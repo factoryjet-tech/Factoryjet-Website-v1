@@ -1,42 +1,37 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
-import NewYorkServiceAndPricingPage from '@/pages/NewYorkServiceAndPricingPage/App'
+import NewYorkServiceAndPricingPage from '@/lib/legacy-pages/NewYorkServiceAndPricingPage/App'
 
 export const metadata: Metadata = {
-  title: 'Web Development Services & Pricing NYC | WordPress, Webflow, Custom | FactoryJet',
-  description: 'Professional web development services in New York City. WordPress, Webflow, Framer, custom development, and e-commerce solutions. Transparent pricing starting from $2,500. Get your free quote today.',
+  title: 'Web Design Services & Pricing in New York City | FactoryJet NYC',
+  description: 'Comprehensive web design and development services in New York City. View our transparent pricing, service packages, and custom solutions for NYC businesses. Get your quote today!',
   keywords: [
-    'Web Development Services NYC',
-    'WordPress Development New York',
-    'Webflow Development NYC',
-    'Framer Development New York',
-    'Custom Web Development NYC',
-    'E-Commerce Development New York',
-    'Website Pricing NYC',
-    'Web Design Packages New York',
-    'Professional Web Development Manhattan',
-    'NYC Web Agency Pricing'
+    'Web Design Services New York',
+    'Web Development Pricing NYC',
+    'New York Web Design Packages',
+    'NYC Website Development Cost',
+    'Professional Web Services Manhattan',
+    'Custom Web Design Pricing NYC'
   ],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Development Services & Pricing NYC | FactoryJet',
-    description: 'Professional web development services in NYC. WordPress, Webflow, custom development. Transparent pricing from $2,500.',
+    title: 'Web Design Services & Pricing in New York City | FactoryJet',
+    description: 'Comprehensive web design services and transparent pricing for NYC businesses.',
     url: 'https://factoryjet.com/us/services/web-design/new-york/services',
     images: [
       {
         url: 'https://factoryjet.com/logo.png',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet - Web Development Services NYC',
+        alt: 'FactoryJet - Web Design Services NYC',
       },
     ],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web Development Services & Pricing NYC | FactoryJet',
-    description: 'Professional web development services in NYC. Transparent pricing from $2,500.',
+    title: 'Web Design Services & Pricing NYC | FactoryJet',
+    description: 'Comprehensive web design services and transparent pricing for NYC businesses.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
@@ -56,52 +51,5 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: 'Web Development Services NYC',
-    description: 'Professional web development services including WordPress, Webflow, Framer, custom development, and e-commerce solutions for New York City businesses.',
-    provider: {
-      '@type': 'LocalBusiness',
-      name: 'FactoryJet - Web Design Company NYC',
-      url: 'https://factoryjet.com/us/services/web-design/new-york',
-      telephone: '+1-919-699-977-699',
-      email: 'connect@factoryjet.com',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'New York',
-        addressRegion: 'NY',
-        addressCountry: 'US',
-      },
-    },
-    areaServed: {
-      '@type': 'City',
-      name: 'New York City',
-    },
-    serviceType: [
-      'WordPress Development',
-      'Webflow Development',
-      'Framer Development',
-      'Custom Web Development',
-      'E-Commerce Development',
-    ],
-    offers: {
-      '@type': 'AggregateOffer',
-      priceCurrency: 'USD',
-      lowPrice: '2500',
-      highPrice: '150000',
-      offerCount: '5',
-    },
-  }
-
-  return (
-    <>
-      <Script
-        id="json-ld-new-york-services"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <NewYorkServiceAndPricingPage />
-    </>
-  )
+  return <NewYorkServiceAndPricingPage />
 }

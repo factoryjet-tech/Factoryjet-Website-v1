@@ -7,6 +7,7 @@ import { ArrowRight, Check, ShieldCheck, ChevronRight, MessageCircle } from 'luc
 import Header from '@/components/Header';
 import { useContactModal } from '@/context/ContactModalContext';
 import Link from 'next/link';
+import FooterUS from '@/components/FooterUS';
 
 const PARTNERS = [
   "Shopify Partner",
@@ -225,7 +226,7 @@ const CTABottom = ({ onOpenContact }: { onOpenContact: () => void }) => (
     </section>
 );
 
-const Footer = () => (
+const FooterLocal = () => (
     <footer className="bg-white border-t border-slate-200 pt-16 pb-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
@@ -300,7 +301,7 @@ export default function App() {
       <PricingTabs onOpenContact={openModal} />
       <FAQSection onOpenContact={openModal} />
       <CTABottom onOpenContact={openModal} />
-      <Footer />
+      <FooterUS />
     </main>
   );
 }

@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence, useInView } from 'framer-motion';
 import Header from '@/components/Header';
+import FooterUS from '@/components/FooterUS';
 import { useContactModal } from '@/context/ContactModalContext';
 import { 
   Menu, X, Check, ArrowRight, Zap, Eye, Workflow, Globe, 
@@ -1397,7 +1398,7 @@ const WhyFactoryJet = ({ onCtaClick }: { onCtaClick: () => void }) => {
       bgColor: "bg-blue-50",
       proofBg: "bg-blue-50/50"
     },
-    {
+    { 
       title: "Premium Quality, Smart Pricing",
       icon: <Gem size={24} />,
       statement: "We don't compete with $500 template sites. We compete with $25,000+ agencies—and win on quality while charging a fraction of the price. Our AI efficiencies translate to savings we pass to you.",
@@ -1806,7 +1807,7 @@ const FAQ = () => {
   );
 };
 
-const Footer = ({ onCtaClick }: { onCtaClick: () => void }) => {
+const FooterLocal = ({ onCtaClick }: { onCtaClick: () => void }) => {
   return (
     <footer className="bg-[#0F172A] text-white pt-20 pb-10 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1835,16 +1836,16 @@ const Footer = ({ onCtaClick }: { onCtaClick: () => void }) => {
             <h4 className="font-bold text-lg mb-6 font-space">Services</h4>
             <ul className="space-y-4 text-slate-400">
               <li><a href="#" className="hover:text-[#FF6B35] transition-colors">Web Design</a></li>
-              <li><a href="#" className="hover:text-[#FF6B35] transition-colors">Web Development</a></li>
+              {/* <li><a href="#" className="hover:text-[#FF6B35] transition-colors">Web Development</a></li> */}
               <li><a href="#" className="hover:text-[#FF6B35] transition-colors">E-Commerce</a></li>
-              <li><a href="#" className="hover:text-[#FF6B35] transition-colors">Mobile Apps</a></li>
+              {/* <li><a href="#" className="hover:text-[#FF6B35] transition-colors">Mobile Apps</a></li> */}
             </ul>
           </div>
           
           <div>
             <h4 className="font-bold text-lg mb-6 font-space">Company</h4>
             <ul className="space-y-4 text-slate-400">
-              <li><a href="#results" className="hover:text-[#FF6B35] transition-colors">Case Studies</a></li>
+              <li><a href="/case" className="hover:text-[#FF6B35] transition-colors">Case Studies</a></li>
               <li><a href="#process" className="hover:text-[#FF6B35] transition-colors">Process</a></li>
               <li><a href="#pricing" className="hover:text-[#FF6B35] transition-colors">Pricing</a></li>
               <li><a onClick={(e) => { e.preventDefault(); onCtaClick(); }} href="#contact" className="hover:text-[#FF6B35] transition-colors cursor-pointer">Contact</a></li>
@@ -1900,7 +1901,7 @@ function UsHomePage() {
           </p>
         </div>
       </section>
-      <Footer onCtaClick={openModal} />
+      <FooterUS onCtaClick={openModal} />
     </div>
   );
 }

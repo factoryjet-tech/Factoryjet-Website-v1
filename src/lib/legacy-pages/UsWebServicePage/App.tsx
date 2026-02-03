@@ -9,9 +9,10 @@ import { QuickAnswer, Button, CtaSection, SectionHeader } from './components/UI/
 import { B2BSection, StartupSection, LocalSection, ComparisonsSection, CaseStudiesSection, MigrationSection, PricingSection, IndustriesSection, ROISection, ExpandedFAQ } from './components/Sections/EnhancedContent';
 import { LeadForm } from './components/UI/LeadForm';
 import { FormProvider, useForm } from './components/UI/FormContext';
+import FooterUS from '@/components/FooterUS';
 
 // --- Footer Component ---
-const Footer: React.FC = () => {
+const FooterLocal: React.FC = () => {
   const { openForm } = useForm();
   
   return (
@@ -744,7 +745,7 @@ const MainContent: React.FC = () => {
         </div>
       </main>
 
-      <Footer />
+      <FooterUS />
 
       {/* Lead Form Modal */}
       <LeadForm 

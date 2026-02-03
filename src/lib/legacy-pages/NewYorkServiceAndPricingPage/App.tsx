@@ -2,7 +2,8 @@
 
 import React from 'react';
 import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import FooterUS from '@/components/FooterUS';
+import { useContactModal } from '@/context/ContactModalContext';
 import WordPressDevelopment from './components/services/WordPressDevelopment';
 import WebflowDevelopment from './components/services/WebflowDevelopment';
 import FramerDevelopment from './components/services/FramerDevelopment';
@@ -11,9 +12,11 @@ import ECommerceDevelopment from './components/services/ECommerceDevelopment';
 import PricingSection from './components/pricing/PricingSection';
 
 export default function App() {
+  const { openModal } = useContactModal();
+
   return (
     <main className="min-h-screen w-full bg-[#F8FAFC] text-[#0F172A]">
-      <Header basePath="/us/services/web-design/new-york" variant="transparent" />
+      <Header basePath="/us/services/web-design/new-york" variant="solid" />
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-[#0F172A] to-[#1E293B] text-white">
@@ -44,7 +47,7 @@ export default function App() {
 
       {/* Pricing */}
       <div id="pricing">
-        <PricingSection />
+        <PricingSection onSelectPlan={openModal} />
       </div>
 
       {/* CTA Section */}
@@ -56,16 +59,16 @@ export default function App() {
           <p className="text-xl text-slate-300 mb-8">
             Get a free consultation and custom quote for your NYC business website.
           </p>
-          <a
-            href="mailto:connect@factoryjet.com"
+          <button
+            onClick={() => openModal()}
             className="inline-flex items-center gap-2 bg-[#FF6B35] hover:bg-[#e55a28] text-white px-8 py-4 rounded-lg font-bold transition-all shadow-lg"
           >
             Get Free Quote
-          </a>
+          </button>
         </div>
       </section>
 
-      <Footer />
+      <FooterUS onCtaClick={openModal} />
     </main>
   );
 }

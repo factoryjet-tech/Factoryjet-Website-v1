@@ -104,25 +104,25 @@ const ContactSection: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-sm text-blue-200 uppercase tracking-wide">Email</p>
-                    <a href="mailto:hello@factoryjet.com" className="text-lg font-medium hover:text-jetOrange transition-colors">hello@factoryjet.com</a>
+                    <a href="mailto:connect@factoryjet.com" className="text-lg font-medium hover:text-jetOrange transition-colors">connect@factoryjet.com</a>
                   </div>
                 </li>
-                <li className="flex items-center gap-4">
+                {/* <li className="flex items-center gap-4">
                   <div className="bg-jetBlue/30 p-3 rounded-lg">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <p className="text-sm text-blue-200 uppercase tracking-wide">Phone (EST)</p>
-                    <a href="tel:+16471234567" className="text-lg font-medium hover:text-jetOrange transition-colors">+1 (647) 123-4567</a>
+                    <a href="tel:+19169977699" className="text-lg font-medium hover:text-jetOrange transition-colors">+1 (916) 997-7699</a>
                   </div>
-                </li>
+                </li> */}
                 <li className="flex items-center gap-4">
                   <div className="bg-jetBlue/30 p-3 rounded-lg">
                     <MessageSquare className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <p className="text-sm text-blue-200 uppercase tracking-wide">WhatsApp</p>
-                    <span className="text-lg font-medium">+1 (647) 123-4567</span>
+                    <span className="text-lg font-medium">9169977699</span>
                   </div>
                 </li>
               </ul>

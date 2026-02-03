@@ -1,7 +1,11 @@
 import React from 'react';
 import { Check, Plus, ShieldCheck, Clock, Zap } from 'lucide-react';
 
-export default function PricingSection() {
+interface PricingSectionProps {
+  onSelectPlan: (plan: string) => void;
+}
+
+export default function PricingSection({ onSelectPlan }: PricingSectionProps) {
   return (
     <section className="py-24 bg-white text-[#0F172A]">
       <div className="container mx-auto px-6 max-w-7xl">
@@ -126,7 +130,7 @@ export default function PricingSection() {
                 <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#0052CC] rounded-full"></div> Basic support</li>
                 <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#0052CC] rounded-full"></div> 2 hours/month changes</li>
               </ul>
-              <button className="w-full py-3 rounded-lg border-2 border-[#0052CC] text-[#0052CC] hover:bg-[#0052CC] hover:text-white transition-colors font-medium">
+              <button onClick={() => onSelectPlan('Basic AMC')} className="w-full py-3 rounded-lg border-2 border-[#0052CC] text-[#0052CC] hover:bg-[#0052CC] hover:text-white transition-colors font-medium">
                 Select Plan
               </button>
             </div>
@@ -145,7 +149,7 @@ export default function PricingSection() {
                 <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#0052CC] rounded-full"></div> SEO monitoring</li>
                 <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#0052CC] rounded-full"></div> Analytics reports</li>
               </ul>
-              <button className="w-full py-3 rounded-lg bg-[#0052CC] hover:shadow-[0_4px_12px_rgba(0,82,204,0.3)] text-white font-bold transition-all">
+              <button onClick={() => onSelectPlan('Professional AMC')} className="w-full py-3 rounded-lg bg-[#0052CC] hover:shadow-[0_4px_12px_rgba(0,82,204,0.3)] text-white font-bold transition-all">
                 Select Plan
               </button>
             </div>
@@ -163,7 +167,7 @@ export default function PricingSection() {
                 <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#0052CC] rounded-full"></div> Conversion optimization</li>
                 <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#0052CC] rounded-full"></div> Quarterly strategy</li>
               </ul>
-              <button className="w-full py-3 rounded-lg border-2 border-[#0052CC] text-[#0052CC] hover:bg-[#0052CC] hover:text-white transition-colors font-medium">
+              <button onClick={() => onSelectPlan('Enterprise AMC')} className="w-full py-3 rounded-lg border-2 border-[#0052CC] text-[#0052CC] hover:bg-[#0052CC] hover:text-white transition-colors font-medium">
                 Contact Sales
               </button>
             </div>

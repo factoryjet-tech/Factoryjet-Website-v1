@@ -45,8 +45,31 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '' 
     { label: 'Why Us', href: '#why-nyc', hasDropdown: false, isRoute: false },
     { label: 'FAQ', href: `${basePath}/faq`, hasDropdown: false, isRoute: true },
     { label: 'Contact', href: '#contact', hasDropdown: false, isRoute: false },
+  ] : basePath === '/us' ? [
+    // US home page navigation - Services dropdown + Locations dropdown + hash links
+    {
+      label: 'Services',
+      href: '#services',
+      hasDropdown: true,
+      submenu: [
+        { label: 'Web Design', href: prefixRoute('/services/web-design'), icon: Monitor, desc: 'Custom high-performance websites', isRoute: true },
+        { label: 'E-Commerce', href: prefixRoute('/services/ecommerce'), icon: ShoppingBag, desc: 'Shopify & WooCommerce stores', isRoute: true },
+      ]
+    },
+    {
+      label: 'Locations',
+      href: '#locations',
+      hasDropdown: true,
+      submenu: [
+        { label: 'New York', href: '/us/services/web-design/new-york', icon: MapPin, desc: 'Web design in New York City', isRoute: true },
+        { label: 'Cleveland', href: '/us/services/web-design/cleveland', icon: MapPin, desc: 'Web design in Cleveland', isRoute: true },
+      ]
+    },
+    { label: 'About Us', href: '#about', hasDropdown: false, isRoute: false },
+    { label: 'Pricing', href: prefixRoute('/pricing'), hasDropdown: false, isRoute: true },
+    { label: 'FAQ', href: prefixRoute('/faq'), hasDropdown: false, isRoute: true },
   ] : basePath ? [
-    // US pages navigation - Services dropdown + hash links to page sections
+    // Other US pages navigation - Services dropdown + hash links to page sections
     {
       label: 'Services',
       href: '#services',

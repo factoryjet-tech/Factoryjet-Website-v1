@@ -59,37 +59,67 @@ export const SevenReasons: React.FC = () => {
           {reasons.map((reason, index) => (
             <FadeIn key={index} delay={index * 0.05}>
               <div 
-                className={`bg-white rounded-lg overflow-hidden transition-all duration-300 border ${openIndex === index ? 'border-primary shadow-lg' : 'border-light shadow-md hover:border-gray-300'}`}
+                className={`bg-white rounded-lg overflow-hidden transition-all duration-300 border ${
+                  openIndex === index 
+                    ? 'border-primary shadow-lg' 
+                    : 'border-light shadow-md hover:border-gray-300'
+                }`}
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  className="w-full flex items-center justify-between p-6 text-left focus:outline-none group"
+                  className="w-full flex items-center justify-between p-6 text-left focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 group"
+                  aria-expanded={openIndex === index}
                 >
-                  <div className="flex items-center gap-4">
-                    <div className={`p-2 rounded-md ${openIndex === index ? 'bg-primary text-white' : 'bg-light text-slate group-hover:bg-gray-100'}`}>
-                      <reason.icon className="w-6 h-6" />
+                  <div className="flex items-center gap-4 flex-1 min-w-0">
+                    <div className={`p-2 rounded-md transition-colors duration-200 ${
+                      openIndex === index 
+                        ? 'bg-primary text-white' 
+                        : 'bg-light text-slate group-hover:bg-gray-100'
+                    }`}>
+                      <reason.icon className="w-6 h-6 flex-shrink-0" />
                     </div>
-                    <span className={`text-lg md:text-xl font-bold font-heading ${openIndex === index ? 'text-primary' : 'text-navy'}`}>
+                    <h4 className={`text-lg font-semibold transition-colors duration-200 ${
+                      openIndex === index 
+                        ? 'text-primary' 
+                        : 'text-slate-800 group-hover:text-primary'
+                    }`}>
                       {reason.headline}
-                    </span>
+                    </h4>
                   </div>
-                  {openIndex === index ? (
-                    <Minus className="w-5 h-5 text-primary flex-shrink-0" />
-                  ) : (
-                    <Plus className="w-5 h-5 text-gray-500 flex-shrink-0 group-hover:text-navy" />
-                  )}
+                  
+                  <div className={`ml-4 p-1 rounded-full transition-all duration-200 ${
+                    openIndex === index 
+                      ? 'bg-primary/10 text-primary' 
+                      : 'text-slate-400 group-hover:text-primary group-hover:bg-primary/5'
+                  }`}>
+                    <motion.div
+                      animate={{ rotate: openIndex === index ? 180 : 0 }}
+                      transition={{ duration: 0.2, ease: "easeInOut" }}
+                    >
+                      {openIndex === index ? <Minus className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
+                    </motion.div>
+                  </div>
                 </button>
-                
-                <AnimatePresence>
+
+                <AnimatePresence initial={false}>
                   {openIndex === index && (
                     <motion.div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
+                      transition={{ 
+                        duration: 0.3, 
+                        ease: [0.04, 0.62, 0.23, 0.98],
+                        opacity: { duration: 0.2 }
+                      }}
+                      className="overflow-hidden"
                     >
-                      <div className="px-6 pb-6 pl-[4.5rem] text-slate leading-relaxed border-t border-dashed border-light pt-4">
-                        {reason.content}
+                      <div className="px-6 pb-6 pt-2">
+                        <div className="pl-14">
+                          <p className="text-slate-600 leading-relaxed">
+                            {reason.content}
+                          </p>
+                        </div>
                       </div>
                     </motion.div>
                   )}
@@ -102,3 +132,4 @@ export const SevenReasons: React.FC = () => {
     </section>
   );
 };
+                

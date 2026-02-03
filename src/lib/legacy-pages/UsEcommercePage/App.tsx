@@ -10,7 +10,7 @@ import CaseStudies from './components/CaseStudies';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
 import CTA from './components/CTA';
-import Footer from './components/Footer';
+import FooterUS from '@/components/FooterUS';
 import { LeadCaptureProvider } from './context/LeadCaptureContext';
 import { LeadCaptureModal } from './components/ui/LeadCaptureModal';
 
@@ -32,7 +32,7 @@ export default function UsEcommercePage() {
         <Pricing />
         <FAQ />
         <CTA />
-        <Footer />
+        <FooterUS />
         <LeadCaptureModal />
       </div>
     </LeadCaptureProvider>

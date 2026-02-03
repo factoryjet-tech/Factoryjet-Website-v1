@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import FooterUS from '@/components/FooterUS';
 import FAQSection from './components/FAQSection';
 import GuaranteesSection from './components/GuaranteesSection';
 import ContactSection from './components/ContactSection';
@@ -11,7 +11,7 @@ import FinalCTA from './components/FinalCTA';
 function App() {
   return (
     <div className="min-h-screen bg-white">
-      <Header basePath="/us/services/web-design/new-york" variant="transparent" />
+      <Header basePath="/us/services/web-design/new-york" variant="solid" />
 
       <main className="pt-20">
         {/* Section 14: Comprehensive FAQ */}
@@ -27,7 +27,7 @@ function App() {
         <FinalCTA />
       </main>
 
-      <Footer />
+      <FooterUS />
     </div>
   );
 }

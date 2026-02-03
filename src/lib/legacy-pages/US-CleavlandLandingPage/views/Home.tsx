@@ -603,9 +603,9 @@ export const Home: React.FC = () => {
   const currentPackages = pricingMode === 'web' ? webPackages : (pricingMode === 'ecommerce' ? ecommercePackages : (pricingMode === 'seo' ? seoPackages : amcPackages));
 
   return (
-    <div className="flex flex-col min-h-screen bg-slate-50">
+    <div className="mt-4 flex flex-col min-h-screen bg-slate-50">
       
-      <Navbar />
+      {/* <Navbar /> */}
 
       <main className="flex-grow">
         
@@ -1580,160 +1580,7 @@ export const Home: React.FC = () => {
       </main>
 
       {/* 12. Footer */}
-      <footer className="bg-navy text-slate-300 relative border-t-4 border-primary">
-        <div className="max-w-7xl mx-auto px-4 py-16 md:py-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
-            
-            {/* Column 1: Company Info (Wider on Desktop) */}
-            <div className="lg:col-span-1.5 flex flex-col">
-              <div className="flex items-center gap-2 mb-6">
-                 <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-lg">F</div>
-                 <span className="text-2xl font-bold text-white tracking-tight">FactoryJet</span>
-              </div>
-              <p className="text-sm font-medium text-slate-300 mb-4">Cleveland&apos;s Premier Website Design & Digital Solutions Partner</p>
-              <p className="text-sm leading-relaxed text-slate-300 mb-6 max-w-sm">
-                Empowering small and medium businesses across Cleveland and Northeast Ohio with cutting-edge web design, e-commerce, and digital marketing solutions since 1999.
-              </p>
-              
-              {/* Newsletter Mini */}
-              <div className="mb-8">
-                 <p className="text-xs font-bold text-white uppercase tracking-wider mb-3">Stay Updated</p>
-                 <div className="flex gap-2">
-                    <input 
-                       type="email" 
-                       placeholder="Enter email address" 
-                       className="bg-slate-800 border border-slate-700 rounded px-3 py-2 text-sm text-white focus:outline-none focus:border-primary w-full min-h-[44px]"
-                    />
-                    <button className="bg-primary hover:bg-blue-600 text-white px-3 py-2 rounded text-sm font-medium transition-colors min-h-[44px]">
-                       Subscribe
-                    </button>
-                 </div>
-              </div>
 
-              <div className="flex gap-4 mt-auto">
-                 <a href="#" aria-label="LinkedIn" className="text-slate-400 hover:text-secondary hover:scale-110 transition-all duration-300 p-2 -m-2">
-                    <Linkedin size={20} />
-                 </a>
-                 <a href="#" aria-label="Facebook" className="text-slate-400 hover:text-secondary hover:scale-110 transition-all duration-300 p-2 -m-2">
-                    <Facebook size={20} />
-                 </a>
-                 <a href="#" aria-label="Twitter" className="text-slate-400 hover:text-secondary hover:scale-110 transition-all duration-300 p-2 -m-2">
-                    <Twitter size={20} />
-                 </a>
-                 <a href="#" aria-label="Instagram" className="text-slate-400 hover:text-secondary hover:scale-110 transition-all duration-300 p-2 -m-2">
-                    <Instagram size={20} />
-                 </a>
-                 <a href="#" aria-label="YouTube" className="text-slate-400 hover:text-secondary hover:scale-110 transition-all duration-300 p-2 -m-2">
-                    <Youtube size={20} />
-                 </a>
-              </div>
-            </div>
-
-            {/* Column 2: Services */}
-            <div>
-              <h4 className="text-white font-bold mb-6">Our Services</h4>
-              <ul className="space-y-3 text-sm">
-                {['Website Design', 'E-Commerce Development', 'WordPress Development', 'Shopify Development', 'Website Redesign', 'Landing Page Design', 'Mobile App Development', 'Maintenance & Support'].map((item) => (
-                   <li key={item}>
-                      <a href="#" className="text-slate-400 hover:text-white hover:underline decoration-secondary decoration-2 underline-offset-4 transition-all duration-200 flex items-center gap-2 group py-1">
-                         <span className="w-0 overflow-hidden group-hover:w-3 transition-all duration-300 opacity-0 group-hover:opacity-100"><ChevronRight size={12} className="text-secondary" /></span>
-                         {item}
-                      </a>
-                   </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Column 3: Solutions */}
-            <div>
-              <h4 className="text-white font-bold mb-6">Solutions</h4>
-              <ul className="space-y-3 text-sm">
-                {['Digital Marketing', 'SEO Services', 'Social Media Management', 'Content Marketing', 'Email Marketing', 'PPC Advertising', 'CRM Implementation', 'ERP Solutions'].map((item) => (
-                   <li key={item}>
-                      <a href="#" className="text-slate-400 hover:text-white hover:underline decoration-secondary decoration-2 underline-offset-4 transition-all duration-200 flex items-center gap-2 group py-1">
-                         <span className="w-0 overflow-hidden group-hover:w-3 transition-all duration-300 opacity-0 group-hover:opacity-100"><ChevronRight size={12} className="text-secondary" /></span>
-                         {item}
-                      </a>
-                   </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Column 4: Company */}
-            <div>
-              <h4 className="text-white font-bold mb-6">Company</h4>
-              <ul className="space-y-3 text-sm">
-                {['About Us', 'Portfolio', 'Case Studies', 'Pricing', 'Blog', 'Careers', 'Contact Us', 'Free Consultation'].map((item) => (
-                   <li key={item}>
-                      <a href="#" className="text-slate-400 hover:text-white hover:underline decoration-secondary decoration-2 underline-offset-4 transition-all duration-200 flex items-center gap-2 group py-1">
-                         <span className="w-0 overflow-hidden group-hover:w-3 transition-all duration-300 opacity-0 group-hover:opacity-100"><ChevronRight size={12} className="text-secondary" /></span>
-                         {item}
-                      </a>
-                   </li>
-                ))}
-              </ul>
-            </div>
-            
-            {/* Column 5: Serving Cleveland */}
-            <div>
-               <h4 className="text-white font-bold mb-6">Serving Cleveland</h4>
-               <ul className="flex flex-wrap gap-2 text-xs mb-8">
-                  {['Downtown Cleveland', 'Cleveland Heights', 'Lakewood', 'Westlake', 'Parma', 'Shaker Heights', 'Cleveland Suburbs', 'Northeast Ohio'].map((item) => (
-                     <li key={item} className="bg-slate-800 text-slate-400 px-2 py-1 rounded hover:bg-slate-700 hover:text-white transition-colors cursor-default">
-                        {item}
-                     </li>
-                  ))}
-               </ul>
-               
-               <div className="space-y-4 text-sm text-slate-400">
-                  <div className="flex gap-3">
-                     <MapPin className="w-5 h-5 text-secondary flex-shrink-0" />
-                     <span>123 Superior Avenue<br/>Cleveland, OH 44114</span>
-                  </div>
-                  <div className="flex gap-3">
-                     <Phone className="w-5 h-5 text-secondary flex-shrink-0" />
-                     <a href="tel:+919699977699" className="hover:text-white transition-colors py-1">+91 96999 77699</a>
-                  </div>
-                  <div className="flex gap-3">
-                     <Mail className="w-5 h-5 text-secondary flex-shrink-0" />
-                     <a href="mailto:connect@factoryjet.com" className="hover:text-white transition-colors py-1">connect@factoryjet.com</a>
-                  </div>
-                  <div className="flex gap-3">
-                     <Clock className="w-5 h-5 text-secondary flex-shrink-0" />
-                     <span>Mon-Fri 9am-6pm EST</span>
-                  </div>
-               </div>
-            </div>
-
-          </div>
-        </div>
-        
-        {/* Bottom Bar */}
-        <div className="bg-[#0A0F1E] border-t border-slate-800">
-           <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
-              <div>
-                 &copy; {new Date().getFullYear()} FactoryJet. All rights reserved.
-              </div>
-              <div className="flex flex-wrap justify-center gap-6">
-                 {['Privacy Policy', 'Terms of Service', 'Sitemap', 'Cookie Policy'].map((link) => (
-                    <a key={link} href="#" className="hover:text-white transition-colors relative group py-2">
-                       {link}
-                       <span className="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
-                    </a>
-                 ))}
-              </div>
-           </div>
-        </div>
-
-        {/* Back to Top Button */}
-        <button 
-           onClick={scrollToTop}
-           className={`fixed bottom-6 right-6 md:bottom-10 md:right-10 bg-primary text-white p-3 md:p-4 rounded-full shadow-lg shadow-primary/30 z-50 transition-all duration-300 transform hover:scale-110 hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-primary/30 min-w-[44px] min-h-[44px] flex items-center justify-center ${showBackToTop ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0 pointer-events-none'}`}
-           aria-label="Back to top"
-        >
-           <ArrowUp className="w-5 h-5 md:w-6 md:h-6" strokeWidth={2.5} />
-        </button>
-      </footer>
     </div>
   );
 };

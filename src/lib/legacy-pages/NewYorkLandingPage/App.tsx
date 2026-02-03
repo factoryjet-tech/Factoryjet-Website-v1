@@ -2,7 +2,8 @@
 
 import React from 'react';
 import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import FooterUS from '@/components/FooterUS';
+import { useContactModal } from '@/context/ContactModalContext';
 import { HeroSection } from './components/sections/HeroSection';
 import { TrustIndicators } from './components/sections/TrustIndicators';
 import { WhyNYC } from './components/sections/WhyNYC';
@@ -12,6 +13,8 @@ import { FactoryJetDifference } from './components/sections/FactoryJetDifference
 import { ServicesIntro } from './components/sections/ServicesIntro';
 
 function App() {
+  const { openModal } = useContactModal();
+
   return (
     <main className="min-h-screen bg-slate-50 font-sans">
       <Header basePath="/us/services/web-design/new-york" variant="transparent" />
@@ -22,7 +25,7 @@ function App() {
       <HiddenCostTable />
       <FactoryJetDifference />
       <ServicesIntro />
-      <Footer />
+      <FooterUS onCtaClick={openModal} />
     </main>
   );
 }

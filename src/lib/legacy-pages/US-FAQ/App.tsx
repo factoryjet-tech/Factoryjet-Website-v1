@@ -15,6 +15,7 @@ import {
 import { faqData } from './data';
 import { FAQItem, SearchResult } from './types';
 import Header from '@/components/Header';
+import FooterUS from '@/components/FooterUS';
 import Link from 'next/link';
 
 // --- Helper Components ---
@@ -412,7 +413,7 @@ const ContactCTA = React.memo(() => (
   </section>
 ));
 
-const Footer = React.memo(() => (
+const FooterLocal = React.memo(() => (
   <footer className="bg-slate-900 text-slate-300 py-12 px-4 border-t border-slate-800">
     <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
       <div className="col-span-1 md:col-span-1">
@@ -616,7 +617,7 @@ const App = () => {
         <ContactCTA />
       </main>
 
-      <Footer />
+      <FooterUS />
     </div>
   );
 };
