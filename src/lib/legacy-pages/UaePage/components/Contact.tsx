@@ -317,7 +317,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
         <div className="text-center text-gray-600 text-xs mt-8">
-          Copyright © 2025 FactoryJet Dubai. All rights reserved.
+          Copyright © 2026 FactoryJet Dubai. All rights reserved.
         </div>
       </div>
     </footer>

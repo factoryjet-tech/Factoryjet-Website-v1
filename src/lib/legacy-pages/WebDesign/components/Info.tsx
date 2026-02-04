@@ -97,7 +97,7 @@ export const Info = () => {
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 md:mb-16">
             <div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 md:mb-4">2025 Web Design Trends</h2>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 md:mb-4">2026 Web Design Trends</h2>
               <p className="text-sm md:text-base text-slate-600">We keep your brand ahead of the curve.</p>
             </div>
             <div className="mt-4 md:mt-0 px-3 md:px-4 py-1.5 md:py-2 bg-white rounded-full border border-slate-200 text-[10px] md:text-xs font-bold uppercase tracking-wider text-slate-500 shadow-sm">

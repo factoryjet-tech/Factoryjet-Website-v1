@@ -196,7 +196,7 @@ const FooterSection: React.FC = () => {
 
         {/* Copyright */}
         <div className="text-center mt-8 text-sm text-blue-200">
-          © 2025 FactoryJet Technologies. All rights reserved.
+          © 2026 FactoryJet Technologies. All rights reserved.
         </div>
       </div>
     </footer>

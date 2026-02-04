@@ -53,7 +53,7 @@ export const PROBLEMS: ProblemCard[] = [
     title: "Customers Question Your Credibility",
     icon: Trophy,
     badge: "Losing Customer Trust",
-    description: "In 2024-2025, customers expect even local businesses to have professional websites. When you hand out a business card without a website URL, customers wonder: 'Is this business legitimate? Are they outdated? Can I trust them?' A professional website from the best website design company in Madurai establishes instant credibility. It shows customers you're serious, professional, and ready to serve them. Without it, you're fighting an uphill battle against doubt and skepticism."
+    description: "In 2024-2026, customers expect even local businesses to have professional websites. When you hand out a business card without a website URL, customers wonder: 'Is this business legitimate? Are they outdated? Can I trust them?' A professional website from the best website design company in Madurai establishes instant credibility. It shows customers you're serious, professional, and ready to serve them. Without it, you're fighting an uphill battle against doubt and skepticism."
   },
   {
     title: "You Can't Expand Beyond Madurai",

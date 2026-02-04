@@ -107,7 +107,7 @@ export const faqData: FAQCategory[] = [
         popular: true,
         answer: (
           <div className="space-y-4">
-            <p>Traditional SEO is no longer enough. We optimize for <strong>how customers actually discover businesses in 2024-2025</strong>.</p>
+            <p>Traditional SEO is no longer enough. We optimize for <strong>how customers actually discover businesses in 2024-2026</strong>.</p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
               <div className="p-4 border border-slate-200 rounded-lg bg-white shadow-sm">

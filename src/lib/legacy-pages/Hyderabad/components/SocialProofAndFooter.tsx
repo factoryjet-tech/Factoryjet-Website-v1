@@ -192,7 +192,7 @@ export const Footer = () => (
       </div>
     </div>
     <div className="max-w-7xl mx-auto px-4 pt-8 border-t border-gray-800 text-center text-sm flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500">
-      <p>&copy; 2025 FactoryJet Technologies Pvt. Ltd. All Rights Reserved.</p>
+      <p>&copy; 2026 FactoryJet Technologies Pvt. Ltd. All Rights Reserved.</p>
       <div className="flex items-center gap-2">
          <span>Made with</span>
          <span className="text-red-500 text-lg">♥</span>

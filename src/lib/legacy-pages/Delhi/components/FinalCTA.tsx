@@ -212,7 +212,7 @@ const FinalCTA: React.FC<FinalCTAProps> = ({ onOpenModal }) => {
         >
           <div className="bg-jet-orange/20 border-2 border-jet-orange rounded-2xl p-8 max-w-3xl mx-auto">
             <p className="text-2xl font-bold mb-4">
-              ⚡ Limited Slots Available for January 2025
+              ⚡ Limited Slots Available for January 2026
             </p>
             <p className="text-lg text-blue-100">
               We only take 10 new projects per month to ensure quality. 7 slots already filled for January.

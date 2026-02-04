@@ -23,7 +23,7 @@ export const WhyNYC: React.FC = () => {
         <div className="mb-24">
           <FadeIn delay={0.1}>
             <div className="text-center mb-12">
-              <h3 className="text-2xl md:text-3xl font-semibold text-navy mb-6 font-heading">The Digital Reality for NYC Businesses in 2025</h3>
+              <h3 className="text-2xl md:text-3xl font-semibold text-navy mb-6 font-heading">The Digital Reality for NYC Businesses in 2026</h3>
               <p className="text-4xl md:text-5xl font-bold text-primary mb-6 font-heading">
                 87% of New York consumers research businesses online before making contact.
               </p>
@@ -90,7 +90,7 @@ export const WhyNYC: React.FC = () => {
                 <h4 className="text-2xl font-bold text-navy font-heading">The AI Search Revolution Changes Everything</h4>
               </div>
               <p className="text-slate text-lg mb-8">
-                Traditional SEO isn't enough anymore. In 2025, 71% of consumers use AI tools like ChatGPT, Perplexity, and Google's AI Overview before making purchase decisions. Your website needs to be optimized for:
+                Traditional SEO isn't enough anymore. In 2026, 71% of consumers use AI tools like ChatGPT, Perplexity, and Google's AI Overview before making purchase decisions. Your website needs to be optimized for:
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {[
@@ -112,7 +112,7 @@ export const WhyNYC: React.FC = () => {
           <FadeIn delay={0.3}>
             <div className="text-center">
               <h3 className="text-2xl md:text-3xl font-bold text-primary font-heading">
-                The businesses that dominate NYC markets in 2025 aren't just SEO-optimized—they're AI-optimized.
+                The businesses that dominate NYC markets in 2026 aren't just SEO-optimized—they're AI-optimized.
               </h3>
             </div>
           </FadeIn>

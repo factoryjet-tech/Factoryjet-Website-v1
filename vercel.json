@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "https://www.factoryjet.com/:path*",
+      "destination": "https://factoryjet.com/:path*",
+      "permanent": true
+    }
+  ]
+}

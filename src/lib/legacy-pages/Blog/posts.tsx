@@ -271,8 +271,8 @@ export const POSTS: BlogPost[] = [
 
 {
   id: '3',
-  slug: 'website-redesign-checklist-2025',
-  title: "The 2025 Redesign Checklist: When to Replace Your Old Website",
+  slug: 'website-redesign-checklist-2026',
+  title: "The 2026 Redesign Checklist: When to Replace Your Old Website",
   excerpt: "If your website is slow, hard to update, or performs poorly on mobile devices, it is no longer helping your business. This guide helps you audit when a redesign is necessary.",
   category: 'Web Design & Strategy',
   author: 'Rajesh Kumar',
@@ -296,7 +296,7 @@ export const POSTS: BlogPost[] = [
     { q: "Do I need new content during a redesign?", a: "In most cases yes, especially if messaging is outdated." },
     { q: "Can I keep my existing domain?", a: "Yes, and it is usually recommended for SEO stability." },
     { q: "What happens if I skip redirects?", a: "You may lose search rankings and traffic permanently." },
-    { q: "Is mobile optimization still important in 2025?", a: "Yes. Most users browse on mobile devices first." },
+    { q: "Is mobile optimization still important in 2026?", a: "Yes. Most users browse on mobile devices first." },
     { q: "Should redesign include accessibility improvements?", a: "Yes. Accessibility improves usability for everyone." },
     { q: "What is the role of Core Web Vitals?", a: "They measure real user experience related to speed and stability." },
     { q: "Can I redesign without downtime?", a: "Yes. Most redesigns are launched without affecting live users." },
@@ -316,7 +316,7 @@ export const POSTS: BlogPost[] = [
   content: (
     <>
       <p>
-        Legacy code is similar to rust on a machine. It builds up slowly and reduces efficiency over time. In 2025, a website is not just a digital brochure. It functions as a sales tool, trust builder, and operational asset.
+        Legacy code is similar to rust on a machine. It builds up slowly and reduces efficiency over time. In 2026, a website is not just a digital brochure. It functions as a sales tool, trust builder, and operational asset.
       </p>
 
       <p>
@@ -1340,7 +1340,7 @@ export const POSTS: BlogPost[] = [
 
 {
   id: '10',
-  slug: 'best-payment-gateway-india-2025',
+  slug: 'best-payment-gateway-india-2026',
   title: "The Payment Gateway Matrix: Razorpay vs Stripe vs PhonePe",
   excerpt: "Every failed payment is a lost customer. This guide compares major Indian and international gateways based on reliability, cost, and real world performance.",
   category: 'E-Commerce Development',
@@ -1864,7 +1864,7 @@ export const POSTS: BlogPost[] = [
 {
   id: '13',
   slug: 'core-web-vitals-optimization-service',
-  title: "Core Web Vitals 2025 The Metrics That Actually Matter",
+  title: "Core Web Vitals 2026 The Metrics That Actually Matter",
   excerpt: "Google replaced FID with INP to better measure real user frustration. If your site feels slow or unresponsive, rankings and conversions will suffer together.",
   category: 'Maintenance & Security',
   author: 'Rajesh Kumar',
@@ -1897,7 +1897,7 @@ export const POSTS: BlogPost[] = [
     { q: "What is field data vs lab data?", a: "Field data comes from real users, lab data comes from simulations." },
     { q: "How long does it take to see SEO impact?", a: "Usually a few weeks after improvements are reflected in field data." },
     { q: "Do single page apps struggle with INP?", a: "Yes, if JavaScript execution is not optimized." },
-    { q: "Is image optimization still important in 2025?", a: "Yes, images remain one of the biggest performance bottlenecks." },
+    { q: "Is image optimization still important in 2026?", a: "Yes, images remain one of the biggest performance bottlenecks." },
     { q: "Does lazy loading help?", a: "Yes, when implemented correctly without affecting LCP." },
     { q: "Can third party scripts hurt scores?", a: "Yes, analytics, ads, and widgets often delay rendering." },
     { q: "How often should Core Web Vitals be monitored?", a: "At least monthly, or after major releases." },
@@ -1913,7 +1913,7 @@ export const POSTS: BlogPost[] = [
       </p>
 
       <p>
-        In 2025, Core Web Vitals matter more than ever because the web has become heavier, more interactive, and more dependent on JavaScript. Users expect instant feedback. When a page loads slowly or ignores taps, frustration builds quickly.
+        In 2026, Core Web Vitals matter more than ever because the web has become heavier, more interactive, and more dependent on JavaScript. Users expect instant feedback. When a page loads slowly or ignores taps, frustration builds quickly.
       </p>
 
       <p>
@@ -2061,7 +2061,7 @@ export const POSTS: BlogPost[] = [
       </p>
 
       <p>
-        Core Web Vitals are a reflection of respect for the user’s time. Sites that feel fast, stable, and responsive build trust naturally. In 2025, performance is no longer a technical detail. It is a core part of product quality.
+        Core Web Vitals are a reflection of respect for the user’s time. Sites that feel fast, stable, and responsive build trust naturally. In 2026, performance is no longer a technical detail. It is a core part of product quality.
       </p>
 
       <NativeAd />

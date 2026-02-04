@@ -140,7 +140,7 @@ export const SOLUTIONS: SolutionItem[] = [
   {
     icon: Code2,
     title: "Custom Design That Sets You Apart",
-    description: "Forget generic templates. Our website development company in Delhi NCR creates custom designs tailored to your brand, industry, and goals. We combine 25+ years of experience with latest design trends (2025: Glassmorphism, Bento Grids, Micro-animations) to create unique digital experiences. Full ownership, scalable architecture, and ongoing support included. Result: A website that positions your business as an industry leader."
+    description: "Forget generic templates. Our website development company in Delhi NCR creates custom designs tailored to your brand, industry, and goals. We combine 25+ years of experience with latest design trends (2026: Glassmorphism, Bento Grids, Micro-animations) to create unique digital experiences. Full ownership, scalable architecture, and ongoing support included. Result: A website that positions your business as an industry leader."
   }
 ];
 

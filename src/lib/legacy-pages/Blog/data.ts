@@ -15,8 +15,8 @@ export const POSTS: BlogPost[] = [
   },
   {
     id: '2',
-    slug: 'seo-2025-dominating-local-search',
-    title: 'SEO in 2025: Dominating Local Search',
+    slug: 'seo-2026-dominating-local-search',
+    title: 'SEO in 2026: Dominating Local Search',
     excerpt: 'The landscape of search engines is shifting. Here is how your factory can stay visible to local distributors.',
     category: 'Web Design & Strategy',
     author: 'Sarah Jenkins',

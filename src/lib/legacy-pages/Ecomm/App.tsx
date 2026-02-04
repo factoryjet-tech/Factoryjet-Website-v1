@@ -187,7 +187,7 @@ const Hero = () => {
         >
           <div className="inline-flex items-center gap-2 px-3 md:px-4 py-2 rounded-full bg-white/50 border border-white/60 backdrop-blur-sm shadow-sm mb-6 md:mb-8">
             <span className="w-2 h-2 rounded-full bg-jetGreen animate-pulse" />
-            <span className="text-[10px] md:text-xs font-bold uppercase tracking-wider text-slate-600">Accepting New Projects for Q4 2025</span>
+            <span className="text-[10px] md:text-xs font-bold uppercase tracking-wider text-slate-600">Accepting New Projects for Q4 2026</span>
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] mb-6 md:mb-8 text-jetNavy">

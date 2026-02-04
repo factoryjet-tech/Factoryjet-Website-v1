@@ -23,7 +23,9 @@
       "Bash(dir:*)",
       "Bash(npx tsc:*)",
       "Bash(echo:*)",
-      "Bash(buildcode=$?)"
+      "Bash(buildcode=$?)",
+      "Bash(grep:*)",
+      "Bash(xargs sed:*)"
     ]
   }
 }

@@ -1,0 +1,2 @@
+# Netlify/Cloudflare Pages redirect: www to non-www
+https://www.factoryjet.com/* https://factoryjet.com/:splat 301!

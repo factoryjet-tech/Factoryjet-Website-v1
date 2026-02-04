@@ -326,7 +326,7 @@ export const Footer = () => (
     </div>
 
     <div className="border-t border-gray-800 pt-8 text-center text-xs text-gray-500 max-w-7xl mx-auto px-4">
-      <p className="mb-2">© 2025 FactoryJet Technologies. All rights reserved.</p>
+      <p className="mb-2">© 2026 FactoryJet Technologies. All rights reserved.</p>
       <p>FactoryJet is the leading website design company in Madurai providing professional website development, WordPress website development, and e-commerce solutions for businesses across Tamil Nadu.</p>
     </div>
   </footer>

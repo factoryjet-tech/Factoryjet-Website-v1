@@ -21,7 +21,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     client: 'Belle Maison',
     location: 'India',
     category: 'E-Comm',
-    image: 'https://bellemaison.in/wp-content/uploads/2025/07/pexels-bertellifotografia-17023032-2048x1365.jpg#/',
+    image: 'https://bellemaison.in/wp-content/uploads/2026/07/pexels-bertellifotografia-17023032-2048x1365.jpg#/',
     title: 'Scaling DTC Luxury Retail to ₹1.5 Cr in 120 Days',
     snippet: 'Launched wholesale & retail store with 800+ products. AI-enhanced imagery and powerful product SEO.',
     challenge: 'Belle Maison faced a classic scaling bottleneck. Managing inventory for 800+ SKUs across both wholesale (B2B) and retail (DTC) channels manually was causing stock discrepancies. Their existing digital presence was fragmented, with slow load times and no automated marketing, resulting in a high cart abandonment rate and low repeat purchase frequency.',

@@ -13,7 +13,7 @@ export const HERO_CONTENT = {
 };
 
 export const SECTION_1_CONTENT = {
-  title: "Why Your Website Matters in 2024-2025",
+  title: "Why Your Website Matters in 2024-2026",
   description: "Your website is often the first interaction potential customers have with your business. In today's digital landscape, a website must be more than just a digital brochure—it needs to be a strategic business tool that:",
   points: [
     { title: "Builds Credibility & Trust", desc: "Professional design signals that you're a legitimate, established business" },

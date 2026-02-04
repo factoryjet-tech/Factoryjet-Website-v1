@@ -336,7 +336,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
                   <Linkedin className="w-4 h-4 md:w-5 md:h-5" aria-hidden="true" />
                 </a>
             </div>
-            <p className="text-gray-500 text-xs md:text-sm font-medium">&copy; 2025 FactoryJet. Designed for Growth.</p>
+            <p className="text-gray-500 text-xs md:text-sm font-medium">&copy; 2026 FactoryJet. Designed for Growth.</p>
         </div>
       </footer>
     </div>

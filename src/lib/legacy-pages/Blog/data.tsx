@@ -85,8 +85,8 @@ export const POSTS: BlogPost[] = [
   },
   {
     id: '2',
-    slug: 'seo-2025-blueprint-manufacturers',
-    title: 'SEO in 2025: The Blueprint for Indian Manufacturers',
+    slug: 'seo-2026-blueprint-manufacturers',
+    title: 'SEO in 2026: The Blueprint for Indian Manufacturers',
     excerpt: 'The landscape of search engines is shifting. Here is how your factory can stay visible to local distributors and global importers.',
     category: 'Web Design & Strategy',
     author: 'Sarah Jenkins',

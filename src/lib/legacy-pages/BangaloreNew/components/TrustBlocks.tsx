@@ -256,7 +256,7 @@ export const Footer = () => (
                 <p>Our website development in Bangalore services help businesses in Koramangala, Whitefield, Electronic City, HSR Layout, Indiranagar, Marathahalli, Jayanagar, and all Bengaluru areas establish powerful online presence. Whether you need a website designer in Bangalore, website developer in Bangalore, or complete website development agency in Bangalore services — FactoryJet delivers results.</p>
                 <p>As a top-rated e-commerce design company in Bangalore and e-commerce development company in Bangalore, we build Shopify stores, WooCommerce platforms, and custom e-commerce solutions. Looking for Shopify store development company in Bangalore? FactoryJet has delivered 120+ successful online stores. Our WordPress website development Bangalore services power 200+ business websites.</p>
                 <p>Service Areas: Bangalore, Bengaluru, Koramangala, Whitefield, Electronic City, HSR Layout, Indiranagar, Marathahalli, BTM Layout, Jayanagar, JP Nagar, Hebbal, Yelahanka, Malleshwaram, and all Karnataka districts. Best website design company in Bangalore — delivering results with 25+ years of expertise.</p>
-                <p className="text-center pt-4">© 2025 FactoryJet Technologies. All rights reserved. | Privacy Policy | Terms of Service</p>
+                <p className="text-center pt-4">© 2026 FactoryJet Technologies. All rights reserved. | Privacy Policy | Terms of Service</p>
             </div>
         </div>
     </footer>

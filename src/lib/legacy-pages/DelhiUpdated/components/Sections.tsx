@@ -746,7 +746,7 @@ export const Footer = () => (
       </div>
 
       <div className="text-center text-xs text-gray-600 mt-8">
-        © 2025 FactoryJet Technologies. All rights reserved. | Privacy Policy | Terms of Service
+        © 2026 FactoryJet Technologies. All rights reserved. | Privacy Policy | Terms of Service
       </div>
     </div>
   </footer>
