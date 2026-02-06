@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { ecommerceAlternates } from '@/data/hreflangMap'
 import EcommPage from '@/pages/Ecomm'
 
 export const metadata: Metadata = {
@@ -62,6 +63,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/ecommerce',
+    languages: ecommerceAlternates,
   },
 }
 

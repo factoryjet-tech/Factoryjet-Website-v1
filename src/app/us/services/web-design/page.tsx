@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { webDesignAlternates } from '@/data/hreflangMap'
 import UsWebServicePage from '@/pages/UsWebServicePage/App'
 
 export const metadata: Metadata = {
@@ -38,6 +39,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/us/services/web-design',
+    languages: webDesignAlternates,
   },
   robots: {
     index: true,

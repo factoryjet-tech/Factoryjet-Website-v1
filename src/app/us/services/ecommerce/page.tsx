@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { ecommerceAlternates } from '@/data/hreflangMap'
 import UsEcommercePage from '@/pages/UsEcommercePage/App'
 
 export const metadata: Metadata = {
@@ -38,6 +39,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/us/services/ecommerce',
+    languages: ecommerceAlternates,
   },
   robots: {
     index: true,

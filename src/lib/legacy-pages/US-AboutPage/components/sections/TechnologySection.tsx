@@ -7,7 +7,7 @@ import { Check } from 'lucide-react';
 
 // --- CUSTOM ANIMATED ICON COMPONENT ---
 const AnimatedFeatureIcon = ({ type, isHovered }: { type: string; isHovered: boolean }) => {
-  const transition = { duration: 0.5, ease: "easeInOut" };
+  const transition = { duration: 0.5, ease: "easeInOut" as const };
 
   // Common SVG props
   const svgProps = {

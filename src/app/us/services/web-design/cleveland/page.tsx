@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import { webDesignCityAlternatesUS } from '@/data/hreflangMap'
 import ClevelandLandingPage from '@/pages/US-CleavlandLandingPage/App'
 
 export const metadata: Metadata = {
@@ -41,6 +42,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/us/services/web-design/cleveland',
+    languages: webDesignCityAlternatesUS['cleveland'],
   },
   robots: {
     index: true,

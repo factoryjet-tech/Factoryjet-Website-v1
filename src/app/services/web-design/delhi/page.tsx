@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { webDesignCityAlternatesIN } from '@/data/hreflangMap'
 import DelhiUpdatedPage from '@/pages/DelhiUpdated/App'
 
 export const metadata: Metadata = {
@@ -42,6 +43,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/web-design/delhi',
+    languages: webDesignCityAlternatesIN['delhi'],
   },
   robots: {
     index: true,

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { webDesignCityAlternatesIN } from '@/data/hreflangMap'
 import MaduraiNewPage from '@/pages/MaduraiNew'
 
 export const metadata: Metadata = {
@@ -40,6 +41,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/web-design/madurai',
+    languages: webDesignCityAlternatesIN['madurai'],
   },
   robots: {
     index: true,
