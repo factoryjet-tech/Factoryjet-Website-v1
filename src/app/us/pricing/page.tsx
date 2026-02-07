@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import { pricingAlternates } from '@/data/hreflangMap'
 import UsPricingPage from '@/pages/Us-PricingPage'
 
 export const metadata: Metadata = {
@@ -39,6 +40,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/us/pricing',
+    languages: pricingAlternates,
   },
   robots: {
     index: true,

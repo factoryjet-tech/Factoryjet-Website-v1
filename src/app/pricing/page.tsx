@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { pricingAlternates } from '@/data/hreflangMap'
 import PricingPage from '@/pages/Pricing'
 
 export const metadata: Metadata = {
@@ -57,6 +58,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/pricing',
+    languages: pricingAlternates,
   },
 }
 

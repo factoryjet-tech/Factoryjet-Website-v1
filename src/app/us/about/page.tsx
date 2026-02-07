@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { aboutAlternates } from '@/data/hreflangMap'
 import USAboutPage from '@/lib/legacy-pages/US-AboutPage/App'
 
 export const metadata: Metadata = {
@@ -36,6 +37,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/us/about',
+    languages: aboutAlternates,
   },
   robots: {
     index: true,

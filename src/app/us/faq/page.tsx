@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import { faqAlternates } from '@/data/hreflangMap'
 import UsFaqPage from '@/pages/US-FAQ'
 
 export const metadata: Metadata = {
@@ -39,6 +40,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/us/faq',
+    languages: faqAlternates,
   },
   robots: {
     index: true,

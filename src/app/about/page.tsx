@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { aboutAlternates } from '@/data/hreflangMap'
 import AboutPage from '@/pages/About'
 
 export const metadata: Metadata = {
@@ -57,6 +58,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/about',
+    languages: aboutAlternates,
   },
 }
 

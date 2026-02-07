@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { homeAlternates } from '@/data/hreflangMap'
 import UsHomePage from '@/pages/UsHomePage/App'
 
 export const metadata: Metadata = {
@@ -36,6 +37,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/us',
+    languages: homeAlternates,
   },
   robots: {
     index: true,

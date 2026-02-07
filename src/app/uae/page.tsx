@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import { homeAlternates } from '@/data/hreflangMap'
 import UaePage from '@/pages/UaePage'
 
 // Organization structured data for SEO
@@ -159,11 +160,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/uae',
-    languages: {
-      'en-AE': 'https://factoryjet.com/uae',
-      'en-US': 'https://factoryjet.com/us',
-      'en-IN': 'https://factoryjet.com',
-    },
+    languages: homeAlternates,
   },
 }
 

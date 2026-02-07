@@ -1,21 +1,33 @@
 /**
- * Hreflang mapping for FactoryJet service pages.
+ * Hreflang mapping for FactoryJet pages.
  *
  * Rules enforced:
  *   - Absolute URLs only.
- *   - x-default always points to the India (en-IN) URL.
+ *   - x-default always points to the India (en-IN) URL (or US if IN doesn't exist).
  *   - en-AE points to /uae (country landing) until dedicated UAE service pages exist.
- *   - City pages that exist in only one country omit all other locale keys;
- *     only en-IN (or en-US) + x-default are included.
+ *   - Pages that exist in only one country omit all other locale keys;
+ *     only the existing locale + x-default are included.
  *
  * Consume via Next.js Metadata API:
- *     import { hreflangMap } from '@/data/hreflangMap'
- *     alternates: { canonical: '...', languages: hreflangMap['web-design'] }
+ *     import { homeAlternates } from '@/data/hreflangMap'
+ *     alternates: { canonical: '...', languages: homeAlternates }
  */
 
-// ---------------------------------------------------------------------------
-// Service-level clusters (pages that have both IN and US variants)
-// ---------------------------------------------------------------------------
+// ===========================================================================
+// COUNTRY-LEVEL LANDING PAGES
+// ===========================================================================
+
+/** Full 3-locale cluster for home pages: / ↔ /us ↔ /uae */
+export const homeAlternates = {
+  'en-IN': 'https://factoryjet.com',
+  'en-US': 'https://factoryjet.com/us',
+  'en-AE': 'https://factoryjet.com/uae',
+  'x-default': 'https://factoryjet.com',
+} as const
+
+// ===========================================================================
+// SERVICE PAGES (IN + US variants exist; UAE points to /uae landing)
+// ===========================================================================
 
 /** Full 3-locale cluster for /services/web-design ↔ /us/services/web-design */
 export const webDesignAlternates = {
@@ -32,6 +44,46 @@ export const ecommerceAlternates = {
   'en-AE': 'https://factoryjet.com/uae',
   'x-default': 'https://factoryjet.com/services/ecommerce',
 } as const
+
+// ===========================================================================
+// GENERAL PAGES (IN + US variants exist)
+// ===========================================================================
+
+/** Pricing pages: /pricing ↔ /us/pricing */
+export const pricingAlternates = {
+  'en-IN': 'https://factoryjet.com/pricing',
+  'en-US': 'https://factoryjet.com/us/pricing',
+  'en-AE': 'https://factoryjet.com/uae',
+  'x-default': 'https://factoryjet.com/pricing',
+} as const
+
+/** About pages: /about ↔ /us/about */
+export const aboutAlternates = {
+  'en-IN': 'https://factoryjet.com/about',
+  'en-US': 'https://factoryjet.com/us/about',
+  'en-AE': 'https://factoryjet.com/uae',
+  'x-default': 'https://factoryjet.com/about',
+} as const
+
+// ===========================================================================
+// SINGLE-COUNTRY PAGES (no alternates in other countries)
+// ===========================================================================
+
+/** Contact page (India only) */
+export const contactAlternates = {
+  'en-IN': 'https://factoryjet.com/contact',
+  'x-default': 'https://factoryjet.com/contact',
+} as const
+
+/** FAQ page (US only) */
+export const faqAlternates = {
+  'en-US': 'https://factoryjet.com/us/faq',
+  'x-default': 'https://factoryjet.com/us/faq',
+} as const
+
+// ===========================================================================
+// CITY-SPECIFIC SERVICE PAGES
+// ===========================================================================
 
 // ---------------------------------------------------------------------------
 // India-only city pages  (no US / UAE equivalents exist)
