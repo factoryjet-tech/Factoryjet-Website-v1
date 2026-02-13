@@ -3,22 +3,8 @@ import { webDesignCityAlternatesIN } from '@/data/hreflangMap'
 import DelhiUpdatedPage from '@/pages/DelhiUpdated/App'
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Delhi | Professional Website Design Services | FactoryJet',
-  description: 'Award-winning Web Design Company in Delhi. Beautiful, conversion-focused websites with modern UI/UX. Mobile-responsive, fast-loading designs. Serving Connaught Place, Gurgaon, Noida, South Delhi & Dwarka. Free consultation available!',
-  keywords: [
-    'Web Design Company in Delhi',
-    'Website Design Services Delhi',
-    'UI/UX Design Delhi',
-    'Custom Web Design Delhi',
-    'Professional Web Designer Delhi',
-    'Web Design Agency Delhi',
-    'Best web designers Delhi',
-    'Responsive web design Delhi',
-    'Mobile web design Delhi',
-    'Website redesign services Delhi',
-    'Web Design Gurgaon',
-    'Web Design Noida'
-  ],
+  title: 'Web Design Company in Delhi – Trusted & Result-Driven Experts',
+  description: 'Leading web design company in Delhi delivering high-performance websites for corporates and startups. Serving Connaught Place, Gurgaon & Noida.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

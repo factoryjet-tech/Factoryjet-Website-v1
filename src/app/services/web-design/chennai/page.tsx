@@ -3,20 +3,8 @@ import { webDesignCityAlternatesIN } from '@/data/hreflangMap'
 import ChennaiPage from '@/pages/chennai'
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Chennai | Professional Website Design Services | FactoryJet',
-  description: 'Award-winning Web Design Company in Chennai. Beautiful, conversion-focused websites with modern UI/UX. Mobile-responsive, fast-loading designs. Serving OMR, Anna Nagar, T Nagar, Adyar & Velachery. Free consultation available!',
-  keywords: [
-    'Web Design Company in Chennai',
-    'Website Design Services Chennai',
-    'UI/UX Design Chennai',
-    'Custom Web Design Chennai',
-    'Professional Web Designer Chennai',
-    'Web Design Agency Chennai',
-    'Best web designers Chennai',
-    'Responsive web design Chennai',
-    'Mobile web design Chennai',
-    'Website redesign services Chennai'
-  ],
+  title: 'Expert Web Design Company in Chennai | Creative Specialists',
+  description: 'Professional web design company in Chennai building fast, scalable websites for businesses across OMR, Anna Nagar & Adyar.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

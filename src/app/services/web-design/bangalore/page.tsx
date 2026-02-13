@@ -3,20 +3,8 @@ import { webDesignCityAlternatesIN } from '@/data/hreflangMap'
 import BangaloreNewPage from '@/pages/BangaloreNew'
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Bangalore | Professional Website Design Services | FactoryJet',
-  description: 'Award-winning Web Design Company in Bangalore. Beautiful, conversion-focused websites with modern UI/UX. Mobile-responsive, fast-loading designs. Serving Whitefield, Koramangala, Indiranagar, HSR Layout & Electronic City. Free consultation available!',
-  keywords: [
-    'Web Design Company in Bangalore',
-    'Website Design Services Bangalore',
-    'UI/UX Design Bangalore',
-    'Custom Web Design Bangalore',
-    'Professional Web Designer Bangalore',
-    'Web Design Agency Bangalore',
-    'Best web designers Bangalore',
-    'Responsive web design Bangalore',
-    'Mobile web design Bangalore',
-    'Website redesign services Bangalore'
-  ],
+  title: 'Leading Web Design Company in Bangalore | IT & Startup Experts',
+  description: 'Professional web design company in Bangalore creating fast, SEO-friendly websites for startups & IT businesses. Serving Whitefield, Koramangala & Electronic City.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

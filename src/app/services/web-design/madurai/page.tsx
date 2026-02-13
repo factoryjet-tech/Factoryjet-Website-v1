@@ -3,20 +3,8 @@ import { webDesignCityAlternatesIN } from '@/data/hreflangMap'
 import MaduraiNewPage from '@/pages/MaduraiNew'
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Madurai | Professional Website Design Services | FactoryJet',
-  description: 'Award-winning Web Design Company in Madurai. Beautiful, conversion-focused websites with modern UI/UX. Mobile-responsive, fast-loading designs. Serving Anna Nagar, KK Nagar, Goripalayam, Thirunagar & Mattuthavani. Free consultation available!',
-  keywords: [
-    'Web Design Company in Madurai',
-    'Website Design Services Madurai',
-    'UI/UX Design Madurai',
-    'Custom Web Design Madurai',
-    'Professional Web Designer Madurai',
-    'Web Design Agency Madurai',
-    'Best web designers Madurai',
-    'Responsive web design Madurai',
-    'Mobile web design Madurai',
-    'Website redesign services Madurai'
-  ],
+  title: 'Professional Web Design Company in Madurai | FactoryJet',
+  description: 'Reliable web design company in Madurai building affordable, performance-focused websites across Anna Nagar & KK Nagar.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

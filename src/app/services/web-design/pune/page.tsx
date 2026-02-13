@@ -3,20 +3,8 @@ import { webDesignCityAlternatesIN } from '@/data/hreflangMap'
 import PuneNewPage from '@/pages/PuneNew'
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Pune | Professional Website Design Services | FactoryJet',
-  description: 'Award-winning Web Design Company in Pune. Beautiful, conversion-focused websites with modern UI/UX. Mobile-responsive, fast-loading designs. Serving Hinjewadi, Kharadi, Wakad, Baner & Viman Nagar. Free consultation available!',
-  keywords: [
-    'Web Design Company in Pune',
-    'Website Design Services Pune',
-    'UI/UX Design Pune',
-    'Custom Web Design Pune',
-    'Professional Web Designer Pune',
-    'Web Design Agency Pune',
-    'Best web designers Pune',
-    'Responsive web design Pune',
-    'Mobile web design Pune',
-    'Website redesign services Pune'
-  ],
+  title: 'Trusted Website Design Company in Pune | Custom Web Design Services',
+  description: 'Looking for a website design company in Pune? We build fast, conversion-driven websites for businesses in Hinjewadi, Kharadi & Wakad. Free consultation.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

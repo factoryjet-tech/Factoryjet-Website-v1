@@ -3,20 +3,8 @@ import { webDesignCityAlternatesIN } from '@/data/hreflangMap'
 import HyderabadPage from '@/pages/Hyderabad'
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Hyderabad | Professional Website Design Services | FactoryJet',
-  description: 'Award-winning Web Design Company in Hyderabad. Beautiful, conversion-focused websites with modern UI/UX. Mobile-responsive, fast-loading designs. Serving HITEC City, Gachibowli, Madhapur, Kondapur & Jubilee Hills. Free consultation available!',
-  keywords: [
-    'Web Design Company in Hyderabad',
-    'Website Design Services Hyderabad',
-    'UI/UX Design Hyderabad',
-    'Custom Web Design Hyderabad',
-    'Professional Web Designer Hyderabad',
-    'Web Design Agency Hyderabad',
-    'Best web designers Hyderabad',
-    'Responsive web design Hyderabad',
-    'Mobile web design Hyderabad',
-    'Website redesign services Hyderabad'
-  ],
+  title: 'Web Design Company in Hyderabad – Proven Digital Growth Experts',
+  description: 'Strategic web design company in Hyderabad creating high-performance websites for tech firms in HITEC City, Gachibowli & Madhapur.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

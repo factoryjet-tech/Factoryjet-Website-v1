@@ -3,20 +3,8 @@ import { webDesignCityAlternatesIN } from '@/data/hreflangMap'
 import MumbaiNewPage from '@/pages/MumbaiNew'
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Mumbai | Professional Website Design Services | FactoryJet',
-  description: 'Award-winning Web Design Company in Mumbai. Beautiful, conversion-focused websites with modern UI/UX. Mobile-responsive, fast-loading designs. Serving Andheri, BKC, Powai, Navi Mumbai & Thane. Free consultation available!',
-  keywords: [
-    'Web Design Company in Mumbai',
-    'Website Design Services Mumbai',
-    'UI/UX Design Mumbai',
-    'Custom Web Design Mumbai',
-    'Professional Web Designer Mumbai',
-    'Web Design Agency Mumbai',
-    'Best web designers Mumbai',
-    'Responsive web design Mumbai',
-    'Mobile web design Mumbai',
-    'Website redesign services Mumbai'
-  ],
+  title: 'Best Website Design Company in Mumbai | Expert Designers',
+  description: 'Professional website design company in Mumbai offering SEO-friendly, fast-loading websites. Serving Andheri, BKC & Navi Mumbai. Free consultation.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

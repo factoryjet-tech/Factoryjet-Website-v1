@@ -3,20 +3,8 @@ import { webDesignCityAlternatesIN } from '@/data/hreflangMap'
 import AhmedabadPage from '@/pages/Ahmedabad'
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Ahmedabad | Professional Website Design Services | FactoryJet',
-  description: 'Award-winning Web Design Company in Ahmedabad. Beautiful, conversion-focused websites with modern UI/UX. Mobile-responsive, fast-loading designs. Serving SG Highway, Prahlad Nagar, Satellite, Vastrapur & Bodakdev. Free consultation available!',
-  keywords: [
-    'Web Design Company in Ahmedabad',
-    'Website Design Services Ahmedabad',
-    'UI/UX Design Ahmedabad',
-    'Custom Web Design Ahmedabad',
-    'Professional Web Designer Ahmedabad',
-    'Web Design Agency Ahmedabad',
-    'Best web designers Ahmedabad',
-    'Responsive web design Ahmedabad',
-    'Mobile web design Ahmedabad',
-    'Website redesign services Ahmedabad'
-  ],
+  title: 'Web Design Company in Ahmedabad | Elite Website Solutions',
+  description: 'Trusted web design company in Ahmedabad creating scalable, revenue-focused websites for businesses in SG Highway, Vastrapur & Bodakdev.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
