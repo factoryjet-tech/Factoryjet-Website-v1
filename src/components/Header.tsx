@@ -15,7 +15,9 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '' 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null);
-  const { openModal } = useContactModal();
+  const { openModal: openContactModal } = useContactModal();
+  const isUS = basePath.startsWith('/us');
+  const openModal = () => openContactModal(isUS ? 'us' : 'in');
 
   // For solid variant, always show scrolled style
   const showSolidStyle = variant === 'solid' || isScrolled;

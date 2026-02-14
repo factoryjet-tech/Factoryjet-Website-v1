@@ -1867,19 +1867,20 @@ const FooterLocal = ({ onCtaClick }: { onCtaClick: () => void }) => {
 
 function UsHomePage() {
   const { openModal } = useContactModal();
+  const openUsModal = () => openModal('us');
 
   return (
     <div className="min-h-screen bg-white text-[#0F172A] font-inter selection:bg-[#FF6B35] selection:text-white">
       <Header basePath="/us" />
-      <Hero onCtaClick={openModal} />
+      <Hero onCtaClick={openUsModal} />
       <TestimonialSection />
-      <ProblemSection onCtaClick={openModal} />
-      <Services onCtaClick={openModal} />
+      <ProblemSection onCtaClick={openUsModal} />
+      <Services onCtaClick={openUsModal} />
       <Industries />
       <CaseStudies />
-      <Methodology onCtaClick={openModal} />
-      <WhyFactoryJet onCtaClick={openModal} />
-      <Pricing onCtaClick={openModal} />
+      <Methodology onCtaClick={openUsModal} />
+      <WhyFactoryJet onCtaClick={openUsModal} />
+      <Pricing onCtaClick={openUsModal} />
       <FAQ />
       <section id="contact" className="bg-[#0F172A] py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-[#0052CC]/10"></div>
@@ -1890,8 +1891,8 @@ function UsHomePage() {
           <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
             Stop losing leads to competitors. Get a free strategy roadmap and quote in 24 hours.
           </p>
-          <button 
-            onClick={openModal}
+          <button
+            onClick={openUsModal}
             className="bg-[#FF6B35] hover:bg-[#E65020] text-white font-bold text-xl px-12 py-5 rounded-xl shadow-2xl shadow-orange-600/30 hover:scale-105 transition-all flex items-center justify-center gap-3 mx-auto min-h-[64px]"
           >
             Start Your Project <Rocket size={24} />
@@ -1901,7 +1902,7 @@ function UsHomePage() {
           </p>
         </div>
       </section>
-      <FooterUS onCtaClick={openModal} />
+      <FooterUS onCtaClick={openUsModal} />
     </div>
   );
 }

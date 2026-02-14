@@ -6,7 +6,8 @@ import { Rocket, DollarSign, Target, Play, ChevronRight } from 'lucide-react';
 import { useContactModal } from '@/context/ContactModalContext';
 
 export const HeroSection: React.FC = () => {
-  const { openModal } = useContactModal();
+  const { openModal: openContactModal } = useContactModal();
+  const openModal = () => openContactModal('us');
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-32 pb-20 bg-[#0052CC] overflow-hidden selection:bg-orange-500 selection:text-white">

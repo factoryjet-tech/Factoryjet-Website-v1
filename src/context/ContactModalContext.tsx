@@ -2,9 +2,12 @@
 
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
+export type ModalRegion = 'in' | 'us';
+
 interface ContactModalContextType {
   isOpen: boolean;
-  openModal: () => void;
+  region: ModalRegion;
+  openModal: (region?: ModalRegion) => void;
   closeModal: () => void;
 }
 
@@ -12,12 +15,16 @@ const ContactModalContext = createContext<ContactModalContextType | undefined>(u
 
 export const ContactModalProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [region, setRegion] = useState<ModalRegion>('in');
 
-  const openModal = () => setIsOpen(true);
+  const openModal = (region: ModalRegion = 'in') => {
+    setRegion(region);
+    setIsOpen(true);
+  };
   const closeModal = () => setIsOpen(false);
 
   return (
-    <ContactModalContext.Provider value={{ isOpen, openModal, closeModal }}>
+    <ContactModalContext.Provider value={{ isOpen, region, openModal, closeModal }}>
       {children}
     </ContactModalContext.Provider>
   );

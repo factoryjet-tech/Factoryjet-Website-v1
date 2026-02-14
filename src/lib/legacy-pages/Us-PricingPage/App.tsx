@@ -293,14 +293,15 @@ const FooterLocal = () => (
 
 export default function App() {
   const { openModal } = useContactModal();
+  const openUsModal = () => openModal('us');
 
   return (
     <main className="min-h-screen font-body text-slate-800 bg-slate-50 selection:bg-blue-100 selection:text-jet-blue-900">
       <Header basePath="/us" variant="solid" />
       <Hero />
-      <PricingTabs onOpenContact={openModal} />
-      <FAQSection onOpenContact={openModal} />
-      <CTABottom onOpenContact={openModal} />
+      <PricingTabs onOpenContact={openUsModal} />
+      <FAQSection onOpenContact={openUsModal} />
+      <CTABottom onOpenContact={openUsModal} />
       <FooterUS />
     </main>
   );

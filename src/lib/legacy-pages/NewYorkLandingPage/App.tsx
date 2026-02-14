@@ -14,6 +14,7 @@ import { ServicesIntro } from './components/sections/ServicesIntro';
 
 function App() {
   const { openModal } = useContactModal();
+  const openUsModal = () => openModal('us');
 
   return (
     <main className="min-h-screen bg-slate-50 font-sans">
@@ -25,7 +26,7 @@ function App() {
       <HiddenCostTable />
       <FactoryJetDifference />
       <ServicesIntro />
-      <FooterUS onCtaClick={openModal} />
+      <FooterUS onCtaClick={openUsModal} />
     </main>
   );
 }

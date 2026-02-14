@@ -68,15 +68,23 @@ const services: {
   },
 ];
 
-const budgets: { id: BudgetRange; label: string; range: string }[] = [
+const budgetsIN: { id: BudgetRange; label: string; range: string }[] = [
   { id: "starter", label: "Starter", range: "₹25K - ₹50K" },
   { id: "business", label: "Business", range: "₹50K - ₹1.2L" },
   { id: "enterprise", label: "Enterprise", range: "₹1.2L+" },
   { id: "not-sure", label: "Not Sure", range: "Need guidance" },
 ];
 
+const budgetsUS: { id: BudgetRange; label: string; range: string }[] = [
+  { id: "starter", label: "Launch", range: "$1,999 - $3,499" },
+  { id: "business", label: "Growth", range: "$3,999 - $6,999" },
+  { id: "enterprise", label: "Scale", range: "$7,999 - $14,999" },
+  { id: "not-sure", label: "Not Sure", range: "Need guidance" },
+];
+
 const ContactFormModal: React.FC = () => {
-  const { isOpen, closeModal } = useContactModal();
+  const { isOpen, region, closeModal } = useContactModal();
+  const budgets = region === 'us' ? budgetsUS : budgetsIN;
   const [step, setStep] = useState<1 | 2 | 3>(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -112,6 +120,19 @@ const ContactFormModal: React.FC = () => {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
+    if (name === 'phone' && region === 'us') {
+      const cleaned = value.replace(/\D/g, '');
+      if (cleaned.length <= 10) {
+        let formatted = cleaned;
+        if (cleaned.length > 3 && cleaned.length <= 6) {
+          formatted = `(${cleaned.slice(0, 3)}) ${cleaned.slice(3)}`;
+        } else if (cleaned.length > 6) {
+          formatted = `(${cleaned.slice(0, 3)}) ${cleaned.slice(3, 6)}-${cleaned.slice(6)}`;
+        }
+        setFormData((prev) => ({ ...prev, phone: formatted }));
+      }
+      return;
+    }
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
@@ -370,7 +391,7 @@ const ContactFormModal: React.FC = () => {
             name="phone"
             value={formData.phone}
             onChange={handleInputChange}
-            placeholder="+91 98765 43210"
+            placeholder={region === 'us' ? "(555) 123-4567" : "+91 98765 43210"}
             className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-jet-blue focus:ring-2 focus:ring-blue-100 outline-none transition-all text-sm"
           />
         </div>

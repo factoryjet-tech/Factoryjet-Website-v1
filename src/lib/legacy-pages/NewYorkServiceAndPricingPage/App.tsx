@@ -13,6 +13,7 @@ import PricingSection from './components/pricing/PricingSection';
 
 export default function App() {
   const { openModal } = useContactModal();
+  const openUsModal = () => openModal('us');
 
   return (
     <main className="min-h-screen w-full bg-[#F8FAFC] text-[#0F172A]">
@@ -47,7 +48,7 @@ export default function App() {
 
       {/* Pricing */}
       <div id="pricing">
-        <PricingSection onSelectPlan={openModal} />
+        <PricingSection onSelectPlan={openUsModal} />
       </div>
 
       {/* CTA Section */}
@@ -60,7 +61,7 @@ export default function App() {
             Get a free consultation and custom quote for your NYC business website.
           </p>
           <button
-            onClick={() => openModal()}
+            onClick={openUsModal}
             className="inline-flex items-center gap-2 bg-[#FF6B35] hover:bg-[#e55a28] text-white px-8 py-4 rounded-lg font-bold transition-all shadow-lg"
           >
             Get Free Quote
@@ -68,7 +69,7 @@ export default function App() {
         </div>
       </section>
 
-      <FooterUS onCtaClick={openModal} />
+      <FooterUS onCtaClick={openUsModal} />
     </main>
   );
 }

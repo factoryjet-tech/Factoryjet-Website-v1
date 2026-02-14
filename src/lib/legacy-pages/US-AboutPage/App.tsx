@@ -25,6 +25,7 @@ import FinalCTASection from './components/sections/FinalCTASection';
 
 export default function App() {
   const { openModal } = useContactModal();
+  const openUsModal = () => openModal('us');
 
   return (
     <div className="min-h-screen font-sans selection:bg-jetOrange selection:text-white">
@@ -34,22 +35,22 @@ export default function App() {
       <Header basePath="/us/about" variant="transparent" />
 
       <main id="main-content">
-        <HeroSection onCtaClick={openModal} />
+        <HeroSection onCtaClick={openUsModal} />
         <ProblemSection />
         <SolutionSection />
         <ServicesSection />
         <ProcessSection />
         <StatsSection />
-        <PricingSection onCtaClick={openModal} />
+        <PricingSection onCtaClick={openUsModal} />
         <TechnologySection />
         <ComparisonSection />
         <CaseStudiesSection />
         <TestimonialSection />
-        <FAQSection onCtaClick={openModal} />
-        <FinalCTASection onCtaClick={openModal} />
+        <FAQSection onCtaClick={openUsModal} />
+        <FinalCTASection onCtaClick={openUsModal} />
       </main>
 
-      <FooterUS onCtaClick={openModal} />
+      <FooterUS onCtaClick={openUsModal} />
 
       <FloatingActionButton />
     </div>
