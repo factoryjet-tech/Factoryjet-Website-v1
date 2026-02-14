@@ -89,42 +89,42 @@ const MumbaiPage = () => {
             mainEntity: [
               {
                 "@type": "Question",
-                name: "How much does website design cost in Mumbai?",
+                name: "How long does it take to build an industrial website?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Website design costs vary based on complexity. At FactoryJet, we offer packages starting at ₹15,000 for basic websites to ₹5,00,000+ for enterprise solutions."
+                  text: "FactoryJet delivers complete industrial websites in 7 days. Our team handles design, development, catalog setup, and SEO much faster than traditional agencies."
                 }
               },
               {
                 "@type": "Question",
-                name: "How long does it take to build a website?",
+                name: "Do you provide content writing for technical products?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Our streamlined process typically delivers a website in 7 days. More complex projects may take 2-4 weeks."
+                  text: "Yes. We provide SEO-optimized technical content for manufacturers, exporters, and industrial businesses. Our team understands product specifications, certifications, and B2B buyer intent."
                 }
               },
               {
                 "@type": "Question",
-                name: "Do you provide e-commerce solutions?",
+                name: "Will my website work on mobile devices?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes, we specialize in e-commerce development with Shopify, WooCommerce, and custom platforms."
+                  text: "Yes. Every website we build is 100% mobile responsive. Your product catalog and inquiry forms will work perfectly on phones and tablets."
                 }
               },
               {
                 "@type": "Question",
-                name: "Can you integrate payment gateways?",
+                name: "Which is the best website design company in Mumbai for manufacturers?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes, we integrate all major payment gateways including Razorpay, PayPal, Stripe for secure transactions."
+                  text: "FactoryJet is among the leading website design companies in Mumbai for manufacturers, with 500+ industrial projects and export-focused expertise."
                 }
               },
               {
                 "@type": "Question",
-                name: "Will my website be mobile responsive?",
+                name: "Why do Mumbai manufacturers need a professional website?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Absolutely. All websites are fully responsive and optimized for all devices."
+                  text: "A professional website helps manufacturers attract export buyers, reduce marketplace dependency, and generate direct B2B inquiries."
                 }
               }
             ]

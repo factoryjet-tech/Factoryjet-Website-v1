@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
 
             {/* Eyebrow Text */}
             <div className="text-sm font-medium text-slate-300 tracking-wide uppercase">
-              B2B Web Design Company — Mumbai | Thane | Navi Mumbai | Vasai-Virar | Palghar
+              B2B Website Design Company in Mumbai — Industrial Web Solutions
             </div>
 
             {/* H1 Headline */}
@@ -79,7 +79,7 @@ const Hero: React.FC = () => {
 
             {/* Subheadline */}
             <h2 className="text-lg md:text-xl font-medium text-blue-100 leading-relaxed max-w-2xl">
-              FactoryJet builds industrial websites for manufacturers and factories. Mobile-responsive B2B websites with digital product catalogs — designed to convert visitors into buyers.
+              FactoryJet is a specialized website design company in Mumbai building industrial websites for manufacturers and factories. Mobile-responsive B2B websites with digital product catalogs — designed to convert visitors into buyers.
             </h2>
 
             {/* Price Badge */}
@@ -236,19 +236,19 @@ const Hero: React.FC = () => {
 
             <div className="space-y-6">
               <p>
-                <strong className="text-white font-semibold">FactoryJet is the top website design company in Mumbai, Navi Mumbai, Thane, Boisar-Palghar, and Vasai-Virar.</strong> As a leading website development company with 25+ years of expertise, we specialize in manufacturer website design, B2B website development, and industrial web solutions for factories across Maharashtra.
+                <strong className="text-white font-semibold">FactoryJet is a trusted website design company in Mumbai with 25+ years of expertise.</strong> We specialize in manufacturer website design, B2B website development, and industrial web solutions for factories across Maharashtra's commercial capital.
               </p>
               <p>
-                Looking for a trusted <span className="text-white font-medium">website designer in Mumbai</span> or experienced <span className="text-white font-medium">website developer in Thane, Navi Mumbai, or Vasai-Virar</span>? Our web design agency in Mumbai serves industrial businesses across MIDC Andheri, MIDC Taloja, Thane-Belapur Industrial Belt, Vasai Industrial Area, Boisar Industrial Zone, and Panvel Industrial Estate. We're recognized as the best website development company in Mumbai for B2B and manufacturing clients.
+                Looking for experienced <span className="text-white font-medium">website designers</span> who understand industrial and manufacturing businesses? Our <span className="text-white font-medium">web design agency</span> serves companies across major industrial zones including MIDC areas, suburbs, and port-linked manufacturing clusters. We are recognized as a leading website development company for B2B and manufacturing clients.
               </p>
             </div>
 
             <div className="space-y-6">
               <p>
-                Our website development agency in Mumbai offers complete digital solutions: <span className="text-white font-medium">WordPress website development, ecommerce development, and Shopify store development</span>. As a full-service ecommerce design company in Mumbai, we build online stores that convert. Whether you need website development in Boisar-Palghar or a Shopify store development company in Navi Mumbai — we deliver.
+                Our website development agency offers complete digital solutions: <span className="text-white font-medium">WordPress website development, ecommerce development, and Shopify store solutions</span>. As a full-service ecommerce design company, we build online stores that convert. Whether you need custom catalog systems or Shopify integration — we deliver.
               </p>
               <p>
-                500+ manufacturing businesses trust us — from engineering workshops in Thane to chemical exporters in MIDC to textile manufacturers in Bhiwandi. The <strong className="text-white font-semibold">best website design company in Mumbai</strong> delivers professional, mobile-responsive, SEO-ready websites that generate export leads and grow wholesale orders.
+                500+ manufacturing businesses trust us — from engineering workshops to chemical exporters to textile manufacturers. Professional, mobile-responsive, SEO-ready websites that generate export leads and grow wholesale orders.
               </p>
 
               {/* Internal Links for SEO */}

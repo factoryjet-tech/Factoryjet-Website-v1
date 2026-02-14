@@ -9,7 +9,7 @@ const FooterLocal: React.FC = () => {
           {/* Col 1: Brand */}
           <div>
             <div className="text-2xl font-bold font-heading mb-4 text-white">FactoryJet</div>
-            <p className="text-slate-400 text-sm mb-6">Mumbai's most trusted industrial web design agency. We transform manufacturers and exporters into global brands through professional websites.</p>
+            <p className="text-slate-400 text-sm mb-6">Trusted website design company in Mumbai. We transform manufacturers and exporters into global brands through professional industrial websites.</p>
             <div className="flex gap-4">
               <Facebook className="w-5 h-5 text-slate-400 hover:text-white cursor-pointer"/>
               <Twitter className="w-5 h-5 text-slate-400 hover:text-white cursor-pointer"/>

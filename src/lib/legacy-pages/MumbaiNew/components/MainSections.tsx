@@ -44,7 +44,7 @@ export const SocialProof: React.FC = () => {
         </div>
 
         <div className="mt-12 bg-white p-6 rounded-lg shadow-sm border border-light text-center max-w-3xl mx-auto">
-          <p className="italic text-slate">"FactoryJet built our industrial catalog website in just 5 days. We started receiving export inquiries from UAE and Europe within the first month." — Chemical Manufacturer, MIDC Taloja</p>
+          <p className="italic text-slate">"FactoryJet built our industrial catalog website in just 5 days. We started receiving export inquiries from UAE and Europe within the first month." — Chemical Manufacturer, MIDC Industrial Area</p>
         </div>
       </div>
     </section>
@@ -56,7 +56,7 @@ export const AboutSection: React.FC = () => {
   return (
     <section className="bg-white py-20">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-navy mb-12 text-center">About FactoryJet — Industrial Web Design Company in Mumbai</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-navy mb-12 text-center">About FactoryJet — Website Design Company in Mumbai for Industrial Businesses</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Col 1 */}
@@ -93,9 +93,9 @@ export const AboutSection: React.FC = () => {
 
           {/* Col 3 */}
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-navy">Service Areas in Mumbai Region</h3>
+            <h3 className="text-xl font-semibold text-navy">Service Coverage</h3>
             <p className="text-slate text-sm leading-relaxed">
-              We proudly serve industrial businesses across Greater Mumbai: Thane, Navi Mumbai, Vasai-Virar, Boisar, Palghar, Bhiwandi, Kalyan-Dombivli, Ulhasnagar, Panvel, Kharghar, Vashi, Airoli, Turbhe, MIDC Andheri, MIDC Taloja, MIDC Ambernath, Thane-Belapur Industrial Belt, Andheri East, Goregaon, Malad, Borivali, Dahisar, Mira Road, Virar, and all Maharashtra industrial districts.
+              We proudly serve industrial businesses across Greater Mumbai Region including key manufacturing zones, industrial estates, and commercial areas throughout Mumbai and surrounding districts.
             </p>
           </div>
         </div>
@@ -111,17 +111,17 @@ export const AboutSection: React.FC = () => {
         <div className="mt-12 bg-bgLight p-8 rounded-2xl border border-light">
           <h3 className="text-2xl font-bold text-navy mb-4">Why Mumbai Manufacturers Choose FactoryJet</h3>
           <p className="text-slate mb-6">
-            Mumbai Metropolitan Region is India's largest industrial hub with the country's busiest port handling 60% of India's container trade. The Thane-Belapur industrial corridor, Vasai-Virar manufacturing zone, and MIDC industrial estates house 50,000+ manufacturing units and 15,000+ registered exporters.
+            Mumbai is India's largest industrial hub with the country's busiest port handling 60% of container trade. The city's manufacturing zones house 50,000+ units and 15,000+ registered exporters.
           </p>
           <p className="text-slate mb-6">
-            Yet 70% of these industrial businesses operate without professional websites. They rely solely on IndiaMART, TradeIndia, and WhatsApp — missing out on direct international buyer inquiries, higher-margin export orders, and brand credibility that comes with a professional web presence.
+            Yet 70% of these industrial businesses operate without professional websites. They rely solely on marketplaces like IndiaMART and WhatsApp — missing direct international buyer inquiries, higher-margin export orders, and brand credibility.
           </p>
           <p className="text-slate mb-4">
-            FactoryJet specializes in industrial web design for Mumbai's manufacturing sector. We understand B2B buyer psychology, export inquiry generation, industrial product catalogs, and the specific needs of factories and manufacturers. Our websites help you:
+            FactoryJet specializes in industrial web design for India's leading manufacturing and export-driven businesses. We understand B2B buyer psychology, industrial product catalogs, export inquiry generation, and factory-specific positioning.
           </p>
           <ul className="list-disc list-inside text-slate space-y-2 ml-4">
             <li>Get found by international importers searching for Indian manufacturers</li>
-            <li>Generate direct export inquiries (skip the marketplace commissions)</li>
+            <li>Generate direct export inquiries (skip marketplace commissions)</li>
             <li>Showcase your factory, machinery, certifications, and capabilities</li>
             <li>Build credibility with procurement managers and corporate buyers</li>
             <li>Convert website visitors into qualified RFQs and bulk orders</li>
@@ -139,7 +139,7 @@ export const ProblemsSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4 text-center">Is Your Mumbai Factory Losing Export Orders Every Day?</h2>
         <p className="text-lg text-slate text-center mb-12 max-w-3xl mx-auto">
-          Without a professional website, Mumbai manufacturers lose millions in potential orders. In India's industrial capital, having no online presence is business suicide.
+          Without a professional website, manufacturers lose millions in potential orders. In India's industrial capital, having no online presence means invisible revenue loss.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -159,7 +159,7 @@ export const ProblemsSection: React.FC = () => {
             <div className="bg-red-100 text-red-600 text-xs font-bold px-2 py-1 inline-block rounded mb-2">COST: 70% ORDERS LOST</div>
             <h3 className="text-lg font-bold text-navy mb-3">Paying 15% Commission</h3>
             <p className="text-sm text-slate">
-              IndiaMART charges 15-20% commission on every lead. TradeIndia, Alibaba, and other portals take similar cuts. If you're doing ₹1 Cr annual business through marketplaces, you're paying ₹15-20 Lakh in commissions. A professional manufacturer website with SEO generates direct inquiries — zero commission, higher margins, and you own the customer relationship. Stop paying rent; own your digital real estate.
+              IndiaMART charges 15-20% commission on every lead. TradeIndia and Alibaba take similar cuts. If you're doing ₹1 Cr annual business through marketplaces, you're paying ₹15-20 Lakh in commissions. A professional manufacturer website with SEO generates direct inquiries — zero commission, higher margins, and you own the customer relationship. Stop paying rent; own your digital real estate.
             </p>
           </div>
 
@@ -169,7 +169,7 @@ export const ProblemsSection: React.FC = () => {
             <div className="bg-red-100 text-red-600 text-xs font-bold px-2 py-1 inline-block rounded mb-2">COST: 78% BUYERS LOST</div>
             <h3 className="text-lg font-bold text-navy mb-3">No Mobile Responsive Site</h3>
             <p className="text-sm text-slate">
-              78% of B2B buyers now research suppliers on mobile devices. Procurement managers, importers, and business owners browse on phones during travel, meetings, and trade shows. If your website isn't mobile responsive (or doesn't exist), you're invisible to 78% of potential buyers. Google also penalizes non-mobile-friendly sites, pushing you further down in search results.
+              78% of B2B buyers now research suppliers on mobile devices. Procurement managers, importers, and business owners browse on phones during travel, meetings, and trade shows. If your website isn't mobile responsive (or doesn't exist), you're invisible to 78% of potential buyers. Google also penalizes non-mobile-friendly sites, pushing you down in search results.
             </p>
           </div>
 
@@ -179,7 +179,7 @@ export const ProblemsSection: React.FC = () => {
             <div className="bg-red-100 text-red-600 text-xs font-bold px-2 py-1 inline-block rounded mb-2">COST: ZERO CREDIBILITY</div>
             <h3 className="text-lg font-bold text-navy mb-3">No Online Trust Signals</h3>
             <p className="text-sm text-slate">
-              International buyers need to trust you before placing ₹50 Lakh orders. They look for: professional website, factory photos, machinery details, quality certifications (ISO, CE, FDA), client testimonials, and export history. A WhatsApp-only business or basic IndiaMART listing screams "small-time operation." Professional websites with trust signals close deals 3x faster with 40% higher order values.
+              International buyers need trust before placing ₹50 Lakh orders. They look for: professional website, factory photos, machinery details, quality certifications (ISO, CE, FDA), client testimonials, and export history. A WhatsApp-only business or basic marketplace listing screams "small-time operation." Professional websites with trust signals close deals 3x faster with 40% higher order values.
             </p>
           </div>
 
@@ -203,7 +203,7 @@ export const SolutionSection: React.FC = () => {
   return (
     <section className="bg-white py-20">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-navy mb-12 text-center">How FactoryJet Solves Mumbai Manufacturers' Website Problems</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-navy mb-12 text-center">How FactoryJet Solves Manufacturers' Website Problems</h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Comparison Table */}
@@ -214,7 +214,7 @@ export const SolutionSection: React.FC = () => {
                   <tr className="bg-bgLight border-b border-light">
                     <th className="p-4 font-semibold text-navy">Feature</th>
                     <th className="p-4 font-bold text-primary">FactoryJet</th>
-                    <th className="p-4 font-semibold text-slate">Typical Mumbai Agency</th>
+                    <th className="p-4 font-semibold text-slate">Typical Agency</th>
                     <th className="p-4 font-semibold text-slate">Freelancers</th>
                   </tr>
                 </thead>
@@ -245,7 +245,7 @@ export const SolutionSection: React.FC = () => {
           <div className="space-y-6">
             <div>
               <h3 className="text-lg font-bold text-navy mb-2">1. Industrial Sector Expertise</h3>
-              <p className="text-slate text-sm">We've built 500+ websites for Mumbai's industrial sector — manufacturers in MIDC, exporters in Navi Mumbai, fabricators in Thane, chemical companies in Vasai, and wholesale distributors in Bhiwandi. We understand industrial product catalogs, B2B buyer behavior, export compliance, and manufacturing terminology. Generic agencies don't.</p>
+              <p className="text-slate text-sm">We've built 500+ websites for industrial businesses — manufacturers, exporters, fabricators, chemical companies, and wholesale distributors. We understand industrial product catalogs, B2B buyer behavior, export compliance, and manufacturing terminology. Generic agencies don't.</p>
             </div>
             <div>
               <h3 className="text-lg font-bold text-navy mb-2">2. Export-Focused SEO</h3>
@@ -261,7 +261,7 @@ export const SolutionSection: React.FC = () => {
             </div>
             <div>
               <h3 className="text-lg font-bold text-navy mb-2">5. ROI-Focused Pricing</h3>
-              <p className="text-slate text-sm">We offer transparent, flexible packages designed for measurable ROI. Whether you are a startup or an enterprise, we have a plan that fits your budget and growth goals. No hidden fees, just predictable value.</p>
+              <p className="text-slate text-sm">We offer transparent, flexible packages designed for measurable ROI. Whether you are a startup or enterprise, we have a plan that fits your budget and growth goals. No hidden fees, just predictable value.</p>
             </div>
             <div>
               <h3 className="text-lg font-bold text-navy mb-2">6. Catalog & Product Management</h3>
@@ -415,7 +415,7 @@ export const LocalSEOSection: React.FC = () => {
               <h4 className="font-bold text-navy mb-2">Nearby Landmarks</h4>
               <p className="mb-4">BKC, Bandra East, Near Diamond District, 10 mins from Bandra Kurla Complex Metro Station</p>
               <h4 className="font-bold text-navy mb-2">Service Areas</h4>
-              <p>We serve industrial businesses across: Mumbai City, Thane, Navi Mumbai (Vashi, CBD Belapur, Airoli, Turbhe), Vasai-Virar, Boisar, Palghar, Bhiwandi, Kalyan-Dombivli, Ulhasnagar, Panvel, Kharghar, MIDC Andheri, MIDC Taloja, MIDC Ambernath, Thane-Belapur Industrial Belt, and all Maharashtra industrial districts.</p>
+              <p>We serve industrial businesses across the Greater Mumbai Region and surrounding areas.</p>
             </div>
           </div>
           <div className="h-full min-h-[400px] rounded-xl overflow-hidden">

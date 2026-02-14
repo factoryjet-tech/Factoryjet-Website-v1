@@ -4,13 +4,13 @@ export const servicesData: ServiceItem[] = [
   {
     title: "Starter Industrial Website",
     idealFor: "Small manufacturers, workshops, new exporters",
-    description: "Perfect for Mumbai's small manufacturers and industrial workshops looking to establish online presence quickly. Basic catalog website with product showcase, about company, and contact/inquiry form.",
+    description: "Perfect for small manufacturers and industrial workshops looking to establish online presence quickly. Basic catalog website with product showcase, about company, and contact/inquiry form.",
     features: ["5 Page Industrial Website", "Up to 25 Products/Services Listing", "Mobile Responsive Design", "WhatsApp Chat Integration", "Basic SEO Setup", "Contact Form with Email", "Google Maps Integration", "SSL Certificate", "30 Days Post-Launch Support"]
   },
   {
     title: "Manufacturer Business Website",
     idealFor: "Medium manufacturers, established exporters",
-    description: "Comprehensive manufacturer website for established industrial businesses in Thane, Navi Mumbai, and MIDC areas. Full product catalog, export credentials, and lead generation optimization.",
+    description: "Comprehensive manufacturer website for established industrial businesses. Full product catalog, export credentials, and lead generation optimization from an experienced website design company in Mumbai.",
     features: ["Up to 15 Pages Custom Design", "Unlimited Product Catalog", "Export Credentials Section (ISO, CE, FDA)", "Factory Gallery & Machinery Photos", "Client Testimonials Section", "Blog for Industry Content", "Advanced SEO Optimization", "CRM Integration Ready", "60 Days Support"]
   },
   {
@@ -22,7 +22,7 @@ export const servicesData: ServiceItem[] = [
   {
     title: "B2B E-Commerce Portal",
     idealFor: "Wholesalers, distributors, B2B sellers",
-    description: "Full B2B e-commerce platform for Mumbai wholesalers and distributors. Customer accounts, tiered pricing, bulk ordering, and credit management.",
+    description: "Full B2B e-commerce platform for wholesalers and distributors. Customer accounts, tiered pricing, bulk ordering, and credit management.",
     features: ["B2B Customer Accounts", "Tiered/Customer-Specific Pricing", "Bulk Order Management", "Credit Terms & Invoicing", "ERP Integration (SAP, Tally, ERPNext)", "Purchase Order Workflows", "Analytics Dashboard", "Priority Support", "Dedicated Account Manager"]
   },
   {
@@ -34,25 +34,25 @@ export const servicesData: ServiceItem[] = [
   {
     title: "Chemical & Pharma Website",
     idealFor: "Chemical manufacturers, pharma companies, API suppliers",
-    description: "Compliance-ready websites for MIDC's chemical and pharmaceutical sector. Product documentation, safety data sheets, and regulatory credentials.",
+    description: "Compliance-ready websites for chemical and pharmaceutical sector. Product documentation, safety data sheets, and regulatory credentials.",
     features: ["Product Documentation System", "Safety Data Sheet (SDS) Downloads", "Regulatory Credentials Display", "B2B Inquiry Management", "Manufacturing Facilities Showcase", "Quality Control Section", "Export License Information", "Compliance-Ready Architecture"]
   },
   {
     title: "Engineering & Fabrication Website",
     idealFor: "Engineering workshops, fabricators, job shops",
-    description: "Professional websites for Thane and Navi Mumbai's engineering and fabrication sector. Project portfolios, capabilities showcase, and inquiry generation.",
+    description: "Professional websites for engineering and fabrication businesses. Project portfolios, capabilities showcase, and inquiry generation.",
     features: ["Project Portfolio Gallery", "Capabilities & Machinery Showcase", "Materials & Processes Section", "Capacity & Lead Time Display", "Client List & Testimonials", "RFQ/Quote Request System", "Industry Certifications Display", "Technical Blog Section"]
   },
   {
     title: "Textile & Garment Website",
     idealFor: "Textile mills, garment manufacturers, fabric suppliers",
-    description: "Visual-rich websites for Mumbai and Bhiwandi's textile sector. Fabric catalogs, color swatches, and B2B ordering capabilities.",
+    description: "Visual-rich websites for textile sector. Fabric catalogs, color swatches, and B2B ordering capabilities.",
     features: ["Visual Fabric Catalog", "Color & Pattern Galleries", "MOQ & Pricing Display", "Sample Request System", "Manufacturing Capacity Info", "Export Market Focus (USA, EU, UAE)", "Sustainability Section", "Trade Show Calendar"]
   },
   {
     title: "Food Processing Website",
     idealFor: "Food manufacturers, processors, FSSAI certified businesses",
-    description: "Websites for Mumbai's food processing industry with compliance focus, product catalogs, and B2B lead generation.",
+    description: "Websites for food processing industry with compliance focus, product catalogs, and B2B lead generation.",
     features: ["FSSAI License Display", "Product Catalog with Nutrition Info", "Private Label/OEM Section", "Manufacturing Facility Showcase", "Quality & Hygiene Certifications", "Distributor Inquiry System", "Recipe/Application Content", "Export Documentation"]
   },
   {
@@ -94,60 +94,68 @@ export const testimonialsData: TestimonialItem[] = [
   {
     quote: "We generated export inquiries from Dubai and UK within 3 months of launching our new website. The FactoryJet team truly understands the manufacturing sector.",
     name: "Rajesh Patel",
-    title: "MD, Patel Engineering Works, Thane",
+    title: "MD, Patel Engineering Works",
     rating: 5
   },
   {
-    quote: "Best B2B website design agency in Mumbai. They delivered our 500-product catalog site in just 7 days as promised. Highly professional team.",
+    quote: "Best B2B website design agency. They delivered our 500-product catalog site in just 7 days as promised. Highly professional team.",
     name: "Amit Shah",
-    title: "Director, ChemTech Industries, MIDC",
+    title: "Director, ChemTech Industries",
     rating: 5
   },
   {
-    quote: "Our previous website was invisible on Google. FactoryJet's SEO strategy put us on page 1 for 'Textile Manufacturer in Mumbai'. The ROI has been incredible.",
+    quote: "Our previous website was invisible on Google. FactoryJet's SEO strategy put us on page 1 for 'Textile Manufacturer'. The ROI has been incredible.",
     name: "Sneha Kapoor",
-    title: "Marketing Head, FabTex Exports, Bhiwandi",
+    title: "Marketing Head, FabTex Exports",
     rating: 5
   },
   {
     quote: "Professional, fast, and cost-effective. The ROI calculator showed us the potential, and the actual results exceeded our expectations.",
     name: "Vikram Singh",
-    title: "Owner, Precision Auto Parts, Vasai",
+    title: "Owner, Precision Auto Parts",
     rating: 5
   }
 ];
 
 export const faqData: FaqItem[] = [
   {
-    question: "How long does it really take to build an industrial website?",
-    answer: "For our standard packages (Starter & Business), we guarantee a 7-day delivery timeline from the moment we receive your content and product details. Custom enterprise portals or complex e-commerce sites may take 3-4 weeks."
+    question: "How long does it take to build an industrial website?",
+    answer: "FactoryJet delivers complete industrial websites in 7 days. Our team handles design, development, catalog setup, and SEO much faster than traditional agencies."
   },
   {
     question: "Do you provide content writing for technical products?",
-    answer: "Yes, our team specializes in industrial content. We can write technical descriptions, factory profiles, process explanations, and company history that resonates with B2B buyers and procurement managers."
+    answer: "Yes. We provide SEO-optimized technical content for manufacturers, exporters, and industrial businesses. Our team understands product specifications, certifications, and B2B buyer intent."
   },
   {
     question: "Will my website work on mobile devices?",
-    answer: "Absolutely. 100% of our websites are mobile-responsive. We prioritize mobile UX because 70% of B2B procurement research now happens on phones and tablets."
+    answer: "Yes. Every website we build is 100% mobile responsive. Your product catalog and inquiry forms will work perfectly on phones and tablets."
   },
   {
     question: "Can I manage the product catalog myself?",
-    answer: "Yes. We build on easy-to-use platforms (WordPress/Custom CMS). We provide training so you can add products, update specifications, and change images without any coding knowledge."
+    answer: "Yes. You get a simple admin dashboard to add products, upload images, update specifications, and manage categories — no coding required."
   },
   {
     question: "Do you help with export SEO?",
-    answer: "Yes, export SEO is our specialty. We optimize your site for international keywords (e.g., 'Manufacturer in India', 'Exporter in Mumbai') to target buyers in USA, UAE, Europe, and Africa."
+    answer: "Yes. We optimize websites for international buyers searching for Indian manufacturers. Our export-focused SEO helps generate direct inquiries from global markets."
   },
   {
     question: "What is included in the AMC?",
-    answer: "Our Annual Maintenance Contract (AMC) covers security updates, daily backups, uptime monitoring, minor content changes, plugin updates, and priority technical support to ensure your site never goes down."
+    answer: "Our AMC includes updates, security, backups, product additions, technical support, and performance optimization — starting at ₹2,999/month."
   },
   {
     question: "Do you integrate with ERP systems?",
-    answer: "Yes, our E-commerce and Enterprise plans support integration with SAP, Tally, ERPNext, Zoho, and other systems for inventory syncing, order management, and invoicing automation."
+    answer: "Yes. We integrate with Tally, SAP, ERPNext, Zoho, and other ERP systems to sync inventory, pricing, and order data."
   },
   {
     question: "Is the payment one-time or recurring?",
-    answer: "The design and development cost is one-time. You only pay recurring fees for Hosting, Domain, and optional AMC/Marketing services. There are no hidden monthly fees for the website itself."
+    answer: "Website development is a one-time payment. Hosting and AMC are annual. You fully own the website and code."
+  },
+  {
+    question: "Which is the best website design company in Mumbai for manufacturers?",
+    answer: "FactoryJet is among the leading website design companies in Mumbai for manufacturers, with 500+ industrial projects and export-focused expertise."
+  },
+  {
+    question: "Why do Mumbai manufacturers need a professional website?",
+    answer: "A professional website helps manufacturers attract export buyers, reduce marketplace dependency, and generate direct B2B inquiries."
   }
 ];
