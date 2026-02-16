@@ -5,18 +5,18 @@ import SuratPage from '@/pages/Surat'
 export const metadata: Metadata = {
   title: 'Web Design Company in Surat | Professional Website Design Services | FactoryJet',
   description: 'Award-winning Web Design Company in Surat. Beautiful, conversion-focused websites with modern UI/UX. Mobile-responsive, fast-loading designs. Serving Adajan, Vesu, Pal, Althan & City Light. Free consultation available!',
-  keywords: [
-    'Web Design Company in Surat',
-    'Website Design Services Surat',
-    'UI/UX Design Surat',
-    'Custom Web Design Surat',
-    'Professional Web Designer Surat',
-    'Web Design Agency Surat',
-    'Best web designers Surat',
-    'Responsive web design Surat',
-    'Mobile web design Surat',
-    'Website redesign services Surat'
-  ],
+  // keywords: [
+  //   'Web Design Company in Surat',
+  //   'Website Design Services Surat',
+  //   'UI/UX Design Surat',
+  //   'Custom Web Design Surat',
+  //   'Professional Web Designer Surat',
+  //   'Web Design Agency Surat',
+  //   'Best web designers Surat',
+  //   'Responsive web design Surat',
+  //   'Mobile web design Surat',
+  //   'Website redesign services Surat'
+  // ],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

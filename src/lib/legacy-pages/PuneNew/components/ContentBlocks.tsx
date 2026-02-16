@@ -74,10 +74,10 @@ export const About = () => {
           <div className="space-y-4 md:space-y-6">
             <h3 className="text-lg md:text-xl font-bold text-jet-blue font-heading">Why Pune Chooses Us</h3>
             <p className="text-jet-gray leading-relaxed text-sm">
-              Pune Metropolitan Region is India's fastest-growing business hub. Yet 60% of Pune businesses operate without professional websites. FactoryJet specializes in website design and development for Pune's diverse business community.
+              Pune Metropolitan Region is India's fastest-growing business hub. Yet 60% of Pune businesses operate without professional websites. As a trusted Website Design Company in Pune and a top website development company in Pune, FactoryJet specializes in scalable, performance-driven digital platforms.
             </p>
             <p className="text-jet-gray leading-relaxed text-sm">
-              We serve businesses across Greater Pune: Hinjewadi, Kharadi, Viman Nagar, Magarpatta, Hadapsar, Wakad, Baner, Aundh, Pimpri-Chinchwad, Bhosari, Chakan, Talegaon.
+              We serve businesses across Greater Pune, including Hinjewadi, Kharadi, Viman Nagar, Magarpatta, Hadapsar, Wakad, Baner, Aundh, Pimpri-Chinchwad, Bhosari, Chakan, and Talegaon.
             </p>
             <div className="flex flex-wrap gap-2">
               {["IT & Software", "Manufacturing", "Startups", "Education"].map((tag, i) => (
@@ -98,7 +98,7 @@ export const ProblemSection = () => {
     { icon: Smartphone, color: "text-red-500", label: "COST: 78% BUYERS LOST", title: "No Mobile Responsive Site", desc: "78% of Indian internet users browse on mobile. If your website isn't mobile responsive, you're invisible to the majority of your potential customers." },
     { icon: ShoppingCart, color: "text-red-500", label: "COST: ₹10L/YEAR LOST", title: "No E-Commerce Capability", desc: "Indian e-commerce is growing at 25% annually. Competitors on Shopify are capturing customers while you rely on phone orders." },
     { icon: Filter, color: "text-red-500", label: "COST: ZERO LEADS", title: "Dependent on Referrals", desc: "Referrals don't scale. With your own SEO website, you generate leads automatically 24/7. Your website becomes your best salesperson." },
-    { icon: Shield, color: "text-red-500", label: "COST: SECURITY RISK", title: "Outdated Technology", desc: "Old websites are vulnerable to hacks. Modern React and secure WordPress development ensures your business data stays safe." }
+    { icon: Shield, color: "text-red-500", label: "COST: SECURITY RISK", title: "Outdated Technology", desc: "Old websites are vulnerable to hacks. Modern React and secure WordPress development ensure your business data stays safe." }
   ];
 
   return (
@@ -132,7 +132,7 @@ export const SolutionSection = () => {
     { title: "Fast Delivery — 7 Days", desc: "Traditional agencies take 2-4 months. We deliver in 7 days using AI-powered processes." },
     { title: "Mobile Responsive Standard", desc: "Every FactoryJet website works perfectly on phones, tablets, and desktops. No extra charge." },
     { title: "Starts at ₹15,000", desc: "Professional business websites starting at 60-70% cheaper than typical Pune agencies." },
-    { title: "E-Commerce Specialists", desc: "Shopify and WooCommerce experts. Payment gateways, shipping, and inventory integrated." }
+    { title: "E-Commerce Specialists", desc: "Shopify and WooCommerce experts. Payment gateways, shipping, and inventory are integrated." }
   ];
 
   const comparison = [
@@ -166,6 +166,7 @@ export const SolutionSection = () => {
                 </div>
               ))}
             </div>
+            <p className="text-jet-gray text-sm leading-relaxed mt-6">As a performance-focused website development company in Pune, we ensure every build supports long-term growth. Our team includes experienced website designers in Pune and skilled website developers in Pune who focus on performance, user experience, and long-term scalability.</p>
           </div>
 
           <div className="lg:col-span-5 relative group perspective-1000">

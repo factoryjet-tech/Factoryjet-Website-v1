@@ -57,39 +57,39 @@ const PunePage = () => {
         name: "How much does website design cost in Pune?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Website design costs vary based on complexity. At FactoryJet, we offer packages starting at ₹15,000 for basic websites to ₹5,00,000+ for enterprise solutions."
+          text: "Website design in Pune typically costs between ₹15,000 and ₹5,00,000 depending on features, functionality, and project complexity. Basic business websites start from ₹15,000, while advanced e-commerce or custom platforms require a higher budget."
         }
       },
       {
         "@type": "Question",
-        name: "How long does it take to build a website in Pune?",
+        name: "How long does it take to build a website?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Our streamlined process typically delivers a website in 7 days. More complex projects may take 2-4 weeks."
+          text: "Most business websites are completed within 7–14 days. Larger e-commerce or custom projects may take 2–4 weeks, depending on requirements."
         }
       },
       {
         "@type": "Question",
-        name: "Do you provide e-commerce solutions?",
+        name: "Do you provide mobile-responsive websites?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, we specialize in e-commerce development with Shopify, WooCommerce, and custom platforms."
+          text: "Yes. All websites are fully mobile-responsive and optimized for smartphones, tablets, and desktops using a mobile-first design approach."
         }
       },
       {
         "@type": "Question",
-        name: "Can you integrate payment gateways?",
+        name: "Do you build e-commerce websites?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, we integrate all major payment gateways including Razorpay, PayPal, Stripe for secure transactions."
+          text: "Yes. We create secure online stores with payment gateway integration, shipping setup, product management, and conversion optimization features."
         }
       },
       {
         "@type": "Question",
-        name: "Will my website be mobile responsive?",
+        name: "Will my website rank on Google?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Absolutely. All websites are fully responsive and optimized for all devices."
+          text: "Every website includes foundational SEO setup such as technical optimization, meta configuration, XML sitemap, and structured data. Advanced SEO services are available separately."
         }
       }
     ]

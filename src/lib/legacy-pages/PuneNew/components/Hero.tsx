@@ -50,7 +50,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative pt-24 pb-12 lg:pt-40 lg:pb-32 overflow-hidden bg-white min-h-screen flex items-center">
+    <section className="relative pt-24 pb-12 lg:pt-30 lg:pb-32 overflow-hidden bg-white min-h-screen flex items-center">
       <div className="absolute inset-0 bg-gradient-to-br from-[#F0F5FF] via-white to-white z-0"></div>
       <div className="absolute top-0 right-0 w-1/2 h-full bg-jet-blue/5 skew-x-12 transform origin-top-right z-0 hidden lg:block"></div>
 
@@ -86,7 +86,7 @@ export const Hero = () => {
 
           <div className="order-3 lg:block w-full mt-8 lg:mt-8">
             <p className="text-jet-gray leading-relaxed text-sm md:text-base max-w-2xl">
-              FactoryJet is Pune's leading website design company specializing in website development, WordPress website development, Shopify store development, and e-commerce solutions for businesses across Maharashtra. With 25+ years of expertise as a top website development company in Pune, we help IT companies, startups, manufacturers, and businesses in Hinjewadi, Kharadi, Pimpri-Chinchwad, Chakan, and Talegaon establish powerful online presence that generates leads and drives growth.
+              FactoryJet is a leading Website Design Company in Pune, specializing in professional business website design and development for companies across Maharashtra. With 25+ years of combined expertise as a trusted website development company in Pune, we help IT companies, startups, manufacturers, and businesses in Hinjewadi, Kharadi, Pimpri-Chinchwad, Chakan, and Talegaon establish a powerful online presence that generates leads and drives sustainable growth.
             </p>
           </div>
         </div>
