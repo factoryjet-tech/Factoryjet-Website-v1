@@ -3,18 +3,18 @@ import { ChevronDown, Check, Star, MapPin, Phone, MessageCircle, Mail } from 'lu
 
 export const Testimonials = () => {
     const reviews = [
-        { text: "FactoryJet is the best website design company in Bangalore hands down. They understood our startup's needs perfectly and delivered a website that helped us raise our Series A. The attention to detail and understanding of investor expectations was remarkable.", author: "Rahul M., Founder & CEO, Fintech Startup, Koramangala" },
+        { text: "FactoryJet is the best web design company in Bangalore we've worked with. They understood our startup's needs perfectly and delivered a website that helped us raise our Series A. The attention to detail and understanding of investor expectations was remarkable.", author: "Rahul M., Founder & CEO, Fintech Startup, Koramangala" },
         { text: "We evaluated 10+ website development companies in Bangalore before choosing FactoryJet. Their 7-day delivery was real — our e-commerce store went live exactly when promised. Professional team, excellent communication, outstanding results.", author: "Priya S., D2C Brand Owner, HSR Layout" },
-        { text: "As an enterprise company in Electronic City, we needed a website that conveyed global standards while appealing to Indian clients. FactoryJet delivered exactly that — a world-class website that has significantly improved our lead quality.", author: "Venkat K., Marketing Director, IT Services Company" },
-        { text: "Our Shopify store built by FactoryJet generated ₹50 lakhs in the first month. Their understanding of e-commerce, payment gateways, and shipping integration is exceptional. Truly the best Shopify store development company in Bangalore.", author: "Meera R., Fashion Brand Founder, Indiranagar" },
-        { text: "FactoryJet redesigned our outdated WordPress site and the transformation was incredible. Page speed went from 8 seconds to under 2 seconds. Our organic traffic doubled in three months. Highly recommend their WordPress website development Bangalore services.", author: "Arun T., CEO, EdTech Company, Whitefield" },
-        { text: "We needed a complex B2B portal with dealer management and custom pricing. FactoryJet's web design agency in Bangalore team delivered beyond our expectations. The portal has streamlined our entire distribution network.", author: "Kumar P., Director, Manufacturing Company, Peenya" }
+        { text: "As an enterprise company in Electronic City, we needed a website that conveyed global standards while appealing to Indian clients. FactoryJet delivered exactly that — a world-class site that has improved our lead quality significantly.", author: "Venkat K., Marketing Director, IT Services Company" },
+        { text: "Our Shopify store generated ₹50 lakhs in the first month. Their understanding of e-commerce, payment gateways, and shipping integration is exceptional. Truly outstanding web development services in Bangalore.", author: "Meera R., Fashion Brand Founder, Indiranagar" },
+        { text: "FactoryJet redesigned our outdated WordPress site and the transformation was incredible. Page speed went from 8 seconds to under 2 seconds. Our organic traffic doubled in 3 months. Highly recommend their website redesign services in Bangalore.", author: "Arun T., CEO, EdTech Company, Whitefield" },
+        { text: "We needed a complex B2B portal with dealer management and custom pricing. FactoryJet's team delivered beyond our expectations. The portal has streamlined our entire distribution network across Karnataka.", author: "Kumar P., Director, Manufacturing Company, Peenya" }
     ];
 
     return (
         <section className="py-20 bg-white">
             <div className="container mx-auto px-4">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-12 text-center">What Our Clients Say — Top Website Design Company in Bangalore</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-12 text-center">What Our Clients Say — Trusted Web Design Company in Bangalore</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {reviews.map((r, i) => (
                         <div key={i} className="bg-slate-50 p-6 rounded-xl border border-slate-100 shadow-sm">
@@ -62,14 +62,14 @@ const FAQItem: React.FC<{ q: string; a: string }> = ({ q, a }) => {
 
 export const FAQ = () => {
     const faqs = [
-        { q: "How much does website design cost in Bangalore?", a: "Website costs in Bangalore range from ₹15,000 to ₹5,00,000+ depending on your requirements. FactoryJet, the best website design company in Bangalore, offers transparent pricing starting at ₹29,999 for starter packages (5-7 pages, mobile responsive, basic SEO), ₹59,999 for professional business websites (10-15 pages, custom design, advanced features), ₹99,999 for e-commerce stores (up to 200 products, payment/shipping integration), and custom quotes for enterprise solutions. Our pricing includes hosting, SSL, mobile responsiveness, and 30-day support. No hidden costs — the price we quote is the price you pay." },
-        { q: "What is included in FactoryJet's ₹29,999 starter package for Bangalore businesses?", a: "Our starter package — the most affordable professional website from a top website design company in Bangalore — includes: 5-7 page responsive website, custom design (no templates), mobile-first development, contact form with email notifications, WhatsApp chat integration, basic SEO setup (meta tags, sitemap), Google Analytics integration, SSL certificate for security, 1-year hosting on premium servers, and 30-day post-launch support. This package is ideal for small businesses, startups, and professionals in Bengaluru who need a credible online presence without a large budget." },
-        { q: "How long does it take to build a website in Bangalore?", a: "Website development timelines for Bangalore businesses vary by project type. At FactoryJet, our delivery schedule is: Landing pages: 3-5 days, Basic business websites (5-7 pages): 7-10 days, Professional websites (10-15 pages): 10-14 days, E-commerce stores (up to 200 products): 3-4 weeks, Custom web applications: 4-8 weeks, Large marketplaces or complex platforms: 6-12 weeks. We offer expedited delivery for urgent projects at additional cost. Our streamlined process ensures faster turnaround without compromising quality — clients across Koramangala, Whitefield, and Electronic City appreciate our efficient delivery." },
-        { q: "Do you provide SEO optimization for websites in Bangalore?", a: "Yes, all FactoryJet websites include SEO optimization. Our SEO services include: Basic SEO (all packages): Meta titles and descriptions, XML sitemap, robots.txt, image optimization, mobile-friendliness, page speed optimization. Advanced SEO (professional packages and above): Keyword research and implementation, schema markup (LocalBusiness, FAQ, Product), internal linking structure, GEO optimization (for AI search), local SEO for Bangalore rankings. Ongoing SEO: Available as monthly service (₹15,000-50,000/month) for continuous optimization and content marketing. Our websites consistently rank well for Bangalore search terms within 2-3 months of launch." },
-        { q: "Should I choose WordPress or Shopify for my Bangalore business?", a: "The choice depends on your specific needs. WordPress is ideal for: Content-heavy websites (blogs, news, portfolios), businesses needing maximum customization, companies preferring ownership and control, budget-conscious projects, and SEO-focused content marketing. Shopify is better for: E-commerce focused businesses, D2C brands wanting quick launch, businesses preferring hosted solutions (less technical management), companies needing reliable payment processing, and scaling e-commerce operations. FactoryJet recommends WordPress for content businesses and Shopify for e-commerce. We can also build WooCommerce stores for businesses wanting WordPress with e-commerce." },
-        { q: "Can you integrate payment gateways for Bangalore e-commerce websites?", a: "Yes, FactoryJet integrates all major payment gateways for Bangalore e-commerce businesses: Indian Gateways: Razorpay (most popular), PayU, CCAvenue, Paytm, Instamojo. International Gateways: Stripe, PayPal (for international sales). Payment Methods Supported: Credit/Debit Cards, UPI, Net Banking, Wallets, EMI, Buy Now Pay Later. We handle complete integration including test transactions, webhook setup, and reconciliation configuration. Payment gateway integration is included in our e-commerce packages." },
-        { q: "Do you build mobile-responsive websites for Bangalore businesses?", a: "Yes, every FactoryJet website is mobile-responsive by default. This is non-negotiable because: 82% of Bangalore web traffic comes from mobile devices, Google uses mobile-first indexing (mobile experience affects rankings), mobile users expect instant loading and easy navigation, and non-responsive sites lose 67% of visitors immediately. Our mobile-first approach means we design for smartphones first, then scale up to tablets and desktops. We test on 15+ devices and all major browsers. Mobile-responsive design is included in all packages — never an add-on or extra cost." },
-        { q: "What happens after my Bangalore website is launched?", a: "FactoryJet provides comprehensive post-launch support for all Bangalore clients: 30-90 day free support (depending on package) covering bug fixes, minor adjustments, and technical questions. Handover documentation including admin credentials, hosting details, and user guides. Training session on managing your website (content updates, basic maintenance). Optional Annual Maintenance Contract (AMC) starting at ₹2,999/month for ongoing updates, security, and support. We don't disappear after launch — our relationship continues as your ongoing website partner." }
+        { q: "How much does website design cost in Bangalore?", a: "Our pricing is structured by technology: Business Lead-Gen sites start at ₹29,999, Custom WordPress/CMS sites start at ₹39,999, and Shopify Stores start at ₹59,999. For Complex Enterprise or Multi-vendor Marketplaces, pricing starts at ₹99,999. All prices are exclusive of 18% GST." },
+        { q: "What is included in FactoryJet's ₹29,999 starter package for Bangalore businesses?", a: "Our Launchpad package covers the basics for small businesses. You get a 5 to 8-page site that works great on phones. It includes contact forms, WhatsApp chat, and basic SEO. We also set up your SSL security and give you 30 to 90 days of help after the site goes live." },
+        { q: "How long does it take to build a website in Bangalore?", a: "We move fast. A standard business site takes 7 to 10 days. E-commerce stores take about 3 to 4 weeks. If you need a custom web app, plan for 4 to 8 weeks. We stick to a clear plan so you aren't left guessing." },
+        { q: "Do you provide SEO optimization for websites in Bangalore?", a: "Yes, every site has the basics built-in. We handle meta tags, keywords, and speed tweaks. If you want to show up on Google or AI tools like ChatGPT, we have extra plans for that too." },
+        { q: "Which web design company in Bangalore is right for my business?", a: "Look for a team with a solid portfolio and clear pricing. We have built over 500 websites for startups and big brands. Most of our clients stay with us because we focus on real results and keep things simple." },
+        { q: "Should I choose WordPress or Shopify for my Bangalore business?", a: "It depends on what you do. WordPress is best for service businesses or blogs because it is very flexible. Shopify is the top choice if you just want to sell products online. We work with both and can help you pick." },
+        { q: "Can you integrate payment gateways for Bangalore e-commerce websites?", a: "Definitely. We connect your site to Razorpay, PayU, or Cashfree. Your customers can pay with UPI, cards, or net banking. If you sell to people outside India, we can add Stripe or PayPal." },
+        { q: "What happens after my Bangalore website is launched?", a: "You aren't on your own. We give you 30 to 90 days of support for any small fixes. After that, we offer yearly plans to keep your site fast, safe, and updated." }
     ];
 
     return (
@@ -116,7 +116,7 @@ export const LocalSEO = () => (
                 ></iframe>
             </div>
              <p className="text-center text-slate-700 text-base flex items-center justify-center gap-2"><MapPin className="w-4 h-4 text-[#0052CC]" /> Office: WeWork Galaxy, 43 Residency Road, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560025</p>
-             <p className="text-center text-slate-700 mt-4 italic max-w-3xl mx-auto text-base">FactoryJet is headquartered in Bangalore with team members across the city. We offer: In-person meetings in Central, East, and South Bangalore, virtual consultations for all locations, same-day visits for enterprise clients, and local market understanding that remote agencies lack. Being Bengaluru-based means we understand the startup culture, tech ecosystem, business landscape, and regional preferences — translating to better results for your website.</p>
+             <p className="text-center text-slate-700 mt-4 italic max-w-3xl mx-auto text-base">FactoryJet is headquartered in Bangalore with team members across the city. We offer in-person meetings in Central, East, and South Bangalore — plus virtual consultations for all locations and same-day visits for enterprise clients. Being a true web design agency near me for Bangalore businesses means we understand startup culture, tech corridors, business culture, and regional buying behavior. Remote agencies simply can't replicate that.</p>
         </div>
     </section>
 );
@@ -136,7 +136,7 @@ export const FinalCTA = () => (
                         Ready to Transform Your <br className="hidden md:block"/>
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Bangalore Business Online?</span>
                     </h2>
-                    <p className="text-xl text-slate-300 font-medium">Join 500+ Successful Businesses Who Chose FactoryJet — Get Started in 24 Hours</p>
+                    <p className="text-xl text-slate-300 font-medium">Join 500+ Successful Businesses Who Chose FactoryJet — Start with a Free Consultation Today.</p>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -147,7 +147,7 @@ export const FinalCTA = () => (
                                 Your competitors in Bangalore are already investing in professional websites. Every day without a conversion-optimized site is a day of lost opportunities — leads going to competitors, customers choosing businesses that look more credible, and revenue slipping away.
                             </p>
                             <p className="text-slate-300 text-lg leading-relaxed">
-                                FactoryJet has helped 500+ businesses across Koramangala, Whitefield, Electronic City, HSR Layout, Indiranagar, and all of Bengaluru transform their digital presence. From funded startups to established enterprises, from D2C brands to manufacturing companies — we deliver websites that generate real business results.
+                                FactoryJet has helped 500+ businesses across Koramangala, Whitefield, Electronic City, HSR Layout, Indiranagar, and all of Bengaluru transform their digital presence. From funded startups to established enterprises, from D2C brands to manufacturing companies — we deliver websites that generate real business results. As a web design company in Bangalore that's delivered ₹150 crore in client revenue, we know what it takes to build websites that work.
                             </p>
                         </div>
 
@@ -160,7 +160,7 @@ export const FinalCTA = () => (
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <div className="bg-green-500/20 p-1.5 rounded-full"><Check className="w-4 h-4 text-green-400" /></div>
-                                    <span className="text-slate-300 text-sm">Custom proposal in 48h</span>
+                                    <span className="text-slate-300 text-sm">Custom proposal within 2 hours</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <div className="bg-green-500/20 p-1.5 rounded-full"><Check className="w-4 h-4 text-green-400" /></div>
@@ -223,7 +223,7 @@ export const Footer = () => (
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
                 <div>
                     <h3 className="text-white font-bold text-lg mb-4">FactoryJet</h3>
-                    <p className="mb-4">Bengaluru's most trusted website design company. We transform businesses into digital powerhouses through professional websites and e-commerce solutions.</p>
+                    <p className="mb-4">Bengaluru's trusted web design company. We transform businesses into digital powerhouses through professional websites and e-commerce solutions.</p>
                     <div className="flex gap-4">
                         <span>Facebook</span><span>Twitter</span><span>Instagram</span><span>LinkedIn</span>
                     </div>

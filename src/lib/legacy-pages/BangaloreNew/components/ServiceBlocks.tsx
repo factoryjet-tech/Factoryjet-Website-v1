@@ -324,7 +324,7 @@ export const Pricing = () => {
                 </div>
 
                 <div className="mt-16 text-center text-sm text-slate-500 max-w-2xl mx-auto">
-                    <p>All plans include our 30-day post-launch support. Prices exclude 18% GST. Renewal rates for AMC apply after 1 year. Custom enterprise requirements? <a href="#contact-form" className="text-[#0052CC] font-bold underline">Contact us</a>.</p>
+                    <p>All plans include our 30-90 day post-launch support. Prices exclude 18% GST. Renewal rates for AMC apply after 1 year. Custom enterprise requirements? <a href="#contact-form" className="text-[#0052CC] font-bold underline">Contact us</a>.</p>
                 </div>
             </div>
         </section>

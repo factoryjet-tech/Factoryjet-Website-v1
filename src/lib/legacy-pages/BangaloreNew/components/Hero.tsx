@@ -99,9 +99,9 @@ export const Hero = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-4">
                {[
                  "500+ Websites Delivered",
-                 "7-Day Delivery Guarantee",
+                 "7-Day Launch for Business Sites",
                  "Bangalore-Based Team",
-                 "₹150 Cr+ Client Revenue"
+                 "2-Hour Response Time"
                ].map((item, i) => (
                  <div key={i} className="flex items-center gap-3 bg-white/60 p-3 rounded-lg border border-slate-100 shadow-sm">
                    <div className="bg-blue-100 p-1 rounded-full"><Check className="w-4 h-4 text-[#0052CC]" /></div>
@@ -249,10 +249,10 @@ export const HeroDetailedText = () => (
 
                     <div className="prose prose-lg text-slate-700 leading-relaxed font-medium">
                         <p className="first-letter:text-6xl first-letter:font-bold first-letter:text-[#0052CC] first-letter:mr-3 first-letter:float-left mb-6 text-lg">
-                            FactoryJet is Bangalore's premier website design company specializing in website development, WordPress website development, Shopify store development, and e-commerce solutions for businesses across Karnataka's Silicon Valley. With 25+ years of combined expertise as the top website development company in Bangalore, we help startups, enterprises, D2C brands, and growing businesses in Koramangala, Whitefield, Electronic City, HSR Layout, Indiranagar, and across Bengaluru establish powerful online presence that generates leads, drives conversions, and accelerates growth.
+                            FactoryJet is a trusted web design company in Bangalore specializing in website development, WordPress development, Shopify store development, and e-commerce solutions for businesses across Karnataka's Silicon Valley. With 25+ years of combined expertise, we help startups, enterprises, D2C brands, and growing businesses in Koramangala, Whitefield, Electronic City, HSR Layout, Indiranagar, and across Bengaluru build powerful online platforms that generate leads, drive conversions, and accelerate growth.
                         </p>
                         <p className="text-lg">
-                            We are the best website design company in Bangalore serving businesses across the city's thriving tech hubs and commercial districts — Manyata Tech Park, Embassy Tech Village, Outer Ring Road (ORR), ITPL Whitefield, Electronic City Phase 1-2, MG Road, and the rapidly expanding startup corridors of Koramangala and HSR Layout. Our website developer team in Bangalore creates mobile-responsive, SEO-optimized websites specifically designed to convert visitors into customers.
+                            Our team covers Bangalore's most active business corridors — Manyata Tech Park, Embassy Tech Village, Outer Ring Road, ITPL Whitefield, Electronic City Phase 1 & 2, MG Road, and the fast-growing startup zones of Koramangala and HSR Layout. Every website we build is mobile-responsive, SEO-friendly, and designed to turn visitors into paying customers.
                         </p>
                     </div>
                 </div>
@@ -266,10 +266,10 @@ export const HeroDetailedText = () => (
                              <TrendingUp className="w-5 h-5 text-[#FF6B35]" /> Bengaluru's Digital Reality
                         </h4>
                         <p className="text-slate-700 text-lg leading-relaxed mb-4">
-                            Bangalore (Bengaluru) is India's startup capital with <strong className="text-[#0052CC]">₹15 lakh crore annual GDP</strong>, 60,000+ registered startups, and home to 45% of India's unicorns. The city houses global tech giants and processes 35% of the country's tech services exports.
+                            Bangalore is India's startup capital with <strong className="text-[#0052CC]">₹15 lakh crore in annual GDP</strong>, 60,000+ registered startups, and home to 45% of India's unicorns. The city handles 35% of the country's tech services exports.
                         </p>
                         <p className="text-slate-700 text-lg leading-relaxed">
-                            Yet <strong className="text-red-600">50% of Bangalore businesses still lack professional websites</strong>, losing lakhs in potential revenue. FactoryJet changes that equation — we build websites that help Bengaluru businesses compete nationally and globally.
+                            Yet <strong className="text-red-600">50% of Bangalore businesses still lack a professional website</strong>, losing lakhs in potential revenue every year. That's the gap FactoryJet fills. As a results-driven web development company in Bangalore, we build websites that help local businesses compete nationally — and globally.
                         </p>
                     </div>
 
@@ -279,7 +279,7 @@ export const HeroDetailedText = () => (
                                 <Users className="w-5 h-5 text-[#FF6B35]" /> Why Choose FactoryJet?
                             </h4>
                             <p className="text-blue-50 text-lg leading-relaxed font-medium">
-                                As the best website development company in Bangalore, we've helped 500+ businesses — from funded startups in Koramangala to e-commerce giants in Whitefield — launch professional, SEO-ready websites. Starting at just <strong className="text-white text-xl">₹29,999</strong>.
+                                As a proven website development company in Bangalore, we've helped 500+ businesses — from funded startups in Koramangala to e-commerce brands in Whitefield — launch professional, SEO-ready websites. Starting at just <strong className="text-white text-xl">₹29,999</strong>.
                             </p>
                          </div>
                          <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
@@ -289,7 +289,7 @@ export const HeroDetailedText = () => (
 
             <div className="mt-12 pt-8 border-t border-slate-100">
                 <p className="text-base text-slate-600 leading-loose text-justify font-medium">
-                    <span className="font-bold text-slate-900">Our Expertise:</span> If you're searching for website designer in Bangalore, website developer in Bangalore, web design agency in Bangalore, website development agency in Bangalore, or e-commerce development company in Bangalore — FactoryJet works with startups, SMBs, enterprises, D2C brands, and businesses across the entire Bengaluru metropolitan area. Whether you need Shopify store development company in Bangalore or WordPress website development Bangalore — get a free quote today and transform your digital presence.
+                    <span className="font-bold text-slate-900">Our Expertise:</span> Whether you're searching for a website designer in Bangalore, a web design agency in Bangalore, a website developer in Bangalore, or a complete web design services in Bangalore partner — FactoryJet works with startups, SMBs, enterprises, D2C brands, and businesses across the Bengaluru metro. Need Shopify store development or WordPress web development? Get a free quote today.
                 </p>
             </div>
         </div>
