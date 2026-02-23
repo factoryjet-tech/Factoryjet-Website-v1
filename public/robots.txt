@@ -1,11 +1,5 @@
-# FactoryJet Robots.txt
-# Allow all search engines and AI bots to crawl valid pages
-
-# Default rules for all bots
 User-agent: *
 Allow: /
-
-# Block legacy e-commerce URLs (from previous platform)
 Disallow: /shopdetail/
 Disallow: /shop/
 Disallow: /store/
@@ -22,8 +16,6 @@ Disallow: /surugaya/
 Disallow: /*?shopdetail
 Disallow: /*?product_id=
 Disallow: /*?callback=product
-
-# Block common legacy patterns
 Disallow: /wp-admin/
 Disallow: /wp-includes/
 Disallow: /wp-content/plugins/
@@ -33,57 +25,40 @@ Disallow: /my-account/
 Disallow: /wishlist/
 Disallow: /compare/
 
-# Crawl delay
-Crawl-delay: 0
-
-# Specific rules for Google
-User-agent: Googlebot
-Allow: /
-Disallow: /shopdetail/
-Disallow: /shop/
-Disallow: /store/
-Disallow: /product/
-Disallow: /pcmypage
-Disallow: /safe_search/
-Disallow: /index.php
-
-# Google Image Bot
-User-agent: Googlebot-Image
-Allow: /
-
-# Google Mobile Bot
-User-agent: Googlebot-Mobile
-Allow: /
-
-# Bing
-User-agent: Bingbot
-Allow: /
-Disallow: /shopdetail/
-Disallow: /shop/
-Disallow: /store/
-Disallow: /product/
-
-# Allow AI bots for better AI search visibility
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
 User-agent: Google-Extended
-Allow: /
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
 
 User-agent: CCBot
-Allow: /
+Disallow: /
 
-User-agent: anthropic-ai
-Allow: /
+User-agent: Cohere-ai
+Disallow: /
 
-User-agent: Claude-Web
-Allow: /
+User-agent: meta-externalagent
+Disallow: /
 
-# Sitemap location
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: Timpibot
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: img2dataset
+Disallow: /
+
 Sitemap: https://factoryjet.com/sitemap.xml
-
-# Host (optional, for Yandex)
-Host: https://factoryjet.com
