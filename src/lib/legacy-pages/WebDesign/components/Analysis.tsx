@@ -14,7 +14,7 @@ export const Analysis = () => {
             <div className="lg:col-span-1">
               <h2 className="text-2xl md:text-3xl font-display font-bold text-slate-900 mb-4 md:mb-6">Metrics That Matter</h2>
               <p className="text-sm md:text-base text-slate-600 leading-relaxed mb-6 md:mb-8">
-                We don't just track vanity metrics. We focus on data that drives revenue, engagement, and long-term growth.
+                We track data that affects revenue — not vanity numbers.
               </p>
               <div className="p-4 md:p-6 bg-slate-50 rounded-xl md:rounded-2xl border border-slate-100">
                 <div className="flex items-center gap-2 md:gap-3 mb-2">
@@ -68,10 +68,10 @@ export const Analysis = () => {
                 <TrendingUp className="w-3 h-3 md:w-4 md:h-4" /> High Impact ROI
               </div>
               <h2 className="text-2xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6 md:mb-8">
-                Your Website Pays for Itself <span className="text-emerald-400">4.6x Over</span>
+                Your Website Generates <span className="text-emerald-400">4.6x Return on Investment</span>
               </h2>
               <p className="text-slate-300 text-sm md:text-base lg:text-lg mb-8 md:mb-10 leading-relaxed max-w-lg">
-                Stop viewing your website as an expense. It's a high-yield asset. With our conversion-first approach, most clients see full ROI within 3 months.
+                A professionally built website is not a sunk cost — it is a compounding asset. With rising paid traffic costs across India's digital market, conversion-optimised organic channels deliver the highest long-term CAC efficiency. Most FactoryJet clients recover full investment within 3 months.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-4 md:gap-6">

@@ -12,7 +12,7 @@ export const Features = () => {
             Enterprise Grade
           </span>
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-display font-bold text-slate-900 mb-4 md:mb-6">Essential Website Features</h2>
-          <p className="text-base md:text-lg lg:text-xl text-slate-600 font-light">Every FactoryJet website comes equipped with a comprehensive suite of tools for growth.</p>
+          <p className="text-base md:text-lg lg:text-xl text-slate-600 font-light">Every FactoryJet website includes a production-ready feature suite — not as add-ons, but as standard.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">

@@ -58,10 +58,10 @@ export const Hero = () => {
           className="text-center max-w-6xl mx-auto px-4"
         >
           <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-extrabold tracking-tight text-slate-900 leading-[1.1] mb-6 md:mb-8 drop-shadow-sm">
-            Build a Website That <br className="hidden md:block" />
+            Builds for <br className="hidden md:block" />
             <span className="relative inline-block whitespace-nowrap">
               <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-jet-blue via-indigo-600 to-purple-600">
-                Actually Converts
+                Conversion
               </span>
               {/* Underline decoration */}
               <svg className="absolute -bottom-1 md:-bottom-2 lg:-bottom-4 left-0 w-full h-2 md:h-3 lg:h-6 text-jet-orange opacity-100" viewBox="0 0 100 10" preserveAspectRatio="none">

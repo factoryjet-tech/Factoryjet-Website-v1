@@ -3,30 +3,30 @@ import { webDesignAlternates } from '@/data/hreflangMap'
 import WebDesignPage from '@/pages/WebDesign'
 
 export const metadata: Metadata = {
-  title: 'Professional Web Design Services | Custom Website Development | FactoryJet',
-  description: 'Transform your business with stunning, high-performance websites. Expert web design & development services. Mobile-first, SEO-optimized, conversion-focused. Fast delivery from 7 days. 150+ successful projects.',
-  keywords: [
-    'web design services',
-    'website development',
-    'custom website design',
-    'responsive web design',
-    'mobile-first design',
-    'ui ux design',
-    'landing page design',
-    'business website design',
-    'corporate website development',
-    'wordpress development',
-    'react website development',
-    'nextjs development',
-    'frontend development',
-    'web application development',
-    'website redesign services',
-    'seo web design',
-    'conversion optimized design',
-    'professional web design',
-    'affordable web design',
-    'fast website development'
-  ],
+  title: 'Web Design Company in India | Conversion-Focused Website Development | FactoryJet',
+  description: 'FactoryJet is a web design company in India that builds high-performance, conversion-focused websites on WordPress, Webflow, Framer, and custom stacks. Mobile-first, SEO-optimized, Core Web Vitals compliant. Services across Mumbai, Pune, Bangalore, Delhi, and more.',
+  // keywords: [
+  //   'web design services',
+  //   'website development',
+  //   'custom website design',
+  //   'responsive web design',
+  //   'mobile-first design',
+  //   'ui ux design',
+  //   'landing page design',
+  //   'business website design',
+  //   'corporate website development',
+  //   'wordpress development',
+  //   'react website development',
+  //   'nextjs development',
+  //   'frontend development',
+  //   'web application development',
+  //   'website redesign services',
+  //   'seo web design',
+  //   'conversion optimized design',
+  //   'professional web design',
+  //   'affordable web design',
+  //   'fast website development'
+  // ],
   authors: [{ name: 'FactoryJet' }],
   robots: {
     index: true,
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Professional Web Design Services | Custom Websites That Convert',
-    description: 'Expert web design & development services. Mobile-first, SEO-optimized, pixel-perfect websites. From concept to launch in record time. Fast delivery, transparent pricing.',
+    title: 'Web Design Company in India | Conversion-Focused Websites | FactoryJet',
+    description: 'FactoryJet designs high-performance websites engineered to turn visitors into customers. WordPress, Webflow, Framer, and custom development across India.',
     url: 'https://factoryjet.com/services/web-design',
     images: [
       {
@@ -57,8 +57,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Professional Web Design Services | Custom Websites That Convert',
-    description: 'Transform your business with stunning websites. Mobile-first, SEO-optimized, conversion-focused design & development.',
+    title: 'Web Design Company in India | Conversion-Focused Websites | FactoryJet',
+    description: 'FactoryJet designs high-performance websites engineered to turn visitors into customers. WordPress, Webflow, Framer, and custom development across India.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {

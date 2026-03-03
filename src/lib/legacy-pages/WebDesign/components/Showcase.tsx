@@ -11,7 +11,7 @@ export const Showcase = () => {
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 md:mb-16 border-b border-white/10 pb-8 md:pb-10">
           <div>
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-display font-bold mb-3 md:mb-4">Selected Work</h2>
-            <p className="text-slate-400 text-sm md:text-base lg:text-lg max-w-xl">Digital experiences that drive measurable growth.</p>
+            <p className="text-slate-400 text-sm md:text-base lg:text-lg max-w-xl">Digital experiences with documented commercial outcomes.</p>
           </div>
           <button className="hidden md:flex items-center gap-2 px-5 md:px-6 py-2.5 md:py-3 rounded-full border border-white/20 hover:bg-white hover:text-slate-900 transition-all duration-300 mt-4 md:mt-0 text-sm md:text-base font-medium group">
             View Full Portfolio <ArrowUpRight className="w-3 h-3 md:w-4 md:h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />

@@ -291,7 +291,7 @@ export const Services = () => {
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="text-center mb-12 md:mb-16 lg:mb-20">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-4 md:mb-6">Platforms & Tech Stack</h2>
-            <p className="text-base md:text-lg lg:text-xl text-slate-400 font-light">Choosing the right technology for scalable growth.</p>
+            <p className="text-base md:text-lg lg:text-xl text-slate-400 font-light">Choosing the right platform determines your ceiling for growth.</p>
           </div>
 
           <div className="grid gap-8 md:gap-10 lg:gap-12">

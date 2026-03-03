@@ -11,6 +11,7 @@ import { Process } from './components/Process';
 import { Showcase } from './components/Showcase';
 import { Analysis } from './components/Analysis';
 import { Info } from './components/Info';
+import { Locations } from './components/Locations';
 
 function App() {
   // Smooth scroll behavior for anchor links if needed
@@ -103,6 +104,7 @@ function App() {
         </section>
         <Showcase />
         <Analysis />
+        <Locations />
         <Info />
 
         <Footer />

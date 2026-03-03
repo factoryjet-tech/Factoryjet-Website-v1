@@ -71,7 +71,7 @@ export const Info = () => {
           <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16 lg:mb-20">
             <span className="text-jet-blue font-bold tracking-widest uppercase text-xs md:text-sm mb-3 md:mb-4 block">Knowledge Base</span>
             <h2 className="text-2xl md:text-4xl font-display font-bold text-slate-900 mb-4 md:mb-6">Frequently Asked Questions</h2>
-            <p className="text-base md:text-lg lg:text-xl text-slate-600 font-light">Detailed answers to your most pressing questions about web development.</p>
+            <p className="text-base md:text-lg lg:text-xl text-slate-600 font-light">Frequently Asked Questions</p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-4 md:gap-6 items-start">
@@ -98,7 +98,7 @@ export const Info = () => {
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 md:mb-16">
             <div>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 md:mb-4">2026 Web Design Trends</h2>
-              <p className="text-sm md:text-base text-slate-600">We keep your brand ahead of the curve.</p>
+              <p className="text-sm md:text-base text-slate-600">Building sites that remain competitive for the next 3 years.</p>
             </div>
             <div className="mt-4 md:mt-0 px-3 md:px-4 py-1.5 md:py-2 bg-white rounded-full border border-slate-200 text-[10px] md:text-xs font-bold uppercase tracking-wider text-slate-500 shadow-sm">
               Future Proofing
@@ -144,11 +144,10 @@ export const Info = () => {
              transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-5xl lg:text-7xl font-display font-black text-white mb-6 md:mb-8 tracking-tight drop-shadow-lg leading-tight">
-              Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-100 to-white/80">Dominate</span> <br className="hidden sm:block"/>
-              Your Market?
+              Ready to Build a Website That <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-100 to-white/80">Pays for Itself?</span>
             </h2>
             <p className="text-blue-100 text-base md:text-xl lg:text-2xl mb-10 md:mb-12 max-w-2xl mx-auto font-light leading-relaxed">
-              Schedule a free 30-minute strategy session. We'll audit your current state and map out your digital growth.
+              Schedule a free 30-minute strategy session with a professional web design company in India that has delivered measurable results across ecommerce, B2B, healthcare, and SaaS. We will audit your current digital presence and outline a clear growth path.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
