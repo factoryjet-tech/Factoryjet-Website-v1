@@ -1,22 +1,11 @@
 import type { Metadata } from 'next'
 import { webDesignCityAlternatesIN } from '@/data/hreflangMap'
 import SuratPage from '@/pages/Surat'
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
   title: 'Web Design Company in Surat | Professional Website Design Services | FactoryJet',
   description: 'Award-winning Web Design Company in Surat. Beautiful, conversion-focused websites with modern UI/UX. Mobile-responsive, fast-loading designs. Serving Adajan, Vesu, Pal, Althan & City Light. Free consultation available!',
-  // keywords: [
-  //   'Web Design Company in Surat',
-  //   'Website Design Services Surat',
-  //   'UI/UX Design Surat',
-  //   'Custom Web Design Surat',
-  //   'Professional Web Designer Surat',
-  //   'Web Design Agency Surat',
-  //   'Best web designers Surat',
-  //   'Responsive web design Surat',
-  //   'Mobile web design Surat',
-  //   'Website redesign services Surat'
-  // ],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
@@ -57,5 +46,15 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <SuratPage />
+  return (
+    <>
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://factoryjet.com' },
+        { name: 'Services', url: 'https://factoryjet.com/services' },
+        { name: 'Web Design', url: 'https://factoryjet.com/services/web-design' },
+        { name: 'Surat', url: 'https://factoryjet.com/services/web-design/surat' },
+      ]} />
+      <SuratPage />
+    </>
+  )
 }

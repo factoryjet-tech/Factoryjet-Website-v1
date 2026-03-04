@@ -5,23 +5,6 @@ import HomePage from '@/pages/Home'
 export const metadata: Metadata = {
   title: 'FactoryJet - Professional Website Design & E-Commerce Development Company India',
   description: 'FactoryJet is India\'s leading web development company offering professional website design, e-commerce development, Shopify stores, and custom web solutions. 7-day delivery, 500+ businesses served, 25+ years expertise. Get a free consultation!',
-  keywords: [
-    'website design company india',
-    'web development company',
-    'e-commerce development india',
-    'shopify development',
-    'professional website design',
-    'custom web development',
-    'web design agency india',
-    'ecommerce website development',
-    'wordpress development',
-    'react development company',
-    'next.js development',
-    'website design services',
-    'affordable web design india',
-    'best web development company',
-    'digital agency india'
-  ],
   authors: [{ name: 'FactoryJet' }],
   robots: {
     index: true,

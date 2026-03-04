@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { webDesignCityAlternatesIN } from '@/data/hreflangMap'
 import HyderabadPage from '@/pages/Hyderabad'
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
   title: 'Web Design Company in Hyderabad – Proven Digital Growth Experts',
@@ -45,5 +46,15 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <HyderabadPage />
+  return (
+    <>
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://factoryjet.com' },
+        { name: 'Services', url: 'https://factoryjet.com/services' },
+        { name: 'Web Design', url: 'https://factoryjet.com/services/web-design' },
+        { name: 'Hyderabad', url: 'https://factoryjet.com/services/web-design/hyderabad' },
+      ]} />
+      <HyderabadPage />
+    </>
+  )
 }

@@ -107,23 +107,6 @@ const serviceJsonLd = {
 export const metadata: Metadata = {
   title: 'Web Design Agency Dubai | Website Development Company UAE | FactoryJet',
   description: 'FactoryJet is Dubai\'s #1 AI-native web design agency. Premium website development, e-commerce solutions & digital transformation for UAE businesses. 25+ years expertise, 500+ projects, 98% satisfaction rate. Get a free consultation!',
-  keywords: [
-    'web design dubai',
-    'website development dubai',
-    'web design agency uae',
-    'website development company dubai',
-    'ecommerce website dubai',
-    'web development uae',
-    'best web design company dubai',
-    'affordable web design dubai',
-    'professional website design uae',
-    'custom web development dubai',
-    'shopify development dubai',
-    'wordpress development uae',
-    'web design abu dhabi',
-    'digital agency dubai',
-    'AI web design dubai',
-  ],
   authors: [{ name: 'FactoryJet' }],
   robots: {
     index: true,

@@ -5,14 +5,6 @@ import UsHomePage from '@/pages/UsHomePage/App'
 export const metadata: Metadata = {
   title: 'Web Development Company USA | E-Commerce Solutions | FactoryJet',
   description: 'FactoryJet delivers world-class web development and e-commerce solutions for US businesses. Custom websites, Shopify stores, and digital solutions. Fast delivery, competitive pricing. Get a free consultation!',
-  keywords: [
-    'Web Development Company USA',
-    'E-commerce Development USA',
-    'Shopify Development USA',
-    'Custom Website Development USA',
-    'Web Design Agency USA',
-    'Digital Solutions USA'
-  ],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

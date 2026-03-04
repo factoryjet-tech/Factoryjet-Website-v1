@@ -4,13 +4,6 @@ import NewYorkFAQPage from '@/lib/legacy-pages/NewYorkFAQ/App'
 export const metadata: Metadata = {
   title: 'Web Design FAQ New York City | Common Questions | FactoryJet NYC',
   description: 'Frequently asked questions about web design and development services in New York City. Get answers about pricing, timelines, process, and more from FactoryJet NYC.',
-  keywords: [
-    'Web Design FAQ New York',
-    'NYC Web Development Questions',
-    'Website Design Process NYC',
-    'Web Design Pricing Questions NYC',
-    'New York Web Developer FAQ'
-  ],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

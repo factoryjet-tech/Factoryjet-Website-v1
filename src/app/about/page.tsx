@@ -5,23 +5,6 @@ import AboutPage from '@/pages/About'
 export const metadata: Metadata = {
   title: 'About Us - Leading Web & E-Commerce Development Company | FactoryJet',
   description: 'Learn about FactoryJet - a trusted web and e-commerce development company with 150+ successful projects. Meet our expert team, discover our mission to empower businesses, and see why companies choose us for their digital transformation.',
-  keywords: [
-    'about factoryjet',
-    'web development company',
-    'ecommerce development company',
-    'digital agency',
-    'web design agency',
-    'our team',
-    'company mission',
-    'our story',
-    'why choose us',
-    'development expertise',
-    'client success stories',
-    'web development team',
-    'professional developers',
-    'trusted agency',
-    'award winning agency'
-  ],
   authors: [{ name: 'FactoryJet' }],
   robots: {
     index: true,

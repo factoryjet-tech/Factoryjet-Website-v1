@@ -2,22 +2,11 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import { webDesignCityAlternatesUS } from '@/data/hreflangMap'
 import ClevelandLandingPage from '@/pages/US-CleavlandLandingPage/App'
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
   title: 'Professional Web Design Company in Cleveland, Ohio | FactoryJet',
   description: 'FactoryJet is the leading AI-native web development company in Cleveland, Ohio. Enterprise-quality websites delivered in 7 days at 60-70% lower cost. Custom web design, SEO optimization, and e-commerce solutions for Cleveland businesses.',
-  keywords: [
-    'Web Design Company Cleveland',
-    'Web Development Cleveland Ohio',
-    'Cleveland Web Designer',
-    'Professional Website Development Cleveland',
-    'Custom Web Design Ohio',
-    'E-commerce Development Cleveland',
-    'SEO Services Cleveland',
-    'AI Web Development Cleveland',
-    'Small Business Website Cleveland',
-    'Web Design Agency Cleveland Ohio'
-  ],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
@@ -112,6 +101,12 @@ export default function Page() {
 
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://factoryjet.com/us' },
+        { name: 'Services', url: 'https://factoryjet.com/us/services' },
+        { name: 'Web Design', url: 'https://factoryjet.com/us/services/web-design' },
+        { name: 'Cleveland', url: 'https://factoryjet.com/us/services/web-design/cleveland' },
+      ]} />
       <Script
         id="json-ld-cleveland"
         type="application/ld+json"

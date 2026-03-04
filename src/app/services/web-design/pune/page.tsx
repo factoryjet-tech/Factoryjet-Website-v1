@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { webDesignCityAlternatesIN } from '@/data/hreflangMap'
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 import PuneNewPage from '@/pages/PuneNew'
 
 export const metadata: Metadata = {
@@ -45,5 +46,15 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <PuneNewPage />
+  return (
+    <>
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://factoryjet.com' },
+        { name: 'Services', url: 'https://factoryjet.com/services' },
+        { name: 'Web Design', url: 'https://factoryjet.com/services/web-design' },
+        { name: 'Pune', url: 'https://factoryjet.com/services/web-design/pune' },
+      ]} />
+      <PuneNewPage />
+    </>
+  )
 }

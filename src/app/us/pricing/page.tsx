@@ -6,16 +6,6 @@ import UsPricingPage from '@/pages/Us-PricingPage'
 export const metadata: Metadata = {
   title: 'Web Development Pricing USA | Transparent Packages | FactoryJet',
   description: 'Transparent, value-driven pricing for web development, e-commerce, SEO, and maintenance services. Enterprise-grade technology at SMB-friendly prices. No hidden fees. Get a free consultation!',
-  keywords: [
-    'Web Development Pricing USA',
-    'Website Design Packages USA',
-    'E-commerce Development Cost',
-    'SEO Services Pricing',
-    'Website Maintenance Plans',
-    'Shopify Development Cost',
-    'Custom Website Pricing',
-    'Web Design Agency Rates USA'
-  ],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

@@ -4,14 +4,6 @@ import NewYorkServiceAndPricingPage from '@/lib/legacy-pages/NewYorkServiceAndPr
 export const metadata: Metadata = {
   title: 'Web Design Services & Pricing in New York City | FactoryJet NYC',
   description: 'Comprehensive web design and development services in New York City. View our transparent pricing, service packages, and custom solutions for NYC businesses. Get your quote today!',
-  keywords: [
-    'Web Design Services New York',
-    'Web Development Pricing NYC',
-    'New York Web Design Packages',
-    'NYC Website Development Cost',
-    'Professional Web Services Manhattan',
-    'Custom Web Design Pricing NYC'
-  ],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

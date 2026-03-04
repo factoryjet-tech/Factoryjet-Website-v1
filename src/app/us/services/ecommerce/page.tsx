@@ -5,16 +5,6 @@ import UsEcommercePage from '@/pages/UsEcommercePage/App'
 export const metadata: Metadata = {
   title: 'E-Commerce Development USA | Shopify & WooCommerce | FactoryJet',
   description: 'Expert e-commerce development services for US businesses. Shopify, WooCommerce, and custom online stores. High-converting, mobile-optimized, and SEO-ready. Affordable pricing with quick delivery. Get a free consultation!',
-  keywords: [
-    'E-commerce Development USA',
-    'Shopify Development USA',
-    'WooCommerce Development USA',
-    'Online Store Development USA',
-    'E-commerce Website USA',
-    'Shopping Cart Development USA',
-    'Custom E-commerce USA',
-    'E-commerce Agency USA'
-  ],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

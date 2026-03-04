@@ -5,23 +5,6 @@ import PricingPage from '@/pages/Pricing'
 export const metadata: Metadata = {
   title: 'Transparent Pricing Plans | Web & E-Commerce Development Packages | FactoryJet',
   description: 'Explore FactoryJet pricing plans for web development and e-commerce solutions. Transparent, affordable packages starting from ₹15,000. Custom quotes available for enterprise projects.',
-  keywords: [
-    'web development pricing',
-    'ecommerce development cost',
-    'website pricing',
-    'web design packages',
-    'affordable web development',
-    'ecommerce pricing plans',
-    'website cost',
-    'development packages',
-    'shopify pricing',
-    'wordpress pricing',
-    'custom website cost',
-    'web development rates',
-    'transparent pricing',
-    'website packages india',
-    'development cost'
-  ],
   authors: [{ name: 'FactoryJet' }],
   robots: {
     index: true,

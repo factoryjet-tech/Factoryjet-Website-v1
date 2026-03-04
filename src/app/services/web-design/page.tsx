@@ -1,32 +1,11 @@
 import type { Metadata } from 'next'
 import { webDesignAlternates } from '@/data/hreflangMap'
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 import WebDesignPage from '@/pages/WebDesign'
 
 export const metadata: Metadata = {
   title: 'Web Design Company in India | Conversion-Focused Website Development | FactoryJet',
   description: 'FactoryJet is a web design company in India that builds high-performance, conversion-focused websites on WordPress, Webflow, Framer, and custom stacks. Mobile-first, SEO-optimized, Core Web Vitals compliant. Services across Mumbai, Pune, Bangalore, Delhi, and more.',
-  // keywords: [
-  //   'web design services',
-  //   'website development',
-  //   'custom website design',
-  //   'responsive web design',
-  //   'mobile-first design',
-  //   'ui ux design',
-  //   'landing page design',
-  //   'business website design',
-  //   'corporate website development',
-  //   'wordpress development',
-  //   'react website development',
-  //   'nextjs development',
-  //   'frontend development',
-  //   'web application development',
-  //   'website redesign services',
-  //   'seo web design',
-  //   'conversion optimized design',
-  //   'professional web design',
-  //   'affordable web design',
-  //   'fast website development'
-  // ],
   authors: [{ name: 'FactoryJet' }],
   robots: {
     index: true,
@@ -68,5 +47,14 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <WebDesignPage />
+  return (
+    <>
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://factoryjet.com' },
+        { name: 'Services', url: 'https://factoryjet.com/services' },
+        { name: 'Web Design', url: 'https://factoryjet.com/services/web-design' },
+      ]} />
+      <WebDesignPage />
+    </>
+  )
 }

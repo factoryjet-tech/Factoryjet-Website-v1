@@ -6,16 +6,6 @@ import UsFaqPage from '@/pages/US-FAQ'
 export const metadata: Metadata = {
   title: 'FAQ | Web Development Questions | FactoryJet USA',
   description: 'Find answers to frequently asked questions about web development, e-commerce, SEO, pricing, and our AI-native approach. Get expert help from FactoryJet USA.',
-  keywords: [
-    'Web Development FAQ USA',
-    'E-commerce Questions',
-    'Website Cost USA',
-    'SEO Pricing Questions',
-    'FactoryJet FAQ',
-    'Digital Agency FAQ',
-    'Shopify Development Questions',
-    'WordPress FAQ'
-  ],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

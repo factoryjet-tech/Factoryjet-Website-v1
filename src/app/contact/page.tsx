@@ -5,23 +5,6 @@ import ContactPage from '@/pages/Contact'
 export const metadata: Metadata = {
   title: 'Contact Us - Get a Free Quote | Web & E-Commerce Development | FactoryJet',
   description: 'Get in touch with FactoryJet for web development, e-commerce solutions, and digital services. Call +91 96999 77699 or email connect@factoryjet.com. Free consultation and quotes available.',
-  keywords: [
-    'contact factoryjet',
-    'web development contact',
-    'ecommerce development inquiry',
-    'free quote',
-    'web design consultation',
-    'get in touch',
-    'contact web agency',
-    'development services contact',
-    'request quote',
-    'factoryjet phone number',
-    'factoryjet email',
-    'web development inquiry',
-    'project consultation',
-    'business inquiry',
-    'support contact'
-  ],
   authors: [{ name: 'FactoryJet' }],
   robots: {
     index: true,

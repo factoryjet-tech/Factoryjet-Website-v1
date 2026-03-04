@@ -1,26 +1,7 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 import BlogPage from '@/pages/Blog'
-
-// Breadcrumb structured data for SEO
-const breadcrumbJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    {
-      '@type': 'ListItem',
-      position: 1,
-      name: 'Home',
-      item: 'https://factoryjet.com',
-    },
-    {
-      '@type': 'ListItem',
-      position: 2,
-      name: 'Blog',
-      item: 'https://factoryjet.com/blog',
-    },
-  ],
-}
 
 // Blog listing page structured data
 const blogListJsonLd = {
@@ -42,23 +23,6 @@ const blogListJsonLd = {
 export const metadata: Metadata = {
   title: 'Web Development & E-Commerce Blog | Expert Tips & Insights | FactoryJet',
   description: 'Discover expert insights on web development, e-commerce, digital marketing, and tech trends. Get actionable tips, tutorials, and industry best practices from FactoryJet.',
-  keywords: [
-    'web development blog',
-    'ecommerce blog',
-    'digital marketing tips',
-    'web design articles',
-    'tech insights',
-    'development tutorials',
-    'online business tips',
-    'website optimization',
-    'seo best practices',
-    'web development trends',
-    'ecommerce strategies',
-    'shopify tips',
-    'wordpress tutorials',
-    'coding best practices',
-    'digital transformation'
-  ],
   authors: [{ name: 'FactoryJet' }],
   robots: {
     index: true,
@@ -102,11 +66,10 @@ export default function Page() {
   return (
     <>
       {/* Breadcrumb Structured Data */}
-      <Script
-        id="breadcrumb-jsonld"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://factoryjet.com' },
+        { name: 'Blog', url: 'https://factoryjet.com/blog' },
+      ]} />
 
       {/* Blog Listing Structured Data */}
       <Script

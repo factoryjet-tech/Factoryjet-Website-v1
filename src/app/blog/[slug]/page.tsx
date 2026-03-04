@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Script from 'next/script'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 import { BlogPostPage } from '@/pages/Blog/components/BlogPostPage'
 import { POSTS } from '@/pages/Blog/posts'
 
@@ -29,13 +30,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${post.title} | FactoryJet Blog`,
     description: post.excerpt,
-    keywords: [
-      post.category.toLowerCase(),
-      'web development',
-      'ecommerce',
-      'factoryjet blog',
-      ...post.title.toLowerCase().split(' '),
-    ],
     authors: [{ name: post.author }],
     robots: {
       index: true,
@@ -134,6 +128,13 @@ export default async function Page({ params }: Props) {
 
   return (
     <>
+      {/* Breadcrumb Structured Data */}
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://factoryjet.com' },
+        { name: 'Blog', url: 'https://factoryjet.com/blog' },
+        { name: post.title, url: `https://factoryjet.com/blog/${resolvedParams.slug}` },
+      ]} />
+
       {/* Article Structured Data */}
       <Script
         id="article-jsonld"

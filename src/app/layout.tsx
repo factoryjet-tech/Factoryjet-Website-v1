@@ -28,7 +28,6 @@ export const metadata: Metadata = {
   title: 'World-Class Web & E-Commerce Development Company | FactoryJet',
   description: 'FactoryJet is a leading web & eCommerce development company delivering scalable, secure, and high-performance digital solutions. Fast delivery, affordable pricing, 150+ successful projects. Get a free consultation today!',
   authors: [{ name: 'FactoryJet' }],
-  // keywords: ['web development', 'ecommerce development', 'digital solutions', 'FactoryJet'],
   robots: {
     index: true,
     follow: true,

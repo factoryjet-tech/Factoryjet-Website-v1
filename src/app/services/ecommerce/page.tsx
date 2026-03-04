@@ -1,32 +1,11 @@
 import type { Metadata } from 'next'
 import { ecommerceAlternates } from '@/data/hreflangMap'
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 import EcommPage from '@/pages/Ecomm'
 
 export const metadata: Metadata = {
   title: 'E-Commerce Development Services | Custom Online Store Solutions | FactoryJet',
   description: 'Build high-converting e-commerce stores with FactoryJet. Expert Shopify, WooCommerce & custom e-commerce development. AI-powered, mobile-first, SEO-optimized stores that sell while you sleep. 150+ successful projects delivered.',
-  keywords: [
-    'e-commerce development',
-    'online store development',
-    'ecommerce website design',
-    'shopify development',
-    'woocommerce development',
-    'custom ecommerce solutions',
-    'online shopping platform',
-    'ecommerce store builder',
-    'b2b ecommerce platform',
-    'b2c ecommerce development',
-    'd2c ecommerce solutions',
-    'multi-vendor marketplace',
-    'ecommerce app development',
-    'mobile commerce solutions',
-    'payment gateway integration',
-    'inventory management system',
-    'ecommerce seo optimization',
-    'conversion rate optimization',
-    'cart abandonment solutions',
-    'ecommerce analytics'
-  ],
   authors: [{ name: 'FactoryJet' }],
   robots: {
     index: true,
@@ -68,5 +47,14 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <EcommPage />
+  return (
+    <>
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://factoryjet.com' },
+        { name: 'Services', url: 'https://factoryjet.com/services' },
+        { name: 'E-Commerce', url: 'https://factoryjet.com/services/ecommerce' },
+      ]} />
+      <EcommPage />
+    </>
+  )
 }

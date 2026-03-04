@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Footer from '@/components/Footer'
 import { CaseStudyPage } from '@/pages/Case/components/CaseStudyPage'
 import { CASE_STUDIES } from '@/pages/Case/data.constants'
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -27,14 +28,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${caseStudy.title} - Case Study | FactoryJet`,
     description: caseStudy.snippet,
-    keywords: [
-      'case study',
-      caseStudy.category.toLowerCase(),
-      caseStudy.location.toLowerCase(),
-      'web development',
-      'ecommerce',
-      ...caseStudy.title.toLowerCase().split(' '),
-    ],
     authors: [{ name: 'FactoryJet' }],
     robots: {
       index: true,
@@ -85,6 +78,11 @@ export default async function Page({ params }: Props) {
 
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://factoryjet.com' },
+        { name: 'Case Studies', url: 'https://factoryjet.com/case' },
+        { name: caseStudy.title, url: `https://factoryjet.com/case/${resolvedParams.slug}` },
+      ]} />
       <CaseStudyPage caseStudy={caseStudy} />
       <Footer />
     </>

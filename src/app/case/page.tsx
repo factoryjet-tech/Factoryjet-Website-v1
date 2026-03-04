@@ -1,26 +1,10 @@
 import type { Metadata } from 'next'
 import CasePage from '@/pages/Case'
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
   title: 'Case Studies - Real Results from Web & E-Commerce Projects | FactoryJet',
   description: 'Explore FactoryJet case studies showcasing successful web development and e-commerce projects. See how we helped businesses achieve exponential growth with modern digital solutions.',
-  keywords: [
-    'case studies',
-    'web development portfolio',
-    'ecommerce success stories',
-    'client projects',
-    'web design portfolio',
-    'project showcase',
-    'client results',
-    'digital transformation case studies',
-    'ecommerce case studies',
-    'website redesign results',
-    'business growth stories',
-    'web development examples',
-    'successful projects',
-    'client testimonials',
-    'portfolio work'
-  ],
   authors: [{ name: 'FactoryJet' }],
   robots: {
     index: true,
@@ -61,5 +45,13 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <CasePage />
+  return (
+    <>
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://factoryjet.com' },
+        { name: 'Case Studies', url: 'https://factoryjet.com/case' },
+      ]} />
+      <CasePage />
+    </>
+  )
 }

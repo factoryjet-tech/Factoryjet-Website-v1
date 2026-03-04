@@ -2,22 +2,11 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import { webDesignCityAlternatesUS } from '@/data/hreflangMap'
 import NewYorkLandingPage from '@/lib/legacy-pages/NewYorkLandingPage/App'
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
   title: 'Professional Web Design Company in New York City | FactoryJet NYC',
   description: 'FactoryJet is the leading AI-native web development company in New York City. Enterprise-quality websites delivered in 7 days at 60-70% lower cost. Custom web design, SEO optimization, and e-commerce solutions for NYC businesses.',
-  keywords: [
-    'Web Design Company New York',
-    'Web Development NYC',
-    'New York City Web Designer',
-    'Professional Website Development NYC',
-    'Custom Web Design Manhattan',
-    'E-commerce Development New York',
-    'SEO Services NYC',
-    'AI Web Development New York',
-    'Small Business Website NYC',
-    'Web Design Agency New York City'
-  ],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
@@ -112,6 +101,12 @@ export default function Page() {
 
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://factoryjet.com/us' },
+        { name: 'Services', url: 'https://factoryjet.com/us/services' },
+        { name: 'Web Design', url: 'https://factoryjet.com/us/services/web-design' },
+        { name: 'New York', url: 'https://factoryjet.com/us/services/web-design/new-york' },
+      ]} />
       <Script
         id="json-ld-new-york"
         type="application/ld+json"

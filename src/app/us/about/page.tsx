@@ -5,14 +5,6 @@ import USAboutPage from '@/lib/legacy-pages/US-AboutPage/App'
 export const metadata: Metadata = {
   title: 'About FactoryJet | AI-Native Web Agency USA',
   description: 'Learn about FactoryJet — the AI-native web design agency for US businesses. Enterprise-grade websites delivered 60% faster and 40% more affordably. Meet our team, process, and mission.',
-  keywords: [
-    'About FactoryJet',
-    'AI Native Web Agency USA',
-    'Web Design Agency About',
-    'FactoryJet Team',
-    'Web Development Company USA',
-    'Webflow Agency USA',
-  ],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
