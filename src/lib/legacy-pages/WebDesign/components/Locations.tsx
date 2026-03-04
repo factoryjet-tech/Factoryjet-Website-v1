@@ -14,7 +14,7 @@ export const Locations = () => {
             Web Design Services Across Major Indian Cities
           </h2>
           <p className="text-base md:text-lg lg:text-xl text-slate-600 font-light">
-            FactoryJet provides conversion-focused website design and development services across India's key business hubs.
+            FactoryJet provides conversion-focused website design and development services across India's key business hubs:
           </p>
         </div>
 

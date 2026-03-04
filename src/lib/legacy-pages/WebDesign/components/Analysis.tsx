@@ -77,11 +77,11 @@ export const Analysis = () => {
               <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
                  <div className="p-4 md:p-6 rounded-xl md:rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
                     <span className="block text-slate-400 text-xs md:text-sm mb-1">Year 1 Investment</span>
-                    <span className="text-xl md:text-2xl font-bold text-white">₹1.36L - ₹4.26L</span>
+                    <span className="text-xl md:text-2xl font-bold text-white">₹1.36L – ₹4.26L</span>
                  </div>
                  <div className="p-4 md:p-6 rounded-xl md:rounded-2xl bg-emerald-500/10 border border-emerald-500/20 backdrop-blur-sm">
                     <span className="block text-emerald-200 text-xs md:text-sm mb-1">Year 1 Revenue</span>
-                    <span className="text-xl md:text-2xl font-bold text-emerald-400">₹10L - ₹20L+</span>
+                    <span className="text-xl md:text-2xl font-bold text-emerald-400">₹10L – ₹20L+</span>
                  </div>
               </div>
             </motion.div>

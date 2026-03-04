@@ -58,7 +58,7 @@ export const Hero = () => {
           className="text-center max-w-6xl mx-auto px-4"
         >
           <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-extrabold tracking-tight text-slate-900 leading-[1.1] mb-6 md:mb-8 drop-shadow-sm">
-            Builds for <br className="hidden md:block" />
+            Web Design Company in India That Builds for{' '}<br className="hidden md:block" />
             <span className="relative inline-block whitespace-nowrap">
               <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-jet-blue via-indigo-600 to-purple-600">
                 Conversion

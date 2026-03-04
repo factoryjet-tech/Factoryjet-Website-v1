@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus, ArrowRight, Sparkles, MessageCircle } from 'lucide-react';
 import { useContactModal } from '@/context/ContactModalContext';
 import { trackCTAClick, trackContactClick } from '@/utils/gtm';
+import Link from 'next/link';
 
 // Track WhatsApp click conversion for Google Ads
 const trackWhatsAppConversion = () => {
@@ -17,7 +18,7 @@ const trackWhatsAppConversion = () => {
 
 interface AccordionItemProps {
   q: string;
-  a: string;
+  a: React.ReactNode;
 }
 
 const AccordionItem: React.FC<AccordionItemProps> = ({ q, a }) => {
@@ -58,6 +59,15 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ q, a }) => {
 export const Info = () => {
   const { openModal } = useContactModal();
 
+  // Render FAQ answer with links where needed
+  const renderAnswer = (faq: { q: string; a: string }): React.ReactNode => {
+    if (faq.q.includes('Q17')) {
+      const parts = faq.a.split('Pricing page');
+      return <>{parts[0]}<Link href="/pricing" className="text-jet-blue hover:underline">Pricing page</Link>{parts[1]}</>;
+    }
+    return faq.a;
+  };
+
   // Split FAQs into two columns
   const midPoint = Math.ceil(FAQS.length / 2);
   const leftFaqs = FAQS.slice(0, midPoint);
@@ -71,18 +81,17 @@ export const Info = () => {
           <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16 lg:mb-20">
             <span className="text-jet-blue font-bold tracking-widest uppercase text-xs md:text-sm mb-3 md:mb-4 block">Knowledge Base</span>
             <h2 className="text-2xl md:text-4xl font-display font-bold text-slate-900 mb-4 md:mb-6">Frequently Asked Questions</h2>
-            <p className="text-base md:text-lg lg:text-xl text-slate-600 font-light">Frequently Asked Questions</p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-4 md:gap-6 items-start">
             <div className="space-y-0">
               {leftFaqs.map((faq, idx) => (
-                <AccordionItem key={`l-${idx}`} q={faq.q} a={faq.a} />
+                <AccordionItem key={`l-${idx}`} q={faq.q} a={renderAnswer(faq)} />
               ))}
             </div>
             <div className="space-y-0">
               {rightFaqs.map((faq, idx) => (
-                <AccordionItem key={`r-${idx}`} q={faq.q} a={faq.a} />
+                <AccordionItem key={`r-${idx}`} q={faq.q} a={renderAnswer(faq)} />
               ))}
             </div>
           </div>

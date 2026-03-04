@@ -14,7 +14,7 @@ export const HERO_CONTENT = {
 
 export const SECTION_1_CONTENT = {
   title: "Why Your Website Is a Revenue Decision, Not a Design One",
-  description: "Your website is often the first and only interaction a prospect has with your business before deciding to engage or leave. In India's accelerating digital market, where paid traffic costs are rising and mobile users dominate, a weak website compounds every marketing rupee wasted.",
+  description: "Your website is often the first and only interaction a prospect has with your business before deciding to engage or leave. In India's accelerating digital market, where paid traffic costs are rising and mobile users dominate, a weak website compounds every marketing rupee wasted. Businesses in major metros require performance-driven digital infrastructure tailored to competitive regional markets. If you are looking for a web design company in Mumbai, Pune, Bangalore, or Delhi, our localised strategy aligns with regional competition and audience behaviour while maintaining national scalability. Every city operates differently — enterprise markets demand structured, authority-driven UX, while startup ecosystems prioritise agile, conversion-focused frameworks. Without this strategic alignment, even high traffic fails to convert. A strategically built website must:",
   points: [
     { title: "Build Credibility & Trust", desc: "Professional design signals that you're a legitimate, established business" },
     { title: "Provide 24/7 Visibility", desc: "Your website works while you sleep, representing your business around the clock" },
@@ -28,13 +28,13 @@ export const SECTION_1_CONTENT = {
     title: "The FactoryJet Difference",
     desc: "We don't ship template-based sites with generic layouts. Every project is scoped around your business goals, audience behaviour, and conversion targets.",
     items: [
-      "Strategically Designed: Structured around your specific acquisition funnel",
-      "Brand-Focused: Visual language aligned with your market positioning",
-      "Mobile-First: 70%+ of Indian web traffic is mobile; design starts there",
-      "SEO-Optimized: Technical SEO foundations baked in from day one",
-      "Conversion-Focused: Every design decision maps to a revenue outcome",
-      "Fast & Secure: Sub-2s load times with enterprise-grade infrastructure",
-      "Easy to Manage: Non-technical admins can update content without developer dependency"
+      "Strategically Designed — Structured around your specific acquisition funnel",
+      "Brand-Focused — Visual language aligned with your market positioning",
+      "Mobile-First — 70%+ of Indian web traffic is mobile; design starts there",
+      "SEO-Optimized — Technical SEO foundations baked in from day one",
+      "Conversion-Focused — Every design decision maps to a revenue outcome",
+      "Fast & Secure — Sub-2s load times with enterprise-grade infrastructure",
+      "Easy to Manage — Non-technical admins can update content without developer dependency"
     ]
   }
 };
@@ -116,18 +116,18 @@ export const PLATFORMS = [
 ];
 
 export const FEATURES_LIST = [
-  { icon: Smartphone, title: "Mobile-Responsive Design", desc: "Adapts to any screen with touch-optimised interfaces and mobile-network-aware performance." },
-  { icon: Search, title: "SEO Optimization Foundation", desc: "Technical SEO, keyword-optimised metadata, schema markup, Core Web Vitals compliance." },
-  { icon: Zap, title: "Fast Loading Speed", desc: "Median load time under 2 seconds via image compression, minification, caching, and global CDN." },
-  { icon: Shield, title: "Security & Compliance", desc: "SSL, DDoS protection, malware monitoring, regular updates, GDPR compliance." },
-  { icon: PenTool, title: "User-Friendly CMS", desc: "Drag-and-drop content management without technical dependency." },
-  { icon: MousePointer, title: "Contact Forms & Lead Capture", desc: "Optimised forms with CRM integration and abandonment tracking." },
-  { icon: Users, title: "Email Newsletter Integration", desc: "MailChimp/ConvertKit integration with optin placement and subscriber management." },
-  { icon: Share2, title: "Social Media Integration", desc: "Open Graph tags, sharing buttons, embedded social feeds." },
-  { icon: BarChart, title: "Analytics & Tracking", desc: "GA4, conversion tracking, event tracking, custom dashboards." },
-  { icon: ShoppingCart, title: "E-Commerce Ready", desc: "Product catalogue, cart, payment gateways, inventory, and order management." },
-  { icon: FileText, title: "Blog Platform", desc: "SEO-optimised publishing with category management and RSS." },
-  { icon: Youtube, title: "Video Embedding", desc: "YouTube/Vimeo with responsive sizing and video SEO." }
+  { icon: Smartphone, title: "Mobile-Responsive Design", desc: "Adapts to any screen with touch-optimised interfaces and mobile-network-aware performance" },
+  { icon: Search, title: "SEO Optimization Foundation", desc: "Technical SEO, keyword-optimised metadata, schema markup, Core Web Vitals compliance" },
+  { icon: Zap, title: "Fast Loading Speed", desc: "Median load time under 2 seconds via image compression, minification, caching, and global CDN" },
+  { icon: Shield, title: "Security & Compliance", desc: "SSL, DDoS protection, malware monitoring, regular updates, GDPR compliance" },
+  { icon: PenTool, title: "User-Friendly CMS", desc: "Drag-and-drop content management without technical dependency" },
+  { icon: MousePointer, title: "Contact Forms & Lead Capture", desc: "Optimised forms with CRM integration and abandonment tracking" },
+  { icon: Users, title: "Email Newsletter Integration", desc: "MailChimp/ConvertKit integration with optin placement and subscriber management" },
+  { icon: Share2, title: "Social Media Integration", desc: "Open Graph tags, sharing buttons, embedded social feeds" },
+  { icon: BarChart, title: "Analytics & Tracking", desc: "GA4, conversion tracking, event tracking, custom dashboards" },
+  { icon: ShoppingCart, title: "E-Commerce Ready", desc: "Product catalogue, cart, payment gateways, inventory, and order management" },
+  { icon: FileText, title: "Blog Platform", desc: "SEO-optimised publishing with category management and RSS" },
+  { icon: Youtube, title: "Video Embedding", desc: "YouTube/Vimeo with responsive sizing and video SEO" }
 ];
 
 export const HOSTING_AMC = {

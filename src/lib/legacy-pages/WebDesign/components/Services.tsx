@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SECTION_1_CONTENT, PRINCIPLES, PLATFORMS } from '../data';
 import { CheckCircle2, Layout, Code2, Paintbrush, Database, Sparkles, ArrowUpRight, Users, MousePointer2, Smartphone, Palette, Zap, Search, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 const PlatformIcon = ({ name }: { name: string }) => {
   if (name.includes('WordPress')) return <Database className="w-8 h-8 text-white" />;
@@ -36,7 +37,7 @@ export const Services = () => {
                 {SECTION_1_CONTENT.title}
               </h2>
               <p className="text-base md:text-lg lg:text-xl text-slate-600 mb-8 md:mb-10 leading-relaxed font-light">
-                {SECTION_1_CONTENT.description}
+                Your website is often the first and only interaction a prospect has with your business before deciding to engage or leave. In India's accelerating digital market, where paid traffic costs are rising and mobile users dominate, a weak website compounds every marketing rupee wasted. Businesses in major metros require performance-driven digital infrastructure tailored to competitive regional markets. If you are looking for a web design company in <Link href="/services/web-design/mumbai" className="text-jet-blue hover:underline">Mumbai</Link>, <Link href="/services/web-design/pune" className="text-jet-blue hover:underline">Pune</Link>, <Link href="/services/web-design/bangalore" className="text-jet-blue hover:underline">Bangalore</Link>, or <Link href="/services/web-design/delhi" className="text-jet-blue hover:underline">Delhi</Link>, our localised strategy aligns with regional competition and audience behaviour while maintaining national scalability. Every city operates differently — enterprise markets demand structured, authority-driven UX, while startup ecosystems prioritise agile, conversion-focused frameworks. Without this strategic alignment, even high traffic fails to convert. A strategically built website must:
               </p>
 
               <div className="grid sm:grid-cols-2 gap-x-6 md:gap-x-8 gap-y-3 md:gap-y-4">
@@ -80,7 +81,7 @@ export const Services = () => {
                 
                 <div className="space-y-4">
                   {SECTION_1_CONTENT.difference.items.map((item, idx) => {
-                    const [bold, rest] = item.split(':');
+                    const [bold, rest] = item.split(' — ');
                     return (
                       <div key={idx} className="flex gap-4 p-4 rounded-xl bg-white/50 hover:bg-white border border-transparent hover:border-slate-100 transition-all duration-300 hover:shadow-sm group">
                         <div className="w-1.5 h-1.5 mt-2 rounded-full bg-slate-300 group-hover:bg-jet-orange transition-colors"></div>
@@ -135,9 +136,9 @@ export const Services = () => {
                   <h3 className="text-xl md:text-2xl lg:text-3xl font-display font-bold text-slate-900 mb-3 md:mb-4">{PRINCIPLES[0].title}</h3>
                   <p className="text-slate-500 text-sm md:text-base lg:text-lg leading-relaxed max-w-md">{PRINCIPLES[0].desc}</p>
                 </div>
-                <div className="hidden md:flex items-center gap-2 text-xs md:text-sm font-bold text-jet-blue opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">
+                <Link href="/case" className="hidden md:flex items-center gap-2 text-xs md:text-sm font-bold text-jet-blue opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300 hover:underline">
                   Read Case Study <ArrowRight className="w-3 h-3 md:w-4 md:h-4" />
-                </div>
+                </Link>
               </div>
 
               {/* Abstract Visual: Concentric User Rings */}
@@ -291,7 +292,7 @@ export const Services = () => {
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="text-center mb-12 md:mb-16 lg:mb-20">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-4 md:mb-6">Platforms & Tech Stack</h2>
-            <p className="text-base md:text-lg lg:text-xl text-slate-400 font-light">Choosing the right platform determines your ceiling for growth.</p>
+            <p className="text-base md:text-lg lg:text-xl text-slate-400 font-light">Choosing the right platform determines your ceiling for growth. Each platform involves trade-offs across SEO flexibility, scalability, hosting costs, maintenance overhead, and development control. Here is an honest assessment of each.</p>
           </div>
 
           <div className="grid gap-8 md:gap-10 lg:gap-12">
