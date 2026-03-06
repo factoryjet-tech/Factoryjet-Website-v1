@@ -5,19 +5,22 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { BlogPost, FAQItem } from '../data.types';
 import { ReadingProgress } from './ReadingProgress';
-import { 
-  ArrowLeft, 
-  Calendar, 
-  Clock, 
-  Share2, 
-  Twitter, 
-  Linkedin, 
-  Facebook, 
+import { getAuthorByName } from '@/data/authors';
+import {
+  ArrowLeft,
+  Calendar,
+  Clock,
+  Share2,
+  Twitter,
+  Linkedin,
+  Facebook,
   Rocket,
   Lightbulb,
   ChevronDown,
   ChevronUp,
-  List
+  List,
+  ArrowUpRight,
+  Award,
 } from 'lucide-react';
 
 interface BlogPostPageProps {
@@ -157,24 +160,32 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
             {post.title}
           </motion.h1>
 
-          <div className="flex items-center justify-center gap-3 md:gap-4">
-            <div className="relative">
-              <img
-                src={`https://ui-avatars.com/api/?name=${encodeURIComponent(post.author)}&background=0052CC&color=fff`}
-                alt={`${post.author} - Author`}
-                width={48}
-                height={48}
-                loading="lazy"
-                decoding="async"
-                className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-white shadow-[0_0_30px_-5px_rgba(0,82,204,0.3)]"
-              />
-              <div className="absolute bottom-0 right-0 w-2.5 h-2.5 md:w-3 md:h-3 bg-green-500 border-2 border-white rounded-full" aria-hidden="true"></div>
-            </div>
-            <div className="text-left">
-              <p className="font-semibold text-gray-900 text-sm md:text-lg leading-tight">{post.author}</p>
-              <p className="text-xs md:text-sm text-gray-500">Senior Tech Journalist</p>
-            </div>
-          </div>
+          {(() => {
+            const authorProfile = getAuthorByName(post.author);
+            return (
+              <Link
+                href={authorProfile ? `/author/${authorProfile.slug}` : '/blog'}
+                className="inline-flex items-center justify-center gap-3 md:gap-4 group/author"
+              >
+                <div className="relative">
+                  <img
+                    src={authorProfile?.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(post.author)}&background=0052CC&color=fff`}
+                    alt={`${post.author} - Author`}
+                    width={48}
+                    height={48}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-white shadow-[0_0_30px_-5px_rgba(0,82,204,0.3)]"
+                  />
+                  <div className="absolute bottom-0 right-0 w-2.5 h-2.5 md:w-3 md:h-3 bg-green-500 border-2 border-white rounded-full" aria-hidden="true"></div>
+                </div>
+                <div className="text-left">
+                  <p className="font-semibold text-gray-900 text-sm md:text-lg leading-tight group-hover/author:text-jetBlue transition-colors">{post.author}</p>
+                  <p className="text-xs md:text-sm text-gray-500">{authorProfile?.jobTitle || 'Senior Tech Journalist'}</p>
+                </div>
+              </Link>
+            );
+          })()}
         </div>
       </header>
 
@@ -226,6 +237,64 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
 
               {/* AEO: FAQ Module */}
               {post.faqs && <FAQAccordion faqs={post.faqs} />}
+
+              {/* Author Attribution Box (E-E-A-T) */}
+              {(() => {
+                const authorProfile = getAuthorByName(post.author);
+                if (!authorProfile) return null;
+                return (
+                  <div className="mt-12 md:mt-16 bg-gradient-to-br from-slate-50 to-blue-50/30 rounded-xl md:rounded-2xl p-5 md:p-8 border border-gray-100" id="author">
+                    <div className="flex items-start gap-4 md:gap-5">
+                      <Link href={`/author/${authorProfile.slug}`} className="flex-shrink-0">
+                        <img
+                          src={authorProfile.image}
+                          alt={`${authorProfile.name} - ${authorProfile.jobTitle}`}
+                          width={80}
+                          height={80}
+                          className="w-16 h-16 md:w-20 md:h-20 rounded-xl md:rounded-2xl ring-2 ring-white shadow-lg"
+                        />
+                      </Link>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex flex-wrap items-center gap-2 mb-1">
+                          <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">Written by</span>
+                        </div>
+                        <Link href={`/author/${authorProfile.slug}`} className="group/name">
+                          <h4 className="font-display font-bold text-lg md:text-xl text-gray-900 group-hover/name:text-jetBlue transition-colors">
+                            {authorProfile.name}
+                          </h4>
+                        </Link>
+                        <p className="text-jetBlue text-xs md:text-sm font-semibold mb-2">
+                          {authorProfile.jobTitle}
+                        </p>
+                        <p className="text-gray-600 text-xs md:text-sm leading-relaxed mb-3">
+                          {authorProfile.shortBio}
+                        </p>
+                        <div className="flex flex-wrap items-center gap-2">
+                          <Link
+                            href={`/author/${authorProfile.slug}`}
+                            className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-jetBlue text-white text-xs font-semibold hover:bg-blue-700 transition-colors"
+                          >
+                            View Profile <ArrowUpRight className="w-3 h-3" />
+                          </Link>
+                          {authorProfile.linkedin && (
+                            <a
+                              href={authorProfile.linkedin}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-[#0077B5]/10 text-[#0077B5] text-xs font-semibold hover:bg-[#0077B5] hover:text-white transition-colors"
+                            >
+                              <Linkedin className="w-3 h-3" /> LinkedIn
+                            </a>
+                          )}
+                          <span className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-orange-50 text-jetOrange text-xs font-semibold border border-orange-100">
+                            <Award className="w-3 h-3" /> {authorProfile.yearsExperience} yrs exp.
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })()}
 
             </div>
           </article>

@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 import { BlogPostPage } from '@/pages/Blog/components/BlogPostPage'
 import { POSTS } from '@/pages/Blog/posts'
+import { getAuthorByName } from '@/data/authors'
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -72,6 +73,28 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 // Generate Article JSON-LD structured data for SEO
 function generateArticleJsonLd(post: typeof POSTS[0], slug: string) {
+  const authorProfile = getAuthorByName(post.author)
+
+  const authorSchema = authorProfile
+    ? {
+        '@type': 'Person' as const,
+        name: authorProfile.name,
+        url: `https://factoryjet.com/author/${authorProfile.slug}`,
+        jobTitle: authorProfile.jobTitle,
+        description: authorProfile.shortBio,
+        sameAs: [authorProfile.linkedin, authorProfile.twitter].filter(Boolean),
+        knowsAbout: authorProfile.knowsAbout,
+        worksFor: {
+          '@type': 'Organization' as const,
+          name: 'FactoryJet',
+          url: 'https://factoryjet.com',
+        },
+      }
+    : {
+        '@type': 'Person' as const,
+        name: post.author,
+      }
+
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -80,10 +103,7 @@ function generateArticleJsonLd(post: typeof POSTS[0], slug: string) {
     image: post.imageUrl || 'https://factoryjet.com/logo.png',
     datePublished: new Date(post.date).toISOString(),
     dateModified: new Date(post.date).toISOString(),
-    author: {
-      '@type': 'Person',
-      name: post.author,
-    },
+    author: authorSchema,
     publisher: {
       '@type': 'Organization',
       name: 'FactoryJet',
