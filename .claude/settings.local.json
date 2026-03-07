@@ -26,7 +26,10 @@
       "Bash(buildcode=$?)",
       "Bash(grep:*)",
       "Bash(xargs sed:*)",
-      "Bash(powershell -Command:*)"
+      "Bash(powershell -Command:*)",
+      "Bash(xxd)",
+      "Bash(node -e \":*)",
+      "Bash(ls -la \"c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/\"*react*)"
     ]
   }
 }

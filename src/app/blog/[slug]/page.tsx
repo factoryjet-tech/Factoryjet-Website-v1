@@ -29,8 +29,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${post.title} | FactoryJet Blog`,
-    description: post.excerpt,
+    title: post.meta?.title || `${post.title} | FactoryJet Blog`,
+    description: post.meta?.description || post.excerpt,
     authors: [{ name: post.author }],
     robots: {
       index: true,
@@ -46,8 +46,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       type: 'article',
       siteName: 'FactoryJet',
-      title: post.title,
-      description: post.excerpt,
+      title: post.meta?.title || post.title,
+      description: post.meta?.description || post.excerpt,
       url: `https://factoryjet.com/blog/${resolvedParams.slug}`,
       images: [
         {
@@ -61,8 +61,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: post.title,
-      description: post.excerpt,
+      title: post.meta?.title || post.title,
+      description: post.meta?.description || post.excerpt,
       images: [post.imageUrl || 'https://factoryjet.com/logo.png'],
     },
     alternates: {

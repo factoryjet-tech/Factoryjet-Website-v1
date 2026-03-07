@@ -19,6 +19,10 @@ export interface BlogPost {
   content?: React.ReactNode;
   keyTakeaways?: string[];
   faqs?: FAQItem[];
+  meta?: {
+    title: string;
+    description: string;
+  };
 }
 
 export type Category = 
