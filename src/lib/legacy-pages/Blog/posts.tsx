@@ -4,7 +4,7 @@ import { NativeAd } from './components/NativeAd';
 
 export const POSTS: BlogPost[] = [
   // --- WEB DESIGN & STRATEGY ---
-{
+{ 
   id: '1',
   slug: 'hidden-cost-of-cheap-websites-india',
   title: "The Hidden Cost of Cheap Websites in India: Why a ₹10,000 Site Is Costing You Lakhs in 2026",
