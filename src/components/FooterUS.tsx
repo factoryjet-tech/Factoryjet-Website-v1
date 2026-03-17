@@ -50,6 +50,11 @@ const FooterUS: React.FC<FooterUSProps> = ({ onCtaClick }) => {
               <li><Link href="/us/services/ecommerce" onClick={() => trackNavigation('E-Commerce', '/us/services/ecommerce', 'footer')} className="hover:text-[#FF6B35] transition-colors">E-Commerce</Link></li>
               <li><Link href="/us/services/web-design/new-york" onClick={() => trackNavigation('New York Web Design', '/us/services/web-design/new-york', 'footer')} className="hover:text-[#FF6B35] transition-colors">New York</Link></li>
               <li><Link href="/us/services/web-design/cleveland" onClick={() => trackNavigation('Cleveland Web Design', '/us/services/web-design/cleveland', 'footer')} className="hover:text-[#FF6B35] transition-colors">Cleveland</Link></li>
+              <li><Link href="/us/services/web-design/boise" onClick={() => trackNavigation('Boise Web Design', '/us/services/web-design/boise', 'footer')} className="hover:text-[#FF6B35] transition-colors">Boise</Link></li>
+              <li><Link href="/us/services/web-design/sioux-falls" onClick={() => trackNavigation('Sioux Falls Web Design', '/us/services/web-design/sioux-falls', 'footer')} className="hover:text-[#FF6B35] transition-colors">Sioux Falls</Link></li>
+              <li><Link href="/us/services/web-design/lincoln" onClick={() => trackNavigation('Lincoln Web Design', '/us/services/web-design/lincoln', 'footer')} className="hover:text-[#FF6B35] transition-colors">Lincoln</Link></li>
+              <li><Link href="/us/services/web-design/chattanooga" onClick={() => trackNavigation('Chattanooga Web Design', '/us/services/web-design/chattanooga', 'footer')} className="hover:text-[#FF6B35] transition-colors">Chattanooga</Link></li>
+              <li><Link href="/us/services/web-design/fargo" onClick={() => trackNavigation('Fargo Web Design', '/us/services/web-design/fargo', 'footer')} className="hover:text-[#FF6B35] transition-colors">Fargo</Link></li>
             </ul>
           </div>
           

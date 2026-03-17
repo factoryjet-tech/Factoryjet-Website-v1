@@ -143,4 +143,24 @@ export const webDesignCityAlternatesUS = {
     'en-US': 'https://factoryjet.com/us/services/web-design/cleveland',
     'x-default': 'https://factoryjet.com/us/services/web-design/cleveland',
   },
+  'boise': {
+    'en-US': 'https://factoryjet.com/us/services/web-design/boise',
+    'x-default': 'https://factoryjet.com/us/services/web-design/boise',
+  },
+  'sioux-falls': {
+    'en-US': 'https://factoryjet.com/us/services/web-design/sioux-falls',
+    'x-default': 'https://factoryjet.com/us/services/web-design/sioux-falls',
+  },
+  'lincoln': {
+    'en-US': 'https://factoryjet.com/us/services/web-design/lincoln',
+    'x-default': 'https://factoryjet.com/us/services/web-design/lincoln',
+  },
+  'chattanooga': {
+    'en-US': 'https://factoryjet.com/us/services/web-design/chattanooga',
+    'x-default': 'https://factoryjet.com/us/services/web-design/chattanooga',
+  },
+  'fargo': {
+    'en-US': 'https://factoryjet.com/us/services/web-design/fargo',
+    'x-default': 'https://factoryjet.com/us/services/web-design/fargo',
+  },
 } as const

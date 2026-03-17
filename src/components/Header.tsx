@@ -65,6 +65,11 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '' 
       submenu: [
         { label: 'New York', href: '/us/services/web-design/new-york', icon: MapPin, desc: 'Web design in New York City', isRoute: true },
         { label: 'Cleveland', href: '/us/services/web-design/cleveland', icon: MapPin, desc: 'Web design in Cleveland', isRoute: true },
+        { label: 'Boise', href: '/us/services/web-design/boise', icon: MapPin, desc: 'E-commerce development in Boise', isRoute: true },
+        { label: 'Sioux Falls', href: '/us/services/web-design/sioux-falls', icon: MapPin, desc: 'E-commerce development in Sioux Falls', isRoute: true },
+        { label: 'Lincoln', href: '/us/services/web-design/lincoln', icon: MapPin, desc: 'E-commerce development in Lincoln', isRoute: true },
+        { label: 'Chattanooga', href: '/us/services/web-design/chattanooga', icon: MapPin, desc: 'E-commerce development in Chattanooga', isRoute: true },
+        { label: 'Fargo', href: '/us/services/web-design/fargo', icon: MapPin, desc: 'E-commerce development in Fargo', isRoute: true },
       ]
     },
     { label: 'About Us', href: '#about', hasDropdown: false, isRoute: false },
