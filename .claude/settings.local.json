@@ -29,7 +29,8 @@
       "Bash(powershell -Command:*)",
       "Bash(xxd)",
       "Bash(node -e \":*)",
-      "Bash(ls -la \"c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/\"*react*)"
+      "Bash(ls -la \"c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/\"*react*)",
+      "Bash(find c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/src -maxdepth 3 -name *.jsx -o -name *.tsx)"
     ]
   }
 }

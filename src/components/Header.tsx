@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, ChevronDown, BookOpen, FileText, MapPin, Monitor, ShoppingBag } from 'lucide-react';
+import { Menu, X, ChevronDown, BookOpen, FileText, MapPin, Monitor, ShoppingBag, Bot } from 'lucide-react';
 import { useContactModal } from '../context/ContactModalContext';
 import { trackButtonClick, trackNavigation, trackCTAClick } from '../utils/gtm';
 
@@ -56,6 +56,7 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '' 
       submenu: [
         { label: 'Web Design', href: prefixRoute('/services/web-design'), icon: Monitor, desc: 'Custom high-performance websites', isRoute: true },
         { label: 'E-Commerce', href: prefixRoute('/services/ecommerce'), icon: ShoppingBag, desc: 'Shopify & WooCommerce stores', isRoute: true },
+        { label: 'AI Agents', href: '/services/ai-agent-development', icon: Bot, desc: 'Custom AI agent development', isRoute: true },
       ]
     },
     {
@@ -84,6 +85,7 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '' 
       submenu: [
         { label: 'Web Design', href: prefixRoute('/services/web-design'), icon: Monitor, desc: 'Custom high-performance websites', isRoute: true },
         { label: 'E-Commerce', href: prefixRoute('/services/ecommerce'), icon: ShoppingBag, desc: 'Shopify & WooCommerce stores', isRoute: true },
+        { label: 'AI Agents', href: '/services/ai-agent-development', icon: Bot, desc: 'Custom AI agent development', isRoute: true },
       ]
     },
     { label: 'About Us', href: '#about', hasDropdown: false, isRoute: false },
@@ -98,6 +100,7 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '' 
       submenu: [
         { label: 'Web Design', href: '/services/web-design', icon: Monitor, desc: 'Custom high-performance websites', isRoute: true },
         { label: 'E-Commerce', href: '/services/ecommerce', icon: ShoppingBag, desc: 'Shopify & WooCommerce stores', isRoute: true },
+        { label: 'AI Agents', href: '/services/ai-agent-development', icon: Bot, desc: 'Custom AI agent development', isRoute: true },
       ]
     },
     {

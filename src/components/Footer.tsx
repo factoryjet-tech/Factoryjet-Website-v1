@@ -52,6 +52,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2 md:space-y-3 text-gray-400 text-sm md:text-base">
               <li><Link href="/services/web-design" onClick={() => trackNavigation('Web Design', '/services/web-design', 'footer')} className="hover:text-jet-blue transition-colors">Web Design</Link></li>
               <li><Link href="/services/ecommerce" onClick={() => trackNavigation('E-Commerce', '/services/ecommerce', 'footer')} className="hover:text-jet-blue transition-colors">E-Commerce</Link></li>
+              <li><Link href="/services/ai-agent-development" onClick={() => trackNavigation('AI Agents', '/services/ai-agent-development', 'footer')} className="hover:text-jet-blue transition-colors">AI Agents</Link></li>
             </ul>
           </div>
 
