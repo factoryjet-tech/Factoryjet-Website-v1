@@ -28,7 +28,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: 
   --radius-sm: 8px; --radius-md: 10px; --radius-lg: 12px; --radius-xl: 16px;
   --shadow-sm: 0 1px 3px rgba(0,0,0,0.08); --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
   --shadow-lg: 0 12px 32px rgba(0,0,0,0.12);
-  --max-w: 720px; --section-py: 48px; --section-px: 20px;
+  --max-w: 1280px; --section-py: 48px; --section-px: 20px;
   --contain: layout style;
 }
 @media(min-width:640px){ :root { --section-py: 60px; --section-px: 24px; } }
