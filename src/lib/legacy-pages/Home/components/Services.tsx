@@ -84,7 +84,7 @@ const Services: React.FC = () => {
             </div>
             <div className="mt-8">
               <a
-                href="/services/ecommerce"
+                href="/services/ecommerce-development"
                 className="inline-flex items-center justify-center w-full py-3 px-6 rounded-xl bg-jetOrange text-white font-bold hover:bg-orange-700 transition-all shadow-lg shadow-orange-900/20"
               >
                 Explore E-Commerce Services

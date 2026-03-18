@@ -64,7 +64,7 @@ const FooterSection: React.FC = () => {
 
   const services = [
     { name: 'Website Design & Development', href: '/services/website-design' },
-    { name: 'E-Commerce Development', href: '/services/ecommerce' },
+    { name: 'E-Commerce Development', href: '/services/ecommerce-development' },
     { name: 'WordPress Development', href: '/services/wordpress' },
     { name: 'Custom Web Applications', href: '/services/web-apps' },
     { name: 'Digital Marketing & SEO', href: '/services/digital-marketing' },

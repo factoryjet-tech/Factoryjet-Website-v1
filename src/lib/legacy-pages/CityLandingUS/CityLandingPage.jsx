@@ -388,7 +388,7 @@ function FormModal({ isOpen, onClose, cityName }) {
           </div>
           <div style={{display:"flex",gap:12,justifyContent:"center",flexWrap:"wrap"}}>
             <button onClick={doClose} className="fj-btn fj-btn-blue" style={{padding:"12px 28px",fontSize:14}}>Done</button>
-            <a href="https://wa.me/message/your-whatsapp-link" target="_blank" rel="noopener noreferrer" className="fj-btn" style={{padding:"12px 20px",fontSize:13,border:"1.5px solid #25D366",background:"#fff",color:"#25D366"}}><WA/> WhatsApp</a>
+            <a href="https://wa.me/919103398557?text=Hi%20FactoryJet%2C%20I%27m%20interested%20in%20e-commerce%20development%20services." target="_blank" rel="noopener noreferrer" className="fj-btn" style={{padding:"12px 20px",fontSize:13,border:"1.5px solid #25D366",background:"#fff",color:"#25D366"}}><WA/> WhatsApp</a>
           </div>
         </div>
       </div>
@@ -449,7 +449,7 @@ function LandingPage({ cityKey }) {
       <style>{GLOBAL_CSS}</style>
       <SchemaBlock c={c} />
 
-      <Header basePath={`/us/services/web-design/${c.slug}`} variant="solid" />
+      <Header basePath={`/us/services/ecommerce-development/${c.slug}`} variant="solid" />
 
       <main id="main-content">
         {/* ── HERO ── */}
@@ -464,7 +464,7 @@ function LandingPage({ cityKey }) {
             <p className="fj-hero-sub">{c.hero.sub}</p>
             <div className="fj-hero-ctas">
               <button onClick={openForm} className="fj-btn fj-btn-primary">Get Your Free E-Commerce Audit <Arr/></button>
-              <a href="https://wa.me/message/your-whatsapp-link" target="_blank" rel="noopener noreferrer" className="fj-btn fj-btn-ghost"><WA/> Chat on WhatsApp</a>
+              <a href="https://wa.me/919103398557?text=Hi%20FactoryJet%2C%20I%27m%20interested%20in%20e-commerce%20development%20services." target="_blank" rel="noopener noreferrer" className="fj-btn fj-btn-ghost"><WA/> Chat on WhatsApp</a>
             </div>
             <div className="fj-stats" role="list" aria-label="Key statistics">
               {c.stats.map((s,i)=><div key={i} role="listitem"><div className="fj-stat-num">{s.num}</div><div className="fj-stat-label">{s.label}</div></div>)}
@@ -613,7 +613,7 @@ function LandingPage({ cityKey }) {
             <p style={{fontSize:15,color:"rgba(255,255,255,.65)",margin:"0 0 28px",lineHeight:1.6}}>Tell us about your business and we'll send a personalized plan within 24 hours. No commitment. No hard sell.</p>
             <div className="fj-cta-buttons">
               <button onClick={openForm} className="fj-btn fj-btn-primary" style={{fontSize:16,padding:"16px 32px"}}>Get Your Free E-Commerce Audit <Arr s={18}/></button>
-              <a href="https://wa.me/message/your-whatsapp-link" target="_blank" rel="noopener noreferrer" className="fj-btn fj-btn-wa"><WA/> Chat on WhatsApp</a>
+              <a href="https://wa.me/919103398557?text=Hi%20FactoryJet%2C%20I%27m%20interested%20in%20e-commerce%20development%20services." target="_blank" rel="noopener noreferrer" className="fj-btn fj-btn-wa"><WA/> Chat on WhatsApp</a>
             </div>
             <p style={{fontSize:12,color:"rgba(255,255,255,.35)",marginTop:20}}>🔒 Your information is secure. We respond within 24 hours.</p>
             <div className="fj-trust-row">{["500+ Projects","98% Satisfaction","3-Week Launch","30 Days Free Support"].map((b,i)=><div key={i} style={{display:"flex",alignItems:"center",gap:5,fontSize:12,color:"rgba(255,255,255,.5)",fontWeight:500}}><Check s={14} c="rgba(255,255,255,.5)"/> {b}</div>)}</div>

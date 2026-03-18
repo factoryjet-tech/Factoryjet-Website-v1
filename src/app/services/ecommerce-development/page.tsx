@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'E-Commerce Development Services | Build Stores That Sell',
     description: 'Professional e-commerce development with AI, glassmorphism design, and conversion psychology. Shopify, WooCommerce, custom solutions. Fast delivery, affordable pricing.',
-    url: 'https://factoryjet.com/services/ecommerce',
+    url: 'https://factoryjet.com/services/ecommerce-development',
     images: [
       {
         url: 'https://factoryjet.com/logo.png',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
-    canonical: 'https://factoryjet.com/services/ecommerce',
+    canonical: 'https://factoryjet.com/services/ecommerce-development',
     languages: ecommerceAlternates,
   },
 }
@@ -52,7 +52,7 @@ export default function Page() {
       <BreadcrumbSchema items={[
         { name: 'Home', url: 'https://factoryjet.com' },
         { name: 'Services', url: 'https://factoryjet.com/services' },
-        { name: 'E-Commerce', url: 'https://factoryjet.com/services/ecommerce' },
+        { name: 'E-Commerce', url: 'https://factoryjet.com/services/ecommerce-development' },
       ]} />
       <EcommPage />
     </>

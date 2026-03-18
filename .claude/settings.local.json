@@ -30,7 +30,14 @@
       "Bash(xxd)",
       "Bash(node -e \":*)",
       "Bash(ls -la \"c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/\"*react*)",
-      "Bash(find c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/src -maxdepth 3 -name *.jsx -o -name *.tsx)"
+      "Bash(find c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/src -maxdepth 3 -name *.jsx -o -name *.tsx)",
+      "Bash(rm -rf .next/dev)",
+      "Bash(rm -rf .next/cache)",
+      "Bash(npx rimraf:*)",
+      "Bash(for city:*)",
+      "Bash(do echo:*)",
+      "Read(//c/FactoryJet/rishi-branch/Factoryjet-Website-v1/src/app/us/services/**)",
+      "Bash(done)"
     ]
   }
 }

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'E-Commerce Development USA | Shopify & WooCommerce',
     description: 'Expert e-commerce development services for US businesses. Shopify, WooCommerce, and custom online stores.',
-    url: 'https://factoryjet.com/us/services/ecommerce',
+    url: 'https://factoryjet.com/us/services/ecommerce-development',
     images: [
       {
         url: 'https://factoryjet.com/logo.png',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
-    canonical: 'https://factoryjet.com/us/services/ecommerce',
+    canonical: 'https://factoryjet.com/us/services/ecommerce-development',
     languages: ecommerceAlternates,
   },
   robots: {

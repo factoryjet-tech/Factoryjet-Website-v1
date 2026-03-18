@@ -1,37 +1,37 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
-import { webDesignCityAlternatesUS } from '@/data/hreflangMap'
-import ChattanoogaPage from '@/lib/legacy-pages/CityLandingUS/ChattanoogaPage'
+import { ecommerceCityAlternatesUS } from '@/data/hreflangMap'
+import LincolnPage from '@/lib/legacy-pages/CityLandingUS/LincolnPage'
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
-  title: 'Shopify Development Chattanooga | E-Commerce & AI Agency - FactoryJet',
-  description: 'Gig City deserves gig-speed e-commerce. Custom Shopify & AI-powered stores for Chattanooga businesses. 10 Gbps infrastructure meets conversion-optimized design.',
+  title: 'E-Commerce Development Lincoln NE | Shopify & AI Agency - FactoryJet',
+  description: 'Professional e-commerce development for Lincoln, Nebraska businesses. From UNL startups to Main Street retailers — Shopify stores that convert. Free audit.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Development Chattanooga | E-Commerce & AI Agency - FactoryJet',
-    description: 'Gig City deserves gig-speed e-commerce. Custom Shopify & AI-powered stores for Chattanooga businesses.',
-    url: 'https://factoryjet.com/us/services/web-design/chattanooga',
+    title: 'E-Commerce Development Lincoln NE | Shopify & AI Agency - FactoryJet',
+    description: 'Professional e-commerce development for Lincoln, Nebraska businesses. Shopify stores that convert.',
+    url: 'https://factoryjet.com/us/services/ecommerce-development/lincoln',
     images: [
       {
         url: 'https://factoryjet.com/logo.png',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet - Shopify Development Chattanooga',
+        alt: 'FactoryJet - E-Commerce Development Lincoln',
       },
     ],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify Development Chattanooga | FactoryJet',
-    description: 'Gig City deserves gig-speed e-commerce. Custom Shopify & AI-powered stores for Chattanooga businesses.',
+    title: 'E-Commerce Development Lincoln NE | FactoryJet',
+    description: 'Professional e-commerce development for Lincoln, Nebraska businesses. Shopify stores that convert.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
-    canonical: 'https://factoryjet.com/us/services/web-design/chattanooga',
-    languages: webDesignCityAlternatesUS['chattanooga'],
+    canonical: 'https://factoryjet.com/us/services/ecommerce-development/lincoln',
+    languages: ecommerceCityAlternatesUS['lincoln'],
   },
   robots: {
     index: true,
@@ -50,40 +50,33 @@ export default function Page() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'FactoryJet - Shopify Development Chattanooga',
-    description: 'Custom online stores and AI solutions for the city with America\'s fastest internet. Shopify, WooCommerce, and headless builds — launched in weeks, built to convert Chattanooga\'s 10.7M annual visitors.',
-    url: 'https://factoryjet.com/us/services/web-design/chattanooga',
+    name: 'FactoryJet - E-Commerce Development Lincoln',
+    description: 'Professional e-commerce development for Lincoln, Nebraska businesses. From UNL startups to Main Street retailers — Shopify stores that convert.',
+    url: 'https://factoryjet.com/us/services/ecommerce-development/lincoln',
     logo: 'https://factoryjet.com/logo.png',
     image: 'https://factoryjet.com/logo.png',
     telephone: '+1-919-699-977-699',
     email: 'connect@factoryjet.com',
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Chattanooga',
-      addressRegion: 'TN',
+      addressLocality: 'Lincoln',
+      addressRegion: 'NE',
       addressCountry: 'US',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 35.0456,
-      longitude: -85.3097,
+      latitude: 40.8136,
+      longitude: -96.7026,
     },
     areaServed: [
-      {
-        '@type': 'City',
-        name: 'Chattanooga',
-      },
-      {
-        '@type': 'State',
-        name: 'Tennessee',
-      },
+      { '@type': 'City', name: 'Lincoln' },
+      { '@type': 'State', name: 'Nebraska' },
     ],
     serviceType: [
       'E-Commerce Development',
       'Shopify Development',
       'WooCommerce Development',
       'AI Agent Development',
-      'Web Design',
     ],
     priceRange: '$$',
     openingHours: 'Mo-Fr 09:00-18:00',
@@ -103,15 +96,15 @@ export default function Page() {
       <BreadcrumbSchema items={[
         { name: 'Home', url: 'https://factoryjet.com/us' },
         { name: 'Services', url: 'https://factoryjet.com/us/services' },
-        { name: 'Web Design', url: 'https://factoryjet.com/us/services/web-design' },
-        { name: 'Chattanooga', url: 'https://factoryjet.com/us/services/web-design/chattanooga' },
+        { name: 'E-Commerce Development', url: 'https://factoryjet.com/us/services/ecommerce-development' },
+        { name: 'Lincoln', url: 'https://factoryjet.com/us/services/ecommerce-development/lincoln' },
       ]} />
       <Script
-        id="json-ld-chattanooga"
+        id="json-ld-ecomm-lincoln"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <ChattanoogaPage />
+      <LincolnPage />
     </>
   )
 }

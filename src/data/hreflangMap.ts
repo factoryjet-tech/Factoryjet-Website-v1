@@ -37,12 +37,12 @@ export const webDesignAlternates = {
   'x-default': 'https://factoryjet.com/services/web-design',
 } as const
 
-/** Full 3-locale cluster for /services/ecommerce ↔ /us/services/ecommerce */
+/** Full 3-locale cluster for /services/ecommerce-development ↔ /us/services/ecommerce-development */
 export const ecommerceAlternates = {
-  'en-IN': 'https://factoryjet.com/services/ecommerce',
-  'en-US': 'https://factoryjet.com/us/services/ecommerce',
+  'en-IN': 'https://factoryjet.com/services/ecommerce-development',
+  'en-US': 'https://factoryjet.com/us/services/ecommerce-development',
   'en-AE': 'https://factoryjet.com/uae',
-  'x-default': 'https://factoryjet.com/services/ecommerce',
+  'x-default': 'https://factoryjet.com/services/ecommerce-development',
 } as const
 
 // ===========================================================================
@@ -143,24 +143,32 @@ export const webDesignCityAlternatesUS = {
     'en-US': 'https://factoryjet.com/us/services/web-design/cleveland',
     'x-default': 'https://factoryjet.com/us/services/web-design/cleveland',
   },
+} as const
+
+// ---------------------------------------------------------------------------
+// US-only e-commerce city pages  (no India / UAE equivalents exist)
+// Per CITY PAGE RULE: only en-US + x-default.
+// ---------------------------------------------------------------------------
+
+export const ecommerceCityAlternatesUS: Record<string, { 'en-US': string; 'x-default': string }> = {
   'boise': {
-    'en-US': 'https://factoryjet.com/us/services/web-design/boise',
-    'x-default': 'https://factoryjet.com/us/services/web-design/boise',
+    'en-US': 'https://factoryjet.com/us/services/ecommerce-development/boise',
+    'x-default': 'https://factoryjet.com/us/services/ecommerce-development/boise',
   },
   'sioux-falls': {
-    'en-US': 'https://factoryjet.com/us/services/web-design/sioux-falls',
-    'x-default': 'https://factoryjet.com/us/services/web-design/sioux-falls',
+    'en-US': 'https://factoryjet.com/us/services/ecommerce-development/sioux-falls',
+    'x-default': 'https://factoryjet.com/us/services/ecommerce-development/sioux-falls',
   },
   'lincoln': {
-    'en-US': 'https://factoryjet.com/us/services/web-design/lincoln',
-    'x-default': 'https://factoryjet.com/us/services/web-design/lincoln',
+    'en-US': 'https://factoryjet.com/us/services/ecommerce-development/lincoln',
+    'x-default': 'https://factoryjet.com/us/services/ecommerce-development/lincoln',
   },
   'chattanooga': {
-    'en-US': 'https://factoryjet.com/us/services/web-design/chattanooga',
-    'x-default': 'https://factoryjet.com/us/services/web-design/chattanooga',
+    'en-US': 'https://factoryjet.com/us/services/ecommerce-development/chattanooga',
+    'x-default': 'https://factoryjet.com/us/services/ecommerce-development/chattanooga',
   },
   'fargo': {
-    'en-US': 'https://factoryjet.com/us/services/web-design/fargo',
-    'x-default': 'https://factoryjet.com/us/services/web-design/fargo',
+    'en-US': 'https://factoryjet.com/us/services/ecommerce-development/fargo',
+    'x-default': 'https://factoryjet.com/us/services/ecommerce-development/fargo',
   },
-} as const
+}

@@ -26,7 +26,7 @@ const sitemapData: SitemapSection[] = [
     icon: ShoppingBag,
     links: [
       { name: 'Web Design', path: '/services/web-design', description: 'Custom website design and development' },
-      { name: 'E-Commerce', path: '/services/ecommerce', description: 'Shopify & WooCommerce store development' },
+      { name: 'E-Commerce', path: '/services/ecommerce-development', description: 'Shopify & WooCommerce store development' },
     ],
   },
   {

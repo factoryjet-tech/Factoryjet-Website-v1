@@ -132,7 +132,7 @@ const FooterSection: React.FC = () => {
             <h4 className="font-bold text-lg mb-4 text-jet-orange">Services</h4>
             <ul className="space-y-2 text-blue-100">
               <li><a href="/services/web-design" className="hover:text-white transition-colors">Web Design</a></li>
-              <li><a href="/services/ecommerce" className="hover:text-white transition-colors">E-Commerce</a></li>
+              <li><a href="/services/ecommerce-development" className="hover:text-white transition-colors">E-Commerce</a></li>
               <li><a href="/services/wordpress" className="hover:text-white transition-colors">WordPress</a></li>
               <li><a href="/services/digital-marketing" className="hover:text-white transition-colors">Digital Marketing</a></li>
               <li><a href="/services/crm" className="hover:text-white transition-colors">CRM Implementation</a></li>

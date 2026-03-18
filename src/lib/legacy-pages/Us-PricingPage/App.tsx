@@ -251,7 +251,7 @@ const FooterLocal = () => (
                     <h4 className="font-bold text-navy mb-6 uppercase text-xs tracking-wider">Services</h4>
                     <ul className="space-y-3 text-sm text-slate-600">
                         <li><Link href="/us/services/web-design" className="hover:text-jet-blue transition-colors focus:outline-none focus:underline">Web Design</Link></li>
-                        <li><Link href="/us/services/ecommerce" className="hover:text-jet-blue transition-colors focus:outline-none focus:underline">E-Commerce</Link></li>
+                        <li><Link href="/us/services/ecommerce-development" className="hover:text-jet-blue transition-colors focus:outline-none focus:underline">E-Commerce</Link></li>
                         <li><a href="#pricing" className="hover:text-jet-blue transition-colors focus:outline-none focus:underline">AI SEO</a></li>
                         <li><a href="#pricing" className="hover:text-jet-blue transition-colors focus:outline-none focus:underline">Maintenance</a></li>
                     </ul>

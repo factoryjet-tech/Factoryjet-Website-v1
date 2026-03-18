@@ -432,7 +432,7 @@ const FooterLocal = React.memo(() => (
         <h4 className="font-bold text-white mb-4">Services</h4>
         <ul className="space-y-2 text-sm">
           <li className="hover:text-white"><Link href="/us/services/web-design">Website Design</Link></li>
-          <li className="hover:text-white"><Link href="/us/services/ecommerce">E-Commerce</Link></li>
+          <li className="hover:text-white"><Link href="/us/services/ecommerce-development">E-Commerce</Link></li>
           <li className="hover:text-white"><Link href="/us#services">SEO/GEO/AIO</Link></li>
           <li className="hover:text-white"><Link href="/us#services">CRM Implementation</Link></li>
         </ul>

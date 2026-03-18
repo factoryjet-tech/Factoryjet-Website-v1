@@ -1,37 +1,37 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
-import { webDesignCityAlternatesUS } from '@/data/hreflangMap'
-import LincolnPage from '@/lib/legacy-pages/CityLandingUS/LincolnPage'
+import { ecommerceCityAlternatesUS } from '@/data/hreflangMap'
+import BoisePage from '@/lib/legacy-pages/CityLandingUS/BoisePage'
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
-  title: 'E-Commerce Development Lincoln NE | Shopify & AI Agency - FactoryJet',
-  description: 'Professional e-commerce development for Lincoln, Nebraska businesses. From UNL startups to Main Street retailers — Shopify stores that convert. Free audit.',
+  title: 'E-Commerce Development Boise | Shopify & AI Agency - FactoryJet',
+  description: 'Custom Shopify, WooCommerce & AI-powered e-commerce development for Boise businesses. Enterprise-grade online stores at startup-friendly prices. Free audit.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'E-Commerce Development Lincoln NE | Shopify & AI Agency - FactoryJet',
-    description: 'Professional e-commerce development for Lincoln, Nebraska businesses. From UNL startups to Main Street retailers — Shopify stores that convert.',
-    url: 'https://factoryjet.com/us/services/web-design/lincoln',
+    title: 'E-Commerce Development Boise | Shopify & AI Agency - FactoryJet',
+    description: 'Custom Shopify, WooCommerce & AI-powered e-commerce development for Boise businesses. Enterprise-grade online stores at startup-friendly prices.',
+    url: 'https://factoryjet.com/us/services/ecommerce-development/boise',
     images: [
       {
         url: 'https://factoryjet.com/logo.png',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet - E-Commerce Development Lincoln NE',
+        alt: 'FactoryJet - E-Commerce Development Boise',
       },
     ],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'E-Commerce Development Lincoln NE | FactoryJet',
-    description: 'Professional e-commerce development for Lincoln, Nebraska businesses. From UNL startups to Main Street retailers — Shopify stores that convert.',
+    title: 'E-Commerce Development Boise | FactoryJet',
+    description: 'Custom Shopify, WooCommerce & AI-powered e-commerce development for Boise businesses. Enterprise-grade online stores at startup-friendly prices.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
-    canonical: 'https://factoryjet.com/us/services/web-design/lincoln',
-    languages: webDesignCityAlternatesUS['lincoln'],
+    canonical: 'https://factoryjet.com/us/services/ecommerce-development/boise',
+    languages: ecommerceCityAlternatesUS['boise'],
   },
   robots: {
     index: true,
@@ -50,40 +50,33 @@ export default function Page() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'FactoryJet - E-Commerce Development Lincoln NE',
-    description: 'From UNL spin-offs to established Nebraska retailers — we build Shopify, WooCommerce, and custom e-commerce stores that convert Lincoln\'s digitally-savvy shoppers into revenue.',
-    url: 'https://factoryjet.com/us/services/web-design/lincoln',
+    name: 'FactoryJet - E-Commerce Development Boise',
+    description: 'Custom Shopify stores, WooCommerce sites, and AI-powered solutions built for the Treasure Valley\'s booming market. Enterprise-grade development at prices that won\'t break the bank.',
+    url: 'https://factoryjet.com/us/services/ecommerce-development/boise',
     logo: 'https://factoryjet.com/logo.png',
     image: 'https://factoryjet.com/logo.png',
     telephone: '+1-919-699-977-699',
     email: 'connect@factoryjet.com',
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Lincoln',
-      addressRegion: 'NE',
+      addressLocality: 'Boise',
+      addressRegion: 'ID',
       addressCountry: 'US',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 40.8136,
-      longitude: -96.7026,
+      latitude: 43.6150,
+      longitude: -116.2023,
     },
     areaServed: [
-      {
-        '@type': 'City',
-        name: 'Lincoln',
-      },
-      {
-        '@type': 'State',
-        name: 'Nebraska',
-      },
+      { '@type': 'City', name: 'Boise' },
+      { '@type': 'State', name: 'Idaho' },
     ],
     serviceType: [
       'E-Commerce Development',
       'Shopify Development',
       'WooCommerce Development',
       'AI Agent Development',
-      'Web Design',
     ],
     priceRange: '$$',
     openingHours: 'Mo-Fr 09:00-18:00',
@@ -103,15 +96,15 @@ export default function Page() {
       <BreadcrumbSchema items={[
         { name: 'Home', url: 'https://factoryjet.com/us' },
         { name: 'Services', url: 'https://factoryjet.com/us/services' },
-        { name: 'Web Design', url: 'https://factoryjet.com/us/services/web-design' },
-        { name: 'Lincoln', url: 'https://factoryjet.com/us/services/web-design/lincoln' },
+        { name: 'E-Commerce Development', url: 'https://factoryjet.com/us/services/ecommerce-development' },
+        { name: 'Boise', url: 'https://factoryjet.com/us/services/ecommerce-development/boise' },
       ]} />
       <Script
-        id="json-ld-lincoln"
+        id="json-ld-ecomm-boise"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <LincolnPage />
+      <BoisePage />
     </>
   )
 }
