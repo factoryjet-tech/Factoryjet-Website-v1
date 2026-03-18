@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, ChevronDown, BookOpen, FileText, MapPin, Monitor, ShoppingBag, Bot } from 'lucide-react';
+import { Menu, X, ChevronDown, BookOpen, FileText, MapPin, Monitor, ShoppingBag, MessageSquare, TrendingUp, Megaphone, Calendar, Workflow, Headphones, Phone } from 'lucide-react';
 import { useContactModal } from '../context/ContactModalContext';
 import { trackButtonClick, trackNavigation, trackCTAClick } from '../utils/gtm';
 
@@ -56,7 +56,13 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '' 
       submenu: [
         { label: 'Web Design', href: prefixRoute('/services/web-design'), icon: Monitor, desc: 'Custom high-performance websites', isRoute: true },
         { label: 'E-Commerce', href: prefixRoute('/services/ecommerce-development'), icon: ShoppingBag, desc: 'Shopify & WooCommerce stores', isRoute: true },
-        { label: 'AI Agents', href: '/services/ai-agent-development', icon: Bot, desc: 'Custom AI agent development', isRoute: true },
+        { label: 'AI Chatbot', href: prefixRoute('/services/ai-chatbot'), icon: MessageSquare, desc: 'Intelligent chatbot solutions', isRoute: true },
+        { label: 'AI Sales Agent', href: prefixRoute('/services/ai-sales-agent'), icon: TrendingUp, desc: 'AI-powered sales automation', isRoute: true },
+        { label: 'AI Marketing Agent', href: prefixRoute('/services/ai-marketing-agent'), icon: Megaphone, desc: 'Smart marketing automation', isRoute: true },
+        { label: 'AI Scheduling Agent', href: prefixRoute('/services/ai-scheduling-agent'), icon: Calendar, desc: 'Automated scheduling & booking', isRoute: true },
+        { label: 'AI Workflow Automation', href: prefixRoute('/services/ai-workflow-automation'), icon: Workflow, desc: 'End-to-end workflow automation', isRoute: true },
+        { label: 'AI Customer Support', href: prefixRoute('/services/ai-customer-support'), icon: Headphones, desc: '24/7 AI support agents', isRoute: true },
+        { label: 'AI Voice Agent', href: prefixRoute('/services/ai-voice-agent'), icon: Phone, desc: 'Voice-powered AI assistants', isRoute: true },
       ]
     },
     {
@@ -85,7 +91,13 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '' 
       submenu: [
         { label: 'Web Design', href: prefixRoute('/services/web-design'), icon: Monitor, desc: 'Custom high-performance websites', isRoute: true },
         { label: 'E-Commerce', href: prefixRoute('/services/ecommerce-development'), icon: ShoppingBag, desc: 'Shopify & WooCommerce stores', isRoute: true },
-        { label: 'AI Agents', href: '/services/ai-agent-development', icon: Bot, desc: 'Custom AI agent development', isRoute: true },
+        { label: 'AI Chatbot', href: prefixRoute('/services/ai-chatbot'), icon: MessageSquare, desc: 'Intelligent chatbot solutions', isRoute: true },
+        { label: 'AI Sales Agent', href: prefixRoute('/services/ai-sales-agent'), icon: TrendingUp, desc: 'AI-powered sales automation', isRoute: true },
+        { label: 'AI Marketing Agent', href: prefixRoute('/services/ai-marketing-agent'), icon: Megaphone, desc: 'Smart marketing automation', isRoute: true },
+        { label: 'AI Scheduling Agent', href: prefixRoute('/services/ai-scheduling-agent'), icon: Calendar, desc: 'Automated scheduling & booking', isRoute: true },
+        { label: 'AI Workflow Automation', href: prefixRoute('/services/ai-workflow-automation'), icon: Workflow, desc: 'End-to-end workflow automation', isRoute: true },
+        { label: 'AI Customer Support', href: prefixRoute('/services/ai-customer-support'), icon: Headphones, desc: '24/7 AI support agents', isRoute: true },
+        { label: 'AI Voice Agent', href: prefixRoute('/services/ai-voice-agent'), icon: Phone, desc: 'Voice-powered AI assistants', isRoute: true },
       ]
     },
     { label: 'About Us', href: '#about', hasDropdown: false, isRoute: false },
@@ -100,7 +112,13 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '' 
       submenu: [
         { label: 'Web Design', href: '/services/web-design', icon: Monitor, desc: 'Custom high-performance websites', isRoute: true },
         { label: 'E-Commerce', href: '/services/ecommerce-development', icon: ShoppingBag, desc: 'Shopify & WooCommerce stores', isRoute: true },
-        { label: 'AI Agents', href: '/services/ai-agent-development', icon: Bot, desc: 'Custom AI agent development', isRoute: true },
+        { label: 'AI Chatbot', href: '/services/ai-chatbot', icon: MessageSquare, desc: 'Intelligent chatbot solutions', isRoute: true },
+        { label: 'AI Sales Agent', href: '/services/ai-sales-agent', icon: TrendingUp, desc: 'AI-powered sales automation', isRoute: true },
+        { label: 'AI Marketing Agent', href: '/services/ai-marketing-agent', icon: Megaphone, desc: 'Smart marketing automation', isRoute: true },
+        { label: 'AI Scheduling Agent', href: '/services/ai-scheduling-agent', icon: Calendar, desc: 'Automated scheduling & booking', isRoute: true },
+        { label: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Workflow, desc: 'End-to-end workflow automation', isRoute: true },
+        { label: 'AI Customer Support', href: '/services/ai-customer-support', icon: Headphones, desc: '24/7 AI support agents', isRoute: true },
+        { label: 'AI Voice Agent', href: '/services/ai-voice-agent', icon: Phone, desc: 'Voice-powered AI assistants', isRoute: true },
       ]
     },
     {

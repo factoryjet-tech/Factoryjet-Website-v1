@@ -38,7 +38,8 @@
       "Bash(do echo:*)",
       "Read(//c/FactoryJet/rishi-branch/Factoryjet-Website-v1/src/app/us/services/**)",
       "Bash(done)",
-      "Bash(find /c/FactoryJet/rishi-branch/Factoryjet-Website-v1/src/components -name Header* -o -name Footer*)"
+      "Bash(find /c/FactoryJet/rishi-branch/Factoryjet-Website-v1/src/components -name Header* -o -name Footer*)",
+      "Bash(find /c/FactoryJet/rishi-branch/Factoryjet-Website-v1 -name *.txt -newer /c/FactoryJet/rishi-branch/Factoryjet-Website-v1/src/app/us/pagecontent.txt -o -name *ai* -type f)"
     ]
   }
 }
