@@ -5,7 +5,7 @@ import { useContactModal } from "@/context/ContactModalContext";
 
 export function FinalCTA() {
   const { openModal } = useContactModal();
-  const handleCTA = () => openModal("in");
+  const handleCTA = () => openModal("in", "ai");
 
   return (
     <section id="consultation" className="relative bg-[#0a0f1c] py-16 md:py-24 overflow-hidden">

@@ -27,6 +27,7 @@ interface NavItem {
 interface HeaderProps {
   variant?: 'transparent' | 'solid';
   basePath?: string;
+  hideLocations?: boolean;
 }
 
 const AI_SERVICES: SubMenuItem[] = [
@@ -39,7 +40,7 @@ const AI_SERVICES: SubMenuItem[] = [
   { label: 'AI Voice Agent', href: '/services/ai-agent-development/ai-voice-agent', icon: Phone, desc: 'Voice-powered AI assistants', isRoute: true },
 ];
 
-const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '' }) => {
+const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '', hideLocations = false }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null);
@@ -50,7 +51,7 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '' 
   const aiPanelTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const { openModal: openContactModal } = useContactModal();
   const isUS = basePath.startsWith('/us');
-  const openModal = () => openContactModal(isUS ? 'us' : 'in');
+  const openModal = () => openContactModal(isUS ? 'us' : 'in', hideLocations ? 'ai' : 'default');
 
   const showSolidStyle = variant === 'solid' || isScrolled;
 
@@ -83,7 +84,7 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '' 
     { label: 'Contact', href: '#contact', hasDropdown: false, isRoute: false },
   ] : basePath === '/us' ? [
     { label: 'Services', href: '#services', hasDropdown: true, hasMegaMenu: true, isRoute: false, submenu: servicesSubmenu },
-    {
+    ...(!hideLocations ? [{
       label: 'Locations', href: '#locations', hasDropdown: true, isRoute: false,
       submenu: [
         { label: 'New York', href: '/us/services/web-design/new-york', icon: MapPin, desc: 'Web design in New York City', isRoute: true },
@@ -94,18 +95,18 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '' 
         { label: 'Chattanooga', href: '/us/services/ecommerce-development/chattanooga', icon: MapPin, desc: 'E-commerce development in Chattanooga', isRoute: true },
         { label: 'Fargo', href: '/us/services/ecommerce-development/fargo', icon: MapPin, desc: 'E-commerce development in Fargo', isRoute: true },
       ]
-    },
-    { label: 'About Us', href: '#about', hasDropdown: false, isRoute: false },
+    }] : []),
+    { label: 'About Us', href: '/about', hasDropdown: false, isRoute: true },
     { label: 'Pricing', href: prefixRoute('/pricing'), hasDropdown: false, isRoute: true },
     { label: 'FAQ', href: prefixRoute('/faq'), hasDropdown: false, isRoute: true },
   ] : basePath ? [
     { label: 'Services', href: '#services', hasDropdown: true, hasMegaMenu: true, isRoute: false, submenu: servicesSubmenu },
-    { label: 'About Us', href: '#about', hasDropdown: false, isRoute: false },
+    { label: 'About Us', href: '/about', hasDropdown: false, isRoute: true },
     { label: 'Pricing', href: prefixRoute('/pricing'), hasDropdown: false, isRoute: true },
     { label: 'FAQ', href: prefixRoute('/faq'), hasDropdown: false, isRoute: true },
   ] : [
     { label: 'Services', href: '#services', hasDropdown: true, hasMegaMenu: true, isRoute: false, submenu: servicesSubmenu },
-    {
+    ...(!hideLocations ? [{
       label: 'Locations', href: '#locations', hasDropdown: true, isRoute: false,
       submenu: [
         { label: 'Mumbai', href: '/services/web-design/mumbai', icon: MapPin, desc: 'Web design in Mumbai', isRoute: true },
@@ -118,7 +119,7 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '' 
         { label: 'Surat', href: '/services/web-design/surat', icon: MapPin, desc: 'Web design in Surat', isRoute: true },
         { label: 'Madurai', href: '/services/web-design/madurai', icon: MapPin, desc: 'Web design in Madurai', isRoute: true },
       ]
-    },
+    }] : []),
     { label: 'About Us', href: '/about', hasDropdown: false, isRoute: true },
     { label: 'Pricing', href: '/pricing', hasDropdown: false, isRoute: true },
     {

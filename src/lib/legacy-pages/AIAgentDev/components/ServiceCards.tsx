@@ -5,7 +5,7 @@ import { useContactModal } from "@/context/ContactModalContext";
 
 export function ServiceCards() {
   const { openModal } = useContactModal();
-  const handleCTA = () => openModal("in");
+  const handleCTA = () => openModal("in", "ai");
   const services = [
     {
       icon: "🎧",

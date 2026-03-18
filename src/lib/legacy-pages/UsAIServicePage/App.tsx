@@ -98,11 +98,11 @@ const Accordion: React.FC<{ question: string; answer: string }> = ({ question, a
 // --- Main Page Component ---
 export default function AIServicePage({ data, region = 'us' }: { data: AIServicePageData; region?: 'us' | 'in' }) {
   const { openModal } = useContactModal();
-  const onCta = () => openModal(region);
+  const onCta = () => openModal(region, 'ai');
 
   return (
     <div className="min-h-screen bg-white text-[#0F172A] font-inter selection:bg-[#FF6B35] selection:text-white">
-      <Header basePath={region === 'us' ? '/us' : ''} />
+      <Header basePath={region === 'us' ? '/us' : ''} hideLocations />
 
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#0F172A] text-white pt-24 pb-16">
@@ -438,7 +438,7 @@ export default function AIServicePage({ data, region = 'us' }: { data: AIService
         </div>
       </section>
 
-      {region === 'us' ? <FooterUS onCtaClick={onCta} /> : <Footer />}
+      {region === 'us' ? <FooterUS onCtaClick={onCta} hideLocations /> : <Footer />}
     </div>
   );
 }

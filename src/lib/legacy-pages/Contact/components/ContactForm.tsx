@@ -188,7 +188,7 @@ const ContactForm: React.FC = () => {
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-slate-700 mb-2">Phone Number *</label>
-                  <input required type="tel" name="phone" value={formData.phone} onChange={handleInputChange} className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-jetBlue focus:border-jetBlue outline-none transition-all bg-white" placeholder="+91 XXXXX XXXXX" />
+                  <input required type="tel" name="phone" value={formData.phone} onChange={handleInputChange} className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-jetBlue focus:border-jetBlue outline-none transition-all bg-white" placeholder="Enter your contact number" />
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-slate-700 mb-2">Company Name</label>

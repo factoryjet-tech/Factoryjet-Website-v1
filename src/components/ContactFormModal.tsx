@@ -8,6 +8,7 @@ import {
   Monitor,
   ShoppingBag,
   Wrench,
+  Bot,
   Rocket,
 } from "lucide-react";
 import { useContactModal } from "../context/ContactModalContext";
@@ -36,7 +37,7 @@ interface FormData {
   message: string;
 }
 
-const services: {
+const defaultServices: {
   id: ServiceType;
   label: string;
   icon: React.ElementType;
@@ -58,7 +59,34 @@ const services: {
     id: "maintenance",
     label: "AMC / Maintenance",
     icon: Wrench,
-    description: "Ongoing support & updates",
+    description: "Ongoing support & maintenance",
+  },
+  {
+    id: "other",
+    label: "Other / Custom",
+    icon: Rocket,
+    description: "Custom development needs",
+  },
+];
+
+const aiServices: typeof defaultServices = [
+  {
+    id: "website",
+    label: "Website Design",
+    icon: Monitor,
+    description: "Custom high-performance websites",
+  },
+  {
+    id: "ecommerce",
+    label: "E-Commerce",
+    icon: ShoppingBag,
+    description: "Shopify & WooCommerce stores",
+  },
+  {
+    id: "maintenance",
+    label: "AI Agent Development",
+    icon: Bot,
+    description: "Custom AI agents for business",
   },
   {
     id: "other",
@@ -83,8 +111,9 @@ const budgetsUS: { id: BudgetRange; label: string; range: string }[] = [
 ];
 
 const ContactFormModal: React.FC = () => {
-  const { isOpen, region, closeModal } = useContactModal();
+  const { isOpen, region, variant, closeModal } = useContactModal();
   const budgets = region === 'us' ? budgetsUS : budgetsIN;
+  const services = variant === 'ai' ? aiServices : defaultServices;
   const [step, setStep] = useState<1 | 2 | 3>(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -391,7 +420,7 @@ const ContactFormModal: React.FC = () => {
             name="phone"
             value={formData.phone}
             onChange={handleInputChange}
-            placeholder={region === 'us' ? "(555) 123-4567" : "+91 98765 43210"}
+            placeholder="Enter your contact number"
             className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-jet-blue focus:ring-2 focus:ring-blue-100 outline-none transition-all text-sm"
           />
         </div>

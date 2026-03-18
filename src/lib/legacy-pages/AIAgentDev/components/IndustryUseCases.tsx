@@ -59,7 +59,7 @@ export function IndustryUseCases() {
   const [active, setActive] = useState("ecommerce");
   const current = industries.find((i) => i.id === active)!;
   const { openModal } = useContactModal();
-  const handleCTA = () => openModal("in");
+  const handleCTA = () => openModal("in", "ai");
 
   return (
     <section className="bg-white py-16 md:py-24">

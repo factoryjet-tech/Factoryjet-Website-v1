@@ -24,7 +24,7 @@ export default function AIAgentDevPage() {
 
   return (
     <div className="min-h-screen flex flex-col font-sans text-slate-700 bg-white selection:bg-primary/20 selection:text-primary">
-      <Header basePath="" variant="transparent" />
+      <Header basePath="" variant="transparent" hideLocations />
       <SchemaMarkup />
       <main className="overflow-x-hidden">
         <HeroSection />
@@ -41,7 +41,7 @@ export default function AIAgentDevPage() {
         <FAQSection />
         <FinalCTA />
       </main>
-      <FooterUS onCtaClick={() => openModal('us')} />
+      <FooterUS onCtaClick={() => openModal('us', 'ai')} hideLocations />
     </div>
   );
 }

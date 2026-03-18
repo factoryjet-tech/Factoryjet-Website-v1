@@ -45,9 +45,9 @@ const ContactMethods: React.FC = () => {
               </div>
             </div>
 
-            <button className="w-full py-3 bg-jetBlue text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+            <a href="#contact-form" className="w-full py-3 bg-jetBlue text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors text-center block">
               Book Free 30-Min Call
-            </button>
+            </a>
           </motion.div>
 
           {/* Card 2: Phone */}

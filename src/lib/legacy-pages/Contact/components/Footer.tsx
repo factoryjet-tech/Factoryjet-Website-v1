@@ -14,10 +14,10 @@ const Footer: React.FC = () => {
             <div className="text-2xl font-bold font-display mb-6">FactoryJet.</div>
             <p className="text-slate-400 mb-6">Your Digital Transformation Starts Here. Helping businesses accelerate growth through world-class digital solutions.</p>
             <div className="flex gap-4">
-              <a href="#" className="text-slate-400 hover:text-white transition-colors"><Linkedin className="w-5 h-5" /></a>
-              <a href="#" className="text-slate-400 hover:text-white transition-colors"><Twitter className="w-5 h-5" /></a>
-              <a href="#" className="text-slate-400 hover:text-white transition-colors"><Facebook className="w-5 h-5" /></a>
-              <a href="#" className="text-slate-400 hover:text-white transition-colors"><Instagram className="w-5 h-5" /></a>
+              <a href="https://in.linkedin.com/company/factoryjet" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors"><Linkedin className="w-5 h-5" /></a>
+              <a href="https://x.com/FactoryJet_Tech" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors"><Twitter className="w-5 h-5" /></a>
+              <a href="https://www.facebook.com/factoryjetb2b/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors"><Facebook className="w-5 h-5" /></a>
+              <a href="https://www.instagram.com/factoryjetb2b/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors"><Instagram className="w-5 h-5" /></a>
             </div>
           </div>
 
@@ -36,11 +36,11 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-bold mb-6 text-white">Locations</h4>
             <ul className="space-y-3 text-slate-400">
-              <li><Link href="/mumbai" className="hover:text-jet-blue transition-colors">Mumbai</Link></li>
-              <li><Link href="/pune" className="hover:text-jet-blue transition-colors">Pune</Link></li>
-              <li><Link href="/bangalore" className="hover:text-jet-blue transition-colors">Bangalore</Link></li>
-              <li><Link href="/ahmedabad" className="hover:text-jet-blue transition-colors">Ahmedabad</Link></li>
-              <li><Link href="/surat" className="hover:text-jet-blue transition-colors">Surat</Link></li>
+              <li><Link href="/services/web-design/mumbai" className="hover:text-jet-blue transition-colors">Mumbai</Link></li>
+              <li><Link href="/services/web-design/pune" className="hover:text-jet-blue transition-colors">Pune</Link></li>
+              <li><Link href="/services/web-design/bangalore" className="hover:text-jet-blue transition-colors">Bangalore</Link></li>
+              <li><Link href="/services/web-design/ahmedabad" className="hover:text-jet-blue transition-colors">Ahmedabad</Link></li>
+              <li><Link href="/services/web-design/surat" className="hover:text-jet-blue transition-colors">Surat</Link></li>
             </ul>
           </div>
 

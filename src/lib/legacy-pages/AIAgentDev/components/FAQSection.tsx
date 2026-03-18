@@ -58,7 +58,7 @@ const faqs = [
 export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const { openModal } = useContactModal();
-  const handleCTA = () => openModal("in");
+  const handleCTA = () => openModal("in", "ai");
 
   return (
     <section className="bg-[#F9FAFB] py-16 md:py-24">

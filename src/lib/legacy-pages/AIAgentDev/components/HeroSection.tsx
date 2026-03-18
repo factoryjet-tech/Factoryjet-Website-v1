@@ -5,7 +5,7 @@ import { useContactModal } from "@/context/ContactModalContext";
 
 export function HeroSection() {
   const { openModal } = useContactModal();
-  const handleCTA = () => openModal("in");
+  const handleCTA = () => openModal("in", "ai");
 
   return (
     <section className="relative bg-[#0a0f1c] overflow-hidden">
