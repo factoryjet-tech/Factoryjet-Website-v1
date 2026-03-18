@@ -3,16 +3,16 @@ import AIServicePage from '@/lib/legacy-pages/UsAIServicePage/App'
 import { aiMarketingAgentData } from '@/lib/legacy-pages/UsAIServicePage/data/ai-marketing-agent'
 
 export const metadata: Metadata = {
-  title: 'AI Marketing Agent Development India | Smart Marketing Automation | FactoryJet',
+  title: 'AI Marketing Agent Development | Smart Marketing Automation | FactoryJet',
   description:
-    'AI marketing agents for Indian businesses. Automate content creation, campaign optimization, and multi-channel marketing with intelligent AI automation.',
+    'AI marketing agents for businesses. Automate content creation, campaign optimization, and multi-channel marketing with intelligent AI automation.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'AI Marketing Agent Development India | Smart Marketing Automation',
+    title: 'AI Marketing Agent Development | Smart Marketing Automation',
     description:
       'AI marketing agents that automate content creation and campaign optimization.',
-    url: 'https://factoryjet.com/services/ai-marketing-agent',
+    url: 'https://factoryjet.com/services/ai-agent-development/ai-marketing-agent',
     images: [
       {
         url: 'https://factoryjet.com/logo.png',
@@ -21,10 +21,9 @@ export const metadata: Metadata = {
         alt: 'FactoryJet - AI Marketing Agent Development',
       },
     ],
-    locale: 'en_IN',
   },
   alternates: {
-    canonical: 'https://factoryjet.com/services/ai-marketing-agent',
+    canonical: 'https://factoryjet.com/services/ai-agent-development/ai-marketing-agent',
   },
   robots: {
     index: true,

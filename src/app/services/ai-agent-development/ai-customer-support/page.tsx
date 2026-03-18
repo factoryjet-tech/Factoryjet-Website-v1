@@ -3,16 +3,16 @@ import AIServicePage from '@/lib/legacy-pages/UsAIServicePage/App'
 import { aiCustomerSupportData } from '@/lib/legacy-pages/UsAIServicePage/data/ai-customer-support'
 
 export const metadata: Metadata = {
-  title: 'AI Customer Support Agent India | 24/7 Automated Support | FactoryJet',
+  title: 'AI Customer Support Agent | 24/7 Automated Support | FactoryJet',
   description:
-    'AI customer support agents for Indian businesses. Provide 24/7 intelligent support, resolve tickets faster, and improve customer satisfaction with AI automation.',
+    'AI customer support agents for businesses. Provide 24/7 intelligent support, resolve tickets faster, and improve customer satisfaction with AI automation.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'AI Customer Support Agent India | 24/7 Automated Support',
+    title: 'AI Customer Support Agent | 24/7 Automated Support',
     description:
       'AI customer support agents that provide 24/7 intelligent support and resolve tickets faster.',
-    url: 'https://factoryjet.com/services/ai-customer-support',
+    url: 'https://factoryjet.com/services/ai-agent-development/ai-customer-support',
     images: [
       {
         url: 'https://factoryjet.com/logo.png',
@@ -21,10 +21,9 @@ export const metadata: Metadata = {
         alt: 'FactoryJet - AI Customer Support Agent',
       },
     ],
-    locale: 'en_IN',
   },
   alternates: {
-    canonical: 'https://factoryjet.com/services/ai-customer-support',
+    canonical: 'https://factoryjet.com/services/ai-agent-development/ai-customer-support',
   },
   robots: {
     index: true,

@@ -3,16 +3,16 @@ import AIServicePage from '@/lib/legacy-pages/UsAIServicePage/App'
 import { aiVoiceAgentData } from '@/lib/legacy-pages/UsAIServicePage/data/ai-voice-agent'
 
 export const metadata: Metadata = {
-  title: 'AI Voice Agent Development India | Voice-Powered AI Assistants | FactoryJet',
+  title: 'AI Voice Agent Development | Voice-Powered AI Assistants | FactoryJet',
   description:
-    'AI voice agents for Indian businesses. Build intelligent voice assistants for customer calls, IVR systems, and voice-powered automation.',
+    'AI voice agents for businesses. Build intelligent voice assistants for customer calls, IVR systems, and voice-powered automation.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'AI Voice Agent Development India | Voice-Powered AI Assistants',
+    title: 'AI Voice Agent Development | Voice-Powered AI Assistants',
     description:
       'AI voice agents for intelligent customer calls and voice-powered automation.',
-    url: 'https://factoryjet.com/services/ai-voice-agent',
+    url: 'https://factoryjet.com/services/ai-agent-development/ai-voice-agent',
     images: [
       {
         url: 'https://factoryjet.com/logo.png',
@@ -21,10 +21,9 @@ export const metadata: Metadata = {
         alt: 'FactoryJet - AI Voice Agent Development',
       },
     ],
-    locale: 'en_IN',
   },
   alternates: {
-    canonical: 'https://factoryjet.com/services/ai-voice-agent',
+    canonical: 'https://factoryjet.com/services/ai-agent-development/ai-voice-agent',
   },
   robots: {
     index: true,

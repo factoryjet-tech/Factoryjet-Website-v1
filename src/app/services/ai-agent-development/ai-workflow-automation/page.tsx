@@ -3,16 +3,16 @@ import AIServicePage from '@/lib/legacy-pages/UsAIServicePage/App'
 import { aiWorkflowAutomationData } from '@/lib/legacy-pages/UsAIServicePage/data/ai-workflow-automation'
 
 export const metadata: Metadata = {
-  title: 'AI Workflow Automation India | End-to-End Business Automation | FactoryJet',
+  title: 'AI Workflow Automation | End-to-End Business Automation | FactoryJet',
   description:
-    'AI workflow automation for Indian businesses. Automate repetitive processes, streamline operations, and boost productivity with intelligent workflow agents.',
+    'AI workflow automation for businesses. Automate repetitive processes, streamline operations, and boost productivity with intelligent workflow agents.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'AI Workflow Automation India | End-to-End Business Automation',
+    title: 'AI Workflow Automation | End-to-End Business Automation',
     description:
       'AI workflow automation that streamlines operations and boosts productivity.',
-    url: 'https://factoryjet.com/services/ai-workflow-automation',
+    url: 'https://factoryjet.com/services/ai-agent-development/ai-workflow-automation',
     images: [
       {
         url: 'https://factoryjet.com/logo.png',
@@ -21,10 +21,9 @@ export const metadata: Metadata = {
         alt: 'FactoryJet - AI Workflow Automation',
       },
     ],
-    locale: 'en_IN',
   },
   alternates: {
-    canonical: 'https://factoryjet.com/services/ai-workflow-automation',
+    canonical: 'https://factoryjet.com/services/ai-agent-development/ai-workflow-automation',
   },
   robots: {
     index: true,

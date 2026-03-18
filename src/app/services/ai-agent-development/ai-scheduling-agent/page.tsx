@@ -3,16 +3,16 @@ import AIServicePage from '@/lib/legacy-pages/UsAIServicePage/App'
 import { aiSchedulingAgentData } from '@/lib/legacy-pages/UsAIServicePage/data/ai-scheduling-agent'
 
 export const metadata: Metadata = {
-  title: 'AI Scheduling Agent Development India | Automated Booking & Scheduling | FactoryJet',
+  title: 'AI Scheduling Agent Development | Automated Booking & Scheduling | FactoryJet',
   description:
-    'AI scheduling agents for Indian businesses. Automate appointment booking, calendar management, and scheduling workflows with intelligent AI automation.',
+    'AI scheduling agents for businesses. Automate appointment booking, calendar management, and scheduling workflows with intelligent AI automation.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'AI Scheduling Agent Development India | Automated Booking & Scheduling',
+    title: 'AI Scheduling Agent Development | Automated Booking & Scheduling',
     description:
       'AI scheduling agents that automate appointment booking and calendar management.',
-    url: 'https://factoryjet.com/services/ai-scheduling-agent',
+    url: 'https://factoryjet.com/services/ai-agent-development/ai-scheduling-agent',
     images: [
       {
         url: 'https://factoryjet.com/logo.png',
@@ -21,10 +21,9 @@ export const metadata: Metadata = {
         alt: 'FactoryJet - AI Scheduling Agent Development',
       },
     ],
-    locale: 'en_IN',
   },
   alternates: {
-    canonical: 'https://factoryjet.com/services/ai-scheduling-agent',
+    canonical: 'https://factoryjet.com/services/ai-agent-development/ai-scheduling-agent',
   },
   robots: {
     index: true,

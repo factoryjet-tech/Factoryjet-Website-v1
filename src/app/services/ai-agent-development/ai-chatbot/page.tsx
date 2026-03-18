@@ -3,16 +3,16 @@ import AIServicePage from '@/lib/legacy-pages/UsAIServicePage/App'
 import { aiChatbotData } from '@/lib/legacy-pages/UsAIServicePage/data/ai-chatbot'
 
 export const metadata: Metadata = {
-  title: 'AI Chatbot Development Services India | Custom AI Chat Agent | FactoryJet',
+  title: 'AI Chatbot Development Services | Custom AI Chat Agent | FactoryJet',
   description:
-    'Custom AI chatbot development for Indian businesses. Intelligent conversational agents that capture leads, qualify visitors, and provide 24/7 support. Deploys in 2-3 weeks.',
+    'Custom AI chatbot development for businesses. Intelligent conversational agents that capture leads, qualify visitors, and provide 24/7 support. Deploys in 2-3 weeks.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'AI Chatbot Development Services India | Custom AI Chat Agent',
+    title: 'AI Chatbot Development Services | Custom AI Chat Agent',
     description:
       'Custom AI chatbots that capture leads, qualify visitors, and provide 24/7 support.',
-    url: 'https://factoryjet.com/services/ai-chatbot',
+    url: 'https://factoryjet.com/services/ai-agent-development/ai-chatbot',
     images: [
       {
         url: 'https://factoryjet.com/logo.png',
@@ -21,10 +21,9 @@ export const metadata: Metadata = {
         alt: 'FactoryJet - AI Chatbot Development',
       },
     ],
-    locale: 'en_IN',
   },
   alternates: {
-    canonical: 'https://factoryjet.com/services/ai-chatbot',
+    canonical: 'https://factoryjet.com/services/ai-agent-development/ai-chatbot',
   },
   robots: {
     index: true,
