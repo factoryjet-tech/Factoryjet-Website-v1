@@ -170,8 +170,8 @@ const Hero = ({ onCtaClick }: { onCtaClick: () => void }) => {
               className="text-4xl md:text-5xl lg:text-4xl xl:text-6xl font-bold tracking-tight leading-[1.1] mb-4"
               style={{ fontFamily: "'Poppins', Arial, sans-serif", fontWeight: 700 }}
             >
-              Stop Losing Contracts to Competitors With <br className="hidden lg:block"/>
-              <span className="bg-gradient-to-r from-[#0052CC] via-[#3B82F6] to-[#FF6B35] bg-clip-text text-transparent pb-1">Better Websites.</span>
+              Web Design Company USA — <br className="hidden lg:block"/>
+              <span className="bg-gradient-to-r from-[#0052CC] via-[#3B82F6] to-[#FF6B35] bg-clip-text text-transparent pb-1">High-Converting Websites for B2B Businesses</span>
             </motion.h1>
 
             <motion.div 
@@ -192,7 +192,7 @@ const Hero = ({ onCtaClick }: { onCtaClick: () => void }) => {
               className="text-sm md:text-base lg:text-lg text-slate-300 mb-6 leading-relaxed max-w-[560px] mx-auto lg:mx-0"
               style={{ fontFamily: "'Inter', Arial, sans-serif", fontWeight: 400 }}
             >
-              FactoryJet is the AI-native web design agency that builds premium B2B websites in <strong className="text-white font-semibold">2-4 weeks—not 6 months</strong>. We've launched 523 websites for healthcare, cybersecurity, and professional services companies.
+              FactoryJet is a B2B web design agency helping US companies to build high-converting, performance-driven websites that generate leads and support long-term growth. We build premium B2B websites and launch them in <strong className="text-white font-semibold">2–4 weeks — not 6 months</strong>.
             </motion.p>
 
             <motion.div 
@@ -206,7 +206,7 @@ const Hero = ({ onCtaClick }: { onCtaClick: () => void }) => {
                 { icon: <Check size={18} className="text-[#0052CC]" />, val: 523, label: "Websites" },
                 { icon: <Clock size={18} className="text-[#FF6B35]" />, val: 17, label: "Avg. Delivery", suffix: " Days", staticVal: true },
                 { icon: <Star size={18} className="text-yellow-500" fill="currentColor" />, val: 4.9, label: "Client Rating", suffix: "/5", staticVal: true },
-                { icon: <Flag size={18} className="text-blue-400" />, val: 0, label: "Agency", textOverride: "US Based", staticVal: true }
+                { icon: <Flag size={18} className="text-blue-400" />, val: 0, label: "US-Based Agency", textOverride: "US-Based", staticVal: true }
               ].map((item, i) => (
                  <div key={i} className="flex items-center gap-2 group cursor-default">
                     <div className="bg-white/5 p-2 rounded-lg group-hover:bg-white/10 transition-colors">
@@ -239,14 +239,15 @@ const Hero = ({ onCtaClick }: { onCtaClick: () => void }) => {
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </motion.button>
               
-              <motion.button 
+              <motion.a
+                href="#results"
                 whileHover={{ backgroundColor: "rgba(255,255,255,0.1)", color: "#ffffff" }}
                 whileTap={{ scale: 0.95 }}
                 className="w-full sm:w-auto bg-transparent border border-white/20 text-slate-300 font-medium text-base md:text-lg px-8 py-3 rounded-xl flex items-center justify-center gap-2 transition-colors hover:border-white/40 min-h-[48px]"
                 style={{ fontFamily: "'Inter', Arial, sans-serif" }}
               >
                 View Case Studies
-              </motion.button>
+              </motion.a>
             </motion.div>
           </div>
 
@@ -594,10 +595,10 @@ const ProblemSection = ({ onCtaClick }: { onCtaClick: () => void }) => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-4 leading-tight" style={{ fontFamily: "'Poppins', Arial, sans-serif" }}>
-            The Website Industry Has a Dirty Secret: <br className="hidden md:block" />
-            They're Designed to Drain Your Budget
+            Why Most Agency Websites <br className="hidden md:block" />
+            Fail to Deliver Results
           </h2>
-          <p className="text-xl text-[#64748B]">You've probably experienced at least one of these scenarios:</p>
+          <p className="text-xl text-[#64748B]">You've probably run into at least one of these situations.</p>
         </motion.div>
 
         <motion.div 
@@ -627,11 +628,11 @@ const ProblemSection = ({ onCtaClick }: { onCtaClick: () => void }) => {
                     
                     <div className="border-l-2 border-red-500/30 pl-4">
                         <p className="text-sm text-red-400 uppercase tracking-wide font-semibold mb-1">Translation</p>
-                        <p className="text-slate-300">They're billing you <span className="text-white font-bold">$15,000</span> before a single pixel is designed.</p>
+                        <p className="text-slate-300">They're billing you <span className="text-white font-bold">$15,000</span> before a single page is designed.</p>
                     </div>
 
                     <p className="text-slate-400 text-sm leading-relaxed pt-2">
-                        Meanwhile, your competitor—who hired a faster agency—has already launched their new site and is ranking for your keywords.
+                        Meanwhile, your competitor — who moved faster — has already launched and is ranking for your keywords.
                     </p>
                 </div>
             </div>
@@ -641,7 +642,7 @@ const ProblemSection = ({ onCtaClick }: { onCtaClick: () => void }) => {
                     Hidden Cost
                 </div>
                 <p className="text-sm text-slate-300">
-                    Every month without a converting website costs you 5-15 qualified leads. At a <span className="text-white font-bold">$75k deal value</span>, that's <span className="text-red-400 font-bold">$50k-$150k in lost revenue.</span>
+                    Every month without a high-performing website can result in missed qualified leads and lost revenue opportunities. At a <span className="text-white font-bold">$75k deal value</span>, that's <span className="text-red-400 font-bold">$50k–$150k in lost pipeline.</span>
                 </p>
             </div>
           </motion.div>
@@ -666,11 +667,11 @@ const ProblemSection = ({ onCtaClick }: { onCtaClick: () => void }) => {
                     
                     <div className="border-l-2 border-amber-500/30 pl-4">
                         <p className="text-sm text-amber-400 uppercase tracking-wide font-semibold mb-1">The Outcome</p>
-                        <p className="text-slate-300">Three months later, you have a template site with broken mobile layouts, zero SEO, and copy that reads like it was written by a robot.</p>
+                        <p className="text-slate-300">Three months later, you have a template site with broken mobile layouts, no SEO, and copy that reads like it was written by a robot.</p>
                     </div>
 
                     <p className="text-slate-400 text-sm leading-relaxed pt-2">
-                        Your sales team is embarrassed to send prospects to it. Your best leads are bouncing within 8 seconds.
+                        Your sales team won't send prospects to it. Your best leads leave in under 8 seconds.
                     </p>
                 </div>
             </div>
@@ -680,7 +681,7 @@ const ProblemSection = ({ onCtaClick }: { onCtaClick: () => void }) => {
                     Hidden Cost
                 </div>
                 <p className="text-sm text-slate-300">
-                    Cheap sites have <span className="text-white font-bold">73% higher bounce rates.</span> Every visitor you lose is a deal you'll never close.
+                    Cheap sites carry <span className="text-white font-bold">73% higher bounce rates.</span> Every visitor you lose is a deal you won't close.
                 </p>
             </div>
           </motion.div>
@@ -707,11 +708,11 @@ const ProblemSection = ({ onCtaClick }: { onCtaClick: () => void }) => {
                     
                     <div className="border-l-2 border-[#10B981] pl-4">
                         <p className="text-sm text-[#10B981] uppercase tracking-wide font-bold mb-1">The Promise</p>
-                        <p className="text-blue-50">Premium agency quality at smart pricing. <span className="font-bold text-white">2-4 week delivery</span> instead of 6 months.</p>
+                        <p className="text-blue-50">Premium quality at honest pricing. Delivered in <span className="font-bold text-white">2–4 weeks</span> instead of 6 months.</p>
                     </div>
 
                     <p className="text-blue-100 text-sm leading-relaxed pt-2">
-                        We're an <span className="font-semibold text-white">AI-native agency</span>—meaning we built our entire operation around AI from day one. Not AI bolted onto old processes.
+                        We built our entire operation around AI from day one — not bolted onto old agency processes. That means faster decisions, parallel workflows, and no wasted hours billed to you.
                     </p>
                 </div>
             </div>
@@ -721,7 +722,7 @@ const ProblemSection = ({ onCtaClick }: { onCtaClick: () => void }) => {
                     The Result
                 </div>
                 <p className="text-sm text-blue-50">
-                    Launch in weeks. Look enterprise-grade. <span className="text-white font-bold border-b border-[#FF6B35]/50">Pay a fraction of traditional agency fees.</span>
+                    Launch in weeks. Look enterprise-grade. <span className="text-white font-bold border-b border-[#FF6B35]/50">Pay a fraction of traditional agency fees.</span> Sound familiar? Let's fix it.
                 </p>
             </div>
           </motion.div>
@@ -758,10 +759,9 @@ const Methodology = ({ onCtaClick }: { onCtaClick: () => void }) => {
       bgColor: "bg-blue-50",
       borderColor: "border-blue-100",
       items: [
-        "We learn your goals, challenges, and vision",
-        "You ask every question you have",
-        "We tell you honestly if we're the right fit",
-        "You get a clear roadmap and quote"
+        "Learn your goals, challenges, and vision",
+        "Clear roadmap and fixed quote",
+        "Ensures alignment and avoids surprises later"
       ]
     },
     {
@@ -774,10 +774,10 @@ const Methodology = ({ onCtaClick }: { onCtaClick: () => void }) => {
       bgColor: "bg-orange-50",
       borderColor: "border-orange-100",
       items: [
-        "AI workflows generate concepts based on your brand",
-        "Human designers refine the strongest directions",
-        "You see real designs within 5 days",
-        "We iterate until you say \"That's it\""
+        "AI-assisted concepts: Generate multiple design directions quickly",
+        "Human refinement: Designers perfect the strongest concepts",
+        "First complete design previews within 5 days",
+        "Rapid feedback loop accelerates approval"
       ]
     },
     {
@@ -790,10 +790,10 @@ const Methodology = ({ onCtaClick }: { onCtaClick: () => void }) => {
       bgColor: "bg-green-50",
       borderColor: "border-green-100",
       items: [
-        "Approved designs become functional pages",
-        "SEO foundations installed (meta, structure, speed)",
-        "Integrations connected (analytics, CRM, forms)",
-        "Mobile responsiveness tested across 12+ devices"
+        "Build: Approved designs become functional pages",
+        "SEO Foundations: Meta tags, site structure, page speed optimization",
+        "Integrations: Analytics, CRM, forms connected",
+        "Mobile-First: Tested across 12+ devices for responsive performance"
       ]
     },
     {
@@ -806,10 +806,9 @@ const Methodology = ({ onCtaClick }: { onCtaClick: () => void }) => {
       bgColor: "bg-purple-50",
       borderColor: "border-purple-100",
       items: [
-        "Full walkthrough of your completed site",
-        "You request changes—we make them fast",
-        "Content finalized and loaded",
-        "Final QA across browsers and devices"
+        "Walkthrough: Full site review with client feedback",
+        "Final Edits: Content finalized, small adjustments made",
+        "Quality Assurance: Cross-browser and device testing"
       ]
     },
     {
@@ -822,10 +821,9 @@ const Methodology = ({ onCtaClick }: { onCtaClick: () => void }) => {
       bgColor: "bg-blue-50",
       borderColor: "border-blue-100",
       items: [
-        "We handle domain configuration and deployment",
-        "Your site goes live (celebration encouraged!)",
-        "30-60 days of post-launch support included",
-        "Bug fixes and performance monitoring covered"
+        "Launch: Domain configuration and deployment handled",
+        "Post-Launch Support: 30–60 days of bug fixes and performance monitoring",
+        "Smooth launch with no surprises"
       ]
     }
   ];
@@ -853,7 +851,7 @@ const Methodology = ({ onCtaClick }: { onCtaClick: () => void }) => {
             <span className="text-[#0052CC]">5 Steps</span>, <span className="text-[#FF6B35]">Zero Surprises</span>
           </h2>
           <p className="text-xl text-slate-500 max-w-2xl mx-auto">
-             We've optimized every day of the process to get you live faster without cutting corners.
+             FactoryJet combines AI-driven workflows with expert designers and developers to deliver high-converting B2B websites in just weeks.
           </p>
         </motion.div>
 
@@ -978,10 +976,10 @@ const Services = ({ onCtaClick }: { onCtaClick: () => void }) => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-[#0F172A] mb-6 font-space">
-            What We Build: <span className="bg-gradient-to-r from-[#0052CC] to-[#FF6B35] bg-clip-text text-transparent">Premium Digital Products</span>
+            Professional Web Design Services for <span className="bg-gradient-to-r from-[#0052CC] to-[#FF6B35] bg-clip-text text-transparent">US B2B Companies</span>
           </h2>
           <p className="text-xl text-slate-500 max-w-2xl mx-auto">
-            From high-converting websites to complex e-commerce stores, we build digital assets that drive revenue.
+            From high-converting websites to complex e-commerce stores, FactoryJet builds digital assets that drive revenue, leads, and business growth.
           </p>
         </motion.div>
 
@@ -1006,17 +1004,17 @@ const Services = ({ onCtaClick }: { onCtaClick: () => void }) => {
                   <Globe size={32} />
                 </div>
                 
-                <h3 className="text-3xl font-bold text-[#0F172A] mb-4 font-space">Websites That Win Deals</h3>
+                <h3 className="text-3xl font-bold text-[#0F172A] mb-4 font-space">Web Design Solutions</h3>
                 <p className="text-slate-600 mb-8 text-lg leading-relaxed">
-                  Your website is your 24/7 sales rep. When a prospect Googles you at 11pm before tomorrow's meeting, what do they see?
+                  Websites that win deals — enterprise-ready design, lead conversion, SEO-friendly, and fast performance.
                 </p>
 
                 <div className="space-y-4 mb-8 flex-grow">
                    {[
-                     "Establish instant credibility (look enterprise-ready)",
-                     "Convert visitors to leads (strategic CTAs)",
-                     "Rank in search (SEO foundations built in)",
-                     "Load fast (sub-2-second load times)"
+                     "Enterprise-Ready Design: Instantly establish credibility with polished layouts",
+                     "Lead Conversion: Clear CTAs guide visitors to request a quote or schedule a call",
+                     "SEO-Friendly: Built with scalable architecture for search visibility",
+                     "Fast Performance: Sub-2-second load times and strong Core Web Vitals"
                    ].map((feat, i) => (
                      <div key={i} className="flex items-start gap-3">
                        <CheckCircle size={20} className="text-[#10B981] mt-0.5 shrink-0" />
@@ -1062,17 +1060,17 @@ const Services = ({ onCtaClick }: { onCtaClick: () => void }) => {
                   <ShoppingCart size={32} />
                 </div>
                 
-                <h3 className="text-3xl font-bold text-[#0F172A] mb-4 font-space">Online Stores That Sell</h3>
+                <h3 className="text-3xl font-bold text-[#0F172A] mb-4 font-space">E-Commerce Development</h3>
                 <p className="text-slate-600 mb-8 text-lg leading-relaxed">
-                  Beautiful isn't enough. Your store needs to convert browsers into buyers, then buyers into repeat customers.
+                  Convert browsers to buyers with optimized product pages and checkout flows.
                 </p>
 
                 <div className="space-y-4 mb-8 flex-grow">
                    {[
-                     "Minimize cart abandonment (optimized checkout)",
-                     "Maximize average order value (strategic upsells)",
-                     "Scale with your growth (inventory, payments)",
-                     "Work on mobile (where 60%+ of your traffic shops)"
+                     "Convert Browsers to Buyers: Optimized product pages and checkout flows",
+                     "Upsells & Repeat Customers: Strategic features increase average order value",
+                     "Scalable Systems: Flexible inventory and payment integration for growth",
+                     "Mobile-First Performance: 60%+ of B2B shoppers are on mobile"
                    ].map((feat, i) => (
                      <div key={i} className="flex items-start gap-3">
                        <CheckCircle size={20} className="text-[#10B981] mt-0.5 shrink-0" />
@@ -1104,37 +1102,29 @@ const Services = ({ onCtaClick }: { onCtaClick: () => void }) => {
         </div>
 
         {/* Secondary Services */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
            {[
-             { 
-               title: "Mobile Apps", 
-               icon: <Smartphone size={24} />, 
-               desc: "Cross-platform apps (React Native) for businesses ready to go beyond web.",
-               price: "$12,999",
-               time: "6-8 weeks",
-               color: "text-indigo-600",
-               bgColor: "bg-indigo-50",
-               borderColor: "from-indigo-500 to-blue-500"
-             },
-             { 
-               title: "Website Redesigns", 
-               icon: <RefreshCw size={24} />, 
-               desc: "Transform your outdated site without losing SEO equity.",
+             {
+               title: "Website Redesign",
+               icon: <RefreshCw size={24} />,
+               desc: "Modernize your site without losing SEO equity. Optimize for lead generation, usability, and performance.",
                price: "$2,499",
                time: "2-4 weeks",
                color: "text-teal-600",
                bgColor: "bg-teal-50",
-               borderColor: "from-teal-500 to-emerald-500"
+               borderColor: "from-teal-500 to-emerald-500",
+               cta: "Redesign Your Site"
              },
-             { 
-               title: "Landing Pages", 
-               icon: <Target size={24} />, 
-               desc: "High-converting campaign pages that turn ads into revenue.",
+             {
+               title: "Landing Pages",
+               icon: <Target size={24} />,
+               desc: "High-converting campaign pages for ads or lead magnets. Strategic copy, CTAs, and design to maximize ROI.",
                price: "$999",
                time: "5-7 days",
                color: "text-rose-600",
                bgColor: "bg-rose-50",
-               borderColor: "from-rose-500 to-red-500"
+               borderColor: "from-rose-500 to-red-500",
+               cta: "Create Landing Page"
              }
            ].map((item, i) => (
              <motion.div 
@@ -1161,8 +1151,8 @@ const Services = ({ onCtaClick }: { onCtaClick: () => void }) => {
                 <p className="text-slate-500 text-sm mb-4 leading-relaxed h-10">{item.desc}</p>
                 <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-sm">
                    <span className="text-slate-400 flex items-center gap-1"><Clock size={14}/> {item.time}</span>
-                   <span className="text-[#0052CC] font-bold flex items-center gap-1 cursor-pointer hover:underline group-hover:gap-2 transition-all">
-                     Details <ArrowRight size={14} />
+                   <span onClick={onCtaClick} className="text-[#0052CC] font-bold flex items-center gap-1 cursor-pointer hover:underline group-hover:gap-2 transition-all">
+                     {item.cta} <ArrowRight size={14} />
                    </span>
                 </div>
              </motion.div>
@@ -1183,36 +1173,36 @@ const CaseStudies = () => {
       company: "WetStone Labs",
       category: "Cybersecurity",
       filterCategory: "Cybersecurity",
-      challenge: "Outdated site didn't reflect enterprise status",
-      solution: "Modern, trust-focused design with clear value prop",
+      challenge: "Website didn't reflect enterprise cybersecurity authority",
+      solution: "Reposition brand with trust-first enterprise UX, credibility signals, optimized service pages",
       quote: "Our sales team finally has something they're proud to share.",
-      link: "#",
+      link: "/case",
       image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800",
-      stat: "+210% Leads"
+      stat: "+210% Qualified Leads"
     },
     {
       id: 2,
       company: "CuraShield",
-      category: "Healthcare",
+      category: "Healthcare Technology",
       filterCategory: "Healthcare",
-      challenge: "Complex product was hard to understand",
-      solution: "Simplified UX with interactive product tours",
+      challenge: "Healthcare platform difficult for prospects to understand",
+      solution: "Simplified navigation, interactive product walkthroughs, and optimized CTAs",
       quote: "They understood our technical product immediately.",
-      link: "#",
+      link: "/case",
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800",
-      stat: "40% Faster Sales"
+      stat: "40% Shorter Sales Cycle"
     },
     {
       id: 3,
       company: "MINDSOURCE",
-      category: "IT Services",
+      category: "Enterprise IT Services",
       filterCategory: "IT Services",
-      challenge: "Low conversion on service pages",
-      solution: "Service-specific landing pages with strong CTAs",
+      challenge: "High organic traffic but low service page conversions",
+      solution: "Created service-specific landing pages with strong CTAs and credibility elements",
       quote: "The credibility boost was immediate.",
-      link: "#",
+      link: "/case",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-      stat: "3 Major Contracts"
+      stat: "3 Enterprise Contracts"
     }
   ];
 
@@ -1228,7 +1218,7 @@ const CaseStudies = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-[#0F172A] mb-6 font-space">
-            Real Results for <span className="text-[#0052CC]">Real Companies</span>
+            Case Studies: Real Results from <span className="text-[#0052CC]">B2B Websites</span>
           </h2>
           <div className="flex flex-wrap justify-center gap-4 mt-8">
             {["All", "Cybersecurity", "Healthcare", "IT Services"].map((cat) => (
@@ -1298,8 +1288,8 @@ const CaseStudies = () => {
                     </div>
                   </div>
 
-                  <a href={project.link} onClick={(e) => e.preventDefault()} className="inline-flex items-center text-[#0052CC] font-bold text-sm hover:gap-2 transition-all group-hover:text-[#FF6B35]">
-                    View Case Study <ArrowRight size={16} className="ml-1" />
+                  <a href={project.link} className="inline-flex items-center text-[#0052CC] font-bold text-sm hover:gap-2 transition-all group-hover:text-[#FF6B35]">
+                    Read Full Case Study <ArrowRight size={16} className="ml-1" />
                   </a>
                 </div>
               </motion.div>
@@ -1316,30 +1306,58 @@ const Industries = () => {
     {
       name: "Cybersecurity",
       icon: <ShieldCheck size={32} />,
-      desc: "Trust is your currency. We build sites that signal authority and technical competence instantly.",
+      desc: "Build trust instantly with a design that signals authority and technical competence. Conversion-focused UX and SEO-optimized for competitive keywords.",
       bg: "bg-blue-50",
       color: "text-blue-600"
     },
     {
       name: "Healthcare & MedTech",
       icon: <Stethoscope size={32} />,
-      desc: "Navigate complex compliance needs while creating accessible, patient-friendly digital experiences.",
+      desc: "Compliance & accessibility: websites meet HIPAA, ADA, and industry standards. Patient-friendly UX that simplifies complex platforms.",
       bg: "bg-teal-50",
       color: "text-teal-600"
     },
     {
       name: "IT & Managed Services",
       icon: <Server size={32} />,
-      desc: "Differentiate from the sea of sameness. Show your specific expertise and technical depth.",
+      desc: "Stand out in a crowded market with clear messaging. Service-specific landing pages and credibility signals for enterprise buyers.",
       bg: "bg-indigo-50",
       color: "text-indigo-600"
     },
     {
       name: "Professional Services",
       icon: <Briefcase size={32} />,
-      desc: "For consultants, legal, and finance. We highlight your people and thought leadership.",
+      desc: "Consulting, legal, and finance. Showcase thought leadership, expert teams, and a clear value proposition with conversion-driven design.",
       bg: "bg-slate-50",
       color: "text-slate-600"
+    },
+    {
+      name: "Manufacturing",
+      icon: <Building size={32} />,
+      desc: "Highlight process expertise and technical capabilities. B2B buyer-focused UX prioritizing product catalogs, case studies, and specifications.",
+      bg: "bg-amber-50",
+      color: "text-amber-600"
+    },
+    {
+      name: "SaaS",
+      icon: <Layers size={32} />,
+      desc: "Demonstrate product value through clear messaging and interactive demos. Optimize trial sign-ups, onboarding, and customer conversion paths.",
+      bg: "bg-purple-50",
+      color: "text-purple-600"
+    },
+    {
+      name: "Non-Profits",
+      icon: <Gem size={32} />,
+      desc: "Convey mission and impact with clear storytelling. Make donations, volunteer sign-ups, and event registrations seamless.",
+      bg: "bg-rose-50",
+      color: "text-rose-600"
+    },
+    {
+      name: "E-Commerce",
+      icon: <ShoppingCart size={32} />,
+      desc: "Convert browsers to buyers with optimized product pages and checkout flows. Mobile-first design to capture 60%+ of B2B shoppers on mobile.",
+      bg: "bg-green-50",
+      color: "text-green-600"
     }
   ];
 
@@ -1353,10 +1371,10 @@ const Industries = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-4 font-space">
-            Specialized in <span className="text-[#0052CC]">Complex Industries</span>
+            Industries <span className="text-[#0052CC]">We Serve</span>
           </h2>
           <p className="text-lg text-slate-500 max-w-2xl mx-auto">
-            We don't do restaurants or dog walkers. We build for B2B companies where trust and clarity are paramount.
+            FactoryJet focuses on industries where trust, clarity, and technical credibility drive buying decisions. We don't build generic sites — we create websites that convert visitors into qualified leads.
           </p>
         </motion.div>
 
@@ -1386,12 +1404,77 @@ const Industries = () => {
   );
 };
 
+const MeetTheExperts = () => {
+  const highlights = [
+    { icon: <Sparkles size={20} />, label: "AI-Powered Workflows" },
+    { icon: <UserCheck size={20} />, label: "Human Design Expertise" },
+    { icon: <Target size={20} />, label: "Conversion Psychology" },
+    { icon: <Palette size={20} />, label: "Brand Strategy" },
+  ];
+
+  return (
+    <section className="py-24 bg-gradient-to-b from-[#F8FAFC] to-white relative overflow-hidden">
+      <div className="absolute inset-0 opacity-[0.02] pointer-events-none"
+        style={{
+          backgroundImage: 'radial-gradient(#0052CC 1px, transparent 1px)',
+          backgroundSize: '30px 30px'
+        }}
+      />
+
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-4 font-space">
+            Meet the Experts: <span className="text-[#0052CC]">Human Strategy</span>, <span className="text-[#FF6B35]">AI Speed</span>
+          </h2>
+          <p className="text-lg text-slate-500 max-w-3xl mx-auto leading-relaxed">
+            FactoryJet is powered by a team of experienced founders, developers, and digital specialists who work together to bring business ideas to life online. Combining strategic planning, technical expertise, and modern development practices, the team focuses on building websites that help companies grow and compete in the digital space.
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="bg-white rounded-2xl shadow-lg border border-slate-100 p-8 md:p-10 mb-10"
+        >
+          <div className="flex items-start gap-4 mb-6">
+            <div className="w-12 h-12 bg-blue-50 text-[#0052CC] rounded-xl flex items-center justify-center shrink-0">
+              <Command size={24} />
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-[#0F172A] font-space mb-1">Our Philosophy</h3>
+              <p className="text-slate-600 leading-relaxed">
+                We use AI to automate the "busy work" (coding foundations, initial wireframes, and data analysis), which frees our human designers to focus on your brand strategy, emotional design, and conversion psychology. This hybrid approach ensures you get elite quality at a speed no traditional agency can match.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {highlights.map((item, i) => (
+              <div key={i} className="flex items-center gap-2 bg-slate-50 px-4 py-3 rounded-lg border border-slate-100">
+                <div className="text-[#0052CC]">{item.icon}</div>
+                <span className="text-sm font-medium text-slate-700">{item.label}</span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
 const WhyFactoryJet = ({ onCtaClick }: { onCtaClick: () => void }) => {
   const reasons = [
     {
       title: "AI-Native Speed",
       icon: <Zap size={24} />,
-      statement: "What takes traditional agencies 4-6 months, we deliver in 2-4 weeks. Not by cutting corners—by eliminating waste. Our AI-accelerated workflows generate more options, faster decisions, and parallel processing.",
+      statement: "What traditional agencies take 4–6 months, we deliver in 2–4 weeks. AI-accelerated workflows generate multiple concepts in parallel, speeding approvals.",
       proof: "17-day average project completion across 47 recent projects.",
       color: "text-[#0052CC]",
       borderColor: "border-[#0052CC]",
@@ -1401,48 +1484,48 @@ const WhyFactoryJet = ({ onCtaClick }: { onCtaClick: () => void }) => {
     { 
       title: "Premium Quality, Smart Pricing",
       icon: <Gem size={24} />,
-      statement: "We don't compete with $500 template sites. We compete with $25,000+ agencies—and win on quality while charging a fraction of the price. Our AI efficiencies translate to savings we pass to you.",
-      proof: "Starting at $1,999 for websites that look like they cost 10x more.",
+      statement: "Websites that look like $25,000+ agencies but cost far less. AI efficiency savings — reduced wasted hours means savings passed directly to clients.",
+      proof: "Packages start at $1,999 for enterprise-grade websites.",
       color: "text-[#FF6B35]",
       borderColor: "border-[#FF6B35]",
       bgColor: "bg-orange-50",
       proofBg: "bg-orange-50/50"
     },
     {
-      title: "Proven With US Businesses",
+      title: "North American Support",
       icon: <Flag size={24} />,
-      statement: "We're not pitching capabilities—we're showing results. Real US companies in cybersecurity, healthcare, and IT services trust us with their digital presence.",
-      proof: "6 active US client relationships with documented outcomes.",
+      statement: "Ontario-based support team available during US business hours. Real conversations, no automated bots.",
+      proof: "Average 2.3-hour response time.",
       color: "text-[#10B981]",
       borderColor: "border-[#10B981]",
       bgColor: "bg-green-50",
       proofBg: "bg-green-50/50"
     },
     {
-      title: "North American Support",
+      title: "Transparent Process",
       icon: <Headphones size={24} />,
-      statement: "Our client success team operates from Ontario, Canada. Same timezone. Real conversations. When you have a question, you get a human—not a chatbot, not a 48-hour email delay.",
-      proof: "Average response time: 2.3 hours during business days.",
+      statement: "Fixed pricing: know your full investment upfront. Clear project steps, timelines, and deliverables. No surprises.",
+      proof: "Fixed-price quotes delivered within 24 hours of strategy call.",
       color: "text-[#8B5CF6]",
       borderColor: "border-[#8B5CF6]",
       bgColor: "bg-purple-50",
       proofBg: "bg-purple-50/50"
     },
     {
-      title: "Transparent Process",
+      title: "Satisfaction Guaranteed",
       icon: <FileText size={24} />,
-      statement: "No mysterious 'discovery phases.' No scope creep. No surprise invoices. You know exactly where your project stands, what's coming next, and what you're paying.",
-      proof: "Fixed-price quotes delivered within 24 hours of strategy call.",
+      statement: "14-day money-back guarantee if the design phase doesn't meet expectations. Every project is built to exceed client goals.",
+      proof: "Money-back guarantee on all projects.",
       color: "text-[#14B8A6]",
       borderColor: "border-[#14B8A6]",
       bgColor: "bg-teal-50",
       proofBg: "bg-teal-50/50"
     },
     {
-      title: "Satisfaction Guaranteed",
+      title: "Certifications & Partnerships",
       icon: <ThumbsUp size={24} />,
-      statement: "If you're not satisfied with the direction of your project after the design phase, we'll refund your deposit. No questions. No hassle. We're confident in our work—and we'll prove it.",
-      proof: "14-day money-back guarantee on all projects.",
+      statement: "FactoryJet works with Google, Shopify, Webflow, and WordPress, ensuring technical expertise and performance. Certified platforms and partnerships ensure scalable, secure, and marketing-ready websites.",
+      proof: "Certified partner across leading web platforms.",
       color: "text-[#F59E0B]",
       borderColor: "border-[#F59E0B]",
       bgColor: "bg-amber-50",
@@ -1469,7 +1552,7 @@ const WhyFactoryJet = ({ onCtaClick }: { onCtaClick: () => void }) => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-4 font-space">
-            Six Reasons Growing Companies <span className="text-[#0052CC]">Choose FactoryJet</span>
+            Why US Companies Choose FactoryJet for <span className="text-[#0052CC]">B2B Web Design</span>
           </h2>
         </motion.div>
 
@@ -1516,7 +1599,7 @@ const WhyFactoryJet = ({ onCtaClick }: { onCtaClick: () => void }) => {
 
         <div className="text-center">
            <a onClick={(e) => { e.preventDefault(); onCtaClick(); }} href="#contact" className="group inline-flex items-center gap-2 text-[#FF6B35] font-bold text-lg px-8 py-3 rounded-full hover:bg-[#FF6B35]/10 transition-all cursor-pointer min-h-[44px]">
-             Experience the FactoryJet difference <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+             Experience the FactoryJet Difference — Book Your Free Strategy Call <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
            </a>
         </div>
       </div>
@@ -1528,8 +1611,8 @@ const Pricing = ({ onCtaClick }: { onCtaClick: () => void }) => {
   const tiers = [
     {
       title: "Launch",
-      price: "$1,999 - $3,499",
-      description: "New businesses and simple websites",
+      price: "$1,999",
+      description: "New businesses and straightforward websites",
       features: [
         "5-7 pages",
         "Mobile-responsive design",
@@ -1543,8 +1626,8 @@ const Pricing = ({ onCtaClick }: { onCtaClick: () => void }) => {
     },
     {
       title: "Growth",
-      price: "$3,999 - $6,999",
-      description: "Established businesses needing more power",
+      price: "$3,999–$6,999",
+      description: "Established businesses that need more performance",
       features: [
         "10-15 pages",
         "Advanced SEO optimization",
@@ -1559,12 +1642,12 @@ const Pricing = ({ onCtaClick }: { onCtaClick: () => void }) => {
     },
     {
       title: "Scale",
-      price: "$7,999 - $14,999",
+      price: "$7,999–$14,999",
       description: "E-commerce and custom functionality",
       features: [
-        "E-commerce or web application",
+        "E-commerce store or web application",
         "Custom integrations",
-        "Advanced analytics",
+        "Advanced analytics setup",
         "Priority support queue",
         "60 days post-launch support"
       ],
@@ -1591,7 +1674,7 @@ const Pricing = ({ onCtaClick }: { onCtaClick: () => void }) => {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold text-[#0F172A] mb-4 font-space"
           >
-            Transparent Pricing for <span className="text-[#0052CC]">Every Growth Stage</span>
+            Transparent Web Design Pricing for <span className="text-[#0052CC]">US Businesses</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -1600,7 +1683,7 @@ const Pricing = ({ onCtaClick }: { onCtaClick: () => void }) => {
             transition={{ delay: 0.1 }}
             className="text-xl text-slate-500 max-w-3xl mx-auto"
           >
-            No hidden fees. No surprise invoices. Know exactly what you're investing before we start.
+            No hidden fees. No surprise invoices. Know exactly what you're investing in before we begin.
           </motion.p>
         </div>
 
@@ -1696,7 +1779,7 @@ const Pricing = ({ onCtaClick }: { onCtaClick: () => void }) => {
 
         <div className="text-center mt-12">
            <p className="text-slate-500">
-             Not sure which tier? <a onClick={(e) => { e.preventDefault(); onCtaClick(); }} href="#contact" className="text-[#0052CC] font-bold hover:underline cursor-pointer">Talk to us—we'll recommend honestly →</a>
+             Not sure which tier fits? <a onClick={(e) => { e.preventDefault(); onCtaClick(); }} href="#contact" className="text-[#0052CC] font-bold hover:underline cursor-pointer">Talk to us — we'll give you an honest recommendation →</a>
            </p>
         </div>
       </div>
@@ -1761,27 +1844,163 @@ const AccordionItem: React.FC<AccordionProps> = ({ question, answer }) => {
   );
 };
 
+const ChooseWebDesign = () => {
+  const factors = [
+    {
+      title: "Proven case studies and results",
+      desc: "A credible B2B web design agency should be able to demonstrate measurable outcomes from past projects — such as increases in leads, faster page speeds, or improved conversion rates.",
+      icon: <TrendingUp size={24} />
+    },
+    {
+      title: "Industry experience",
+      desc: "Websites for B2B industries like cybersecurity, healthcare, and IT services require different messaging and structure than consumer sites. Agencies with relevant experience understand buyer behavior and compliance requirements.",
+      icon: <Briefcase size={24} />
+    },
+    {
+      title: "SEO and performance expertise",
+      desc: "A trusted B2B web design agency helping US businesses build high-converting websites should build websites with strong SEO foundations, fast loading speeds, and mobile-first design.",
+      icon: <Search size={24} />
+    },
+    {
+      title: "Transparent pricing and process",
+      desc: "Reliable agencies clearly explain project scope, timelines, and pricing upfront. Avoid firms that require long \"discovery phases\" before sharing a quote.",
+      icon: <FileText size={24} />
+    },
+    {
+      title: "Platform expertise",
+      desc: "The best agencies understand modern platforms such as WordPress, Webflow, and Shopify and recommend the right one based on your business goals.",
+      icon: <Layers size={24} />
+    }
+  ];
+
+  return (
+    <section className="py-24 bg-gradient-to-b from-white to-[#F8FAFC] relative overflow-hidden">
+      <div className="absolute inset-0 opacity-[0.02] pointer-events-none"
+        style={{
+          backgroundImage: 'radial-gradient(#0F172A 1px, transparent 1px)',
+          backgroundSize: '40px 40px'
+        }}
+      />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Cities Banner */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-20"
+        >
+          <h3 className="text-xl font-bold text-[#0F172A] mb-3 font-space">Web Design Services Across the United States</h3>
+          <p className="text-slate-500 mb-4 max-w-2xl mx-auto">
+            FactoryJet works with companies across the United States, including major business hubs such as:
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {["New York", "Chicago", "Dallas", "San Francisco", "Boston", "Los Angeles", "Austin", "Denver"].map((city) => (
+              <span key={city} className="bg-white border border-slate-200 px-4 py-2 rounded-full text-sm font-medium text-slate-600 shadow-sm flex items-center gap-1.5">
+                <MapPin size={14} className="text-[#0052CC]" /> {city}
+              </span>
+            ))}
+          </div>
+          <p className="text-sm text-slate-400 mt-4">
+            Our remote-first process allows businesses anywhere in the US to work with our design and development team efficiently.
+          </p>
+        </motion.div>
+
+        {/* How to Choose Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-4 font-space">
+            How to Choose the Right <span className="text-[#0052CC]">Web Design Company</span> in the USA
+          </h2>
+          <p className="text-lg text-slate-500 max-w-3xl mx-auto">
+            Selecting the right web design company in the USA can determine whether your website becomes a lead-generation asset or just an online brochure.
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={staggerContainer}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
+        >
+          {factors.map((factor, i) => (
+            <motion.div
+              key={i}
+              variants={fadeInUp}
+              whileHover={{ y: -5 }}
+              className="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-all group"
+            >
+              <div className="w-12 h-12 bg-blue-50 text-[#0052CC] rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                {factor.icon}
+              </div>
+              <h3 className="text-lg font-bold text-[#0F172A] mb-2 font-space">{factor.title}</h3>
+              <p className="text-slate-500 text-sm leading-relaxed">{factor.desc}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <p className="text-center text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          Choosing the right website design partner for your business that combines design expertise, technical development, and conversion strategy ensures your website supports long-term business growth rather than becoming a costly redesign project later.
+        </p>
+      </div>
+    </section>
+  );
+};
+
 const FAQ = () => {
   const faqs = [
     {
       question: "Do you use templates?",
-      answer: "No. Every FactoryJet site is custom-designed. We use AI to generate layouts and components based on your specific content and goals, then our designers refine them. This gives you a custom site in the time it takes others to customize a template."
+      answer: "No. Every site we build is custom-designed for your brand, audience, and goals. Templates or recycled components are never used, ensuring your website is unique and conversion-focused."
     },
     {
       question: "How are you so much faster than other agencies?",
-      answer: "Traditional agencies spend weeks on manual tasks we've automated. We use AI for initial wireframing, content generation, and code scaffolding. This eliminates about 80% of the repetitive work, allowing our senior designers and developers to focus on strategy and polish."
+      answer: "We built our workflow around AI-assisted design and development from day one. AI generates concepts, layouts, and copy in parallel. Human designers and developers then refine the strongest directions — cutting weeks of back-and-forth without reducing quality."
     },
     {
       question: "Will I be able to update the site myself?",
-      answer: "Yes. We build on user-friendly CMS platforms (typically WordPress or Webflow depending on your needs). We provide training videos and a 1-hour handover session so you can easily change text, images, and add blog posts."
+      answer: "Yes. We build on WordPress or Webflow, giving your team a clean, user-friendly editor. Add pages, update content, or manage your blog without touching code."
     },
     {
       question: "What if I don't like the design?",
-      answer: "That's why we have our Satisfaction Guarantee. We show you the design direction early in the process (Day 3-4). If you don't like it and we can't fix it to your satisfaction, we refund your deposit and part ways. No risk to you."
+      answer: "Every project includes revision rounds. If the design isn't right after the design phase, we adjust until it is. If you're still unsatisfied, our money-back guarantee applies — no questions asked."
     },
     {
-      question: "Do you write the copy/text?",
-      answer: "Yes. We use a combination of AI and human copywriting. We interview you to get the key facts and tone, generate the initial drafts with AI models trained on high-converting sales copy, and then our copywriters polish it."
+      question: "Do you write the copy?",
+      answer: "Yes. Our copywriting team works from a brief built during the strategy call. We can also incorporate existing content if you prefer."
+    },
+    {
+      question: "How much does a professional B2B website cost in the USA?",
+      answer: "A professional B2B website typically costs between $1,999 and $15,000. At FactoryJet, our Launch packages start at $1,999, Growth tiers at $3,999, and complex enterprise or e-commerce builds range from $8,000 to $15,000+. FactoryJet offers transparent, fixed pricing."
+    },
+    {
+      question: "How long does it take to build a B2B website?",
+      answer: "The average B2B website takes 17 to 28 days to build. Our AI-accelerated process allows us to complete design sprints in 5 days and full development within 3 weeks, significantly faster than the industry standard of 3–6 months."
+    },
+    {
+      question: "What is the best platform for a B2B business website?",
+      answer: "The best platforms for B2B websites are Webflow for design flexibility, WordPress for content-heavy SEO, and Shopify for B2B e-commerce. FactoryJet specializes in all three to ensure your tech stack matches your growth goals."
+    },
+    {
+      question: "What industries do you specialize in?",
+      answer: "Cybersecurity, Healthcare/MedTech, IT & Managed Services, Professional Services (consulting, legal, finance), Manufacturing, SaaS, Non-Profits, and E-Commerce. We focus on industries where trust and technical credibility drive purchasing decisions."
+    },
+    {
+      question: "Can you redesign my website without losing Google rankings?",
+      answer: "Yes. We conduct a full SEO audit, preserve ranking pages, and set up proper redirects. Redesigns maintain SEO equity while improving design and functionality."
+    },
+    {
+      question: "What is a conversion-focused website?",
+      answer: "Built to turn visitors into leads/customers, every design, CTA, and page flow is optimized for the buyer's journey. It's more than aesthetics — it drives measurable results."
+    },
+    {
+      question: "How do I get started?",
+      answer: "Book a free 30-minute strategy call. We review your current site, set goals, and provide a clear scope and fixed quote — no obligation, no pressure."
     }
   ];
 
@@ -1790,7 +2009,7 @@ const FAQ = () => {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-4 font-space">
-            Common Questions
+            Frequently Asked Questions: B2B Web Design in the USA
           </h2>
           <p className="text-slate-500">
             Everything you need to know about working with us.
@@ -1835,10 +2054,8 @@ const FooterLocal = ({ onCtaClick }: { onCtaClick: () => void }) => {
           <div>
             <h4 className="font-bold text-lg mb-6 font-space">Services</h4>
             <ul className="space-y-4 text-slate-400">
-              <li><a href="#" className="hover:text-[#FF6B35] transition-colors">Web Design</a></li>
-              {/* <li><a href="#" className="hover:text-[#FF6B35] transition-colors">Web Development</a></li> */}
-              <li><a href="#" className="hover:text-[#FF6B35] transition-colors">E-Commerce</a></li>
-              {/* <li><a href="#" className="hover:text-[#FF6B35] transition-colors">Mobile Apps</a></li> */}
+              <li><a href="/us/services/web-design" className="hover:text-[#FF6B35] transition-colors">Web Design</a></li>
+              <li><a href="/us/services/ecommerce-development" className="hover:text-[#FF6B35] transition-colors">E-Commerce</a></li>
             </ul>
           </div>
           
@@ -1856,8 +2073,8 @@ const FooterLocal = ({ onCtaClick }: { onCtaClick: () => void }) => {
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
           <p>© 2026 FactoryJet Inc. All rights reserved.</p>
           <div className="flex gap-8">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>
@@ -1879,24 +2096,34 @@ function UsHomePage() {
       <Industries />
       <CaseStudies />
       <Methodology onCtaClick={openUsModal} />
+      <MeetTheExperts />
       <WhyFactoryJet onCtaClick={openUsModal} />
       <Pricing onCtaClick={openUsModal} />
+      <ChooseWebDesign />
       <FAQ />
       <section id="contact" className="bg-[#0F172A] py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-[#0052CC]/10"></div>
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-space">
-            Ready to Upgrade Your <br/> Digital Presence?
+            Transform Your B2B Website Into a <br/> Lead-Generating Machine
           </h2>
           <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-            Stop losing leads to competitors. Get a free strategy roadmap and quote in 24 hours.
+            Stop losing leads to competitors with outdated or slow websites. Partner with FactoryJet — a US-based B2B web design agency — to get a high-converting, performance-driven website in just weeks.
           </p>
-          <button
-            onClick={openUsModal}
-            className="bg-[#FF6B35] hover:bg-[#E65020] text-white font-bold text-xl px-12 py-5 rounded-xl shadow-2xl shadow-orange-600/30 hover:scale-105 transition-all flex items-center justify-center gap-3 mx-auto min-h-[64px]"
-          >
-            Start Your Project <Rocket size={24} />
-          </button>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button
+              onClick={openUsModal}
+              className="bg-[#FF6B35] hover:bg-[#E65020] text-white font-bold text-xl px-12 py-5 rounded-xl shadow-2xl shadow-orange-600/30 hover:scale-105 transition-all flex items-center justify-center gap-3 min-h-[64px]"
+            >
+              Get Your Free Strategy Call <ArrowRight size={24} />
+            </button>
+            <button
+              onClick={openUsModal}
+              className="bg-transparent border-2 border-white/30 hover:border-white/60 text-white font-bold text-xl px-12 py-5 rounded-xl hover:scale-105 transition-all flex items-center justify-center gap-3 min-h-[64px]"
+            >
+              Request a Free Website Audit <ArrowRight size={24} />
+            </button>
+          </div>
           <p className="mt-6 text-sm text-slate-400 flex items-center justify-center gap-2">
             <Lock size={14} /> No obligation. 100% free consultation.
           </p>
