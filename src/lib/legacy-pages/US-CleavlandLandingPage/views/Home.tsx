@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Navbar } from '../components/Navbar';
+import { useContactModal } from '@/context/ContactModalContext';
 import { Button } from '../components/Button';
 import { Card } from '../components/Card';
 import { ContactForm } from '../components/ContactForm';
@@ -54,6 +54,8 @@ import {
 } from 'lucide-react';
 
 export const Home: React.FC = () => {
+  const { openModal } = useContactModal();
+  const onCta = () => openModal('us');
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('All');
@@ -604,8 +606,6 @@ export const Home: React.FC = () => {
 
   return (
     <div className="mt-4 flex flex-col min-h-screen bg-slate-50">
-      
-      {/* <Navbar /> */}
 
       <main className="flex-grow">
         
@@ -642,10 +642,7 @@ export const Home: React.FC = () => {
                 </Text>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
-                  <Button size="lg" variant="primary" rightIcon={<ArrowRight size={20} />} onClick={() => {
-                    const heroForm = document.getElementById('hero-form');
-                    if(heroForm) heroForm.scrollIntoView({ behavior: 'smooth' });
-                  }}>
+                  <Button size="lg" variant="primary" rightIcon={<ArrowRight size={20} />} onClick={onCta}>
                     Get Free Website Quote
                   </Button>
                   <a 
@@ -756,9 +753,9 @@ export const Home: React.FC = () => {
                    ))}
                  </ul>
                  <div className="mt-auto">
-                   <span className="text-secondary font-semibold flex items-center gap-2 group-hover:gap-3 transition-all cursor-pointer" onClick={() => window.location.href = '#cta'}>
+                   <a href="#cta" className="text-secondary font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                      Learn More <ArrowRight size={18} />
-                   </span>
+                   </a>
                  </div>
                </Card>
 
@@ -784,9 +781,9 @@ export const Home: React.FC = () => {
                    ))}
                  </ul>
                  <div className="mt-auto">
-                   <span className="text-secondary font-semibold flex items-center gap-2 group-hover:gap-3 transition-all cursor-pointer" onClick={() => window.location.href = '#cta'}>
+                   <a href="#cta" className="text-secondary font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                      Learn More <ArrowRight size={18} />
-                   </span>
+                   </a>
                  </div>
                </Card>
 
@@ -812,9 +809,9 @@ export const Home: React.FC = () => {
                    ))}
                  </ul>
                  <div className="mt-auto">
-                   <span className="text-secondary font-semibold flex items-center gap-2 group-hover:gap-3 transition-all cursor-pointer" onClick={() => window.location.href = '#cta'}>
+                   <a href="#cta" className="text-secondary font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                      Learn More <ArrowRight size={18} />
-                   </span>
+                   </a>
                  </div>
                </Card>
             </div>
@@ -1053,7 +1050,7 @@ export const Home: React.FC = () => {
                           <Clock size={14} />
                           <span>{project.timeline}</span>
                         </div>
-                        <a href="#" className="inline-flex items-center gap-1.5 text-secondary font-bold text-sm hover:translate-x-1 transition-transform">
+                        <a href="/case" className="inline-flex items-center gap-1.5 text-secondary font-bold text-sm hover:translate-x-1 transition-transform">
                           View Case Study <ArrowRight size={16} strokeWidth={2.5} />
                         </a>
                       </div>
@@ -1064,9 +1061,9 @@ export const Home: React.FC = () => {
             </div>
 
             <div className="mt-16 text-center">
-               <Button variant="outline" size="lg" className="border-slate-300 text-slate-600 hover:border-primary hover:text-primary hover:bg-white">
+               <a href="/case" className="inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 border-2 border-slate-300 text-slate-600 hover:border-primary hover:text-primary hover:bg-white text-lg px-8 py-4 gap-2.5 min-h-[56px]">
                   View Full Portfolio
-               </Button>
+               </a>
             </div>
           </div>
         </section>
@@ -1194,10 +1191,7 @@ export const Home: React.FC = () => {
                       className={`w-full justify-center font-bold text-lg h-14 ${
                         tier.color === 'accent' ? 'bg-accent hover:bg-emerald-600 shadow-emerald-200' : ''
                       }`}
-                      onClick={() => {
-                        const heroForm = document.getElementById('hero-form');
-                        if(heroForm) heroForm.scrollIntoView({ behavior: 'smooth' });
-                      }}
+                      onClick={onCta}
                     >
                       {tier.ctaText}
                     </Button>
@@ -1358,10 +1352,6 @@ export const Home: React.FC = () => {
                   <span>4.9 out of 5 on Google Reviews</span>
                   <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" className="h-4 ml-1 opacity-80" />
                </div>
-               
-               <Button variant="outline" className="border-slate-300 hover:border-primary">
-                  Read All Reviews <ExternalLink size={16} />
-               </Button>
             </div>
           </div>
         </section>
@@ -1476,10 +1466,7 @@ export const Home: React.FC = () => {
                   </div>
                   <Heading level={3} className="text-xl mb-2">Still have questions?</Heading>
                   <Text className="text-slate-600 mb-6">Can't find the answer you're looking for? Contact our team for personalized assistance.</Text>
-                  <Button onClick={() => {
-                        const heroForm = document.getElementById('hero-form');
-                        if(heroForm) heroForm.scrollIntoView({ behavior: 'smooth' });
-                      }}>Talk to an Expert</Button>
+                  <Button onClick={onCta}>Talk to an Expert</Button>
                </div>
             </div>
           </div>
@@ -1504,20 +1491,16 @@ export const Home: React.FC = () => {
                  </Text>
                  
                  <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
-                   <Button 
-                      size="lg" 
-                      className="bg-white text-primary hover:bg-blue-50 shadow-lg font-bold text-lg px-8 py-4 h-14 border-0 w-full sm:w-auto"
-                      leftIcon={<Phone className="w-5 h-5 fill-current" />}
-                   >
-                      +91 96999 77699
+                   <Button size="lg" variant="secondary" onClick={onCta} rightIcon={<ArrowRight size={20} />} className="w-full sm:w-auto">
+                      Get Free Quote
                    </Button>
-                   <a 
-                    href="https://wa.me/919699977699" 
-                    target="_blank" 
+                   <a
+                    href="https://wa.me/919699977699"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2 shadow-lg text-lg px-8 py-4 gap-2.5 min-h-[56px] bg-[#25D366] text-white hover:bg-[#128C7E] w-full sm:w-auto"
                   >
-                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className="css-i6dzq1"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
                     WhatsApp Us
                   </a>
                  </div>
@@ -1546,40 +1529,38 @@ export const Home: React.FC = () => {
              
              {/* Contact Grid */}
              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-blue-100 border-t border-white/10 pt-10 mt-12">
-                <div className="flex flex-col items-center gap-2">
+                <a href="https://wa.me/919699977699" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 hover:opacity-80 transition-opacity">
                    <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-secondary mb-1">
-                      <Phone className="w-5 h-5" />
+                      <MessageCircle className="w-5 h-5" />
                    </div>
-                   <span className="text-xs uppercase tracking-wider text-blue-300 font-bold">Call Us</span>
-                   <span className="font-semibold text-white">+91 96999 77699</span>
-                </div>
-                <div className="flex flex-col items-center gap-2">
+                   <span className="text-xs uppercase tracking-wider text-blue-300 font-bold">WhatsApp</span>
+                   <span className="font-semibold text-white">Chat with us</span>
+                </a>
+                <a href="mailto:connect@factoryjet.com" className="flex flex-col items-center gap-2 hover:opacity-80 transition-opacity">
                    <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-secondary mb-1">
                       <Mail className="w-5 h-5" />
                    </div>
                    <span className="text-xs uppercase tracking-wider text-blue-300 font-bold">Email Us</span>
                    <span className="font-semibold text-white">connect@factoryjet.com</span>
-                </div>
-                <div className="flex flex-col items-center gap-2">
+                </a>
+                <button onClick={onCta} className="flex flex-col items-center gap-2 hover:opacity-80 transition-opacity">
                    <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-secondary mb-1">
-                      <MessageCircle className="w-5 h-5" />
+                      <Phone className="w-5 h-5" />
                    </div>
-                   <span className="text-xs uppercase tracking-wider text-blue-300 font-bold">Live Chat</span>
-                   <span className="font-semibold text-white">Mon-Fri 9am-6pm EST</span>
-                </div>
+                   <span className="text-xs uppercase tracking-wider text-blue-300 font-bold">Get Quote</span>
+                   <span className="font-semibold text-white">Free Consultation</span>
+                </button>
                 <div className="flex flex-col items-center gap-2">
                    <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-secondary mb-1">
                       <MapPin className="w-5 h-5" />
                    </div>
                    <span className="text-xs uppercase tracking-wider text-blue-300 font-bold">Office</span>
-                   <span className="font-semibold text-white">Downtown Cleveland, OH</span>
+                   <span className="font-semibold text-white">Cleveland, OH</span>
                 </div>
              </div>
            </div>
         </section>
       </main>
-
-      {/* 12. Footer */}
 
     </div>
   );

@@ -1,4 +1,7 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+'use client';
+
+import React, { createContext, useContext, ReactNode } from 'react';
+import { useContactModal } from '@/context/ContactModalContext';
 
 interface LeadCaptureContextType {
   isFormOpen: boolean;
@@ -10,21 +13,18 @@ interface LeadCaptureContextType {
 const LeadCaptureContext = createContext<LeadCaptureContextType | undefined>(undefined);
 
 export const LeadCaptureProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [isFormOpen, setIsFormOpen] = useState(false);
-  const [initialInterest, setInitialInterest] = useState('');
+  const { openModal, closeModal, isOpen } = useContactModal();
 
   const openForm = (interest: string = 'General Inquiry') => {
-    setInitialInterest(interest);
-    setIsFormOpen(true);
+    openModal('us');
   };
 
   const closeForm = () => {
-    setIsFormOpen(false);
-    setInitialInterest('');
+    closeModal();
   };
 
   return (
-    <LeadCaptureContext.Provider value={{ isFormOpen, openForm, closeForm, initialInterest }}>
+    <LeadCaptureContext.Provider value={{ isFormOpen: isOpen, openForm, closeForm, initialInterest: '' }}>
       {children}
     </LeadCaptureContext.Provider>
   );

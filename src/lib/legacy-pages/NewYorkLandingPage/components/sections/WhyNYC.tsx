@@ -4,7 +4,7 @@ import { BarChart, Smartphone, Zap, MousePointer2, Building2, Globe2, Rocket, Se
 
 export const WhyNYC: React.FC = () => {
   return (
-    <section className="bg-white py-12 md:py-20 px-6 lg:px-20">
+    <section id="why-nyc" className="bg-white py-12 md:py-20 px-6 lg:px-20">
       <div className="max-w-[1280px] mx-auto">
         
         {/* Section Header */}

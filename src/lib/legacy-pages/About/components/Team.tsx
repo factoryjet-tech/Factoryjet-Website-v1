@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { TEAM } from '../data.constants';
-import { UserCircle2, LinkedinIcon } from 'lucide-react';
+import { LinkedinIcon } from 'lucide-react';
 
 const Team = () => {
   return (
@@ -26,6 +26,7 @@ const Team = () => {
 
 interface TeamMemberCardProps {
   member: {
+    name: string;
     role: string;
     experience: string;
     specialization: string;
@@ -37,9 +38,12 @@ interface TeamMemberCardProps {
 const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member }) => {
   const [imageError, setImageError] = useState(false);
 
-  const handleImageError = () => {
-    setImageError(true);
-  };
+  const initials = member.name
+    .split(' ')
+    .map((n) => n[0])
+    .join('')
+    .toUpperCase()
+    .slice(0, 2);
 
   return (
     <div className="group text-center">
@@ -48,20 +52,21 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member }) => {
         {member.image && !imageError ? (
           <img
             src={member.image}
-            alt={member.role}
-            onError={handleImageError}
+            alt={member.name}
+            onError={() => setImageError(true)}
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-200 to-slate-300 group-hover:scale-110 transition-transform duration-500">
-            <UserCircle2 className="w-16 h-16 md:w-20 md:h-20 text-slate-400" />
+          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#0052CC] to-[#0041a3] group-hover:scale-110 transition-transform duration-500">
+            <span className="text-3xl md:text-4xl font-bold text-white">{initials}</span>
           </div>
         )}
       </div>
 
       {/* Member Info */}
-      <h4 className="text-lg md:text-xl font-bold text-slate-900">{member.role}</h4>
-      <p className="text-jetBlue font-medium text-xs md:text-sm mb-2 md:mb-3">{member.experience} Experience</p>
+      <h4 className="text-lg md:text-xl font-bold text-slate-900">{member.name}</h4>
+      <p className="text-jetBlue font-medium text-xs md:text-sm mb-1">{member.role}</p>
+      <p className="text-slate-500 text-xs mb-2 md:mb-3">{member.experience} Experience</p>
 
       <div className="inline-block bg-slate-50 px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-[11px] md:text-xs text-slate-600 max-w-xs mx-auto mb-4">
         {member.specialization}

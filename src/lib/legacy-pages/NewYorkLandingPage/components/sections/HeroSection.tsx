@@ -87,14 +87,15 @@ export const HeroSection: React.FC = () => {
             </span>
           </motion.button>
 
-          <motion.button 
+          <motion.a
+            href="/case"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="px-8 py-4 rounded-lg bg-white text-[#0052CC] font-semibold hover:bg-slate-50 transition-colors flex items-center justify-center gap-2 shadow-lg border border-transparent min-h-[56px]"
           >
              <Play className="w-4 h-4 fill-current" />
              View Portfolio
-          </motion.button>
+          </motion.a>
         </motion.div>
 
         {/* Trust Indicators - Improved layout and animation */}

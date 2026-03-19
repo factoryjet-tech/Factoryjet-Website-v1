@@ -39,7 +39,11 @@
       "Read(//c/FactoryJet/rishi-branch/Factoryjet-Website-v1/src/app/us/services/**)",
       "Bash(done)",
       "Bash(find /c/FactoryJet/rishi-branch/Factoryjet-Website-v1/src/components -name Header* -o -name Footer*)",
-      "Bash(find /c/FactoryJet/rishi-branch/Factoryjet-Website-v1 -name *.txt -newer /c/FactoryJet/rishi-branch/Factoryjet-Website-v1/src/app/us/pagecontent.txt -o -name *ai* -type f)"
+      "Bash(find /c/FactoryJet/rishi-branch/Factoryjet-Website-v1 -name *.txt -newer /c/FactoryJet/rishi-branch/Factoryjet-Website-v1/src/app/us/pagecontent.txt -o -name *ai* -type f)",
+      "Bash(find /c/FactoryJet/rishi-branch/Factoryjet-Website-v1 -type f -name *ContactModal*)",
+      "Bash(grep -rl \"telephone: ''''+1-919-699-977-699''''\" src/app/)",
+      "Bash(while read:*)",
+      "Bash(do sed:*)"
     ]
   }
 }

@@ -1,4 +1,7 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+'use client';
+
+import React, { createContext, useContext, ReactNode } from 'react';
+import { useContactModal } from '@/context/ContactModalContext';
 
 interface FormContextType {
   isFormOpen: boolean;
@@ -9,19 +12,18 @@ interface FormContextType {
 const FormContext = createContext<FormContextType | undefined>(undefined);
 
 export const FormProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [isFormOpen, setIsFormOpen] = useState(false);
+  const { openModal, closeModal, isOpen } = useContactModal();
 
   const openForm = (service?: string) => {
-    setIsFormOpen(true);
-    // Optional: You could store the selected service in state to pre-fill the form
+    openModal('us');
   };
 
   const closeForm = () => {
-    setIsFormOpen(false);
+    closeModal();
   };
 
   return (
-    <FormContext.Provider value={{ isFormOpen, openForm, closeForm }}>
+    <FormContext.Provider value={{ isFormOpen: isOpen, openForm, closeForm }}>
       {children}
     </FormContext.Provider>
   );

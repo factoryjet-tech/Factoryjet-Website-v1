@@ -29,6 +29,7 @@ export interface ReasonItem {
 }
 
 export interface TeamMember {
+  name: string;
   role: string;
   experience: string;
   specialization: string;

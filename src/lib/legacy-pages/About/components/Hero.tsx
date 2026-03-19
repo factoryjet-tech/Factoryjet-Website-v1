@@ -80,7 +80,7 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll Indicator
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -91,7 +91,7 @@ const Hero = () => {
         <div className="w-[1px] h-12 bg-slate-200 mt-2 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-1/2 bg-jetBlue animate-dropdown" />
         </div>
-      </motion.div>
+      </motion.div> */}
 
       <style>{`
         @keyframes dropdown {

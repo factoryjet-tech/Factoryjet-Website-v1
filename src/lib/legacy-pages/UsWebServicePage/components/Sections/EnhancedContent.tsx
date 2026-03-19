@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { Check, CheckCircle, Star, Building2, Rocket, MapPin, Scale, ArrowUpRight, Briefcase, Layers, AlertCircle, ArrowRight, Clock, Flag, Layout, Trophy, TrendingUp, Users, Zap, ShoppingBag, Globe, Smartphone, MousePointerClick, Search, BarChart3, HelpCircle, ShieldCheck, CreditCard, Stethoscope, Landmark, Home, Server, ChevronDown, Calculator, Minus, Plus, Cpu, Hammer } from 'lucide-react';
 import { QuickAnswer, ExpertTake, Button, CtaSection, SectionHeader } from '../UI/Common';
 import { useForm } from '../UI/FormContext';
@@ -330,9 +331,9 @@ export const StartupSection: React.FC = () => {
                       Launch Your MVP in 2 Weeks
                       <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                   </button>
-                  <button onClick={() => openForm('Startup Pricing')} className="px-8 py-4 bg-transparent border-2 border-white/30 text-white font-bold rounded-xl hover:bg-white/10 hover:border-white transition-all">
+                  <Link href="/us/pricing" className="px-8 py-4 bg-transparent border-2 border-white/30 text-white font-bold rounded-xl hover:bg-white/10 hover:border-white transition-all">
                       View Startup Pricing
-                  </button>
+                  </Link>
               </div>
            </div>
         </div>
@@ -527,7 +528,9 @@ export const CaseStudiesSection: React.FC = () => {
             </div>
             
             <div className="mt-12 text-center">
-                <Button variant="secondary" onClick={() => openForm('Case Study Inquiry')}>View All Case Studies</Button>
+                <Link href="/case" className="inline-flex items-center gap-2 px-8 py-4 border-2 border-slate-300 text-navy font-bold rounded-xl hover:border-jet-blue hover:bg-jet-blue/5 transition-all">
+                  View All Case Studies <ArrowRight className="w-4 h-4" />
+                </Link>
             </div>
         </div>
     </section>
@@ -631,7 +634,9 @@ export const ROISection: React.FC = () => {
                              <div className="flex justify-between text-sm text-slate-400 mb-1">Page Load Speed</div>
                              <div className="text-3xl font-bold text-jet-blue">&lt; 1 Second</div>
                          </div>
-                         <Button variant="primary" fullWidth onClick={() => openForm('ROI Calculation')}>Calculate Your ROI</Button>
+                         <Link href="/us/pricing" className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-jet-blue text-white font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg">
+                           Calculate Your ROI <ArrowRight className="w-4 h-4" />
+                         </Link>
                      </div>
                  </div>
              </div>

@@ -55,7 +55,7 @@ export default function Page() {
     url: 'https://factoryjet.com/us/services/ecommerce-development/chattanooga',
     logo: 'https://factoryjet.com/logo.png',
     image: 'https://factoryjet.com/logo.png',
-    telephone: '+1-919-699-977-699',
+    telephone: '+91-96999-77699',
     email: 'connect@factoryjet.com',
     address: {
       '@type': 'PostalAddress',

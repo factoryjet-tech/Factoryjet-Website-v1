@@ -16,6 +16,7 @@ import { faqData } from './data';
 import { FAQItem, SearchResult } from './types';
 import Header from '@/components/Header';
 import FooterUS from '@/components/FooterUS';
+import { useContactModal } from '@/context/ContactModalContext';
 import Link from 'next/link';
 
 // --- Helper Components ---
@@ -378,40 +379,43 @@ const SearchResults = ({ results, onSelect }: { results: SearchResult[], onSelec
   );
 };
 
-const ContactCTA = React.memo(() => (
-  <section className="bg-jet-blue text-white py-16 px-4">
-    <div className="max-w-4xl mx-auto text-center">
-      <h2 className="text-3xl font-display font-bold mb-4">Can't find what you're looking for?</h2>
-      <p className="text-blue-50 mb-10 text-lg">Our AI-native experts are ready to help you navigate your digital transformation.</p>
-      
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <button className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-xl hover:bg-white hover:text-jet-blue transition-all group text-left">
-          <div className="bg-white/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-100 group-hover:text-jet-blue transition-colors">
-            <MessageCircle size={24} aria-hidden="true" />
-          </div>
-          <h3 className="font-bold text-lg mb-1">Live Chat</h3>
-          <p className="text-sm opacity-80 group-hover:opacity-100">Chat with an expert now</p>
-        </button>
+const ContactCTA = () => {
+  const { openModal } = useContactModal();
+  return (
+    <section className="bg-jet-blue text-white py-16 px-4">
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="text-3xl font-display font-bold mb-4">Can&apos;t find what you&apos;re looking for?</h2>
+        <p className="text-blue-50 mb-10 text-lg">Our AI-native experts are ready to help you navigate your digital transformation.</p>
 
-        <button className="bg-white text-jet-blue p-6 rounded-xl shadow-xl hover:-translate-y-1 transition-transform text-left">
-          <div className="bg-blue-50 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-jet-blue">
-            <Phone size={24} aria-hidden="true" />
-          </div>
-          <h3 className="font-bold text-lg mb-1">Schedule Call</h3>
-          <p className="text-sm text-slate-600">Book 30-min consultation</p>
-        </button>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <button onClick={() => openModal('us')} className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-xl hover:bg-white hover:text-jet-blue transition-all group text-left">
+            <div className="bg-white/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-100 group-hover:text-jet-blue transition-colors">
+              <MessageCircle size={24} aria-hidden="true" />
+            </div>
+            <h3 className="font-bold text-lg mb-1">Live Chat</h3>
+            <p className="text-sm opacity-80 group-hover:opacity-100">Chat with an expert now</p>
+          </button>
 
-        <button className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-xl hover:bg-white hover:text-jet-blue transition-all group text-left">
-          <div className="bg-white/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-100 group-hover:text-jet-blue transition-colors">
-            <Mail size={24} aria-hidden="true" />
-          </div>
-          <h3 className="font-bold text-lg mb-1">Email Us</h3>
-          <p className="text-sm opacity-80 group-hover:opacity-100">Get answer within 4 hours</p>
-        </button>
+          <button onClick={() => openModal('us')} className="bg-white text-jet-blue p-6 rounded-xl shadow-xl hover:-translate-y-1 transition-transform text-left">
+            <div className="bg-blue-50 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-jet-blue">
+              <Phone size={24} aria-hidden="true" />
+            </div>
+            <h3 className="font-bold text-lg mb-1">Schedule Call</h3>
+            <p className="text-sm text-slate-600">Book 30-min consultation</p>
+          </button>
+
+          <a href="mailto:connect@factoryjet.com" className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-xl hover:bg-white hover:text-jet-blue transition-all group text-left">
+            <div className="bg-white/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-100 group-hover:text-jet-blue transition-colors">
+              <Mail size={24} aria-hidden="true" />
+            </div>
+            <h3 className="font-bold text-lg mb-1">Email Us</h3>
+            <p className="text-sm opacity-80 group-hover:opacity-100">Get answer within 4 hours</p>
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
-));
+    </section>
+  );
+};
 
 const FooterLocal = React.memo(() => (
   <footer className="bg-slate-900 text-slate-300 py-12 px-4 border-t border-slate-800">

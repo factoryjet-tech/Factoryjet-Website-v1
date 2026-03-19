@@ -3,61 +3,14 @@
 import './App.css';
 import React, { useState, useRef, useEffect } from 'react';
 import { CheckCircle, Check, Code2, Layers, Smartphone, Globe, Plus, Minus, ArrowRight, Zap, Shield, Cpu, ShieldCheck, TrendingUp, Sparkles, Layout, Settings, ShoppingBag, FileText, Star, Clock, Lock, Database, Flag, AlertCircle, Rocket } from 'lucide-react';
+import Link from 'next/link';
 import Header from '@/components/Header';
 import { JumpNav } from './components/Layout/JumpNav';
 import { QuickAnswer, Button, CtaSection, SectionHeader } from './components/UI/Common';
 import { B2BSection, StartupSection, LocalSection, ComparisonsSection, CaseStudiesSection, MigrationSection, PricingSection, IndustriesSection, ROISection, ExpandedFAQ } from './components/Sections/EnhancedContent';
-import { LeadForm } from './components/UI/LeadForm';
 import { FormProvider, useForm } from './components/UI/FormContext';
 import FooterUS from '@/components/FooterUS';
-
-// --- Footer Component ---
-const FooterLocal: React.FC = () => {
-  const { openForm } = useForm();
-  
-  return (
-    <footer className="bg-navy text-white py-12 border-t border-white/10 ">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-heading font-bold mb-4">FACTORYJET</h3>
-            <p className="text-slate-400 max-w-sm mb-6 leading-relaxed">
-              Enterprise-grade web development for modern businesses. Built in the USA.
-            </p>
-          </div>
-          <div>
-            <h4 className="font-bold mb-4">Company</h4>
-            <ul className="space-y-3 text-slate-400 text-sm">
-              <li><a href="#overview" className="hover:text-white transition-colors">Services</a></li>
-              <li><a href="#case-studies" className="hover:text-white transition-colors">Case Studies</a></li>
-              <li><a href="#pricing" className="hover:text-white transition-colors">Pricing</a></li>
-              <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-bold mb-4">Contact</h4>
-            <ul className="space-y-3 text-slate-400 text-sm">
-              <li>connect@factoryjet.com</li>
-              <li>+91 96999 77699</li>
-              <li>
-                <button onClick={() => openForm('Footer Link')} className="text-jet-blue font-bold hover:text-white transition-colors">
-                  Start a Project
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-xs md:text-sm">
-          <div>&copy; {new Date().getFullYear()} FactoryJet. All rights reserved.</div>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-};
+import { useContactModal } from '@/context/ContactModalContext';
 
 // --- Hero Section ---
 const BackgroundElements = () => (
@@ -176,12 +129,12 @@ const Hero = () => {
                         <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 group-hover:translate-x-full"></div>
                     </button>
 
-                    <button 
-                      onClick={() => openForm('Client Sites')}
-                      className="group relative rounded-xl bg-transparent border-2 border-jet-blue/20 px-8 py-4 text-jet-blue font-bold transition-all hover:bg-jet-blue/5 hover:border-jet-blue w-full sm:w-auto text-sm md:text-base"
+                    <Link
+                      href="/case"
+                      className="group relative rounded-xl bg-transparent border-2 border-jet-blue/20 px-8 py-4 text-jet-blue font-bold transition-all hover:bg-jet-blue/5 hover:border-jet-blue w-full sm:w-auto text-sm md:text-base flex justify-center items-center gap-2"
                     >
-                        View Live Client Sites
-                    </button>
+                        View Case Studies
+                    </Link>
                   </div>
               </div>
 
@@ -284,7 +237,9 @@ const Hero = () => {
 };
 
 // --- The Problem Section (Why Projects Fail) ---
-const Problem = () => (
+const Problem = () => {
+  const { openForm } = useForm();
+  return (
   <section id="overview" className="relative pt-48 pb-16 md:py-24 bg-gradient-to-b from-white via-slate-50 to-white overflow-hidden">
     <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
          style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`, transform: 'rotate(15deg)' }}>
@@ -371,7 +326,7 @@ const Problem = () => (
       </div>
 
       <div className="mt-12 md:mt-16 text-center">
-        <button className="relative inline-flex items-center justify-center px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-br from-jet-orange to-orange-500 shadow-[0_4px_14px_rgba(255,107,53,0.4)] hover:shadow-[0_8px_25px_rgba(255,107,53,0.5)] hover:-translate-y-0.5 transition-all duration-300 group w-full md:w-auto text-base">
+        <button onClick={() => openForm('Problem CTA')} className="relative inline-flex items-center justify-center px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-br from-jet-orange to-orange-500 shadow-[0_4px_14px_rgba(255,107,53,0.4)] hover:shadow-[0_8px_25px_rgba(255,107,53,0.5)] hover:-translate-y-0.5 transition-all duration-300 group w-full md:w-auto text-base">
             <span className="mr-2">Stop Renting. Own Your Site.</span>
             <div className="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
                 <ArrowRight className="w-3 h-3" />
@@ -380,7 +335,8 @@ const Problem = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 // --- Method Section (Scroll Storytelling) ---
 const Method = () => {
@@ -476,6 +432,7 @@ const Method = () => {
 
 // --- Platforms Section (Holographic Cards) ---
 const Platforms = () => {
+  const { openForm } = useForm();
   const platforms = [
     {
       name: 'Next.js 14',
@@ -620,10 +577,10 @@ const Platforms = () => {
                  </ul>
 
                  {/* Link */}
-                 <div className="flex items-center gap-2 text-jet-blue font-bold text-sm cursor-pointer group/link">
+                 <button onClick={() => openForm(platform.name)} className="flex items-center gap-2 text-jet-blue font-bold text-sm cursor-pointer group/link">
                     <span>Explore {platform.name}</span>
                     <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1" />
-                 </div>
+                 </button>
               </div>
             </div>
           ))}
@@ -634,7 +591,8 @@ const Platforms = () => {
 };
 
 const MainContent: React.FC = () => {
-  const { isFormOpen, openForm, closeForm } = useForm();
+  const { openForm } = useForm();
+  const { openModal: openContactModal } = useContactModal();
   const [showFloatingCTA, setShowFloatingCTA] = useState(false);
 
   useEffect(() => {
@@ -745,13 +703,7 @@ const MainContent: React.FC = () => {
         </div>
       </main>
 
-      <FooterUS />
-
-      {/* Lead Form Modal */}
-      <LeadForm 
-        isOpen={isFormOpen} 
-        onClose={closeForm} 
-      />
+      <FooterUS onCtaClick={() => openContactModal('us')} />
 
       {/* Floating Mobile CTA */}
       <div className={`fixed bottom-0 left-0 right-0 p-4 bg-white border-t border-slate-200 z-40 md:hidden transition-transform duration-300 flex gap-3 ${showFloatingCTA ? 'translate-y-0' : 'translate-y-full'}`}>

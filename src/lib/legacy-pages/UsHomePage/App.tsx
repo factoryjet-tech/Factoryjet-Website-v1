@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence, useInView } from 'framer-motion';
+import Link from 'next/link';
 import Header from '@/components/Header';
 import FooterUS from '@/components/FooterUS';
 import { useContactModal } from '@/context/ContactModalContext';
@@ -239,15 +240,13 @@ const Hero = ({ onCtaClick }: { onCtaClick: () => void }) => {
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </motion.button>
               
-              <motion.a
-                href="#results"
-                whileHover={{ backgroundColor: "rgba(255,255,255,0.1)", color: "#ffffff" }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full sm:w-auto bg-transparent border border-white/20 text-slate-300 font-medium text-base md:text-lg px-8 py-3 rounded-xl flex items-center justify-center gap-2 transition-colors hover:border-white/40 min-h-[48px]"
+              <Link
+                href="/case"
+                className="w-full sm:w-auto bg-transparent border border-white/20 text-slate-300 font-medium text-base md:text-lg px-8 py-3 rounded-xl flex items-center justify-center gap-2 transition-colors hover:border-white/40 hover:bg-white/10 hover:text-white min-h-[48px]"
                 style={{ fontFamily: "'Inter', Arial, sans-serif" }}
               >
                 View Case Studies
-              </motion.a>
+              </Link>
             </motion.div>
           </div>
 
@@ -1895,10 +1894,20 @@ const ChooseWebDesign = () => {
             FactoryJet works with companies across the United States, including major business hubs such as:
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            {["New York", "Chicago", "Dallas", "San Francisco", "Boston", "Los Angeles", "Austin", "Denver"].map((city) => (
-              <span key={city} className="bg-white border border-slate-200 px-4 py-2 rounded-full text-sm font-medium text-slate-600 shadow-sm flex items-center gap-1.5">
-                <MapPin size={14} className="text-[#0052CC]" /> {city}
-              </span>
+            {[
+              { name: "New York", href: "/us/services/web-design/new-york" },
+              { name: "Cleveland", href: "/us/services/web-design/cleveland" },
+              { name: "Chicago", href: "/us/services/web-design" },
+              { name: "Dallas", href: "/us/services/web-design" },
+              { name: "San Francisco", href: "/us/services/web-design" },
+              { name: "Boston", href: "/us/services/web-design" },
+              { name: "Los Angeles", href: "/us/services/web-design" },
+              { name: "Austin", href: "/us/services/web-design" },
+              { name: "Denver", href: "/us/services/web-design" },
+            ].map((city) => (
+              <Link key={city.name} href={city.href} className="bg-white border border-slate-200 px-4 py-2 rounded-full text-sm font-medium text-slate-600 shadow-sm flex items-center gap-1.5 hover:border-[#0052CC] hover:text-[#0052CC] transition-colors">
+                <MapPin size={14} className="text-[#0052CC]" /> {city.name}
+              </Link>
             ))}
           </div>
           <p className="text-sm text-slate-400 mt-4">

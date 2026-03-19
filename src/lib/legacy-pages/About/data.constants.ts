@@ -127,11 +127,10 @@ export const REASONS: ReasonItem[] = [
 ];
 
 export const TEAM: TeamMember[] = [
-  { role: "Founder & CEO", experience: "18+ years", specialization: "Business strategy, ERP implementation" , image: "https://media.licdn.com/dms/image/v2/D5603AQHhq-6TRi6xqw/profile-displayphoto-scale_200_200/B56ZnTEEVkG0AY-/0/1760182683518?e=1770249600&v=beta&t=HgbI66N6ma8YMi8Ty3theWVsCMYdEKeYKGl9XjifcIg", LinkedInUrl: "https://www.linkedin.com/in/barotbhavesh/?originalSubdomain=in" },
-  { role: "Co-Founder & CTO", experience: "5+ years", specialization: "Technical architecture, AI implementation", image: "https://media.licdn.com/dms/image/v2/D5603AQHKKCmBYItb4A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1714074311535?e=1770249600&v=beta&t=V5KJXb7jgZ5LktCT3Ik-4tUJCzjuY9ujdbr4noEw2Uk", LinkedInUrl: "https://www.linkedin.com/in/manoj-v-38a047220/" },
-  { role: "Founding Member & Dev", experience: "2+ years", specialization: "Full Stack Development, AI implementation", image: "https://media.licdn.com/dms/image/v2/D5603AQHYHUygALF-bw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1728331436522?e=1770249600&v=beta&t=m57CXFbhdw95S2BvnsZN1EMVZ5qTT_ii67WpRMXEMv4", LinkedInUrl: "https://www.linkedin.com/in/rishikesh-yadav-a059482b0/" },
-  { role: "Head of Digital Marketing", experience: "5+ years", specialization: "SEO, GEO, AEO, AIO, Paid Ads", image: "/nikhil_photo.jpeg", LinkedInUrl: "https://www.linkedin.com/in/nikhil-guleria-642825209/" },
-  // { role: "Head of CRM & Sales Ops", experience: "10+ years", specialization: "HubSpot, Salesforce, ZOHO", image: "", LinkedInUrl: "sdf" }
+  { name: "Bhavesh Barot", role: "Founder & CEO", experience: "18+ years", specialization: "Business strategy, ERP implementation", image: "/team/bhavesh.jpeg", LinkedInUrl: "https://www.linkedin.com/in/barotbhavesh/?originalSubdomain=in" },
+  { name: "Manoj V", role: "Co-Founder & CTO", experience: "5+ years", specialization: "Technical architecture, AI implementation", image: "/team/manoj.jpeg", LinkedInUrl: "https://www.linkedin.com/in/manoj-v-38a047220/" },
+  { name: "Rishikesh Yadav", role: "Founding Member & Dev", experience: "2+ years", specialization: "Full Stack Development, AI implementation", image: "/team/rishikesh.jpeg", LinkedInUrl: "https://www.linkedin.com/in/rishikesh-yadav-a059482b0/" },
+  { name: "Nikhil Guleria", role: "Head of Digital Marketing", experience: "5+ years", specialization: "SEO, GEO, AEO, AIO, Paid Ads", image: "/nikhil_photo.jpeg", LinkedInUrl: "https://www.linkedin.com/in/nikhil-guleria-642825209/" },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [

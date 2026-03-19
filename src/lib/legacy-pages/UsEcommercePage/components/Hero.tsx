@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Button } from './ui/Section';
 import { useLeadCapture } from '../context/LeadCaptureContext';
@@ -33,12 +34,12 @@ const Hero: React.FC = () => {
             >
               Get Your Free E-Commerce Audit
             </Button>
-            <button 
+            <Link
+              href="/case"
               className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border border-white text-base md:text-lg font-medium rounded-lg text-white bg-transparent hover:bg-white hover:text-jet-blue transition-all duration-200"
-              onClick={() => openForm('Portfolio Request')}
             >
               View Our Portfolio <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
+            </Link>
           </div>
 
           {/* Trust Bar */}
