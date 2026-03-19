@@ -43,7 +43,10 @@
       "Bash(find /c/FactoryJet/rishi-branch/Factoryjet-Website-v1 -type f -name *ContactModal*)",
       "Bash(grep -rl \"telephone: ''''+1-919-699-977-699''''\" src/app/)",
       "Bash(while read:*)",
-      "Bash(do sed:*)"
+      "Bash(do sed:*)",
+      "WebFetch(domain:www.linkedin.com)",
+      "WebFetch(domain:in.linkedin.com)",
+      "WebSearch"
     ]
   }
 }
