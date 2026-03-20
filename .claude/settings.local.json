@@ -46,7 +46,15 @@
       "Bash(do sed:*)",
       "WebFetch(domain:www.linkedin.com)",
       "WebFetch(domain:in.linkedin.com)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(mkdir -p \"C:/FactoryJet/rishi-branch/Factoryjet-Website-v1/src/lib/legacy-pages/ShopifyDevelopment\")",
+      "Bash(mkdir -p \"C:/FactoryJet/rishi-branch/Factoryjet-Website-v1/src/app/ecommerce/shopify-development\")",
+      "Bash(\"c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/src/lib/legacy-pages/ShopifyDevelopment/index.tsx\")",
+      "Bash(find /c/FactoryJet/rishi-branch/Factoryjet-Website-v1 -type f -name *shopify* -o -name *Shopify*)",
+      "Bash(find /c/FactoryJet/rishi-branch/Factoryjet-Website-v1/src/pages -type f \\\\\\(-name *.tsx -o -name *.ts \\\\\\))",
+      "Bash(find /c/FactoryJet/rishi-branch/Factoryjet-Website-v1/src -type f -path *pages* -name *.ts*)",
+      "Bash(find /c/FactoryJet/rishi-branch/Factoryjet-Website-v1/src -path */blog/* -name *.tsx -o -path */blog/* -name *.ts)",
+      "Bash(find /c/FactoryJet/rishi-branch/Factoryjet-Website-v1/src -name ContactFormModal.tsx -o -name Footer*.tsx)"
     ]
   }
 }

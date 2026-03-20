@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { Menu, X, ChevronDown, ChevronRight, BookOpen, FileText, MapPin, Monitor, ShoppingBag, Bot, MessageSquare, TrendingUp, Megaphone, Calendar, Workflow, Headphones, Phone } from 'lucide-react';
+import { Menu, X, ChevronDown, ChevronRight, BookOpen, FileText, MapPin, Monitor, ShoppingBag, Bot, MessageSquare, TrendingUp, Megaphone, Calendar, Workflow, Headphones, Phone, ShoppingCart } from 'lucide-react';
 import { useContactModal } from '../context/ContactModalContext';
 import { trackButtonClick, trackNavigation, trackCTAClick } from '../utils/gtm';
 
@@ -40,12 +40,18 @@ const AI_SERVICES: SubMenuItem[] = [
   { label: 'AI Voice Agent', href: '/services/ai-agent-development/ai-voice-agent', icon: Phone, desc: 'Voice-powered AI assistants', isRoute: true },
 ];
 
+const ECOMMERCE_SERVICES_BASE: Omit<SubMenuItem, 'href'>[] = [
+  { label: 'Shopify Development', icon: ShoppingCart, desc: 'Shopify & Shopify Plus stores', isRoute: true },
+];
+
 const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '', hideLocations = false }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null);
   const [mobileAISubmenu, setMobileAISubmenu] = useState(false);
+  const [mobileEcomSubmenu, setMobileEcomSubmenu] = useState(false);
   const [showAIPanel, setShowAIPanel] = useState(false);
+  const [activeChildPanel, setActiveChildPanel] = useState<string | null>(null);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const dropdownTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const aiPanelTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -65,9 +71,14 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '',
 
   const prefixRoute = (route: string) => basePath ? `${basePath}${route}` : route;
 
+  const ecommerceServices: SubMenuItem[] = ECOMMERCE_SERVICES_BASE.map(s => ({
+    ...s,
+    href: prefixRoute('/ecommerce-development/shopify-development'),
+  }));
+
   const servicesSubmenu: SubMenuItem[] = [
     { label: 'Web Design', href: prefixRoute('/services/web-design'), icon: Monitor, desc: 'Custom high-performance websites', isRoute: true },
-    { label: 'E-Commerce', href: prefixRoute('/services/ecommerce-development'), icon: ShoppingBag, desc: 'Shopify & WooCommerce stores', isRoute: true },
+    { label: 'E-Commerce', href: prefixRoute('/services/ecommerce-development'), icon: ShoppingBag, desc: 'Shopify & WooCommerce stores', isRoute: true, children: ecommerceServices },
     { label: 'AI Agent Development', href: '/services/ai-agent-development', icon: Bot, desc: 'Custom AI agent development', isRoute: true, children: AI_SERVICES },
   ];
 
@@ -147,17 +158,35 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '',
   const handleAIPanelEnter = () => {
     if (aiPanelTimeoutRef.current) clearTimeout(aiPanelTimeoutRef.current);
     setShowAIPanel(true);
+    setActiveChildPanel('AI Agent Development');
   };
 
   const handleAIPanelLeave = () => {
     aiPanelTimeoutRef.current = setTimeout(() => {
+      setShowAIPanel(false);
+      setActiveChildPanel(null);
+    }, 100);
+  };
+
+  const handleChildPanelEnter = (label: string) => {
+    if (aiPanelTimeoutRef.current) clearTimeout(aiPanelTimeoutRef.current);
+    setActiveChildPanel(label);
+    setShowAIPanel(true);
+  };
+
+  const handleChildPanelLeave = () => {
+    aiPanelTimeoutRef.current = setTimeout(() => {
+      setActiveChildPanel(null);
       setShowAIPanel(false);
     }, 100);
   };
 
   const toggleMobileSubmenu = (label: string) => {
     setMobileSubmenu(mobileSubmenu === label ? null : label);
-    if (mobileSubmenu !== label) setMobileAISubmenu(false);
+    if (mobileSubmenu !== label) {
+      setMobileAISubmenu(false);
+      setMobileEcomSubmenu(false);
+    }
   };
 
   const renderLink = (href: string, isRoute: boolean | undefined, children: React.ReactNode, className: string, onClick?: () => void) => {
@@ -221,19 +250,19 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '',
                     {item.submenu?.map((sub) => (
                       <div
                         key={sub.label}
-                        onMouseEnter={() => sub.children && handleAIPanelEnter()}
-                        onMouseLeave={() => sub.children && handleAIPanelLeave()}
+                        onMouseEnter={() => sub.children && handleChildPanelEnter(sub.label)}
+                        onMouseLeave={() => sub.children && handleChildPanelLeave()}
                       >
                         <Link
                           href={sub.href}
                           className={`flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-150 group/item ${
-                            sub.children && showAIPanel
+                            sub.children && activeChildPanel === sub.label
                               ? 'bg-blue-50'
                               : 'hover:bg-gray-50'
                           }`}
                         >
                           <div className={`p-2 rounded-lg shrink-0 transition-colors duration-150 ${
-                            sub.children && showAIPanel
+                            sub.children && activeChildPanel === sub.label
                               ? 'bg-jet-blue text-white'
                               : 'bg-blue-50 text-jet-blue group-hover/item:bg-jet-blue group-hover/item:text-white'
                           }`}>
@@ -244,22 +273,22 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '',
                             <div className="text-[11px] text-gray-400 mt-0.5 leading-tight">{sub.desc}</div>
                           </div>
                           {sub.children && (
-                            <ChevronRight size={14} className={`shrink-0 transition-colors ${showAIPanel ? 'text-jet-blue' : 'text-gray-300'}`} />
+                            <ChevronRight size={14} className={`shrink-0 transition-colors ${activeChildPanel === sub.label ? 'text-jet-blue' : 'text-gray-300'}`} />
                           )}
                         </Link>
                       </div>
                     ))}
                   </div>
 
-                  {/* AI Mega Menu — separate block on the right, appears on AI Agent hover */}
-                  {showAIPanel && (
+                  {/* Child Services Mega Menu — appears on hover of any service with children */}
+                  {activeChildPanel && item.submenu?.find(s => s.label === activeChildPanel)?.children && (
                     <div
                       className="bg-white backdrop-blur-xl rounded-2xl border border-gray-100 shadow-2xl shadow-black/10 p-2 w-[260px]"
-                      onMouseEnter={handleAIPanelEnter}
-                      onMouseLeave={handleAIPanelLeave}
+                      onMouseEnter={() => handleChildPanelEnter(activeChildPanel)}
+                      onMouseLeave={handleChildPanelLeave}
                     >
-                      <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-400 px-3 pt-1 pb-1.5">AI Services</p>
-                      {AI_SERVICES.map((child) => (
+                      <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-400 px-3 pt-1 pb-1.5">{activeChildPanel === 'AI Agent Development' ? 'AI Services' : `${activeChildPanel} Services`}</p>
+                      {item.submenu?.find(s => s.label === activeChildPanel)?.children?.map((child) => (
                         <Link
                           key={child.label}
                           href={child.href}
@@ -359,38 +388,44 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '',
                       {item.submenu?.map((sub) => (
                         sub.children ? (
                           <div key={sub.label}>
-                            {/* AI Agent Development — expandable */}
+                            {/* Expandable service with children */}
                             <button
-                              onClick={() => setMobileAISubmenu(!mobileAISubmenu)}
+                              onClick={() => {
+                                if (sub.label === 'AI Agent Development') {
+                                  setMobileAISubmenu(!mobileAISubmenu);
+                                } else if (sub.label === 'E-Commerce') {
+                                  setMobileEcomSubmenu(!mobileEcomSubmenu);
+                                }
+                              }}
                               className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all ${
-                                mobileAISubmenu ? 'bg-blue-50 text-jet-blue' : 'hover:bg-white text-jet-slate hover:text-jet-blue'
+                                (sub.label === 'AI Agent Development' ? mobileAISubmenu : mobileEcomSubmenu) ? 'bg-blue-50 text-jet-blue' : 'hover:bg-white text-jet-slate hover:text-jet-blue'
                               }`}
                             >
-                              <div className={`p-1.5 rounded-lg transition-colors ${mobileAISubmenu ? 'bg-jet-blue text-white' : 'bg-blue-50 text-jet-blue'}`}>
+                              <div className={`p-1.5 rounded-lg transition-colors ${(sub.label === 'AI Agent Development' ? mobileAISubmenu : mobileEcomSubmenu) ? 'bg-jet-blue text-white' : 'bg-blue-50 text-jet-blue'}`}>
                                 <sub.icon size={16} />
                               </div>
                               <span className="font-semibold text-sm flex-1 text-left">{sub.label}</span>
-                              <ChevronDown size={14} className={`transition-transform duration-300 ${mobileAISubmenu ? 'rotate-180' : ''}`} />
+                              <ChevronDown size={14} className={`transition-transform duration-300 ${(sub.label === 'AI Agent Development' ? mobileAISubmenu : mobileEcomSubmenu) ? 'rotate-180' : ''}`} />
                             </button>
 
-                            {/* Expanded AI sub-services */}
-                            {mobileAISubmenu && (
+                            {/* Expanded sub-services */}
+                            {(sub.label === 'AI Agent Development' ? mobileAISubmenu : mobileEcomSubmenu) && (
                               <div className="mt-1 mx-2 mb-2 bg-white rounded-xl border border-gray-100 overflow-hidden">
                                 {/* View All link */}
                                 <Link
                                   href={sub.href}
                                   className="flex items-center gap-2.5 px-4 py-2.5 bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-gray-100"
                                   onClick={() => {
-                                    trackNavigation('AI Agent Development', sub.href, 'mobile_menu');
+                                    trackNavigation(sub.label, sub.href, 'mobile_menu');
                                     setIsMobileMenuOpen(false);
                                   }}
                                 >
-                                  <Bot size={14} className="text-jet-blue" />
-                                  <span className="font-semibold text-xs text-jet-blue">View All AI Services</span>
+                                  <sub.icon size={14} className="text-jet-blue" />
+                                  <span className="font-semibold text-xs text-jet-blue">View All {sub.label === 'AI Agent Development' ? 'AI Services' : `${sub.label} Services`}</span>
                                   <ChevronRight size={12} className="text-jet-blue ml-auto" />
                                 </Link>
 
-                                {/* Individual AI services */}
+                                {/* Individual services */}
                                 <div className="p-1.5">
                                   {sub.children.map((child) => (
                                     <Link
