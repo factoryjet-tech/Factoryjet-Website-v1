@@ -54,7 +54,8 @@
       "Bash(find /c/FactoryJet/rishi-branch/Factoryjet-Website-v1/src/pages -type f \\\\\\(-name *.tsx -o -name *.ts \\\\\\))",
       "Bash(find /c/FactoryJet/rishi-branch/Factoryjet-Website-v1/src -type f -path *pages* -name *.ts*)",
       "Bash(find /c/FactoryJet/rishi-branch/Factoryjet-Website-v1/src -path */blog/* -name *.tsx -o -path */blog/* -name *.ts)",
-      "Bash(find /c/FactoryJet/rishi-branch/Factoryjet-Website-v1/src -name ContactFormModal.tsx -o -name Footer*.tsx)"
+      "Bash(find /c/FactoryJet/rishi-branch/Factoryjet-Website-v1/src -name ContactFormModal.tsx -o -name Footer*.tsx)",
+      "Bash(wc -l \"C:\\\\FactoryJet\\\\rishi-branch\\\\Factoryjet-Website-v1\\\\src\\\\lib\\\\legacy-pages\\\\ShopifyDevelopment\\\\components/\"*.tsx)"
     ]
   }
 }
