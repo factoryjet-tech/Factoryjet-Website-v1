@@ -62,3 +62,7 @@ User-agent: img2dataset
 Disallow: /
 
 Sitemap: https://factoryjet.com/sitemap.xml
+Sitemap: https://factoryjet.com/sitemap-pages.xml
+Sitemap: https://factoryjet.com/sitemap-services.xml
+Sitemap: https://factoryjet.com/sitemap-blog.xml
+Sitemap: https://factoryjet.com/sitemap-cases.xml
