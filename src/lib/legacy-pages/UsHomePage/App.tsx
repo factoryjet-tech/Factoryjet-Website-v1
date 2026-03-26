@@ -358,32 +358,32 @@ const TestimonialSection = () => {
   const testimonials: Testimonial[] = [
     {
       quote: "We were embarrassed to send prospects to our old site. FactoryJet built us a site that actually represents our expertise. Our sales team finally has something they're proud to share.",
-      name: "David Chen",
-      title: "CEO, WetStone Labs",
+      name: "Vishal Barot",
+      title: "Co-founder - Impulse Branding Solutions",
       industry: "Enterprise Cybersecurity",
       logoName: "WetStone Labs",
       metrics: "2x Lead Generation",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=200&h=200",
+      image: "",
       icon: <Shield size={16} />
     },
     {
       quote: "They understood our technical product and made it accessible to our healthcare buyers. That's rare. The new design system has completely transformed how we present our solution.",
-      name: "Sarah Jenkins",
-      title: "CTO, CuraShield AI",
+      name: "Vishal Barot",
+      title: "Co-founder - Impulse Branding Solutions",
       industry: "Healthcare Cybersecurity",
       logoName: "CuraShield AI",
       metrics: "40% Faster Sales Cycle",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&w=200&h=200",
+      image: "",
       icon: <Hexagon size={16} />
     },
     {
       quote: "Our new site has been instrumental in our government contracting conversations. It looks like a company that can handle serious projects. The credibility boost was immediate.",
-      name: "Michael Ross",
-      title: "Director of Ops, MINDSOURCE",
+      name: "Vishal Barot",
+      title: "Co-founder - Impulse Branding Solutions",
       industry: "IT Services",
       logoName: "MINDSOURCE",
       metrics: "3 Major Contracts Won",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?fit=crop&w=200&h=200",
+      image: "",
       icon: <Database size={16} />
     }
   ];
@@ -474,29 +474,11 @@ const TestimonialSection = () => {
 
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 border-t border-slate-100 pt-8">
                         <div className="flex items-center gap-4">
-                            <div className="relative group/avatar cursor-pointer">
-                                <img
-                                    src={testimonials[currentIndex].image}
-                                    alt={`${testimonials[currentIndex].name}, ${testimonials[currentIndex].title}`}
-                                    className="w-16 h-16 rounded-full object-cover border-2 border-white shadow-md"
-                                    width={64}
-                                    height={64}
-                                    loading="lazy"
-                                />
-                                <div className="absolute inset-0 bg-black/20 rounded-full flex items-center justify-center opacity-0 group-hover/avatar:opacity-100 transition-opacity">
-                                    <Play size={24} className="text-white fill-current" />
-                                </div>
-                            </div>
                             <div>
                                 <h4 className="font-space font-bold text-[#0F172A] text-lg">{testimonials[currentIndex].name}</h4>
                                 <div className="flex items-center gap-2 text-sm text-[#64748B]">
                                     <span>{testimonials[currentIndex].title}</span>
-                                    <span className="w-1 h-1 bg-slate-300 rounded-full"></span>
-                                    <span className="flex items-center gap-1 font-medium text-slate-500">
-                                        {testimonials[currentIndex].icon} {testimonials[currentIndex].logoName}
-                                    </span>
                                 </div>
-                                <div className="text-xs text-[#0052CC] font-medium mt-1 cursor-pointer hover:underline">Watch Video Story (2:15)</div>
                             </div>
                         </div>
 
