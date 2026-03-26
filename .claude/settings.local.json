@@ -57,7 +57,25 @@
       "Bash(find /c/FactoryJet/rishi-branch/Factoryjet-Website-v1/src -name ContactFormModal.tsx -o -name Footer*.tsx)",
       "Bash(wc -l \"C:\\\\FactoryJet\\\\rishi-branch\\\\Factoryjet-Website-v1\\\\src\\\\lib\\\\legacy-pages\\\\ShopifyDevelopment\\\\components/\"*.tsx)",
       "Bash(xargs ls:*)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(find /c/FactoryJet/rishi-branch/Factoryjet-Website-v1 -type f -path *pages/Case*)",
+      "WebFetch(domain:impulsebranding.in)",
+      "WebFetch(domain:formativeconcepts.com)",
+      "WebFetch(domain:bellemaison.in)",
+      "WebFetch(domain:bombaypetals.in)",
+      "WebFetch(domain:grofreshagro.com)",
+      "WebFetch(domain:shevvaacardriverservices.com)",
+      "WebFetch(domain:www.flyingpixel.in)",
+      "WebFetch(domain:www.rukmantransport.com)",
+      "WebFetch(domain:gpsuk.co)",
+      "WebFetch(domain:www.wetstonelabs.com)",
+      "WebFetch(domain:curashield-design-system.pages.dev)",
+      "WebFetch(domain:mindsource.com)",
+      "WebFetch(domain:stegohuntapp.pages.dev)",
+      "WebFetch(domain:vidamltest.pages.dev)",
+      "WebFetch(domain:kdassociates-sample.pages.dev)",
+      "Bash(ls -la C:/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/portfolio/*.png C:/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/portfolio/*.svg)",
+      "Read(//c/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/portfolio/**)"
     ]
   }
 }
