@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"$SRC/image8.png\" \"public/webflow-vs-wordpress-comparison.png\")",
+      "Bash(ls \"c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/webflow-\"*)"
+    ]
+  }
+}

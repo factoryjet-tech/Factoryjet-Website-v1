@@ -23,7 +23,7 @@ export const AUTHORS: Record<string, AuthorProfile> = {
   bio: 'Bhavesh Barot is a global enterprise sales leader and revenue strategist with 18+ years of experience building scalable revenue engines and high-performance sales teams across SaaS, AI, and B2B commerce platforms. He is the Founder of FactoryJet, a B2B marketplace connecting building material manufacturers directly with retailers across India. Bhavesh has successfully closed enterprise deals with more than 20 Fortune 500 companies including Nestlé, Cargill, Swiss Re, Munich Re, Fairfax Insurance, HDFC ERGO, and ICICI Lombard. Throughout his career, he has built multiple go-to-market (GTM) organizations from scratch, expanded businesses across North America, LATAM, EMEA, APAC, and India, and consistently exceeded sales targets by 120–150%. At FactoryJet, he has onboarded over 5,000 retailers and partnered with 300+ leading brands such as Philips, Havells, Crompton, Legrand, and Grohe. Bhavesh combines strategic GTM planning with hands-on enterprise sales execution, helping startups and growth-stage companies scale revenue, build strong sales cultures, and expand globally.',
   shortBio: 'Enterprise sales leader and Founder of FactoryJet with 18+ years of experience scaling SaaS and B2B marketplaces globally.',
   yearsExperience: '18+',
-  image: `https://media.licdn.com/dms/image/v2/D5603AQHhq-6TRi6xqw/profile-displayphoto-scale_200_200/B56ZnTEEVkG0AY-/0/1760182683518?e=1774483200&v=beta&t=QVE_sUrdVQLWpu0uHS6iys3wi0sCAcHfbAeZfzpCGQI`,
+  image: '/bhavesh_image.jpg',
   linkedin: 'https://www.linkedin.com/in/barotbhavesh/',
   credentials: [
     '18+ years in enterprise sales and revenue leadership',

@@ -75,7 +75,25 @@
       "WebFetch(domain:vidamltest.pages.dev)",
       "WebFetch(domain:kdassociates-sample.pages.dev)",
       "Bash(ls -la C:/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/portfolio/*.png C:/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/portfolio/*.svg)",
-      "Read(//c/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/portfolio/**)"
+      "Read(//c/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/portfolio/**)",
+      "Bash(find c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/src -name *blog* -o -name *[slug]*)",
+      "Bash(find c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/src -type f -path *pages*Blog*)",
+      "Bash(python -c \":*)",
+      "Bash(cp \"src/lib/legacy-pages/Blog/What is Webflow_ The Ultimate Guide + Comparisons - Blog/images/image1.png\" \"public/what-is-webflow-guide-2026.png\")",
+      "Bash(cp \"src/lib/legacy-pages/Blog/What is Webflow_ The Ultimate Guide + Comparisons - Blog/images/image2.png\" \"public/webflow-no-code-website-builder.png\")",
+      "Bash(cp \"src/lib/legacy-pages/Blog/What is Webflow_ The Ultimate Guide + Comparisons - Blog/images/image3.png\" \"public/webflow-features-dashboard.png\")",
+      "Bash(cp \"src/lib/legacy-pages/Blog/What is Webflow_ The Ultimate Guide + Comparisons - Blog/images/image4.png\" \"public/webflow-development-process.png\")",
+      "Bash(cp \"src/lib/legacy-pages/Blog/What is Webflow_ The Ultimate Guide + Comparisons - Blog/images/image5.png\" \"public/webflow-vs-wordpress-comparison.png\")",
+      "Bash(SRC=\"src/lib/legacy-pages/Blog/What is Webflow_ The Ultimate Guide + Comparisons - Blog/images\")",
+      "Bash(cp \"$SRC/image1.png\" \"public/what-is-webflow-guide-2026.png\")",
+      "Bash(cp \"$SRC/image6.png\" \"public/webflow-no-code-website-builder.png\")",
+      "Bash(cp \"$SRC/image3.png\" \"public/webflow-features-dashboard.png\")",
+      "Bash(cp \"$SRC/image2.png\" \"public/webflow-development-process.png\")",
+      "Bash(cp \"$SRC/image7.png\" \"public/webflow-vs-wordpress-comparison.png\")",
+      "Bash(cp \"$SRC/image8.png\" \"public/webflow-vs-framer-comparison.png\")",
+      "Bash(cp \"$SRC/image7.png\" \"public/webflow-vs-wix-infographic.png\")",
+      "Bash(cp \"$SRC/image4.png\" \"public/webflow-development-services-team-working.png\")",
+      "Bash(cp \"$SRC/image5.png\" \"public/webflow-pros-cons-infographic.png\")"
     ]
   }
 }
