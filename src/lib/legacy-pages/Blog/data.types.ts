@@ -19,6 +19,7 @@ export interface BlogPost {
   content?: React.ReactNode;
   keyTakeaways?: string[];
   faqs?: FAQItem[];
+  hideExcerptOnPage?: boolean;
   meta?: {
     title: string;
     description: string;

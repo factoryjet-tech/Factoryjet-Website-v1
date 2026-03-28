@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `https://factoryjet.com/blog/${resolvedParams.slug}`,
       images: [
         {
-          url: post.imageUrl || 'https://factoryjet.com/logo.png',
+          url: post.imageUrl?.startsWith('http') ? post.imageUrl : `https://factoryjet.com${post.imageUrl || '/logo.png'}`,
           width: 1200,
           height: 630,
           alt: post.title,
@@ -63,7 +63,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title: post.meta?.title || post.title,
       description: post.meta?.description || post.excerpt,
-      images: [post.imageUrl || 'https://factoryjet.com/logo.png'],
+      images: [post.imageUrl?.startsWith('http') ? post.imageUrl : `https://factoryjet.com${post.imageUrl || '/logo.png'}`],
     },
     alternates: {
       canonical: `https://factoryjet.com/blog/${resolvedParams.slug}`,
@@ -100,7 +100,7 @@ function generateArticleJsonLd(post: typeof POSTS[0], slug: string) {
     '@type': 'Article',
     headline: post.title,
     description: post.excerpt,
-    image: post.imageUrl || 'https://factoryjet.com/logo.png',
+    image: post.imageUrl?.startsWith('http') ? post.imageUrl : `https://factoryjet.com${post.imageUrl || '/logo.png'}`,
     datePublished: new Date(post.date).toISOString(),
     dateModified: new Date(post.date).toISOString(),
     author: authorSchema,

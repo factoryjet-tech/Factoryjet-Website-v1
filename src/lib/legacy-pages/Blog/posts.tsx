@@ -3798,14 +3798,15 @@ export const POSTS: BlogPost[] = [
   slug: 'what-is-webflow',
   title: "What is Webflow? A Complete Guide with Features and Comparison",
   excerpt: "Compare Webflow with WordPress, Wix & Framer. Learn Webflow features, pricing, pros, and when to use it in this complete 2026 guide.",
+  hideExcerptOnPage: true,
   category: 'Web Design & Strategy',
   author: 'Bhavesh Barot',
   date: 'Mar 28, 2026',
   readTime: '14 min read',
-  imageUrl: '/what-is-webflow-guide-2026.png',
+  imageUrl: '/what-is-webflow-guide-2026.webp',
   isFeatured: true,
   meta: {
-    title: "What is Webflow? Full Guide with Features, Pricing & Comparison (2026)",
+    title: "What is Webflow? Features, Pricing & Comparison (2026)",
     description: "Compare Webflow with WordPress, Wix & Framer. Learn Webflow features, pricing, pros, and when to use it in this complete 2026 guide."
   },
   keyTakeaways: [
@@ -3830,20 +3831,20 @@ export const POSTS: BlogPost[] = [
       <div className="bg-gray-50 p-6 rounded-lg mb-8 border">
         <h3 className="text-lg font-bold mb-3">Table of Contents</h3>
         <ul className="list-disc pl-5 space-y-1 text-blue-700">
-          <li>What is Webflow?</li>
-          <li>Key Features of Webflow</li>
-          <li>Webflow Development Explained</li>
-          <li>Webflow vs WordPress</li>
-          <li>Webflow vs Framer</li>
-          <li>Webflow vs Wix</li>
-          <li>Can You Use Webflow and WordPress Together?</li>
-          <li>Webflow Development Services</li>
-          <li>Webflow Pricing</li>
-          <li>Real-World Case Study</li>
-          <li>Common Mistakes to Avoid</li>
-          <li>Pros and Cons</li>
-          <li>Final Verdict</li>
-          <li>FAQ</li>
+          <li><a href="#what-is-webflow" className="hover:underline">What is Webflow?</a></li>
+          <li><a href="#key-features" className="hover:underline">Key Features of Webflow</a></li>
+          <li><a href="#webflow-development" className="hover:underline">Webflow Development Explained</a></li>
+          <li><a href="#webflow-vs-wordpress" className="hover:underline">Webflow vs WordPress</a></li>
+          <li><a href="#webflow-vs-framer" className="hover:underline">Webflow vs Framer</a></li>
+          <li><a href="#webflow-vs-wix" className="hover:underline">Webflow vs Wix</a></li>
+          <li><a href="#webflow-wordpress-together" className="hover:underline">Can You Use Webflow and WordPress Together?</a></li>
+          <li><a href="#webflow-development-services" className="hover:underline">Webflow Development Services</a></li>
+          <li><a href="#webflow-pricing" className="hover:underline">Webflow Pricing</a></li>
+          <li><a href="#webflow-case-study" className="hover:underline">Real-World Case Study</a></li>
+          <li><a href="#webflow-mistakes" className="hover:underline">Common Mistakes to Avoid</a></li>
+          <li><a href="#webflow-pros-cons" className="hover:underline">Pros and Cons</a></li>
+          <li><a href="#webflow-verdict" className="hover:underline">Final Verdict</a></li>
+          <li><a href="#faqs" className="hover:underline">FAQ</a></li>
         </ul>
       </div>
 
@@ -3857,16 +3858,16 @@ export const POSTS: BlogPost[] = [
         In this guide, we'll break down how Webflow works, its features, pricing, and how it compares to platforms like WordPress, Wix, and Framer — so you can decide if it's the right choice for your website.
       </p>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">What is Webflow?</h2>
+      <h2 id="what-is-webflow" className="text-2xl font-bold mt-8 mb-4">What is Webflow?</h2>
       <p className="mb-4">
         <a href="https://webflow.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 transition-colors">Webflow</a> is a visual, no-code website builder that lets you design, build, and host professional websites without writing code. It combines the design freedom of a code editor with the simplicity of a drag-and-drop interface — all in one browser-based platform. Think of Webflow as the middle ground between Wix (super simple) and hand-coding a site (super complex). It gives designers real creative control — flexbox, grid, animations, custom CMS — without needing a developer for every small change.
       </p>
       <p className="mb-6">
         Founded in 2013, Webflow has grown into one of the most powerful no-code website builders on the market. As of 2026, it powers over 3.5 million websites worldwide.
       </p>
-      <img src="/webflow-no-code-website-builder.png" alt="Webflow no-code website builder interface" className="rounded-xl w-full mb-6" />
+      <img src="/webflow-no-code-website-builder.webp" alt="Webflow no-code website builder interface" className="rounded-xl w-full mb-6" />
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">Key Features of Webflow</h2>
+      <h2 id="key-features" className="text-2xl font-bold mt-8 mb-4">Key Features of Webflow</h2>
       <p className="mb-4">
         Webflow offers a visual design editor, built-in CMS, hosting, e-commerce tools, animations, SEO controls, and a logic builder — all without needing separate plugins or third-party hosting.
       </p>
@@ -3880,9 +3881,9 @@ export const POSTS: BlogPost[] = [
         <li><strong>Webflow Logic</strong> — Automate workflows without code (think Zapier-lite built right in).</li>
         <li><strong>Responsive Design</strong> — Control layout at every breakpoint: desktop, tablet, and mobile.</li>
       </ul>
-      <img src="/webflow-features-dashboard.png" alt="Webflow features dashboard CMS tools" className="rounded-xl w-full mb-6" />
+      <img src="/webflow-features-dashboard.webp" alt="Webflow features dashboard CMS tools" className="rounded-xl w-full mb-6" />
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">Webflow Development Explained</h2>
+      <h2 id="webflow-development" className="text-2xl font-bold mt-8 mb-4">Webflow Development Explained</h2>
       <p className="mb-4">
         Webflow development means building websites using Webflow's visual tools. It covers everything from simple landing pages to complex CMS-driven sites — without manually writing HTML, CSS, or JavaScript.
       </p>
@@ -3897,9 +3898,9 @@ export const POSTS: BlogPost[] = [
       <p className="mb-6">
         Use cases include agency websites, SaaS landing pages, portfolios, blogs, startup sites, and e-commerce stores.
       </p>
-      <img src="/webflow-development-process.png" alt="Webflow development process from wireframe to website" className="rounded-xl w-full mb-6" />
+      <img src="/webflow-development-process.webp" alt="Webflow development process from wireframe to website" className="rounded-xl w-full mb-6" />
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">Webflow vs WordPress</h2>
+      <h2 id="webflow-vs-wordpress" className="text-2xl font-bold mt-8 mb-4">Webflow vs WordPress</h2>
       <p className="mb-4">
         Webflow gives designers more visual control and cleaner code. WordPress has a larger plugin ecosystem and a lower starting cost. For design-heavy sites, Webflow usually wins. For content-heavy or complex functionality, WordPress still has an edge.
       </p>
@@ -3945,9 +3946,9 @@ export const POSTS: BlogPost[] = [
         </div>
       </div>
 
-      <img src="/webflow-vs-wordpress-comparison.png" alt="Webflow vs WordPress comparison 2026" className="rounded-xl w-full mb-6" />
+      <img src="/webflow-vs-wordpress-comparison.webp" alt="Webflow vs WordPress comparison 2026" className="rounded-xl w-full mb-6" />
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">Webflow vs Framer</h2>
+      <h2 id="webflow-vs-framer" className="text-2xl font-bold mt-8 mb-4">Webflow vs Framer</h2>
       <p className="mb-4">
         <a href="https://www.framer.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 transition-colors">Framer</a> is the new kid — and it's impressive. But how does it compare to the established Webflow?
       </p>
@@ -3975,7 +3976,7 @@ export const POSTS: BlogPost[] = [
         <strong>Bottom line:</strong> Choose Webflow for larger, content-driven sites. Choose Framer if you want React power and you're building simpler showcases or design portfolios. Also see our <a href="/blog/react-vs-wordpress" className="text-blue-600 underline hover:text-blue-800 transition-colors">React vs WordPress comparison</a>.
       </p>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">Webflow vs Wix</h2>
+      <h2 id="webflow-vs-wix" className="text-2xl font-bold mt-8 mb-4">Webflow vs Wix</h2>
       <p className="mb-4">
         Wix is easy. Webflow is powerful. That's the simple version — but let's go deeper.
       </p>
@@ -4003,9 +4004,9 @@ export const POSTS: BlogPost[] = [
         <strong>Who should use Wix?</strong> Beginners who just need a simple business website fast.<br />
         <strong>Who should use Webflow?</strong> Designers, agencies, and anyone who needs a professional, scalable site.
       </p>
-      <img src="/webflow-vs-wix-infographic.png" alt="Webflow vs Wix website builder comparison" className="rounded-xl w-full mb-6" />
+      <img src="/webflow-vs-wix-infographic.webp" alt="Webflow vs Wix website builder comparison" className="rounded-xl w-full mb-6" />
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">Can You Use Webflow and WordPress Together?</h2>
+      <h2 id="webflow-wordpress-together" className="text-2xl font-bold mt-8 mb-4">Can You Use Webflow and WordPress Together?</h2>
       <p className="mb-4">
         Yes. Some teams use Webflow for their front-end design and a headless WordPress CMS on the backend to manage content. This setup is called "headless CMS" architecture — it's powerful but requires developer expertise.
       </p>
@@ -4016,7 +4017,7 @@ export const POSTS: BlogPost[] = [
         This setup is great for enterprises that already have WordPress content at scale but want a faster, more design-forward frontend. For most small businesses, though, Webflow's native CMS is more than enough.
       </p>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">Webflow Development Services</h2>
+      <h2 id="webflow-development-services" className="text-2xl font-bold mt-8 mb-4">Webflow Development Services</h2>
       <p className="mb-4">
         Webflow development services are offered by agencies and freelancers who specialize in building websites on Webflow. They handle design, development, CMS setup, SEO, and ongoing maintenance.
       </p>
@@ -4041,9 +4042,9 @@ export const POSTS: BlogPost[] = [
         <p className="text-sm text-blue-700 mt-3">We help businesses build fast, SEO-friendly Webflow websites focused on real results — not just design.</p>
       </div>
 
-      <img src="/webflow-development-services-team-working.png" alt="Webflow development services team working" className="rounded-xl w-full mb-6" />
+      <img src="/webflow-development-services-team-working.webp" alt="Webflow development services team working" className="rounded-xl w-full mb-6" />
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">Webflow Pricing vs Hiring a Webflow Expert (2026)</h2>
+      <h2 id="webflow-pricing" className="text-2xl font-bold mt-8 mb-4">Webflow Pricing vs Hiring a Webflow Expert (2026)</h2>
       <p className="mb-4">
         Webflow plans start from around $14/month, but building a high-performing website still requires design, SEO, and development expertise.
       </p>
@@ -4065,7 +4066,7 @@ export const POSTS: BlogPost[] = [
         In short, Webflow pricing is affordable, but the real investment is in building a site that actually performs.
       </p>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">Real-World Example: SaaS Company Switches to Webflow</h2>
+      <h2 id="webflow-case-study" className="text-2xl font-bold mt-8 mb-4">Real-World Example: SaaS Company Switches to Webflow</h2>
       <p className="mb-4">
         A mid-size SaaS company was running its marketing site on WordPress with a premium theme. It took their team 3+ days to make design changes, and pages loaded in over 4 seconds.
       </p>
@@ -4080,7 +4081,7 @@ export const POSTS: BlogPost[] = [
         This is a common pattern. When teams move from bloated WordPress installs to clean Webflow builds, the performance and workflow improvements are immediate.
       </p>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">Common Mistakes to Avoid in Webflow</h2>
+      <h2 id="webflow-mistakes" className="text-2xl font-bold mt-8 mb-4">Common Mistakes to Avoid in Webflow</h2>
       <ul className="list-disc pl-6 space-y-3 mb-6">
         <li><strong>Skipping mobile design</strong> — Always design for mobile breakpoints from the start, not as an afterthought.</li>
         <li><strong>Ignoring CMS structure</strong> — Plan your content collections carefully before building. Restructuring later is painful.</li>
@@ -4090,7 +4091,7 @@ export const POSTS: BlogPost[] = [
         <li><strong>Publishing without SEO setup</strong> — Fill in meta titles, descriptions, and custom slugs before going live.</li>
       </ul>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">Pros and Cons of Webflow</h2>
+      <h2 id="webflow-pros-cons" className="text-2xl font-bold mt-8 mb-4">Pros and Cons of Webflow</h2>
       <img src="/webflow-pros-cons-infographic.png" alt="Webflow pros and cons comparison infographic" className="rounded-xl w-full mb-6" />
       <div className="grid md:grid-cols-2 gap-4 mb-8">
         <div className="bg-green-50 p-5 rounded-lg border border-green-200">
@@ -4117,7 +4118,7 @@ export const POSTS: BlogPost[] = [
         </div>
       </div>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">Final Verdict – Is Webflow Right for You?</h2>
+      <h2 id="webflow-verdict" className="text-2xl font-bold mt-8 mb-4">Final Verdict – Is Webflow Right for You?</h2>
       <div className="grid md:grid-cols-2 gap-4 mb-8">
         <div className="bg-blue-50 p-5 rounded-lg border border-blue-200">
           <h4 className="font-bold text-blue-800 mb-3">Use Webflow if you:</h4>

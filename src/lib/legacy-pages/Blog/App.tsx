@@ -9,10 +9,14 @@ const App: React.FC = () => {
   const router = useRouter();
   const [activeCategory, setActiveCategory] = useState<Category>('All');
 
+  const sortedPosts = useMemo(() => {
+    return [...POSTS].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  }, []);
+
   const filteredPosts = useMemo(() => {
-    if (activeCategory === 'All') return POSTS;
-    return POSTS.filter(post => post.category === activeCategory);
-  }, [activeCategory]);
+    if (activeCategory === 'All') return sortedPosts;
+    return sortedPosts.filter(post => post.category === activeCategory);
+  }, [activeCategory, sortedPosts]);
 
   const handlePostClick = (post: BlogPost) => {
     router.push(`/blog/${post.slug}`);

@@ -11,7 +11,20 @@
       "Bash(cp \"homepage-images/HomePage Images/product page layout for a Shopify ecommerce store.webp\" \"hero-trending-shoe-red.webp\")",
       "Bash(cp \"homepage-images/HomePage Images/design for a luxury footwear.webp\" \"hero-trending-shoe-brown.webp\")",
       "Bash(cp \"homepage-images/HomePage Images/factoryjet case study impulse branding.webp\" \"case-impulse-branding.webp\")",
-      "Bash(cp \"homepage-images/HomePage Images/factoryjet case study on formative concepts.webp\" \"case-formative-concepts.webp\")"
+      "Bash(cp \"homepage-images/HomePage Images/factoryjet case study on formative concepts.webp\" \"case-formative-concepts.webp\")",
+      "Read(//c/FactoryJet/rishi-branch/Factoryjet-Website-v1/**)",
+      "Bash(ls \"c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/src/lib/legacy-pages/Blog/What is Webflow\"*/*.zip)",
+      "Bash(ls \"c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/\"*blog*.zip)",
+      "Bash(ls \"c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/\"*.zip)",
+      "Bash(unzip -l \"src/lib/legacy-pages/Blog/What is Webflow_ The Ultimate Guide + Comparisons - Blog/Blog Images.zip\")",
+      "Bash(unzip -o \"src/lib/legacy-pages/Blog/What is Webflow_ The Ultimate Guide + Comparisons - Blog/Blog Images.zip\" -d \"_blog_images_temp\")",
+      "Bash(ls -la \"c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/\"*webflow*)",
+      "Bash(cp \"_blog_images_temp/what is webflow guide 2026.webp\" \"public/what-is-webflow-guide-2026.webp\")",
+      "Bash(cp \"_blog_images_temp/webflow no code website builder.webp\" \"public/webflow-no-code-website-builder.webp\")",
+      "Bash(cp \"_blog_images_temp/webflow features dashboard.webp\" \"public/webflow-features-dashboard.webp\")",
+      "Bash(cp \"_blog_images_temp/webflow development process.webp\" \"public/webflow-development-process.webp\")",
+      "Bash(cp \"_blog_images_temp/webflow vs wordpress comparison.webp\" \"public/webflow-vs-wordpress-comparison.webp\")",
+      "Bash(ls -la \"c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/webflow-pros-cons-infographic\"*)"
     ]
   }
 }

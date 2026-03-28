@@ -219,9 +219,11 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
             <div className="bg-white rounded-xl md:rounded-2xl p-5 md:p-8 lg:p-12 shadow-sm border border-gray-100">
 
               {/* Introduction/Excerpt */}
-              <p className="text-base md:text-xl lg:text-2xl text-gray-600 leading-relaxed mb-8 md:mb-10 font-serif italic border-l-4 border-jetOrange pl-4 md:pl-6 py-2 bg-gray-50/50 rounded-r-lg">
-                "{post.excerpt}"
-              </p>
+              {!post.hideExcerptOnPage && (
+                <p className="text-base md:text-xl lg:text-2xl text-gray-600 leading-relaxed mb-8 md:mb-10 font-serif italic border-l-4 border-jetOrange pl-4 md:pl-6 py-2 bg-gray-50/50 rounded-r-lg">
+                  "{post.excerpt}"
+                </p>
+              )}
 
               {/* AEO: Key Takeaways Module */}
               {post.keyTakeaways && (
