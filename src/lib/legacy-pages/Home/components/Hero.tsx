@@ -200,8 +200,7 @@ const Hero: React.FC = () => {
                   {/* Sidebar / Hero Banner */}
                   <div className="relative w-2/3 h-full group">
                     <img
-                      src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=500&q=70&fm=webp"
-                      srcSet="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=300&q=70&fm=webp 300w, https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=500&q=70&fm=webp 500w, https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=70&fm=webp 800w"
+                      src="/hero-ecommerce-store.webp"
                       sizes="(max-width: 768px) 66vw, 33vw"
                       alt="Fashion Website Hero"
                       width={320}
@@ -238,11 +237,11 @@ const Hero: React.FC = () => {
                       {[
                         {
                           price: "₹2.4k",
-                          img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=64&q=60&fm=webp",
+                          img: "/hero-trending-shoe-red.webp",
                         },
                         {
                           price: "₹5.9k",
-                          img: "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=64&q=60&fm=webp",
+                          img: "/hero-trending-shoe-brown.webp",
                         },
                       ].map((item, i) => (
                         <div

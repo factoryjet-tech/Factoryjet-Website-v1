@@ -2,7 +2,16 @@
   "permissions": {
     "allow": [
       "Bash(cp \"$SRC/image8.png\" \"public/webflow-vs-wordpress-comparison.png\")",
-      "Bash(ls \"c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/webflow-\"*)"
+      "Bash(ls \"c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/webflow-\"*)",
+      "Bash(ls \"c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/\"*.zip)",
+      "Bash(unzip -o \"HomePage Images-20260328T135151Z-1-001.zip\" -d homepage-images)",
+      "Bash(unzip -o \"Web design Page Images-20260328T135151Z-1-001.zip\" -d webdesign-images)",
+      "Bash(find /c/FactoryJet/rishi-branch/Factoryjet-Website-v1/src -name *.tsx -path */pages/*)",
+      "Bash(cp \"homepage-images/HomePage Images/e-commerce website design for a retail clothing brand.webp\" \"hero-ecommerce-store.webp\")",
+      "Bash(cp \"homepage-images/HomePage Images/product page layout for a Shopify ecommerce store.webp\" \"hero-trending-shoe-red.webp\")",
+      "Bash(cp \"homepage-images/HomePage Images/design for a luxury footwear.webp\" \"hero-trending-shoe-brown.webp\")",
+      "Bash(cp \"homepage-images/HomePage Images/factoryjet case study impulse branding.webp\" \"case-impulse-branding.webp\")",
+      "Bash(cp \"homepage-images/HomePage Images/factoryjet case study on formative concepts.webp\" \"case-formative-concepts.webp\")"
     ]
   }
 }
