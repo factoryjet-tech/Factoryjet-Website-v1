@@ -3809,13 +3809,6 @@ export const POSTS: BlogPost[] = [
     title: "What is Webflow? Features, Pricing & Comparison (2026)",
     description: "Compare Webflow with WordPress, Wix & Framer. Learn Webflow features, pricing, pros, and when to use it in this complete 2026 guide."
   },
-  keyTakeaways: [
-    "Webflow is a visual, no-code website builder that combines design freedom with CMS, hosting, and SEO tools in one platform.",
-    "Webflow is best for design-heavy marketing sites, portfolios, SaaS landing pages, and agency websites.",
-    "WordPress has a larger plugin ecosystem and lower starting cost, but Webflow produces cleaner code and faster performance.",
-    "Framer is great for simple portfolios and React-powered pages, but Webflow wins for larger CMS-driven sites.",
-    "Webflow pricing starts at $14/month, but professional results often require expert development services."
-  ],
   faqs: [
     { q: "What is Webflow used for?", a: "Webflow is used to design, build, and host websites without writing code. Common use cases include marketing sites, portfolios, blogs, SaaS landing pages, and e-commerce stores." },
     { q: "Is Webflow better than WordPress?", a: "It depends on your needs. Webflow is better for design-heavy sites with fast performance. WordPress is better when you need a huge plugin ecosystem or are managing a very large content library." },
@@ -4092,7 +4085,6 @@ export const POSTS: BlogPost[] = [
       </ul>
 
       <h2 id="webflow-pros-cons" className="text-2xl font-bold mt-8 mb-4">Pros and Cons of Webflow</h2>
-      <img src="/webflow-pros-cons-infographic.png" alt="Webflow pros and cons comparison infographic" className="rounded-xl w-full mb-6" />
       <div className="grid md:grid-cols-2 gap-4 mb-8">
         <div className="bg-green-50 p-5 rounded-lg border border-green-200">
           <h4 className="font-bold text-green-800 mb-2">✓ Pros</h4>

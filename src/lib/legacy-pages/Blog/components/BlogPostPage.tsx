@@ -18,7 +18,6 @@ import {
   Lightbulb,
   ChevronDown,
   ChevronUp,
-  List,
   ArrowUpRight,
   Award,
 } from 'lucide-react';
@@ -95,6 +94,15 @@ const FAQAccordion = ({ faqs }: { faqs: FAQItem[] }) => {
 
 export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
   const [imageError, setImageError] = useState(false);
+
+  const handleShare = async () => {
+    const url = `https://factoryjet.com/blog/${post.slug}`;
+    if (navigator.share) {
+      await navigator.share({ title: post.title, url });
+    } else {
+      await navigator.clipboard.writeText(url);
+    }
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -321,55 +329,14 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
                     Don't just read about growth. Get a high-performance, lead-generating website in just 7 days.
                   </p>
 
-                  <button className="w-full bg-[#0052CC] hover:bg-blue-700 text-white font-semibold py-3 md:py-3.5 rounded-lg md:rounded-xl transition-all duration-300 shadow-lg shadow-blue-900/20 flex items-center justify-center gap-2 group/btn text-sm md:text-base">
+                  <Link href="/contact" className="w-full bg-[#0052CC] hover:bg-blue-700 text-white font-semibold py-3 md:py-3.5 rounded-lg md:rounded-xl transition-all duration-300 shadow-lg shadow-blue-900/20 flex items-center justify-center gap-2 group/btn text-sm md:text-base">
                     Book Free Consultation
                     <ArrowLeft className="w-3.5 h-3.5 md:w-4 md:h-4 rotate-180 group-hover/btn:translate-x-1 transition-transform" />
-                  </button>
+                  </Link>
                   <p className="text-center text-xs text-gray-400 mt-3">No commitment required. Limited slots.</p>
                 </div>
               </div>
 
-              {/* 2. Table of Contents (Moved from Left) */}
-              <div className="bg-white border border-gray-100 rounded-xl md:rounded-2xl p-5 md:p-6 shadow-sm">
-                <div className="flex items-center gap-2 mb-3 md:mb-4 pb-3 md:pb-4 border-b border-gray-100">
-                  <List className="w-3.5 h-3.5 md:w-4 md:h-4 text-gray-400" />
-                  <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wider">
-                    In This Article
-                  </h3>
-                </div>
-                <nav>
-                  <ul className="space-y-2 md:space-y-3 text-sm">
-                    <li>
-                      <a href="#" className="flex items-center text-jetBlue font-medium group">
-                        <span className="w-1.5 h-1.5 rounded-full bg-jetBlue mr-2 md:mr-3 group-hover:scale-125 transition-transform"></span>
-                        Introduction
-                      </a>
-                    </li>
-                    {post.keyTakeaways && (
-                      <li>
-                        <a href="#takeaways" className="flex items-center text-gray-600 hover:text-jetBlue group transition-colors">
-                          <span className="w-1.5 h-1.5 rounded-full bg-gray-300 mr-2 md:mr-3 group-hover:bg-jetBlue transition-colors"></span>
-                          Key Takeaways
-                        </a>
-                      </li>
-                    )}
-                    <li>
-                      <a href="#content" className="flex items-center text-gray-600 hover:text-jetBlue group transition-colors">
-                        <span className="w-1.5 h-1.5 rounded-full bg-gray-300 mr-2 md:mr-3 group-hover:bg-jetBlue transition-colors"></span>
-                        In-Depth Analysis
-                      </a>
-                    </li>
-                    {post.faqs && (
-                      <li>
-                        <a href="#faqs" className="flex items-center text-gray-600 hover:text-jetBlue group transition-colors">
-                          <span className="w-1.5 h-1.5 rounded-full bg-gray-300 mr-2 md:mr-3 group-hover:bg-jetBlue transition-colors"></span>
-                          Expert FAQs
-                        </a>
-                      </li>
-                    )}
-                  </ul>
-                </nav>
-              </div>
 
             </div>
           </aside>
@@ -383,6 +350,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
             <div className="flex items-center justify-center gap-4 md:gap-6 mb-5 md:mb-6">
                 <button
                   aria-label="Share this article"
+                  onClick={handleShare}
                   className="p-2 md:p-3 bg-gray-50 rounded-full hover:bg-blue-50 hover:text-jetBlue transition-colors cursor-pointer"
                 >
                   <Share2 className="w-4 h-4 md:w-5 md:h-5" aria-hidden="true" />
