@@ -207,13 +207,13 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
         >
           <img
             src={imageUrl}
-            alt={post.title}
+            alt={post.imageAlt || post.title}
             onError={handleImageError}
             width={1200}
             height={514}
             loading="eager"
             decoding="async"
-            className="w-full h-full object-cover"
+            className={`w-full h-full ${post.imageFit === 'contain' ? 'object-contain' : 'object-cover'}`}
           />
         </motion.div>
       </div>

@@ -15,6 +15,8 @@ export interface BlogPost {
   date: string;
   readTime: string;
   imageUrl: string;
+  imageAlt?: string;
+  imageFit?: 'cover' | 'contain';
   isFeatured?: boolean;
   content?: React.ReactNode;
   keyTakeaways?: string[];

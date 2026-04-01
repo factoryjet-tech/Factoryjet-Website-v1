@@ -32,13 +32,13 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post, index, onClick }) => {
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.6 }}
           src={imageUrl}
-          alt={post.title}
+          alt={post.imageAlt || post.title}
           onError={handleImageError}
           width={400}
           height={192}
           loading="lazy"
           decoding="async"
-          className="h-full w-full object-cover transition-transform duration-700"
+          className={`h-full w-full ${post.imageFit === 'contain' ? 'object-contain' : 'object-cover'} transition-transform duration-700`}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 md:hidden" aria-hidden="true" />
       </div>

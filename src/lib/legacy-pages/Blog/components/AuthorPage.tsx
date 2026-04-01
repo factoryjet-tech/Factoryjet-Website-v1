@@ -230,11 +230,11 @@ export const AuthorPage: React.FC<AuthorPageProps> = ({ author, posts }) => {
                 <div className="relative h-40 md:h-48 overflow-hidden flex-shrink-0">
                   <img
                     src={post.imageUrl}
-                    alt={post.title}
+                    alt={post.imageAlt || post.title}
                     width={400}
                     height={192}
                     loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className={`w-full h-full ${post.imageFit === 'contain' ? 'object-contain' : 'object-cover'} group-hover:scale-105 transition-transform duration-500`}
                   />
                   <div className="absolute top-3 left-3">
                     <span className="px-2 py-0.5 rounded-full text-xs font-semibold bg-white/90 text-jetBlue backdrop-blur-sm">

@@ -24,7 +24,13 @@
       "Bash(cp \"_blog_images_temp/webflow features dashboard.webp\" \"public/webflow-features-dashboard.webp\")",
       "Bash(cp \"_blog_images_temp/webflow development process.webp\" \"public/webflow-development-process.webp\")",
       "Bash(cp \"_blog_images_temp/webflow vs wordpress comparison.webp\" \"public/webflow-vs-wordpress-comparison.webp\")",
-      "Bash(ls -la \"c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/webflow-pros-cons-infographic\"*)"
+      "Bash(ls -la \"c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/webflow-pros-cons-infographic\"*)",
+      "Bash(ls c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/*.webp)",
+      "Bash(magick --version)",
+      "Bash(npm list:*)",
+      "Bash(ffmpeg -y -i 'c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/src/lib/legacy-pages/Blog/top 10 web design companey in mumbai/Top 10 Web Design Companies in Mumbai \\(2026 Expert Review\\)/images/image1.png' -quality 80 c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/best-web-design-companies-mumbai-2026.webp)",
+      "Bash(ffmpeg -y -i 'c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/src/lib/legacy-pages/Blog/top 10 web design companey in mumbai/Top 10 Web Design Companies in Mumbai \\(2026 Expert Review\\)/images/image8.png' -quality 50 c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/eskon-ecommerce-store-website.webp)",
+      "Bash(ffmpeg -y -i 'c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/src/lib/legacy-pages/Blog/top 10 web design companey in mumbai/Top 10 Web Design Companies in Mumbai \\(2026 Expert Review\\)/images/image10.jpg' -quality 80 c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/top-web-design-companies-mumbai/best-web-design-companies-mumbai-2026.webp)"
     ]
   }
 }
