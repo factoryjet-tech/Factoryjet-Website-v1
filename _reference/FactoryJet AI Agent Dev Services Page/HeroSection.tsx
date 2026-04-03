@@ -12,7 +12,7 @@ export function HeroSection() {
     // Google Ads conversion tracking
     if (typeof window !== "undefined" && (window as any).gtag) {
       (window as any).gtag("event", "conversion", {
-        send_to: "AW-XXXXXXXXX/XXXXXXXXX", // Replace with your conversion ID
+        send_to: "AW-11127037244/aqsvCJCk8ZQcELy65Lkp",
         event_callback: () => {},
       });
     }

@@ -4,7 +4,7 @@ import { Check, ChevronRight, Send } from 'lucide-react';
 import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/firebase';
 import { ContactFormData, INITIAL_FORM_STATE } from '../data.types';
-import { trackFormStart, trackFormSubmit, trackFormSuccess, trackFormError, trackButtonClick } from '@/utils/gtm';
+import { trackFormStart, trackFormSubmit, trackFormSuccess, trackFormError, trackButtonClick, trackFormSubmission } from '@/utils/gtm';
 
 const SERVICES = [
   "Website Design & Development", "E-Commerce Platform", "Digital Marketing (SEO, Social, Ads)", 
@@ -114,6 +114,7 @@ const ContactForm: React.FC = () => {
 
       // Track successful submission
       trackFormSuccess('contact_page_form');
+      trackFormSubmission();
       setIsSuccess(true);
     } catch (err) {
       console.error('Error submitting contact form:', err);

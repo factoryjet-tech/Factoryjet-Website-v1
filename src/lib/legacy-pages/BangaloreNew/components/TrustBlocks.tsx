@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, Check, Star, MapPin, Phone, MessageCircle, Mail } from 'lucide-react';
+import { trackWhatsAppConversion } from '@/utils/gtm';
 
 export const Testimonials = () => {
     const reviews = [
@@ -191,10 +192,10 @@ export const FinalCTA = () => (
                             </a>
 
                             <div className="flex flex-col sm:flex-row justify-center gap-4">
-                                <a href="tel:+919699977699" className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 py-3 px-6 rounded-lg text-white font-bold transition-colors border border-white/10">
+                                <a href="tel:+919699977699" onClick={trackWhatsAppConversion} className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 py-3 px-6 rounded-lg text-white font-bold transition-colors border border-white/10">
                                     <span>Call Now</span>
                                 </a>
-                                <a href="https://wa.me/919699977699?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20web%20design%20services%20in%20Bangalore" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-green-600 py-3 px-6 rounded-lg text-white font-bold transition-colors shadow-lg">
+                                <a href="https://wa.me/919699977699?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20web%20design%20services%20in%20Bangalore" target="_blank" rel="noopener noreferrer" onClick={trackWhatsAppConversion} className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-green-600 py-3 px-6 rounded-lg text-white font-bold transition-colors shadow-lg">
                                     <span>WhatsApp</span>
                                 </a>
                             </div>

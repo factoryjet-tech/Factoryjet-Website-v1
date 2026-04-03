@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Send, CheckCircle, Loader2 } from 'lucide-react';
-import { trackModalOpen, trackModalClose, trackFormSubmit, trackFormSuccess, trackFormError } from '../utils/gtm';
+import { trackModalOpen, trackModalClose, trackFormSubmit, trackFormSuccess, trackFormError, trackFormSubmission } from '../utils/gtm';
 
 interface PlanSelectionModalProps {
   isOpen: boolean;
@@ -83,6 +83,7 @@ const PlanSelectionModal: React.FC<PlanSelectionModalProps> = ({
       });
 
       trackFormSuccess('plan_selection_form');
+      trackFormSubmission();
       setIsSuccess(true);
     } catch (err) {
       console.error('Error submitting form:', err);

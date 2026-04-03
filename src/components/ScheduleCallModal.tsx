@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Calendar, Clock, CheckCircle, Loader2, ChevronLeft, ChevronRight } from 'lucide-react';
-import { trackModalOpen, trackModalClose, trackFormSubmit, trackFormSuccess, trackFormError } from '../utils/gtm';
+import { trackModalOpen, trackModalClose, trackFormSubmit, trackFormSuccess, trackFormError, trackFormSubmission } from '../utils/gtm';
 
 interface ScheduleCallModalProps {
   isOpen: boolean;
@@ -152,6 +152,7 @@ const ScheduleCallModal: React.FC<ScheduleCallModalProps> = ({
       });
 
       trackFormSuccess('schedule_call_form');
+      trackFormSubmission();
       setIsSuccess(true);
     } catch (err) {
       console.error('Error submitting form:', err);

@@ -1,4 +1,5 @@
 import React from 'react';
+import { trackWhatsAppConversion } from '@/utils/gtm';
 
 const FinalCTA: React.FC = () => (
   <section className="py-16 lg:py-24 bg-cta-gradient text-white text-center relative overflow-hidden">
@@ -20,6 +21,7 @@ const FinalCTA: React.FC = () => (
         </button>
         <a
           href="tel:+919699977699"
+          onClick={trackWhatsAppConversion}
           className="bg-transparent border-2 border-white text-white px-8 lg:px-10 py-4 lg:py-5 rounded-full font-bold text-lg lg:text-xl hover:bg-white/10 transition-all w-full sm:w-auto min-h-[56px] flex items-center justify-center"
         >
           Call Now

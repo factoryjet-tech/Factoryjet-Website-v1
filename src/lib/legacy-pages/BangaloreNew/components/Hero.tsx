@@ -2,6 +2,7 @@ import React, { useState, FormEvent } from 'react';
 import { Check, MapPin, TrendingUp, Users, ShieldCheck, Zap } from 'lucide-react';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/firebase';
+import { trackWhatsAppConversion } from '@/utils/gtm';
 
 export const Hero = () => {
   const [formData, setFormData] = useState({
@@ -90,7 +91,7 @@ export const Hero = () => {
             </h2>
 
             <div className="py-2 md:py-4">
-              <a href="https://wa.me/919699977699?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20web%20design%20services%20in%20Bangalore" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center justify-center gap-2 md:gap-3 bg-[#25D366] hover:bg-[#1ebc57] text-white px-5 py-3 md:px-8 md:py-5 rounded-full font-bold text-base md:text-lg shadow-lg shadow-green-500/30 transform transition-all hover:-translate-y-1 hover:shadow-xl w-full sm:w-auto">
+              <a href="https://wa.me/919699977699?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20web%20design%20services%20in%20Bangalore" target="_blank" rel="noopener noreferrer" onClick={trackWhatsAppConversion} className="group inline-flex items-center justify-center gap-2 md:gap-3 bg-[#25D366] hover:bg-[#1ebc57] text-white px-5 py-3 md:px-8 md:py-5 rounded-full font-bold text-base md:text-lg shadow-lg shadow-green-500/30 transform transition-all hover:-translate-y-1 hover:shadow-xl w-full sm:w-auto">
                 <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" className="md:w-7 md:h-7"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.585 1.961.893 3.156.893 3.179 0 5.767-2.587 5.767-5.766.001-3.187-2.575-5.77-5.767-5.77zm0 10.426c-1.077 0-1.916-.277-2.731-.726l-.196-.108-1.57.411.419-1.531-.126-.2c-.525-.838-.802-1.713-.801-2.909.001-2.569 2.088-4.657 4.656-4.657 2.569 0 4.656 2.087 4.657 4.656.001 2.57-2.087 4.657-4.655 4.657h-.001zm2.535-3.483c-.139-.069-.819-.404-.945-.451-.127-.046-.219-.068-.311.069-.093.138-.358.45-.438.542-.081.092-.162.103-.3.034-.139-.069-.586-.216-1.116-.689-.413-.369-.692-.824-.773-.962-.081-.138-.009-.213.061-.282.063-.062.139-.161.208-.242.07-.08.093-.138.139-.23.046-.092.023-.173-.012-.242-.034-.069-.311-.75-.425-1.027-.111-.269-.224-.233-.307-.237l-.261-.005c-.091 0-.238.034-.362.17-.123.136-.473.461-.473 1.124 0 .664.483 1.306.551 1.397.068.092.951 1.453 2.304 2.038.321.139.572.222.767.284.321.102.613.088.845.053.256-.038.819-.334.935-.657.116-.322.116-.599.081-.657-.035-.057-.127-.091-.266-.16z"/></svg>
                 <span>WhatsApp Us Now: +91 96999 77699</span>
               </a>

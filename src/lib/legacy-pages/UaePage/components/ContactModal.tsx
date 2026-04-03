@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { X, ArrowRight, CheckCircle } from 'lucide-react';
+import { trackFormSubmission } from '@/utils/gtm';
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -56,6 +57,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
       });
 
       setIsSuccess(true);
+      trackFormSubmission();
 
       // Auto-close after 5 seconds
       setTimeout(() => {

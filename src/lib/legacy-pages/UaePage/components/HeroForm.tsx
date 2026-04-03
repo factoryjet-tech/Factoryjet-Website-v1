@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Check, ChevronRight, Lock, Star, Zap } from 'lucide-react';
+import { trackFormSubmission } from '@/utils/gtm';
 
 const services = [
   "Website Design & Dev",
@@ -70,6 +71,7 @@ const HeroForm: React.FC = () => {
       });
 
       setIsSuccess(true);
+      trackFormSubmission();
     } catch (err) {
       console.error('Error submitting form:', err);
       setError('Something went wrong. Please try again.');

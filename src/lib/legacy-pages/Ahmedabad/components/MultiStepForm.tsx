@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Globe, ShoppingBag, Smartphone, ArrowRight, ArrowLeft, Rocket, ShieldCheck, CheckCircle2, User, Phone, Mail, Building, Link2, MessageSquare, MapPin } from 'lucide-react';
 import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/firebase';
+import { trackFormSubmission } from '@/utils/gtm';
 
 interface MultiStepFormProps {
   onSuccess?: () => void;
@@ -53,6 +54,7 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ onSuccess, variant = 'her
       });
 
       setIsSubmitted(true);
+      trackFormSubmission();
       if (onSuccess) onSuccess();
     } catch (err) {
       console.error('Error submitting form:', err);

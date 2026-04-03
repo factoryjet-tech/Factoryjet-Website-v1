@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { ChevronRight, Lock, Clock, ArrowLeft, Send, CheckCircle2, Loader2 } from 'lucide-react';
+import { trackFormSubmission } from '@/utils/gtm';
 
 interface ContactFormProps {
   className?: string;
@@ -63,6 +64,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ className = '' }) => {
       });
 
       setIsSuccess(true);
+      trackFormSubmission();
     } catch (err) {
       console.error('Error submitting form:', err);
       setError('Something went wrong. Please try again.');

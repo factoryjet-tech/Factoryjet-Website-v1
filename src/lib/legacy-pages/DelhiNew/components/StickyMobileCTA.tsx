@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, MessageCircle } from 'lucide-react';
+import { trackWhatsAppConversion } from '@/utils/gtm';
 
 const StickyMobileCTA: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -48,6 +49,7 @@ const StickyMobileCTA: React.FC = () => {
         href="https://wa.me/919699977699?text=Hi%20FactoryJet,%20I'm%20interested%20in%20website%20design%20services."
         target="_blank"
         rel="noopener noreferrer"
+        onClick={trackWhatsAppConversion}
         className="flex-1 bg-whatsapp hover:bg-whatsapp-hover text-white flex items-center justify-center font-bold text-lg active:scale-95 transition-transform"
         aria-label="WhatsApp Us"
       >
@@ -55,6 +57,7 @@ const StickyMobileCTA: React.FC = () => {
       </a>
       <a
         href="tel:+919699977699"
+        onClick={trackWhatsAppConversion}
         className="flex-1 bg-[#0052CC] hover:bg-blue-700 text-white flex items-center justify-center font-bold text-lg active:scale-95 transition-transform"
         aria-label="Call Now"
       >

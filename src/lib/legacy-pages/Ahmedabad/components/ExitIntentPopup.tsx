@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Gift, MessageCircle, ArrowRight, ShieldCheck, Sparkles } from 'lucide-react';
 import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/firebase';
+import { trackFormSubmission } from '@/utils/gtm';
 
 const ExitIntentPopup: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -55,6 +56,7 @@ const ExitIntentPopup: React.FC = () => {
         source: 'ahmedabad_exit_intent',
       });
       setIsSuccess(true);
+      trackFormSubmission();
       setTimeout(handleClose, 3000);
     } catch (err) {
       console.error('Error submitting exit intent form:', err);

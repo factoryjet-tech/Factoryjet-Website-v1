@@ -19,6 +19,7 @@ import {
   trackFormSubmit,
   trackFormSuccess,
   trackFormError,
+  trackFormSubmission,
   trackServiceSelection,
   trackBudgetSelection,
   trackButtonClick,
@@ -246,6 +247,7 @@ const ContactFormModal: React.FC = () => {
 
       // Track successful form submission
       trackFormSuccess("contact_form");
+      trackFormSubmission();
       setIsSuccess(true);
     } catch (err) {
       console.error("Error submitting form:", err);

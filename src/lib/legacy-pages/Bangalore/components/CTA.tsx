@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Rocket, MessageCircle, Phone, CheckCircle, Zap, ArrowRight } from 'lucide-react';
 import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/firebase';
+import { trackFormSubmission } from '@/utils/gtm';
 
 interface CTAProps {
   onOpenModal: () => void;
@@ -31,6 +32,7 @@ const CTA: React.FC<CTAProps> = ({ onOpenModal }) => {
         source: 'bangalore_cta_quick',
       });
       setIsSuccess(true);
+      trackFormSubmission();
     } catch (err) {
       console.error('Error:', err);
     } finally {

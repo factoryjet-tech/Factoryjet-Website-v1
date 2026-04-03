@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Send, CheckCircle2 } from 'lucide-react';
 import { initFirebase } from '@/firebase';
+import { trackFormSubmission } from '@/utils/gtm';
 
 interface LeadFormModalProps {
   isOpen: boolean;
@@ -77,6 +78,7 @@ const LeadFormModal: React.FC<LeadFormModalProps> = ({ isOpen, onClose }) => {
       });
 
       setIsSuccess(true);
+      trackFormSubmission();
 
       // Reset form after 3 seconds
       setTimeout(() => {

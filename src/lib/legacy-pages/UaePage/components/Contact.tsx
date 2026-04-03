@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Facebook, Instagram, Twitter, Linkedin, Mail, MapPin, ArrowRight, CheckCircle2, Clock, Calendar, Check } from 'lucide-react';
+import { trackFormSubmission } from '@/utils/gtm';
 
 const Contact: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -51,6 +52,7 @@ const Contact: React.FC = () => {
       });
 
       setIsSuccess(true);
+      trackFormSubmission();
       setFormData({ name: '', email: '', phone: '', service: '', budget: '', message: '' });
 
       // Reset success message after 5 seconds

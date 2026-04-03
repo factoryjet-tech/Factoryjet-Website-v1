@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { 
-  Check, Star, MapPin, ArrowRight, Clock, Shield, Globe, 
-  Smartphone, BarChart3, Users, Zap, Layout, Code2, 
-  Building2, ShoppingCart, ShoppingBag, PenTool, RefreshCw, 
+import { trackWhatsAppConversion } from '@/utils/gtm';
+import {
+  Check, Star, MapPin, ArrowRight, Clock, Shield, Globe,
+  Smartphone, BarChart3, Users, Zap, Layout, Code2,
+  Building2, ShoppingCart, ShoppingBag, PenTool, RefreshCw,
   Settings, Palette, Store, Server, Phone, CheckCircle2, MessageCircle, ChevronRight, ChevronDown, Plus, Minus
 } from 'lucide-react';
 import { 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Phone } from 'lucide-react';
+import { trackWhatsAppConversion } from '@/utils/gtm';
 
 export const MobileStickyCTA = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -42,6 +43,7 @@ export const MobileStickyCTA = () => {
     <div className="fixed bottom-0 left-0 w-full z-[9999] flex md:hidden shadow-[0_-4px_12px_rgba(0,0,0,0.15)] border-t border-slate-100 animate-in slide-in-from-bottom-full duration-300">
       <a
         href="#"
+        onClick={trackWhatsAppConversion}
         className="flex-1 bg-whatsapp hover:bg-whatsapp-hover text-white py-4 flex items-center justify-center font-bold text-lg gap-2 active:bg-whatsapp-hover transition-colors"
         aria-label="Chat on WhatsApp"
       >
@@ -50,6 +52,7 @@ export const MobileStickyCTA = () => {
       </a>
       <a
         href="tel:+919699977699"
+        onClick={trackWhatsAppConversion}
         className="flex-1 bg-[#0052CC] hover:bg-blue-700 text-white py-4 flex items-center justify-center font-bold text-lg gap-2 active:bg-blue-800 transition-colors"
         aria-label="Call Now"
       >

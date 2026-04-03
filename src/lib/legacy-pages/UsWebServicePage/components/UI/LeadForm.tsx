@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { X, Check, ArrowRight, ArrowLeft, ShieldCheck, Briefcase, User, Mail, Phone, Building } from 'lucide-react';
+import { trackFormSubmission } from '@/utils/gtm';
 
 interface LeadFormProps {
   isOpen: boolean;
@@ -133,6 +134,7 @@ export const LeadForm: React.FC<LeadFormProps> = ({ isOpen, onClose, initialServ
     if (isMounted.current) {
       setIsSubmitting(false);
       setIsSuccess(true);
+      trackFormSubmission();
     }
   };
 
