@@ -1,39 +1,58 @@
-# Apply the following rules to all standard crawlers and specific AI bots
+# Allow all standard crawlers and AI bots to access everything
 User-agent: *
-User-agent: GPTBot
-User-agent: ClaudeBot
-User-agent: PerplexityBot
-User-agent: Google-Extended
-User-agent: anthropic-ai
-
-# Explicitly allow general crawling
 Allow: /
 
-# Prevent crawling of backend, sensitive, and duplicate content pages
-Disallow: /shopdetail/
-Disallow: /shop/
-Disallow: /store/
-Disallow: /product/
-Disallow: /pcmypage
-Disallow: /safe_search/
-Disallow: /demo/
-Disallow: /old/
-Disallow: /backup/
-Disallow: /index.php
-Disallow: /zhHant/
-Disallow: /zhHans/
-Disallow: /surugaya/
-Disallow: /*?shopdetail
-Disallow: /*?product_id=
-Disallow: /*?callback=product
-Disallow: /wp-admin/
-Disallow: /wp-includes/
-Disallow: /wp-content/plugins/
-Disallow: /cart/
-Disallow: /checkout/
-Disallow: /my-account/
-Disallow: /wishlist/
-Disallow: /compare/
+# Google AI
+User-agent: Google-Extended
+Allow: /
+
+# OpenAI
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: Claude-Web
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+# Microsoft / Bing AI
+User-agent: bingbot
+Allow: /
+User-agent: BingPreview
+Allow: /
+
+# Amazon Alexa
+User-agent: Amazonbot
+Allow: /
+
+# Common
+User-agent: Googlebot
+Allow: /
+User-agent: Googlebot-Image
+Allow: /
+User-agent: Googlebot-News
+Allow: /
 
 # Sitemaps
 Sitemap: https://factoryjet.com/sitemap.xml
