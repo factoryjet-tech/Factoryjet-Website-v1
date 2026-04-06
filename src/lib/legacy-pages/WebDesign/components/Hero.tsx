@@ -5,6 +5,7 @@ import { HERO_CONTENT } from '../data';
 import { ArrowRight, Globe, Code2, TrendingUp, Users, Activity } from 'lucide-react';
 import { useContactModal } from '@/context/ContactModalContext';
 import { trackCTAClick } from '@/utils/gtm';
+import AuthorByline from '@/components/AuthorByline';
 
 export const Hero = () => {
   const { openModal } = useContactModal();
@@ -74,6 +75,7 @@ export const Hero = () => {
               </svg>
             </span>
           </h1>
+          <AuthorByline />
         </motion.div>
 
         {/* 4. Subheadline */}

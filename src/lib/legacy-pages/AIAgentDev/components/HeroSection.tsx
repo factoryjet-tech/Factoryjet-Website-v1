@@ -2,6 +2,7 @@
 "use client";
 
 import { useContactModal } from "@/context/ContactModalContext";
+import AuthorByline from "@/components/AuthorByline";
 
 export function HeroSection() {
   const { openModal } = useContactModal();
@@ -57,6 +58,7 @@ export function HeroSection() {
                 — Deployed in Weeks, Not Quarters
               </span>
             </h1>
+            <AuthorByline variant="dark" />
 
             {/* Subheadline */}
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mb-8">

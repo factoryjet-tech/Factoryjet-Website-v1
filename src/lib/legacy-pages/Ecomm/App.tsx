@@ -28,6 +28,7 @@ import { useContactModal } from '@/context/ContactModalContext';
 import { trackCTAClick } from '@/utils/gtm';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import AuthorByline from '@/components/AuthorByline';
 
 // --- Utility Hooks & Components ---
 
@@ -196,6 +197,7 @@ const Hero = () => {
               Sell While You Sleep
             </span>
           </h1>
+          <AuthorByline />
 
           <p className="text-base md:text-xl lg:text-2xl text-slate-600 mb-8 md:mb-10 leading-relaxed max-w-xl">
             We architect high-performance e-commerce ecosystems using AI, Glassmorphism design, and conversion psychology.

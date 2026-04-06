@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, CheckCircle2, MapPin, Phone, MessageCircle, ArrowRight, ChevronRight } from 'lucide-react';
+import AuthorByline from '@/components/AuthorByline';
 
 interface HeroSectionProps {
   onOpenModal: () => void;
@@ -45,6 +46,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenModal }) => {
               Starting{' '}
               <span className="text-jet-green">₹29,999</span>
             </h1>
+            <AuthorByline />
 
             {/* Authority Paragraph */}
             <div className="text-lg text-gray-700 mb-8 space-y-4 leading-relaxed">

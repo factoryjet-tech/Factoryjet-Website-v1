@@ -25,6 +25,7 @@ import {
   Globe2
 } from 'lucide-react';
 import { CaseStudy } from '../data.types';
+import AuthorByline from '@/components/AuthorByline';
 
 interface CaseStudyPageProps {
   caseStudy: CaseStudy;
@@ -225,6 +226,7 @@ export const CaseStudyPage: React.FC<CaseStudyPageProps> = ({ caseStudy, onBack 
           >
             {caseStudy.title}
           </motion.h1>
+          <AuthorByline variant="dark" />
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}

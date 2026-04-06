@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2, MapPin, Users, Zap } from 'lucide-react';
 import MultiStepForm from './MultiStepForm';
+import AuthorByline from '@/components/AuthorByline';
 
 interface HeroProps {
   onCtaClick?: () => void;
@@ -37,6 +38,7 @@ const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
               <span className="text-jet-blue">Websites Built</span> For <br />
               <span className="text-jet-orange">Ahmedabad SMBs</span>
             </h1>
+            <AuthorByline />
 
             <p className="text-base md:text-lg text-jet-slate mb-6 max-w-xl leading-relaxed">
               Professional web design and e-commerce development launching in 4 weeks.

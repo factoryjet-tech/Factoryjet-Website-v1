@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import FooterUS from '@/components/FooterUS';
 import Footer from '@/components/Footer';
 import { useContactModal } from '@/context/ContactModalContext';
+import AuthorByline from '@/components/AuthorByline';
 import {
   ArrowRight, Check, CheckCircle, ChevronDown, ChevronUp,
   Star, Lock, Plus, Minus, Clock, Rocket
@@ -143,6 +144,7 @@ export default function AIServicePage({ data, region = 'us' }: { data: AIService
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }} className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6" style={{ fontFamily: "'Poppins', Arial, sans-serif" }}>
             {data.heroTitle}
           </motion.h1>
+          <AuthorByline variant="dark" />
 
           <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }} className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed max-w-3xl">
             {data.heroDescription}

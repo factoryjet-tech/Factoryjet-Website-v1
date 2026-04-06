@@ -3,6 +3,7 @@ import { CheckCircle2, MessageCircle } from 'lucide-react';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/firebase';
 import { TRUST_INDICATORS, CONTACT } from '../data.constants';
+import AuthorByline from '@/components/AuthorByline';
 
 export const Hero = () => {
   const [formData, setFormData] = useState({
@@ -72,6 +73,7 @@ export const Hero = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-[#0F172A] leading-tight">
               Best Website Design Company in <span className="text-[#0052CC]">Madurai</span>
             </h1>
+            <AuthorByline />
 
             <p className="text-lg md:text-xl text-[#64748B] leading-relaxed">
               FactoryJet is a Top Website & E-Commerce Development Company. Starting at Just <span className="font-bold text-[#0F172A]">₹15,000</span> - FactoryJet Offers Professional Web Design & E-Commerce Solutions & Services to Businesses in Madurai.

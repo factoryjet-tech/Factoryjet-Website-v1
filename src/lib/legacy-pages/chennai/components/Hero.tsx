@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Button from './Button';
 import { Check, ArrowRight, Star, ShieldCheck, CreditCard, Lock, MessageCircle } from 'lucide-react';
 import { TRUST_BADGES } from '../constant';
+import AuthorByline from '@/components/AuthorByline';
 
 const Hero: React.FC = () => {
   return (
@@ -46,6 +47,7 @@ const Hero: React.FC = () => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-heading leading-[1.2] text-jet-navy mb-6">
               <span className="text-jet-blue">#1 Website Design Company in Chennai</span> – Professional Web Development Services Starting ₹29,999
             </h1>
+            <AuthorByline />
             <h2 className="text-base sm:text-lg md:text-xl text-jet-slate leading-relaxed font-medium mb-0">
               FactoryJet delivers award-winning <strong>website design in Chennai</strong> with 7-day delivery, AI-powered optimization, and complete digital solutions. As the leading <strong>web development company in Chennai</strong>, we've helped 500+ businesses across OMR, T. Nagar, Anna Nagar, Adyar, Guindy, and Velachery transform their digital presence. From startup websites to enterprise e-commerce platforms, our Chennai-based team combines cutting-edge technology with local market expertise.
             </h2>

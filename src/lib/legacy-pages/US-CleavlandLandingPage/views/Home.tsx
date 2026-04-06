@@ -6,6 +6,7 @@ import { Button } from '../components/Button';
 import { Card } from '../components/Card';
 import { ContactForm } from '../components/ContactForm';
 import { Heading, Text } from '../components/Typography';
+import AuthorByline from '@/components/AuthorByline';
 import { 
   CheckCircle2, 
   ArrowRight, 
@@ -636,7 +637,8 @@ export const Home: React.FC = () => {
                   </span>
                   <span className="block text-navy">in Cleveland, Ohio</span>
                 </Heading>
-                
+                <AuthorByline />
+
                 <Text size="lg" className="text-slate-600 max-w-xl mx-auto lg:mx-0">
                   FactoryJet creates stunning, high-performance websites that drive results for Cleveland businesses. From modern design to seamless development, we deliver digital solutions that convert visitors into customers.
                 </Text>

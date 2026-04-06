@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Rocket, DollarSign, Target, Play, ChevronRight } from 'lucide-react';
 import { useContactModal } from '@/context/ContactModalContext';
+import AuthorByline from '@/components/AuthorByline';
 
 export const HeroSection: React.FC = () => {
   const { openModal: openContactModal } = useContactModal();
@@ -56,6 +57,7 @@ export const HeroSection: React.FC = () => {
               Websites That Drive Revenue in 7 Days
             </span>
           </h1>
+          <AuthorByline variant="dark" />
         </motion.div>
 
         {/* Subheadline - Better responsive text */}

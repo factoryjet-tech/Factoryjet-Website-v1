@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import AuthorByline from '@/components/AuthorByline';
 
 interface HeroSectionProps {
   handleCta: (e?: React.MouseEvent) => void;
@@ -30,6 +31,7 @@ export default function HeroSection({ handleCta }: HeroSectionProps) {
         </div>
 
         <h1 className="reveal reveal-d1">Shopify &amp; Shopify Plus<br/>E-Commerce Development<br/>Services</h1>
+        <AuthorByline variant="dark" />
 
         <p className="hero-desc reveal reveal-d2">FactoryJet builds high-converting Shopify and Shopify Plus stores for DTC, B2B, and enterprise brands worldwide. Custom store builds, platform migrations, headless commerce with Hydrogen, and Shopify Plus checkout customization — engineered to sell more and rank everywhere.</p>
 

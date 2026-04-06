@@ -1,6 +1,7 @@
 import React from 'react';
 import { CheckCircle, ArrowRight, ShieldCheck, Star, Clock, Lock, XCircle, TrendingDown, Smartphone, MessageCircle } from 'lucide-react';
 import { SITE_DATA } from '../data.constants';
+import AuthorByline from '@/components/AuthorByline';
 
 // --- Components ---
 
@@ -100,6 +101,7 @@ export const Hero = () => {
             <h1 className="text-4xl lg:text-7xl font-heading font-bold mb-4 lg:mb-6 leading-[1.1] tracking-tight text-white drop-shadow-2xl">
               {SITE_DATA.hero.h1}
             </h1>
+            <AuthorByline variant="dark" />
 
             {/* 3. Subheadline */}
             <p className="text-lg lg:text-2xl font-light text-blue-100/90 mb-8 lg:mb-10 max-w-2xl leading-relaxed border-l-2 border-white/20 pl-4 lg:pl-6">

@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, Star, TrendingUp, Award } from 'lucide-react';
 import MultiStepForm from './MultiStepForm';
+import AuthorByline from '@/components/AuthorByline';
 
 interface HeroProps {
   onOpenModal: () => void;
@@ -62,6 +63,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
               <br />
               <span className="text-jet-navy">—Built for Surat Businesses</span>
             </motion.h1>
+            <AuthorByline />
 
             {/* Subheadline */}
             <motion.p

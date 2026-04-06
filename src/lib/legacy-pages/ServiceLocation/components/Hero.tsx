@@ -2,6 +2,7 @@ import React from 'react';
 import { useContactModal } from '@/context/ContactModalContext';
 import { ArrowRight, Star, CheckCircle2 } from 'lucide-react';
 import { trackCTAClick } from '@/utils/gtm';
+import AuthorByline from '@/components/AuthorByline';
 
 interface HeroProps {
   h1: string;
@@ -38,6 +39,7 @@ const Hero: React.FC<HeroProps> = ({ h1, h2, city, service }) => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight">
               {h1}
             </h1>
+            <AuthorByline variant="dark" />
 
             {/* H2 - Secondary Heading */}
             <h2 className="text-xl md:text-2xl text-blue-100 font-normal leading-relaxed">

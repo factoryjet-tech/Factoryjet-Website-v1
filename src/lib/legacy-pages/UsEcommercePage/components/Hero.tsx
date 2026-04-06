@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Button } from './ui/Section';
 import { useLeadCapture } from '../context/LeadCaptureContext';
+import AuthorByline from '@/components/AuthorByline';
 
 const Hero: React.FC = () => {
   const { openForm } = useLeadCapture();
@@ -21,7 +22,10 @@ const Hero: React.FC = () => {
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-heading font-bold text-white tracking-tight mb-6 md:mb-8 leading-[1.1] md:leading-tight">
             Your Online Store Should Be Your Best Salesperson. <span className="text-transparent bg-clip-text bg-gradient-to-r from-jet-orange to-amber-500 inline-block">Most Aren't.</span>
           </h1>
-          
+          <div className="flex justify-center">
+            <AuthorByline variant="dark" />
+          </div>
+
           <p className="text-base sm:text-lg md:text-xl text-slate-300 mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed px-2">
             FactoryJet is the <strong className="text-white">e-commerce development company</strong> that builds stores engineered for revenue. We've helped 200+ brands achieve 247% revenue increase across <strong className="text-white">Shopify</strong>, <strong className="text-white">Commerceflo</strong>, <strong className="text-white">Adobe Commerce</strong>, and <strong className="text-white">Headless</strong>.
           </p>

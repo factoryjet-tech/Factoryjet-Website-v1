@@ -7,6 +7,7 @@ import {
   Globe,
   Phone,
 } from "lucide-react";
+import AuthorByline from "@/components/AuthorByline";
 
 const Hero: React.FC = () => {
   return (
@@ -42,6 +43,7 @@ const Hero: React.FC = () => {
                 Mumbai
               </span>
             </h1>
+            <AuthorByline variant="dark" />
 
             {/* Subheadline - Mobile Item [3] */}
             <h2 className="text-lg md:text-2xl font-medium text-blue-100 leading-relaxed max-w-2xl">

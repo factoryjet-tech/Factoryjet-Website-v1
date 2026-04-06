@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import Header from "@/components/Header";
 import FooterUS from "@/components/FooterUS";
 import { useContactModal } from "@/context/ContactModalContext";
+import AuthorByline from "@/components/AuthorByline";
 
 /* ═══════════════════════════════════════════════════════════
    GLOBAL CSS — Mobile-First Responsive, Lighthouse 100 Optimized
@@ -461,6 +462,7 @@ function LandingPage({ cityKey }) {
             <nav className="fj-breadcrumb" aria-label="Breadcrumb"><span>Home</span> → <span>E-Commerce Development</span> → <span>{c.city}, {c.state}</span></nav>
             <div className="fj-badge"><span className="fj-badge-emoji" aria-hidden="true">{c.hero.badge.split(" ")[0]}</span><span className="fj-badge-text">{c.hero.badge.split(" ").slice(1).join(" ")}</span></div>
             <h1 id="hero-heading" className="fj-h1 fj-hero-h1">{c.hero.h1}</h1>
+            <AuthorByline variant="dark" />
             <p className="fj-hero-sub">{c.hero.sub}</p>
             <div className="fj-hero-ctas">
               <button onClick={openForm} className="fj-btn fj-btn-primary">Get Your Free E-Commerce Audit <Arr/></button>
