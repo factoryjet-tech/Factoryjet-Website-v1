@@ -120,37 +120,23 @@ function ChennaiPage() {
   const schemaMarkup = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "FactoryJet - Website Design Company Chennai",
-    "image": "https://www.factoryjet.com/images/factoryjet-chennai.jpg",
+    "name": "FactoryJet",
     "url": "https://factoryjet.com/services/web-design/chennai",
     "telephone": "+91 96999 77699",
     "email": "connect@factoryjet.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Tidel Park, OMR, Chennai",
-      "addressLocality": "Chennai",
-      "addressRegion": "Tamil Nadu",
-      "postalCode": "600113",
+      "streetAddress": "ITPL Main Rd, Tigalarpalya, Brookefield",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560037",
       "addressCountry": "IN"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "12.8854",
-      "longitude": "80.2356"
+    "areaServed": {
+      "@type": "Place",
+      "name": "Chennai"
     },
-    "priceRange": "₹15,000 - ₹5,00,000+",
-    "openingHours": ["Mo-Fr 09:00-19:00", "Sa 10:00-16:00"],
-    "areaServed": ["Chennai", "OMR", "T. Nagar", "Anna Nagar", "Adyar", "Velachery", "Tambaram"],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "150"
-    },
-    "sameAs": [
-      "https://www.facebook.com/factoryjet",
-      "https://www.linkedin.com/company/factoryjet",
-      "https://twitter.com/factoryjet"
-    ]
+    "priceRange": "₹29,999 - ₹5,00,000+"
   };
 
   const faqSchema = {

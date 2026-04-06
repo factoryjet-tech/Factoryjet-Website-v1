@@ -13,37 +13,23 @@ function HyderabadPage() {
   const schemaMarkup = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "FactoryJet - Website Design Company Hyderabad",
-    "image": "https://www.factoryjet.com/images/factoryjet-hyderabad.jpg",
+    "name": "FactoryJet",
     "url": "https://factoryjet.com/services/web-design/hyderabad",
     "telephone": "+91 96999 77699",
     "email": "connect@factoryjet.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Hyderabad",
-      "addressLocality": "Hyderabad",
-      "addressRegion": "Telangana",
-      "postalCode": "500001",
+      "streetAddress": "ITPL Main Rd, Tigalarpalya, Brookefield",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560037",
       "addressCountry": "IN"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "17.3850",
-      "longitude": "78.4867"
+    "areaServed": {
+      "@type": "Place",
+      "name": "Hyderabad"
     },
-    "priceRange": "₹15,000 - ₹5,00,000+",
-    "openingHours": ["Mo-Fr 09:00-19:00", "Sa 10:00-16:00"],
-    "areaServed": ["Hyderabad", "Secunderabad", "Telangana", "HITEC City", "Financial District"],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "150"
-    },
-    "sameAs": [
-      "https://www.facebook.com/factoryjet",
-      "https://www.linkedin.com/company/factoryjet",
-      "https://twitter.com/factoryjet"
-    ]
+    "priceRange": "₹29,999 - ₹5,00,000+"
   };
 
   const faqSchema = {

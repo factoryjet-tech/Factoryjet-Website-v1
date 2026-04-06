@@ -701,8 +701,25 @@ export const ExpandedFAQ: React.FC = () => {
         { q: "What is your payment schedule?", a: "Typically 50% upfront to book your slot, 25% at design approval, and 25% upon launch." },
     ];
 
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.q,
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.a,
+            },
+        })),
+    };
+
     return (
         <section id="faq" className="py-20 bg-slate-50">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
             <div className="container mx-auto px-4 md:px-6 max-w-3xl">
                 <SectionHeader
                     icon={HelpCircle}

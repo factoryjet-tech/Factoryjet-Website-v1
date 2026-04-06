@@ -29,49 +29,23 @@ import { MessageCircle, Phone } from "lucide-react";
 const schemaMarkup = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "FactoryJet - Industrial Web Design Company Mumbai",
-  image: "https://www.factoryjet.com/images/factoryjet-mumbai.jpg",
-  url: "https://factoryjet.com/locations/mumbai",
-  telephone: "+91 96999 77699",
-  email: "connect@factoryjet.com",
-  address: {
+  "name": "FactoryJet",
+  "url": "https://factoryjet.com/locations/mumbai",
+  "telephone": "+91 96999 77699",
+  "email": "connect@factoryjet.com",
+  "address": {
     "@type": "PostalAddress",
-    streetAddress: "Building #20, 10, Ajit Glass Garden Rd, opp. Amrutnagar, Somani Gram, Goregaon West, ",
-    addressLocality: "Mumbai",
-    addressRegion: "Maharashtra",
-    postalCode: "400063",
-    addressCountry: "IN",
+    "streetAddress": "ITPL Main Rd, Tigalarpalya, Brookefield",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "Karnataka",
+    "postalCode": "560037",
+    "addressCountry": "IN"
   },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: "19.0596",
-    longitude: "72.8656",
+  "areaServed": {
+    "@type": "Place",
+    "name": "Mumbai"
   },
-  priceRange: "₹15,000 - ₹5,00,000+",
-  openingHours: ["Mo-Fr 09:00-19:00", "Sa 10:00-16:00"],
-  areaServed: [
-    "Mumbai",
-    "Thane",
-    "Navi Mumbai",
-    "Vasai-Virar",
-    "Boisar",
-    "Palghar",
-    "Bhiwandi",
-    "Kalyan",
-    "Panvel",
-    "MIDC Andheri",
-    "MIDC Taloja",
-  ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "150",
-  },
-  sameAs: [
-    "https://www.facebook.com/factoryjet",
-    "https://www.linkedin.com/company/factoryjet",
-    "https://twitter.com/factoryjet",
-  ],
+  "priceRange": "₹29,999 - ₹5,00,000+"
 };
 
 const faqSchema = {

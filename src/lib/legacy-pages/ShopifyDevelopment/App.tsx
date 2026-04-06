@@ -172,8 +172,29 @@ export default function ShopifyDevelopmentPage({ region = 'in' }: { region?: 'in
 
   const clearFqSearch = useCallback(() => { setFaqSearch(''); }, []);
 
+  const shopifyFaqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "How much does Shopify e-commerce development cost?", acceptedAnswer: { "@type": "Answer", text: "Shopify e-commerce development costs range from $5,000 to $25,000 for standard Shopify stores and $25,000 to $150,000 or more for Shopify Plus enterprise builds. Factors that affect cost include design complexity, number of product SKUs, third-party integrations with ERP, CRM, and PIM systems, custom app development, and migration requirements. FactoryJet offers enterprise-grade Shopify development at startup-friendly prices, with projects typically 40 to 60 percent below US and UK agency rates." } },
+      { "@type": "Question", name: "What is the difference between Shopify and Shopify Plus?", acceptedAnswer: { "@type": "Answer", text: "Shopify is designed for small to mid-size businesses with monthly plans starting at $39, while Shopify Plus is the enterprise tier starting at $2,300 per month for high-growth brands doing $80,000 or more in monthly revenue. Shopify Plus offers full checkout customization through Checkout Extensibility, B2B selling with company profiles and custom price lists, up to 10 expansion stores, unlimited staff accounts, 10x API call limits, a dedicated Merchant Success Manager, and advanced automation through Shopify Flow and Launchpad." } },
+      { "@type": "Question", name: "How long does it take to build a Shopify store?", acceptedAnswer: { "@type": "Answer", text: "A standard Shopify store using a customized theme takes 4 to 8 weeks. A fully custom Shopify store with bespoke design and integrations takes 8 to 14 weeks. Enterprise Shopify Plus builds with headless architecture, B2B functionality, and complex integrations typically take 12 to 20 weeks." } },
+      { "@type": "Question", name: "Can you migrate my existing store to Shopify or Shopify Plus?", acceptedAnswer: { "@type": "Answer", text: "Yes. FactoryJet provides zero-downtime migration services from WooCommerce, Magento, BigCommerce, Salesforce Commerce Cloud, Wix, Squarespace, and custom platforms to Shopify and Shopify Plus. Our migration process preserves all product data, customer records, order history, and SEO rankings through 301 redirects and structured data transfer." } },
+      { "@type": "Question", name: "What is headless Shopify development with Hydrogen?", acceptedAnswer: { "@type": "Answer", text: "Headless Shopify development separates the frontend presentation layer from the Shopify backend, allowing fully custom storefronts built with modern web technologies. Shopify Hydrogen is Shopify's official React-based framework for headless builds, hosted on Shopify's Oxygen infrastructure. Hydrogen storefronts deliver 50 to 70 percent faster page loads, near-perfect Lighthouse scores, and 30 percent or higher conversion improvements." } },
+      { "@type": "Question", name: "Can Shopify handle B2B and wholesale e-commerce?", acceptedAnswer: { "@type": "Answer", text: "Yes. Shopify Plus includes native B2B functionality with company profiles, custom price lists, net payment terms, quick-order lists, and volume-based discounts. Businesses can run DTC and B2B operations from a single Shopify Plus store or create dedicated B2B expansion stores." } },
+      { "@type": "Question", name: "Do you work with international clients?", acceptedAnswer: { "@type": "Answer", text: "Yes. FactoryJet serves clients across the United States, Canada, United Kingdom, Europe, Australia, Singapore, UAE, Saudi Arabia, and India. We configure multi-currency storefronts through Shopify Markets, set up region-specific payment gateways, and implement international shipping and tax compliance." } },
+      { "@type": "Question", name: "Do you provide ongoing Shopify support after launch?", acceptedAnswer: { "@type": "Answer", text: "Yes. FactoryJet offers Annual Maintenance Contracts starting at $500 per month for standard Shopify stores and $1,500 per month for Shopify Plus enterprise stores. AMC plans cover performance monitoring, security updates, bug fixes, content updates, and 24/7 priority support." } },
+      { "@type": "Question", name: "Which industries do you serve for Shopify development?", acceptedAnswer: { "@type": "Answer", text: "We build Shopify stores across fashion, health and beauty, food and beverage, home and furniture, jewelry, sports, B2B wholesale, luxury retail, electronics, and subscription businesses. Each industry receives tailored store architecture, checkout flows, and integration configurations." } },
+      { "@type": "Question", name: "What makes FactoryJet different from other Shopify agencies?", acceptedAnswer: { "@type": "Answer", text: "FactoryJet combines AI-native development practices with deep Shopify expertise. Every store we build is optimized for visibility across Google, AI Overviews, ChatGPT, Perplexity, and other AI search engines. Our India-based team delivers enterprise-grade quality at 40 to 60 percent below comparable US, UK, and Australian agency rates." } },
+    ],
+  };
+
   return (
     <>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(shopifyFaqSchema) }}
+    />
     <Header variant="transparent" basePath={region === 'us' ? '/us' : ''} />
     <div className="shopify-page">
       <HeroSection handleCta={handleCta} />

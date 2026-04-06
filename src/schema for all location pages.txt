@@ -1,0 +1,122 @@
+SCHEMA FOR ALL LOCATION PAGES INDIA / USA
+
+🇮🇳 India city pages (e.g., Delhi, Mumbai, Bangalore, etc.)
+Rules:
+Use @type: LocalBusiness
+Use real Bengaluru office address
+Same phone & email on all pages
+Only change url and areaServed per city
+Generic India template
+xml
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "FactoryJet",
+  "url": "PAGE_URL_HERE",
+  "telephone": "+91 96999 77699",
+  "email": "connect@factoryjet.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ITPL Main Rd, Tigalarpalya, Brookefield",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "Karnataka",
+    "postalCode": "560037",
+    "addressCountry": "IN"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "TARGET_CITY_NAME_INDIA"
+  },
+  "priceRange": "₹29,999 - ₹5,00,000+"
+}
+</script>
+Replace:
+PAGE_URL_HERE → actual URL (e.g., https://factoryjet.com/services/web-design/delhi)
+TARGET_CITY_NAME_INDIA → city name (Delhi NCR, Mumbai, Pune, Chennai, etc.)
+Example – Delhi page
+xml
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "FactoryJet",
+  "url": "https://factoryjet.com/services/web-design/delhi",
+  "telephone": "+91 96999 77699",
+  "email": "connect@factoryjet.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ITPL Main Rd, Tigalarpalya, Brookefield",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "Karnataka",
+    "postalCode": "560037",
+    "addressCountry": "IN"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Delhi NCR"
+  },
+  "priceRange": "₹29,999 - ₹5,00,000+"
+}
+</script>
+The same pattern applies to Mumbai, Pune, Bangalore, etc. pages; only change the url and areaServed city.
+
+🇺🇸 US city pages (e.g., New York, Chicago, etc.)
+Rules:
+Also use @type: LocalBusiness
+Still use the same real Bengaluru office address (no fake US offices)
+Same phone & email everywhere
+Only change url and areaServed per US city
+Generic US template
+xml
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "FactoryJet",
+  "url": "PAGE_URL_HERE",
+  "telephone": "+91 96999 77699",
+  "email": "connect@factoryjet.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ITPL Main Rd, Tigalarpalya, Brookefield",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "Karnataka",
+    "postalCode": "560037",
+    "addressCountry": "IN"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "TARGET_CITY_NAME_US"
+  },
+  "priceRange": "$2,000 - $25,000+"
+}
+</script>
+Replace:
+PAGE_URL_HERE → US city page (e.g., https://factoryjet.com/us/new-york-web-design)
+TARGET_CITY_NAME_US → "New York", "Chicago", "Los Angeles", etc.
+Example – New York page
+xml
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "FactoryJet",
+  "url": "https://factoryjet.com/us/new-york-web-design",
+  "telephone": "+91 96999 77699",
+  "email": "connect@factoryjet.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ITPL Main Rd, Tigalarpalya, Brookefield",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "Karnataka",
+    "postalCode": "560037",
+    "addressCountry": "IN"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "New York"
+  },
+  "priceRange": "$2,000 - $25,000+"
+}
+</script>

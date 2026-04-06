@@ -34,60 +34,23 @@ const PunePage: React.FC = () => {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "FactoryJet - Website Design Company Pune",
-    "image": "https://www.factoryjet.com/images/factoryjet-pune.jpg",
+    "name": "FactoryJet",
     "url": "https://factoryjet.com/locations/pune",
     "telephone": "+91 96999 77699",
     "email": "connect@factoryjet.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Pune",
-      "addressLocality": "Pune",
-      "addressRegion": "Maharashtra",
-      "postalCode": "411001",
+      "streetAddress": "ITPL Main Rd, Tigalarpalya, Brookefield",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560037",
       "addressCountry": "IN"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "18.5204",
-      "longitude": "73.8567"
+    "areaServed": {
+      "@type": "Place",
+      "name": "Pune"
     },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "19:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "10:00",
-        "closes": "16:00"
-      }
-    ],
-    "priceRange": "₹29,999 - ₹5,00,000+",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "150"
-    },
-    "areaServed": [
-      { "@type": "City", "name": "Pune" },
-      { "@type": "City", "name": "Pimpri-Chinchwad" },
-      { "@type": "City", "name": "Hinjewadi" },
-      { "@type": "City", "name": "Kharadi" },
-      { "@type": "City", "name": "Chakan" }
-    ],
-    "serviceType": [
-      "Website Design",
-      "Web Development",
-      "E-Commerce Development",
-      "Shopify Development",
-      "WooCommerce Development",
-      "WordPress Development",
-      "Digital Marketing"
-    ]
+    "priceRange": "₹29,999 - ₹5,00,000+"
   };
 
   const faqPageSchema = {

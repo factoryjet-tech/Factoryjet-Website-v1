@@ -48,47 +48,25 @@ export const metadata: Metadata = {
 
 export default function Page() {
   const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'FactoryJet - E-Commerce Development Boise',
-    description: 'Custom Shopify stores, WooCommerce sites, and AI-powered solutions built for the Treasure Valley\'s booming market. Enterprise-grade development at prices that won\'t break the bank.',
-    url: 'https://factoryjet.com/us/services/ecommerce-development/boise',
-    logo: 'https://factoryjet.com/logo.png',
-    image: 'https://factoryjet.com/logo.png',
-    telephone: '+91-96999-77699',
-    email: 'connect@factoryjet.com',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Boise',
-      addressRegion: 'ID',
-      addressCountry: 'US',
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "FactoryJet",
+    "url": "https://factoryjet.com/us/services/ecommerce-development/boise",
+    "telephone": "+91 96999 77699",
+    "email": "connect@factoryjet.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ITPL Main Rd, Tigalarpalya, Brookefield",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560037",
+      "addressCountry": "IN"
     },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 43.6150,
-      longitude: -116.2023,
+    "areaServed": {
+      "@type": "Place",
+      "name": "Boise"
     },
-    areaServed: [
-      { '@type': 'City', name: 'Boise' },
-      { '@type': 'State', name: 'Idaho' },
-    ],
-    serviceType: [
-      'E-Commerce Development',
-      'Shopify Development',
-      'WooCommerce Development',
-      'AI Agent Development',
-    ],
-    priceRange: '$$',
-    openingHours: 'Mo-Fr 09:00-18:00',
-    sameAs: [
-      'https://www.linkedin.com/company/factoryjet',
-      'https://twitter.com/factoryjet',
-    ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '500',
-    },
+    "priceRange": "$2,000 - $25,000+"
   }
 
   return (

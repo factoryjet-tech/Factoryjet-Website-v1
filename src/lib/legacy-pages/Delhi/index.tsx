@@ -27,39 +27,25 @@ const DelhiPage: React.FC = () => {
 
   // Schema.org LocalBusiness Markup for Delhi NCR
   const schemaMarkup = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    'name': 'FactoryJet - Website Design Company Delhi NCR',
-    'image': 'https://www.factoryjet.com/images/factoryjet-delhi.jpg',
-    'url': 'https://factoryjet.com/locations/delhi',
-    'telephone': '+91 96999 77699',
-    'email': 'connect@factoryjet.com',
-    'address': {
-      '@type': 'PostalAddress',
-      'streetAddress': 'Delhi NCR',
-      'addressLocality': 'Delhi',
-      'addressRegion': 'Delhi',
-      'postalCode': '110001',
-      'addressCountry': 'IN',
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "FactoryJet",
+    "url": "https://factoryjet.com/services/web-design/delhi",
+    "telephone": "+91 96999 77699",
+    "email": "connect@factoryjet.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ITPL Main Rd, Tigalarpalya, Brookefield",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560037",
+      "addressCountry": "IN"
     },
-    'geo': {
-      '@type': 'GeoCoordinates',
-      'latitude': 28.6139,
-      'longitude': 77.2090,
+    "areaServed": {
+      "@type": "Place",
+      "name": "Delhi NCR"
     },
-    'priceRange': '₹15,000 - ₹5,00,000+',
-    'openingHours': ['Mo-Fr 09:00-19:00', 'Sa 10:00-16:00'],
-    'areaServed': ['Delhi', 'Gurgaon', 'Noida', 'Greater Noida', 'Faridabad', 'Ghaziabad'],
-    'aggregateRating': {
-      '@type': 'AggregateRating',
-      'ratingValue': '4.9',
-      'reviewCount': '150',
-    },
-    'sameAs': [
-      'https://www.facebook.com/factoryjet',
-      'https://www.linkedin.com/company/factoryjet',
-      'https://twitter.com/factoryjet'
-    ]
+    "priceRange": "₹29,999 - ₹5,00,000+"
   };
 
   const faqSchema = {

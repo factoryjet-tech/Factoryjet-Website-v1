@@ -100,8 +100,25 @@ export default function AIServicePage({ data, region = 'us' }: { data: AIService
   const { openModal } = useContactModal();
   const onCta = () => openModal(region, 'ai');
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: data.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-white text-[#0F172A] font-inter selection:bg-[#FF6B35] selection:text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Header basePath={region === 'us' ? '/us' : ''} hideLocations />
 
       {/* Hero */}

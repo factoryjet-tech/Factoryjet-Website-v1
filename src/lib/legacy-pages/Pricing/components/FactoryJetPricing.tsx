@@ -670,8 +670,27 @@ const FactoryJetPricing = () => {
   const activeFaqs =
     FAQ_DATA.find((cat) => cat.id === faqCategory)?.items || [];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQ_DATA.flatMap((cat) =>
+      cat.items.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.a,
+        },
+      }))
+    ),
+  };
+
   return (
     <div className="min-h-screen pb-12 md:pb-20 font-sans">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* --- HERO SECTION --- */}
       <header className="relative pt-28 md:pt-24 pb-12 md:pb-16 px-4 text-center bg-gradient-to-b from-white via-blue-50/30 to-slate-50">
         <div className="max-w-4xl mx-auto">

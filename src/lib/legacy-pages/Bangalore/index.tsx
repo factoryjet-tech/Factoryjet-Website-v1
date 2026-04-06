@@ -35,37 +35,23 @@ const BangalorePage: React.FC = () => {
   const schemaMarkup = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "FactoryJet - Website Design Company Bangalore",
-    "image": "https://www.factoryjet.com/images/factoryjet-bangalore.jpg",
+    "name": "FactoryJet",
     "url": "https://factoryjet.com/locations/bangalore",
     "telephone": "+91 96999 77699",
     "email": "connect@factoryjet.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Bangalore",
-      "addressLocality": "Bangalore",
+      "streetAddress": "ITPL Main Rd, Tigalarpalya, Brookefield",
+      "addressLocality": "Bengaluru",
       "addressRegion": "Karnataka",
-      "postalCode": "560001",
+      "postalCode": "560037",
       "addressCountry": "IN"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "12.9716",
-      "longitude": "77.5946"
+    "areaServed": {
+      "@type": "Place",
+      "name": "Bangalore"
     },
-    "priceRange": "₹15,000 - ₹5,00,000+",
-    "openingHours": ["Mo-Fr 09:00-19:00", "Sa 10:00-16:00"],
-    "areaServed": ["Bangalore", "Whitefield", "Koramangala", "Indiranagar", "HSR Layout", "Bellandur", "Jayanagar"],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "150"
-    },
-    "sameAs": [
-      "https://www.facebook.com/factoryjet",
-      "https://www.linkedin.com/company/factoryjet",
-      "https://twitter.com/factoryjet"
-    ]
+    "priceRange": "₹29,999 - ₹5,00,000+"
   };
 
   const faqSchema = {

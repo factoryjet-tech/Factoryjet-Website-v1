@@ -48,47 +48,25 @@ export const metadata: Metadata = {
 
 export default function Page() {
   const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'FactoryJet - E-Commerce Development Sioux Falls',
-    description: 'Custom Shopify & e-commerce development for Sioux Falls businesses. No state income tax = higher margins. Enterprise-grade stores from $2,999.',
-    url: 'https://factoryjet.com/us/services/ecommerce-development/sioux-falls',
-    logo: 'https://factoryjet.com/logo.png',
-    image: 'https://factoryjet.com/logo.png',
-    telephone: '+91-96999-77699',
-    email: 'connect@factoryjet.com',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Sioux Falls',
-      addressRegion: 'SD',
-      addressCountry: 'US',
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "FactoryJet",
+    "url": "https://factoryjet.com/us/services/ecommerce-development/sioux-falls",
+    "telephone": "+91 96999 77699",
+    "email": "connect@factoryjet.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ITPL Main Rd, Tigalarpalya, Brookefield",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560037",
+      "addressCountry": "IN"
     },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 43.5446,
-      longitude: -96.7311,
+    "areaServed": {
+      "@type": "Place",
+      "name": "Sioux Falls"
     },
-    areaServed: [
-      { '@type': 'City', name: 'Sioux Falls' },
-      { '@type': 'State', name: 'South Dakota' },
-    ],
-    serviceType: [
-      'E-Commerce Development',
-      'Shopify Development',
-      'WooCommerce Development',
-      'AI Agent Development',
-    ],
-    priceRange: '$$',
-    openingHours: 'Mo-Fr 09:00-18:00',
-    sameAs: [
-      'https://www.linkedin.com/company/factoryjet',
-      'https://twitter.com/factoryjet',
-    ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '500',
-    },
+    "priceRange": "$2,000 - $25,000+"
   }
 
   return (

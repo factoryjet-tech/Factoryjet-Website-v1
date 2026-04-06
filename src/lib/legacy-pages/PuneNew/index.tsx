@@ -15,37 +15,23 @@ const PunePage = () => {
   const schemaMarkup = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "FactoryJet - Website Design Company Pune",
-    "image": "https://www.factoryjet.com/images/factoryjet-pune.jpg",
+    "name": "FactoryJet",
     "url": "https://factoryjet.com/services/web-design/pune",
     "telephone": "+91 96999 77699",
     "email": "connect@factoryjet.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Hinjewadi, Pune",
-      "addressLocality": "Pune",
-      "addressRegion": "Maharashtra",
-      "postalCode": "411057",
+      "streetAddress": "ITPL Main Rd, Tigalarpalya, Brookefield",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560037",
       "addressCountry": "IN"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "18.5904",
-      "longitude": "73.7341"
+    "areaServed": {
+      "@type": "Place",
+      "name": "Pune"
     },
-    "priceRange": "₹15,000 - ₹5,00,000+",
-    "openingHours": ["Mo-Fr 09:00-19:00", "Sa 10:00-16:00"],
-    "areaServed": ["Pune", "Hinjewadi", "Kharadi", "Chakan", "Wakad", "Viman Nagar", "Katraj", "Magarpatta"],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "150"
-    },
-    "sameAs": [
-      "https://www.facebook.com/factoryjet",
-      "https://www.linkedin.com/company/factoryjet",
-      "https://twitter.com/factoryjet"
-    ]
+    "priceRange": "₹29,999 - ₹5,00,000+"
   };
 
   const faqSchema = {

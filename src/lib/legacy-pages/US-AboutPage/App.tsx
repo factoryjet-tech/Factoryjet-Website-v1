@@ -7,6 +7,7 @@ import { useContactModal } from '@/context/ContactModalContext';
 import SkipLink from './components/ui/SkipLink';
 import ScrollProgress from './components/animations/ScrollProgress';
 import FloatingActionButton from './components/ui/FloatingActionButton';
+import { FAQ_DATA } from './lib/constants';
 
 // Import Sections
 import HeroSection from './components/sections/HeroSection';
@@ -23,12 +24,31 @@ import TestimonialSection from './components/sections/TestimonialSection';
 import FAQSection from './components/sections/FAQSection';
 import FinalCTASection from './components/sections/FinalCTASection';
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ_DATA.flatMap((cat) =>
+    cat.items.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    }))
+  ),
+};
+
 export default function App() {
   const { openModal } = useContactModal();
   const openUsModal = () => openModal('us');
 
   return (
     <div className="min-h-screen font-sans selection:bg-jetOrange selection:text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <SkipLink />
       <ScrollProgress />
 

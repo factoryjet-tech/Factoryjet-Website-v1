@@ -48,47 +48,25 @@ export const metadata: Metadata = {
 
 export default function Page() {
   const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'FactoryJet - E-Commerce Development Fargo',
-    description: 'Custom Shopify & e-commerce stores for Fargo businesses. From Microsoft\'s backyard to Main Street — AI-powered development.',
-    url: 'https://factoryjet.com/us/services/ecommerce-development/fargo',
-    logo: 'https://factoryjet.com/logo.png',
-    image: 'https://factoryjet.com/logo.png',
-    telephone: '+91-96999-77699',
-    email: 'connect@factoryjet.com',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Fargo',
-      addressRegion: 'ND',
-      addressCountry: 'US',
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "FactoryJet",
+    "url": "https://factoryjet.com/us/services/ecommerce-development/fargo",
+    "telephone": "+91 96999 77699",
+    "email": "connect@factoryjet.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ITPL Main Rd, Tigalarpalya, Brookefield",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560037",
+      "addressCountry": "IN"
     },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 46.8772,
-      longitude: -96.7898,
+    "areaServed": {
+      "@type": "Place",
+      "name": "Fargo"
     },
-    areaServed: [
-      { '@type': 'City', name: 'Fargo' },
-      { '@type': 'State', name: 'North Dakota' },
-    ],
-    serviceType: [
-      'E-Commerce Development',
-      'Shopify Development',
-      'WooCommerce Development',
-      'AI Agent Development',
-    ],
-    priceRange: '$$',
-    openingHours: 'Mo-Fr 09:00-18:00',
-    sameAs: [
-      'https://www.linkedin.com/company/factoryjet',
-      'https://twitter.com/factoryjet',
-    ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '500',
-    },
+    "priceRange": "$2,000 - $25,000+"
   }
 
   return (

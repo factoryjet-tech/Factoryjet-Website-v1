@@ -291,12 +291,29 @@ const FooterLocal = () => (
     </footer>
 );
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.a,
+    },
+  })),
+};
+
 export default function App() {
   const { openModal } = useContactModal();
   const openUsModal = () => openModal('us');
 
   return (
     <main className="min-h-screen font-body text-slate-800 bg-slate-50 selection:bg-blue-100 selection:text-jet-blue-900">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Header basePath="/us" variant="solid" />
       <Hero />
       <PricingTabs onOpenContact={openUsModal} />

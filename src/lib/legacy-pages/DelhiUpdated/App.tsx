@@ -5,13 +5,13 @@ import Header from '@/components/Header';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import StickyMobileCTA from './components/StickyMobileCTA';
 import Footer from '@/components/Footer';
-import { 
-  HeroSection, 
+import {
+  HeroSection,
   HeroDescription,
-  SocialProof, 
-  AboutBlock, 
-  ProblemSection, 
-  SolutionSection, 
+  SocialProof,
+  AboutBlock,
+  ProblemSection,
+  SolutionSection,
   ServicesSection,
   ProcessSection,
   PricingSection,
@@ -21,34 +21,58 @@ import {
   FAQSection,
   LocalSEOSection,
   FinalCTA,
-  
+
 } from './components/Sections';
+import { FAQS } from './data.constants';
 
 // Schema Markup helper
 const SchemaMarkup = () => {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "FactoryJet - Website Design Company Delhi NCR",
+    "name": "FactoryJet",
     "url": "https://factoryjet.com/website-design-company-delhi-ncr",
-    "telephone": "+91-9999999999",
-    "email": "delhi@factoryjet.com",
+    "telephone": "+91 96999 77699",
+    "email": "connect@factoryjet.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "WeWork, Two Horizon Center, Golf Course Road, Sector 43",
-      "addressLocality": "Gurugram",
-      "addressRegion": "Haryana",
-      "postalCode": "122002",
+      "streetAddress": "ITPL Main Rd, Tigalarpalya, Brookefield",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560037",
       "addressCountry": "IN"
+    },
+    "areaServed": {
+      "@type": "Place",
+      "name": "Delhi NCR"
     },
     "priceRange": "₹29,999 - ₹5,00,000+"
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQS.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+    </>
   );
 };
 

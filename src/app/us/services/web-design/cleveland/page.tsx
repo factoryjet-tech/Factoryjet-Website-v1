@@ -48,55 +48,25 @@ export const metadata: Metadata = {
 
 export default function Page() {
   const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'FactoryJet - Web Design Company Cleveland',
-    description: 'AI-native web development company delivering enterprise-quality websites for Cleveland, Ohio businesses in 7 days at 60-70% lower cost.',
-    url: 'https://factoryjet.com/us/services/web-design/cleveland',
-    logo: 'https://factoryjet.com/logo.png',
-    image: 'https://factoryjet.com/logo.png',
-    telephone: '+91-96999-77699',
-    email: 'connect@factoryjet.com',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Cleveland',
-      addressRegion: 'OH',
-      addressCountry: 'US',
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "FactoryJet",
+    "url": "https://factoryjet.com/us/services/web-design/cleveland",
+    "telephone": "+91 96999 77699",
+    "email": "connect@factoryjet.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ITPL Main Rd, Tigalarpalya, Brookefield",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560037",
+      "addressCountry": "IN"
     },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 41.4993,
-      longitude: -81.6944,
+    "areaServed": {
+      "@type": "Place",
+      "name": "Cleveland"
     },
-    areaServed: [
-      {
-        '@type': 'City',
-        name: 'Cleveland',
-      },
-      {
-        '@type': 'State',
-        name: 'Ohio',
-      },
-    ],
-    serviceType: [
-      'Web Design',
-      'Web Development',
-      'E-commerce Development',
-      'SEO Services',
-      'Custom Website Development',
-      'AI-Optimized Websites',
-    ],
-    priceRange: '$$',
-    openingHours: 'Mo-Fr 09:00-18:00',
-    sameAs: [
-      'https://www.linkedin.com/company/factoryjet',
-      'https://twitter.com/factoryjet',
-    ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '500',
-    },
+    "priceRange": "$2,000 - $25,000+"
   }
 
   return (

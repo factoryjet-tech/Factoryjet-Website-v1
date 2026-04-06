@@ -207,6 +207,20 @@ const faqData: Record<string, Array<{ q: string; a: string }>> = {
   ]
 };
 
+// Generate FAQPage JSON-LD schema from all FAQ data
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: Object.values(faqData).flat().map((item) => ({
+    "@type": "Question",
+    name: item.q.replace(/\*/g, ''),
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.a.replace(/\*\*/g, ''),
+    },
+  })),
+};
+
 const FAQ: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>('strategy');
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -217,6 +231,10 @@ const FAQ: React.FC = () => {
 
   return (
     <section id="faq" className="py-16 md:py-24 bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}

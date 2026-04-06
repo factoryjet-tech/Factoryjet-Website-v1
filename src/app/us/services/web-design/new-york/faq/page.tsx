@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import NewYorkFAQPage from '@/lib/legacy-pages/NewYorkFAQ/App'
+import { faqData } from '@/lib/legacy-pages/NewYorkFAQ/data/faqData'
 
 export const metadata: Metadata = {
   title: 'Web Design FAQ New York City | Common Questions | FactoryJet NYC',
@@ -42,6 +43,27 @@ export const metadata: Metadata = {
   },
 }
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqData.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: Array.isArray(faq.answer) ? faq.answer.join(' ') : faq.answer,
+    },
+  })),
+};
+
 export default function Page() {
-  return <NewYorkFAQPage />
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <NewYorkFAQPage />
+    </>
+  )
 }

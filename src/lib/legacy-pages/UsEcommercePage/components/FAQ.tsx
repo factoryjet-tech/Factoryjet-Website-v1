@@ -125,6 +125,22 @@ const faqData = [
   }
 ];
 
+// Generate FAQPage JSON-LD schema from all FAQ categories
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqData.flatMap((cat) =>
+    cat.questions.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    }))
+  ),
+};
+
 const FAQ: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState(faqData[0].id);
   const [openQuestions, setOpenQuestions] = useState<string[]>([]);
@@ -139,6 +155,10 @@ const FAQ: React.FC = () => {
 
   return (
     <Section id="faq" className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Knowledge Base Header */}
       <div className="text-center mb-12 md:mb-16">
         <span className="text-jet-blue font-bold tracking-widest uppercase text-xs md:text-sm mb-3 block">KNOWLEDGE BASE</span>

@@ -56,38 +56,79 @@ const ServiceLocationPage: React.FC<ServiceLocationPageProps> = ({ params }) => 
   // Structured Data (JSON-LD) for SEO
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": `FactoryJet - ${serviceData.name} in ${cityName}`,
-    "image": "https://factoryjet.com/FinalLogo.svg",
+    "@type": "LocalBusiness",
+    "name": "FactoryJet",
     "url": `https://factoryjet.com/services/${service}/${city}`,
-    "telephone": "+919699977699",
+    "telephone": "+91 96999 77699",
     "email": "connect@factoryjet.com",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": cityName,
-      "addressRegion": cityData.state,
+      "streetAddress": "ITPL Main Rd, Tigalarpalya, Brookefield",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560037",
       "addressCountry": "IN"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "19.0760",
-      "longitude": "72.8777"
-    },
-    "priceRange": "₹₹-₹₹₹",
     "areaServed": {
-      "@type": "City",
+      "@type": "Place",
       "name": cityName
     },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "150"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/company/factoryjet",
-      "https://www.instagram.com/factoryjet",
-      "https://www.facebook.com/factoryjet"
-    ]
+    "priceRange": "₹29,999 - ₹5,00,000+"
+  };
+
+  const faqSchemaData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: `How long does it take to complete a project in ${cityName}?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Most projects are completed within 7 days. Complex projects may take 2-3 weeks. We provide detailed timelines during the consultation phase.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is included in your service packages?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "All packages include custom design, development, SEO optimization, mobile responsiveness, hosting setup, and ongoing support for the first month.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you provide ongoing support after launch?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes! We offer 24/7 support and maintenance packages. The first month of support is included with all projects.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is your payment structure?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We follow a milestone-based payment structure: 40% advance, 30% on design approval, and 30% on completion. Flexible payment options available.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can you help with content and copywriting?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Absolutely! We have content specialists who can help with professional copywriting, product descriptions, and SEO-optimized content.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you provide SEO services?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, basic on-page SEO is included in all projects. We also offer comprehensive SEO packages for long-term organic growth.",
+        },
+      },
+    ],
   };
 
   const breadcrumbData = {
@@ -133,6 +174,18 @@ const ServiceLocationPage: React.FC<ServiceLocationPageProps> = ({ params }) => 
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchemaData) }}
+      />
       <div className="min-h-screen bg-white">
         <Header variant="transparent" />
 

@@ -48,55 +48,25 @@ export const metadata: Metadata = {
 
 export default function Page() {
   const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'FactoryJet - Web Design Company NYC',
-    description: 'AI-native web development company delivering enterprise-quality websites for New York City businesses in 7 days at 60-70% lower cost.',
-    url: 'https://factoryjet.com/us/services/web-design/new-york',
-    logo: 'https://factoryjet.com/logo.png',
-    image: 'https://factoryjet.com/logo.png',
-    telephone: '+91-96999-77699',
-    email: 'connect@factoryjet.com',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'New York',
-      addressRegion: 'NY',
-      addressCountry: 'US',
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "FactoryJet",
+    "url": "https://factoryjet.com/us/services/web-design/new-york",
+    "telephone": "+91 96999 77699",
+    "email": "connect@factoryjet.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ITPL Main Rd, Tigalarpalya, Brookefield",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560037",
+      "addressCountry": "IN"
     },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 40.7128,
-      longitude: -74.0060,
+    "areaServed": {
+      "@type": "Place",
+      "name": "New York"
     },
-    areaServed: [
-      {
-        '@type': 'City',
-        name: 'New York City',
-      },
-      {
-        '@type': 'State',
-        name: 'New York',
-      },
-    ],
-    serviceType: [
-      'Web Design',
-      'Web Development',
-      'E-commerce Development',
-      'SEO Services',
-      'Custom Website Development',
-      'AI-Optimized Websites',
-    ],
-    priceRange: '$$',
-    openingHours: 'Mo-Fr 09:00-18:00',
-    sameAs: [
-      'https://www.linkedin.com/company/factoryjet',
-      'https://twitter.com/factoryjet',
-    ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '500',
-    },
+    "priceRange": "$2,000 - $25,000+"
   }
 
   return (

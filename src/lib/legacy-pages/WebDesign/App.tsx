@@ -12,6 +12,7 @@ import { Showcase } from './components/Showcase';
 import { Analysis } from './components/Analysis';
 import { Info } from './components/Info';
 import { Locations } from './components/Locations';
+import { FAQS } from './data';
 
 function App() {
   // Smooth scroll behavior for anchor links if needed
@@ -86,11 +87,28 @@ function App() {
     }
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQS.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.a,
+      },
+    })),
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <main className="min-h-screen bg-white font-sans text-slate-900 selection:bg-jet-orange/20 selection:text-jet-orange">
         <Header variant="solid" />

@@ -3,62 +3,27 @@ import Script from 'next/script'
 import { homeAlternates } from '@/data/hreflangMap'
 import UaePage from '@/pages/UaePage'
 
-// Organization structured data for SEO
-const organizationJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'FactoryJet Dubai',
-  alternateName: 'FactoryJet UAE',
-  url: 'https://factoryjet.com/uae',
-  logo: 'https://factoryjet.com/FinalLogo.svg',
-  description: 'Premium Web Design & Development Agency in Dubai, UAE. AI-powered web solutions for businesses in the Middle East.',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Dubai',
-    addressCountry: 'AE',
-  },
-  areaServed: [
-    { '@type': 'Country', name: 'United Arab Emirates' },
-    { '@type': 'City', name: 'Dubai' },
-    { '@type': 'City', name: 'Abu Dhabi' },
-    { '@type': 'City', name: 'Sharjah' },
-  ],
-  sameAs: [
-    'https://www.linkedin.com/company/factoryjet',
-    'https://twitter.com/factoryjet',
-  ],
-}
-
-// Local Business structured data for better local SEO
+// LocalBusiness structured data for SEO
 const localBusinessJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'WebDesign',
-  name: 'FactoryJet - Web Design Agency Dubai',
-  image: 'https://factoryjet.com/logo.png',
-  url: 'https://factoryjet.com/uae',
-  telephone: '+971-50-000-0000',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Dubai',
-    addressCountry: 'AE',
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "FactoryJet",
+  "url": "https://factoryjet.com/uae",
+  "telephone": "+91 96999 77699",
+  "email": "connect@factoryjet.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ITPL Main Rd, Tigalarpalya, Brookefield",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "Karnataka",
+    "postalCode": "560037",
+    "addressCountry": "IN"
   },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 25.2048,
-    longitude: 55.2708,
+  "areaServed": {
+    "@type": "Place",
+    "name": "Dubai"
   },
-  priceRange: 'AED 5,000 - AED 100,000+',
-  openingHoursSpecification: {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-    opens: '09:00',
-    closes: '18:00',
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '150',
-  },
+  "priceRange": "$2,000 - $25,000+"
 }
 
 // Breadcrumb structured data
@@ -150,13 +115,6 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      {/* Organization Structured Data */}
-      <Script
-        id="organization-jsonld"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
-      />
-
       {/* Local Business Structured Data */}
       <Script
         id="local-business-jsonld"
