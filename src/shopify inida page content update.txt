@@ -1,0 +1,132 @@
+SECTION 1: PRICING SECTION (Replace existing #pricing section content)
+Heading & Subheading — keep existing structure, update copy:
+How Much Does Shopify Development Cost in India?
+
+Transparent INR pricing for Indian D2C and B2B brands. All packages include GST-ready billing, Indian payment gateway integration, and logistics platform support.
+
+Three Pricing Cards:
+
+
+Card 1 — 
+Price: Starting from ₹1,50,000 – ₹3,00,000 Timeline: 4–8 weeks
+
+Card 2 —
+Price: Starting from ₹4,00,000 – ₹8,00,000 Timeline: 8–14 weeks
+
+Card 3 — Enterprise / Shopify Plus 
+
+Price: Starting from ₹10,00,000+ Timeline: 12–20 weeks
+
+Full Pricing Table (replace USD values with INR):
+Service
+Price Range (INR)
+Timeline
+Best For
+Shopify Theme-Based Store
+₹1,50,000 – ₹3,00,000
+4–8 weeks
+Startups launching their first Shopify store
+Custom Shopify Store
+₹4,00,000 – ₹8,00,000
+8–14 weeks
+D2C brands needing custom design and integrations
+Shopify Plus Enterprise Store
+₹10,00,000+
+12–20 weeks
+High-revenue brands needing Shopify Plus Development
+Headless Shopify (Hydrogen)
+₹12,00,000 – ₹40,00,000+
+12–20 weeks
+Brands needing ultra-fast performance
+Shopify Migration
+₹1,50,000 – ₹20,00,000
+4–12 weeks
+Businesses migrating from WooCommerce or Magento
+Shopify App Development
+₹2,50,000 – ₹15,00,000+
+6–16 weeks
+Custom functionality not in the Shopify App Store
+Ongoing Support (AMC)
+₹15,000 – ₹80,000/month
+Ongoing
+Maintenance, updates, and Tech support
+
+Bottom note (replace existing):
+FactoryJet's India-based team delivers enterprise-grade Shopify and Shopify Plus Development for Indian brands — with GST-ready billing, Razorpay and PayU integration, COD support, and Shiprocket / Delhivery logistics setup included. All pricing is in INR and inclusive of project management, QA testing, and 30-day post-launch support.
+2. MIGRATION SECTION
+text
+WooCommerce: $5,000 – $50,000 → ₹4,15,000 - ₹41,50,000
+Magento: $15,000 – $75,000 → ₹12,45,000 - ₹62,25,000
+3. SERVICE CARDS (svc-price class)
+
+text
+"From $5,000" → "From ₹1,50,000"
+"$25K – $150K" → "₹10L - ₹1.25Cr"  
+"$30K - $120K" → "₹12L - ₹40L"
+"From $8,000" → "From ₹2,50,000"
+4. REVENUE THRESHOLD (id="comparison")
+Text = Monthly revenue consistently exceeds $80,000 to $100,000
+80,000 to 100,000 → ₹66,40,000 - ₹83,00,000/month
+5 . GLOBAL TEXT CHANGES
+text
+"vs US/UK Agency Rates" → "vs Global Rates (60% savings)"
+"at 40 to 60 percent below comparable US agency rates. → at 60% below Global agency rates"
+
+SECTION 2: INDIA TRUST BLOCK (Add below Pricing, above Why FactoryJet)
+Add this as a new <section> between #pricing and #why-factoryjet:
+Heading: Trusted by Brands Across India
+Body: FactoryJet delivers Shopify Development and Shopify Plus Development for D2C and B2B brands across Mumbai, Bangalore, Delhi NCR, Pune, Hyderabad, and Chennai. Every store we build is GST-ready, integrated with Razorpay and PayU, and connected to Shiprocket and Delhivery — so Indian brands can sell and ship from day one.
+
+
+SECTION 3: FAQ SECTION 
+Here's your final FAQ 
+
+FAQ 1 What is Shopify website development cost in India?
+Shopify development in India starts from ₹1,50,000 for theme-based stores and goes up to ₹10,00,000 or more for Shopify Plus Development projects. The final cost depends on design complexity, number of products, integrations like Razorpay and Shiprocket, and whether you need B2B or headless commerce. FactoryJet offers transparent INR pricing with no hidden costs.
+
+FAQ 2 Do you support Shopify Plus development in India?
+Yes. FactoryJet provides full Shopify Plus Development for Indian brands including Checkout Extensibility, B2B commerce setup, multi-store architecture, Shopify Flow automation, and enterprise ERP integrations. Shopify Plus is ideal for high-revenue Indian brands doing ₹80 lakh or more in monthly GMV.
+
+FAQ 3 What is the difference between Shopify and Shopify Plus?
+(Keep existing answer as-is)
+
+FAQ 4 How long does it take to build a Shopify store?
+(Keep existing answer as-is)
+
+FAQ 5 Do you integrate Razorpay, PayU, and COD for Indian stores?
+Yes. We integrate Razorpay, PayU, Cashfree, and PayTM payment gateways for Indian Shopify stores. We also configure Cash on Delivery workflows including COD verification and COD fee logic — essential for Indian D2C brands where COD accounts for 40–60% of orders.
+
+FAQ 6 Is GST billing supported on Shopify stores?
+Yes. Every Shopify store we build for Indian businesses includes GST-compliant invoice generation, multi-state tax configuration covering CGST, SGST, and IGST, and HSN/SAC code setup. We also integrate Tally and Zoho Books for automated GST reconciliation where needed.
+
+FAQ 7 Can you migrate our store from WooCommerce or Magento to Shopify?
+Yes. We handle zero-downtime migrations from WooCommerce, Magento, PrestaShop, and other platforms to Shopify and Shopify Plus. The migration includes full transfer of products, customers, orders, and blog content — along with 301 redirects to protect your existing Google rankings. Timelines range from 4 to 12 weeks.
+
+FAQ 8 What is headless Shopify development with Hydrogen?
+(Keep existing answer as-is)
+
+FAQ 9 Can Shopify handle B2B and wholesale e-commerce?
+(Keep existing answer as-is)
+
+FAQ 10 Do you offer Shopify Plus for enterprise brands in India?
+Yes. FactoryJet handles Shopify Plus Development for enterprise Indian brands in fashion, FMCG, electronics, and B2B sectors. Shopify Plus gives Indian enterprises custom checkout via Checkout Extensibility, unlimited staff accounts, advanced Shopify Flow automation, and up to 10 expansion storefronts — making it the right platform for brands scaling beyond ₹1 crore per month in online revenue.
+
+
+TECHNICAL ISSUES MUST FIX
+1. Add hreflang = Since we have a /us/ version of this page, Google may treat them as duplicate content. Add these to India page's <head> immediately:
+India page <head>:
+html
+<link rel="canonical" href="https://factoryjet.com/ecommerce-development/shopify-development" />
+<link rel="alternate" hreflang="en-in" href="https://factoryjet.com/ecommerce-development/shopify-development" />
+<link rel="alternate" hreflang="en-us" href="https://factoryjet.com/us/ecommerce-development/shopify-development" />
+<link rel="alternate" hreflang="x-default" href="https://factoryjet.com/ecommerce-development/shopify-development" />
+
+Add this in US page https://factoryjet.com/us/ecommerce-development/shopify-development
+ <head>:
+html
+<link rel="canonical" href="https://factoryjet.com/us/ecommerce-development/shopify-development" /> <link rel="alternate" hreflang="en-in" href="https://factoryjet.com/ecommerce-development/shopify-development" /> <link rel="alternate" hreflang="en-us" href="https://factoryjet.com/us/ecommerce-development/shopify-development" /> <link rel="alternate" hreflang="x-default" href="https://factoryjet.com/ecommerce-development/shopify-development" />
+
+2. og:locale is set to en_US on the India page Your meta tag reads <meta property="og:locale" content="en_US"/>. This should be en_IN on the India/global page. This confuses both social platforms and signals to Google that your India page is actually US-targeted.
+3. FAQ schema (JSON-LD) is missing 
+4. The og:locale on your /us/ page should be en_US Make sure the US page has en_US locale and the India page has en_IN — this pair, combined with hreflang, is the correct signal stack for geo-targeting.
+5. Breadcrumb shows /services/ but your URL is /ecommerce-development/ Your breadcrumb HTML reads href="/services/" and href="/services/ecommerce-development/" but your actual URL structure is /ecommerce-development/shopify-development. Fix the breadcrumb links to match your real URL paths — mismatched breadcrumbs break BreadcrumbList schema and confuse crawlers.

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter, Poppins } from 'next/font/google'
 import '../index.css'
 import { ContactModalProvider } from '../context/ContactModalContext'
@@ -25,6 +25,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://factoryjet.com'),
   title: 'World-Class Web & E-Commerce Development Company | FactoryJet',
   description: 'FactoryJet is a leading web & eCommerce development company delivering scalable, secure, and high-performance digital solutions. Fast delivery, affordable pricing, 150+ successful projects. Get a free consultation today!',
   authors: [{ name: 'FactoryJet' }],
@@ -68,8 +69,11 @@ export const metadata: Metadata = {
     icon: '/favicon.svg',
     apple: '/favicon.svg',
   },
-  themeColor: '#0052CC',
   manifest: '/site.webmanifest',
+}
+
+export const viewport: Viewport = {
+  themeColor: '#0052CC',
 }
 
 export default function RootLayout({

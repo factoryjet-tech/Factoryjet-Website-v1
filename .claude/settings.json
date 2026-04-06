@@ -35,7 +35,10 @@
       "Bash(xargs -I {} bash -c 'grep -L \"FAQPage\" {} && echo \" \\(NO SCHEMA\\)\"')",
       "Bash([ -f \"/c/FactoryJet/rishi-branch/Factoryjet-Website-v1/src/lib/legacy-pages/$dir/App.tsx\" ])",
       "Bash([ -f \"/c/FactoryJet/rishi-branch/Factoryjet-Website-v1/src/lib/legacy-pages/$dir/index.tsx\" ])",
-      "Bash(bash /tmp/check_faq.sh)"
+      "Bash(bash /tmp/check_faq.sh)",
+      "Bash(ls -la node_modules/tailwindcss/oxide*)",
+      "Bash(taskkill //PID 27720 //F)",
+      "Bash(netstat -ano)"
     ]
   }
 }

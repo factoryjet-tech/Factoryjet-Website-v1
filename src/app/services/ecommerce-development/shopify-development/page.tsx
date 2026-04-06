@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import ShopifyDevelopmentPage from '@/pages/ShopifyDevelopment';
+import ShopifyDevelopmentPage from '@/pages/ShopifyDevelopmentIN';
 
 export const metadata: Metadata = {
   title: 'Shopify & Shopify Plus E-Commerce Development Services | FactoryJet',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
         alt: 'FactoryJet Shopify Development Services',
       },
     ],
-    locale: 'en_US',
+    locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',
@@ -40,6 +40,11 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/ecommerce-development/shopify-development',
+    languages: {
+      'en-in': 'https://factoryjet.com/services/ecommerce-development/shopify-development',
+      'en-us': 'https://factoryjet.com/us/services/ecommerce-development/shopify-development',
+      'x-default': 'https://factoryjet.com/services/ecommerce-development/shopify-development',
+    },
   },
 };
 

@@ -3,8 +3,8 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useContactModal } from '@/context/ContactModalContext';
 import Header from '@/components/Header';
-import FooterUS from '@/components/FooterUS';
-import './shopify.css';
+import Footer from '@/components/Footer';
+import '../ShopifyDevelopment/shopify.css';
 
 import HeroSection from './components/HeroSection';
 import TrustStrip from './components/TrustStrip';
@@ -22,7 +22,7 @@ import CaseStudies from './components/CaseStudies';
 import FaqSection from './components/FaqSection';
 import FinalCta from './components/FinalCta';
 
-export default function ShopifyDevelopmentPage() {
+export default function ShopifyDevelopmentINPage() {
   const { openModal } = useContactModal();
   const [pricingTab, setPricingTab] = useState('build');
   const [fullTableOpen, setFullTableOpen] = useState(false);
@@ -32,7 +32,7 @@ export default function ShopifyDevelopmentPage() {
 
   const handleCta = useCallback((e?: React.MouseEvent) => {
     e?.preventDefault();
-    openModal('us');
+    openModal('in');
   }, [openModal]);
 
   // Parallax on hero elements
@@ -175,16 +175,16 @@ export default function ShopifyDevelopmentPage() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "How much does Shopify e-commerce development cost?", acceptedAnswer: { "@type": "Answer", text: "Shopify e-commerce development costs range from $5,000 to $25,000 for standard Shopify stores and $25,000 to $150,000 or more for Shopify Plus enterprise builds. Factors that affect cost include design complexity, number of product SKUs, third-party integrations with ERP, CRM, and PIM systems, custom app development, and migration requirements. FactoryJet offers enterprise-grade Shopify development at startup-friendly prices, with projects typically 40 to 60 percent below US and UK agency rates." } },
+      { "@type": "Question", name: "What is Shopify website development cost in India?", acceptedAnswer: { "@type": "Answer", text: "Shopify development in India starts from ₹1,50,000 for theme-based stores and goes up to ₹10,00,000 or more for Shopify Plus Development projects. The final cost depends on design complexity, number of products, integrations like Razorpay and Shiprocket, and whether you need B2B or headless commerce. FactoryJet offers transparent INR pricing with no hidden costs." } },
+      { "@type": "Question", name: "Do you support Shopify Plus development in India?", acceptedAnswer: { "@type": "Answer", text: "Yes. FactoryJet provides full Shopify Plus Development for Indian brands including Checkout Extensibility, B2B commerce setup, multi-store architecture, Shopify Flow automation, and enterprise ERP integrations. Shopify Plus is ideal for high-revenue Indian brands doing ₹80 lakh or more in monthly GMV." } },
       { "@type": "Question", name: "What is the difference between Shopify and Shopify Plus?", acceptedAnswer: { "@type": "Answer", text: "Shopify is designed for small to mid-size businesses with monthly plans starting at $39, while Shopify Plus is the enterprise tier starting at $2,300 per month for high-growth brands doing $80,000 or more in monthly revenue. Shopify Plus offers full checkout customization through Checkout Extensibility, B2B selling with company profiles and custom price lists, up to 10 expansion stores, unlimited staff accounts, 10x API call limits, a dedicated Merchant Success Manager, and advanced automation through Shopify Flow and Launchpad." } },
       { "@type": "Question", name: "How long does it take to build a Shopify store?", acceptedAnswer: { "@type": "Answer", text: "A standard Shopify store using a customized theme takes 4 to 8 weeks. A fully custom Shopify store with bespoke design and integrations takes 8 to 14 weeks. Enterprise Shopify Plus builds with headless architecture, B2B functionality, and complex integrations typically take 12 to 20 weeks." } },
-      { "@type": "Question", name: "Can you migrate my existing store to Shopify or Shopify Plus?", acceptedAnswer: { "@type": "Answer", text: "Yes. FactoryJet provides zero-downtime migration services from WooCommerce, Magento, BigCommerce, Salesforce Commerce Cloud, Wix, Squarespace, and custom platforms to Shopify and Shopify Plus. Our migration process preserves all product data, customer records, order history, and SEO rankings through 301 redirects and structured data transfer." } },
+      { "@type": "Question", name: "Do you integrate Razorpay, PayU, and COD for Indian stores?", acceptedAnswer: { "@type": "Answer", text: "Yes. We integrate Razorpay, PayU, Cashfree, and PayTM payment gateways for Indian Shopify stores. We also configure Cash on Delivery workflows including COD verification and COD fee logic — essential for Indian D2C brands where COD accounts for 40–60% of orders." } },
+      { "@type": "Question", name: "Is GST billing supported on Shopify stores?", acceptedAnswer: { "@type": "Answer", text: "Yes. Every Shopify store we build for Indian businesses includes GST-compliant invoice generation, multi-state tax configuration covering CGST, SGST, and IGST, and HSN/SAC code setup. We also integrate Tally and Zoho Books for automated GST reconciliation where needed." } },
+      { "@type": "Question", name: "Can you migrate our store from WooCommerce or Magento to Shopify?", acceptedAnswer: { "@type": "Answer", text: "Yes. We handle zero-downtime migrations from WooCommerce, Magento, PrestaShop, and other platforms to Shopify and Shopify Plus. The migration includes full transfer of products, customers, orders, and blog content — along with 301 redirects to protect your existing Google rankings. Timelines range from 4 to 12 weeks." } },
       { "@type": "Question", name: "What is headless Shopify development with Hydrogen?", acceptedAnswer: { "@type": "Answer", text: "Headless Shopify development separates the frontend presentation layer from the Shopify backend, allowing fully custom storefronts built with modern web technologies. Shopify Hydrogen is Shopify's official React-based framework for headless builds, hosted on Shopify's Oxygen infrastructure. Hydrogen storefronts deliver 50 to 70 percent faster page loads, near-perfect Lighthouse scores, and 30 percent or higher conversion improvements." } },
       { "@type": "Question", name: "Can Shopify handle B2B and wholesale e-commerce?", acceptedAnswer: { "@type": "Answer", text: "Yes. Shopify Plus includes native B2B functionality with company profiles, custom price lists, net payment terms, quick-order lists, and volume-based discounts. Businesses can run DTC and B2B operations from a single Shopify Plus store or create dedicated B2B expansion stores." } },
-      { "@type": "Question", name: "Do you work with international clients?", acceptedAnswer: { "@type": "Answer", text: "Yes. FactoryJet serves clients across the United States, Canada, United Kingdom, Europe, Australia, Singapore, UAE, Saudi Arabia, and India. We configure multi-currency storefronts through Shopify Markets, set up region-specific payment gateways, and implement international shipping and tax compliance." } },
-      { "@type": "Question", name: "Do you provide ongoing Shopify support after launch?", acceptedAnswer: { "@type": "Answer", text: "Yes. FactoryJet offers Annual Maintenance Contracts starting at $500 per month for standard Shopify stores and $1,500 per month for Shopify Plus enterprise stores. AMC plans cover performance monitoring, security updates, bug fixes, content updates, and 24/7 priority support." } },
-      { "@type": "Question", name: "Which industries do you serve for Shopify development?", acceptedAnswer: { "@type": "Answer", text: "We build Shopify stores across fashion, health and beauty, food and beverage, home and furniture, jewelry, sports, B2B wholesale, luxury retail, electronics, and subscription businesses. Each industry receives tailored store architecture, checkout flows, and integration configurations." } },
-      { "@type": "Question", name: "What makes FactoryJet different from other Shopify agencies?", acceptedAnswer: { "@type": "Answer", text: "FactoryJet combines AI-native development practices with deep Shopify expertise. Every store we build is optimized for visibility across Google, AI Overviews, ChatGPT, Perplexity, and other AI search engines. Our India-based team delivers enterprise-grade quality at 40 to 60 percent below comparable US, UK, and Australian agency rates." } },
+      { "@type": "Question", name: "Do you offer Shopify Plus for enterprise brands in India?", acceptedAnswer: { "@type": "Answer", text: "Yes. FactoryJet handles Shopify Plus Development for enterprise Indian brands in fashion, FMCG, electronics, and B2B sectors. Shopify Plus gives Indian enterprises custom checkout via Checkout Extensibility, unlimited staff accounts, advanced Shopify Flow automation, and up to 10 expansion storefronts — making it the right platform for brands scaling beyond ₹1 crore per month in online revenue." } },
     ],
   };
 
@@ -194,7 +194,7 @@ export default function ShopifyDevelopmentPage() {
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(shopifyFaqSchema) }}
     />
-    <Header variant="transparent" basePath="/us" />
+    <Header variant="transparent" basePath="" />
     <div className="shopify-page">
       <HeroSection handleCta={handleCta} />
       <TrustStrip />
@@ -207,12 +207,18 @@ export default function ShopifyDevelopmentPage() {
       <MigrationSection handleCta={handleCta} />
       <GlobalReach handleCta={handleCta} />
       <PricingSection handleCta={handleCta} pricingTab={pricingTab} setPricingTab={setPricingTab} fullTableOpen={fullTableOpen} setFullTableOpen={setFullTableOpen} />
+      <section className="sec sec--w" style={{paddingTop:'48px',paddingBottom:'48px'}}>
+        <div className="ctr" style={{textAlign:'center'}}>
+          <h2 style={{marginBottom:'16px'}}>Trusted by Brands Across India</h2>
+          <p className="sub sub--center">FactoryJet delivers Shopify Development and Shopify Plus Development for D2C and B2B brands across Mumbai, Bangalore, Delhi NCR, Pune, Hyderabad, and Chennai. Every store we build is GST-ready, integrated with Razorpay and PayU, and connected to Shiprocket and Delhivery — so Indian brands can sell and ship from day one.</p>
+        </div>
+      </section>
       <WhyFactoryJet handleCta={handleCta} />
       <CaseStudies csScrollRef={csScrollRef} scrollCS={scrollCS} />
       <FaqSection handleCta={handleCta} faqFilter={faqFilter} setFaqFilter={setFaqFilter} faqSearch={faqSearch} setFaqSearch={setFaqSearch} clearFqSearch={clearFqSearch} />
       <FinalCta handleCta={handleCta} />
     </div>
-    <FooterUS />
+    <Footer />
     </>
   );
 }
