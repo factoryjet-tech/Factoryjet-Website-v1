@@ -642,7 +642,7 @@ const Pricing: React.FC = () => {
             perfect stack.
           </p>
           <a
-            href="https://wa.me/91969977699"
+            href="https://wa.me/919699977699"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => {

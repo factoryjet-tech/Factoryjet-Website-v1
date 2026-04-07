@@ -17,19 +17,19 @@ const Footer: React.FC = () => {
         <div>
           <h4 className="text-white font-bold mb-4">Services</h4>
           <ul className="space-y-2">
-            <li><a href="#" className="hover:text-white">Shopify Development</a></li>
-            <li><a href="#" className="hover:text-white">BigCommerce B2B</a></li>
-            <li><a href="#" className="hover:text-white">Mobile Apps</a></li>
-            <li><a href="#" className="hover:text-white">Headless Commerce</a></li>
+            <li><a href="/us/services/ecommerce-development/shopify-development" className="hover:text-white">Shopify Development</a></li>
+            <li><a href="/us/services/ecommerce-development" className="hover:text-white">E-Commerce Development</a></li>
+            <li><a href="/us/services/web-design" className="hover:text-white">Web Design</a></li>
+            <li><a href="/services/ai-agent-development" className="hover:text-white">AI Agent Development</a></li>
           </ul>
         </div>
-        
+
         <div>
            <h4 className="text-white font-bold mb-4">Company</h4>
            <ul className="space-y-2">
-             <li><a href="#" className="hover:text-white">Case Studies</a></li>
-             <li><a href="#" className="hover:text-white">Pricing</a></li>
-             <li><a href="#" className="hover:text-white">Contact</a></li>
+             <li><a href="/case" className="hover:text-white">Case Studies</a></li>
+             <li><a href="/us/pricing" className="hover:text-white">Pricing</a></li>
+             <li><a href="/us/about" className="hover:text-white">About Us</a></li>
            </ul>
         </div>
         

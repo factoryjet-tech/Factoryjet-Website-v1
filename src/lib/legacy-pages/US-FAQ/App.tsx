@@ -444,7 +444,7 @@ const FooterLocal = React.memo(() => (
       <div>
         <h4 className="font-bold text-white mb-4">Company</h4>
         <ul className="space-y-2 text-sm">
-          <li className="hover:text-white"><Link href="/about">About Us</Link></li>
+          <li className="hover:text-white"><Link href="/us/about">About Us</Link></li>
           <li className="hover:text-white"><Link href="/us#process">Process</Link></li>
           <li className="hover:text-white"><Link href="/contact">Contact</Link></li>
           <li className="hover:text-white"><Link href="/us/faq">FAQ</Link></li>

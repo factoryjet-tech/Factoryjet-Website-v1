@@ -42,7 +42,9 @@ export const MobileStickyCTA = () => {
   return (
     <div className="fixed bottom-0 left-0 w-full z-[9999] flex md:hidden shadow-[0_-4px_12px_rgba(0,0,0,0.15)] border-t border-slate-100 animate-in slide-in-from-bottom-full duration-300">
       <a
-        href="#"
+        href="https://wa.me/919699977699?text=Hi%20FactoryJet%2C%20I%27m%20interested%20in%20website%20design%20services%20in%20Bangalore."
+        target="_blank"
+        rel="noopener noreferrer"
         onClick={trackWhatsAppConversion}
         className="flex-1 bg-whatsapp hover:bg-whatsapp-hover text-white py-4 flex items-center justify-center font-bold text-lg gap-2 active:bg-whatsapp-hover transition-colors"
         aria-label="Chat on WhatsApp"

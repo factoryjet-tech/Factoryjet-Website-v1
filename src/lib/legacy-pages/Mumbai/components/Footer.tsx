@@ -11,11 +11,11 @@ const Footer: React.FC = () => {
             <div className="text-2xl font-bold font-heading mb-4 text-white">FactoryJet</div>
             <p className="text-slate-400 text-sm mb-6">Mumbai's most trusted industrial web design agency. We transform manufacturers and exporters into global brands through professional websites.</p>
             <div className="flex gap-4">
-              <Facebook className="w-5 h-5 text-slate-400 hover:text-white cursor-pointer"/>
-              <Twitter className="w-5 h-5 text-slate-400 hover:text-white cursor-pointer"/>
-              <Instagram className="w-5 h-5 text-slate-400 hover:text-white cursor-pointer"/>
-              <Linkedin className="w-5 h-5 text-slate-400 hover:text-white cursor-pointer"/>
-              <Youtube className="w-5 h-5 text-slate-400 hover:text-white cursor-pointer"/>
+              <a href="https://www.facebook.com/factoryjet" target="_blank" rel="noopener noreferrer"><Facebook className="w-5 h-5 text-slate-400 hover:text-white cursor-pointer"/></a>
+              <a href="https://x.com/FactoryJet_Tech" target="_blank" rel="noopener noreferrer"><Twitter className="w-5 h-5 text-slate-400 hover:text-white cursor-pointer"/></a>
+              <a href="https://www.instagram.com/factoryjet" target="_blank" rel="noopener noreferrer"><Instagram className="w-5 h-5 text-slate-400 hover:text-white cursor-pointer"/></a>
+              <a href="https://in.linkedin.com/company/factoryjet" target="_blank" rel="noopener noreferrer"><Linkedin className="w-5 h-5 text-slate-400 hover:text-white cursor-pointer"/></a>
+              <a href="https://www.youtube.com/@factoryjet" target="_blank" rel="noopener noreferrer"><Youtube className="w-5 h-5 text-slate-400 hover:text-white cursor-pointer"/></a>
             </div>
           </div>
 
@@ -23,13 +23,13 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-lg mb-6">Quick Links</h4>
             <ul className="space-y-3 text-sm text-slate-400">
-              <li><a href="#" className="hover:text-white">Home</a></li>
-              <li><a href="#" className="hover:text-white">About Us</a></li>
-              <li><a href="#" className="hover:text-white">Services</a></li>
-              <li><a href="#" className="hover:text-white">Portfolio</a></li>
-              <li><a href="#" className="hover:text-white">Case Studies</a></li>
-              <li><a href="#" className="hover:text-white">Blog</a></li>
-              <li><a href="#" className="hover:text-white">Contact</a></li>
+              <li><a href="/" className="hover:text-white">Home</a></li>
+              <li><a href="/about" className="hover:text-white">About Us</a></li>
+              <li><a href="/services/web-design" className="hover:text-white">Services</a></li>
+              <li><a href="/portfolio" className="hover:text-white">Portfolio</a></li>
+              <li><a href="/case" className="hover:text-white">Case Studies</a></li>
+              <li><a href="/blog" className="hover:text-white">Blog</a></li>
+              <li><a href="/contact" className="hover:text-white">Contact</a></li>
             </ul>
           </div>
 
@@ -37,14 +37,11 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-lg mb-6">Our Services</h4>
             <ul className="space-y-3 text-sm text-slate-400">
-              <li><a href="#" className="hover:text-white">Industrial Web Design</a></li>
-              <li><a href="#" className="hover:text-white">Manufacturer Websites</a></li>
-              <li><a href="#" className="hover:text-white">B2B E-Commerce Portals</a></li>
-              <li><a href="#" className="hover:text-white">Export Lead Gen Sites</a></li>
-              <li><a href="#" className="hover:text-white">Product Catalog Websites</a></li>
-              <li><a href="#" className="hover:text-white">WordPress Development</a></li>
-              <li><a href="#" className="hover:text-white">Mobile Responsive Sites</a></li>
-              <li><a href="#" className="hover:text-white">Website Redesign</a></li>
+              <li><a href="/services/web-design" className="hover:text-white">Website Design</a></li>
+              <li><a href="/services/web-design/mumbai" className="hover:text-white">Web Design Mumbai</a></li>
+              <li><a href="/services/ecommerce-development" className="hover:text-white">E-Commerce Development</a></li>
+              <li><a href="/services/ecommerce-development/shopify-development" className="hover:text-white">Shopify Development</a></li>
+              <li><a href="/services/ai-agent-development" className="hover:text-white">AI Agent Development</a></li>
             </ul>
           </div>
 
@@ -88,8 +85,8 @@ const Footer: React.FC = () => {
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
           <p>© 2026 FactoryJet Technologies. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white">Privacy Policy</a>
-            <a href="#" className="hover:text-white">Terms of Service</a>
+            <a href="/privacy" className="hover:text-white">Privacy Policy</a>
+            <a href="/terms" className="hover:text-white">Terms of Service</a>
           </div>
         </div>
       </div>

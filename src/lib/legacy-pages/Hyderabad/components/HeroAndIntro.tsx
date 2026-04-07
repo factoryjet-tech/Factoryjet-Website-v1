@@ -109,7 +109,7 @@ export const Hero = () => {
             </p>
 
             {/* 4. WhatsApp CTA (Mobile Only - Priority) */}
-            <a href="https://wa.me/" className="lg:hidden w-full bg-jet-orange text-white py-4 rounded-lg font-bold text-lg flex items-center justify-center gap-2 shadow-lg mb-8 hover:bg-[#ff7a47] transition-colors">
+            <a href="https://wa.me/919699977699?text=Hi%20FactoryJet%2C%20I%27m%20interested%20in%20website%20design%20services%20in%20Hyderabad." target="_blank" rel="noopener noreferrer" className="lg:hidden w-full bg-jet-orange text-white py-4 rounded-lg font-bold text-lg flex items-center justify-center gap-2 shadow-lg mb-8 hover:bg-[#ff7a47] transition-colors">
               <MessageCircle size={24} fill="white" /> 💬 WhatsApp Us Now
             </a>
 

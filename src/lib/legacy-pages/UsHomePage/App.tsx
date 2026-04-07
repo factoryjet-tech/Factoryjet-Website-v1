@@ -2048,11 +2048,11 @@ const FooterLocal = ({ onCtaClick }: { onCtaClick: () => void }) => {
             </p>
             <div className="flex gap-4">
               {[
-                { Icon: Twitter, label: 'Twitter' },
-                { Icon: Linkedin, label: 'LinkedIn' },
-                { Icon: Mail, label: 'Email' }
-              ].map(({ Icon, label }, i) => (
-                <a key={i} href="#" aria-label={`Connect with us on ${label}`} className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#FF6B35] transition-colors text-slate-400 hover:text-white">
+                { Icon: Twitter, label: 'Twitter', href: 'https://x.com/FactoryJet_Tech' },
+                { Icon: Linkedin, label: 'LinkedIn', href: 'https://in.linkedin.com/company/factoryjet' },
+                { Icon: Mail, label: 'Email', href: 'mailto:connect@factoryjet.com' }
+              ].map(({ Icon, label, href }, i) => (
+                <a key={i} href={href} target={label !== 'Email' ? '_blank' : undefined} rel={label !== 'Email' ? 'noopener noreferrer' : undefined} aria-label={`Connect with us on ${label}`} className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#FF6B35] transition-colors text-slate-400 hover:text-white">
                   <Icon size={20} aria-hidden="true" />
                 </a>
               ))}

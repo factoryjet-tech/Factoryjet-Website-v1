@@ -34,25 +34,24 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-white font-bold text-lg mb-6">Services</h4>
             <ul className="space-y-3 text-sm text-slate-400">
-              <li><a href="#" className="hover:text-jet-orange transition-colors">Website Design Chennai</a></li>
-              <li><a href="#" className="hover:text-jet-orange transition-colors">E-Commerce Development</a></li>
-              <li><a href="#" className="hover:text-jet-orange transition-colors">Digital Marketing Services</a></li>
-              <li><a href="#" className="hover:text-jet-orange transition-colors">CRM Implementation</a></li>
-              <li><a href="#" className="hover:text-jet-orange transition-colors">ERP Solutions</a></li>
-              <li><a href="#" className="hover:text-jet-orange transition-colors">AI Creative Services</a></li>
+              <li><a href="/services/web-design/chennai" className="hover:text-jet-orange transition-colors">Website Design Chennai</a></li>
+              <li><a href="/services/ecommerce-development" className="hover:text-jet-orange transition-colors">E-Commerce Development</a></li>
+              <li><a href="/services/ecommerce-development/shopify-development" className="hover:text-jet-orange transition-colors">Shopify Development</a></li>
+              <li><a href="/services/ai-agent-development" className="hover:text-jet-orange transition-colors">AI Agent Development</a></li>
+              <li><a href="/services/web-design" className="hover:text-jet-orange transition-colors">Web Design India</a></li>
             </ul>
           </div>
 
-          {/* Industry Links */}
+          {/* Quick Links */}
           <div>
-            <h4 className="text-white font-bold text-lg mb-6">Industries</h4>
+            <h4 className="text-white font-bold text-lg mb-6">Company</h4>
             <ul className="space-y-3 text-sm text-slate-400">
-              <li><a href="#" className="hover:text-jet-orange transition-colors">IT & Software Websites</a></li>
-              <li><a href="#" className="hover:text-jet-orange transition-colors">Automobile Industry Websites</a></li>
-              <li><a href="#" className="hover:text-jet-orange transition-colors">Healthcare Websites</a></li>
-              <li><a href="#" className="hover:text-jet-orange transition-colors">Manufacturing B2B Portals</a></li>
-              <li><a href="#" className="hover:text-jet-orange transition-colors">Education Websites</a></li>
-              <li><a href="#" className="hover:text-jet-orange transition-colors">Retail & E-Commerce</a></li>
+              <li><a href="/about" className="hover:text-jet-orange transition-colors">About Us</a></li>
+              <li><a href="/case" className="hover:text-jet-orange transition-colors">Case Studies</a></li>
+              <li><a href="/portfolio" className="hover:text-jet-orange transition-colors">Portfolio</a></li>
+              <li><a href="/blog" className="hover:text-jet-orange transition-colors">Blog & Insights</a></li>
+              <li><a href="/pricing" className="hover:text-jet-orange transition-colors">Pricing</a></li>
+              <li><a href="/contact" className="hover:text-jet-orange transition-colors">Contact</a></li>
             </ul>
           </div>
 
@@ -60,16 +59,20 @@ const Footer: React.FC = () => {
           <div>
              <h4 className="text-white font-bold text-lg mb-6">Resources</h4>
              <ul className="space-y-3 text-sm text-slate-400 mb-6">
-                <li><a href="#" className="hover:text-jet-orange transition-colors">Blog & Insights</a></li>
-                <li><a href="#" className="hover:text-jet-orange transition-colors">Case Studies</a></li>
-                <li><a href="#" className="hover:text-jet-orange transition-colors">Pricing Guide</a></li>
-                <li><a href="#" className="hover:text-jet-orange transition-colors">Free Website Audit</a></li>
-                <li><a href="#" className="hover:text-jet-orange transition-colors">FAQ</a></li>
+                <li><a href="/blog" className="hover:text-jet-orange transition-colors">Blog & Insights</a></li>
+                <li><a href="/case" className="hover:text-jet-orange transition-colors">Case Studies</a></li>
+                <li><a href="/pricing" className="hover:text-jet-orange transition-colors">Pricing Guide</a></li>
+                <li><a href="/contact" className="hover:text-jet-orange transition-colors">Free Website Audit</a></li>
              </ul>
-             
+
              <div className="flex gap-4">
-                 {[Facebook, Instagram, Linkedin, Twitter].map((Icon, i) => (
-                     <a key={i} href="#" className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-jet-blue hover:text-white transition-all">
+                 {[
+                   { Icon: Facebook, href: 'https://www.facebook.com/factoryjet' },
+                   { Icon: Instagram, href: 'https://www.instagram.com/factoryjet' },
+                   { Icon: Linkedin, href: 'https://in.linkedin.com/company/factoryjet' },
+                   { Icon: Twitter, href: 'https://x.com/FactoryJet_Tech' }
+                 ].map(({ Icon, href }, i) => (
+                     <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-jet-blue hover:text-white transition-all">
                          <Icon size={16} />
                      </a>
                  ))}
@@ -91,9 +94,9 @@ const Footer: React.FC = () => {
                 <span>4.9/5 Rating from 100+ Chennai Clients | ISO Certified</span>
              </div>
              <div className="flex gap-4">
-                <a href="#" className="hover:text-white">Privacy Policy</a>
-                <a href="#" className="hover:text-white">Terms of Service</a>
-                <a href="#" className="hover:text-white">Refund Policy</a>
+                <a href="/privacy" className="hover:text-white">Privacy Policy</a>
+                <a href="/terms" className="hover:text-white">Terms of Service</a>
+                <a href="/refund-policy" className="hover:text-white">Refund Policy</a>
              </div>
              <p>© 2024 FactoryJet Technologies. All rights reserved.</p>
            </div>

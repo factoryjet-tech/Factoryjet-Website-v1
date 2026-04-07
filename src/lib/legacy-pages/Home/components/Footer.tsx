@@ -20,8 +20,13 @@ const Footer: React.FC = () => {
               World-class website and e-commerce development for growing businesses. Fast, affordable, and results-driven.
             </p>
             <div className="flex gap-4">
-              {[Linkedin, Instagram, Facebook, Twitter].map((Icon, i) => (
-                <a key={i} href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-jet-blue hover:text-white transition-all">
+              {[
+                { Icon: Linkedin, href: 'https://in.linkedin.com/company/factoryjet' },
+                { Icon: Instagram, href: 'https://www.instagram.com/factoryjet' },
+                { Icon: Facebook, href: 'https://www.facebook.com/factoryjet' },
+                { Icon: Twitter, href: 'https://x.com/FactoryJet_Tech' }
+              ].map(({ Icon, href }, i) => (
+                <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-jet-blue hover:text-white transition-all">
                   <Icon size={18} />
                 </a>
               ))}
@@ -32,12 +37,10 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-lg mb-6">Services</h4>
             <ul className="space-y-3 text-gray-400">
-              <li><Link href="/web-design" className="hover:text-jet-blue transition-colors">Website Development</Link></li>
-              <li><Link href="/ecommerce" className="hover:text-jet-blue transition-colors">E-Commerce Stores</Link></li>
-              <li><a href="#" className="hover:text-jet-blue transition-colors">Shopify Development</a></li>
-              <li><a href="#" className="hover:text-jet-blue transition-colors">WooCommerce</a></li>
-              <li><a href="#" className="hover:text-jet-blue transition-colors">Quick Commerce Apps</a></li>
-              <li><a href="#" className="hover:text-jet-blue transition-colors">Landing Pages</a></li>
+              <li><Link href="/services/web-design" className="hover:text-jet-blue transition-colors">Website Development</Link></li>
+              <li><Link href="/services/ecommerce-development" className="hover:text-jet-blue transition-colors">E-Commerce Stores</Link></li>
+              <li><Link href="/services/ecommerce-development/shopify-development" className="hover:text-jet-blue transition-colors">Shopify Development</Link></li>
+              <li><Link href="/services/ai-agent-development" className="hover:text-jet-blue transition-colors">AI Agent Development</Link></li>
             </ul>
           </div>
 
@@ -57,11 +60,11 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-lg mb-6">Locations</h4>
             <ul className="space-y-3 text-gray-400">
-              <li><Link href="/mumbai" className="hover:text-jet-blue transition-colors">Mumbai</Link></li>
-              <li><Link href="/pune" className="hover:text-jet-blue transition-colors">Pune</Link></li>
-              <li><Link href="/bangalore" className="hover:text-jet-blue transition-colors">Bangalore</Link></li>
-              <li><Link href="/ahmedabad" className="hover:text-jet-blue transition-colors">Ahmedabad</Link></li>
-              <li><Link href="/surat" className="hover:text-jet-blue transition-colors">Surat</Link></li>
+              <li><Link href="/services/web-design/mumbai" className="hover:text-jet-blue transition-colors">Mumbai</Link></li>
+              <li><Link href="/services/web-design/pune" className="hover:text-jet-blue transition-colors">Pune</Link></li>
+              <li><Link href="/services/web-design/bangalore" className="hover:text-jet-blue transition-colors">Bangalore</Link></li>
+              <li><Link href="/services/web-design/ahmedabad" className="hover:text-jet-blue transition-colors">Ahmedabad</Link></li>
+              <li><Link href="/services/web-design/surat" className="hover:text-jet-blue transition-colors">Surat</Link></li>
             </ul>
           </div>
 
@@ -88,9 +91,9 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
           <p>© 2026 FactoryJet Digital Solutions. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white">Terms</a>
-            <a href="#" className="hover:text-white">Privacy</a>
-            <a href="#" className="hover:text-white">Sitemap</a>
+            <a href="/terms" className="hover:text-white">Terms</a>
+            <a href="/privacy" className="hover:text-white">Privacy</a>
+            <a href="/sitemap" className="hover:text-white">Sitemap</a>
           </div>
         </div>
       </div>

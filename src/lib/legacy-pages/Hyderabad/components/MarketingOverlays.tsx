@@ -26,7 +26,7 @@ export const StickyWhatsApp = () => (
 
     {/* Desktop Floating Bubble (md and up) */}
     <a 
-      href="https://wa.me/" // Add actual number
+      href="https://wa.me/919699977699?text=Hi%20FactoryJet%2C%20I%27m%20interested%20in%20website%20design%20services%20in%20Hyderabad."
       target="_blank" 
       rel="noreferrer"
       className="hidden md:flex fixed bottom-6 right-6 z-50 bg-whatsapp text-white p-4 rounded-full shadow-2xl hover:bg-[#128C7E] transition-all hover:scale-110 items-center justify-center group"

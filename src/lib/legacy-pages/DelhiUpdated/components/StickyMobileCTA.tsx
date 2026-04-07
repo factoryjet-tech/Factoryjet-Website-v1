@@ -48,7 +48,7 @@ const StickyMobileCTA: React.FC = () => {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-[60] flex md:hidden h-16 shadow-[0_-4px_10px_rgba(0,0,0,0.1)] animate-in slide-in-from-bottom duration-300">
       <a 
-        href="https://wa.me/919999999999?text=Hi%20FactoryJet,%20I'm%20interested%20in%20website%20design%20services." 
+        href="https://wa.me/919699977699?text=Hi%20FactoryJet,%20I'm%20interested%20in%20website%20design%20services." 
         target="_blank" 
         rel="noopener noreferrer" 
         className="flex-1 bg-whatsapp hover:bg-whatsapp-hover text-white flex items-center justify-center font-bold text-lg active:scale-95 transition-transform"
@@ -57,7 +57,7 @@ const StickyMobileCTA: React.FC = () => {
         <MessageCircle className="mr-2 fill-current" size={24} /> WhatsApp
       </a>
       <a 
-        href="tel:+919999999999" 
+        href="tel:+919699977699" 
         className="flex-1 bg-[#0052CC] hover:bg-blue-700 text-white flex items-center justify-center font-bold text-lg active:scale-95 transition-transform"
         aria-label="Call Now"
       >

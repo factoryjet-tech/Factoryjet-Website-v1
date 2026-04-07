@@ -96,7 +96,7 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '',
   ] : basePath === '/us' ? [
     { label: 'Services', href: '#services', hasDropdown: true, hasMegaMenu: true, isRoute: false, submenu: servicesSubmenu },
     { label: 'Portfolio', href: '/us/portfolio', hasDropdown: false, isRoute: true },
-    { label: 'About Us', href: '/about', hasDropdown: false, isRoute: true },
+    { label: 'About Us', href: '/us/about', hasDropdown: false, isRoute: true },
     { label: 'Pricing', href: prefixRoute('/pricing'), hasDropdown: false, isRoute: true },
     { label: 'FAQ', href: prefixRoute('/faq'), hasDropdown: false, isRoute: true },
     {

@@ -26,9 +26,9 @@ const Header: React.FC = () => {
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-             <a href="tel:+919999999999" className="flex items-center text-jet-blue font-semibold hover:underline">
+             <a href="tel:+919699977699" className="flex items-center text-jet-blue font-semibold hover:underline">
                <Phone className="h-5 w-5 mr-2" />
-               +91-999-999-9999
+               +91-969-997-7699
              </a>
              <a href="#hero" className="bg-jet-orange hover:bg-jet-orange-dark text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-md hover:shadow-lg">
                Get Quote

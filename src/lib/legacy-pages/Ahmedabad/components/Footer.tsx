@@ -18,8 +18,13 @@ const Footer: React.FC = () => {
               Ahmedabad's trusted web design partner for SMBs. We build high-performance e-commerce and business websites that actually convert.
             </p>
             <div className="flex gap-4">
-              {[Linkedin, Instagram, Twitter, Youtube].map((Icon, i) => (
-                <a key={i} href="#" className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-jet-blue transition-colors">
+              {[
+                { Icon: Linkedin, href: 'https://in.linkedin.com/company/factoryjet' },
+                { Icon: Instagram, href: 'https://www.instagram.com/factoryjet' },
+                { Icon: Twitter, href: 'https://x.com/FactoryJet_Tech' },
+                { Icon: Youtube, href: 'https://www.youtube.com/@factoryjet' }
+              ].map(({ Icon, href }, i) => (
+                <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-jet-blue transition-colors">
                   <Icon size={18} />
                 </a>
               ))}
@@ -34,11 +39,11 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-lg mb-6">Services</h4>
             <ul className="space-y-3 text-jet-gray text-sm">
-              <li><Link href="/web-design" className="hover:text-white transition-colors">Website Design & Development</Link></li>
-              <li><Link href="/ecommerce" className="hover:text-white transition-colors">E-Commerce Store Development</Link></li>
-              <li><Link href="/web-design" className="hover:text-white transition-colors">Local SEO & GMB setup</Link></li>
-              <li><Link href="/web-design" className="hover:text-white transition-colors">Digital Marketing</Link></li>
-              <li><Link href="/web-design" className="hover:text-white transition-colors">CRM & ERP Solutions</Link></li>
+              <li><Link href="/services/web-design" className="hover:text-white transition-colors">Website Design & Development</Link></li>
+              <li><Link href="/services/ecommerce-development" className="hover:text-white transition-colors">E-Commerce Store Development</Link></li>
+              <li><Link href="/services/ecommerce-development/shopify-development" className="hover:text-white transition-colors">Shopify Development</Link></li>
+              <li><Link href="/services/ai-agent-development" className="hover:text-white transition-colors">AI Agent Development</Link></li>
+              <li><Link href="/services/web-design/ahmedabad" className="hover:text-white transition-colors">Web Design Ahmedabad</Link></li>
             </ul>
           </div>
 
@@ -84,10 +89,10 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-lg mb-6">Other Locations</h4>
             <ul className="space-y-3 text-jet-gray text-sm">
-              <li><Link href="/mumbai" className="hover:text-white transition-colors">Mumbai</Link></li>
-              <li><Link href="/pune" className="hover:text-white transition-colors">Pune</Link></li>
-              <li><Link href="/bangalore" className="hover:text-white transition-colors">Bangalore</Link></li>
-              <li><Link href="/surat" className="hover:text-white transition-colors">Surat</Link></li>
+              <li><Link href="/services/web-design/mumbai" className="hover:text-white transition-colors">Mumbai</Link></li>
+              <li><Link href="/services/web-design/pune" className="hover:text-white transition-colors">Pune</Link></li>
+              <li><Link href="/services/web-design/bangalore" className="hover:text-white transition-colors">Bangalore</Link></li>
+              <li><Link href="/services/web-design/surat" className="hover:text-white transition-colors">Surat</Link></li>
             </ul>
           </div>
         </div>
@@ -105,7 +110,7 @@ const Footer: React.FC = () => {
           <div className="flex gap-6">
             <a href="/privacy" className="hover:text-white">Privacy Policy</a>
             <a href="/terms" className="hover:text-white">Terms of Service</a>
-            <a href="#" className="hover:text-white">Refund Policy</a>
+            <a href="/refund-policy" className="hover:text-white">Refund Policy</a>
           </div>
           <p>Made with &#10084; in Ahmedabad</p>
         </div>

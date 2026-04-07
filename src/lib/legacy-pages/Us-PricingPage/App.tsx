@@ -260,7 +260,7 @@ const FooterLocal = () => (
                 <nav aria-label="Footer Company">
                     <h4 className="font-bold text-navy mb-6 uppercase text-xs tracking-wider">Company</h4>
                     <ul className="space-y-3 text-sm text-slate-600">
-                        <li><Link href="/about" className="hover:text-jet-blue transition-colors focus:outline-none focus:underline">About Us</Link></li>
+                        <li><Link href="/us/about" className="hover:text-jet-blue transition-colors focus:outline-none focus:underline">About Us</Link></li>
                         <li><Link href="/case" className="hover:text-jet-blue transition-colors focus:outline-none focus:underline">Case Studies</Link></li>
                         <li><Link href="/contact" className="hover:text-jet-blue transition-colors focus:outline-none focus:underline">Contact</Link></li>
                         <li><Link href="/blog" className="hover:text-jet-blue transition-colors focus:outline-none focus:underline">Blog</Link></li>
