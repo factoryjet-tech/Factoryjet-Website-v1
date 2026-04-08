@@ -93,7 +93,7 @@ const organizationData = {
   "logo": "https://factoryjet.com/logo.png",
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+91-96999-77699",
+    "telephone": "+1-332-867-0003",
     "contactType": "customer service",
     "email": "connect@factoryjet.com",
     "areaServed": "US",

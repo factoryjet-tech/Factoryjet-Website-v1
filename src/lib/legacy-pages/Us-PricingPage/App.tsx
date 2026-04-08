@@ -284,7 +284,7 @@ const FooterLocal = () => (
                 <div className="flex gap-6">
                     <span>New York</span>
                     <span>London</span>
-                    <span>Bangalore</span>
+                    <span>San Francisco</span>
                 </div>
             </div>
         </div>

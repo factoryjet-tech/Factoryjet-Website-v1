@@ -326,14 +326,14 @@ function FadeIn({ children, className = "" }) {
 // ═══════════════ ENHANCED SCHEMA (Service + FAQ + Breadcrumb + WebPage + Organization + Reviews) ═══════════════
 
 function SchemaBlock({ c }) {
-  const url = `https://factoryjet.com/ecommerce-development-${c.slug}/`;
+  const url = `https://factoryjet.com/us/services/ecommerce-development/${c.slug}/`;
   const schema = { "@context": "https://schema.org", "@graph": [
     { "@type": "WebPage", "@id": url, url, name: c.metaTitle, description: c.metaDesc, isPartOf: { "@id": "https://factoryjet.com/#website" }, breadcrumb: { "@id": `${url}#breadcrumb` }, about: { "@id": `${url}#service` }, inLanguage: "en-US" },
     { "@type": "WebSite", "@id": "https://factoryjet.com/#website", url: "https://factoryjet.com/", name: "FactoryJet Technologies", publisher: { "@id": "https://factoryjet.com/#organization" }, inLanguage: "en-US" },
     { "@type": "Organization", "@id": "https://factoryjet.com/#organization", name: "FactoryJet Technologies", url: "https://factoryjet.com/", description: "Enterprise-grade digital transformation agency — e-commerce development, web design, and AI agent development for SMBs.", sameAs: ["https://www.linkedin.com/company/factoryjet"], contactPoint: { "@type": "ContactPoint", contactType: "sales", availableLanguage: "English" }, aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "127", bestRating: "5" } },
     { "@type": "Service", "@id": `${url}#service`, name: `E-Commerce Development in ${c.city}, ${c.state}`, description: c.hero.sub, provider: { "@id": "https://factoryjet.com/#organization" }, areaServed: { "@type": "City", name: c.city, containedInPlace: { "@type": "State", name: c.stateFullName, sameAs: `https://en.wikipedia.org/wiki/${c.stateFullName.replace(/ /g,"_")}` } }, serviceType: ["E-Commerce Development", "Shopify Development", "WooCommerce Development", "AI Agent Development", "Custom Web Development"], offers: { "@type": "AggregateOffer", lowPrice: "2999", highPrice: "15999", priceCurrency: "USD" }, hasOfferCatalog: { "@type": "OfferCatalog", name: "E-Commerce Services", itemListElement: SERVICES.map(s => ({ "@type": "Offer", name: s.title, description: s.desc })) } },
     { "@type": "FAQPage", "@id": `${url}#faq`, mainEntity: c.faqs.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) },
-    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://factoryjet.com/" }, { "@type": "ListItem", position: 2, name: "E-Commerce Development", item: "https://factoryjet.com/ecommerce-development/" }, { "@type": "ListItem", position: 3, name: `${c.city}, ${c.state}`, item: url }] },
+    { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://factoryjet.com/us" }, { "@type": "ListItem", position: 2, name: "E-Commerce Development", item: "https://factoryjet.com/us/services/ecommerce-development/" }, { "@type": "ListItem", position: 3, name: `${c.city}, ${c.state}`, item: url }] },
   ]};
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />;
 }
@@ -389,7 +389,7 @@ function FormModal({ isOpen, onClose, cityName }) {
           </div>
           <div style={{display:"flex",gap:12,justifyContent:"center",flexWrap:"wrap"}}>
             <button onClick={doClose} className="fj-btn fj-btn-blue" style={{padding:"12px 28px",fontSize:14}}>Done</button>
-            <a href="https://wa.me/919103398557?text=Hi%20FactoryJet%2C%20I%27m%20interested%20in%20e-commerce%20development%20services." target="_blank" rel="noopener noreferrer" className="fj-btn" style={{padding:"12px 20px",fontSize:13,border:"1.5px solid #25D366",background:"#fff",color:"#25D366"}}><WA/> WhatsApp</a>
+            <a href="https://wa.me/919699977699?text=Hi%20FactoryJet%2C%20I%27m%20interested%20in%20e-commerce%20development%20services." target="_blank" rel="noopener noreferrer" className="fj-btn" style={{padding:"12px 20px",fontSize:13,border:"1.5px solid #25D366",background:"#fff",color:"#25D366"}}><WA/> WhatsApp</a>
           </div>
         </div>
       </div>
@@ -466,7 +466,7 @@ function LandingPage({ cityKey }) {
             <p className="fj-hero-sub">{c.hero.sub}</p>
             <div className="fj-hero-ctas">
               <button onClick={openForm} className="fj-btn fj-btn-primary">Get Your Free E-Commerce Audit <Arr/></button>
-              <a href="https://wa.me/919103398557?text=Hi%20FactoryJet%2C%20I%27m%20interested%20in%20e-commerce%20development%20services." target="_blank" rel="noopener noreferrer" className="fj-btn fj-btn-ghost"><WA/> Chat on WhatsApp</a>
+              <a href="https://wa.me/919699977699?text=Hi%20FactoryJet%2C%20I%27m%20interested%20in%20e-commerce%20development%20services." target="_blank" rel="noopener noreferrer" className="fj-btn fj-btn-ghost"><WA/> Chat on WhatsApp</a>
             </div>
             <div className="fj-stats" role="list" aria-label="Key statistics">
               {c.stats.map((s,i)=><div key={i} role="listitem"><div className="fj-stat-num">{s.num}</div><div className="fj-stat-label">{s.label}</div></div>)}
@@ -615,7 +615,7 @@ function LandingPage({ cityKey }) {
             <p style={{fontSize:15,color:"rgba(255,255,255,.65)",margin:"0 0 28px",lineHeight:1.6}}>Tell us about your business and we'll send a personalized plan within 24 hours. No commitment. No hard sell.</p>
             <div className="fj-cta-buttons">
               <button onClick={openForm} className="fj-btn fj-btn-primary" style={{fontSize:16,padding:"16px 32px"}}>Get Your Free E-Commerce Audit <Arr s={18}/></button>
-              <a href="https://wa.me/919103398557?text=Hi%20FactoryJet%2C%20I%27m%20interested%20in%20e-commerce%20development%20services." target="_blank" rel="noopener noreferrer" className="fj-btn fj-btn-wa"><WA/> Chat on WhatsApp</a>
+              <a href="https://wa.me/919699977699?text=Hi%20FactoryJet%2C%20I%27m%20interested%20in%20e-commerce%20development%20services." target="_blank" rel="noopener noreferrer" className="fj-btn fj-btn-wa"><WA/> Chat on WhatsApp</a>
             </div>
             <p style={{fontSize:12,color:"rgba(255,255,255,.35)",marginTop:20}}>🔒 Your information is secure. We respond within 24 hours.</p>
             <div className="fj-trust-row">{["500+ Projects","98% Satisfaction","3-Week Launch","30 Days Free Support"].map((b,i)=><div key={i} style={{display:"flex",alignItems:"center",gap:5,fontSize:12,color:"rgba(255,255,255,.5)",fontWeight:500}}><Check s={14} c="rgba(255,255,255,.5)"/> {b}</div>)}</div>

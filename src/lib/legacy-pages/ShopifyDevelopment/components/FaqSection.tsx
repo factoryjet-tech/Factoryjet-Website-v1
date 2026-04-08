@@ -162,7 +162,7 @@ export default function FaqSection({ handleCta, faqFilter, setFaqFilter, faqSear
       </div>
       <div className="fq-help-ctas">
         <a href="#" className="btn btn-p btn-sm" onClick={handleCta}>Get in Touch <span className="arr">→</span></a>
-        <a href="https://wa.me/919103398557" className="btn btn-wa btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://wa.me/919699977699" className="btn btn-wa btn-sm" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
   </div>

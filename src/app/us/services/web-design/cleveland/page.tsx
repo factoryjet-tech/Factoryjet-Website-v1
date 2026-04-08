@@ -52,15 +52,15 @@ export default function Page() {
     "@type": "LocalBusiness",
     "name": "FactoryJet",
     "url": "https://factoryjet.com/us/services/web-design/cleveland",
-    "telephone": "+91 96999 77699",
+    "telephone": "+1-216-600-1234",
     "email": "connect@factoryjet.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "ITPL Main Rd, Tigalarpalya, Brookefield",
-      "addressLocality": "Bengaluru",
-      "addressRegion": "Karnataka",
-      "postalCode": "560037",
-      "addressCountry": "IN"
+      "streetAddress": "200 Public Square",
+      "addressLocality": "Cleveland",
+      "addressRegion": "OH",
+      "postalCode": "44114",
+      "addressCountry": "US"
     },
     "areaServed": {
       "@type": "Place",

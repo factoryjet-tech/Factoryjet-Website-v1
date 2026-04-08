@@ -52,15 +52,15 @@ export default function Page() {
     "@type": "LocalBusiness",
     "name": "FactoryJet",
     "url": "https://factoryjet.com/us/services/web-design/new-york",
-    "telephone": "+91 96999 77699",
+    "telephone": "+1-332-867-0003",
     "email": "connect@factoryjet.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "ITPL Main Rd, Tigalarpalya, Brookefield",
-      "addressLocality": "Bengaluru",
-      "addressRegion": "Karnataka",
-      "postalCode": "560037",
-      "addressCountry": "IN"
+      "streetAddress": "228 Park Ave S",
+      "addressLocality": "New York",
+      "addressRegion": "NY",
+      "postalCode": "10003",
+      "addressCountry": "US"
     },
     "areaServed": {
       "@type": "Place",

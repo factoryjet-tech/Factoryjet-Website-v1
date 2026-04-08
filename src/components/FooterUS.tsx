@@ -27,7 +27,7 @@ const FooterUS: React.FC<FooterUSProps> = ({ onCtaClick, hideLocations = false }
             <div className="flex gap-4">
               {[
                 { Icon: Twitter, href: 'https://x.com/FactoryJet_Tech', label: 'Twitter' },
-                { Icon: Linkedin, href: 'https://in.linkedin.com/company/factoryjet', label: 'LinkedIn' },
+                { Icon: Linkedin, href: 'https://www.linkedin.com/company/factoryjet', label: 'LinkedIn' },
                 { Icon: Mail, href: 'mailto:connect@factoryjet.com', label: 'Email' }
               ].map(({ Icon, href, label }, i) => (
                 <a
@@ -49,7 +49,7 @@ const FooterUS: React.FC<FooterUSProps> = ({ onCtaClick, hideLocations = false }
             <ul className="space-y-4 text-slate-400">
               <li><Link href="/us/services/web-design" onClick={() => trackNavigation('Web Design', '/us/services/web-design', 'footer')} className="hover:text-[#FF6B35] transition-colors">Web Design</Link></li>
               <li><Link href="/us/services/ecommerce-development" onClick={() => trackNavigation('E-Commerce', '/us/services/ecommerce-development', 'footer')} className="hover:text-[#FF6B35] transition-colors">E-Commerce</Link></li>
-              <li><Link href="/services/ai-agent-development" onClick={() => trackNavigation('AI Agent Development', '/services/ai-agent-development', 'footer')} className="hover:text-[#FF6B35] transition-colors">AI Agent Development</Link></li>
+              <li><Link href="/us/services/ai-agent-development" onClick={() => trackNavigation('AI Agent Development', '/us/services/ai-agent-development', 'footer')} className="hover:text-[#FF6B35] transition-colors">AI Agent Development</Link></li>
             </ul>
           </div>
 
@@ -73,7 +73,7 @@ const FooterUS: React.FC<FooterUSProps> = ({ onCtaClick, hideLocations = false }
           <div>
             <h4 className="font-bold text-lg mb-6 font-space">Company</h4>
             <ul className="space-y-4 text-slate-400">
-              <li><Link href="/about" onClick={() => trackNavigation('About Us', '/about', 'footer')} className="hover:text-[#FF6B35] transition-colors">About Us</Link></li>
+              <li><Link href="/us/about" onClick={() => trackNavigation('About Us', '/us/about', 'footer')} className="hover:text-[#FF6B35] transition-colors">About Us</Link></li>
               <li><Link href="/us#results" onClick={() => trackNavigation('Case Studies', '/us#results', 'footer')} className="hover:text-[#FF6B35] transition-colors">Case Studies</Link></li>
               <li><Link href="/us/pricing" onClick={() => trackNavigation('Pricing', '/us/pricing', 'footer')} className="hover:text-[#FF6B35] transition-colors">Pricing</Link></li>
               {onCtaClick && (

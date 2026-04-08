@@ -53,7 +53,7 @@ export function FinalCTA() {
               </h3>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="https://wa.me/919103398557?text=Hi%20FactoryJet%2C%20I%27m%20interested%20in%20AI%20agent%20development%20services."
+                  href="https://wa.me/919699977699?text=Hi%20FactoryJet%2C%20I%27m%20interested%20in%20AI%20agent%20development%20services."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-3 bg-[#25D366]/10 border border-[#25D366]/30 text-[#25D366] font-semibold text-sm rounded-lg hover:bg-[#25D366]/20 transition-all duration-200"
@@ -73,7 +73,7 @@ export function FinalCTA() {
                   connect@factoryjet.com
                 </a>
                 <a
-                  href="tel:+919103398557"
+                  href="tel:+919699977699"
                   className="inline-flex items-center gap-2 px-5 py-3 bg-white/[0.05] border border-white/10 text-gray-300 font-semibold text-sm rounded-lg hover:bg-white/[0.08] transition-all duration-200"
                 >
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>

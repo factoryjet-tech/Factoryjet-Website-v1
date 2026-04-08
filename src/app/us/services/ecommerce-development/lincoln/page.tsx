@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
 import { ecommerceCityAlternatesUS } from '@/data/hreflangMap'
 import LincolnPage from '@/lib/legacy-pages/CityLandingUS/LincolnPage'
-import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
   title: 'E-Commerce Development Lincoln NE | Shopify & AI Agency - FactoryJet',
@@ -47,42 +45,5 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "FactoryJet",
-    "url": "https://factoryjet.com/us/services/ecommerce-development/lincoln",
-    "telephone": "+91 96999 77699",
-    "email": "connect@factoryjet.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "ITPL Main Rd, Tigalarpalya, Brookefield",
-      "addressLocality": "Bengaluru",
-      "addressRegion": "Karnataka",
-      "postalCode": "560037",
-      "addressCountry": "IN"
-    },
-    "areaServed": {
-      "@type": "Place",
-      "name": "Lincoln"
-    },
-    "priceRange": "$2,000 - $25,000+"
-  }
-
-  return (
-    <>
-      <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://factoryjet.com/us' },
-        { name: 'Services', url: 'https://factoryjet.com/us/services' },
-        { name: 'E-Commerce Development', url: 'https://factoryjet.com/us/services/ecommerce-development' },
-        { name: 'Lincoln', url: 'https://factoryjet.com/us/services/ecommerce-development/lincoln' },
-      ]} />
-      <Script
-        id="json-ld-ecomm-lincoln"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <LincolnPage />
-    </>
-  )
+  return <LincolnPage />
 }

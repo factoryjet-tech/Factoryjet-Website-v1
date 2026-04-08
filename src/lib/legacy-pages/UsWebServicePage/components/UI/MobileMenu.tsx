@@ -73,11 +73,11 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onOpenF
           <div className="mt-8 pt-8 border-t border-slate-100">
             <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Contact Us</h4>
             <div className="space-y-4">
-              <a href="tel:+919699977699" className="flex items-center gap-3 text-slate-600 hover:text-jet-blue transition-colors">
+              <a href="tel:+13328670003" className="flex items-center gap-3 text-slate-600 hover:text-jet-blue transition-colors">
                 <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center text-jet-blue">
                   <Phone className="w-4 h-4" />
                 </div>
-                <span className="font-medium">+91 96999 77699</span>
+                <span className="font-medium">+1 (332) 867-0003</span>
               </a>
               <a href="mailto:connect@factoryjet.com" className="flex items-center gap-3 text-slate-600 hover:text-jet-blue transition-colors">
                 <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center text-jet-blue">
