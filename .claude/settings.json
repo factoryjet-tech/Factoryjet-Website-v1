@@ -40,7 +40,9 @@
       "Bash(taskkill //PID 27720 //F)",
       "Bash(netstat -ano)",
       "Read(//c/Users/rishi/.claude/projects/c--FactoryJet-rishi-branch-Factoryjet-Website-v1/7b8e46dd-18e3-4a17-a6e9-10048c1c6f51/tool-results/**)",
-      "Bash(wc -l \"c:\\\\FactoryJet\\\\rishi-branch\\\\Factoryjet-Website-v1\\\\src\\\\lib\\\\legacy-pages\\\\US-AboutPage\\\\components\\\\sections\"/*.tsx)"
+      "Bash(wc -l \"c:\\\\FactoryJet\\\\rishi-branch\\\\Factoryjet-Website-v1\\\\src\\\\lib\\\\legacy-pages\\\\US-AboutPage\\\\components\\\\sections\"/*.tsx)",
+      "Read(//c/FactoryJet/**)",
+      "Bash(/tmp/critical_check.sh)"
     ]
   }
 }

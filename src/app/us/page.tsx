@@ -3,13 +3,13 @@ import { homeAlternates } from '@/data/hreflangMap'
 import UsHomePage from '@/pages/UsHomePage/App'
 
 export const metadata: Metadata = {
-  title: 'Web Design Company USA | High-Converting B2B Websites | FactoryJet',
-  description: 'FactoryJet is a B2B web design agency helping US companies build high-converting, performance-driven websites. Custom web design, e-commerce development, and website redesign. Launched in 2–4 weeks. Get a free strategy call!',
+  title: 'Leading B2B Web Design Agency in USA | FactoryJet',
+  description: 'FactoryJet is a B2B web design agency USA businesses trust for high-converting websites delivered in 7 days. Fixed pricing, full code ownership, and zero vendor lock-in.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company USA | High-Converting B2B Websites | FactoryJet',
-    description: 'FactoryJet is a B2B web design agency helping US companies build high-converting, performance-driven websites.',
+    title: 'Leading B2B Web Design Agency in USA | FactoryJet',
+    description: 'FactoryJet is a B2B web design agency USA businesses trust for high-converting websites delivered in 7 days. Fixed pricing, full code ownership, and zero vendor lock-in.',
     url: 'https://factoryjet.com/us',
     images: [
       {
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web Design Company USA | FactoryJet',
-    description: 'B2B web design agency helping US companies build high-converting websites.',
+    title: 'Leading B2B Web Design Agency in USA | FactoryJet',
+    description: 'FactoryJet is a B2B web design agency USA businesses trust for high-converting websites delivered in 7 days. Fixed pricing, full code ownership, and zero vendor lock-in.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
