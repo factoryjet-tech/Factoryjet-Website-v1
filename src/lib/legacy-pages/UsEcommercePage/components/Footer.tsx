@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
         <div>
           <h4 className="text-white font-bold mb-4">Services</h4>
           <ul className="space-y-2">
-            <li><a href="/us/services/ecommerce-development/shopify-development" className="hover:text-white">Shopify Development</a></li>
+            <li><a href="/us/services/shopify-development" className="hover:text-white">Shopify Development</a></li>
             <li><a href="/us/services/ecommerce-development" className="hover:text-white">E-Commerce Development</a></li>
             <li><a href="/us/services/web-design" className="hover:text-white">Web Design</a></li>
             <li><a href="/services/ai-agent-development" className="hover:text-white">AI Agent Development</a></li>

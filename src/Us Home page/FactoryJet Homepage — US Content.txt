@@ -19,8 +19,8 @@ ________________
 HERO SECTION
 Status Badge (top) Accepting New Clients
 H1: B2B Web Design Agency in USA for High-Converting Websites
-Hero Paragraph: FactoryJet is a B2B web design agency helping US businesses build high-converting, performance-driven websites that generate qualified leads and support long-term growth. We deliver enterprise-grade B2B websites in just 7 days with fixed pricing, 100% code ownership, and zero vendor lock-in.
-Trusted by 500+ businesses across SaaS, Cybersecurity, Healthcare, IT, and Professional Services. Built using Google Lighthouse and Core Web Vitals best practices.
+Hero Paragraph: FactoryJet is a B2B web design agency helping US businesses build high-converting websites that generate qualified leads, strengthen brand credibility, and support long-term growth. We deliver enterprise-grade websites in just 7 days with fixed pricing, 100% code ownership, and zero vendor lock-in.
+Trusted by 523+ businesses across SaaS, Cybersecurity, Healthcare, IT, and Professional Services.
 
 
 ________________
@@ -32,7 +32,7 @@ Counter
 	Value
 	Label
 	1
-	523
+	523+
 	Websites Delivered
 	2
 	7 Days
@@ -248,47 +248,60 @@ ________________
 
 PROCESS SECTION
 H2: Your Path to Launch: 5 Steps, Zero Surprises
-FactoryJet's AI-native workflows and expert team deliver high-converting B2B websites in 7 days. Every project follows the same structured process — so you always know exactly where things stand.
-FactoryJet Conversion Architecture™: Traffic Qualification → Intent Mapping → Micro-Commitment Design → Friction Elimination → Conversion Amplification. Every stage of our process is mapped to this framework.
+FactoryJet’s AI-native workflows and expert team deliver high-converting B2B websites in 7 days. Every project follows a structured milestone-driven process, so you always know exactly what happens next.
+FactoryJet Conversion Architecture™:
+Traffic Qualification → Intent Mapping → Micro-Commitment Design → Friction Elimination → Conversion Amplification
+Every stage of our process is mapped to this framework.
 ________________
 
 
-Step 1 — Strategy Call (30 Mins · Day 1)
-   * Clarify your goals, challenges, and target buyers
-   * Receive a clear roadmap and fixed quote
-   * Alignment confirmed upfront — no surprises later
+Step 1 — Strategy Call
+Day 1 · 30 Minutes
+   * Clarify your goals, business challenges, and target buyers
+   * Identify required pages, integrations, and conversion goals
+   * Receive a fixed quote and clear roadmap
+   * Alignment confirmed upfront — zero surprises later
 ________________
 
 
-Step 2 — Design Sprint (Week 1 · Days 2–6)
-   * AI-assisted concepts generate multiple design directions in parallel
-   * Human designers refine and perfect the strongest direction
-   * First complete design previews delivered within 5 days
-   * Rapid feedback loop accelerates client approval
+Step 2 — Design Sprint
+Days 1–3
+   * AI-assisted design concepts generated in parallel
+   * Human designers refine the strongest direction
+   * Homepage and core page previews shared quickly
+   * Fast feedback loop for rapid approvals
 ________________
 
 
-Step 3 — Development (Week 1–2 · Days 7–14)
-   * Approved designs built into fully functional pages
-   * SEO foundations: meta structure, site architecture, and page speed optimisation
-   * Analytics, CRM, and form integrations connected
-   * QA tested across 20+ devices with Lighthouse performance audits
-   * Hosting and deployment configured in the client's own account — zero markup, zero lock-in
+Step 3 — Development & SEO Setup
+Days 3–5
+   * Approved designs developed into fully functional pages
+   * Mobile responsiveness and speed optimisation
+   * Core SEO setup: meta tags, URL structure, schema-ready architecture
+   * CRM, forms, and analytics integrations completed
 ________________
 
 
-Step 4 — Review & Refine (Week 2 · Days 15–17)
-   * Full site walkthrough with structured client feedback
-   * Final content, copy, and design adjustments
-   * Cross-browser and device quality assurance completed
+Step 4 — QA, Review & Refinement
+Days 5–6
+   * Cross-browser and device testing
+   * Lighthouse and Core Web Vitals optimisation
+   * Final design and content refinements
+   * Client walkthrough and approval
 ________________
 
 
-Step 5 — Launch & Support (Day 7+)
-   * Domain configuration and deployment handled end-to-end
-   * 30–60 days of post-launch bug fixes and performance monitoring
-   * 100% code ownership transferred via GitHub repository on completion
-Average Total: 7 Days
+Step 5 — Launch & Support
+Day 7
+   * Domain connection and deployment
+   * Live launch in your own hosting account
+   * GitHub code handover
+   * 30–60 days post-launch support included
+________________
+
+
+Launch Timeline
+Average Total Launch Time: 7 Days
 CTA: Ready to Start? Book Your Strategy Call
 Built by Experts in B2B Growth and Development
 Our team combines experienced developers, strategists, and conversion specialists with 10+ years of combined expertise in digital growth, branding, and website development. Every project is built with one goal: creating websites that help businesses generate more qualified pipeline.
@@ -451,7 +464,7 @@ Q: What is a B2B web design agency? A B2B web design agency builds websites spec
 ________________
 
 
-Q: How long does it take to build a B2B website? FactoryJet delivers most B2B websites in 7 days. A standard 5–10 page project follows a structured process: strategy call on day one, design previews by day five, development and QA by day fourteen, and launch shortly after. Complex e-commerce or custom-integration projects may extend to 7–14 days.
+Q: How long does it take to build a B2B website? FactoryJet delivers most standard B2B websites in 7 days. A typical 5–10 page project includes strategy on day one, design sprint within the first 3 days, development and QA by days 5–6, and live launch on day 7. Complex e-commerce or custom integration projects may extend to 7–14 days.
 ________________
 
 

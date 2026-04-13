@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Check, CheckCircle, Star, Building2, Rocket, MapPin, Scale, ArrowUpRight, Briefcase, Layers, AlertCircle, ArrowRight, Clock, Flag, Layout, Trophy, TrendingUp, Users, Zap, ShoppingBag, Globe, Smartphone, MousePointerClick, Search, BarChart3, HelpCircle, ShieldCheck, CreditCard, Stethoscope, Landmark, Home, Server, ChevronDown, Calculator, Minus, Plus, Cpu, Hammer } from 'lucide-react';
+import { Check, CheckCircle, Star, Building2, Rocket, MapPin, Scale, ArrowUpRight, Briefcase, Layers, ArrowRight, Clock, Flag, Layout, Trophy, TrendingUp, Users, Zap, ShoppingBag, Globe, Smartphone, MousePointerClick, Search, BarChart3, HelpCircle, ShieldCheck, CreditCard, Stethoscope, Landmark, Home, Server, ChevronDown, Calculator, Minus, Plus, Cpu, Hammer } from 'lucide-react';
 import { QuickAnswer, ExpertTake, Button, CtaSection, SectionHeader } from '../UI/Common';
 import { useForm } from '../UI/FormContext';
 
@@ -15,15 +15,15 @@ export const B2BSection: React.FC = () => {
 
       <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
         
-        <SectionHeader 
+        <SectionHeader
           icon={Building2}
-          eyebrow="Specialized Web Design Services"
+          eyebrow="B2B Web Design"
           title="B2B Website Design That Shortens Sales Cycles"
-          subtitle="Your website should qualify leads before your sales team ever makes a call."
+          subtitle=""
         />
 
         <QuickAnswer>
-          B2B website design focuses on educating and qualifying complex buyers through content-rich experiences, lead capture mechanisms, and integration with sales tools. Unlike B2C sites that optimize for immediate purchase, B2B websites nurture relationships over weeks or months.
+          B2B website design structures content and conversion paths for multi-stakeholder purchase decisions that unfold over weeks or months. Unlike B2C, where one visitor converts in one session, a B2B site must simultaneously serve an awareness-stage researcher, a mid-funnel evaluator, and a bottom-funnel decision-maker — often across separate sessions and devices.
         </QuickAnswer>
 
         {/* Comparison Table */}
@@ -42,11 +42,11 @@ export const B2BSection: React.FC = () => {
                  {/* Rows */}
                  {[
                    { factor: "Decision Timeline", b2c: "Minutes to days", b2b: "Weeks to months" },
-                   { factor: "Decision Makers", b2c: "1 person", b2b: "3-7 stakeholders" },
-                   { factor: "Content Depth", b2c: "Surface level", b2b: "Technical detail" },
+                   { factor: "Decision Makers", b2c: "1 person", b2b: "3–7 stakeholders" },
+                   { factor: "Content Depth", b2c: "Surface-level", b2b: "Technical specs, ROI data" },
                    { factor: "Primary CTA", b2c: "Buy Now", b2b: "Book Demo / Download Guide" },
-                   { factor: "Trust Requirements", b2c: "Reviews, badges", b2b: "Case studies, ROI data" },
-                   { factor: "Integration Needs", b2c: "E-commerce", b2b: "CRM, marketing automation" }
+                   { factor: "Trust Requirements", b2c: "Reviews, badges", b2b: "Case studies, security documentation" },
+                   { factor: "Integration Needs", b2c: "E-commerce platform", b2b: "CRM, marketing automation" }
                  ].map((row, i) => (
                    <div key={i} className="grid grid-cols-3 p-6 items-center transition-all duration-300 hover:bg-blue-50/30 hover:border-l-4 hover:border-l-jet-blue hover:shadow-sm group border-l-4 border-transparent">
                       <div className="font-bold text-navy text-sm md:text-base">{row.factor}</div>
@@ -68,22 +68,22 @@ export const B2BSection: React.FC = () => {
            <h3 className="text-2xl font-bold text-navy mb-10 text-center">The B2B Buyer Journey Your Website Must Support</h3>
            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                 { 
-                   step: "01", title: "Awareness Stage", 
+                 {
+                   step: "01", title: "Awareness",
                    subtitle: "(Top of Funnel)",
-                   bullets: ["Educational blog content", "Industry reports and whitepapers", "Thought leadership articles", "SEO-optimized landing pages"],
+                   bullets: ["SEO-indexed educational content written around the specific problems your buyers are researching — not the services you want to sell.", "Industry data, original analysis, and thought leadership that establishes authority before a prospect considers a vendor."],
                    color: "from-blue-400 to-blue-600"
                  },
-                 { 
-                   step: "02", title: "Consideration Stage", 
+                 {
+                   step: "02", title: "Consideration",
                    subtitle: "(Middle of Funnel)",
-                   bullets: ["Detailed product/service pages", "Case studies with metrics", "Comparison guides", "Webinar recordings", "ROI calculators"],
+                   bullets: ["Detailed solution pages, case studies with quantified outcomes, ROI calculators, comparison guides, and recorded demos.", "This stage converts passive researchers into identified, qualified leads with explicit purchase intent."],
                    color: "from-blue-600 to-indigo-600"
                  },
-                 { 
-                   step: "03", title: "Decision Stage", 
+                 {
+                   step: "03", title: "Decision",
                    subtitle: "(Bottom of Funnel)",
-                   bullets: ["Pricing transparency", "Demo scheduling", "Customer testimonials", "Implementation timelines", "Security/compliance documentation"],
+                   bullets: ["Pricing transparency, frictionless demo scheduling, security and compliance documentation, and implementation timelines.", "The most consistently overlooked conversion driver at this stage: reducing the time between a prospect's first inquiry and a meaningful response."],
                    color: "from-indigo-600 to-purple-600"
                  }
               ].map((stage, i) => (
@@ -107,8 +107,8 @@ export const B2BSection: React.FC = () => {
            </div>
         </div>
 
-        <ExpertTake 
-           quote="The biggest mistake B2B companies make is building a website that talks about themselves instead of their customers' problems. We structure B2B sites around buyer personas and pain points, not org charts and product features."
+        <ExpertTake
+           quote="The most common structural error in B2B web design is organizing pages around your internal org chart instead of your buyer's decision process. A buyer doesn't care which department owns a feature — they need to understand how it eliminates a specific risk they are accountable for."
            author="David Chen"
            role="B2B Strategy Director"
         />
@@ -128,41 +128,23 @@ export const StartupSection: React.FC = () => {
 
       <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
         
-        <SectionHeader 
+        <SectionHeader
           icon={Rocket}
-          eyebrow="Startup-Focused Development"
+          eyebrow="Startup Web Design"
           title="Startup Website Development That Scales With You"
-          subtitle="From MVP landing page to Series A—we've helped 50+ startups build their digital foundation."
+          subtitle=""
         />
 
         <QuickAnswer>
-          Startup web design prioritizes speed-to-market, conversion optimization, and scalable architecture. Unlike enterprise websites that optimize for comprehensive features, startup sites focus on validating product-market fit and capturing early adopters.
+          Startup web design prioritizes validated speed-to-market over feature completeness. The objective at pre-seed is a credible digital presence that captures early demand — not a fully-featured marketing site. Architecture choices at this stage determine how expensive the inevitable rebuild is at Series A. Build with the upgrade path in mind from day one.
         </QuickAnswer>
 
         {/* The Startup Website Challenge */}
         <div className="my-16 bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm">
-           <h3 className="text-2xl font-bold text-navy mb-6">The Startup Website Challenge</h3>
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                  <p className="mb-4 font-bold text-slate-700">You need to:</p>
-                  <ul className="space-y-2">
-                      {['Launch fast (investors are waiting)', 'Look credible (despite being unknown)', 'Convert visitors (prove traction)', 'Scale later (without rebuilding)', 'Stay lean (preserve runway)'].map((item, i) => (
-                          <li key={i} className="flex items-center gap-2 text-slate-600"><div className="w-1.5 h-1.5 bg-jet-green rounded-full shrink-0"></div> {item}</li>
-                      ))}
-                  </ul>
-              </div>
-              <div className="bg-red-50 p-6 rounded-xl border border-red-100">
-                  <p className="mb-4 font-bold text-red-800">Most agencies either:</p>
-                  <ul className="space-y-3">
-                      <li className="flex gap-2 text-red-700"><AlertCircle className="w-5 h-5 shrink-0"/> Build too slow (agency timelines don't match startup speed)</li>
-                      <li className="flex gap-2 text-red-700"><AlertCircle className="w-5 h-5 shrink-0"/> Build too cheap (breaks when you scale)</li>
-                      <li className="flex gap-2 text-red-700"><AlertCircle className="w-5 h-5 shrink-0"/> Build too expensive (burns precious runway)</li>
-                  </ul>
-              </div>
-           </div>
+           <p className="text-lg text-slate-700 leading-relaxed">You need to launch fast — investors and early customers will not wait 90 days for a website. But a $500 template breaks under real traffic, and a $50,000 agency proposal is incompatible with a 12-month runway. The failure mode most startups hit: they overbuild for their current stage, or underbuild in a way that forces a complete teardown six months later. We build for where you are going, not just where you are.</p>
         </div>
 
-        <h3 className="text-2xl font-bold text-navy mb-10 text-center">The FactoryJet Startup Approach</h3>
+        <h3 className="text-2xl font-bold text-navy mb-10 text-center">Startup Phases</h3>
 
         {/* Phase Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
@@ -173,11 +155,11 @@ export const StartupSection: React.FC = () => {
               </div>
               <h3 className="text-2xl font-bold text-navy mb-2">Launch Fast</h3>
               <p className="text-sm text-slate-500 mb-6">Pre-launch, validation.</p>
-              
+
               <div className="mb-6">
                  <div className="flex justify-between text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
                     <span>Timeline</span>
-                    <span>1-2 Weeks</span>
+                    <span>1–2 Weeks</span>
                  </div>
                  <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
                     <div className="h-full w-[33%] bg-gradient-to-r from-jet-orange to-orange-400 rounded-full"></div>
@@ -186,11 +168,11 @@ export const StartupSection: React.FC = () => {
 
               <div className="mb-8">
                  <div className="text-xs text-slate-500 mb-1">Investment</div>
-                 <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-jet-orange to-red-500">$999 - $2,999</div>
+                 <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-jet-orange to-red-500">$1,999 – $2,999</div>
               </div>
 
               <ul className="space-y-3 mb-8 flex-1">
-                 {['Single landing page', 'Clear value proposition', 'Email capture', 'Analytics tracking', 'Social proof'].map((feat, i) => (
+                 {['Single high-conversion landing page', 'Clear above-fold value proposition', 'Email capture with lead magnet', 'GA4 and Hotjar analytics', 'Social proof / early adopter counter'].map((feat, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm text-slate-700 group-hover:translate-x-1 transition-transform">
                        <div className="mt-0.5 w-4 h-4 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
                           <Check className="w-2.5 h-2.5 text-jet-orange" strokeWidth={3} />
@@ -212,12 +194,12 @@ export const StartupSection: React.FC = () => {
                  Phase 2: Convert
               </div>
               <h3 className="text-2xl font-bold text-navy mb-2">Grow Smart</h3>
-              <p className="text-sm text-slate-500 mb-6">Post-funding, scaling.</p>
-              
+              <p className="text-sm text-slate-500 mb-6">Post-seed, scaling.</p>
+
               <div className="mb-6">
                  <div className="flex justify-between text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
                     <span>Timeline</span>
-                    <span>3-4 Weeks</span>
+                    <span>3–4 Weeks</span>
                  </div>
                  <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
                     <div className="h-full w-[60%] bg-gradient-to-r from-jet-blue to-blue-400 rounded-full"></div>
@@ -226,11 +208,11 @@ export const StartupSection: React.FC = () => {
 
               <div className="mb-8">
                  <div className="text-xs text-slate-500 mb-1">Investment</div>
-                 <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-jet-blue to-blue-600">$4,999 - $8,999</div>
+                 <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-jet-blue to-blue-600">$4,999 – $8,999</div>
               </div>
 
               <ul className="space-y-3 mb-8 flex-1">
-                 {['Multi-page marketing site', 'Product/feature pages', 'Pricing page', 'Blog foundation', 'Basic SEO'].map((feat, i) => (
+                 {['Multi-page marketing site', 'Product and feature detail pages', 'Pricing page with clear tier logic', 'Blog foundation (SEO-ready architecture)', 'Schema markup and XML sitemap'].map((feat, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm text-slate-700 group-hover:translate-x-1 transition-transform">
                        <div className="mt-0.5 w-4 h-4 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
                           <Check className="w-2.5 h-2.5 text-jet-blue" strokeWidth={3} />
@@ -247,12 +229,12 @@ export const StartupSection: React.FC = () => {
                  Phase 3: Scale
               </div>
               <h3 className="text-2xl font-bold text-navy mb-2">Scale Big</h3>
-              <p className="text-sm text-slate-500 mb-6">Series A+, enterprise ready.</p>
-              
+              <p className="text-sm text-slate-500 mb-6">Series A+, enterprise-ready.</p>
+
               <div className="mb-6">
                  <div className="flex justify-between text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
                     <span>Timeline</span>
-                    <span>6-8 Weeks</span>
+                    <span>6–8 Weeks</span>
                  </div>
                  <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
                     <div className="h-full w-[100%] bg-gradient-to-r from-jet-green to-emerald-500 rounded-full"></div>
@@ -265,7 +247,7 @@ export const StartupSection: React.FC = () => {
               </div>
 
               <ul className="space-y-3 mb-8 flex-1">
-                 {['Full marketing site', 'Content hub', 'Lead generation system', 'CRM integration', 'Product demo/trial'].map((feat, i) => (
+                 {['Full content marketing hub', 'CRM integration (HubSpot / Salesforce)', 'Lead scoring and intent-capture system', 'Product demo and trial onboarding flow', 'Custom analytics dashboard'].map((feat, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm text-slate-700 group-hover:translate-x-1 transition-transform">
                        <div className="mt-0.5 w-4 h-4 rounded-full bg-green-100 flex items-center justify-center shrink-0">
                           <Check className="w-2.5 h-2.5 text-jet-green" strokeWidth={3} />
@@ -295,10 +277,10 @@ export const StartupSection: React.FC = () => {
                   </thead>
                   <tbody className="divide-y divide-slate-100">
                       {[
-                          { stage: "Pre-Seed", stack: "Framer or Webflow", why: "Speed, low cost, easy iteration" },
-                          { stage: "Seed", stack: "Next.js + Headless CMS", why: "Performance, SEO, scalability" },
-                          { stage: "Series A", stack: "Next.js + Custom Backend", why: "Full control, complex features" },
-                          { stage: "Series B+", stack: "Custom Application", why: "Enterprise requirements" }
+                          { stage: "Pre-Seed", stack: "Framer or Webflow", why: "7-day launch, low cost, easy iteration" },
+                          { stage: "Seed", stack: "Next.js + Headless CMS", why: "SEO performance, content scalability" },
+                          { stage: "Series A", stack: "Next.js + Custom Backend", why: "Full architectural control, complex features" },
+                          { stage: "Series B+", stack: "Custom Application", why: "Enterprise data, security, and integration needs" }
                       ].map((row, i) => (
                           <tr key={i} className="hover:bg-slate-50 transition-colors">
                               <td className="px-6 py-4 font-bold text-navy whitespace-nowrap">{row.stage}</td>
@@ -311,8 +293,8 @@ export const StartupSection: React.FC = () => {
            </div>
         </div>
 
-        <ExpertTake 
-           quote="Don't overbuild. Your Series A website shouldn't be your seed stage website. We design upgrade paths so you can start lean and scale smart."
+        <ExpertTake
+           quote="The most expensive startup web design mistake isn't overspending — it's choosing architecture at the seed stage that requires a full teardown at Series A. We build upgrade paths into every engagement so you can start lean, validate fast, and scale without rebuilding from scratch."
            author="Sarah Jenkins"
            role="Startup Advisor & Angel Investor"
         />
@@ -373,6 +355,8 @@ export const LocalSection: React.FC = () => {
     }
   ];
 
+  const supportingIntro = "We serve clients across all three market tiers. Tier 3 emerging cities often represent the strongest near-term ranking opportunity — lower organic competition means a well-structured site can reach page one significantly faster than in saturated Tier 1 markets.";
+
   return (
     <section id="local" className="py-12 md:py-24 relative overflow-hidden bg-gradient-to-b from-white via-blue-50 to-white">
        {/* Map Overlay */}
@@ -382,16 +366,19 @@ export const LocalSection: React.FC = () => {
 
        <div className="container mx-auto px-4 md:px-6 relative z-10">
          
-         <SectionHeader 
+         <SectionHeader
             icon={MapPin}
-            eyebrow="US Coverage"
-            title="Professional Web Design Services in Your City"
-            subtitle="FactoryJet provides web design services across the United States. We combine national expertise with local market understanding."
+            eyebrow="US Coverage / Local"
+            title="Web Design Services Across the United States"
+            subtitle=""
          />
 
          <QuickAnswer>
-            FactoryJet provides web design services across the United States, with particular expertise in emerging tech hubs and growing markets. Our distributed team model means you get Silicon Valley-quality development with local market knowledge.
+            FactoryJet provides web design services across the United States through a fully distributed US-based team. We serve Tier 1 metro markets including New York, Los Angeles, Austin, Chicago, and San Francisco, as well as Tier 2 regional hubs and Tier 3 emerging markets — where organic competition is lower and ROI on a well-engineered site is often highest.
          </QuickAnswer>
+
+         {/* Supporting Intro */}
+         <p className="text-center text-slate-600 mb-12 max-w-3xl mx-auto text-lg">{supportingIntro}</p>
 
          {/* Tier Cards */}
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
@@ -434,21 +421,21 @@ export const LocalSection: React.FC = () => {
                      <Clock className="w-8 h-8" />
                  </div>
                  <h4 className="font-bold text-navy text-lg mb-2">Same Timezone Support</h4>
-                 <p className="text-slate-600 text-sm">Real-time collaboration during your business hours.</p>
+                 <p className="text-slate-600 text-sm">Every project is managed by a US-based team member in your timezone. No communication delays, no offshore handoffs, no 24-hour response windows.</p>
              </div>
              <div className="flex flex-col items-center text-center p-6">
                  <div className="w-16 h-16 rounded-full bg-orange-50 flex items-center justify-center text-jet-orange mb-4">
                      <MapPin className="w-8 h-8" />
                  </div>
                  <h4 className="font-bold text-navy text-lg mb-2">Local Market Knowledge</h4>
-                 <p className="text-slate-600 text-sm">Design trends that resonate with your specific region.</p>
+                 <p className="text-slate-600 text-sm">Search behavior, design expectations, and competitive intensity vary between New York and Nashville. We factor regional context into content architecture and keyword targeting.</p>
              </div>
              <div className="flex flex-col items-center text-center p-6">
                  <div className="w-16 h-16 rounded-full bg-green-50 flex items-center justify-center text-jet-green mb-4">
                      <Flag className="w-8 h-8" />
                  </div>
                  <h4 className="font-bold text-navy text-lg mb-2">100% US-Based</h4>
-                 <p className="text-slate-600 text-sm">No outsourcing. All code is written in the USA.</p>
+                 <p className="text-slate-600 text-sm">All code is written by US-based engineers. No outsourced development, no offshore QA. Every person on your project is available during your business hours.</p>
              </div>
          </div>
        </div>
@@ -463,11 +450,11 @@ export const ComparisonsSection: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6">
             <SectionHeader
                 icon={Scale}
-                eyebrow="Compare"
+                eyebrow="Comparison"
                 title="Why Choose FactoryJet?"
-                subtitle="See how we stack up against traditional agencies and freelancers."
+                subtitle="The US web design market has three provider categories: freelancers, traditional agencies, and engineering-first firms. Here is how the variables that determine actual project outcomes compare across each."
             />
-            
+
             <div className="overflow-x-auto pb-8">
                 <div className="min-w-[800px] bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
                     <div className="grid grid-cols-4 bg-navy text-white p-6 text-sm font-bold uppercase tracking-wider">
@@ -477,11 +464,12 @@ export const ComparisonsSection: React.FC = () => {
                         <div className="flex items-center justify-center text-jet-blue-light">FactoryJet</div>
                     </div>
                     {[
-                        { name: "Code Quality", freelance: "Variable", agency: "Outsourced", fj: "Enterprise Grade" },
-                        { name: "Turnaround Time", freelance: "Unpredictable", agency: "3-6 Months", fj: "21 Days" },
-                        { name: "Cost", freelance: "$2k - $10k", agency: "$25k - $100k", fj: "$5k - $15k" },
-                        { name: "Ownership", freelance: "Full", agency: "Vendor Lock-in", fj: "100% Code Ownership" },
-                        { name: "Scalability", freelance: "Low", agency: "Medium", fj: "High (Next.js)" },
+                        { name: "Code Quality", freelance: "Variable", agency: "Often outsourced", fj: "Enterprise-grade TypeScript" },
+                        { name: "Turnaround Time", freelance: "Unpredictable", agency: "3–6 months", fj: "7 days (rapid) / 21 days (full)" },
+                        { name: "Cost", freelance: "$2k–$10k", agency: "$25k–$100k", fj: "$1,999 – $15,000+" },
+                        { name: "Ownership", freelance: "Full", agency: "Vendor lock-in", fj: "100% GitHub transfer" },
+                        { name: "Scalability", freelance: "Low", agency: "Medium", fj: "High (modular architecture, Next.js, headless CMS, scalable systems)" },
+                        { name: "Communication", freelance: "Async only", agency: "Account manager layer", fj: "Direct daily standup" },
                     ].map((row, i) => (
                         <div key={i} className="grid grid-cols-4 p-6 border-b border-slate-100 hover:bg-slate-50 transition-colors">
                             <div className="font-bold text-navy">{row.name}</div>
@@ -492,6 +480,24 @@ export const ComparisonsSection: React.FC = () => {
                             </div>
                         </div>
                     ))}
+                </div>
+            </div>
+
+            {/* Cost of Bad Website Section */}
+            <div className="mt-16 bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl p-8 md:p-12 border border-red-100">
+                <h3 className="text-2xl font-bold text-navy mb-4">The Cost of a Bad Website</h3>
+                <p className="text-slate-700 mb-6">
+                    75% of US users assess a company's credibility from its website before any other interaction. 53% of mobile users abandon a page that exceeds 3 seconds to load. A slow, visually outdated website doesn't just underperform in isolation — it actively routes qualified traffic to competitors who rank faster, load faster, and convert better. The compounding monthly revenue cost of a poor digital presence is measurable, and calculable. Traditional agencies charge $25k–$100k to deliver it in 3–6 months. FactoryJet delivers an enterprise-grade result at $2k–$15k, in days.
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-white rounded-lg p-4 border border-red-100">
+                        <div className="text-sm text-slate-500 mb-1">Conversion Rate Increase</div>
+                        <div className="text-2xl font-bold text-jet-blue">+25% to +200%</div>
+                    </div>
+                    <div className="bg-white rounded-lg p-4 border border-red-100">
+                        <div className="text-sm text-slate-500 mb-1">Page Load Speed</div>
+                        <div className="text-2xl font-bold text-jet-blue">Under 1 Second (LCP target)</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -510,7 +516,7 @@ export const CaseStudiesSection: React.FC = () => {
                 icon={Trophy}
                 eyebrow="Results"
                 title="Proven Track Record"
-                subtitle="We don't just build websites; we build business assets."
+                subtitle="Every metric below reflects a documented before-and-after outcome from our US client portfolio, including the specific intervention that produced the result."
             />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
@@ -547,12 +553,21 @@ export const MigrationSection: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
             <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">Trapped in a Legacy Platform?</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-10">
-                We specialize in complex migrations. Whether it's moving from Drupal to Next.js, or Magento to Shopify Plus, we handle the data, SEO redirects, and design upgrades.
+                Platform migrations are among the most technically complex engagements in web development — and the most damaging when handled without a structured process. A poorly executed migration can eliminate years of organic search equity in under 72 hours. We handle migrations from Drupal, Magento, legacy custom CMS builds, and monolithic WordPress setups to modern stacks — with full 301 redirect mapping, verified SEO equity preservation, and zero-downtime deployment.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-10">
-                {['Zero Data Loss', 'SEO Preservation', 'No Downtime', 'Training Included'].map((item, i) => (
-                    <div key={i} className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full text-sm font-bold">
-                        <Check className="w-4 h-4 text-jet-green" /> {item}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto mb-10">
+                {[
+                    { label: 'Zero Data Loss', desc: 'Full content audit and migration verification before DNS cutover' },
+                    { label: 'SEO Preservation', desc: 'Complete 301 redirect matrix for every changed URL, tested pre-launch' },
+                    { label: 'No Downtime', desc: 'Parallel deployment with instant DNS swap protocol' },
+                    { label: 'Training Included', desc: 'Documented CMS workflows for your content and marketing team' },
+                ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-3 bg-white/10 px-5 py-3 rounded-xl text-sm">
+                        <Check className="w-4 h-4 text-jet-green shrink-0 mt-0.5" />
+                        <div>
+                            <span className="font-bold">{item.label}</span>
+                            <span className="text-slate-400"> — {item.desc}</span>
+                        </div>
                     </div>
                 ))}
             </div>
@@ -570,7 +585,7 @@ export const IndustriesSection: React.FC = () => (
                 icon={Briefcase}
                 eyebrow="Industries"
                 title="Specialized Expertise"
-                subtitle="We have deep experience in regulated and high-trust industries."
+                subtitle="Regulated and high-trust industries require web infrastructure that satisfies compliance, security, and credibility standards that general-purpose agency builds do not address by default."
             />
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
@@ -606,21 +621,12 @@ export const ROISection: React.FC = () => {
                         icon={TrendingUp}
                         eyebrow="ROI Focused"
                         title="The Cost of a Bad Website"
-                        subtitle="A slow, outdated website isn't just an eyesore—it's leaking revenue every hour."
+                        subtitle=""
                         centered={false}
                      />
-                     <ul className="space-y-4">
-                         {[
-                             "75% of users judge credibility based on design.",
-                             "53% of mobile users leave if load time > 3s.",
-                             "A bad experience drives customers to competitors."
-                         ].map((stat, i) => (
-                             <li key={i} className="flex items-start gap-3">
-                                 <AlertCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
-                                 <span className="text-slate-700 font-medium">{stat}</span>
-                             </li>
-                         ))}
-                     </ul>
+                     <p className="text-slate-700 leading-relaxed">
+                         75% of US users assess a company's credibility from its website before any other interaction. 53% of mobile users abandon a page that exceeds 3 seconds to load. A slow, visually outdated website doesn't just underperform in isolation — it actively routes qualified traffic to competitors who rank faster, load faster, and convert better. The compounding monthly revenue cost of a poor digital presence is measurable, and calculable. Traditional agencies charge $25k–$100k to deliver it in 3–6 months. FactoryJet delivers an enterprise-grade result at $2k–$15k, in days.
+                     </p>
                  </div>
                  <div className="flex-1 w-full bg-navy rounded-2xl p-8 text-white relative overflow-hidden">
                      <div className="absolute top-0 right-0 w-64 h-64 bg-jet-blue opacity-20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
@@ -632,7 +638,7 @@ export const ROISection: React.FC = () => {
                          </div>
                          <div>
                              <div className="flex justify-between text-sm text-slate-400 mb-1">Page Load Speed</div>
-                             <div className="text-3xl font-bold text-jet-blue">&lt; 1 Second</div>
+                             <div className="text-3xl font-bold text-jet-blue">Under 1 Second (LCP target)</div>
                          </div>
                          <Link href="/us/pricing" className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-jet-blue text-white font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg">
                            Calculate Your ROI <ArrowRight className="w-4 h-4" />
@@ -654,15 +660,15 @@ export const PricingSection: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6">
             <SectionHeader
                 icon={CreditCard}
-                eyebrow="Transparent Pricing"
+                eyebrow="Pricing"
                 title="Investment Packages"
-                subtitle="No hidden fees. No hourly billing surprises. Just flat-rate pricing for exceptional results."
+                subtitle="Flat-rate project pricing. No hourly billing, no change-order surprises, no hosting markup. All packages include full GitHub repository transfer at handoff."
             />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {[
-                    { name: "Starter", price: "$4,999", desc: "Perfect for local businesses.", features: ["Custom Design", "5 Pages", "Contact Form", "Basic SEO", "CMS Training"] },
-                    { name: "Growth", price: "$9,999", desc: "Best for growing companies.", featured: true, features: ["Everything in Starter", "10-15 Pages", "Blog/News Section", "Advanced SEO", "Analytics Dashboard", "Lead Magnet Setup"] },
-                    { name: "Enterprise", price: "Custom", desc: "For large scale operations.", features: ["Complex Web Apps", "E-Commerce", "Custom API Integrations", "SSO / Security", "SLA Support"] },
+                    { name: "Launch Plan", price: "Starting at $1,999", desc: "Ideal for local businesses and service providers establishing a digital presence fast.", features: ["Custom-designed landing page", "Up to 3 pages", "Contact form with lead capture", "On-page SEO setup (meta, schema, sitemap)", "7-day delivery sprint"] },
+                    { name: "Growth Plan", price: "Starting at $4,999", desc: "Built for growing businesses that need a full marketing site and content infrastructure.", featured: true, features: ["Everything in Starter", "Up to 10 pages", "Blog with SEO-ready architecture", "Advanced schema markup", "GA4 + Search Console setup", "CMS training session"] },
+                    { name: "Scale Plan", price: "Custom Enterprise Build", desc: "For complex web applications, high-volume e-commerce, and multi-system builds.", features: ["Complex web application architecture", "E-commerce (Shopify Plus or headless)", "Custom API and third-party integrations", "SSO and enterprise security", "SLA-backed support"] },
                 ].map((plan, i) => (
                     <div key={i} className={`relative rounded-2xl p-8 border ${plan.featured ? 'border-jet-blue shadow-2xl scale-105 z-10 bg-white' : 'border-slate-200 bg-slate-50'}`}>
                         {plan.featured && (
@@ -694,11 +700,18 @@ export const PricingSection: React.FC = () => {
 export const ExpandedFAQ: React.FC = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
     const faqs = [
-        { q: "How long does a project take?", a: "Our standard turnaround for a marketing website is 21 days. Larger e-commerce or web app projects typically take 6-8 weeks." },
-        { q: "Do I own the code?", a: "Yes, absolutely. Unlike other agencies that hold your site hostage, you get full ownership of the GitHub repository and all assets upon completion." },
-        { q: "Will I be able to edit the site myself?", a: "Yes. We build with user-friendly CMS options (like Sanity, WordPress, or Shopify) so you can easily update text and images without touching code." },
-        { q: "Do you offer hosting?", a: "We can set up hosting for you on high-performance platforms like Vercel or Netlify, but the account will be in your name. We don't markup hosting fees." },
-        { q: "What is your payment schedule?", a: "Typically 50% upfront to book your slot, 25% at design approval, and 25% upon launch." },
+        { q: "How long does a web design project take?", a: "Our rapid sprint delivers a production-ready landing page or single-page site in 7 days. A full marketing website — covering discovery, design system, development, QA across 20+ devices, and deployment — takes 21 days. E-commerce and complex web application projects run 6–8 weeks depending on integration scope. Every timeline is documented in the project agreement before work begins." },
+        { q: "Do I own the code after the project?", a: "Yes — unconditionally. At handoff, we transfer the full GitHub repository to your organization. You own every component, every configuration file, and every line of code. Hosting accounts are also set up in your name. There is no ongoing technical dependency on FactoryJet to keep your site running." },
+        { q: "Will I be able to edit the site myself?", a: "Yes. Every project includes a CMS configured for non-technical content editing — whether that's WordPress, Sanity, or a headless CMS appropriate to your stack. We provide a recorded training session and written documentation covering common content updates. For design-system and feature changes, we offer monthly maintenance retainers." },
+        { q: "Do you offer hosting, and is there a markup?", a: "We configure hosting in your name on Vercel, Netlify, AWS, or your preferred infrastructure provider. There is zero markup on hosting costs — you pay the provider directly. Typical hosting costs for a Next.js marketing site run $0–$20 per month depending on traffic." },
+        { q: "How do I get started with FactoryJet's web design services USA?", a: "Book a free strategy call using the button below. We'll review your current site, identify the highest-impact technical and conversion gaps, and outline a project scope with a fixed price and delivery date before any commitment is required." },
+        { q: "What does a web design agency do?", a: "A web design agency plans, designs, and structures websites to ensure usability, branding consistency, accessibility, and conversion readiness. This includes UI/UX design, responsive layouts, performance optimization, and content structure." },
+        { q: "How much does web design cost in the USA?", a: "Web design in the USA typically costs between $2,500 and $15,000 depending on scope, pages, customization, and timelines. Complex or conversion-focused projects may cost more." },
+        { q: "How long does it take to design a website?", a: "Most professional websites take 2–6 weeks to design, depending on complexity, approvals, and content readiness." },
+        { q: "Is SEO included in web design?", a: "Modern web design includes technical SEO foundations such as page structure, speed optimization, mobile responsiveness, and accessibility. Ongoing SEO is usually a separate service." },
+        { q: "Will I own the website code?", a: "Yes. You retain full ownership of the website code, design files, and content after project delivery." },
+        { q: "Can a website be redesigned without losing SEO?", a: "Yes. With proper redirects, URL preservation, and content mapping, a redesign can improve SEO without rankings loss." },
+        { q: "Is web design different from web development?", a: "Yes. Web design focuses on layout, UX, and visuals, while development handles functionality and backend logic." },
     ];
 
     const faqSchema = {
@@ -725,7 +738,7 @@ export const ExpandedFAQ: React.FC = () => {
                     icon={HelpCircle}
                     eyebrow="FAQ"
                     title="Common Questions"
-                    subtitle="Everything you need to know before we start."
+                    subtitle=""
                 />
                 <div className="space-y-4">
                     {faqs.map((faq, i) => (

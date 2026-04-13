@@ -1,126 +1,97 @@
 import React, { useState } from 'react';
 import { Section } from './ui/Section';
-import { 
-  ChevronDown, 
-  Minus, 
-  Plus, 
-  Layers, 
-  Code, 
-  Building2, 
-  Smartphone, 
-  Share2, 
-  Server, 
-  Globe, 
+import {
+  Minus,
+  Plus,
+  Layers,
+  Code,
+  Building2,
+  Server,
   DollarSign,
   BrainCircuit
 } from 'lucide-react';
 
 const faqData = [
   {
-    id: 'ai-commerce',
-    category: "AI & Commerceflo",
-    icon: BrainCircuit,
+    id: 'pricing-timeline',
+    category: 'Pricing & Timeline',
+    icon: DollarSign,
     questions: [
-      { 
-        q: "What exactly is 'AI-Native' commerce, and why should I care?", 
-        a: "Think of 'AI-Native' as having a brain built into your business from day one, rather than taping a calculator to the side later. Legacy platforms like Shopify are 'Bolt-On' systems; their AI is blind to data silos. Commerceflo is built on a Unified Data Model, meaning its AI sees everything—inventory, B2B orders, Amazon sales—simultaneously. This allows it to make complex decisions, like routing inventory from a retail store to an FBA warehouse, because it's the only AI that knows both exist." 
+      {
+        q: 'How much does e-commerce development cost?',
+        a: 'FactoryJet e-commerce development starts from $1,999 for launch-ready stores. Growth builds typically range from $10,000 to $24,999, advanced custom storefronts from $25,000 to $49,999, and enterprise commerce solutions from $50,000 to $150,000+. Final pricing depends on platform, product catalog size, integrations, and business complexity.'
       },
-      { 
-        q: "Can you explain what Commerceflo.ai actually is in simple terms?", 
-        a: "Commerceflo.ai is the central nervous system for ambitious SMEs ($500k–$20M). It's a single operating system that replaces the chaotic 'Franken-stack' of apps and spreadsheets. It unifies your entire business—One Catalog, One Inventory Pool, One Order Hub—across every channel you sell on, from your B2B portal and Shopify site to TikTok Shop and Amazon. It lets you 'Sell Everywhere, Manage Once' without the technical headache." 
-      },
-      { 
-        q: "How does AI actually help with the daily grind of running an online store?", 
-        a: "It acts as your co-pilot to handle the heavy lifting. The Doer automates grunt work—generating SEO descriptions for every channel and routing thousands of orders to the cheapest fulfillment center. The Analyst watches your margins, auto-adjusting prices to win Amazon Buy Boxes and balancing inventory to prevent stockouts. The Strategist spots growth, telling you when a product is trending on TikTok or if you should expand to Walmart Marketplace based on your catalog." 
-      },
-      { 
-        q: "Is Commerceflo truly a unified multi-channel solution, or just another connector tool?", 
-        a: "Absolutely. Unlike tools that just pass data back and forth, Commerceflo is a thinking engine. It natively integrates B2C, B2B, Marketplaces, Social, and POS into one dashboard. Because it’s Headless and API-First, it doesn't just sync stock numbers; it orchestrates your entire logistics and sales strategy. It eliminates 'Inventory Blindness' and 'Channel Chaos,' giving you a single, truthful view of your business that legacy platforms simply can't provide." 
+      {
+        q: 'How long does it take to build an e-commerce store?',
+        a: 'Most core e-commerce stores are delivered in 7 days. More advanced custom builds typically take 7–14 days, while enterprise and marketplace solutions follow milestone-based delivery timelines depending on integrations, platform requirements, and project scope.'
       }
     ]
   },
-  { 
+  {
     id: 'platforms',
-    category: "Platform Selection", 
+    category: 'Platform Selection',
     icon: Layers,
     questions: [
-      { q: "Which e-commerce platform is best for my business?", a: "It depends on your needs. Shopify is best for DTC brands wanting quick launch. Shopify Plus for enterprise DTC ($10M+ revenue). BigCommerce for B2B/B2C hybrid. Adobe Commerce for complex customization. WooCommerce for WordPress integration. Headless platforms (Medusa.js, Spree) for maximum flexibility. We provide free platform consultations." },
-      { q: "Should I choose Shopify or WooCommerce?", a: "Shopify is easier, faster, and has better support—ideal for most businesses. WooCommerce offers more flexibility and no transaction fees—ideal if you have WordPress expertise or need deep customization. Choose Shopify for simplicity; WooCommerce for control." },
-      { q: "What's the difference between Shopify and Shopify Plus?", a: "Shopify Plus ($2,500/month) offers: checkout customization, Shopify Flow automation, higher API limits, dedicated support, multi-storefront, and B2B features. Standard Shopify ($29-299/month) handles most needs for brands under $1M annual revenue." },
-      { q: "Is BigCommerce better than Shopify for B2B?", a: "Yes. BigCommerce has native B2B features (customer-specific pricing, quotes, purchase orders) in its B2B Edition. Shopify requires apps or Shopify Plus for B2B functionality. For B2B-first businesses, BigCommerce is typically the better choice." },
-      { q: "What is Spree Commerce and when should I use it?", a: "Spree Commerce is an open-source Ruby on Rails e-commerce framework. Use it when you have Ruby development resources, need complete customization freedom, want to avoid licensing fees, or are building a marketplace. It's more technical but offers maximum flexibility." },
-      { q: "What is Medusa.js and how does it compare to Shopify?", a: "Medusa.js is an open-source headless commerce engine built on Node.js. It offers Shopify-like features with complete customization and zero transaction fees. Choose Medusa for custom builds; Shopify for quick launch with less technical overhead." }
+      {
+        q: 'Which e-commerce platforms does FactoryJet work with?',
+        a: 'FactoryJet builds on Shopify, Shopify Plus, WooCommerce, BigCommerce, Adobe Commerce, and headless commerce frameworks. We recommend the right platform based on your business model, growth stage, product catalog, required integrations, and revenue goals.'
+      }
     ]
   },
-  { 
-    id: 'process',
-    category: "Development Process", 
+  {
+    id: 'ai-commerce',
+    category: 'AI & Commerceflo',
+    icon: BrainCircuit,
+    questions: [
+      {
+        q: 'What exactly is AI-native e-commerce, and why does it matter?',
+        a: 'AI-native e-commerce means your store is built for speed, search visibility, automation, and conversion intelligence from day one. At FactoryJet, this includes structured data, schema markup, answer-first content architecture, AI-ready product pages, and integrations that improve visibility across Google, AI Overviews, ChatGPT, and other generative search engines.'
+      },
+      {
+        q: 'What is Commerceflo.ai in simple terms?',
+        a: 'Commerceflo.ai is a unified commerce operating system for growing brands that want to manage products, inventory, orders, B2B sales, marketplaces, and social commerce from one platform. Instead of using multiple disconnected tools, it centralizes catalog, stock, order routing, and analytics into one dashboard for easier scaling.'
+      },
+      {
+        q: 'Is Commerceflo a true multi-channel solution?',
+        a: 'Yes. Commerceflo supports true multi-channel commerce by connecting your website, B2B portal, marketplaces, social commerce channels, and POS systems into one unified backend. This reduces inventory mismatch, improves order visibility, and allows centralized management across all sales channels.'
+      }
+    ]
+  },
+  {
+    id: 'ownership-migration',
+    category: 'Ownership & Migration',
     icon: Code,
     questions: [
-      { q: "How long does e-commerce development take?", a: "Starter stores: 2-4 weeks. Custom stores: 6-12 weeks. Enterprise/headless: 12-24 weeks. Social commerce: 2-4 weeks. Mobile apps: 8-16 weeks. We provide detailed timelines after discovery." },
-      { q: "How much does e-commerce development cost?", a: "Starter: $5K-10K. Growth: $10K-25K. Professional: $25K-50K. Enterprise: $50K-150K+. Mobile apps: $30K-100K+. Pricing depends on platform, features, and customization requirements." },
-      { q: "Do you provide ongoing support?", a: "Yes. All projects include post-launch support (30-90 days based on tier). We also offer monthly retainer support plans starting at $1,500/month for ongoing optimization, updates, and technical support." },
-      { q: "Can you migrate from our current platform?", a: "Yes. We handle migrations from WooCommerce, Magento, BigCommerce, Shopify, and custom platforms. Migration includes data transfer, SEO preservation (301 redirects), and design refresh." }
+      {
+        q: 'Do you provide full code ownership?',
+        a: 'Yes. Every project includes full GitHub repository ownership, zero vendor lock-in, hosting setup in your account, and complete access to source code, assets, and technical documentation.'
+      },
+      {
+        q: 'Can you migrate my existing store?',
+        a: 'Yes. FactoryJet provides zero-downtime migrations from Shopify, WooCommerce, Magento, BigCommerce, Wix, and custom platforms with SEO preservation, 301 redirects, structured data migration, and full order history transfer.'
+      }
     ]
   },
-  { 
-    id: 'b2b',
-    category: "B2B E-Commerce", 
-    icon: Building2,
-    questions: [
-       { q: "What B2B features do you build?", a: "Customer-specific pricing, tiered pricing, quote management (RFQ), purchase orders, company accounts, multiple buyer roles, approval workflows, payment terms (Net 30/60/90), bulk ordering, quick reorder, and ERP integration." },
-       { q: "Which platform is best for B2B e-commerce?", a: "BigCommerce B2B Edition for mid-market. Adobe Commerce for enterprise with complex requirements. OroCommerce for B2B-first businesses. Shopify Plus for existing Shopify merchants adding B2B. Custom solutions for unique requirements." },
-       { q: "Can you integrate with our ERP?", a: "Yes. We integrate with SAP, NetSuite, Microsoft Dynamics, Salesforce, HubSpot, ERPNext, and most major systems. Custom integrations also available." }
-    ]
-  },
-  { 
-    id: 'mobile',
-    category: "Mobile & Apps", 
-    icon: Smartphone,
-    questions: [
-      { q: "Do I need a mobile app or is responsive web enough?", a: "Responsive web works for most businesses. Consider an app if: you have 100K+ customers, high repeat purchase rate, want push notifications, need offline features, or compete against app-first brands. Apps convert 3-4x better than mobile web." },
-      { q: "React Native vs Flutter - which is better for e-commerce?", a: "Both are excellent. React Native is better if your team knows JavaScript/React. Flutter offers slightly better performance and is better if starting fresh. Both achieve 40-60% cost savings vs native development." },
-      { q: "How much does e-commerce app development cost?", a: "Cross-platform (React Native/Flutter): $30K-60K. Native (iOS + Android separately): $60K-120K. PWA: $15K-30K. Pricing depends on features and platform integration complexity." }
-    ]
-  },
-  { 
-    id: 'social',
-    category: "Social Commerce", 
-    icon: Share2,
-    questions: [
-      { q: "How do I sell on TikTok Shop?", a: "TikTok Shop requires: US business, product catalog, fulfillment capability. We handle: shop setup, product sync with your e-commerce platform, affiliate program configuration, and livestream setup. Typical setup: 2-4 weeks." },
-      { q: "Can you set up Instagram Shopping?", a: "Yes. We configure Instagram Shopping including: business account eligibility, product tagging, catalog management via Commerce Manager, checkout configuration, and shopping ads setup." },
-      { q: "What is livestream commerce?", a: "Livestream commerce is selling products during live video broadcasts on platforms like TikTok Live and Instagram Live. Products are tagged and purchasable in real-time. Conversion rates reach 10-15% (vs 2% for regular e-commerce)." }
-    ]
-  },
-  { 
-    id: 'headless',
-    category: "Headless & Technical", 
+  {
+    id: 'why-factoryjet',
+    category: 'Why FactoryJet',
     icon: Server,
     questions: [
-      { q: "What is headless commerce?", a: "Headless commerce separates the frontend (what customers see) from the backend (e-commerce engine) via APIs. This enables custom frontends using any technology, better performance, and omnichannel experiences. It's more complex but offers unlimited flexibility." },
-      { q: "What is composable commerce?", a: "Composable commerce uses best-of-breed, modular components instead of a single monolithic platform. Following MACH principles (Microservices, API-first, Cloud-native, Headless), it allows mixing different vendors for commerce, CMS, search, payments, etc." },
-      { q: "What does MACH architecture mean?", a: "MACH stands for Microservices, API-first, Cloud-native, Headless. It's an architectural approach that enables maximum flexibility, scalability, and the ability to swap individual components without rebuilding everything." },
-      { q: "When should I go headless?", a: "Consider headless when: you need maximum performance (sub-second loads), want custom frontend experiences, need true omnichannel (web, app, IoT), have developer resources, or are limited by template-based platforms." }
+      {
+        q: 'What makes FactoryJet different from other e-commerce agencies?',
+        a: 'FactoryJet combines enterprise-grade development with startup-friendly pricing. Our key USPs include 7-day delivery, full code ownership, AI-native architecture, 523 websites delivered, 500+ clients served, 4.9/5 client rating, and pricing that is typically 40–60% below comparable US and UK agencies.'
+      }
     ]
   },
-  { 
-    id: 'cross-border',
-    category: "Cross-Border", 
-    icon: Globe,
+  {
+    id: 'b2b',
+    category: 'B2B & Wholesale',
+    icon: Building2,
     questions: [
-      { q: "Can you help us sell internationally?", a: "Yes. We implement cross-border solutions including multi-currency checkout, local payment methods, duties and taxes calculation, international shipping, and localized content. Solutions include Shopify Markets, Global-e, and BigCommerce multi-storefront." },
-      { q: "How do you handle multi-currency?", a: "We configure automatic currency conversion based on visitor location, local pricing strategies, proper rounding rules, and checkout in local currency. Most platforms support 100+ currencies." },
-      { q: "What about duties and taxes for international orders?", a: "We implement landed cost calculation showing duties and taxes at checkout (DDP - Delivered Duty Paid), ensuring no surprise fees for customers and proper compliance." }
-    ]
-  },
-  { 
-    id: 'pricing',
-    category: "Pricing & Timeline", 
-    icon: DollarSign,
-    questions: [
-       { q: "What's included in your pricing?", a: "All pricing includes: discovery, design, development, testing, launch, training, and post-launch support. No hidden fees. Hosting, apps, and platform subscription fees are separate (we'll detail these in your quote)." },
-       { q: "Do you offer payment plans?", a: "Yes. Typical structure: 40% deposit, 40% at development milestone, 20% at launch. We also offer monthly payment options for larger projects." }
+      {
+        q: 'Do you support B2B and wholesale e-commerce?',
+        a: 'Yes. We build B2B and wholesale e-commerce systems with custom pricing, customer-specific catalogs, bulk ordering workflows, ERP integrations, approval flows, and multi-user business accounts across Shopify Plus, Adobe Commerce, and headless frameworks.'
+      }
     ]
   }
 ];

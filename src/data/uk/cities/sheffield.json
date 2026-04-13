@@ -1,0 +1,58 @@
+{
+  "slug": "sheffield",
+  "name": "Sheffield",
+  "region": "South Yorkshire",
+  "country": "England",
+  "population": 590000,
+  "businesses": 28000,
+  "gdpBn": 21.8,
+  "primaryIndustries": [
+    "Manufacturing",
+    "Advanced Engineering",
+    "Digital & Tech",
+    "Healthcare"
+  ],
+  "keyEmployers": [
+    "Rolls-Royce",
+    "Forgemasters",
+    "Sheffield Teaching Hospitals",
+    "University of Sheffield",
+    "ADS Group"
+  ],
+  "avgAgencyPricing": {
+    "webDesign": 3600,
+    "ecommerce": 7000,
+    "seo": 950,
+    "aiAgents": 0
+  },
+  "localAgencies": {
+    "web-design": [
+      "Vantage Design",
+      "Sheffield Digital",
+      "Web Design Sheffield"
+    ],
+    "seo": [
+      "Sheffield SEO Services",
+      "Digital Catalyst",
+      "Marketing Bubble"
+    ]
+  },
+  "keyStats": {
+    "digitalBusinessGrowth": "15% YoY",
+    "smeCount": 24000,
+    "techJobs": 6500,
+    "avgSalary": 29000
+  },
+  "cityAreas": [
+    "Sheffield City Centre",
+    "The Moor",
+    "Kelham",
+    "Attercliffe",
+    "Hillsborough"
+  ],
+  "newsHook": "Advanced Manufacturing Innovation Centre opens with £80M investment",
+  "coordinates": {
+    "lat": 53.3828,
+    "lng": -1.4659
+  }
+}

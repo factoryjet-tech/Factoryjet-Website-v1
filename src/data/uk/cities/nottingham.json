@@ -1,0 +1,58 @@
+{
+  "slug": "nottingham",
+  "name": "Nottingham",
+  "region": "East Midlands",
+  "country": "England",
+  "population": 330000,
+  "businesses": 18000,
+  "gdpBn": 14.2,
+  "primaryIndustries": [
+    "Retail",
+    "Healthcare & Education",
+    "Distribution & Logistics",
+    "Technology"
+  ],
+  "keyEmployers": [
+    "Boots UK",
+    "Experian",
+    "University of Nottingham",
+    "Nottingham University Hospitals",
+    "Nottingham City Council"
+  ],
+  "avgAgencyPricing": {
+    "webDesign": 3400,
+    "ecommerce": 6800,
+    "seo": 900,
+    "aiAgents": 0
+  },
+  "localAgencies": {
+    "web-design": [
+      "Nottingham Digital",
+      "Web Squared",
+      "Bolt Design"
+    ],
+    "seo": [
+      "Nottingham SEO",
+      "Local Search Pro",
+      "Digital Insight"
+    ]
+  },
+  "keyStats": {
+    "digitalBusinessGrowth": "14% YoY",
+    "smeCount": 16000,
+    "techJobs": 4800,
+    "avgSalary": 28500
+  },
+  "cityAreas": [
+    "Nottingham City Centre",
+    "Lace Market",
+    "Hockley",
+    "Beeston",
+    "Bulwell"
+  ],
+  "newsHook": "Boots invests £50M in UK headquarters modernization and tech transformation",
+  "coordinates": {
+    "lat": 52.9549,
+    "lng": -1.1584
+  }
+}

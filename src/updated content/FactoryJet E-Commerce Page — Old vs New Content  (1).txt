@@ -1,0 +1,271 @@
+﻿FactoryJet E-Commerce Page — Old vs New Content  
+https://factoryjet.com/us/services/ecommerce-development
+________________
+
+
+1) HERO SECTION
+OLD CONTENT
+AMERICA'S AI-NATIVE E-COMMERCE DEVELOPMENT COMPANY
+Your Online Store Should Be Your Best Salesperson. Most Aren't.
+By Bhavesh Barot · Founder at FactoryJet · 18+ Years Experience
+200+ Stores Launched
+$47M+ Generated
+3-4 Week Delivery
+4.9★ Satisfaction
+
+
+NEW CONTENT (REPLACE FULL BLOCK)
+AMERICA'S AI-NATIVE E-COMMERCE DEVELOPMENT COMPANY
+Your Online Store Should Be Your Best Salesperson. Most Aren’t.
+Enterprise-grade e-commerce stores delivered in 7 days.
+Built with Silicon Valley precision at SMB pricing.
+100% code ownership with zero vendor lock-in.
+By Bhavesh Barot · Founder at FactoryJet · 18+ Years Experience
+523 Websites Delivered
+500+ Clients Served
+4.9/5 Client Rating
+$50M+ Revenue Generated for Clients
+200+ E-Commerce Stores Launched
+Helping brands build conversion-focused commerce systems that scale revenue.
+Starting at $1,999
+Fixed scope • Fixed pricing • No surprises
+________________
+
+
+________________
+
+
+2) TRUST + OWNERSHIP STRIP (NEW SECTION ADD)
+OLD CONTENT
+Not clearly visible / scattered lower on page
+
+
+NEW CONTENT (ADD DIRECTLY BELOW CTA)
+✓ Full GitHub Repository Ownership
+✓ Zero Vendor Lock-In
+✓ Hosting Configured in Your Account
+✓ Lighthouse Audited
+✓ Core Web Vitals Optimized
+✓ WCAG Accessibility Compliance
+✓ QA Tested Across 20+ Devices
+
+
+________________
+
+
+
+
+________________
+
+
+4) WHY FACTORYJET SECTION INTRO
+OLD CONTENT
+The E-Commerce Development Company That Focuses on Revenue—Not Just Code
+
+
+NEW CONTENT
+WHY LEADING US BRANDS CHOOSE FACTORYJET
+
+
+The E-Commerce Development Company Built for Revenue Growth
+FactoryJet builds enterprise-grade e-commerce systems engineered to increase conversions, improve checkout completion, and scale online revenue.
+Unlike traditional agencies that focus only on design, every decision we make is measured against one question:
+Will this increase sales?
+Our clients trust us for 7-day delivery, full code ownership, platform-neutral recommendations, and revenue-first engineering.
+________________
+
+
+________________
+
+
+5) TIMELINE CONTENT REPLACEMENTS (GLOBAL)
+OLD CONTENT
+3-4 Week Delivery
+3-4 wks
+2-3 week delivery
+4-6 week delivery
+8-12 week delivery
+
+
+NEW CONTENT
+7-Day Core Delivery
+7 Days
+7-day delivery
+7–14 day delivery
+14+ day enterprise delivery
+
+
+________________
+
+
+6) PRICING SECTION (FULL REPLACEMENT)
+OLD CONTENT
+Starter
+$4,999- $9,999
+2-3 week delivery
+
+
+Growth
+$10,000- $24,999
+4-6 week delivery
+
+
+Professional
+$25,000- $49,999
+8-12 week delivery
+
+
+Enterprise
+$50,000- $150k+
+12-24 week delivery
+
+
+NEW CONTENT
+Starter
+$1,999 – $9,999
+
+
+Best for new brands launching online.
+✓ Shopify or WooCommerce
+✓ Template customization
+✓ Up to 100 products
+✓ Mobile responsive
+✓ SEO foundation
+✓ 7-day delivery
+✓ 30-day support
+
+
+Growth
+$10,000 – $24,999
+
+
+Best for established brands scaling revenue.
+✓ Shopify, WooCommerce, or BigCommerce
+✓ Custom design
+✓ Up to 500 products
+✓ Analytics integration
+✓ SEO setup
+✓ 7–14 day delivery
+✓ 60-day support
+
+
+Professional
+$25,000 – $49,999
+
+
+Best for high-growth brands and B2B commerce.
+✓ Shopify Plus / Adobe / Headless
+✓ Fully custom storefront
+✓ Unlimited products
+✓ ERP / CRM integrations
+✓ B2B features
+✓ 7–14 day delivery
+✓ 90-day support
+
+
+Enterprise
+$50,000 – $150K+
+
+
+Best for marketplaces and enterprise commerce.
+✓ Adobe Commerce / Headless
+✓ Multi-storefront architecture
+✓ Advanced custom integrations
+✓ Dedicated engineering team
+✓ Milestone-based enterprise delivery
+✓ 12-month support
+________________
+
+
+7) CRITICAL GLOBAL ENTITY RULES FOR DEV + CONTENT TEAM
+ALWAYS USE:
+523 websites delivered
+500+ clients served
+4.9/5 client rating
+$50M+ revenue generated
+7-day delivery
+Starting at $1,999
+
+
+REMOVE EVERYWHERE:
+$47M
+3-4 weeks
+2-3 weeks
+mixed timeline messaging
+
+
+________________
+
+
+Faqs
+________________
+
+
+1. How much does e-commerce development cost?
+FactoryJet e-commerce development starts from $1,999 for launch-ready stores. Growth builds typically range from $10,000 to $24,999, advanced custom storefronts from $25,000 to $49,999, and enterprise commerce solutions from $50,000 to $150,000+. Final pricing depends on platform, product catalog size, integrations, and business complexity.
+
+
+________________
+
+
+2. How long does it take to build an e-commerce store?
+Most core e-commerce stores are delivered in 7 days. More advanced custom builds typically take 7–14 days, while enterprise and marketplace solutions follow milestone-based delivery timelines depending on integrations, platform requirements, and project scope.
+
+
+________________
+
+
+3. Which e-commerce platforms does FactoryJet work with?
+FactoryJet builds on Shopify, Shopify Plus, WooCommerce, BigCommerce, Adobe Commerce, and headless commerce frameworks. We recommend the right platform based on your business model, growth stage, product catalog, required integrations, and revenue goals.
+
+
+________________
+
+
+4. What exactly is AI-native e-commerce, and why does it matter?
+AI-native e-commerce means your store is built for speed, search visibility, automation, and conversion intelligence from day one. At FactoryJet, this includes structured data, schema markup, answer-first content architecture, AI-ready product pages, and integrations that improve visibility across Google, AI Overviews, ChatGPT, and other generative search engines.
+
+
+________________
+
+
+5. What is Commerceflo.ai in simple terms?
+Commerceflo.ai is a unified commerce operating system for growing brands that want to manage products, inventory, orders, B2B sales, marketplaces, and social commerce from one platform. Instead of using multiple disconnected tools, it centralizes catalog, stock, order routing, and analytics into one dashboard for easier scaling.
+
+
+________________
+
+
+6. Is Commerceflo a true multi-channel solution?
+Yes. Commerceflo supports true multi-channel commerce by connecting your website, B2B portal, marketplaces, social commerce channels, and POS systems into one unified backend. This reduces inventory mismatch, improves order visibility, and allows centralized management across all sales channels.
+
+
+________________
+
+
+7. Do you provide full code ownership?
+Yes. Every project includes full GitHub repository ownership, zero vendor lock-in, hosting setup in your account, and complete access to source code, assets, and technical documentation.
+
+
+________________
+
+
+8. Can you migrate my existing store?
+Yes. FactoryJet provides zero-downtime migrations from Shopify, WooCommerce, Magento, BigCommerce, Wix, and custom platforms with SEO preservation, 301 redirects, structured data migration, and full order history transfer.
+
+
+________________
+
+
+9. What makes FactoryJet different from other e-commerce agencies?
+FactoryJet combines enterprise-grade development with startup-friendly pricing. Our key USPs include 7-day delivery, full code ownership, AI-native architecture, 523 websites delivered, 500+ clients served, 4.9/5 client rating, and pricing that is typically 40–60% below comparable US and UK agencies.
+
+
+________________
+
+
+10. Do you support B2B and wholesale e-commerce?
+Yes. We build B2B and wholesale e-commerce systems with custom pricing, customer-specific catalogs, bulk ordering workflows, ERP integrations, approval flows, and multi-user business accounts across Shopify Plus, Adobe Commerce, and headless frameworks.
+
+
+________________

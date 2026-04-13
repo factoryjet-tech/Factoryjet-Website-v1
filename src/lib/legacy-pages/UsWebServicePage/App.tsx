@@ -94,26 +94,17 @@ const Hero = () => {
               {/* Left Column: Content */}
               <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
                   
-                  {/* Eyebrow Badge */}
-                  <div className="opacity-0 animate-fade-up [animation-delay:0.3s] w-full flex justify-center lg:justify-start">
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-jet-green to-jet-green-dark text-white text-[10px] md:text-xs font-bold tracking-wider uppercase mb-6 shadow-lg relative overflow-hidden group">
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer"></div>
-                        <Sparkles className="w-3.5 h-3.5 text-yellow-300" />
-                        <span>America's Most Technical Web Design Company</span>
-                    </div>
-                  </div>
-
                   {/* Headline */}
                   <h1 className="text-[2.5rem] leading-[1.1] md:text-5xl lg:text-6xl font-heading font-extrabold text-navy tracking-tight mb-6 opacity-0 animate-fade-up [animation-delay:0.5s] w-full">
-                    Enterprise-Grade Web Development. <br className="hidden md:block" />
+                    Web Design Services for US Businesses — <br className="hidden md:block" />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-jet-blue to-jet-orange animate-gradient-x block mt-2 md:inline md:mt-0">
-                        Built for Growth. Priced for SMBs.
+                        Built for Speed, SEO & Conversions
                     </span>
                   </h1>
 
                   {/* Subheadline */}
                   <p className="text-base md:text-lg text-slate-800 mb-8 leading-relaxed max-w-2xl font-normal opacity-0 animate-fade-up [animation-delay:0.7s]">
-                    FactoryJet is a full-stack web development agency that combines the technical precision of Silicon Valley with the affordability SMBs need. Whether you need a lightning-fast Next.js application, a conversion-optimized WordPress website, or a custom Shopify store—we deliver production-ready code in <span className="text-navy font-bold border-b-2 border-jet-blue/20">21 days</span>.
+                    FactoryJet helps US businesses launch high-performance websites in as little as <span className="text-navy font-bold border-b-2 border-jet-blue/20">7 days</span>. From custom Next.js applications to WordPress, Shopify, and scalable React builds, we create conversion-focused websites engineered for speed, SEO, and qualified lead generation — with full GitHub ownership and zero vendor lock-in.
                   </p>
                   
                   {/* CTAs */}
@@ -148,28 +139,28 @@ const Hero = () => {
 
                   {/* Value Props Grid - 2x2 on Desktop, 1x2 or stacked on Mobile */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 relative z-10">
-                      <ValuePropCard 
-                        icon={Code2} 
-                        title="Custom Code" 
-                        desc="Every line written for your business." 
+                      <ValuePropCard
+                        icon={Code2}
+                        title="Custom Code"
+                        desc="Every component engineered specifically for your business. No templates, no plugin stacks, no recycled layouts."
                         delay="[animation-delay:1.0s]"
                       />
-                      <ValuePropCard 
-                        icon={Clock} 
-                        title="21-Day Delivery" 
-                        desc="While competitors are still in meetings." 
+                      <ValuePropCard
+                        icon={Clock}
+                        title="7-Day Delivery"
+                        desc="While competitors are still in discovery meetings, we ship. Our rapid sprint system delivers production-ready code in as little as 7 days."
                         delay="[animation-delay:1.1s]"
                       />
-                      <ValuePropCard 
-                        icon={Lock} 
-                        title="100% Ownership" 
-                        desc="You own the GitHub repository." 
+                      <ValuePropCard
+                        icon={Lock}
+                        title="100% Ownership"
+                        desc="Full GitHub repository transfer at handoff. Your code, your hosting account, your asset — unconditionally."
                         delay="[animation-delay:1.2s]"
                       />
-                      <ValuePropCard 
-                        icon={Flag} 
-                        title="US-Based Team" 
-                        desc="Real-time collaboration, zero lag." 
+                      <ValuePropCard
+                        icon={Flag}
+                        title="US-Based Team"
+                        desc="Every engineer and strategist operates in US business hours for real-time collaboration. No offshore handoffs, no communication delays."
                         delay="[animation-delay:1.3s]"
                       />
                   </div>
@@ -187,8 +178,8 @@ const Hero = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wide leading-tight text-left">
-                        Trusted by<br/><span className="text-navy text-sm">500+ Innovators</span>
+                    <div className="text-xs font-bold text-slate-500 leading-tight text-left">
+                        <span className="uppercase tracking-wide">Trusted by</span><br/><span className="text-navy text-sm">500+ Innovators</span><br/><span className="text-[10px] text-slate-400 font-medium normal-case">across SaaS, finance, e-commerce, and professional services</span>
                     </div>
                  </div>
 
@@ -224,7 +215,7 @@ const Hero = () => {
                     </div>
                     <div>
                         <div className="text-xl font-black text-navy leading-none">$50M+</div>
-                        <div className="text-[10px] text-slate-400 font-bold uppercase mt-1">Revenue Gen</div>
+                        <div className="text-[10px] text-slate-400 font-bold uppercase mt-1">Revenue Generated for Clients</div>
                     </div>
                  </div>
               </div>
@@ -246,32 +237,32 @@ const Problem = () => {
     </div>
 
     <div className="container mx-auto px-4 md:px-6 max-w-6xl relative z-10">
-      <SectionHeader 
+      <SectionHeader
         icon={AlertCircle}
         eyebrow="The Problem"
-        title="Why Most Website Developers Fail Your Business"
-        subtitle="The uncomfortable truth about the $3 billion web design industry. Most businesses hire a web design agency expecting a growth engine. Instead, they get a digital paperweight."
+        title="Why Most Website Builds Fail US Businesses"
+        subtitle="The US web design industry generates over $40 billion annually — yet 70% of redesigned business websites fail to produce a measurable increase in qualified leads within 12 months. The failure is rarely creative. It's structural, technical, and strategic."
         centered
       />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8">
         {[
-          { 
-            icon: Zap, 
-            title: "Speed Theater", 
-            desc: "Designers show you 'fast' sites on their laptops. Real users experience 5-8s loads, laggy scrolling, and broken layouts.", 
+          {
+            icon: Zap,
+            title: "Speed Theater",
+            desc: "Agencies demo your site on a gigabit office connection. Real users on US mobile networks experience 5–8 second load times. Every second of load time beyond 3s costs approximately 7% in conversions. A Largest Contentful Paint above 2.5s triggers Google's Core Web Vitals penalty — hurting both rankings and revenue.",
             stat: "7% Conv. Loss / sec"
           },
-          { 
-            icon: Shield, 
-            title: "SEO Snake Oil", 
-            desc: "Promises of 'SEO-friendly' design that deliver basic meta tags Google ignores. No schema, no semantic HTML.", 
+          {
+            icon: Shield,
+            title: "SEO Snake Oil",
+            desc: "'SEO-friendly design' has become a meaningless sales phrase. A site that genuinely ranks requires semantic HTML, valid structured schema, sub-2s load time, and crawlable rendered content — not just a filled-in meta description and an alt tag on the logo.",
             stat: "Invisible on Google"
           },
-          { 
-            icon: Layers, 
-            title: "The Plugin Graveyard", 
-            desc: "Traditional WordPress devs solve every problem with a plugin. Result: 40+ plugins, security holes, and constant crashes.", 
+          {
+            icon: Layers,
+            title: "The Plugin Graveyard",
+            desc: "The average agency-built WordPress site carries 35–50 active plugins. Each adds an attack surface, degrades load performance, and creates a brittle update dependency chain. We replace plugin stacks with purpose-built, tested components.",
             stat: "Security Risk"
           }
         ].map((item, i) => (
@@ -297,14 +288,14 @@ const Problem = () => {
         {[
             {
                 icon: Layout,
-                title: "Design-First, Strategy Never",
-                desc: "Most website designers ask: 'What colors do you like?' We ask: 'What action should visitors take in the first 10 seconds?'",
+                title: "Design-First, No Conversion Strategy",
+                desc: "The first question most agencies ask is 'what colors do you like?' The first question we ask is 'what specific action should a visitor take in the first 10 seconds — and what's stopping them right now?' Strategy precedes every pixel.",
                 stat: "Low Conversion"
             },
             {
                 icon: Lock,
                 title: "Vendor Lock-In",
-                desc: "You're stuck. Your web designer built on a proprietary platform. We give you the GitHub repository. You own the code.",
+                desc: "Proprietary builders, agency-controlled hosting, and undocumented CMS setups keep you financially dependent on the agency that built your site. We transfer the full GitHub repository at handoff and set up hosting in your name on day one.",
                 stat: "No Ownership"
             }
         ].map((item, i) => (
@@ -327,7 +318,7 @@ const Problem = () => {
 
       <div className="mt-12 md:mt-16 text-center">
         <button onClick={() => openForm('Problem CTA')} className="relative inline-flex items-center justify-center px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-br from-jet-orange to-orange-500 shadow-[0_4px_14px_rgba(255,107,53,0.4)] hover:shadow-[0_8px_25px_rgba(255,107,53,0.5)] hover:-translate-y-0.5 transition-all duration-300 group w-full md:w-auto text-base">
-            <span className="mr-2">Stop Renting. Own Your Site.</span>
+            <span className="mr-2">Stop renting. Own a digital asset that drives revenue.</span>
             <div className="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
                 <ArrowRight className="w-3 h-3" />
             </div>
@@ -344,12 +335,12 @@ const Method = () => {
   const [lineHeight, setLineHeight] = useState(0);
 
   const phases = [
-    { step: "01", title: "Business Architecture", days: "Days 1-3", desc: "Strategic discovery session to understand goals, conversion funnels, and technical debt. Not just 'what colors do you like'.", deliverables: ["User Flows", "Conversion Funnels", "Technical Spec"] },
-    { step: "02", title: "Technology Stack Selection", days: "Day 3", desc: "Matching the right tech (Next.js, WordPress, Shopify) to business goals. We don't force you into our preferred tool.", deliverables: ["Architecture Diagram", "CMS Selection", "Hosting Setup"] },
-    { step: "03", title: "Design System Creation", days: "Days 4-8", desc: "Building a scalable component library (buttons, forms, cards) for consistency and scalability.", deliverables: ["Figma Prototypes", "UI Kit", "Brand Guidelines"] },
-    { step: "04", title: "Development Sprint", days: "Days 9-15", desc: "Daily standups, clean commented code (TypeScript/Tailwind), and real-time staging access.", deliverables: ["React Components", "API Integration", "Database Schema"] },
-    { step: "05", title: "Quality Assurance", days: "Days 16-18", desc: "Automated testing across 20+ devices, Lighthouse performance audits, and WCAG accessibility compliance.", deliverables: ["Lighthouse Report", "Security Audit", "Mobile Testing"] },
-    { step: "06", title: "Deployment & Launch", days: "Days 19-21", desc: "DNS configuration, SSL activation, analytics setup, and monitoring dashboard handoff.", deliverables: ["Production Build", "DNS Propagation", "Google Analytics"] }
+    { step: "01", title: "Business Architecture", days: "Days 1–3", desc: "We map your conversion funnel before writing a single line of code. This covers user journey mapping, traffic intent segmentation, and identification of the primary CTA path for each visitor type. Deliverables confirm scope before development begins.", deliverables: ["User Flows", "Conversion Funnels", "Technical Spec"] },
+    { step: "02", title: "Technology Stack Selection", days: "Day 3", desc: "We match infrastructure to your business goals — not to our preferred framework. A B2B lead-generation site has different performance, CMS, and scalability requirements than a Shopify Plus storefront. The recommendation is documented and agreed before any development starts.", deliverables: ["Architecture Diagram", "CMS Selection", "Hosting Setup"] },
+    { step: "03", title: "Design System Creation", days: "Days 3–5", desc: "We build a reusable component library — buttons, forms, cards, navigation patterns — before designing individual pages. This eliminates inconsistency, accelerates development, and ensures every UI element scales across future pages without a rebuild.", deliverables: ["Figma Prototypes", "UI Kit", "Brand Guidelines"] },
+    { step: "04", title: "Development Sprint", days: "Days 5–7", desc: "Daily standups, TypeScript + Tailwind codebase with inline documentation, and a live staging environment available during development. You review working features in real time — not static mockups.", deliverables: ["React Components", "API Integration", "Database Schema"] },
+    { step: "05", title: "Quality Assurance", days: "Day 7", desc: "Automated testing across 20+ device profiles. Lighthouse performance audits targeting LCP under 2.5s, TTFB under 200ms, and a median page load under 2 seconds. Full WCAG 2.1 AA accessibility validation included on every build.", deliverables: ["Lighthouse Report", "Security Audit", "Mobile Testing"] },
+    { step: "06", title: "Deployment & Launch", days: "Post Day 7 / Enterprise Extension", desc: "DNS configuration, SSL provisioning, Google Analytics 4 setup, and production deployment handoff. Hosting is configured in your name — Vercel, Netlify, or your preferred provider — at zero markup.", deliverables: ["Production Build", "DNS Propagation", "Google Analytics"] }
   ];
 
   useEffect(() => {
@@ -374,11 +365,11 @@ const Method = () => {
         </div>
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-            <SectionHeader 
+            <SectionHeader
                 icon={Settings}
-                eyebrow="Our Proven Process"
+                eyebrow="Our Process"
                 title="The Engineering-First Process"
-                subtitle="We don't guess. We follow a rigorous, data-driven engineering process to ensure predictable results every time."
+                subtitle="Every project follows a structured engineering sprint. Core delivery happens within a 7-day execution cycle, with extended phases only required for enterprise-grade builds, complex integrations, or migration-heavy systems."
                 centered
             />
 
@@ -439,8 +430,8 @@ const Platforms = () => {
       icon: Globe,
       color: '#000000',
       bgGradient: 'from-gray-900 to-black',
-      bestFor: 'High-Performance Apps',
-      desc: 'The React framework for production. Hybrid static & server rendering for unmatched speed. Used by Netflix & TikTok.',
+      bestFor: 'High-Performance Applications',
+      desc: 'The React framework for production-grade web builds. Hybrid static and server-side rendering delivers sub-1s load times with full SEO indexability. Used by Netflix, TikTok, and Notion. Scales from 10,000 to 10M monthly sessions without architectural changes. Maximum SEO flexibility — full control over metadata, schema, and rendering mode per route.',
       features: ['Server-Side Rendering', 'Static Site Generation', 'Global CDN Deployment'],
       popular: true,
       delay: '[animation-delay:0ms]'
@@ -450,8 +441,8 @@ const Platforms = () => {
       icon: FileText,
       color: '#21759B',
       bgGradient: 'from-[#21759B] to-[#1A5C7A]',
-      bestFor: 'Content Powerhouses',
-      desc: 'WordPress for easy editing + Next.js for blazing speed. Security of static sites with the CMS you know.',
+      bestFor: 'Content-Driven Business Sites',
+      desc: 'WordPress as a headless CMS paired with a Next.js front end. Your content team retains the familiar WordPress editor. Your users get a statically-generated, plugin-free experience with enterprise security. Headless builds typically reduce bounce rates 15–25% compared to traditional WordPress setups — while maintaining full editorial control.',
       features: ['Decoupled Architecture', 'Zero Plugins Frontend', 'Bank-Grade Security'],
       popular: true,
       delay: '[animation-delay:100ms]'
@@ -462,7 +453,7 @@ const Platforms = () => {
       color: '#96BF48',
       bgGradient: 'from-[#96BF48] to-[#5E8E3E]',
       bestFor: 'E-Commerce Brands',
-      desc: 'Custom Liquid development and headless storefronts. Unique checkout flows and custom product configurators.',
+      desc: 'Custom Liquid theme development and headless storefront builds for stores processing $1M+ annually. We build custom checkout flows, B2B wholesale portals, and product configurators beyond what standard Shopify themes allow. Strong built-in SEO defaults; headless Shopify adds rendering control for competitive organic categories.',
       features: ['Custom Themes', 'App Development', 'High-Traffic Scaling'],
       popular: false,
       delay: '[animation-delay:200ms]'
@@ -472,8 +463,8 @@ const Platforms = () => {
       icon: Layout,
       color: '#4353FF',
       bgGradient: 'from-[#4353FF] to-[#2D3ACC]',
-      bestFor: 'Design-Forward Sites',
-      desc: 'Visual development platform for rapid iteration and pixel-perfect design control without heavy code.',
+      bestFor: 'Design-Forward Marketing Sites',
+      desc: 'Visual development platform with native CMS and hosting. Best suited for marketing teams that need to iterate post-launch without developer dependency. Development control is more constrained than Next.js, but time-to-market is 30–40% faster for visually complex marketing sites with lower traffic requirements.',
       features: ['Visual CMS', 'Complex Animations', 'Hosting Included'],
       popular: false,
       delay: '[animation-delay:300ms]'
@@ -483,8 +474,8 @@ const Platforms = () => {
       icon: Code2,
       color: '#61DAFB',
       bgGradient: 'from-[#61DAFB] to-[#00B4D8]',
-      bestFor: 'Complex SaaS',
-      desc: 'Bespoke single-page applications built for complex data visualization, dashboards, and interactivity.',
+      bestFor: 'Complex SaaS Applications',
+      desc: 'Bespoke single-page applications for dashboards, data visualization tools, and SaaS platforms with real-time data requirements. Architecture is purpose-built around your data model — no framework overhead, no unnecessary abstraction layers. Ideal for authenticated app environments where SEO is secondary to performance.',
       features: ['State Management', 'Real-time Data', 'Microservices'],
       popular: false,
       delay: '[animation-delay:400ms]'
@@ -494,8 +485,8 @@ const Platforms = () => {
       icon: Layers,
       color: '#FF0066',
       bgGradient: 'from-[#FF0066] to-[#9900FF]',
-      bestFor: 'Startups & LPs',
-      desc: 'Rapid prototyping tool that exports production React code. Perfect for MVPs and landing pages.',
+      bestFor: 'Startups & Landing Pages',
+      desc: 'Rapid prototyping platform that exports production-ready React code. The fastest path from concept to a credible digital presence — ideal for pre-seed startups that need to capture early demand without burning runway on custom development. Upgrade path to Next.js is direct when traffic justifies the investment.',
       features: ['Fast Launch', 'Interactive Prototypes', 'Zero Ops'],
       popular: false,
       delay: '[animation-delay:500ms]'
@@ -505,11 +496,11 @@ const Platforms = () => {
   return (
     <section id="platforms" className="py-16 md:py-24 bg-white relative">
       <div className="container mx-auto px-4 md:px-6 max-w-[1100px]">
-        <SectionHeader 
+        <SectionHeader
             icon={Layers}
             eyebrow="Technology Stack"
             title="The Right Stack for the Right Challenge"
-            subtitle="We build with 6 platforms—and know exactly when to use each."
+            subtitle="We build across six platforms and select based on your traffic volume, content complexity, team's editing requirements, and long-term scalability needs — not on whichever framework is fastest for us to build with."
             centered
         />
 
@@ -655,7 +646,7 @@ const MainContent: React.FC = () => {
                   {/* Floating Badge */}
                   <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-white/10 border border-white/20 text-white font-bold text-xs uppercase tracking-widest mb-10 backdrop-blur-md shadow-lg animate-float">
                     <Rocket className="w-4 h-4 text-jet-orange" />
-                    <span>Launch in 21 Days</span>
+                    <span>Starting at $1,999</span>
                   </div>
 
                   <h2 className="text-3xl md:text-6xl lg:text-7xl font-heading font-black text-white mb-8 tracking-tight leading-[1.1]">
@@ -666,32 +657,32 @@ const MainContent: React.FC = () => {
                   </h2>
 
                   <p className="text-lg md:text-2xl text-slate-300 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
-                    Stop renting a website. Own a digital asset that drives revenue.
+                    Stop maintaining a site you don't own, built on a stack you can't control, managed by an agency with no financial stake in your conversion rate. FactoryJet delivers enterprise-grade web design services for US businesses — with a defined timeline, a fixed price, and a GitHub repository that belongs to you at handoff. Starting at $1,999. Delivered in as little as 7 days.
                   </p>
 
                   <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
                     <button onClick={() => openForm('Footer Strategy')} className="group relative px-8 md:px-10 py-5 bg-white text-navy font-bold text-lg rounded-2xl shadow-[0_0_50px_rgba(255,255,255,0.2)] hover:shadow-[0_0_80px_rgba(255,255,255,0.4)] transition-all duration-300 hover:-translate-y-1 overflow-hidden w-full sm:w-auto">
                       <span className="relative z-10 flex items-center justify-center gap-3">
-                        Book Strategy Call
+                        Get Your Free Strategy Call
                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                       </span>
                     </button>
-                    
-                    <button onClick={() => openForm('Footer Quick Quote')} className="group px-8 md:px-10 py-5 bg-white/5 text-white border border-white/10 font-bold text-lg rounded-2xl hover:bg-white/10 transition-all duration-300 backdrop-blur-sm w-full sm:w-auto">
-                      Get Quick Quote
+
+                    <button onClick={() => openForm('Footer Technical Audit')} className="group px-8 md:px-10 py-5 bg-white/5 text-white border border-white/10 font-bold text-lg rounded-2xl hover:bg-white/10 transition-all duration-300 backdrop-blur-sm w-full sm:w-auto">
+                      Request a Free Technical Audit
                     </button>
                   </div>
 
                   <div className="mt-16 pt-10 border-t border-white/10 flex flex-wrap justify-center gap-x-6 gap-y-4 md:gap-x-12 md:gap-y-6">
                     {[
-                      { label: 'Technical Excellence', icon: Code2 },
-                      { label: 'Speed', icon: Zap },
-                      { label: 'Transparency', icon: CheckCircle },
-                      { label: 'Ownership', icon: Lock },
+                      { label: 'Technical Excellence — TypeScript, Tailwind, Lighthouse-audited on every build', icon: Code2 },
+                      { label: '7-Day Delivery — Rapid sprint system, date-certain', icon: Zap },
+                      { label: 'Full Transparency — Fixed price, live staging from Day 10', icon: CheckCircle },
+                      { label: '100% Ownership — Full GitHub transfer at handoff', icon: Lock },
                     ].map((item, i) => (
-                      <div key={i} className="flex items-center gap-2 md:gap-3 text-xs md:text-sm font-bold text-white/60 uppercase tracking-wider group-hover:text-white/90 transition-colors">
-                        <item.icon className="w-4 h-4 md:w-5 md:h-5 text-jet-blue" />
-                        {item.label}
+                      <div key={i} className="flex items-center gap-2 md:gap-3 text-xs md:text-[11px] font-bold text-white/60 uppercase tracking-wider group-hover:text-white/90 transition-colors max-w-[200px]">
+                        <item.icon className="w-4 h-4 md:w-5 md:h-5 text-jet-blue flex-shrink-0" />
+                        <span className="text-left">{item.label}</span>
                       </div>
                     ))}
                   </div>

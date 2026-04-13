@@ -1,0 +1,58 @@
+{
+  "slug": "coventry",
+  "name": "Coventry",
+  "region": "West Midlands",
+  "country": "England",
+  "population": 370000,
+  "businesses": 15000,
+  "gdpBn": 12.5,
+  "primaryIndustries": [
+    "Automotive",
+    "Education & Innovation",
+    "Engineering",
+    "Digital Technology"
+  ],
+  "keyEmployers": [
+    "Jaguar Land Rover",
+    "Coventry University",
+    "Arden University",
+    "Ricardo Engineering",
+    "Unipart"
+  ],
+  "avgAgencyPricing": {
+    "webDesign": 3600,
+    "ecommerce": 7000,
+    "seo": 950,
+    "aiAgents": 0
+  },
+  "localAgencies": {
+    "web-design": [
+      "Coventry Web Design",
+      "Midlands Digital",
+      "Creative Tech Coventry"
+    ],
+    "seo": [
+      "Coventry SEO Agency",
+      "Midlands Marketing Pro",
+      "Local Search Coventry"
+    ]
+  },
+  "keyStats": {
+    "digitalBusinessGrowth": "19% YoY",
+    "smeCount": 13000,
+    "techJobs": 4500,
+    "avgSalary": 29000
+  },
+  "cityAreas": [
+    "Coventry City Centre",
+    "Coventry Waterpark",
+    "Kenilworth Road",
+    "Earlsdon",
+    "Whoberley"
+  ],
+  "newsHook": "Jaguar Land Rover invests £3B in electric vehicle technology hub in Coventry",
+  "coordinates": {
+    "lat": 52.4062,
+    "lng": -1.5045
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "slug": "hull",
+  "name": "Hull",
+  "region": "East Yorkshire",
+  "country": "England",
+  "population": 260000,
+  "businesses": 11000,
+  "gdpBn": 8.5,
+  "primaryIndustries": [
+    "Port & Maritime",
+    "Energy & Renewables",
+    "Food & Drink",
+    "Distribution"
+  ],
+  "keyEmployers": [
+    "AP Moller-Maersk",
+    "Reckitt Benckiser",
+    "Siemens Gamesa",
+    "Port of Hull",
+    "Hull University"
+  ],
+  "avgAgencyPricing": {
+    "webDesign": 3300,
+    "ecommerce": 6500,
+    "seo": 850,
+    "aiAgents": 0
+  },
+  "localAgencies": {
+    "web-design": [
+      "Hull Web Design",
+      "Yorkshire Digital",
+      "Creative Hull"
+    ],
+    "seo": [
+      "Hull SEO Services",
+      "Yorkshire Marketing",
+      "Local Search Hull"
+    ]
+  },
+  "keyStats": {
+    "digitalBusinessGrowth": "11% YoY",
+    "smeCount": 9500,
+    "techJobs": 3000,
+    "avgSalary": 27000
+  },
+  "cityAreas": [
+    "Hull City Centre",
+    "Old Town",
+    "The Waterfront",
+    "Spring Bank",
+    "Beverley Road"
+  ],
+  "newsHook": "Siemens Gamesa opens £200M offshore wind blade manufacturing facility in Hull",
+  "coordinates": {
+    "lat": 53.7438,
+    "lng": -0.3369
+  }
+}

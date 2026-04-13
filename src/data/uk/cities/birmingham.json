@@ -1,0 +1,58 @@
+{
+  "slug": "birmingham",
+  "name": "Birmingham",
+  "region": "West Midlands",
+  "country": "England",
+  "population": 1140000,
+  "businesses": 60000,
+  "gdpBn": 41.2,
+  "primaryIndustries": [
+    "Manufacturing",
+    "Retail & Commerce",
+    "Professional Services",
+    "Engineering"
+  ],
+  "keyEmployers": [
+    "Jaguar Land Rover",
+    "Royal Mail",
+    "BT Group",
+    "GKN Aerospace",
+    "Metro Bank"
+  ],
+  "avgAgencyPricing": {
+    "webDesign": 3800,
+    "ecommerce": 7200,
+    "seo": 1000,
+    "aiAgents": 0
+  },
+  "localAgencies": {
+    "web-design": [
+      "Gorilla",
+      "Axon Studios",
+      "One Stop Web Shop"
+    ],
+    "seo": [
+      "Absolute Digital Media",
+      "Local SEO Service",
+      "Cyber Breeze"
+    ]
+  },
+  "keyStats": {
+    "digitalBusinessGrowth": "16% YoY",
+    "smeCount": 52000,
+    "techJobs": 11000,
+    "avgSalary": 30000
+  },
+  "cityAreas": [
+    "Birmingham City Centre",
+    "Eastside",
+    "Brindleyplace",
+    "Jewellery Quarter",
+    "Digbeth"
+  ],
+  "newsHook": "Eastside redevelopment creates 1,200 new tech and creative sector jobs",
+  "coordinates": {
+    "lat": 52.5086,
+    "lng": -1.8845
+  }
+}

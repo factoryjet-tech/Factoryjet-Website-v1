@@ -1,0 +1,58 @@
+{
+  "slug": "liverpool",
+  "name": "Liverpool",
+  "region": "Merseyside",
+  "country": "England",
+  "population": 500000,
+  "businesses": 22000,
+  "gdpBn": 18.5,
+  "primaryIndustries": [
+    "Port & Maritime",
+    "Hospitality & Tourism",
+    "Creative Industries",
+    "Professional Services"
+  ],
+  "keyEmployers": [
+    "DP World",
+    "Mersey Docks and Harbour Company",
+    "Alder Hey Children's Hospital",
+    "University of Liverpool",
+    "Liverpool City Council"
+  ],
+  "avgAgencyPricing": {
+    "webDesign": 3800,
+    "ecommerce": 7200,
+    "seo": 1000,
+    "aiAgents": 0
+  },
+  "localAgencies": {
+    "web-design": [
+      "Liverpool Digital",
+      "Creative Minds",
+      "Web Design Liverpool"
+    ],
+    "seo": [
+      "Liverpool SEO",
+      "North West Marketing",
+      "Digital Growth"
+    ]
+  },
+  "keyStats": {
+    "digitalBusinessGrowth": "16% YoY",
+    "smeCount": 19500,
+    "techJobs": 5500,
+    "avgSalary": 29500
+  },
+  "cityAreas": [
+    "Liverpool City Centre",
+    "Albert Dock",
+    "Pier Head",
+    "Baltic Triangle",
+    "Toxteth"
+  ],
+  "newsHook": "Liverpool Waterfront development creates 2,000 new jobs in creative and digital sectors",
+  "coordinates": {
+    "lat": 53.4084,
+    "lng": -2.9916
+  }
+}

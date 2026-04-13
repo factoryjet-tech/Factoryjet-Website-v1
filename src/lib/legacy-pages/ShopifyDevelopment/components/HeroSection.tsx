@@ -56,7 +56,7 @@ export default function HeroSection({ handleCta }: HeroSectionProps) {
             <div className="proof-av" style={{background:"linear-gradient(135deg,#10B981,#6EE7B7)"}}>K</div>
             <div className="proof-av" style={{background:"linear-gradient(135deg,#334155,#64748B)"}}>+</div>
           </div>
-          <span className="proof-text">Trusted by <strong>200+</strong> brands across <strong>9 countries</strong></span>
+          <span className="proof-text">Trusted by <strong>120+</strong> brands across <strong>9 countries</strong></span>
         </div>
       </div>
 

@@ -60,3 +60,8 @@ Sitemap: https://factoryjet.com/sitemap-pages.xml
 Sitemap: https://factoryjet.com/sitemap-services.xml
 Sitemap: https://factoryjet.com/sitemap-blog.xml
 Sitemap: https://factoryjet.com/sitemap-cases.xml
+
+# UK Programmatic SEO Sitemaps
+Sitemap: https://factoryjet.com/uk/sitemap-index.xml
+Sitemap: https://factoryjet.com/uk/sitemap-cities.xml
+Sitemap: https://factoryjet.com/uk/sitemap-services.xml

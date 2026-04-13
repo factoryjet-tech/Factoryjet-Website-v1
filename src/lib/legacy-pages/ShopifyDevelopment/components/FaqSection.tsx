@@ -34,42 +34,32 @@ export default function FaqSection({ handleCta, faqFilter, setFaqFilter, faqSear
     <div className="fq-tabs reveal">
       <button className={`fq-tab ${faqFilter === "all" ? "active" : ""}`} data-cat="all" onClick={() => setFaqFilter("all")}>All Questions <span className="fq-tab-count">(10)</span></button>
       <button className={`fq-tab ${faqFilter === "pricing" ? "active" : ""}`} data-cat="pricing" onClick={() => setFaqFilter("pricing")}>Pricing &amp; Timeline <span className="fq-tab-count">(2)</span></button>
-      <button className={`fq-tab ${faqFilter === "platform" ? "active" : ""}`} data-cat="platform" onClick={() => setFaqFilter("platform")}>Platform &amp; Tech <span className="fq-tab-count">(3)</span></button>
+      <button className={`fq-tab ${faqFilter === "platform" ? "active" : ""}`} data-cat="platform" onClick={() => setFaqFilter("platform")}>Platform &amp; Tech <span className="fq-tab-count">(2)</span></button>
       <button className={`fq-tab ${faqFilter === "services" ? "active" : ""}`} data-cat="services" onClick={() => setFaqFilter("services")}>Services &amp; Support <span className="fq-tab-count">(3)</span></button>
-      <button className={`fq-tab ${faqFilter === "about" ? "active" : ""}`} data-cat="about" onClick={() => setFaqFilter("about")}>About FactoryJet <span className="fq-tab-count">(2)</span></button>
+      <button className={`fq-tab ${faqFilter === "about" ? "active" : ""}`} data-cat="about" onClick={() => setFaqFilter("about")}>About FactoryJet <span className="fq-tab-count">(3)</span></button>
     </div>
 
 
     <div className="fq-list" id="fqList">
 
 
-      <div className="fq-item reveal" data-cat="pricing" data-q="how much does shopify e-commerce development cost" data-a="shopify e-commerce development costs range $5,000 $25,000 standard shopify stores $25,000 $150,000 shopify plus enterprise builds design complexity product skus third-party integrations erp crm pim custom app development migration requirements factoryjet enterprise-grade startup-friendly prices 40 60 percent below us uk agency rates">
+      <div className="fq-item reveal" data-cat="pricing" data-q="how much does shopify e-commerce development cost" data-a="shopify development pricing starts $5,000 $15,000 theme-based stores $15,000 $40,000 custom shopify builds $25,000 $150,000 shopify plus enterprise projects design complexity integrations migration scope custom apps b2b requirements factoryjet enterprise-grade quality 40 60 percent below us uk agency rates">
         <button className="fq-q" onClick={(e) => { const item = e.currentTarget.closest(".fq-item"); if(item) { const wasOpen = item.classList.contains("open"); document.querySelectorAll(".fq-item.open").forEach(el => el.classList.remove("open")); if(!wasOpen) item.classList.add("open"); } }} aria-expanded="false">
           <span className="fq-dot fq-dot--blue"></span>
           <h3>How much does Shopify e-commerce development cost?</h3>
           <span className="fq-chev"><svg viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd"/></svg></span>
         </button>
-        <div className="fq-a"><div className="fq-a-body">Shopify e-commerce development costs range from <span className="fq-hl">$5,000 to $25,000</span> for standard Shopify stores and <span className="fq-hl">$25,000 to $150,000 or more</span> for Shopify Plus enterprise builds. Factors that affect cost include design complexity, number of product SKUs, third-party integrations with ERP, CRM, and PIM systems, custom app development, and migration requirements. FactoryJet offers enterprise-grade Shopify development at startup-friendly prices, with projects typically <span className="fq-hl">40 to 60 percent below US and UK agency rates</span>.</div></div>
+        <div className="fq-a"><div className="fq-a-body">Shopify development pricing starts from <span className="fq-hl">$5,000–$15,000</span> for theme-based stores, <span className="fq-hl">$15,000–$40,000</span> for custom Shopify builds, and <span className="fq-hl">$25,000–$150,000+</span> for Shopify Plus and enterprise projects. Pricing depends on design complexity, integrations, migration scope, custom apps, and B2B requirements. FactoryJet delivers enterprise-grade quality at <span className="fq-hl">40–60% below US/UK agency rates</span>.</div></div>
       </div>
 
 
-      <div className="fq-item reveal" data-cat="platform" data-q="what is the difference between shopify and shopify plus" data-a="shopify small mid-size businesses $39 shopify plus enterprise tier $2,300 per month high-growth brands $80,000 checkout customization checkout extensibility b2b selling company profiles custom price lists expansion stores unlimited staff accounts 10x api call limits merchant success manager shopify flow launchpad">
-        <button className="fq-q" onClick={(e) => { const item = e.currentTarget.closest(".fq-item"); if(item) { const wasOpen = item.classList.contains("open"); document.querySelectorAll(".fq-item.open").forEach(el => el.classList.remove("open")); if(!wasOpen) item.classList.add("open"); } }} aria-expanded="false">
-          <span className="fq-dot fq-dot--orange"></span>
-          <h3>What is the difference between Shopify and Shopify Plus?</h3>
-          <span className="fq-chev"><svg viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd"/></svg></span>
-        </button>
-        <div className="fq-a"><div className="fq-a-body">Shopify is designed for small to mid-size businesses with monthly plans starting at <span className="fq-hl">$39</span>, while Shopify Plus is the enterprise tier starting at <span className="fq-hl">$2,300 per month</span> for high-growth brands doing $80,000 or more in monthly revenue. Shopify Plus offers full checkout customization through <span className="fq-hl">Checkout Extensibility</span>, B2B selling with company profiles and custom price lists, up to <span className="fq-hl">10 expansion stores</span>, unlimited staff accounts, 10x API call limits, a dedicated <span className="fq-hl">Merchant Success Manager</span>, and advanced automation through Shopify Flow and Launchpad.</div></div>
-      </div>
-
-
-      <div className="fq-item reveal" data-cat="pricing" data-q="how long does it take to build a shopify store" data-a="standard shopify store customized theme 4 8 weeks fully custom shopify store bespoke design integrations 8 14 weeks enterprise shopify plus headless architecture b2b functionality complex integrations 12 20 weeks">
+      <div className="fq-item reveal" data-cat="pricing" data-q="how long does it take to build a shopify store" data-a="most standard shopify stores delivered 7 days custom growth stores 7 14 days enterprise shopify plus headless hydrogen b2b multi-store 14 days milestone-based process strategy ux development qa seo launch">
         <button className="fq-q" onClick={(e) => { const item = e.currentTarget.closest(".fq-item"); if(item) { const wasOpen = item.classList.contains("open"); document.querySelectorAll(".fq-item.open").forEach(el => el.classList.remove("open")); if(!wasOpen) item.classList.add("open"); } }} aria-expanded="false">
           <span className="fq-dot fq-dot--blue"></span>
           <h3>How long does it take to build a Shopify store?</h3>
           <span className="fq-chev"><svg viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd"/></svg></span>
         </button>
-        <div className="fq-a"><div className="fq-a-body">A standard Shopify store using a customized theme takes <span className="fq-hl">4 to 8 weeks</span>. A fully custom Shopify store with bespoke design and integrations takes <span className="fq-hl">8 to 14 weeks</span>. Enterprise Shopify Plus builds with headless architecture, B2B functionality, and complex integrations typically take <span className="fq-hl">12 to 20 weeks</span>.</div></div>
+        <div className="fq-a"><div className="fq-a-body">Most standard Shopify stores are delivered in <span className="fq-hl">7 days</span>. Custom growth stores typically take <span className="fq-hl">7–14 days</span>, depending on design complexity, integrations, and migration scope. Enterprise Shopify Plus, headless Hydrogen, B2B, and multi-store builds usually require <span className="fq-hl">14+ days</span>. FactoryJet follows a milestone-based process covering strategy, UX, development, QA, SEO, and launch.</div></div>
       </div>
 
 
@@ -79,7 +69,7 @@ export default function FaqSection({ handleCta, faqFilter, setFaqFilter, faqSear
           <h3>Can you migrate my existing store to Shopify or Shopify Plus?</h3>
           <span className="fq-chev"><svg viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd"/></svg></span>
         </button>
-        <div className="fq-a"><div className="fq-a-body">Yes. FactoryJet provides <span className="fq-hl">zero-downtime migration</span> services from WooCommerce, Magento, BigCommerce, Salesforce Commerce Cloud, Wix, Squarespace, and custom platforms to Shopify and Shopify Plus. Our migration process preserves all product data, customer records, order history, and SEO rankings through <span className="fq-hl">301 redirects</span> and structured data transfer.</div></div>
+        <div className="fq-a"><div className="fq-a-body">Yes. We provide <span className="fq-hl">zero-downtime migration</span> services from WooCommerce, Magento, BigCommerce, Salesforce Commerce Cloud, Wix, Squarespace, and custom platforms. We migrate products, customers, orders, content, and SEO data with <span className="fq-hl">301 redirects</span> and URL preservation.</div></div>
       </div>
 
 
@@ -89,7 +79,7 @@ export default function FaqSection({ handleCta, faqFilter, setFaqFilter, faqSear
           <h3>What is headless Shopify development with Hydrogen?</h3>
           <span className="fq-chev"><svg viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd"/></svg></span>
         </button>
-        <div className="fq-a"><div className="fq-a-body">Headless Shopify development separates the frontend presentation layer from the Shopify backend, allowing fully custom storefronts built with modern web technologies. <span className="fq-hl">Shopify Hydrogen</span> is Shopify's official React-based framework for headless builds, hosted on Shopify's <span className="fq-hl">Oxygen infrastructure</span>. Hydrogen storefronts deliver <span className="fq-hl">50 to 70 percent faster page loads</span>, near-perfect Lighthouse scores, and <span className="fq-hl">30 percent or higher conversion improvements</span>.</div></div>
+        <div className="fq-a"><div className="fq-a-body">Headless Shopify separates the storefront frontend from Shopify's backend. FactoryJet uses <span className="fq-hl">Shopify Hydrogen and Oxygen</span> to build faster React-based storefronts with better performance, flexibility, and SEO. These builds typically deliver <span className="fq-hl">50–70% faster load times</span> and improved conversion rates.</div></div>
       </div>
 
 
@@ -99,7 +89,7 @@ export default function FaqSection({ handleCta, faqFilter, setFaqFilter, faqSear
           <h3>Can Shopify handle B2B and wholesale e-commerce?</h3>
           <span className="fq-chev"><svg viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd"/></svg></span>
         </button>
-        <div className="fq-a"><div className="fq-a-body">Yes. Shopify Plus includes <span className="fq-hl">native B2B functionality</span> with company profiles, custom price lists, net payment terms, quick-order lists, and volume-based discounts. Businesses can run DTC and B2B operations from a single Shopify Plus store or create dedicated <span className="fq-hl">B2B expansion stores</span>.</div></div>
+        <div className="fq-a"><div className="fq-a-body">Yes. Shopify Plus supports <span className="fq-hl">native B2B functionality</span>, including company profiles, custom pricing, net payment terms, bulk ordering, and dedicated B2B storefronts. It is ideal for wholesale and enterprise commerce.</div></div>
       </div>
 
 
@@ -109,7 +99,7 @@ export default function FaqSection({ handleCta, faqFilter, setFaqFilter, faqSear
           <h3>Do you work with international clients?</h3>
           <span className="fq-chev"><svg viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd"/></svg></span>
         </button>
-        <div className="fq-a"><div className="fq-a-body">Yes. FactoryJet serves clients across the <span className="fq-hl">United States, Canada, United Kingdom, Europe, Australia, Singapore, UAE, Saudi Arabia, and India</span>. We configure multi-currency storefronts through Shopify Markets, set up region-specific payment gateways, and implement international shipping and tax compliance.</div></div>
+        <div className="fq-a"><div className="fq-a-body">Yes. FactoryJet works with clients across the <span className="fq-hl">US, UK, Canada, Europe, Australia, UAE, Saudi Arabia, Singapore, and India</span>. We support multi-currency, international shipping, region-specific payment gateways, and tax compliance.</div></div>
       </div>
 
 
@@ -119,7 +109,7 @@ export default function FaqSection({ handleCta, faqFilter, setFaqFilter, faqSear
           <h3>Do you provide ongoing Shopify support after launch?</h3>
           <span className="fq-chev"><svg viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd"/></svg></span>
         </button>
-        <div className="fq-a"><div className="fq-a-body">Yes. FactoryJet offers <span className="fq-hl">Annual Maintenance Contracts</span> starting at <span className="fq-hl">$500 per month</span> for standard Shopify stores and <span className="fq-hl">$1,500 per month</span> for Shopify Plus enterprise stores. AMC plans cover performance monitoring, security updates, bug fixes, content updates, and <span className="fq-hl">24/7 priority support</span>.</div></div>
+        <div className="fq-a"><div className="fq-a-body">Yes. We offer ongoing support plans for <span className="fq-hl">performance optimization, bug fixes, app updates, CRO improvements, SEO updates, and technical maintenance</span>. Support is available for both Shopify and Shopify Plus stores.</div></div>
       </div>
 
 
@@ -129,7 +119,7 @@ export default function FaqSection({ handleCta, faqFilter, setFaqFilter, faqSear
           <h3>Which industries do you serve for Shopify development?</h3>
           <span className="fq-chev"><svg viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd"/></svg></span>
         </button>
-        <div className="fq-a"><div className="fq-a-body">We build Shopify stores across <span className="fq-hl">fashion, health and beauty, food and beverage, home and furniture, jewelry, sports, B2B wholesale, luxury retail, electronics, and subscription businesses</span>. Each industry receives tailored store architecture, checkout flows, and integration configurations.</div></div>
+        <div className="fq-a"><div className="fq-a-body">We build Shopify stores for <span className="fq-hl">fashion, beauty, food, furniture, luxury, sports, B2B, electronics, and subscription brands</span>. Each store is tailored to industry-specific workflows, integrations, and conversion needs.</div></div>
       </div>
 
 
@@ -139,7 +129,17 @@ export default function FaqSection({ handleCta, faqFilter, setFaqFilter, faqSear
           <h3>What makes FactoryJet different from other Shopify agencies?</h3>
           <span className="fq-chev"><svg viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd"/></svg></span>
         </button>
-        <div className="fq-a"><div className="fq-a-body">FactoryJet combines <span className="fq-hl">AI-native development practices</span> with deep Shopify expertise. Every store we build is optimized for visibility across <span className="fq-hl">Google, AI Overviews, ChatGPT, Perplexity</span>, and other AI search engines. Our India-based team delivers enterprise-grade quality at <span className="fq-hl">40 to 60 percent below</span> comparable US, UK, and Australian agency rates.</div></div>
+        <div className="fq-a"><div className="fq-a-body">FactoryJet combines <span className="fq-hl">AI-native development</span>, deep Shopify expertise, and enterprise-grade execution.<ul style={{marginTop:"12px",paddingLeft:"20px"}}><li>120+ Shopify and Shopify Plus stores delivered</li><li>part of 523 websites delivered for 500+ clients globally</li><li>clients across 9 countries</li><li>40–60% below US/UK rates</li><li>built-in SEO, AEO, and GEO optimization</li></ul></div></div>
+      </div>
+
+
+      <div className="fq-item reveal" data-cat="about" data-q="how many shopify stores has factoryjet delivered" data-a="120+ shopify shopify plus stores dtc b2b enterprise brands 523 websites 500+ clients globally">
+        <button className="fq-q" onClick={(e) => { const item = e.currentTarget.closest(".fq-item"); if(item) { const wasOpen = item.classList.contains("open"); document.querySelectorAll(".fq-item.open").forEach(el => el.classList.remove("open")); if(!wasOpen) item.classList.add("open"); } }} aria-expanded="false">
+          <span className="fq-dot fq-dot--purple"></span>
+          <h3>How many Shopify stores has FactoryJet delivered?</h3>
+          <span className="fq-chev"><svg viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd"/></svg></span>
+        </button>
+        <div className="fq-a"><div className="fq-a-body">FactoryJet has delivered <span className="fq-hl">120+ Shopify and Shopify Plus stores</span> across DTC, B2B, and enterprise brands. This is part of our broader track record of <span className="fq-hl">523 websites delivered for 500+ clients globally</span>.</div></div>
       </div>
 
     </div>

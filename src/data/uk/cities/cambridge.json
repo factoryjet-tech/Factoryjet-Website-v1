@@ -1,0 +1,58 @@
+{
+  "slug": "cambridge",
+  "name": "Cambridge",
+  "region": "Cambridgeshire",
+  "country": "England",
+  "population": 130000,
+  "businesses": 10000,
+  "gdpBn": 13.5,
+  "primaryIndustries": [
+    "Technology & Software",
+    "Education & Research",
+    "Biotech & Life Sciences",
+    "Pharmaceuticals"
+  ],
+  "keyEmployers": [
+    "University of Cambridge",
+    "ARM Holdings",
+    "AstraZeneca",
+    "Rolls-Royce",
+    "Cambridge Consultants"
+  ],
+  "avgAgencyPricing": {
+    "webDesign": 4400,
+    "ecommerce": 7700,
+    "seo": 1150,
+    "aiAgents": 0
+  },
+  "localAgencies": {
+    "web-design": [
+      "Cambridge Web Design",
+      "East Anglia Digital",
+      "Tech Agency Cambridge"
+    ],
+    "seo": [
+      "Cambridge SEO Agency",
+      "East Coast Marketing",
+      "Digital Cambridge"
+    ]
+  },
+  "keyStats": {
+    "digitalBusinessGrowth": "25% YoY",
+    "smeCount": 8500,
+    "techJobs": 5500,
+    "avgSalary": 36000
+  },
+  "cityAreas": [
+    "Cambridge City Centre",
+    "University Area",
+    "Science Park",
+    "Trumpington",
+    "Chesterton"
+  ],
+  "newsHook": "Cambridge tech sector booms with ARM expansion and £300M AI research investment",
+  "coordinates": {
+    "lat": 52.2044,
+    "lng": 0.1235
+  }
+}

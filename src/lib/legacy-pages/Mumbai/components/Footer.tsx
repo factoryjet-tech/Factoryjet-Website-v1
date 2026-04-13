@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
               <li><a href="/services/web-design" className="hover:text-white">Website Design</a></li>
               <li><a href="/services/web-design/mumbai" className="hover:text-white">Web Design Mumbai</a></li>
               <li><a href="/services/ecommerce-development" className="hover:text-white">E-Commerce Development</a></li>
-              <li><a href="/services/ecommerce-development/shopify-development" className="hover:text-white">Shopify Development</a></li>
+              <li><a href="/services/shopify-development" className="hover:text-white">Shopify Development</a></li>
               <li><a href="/services/ai-agent-development" className="hover:text-white">AI Agent Development</a></li>
             </ul>
           </div>

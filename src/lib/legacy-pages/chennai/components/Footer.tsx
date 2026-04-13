@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-3 text-sm text-slate-400">
               <li><a href="/services/web-design/chennai" className="hover:text-jet-orange transition-colors">Website Design Chennai</a></li>
               <li><a href="/services/ecommerce-development" className="hover:text-jet-orange transition-colors">E-Commerce Development</a></li>
-              <li><a href="/services/ecommerce-development/shopify-development" className="hover:text-jet-orange transition-colors">Shopify Development</a></li>
+              <li><a href="/services/shopify-development" className="hover:text-jet-orange transition-colors">Shopify Development</a></li>
               <li><a href="/services/ai-agent-development" className="hover:text-jet-orange transition-colors">AI Agent Development</a></li>
               <li><a href="/services/web-design" className="hover:text-jet-orange transition-colors">Web Design India</a></li>
             </ul>

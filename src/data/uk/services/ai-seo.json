@@ -1,0 +1,41 @@
+{
+  "slug": "ai-seo",
+  "name": "AI SEO",
+  "tagline": "AI-Driven SEO That Automates Optimization & Content Strategy",
+  "shortDescription": "AI-powered keyword research, content generation, and optimization that scales your SEO.",
+  "primaryKeyword": "ai seo [city]",
+  "secondaryKeywords": [
+    "ai-powered seo [city]",
+    "automated seo [city]",
+    "ai content optimization [city]",
+    "intelligent seo strategy [city]",
+    "ai marketing [city]"
+  ],
+  "heroHeadline": "AI SEO in {cityName} That Scales Organic Traffic Automatically",
+  "pricingRange": {
+    "min": 800,
+    "max": 4000,
+    "currency": "GBP/month"
+  },
+  "localAvgMultiplier": 3.0,
+  "deliveryWeeks": {
+    "standard": 8,
+    "express": 4
+  },
+  "techStack": [
+    "OpenAI GPT-4",
+    "Google API",
+    "SEMrush API",
+    "Custom ML Models"
+  ],
+  "relatedServices": [
+    "seo",
+    "ai-websites"
+  ],
+  "platforms": [
+    "wordpress",
+    "shopify",
+    "nextjs",
+    "custom"
+  ]
+}

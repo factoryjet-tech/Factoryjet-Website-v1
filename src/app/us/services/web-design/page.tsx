@@ -3,13 +3,13 @@ import { webDesignAlternates } from '@/data/hreflangMap'
 import UsWebServicePage from '@/pages/UsWebServicePage/App'
 
 export const metadata: Metadata = {
-  title: 'Web Design Services USA | Professional Website Development | FactoryJet',
-  description: 'Professional web design services for US businesses. Custom, responsive websites with modern UI/UX. SEO-optimized, fast-loading designs. Affordable pricing with quick turnaround. Get a free consultation!',
+  title: 'Web Design Services USA | 7-Day Website Launch | FactoryJet',
+  description: 'FactoryJet delivers web design services USA businesses trust — custom Next.js, WordPress & Shopify websites. Launch in 7 days. Starting at $1,999. Full GitHub ownership. Get a free technical audit.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Services USA | Professional Website Development',
-    description: 'Professional web design services for US businesses. Custom, responsive websites with modern UI/UX.',
+    title: 'Web Design Services USA | 7-Day Website Launch | FactoryJet',
+    description: 'FactoryJet delivers web design services USA businesses trust — custom Next.js, WordPress & Shopify websites. Launch in 7 days. Starting at $1,999. Full GitHub ownership. Get a free technical audit.',
     url: 'https://factoryjet.com/us/services/web-design',
     images: [
       {
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web Design Services USA | FactoryJet',
-    description: 'Professional web design services for US businesses. Custom, responsive websites.',
+    title: 'Web Design Services USA | 7-Day Website Launch | FactoryJet',
+    description: 'FactoryJet delivers web design services USA businesses trust — custom Next.js, WordPress & Shopify websites. Launch in 7 days. Starting at $1,999. Full GitHub ownership. Get a free technical audit.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {

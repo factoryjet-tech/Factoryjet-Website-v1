@@ -192,7 +192,7 @@ const Hero = ({ onCtaClick }: { onCtaClick: () => void }) => {
               className="text-sm md:text-base lg:text-lg text-slate-300 mb-6 leading-relaxed max-w-[560px] mx-auto lg:mx-0"
               style={{ fontFamily: "'Inter', Arial, sans-serif", fontWeight: 400 }}
             >
-              FactoryJet is a B2B web design agency helping US businesses build high-converting, performance-driven websites that generate qualified leads and support long-term growth. We deliver enterprise-grade B2B websites in just <strong className="text-white font-semibold">7 days</strong> with fixed pricing, 100% code ownership, and zero vendor lock-in.<br/><br/>Trusted by 500+ businesses across SaaS, Cybersecurity, Healthcare, IT, and Professional Services. Built using Google Lighthouse and Core Web Vitals best practices.
+              FactoryJet is a B2B web design agency helping US businesses build high-converting websites that generate qualified leads, strengthen brand credibility, and support long-term growth. We deliver enterprise-grade websites in just <strong className="text-white font-semibold">7 days</strong> with fixed pricing, 100% code ownership, and zero vendor lock-in.<br/><br/>Trusted by 523+ businesses across SaaS, Cybersecurity, Healthcare, IT, and Professional Services.
             </motion.p>
 
             <motion.div 
@@ -729,79 +729,81 @@ const Methodology = ({ onCtaClick }: { onCtaClick: () => void }) => {
     {
       title: "Strategy Call",
       day: "Day 1",
-      duration: "30 Mins",
+      duration: "30 Minutes",
       benefit: "No Obligation",
       icon: <Phone size={24} />,
       color: "text-[#0052CC]",
       bgColor: "bg-blue-50",
       borderColor: "border-blue-100",
       items: [
-        "Clarify your goals, challenges, and target buyers",
-        "Receive a clear roadmap and fixed quote",
-        "Alignment confirmed upfront — no surprises later"
+        "Clarify your goals, business challenges, and target buyers",
+        "Identify required pages, integrations, and conversion goals",
+        "Receive a fixed quote and clear roadmap",
+        "Alignment confirmed upfront — zero surprises later"
       ]
     },
     {
       title: "Design Sprint",
-      day: "Days 2–6",
-      duration: "Week 1",
+      day: "Days 1–3",
+      duration: "Day 1–3",
       benefit: "AI-Accelerated",
       icon: <Palette size={24} />,
       color: "text-[#FF6B35]",
       bgColor: "bg-orange-50",
       borderColor: "border-orange-100",
       items: [
-        "AI-assisted concepts generate multiple design directions in parallel",
-        "Human designers refine and perfect the strongest direction",
-        "First complete design previews delivered within 5 days",
-        "Rapid feedback loop accelerates client approval"
+        "AI-assisted design concepts generated in parallel",
+        "Human designers refine the strongest direction",
+        "Homepage and core page previews shared quickly",
+        "Fast feedback loop for rapid approvals"
       ]
     },
     {
-      title: "Development",
-      day: "Days 7-14",
-      duration: "Weeks 2-3",
+      title: "Development & SEO Setup",
+      day: "Days 3–5",
+      duration: "Day 3–5",
       benefit: "Parallel Processing",
       icon: <Code size={24} />,
       color: "text-[#10B981]",
       bgColor: "bg-green-50",
       borderColor: "border-green-100",
       items: [
-        "Approved designs built into fully functional pages",
-        "SEO foundations: meta structure, site architecture, and page speed optimisation",
-        "Analytics, CRM, and form integrations connected",
-        "QA tested across 20+ devices with Lighthouse performance audits",
-        "Hosting and deployment configured in the client's own account — zero markup, zero lock-in"
+        "Approved designs developed into fully functional pages",
+        "Mobile responsiveness and speed optimisation",
+        "Core SEO setup: meta tags, URL structure, schema-ready architecture",
+        "CRM, forms, and analytics integrations completed"
       ]
     },
     {
-      title: "Review & Refine",
-      day: "Days 15–17",
-      duration: "Week 2",
-      benefit: "Unlimited Revisions",
+      title: "QA, Review & Refinement",
+      day: "Days 5–6",
+      duration: "Day 5–6",
+      benefit: "Quality Assured",
       icon: <Search size={24} />,
       color: "text-purple-600",
       bgColor: "bg-purple-50",
       borderColor: "border-purple-100",
       items: [
-        "Full site walkthrough with structured client feedback",
-        "Final content, copy, and design adjustments",
-        "Cross-browser and device quality assurance completed"
+        "Cross-browser and device testing",
+        "Lighthouse and Core Web Vitals optimisation",
+        "Final design and content refinements",
+        "Client walkthrough and approval"
       ]
     },
     {
       title: "Launch & Support",
-      day: "Day 7+",
+      day: "Day 7",
       duration: "Go Live!",
-      benefit: "30-60 Days Support",
+      benefit: "30–60 Days Support",
       icon: <Rocket size={24} />,
       color: "text-[#0052CC]",
       bgColor: "bg-blue-50",
       borderColor: "border-blue-100",
       items: [
-        "Domain configuration and deployment handled end-to-end",
-        "30–60 days of post-launch bug fixes and performance monitoring",
-        "100% code ownership transferred via GitHub repository on completion"
+        "Domain connection and deployment",
+        "Live launch in your own hosting account",
+        "GitHub code handover",
+        "30–60 days post-launch support included"
       ]
     }
   ];
@@ -829,7 +831,7 @@ const Methodology = ({ onCtaClick }: { onCtaClick: () => void }) => {
             <span className="text-[#0052CC]">5 Steps</span>, <span className="text-[#FF6B35]">Zero Surprises</span>
           </h2>
           <p className="text-xl text-slate-500 max-w-2xl mx-auto">
-             FactoryJet's AI-native workflows and expert team deliver high-converting B2B websites in 7 days. Every project follows the same structured process — so you always know exactly where things stand.
+             FactoryJet's AI-native workflows and expert team deliver high-converting B2B websites in 7 days. Every project follows a structured milestone-driven process, so you always know exactly what happens next.
              <br className="hidden md:block" />
              <span className="italic text-sm">FactoryJet Conversion Architecture™: Traffic Qualification → Intent Mapping → Micro-Commitment Design → Friction Elimination → Conversion Amplification. Every stage of our process is mapped to this framework.</span>
           </p>
@@ -914,7 +916,7 @@ const Methodology = ({ onCtaClick }: { onCtaClick: () => void }) => {
           className="mt-20 text-center"
         >
            <div className="inline-flex items-center gap-2 bg-[#10B981]/10 text-[#10B981] px-4 py-2 rounded-full font-bold mb-8">
-             <Clock size={16} /> Average Total: 7 Days
+             <Clock size={16} /> Average Total Launch Time: 7 Days
            </div>
            
            <div className="flex justify-center">
@@ -1100,9 +1102,9 @@ const Services = ({ onCtaClick }: { onCtaClick: () => void }) => {
              {
                title: "Landing Pages",
                icon: <Target size={24} />,
-               desc: "High-converting campaign pages for ads or lead magnets. Strategic copy, CTAs, and design to maximize ROI.",
-               price: "$999",
-               time: "5-7 days",
+               desc: "High-converting campaign pages for ads or lead magnets. Strategic copy, conversion-focused CTAs, and design built to maximise ROI.",
+               price: "$999+",
+               time: "5–7 Days",
                color: "text-rose-600",
                bgColor: "bg-rose-50",
                borderColor: "from-rose-500 to-red-500",
@@ -1125,7 +1127,7 @@ const Services = ({ onCtaClick }: { onCtaClick: () => void }) => {
                    </div>
                    <div className="text-right">
                       <div className={`text-sm font-bold ${item.color} bg-white border border-slate-100 px-2 py-1 rounded shadow-sm`}>
-                        {item.price}+
+                        {item.price}
                       </div>
                    </div>
                 </div>
@@ -1886,7 +1888,7 @@ const Pricing = ({ onCtaClick }: { onCtaClick: () => void }) => {
 
         <div className="text-center mt-12">
            <p className="text-slate-500">
-             Not sure which tier fits? <a onClick={(e) => { e.preventDefault(); onCtaClick(); }} href="#contact" className="text-[#0052CC] font-bold hover:underline cursor-pointer">Talk to us — we'll give you an honest recommendation →</a>
+             Not sure which plan fits? <a onClick={(e) => { e.preventDefault(); onCtaClick(); }} href="#contact" className="text-[#0052CC] font-bold hover:underline cursor-pointer">Talk to us — we'll give you an honest recommendation →</a>
            </p>
         </div>
       </div>
@@ -2079,7 +2081,7 @@ const FAQ = () => {
     },
     {
       question: "How long does it take to build a B2B website?",
-      answer: "FactoryJet delivers most B2B websites in 7 days. A standard 5–10 page project follows a structured process: strategy call on day one, design previews by day five, development and QA by day fourteen, and launch shortly after. Complex e-commerce or custom-integration projects may extend to 7–14 days."
+      answer: "FactoryJet delivers most standard B2B websites in 7 days. A typical 5–10 page project includes strategy on day one, design sprint within the first 3 days, development and QA by days 5–6, and live launch on day 7. Complex e-commerce or custom integration projects may extend to 7–14 days."
     },
     {
       question: "How much does a professional B2B website cost in the USA?",
@@ -2199,7 +2201,7 @@ const FooterLocal = ({ onCtaClick }: { onCtaClick: () => void }) => {
               Factory<span className="text-[#FF6B35]">Jet</span>
             </span>
             <p className="text-slate-400 max-w-sm mb-8 leading-relaxed">
-              The AI-native web design agency for B2B companies. We build enterprise-grade websites in weeks, not months.
+              The AI-native B2B web design agency for US companies. We build enterprise-grade, conversion-focused websites in 7 days — with 100% code ownership and zero vendor lock-in.
             </p>
             <div className="flex gap-4">
               {[
@@ -2219,6 +2221,7 @@ const FooterLocal = ({ onCtaClick }: { onCtaClick: () => void }) => {
             <ul className="space-y-4 text-slate-400">
               <li><a href="/us/services/web-design" className="hover:text-[#FF6B35] transition-colors">Web Design</a></li>
               <li><a href="/us/services/ecommerce-development" className="hover:text-[#FF6B35] transition-colors">E-Commerce</a></li>
+              <li><a href="/services/ai-agent-development" className="hover:text-[#FF6B35] transition-colors">AI Agent Development</a></li>
             </ul>
           </div>
           

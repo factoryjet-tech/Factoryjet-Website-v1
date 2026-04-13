@@ -77,7 +77,7 @@ export default function FinalCta({ handleCta }: FinalCtaProps) {
       <div className="fc-trust reveal">
         <div className="fc-trust-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="#34D399" strokeWidth="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          <span><strong>200+</strong> stores launched</span>
+          <span><strong>120+</strong> Shopify stores launched</span>
         </div>
         <div className="fc-trust-sep"></div>
         <div className="fc-trust-item">

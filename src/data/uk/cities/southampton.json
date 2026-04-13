@@ -1,0 +1,58 @@
+{
+  "slug": "southampton",
+  "name": "Southampton",
+  "region": "Hampshire",
+  "country": "England",
+  "population": 250000,
+  "businesses": 14000,
+  "gdpBn": 9.5,
+  "primaryIndustries": [
+    "Port & Maritime",
+    "Cruise Industry",
+    "Retail",
+    "Education"
+  ],
+  "keyEmployers": [
+    "Carnival Corporation",
+    "Port of Southampton",
+    "RNLI",
+    "Solent University",
+    "Southampton University"
+  ],
+  "avgAgencyPricing": {
+    "webDesign": 3500,
+    "ecommerce": 6800,
+    "seo": 900,
+    "aiAgents": 0
+  },
+  "localAgencies": {
+    "web-design": [
+      "Southampton Web Design",
+      "South Coast Digital",
+      "Creative Web"
+    ],
+    "seo": [
+      "Southampton SEO",
+      "South Coast Marketing",
+      "Local Search South"
+    ]
+  },
+  "keyStats": {
+    "digitalBusinessGrowth": "12% YoY",
+    "smeCount": 12500,
+    "techJobs": 3500,
+    "avgSalary": 27000
+  },
+  "cityAreas": [
+    "Southampton City Centre",
+    "Waterfront",
+    "Above Bar Street",
+    "Shirley",
+    "Totton"
+  ],
+  "newsHook": "Port of Southampton invests £500M in container terminal expansion",
+  "coordinates": {
+    "lat": 50.9097,
+    "lng": -1.4044
+  }
+}

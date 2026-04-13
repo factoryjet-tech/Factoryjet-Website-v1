@@ -73,7 +73,7 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '',
 
   const ecommerceServices: SubMenuItem[] = ECOMMERCE_SERVICES_BASE.map(s => ({
     ...s,
-    href: prefixRoute('/services/ecommerce-development/shopify-development'),
+    href: prefixRoute('/services/shopify-development'),
   }));
 
   const servicesSubmenu: SubMenuItem[] = [

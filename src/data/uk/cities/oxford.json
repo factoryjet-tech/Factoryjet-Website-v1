@@ -1,0 +1,58 @@
+{
+  "slug": "oxford",
+  "name": "Oxford",
+  "region": "Oxfordshire",
+  "country": "England",
+  "population": 160000,
+  "businesses": 10000,
+  "gdpBn": 12.8,
+  "primaryIndustries": [
+    "Education & Research",
+    "Technology & Innovation",
+    "Biotech & Life Sciences",
+    "Publishing"
+  ],
+  "keyEmployers": [
+    "University of Oxford",
+    "Oxford Brookes University",
+    "Oxford University Press",
+    "Novartis",
+    "GSK Pharma"
+  ],
+  "avgAgencyPricing": {
+    "webDesign": 4200,
+    "ecommerce": 7500,
+    "seo": 1100,
+    "aiAgents": 0
+  },
+  "localAgencies": {
+    "web-design": [
+      "Oxford Web Design",
+      "Digital Oxford",
+      "Creative Solutions Oxford"
+    ],
+    "seo": [
+      "Oxford SEO Services",
+      "University City Marketing",
+      "Local Search Oxford"
+    ]
+  },
+  "keyStats": {
+    "digitalBusinessGrowth": "23% YoY",
+    "smeCount": 9000,
+    "techJobs": 4500,
+    "avgSalary": 34000
+  },
+  "cityAreas": [
+    "Oxford City Centre",
+    "University District",
+    "Jericho",
+    "Summertown",
+    "Cowley"
+  ],
+  "newsHook": "Oxford innovation hub secures £200M in biotech and AI research funding",
+  "coordinates": {
+    "lat": 51.7520,
+    "lng": -1.2577
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "slug": "ecommerce",
+  "name": "E-Commerce",
+  "tagline": "High-Converting Online Stores That Sell 24/7",
+  "shortDescription": "Shopify, WooCommerce, and custom e-commerce platforms built for profitability.",
+  "primaryKeyword": "ecommerce website [city]",
+  "secondaryKeywords": [
+    "online store [city]",
+    "shopify development [city]",
+    "ecommerce development [city]",
+    "shopping website [city]",
+    "woocommerce [city]"
+  ],
+  "heroHeadline": "E-Commerce Solutions in {cityName} That Generate Revenue",
+  "pricingRange": {
+    "min": 3000,
+    "max": 15000,
+    "currency": "GBP"
+  },
+  "localAvgMultiplier": 3.2,
+  "deliveryWeeks": {
+    "standard": 8,
+    "express": 4
+  },
+  "techStack": [
+    "Shopify",
+    "WooCommerce",
+    "Next.js",
+    "Stripe"
+  ],
+  "relatedServices": [
+    "web-design",
+    "seo"
+  ],
+  "platforms": [
+    "shopify",
+    "woocommerce",
+    "magento",
+    "custom"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "slug": "web-design",
+  "name": "Web Design",
+  "tagline": "Enterprise-Grade Websites at Startup-Friendly Prices",
+  "shortDescription": "Custom websites built with Next.js 15 and GSAP that convert visitors into paying clients.",
+  "primaryKeyword": "web design [city]",
+  "secondaryKeywords": [
+    "website designer [city]",
+    "web agency [city]",
+    "website design company [city]",
+    "affordable web design [city]",
+    "professional website [city]"
+  ],
+  "heroHeadline": "Web Design in {cityName} That Converts Visitors Into Clients",
+  "pricingRange": {
+    "min": 1500,
+    "max": 8000,
+    "currency": "GBP"
+  },
+  "localAvgMultiplier": 2.8,
+  "deliveryWeeks": {
+    "standard": 4,
+    "express": 2
+  },
+  "techStack": [
+    "Next.js 15",
+    "Tailwind CSS 4",
+    "GSAP",
+    "TypeScript"
+  ],
+  "relatedServices": [
+    "ai-websites",
+    "seo"
+  ],
+  "platforms": [
+    "wordpress",
+    "shopify",
+    "webflow",
+    "nextjs",
+    "framer"
+  ]
+}

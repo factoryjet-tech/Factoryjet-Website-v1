@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Shopify & Shopify Plus E-Commerce Development Services',
     description: 'Expert Shopify Plus e-commerce development for DTC, B2B, and enterprise brands. Custom stores, migrations, headless commerce with Hydrogen.',
-    url: 'https://factoryjet.com/services/ecommerce-development/shopify-development',
+    url: 'https://factoryjet.com/services/shopify-development',
     images: [
       {
         url: 'https://factoryjet.com/logo.png',
@@ -39,11 +39,11 @@ export const metadata: Metadata = {
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
-    canonical: 'https://factoryjet.com/services/ecommerce-development/shopify-development',
+    canonical: 'https://factoryjet.com/services/shopify-development',
     languages: {
-      'en-in': 'https://factoryjet.com/services/ecommerce-development/shopify-development',
-      'en-us': 'https://factoryjet.com/us/services/ecommerce-development/shopify-development',
-      'x-default': 'https://factoryjet.com/services/ecommerce-development/shopify-development',
+      'en-in': 'https://factoryjet.com/services/shopify-development',
+      'en-us': 'https://factoryjet.com/us/services/shopify-development',
+      'x-default': 'https://factoryjet.com/services/shopify-development',
     },
   },
 };

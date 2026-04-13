@@ -42,7 +42,24 @@
       "Read(//c/Users/rishi/.claude/projects/c--FactoryJet-rishi-branch-Factoryjet-Website-v1/7b8e46dd-18e3-4a17-a6e9-10048c1c6f51/tool-results/**)",
       "Bash(wc -l \"c:\\\\FactoryJet\\\\rishi-branch\\\\Factoryjet-Website-v1\\\\src\\\\lib\\\\legacy-pages\\\\US-AboutPage\\\\components\\\\sections\"/*.tsx)",
       "Read(//c/FactoryJet/**)",
-      "Bash(/tmp/critical_check.sh)"
+      "Bash(/tmp/critical_check.sh)",
+      "Read(//tmp/**)",
+      "Bash(pkill -f \"npm run dev\")",
+      "Bash(awk '{print $2}')",
+      "Bash(xargs kill:*)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(pkill -9 -f \"next dev\")",
+      "Bash(pkill -9 -f \"node\")",
+      "Bash(cd c:\\\\\\\\FactoryJet\\\\\\\\rishi-branch\\\\\\\\Factoryjet-Website-v1)",
+      "Bash(wc -l c:\\\\\\\\FactoryJet\\\\\\\\rishi-branch\\\\\\\\Factoryjet-Website-v1\\\\\\\\src\\\\\\\\lib\\\\\\\\factoryjet-uk-pages\\\\\\\\src\\\\\\\\app\\\\\\\\sheffield\\\\\\\\page.tsx)",
+      "Bash(git commit -m ':*)",
+      "Bash(git add:*)",
+      "Bash(tail -30 \"C:\\\\\\\\Users\\\\\\\\rishi\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\claude\\\\\\\\c--FactoryJet-rishi-branch-Factoryjet-Website-v1\\\\\\\\ddf9423a-42fa-402e-bf43-0254c6d909a3\\\\\\\\tasks\\\\\\\\b1ck3k25a.output\")"
+    ],
+    "additionalDirectories": [
+      "c:\\FactoryJet\\rishi-branch\\Factoryjet-Website-v1\\src\\app\\uk\\[city\\]\\[service\\]\\[platform",
+      "\\tmp",
+      "C:\\FactoryJet\\rishi-branch\\Factoryjet-Website-v1\\src\\lib\\factoryjet-uk-pages\\src\\app\\sheffield"
     ]
   }
 }

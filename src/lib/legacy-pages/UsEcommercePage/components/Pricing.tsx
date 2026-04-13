@@ -6,35 +6,35 @@ import { useLeadCapture } from '../context/LeadCaptureContext';
 const tiers = [
   {
     name: "Starter",
-    price: "$4,999",
-    range: "- $9,999",
-    desc: "Best for new businesses, testing e-commerce.",
-    features: ["Shopify or WooCommerce", "Template customization", "Up to 100 products", "Mobile responsive", "SEO foundation", "2-3 week delivery", "30-day support"],
+    price: "$1,999",
+    range: "– $9,999",
+    desc: "Best for new brands launching online.",
+    features: ["Shopify or WooCommerce", "Template customization", "Up to 100 products", "Mobile responsive", "SEO foundation", "7-day delivery", "30-day support"],
     cta: "Get Started"
   },
   {
     name: "Growth",
     price: "$10,000",
-    range: "- $24,999",
-    desc: "Best for established businesses scaling online.",
-    features: ["Shopify, BigCommerce, or Woo", "Custom design (not template)", "Up to 500 products", "Analytics integration", "SEO setup", "4-6 week delivery", "60-day support"],
+    range: "– $24,999",
+    desc: "Best for established brands scaling revenue.",
+    features: ["Shopify, WooCommerce, or BigCommerce", "Custom design", "Up to 500 products", "Analytics integration", "SEO setup", "7–14 day delivery", "60-day support"],
     cta: "Scale Now",
     recommended: true
   },
   {
     name: "Professional",
     price: "$25,000",
-    range: "- $49,999",
-    desc: "High-growth brands, B2B companies.",
-    features: ["Any Platform (Plus, Adobe)", "Fully Custom Design", "Unlimited products", "Advanced integrations (ERP, CRM)", "B2B features available", "8-12 week delivery", "90-day support"],
+    range: "– $49,999",
+    desc: "Best for high-growth brands and B2B commerce.",
+    features: ["Shopify Plus / Adobe / Headless", "Fully custom storefront", "Unlimited products", "ERP / CRM integrations", "B2B features", "7–14 day delivery", "90-day support"],
     cta: "Go Pro"
   },
   {
     name: "Enterprise",
     price: "$50,000",
-    range: "- $150k+",
-    desc: "Enterprise, marketplaces, complex needs.",
-    features: ["Adobe Commerce / Headless", "Complete customization", "Multi-storefront", "Complex integrations", "Dedicated team", "12-24 week delivery", "12-month support"],
+    range: "– $150K+",
+    desc: "Best for marketplaces and enterprise commerce.",
+    features: ["Adobe Commerce / Headless", "Multi-storefront architecture", "Advanced custom integrations", "Dedicated engineering team", "Milestone-based enterprise delivery", "12-month support"],
     cta: "Contact Us"
   }
 ];

@@ -32,7 +32,7 @@ export default function ProcessSection({ handleCta }: ProcessSectionProps) {
               </div>
               <div className="pj-info">
                 <div className="pj-title">Discovery and Strategy</div>
-                <div className="pj-week">Weeks 1–2</div>
+                <div className="pj-week">Day 1</div>
               </div>
             </div>
             <p className="pj-sum">Audit your business, competitors, and goals — then deliver a technical blueprint and project scope.</p>
@@ -58,7 +58,7 @@ export default function ProcessSection({ handleCta }: ProcessSectionProps) {
               </div>
               <div className="pj-info">
                 <div className="pj-title">UX Design and Prototyping</div>
-                <div className="pj-week">Weeks 2–4</div>
+                <div className="pj-week">Day 2</div>
               </div>
             </div>
             <p className="pj-sum">Mobile-first wireframes, high-fidelity mockups, and clickable prototypes — before any code is written.</p>
@@ -84,7 +84,7 @@ export default function ProcessSection({ handleCta }: ProcessSectionProps) {
               </div>
               <div className="pj-info">
                 <div className="pj-title">Development and Integration</div>
-                <div className="pj-week">Weeks 4–10</div>
+                <div className="pj-week">Day 3–5</div>
               </div>
             </div>
             <p className="pj-sum">Custom Liquid or Hydrogen build with payment gateways, shipping, tax, and all third-party integrations.</p>
@@ -110,7 +110,7 @@ export default function ProcessSection({ handleCta }: ProcessSectionProps) {
               </div>
               <div className="pj-info">
                 <div className="pj-title">Content, SEO, and AI Optimization</div>
-                <div className="pj-week">Weeks 8–11</div>
+                <div className="pj-week">Day 6</div>
               </div>
             </div>
             <p className="pj-sum">Schema markup, meta optimization, AI crawler access, and content structured for Google + AI search engines.</p>
@@ -136,7 +136,7 @@ export default function ProcessSection({ handleCta }: ProcessSectionProps) {
               </div>
               <div className="pj-info">
                 <div className="pj-title">Testing and Quality Assurance</div>
-                <div className="pj-week">Weeks 10–12</div>
+                <div className="pj-week">Day 7</div>
               </div>
             </div>
             <p className="pj-sum">Cross-browser, cross-device testing with Lighthouse 90+ targets, security hardening, and schema validation.</p>
@@ -162,7 +162,7 @@ export default function ProcessSection({ handleCta }: ProcessSectionProps) {
               </div>
               <div className="pj-info">
                 <div className="pj-title">Launch and Ongoing Growth</div>
-                <div className="pj-week">Week 12+</div>
+                <div className="pj-week">Enterprise: 7–14 day delivery</div>
               </div>
             </div>
             <p className="pj-sum">Zero-downtime launch with GA4 tracking, conversion monitoring, and optional annual maintenance contracts.</p>
@@ -182,12 +182,12 @@ export default function ProcessSection({ handleCta }: ProcessSectionProps) {
 
 
       <div className="pj-weeks-bar" id="pjWeekBar">
-        <span className="pj-wk-label">Wk 1–2</span>
-        <span className="pj-wk-label">Wk 2–4</span>
-        <span className="pj-wk-label">Wk 4–10</span>
-        <span className="pj-wk-label">Wk 8–11</span>
-        <span className="pj-wk-label">Wk 10–12</span>
-        <span className="pj-wk-label">Wk 12+</span>
+        <span className="pj-wk-label">Day 1</span>
+        <span className="pj-wk-label">Day 2</span>
+        <span className="pj-wk-label">Day 3–5</span>
+        <span className="pj-wk-label">Day 6</span>
+        <span className="pj-wk-label">Day 7</span>
+        <span className="pj-wk-label">7–14d Ent.</span>
       </div>
     </div>
 

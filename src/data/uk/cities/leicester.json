@@ -1,0 +1,58 @@
+{
+  "slug": "leicester",
+  "name": "Leicester",
+  "region": "East Midlands",
+  "country": "England",
+  "population": 370000,
+  "businesses": 19000,
+  "gdpBn": 15.8,
+  "primaryIndustries": [
+    "Textiles & Fashion",
+    "Food & Logistics",
+    "Professional Services",
+    "Technology"
+  ],
+  "keyEmployers": [
+    "John Lewis",
+    "Leicestershire County Council",
+    "University of Leicester",
+    "Royal Mail",
+    "BT Group"
+  ],
+  "avgAgencyPricing": {
+    "webDesign": 3500,
+    "ecommerce": 7000,
+    "seo": 950,
+    "aiAgents": 0
+  },
+  "localAgencies": {
+    "web-design": [
+      "Leicester Digital",
+      "Web Design East Midlands",
+      "Digital Fox"
+    ],
+    "seo": [
+      "Leicester SEO Agency",
+      "East Midlands Marketing",
+      "Local Online"
+    ]
+  },
+  "keyStats": {
+    "digitalBusinessGrowth": "17% YoY",
+    "smeCount": 17000,
+    "techJobs": 5200,
+    "avgSalary": 28000
+  },
+  "cityAreas": [
+    "Leicester City Centre",
+    "The Lanes",
+    "Belgrave Road",
+    "Highfields",
+    "Clarendon Park"
+  ],
+  "newsHook": "Textiles sector digitalization drives £25M investment in Leicester tech startups",
+  "coordinates": {
+    "lat": 52.6369,
+    "lng": -1.1398
+  }
+}

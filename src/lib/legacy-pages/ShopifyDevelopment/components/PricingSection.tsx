@@ -13,6 +13,17 @@ export default function PricingSection({ handleCta, pricingTab, setPricingTab, f
   return (
     <section className="sec sec--w" id="pricing">
       <div className="ctr">
+        <div className="reveal" style={{maxWidth:"760px",margin:"0 auto 48px",padding:"24px 28px",background:"var(--off-white)",border:"1px solid var(--light)",borderRadius:"var(--r-xl)"}}>
+          <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit, minmax(260px, 1fr))",gap:"10px 24px"}}>
+            <div style={{display:"flex",alignItems:"center",gap:"10px",fontSize:".9375rem",color:"var(--navy)",fontWeight:"500"}}><span style={{color:"#10B981",fontWeight:"700"}}>✓</span> 100% code ownership with full GitHub repository transfer</div>
+            <div style={{display:"flex",alignItems:"center",gap:"10px",fontSize:".9375rem",color:"var(--navy)",fontWeight:"500"}}><span style={{color:"#10B981",fontWeight:"700"}}>✓</span> Zero vendor lock-in</div>
+            <div style={{display:"flex",alignItems:"center",gap:"10px",fontSize:".9375rem",color:"var(--navy)",fontWeight:"500"}}><span style={{color:"#10B981",fontWeight:"700"}}>✓</span> Hosting configured in your account</div>
+            <div style={{display:"flex",alignItems:"center",gap:"10px",fontSize:".9375rem",color:"var(--navy)",fontWeight:"500"}}><span style={{color:"#10B981",fontWeight:"700"}}>✓</span> QA tested across 20+ devices</div>
+            <div style={{display:"flex",alignItems:"center",gap:"10px",fontSize:".9375rem",color:"var(--navy)",fontWeight:"500"}}><span style={{color:"#10B981",fontWeight:"700"}}>✓</span> Lighthouse audited</div>
+            <div style={{display:"flex",alignItems:"center",gap:"10px",fontSize:".9375rem",color:"var(--navy)",fontWeight:"500"}}><span style={{color:"#10B981",fontWeight:"700"}}>✓</span> WCAG accessibility best practices</div>
+            <div style={{display:"flex",alignItems:"center",gap:"10px",fontSize:".9375rem",color:"var(--navy)",fontWeight:"500"}}><span style={{color:"#10B981",fontWeight:"700"}}>✓</span> Core Web Vitals optimized</div>
+          </div>
+        </div>
         <div className="sec-head reveal" style={{textAlign:"center"}}>
           <span className="eyebrow">Pricing</span>
           <h2>How Much Does Shopify Development Cost?</h2>
@@ -48,7 +59,7 @@ export default function PricingSection({ handleCta, pricingTab, setPricingTab, f
             </div>
             <div className="pr-timeline">
               <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              4–8 weeks
+              7-day core delivery
             </div>
 
             <div className="pr-ongoing-price" style={{display:"none"}}>
@@ -98,7 +109,7 @@ export default function PricingSection({ handleCta, pricingTab, setPricingTab, f
             </div>
             <div className="pr-timeline">
               <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              8–14 weeks
+              7–14 day delivery
             </div>
 
             <div className="pr-ongoing-price" style={{display:"none"}}>
@@ -145,7 +156,7 @@ export default function PricingSection({ handleCta, pricingTab, setPricingTab, f
             </div>
             <div className="pr-timeline">
               <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              12–20 weeks
+              14+ day enterprise delivery
             </div>
 
             <div className="pr-ongoing-price" style={{display:"none"}}>
@@ -190,10 +201,10 @@ export default function PricingSection({ handleCta, pricingTab, setPricingTab, f
                   <th style={{padding:"14px 16px",textAlign:"left",color:"rgba(255,255,255,.7)",fontWeight:"600",fontSize:".6875rem",letterSpacing:".06em",textTransform:"uppercase"}}>Best For</th>
                 </tr></thead>
                 <tbody>
-                  <tr style={{borderBottom:"1px solid var(--light)"}}><td style={{padding:"14px 16px",fontWeight:"600",color:"var(--navy)"}}>Shopify Theme-Based Store</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>$5,000 – $15,000</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>4–8 weeks</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>Startups and small businesses launching their first Shopify store</td></tr>
-                  <tr style={{borderBottom:"1px solid var(--light)",background:"var(--off-white)"}}><td style={{padding:"14px 16px",fontWeight:"600",color:"var(--navy)"}}>Custom Shopify Store</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>$15,000 – $40,000</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>8–14 weeks</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>Growing brands needing bespoke design and custom functionality</td></tr>
-                  <tr style={{borderBottom:"1px solid var(--light)"}}><td style={{padding:"14px 16px",fontWeight:"600",color:"var(--navy)"}}>Shopify Plus Enterprise Store</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>$25,000 – $150,000+</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>12–20 weeks</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>High-revenue brands requiring checkout customization, B2B, and multi-store</td></tr>
-                  <tr style={{borderBottom:"1px solid var(--light)",background:"var(--off-white)"}}><td style={{padding:"14px 16px",fontWeight:"600",color:"var(--navy)"}}>Headless Shopify (Hydrogen)</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>$30,000 – $120,000+</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>12–20 weeks</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>Brands needing ultra-fast performance and complete design freedom</td></tr>
+                  <tr style={{borderBottom:"1px solid var(--light)"}}><td style={{padding:"14px 16px",fontWeight:"600",color:"var(--navy)"}}>Shopify Theme-Based Store</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>$5,000 – $15,000</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>7-day core delivery</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>Startups and small businesses launching their first Shopify store</td></tr>
+                  <tr style={{borderBottom:"1px solid var(--light)",background:"var(--off-white)"}}><td style={{padding:"14px 16px",fontWeight:"600",color:"var(--navy)"}}>Custom Shopify Store</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>$15,000 – $40,000</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>7–14 day delivery</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>Growing brands needing bespoke design and custom functionality</td></tr>
+                  <tr style={{borderBottom:"1px solid var(--light)"}}><td style={{padding:"14px 16px",fontWeight:"600",color:"var(--navy)"}}>Shopify Plus Enterprise Store</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>$25,000 – $150,000+</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>14+ day enterprise delivery</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>High-revenue brands requiring checkout customization, B2B, and multi-store</td></tr>
+                  <tr style={{borderBottom:"1px solid var(--light)",background:"var(--off-white)"}}><td style={{padding:"14px 16px",fontWeight:"600",color:"var(--navy)"}}>Headless Shopify (Hydrogen)</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>$30,000 – $120,000+</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>14+ day enterprise delivery</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>Brands needing ultra-fast performance and complete design freedom</td></tr>
                   <tr style={{borderBottom:"1px solid var(--light)"}}><td style={{padding:"14px 16px",fontWeight:"600",color:"var(--navy)"}}>Shopify Migration</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>$5,000 – $75,000</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>4–12 weeks</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>Businesses moving from WooCommerce, Magento, SFCC, or other platforms</td></tr>
                   <tr style={{borderBottom:"1px solid var(--light)",background:"var(--off-white)"}}><td style={{padding:"14px 16px",fontWeight:"600",color:"var(--navy)"}}>Shopify App Development</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>$8,000 – $50,000+</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>6–16 weeks</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>Custom functionality not available in the Shopify App Store</td></tr>
                   <tr><td style={{padding:"14px 16px",fontWeight:"600",color:"var(--navy)"}}>Ongoing Support (AMC)</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>$500 – $3,000/month</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>Ongoing</td><td style={{padding:"14px 16px",color:"var(--slate)"}}>Maintenance, updates, optimization, and 24/7 support</td></tr>

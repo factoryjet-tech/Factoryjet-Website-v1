@@ -13,6 +13,7 @@ export default function CaseStudies({ csScrollRef, scrollCS }: CaseStudiesProps)
     <div className="sec-head reveal" style={{textAlign:"center"}}>
       <span className="eyebrow eyebrow--dark">Results That Speak</span>
       <h2 style={{color:"#fff"}}>Real Shopify Stores, Real Growth</h2>
+      <p style={{color:"rgba(255,255,255,.75)",fontWeight:"600",marginTop:"8px"}}>120+ Shopify builds across DTC, B2B, and enterprise brands</p>
       <p className="sub sub--center" style={{color:"rgba(255,255,255,.45)"}}>Every metric is from a live FactoryJet Shopify build. Hover to explore the full story.</p>
     </div>
   </div>

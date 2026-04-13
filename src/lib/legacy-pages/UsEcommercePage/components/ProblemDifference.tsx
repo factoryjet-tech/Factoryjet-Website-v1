@@ -53,17 +53,16 @@ export const Problem: React.FC = () => {
 
 export const Difference: React.FC = () => (
   <Section id="difference" className="bg-jet-light">
-    <SectionHeader 
-      eyebrow="WHY LEADING US BRANDS CHOOSE FACTORYJET" 
-      title="The E-Commerce Development Company That Focuses on Revenue—Not Just Code" 
-      subtitle="Every decision we make is measured against one question: 'Will this increase sales?'"
+    <SectionHeader
+      eyebrow="WHY LEADING US BRANDS CHOOSE FACTORYJET"
+      title="The E-Commerce Development Company Built for Revenue Growth"
     />
 
     {/* Quick Answer Box */}
     <div className="bg-blue-50 border-l-4 border-jet-blue p-6 rounded-r-lg mb-12 max-w-4xl mx-auto shadow-sm">
       <p className="text-sm text-jet-blue font-bold mb-2 uppercase tracking-wide">💡 Quick Answer</p>
       <p className="text-jet-gray text-base leading-relaxed">
-        FactoryJet is an AI-native e-commerce development company specializing in revenue-optimized online stores. Unlike traditional agencies that build generic stores, we engineer every element—from platform selection to checkout flow—for maximum conversion. Our clients see 247% average revenue increase within 12 months.
+        FactoryJet builds enterprise-grade e-commerce systems engineered to increase conversions, improve checkout completion, and scale online revenue. Unlike traditional agencies that focus only on design, every decision we make is measured against one question: <strong>Will this increase sales?</strong> Our clients trust us for 7-day delivery, full code ownership, platform-neutral recommendations, and revenue-first engineering.
       </p>
     </div>
 
@@ -108,7 +107,7 @@ export const Difference: React.FC = () => (
              <div className="text-xs text-slate-400 mt-1">Industry Avg: 4.2s</div>
          </div>
          <div className="p-6 text-center hover:bg-slate-50 transition">
-            <div className="text-3xl font-bold text-jet-orange">3-4 wks</div>
+            <div className="text-3xl font-bold text-jet-orange">7 Days</div>
             <div className="text-sm text-jet-gray font-medium">Time to Launch</div>
              <div className="text-xs text-slate-400 mt-1">Industry Avg: 12-16 wks</div>
          </div>
