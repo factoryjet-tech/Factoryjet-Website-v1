@@ -127,6 +127,26 @@ const ContactFormModal: React.FC = () => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  // Lock body scroll when modal is open so closing never jumps the page
+  useEffect(() => {
+    if (isOpen) {
+      const scrollY = window.scrollY;
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.left = '0';
+      document.body.style.right = '0';
+      document.body.style.overflowY = 'scroll';
+      return () => {
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.left = '';
+        document.body.style.right = '';
+        document.body.style.overflowY = '';
+        window.scrollTo({ top: scrollY, behavior: 'instant' as ScrollBehavior });
+      };
+    }
+  }, [isOpen]);
+
   // Pre-load Firebase when modal opens (non-blocking) and track modal open
   useEffect(() => {
     if (isOpen) {
