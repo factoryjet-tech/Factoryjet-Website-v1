@@ -642,7 +642,7 @@ export default function SheffieldPage() {
 
               {/* ── Right column: light browser mockup ───────────────── */}
               <div className="hidden lg:flex items-center justify-center">
-                <BrowserMockup />
+                <BrowserMockup onCtaClick={() => openModal('uk')} />
               </div>
             </div>
           </div>
@@ -1607,7 +1607,7 @@ export default function SheffieldPage() {
 
 // ─── Browser mockup (pure CSS/divs, ~70vh tall) ──────────────────────────────
 
-function BrowserMockup() {
+function BrowserMockup({ onCtaClick }: { onCtaClick: () => void }) {
   return (
     <div
       className="w-full max-w-[480px] rounded-2xl overflow-hidden border border-[#E9ECEF] bg-white flex flex-col"
@@ -1643,7 +1643,7 @@ function BrowserMockup() {
           <div className="h-[7px] w-8 rounded bg-[#343A40]/20" />
           <div className="h-[7px] w-8 rounded bg-[#343A40]/15" />
           <div className="h-[7px] w-8 rounded bg-[#343A40]/15" />
-          <div className="h-7 w-20 rounded-lg bg-[#FF6B35]" />
+          <div className="h-7 w-20 rounded-lg bg-[#FF6B35] cursor-pointer" onClick={onCtaClick} />
         </div>
 
         {/* Hero skeleton area — light */}
@@ -1707,7 +1707,10 @@ function BrowserMockup() {
         </div>
 
         {/* CTA skeleton */}
-        <div className="h-10 rounded-lg bg-[#FF6B35] flex items-center justify-center">
+        <div
+          onClick={onCtaClick}
+          className="h-10 rounded-lg bg-[#FF6B35] hover:bg-[#ff8255] flex items-center justify-center cursor-pointer transition-colors duration-200"
+        >
           <span className="text-[11px] font-bold text-white uppercase tracking-[0.08em]">
             Get My Free Quote →
           </span>
