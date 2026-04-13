@@ -475,7 +475,7 @@ export default function SheffieldPage() {
           {/* ── Right: CTA + hamburger ─────────────────────────────── */}
           <div className="flex items-center gap-3 flex-shrink-0">
             <button
-              onClick={() => openModal('in')}
+              onClick={() => openModal('uk')}
               className="group inline-flex items-center gap-[6px] bg-[#FF6B35] hover:bg-[#ff8255] text-white font-semibold rounded-lg transition-all duration-200 hover:-translate-y-[1px] text-[13px] px-4 py-2 md:text-[14px] md:px-6 md:py-3"
             >
               Get Free Quote
@@ -511,7 +511,7 @@ export default function SheffieldPage() {
           </nav>
           <div className="mt-8">
             <button
-              onClick={() => { setMenuOpen(false); openModal('in'); }}
+              onClick={() => { setMenuOpen(false); openModal('uk'); }}
               className="inline-flex w-full items-center justify-center gap-2 bg-[#FF6B35] text-white text-[16px] font-semibold px-6 py-4 rounded-lg"
             >
               Get My Free Quote →
@@ -608,7 +608,7 @@ export default function SheffieldPage() {
                 {/* CTAs */}
                 <div className="relative z-10 flex flex-col sm:flex-row gap-3 mb-6">
                   <button
-                    onClick={() => openModal('in')}
+                    onClick={() => openModal('uk')}
                     className="group inline-flex items-center justify-center gap-2 bg-[#0052CC] hover:bg-[#1a6fff] text-white text-[16px] font-semibold px-8 py-[13px] rounded-lg transition-all duration-200 hover:-translate-y-[1px] w-full sm:w-auto"
                   >
                     Get My Free Quote
@@ -1094,7 +1094,7 @@ export default function SheffieldPage() {
             {/* CTA */}
             <div className="flex justify-center mt-14">
               <button
-                onClick={() => openModal('in')}
+                onClick={() => openModal('uk')}
                 className="group inline-flex items-center gap-2 bg-[#FF6B35] hover:bg-[#ff8255] text-white text-[16px] font-semibold px-8 py-4 rounded-lg transition-all duration-200 hover:-translate-y-[1px]"
               >
                 Start your 7-day build
@@ -1157,7 +1157,7 @@ export default function SheffieldPage() {
 
                 <div className="mt-8">
                   <button
-                    onClick={() => openModal('in')}
+                    onClick={() => openModal('uk')}
                     className="group inline-flex items-center gap-2 text-[#0052CC] border border-[#0052CC]/40 hover:bg-[#0052CC]/10 text-[15px] font-semibold px-6 py-3 rounded-lg transition-all duration-200"
                   >
                     See AI-powered Sheffield websites
@@ -1499,7 +1499,7 @@ export default function SheffieldPage() {
                 </div>
                 <button
                   type="button"
-                  onClick={() => openModal('in')}
+                  onClick={() => openModal('uk')}
                   className="group w-full bg-[#FF6B35] hover:bg-[#ff8255] text-white text-[15px] font-semibold px-6 py-4 rounded-lg transition-all duration-200 hover:-translate-y-[1px] flex items-center justify-center gap-2"
                 >
                   Get My Free Proposal
@@ -1579,7 +1579,7 @@ export default function SheffieldPage() {
               </div>
               <div className="mt-2">
                 <button
-                  onClick={() => openModal('in')}
+                  onClick={() => openModal('uk')}
                   className="inline-flex items-center gap-2 bg-[#FF6B35] hover:bg-[#ff8255] text-white text-[13px] font-semibold px-4 py-2 rounded-lg transition-all duration-200"
                 >
                   Get Free Quote →

@@ -111,9 +111,16 @@ const budgetsUS: { id: BudgetRange; label: string; range: string }[] = [
   { id: "not-sure", label: "Not Sure", range: "Need guidance" },
 ];
 
+const budgetsUK: { id: BudgetRange; label: string; range: string }[] = [
+  { id: "starter", label: "Starter", range: "£799 - £1,499" },
+  { id: "business", label: "Business", range: "£1,499 - £2,499" },
+  { id: "enterprise", label: "Enterprise", range: "£4,999+" },
+  { id: "not-sure", label: "Not Sure", range: "Need guidance" },
+];
+
 const ContactFormModal: React.FC = () => {
   const { isOpen, region, variant, closeModal } = useContactModal();
-  const budgets = region === 'us' ? budgetsUS : budgetsIN;
+  const budgets = region === 'us' ? budgetsUS : region === 'uk' ? budgetsUK : budgetsIN;
   const services = variant === 'ai' ? aiServices : defaultServices;
   const [step, setStep] = useState<1 | 2 | 3>(1);
   const [isSubmitting, setIsSubmitting] = useState(false);

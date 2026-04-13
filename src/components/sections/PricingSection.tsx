@@ -1,6 +1,7 @@
 "use client";
 
 import { CheckCircle2 } from "lucide-react";
+import { useContactModal } from "@/context/ContactModalContext";
 
 const PRICING_TIERS = [
   {
@@ -65,6 +66,8 @@ const PRICING_TIERS = [
 ];
 
 export default function PricingSection() {
+  const { openModal } = useContactModal();
+
   return (
     <section id="pricing" className="py-20 md:py-32 px-4 md:px-8 bg-[#F8F9FA]">
       <div className="max-w-7xl mx-auto">
@@ -108,6 +111,7 @@ export default function PricingSection() {
               </ul>
 
               <button
+                onClick={() => openModal('uk')}
                 className={`w-full py-3 rounded-lg font-bold transition-all duration-300 ${
                   tier.highlighted
                     ? "bg-[#FF6B35] hover:bg-[#ff8255] text-white"

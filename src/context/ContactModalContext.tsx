@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-export type ModalRegion = 'in' | 'us';
+export type ModalRegion = 'in' | 'us' | 'uk';
 export type ModalVariant = 'default' | 'ai';
 
 interface ContactModalContextType {
