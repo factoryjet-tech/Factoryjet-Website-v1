@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger, SplitText } from "@/lib/gsap";
 import { CheckCircle2, Menu, X, Monitor, Bot, ShoppingCart, RefreshCw, TrendingUp } from "lucide-react";
+import { useContactModal } from "@/context/ContactModalContext";
 
 const PricingSection = dynamic(
   () => import("@/components/sections/PricingSection"),
@@ -221,6 +222,7 @@ export default function SheffieldPage() {
   const [openFaq,       setOpenFaq]       = useState<number | null>(null);
   const [menuOpen,      setMenuOpen]      = useState(false);
   const [statsVisible,  setStatsVisible]  = useState(false);
+  const { openModal } = useContactModal();
 
   // Section refs
   const headingRef  = useRef<HTMLHeadingElement>(null);
@@ -472,13 +474,13 @@ export default function SheffieldPage() {
 
           {/* ── Right: CTA + hamburger ─────────────────────────────── */}
           <div className="flex items-center gap-3 flex-shrink-0">
-            <Link
-              href="#contact"
+            <button
+              onClick={() => openModal('in')}
               className="group inline-flex items-center gap-[6px] bg-[#FF6B35] hover:bg-[#ff8255] text-white font-semibold rounded-lg transition-all duration-200 hover:-translate-y-[1px] text-[13px] px-4 py-2 md:text-[14px] md:px-6 md:py-3"
             >
               Get Free Quote
               <span className="hidden sm:inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
-            </Link>
+            </button>
             {/* Hamburger — mobile only */}
             <button
               aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -508,13 +510,12 @@ export default function SheffieldPage() {
             ))}
           </nav>
           <div className="mt-8">
-            <Link
-              href="#contact"
-              onClick={() => setMenuOpen(false)}
+            <button
+              onClick={() => { setMenuOpen(false); openModal('in'); }}
               className="inline-flex w-full items-center justify-center gap-2 bg-[#FF6B35] text-white text-[16px] font-semibold px-6 py-4 rounded-lg"
             >
               Get My Free Quote →
-            </Link>
+            </button>
           </div>
         </div>
       )}
@@ -606,15 +607,15 @@ export default function SheffieldPage() {
 
                 {/* CTAs */}
                 <div className="relative z-10 flex flex-col sm:flex-row gap-3 mb-6">
-                  <Link
-                    href="#contact"
+                  <button
+                    onClick={() => openModal('in')}
                     className="group inline-flex items-center justify-center gap-2 bg-[#0052CC] hover:bg-[#1a6fff] text-white text-[16px] font-semibold px-8 py-[13px] rounded-lg transition-all duration-200 hover:-translate-y-[1px] w-full sm:w-auto"
                   >
                     Get My Free Quote
                     <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
-                  </Link>
+                  </button>
                   <Link
-                    href="#services"
+                    href="/portfolio"
                     className="inline-flex items-center justify-center gap-2 border border-[#343A40] hover:border-[#0052CC] hover:text-[#0052CC] text-[#343A40] text-[16px] font-semibold px-8 py-[13px] rounded-lg transition-all duration-200 w-full sm:w-auto"
                   >
                     See Our Work
@@ -1092,13 +1093,13 @@ export default function SheffieldPage() {
 
             {/* CTA */}
             <div className="flex justify-center mt-14">
-              <Link
-                href="#contact"
+              <button
+                onClick={() => openModal('in')}
                 className="group inline-flex items-center gap-2 bg-[#FF6B35] hover:bg-[#ff8255] text-white text-[16px] font-semibold px-8 py-4 rounded-lg transition-all duration-200 hover:-translate-y-[1px]"
               >
                 Start your 7-day build
                 <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
-              </Link>
+              </button>
             </div>
           </div>
         </section>
@@ -1155,13 +1156,13 @@ export default function SheffieldPage() {
                 </div>
 
                 <div className="mt-8">
-                  <Link
-                    href="#contact"
+                  <button
+                    onClick={() => openModal('in')}
                     className="group inline-flex items-center gap-2 text-[#0052CC] border border-[#0052CC]/40 hover:bg-[#0052CC]/10 text-[15px] font-semibold px-6 py-3 rounded-lg transition-all duration-200"
                   >
                     See AI-powered Sheffield websites
                     <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
-                  </Link>
+                  </button>
                 </div>
               </div>
 
@@ -1407,7 +1408,6 @@ export default function SheffieldPage() {
                   {[
                     { label: "Email",     value: "connect@factoryjet.com",   href: "mailto:connect@factoryjet.com" },
                     { label: "WhatsApp",  value: "Message us on WhatsApp",   href: "https://wa.me/919103398557" },
-                    { label: "Phone",     value: "+1 (339) 170-2199",        href: "tel:+13391702199" },
                   ].map((c) => (
                     <a key={c.label} href={c.href} rel="noopener noreferrer" className="flex items-start gap-4 group">
                       <span className="text-[11px] font-semibold uppercase tracking-[0.1em] text-[#6B7280] w-[74px] flex-shrink-0 pt-[2px]">
@@ -1498,7 +1498,8 @@ export default function SheffieldPage() {
                   />
                 </div>
                 <button
-                  type="submit"
+                  type="button"
+                  onClick={() => openModal('in')}
                   className="group w-full bg-[#FF6B35] hover:bg-[#ff8255] text-white text-[15px] font-semibold px-6 py-4 rounded-lg transition-all duration-200 hover:-translate-y-[1px] flex items-center justify-center gap-2"
                 >
                   Get My Free Proposal
@@ -1558,11 +1559,11 @@ export default function SheffieldPage() {
               <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#6B7280]">UK Cities</p>
               <div className="flex flex-col gap-3">
                 {[
-                  { label: "Sheffield",   href: "/sheffield" },
-                  { label: "Leeds",       href: "/leeds" },
-                  { label: "Manchester",  href: "/manchester" },
-                  { label: "Birmingham",  href: "/birmingham" },
-                  { label: "London",      href: "/london" },
+                  { label: "Sheffield",   href: "/uk/sheffield" },
+                  { label: "Leeds",       href: "/uk/leeds" },
+                  { label: "Manchester",  href: "/uk/manchester" },
+                  { label: "Birmingham",  href: "/uk/birmingham" },
+                  { label: "London",      href: "/uk/london" },
                 ].map((c) => (
                   <a key={c.label} href={c.href} className="text-[14px] text-white/40 hover:text-white transition-colors duration-200">{c.label}</a>
                 ))}
@@ -1575,15 +1576,14 @@ export default function SheffieldPage() {
               <div className="flex flex-col gap-3">
                 <a href="mailto:connect@factoryjet.com" rel="noopener noreferrer" className="text-[14px] text-white/40 hover:text-white transition-colors duration-200">connect@factoryjet.com</a>
                 <a href="https://wa.me/919103398557" rel="noopener noreferrer" className="text-[14px] text-white/40 hover:text-white transition-colors duration-200">WhatsApp</a>
-                <a href="tel:+13391702199" rel="noopener noreferrer" className="text-[14px] text-white/40 hover:text-white transition-colors duration-200">+1 (339) 170-2199</a>
               </div>
               <div className="mt-2">
-                <Link
-                  href="#contact"
+                <button
+                  onClick={() => openModal('in')}
                   className="inline-flex items-center gap-2 bg-[#FF6B35] hover:bg-[#ff8255] text-white text-[13px] font-semibold px-4 py-2 rounded-lg transition-all duration-200"
                 >
                   Get Free Quote →
-                </Link>
+                </button>
               </div>
             </div>
           </div>
