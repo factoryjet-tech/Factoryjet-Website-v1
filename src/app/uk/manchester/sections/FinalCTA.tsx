@@ -289,7 +289,7 @@ export default function FinalCTA() {
               >
                 <MessageCircle size={17} style={{ color: "#10B981", flexShrink: 0 }} aria-hidden="true" />
                 <span style={{ fontSize: "14px", color: "rgba(255,255,255,0.6)" }}>
-                  WhatsApp: +91 9103398557
+                  Message us on WhatsApp
                 </span>
               </a>
               <a

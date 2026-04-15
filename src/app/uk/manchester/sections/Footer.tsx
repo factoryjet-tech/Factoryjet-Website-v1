@@ -109,10 +109,9 @@ export default function Footer() {
             </p>
             <ul className="flex flex-col" style={{ gap: "10px" }}>
               {[
-                { label: "connect@factoryjet.com", href: "mailto:connect@factoryjet.com" },
-                { label: "+1-339-170-2199 (US)", href: "tel:+13391702199" },
-                { label: "+91 9103398557 (WhatsApp)", href: "https://wa.me/919103398557" },
-              ].map(({ label, href }) => (
+                { label: "Email", href: "mailto:connect@factoryjet.com", display: "connect@factoryjet.com" },
+                { label: "WhatsApp", href: "https://wa.me/919103398557", display: "Message us on WhatsApp" },
+              ].map(({ label, href, display }) => (
                 <li key={label}>
                   <a
                     href={href}
@@ -127,7 +126,7 @@ export default function Footer() {
                         "rgba(255,255,255,0.5)")
                     }
                   >
-                    {label}
+                    {display}
                   </a>
                 </li>
               ))}

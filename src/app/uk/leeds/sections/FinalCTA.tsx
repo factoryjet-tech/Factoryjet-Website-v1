@@ -356,14 +356,14 @@ export default function FinalCTA() {
                 </span>
               </a>
               <a
-                href="https://wa.me/919699977699"
+                href="https://wa.me/919103398557"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 transition-opacity duration-200 hover:opacity-80"
               >
                 <MessageCircle size={17} style={{ color: "#10B981", flexShrink: 0 }} aria-hidden="true" />
                 <span style={{ fontSize: "14px", color: "rgba(255,255,255,0.6)" }}>
-                  WhatsApp: +91 96999 77699
+                  Message us on WhatsApp
                 </span>
               </a>
               <a
