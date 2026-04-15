@@ -71,14 +71,18 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '',
 
   const prefixRoute = (route: string) => basePath ? `${basePath}${route}` : route;
 
+  // For service links, always use the top-level US or root base, not deep city/location paths
+  const serviceBase = isUS ? '/us' : (basePath && !basePath.startsWith('/us') ? basePath : '');
+  const prefixServiceRoute = (route: string) => serviceBase ? `${serviceBase}${route}` : route;
+
   const ecommerceServices: SubMenuItem[] = ECOMMERCE_SERVICES_BASE.map(s => ({
     ...s,
-    href: prefixRoute('/services/shopify-development'),
+    href: prefixServiceRoute('/services/shopify-development'),
   }));
 
   const servicesSubmenu: SubMenuItem[] = [
-    { label: 'Web Design', href: prefixRoute('/services/web-design'), icon: Monitor, desc: 'Custom high-performance websites', isRoute: true },
-    { label: 'E-Commerce', href: prefixRoute('/services/ecommerce-development'), icon: ShoppingBag, desc: 'Shopify & WooCommerce stores', isRoute: true, children: ecommerceServices },
+    { label: 'Web Design', href: prefixServiceRoute('/services/web-design'), icon: Monitor, desc: 'Custom high-performance websites', isRoute: true },
+    { label: 'E-Commerce', href: prefixServiceRoute('/services/ecommerce-development'), icon: ShoppingBag, desc: 'Shopify & WooCommerce stores', isRoute: true, children: ecommerceServices },
     { label: 'AI Agent Development', href: '/services/ai-agent-development', icon: Bot, desc: 'Custom AI agent development', isRoute: true, children: AI_SERVICES },
   ];
 

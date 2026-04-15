@@ -54,12 +54,18 @@
       "Bash(wc -l c:\\\\\\\\FactoryJet\\\\\\\\rishi-branch\\\\\\\\Factoryjet-Website-v1\\\\\\\\src\\\\\\\\lib\\\\\\\\factoryjet-uk-pages\\\\\\\\src\\\\\\\\app\\\\\\\\sheffield\\\\\\\\page.tsx)",
       "Bash(git commit -m ':*)",
       "Bash(git add:*)",
-      "Bash(tail -30 \"C:\\\\\\\\Users\\\\\\\\rishi\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\claude\\\\\\\\c--FactoryJet-rishi-branch-Factoryjet-Website-v1\\\\\\\\ddf9423a-42fa-402e-bf43-0254c6d909a3\\\\\\\\tasks\\\\\\\\b1ck3k25a.output\")"
+      "Bash(tail -30 \"C:\\\\\\\\Users\\\\\\\\rishi\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\claude\\\\\\\\c--FactoryJet-rishi-branch-Factoryjet-Website-v1\\\\\\\\ddf9423a-42fa-402e-bf43-0254c6d909a3\\\\\\\\tasks\\\\\\\\b1ck3k25a.output\")",
+      "Bash(cp -r \"c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/src/Manchester_Page_Deploy/manchester-sections\" \"c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/src/app/uk/manchester\")",
+      "Bash(cp -r \"c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/src/Manchester_Page_Deploy/manchester-images\" \"c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/images/manchester\")",
+      "Bash(cp -r \"c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/src/Manchester_Page_Deploy/manchester-images/\"* \"c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/images/manchester/\")",
+      "Bash(cp -r ./src/leeds-deployment/src/app/leeds/sections/* ./leeds-extraction/sections/)",
+      "Bash(cp -r ./src/leeds-deployment/public/images/leeds/* ./leeds-extraction/public/images/leeds/)"
     ],
     "additionalDirectories": [
       "c:\\FactoryJet\\rishi-branch\\Factoryjet-Website-v1\\src\\app\\uk\\[city\\]\\[service\\]\\[platform",
       "\\tmp",
-      "C:\\FactoryJet\\rishi-branch\\Factoryjet-Website-v1\\src\\lib\\factoryjet-uk-pages\\src\\app\\sheffield"
+      "C:\\FactoryJet\\rishi-branch\\Factoryjet-Website-v1\\src\\lib\\factoryjet-uk-pages\\src\\app\\sheffield",
+      "C:\\FactoryJet\\rishi-branch\\Factoryjet-Website-v1\\leeds-extraction\\{sections,lib,public\\images\\leeds{"
     ]
   }
 }

@@ -6,6 +6,12 @@ import { SplitText } from "gsap/SplitText";
 
 if (typeof window !== "undefined") {
   gsapCore.registerPlugin(ScrollTrigger, SplitText);
+
+  // Optimize ScrollTrigger for performance
+  ScrollTrigger.config({
+    autoRefreshEvents: "visibilitychange,domContentLoaded,load",
+    ignoreMobileResize: true,
+  });
 }
 
 export const gsap = gsapCore;
