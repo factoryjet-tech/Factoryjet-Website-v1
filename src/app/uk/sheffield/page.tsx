@@ -374,7 +374,6 @@ export default function SheffieldPage() {
                 name: "FactoryJet Technologies",
                 description: "AI-powered custom websites for Sheffield businesses built in 7 days. From £799.",
                 url: "https://factoryjet.com/sheffield",
-                telephone: "+13391702199",
                 email: "connect@factoryjet.com",
                 address: {
                   "@type": "PostalAddress",

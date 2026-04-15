@@ -9,7 +9,6 @@ const localBusinessSchema = {
   description:
     "AI-native web design agency building custom websites for Leeds businesses. Next.js 15, GSAP, Tailwind CSS 4. 50–60% below Leeds agency rates.",
   url: "https://factoryjet.com/leeds",
-  telephone: "+13391702199",
   email: "connect@factoryjet.com",
   priceRange: "££",
   areaServed: {
