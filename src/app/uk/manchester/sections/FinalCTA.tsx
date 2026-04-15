@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { CheckCircle2, MessageCircle, Mail, Phone, Check } from "lucide-react";
+import { useContactModal } from "@/context/ContactModalContext";
 
 
 const TRUST_POINTS = [
@@ -119,6 +120,7 @@ function StepIndicator({ currentStep }: { currentStep: number }) {
 
 // ── Main Component ────────────────────────────────────────────────────────────
 export default function FinalCTA() {
+  const { openModal } = useContactModal();
   const sectionRef = useRef<HTMLElement>(null);
   const leftRef = useRef<HTMLDivElement>(null);
   const rightRef = useRef<HTMLDivElement>(null);
@@ -198,10 +200,36 @@ export default function FinalCTA() {
   }
 
   // ── Final submit ──────────────────────────────────────────────────────────
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    setSubmitted(true);
+
+    try {
+      // Submit form data to Firebase
+      const { doc, setDoc, serverTimestamp } = await import("firebase/firestore");
+      const { initFirebase } = await import("@/firebase");
+      const { db } = await initFirebase();
+
+      if (!db) throw new Error("Firebase not initialized");
+
+      // Generate document ID
+      const now = new Date();
+      const dateStr = now.toISOString().split("T")[0];
+      const timeStr = now.toTimeString().split(" ")[0].replace(/:/g, "-");
+      const namePart = formData.name.replace(/\s+/g, "").slice(0, 15);
+      const docId = `${dateStr}_${timeStr}_${namePart}`;
+
+      await setDoc(doc(db, "contactus", docId), {
+        ...formData,
+        region: "uk",
+        page: "manchester",
+        createdAt: serverTimestamp(),
+        status: "new",
+      });
+
+      setSubmitted(true);
+    } catch (err) {
+      console.error("Error submitting form:", err);
+    }
   }
 
   // ── Enter on last field of a step advances it ─────────────────────────────

@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { CheckCircle2, MessageCircle, Mail, Globe, Check } from "lucide-react";
+import { useContactModal } from "@/context/ContactModalContext";
 
 
 const TRUST_POINTS = [
@@ -152,6 +153,7 @@ function StepIndicator({ currentStep }: { currentStep: number }) {
 
 // ── Main Component ────────────────────────────────────────────────────────────
 export default function FinalCTA() {
+  const { openModal } = useContactModal();
   const sectionRef = useRef<HTMLElement>(null);
   const leftRef = useRef<HTMLDivElement>(null);
   const rightRef = useRef<HTMLDivElement>(null);
@@ -248,7 +250,7 @@ export default function FinalCTA() {
   }
 
   // ── Final submit ──────────────────────────────────────────────────────────
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     const newErrors: StepErrors = {};
     if (!formData.description.trim() || formData.description.trim().length < 10)
@@ -259,19 +261,45 @@ export default function FinalCTA() {
       return;
     }
     setErrors({});
-    console.log("Form submitted:", formData);
 
-    // Google Ads conversion tracking
-    if (typeof window !== "undefined") {
-      const gtag = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
-      if (typeof gtag === "function") {
-        gtag("event", "conversion", {
-          send_to: "AW-11127037244/aqsvCJCk8ZQcELy65Lkp",
-        });
+    try {
+      // Submit form data to Firebase
+      const { doc, setDoc, serverTimestamp } = await import("firebase/firestore");
+      const { initFirebase } = await import("@/firebase");
+      const { db } = await initFirebase();
+
+      if (!db) throw new Error("Firebase not initialized");
+
+      // Generate document ID
+      const now = new Date();
+      const dateStr = now.toISOString().split("T")[0];
+      const timeStr = now.toTimeString().split(" ")[0].replace(/:/g, "-");
+      const namePart = formData.name.replace(/\s+/g, "").slice(0, 15);
+      const docId = `${dateStr}_${timeStr}_${namePart}`;
+
+      await setDoc(doc(db, "contactus", docId), {
+        ...formData,
+        region: "uk",
+        page: "leeds",
+        createdAt: serverTimestamp(),
+        status: "new",
+      });
+
+      // Google Ads conversion tracking
+      if (typeof window !== "undefined") {
+        const gtag = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
+        if (typeof gtag === "function") {
+          gtag("event", "conversion", {
+            send_to: "AW-11127037244/aqsvCJCk8ZQcELy65Lkp",
+          });
+        }
       }
-    }
 
-    setSubmitted(true);
+      setSubmitted(true);
+    } catch (err) {
+      console.error("Error submitting form:", err);
+      setErrors({ ...errors, description: "Error submitting form. Please try again." });
+    }
   }
 
   // ── Enter on last field of a step advances it ─────────────────────────────
