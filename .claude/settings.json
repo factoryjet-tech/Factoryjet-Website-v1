@@ -59,7 +59,9 @@
       "Bash(cp -r \"c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/src/Manchester_Page_Deploy/manchester-images\" \"c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/images/manchester\")",
       "Bash(cp -r \"c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/src/Manchester_Page_Deploy/manchester-images/\"* \"c:/FactoryJet/rishi-branch/Factoryjet-Website-v1/public/images/manchester/\")",
       "Bash(cp -r ./src/leeds-deployment/src/app/leeds/sections/* ./leeds-extraction/sections/)",
-      "Bash(cp -r ./src/leeds-deployment/public/images/leeds/* ./leeds-extraction/public/images/leeds/)"
+      "Bash(cp -r ./src/leeds-deployment/public/images/leeds/* ./leeds-extraction/public/images/leeds/)",
+      "Bash(sed -i 's|wa.me/919103398557|wa.me/919699977699|g' src/app/uk/sheffield/page.tsx)",
+      "Bash(sed -i 's|wa.me/919103398557|wa.me/919699977699|g' src/app/sheffield/page.tsx)"
     ],
     "additionalDirectories": [
       "c:\\FactoryJet\\rishi-branch\\Factoryjet-Website-v1\\src\\app\\uk\\[city\\]\\[service\\]\\[platform",

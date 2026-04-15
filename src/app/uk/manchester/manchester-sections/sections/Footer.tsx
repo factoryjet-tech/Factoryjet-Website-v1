@@ -111,7 +111,7 @@ export default function Footer() {
               {[
                 { label: "connect@factoryjet.com", href: "mailto:connect@factoryjet.com" },
                 { label: "+1-339-170-2199 (US)", href: "tel:+13391702199" },
-                { label: "+91 9103398557 (WhatsApp)", href: "https://wa.me/919103398557" },
+                { label: "+91 9103398557 (WhatsApp)", href: "https://wa.me/919699977699" },
               ].map(({ label, href }) => (
                 <li key={label}>
                   <a

@@ -1406,7 +1406,7 @@ export default function SheffieldPage() {
                 <div className="flex flex-col gap-4">
                   {[
                     { label: "Email",     value: "connect@factoryjet.com",   href: "mailto:connect@factoryjet.com" },
-                    { label: "WhatsApp",  value: "Message us on WhatsApp",   href: "https://wa.me/919103398557" },
+                    { label: "WhatsApp",  value: "Message us on WhatsApp",   href: "https://wa.me/919699977699" },
                   ].map((c) => (
                     <a key={c.label} href={c.href} rel="noopener noreferrer" className="flex items-start gap-4 group">
                       <span className="text-[11px] font-semibold uppercase tracking-[0.1em] text-[#6B7280] w-[74px] flex-shrink-0 pt-[2px]">
@@ -1539,7 +1539,7 @@ export default function SheffieldPage() {
               <div className="flex gap-3">
                 <a href="mailto:connect@factoryjet.com" rel="noopener noreferrer" className="text-[13px] text-white/40 hover:text-white transition-colors duration-200">Email</a>
                 <span className="text-white/20">·</span>
-                <a href="https://wa.me/919103398557" rel="noopener noreferrer" className="text-[13px] text-white/40 hover:text-white transition-colors duration-200">WhatsApp</a>
+                <a href="https://wa.me/919699977699" rel="noopener noreferrer" className="text-[13px] text-white/40 hover:text-white transition-colors duration-200">WhatsApp</a>
               </div>
             </div>
 
@@ -1574,7 +1574,7 @@ export default function SheffieldPage() {
               <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#6B7280]">Contact</p>
               <div className="flex flex-col gap-3">
                 <a href="mailto:connect@factoryjet.com" rel="noopener noreferrer" className="text-[14px] text-white/40 hover:text-white transition-colors duration-200">connect@factoryjet.com</a>
-                <a href="https://wa.me/919103398557" rel="noopener noreferrer" className="text-[14px] text-white/40 hover:text-white transition-colors duration-200">WhatsApp</a>
+                <a href="https://wa.me/919699977699" rel="noopener noreferrer" className="text-[14px] text-white/40 hover:text-white transition-colors duration-200">WhatsApp</a>
               </div>
               <div className="mt-2">
                 <button

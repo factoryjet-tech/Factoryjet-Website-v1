@@ -101,7 +101,7 @@ export default function Footer() {
             <ul className="flex flex-col" style={{ gap: "10px" }}>
               {[
                 { label: "Email", href: "mailto:connect@factoryjet.com", display: "connect@factoryjet.com" },
-                { label: "WhatsApp", href: "https://wa.me/919103398557", display: "Message us on WhatsApp" },
+                { label: "WhatsApp", href: "https://wa.me/919699977699", display: "Message us on WhatsApp" },
               ].map(({ label, href, display }) => (
                 <li key={label}>
                   <a
