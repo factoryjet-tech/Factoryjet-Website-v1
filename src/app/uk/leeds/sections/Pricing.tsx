@@ -4,6 +4,8 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { CheckCircle2 } from "lucide-react";
+import { useContactModal } from "@/context/ContactModalContext";
+import { trackButtonClick, trackCTAClick } from "@/utils/gtm";
 
 
 const PRICING_ROWS = [
@@ -67,6 +69,8 @@ export default function Pricing() {
   const headerRef = useRef<HTMLDivElement>(null);
   const tableRef = useRef<HTMLTableSectionElement>(null);
   const footerRef = useRef<HTMLDivElement>(null);
+  const { openModal: openContactModal } = useContactModal();
+  const openModal = () => openContactModal('uk', 'default');
 
   useGSAP(
     () => {
@@ -369,15 +373,19 @@ export default function Pricing() {
 
           {/* CTA row */}
           <div className="flex flex-wrap gap-4">
-            <a
-              href="#final-cta"
+            <button
+              onClick={() => {
+                trackCTAClick('get_your_free_quote', 'leeds_pricing', 'primary');
+                trackButtonClick('get_your_free_quote', 'leeds_pricing');
+                openModal();
+              }}
               className="px-8 py-4 rounded-lg text-white font-semibold text-center transition-all duration-200 hover:brightness-110"
               style={{ background: "#FF6B35", fontSize: "15px" }}
             >
               Get Your Free Quote →
-            </a>
+            </button>
             <a
-              href="https://wa.me/13391702199"
+              href="https://wa.me/919699977699"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 rounded-lg font-semibold text-center transition-all duration-200"

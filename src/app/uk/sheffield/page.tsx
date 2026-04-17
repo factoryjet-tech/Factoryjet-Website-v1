@@ -247,18 +247,27 @@ export default function SheffieldPage() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // GSAP: Hero H1 SplitText reveal (load animation — no ScrollTrigger)
+  // GSAP: Hero H1 word reveal animation (load animation — no ScrollTrigger)
   useGSAP(() => {
     if (typeof window === "undefined") return;
     if (!headingRef.current) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const split = new SplitText(headingRef.current, { type: "words" });
+
+    // Get all words in the heading
+    const words = headingRef.current.textContent?.split(" ") || [];
+    if (!words.length) return;
+
+    // Wrap each word in a span for animation
+    headingRef.current.innerHTML = words
+      .map(word => `<span style="display:inline-block;overflow:hidden;"><span style="display:inline-block;">${word}&nbsp;</span></span>`)
+      .join("");
+
+    const wordSpans = headingRef.current.querySelectorAll("span > span");
     gsap.fromTo(
-      split.words,
+      wordSpans,
       { y: 80, opacity: 0 },
       { y: 0, opacity: 1, duration: 0.8, stagger: 0.07, ease: "power3.out", delay: 0.2 }
     );
-    return () => { split.revert(); };
   }, []);
 
   // Section 4 Why FactoryJet: STATIC — no GSAP, always fully visible

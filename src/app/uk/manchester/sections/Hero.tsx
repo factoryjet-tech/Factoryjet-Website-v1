@@ -4,6 +4,8 @@ import { useRef } from "react";
 import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap";
+import { useContactModal } from "@/context/ContactModalContext";
+import { trackButtonClick, trackCTAClick } from "@/utils/gtm";
 
 // ── Grain texture ─────────────────────────────────────────────────────────────
 // SVG feTurbulence as a data URI — static CSS texture, zero animation.
@@ -18,6 +20,8 @@ export default function Hero() {
   const subheadRef = useRef<HTMLParagraphElement>(null);
   const ctaRef     = useRef<HTMLDivElement>(null);
   const trustRef   = useRef<HTMLDivElement>(null);
+  const { openModal: openContactModal } = useContactModal();
+  const openModal = () => openContactModal('uk', 'default');
 
   useGSAP(
     () => {
@@ -117,17 +121,21 @@ export default function Hero() {
           ref={ctaRef}
           className="flex flex-wrap justify-center gap-4 mb-8"
         >
-          <a
-            href="#final-cta"
+          <button
+            onClick={() => {
+              trackCTAClick('get_your_free_quote', 'manchester_hero', 'primary');
+              trackButtonClick('get_your_free_quote', 'manchester_hero');
+              openModal();
+            }}
             className="px-6 py-3 rounded-lg text-white text-base font-semibold transition-colors duration-200 focus-visible:outline-offset-2"
             style={{ backgroundColor: "#FF6B35" }}
             onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#e55a2b")}
             onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#FF6B35")}
           >
             Get Your Free Quote →
-          </a>
+          </button>
           <a
-            href="https://wa.me/13391702199"
+            href="https://wa.me/919699977699"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 rounded-lg text-white text-base font-semibold border border-white/20 backdrop-blur-sm transition-colors duration-200 hover:bg-white/20"

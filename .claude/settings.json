@@ -68,7 +68,13 @@
       "Bash(chmod +x VERIFY_UK_EXTRACTION.sh)",
       "Bash(bash VERIFY_UK_EXTRACTION.sh)",
       "Bash(awk '{print $NF}')",
-      "Bash(git checkout *)"
+      "Bash(git checkout *)",
+      "Bash(bash /tmp/check_manchester.sh)",
+      "Bash(bash /tmp/fix_leeds.sh)",
+      "Bash(cat)",
+      "Bash(chmod +x /tmp/audit_buttons.sh)",
+      "Bash(bash /tmp/audit_buttons.sh)",
+      "Bash(find src/app/uk/sections -name \"*.tsx\" -exec echo \"=== {} ===\" \\\\; -exec grep -l \"button\\\\|href\" {} \\\\;)"
     ],
     "additionalDirectories": [
       "c:\\FactoryJet\\rishi-branch\\Factoryjet-Website-v1\\src\\app\\uk\\[city\\]\\[service\\]\\[platform",

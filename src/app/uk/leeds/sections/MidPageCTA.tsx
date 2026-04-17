@@ -1,4 +1,11 @@
+"use client";
+
+import { useContactModal } from "@/context/ContactModalContext";
+import { trackButtonClick, trackCTAClick } from "@/utils/gtm";
+
 export default function MidPageCTA() {
+  const { openModal: openContactModal } = useContactModal();
+  const openModal = () => openContactModal('uk', 'default');
   return (
     <div
       style={{ background: "#0052CC", padding: "64px 0" }}
@@ -31,8 +38,12 @@ export default function MidPageCTA() {
         </div>
 
         {/* Right: CTA */}
-        <a
-          href="#final-cta"
+        <button
+          onClick={() => {
+            trackCTAClick('get_your_free_leeds_digital_audit', 'leeds_midpage_cta', 'primary');
+            trackButtonClick('get_your_free_leeds_digital_audit', 'leeds_midpage_cta');
+            openModal();
+          }}
           className="w-full lg:w-auto text-center font-semibold text-white rounded-lg transition-all duration-200 hover:brightness-110 flex-shrink-0"
           style={{
             background: "#FF6B35",
@@ -41,7 +52,7 @@ export default function MidPageCTA() {
           }}
         >
           Get Your Free Leeds Digital Audit →
-        </a>
+        </button>
       </div>
     </div>
   );
