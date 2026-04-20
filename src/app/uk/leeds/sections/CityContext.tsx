@@ -91,7 +91,7 @@ export default function CityContext() {
     >
       {/* ── Layer 0: Background image ───────────────────────────────────── */}
       <Image
-        src="/images/leeds/northern-quarter.jpg"
+        src="/images/leeds/northern-quarter.webp"
         alt="Leeds Victoria Quarter shopping arcade"
         fill
         priority={false}
