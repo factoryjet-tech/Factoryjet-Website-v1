@@ -193,7 +193,6 @@ Listed in rough priority order. Do not start any of these without explicit instr
 | 19 | Duplicate service routes: `/ecommerce-development/shopify-development/` AND `/services/shopify-development/` both exist | SEO canonicalisation |
 | 20 | Both GSAP and Framer Motion loaded — bundle bloat | Performance |
 | 21 | `@cloudflare/next-on-pages` deprecated — migrate to OpenNext | Infra |
-| 22 | `react-helmet-async` installed but unused — dead dependency | Bundle |
 | 23 | 8 npm vulnerabilities (1 critical, 3 high) | Security |
 | 24 | UK layout loads fonts in `<body>` instead of `<head>` | CLS / FOUT |
 | — | UAE page is a placeholder — needs full build | Market coverage |
@@ -216,6 +215,7 @@ Listed in rough priority order. Do not start any of these without explicit instr
 - `en-GB` hreflang added to `src/data/hreflangMap.ts` and `src/app/uk/metadata.ts`
 - Cloudflare Cache Rule deployed — HTML cached 1 month at edge
 - Cloudflare Cache Rule hardened with Status code TTL overrides (2026-04-20) — 404/301/302/5xx no longer cached for 1 month, preventing Issue #19 bug class (cached errors/redirects stuck at edge)
+- Issue #22 closed (2026-04-20) — removed dead `src/lib/legacy-pages/Mumbai/` directory (8 files, 2707 lines) and dropped unused `react-helmet-async` dependency. `npm uninstall` cleaned 6 packages total. Live `/services/web-design/mumbai` route unaffected — it renders via `MumbaiNew`.
 - 4 sitemaps submitted to Google Search Console
 
 ---
