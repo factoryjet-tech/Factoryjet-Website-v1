@@ -1,0 +1,56 @@
+# FactoryJet Technologies
+
+> AI-Native Web Design, E-Commerce Development, and AI Agent Development Agency serving UK, US, UAE, and India.
+
+## About
+
+FactoryJet Technologies is an AI-native digital agency founded and led by Bhavesh Barot, based in Bengaluru, India. We serve SMBs across the United Kingdom, United States, United Arab Emirates, and India. We deliver high-performance websites, e-commerce stores, AI agents, and AI SEO at 50-60% below typical agency rates with a 7-day delivery model.
+
+## Services
+
+- Web Design & Development (Next.js, React, WordPress, Webflow, Framer)
+- E-Commerce Development (Shopify, WooCommerce, headless commerce)
+- AI Agent Development (custom agentic AI, multi-agent systems, MCP integration)
+- AI SEO, GEO, AEO, AIO (Generative Engine Optimisation, Answer Engine Optimisation)
+- Shopify Development (Shopify Plus, Shopify themes, migrations)
+
+## Markets Served
+
+- United Kingdom: Manchester, Leeds, Sheffield, Birmingham, Bristol, Edinburgh, Glasgow, Liverpool, Newcastle, Nottingham
+- United States: New York, Cleveland, Boise ID, Chattanooga TN
+- United Arab Emirates: Dubai, Abu Dhabi
+- India: Mumbai, Bangalore, Delhi, Pune, Chennai, Hyderabad, Ahmedabad, Surat
+
+## Key Facts
+
+- 500+ projects delivered
+- 4.9/5 rating across 150+ reviews
+- 7-day delivery guarantee on standard projects
+- Pricing: 50-60% below UK/US local agency rates
+- AI-first methodology: every project uses AI for design, development, and SEO
+
+## Contact
+
+- Website: https://factoryjet.com
+- Email: connect@factoryjet.com
+- Phone: +91 96999 77699
+- WhatsApp: https://wa.me/919699977699
+
+## Technology Stack
+
+Next.js 15, React 19, TypeScript, Tailwind CSS, GSAP, Firebase, Cloudflare
+
+## Sister Company
+
+Commerceflo.ai — AI-native unified commerce ERP SaaS platform
+
+## URLs
+
+- Homepage: https://factoryjet.com
+- UK Market: https://factoryjet.com/uk
+- US Market: https://factoryjet.com/us
+- UAE Market: https://factoryjet.com/uae
+- Blog: https://factoryjet.com/blog
+- Portfolio: https://factoryjet.com/portfolio
+- Pricing: https://factoryjet.com/pricing
+- Contact: https://factoryjet.com/contact
