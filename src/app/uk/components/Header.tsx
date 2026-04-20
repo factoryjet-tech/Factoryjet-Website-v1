@@ -30,13 +30,13 @@ interface HeaderProps {
 }
 
 const AI_SERVICES: SubMenuItem[] = [
-  { label: 'AI Chatbot', href: '/uk/services/ai-agent-development/ai-chatbot', icon: MessageSquare, desc: 'Intelligent chatbot solutions', isRoute: true },
-  { label: 'AI Sales Agent', href: '/uk/services/ai-agent-development/ai-sales-agent', icon: TrendingUp, desc: 'AI-powered sales automation', isRoute: true },
-  { label: 'AI Marketing Agent', href: '/uk/services/ai-agent-development/ai-marketing-agent', icon: Megaphone, desc: 'Smart marketing automation', isRoute: true },
-  { label: 'AI Scheduling Agent', href: '/uk/services/ai-agent-development/ai-scheduling-agent', icon: Calendar, desc: 'Automated scheduling & booking', isRoute: true },
-  { label: 'AI Workflow Automation', href: '/uk/services/ai-agent-development/ai-workflow-automation', icon: Workflow, desc: 'End-to-end workflow automation', isRoute: true },
-  { label: 'AI Customer Support', href: '/uk/services/ai-agent-development/ai-customer-support', icon: Headphones, desc: '24/7 AI support agents', isRoute: true },
-  { label: 'AI Voice Agent', href: '/uk/services/ai-agent-development/ai-voice-agent', icon: Phone, desc: 'Voice-powered AI assistants', isRoute: true },
+  { label: 'AI Chatbot', href: '/services/ai-agent-development/ai-chatbot', icon: MessageSquare, desc: 'Intelligent chatbot solutions', isRoute: true },
+  { label: 'AI Sales Agent', href: '/services/ai-agent-development/ai-sales-agent', icon: TrendingUp, desc: 'AI-powered sales automation', isRoute: true },
+  { label: 'AI Marketing Agent', href: '/services/ai-agent-development/ai-marketing-agent', icon: Megaphone, desc: 'Smart marketing automation', isRoute: true },
+  { label: 'AI Scheduling Agent', href: '/services/ai-agent-development/ai-scheduling-agent', icon: Calendar, desc: 'Automated scheduling & booking', isRoute: true },
+  { label: 'AI Workflow Automation', href: '/services/ai-agent-development/ai-workflow-automation', icon: Workflow, desc: 'End-to-end workflow automation', isRoute: true },
+  { label: 'AI Customer Support', href: '/services/ai-agent-development/ai-customer-support', icon: Headphones, desc: '24/7 AI support agents', isRoute: true },
+  { label: 'AI Voice Agent', href: '/services/ai-agent-development/ai-voice-agent', icon: Phone, desc: 'Voice-powered AI assistants', isRoute: true },
 ];
 
 const ECOMMERCE_SERVICES_BASE: Omit<SubMenuItem, 'href'>[] = [
@@ -69,13 +69,13 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', hideLocations 
 
   const ecommerceServices: SubMenuItem[] = ECOMMERCE_SERVICES_BASE.map(s => ({
     ...s,
-    href: '/uk/services/shopify-development',
+    href: '/services/shopify-development',
   }));
 
   const servicesSubmenu: SubMenuItem[] = [
-    { label: 'Web Design', href: '/uk/services/web-design', icon: Monitor, desc: 'Custom high-performance websites', isRoute: true },
-    { label: 'E-Commerce', href: '/uk/services/ecommerce-development', icon: ShoppingBag, desc: 'Shopify & WooCommerce stores', isRoute: true, children: ecommerceServices },
-    { label: 'AI Agent Development', href: '/uk/services/ai-agent-development', icon: Bot, desc: 'Custom AI agent development', isRoute: true, children: AI_SERVICES },
+    { label: 'Web Design', href: '/services/web-design', icon: Monitor, desc: 'Custom high-performance websites', isRoute: true },
+    { label: 'E-Commerce', href: '/services/ecommerce-development', icon: ShoppingBag, desc: 'Shopify & WooCommerce stores', isRoute: true, children: ecommerceServices },
+    { label: 'AI Agent Development', href: '/services/ai-agent-development', icon: Bot, desc: 'Custom AI agent development', isRoute: true, children: AI_SERVICES },
   ];
 
   const navItems: NavItem[] = [
