@@ -156,7 +156,13 @@ Gate any PR that drops any public page below these.
 
 - **Hosting:** Cloudflare Pages
 - **Auto-deploy:** every `git push origin NextJS`
-- **Cache:** Cloudflare Cache Rule — HTML pages cached at edge with 1-month Edge TTL
+- **Cache:** Cloudflare Cache Rule "Cache Static Site HTML" — HTML pages cached at edge with 1-month Edge TTL, 4-hour Browser TTL. Status code TTL overrides (added 2026-04-20) prevent non-2xx responses from getting stuck:
+  - 404 → No cache (revalidates on every hit)
+  - 301 → No cache (future `_redirects` changes take effect immediately)
+  - 302 → No cache
+  - 500–526 range → No cache (origin errors never cached long-term)
+
+  Any change to redirects or removal of broken URLs self-heals on next request — no manual cache purge required.
 - **CDN/WAF:** Cloudflare — AI crawler user agents (GPTBot, ClaudeBot, PerplexityBot, anthropic-ai, Google-Extended) must remain allowlisted. Do not enable Bot Fight Mode on this zone.
 - **Current adapter:** `@cloudflare/next-on-pages` (deprecated — OpenNext migration planned, Issue #21)
 
@@ -209,6 +215,7 @@ Listed in rough priority order. Do not start any of these without explicit instr
 - `llms.txt` created in `/public/`
 - `en-GB` hreflang added to `src/data/hreflangMap.ts` and `src/app/uk/metadata.ts`
 - Cloudflare Cache Rule deployed — HTML cached 1 month at edge
+- Cloudflare Cache Rule hardened with Status code TTL overrides (2026-04-20) — 404/301/302/5xx no longer cached for 1 month, preventing Issue #19 bug class (cached errors/redirects stuck at edge)
 - 4 sitemaps submitted to Google Search Console
 
 ---
