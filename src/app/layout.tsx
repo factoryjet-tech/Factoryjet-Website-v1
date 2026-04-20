@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Poppins } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import '../index.css'
 import { ContactModalProvider } from '../context/ContactModalContext'
 import Script from 'next/script'
@@ -15,14 +15,6 @@ const inter = Inter({
   fallback: ['system-ui', 'arial'],
 })
 
-const poppins = Poppins({
-  subsets: ['latin'],
-  variable: '--font-poppins',
-  display: 'swap',
-  weight: ['600', '700'],
-  preload: true,
-  fallback: ['system-ui', 'arial'],
-})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://factoryjet.com'),
@@ -82,7 +74,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
+    <html lang="en" className={`${inter.variable}`}>
       <head>
         {/* Preconnect to critical origins */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -116,18 +108,18 @@ export default function RootLayout({
                 "https://twitter.com/factoryjet"
               ],
               "areaServed": [
-                { "@type": "City", "name": "Mumbai" },
-                { "@type": "City", "name": "Pune" },
-                { "@type": "City", "name": "Bangalore" },
-                { "@type": "City", "name": "Ahmedabad" },
-                { "@type": "City", "name": "Surat" }
+                { "@type": "Country", "name": "United Kingdom" },
+                { "@type": "Country", "name": "United States" },
+                { "@type": "Country", "name": "United Arab Emirates" },
+                { "@type": "Country", "name": "India" }
               ],
               "serviceType": [
-                "Web Development",
+                "Web Design & Development",
                 "E-Commerce Development",
-                "Mobile App Development",
-                "Digital Marketing",
-                "SEO Services"
+                "AI Agent Development",
+                "AI SEO & GEO Optimization",
+                "Shopify Development",
+                "Digital Marketing"
               ],
               "priceRange": "₹₹-₹₹₹",
               "aggregateRating": {
