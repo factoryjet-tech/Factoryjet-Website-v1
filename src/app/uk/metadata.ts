@@ -14,6 +14,10 @@ export const ukMetadata: Metadata = {
     canonical: "https://factoryjet.com/uk",
     languages: {
       "en-GB": "https://factoryjet.com/uk",
+      "en-US": "https://factoryjet.com/us",
+      "en-IN": "https://factoryjet.com",
+      "en-AE": "https://factoryjet.com/uae",
+      "x-default": "https://factoryjet.com",
     },
   },
   openGraph: {

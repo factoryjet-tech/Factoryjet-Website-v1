@@ -22,6 +22,7 @@ export const homeAlternates = {
   'en-IN': 'https://factoryjet.com',
   'en-US': 'https://factoryjet.com/us',
   'en-AE': 'https://factoryjet.com/uae',
+  'en-GB': 'https://factoryjet.com/uk',
   'x-default': 'https://factoryjet.com',
 } as const
 
@@ -34,6 +35,7 @@ export const webDesignAlternates = {
   'en-IN': 'https://factoryjet.com/services/web-design',
   'en-US': 'https://factoryjet.com/us/services/web-design',
   'en-AE': 'https://factoryjet.com/uae',
+  'en-GB': 'https://factoryjet.com/uk',
   'x-default': 'https://factoryjet.com/services/web-design',
 } as const
 
@@ -42,6 +44,7 @@ export const ecommerceAlternates = {
   'en-IN': 'https://factoryjet.com/services/ecommerce-development',
   'en-US': 'https://factoryjet.com/us/services/ecommerce-development',
   'en-AE': 'https://factoryjet.com/uae',
+  'en-GB': 'https://factoryjet.com/uk',
   'x-default': 'https://factoryjet.com/services/ecommerce-development',
 } as const
 
@@ -54,6 +57,7 @@ export const pricingAlternates = {
   'en-IN': 'https://factoryjet.com/pricing',
   'en-US': 'https://factoryjet.com/us/pricing',
   'en-AE': 'https://factoryjet.com/uae',
+  'en-GB': 'https://factoryjet.com/uk',
   'x-default': 'https://factoryjet.com/pricing',
 } as const
 
@@ -62,6 +66,7 @@ export const aboutAlternates = {
   'en-IN': 'https://factoryjet.com/about',
   'en-US': 'https://factoryjet.com/us/about',
   'en-AE': 'https://factoryjet.com/uae',
+  'en-GB': 'https://factoryjet.com/uk',
   'x-default': 'https://factoryjet.com/about',
 } as const
 
