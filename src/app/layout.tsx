@@ -82,6 +82,12 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
+        {/* Fontshare — Clash Display (all regions) */}
+        <link rel="preconnect" href="https://api.fontshare.com" crossOrigin="" />
+        <link rel="preconnect" href="https://cdn.fontshare.com" crossOrigin="" />
+        <link rel="preload" as="style" href="https://api.fontshare.com/v2/css?f[]=clash-display@700,600&display=swap" />
+        <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@700,600&display=swap" fetchPriority="high" />
+
         {/* Structured Data - Organization Schema */}
         <Script
           id="organization-schema"
