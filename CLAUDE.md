@@ -192,10 +192,12 @@ Listed in rough priority order. Do not start any of these without explicit instr
 | 7 | `output: 'export'` disables `next/image` optimisation — images ship uncompressed | Performance |
 | 20 | Both GSAP and Framer Motion loaded — bundle bloat | Performance |
 | 21 | `@cloudflare/next-on-pages` deprecated — migrate to OpenNext | Infra |
-| 23 | 8 npm vulnerabilities (1 critical, 3 high) | Security |
-| 24 | UK layout loads fonts in `<body>` instead of `<head>` | CLS / FOUT |
+| 23 | 5 npm vulns remain (accepted dev-dep risk — see note below) | Security |
+| 26 | UK layout `<link>` and `<style>` still render in `<body>` (Fragment limitation) — full html/head refactor needed | CLS / FOUT |
 | — | UAE page is a placeholder — needs full build | Market coverage |
 | — | US uses static pages — needs dynamic `[city]` routing like UK | Scalability |
+
+**Issue #23 accepted risks:** Remaining 5 vulns (`cookie`, `esbuild`, `undici` ×3) are all inside `@cloudflare/next-on-pages` dev deps — zero production exposure (static site). No upstream fix available without `--force` breaking the adapter. Will self-resolve when Issue #21 (OpenNext migration) is done.
 
 ---
 
@@ -220,6 +222,9 @@ Listed in rough priority order. Do not start any of these without explicit instr
 - Stale extraction documentation removed (2026-04-21) — deleted 13 root-level docs (4,844 lines) left over from completed UK and Manchester extractions: `UK_EXTRACTION_GUIDE.md`, `EXTRACTION_SUMMARY.md`, `FINAL_VERIFICATION_REPORT.md`, `README_UK_EXTRACTION.md`, 3 Manchester extraction docs, 3 UK audit reports, `UK_IMPLEMENTATION_COMPLETE.md` (UK programmatic SEO architecture; redundant with live `src/data/uk/`), `UK_PAGE_STRUCTURE.txt`, `VERIFY_UK_EXTRACTION.sh`. Source of truth is the code itself.
 - `.claude/settings.json` audited and cleaned (2026-04-21) — reduced allowlist from 74 entries to 15. Removed all stale entries: Windows-path commands from `rishi-branch` machine, one-shot `cp`/`unzip`/`ffmpeg` commands, references to deleted `Manchester_Page_Deploy/`/`uk-home-deployment/`/`leeds-extraction/`, temp scripts (`/tmp/check_*.sh`, `/tmp/audit_buttons.sh`), completed sed contact swaps, and the entire malformed `additionalDirectories` block. Kept only generic reusable patterns: `magick`, `pkill` for stuck dev servers, `git add/commit/checkout`, `npm list`, `awk`, `cat`, generic xargs.
 - 4 sitemaps submitted to Google Search Console
+- Issue #23 partially closed (2026-04-21, a9358fd) — `npm audit fix` patched 3 vulns (protobufjs critical, 2× picomatch moderate). 5 remain as accepted dev-dep risk in `@cloudflare/next-on-pages`; see §6 note.
+- Issue #24 closed (2026-04-21, f6588b9 + a81bb85) — Clash Display font loading consolidated: @font-face fallback metrics hoisted to `src/index.css`; Fontshare preconnects/preload/stylesheet moved from UK layout to root `layout.tsx <head>`; UK layout slimmed to JetBrains Mono + skip-link CSS only. Remaining limitation (Fragment body render) tracked as Issue #26.
+- Issue #25 closed (2026-04-21, 6dc1ff4) — deleted orphaned `src/lib/uk-pages/sheffield.tsx` (488 lines, zero imports). Live `/uk/sheffield` route unaffected.
 
 ---
 
