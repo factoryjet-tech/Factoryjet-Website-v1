@@ -166,3 +166,27 @@ html {
 .btn-primary:hover {
   transform: translateY(-2px);
 }
+
+/* ──────────────────────────────────────────────────────────────────
+   Clash Display — font fallback metrics + utility class.
+   Hoisted from src/app/uk/layout.tsx (Issue #24) so non-UK pages can
+   use Clash per the design system. The Fontshare @font-face itself is
+   loaded via stylesheet <link> in src/app/layout.tsx <head>.
+   Fallback metrics prevent CLS during font swap.
+   ────────────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: 'Clash Display Fallback';
+  src: local('Arial Black'), local('Helvetica Neue Bold'), local('Arial Bold');
+  size-adjust: 108%;
+  ascent-override: 92%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
+:root {
+  --font-clash: 'Clash Display', 'Clash Display Fallback', 'Arial Black', system-ui, sans-serif;
+}
+
+.font-clash {
+  font-family: var(--font-clash);
+}
