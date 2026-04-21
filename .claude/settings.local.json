@@ -93,7 +93,13 @@
       "Bash(cp \"$SRC/image8.png\" \"public/webflow-vs-framer-comparison.png\")",
       "Bash(cp \"$SRC/image7.png\" \"public/webflow-vs-wix-infographic.png\")",
       "Bash(cp \"$SRC/image4.png\" \"public/webflow-development-services-team-working.png\")",
-      "Bash(cp \"$SRC/image5.png\" \"public/webflow-pros-cons-infographic.png\")"
+      "Bash(cp \"$SRC/image5.png\" \"public/webflow-pros-cons-infographic.png\")",
+      "Bash(npm audit *)",
+      "Bash(npm ls *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git commit -m 'perf: consolidate Clash Display font loading to root layout \\(Issue #24 edits 2-3\\) *)",
+      "Bash(git commit -m 'chore: delete orphaned src/lib/uk-pages/sheffield.tsx \\(Issue #25\\) *)",
+      "Bash(git commit -m 'fix: npm audit fix — resolve 3 vulns, document 5 accepted dev-dep risks \\(Issue #23\\) *)"
     ]
   }
 }
