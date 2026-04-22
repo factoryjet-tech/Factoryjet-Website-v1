@@ -1,6 +1,7 @@
 import React from 'react';
 import { BlogPost } from './data.types';
 import { NativeAd } from './components/NativeAd';
+import { post as howUkSmbsEvaluateWoocommerceAgency2026Post } from './posts/how-uk-smbs-evaluate-woocommerce-agency-2026';
 
 export const POSTS: BlogPost[] = [
   // --- WEB DESIGN & STRATEGY ---
@@ -4533,6 +4534,7 @@ export const POSTS: BlogPost[] = [
       </p>
     </>
   )
-}
+},
 
+  howUkSmbsEvaluateWoocommerceAgency2026Post,
 ];
