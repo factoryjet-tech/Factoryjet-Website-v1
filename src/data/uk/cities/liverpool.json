@@ -2,58 +2,24 @@
   "slug": "liverpool",
   "name": "Liverpool",
   "region": "Merseyside",
-  "country": "England",
   "population": 500000,
-  "businesses": 22000,
-  "gdpBn": 18.5,
-  "primaryIndustries": [
-    "Port & Maritime",
-    "Hospitality & Tourism",
-    "Creative Industries",
-    "Professional Services"
-  ],
-  "keyEmployers": [
-    "DP World",
-    "Mersey Docks and Harbour Company",
-    "Alder Hey Children's Hospital",
-    "University of Liverpool",
-    "Liverpool City Council"
-  ],
-  "avgAgencyPricing": {
-    "webDesign": 3800,
-    "ecommerce": 7200,
-    "seo": 1000,
-    "aiAgents": 0
+  "lcr_population": 1550000,
+  "businesses": 14000,
+  "lcr_businesses": 30000,
+  "gdpBn": 16.7,
+  "lcr_gdpBn": 43.3,
+  "primaryIndustries": ["Port/Logistics", "Creative", "Hospitality", "Healthcare", "Maritime"],
+  "keyEmployers": ["Peel Ports", "JLR Halewood", "NHS Royal Liverpool", "Unilever", "Sony Music", "HMRC"],
+  "avgAgencyWebDesign": 4500,
+  "avgAgencyEcommerce": 9000,
+  "avgAgencySeo": 1500,
+  "localCompetitors": {
+    "web-design": ["Pixus", "Webrevolve", "Codeguys", "Heart IT", "Cyberfrog Design"],
+    "ecommerce": ["Velstar", "Pixus", "MageCloud"],
+    "seo": ["Quirky Digital", "SEO Company Liverpool", "Six Digital"],
+    "ai-agents": ["ZJELL Consulting", "DBT", "Bot Factory"]
   },
-  "localAgencies": {
-    "web-design": [
-      "Liverpool Digital",
-      "Creative Minds",
-      "Web Design Liverpool"
-    ],
-    "seo": [
-      "Liverpool SEO",
-      "North West Marketing",
-      "Digital Growth"
-    ]
-  },
-  "keyStats": {
-    "digitalBusinessGrowth": "16% YoY",
-    "smeCount": 19500,
-    "techJobs": 5500,
-    "avgSalary": 29500
-  },
-  "cityAreas": [
-    "Liverpool City Centre",
-    "Albert Dock",
-    "Pier Head",
-    "Baltic Triangle",
-    "Toxteth"
-  ],
-  "newsHook": "Liverpool Waterfront development creates 2,000 new jobs in creative and digital sectors",
-    "heroImage": "/images/uk/liverpool/hero-liverpool.webp",
-  "coordinates": {
-    "lat": 53.4084,
-    "lng": -2.9916
-  }
+  "landmarks": ["Albert Dock", "Liver Building", "Baltic Triangle", "Knowledge Quarter", "Bramley-Moore Dock"],
+  "newsHook": "Everton stadium at Bramley-Moore Dock opened August 2025 — £500m, 52,769 seats, 15,000 jobs",
+  "postcodes": ["L1", "L2", "L3", "L4", "L5", "L6", "L7", "L8"]
 }
