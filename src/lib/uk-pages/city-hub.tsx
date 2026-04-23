@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ChevronDown, CheckCircle, ArrowRight } from 'lucide-react'
 import { CityData, services } from '@/data/uk'
 
@@ -94,6 +95,9 @@ export default function CityHubPage({ city }: CityHubPageProps) {
       <section className="relative min-h-screen bg-[#0a0a0a] text-white flex flex-col justify-center items-center px-4 md:px-8 overflow-hidden">
         {/* Decorative top line */}
         <div className="absolute top-0 left-0 right-0 h-1 bg-[#0052CC]"></div>
+        {city.heroImage && (
+          <Image src={city.heroImage} alt={`${city.name} cityscape`} fill className="object-cover opacity-20" priority />
+        )}
 
         {/* Faded city name background */}
         <div className="absolute inset-0 opacity-5 text-9xl font-bold text-white pointer-events-none flex items-center justify-center">

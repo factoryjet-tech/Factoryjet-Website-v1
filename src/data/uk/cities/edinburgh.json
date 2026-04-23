@@ -51,6 +51,7 @@
     "New Town"
   ],
   "newsHook": "Edinburgh tech sector grows 19% with major fintech and AI startup investments",
+  "heroImage": "/images/uk/edinburgh/hero-edinburgh.webp",
   "coordinates": {
     "lat": 55.9533,
     "lng": -3.1883

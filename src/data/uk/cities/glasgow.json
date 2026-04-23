@@ -51,6 +51,7 @@
     "East End"
   ],
   "newsHook": "Glasgow tech sector investment reaches £150M with major AI and fintech startups",
+  "heroImage": "/images/uk/glasgow/hero-glasgow.webp",
   "coordinates": {
     "lat": 55.8642,
     "lng": -4.2518

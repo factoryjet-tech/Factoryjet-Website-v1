@@ -28,6 +28,7 @@ export interface CityData {
   }
   cityAreas: string[]
   newsHook: string
+  heroImage: string
   coordinates: {
     lat: number
     lng: number
