@@ -1,9 +1,8 @@
 'use client'
 
-import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ChevronDown, CheckCircle, ArrowRight } from 'lucide-react'
+import { CheckCircle, ArrowRight } from 'lucide-react'
 import { CityData, services } from '@/data/uk'
 
 interface CityHubPageProps {
@@ -11,8 +10,6 @@ interface CityHubPageProps {
 }
 
 export default function CityHubPage({ city }: CityHubPageProps) {
-  const [openFaq, setOpenFaq] = useState<number | null>(null)
-
   const faqs = [
     {
       q: 'How can you build a website in just 7 days?',
@@ -338,30 +335,31 @@ export default function CityHubPage({ city }: CityHubPageProps) {
       </section>
 
       {/* FAQ SECTION */}
-      <section className="bg-[#F8F9FA] py-20 px-4 md:px-8">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-5xl font-bold mb-12 text-[#0a0a0a]" style={{ fontFamily: 'Clash Display, sans-serif' }}>
-            Common questions from {city.name} businesses
-          </h2>
+      <section className="bg-[#0a0f1c] py-24 px-4 md:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-16">
+            <p className="text-[#FF6B35] text-sm font-semibold tracking-widest uppercase mb-4">GOT QUESTIONS?</p>
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-4" style={{ fontFamily: 'Clash Display, sans-serif' }}>
+              Common questions from<br />{city.name} businesses
+            </h2>
+            <p className="text-gray-400 text-lg max-w-xl">Everything you need to know before working with FactoryJet.</p>
+          </div>
 
-          <div className="space-y-4">
+          <div className="grid md:grid-cols-2 gap-6">
             {faqs.map((faq, i) => (
-              <div key={i} className="bg-white rounded-lg border border-[#E9ECEF] overflow-hidden">
-                <button
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full px-6 py-4 flex justify-between items-center hover:bg-[#F8F9FA] transition-colors"
-                >
-                  <h3 className="font-bold text-[#0a0a0a] text-left">{faq.q}</h3>
-                  <ChevronDown
-                    size={20}
-                    className={`text-[#0052CC] transition-transform ${openFaq === i ? 'rotate-180' : ''}`}
-                  />
-                </button>
-                {openFaq === i && (
-                  <div className="px-6 py-4 bg-[#F8F9FA] border-t border-[#E9ECEF]">
-                    <p className="text-gray-700">{faq.a}</p>
+              <div
+                key={i}
+                className="group relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/8 hover:border-[#0052CC]/50 transition-all duration-300"
+              >
+                <div className="flex items-start gap-5">
+                  <span className="flex-shrink-0 w-10 h-10 rounded-full bg-[#0052CC]/20 border border-[#0052CC]/40 flex items-center justify-center text-[#0052CC] font-bold text-sm group-hover:bg-[#0052CC] group-hover:text-white transition-all duration-300">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <div>
+                    <h3 className="text-white font-bold text-lg mb-3 leading-snug">{faq.q}</h3>
+                    <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">{faq.a}</p>
                   </div>
-                )}
+                </div>
               </div>
             ))}
           </div>
