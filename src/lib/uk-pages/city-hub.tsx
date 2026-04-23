@@ -204,6 +204,11 @@ export default function CityHubPage({ city }: CityHubPageProps) {
                 href={`/uk/${city.slug}/${service.slug}`}
                 className="bg-white p-8 rounded-xl border border-[#E9ECEF] hover:border-[#0052CC] transition-all duration-300"
               >
+                {['web-design','ecommerce','ai-agents','ai-seo'].includes(service.slug) && (
+                  <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden">
+                    <Image src={`/images/uk/${city.slug}/service-${service.slug}-${city.slug}.webp`} alt={`${service.name} ${city.name}`} fill className="object-cover" />
+                  </div>
+                )}
                 <h3 className="text-xl font-bold mb-3 text-[#0a0a0a]">{service.name}</h3>
                 <p className="text-gray-700 mb-4">{service.shortDescription}</p>
                 <p className="text-sm text-gray-500">{service.tagline}</p>
