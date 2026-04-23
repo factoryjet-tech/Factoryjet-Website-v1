@@ -282,6 +282,36 @@ export default function Hero() {
         }}
       />
 
+      {/* Stat watermarks — absolute atmospheric layer, z-index:0, never adds height */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 hidden select-none overflow-hidden lg:flex items-end justify-center"
+        style={{ zIndex: 0 }}
+      >
+        <div
+          style={{
+            color: "rgba(255,255,255,0.08)",
+            fontFamily: "var(--font-clash), 'Clash Display', sans-serif",
+            fontWeight: 700,
+            fontSize: "clamp(32px, 3.5vw, 48px)",
+            letterSpacing: "-0.03em",
+            paddingBottom: "12vh",
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "0 24px",
+            justifyContent: "center",
+          }}
+        >
+          <span>£43.3bn LCR GDP</span>
+          <span>·</span>
+          <span>14,000 businesses</span>
+          <span>·</span>
+          <span>£5.5bn Liverpool Waters</span>
+          <span>·</span>
+          <span>LCR Freeport</span>
+        </div>
+      </div>
+
       {/* Watermark "LIV" — desktop only */}
       <span
         aria-hidden="true"
@@ -441,26 +471,6 @@ export default function Hero() {
           ))}
         </div>
 
-        {/* Stat watermarks */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none select-none mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-1 hidden lg:flex"
-          style={{
-            color: "rgba(255,255,255,0.08)",
-            fontFamily: "var(--font-clash), 'Clash Display', sans-serif",
-            fontWeight: 700,
-            fontSize: "clamp(32px, 4vw, 52px)",
-            letterSpacing: "-0.03em",
-          }}
-        >
-          <span>£43.3bn LCR GDP</span>
-          <span>·</span>
-          <span>14,000 businesses</span>
-          <span>·</span>
-          <span>£5.5bn Liverpool Waters</span>
-          <span>·</span>
-          <span>LCR Freeport</span>
-        </div>
       </div>
 
       {/* Scroll cue */}

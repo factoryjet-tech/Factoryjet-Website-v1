@@ -251,18 +251,23 @@ export default function DigitalLandscape() {
                       "0 1px 3px rgba(0,0,0,0.04)";
                   }}
                 >
-                  {/* Decorative progress ring — top right */}
+                  {/* Progress ring — absolute inset-0, clips to card via overflow:hidden */}
                   <svg
                     aria-hidden="true"
-                    width="64"
-                    height="64"
-                    viewBox="0 0 64 64"
-                    className="absolute right-5 top-5"
-                    style={{ zIndex: 0, pointerEvents: "none" }}
+                    viewBox="0 0 200 180"
+                    preserveAspectRatio="xMaxYMin meet"
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      width: "100%",
+                      height: "100%",
+                      zIndex: 0,
+                      pointerEvents: "none",
+                    }}
                   >
-                    {/* Track */}
+                    {/* Track — ring centred at top-right of viewBox */}
                     <circle
-                      cx="32"
+                      cx="168"
                       cy="32"
                       r={R}
                       fill="none"
@@ -273,7 +278,7 @@ export default function DigitalLandscape() {
                     <circle
                       data-ring-fill={s.ringPct}
                       data-ring-color={s.ringColor}
-                      cx="32"
+                      cx="168"
                       cy="32"
                       r={R}
                       fill="none"
@@ -284,11 +289,12 @@ export default function DigitalLandscape() {
                         strokeDasharray: CIRC,
                         strokeDashoffset: CIRC,
                         transform: "rotate(-90deg)",
-                        transformOrigin: "32px 32px",
+                        transformOrigin: "168px 32px",
                       }}
                     />
                   </svg>
 
+                  {/* Text — relative + z-index:10 so it always sits above the ring */}
                   <div
                     className="font-clash"
                     style={{
@@ -298,7 +304,7 @@ export default function DigitalLandscape() {
                       lineHeight: 1,
                       letterSpacing: "-0.02em",
                       position: "relative",
-                      zIndex: 1,
+                      zIndex: 10,
                     }}
                   >
                     {s.value}
@@ -311,6 +317,8 @@ export default function DigitalLandscape() {
                       fontWeight: 400,
                       fontSize: 14,
                       letterSpacing: "0.02em",
+                      position: "relative",
+                      zIndex: 10,
                     }}
                   >
                     {s.label}
