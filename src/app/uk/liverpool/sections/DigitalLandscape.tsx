@@ -251,34 +251,36 @@ export default function DigitalLandscape() {
                       "0 1px 3px rgba(0,0,0,0.04)";
                   }}
                 >
-                  {/* Progress ring — absolute inset-0, clips to card via overflow:hidden */}
+                  {/* Decorative progress ring — 80×80, top-right corner */}
                   <svg
                     aria-hidden="true"
-                    viewBox="0 0 200 180"
-                    preserveAspectRatio="xMaxYMin meet"
+                    width="80"
+                    height="80"
+                    viewBox="0 0 64 64"
                     style={{
                       position: "absolute",
-                      inset: 0,
-                      width: "100%",
-                      height: "100%",
+                      top: 8,
+                      right: 8,
+                      width: 80,
+                      height: 80,
                       zIndex: 0,
                       pointerEvents: "none",
                     }}
                   >
-                    {/* Track — ring centred at top-right of viewBox */}
+                    {/* Track */}
                     <circle
-                      cx="168"
+                      cx="32"
                       cy="32"
                       r={R}
                       fill="none"
                       stroke="#E2E8F0"
                       strokeWidth="3"
                     />
-                    {/* Fill — starts hidden (full offset), GSAP draws it in */}
+                    {/* Fill — starts hidden, GSAP draws it in on scroll */}
                     <circle
                       data-ring-fill={s.ringPct}
                       data-ring-color={s.ringColor}
-                      cx="168"
+                      cx="32"
                       cy="32"
                       r={R}
                       fill="none"
@@ -289,7 +291,7 @@ export default function DigitalLandscape() {
                         strokeDasharray: CIRC,
                         strokeDashoffset: CIRC,
                         transform: "rotate(-90deg)",
-                        transformOrigin: "168px 32px",
+                        transformOrigin: "32px 32px",
                       }}
                     />
                   </svg>

@@ -285,8 +285,17 @@ export default function Hero() {
       {/* Stat watermarks — absolute atmospheric layer, z-index:0, never adds height */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 hidden select-none overflow-hidden lg:flex items-end justify-center"
-        style={{ zIndex: 0 }}
+        className="pointer-events-none hidden select-none lg:flex items-end justify-center"
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: "50%",
+          overflow: "hidden",
+          zIndex: 0,
+          pointerEvents: "none",
+        }}
       >
         <div
           style={{
