@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { BlogPost, FAQItem } from '../data.types';
 import { ReadingProgress } from './ReadingProgress';
+import { StickyCallToAction } from './StickyCallToAction';
 import { getAuthorByName } from '@/data/authors';
 import {
   ArrowLeft,
@@ -117,6 +118,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
   return (
     <div className="min-h-screen bg-slate-50 relative pt-16 md:pt-20">
       <ReadingProgress />
+      <StickyCallToAction />
 
       {/* Navigation */}
       {/* <nav className="fixed top-0 left-0 right-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-200 transition-all">

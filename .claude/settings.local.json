@@ -99,7 +99,9 @@
       "Bash(git commit -m ' *)",
       "Bash(git commit -m 'perf: consolidate Clash Display font loading to root layout \\(Issue #24 edits 2-3\\) *)",
       "Bash(git commit -m 'chore: delete orphaned src/lib/uk-pages/sheffield.tsx \\(Issue #25\\) *)",
-      "Bash(git commit -m 'fix: npm audit fix — resolve 3 vulns, document 5 accepted dev-dep risks \\(Issue #23\\) *)"
+      "Bash(git commit -m 'fix: npm audit fix — resolve 3 vulns, document 5 accepted dev-dep risks \\(Issue #23\\) *)",
+      "Bash(git commit -m 'docs: close Issues #23 #24 #25 in CLAUDE.md, open Issue #26 *)",
+      "Bash(git push *)"
     ]
   }
 }
