@@ -446,7 +446,7 @@ export default function Hero() {
           aria-hidden="true"
           className="pointer-events-none select-none mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-1 hidden lg:flex"
           style={{
-            color: "rgba(255,255,255,0.04)",
+            color: "rgba(255,255,255,0.08)",
             fontFamily: "var(--font-clash), 'Clash Display', sans-serif",
             fontWeight: 700,
             fontSize: "clamp(32px, 4vw, 52px)",

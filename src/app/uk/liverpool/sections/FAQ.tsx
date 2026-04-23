@@ -1,29 +1,26 @@
 "use client";
 
-// Liverpool FAQ — CSS-only accordion, all answers always in DOM.
-// Collapsed state uses max-height/opacity, NOT display:none.
-// AI crawlers (GPTBot, ClaudeBot, PerplexityBot) read every answer.
+// Liverpool FAQ — all 12 answers statically expanded at all times.
+// No accordion toggle, no useState for open/close.
+// AI crawlers (GPTBot, ClaudeBot, PerplexityBot) see every answer in HTML source.
+// Category filter only hides cards visually via conditional render; default is "all"
+// so the initial server HTML contains all 12 Q&As.
 
 import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 
 // ── Types & data ─────────────────────────────────────────────────────────────
-type CategoryId =
-  | "all"
-  | "web-design"
-  | "ecommerce"
-  | "ai-agents"
-  | "ai-seo";
+type CategoryId = "all" | "web-design" | "ecommerce" | "ai-agents" | "ai-seo";
 
 type Category = { id: CategoryId; label: string; count: number | null };
 
 const CATEGORIES: Category[] = [
-  { id: "all", label: "All Questions", count: 12 },
-  { id: "web-design", label: "Web Design", count: 5 },
-  { id: "ecommerce", label: "E-Commerce", count: 1 },
+  { id: "all",       label: "All Questions",        count: 12 },
+  { id: "web-design",label: "Web Design",           count: 5  },
+  { id: "ecommerce", label: "E-Commerce",           count: 1  },
   { id: "ai-agents", label: "AI Agents & Automation", count: 3 },
-  { id: "ai-seo", label: "AI SEO", count: 3 },
+  { id: "ai-seo",    label: "AI SEO",               count: 3  },
 ];
 
 type Faq = {
@@ -95,40 +92,6 @@ const FAQS: Faq[] = [
   },
 ];
 
-// Stable id derived from question text
-const idFor = (q: string) =>
-  q
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .slice(0, 60);
-
-// ── PlusIcon ─────────────────────────────────────────────────────────────────
-function PlusIcon({ open }: { open: boolean }) {
-  return (
-    <svg
-      aria-hidden="true"
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      style={{
-        flex: "none",
-        transform: open ? "rotate(45deg)" : "rotate(0deg)",
-        transition: "transform 300ms ease",
-        color: open ? "#0052CC" : "#6b7280",
-      }}
-    >
-      <line x1="12" y1="5" x2="12" y2="19" />
-      <line x1="5" y1="12" x2="19" y2="12" />
-    </svg>
-  );
-}
-
 // ── Section ──────────────────────────────────────────────────────────────────
 export default function FAQ() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -136,22 +99,11 @@ export default function FAQ() {
   const listRef = useRef<HTMLDivElement>(null);
 
   const [active, setActive] = useState<CategoryId>("all");
-  const [openSet, setOpenSet] = useState<Set<string>>(
-    () => new Set([idFor(FAQS[0].q)])
-  );
-
-  const toggle = (id: string) => {
-    setOpenSet((prev) => {
-      const next = new Set(prev);
-      if (next.has(id)) next.delete(id);
-      else next.add(id);
-      return next;
-    });
-  };
 
   const visible =
     active === "all" ? FAQS : FAQS.filter((f) => f.cat === active);
 
+  // Header stagger-in on scroll
   useGSAP(
     () => {
       const prefersReduced = window.matchMedia(
@@ -212,6 +164,7 @@ export default function FAQ() {
     { scope: sectionRef }
   );
 
+  // Re-stagger on filter change
   useGSAP(
     () => {
       const prefersReduced = window.matchMedia(
@@ -244,29 +197,13 @@ export default function FAQ() {
       id="faq"
       aria-label="Frequently asked questions — Liverpool web design"
       className="relative w-full"
-      style={{ backgroundColor: "#FFFFFF", maxWidth: "100vw" }}
+      style={{ backgroundColor: "#0A0F1C", maxWidth: "100vw" }}
       itemScope
       itemType="https://schema.org/FAQPage"
     >
       <style>{`
         .liv-cat-pills::-webkit-scrollbar { display: none; }
         .liv-cat-pills { -ms-overflow-style: none; scrollbar-width: none; }
-
-        /* Accordion: CSS-only. Answer ALWAYS in DOM — collapsed via max-height/opacity. */
-        [data-liv-acc-panel] {
-          max-height: 0;
-          opacity: 0;
-          overflow: hidden;
-          transition: max-height 300ms ease, opacity 300ms ease;
-        }
-        [data-liv-acc-panel][data-open="true"] {
-          max-height: 1200px;
-          opacity: 1;
-          overflow: visible;
-        }
-        @media (prefers-reduced-motion: reduce) {
-          [data-liv-acc-panel] { transition: none; }
-        }
       `}</style>
 
       <div
@@ -283,11 +220,11 @@ export default function FAQ() {
               <p
                 data-faq-head
                 style={{
-                  color: "#0052CC",
+                  color: "#FF6B35",
                   fontFamily: "var(--font-sans)",
                   fontWeight: 600,
                   fontSize: 12,
-                  letterSpacing: "0.08em",
+                  letterSpacing: "0.12em",
                   textTransform: "uppercase",
                 }}
               >
@@ -298,7 +235,7 @@ export default function FAQ() {
                 data-faq-head
                 className="font-clash mt-4"
                 style={{
-                  color: "#0F172A",
+                  color: "#FFFFFF",
                   fontWeight: 700,
                   fontSize: "clamp(24px, 3.2vw, 36px)",
                   lineHeight: 1.1,
@@ -311,7 +248,7 @@ export default function FAQ() {
               <p
                 data-faq-head
                 style={{
-                  color: "#6b7280",
+                  color: "rgba(255,255,255,0.55)",
                   fontFamily: "var(--font-sans)",
                   fontSize: 14,
                   lineHeight: 1.6,
@@ -341,14 +278,14 @@ export default function FAQ() {
                             fontFamily: "var(--font-sans)",
                             fontWeight: isActive ? 600 : 500,
                             fontSize: 14,
-                            color: isActive ? "#0052CC" : "#6b7280",
+                            color: isActive ? "#93C5FD" : "rgba(255,255,255,0.55)",
                             backgroundColor: isActive
-                              ? "#F0F7FF"
+                              ? "rgba(147,197,253,0.08)"
                               : "transparent",
                             borderLeft: isActive
-                              ? "3px solid #0052CC"
-                              : "3px solid transparent",
-                            borderBottom: "1px solid #E2E8F0",
+                              ? "3px solid #93C5FD"
+                              : "3px solid rgba(255,255,255,0.1)",
+                            borderBottom: "1px solid rgba(255,255,255,0.07)",
                             paddingTop: 12,
                             paddingBottom: 12,
                             paddingLeft: isActive ? 16 : 19,
@@ -361,7 +298,9 @@ export default function FAQ() {
                           {cat.count != null && (
                             <span
                               style={{
-                                color: isActive ? "#0052CC" : "#9CA3AF",
+                                color: isActive
+                                  ? "#93C5FD"
+                                  : "rgba(255,255,255,0.3)",
                                 fontSize: 12,
                                 fontWeight: 500,
                               }}
@@ -398,11 +337,13 @@ export default function FAQ() {
                         fontSize: 13,
                         padding: "10px 16px",
                         minHeight: 44,
-                        color: isActive ? "#FFFFFF" : "#374151",
-                        backgroundColor: isActive ? "#0052CC" : "#F1F5F9",
+                        color: isActive ? "#0A0F1C" : "rgba(255,255,255,0.7)",
+                        backgroundColor: isActive
+                          ? "#93C5FD"
+                          : "rgba(255,255,255,0.06)",
                         border: isActive
-                          ? "1px solid #0052CC"
-                          : "1px solid #E2E8F0",
+                          ? "1px solid #93C5FD"
+                          : "1px solid rgba(255,255,255,0.12)",
                       }}
                     >
                       {cat.label}
@@ -410,7 +351,7 @@ export default function FAQ() {
                         <span
                           style={{
                             marginLeft: 8,
-                            opacity: isActive ? 0.8 : 0.6,
+                            opacity: isActive ? 0.8 : 0.5,
                           }}
                         >
                           {cat.count}
@@ -423,81 +364,84 @@ export default function FAQ() {
             </div>
           </aside>
 
-          {/* RIGHT — ACCORDION LIST */}
-          <div ref={listRef}>
-            {visible.map((item) => {
-              const id = idFor(item.q);
-              const isOpen = openSet.has(id);
+          {/* RIGHT — STATIC EXPANDED CARDS */}
+          <div ref={listRef} className="flex flex-col gap-4">
+            {visible.map((item, i) => {
+              const globalIndex = FAQS.indexOf(item);
               return (
-                <article
-                  key={id}
+                <div
+                  key={item.q}
                   data-faq-card
                   itemScope
                   itemProp="mainEntity"
                   itemType="https://schema.org/Question"
+                  className="group relative"
+                  style={{
+                    backgroundColor: "rgba(255,255,255,0.04)",
+                    border: "1px solid rgba(255,255,255,0.08)",
+                    borderRadius: 16,
+                    padding: "28px 28px 28px 24px",
+                  }}
                 >
-                  <button
-                    type="button"
-                    onClick={() => toggle(id)}
-                    aria-expanded={isOpen}
-                    aria-controls={`faq-panel-${id}`}
-                    className="flex w-full items-center justify-between text-left"
-                    style={{
-                      cursor: "pointer",
-                      paddingTop: 20,
-                      paddingBottom: 20,
-                      minHeight: 48,
-                      borderBottom: "1px solid #E2E8F0",
-                      gap: 24,
-                      background: "transparent",
-                    }}
-                  >
-                    <h3
-                      itemProp="name"
+                  {/* Number badge */}
+                  <div className="flex items-start gap-5">
+                    <span
+                      aria-hidden="true"
+                      className="flex-shrink-0 flex items-center justify-center rounded-full font-bold text-sm"
                       style={{
-                        color: "#0F172A",
+                        width: 40,
+                        height: 40,
+                        minWidth: 40,
+                        backgroundColor: "rgba(147,197,253,0.12)",
+                        border: "1px solid rgba(147,197,253,0.3)",
+                        color: "#93C5FD",
                         fontFamily: "var(--font-sans)",
-                        fontWeight: 600,
-                        fontSize: "clamp(15px, 1.1vw, 17px)",
-                        lineHeight: 1.45,
-                        letterSpacing: "-0.005em",
-                        margin: 0,
+                        fontVariantNumeric: "tabular-nums",
                       }}
                     >
-                      {item.q}
-                    </h3>
-                    <PlusIcon open={isOpen} />
-                  </button>
+                      {String(globalIndex + 1).padStart(2, "0")}
+                    </span>
 
-                  {/* Answer — ALWAYS in the DOM. Collapsed via max-height/opacity. */}
-                  <div
-                    id={`faq-panel-${id}`}
-                    data-liv-acc-panel
-                    data-open={isOpen ? "true" : "false"}
-                    itemScope
-                    itemProp="acceptedAnswer"
-                    itemType="https://schema.org/Answer"
-                    role="region"
-                    aria-hidden={!isOpen}
-                  >
-                    <p
-                      itemProp="text"
-                      style={{
-                        color: "#374151",
-                        fontFamily: "var(--font-sans)",
-                        fontWeight: 400,
-                        fontSize: "clamp(14px, 1.05vw, 15px)",
-                        lineHeight: 1.75,
-                        paddingTop: 8,
-                        paddingBottom: 20,
-                        paddingRight: 44,
-                        margin: 0,
-                      }}
-                    >
-                      {item.a}
-                    </p>
+                    <div className="flex-1 min-w-0">
+                      <h3
+                        itemProp="name"
+                        style={{
+                          color: "#FFFFFF",
+                          fontFamily: "var(--font-sans)",
+                          fontWeight: 600,
+                          fontSize: "clamp(15px, 1.1vw, 17px)",
+                          lineHeight: 1.4,
+                          letterSpacing: "-0.005em",
+                          margin: 0,
+                        }}
+                      >
+                        {item.q}
+                      </h3>
+
+                      {/* Answer — always visible, never hidden */}
+                      <div
+                        itemScope
+                        itemProp="acceptedAnswer"
+                        itemType="https://schema.org/Answer"
+                      >
+                        <p
+                          itemProp="text"
+                          style={{
+                            color: "rgba(255,255,255,0.65)",
+                            fontFamily: "var(--font-sans)",
+                            fontWeight: 400,
+                            fontSize: "clamp(14px, 1.05vw, 15px)",
+                            lineHeight: 1.75,
+                            marginTop: 12,
+                            marginBottom: 0,
+                          }}
+                        >
+                          {item.a}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </article>
+                </div>
               );
             })}
           </div>

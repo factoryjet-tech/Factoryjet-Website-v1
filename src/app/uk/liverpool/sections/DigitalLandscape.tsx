@@ -258,6 +258,7 @@ export default function DigitalLandscape() {
                     height="64"
                     viewBox="0 0 64 64"
                     className="absolute right-5 top-5"
+                    style={{ zIndex: 0, pointerEvents: "none" }}
                   >
                     {/* Track */}
                     <circle
@@ -296,6 +297,8 @@ export default function DigitalLandscape() {
                       fontSize: s.span2 ? 64 : 56,
                       lineHeight: 1,
                       letterSpacing: "-0.02em",
+                      position: "relative",
+                      zIndex: 1,
                     }}
                   >
                     {s.value}

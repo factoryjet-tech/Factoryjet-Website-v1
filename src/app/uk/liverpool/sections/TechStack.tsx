@@ -4,153 +4,83 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 
-// ── Tech badge data ───────────────────────────────────────────────────────────
-type Tech = {
+// ── Platform grid data ───────────────────────────────────────────────────────
+type Platform = {
   id: string;
   name: string;
-  description: string;
-  colClass: string;
-  offsetPx: number;
-  parallax: number;
+  tagline: string;
   accent: string;
   mark: string;
 };
 
-const TECH: Tech[] = [
-  {
-    id: "nextjs",
-    name: "Next.js 15 (React Framework)",
-    description:
-      "Server-side rendering, static site generation, and incremental static regeneration deliver websites that load in under two seconds and score 90+ on Google Lighthouse Performance. Websites that load in one second convert at three times the rate of sites that take five seconds. This is not marginal optimisation — it directly impacts your revenue.",
-    colClass: "lg:col-span-5 lg:col-start-1",
-    offsetPx: 0,
-    parallax: 40,
-    accent: "#FFFFFF",
-    mark: "N",
-  },
-  {
-    id: "tailwind",
-    name: "Tailwind CSS 4",
-    description:
-      "Utility-first CSS that eliminates stylesheet bloat. Our sites have smaller CSS bundles, faster paint times, and pixel-perfect responsive layouts across every device and screen size — from mobile to ultra-wide desktop.",
-    colClass: "lg:col-span-5 lg:col-start-8",
-    offsetPx: 72,
-    parallax: -60,
-    accent: "#38BDF8",
-    mark: "T",
-  },
-  {
-    id: "gsap",
-    name: "GSAP & Framer Motion",
-    description:
-      "Premium, performant animations that enhance user experience without sacrificing page speed. Purposeful motion that guides attention and increases engagement — not flashy effects that slow your site down.",
-    colClass: "lg:col-span-5 lg:col-start-2",
-    offsetPx: 36,
-    parallax: 30,
-    accent: "#10B981",
-    mark: "◆",
-  },
-  {
-    id: "ai-workflow",
-    name: "AI-Augmented Development Workflow",
-    description:
-      "We use AI throughout our development process — from design generation to code review to quality assurance. This is not a marketing gimmick; it is the operational advantage that allows us to deliver 2–3x faster than traditional agencies while maintaining higher quality standards, and it is why we can price 50–60% below UK market rates without cutting corners.",
-    colClass: "lg:col-span-5 lg:col-start-7",
-    offsetPx: 96,
-    parallax: -45,
-    accent: "#FF6B35",
-    mark: "✦",
-  },
-  {
-    id: "ai-crawler",
-    name: "AI Crawler Optimisation",
-    description:
-      "Every site we build is configured from day one for readability by Google, ChatGPT (GPTBot), Claude (ClaudeBot), Perplexity (PerplexityBot), and Google AI Overviews. Most UK websites accidentally block these crawlers via Cloudflare's default settings — making them invisible to the fastest-growing search channels.",
-    colClass: "lg:col-span-6 lg:col-start-4",
-    offsetPx: 48,
-    parallax: 50,
-    accent: "#0052CC",
-    mark: "⚡",
-  },
+const PLATFORMS: Platform[] = [
+  { id: "nextjs",    name: "Next.js 15",       tagline: "App Router, SSR, ISR — Lighthouse 95+ guaranteed",          accent: "#FFFFFF", mark: "N" },
+  { id: "react",     name: "React 19",          tagline: "Server Components, concurrent rendering, zero layout shift", accent: "#61DAFB", mark: "R" },
+  { id: "nodejs",    name: "Node.js",           tagline: "API layers, webhooks, and server-side integrations",         accent: "#8CC84B", mark: "⬡" },
+  { id: "wordpress", name: "WordPress",         tagline: "Custom themes, plugins, and content-managed builds",         accent: "#21759B", mark: "W" },
+  { id: "woo",       name: "WooCommerce",       tagline: "B2B & B2C stores with deep ERP and CRM integration",         accent: "#96588A", mark: "Wc" },
+  { id: "shopify",   name: "Shopify Plus",      tagline: "Headless builds, custom checkout, Flow automation",          accent: "#96BF48", mark: "S" },
+  { id: "magento",   name: "Magento 2",         tagline: "Enterprise catalogue management and multi-store setups",     accent: "#EE672F", mark: "M" },
+  { id: "webflow",   name: "Webflow",           tagline: "Pixel-perfect CMS sites for Liverpool's creative sector",    accent: "#4353FF", mark: "Wf" },
+  { id: "framer",    name: "Framer",            tagline: "Motion-rich marketing sites with no-code content updates",   accent: "#0055FF", mark: "Fr" },
+  { id: "wix",       name: "Wix Enterprise",    tagline: "Managed hosting for fast-turnaround SMB projects",           accent: "#FAAD4D", mark: "Wx" },
+  { id: "php",       name: "PHP 8.2",           tagline: "Legacy migration, custom portals, and CRM backends",         accent: "#8993BE", mark: "Php" },
+  { id: "custom",    name: "Custom Stack",      tagline: "Bespoke architecture for logistics, port ops, and fintech",  accent: "#FF6B35", mark: "✦" },
 ];
 
-// ── Badge ────────────────────────────────────────────────────────────────────
-function TechBadge({ tech }: { tech: Tech }) {
+// ── Platform card ─────────────────────────────────────────────────────────────
+function PlatformCard({ platform }: { platform: Platform }) {
   return (
-    <article
-      data-tech-badge
-      data-parallax={tech.parallax}
-      className={["relative w-full", tech.colClass].join(" ")}
+    <div
+      className="relative overflow-hidden"
       style={{
-        marginTop: `var(--offset, 0px)`,
-        ["--offset" as never]: `${tech.offsetPx}px`,
+        backgroundColor: "#111827",
+        border: "1px solid rgba(255,255,255,0.06)",
+        borderRadius: 12,
+        padding: "20px 20px 22px",
+        borderLeft: `3px solid ${platform.accent}`,
       }}
     >
-      <div
-        className="relative overflow-hidden"
-        style={{
-          backgroundColor: "#111827",
-          border: "1px solid rgba(255,255,255,0.06)",
-          borderRadius: 16,
-          padding: "28px 28px 30px",
-          boxShadow:
-            "0 30px 60px -25px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.04)",
-        }}
-      >
-        {/* Subtle inner glow accent */}
+      <header className="flex items-center gap-3">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full"
+          className="flex h-9 w-9 flex-none items-center justify-center text-[13px] font-bold"
           style={{
-            background: `radial-gradient(circle, ${tech.accent}22 0%, transparent 70%)`,
-          }}
-        />
-
-        <header className="flex items-start gap-4">
-          <div
-            aria-hidden="true"
-            className="flex h-12 w-12 flex-none items-center justify-center"
-            style={{
-              backgroundColor: "rgba(255,255,255,0.04)",
-              border: `1px solid ${tech.accent}40`,
-              borderRadius: 10,
-              color: tech.accent,
-              fontFamily: "var(--font-clash), 'Clash Display', sans-serif",
-              fontWeight: 700,
-              fontSize: 20,
-              lineHeight: 1,
-            }}
-          >
-            {tech.mark}
-          </div>
-          <h3
-            className="font-clash"
-            style={{
-              color: "#FFFFFF",
-              fontWeight: 600,
-              fontSize: "clamp(18px, 1.8vw, 22px)",
-              lineHeight: 1.2,
-              letterSpacing: "-0.01em",
-              marginTop: 2,
-            }}
-          >
-            {tech.name}
-          </h3>
-        </header>
-
-        <p
-          className="mt-5"
-          style={{
-            color: "rgba(255,255,255,0.72)",
-            fontFamily: "var(--font-sans)",
-            fontSize: "clamp(14px, 1.05vw, 15.5px)",
-            lineHeight: 1.75,
+            backgroundColor: "rgba(255,255,255,0.04)",
+            border: `1px solid ${platform.accent}40`,
+            borderRadius: 8,
+            color: platform.accent,
+            fontFamily: "var(--font-clash), 'Clash Display', sans-serif",
+            lineHeight: 1,
           }}
         >
-          {tech.description}
-        </p>
-      </div>
-    </article>
+          {platform.mark}
+        </div>
+        <h3
+          className="font-clash"
+          style={{
+            color: "#FFFFFF",
+            fontWeight: 600,
+            fontSize: "clamp(15px, 1.2vw, 17px)",
+            lineHeight: 1.2,
+            letterSpacing: "-0.01em",
+          }}
+        >
+          {platform.name}
+        </h3>
+      </header>
+      <p
+        className="mt-3"
+        style={{
+          color: "rgba(255,255,255,0.6)",
+          fontFamily: "var(--font-sans)",
+          fontSize: 13,
+          lineHeight: 1.6,
+        }}
+      >
+        {platform.tagline}
+      </p>
+    </div>
   );
 }
 
@@ -166,30 +96,26 @@ export default function TechStack() {
       ).matches;
       if (prefersReduced) return;
 
-      const desktop = window.matchMedia("(min-width: 1024px)");
-      if (!desktop.matches) return;
+      const cards =
+        gridRef.current?.querySelectorAll<HTMLElement>("[data-platform-card]");
+      if (!cards || !cards.length) return;
 
-      const badges =
-        gridRef.current?.querySelectorAll<HTMLElement>("[data-tech-badge]");
-      if (!badges || !badges.length) return;
-
-      badges.forEach((el) => {
-        const amount = Number(el.getAttribute("data-parallax") ?? "0");
-        gsap.fromTo(
-          el,
-          { y: -amount / 2 },
-          {
-            y: amount / 2,
-            ease: "none",
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: "top bottom",
-              end: "bottom top",
-              scrub: 0.8,
-            },
-          }
-        );
-      });
+      gsap.fromTo(
+        cards,
+        { y: 20, autoAlpha: 0 },
+        {
+          y: 0,
+          autoAlpha: 1,
+          duration: 0.5,
+          ease: "power2.out",
+          stagger: 0.04,
+          scrollTrigger: {
+            trigger: gridRef.current,
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
 
       return () => {
         ScrollTrigger.getAll().forEach((t) => {
@@ -315,13 +241,15 @@ export default function TechStack() {
           </div>
         </div>
 
-        {/* Floating tech badges — asymmetric, parallax on scroll */}
+        {/* Platform grid — 12 platforms, responsive 2/3/4 cols */}
         <div
           ref={gridRef}
-          className="mt-20 grid grid-cols-1 gap-6 sm:gap-7 lg:grid-cols-12 lg:gap-8"
+          className="mt-16 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4"
         >
-          {TECH.map((t) => (
-            <TechBadge key={t.id} tech={t} />
+          {PLATFORMS.map((p) => (
+            <div key={p.id} data-platform-card>
+              <PlatformCard platform={p} />
+            </div>
           ))}
         </div>
       </div>
