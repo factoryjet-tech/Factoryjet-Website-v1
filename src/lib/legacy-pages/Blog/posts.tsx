@@ -4,6 +4,8 @@ import { NativeAd } from './components/NativeAd';
 import { post as howUkSmbsEvaluateWoocommerceAgency2026Post } from './posts/how-uk-smbs-evaluate-woocommerce-agency-2026';
 import { post as evaluateWebDesignAgencyUsSmbs2026Post } from './posts/evaluate-web-design-agency-us-smbs-2026';
 import { post as aiAgentsUkSmbsGuidePost } from './posts/ai-agents-uk-smbs-guide';
+import { post as woocommerceSeoTipsUkStoresPost } from './posts/woocommerce-seo-tips-uk-stores';
+import { post as shopifyVsWoocommerceUkSmbsPost } from './posts/shopify-vs-woocommerce-uk-smbs';
 import { post as chooseWebDesignAgencyUkSmbQuestions2026Post } from './posts/choose-web-design-agency-uk-smb-questions-2026';
 
 export const POSTS: BlogPost[] = [
@@ -4542,5 +4544,7 @@ export const POSTS: BlogPost[] = [
   howUkSmbsEvaluateWoocommerceAgency2026Post,
   evaluateWebDesignAgencyUsSmbs2026Post,
   chooseWebDesignAgencyUkSmbQuestions2026Post,
+  woocommerceSeoTipsUkStoresPost,
+  shopifyVsWoocommerceUkSmbsPost,
   aiAgentsUkSmbsGuidePost,
 ];
