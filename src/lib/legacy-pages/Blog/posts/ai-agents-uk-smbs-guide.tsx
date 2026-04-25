@@ -4,7 +4,7 @@ import type { BlogPost } from '../data.types';
 export const post: BlogPost = {
   id: '103',
   slug: "ai-agents-uk-smbs-guide",
-  title: "AI Agents for UK SMBs: Complete 2025 Implementation Guide",
+  title: "AI Agents for UK SMBs: Complete 2026 Implementation Guide",
   excerpt: "AI agents automate customer support, sales, and operations for UK SMBs, cutting costs by 40-60% while handling 24/7 inquiries. This guide covers real-world use cases, pricing, and implementation timelines for businesses ready to deploy intelligent automation.",
   category: "Emerging Tech",
   author: 'Bhavesh Barot',
@@ -12,7 +12,7 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/ai-agents-uk-smbs-guide-hero.jpg",
   meta: {
-    title: "AI Agents for UK SMBs: Implementation Guide 2025",
+    title: "AI Agents for UK SMBs: Implementation Guide 2026",
     description: "AI agents automate support, sales, and ops for UK SMBs. Cut costs 40-60%, handle 24/7 inquiries. Real pricing, use cases, and implementation timelines inside.",
   },
   keyTakeaways: [

@@ -4,7 +4,7 @@ import type { BlogPost } from '../data.types';
 export const post: BlogPost = {
   id: '105',
   slug: "shopify-vs-woocommerce-uk-smbs",
-  title: "Shopify vs WooCommerce for UK SMBs: Which Platform Wins in 2025?",
+  title: "Shopify vs WooCommerce for UK SMBs: Which Platform Wins in 2026?",
   excerpt: "WooCommerce offers lower long-term costs and full ownership for UK SMBs comfortable with WordPress, while Shopify provides faster setup and managed hosting at higher monthly fees. Your choice depends on technical capability, budget structure, and growth plans.",
   category: "E-Commerce Development",
   author: 'Bhavesh Barot',
@@ -12,7 +12,7 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/shopify-vs-woocommerce-uk-smbs-hero.jpg",
   meta: {
-    title: "Shopify vs WooCommerce UK: Best Platform for Small Business 2025",
+    title: "Shopify vs WooCommerce UK: Best Platform for Small Business 2026",
     description: "Compare Shopify vs WooCommerce for UK small businesses. Real costs, payment fees, VAT handling, and which platform suits your budget and technical skills in 2025.",
   },
   keyTakeaways: [

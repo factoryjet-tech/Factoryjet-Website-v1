@@ -12,7 +12,7 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/woocommerce-seo-tips-uk-stores-hero.jpg",
   meta: {
-    title: "WooCommerce SEO Tips for UK Stores | 12 Tactics That Work in 2025",
+    title: "WooCommerce SEO Tips for UK Stores | 12 Tactics That Work in 2026",
     description: "Proven WooCommerce SEO tips for UK stores: product schema, crawl optimisation, local search intent, and technical fixes that drive organic traffic and sales in British markets.",
   },
   keyTakeaways: [
