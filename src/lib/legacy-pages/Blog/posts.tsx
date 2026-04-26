@@ -7,6 +7,7 @@ import { post as aiAgentsUkSmbsGuidePost } from './posts/ai-agents-uk-smbs-guide
 import { post as woocommerceSeoTipsUkStoresPost } from './posts/woocommerce-seo-tips-uk-stores';
 import { post as shopifyVsWoocommerceUkSmbsPost } from './posts/shopify-vs-woocommerce-uk-smbs';
 import { post as chooseWebDesignAgencyUkSmbQuestions2026Post } from './posts/choose-web-design-agency-uk-smb-questions-2026';
+import { post as websiteRedesignCostUk2026CompletePricingGuidePost } from './posts/website-redesign-cost-uk-2026-complete-pricing-guide';
 
 export const POSTS: BlogPost[] = [
   // --- WEB DESIGN & STRATEGY ---
@@ -4547,4 +4548,5 @@ export const POSTS: BlogPost[] = [
   woocommerceSeoTipsUkStoresPost,
   shopifyVsWoocommerceUkSmbsPost,
   aiAgentsUkSmbsGuidePost,
+  websiteRedesignCostUk2026CompletePricingGuidePost,
 ];
