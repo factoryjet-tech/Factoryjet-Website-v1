@@ -8,6 +8,10 @@ import { post as woocommerceSeoTipsUkStoresPost } from './posts/woocommerce-seo-
 import { post as shopifyVsWoocommerceUkSmbsPost } from './posts/shopify-vs-woocommerce-uk-smbs';
 import { post as chooseWebDesignAgencyUkSmbQuestions2026Post } from './posts/choose-web-design-agency-uk-smb-questions-2026';
 import { post as websiteRedesignCostUk2026CompletePricingGuidePost } from './posts/website-redesign-cost-uk-2026-complete-pricing-guide';
+import { post as bestWebDesignAgenciesUkSmbs2026Post } from './posts/best-web-design-agencies-uk-smbs-2026';
+import { post as topWebDesignAgenciesLondonSmbs2026Post } from './posts/top-web-design-agencies-london-smbs-2026';
+import { post as webDesignAgencyPricingUk2026Post } from './posts/web-design-agency-pricing-uk-2026';
+import { post as whatDoesWebDesignAgencyDo2026Post } from './posts/what-does-web-design-agency-do-2026';
 
 export const POSTS: BlogPost[] = [
   // --- WEB DESIGN & STRATEGY ---
@@ -4549,4 +4553,8 @@ export const POSTS: BlogPost[] = [
   shopifyVsWoocommerceUkSmbsPost,
   aiAgentsUkSmbsGuidePost,
   websiteRedesignCostUk2026CompletePricingGuidePost,
+  bestWebDesignAgenciesUkSmbs2026Post,
+  topWebDesignAgenciesLondonSmbs2026Post,
+  webDesignAgencyPricingUk2026Post,
+  whatDoesWebDesignAgencyDo2026Post,
 ];
