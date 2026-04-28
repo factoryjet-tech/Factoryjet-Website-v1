@@ -49,6 +49,18 @@ const nextConfig = {
   // Enable gzip compression
   compress: true,
 
+  // 301 redirects from old /uk/sitemap-*.xml URLs to the new native
+  // sitemap-index. NOTE: redirects() is a no-op under output: 'export'
+  // (production). The production-effective layer is /public/_redirects,
+  // which Cloudflare Pages applies. These entries cover dev/preview only.
+  async redirects() {
+    return [
+      { source: '/uk/sitemap-index.xml',    destination: '/sitemap.xml',            permanent: true },
+      { source: '/uk/sitemap-cities.xml',   destination: '/sitemap-uk/sitemap.xml', permanent: true },
+      { source: '/uk/sitemap-services.xml', destination: '/sitemap-uk/sitemap.xml', permanent: true },
+    ]
+  },
+
   // Optimize power consumption (better performance)
   poweredByHeader: false,
 
