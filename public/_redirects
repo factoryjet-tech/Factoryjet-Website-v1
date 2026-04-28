@@ -3,3 +3,8 @@ https://www.factoryjet.com/* https://factoryjet.com/:splat 301!
 
 # Issue #19: Legacy Shopify route → canonical URL
 /ecommerce-development/shopify-development /services/shopify-development 301!
+
+# Foundation Patch #3: old /uk/sitemap-*.xml URLs → native sitemap-index
+/uk/sitemap-index.xml      /sitemap.xml                  301
+/uk/sitemap-cities.xml     /sitemap-uk/sitemap.xml       301
+/uk/sitemap-services.xml   /sitemap-uk/sitemap.xml       301
