@@ -1,9 +1,9 @@
-import { cities, getCityBySlug } from '@/data/uk'
+import { dynamicCities, getCityBySlug } from '@/data/uk'
 import { notFound } from 'next/navigation'
 import CityHubPage from '@/lib/uk-pages/city-hub'
 
 export async function generateStaticParams() {
-  return cities.map(city => ({ city: city.slug }))
+  return dynamicCities.map(city => ({ city: city.slug }))
 }
 
 export async function generateMetadata({

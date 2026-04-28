@@ -113,3 +113,29 @@ export const getAllCombinations = () =>
       service: service.slug
     }))
   )
+
+/**
+ * UK city slugs that have bespoke pages at src/app/uk/{slug}/page.tsx.
+ * These cities are EXCLUDED from generateStaticParams on the dynamic
+ * [city] route and its descendants, because the static segment in
+ * src/app/uk/{slug}/ takes routing precedence and dynamic builds for
+ * the same slug would be wasted artifacts.
+ *
+ * To graduate a city to bespoke: add the slug here AND create
+ * src/app/uk/{slug}/page.tsx. To demote: reverse both.
+ */
+export const BESPOKE_UK_CITY_SLUGS = [
+  'manchester',
+  'birmingham',
+  'leeds',
+  'liverpool',
+  'sheffield',
+] as const
+
+/**
+ * Cities that should be built via the dynamic [city] route.
+ * Equals `cities` minus any slug in BESPOKE_UK_CITY_SLUGS.
+ */
+export const dynamicCities: CityData[] = cities.filter(
+  (c) => !(BESPOKE_UK_CITY_SLUGS as readonly string[]).includes(c.slug)
+)

@@ -1,4 +1,4 @@
-import { cities, services, getCityBySlug, getServiceBySlug } from '@/data/uk'
+import { dynamicCities, services, getCityBySlug, getServiceBySlug } from '@/data/uk'
 import { notFound } from 'next/navigation'
 import CityServicePlatformPage from '@/lib/uk-pages/city-service-platform'
 
@@ -6,7 +6,7 @@ import CityServicePlatformPage from '@/lib/uk-pages/city-service-platform'
 const platforms = ['shopify', 'woocommerce', 'webflow', 'wordpress', 'nextjs', 'framer']
 
 export async function generateStaticParams() {
-  return cities.flatMap(city =>
+  return dynamicCities.flatMap(city =>
     services.flatMap(service =>
       (service.platforms || [])
         .filter(p => platforms.includes(p))
