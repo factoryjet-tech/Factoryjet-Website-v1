@@ -1,10 +1,10 @@
-import { cities, services, getCityBySlug, getServiceBySlug } from '@/data/uk'
+import { dynamicCities, services, getCityBySlug, getServiceBySlug } from '@/data/uk'
 import { notFound } from 'next/navigation'
 import CityServicePage from '@/lib/uk-pages/city-service'
 
 // This tells Next.js: "Build a page for EVERY city + service combination"
 export async function generateStaticParams() {
-  return cities.flatMap(city =>
+  return dynamicCities.flatMap(city =>
     services.map(service => ({
       city: city.slug,
       service: service.slug
