@@ -15,6 +15,7 @@ import { post as whatDoesWebDesignAgencyDo2026Post } from './posts/what-does-web
 import { post as customOnlineStoreDevelopmentUkSmbs2026Post } from './posts/custom-online-store-development-uk-smbs-2026';
 import { post as howToBuildOnlineStoreUkSmb2026Post } from './posts/how-to-build-online-store-uk-smb-2026';
 import { post as shopifyStoreDevelopmentUkSmbs2026GuidePost } from './posts/shopify-store-development-uk-smbs-2026-guide';
+import { post as ecommerceDevelopmentUkShopifyWoocommerce2026Post } from './posts/ecommerce-development-uk-shopify-woocommerce-2026';
 
 export const POSTS: BlogPost[] = [
   // --- WEB DESIGN & STRATEGY ---
@@ -4563,4 +4564,5 @@ export const POSTS: BlogPost[] = [
   customOnlineStoreDevelopmentUkSmbs2026Post,
   howToBuildOnlineStoreUkSmb2026Post,
   shopifyStoreDevelopmentUkSmbs2026GuidePost,
+  ecommerceDevelopmentUkShopifyWoocommerce2026Post,
 ];
