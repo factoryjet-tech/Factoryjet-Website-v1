@@ -12,6 +12,7 @@ import { post as bestWebDesignAgenciesUkSmbs2026Post } from './posts/best-web-de
 import { post as topWebDesignAgenciesLondonSmbs2026Post } from './posts/top-web-design-agencies-london-smbs-2026';
 import { post as webDesignAgencyPricingUk2026Post } from './posts/web-design-agency-pricing-uk-2026';
 import { post as whatDoesWebDesignAgencyDo2026Post } from './posts/what-does-web-design-agency-do-2026';
+import { post as customOnlineStoreDevelopmentUkSmbs2026Post } from './posts/custom-online-store-development-uk-smbs-2026';
 
 export const POSTS: BlogPost[] = [
   // --- WEB DESIGN & STRATEGY ---
@@ -4557,4 +4558,5 @@ export const POSTS: BlogPost[] = [
   topWebDesignAgenciesLondonSmbs2026Post,
   webDesignAgencyPricingUk2026Post,
   whatDoesWebDesignAgencyDo2026Post,
+  customOnlineStoreDevelopmentUkSmbs2026Post,
 ];
