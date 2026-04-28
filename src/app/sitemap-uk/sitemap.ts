@@ -65,11 +65,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   })
 
-  // City × service — all cities × all services. Per spec, advertise the
-  // full grid even though Patch #2 will eventually exclude bespoke cities
-  // from the dynamic [city]/[service] route. Bespoke cities are expected
-  // to gain dedicated service pages over time.
-  const cityService: MetadataRoute.Sitemap = cities.flatMap((city) =>
+  // Cities served by the dynamic [city]/[service] route. Bespoke cities
+  // have only /uk/{slug}/page.tsx — no service or platform descendants
+  // exist on disk — so listing /uk/{bespoke}/{service} would advertise
+  // 404s. Mirrors Patch #2's `dynamicCities` filter; folded back to a
+  // shared import once Patch #2 is merged.
+  const dynamicCities = cities.filter(
+    (c) => !BESPOKE_UK_CITY_SLUGS.has(c.slug)
+  )
+
+  // City × service — only cities served by the dynamic [city]/[service]
+  // route. Bespoke city service URLs would 404.
+  const cityService: MetadataRoute.Sitemap = dynamicCities.flatMap((city) =>
     services.map((service) => ({
       url: `${SITE_URL}/uk/${city.slug}/${service.slug}`,
       lastModified: buildTime,
@@ -79,8 +86,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   )
 
   // City × service × platform — replicates the iteration shape of
-  // src/app/uk/[city]/[service]/[platform]/page.tsx's generateStaticParams.
-  const cityServicePlatform: MetadataRoute.Sitemap = cities.flatMap((city) =>
+  // src/app/uk/[city]/[service]/[platform]/page.tsx's generateStaticParams,
+  // which (post-Patch #2) iterates dynamicCities, not all cities.
+  const cityServicePlatform: MetadataRoute.Sitemap = dynamicCities.flatMap((city) =>
     services.flatMap((service) =>
       (service.platforms || [])
         .filter((p) => VALID_PLATFORMS.has(p))
