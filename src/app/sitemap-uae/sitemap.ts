@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next'
+import { getFileLastMod } from '@/lib/sitemap-helpers'
 
 export const dynamic = 'force-static'
 
@@ -8,12 +9,10 @@ const SITE_URL = 'https://factoryjet.com'
 // will expand this into a full data-layer enumeration mirroring
 // sitemap-uk.
 export default function sitemap(): MetadataRoute.Sitemap {
-  const buildTime = new Date()
-
   return [
     {
       url: `${SITE_URL}/uae`,
-      lastModified: buildTime,
+      lastModified: getFileLastMod('src/app/uae/page.tsx'),
       changeFrequency: 'monthly',
       priority: 0.9,
     },
