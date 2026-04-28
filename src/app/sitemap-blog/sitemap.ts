@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { POSTS } from '@/lib/legacy-pages/Blog/posts'
+import { getFileLastMod } from '@/lib/sitemap-helpers'
 
 export const dynamic = 'force-static'
 
@@ -30,11 +31,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogIndex: MetadataRoute.Sitemap[number] = {
     url: `${SITE_URL}/blog`,
-    lastModified: buildTime,
+    lastModified: getFileLastMod('src/app/blog/page.tsx'),
     changeFrequency: CHANGEFREQ.index as ChangeFreq,
     priority: PRIORITY.index,
   }
 
+  // Per-post lastmod uses the human-curated `date` field (publish date)
+  // rather than git timestamps — the date in the post body is more
+  // meaningful to readers and search engines than the last commit
+  // touching the file. Falls back to build time for malformed dates.
   const posts: MetadataRoute.Sitemap = POSTS.map((post) => ({
     url: `${SITE_URL}/blog/${post.slug}`,
     lastModified: parsePostDate(post.date, buildTime),

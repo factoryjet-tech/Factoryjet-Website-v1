@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { cities, services } from '@/data/uk'
+import { getFileLastMod, getMaxLastMod } from '@/lib/sitemap-helpers'
 
 export const dynamic = 'force-static'
 
@@ -42,24 +43,31 @@ const VALID_PLATFORMS = new Set([
   'framer',
 ])
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const buildTime = new Date()
+const DYNAMIC_CITY_PAGE = 'src/app/uk/[city]/page.tsx'
+const DYNAMIC_CITY_SERVICE_PAGE = 'src/app/uk/[city]/[service]/page.tsx'
+const DYNAMIC_CITY_SERVICE_PLATFORM_PAGE = 'src/app/uk/[city]/[service]/[platform]/page.tsx'
 
+export default function sitemap(): MetadataRoute.Sitemap {
   const ukIndex: MetadataRoute.Sitemap[number] = {
     url: `${SITE_URL}/uk`,
-    lastModified: buildTime,
+    lastModified: getFileLastMod('src/app/uk/page.tsx'),
     changeFrequency: CHANGEFREQ.topNav as ChangeFreq,
     priority: PRIORITY.topNav,
   }
 
   // City hubs — all 20 cities, prioritised by whether they have a bespoke
   // page (richer content, weekly updates) or are served by the dynamic
-  // [city] route.
+  // [city] route. Lastmod takes the latest of (city data file, page source)
+  // so content edits AND template edits both bump the timestamp.
   const cityHubs: MetadataRoute.Sitemap = cities.map((city) => {
     const isBespoke = BESPOKE_UK_CITY_SLUGS.has(city.slug)
+    const cityDataFile = `src/data/uk/cities/${city.slug}.json`
+    const pageSource = isBespoke
+      ? `src/app/uk/${city.slug}/page.tsx`
+      : DYNAMIC_CITY_PAGE
     return {
       url: `${SITE_URL}/uk/${city.slug}`,
-      lastModified: buildTime,
+      lastModified: getMaxLastMod(cityDataFile, pageSource),
       changeFrequency: (isBespoke ? CHANGEFREQ.bespoke : CHANGEFREQ.dynamic) as ChangeFreq,
       priority: isBespoke ? PRIORITY.bespoke : PRIORITY.dynamic,
     }
@@ -79,7 +87,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const cityService: MetadataRoute.Sitemap = dynamicCities.flatMap((city) =>
     services.map((service) => ({
       url: `${SITE_URL}/uk/${city.slug}/${service.slug}`,
-      lastModified: buildTime,
+      lastModified: getMaxLastMod(
+        `src/data/uk/cities/${city.slug}.json`,
+        `src/data/uk/services/${service.slug}.json`,
+        DYNAMIC_CITY_SERVICE_PAGE,
+      ),
       changeFrequency: CHANGEFREQ.dynamic as ChangeFreq,
       priority: PRIORITY.dynamic,
     }))
@@ -94,7 +106,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
         .filter((p) => VALID_PLATFORMS.has(p))
         .map((platform) => ({
           url: `${SITE_URL}/uk/${city.slug}/${service.slug}/${platform}`,
-          lastModified: buildTime,
+          lastModified: getMaxLastMod(
+            `src/data/uk/cities/${city.slug}.json`,
+            `src/data/uk/services/${service.slug}.json`,
+            DYNAMIC_CITY_SERVICE_PLATFORM_PAGE,
+          ),
           changeFrequency: CHANGEFREQ.dynamic as ChangeFreq,
           priority: PRIORITY.dynamic,
         }))
