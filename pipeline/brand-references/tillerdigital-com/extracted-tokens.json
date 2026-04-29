@@ -1,0 +1,934 @@
+{
+  "slug": "tillerdigital-com",
+  "category": "taste",
+  "homepage": "https://tillerdigital.com",
+  "captured_at": "2026-04-29T04:58:29Z",
+  "pages": {
+    "homepage": {
+      "url": "https://tillerdigital.com/",
+      "screenshot": "screenshots/homepage.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#000000",
+              "count": 31
+            },
+            {
+              "hex": "#FFA100",
+              "count": 3
+            },
+            {
+              "hex": "#006FF6",
+              "count": 1
+            }
+          ],
+          "text": [
+            {
+              "hex": "#FFFFFF",
+              "count": 1222
+            },
+            {
+              "hex": "#000000",
+              "count": 77
+            }
+          ],
+          "border": [
+            {
+              "hex": "#FFFFFF",
+              "count": 16
+            }
+          ]
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "bassen, sans-serif",
+              "count": 1146
+            },
+            {
+              "value": "tiempos, serif",
+              "count": 73
+            },
+            {
+              "value": "\"Times New Roman\"",
+              "count": 59
+            },
+            {
+              "value": "Arial",
+              "count": 11
+            },
+            {
+              "value": "tiempos, sans-serif",
+              "count": 8
+            },
+            {
+              "value": "Karla, sans-serif",
+              "count": 2
+            }
+          ],
+          "font_sizes_px": [
+            1,
+            13,
+            16,
+            19,
+            30,
+            34,
+            59,
+            91
+          ],
+          "font_weights": [
+            {
+              "value": "400",
+              "count": 696
+            },
+            {
+              "value": "600",
+              "count": 603
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "29.925px",
+              "count": 434
+            },
+            {
+              "value": "26.6px",
+              "count": 283
+            },
+            {
+              "value": "22.8px",
+              "count": 264
+            },
+            {
+              "value": "19px",
+              "count": 103
+            },
+            {
+              "value": "38px",
+              "count": 57
+            },
+            {
+              "value": "30.4px",
+              "count": 20
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "0.912px",
+              "count": 57
+            },
+            {
+              "value": "1.767px",
+              "count": 12
+            },
+            {
+              "value": "0.57px",
+              "count": 5
+            },
+            {
+              "value": "1.026px",
+              "count": 4
+            },
+            {
+              "value": "2.736px",
+              "count": 3
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            8,
+            11,
+            15,
+            19,
+            23,
+            30,
+            46,
+            91,
+            122,
+            129
+          ],
+          "margin_px": [
+            2,
+            5,
+            8,
+            11,
+            15,
+            23,
+            29,
+            34,
+            46,
+            74,
+            106
+          ],
+          "gap_px": [
+            15
+          ]
+        },
+        "radii": [],
+        "shadows": [
+          {
+            "value": "rgb(255, 255, 255) 0px 0px 0px 0.95px inset",
+            "count": 4
+          },
+          {
+            "value": "rgb(255, 255, 255) 0px 0px 0px 1.9px inset",
+            "count": 3
+          }
+        ],
+        "gradients_used": false,
+        "gradient_count": 0,
+        "css_variables": {
+          "--yellow": "#FFA100",
+          "--col-8": "880rem",
+          "--col-2": "208rem",
+          "--frame-width": "1328rem",
+          "--ps": ".875em",
+          "--ns3": "-16rem",
+          "--ns5": "-32rem",
+          "--ns9": "-128rem",
+          "--col-1": "96rem",
+          "--ns6": "-48rem",
+          "--page-head-height-compressed": "96rem",
+          "--page-head-height": "96rem",
+          "--s7": "64rem",
+          "--black": "#000",
+          "--ns2": "-12rem",
+          "--ns11": "-256rem",
+          "--col-7": "768rem",
+          "--ns8": "-96rem",
+          "--col-9": "992rem",
+          "--s2": "12rem",
+          "--white": "#fff",
+          "--page-width": "calc(100vw - 0px)",
+          "--notification-height": "0rem",
+          "--red": "#F43D00",
+          "--s6": "48rem",
+          "--col-12": "1328rem",
+          "--ns4": "-24rem",
+          "--ns1": "-8rem",
+          "--s1": "8rem",
+          "--s4": "24rem",
+          "--ns12": "-384rem",
+          "--s11": "256rem",
+          "--s10": "192rem",
+          "--s5": "32rem",
+          "--dark-grey": "#666",
+          "--col-5": "544rem",
+          "--s8": "96rem",
+          "--light-grey": "#ccc",
+          "--ns10": "-192rem",
+          "--s9": "128rem",
+          "--col-11": "1216rem",
+          "--s3": "16rem",
+          "--blue": "#006FF6",
+          "--ns7": "-64rem",
+          "--col-4": "432rem",
+          "--s12": "384rem",
+          "--col-10": "1104rem",
+          "--col-6": "656rem",
+          "--scrollbar-width": "0px",
+          "--col-3": "320rem"
+        }
+      }
+    },
+    "service": {
+      "url": "https://tillerdigital.com/services/product/",
+      "screenshot": "screenshots/service.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#000000",
+              "count": 15
+            },
+            {
+              "hex": "#FFA100",
+              "count": 3
+            }
+          ],
+          "text": [
+            {
+              "hex": "#FFFFFF",
+              "count": 952
+            },
+            {
+              "hex": "#000000",
+              "count": 65
+            }
+          ],
+          "border": [
+            {
+              "hex": "#FFFFFF",
+              "count": 9
+            }
+          ]
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "bassen, sans-serif",
+              "count": 939
+            },
+            {
+              "value": "\"Times New Roman\"",
+              "count": 53
+            },
+            {
+              "value": "tiempos, serif",
+              "count": 14
+            },
+            {
+              "value": "Arial",
+              "count": 5
+            },
+            {
+              "value": "Karla, sans-serif",
+              "count": 4
+            },
+            {
+              "value": "tiempos, sans-serif",
+              "count": 2
+            }
+          ],
+          "font_sizes_px": [
+            1,
+            13,
+            16,
+            19,
+            30,
+            34,
+            59,
+            68
+          ],
+          "font_weights": [
+            {
+              "value": "600",
+              "count": 638
+            },
+            {
+              "value": "400",
+              "count": 379
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "26.6px",
+              "count": 283
+            },
+            {
+              "value": "22.8px",
+              "count": 261
+            },
+            {
+              "value": "29.925px",
+              "count": 215
+            },
+            {
+              "value": "19px",
+              "count": 84
+            },
+            {
+              "value": "21.375px",
+              "count": 54
+            },
+            {
+              "value": "30.4px",
+              "count": 18
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "1.767px",
+              "count": 6
+            },
+            {
+              "value": "0.912px",
+              "count": 4
+            },
+            {
+              "value": "1.026px",
+              "count": 3
+            },
+            {
+              "value": "0.57px",
+              "count": 2
+            },
+            {
+              "value": "2.052px",
+              "count": 1
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            8,
+            11,
+            15,
+            19,
+            23,
+            30,
+            46,
+            91,
+            122,
+            129
+          ],
+          "margin_px": [
+            2,
+            5,
+            8,
+            11,
+            15,
+            23,
+            29,
+            34,
+            46,
+            74
+          ],
+          "gap_px": [
+            15
+          ]
+        },
+        "radii": [],
+        "shadows": [
+          {
+            "value": "rgb(255, 255, 255) 0px 0px 0px 0.95px inset",
+            "count": 4
+          },
+          {
+            "value": "rgb(255, 255, 255) 0px 0px 0px 1.9px inset",
+            "count": 1
+          }
+        ],
+        "gradients_used": false,
+        "gradient_count": 0,
+        "css_variables": {
+          "--yellow": "#FFA100",
+          "--col-8": "880rem",
+          "--col-2": "208rem",
+          "--frame-width": "1328rem",
+          "--ps": ".875em",
+          "--ns3": "-16rem",
+          "--ns5": "-32rem",
+          "--ns9": "-128rem",
+          "--col-1": "96rem",
+          "--ns6": "-48rem",
+          "--page-head-height": "96rem",
+          "--ns8": "-96rem",
+          "--page-head-height-compressed": "96rem",
+          "--black": "#000",
+          "--ns2": "-12rem",
+          "--s7": "64rem",
+          "--ns11": "-256rem",
+          "--col-7": "768rem",
+          "--col-9": "992rem",
+          "--s2": "12rem",
+          "--white": "#fff",
+          "--page-width": "calc(100vw - 0px)",
+          "--notification-height": "0rem",
+          "--red": "#F43D00",
+          "--s6": "48rem",
+          "--col-12": "1328rem",
+          "--ns4": "-24rem",
+          "--ns1": "-8rem",
+          "--s1": "8rem",
+          "--s4": "24rem",
+          "--ns12": "-384rem",
+          "--s11": "256rem",
+          "--s10": "192rem",
+          "--s5": "32rem",
+          "--dark-grey": "#666",
+          "--col-5": "544rem",
+          "--s8": "96rem",
+          "--light-grey": "#ccc",
+          "--ns10": "-192rem",
+          "--s9": "128rem",
+          "--col-11": "1216rem",
+          "--s3": "16rem",
+          "--blue": "#006FF6",
+          "--ns7": "-64rem",
+          "--col-4": "432rem",
+          "--s12": "384rem",
+          "--col-10": "1104rem",
+          "--col-6": "656rem",
+          "--scrollbar-width": "0px",
+          "--col-3": "320rem"
+        }
+      }
+    },
+    "feature": {
+      "url": "https://tillerdigital.com/work/waitwell/",
+      "screenshot": "screenshots/feature.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#000000",
+              "count": 17
+            },
+            {
+              "hex": "#FFA100",
+              "count": 3
+            }
+          ],
+          "text": [
+            {
+              "hex": "#FFFFFF",
+              "count": 1040
+            },
+            {
+              "hex": "#000000",
+              "count": 73
+            }
+          ],
+          "border": [
+            {
+              "hex": "#FFFFFF",
+              "count": 6
+            }
+          ]
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "bassen, sans-serif",
+              "count": 1034
+            },
+            {
+              "value": "\"Times New Roman\"",
+              "count": 60
+            },
+            {
+              "value": "tiempos, serif",
+              "count": 8
+            },
+            {
+              "value": "tiempos, sans-serif",
+              "count": 6
+            },
+            {
+              "value": "Arial",
+              "count": 5
+            }
+          ],
+          "font_sizes_px": [
+            1,
+            13,
+            16,
+            19,
+            30,
+            38,
+            59,
+            84,
+            91
+          ],
+          "font_weights": [
+            {
+              "value": "600",
+              "count": 579
+            },
+            {
+              "value": "400",
+              "count": 530
+            },
+            {
+              "value": "500",
+              "count": 4
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "29.925px",
+              "count": 351
+            },
+            {
+              "value": "26.6px",
+              "count": 283
+            },
+            {
+              "value": "22.8px",
+              "count": 262
+            },
+            {
+              "value": "19px",
+              "count": 75
+            },
+            {
+              "value": "30.4px",
+              "count": 18
+            },
+            {
+              "value": "23.275px",
+              "count": 12
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "1.767px",
+              "count": 5
+            },
+            {
+              "value": "2.736px",
+              "count": 3
+            },
+            {
+              "value": "0.912px",
+              "count": 2
+            },
+            {
+              "value": "1.14px",
+              "count": 2
+            },
+            {
+              "value": "2.508px",
+              "count": 1
+            },
+            {
+              "value": "0.57px",
+              "count": 1
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            8,
+            11,
+            15,
+            19,
+            23,
+            30,
+            46,
+            91,
+            106,
+            122,
+            129
+          ],
+          "margin_px": [
+            2,
+            5,
+            8,
+            11,
+            15,
+            23,
+            30,
+            34,
+            46,
+            74,
+            106
+          ],
+          "gap_px": [
+            15
+          ]
+        },
+        "radii": [],
+        "shadows": [
+          {
+            "value": "rgb(255, 255, 255) 0px 0px 0px 0.95px inset",
+            "count": 4
+          }
+        ],
+        "gradients_used": false,
+        "gradient_count": 0,
+        "css_variables": {
+          "--yellow": "#FFA100",
+          "--col-8": "880rem",
+          "--col-2": "208rem",
+          "--frame-width": "1328rem",
+          "--ns5": "-32rem",
+          "--ns3": "-16rem",
+          "--ps": ".875em",
+          "--ns9": "-128rem",
+          "--col-1": "96rem",
+          "--ns6": "-48rem",
+          "--page-head-height": "96rem",
+          "--page-head-height-compressed": "96rem",
+          "--ns8": "-96rem",
+          "--black": "#000",
+          "--ns2": "-12rem",
+          "--s7": "64rem",
+          "--ns11": "-256rem",
+          "--col-7": "768rem",
+          "--col-9": "992rem",
+          "--s2": "12rem",
+          "--white": "#fff",
+          "--page-width": "calc(100vw - 0px)",
+          "--notification-height": "0rem",
+          "--red": "#F43D00",
+          "--s6": "48rem",
+          "--col-12": "1328rem",
+          "--ns4": "-24rem",
+          "--ns1": "-8rem",
+          "--s1": "8rem",
+          "--s4": "24rem",
+          "--ns12": "-384rem",
+          "--s11": "256rem",
+          "--s10": "192rem",
+          "--s5": "32rem",
+          "--dark-grey": "#666",
+          "--col-5": "544rem",
+          "--s8": "96rem",
+          "--light-grey": "#ccc",
+          "--ns10": "-192rem",
+          "--s9": "128rem",
+          "--col-11": "1216rem",
+          "--s3": "16rem",
+          "--blue": "#006FF6",
+          "--ns7": "-64rem",
+          "--col-4": "432rem",
+          "--s12": "384rem",
+          "--col-10": "1104rem",
+          "--col-6": "656rem",
+          "--scrollbar-width": "0px",
+          "--col-3": "320rem"
+        }
+      }
+    },
+    "blog": {
+      "url": "https://tillerdigital.com/blog/",
+      "screenshot": "screenshots/blog.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#000000",
+              "count": 19
+            },
+            {
+              "hex": "#FFA100",
+              "count": 3
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 3
+            },
+            {
+              "hex": "#EFEFEF",
+              "count": 1
+            },
+            {
+              "hex": "#006FF6",
+              "count": 1
+            }
+          ],
+          "text": [
+            {
+              "hex": "#FFFFFF",
+              "count": 953
+            },
+            {
+              "hex": "#000000",
+              "count": 74
+            }
+          ],
+          "border": [
+            {
+              "hex": "#FFFFFF",
+              "count": 15
+            },
+            {
+              "hex": "#000000",
+              "count": 1
+            }
+          ]
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "bassen, sans-serif",
+              "count": 940
+            },
+            {
+              "value": "\"Times New Roman\"",
+              "count": 52
+            },
+            {
+              "value": "tiempos, serif",
+              "count": 22
+            },
+            {
+              "value": "Arial",
+              "count": 13
+            }
+          ],
+          "font_sizes_px": [
+            1,
+            13,
+            17,
+            30,
+            38,
+            59,
+            84
+          ],
+          "font_weights": [
+            {
+              "value": "600",
+              "count": 576
+            },
+            {
+              "value": "400",
+              "count": 451
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "26.6px",
+              "count": 335
+            },
+            {
+              "value": "22.8px",
+              "count": 259
+            },
+            {
+              "value": "29.925px",
+              "count": 215
+            },
+            {
+              "value": "19px",
+              "count": 77
+            },
+            {
+              "value": "30.4px",
+              "count": 18
+            },
+            {
+              "value": "38px",
+              "count": 14
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "0.912px",
+              "count": 14
+            },
+            {
+              "value": "1.14px",
+              "count": 4
+            },
+            {
+              "value": "1.767px",
+              "count": 3
+            },
+            {
+              "value": "2.508px",
+              "count": 1
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            1,
+            6,
+            11,
+            15,
+            19,
+            23,
+            30,
+            46,
+            61,
+            91,
+            122,
+            129
+          ],
+          "margin_px": [
+            2,
+            5,
+            8,
+            11,
+            15,
+            29,
+            34,
+            46,
+            61,
+            74,
+            91
+          ],
+          "gap_px": [
+            15
+          ]
+        },
+        "radii": [
+          {
+            "value": "100%",
+            "count": 9
+          }
+        ],
+        "shadows": [
+          {
+            "value": "rgb(0, 111, 246) 0px 0px 0px 1.9px inset",
+            "count": 9
+          },
+          {
+            "value": "rgb(255, 255, 255) 0px 0px 0px 0.95px inset",
+            "count": 4
+          },
+          {
+            "value": "rgb(0, 0, 0) 0px 0px 0px 0.95px inset",
+            "count": 2
+          },
+          {
+            "value": "rgb(255, 255, 255) 0px 0px 0px 1.9px inset",
+            "count": 1
+          }
+        ],
+        "gradients_used": false,
+        "gradient_count": 0,
+        "css_variables": {
+          "--yellow": "#FFA100",
+          "--col-8": "880rem",
+          "--col-2": "208rem",
+          "--frame-width": "1328rem",
+          "--ns5": "-32rem",
+          "--ns3": "-16rem",
+          "--ps": ".875em",
+          "--ns9": "-128rem",
+          "--col-1": "96rem",
+          "--ns6": "-48rem",
+          "--page-head-height-compressed": "96rem",
+          "--ns8": "-96rem",
+          "--page-head-height": "96rem",
+          "--black": "#000",
+          "--ns2": "-12rem",
+          "--s7": "64rem",
+          "--ns11": "-256rem",
+          "--col-7": "768rem",
+          "--col-9": "992rem",
+          "--s2": "12rem",
+          "--white": "#fff",
+          "--page-width": "calc(100vw - 0px)",
+          "--notification-height": "0rem",
+          "--red": "#F43D00",
+          "--s6": "48rem",
+          "--col-12": "1328rem",
+          "--ns4": "-24rem",
+          "--ns1": "-8rem",
+          "--s1": "8rem",
+          "--s4": "24rem",
+          "--ns12": "-384rem",
+          "--s11": "256rem",
+          "--s10": "192rem",
+          "--s5": "32rem",
+          "--dark-grey": "#666",
+          "--col-5": "544rem",
+          "--s8": "96rem",
+          "--light-grey": "#ccc",
+          "--ns10": "-192rem",
+          "--s9": "128rem",
+          "--col-11": "1216rem",
+          "--s3": "16rem",
+          "--blue": "#006FF6",
+          "--ns7": "-64rem",
+          "--col-4": "432rem",
+          "--s12": "384rem",
+          "--col-10": "1104rem",
+          "--col-6": "656rem",
+          "--scrollbar-width": "0px",
+          "--col-3": "320rem"
+        }
+      }
+    }
+  },
+  "missing_categories": [
+    "pricing"
+  ]
+}

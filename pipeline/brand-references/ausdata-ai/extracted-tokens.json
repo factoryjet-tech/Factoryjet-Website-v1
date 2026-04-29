@@ -1,0 +1,1795 @@
+{
+  "slug": "ausdata-ai",
+  "category": "taste",
+  "homepage": "https://ausdata.ai",
+  "captured_at": "2026-04-29T05:03:58Z",
+  "pages": {
+    "homepage": {
+      "url": "https://www.ausdata.ai/en",
+      "screenshot": "screenshots/homepage.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#0A0A0A",
+              "count": 11
+            },
+            {
+              "hex": "#050505",
+              "count": 5
+            },
+            {
+              "hex": "#1E1E1E",
+              "count": 4
+            },
+            {
+              "hex": "#F5F5F5",
+              "count": 2
+            },
+            {
+              "hex": "#22C55E",
+              "count": 1
+            },
+            {
+              "hex": "#FF3B30",
+              "count": 1
+            },
+            {
+              "hex": "#FF9500",
+              "count": 1
+            },
+            {
+              "hex": "#28CD41",
+              "count": 1
+            }
+          ],
+          "text": [
+            {
+              "hex": "#F5F5F5",
+              "count": 193
+            },
+            {
+              "hex": "#000000",
+              "count": 74
+            },
+            {
+              "hex": "#AAAAAA",
+              "count": 47
+            },
+            {
+              "hex": "#818CF8",
+              "count": 35
+            },
+            {
+              "hex": "#CCCCCC",
+              "count": 30
+            },
+            {
+              "hex": "#4F46E5",
+              "count": 8
+            },
+            {
+              "hex": "#F8FAFC",
+              "count": 4
+            },
+            {
+              "hex": "#E2E8F0",
+              "count": 2
+            }
+          ],
+          "border": [
+            {
+              "hex": "#4F46E5",
+              "count": 2
+            }
+          ]
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "\"Times New Roman\"",
+              "count": 403
+            }
+          ],
+          "font_sizes_px": [
+            10,
+            13,
+            16,
+            19,
+            25,
+            56,
+            79
+          ],
+          "font_weights": [
+            {
+              "value": "400",
+              "count": 386
+            },
+            {
+              "value": "600",
+              "count": 6
+            },
+            {
+              "value": "500",
+              "count": 4
+            },
+            {
+              "value": "700",
+              "count": 4
+            },
+            {
+              "value": "300",
+              "count": 3
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "25.888px",
+              "count": 189
+            },
+            {
+              "value": "24px",
+              "count": 74
+            },
+            {
+              "value": "19.416px",
+              "count": 40
+            },
+            {
+              "value": "22.652px",
+              "count": 20
+            },
+            {
+              "value": "22.75px",
+              "count": 18
+            },
+            {
+              "value": "0px",
+              "count": 17
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "0.08px",
+              "count": 249
+            },
+            {
+              "value": "1.56px",
+              "count": 38
+            },
+            {
+              "value": "1.352px",
+              "count": 13
+            },
+            {
+              "value": "-0.504px",
+              "count": 4
+            },
+            {
+              "value": "-0.176px",
+              "count": 4
+            },
+            {
+              "value": "1.4976px",
+              "count": 3
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            4,
+            10,
+            13,
+            16,
+            19,
+            24,
+            32,
+            40,
+            58,
+            61,
+            64,
+            68
+          ],
+          "margin_px": [
+            1,
+            4,
+            12,
+            16,
+            20,
+            24,
+            32,
+            64,
+            80
+          ],
+          "gap_px": [
+            1,
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            29,
+            32,
+            38,
+            58,
+            64
+          ]
+        },
+        "radii": [
+          {
+            "value": "50%",
+            "count": 10
+          },
+          {
+            "value": "3.232px",
+            "count": 7
+          },
+          {
+            "value": "4px",
+            "count": 4
+          },
+          {
+            "value": "2px",
+            "count": 3
+          },
+          {
+            "value": "9999px",
+            "count": 3
+          }
+        ],
+        "shadows": [
+          {
+            "value": "rgba(0, 0, 0, 0.4) 0px 8px 40px 0px",
+            "count": 1
+          },
+          {
+            "value": "rgba(34, 197, 94, 0.7) 0px 0px 5px 0px",
+            "count": 1
+          },
+          {
+            "value": "rgba(255, 255, 255, 0.04) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.02) 0px 0px 0px 1px",
+            "count": 1
+          },
+          {
+            "value": "rgba(255, 255, 255, 0.03) 0px 1px 0px 0px inset",
+            "count": 1
+          },
+          {
+            "value": "rgba(99, 102, 241, 0.22) 0px 0px 48px 0px, rgba(59, 130, 246, 0.1) 0px 0px 36px 0px inset",
+            "count": 1
+          }
+        ],
+        "gradients_used": true,
+        "gradient_count": 16,
+        "css_variables": {
+          "--container-md": "28rem",
+          "--obsidian-surface": "#0a0a0a",
+          "--tw-inset-shadow-alpha": "100%",
+          "--color-zinc-100": "lab(96.1634% .0993311 -.364041)",
+          "--text-display-sm": "1.375rem",
+          "--aspect-video": "16/9",
+          "--color-slate-200": "lab(91.7353% -.998765 -4.76968)",
+          "--color-sky-500": "lab(63.3038% -18.433 -51.0407)",
+          "--space-base": "1rem",
+          "--color-orange-600": "lab(57.1026% 64.2584 89.8886)",
+          "--text-body-md": ".875rem",
+          "--text-heading-lg": "1.25rem",
+          "--color-blue-700": "lab(36.9089% 35.0961 -85.6872)",
+          "--font-body": "",
+          "--color-slate-500": "lab(48.0876% -2.03595 -16.5814)",
+          "--color-dark-elevated": "",
+          "--color-orange-900": "lab(30.2951% 36.0434 37.671)",
+          "--color-neural-500": "#477eeb",
+          "--tw-outline-style": "solid",
+          "--tw-inset-ring-shadow": "0 0 #0000",
+          "--text-base--line-height": "calc(1.5/1)",
+          "--color-orange-50": "lab(97.7008% 1.53735 5.90649)",
+          "--color-blue-300": "lab(77.5052% -6.4629 -36.42)",
+          "--color-text-secondary": "",
+          "--color-card-foreground": "",
+          "--color-text-tertiary": "",
+          "--color-gray-300": "lab(85.1236% -.612259 -3.7138)",
+          "--color-neural-600": "#154fc1",
+          "--color-yellow-400": "lab(83.2664% 8.65132 106.895)",
+          "--font-mono": "",
+          "--color-slate-300": "lab(84.7652% -1.94535 -7.93337)",
+          "--color-amber-300": "lab(86.4156% 6.13147 78.3961)",
+          "--color-gray-500": "lab(47.7841% -.393182 -10.0268)",
+          "--gallery-muted": "#ccc",
+          "--weight-normal": "400",
+          "--color-primary-foreground": "#051639",
+          "--color-dark-border-default": "",
+          "--glow-accent": "0 0 20px #4020df80,0 0 40px #4020df40",
+          "--text-heading-sm": "1rem",
+          "--gradient-ai-core": "radial-gradient(circle at 38.2% 38.2%,#6e98ed 0%,#477eeb 38.2%,#0f49bd 61.8%,#062460 100%)",
+          "--color-green-500": "lab(70.5521% -66.5147 45.8073)",
+          "--color-border-accent": "#477eeb",
+          "--tw-inset-shadow": "0 0 #0000",
+          "--tw-gradient-from": "rgba(0, 0, 0, 0)",
+          "--color-white": "#fff",
+          "--nav-chip-border": "#ffffff26",
+          "--color-quantum-400": "#836eed",
+          "--color-gray-400": "lab(65.9269% -.832707 -8.17473)",
+          "--color-accent": "#836eed",
+          "--tw-gradient-to": "rgba(0, 0, 0, 0)",
+          "--tw-shadow-alpha": "100%",
+          "--color-popover": "",
+          "--color-slate-400": "lab(65.5349% -2.25151 -14.5072)",
+          "--nav-chip-bg": "#ffffff0a",
+          "--color-text-accent": "#477eeb",
+          "--nav-shine": "#818cf81a",
+          "--weight-semibold": "600",
+          "--weight-light": "300",
+          "--color-yellow-300": "lab(89.7033% -.480294 84.4917)",
+          "--color-blue-400": "lab(65.0361% -1.42065 -56.9802)",
+          "--text-display-md": "1.618rem",
+          "--font-weight-bold": "700",
+          "--fs-body": "1rem",
+          "--color-input": "",
+          "--nav-mobile-divider": "#ffffff52",
+          "--color-purple-600": "lab(43.0295% 75.21 -86.5669)",
+          "--tw-gradient-via-position": "50%",
+          "--text-xs--line-height": "calc(1/.75)",
+          "--color-zinc-700": "lab(26.8019% 1.35387 -4.68303)",
+          "--color-dark-space": "#051639",
+          "--violet-light": "#818cf8",
+          "--color-dark-surface": "",
+          "--tw-gradient-to-position": "100%",
+          "--color-dark-void": "#020e26",
+          "--color-dark-border-glow": "#2060df61",
+          "--radius-base": ".5rem",
+          "--color-neural-300": "#8fafef",
+          "--default-transition-duration": ".15s",
+          "--color-neural-900": "#04163a",
+          "--glow-primary": "0 0 20px #2060df80,0 0 40px #2060df40",
+          "--color-green-900": "lab(30.797% -29.6927 17.382)",
+          "--animate-pulse": "pulse 2s cubic-bezier(.4,0,.6,1)infinite",
+          "--radius-2xl": "2.118rem",
+          "--fs-h4": "clamp(1rem,1.25vw,1.375rem)",
+          "--fs-h1-zh": "clamp(1.75rem,3.2vw,2.875rem)",
+          "--color-blue-800": "lab(30.2514% 27.7853 -70.2699)",
+          "--drop-shadow-lg": "0 4px 4px #00000026",
+          "--radius-lg": ".809rem",
+          "--text-xl": "1.25rem",
+          "--container-xs": "20rem",
+          "--color-neutral-900": "lab(7.78201% -.0000149012 0)",
+          "--color-border-subtle": "#dde6f8",
+          "--section-py-sm": "clamp(2rem,4vw,4rem)",
+          "--color-blue-100": "lab(92.0301% -2.24757 -11.6453)",
+          "--leading-relaxed": "1.618",
+          "--leading-snug": "1.272",
+          "--section-px": "clamp(1.5rem,4.236vw,4.236rem)",
+          "--shadow-quantum-dark-2": "0 2px 4px #020e264d,0 8px 13px #04122f59,0 0 16px #2060df1f",
+          "--color-text-quaternary": "",
+          "--default-transition-timing-function": "cubic-bezier(.4,0,.2,1)",
+          "--color-zinc-900": "lab(8.30603% .618205 -2.16572)",
+          "--shadow-glass-medium": "0 2px 4px #04163a1a,0 8px 13px #0516391f,0 0 16px #2060df0f",
+          "--color-orange-500": "lab(64.272% 57.1788 90.3583)",
+          "--nav-bg": "#08080826",
+          "--color-slate-800": "lab(16.132% -.318035 -14.6672)",
+          "--gradient-neural": "linear-gradient(137.5deg,#477eeb 0%,#175de8 38.2%,#0f49bd 61.8%,#093690 100%)",
+          "--color-emerald-900": "lab(28.8637% -26.9249 5.45986)",
+          "--color-sky-400": "lab(70.687% -23.6078 -45.9483)",
+          "--text-2xl--line-height": "calc(2/1.5)",
+          "--gallery-fg": "#f5f5f5",
+          "--border-line": "#ffffff52",
+          "--color-slate-600": "lab(35.5623% -1.74978 -15.4316)",
+          "--spacing": ".25rem",
+          "--text-heading-xl": "1.5rem",
+          "--tw-translate-z": "0",
+          "--text-heading-md": "1.125rem",
+          "--tw-gradient-via": "rgba(0, 0, 0, 0)",
+          "--color-quantum-amber": "#fab338",
+          "--tw-scale-y": "1",
+          "--color-secondary": "",
+          "--text-8xl": "6rem",
+          "--container-6xl": "72rem",
+          "--text-xl--line-height": "calc(1.75/1.25)",
+          "--space-4xl": "11.09rem",
+          "--container-3xl": "48rem",
+          "--text-sm": ".875rem",
+          "--tw-translate-y": "0",
+          "--ease-out": "cubic-bezier(0,0,.2,1)",
+          "--obsidian-card": "#101010",
+          "--color-emerald-500": "lab(66.9756% -58.27 19.5419)",
+          "--color-accent-foreground": "#051639",
+          "--color-popover-foreground": "",
+          "--color-amber-700": "lab(47.2709% 42.9082 69.2966)",
+          "--tw-content": "\"\"",
+          "--color-amber-900": "lab(31.2288% 30.2627 40.0378)",
+          "--color-surface": "#fff",
+          "--leading-tight": "1.2",
+          "--color-indigo-500": "lab(48.295% 38.3129 -81.9673)",
+          "--color-neural-200": "#b3c7ef",
+          "--color-gray-600": "lab(35.6337% -1.58697 -10.8425)",
+          "--ease-quantum": "cubic-bezier(.16,1,.3,1)",
+          "--color-purple-400": "lab(63.6946% 47.6127 -59.2066)",
+          "--color-orange-100": "lab(94.7127% 3.58394 14.3151)",
+          "--color-blue-600": "lab(44.0605% 29.0279 -86.0352)",
+          "--color-ring": "#6e98ed",
+          "--color-green-200": "lab(92.4222% -26.4702 12.9427)",
+          "--tw-border-style": "solid",
+          "--text-display-lg": "2.618rem",
+          "--color-error": "#df3a3a",
+          "--color-border-glow": "#2060df61",
+          "--gradient-data-flow": "linear-gradient(90deg,#477eeb 0%,#25d1f4 38.2%,#1ae6a2 100%)",
+          "--color-border-strong": "#6e98ed",
+          "--color-red-600": "lab(48.4493% 77.4328 61.5452)",
+          "--tw-translate-x": "0",
+          "--color-border": "",
+          "--color-blue-50": "lab(96.492% -1.14644 -5.11479)",
+          "--color-neural-800": "#082868",
+          "--weight-bold": "700",
+          "--color-black": "#000",
+          "--duration-slower": ".686s",
+          "--color-foreground": "",
+          "--violet-glow": "#4f46e580",
+          "--color-neural-100": "#dde6f8",
+          "--shadow-quantum-2": "0 2px 4px #04163a1a,0 8px 13px #0516391f,0 0 16px #2060df0f",
+          "--fs-label": ".75rem",
+          "--obsidian-border": "#1e1e1e",
+          "--color-amber-100": "lab(95.916% -1.21653 23.111)",
+          "--space-3xl": "6.854rem",
+          "--weight-black": "900",
+          "--tw-space-y-reverse": "0",
+          "--text-4xl--line-height": "calc(2.5/2.25)",
+          "--color-indigo-100": "lab(91.6577% 1.04591 -12.7199)",
+          "--color-hero-ice": "#dde6f8",
+          "--fs-h1": "clamp(2rem,3.9vw,3.5rem)",
+          "--space-sm": ".405rem",
+          "--tracking-tight": "-.025em",
+          "--color-muted-foreground": "",
+          "--gradient-hero-dark": "linear-gradient(137.5deg,#04163a 0%,#051a42 38.2%,#071e4a 61.8%,#092253 100%)",
+          "--color-cyan-400": "lab(76.6045% -40.9406 -29.6231)",
+          "--fs-h2-zh": "clamp(1.375rem,2.5vw,2.25rem)",
+          "--color-amber-400": "lab(80.1641% 16.6016 99.2089)",
+          "--tw-ring-shadow": "0 0 #0000",
+          "--text-2xl": "1.5rem",
+          "--text-body-sm": ".75rem",
+          "--obsidian-ghost": "#2a2a2a",
+          "--nav-shadow": "0 8px 40px #0006",
+          "--color-purple-500": "lab(52.0183% 66.11 -78.2316)",
+          "--violet-pure": "#4f46e5",
+          "--color-indigo-400": "lab(59.866% 22.4834 -64.4485)",
+          "--color-quantum-cyan": "#25d1f4",
+          "--tw-drop-shadow-alpha": "100%",
+          "--text-body-xl": "1.125rem",
+          "--color-slate-700": "lab(26.9569% -1.47016 -15.6993)",
+          "--text-lg": "1.125rem",
+          "--text-8xl--line-height": "1",
+          "--color-amber-600": "lab(60.3514% 40.5624 87.1228)",
+          "--color-slate-900": "lab(7.78673% 1.82345 -15.0537)",
+          "--text-5xl--line-height": "1",
+          "--space-xl": "2.618rem",
+          "--color-green-100": "lab(96.1861% -13.8464 6.52365)",
+          "--leading-normal": "1.414",
+          "--ease-quantum-bounce": "cubic-bezier(.34,1.56,.64,1)",
+          "--ease-cinematic": "cubic-bezier(.16,1,.3,1)",
+          "--color-red-200": "lab(86.017% 19.8815 7.75869)",
+          "--color-dark-glass": "",
+          "--text-body-lg": "1rem",
+          "--animate-ping": "ping 1s cubic-bezier(0,0,.2,1)infinite",
+          "--fs-body-lg": "clamp(1.0625rem,1.3vw,1.25rem)",
+          "--glow-success": "0 0 20px #1bbb8680,0 0 40px #1bbb8640",
+          "--shadow-neuro-light": "20px 20px 60px #bed0f49e,-20px -20px 60px #f2f6fd9e",
+          "--shadow-quantum-dark-1": "0 2px 4px #020e2640,0 0 8px #2060df14",
+          "--blur-xl": "24px",
+          "--space-2xl": "4.236rem",
+          "--tw-ring-offset-color": "#fff",
+          "--text-lg--line-height": "calc(1.75/1.125)",
+          "--color-red-400": "lab(63.7053% 60.745 31.3109)",
+          "--color-dark-text-primary": "",
+          "--blur-3xl": "64px",
+          "--color-dark-text-tertiary": "",
+          "--font-sans": "ui-sans-serif,system-ui,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"",
+          "--tw-scale-z": "1",
+          "--nav-border": "#ffffff52",
+          "--radius": ".809rem",
+          "--shadow-quantum-1": "0 2px 4px #04163a14,0 0 8px #2060df0d",
+          "--color-emerald-100": "lab(94.9004% -17.0769 5.63836)",
+          "--color-red-800": "lab(33.7174% 55.8993 41.0293)",
+          "--color-red-500": "lab(55.4814% 75.0732 48.8528)",
+          "--color-surface-glass": "#fffc",
+          "--color-background": "#051639",
+          "--container-sm": "24rem",
+          "--tw-ring-offset-width": "0px",
+          "--color-zinc-300": "lab(84.9837% .601262 -2.17986)",
+          "--fs-display": "clamp(2.75rem,5.5vw,5rem)",
+          "--space-fluid-section": "clamp(4rem,2rem + 8vw,11.09rem)",
+          "--text-6xl": "3.75rem",
+          "--nav-mobile-bg": "#0a0a0a40",
+          "--duration-slow": ".424s",
+          "--gradient-obsidian-hero": "radial-gradient(ellipse 120% 80% at 50% 130%,#4f46e52e 0%,#1e1b4b1f 35%,#05050500 70%)",
+          "--default-font-family": "ui-sans-serif,system-ui,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"",
+          "--font-weight-light": "300",
+          "--nav-shadow-scrolled": "0 4px 32px #0000008c,0 0 0 1px #4f46e51a",
+          "--color-amber-800": "lab(37.8822% 37.1699 52.2718)",
+          "--color-hero-glow": "#96b1e9",
+          "--color-dark-border-subtle": "",
+          "--color-fuchsia-500": "lab(56.4256% 83.132 -64.639)",
+          "--color-dark-border-strong": "",
+          "--color-dark-text-accent": "#8fafef",
+          "--color-quantum-emerald": "#1ae6a2",
+          "--duration-fast": ".162s",
+          "--color-page-bg": "#051639",
+          "--text-display-2xl": "4.236rem",
+          "--color-dark-text-secondary": "",
+          "--shadow-quantum-dark-3": "0 2px 4px #020e2659,0 8px 13px #04122f66,0 21px 34px #06163873,0 0 24px #2060df26",
+          "--color-text-primary": "",
+          "--tw-gradient-from-position": "0%",
+          "--shadow-glass-strong": "0 2px 4px #04163a1f,0 8px 13px #05163924,0 21px 34px #071e4a29,0 0 24px #2060df14",
+          "--color-secondary-foreground": "",
+          "--ease-in-out": "cubic-bezier(.4,0,.2,1)",
+          "--tw-ring-offset-shadow": "0 0 #0000",
+          "--nav-separator": "#ffffff12",
+          "--color-quantum-600": "#3318bf",
+          "--color-hero-sea": "#b3c7ef",
+          "--fs-nav": ".75rem",
+          "--color-border-default": "#b3c7ef",
+          "--color-surface-elevated": "#f8faff",
+          "--tracking-tighter": "-.05em",
+          "--color-zinc-500": "lab(47.8878% 1.65477 -5.77283)",
+          "--font-weight-black": "900",
+          "--color-dark-frosted": "",
+          "--color-quantum-300": "#9f8fef",
+          "--color-zinc-800": "lab(15.7305% .613764 -2.16959)",
+          "--color-indigo-950": "lab(12.4853% 14.9672 -31.3418)",
+          "--nav-mobile-border": "#ffffff52",
+          "--color-neural-400": "#6e98ed",
+          "--shadow-quantum-3": "0 2px 4px #04163a1f,0 8px 13px #05163924,0 21px 34px #071e4a29,0 0 24px #2060df14",
+          "--container-5xl": "64rem",
+          "--color-amber-500": "lab(72.7183% 31.8672 97.9407)",
+          "--gradient-hero-light": "linear-gradient(137.5deg,#4ca6ff/**/0%,#dde6f8/**/38.2%,#b3c7ef/**/61.8%,#96b1e9/**/100%)",
+          "--color-neural-700": "#0f3b95",
+          "--color-slate-950": "lab(1.76974% 1.32743 -9.28855)",
+          "--tracking-wide": ".025em",
+          "--fs-h3": "clamp(1.25rem,1.75vw,1.75rem)",
+          "--color-green-800": "lab(37.4616% -36.7971 22.9692)",
+          "--font-weight-semibold": "600",
+          "--weight-thin": "100",
+          "--color-red-700": "lab(40.4273% 67.2623 53.7441)",
+          "--color-slate-100": "lab(96.286% -.852436 -2.46847)",
+          "--blur-md": "12px",
+          "--gradient-quantum": "linear-gradient(137.5deg,#6347eb 0%,#2e2eea 38.2%,#2b6cee 61.8%,#0f5af0 100%)",
+          "--color-blue-500": "lab(54.1736% 13.3369 -74.6839)",
+          "--fs-display-zh": "clamp(2.25rem,4.5vw,4rem)",
+          "--animate-spin": "spin 1s linear infinite",
+          "--space-lg": "1.618rem",
+          "--color-blue-900": "lab(26.1542% 15.7545 -51.5504)",
+          "--container-4xl": "56rem",
+          "--color-zinc-400": "lab(65.6464% 1.53497 -5.42429)",
+          "--obsidian": "#050505",
+          "--color-muted": "",
+          "--text-display-xl": "3.618rem",
+          "--nav-dot": "#ffffff2e",
+          "--color-dark-border-accent": "#6e98ed",
+          "--violet-dim": "#4f46e51f",
+          "--space-xs": ".25rem",
+          "--font-weight-extrabold": "800",
+          "--text-4xl": "2.25rem",
+          "--radius-full": "9999px",
+          "--tracking-normal": "0em",
+          "--section-py": "clamp(3.5rem,6vw,7rem)",
+          "--color-red-50": "lab(96.5005% 4.18508 1.52328)",
+          "--color-green-300": "lab(86.9953% -47.2691 25.0054)",
+          "--tw-shadow": "0 0 #0000",
+          "--container-2xl": "42rem",
+          "--color-blue-200": "lab(86.15% -4.04379 -21.0797)",
+          "--shadow-neuro-inset": "inset 20px 20px 60px #bed0f49e,inset -20px -20px 60px #f2f6fd9e",
+          "--color-primary": "#6e98ed",
+          "--text-sm--line-height": "calc(1.25/.875)",
+          "--font-code": "",
+          "--duration-normal": ".262s",
+          "--text-3xl--line-height": "calc(2.25/1.875)",
+          "--text-5xl": "3rem",
+          "--weight-medium": "500",
+          "--text-3xl": "1.875rem",
+          "--text-xs": ".75rem",
+          "--color-red-950": "lab(13.003% 29.04 16.7519)",
+          "--space-md": ".618rem",
+          "--font-weight-medium": "500",
+          "--tw-scale-x": "1",
+          "--fs-h2": "clamp(1.5rem,3vw,2.75rem)",
+          "--shadow-glass-light": "0 2px 4px #04163a14,0 0 8px #2060df0d",
+          "--color-surface-frosted": "#fff9",
+          "--color-emerald-400": "lab(75.0771% -60.7313 19.4147)",
+          "--color-indigo-900": "lab(23.3911% 24.6978 -50.4718)",
+          "--gallery-ghost": "#aaa",
+          "--font-serif": "",
+          "--color-dark-text-quaternary": "",
+          "--color-quantum-500": "#6347eb",
+          "--color-card": "",
+          "--font-display": "",
+          "--radius-xl": "1.309rem",
+          "--text-6xl--line-height": "1",
+          "--gallery-line": "#2a2a2a",
+          "--color-blue-950": "lab(15.6723% 8.86232 -32.2945)",
+          "--color-amber-50": "lab(98.6252% -.635922 8.42309)",
+          "--fs-small": ".875rem",
+          "--color-hero-sky": "#4ca6ff",
+          "--container-7xl": "80rem",
+          "--text-base": "1rem",
+          "--blur-sm": "8px",
+          "--color-amber-200": "lab(91.7203% -.505269 49.9084)",
+          "--default-mono-font-family": ""
+        }
+      }
+    },
+    "service": {
+      "url": "https://www.ausdata.ai/en/products",
+      "screenshot": "screenshots/service.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#050505",
+              "count": 5
+            },
+            {
+              "hex": "#080616",
+              "count": 5
+            },
+            {
+              "hex": "#F5F5F5",
+              "count": 2
+            },
+            {
+              "hex": "#22C55E",
+              "count": 1
+            },
+            {
+              "hex": "#0A0A0A",
+              "count": 1
+            }
+          ],
+          "text": [
+            {
+              "hex": "#F5F5F5",
+              "count": 317
+            },
+            {
+              "hex": "#000000",
+              "count": 76
+            },
+            {
+              "hex": "#AAAAAA",
+              "count": 46
+            },
+            {
+              "hex": "#CCCCCC",
+              "count": 33
+            },
+            {
+              "hex": "#4F46E5",
+              "count": 11
+            },
+            {
+              "hex": "#818CF8",
+              "count": 5
+            }
+          ],
+          "border": [
+            {
+              "hex": "#F5F5F5",
+              "count": 2
+            }
+          ]
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "\"Times New Roman\"",
+              "count": 495
+            }
+          ],
+          "font_sizes_px": [
+            10,
+            14,
+            18,
+            43,
+            56,
+            79
+          ],
+          "font_weights": [
+            {
+              "value": "400",
+              "count": 488
+            },
+            {
+              "value": "300",
+              "count": 6
+            },
+            {
+              "value": "700",
+              "count": 1
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "25.888px",
+              "count": 309
+            },
+            {
+              "value": "24px",
+              "count": 76
+            },
+            {
+              "value": "19.416px",
+              "count": 22
+            },
+            {
+              "value": "22.652px",
+              "count": 20
+            },
+            {
+              "value": "0px",
+              "count": 17
+            },
+            {
+              "value": "10.4px",
+              "count": 17
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "0.08px",
+              "count": 344
+            },
+            {
+              "value": "1.56px",
+              "count": 20
+            },
+            {
+              "value": "1.352px",
+              "count": 17
+            },
+            {
+              "value": "2.08px",
+              "count": 15
+            },
+            {
+              "value": "-1.08px",
+              "count": 5
+            },
+            {
+              "value": "1.3056px",
+              "count": 4
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            4,
+            10,
+            13,
+            16,
+            22,
+            26,
+            32,
+            36,
+            40,
+            61,
+            64,
+            68
+          ],
+          "margin_px": [
+            12,
+            16,
+            20,
+            24,
+            32,
+            40,
+            64
+          ],
+          "gap_px": [
+            2,
+            6,
+            12,
+            16,
+            20,
+            24,
+            29,
+            32,
+            58,
+            64
+          ]
+        },
+        "radii": [
+          {
+            "value": "2px",
+            "count": 7
+          },
+          {
+            "value": "4px",
+            "count": 5
+          },
+          {
+            "value": "50%",
+            "count": 4
+          }
+        ],
+        "shadows": [
+          {
+            "value": "rgba(0, 0, 0, 0.4) 0px 4px 24px 0px",
+            "count": 5
+          },
+          {
+            "value": "rgba(0, 0, 0, 0.4) 0px 8px 40px 0px",
+            "count": 1
+          },
+          {
+            "value": "rgba(34, 197, 94, 0.7) 0px 0px 5px 0px",
+            "count": 1
+          },
+          {
+            "value": "rgba(79, 70, 229, 0.4) 0px 0px 8px 0px",
+            "count": 1
+          }
+        ],
+        "gradients_used": true,
+        "gradient_count": 21,
+        "css_variables": {
+          "--container-md": "28rem",
+          "--obsidian-surface": "#0a0a0a",
+          "--tw-inset-shadow-alpha": "100%",
+          "--color-zinc-100": "lab(96.1634% .0993311 -.364041)",
+          "--text-display-sm": "1.375rem",
+          "--aspect-video": "16/9",
+          "--color-slate-200": "lab(91.7353% -.998765 -4.76968)",
+          "--color-sky-500": "lab(63.3038% -18.433 -51.0407)",
+          "--space-base": "1rem",
+          "--color-orange-600": "lab(57.1026% 64.2584 89.8886)",
+          "--text-body-md": ".875rem",
+          "--text-heading-lg": "1.25rem",
+          "--color-blue-700": "lab(36.9089% 35.0961 -85.6872)",
+          "--font-body": "",
+          "--color-slate-500": "lab(48.0876% -2.03595 -16.5814)",
+          "--color-dark-elevated": "",
+          "--color-orange-900": "lab(30.2951% 36.0434 37.671)",
+          "--color-neural-500": "#477eeb",
+          "--tw-outline-style": "solid",
+          "--tw-inset-ring-shadow": "0 0 #0000",
+          "--text-base--line-height": "calc(1.5/1)",
+          "--color-orange-50": "lab(97.7008% 1.53735 5.90649)",
+          "--color-blue-300": "lab(77.5052% -6.4629 -36.42)",
+          "--color-text-secondary": "",
+          "--color-card-foreground": "",
+          "--color-text-tertiary": "",
+          "--color-gray-300": "lab(85.1236% -.612259 -3.7138)",
+          "--color-neural-600": "#154fc1",
+          "--color-yellow-400": "lab(83.2664% 8.65132 106.895)",
+          "--font-mono": "",
+          "--color-slate-300": "lab(84.7652% -1.94535 -7.93337)",
+          "--color-amber-300": "lab(86.4156% 6.13147 78.3961)",
+          "--color-gray-500": "lab(47.7841% -.393182 -10.0268)",
+          "--gallery-muted": "#ccc",
+          "--color-primary-foreground": "#051639",
+          "--text-heading-sm": "1rem",
+          "--color-dark-border-default": "",
+          "--glow-accent": "0 0 20px #4020df80,0 0 40px #4020df40",
+          "--gradient-ai-core": "radial-gradient(circle at 38.2% 38.2%,#6e98ed 0%,#477eeb 38.2%,#0f49bd 61.8%,#062460 100%)",
+          "--weight-normal": "400",
+          "--color-green-500": "lab(70.5521% -66.5147 45.8073)",
+          "--color-border-accent": "#477eeb",
+          "--tw-inset-shadow": "0 0 #0000",
+          "--tw-gradient-from": "rgba(0, 0, 0, 0)",
+          "--color-white": "#fff",
+          "--nav-chip-border": "#ffffff26",
+          "--color-quantum-400": "#836eed",
+          "--color-gray-400": "lab(65.9269% -.832707 -8.17473)",
+          "--color-blue-400": "lab(65.0361% -1.42065 -56.9802)",
+          "--tw-gradient-to": "rgba(0, 0, 0, 0)",
+          "--tw-shadow-alpha": "100%",
+          "--color-slate-400": "lab(65.5349% -2.25151 -14.5072)",
+          "--color-popover": "",
+          "--color-accent": "#836eed",
+          "--color-text-accent": "#477eeb",
+          "--nav-shine": "#818cf81a",
+          "--weight-light": "300",
+          "--weight-semibold": "600",
+          "--color-yellow-300": "lab(89.7033% -.480294 84.4917)",
+          "--nav-chip-bg": "#ffffff0a",
+          "--text-display-md": "1.618rem",
+          "--font-weight-bold": "700",
+          "--fs-body": "1rem",
+          "--color-input": "",
+          "--nav-mobile-divider": "#ffffff52",
+          "--color-purple-600": "lab(43.0295% 75.21 -86.5669)",
+          "--tw-gradient-via-position": "50%",
+          "--color-zinc-700": "lab(26.8019% 1.35387 -4.68303)",
+          "--color-dark-space": "#051639",
+          "--text-xs--line-height": "calc(1/.75)",
+          "--violet-light": "#818cf8",
+          "--color-dark-surface": "",
+          "--tw-gradient-to-position": "100%",
+          "--color-dark-void": "#020e26",
+          "--color-dark-border-glow": "#2060df61",
+          "--radius-base": ".5rem",
+          "--color-neural-300": "#8fafef",
+          "--default-transition-duration": ".15s",
+          "--glow-primary": "0 0 20px #2060df80,0 0 40px #2060df40",
+          "--color-neural-900": "#04163a",
+          "--color-green-900": "lab(30.797% -29.6927 17.382)",
+          "--animate-pulse": "pulse 2s cubic-bezier(.4,0,.6,1)infinite",
+          "--radius-2xl": "2.118rem",
+          "--fs-h4": "clamp(1rem,1.25vw,1.375rem)",
+          "--fs-h1-zh": "clamp(1.75rem,3.2vw,2.875rem)",
+          "--drop-shadow-lg": "0 4px 4px #00000026",
+          "--color-blue-800": "lab(30.2514% 27.7853 -70.2699)",
+          "--color-border-subtle": "#dde6f8",
+          "--radius-lg": ".809rem",
+          "--container-xs": "20rem",
+          "--color-neutral-900": "lab(7.78201% -.0000149012 0)",
+          "--text-xl": "1.25rem",
+          "--section-py-sm": "clamp(2rem,4vw,4rem)",
+          "--color-blue-100": "lab(92.0301% -2.24757 -11.6453)",
+          "--leading-relaxed": "1.618",
+          "--section-px": "clamp(1.5rem,4.236vw,4.236rem)",
+          "--leading-snug": "1.272",
+          "--shadow-quantum-dark-2": "0 2px 4px #020e264d,0 8px 13px #04122f59,0 0 16px #2060df1f",
+          "--color-text-quaternary": "",
+          "--default-transition-timing-function": "cubic-bezier(.4,0,.2,1)",
+          "--color-zinc-900": "lab(8.30603% .618205 -2.16572)",
+          "--shadow-glass-medium": "0 2px 4px #04163a1a,0 8px 13px #0516391f,0 0 16px #2060df0f",
+          "--color-orange-500": "lab(64.272% 57.1788 90.3583)",
+          "--nav-bg": "#08080826",
+          "--color-slate-800": "lab(16.132% -.318035 -14.6672)",
+          "--gradient-neural": "linear-gradient(137.5deg,#477eeb 0%,#175de8 38.2%,#0f49bd 61.8%,#093690 100%)",
+          "--color-emerald-900": "lab(28.8637% -26.9249 5.45986)",
+          "--color-sky-400": "lab(70.687% -23.6078 -45.9483)",
+          "--text-2xl--line-height": "calc(2/1.5)",
+          "--gallery-fg": "#f5f5f5",
+          "--color-slate-600": "lab(35.5623% -1.74978 -15.4316)",
+          "--border-line": "#ffffff52",
+          "--spacing": ".25rem",
+          "--text-heading-xl": "1.5rem",
+          "--tw-translate-z": "0",
+          "--text-heading-md": "1.125rem",
+          "--tw-gradient-via": "rgba(0, 0, 0, 0)",
+          "--color-quantum-amber": "#fab338",
+          "--tw-scale-y": "1",
+          "--color-secondary": "",
+          "--text-8xl": "6rem",
+          "--container-6xl": "72rem",
+          "--text-xl--line-height": "calc(1.75/1.25)",
+          "--space-4xl": "11.09rem",
+          "--container-3xl": "48rem",
+          "--text-sm": ".875rem",
+          "--tw-translate-y": "0",
+          "--ease-out": "cubic-bezier(0,0,.2,1)",
+          "--obsidian-card": "#101010",
+          "--color-emerald-500": "lab(66.9756% -58.27 19.5419)",
+          "--color-accent-foreground": "#051639",
+          "--color-popover-foreground": "",
+          "--color-amber-700": "lab(47.2709% 42.9082 69.2966)",
+          "--tw-content": "\"\"",
+          "--color-amber-900": "lab(31.2288% 30.2627 40.0378)",
+          "--color-surface": "#fff",
+          "--color-indigo-500": "lab(48.295% 38.3129 -81.9673)",
+          "--leading-tight": "1.2",
+          "--color-gray-600": "lab(35.6337% -1.58697 -10.8425)",
+          "--color-neural-200": "#b3c7ef",
+          "--ease-quantum": "cubic-bezier(.16,1,.3,1)",
+          "--color-orange-100": "lab(94.7127% 3.58394 14.3151)",
+          "--color-purple-400": "lab(63.6946% 47.6127 -59.2066)",
+          "--color-blue-600": "lab(44.0605% 29.0279 -86.0352)",
+          "--color-ring": "#6e98ed",
+          "--color-green-200": "lab(92.4222% -26.4702 12.9427)",
+          "--tw-border-style": "solid",
+          "--color-error": "#df3a3a",
+          "--text-display-lg": "2.618rem",
+          "--color-border-glow": "#2060df61",
+          "--gradient-data-flow": "linear-gradient(90deg,#477eeb 0%,#25d1f4 38.2%,#1ae6a2 100%)",
+          "--color-border-strong": "#6e98ed",
+          "--color-red-600": "lab(48.4493% 77.4328 61.5452)",
+          "--tw-translate-x": "0",
+          "--color-border": "",
+          "--color-blue-50": "lab(96.492% -1.14644 -5.11479)",
+          "--color-neural-800": "#082868",
+          "--weight-bold": "700",
+          "--color-black": "#000",
+          "--duration-slower": ".686s",
+          "--color-foreground": "",
+          "--violet-glow": "#4f46e580",
+          "--color-neural-100": "#dde6f8",
+          "--shadow-quantum-2": "0 2px 4px #04163a1a,0 8px 13px #0516391f,0 0 16px #2060df0f",
+          "--fs-label": ".75rem",
+          "--obsidian-border": "#1e1e1e",
+          "--color-amber-100": "lab(95.916% -1.21653 23.111)",
+          "--space-3xl": "6.854rem",
+          "--weight-black": "900",
+          "--tw-space-y-reverse": "0",
+          "--text-4xl--line-height": "calc(2.5/2.25)",
+          "--color-indigo-100": "lab(91.6577% 1.04591 -12.7199)",
+          "--color-hero-ice": "#dde6f8",
+          "--fs-h1": "clamp(2rem,3.9vw,3.5rem)",
+          "--space-sm": ".405rem",
+          "--tracking-tight": "-.025em",
+          "--gradient-hero-dark": "linear-gradient(137.5deg,#04163a 0%,#051a42 38.2%,#071e4a 61.8%,#092253 100%)",
+          "--color-muted-foreground": "",
+          "--color-cyan-400": "lab(76.6045% -40.9406 -29.6231)",
+          "--fs-h2-zh": "clamp(1.375rem,2.5vw,2.25rem)",
+          "--color-amber-400": "lab(80.1641% 16.6016 99.2089)",
+          "--tw-ring-shadow": "0 0 #0000",
+          "--color-indigo-400": "lab(59.866% 22.4834 -64.4485)",
+          "--text-2xl": "1.5rem",
+          "--text-body-sm": ".75rem",
+          "--obsidian-ghost": "#2a2a2a",
+          "--nav-shadow": "0 8px 40px #0006",
+          "--color-purple-500": "lab(52.0183% 66.11 -78.2316)",
+          "--violet-pure": "#4f46e5",
+          "--color-quantum-cyan": "#25d1f4",
+          "--tw-drop-shadow-alpha": "100%",
+          "--text-body-xl": "1.125rem",
+          "--color-slate-700": "lab(26.9569% -1.47016 -15.6993)",
+          "--text-lg": "1.125rem",
+          "--text-8xl--line-height": "1",
+          "--color-amber-600": "lab(60.3514% 40.5624 87.1228)",
+          "--color-slate-900": "lab(7.78673% 1.82345 -15.0537)",
+          "--text-5xl--line-height": "1",
+          "--space-xl": "2.618rem",
+          "--color-green-100": "lab(96.1861% -13.8464 6.52365)",
+          "--leading-normal": "1.414",
+          "--ease-quantum-bounce": "cubic-bezier(.34,1.56,.64,1)",
+          "--ease-cinematic": "cubic-bezier(.16,1,.3,1)",
+          "--color-red-200": "lab(86.017% 19.8815 7.75869)",
+          "--color-dark-glass": "",
+          "--text-body-lg": "1rem",
+          "--animate-ping": "ping 1s cubic-bezier(0,0,.2,1)infinite",
+          "--fs-body-lg": "clamp(1.0625rem,1.3vw,1.25rem)",
+          "--glow-success": "0 0 20px #1bbb8680,0 0 40px #1bbb8640",
+          "--shadow-neuro-light": "20px 20px 60px #bed0f49e,-20px -20px 60px #f2f6fd9e",
+          "--shadow-quantum-dark-1": "0 2px 4px #020e2640,0 0 8px #2060df14",
+          "--blur-xl": "24px",
+          "--space-2xl": "4.236rem",
+          "--tw-ring-offset-color": "#fff",
+          "--text-lg--line-height": "calc(1.75/1.125)",
+          "--color-red-400": "lab(63.7053% 60.745 31.3109)",
+          "--color-dark-text-primary": "",
+          "--blur-3xl": "64px",
+          "--color-dark-text-tertiary": "",
+          "--font-sans": "ui-sans-serif,system-ui,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"",
+          "--tw-scale-z": "1",
+          "--nav-border": "#ffffff52",
+          "--radius": ".809rem",
+          "--shadow-quantum-1": "0 2px 4px #04163a14,0 0 8px #2060df0d",
+          "--color-emerald-100": "lab(94.9004% -17.0769 5.63836)",
+          "--color-red-800": "lab(33.7174% 55.8993 41.0293)",
+          "--color-background": "#051639",
+          "--color-red-500": "lab(55.4814% 75.0732 48.8528)",
+          "--color-surface-glass": "#fffc",
+          "--container-sm": "24rem",
+          "--tw-ring-offset-width": "0px",
+          "--color-zinc-300": "lab(84.9837% .601262 -2.17986)",
+          "--fs-display": "clamp(2.75rem,5.5vw,5rem)",
+          "--space-fluid-section": "clamp(4rem,2rem + 8vw,11.09rem)",
+          "--text-6xl": "3.75rem",
+          "--nav-mobile-bg": "#0a0a0a40",
+          "--duration-slow": ".424s",
+          "--gradient-obsidian-hero": "radial-gradient(ellipse 120% 80% at 50% 130%,#4f46e52e 0%,#1e1b4b1f 35%,#05050500 70%)",
+          "--default-font-family": "ui-sans-serif,system-ui,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"",
+          "--nav-shadow-scrolled": "0 4px 32px #0000008c,0 0 0 1px #4f46e51a",
+          "--font-weight-light": "300",
+          "--color-dark-border-subtle": "",
+          "--color-hero-glow": "#96b1e9",
+          "--color-amber-800": "lab(37.8822% 37.1699 52.2718)",
+          "--color-fuchsia-500": "lab(56.4256% 83.132 -64.639)",
+          "--color-dark-border-strong": "",
+          "--color-dark-text-accent": "#8fafef",
+          "--color-quantum-emerald": "#1ae6a2",
+          "--duration-fast": ".162s",
+          "--color-page-bg": "#051639",
+          "--text-display-2xl": "4.236rem",
+          "--color-dark-text-secondary": "",
+          "--shadow-quantum-dark-3": "0 2px 4px #020e2659,0 8px 13px #04122f66,0 21px 34px #06163873,0 0 24px #2060df26",
+          "--color-text-primary": "",
+          "--tw-gradient-from-position": "0%",
+          "--shadow-glass-strong": "0 2px 4px #04163a1f,0 8px 13px #05163924,0 21px 34px #071e4a29,0 0 24px #2060df14",
+          "--color-secondary-foreground": "",
+          "--ease-in-out": "cubic-bezier(.4,0,.2,1)",
+          "--tw-ring-offset-shadow": "0 0 #0000",
+          "--nav-separator": "#ffffff12",
+          "--color-quantum-600": "#3318bf",
+          "--color-hero-sea": "#b3c7ef",
+          "--fs-nav": ".75rem",
+          "--color-border-default": "#b3c7ef",
+          "--color-surface-elevated": "#f8faff",
+          "--tracking-tighter": "-.05em",
+          "--color-zinc-500": "lab(47.8878% 1.65477 -5.77283)",
+          "--font-weight-black": "900",
+          "--color-dark-frosted": "",
+          "--color-quantum-300": "#9f8fef",
+          "--color-zinc-800": "lab(15.7305% .613764 -2.16959)",
+          "--color-indigo-950": "lab(12.4853% 14.9672 -31.3418)",
+          "--nav-mobile-border": "#ffffff52",
+          "--color-neural-400": "#6e98ed",
+          "--shadow-quantum-3": "0 2px 4px #04163a1f,0 8px 13px #05163924,0 21px 34px #071e4a29,0 0 24px #2060df14",
+          "--container-5xl": "64rem",
+          "--color-amber-500": "lab(72.7183% 31.8672 97.9407)",
+          "--gradient-hero-light": "linear-gradient(137.5deg,#4ca6ff/**/0%,#dde6f8/**/38.2%,#b3c7ef/**/61.8%,#96b1e9/**/100%)",
+          "--color-neural-700": "#0f3b95",
+          "--color-slate-950": "lab(1.76974% 1.32743 -9.28855)",
+          "--fs-h3": "clamp(1.25rem,1.75vw,1.75rem)",
+          "--tracking-wide": ".025em",
+          "--color-green-800": "lab(37.4616% -36.7971 22.9692)",
+          "--font-weight-semibold": "600",
+          "--weight-thin": "100",
+          "--color-red-700": "lab(40.4273% 67.2623 53.7441)",
+          "--color-slate-100": "lab(96.286% -.852436 -2.46847)",
+          "--blur-md": "12px",
+          "--gradient-quantum": "linear-gradient(137.5deg,#6347eb 0%,#2e2eea 38.2%,#2b6cee 61.8%,#0f5af0 100%)",
+          "--color-blue-500": "lab(54.1736% 13.3369 -74.6839)",
+          "--fs-display-zh": "clamp(2.25rem,4.5vw,4rem)",
+          "--animate-spin": "spin 1s linear infinite",
+          "--container-4xl": "56rem",
+          "--color-blue-900": "lab(26.1542% 15.7545 -51.5504)",
+          "--space-lg": "1.618rem",
+          "--obsidian": "#050505",
+          "--color-zinc-400": "lab(65.6464% 1.53497 -5.42429)",
+          "--color-muted": "",
+          "--text-display-xl": "3.618rem",
+          "--nav-dot": "#ffffff2e",
+          "--color-dark-border-accent": "#6e98ed",
+          "--violet-dim": "#4f46e51f",
+          "--space-xs": ".25rem",
+          "--font-weight-extrabold": "800",
+          "--text-4xl": "2.25rem",
+          "--radius-full": "9999px",
+          "--tracking-normal": "0em",
+          "--section-py": "clamp(3.5rem,6vw,7rem)",
+          "--shadow-neuro-inset": "inset 20px 20px 60px #bed0f49e,inset -20px -20px 60px #f2f6fd9e",
+          "--color-green-300": "lab(86.9953% -47.2691 25.0054)",
+          "--tw-shadow": "0 0 #0000",
+          "--text-sm--line-height": "calc(1.25/.875)",
+          "--color-blue-200": "lab(86.15% -4.04379 -21.0797)",
+          "--color-red-50": "lab(96.5005% 4.18508 1.52328)",
+          "--color-primary": "#6e98ed",
+          "--container-2xl": "42rem",
+          "--duration-normal": ".262s",
+          "--text-3xl--line-height": "calc(2.25/1.875)",
+          "--text-5xl": "3rem",
+          "--font-code": "",
+          "--weight-medium": "500",
+          "--text-3xl": "1.875rem",
+          "--text-xs": ".75rem",
+          "--color-red-950": "lab(13.003% 29.04 16.7519)",
+          "--space-md": ".618rem",
+          "--font-weight-medium": "500",
+          "--tw-scale-x": "1",
+          "--color-surface-frosted": "#fff9",
+          "--fs-h2": "clamp(1.5rem,3vw,2.75rem)",
+          "--shadow-glass-light": "0 2px 4px #04163a14,0 0 8px #2060df0d",
+          "--color-emerald-400": "lab(75.0771% -60.7313 19.4147)",
+          "--color-indigo-900": "lab(23.3911% 24.6978 -50.4718)",
+          "--gallery-ghost": "#aaa",
+          "--font-serif": "",
+          "--color-dark-text-quaternary": "",
+          "--color-quantum-500": "#6347eb",
+          "--color-card": "",
+          "--font-display": "",
+          "--radius-xl": "1.309rem",
+          "--text-6xl--line-height": "1",
+          "--gallery-line": "#2a2a2a",
+          "--color-blue-950": "lab(15.6723% 8.86232 -32.2945)",
+          "--color-amber-50": "lab(98.6252% -.635922 8.42309)",
+          "--fs-small": ".875rem",
+          "--color-hero-sky": "#4ca6ff",
+          "--container-7xl": "80rem",
+          "--text-base": "1rem",
+          "--blur-sm": "8px",
+          "--color-amber-200": "lab(91.7203% -.505269 49.9084)",
+          "--default-mono-font-family": ""
+        }
+      }
+    },
+    "blog": {
+      "url": "https://www.ausdata.ai/en/insights",
+      "screenshot": "screenshots/blog.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#FFFFFF",
+              "count": 16
+            },
+            {
+              "hex": "#050505",
+              "count": 6
+            },
+            {
+              "hex": "#0A0A0A",
+              "count": 6
+            },
+            {
+              "hex": "#4F46E5",
+              "count": 5
+            },
+            {
+              "hex": "#101010",
+              "count": 5
+            },
+            {
+              "hex": "#F5F5F5",
+              "count": 2
+            },
+            {
+              "hex": "#22C55E",
+              "count": 1
+            },
+            {
+              "hex": "#051639",
+              "count": 1
+            }
+          ],
+          "text": [
+            {
+              "hex": "#F5F5F5",
+              "count": 256
+            },
+            {
+              "hex": "#000000",
+              "count": 75
+            },
+            {
+              "hex": "#AAAAAA",
+              "count": 47
+            },
+            {
+              "hex": "#CCCCCC",
+              "count": 43
+            },
+            {
+              "hex": "#818CF8",
+              "count": 23
+            },
+            {
+              "hex": "#4F46E5",
+              "count": 9
+            },
+            {
+              "hex": "#F2F2F2",
+              "count": 1
+            },
+            {
+              "hex": "#C7C7C7",
+              "count": 1
+            }
+          ],
+          "border": [
+            {
+              "hex": "#F5F5F5",
+              "count": 12
+            },
+            {
+              "hex": "#1E1E1E",
+              "count": 1
+            }
+          ]
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "\"Times New Roman\"",
+              "count": 457
+            }
+          ],
+          "font_sizes_px": [
+            10,
+            14,
+            18,
+            24,
+            36,
+            42,
+            56
+          ],
+          "font_weights": [
+            {
+              "value": "400",
+              "count": 430
+            },
+            {
+              "value": "500",
+              "count": 15
+            },
+            {
+              "value": "900",
+              "count": 10
+            },
+            {
+              "value": "700",
+              "count": 1
+            },
+            {
+              "value": "300",
+              "count": 1
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "25.888px",
+              "count": 225
+            },
+            {
+              "value": "24px",
+              "count": 75
+            },
+            {
+              "value": "10.4px",
+              "count": 37
+            },
+            {
+              "value": "19.416px",
+              "count": 22
+            },
+            {
+              "value": "22.652px",
+              "count": 20
+            },
+            {
+              "value": "0px",
+              "count": 17
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "0.08px",
+              "count": 280
+            },
+            {
+              "value": "1.352px",
+              "count": 37
+            },
+            {
+              "value": "1.56px",
+              "count": 20
+            },
+            {
+              "value": "0.6528px",
+              "count": 15
+            },
+            {
+              "value": "2.16px",
+              "count": 10
+            },
+            {
+              "value": "-0.6px",
+              "count": 8
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            4,
+            10,
+            13,
+            16,
+            24,
+            32,
+            38,
+            56,
+            64,
+            68,
+            96
+          ],
+          "margin_px": [
+            6,
+            12,
+            16,
+            20,
+            24,
+            32,
+            80,
+            144
+          ],
+          "gap_px": [
+            1,
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            32,
+            58,
+            64
+          ]
+        },
+        "radii": [
+          {
+            "value": "9999px",
+            "count": 17
+          },
+          {
+            "value": "4px",
+            "count": 14
+          },
+          {
+            "value": "50%",
+            "count": 4
+          },
+          {
+            "value": "2px",
+            "count": 2
+          }
+        ],
+        "shadows": [
+          {
+            "value": "rgba(148, 163, 184, 0.12) 0px 0px 15px 0px",
+            "count": 15
+          },
+          {
+            "value": "rgba(2, 6, 23, 0.22) 0px 24px 64px 0px",
+            "count": 5
+          },
+          {
+            "value": "rgba(0, 0, 0, 0.4) 0px 8px 40px 0px",
+            "count": 1
+          },
+          {
+            "value": "rgba(34, 197, 94, 0.7) 0px 0px 5px 0px",
+            "count": 1
+          }
+        ],
+        "gradients_used": true,
+        "gradient_count": 33,
+        "css_variables": {
+          "--container-md": "28rem",
+          "--obsidian-surface": "#0a0a0a",
+          "--tw-inset-shadow-alpha": "100%",
+          "--color-zinc-100": "lab(96.1634% .0993311 -.364041)",
+          "--text-display-sm": "1.375rem",
+          "--aspect-video": "16/9",
+          "--color-slate-200": "lab(91.7353% -.998765 -4.76968)",
+          "--color-sky-500": "lab(63.3038% -18.433 -51.0407)",
+          "--space-base": "1rem",
+          "--color-orange-600": "lab(57.1026% 64.2584 89.8886)",
+          "--text-body-md": ".875rem",
+          "--text-heading-lg": "1.25rem",
+          "--color-blue-700": "lab(36.9089% 35.0961 -85.6872)",
+          "--font-body": "",
+          "--color-slate-500": "lab(48.0876% -2.03595 -16.5814)",
+          "--color-dark-elevated": "",
+          "--color-orange-900": "lab(30.2951% 36.0434 37.671)",
+          "--color-neural-500": "#477eeb",
+          "--tw-outline-style": "solid",
+          "--tw-inset-ring-shadow": "0 0 #0000",
+          "--text-base--line-height": "calc(1.5/1)",
+          "--color-orange-50": "lab(97.7008% 1.53735 5.90649)",
+          "--color-blue-300": "lab(77.5052% -6.4629 -36.42)",
+          "--color-text-secondary": "",
+          "--color-card-foreground": "",
+          "--color-text-tertiary": "",
+          "--color-gray-300": "lab(85.1236% -.612259 -3.7138)",
+          "--color-neural-600": "#154fc1",
+          "--color-yellow-400": "lab(83.2664% 8.65132 106.895)",
+          "--font-mono": "",
+          "--color-slate-300": "lab(84.7652% -1.94535 -7.93337)",
+          "--color-amber-300": "lab(86.4156% 6.13147 78.3961)",
+          "--color-gray-500": "lab(47.7841% -.393182 -10.0268)",
+          "--gallery-muted": "#ccc",
+          "--color-primary-foreground": "#051639",
+          "--weight-normal": "400",
+          "--color-dark-border-default": "",
+          "--glow-accent": "0 0 20px #4020df80,0 0 40px #4020df40",
+          "--text-heading-sm": "1rem",
+          "--gradient-ai-core": "radial-gradient(circle at 38.2% 38.2%,#6e98ed 0%,#477eeb 38.2%,#0f49bd 61.8%,#062460 100%)",
+          "--color-green-500": "lab(70.5521% -66.5147 45.8073)",
+          "--color-border-accent": "#477eeb",
+          "--tw-inset-shadow": "0 0 #0000",
+          "--tw-gradient-from": "rgba(0, 0, 0, 0)",
+          "--color-white": "#fff",
+          "--nav-chip-border": "#ffffff26",
+          "--color-quantum-400": "#836eed",
+          "--color-gray-400": "lab(65.9269% -.832707 -8.17473)",
+          "--color-blue-400": "lab(65.0361% -1.42065 -56.9802)",
+          "--tw-gradient-to": "rgba(0, 0, 0, 0)",
+          "--tw-shadow-alpha": "100%",
+          "--color-slate-400": "lab(65.5349% -2.25151 -14.5072)",
+          "--color-popover": "",
+          "--color-accent": "#836eed",
+          "--color-text-accent": "#477eeb",
+          "--nav-shine": "#818cf81a",
+          "--weight-light": "300",
+          "--weight-semibold": "600",
+          "--color-yellow-300": "lab(89.7033% -.480294 84.4917)",
+          "--nav-chip-bg": "#ffffff0a",
+          "--text-display-md": "1.618rem",
+          "--font-weight-bold": "700",
+          "--fs-body": "1rem",
+          "--color-input": "",
+          "--nav-mobile-divider": "#ffffff52",
+          "--color-purple-600": "lab(43.0295% 75.21 -86.5669)",
+          "--tw-gradient-via-position": "50%",
+          "--color-zinc-700": "lab(26.8019% 1.35387 -4.68303)",
+          "--color-dark-space": "#051639",
+          "--text-xs--line-height": "calc(1/.75)",
+          "--violet-light": "#818cf8",
+          "--color-dark-surface": "",
+          "--tw-gradient-to-position": "100%",
+          "--color-dark-void": "#020e26",
+          "--color-dark-border-glow": "#2060df61",
+          "--radius-base": ".5rem",
+          "--color-neural-300": "#8fafef",
+          "--default-transition-duration": ".15s",
+          "--glow-primary": "0 0 20px #2060df80,0 0 40px #2060df40",
+          "--color-neural-900": "#04163a",
+          "--color-green-900": "lab(30.797% -29.6927 17.382)",
+          "--animate-pulse": "pulse 2s cubic-bezier(.4,0,.6,1)infinite",
+          "--radius-2xl": "2.118rem",
+          "--fs-h4": "clamp(1rem,1.25vw,1.375rem)",
+          "--fs-h1-zh": "clamp(1.75rem,3.2vw,2.875rem)",
+          "--drop-shadow-lg": "0 4px 4px #00000026",
+          "--color-blue-800": "lab(30.2514% 27.7853 -70.2699)",
+          "--color-neutral-900": "lab(7.78201% -.0000149012 0)",
+          "--color-border-subtle": "#dde6f8",
+          "--container-xs": "20rem",
+          "--radius-lg": ".809rem",
+          "--text-xl": "1.25rem",
+          "--section-py-sm": "clamp(2rem,4vw,4rem)",
+          "--color-blue-100": "lab(92.0301% -2.24757 -11.6453)",
+          "--leading-relaxed": "1.618",
+          "--section-px": "clamp(1.5rem,4.236vw,4.236rem)",
+          "--leading-snug": "1.272",
+          "--shadow-quantum-dark-2": "0 2px 4px #020e264d,0 8px 13px #04122f59,0 0 16px #2060df1f",
+          "--color-text-quaternary": "",
+          "--default-transition-timing-function": "cubic-bezier(.4,0,.2,1)",
+          "--color-zinc-900": "lab(8.30603% .618205 -2.16572)",
+          "--shadow-glass-medium": "0 2px 4px #04163a1a,0 8px 13px #0516391f,0 0 16px #2060df0f",
+          "--color-orange-500": "lab(64.272% 57.1788 90.3583)",
+          "--color-slate-800": "lab(16.132% -.318035 -14.6672)",
+          "--nav-bg": "#08080826",
+          "--gradient-neural": "linear-gradient(137.5deg,#477eeb 0%,#175de8 38.2%,#0f49bd 61.8%,#093690 100%)",
+          "--color-emerald-900": "lab(28.8637% -26.9249 5.45986)",
+          "--color-sky-400": "lab(70.687% -23.6078 -45.9483)",
+          "--text-2xl--line-height": "calc(2/1.5)",
+          "--gallery-fg": "#f5f5f5",
+          "--color-slate-600": "lab(35.5623% -1.74978 -15.4316)",
+          "--border-line": "#ffffff52",
+          "--spacing": ".25rem",
+          "--text-heading-xl": "1.5rem",
+          "--tw-translate-z": "0",
+          "--text-heading-md": "1.125rem",
+          "--tw-gradient-via": "rgba(0, 0, 0, 0)",
+          "--color-quantum-amber": "#fab338",
+          "--tw-scale-y": "1",
+          "--color-secondary": "",
+          "--text-8xl": "6rem",
+          "--container-6xl": "72rem",
+          "--text-xl--line-height": "calc(1.75/1.25)",
+          "--space-4xl": "11.09rem",
+          "--container-3xl": "48rem",
+          "--text-sm": ".875rem",
+          "--tw-translate-y": "0",
+          "--ease-out": "cubic-bezier(0,0,.2,1)",
+          "--obsidian-card": "#101010",
+          "--color-emerald-500": "lab(66.9756% -58.27 19.5419)",
+          "--color-accent-foreground": "#051639",
+          "--color-popover-foreground": "",
+          "--color-amber-700": "lab(47.2709% 42.9082 69.2966)",
+          "--tw-content": "\"\"",
+          "--color-amber-900": "lab(31.2288% 30.2627 40.0378)",
+          "--color-surface": "#fff",
+          "--color-indigo-500": "lab(48.295% 38.3129 -81.9673)",
+          "--leading-tight": "1.2",
+          "--color-gray-600": "lab(35.6337% -1.58697 -10.8425)",
+          "--color-neural-200": "#b3c7ef",
+          "--color-orange-100": "lab(94.7127% 3.58394 14.3151)",
+          "--color-purple-400": "lab(63.6946% 47.6127 -59.2066)",
+          "--ease-quantum": "cubic-bezier(.16,1,.3,1)",
+          "--color-blue-600": "lab(44.0605% 29.0279 -86.0352)",
+          "--color-green-200": "lab(92.4222% -26.4702 12.9427)",
+          "--color-ring": "#6e98ed",
+          "--tw-border-style": "solid",
+          "--color-error": "#df3a3a",
+          "--text-display-lg": "2.618rem",
+          "--color-border-glow": "#2060df61",
+          "--gradient-data-flow": "linear-gradient(90deg,#477eeb 0%,#25d1f4 38.2%,#1ae6a2 100%)",
+          "--color-border-strong": "#6e98ed",
+          "--color-red-600": "lab(48.4493% 77.4328 61.5452)",
+          "--tw-translate-x": "0",
+          "--color-border": "",
+          "--color-blue-50": "lab(96.492% -1.14644 -5.11479)",
+          "--color-neural-800": "#082868",
+          "--weight-bold": "700",
+          "--color-black": "#000",
+          "--duration-slower": ".686s",
+          "--color-foreground": "",
+          "--violet-glow": "#4f46e580",
+          "--color-neural-100": "#dde6f8",
+          "--shadow-quantum-2": "0 2px 4px #04163a1a,0 8px 13px #0516391f,0 0 16px #2060df0f",
+          "--fs-label": ".75rem",
+          "--obsidian-border": "#1e1e1e",
+          "--space-3xl": "6.854rem",
+          "--color-amber-100": "lab(95.916% -1.21653 23.111)",
+          "--weight-black": "900",
+          "--tw-space-y-reverse": "0",
+          "--text-4xl--line-height": "calc(2.5/2.25)",
+          "--color-indigo-100": "lab(91.6577% 1.04591 -12.7199)",
+          "--color-hero-ice": "#dde6f8",
+          "--space-sm": ".405rem",
+          "--fs-h1": "clamp(2rem,3.9vw,3.5rem)",
+          "--tracking-tight": "-.025em",
+          "--color-muted-foreground": "",
+          "--gradient-hero-dark": "linear-gradient(137.5deg,#04163a 0%,#051a42 38.2%,#071e4a 61.8%,#092253 100%)",
+          "--color-cyan-400": "lab(76.6045% -40.9406 -29.6231)",
+          "--fs-h2-zh": "clamp(1.375rem,2.5vw,2.25rem)",
+          "--color-amber-400": "lab(80.1641% 16.6016 99.2089)",
+          "--tw-ring-shadow": "0 0 #0000",
+          "--text-2xl": "1.5rem",
+          "--color-indigo-400": "lab(59.866% 22.4834 -64.4485)",
+          "--text-body-sm": ".75rem",
+          "--obsidian-ghost": "#2a2a2a",
+          "--nav-shadow": "0 8px 40px #0006",
+          "--color-purple-500": "lab(52.0183% 66.11 -78.2316)",
+          "--violet-pure": "#4f46e5",
+          "--color-quantum-cyan": "#25d1f4",
+          "--tw-drop-shadow-alpha": "100%",
+          "--text-body-xl": "1.125rem",
+          "--color-slate-700": "lab(26.9569% -1.47016 -15.6993)",
+          "--text-lg": "1.125rem",
+          "--text-8xl--line-height": "1",
+          "--color-amber-600": "lab(60.3514% 40.5624 87.1228)",
+          "--color-slate-900": "lab(7.78673% 1.82345 -15.0537)",
+          "--text-5xl--line-height": "1",
+          "--space-xl": "2.618rem",
+          "--color-green-100": "lab(96.1861% -13.8464 6.52365)",
+          "--leading-normal": "1.414",
+          "--ease-quantum-bounce": "cubic-bezier(.34,1.56,.64,1)",
+          "--ease-cinematic": "cubic-bezier(.16,1,.3,1)",
+          "--color-red-200": "lab(86.017% 19.8815 7.75869)",
+          "--color-dark-glass": "",
+          "--text-body-lg": "1rem",
+          "--animate-ping": "ping 1s cubic-bezier(0,0,.2,1)infinite",
+          "--fs-body-lg": "clamp(1.0625rem,1.3vw,1.25rem)",
+          "--glow-success": "0 0 20px #1bbb8680,0 0 40px #1bbb8640",
+          "--shadow-neuro-light": "20px 20px 60px #bed0f49e,-20px -20px 60px #f2f6fd9e",
+          "--shadow-quantum-dark-1": "0 2px 4px #020e2640,0 0 8px #2060df14",
+          "--blur-xl": "24px",
+          "--space-2xl": "4.236rem",
+          "--tw-ring-offset-color": "#fff",
+          "--text-lg--line-height": "calc(1.75/1.125)",
+          "--color-red-400": "lab(63.7053% 60.745 31.3109)",
+          "--color-dark-text-primary": "",
+          "--blur-3xl": "64px",
+          "--color-dark-text-tertiary": "",
+          "--font-sans": "ui-sans-serif,system-ui,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"",
+          "--tw-scale-z": "1",
+          "--nav-border": "#ffffff52",
+          "--radius": ".809rem",
+          "--shadow-quantum-1": "0 2px 4px #04163a14,0 0 8px #2060df0d",
+          "--color-emerald-100": "lab(94.9004% -17.0769 5.63836)",
+          "--color-red-800": "lab(33.7174% 55.8993 41.0293)",
+          "--color-red-500": "lab(55.4814% 75.0732 48.8528)",
+          "--color-background": "#051639",
+          "--color-surface-glass": "#fffc",
+          "--container-sm": "24rem",
+          "--tw-ring-offset-width": "0px",
+          "--color-zinc-300": "lab(84.9837% .601262 -2.17986)",
+          "--fs-display": "clamp(2.75rem,5.5vw,5rem)",
+          "--space-fluid-section": "clamp(4rem,2rem + 8vw,11.09rem)",
+          "--text-6xl": "3.75rem",
+          "--gradient-obsidian-hero": "radial-gradient(ellipse 120% 80% at 50% 130%,#4f46e52e 0%,#1e1b4b1f 35%,#05050500 70%)",
+          "--duration-slow": ".424s",
+          "--nav-mobile-bg": "#0a0a0a40",
+          "--default-font-family": "ui-sans-serif,system-ui,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"",
+          "--nav-shadow-scrolled": "0 4px 32px #0000008c,0 0 0 1px #4f46e51a",
+          "--font-weight-light": "300",
+          "--color-amber-800": "lab(37.8822% 37.1699 52.2718)",
+          "--color-hero-glow": "#96b1e9",
+          "--color-dark-border-subtle": "",
+          "--color-fuchsia-500": "lab(56.4256% 83.132 -64.639)",
+          "--color-dark-border-strong": "",
+          "--color-dark-text-accent": "#8fafef",
+          "--color-quantum-emerald": "#1ae6a2",
+          "--duration-fast": ".162s",
+          "--color-page-bg": "#051639",
+          "--text-display-2xl": "4.236rem",
+          "--shadow-quantum-dark-3": "0 2px 4px #020e2659,0 8px 13px #04122f66,0 21px 34px #06163873,0 0 24px #2060df26",
+          "--color-dark-text-secondary": "",
+          "--color-text-primary": "",
+          "--tw-gradient-from-position": "0%",
+          "--shadow-glass-strong": "0 2px 4px #04163a1f,0 8px 13px #05163924,0 21px 34px #071e4a29,0 0 24px #2060df14",
+          "--color-secondary-foreground": "",
+          "--ease-in-out": "cubic-bezier(.4,0,.2,1)",
+          "--tw-ring-offset-shadow": "0 0 #0000",
+          "--nav-separator": "#ffffff12",
+          "--color-quantum-600": "#3318bf",
+          "--color-hero-sea": "#b3c7ef",
+          "--fs-nav": ".75rem",
+          "--color-border-default": "#b3c7ef",
+          "--color-surface-elevated": "#f8faff",
+          "--tracking-tighter": "-.05em",
+          "--color-zinc-500": "lab(47.8878% 1.65477 -5.77283)",
+          "--font-weight-black": "900",
+          "--color-dark-frosted": "",
+          "--color-quantum-300": "#9f8fef",
+          "--color-indigo-950": "lab(12.4853% 14.9672 -31.3418)",
+          "--color-zinc-800": "lab(15.7305% .613764 -2.16959)",
+          "--nav-mobile-border": "#ffffff52",
+          "--color-neural-400": "#6e98ed",
+          "--shadow-quantum-3": "0 2px 4px #04163a1f,0 8px 13px #05163924,0 21px 34px #071e4a29,0 0 24px #2060df14",
+          "--container-5xl": "64rem",
+          "--color-amber-500": "lab(72.7183% 31.8672 97.9407)",
+          "--gradient-hero-light": "linear-gradient(137.5deg,#4ca6ff/**/0%,#dde6f8/**/38.2%,#b3c7ef/**/61.8%,#96b1e9/**/100%)",
+          "--color-neural-700": "#0f3b95",
+          "--color-slate-950": "lab(1.76974% 1.32743 -9.28855)",
+          "--fs-h3": "clamp(1.25rem,1.75vw,1.75rem)",
+          "--color-green-800": "lab(37.4616% -36.7971 22.9692)",
+          "--font-weight-semibold": "600",
+          "--weight-thin": "100",
+          "--tracking-wide": ".025em",
+          "--color-red-700": "lab(40.4273% 67.2623 53.7441)",
+          "--color-slate-100": "lab(96.286% -.852436 -2.46847)",
+          "--blur-md": "12px",
+          "--gradient-quantum": "linear-gradient(137.5deg,#6347eb 0%,#2e2eea 38.2%,#2b6cee 61.8%,#0f5af0 100%)",
+          "--color-blue-500": "lab(54.1736% 13.3369 -74.6839)",
+          "--fs-display-zh": "clamp(2.25rem,4.5vw,4rem)",
+          "--animate-spin": "spin 1s linear infinite",
+          "--container-4xl": "56rem",
+          "--space-lg": "1.618rem",
+          "--color-blue-900": "lab(26.1542% 15.7545 -51.5504)",
+          "--color-zinc-400": "lab(65.6464% 1.53497 -5.42429)",
+          "--obsidian": "#050505",
+          "--color-muted": "",
+          "--text-display-xl": "3.618rem",
+          "--nav-dot": "#ffffff2e",
+          "--color-dark-border-accent": "#6e98ed",
+          "--violet-dim": "#4f46e51f",
+          "--space-xs": ".25rem",
+          "--font-weight-extrabold": "800",
+          "--text-4xl": "2.25rem",
+          "--radius-full": "9999px",
+          "--tracking-normal": "0em",
+          "--section-py": "clamp(3.5rem,6vw,7rem)",
+          "--shadow-neuro-inset": "inset 20px 20px 60px #bed0f49e,inset -20px -20px 60px #f2f6fd9e",
+          "--color-red-50": "lab(96.5005% 4.18508 1.52328)",
+          "--tw-shadow": "0 0 #0000",
+          "--font-code": "",
+          "--color-blue-200": "lab(86.15% -4.04379 -21.0797)",
+          "--container-2xl": "42rem",
+          "--color-green-300": "lab(86.9953% -47.2691 25.0054)",
+          "--color-primary": "#6e98ed",
+          "--duration-normal": ".262s",
+          "--text-3xl--line-height": "calc(2.25/1.875)",
+          "--text-5xl": "3rem",
+          "--weight-medium": "500",
+          "--text-3xl": "1.875rem",
+          "--text-xs": ".75rem",
+          "--color-red-950": "lab(13.003% 29.04 16.7519)",
+          "--space-md": ".618rem",
+          "--font-weight-medium": "500",
+          "--tw-scale-x": "1",
+          "--fs-h2": "clamp(1.5rem,3vw,2.75rem)",
+          "--color-emerald-400": "lab(75.0771% -60.7313 19.4147)",
+          "--shadow-glass-light": "0 2px 4px #04163a14,0 0 8px #2060df0d",
+          "--text-sm--line-height": "calc(1.25/.875)",
+          "--color-indigo-900": "lab(23.3911% 24.6978 -50.4718)",
+          "--gallery-ghost": "#aaa",
+          "--font-serif": "",
+          "--color-surface-frosted": "#fff9",
+          "--color-dark-text-quaternary": "",
+          "--color-quantum-500": "#6347eb",
+          "--color-card": "",
+          "--font-display": "",
+          "--radius-xl": "1.309rem",
+          "--text-6xl--line-height": "1",
+          "--gallery-line": "#2a2a2a",
+          "--color-amber-50": "lab(98.6252% -.635922 8.42309)",
+          "--color-blue-950": "lab(15.6723% 8.86232 -32.2945)",
+          "--fs-small": ".875rem",
+          "--color-hero-sky": "#4ca6ff",
+          "--container-7xl": "80rem",
+          "--text-base": "1rem",
+          "--blur-sm": "8px",
+          "--color-amber-200": "lab(91.7203% -.505269 49.9084)",
+          "--default-mono-font-family": ""
+        }
+      }
+    }
+  },
+  "missing_categories": [
+    "pricing",
+    "feature"
+  ]
+}

@@ -87,3 +87,21 @@ This pattern is what made 5 production-grade patches ship in one afternoon with 
 ---
 
 *Foundation phase complete. Pipeline build phase begins with brand reference audit (Apr 28, 2026 evening).*
+
+---
+
+## Patch #5 — Brand reference audit (foundation for DESIGN.md authoring)
+
+Adds `pipeline/scripts/brand_audit.py`, a Playwright + BeautifulSoup audit that visits 20 reference sites (15 taste-driven + 5 white-bg gold standards: Stripe, Linear, Vercel, Resend, Mintlify) and captures up to 5 pages each (homepage, service, pricing, feature/case-study, blog). Per-page output: full-page PNG screenshot + computed-CSS token extraction (colors, typography, spacing, radii, shadows, gradients, CSS variables).
+
+Inputs: `pipeline/scripts/sites.json` (20 sites with optional per-category URL overrides). Inner-page URL discovery via `<nav>/<header>/<footer>/<main>` link parsing, scored against per-category keyword lists with same-domain enforcement. Light mode forced (`color_scheme="light"`); cookie/consent overlays suppressed via injected CSS pre-screenshot.
+
+Outputs (under `pipeline/brand-references/`):
+- `{slug}/extracted-tokens.json` — per-page distilled tokens, committed
+- `{slug}/screenshots/{category}.png` — full-page captures, gitignored
+- `_audit-run.json` — run summary with success/failure counts, committed
+- `_run.log` — forensic stdout trail, gitignored
+
+First run (Apr 29, 2026): 70/100 captures in 18m44s, zero `[ERR]` events. 5 sites with all 5 captures (Stripe, Vercel, Resend, Mintlify, mygomseo); 15 with partial captures (graceful skips on missing pricing/portfolio pages); 0 site-level failures. Output feeds white-background `factoryjet.DESIGN.md` synthesis (Step 1 of the 8-step pipeline build path).
+
+Why this exists: the prior `factoryjet.DESIGN.md` was written before the white-bg visual mandate and lacks reference-grounded defense for color, typography, and spacing decisions. Pipeline-generated landing pages need a brand contract whose decisions are defensible by reference rather than opinion.
