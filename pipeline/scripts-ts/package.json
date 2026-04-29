@@ -10,6 +10,7 @@
     "score": "tsx scripts/score-candidates.ts",
     "enrich": "tsx scripts/enrich-cities.ts",
     "test:validator": "tsx scripts/test-validator.ts",
+    "test:parser": "tsx scripts/test-parser.ts",
     "typecheck": "tsc --noEmit"
   },
   "engines": {

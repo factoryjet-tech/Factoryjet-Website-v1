@@ -27,14 +27,75 @@ function isAlreadyEnriched(country: 'GB' | 'US', slug: string): boolean {
   return existsSync(join(SCRIPTS_TS_ROOT, 'data', 'enriched', sub, `${slug}.json`));
 }
 
+/**
+ * Robustly extract a JSON object from the model's text output.
+ *
+ * The model is instructed to emit JSON only, but in practice often emits
+ * a planning preamble followed by the JSON, sometimes inside markdown
+ * fences. This parser handles all three observed shapes:
+ *
+ *   1. Pure JSON: "{...}"
+ *   2. Fenced JSON anywhere: "...prose...```json\n{...}\n```...prose..."
+ *   3. Naked JSON after prose: "...prose...{...}"
+ *
+ * For case 3 we extract the largest balanced { ... } block by walking the
+ * string and tracking brace depth (with string-literal awareness so that
+ * braces inside JSON string values don't mislead the depth counter).
+ */
 function tryParseJson(raw: string): unknown {
-  // Tolerate fenced output even though prompt forbids it.
   const trimmed = raw.trim();
-  const stripped = trimmed
-    .replace(/^```(?:json)?\s*/i, '')
-    .replace(/\s*```$/i, '')
-    .trim();
-  return JSON.parse(stripped);
+
+  // Case 1: pure JSON.
+  if (trimmed.startsWith('{') && trimmed.endsWith('}')) {
+    return JSON.parse(trimmed);
+  }
+
+  // Case 2: fenced JSON. Match the FIRST ```json (or ```) block.
+  const fenceMatch = trimmed.match(/```(?:json)?\s*\n([\s\S]*?)\n\s*```/i);
+  if (fenceMatch && fenceMatch[1]) {
+    const fenced = fenceMatch[1].trim();
+    if (fenced.startsWith('{')) {
+      return JSON.parse(fenced);
+    }
+  }
+
+  // Case 3: naked JSON embedded in prose. Walk the string to find the
+  // outermost balanced { ... } block. String-literal aware: a { or } inside
+  // a JSON string literal must not affect depth.
+  const start = trimmed.indexOf('{');
+  if (start === -1) {
+    throw new Error('no JSON object found in output');
+  }
+
+  let depth = 0;
+  let inString = false;
+  let escape = false;
+  for (let i = start; i < trimmed.length; i++) {
+    const ch = trimmed[i];
+    if (escape) {
+      escape = false;
+      continue;
+    }
+    if (ch === '\\') {
+      escape = true;
+      continue;
+    }
+    if (ch === '"') {
+      inString = !inString;
+      continue;
+    }
+    if (inString) continue;
+    if (ch === '{') depth++;
+    else if (ch === '}') {
+      depth--;
+      if (depth === 0) {
+        const candidate = trimmed.slice(start, i + 1);
+        return JSON.parse(candidate);
+      }
+    }
+  }
+
+  throw new Error('JSON object in output was not balanced');
 }
 
 export async function enrichBatch(opts: EnrichBatchOptions): Promise<EnrichmentOutcome[]> {
@@ -239,3 +300,7 @@ export async function enrichBatch(opts: EnrichBatchOptions): Promise<EnrichmentO
 
   return outcomes;
 }
+
+/** Test-only export. Do not use from production code paths — call
+ * enrichBatch instead. Exposed for parser fixture tests. */
+export const tryParseJsonForTesting = tryParseJson;

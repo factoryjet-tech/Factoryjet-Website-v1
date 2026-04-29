@@ -172,6 +172,54 @@ const cases: Case[] = [
     },
     expectOk: false,
   },
+  {
+    name: 'agency directory host accepted for competitor source',
+    mutate: (r) => {
+      const c = r.competitors[0];
+      if (c) {
+        const src = c.sources[0];
+        if (src) src.url = 'https://digitalagencynetwork.com/agencies/london/';
+      }
+      return r;
+    },
+    expectOk: true,
+  },
+  {
+    name: 'whitehat-seo accepted for competitor source',
+    mutate: (r) => {
+      const c = r.competitors[0];
+      if (c) {
+        const src = c.sources[0];
+        if (src) src.url = 'https://whitehat-seo.co.uk/blog/london-agencies';
+      }
+      return r;
+    },
+    expectOk: true,
+  },
+  {
+    name: 'data.london.gov.uk accepted for industry source',
+    mutate: (r) => {
+      const ind = r.industries[0];
+      if (ind) {
+        const src = ind.sources[0];
+        if (src) src.url = 'https://data.london.gov.uk/dataset/economy';
+      }
+      return r;
+    },
+    expectOk: true,
+  },
+  {
+    name: 'random unknown host still rejected for industry source',
+    mutate: (r) => {
+      const ind = r.industries[0];
+      if (ind) {
+        const src = ind.sources[0];
+        if (src) src.url = 'https://random-blog-site.example.com/london';
+      }
+      return r;
+    },
+    expectOk: false,
+  },
 ];
 
 let failed = 0;
