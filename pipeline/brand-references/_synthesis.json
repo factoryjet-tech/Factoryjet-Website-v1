@@ -1,0 +1,1745 @@
+{
+  "generated_at": "2026-04-29T06:16:16Z",
+  "sites_analyzed": 20,
+  "anchor_sites": [
+    "linear-app",
+    "mintlify-com",
+    "resend-com",
+    "stripe-com",
+    "vercel-com"
+  ],
+  "taste_sites": [
+    "ausdata-ai",
+    "digitalflagship-com",
+    "galvanite-io",
+    "jenamdvacetpet-cz",
+    "madeinevolve-com",
+    "mygomseo-com",
+    "natboos-com",
+    "nextsense-io",
+    "olyablack-com",
+    "onething-design",
+    "qvery-ai",
+    "spade-com",
+    "theboathouse-agency",
+    "tillerdigital-com",
+    "voxr-ai"
+  ],
+  "colors": {
+    "background_consensus": [
+      {
+        "hex": "#FFFFFF",
+        "lightness_class": "near-white",
+        "raw_count": 1085,
+        "sites_using_count": 20,
+        "sites_using": [
+          "ausdata-ai",
+          "digitalflagship-com",
+          "galvanite-io",
+          "jenamdvacetpet-cz",
+          "linear-app",
+          "madeinevolve-com",
+          "mintlify-com",
+          "mygomseo-com",
+          "natboos-com",
+          "nextsense-io",
+          "olyablack-com",
+          "onething-design",
+          "qvery-ai",
+          "resend-com",
+          "spade-com",
+          "stripe-com",
+          "theboathouse-agency",
+          "tillerdigital-com",
+          "vercel-com",
+          "voxr-ai"
+        ]
+      },
+      {
+        "hex": "#4A5B38",
+        "lightness_class": "dark",
+        "raw_count": 800,
+        "sites_using_count": 1,
+        "sites_using": [
+          "spade-com"
+        ]
+      },
+      {
+        "hex": "#000000",
+        "lightness_class": "near-black",
+        "raw_count": 641,
+        "sites_using_count": 10,
+        "sites_using": [
+          "linear-app",
+          "madeinevolve-com",
+          "mygomseo-com",
+          "nextsense-io",
+          "olyablack-com",
+          "onething-design",
+          "resend-com",
+          "theboathouse-agency",
+          "tillerdigital-com",
+          "voxr-ai"
+        ]
+      },
+      {
+        "hex": "#090F05",
+        "lightness_class": "near-black",
+        "raw_count": 292,
+        "sites_using_count": 1,
+        "sites_using": [
+          "spade-com"
+        ]
+      },
+      {
+        "hex": "#131313",
+        "lightness_class": "near-black",
+        "raw_count": 213,
+        "sites_using_count": 1,
+        "sites_using": [
+          "madeinevolve-com"
+        ]
+      },
+      {
+        "hex": "#060616",
+        "lightness_class": "near-black",
+        "raw_count": 198,
+        "sites_using_count": 1,
+        "sites_using": [
+          "digitalflagship-com"
+        ]
+      },
+      {
+        "hex": "#EBEBEB",
+        "lightness_class": "light",
+        "raw_count": 129,
+        "sites_using_count": 1,
+        "sites_using": [
+          "vercel-com"
+        ]
+      },
+      {
+        "hex": "#6400FF",
+        "lightness_class": "dark",
+        "raw_count": 91,
+        "sites_using_count": 1,
+        "sites_using": [
+          "mygomseo-com"
+        ]
+      },
+      {
+        "hex": "#2B2E3F",
+        "lightness_class": "dark",
+        "raw_count": 68,
+        "sites_using_count": 1,
+        "sites_using": [
+          "nextsense-io"
+        ]
+      },
+      {
+        "hex": "#111933",
+        "lightness_class": "near-black",
+        "raw_count": 59,
+        "sites_using_count": 1,
+        "sites_using": [
+          "galvanite-io"
+        ]
+      },
+      {
+        "hex": "#383845",
+        "lightness_class": "dark",
+        "raw_count": 57,
+        "sites_using_count": 1,
+        "sites_using": [
+          "digitalflagship-com"
+        ]
+      },
+      {
+        "hex": "#08080B",
+        "lightness_class": "near-black",
+        "raw_count": 51,
+        "sites_using_count": 1,
+        "sites_using": [
+          "natboos-com"
+        ]
+      },
+      {
+        "hex": "#0A0A0A",
+        "lightness_class": "near-black",
+        "raw_count": 42,
+        "sites_using_count": 3,
+        "sites_using": [
+          "ausdata-ai",
+          "mygomseo-com",
+          "onething-design"
+        ]
+      },
+      {
+        "hex": "#CCEEFF",
+        "lightness_class": "light",
+        "raw_count": 42,
+        "sites_using_count": 1,
+        "sites_using": [
+          "galvanite-io"
+        ]
+      },
+      {
+        "hex": "#FAFAFA",
+        "lightness_class": "near-white",
+        "raw_count": 42,
+        "sites_using_count": 2,
+        "sites_using": [
+          "mygomseo-com",
+          "vercel-com"
+        ]
+      }
+    ],
+    "text_consensus": [
+      {
+        "hex": "#000000",
+        "lightness_class": "near-black",
+        "raw_count": 21890,
+        "sites_using_count": 20,
+        "sites_using": [
+          "ausdata-ai",
+          "digitalflagship-com",
+          "galvanite-io",
+          "jenamdvacetpet-cz",
+          "linear-app",
+          "madeinevolve-com",
+          "mintlify-com",
+          "mygomseo-com",
+          "natboos-com",
+          "nextsense-io",
+          "olyablack-com",
+          "onething-design",
+          "qvery-ai",
+          "resend-com",
+          "spade-com",
+          "stripe-com",
+          "theboathouse-agency",
+          "tillerdigital-com",
+          "vercel-com",
+          "voxr-ai"
+        ]
+      },
+      {
+        "hex": "#FFFFFF",
+        "lightness_class": "near-white",
+        "raw_count": 20455,
+        "sites_using_count": 19,
+        "sites_using": [
+          "digitalflagship-com",
+          "galvanite-io",
+          "jenamdvacetpet-cz",
+          "linear-app",
+          "madeinevolve-com",
+          "mintlify-com",
+          "mygomseo-com",
+          "natboos-com",
+          "nextsense-io",
+          "olyablack-com",
+          "onething-design",
+          "qvery-ai",
+          "resend-com",
+          "spade-com",
+          "stripe-com",
+          "theboathouse-agency",
+          "tillerdigital-com",
+          "vercel-com",
+          "voxr-ai"
+        ]
+      },
+      {
+        "hex": "#171717",
+        "lightness_class": "near-black",
+        "raw_count": 9015,
+        "sites_using_count": 1,
+        "sites_using": [
+          "vercel-com"
+        ]
+      },
+      {
+        "hex": "#F7F8F8",
+        "lightness_class": "near-white",
+        "raw_count": 7968,
+        "sites_using_count": 1,
+        "sites_using": [
+          "linear-app"
+        ]
+      },
+      {
+        "hex": "#425466",
+        "lightness_class": "dark",
+        "raw_count": 6317,
+        "sites_using_count": 1,
+        "sites_using": [
+          "stripe-com"
+        ]
+      },
+      {
+        "hex": "#F0F0F0",
+        "lightness_class": "light",
+        "raw_count": 4192,
+        "sites_using_count": 1,
+        "sites_using": [
+          "resend-com"
+        ]
+      },
+      {
+        "hex": "#533AFD",
+        "lightness_class": "dark",
+        "raw_count": 3323,
+        "sites_using_count": 1,
+        "sites_using": [
+          "stripe-com"
+        ]
+      },
+      {
+        "hex": "#4D4D4D",
+        "lightness_class": "dark",
+        "raw_count": 2358,
+        "sites_using_count": 1,
+        "sites_using": [
+          "vercel-com"
+        ]
+      },
+      {
+        "hex": "#0A2540",
+        "lightness_class": "near-black",
+        "raw_count": 2173,
+        "sites_using_count": 1,
+        "sites_using": [
+          "stripe-com"
+        ]
+      },
+      {
+        "hex": "#F1F7FE",
+        "lightness_class": "light",
+        "raw_count": 1947,
+        "sites_using_count": 1,
+        "sites_using": [
+          "resend-com"
+        ]
+      },
+      {
+        "hex": "#090F05",
+        "lightness_class": "near-black",
+        "raw_count": 1750,
+        "sites_using_count": 1,
+        "sites_using": [
+          "spade-com"
+        ]
+      },
+      {
+        "hex": "#CCEEFF",
+        "lightness_class": "light",
+        "raw_count": 1461,
+        "sites_using_count": 1,
+        "sites_using": [
+          "galvanite-io"
+        ]
+      }
+    ],
+    "border_consensus": [
+      {
+        "hex": "#000000",
+        "lightness_class": "near-black",
+        "raw_count": 121,
+        "sites_using_count": 0,
+        "sites_using": []
+      },
+      {
+        "hex": "#FFFFFF",
+        "lightness_class": "near-white",
+        "raw_count": 91,
+        "sites_using_count": 0,
+        "sites_using": []
+      },
+      {
+        "hex": "#343442",
+        "lightness_class": "dark",
+        "raw_count": 48,
+        "sites_using_count": 0,
+        "sites_using": []
+      },
+      {
+        "hex": "#E6ECF2",
+        "lightness_class": "light",
+        "raw_count": 44,
+        "sites_using_count": 0,
+        "sites_using": []
+      },
+      {
+        "hex": "#2D4F80",
+        "lightness_class": "dark",
+        "raw_count": 42,
+        "sites_using_count": 0,
+        "sites_using": []
+      },
+      {
+        "hex": "#1F1F22",
+        "lightness_class": "near-black",
+        "raw_count": 33,
+        "sites_using_count": 0,
+        "sites_using": []
+      },
+      {
+        "hex": "#FFF9EE",
+        "lightness_class": "near-white",
+        "raw_count": 33,
+        "sites_using_count": 0,
+        "sites_using": []
+      },
+      {
+        "hex": "#DDDDDD",
+        "lightness_class": "light",
+        "raw_count": 32,
+        "sites_using_count": 0,
+        "sites_using": []
+      },
+      {
+        "hex": "#E5EDF5",
+        "lightness_class": "light",
+        "raw_count": 29,
+        "sites_using_count": 0,
+        "sites_using": []
+      },
+      {
+        "hex": "#08080B",
+        "lightness_class": "near-black",
+        "raw_count": 26,
+        "sites_using_count": 0,
+        "sites_using": []
+      }
+    ]
+  },
+  "typography": {
+    "font_family_consensus": [
+      {
+        "family": "sohne-var",
+        "raw_count": 16446,
+        "sites_using_count": 1,
+        "sites_using": [
+          "stripe-com"
+        ]
+      },
+      {
+        "family": "geist",
+        "raw_count": 15190,
+        "sites_using_count": 2,
+        "sites_using": [
+          "mygomseo-com",
+          "vercel-com"
+        ]
+      },
+      {
+        "family": "inter",
+        "raw_count": 14020,
+        "sites_using_count": 3,
+        "sites_using": [
+          "mintlify-com",
+          "qvery-ai",
+          "resend-com"
+        ]
+      },
+      {
+        "family": "arial",
+        "raw_count": 10784,
+        "sites_using_count": 8,
+        "sites_using": [
+          "jenamdvacetpet-cz",
+          "madeinevolve-com",
+          "natboos-com",
+          "nextsense-io",
+          "olyablack-com",
+          "stripe-com",
+          "theboathouse-agency",
+          "tillerdigital-com"
+        ]
+      },
+      {
+        "family": "inter variable",
+        "raw_count": 10195,
+        "sites_using_count": 1,
+        "sites_using": [
+          "linear-app"
+        ]
+      },
+      {
+        "family": "dm sans",
+        "raw_count": 6765,
+        "sites_using_count": 3,
+        "sites_using": [
+          "galvanite-io",
+          "nextsense-io",
+          "voxr-ai"
+        ]
+      },
+      {
+        "family": "bassen",
+        "raw_count": 4059,
+        "sites_using_count": 1,
+        "sites_using": [
+          "tillerdigital-com"
+        ]
+      },
+      {
+        "family": "times new roman",
+        "raw_count": 3667,
+        "sites_using_count": 12,
+        "sites_using": [
+          "ausdata-ai",
+          "digitalflagship-com",
+          "linear-app",
+          "madeinevolve-com",
+          "natboos-com",
+          "olyablack-com",
+          "onething-design",
+          "qvery-ai",
+          "stripe-com",
+          "theboathouse-agency",
+          "tillerdigital-com",
+          "voxr-ai"
+        ]
+      },
+      {
+        "family": "saans",
+        "raw_count": 3441,
+        "sites_using_count": 1,
+        "sites_using": [
+          "digitalflagship-com"
+        ]
+      },
+      {
+        "family": "polar",
+        "raw_count": 2823,
+        "sites_using_count": 1,
+        "sites_using": [
+          "spade-com"
+        ]
+      },
+      {
+        "family": "miletus grotesk",
+        "raw_count": 2621,
+        "sites_using_count": 1,
+        "sites_using": [
+          "nextsense-io"
+        ]
+      },
+      {
+        "family": "plusjakartasans var",
+        "raw_count": 2324,
+        "sites_using_count": 1,
+        "sites_using": [
+          "onething-design"
+        ]
+      },
+      {
+        "family": "sans-serif",
+        "raw_count": 1864,
+        "sites_using_count": 5,
+        "sites_using": [
+          "galvanite-io",
+          "madeinevolve-com",
+          "onething-design",
+          "qvery-ai",
+          "voxr-ai"
+        ]
+      },
+      {
+        "family": "ui-sans-serif",
+        "raw_count": 1205,
+        "sites_using_count": 3,
+        "sites_using": [
+          "mintlify-com",
+          "mygomseo-com",
+          "spade-com"
+        ]
+      },
+      {
+        "family": "bull 5 typewriter",
+        "raw_count": 1100,
+        "sites_using_count": 1,
+        "sites_using": [
+          "madeinevolve-com"
+        ]
+      }
+    ],
+    "font_size_scale_px": [
+      {
+        "px": 1,
+        "site_page_occurrences": 4
+      },
+      {
+        "px": 8,
+        "site_page_occurrences": 12
+      },
+      {
+        "px": 9,
+        "site_page_occurrences": 2
+      },
+      {
+        "px": 10,
+        "site_page_occurrences": 24
+      },
+      {
+        "px": 11,
+        "site_page_occurrences": 14
+      },
+      {
+        "px": 12,
+        "site_page_occurrences": 18
+      },
+      {
+        "px": 13,
+        "site_page_occurrences": 22
+      },
+      {
+        "px": 14,
+        "site_page_occurrences": 27
+      },
+      {
+        "px": 15,
+        "site_page_occurrences": 6
+      },
+      {
+        "px": 16,
+        "site_page_occurrences": 36
+      },
+      {
+        "px": 17,
+        "site_page_occurrences": 5
+      },
+      {
+        "px": 18,
+        "site_page_occurrences": 22
+      },
+      {
+        "px": 19,
+        "site_page_occurrences": 8
+      },
+      {
+        "px": 20,
+        "site_page_occurrences": 31
+      },
+      {
+        "px": 21,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 22,
+        "site_page_occurrences": 3
+      },
+      {
+        "px": 23,
+        "site_page_occurrences": 3
+      },
+      {
+        "px": 24,
+        "site_page_occurrences": 34
+      },
+      {
+        "px": 25,
+        "site_page_occurrences": 3
+      },
+      {
+        "px": 26,
+        "site_page_occurrences": 6
+      },
+      {
+        "px": 27,
+        "site_page_occurrences": 3
+      },
+      {
+        "px": 28,
+        "site_page_occurrences": 10
+      },
+      {
+        "px": 30,
+        "site_page_occurrences": 15
+      },
+      {
+        "px": 31,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 32,
+        "site_page_occurrences": 18
+      },
+      {
+        "px": 33,
+        "site_page_occurrences": 2
+      },
+      {
+        "px": 34,
+        "site_page_occurrences": 6
+      },
+      {
+        "px": 35,
+        "site_page_occurrences": 4
+      },
+      {
+        "px": 36,
+        "site_page_occurrences": 7
+      },
+      {
+        "px": 38,
+        "site_page_occurrences": 7
+      },
+      {
+        "px": 39,
+        "site_page_occurrences": 3
+      },
+      {
+        "px": 40,
+        "site_page_occurrences": 15
+      },
+      {
+        "px": 42,
+        "site_page_occurrences": 4
+      },
+      {
+        "px": 43,
+        "site_page_occurrences": 3
+      },
+      {
+        "px": 44,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 45,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 46,
+        "site_page_occurrences": 2
+      },
+      {
+        "px": 47,
+        "site_page_occurrences": 3
+      },
+      {
+        "px": 48,
+        "site_page_occurrences": 23
+      },
+      {
+        "px": 50,
+        "site_page_occurrences": 3
+      },
+      {
+        "px": 51,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 52,
+        "site_page_occurrences": 2
+      },
+      {
+        "px": 53,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 55,
+        "site_page_occurrences": 2
+      },
+      {
+        "px": 56,
+        "site_page_occurrences": 19
+      },
+      {
+        "px": 58,
+        "site_page_occurrences": 8
+      },
+      {
+        "px": 59,
+        "site_page_occurrences": 4
+      },
+      {
+        "px": 60,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 62,
+        "site_page_occurrences": 2
+      },
+      {
+        "px": 63,
+        "site_page_occurrences": 5
+      },
+      {
+        "px": 64,
+        "site_page_occurrences": 5
+      },
+      {
+        "px": 68,
+        "site_page_occurrences": 2
+      },
+      {
+        "px": 70,
+        "site_page_occurrences": 3
+      },
+      {
+        "px": 72,
+        "site_page_occurrences": 11
+      },
+      {
+        "px": 76,
+        "site_page_occurrences": 2
+      },
+      {
+        "px": 77,
+        "site_page_occurrences": 5
+      },
+      {
+        "px": 78,
+        "site_page_occurrences": 4
+      },
+      {
+        "px": 79,
+        "site_page_occurrences": 4
+      },
+      {
+        "px": 80,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 84,
+        "site_page_occurrences": 7
+      },
+      {
+        "px": 85,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 88,
+        "site_page_occurrences": 2
+      },
+      {
+        "px": 91,
+        "site_page_occurrences": 2
+      },
+      {
+        "px": 96,
+        "site_page_occurrences": 4
+      },
+      {
+        "px": 97,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 100,
+        "site_page_occurrences": 4
+      },
+      {
+        "px": 102,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 104,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 110,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 112,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 120,
+        "site_page_occurrences": 2
+      },
+      {
+        "px": 130,
+        "site_page_occurrences": 4
+      },
+      {
+        "px": 137,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 144,
+        "site_page_occurrences": 2
+      },
+      {
+        "px": 150,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 158,
+        "site_page_occurrences": 4
+      },
+      {
+        "px": 180,
+        "site_page_occurrences": 3
+      },
+      {
+        "px": 187,
+        "site_page_occurrences": 1
+      }
+    ],
+    "font_weight_consensus": [
+      {
+        "weight": "400",
+        "raw_count": 74340
+      },
+      {
+        "weight": "300",
+        "raw_count": 12434
+      },
+      {
+        "weight": "500",
+        "raw_count": 8310
+      },
+      {
+        "weight": "600",
+        "raw_count": 3649
+      },
+      {
+        "weight": "700",
+        "raw_count": 1261
+      },
+      {
+        "weight": "425",
+        "raw_count": 1014
+      },
+      {
+        "weight": "510",
+        "raw_count": 708
+      },
+      {
+        "weight": "900",
+        "raw_count": 489
+      }
+    ]
+  },
+  "spacing": {
+    "spacing_scale_px": [
+      {
+        "px": 1,
+        "site_page_occurrences": 44
+      },
+      {
+        "px": 2,
+        "site_page_occurrences": 28
+      },
+      {
+        "px": 3,
+        "site_page_occurrences": 6
+      },
+      {
+        "px": 4,
+        "site_page_occurrences": 62
+      },
+      {
+        "px": 5,
+        "site_page_occurrences": 16
+      },
+      {
+        "px": 6,
+        "site_page_occurrences": 19
+      },
+      {
+        "px": 7,
+        "site_page_occurrences": 16
+      },
+      {
+        "px": 8,
+        "site_page_occurrences": 73
+      },
+      {
+        "px": 10,
+        "site_page_occurrences": 36
+      },
+      {
+        "px": 11,
+        "site_page_occurrences": 11
+      },
+      {
+        "px": 12,
+        "site_page_occurrences": 71
+      },
+      {
+        "px": 13,
+        "site_page_occurrences": 5
+      },
+      {
+        "px": 14,
+        "site_page_occurrences": 25
+      },
+      {
+        "px": 15,
+        "site_page_occurrences": 14
+      },
+      {
+        "px": 16,
+        "site_page_occurrences": 78
+      },
+      {
+        "px": 17,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 18,
+        "site_page_occurrences": 12
+      },
+      {
+        "px": 19,
+        "site_page_occurrences": 5
+      },
+      {
+        "px": 20,
+        "site_page_occurrences": 65
+      },
+      {
+        "px": 21,
+        "site_page_occurrences": 2
+      },
+      {
+        "px": 22,
+        "site_page_occurrences": 4
+      },
+      {
+        "px": 23,
+        "site_page_occurrences": 7
+      },
+      {
+        "px": 24,
+        "site_page_occurrences": 84
+      },
+      {
+        "px": 25,
+        "site_page_occurrences": 4
+      },
+      {
+        "px": 26,
+        "site_page_occurrences": 4
+      },
+      {
+        "px": 27,
+        "site_page_occurrences": 3
+      },
+      {
+        "px": 28,
+        "site_page_occurrences": 9
+      },
+      {
+        "px": 29,
+        "site_page_occurrences": 14
+      },
+      {
+        "px": 30,
+        "site_page_occurrences": 17
+      },
+      {
+        "px": 32,
+        "site_page_occurrences": 73
+      },
+      {
+        "px": 35,
+        "site_page_occurrences": 4
+      },
+      {
+        "px": 36,
+        "site_page_occurrences": 16
+      },
+      {
+        "px": 37,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 38,
+        "site_page_occurrences": 2
+      },
+      {
+        "px": 40,
+        "site_page_occurrences": 60
+      },
+      {
+        "px": 42,
+        "site_page_occurrences": 3
+      },
+      {
+        "px": 43,
+        "site_page_occurrences": 2
+      },
+      {
+        "px": 44,
+        "site_page_occurrences": 6
+      },
+      {
+        "px": 45,
+        "site_page_occurrences": 2
+      },
+      {
+        "px": 46,
+        "site_page_occurrences": 8
+      },
+      {
+        "px": 48,
+        "site_page_occurrences": 62
+      },
+      {
+        "px": 50,
+        "site_page_occurrences": 13
+      },
+      {
+        "px": 52,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 55,
+        "site_page_occurrences": 2
+      },
+      {
+        "px": 56,
+        "site_page_occurrences": 15
+      },
+      {
+        "px": 58,
+        "site_page_occurrences": 7
+      },
+      {
+        "px": 60,
+        "site_page_occurrences": 6
+      },
+      {
+        "px": 61,
+        "site_page_occurrences": 3
+      },
+      {
+        "px": 64,
+        "site_page_occurrences": 42
+      },
+      {
+        "px": 67,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 68,
+        "site_page_occurrences": 6
+      },
+      {
+        "px": 72,
+        "site_page_occurrences": 13
+      },
+      {
+        "px": 75,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 77,
+        "site_page_occurrences": 3
+      },
+      {
+        "px": 80,
+        "site_page_occurrences": 23
+      },
+      {
+        "px": 84,
+        "site_page_occurrences": 2
+      },
+      {
+        "px": 86,
+        "site_page_occurrences": 4
+      },
+      {
+        "px": 90,
+        "site_page_occurrences": 2
+      },
+      {
+        "px": 91,
+        "site_page_occurrences": 4
+      },
+      {
+        "px": 96,
+        "site_page_occurrences": 19
+      },
+      {
+        "px": 100,
+        "site_page_occurrences": 3
+      },
+      {
+        "px": 104,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 106,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 109,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 110,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 112,
+        "site_page_occurrences": 4
+      },
+      {
+        "px": 115,
+        "site_page_occurrences": 4
+      },
+      {
+        "px": 120,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 122,
+        "site_page_occurrences": 4
+      },
+      {
+        "px": 128,
+        "site_page_occurrences": 7
+      },
+      {
+        "px": 129,
+        "site_page_occurrences": 5
+      },
+      {
+        "px": 134,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 135,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 136,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 140,
+        "site_page_occurrences": 3
+      },
+      {
+        "px": 144,
+        "site_page_occurrences": 6
+      },
+      {
+        "px": 152,
+        "site_page_occurrences": 1
+      },
+      {
+        "px": 164,
+        "site_page_occurrences": 3
+      },
+      {
+        "px": 180,
+        "site_page_occurrences": 2
+      }
+    ],
+    "radius_scale_px": [
+      {
+        "px": 0,
+        "raw_count": 18
+      },
+      {
+        "px": 1,
+        "raw_count": 84
+      },
+      {
+        "px": 2,
+        "raw_count": 87
+      },
+      {
+        "px": 3,
+        "raw_count": 41
+      },
+      {
+        "px": 4,
+        "raw_count": 515
+      },
+      {
+        "px": 5,
+        "raw_count": 16
+      },
+      {
+        "px": 6,
+        "raw_count": 796
+      },
+      {
+        "px": 7,
+        "raw_count": 39
+      },
+      {
+        "px": 8,
+        "raw_count": 328
+      },
+      {
+        "px": 9,
+        "raw_count": 7
+      },
+      {
+        "px": 10,
+        "raw_count": 89
+      },
+      {
+        "px": 12,
+        "raw_count": 121
+      },
+      {
+        "px": 13,
+        "raw_count": 8
+      },
+      {
+        "px": 14,
+        "raw_count": 16
+      },
+      {
+        "px": 15,
+        "raw_count": 5
+      },
+      {
+        "px": 16,
+        "raw_count": 428
+      },
+      {
+        "px": 18,
+        "raw_count": 4
+      },
+      {
+        "px": 20,
+        "raw_count": 70
+      },
+      {
+        "px": 22,
+        "raw_count": 21
+      },
+      {
+        "px": 23,
+        "raw_count": 6
+      },
+      {
+        "px": 24,
+        "raw_count": 90
+      },
+      {
+        "px": 25,
+        "raw_count": 1
+      },
+      {
+        "px": 30,
+        "raw_count": 40
+      },
+      {
+        "px": 32,
+        "raw_count": 94
+      },
+      {
+        "px": 40,
+        "raw_count": 9
+      },
+      {
+        "px": 50,
+        "raw_count": 5
+      },
+      {
+        "px": 60,
+        "raw_count": 2
+      },
+      {
+        "px": 64,
+        "raw_count": 40
+      },
+      {
+        "px": 80,
+        "raw_count": 10
+      },
+      {
+        "px": 89,
+        "raw_count": 8
+      },
+      {
+        "px": 99,
+        "raw_count": 77
+      },
+      {
+        "px": 100,
+        "raw_count": 68
+      },
+      {
+        "px": 110,
+        "raw_count": 18
+      },
+      {
+        "px": 114,
+        "raw_count": 8
+      },
+      {
+        "px": 128,
+        "raw_count": 14
+      },
+      {
+        "px": 200,
+        "raw_count": 7
+      },
+      {
+        "px": 300,
+        "raw_count": 35
+      },
+      {
+        "px": 562,
+        "raw_count": 5
+      },
+      {
+        "px": 900,
+        "raw_count": 88
+      },
+      {
+        "px": 999,
+        "raw_count": 100
+      },
+      {
+        "px": 1124,
+        "raw_count": 10
+      },
+      {
+        "px": 1600,
+        "raw_count": 2
+      },
+      {
+        "px": 9999,
+        "raw_count": 184
+      }
+    ],
+    "top_shadows": [
+      {
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(176, 199, 217, 0.145) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "raw_count": 156
+      },
+      {
+        "shadow": "rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px",
+        "raw_count": 38
+      },
+      {
+        "shadow": "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
+        "raw_count": 38
+      },
+      {
+        "shadow": "rgba(0, 0, 0, 0.08) 0px 0px 0px 1px, rgba(0, 0, 0, 0.04) 0px 2px 2px 0px, rgb(250, 250, 250) 0px 0px 0px 1px",
+        "raw_count": 35
+      },
+      {
+        "shadow": "rgba(50, 50, 93, 0.25) 0px 6.3px 11.5px -3.5px, rgba(0, 0, 0, 0.1) 0px 3.8px 7.5px -3.7px",
+        "raw_count": 32
+      },
+      {
+        "shadow": "rgba(0, 0, 0, 0.03) 0px 1.2px 0px 0px",
+        "raw_count": 31
+      },
+      {
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, lab(2.42579 -0.165291 -0.470081 / 0.03) 0px 2px 4px 0px",
+        "raw_count": 25
+      },
+      {
+        "shadow": "rgb(255, 255, 255) 0px 0px 0px 1px",
+        "raw_count": 21
+      },
+      {
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px",
+        "raw_count": 20
+      },
+      {
+        "shadow": "rgba(0, 0, 0, 0) 0px 8px 2px 0px, rgba(0, 0, 0, 0.01) 0px 5px 2px 0px, rgba(0, 0, 0, 0.04) 0px 3px 2px 0px, rgba(0, 0, 0, 0.07) 0px 1px 1px 0px, rgba(0, 0, 0, 0.08) 0px 0px 1px 0px",
+        "raw_count": 19
+      }
+    ]
+  },
+  "gradients": {
+    "sites_with_gradients": 15,
+    "sites_without_gradients": 5,
+    "per_site": [
+      {
+        "slug": "resend-com",
+        "category": "anchor",
+        "pages_captured": 5,
+        "total_gradient_instances": 670,
+        "gradients_present": true,
+        "avg_gradients_per_page": 134.0
+      },
+      {
+        "slug": "stripe-com",
+        "category": "anchor",
+        "pages_captured": 5,
+        "total_gradient_instances": 179,
+        "gradients_present": true,
+        "avg_gradients_per_page": 35.8
+      },
+      {
+        "slug": "galvanite-io",
+        "category": "taste",
+        "pages_captured": 3,
+        "total_gradient_instances": 126,
+        "gradients_present": true,
+        "avg_gradients_per_page": 42.0
+      },
+      {
+        "slug": "voxr-ai",
+        "category": "taste",
+        "pages_captured": 3,
+        "total_gradient_instances": 82,
+        "gradients_present": true,
+        "avg_gradients_per_page": 27.3
+      },
+      {
+        "slug": "ausdata-ai",
+        "category": "taste",
+        "pages_captured": 3,
+        "total_gradient_instances": 70,
+        "gradients_present": true,
+        "avg_gradients_per_page": 23.3
+      },
+      {
+        "slug": "mintlify-com",
+        "category": "anchor",
+        "pages_captured": 5,
+        "total_gradient_instances": 36,
+        "gradients_present": true,
+        "avg_gradients_per_page": 7.2
+      },
+      {
+        "slug": "linear-app",
+        "category": "anchor",
+        "pages_captured": 4,
+        "total_gradient_instances": 34,
+        "gradients_present": true,
+        "avg_gradients_per_page": 8.5
+      },
+      {
+        "slug": "nextsense-io",
+        "category": "taste",
+        "pages_captured": 3,
+        "total_gradient_instances": 25,
+        "gradients_present": true,
+        "avg_gradients_per_page": 8.3
+      },
+      {
+        "slug": "onething-design",
+        "category": "taste",
+        "pages_captured": 4,
+        "total_gradient_instances": 20,
+        "gradients_present": true,
+        "avg_gradients_per_page": 5.0
+      },
+      {
+        "slug": "mygomseo-com",
+        "category": "taste",
+        "pages_captured": 5,
+        "total_gradient_instances": 17,
+        "gradients_present": true,
+        "avg_gradients_per_page": 3.4
+      },
+      {
+        "slug": "madeinevolve-com",
+        "category": "taste",
+        "pages_captured": 3,
+        "total_gradient_instances": 16,
+        "gradients_present": true,
+        "avg_gradients_per_page": 5.3
+      },
+      {
+        "slug": "digitalflagship-com",
+        "category": "taste",
+        "pages_captured": 4,
+        "total_gradient_instances": 13,
+        "gradients_present": true,
+        "avg_gradients_per_page": 3.2
+      },
+      {
+        "slug": "vercel-com",
+        "category": "anchor",
+        "pages_captured": 5,
+        "total_gradient_instances": 9,
+        "gradients_present": true,
+        "avg_gradients_per_page": 1.8
+      },
+      {
+        "slug": "natboos-com",
+        "category": "taste",
+        "pages_captured": 2,
+        "total_gradient_instances": 8,
+        "gradients_present": true,
+        "avg_gradients_per_page": 4.0
+      },
+      {
+        "slug": "jenamdvacetpet-cz",
+        "category": "taste",
+        "pages_captured": 1,
+        "total_gradient_instances": 1,
+        "gradients_present": true,
+        "avg_gradients_per_page": 1.0
+      },
+      {
+        "slug": "olyablack-com",
+        "category": "taste",
+        "pages_captured": 3,
+        "total_gradient_instances": 0,
+        "gradients_present": false,
+        "avg_gradients_per_page": 0.0
+      },
+      {
+        "slug": "qvery-ai",
+        "category": "taste",
+        "pages_captured": 2,
+        "total_gradient_instances": 0,
+        "gradients_present": false,
+        "avg_gradients_per_page": 0.0
+      },
+      {
+        "slug": "spade-com",
+        "category": "taste",
+        "pages_captured": 4,
+        "total_gradient_instances": 0,
+        "gradients_present": false,
+        "avg_gradients_per_page": 0.0
+      },
+      {
+        "slug": "theboathouse-agency",
+        "category": "taste",
+        "pages_captured": 2,
+        "total_gradient_instances": 0,
+        "gradients_present": false,
+        "avg_gradients_per_page": 0.0
+      },
+      {
+        "slug": "tillerdigital-com",
+        "category": "taste",
+        "pages_captured": 4,
+        "total_gradient_instances": 0,
+        "gradients_present": false,
+        "avg_gradients_per_page": 0.0
+      }
+    ]
+  },
+  "css_variables": {
+    "by_site": [
+      {
+        "slug": "stripe-com",
+        "category": "anchor",
+        "css_var_count": 684,
+        "publishes_design_system": true
+      },
+      {
+        "slug": "linear-app",
+        "category": "anchor",
+        "css_var_count": 549,
+        "publishes_design_system": true
+      },
+      {
+        "slug": "resend-com",
+        "category": "anchor",
+        "css_var_count": 464,
+        "publishes_design_system": true
+      },
+      {
+        "slug": "jenamdvacetpet-cz",
+        "category": "taste",
+        "css_var_count": 424,
+        "publishes_design_system": true
+      },
+      {
+        "slug": "nextsense-io",
+        "category": "taste",
+        "css_var_count": 413,
+        "publishes_design_system": true
+      },
+      {
+        "slug": "vercel-com",
+        "category": "anchor",
+        "css_var_count": 407,
+        "publishes_design_system": true
+      },
+      {
+        "slug": "ausdata-ai",
+        "category": "taste",
+        "css_var_count": 350,
+        "publishes_design_system": true
+      },
+      {
+        "slug": "mygomseo-com",
+        "category": "taste",
+        "css_var_count": 320,
+        "publishes_design_system": true
+      },
+      {
+        "slug": "natboos-com",
+        "category": "taste",
+        "css_var_count": 165,
+        "publishes_design_system": true
+      },
+      {
+        "slug": "olyablack-com",
+        "category": "taste",
+        "css_var_count": 161,
+        "publishes_design_system": true
+      },
+      {
+        "slug": "theboathouse-agency",
+        "category": "taste",
+        "css_var_count": 161,
+        "publishes_design_system": true
+      },
+      {
+        "slug": "mintlify-com",
+        "category": "anchor",
+        "css_var_count": 157,
+        "publishes_design_system": true
+      },
+      {
+        "slug": "spade-com",
+        "category": "taste",
+        "css_var_count": 99,
+        "publishes_design_system": true
+      },
+      {
+        "slug": "onething-design",
+        "category": "taste",
+        "css_var_count": 68,
+        "publishes_design_system": true
+      },
+      {
+        "slug": "digitalflagship-com",
+        "category": "taste",
+        "css_var_count": 59,
+        "publishes_design_system": true
+      },
+      {
+        "slug": "tillerdigital-com",
+        "category": "taste",
+        "css_var_count": 50,
+        "publishes_design_system": true
+      },
+      {
+        "slug": "galvanite-io",
+        "category": "taste",
+        "css_var_count": 39,
+        "publishes_design_system": true
+      },
+      {
+        "slug": "madeinevolve-com",
+        "category": "taste",
+        "css_var_count": 29,
+        "publishes_design_system": true
+      },
+      {
+        "slug": "voxr-ai",
+        "category": "taste",
+        "css_var_count": 14,
+        "publishes_design_system": false
+      },
+      {
+        "slug": "qvery-ai",
+        "category": "taste",
+        "css_var_count": 1,
+        "publishes_design_system": false
+      }
+    ],
+    "sites_with_design_system": 18
+  }
+}
