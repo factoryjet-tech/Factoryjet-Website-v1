@@ -1,6 +1,10 @@
 import { z } from 'zod';
 import { CURRENT_ENRICHMENT_VERSION } from '../../config/city-data/types.js';
-import { isHeadlineStatHost, isAcceptableSecondaryHost } from './source-allowlist.js';
+import {
+  isHeadlineStatHost,
+  isAcceptableSecondaryHost,
+  isAcceptableCompetitorSource,
+} from './source-allowlist.js';
 
 const sourceSchema = z.object({
   url: z.string().url(),
@@ -129,8 +133,29 @@ export function validateEnrichment(input: unknown): ValidationResult {
     });
   };
 
+  const checkCompetitor = (
+    path: string,
+    sources: ReadonlyArray<{ url: string; accessedAt: string }>,
+  ) => {
+    sources.forEach((s, i) => {
+      if (!isAcceptableCompetitorSource(s.url)) {
+        issues.push({
+          path: `${path}.sources[${i}].url`,
+          message: `competitor source URL "${s.url}" is malformed`,
+        });
+      }
+      const accessed = new Date(s.accessedAt).getTime();
+      if (Number.isNaN(accessed) || now - accessed > maxAgeMs) {
+        issues.push({
+          path: `${path}.sources[${i}].accessedAt`,
+          message: `accessedAt is older than ${ACCESSED_AT_MAX_AGE_DAYS} days or invalid`,
+        });
+      }
+    });
+  };
+
   record.industries.forEach((ind, i) => checkSecondary(`industries[${i}]`, ind.sources));
-  record.competitors.forEach((c, i) => checkSecondary(`competitors[${i}]`, c.sources));
+  record.competitors.forEach((c, i) => checkCompetitor(`competitors[${i}]`, c.sources));
 
   // Industry rank uniqueness.
   const ranks = record.industries.map((i) => i.rank);
