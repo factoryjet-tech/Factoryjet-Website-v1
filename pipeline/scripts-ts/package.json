@@ -8,12 +8,15 @@
     "smoke": "tsx scripts/smoke-test.ts",
     "research-test": "tsx scripts/test-research.ts",
     "score": "tsx scripts/score-candidates.ts",
+    "enrich": "tsx scripts/enrich-cities.ts",
+    "test:validator": "tsx scripts/test-validator.ts",
     "typecheck": "tsc --noEmit"
   },
   "engines": {
     "node": ">=20.0.0"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.91.1",
     "dotenv": "^16.4.5",
     "firebase-admin": "^12.7.0",
     "zod": "^3.23.8"
