@@ -2,7 +2,8 @@ import Anthropic from '@anthropic-ai/sdk';
 import { requireAnthropicKey } from '../../config/env.js';
 
 const MODEL_ID = 'claude-sonnet-4-6';
-const MAX_OUTPUT_TOKENS = 4096;
+const MAX_OUTPUT_TOKENS = 8000;
+const MAX_WEB_SEARCH_USES = 8;
 const MAX_RETRIES = 3;
 const BACKOFF_BASE_MS = 2000;
 
@@ -20,10 +21,12 @@ export interface EnrichmentCallResult {
 
 /**
  * Sonnet 4.6 pricing (verify before each release): $3 / 1M input, $15 / 1M output.
+ * Web search: $10 per 1,000 server-side searches (Anthropic-billed).
  * If pricing changes, update these constants and bump PROMPT_VERSION.
  */
 const COST_PER_INPUT_TOKEN_USD = 3 / 1_000_000;
 const COST_PER_OUTPUT_TOKEN_USD = 15 / 1_000_000;
+const COST_PER_WEB_SEARCH_USD = 10 / 1_000;
 
 let cachedClient: Anthropic | null = null;
 
@@ -62,8 +65,11 @@ export async function callEnrichment(args: CallEnrichmentArgs): Promise<Enrichme
           tools: [
             {
               // Anthropic server-side web search tool. Type string is version-pinned.
+              // max_uses caps searches per call — without it, the model can spiral
+              // into unbounded searches and exceed wall-clock timeouts.
               type: 'web_search_20250305',
               name: 'web_search',
+              max_uses: MAX_WEB_SEARCH_USES,
             } as unknown as Anthropic.Tool,
           ],
         }),
@@ -85,8 +91,15 @@ export async function callEnrichment(args: CallEnrichmentArgs): Promise<Enrichme
 
       const inputTokens = response.usage.input_tokens;
       const outputTokens = response.usage.output_tokens;
+      // The SDK doesn't yet type server_tool_use; access defensively.
+      const usageWithTools = response.usage as typeof response.usage & {
+        server_tool_use?: { web_search_requests?: number };
+      };
+      const webSearchRequests = usageWithTools.server_tool_use?.web_search_requests ?? 0;
       const estimatedCostUsd =
-        inputTokens * COST_PER_INPUT_TOKEN_USD + outputTokens * COST_PER_OUTPUT_TOKEN_USD;
+        inputTokens * COST_PER_INPUT_TOKEN_USD +
+        outputTokens * COST_PER_OUTPUT_TOKEN_USD +
+        webSearchRequests * COST_PER_WEB_SEARCH_USD;
 
       return {
         rawText,
@@ -97,6 +110,12 @@ export async function callEnrichment(args: CallEnrichmentArgs): Promise<Enrichme
       };
     } catch (err) {
       lastErr = err;
+      // Timeouts indicate the call is genuinely too slow (model spiraling
+      // through tool calls). Retrying burns wall clock and money for the
+      // same likely outcome. Surface the timeout immediately.
+      if (err instanceof Error && err.message.includes('timed out')) {
+        throw err;
+      }
       if (attempt < MAX_RETRIES) {
         const backoff = BACKOFF_BASE_MS * Math.pow(2, attempt - 1);
         await sleep(backoff);
