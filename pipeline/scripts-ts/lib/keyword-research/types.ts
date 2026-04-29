@@ -115,7 +115,8 @@ export interface LedgerEntry {
 
 /**
  * Daily aggregate counter document. Lives at
- * pipeline_meta/daily_usage/{YYYY-MM-DD}.
+ * pipeline_meta/daily_usage_{YYYY-MM-DD} (flat document path; chosen
+ * over a subcollection for simpler point reads in getDailyUsage).
  */
 export interface DailyUsage {
   date: string;

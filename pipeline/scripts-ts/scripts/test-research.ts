@@ -210,6 +210,92 @@ async function main(): Promise<void> {
     `[smoke]   ✓ Daily aggregate: echo-stub=${usage.byProvider['echo-stub']?.calls} calls today`,
   );
 
+  // ---- 6. Real mock provider (deterministic) ----
+  console.log('[smoke] 6. Real mock provider');
+  // Import + register mock provider via the auto-registration module.
+  // Note: registry was reset at the top of main(), so this is the
+  // first registration of 'mock' in this process.
+  const { mockProvider } = await import('../lib/keyword-research/providers/mock.js');
+  registerProvider(mockProvider);
+
+  const mockInput = {
+    keywords: [`${TEST_KEYWORD}-mock`],
+    geoTargets: TEST_GEO,
+    language: TEST_LANG,
+    tenantId: TEST_TENANT,
+  };
+
+  const mockResult1 = await researchKeywords(mockInput, { provider: 'mock' });
+  assert(mockResult1.length === 1, 'mock should return 1 result');
+  assert(
+    mockResult1[0]?.provider === 'mock',
+    `mock provider tag mismatch: ${mockResult1[0]?.provider}`,
+  );
+  assert(
+    typeof mockResult1[0]?.monthlySearches === 'number',
+    'mock should return numeric monthlySearches',
+  );
+  assert(
+    (mockResult1[0]?.monthlySearches ?? 0) >= 10 &&
+      (mockResult1[0]?.monthlySearches ?? 0) <= 50_000,
+    `mock monthlySearches out of expected range: ${mockResult1[0]?.monthlySearches}`,
+  );
+
+  // Determinism check: identical input on a forceRefresh should return
+  // identical metrics (PRNG is seeded by keyword+geo+language).
+  const mockResult2 = await researchKeywords(
+    { ...mockInput, forceRefresh: true },
+    { provider: 'mock' },
+  );
+  assert(
+    mockResult1[0]?.monthlySearches === mockResult2[0]?.monthlySearches &&
+      mockResult1[0]?.competition === mockResult2[0]?.competition &&
+      mockResult1[0]?.lowBidUsd === mockResult2[0]?.lowBidUsd &&
+      mockResult1[0]?.highBidUsd === mockResult2[0]?.highBidUsd,
+    'mock provider should be deterministic across calls with same input',
+  );
+
+  // Idea expansion via mock.
+  const mockIdeas = await expandKeywordIdeas(mockInput, { provider: 'mock' });
+  assert(
+    mockIdeas.length >= 5 && mockIdeas.length <= 15,
+    `mock should return 5–15 ideas, got ${mockIdeas.length}`,
+  );
+  assert(
+    mockIdeas.every((i) => i.provider === 'mock'),
+    'all mock ideas should carry provider=mock',
+  );
+
+  console.log(
+    `[smoke]   ✓ Mock provider deterministic; metrics & ${mockIdeas.length} ideas returned`,
+  );
+
+  // Schedule cleanup of the mock-keyword cache entries.
+  cleanupTasks.push({
+    description: 'mock metrics cache entry',
+    run: () =>
+      _deleteCacheEntryForTesting({
+        provider: 'mock',
+        method: 'getMetrics',
+        keyword: `${TEST_KEYWORD}-mock`,
+        geoTargets: TEST_GEO,
+        language: TEST_LANG,
+        tenantId: TEST_TENANT,
+      }),
+  });
+  cleanupTasks.push({
+    description: 'mock ideas cache entry',
+    run: () =>
+      _deleteCacheEntryForTesting({
+        provider: 'mock',
+        method: 'expandIdeas',
+        keyword: `${TEST_KEYWORD}-mock`,
+        geoTargets: TEST_GEO,
+        language: TEST_LANG,
+        tenantId: TEST_TENANT,
+      }),
+  });
+
   console.log('\n[smoke] ALL CHECKS PASSED');
 }
 
