@@ -17,7 +17,7 @@
  *   ANTHROPIC_API_KEY       Required for non-dry-run; loaded from ~/.factoryjet/anthropic.env
  *   MAX_CITIES_PER_RUN      Default 5
  *   MAX_USD_PER_RUN         Default 5
- *   WALL_CLOCK_PER_CITY_MS  Default 90000
+ *   WALL_CLOCK_PER_CITY_MS  Default 240000
  */
 
 import { UK_CITIES, US_CITIES } from '../config/cities/index.js';
@@ -145,7 +145,7 @@ async function main(): Promise<void> {
     budget: {
       maxCities: args.limit,
       maxUsdPerRun: Number(process.env.MAX_USD_PER_RUN ?? 5),
-      wallClockPerCityMs: Number(process.env.WALL_CLOCK_PER_CITY_MS ?? 90_000),
+      wallClockPerCityMs: Number(process.env.WALL_CLOCK_PER_CITY_MS ?? 240_000),
     },
     force: args.force,
     dryRun: args.dryRun,
