@@ -6,6 +6,7 @@
   "description": "FactoryJet programmatic SEO pipeline (TypeScript runtime). Standalone install — not a workspace member.",
   "scripts": {
     "smoke": "tsx scripts/smoke-test.ts",
+    "research-test": "tsx scripts/test-research.ts",
     "typecheck": "tsc --noEmit"
   },
   "engines": {
