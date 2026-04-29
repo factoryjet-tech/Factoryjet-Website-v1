@@ -1,0 +1,245 @@
+{
+  "citySlug": "london",
+  "countryCode": "GB",
+  "population": {
+    "value": 9100000,
+    "unit": "people",
+    "asOfYear": 2024,
+    "sources": [
+      {
+        "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/populationestimatesforenglandandwales/mid2024",
+        "accessedAt": "2026-04-29T17:55:04.414Z",
+        "publisher": "Office for National Statistics"
+      },
+      {
+        "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/populationestimatesforenglandandwales/mid2024",
+        "accessedAt": "2026-04-29T17:55:04.414Z",
+        "publisher": "Office for National Statistics"
+      }
+    ]
+  },
+  "gdpUsdBillions": {
+    "value": 722.6,
+    "unit": "USD billions (converted from £569bn GBP at approx. 1.27 GBP/USD; ONS current market prices, London ITL1 region)",
+    "asOfYear": 2023,
+    "sources": [
+      {
+        "url": "https://www.ons.gov.uk/economy/grossdomesticproductgdp/bulletins/regionaleconomicactivitybygrossdomesticproductuk/1998to2023",
+        "accessedAt": "2026-04-29T17:55:04.414Z",
+        "publisher": "Office for National Statistics – Regional economic activity by GDP, UK: 1998 to 2023"
+      }
+    ]
+  },
+  "industries": [
+    {
+      "name": "Financial & Insurance Services",
+      "rank": 1,
+      "notes": "London is one of the world's leading international financial centres. Financial services, alongside associated professional services, dominate the regional economy and are substantially larger relative to output than the UK average.",
+      "sources": [
+        {
+          "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-8353/",
+          "accessedAt": "2026-04-29T17:55:04.414Z",
+          "publisher": "House of Commons Library – Industries in the UK (ONS data)"
+        }
+      ]
+    },
+    {
+      "name": "Professional, Scientific & Technical Services",
+      "rank": 2,
+      "notes": "Professional and technical sectors account for a disproportionately large share of London's output compared with the UK average, reflecting the concentration of legal, consulting, accounting, and management advisory firms.",
+      "sources": [
+        {
+          "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-8353/",
+          "accessedAt": "2026-04-29T17:55:04.414Z",
+          "publisher": "House of Commons Library – Industries in the UK (ONS data)"
+        }
+      ]
+    },
+    {
+      "name": "Information Technology & Communications",
+      "rank": 3,
+      "notes": "London hosts a fast-growing tech sector centred on East London Tech City ('Silicon Roundabout') and hosts over 100 technology unicorns. IT and communications form a much larger share of London's output than the national average.",
+      "sources": [
+        {
+          "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-8353/",
+          "accessedAt": "2026-04-29T17:55:04.414Z",
+          "publisher": "House of Commons Library – Industries in the UK (ONS data)"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Economy_of_London",
+          "accessedAt": "2026-04-29T17:55:04.414Z",
+          "publisher": "Wikipedia – Economy of London"
+        }
+      ]
+    },
+    {
+      "name": "Real Estate & Construction",
+      "rank": 4,
+      "notes": "Real estate activities represent a significant component of London GVA. High property values and sustained development activity, including major projects such as Crossrail, underpin the sector's scale.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Economy_of_London",
+          "accessedAt": "2026-04-29T17:55:04.414Z",
+          "publisher": "Wikipedia – Economy of London"
+        }
+      ]
+    },
+    {
+      "name": "Creative Industries, Media & Tourism",
+      "rank": 5,
+      "notes": "Media companies are heavily concentrated in London; the BBC, national newspapers, and film post-production (Soho) are key employers. Tourism generated £18.8bn in visitor expenditure in 2024, with nearly 36 million visits recorded.",
+      "sources": [
+        {
+          "url": "https://data.london.gov.uk/blog/the-state-of-london-report-2025/",
+          "accessedAt": "2026-04-29T17:55:04.414Z",
+          "publisher": "Greater London Authority – State of London Report 2025"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Economy_of_London",
+          "accessedAt": "2026-04-29T17:55:04.414Z",
+          "publisher": "Wikipedia – Economy of London"
+        }
+      ]
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Brainlabs",
+      "websiteUrl": "https://www.brainlabsdigital.com",
+      "positioning": "Large-scale, data-led full-service media agency headquartered in London serving global enterprise brands across paid search, SEO, programmatic, and CRO.",
+      "pricingPublic": false,
+      "pricingNotes": "Enterprise retainers estimated at £5,000–£20,000+/month by third-party review sources; no pricing published on site.",
+      "sources": [
+        {
+          "url": "https://www.brainlabsdigital.com/",
+          "accessedAt": "2026-04-29T17:55:04.414Z",
+          "publisher": "Brainlabs – Official Website"
+        },
+        {
+          "url": "https://whitehat-seo.co.uk/blog/18-best-seo-agencies-london-2026-pricing-honest-comparison",
+          "accessedAt": "2026-04-29T17:55:04.414Z",
+          "publisher": "Whitehat SEO – 18 Best SEO Agencies London 2026"
+        }
+      ]
+    },
+    {
+      "name": "Passion Digital",
+      "websiteUrl": "https://passion.digital",
+      "positioning": "Independent London digital marketing agency blending performance-driven SEO, PPC, paid social, and content marketing for ambitious growth-stage brands.",
+      "pricingPublic": false,
+      "pricingNotes": "No pricing listed publicly; prospective clients are invited to discuss goals directly.",
+      "sources": [
+        {
+          "url": "https://passion.digital/",
+          "accessedAt": "2026-04-29T17:55:04.414Z",
+          "publisher": "Passion Digital – Official Website"
+        },
+        {
+          "url": "https://whitehat-seo.co.uk/blog/18-best-seo-agencies-london-2026-pricing-honest-comparison",
+          "accessedAt": "2026-04-29T17:55:04.414Z",
+          "publisher": "Whitehat SEO – 18 Best SEO Agencies London 2026"
+        }
+      ]
+    },
+    {
+      "name": "CEEK",
+      "websiteUrl": "https://ceek.co.uk",
+      "positioning": "London-headquartered digital marketing consultancy offering social media, SEO, PPC, influencer marketing, and website development for UK and international clients.",
+      "pricingPublic": true,
+      "pricingNotes": "Digital Agency Network lists minimum project budget from £1,000 and minimum monthly budget from £1,000.",
+      "sources": [
+        {
+          "url": "https://digitalagencynetwork.com/agencies/london/web-design/",
+          "accessedAt": "2026-04-29T17:55:04.414Z",
+          "publisher": "Digital Agency Network – Top Web Design Agencies in London (2026)"
+        },
+        {
+          "url": "https://bmmagazine.co.uk/business/top-digital-marketing-agencies-in-london-digital-agency-network-october-2024-list/",
+          "accessedAt": "2026-04-29T17:55:04.414Z",
+          "publisher": "Business Matters Magazine – Top Digital Marketing Agencies in London, October 2024"
+        }
+      ]
+    },
+    {
+      "name": "The Charles",
+      "websiteUrl": "https://thecharles.com",
+      "positioning": "Full-service creative and digital agency in London specialising in strategic campaigns, digital design, technology solutions, and content creation for brand-led clients.",
+      "pricingPublic": false,
+      "pricingNotes": "No public pricing; project budgets available on request via agency directories.",
+      "sources": [
+        {
+          "url": "https://digitalagencynetwork.com/agencies/london/web-design/",
+          "accessedAt": "2026-04-29T17:55:04.414Z",
+          "publisher": "Digital Agency Network – Top Web Design Agencies in London (2026)"
+        },
+        {
+          "url": "https://bmmagazine.co.uk/business/top-digital-marketing-agencies-in-london-digital-agency-network-october-2024-list/",
+          "accessedAt": "2026-04-29T17:55:04.414Z",
+          "publisher": "Business Matters Magazine – Top Digital Marketing Agencies in London, October 2024"
+        }
+      ]
+    },
+    {
+      "name": "Rise at Seven",
+      "websiteUrl": "https://riseatseven.com",
+      "positioning": "Award-winning creative SEO agency pioneering 'social SEO', combining organic search with viral PR-led content strategies for consumer and D2C brands including Xbox and Klarna.",
+      "pricingPublic": false,
+      "pricingNotes": "No pricing published on site; third-party sources indicate mid-to-enterprise tier retainers.",
+      "sources": [
+        {
+          "url": "https://whitehat-seo.co.uk/blog/18-best-seo-agencies-london-2026-pricing-honest-comparison",
+          "accessedAt": "2026-04-29T17:55:04.414Z",
+          "publisher": "Whitehat SEO – 18 Best SEO Agencies London 2026"
+        }
+      ]
+    },
+    {
+      "name": "Burst Digital",
+      "websiteUrl": "https://www.burstdigital.co.uk",
+      "positioning": "Award-winning full-service creative agency with UK and US operations, delivering branding, web design, and integrated digital marketing for growth-focused clients.",
+      "pricingPublic": false,
+      "pricingNotes": "No pricing listed publicly on the agency website.",
+      "sources": [
+        {
+          "url": "https://bmmagazine.co.uk/business/top-digital-marketing-agencies-in-london-digital-agency-network-october-2024-list/",
+          "accessedAt": "2026-04-29T17:55:04.414Z",
+          "publisher": "Business Matters Magazine – Top Digital Marketing Agencies in London, October 2024"
+        },
+        {
+          "url": "https://digitalagencynetwork.com/agencies/london/web-design/",
+          "accessedAt": "2026-04-29T17:55:04.414Z",
+          "publisher": "Digital Agency Network – Top Web Design Agencies in London (2026)"
+        }
+      ]
+    }
+  ],
+  "landmarks": [
+    {
+      "name": "Tower Bridge",
+      "type": "architectural",
+      "visualNotes": "Victorian Gothic bascule and suspension bridge spanning the River Thames, with its twin towers and pale stone facades instantly recognisable as London's most iconic riverside structure."
+    },
+    {
+      "name": "Buckingham Palace",
+      "type": "architectural",
+      "visualNotes": "Neoclassical royal residence at the end of The Mall, fronted by the Victoria Memorial and famous for the Changing of the Guard ceremony and its grand central balcony."
+    },
+    {
+      "name": "The Shard",
+      "type": "architectural",
+      "visualNotes": "Europe's tallest building at 310 metres, with a tapering glass façade of 11,000 panes that reflects the sky and city light, dominating the South Bank skyline above London Bridge."
+    },
+    {
+      "name": "Canary Wharf",
+      "type": "commercial",
+      "visualNotes": "London's secondary financial district on the Isle of Dogs, characterised by a dense cluster of glass skyscrapers including One Canada Square, surrounded by docklands waterways."
+    },
+    {
+      "name": "Hyde Park",
+      "type": "natural",
+      "visualNotes": "350-acre royal park in central London featuring the Serpentine lake, tree-lined avenues, Speaker's Corner, and open meadows providing a green counterpoint to the surrounding urban fabric."
+    }
+  ],
+  "enrichmentVersion": 1,
+  "lastEnrichedAt": "2026-04-29T18:55:04.415Z"
+}
