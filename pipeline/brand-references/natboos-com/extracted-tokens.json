@@ -1,0 +1,848 @@
+{
+  "slug": "natboos-com",
+  "category": "taste",
+  "homepage": "https://natboos.com",
+  "captured_at": "2026-04-29T05:11:33Z",
+  "pages": {
+    "homepage": {
+      "url": "https://www.natboos.com/",
+      "screenshot": "screenshots/homepage.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#08080B",
+              "count": 28
+            },
+            {
+              "hex": "#FFF9EE",
+              "count": 11
+            },
+            {
+              "hex": "#E86C28",
+              "count": 7
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 1
+            },
+            {
+              "hex": "#F4A5D6",
+              "count": 1
+            },
+            {
+              "hex": "#DF3131",
+              "count": 1
+            }
+          ],
+          "text": [
+            {
+              "hex": "#000000",
+              "count": 1096
+            },
+            {
+              "hex": "#FFF9EE",
+              "count": 243
+            },
+            {
+              "hex": "#0000EE",
+              "count": 192
+            },
+            {
+              "hex": "#E2DCD2",
+              "count": 93
+            },
+            {
+              "hex": "#08080B",
+              "count": 36
+            },
+            {
+              "hex": "#E86C28",
+              "count": 16
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 6
+            },
+            {
+              "hex": "#F4A5D6",
+              "count": 2
+            }
+          ],
+          "border": [
+            {
+              "hex": "#FFF9EE",
+              "count": 20
+            },
+            {
+              "hex": "#08080B",
+              "count": 2
+            },
+            {
+              "hex": "#E86C28",
+              "count": 2
+            }
+          ]
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "Arial, Helvetica, sans-serif",
+              "count": 1144
+            },
+            {
+              "value": "wfont_96879d_f8d16c27b5d2415daffd732ba31e9eb1, wf_f8d16c27b5d2415daffd732ba, orig_outfit_medium",
+              "count": 248
+            },
+            {
+              "value": "\"Times New Roman\"",
+              "count": 131
+            },
+            {
+              "value": "wfont_c32374_8be3301d675e4c55bb3f1841fbaec7d2, wf_8be3301d675e4c55bb3f1841f, orig_coconat_bold_ext",
+              "count": 81
+            },
+            {
+              "value": "wfont_96879d_730c1e89abde40fda4cf797e5fd3fa95, wf_730c1e89abde40fda4cf797e5, orig_outfit_semibold",
+              "count": 47
+            },
+            {
+              "value": "wfont_96879d_48f41281027543b39fe9ab1bd07fb5f9, wf_48f41281027543b39fe9ab1bd, orig_outfit_light",
+              "count": 17
+            }
+          ],
+          "font_sizes_px": [
+            10,
+            13,
+            16,
+            19,
+            26,
+            30,
+            33,
+            36,
+            39,
+            52,
+            58,
+            63
+          ],
+          "font_weights": [
+            {
+              "value": "400",
+              "count": 1692
+            },
+            {
+              "value": "700",
+              "count": 1
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "22.4px",
+              "count": 106
+            },
+            {
+              "value": "34.2px",
+              "count": 44
+            },
+            {
+              "value": "16px",
+              "count": 35
+            },
+            {
+              "value": "19.6px",
+              "count": 11
+            },
+            {
+              "value": "0px",
+              "count": 11
+            },
+            {
+              "value": "36.3375px",
+              "count": 10
+            }
+          ],
+          "letter_spacings": []
+        },
+        "spacing": {
+          "padding_px": [
+            2,
+            5,
+            8,
+            11,
+            14,
+            20,
+            24,
+            27,
+            40,
+            56,
+            72,
+            144
+          ],
+          "margin_px": [
+            1,
+            4,
+            7,
+            10,
+            13,
+            16,
+            19,
+            22,
+            25,
+            28,
+            31,
+            35
+          ],
+          "gap_px": [
+            8,
+            12,
+            16,
+            20,
+            23
+          ]
+        },
+        "radii": [
+          {
+            "value": "22.5px",
+            "count": 9
+          },
+          {
+            "value": "20px",
+            "count": 5
+          },
+          {
+            "value": "113.834px",
+            "count": 4
+          },
+          {
+            "value": "80px",
+            "count": 3
+          },
+          {
+            "value": "100px",
+            "count": 2
+          },
+          {
+            "value": "18px",
+            "count": 2
+          },
+          {
+            "value": "6px",
+            "count": 2
+          },
+          {
+            "value": "16px",
+            "count": 2
+          }
+        ],
+        "shadows": [
+          {
+            "value": "rgba(0, 0, 0, 0.1) 0px 0px 4px 0px, rgba(0, 0, 0, 0.1) 0px 4px 8px 0px",
+            "count": 1
+          },
+          {
+            "value": "rgb(255, 249, 238) 0px 0px 0px 0px",
+            "count": 1
+          },
+          {
+            "value": "rgba(0, 0, 0, 0.07) 0.78px 1.84px 8px 1px",
+            "count": 1
+          },
+          {
+            "value": "rgba(0, 0, 0, 0.1) -8px -7px 20px 0px",
+            "count": 1
+          }
+        ],
+        "gradients_used": true,
+        "gradient_count": 6,
+        "css_variables": {
+          "--wst-color-custom-17": "rgb(243,228,153)",
+          "--wix-opt-in-direction": "ltr",
+          "--wst-font-style-body-large": "normal normal normal calc(19 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_96879d_f8d16c27b5d2415daffd732ba31e9eb1,wf_f8d16c27b5d2415daffd732ba,orig_outfit_medium",
+          "--font_9": "normal normal normal calc(16 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_96879d_48f41281027543b39fe9ab1bd07fb5f9,wf_48f41281027543b39fe9ab1bd,orig_outfit_light",
+          "--wst-color-fill-background-primary": "rgb(255,249,238)",
+          "--color_55": "111,108,103",
+          "--wst-color-custom-20": "rgb(79,69,21)",
+          "--wst-color-custom-11": "rgb(186,199,252)",
+          "--color_43": "232,108,40",
+          "--color_37": "8,8,11",
+          "--wst-color-fill-base-shade-2": "rgb(111,108,103)",
+          "--wst-color-custom-19": "rgb(158,139,41)",
+          "--color_12": "226,220,210",
+          "--color_60": "255,249,238",
+          "--wst-button-color-border-secondary-hover": "rgb(232,108,40)",
+          "--color_25": "61,41,53",
+          "--color_48": "232,108,40",
+          "--wix-ads-height": "0px",
+          "--wst-font-style-body-small": "normal normal normal calc(16 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_96879d_48f41281027543b39fe9ab1bd07fb5f9,wf_48f41281027543b39fe9ab1bd,orig_outfit_light",
+          "--scaling-factor": "clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px))",
+          "--wst-button-color-text-primary": "rgb(255,249,238)",
+          "--wst-font-style-body-x-small": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+          "--cookie-banner-secondary-color": "#FFF9EE",
+          "--wst-color-line": "rgb(8,8,11)",
+          "--color_21": "250,209,234",
+          "--color_51": "232,108,40",
+          "--color_50": "255,249,238",
+          "--color_13": "111,108,103",
+          "--color_10": "176,176,176",
+          "--wst-color-custom-12": "rgb(119,144,249)",
+          "--browser-zoom": "1",
+          "--wst-font-style-h6": "normal normal normal calc(23 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_c32374_8be3301d675e4c55bb3f1841fbaec7d2,wf_8be3301d675e4c55bb3f1841f,orig_coconat_bold_ext",
+          "--color_54": "111,108,103",
+          "--wst-color-custom-7": "rgb(244,165,214)",
+          "--color_20": "77,36,13",
+          "--color_58": "232,108,40",
+          "--color_65": "111,108,103",
+          "--color_46": "50,50,50",
+          "--color_2": "0,0,0",
+          "--wst-color-custom-8": "rgb(183,124,161)",
+          "--color_3": "237,28,36",
+          "--wst-button-color-border-primary-hover": "rgb(232,108,40)",
+          "--wst-color-action": "rgb(232,108,40)",
+          "--wst-color-fill-accent-2": "rgb(232,108,40)",
+          "--color_41": "232,108,40",
+          "--color_22": "244,165,214",
+          "--color_30": "30,36,62",
+          "--wst-color-custom-13": "rgb(89,108,187)",
+          "--color_23": "183,124,161",
+          "--maxViewportSize": "1920",
+          "--minViewportSize": "320",
+          "--wst-color-custom-14": "rgb(60,72,125)",
+          "--color_31": "249,239,188",
+          "--color_42": "232,108,40",
+          "--wst-button-color-fill-secondary": "rgb(255,249,238)",
+          "--wst-font-style-h2": "normal normal normal calc(47 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_96879d_730c1e89abde40fda4cf797e5fd3fa95,wf_730c1e89abde40fda4cf797e5,orig_outfit_semibold",
+          "--font_7": "normal normal normal calc(19 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_96879d_f8d16c27b5d2415daffd732ba31e9eb1,wf_f8d16c27b5d2415daffd732ba,orig_outfit_medium",
+          "--wst-button-color-fill-secondary-hover": "rgb(255,249,238)",
+          "--font_6": "normal normal normal calc(23 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_c32374_8be3301d675e4c55bb3f1841fbaec7d2,wf_8be3301d675e4c55bb3f1841f,orig_coconat_bold_ext",
+          "--wst-button-color-fill-primary-disabled": "rgb(111,108,103)",
+          "--font_3": "normal normal normal calc(35 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_c32374_8be3301d675e4c55bb3f1841fbaec7d2,wf_8be3301d675e4c55bb3f1841f,orig_coconat_bold_ext",
+          "--font_4": "normal normal normal calc(29 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_96879d_730c1e89abde40fda4cf797e5fd3fa95,wf_730c1e89abde40fda4cf797e5,orig_outfit_semibold",
+          "--wst-color-custom-16": "rgb(249,239,188)",
+          "--cookie-banner-font-size": "14px",
+          "--color_44": "232,108,40",
+          "--wst-button-color-text-secondary": "rgb(232,108,40)",
+          "--wst-color-custom-15": "rgb(30,36,62)",
+          "--wst-button-color-border-primary-disabled": "rgb(111,108,103)",
+          "--wst-color-fill-base-shade-3": "rgb(50,50,50)",
+          "--wst-color-custom-4": "rgb(155,72,27)",
+          "--color_56": "255,249,238",
+          "--wst-color-fill-accent-3": "rgb(232,108,40)",
+          "--cookie-banner-font-family": "wfont_96879d_f8d16c27b5d2415daffd732ba31e9eb1,wf__f8d16c27b5d2415daffd732ba,orig_outfit_medium",
+          "--theme-spx-ratio": "clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280",
+          "--cookie-banner-primary-color": "#08080B",
+          "--spx-stopper-max": "9999px",
+          "--color_9": "114,114,114",
+          "--color_27": "119,144,249",
+          "--customScaleViewportLimit": "clamp(320 * 1px, 100 * 1cqw * 1, min(9999px, 1920 * 1px))",
+          "--portals-z-index": "100001",
+          "--wst-color-custom-3": "rgb(240,176,140)",
+          "--color_33": "237,208,62",
+          "--color_61": "232,108,40",
+          "--color_62": "232,108,40",
+          "--color_0": "255,255,255",
+          "--wst-color-custom-18": "rgb(237,208,62)",
+          "--wst-color-fill-base-shade-1": "rgb(226,220,210)",
+          "--font_5": "normal normal normal calc(23 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_96879d_730c1e89abde40fda4cf797e5fd3fa95,wf_730c1e89abde40fda4cf797e5,orig_outfit_semibold",
+          "--font_8": "normal normal normal calc(16 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_96879d_f8d16c27b5d2415daffd732ba31e9eb1,wf_f8d16c27b5d2415daffd732ba,orig_outfit_medium",
+          "--color_39": "111,108,103",
+          "--font_2": "normal normal normal calc(47 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_96879d_730c1e89abde40fda4cf797e5fd3fa95,wf_730c1e89abde40fda4cf797e5,orig_outfit_semibold",
+          "--color_63": "255,249,238",
+          "--wst-color-custom-6": "rgb(250,209,234)",
+          "--color_4": "0,136,203",
+          "--color_7": "176,176,176",
+          "--wst-button-color-text-secondary-hover": "rgb(232,108,40)",
+          "--color_52": "232,108,40",
+          "--wst-font-style-h3": "normal normal normal calc(35 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_c32374_8be3301d675e4c55bb3f1841fbaec7d2,wf_8be3301d675e4c55bb3f1841f,orig_coconat_bold_ext",
+          "--font_0": "normal normal normal calc(56 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_c32374_8be3301d675e4c55bb3f1841fbaec7d2,wf_8be3301d675e4c55bb3f1841f,orig_coconat_bold_ext",
+          "--wst-color-fill-accent-1": "rgb(232,108,40)",
+          "--color_34": "158,139,41",
+          "--color_47": "8,8,11",
+          "--wst-button-color-border-secondary": "rgb(232,108,40)",
+          "--wst-button-color-text-secondary-disabled": "rgb(111,108,103)",
+          "--color_45": "8,8,11",
+          "--color_59": "232,108,40",
+          "--wst-button-color-border-secondary-disabled": "rgb(111,108,103)",
+          "--wst-color-fill-background-secondary": "rgb(226,220,210)",
+          "--wst-color-fill-accent-4": "rgb(232,108,40)",
+          "--wst-color-custom-1": "rgb(111,108,103)",
+          "--color_5": "255,203,5",
+          "--color_1": "255,255,255",
+          "--color_14": "50,50,50",
+          "--full-viewport": "100 * 1cqw * 1",
+          "--wst-font-style-body-medium": "normal normal normal calc(16 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_96879d_f8d16c27b5d2415daffd732ba31e9eb1,wf_f8d16c27b5d2415daffd732ba,orig_outfit_medium",
+          "--font_10": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+          "--wst-font-style-h4": "normal normal normal calc(29 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_96879d_730c1e89abde40fda4cf797e5fd3fa95,wf_730c1e89abde40fda4cf797e5,orig_outfit_semibold",
+          "--wst-color-text-secondary": "rgb(50,50,50)",
+          "--color_17": "240,176,140",
+          "--color_40": "50,50,50",
+          "--wst-button-color-fill-primary-hover": "rgb(232,108,40)",
+          "--wst-button-color-border-primary": "rgb(232,108,40)",
+          "--wst-color-disabled": "rgb(111,108,103)",
+          "--color_16": "247,203,179",
+          "--site-width": "980px",
+          "--color_19": "155,72,27",
+          "--color_24": "122,83,107",
+          "--wst-button-color-fill-primary": "rgb(232,108,40)",
+          "--wst-color-fill-base-1": "rgb(255,249,238)",
+          "--wst-color-custom-5": "rgb(77,36,13)",
+          "--color_15": "8,8,11",
+          "--font_1": "normal normal normal 16px/1.4em din-next-w01-light,sans-serif",
+          "--wst-font-style-h5": "normal normal normal calc(23 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_96879d_730c1e89abde40fda4cf797e5fd3fa95,wf_730c1e89abde40fda4cf797e5,orig_outfit_semibold",
+          "--color_26": "186,199,252",
+          "--color_49": "232,108,40",
+          "--color_6": "114,114,114",
+          "--wst-button-color-fill-secondary-disabled": "rgb(255,249,238)",
+          "--wst-color-custom-10": "rgb(61,41,53)",
+          "--wst-color-text-primary": "rgb(8,8,11)",
+          "--wix-ads-top-height": "0px",
+          "--spx-stopper-min": "0px",
+          "--color_38": "226,220,210",
+          "--sticky-offset": "0px",
+          "--color_57": "255,249,238",
+          "--color_8": "255,255,255",
+          "--color_36": "255,249,238",
+          "--wst-color-subtitle": "rgb(50,50,50)",
+          "--color_18": "232,108,40",
+          "--wst-color-custom-9": "rgb(122,83,107)",
+          "--wix-opt-in-direction-multiplier": "1",
+          "--wst-color-fill-base-2": "rgb(8,8,11)",
+          "--color_64": "111,108,103",
+          "--color_53": "255,249,238",
+          "--color_28": "89,108,187",
+          "--wst-color-title": "rgb(8,8,11)",
+          "--above-all-z-index": "100000",
+          "--color_35": "79,69,21",
+          "--color_32": "243,228,153",
+          "--color_11": "255,249,238",
+          "--one-unit": "1cqw",
+          "--wst-button-color-text-primary-hover": "rgb(255,249,238)",
+          "--wst-button-color-text-primary-disabled": "rgb(255,249,238)",
+          "--color_29": "60,72,125",
+          "--wst-color-custom-2": "rgb(247,203,179)",
+          "--section-max-width": "9999px"
+        }
+      }
+    },
+    "pricing": {
+      "url": "https://www.natboos.com/packages-pricing",
+      "screenshot": "screenshots/pricing.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#08080B",
+              "count": 23
+            },
+            {
+              "hex": "#FFF9EE",
+              "count": 22
+            },
+            {
+              "hex": "#E86C28",
+              "count": 9
+            },
+            {
+              "hex": "#7790F9",
+              "count": 2
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 1
+            },
+            {
+              "hex": "#DF3131",
+              "count": 1
+            }
+          ],
+          "text": [
+            {
+              "hex": "#000000",
+              "count": 1104
+            },
+            {
+              "hex": "#FFF9EE",
+              "count": 141
+            },
+            {
+              "hex": "#08080B",
+              "count": 96
+            },
+            {
+              "hex": "#E2DCD2",
+              "count": 93
+            },
+            {
+              "hex": "#0000EE",
+              "count": 92
+            },
+            {
+              "hex": "#E86C28",
+              "count": 13
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 6
+            },
+            {
+              "hex": "#808080",
+              "count": 2
+            }
+          ],
+          "border": [
+            {
+              "hex": "#08080B",
+              "count": 24
+            },
+            {
+              "hex": "#FFF9EE",
+              "count": 13
+            },
+            {
+              "hex": "#E86C28",
+              "count": 2
+            }
+          ]
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "Arial, Helvetica, sans-serif",
+              "count": 1056
+            },
+            {
+              "value": "wfont_96879d_f8d16c27b5d2415daffd732ba31e9eb1, wf_f8d16c27b5d2415daffd732ba, orig_outfit_medium",
+              "count": 257
+            },
+            {
+              "value": "\"Times New Roman\"",
+              "count": 130
+            },
+            {
+              "value": "wfont_c32374_8be3301d675e4c55bb3f1841fbaec7d2, wf_8be3301d675e4c55bb3f1841f, orig_coconat_bold_ext",
+              "count": 36
+            },
+            {
+              "value": "wfont_96879d_730c1e89abde40fda4cf797e5fd3fa95, wf_730c1e89abde40fda4cf797e5, orig_outfit_semibold",
+              "count": 29
+            },
+            {
+              "value": "wfont_96879d_48f41281027543b39fe9ab1bd07fb5f9, wf_48f41281027543b39fe9ab1bd, orig_outfit_light",
+              "count": 16
+            }
+          ],
+          "font_sizes_px": [
+            10,
+            13,
+            16,
+            20,
+            26,
+            30,
+            33,
+            39,
+            47,
+            53,
+            58,
+            63
+          ],
+          "font_weights": [
+            {
+              "value": "400",
+              "count": 1550
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "22.4px",
+              "count": 106
+            },
+            {
+              "value": "16px",
+              "count": 35
+            },
+            {
+              "value": "28.8px",
+              "count": 12
+            },
+            {
+              "value": "36.3375px",
+              "count": 11
+            },
+            {
+              "value": "19.6px",
+              "count": 11
+            },
+            {
+              "value": "0px",
+              "count": 11
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "0.4275px",
+              "count": 8
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            2,
+            5,
+            8,
+            11,
+            14,
+            20,
+            24,
+            27,
+            36,
+            40,
+            43,
+            56
+          ],
+          "margin_px": [
+            1,
+            4,
+            7,
+            10,
+            13,
+            16,
+            19,
+            22,
+            25,
+            28,
+            31,
+            36
+          ],
+          "gap_px": [
+            2,
+            8,
+            11,
+            16,
+            23
+          ]
+        },
+        "radii": [
+          {
+            "value": "22.5px",
+            "count": 8
+          },
+          {
+            "value": "80px",
+            "count": 7
+          },
+          {
+            "value": "22.5px 22.5px 0px 0px",
+            "count": 4
+          },
+          {
+            "value": "113.834px",
+            "count": 4
+          },
+          {
+            "value": "100px",
+            "count": 2
+          },
+          {
+            "value": "18px",
+            "count": 2
+          },
+          {
+            "value": "6px",
+            "count": 2
+          },
+          {
+            "value": "16px",
+            "count": 2
+          }
+        ],
+        "shadows": [
+          {
+            "value": "rgba(0, 0, 0, 0.1) 0px 0px 4px 0px, rgba(0, 0, 0, 0.1) 0px 4px 8px 0px",
+            "count": 1
+          },
+          {
+            "value": "rgb(255, 249, 238) 0px 0px 0px 0px",
+            "count": 1
+          },
+          {
+            "value": "rgba(0, 0, 0, 0.1) -8px -7px 20px 0px",
+            "count": 1
+          }
+        ],
+        "gradients_used": true,
+        "gradient_count": 2,
+        "css_variables": {
+          "--wst-color-custom-17": "rgb(243,228,153)",
+          "--wix-opt-in-direction": "ltr",
+          "--wst-font-style-body-large": "normal normal normal calc(19 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_96879d_f8d16c27b5d2415daffd732ba31e9eb1,wf_f8d16c27b5d2415daffd732ba,orig_outfit_medium",
+          "--font_9": "normal normal normal calc(16 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_96879d_48f41281027543b39fe9ab1bd07fb5f9,wf_48f41281027543b39fe9ab1bd,orig_outfit_light",
+          "--wst-color-fill-background-primary": "rgb(255,249,238)",
+          "--color_55": "111,108,103",
+          "--wst-color-custom-20": "rgb(79,69,21)",
+          "--wst-color-custom-11": "rgb(186,199,252)",
+          "--color_37": "8,8,11",
+          "--color_43": "232,108,40",
+          "--wst-color-custom-19": "rgb(158,139,41)",
+          "--wst-color-fill-base-shade-2": "rgb(111,108,103)",
+          "--color_12": "226,220,210",
+          "--color_60": "255,249,238",
+          "--wst-button-color-border-secondary-hover": "rgb(232,108,40)",
+          "--color_25": "61,41,53",
+          "--color_48": "232,108,40",
+          "--wix-ads-height": "0px",
+          "--wst-font-style-body-small": "normal normal normal calc(16 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_96879d_48f41281027543b39fe9ab1bd07fb5f9,wf_48f41281027543b39fe9ab1bd,orig_outfit_light",
+          "--scaling-factor": "clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px))",
+          "--wst-button-color-text-primary": "rgb(255,249,238)",
+          "--wst-font-style-body-x-small": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+          "--cookie-banner-secondary-color": "#FFF9EE",
+          "--wst-color-line": "rgb(8,8,11)",
+          "--color_21": "250,209,234",
+          "--color_51": "232,108,40",
+          "--color_50": "255,249,238",
+          "--color_13": "111,108,103",
+          "--color_10": "176,176,176",
+          "--wst-color-custom-12": "rgb(119,144,249)",
+          "--wst-font-style-h6": "normal normal normal calc(23 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_c32374_8be3301d675e4c55bb3f1841fbaec7d2,wf_8be3301d675e4c55bb3f1841f,orig_coconat_bold_ext",
+          "--browser-zoom": "1",
+          "--color_54": "111,108,103",
+          "--wst-color-custom-7": "rgb(244,165,214)",
+          "--color_20": "77,36,13",
+          "--color_58": "232,108,40",
+          "--color_65": "111,108,103",
+          "--color_46": "50,50,50",
+          "--wst-color-custom-8": "rgb(183,124,161)",
+          "--color_2": "0,0,0",
+          "--wst-button-color-border-primary-hover": "rgb(232,108,40)",
+          "--color_3": "237,28,36",
+          "--wst-color-action": "rgb(232,108,40)",
+          "--wst-color-fill-accent-2": "rgb(232,108,40)",
+          "--color_41": "232,108,40",
+          "--color_22": "244,165,214",
+          "--color_30": "30,36,62",
+          "--wst-color-custom-13": "rgb(89,108,187)",
+          "--color_31": "249,239,188",
+          "--maxViewportSize": "1920",
+          "--minViewportSize": "320",
+          "--wst-color-custom-14": "rgb(60,72,125)",
+          "--color_23": "183,124,161",
+          "--color_42": "232,108,40",
+          "--wst-button-color-fill-secondary": "rgb(255,249,238)",
+          "--wst-font-style-h2": "normal normal normal calc(47 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_96879d_730c1e89abde40fda4cf797e5fd3fa95,wf_730c1e89abde40fda4cf797e5,orig_outfit_semibold",
+          "--font_7": "normal normal normal calc(19 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_96879d_f8d16c27b5d2415daffd732ba31e9eb1,wf_f8d16c27b5d2415daffd732ba,orig_outfit_medium",
+          "--wst-button-color-fill-secondary-hover": "rgb(255,249,238)",
+          "--font_6": "normal normal normal calc(23 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_c32374_8be3301d675e4c55bb3f1841fbaec7d2,wf_8be3301d675e4c55bb3f1841f,orig_coconat_bold_ext",
+          "--wst-button-color-fill-primary-disabled": "rgb(111,108,103)",
+          "--font_3": "normal normal normal calc(35 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_c32374_8be3301d675e4c55bb3f1841fbaec7d2,wf_8be3301d675e4c55bb3f1841f,orig_coconat_bold_ext",
+          "--font_4": "normal normal normal calc(29 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_96879d_730c1e89abde40fda4cf797e5fd3fa95,wf_730c1e89abde40fda4cf797e5,orig_outfit_semibold",
+          "--color_44": "232,108,40",
+          "--cookie-banner-font-size": "14px",
+          "--wst-color-custom-16": "rgb(249,239,188)",
+          "--wst-color-custom-15": "rgb(30,36,62)",
+          "--wst-button-color-text-secondary": "rgb(232,108,40)",
+          "--wst-button-color-border-primary-disabled": "rgb(111,108,103)",
+          "--wst-color-fill-base-shade-3": "rgb(50,50,50)",
+          "--wst-color-custom-4": "rgb(155,72,27)",
+          "--color_56": "255,249,238",
+          "--wst-color-fill-accent-3": "rgb(232,108,40)",
+          "--cookie-banner-font-family": "wfont_96879d_f8d16c27b5d2415daffd732ba31e9eb1,wf__f8d16c27b5d2415daffd732ba,orig_outfit_medium",
+          "--theme-spx-ratio": "clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280",
+          "--cookie-banner-primary-color": "#08080B",
+          "--spx-stopper-max": "9999px",
+          "--color_9": "114,114,114",
+          "--color_27": "119,144,249",
+          "--customScaleViewportLimit": "clamp(320 * 1px, 100 * 1cqw * 1, min(9999px, 1920 * 1px))",
+          "--portals-z-index": "100001",
+          "--wst-color-custom-3": "rgb(240,176,140)",
+          "--color_61": "232,108,40",
+          "--wst-color-fill-base-shade-1": "rgb(226,220,210)",
+          "--color_33": "237,208,62",
+          "--color_0": "255,255,255",
+          "--wst-color-custom-18": "rgb(237,208,62)",
+          "--color_62": "232,108,40",
+          "--font_5": "normal normal normal calc(23 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_96879d_730c1e89abde40fda4cf797e5fd3fa95,wf_730c1e89abde40fda4cf797e5,orig_outfit_semibold",
+          "--color_39": "111,108,103",
+          "--font_8": "normal normal normal calc(16 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_96879d_f8d16c27b5d2415daffd732ba31e9eb1,wf_f8d16c27b5d2415daffd732ba,orig_outfit_medium",
+          "--font_2": "normal normal normal calc(47 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_96879d_730c1e89abde40fda4cf797e5fd3fa95,wf_730c1e89abde40fda4cf797e5,orig_outfit_semibold",
+          "--color_63": "255,249,238",
+          "--wst-color-custom-6": "rgb(250,209,234)",
+          "--color_4": "0,136,203",
+          "--color_7": "176,176,176",
+          "--color_52": "232,108,40",
+          "--wst-button-color-text-secondary-hover": "rgb(232,108,40)",
+          "--wst-font-style-h3": "normal normal normal calc(35 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_c32374_8be3301d675e4c55bb3f1841fbaec7d2,wf_8be3301d675e4c55bb3f1841f,orig_coconat_bold_ext",
+          "--wst-color-fill-accent-1": "rgb(232,108,40)",
+          "--font_0": "normal normal normal calc(56 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_c32374_8be3301d675e4c55bb3f1841fbaec7d2,wf_8be3301d675e4c55bb3f1841f,orig_coconat_bold_ext",
+          "--color_34": "158,139,41",
+          "--color_47": "8,8,11",
+          "--wst-button-color-border-secondary": "rgb(232,108,40)",
+          "--wst-button-color-text-secondary-disabled": "rgb(111,108,103)",
+          "--color_45": "8,8,11",
+          "--wst-button-color-border-secondary-disabled": "rgb(111,108,103)",
+          "--color_59": "232,108,40",
+          "--wst-color-fill-background-secondary": "rgb(226,220,210)",
+          "--wst-color-fill-accent-4": "rgb(232,108,40)",
+          "--wst-color-custom-1": "rgb(111,108,103)",
+          "--color_5": "255,203,5",
+          "--color_1": "255,255,255",
+          "--color_14": "50,50,50",
+          "--full-viewport": "100 * 1cqw * 1",
+          "--wst-font-style-body-medium": "normal normal normal calc(16 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_96879d_f8d16c27b5d2415daffd732ba31e9eb1,wf_f8d16c27b5d2415daffd732ba,orig_outfit_medium",
+          "--font_10": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+          "--wst-font-style-h4": "normal normal normal calc(29 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_96879d_730c1e89abde40fda4cf797e5fd3fa95,wf_730c1e89abde40fda4cf797e5,orig_outfit_semibold",
+          "--wst-color-text-secondary": "rgb(50,50,50)",
+          "--color_17": "240,176,140",
+          "--color_40": "50,50,50",
+          "--wst-button-color-fill-primary-hover": "rgb(232,108,40)",
+          "--wst-button-color-border-primary": "rgb(232,108,40)",
+          "--wst-color-disabled": "rgb(111,108,103)",
+          "--color_16": "247,203,179",
+          "--color_24": "122,83,107",
+          "--color_19": "155,72,27",
+          "--site-width": "980px",
+          "--wst-button-color-fill-primary": "rgb(232,108,40)",
+          "--wst-color-fill-base-1": "rgb(255,249,238)",
+          "--wst-color-custom-5": "rgb(77,36,13)",
+          "--color_15": "8,8,11",
+          "--font_1": "normal normal normal 16px/1.4em din-next-w01-light,sans-serif",
+          "--wst-font-style-h5": "normal normal normal calc(23 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280)/1.4em wfont_96879d_730c1e89abde40fda4cf797e5fd3fa95,wf_730c1e89abde40fda4cf797e5,orig_outfit_semibold",
+          "--spx-stopper-min": "0px",
+          "--color_6": "114,114,114",
+          "--color_49": "232,108,40",
+          "--color_26": "186,199,252",
+          "--wst-color-custom-10": "rgb(61,41,53)",
+          "--wst-color-text-primary": "rgb(8,8,11)",
+          "--wix-ads-top-height": "0px",
+          "--wst-button-color-fill-secondary-disabled": "rgb(255,249,238)",
+          "--color_38": "226,220,210",
+          "--sticky-offset": "0px",
+          "--color_57": "255,249,238",
+          "--color_8": "255,255,255",
+          "--color_36": "255,249,238",
+          "--wst-color-subtitle": "rgb(50,50,50)",
+          "--color_18": "232,108,40",
+          "--wst-color-custom-9": "rgb(122,83,107)",
+          "--wst-color-fill-base-2": "rgb(8,8,11)",
+          "--wix-opt-in-direction-multiplier": "1",
+          "--color_64": "111,108,103",
+          "--color_53": "255,249,238",
+          "--color_28": "89,108,187",
+          "--wst-color-title": "rgb(8,8,11)",
+          "--above-all-z-index": "100000",
+          "--color_35": "79,69,21",
+          "--color_32": "243,228,153",
+          "--color_29": "60,72,125",
+          "--one-unit": "1cqw",
+          "--wst-button-color-text-primary-hover": "rgb(255,249,238)",
+          "--wst-button-color-text-primary-disabled": "rgb(255,249,238)",
+          "--color_11": "255,249,238",
+          "--wst-color-custom-2": "rgb(247,203,179)",
+          "--section-max-width": "9999px"
+        }
+      }
+    }
+  },
+  "missing_categories": [
+    "service",
+    "feature",
+    "blog"
+  ]
+}

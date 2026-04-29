@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "purpose": "Brand reference audit input for factoryjet.com pipeline DESIGN.md authoring (Patch #5).",
+  "captures_per_site": ["homepage", "service", "pricing", "feature", "blog"],
+  "discovery_note": "If a urls.{category} value is null, the script discovers it by parsing the homepage nav. If discovery fails, the page is logged as missing in the audit summary.",
+  "sites": [
+    { "slug": "qvery-ai",         "category": "taste",  "homepage": "https://qvery.ai",            "urls": { "service": null, "pricing": null, "feature": null, "blog": null }, "notes": "" },
+    { "slug": "tillerdigital-com","category": "taste",  "homepage": "https://tillerdigital.com",   "urls": { "service": null, "pricing": null, "feature": null, "blog": null }, "notes": "" },
+    { "slug": "voxr-ai",          "category": "taste",  "homepage": "https://voxr.ai",             "urls": { "service": null, "pricing": null, "feature": null, "blog": null }, "notes": "" },
+    { "slug": "mygomseo-com",     "category": "taste",  "homepage": "https://mygomseo.com",        "urls": { "service": null, "pricing": null, "feature": null, "blog": null }, "notes": "" },
+    { "slug": "spade-com",        "category": "taste",  "homepage": "https://spade.com",           "urls": { "service": null, "pricing": null, "feature": null, "blog": null }, "notes": "" },
+    { "slug": "nextsense-io",     "category": "taste",  "homepage": "https://nextsense.io",        "urls": { "service": null, "pricing": null, "feature": null, "blog": null }, "notes": "" },
+    { "slug": "ausdata-ai",       "category": "taste",  "homepage": "https://ausdata.ai",          "urls": { "service": null, "pricing": null, "feature": null, "blog": null }, "notes": "" },
+    { "slug": "jenamdvacetpet-cz","category": "taste",  "homepage": "https://jenamdvacetpet.cz",   "urls": { "service": null, "pricing": null, "feature": null, "blog": null }, "notes": "Czech site — nav text may not match English keywords; discovery will likely miss inner pages." },
+    { "slug": "theboathouse-agency","category": "taste","homepage": "https://theboathouse.agency", "urls": { "service": null, "pricing": null, "feature": null, "blog": null }, "notes": "" },
+    { "slug": "digitalflagship-com","category": "taste","homepage": "https://digitalflagship.com", "urls": { "service": null, "pricing": null, "feature": null, "blog": null }, "notes": "" },
+    { "slug": "galvanite-io",     "category": "taste",  "homepage": "https://galvanite.io",        "urls": { "service": null, "pricing": null, "feature": null, "blog": null }, "notes": "" },
+    { "slug": "madeinevolve-com", "category": "taste",  "homepage": "https://madeinevolve.com",    "urls": { "service": null, "pricing": null, "feature": null, "blog": null }, "notes": "" },
+    { "slug": "olyablack-com",    "category": "taste",  "homepage": "https://olyablack.com",       "urls": { "service": null, "pricing": null, "feature": null, "blog": null }, "notes": "Personal portfolio — pricing/blog likely missing." },
+    { "slug": "natboos-com",      "category": "taste",  "homepage": "https://natboos.com",         "urls": { "service": null, "pricing": null, "feature": null, "blog": null }, "notes": "Personal portfolio — pricing/blog likely missing." },
+    { "slug": "onething-design",  "category": "taste",  "homepage": "https://onething.design",     "urls": { "service": null, "pricing": null, "feature": null, "blog": null }, "notes": "" },
+
+    { "slug": "stripe-com",       "category": "anchor", "homepage": "https://stripe.com",          "urls": { "service": null, "pricing": null, "feature": null, "blog": null }, "notes": "White-bg gold standard." },
+    { "slug": "linear-app",       "category": "anchor", "homepage": "https://linear.app",          "urls": { "service": null, "pricing": null, "feature": null, "blog": null }, "notes": "May render dark by default — script forces light mode." },
+    { "slug": "vercel-com",       "category": "anchor", "homepage": "https://vercel.com",          "urls": { "service": null, "pricing": null, "feature": null, "blog": null }, "notes": "May render dark by default — script forces light mode." },
+    { "slug": "resend-com",       "category": "anchor", "homepage": "https://resend.com",          "urls": { "service": null, "pricing": null, "feature": null, "blog": null }, "notes": "May render dark by default — script forces light mode." },
+    { "slug": "mintlify-com",     "category": "anchor", "homepage": "https://mintlify.com",        "urls": { "service": null, "pricing": null, "feature": null, "blog": null }, "notes": "" }
+  ]
+}

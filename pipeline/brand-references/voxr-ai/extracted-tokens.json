@@ -1,0 +1,767 @@
+{
+  "slug": "voxr-ai",
+  "category": "taste",
+  "homepage": "https://voxr.ai",
+  "captured_at": "2026-04-29T04:59:05Z",
+  "pages": {
+    "homepage": {
+      "url": "https://www.voxr.ai/",
+      "screenshot": "screenshots/homepage.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#FFFFFF",
+              "count": 31
+            },
+            {
+              "hex": "#000000",
+              "count": 24
+            },
+            {
+              "hex": "#0B040D",
+              "count": 15
+            },
+            {
+              "hex": "#AB00FF",
+              "count": 8
+            },
+            {
+              "hex": "#1F1B20",
+              "count": 6
+            },
+            {
+              "hex": "#DDBBF1",
+              "count": 5
+            },
+            {
+              "hex": "#CD7FFE",
+              "count": 2
+            },
+            {
+              "hex": "#F6F6F6",
+              "count": 2
+            }
+          ],
+          "text": [
+            {
+              "hex": "#FFFFFF",
+              "count": 2485
+            },
+            {
+              "hex": "#0B040D",
+              "count": 54
+            },
+            {
+              "hex": "#000000",
+              "count": 43
+            },
+            {
+              "hex": "#DDBBF1",
+              "count": 18
+            },
+            {
+              "hex": "#7F34A4",
+              "count": 12
+            }
+          ],
+          "border": []
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "\"DM Sans\", sans-serif",
+              "count": 2040
+            },
+            {
+              "value": "\"DM Sans\"",
+              "count": 561
+            },
+            {
+              "value": "sans-serif",
+              "count": 34
+            },
+            {
+              "value": "\"Times New Roman\"",
+              "count": 1
+            }
+          ],
+          "font_sizes_px": [
+            14,
+            18,
+            24,
+            32,
+            36,
+            40,
+            48,
+            56,
+            64,
+            72,
+            100
+          ],
+          "font_weights": [
+            {
+              "value": "500",
+              "count": 1919
+            },
+            {
+              "value": "700",
+              "count": 406
+            },
+            {
+              "value": "400",
+              "count": 202
+            },
+            {
+              "value": "600",
+              "count": 108
+            },
+            {
+              "value": "300",
+              "count": 1
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "24px",
+              "count": 1961
+            },
+            {
+              "value": "150px",
+              "count": 561
+            },
+            {
+              "value": "28px",
+              "count": 25
+            },
+            {
+              "value": "32px",
+              "count": 22
+            },
+            {
+              "value": "68px",
+              "count": 15
+            },
+            {
+              "value": "44px",
+              "count": 6
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "-2.8px",
+              "count": 14
+            },
+            {
+              "value": "-0.8px",
+              "count": 2
+            },
+            {
+              "value": "-2.4px",
+              "count": 2
+            },
+            {
+              "value": "-24.96px",
+              "count": 1
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            1,
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            32,
+            48,
+            56,
+            64,
+            80
+          ],
+          "margin_px": [
+            4,
+            7,
+            10,
+            22,
+            32,
+            36,
+            41,
+            45,
+            49,
+            112,
+            150,
+            176
+          ],
+          "gap_px": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            32,
+            36,
+            48,
+            56,
+            100
+          ]
+        },
+        "radii": [
+          {
+            "value": "900px",
+            "count": 45
+          },
+          {
+            "value": "999.04px",
+            "count": 35
+          },
+          {
+            "value": "20px",
+            "count": 35
+          },
+          {
+            "value": "24px",
+            "count": 24
+          },
+          {
+            "value": "100%",
+            "count": 22
+          },
+          {
+            "value": "16px",
+            "count": 13
+          },
+          {
+            "value": "8px",
+            "count": 6
+          },
+          {
+            "value": "50%",
+            "count": 5
+          }
+        ],
+        "shadows": [
+          {
+            "value": "rgba(0, 0, 0, 0.2) 0px 7px 40px 0px",
+            "count": 6
+          },
+          {
+            "value": "rgba(255, 255, 255, 0.8) 0px -19px 20px 2px inset, rgb(202, 92, 243) 0px -28px 42.7px 12px inset, rgb(93, 36, 140) 0px -79px 62.5px 14px inset",
+            "count": 1
+          },
+          {
+            "value": "rgba(255, 255, 255, 0.8) 0px 17px 20px 2px inset, rgb(202, 92, 243) 0px 33px 25px 12px inset, rgb(93, 36, 140) 0px 79px 48px 14px inset",
+            "count": 1
+          }
+        ],
+        "gradients_used": true,
+        "gradient_count": 36,
+        "css_variables": {
+          "--white-60": "white",
+          "--light-purple": "#cd7ffe",
+          "--swiper-navigation-size": "44px",
+          "--darker-purple": "#7f34a4",
+          "--light-shade-purple": "#ddbbf1",
+          "--white-70": "white",
+          "--glow-purple": "#cd7ffe99",
+          "--main-purple": "#ab00ff",
+          "--swiper-theme-color": "#007aff",
+          "--dark": "#0b040d",
+          "--white-100": "white",
+          "--white-90": "white",
+          "--main-purple-8": "#ab00ff14",
+          "--white-80": "white"
+        }
+      }
+    },
+    "service": {
+      "url": "https://www.voxr.ai/features",
+      "screenshot": "screenshots/service.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#FFFFFF",
+              "count": 16
+            },
+            {
+              "hex": "#F6F6F6",
+              "count": 16
+            },
+            {
+              "hex": "#000000",
+              "count": 10
+            },
+            {
+              "hex": "#CD7FFE",
+              "count": 9
+            },
+            {
+              "hex": "#DDBBF1",
+              "count": 8
+            },
+            {
+              "hex": "#0B040D",
+              "count": 7
+            },
+            {
+              "hex": "#AB00FF",
+              "count": 7
+            },
+            {
+              "hex": "#28212C",
+              "count": 6
+            }
+          ],
+          "text": [
+            {
+              "hex": "#FFFFFF",
+              "count": 696
+            },
+            {
+              "hex": "#000000",
+              "count": 77
+            },
+            {
+              "hex": "#0B040D",
+              "count": 48
+            },
+            {
+              "hex": "#DDBBF1",
+              "count": 11
+            },
+            {
+              "hex": "#7F34A4",
+              "count": 3
+            }
+          ],
+          "border": [
+            {
+              "hex": "#E0E0E0",
+              "count": 1
+            }
+          ]
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "\"DM Sans\", sans-serif",
+              "count": 825
+            },
+            {
+              "value": "sans-serif",
+              "count": 34
+            }
+          ],
+          "font_sizes_px": [
+            14,
+            18,
+            24,
+            32,
+            48,
+            56,
+            72
+          ],
+          "font_weights": [
+            {
+              "value": "500",
+              "count": 701
+            },
+            {
+              "value": "600",
+              "count": 119
+            },
+            {
+              "value": "400",
+              "count": 34
+            },
+            {
+              "value": "700",
+              "count": 5
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "24px",
+              "count": 768
+            },
+            {
+              "value": "26.08px",
+              "count": 18
+            },
+            {
+              "value": "68px",
+              "count": 11
+            },
+            {
+              "value": "56px",
+              "count": 9
+            },
+            {
+              "value": "28px",
+              "count": 6
+            },
+            {
+              "value": "32px",
+              "count": 6
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "-0.1408px",
+              "count": 16
+            },
+            {
+              "value": "-2.8px",
+              "count": 11
+            },
+            {
+              "value": "-0.8px",
+              "count": 2
+            },
+            {
+              "value": "-2.4px",
+              "count": 2
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            1,
+            4,
+            12,
+            16,
+            20,
+            23,
+            32,
+            48,
+            64,
+            84,
+            96,
+            112
+          ],
+          "margin_px": [
+            6,
+            20,
+            24,
+            32,
+            36,
+            43,
+            49,
+            96,
+            112
+          ],
+          "gap_px": [
+            8,
+            12,
+            16,
+            24,
+            36,
+            48,
+            64
+          ]
+        },
+        "radii": [
+          {
+            "value": "16px",
+            "count": 26
+          },
+          {
+            "value": "100%",
+            "count": 22
+          },
+          {
+            "value": "900px",
+            "count": 21
+          },
+          {
+            "value": "999.04px",
+            "count": 20
+          },
+          {
+            "value": "24px",
+            "count": 18
+          },
+          {
+            "value": "50%",
+            "count": 13
+          },
+          {
+            "value": "20px",
+            "count": 11
+          },
+          {
+            "value": "16px 16px 0px 0px",
+            "count": 6
+          }
+        ],
+        "shadows": [
+          {
+            "value": "rgba(0, 0, 0, 0.5) 0px 0px 30px 0px",
+            "count": 5
+          },
+          {
+            "value": "rgba(255, 255, 255, 0.8) 0px -19px 20px 2px inset, rgb(202, 92, 243) 0px -28px 42.7px 12px inset, rgb(93, 36, 140) 0px -79px 62.5px 14px inset",
+            "count": 1
+          },
+          {
+            "value": "rgba(255, 255, 255, 0.8) 0px 17px 20px 2px inset, rgb(202, 92, 243) 0px 33px 25px 12px inset, rgb(93, 36, 140) 0px 79px 48px 14px inset",
+            "count": 1
+          }
+        ],
+        "gradients_used": true,
+        "gradient_count": 35,
+        "css_variables": {
+          "--white-60": "white",
+          "--light-purple": "#cd7ffe",
+          "--swiper-navigation-size": "44px",
+          "--light-shade-purple": "#ddbbf1",
+          "--darker-purple": "#7f34a4",
+          "--white-70": "white",
+          "--glow-purple": "#cd7ffe99",
+          "--swiper-theme-color": "#007aff",
+          "--main-purple": "#ab00ff",
+          "--dark": "#0b040d",
+          "--white-100": "white",
+          "--white-90": "white",
+          "--main-purple-8": "#ab00ff14",
+          "--white-80": "white"
+        }
+      }
+    },
+    "pricing": {
+      "url": "https://www.voxr.ai/pricing",
+      "screenshot": "screenshots/pricing.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#FFFFFF",
+              "count": 18
+            },
+            {
+              "hex": "#000000",
+              "count": 16
+            },
+            {
+              "hex": "#AB00FF",
+              "count": 5
+            },
+            {
+              "hex": "#0B040D",
+              "count": 3
+            },
+            {
+              "hex": "#CD7FFE",
+              "count": 2
+            },
+            {
+              "hex": "#F6F6F6",
+              "count": 1
+            },
+            {
+              "hex": "#DDBBF1",
+              "count": 1
+            }
+          ],
+          "text": [
+            {
+              "hex": "#FFFFFF",
+              "count": 510
+            },
+            {
+              "hex": "#000000",
+              "count": 34
+            },
+            {
+              "hex": "#0B040D",
+              "count": 28
+            },
+            {
+              "hex": "#7F34A4",
+              "count": 3
+            },
+            {
+              "hex": "#DDBBF1",
+              "count": 1
+            }
+          ],
+          "border": [
+            {
+              "hex": "#DDBBF1",
+              "count": 1
+            }
+          ]
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "\"DM Sans\", sans-serif",
+              "count": 570
+            },
+            {
+              "value": "sans-serif",
+              "count": 30
+            }
+          ],
+          "font_sizes_px": [
+            14,
+            20,
+            24,
+            40,
+            56,
+            72
+          ],
+          "font_weights": [
+            {
+              "value": "500",
+              "count": 500
+            },
+            {
+              "value": "600",
+              "count": 62
+            },
+            {
+              "value": "400",
+              "count": 30
+            },
+            {
+              "value": "700",
+              "count": 8
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "24px",
+              "count": 523
+            },
+            {
+              "value": "21.12px",
+              "count": 26
+            },
+            {
+              "value": "28px",
+              "count": 8
+            },
+            {
+              "value": "52px",
+              "count": 4
+            },
+            {
+              "value": "68px",
+              "count": 4
+            },
+            {
+              "value": "32px",
+              "count": 3
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "-2.8px",
+              "count": 4
+            },
+            {
+              "value": "-3.6px",
+              "count": 2
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            32,
+            64,
+            109,
+            128,
+            136,
+            140
+          ],
+          "margin_px": [
+            4,
+            32,
+            36,
+            43,
+            49,
+            112
+          ],
+          "gap_px": [
+            8,
+            12,
+            16,
+            20,
+            24,
+            48,
+            64
+          ]
+        },
+        "radii": [
+          {
+            "value": "900px",
+            "count": 22
+          },
+          {
+            "value": "100%",
+            "count": 20
+          },
+          {
+            "value": "24px",
+            "count": 17
+          },
+          {
+            "value": "999.04px",
+            "count": 14
+          },
+          {
+            "value": "16px",
+            "count": 8
+          },
+          {
+            "value": "20px",
+            "count": 3
+          }
+        ],
+        "shadows": [
+          {
+            "value": "rgba(255, 255, 255, 0.8) 0px -19px 20px 2px inset, rgb(202, 92, 243) 0px -28px 42.7px 12px inset, rgb(93, 36, 140) 0px -79px 62.5px 14px inset",
+            "count": 1
+          },
+          {
+            "value": "rgba(255, 255, 255, 0.8) 0px 17px 20px 2px inset, rgb(202, 92, 243) 0px 33px 25px 12px inset, rgb(93, 36, 140) 0px 79px 48px 14px inset",
+            "count": 1
+          }
+        ],
+        "gradients_used": true,
+        "gradient_count": 11,
+        "css_variables": {
+          "--white-60": "white",
+          "--light-purple": "#cd7ffe",
+          "--swiper-navigation-size": "44px",
+          "--darker-purple": "#7f34a4",
+          "--light-shade-purple": "#ddbbf1",
+          "--white-70": "white",
+          "--glow-purple": "#cd7ffe99",
+          "--main-purple": "#ab00ff",
+          "--swiper-theme-color": "#007aff",
+          "--dark": "#0b040d",
+          "--white-100": "white",
+          "--white-90": "white",
+          "--main-purple-8": "#ab00ff14",
+          "--white-80": "white"
+        }
+      }
+    }
+  },
+  "missing_categories": [
+    "feature",
+    "blog"
+  ]
+}

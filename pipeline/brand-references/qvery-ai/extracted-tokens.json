@@ -1,0 +1,496 @@
+{
+  "slug": "qvery-ai",
+  "category": "taste",
+  "homepage": "https://qvery.ai",
+  "captured_at": "2026-04-29T04:57:50Z",
+  "pages": {
+    "homepage": {
+      "url": "https://qvery.ai/",
+      "screenshot": "screenshots/homepage.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#011C25",
+              "count": 17
+            },
+            {
+              "hex": "#F6F8FF",
+              "count": 13
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 2
+            },
+            {
+              "hex": "#FF3131",
+              "count": 1
+            },
+            {
+              "hex": "#0AD0BC",
+              "count": 1
+            }
+          ],
+          "text": [
+            {
+              "hex": "#000000",
+              "count": 766
+            },
+            {
+              "hex": "#011C25",
+              "count": 106
+            },
+            {
+              "hex": "#0000EE",
+              "count": 46
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 9
+            },
+            {
+              "hex": "#F6F8FF",
+              "count": 6
+            },
+            {
+              "hex": "#FF3131",
+              "count": 4
+            }
+          ],
+          "border": []
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "sans-serif",
+              "count": 789
+            },
+            {
+              "value": "Lato, sans-serif",
+              "count": 43
+            },
+            {
+              "value": "Inter, \"Inter Placeholder\", sans-serif",
+              "count": 42
+            },
+            {
+              "value": "\"Times New Roman\"",
+              "count": 36
+            },
+            {
+              "value": "Lato, \"Lato Placeholder\", sans-serif",
+              "count": 17
+            },
+            {
+              "value": "system-ui, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+              "count": 8
+            }
+          ],
+          "font_sizes_px": [
+            11,
+            14,
+            17,
+            20,
+            24,
+            35,
+            40,
+            55
+          ],
+          "font_weights": [
+            {
+              "value": "400",
+              "count": 851
+            },
+            {
+              "value": "900",
+              "count": 43
+            },
+            {
+              "value": "500",
+              "count": 18
+            },
+            {
+              "value": "700",
+              "count": 13
+            },
+            {
+              "value": "300",
+              "count": 12
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "26.4px",
+              "count": 16
+            },
+            {
+              "value": "18px",
+              "count": 13
+            },
+            {
+              "value": "24px",
+              "count": 11
+            },
+            {
+              "value": "15.2px",
+              "count": 10
+            },
+            {
+              "value": "21px",
+              "count": 9
+            },
+            {
+              "value": "77px",
+              "count": 8
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "-0.14px",
+              "count": 8
+            },
+            {
+              "value": "1.1px",
+              "count": 6
+            },
+            {
+              "value": "0.15px",
+              "count": 6
+            },
+            {
+              "value": "0.7px",
+              "count": 1
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            2,
+            6,
+            10,
+            14,
+            20,
+            25,
+            30,
+            40,
+            50,
+            64,
+            80
+          ],
+          "margin_px": [
+            2
+          ],
+          "gap_px": [
+            3,
+            10,
+            15,
+            20,
+            24,
+            30,
+            35,
+            40,
+            50,
+            60,
+            75,
+            115
+          ]
+        },
+        "radii": [
+          {
+            "value": "6px",
+            "count": 17
+          },
+          {
+            "value": "16px",
+            "count": 10
+          },
+          {
+            "value": "100px",
+            "count": 7
+          },
+          {
+            "value": "20px",
+            "count": 4
+          },
+          {
+            "value": "99px",
+            "count": 3
+          },
+          {
+            "value": "8px",
+            "count": 1
+          },
+          {
+            "value": "2px",
+            "count": 1
+          },
+          {
+            "value": "12px",
+            "count": 1
+          }
+        ],
+        "shadows": [
+          {
+            "value": "rgba(0, 0, 0, 0.1) 0px 4px 20px 0px",
+            "count": 10
+          },
+          {
+            "value": "rgba(0, 0, 0, 0.15) 0px 1px 20px 0px",
+            "count": 1
+          },
+          {
+            "value": "rgba(0, 0, 0, 0.06) 0px 1px 6px 0px, rgba(0, 0, 0, 0.16) 0px 2px 32px 0px",
+            "count": 1
+          }
+        ],
+        "gradients_used": false,
+        "gradient_count": 0,
+        "css_variables": {
+          "--one-if-corner-shape-supported": "1"
+        }
+      }
+    },
+    "pricing": {
+      "url": "https://qvery.ai/pricing",
+      "screenshot": "screenshots/pricing.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#FFFFFF",
+              "count": 5
+            },
+            {
+              "hex": "#011C25",
+              "count": 5
+            },
+            {
+              "hex": "#F6F8FF",
+              "count": 3
+            },
+            {
+              "hex": "#F0F0F0",
+              "count": 1
+            },
+            {
+              "hex": "#0AD0BC",
+              "count": 1
+            }
+          ],
+          "text": [
+            {
+              "hex": "#000000",
+              "count": 580
+            },
+            {
+              "hex": "#011C25",
+              "count": 55
+            },
+            {
+              "hex": "#666666",
+              "count": 29
+            },
+            {
+              "hex": "#0000EE",
+              "count": 13
+            },
+            {
+              "hex": "#F6F8FF",
+              "count": 6
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 5
+            },
+            {
+              "hex": "#333333",
+              "count": 3
+            },
+            {
+              "hex": "#999999",
+              "count": 3
+            }
+          ],
+          "border": []
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "sans-serif",
+              "count": 577
+            },
+            {
+              "value": "Inter, \"Inter Placeholder\", sans-serif",
+              "count": 50
+            },
+            {
+              "value": "\"Times New Roman\"",
+              "count": 36
+            },
+            {
+              "value": "Lato, \"Lato Placeholder\", sans-serif",
+              "count": 12
+            },
+            {
+              "value": "Lato, sans-serif",
+              "count": 10
+            },
+            {
+              "value": "system-ui, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+              "count": 8
+            }
+          ],
+          "font_sizes_px": [
+            12,
+            15,
+            18,
+            52,
+            55
+          ],
+          "font_weights": [
+            {
+              "value": "400",
+              "count": 631
+            },
+            {
+              "value": "600",
+              "count": 32
+            },
+            {
+              "value": "700",
+              "count": 12
+            },
+            {
+              "value": "900",
+              "count": 10
+            },
+            {
+              "value": "500",
+              "count": 7
+            },
+            {
+              "value": "300",
+              "count": 3
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "21px",
+              "count": 36
+            },
+            {
+              "value": "24px",
+              "count": 10
+            },
+            {
+              "value": "18px",
+              "count": 6
+            },
+            {
+              "value": "22.5px",
+              "count": 3
+            },
+            {
+              "value": "50px",
+              "count": 3
+            },
+            {
+              "value": "16px",
+              "count": 3
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "-0.14px",
+              "count": 8
+            },
+            {
+              "value": "0.7px",
+              "count": 1
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            4,
+            8,
+            12,
+            15,
+            20,
+            30,
+            40,
+            64,
+            80
+          ],
+          "margin_px": [],
+          "gap_px": [
+            4,
+            8,
+            16,
+            20,
+            24,
+            30,
+            35,
+            40,
+            50,
+            115
+          ]
+        },
+        "radii": [
+          {
+            "value": "6px",
+            "count": 5
+          },
+          {
+            "value": "4px",
+            "count": 3
+          },
+          {
+            "value": "20px",
+            "count": 3
+          },
+          {
+            "value": "8px",
+            "count": 2
+          },
+          {
+            "value": "100px",
+            "count": 1
+          },
+          {
+            "value": "50%",
+            "count": 1
+          }
+        ],
+        "shadows": [
+          {
+            "value": "rgba(0, 0, 0, 0.05) 0px 0.796192px 2.38858px -0.625px, rgba(0, 0, 0, 0.05) 0px 2.41451px 7.24352px -1.25px, rgba(0, 0, 0, 0.05) 0px 6.38265px 19.148px -1.875px, rgba(0, 0, 0, 0.05) 0px 20px 60px -2.5px",
+            "count": 2
+          },
+          {
+            "value": "rgba(0, 0, 0, 0.15) 0px 1px 20px 0px",
+            "count": 1
+          },
+          {
+            "value": "rgba(0, 0, 0, 0.12) 0px 0.796192px 2.38858px -0.625px, rgba(0, 0, 0, 0.12) 0px 2.41451px 7.24352px -1.25px, rgba(0, 0, 0, 0.12) 0px 6.38265px 19.148px -1.875px, rgba(0, 0, 0, 0.12) 0px 20px 60px -2.5px, rgba(10, 209, 189, 0.2) 10px 10px 24px 0px",
+            "count": 1
+          },
+          {
+            "value": "rgba(0, 0, 0, 0.06) 0px 1px 6px 0px, rgba(0, 0, 0, 0.16) 0px 2px 32px 0px",
+            "count": 1
+          }
+        ],
+        "gradients_used": false,
+        "gradient_count": 0,
+        "css_variables": {
+          "--one-if-corner-shape-supported": "1"
+        }
+      }
+    }
+  },
+  "missing_categories": [
+    "service",
+    "feature",
+    "blog"
+  ]
+}

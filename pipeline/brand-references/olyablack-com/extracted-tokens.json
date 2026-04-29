@@ -1,0 +1,1120 @@
+{
+  "slug": "olyablack-com",
+  "category": "taste",
+  "homepage": "https://olyablack.com",
+  "captured_at": "2026-04-29T05:09:49Z",
+  "pages": {
+    "homepage": {
+      "url": "https://www.olyablack.com/",
+      "screenshot": "screenshots/homepage.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#000000",
+              "count": 15
+            },
+            {
+              "hex": "#0A03FF",
+              "count": 12
+            },
+            {
+              "hex": "#CAFF30",
+              "count": 6
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 4
+            },
+            {
+              "hex": "#212121",
+              "count": 1
+            }
+          ],
+          "text": [
+            {
+              "hex": "#000000",
+              "count": 1416
+            },
+            {
+              "hex": "#E3E3E3",
+              "count": 254
+            },
+            {
+              "hex": "#0000EE",
+              "count": 195
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 98
+            },
+            {
+              "hex": "#979797",
+              "count": 48
+            },
+            {
+              "hex": "#CAFF30",
+              "count": 38
+            },
+            {
+              "hex": "#116DFF",
+              "count": 1
+            }
+          ],
+          "border": [
+            {
+              "hex": "#FFFFFF",
+              "count": 12
+            },
+            {
+              "hex": "#CAFF30",
+              "count": 8
+            },
+            {
+              "hex": "#000000",
+              "count": 2
+            }
+          ]
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "Arial, Helvetica, sans-serif",
+              "count": 1425
+            },
+            {
+              "value": "wfont_f415e2_2db2fada43ad426e86d977f0e1895970, wf_2db2fada43ad426e86d977f0e, orig_arbeitlightwebfont",
+              "count": 459
+            },
+            {
+              "value": "\"Times New Roman\"",
+              "count": 127
+            },
+            {
+              "value": "aether, sans-serif",
+              "count": 38
+            },
+            {
+              "value": "Helvetica, Arial, メイリオ, meiryo, \"ヒラギノ角ゴ pro w3\", \"hiragino kaku gothic pro\", sans-serif",
+              "count": 1
+            }
+          ],
+          "font_sizes_px": [
+            10,
+            13,
+            16,
+            20,
+            25,
+            32,
+            35,
+            38,
+            50,
+            56,
+            102,
+            137
+          ],
+          "font_weights": [
+            {
+              "value": "400",
+              "count": 2042
+            },
+            {
+              "value": "700",
+              "count": 5
+            },
+            {
+              "value": "500",
+              "count": 3
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "24px",
+              "count": 252
+            },
+            {
+              "value": "25.2px",
+              "count": 52
+            },
+            {
+              "value": "30.8px",
+              "count": 44
+            },
+            {
+              "value": "34.65px",
+              "count": 22
+            },
+            {
+              "value": "22.4px",
+              "count": 19
+            },
+            {
+              "value": "22.05px",
+              "count": 16
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "1.26px",
+              "count": 16
+            },
+            {
+              "value": "1.68751px",
+              "count": 8
+            },
+            {
+              "value": "1.82134px",
+              "count": 4
+            },
+            {
+              "value": "1.8px",
+              "count": 4
+            },
+            {
+              "value": "6.83004px",
+              "count": 2
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            1,
+            5,
+            8,
+            12,
+            16,
+            24,
+            29,
+            32,
+            37,
+            68,
+            72
+          ],
+          "margin_px": [
+            2,
+            5,
+            8,
+            11,
+            15,
+            18,
+            21,
+            24,
+            28,
+            31,
+            40,
+            43
+          ],
+          "gap_px": [
+            12,
+            18,
+            24
+          ]
+        },
+        "radii": [
+          {
+            "value": "1123.88px",
+            "count": 10
+          },
+          {
+            "value": "89px",
+            "count": 5
+          },
+          {
+            "value": "22.5004px",
+            "count": 4
+          },
+          {
+            "value": "22.7668px",
+            "count": 2
+          },
+          {
+            "value": "24px",
+            "count": 1
+          },
+          {
+            "value": "30px",
+            "count": 1
+          }
+        ],
+        "shadows": [
+          {
+            "value": "rgba(202, 255, 48, 0.33) -4.95px 4.95px 53px 1px",
+            "count": 3
+          },
+          {
+            "value": "rgba(98, 60, 234, 0.33) -4.95px 4.95px 53px 1px",
+            "count": 2
+          },
+          {
+            "value": "rgba(10, 3, 255, 0.6) 0px 1.12464px 4.49986px 0px",
+            "count": 2
+          },
+          {
+            "value": "rgba(0, 0, 0, 0.15) 6.51125px -4.58755px 4.55342px 0px",
+            "count": 1
+          },
+          {
+            "value": "rgba(0, 0, 0, 0.15) 5.13389px -6.09005px 4.55342px 0px",
+            "count": 1
+          }
+        ],
+        "gradients_used": false,
+        "gradient_count": 0,
+        "css_variables": {
+          "--wst-color-custom-17": "rgb(154,169,172)",
+          "--wix-opt-in-direction": "ltr",
+          "--wst-font-style-body-large": "normal normal normal 18px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--font_9": "normal normal normal 14px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--wst-color-fill-background-primary": "rgb(255,255,255)",
+          "--color_55": "151,151,151",
+          "--wst-color-custom-20": "rgb(34,42,43)",
+          "--wst-color-custom-11": "rgb(209,219,195)",
+          "--color_37": "0,0,0",
+          "--color_43": "202,255,48",
+          "--wst-color-fill-base-shade-2": "rgb(151,151,151)",
+          "--wst-color-custom-19": "rgb(69,84,87)",
+          "--color_12": "227,227,227",
+          "--color_60": "255,255,255",
+          "--wst-button-color-border-secondary-hover": "rgb(202,255,48)",
+          "--color_25": "3,1,85",
+          "--color_48": "202,255,48",
+          "--wix-ads-height": "0px",
+          "--wst-font-style-body-small": "normal normal normal 14px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--scaling-factor": "clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px))",
+          "--wst-button-color-text-primary": "rgb(255,255,255)",
+          "--wst-font-style-body-x-small": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+          "--wst-color-line": "rgb(0,0,0)",
+          "--color_21": "173,171,255",
+          "--color_51": "202,255,48",
+          "--color_50": "255,255,255",
+          "--color_13": "151,151,151",
+          "--color_10": "176,176,176",
+          "--wst-color-custom-12": "rgb(171,184,153)",
+          "--browser-zoom": "1",
+          "--wst-font-style-h6": "normal normal normal calc(23 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1400)/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--color_54": "151,151,151",
+          "--wst-color-custom-7": "rgb(132,129,255)",
+          "--color_20": "67,85,16",
+          "--color_58": "202,255,48",
+          "--color_65": "151,151,151",
+          "--color_46": "79,79,79",
+          "--color_2": "0,0,0",
+          "--wst-color-custom-8": "rgb(10,3,255)",
+          "--wst-button-color-border-primary-hover": "rgb(202,255,48)",
+          "--color_3": "237,28,36",
+          "--wst-color-action": "rgb(202,255,48)",
+          "--wst-color-fill-accent-2": "rgb(202,255,48)",
+          "--color_41": "202,255,48",
+          "--color_22": "132,129,255",
+          "--color_30": "42,49,33",
+          "--color_23": "10,3,255",
+          "--wst-color-custom-13": "rgb(127,148,99)",
+          "--color_31": "199,211,213",
+          "--maxViewportSize": "1920",
+          "--minViewportSize": "320",
+          "--wst-color-custom-14": "rgb(85,99,66)",
+          "--color_42": "202,255,48",
+          "--wst-button-color-fill-secondary": "rgb(255,255,255)",
+          "--wst-font-style-h2": "normal normal normal 72px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--font_7": "normal normal normal 18px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--wst-button-color-fill-secondary-hover": "rgb(255,255,255)",
+          "--font_6": "normal normal normal calc(23 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1400)/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--wst-button-color-fill-primary-disabled": "rgb(151,151,151)",
+          "--font_3": "normal normal normal 50px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--font_4": "normal normal normal calc(37 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1400)/1.4em aether,sans-serif",
+          "--color_44": "202,255,48",
+          "--wst-color-custom-16": "rgb(199,211,213)",
+          "--wst-color-custom-15": "rgb(42,49,33)",
+          "--wst-button-color-text-secondary": "rgb(202,255,48)",
+          "--wst-button-color-border-primary-disabled": "rgb(151,151,151)",
+          "--wst-color-fill-base-shade-3": "rgb(79,79,79)",
+          "--wst-color-custom-4": "rgb(135,170,32)",
+          "--color_56": "255,255,255",
+          "--wst-color-fill-accent-3": "rgb(202,255,48)",
+          "--theme-spx-ratio": "clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1400",
+          "--spx-stopper-max": "9999px",
+          "--color_9": "114,114,114",
+          "--color_27": "171,184,153",
+          "--customScaleViewportLimit": "clamp(320 * 1px, 100 * 1cqw * 1, min(9999px, 1920 * 1px))",
+          "--portals-z-index": "100001",
+          "--wst-color-custom-3": "rgb(228,255,152)",
+          "--color_61": "202,255,48",
+          "--wst-color-fill-base-shade-1": "rgb(227,227,227)",
+          "--color_33": "103,126,130",
+          "--color_0": "255,255,255",
+          "--wst-color-custom-18": "rgb(103,126,130)",
+          "--color_62": "202,255,48",
+          "--font_5": "normal normal normal 28px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--color_39": "151,151,151",
+          "--font_8": "normal normal normal 20px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--font_2": "normal normal normal 72px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--color_63": "255,255,255",
+          "--wst-color-custom-6": "rgb(173,171,255)",
+          "--color_4": "0,136,203",
+          "--color_7": "176,176,176",
+          "--color_52": "202,255,48",
+          "--wst-button-color-text-secondary-hover": "rgb(202,255,48)",
+          "--wst-font-style-h3": "normal normal normal 50px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--font_0": "normal normal normal 88px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--wst-color-fill-accent-1": "rgb(202,255,48)",
+          "--color_34": "69,84,87",
+          "--color_47": "0,0,0",
+          "--wst-button-color-border-secondary": "rgb(202,255,48)",
+          "--wst-button-color-text-secondary-disabled": "rgb(151,151,151)",
+          "--color_45": "0,0,0",
+          "--wst-button-color-border-secondary-disabled": "rgb(151,151,151)",
+          "--color_59": "202,255,48",
+          "--wst-color-fill-background-secondary": "rgb(227,227,227)",
+          "--wst-color-fill-accent-4": "rgb(202,255,48)",
+          "--wst-color-custom-1": "rgb(151,151,151)",
+          "--color_5": "255,203,5",
+          "--color_1": "255,255,255",
+          "--color_14": "79,79,79",
+          "--full-viewport": "100 * 1cqw * 1",
+          "--wst-font-style-body-medium": "normal normal normal 20px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--font_10": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+          "--wst-font-style-h4": "normal normal normal calc(37 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1400)/1.4em aether,sans-serif",
+          "--wst-color-text-secondary": "rgb(79,79,79)",
+          "--color_17": "228,255,152",
+          "--color_40": "79,79,79",
+          "--wst-button-color-fill-primary-hover": "rgb(202,255,48)",
+          "--wst-button-color-border-primary": "rgb(202,255,48)",
+          "--wst-color-disabled": "rgb(151,151,151)",
+          "--color_16": "237,255,186",
+          "--color_24": "7,2,170",
+          "--color_19": "135,170,32",
+          "--site-width": "980px",
+          "--wst-button-color-fill-primary": "rgb(202,255,48)",
+          "--wst-color-fill-base-1": "rgb(255,255,255)",
+          "--wst-color-custom-5": "rgb(67,85,16)",
+          "--color_15": "0,0,0",
+          "--font_1": "normal normal normal 16px/1.4em din-next-w01-light,sans-serif",
+          "--wst-font-style-h5": "normal normal normal 28px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--spx-stopper-min": "0px",
+          "--color_6": "114,114,114",
+          "--color_49": "202,255,48",
+          "--wst-button-color-fill-secondary-disabled": "rgb(255,255,255)",
+          "--wst-color-custom-10": "rgb(3,1,85)",
+          "--wst-color-text-primary": "rgb(0,0,0)",
+          "--wix-ads-top-height": "0px",
+          "--color_26": "209,219,195",
+          "--color_38": "227,227,227",
+          "--sticky-offset": "0px",
+          "--color_57": "255,255,255",
+          "--color_8": "255,255,255",
+          "--color_36": "255,255,255",
+          "--wst-color-subtitle": "rgb(79,79,79)",
+          "--color_18": "202,255,48",
+          "--wst-color-custom-9": "rgb(7,2,170)",
+          "--wix-opt-in-direction-multiplier": "1",
+          "--wst-color-fill-base-2": "rgb(0,0,0)",
+          "--color_64": "151,151,151",
+          "--color_53": "255,255,255",
+          "--color_28": "127,148,99",
+          "--wst-color-title": "rgb(0,0,0)",
+          "--above-all-z-index": "100000",
+          "--color_35": "34,42,43",
+          "--color_32": "154,169,172",
+          "--color_29": "85,99,66",
+          "--one-unit": "1cqw",
+          "--wst-button-color-text-primary-hover": "rgb(255,255,255)",
+          "--wst-button-color-text-primary-disabled": "rgb(255,255,255)",
+          "--color_11": "255,255,255",
+          "--wst-color-custom-2": "rgb(237,255,186)",
+          "--section-max-width": "9999px"
+        }
+      }
+    },
+    "feature": {
+      "url": "https://www.olyablack.com/portfolio",
+      "screenshot": "screenshots/feature.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#FFFFFF",
+              "count": 3
+            },
+            {
+              "hex": "#000000",
+              "count": 3
+            },
+            {
+              "hex": "#212121",
+              "count": 1
+            }
+          ],
+          "text": [
+            {
+              "hex": "#000000",
+              "count": 659
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 192
+            },
+            {
+              "hex": "#0000EE",
+              "count": 135
+            },
+            {
+              "hex": "#CAFF30",
+              "count": 5
+            },
+            {
+              "hex": "#116DFF",
+              "count": 1
+            },
+            {
+              "hex": "#E4FF98",
+              "count": 1
+            }
+          ],
+          "border": [
+            {
+              "hex": "#CAFF30",
+              "count": 13
+            },
+            {
+              "hex": "#000000",
+              "count": 2
+            }
+          ]
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "Arial, Helvetica, sans-serif",
+              "count": 619
+            },
+            {
+              "value": "wfont_f415e2_2db2fada43ad426e86d977f0e1895970, wf_2db2fada43ad426e86d977f0e, orig_arbeitlightwebfont",
+              "count": 239
+            },
+            {
+              "value": "\"Times New Roman\"",
+              "count": 113
+            },
+            {
+              "value": "Arial",
+              "count": 17
+            },
+            {
+              "value": "aether, sans-serif",
+              "count": 4
+            },
+            {
+              "value": "Helvetica, Arial, メイリオ, meiryo, \"ヒラギノ角ゴ pro w3\", \"hiragino kaku gothic pro\", sans-serif",
+              "count": 1
+            }
+          ],
+          "font_sizes_px": [
+            10,
+            13,
+            16,
+            20,
+            46,
+            50,
+            88
+          ],
+          "font_weights": [
+            {
+              "value": "400",
+              "count": 993
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "22.4px",
+              "count": 99
+            },
+            {
+              "value": "25.2px",
+              "count": 52
+            },
+            {
+              "value": "28px",
+              "count": 12
+            },
+            {
+              "value": "21.8555px",
+              "count": 7
+            },
+            {
+              "value": "35px",
+              "count": 6
+            },
+            {
+              "value": "123.2px",
+              "count": 1
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "1.8px",
+              "count": 4
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            1,
+            5,
+            10,
+            24,
+            68,
+            72
+          ],
+          "margin_px": [
+            2,
+            5,
+            9,
+            15,
+            18,
+            30,
+            40,
+            45,
+            95,
+            155
+          ],
+          "gap_px": [
+            25
+          ]
+        },
+        "radii": [
+          {
+            "value": "24px",
+            "count": 1
+          },
+          {
+            "value": "89px",
+            "count": 1
+          }
+        ],
+        "shadows": [
+          {
+            "value": "rgba(202, 255, 48, 0.33) -4.95px 4.95px 53px 1px",
+            "count": 1
+          }
+        ],
+        "gradients_used": false,
+        "gradient_count": 0,
+        "css_variables": {
+          "--wst-color-custom-17": "rgb(154,169,172)",
+          "--wix-opt-in-direction": "ltr",
+          "--wst-font-style-body-large": "normal normal normal 18px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--font_9": "normal normal normal 14px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--wst-color-fill-background-primary": "rgb(255,255,255)",
+          "--color_55": "151,151,151",
+          "--wst-color-custom-20": "rgb(34,42,43)",
+          "--color_43": "202,255,48",
+          "--color_37": "0,0,0",
+          "--wst-color-custom-11": "rgb(209,219,195)",
+          "--wst-color-fill-base-shade-2": "rgb(151,151,151)",
+          "--wst-color-custom-19": "rgb(69,84,87)",
+          "--color_12": "227,227,227",
+          "--color_60": "255,255,255",
+          "--wst-button-color-border-secondary-hover": "rgb(202,255,48)",
+          "--color_25": "3,1,85",
+          "--color_48": "202,255,48",
+          "--wix-ads-height": "0px",
+          "--wst-font-style-body-small": "normal normal normal 14px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--scaling-factor": "clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px))",
+          "--wst-button-color-text-primary": "rgb(255,255,255)",
+          "--wst-font-style-body-x-small": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+          "--wst-color-line": "rgb(0,0,0)",
+          "--color_21": "173,171,255",
+          "--color_51": "202,255,48",
+          "--color_50": "255,255,255",
+          "--color_13": "151,151,151",
+          "--color_10": "176,176,176",
+          "--wst-color-custom-12": "rgb(171,184,153)",
+          "--browser-zoom": "1",
+          "--wst-font-style-h6": "normal normal normal calc(23 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1400)/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--color_54": "151,151,151",
+          "--wst-color-custom-7": "rgb(132,129,255)",
+          "--color_20": "67,85,16",
+          "--color_58": "202,255,48",
+          "--color_65": "151,151,151",
+          "--color_46": "79,79,79",
+          "--wst-color-custom-8": "rgb(10,3,255)",
+          "--color_2": "0,0,0",
+          "--color_3": "237,28,36",
+          "--wst-button-color-border-primary-hover": "rgb(202,255,48)",
+          "--wst-color-action": "rgb(202,255,48)",
+          "--wst-color-fill-accent-2": "rgb(202,255,48)",
+          "--color_41": "202,255,48",
+          "--color_22": "132,129,255",
+          "--color_30": "42,49,33",
+          "--color_23": "10,3,255",
+          "--wst-color-custom-13": "rgb(127,148,99)",
+          "--color_31": "199,211,213",
+          "--maxViewportSize": "1920",
+          "--minViewportSize": "320",
+          "--wst-color-custom-14": "rgb(85,99,66)",
+          "--color_42": "202,255,48",
+          "--wst-button-color-fill-secondary": "rgb(255,255,255)",
+          "--wst-font-style-h2": "normal normal normal 72px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--font_7": "normal normal normal 18px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--wst-button-color-fill-secondary-hover": "rgb(255,255,255)",
+          "--font_6": "normal normal normal calc(23 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1400)/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--wst-button-color-fill-primary-disabled": "rgb(151,151,151)",
+          "--font_3": "normal normal normal 50px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--font_4": "normal normal normal calc(37 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1400)/1.4em aether,sans-serif",
+          "--color_44": "202,255,48",
+          "--wst-color-custom-16": "rgb(199,211,213)",
+          "--wst-color-custom-15": "rgb(42,49,33)",
+          "--wst-button-color-text-secondary": "rgb(202,255,48)",
+          "--wst-button-color-border-primary-disabled": "rgb(151,151,151)",
+          "--wst-color-fill-base-shade-3": "rgb(79,79,79)",
+          "--wst-color-custom-4": "rgb(135,170,32)",
+          "--color_56": "255,255,255",
+          "--wst-color-fill-accent-3": "rgb(202,255,48)",
+          "--theme-spx-ratio": "clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1400",
+          "--spx-stopper-max": "9999px",
+          "--color_9": "114,114,114",
+          "--color_27": "171,184,153",
+          "--customScaleViewportLimit": "clamp(320 * 1px, 100 * 1cqw * 1, min(9999px, 1920 * 1px))",
+          "--portals-z-index": "100001",
+          "--wst-color-custom-3": "rgb(228,255,152)",
+          "--color_62": "202,255,48",
+          "--wst-color-fill-base-shade-1": "rgb(227,227,227)",
+          "--color_61": "202,255,48",
+          "--color_0": "255,255,255",
+          "--wst-color-custom-18": "rgb(103,126,130)",
+          "--color_33": "103,126,130",
+          "--font_5": "normal normal normal 28px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--font_8": "normal normal normal 20px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--color_39": "151,151,151",
+          "--font_2": "normal normal normal 72px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--color_63": "255,255,255",
+          "--wst-color-custom-6": "rgb(173,171,255)",
+          "--color_4": "0,136,203",
+          "--color_7": "176,176,176",
+          "--color_52": "202,255,48",
+          "--wst-button-color-text-secondary-hover": "rgb(202,255,48)",
+          "--wst-font-style-h3": "normal normal normal 50px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--font_0": "normal normal normal 88px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--wst-color-fill-accent-1": "rgb(202,255,48)",
+          "--color_34": "69,84,87",
+          "--color_47": "0,0,0",
+          "--wst-button-color-border-secondary": "rgb(202,255,48)",
+          "--wst-button-color-text-secondary-disabled": "rgb(151,151,151)",
+          "--color_45": "0,0,0",
+          "--color_59": "202,255,48",
+          "--wst-button-color-border-secondary-disabled": "rgb(151,151,151)",
+          "--wst-color-fill-background-secondary": "rgb(227,227,227)",
+          "--wst-color-fill-accent-4": "rgb(202,255,48)",
+          "--wst-color-custom-1": "rgb(151,151,151)",
+          "--color_5": "255,203,5",
+          "--color_1": "255,255,255",
+          "--color_14": "79,79,79",
+          "--full-viewport": "100 * 1cqw * 1",
+          "--wst-font-style-body-medium": "normal normal normal 20px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--font_10": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+          "--wst-font-style-h4": "normal normal normal calc(37 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1400)/1.4em aether,sans-serif",
+          "--wst-color-text-secondary": "rgb(79,79,79)",
+          "--color_17": "228,255,152",
+          "--color_40": "79,79,79",
+          "--wst-button-color-fill-primary-hover": "rgb(202,255,48)",
+          "--wst-button-color-border-primary": "rgb(202,255,48)",
+          "--wst-color-disabled": "rgb(151,151,151)",
+          "--color_16": "237,255,186",
+          "--color_19": "135,170,32",
+          "--color_24": "7,2,170",
+          "--site-width": "980px",
+          "--wst-button-color-fill-primary": "rgb(202,255,48)",
+          "--wst-color-fill-base-1": "rgb(255,255,255)",
+          "--wst-color-custom-5": "rgb(67,85,16)",
+          "--color_15": "0,0,0",
+          "--font_1": "normal normal normal 16px/1.4em din-next-w01-light,sans-serif",
+          "--wst-font-style-h5": "normal normal normal 28px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--spx-stopper-min": "0px",
+          "--color_6": "114,114,114",
+          "--color_49": "202,255,48",
+          "--wst-button-color-fill-secondary-disabled": "rgb(255,255,255)",
+          "--wst-color-custom-10": "rgb(3,1,85)",
+          "--wst-color-text-primary": "rgb(0,0,0)",
+          "--wix-ads-top-height": "0px",
+          "--color_26": "209,219,195",
+          "--color_38": "227,227,227",
+          "--sticky-offset": "0px",
+          "--color_57": "255,255,255",
+          "--color_8": "255,255,255",
+          "--color_36": "255,255,255",
+          "--wst-color-subtitle": "rgb(79,79,79)",
+          "--color_18": "202,255,48",
+          "--wst-color-custom-9": "rgb(7,2,170)",
+          "--wix-opt-in-direction-multiplier": "1",
+          "--wst-color-fill-base-2": "rgb(0,0,0)",
+          "--color_64": "151,151,151",
+          "--color_53": "255,255,255",
+          "--color_28": "127,148,99",
+          "--wst-color-title": "rgb(0,0,0)",
+          "--above-all-z-index": "100000",
+          "--color_35": "34,42,43",
+          "--color_32": "154,169,172",
+          "--color_11": "255,255,255",
+          "--one-unit": "1cqw",
+          "--wst-button-color-text-primary-hover": "rgb(255,255,255)",
+          "--wst-button-color-text-primary-disabled": "rgb(255,255,255)",
+          "--color_29": "85,99,66",
+          "--wst-color-custom-2": "rgb(237,255,186)",
+          "--section-max-width": "9999px"
+        }
+      }
+    },
+    "blog": {
+      "url": "https://www.olyablack.com/news",
+      "screenshot": "screenshots/blog.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#000000",
+              "count": 6
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 3
+            },
+            {
+              "hex": "#212121",
+              "count": 1
+            }
+          ],
+          "text": [
+            {
+              "hex": "#000000",
+              "count": 580
+            },
+            {
+              "hex": "#0000EE",
+              "count": 249
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 103
+            },
+            {
+              "hex": "#CAFF30",
+              "count": 10
+            },
+            {
+              "hex": "#116DFF",
+              "count": 1
+            },
+            {
+              "hex": "#E4FF98",
+              "count": 1
+            }
+          ],
+          "border": [
+            {
+              "hex": "#0A03FF",
+              "count": 18
+            },
+            {
+              "hex": "#CAFF30",
+              "count": 3
+            },
+            {
+              "hex": "#000000",
+              "count": 2
+            }
+          ]
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "Arial, Helvetica, sans-serif",
+              "count": 659
+            },
+            {
+              "value": "wfont_f415e2_2db2fada43ad426e86d977f0e1895970, wf_2db2fada43ad426e86d977f0e, orig_arbeitlightwebfont",
+              "count": 113
+            },
+            {
+              "value": "\"Times New Roman\"",
+              "count": 108
+            },
+            {
+              "value": "wfont_07913e_94c8f6e3a25245f1adc5363c419643f8, wf_94c8f6e3a25245f1adc5363c4, orig_oakes_grotesk_medium",
+              "count": 37
+            },
+            {
+              "value": "Arial",
+              "count": 17
+            },
+            {
+              "value": "aether, sans-serif",
+              "count": 9
+            }
+          ],
+          "font_sizes_px": [
+            10,
+            13,
+            16,
+            20,
+            25,
+            46,
+            50
+          ],
+          "font_weights": [
+            {
+              "value": "400",
+              "count": 944
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "25.2px",
+              "count": 53
+            },
+            {
+              "value": "35px",
+              "count": 42
+            },
+            {
+              "value": "28.35px",
+              "count": 36
+            },
+            {
+              "value": "28px",
+              "count": 12
+            },
+            {
+              "value": "21.8555px",
+              "count": 7
+            },
+            {
+              "value": "25.4988px",
+              "count": 4
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "1.8px",
+              "count": 5
+            },
+            {
+              "value": "1.82134px",
+              "count": 4
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            1,
+            5,
+            10,
+            24,
+            29,
+            68,
+            72,
+            144
+          ],
+          "margin_px": [
+            2,
+            5,
+            8,
+            11,
+            15,
+            18,
+            30,
+            40,
+            43
+          ],
+          "gap_px": [
+            25
+          ]
+        },
+        "radii": [
+          {
+            "value": "89px",
+            "count": 2
+          },
+          {
+            "value": "24px",
+            "count": 1
+          }
+        ],
+        "shadows": [
+          {
+            "value": "rgba(202, 255, 48, 0.33) -4.95px 4.95px 53px 1px",
+            "count": 2
+          }
+        ],
+        "gradients_used": false,
+        "gradient_count": 0,
+        "css_variables": {
+          "--wst-color-custom-17": "rgb(154,169,172)",
+          "--wix-opt-in-direction": "ltr",
+          "--wst-font-style-body-large": "normal normal normal 18px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--font_9": "normal normal normal 14px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--color_55": "151,151,151",
+          "--wst-color-fill-background-primary": "rgb(255,255,255)",
+          "--wst-color-custom-20": "rgb(34,42,43)",
+          "--wst-color-custom-11": "rgb(209,219,195)",
+          "--color_37": "0,0,0",
+          "--color_43": "202,255,48",
+          "--wst-color-custom-19": "rgb(69,84,87)",
+          "--wst-color-fill-base-shade-2": "rgb(151,151,151)",
+          "--color_12": "227,227,227",
+          "--color_60": "255,255,255",
+          "--wst-button-color-border-secondary-hover": "rgb(202,255,48)",
+          "--color_25": "3,1,85",
+          "--color_48": "202,255,48",
+          "--wix-ads-height": "0px",
+          "--wst-font-style-body-small": "normal normal normal 14px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--scaling-factor": "clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px))",
+          "--wst-button-color-text-primary": "rgb(255,255,255)",
+          "--wst-font-style-body-x-small": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+          "--wst-color-line": "rgb(0,0,0)",
+          "--color_21": "173,171,255",
+          "--color_51": "202,255,48",
+          "--color_50": "255,255,255",
+          "--color_13": "151,151,151",
+          "--color_10": "176,176,176",
+          "--wst-color-custom-12": "rgb(171,184,153)",
+          "--browser-zoom": "1",
+          "--wst-font-style-h6": "normal normal normal calc(23 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1400)/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--color_54": "151,151,151",
+          "--wst-color-custom-7": "rgb(132,129,255)",
+          "--color_20": "67,85,16",
+          "--color_58": "202,255,48",
+          "--color_65": "151,151,151",
+          "--color_46": "79,79,79",
+          "--color_2": "0,0,0",
+          "--wst-color-custom-8": "rgb(10,3,255)",
+          "--wst-button-color-border-primary-hover": "rgb(202,255,48)",
+          "--color_3": "237,28,36",
+          "--wst-color-action": "rgb(202,255,48)",
+          "--wst-color-fill-accent-2": "rgb(202,255,48)",
+          "--color_41": "202,255,48",
+          "--color_22": "132,129,255",
+          "--color_30": "42,49,33",
+          "--color_23": "10,3,255",
+          "--wst-color-custom-13": "rgb(127,148,99)",
+          "--color_31": "199,211,213",
+          "--maxViewportSize": "1920",
+          "--minViewportSize": "320",
+          "--wst-color-custom-14": "rgb(85,99,66)",
+          "--color_42": "202,255,48",
+          "--wst-button-color-fill-secondary": "rgb(255,255,255)",
+          "--wst-font-style-h2": "normal normal normal 72px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--font_7": "normal normal normal 18px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--wst-button-color-fill-secondary-hover": "rgb(255,255,255)",
+          "--font_6": "normal normal normal calc(23 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1400)/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--wst-button-color-fill-primary-disabled": "rgb(151,151,151)",
+          "--font_3": "normal normal normal 50px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--font_4": "normal normal normal calc(37 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1400)/1.4em aether,sans-serif",
+          "--wst-color-custom-16": "rgb(199,211,213)",
+          "--color_44": "202,255,48",
+          "--wst-button-color-text-secondary": "rgb(202,255,48)",
+          "--wst-color-custom-15": "rgb(42,49,33)",
+          "--wst-button-color-border-primary-disabled": "rgb(151,151,151)",
+          "--wst-color-fill-base-shade-3": "rgb(79,79,79)",
+          "--wst-color-custom-4": "rgb(135,170,32)",
+          "--color_56": "255,255,255",
+          "--wst-color-fill-accent-3": "rgb(202,255,48)",
+          "--theme-spx-ratio": "clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1400",
+          "--spx-stopper-max": "9999px",
+          "--color_9": "114,114,114",
+          "--color_27": "171,184,153",
+          "--customScaleViewportLimit": "clamp(320 * 1px, 100 * 1cqw * 1, min(9999px, 1920 * 1px))",
+          "--portals-z-index": "100001",
+          "--wst-color-custom-3": "rgb(228,255,152)",
+          "--color_62": "202,255,48",
+          "--color_33": "103,126,130",
+          "--wst-color-fill-base-shade-1": "rgb(227,227,227)",
+          "--color_0": "255,255,255",
+          "--wst-color-custom-18": "rgb(103,126,130)",
+          "--color_61": "202,255,48",
+          "--font_5": "normal normal normal 28px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--color_39": "151,151,151",
+          "--font_8": "normal normal normal 20px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--font_2": "normal normal normal 72px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--color_63": "255,255,255",
+          "--wst-color-custom-6": "rgb(173,171,255)",
+          "--color_4": "0,136,203",
+          "--color_7": "176,176,176",
+          "--wst-button-color-text-secondary-hover": "rgb(202,255,48)",
+          "--color_52": "202,255,48",
+          "--wst-font-style-h3": "normal normal normal 50px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--font_0": "normal normal normal 88px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--wst-color-fill-accent-1": "rgb(202,255,48)",
+          "--color_34": "69,84,87",
+          "--color_47": "0,0,0",
+          "--wst-button-color-border-secondary": "rgb(202,255,48)",
+          "--wst-button-color-text-secondary-disabled": "rgb(151,151,151)",
+          "--color_45": "0,0,0",
+          "--wst-button-color-border-secondary-disabled": "rgb(151,151,151)",
+          "--color_59": "202,255,48",
+          "--wst-color-fill-background-secondary": "rgb(227,227,227)",
+          "--wst-color-fill-accent-4": "rgb(202,255,48)",
+          "--wst-color-custom-1": "rgb(151,151,151)",
+          "--color_5": "255,203,5",
+          "--color_1": "255,255,255",
+          "--color_14": "79,79,79",
+          "--full-viewport": "100 * 1cqw * 1",
+          "--wst-font-style-body-medium": "normal normal normal 20px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--font_10": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+          "--wst-font-style-h4": "normal normal normal calc(37 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1400)/1.4em aether,sans-serif",
+          "--wst-color-text-secondary": "rgb(79,79,79)",
+          "--color_17": "228,255,152",
+          "--color_40": "79,79,79",
+          "--wst-button-color-fill-primary-hover": "rgb(202,255,48)",
+          "--wst-color-disabled": "rgb(151,151,151)",
+          "--wst-button-color-border-primary": "rgb(202,255,48)",
+          "--color_16": "237,255,186",
+          "--color_24": "7,2,170",
+          "--color_19": "135,170,32",
+          "--site-width": "980px",
+          "--wst-button-color-fill-primary": "rgb(202,255,48)",
+          "--wst-color-fill-base-1": "rgb(255,255,255)",
+          "--wst-color-custom-5": "rgb(67,85,16)",
+          "--color_15": "0,0,0",
+          "--font_1": "normal normal normal 16px/1.4em din-next-w01-light,sans-serif",
+          "--wst-font-style-h5": "normal normal normal 28px/1.4em wfont_f415e2_2db2fada43ad426e86d977f0e1895970,wf_2db2fada43ad426e86d977f0e,orig_arbeitlightwebfont",
+          "--color_26": "209,219,195",
+          "--color_6": "114,114,114",
+          "--color_49": "202,255,48",
+          "--wst-button-color-fill-secondary-disabled": "rgb(255,255,255)",
+          "--wst-color-custom-10": "rgb(3,1,85)",
+          "--wst-color-text-primary": "rgb(0,0,0)",
+          "--wix-ads-top-height": "0px",
+          "--spx-stopper-min": "0px",
+          "--color_38": "227,227,227",
+          "--sticky-offset": "0px",
+          "--color_57": "255,255,255",
+          "--color_8": "255,255,255",
+          "--wst-color-subtitle": "rgb(79,79,79)",
+          "--color_36": "255,255,255",
+          "--color_18": "202,255,48",
+          "--wst-color-custom-9": "rgb(7,2,170)",
+          "--wst-color-fill-base-2": "rgb(0,0,0)",
+          "--wix-opt-in-direction-multiplier": "1",
+          "--color_64": "151,151,151",
+          "--color_53": "255,255,255",
+          "--color_28": "127,148,99",
+          "--wst-color-title": "rgb(0,0,0)",
+          "--above-all-z-index": "100000",
+          "--color_35": "34,42,43",
+          "--color_32": "154,169,172",
+          "--color_29": "85,99,66",
+          "--one-unit": "1cqw",
+          "--wst-button-color-text-primary-hover": "rgb(255,255,255)",
+          "--wst-button-color-text-primary-disabled": "rgb(255,255,255)",
+          "--color_11": "255,255,255",
+          "--wst-color-custom-2": "rgb(237,255,186)",
+          "--section-max-width": "9999px"
+        }
+      }
+    }
+  },
+  "missing_categories": [
+    "service",
+    "pricing"
+  ]
+}

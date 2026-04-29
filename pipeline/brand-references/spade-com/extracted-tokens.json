@@ -1,0 +1,1323 @@
+{
+  "slug": "spade-com",
+  "category": "taste",
+  "homepage": "https://spade.com",
+  "captured_at": "2026-04-29T05:01:01Z",
+  "pages": {
+    "homepage": {
+      "url": "https://spade.com/",
+      "screenshot": "screenshots/homepage.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#090F05",
+              "count": 237
+            },
+            {
+              "hex": "#4A5B38",
+              "count": 200
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 52
+            },
+            {
+              "hex": "#F4FAED",
+              "count": 16
+            },
+            {
+              "hex": "#18280E",
+              "count": 5
+            },
+            {
+              "hex": "#333109",
+              "count": 1
+            },
+            {
+              "hex": "#331B09",
+              "count": 1
+            },
+            {
+              "hex": "#B2EB76",
+              "count": 1
+            }
+          ],
+          "text": [
+            {
+              "hex": "#090F05",
+              "count": 698
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 414
+            },
+            {
+              "hex": "#000000",
+              "count": 80
+            },
+            {
+              "hex": "#B2EB76",
+              "count": 25
+            },
+            {
+              "hex": "#3F7308",
+              "count": 18
+            },
+            {
+              "hex": "#18280E",
+              "count": 3
+            },
+            {
+              "hex": "#B3C5A0",
+              "count": 3
+            },
+            {
+              "hex": "#EBE46A",
+              "count": 2
+            }
+          ],
+          "border": [
+            {
+              "hex": "#D8E5CA",
+              "count": 3
+            },
+            {
+              "hex": "#B2EB76",
+              "count": 1
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 1
+            }
+          ]
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "polar, \"polar Fallback\", ui-sans-serif, system-ui, sans-serif",
+              "count": 952
+            },
+            {
+              "value": "polarMono, \"polarMono Fallback\", ui-monospace",
+              "count": 169
+            },
+            {
+              "value": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+              "count": 80
+            },
+            {
+              "value": "naNSuperX, \"naNSuperX Fallback\", ui-sans-serif, system-ui, sans-serif",
+              "count": 62
+            }
+          ],
+          "font_sizes_px": [
+            10,
+            13,
+            16,
+            20,
+            24,
+            28,
+            40,
+            48,
+            64,
+            78,
+            84
+          ],
+          "font_weights": [
+            {
+              "value": "400",
+              "count": 1035
+            },
+            {
+              "value": "520",
+              "count": 166
+            },
+            {
+              "value": "500",
+              "count": 34
+            },
+            {
+              "value": "560",
+              "count": 28
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "24px",
+              "count": 967
+            },
+            {
+              "value": "15px",
+              "count": 133
+            },
+            {
+              "value": "18.2px",
+              "count": 36
+            },
+            {
+              "value": "81.9px",
+              "count": 21
+            },
+            {
+              "value": "15.95px",
+              "count": 16
+            },
+            {
+              "value": "13.2px",
+              "count": 13
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "-0.75px",
+              "count": 130
+            },
+            {
+              "value": "1.32px",
+              "count": 18
+            },
+            {
+              "value": "-0.12px",
+              "count": 13
+            },
+            {
+              "value": "1.2px",
+              "count": 12
+            },
+            {
+              "value": "-0.48px",
+              "count": 4
+            },
+            {
+              "value": "1.56px",
+              "count": 4
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            5,
+            10,
+            14,
+            18,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            48,
+            60
+          ],
+          "margin_px": [
+            2,
+            7,
+            10,
+            14,
+            20,
+            24,
+            28,
+            32,
+            46,
+            56,
+            80,
+            92
+          ],
+          "gap_px": [
+            4,
+            12,
+            32,
+            40,
+            48
+          ]
+        },
+        "radii": [
+          {
+            "value": "6px",
+            "count": 7
+          }
+        ],
+        "shadows": [
+          {
+            "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+            "count": 1
+          }
+        ],
+        "gradients_used": false,
+        "gradient_count": 0,
+        "css_variables": {
+          "--container-md": "28rem",
+          "--color-sea": "#093328",
+          "--tw-ring-offset-shadow": "0 0 #0000",
+          "--tw-inset-shadow-alpha": "100%",
+          "--header-height": "4.4375rem",
+          "--tw-ring-shadow": "0 0 #0000",
+          "--color-moss": "#3f7308",
+          "--color-earth": "#331b09",
+          "--tw-drop-shadow-alpha": "100%",
+          "--color-soil": "#29261f",
+          "--animate-shake": "shake .5s ease-in-out",
+          "--color-lemongrass": "#b2eb76",
+          "--default-transition-timing-function": "cubic-bezier(.4,0,.2,1)",
+          "--animate-marquee": "marquee 25s linear infinite",
+          "--color-sand": "#f2dfac",
+          "--color-stone": "#d0c4a5",
+          "--_number-flow-d": "0",
+          "--color-sage-1": "#f4faed",
+          "--tw-outline-style": "solid",
+          "--_number-flow-dx": "0px",
+          "--color-sage-5": "#4a5b38",
+          "--container-5xl": "64rem",
+          "--leading-normal": "1.5",
+          "--tw-inset-ring-shadow": "0 0 #0000",
+          "--number-flow-mask-height": "0em",
+          "--spacing": ".25rem",
+          "--tw-translate-z": "0",
+          "--tw-gradient-via": "rgba(0, 0, 0, 0)",
+          "--color-gray-300": "lab(85.1236% -.612259 -3.7138)",
+          "--tw-scale-y": "1",
+          "--font-mono": "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace",
+          "--container-6xl": "72rem",
+          "--color-gray-500": "lab(47.7841% -.393182 -10.0268)",
+          "--color-sage-3": "#d8e5ca",
+          "--container-3xl": "48rem",
+          "--tw-translate-y": "0",
+          "--color-black-80": "#090f0580",
+          "--ease-out": "cubic-bezier(0,0,.2,1)",
+          "--color-forest": "#18280e",
+          "--swiper-theme-color": "#007aff",
+          "--color-ochre": "#aa9a33",
+          "--container-4xl": "56rem",
+          "--spacing-164": "10.25rem",
+          "--tw-inset-shadow": "0 0 #0000",
+          "--tw-ring-offset-color": "#fff",
+          "--tw-gradient-from": "rgba(0, 0, 0, 0)",
+          "--tw-content": "\"\"",
+          "--color-white": "#fff",
+          "--color-gray-400": "lab(65.9269% -.832707 -8.17473)",
+          "--tw-gradient-to": "rgba(0, 0, 0, 0)",
+          "--tw-shadow-alpha": "100%",
+          "--leading-tight": "1.25",
+          "--color-sage-4": "#b3c5a0",
+          "--radius-sm": ".25rem",
+          "--font-sans": "ui-sans-serif,system-ui,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"",
+          "--tw-border-style": "solid",
+          "--tw-scale-z": "1",
+          "--color-gold": "#333109",
+          "--font-weight-bold": "700",
+          "--color-red-500": "lab(55.4814% 75.0732 48.8528)",
+          "--color-red-600": "lab(48.4493% 77.4328 61.5452)",
+          "--container-2xl": "42rem",
+          "--tw-shadow": "0 0 #0000",
+          "--container-sm": "24rem",
+          "--tw-translate-x": "0",
+          "--tw-ring-offset-width": "0px",
+          "--_number-flow-d-opacity": "0",
+          "--color-lagoon": "#4fa68f",
+          "--tw-gradient-via-position": "50%",
+          "--color-clay": "#c9753d",
+          "--text-xs": ".75rem",
+          "--default-font-family": "ui-sans-serif,system-ui,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"",
+          "--tracking-widest": ".1em",
+          "--color-black": "#090f05",
+          "--container-3xs": "16rem",
+          "--tw-space-x-reverse": "0",
+          "--font-weight-medium": "500",
+          "--tw-scale-x": "1",
+          "--spacing-196": "12.25rem",
+          "--font-weight-normal": "400",
+          "--color-rock": "#a0967a",
+          "--container-lg": "32rem",
+          "--text-xs--line-height": "calc(1/.75)",
+          "--tw-gradient-to-position": "100%",
+          "--font-serif": "ui-serif,Georgia,Cambria,\"Times New Roman\",Times,serif",
+          "--color-sky": "#baebc2",
+          "--default-transition-duration": ".25s",
+          "--color-sage-2": "#f0fae6",
+          "--radius-xl": ".75rem",
+          "--tw-space-y-reverse": "0",
+          "--radius-md": ".375rem",
+          "--container-xl": "36rem",
+          "--_number-flow-d-width": "0",
+          "--radius-lg": ".5rem",
+          "--container-xs": "20rem",
+          "--tw-gradient-from-position": "0%",
+          "--color-sun": "#ebe46a",
+          "--default-mono-font-family": "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace",
+          "--ease-in-out": "cubic-bezier(.4,0,.2,1)"
+        }
+      }
+    },
+    "service": {
+      "url": "https://spade.com/terms/",
+      "screenshot": "screenshots/service.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#4A5B38",
+              "count": 200
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 11
+            },
+            {
+              "hex": "#090F05",
+              "count": 1
+            },
+            {
+              "hex": "#18280E",
+              "count": 1
+            },
+            {
+              "hex": "#B2EB76",
+              "count": 1
+            }
+          ],
+          "text": [
+            {
+              "hex": "#FFFFFF",
+              "count": 315
+            },
+            {
+              "hex": "#090F05",
+              "count": 281
+            },
+            {
+              "hex": "#000000",
+              "count": 73
+            },
+            {
+              "hex": "#B2EB76",
+              "count": 21
+            },
+            {
+              "hex": "#18280E",
+              "count": 3
+            },
+            {
+              "hex": "#B3C5A0",
+              "count": 3
+            }
+          ],
+          "border": [
+            {
+              "hex": "#B2EB76",
+              "count": 1
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 1
+            }
+          ]
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "polar, \"polar Fallback\", ui-sans-serif, system-ui, sans-serif",
+              "count": 542
+            },
+            {
+              "value": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+              "count": 73
+            },
+            {
+              "value": "polarMono, \"polarMono Fallback\", ui-monospace",
+              "count": 49
+            },
+            {
+              "value": "naNSuperX, \"naNSuperX Fallback\", ui-sans-serif, system-ui, sans-serif",
+              "count": 38
+            }
+          ],
+          "font_sizes_px": [
+            10,
+            14,
+            18,
+            28,
+            78,
+            84
+          ],
+          "font_weights": [
+            {
+              "value": "400",
+              "count": 599
+            },
+            {
+              "value": "520",
+              "count": 61
+            },
+            {
+              "value": "560",
+              "count": 22
+            },
+            {
+              "value": "600",
+              "count": 15
+            },
+            {
+              "value": "500",
+              "count": 5
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "24px",
+              "count": 467
+            },
+            {
+              "value": "25.2px",
+              "count": 64
+            },
+            {
+              "value": "18.2px",
+              "count": 52
+            },
+            {
+              "value": "15px",
+              "count": 47
+            },
+            {
+              "value": "81.9px",
+              "count": 21
+            },
+            {
+              "value": "28px",
+              "count": 19
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "-0.75px",
+              "count": 44
+            },
+            {
+              "value": "-0.12px",
+              "count": 13
+            },
+            {
+              "value": "-0.78px",
+              "count": 4
+            },
+            {
+              "value": "1px",
+              "count": 3
+            },
+            {
+              "value": "1.32px",
+              "count": 1
+            },
+            {
+              "value": "-0.84px",
+              "count": 1
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            10,
+            16,
+            44,
+            48,
+            80,
+            128,
+            164
+          ],
+          "margin_px": [
+            2,
+            7,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            56,
+            164
+          ],
+          "gap_px": [
+            24,
+            40,
+            48
+          ]
+        },
+        "radii": [
+          {
+            "value": "6px",
+            "count": 2
+          }
+        ],
+        "shadows": [
+          {
+            "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+            "count": 1
+          }
+        ],
+        "gradients_used": false,
+        "gradient_count": 0,
+        "css_variables": {
+          "--container-md": "28rem",
+          "--color-sea": "#093328",
+          "--tw-ring-offset-shadow": "0 0 #0000",
+          "--tw-inset-shadow-alpha": "100%",
+          "--header-height": "4.4375rem",
+          "--tw-ring-shadow": "0 0 #0000",
+          "--color-moss": "#3f7308",
+          "--color-earth": "#331b09",
+          "--tw-drop-shadow-alpha": "100%",
+          "--animate-shake": "shake .5s ease-in-out",
+          "--color-soil": "#29261f",
+          "--color-lemongrass": "#b2eb76",
+          "--default-transition-timing-function": "cubic-bezier(.4,0,.2,1)",
+          "--animate-marquee": "marquee 25s linear infinite",
+          "--color-sand": "#f2dfac",
+          "--color-stone": "#d0c4a5",
+          "--_number-flow-d": "0",
+          "--color-sage-1": "#f4faed",
+          "--tw-outline-style": "solid",
+          "--_number-flow-dx": "0px",
+          "--color-sage-5": "#4a5b38",
+          "--container-5xl": "64rem",
+          "--leading-normal": "1.5",
+          "--tw-inset-ring-shadow": "0 0 #0000",
+          "--number-flow-mask-height": "0em",
+          "--spacing": ".25rem",
+          "--tw-translate-z": "0",
+          "--tw-gradient-via": "rgba(0, 0, 0, 0)",
+          "--color-gray-300": "lab(85.1236% -.612259 -3.7138)",
+          "--tw-scale-y": "1",
+          "--font-mono": "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace",
+          "--container-6xl": "72rem",
+          "--color-gray-500": "lab(47.7841% -.393182 -10.0268)",
+          "--color-sage-3": "#d8e5ca",
+          "--container-3xl": "48rem",
+          "--tw-translate-y": "0",
+          "--color-black-80": "#090f0580",
+          "--ease-out": "cubic-bezier(0,0,.2,1)",
+          "--color-forest": "#18280e",
+          "--swiper-theme-color": "#007aff",
+          "--color-ochre": "#aa9a33",
+          "--container-4xl": "56rem",
+          "--spacing-164": "10.25rem",
+          "--tw-inset-shadow": "0 0 #0000",
+          "--tw-ring-offset-color": "#fff",
+          "--tw-content": "\"\"",
+          "--tw-gradient-from": "rgba(0, 0, 0, 0)",
+          "--color-white": "#fff",
+          "--color-gray-400": "lab(65.9269% -.832707 -8.17473)",
+          "--tw-gradient-to": "rgba(0, 0, 0, 0)",
+          "--tw-shadow-alpha": "100%",
+          "--leading-tight": "1.25",
+          "--color-sage-4": "#b3c5a0",
+          "--radius-sm": ".25rem",
+          "--font-sans": "ui-sans-serif,system-ui,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"",
+          "--tw-scale-z": "1",
+          "--tw-border-style": "solid",
+          "--font-weight-bold": "700",
+          "--color-gold": "#333109",
+          "--color-red-500": "lab(55.4814% 75.0732 48.8528)",
+          "--color-red-600": "lab(48.4493% 77.4328 61.5452)",
+          "--container-2xl": "42rem",
+          "--tw-shadow": "0 0 #0000",
+          "--container-sm": "24rem",
+          "--tw-translate-x": "0",
+          "--tw-ring-offset-width": "0px",
+          "--_number-flow-d-opacity": "0",
+          "--color-lagoon": "#4fa68f",
+          "--tw-gradient-via-position": "50%",
+          "--color-clay": "#c9753d",
+          "--text-xs": ".75rem",
+          "--color-black": "#090f05",
+          "--tracking-widest": ".1em",
+          "--default-font-family": "ui-sans-serif,system-ui,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"",
+          "--container-3xs": "16rem",
+          "--tw-space-x-reverse": "0",
+          "--font-weight-normal": "400",
+          "--tw-scale-x": "1",
+          "--spacing-196": "12.25rem",
+          "--color-rock": "#a0967a",
+          "--container-lg": "32rem",
+          "--text-xs--line-height": "calc(1/.75)",
+          "--tw-gradient-to-position": "100%",
+          "--font-serif": "ui-serif,Georgia,Cambria,\"Times New Roman\",Times,serif",
+          "--font-weight-medium": "500",
+          "--color-sky": "#baebc2",
+          "--default-transition-duration": ".25s",
+          "--color-sage-2": "#f0fae6",
+          "--radius-xl": ".75rem",
+          "--tw-space-y-reverse": "0",
+          "--radius-md": ".375rem",
+          "--container-xl": "36rem",
+          "--_number-flow-d-width": "0",
+          "--radius-lg": ".5rem",
+          "--container-xs": "20rem",
+          "--tw-gradient-from-position": "0%",
+          "--color-sun": "#ebe46a",
+          "--default-mono-font-family": "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace",
+          "--ease-in-out": "cubic-bezier(.4,0,.2,1)"
+        }
+      }
+    },
+    "feature": {
+      "url": "https://spade.com/customers/bilt-enrichment-ai-agent/",
+      "screenshot": "screenshots/feature.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#4A5B38",
+              "count": 200
+            },
+            {
+              "hex": "#090F05",
+              "count": 25
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 11
+            },
+            {
+              "hex": "#18280E",
+              "count": 1
+            },
+            {
+              "hex": "#B2EB76",
+              "count": 1
+            }
+          ],
+          "text": [
+            {
+              "hex": "#FFFFFF",
+              "count": 371
+            },
+            {
+              "hex": "#090F05",
+              "count": 129
+            },
+            {
+              "hex": "#000000",
+              "count": 73
+            },
+            {
+              "hex": "#B2EB76",
+              "count": 21
+            },
+            {
+              "hex": "#18280E",
+              "count": 3
+            },
+            {
+              "hex": "#B3C5A0",
+              "count": 3
+            }
+          ],
+          "border": [
+            {
+              "hex": "#090F05",
+              "count": 3
+            },
+            {
+              "hex": "#B2EB76",
+              "count": 1
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 1
+            }
+          ]
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "polar, \"polar Fallback\", ui-sans-serif, system-ui, sans-serif",
+              "count": 491
+            },
+            {
+              "value": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+              "count": 73
+            },
+            {
+              "value": "polarMono, \"polarMono Fallback\", ui-monospace",
+              "count": 43
+            },
+            {
+              "value": "naNSuperX, \"naNSuperX Fallback\", ui-sans-serif, system-ui, sans-serif",
+              "count": 32
+            }
+          ],
+          "font_sizes_px": [
+            10,
+            14,
+            18,
+            24,
+            28,
+            68,
+            78
+          ],
+          "font_weights": [
+            {
+              "value": "400",
+              "count": 567
+            },
+            {
+              "value": "520",
+              "count": 34
+            },
+            {
+              "value": "560",
+              "count": 22
+            },
+            {
+              "value": "500",
+              "count": 11
+            },
+            {
+              "value": "700",
+              "count": 5
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "24px",
+              "count": 478
+            },
+            {
+              "value": "18.2px",
+              "count": 36
+            },
+            {
+              "value": "25.2px",
+              "count": 35
+            },
+            {
+              "value": "15px",
+              "count": 30
+            },
+            {
+              "value": "81.9px",
+              "count": 21
+            },
+            {
+              "value": "13.2px",
+              "count": 13
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "-0.75px",
+              "count": 27
+            },
+            {
+              "value": "-0.12px",
+              "count": 13
+            },
+            {
+              "value": "1.44px",
+              "count": 6
+            },
+            {
+              "value": "1.32px",
+              "count": 5
+            },
+            {
+              "value": "-0.78px",
+              "count": 4
+            },
+            {
+              "value": "1px",
+              "count": 3
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            5,
+            8,
+            12,
+            16,
+            20,
+            44,
+            48,
+            80,
+            128,
+            164
+          ],
+          "margin_px": [
+            2,
+            7,
+            12,
+            16,
+            19,
+            22,
+            28,
+            36,
+            56,
+            112,
+            128,
+            164
+          ],
+          "gap_px": [
+            4,
+            12,
+            20,
+            24,
+            40,
+            48
+          ]
+        },
+        "radii": [
+          {
+            "value": "6px",
+            "count": 2
+          }
+        ],
+        "shadows": [
+          {
+            "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(9, 15, 5) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+            "count": 1
+          },
+          {
+            "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+            "count": 1
+          }
+        ],
+        "gradients_used": false,
+        "gradient_count": 0,
+        "css_variables": {
+          "--container-md": "28rem",
+          "--color-sea": "#093328",
+          "--tw-ring-offset-shadow": "0 0 #0000",
+          "--tw-inset-shadow-alpha": "100%",
+          "--header-height": "4.4375rem",
+          "--tw-ring-shadow": "0 0 #0000",
+          "--color-moss": "#3f7308",
+          "--color-earth": "#331b09",
+          "--tw-drop-shadow-alpha": "100%",
+          "--animate-shake": "shake .5s ease-in-out",
+          "--color-soil": "#29261f",
+          "--color-lemongrass": "#b2eb76",
+          "--default-transition-timing-function": "cubic-bezier(.4,0,.2,1)",
+          "--animate-marquee": "marquee 25s linear infinite",
+          "--color-sand": "#f2dfac",
+          "--color-stone": "#d0c4a5",
+          "--_number-flow-d": "0",
+          "--color-sage-1": "#f4faed",
+          "--tw-outline-style": "solid",
+          "--_number-flow-dx": "0px",
+          "--color-sage-5": "#4a5b38",
+          "--container-5xl": "64rem",
+          "--leading-normal": "1.5",
+          "--tw-inset-ring-shadow": "0 0 #0000",
+          "--number-flow-mask-height": "0em",
+          "--spacing": ".25rem",
+          "--tw-translate-z": "0",
+          "--tw-gradient-via": "rgba(0, 0, 0, 0)",
+          "--color-gray-300": "lab(85.1236% -.612259 -3.7138)",
+          "--tw-scale-y": "1",
+          "--font-mono": "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace",
+          "--container-6xl": "72rem",
+          "--color-gray-500": "lab(47.7841% -.393182 -10.0268)",
+          "--color-sage-3": "#d8e5ca",
+          "--container-3xl": "48rem",
+          "--tw-translate-y": "0",
+          "--color-black-80": "#090f0580",
+          "--ease-out": "cubic-bezier(0,0,.2,1)",
+          "--color-forest": "#18280e",
+          "--swiper-theme-color": "#007aff",
+          "--color-ochre": "#aa9a33",
+          "--container-4xl": "56rem",
+          "--spacing-164": "10.25rem",
+          "--tw-inset-shadow": "0 0 #0000",
+          "--tw-ring-offset-color": "#fff",
+          "--tw-gradient-from": "rgba(0, 0, 0, 0)",
+          "--tw-content": "\"\"",
+          "--color-white": "#fff",
+          "--color-gray-400": "lab(65.9269% -.832707 -8.17473)",
+          "--tw-gradient-to": "rgba(0, 0, 0, 0)",
+          "--tw-shadow-alpha": "100%",
+          "--leading-tight": "1.25",
+          "--color-sage-4": "#b3c5a0",
+          "--radius-sm": ".25rem",
+          "--font-sans": "ui-sans-serif,system-ui,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"",
+          "--tw-scale-z": "1",
+          "--tw-border-style": "solid",
+          "--font-weight-bold": "700",
+          "--color-gold": "#333109",
+          "--color-red-500": "lab(55.4814% 75.0732 48.8528)",
+          "--container-2xl": "42rem",
+          "--tw-shadow": "0 0 #0000",
+          "--container-sm": "24rem",
+          "--tw-translate-x": "0",
+          "--tw-ring-offset-width": "0px",
+          "--_number-flow-d-opacity": "0",
+          "--color-lagoon": "#4fa68f",
+          "--color-red-600": "lab(48.4493% 77.4328 61.5452)",
+          "--tw-gradient-via-position": "50%",
+          "--color-clay": "#c9753d",
+          "--text-xs": ".75rem",
+          "--text-xs--line-height": "calc(1/.75)",
+          "--default-font-family": "ui-sans-serif,system-ui,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"",
+          "--color-black": "#090f05",
+          "--container-3xs": "16rem",
+          "--tracking-widest": ".1em",
+          "--tw-space-x-reverse": "0",
+          "--font-weight-medium": "500",
+          "--tw-scale-x": "1",
+          "--spacing-196": "12.25rem",
+          "--font-weight-normal": "400",
+          "--color-rock": "#a0967a",
+          "--container-lg": "32rem",
+          "--tw-gradient-to-position": "100%",
+          "--font-serif": "ui-serif,Georgia,Cambria,\"Times New Roman\",Times,serif",
+          "--color-sky": "#baebc2",
+          "--default-transition-duration": ".25s",
+          "--color-sage-2": "#f0fae6",
+          "--radius-xl": ".75rem",
+          "--tw-space-y-reverse": "0",
+          "--radius-md": ".375rem",
+          "--container-xl": "36rem",
+          "--_number-flow-d-width": "0",
+          "--radius-lg": ".5rem",
+          "--container-xs": "20rem",
+          "--tw-gradient-from-position": "0%",
+          "--color-sun": "#ebe46a",
+          "--default-mono-font-family": "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace",
+          "--ease-in-out": "cubic-bezier(.4,0,.2,1)"
+        }
+      }
+    },
+    "blog": {
+      "url": "https://spade.com/resources/",
+      "screenshot": "screenshots/blog.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#4A5B38",
+              "count": 200
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 70
+            },
+            {
+              "hex": "#090F05",
+              "count": 29
+            },
+            {
+              "hex": "#18280E",
+              "count": 1
+            },
+            {
+              "hex": "#B2EB76",
+              "count": 1
+            }
+          ],
+          "text": [
+            {
+              "hex": "#090F05",
+              "count": 642
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 315
+            },
+            {
+              "hex": "#000000",
+              "count": 80
+            },
+            {
+              "hex": "#B2EB76",
+              "count": 21
+            },
+            {
+              "hex": "#18280E",
+              "count": 11
+            },
+            {
+              "hex": "#3F7308",
+              "count": 3
+            },
+            {
+              "hex": "#B3C5A0",
+              "count": 3
+            }
+          ],
+          "border": [
+            {
+              "hex": "#090F05",
+              "count": 3
+            },
+            {
+              "hex": "#B2EB76",
+              "count": 1
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 1
+            }
+          ]
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "polar, \"polar Fallback\", ui-sans-serif, system-ui, sans-serif",
+              "count": 838
+            },
+            {
+              "value": "polarMono, \"polarMono Fallback\", ui-monospace",
+              "count": 141
+            },
+            {
+              "value": "ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+              "count": 80
+            },
+            {
+              "value": "naNSuperX, \"naNSuperX Fallback\", ui-sans-serif, system-ui, sans-serif",
+              "count": 36
+            }
+          ],
+          "font_sizes_px": [
+            10,
+            13,
+            16,
+            20,
+            28,
+            40,
+            78,
+            84
+          ],
+          "font_weights": [
+            {
+              "value": "400",
+              "count": 923
+            },
+            {
+              "value": "520",
+              "count": 94
+            },
+            {
+              "value": "500",
+              "count": 55
+            },
+            {
+              "value": "560",
+              "count": 23
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "24px",
+              "count": 853
+            },
+            {
+              "value": "15px",
+              "count": 83
+            },
+            {
+              "value": "15.95px",
+              "count": 53
+            },
+            {
+              "value": "18.2px",
+              "count": 38
+            },
+            {
+              "value": "81.9px",
+              "count": 21
+            },
+            {
+              "value": "22.4px",
+              "count": 14
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "-0.75px",
+              "count": 80
+            },
+            {
+              "value": "1.32px",
+              "count": 53
+            },
+            {
+              "value": "-0.12px",
+              "count": 13
+            },
+            {
+              "value": "-0.78px",
+              "count": 4
+            },
+            {
+              "value": "-0.7px",
+              "count": 3
+            },
+            {
+              "value": "1px",
+              "count": 3
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            6,
+            10,
+            16,
+            20,
+            44,
+            48,
+            96,
+            164
+          ],
+          "margin_px": [
+            2,
+            7,
+            10,
+            14,
+            20,
+            24,
+            28,
+            32,
+            60,
+            80,
+            160,
+            164
+          ],
+          "gap_px": [
+            4,
+            8,
+            24,
+            32,
+            40,
+            48,
+            64
+          ]
+        },
+        "radii": [
+          {
+            "value": "6px",
+            "count": 2
+          }
+        ],
+        "shadows": [
+          {
+            "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(9, 15, 5) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+            "count": 1
+          },
+          {
+            "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+            "count": 1
+          }
+        ],
+        "gradients_used": false,
+        "gradient_count": 0,
+        "css_variables": {
+          "--container-md": "28rem",
+          "--color-sea": "#093328",
+          "--tw-ring-offset-shadow": "0 0 #0000",
+          "--tw-inset-shadow-alpha": "100%",
+          "--header-height": "4.4375rem",
+          "--tw-ring-shadow": "0 0 #0000",
+          "--color-moss": "#3f7308",
+          "--color-earth": "#331b09",
+          "--tw-drop-shadow-alpha": "100%",
+          "--color-soil": "#29261f",
+          "--animate-shake": "shake .5s ease-in-out",
+          "--color-lemongrass": "#b2eb76",
+          "--default-transition-timing-function": "cubic-bezier(.4,0,.2,1)",
+          "--animate-marquee": "marquee 25s linear infinite",
+          "--color-sand": "#f2dfac",
+          "--color-stone": "#d0c4a5",
+          "--_number-flow-d": "0",
+          "--color-sage-1": "#f4faed",
+          "--tw-outline-style": "solid",
+          "--_number-flow-dx": "0px",
+          "--color-sage-5": "#4a5b38",
+          "--container-5xl": "64rem",
+          "--leading-normal": "1.5",
+          "--tw-inset-ring-shadow": "0 0 #0000",
+          "--number-flow-mask-height": "0em",
+          "--spacing": ".25rem",
+          "--tw-translate-z": "0",
+          "--tw-gradient-via": "rgba(0, 0, 0, 0)",
+          "--color-gray-300": "lab(85.1236% -.612259 -3.7138)",
+          "--tw-scale-y": "1",
+          "--font-mono": "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace",
+          "--container-6xl": "72rem",
+          "--color-gray-500": "lab(47.7841% -.393182 -10.0268)",
+          "--color-sage-3": "#d8e5ca",
+          "--container-3xl": "48rem",
+          "--tw-translate-y": "0",
+          "--color-black-80": "#090f0580",
+          "--ease-out": "cubic-bezier(0,0,.2,1)",
+          "--color-forest": "#18280e",
+          "--swiper-theme-color": "#007aff",
+          "--color-ochre": "#aa9a33",
+          "--container-4xl": "56rem",
+          "--spacing-164": "10.25rem",
+          "--tw-inset-shadow": "0 0 #0000",
+          "--tw-ring-offset-color": "#fff",
+          "--tw-gradient-from": "rgba(0, 0, 0, 0)",
+          "--tw-content": "\"\"",
+          "--color-white": "#fff",
+          "--color-gray-400": "lab(65.9269% -.832707 -8.17473)",
+          "--tw-shadow-alpha": "100%",
+          "--tw-gradient-to": "rgba(0, 0, 0, 0)",
+          "--leading-tight": "1.25",
+          "--color-sage-4": "#b3c5a0",
+          "--radius-sm": ".25rem",
+          "--font-sans": "ui-sans-serif,system-ui,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"",
+          "--tw-border-style": "solid",
+          "--tw-scale-z": "1",
+          "--font-weight-bold": "700",
+          "--color-gold": "#333109",
+          "--color-red-500": "lab(55.4814% 75.0732 48.8528)",
+          "--container-2xl": "42rem",
+          "--tw-shadow": "0 0 #0000",
+          "--container-sm": "24rem",
+          "--tw-translate-x": "0",
+          "--tw-ring-offset-width": "0px",
+          "--_number-flow-d-opacity": "0",
+          "--color-lagoon": "#4fa68f",
+          "--color-red-600": "lab(48.4493% 77.4328 61.5452)",
+          "--tw-gradient-via-position": "50%",
+          "--color-clay": "#c9753d",
+          "--color-black": "#090f05",
+          "--default-font-family": "ui-sans-serif,system-ui,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\"",
+          "--tracking-widest": ".1em",
+          "--text-xs": ".75rem",
+          "--container-3xs": "16rem",
+          "--tw-space-x-reverse": "0",
+          "--font-weight-medium": "500",
+          "--tw-scale-x": "1",
+          "--container-lg": "32rem",
+          "--font-weight-normal": "400",
+          "--color-rock": "#a0967a",
+          "--spacing-196": "12.25rem",
+          "--text-xs--line-height": "calc(1/.75)",
+          "--tw-gradient-to-position": "100%",
+          "--font-serif": "ui-serif,Georgia,Cambria,\"Times New Roman\",Times,serif",
+          "--color-sky": "#baebc2",
+          "--default-transition-duration": ".25s",
+          "--color-sage-2": "#f0fae6",
+          "--radius-xl": ".75rem",
+          "--tw-space-y-reverse": "0",
+          "--radius-md": ".375rem",
+          "--container-xl": "36rem",
+          "--_number-flow-d-width": "0",
+          "--radius-lg": ".5rem",
+          "--container-xs": "20rem",
+          "--tw-gradient-from-position": "0%",
+          "--color-sun": "#ebe46a",
+          "--default-mono-font-family": "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace",
+          "--ease-in-out": "cubic-bezier(.4,0,.2,1)"
+        }
+      }
+    }
+  },
+  "missing_categories": [
+    "pricing"
+  ]
+}
