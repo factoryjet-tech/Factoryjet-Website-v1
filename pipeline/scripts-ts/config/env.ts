@@ -1,4 +1,4 @@
-import { existsSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { join } from 'node:path';
 import { config as loadDotenv } from 'dotenv';
@@ -12,12 +12,59 @@ const DEFAULT_CREDENTIALS_PATH = join(
   'firebase-admin-pipeline.json',
 );
 
+const ANTHROPIC_ENV_PATH = join(homedir(), '.factoryjet', 'anthropic.env');
+
+/**
+ * Best-effort load of ~/.factoryjet/anthropic.env (KEY=VALUE per line).
+ * Live process.env values win — never overwrite something the caller set.
+ * Mirrors the Firebase admin JSON convention: file lives under ~/.factoryjet/.
+ */
+function loadAnthropicEnvFile(): void {
+  if (!existsSync(ANTHROPIC_ENV_PATH)) return;
+  const raw = readFileSync(ANTHROPIC_ENV_PATH, 'utf-8');
+  for (const line of raw.split(/\r?\n/)) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith('#')) continue;
+    const eq = trimmed.indexOf('=');
+    if (eq <= 0) continue;
+    const key = trimmed.slice(0, eq).trim();
+    const value = trimmed.slice(eq + 1).trim().replace(/^["']|["']$/g, '');
+    if (!process.env[key]) {
+      process.env[key] = value;
+    }
+  }
+}
+
+loadAnthropicEnvFile();
+
+/**
+ * Clear empty-string optional env vars so zod's `.string().min(1).optional()`
+ * treats "absent" and "set-to-empty" identically. Some shells inherit blank
+ * values from parent processes.
+ */
+const OPTIONAL_KEYS = [
+  'ANTHROPIC_API_KEY',
+  'GOOGLE_ADS_DEVELOPER_TOKEN',
+  'GOOGLE_ADS_CLIENT_ID',
+  'GOOGLE_ADS_CLIENT_SECRET',
+  'GOOGLE_ADS_REFRESH_TOKEN',
+  'KEYWORDS_EVERYWHERE_API_KEY',
+  'RUNWARE_API_KEY',
+  'KIE_API_KEY',
+];
+for (const k of OPTIONAL_KEYS) {
+  if (process.env[k] === '') delete process.env[k];
+}
+
 const envSchema = z.object({
   GOOGLE_APPLICATION_CREDENTIALS: z
     .string()
     .min(1)
     .default(DEFAULT_CREDENTIALS_PATH),
   FIREBASE_PROJECT_ID: z.string().min(1).default('factoryjet-pipeline'),
+
+  // Anthropic (city enrichment + future LLM calls). Optional so dry-run works.
+  ANTHROPIC_API_KEY: z.string().min(1).optional(),
 
   // Future integrations — optional placeholders.
   GOOGLE_ADS_DEVELOPER_TOKEN: z.string().optional(),
@@ -49,3 +96,19 @@ if (!existsSync(parsed.data.GOOGLE_APPLICATION_CREDENTIALS)) {
 
 export const env = parsed.data;
 export type Env = typeof env;
+
+/**
+ * Throws a clear error if ANTHROPIC_API_KEY is unset. Runner uses this; dry-run
+ * paths must avoid it. Centralizes the failure message so callers can rely on
+ * a single hint about ~/.factoryjet/anthropic.env.
+ */
+export function requireAnthropicKey(): string {
+  const key = env.ANTHROPIC_API_KEY;
+  if (!key) {
+    throw new Error(
+      `[env] ANTHROPIC_API_KEY is not set. Either export it in the live ` +
+        `environment or place "ANTHROPIC_API_KEY=sk-ant-..." in ${ANTHROPIC_ENV_PATH}.`,
+    );
+  }
+  return key;
+}
