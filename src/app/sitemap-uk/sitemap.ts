@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { cities, services } from '@/data/uk'
+import { cities, services, BESPOKE_CITY_SERVICE_PAGES } from '@/data/uk'
 import { getFileLastMod, getMaxLastMod } from '@/lib/sitemap-helpers'
 
 export const dynamic = 'force-static'
@@ -25,6 +25,7 @@ type ChangeFreq = MetadataRoute.Sitemap[number]['changeFrequency']
 // BESPOKE_UK_CITY_SLUGS to src/data/uk/index.ts). Once both PRs merge,
 // fold this back to a shared import.
 const BESPOKE_UK_CITY_SLUGS: ReadonlySet<string> = new Set([
+  'london',
   'manchester',
   'birmingham',
   'leeds',
@@ -117,5 +118,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     )
   )
 
-  return [ukIndex, ...cityHubs, ...cityService, ...cityServicePlatform]
+  // Bespoke city × service pages — pipeline-generated landing pages that
+  // live as static segments under src/app/uk/{city}/{service}/page.tsx.
+  // These are excluded from cityService above (dynamicCities filter), so
+  // we emit them explicitly.
+  const bespokeCityService: MetadataRoute.Sitemap = BESPOKE_CITY_SERVICE_PAGES.map(
+    ({ city, service }) => ({
+      url: `${SITE_URL}/uk/${city}/${service}`,
+      lastModified: getMaxLastMod(
+        `src/data/uk/cities/${city}.json`,
+        `src/data/uk/services/${service}.json`,
+        `src/app/uk/${city}/${service}/page.tsx`,
+      ),
+      changeFrequency: CHANGEFREQ.bespoke as ChangeFreq,
+      priority: PRIORITY.bespoke,
+    }),
+  )
+
+  return [
+    ukIndex,
+    ...cityHubs,
+    ...cityService,
+    ...cityServicePlatform,
+    ...bespokeCityService,
+  ]
 }

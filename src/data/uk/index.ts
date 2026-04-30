@@ -59,6 +59,7 @@ export interface ServiceData {
 }
 
 // ---- DATA IMPORTS ----
+import london from './cities/london.json'
 import leeds from './cities/leeds.json'
 import manchester from './cities/manchester.json'
 import birmingham from './cities/birmingham.json'
@@ -89,7 +90,7 @@ import aiAgents from './services/ai-agents.json'
 
 // ---- EXPORTS ----
 export const cities: CityData[] = [
-  leeds, manchester, birmingham, bristol, edinburgh,
+  london, leeds, manchester, birmingham, bristol, edinburgh,
   sheffield, nottingham, leicester, liverpool, cardiff,
   glasgow, newcastle, southampton, brighton, oxford,
   cambridge, derby, coventry, hull, plymouth
@@ -125,6 +126,7 @@ export const getAllCombinations = () =>
  * src/app/uk/{slug}/page.tsx. To demote: reverse both.
  */
 export const BESPOKE_UK_CITY_SLUGS = [
+  'london',
   'manchester',
   'birmingham',
   'leeds',
@@ -139,3 +141,14 @@ export const BESPOKE_UK_CITY_SLUGS = [
 export const dynamicCities: CityData[] = cities.filter(
   (c) => !(BESPOKE_UK_CITY_SLUGS as readonly string[]).includes(c.slug)
 )
+
+/**
+ * Bespoke city × service pages that exist as static segments under
+ * src/app/uk/{city}/{service}/page.tsx. The dynamic [city]/[service]
+ * route excludes BESPOKE_UK_CITY_SLUGS, so these URLs would otherwise
+ * be missing from the sitemap entirely. Each entry here has a real page
+ * on disk; do not list a combo unless the page exists.
+ */
+export const BESPOKE_CITY_SERVICE_PAGES = [
+  { city: 'london', service: 'web-design' },
+] as const
