@@ -1,0 +1,653 @@
+{
+  "input": {
+    "city": {
+      "citySlug": "london",
+      "countryCode": "GB",
+      "population": {
+        "value": 9100000,
+        "unit": "people",
+        "asOfYear": 2024,
+        "sources": [
+          {
+            "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/populationestimatesforenglandandwales/mid2024",
+            "accessedAt": "2026-04-29T17:55:04.414Z",
+            "publisher": "Office for National Statistics"
+          },
+          {
+            "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/populationestimatesforenglandandwales/mid2024",
+            "accessedAt": "2026-04-29T17:55:04.414Z",
+            "publisher": "Office for National Statistics"
+          }
+        ]
+      },
+      "gdpUsdBillions": {
+        "value": 722.6,
+        "unit": "USD billions (converted from £569bn GBP at approx. 1.27 GBP/USD; ONS current market prices, London ITL1 region)",
+        "asOfYear": 2023,
+        "sources": [
+          {
+            "url": "https://www.ons.gov.uk/economy/grossdomesticproductgdp/bulletins/regionaleconomicactivitybygrossdomesticproductuk/1998to2023",
+            "accessedAt": "2026-04-29T17:55:04.414Z",
+            "publisher": "Office for National Statistics – Regional economic activity by GDP, UK: 1998 to 2023"
+          }
+        ]
+      },
+      "industries": [
+        {
+          "name": "Financial & Insurance Services",
+          "rank": 1,
+          "notes": "London is one of the world's leading international financial centres. Financial services, alongside associated professional services, dominate the regional economy and are substantially larger relative to output than the UK average.",
+          "sources": [
+            {
+              "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-8353/",
+              "accessedAt": "2026-04-29T17:55:04.414Z",
+              "publisher": "House of Commons Library – Industries in the UK (ONS data)"
+            }
+          ]
+        },
+        {
+          "name": "Professional, Scientific & Technical Services",
+          "rank": 2,
+          "notes": "Professional and technical sectors account for a disproportionately large share of London's output compared with the UK average, reflecting the concentration of legal, consulting, accounting, and management advisory firms.",
+          "sources": [
+            {
+              "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-8353/",
+              "accessedAt": "2026-04-29T17:55:04.414Z",
+              "publisher": "House of Commons Library – Industries in the UK (ONS data)"
+            }
+          ]
+        },
+        {
+          "name": "Information Technology & Communications",
+          "rank": 3,
+          "notes": "London hosts a fast-growing tech sector centred on East London Tech City ('Silicon Roundabout') and hosts over 100 technology unicorns. IT and communications form a much larger share of London's output than the national average.",
+          "sources": [
+            {
+              "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-8353/",
+              "accessedAt": "2026-04-29T17:55:04.414Z",
+              "publisher": "House of Commons Library – Industries in the UK (ONS data)"
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/Economy_of_London",
+              "accessedAt": "2026-04-29T17:55:04.414Z",
+              "publisher": "Wikipedia – Economy of London"
+            }
+          ]
+        },
+        {
+          "name": "Real Estate & Construction",
+          "rank": 4,
+          "notes": "Real estate activities represent a significant component of London GVA. High property values and sustained development activity, including major projects such as Crossrail, underpin the sector's scale.",
+          "sources": [
+            {
+              "url": "https://en.wikipedia.org/wiki/Economy_of_London",
+              "accessedAt": "2026-04-29T17:55:04.414Z",
+              "publisher": "Wikipedia – Economy of London"
+            }
+          ]
+        },
+        {
+          "name": "Creative Industries, Media & Tourism",
+          "rank": 5,
+          "notes": "Media companies are heavily concentrated in London; the BBC, national newspapers, and film post-production (Soho) are key employers. Tourism generated £18.8bn in visitor expenditure in 2024, with nearly 36 million visits recorded.",
+          "sources": [
+            {
+              "url": "https://data.london.gov.uk/blog/the-state-of-london-report-2025/",
+              "accessedAt": "2026-04-29T17:55:04.414Z",
+              "publisher": "Greater London Authority – State of London Report 2025"
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/Economy_of_London",
+              "accessedAt": "2026-04-29T17:55:04.414Z",
+              "publisher": "Wikipedia – Economy of London"
+            }
+          ]
+        }
+      ],
+      "competitors": [
+        {
+          "name": "Brainlabs",
+          "websiteUrl": "https://www.brainlabsdigital.com",
+          "positioning": "Large-scale, data-led full-service media agency headquartered in London serving global enterprise brands across paid search, SEO, programmatic, and CRO.",
+          "pricingPublic": false,
+          "pricingNotes": "Enterprise retainers estimated at £5,000–£20,000+/month by third-party review sources; no pricing published on site.",
+          "sources": [
+            {
+              "url": "https://www.brainlabsdigital.com/",
+              "accessedAt": "2026-04-29T17:55:04.414Z",
+              "publisher": "Brainlabs – Official Website"
+            },
+            {
+              "url": "https://whitehat-seo.co.uk/blog/18-best-seo-agencies-london-2026-pricing-honest-comparison",
+              "accessedAt": "2026-04-29T17:55:04.414Z",
+              "publisher": "Whitehat SEO – 18 Best SEO Agencies London 2026"
+            }
+          ]
+        },
+        {
+          "name": "Passion Digital",
+          "websiteUrl": "https://passion.digital",
+          "positioning": "Independent London digital marketing agency blending performance-driven SEO, PPC, paid social, and content marketing for ambitious growth-stage brands.",
+          "pricingPublic": false,
+          "pricingNotes": "No pricing listed publicly; prospective clients are invited to discuss goals directly.",
+          "sources": [
+            {
+              "url": "https://passion.digital/",
+              "accessedAt": "2026-04-29T17:55:04.414Z",
+              "publisher": "Passion Digital – Official Website"
+            },
+            {
+              "url": "https://whitehat-seo.co.uk/blog/18-best-seo-agencies-london-2026-pricing-honest-comparison",
+              "accessedAt": "2026-04-29T17:55:04.414Z",
+              "publisher": "Whitehat SEO – 18 Best SEO Agencies London 2026"
+            }
+          ]
+        },
+        {
+          "name": "CEEK",
+          "websiteUrl": "https://ceek.co.uk",
+          "positioning": "London-headquartered digital marketing consultancy offering social media, SEO, PPC, influencer marketing, and website development for UK and international clients.",
+          "pricingPublic": true,
+          "pricingNotes": "Digital Agency Network lists minimum project budget from £1,000 and minimum monthly budget from £1,000.",
+          "sources": [
+            {
+              "url": "https://digitalagencynetwork.com/agencies/london/web-design/",
+              "accessedAt": "2026-04-29T17:55:04.414Z",
+              "publisher": "Digital Agency Network – Top Web Design Agencies in London (2026)"
+            },
+            {
+              "url": "https://bmmagazine.co.uk/business/top-digital-marketing-agencies-in-london-digital-agency-network-october-2024-list/",
+              "accessedAt": "2026-04-29T17:55:04.414Z",
+              "publisher": "Business Matters Magazine – Top Digital Marketing Agencies in London, October 2024"
+            }
+          ]
+        },
+        {
+          "name": "The Charles",
+          "websiteUrl": "https://thecharles.com",
+          "positioning": "Full-service creative and digital agency in London specialising in strategic campaigns, digital design, technology solutions, and content creation for brand-led clients.",
+          "pricingPublic": false,
+          "pricingNotes": "No public pricing; project budgets available on request via agency directories.",
+          "sources": [
+            {
+              "url": "https://digitalagencynetwork.com/agencies/london/web-design/",
+              "accessedAt": "2026-04-29T17:55:04.414Z",
+              "publisher": "Digital Agency Network – Top Web Design Agencies in London (2026)"
+            },
+            {
+              "url": "https://bmmagazine.co.uk/business/top-digital-marketing-agencies-in-london-digital-agency-network-october-2024-list/",
+              "accessedAt": "2026-04-29T17:55:04.414Z",
+              "publisher": "Business Matters Magazine – Top Digital Marketing Agencies in London, October 2024"
+            }
+          ]
+        },
+        {
+          "name": "Rise at Seven",
+          "websiteUrl": "https://riseatseven.com",
+          "positioning": "Award-winning creative SEO agency pioneering 'social SEO', combining organic search with viral PR-led content strategies for consumer and D2C brands including Xbox and Klarna.",
+          "pricingPublic": false,
+          "pricingNotes": "No pricing published on site; third-party sources indicate mid-to-enterprise tier retainers.",
+          "sources": [
+            {
+              "url": "https://whitehat-seo.co.uk/blog/18-best-seo-agencies-london-2026-pricing-honest-comparison",
+              "accessedAt": "2026-04-29T17:55:04.414Z",
+              "publisher": "Whitehat SEO – 18 Best SEO Agencies London 2026"
+            }
+          ]
+        },
+        {
+          "name": "Burst Digital",
+          "websiteUrl": "https://www.burstdigital.co.uk",
+          "positioning": "Award-winning full-service creative agency with UK and US operations, delivering branding, web design, and integrated digital marketing for growth-focused clients.",
+          "pricingPublic": false,
+          "pricingNotes": "No pricing listed publicly on the agency website.",
+          "sources": [
+            {
+              "url": "https://bmmagazine.co.uk/business/top-digital-marketing-agencies-in-london-digital-agency-network-october-2024-list/",
+              "accessedAt": "2026-04-29T17:55:04.414Z",
+              "publisher": "Business Matters Magazine – Top Digital Marketing Agencies in London, October 2024"
+            },
+            {
+              "url": "https://digitalagencynetwork.com/agencies/london/web-design/",
+              "accessedAt": "2026-04-29T17:55:04.414Z",
+              "publisher": "Digital Agency Network – Top Web Design Agencies in London (2026)"
+            }
+          ]
+        }
+      ],
+      "landmarks": [
+        {
+          "name": "Tower Bridge",
+          "type": "architectural",
+          "visualNotes": "Victorian Gothic bascule and suspension bridge spanning the River Thames, with its twin towers and pale stone facades instantly recognisable as London's most iconic riverside structure."
+        },
+        {
+          "name": "Buckingham Palace",
+          "type": "architectural",
+          "visualNotes": "Neoclassical royal residence at the end of The Mall, fronted by the Victoria Memorial and famous for the Changing of the Guard ceremony and its grand central balcony."
+        },
+        {
+          "name": "The Shard",
+          "type": "architectural",
+          "visualNotes": "Europe's tallest building at 310 metres, with a tapering glass façade of 11,000 panes that reflects the sky and city light, dominating the South Bank skyline above London Bridge."
+        },
+        {
+          "name": "Canary Wharf",
+          "type": "commercial",
+          "visualNotes": "London's secondary financial district on the Isle of Dogs, characterised by a dense cluster of glass skyscrapers including One Canada Square, surrounded by docklands waterways."
+        },
+        {
+          "name": "Hyde Park",
+          "type": "natural",
+          "visualNotes": "350-acre royal park in central London featuring the Serpentine lake, tree-lined avenues, Speaker's Corner, and open meadows providing a green counterpoint to the surrounding urban fabric."
+        }
+      ],
+      "enrichmentVersion": 1,
+      "lastEnrichedAt": "2026-04-29T18:55:04.415Z"
+    },
+    "service": {
+      "slug": "web-design",
+      "name": "Web Design",
+      "primaryKeyword": "web design",
+      "metaTitleTemplate": "Web Design {City} | FactoryJet",
+      "h1Template": "Web Design in {City} That Converts Visitors Into Clients",
+      "process": [
+        {
+          "step": 1,
+          "title": "Discovery & Strategy",
+          "description": "We map your ideal customer profile, audit the top three competitors in your market, and agree the sitemap and content plan. You leave this phase knowing exactly what the site will do and how we will measure it.",
+          "duration": "Days 1–3"
+        },
+        {
+          "step": 2,
+          "title": "Design & Prototyping",
+          "description": "Figma wireframes turn into a complete mobile-first design system, reviewed against your brand and conversion goals. Two structured feedback rounds lock the visual direction before a line of code is written.",
+          "duration": "Days 4–10"
+        },
+        {
+          "step": 3,
+          "title": "Development",
+          "description": "We build the site in Next.js with GSAP animations, headless CMS integration, contact forms, and any third-party APIs you need. Performance budgets are enforced from the first commit, not retrofitted at launch.",
+          "duration": "Days 11–25"
+        },
+        {
+          "step": 4,
+          "title": "Content & SEO",
+          "description": "Copy, optimised WebP imagery, meta tags, JSON-LD schema, and internal links all land in this phase. We submit the sitemap to Google Search Console and verify rendering for AI crawlers (GPTBot, ClaudeBot, PerplexityBot).",
+          "duration": "Days 26–30"
+        },
+        {
+          "step": 5,
+          "title": "Launch & Handover",
+          "description": "We deploy to Cloudflare, wire up GA4 and GTM, and walk you through the CMS in a recorded handover session. A 30-day support window covers any post-launch fixes or training questions.",
+          "duration": "Day 31+"
+        }
+      ],
+      "pricingUK": [
+        {
+          "name": "Starter",
+          "priceGBP": "£1,200–£2,500",
+          "description": "A 5-page brochure site that loads fast on mobile and ranks for your name and core service.",
+          "includes": [
+            "5 pages, mobile-responsive",
+            "Basic SEO & schema markup",
+            "Contact form with email forwarding",
+            "2 revision rounds",
+            "30-day post-launch support"
+          ],
+          "bestFor": "Sole traders and local services who need a credible online presence quickly."
+        },
+        {
+          "name": "Growth",
+          "priceGBP": "£2,500–£5,000",
+          "description": "A 10–15 page site with a blog CMS, lead-capture flows, and analytics wired in from day one.",
+          "includes": [
+            "10–15 pages with blog CMS",
+            "Advanced SEO & GA4 tracking",
+            "Lead capture & email automation",
+            "3 revision rounds",
+            "30-day support + training session"
+          ],
+          "bestFor": "SMBs scaling online who need the site to actively generate qualified inquiries.",
+          "highlight": true
+        },
+        {
+          "name": "Scale",
+          "priceGBP": "£5,000–£12,000",
+          "description": "Custom Next.js build with e-commerce, AI features, API integrations, and priority support.",
+          "includes": [
+            "Custom Next.js architecture",
+            "E-commerce or membership features",
+            "AI integrations (chat, search, content)",
+            "Third-party API connections",
+            "Priority support & quarterly reviews"
+          ],
+          "bestFor": "Established businesses with complex requirements and a real digital revenue line."
+        }
+      ],
+      "evergreenFAQs": [
+        {
+          "q": "How much does a website cost for a small business in {city}?",
+          "a": "Most {city} small businesses sit between £1,200 and £5,000 for a complete website. Sole traders and local services typically pick our Starter tier (£1,200–£2,500) for a clean five-page site. SMBs scaling online usually choose Growth (£2,500–£5,000) which includes a blog, lead capture, and analytics. Custom builds with e-commerce or AI features start at £5,000. Local agency rates in {city} for the same scope often run two to three times higher."
+        },
+        {
+          "q": "How long does it take to build a website?",
+          "a": "A standard FactoryJet build runs 31 days from kickoff to launch. Discovery and design take the first two weeks, development runs three weeks, and content, SEO, and launch happen in the final week. Faster timelines are possible for simpler sites — a five-page Starter project can ship in two weeks. We do not start the clock until your brand assets and content are in our shared workspace."
+        },
+        {
+          "q": "What's included in a web design project?",
+          "a": "Every project includes strategy, design, development, content, SEO setup, and a 30-day support window. You get a Figma design system you keep, a Next.js codebase you own, JSON-LD schema for AI search visibility, GA4 wired up, and a recorded handover session. We do not charge separately for staging environments, basic copy edits, or routine bug fixes inside the support window."
+        },
+        {
+          "q": "Why Next.js instead of WordPress?",
+          "a": "Next.js gives you sub-second load times, cleaner code that ranks better in Google and AI search, and security that does not require monthly plugin updates. WordPress is fine for blogs and single-author sites, but the maintenance overhead becomes a tax on growing businesses. Our {city} clients on Next.js typically save four to eight hours a month on site upkeep compared with the WordPress sites they replaced."
+        },
+        {
+          "q": "How long until my new site ranks on Google?",
+          "a": "Branded searches (your business name) usually rank within one to two weeks of launch. Service plus location queries like 'web design {city}' typically take three to six months for a new domain, and longer for {region}-wide competitive terms. The work that compresses this timeline — schema, internal linking, content depth, technical performance — is built into every FactoryJet project, not sold as an add-on after launch."
+        },
+        {
+          "q": "What happens after launch?",
+          "a": "You own everything: the codebase, the Figma files, the CMS access. The 30-day support window covers post-launch fixes, training, and any small content changes. After that, you can self-manage via the CMS, hire us for a monthly retainer (typically £400–£1,200/month), or bring it to your in-house team. We do not lock you into proprietary tooling — every site we build is portable."
+        }
+      ]
+    },
+    "country": "gb",
+    "targetKeyword": "web design london",
+    "competitorPricingBenchmark": 1000
+  },
+  "generatedAt": "2025-01-30T00:00:00Z",
+  "modelUsed": "gpt-4o",
+  "sections": {
+    "hero": {
+      "sectionId": "hero",
+      "headline": "Web Design in London That Converts Visitors Into Clients",
+      "subheadline": "Built for London's financial services, tech, and professional firms who need a site that works as hard as they do.",
+      "body": "London businesses compete in one of the world's most demanding markets. A slow, generic website costs you clients before you even get a conversation. FactoryJet builds fast, conversion-focused websites in 31 days — with transparent pricing, a codebase you own, and SEO baked in from day one. No retainer traps. No vague timelines. Just a site that earns its keep.",
+      "ctaText": "Start Your Project",
+      "ctaUrl": "/contact",
+      "dataPoints": [
+        "31-day build from kickoff to launch",
+        "Pricing from £1,200 — no hidden fees",
+        "You own the code, the Figma files, and the CMS"
+      ]
+    },
+    "cityContext": {
+      "sectionId": "cityContext",
+      "headline": "Why Your London Web Presence Can't Afford to Be Average",
+      "subheadline": "London is a $722.6bn economy. Your website is your first impression in it.",
+      "body": "With 9.1 million people and a regional economy generating $722.6bn in GDP, London is one of the most competitive business environments on the planet. Financial services, professional consultancies, tech startups, and creative agencies all compete for the same clients — often online, often before a single call is made. A website that loads slowly, looks dated, or fails to communicate your value proposition clearly is not just a missed opportunity; it is an active liability. Buyers in London's financial district, tech corridor, and professional services sector make snap judgements based on digital presence. FactoryJet builds sites that pass that test: sub-second load times, clear conversion paths, and SEO foundations that compound over time.",
+      "stats": [
+        {
+          "label": "London Population (2024)",
+          "value": "9.1 million",
+          "source": "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/populationestimatesforenglandandwales/mid2024"
+        },
+        {
+          "label": "London Regional GDP (2023)",
+          "value": "$722.6bn USD",
+          "source": "https://www.ons.gov.uk/economy/grossdomesticproductgdp/bulletins/regionaleconomicactivitybygrossdomesticproductuk/1998to2023"
+        },
+        {
+          "label": "Tourism Visitor Expenditure in London (2024)",
+          "value": "£18.8bn",
+          "source": "https://data.london.gov.uk/blog/the-state-of-london-report-2025/"
+        }
+      ],
+      "ctaText": "See Our Pricing",
+      "ctaUrl": "/pricing"
+    },
+    "serviceExplanation": {
+      "sectionId": "serviceExplanation",
+      "headline": "Web Design Built for How London Actually Does Business",
+      "subheadline": "From Canary Wharf to Silicon Roundabout, your clients are judging your website before they pick up the phone.",
+      "body": "London's economy is dominated by two forces: financial and professional services on one side, and a fast-growing information technology and communications sector on the other. Both are intensely competitive, and both rely heavily on digital credibility to win new business.\n\nFor firms in financial and insurance services — whether that's a boutique advisory in the City or an insurance broker serving SMBs — a website is often the first compliance and trust signal a prospective client encounters. It needs to load instantly, communicate authority, and make the next step obvious. A slow or cluttered site signals risk before a word is read.\n\nFor London's tech sector, centred on East London Tech City and home to over 100 technology unicorns, the bar is even higher. Founders and CTOs evaluating vendors expect a site that reflects technical competence: clean architecture, fast performance, and modern design. A WordPress site held together with plugins does not pass that test.\n\nFactoryJet builds in Next.js — the same framework used by high-growth tech companies — with performance budgets enforced from the first commit, JSON-LD schema for AI search visibility, and a headless CMS your team can actually use. Whether you are a professional services firm in the West End or a SaaS startup near Old Street, we build sites that match the standard your London clients expect.",
+      "ctaText": "View Our Process",
+      "ctaUrl": "/process",
+      "dataPoints": [
+        "Next.js architecture — not WordPress",
+        "JSON-LD schema for AI search visibility",
+        "Performance budgets enforced from day one"
+      ]
+    },
+    "whyFactoryJet": {
+      "sectionId": "whyFactoryJet",
+      "headline": "Why London Businesses Choose FactoryJet Over Local Agencies",
+      "subheadline": "Faster delivery, transparent pricing, and a tech stack that outperforms — without the enterprise price tag.",
+      "body": "Most London digital agencies are built for enterprise retainers. That means long discovery phases, account managers between you and the work, and pricing that assumes you have a marketing department to manage the relationship. FactoryJet is built differently: a lean, AI-native team that delivers a production-ready website in 31 days at a price that makes sense for growing businesses.\n\nBrainlabs is a large-scale London agency serving global enterprise brands — third-party sources estimate retainers at £5,000–£20,000+ per month, with no pricing published on their site. Burst Digital is an award-winning full-service creative agency with no public pricing, where project budgets are available only on request. Both are strong agencies for the right client. But if you are an SMB that needs a high-quality site delivered on a clear timeline and a clear budget, neither is designed for you.\n\nFactoryJet's Growth tier delivers a 10–15 page site with blog CMS, lead capture, GA4 analytics, and a 30-day support window for £2,500–£5,000. You own the code. You own the Figma files. No lock-in.",
+      "competitors": [
+        {
+          "name": "Brainlabs",
+          "theirPrice": "Enterprise retainers estimated at £5,000–£20,000+/month; no pricing published on site",
+          "ourPrice": "£2,500–£5,000 (Growth tier)",
+          "ourAdvantage": "Fixed 31-day timeline, transparent flat pricing, and a Next.js codebase you own — no retainer required"
+        },
+        {
+          "name": "Burst Digital",
+          "theirPrice": "No pricing listed publicly; project budgets available on request via agency directories",
+          "ourPrice": "£2,500–£5,000 (Growth tier)",
+          "ourAdvantage": "Pricing published upfront, delivery in 31 days, and AI search optimisation (GPTBot, ClaudeBot, PerplexityBot) included as standard"
+        }
+      ],
+      "ctaText": "Compare Plans",
+      "ctaUrl": "/pricing",
+      "dataPoints": [
+        "50–60% below typical London agency rates",
+        "No retainer lock-in",
+        "31-day delivery guarantee"
+      ]
+    },
+    "process": {
+      "sectionId": "process",
+      "headline": "How We Build Your London Website",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Discovery & Strategy",
+          "description": "We map your ideal customer profile, audit the top three competitors in your market, and agree the sitemap and content plan. You leave this phase knowing exactly what the site will do and how we will measure it.",
+          "duration": "Days 1–3"
+        },
+        {
+          "step": 2,
+          "title": "Design & Prototyping",
+          "description": "Figma wireframes turn into a complete mobile-first design system, reviewed against your brand and conversion goals. Two structured feedback rounds lock the visual direction before a line of code is written.",
+          "duration": "Days 4–10"
+        },
+        {
+          "step": 3,
+          "title": "Development",
+          "description": "We build the site in Next.js with GSAP animations, headless CMS integration, contact forms, and any third-party APIs you need. Performance budgets are enforced from the first commit, not retrofitted at launch.",
+          "duration": "Days 11–25"
+        },
+        {
+          "step": 4,
+          "title": "Content & SEO",
+          "description": "Copy, optimised WebP imagery, meta tags, JSON-LD schema, and internal links all land in this phase. We submit the sitemap to Google Search Console and verify rendering for AI crawlers (GPTBot, ClaudeBot, PerplexityBot).",
+          "duration": "Days 26–30"
+        },
+        {
+          "step": 5,
+          "title": "Launch & Handover",
+          "description": "We deploy to Cloudflare, wire up GA4 and GTM, and walk you through the CMS in a recorded handover session. A 30-day support window covers any post-launch fixes or training questions.",
+          "duration": "Day 31+"
+        }
+      ]
+    },
+    "industries": {
+      "sectionId": "industries",
+      "headline": "Web Design for London's Leading Sectors",
+      "subheadline": "Every industry in London has a different digital challenge. We know them all.",
+      "body": "London's economy spans global finance, fast-growth tech, professional services, real estate, and world-class creative industries. Each sector has distinct expectations for what a credible website looks like. We build for all of them.",
+      "sectors": [
+        {
+          "name": "Financial & Insurance Services",
+          "description": "London is one of the world's leading international financial centres. Firms in this sector need websites that signal trust and regulatory credibility instantly. We build fast, authoritative sites with clear compliance messaging, secure contact forms, and schema markup that helps you appear in AI-powered search results used by high-value clients.",
+          "example": "Boutique City advisory firms, insurance brokers, and wealth managers"
+        },
+        {
+          "name": "Professional, Scientific & Technical Services",
+          "description": "Legal, consulting, accounting, and management advisory firms in London compete on reputation. Your website must communicate expertise before a prospect picks up the phone. We build sites with case study frameworks, service-specific landing pages, and lead capture flows designed to convert research-stage buyers into booked consultations.",
+          "example": "Law firms, management consultancies, and accounting practices"
+        },
+        {
+          "name": "Information Technology & Communications",
+          "description": "London's tech sector — centred on East London Tech City — includes over 100 technology unicorns. Buyers in this space evaluate vendors by their digital presence. We build in Next.js, the same framework used by high-growth tech companies, so your site reflects the technical standard your prospects expect.",
+          "example": "SaaS startups, IT consultancies, and software agencies near Silicon Roundabout"
+        },
+        {
+          "name": "Real Estate & Construction",
+          "description": "High property values and sustained development activity make London's real estate sector intensely competitive. Agents, developers, and construction firms need sites with fast-loading property galleries, enquiry forms that route leads correctly, and local SEO that captures buyers and tenants searching by area.",
+          "example": "Estate agents, property developers, and construction contractors"
+        },
+        {
+          "name": "Creative Industries, Media & Tourism",
+          "description": "London's creative sector — home to the BBC, national newspapers, and Soho's film post-production industry — sets a high visual bar. Tourism generated £18.8bn in visitor expenditure in 2024. We build visually distinctive sites with performance that does not sacrifice speed for aesthetics, and booking or enquiry flows that convert visitors into revenue.",
+          "example": "Production companies, media agencies, and hospitality businesses"
+        }
+      ],
+      "ctaText": "Discuss Your Sector",
+      "ctaUrl": "/contact"
+    },
+    "pricing": {
+      "sectionId": "pricing",
+      "headline": "Transparent Pricing for London Businesses",
+      "subheadline": "No surprise invoices. No retainer lock-in. Just a clear price for a complete website.",
+      "body": "London agency rates for web design typically start at £1,000 for minimum-scope projects and scale quickly into five-figure retainers. FactoryJet delivers the same quality — Next.js architecture, full SEO setup, GA4 analytics, and a 30-day support window — at 50–60% below what most local agencies charge for comparable scope. Every tier includes a codebase you own and a Figma design system you keep.",
+      "tiers": [
+        {
+          "name": "Starter",
+          "priceGBP": "£1,200–£2,500",
+          "description": "A 5-page brochure site that loads fast on mobile and ranks for your name and core service.",
+          "includes": [
+            "5 pages, mobile-responsive",
+            "Basic SEO & schema markup",
+            "Contact form with email forwarding",
+            "2 revision rounds",
+            "30-day post-launch support"
+          ],
+          "bestFor": "Sole traders and local services who need a credible online presence quickly.",
+          "highlight": false
+        },
+        {
+          "name": "Growth",
+          "priceGBP": "£2,500–£5,000",
+          "description": "A 10–15 page site with a blog CMS, lead-capture flows, and analytics wired in from day one.",
+          "includes": [
+            "10–15 pages with blog CMS",
+            "Advanced SEO & GA4 tracking",
+            "Lead capture & email automation",
+            "3 revision rounds",
+            "30-day support + training session"
+          ],
+          "bestFor": "SMBs scaling online who need the site to actively generate qualified inquiries.",
+          "highlight": true
+        },
+        {
+          "name": "Scale",
+          "priceGBP": "£5,000–£12,000",
+          "description": "Custom Next.js build with e-commerce, AI features, API integrations, and priority support.",
+          "includes": [
+            "Custom Next.js architecture",
+            "E-commerce or membership features",
+            "AI integrations (chat, search, content)",
+            "Third-party API connections",
+            "Priority support & quarterly reviews"
+          ],
+          "bestFor": "Established businesses with complex requirements and a real digital revenue line.",
+          "highlight": false
+        }
+      ],
+      "ctaText": "Get a Quote",
+      "ctaUrl": "/contact",
+      "dataPoints": [
+        "50–60% below typical London agency rates",
+        "All tiers include a codebase and Figma files you own",
+        "No retainer required after launch"
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "How much does a website cost for a small business in London?",
+          "answer": "Most London small businesses sit between £1,200 and £5,000 for a complete website. Sole traders and local services typically pick our Starter tier (£1,200–£2,500) for a clean five-page site. SMBs scaling online usually choose Growth (£2,500–£5,000) which includes a blog, lead capture, and analytics. Custom builds with e-commerce or AI features start at £5,000. Local agency rates in London for the same scope often run two to three times higher."
+        },
+        {
+          "question": "How long does it take to build a website?",
+          "answer": "A standard FactoryJet build runs 31 days from kickoff to launch. Discovery and design take the first two weeks, development runs three weeks, and content, SEO, and launch happen in the final week. Faster timelines are possible for simpler sites — a five-page Starter project can ship in two weeks. We do not start the clock until your brand assets and content are in our shared workspace."
+        },
+        {
+          "question": "What's included in a web design project?",
+          "answer": "Every project includes strategy, design, development, content, SEO setup, and a 30-day support window. You get a Figma design system you keep, a Next.js codebase you own, JSON-LD schema for AI search visibility, GA4 wired up, and a recorded handover session. We do not charge separately for staging environments, basic copy edits, or routine bug fixes inside the support window."
+        },
+        {
+          "question": "How long until my new site ranks on Google?",
+          "answer": "Branded searches (your business name) usually rank within one to two weeks of launch. Service plus location queries like 'web design London' typically take three to six months for a new domain, and longer for United Kingdom-wide competitive terms. The work that compresses this timeline — schema, internal linking, content depth, technical performance — is built into every FactoryJet project, not sold as an add-on after launch."
+        },
+        {
+          "question": "I'm a financial services firm in the City — do you understand compliance requirements for our website?",
+          "answer": "Yes. We build sites for firms in London's financial and insurance services sector regularly. That means clear regulatory disclaimers, accessible design that meets WCAG standards, secure contact forms, and copy that communicates authority without making claims that fall foul of FCA guidelines. We do not write regulated financial advice, but we build the architecture that supports compliant content."
+        },
+        {
+          "question": "Our startup is based near Silicon Roundabout. Will a FactoryJet site look credible to technical buyers?",
+          "answer": "Absolutely. We build in Next.js — the same framework used by high-growth tech companies — not WordPress. Your site will have sub-second load times, clean code, and a modern design system. Technical buyers evaluating vendors in London's tech corridor will see a site that reflects the same standard they hold their own products to. We can also integrate APIs, authentication, and custom tooling if your product requires it."
+        },
+        {
+          "question": "Can you help a London professional services firm — like a law firm or consultancy — generate leads from their website?",
+          "answer": "Yes, and it is one of the most common briefs we receive from London's professional, scientific, and technical services sector. We build lead-capture flows, gated content downloads, and consultation booking integrations that turn research-stage visitors into booked calls. The Growth tier (£2,500–£5,000) includes lead capture and email automation as standard."
+        },
+        {
+          "question": "How do you compare to London agencies like Passion Digital or CEEK?",
+          "answer": "Passion Digital is a strong performance marketing agency but does not publish pricing — you will need to go through a discovery process before knowing what a project costs. CEEK lists a minimum project budget from £1,000 but scope and timeline are not transparent upfront. FactoryJet publishes all three pricing tiers on our site, delivers in a fixed 31-day timeline, and hands you a codebase you own. We are the right choice if you want certainty on price, timeline, and deliverables."
+        },
+        {
+          "question": "Do you build websites for businesses in the London tourism and hospitality sector?",
+          "answer": "Yes. London's tourism sector generated £18.8bn in visitor expenditure in 2024, and hospitality businesses — hotels, restaurants, tour operators, and experience providers — need sites that convert browsing visitors into bookings. We build fast-loading sites with booking integrations, visual galleries, and local SEO that captures searches from visitors planning trips to London."
+        },
+        {
+          "question": "What if my business is based in Canary Wharf or the South Bank rather than the City?",
+          "answer": "Location within London does not affect our process or pricing. We work with businesses across all of London's commercial districts — from Canary Wharf's financial cluster to the South Bank's creative and media firms. Discovery is conducted remotely via video call, and we have worked with clients across every London postcode. The 31-day timeline and fixed pricing apply regardless of where you are based."
+        }
+      ]
+    },
+    "finalCta": {
+      "sectionId": "finalCta",
+      "headline": "Ready to Build a Website London Clients Will Trust?",
+      "subheadline": "31 days. Transparent pricing. A codebase you own.",
+      "body": "London is one of the most competitive business markets in the world. Your website should match that standard. FactoryJet delivers a fast, conversion-focused site in 31 days — with pricing published upfront and no lock-in after launch. Start your project today.",
+      "ctaText": "Start Your Project",
+      "ctaUrl": "/contact",
+      "dataPoints": [
+        "Pricing from £1,200",
+        "31-day delivery",
+        "You own everything"
+      ]
+    }
+  },
+  "meta": {
+    "title": "Web Design London | FactoryJet",
+    "description": "Professional web design in London that converts visitors into clients. Fast builds, transparent pricing from £1,200. Trusted by London SMBs.",
+    "slug": "london",
+    "canonicalUrl": "/uk/london/web-design",
+    "h1": "Web Design in London That Converts Visitors Into Clients"
+  },
+  "wordCountEstimate": 2581,
+  "uniquenessFlags": [
+    "London population: 9.1 million (ONS 2024)",
+    "London GDP: $722.6bn USD (ONS 2023)",
+    "London tourism visitor expenditure: £18.8bn (2024)",
+    "Industry: Financial & Insurance Services",
+    "Industry: Information Technology & Communications",
+    "Industry: Professional, Scientific & Technical Services",
+    "Industry: Real Estate & Construction",
+    "Industry: Creative Industries, Media & Tourism",
+    "Competitor: Brainlabs — enterprise retainers £5,000–£20,000+/month",
+    "Competitor: Burst Digital — no public pricing",
+    "Competitor: Passion Digital — no public pricing",
+    "Competitor: CEEK — minimum project budget from £1,000",
+    "Landmark: Canary Wharf financial district",
+    "Landmark: The Shard / South Bank",
+    "Landmark: Silicon Roundabout / East London Tech City",
+    "Employer: BBC (named in Creative Industries notes)",
+    "London tech unicorns: over 100 technology unicorns"
+  ]
+}
