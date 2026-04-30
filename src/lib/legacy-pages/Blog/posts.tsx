@@ -16,6 +16,7 @@ import { post as customOnlineStoreDevelopmentUkSmbs2026Post } from './posts/cust
 import { post as howToBuildOnlineStoreUkSmb2026Post } from './posts/how-to-build-online-store-uk-smb-2026';
 import { post as shopifyStoreDevelopmentUkSmbs2026GuidePost } from './posts/shopify-store-development-uk-smbs-2026-guide';
 import { post as ecommerceDevelopmentUkShopifyWoocommerce2026Post } from './posts/ecommerce-development-uk-shopify-woocommerce-2026';
+import { post as bestWebDesignCompaniesSmallBusinessAustraliaPost } from './posts/best-web-design-companies-small-business-australia';
 
 export const POSTS: BlogPost[] = [
   // --- WEB DESIGN & STRATEGY ---
@@ -4565,4 +4566,5 @@ export const POSTS: BlogPost[] = [
   howToBuildOnlineStoreUkSmb2026Post,
   shopifyStoreDevelopmentUkSmbs2026GuidePost,
   ecommerceDevelopmentUkShopifyWoocommerce2026Post,
+  bestWebDesignCompaniesSmallBusinessAustraliaPost,
 ];
