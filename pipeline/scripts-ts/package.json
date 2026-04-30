@@ -20,6 +20,8 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.91.1",
+    "@runware/sdk-js": "^1.2.9",
+    "@tavily/core": "^0.7.3",
     "dotenv": "^16.4.5",
     "firebase-admin": "^12.7.0",
     "zod": "^3.23.8"

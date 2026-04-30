@@ -13,15 +13,17 @@ const DEFAULT_CREDENTIALS_PATH = join(
 );
 
 const ANTHROPIC_ENV_PATH = join(homedir(), '.factoryjet', 'anthropic.env');
+const RUNWARE_ENV_PATH = join(homedir(), '.factoryjet', 'runware.env');
+const TAVILY_ENV_PATH = join(homedir(), '.factoryjet', 'tavily.env');
 
 /**
- * Best-effort load of ~/.factoryjet/anthropic.env (KEY=VALUE per line).
+ * Best-effort load of a KEY=VALUE-per-line env file under ~/.factoryjet/.
  * Live process.env values win — never overwrite something the caller set.
- * Mirrors the Firebase admin JSON convention: file lives under ~/.factoryjet/.
+ * Mirrors the Firebase admin JSON convention: secrets live outside the repo.
  */
-function loadAnthropicEnvFile(): void {
-  if (!existsSync(ANTHROPIC_ENV_PATH)) return;
-  const raw = readFileSync(ANTHROPIC_ENV_PATH, 'utf-8');
+function loadEnvFile(path: string): void {
+  if (!existsSync(path)) return;
+  const raw = readFileSync(path, 'utf-8');
   for (const line of raw.split(/\r?\n/)) {
     const trimmed = line.trim();
     if (!trimmed || trimmed.startsWith('#')) continue;
@@ -35,7 +37,9 @@ function loadAnthropicEnvFile(): void {
   }
 }
 
-loadAnthropicEnvFile();
+loadEnvFile(ANTHROPIC_ENV_PATH);
+loadEnvFile(RUNWARE_ENV_PATH);
+loadEnvFile(TAVILY_ENV_PATH);
 
 /**
  * Clear empty-string optional env vars so zod's `.string().min(1).optional()`
@@ -50,6 +54,7 @@ const OPTIONAL_KEYS = [
   'GOOGLE_ADS_REFRESH_TOKEN',
   'KEYWORDS_EVERYWHERE_API_KEY',
   'RUNWARE_API_KEY',
+  'TAVILY_API_KEY',
   'KIE_API_KEY',
 ];
 for (const k of OPTIONAL_KEYS) {
@@ -73,6 +78,7 @@ const envSchema = z.object({
   GOOGLE_ADS_REFRESH_TOKEN: z.string().optional(),
   KEYWORDS_EVERYWHERE_API_KEY: z.string().optional(),
   RUNWARE_API_KEY: z.string().optional(),
+  TAVILY_API_KEY: z.string().optional(),
   KIE_API_KEY: z.string().optional(),
 });
 
@@ -108,6 +114,38 @@ export function requireAnthropicKey(): string {
     throw new Error(
       `[env] ANTHROPIC_API_KEY is not set. Either export it in the live ` +
         `environment or place "ANTHROPIC_API_KEY=sk-ant-..." in ${ANTHROPIC_ENV_PATH}.`,
+    );
+  }
+  return key;
+}
+
+/**
+ * Throws a clear error if RUNWARE_API_KEY is unset. Used by the Runware
+ * text/image inference clients introduced in Phase A1.1 of the LLM
+ * provider migration.
+ */
+export function requireRunwareKey(): string {
+  const key = env.RUNWARE_API_KEY;
+  if (!key) {
+    throw new Error(
+      `[env] RUNWARE_API_KEY is not set. Either export it in the live ` +
+        `environment or place "RUNWARE_API_KEY=..." in ${RUNWARE_ENV_PATH}.`,
+    );
+  }
+  return key;
+}
+
+/**
+ * Throws a clear error if TAVILY_API_KEY is unset. Used by the Tavily
+ * web-search client that replaces Anthropic's web_search tool in the
+ * Step 5 enrichment migration.
+ */
+export function requireTavilyKey(): string {
+  const key = env.TAVILY_API_KEY;
+  if (!key) {
+    throw new Error(
+      `[env] TAVILY_API_KEY is not set. Either export it in the live ` +
+        `environment or place "TAVILY_API_KEY=tvly-..." in ${TAVILY_ENV_PATH}.`,
     );
   }
   return key;
