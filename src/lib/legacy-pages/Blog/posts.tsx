@@ -18,6 +18,7 @@ import { post as shopifyStoreDevelopmentUkSmbs2026GuidePost } from './posts/shop
 import { post as ecommerceDevelopmentUkShopifyWoocommerce2026Post } from './posts/ecommerce-development-uk-shopify-woocommerce-2026';
 import { post as bestWebDesignCompaniesSmallBusinessAustraliaPost } from './posts/best-web-design-companies-small-business-australia';
 import { post as bestEcommerceAgencySmallBusinessAustralia2026Post } from './posts/best-ecommerce-agency-small-business-australia-2026';
+import { post as seoRecruitmentAgenciesUk2026Post } from './posts/seo-recruitment-agencies-uk-2026';
 
 export const POSTS: BlogPost[] = [
   // --- WEB DESIGN & STRATEGY ---
@@ -4569,4 +4570,5 @@ export const POSTS: BlogPost[] = [
   ecommerceDevelopmentUkShopifyWoocommerce2026Post,
   bestWebDesignCompaniesSmallBusinessAustraliaPost,
   bestEcommerceAgencySmallBusinessAustralia2026Post,
+  seoRecruitmentAgenciesUk2026Post,
 ];
