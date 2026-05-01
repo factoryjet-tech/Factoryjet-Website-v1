@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Source_Serif_4 } from 'next/font/google'
 import '../index.css'
 import { ContactModalProvider } from '../context/ContactModalContext'
 import Script from 'next/script'
@@ -13,6 +13,17 @@ const inter = Inter({
   weight: ['400', '500', '600', '700'],
   preload: true,
   fallback: ['system-ui', 'arial'],
+})
+
+// Source Serif 4 — reserved for editorial moments (display H1, pull quotes).
+// Brand rule: "Inter for body and UI; Source Serif for editorial moments."
+// Loaded as a CSS variable so Tailwind utilities resolve via --font-source-serif.
+const sourceSerif = Source_Serif_4({
+  subsets: ['latin'],
+  variable: '--font-source-serif',
+  display: 'swap',
+  weight: ['400', '500', '600'],
+  fallback: ['Georgia', 'serif'],
 })
 
 
@@ -74,7 +85,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable}`}>
+    <html lang="en" className={`${inter.variable} ${sourceSerif.variable}`}>
       <head>
         {/* Preconnect to critical origins */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
