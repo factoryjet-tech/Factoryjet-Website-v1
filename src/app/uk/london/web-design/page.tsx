@@ -4,6 +4,10 @@
 
 import type { Metadata } from 'next';
 import Link from 'next/link';
+// PR #32 — manual hero override on the otherwise auto-generated London page.
+// The new programmatic <HeroSection> replaces the assembler's local
+// HeroSection function below until PR #33 rewrites the assembler itself.
+import { HeroSection as ProgrammaticHeroSection } from '@/components/programmatic/HeroSection';
 
 export const metadata: Metadata = {
   title: 'Web Design London | FactoryJet',
@@ -16,7 +20,16 @@ export const metadata: Metadata = {
 export default function LondonWebDesignPage() {
   return (
     <main className="bg-white font-inter">
-      <HeroSection />
+      <ProgrammaticHeroSection
+        eyebrow="WEB DESIGN · LONDON"
+        headline="Web design that wins London business."
+        lead="London businesses compete in one of the world's most demanding markets. A slow, generic website costs you clients before you even get a conversation. FactoryJet builds fast, conversion-focused websites in 31 days — with transparent pricing, a codebase you own, and SEO baked in from day one."
+        trustItems={["31-day delivery", "From £1,200", "You own the code"]}
+        primaryCta={{ label: "Get a Free Quote", href: "https://factoryjet.com/contact" }}
+        secondaryCta={{ label: "WhatsApp Us", href: "https://wa.me/919103398557" }}
+        serviceVariant="web-design"
+        city="London"
+      />
       <CityContextSection />
       <ServiceExplanationSection />
       <WhyFactoryJetSection />
@@ -27,40 +40,6 @@ export default function LondonWebDesignPage() {
       <FinalCTASection />
       <SchemaScript />
     </main>
-  );
-}
-
-function HeroSection() {
-  return (
-    <section className="bg-[#0A0F1C] text-white min-h-[80vh] flex flex-col justify-center py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">Web Design in London That Converts Visitors Into Clients</h1>
-        <p className="text-xl md:text-2xl text-gray-300 mt-4 max-w-3xl">Built for London's financial services, tech, and professional firms who need a site that works as hard as they do.</p>
-        <p className="text-lg text-gray-400 mt-6 max-w-2xl leading-relaxed">London businesses compete in one of the world's most demanding markets. A slow, generic website costs you clients before you even get a conversation. FactoryJet builds fast, conversion-focused websites in 31 days — with transparent pricing, a codebase you own, and SEO baked in from day one. No retainer traps. No vague timelines. Just a site that earns its keep.</p>
-        <div className="flex flex-wrap gap-4 mt-8">
-          <span className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-sm">
-            <span className="text-[#10B981]" aria-hidden="true">✓</span>
-            <span>31-day build from kickoff to launch</span>
-          </span>
-          <span className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-sm">
-            <span className="text-[#10B981]" aria-hidden="true">✓</span>
-            <span>Pricing from £1,200 — no hidden fees</span>
-          </span>
-          <span className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-sm">
-            <span className="text-[#10B981]" aria-hidden="true">✓</span>
-            <span>You own the code, the Figma files, and the CMS</span>
-          </span>
-        </div>
-        <div className="mt-10">
-          <Link
-            href="/contact"
-            className="inline-block bg-[#0052CC] hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
-          >
-            Start Your Project
-          </Link>
-        </div>
-      </div>
-    </section>
   );
 }
 
