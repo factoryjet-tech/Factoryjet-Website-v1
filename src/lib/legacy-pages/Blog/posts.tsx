@@ -21,6 +21,7 @@ import { post as bestEcommerceAgencySmallBusinessAustralia2026Post } from './pos
 import { post as seoRecruitmentAgenciesUk2026Post } from './posts/seo-recruitment-agencies-uk-2026';
 import { post as bestWordpressDevelopmentCompaniesAustralia2026Post } from './posts/best-wordpress-development-companies-australia-2026';
 import { post as howToChooseWebDesignAgencyUk2026Post } from './posts/how-to-choose-web-design-agency-uk-2026';
+import { post as ukWebDesignAgencyPricing2026SmbGuidePost } from './posts/uk-web-design-agency-pricing-2026-smb-guide';
 
 export const POSTS: BlogPost[] = [
   // --- WEB DESIGN & STRATEGY ---
@@ -4575,4 +4576,5 @@ export const POSTS: BlogPost[] = [
   seoRecruitmentAgenciesUk2026Post,
   bestWordpressDevelopmentCompaniesAustralia2026Post,
   howToChooseWebDesignAgencyUk2026Post,
+  ukWebDesignAgencyPricing2026SmbGuidePost,
 ];
