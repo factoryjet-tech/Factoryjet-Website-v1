@@ -23,6 +23,7 @@ import { post as bestWordpressDevelopmentCompaniesAustralia2026Post } from './po
 import { post as howToChooseWebDesignAgencyUk2026Post } from './posts/how-to-choose-web-design-agency-uk-2026';
 import { post as ukWebDesignAgencyPricing2026SmbGuidePost } from './posts/uk-web-design-agency-pricing-2026-smb-guide';
 import { post as topWebDesignAgenciesLondon2026AiNativeVsTraditionalPost } from './posts/top-web-design-agencies-london-2026-ai-native-vs-traditional';
+import { post as bestWebDesignAgenciesSmallBusiness2026Post } from './posts/best-web-design-agencies-small-business-2026';
 
 export const POSTS: BlogPost[] = [
   // --- WEB DESIGN & STRATEGY ---
@@ -4579,4 +4580,5 @@ export const POSTS: BlogPost[] = [
   howToChooseWebDesignAgencyUk2026Post,
   ukWebDesignAgencyPricing2026SmbGuidePost,
   topWebDesignAgenciesLondon2026AiNativeVsTraditionalPost,
+  bestWebDesignAgenciesSmallBusiness2026Post,
 ];
