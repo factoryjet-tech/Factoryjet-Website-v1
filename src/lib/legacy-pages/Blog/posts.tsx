@@ -22,6 +22,7 @@ import { post as seoRecruitmentAgenciesUk2026Post } from './posts/seo-recruitmen
 import { post as bestWordpressDevelopmentCompaniesAustralia2026Post } from './posts/best-wordpress-development-companies-australia-2026';
 import { post as howToChooseWebDesignAgencyUk2026Post } from './posts/how-to-choose-web-design-agency-uk-2026';
 import { post as ukWebDesignAgencyPricing2026SmbGuidePost } from './posts/uk-web-design-agency-pricing-2026-smb-guide';
+import { post as topWebDesignAgenciesLondon2026AiNativeVsTraditionalPost } from './posts/top-web-design-agencies-london-2026-ai-native-vs-traditional';
 
 export const POSTS: BlogPost[] = [
   // --- WEB DESIGN & STRATEGY ---
@@ -4577,4 +4578,5 @@ export const POSTS: BlogPost[] = [
   bestWordpressDevelopmentCompaniesAustralia2026Post,
   howToChooseWebDesignAgencyUk2026Post,
   ukWebDesignAgencyPricing2026SmbGuidePost,
+  topWebDesignAgenciesLondon2026AiNativeVsTraditionalPost,
 ];
