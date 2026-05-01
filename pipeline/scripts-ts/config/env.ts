@@ -15,6 +15,7 @@ const DEFAULT_CREDENTIALS_PATH = join(
 const ANTHROPIC_ENV_PATH = join(homedir(), '.factoryjet', 'anthropic.env');
 const RUNWARE_ENV_PATH = join(homedir(), '.factoryjet', 'runware.env');
 const TAVILY_ENV_PATH = join(homedir(), '.factoryjet', 'tavily.env');
+const DEEPSEEK_ENV_PATH = join(homedir(), '.factoryjet', 'deepseek.env');
 
 /**
  * Best-effort load of a KEY=VALUE-per-line env file under ~/.factoryjet/.
@@ -40,6 +41,7 @@ function loadEnvFile(path: string): void {
 loadEnvFile(ANTHROPIC_ENV_PATH);
 loadEnvFile(RUNWARE_ENV_PATH);
 loadEnvFile(TAVILY_ENV_PATH);
+loadEnvFile(DEEPSEEK_ENV_PATH);
 
 /**
  * Clear empty-string optional env vars so zod's `.string().min(1).optional()`
@@ -55,6 +57,7 @@ const OPTIONAL_KEYS = [
   'KEYWORDS_EVERYWHERE_API_KEY',
   'RUNWARE_API_KEY',
   'TAVILY_API_KEY',
+  'DEEPSEEK_API_KEY',
   'KIE_API_KEY',
 ];
 for (const k of OPTIONAL_KEYS) {
@@ -79,6 +82,7 @@ const envSchema = z.object({
   KEYWORDS_EVERYWHERE_API_KEY: z.string().optional(),
   RUNWARE_API_KEY: z.string().optional(),
   TAVILY_API_KEY: z.string().optional(),
+  DEEPSEEK_API_KEY: z.string().optional(),
   KIE_API_KEY: z.string().optional(),
 });
 
@@ -146,6 +150,23 @@ export function requireTavilyKey(): string {
     throw new Error(
       `[env] TAVILY_API_KEY is not set. Either export it in the live ` +
         `environment or place "TAVILY_API_KEY=tvly-..." in ${TAVILY_ENV_PATH}.`,
+    );
+  }
+  return key;
+}
+
+/**
+ * Throws a clear error if DEEPSEEK_API_KEY is unset. DeepSeek is the
+ * primary text/reasoning provider from Phase A1.3 onwards (Step 5
+ * enrichment + Step 7 copy gen migration; Phase B Design Agent).
+ * Consumed via the OpenAI-compatible client at https://api.deepseek.com.
+ */
+export function requireDeepseekKey(): string {
+  const key = env.DEEPSEEK_API_KEY;
+  if (!key) {
+    throw new Error(
+      `[env] DEEPSEEK_API_KEY is not set. Either export it in the live ` +
+        `environment or place "DEEPSEEK_API_KEY=sk-..." in ${DEEPSEEK_ENV_PATH}.`,
     );
   }
   return key;
