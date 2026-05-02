@@ -1,0 +1,5 @@
+{
+  "_schema": "Client[] — see types.ts",
+  "_note": "Bhavesh populates from Notion DB. M1.5 ships empty; M2 surfaces TRUST_GAP warnings if rendering touches empty arrays.",
+  "clients": []
+}
