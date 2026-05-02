@@ -18,6 +18,7 @@ import {
   CheckCircle2,
   HeartHandshake,
   Gauge,
+  RefreshCw,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -57,6 +58,7 @@ const ICONS: Record<string, LucideIcon> = {
   CheckCircle2,
   HeartHandshake,
   Gauge,
+  RefreshCw,
 };
 
 export type IconName = keyof typeof ICONS | string;

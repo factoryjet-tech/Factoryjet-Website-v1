@@ -1,32 +1,33 @@
 /**
- * Mock copy fixtures for the M1 component gallery.
+ * Mock copy fixtures for the M1.5 component gallery v2.
  *
- * One typed export per treatment, plus three ALT exports for the
- * sections that have alternates (city_context, service_explanation,
- * why_factoryjet). City varies across treatments — London, Sheffield,
- * Manchester — so the gallery feels like multiple cities, not one.
+ * One typed export per v2 treatment, in canonical order. Mostly
+ * London-centric copy. Two extra exports surface the "permission
+ * gating" behavior of the testimonials component.
  *
  * Source URLs use real public-info publishers (ONS, gov.uk,
- * Companies House) for plausibility. Pricing claims about named
- * London agencies are deliberately omitted — only structural
- * differentiators are stated, no specific price assertions.
+ * Companies House) for plausibility. No specific pricing claims
+ * about named London agencies — only structural delivery-model
+ * differentiators.
  */
 import type { HeroSectionProps } from '@/components/programmatic/HeroSection';
+import type { ProofStripLogosAndStatsProps } from '@/components/programmatic/ProofStripLogosAndStats';
 import type { CityContextStatStripProps } from '@/components/programmatic/CityContextStatStrip';
-import type { ServiceEditorialPullquoteProps } from '@/components/programmatic/ServiceEditorialPullquote';
-import type { WhyComparisonMatrixProps } from '@/components/programmatic/WhyComparisonMatrix';
-import type { IndustriesGridIllustratedProps } from '@/components/programmatic/IndustriesGridIllustrated';
+import type { StakesVsRewardsSplitProps } from '@/components/programmatic/StakesVsRewardsSplit';
+import type { ServiceWithDeliverableMockupProps } from '@/components/programmatic/ServiceEditorialPullquote';
+import type { WhyComparisonMatrixV2Props } from '@/components/programmatic/WhyComparisonMatrix';
+import type { ProcessVisualTimelineProps } from '@/components/programmatic/ProcessVisualTimeline';
+import type { IndustriesGridV2Props } from '@/components/programmatic/IndustriesGridIllustrated';
 import type { PricingThreeTierProps } from '@/components/programmatic/PricingThreeTier';
-import type { FAQEditorialColumnProps } from '@/components/programmatic/FAQEditorialColumn';
-import type { FinalCTAAnchorProps } from '@/components/programmatic/FinalCTAAnchor';
+import type { TestimonialsNamedWithMetricsProps } from '@/components/programmatic/TestimonialsNamedWithMetrics';
+import type { FAQEditorialColumnV2Props } from '@/components/programmatic/FAQEditorialColumn';
+import type { FinalCTAAnchorV2Props } from '@/components/programmatic/FinalCTAAnchor';
 
 /* ========================================================================
  * 1. asymmetric_split_with_mockup → <HeroSection>   (London)
+ *    5 mockups across all five service variants.
  * ====================================================================== */
 
-// NOTE: this is a placeholder v2 mockHero so GATE C typecheck passes.
-// GATE E rewrites mock-data from scratch with a richer 5-mockup mosaic
-// across all service variants.
 export const mockHero: HeroSectionProps = {
   eyebrow: 'WEB DESIGN · LONDON',
   headline: 'Web design that *wins* London business.',
@@ -71,14 +72,81 @@ export const mockHero: HeroSectionProps = {
         statStrip: [{ value: '4.9★', label: 'reviews' }],
       },
     },
+    {
+      serviceVariant: 'ai-websites',
+      businessName: 'Northway Legal',
+      businessTagline: 'A faster route to counsel.',
+      url: 'northway.legal',
+      rotation: -1,
+      mockSiteData: {
+        subhead: 'AI-assisted intake · 24/7',
+        ctaLabel: 'Start your enquiry',
+        navItems: ['Services', 'Team', 'Insights'],
+        statStrip: [{ value: '< 4hr', label: 'response' }],
+      },
+    },
+    {
+      serviceVariant: 'seo',
+      businessName: 'Camden Dental',
+      businessTagline: "Camden's quietest dentist.",
+      url: 'camdendental.co.uk',
+      rotation: 1,
+      mockSiteData: {
+        subhead: 'NW1 · Open Saturdays',
+        ctaLabel: 'Book online',
+        navItems: ['Treatments', 'Pricing', 'Team', 'Visit'],
+        statStrip: [{ value: '4.8★', label: 'Google' }],
+      },
+    },
+    {
+      serviceVariant: 'ai-agents',
+      businessName: 'Linden Lettings',
+      businessTagline: 'Your agent never sleeps.',
+      url: 'linden.london',
+      rotation: -2,
+      mockSiteData: {
+        subhead: 'Greater London · 12 branches',
+        ctaLabel: 'Chat to Linden',
+        navItems: ['Buy', 'Rent', 'Sell', 'Manage'],
+        statStrip: [{ value: '24/7', label: 'concierge' }],
+      },
+    },
   ],
 };
 
 /* ========================================================================
- * 2. stat_strip_3up_with_lead → <CityContextStatStrip>   (London)
+ * 2. proof_strip_logos_and_stats → <ProofStripLogosAndStats>   (London)
+ *    8 placeholder logos all `pending` so logo row suppresses;
+ *    4 real stats render.
  * ====================================================================== */
 
-export const mockCityContextStatStrip: CityContextStatStripProps = {
+export const mockProofStrip: ProofStripLogosAndStatsProps = {
+  eyebrow: 'TRUSTED BY LONDON FIRMS',
+  headline: 'Production sites for businesses across the City and Greater London.',
+  clientLogos: [
+    { name: 'Client A', logoSvgPath: '/clients/client-a.svg', altText: 'Client A logo', displayPermission: 'pending' },
+    { name: 'Client B', logoSvgPath: '/clients/client-b.svg', altText: 'Client B logo', displayPermission: 'pending' },
+    { name: 'Client C', logoSvgPath: '/clients/client-c.svg', altText: 'Client C logo', displayPermission: 'pending' },
+    { name: 'Client D', logoSvgPath: '/clients/client-d.svg', altText: 'Client D logo', displayPermission: 'pending' },
+    { name: 'Client E', logoSvgPath: '/clients/client-e.svg', altText: 'Client E logo', displayPermission: 'pending' },
+    { name: 'Client F', logoSvgPath: '/clients/client-f.svg', altText: 'Client F logo', displayPermission: 'pending' },
+    { name: 'Client G', logoSvgPath: '/clients/client-g.svg', altText: 'Client G logo', displayPermission: 'pending' },
+    { name: 'Client H', logoSvgPath: '/clients/client-h.svg', altText: 'Client H logo', displayPermission: 'pending' },
+  ],
+  stats: [
+    { value: '31', label: 'days kickoff to launch', sourceLabel: 'avg' },
+    { value: '£1.2k+', label: 'starting build price', sourceLabel: 'public' },
+    { value: '95+', label: 'Lighthouse score', sourceLabel: 'every build' },
+    { value: '0', label: 'long-term contracts', sourceLabel: 'ever' },
+  ],
+};
+
+/* ========================================================================
+ * 3. city_context_v2 → <CityContextStatStrip>   (London)
+ *    Same 3-stat London treatment from M1.
+ * ====================================================================== */
+
+export const mockCityContext: CityContextStatStripProps = {
   eyebrow: 'LONDON IN NUMBERS',
   headline: 'A market that rewards a serious digital presence.',
   leadParagraph:
@@ -101,30 +169,44 @@ export const mockCityContextStatStrip: CityContextStatStripProps = {
     {
       value: '1.1M',
       label: 'Active businesses registered in London',
-      sourceUrl:
-        'https://www.gov.uk/government/organisations/companies-house',
+      sourceUrl: 'https://www.gov.uk/government/organisations/companies-house',
       sourceLabel: 'companieshouse.gov.uk',
     },
   ],
 };
 
 /* ========================================================================
- * 4. editorial_prose_with_pullquote_and_diagram → <ServiceEditorialPullquote>
- *    (London)
+ * 4. stakes_vs_rewards_split → <StakesVsRewardsSplit>
  * ====================================================================== */
 
-// NOTE: placeholder v2 mock so GATE D typecheck passes. GATE E
-// rewrites mock-data with full v2 5-deliverable variety.
-export const mockServiceEditorial: ServiceEditorialPullquoteProps = {
+export const mockStakesVsRewards: StakesVsRewardsSplitProps = {
+  eyebrow: 'WHAT YOUR WEBSITE IS DOING RIGHT NOW',
+  stakesHeadline: 'A slow, dated site quietly costs you.',
+  stakes: [
+    'Buyers leave before the first scroll.',
+    'AI search engines skip your content.',
+    'Each redesign starts from scratch — again.',
+  ],
+  rewardsHeadline: 'A modern site compounds in your favour.',
+  rewards: [
+    'Sub-second loads keep buyers reading.',
+    'Schema + clean markup gets you cited.',
+    'A real codebase that survives team change.',
+  ],
+};
+
+/* ========================================================================
+ * 5. service_with_deliverable_mockup → <ServiceEditorialPullquote>   (London)
+ *    cms_dashboard variant.
+ * ====================================================================== */
+
+export const mockServiceDeliverable: ServiceWithDeliverableMockupProps = {
   eyebrow: 'WHAT YOU GET',
   headline: 'A fast website, plus the system that keeps it fast.',
-  sidebarCta: {
-    label: 'See pricing',
-    href: '#pricing',
-  },
+  sidebarCta: { label: 'See pricing', href: '#pricing_3tier_v2' },
   introParagraphs: [
-    "A web design project should produce two things: a site that converts the people who land on it, and a codebase your team can keep maintaining without us. Most agency engagements deliver the first and quietly fail at the second. We optimise for both.",
-    "Every site ships on a modern, statically-generated stack. Static export means no server to keep warm, no surprise hosting bills, and Lighthouse scores in the high nineties without us tuning anything exotic.",
+    "A web design project should produce two things: a site that converts the people who land on it, and a codebase your team can keep maintaining without us. Most agency engagements deliver the first and quietly fail at the second. We optimise for both — the second is where a website earns its keep over years, not weeks.",
+    "Every site ships on a modern, statically-generated stack. Static export means no server to keep warm, no surprise hosting bills, and Lighthouse scores in the high nineties without us tuning anything exotic. Cloudflare Pages takes care of edge delivery and rollback. Your team needs neither devops experience nor a renewal contract.",
   ],
   pullquoteText:
     "We don't hand you a black box. We hand you Next.js, Tailwind, and a CMS your team can actually edit.",
@@ -144,17 +226,45 @@ export const mockServiceEditorial: ServiceEditorialPullquoteProps = {
 };
 
 /* ========================================================================
- * 6. comparison_matrix_with_advantage_tiles → <WhyComparisonMatrix>
- *    (London)
+ * 6. why_comparison_matrix_v2 → <WhyComparisonMatrix>   (London)
+ *    3 case study tiles with placeholder client names + 1 generic
+ *    competitor column in the matrix.
  * ====================================================================== */
 
-export const mockWhyComparisonMatrix: WhyComparisonMatrixProps = {
+export const mockWhyComparison: WhyComparisonMatrixV2Props = {
   eyebrow: 'WHY FACTORYJET',
   headline: 'How we compare to the typical London digital agency.',
   lead: "Pricing varies enormously across London digital agencies, and most won't publish numbers. Here's how our delivery model differs structurally — independent of headline price.",
-  // competitorColumnHeaders intentionally omitted — component default
-  // is the generic "Local London agency". We never name real competitors
-  // in published copy.
+  // Three case study tiles. Logos use empty path so the component
+  // falls back to text rendering of the client name. Real client logos
+  // ship in M2 once Bhavesh has populated clients.json.
+  caseStudyTiles: [
+    {
+      clientLogoPath: '',
+      clientName: 'City advisory firm',
+      industryTag: 'FINANCIAL SERVICES',
+      outcomeStatement:
+        'Rebuilt site lifted qualified intake-form submissions by 47% in Q1.',
+      storyHref: '/work/city-advisory',
+    },
+    {
+      clientLogoPath: '',
+      clientName: 'Mayfair clinic',
+      industryTag: 'HEALTHCARE',
+      outcomeStatement:
+        'Faster booking flow cut average enquiry-to-appointment time from 6 days to 2.',
+      storyHref: '/work/mayfair-clinic',
+    },
+    {
+      clientLogoPath: '',
+      clientName: 'East London studio',
+      industryTag: 'CREATIVE',
+      outcomeStatement:
+        'New site doubled inbound brief requests within 8 weeks of launch.',
+      storyHref: '/work/east-london-studio',
+    },
+  ],
+  // competitorColumnHeaders intentionally omitted — defaults to 'Local London agency'.
   comparisonRows: [
     {
       agencyName: 'Pricing transparency',
@@ -207,11 +317,58 @@ export const mockWhyComparisonMatrix: WhyComparisonMatrixProps = {
 };
 
 /* ========================================================================
- * 9. industries_grid_3x2_illustrated → <IndustriesGridIllustrated>
- *    (London)
+ * 7. process_v2_visual_timeline → <ProcessVisualTimeline>   (London)
  * ====================================================================== */
 
-export const mockIndustriesGridIllustrated: IndustriesGridIllustratedProps = {
+export const mockProcess: ProcessVisualTimelineProps = {
+  eyebrow: 'OUR PROCESS',
+  headline: '31 days, five named stages, one fixed price.',
+  lead: "We've run this same five-stage process across every London engagement we've delivered. It compresses to two weeks for simpler scopes and never stretches past five for the standard one. The day ranges below are the version we quote.",
+  steps: [
+    {
+      numeral: '01',
+      dayRange: 'DAY 1–3',
+      title: 'Discovery & brief',
+      body: 'Kickoff call, audit of any existing site, and a one-page written brief. You sign the brief; we lock scope and price.',
+      lucideIconName: 'Search',
+    },
+    {
+      numeral: '02',
+      dayRange: 'DAY 4–10',
+      title: 'Design',
+      body: 'Figma comps for the homepage and one inner page. Two rounds of revision. Sign-off triggers build.',
+      lucideIconName: 'PenTool',
+    },
+    {
+      numeral: '03',
+      dayRange: 'DAY 11–22',
+      title: 'Build',
+      body: 'Next.js + Tailwind on a staging URL you can visit daily. Content uploaded, CMS configured, integrations wired.',
+      lucideIconName: 'Hammer',
+    },
+    {
+      numeral: '04',
+      dayRange: 'DAY 23–28',
+      title: 'QA & content polish',
+      body: 'Cross-browser testing, accessibility audit, performance budget enforcement, final copy edits with you.',
+      lucideIconName: 'Rocket',
+    },
+    {
+      numeral: '05',
+      dayRange: 'DAY 29–31',
+      title: 'Launch & handover',
+      body: 'DNS cutover with you on the call, 72-hour post-launch monitoring, and a written handover including repo access.',
+      lucideIconName: 'RefreshCw',
+    },
+  ],
+};
+
+/* ========================================================================
+ * 8. industries_v2_buyer_persona_grid → <IndustriesGridIllustrated>   (London)
+ *    6 sectors with photoUrl: '' (placeholder mode — Pexels in M3).
+ * ====================================================================== */
+
+export const mockIndustries: IndustriesGridV2Props = {
   eyebrow: 'WHO WE BUILD FOR',
   headline: 'Six London sectors where a faster, sharper site moves the needle most.',
   lead: "We don't pretend to be sector specialists. We are stack specialists. But these six categories of London business consistently see the largest commercial uplift from a serious web rebuild — usually because their existing site is the slowest part of an otherwise excellent operation.",
@@ -221,75 +378,76 @@ export const mockIndustriesGridIllustrated: IndustriesGridIllustratedProps = {
       name: 'Financial services',
       description:
         'Wealth managers, advisory firms, and FCA-regulated practices in the City and Mayfair. Trust signals and compliance copy carry more weight than visual flourish. We build calm, considered sites that survive due-diligence scrutiny.',
-      linkText: 'See financial-services work',
-      linkHref: '/uk/london/financial-services',
       photoUrl: '',
       photoCredit: '',
-      photoAlt: '',
+      photoAlt: 'Financial services buyer persona — illustration pending',
+      linkText: 'See financial-services work',
+      linkHref: '/uk/london/financial-services',
     },
     {
       slug: 'hospitality',
       name: 'Hospitality',
       description:
         "Restaurants, hotels, members' clubs, and venue groups. The booking funnel is the product, the menu is the proof, and image quality is non-negotiable. We optimise for fast image delivery, table-booking integrations, and mobile-first browsing.",
-      linkText: 'See hospitality work',
-      linkHref: '/uk/london/hospitality',
       photoUrl: '',
       photoCredit: '',
-      photoAlt: '',
+      photoAlt: 'Hospitality buyer persona — illustration pending',
+      linkText: 'See hospitality work',
+      linkHref: '/uk/london/hospitality',
     },
     {
       slug: 'property',
       name: 'Property',
       description:
         'Estate agents, developers, and prop-tech operators across Greater London. Listing-heavy data, location-led SEO, and serious lead-capture flows are the work. We integrate with the major property feeds and keep page weights low even at thousands of listings.',
-      linkText: 'See property work',
-      linkHref: '/uk/london/property',
       photoUrl: '',
       photoCredit: '',
-      photoAlt: '',
+      photoAlt: 'Property buyer persona — illustration pending',
+      linkText: 'See property work',
+      linkHref: '/uk/london/property',
     },
     {
       slug: 'legal',
       name: 'Legal',
       description:
         'Solicitors, chambers, and specialist boutiques across the City, Lincoln’s Inn, and the West End. Buyers research extensively before contact, and a site that signals seniority and case strength shortens the engagement cycle. We focus on credibility design and case-study architecture.',
-      linkText: 'See legal work',
-      linkHref: '/uk/london/legal',
       photoUrl: '',
       photoCredit: '',
-      photoAlt: '',
+      photoAlt: 'Legal buyer persona — illustration pending',
+      linkText: 'See legal work',
+      linkHref: '/uk/london/legal',
     },
     {
       slug: 'healthcare',
       name: 'Healthcare',
       description:
         'Private clinics, specialist practices, and concierge medicine across Harley Street and beyond. Booking flows, GDPR-clean form handling, and clear service descriptions matter more than hero animation. We optimise for credibility and conversion.',
-      linkText: 'See healthcare work',
-      linkHref: '/uk/london/healthcare',
       photoUrl: '',
       photoCredit: '',
-      photoAlt: '',
+      photoAlt: 'Healthcare buyer persona — illustration pending',
+      linkText: 'See healthcare work',
+      linkHref: '/uk/london/healthcare',
     },
     {
       slug: 'creative',
       name: 'Creative',
       description:
         'Studios, production houses, and design agencies that need a site doing justice to the work they ship. Heavy media, strong typography, and editorial structure. We collaborate closely with in-house design teams who already know what they want.',
-      linkText: 'See creative work',
-      linkHref: '/uk/london/creative',
       photoUrl: '',
       photoCredit: '',
-      photoAlt: '',
+      photoAlt: 'Creative buyer persona — illustration pending',
+      linkText: 'See creative work',
+      linkHref: '/uk/london/creative',
     },
   ],
 };
 
 /* ========================================================================
- * 10. pricing_3tier_anchor → <PricingThreeTier>   (London)
+ * 9. pricing_3tier_v2 → <PricingThreeTier>   (London)
+ *    Same as M1.
  * ====================================================================== */
 
-export const mockPricingThreeTier: PricingThreeTierProps = {
+export const mockPricing: PricingThreeTierProps = {
   eyebrow: 'PRICING',
   headline: 'One fixed number per tier. No retainers, no surprise add-ons.',
   lead: "Most London digital agencies won't publish their pricing. We do. The bands below cover most of what we deliver. If your project sits cleanly in one tier, that's the price. If it straddles two, we'll quote a number between the bands on the discovery call.",
@@ -345,12 +503,68 @@ export const mockPricingThreeTier: PricingThreeTierProps = {
 };
 
 /* ========================================================================
- * 11. faq_static_editorial → <FAQEditorialColumn>   (London)
+ * 10. testimonials_v2_named_with_metrics → <TestimonialsNamedWithMetrics>
+ *
+ *    Two exports for visual review:
+ *      mockTestimonials         — all `pending`, component renders nothing
+ *      mockTestimonialsGranted  — all `granted`, component renders cards
+ *    Gallery shows BOTH so the reviewer sees both states.
  * ====================================================================== */
 
-export const mockFAQEditorialColumn: FAQEditorialColumnProps = {
+const TESTIMONIAL_SHARED_HEADER = {
+  eyebrow: 'CLIENT WORDS',
+  headline: 'Quoted from London clients on what changed for them.',
+} as const;
+
+export const mockTestimonials: TestimonialsNamedWithMetricsProps = {
+  ...TESTIMONIAL_SHARED_HEADER,
+  testimonials: [
+    {
+      headshotPath: '',
+      name: 'Anna Reeve',
+      role: 'Managing Partner',
+      company: 'City advisory firm',
+      quote:
+        "FactoryJet rebuilt our site in 28 days and intake-form submissions went up **47% in the first quarter**. We didn't have to learn a new CMS — our existing team kept publishing.",
+      permissionStatus: 'pending',
+    },
+    {
+      headshotPath: '',
+      name: 'Dr. Owen Hartlee',
+      role: 'Founder',
+      company: 'Mayfair clinic',
+      quote:
+        'The booking flow they shipped cut our average enquiry-to-appointment time from **6 days to 2**. The whole project came in under £6k and ran for exactly 31 days.',
+      permissionStatus: 'pending',
+    },
+    {
+      headshotPath: '',
+      name: 'Mira Patel',
+      role: 'Studio Director',
+      company: 'East London creative studio',
+      quote:
+        'Inbound brief requests **doubled within 8 weeks** of launch. The whole site is in our GitHub now — our internal dev can ship updates without us calling FactoryJet back.',
+      permissionStatus: 'pending',
+    },
+  ],
+};
+
+export const mockTestimonialsGranted: TestimonialsNamedWithMetricsProps = {
+  ...TESTIMONIAL_SHARED_HEADER,
+  testimonials: mockTestimonials.testimonials.map((t) => ({
+    ...t,
+    permissionStatus: 'granted' as const,
+  })),
+};
+
+/* ========================================================================
+ * 11. faq_v2_static_editorial → <FAQEditorialColumn>   (London)
+ *    Same Q-A pairs as M1 + anchor IDs.
+ * ====================================================================== */
+
+export const mockFAQ: FAQEditorialColumnV2Props = {
   eyebrow: 'COMMON QUESTIONS',
-  headline: "What London clients ask before they sign.",
+  headline: 'What London clients ask before they sign.',
   lead: "These are the eight questions that come up most often on first calls. If yours isn't here, message us — we'll add it.",
   faqs: [
     {
@@ -405,10 +619,11 @@ export const mockFAQEditorialColumn: FAQEditorialColumnProps = {
 };
 
 /* ========================================================================
- * 12. anchor_cta_glass → <FinalCTAAnchor>   (London)
+ * 12. final_cta_v2_full_bleed → <FinalCTAAnchor>   (London)
+ *    Same as M1, no atmospheric image yet (M3 wires it).
  * ====================================================================== */
 
-export const mockFinalCTAAnchor: FinalCTAAnchorProps = {
+export const mockFinalCTA: FinalCTAAnchorV2Props = {
   headline: 'Ready to start?',
   lead: "A 30-minute discovery call ends with a written brief and a fixed price. No commitment, no follow-up sequence. If we're not the right fit, we'll say so on the call.",
   primaryCta: {
@@ -419,4 +634,5 @@ export const mockFinalCTAAnchor: FinalCTAAnchorProps = {
     label: 'Or message on WhatsApp',
     href: 'https://wa.me/919103398557',
   },
+  // atmosphericImagePath intentionally omitted — M3 generates these.
 };
