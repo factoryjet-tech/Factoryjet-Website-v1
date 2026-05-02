@@ -113,6 +113,8 @@ export const mockCityContextStatStrip: CityContextStatStripProps = {
  *    (London)
  * ====================================================================== */
 
+// NOTE: placeholder v2 mock so GATE D typecheck passes. GATE E
+// rewrites mock-data with full v2 5-deliverable variety.
 export const mockServiceEditorial: ServiceEditorialPullquoteProps = {
   eyebrow: 'WHAT YOU GET',
   headline: 'A fast website, plus the system that keeps it fast.',
@@ -120,21 +122,25 @@ export const mockServiceEditorial: ServiceEditorialPullquoteProps = {
     label: 'See pricing',
     href: '#pricing',
   },
-  introParagraph:
-    "A web design project should produce two things: a site that converts the people who land on it, and a codebase your team can keep maintaining without us. Most agency engagements deliver the first and quietly fail at the second. We optimise for both — because the second is where a website earns its keep over years, not weeks.",
+  introParagraphs: [
+    "A web design project should produce two things: a site that converts the people who land on it, and a codebase your team can keep maintaining without us. Most agency engagements deliver the first and quietly fail at the second. We optimise for both.",
+    "Every site ships on a modern, statically-generated stack. Static export means no server to keep warm, no surprise hosting bills, and Lighthouse scores in the high nineties without us tuning anything exotic.",
+  ],
   pullquoteText:
     "We don't hand you a black box. We hand you Next.js, Tailwind, and a CMS your team can actually edit.",
-  bodyParagraphs: [
-    "Every site ships on a modern, statically-generated stack. Static export means no server to keep warm, no surprise hosting bills, and Lighthouse scores in the high nineties without us tuning anything exotic. Cloudflare Pages takes care of edge delivery and rollback. Your team needs neither devops experience nor a renewal contract.",
+  closingParagraph:
     "We instrument analytics, schema markup, and AI-search visibility from day one. The site is built to be discoverable not just by Google, but by Claude, Perplexity, and ChatGPT — increasingly the way decision-makers find vendors. That's not a separate add-on. It's the same build.",
-  ],
-  diagramNodes: [
-    { label: 'Discovery', description: 'Brief + audit' },
-    { label: 'Design', description: 'Figma + tokens' },
-    { label: 'Build', description: 'Next.js + Tailwind' },
-    { label: 'Launch', description: 'Cloudflare Pages' },
-    { label: 'Iterate', description: 'CMS + analytics' },
-  ],
+  deliverableType: 'cms_dashboard',
+  deliverableData: {
+    siteName: 'Hartwell & Co.',
+    navItems: ['Pages', 'Blog', 'Insights', 'Settings'],
+    recentEdits: [
+      { title: 'Wealth management — overview', status: 'Published', updatedAt: '2h ago' },
+      { title: 'Family office FAQ', status: 'Draft', updatedAt: '1d ago' },
+      { title: 'Spring 2026 outlook', status: 'Published', updatedAt: '3d ago' },
+      { title: 'Contact page', status: 'Published', updatedAt: '1w ago' },
+    ],
+  },
 };
 
 /* ========================================================================

@@ -1,48 +1,52 @@
 import Link from 'next/link';
+import {
+  DeliverableMockup,
+  type DeliverableType,
+} from './Deliverables/DeliverableMockup';
+import { RevealOnScroll } from './RevealOnScroll';
 
-export interface ServiceEditorialPullquoteProps {
+export interface ServiceWithDeliverableMockupProps {
   eyebrow: string;
   headline: string;
   sidebarCta: { label: string; href: string };
-  introParagraph: string;
+  /** length 2 — first paragraph above the deliverable, second between the pull quote and closing */
+  introParagraphs: ReadonlyArray<string>;
   pullquoteText: string;
-  bodyParagraphs: ReadonlyArray<string>; // length 2
-  diagramNodes: ReadonlyArray<{
-    label: string;
-    description: string;
-  }>; // length 5
+  closingParagraph: string;
+  /** Which DeliverableMockup variant to render */
+  deliverableType: DeliverableType;
+  /** Per-variant payload — see DeliverableMockup for shape per type */
+  deliverableData: Record<string, unknown>;
 }
 
+// Backward-compat alias so older imports keep working until M4 cleanup.
+export type ServiceEditorialPullquoteProps = ServiceWithDeliverableMockupProps;
+
 /**
- * Treatment 3 — `editorial_prose_with_pullquote_and_diagram`.
- * Service explanation (default).
+ * Service explanation v2 — `service_with_deliverable_mockup` per
+ * spec §5.5. Replaces the old hand-coded SVG flow diagram with a
+ * concrete deliverable mockup (CMS dashboard, Lighthouse score,
+ * Figma artifact, GA4 dashboard, or GitHub handover) demonstrating
+ * what the buyer actually receives.
  *
- * Pure Server Component. White background. Two-column 4/12 + 8/12.
- * Left column is sticky on lg+ (eyebrow + headline + outlined CTA).
- * Right column is editorial prose: intro paragraph, then a serif
- * pull-quote with a Jet Blue left border, then two body paragraphs,
- * then an inline 5-node SVG flow diagram.
+ * Right-column order:
+ *   intro paragraph 1 → deliverable mockup → pull quote →
+ *   intro paragraph 2 → closing paragraph
  *
- * The diagram is hand-rolled SVG (no JS, no D3) — it stays in the
- * server-rendered HTML so AI crawlers see the labels. Mobile users
- * scroll horizontally inside the SVG container.
+ * Pure Server Component. The DeliverableMockup variants are also
+ * server-rendered (they may contain <BrowserMockup>, which itself
+ * is server-only). Entry choreography via <RevealOnScroll>.
  */
 export default function ServiceEditorialPullquote({
   eyebrow,
   headline,
   sidebarCta,
-  introParagraph,
+  introParagraphs,
   pullquoteText,
-  bodyParagraphs,
-  diagramNodes,
-}: ServiceEditorialPullquoteProps) {
-  // Diagram geometry: 5 nodes spaced evenly across an 800px viewBox.
-  const nodeWidth = 130;
-  const nodeHeight = 56;
-  const nodeY = 60;
-  const totalSpan = 800;
-  const step = (totalSpan - nodeWidth) / (diagramNodes.length - 1);
-
+  closingParagraph,
+  deliverableType,
+  deliverableData,
+}: ServiceWithDeliverableMockupProps) {
   return (
     <section className="bg-white">
       <div className="mx-auto max-w-container-xl px-6 py-section-y lg:px-8">
@@ -67,99 +71,29 @@ export default function ServiceEditorialPullquote({
 
           {/* Right — editorial body (8/12) */}
           <div className="lg:col-span-8">
-            <p className="text-body-lg text-slate">{introParagraph}</p>
+            {/* Intro paragraph 1 */}
+            <p className="text-body-lg text-slate">{introParagraphs[0]}</p>
+
+            {/* Deliverable mockup */}
+            <RevealOnScroll className="mt-10">
+              <DeliverableMockup
+                type={deliverableType}
+                data={deliverableData}
+              />
+            </RevealOnScroll>
 
             {/* Pull quote */}
-            <blockquote className="my-8 border-l-4 border-jet-blue py-2 pl-6 font-serif text-headline italic text-navy">
+            <blockquote className="my-10 border-l-4 border-jet-blue py-2 pl-6 font-serif text-headline italic text-navy">
               {pullquoteText}
             </blockquote>
 
-            {bodyParagraphs.map((para, i) => (
-              <p key={i} className="mt-6 text-body text-slate">
-                {para}
-              </p>
-            ))}
+            {/* Intro paragraph 2 */}
+            {introParagraphs[1] && (
+              <p className="text-body text-slate">{introParagraphs[1]}</p>
+            )}
 
-            {/* Inline 5-node diagram.
-             *
-             * SVG attributes can't consume Tailwind tokens, so colours
-             * are hard-coded here:
-             *   #64748B = text-meta token (stroke + arrow fill + node caption)
-             *   #0F172A = navy token       (node label fill)
-             * If tailwind.config.js renames or re-hexes either token,
-             * update both literals below to match.
-             */}
-            <div className="mt-12 overflow-x-auto">
-              <svg
-                viewBox="0 0 800 200"
-                className="min-w-[640px] w-full"
-                role="img"
-                aria-label="Process flow diagram"
-              >
-                {/* Connector arrows between nodes */}
-                {diagramNodes.slice(0, -1).map((_, i) => {
-                  const x1 = i * step + nodeWidth;
-                  const x2 = (i + 1) * step;
-                  const y = nodeY + nodeHeight / 2;
-                  return (
-                    <g key={`arrow-${i}`}>
-                      <line
-                        x1={x1}
-                        x2={x2 - 6}
-                        y1={y}
-                        y2={y}
-                        stroke="#64748B"
-                        strokeWidth={1.5}
-                      />
-                      <polygon
-                        points={`${x2 - 6},${y - 4} ${x2},${y} ${x2 - 6},${y + 4}`}
-                        fill="#64748B"
-                      />
-                    </g>
-                  );
-                })}
-
-                {/* Nodes */}
-                {diagramNodes.map((node, i) => {
-                  const x = i * step;
-                  return (
-                    <g key={node.label}>
-                      <rect
-                        x={x}
-                        y={nodeY}
-                        width={nodeWidth}
-                        height={nodeHeight}
-                        rx={8}
-                        fill="white"
-                        stroke="#64748B"
-                        strokeWidth={1.5}
-                      />
-                      <text
-                        x={x + nodeWidth / 2}
-                        y={nodeY + nodeHeight / 2 + 4}
-                        textAnchor="middle"
-                        fontSize={13}
-                        fontWeight={500}
-                        fill="#0F172A"
-                        fontFamily="ui-sans-serif, system-ui, sans-serif"
-                      >
-                        {node.label}
-                      </text>
-                      <text
-                        x={x + nodeWidth / 2}
-                        y={nodeY + nodeHeight + 22}
-                        textAnchor="middle"
-                        fontSize={11}
-                        fill="#64748B"
-                        fontFamily="ui-sans-serif, system-ui, sans-serif"
-                      >
-                        {node.description}
-                      </text>
-                    </g>
-                  );
-                })}
-              </svg>
-            </div>
+            {/* Closing paragraph */}
+            <p className="mt-6 text-body text-slate">{closingParagraph}</p>
           </div>
         </div>
       </div>
