@@ -2,26 +2,20 @@ import type { Metadata } from 'next';
 
 import { HeroSection } from '@/components/programmatic/HeroSection';
 import CityContextStatStrip from '@/components/programmatic/CityContextStatStrip';
-import CityContextProseInline from '@/components/programmatic/CityContextProseInline';
 import ServiceEditorialPullquote from '@/components/programmatic/ServiceEditorialPullquote';
-import ServiceStepsHorizontal from '@/components/programmatic/ServiceStepsHorizontal';
 import WhyComparisonMatrix from '@/components/programmatic/WhyComparisonMatrix';
-import WhyCompactAdvantageList from '@/components/programmatic/WhyCompactAdvantageList';
-import ProcessVerticalTimeline from '@/components/programmatic/ProcessVerticalTimeline';
 import IndustriesGridIllustrated from '@/components/programmatic/IndustriesGridIllustrated';
 import PricingThreeTier from '@/components/programmatic/PricingThreeTier';
 import FAQEditorialColumn from '@/components/programmatic/FAQEditorialColumn';
 import FinalCTAAnchor from '@/components/programmatic/FinalCTAAnchor';
 
+// NOTE: gallery is intentionally incomplete during M1.5. GATE E rebuilds
+// it from scratch against the full 12-treatment v2 sequence.
 import {
   mockHero,
   mockCityContextStatStrip,
-  mockCityContextProseInline,
   mockServiceEditorial,
-  mockServiceStepsHorizontal,
   mockWhyComparisonMatrix,
-  mockWhyCompactAdvantageList,
-  mockProcessVerticalTimeline,
   mockIndustriesGridIllustrated,
   mockPricingThreeTier,
   mockFAQEditorialColumn,
@@ -67,37 +61,14 @@ const TREATMENTS: ReadonlyArray<TreatmentEntry> = [
     render: () => <CityContextStatStrip {...mockCityContextStatStrip} />,
   },
   {
-    slug: 'prose_with_inline_stats',
-    sectionName: 'city_context',
-    alt: true,
-    render: () => <CityContextProseInline {...mockCityContextProseInline} />,
-  },
-  {
     slug: 'editorial_prose_with_pullquote_and_diagram',
     sectionName: 'service_explanation',
     render: () => <ServiceEditorialPullquote {...mockServiceEditorial} />,
   },
   {
-    slug: 'service_steps_horizontal',
-    sectionName: 'service_explanation',
-    alt: true,
-    render: () => <ServiceStepsHorizontal {...mockServiceStepsHorizontal} />,
-  },
-  {
     slug: 'comparison_matrix_with_advantage_tiles',
     sectionName: 'why_factoryjet',
     render: () => <WhyComparisonMatrix {...mockWhyComparisonMatrix} />,
-  },
-  {
-    slug: 'compact_advantage_list',
-    sectionName: 'why_factoryjet',
-    alt: true,
-    render: () => <WhyCompactAdvantageList {...mockWhyCompactAdvantageList} />,
-  },
-  {
-    slug: 'vertical_timeline_5step',
-    sectionName: 'process',
-    render: () => <ProcessVerticalTimeline {...mockProcessVerticalTimeline} />,
   },
   {
     slug: 'industries_grid_3x2_illustrated',

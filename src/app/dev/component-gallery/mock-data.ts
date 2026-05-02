@@ -13,12 +13,8 @@
  */
 import type { HeroSectionProps } from '@/components/programmatic/HeroSection';
 import type { CityContextStatStripProps } from '@/components/programmatic/CityContextStatStrip';
-import type { CityContextProseInlineProps } from '@/components/programmatic/CityContextProseInline';
 import type { ServiceEditorialPullquoteProps } from '@/components/programmatic/ServiceEditorialPullquote';
-import type { ServiceStepsHorizontalProps } from '@/components/programmatic/ServiceStepsHorizontal';
 import type { WhyComparisonMatrixProps } from '@/components/programmatic/WhyComparisonMatrix';
-import type { WhyCompactAdvantageListProps } from '@/components/programmatic/WhyCompactAdvantageList';
-import type { ProcessVerticalTimelineProps } from '@/components/programmatic/ProcessVerticalTimeline';
 import type { IndustriesGridIllustratedProps } from '@/components/programmatic/IndustriesGridIllustrated';
 import type { PricingThreeTierProps } from '@/components/programmatic/PricingThreeTier';
 import type { FAQEditorialColumnProps } from '@/components/programmatic/FAQEditorialColumn';
@@ -80,39 +76,6 @@ export const mockCityContextStatStrip: CityContextStatStripProps = {
 };
 
 /* ========================================================================
- * 3. prose_with_inline_stats → <CityContextProseInline>   (Sheffield, ALT)
- * ====================================================================== */
-
-export const mockCityContextProseInline: CityContextProseInlineProps = {
-  eyebrow: 'SHEFFIELD, IN CONTEXT',
-  headline: "A city that's quietly become the UK's manufacturing-tech corridor.",
-  paragraphs: [
-    "Sheffield is no longer the city that featured in your school history textbooks. The Advanced Manufacturing Research Centre with Boeing brought serious industrial R&D to the south of the city, and the AMRC ecosystem has anchored a generation of engineering startups around it.",
-    "The two universities — Sheffield and Sheffield Hallam — graduate around 13,000 students every year between them. A meaningful slice of that cohort stays. The city now has a real software and product-design talent pool, priced well below London or Manchester rates.",
-    "What's missing is digital presentation. Many capable Sheffield firms still run websites that under-sell what they actually do. A clean, fast, well-architected site is one of the cheapest competitive moves available, and it's where we focus.",
-    "We build for Sheffield clients the same way we build for London clients — same stack, same delivery cadence, same code ownership at handover. The only thing that differs is the local proof we cite in the copy.",
-  ],
-  inlineStats: [
-    {
-      value: '~13,000',
-      whatItMeans: 'graduates per year across the two universities',
-      sourceUrl: 'https://www.hesa.ac.uk/data-and-analysis/students',
-    },
-    {
-      value: '£11.6bn',
-      whatItMeans: 'Sheffield GVA (2022, current prices)',
-      sourceUrl:
-        'https://www.ons.gov.uk/economy/grossvalueaddedgva/bulletins/regionalgrossvalueaddedbalanceduk/2022',
-    },
-    {
-      value: '500+',
-      whatItMeans: 'industrial partners in the AMRC ecosystem',
-      sourceUrl: 'https://www.amrc.co.uk/',
-    },
-  ],
-};
-
-/* ========================================================================
  * 4. editorial_prose_with_pullquote_and_diagram → <ServiceEditorialPullquote>
  *    (London)
  * ====================================================================== */
@@ -138,42 +101,6 @@ export const mockServiceEditorial: ServiceEditorialPullquoteProps = {
     { label: 'Build', description: 'Next.js + Tailwind' },
     { label: 'Launch', description: 'Cloudflare Pages' },
     { label: 'Iterate', description: 'CMS + analytics' },
-  ],
-};
-
-/* ========================================================================
- * 5. service_steps_horizontal → <ServiceStepsHorizontal>   (Manchester, ALT)
- * ====================================================================== */
-
-export const mockServiceStepsHorizontal: ServiceStepsHorizontalProps = {
-  eyebrow: 'HOW IT WORKS',
-  headline: 'Four steps from kickoff to live in Manchester.',
-  lead: "We've stripped the agency engagement down to the steps that matter. No padded discovery phases, no committee design reviews, no surprise change-orders. Each step has a fixed deliverable, a named owner on our side, and a clear handover criterion.",
-  steps: [
-    {
-      title: 'Discovery',
-      description:
-        'A 90-minute kickoff call to lock scope, audience, and proof points. You leave with a one-page brief and a fixed price.',
-      lucideIconName: 'Search',
-    },
-    {
-      title: 'Design',
-      description:
-        'Figma comps for the homepage and one inner page within seven days. Two rounds of revision included; most clients use one.',
-      lucideIconName: 'PenTool',
-    },
-    {
-      title: 'Build',
-      description:
-        'Next.js + Tailwind on Cloudflare Pages. Staging URL within ten days of design sign-off. Your CMS account ready to use.',
-      lucideIconName: 'Hammer',
-    },
-    {
-      title: 'Launch',
-      description:
-        'DNS cutover with you on the call. We monitor for 72 hours post-launch and hand over the keys with documentation your team can read.',
-      lucideIconName: 'Rocket',
-    },
   ],
 };
 
@@ -236,80 +163,6 @@ export const mockWhyComparisonMatrix: WhyComparisonMatrixProps = {
       title: 'Delivery in days, not quarters',
       body: 'A typical engagement is 31 days kickoff to live. We can compress to 14 days for simpler scopes. Our calendar makes that possible because we run small concurrent engagements, not big ones.',
       lucideIconName: 'Zap',
-    },
-  ],
-};
-
-/* ========================================================================
- * 7. compact_advantage_list → <WhyCompactAdvantageList>   (Sheffield, ALT)
- * ====================================================================== */
-
-export const mockWhyCompactAdvantageList: WhyCompactAdvantageListProps = {
-  eyebrow: 'WHY FACTORYJET',
-  headline: "Five things Sheffield clients tell us they didn't get elsewhere.",
-  lead: "We mostly hear the same five things from Sheffield clients on the kickoff call. None of them is exotic. All of them are the kind of operational hygiene that's easy to skip if you're optimising for billable hours rather than client outcomes.",
-  advantages: [
-    {
-      title: 'A price before the discovery call ends',
-      body: 'You leave the first call with a number, a delivery date, and a written one-pager. No "we\'ll send a proposal next week" routine.',
-    },
-    {
-      title: 'A staging URL within ten days',
-      body: "Most agencies wait until the build is mostly done before showing you anything live. We ship a staging environment early and update it daily so you see progress, not slides.",
-    },
-    {
-      title: 'A codebase your team can read',
-      body: 'Standard Next.js, standard Tailwind, no bespoke abstractions. A junior developer can ship an edit on day one. We document the parts that aren\'t obvious.',
-    },
-    {
-      title: 'AI search baked in',
-      body: 'Schema markup, crawler-friendly HTML, and an answer-engine-ready content structure. Your site shows up when somebody asks Claude for a Sheffield supplier — not just when they Google one.',
-    },
-    {
-      title: 'A handover that ends the engagement',
-      body: "We don't run on retainers. The build ends, the code is yours, and we step out of the way. If you want help later, you call us — but you're not obligated to.",
-    },
-  ],
-};
-
-/* ========================================================================
- * 8. vertical_timeline_5step → <ProcessVerticalTimeline>   (London)
- * ====================================================================== */
-
-export const mockProcessVerticalTimeline: ProcessVerticalTimelineProps = {
-  eyebrow: 'OUR PROCESS',
-  headline: '31 days, five named stages, one fixed price.',
-  lead: "We've run this same five-stage process across every London engagement we've delivered. It compresses to two weeks for simpler scopes and never stretches past five for the standard one. The day ranges below are the version we quote.",
-  steps: [
-    {
-      numeral: '01',
-      dayRange: 'DAY 1–3',
-      title: 'Discovery & brief',
-      body: 'Kickoff call, audit of any existing site, and a one-page written brief. You sign the brief; we lock scope and price.',
-    },
-    {
-      numeral: '02',
-      dayRange: 'DAY 4–10',
-      title: 'Design',
-      body: 'Figma comps for the homepage and one inner page. Two rounds of revision. Sign-off triggers build.',
-    },
-    {
-      numeral: '03',
-      dayRange: 'DAY 11–22',
-      title: 'Build',
-      body: 'Next.js + Tailwind on a staging URL you can visit daily. Content uploaded, CMS configured, integrations wired.',
-    },
-    {
-      numeral: '04',
-      dayRange: 'DAY 23–28',
-      title: 'QA & content polish',
-      body: 'Cross-browser testing, accessibility audit, performance budget enforcement, final copy edits with you.',
-    },
-    {
-      numeral: '05',
-      dayRange: 'DAY 29–31',
-      title: 'Launch & handover',
-      body: 'DNS cutover with you on the call, 72-hour post-launch monitoring, and a written handover including repo access.',
     },
   ],
 };
