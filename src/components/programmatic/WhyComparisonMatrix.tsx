@@ -1,9 +1,26 @@
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 import { lookupIcon } from './lucideIconLookup';
+import { RevealOnScroll, RevealStagger } from './RevealOnScroll';
 
-export interface WhyComparisonMatrixProps {
+export interface WhyComparisonMatrixV2Props {
   eyebrow: string;
   headline: string;
   lead: string;
+  /**
+   * NEW in v2 — case study tiles rendered ABOVE the matrix.
+   * If undefined or empty, only the matrix + advantage tiles render
+   * (M1 layout). If exactly 3 entries provided, render a 3-up tile
+   * row using granted client artefacts.
+   */
+  caseStudyTiles?: ReadonlyArray<{
+    clientLogoPath: string;
+    clientName: string;
+    industryTag: string;
+    /** One sentence with a metric, e.g. "Lifted qualified leads 47% in Q1." */
+    outcomeStatement: string;
+    storyHref: string;
+  }>;
   /**
    * Per-row label is a feature/dimension (Pricing, Turnaround, …),
    * NOT an agency. The matrix is dimensions × agencies, and the
@@ -30,6 +47,9 @@ export interface WhyComparisonMatrixProps {
   }>; // length 3
 }
 
+// Backward-compat alias so older imports keep working until M4 cleanup.
+export type WhyComparisonMatrixProps = WhyComparisonMatrixV2Props;
+
 /**
  * Treatment 4 — `comparison_matrix_with_advantage_tiles`. Why
  * FactoryJet (default).
@@ -51,10 +71,13 @@ export default function WhyComparisonMatrix({
   eyebrow,
   headline,
   lead,
+  caseStudyTiles,
   comparisonRows,
   competitorColumnHeaders = ['Local London agency'],
   advantageTiles,
-}: WhyComparisonMatrixProps) {
+}: WhyComparisonMatrixV2Props) {
+  const hasCaseStudies = caseStudyTiles && caseStudyTiles.length === 3;
+
   return (
     <section className="bg-white">
       <div className="mx-auto max-w-container-xl px-6 py-section-y lg:px-8">
@@ -67,8 +90,54 @@ export default function WhyComparisonMatrix({
           <p className="mt-6 text-body-lg text-slate">{lead}</p>
         </div>
 
+        {/* Case study tile row — v2 only, rendered when 3 tiles provided */}
+        {hasCaseStudies && (
+          <RevealStagger
+            className="mb-16 grid grid-cols-1 gap-6 lg:grid-cols-3"
+            staggerDelay={0.06}
+          >
+            {caseStudyTiles!.map((tile) => (
+              <article
+                key={tile.clientName}
+                className="flex flex-col rounded-lg border border-border-soft bg-white p-6 transition-shadow duration-300 hover:shadow-lg"
+              >
+                {/* Client logo */}
+                <div className="h-8">
+                  {tile.clientLogoPath ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={tile.clientLogoPath}
+                      alt={`${tile.clientName} logo`}
+                      className="h-8 w-auto"
+                    />
+                  ) : (
+                    <span className="font-display text-base font-semibold text-navy">
+                      {tile.clientName}
+                    </span>
+                  )}
+                </div>
+
+                <p className="mt-6 font-mono text-mono-sm uppercase tracking-[0.08em] text-text-meta">
+                  {tile.industryTag}
+                </p>
+                <p className="mt-2 text-body text-navy">
+                  {tile.outcomeStatement}
+                </p>
+
+                <Link
+                  href={tile.storyHref}
+                  className="mt-auto inline-flex items-center gap-1.5 pt-6 text-body-sm font-medium text-jet-blue hover:text-primary-dark"
+                >
+                  <span>Read the story</span>
+                  <ArrowRight className="size-4" aria-hidden />
+                </Link>
+              </article>
+            ))}
+          </RevealStagger>
+        )}
+
         {/* Matrix */}
-        <div className="overflow-x-auto">
+        <RevealOnScroll className="overflow-x-auto">
           <table className="w-full min-w-[640px] border-collapse">
             <thead>
               <tr className="border-b border-border-soft">
@@ -114,10 +183,13 @@ export default function WhyComparisonMatrix({
               ))}
             </tbody>
           </table>
-        </div>
+        </RevealOnScroll>
 
         {/* Advantage tiles */}
-        <div className="mt-16 grid grid-cols-1 gap-6 lg:grid-cols-3">
+        <RevealStagger
+          className="mt-16 grid grid-cols-1 gap-6 lg:grid-cols-3"
+          staggerDelay={0.06}
+        >
           {advantageTiles.map((tile) => {
             const Icon = lookupIcon(tile.lucideIconName);
             return (
@@ -133,7 +205,7 @@ export default function WhyComparisonMatrix({
               </div>
             );
           })}
-        </div>
+        </RevealStagger>
       </div>
     </section>
   );
