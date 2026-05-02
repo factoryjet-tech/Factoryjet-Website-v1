@@ -12,8 +12,9 @@ interface BrowserMockupProps {
 /**
  * Browser chrome wrapper for displaying a fictional website preview
  * inside a marketing hero. Server Component — no client state, no
- * animation, no JS. Matches the Apple/Anthropic restraint lane:
- * 1px border, soft layered shadow, rounded-lg.
+ * JS. Single CSS-only motion: subtle oblique tilt + scale on hover
+ * (per spec §4 motion treatment 4). Honours prefers-reduced-motion
+ * via Tailwind's reduced-motion variant.
  *
  * Usage:
  *   <BrowserMockup url="hartwell-co.com">
@@ -32,7 +33,7 @@ export function BrowserMockup({
     <div
       role="img"
       aria-label={ariaLabel}
-      className="relative w-full overflow-hidden rounded-lg border border-border-soft bg-white"
+      className="relative w-full overflow-hidden rounded-lg border border-border-soft bg-white transition-transform duration-300 hover:rotate-1 hover:scale-[1.02] motion-reduce:transition-none motion-reduce:hover:rotate-0 motion-reduce:hover:scale-100"
       style={{
         boxShadow:
           '0 2px 4px rgba(0,0,0,0.02), 0 4px 8px rgba(0,0,0,0.02), 0 16px 32px rgba(0,0,0,0.04)',
