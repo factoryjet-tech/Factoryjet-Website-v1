@@ -1,33 +1,57 @@
 import Link from 'next/link';
+import { Fragment } from 'react';
 import { BrowserMockup } from './BrowserMockup';
+import {
+  getMockSiteComponent,
+  type MockSiteData,
+  type ServiceVariant,
+} from './MockSites';
+import { RevealOnScroll } from './RevealOnScroll';
+
+export interface HeroMockup {
+  /** Picks which mock site to render inside the BrowserMockup chrome. */
+  serviceVariant: ServiceVariant;
+  /** e.g. "Hartwell & Co.", varies per city + service. */
+  businessName: string;
+  /** e.g. "Wealth management, considered." */
+  businessTagline: string;
+  /** Domain shown in the mock browser address bar (e.g. "hartwell-co.com") */
+  url: string;
+  /** Mock site rendering data (subhead, CTA label, nav, stats). */
+  mockSiteData: Omit<MockSiteData, 'businessName' | 'businessTagline'>;
+  /** Rotation in degrees for staggered visual feel: -2 to +2. */
+  rotation: number;
+}
 
 export interface HeroSectionProps {
-  /** Eyebrow chip text, e.g. "WEB DESIGN · LONDON". Will be rendered uppercase. */
   eyebrow: string;
-  /** H1 text. Should be 6–10 words for the restraint lane. */
+  /** 6–9 words. Use *asterisks* to mark italic word for serif emphasis. */
   headline: string;
-  /** Lead paragraph. Max ~60ch reads best. */
   lead: string;
-  /** Trust strip items shown below CTAs, separated by middle dots. */
   trustItems: string[];
-  /** Primary CTA — filled Jet Blue. */
   primaryCta: { label: string; href: string };
-  /** Secondary CTA — outlined. */
   secondaryCta: { label: string; href: string };
-  /** Service variant — picks which mock site to render in the BrowserMockup. */
-  serviceVariant: 'web-design'; // extend with 'ai-websites' | 'ecommerce' | etc. in future PRs
-  /** City context — feeds into the eyebrow + mockup URL. */
-  city: string;
+  /** 4–6 fictional businesses arranged in mosaic. */
+  mockups: HeroMockup[];
+  /** For mockup name variation in copy. */
+  cityName: string;
 }
 
 /**
- * Programmatic page hero — Apple/Anthropic restraint lane.
- * Pure Server Component. White background, asymmetric two-column,
- * typography-driven, no motion, no gradients.
+ * Hero v2 — `hero_v2_asset_mosaic` per spec §5.1.
  *
- * The right column is a BrowserMockup showing a fictional business
- * website matching the service. For PR #32, only `web-design` variant
- * is implemented (Hartwell & Co. — Mayfair financial advisory).
+ * Asymmetric 7/12 + 5/12 grid with the right column rendering 4–6
+ * service-variant mockups in an overlapping mosaic. Each mockup
+ * is a smaller-scale <BrowserMockup> showing a fictional business
+ * for the matching service variant.
+ *
+ * Headline parses *word* asterisk markers and renders the wrapped
+ * span in font-display italic — a lightweight serif emphasis trick
+ * borrowed from editorial agency homepages.
+ *
+ * Entry choreography per spec §4: each block fades up in turn,
+ * starting at 0s and stepping ~150ms apart. Honours
+ * prefers-reduced-motion via the RevealOnScroll wrapper.
  */
 export function HeroSection({
   eyebrow,
@@ -36,8 +60,8 @@ export function HeroSection({
   trustItems,
   primaryCta,
   secondaryCta,
-  serviceVariant,
-  city,
+  mockups,
+  cityName,
 }: HeroSectionProps) {
   return (
     <section className="relative bg-white">
@@ -45,56 +69,63 @@ export function HeroSection({
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Left column — content (7/12) */}
           <div className="lg:col-span-7">
-            {/* Eyebrow chip */}
-            <div className="mb-8 inline-flex items-center font-mono text-mono-sm uppercase tracking-[0.08em] text-text-meta">
-              {eyebrow}
-            </div>
+            <RevealOnScroll>
+              <div className="mb-8 inline-flex items-center font-mono text-mono-sm uppercase tracking-[0.08em] text-text-meta">
+                {eyebrow}
+              </div>
+            </RevealOnScroll>
 
-            {/* H1 — display-lg, font-display (Source Serif 4) */}
-            <h1 className="font-display text-display-lg text-black">
-              {headline}
-            </h1>
+            {/* H1 — display-lg, font-display (Source Serif 4)
+             *      *word* markers render the wrapped word in italic. */}
+            <RevealOnScroll delay={0.15}>
+              <h1 className="font-display text-display-lg text-black">
+                <HeadlineWithEmphasis text={headline} />
+              </h1>
+            </RevealOnScroll>
 
-            {/* Lead paragraph */}
-            <p className="mt-6 max-w-2xl text-body-lg text-text-meta">
-              {lead}
-            </p>
+            <RevealOnScroll delay={0.3}>
+              <p className="mt-6 max-w-2xl text-body-lg text-text-meta">
+                {lead}
+              </p>
+            </RevealOnScroll>
 
-            {/* CTA pair */}
-            <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <Link
-                href={primaryCta.href}
-                className="inline-flex items-center justify-center rounded-lg bg-jet-blue px-6 py-3.5 text-base font-medium text-white transition-colors hover:bg-[#003D99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-jet-blue"
+            <RevealOnScroll delay={0.45}>
+              <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
+                <Link
+                  href={primaryCta.href}
+                  className="inline-flex items-center justify-center rounded-lg bg-jet-blue px-6 py-3.5 text-base font-medium text-white transition-colors hover:bg-[#003D99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-jet-blue"
+                >
+                  {primaryCta.label}
+                </Link>
+                <Link
+                  href={secondaryCta.href}
+                  className="inline-flex items-center justify-center rounded-lg border border-border-soft bg-white px-6 py-3.5 text-base font-medium text-black transition-colors hover:border-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-jet-blue"
+                >
+                  {secondaryCta.label}
+                </Link>
+              </div>
+            </RevealOnScroll>
+
+            <RevealOnScroll delay={0.5}>
+              <div
+                className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-2 text-body-sm text-text-meta"
+                aria-label={`Trust signals for FactoryJet's ${cityName} work`}
               >
-                {primaryCta.label}
-              </Link>
-              <Link
-                href={secondaryCta.href}
-                className="inline-flex items-center justify-center rounded-lg border border-border-soft bg-white px-6 py-3.5 text-base font-medium text-black transition-colors hover:border-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-jet-blue"
-              >
-                {secondaryCta.label}
-              </Link>
-            </div>
-
-            {/* Trust strip */}
-            <div className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-2 text-body-sm text-text-meta">
-              {trustItems.map((item, i) => (
-                <span key={item} className="flex items-center gap-3">
-                  {i > 0 && <span aria-hidden>·</span>}
-                  <span>{item}</span>
-                </span>
-              ))}
-            </div>
+                {trustItems.map((item, i) => (
+                  <span key={item} className="flex items-center gap-3">
+                    {i > 0 && <span aria-hidden>·</span>}
+                    <span>{item}</span>
+                  </span>
+                ))}
+              </div>
+            </RevealOnScroll>
           </div>
 
-          {/* Right column — BrowserMockup (5/12) */}
+          {/* Right column — mockup mosaic (5/12) */}
           <div className="lg:col-span-5">
-            <BrowserMockup
-              url="hartwell-co.com"
-              ariaLabel={`Example ${serviceVariant} project for a ${city} business`}
-            >
-              {serviceVariant === 'web-design' && <HartwellMockSite />}
-            </BrowserMockup>
+            <RevealOnScroll delay={0.6}>
+              <MockupMosaic mockups={mockups} cityName={cityName} />
+            </RevealOnScroll>
           </div>
         </div>
       </div>
@@ -102,73 +133,79 @@ export function HeroSection({
   );
 }
 
-/**
- * Fictional London Mayfair financial advisory mock site.
- * Used inside the BrowserMockup on web-design service pages.
- * Pure typography + Jet Blue CTA. The brand color appears here
- * (inside the demonstrated product), not on the page chrome.
- */
-function HartwellMockSite() {
+/* ------------------------------------------------------------------ */
+/*  Headline emphasis parser                                          */
+/*  *word* → <em className="font-display italic">word</em>            */
+/* ------------------------------------------------------------------ */
+
+function HeadlineWithEmphasis({ text }: { text: string }) {
+  // Split on *…* groups but keep the markers in the result so we
+  // can identify which segments to italicise.
+  const parts = text.split(/(\*[^*]+\*)/g);
   return (
-    <div className="px-6 py-8">
-      {/* Mock nav */}
-      <div className="mb-10 flex items-center justify-between">
-        <span className="font-display text-base font-semibold text-black">
-          Hartwell &amp; Co.
-        </span>
-        <nav
-          className="hidden gap-5 text-xs text-text-meta sm:flex"
-          aria-hidden
-        >
-          <span>About</span>
-          <span>Services</span>
-          <span>Insights</span>
-          <span>Contact</span>
-        </nav>
-      </div>
+    <>
+      {parts.map((part, i) => {
+        if (part.startsWith('*') && part.endsWith('*') && part.length > 2) {
+          return (
+            <em key={i} className="font-display italic">
+              {part.slice(1, -1)}
+            </em>
+          );
+        }
+        return <Fragment key={i}>{part}</Fragment>;
+      })}
+    </>
+  );
+}
 
-      {/* Mock hero */}
-      <div className="mb-6">
-        <div className="mb-2 font-mono text-[10px] uppercase tracking-[0.08em] text-text-meta">
-          Mayfair · Est. 1987
-        </div>
-        <h2 className="font-display text-2xl leading-tight text-black">
-          Wealth management,
-          <br />
-          considered.
-        </h2>
-        <p className="mt-3 text-xs text-text-meta">
-          Discretionary advisory for founders, families,
-          <br className="hidden sm:block" />
-          and operating partners.
-        </p>
-      </div>
+/* ------------------------------------------------------------------ */
+/*  Mockup mosaic                                                     */
+/*                                                                    */
+/*  Stacks 4–6 small BrowserMockups in a layered grid using           */
+/*  staggered translation + per-mockup rotation. CSS-only —           */
+/*  no client JS for the layout itself; RevealOnScroll handles        */
+/*  the entry animation around it.                                    */
+/* ------------------------------------------------------------------ */
 
-      {/* Mock CTA — this is where Jet Blue appears (in the demoed product) */}
-      <button
-        type="button"
-        className="rounded-md bg-jet-blue px-4 py-2 text-xs font-medium text-white"
-        aria-hidden
-        tabIndex={-1}
-      >
-        Book an introduction
-      </button>
+function MockupMosaic({
+  mockups,
+  cityName,
+}: {
+  mockups: HeroMockup[];
+  cityName: string;
+}) {
+  // Geometry: stack mockups in a 2-col grid on desktop, layered with
+  // slight overlaps. Each tile is ~80% width, rotated, and offset.
+  // We use CSS grid for the base layout and per-mockup transform for
+  // the artistic stagger.
+  return (
+    <div className="relative grid grid-cols-2 gap-3 sm:gap-4">
+      {mockups.map((mockup, i) => {
+        const MockSite = getMockSiteComponent(mockup.serviceVariant);
+        // Vertical offset: every other mockup nudged down for parallax feel.
+        const translateY = i % 2 === 1 ? 'translate-y-6' : '';
 
-      {/* Mock stat strip */}
-      <div className="mt-8 flex gap-6 border-t border-border-soft pt-6">
-        <div>
-          <div className="font-display text-lg font-semibold text-black">
-            £840m
+        return (
+          <div
+            key={`${mockup.url}-${i}`}
+            className={`origin-center transition-transform ${translateY}`}
+            style={{ transform: `rotate(${mockup.rotation}deg)` }}
+          >
+            <BrowserMockup
+              url={mockup.url}
+              ariaLabel={`Example ${mockup.serviceVariant} project for a ${cityName} business — ${mockup.businessName}`}
+            >
+              <MockSite
+                data={{
+                  businessName: mockup.businessName,
+                  businessTagline: mockup.businessTagline,
+                  ...mockup.mockSiteData,
+                }}
+              />
+            </BrowserMockup>
           </div>
-          <div className="text-[10px] text-text-meta">AUM</div>
-        </div>
-        <div>
-          <div className="font-display text-lg font-semibold text-black">
-            38yrs
-          </div>
-          <div className="text-[10px] text-text-meta">heritage</div>
-        </div>
-      </div>
+        );
+      })}
     </div>
   );
 }

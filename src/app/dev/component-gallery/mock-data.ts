@@ -24,9 +24,12 @@ import type { FinalCTAAnchorProps } from '@/components/programmatic/FinalCTAAnch
  * 1. asymmetric_split_with_mockup → <HeroSection>   (London)
  * ====================================================================== */
 
+// NOTE: this is a placeholder v2 mockHero so GATE C typecheck passes.
+// GATE E rewrites mock-data from scratch with a richer 5-mockup mosaic
+// across all service variants.
 export const mockHero: HeroSectionProps = {
   eyebrow: 'WEB DESIGN · LONDON',
-  headline: 'Web design that wins London business.',
+  headline: 'Web design that *wins* London business.',
   lead: "London businesses compete in one of the world's most demanding markets. A slow, generic website costs you clients before you even get a conversation. FactoryJet builds fast, conversion-focused websites in 31 days — with transparent pricing, a codebase you own, and SEO baked in from day one.",
   trustItems: ['31-day delivery', 'From £1,200', 'You own the code'],
   primaryCta: {
@@ -37,8 +40,38 @@ export const mockHero: HeroSectionProps = {
     label: 'WhatsApp Us',
     href: 'https://wa.me/919103398557',
   },
-  serviceVariant: 'web-design',
-  city: 'London',
+  cityName: 'London',
+  mockups: [
+    {
+      serviceVariant: 'web-design',
+      businessName: 'Hartwell & Co.',
+      businessTagline: 'Wealth management, considered.',
+      url: 'hartwell-co.com',
+      rotation: -1.5,
+      mockSiteData: {
+        subhead: 'Mayfair · Est. 1987',
+        ctaLabel: 'Book an introduction',
+        navItems: ['About', 'Services', 'Insights', 'Contact'],
+        statStrip: [
+          { value: '£840m', label: 'AUM' },
+          { value: '38yrs', label: 'heritage' },
+        ],
+      },
+    },
+    {
+      serviceVariant: 'ecommerce',
+      businessName: 'Field Notes',
+      businessTagline: 'Larder essentials, slow-made.',
+      url: 'fieldnotes.shop',
+      rotation: 1.5,
+      mockSiteData: {
+        subhead: 'New season',
+        ctaLabel: 'Shop the range',
+        navItems: ['Shop', 'Pantry', 'Recipes', 'Stockists'],
+        statStrip: [{ value: '4.9★', label: 'reviews' }],
+      },
+    },
+  ],
 };
 
 /* ========================================================================
