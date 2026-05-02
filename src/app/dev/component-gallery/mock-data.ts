@@ -354,41 +354,49 @@ export const mockFAQEditorialColumn: FAQEditorialColumnProps = {
   lead: "These are the eight questions that come up most often on first calls. If yours isn't here, message us — we'll add it.",
   faqs: [
     {
+      anchorId: 'faq-pricing',
       question: 'How is your pricing fixed if every project is different?',
       answer:
         "Every tier covers a defined scope. If your project fits within a tier, that's the price. If it straddles two tiers, we'll quote a single number between the bands on the discovery call before any commitment. No hourly billing, no surprise change orders for work we caused ourselves.",
     },
     {
+      anchorId: 'faq-timeline',
       question: 'Will my site really launch in 31 days?',
       answer:
         "It depends on you, not us. The 31-day clock assumes you respond to design rounds within 48 hours and that content is ready when we ask for it. If those slip, the launch slips by the same amount. We'll always tell you what's needed and when, in writing.",
     },
     {
+      anchorId: 'faq-post-launch-changes',
       question: 'What happens if I want changes after launch?',
       answer:
         "Small edits are easy because the codebase is yours and the CMS is configured for your team. For larger changes, you can hire us back on a fixed-scope basis or take it to any other developer — the stack is industry-standard Next.js, not a proprietary system.",
     },
     {
+      anchorId: 'faq-seo-scope',
       question: 'Do you do SEO, or just the build?',
       answer:
         "Technical SEO — schema, performance, crawlability, AI-search markup — is included in every build. Content SEO and link-building are not; those are ongoing disciplines that we'd rather not pretend to be a fit for. We can recommend specialist partners.",
     },
     {
+      anchorId: 'faq-hosting-costs',
       question: 'What about hosting and ongoing costs?',
       answer:
         "We deploy on Cloudflare Pages, which is free for the traffic profiles of most clients we work with. Domains and any premium integrations (a CRM, scheduling tool, etc.) are billed directly to you by those providers — never marked up by us.",
     },
     {
+      anchorId: 'faq-existing-brand',
       question: 'Can you work with our existing brand and assets?',
       answer:
         "Yes. We're happy to build inside an existing brand system if you have one, and we'll flag where the brand is fighting the conversion goals so you can decide what to do about it. If you don't have a brand system, we don't pretend to be brand strategists — we'll work with what you have or recommend a partner.",
     },
     {
+      anchorId: 'faq-code-ownership',
       question: 'What does "you own the code" actually mean?',
       answer:
         'At handover, we transfer the GitHub repository to your organisation. You get admin rights. The deployment configuration is documented, the CMS credentials are in your name, and the domain is registered to you (or stays with whoever already holds it). There is no licence, no token, and no piece of infrastructure that belongs to us.',
     },
     {
+      anchorId: 'faq-discounts',
       question: 'Do you offer a discount for non-profits or early-stage startups?',
       answer:
         'Sometimes. We have a small annual budget for pro-bono and reduced-rate work. Ask. Worst case, we say no.',
