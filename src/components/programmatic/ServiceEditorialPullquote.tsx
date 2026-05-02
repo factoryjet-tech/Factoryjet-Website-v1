@@ -80,7 +80,15 @@ export default function ServiceEditorialPullquote({
               </p>
             ))}
 
-            {/* Inline 5-node diagram */}
+            {/* Inline 5-node diagram.
+             *
+             * SVG attributes can't consume Tailwind tokens, so colours
+             * are hard-coded here:
+             *   #64748B = text-meta token (stroke + arrow fill + node caption)
+             *   #0F172A = navy token       (node label fill)
+             * If tailwind.config.js renames or re-hexes either token,
+             * update both literals below to match.
+             */}
             <div className="mt-12 overflow-x-auto">
               <svg
                 viewBox="0 0 800 200"

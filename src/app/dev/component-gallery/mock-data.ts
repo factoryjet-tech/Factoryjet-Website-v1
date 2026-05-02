@@ -186,7 +186,9 @@ export const mockWhyComparisonMatrix: WhyComparisonMatrixProps = {
   eyebrow: 'WHY FACTORYJET',
   headline: 'How we compare to the typical London digital agency.',
   lead: "Pricing varies enormously across London digital agencies, and most won't publish numbers. Here's how our delivery model differs structurally — independent of headline price.",
-  competitorColumnHeaders: ['Typical London agency'],
+  // competitorColumnHeaders intentionally omitted — component default
+  // is the generic "Local London agency". We never name real competitors
+  // in published copy.
   comparisonRows: [
     {
       agencyName: 'Pricing transparency',
@@ -319,61 +321,61 @@ export const mockProcessVerticalTimeline: ProcessVerticalTimelineProps = {
 
 export const mockIndustriesGridIllustrated: IndustriesGridIllustratedProps = {
   eyebrow: 'WHO WE BUILD FOR',
-  headline: 'Six sectors where a faster, sharper site moves the needle most.',
+  headline: 'Six London sectors where a faster, sharper site moves the needle most.',
   lead: "We don't pretend to be sector specialists. We are stack specialists. But these six categories of London business consistently see the largest commercial uplift from a serious web rebuild — usually because their existing site is the slowest part of an otherwise excellent operation.",
   sectors: [
     {
-      slug: 'professional-services',
-      name: 'Professional services',
+      slug: 'financial-services',
+      name: 'Financial services',
       description:
-        "Law firms, consultancies, accountants, and architects. Buyers research extensively before contact, and a site that signals seniority and capability shortens the sales cycle. We focus on credibility design and case-study architecture.",
-      linkText: 'See professional-services work',
-      linkHref: '/uk/london/professional-services',
+        'Wealth managers, advisory firms, and FCA-regulated practices in the City and Mayfair. Trust signals and compliance copy carry more weight than visual flourish. We build calm, considered sites that survive due-diligence scrutiny.',
+      linkText: 'See financial-services work',
+      linkHref: '/uk/london/financial-services',
       illustrationPath: '',
     },
     {
-      slug: 'fintech',
-      name: 'Fintech & financial advisory',
+      slug: 'hospitality',
+      name: 'Hospitality',
       description:
-        "Wealth managers, founders' offices, and FCA-regulated advisory firms. Trust signals and compliance copy carry more weight than visual flourish. We build calm, considered sites that survive due-diligence scrutiny.",
-      linkText: 'See fintech work',
-      linkHref: '/uk/london/fintech',
+        "Restaurants, hotels, members' clubs, and venue groups. The booking funnel is the product, the menu is the proof, and image quality is non-negotiable. We optimise for fast image delivery, table-booking integrations, and mobile-first browsing.",
+      linkText: 'See hospitality work',
+      linkHref: '/uk/london/hospitality',
       illustrationPath: '',
     },
     {
-      slug: 'b2b-saas',
-      name: 'B2B SaaS',
+      slug: 'property',
+      name: 'Property',
       description:
-        "Early- and growth-stage SaaS companies. We build product-marketing sites that integrate cleanly with the engineering team's existing CI and monitoring — no separate marketing-team fiefdom required.",
-      linkText: 'See SaaS work',
-      linkHref: '/uk/london/b2b-saas',
+        'Estate agents, developers, and prop-tech operators across Greater London. Listing-heavy data, location-led SEO, and serious lead-capture flows are the work. We integrate with the major property feeds and keep page weights low even at thousands of listings.',
+      linkText: 'See property work',
+      linkHref: '/uk/london/property',
+      illustrationPath: '',
+    },
+    {
+      slug: 'legal',
+      name: 'Legal',
+      description:
+        'Solicitors, chambers, and specialist boutiques across the City, Lincoln’s Inn, and the West End. Buyers research extensively before contact, and a site that signals seniority and case strength shortens the engagement cycle. We focus on credibility design and case-study architecture.',
+      linkText: 'See legal work',
+      linkHref: '/uk/london/legal',
       illustrationPath: '',
     },
     {
       slug: 'healthcare',
-      name: 'Private healthcare',
+      name: 'Healthcare',
       description:
-        'Clinics, specialist practices, and concierge medicine. Booking flows, GDPR-clean form handling, and clear service descriptions matter more than hero animation. We optimise for credibility and conversion.',
+        'Private clinics, specialist practices, and concierge medicine across Harley Street and beyond. Booking flows, GDPR-clean form handling, and clear service descriptions matter more than hero animation. We optimise for credibility and conversion.',
       linkText: 'See healthcare work',
       linkHref: '/uk/london/healthcare',
       illustrationPath: '',
     },
     {
-      slug: 'real-estate',
-      name: 'Property & real estate',
+      slug: 'creative',
+      name: 'Creative',
       description:
-        'Agencies, developers, and prop-tech. Listing-heavy data, location SEO, and lead-capture flows are the work. We integrate cleanly with the major property data feeds and keep page weights low.',
-      linkText: 'See property work',
-      linkHref: '/uk/london/real-estate',
-      illustrationPath: '',
-    },
-    {
-      slug: 'creative-agencies',
-      name: 'Creative & production agencies',
-      description:
-        'Studios that need a site that does justice to the work they ship. Heavy media, strong typography, and editorial structure. We collaborate closely with in-house design teams who know what they want.',
-      linkText: 'See agency work',
-      linkHref: '/uk/london/creative-agencies',
+        'Studios, production houses, and design agencies that need a site doing justice to the work they ship. Heavy media, strong typography, and editorial structure. We collaborate closely with in-house design teams who already know what they want.',
+      linkText: 'See creative work',
+      linkHref: '/uk/london/creative',
       illustrationPath: '',
     },
   ],

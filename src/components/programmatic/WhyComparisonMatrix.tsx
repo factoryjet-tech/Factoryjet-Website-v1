@@ -17,8 +17,10 @@ export interface WhyComparisonMatrixProps {
   }>;
   /**
    * Optional per-column header for the "their" agency name. If absent
-   * the matrix renders a single "Local agency" column. M1 mock data
-   * sets a fixed length-1 array; future variants can supply 2–3.
+   * the matrix renders a single "Local London agency" column —
+   * deliberately generic, never a real agency name. Future variants
+   * may supply 2–3 named columns when the city/service warrants it,
+   * but we publish no specific pricing claims about named competitors.
    */
   competitorColumnHeaders?: ReadonlyArray<string>;
   advantageTiles: ReadonlyArray<{
@@ -50,7 +52,7 @@ export default function WhyComparisonMatrix({
   headline,
   lead,
   comparisonRows,
-  competitorColumnHeaders = ['Local agency'],
+  competitorColumnHeaders = ['Local London agency'],
   advantageTiles,
 }: WhyComparisonMatrixProps) {
   return (
