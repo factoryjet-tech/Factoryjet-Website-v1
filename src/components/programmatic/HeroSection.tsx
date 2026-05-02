@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { BrowserMockup } from './BrowserMockup';
 
-interface HeroSectionProps {
+export interface HeroSectionProps {
   /** Eyebrow chip text, e.g. "WEB DESIGN · LONDON". Will be rendered uppercase. */
   eyebrow: string;
   /** H1 text. Should be 6–10 words for the restraint lane. */
