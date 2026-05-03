@@ -1,247 +1,566 @@
----
-name: FactoryJet
-description: AI-native digital agency for SMBs across US, UK, UAE, India
-version: alpha
-colors:
-  # Brand primaries — locked by the FactoryJet brand system, non-negotiable
-  primary: "#0052CC"             # Jet Blue — interactive only (CTAs, links, focus)
-  primary-hover: "#003D99"       # darker shade for hover/active states
-  primary-on: "#FFFFFF"          # text/icons on primary
-  secondary: "#FF6B35"           # Jet Orange — accents, badges, illustrative emphasis
-  success: "#10B981"             # Jet Green — success states only (never decorative)
-  # Neutral spine — the page belongs to neutrals, not brand colors
-  ink: "#0A0F1C"                 # primary text; near-black with a slight cool tint
-  ink-muted: "#475569"           # secondary text, captions, supporting copy
-  ink-subtle: "#7081A1"           # tertiary metadata, supporting captions (WCAG AA-large compliant on white)
-  ink-disabled: "#94A3B8"         # disabled controls and placeholder text only (WCAG 1.4.3 exempt)
-  surface: "#FFFFFF"             # canvas — every page's primary background
-  surface-alt: "#F8FAFC"         # alternating section background, cards, code blocks
-  surface-2: "#EEF2F7"           # input fields, callout backgrounds, subtle separators
-  border: "#E2E8F0"              # default borders, dividers, hairlines
-  border-strong: "#CBD5E1"       # emphasis borders, input focus boundaries
-typography:
-  # Single editorial family: Inter. Most-shared editorial font in the audit (4/20 sites).
-  # JetBrains Mono is the only secondary family, permitted for code samples only.
-  display:   { fontFamily: "Inter", fontSize: "6rem",     fontWeight: 700, lineHeight: 1.0,  letterSpacing: "-0.03em" }
-  h1:        { fontFamily: "Inter", fontSize: "3.75rem",  fontWeight: 700, lineHeight: 1.05, letterSpacing: "-0.02em" }
-  h2:        { fontFamily: "Inter", fontSize: "2.5rem",   fontWeight: 700, lineHeight: 1.1,  letterSpacing: "-0.01em" }
-  h3:        { fontFamily: "Inter", fontSize: "1.75rem",  fontWeight: 600, lineHeight: 1.2 }
-  h4:        { fontFamily: "Inter", fontSize: "1.25rem",  fontWeight: 600, lineHeight: 1.3 }
-  body-lg:   { fontFamily: "Inter", fontSize: "1.125rem", fontWeight: 400, lineHeight: 1.6 }
-  body:      { fontFamily: "Inter", fontSize: "1rem",     fontWeight: 400, lineHeight: 1.6 }
-  body-sm:   { fontFamily: "Inter", fontSize: "0.875rem", fontWeight: 400, lineHeight: 1.5 }
-  caption:   { fontFamily: "Inter", fontSize: "0.75rem",  fontWeight: 500, lineHeight: 1.4, letterSpacing: "0.04em" }
-  mono:      { fontFamily: "JetBrains Mono, Consolas, monospace", fontSize: "0.875rem", fontWeight: 400, lineHeight: 1.5 }
-rounded:
-  none: 0
-  sm: 4px        # subtle inputs, micro-tags
-  md: 6px        # DEFAULT for buttons, cards, inputs (audit consensus: 796 occurrences)
-  lg: 8px        # elevated cards, modals
-  xl: 12px       # hero callout blocks, large feature cards
-  "2xl": 16px    # decorative containers (rare)
-  pill: 9999px   # badges, pills, avatars
-spacing:
-  xs: 4px
-  sm: 8px
-  md: 16px
-  lg: 24px
-  xl: 32px
-  "2xl": 48px
-  "3xl": 64px
-  "4xl": 96px
-  "5xl": 128px
-shadows:
-  # Multi-stop ambient + contact pattern (Stripe reference). Avoid single-drop "AI" shadows.
-  sm: "0 1px 2px 0 rgba(10, 15, 28, 0.05)"
-  md: "0 4px 6px -1px rgba(10, 15, 28, 0.06), 0 2px 4px -2px rgba(10, 15, 28, 0.04)"
-  lg: "0 12px 24px -6px rgba(10, 15, 28, 0.08), 0 4px 8px -4px rgba(10, 15, 28, 0.04)"
-  xl: "0 30px 60px -12px rgba(50, 50, 93, 0.18), 0 18px 36px -18px rgba(0, 0, 0, 0.12)"
-components:
-  button-primary:
-    backgroundColor: "{colors.primary}"
-    textColor: "{colors.primary-on}"
-    rounded: "{rounded.md}"
-    padding: "12px 24px"
-    fontWeight: 600
-  button-primary-hover:
-    backgroundColor: "{colors.primary-hover}"
-  button-secondary:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.ink}"
-    border: "1px solid {colors.border-strong}"
-    rounded: "{rounded.md}"
-    padding: "12px 24px"
-    fontWeight: 600
-  button-ghost:
-    backgroundColor: "transparent"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.md}"
-    padding: "10px 20px"
-    fontWeight: 500
-  card:
-    backgroundColor: "{colors.surface}"
-    border: "1px solid {colors.border}"
-    rounded: "{rounded.md}"
-    padding: "{spacing.lg}"
-    shadow: "{shadows.sm}"
-  card-elevated:
-    backgroundColor: "{colors.surface}"
-    border: "1px solid {colors.border}"
-    rounded: "{rounded.lg}"
-    padding: "{spacing.xl}"
-    shadow: "{shadows.md}"
-  input:
-    backgroundColor: "{colors.surface}"
-    border: "1px solid {colors.border-strong}"
-    rounded: "{rounded.md}"
-    padding: "10px 14px"
-    focusRing: "2px solid {colors.primary}"
-  badge:
-    backgroundColor: "{colors.surface-2}"
-    textColor: "{colors.ink-muted}"
-    rounded: "{rounded.pill}"
-    padding: "4px 10px"
-    fontSize: "0.75rem"
-    fontWeight: 600
-  badge-success:
-    backgroundColor: "rgba(16, 185, 129, 0.10)"
-    textColor: "{colors.success}"
-    rounded: "{rounded.pill}"
-    padding: "4px 10px"
-    fontSize: "0.75rem"
-    fontWeight: 600
-  divider:
-    backgroundColor: "{colors.border}"
-    height: "1px"
+# FactoryJet Design System v2.0
+
+> **Canonical design reference for factoryjet.com and all geo subdirectories (/us, /uk, /uae, /in).**
+> This file is the single source of truth. If anything in the codebase contradicts this file, this file wins.
+> Every Claude Code session must read this file first before writing any component or page code.
+
 ---
 
-## Overview
+## 0. The five-second test
 
-FactoryJet is the AI-native digital agency for SMBs in the US, UK, UAE, and India. The visual system targets enterprise-grade quality at startup-friendly perception.
+Open any FactoryJet page in incognito. Read for 5 seconds. The reader should think: **"This is an AI services company that obviously knows what it's doing."** Not: "This is a fast web design agency." Not: "This is another AI startup with a dark hero and a glowing gradient." Not: "This was generated by Claude Code in 30 minutes."
 
-**Aesthetic anchors — explicit, audited references:**
+If a design decision doesn't pass this test, override it with a decision that does.
 
-- **Stripe** — typographic precision on white, multi-stop shadows, restrained color discipline
-- **Linear** — ultra-minimal interface, single accent color used sparingly
-- **Vercel** — black-and-white precision, gradient restraint (9 gradient instances across 5 pages)
-- **Resend** — Inter on white, generous whitespace, decorative accents confined to FinalCTA blocks
-- **Mintlify** — documentation-grade typographic clarity, calm neutrals
+---
 
-**Reference set for gradient discipline (sites using zero gradients across all pages audited):** olyablack.com, qvery.ai, spade.com, theboathouse.agency, tillerdigital.com.
+## 1. Identity anchors
 
-The system optimizes for SMB founders who recognize quality but cannot afford agency-tier prices. Every visual choice answers: "Does this look like the SaaS tools the buyer already trusts?" When in doubt, do less.
+### 1.1 Positioning sentence
+> FactoryJet is the AI-native services partner for SMBs in the US, UK, UAE, and India. We build AI agents that work, AI-native websites that get cited by ChatGPT and Perplexity, and AI-powered systems that turn AI investment into measurable business outcomes — not another pilot that quietly dies.
 
-## Colors
+### 1.2 Aesthetic anchors (study these before designing)
+- **Stripe** (stripe.com) — disciplined whitespace, confident type, subtle motion
+- **Linear** (linear.app) — sharp grotesk body, surgical precision, dark used as accent only
+- **Vercel** (vercel.com) — editorial scale, Geist in production, asymmetric grids
+- **Mercury** (mercury.com) — warm light backgrounds with one strategic dark mid-page section
+- **Anthropic** (anthropic.com) — cream + ink + accent, serif headlines, calm authority
+- **Pentagram** (pentagram.com) — typographic authorship, restraint as confidence
+- **Harvey AI** (harvey.ai) — calm light, professional weight, AI without theatrics
 
-The palette is rooted in three brand primaries against a comprehensive neutral spine. Brand colors are scarce by design; neutrals carry 90% of the visual weight.
+### 1.3 Anti-anchors (do NOT design like these)
+- Lovable / Bolt / v0 default templates — dark hero + neon accent + glowing borders = AI slop fingerprint
+- Every Y Combinator AI startup launched in the last 18 months that picked Inter + dark mode + gradient text
+- Generic SaaS templates with three symmetric pricing cards and a "trusted by" logo wall above the fold
+- HubSpot/template-builder aesthetic that signals "established but tired"
 
-**Jet Blue (`#0052CC`) is the only interactive color.** CTAs, links, focus rings, primary buttons. Never decorative. Never as a section background. This single-color discipline is the structural separator between the FactoryJet system and generic SaaS templates.
+---
 
-**Jet Orange (`#FF6B35`) is the accent.** Reserve for highlights, badges, and rare illustrative emphasis. Never on body text. Never as a content-section background.
+## 2. Colour system
 
-**Jet Green (`#10B981`) is reserved for success states only.** Confirmations, positive metric deltas, "online" indicators. Never decorative. Never as a brand emphasis.
+### 2.1 The 70-20-10 palette
 
-**The neutral spine carries the page.** `{colors.ink}` for primary text, `{colors.ink-muted}` for supporting copy, `{colors.surface}` (pure white #FFFFFF) as the canvas — confirmed by 20/20 reference sites in the brand audit. `{colors.surface-alt}` (#F8FAFC) for alternating sections without harsh dividers. `{colors.border}` for hairlines.
+The dominant palette is **warm-neutral**, not multi-brand. Jet Blue is the only primary brand colour that appears in dominant surfaces. Jet Orange and Jet Green are reserved for component accents (status, category, tag), not page surfaces.
 
-**WCAG AA contrast verified:** every text-on-background combination in the token set achieves ≥ 4.5:1 for body text and ≥ 3:1 for large text. The lint command (`npx @google/design.md lint`) enforces this on every commit.
+| Token              | Hex       | Role                                                   | % of page |
+|--------------------|-----------|--------------------------------------------------------|-----------|
+| `--cream`          | `#FAFAF7` | Default page background — warmer than white, calmer than ivory | 70%       |
+| `--ink`            | `#1A1A1A` | Body text, default foreground                          | 20%       |
+| `--jet-blue`       | `#0052CC` | Single accent — links, italic emphasis, primary CTA, key stats | 10%       |
 
-## Typography
+### 2.2 Strategic dark-section palette (for 1-2 sections per page only)
 
-**One editorial family: Inter.** Headings use Inter at heavier weights (700 for display/H1/H2, 600 for H3/H4). Body uses Inter Regular (400) — the dominant weight across the audit at 74,000+ occurrences. Captions use Inter Medium with a touch of letter-spacing for a "label" feel. Code uses JetBrains Mono — the only secondary family permitted, and only for code samples.
+| Token              | Hex       | Role                                                   |
+|--------------------|-----------|--------------------------------------------------------|
+| `--charcoal`       | `#0F0F12` | Mid-page dark section + footer-CTA dark section        |
+| `--charcoal-text`  | `#F5F5F2` | Body text inside dark sections                         |
+| `--charcoal-muted` | `#8A8A8F` | Muted/secondary text inside dark sections              |
 
-**Inter is the most-shared editorial choice across the reference set** (4/20 sites). The remaining anchor sites publish custom typefaces (sohne-var/Stripe, Geist/Vercel) — choosing Inter aligns FactoryJet with the same typographic clarity those custom faces achieve, without the licensing complexity.
+**Rule:** A page may have a maximum of 2 dark sections. Hero is NEVER dark. The dark sections exist to provide visual rhythm and depth, not to anchor the page.
 
-**The size scale is derived from audit consensus:**
+### 2.3 Tertiary accent tints (component-level only)
 
-- `display` (96px / 6rem) — hero treatment only, anchors the page when no dark hero carries weight
-- `h1` (60px) — primary page heading
-- `h2` (40px) — section headings
-- `h3` / `h4` (28px / 20px) — subsections
-- `body` (16px, mode in audit) — default reading size
-- `caption` (12px) — metadata, labels
+| Token              | Hex       | Use                                                    |
+|--------------------|-----------|--------------------------------------------------------|
+| `--jet-blue-tint`  | `#E6F0FF` | Comparison-table FactoryJet column background; card highlight |
+| `--jet-orange`     | `#FF6B35` | "FLAGSHIP" tag colour; productised solution card accent (JetSDR) |
+| `--jet-orange-tint`| `#FEF3E8` | Productised solution card background (JetSDR variant)  |
+| `--jet-green`      | `#10B981` | "AVAILABLE" / "LIVE" status indicators; recommended-variant tag |
+| `--jet-green-tint` | `#E8FAF1` | Productised solution card background (JetAgent variant)|
 
-Headings carry negative letter-spacing to feel sharper at large sizes. Body text uses default tracking with 1.6 line-height for sustained reading. Display and H1 use line-height ≤ 1.05 — tight, confident, intentional.
+### 2.4 Neutral scale (for borders, dividers, muted text)
 
-**Forbidden typographic effects:** gradient text, rainbow text, drop-shadow on body text, animated counters that spin into place, glassmorphic backgrounds behind type, mixed font families on a single page, "Clash Display" or any second display face. All read as AI-generated to the FactoryJet target buyer and erode the premium positioning.
+| Token              | Hex       | Use                                                    |
+|--------------------|-----------|--------------------------------------------------------|
+| `--neutral-50`     | `#F8F8F5` | Subtle alternate section background                    |
+| `--neutral-100`    | `#EFEFEA` | Card backgrounds inside cream sections                 |
+| `--neutral-200`    | `#D9D9D2` | Borders, dividers                                      |
+| `--neutral-400`    | `#8A8A82` | Muted labels, eyebrow text, disabled state             |
+| `--neutral-600`    | `#4A4A45` | Secondary body text                                    |
 
-## Layout
+### 2.5 Forbidden colour treatments
+- ❌ No gradient text. Ever.
+- ❌ No rainbow gradients on backgrounds, borders, or buttons.
+- ❌ No glowing borders or `box-shadow: 0 0 [n]px rgba(neon-colour)` effects.
+- ❌ No neon-on-dark colour combinations.
+- ❌ No use of Jet Orange or Jet Green as a section background or hero surface.
+- ❌ No background images behind text without a 70%+ opacity overlay if text contrast drops below WCAG AA.
 
-**Standard page rhythm: white hero, alternating white and off-white sections.** This is the new white-background mandate, defended by 20/20 audit sites using #FFFFFF as their primary background. The hero earns its visual weight from typography, generous whitespace, and asymmetric composition — not from a dark background.
+---
 
-**Section sequence:** white hero (`{colors.surface}`) → off-white feature section (`{colors.surface-alt}`) → white section → off-white section. Alternation gives visual rhythm without harsh dividers. Section padding follows `{spacing.4xl}` (96px) vertical, `{spacing.xl}` horizontal.
+## 3. Typography
 
-**Maximum 5 signature design moments per page.** A signature moment is something that earns a screenshot — a striking typographic hero, a creative comparison block, a custom illustration, a unique data visualization, a distinctive testimonial layout. Anything more and the page reads as a portfolio reel rather than a product page.
+### 3.1 Font families
 
-**Asymmetric layouts beat centered-everything.** Reference Stripe, Linear, Vercel — none center every section. Mix left-aligned hero with right-aligned testimonial; mix two-column features with full-bleed callouts. Never sacrifice mobile clarity for desktop creativity — every asymmetric desktop layout collapses cleanly to a single column under 768px.
+| Role              | Font          | Source                       | Weights to load           |
+|-------------------|---------------|------------------------------|---------------------------|
+| Display (headings, hero, stats, titles) | **Fraunces** | Google Fonts (variable)      | Variable: 300-900, italic |
+| Body (paragraph, nav, buttons, microcopy) | **Geist**    | Vercel Fonts / self-hosted   | 400, 500, 600, 700        |
+| Code / monospace  | **Geist Mono**| Vercel Fonts / self-hosted   | 400, 500                  |
 
-**Bento grids permitted, sparingly.** Use them for feature showcases on homepage and pricing comparison; do not use them on every section. Three to six tiles maximum per bento block.
+**Loading:** Self-host both fonts. Use `font-display: swap`. Variable Fraunces preferred to reduce file weight. Preload only the body font weight 400 and the display variable file. Subset to Latin Extended for now; add other ranges per-geo as needed.
 
-**Glassmorphism: maximum one instance per page, only on FinalCTA.** Never on hero, never on cards, never on testimonials. The single FinalCTA block uses `backdrop-blur` with subtle border to create a "premium close" before the page footer.
+### 3.2 Fraunces tuning (the sharpening axis)
 
-## Motion
+Fraunces ships warm by default. We tune it to feel sharper and more technical to match the GT Sectra reference:
 
-**Restrained.** Framer Motion is permitted; complex GSAP timelines are not the default. GSAP ScrollTrigger reserved for hero-only treatments where the visual is genuinely distinctive.
+```css
+.display-font {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 144, 'SOFT' 30, 'WONK' 0, 'GRAD' 50;
+  letter-spacing: -0.02em;
+}
+```
 
-**Acceptable motions:**
+- `opsz` 144 (max optical size) for hero/display headings; reduce to `opsz` 24 for H3.
+- `SOFT` 30 (down from default 50) to sharpen serif terminals.
+- `WONK` 0 (off) — keep classical, not quirky.
+- `GRAD` 50 (slight grade boost) for crisper rendering on light backgrounds.
 
-- Fade-up reveals on scroll (200–400ms duration, ease-out)
-- Subtle hover state transitions (color change + 1–2px translate, 150ms)
-- Page transitions between sections (300ms, ease-in-out)
-- Lenis-driven smooth scrolling on the page itself
+For italic emphasis (the brand-word-italic pattern from the Phase 2 brief), use Fraunces Italic at the same `opsz` as the surrounding text. The italic is genuinely different in shape — that's the point.
 
-**Forbidden motions:** particles, parallax-anything-everywhere, infinite-scrolling marquees, cursor-follow effects, mouse-trail effects, animated number counters that spin into place, animated background gradients, anything labeled "wow factor" in a brief.
+### 3.3 Type scale (desktop)
 
-**Motion budget:** any single animation over 600ms requires explicit justification. Defaults to under 400ms. Hero reveals are the one permitted exception, capped at 800ms.
+| Token        | Size     | Line-height | Weight | Letter-spacing | Font     | Use                                        |
+|--------------|----------|-------------|--------|----------------|----------|--------------------------------------------|
+| `--type-hero`     | 104px / 6.5rem  | 1.02   | 700    | -0.03em        | Fraunces | Homepage hero H1 (oversized headline)       |
+| `--type-h1`       | 80px / 5rem     | 1.05   | 700    | -0.025em       | Fraunces | Page H1                                     |
+| `--type-h2`       | 56px / 3.5rem   | 1.1    | 600    | -0.02em        | Fraunces | Section H2                                  |
+| `--type-h3`       | 36px / 2.25rem  | 1.2    | 600    | -0.015em       | Fraunces | Sub-section H3                              |
+| `--type-h4`       | 24px / 1.5rem   | 1.3    | 600    | -0.01em        | Fraunces | Card titles, FAQ questions                  |
+| `--type-stat`     | 88px / 5.5rem   | 1.0    | 500    | -0.04em        | Fraunces | Big-Three Trust Block numbers; case study hero metrics |
+| `--type-eyebrow`  | 13px / 0.8125rem| 1.4    | 600    | 0.12em         | Geist    | UPPERCASE eyebrow tags                      |
+| `--type-lead`     | 22px / 1.375rem | 1.5    | 400    | 0              | Geist    | Hero sub-headline, section lead paragraph   |
+| `--type-body`     | 17px / 1.0625rem| 1.6    | 400    | 0              | Geist    | Default body                                |
+| `--type-body-sm`  | 15px / 0.9375rem| 1.55   | 400    | 0              | Geist    | Card body, FAQ answer                       |
+| `--type-caption`  | 13px / 0.8125rem| 1.5    | 500    | 0.005em        | Geist    | Captions, labels, footnotes                 |
+| `--type-button`   | 15px / 0.9375rem| 1.0    | 600    | -0.005em       | Geist    | Button label                                |
+| `--type-nav`      | 15px / 0.9375rem| 1.0    | 500    | -0.005em       | Geist    | Top nav items                               |
+| `--type-mono`     | 14px / 0.875rem | 1.5    | 400    | 0              | Geist Mono | Code blocks, technical labels             |
 
-## Imagery
+### 3.4 Type scale (mobile, ≤768px)
 
-**Photography: real, human, contextual.** Pexels and Unsplash with FactoryJet's commercial-use vetting are the default sources. Avoid the generic "diverse business team smiling at laptop" stock cliché — find a sharper visual angle. Real product screenshots beat staged mockups every time.
+Headings scale down aggressively on mobile to preserve hierarchy without overwhelming small screens.
 
-**Illustrations:** generated via Flux Schnell (Apache 2.0) constrained to the FactoryJet palette. Style: clean line work, flat color blocks, occasional subtle gradient on a single accent element only. Never: rainbow gradients, neon glows, AI-generated faces of fake people, photorealistic AI-generated humans (legal risk and uncanny effect).
+| Token        | Mobile size |
+|--------------|-------------|
+| `--type-hero`| 56px / 3.5rem |
+| `--type-h1`  | 44px / 2.75rem |
+| `--type-h2`  | 32px / 2rem |
+| `--type-h3`  | 24px / 1.5rem |
+| `--type-stat`| 56px / 3.5rem |
+| `--type-lead`| 19px / 1.1875rem |
 
-**Product mockups:** real screenshots of the actual tool when possible. Generated mockups only for concept work, always labeled.
+### 3.5 The italic-emphasis pattern (FactoryJet typographic signature)
 
-**Image generation models for pipeline content:** NanoBanana PRO for white-background brand imagery (matches the new white-bg aesthetic). Runware + Kie for variant generation.
+Every major heading on the site has 1-2 words italicised in Fraunces Italic. The italicised word is the conviction word — the word that contradicts, surprises, or commits.
 
-## Do's and Don'ts
+**Examples:**
+- AI agents that *actually* ship.
+- 95% of AI pilots quietly die. Ours *don't*.
+- From AI-curious to AI-*running*.
+- The *implementation* partner. Not the experiment partner.
+- Not pilots in 30 *months*.
 
-**DO**
+Italic words always inherit the same colour as the surrounding text by default. Optionally, italic words may take `--jet-blue` colour for extra emphasis on hero H1 only — this is the ONE place Jet Blue appears in display type.
 
-- Use Jet Blue exclusively for interactive elements
-- Maintain ≥ 4.5:1 contrast on text; the lint command enforces this
-- Apply the spacing scale strictly — `{spacing.md}` not `15px`, `{spacing.lg}` not `25px`
-- Default to 6px border-radius for buttons and cards (audit consensus)
-- Use multi-stop shadows (Stripe pattern), never single drop-shadows
-- Server-render all primary content (AI crawlers do not run JavaScript)
-- Include JSON-LD schema on every page (LocalBusiness + Service + FAQPage + BreadcrumbList minimum for landing pages)
-- Allow GPTBot, ClaudeBot, PerplexityBot, anthropic-ai, Google-Extended, Applebot-Extended in robots.txt
-- Publish CSS custom properties at `:root` so the design system is machine-readable
+### 3.6 Forbidden typography treatments
+- ❌ No Inter, Roboto, Poppins, DM Sans, Open Sans, Montserrat, Manrope, Plus Jakarta Sans anywhere on the site. These are AI-slop fingerprints.
+- ❌ No three+ font families on a page. Display + body + (optional) mono = max three.
+- ❌ No animated/gradient/textured fill on type. Type is solid colour, period.
+- ❌ No all-caps blocks longer than 4 words (eyebrows max).
+- ❌ No `text-shadow` on body type. Period.
+- ❌ No centred body paragraphs longer than one sentence. Body type is left-aligned.
 
-**DON'T**
+---
 
-- Introduce colors outside the eight named neutrals + three brand primaries
-- Use multiple font families — Inter only (and JetBrains Mono for code)
-- Apply gradients to text — ever
-- Use gradients on content-surface backgrounds (5 reference sites confirm this is the discipline)
-- Use glassmorphism beyond a single FinalCTA treatment
-- Hide primary content behind JS-only reveals or "Show more" without server fallback
-- Use stock photos of "team in modern office" — find a sharper visual angle
-- Default to 8px border-radius (audit shows 6px wins, 8px is secondary)
-- Apply animations longer than 600ms to non-hero elements
-- Mix font families on a single page
-- Use `{colors.ink-disabled}` for any content text — it is reserved for disabled controls and placeholder text only (WCAG 1.4.3 exemption); content metadata uses `{colors.ink-subtle}`
+## 4. Spacing & layout
 
-## Agent Prompt Guide
+### 4.1 Spacing scale (8-point grid, with key half-steps)
 
-When generating UI for any FactoryJet property:
+```
+--space-1: 4px
+--space-2: 8px
+--space-3: 12px
+--space-4: 16px
+--space-5: 24px
+--space-6: 32px
+--space-7: 48px
+--space-8: 64px
+--space-9: 96px
+--space-10: 128px
+--space-11: 160px
+--space-12: 192px
+```
 
-1. **Read this DESIGN.md before writing any CSS or component styles.** Token names, not literal values.
-2. **Reference tokens by name** — `{colors.primary}` not `#0052CC`, `{spacing.lg}` not `24px`, `{rounded.md}` not `6px`. The pipeline anti-slop validator will fail any hex literal in JSX outside the token set.
-3. **Validate every text-on-background pairing against WCAG AA** — run `npx @google/design.md lint factoryjet.DESIGN.md` before commit. Build fails on lint errors.
-4. **Apply the spacing scale strictly** — `{spacing.md}` not `15px`. The 4/8/16/24/32/48/64/96/128 scale is the only permitted vertical and horizontal rhythm.
-5. **Default border-radius is `{rounded.md}` (6px)** for buttons, cards, and inputs. Anchor reference: Stripe, Vercel, and 14 other audit sites converged here.
-6. **Maximum 5 signature design moments per page.** The rest is restraint. Five is a ceiling, not a target — three is often better.
-7. **No dark hero.** White hero + alternating white/off-white sections. Visual weight comes from typography, asymmetric layout, real photography. The current page rhythm overrides any prior dark-hero references in legacy documentation.
-8. **One glassmorphism instance per page, FinalCTA only.** Reject any other glassmorphic treatment in the brief.
-9. **If a brief asks for "make it pop with a gradient"** — politely redirect to the secondary color, the hover state, or a typographic emphasis. The brand does not pop; the brand convinces.
-10. **For pipeline-generated landing pages, the anti-slop validator runs after page build** — see `pipeline/scripts/anti_slop_validator` for the F1/F2/F3 checks. Pages that fail validation route back to the page builder with specific findings before publishing.
+### 4.2 Section padding
+
+| Context       | Desktop padding-y | Mobile padding-y |
+|---------------|-------------------|------------------|
+| Hero          | 160px (`--space-11`) | 96px           |
+| Major section | 128px (`--space-10`) | 80px           |
+| Sub-section   | 96px (`--space-9`)  | 64px           |
+| Card stack    | 64px (`--space-8`)  | 48px           |
+
+This is generous. Sections breathe. Whitespace is part of the brand.
+
+### 4.3 Container widths
+
+| Token              | Width     | Use                                                    |
+|--------------------|-----------|--------------------------------------------------------|
+| `--container-narrow`| 720px    | Long-form prose, blog articles, glossary entries       |
+| `--container-default`| 1120px  | Most marketing sections                                |
+| `--container-wide` | 1320px    | Hero, comparison table, case studies grid              |
+| `--container-full` | 100vw     | Full-bleed sections (dark mid-page section, client list scroll) |
+
+### 4.4 Grid philosophy
+
+**Asymmetric over symmetric.** Symmetric three-column SaaS-template grids are forbidden as primary layouts. Use 60/40, 55/45, 7-column / 5-column splits, or single-column with intentional left-alignment.
+
+**Left-aligned over centred.** Hero headlines, section headers, and card grids are left-aligned. Centred layouts are reserved for: footer CTAs, individual card content (within an asymmetric outer grid), and modal dialogs.
+
+---
+
+## 5. Component library
+
+The eleven net-new components from the Phase 2 brief, plus the existing components that carry forward.
+
+### 5.1 Hero (light variant) — REPLACES current dark hero
+
+```
+Background: --cream
+Layout: 7-column / 5-column asymmetric grid (text left, optional asset right)
+Padding-y: --space-11
+Eyebrow: --type-eyebrow, --jet-blue, uppercase, before headline
+Headline: --type-hero, --ink, Fraunces, 1-2 words italicised in Jet Blue
+Sub-headline: --type-lead, --neutral-600, max-width 560px
+CTA pair: Primary (Jet Blue solid) + Secondary (ink outline)
+Trust strip: --type-caption, --neutral-400, dot-separated
+NO: animations on load, particles, video backgrounds, glow effects
+```
+
+### 5.2 Big-Three Trust Block
+
+```
+Background: --neutral-50 (subtle warmth, not pure white)
+Layout: 3-column grid, each cell left-aligned
+Number: --type-stat, --ink, Fraunces 500
+Label: --type-body-sm, --neutral-600
+Optional micro-line: --type-caption, --neutral-400, "boring stats" voice
+Padding-y: --space-9
+```
+
+### 5.3 Pain → Promise dual-column
+
+```
+Background: --cream
+Layout: 60/40 asymmetric (Pain left, narrower; Promise right, wider) OR 50/50
+Pain heading: --type-h3, --neutral-600, prefixed with "✕" mark
+Pain bullets: --type-body, --neutral-600
+Promise heading: --type-h3, --ink, prefixed with "✓" mark in Jet Blue
+Promise bullets: --type-body, --ink, with Jet Blue checkmark
+Padding-y: --space-10
+```
+
+### 5.4 Service journey row (Neurons Lab pattern)
+
+```
+Background: --cream
+Layout: Horizontal scroll on mobile, 6-column grid on desktop
+Each card: 
+  - Stage number (--type-eyebrow, --jet-blue, "01" / "02" etc.)
+  - Service name (--type-h4, --ink, Fraunces)
+  - 2-line description (--type-body-sm, --neutral-600)
+  - "See how it works →" (--type-button, --jet-blue)
+  - Border: 1px --neutral-200, hover: --jet-blue
+Connecting line: 1px --neutral-200, runs behind cards horizontally on desktop
+```
+
+### 5.5 Productised solution card (NEW — JetAgent / JetSDR / JetDocs)
+
+```
+Background variants:
+  - JetAgent: --jet-green-tint
+  - JetSDR: --jet-orange-tint
+  - JetDocs: --jet-blue-tint
+Sub-brand name: --type-h2 (smaller than page H2 — use 44px), Fraunces 700
+One-line description: --type-lead, --ink
+Three feature bullets with icon (--type-body-sm, --ink)
+CTA: Primary "See live demo" (solid in matching brand colour) + Secondary "Read the case studies"
+Padding: --space-8 inset
+Border-radius: 16px
+Optional: small "LIVE" badge (--jet-green) if a working demo exists
+```
+
+### 5.6 Comparison vs alternatives table (NEW)
+
+```
+Background: --cream
+Layout: 5-column table, FactoryJet column leftmost with --jet-blue-tint background
+Header row: --type-eyebrow, --neutral-400 except FactoryJet column (--jet-blue, bold)
+Row labels: --type-body, --ink, left-aligned, sticky on horizontal scroll
+Cell values: 
+  - ✓ (Jet Blue, 18px) for "yes / strong"
+  - ◐ (Neutral-400, 18px) for "partial / sometimes"
+  - ✕ (Neutral-200, 18px) for "no / weak"
+  - Text values: --type-body-sm, --ink
+FactoryJet column: bolder weight, --jet-blue accent on the icons
+Section heading: "FactoryJet vs the alternatives. (Yes, we'll tell you when not to hire us.)"
+NO emoji icons. Use SVG checkmark/circle/cross.
+```
+
+### 5.7 Embedded interactive AI demo (NEW)
+
+```
+Background: --neutral-50 framing block, demo itself --cream
+Layout: Full-width, centred container, max 1120px wide
+Demo iframe: 480px height desktop, 600px mobile
+Lazy-loaded (intersection observer, load 50vh before viewport)
+Performance budget: must not regress Lighthouse SEO/Performance below 90
+Below the demo:
+  - "Try it yourself ↓" prompt (--type-eyebrow, --jet-blue) above the demo
+  - Disclosure line below demo (--type-caption, --neutral-400): "This agent runs on FactoryJet's self-hosted Llama 3.2 stack. We don't log your messages."
+  - CTA: "See how we'd build one for your business →"
+NO: chat avatar that looks like a real person, fake typing indicators, animated "AI thinking" effects
+```
+
+### 5.8 Long-form client list scroll (NEW — Paper Tiger pattern)
+
+```
+Background: --cream
+Layout: Single-row horizontal infinite scroll, ~80 client names
+Each name: --type-body, --neutral-600, separated by " · " divider
+Animation: continuous scroll, 60s loop, pauses on hover
+Heading above: --type-h3, --ink, "500+ companies have shipped with FactoryJet."
+Eyebrow below: --type-caption, --neutral-400, "What you don't see: 200+ NDA clients in cybersecurity, fintech, and healthcare."
+Padding-y: --space-9
+```
+
+### 5.9 Case study editorial layout (NEW)
+
+```
+Hero metric: --type-stat, --jet-blue, ~120px on desktop (e.g., "+210%")
+Metric label: --type-h4, --neutral-600, e.g., "qualified leads in 90 days"
+Client name: --type-h2, --ink, Fraunces
+Body layout: 60/40 asymmetric, image dominant on alternating sides per case study
+Pull-quote: --type-h3, --ink, Fraunces Italic, --jet-blue left border 4px
+Body prose: --type-body, --neutral-600, line-length 65ch max
+NO symmetric three-column "Challenge / Solution / Result" boxed grid
+```
+
+### 5.10 Boring-stats microcopy variants
+
+Pattern for trust signals throughout the site. Always paired with a primary stat or claim.
+
+**Examples:**
+- 4.9/5 across 500+ projects *(we count the 4-star ones too).*
+- 60-day average time-to-value *(we'll tell you if yours will be longer).*
+- 100% code ownership *(yes, even when it's annoying for us).*
+- Zero pilot deaths *(we keep score).*
+- 4 geographies, one delivery standard *(boring, by design).*
+
+```
+Primary line: --type-body, --ink, weight 600
+Microcopy: --type-body-sm, --neutral-600, italic
+Layout: stacked, microcopy directly below primary
+```
+
+### 5.11 Glossary entry template
+
+```
+Layout: --container-narrow (720px max width)
+Term: --type-h1, Fraunces, --ink
+One-sentence definition: --type-lead, --ink
+Related terms: --type-eyebrow, --jet-blue, comma-separated, linked
+Body: --type-body, --neutral-600, max 400 words per entry
+Schema markup: DefinedTerm + inDefinedTermSet
+"Related questions" block at bottom: links to 3 relevant other glossary entries
+```
+
+### 5.12 Common Questions FAQ template
+
+```
+Layout: --container-default
+Question heading: --type-h4, --ink, Fraunces, expandable on mobile
+Answer body: --type-body, --neutral-600, max 250 words
+Schema markup: FAQPage + Question + Answer
+Visual divider between questions: 1px --neutral-200
+NO accordion that hides answers on desktop. All answers visible expanded by default per Phase 1 brief (12-14% ranking uplift per SearchPilot data).
+```
+
+### 5.13 Strategic dark section (mid-page rhythm break)
+
+```
+Background: --charcoal
+Text: --charcoal-text
+Used 1-2x per page maximum
+Best for: comparison-table section, customer-quote section, final-CTA section
+Inside dark section, Jet Blue accent shifts to a slightly lighter variant: #4A8FFF for adequate contrast
+```
+
+### 5.14 Final CTA block (light or dark variant)
+
+```
+Light variant background: --neutral-50
+Dark variant background: --charcoal
+Heading: --type-h2, italicised conviction word
+Sub-line: --type-lead
+CTA pair: Primary + Secondary (both buttons more prominent than mid-page CTAs)
+Soft objection-handler line: --type-caption, --neutral-400 / --charcoal-muted, italic
+Padding-y: --space-10
+```
+
+---
+
+## 6. Motion & interaction
+
+### 6.1 Motion principles
+
+- **Subtle over showy.** Motion serves the content, never competes with it.
+- **Inertia + ease, never linear.** All transitions use `cubic-bezier(0.22, 1, 0.36, 1)` (custom ease-out-quint) by default.
+- **Default duration: 300ms.** Hover states and small UI: 200ms. Page-level scroll-triggered: 600ms.
+- **Lenis for smooth scroll** (already in stack). GSAP for scroll-triggered animations.
+
+### 6.2 Forbidden motion treatments
+- ❌ No `transform: rotate()` ambient animations on decorative elements.
+- ❌ No spinning counters that count up on scroll. Numbers are static.
+- ❌ No parallax backgrounds (performance + accessibility cost).
+- ❌ No mouse-tracking spotlight/glow effects on cards.
+- ❌ No video backgrounds.
+- ❌ No "reveal on scroll" animation longer than 600ms or staggered across more than 6 elements.
+- ❌ No load-screen / splash animations. The page loads, the content is there.
+
+### 6.3 Approved motion patterns
+
+- Fade-up on first viewport entry: `translateY(16px) → 0`, opacity `0 → 1`, 600ms, ease-out-quint.
+- Hover lift on cards: `translateY(0) → -2px`, shadow change, 200ms.
+- Underline draw on link hover: pseudo-element width `0 → 100%`, 200ms.
+- Smooth scroll via Lenis with `lerp: 0.1`.
+- AI demo response streaming: actual streaming from the model, not faked typing animation.
+
+---
+
+## 7. Imagery
+
+### 7.1 Photography direction
+
+- **Real, not stock.** Where possible, use real photographs of FactoryJet team, clients, or office. Fallback to high-quality editorial photography from Pexels/Unsplash with explicit anti-stock filters.
+- **Filter for: matte finish, natural light, neutral colour grading, single subject focus, asymmetric crop.**
+- **Avoid: glossy product shots, AI-generated faces, stock photos with people in suits in conference rooms, gradient overlays, neon-tinted phototones.**
+
+### 7.2 Illustration direction
+
+- Custom SVG illustrations only. No Lottie animations, no 3D renders, no Spline embeds for the homepage.
+- Illustration style: thin-line geometric, single-colour (Jet Blue or Ink), minimal shading.
+- Reference: Stripe's documentation illustrations, Linear's marketing site icons.
+
+### 7.3 Forbidden imagery
+- ❌ No AI-generated photorealistic people.
+- ❌ No abstract "neural network" / "circuit board" stock illustrations.
+- ❌ No floating geometric shapes as decorative elements.
+- ❌ No gradient orbs or glowing globes anywhere.
+- ❌ No emoji as functional icons (only allowed in body prose where contextually warranted).
+
+---
+
+## 8. Performance budget
+
+| Metric                       | Target          |
+|------------------------------|-----------------|
+| Lighthouse Performance       | ≥ 95            |
+| Lighthouse SEO               | 100             |
+| Lighthouse Accessibility     | ≥ 95            |
+| Lighthouse Best Practices    | 100             |
+| Largest Contentful Paint     | < 1.8s          |
+| First Contentful Paint       | < 1.0s          |
+| Cumulative Layout Shift      | < 0.05          |
+| Total Blocking Time          | < 200ms         |
+| Initial JS bundle            | < 180KB gzipped |
+| Initial CSS                  | < 30KB gzipped  |
+| Web font total weight        | < 80KB (subset Latin Extended) |
+
+Components that risk regressing these targets (live AI demo, long-form client scroll, GSAP scroll-triggered sections) are lazy-loaded with intersection-observer triggers.
+
+---
+
+## 9. Accessibility floor
+
+- WCAG 2.2 AA compliance minimum. AAA where reasonable.
+- All interactive elements keyboard-navigable with visible focus rings (`outline: 2px solid var(--jet-blue); outline-offset: 2px`).
+- Colour contrast: body text on cream meets 7:1 (AAA), heading text on cream meets 4.5:1 (AA).
+- All images have alt text. Decorative images have empty alt (`alt=""`) and `aria-hidden="true"`.
+- Heading hierarchy is sequential (no skipping H1 → H3).
+- Form inputs have programmatic labels.
+- `prefers-reduced-motion` respected for all motion patterns.
+
+---
+
+## 10. AI SEO / GEO requirements
+
+Every page on the site must be optimised for AI engine citation as well as traditional Google ranking. Rules:
+
+- **Server-side rendered content.** AI crawlers don't execute JavaScript. All primary content must be in initial HTML.
+- **Semantic HTML.** Use proper `<article>`, `<section>`, `<nav>`, `<aside>`, `<dl>`/`<dt>`/`<dd>` for definitions.
+- **Schema markup mandatory:** Organization, Service (per service page), FAQPage (per FAQ block), DefinedTerm (per glossary entry), BreadcrumbList (sitewide).
+- **No accordion-hidden primary content.** Per SearchPilot, expanded content delivers 12-14% ranking uplift.
+- **Cloudflare WAF allowlist for AI crawlers:** GPTBot, ClaudeBot, PerplexityBot, anthropic-ai, Google-Extended, CCBot.
+- **`llms.txt` file at site root** declaring permitted crawl behaviour for LLM training and indexing.
+
+---
+
+## 11. Geography variants
+
+The same component library and design system serves /us, /uk, /uae, /in. Per-geo overrides:
+
+| Aspect            | /us                       | /uk                       | /uae                      | /in                       |
+|-------------------|---------------------------|---------------------------|---------------------------|---------------------------|
+| Pricing currency  | USD                       | GBP                       | AED                       | INR                       |
+| Hero sub-headline | "...for SMBs in the US"   | "...for SMBs in the UK"   | "...for SMBs in the UAE"  | "...for SMBs in India"    |
+| Case studies      | WetStone, CuraShield, MINDSOURCE | GPSUK + 1 to secure | 1 to secure               | Vishal Barot/Impulse + others |
+| Compliance badges | SOC2, HIPAA               | UK GDPR, ICO              | UAE Data Office           | DPDP Act                  |
+| Cities (footer)   | NYC, Cleveland, Chicago, Dallas, SF, Boston, LA, Austin, Denver, Boise, Sioux Falls, Lincoln, Chattanooga, Fargo | Leeds, Manchester, Sheffield, Birmingham, Glasgow, Bristol, Liverpool, Edinburgh, Newcastle, Nottingham | Dubai, Abu Dhabi, Sharjah | Bengaluru, Mumbai, Delhi NCR, Hyderabad |
+
+Brand colour, typography, spacing, components, motion are identical across all four geographies. Only content varies.
+
+---
+
+## 12. Component build sequence (Phase 2A — Weeks 1-2)
+
+Build order. Each component is built in isolation in `/components/v2/` with a Storybook-equivalent test page before being wired into pages.
+
+1. Type system + colour tokens (Tailwind config + global CSS)
+2. Hero (light variant)
+3. Big-Three Trust Block
+4. Pain → Promise dual-column
+5. Service journey row
+6. Productised solution card (3 variants)
+7. Comparison vs alternatives table
+8. Embedded interactive AI demo wrapper
+9. Long-form client list scroll
+10. Case study editorial layout
+11. Boring-stats microcopy variants
+12. Glossary entry template
+13. Common Questions FAQ template
+14. Strategic dark section
+15. Final CTA block (light + dark variants)
+
+Phase 2A exit criterion: all 15 components rendering cleanly in test page, design tokens enforced via Tailwind, Lighthouse target met on test page.
+
+---
+
+## 13. The five-second test (revisited)
+
+Re-read Section 0. If the design you are building does not pass that test, revise before shipping.
+
+> This is an AI services company that obviously knows what it's doing.
+
+Not a design agency. Not a fast web shop. Not another AI startup. An AI services company that obviously knows what it's doing.
+
+That's the entire bet.
+
+---
+
+**Version:** 2.0
+**Last updated:** May 2026
+**Next review:** Post-Phase 2B (after Variant B homepage launches)
+**Maintained by:** Bhavesh Bhatt, Founder & CEO
