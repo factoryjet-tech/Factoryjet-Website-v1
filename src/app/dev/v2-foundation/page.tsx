@@ -9,6 +9,11 @@ import CityContextSection from '@/components/v2/CityContextSection';
 import FAQ from '@/components/v2/FAQ';
 import PricingTiers from '@/components/v2/PricingTiers';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
+import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
+import ServiceJourneyRow, {
+  DEFAULT_JOURNEY_STAGES,
+} from '@/components/v2/ServiceJourneyRow';
+import ServiceExplanation from '@/components/v2/ServiceExplanation';
 
 /**
  * /dev/v2-foundation — verification surface for M1.a.
@@ -377,6 +382,131 @@ export default function V2FoundationPage() {
               'High visual bar without sacrificing speed. Booking integrations and visitor flows that convert — for hospitality, production, and the £18.8bn tourism sector.',
           },
         ]}
+      />
+
+      {/* === ComparisonTable ===
+       * Pricing values: only the "Local London Agency" column is grounded
+       * (avg £5,000 from src/data/uk/cities/london.json
+       * .avgAgencyPricing.webDesign). FactoryJet and Offshore Freelancer
+       * pricing/turnaround use placeholder strings — the prompt explicitly
+       * forbids fabricating numbers when the anchor isn't in london.json or
+       * factoryjet.DESIGN.md. */}
+      <SectionLabel slug="M1.c.2 — ComparisonTable" />
+      <ComparisonTable
+        eyebrow="COMPARE"
+        headline={
+          <>
+            FactoryJet vs the <em>alternatives</em>.
+          </>
+        }
+        lead="We'll tell you when not to hire us — short list, no spin."
+        columns={[
+          { label: 'FactoryJet', isFactoryJet: true },
+          { label: 'Local London Agency' },
+          { label: 'Offshore Freelancer' },
+        ]}
+        rows={[
+          {
+            feature: 'Pricing range',
+            // TODO(M1.c.4): replace placeholders once FJ and offshore
+            // pricing anchors are signed off and added to either
+            // src/data/uk/cities/london.json or factoryjet.DESIGN.md.
+            values: ['£X–£Y (TODO)', '£5,000+ avg', '£X–£Y (TODO)'],
+          },
+          {
+            feature: 'Turnaround',
+            // TODO(M1.c.4): durations not in london.json/DESIGN.md.
+            values: ['X weeks (TODO)', 'X weeks (TODO)', 'Variable'],
+          },
+          {
+            feature: 'AI-native workflow',
+            values: [
+              <CompareIcon key="fj" kind="yes" />,
+              <CompareIcon key="la" kind="partial" />,
+              <CompareIcon key="of" kind="no" />,
+            ],
+          },
+          {
+            feature: 'Dedicated PM',
+            values: [
+              <CompareIcon key="fj" kind="yes" />,
+              <CompareIcon key="la" kind="yes" />,
+              <CompareIcon key="of" kind="no" />,
+            ],
+          },
+          {
+            feature: 'Post-launch support',
+            values: [
+              <CompareIcon key="fj" kind="yes" />,
+              <CompareIcon key="la" kind="partial" />,
+              <CompareIcon key="of" kind="no" />,
+            ],
+          },
+          {
+            feature: 'Named-competitor benchmark',
+            values: [
+              <CompareIcon key="fj" kind="yes" />,
+              <CompareIcon key="la" kind="no" />,
+              <CompareIcon key="of" kind="no" />,
+            ],
+          },
+        ]}
+        footer="(Numbers grounded in src/data/uk/cities/london.json. Empty cells are honest TODOs — pricing benchmarks pending sign-off.)"
+      />
+
+      {/* === ServiceJourneyRow === */}
+      <SectionLabel slug="M1.c.2 — ServiceJourneyRow" />
+      <ServiceJourneyRow
+        eyebrow="HOW WE WORK"
+        headline={
+          <>
+            Ship to <em>production</em>. Not to slides.
+          </>
+        }
+        lead="Five stages. The same five whether the brief is a marketing site or a multi-agent system."
+        stages={DEFAULT_JOURNEY_STAGES}
+      />
+
+      {/* === ServiceExplanation ===
+       * Web design contextualised for London's financial services sector.
+       * rightSlot: stat callout grounded in london.json
+       * (population 9.1m, GDP £569bn). */}
+      <SectionLabel slug="M1.c.2 — ServiceExplanation" />
+      <ServiceExplanation
+        eyebrow="WEB DESIGN · LONDON"
+        headline={
+          <>
+            Sites that signal credibility before someone <em>opens</em> them.
+          </>
+        }
+        lead="London's financial services sector decides whether to engage you in the first 1.5 seconds of looking at your homepage."
+        body={
+          <>
+            <p>
+              We build for that 1.5 seconds. Compliance-aware copy. Secure
+              forms. Schema markup that puts you in front of buyers using AI
+              search to vet vendors.
+            </p>
+            <p>
+              The site is the qualifier — not your sales call. By the time a
+              prospect picks up the phone, the credibility question is already
+              answered.
+            </p>
+          </>
+        }
+        rightSlot={
+          <div className="rounded-2xl border border-fj-neutral-200 bg-fj-neutral-50 p-8">
+            <p className="fj-display font-fj-display text-[3.5rem] font-medium leading-none tracking-[-0.04em] text-fj-jet-blue md:text-[4.5rem]">
+              9.1m
+            </p>
+            <p className="mt-3 font-fj-body text-[0.9375rem] leading-[1.55] text-fj-neutral-600">
+              people. £569bn regional GDP.
+            </p>
+            <p className="mt-3 font-fj-body text-[0.8125rem] italic text-fj-neutral-400">
+              (Buyers in the City judge sites in seconds.)
+            </p>
+          </div>
+        }
       />
     </main>
   );
