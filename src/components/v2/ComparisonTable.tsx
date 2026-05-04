@@ -67,7 +67,7 @@ export default function ComparisonTable({
   footer,
 }: ComparisonTableProps) {
   return (
-    <section className="bg-fj-cream py-24 md:py-32">
+    <section className="bg-fj-cream py-24 md:py-32 overflow-x-clip">
       <div className="mx-auto max-w-[1120px] px-6 md:px-8">
         {/* Header */}
         <div className="max-w-[820px]">
@@ -175,7 +175,7 @@ const ICON_LABEL: Record<CompareIconProps['kind'], string> = {
 export function CompareIcon({ kind, label }: CompareIconProps) {
   const visualLabel = label ?? ICON_LABEL[kind];
   return (
-    <span className={`inline-flex items-center ${ICON_COLOR[kind]}`}>
+    <span className={`relative inline-flex items-center ${ICON_COLOR[kind]}`}>
       {kind === 'yes' && (
         <svg
           width="18"

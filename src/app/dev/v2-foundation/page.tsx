@@ -14,6 +14,11 @@ import ServiceJourneyRow, {
   DEFAULT_JOURNEY_STAGES,
 } from '@/components/v2/ServiceJourneyRow';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
+import SiteHeader from '@/components/v2/SiteHeader';
+import SiteFooter from '@/components/v2/SiteFooter';
+import ImageBlock, { placeholderImageDataUrl } from '@/components/v2/ImageBlock';
+import LogoBar from '@/components/v2/LogoBar';
+import CaseStudyCard from '@/components/v2/CaseStudyCard';
 
 /**
  * /dev/v2-foundation — verification surface for M1.a.
@@ -508,6 +513,156 @@ export default function V2FoundationPage() {
           </div>
         }
       />
+
+      {/* === SiteHeader === */}
+      <SectionLabel slug="M1.c.2.5 — SiteHeader (would normally render once per page)" />
+      <div className="mx-auto max-w-[1200px] px-4 lg:px-6">
+        <div className="overflow-hidden rounded-2xl border border-fj-neutral-200">
+          <SiteHeader />
+        </div>
+      </div>
+
+      {/* === BoringStatsRow (alignment fix · align="center") ===
+       * Placed after the existing M1.a BoringStatsRow demo so reviewers
+       * can scroll between the two and confirm the centred layout reads
+       * cleaner than the legacy left-anchored version. Same stats data;
+       * only the new `align="center"` prop differs. The default stays
+       * `'start'` for backward-compat with all existing call sites. */}
+      <SectionLabel slug='M1.c.2.5 — BoringStatsRow (alignment fix · align="center")' />
+      <BoringStatsRow
+        align="center"
+        stats={[
+          {
+            value: '+210%',
+            label: 'qualified leads in 90 days',
+            microcopy: "we'll tell you if yours will be longer",
+          },
+          {
+            value: '500+',
+            label: 'projects shipped',
+            microcopy: 'we count the 4-star ones too',
+          },
+          {
+            value: '0',
+            label: 'pilot deaths',
+            microcopy: 'we keep score',
+          },
+        ]}
+      />
+
+      {/* === ImageBlock (3 variants) === */}
+      <SectionLabel slug="M1.c.2.5 — ImageBlock (bordered · elevated · with caption)" />
+      <div className="mx-auto max-w-[1200px] px-4 pb-8 lg:px-6">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+          <ImageBlock
+            src={placeholderImageDataUrl(640, 480)}
+            alt="ImageBlock variant: bordered (default)"
+            width={640}
+            height={480}
+            aspectRatio="4/3"
+          />
+          <ImageBlock
+            src={placeholderImageDataUrl(640, 480)}
+            alt="ImageBlock variant: elevated (white inset on cream)"
+            width={640}
+            height={480}
+            aspectRatio="4/3"
+            elevated
+          />
+          <ImageBlock
+            src={placeholderImageDataUrl(640, 480)}
+            alt="ImageBlock variant: with Fraunces-italic caption"
+            width={640}
+            height={480}
+            aspectRatio="4/3"
+            caption="(Hartwell & Co. — Mayfair financial advisory mockup.)"
+          />
+        </div>
+      </div>
+
+      {/* === LogoBar === */}
+      <SectionLabel slug="M1.c.2.5 — LogoBar (DEMO · placeholder wordmarks)" />
+      <LogoBar
+        eyebrow="DEMO · PLACEHOLDER WORDMARKS"
+        logos={[
+          { name: 'Atlas Legal' },
+          { name: 'Bright Health' },
+          { name: 'Forge & Co' },
+          { name: 'Westmount Realty' },
+          { name: 'Northstar Labs' },
+          { name: 'Pebble Finance' },
+        ]}
+      />
+
+      {/* === CaseStudyCard (3 cards) === */}
+      <SectionLabel slug="M1.c.2.5 — CaseStudyCard (3-card grid)" />
+      <div className="mx-auto max-w-[1200px] px-4 pb-8 lg:px-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <CaseStudyCard
+            industry="LEGAL · LONDON"
+            clientName="Atlas Legal"
+            headline="Doubled qualified leads in 90 days."
+            body="Replatformed a 12-year-old WordPress site to a Next.js architecture with consultation-booking flows wired into intake. Compliance-aware copy throughout."
+            metrics={[
+              { value: '+210%', label: 'qualified leads (90 days)' },
+              { value: '60-day', label: 'time-to-launch' },
+            ]}
+            image={{
+              src: placeholderImageDataUrl(800, 600),
+              alt: 'Atlas Legal — case study cover',
+              width: 800,
+              height: 600,
+            }}
+            href="/case/atlas-legal"
+          />
+          <CaseStudyCard
+            industry="HEALTHCARE · LONDON"
+            clientName="Bright Health"
+            headline="Compliance-aware redesign cleared regulatory review."
+            body="Rebuilt a patient-facing site with WCAG 2.2 AA compliance, MHRA-aligned content review, and secure intake forms — landed on the first regulatory pass."
+            metrics={[
+              { value: '100%', label: 'first-pass regulatory clearance' },
+              { value: '4.9/5', label: 'patient onboarding NPS' },
+            ]}
+            image={{
+              src: placeholderImageDataUrl(800, 600),
+              alt: 'Bright Health — case study cover',
+              width: 800,
+              height: 600,
+            }}
+            href="/case/bright-health"
+          />
+          <CaseStudyCard
+            industry="MANUFACTURING · LONDON"
+            clientName="Forge & Co"
+            headline={
+              <>
+                From 3-second LCP to <em>0.9s</em>.
+              </>
+            }
+            body="Replaced a Webflow build with a Next.js + edge-cached architecture. Lighthouse Performance scored 98 across the top 20 product pages on launch day."
+            metrics={[
+              { value: '0.9s', label: 'Largest Contentful Paint' },
+              { value: '98', label: 'Lighthouse Performance' },
+            ]}
+            image={{
+              src: placeholderImageDataUrl(800, 600),
+              alt: 'Forge & Co — case study cover',
+              width: 800,
+              height: 600,
+            }}
+            href="/case/forge-and-co"
+          />
+        </div>
+      </div>
+
+      {/* === SiteFooter === */}
+      <SectionLabel slug="M1.c.2.5 — SiteFooter (would normally render once per page)" />
+      <div className="mx-auto max-w-[1200px] px-4 pb-12 lg:px-6">
+        <div className="overflow-hidden rounded-2xl border border-fj-neutral-200">
+          <SiteFooter />
+        </div>
+      </div>
     </main>
   );
 }
