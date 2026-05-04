@@ -5,6 +5,10 @@ import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import Hero from '@/components/v2/Hero';
 import FinalCTA from '@/components/v2/FinalCTA';
+import CityContextSection from '@/components/v2/CityContextSection';
+import FAQ from '@/components/v2/FAQ';
+import PricingTiers from '@/components/v2/PricingTiers';
+import IndustriesGrid from '@/components/v2/IndustriesGrid';
 
 /**
  * /dev/v2-foundation — verification surface for M1.a.
@@ -198,6 +202,181 @@ export default function V2FoundationPage() {
         primaryCta={{ label: 'Book a call', href: '/contact' }}
         secondaryCta={{ label: 'See case studies', href: '/case' }}
         objectionHandler="(We'll tell you on the first call if we're the wrong people for the job.)"
+      />
+
+      {/* === CityContextSection === */}
+      <SectionLabel slug="M1.c.1 — CityContextSection" />
+      <CityContextSection
+        eyebrow="LONDON MARKET"
+        headline={
+          <>
+            Built for the world's most <em>demanding</em> business climate.
+          </>
+        }
+        leadParagraphs={[
+          "With 9.1 million people and £569bn in regional GDP, London is one of the planet's most demanding markets.",
+          'Buyers in the City and the tech corridor make snap judgements based on digital presence.',
+        ]}
+        stats={[
+          {
+            value: '9.1m',
+            label: 'London population (2024)',
+            sourceUrl:
+              'https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/populationestimatesforenglandandwales/mid2024',
+          },
+          {
+            value: '$722.6bn',
+            label: 'London regional GDP (2023)',
+            sourceUrl:
+              'https://www.ons.gov.uk/economy/grossdomesticproductgdp/bulletins/regionaleconomicactivitybygrossdomesticproductuk/1998to2023',
+          },
+          {
+            value: '£18.8bn',
+            label: 'Tourism visitor expenditure (2024)',
+            sourceUrl:
+              'https://data.london.gov.uk/blog/the-state-of-london-report-2025/',
+          },
+        ]}
+      />
+
+      {/* === FAQ === */}
+      <SectionLabel slug="M1.c.1 — FAQ" />
+      <FAQ
+        eyebrow="COMMON QUESTIONS"
+        headline={
+          <>
+            What you'll <em>actually</em> ask first.
+          </>
+        }
+        items={[
+          {
+            question: 'How long does a London project take?',
+            answer:
+              "60 days end-to-end on average — discovery to production. We'll tell you on the first call if your stack pushes that out, and exactly why.",
+          },
+          {
+            question: "What's the typical price range?",
+            answer:
+              '£1,200–£12,000 depending on scope. We tell you on the first call. No proposal-tag, no surprise add-ons.',
+          },
+          {
+            question: 'Who owns the code?',
+            answer:
+              'You do. Day one. Your repo, your infra, your model weights when self-hosted. No lock-in tax.',
+          },
+          {
+            question: "What if we already have a pilot that's stuck?",
+            answer:
+              "We do rescue work. Bring the artefacts; we'll tell you within a week whether it can ship or whether it needs to be rebuilt.",
+          },
+          {
+            question: 'Do you work with industries outside the five listed?',
+            answer:
+              "Yes — those five are where we have the most case-study density. The delivery standard doesn't change by sector. Boring, by design.",
+          },
+          {
+            question: 'What happens after launch?',
+            answer:
+              'Optional retainer. We hand back the keys whenever you ask. Not every project needs us forever.',
+          },
+        ]}
+      />
+
+      {/* === PricingTiers === */}
+      <SectionLabel slug="M1.c.1 — PricingTiers" />
+      <PricingTiers
+        eyebrow="TRANSPARENT PRICING"
+        headline={
+          <>
+            Pricing on the <em>first</em> call.
+          </>
+        }
+        lead="London agency rates run two to three times higher for the same scope. Our pricing is the price."
+        tiers={[
+          {
+            name: 'Starter',
+            priceRange: '£1,200–£2,500',
+            description:
+              'A 5-page brochure site that loads fast on mobile and ranks for your name and core service.',
+            features: [
+              '5 pages, mobile-responsive',
+              'Basic SEO & schema markup',
+              'Contact form with email forwarding',
+              '2 revision rounds',
+              '30-day post-launch support',
+            ],
+            cta: { label: 'Get a quote', href: '/contact' },
+          },
+          {
+            name: 'Growth',
+            priceRange: '£2,500–£5,000',
+            description:
+              'A 10–15 page site with a blog CMS, lead-capture flows, and analytics wired in from day one.',
+            features: [
+              '10–15 pages with blog CMS',
+              'Advanced SEO & GA4 tracking',
+              'Lead capture & email automation',
+              '3 revision rounds',
+              '30-day support + training session',
+            ],
+            cta: { label: 'Get a quote', href: '/contact' },
+            popular: true,
+          },
+          {
+            name: 'Scale',
+            priceRange: '£5,000–£12,000',
+            description:
+              'Custom Next.js build with e-commerce, AI features, API integrations, and priority support.',
+            features: [
+              'Custom Next.js architecture',
+              'E-commerce or membership features',
+              'AI integrations (chat, search, content)',
+              'Third-party API connections',
+              'Priority support & quarterly reviews',
+            ],
+            cta: { label: 'Get a quote', href: '/contact' },
+          },
+        ]}
+        footnote="(Pricing is a starting range. Real number on the first call, after we've seen the actual scope.)"
+      />
+
+      {/* === IndustriesGrid === */}
+      <SectionLabel slug="M1.c.1 — IndustriesGrid" />
+      <IndustriesGrid
+        eyebrow="LONDON × WEB DESIGN"
+        headline={
+          <>
+            We work with London's <em>biggest</em> sectors.
+          </>
+        }
+        lead="Five sectors where we have case-study density. Industries outside this list still get the same delivery standard."
+        sectors={[
+          {
+            name: 'Financial & Insurance Services',
+            description:
+              'Sites that signal regulatory credibility before a prospect picks up the phone. Compliance-aware copy, secure forms, and AI-search visibility for high-value clients in the City.',
+          },
+          {
+            name: 'Professional, Scientific & Technical Services',
+            description:
+              'Law firms, consultancies, and accountants compete on reputation. Lead-capture flows and consultation booking that turn research-stage buyers into booked calls — not bounce.',
+          },
+          {
+            name: 'Information Technology & Communications',
+            description:
+              'Built in Next.js, the framework your prospects already use. Sub-second loads, clean code, the technical standard the Silicon Roundabout corridor expects from its vendors.',
+          },
+          {
+            name: 'Real Estate & Construction',
+            description:
+              "Fast property galleries, enquiry forms that route correctly, local SEO that captures buyers searching by postcode. London's most competitive sector — your site is the qualifier.",
+          },
+          {
+            name: 'Creative Industries, Media & Tourism',
+            description:
+              'High visual bar without sacrificing speed. Booking integrations and visitor flows that convert — for hospitality, production, and the £18.8bn tourism sector.',
+          },
+        ]}
       />
     </main>
   );

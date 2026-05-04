@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { HTMLAttributes, ReactNode } from 'react';
 
 /**
  * Heading — v2.0 display heading wrapper per factoryjet.DESIGN.md §3.3 & §3.5.
@@ -18,13 +18,20 @@ import type { ReactNode } from 'react';
  * Per-instance text colour stays the consumer's responsibility — typically
  * `text-fj-ink` on light, `text-fj-charcoal-text` on dark.
  *
+ * Available as both a default and named export so consumers can use either
+ * `import Heading` or `import { Heading }` style.
+ *
  * Pure server component.
  */
 
 type HeadingTag = 'h1' | 'h2' | 'h3' | 'h4';
 type HeadingSize = 'hero' | 'h1' | 'h2' | 'h3' | 'h4';
 
-export interface HeadingProps {
+/* Accepts and forwards any standard heading-element HTML attribute (id,
+ * role, aria-*, data-*, etc.) — required so v2 components can attach
+ * extraction hooks like data-faq-question without a wrapper element. */
+export interface HeadingProps
+  extends Omit<HTMLAttributes<HTMLHeadingElement>, 'className' | 'children'> {
   /** Semantic heading level. Defaults to 'h2'. */
   as?: HeadingTag;
   /** Visual size token. Defaults to match `as` (h1 → 'h1', h2 → 'h2', etc.).
@@ -65,6 +72,7 @@ export default function Heading({
   onDark = false,
   className = '',
   children,
+  ...rest
 }: HeadingProps) {
   const Tag = as;
   const resolvedSize: HeadingSize = size ?? as;
@@ -80,5 +88,11 @@ export default function Heading({
     .filter(Boolean)
     .join(' ');
 
-  return <Tag className={classes}>{children}</Tag>;
+  return (
+    <Tag {...rest} className={classes}>
+      {children}
+    </Tag>
+  );
 }
+
+export { Heading };
