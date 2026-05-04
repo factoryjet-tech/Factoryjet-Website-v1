@@ -246,6 +246,42 @@ html {
   color: var(--fj-jet-blue-on-dark);
 }
 
+/* Auto-italic for <em> tags inside display contexts.
+ * Lets headings use semantic <em> markup (per factoryjet.DESIGN.md §3.5)
+ * without requiring a className per em element. */
+.fj-display em,
+h1.fj-display em,
+h2.fj-display em,
+h3.fj-display em,
+h4.fj-display em {
+  font-style: italic;
+  font-variation-settings: var(--fj-display-axes);
+  font-weight: inherit;
+}
+
+/* On-dark variant: when a heading is inside a .fj-on-dark container
+ * (or carries the class itself), em children get the contrast-safe Jet Blue. */
+.fj-on-dark em {
+  color: var(--fj-jet-blue-on-dark);
+}
+
+/* Eyebrow utility — --type-eyebrow per factoryjet.DESIGN.md §3.3.
+ * Default colour fj-jet-blue; inside .fj-on-dark switches to fj-jet-blue-on-dark.
+ * Geist binds via --font-geist-sans (wired in src/app/layout.tsx through
+ * geist/font/sans, exposed to Tailwind as font-fj-body). */
+.fj-eyebrow {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fj-jet-blue);
+}
+.fj-on-dark .fj-eyebrow {
+  color: var(--fj-jet-blue-on-dark);
+}
+
 /* Reduced-motion respect (per factoryjet.DESIGN.md §9) */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
