@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import BoringStatsRow from '@/components/v2/BoringStatsRow';
 import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
+import Hero from '@/components/v2/Hero';
+import FinalCTA from '@/components/v2/FinalCTA';
 
 /**
  * /dev/v2-foundation — verification surface for M1.a.
@@ -118,6 +120,85 @@ export default function V2FoundationPage() {
           (#4A8FFF) per spec §2.2.
         </p>
       </StrategicDarkSection>
+
+      {/* === Hero (with rightSlot) === */}
+      <SectionLabel slug="M1.b — Hero (with rightSlot)" />
+      <Hero
+        eyebrow="AI SERVICES · UK"
+        headline={
+          <>
+            AI agents that <em>actually</em> ship.
+          </>
+        }
+        lead="We build the agents your team will actually use, in your stack, with your data, in 60 days. Not pilots that quietly die."
+        primaryCta={{ label: 'Book a 30-min call', href: '/contact' }}
+        secondaryCta={{ label: 'See case studies', href: '/case' }}
+        trustItems={[
+          '500+ projects shipped',
+          '60-day average launch',
+          '100% code ownership',
+        ]}
+        rightSlot={
+          <div className="flex aspect-[4/3] items-center justify-center rounded-2xl border border-fj-neutral-200 bg-fj-neutral-100">
+            <span
+              className="font-fj-body text-fj-neutral-400"
+              style={{ fontSize: '0.9375rem', letterSpacing: '0.005em' }}
+            >
+              rightSlot demo
+            </span>
+          </div>
+        }
+      />
+
+      {/* === Hero (single-column, no rightSlot) === */}
+      <SectionLabel slug="M1.b — Hero (single-column, no rightSlot)" />
+      <Hero
+        eyebrow="AI SERVICES · UK"
+        headline={
+          <>
+            AI agents that <em>actually</em> ship.
+          </>
+        }
+        lead="We build the agents your team will actually use, in your stack, with your data, in 60 days. Not pilots that quietly die."
+        primaryCta={{ label: 'Book a 30-min call', href: '/contact' }}
+        secondaryCta={{ label: 'See case studies', href: '/case' }}
+        trustItems={[
+          '500+ projects shipped',
+          '60-day average launch',
+          '100% code ownership',
+        ]}
+      />
+
+      {/* === FinalCTA (light variant) === */}
+      <SectionLabel slug="M1.b — FinalCTA (light variant)" />
+      <FinalCTA
+        eyebrow="READY WHEN YOU ARE"
+        headline={
+          <>
+            Stop running <em>pilots</em>. Start shipping.
+          </>
+        }
+        sub="A 30-minute call. We'll tell you if there's a fit before we tell you the price."
+        primaryCta={{ label: 'Book a call', href: '/contact' }}
+        secondaryCta={{ label: 'See case studies', href: '/case' }}
+        objectionHandler="(We'll tell you on the first call if we're the wrong people for the job.)"
+      />
+
+      {/* === FinalCTA (dark variant) === */}
+      <SectionLabel slug="M1.b — FinalCTA (dark variant)" />
+      <FinalCTA
+        variant="dark"
+        eyebrow="READY WHEN YOU ARE"
+        headline={
+          <>
+            Stop running <em>pilots</em>. Start shipping.
+          </>
+        }
+        sub="A 30-minute call. We'll tell you if there's a fit before we tell you the price."
+        primaryCta={{ label: 'Book a call', href: '/contact' }}
+        secondaryCta={{ label: 'See case studies', href: '/case' }}
+        objectionHandler="(We'll tell you on the first call if we're the wrong people for the job.)"
+      />
     </main>
   );
 }
