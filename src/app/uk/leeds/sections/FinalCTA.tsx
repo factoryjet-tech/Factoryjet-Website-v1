@@ -5,6 +5,8 @@ import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { CheckCircle2, MessageCircle, Mail, Globe, Check } from "lucide-react";
 import { useContactModal } from "@/context/ContactModalContext";
+import { doc, setDoc, serverTimestamp } from "firebase/firestore";
+import { db } from "@/firebase";
 
 
 const TRUST_POINTS = [
@@ -264,9 +266,7 @@ export default function FinalCTA() {
 
     try {
       // Submit form data to Firebase
-      const { doc, setDoc, serverTimestamp } = await import("firebase/firestore");
-      const { initFirebase } = await import("@/firebase");
-      const { db } = await initFirebase();
+      // (db, doc, setDoc, serverTimestamp now imported statically at top)
 
       if (!db) throw new Error("Firebase not initialized");
 
