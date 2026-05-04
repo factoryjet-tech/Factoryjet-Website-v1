@@ -10,6 +10,15 @@
  * Background is intentionally transparent — the consuming page wraps
  * this in `bg-fj-cream` or `bg-fj-neutral-50` as appropriate.
  *
+ * M1.c.2.5 alignment fix: a new `align` prop controls cell-content
+ * alignment. Default stays `'start'` to preserve M1.a/M1.b/M1.c.* call-
+ * site visuals (backward-compat). Pass `align="center"` to opt in to
+ * the centred treatment, which reads cleaner when numerals have very
+ * different widths ("+210%" vs "0") — the previous left-anchored layout
+ * produced ragged right-side dead space inside each grid cell. The dev
+ * page renders both variants for visual comparison; production callers
+ * (e.g. London page in M1.c.4) can flip to `align="center"` per call.
+ *
  * Pure server component. No client state, no animation.
  */
 
@@ -25,9 +34,15 @@ export interface BoringStat {
 export interface BoringStatsRowProps {
   /** 1–3 stats. Renders 1, 2, or 3 columns at lg+ to match length. */
   stats: BoringStat[];
+  /** Cell-content alignment. Default `'start'` (legacy left-anchored
+   *  per M1.a). Pass `'center'` for the M1.c.2.5 alignment fix. */
+  align?: 'start' | 'center';
 }
 
-export default function BoringStatsRow({ stats }: BoringStatsRowProps) {
+export default function BoringStatsRow({
+  stats,
+  align = 'start',
+}: BoringStatsRowProps) {
   // Cap responsive columns at the stat count so a 1- or 2-stat row
   // doesn't end up with an empty grid cell stretching the layout.
   const lgCols =
@@ -37,6 +52,11 @@ export default function BoringStatsRow({ stats }: BoringStatsRowProps) {
         ? 'lg:grid-cols-2'
         : 'lg:grid-cols-3';
 
+  const cellAlign =
+    align === 'center'
+      ? 'items-center text-center'
+      : 'items-start text-left';
+
   return (
     <section className="py-16 lg:py-24">
       <div className="mx-auto max-w-[1120px] px-4 lg:px-6">
@@ -44,7 +64,7 @@ export default function BoringStatsRow({ stats }: BoringStatsRowProps) {
           className={`grid grid-cols-1 gap-x-16 gap-y-12 sm:grid-cols-2 ${lgCols}`}
         >
           {stats.map((stat, i) => (
-            <div key={i} className="flex flex-col items-start text-left">
+            <div key={i} className={`flex flex-col ${cellAlign}`}>
               {/* Number — Fraunces tuned, Jet Blue, --type-stat */}
               <p
                 className="fj-display font-medium text-fj-jet-blue"
