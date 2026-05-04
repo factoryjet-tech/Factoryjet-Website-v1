@@ -216,6 +216,11 @@ html {
   --fj-neutral-400: #8A8A82;
   --fj-neutral-600: #4A4A45;
 
+  /* Strategic dark-section palette — per factoryjet.DESIGN.md §2.2.
+   * Inside StrategicDarkSection, Jet Blue shifts to #4A8FFF for adequate
+   * contrast over the #0F0F12 charcoal background. */
+  --fj-jet-blue-on-dark: #4A8FFF;
+
   /* Typography helper — Fraunces tuning per factoryjet.DESIGN.md §3.2 */
   --fj-display-axes: "opsz" 144, "SOFT" 30, "WONK" 0, "GRAD" 50;
 }
@@ -231,6 +236,14 @@ html {
 .fj-italic {
   font-style: italic;
   font-variation-settings: var(--fj-display-axes);
+}
+
+/* On-dark variant of .fj-italic for use inside StrategicDarkSection.
+ * Same Fraunces axes; switches to the contrast-safe Jet Blue (#4A8FFF). */
+.fj-italic--on-dark {
+  font-style: italic;
+  font-variation-settings: var(--fj-display-axes);
+  color: var(--fj-jet-blue-on-dark);
 }
 
 /* Reduced-motion respect (per factoryjet.DESIGN.md §9) */

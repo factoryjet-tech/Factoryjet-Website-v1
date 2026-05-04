@@ -71,6 +71,7 @@ export default {
         'fj-ink': '#1A1A1A',
         'fj-jet-blue': '#0052CC',
         'fj-jet-blue-tint': '#E6F0FF',
+        'fj-jet-blue-on-dark': '#4A8FFF',  // Contrast-safe Jet Blue inside StrategicDarkSection per §2.2
         'fj-jet-orange': '#FF6B35',
         'fj-jet-orange-tint': '#FEF3E8',
         'fj-jet-green': '#10B981',
