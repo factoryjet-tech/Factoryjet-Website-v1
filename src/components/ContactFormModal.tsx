@@ -12,6 +12,8 @@ import {
   Rocket,
 } from "lucide-react";
 import { useContactModal } from "../context/ContactModalContext";
+import { doc, setDoc, serverTimestamp } from "firebase/firestore";
+import { db } from "@/firebase";
 import {
   trackModalOpen,
   trackModalClose,
@@ -246,18 +248,9 @@ const ContactFormModal: React.FC = () => {
     });
 
     try {
-      // Dynamically import Firebase functions only when submitting
-      const { doc, setDoc, serverTimestamp } = await import(
-        "firebase/firestore"
-      );
-
-      // Ensure Firebase is initialized and get db instance
-      const { initFirebase } = await import("../firebase");
-      const { db } = await initFirebase();
-
-      if (!db) {
-        throw new Error("Firebase not initialized");
-      }
+      // db, doc, setDoc, serverTimestamp now imported statically at top of file.
+      // Static import order ensures firebase/firestore registers Firestore
+      // service before @/firebase calls getFirestore(app).
 
       // Generate readable document ID: 2026-12-18_13-30-45_BhaveshB
       const now = new Date();
