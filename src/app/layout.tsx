@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Source_Serif_4 } from 'next/font/google'
+import { Inter, Source_Serif_4, Fraunces } from 'next/font/google'
+import { GeistSans } from 'geist/font/sans'
+import { GeistMono } from 'geist/font/mono'
 import '../index.css'
 import { ContactModalProvider } from '../context/ContactModalContext'
 import Script from 'next/script'
@@ -24,6 +26,18 @@ const sourceSerif = Source_Serif_4({
   display: 'swap',
   weight: ['400', '500', '600'],
   fallback: ['Georgia', 'serif'],
+})
+
+// === FactoryJet Design System v2.0 fonts (M0 foundation) ===
+// Fraunces — display family for v2 components. Per factoryjet.DESIGN.md §3.2,
+// the tuned axes (opsz / SOFT / WONK / GRAD) are surfaced via the
+// `.fj-display` utility class in src/index.css using font-variation-settings.
+// next/font/google can pre-bake the opsz axis here.
+const fraunces = Fraunces({
+  subsets: ['latin', 'latin-ext'],
+  variable: '--font-fraunces',
+  display: 'swap',
+  axes: ['SOFT', 'WONK', 'opsz'],
 })
 
 
@@ -85,7 +99,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${sourceSerif.variable}`}>
+    <html lang="en" className={`${inter.variable} ${sourceSerif.variable} ${fraunces.variable} ${GeistSans.variable} ${GeistMono.variable}`}>
       <head>
         {/* Preconnect to critical origins */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

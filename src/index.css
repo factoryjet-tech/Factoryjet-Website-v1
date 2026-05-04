@@ -190,3 +190,55 @@ html {
 .font-clash {
   font-family: var(--font-clash);
 }
+
+/* ============================================ */
+/* FactoryJet Design System v2.0 — base tokens  */
+/* DO NOT MODIFY without spec update            */
+/* (factoryjet.DESIGN.md, locked May 2026)      */
+/* ============================================ */
+
+:root {
+  /* Colour tokens — also available as Tailwind utilities (fj-*) */
+  --fj-cream: #FAFAF7;
+  --fj-ink: #1A1A1A;
+  --fj-jet-blue: #0052CC;
+  --fj-jet-blue-tint: #E6F0FF;
+  --fj-jet-orange: #FF6B35;
+  --fj-jet-orange-tint: #FEF3E8;
+  --fj-jet-green: #10B981;
+  --fj-jet-green-tint: #E8FAF1;
+  --fj-charcoal: #0F0F12;
+  --fj-charcoal-text: #F5F5F2;
+  --fj-charcoal-muted: #8A8A8F;
+  --fj-neutral-50: #F8F8F5;
+  --fj-neutral-100: #EFEFEA;
+  --fj-neutral-200: #D9D9D2;
+  --fj-neutral-400: #8A8A82;
+  --fj-neutral-600: #4A4A45;
+
+  /* Typography helper — Fraunces tuning per factoryjet.DESIGN.md §3.2 */
+  --fj-display-axes: "opsz" 144, "SOFT" 30, "WONK" 0, "GRAD" 50;
+}
+
+/* Fraunces utility class — apply when a heading needs the tuned display rendering */
+.fj-display {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-variation-settings: var(--fj-display-axes);
+  letter-spacing: -0.02em;
+}
+
+/* Italic conviction-word helper for headings (per factoryjet.DESIGN.md §3.5) */
+.fj-italic {
+  font-style: italic;
+  font-variation-settings: var(--fj-display-axes);
+}
+
+/* Reduced-motion respect (per factoryjet.DESIGN.md §9) */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

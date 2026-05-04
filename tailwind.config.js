@@ -25,6 +25,19 @@ export default {
         // New programmatic components use font-sans / font-serif / font-display.
         heading: ['Poppins', 'Inter', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
+
+        // === FactoryJet Design System v2.0 (M0 foundation) ===
+        // v2 components MUST use these family names. Resolved via CSS
+        // variables wired in src/app/layout.tsx through next/font.
+        // Per factoryjet.DESIGN.md §3 (locked May 2026).
+        'fj-display': ['var(--font-fraunces)', 'Georgia', 'serif'],
+        'fj-body': ['var(--font-geist-sans)', 'system-ui', '-apple-system', 'sans-serif'],
+        'fj-mono': ['var(--font-geist-mono)', 'Consolas', 'monospace'],
+
+        // Explicit opt-in fallback for any LEGACY component observed to
+        // render with the wrong font after a future cleanup. M0 only
+        // adds the class — does not apply it anywhere.
+        'legacy-inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
       },
       fontSize: {
         // Apple/Anthropic-grounded type scale. Weight 500 (not 700) for display
@@ -49,6 +62,28 @@ export default {
         'container-xl': '1280px',
       },
       colors: {
+        // === FactoryJet Design System v2.0 (M0 foundation) ===
+        // v2 components MUST use the fj-* prefix. Per factoryjet.DESIGN.md §2
+        // (locked May 2026). Names overlap with the legacy `jet-*` tokens
+        // below at the same hex (#0052CC etc.) — both kept during the
+        // v1→v2 transition window. Cleanup is a future milestone.
+        'fj-cream': '#FAFAF7',
+        'fj-ink': '#1A1A1A',
+        'fj-jet-blue': '#0052CC',
+        'fj-jet-blue-tint': '#E6F0FF',
+        'fj-jet-orange': '#FF6B35',
+        'fj-jet-orange-tint': '#FEF3E8',
+        'fj-jet-green': '#10B981',
+        'fj-jet-green-tint': '#E8FAF1',
+        'fj-charcoal': '#0F0F12',
+        'fj-charcoal-text': '#F5F5F2',
+        'fj-charcoal-muted': '#8A8A8F',
+        'fj-neutral-50': '#F8F8F5',
+        'fj-neutral-100': '#EFEFEA',
+        'fj-neutral-200': '#D9D9D2',
+        'fj-neutral-400': '#8A8A82',
+        'fj-neutral-600': '#4A4A45',
+
         // === New tokens for the ProgSEO redesign (PR #31) ===
         // All additive — existing tokens below preserved untouched.
         'dark-hero': '#0A0F1C',     // Was hardcoded in assembler.ts as bg-[#0A0F1C]; now a token.
