@@ -30,6 +30,7 @@ import { post as chooseBestWebDesignAgencyUk2026ChecklistPost } from './posts/ch
 import { post as websiteRedesignSmallBusinessUk2026AiPoweredPost } from './posts/website-redesign-small-business-uk-2026-ai-powered';
 import { post as webDevelopmentAgencyUk2026CustomAiSolutionsPost } from './posts/web-development-agency-uk-2026-custom-ai-solutions';
 import { post as websiteRedesignIdeasUkSmbs2026Post } from './posts/website-redesign-ideas-uk-smbs-2026';
+import { post as bestOnlineStoreDevelopmentSmallBusinessUk2026Post } from './posts/best-online-store-development-small-business-uk-2026';
 
 export const POSTS: BlogPost[] = [
   // --- WEB DESIGN & STRATEGY ---
@@ -4593,4 +4594,5 @@ export const POSTS: BlogPost[] = [
   websiteRedesignSmallBusinessUk2026AiPoweredPost,
   webDevelopmentAgencyUk2026CustomAiSolutionsPost,
   websiteRedesignIdeasUkSmbs2026Post,
+  bestOnlineStoreDevelopmentSmallBusinessUk2026Post,
 ];
