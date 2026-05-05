@@ -23,6 +23,15 @@ html {
   scroll-behavior: smooth;
 }
 
+/* M1.d.1 aesthetic-pivot foundation: default body font is Inter, wired
+ * via next/font in src/app/layout.tsx (the Inter import declares its
+ * own fallback: ['system-ui', 'arial'], so --font-inter already expands
+ * to a full Inter→fallback chain). We add only sans-serif as the final
+ * generic fallback, avoiding the duplicate-system-ui mistake on live /uk. */
+body {
+  font-family: var(--font-inter), sans-serif;
+}
+
 ::selection {
   background: #0052cc;
   color: white;
@@ -193,93 +202,80 @@ html {
 
 /* ============================================ */
 /* FactoryJet Design System v2.0 — base tokens  */
-/* DO NOT MODIFY without spec update            */
-/* (factoryjet.DESIGN.md, locked May 2026)      */
+/* M1.d.1 aesthetic-pivot foundation reset.     */
+/* Visual canon now: live factoryjet.com/uk.    */
+/* See factoryjet.DESIGN.md (rewritten May 5).  */
 /* ============================================ */
 
 :root {
-  /* Colour tokens — also available as Tailwind utilities (fj-*) */
+  /* Colour tokens — also available as Tailwind utilities (fj-*).
+   * fj-cream is now an ACCENT only (not the dominant page BG). */
   --fj-cream: #FAFAF7;
   --fj-ink: #1A1A1A;
   --fj-jet-blue: #0052CC;
+  --fj-jet-blue-bright: #3B82F6;
   --fj-jet-blue-tint: #E6F0FF;
   --fj-jet-orange: #FF6B35;
   --fj-jet-orange-tint: #FEF3E8;
   --fj-jet-green: #10B981;
   --fj-jet-green-tint: #E8FAF1;
+
+  /* Dark hero / dark-section palette per the pivot — navy is the new
+   * dominant dark surface; charcoal kept for backward compat. */
+  --fj-navy: #0A0F1C;
+  --fj-navy-deep: #070B14;
   --fj-charcoal: #0F0F12;
   --fj-charcoal-text: #F5F5F2;
   --fj-charcoal-muted: #8A8A8F;
+
   --fj-neutral-50: #F8F8F5;
   --fj-neutral-100: #EFEFEA;
   --fj-neutral-200: #D9D9D2;
   --fj-neutral-400: #8A8A82;
   --fj-neutral-600: #4A4A45;
 
-  /* Strategic dark-section palette — per factoryjet.DESIGN.md §2.2.
-   * Inside StrategicDarkSection, Jet Blue shifts to #4A8FFF for adequate
-   * contrast over the #0F0F12 charcoal background. */
+  /* Contrast-safe Jet Blue for use over the navy/charcoal surfaces. */
   --fj-jet-blue-on-dark: #4A8FFF;
-
-  /* Typography helper — Fraunces tuning per factoryjet.DESIGN.md §3.2 */
-  --fj-display-axes: "opsz" 144, "SOFT" 30, "WONK" 0, "GRAD" 50;
 }
 
-/* Fraunces utility class — apply when a heading needs the tuned display rendering */
+/* Display utility class — now Clash Display 700 per the M1.d.1 pivot.
+ * --font-clash is defined above (line ~187) from the Fontshare load
+ * wired in src/app/layout.tsx. */
 .fj-display {
-  font-family: var(--font-fraunces), Georgia, serif;
-  font-variation-settings: var(--fj-display-axes);
+  font-family: var(--font-clash);
+  font-weight: 700;
   letter-spacing: -0.02em;
 }
 
-/* Italic conviction-word helper for headings (per factoryjet.DESIGN.md §3.5) */
-.fj-italic {
-  font-style: italic;
-  font-variation-settings: var(--fj-display-axes);
-}
-
-/* On-dark variant of .fj-italic for use inside StrategicDarkSection.
- * Same Fraunces axes; switches to the contrast-safe Jet Blue (#4A8FFF). */
-.fj-italic--on-dark {
-  font-style: italic;
-  font-variation-settings: var(--fj-display-axes);
-  color: var(--fj-jet-blue-on-dark);
-}
-
-/* Auto-italic for <em> tags inside display contexts.
- * Lets headings use semantic <em> markup (per factoryjet.DESIGN.md §3.5)
- * without requiring a className per em element. */
-.fj-display em,
-h1.fj-display em,
-h2.fj-display em,
-h3.fj-display em,
-h4.fj-display em {
-  font-style: italic;
-  font-variation-settings: var(--fj-display-axes);
-  font-weight: inherit;
-}
-
-/* On-dark variant: when a heading is inside a .fj-on-dark container
- * (or carries the class itself), em children get the contrast-safe Jet Blue. */
-.fj-on-dark em {
-  color: var(--fj-jet-blue-on-dark);
-}
-
-/* Eyebrow utility — --type-eyebrow per factoryjet.DESIGN.md §3.3.
- * Default colour fj-jet-blue; inside .fj-on-dark switches to fj-jet-blue-on-dark.
- * Geist binds via --font-geist-sans (wired in src/app/layout.tsx through
- * geist/font/sans, exposed to Tailwind as font-fj-body). */
+/* Eyebrow utility — Geist Mono tracked-caps, fj-jet-blue default;
+ * shifts to the contrast-safe variant inside .fj-on-dark containers. */
 .fj-eyebrow {
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
   font-size: 0.8125rem;
   line-height: 1.4;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--fj-jet-blue);
 }
 .fj-on-dark .fj-eyebrow {
   color: var(--fj-jet-blue-on-dark);
+}
+
+/* Gradient-heading utility — for H2 conviction headings on the new
+ * dark navy hero / dark sections per the pivot. White-to-light-blue,
+ * matched to the live /uk H2 pattern. Background-clip: text + transparent
+ * fill — works across modern browsers; falls back to white on legacy.
+ *
+ * Caller responsibility: only apply on a sufficiently-dark surface
+ * (navy/charcoal) so the white side of the gradient has contrast.
+ * Designed for H2 only — H1 stays solid white per the pivot brief. */
+.fj-gradient-heading {
+  background-image: linear-gradient(135deg, #FFFFFF 0%, #93C5FD 60%, #3B82F6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 /* Reduced-motion respect (per factoryjet.DESIGN.md §9) */
