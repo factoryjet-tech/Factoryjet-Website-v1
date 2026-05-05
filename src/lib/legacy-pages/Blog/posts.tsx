@@ -34,6 +34,7 @@ import { post as bestOnlineStoreDevelopmentSmallBusinessUk2026Post } from './pos
 import { post as howToBuildOnlineStoreUkSmbGuide2026Post } from './posts/how-to-build-online-store-uk-smb-guide-2026';
 import { post as topEcommerceDevelopmentAgenciesUk2026Post } from './posts/top-ecommerce-development-agencies-uk-2026';
 import { post as createAiAgentsBusinessUkSmbGuide2026Post } from './posts/create-ai-agents-business-uk-smb-guide-2026';
+import { post as bestAiAutomationToolsSmallBusinessUk2026Post } from './posts/best-ai-automation-tools-small-business-uk-2026';
 
 export const POSTS: BlogPost[] = [
   // --- WEB DESIGN & STRATEGY ---
@@ -4601,4 +4602,5 @@ export const POSTS: BlogPost[] = [
   howToBuildOnlineStoreUkSmbGuide2026Post,
   topEcommerceDevelopmentAgenciesUk2026Post,
   createAiAgentsBusinessUkSmbGuide2026Post,
+  bestAiAutomationToolsSmallBusinessUk2026Post,
 ];
