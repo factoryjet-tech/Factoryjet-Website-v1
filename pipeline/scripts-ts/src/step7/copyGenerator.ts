@@ -89,13 +89,13 @@ const pricingDisplaySchema = {
   type: 'object',
   properties: {
     name: { type: 'string' },
-    priceGBP: { type: 'string' },
+    priceLabel: { type: 'string' },
     description: { type: 'string' },
     includes: { type: 'array', items: { type: 'string' } },
     bestFor: { type: 'string' },
     highlight: { type: 'boolean' },
   },
-  required: ['name', 'priceGBP', 'description', 'includes', 'bestFor'],
+  required: ['name', 'priceLabel', 'description', 'includes', 'bestFor'],
 };
 
 const processStepSchema = {

@@ -7,12 +7,16 @@
  */
 
 import type { PageGenerationInput } from '../types.js';
+import { localeBasePath } from '../../../lib/locales/paths.js';
 
 const COUNTRY_DISPLAY: Record<PageGenerationInput['country'], { name: string; region: string }> = {
   gb: { name: 'United Kingdom', region: 'United Kingdom' },
   us: { name: 'United States', region: 'United States' },
   au: { name: 'Australia', region: 'Australia' },
-  ca: { name: 'Canada', region: 'Canada' },
+  ae: { name: 'United Arab Emirates', region: 'United Arab Emirates' },
+  in: { name: 'India', region: 'India' },
+  br: { name: 'Brazil', region: 'Brazil' },
+  mx: { name: 'Mexico', region: 'Mexico' },
 };
 
 function cityDisplayName(slug: string): string {
@@ -30,14 +34,33 @@ function replaceTemplate(s: string, vars: Record<string, string>): string {
 }
 
 export function buildSectionsPrompt(input: PageGenerationInput): string {
-  const { city, service, country, targetKeyword, competitorPricingBenchmark } = input;
+  const { city, service, country, targetKeyword, competitorPricingBenchmark, locale } = input;
   const cityName = cityDisplayName(city.citySlug);
   const { name: countryName, region } = COUNTRY_DISPLAY[country];
 
+  const tiers = service.pricing[country] ?? [];
+  const starterTier = tiers[0];
+  const growthTier = tiers.find((t) => t.highlight) ?? tiers[1];
+  const scaleTier = tiers[2];
+
   // Pre-resolve evergreen FAQs so the model only handles real strings.
   const resolvedEvergreenFAQs = service.evergreenFAQs.map((f) => ({
-    q: replaceTemplate(f.q, { city: cityName, region }),
-    a: replaceTemplate(f.a, { city: cityName, region }),
+    q: replaceTemplate(f.q, {
+      city: cityName,
+      region,
+      currencySymbol: locale.currencySymbol,
+      starterPrice: starterTier?.priceLabel ?? '',
+      growthPrice: growthTier?.priceLabel ?? '',
+      scalePrice: scaleTier?.priceLabel ?? '',
+    }),
+    a: replaceTemplate(f.a, {
+      city: cityName,
+      region,
+      currencySymbol: locale.currencySymbol,
+      starterPrice: starterTier?.priceLabel ?? '',
+      growthPrice: growthTier?.priceLabel ?? '',
+      scalePrice: scaleTier?.priceLabel ?? '',
+    }),
   }));
 
   // Compose competitor block. Always include all of them; the model picks
@@ -128,10 +151,10 @@ export function buildSectionsPrompt(input: PageGenerationInput): string {
     )
     .join('\n');
 
-  const pricingBlock = service.pricingUK
+  const pricingBlock = tiers
     .map((t) =>
       [
-        `- ${t.name}${t.highlight ? ' [highlight]' : ''}: ${t.priceGBP}`,
+        `- ${t.name}${t.highlight ? ' [highlight]' : ''}: ${t.priceLabel}`,
         `  ${t.description}`,
         `  Includes: ${t.includes.join('; ')}`,
         `  Best for: ${t.bestFor}`,
@@ -142,6 +165,8 @@ export function buildSectionsPrompt(input: PageGenerationInput): string {
   const evergreenFaqBlock = resolvedEvergreenFAQs
     .map((f, i) => `${i + 1}. Q: ${f.q}\n   A: ${f.a}`)
     .join('\n\n');
+
+  const canonicalUrl = `${localeBasePath(locale)}/${city.citySlug}/${service.slug}`;
 
   return [
     `Produce landing-page copy for FactoryJet's ${service.name} service targeting ${cityName}, ${countryName}.`,
@@ -166,7 +191,7 @@ export function buildSectionsPrompt(input: PageGenerationInput): string {
     'LANDMARKS:',
     landmarksBlock,
     '',
-    `Competitor pricing benchmark for the "50–60% below local agency rates" framing: £${competitorPricingBenchmark.toLocaleString()} GBP`,
+    `Competitor pricing benchmark for the "50–60% below local agency rates" framing: ${locale.currencySymbol}${competitorPricingBenchmark.toLocaleString()} ${locale.currencyCode}`,
     '',
     '═══════════════════════════════════════════════════════════',
     'SERVICE DATA (process and pricing are EMBEDDED VERBATIM — do not rewrite)',
@@ -217,7 +242,7 @@ export function buildSectionsPrompt(input: PageGenerationInput): string {
     'sections.whyFactoryJet',
     '  - body: 150–200 words.',
     '  - competitors: exactly 2 or 3 CompetitorComparison entries chosen from the competitor list above.',
-    '    For each: theirPrice (quote pricingNotes verbatim or summarise; do not invent), ourPrice (cite the Growth tier "£2,500–£5,000"), ourAdvantage (specific — speed, price gap, tech stack — not generic).',
+    `    For each: theirPrice (quote pricingNotes verbatim or summarise; do not invent), ourPrice (cite the Growth tier "${growthTier?.priceLabel ?? ''}"), ourAdvantage (specific — speed, price gap, tech stack — not generic).`,
     '',
     'sections.process',
     `  - headline: "How We Build Your ${cityName} Website"`,
@@ -230,7 +255,7 @@ export function buildSectionsPrompt(input: PageGenerationInput): string {
     '  - Use named employers from industry notes as examples where the notes mention them.',
     '',
     'sections.pricing',
-    `  - body: 80–100 words. Reference the £${competitorPricingBenchmark.toLocaleString()} benchmark to justify the "50–60% below local agency rates" framing.`,
+    `  - body: 80–100 words. Reference the ${locale.currencySymbol}${competitorPricingBenchmark.toLocaleString()} benchmark to justify the "50–60% below local agency rates" framing.`,
     '  - tiers: copy all 3 pricing tiers verbatim from the SERVICE DATA section above. Set highlight=true on Growth.',
     '',
     'sections.faq',
@@ -247,7 +272,7 @@ export function buildSectionsPrompt(input: PageGenerationInput): string {
     `  - description: must contain "${cityName}" and the primary value prop. MUST be ≤155 chars. Count the characters before emitting. No exceptions.`,
     `  - h1: replace {City} in "${service.h1Template}" with "${cityName}".`,
     `  - slug: "${city.citySlug}"`,
-    `  - canonicalUrl: "${country === 'gb' ? '/uk' : `/${country}`}/${city.citySlug}/${service.slug}"`,
+    `  - canonicalUrl: "${canonicalUrl}"`,
     '',
     'uniquenessFlags',
     '  - List every city-specific element used in the copy: each stat value, each industry name used by name, each competitor name used, each landmark referenced, each employer named.',

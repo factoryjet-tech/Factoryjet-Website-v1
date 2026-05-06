@@ -4,14 +4,14 @@
  *
  * Reads pipeline/scripts-ts/data/generated/{country}/{city}/{service}.copy.json
  * and writes a Next.js TSX page component to
- *   <repo-root>/src/app/uk/{city-slug}/{service-slug}/page.tsx
+ *   <repo-root>/src/app/<locale-base-path>/{city-slug}/{service-slug}/page.tsx
  *
  * Pure data → template. No LLM calls. The output is a Next.js Server
  * Component (no 'use client'), with all FAQ content rendered in static
  * HTML so AI crawlers can index it without JS execution.
  *
  * CLI:
- *   pnpm assemble --city <slug> --service <slug> [--country <gb|us|au|ca>]
+ *   pnpm assemble --city <slug> --service <slug> [--country <gb|us|au|ae|in|br|mx>]
  *                 [--dry-run]
  */
 
@@ -19,6 +19,8 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import type { PageCopyOutput } from './types.js';
+import type { CountryCode } from '../../lib/locales/types.js';
+import { localeBasePath } from '../../lib/locales/paths.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 // pipeline/scripts-ts/src/step7/ -> pipeline/scripts-ts/
@@ -29,7 +31,7 @@ const REPO_ROOT = join(SCRIPTS_TS_ROOT, '..', '..');
 interface CliArgs {
   city: string;
   service: string;
-  country: 'gb' | 'us' | 'au' | 'ca';
+  country: CountryCode;
   dryRun: boolean;
   help: boolean;
 }
@@ -56,10 +58,13 @@ function parseArgs(argv: string[]): CliArgs {
       args.service = v;
     } else if (a === '--country') {
       const v = argv[++i];
-      if (v !== 'gb' && v !== 'us' && v !== 'au' && v !== 'ca') {
-        throw new Error(`invalid --country: ${v}`);
+      const validCountries: CountryCode[] = ['gb', 'us', 'au', 'ae', 'in', 'br', 'mx'];
+      if (!validCountries.includes(v as CountryCode)) {
+        throw new Error(
+          `invalid --country: ${v}. Must be one of: ${validCountries.join(', ')}`,
+        );
       }
-      args.country = v;
+      args.country = v as CountryCode;
     } else {
       throw new Error(`unknown argument: ${a}`);
     }
@@ -71,10 +76,10 @@ function printHelp(): void {
   // eslint-disable-next-line no-console
   console.log(
     [
-      'Usage: pnpm assemble --city <slug> --service <slug> [--country gb|us|au|ca] [--dry-run]',
+      'Usage: pnpm assemble --city <slug> --service <slug> [--country gb|us|au|ae|in|br|mx] [--dry-run]',
       '',
       '  Reads data/generated/<country>/<city>/<service>.copy.json',
-      '  Writes <repo>/src/app/uk/<city>/<service>/page.tsx',
+      '  Writes <repo>/src/app/<locale-path>/<city>/<service>/page.tsx',
     ].join('\n'),
   );
 }
@@ -111,6 +116,10 @@ function renderParagraphs(body: string, className: string): string {
         `        <p className="${className}">${jsxEscape(p)}</p>`,
     )
     .join('\n');
+}
+
+function cityNameFromSlug(slug: string): string {
+  return slug.split('-').map((p) => p.charAt(0).toUpperCase() + p.slice(1)).join(' ');
 }
 
 /* ------------------------------------------------------------------ */
@@ -163,7 +172,8 @@ ${dataPoints
 
 function genCityContext(c: PageCopyOutput): string {
   const s = c.sections.cityContext;
-  const headline = s.headline ?? 'London Market Context';
+  const cityName = cityNameFromSlug(c.meta.slug);
+  const headline = s.headline ?? `${cityName} Market Context`;
   const body = s.body ?? '';
   const stats = s.stats ?? [];
 
@@ -171,7 +181,7 @@ function genCityContext(c: PageCopyOutput): string {
   return (
     <section className="bg-white py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-[#FF6B35] text-sm font-semibold uppercase tracking-wider">London Market</p>
+        <p className="text-[#FF6B35] text-sm font-semibold uppercase tracking-wider">${jsxEscape(cityName)} Market</p>
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3">${jsxEscape(headline)}</h2>
         <div className="text-lg text-gray-600 leading-relaxed mt-6 max-w-3xl space-y-4">
 ${renderParagraphs(body, 'text-lg text-gray-600 leading-relaxed')}
@@ -203,14 +213,15 @@ ${stats
 
 function genServiceExplanation(c: PageCopyOutput): string {
   const s = c.sections.serviceExplanation;
-  const headline = s.headline ?? "Web Design Built for London's Economy";
+  const cityName = cityNameFromSlug(c.meta.slug);
+  const headline = s.headline ?? `Web Design Built for ${cityName}'s Economy`;
   const body = s.body ?? '';
 
   return `function ServiceExplanationSection() {
   return (
     <section className="bg-gray-50 py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-[#FF6B35] text-sm font-semibold uppercase tracking-wider">Web Design London</p>
+        <p className="text-[#FF6B35] text-sm font-semibold uppercase tracking-wider">Web Design ${jsxEscape(cityName)}</p>
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 max-w-3xl">${jsxEscape(headline)}</h2>
         <div className="mt-8 max-w-3xl space-y-4">
 ${renderParagraphs(body, 'text-lg text-gray-700 leading-relaxed')}
@@ -284,7 +295,8 @@ ${dataPoints
 
 function genProcess(c: PageCopyOutput): string {
   const p = c.sections.process;
-  const headline = p.headline ?? 'How We Build Your London Website';
+  const cityName = cityNameFromSlug(c.meta.slug);
+  const headline = p.headline ?? `How We Build Your ${cityName} Website`;
   const steps = p.steps ?? [];
 
   return `function ProcessSection() {
@@ -316,7 +328,8 @@ ${steps
 
 function genIndustries(c: PageCopyOutput): string {
   const s = c.sections.industries;
-  const headline = s.headline ?? "Web Design for London's Key Sectors";
+  const cityName = cityNameFromSlug(c.meta.slug);
+  const headline = s.headline ?? `Web Design for ${cityName}'s Key Sectors`;
   const body = s.body ?? '';
   const sectors = s.sectors ?? [];
 
@@ -347,7 +360,8 @@ ${sectors
 
 function genPricing(c: PageCopyOutput): string {
   const s = c.sections.pricing;
-  const headline = s.headline ?? 'Web Design Pricing for London Businesses';
+  const cityName = cityNameFromSlug(c.meta.slug);
+  const headline = s.headline ?? `Web Design Pricing for ${cityName} Businesses`;
   const body = s.body ?? '';
   const tiers = s.tiers ?? [];
 
@@ -367,7 +381,7 @@ ${tiers
     return `          <div className="${cardClass}">
             ${tier.highlight ? `<div className="inline-block bg-[#0052CC] text-white text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-4">Most Popular</div>` : ''}
             <h3 className="font-bold text-lg text-gray-900">${jsxEscape(tier.name)}</h3>
-            <p className="text-3xl font-bold text-[#0052CC] mt-2">${jsxEscape(tier.priceGBP)}</p>
+            <p className="text-3xl font-bold text-[#0052CC] mt-2">${jsxEscape(tier.priceLabel)}</p>
             <p className="text-gray-600 text-sm mt-2">${jsxEscape(tier.description)}</p>
             <ul className="mt-4 space-y-2">
 ${tier.includes
@@ -398,12 +412,13 @@ ${tier.includes
 
 function genFAQ(c: PageCopyOutput): string {
   const items = c.sections.faq.items;
+  const cityName = cityNameFromSlug(c.meta.slug);
   return `function FAQSection() {
   return (
     <section className="bg-white py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-[#FF6B35] text-sm font-semibold uppercase tracking-wider">FAQ</p>
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3">Common Questions from London Businesses</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3">Common Questions from ${jsxEscape(cityName)} Businesses</h2>
         <div className="mt-12 max-w-3xl">
 ${items
   .map(
@@ -423,7 +438,8 @@ ${items
 
 function genFinalCTA(c: PageCopyOutput): string {
   const s = c.sections.finalCta;
-  const headline = s.headline ?? 'Ready to Build a London Website That Wins Clients?';
+  const cityName = cityNameFromSlug(c.meta.slug);
+  const headline = s.headline ?? `Ready to Build a ${cityName} Website That Wins Clients?`;
   const body = s.body ?? '';
 
   return `function FinalCTASection() {
@@ -457,10 +473,8 @@ function genFinalCTA(c: PageCopyOutput): string {
 }
 
 function genSchemaScript(c: PageCopyOutput): string {
-  const cityName = c.meta.slug
-    .split('-')
-    .map((p) => p.charAt(0).toUpperCase() + p.slice(1))
-    .join(' ');
+  const cityName = cityNameFromSlug(c.meta.slug);
+  const locale = c.input.locale;
 
   const faqSchema = c.sections.faq.items.map((it) => ({
     '@type': 'Question',
@@ -470,6 +484,8 @@ function genSchemaScript(c: PageCopyOutput): string {
       text: it.answer,
     },
   }));
+
+  const basePath = localeBasePath(locale);
 
   const schemaGraph = {
     '@context': 'https://schema.org',
@@ -481,7 +497,7 @@ function genSchemaScript(c: PageCopyOutput): string {
         url: 'https://factoryjet.com',
         telephone: '+919103398557',
         areaServed: cityName,
-        priceRange: '£1,200–£12,000',
+        priceRange: c.input.service.priceRange[c.input.country],
       },
       {
         '@type': 'Service',
@@ -504,12 +520,17 @@ function genSchemaScript(c: PageCopyOutput): string {
         '@id': `https://factoryjet.com${c.meta.canonicalUrl}#breadcrumbs`,
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-          { '@type': 'ListItem', position: 2, name: 'UK', item: 'https://factoryjet.com/uk' },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: locale.countryName,
+            item: `https://factoryjet.com${basePath}`,
+          },
           {
             '@type': 'ListItem',
             position: 3,
             name: cityName,
-            item: `https://factoryjet.com/uk/${c.meta.slug}`,
+            item: `https://factoryjet.com${basePath}/${c.meta.slug}`,
           },
           {
             '@type': 'ListItem',
@@ -553,8 +574,8 @@ export function generatePageTSX(output: PageCopyOutput): string {
   const fnName = pageFunctionName(output.input.city.citySlug, output.input.service.slug);
 
   return `// AUTO-GENERATED by pipeline/scripts-ts/src/step7/assembler.ts
-// Source: pipeline/scripts-ts/data/generated/gb/${output.input.city.citySlug}/${output.input.service.slug}.copy.json
-// Do not edit by hand — re-run \`pnpm assemble --city ${output.input.city.citySlug} --service ${output.input.service.slug}\` after copy regeneration.
+// Source: pipeline/scripts-ts/data/generated/${output.input.country}/${output.input.city.citySlug}/${output.input.service.slug}.copy.json
+// Do not edit by hand — re-run \`pnpm assemble --city ${output.input.city.citySlug} --service ${output.input.service.slug} --country ${output.input.country}\` after copy regeneration.
 
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -621,8 +642,11 @@ function copyJsonPath(country: string, citySlug: string, serviceSlug: string): s
   );
 }
 
-function pageOutputPath(citySlug: string, serviceSlug: string): string {
-  return join(REPO_ROOT, 'src', 'app', 'uk', citySlug, serviceSlug, 'page.tsx');
+function pageOutputPath(output: PageCopyOutput): string {
+  const basePath = localeBasePath(output.input.locale).slice(1);
+  const citySlug = output.input.city.citySlug;
+  const serviceSlug = output.input.service.slug;
+  return join(REPO_ROOT, 'src', 'app', basePath, citySlug, serviceSlug, 'page.tsx');
 }
 
 async function main(): Promise<void> {
@@ -650,7 +674,7 @@ async function main(): Promise<void> {
   if (!existsSync(inputPath)) {
     // eslint-disable-next-line no-console
     console.error(
-      `[assemble] Copy JSON not found: ${inputPath}\nRun \`pnpm generate --city ${args.city} --service ${args.service}\` first.`,
+      `[assemble] Copy JSON not found: ${inputPath}\nRun \`pnpm generate --city ${args.city} --service ${args.service} --country ${args.country}\` first.`,
     );
     process.exit(1);
   }
@@ -676,16 +700,17 @@ async function main(): Promise<void> {
     console.log(preview);
     // eslint-disable-next-line no-console
     console.log(
-      `\n[dry-run] Would write ${lineCount} lines to: ${pageOutputPath(args.city, args.service)}`,
+      `\n[dry-run] Would write ${lineCount} lines to: ${pageOutputPath(copy)}`,
     );
     return;
   }
 
-  const outPath = pageOutputPath(args.city, args.service);
+  const outPath = pageOutputPath(copy);
   mkdirSync(dirname(outPath), { recursive: true });
   writeFileSync(outPath, tsx, 'utf-8');
+  const relPath = outPath.replace(REPO_ROOT + '/', '');
   // eslint-disable-next-line no-console
-  console.log(`Written: src/app/uk/${args.city}/${args.service}/page.tsx (${lineCount} lines)`);
+  console.log(`Written: ${relPath} (${lineCount} lines)`);
 }
 
 main().catch((err) => {
