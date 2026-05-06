@@ -1,0 +1,14 @@
+{
+  "countryCode": "au",
+  "countryName": "Australia",
+  "countryAdjective": "Australian",
+  "bcp47": "en-AU",
+  "currencyCode": "AUD",
+  "currencySymbol": "$",
+  "currencyName": "Australian Dollar",
+  "languageCode": "en",
+  "officialStatsBodyName": "Australian Bureau of Statistics",
+  "officialStatsBodyUrl": "https://www.abs.gov.au",
+  "regulatoryAuthorityName": "Australian Securities and Investments Commission",
+  "agencyArchetypeLabel": "Sydney digital agency"
+}
