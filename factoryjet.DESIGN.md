@@ -262,12 +262,14 @@ asymmetric outer grids, and modal dialogs.
 
 ---
 
-## 5. Page taxonomy (locale-agnostic)
+## 5. Locale data foundation (post M1.d.3)
 
-The ProgSEO pipeline is global from day one. Every component must accept
-locale-driving props; no UK-specific defaults are baked in.
+The ProgSEO pipeline is global from day one. Every component is
+caller-driven; no UK-specific defaults are baked into the v2 namespace.
+Locale data lives in `src/data/countries/<cc>/` and is resolved at the
+page-route level via the helper in `src/lib/locales/`.
 
-### 5.1 Page levels
+### 5.1 Page taxonomy
 
 ```
 Global home          factoryjet.com/
@@ -284,33 +286,114 @@ City×Service×Niche   factoryjet.com/{country}/{city}/{service}/{niche}
                                                                 /uk/london/web-design/financial-services
 ```
 
-### 5.2 Per-locale data each component must accept (via props or context)
+### 5.2 Directory structure (M1.d.3 realised)
 
-| Field                       | UK example                                      | US example                                        |
-|-----------------------------|-------------------------------------------------|---------------------------------------------------|
-| `currencyCode`              | `GBP`                                           | `USD`                                             |
-| `currencySymbol`            | `£`                                             | `$`                                               |
-| `countryAdjective`          | `UK` / `British`                                | `US` / `American`                                 |
-| `officialStatsBodyName`     | Office for National Statistics                  | U.S. Census Bureau                                |
-| `officialStatsBodyUrl`      | https://www.ons.gov.uk                          | https://www.census.gov                            |
-| `languageCode`              | `en-GB`                                         | `en-US`                                           |
-| `agencyCompetitorCatalog`   | List of UK agency archetypes                    | List of US agency archetypes                      |
-| `regulatoryAuthority`       | FCA / ICO / MHRA                                | SEC / FDA / FTC                                   |
+```
+src/data/countries/
+├── types.ts                  ← shared CityData / ServiceData types
+├── gb/
+│   ├── locale.json           ← Locale: GBP / £ / ONS / Companies House / "London digital agency"
+│   ├── cities/               ← 21 *.json (london, manchester, birmingham, leeds, ...)
+│   └── services/             ← 6 *.json (web-design, ai-websites, ecommerce, seo, ai-seo, ai-agents)
+├── us/
+│   └── locale.json           ← Locale: USD / $ / U.S. Census Bureau / SEC / "New York digital agency"
+└── (au / ae / in / br / mx — locale.json deferred to M1.d.4 + later)
 
-### 5.3 Per-locale data sources (M1.d.6+ wiring)
+src/lib/locales/
+├── types.ts                  ← Locale type + CountryCode union
+└── index.ts                  ← resolveLocale() / bcp47ToCountryCode() / listPopulatedLocales()
 
-| Country | Currency | Stats body                                        | URL                       |
-|---------|----------|---------------------------------------------------|---------------------------|
-| UK      | GBP      | Office for National Statistics                    | https://www.ons.gov.uk    |
-| US      | USD      | U.S. Census Bureau                                | https://www.census.gov    |
-| AU      | AUD      | Australian Bureau of Statistics                   | https://www.abs.gov.au    |
-| AE      | AED      | UAE Federal Statistics                            | https://fcsc.gov.ae       |
-| IN      | INR      | Ministry of Statistics & Programme Implementation | https://www.mospi.gov.in  |
-| BR      | BRL      | IBGE                                              | https://www.ibge.gov.br   |
-| MX      | MXN      | INEGI                                             | https://www.inegi.org.mx  |
+src/data/uk/
+└── index.ts                  ← backward-compat shim: `export * from '@/data/countries/gb'`
+```
 
-NO UK-specific defaults baked in. Every reference to ONS or £ in a v2
-component is a bug starting M1.d.2.
+### 5.3 The `Locale` type
+
+`src/lib/locales/types.ts` defines the per-country runtime context. Each
+field's role:
+
+| Field                     | Example (GB)                          | Used for                                       |
+|---------------------------|---------------------------------------|-----------------------------------------------|
+| `countryCode`             | `gb`                                  | Directory key under `src/data/countries/`. |
+| `countryName`             | `United Kingdom`                      | Display name in copy. |
+| `countryAdjective`        | `British`                             | Body copy + comparison-table archetype labels. |
+| `bcp47`                   | `en-GB`                               | Aligns with `src/data/hreflangMap.ts` keys. |
+| `currencyCode`            | `GBP`                                 | ISO 4217 code for schema.org markup. |
+| `currencySymbol`          | `£`                                   | Render-ready symbol for prices. |
+| `currencyName`            | `Pound Sterling`                      | Display name for currency disclosures. |
+| `languageCode`            | `en`                                  | ISO 639-1 (region-stripped) for `<html lang>`. |
+| `officialStatsBodyName`   | `Office for National Statistics`      | Source citation in CityContextSection / blog content. |
+| `officialStatsBodyUrl`    | `https://www.ons.gov.uk`              | Source link target. |
+| `regulatoryAuthorityName` | `Companies House` (GB) / `SEC` (US)   | Compliance copy, regulatory disclosures. |
+| `agencyArchetypeLabel`    | `London digital agency`               | ComparisonTable / IndustriesGrid local-agency archetype. |
+
+### 5.4 The resolver
+
+```typescript
+import { resolveLocale } from '@/lib/locales';
+
+const locale = resolveLocale('gb');         // Locale
+console.log(locale.currencySymbol);          // "£"
+console.log(locale.officialStatsBodyName);   // "Office for National Statistics"
+```
+
+`resolveLocale(country)` throws on unpopulated countries — currently `au`,
+`ae`, `in`, `br`, `mx`. The throw is intentional: a silent
+`undefined` would surface as subtle UI bugs deep in ProgSEO routes.
+
+`bcp47ToCountryCode('en-GB')` returns `'gb'` for hreflang-side reverse lookup.
+
+`listPopulatedLocales()` returns the populated subset — useful for
+build-time enumeration of routes that have data available.
+
+### 5.5 The shim
+
+`src/data/uk/index.ts` is now a one-line re-export:
+
+```typescript
+export * from '@/data/countries/gb'
+```
+
+Legacy v1 imports — `src/app/uk/[city]/...`, `src/app/sitemap-uk/`,
+`src/lib/uk-pages/*` — keep working unchanged. New v2 code MUST import
+from `@/data/countries/gb` directly.
+
+### 5.6 Per-locale data sources (target catalogue)
+
+| Country | Currency | Stats body                                        | URL                       | Status        |
+|---------|----------|---------------------------------------------------|---------------------------|---------------|
+| GB      | GBP      | Office for National Statistics                    | https://www.ons.gov.uk    | **populated** |
+| US      | USD      | U.S. Census Bureau                                | https://www.census.gov    | **populated** |
+| AU      | AUD      | Australian Bureau of Statistics                   | https://www.abs.gov.au    | M1.d.4        |
+| AE      | AED      | UAE Federal Statistics                            | https://fcsc.gov.ae       | M1.d.4+       |
+| IN      | INR      | Ministry of Statistics & Programme Implementation | https://www.mospi.gov.in  | M1.d.4+       |
+| BR      | BRL      | IBGE                                              | https://www.ibge.gov.br   | later         |
+| MX      | MXN      | INEGI                                             | https://www.inegi.org.mx  | later         |
+
+### 5.7 What's NOT yet wired
+
+- **City / service JSON shapes are still implicitly currency-coded.**
+  `gdpBn`, `avgAgencyPricing.{webDesign,ecommerce,seo,aiAgents}`, and
+  `keyStats.avgSalary` are bare numbers; their currency is implied by
+  the country directory. Currency-tag widening is deferred until non-GB
+  city data arrives.
+- **AU / AE / IN / BR / MX `locale.json` are not yet authored.** Calling
+  `resolveLocale('au')` today throws.
+- **The pipeline still hardcodes GBP** — `pipeline/scripts-ts/src/step7/`
+  carries `priceGBP`, `pricingUK`, £-regex extraction, and a UK
+  breadcrumb literal in the schema-script generator. Running
+  `pnpm generate --country au` today produces GBP-priced AU output.
+  Pipeline rewrite tracked under M1.d.5.
+- **`src/data/hreflangMap.ts` already declares `en-IN / en-US / en-AE / en-GB / x-default`** —
+  ahead of where the runtime resolver is. M1.d.4 should align the new
+  populated locales with this list.
+- **`SiteFooter`'s `DEFAULT_COLUMNS` no longer includes a Locations column.**
+  Callers pass an explicit Locations column with the relevant per-locale
+  city list when locale routing is needed. The dev showcase
+  (`/dev/v2-foundation`) does this.
+
+NO UK-specific defaults baked in v2 components. Every reference to ONS
+or £ in a v2 component is a bug starting M1.d.2.
 
 ---
 
