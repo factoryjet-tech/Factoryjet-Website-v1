@@ -22,7 +22,7 @@ import type { ReactNode } from 'react';
 
 export interface FAQProps {
   eyebrow?: string;
-  /** H2 content. Pass JSX with `<em>` for italic conviction words. */
+  /** H2 content (plain text post M1.d.2 — italic-emphasis pattern dropped). */
   headline: ReactNode;
   lead?: string;
   /** 6–12 Q-A pairs per spec. */

@@ -19,7 +19,7 @@ import { Heading } from './Heading';
 
 export interface ServiceExplanationProps {
   eyebrow?: string;
-  /** H2 content. Pass JSX with `<em>` for italic conviction words. */
+  /** H2 content (plain text post M1.d.2 — italic-emphasis pattern dropped). */
   headline: ReactNode;
   /** Sub-headline at --type-lead size, capped to ~560px for measure. */
   lead: string;

@@ -3,7 +3,7 @@
  *
  * Cream surface. Centered eyebrow above, horizontal row of logos below.
  * When a logo entry has no `src`, the company `name` renders as a
- * Fraunces 500 wordmark in fj-ink — honest about being a layout
+ * Clash Display 700 wordmark in fj-ink — honest about being a layout
  * placeholder while the real logos are pending.
  *
  * Logos render at ~32–40px height; opacity 60 by default, 100 on hover
@@ -25,7 +25,7 @@ export interface LogoBarLogo {
    *  always supplied for the alt attribute. */
   name: string;
   /** Optional image URL (PNG/SVG). When omitted, name renders as
-   *  Fraunces wordmark. */
+   *  Clash Display wordmark. */
   src?: string;
   /** Intrinsic width in px (only used when `src` is supplied). */
   width?: number;
@@ -70,7 +70,7 @@ export default function LogoBar({
                   loading="lazy"
                 />
               ) : (
-                /* Wordmark fallback: Fraunces 500, ink. No hover state. */
+                /* Wordmark fallback: Clash Display 700, ink. No hover state. */
                 <span className="fj-display font-fj-display text-[20px] font-medium leading-none text-fj-ink lg:text-[24px]">
                   {logo.name}
                 </span>

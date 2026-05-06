@@ -33,12 +33,13 @@ export interface PricingTier {
 
 export interface PricingTiersProps {
   eyebrow?: string;
-  /** H2 content. Pass JSX with `<em>` for italic conviction words. */
+  /** H2 content (plain text post M1.d.2 — italic-emphasis pattern dropped). */
   headline: ReactNode;
   lead?: string;
   /** Tuple — exactly 3 tiers required. */
   tiers: readonly [PricingTier, PricingTier, PricingTier];
-  /** Optional italic line below the grid (boring-stats voice). */
+  /** Optional muted footnote line below the grid. Plain Inter body text
+   *  post M1.d.2 — boring-stats Fraunces-italic voice dropped. */
   footnote?: string;
 }
 
@@ -78,7 +79,7 @@ export default function PricingTiers({
 
         {/* Footnote */}
         {footnote && (
-          <p className="mt-8 text-center font-fj-body text-[0.8125rem] italic text-fj-neutral-400">
+          <p className="mt-8 text-center font-fj-body text-[0.8125rem] text-fj-neutral-400">
             {footnote}
           </p>
         )}

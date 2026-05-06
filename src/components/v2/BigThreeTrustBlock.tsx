@@ -8,9 +8,9 @@
  * Spec:
  *   - Background: bg-fj-neutral-50 (subtle warmth, NOT pure white, NOT cream)
  *   - 3-column grid on desktop, stacked on mobile, --space-7 (48px) gap
- *   - Number:     --type-stat   (88px desktop / 56px mobile, Fraunces 500, ink, -0.04em)
- *   - Label:      --type-body-sm (15px Geist, neutral-600)
- *   - Microcopy:  --type-caption (13px Geist italic, neutral-400, parenthesised)
+ *   - Number:     --type-stat   (88px desktop / 56px mobile, Clash Display 700, ink, -0.04em)
+ *   - Label:      --type-body-sm (15px Inter, neutral-600)
+ *   - Microcopy:  --type-caption (13px Inter, neutral-400, parenthesised — plain post M1.d.2)
  *   - py:         --space-9     (96px desktop / 64px mobile)
  *   - container:  --container-default (1120px max)
  *
@@ -22,7 +22,8 @@ export interface TrustStat {
   number: string;
   /** Label below the number — descriptive in body-sm */
   label: string;
-  /** Optional parenthetical italic micro-line in the "boring stats" voice */
+  /** Optional parenthetical micro-line in the "boring stats" voice. Plain
+   *  Inter body text post M1.d.2 — italic styling dropped. */
   microcopy?: string;
 }
 
@@ -38,7 +39,7 @@ export default function BigThreeTrustBlock({ stats }: BigThreeTrustBlockProps) {
         <div className="grid grid-cols-1 gap-x-12 gap-y-12 lg:grid-cols-3">
           {stats.map((stat, i) => (
             <div key={i} className="flex flex-col items-start text-left">
-              {/* Number — Fraunces tuned, ink, --type-stat */}
+              {/* Number — Clash Display via .fj-display, ink, --type-stat */}
               <p
                 className="fj-display font-medium text-fj-ink"
                 style={{
@@ -61,10 +62,11 @@ export default function BigThreeTrustBlock({ stats }: BigThreeTrustBlockProps) {
                 {stat.label}
               </p>
 
-              {/* Microcopy — Geist italic, neutral-400, --type-caption, parenthesised */}
+              {/* Microcopy — plain Geist body, neutral-400, --type-caption,
+               * parenthesised. M1.d.2: italic dropped per the M1.d.1.1 canon. */}
               {stat.microcopy && (
                 <p
-                  className="mt-2 font-fj-body italic text-fj-neutral-400"
+                  className="mt-2 font-fj-body text-fj-neutral-400"
                   style={{
                     fontSize: '0.8125rem',
                     lineHeight: 1.5,

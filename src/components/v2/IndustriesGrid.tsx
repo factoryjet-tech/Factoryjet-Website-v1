@@ -30,7 +30,7 @@ export interface IndustryCard {
 
 export interface IndustriesGridProps {
   eyebrow?: string;
-  /** H2 content. Pass JSX with `<em>` for italic conviction words. */
+  /** H2 content (plain text post M1.d.2 — italic-emphasis pattern dropped). */
   headline: ReactNode;
   lead?: string;
   /** 4–6 sectors per spec. */

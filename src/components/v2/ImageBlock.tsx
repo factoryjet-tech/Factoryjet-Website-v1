@@ -9,7 +9,7 @@ import type { ReactNode } from 'react';
  * `next/image` with `unoptimized` (matches the repo's static-export
  * config in next.config.mjs) plus the v2 visual lane: 12px radius, 1px
  * neutral-200 border by default, optional white inset for "product
- * mockup on cream" treatment, optional Fraunces-italic caption below.
+ * mockup on cream" treatment, optional plain Inter caption below.
  *
  * No drop-shadow, no glow, no hover lift — restraint per §6.2.
  *
@@ -28,7 +28,8 @@ export interface ImageBlockProps {
   /** Optional CSS aspect-ratio override (e.g. "4/3", "16/9"). When set,
    *  the wrapper enforces this aspect; the image fills it via object-cover. */
   aspectRatio?: string;
-  /** Optional caption rendered below the image in Fraunces italic. */
+  /** Optional caption rendered below the image in plain Inter body text
+   *  (italic styling dropped in M1.d.2). */
   caption?: ReactNode;
   /** 1px fj-neutral-200 border + 12px radius. Default true. */
   bordered?: boolean;
@@ -96,7 +97,7 @@ export default function ImageBlock({
         />
       </div>
       {caption && (
-        <figcaption className="mt-3 font-fj-display italic text-[14px] leading-[1.5] text-fj-neutral-400">
+        <figcaption className="mt-3 font-fj-body text-[14px] leading-[1.5] text-fj-neutral-400">
           {caption}
         </figcaption>
       )}

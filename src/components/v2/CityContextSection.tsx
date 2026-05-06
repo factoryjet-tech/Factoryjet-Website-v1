@@ -5,7 +5,7 @@ import { Heading } from './Heading';
  *
  * Asymmetric 7/12 + 5/12 grid (§4.4): lead text left, stat strip right.
  * Cream background. The stat-strip column stacks 3 stats vertically,
- * each with a numeric value (Fraunces tuned, Jet Blue), label, and
+ * each with a numeric value (Clash Display via .fj-display, Jet Blue), label, and
  * external source link.
  *
  * Pure server component.
@@ -15,7 +15,7 @@ import type { ReactNode } from 'react';
 
 export interface CityContextSectionProps {
   eyebrow?: string;
-  /** H2 content. Pass JSX with `<em>` for italic conviction words. */
+  /** H2 content (plain text post M1.d.2 — italic-emphasis pattern dropped). */
   headline: ReactNode;
   /** 1–3 paragraphs forming the lead. */
   leadParagraphs: ReadonlyArray<string>;

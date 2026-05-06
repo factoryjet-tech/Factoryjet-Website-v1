@@ -8,9 +8,9 @@ import ImageBlock from './ImageBlock';
  *
  * Cream surface, 1px fj-neutral-200 border, 16px radius, 32px padding.
  * Optional ImageBlock at top (4/3 aspect by default). Eyebrow industry
- * tag, client name (Heading h3 size h4), one-line headline (italic
- * emphasis OPTIONAL — not forced), 2–3 sentence body, optional metrics
- * row at the bottom in Fraunces Jet Blue numerals.
+ * tag, client name (Heading h3 size h4), one-line plain headline,
+ * 2–3 sentence body, optional metrics row at the bottom in Clash
+ * Display Jet Blue numerals.
  *
  * NO hover-lift, NO shadow change — restraint per §6.2. When `href` is
  * provided, the entire card becomes a link and a static "→" glyph
@@ -30,8 +30,9 @@ export interface CaseStudyCardProps {
   clientName: string;
   /** Industry eyebrow rendered above the client name. */
   industry?: string;
-  /** One-line outcome. ReactNode so callers can pass <em> for italic
-   *  emphasis when warranted; do not force italic on every card. */
+  /** One-line outcome. Plain text post M1.d.2 — italic-emphasis pattern
+   *  dropped. ReactNode kept for callers that need to embed inline links
+   *  or other inline elements. */
   headline: ReactNode;
   /** 2–3 sentence body. */
   body: string;

@@ -23,7 +23,7 @@ export interface FinalCTAProps {
   variant?: 'light' | 'dark';
   /** Optional uppercase eyebrow above the headline. */
   eyebrow?: string;
-  /** H2 content. Pass JSX with `<em>` for italic conviction words. */
+  /** H2 content (plain text post M1.d.2 — italic-emphasis pattern dropped). */
   headline: ReactNode;
   /** Sub-line below the headline (--type-lead). */
   sub?: string;
@@ -31,7 +31,8 @@ export interface FinalCTAProps {
   primaryCta: { label: string; href: string };
   /** Optional secondary CTA — outlined. */
   secondaryCta?: { label: string; href: string };
-  /** Soft objection-handler line below CTAs (--type-caption, italic, muted). */
+  /** Soft objection-handler line below CTAs (--type-caption, muted). Plain
+   *  Inter body text post M1.d.2 — Fraunces-italic parenthetical voice dropped. */
   objectionHandler?: string;
 }
 
@@ -65,19 +66,13 @@ export default function FinalCTA({
       <div className="mx-auto max-w-[1120px] px-6 md:px-8 text-center">
         {eyebrow && <p className="fj-eyebrow">{eyebrow}</p>}
 
-        {/* Wrap heading in .fj-on-dark on dark variant so em children pick up
-            the on-dark italic colour (also passed to Heading via onDark — both
-            paths cascade safely). */}
-        <div className={isDark ? 'fj-on-dark' : ''}>
-          <Heading
-            as="h2"
-            size="h2"
-            onDark={isDark}
-            className={`${eyebrow ? 'mt-6' : ''} ${headingColorClass}`}
-          >
-            {headline}
-          </Heading>
-        </div>
+        <Heading
+          as="h2"
+          size="h2"
+          className={`${eyebrow ? 'mt-6' : ''} ${headingColorClass}`}
+        >
+          {headline}
+        </Heading>
 
         {sub && (
           <p
@@ -104,7 +99,7 @@ export default function FinalCTA({
 
         {objectionHandler && (
           <p
-            className={`mt-6 mx-auto max-w-[560px] font-fj-body italic ${objectionColorClass}`}
+            className={`mt-6 mx-auto max-w-[560px] font-fj-body ${objectionColorClass}`}
             style={{
               fontSize: '0.8125rem',
               lineHeight: 1.5,
