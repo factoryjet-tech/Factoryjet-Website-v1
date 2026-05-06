@@ -1,9 +1,45 @@
 import type { Viewport } from "next";
 import { ukMetadata, ukViewport } from "./metadata";
-import Header from "./components/Header";
+import SiteHeader from '@/components/v2/SiteHeader';
+import SiteFooter from '@/components/v2/SiteFooter';
 
 export const metadata = ukMetadata;
 export const viewport: Viewport = ukViewport;
+
+// UK-locale footer columns — Services / Company / Locations (UK cities).
+// Mirrors the /dev/v2-foundation showcase pattern exactly.
+const UK_FOOTER_LINK_COLUMNS = [
+  {
+    heading: 'Services',
+    links: [
+      { label: 'Web Design', href: '/services/web-design' },
+      { label: 'E-Commerce', href: '/services/ecommerce-development' },
+      { label: 'AI Agent Development', href: '/services/ai-agent-development' },
+      { label: 'AI SEO (GEO/AEO)', href: '/services/ai-seo' },
+      { label: 'Shopify Development', href: '/services/shopify-development' },
+    ],
+  },
+  {
+    heading: 'Company',
+    links: [
+      { label: 'About', href: '/about' },
+      { label: 'Portfolio', href: '/portfolio' },
+      { label: 'Case Studies', href: '/case' },
+      { label: 'Blog', href: '/blog' },
+      { label: 'Contact', href: '/contact' },
+    ],
+  },
+  {
+    heading: 'Locations',
+    links: [
+      { label: 'London', href: '/uk/london' },
+      { label: 'Manchester', href: '/uk/manchester' },
+      { label: 'Birmingham', href: '/uk/birmingham' },
+      { label: 'Leeds', href: '/uk/leeds' },
+      { label: 'Edinburgh', href: '/uk/edinburgh' },
+    ],
+  },
+] as const;
 
 export default function UKLayout({
   children,
@@ -12,10 +48,10 @@ export default function UKLayout({
 }) {
   return (
     <>
-      {/* ── Header ─────────────────────────────────────────────────────── */}
-      <Header />
+      <SiteHeader />
 
-      {/* ── LCP image preload ──────────────────────────────────────────── */}
+      {/* LCP preload (v1 hero-uk.webp) — kept to avoid regression on v1 UK pages
+          still in service; remove once v2 UK homepage ships (no static hero image). */}
       <link
         rel="preload"
         as="image"
@@ -24,14 +60,15 @@ export default function UKLayout({
         fetchPriority="high"
       />
 
-      {/* ── JetBrains Mono (TechStack component) ───────────────────────── */}
-      {/* Fontshare + Inter are already loaded by the root layout <head>.  */}
+      {/* JetBrains Mono (v1 TechStack component) — v2 uses Geist Mono via root layout;
+          remove once all v1 UK pages are retired. */}
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
       />
 
-      {/* Skip-link style only — Clash fallback metrics are in src/index.css */}
+      {/* Skip-link style (v1 Header artifact) — .uk-skip-link unused by v2 SiteHeader;
+          remove alongside the two links above in the v1 retirement patch. */}
       <style>{`
         .uk-skip-link {
           position: absolute;
@@ -51,6 +88,8 @@ export default function UKLayout({
       `}</style>
 
       {children}
+
+      <SiteFooter linkColumns={UK_FOOTER_LINK_COLUMNS} />
     </>
   );
 }
