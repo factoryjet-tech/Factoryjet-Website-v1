@@ -38,6 +38,7 @@ import { post as bestAiAutomationToolsSmallBusinessUk2026Post } from './posts/be
 import { post as buildAiAgentsSmallBusinessDiyVsAgency2026Post } from './posts/build-ai-agents-small-business-diy-vs-agency-2026';
 import { post as aiAgentsBusinessOperationsUkSmbs2026Post } from './posts/ai-agents-business-operations-uk-smbs-2026';
 import { post as aiAutomationServicesSmallBusinessUk2026Post } from './posts/ai-automation-services-small-business-uk-2026';
+import { post as aiSeoAgencyUkGeoAeoOrganicGrowthPost } from './posts/ai-seo-agency-uk-geo-aeo-organic-growth';
 
 export const POSTS: BlogPost[] = [
   // --- WEB DESIGN & STRATEGY ---
@@ -4609,4 +4610,5 @@ export const POSTS: BlogPost[] = [
   buildAiAgentsSmallBusinessDiyVsAgency2026Post,
   aiAgentsBusinessOperationsUkSmbs2026Post,
   aiAutomationServicesSmallBusinessUk2026Post,
+  aiSeoAgencyUkGeoAeoOrganicGrowthPost,
 ];
