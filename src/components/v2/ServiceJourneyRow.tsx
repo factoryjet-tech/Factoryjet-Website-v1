@@ -5,7 +5,7 @@ import { Heading } from './Heading';
  * ServiceJourneyRow — v2.0 delivery-stage row.
  *
  * Loosely follows factoryjet.DESIGN.md §5.4 (Neurons-Lab "service journey
- * row" pattern: cream BG, large numerals in Fraunces, 1px neutral-200
+ * row" pattern: cream BG, large numerals in Clash Display, 1px neutral-200
  * connecting line, no animation, no marquee). The §5.4 spec describes a
  * row of SERVICE cards (each card a service offering); this component
  * repurposes the same visual lane for delivery-process STAGES (Discover →
@@ -64,7 +64,7 @@ export const DEFAULT_JOURNEY_STAGES: ReadonlyArray<ServiceJourneyStage> = [
 
 export interface ServiceJourneyRowProps {
   eyebrow?: string;
-  /** H2 content. Pass JSX with `<em>` for italic conviction words. */
+  /** H2 content (plain text post M1.d.2 — italic-emphasis pattern dropped). */
   headline: ReactNode;
   lead?: string;
   /** Defaults to `DEFAULT_JOURNEY_STAGES` (5 stages). Caller may override. */

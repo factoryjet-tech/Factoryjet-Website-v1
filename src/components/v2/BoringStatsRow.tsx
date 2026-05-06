@@ -2,9 +2,9 @@
  * BoringStatsRow — v2.0 component per factoryjet.DESIGN.md §5.10.
  *
  * A row of 1–3 stat blocks with the "boring stats" microcopy voice.
- * Each block: number (Fraunces, Jet Blue, --type-stat) → label (Geist,
- * ink, weight 600) → optional parenthetical italic microcopy (Geist,
- * neutral-600, italic).
+ * Each block: number (Clash Display via .fj-display, Jet Blue, --type-stat)
+ * → label (Inter, ink, weight 600) → optional parenthetical microcopy
+ * (Inter, neutral-600, plain — italic styling dropped in M1.d.2).
  *
  * Section padding-y: --space-9 (96px desktop / 64px mobile).
  * Background is intentionally transparent — the consuming page wraps
@@ -27,7 +27,8 @@ export interface BoringStat {
   value: string;
   /** The descriptive label, e.g. "qualified leads in 90 days" */
   label: string;
-  /** Optional italic microcopy, rendered parenthesised below the label */
+  /** Optional micro-line, rendered parenthesised below the label. Plain
+   *  Inter body text post M1.d.2 — italic styling dropped. */
   microcopy?: string;
 }
 
@@ -65,7 +66,7 @@ export default function BoringStatsRow({
         >
           {stats.map((stat, i) => (
             <div key={i} className={`flex flex-col ${cellAlign}`}>
-              {/* Number — Fraunces tuned, Jet Blue, --type-stat */}
+              {/* Number — Clash Display via .fj-display, Jet Blue, --type-stat */}
               <p
                 className="fj-display font-medium text-fj-jet-blue"
                 style={{
@@ -88,10 +89,13 @@ export default function BoringStatsRow({
                 {stat.label}
               </p>
 
-              {/* Microcopy — Geist italic, neutral-600, parenthesised */}
+              {/* Microcopy — plain Geist body, neutral-600, parenthesised.
+               * M1.d.2: italic dropped per the M1.d.1.1 canon (Fraunces-italic
+               * boring-stats parenthetical pattern is gone — Clash doesn't
+               * render inline italic at body scale gracefully). */}
               {stat.microcopy && (
                 <p
-                  className="mt-2 font-fj-body italic text-fj-neutral-600"
+                  className="mt-2 font-fj-body text-fj-neutral-600"
                   style={{
                     fontSize: '0.9375rem',
                     lineHeight: 1.55,

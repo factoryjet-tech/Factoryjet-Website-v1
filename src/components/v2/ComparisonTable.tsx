@@ -40,7 +40,7 @@ export interface ComparisonRow {
 
 export interface ComparisonTableProps {
   eyebrow?: string;
-  /** H2 content. Pass JSX with `<em>` for italic conviction words. */
+  /** H2 content (plain text post M1.d.2 — italic-emphasis pattern dropped). */
   headline: ReactNode;
   lead?: string;
   /** Typically 2–3 columns; spec §5.6 envisions up to 5. The FactoryJet
@@ -139,7 +139,7 @@ export default function ComparisonTable({
 
         {/* Footer */}
         {footer && (
-          <div className="mt-6 font-fj-body text-[0.8125rem] italic text-fj-neutral-400">
+          <div className="mt-6 font-fj-body text-[0.8125rem] text-fj-neutral-400">
             {footer}
           </div>
         )}

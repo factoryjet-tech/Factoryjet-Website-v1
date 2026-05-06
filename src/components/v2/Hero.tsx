@@ -8,7 +8,7 @@ import Heading from './Heading';
  *
  * Replaces the dark-hero pattern. Cream background, asymmetric 7/5 split when
  * a `rightSlot` is provided, single-column at 820px max otherwise. Display
- * type via the Heading wrapper (Fraunces tuned axes + auto-italic on `<em>`).
+ * type via the Heading wrapper (Clash Display 700, no italic-emphasis post M1.d.2).
  *
  * No animations on load, no particles, no video bg, no glow effects (§5.1).
  *
@@ -18,7 +18,7 @@ import Heading from './Heading';
 export interface HeroProps {
   /** Optional uppercase eyebrow above the headline (--type-eyebrow, fj-jet-blue). */
   eyebrow?: string;
-  /** H1 content. Pass JSX with `<em>` for italic conviction words (§3.5). */
+  /** H1 content (plain text post M1.d.2 — italic-emphasis pattern dropped). */
   headline: ReactNode;
   /** Lead paragraph (--type-lead). Capped at max-w-[560px] for read line. */
   lead?: string;

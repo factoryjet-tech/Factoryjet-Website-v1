@@ -4,8 +4,8 @@ import Link from 'next/link';
  * SiteHeader — v2.0 top-of-page chrome.
  *
  * Cream surface to match the page; 1px fj-neutral-200 bottom hairline.
- * Logo wordmark in Fraunces 500 on the left; flat horizontal nav in
- * Geist on desktop; primary CTA on the right. No mega-menu, no
+ * Logo wordmark in Clash Display 700 on the left; flat horizontal nav in
+ * Inter on desktop; primary CTA on the right. No mega-menu, no
  * dropdowns — flat list only, by design.
  *
  * Mobile (< md): nav hides, replaced by a static "Menu" text link

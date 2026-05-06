@@ -9,9 +9,10 @@ import type { ReactNode } from 'react';
  *   - max-w-[1120px] inner container, centred, px-4 mobile / px-6 desktop
  *   - py --space-10               (128px desktop / 80px mobile)
  *
- * Inside dark sections, italic emphasis must use the .fj-italic--on-dark
- * class for contrast-safe Jet Blue (#4A8FFF) — wired in src/index.css
- * per §2.2.
+ * Italic-emphasis inside dark sections is no longer supported — the
+ * pattern was dropped in M1.d.1.1 + M1.d.2 (Clash Display does not
+ * render inline italic emphasis gracefully). Headings here render as
+ * plain Clash Display 700 in `--fj-charcoal-text` (or white).
  *
  * Hard rule: this component does NOT enforce the "max 2 dark sections
  * per page" cap (§5.13). That's a page-level discipline tracked in

@@ -1,19 +1,17 @@
 import type { HTMLAttributes, ReactNode } from 'react';
 
 /**
- * Heading — v2.0 display heading wrapper per factoryjet.DESIGN.md §3.3 & §3.5.
+ * Heading — v2.0 display heading wrapper per factoryjet.DESIGN.md §3.
  *
  * Renders h1/h2/h3/h4 with the correct --type-* token (size token decoupled
  * from semantic level so an h2 can be rendered at hero scale, etc.). Always
- * applies `.fj-display` for Fraunces axis tuning (opsz/SOFT/WONK/GRAD).
+ * applies `.fj-display` (Clash Display 700 post-pivot) and `font-fj-display`.
  *
- * Italic-emphasis pattern (the brand signature, §3.5): pass JSX children
- * containing `<em>` for conviction words. The CSS rule `.fj-display em`
- * (src/index.css) auto-styles them in Fraunces Italic at the same axes.
- *
- * On-dark contexts: pass `onDark` to add `.fj-on-dark` to the heading
- * element. The CSS rule `.fj-on-dark em` shifts em children to
- * `--fj-jet-blue-on-dark` (#4A8FFF) for AA contrast on charcoal.
+ * The italic-conviction-word emphasis pattern was dropped in M1.d.1.1 +
+ * M1.d.2 — Clash Display does not render inline italic emphasis at the
+ * scale Fraunces did. Headlines are confident statements, not editorial
+ * flourishes. Pass plain text in `children`; do NOT wrap conviction words
+ * in `<em>`.
  *
  * Per-instance text colour stays the consumer's responsibility — typically
  * `text-fj-ink` on light, `text-fj-charcoal-text` on dark.
@@ -37,8 +35,6 @@ export interface HeadingProps
   /** Visual size token. Defaults to match `as` (h1 → 'h1', h2 → 'h2', etc.).
    *  Allows e.g. an `<h2>` rendered at 'hero' scale. */
   size?: HeadingSize;
-  /** Inside a charcoal/dark surface — italic em children pick up fj-jet-blue-on-dark. */
-  onDark?: boolean;
   /** Extra utility classes appended to the heading element. */
   className?: string;
   children: ReactNode;
@@ -69,7 +65,6 @@ const WEIGHT_CLASSES: Record<HeadingSize, string> = {
 export default function Heading({
   as = 'h2',
   size,
-  onDark = false,
   className = '',
   children,
   ...rest
@@ -82,7 +77,6 @@ export default function Heading({
     'fj-display',
     SIZE_CLASSES[resolvedSize],
     WEIGHT_CLASSES[resolvedSize],
-    onDark ? 'fj-on-dark' : '',
     className,
   ]
     .filter(Boolean)
