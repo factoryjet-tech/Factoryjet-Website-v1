@@ -107,7 +107,7 @@ function TierCard({ tier }: { tier: PricingTier }) {
       <Heading as="h3" size="h4" className="text-fj-ink">
         {tier.name}
       </Heading>
-      <p className="fj-display font-fj-display mt-6 text-[3.5rem] font-medium leading-none tracking-[-0.025em] text-fj-ink md:text-[5rem]">
+      <p className="fj-display font-fj-display mt-6 text-[2.5rem] font-medium leading-none tracking-[-0.025em] text-fj-ink md:text-[3.5rem]">
         {tier.priceRange}
       </p>
       <p className="mt-3 font-fj-body text-[0.9375rem] text-fj-neutral-600">
