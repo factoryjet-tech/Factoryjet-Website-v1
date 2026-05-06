@@ -249,7 +249,7 @@ export const WEB_DESIGN_SERVICE: ServiceSeed = {
   evergreenFAQs: [
     {
       q: 'How much does a website cost for a small business in {city}?',
-      a: 'Most {city} small businesses sit between {starterPrice} and {growthPrice} for a complete website. Sole traders and local services typically pick our Starter tier ({starterPrice}) for a clean five-page site. SMBs scaling online usually choose Growth ({growthPrice}) which includes a blog, lead capture, and analytics. Custom builds with e-commerce or AI features start at the Scale tier. Local agency rates in {city} for the same scope often run two to three times higher.',
+      a: 'Most {city} small businesses choose the Starter tier ({starterPrice}) for a clean five-page site or Growth ({growthPrice}) for a blog CMS and lead capture. Custom builds with e-commerce or AI features start with Scale. Local agency rates in {city} for the same scope often run two to three times higher.',
     },
     {
       q: 'How long does it take to build a website?',
