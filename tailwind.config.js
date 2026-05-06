@@ -26,17 +26,31 @@ export default {
         heading: ['Poppins', 'Inter', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
 
-        // === FactoryJet Design System v2.0 (M0 foundation) ===
-        // v2 components MUST use these family names. Resolved via CSS
-        // variables wired in src/app/layout.tsx through next/font.
-        // Per factoryjet.DESIGN.md §3 (locked May 2026).
-        'fj-display': ['var(--font-fraunces)', 'Georgia', 'serif'],
-        'fj-body': ['var(--font-geist-sans)', 'system-ui', '-apple-system', 'sans-serif'],
-        'fj-mono': ['var(--font-geist-mono)', 'Consolas', 'monospace'],
+        // === FactoryJet Design System v2.0 (post M1.d.1 pivot) ===
+        // Display (canonical for v2 going forward): Clash Display 700.
+        // Body: Inter. Mono: Geist Mono.
+        // The fj-display key is RETAINED but now resolves to Clash so
+        // every existing v2 call site (font-fj-display) auto-picks up
+        // the new font without TSX edits. Subsequent reskin patches
+        // (M1.d.2–M1.d.5) may replace these utilities per component.
+        'fj-display': ['"Clash Display"', '"Clash Display Fallback"', '"Arial Black"', 'system-ui', 'sans-serif'],
+        'fj-body': ['var(--font-inter)', 'sans-serif'],
+        'fj-mono': ['var(--font-geist-mono)', 'ui-monospace', 'Consolas', 'monospace'],
+
+        // New canonical Clash Display key for components authored after
+        // the pivot to reach for explicitly.
+        'clash': ['"Clash Display"', '"Clash Display Fallback"', '"Arial Black"', 'system-ui', 'sans-serif'],
+
+        // Legacy keys — kept defined for v1 page parity. v2 components
+        // will not consume them. fraunces and sourceSerif still resolve
+        // via the next/font variables wired in src/app/layout.tsx.
+        'fraunces': ['var(--font-fraunces)', 'Georgia', 'serif'],
+        'geist': ['var(--font-geist-sans)', 'system-ui', '-apple-system', 'sans-serif'],
+        'sourceSerif': ['var(--font-source-serif)', 'Georgia', 'serif'],
+        'geistMono': ['var(--font-geist-mono)', 'ui-monospace', 'Consolas', 'monospace'],
 
         // Explicit opt-in fallback for any LEGACY component observed to
-        // render with the wrong font after a future cleanup. M0 only
-        // adds the class — does not apply it anywhere.
+        // render with the wrong font after a future cleanup.
         'legacy-inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
       },
       fontSize: {
@@ -62,17 +76,28 @@ export default {
         'container-xl': '1280px',
       },
       colors: {
-        // === FactoryJet Design System v2.0 (M0 foundation) ===
-        // v2 components MUST use the fj-* prefix. Per factoryjet.DESIGN.md §2
-        // (locked May 2026). Names overlap with the legacy `jet-*` tokens
-        // below at the same hex (#0052CC etc.) — both kept during the
-        // v1→v2 transition window. Cleanup is a future milestone.
-        'fj-cream': '#FAFAF7',
+        // === FactoryJet Design System v2.0 (post M1.d.1 pivot) ===
+        // v2 components consume the fj-* prefix. Tokens from the
+        // pre-pivot palette are RETAINED to preserve every existing
+        // call site; the pivot adds dark-surface tokens for the
+        // dark-section rhythm-break + footer slots only.
+
+        // --- Pivot additions (M1.d.1) ---
+        // Reserved for SiteFooter + StrategicDarkSection mid-page rhythm
+        // breaks only. NOT for hero. NOT for default surface. Max 2 dark
+        // sections per page (per factoryjet.DESIGN.md §2.2 + §2.5).
+        'fj-navy': '#0A0F1C',
+        'fj-navy-deep': '#070B14',
+        // Reserved (loaded for future hero-CTA accent variants); not in default v2 use.
+        'fj-jet-blue-bright': '#3B82F6',
+
+        // --- Pre-existing tokens (kept) ---
+        'fj-cream': '#FAFAF7',          // Dominant page BG (~70%). Restored as canon post-M1.d.1.1.
         'fj-ink': '#1A1A1A',
         'fj-jet-blue': '#0052CC',
         'fj-jet-blue-tint': '#E6F0FF',
-        'fj-jet-blue-on-dark': '#4A8FFF',  // Contrast-safe Jet Blue inside StrategicDarkSection per §2.2
-        'fj-jet-orange': '#FF6B35',
+        'fj-jet-blue-on-dark': '#4A8FFF',  // Contrast-safe Jet Blue inside dark sections.
+        'fj-jet-orange': '#FF6B35',     // Secondary accent — small-area only (FLAGSHIP tag, JetSDR variant).
         'fj-jet-orange-tint': '#FEF3E8',
         'fj-jet-green': '#10B981',
         'fj-jet-green-tint': '#E8FAF1',
