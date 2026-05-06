@@ -7,9 +7,11 @@
  * FAQ templates.
  *
  * Data is FactoryJet's real offering: process derived from the 31-day
- * delivery model, pricing aligned with the live UK rate card, FAQs
- * curated from sales-call transcripts.
+ * delivery model, pricing aligned with the live rate cards per locale,
+ * FAQs curated from sales-call transcripts.
  */
+
+import type { CountryCode } from '../../lib/locales/types.js';
 
 export interface ProcessStep {
   step: number;
@@ -20,7 +22,7 @@ export interface ProcessStep {
 
 export interface PricingTier {
   name: string;
-  priceGBP: string;
+  priceLabel: string;
   description: string;
   includes: string[];
   bestFor: string;
@@ -28,9 +30,11 @@ export interface PricingTier {
 }
 
 export interface FAQTemplate {
-  /** May contain {city} or {region} placeholders. */
+  /** May contain {city}, {region}, {currencySymbol}, {starterPrice},
+   *  {growthPrice}, or {scalePrice} placeholders. */
   q: string;
-  /** May contain {city} or {region} placeholders. */
+  /** May contain {city}, {region}, {currencySymbol}, {starterPrice},
+   *  {growthPrice}, or {scalePrice} placeholders. */
   a: string;
 }
 
@@ -41,7 +45,8 @@ export interface ServiceSeed {
   metaTitleTemplate: string;
   h1Template: string;
   process: ProcessStep[];
-  pricingUK: PricingTier[];
+  pricing: Record<CountryCode, PricingTier[]>;
+  priceRange: Record<CountryCode, string>;
   evergreenFAQs: FAQTemplate[];
 }
 
@@ -88,56 +93,163 @@ export const WEB_DESIGN_SERVICE: ServiceSeed = {
       duration: 'Day 31+',
     },
   ],
-  pricingUK: [
-    {
-      name: 'Starter',
-      priceGBP: '£1,200–£2,500',
-      description:
-        'A 5-page brochure site that loads fast on mobile and ranks for your name and core service.',
-      includes: [
-        '5 pages, mobile-responsive',
-        'Basic SEO & schema markup',
-        'Contact form with email forwarding',
-        '2 revision rounds',
-        '30-day post-launch support',
-      ],
-      bestFor: 'Sole traders and local services who need a credible online presence quickly.',
-    },
-    {
-      name: 'Growth',
-      priceGBP: '£2,500–£5,000',
-      description:
-        'A 10–15 page site with a blog CMS, lead-capture flows, and analytics wired in from day one.',
-      includes: [
-        '10–15 pages with blog CMS',
-        'Advanced SEO & GA4 tracking',
-        'Lead capture & email automation',
-        '3 revision rounds',
-        '30-day support + training session',
-      ],
-      bestFor: 'SMBs scaling online who need the site to actively generate qualified inquiries.',
-      highlight: true,
-    },
-    {
-      name: 'Scale',
-      priceGBP: '£5,000–£12,000',
-      description:
-        'Custom Next.js build with e-commerce, AI features, API integrations, and priority support.',
-      includes: [
-        'Custom Next.js architecture',
-        'E-commerce or membership features',
-        'AI integrations (chat, search, content)',
-        'Third-party API connections',
-        'Priority support & quarterly reviews',
-      ],
-      bestFor:
-        'Established businesses with complex requirements and a real digital revenue line.',
-    },
-  ],
+  pricing: {
+    gb: [
+      {
+        name: 'Starter',
+        priceLabel: '£1,200–£2,500',
+        description:
+          'A 5-page brochure site that loads fast on mobile and ranks for your name and core service.',
+        includes: [
+          '5 pages, mobile-responsive',
+          'Basic SEO & schema markup',
+          'Contact form with email forwarding',
+          '2 revision rounds',
+          '30-day post-launch support',
+        ],
+        bestFor: 'Sole traders and local services who need a credible online presence quickly.',
+      },
+      {
+        name: 'Growth',
+        priceLabel: '£2,500–£5,000',
+        description:
+          'A 10–15 page site with a blog CMS, lead-capture flows, and analytics wired in from day one.',
+        includes: [
+          '10–15 pages with blog CMS',
+          'Advanced SEO & GA4 tracking',
+          'Lead capture & email automation',
+          '3 revision rounds',
+          '30-day support + training session',
+        ],
+        bestFor: 'SMBs scaling online who need the site to actively generate qualified inquiries.',
+        highlight: true,
+      },
+      {
+        name: 'Scale',
+        priceLabel: '£5,000–£12,000',
+        description:
+          'Custom Next.js build with e-commerce, AI features, API integrations, and priority support.',
+        includes: [
+          'Custom Next.js architecture',
+          'E-commerce or membership features',
+          'AI integrations (chat, search, content)',
+          'Third-party API connections',
+          'Priority support & quarterly reviews',
+        ],
+        bestFor:
+          'Established businesses with complex requirements and a real digital revenue line.',
+      },
+    ],
+    us: [
+      {
+        name: 'Starter',
+        priceLabel: '$1,500–$3,100',
+        description:
+          'A 5-page brochure site that loads fast on mobile and ranks for your name and core service.',
+        includes: [
+          '5 pages, mobile-responsive',
+          'Basic SEO & schema markup',
+          'Contact form with email forwarding',
+          '2 revision rounds',
+          '30-day post-launch support',
+        ],
+        bestFor: 'Sole traders and local services who need a credible online presence quickly.',
+      },
+      {
+        name: 'Growth',
+        priceLabel: '$3,100–$6,300',
+        description:
+          'A 10–15 page site with a blog CMS, lead-capture flows, and analytics wired in from day one.',
+        includes: [
+          '10–15 pages with blog CMS',
+          'Advanced SEO & GA4 tracking',
+          'Lead capture & email automation',
+          '3 revision rounds',
+          '30-day support + training session',
+        ],
+        bestFor: 'SMBs scaling online who need the site to actively generate qualified inquiries.',
+        highlight: true,
+      },
+      {
+        name: 'Scale',
+        priceLabel: '$6,300–$15,000',
+        description:
+          'Custom Next.js build with e-commerce, AI features, API integrations, and priority support.',
+        includes: [
+          'Custom Next.js architecture',
+          'E-commerce or membership features',
+          'AI integrations (chat, search, content)',
+          'Third-party API connections',
+          'Priority support & quarterly reviews',
+        ],
+        bestFor:
+          'Established businesses with complex requirements and a real digital revenue line.',
+      },
+    ],
+    au: [
+      {
+        name: 'Starter',
+        priceLabel: 'A$2,200–A$4,600',
+        description:
+          'A 5-page brochure site that loads fast on mobile and ranks for your name and core service.',
+        includes: [
+          '5 pages, mobile-responsive',
+          'Basic SEO & schema markup',
+          'Contact form with email forwarding',
+          '2 revision rounds',
+          '30-day post-launch support',
+        ],
+        bestFor: 'Sole traders and local services who need a credible online presence quickly.',
+      },
+      {
+        name: 'Growth',
+        priceLabel: 'A$4,600–A$9,300',
+        description:
+          'A 10–15 page site with a blog CMS, lead-capture flows, and analytics wired in from day one.',
+        includes: [
+          '10–15 pages with blog CMS',
+          'Advanced SEO & GA4 tracking',
+          'Lead capture & email automation',
+          '3 revision rounds',
+          '30-day support + training session',
+        ],
+        bestFor: 'SMBs scaling online who need the site to actively generate qualified inquiries.',
+        highlight: true,
+      },
+      {
+        name: 'Scale',
+        priceLabel: 'A$9,300–A$22,200',
+        description:
+          'Custom Next.js build with e-commerce, AI features, API integrations, and priority support.',
+        includes: [
+          'Custom Next.js architecture',
+          'E-commerce or membership features',
+          'AI integrations (chat, search, content)',
+          'Third-party API connections',
+          'Priority support & quarterly reviews',
+        ],
+        bestFor:
+          'Established businesses with complex requirements and a real digital revenue line.',
+      },
+    ],
+    ae: [],
+    in: [],
+    br: [],
+    mx: [],
+  },
+  priceRange: {
+    gb: '£1,200–£12,000',
+    us: '$1,500–$15,000',
+    au: 'A$2,200–A$22,200',
+    ae: '',
+    in: '',
+    br: '',
+    mx: '',
+  },
   evergreenFAQs: [
     {
       q: 'How much does a website cost for a small business in {city}?',
-      a: 'Most {city} small businesses sit between £1,200 and £5,000 for a complete website. Sole traders and local services typically pick our Starter tier (£1,200–£2,500) for a clean five-page site. SMBs scaling online usually choose Growth (£2,500–£5,000) which includes a blog, lead capture, and analytics. Custom builds with e-commerce or AI features start at £5,000. Local agency rates in {city} for the same scope often run two to three times higher.',
+      a: 'Most {city} small businesses sit between {starterPrice} and {growthPrice} for a complete website. Sole traders and local services typically pick our Starter tier ({starterPrice}) for a clean five-page site. SMBs scaling online usually choose Growth ({growthPrice}) which includes a blog, lead capture, and analytics. Custom builds with e-commerce or AI features start at the Scale tier. Local agency rates in {city} for the same scope often run two to three times higher.',
     },
     {
       q: 'How long does it take to build a website?',
@@ -157,7 +269,7 @@ export const WEB_DESIGN_SERVICE: ServiceSeed = {
     },
     {
       q: 'What happens after launch?',
-      a: "You own everything: the codebase, the Figma files, the CMS access. The 30-day support window covers post-launch fixes, training, and any small content changes. After that, you can self-manage via the CMS, hire us for a monthly retainer (typically £400–£1,200/month), or bring it to your in-house team. We do not lock you into proprietary tooling — every site we build is portable.",
+      a: 'You own everything: the codebase, the Figma files, the CMS access. The 30-day support window covers post-launch fixes, training, and any small content changes. After that, you can self-manage via the CMS, hire us for a monthly retainer, or bring it to your in-house team. We do not lock you into proprietary tooling — every site we build is portable.',
     },
   ],
 };

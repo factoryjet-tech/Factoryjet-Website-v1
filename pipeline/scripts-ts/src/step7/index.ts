@@ -3,7 +3,7 @@
  * CLI entry for Step 7 page-copy generation.
  *
  * Usage:
- *   pnpm generate --city <slug> --service <slug> [--country <gb|us|au|ca>]
+ *   pnpm generate --city <slug> --service <slug> [--country <gb|us|au|ae|in|br|mx>]
  *                 [--dry-run] [--force]
  *
  * Default country: gb. Default service: web-design (the only one with a
@@ -18,22 +18,21 @@ import type { CityEnrichment } from '../../config/city-data/types.js';
 import { generatePageCopy } from './copyGenerator.js';
 import { validatePageCopy } from './copyValidator.js';
 import type { PageCopyOutput, PageGenerationInput } from './types.js';
+import type { CountryCode } from '../../lib/locales/types.js';
+import { resolveLocale } from '../../lib/locales/index.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 // pipeline/scripts-ts/src/step7/ -> pipeline/scripts-ts/
 const SCRIPTS_TS_ROOT = join(__dirname, '..', '..');
 
-const COUNTRY_NAMES: Record<string, string> = {
-  gb: 'United Kingdom',
-  us: 'United States',
-  au: 'Australia',
-  ca: 'Canada',
-};
+function escapeRegex(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
 
 interface CliArgs {
   city: string;
   service: string;
-  country: 'gb' | 'us' | 'au' | 'ca';
+  country: CountryCode;
   dryRun: boolean;
   force: boolean;
   help: boolean;
@@ -66,10 +65,13 @@ function parseArgs(argv: string[]): CliArgs {
       args.service = v;
     } else if (a === '--country') {
       const v = argv[++i];
-      if (v !== 'gb' && v !== 'us' && v !== 'au' && v !== 'ca') {
-        throw new Error(`invalid --country: ${v}`);
+      const validCountries: CountryCode[] = ['gb', 'us', 'au', 'ae', 'in', 'br', 'mx'];
+      if (!validCountries.includes(v as CountryCode)) {
+        throw new Error(
+          `invalid --country: ${v}. Must be one of: ${validCountries.join(', ')}`,
+        );
       }
-      args.country = v;
+      args.country = v as CountryCode;
     } else {
       throw new Error(`unknown argument: ${a}`);
     }
@@ -81,11 +83,11 @@ function printHelp(): void {
   // eslint-disable-next-line no-console
   console.log(
     [
-      'Usage: pnpm generate --city <slug> --service <slug> [--country gb|us|au|ca] [--dry-run] [--force]',
+      'Usage: pnpm generate --city <slug> --service <slug> [--country gb|us|au|ae|in|br|mx] [--dry-run] [--force]',
       '',
       '  --city <slug>      Required. City slug matching pipeline/scripts-ts/data/enriched/<country>/<slug>.json',
       '  --service <slug>   Required. Service slug. Currently only "web-design" is supported.',
-      '  --country <code>   gb | us | au | ca (default: gb)',
+      '  --country <code>   gb | us | au | ae | in | br | mx (default: gb)',
       '  --dry-run          Generate copy and validate; do not write file.',
       '  --force            Overwrite existing output file.',
       '  --help             Print this help.',
@@ -122,30 +124,34 @@ function loadService(slug: string): ServiceSeed {
 
 /**
  * Pricing benchmark heuristic:
- *   1. Extract numeric GBP figures from competitor pricingNotes when
- *      pricingPublic === true.
- *   2. If no public-priced competitors, return 5000 GBP fallback.
+ *   1. Extract numeric figures (locale-currency-prefixed) from competitor
+ *      pricingNotes when pricingPublic === true.
+ *   2. If no public-priced competitors, return locale.benchmarkFallback.
  *   3. Mean of extracted floors.
  */
-function computeCompetitorPricingBenchmark(city: CityEnrichment): {
+function computeCompetitorPricingBenchmark(
+  city: CityEnrichment,
+  currencySymbol: string,
+  benchmarkFallback: number,
+): {
   value: number;
   path: 'computed' | 'fallback';
 } {
   const publicPriced = city.competitors.filter((c) => c.pricingPublic);
   if (publicPriced.length === 0) {
-    return { value: 5000, path: 'fallback' };
+    return { value: benchmarkFallback, path: 'fallback' };
   }
   const figures: number[] = [];
+  const pattern = new RegExp(`${escapeRegex(currencySymbol)}\\s*([\\d,]+)`);
   for (const c of publicPriced) {
     const notes = c.pricingNotes ?? '';
-    // Match £1,200 or £1200 — capture the first numeric figure.
-    const match = notes.match(/£\s*([\d,]+)/);
+    const match = notes.match(pattern);
     if (match && match[1]) {
       const n = Number(match[1].replace(/,/g, ''));
       if (Number.isFinite(n) && n > 0) figures.push(n);
     }
   }
-  if (figures.length === 0) return { value: 5000, path: 'fallback' };
+  if (figures.length === 0) return { value: benchmarkFallback, path: 'fallback' };
   const mean = Math.round(figures.reduce((a, b) => a + b, 0) / figures.length);
   return { value: mean, path: 'computed' };
 }
@@ -187,12 +193,17 @@ async function main(): Promise<void> {
     process.exit(args.help ? 0 : 2);
   }
 
+  const locale = resolveLocale(args.country);
   const city = loadCity(args.country, args.city);
   const service = loadService(args.service);
-  const benchmark = computeCompetitorPricingBenchmark(city);
+  const benchmark = computeCompetitorPricingBenchmark(
+    city,
+    locale.currencySymbol,
+    locale.benchmarkFallback,
+  );
   // eslint-disable-next-line no-console
   console.log(
-    `[generate] competitorPricingBenchmark: £${benchmark.value.toLocaleString()} (${benchmark.path})`,
+    `[generate] competitorPricingBenchmark: ${locale.currencySymbol}${benchmark.value.toLocaleString()} (${benchmark.path})`,
   );
 
   const input: PageGenerationInput = {
@@ -201,6 +212,7 @@ async function main(): Promise<void> {
     country: args.country,
     targetKeyword: buildTargetKeyword(args.service, args.city),
     competitorPricingBenchmark: benchmark.value,
+    locale,
   };
 
   const output = await generatePageCopy(input);
@@ -303,5 +315,3 @@ main().catch((err) => {
   }
   process.exit(1);
 });
-
-void COUNTRY_NAMES;

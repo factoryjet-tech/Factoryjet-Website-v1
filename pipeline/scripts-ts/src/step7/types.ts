@@ -9,17 +9,20 @@
 
 import type { CityEnrichment } from '../../config/city-data/types.js';
 import type { ServiceSeed } from '../../config/services/web-design.js';
+import type { CountryCode, Locale } from '../../lib/locales/types.js';
 
 export type { CityEnrichment };
 
 export interface PageGenerationInput {
   city: CityEnrichment;
   service: ServiceSeed;
-  country: 'gb' | 'us' | 'au' | 'ca';
+  country: CountryCode;
   /** e.g. "web design london" — used for keyword density and meta. */
   targetKeyword: string;
-  /** Mean GBP from city competitors with pricingPublic=true; fallback 5000. */
+  /** Mean numeric figure (locale.currencySymbol-prefixed in source) from city
+   *  competitors with pricingPublic=true; fallback locale.benchmarkFallback. */
   competitorPricingBenchmark: number;
+  locale: Locale;
 }
 
 export interface StatBlock {
@@ -44,7 +47,7 @@ export interface IndustrySector {
 
 export interface PricingDisplay {
   name: string;
-  priceGBP: string;
+  priceLabel: string;
   description: string;
   includes: string[];
   bestFor: string;
