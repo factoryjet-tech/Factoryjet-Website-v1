@@ -16,6 +16,7 @@
 import type { Locale, CountryCode } from './types';
 import gbLocale from '@/data/countries/gb/locale.json';
 import usLocale from '@/data/countries/us/locale.json';
+import auLocale from '@/data/countries/au/locale.json';
 
 /* Partial<Record<...>> — only populated countries appear as keys; the
  * resolver throws for missing ones rather than returning `undefined`,
@@ -23,7 +24,8 @@ import usLocale from '@/data/countries/us/locale.json';
 const LOCALE_MAP: Partial<Record<CountryCode, Locale>> = {
   gb: gbLocale as Locale,
   us: usLocale as Locale,
-  // au, ae, in, br, mx — locale.json not yet populated; added in later patches.
+  au: auLocale as Locale,
+  // ae, in, br, mx — locale.json not yet populated; added in later patches.
 };
 
 export function resolveLocale(country: CountryCode): Locale {

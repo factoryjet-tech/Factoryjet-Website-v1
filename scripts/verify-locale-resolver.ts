@@ -49,10 +49,12 @@ if (unknownFromBcp !== undefined) {
   process.exit(1);
 }
 
-// Failure mode
+// Failure mode — test against a country code that's still unpopulated.
+// AU was populated in M1.d.4; testing 'in' (India) instead, which remains
+// unpopulated per factoryjet.DESIGN.md §5.6.
 try {
-  resolveLocale('au' as CountryCode);
-  console.error('FAIL: should have thrown for unpopulated locale au');
+  resolveLocale('in' as CountryCode);
+  console.error('FAIL: should have thrown for unpopulated locale in');
   process.exit(1);
 } catch (e) {
   console.log(`\nCorrectly threw for unpopulated locale: ${(e as Error).message}`);
