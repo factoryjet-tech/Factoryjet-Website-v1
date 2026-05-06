@@ -7,8 +7,7 @@
  *   <repo-root>/src/app/<locale-base-path>/{city-slug}/{service-slug}/page.tsx
  *
  * Pure data → template. No LLM calls. The output is a Next.js Server
- * Component (no 'use client'), with all FAQ content rendered in static
- * HTML so AI crawlers can index it without JS execution.
+ * Component (no 'use client'), importing v2 components from src/components/v2/.
  *
  * CLI:
  *   pnpm assemble --city <slug> --service <slug> [--country <gb|us|au|ae|in|br|mx>]
@@ -18,7 +17,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import type { PageCopyOutput } from './types.js';
+import type { PageCopyOutput, PricingDisplay, CompetitorComparison } from './types.js';
 import type { CountryCode } from '../../lib/locales/types.js';
 import { localeBasePath } from '../../lib/locales/paths.js';
 
@@ -88,34 +87,29 @@ function printHelp(): void {
 /*   Escape helpers                                                    */
 /* ------------------------------------------------------------------ */
 
-/** Escape a string for safe interpolation inside a JSX text node. */
+/** Escape a string for safe interpolation inside a JSX text node.
+ *  Backtick is also escaped (&#96;) to avoid breaking template-literal
+ *  embedding in the assembler when city copy contains backtick chars. */
 function jsxEscape(s: string): string {
   return s
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/\{/g, '&#123;')
-    .replace(/\}/g, '&#125;');
+    .replace(/\}/g, '&#125;')
+    .replace(/`/g, '&#96;');
 }
 
-/** Escape a string for use as a JS string literal (single-quoted). */
+/** Escape a string for use as a JS string literal (single-quoted).
+ *  Backtick is escaped so values are safe inside the assembler's own
+ *  template literals when building the page header lines. */
 function jsString(s: string): string {
   return s
     .replace(/\\/g, '\\\\')
     .replace(/'/g, "\\'")
+    .replace(/`/g, '\\`')
     .replace(/\n/g, '\\n')
     .replace(/\r/g, '\\r');
-}
-
-/** Render a body string as paragraphs split on \n\n. */
-function renderParagraphs(body: string, className: string): string {
-  const paras = body.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
-  return paras
-    .map(
-      (p) =>
-        `        <p className="${className}">${jsxEscape(p)}</p>`,
-    )
-    .join('\n');
 }
 
 function cityNameFromSlug(slug: string): string {
@@ -123,354 +117,294 @@ function cityNameFromSlug(slug: string): string {
 }
 
 /* ------------------------------------------------------------------ */
-/*   Section generators                                                */
+/*   Adapter helpers (assembly-time, not emitted into the TSX)        */
+/* ------------------------------------------------------------------ */
+
+/** Split a body string into paragraphs on blank-line boundaries. */
+function splitParagraphs(body: string): string[] {
+  return body.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
+}
+
+/** Pad a 1-based step number to two digits: 1 → "01", 10 → "10". */
+function padStepNumber(n: number): string {
+  return n < 10 ? `0${n}` : `${n}`;
+}
+
+/** Append duration to a step description with an em-dash separator.
+ *  If duration is absent or empty, returns description unchanged. */
+function embedDuration(description: string, duration: string | undefined): string {
+  return duration ? `${description} — ${duration}` : description;
+}
+
+/** Append bestFor prose to a pricing tier description.
+ *  Normalises trailing punctuation so the join reads as one sentence. */
+function embedBestFor(description: string, bestFor: string | undefined): string {
+  if (!bestFor) return description;
+  const base = description.replace(/\.\s*$/, '');
+  const bfClean = bestFor.replace(/\.\s*$/, '').toLowerCase();
+  return `${base}. Best for ${bfClean}.`;
+}
+
+interface MappedPricingTier {
+  name: string;
+  priceRange: string;
+  description: string;
+  features: string[];
+  cta: { label: string; href: string };
+  popular?: boolean;
+}
+
+/** Map a pipeline PricingDisplay to the v2 PricingTier prop shape.
+ *  Field renames: priceLabel→priceRange, includes→features, highlight→popular.
+ *  bestFor is prose-joined into description. Uniform CTA injected. */
+function mapPricingTierForV2(tier: PricingDisplay): MappedPricingTier {
+  const mapped: MappedPricingTier = {
+    name: tier.name,
+    priceRange: tier.priceLabel,
+    description: embedBestFor(tier.description, tier.bestFor),
+    features: tier.includes,
+    cta: { label: 'Get a quote', href: '/contact' },
+  };
+  if (tier.highlight) mapped.popular = true;
+  return mapped;
+}
+
+/** Map competitor comparisons to ComparisonTable rows (3 data columns).
+ *  feature = competitor name; values = [theirPrice, ourPrice, ourAdvantage]. */
+function mapCompetitorsToComparisonRows(
+  competitors: CompetitorComparison[],
+): Array<{ feature: string; values: string[] }> {
+  return competitors.map((cp) => ({
+    feature: cp.name,
+    values: [cp.theirPrice, cp.ourPrice, cp.ourAdvantage],
+  }));
+}
+
+/* ------------------------------------------------------------------ */
+/*   Section emitters — return JSX component invocation strings       */
+/*   that are joined into <main> by generatePageTSX.                  */
 /* ------------------------------------------------------------------ */
 
 function genHero(c: PageCopyOutput): string {
-  const h = c.sections.hero;
-  const headline = c.meta.h1 || h.headline || '';
-  const subheadline = h.subheadline ?? '';
-  const body = h.body ?? '';
-  const ctaText = h.ctaText || 'Get a Free Quote';
-  const dataPoints = h.dataPoints ?? [];
+  const s = c.sections.hero;
+  const cityName = cityNameFromSlug(c.meta.slug);
+  const eyebrow = `WEB DESIGN · ${cityName.toUpperCase()}`;
+  const headline = s.headline ?? c.meta.h1;
+  const lead = s.body ?? '';
+  const ctaLabel = s.ctaText ?? 'Get a quote';
+  const trustItems = s.dataPoints ?? [];
 
-  return `function HeroSection() {
-  return (
-    <section className="bg-[#0A0F1C] text-white min-h-[80vh] flex flex-col justify-center py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">${jsxEscape(headline)}</h1>
-        <p className="text-xl md:text-2xl text-gray-300 mt-4 max-w-3xl">${jsxEscape(subheadline)}</p>
-        <p className="text-lg text-gray-400 mt-6 max-w-2xl leading-relaxed">${jsxEscape(body)}</p>
-        ${
-          dataPoints.length > 0
-            ? `<div className="flex flex-wrap gap-4 mt-8">
-${dataPoints
-  .map(
-    (dp) =>
-      `          <span className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-sm">
-            <span className="text-[#10B981]" aria-hidden="true">✓</span>
-            <span>${jsxEscape(dp)}</span>
-          </span>`,
-  )
-  .join('\n')}
-        </div>`
-            : ''
-        }
-        <div className="mt-10">
-          <Link
-            href="/contact"
-            className="inline-block bg-[#0052CC] hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
-          >
-            ${jsxEscape(ctaText)}
-          </Link>
-        </div>
-      </div>
-    </section>
-  );
-}`;
+  return [
+    `      <Hero`,
+    `        eyebrow={${JSON.stringify(eyebrow)}}`,
+    `        headline={${JSON.stringify(headline)}}`,
+    `        lead={${JSON.stringify(lead)}}`,
+    `        primaryCta={{ label: ${JSON.stringify(ctaLabel)}, href: '/contact' }}`,
+    `        trustItems={${JSON.stringify(trustItems)}}`,
+    `      />`,
+  ].join('\n');
 }
 
 function genCityContext(c: PageCopyOutput): string {
   const s = c.sections.cityContext;
   const cityName = cityNameFromSlug(c.meta.slug);
+  const eyebrow = `${cityName.toUpperCase()} MARKET`;
   const headline = s.headline ?? `${cityName} Market Context`;
-  const body = s.body ?? '';
-  const stats = s.stats ?? [];
+  const leadParagraphs = splitParagraphs(s.body);
+  // source → sourceUrl rename (StatBlock.source maps to CityContextSectionProps.stats.sourceUrl)
+  const stats = s.stats.map((st) => ({
+    value: st.value,
+    label: st.label,
+    sourceUrl: st.source,
+  }));
 
-  return `function CityContextSection() {
-  return (
-    <section className="bg-white py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-[#FF6B35] text-sm font-semibold uppercase tracking-wider">${jsxEscape(cityName)} Market</p>
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3">${jsxEscape(headline)}</h2>
-        <div className="text-lg text-gray-600 leading-relaxed mt-6 max-w-3xl space-y-4">
-${renderParagraphs(body, 'text-lg text-gray-600 leading-relaxed')}
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-${stats
-  .map(
-    (st) =>
-      `          <div className="border border-gray-200 rounded-xl p-6">
-            <div className="text-3xl font-bold text-[#0052CC]">${jsxEscape(st.value)}</div>
-            <div className="text-sm text-gray-500 mt-1">${jsxEscape(st.label)}</div>
-            <a
-              href="${jsxEscape(st.source)}"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs text-gray-400 mt-2 inline-block hover:text-[#0052CC] transition-colors"
-            >
-              Source ↗
-            </a>
-          </div>`,
-  )
-  .join('\n')}
-        </div>
-      </div>
-    </section>
-  );
-}`;
+  return [
+    `      <CityContextSection`,
+    `        eyebrow={${JSON.stringify(eyebrow)}}`,
+    `        headline={${JSON.stringify(headline)}}`,
+    `        leadParagraphs={${JSON.stringify(leadParagraphs)}}`,
+    `        stats={${JSON.stringify(stats)}}`,
+    `      />`,
+  ].join('\n');
 }
 
 function genServiceExplanation(c: PageCopyOutput): string {
   const s = c.sections.serviceExplanation;
   const cityName = cityNameFromSlug(c.meta.slug);
+  const eyebrow = `WEB DESIGN · ${cityName}`;
   const headline = s.headline ?? `Web Design Built for ${cityName}'s Economy`;
-  const body = s.body ?? '';
+  const paragraphs = splitParagraphs(s.body);
+  const lead = paragraphs[0] ?? '';
+  const bodyParagraphs = paragraphs.slice(1);
+  const bodyJsx = bodyParagraphs.map((p) => `<p>${jsxEscape(p)}</p>`).join('');
 
-  return `function ServiceExplanationSection() {
-  return (
-    <section className="bg-gray-50 py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-[#FF6B35] text-sm font-semibold uppercase tracking-wider">Web Design ${jsxEscape(cityName)}</p>
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 max-w-3xl">${jsxEscape(headline)}</h2>
-        <div className="mt-8 max-w-3xl space-y-4">
-${renderParagraphs(body, 'text-lg text-gray-700 leading-relaxed')}
-        </div>
-      </div>
-    </section>
-  );
-}`;
+  const lines = [
+    `      <ServiceExplanation`,
+    `        eyebrow={${JSON.stringify(eyebrow)}}`,
+    `        headline={${JSON.stringify(headline)}}`,
+    `        lead={${JSON.stringify(lead)}}`,
+  ];
+  if (bodyJsx) {
+    lines.push(`        body={<>${bodyJsx}</>}`);
+  }
+  lines.push(`      />`);
+  return lines.join('\n');
 }
 
 function genWhyFactoryJet(c: PageCopyOutput): string {
   const s = c.sections.whyFactoryJet;
-  const headline = s.headline ?? 'Why FactoryJet';
-  const subheadline = s.subheadline ?? '';
-  const body = s.body ?? '';
-  const competitors = s.competitors ?? [];
-  const dataPoints = s.dataPoints ?? [];
+  if (s.competitors.length < 2) {
+    throw new Error(
+      `[assemble] whyFactoryJet must have at least 2 competitors; found ${s.competitors.length}`,
+    );
+  }
+  const cityName = cityNameFromSlug(c.meta.slug);
+  const eyebrow = 'WHY FACTORYJET';
+  const headline = s.headline ?? `The ${cityName} Agency Alternative`;
 
-  return `function WhyFactoryJetSection() {
-  return (
-    <section className="bg-white py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-[#FF6B35] text-sm font-semibold uppercase tracking-wider">Why FactoryJet</p>
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3">${jsxEscape(headline)}</h2>
-        ${subheadline ? `<p className="text-xl text-gray-600 mt-3 max-w-3xl">${jsxEscape(subheadline)}</p>` : ''}
-        <div className="mt-6 max-w-3xl space-y-4">
-${renderParagraphs(body, 'text-lg text-gray-700 leading-relaxed')}
-        </div>
-        <div className="overflow-x-auto mt-12">
-          <table className="w-full border-collapse">
-            <thead>
-              <tr>
-                <th className="bg-gray-50 text-left p-3 text-sm font-semibold text-gray-700">Agency</th>
-                <th className="bg-gray-50 text-left p-3 text-sm font-semibold text-gray-700">Their Pricing</th>
-                <th className="bg-gray-50 text-left p-3 text-sm font-semibold text-gray-700">FactoryJet</th>
-                <th className="bg-gray-50 text-left p-3 text-sm font-semibold text-gray-700">Our Advantage</th>
-              </tr>
-            </thead>
-            <tbody>
-${competitors
-  .map(
-    (cp) =>
-      `              <tr>
-                <td className="p-3 text-sm border-b border-gray-100 font-medium text-gray-900">${jsxEscape(cp.name)}</td>
-                <td className="p-3 text-sm border-b border-gray-100 text-gray-600">${jsxEscape(cp.theirPrice)}</td>
-                <td className="p-3 text-sm border-b border-gray-100 text-[#0052CC] font-semibold">${jsxEscape(cp.ourPrice)}</td>
-                <td className="p-3 text-sm border-b border-gray-100 text-gray-700">${jsxEscape(cp.ourAdvantage)}</td>
-              </tr>`,
-  )
-  .join('\n')}
-            </tbody>
-          </table>
-        </div>
-        ${
-          dataPoints.length > 0
-            ? `<ul className="mt-8 space-y-2 max-w-3xl">
-${dataPoints
-  .map(
-    (dp) =>
-      `          <li className="flex gap-3 text-gray-700"><span className="text-[#10B981] flex-shrink-0" aria-hidden="true">✓</span><span>${jsxEscape(dp)}</span></li>`,
-  )
-  .join('\n')}
-        </ul>`
-            : ''
-        }
-      </div>
-    </section>
+  // 3 data columns: Their pricing | FactoryJet (highlighted) | Why we cost less
+  // feature (left label) = competitor name
+  const columns = [
+    { label: 'Their pricing' },
+    { label: 'FactoryJet', isFactoryJet: true },
+    { label: 'Why we cost less' },
+  ];
+  const rows = mapCompetitorsToComparisonRows(s.competitors);
+
+  const lines = [
+    `      <ComparisonTable`,
+    `        eyebrow={${JSON.stringify(eyebrow)}}`,
+    `        headline={${JSON.stringify(headline)}}`,
+  ];
+  if (s.body) {
+    lines.push(`        lead={${JSON.stringify(s.body)}}`);
+  }
+  lines.push(
+    `        columns={${JSON.stringify(columns)}}`,
+    `        rows={${JSON.stringify(rows)}}`,
+    `      />`,
   );
-}`;
+  return lines.join('\n');
 }
 
 function genProcess(c: PageCopyOutput): string {
   const p = c.sections.process;
+  if (!p.steps || p.steps.length === 0) {
+    throw new Error(`[assemble] Process section has no steps`);
+  }
   const cityName = cityNameFromSlug(c.meta.slug);
+  const eyebrow = 'OUR PROCESS';
   const headline = p.headline ?? `How We Build Your ${cityName} Website`;
-  const steps = p.steps ?? [];
+  const stages = p.steps.map((s) => ({
+    number: padStepNumber(s.step),
+    title: s.title,
+    description: embedDuration(s.description, s.duration),
+  }));
 
-  return `function ProcessSection() {
-  return (
-    <section className="bg-gray-50 py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-[#FF6B35] text-sm font-semibold uppercase tracking-wider">Our Process</p>
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3">${jsxEscape(headline)}</h2>
-        <ol className="mt-12 space-y-8 max-w-3xl">
-${steps
-  .map(
-    (st) =>
-      `          <li className="flex gap-4">
-            <span className="flex-shrink-0 w-10 h-10 rounded-full bg-[#0052CC] text-white flex items-center justify-center font-bold">${st.step}</span>
-            <div>
-              <h3 className="font-semibold text-gray-900 text-lg">${jsxEscape(st.title)}</h3>
-              <p className="text-xs text-[#FF6B35] font-medium mt-1">${jsxEscape(st.duration)}</p>
-              <p className="text-gray-600 mt-2 leading-relaxed">${jsxEscape(st.description)}</p>
-            </div>
-          </li>`,
-  )
-  .join('\n')}
-        </ol>
-      </div>
-    </section>
-  );
-}`;
+  return [
+    `      <ServiceJourneyRow`,
+    `        eyebrow={${JSON.stringify(eyebrow)}}`,
+    `        headline={${JSON.stringify(headline)}}`,
+    `        stages={${JSON.stringify(stages)}}`,
+    `      />`,
+  ].join('\n');
 }
 
 function genIndustries(c: PageCopyOutput): string {
   const s = c.sections.industries;
   const cityName = cityNameFromSlug(c.meta.slug);
+  const eyebrow = `${cityName.toUpperCase()} × WEB DESIGN`;
   const headline = s.headline ?? `Web Design for ${cityName}'s Key Sectors`;
-  const body = s.body ?? '';
-  const sectors = s.sectors ?? [];
+  const sectors = s.sectors.map((sec) => ({
+    name: sec.name,
+    description: sec.description,
+    ...(sec.example ? { example: sec.example } : {}),
+  }));
 
-  return `function IndustriesSection() {
-  return (
-    <section className="bg-white py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-[#FF6B35] text-sm font-semibold uppercase tracking-wider">Industries We Serve</p>
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3">${jsxEscape(headline)}</h2>
-        ${body ? `<p className="text-lg text-gray-600 mt-6 max-w-3xl leading-relaxed">${jsxEscape(body)}</p>` : ''}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-${sectors
-  .map(
-    (sec) =>
-      `          <div className="border border-gray-200 rounded-xl p-6">
-            <h3 className="font-semibold text-gray-900">${jsxEscape(sec.name)}</h3>
-            <p className="text-gray-600 text-sm mt-2 leading-relaxed">${jsxEscape(sec.description)}</p>
-            ${sec.example ? `<p className="text-xs text-[#0052CC] mt-2 font-medium">${jsxEscape(sec.example)}</p>` : ''}
-          </div>`,
-  )
-  .join('\n')}
-        </div>
-      </div>
-    </section>
-  );
-}`;
+  const lines = [
+    `      <IndustriesGrid`,
+    `        eyebrow={${JSON.stringify(eyebrow)}}`,
+    `        headline={${JSON.stringify(headline)}}`,
+  ];
+  if (s.body) {
+    lines.push(`        lead={${JSON.stringify(s.body)}}`);
+  }
+  lines.push(`        sectors={${JSON.stringify(sectors)}}`, `      />`);
+  return lines.join('\n');
 }
 
 function genPricing(c: PageCopyOutput): string {
   const s = c.sections.pricing;
+  if (s.tiers.length < 3) {
+    throw new Error(
+      `[assemble] Pricing section must have exactly 3 tiers; found ${s.tiers.length}`,
+    );
+  }
   const cityName = cityNameFromSlug(c.meta.slug);
+  const eyebrow = 'TRANSPARENT PRICING';
   const headline = s.headline ?? `Web Design Pricing for ${cityName} Businesses`;
-  const body = s.body ?? '';
-  const tiers = s.tiers ?? [];
+  // Non-null assertions safe: length guard above guarantees all three exist.
+  const t0 = mapPricingTierForV2(s.tiers[0]!);
+  const t1 = mapPricingTierForV2(s.tiers[1]!);
+  const t2 = mapPricingTierForV2(s.tiers[2]!);
 
-  return `function PricingSection() {
-  return (
-    <section className="bg-gray-50 py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-[#FF6B35] text-sm font-semibold uppercase tracking-wider">Transparent Pricing</p>
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3">${jsxEscape(headline)}</h2>
-        ${body ? `<p className="text-lg text-gray-600 mt-6 max-w-3xl leading-relaxed">${jsxEscape(body)}</p>` : ''}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-${tiers
-  .map((tier) => {
-    const cardClass = tier.highlight
-      ? 'rounded-xl p-8 border-2 border-[#0052CC] shadow-lg bg-white'
-      : 'rounded-xl p-8 border border-gray-200 bg-white';
-    return `          <div className="${cardClass}">
-            ${tier.highlight ? `<div className="inline-block bg-[#0052CC] text-white text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-4">Most Popular</div>` : ''}
-            <h3 className="font-bold text-lg text-gray-900">${jsxEscape(tier.name)}</h3>
-            <p className="text-3xl font-bold text-[#0052CC] mt-2">${jsxEscape(tier.priceLabel)}</p>
-            <p className="text-gray-600 text-sm mt-2">${jsxEscape(tier.description)}</p>
-            <ul className="mt-4 space-y-2">
-${tier.includes
-  .map(
-    (inc) =>
-      `              <li className="flex gap-2 text-sm text-gray-700"><span className="text-[#0052CC] flex-shrink-0" aria-hidden="true">✓</span><span>${jsxEscape(inc)}</span></li>`,
-  )
-  .join('\n')}
-            </ul>
-            <p className="text-xs text-gray-500 mt-6 italic">${jsxEscape(tier.bestFor)}</p>
-          </div>`;
-  })
-  .join('\n')}
-        </div>
-        <div className="text-center mt-12">
-          <Link
-            href="/contact"
-            className="inline-block bg-[#0052CC] hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
-          >
-            Get a Free Quote
-          </Link>
-        </div>
-      </div>
-    </section>
+  const lines = [
+    `      <PricingTiers`,
+    `        eyebrow={${JSON.stringify(eyebrow)}}`,
+    `        headline={${JSON.stringify(headline)}}`,
+  ];
+  if (s.body) {
+    lines.push(`        lead={${JSON.stringify(s.body)}}`);
+  }
+  // Inline 3 separate object literals so TypeScript contextually types as the
+  // required readonly [PricingTier, PricingTier, PricingTier] tuple.
+  lines.push(
+    `        tiers={[`,
+    `          ${JSON.stringify(t0)},`,
+    `          ${JSON.stringify(t1)},`,
+    `          ${JSON.stringify(t2)}`,
+    `        ] as const}`,
+    `      />`,
   );
-}`;
+  return lines.join('\n');
 }
 
 function genFAQ(c: PageCopyOutput): string {
-  const items = c.sections.faq.items;
+  // sections.faq only has { items: FAQItem[] } — eyebrow/headline are hardcoded
   const cityName = cityNameFromSlug(c.meta.slug);
-  return `function FAQSection() {
-  return (
-    <section className="bg-white py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-[#FF6B35] text-sm font-semibold uppercase tracking-wider">FAQ</p>
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3">Common Questions from ${jsxEscape(cityName)} Businesses</h2>
-        <div className="mt-12 max-w-3xl">
-${items
-  .map(
-    (it) =>
-      `          <div className="border-b border-gray-200 py-6">
-            <h3 className="font-semibold text-gray-900 text-lg">${jsxEscape(it.question)}</h3>
-            <p className="text-gray-600 mt-3 leading-relaxed">${jsxEscape(it.answer)}</p>
-          </div>`,
-  )
-  .join('\n')}
-        </div>
-      </div>
-    </section>
-  );
-}`;
+  const headline = `Common Questions from ${cityName} Businesses`;
+  const items = c.sections.faq.items;
+
+  return [
+    `      <FAQ`,
+    `        eyebrow="COMMON QUESTIONS"`,
+    `        headline={${JSON.stringify(headline)}}`,
+    `        items={${JSON.stringify(items)}}`,
+    `      />`,
+  ].join('\n');
 }
 
 function genFinalCTA(c: PageCopyOutput): string {
   const s = c.sections.finalCta;
   const cityName = cityNameFromSlug(c.meta.slug);
+  const eyebrow = 'READY TO START';
   const headline = s.headline ?? `Ready to Build a ${cityName} Website That Wins Clients?`;
-  const body = s.body ?? '';
+  const ctaLabel = s.ctaText ?? 'Get a quote';
 
-  return `function FinalCTASection() {
-  return (
-    <section className="bg-[#0052CC] py-20 text-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-12 max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold">${jsxEscape(headline)}</h2>
-          <p className="text-lg mt-6 text-white/90 leading-relaxed">${jsxEscape(body)}</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-            <Link
-              href="/contact"
-              className="inline-block bg-white text-[#0052CC] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Get a Free Quote
-            </Link>
-            <a
-              href="https://wa.me/919103398557"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-            >
-              WhatsApp Us
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}`;
+  return [
+    `      <FinalCTA`,
+    `        variant="dark"`,
+    `        eyebrow={${JSON.stringify(eyebrow)}}`,
+    `        headline={${JSON.stringify(headline)}}`,
+    `        sub={${JSON.stringify(s.body)}}`,
+    `        primaryCta={{ label: ${JSON.stringify(ctaLabel)}, href: '/contact' }}`,
+    `      />`,
+  ].join('\n');
 }
+
+/* ------------------------------------------------------------------ */
+/*   Schema script — preserved unchanged from pre-patch assembler     */
+/* ------------------------------------------------------------------ */
 
 function genSchemaScript(c: PageCopyOutput): string {
   const cityName = cityNameFromSlug(c.meta.slug);
@@ -572,59 +506,65 @@ function pageFunctionName(citySlug: string, serviceSlug: string): string {
 
 export function generatePageTSX(output: PageCopyOutput): string {
   const fnName = pageFunctionName(output.input.city.citySlug, output.input.service.slug);
+  const country = output.input.country;
+  const citySlug = output.input.city.citySlug;
+  const svcSlug = output.input.service.slug;
 
-  return `// AUTO-GENERATED by pipeline/scripts-ts/src/step7/assembler.ts
-// Source: pipeline/scripts-ts/data/generated/${output.input.country}/${output.input.city.citySlug}/${output.input.service.slug}.copy.json
-// Do not edit by hand — re-run \`pnpm assemble --city ${output.input.city.citySlug} --service ${output.input.service.slug} --country ${output.input.country}\` after copy regeneration.
+  // Build header lines in an array to avoid template-literal backtick hazards
+  // from user-controlled data (meta.title, meta.description, canonicalUrl).
+  const header = [
+    `// AUTO-GENERATED by pipeline/scripts-ts/src/step7/assembler.ts`,
+    `// Source: pipeline/scripts-ts/data/generated/${country}/${citySlug}/${svcSlug}.copy.json`,
+    `// Do not edit by hand — re-run \`pnpm assemble --city ${citySlug} --service ${svcSlug} --country ${country}\` after copy regeneration.`,
+    ``,
+    `import type { Metadata } from 'next';`,
+    `import Hero from '@/components/v2/Hero';`,
+    `import CityContextSection from '@/components/v2/CityContextSection';`,
+    `import ServiceExplanation from '@/components/v2/ServiceExplanation';`,
+    `import ComparisonTable from '@/components/v2/ComparisonTable';`,
+    `import ServiceJourneyRow from '@/components/v2/ServiceJourneyRow';`,
+    `import IndustriesGrid from '@/components/v2/IndustriesGrid';`,
+    `import PricingTiers from '@/components/v2/PricingTiers';`,
+    `import FAQ from '@/components/v2/FAQ';`,
+    `import FinalCTA from '@/components/v2/FinalCTA';`,
+    ``,
+    `export const metadata: Metadata = {`,
+    `  title: '${jsString(output.meta.title)}',`,
+    `  description: '${jsString(output.meta.description)}',`,
+    `  alternates: {`,
+    `    canonical: 'https://factoryjet.com${output.meta.canonicalUrl}',`,
+    `  },`,
+    `};`,
+    ``,
+    `export default function ${fnName}() {`,
+    `  return (`,
+    `    <main className="bg-fj-cream">`,
+  ];
 
-import type { Metadata } from 'next';
-import Link from 'next/link';
+  const footer = [
+    `    </main>`,
+    `  );`,
+    `}`,
+    ``,
+  ];
 
-export const metadata: Metadata = {
-  title: '${jsString(output.meta.title)}',
-  description: '${jsString(output.meta.description)}',
-  alternates: {
-    canonical: 'https://factoryjet.com${output.meta.canonicalUrl}',
-  },
-};
-
-export default function ${fnName}() {
-  return (
-    <main className="bg-white font-inter">
-      <HeroSection />
-      <CityContextSection />
-      <ServiceExplanationSection />
-      <WhyFactoryJetSection />
-      <ProcessSection />
-      <IndustriesSection />
-      <PricingSection />
-      <FAQSection />
-      <FinalCTASection />
-      <SchemaScript />
-    </main>
-  );
-}
-
-${genHero(output)}
-
-${genCityContext(output)}
-
-${genServiceExplanation(output)}
-
-${genWhyFactoryJet(output)}
-
-${genProcess(output)}
-
-${genIndustries(output)}
-
-${genPricing(output)}
-
-${genFAQ(output)}
-
-${genFinalCTA(output)}
-
-${genSchemaScript(output)}
-`;
+  // Emit all section JSX then the preserved SchemaScript function.
+  return [
+    ...header,
+    genHero(output),
+    genCityContext(output),
+    genServiceExplanation(output),
+    genWhyFactoryJet(output),
+    genProcess(output),
+    genIndustries(output),
+    genPricing(output),
+    genFAQ(output),
+    genFinalCTA(output),
+    `      <SchemaScript />`,
+    ...footer,
+    genSchemaScript(output),
+    ``,
+  ].join('\n');
 }
 
 /* ------------------------------------------------------------------ */

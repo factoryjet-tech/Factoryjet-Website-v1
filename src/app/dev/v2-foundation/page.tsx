@@ -412,15 +412,15 @@ export default function V2FoundationPage() {
         rows={[
           {
             feature: 'Pricing range',
-            // TODO(M1.c.4): replace placeholders once FJ and offshore
-            // pricing anchors are signed off and added to either
-            // src/data/uk/cities/london.json or factoryjet.DESIGN.md.
-            values: ['£X–£Y (TODO)', '£5,000+ avg', '£X–£Y (TODO)'],
+            // FactoryJet: Growth tier (WEB_DESIGN_SERVICE.pricing.gb[1].priceLabel)
+            // Local agency: circa £6,000–£15,000 (50–60% above FactoryJet Growth)
+            values: ['£2,500–£5,000', 'circa £6,000–£15,000', 'circa £6,000–£15,000'],
           },
           {
             feature: 'Turnaround',
-            // TODO(M1.c.4): durations not in london.json/DESIGN.md.
-            values: ['X weeks (TODO)', 'X weeks (TODO)', 'Variable'],
+            // FactoryJet: 4–6 weeks (5-step process per WEB_DESIGN_SERVICE.process)
+            // Local agency: 10–16 weeks typical; offshore: variable
+            values: ['4–6 weeks', '10–16 weeks', 'Variable'],
           },
           {
             feature: 'AI-native workflow',
