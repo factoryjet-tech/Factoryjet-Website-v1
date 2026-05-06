@@ -27,6 +27,10 @@ export interface SiteFooterColumn {
 export interface SiteFooterProps {
   logoText?: string;
   tagline?: string;
+  /** Defaults exclude a Locations column post-M1.d.3 — the previous default
+   *  hardcoded UK cities, which broke the locale-agnostic v2 contract. Pass
+   *  an explicit `linkColumns` array (typically including a Locations column
+   *  with the relevant per-locale city list) when locale routing is needed. */
   linkColumns?: ReadonlyArray<SiteFooterColumn>;
   bottomRow?: {
     copyright?: string;
@@ -57,16 +61,11 @@ const DEFAULT_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'Contact', href: '/contact' },
     ],
   },
-  {
-    heading: 'Locations',
-    links: [
-      { label: 'London', href: '/uk/london' },
-      { label: 'Manchester', href: '/uk/manchester' },
-      { label: 'Birmingham', href: '/uk/birmingham' },
-      { label: 'Leeds', href: '/uk/leeds' },
-      { label: 'Edinburgh', href: '/uk/edinburgh' },
-    ],
-  },
+  // M1.d.3: Locations column removed from defaults. The previous default
+  // hardcoded country-specific cities, which broke the locale-agnostic v2
+  // contract. Callers pass an explicit Locations column with the relevant
+  // per-locale city list via the `linkColumns` prop when locale routing
+  // requires it.
 ];
 
 const DEFAULT_BOTTOM_ROW = {

@@ -655,11 +655,49 @@ export default function V2FoundationPage() {
         </div>
       </div>
 
-      {/* === SiteFooter === */}
+      {/* === SiteFooter ===
+       * Passes an explicit `linkColumns` set so the demo retains the
+       * Services / Company / Locations layout. Locations column dropped
+       * from the component's DEFAULT_COLUMNS in M1.d.3 — callers now own
+       * the per-locale city list (this dev page mirrors a /uk route, so
+       * UK cities are passed here verbatim). */}
       <SectionLabel slug="M1.c.2.5 — SiteFooter (would normally render once per page)" />
       <div className="mx-auto max-w-[1200px] px-4 pb-12 lg:px-6">
         <div className="overflow-hidden rounded-2xl border border-fj-neutral-200">
-          <SiteFooter />
+          <SiteFooter
+            linkColumns={[
+              {
+                heading: 'Services',
+                links: [
+                  { label: 'Web Design', href: '/services/web-design' },
+                  { label: 'E-Commerce', href: '/services/ecommerce-development' },
+                  { label: 'AI Agent Development', href: '/services/ai-agent-development' },
+                  { label: 'AI SEO (GEO/AEO)', href: '/services/ai-seo' },
+                  { label: 'Shopify Development', href: '/services/shopify-development' },
+                ],
+              },
+              {
+                heading: 'Company',
+                links: [
+                  { label: 'About', href: '/about' },
+                  { label: 'Portfolio', href: '/portfolio' },
+                  { label: 'Case Studies', href: '/case' },
+                  { label: 'Blog', href: '/blog' },
+                  { label: 'Contact', href: '/contact' },
+                ],
+              },
+              {
+                heading: 'Locations',
+                links: [
+                  { label: 'London', href: '/uk/london' },
+                  { label: 'Manchester', href: '/uk/manchester' },
+                  { label: 'Birmingham', href: '/uk/birmingham' },
+                  { label: 'Leeds', href: '/uk/leeds' },
+                  { label: 'Edinburgh', href: '/uk/edinburgh' },
+                ],
+              },
+            ]}
+          />
         </div>
       </div>
     </main>
