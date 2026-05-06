@@ -3,33 +3,59 @@
 This directory holds FactoryJet Design System v2.0 components.
 
 **Read first:**
-- `factoryjet.DESIGN.md` (canonical design system — rewritten May 5, 2026
-  for the aesthetic pivot. The cream-Fraunces canon is gone; the live
-  `factoryjet.com/uk` is now the visual reference.)
+- `factoryjet.DESIGN.md` (canonical design system — typography pivot
+  May 5, canon corrected May 6. The cream-light v2 surface, restraint
+  references, and never-dark hero rule all carry forward; only the
+  type stack changed.)
 - `CLAUDE.md` (project anchor)
 
-**New design language (post M1.d.1 pivot):**
+**Design language summary (post M1.d.1.1 canon correction):**
 - Display: **Clash Display 700** (Fontshare) — replaces Fraunces.
+  Fraunces remains loaded via `next/font` for v1-page parity but no v2
+  component consumes it after M1.d.1.
 - Body: **Inter** (next/font) — replaces Geist Sans as v2 default.
-- Mono: **Geist Mono** — kept.
-- Surface: **navy `#0A0F1C` hero default**, white / off-white sections
-  alternating, fj-cream now an **accent only** (not the dominant BG).
-- Accents: Jet Blue primary `#0052CC`, Jet Blue Bright `#3B82F6` for
-  hero CTAs, Jet Orange `#FF6B35` reinstated as secondary accent.
-- Glassmorphism allowed on stat cards over dark surfaces.
-- Gradient text (`.fj-gradient-heading`) allowed on H2 conviction
-  headings over navy.
+  Geist Sans remains loaded; v2 components do not consume it.
+- Mono: **Geist Mono** — kept (for `.fj-eyebrow`).
+- Surface: **`fj-cream` `#FAFAF7` is the dominant page BG (~70%)**, white /
+  off-white (`fj-neutral-50`) sections alternating for rhythm. `fj-navy`
+  / `fj-navy-deep` are reserved for `StrategicDarkSection` mid-page
+  rhythm breaks and `SiteFooter` only — **NOT** for hero, **NOT** for
+  default surface (max 2 dark sections per page).
+- Hero: **NEVER dark.** Light cream BG default with optional `rightSlot`
+  for imagery. Hard rule across all page types.
+- Accents: Jet Blue `#0052CC` primary (~10%), Jet Orange `#FF6B35`
+  secondary, small-area only (FLAGSHIP tag, JetSDR variant).
+- **Glassmorphism BANNED** everywhere except optionally on `FinalCTA`
+  (the single-instance allowance from the original v2 spec).
+- **Gradient text on headings BANNED.** Solid ink with optional Jet
+  Blue accent words.
+
+**Visual / layout / restraint references** (preserved from original v2):
+Stripe, Linear, Vercel, Mercury, Anthropic, Harvey AI.
+
+**Typography-only reference**: live `factoryjet.com/uk` for the Clash
+Display + Inter + Geist Mono font choices. Its dark hero, glassmorphism,
+gradient H2, and full-bleed stock-photo backgrounds are NOT adopted.
 
 **Dropped patterns:**
-- Italic-emphasis on conviction words (the pre-pivot signature). Headlines
-  are now confident statements, not editorial flourishes.
-- Fraunces-italic boring-stats parentheticals. If a parenthetical earns
-  its place, it lives in plain Inter italic at body-small.
-- Asymmetric-grid mandate. Symmetric 3-up grids are now valid (pricing,
-  case studies, industry cards).
+- Italic-emphasis on conviction words. Display-font compatibility —
+  Clash Display does not render inline italic emphasis at the scale
+  Fraunces did. Headlines are confident statements, not editorial
+  flourishes.
+- Fraunces-italic boring-stats parentheticals. Same display-font reason.
+  Stats render in plain Inter body text below the numeral.
+
+**Preserved from original v2:**
+- Asymmetric grids (60/40, 7/5) for narrative sections + symmetric 3-up
+  grids for repeating cards — both lanes valid.
+- 80–96px major-section vertical rhythm (set in M1.c.2.5 review).
+- Editorial restraint, single accent colour per moment.
+- All M1.a/M1.b/M1.c.* component layouts.
 
 **18 components currently in this directory** (no list changes in M1.d.1
-— reskins land in M1.d.2 → M1.d.5):
+— per-component reskin patches strip italic-emphasis className
+applications + Fraunces-italic boring-stats applications in M1.d.2 →
+M1.d.5):
 
 ```
 BigThreeTrustBlock     CityContextSection     CaseStudyCard
@@ -42,14 +68,15 @@ SiteFooter             SiteHeader             StrategicDarkSection
 
 **M1.d roadmap:**
 
-| Patch  | Scope                                                                              |
-|--------|------------------------------------------------------------------------------------|
-| M1.d.1 | **Foundation reset (this PR).** Fonts, fj-* tokens, .fj-display class, DESIGN.md, README. No component implementation touched. |
-| M1.d.2 | Reskin Heading + Hero + FinalCTA (the navy-hero spine).                            |
-| M1.d.3 | Reskin BoringStatsRow + StrategicDarkSection + BigThreeTrustBlock + CityContextSection (the proof + dark-rhythm components). |
-| M1.d.4 | Reskin FAQ + PricingTiers + IndustriesGrid + ComparisonTable + ServiceJourneyRow + ServiceExplanation (the content body). |
-| M1.d.5 | Reskin SiteHeader + SiteFooter + ImageBlock + LogoBar + CaseStudyCard (chrome + imagery). |
-| M1.d.6 | **Add CountryPageHero (component #19)** + locale-data scaffolding.                 |
+| Patch    | Scope                                                                                                                |
+|----------|----------------------------------------------------------------------------------------------------------------------|
+| M1.d.1   | **Foundation reset (this PR).** Fonts, fj-* tokens, `.fj-display` class, DESIGN.md, README. No component implementation touched. |
+| M1.d.1.1 | **Canon correction (this PR, additional commit).** DESIGN.md + README narrowed to typography-only pivot. Gradient-heading utility class deleted from `src/index.css`. |
+| M1.d.2   | Strip italic-emphasis em rules from Heading + Hero + FinalCTA.                                                       |
+| M1.d.3   | Strip Fraunces-italic boring-stats parentheticals from BoringStatsRow + StrategicDarkSection + BigThreeTrustBlock + CityContextSection. |
+| M1.d.4   | Touch-up FAQ + PricingTiers + IndustriesGrid + ComparisonTable + ServiceJourneyRow + ServiceExplanation for type stack changes. |
+| M1.d.5   | Touch-up SiteHeader + SiteFooter + ImageBlock + LogoBar + CaseStudyCard.                                             |
+| M1.d.6   | **Add CountryPageHero (component #19)** + locale-data scaffolding.                                                   |
 
 **Locale-agnosticism (mandatory by M1.d.5 close):**
 
@@ -75,25 +102,32 @@ The full per-locale data table lives in `factoryjet.DESIGN.md` §5.3.
 
 - Inter substitutes (Roboto, Poppins, DM Sans, Open Sans, Montserrat,
   Manrope, Plus Jakarta Sans).
-- Fraunces in v2 components (still loaded for v1 page parity, not consumed here).
+- Fraunces / Source Serif 4 / Geist Sans in v2 components (loaded for
+  v1-page parity, not consumed here).
 - Italic-emphasis `<em>` patterns inside `<Heading>`.
 - Fraunces-italic parentheticals (the pre-pivot "boring stats" voice).
+- Dark hero on any page type.
+- Glassmorphism anywhere except optionally on `FinalCTA`.
+- Gradient text on headings.
 - Glow effects, neon-on-dark combinations, gradient orbs, particles.
+- Stock-photo hero backgrounds.
 - Emoji as functional icons (use inline SVG).
 
 **Build sequence (frozen):**
 
-- M0 — Foundation tokens (cream + Fraunces, now superseded).
+- M0 — Foundation tokens (cream + Fraunces). Cream surface preserved
+  through every later milestone; Fraunces superseded by Clash in M1.d.1.
 - M1.a — Foundation components (BoringStatsRow, StrategicDarkSection,
   BigThreeTrustBlock).
 - M1.b — Hero + FinalCTA + italic-emphasis em-tag system (italic system
-  is being dropped post-pivot; component shells stay).
+  is being dropped via M1.d.2 per-component reskin; component shells stay).
 - M1.c.1 — CityContextSection, FAQ, PricingTiers, IndustriesGrid.
 - M1.c.2 — ComparisonTable, ServiceJourneyRow, ServiceExplanation.
 - M1.c.2.5 — SiteHeader, SiteFooter, ImageBlock, LogoBar, CaseStudyCard;
   BoringStatsRow alignment fix.
-- **M1.d.1 — Aesthetic-pivot foundation reset (this PR).**
-- M1.d.2 → M1.d.6 — Component reskins + CountryPageHero.
+- **M1.d.1 — Typography pivot foundation reset (this PR).**
+- **M1.d.1.1 — Canon correction (this PR, additional commit).**
+- M1.d.2 → M1.d.6 — Per-component patches + CountryPageHero.
 
 Components from `feat/pipeline-m1.5-components-v2` (PR #34) are NOT
 migrated here — that branch was built against a superseded spec.

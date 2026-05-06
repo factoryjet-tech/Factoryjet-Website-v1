@@ -79,21 +79,25 @@ export default {
         // === FactoryJet Design System v2.0 (post M1.d.1 pivot) ===
         // v2 components consume the fj-* prefix. Tokens from the
         // pre-pivot palette are RETAINED to preserve every existing
-        // call site; the pivot adds the navy/bright-blue surface
-        // tokens that the live /uk aesthetic requires.
+        // call site; the pivot adds dark-surface tokens for the
+        // dark-section rhythm-break + footer slots only.
 
         // --- Pivot additions (M1.d.1) ---
-        'fj-navy': '#0A0F1C',           // Live /uk hero BG.
-        'fj-navy-deep': '#070B14',      // Deeper sections, footer.
-        'fj-jet-blue-bright': '#3B82F6',// Hero CTA buttons.
+        // Reserved for SiteFooter + StrategicDarkSection mid-page rhythm
+        // breaks only. NOT for hero. NOT for default surface. Max 2 dark
+        // sections per page (per factoryjet.DESIGN.md §2.2 + §2.5).
+        'fj-navy': '#0A0F1C',
+        'fj-navy-deep': '#070B14',
+        // Reserved (loaded for future hero-CTA accent variants); not in default v2 use.
+        'fj-jet-blue-bright': '#3B82F6',
 
         // --- Pre-existing tokens (kept) ---
-        'fj-cream': '#FAFAF7',          // Now an ACCENT only (not dominant BG).
+        'fj-cream': '#FAFAF7',          // Dominant page BG (~70%). Restored as canon post-M1.d.1.1.
         'fj-ink': '#1A1A1A',
         'fj-jet-blue': '#0052CC',
         'fj-jet-blue-tint': '#E6F0FF',
         'fj-jet-blue-on-dark': '#4A8FFF',  // Contrast-safe Jet Blue inside dark sections.
-        'fj-jet-orange': '#FF6B35',     // Reinstated as secondary accent post-pivot.
+        'fj-jet-orange': '#FF6B35',     // Secondary accent — small-area only (FLAGSHIP tag, JetSDR variant).
         'fj-jet-orange-tint': '#FEF3E8',
         'fj-jet-green': '#10B981',
         'fj-jet-green-tint': '#E8FAF1',
