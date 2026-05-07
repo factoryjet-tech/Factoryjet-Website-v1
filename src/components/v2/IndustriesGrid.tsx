@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Heading } from './Heading';
+import MotionFadeUp from './MotionFadeUp';
 
 /**
  * IndustriesGrid — v2.0 industries block.
@@ -66,31 +67,30 @@ export default function IndustriesGrid({
         {/* Sectors grid */}
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {sectors.map((sector, i) => (
-            <article
-              key={i}
-              className="rounded-2xl border border-fj-neutral-200 bg-fj-neutral-50 p-6 transition-colors hover:border-fj-jet-blue"
-            >
-              <Heading as="h3" size="h4" className="text-fj-ink">
-                {sector.name}
-              </Heading>
-              <p className="mt-3 font-fj-body text-[0.9375rem] leading-[1.55] text-fj-neutral-600">
-                {sector.description}
-              </p>
-              {sector.example && (
-                <p className="mt-3 font-fj-body text-[0.8125rem] font-medium text-fj-jet-blue">
-                  {sector.example}
+            <MotionFadeUp key={i} delay={i * 0.08}>
+              <article className="rounded-2xl border border-fj-neutral-200 bg-fj-neutral-50 p-6 transition-all duration-200 hover:-translate-y-1 hover:border-fj-jet-blue">
+                <Heading as="h3" size="h4" className="text-fj-ink">
+                  {sector.name}
+                </Heading>
+                <p className="mt-3 font-fj-body text-[0.9375rem] leading-[1.55] text-fj-neutral-600">
+                  {sector.description}
                 </p>
-              )}
-              {sector.linkLabel && sector.linkHref && (
-                <Link
-                  href={sector.linkHref}
-                  className="mt-4 inline-flex items-center gap-2 font-fj-body text-[0.9375rem] font-semibold text-fj-jet-blue hover:underline"
-                >
-                  {sector.linkLabel}
-                  <span aria-hidden>→</span>
-                </Link>
-              )}
-            </article>
+                {sector.example && (
+                  <p className="mt-3 font-fj-body text-[0.8125rem] font-medium text-fj-jet-blue">
+                    {sector.example}
+                  </p>
+                )}
+                {sector.linkLabel && sector.linkHref && (
+                  <Link
+                    href={sector.linkHref}
+                    className="mt-4 inline-flex items-center gap-2 font-fj-body text-[0.9375rem] font-semibold text-fj-jet-blue hover:underline"
+                  >
+                    {sector.linkLabel}
+                    <span aria-hidden>→</span>
+                  </Link>
+                )}
+              </article>
+            </MotionFadeUp>
           ))}
         </div>
       </div>

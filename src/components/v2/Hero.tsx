@@ -94,7 +94,7 @@ function HeroContent({
       <Heading
         as="h1"
         size="hero"
-        className={`text-fj-ink max-w-[20ch] ${eyebrow ? 'mt-4 lg:mt-5' : ''}`}
+        className={`text-fj-ink max-w-[28ch] ${eyebrow ? 'mt-4 lg:mt-5' : ''}`}
       >
         {headline}
       </Heading>

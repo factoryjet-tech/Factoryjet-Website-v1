@@ -193,6 +193,7 @@ function genHero(c: PageCopyOutput): string {
   const lead = s.body ?? '';
   const ctaLabel = s.ctaText ?? 'Get a quote';
   const trustItems = s.dataPoints ?? [];
+  const svcSlug = c.input.service.slug;
 
   return [
     `      <Hero`,
@@ -201,6 +202,7 @@ function genHero(c: PageCopyOutput): string {
     `        lead={${JSON.stringify(lead)}}`,
     `        primaryCta={{ label: ${JSON.stringify(ctaLabel)}, href: '/contact' }}`,
     `        trustItems={${JSON.stringify(trustItems)}}`,
+    `        rightSlot={<img src="/images/services/${svcSlug}/hero.webp" alt="" aria-hidden="true" className="w-full rounded-2xl object-cover" />}`,
     `      />`,
   ].join('\n');
 }
@@ -237,6 +239,7 @@ function genServiceExplanation(c: PageCopyOutput): string {
   const lead = paragraphs[0] ?? '';
   const bodyParagraphs = paragraphs.slice(1);
   const bodyJsx = bodyParagraphs.map((p) => `<p>${jsxEscape(p)}</p>`).join('');
+  const svcSlug = c.input.service.slug;
 
   const lines = [
     `      <ServiceExplanation`,
@@ -247,7 +250,10 @@ function genServiceExplanation(c: PageCopyOutput): string {
   if (bodyJsx) {
     lines.push(`        body={<>${bodyJsx}</>}`);
   }
-  lines.push(`      />`);
+  lines.push(
+    `        rightSlot={<img src="/images/services/${svcSlug}/service-explanation.webp" alt="" aria-hidden="true" className="w-full rounded-2xl object-cover" />}`,
+    `      />`,
+  );
   return lines.join('\n');
 }
 

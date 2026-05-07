@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import { Heading } from './Heading';
+import MotionFadeUp from './MotionFadeUp';
 
 /**
  * ServiceJourneyRow — v2.0 delivery-stage row.
@@ -100,7 +101,11 @@ export default function ServiceJourneyRow({
         {/* Stages grid */}
         <div className="mt-16 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-8 lg:grid-cols-5 lg:gap-6">
           {stages.map((stage, i) => (
-            <div key={i} className="border-t border-fj-neutral-200 pt-6">
+            <MotionFadeUp
+              key={i}
+              delay={i * 0.08}
+              className="border-t border-fj-neutral-200 pt-6 transition-transform duration-200 hover:-translate-y-1"
+            >
               <p className="fj-display font-fj-display text-[3rem] font-medium leading-none tracking-[-0.025em] text-fj-jet-blue md:text-[3.5rem]">
                 {stage.number}
               </p>
@@ -110,7 +115,7 @@ export default function ServiceJourneyRow({
               <p className="mt-3 font-fj-body text-[0.9375rem] leading-[1.55] text-fj-neutral-600">
                 {stage.description}
               </p>
-            </div>
+            </MotionFadeUp>
           ))}
         </div>
       </div>

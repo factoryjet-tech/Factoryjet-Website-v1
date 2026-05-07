@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import { Heading } from './Heading';
+import MotionFadeUp from './MotionFadeUp';
 
 /**
  * ServiceExplanation — v2.0 60/40 asymmetric explanation block.
@@ -51,7 +52,7 @@ export default function ServiceExplanation({
       <div className="mx-auto max-w-[1120px] px-6 md:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Content (60%) */}
-          <div className={contentClass}>
+          <MotionFadeUp className={contentClass}>
             {eyebrow && <p className="fj-eyebrow">{eyebrow}</p>}
             <Heading
               as="h2"
@@ -68,10 +69,14 @@ export default function ServiceExplanation({
                 {body}
               </div>
             )}
-          </div>
+          </MotionFadeUp>
 
           {/* Right slot (40%) */}
-          {rightSlot && <div className={slotClass}>{rightSlot}</div>}
+          {rightSlot && (
+            <MotionFadeUp delay={0.15} className={slotClass}>
+              {rightSlot}
+            </MotionFadeUp>
+          )}
         </div>
       </div>
     </section>

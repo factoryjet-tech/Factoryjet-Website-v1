@@ -1,4 +1,5 @@
 import { Heading } from './Heading';
+import MotionFadeUp from './MotionFadeUp';
 
 /**
  * CityContextSection — v2.0 city-context block.
@@ -8,7 +9,7 @@ import { Heading } from './Heading';
  * each with a numeric value (Clash Display via .fj-display, Jet Blue), label, and
  * external source link.
  *
- * Pure server component.
+ * Pure server component (MotionFadeUp is the client boundary for scroll animation).
  */
 
 import type { ReactNode } from 'react';
@@ -40,7 +41,7 @@ export default function CityContextSection({
       <div className="mx-auto max-w-[1120px] px-6 md:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Left — content (7/12) */}
-          <div className="lg:col-span-7">
+          <MotionFadeUp className="lg:col-span-7">
             {eyebrow && <p className="fj-eyebrow">{eyebrow}</p>}
             <Heading
               as="h2"
@@ -59,12 +60,12 @@ export default function CityContextSection({
                 </p>
               ))}
             </div>
-          </div>
+          </MotionFadeUp>
 
           {/* Right — stats (5/12) */}
           <div className="flex flex-col gap-8 lg:col-span-5">
             {stats.map((s, i) => (
-              <div key={i} className="flex flex-col items-start text-left">
+              <MotionFadeUp key={i} delay={i * 0.1} className="flex flex-col items-start text-left">
                 <p className="fj-display font-fj-display text-[3.5rem] font-medium leading-none tracking-[-0.04em] text-fj-jet-blue md:text-[5.5rem]">
                   {s.value}
                 </p>
@@ -79,7 +80,7 @@ export default function CityContextSection({
                 >
                   {s.sourceLabel ?? 'Source ↗'}
                 </a>
-              </div>
+              </MotionFadeUp>
             ))}
           </div>
         </div>

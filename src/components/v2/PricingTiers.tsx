@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Heading } from './Heading';
+import MotionFadeUp from './MotionFadeUp';
 
 /**
  * PricingTiers — v2.0 pricing block per factoryjet.DESIGN.md §5.6 +
@@ -73,7 +74,9 @@ export default function PricingTiers({
         {/* Tiers grid */}
         <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-3">
           {tiers.map((tier, i) => (
-            <TierCard key={i} tier={tier} />
+            <MotionFadeUp key={i} delay={i * 0.1} className="transition-transform duration-200 hover:-translate-y-1">
+              <TierCard tier={tier} />
+            </MotionFadeUp>
           ))}
         </div>
 
@@ -100,14 +103,14 @@ function TierCard({ tier }: { tier: PricingTier }) {
     : 'block w-full rounded-lg border border-fj-ink bg-transparent px-6 py-3.5 text-center font-fj-body text-[0.9375rem] font-semibold text-fj-ink transition-colors hover:bg-fj-ink hover:text-fj-cream focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue';
 
   return (
-    <div className={`flex flex-col rounded-2xl bg-fj-cream p-8 ${borderClass}`}>
+    <div className={`flex h-full flex-col rounded-2xl bg-fj-cream p-8 ${borderClass}`}>
       {isPopular && (
         <p className="fj-eyebrow mb-4 text-fj-jet-blue">POPULAR</p>
       )}
       <Heading as="h3" size="h4" className="text-fj-ink">
         {tier.name}
       </Heading>
-      <p className="fj-display font-fj-display mt-6 text-[2.5rem] font-medium leading-none tracking-[-0.025em] text-fj-ink md:text-[3.5rem]">
+      <p className="fj-display font-fj-display mt-6 text-[clamp(2rem,3.5vw,3rem)] font-medium leading-[1.05] tracking-[-0.025em] text-fj-ink">
         {tier.priceRange}
       </p>
       <p className="mt-3 font-fj-body text-[0.9375rem] text-fj-neutral-600">
