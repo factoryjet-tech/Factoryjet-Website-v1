@@ -44,9 +44,9 @@ export interface HeadingProps
  * Tracking and line-height stay constant across breakpoints (per §3.3/3.4
  * which only specifies smaller mobile font sizes, not different metrics). */
 const SIZE_CLASSES: Record<HeadingSize, string> = {
-  hero: 'text-[3.5rem] md:text-[6.5rem] leading-[1.02] tracking-[-0.03em]',
+  hero: 'text-[clamp(2.5rem,5.5vw,5rem)] leading-[1.05] tracking-[-0.02em] text-balance',
   h1: 'text-[2.75rem] md:text-[5rem] leading-[1.05] tracking-[-0.025em]',
-  h2: 'text-[2rem] md:text-[3.5rem] leading-[1.1] tracking-[-0.02em]',
+  h2: 'text-[clamp(2rem,4vw,3.5rem)] leading-[1.1] tracking-[-0.015em] text-balance',
   h3: 'text-[1.5rem] md:text-[2.25rem] leading-[1.2] tracking-[-0.015em]',
   // h4 has no mobile-specific override per §3.4.
   h4: 'text-[1.5rem] leading-[1.3] tracking-[-0.01em]',
