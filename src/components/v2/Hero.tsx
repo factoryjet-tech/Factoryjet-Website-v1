@@ -46,7 +46,7 @@ export default function Hero({
   const hasRightSlot = rightSlot !== undefined && rightSlot !== null;
 
   return (
-    <section className="bg-fj-cream py-24 md:py-40">
+    <section className="bg-fj-cream pt-24 lg:pt-28 pb-24 md:pb-40">
       <div className="mx-auto max-w-[1120px] px-6 md:px-8">
         {hasRightSlot ? (
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
@@ -94,7 +94,7 @@ function HeroContent({
       <Heading
         as="h1"
         size="hero"
-        className={`text-fj-ink ${eyebrow ? 'mt-6' : ''}`}
+        className={`text-fj-ink max-w-[20ch] ${eyebrow ? 'mt-4 lg:mt-5' : ''}`}
       >
         {headline}
       </Heading>
