@@ -44,6 +44,7 @@ import { post as salesAutomationAiUkSmbsWorkflowsPost } from './posts/sales-auto
 import { post as bestSalesAutomationSmallBusinessUk2026Post } from './posts/best-sales-automation-small-business-uk-2026';
 import { post as salesAutomationToolsUkSmbsRoi2026Post } from './posts/sales-automation-tools-uk-smbs-roi-2026';
 import { post as sellAiAutomationServicesUkAgencyPlaybook2026Post } from './posts/sell-ai-automation-services-uk-agency-playbook-2026';
+import { post as chooseWebDesignAgencyUk2026QuestionsPost } from './posts/choose-web-design-agency-uk-2026-questions';
 
 export const POSTS: BlogPost[] = [
   // --- WEB DESIGN & STRATEGY ---
@@ -4621,4 +4622,5 @@ export const POSTS: BlogPost[] = [
   bestSalesAutomationSmallBusinessUk2026Post,
   salesAutomationToolsUkSmbsRoi2026Post,
   sellAiAutomationServicesUkAgencyPlaybook2026Post,
+  chooseWebDesignAgencyUk2026QuestionsPost,
 ];
