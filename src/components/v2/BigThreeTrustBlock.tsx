@@ -1,49 +1,139 @@
 /**
- * BigThreeTrustBlock — v2.0 component per factoryjet.DESIGN.md §5.2.
+ * BigThreeTrustBlock — v2.1 visual upgrade.
  *
- * Three-cell trust signal, larger and more prominent than BoringStatsRow.
- * TypeScript tuple-enforced to exactly 3 stats — sparse trust rows look
- * weak; the type system prevents passing 1 or 2.
+ * Design language (Path A — CSS/JSX only):
+ *   - Uniform tinted band (same system as BoringStatsRow) — the section IS
+ *     the design container. No per-element glows on light backgrounds.
+ *   - Gradient vertical dividers replace flat divide-x lines (same technique
+ *     as BoringStatsRow — fades in/out, never clips at edges)
+ *   - Numbers: text-fj-jet-blue on the tinted band — intentional color harmony
+ *   - Blue accent bars above each number (Jasper/Aura pattern — kept from v2.0)
+ *   - Padding reduced from py-14 lg:py-20 to py-10 md:py-12 — trust strip
+ *     sits more naturally between Hero and the next content section
  *
- * Spec:
- *   - Background: bg-fj-neutral-50 (subtle warmth, NOT pure white, NOT cream)
- *   - 3-column grid on desktop, stacked on mobile, --space-7 (48px) gap
- *   - Number:     --type-stat   (88px desktop / 56px mobile, Clash Display 700, ink, -0.04em)
- *   - Label:      --type-body-sm (15px Inter, neutral-600)
- *   - Microcopy:  --type-caption (13px Inter, neutral-400, parenthesised — plain post M1.d.2)
- *   - py:         --space-9     (96px desktop / 64px mobile)
- *   - container:  --container-default (1120px max)
+ * Positioned immediately after Hero per B2B non-negotiable rule #1:
+ * logo bar / trust strip must be section 2 — universal convention.
  *
  * Pure server component.
  */
 
-export interface TrustStat {
-  /** The big number/figure, e.g. "60-day", "100%", "4.9/5" */
-  number: string;
-  /** Label below the number — descriptive in body-sm */
+export interface CityCountStat {
+  value: string;
   label: string;
-  /** Optional parenthetical micro-line in the "boring stats" voice. Plain
-   *  Inter body text post M1.d.2 — italic styling dropped. */
-  microcopy?: string;
+  source?: string;
 }
 
 export interface BigThreeTrustBlockProps {
-  /** Tuple of EXACTLY 3 stats. TypeScript will reject anything else. */
-  stats: [TrustStat, TrustStat, TrustStat];
+  eyebrow?: string;
+  headline?: string;
+  cityCount?: CityCountStat;
 }
 
-export default function BigThreeTrustBlock({ stats }: BigThreeTrustBlockProps) {
+interface StatCell {
+  number: string;
+  label: string;
+  microcopy?: string;
+}
+
+const CORE_STATS: [StatCell, StatCell, StatCell] = [
+  {
+    number: '500+',
+    label: 'businesses served',
+    microcopy: 'US, UK, and UAE clients since 1999',
+  },
+  {
+    number: '7-day',
+    label: 'delivery guarantee',
+    microcopy: '97% of projects delivered on time',
+  },
+  {
+    number: '60–70%',
+    label: 'cheaper than US agencies',
+    microcopy: 'same output, India-based team cost structure',
+  },
+];
+
+export default function BigThreeTrustBlock({
+  eyebrow,
+  headline,
+  cityCount,
+}: BigThreeTrustBlockProps) {
+  const allStats: StatCell[] = cityCount
+    ? [
+        ...CORE_STATS,
+        {
+          number: cityCount.value,
+          label: cityCount.label,
+          microcopy: cityCount.source ? `source: ${cityCount.source}` : undefined,
+        },
+      ]
+    : [...CORE_STATS];
+
+  const gridCols =
+    allStats.length === 4
+      ? 'sm:grid-cols-2 lg:grid-cols-4'
+      : 'sm:grid-cols-3';
+
   return (
-    <section className="bg-fj-neutral-50 py-16 lg:py-24">
-      <div className="mx-auto max-w-[1120px] px-4 lg:px-6">
-        <div className="grid grid-cols-1 gap-x-12 gap-y-12 lg:grid-cols-3">
-          {stats.map((stat, i) => (
-            <div key={i} className="flex flex-col items-start text-left">
-              {/* Number — Clash Display via .fj-display, ink, --type-stat */}
+    <section
+      style={{
+        background: 'linear-gradient(135deg, #E8EFFE 0%, #F4F7FF 50%, #E8EFFE 100%)',
+        borderTop: '1px solid rgba(0,82,204,0.14)',
+        borderBottom: '1px solid rgba(0,82,204,0.14)',
+      }}
+      className="py-10 md:py-12"
+    >
+      <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+
+        {(eyebrow || headline) && (
+          <div className="mb-10">
+            {eyebrow && (
               <p
-                className="fj-display font-medium text-fj-ink"
+                className="font-fj-mono font-medium uppercase text-fj-jet-blue"
+                style={{ fontSize: '11px', letterSpacing: '0.14em' }}
+              >
+                {eyebrow}
+              </p>
+            )}
+            {headline && (
+              <p
+                className="mt-2 font-fj-body text-fj-neutral-400"
+                style={{ fontSize: '0.9375rem', lineHeight: 1.5 }}
+              >
+                {headline}
+              </p>
+            )}
+          </div>
+        )}
+
+        <div className={`grid grid-cols-1 gap-y-10 ${gridCols}`}>
+          {allStats.map((stat, i) => (
+            <div
+              key={i}
+              className="relative flex flex-col sm:px-10 sm:first:pl-0 sm:last:pr-0"
+            >
+              {/* ── Gradient vertical divider (all but last) ─────────── */}
+              {i < allStats.length - 1 && (
+                <div
+                  className="pointer-events-none absolute right-0 top-[5%] hidden h-[90%] w-px sm:block"
+                  style={{
+                    background: 'linear-gradient(180deg, transparent 0%, rgba(0,82,204,0.28) 25%, rgba(0,82,204,0.28) 75%, transparent 100%)',
+                  }}
+                  aria-hidden="true"
+                />
+              )}
+
+              {/* Blue accent bar */}
+              <div
+                className="mb-5 h-[3px] w-10 rounded-full bg-fj-jet-blue"
+                aria-hidden="true"
+              />
+
+              {/* Number */}
+              <p
+                className="fj-display font-bold text-fj-jet-blue whitespace-nowrap"
                 style={{
-                  fontSize: 'clamp(3.5rem, 8vw, 5.5rem)',
+                  fontSize: 'clamp(2.5rem, 5.5vw, 4rem)',
                   lineHeight: 1,
                   letterSpacing: '-0.04em',
                 }}
@@ -51,35 +141,27 @@ export default function BigThreeTrustBlock({ stats }: BigThreeTrustBlockProps) {
                 {stat.number}
               </p>
 
-              {/* Label — Geist, neutral-600, --type-body-sm */}
+              {/* Label */}
               <p
-                className="mt-3 font-fj-body text-fj-neutral-600"
-                style={{
-                  fontSize: '0.9375rem',
-                  lineHeight: 1.55,
-                }}
+                className="mt-3 font-fj-body font-semibold text-fj-ink"
+                style={{ fontSize: '0.9375rem', lineHeight: 1.5 }}
               >
                 {stat.label}
               </p>
 
-              {/* Microcopy — plain Geist body, neutral-400, --type-caption,
-               * parenthesised. M1.d.2: italic dropped per the M1.d.1.1 canon. */}
+              {/* Microcopy */}
               {stat.microcopy && (
                 <p
-                  className="mt-2 font-fj-body text-fj-neutral-400"
-                  style={{
-                    fontSize: '0.8125rem',
-                    lineHeight: 1.5,
-                    letterSpacing: '0.005em',
-                    fontWeight: 500,
-                  }}
+                  className="mt-1.5 font-fj-body text-fj-neutral-500"
+                  style={{ fontSize: '0.8125rem', lineHeight: 1.55, fontWeight: 500 }}
                 >
-                  ({stat.microcopy})
+                  {stat.microcopy}
                 </p>
               )}
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

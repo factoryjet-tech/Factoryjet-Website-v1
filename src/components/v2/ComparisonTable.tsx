@@ -80,7 +80,7 @@ export default function ComparisonTable({
   const hasPullQuote = !!pullQuote;
 
   return (
-    <section className="bg-fj-cream py-24 md:py-32 overflow-x-clip">
+    <section className="bg-fj-cream py-14 md:py-20 overflow-x-clip">
       <div className="mx-auto max-w-[1120px] px-6 md:px-8">
         {/* Header — 2-col with pull-quote when provided, single-col otherwise */}
         {hasPullQuote ? (
@@ -103,7 +103,16 @@ export default function ComparisonTable({
             </div>
             {/* Right: pull-quote panel */}
             <div className="lg:col-span-5">
-              <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 md:p-10">
+              <div
+                className="rounded-2xl bg-white p-8 md:p-10 overflow-hidden"
+                style={{
+                  border: '1px solid #E5E7EB',
+                  borderTopWidth: '3px',
+                  borderTopStyle: 'solid',
+                  borderTopColor: '#0052CC',
+                }}
+              >
+                <div className="mb-5 h-[3px] w-10 rounded-full bg-fj-jet-blue" aria-hidden="true" />
                 <p
                   className="font-fj-display fj-display font-bold text-fj-jet-blue leading-none tracking-[-0.02em]"
                   style={{ fontSize: 'clamp(3rem,6vw,5rem)' }}
@@ -153,6 +162,7 @@ export default function ComparisonTable({
                         ? 'bg-fj-jet-blue-tint text-fj-jet-blue'
                         : 'text-fj-neutral-400'
                     }`}
+                    style={col.isFactoryJet ? { borderTopWidth: '3px', borderTopStyle: 'solid', borderTopColor: '#0052CC' } : undefined}
                   >
                     {col.label}
                   </th>
@@ -161,7 +171,7 @@ export default function ComparisonTable({
             </thead>
             <tbody>
               {rows.map((row, ri) => (
-                <tr key={ri} className="border-t border-fj-neutral-200">
+                <tr key={ri} className="border-t border-fj-neutral-200 transition-colors hover:bg-fj-neutral-50/40">
                   <th
                     scope="row"
                     className={`sticky left-0 z-10 bg-fj-cream ${ROW_LABEL_TYPE}`}

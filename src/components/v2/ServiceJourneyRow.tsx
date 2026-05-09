@@ -1,21 +1,19 @@
 import type { ReactNode } from 'react';
-import { Heading } from './Heading';
 import MotionFadeUp from './MotionFadeUp';
 
 /**
- * ServiceJourneyRow — v2.0 delivery-stage row.
+ * ServiceJourneyRow — v2.1 visual upgrade.
  *
- * Loosely follows factoryjet.DESIGN.md §5.4 (Neurons-Lab "service journey
- * row" pattern: cream BG, large numerals in Clash Display, 1px neutral-200
- * connecting line, no animation, no marquee). The §5.4 spec describes a
- * row of SERVICE cards (each card a service offering); this component
- * repurposes the same visual lane for delivery-process STAGES (Discover →
- * Run). Same typography, same connecting-line treatment, different prop
- * shape — flagged as a deliberate semantic shift in the M1.c.2 PR.
- *
- * Layout: 5-col grid on lg, 2-col on md, 1-col on sm. The connecting line
- * is achieved via a `border-t` on each card; on lg the borders abut with
- * small grid-gap breaks, reading as a horizontally-segmented timeline.
+ * Design language (Path A — CSS/JSX only, zero JS for decoration):
+ *   - Section bg: white + dot grid + bottom-centred radial bloom (differs
+ *     from IndustriesGrid's top bloom so adjacent sections feel distinct)
+ *   - Desktop timeline: a continuous gradient connector line spans all 5
+ *     circles via absolute positioning — sits below the circles (z-0) so
+ *     circles (z-10) read as nodes on the line
+ *   - Circle badges: ambient glow ring (box-shadow spread + blur), solid
+ *     fj-jet-blue fill with white number — "energy node" treatment
+ *   - Closing note: flanked by gradient rules (editorial web pattern)
+ *   - Headline: tighter clamp matching StrategicDarkSection / IndustriesGrid
  *
  * Pure server component.
  */
@@ -28,8 +26,7 @@ export interface ServiceJourneyStage {
   description: string;
 }
 
-/* Canonical 5-stage delivery journey. Exported so callers can spread +
- * override individual stages without re-stating the full sequence. */
+/* Canonical 5-stage delivery journey. */
 export const DEFAULT_JOURNEY_STAGES: ReadonlyArray<ServiceJourneyStage> = [
   {
     number: '01',
@@ -65,11 +62,10 @@ export const DEFAULT_JOURNEY_STAGES: ReadonlyArray<ServiceJourneyStage> = [
 
 export interface ServiceJourneyRowProps {
   eyebrow?: string;
-  /** H2 content (plain text post M1.d.2 — italic-emphasis pattern dropped). */
   headline: ReactNode;
   lead?: string;
-  /** Defaults to `DEFAULT_JOURNEY_STAGES` (5 stages). Caller may override. */
   stages?: ReadonlyArray<ServiceJourneyStage>;
+  closingNote?: string;
 }
 
 export default function ServiceJourneyRow({
@@ -77,47 +73,171 @@ export default function ServiceJourneyRow({
   headline,
   lead,
   stages = DEFAULT_JOURNEY_STAGES,
+  closingNote,
 }: ServiceJourneyRowProps) {
   return (
-    <section className="bg-fj-cream py-24 md:py-32">
+    <section
+      className="py-10 md:py-14"
+      style={{
+        /*
+         * White base + dot grid + bloom at bottom-centre (differentiates
+         * from IndustriesGrid which has its bloom at top-centre).
+         * The bloom creates a subtle "stage spotlights" effect below the row.
+         */
+        backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.055) 1px, transparent 1px)',
+        backgroundSize: '28px 28px',
+        backgroundColor: '#FFFFFF',
+      }}
+    >
       <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-        {/* Header */}
-        <div className="max-w-[820px]">
-          {eyebrow && <p className="fj-eyebrow">{eyebrow}</p>}
-          <Heading
-            as="h2"
-            size="h2"
-            className={`text-fj-ink ${eyebrow ? 'mt-6' : ''}`}
+
+        {/* ── Section header ─────────────────────────────────────────────── */}
+        <div className="max-w-[720px]">
+          {eyebrow && (
+            <p className="fj-eyebrow">{eyebrow}</p>
+          )}
+          <h2
+            className={`fj-display font-semibold text-fj-ink ${eyebrow ? 'mt-3' : ''}`}
+            style={{
+              fontSize: 'clamp(1.625rem, 3vw, 2.5rem)',
+              lineHeight: 1.1,
+              letterSpacing: '-0.025em',
+            }}
           >
             {headline}
-          </Heading>
+          </h2>
           {lead && (
-            <p className="mt-6 max-w-[640px] font-fj-body text-[1.0625rem] leading-[1.6] text-fj-neutral-600">
+            <p
+              className="mt-4 max-w-[580px] font-fj-body text-fj-neutral-600"
+              style={{ fontSize: '1rem', lineHeight: 1.65 }}
+            >
               {lead}
             </p>
           )}
         </div>
 
-        {/* Stages grid */}
-        <div className="mt-16 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-8 lg:grid-cols-5 lg:gap-6">
-          {stages.map((stage, i) => (
-            <MotionFadeUp
-              key={i}
-              delay={i * 0.08}
-              className="border-t border-fj-neutral-200 pt-6 transition-transform duration-200 hover:-translate-y-1"
-            >
-              <p className="fj-display font-fj-display text-[3rem] font-medium leading-none tracking-[-0.025em] text-fj-jet-blue md:text-[3.5rem]">
-                {stage.number}
-              </p>
-              <Heading as="h3" size="h4" className="mt-4 text-fj-ink">
-                {stage.title}
-              </Heading>
-              <p className="mt-3 font-fj-body text-[0.9375rem] leading-[1.55] text-fj-neutral-600">
-                {stage.description}
-              </p>
-            </MotionFadeUp>
-          ))}
+        {/* ── Timeline ───────────────────────────────────────────────────── */}
+        {/*
+         * Outer wrapper is `relative` so the absolutely-positioned connector
+         * line can span the full grid width behind the circle nodes.
+         */}
+        <div className="relative mt-10">
+
+          {/* ── Connector line — desktop only ──────────────────────────── */}
+          {/*
+           * Sits at top-[22px] = half the circle height (h-11 = 44px).
+           * Fades in from left and out to right so it doesn't clip the
+           * first/last circle awkwardly.
+           * hidden on mobile/tablet where layout is vertical.
+           */}
+          <div
+            className="pointer-events-none absolute inset-x-0 top-[22px] hidden h-px lg:block"
+            style={{
+              background: 'linear-gradient(90deg, transparent 0%, rgba(0,82,204,0.22) 8%, rgba(0,82,204,0.22) 92%, transparent 100%)',
+            }}
+            aria-hidden="true"
+          />
+
+          {/* ── Stage grid ─────────────────────────────────────────────── */}
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-8 lg:grid-cols-5 lg:gap-5">
+            {stages.map((stage, i) => (
+              <MotionFadeUp key={i} delay={i * 0.08}>
+                <div className="flex flex-col">
+
+                  {/* ── Circle node ──────────────────────────────────── */}
+                  {/*
+                   * Ambient glow: two-layer box-shadow — a spread ring at low
+                   * opacity creates the "energy node" halo; inner blur adds
+                   * the bloom. z-10 ensures circles sit above the connector line.
+                   */}
+                  <div
+                    className="relative z-10 flex h-11 w-11 items-center justify-center rounded-full bg-fj-jet-blue font-fj-mono text-[0.875rem] font-bold text-white"
+                    style={{
+                      boxShadow: '0 0 0 5px rgba(0,82,204,0.12), 0 0 22px rgba(0,82,204,0.32)',
+                    }}
+                    aria-hidden="true"
+                  >
+                    {stage.number}
+                  </div>
+
+                  {/* ── Stage label ──────────────────────────────────── */}
+                  <p
+                    className="mt-4 font-fj-mono font-semibold uppercase text-fj-jet-blue"
+                    style={{ fontSize: '10px', letterSpacing: '0.14em', opacity: 0.65 }}
+                    aria-hidden="true"
+                  >
+                    STAGE {stage.number}
+                  </p>
+
+                  {/* ── Stage title ──────────────────────────────────── */}
+                  <h3
+                    className="mt-1.5 fj-display font-semibold text-fj-ink"
+                    style={{
+                      fontSize: '1.125rem',
+                      lineHeight: 1.25,
+                      letterSpacing: '-0.02em',
+                    }}
+                  >
+                    {stage.title}
+                  </h3>
+
+                  {/* ── Description card ─────────────────────────────── */}
+                  {/*
+                   * Subtle glassmorphism card on white: bg slightly off-white
+                   * with a blue-tinted border. Creates depth and clearly
+                   * separates description from the title above.
+                   */}
+                  <div
+                    className="mt-3 rounded-xl p-4"
+                    style={{
+                      background: 'linear-gradient(160deg, #FFFFFF 0%, #F4F7FF 100%)',
+                      border: '1px solid rgba(0,82,204,0.10)',
+                      boxShadow: '0 2px 8px rgba(0,82,204,0.05)',
+                    }}
+                  >
+                    <p
+                      className="font-fj-body text-fj-neutral-600"
+                      style={{ fontSize: '0.875rem', lineHeight: 1.65 }}
+                    >
+                      {stage.description}
+                    </p>
+                  </div>
+
+                </div>
+              </MotionFadeUp>
+            ))}
+          </div>
         </div>
+
+        {/* ── Closing note — flanked by gradient rules ────────────────────── */}
+        {closingNote && (
+          <div
+            className="mt-10 flex items-center gap-5"
+            aria-hidden="true"
+          >
+            {/* Left gradient rule */}
+            <div
+              className="h-px flex-1"
+              style={{
+                background: 'linear-gradient(90deg, transparent 0%, rgba(0,82,204,0.20) 100%)',
+              }}
+            />
+            <p
+              className="flex-shrink-0 font-fj-mono font-medium uppercase text-fj-neutral-400"
+              style={{ fontSize: '11px', letterSpacing: '0.10em' }}
+            >
+              {closingNote}
+            </p>
+            {/* Right gradient rule */}
+            <div
+              className="h-px flex-1"
+              style={{
+                background: 'linear-gradient(90deg, rgba(0,82,204,0.20) 0%, transparent 100%)',
+              }}
+            />
+          </div>
+        )}
+
       </div>
     </section>
   );

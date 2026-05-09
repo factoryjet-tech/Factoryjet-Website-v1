@@ -45,7 +45,7 @@ export default function SiteHeader({
 }: SiteHeaderProps) {
   return (
     <header
-      className={`bg-fj-cream border-b border-fj-neutral-200 ${className}`.trim()}
+      className={`sticky top-0 z-40 bg-fj-cream/95 backdrop-blur-sm border-b border-fj-neutral-200 ${className}`.trim()}
     >
       <div className="mx-auto max-w-[1200px] px-6 md:px-8">
         <div className="flex h-16 items-center justify-between md:h-20">

@@ -1,42 +1,29 @@
 /**
- * BoringStatsRow — v2.0 component per factoryjet.DESIGN.md §5.10.
+ * BoringStatsRow — v2.1 visual upgrade.
  *
- * A row of 1–3 stat blocks with the "boring stats" microcopy voice.
- * Each block: number (Clash Display via .fj-display, Jet Blue, --type-stat)
- * → label (Inter, ink, weight 600) → optional parenthetical microcopy
- * (Inter, neutral-600, plain — italic styling dropped in M1.d.2).
+ * Design language (Path A — CSS/JSX only):
+ *   - Numbers are the hero: ambient radial glow disc behind each value
+ *     (Ambient Glow & Bloom #15) + Maxi Typography treatment (#13)
+ *   - Section: white + dot grid + centre bloom — consistent system language
+ *   - Gradient vertical dividers replace plain neutral-200 divide lines
+ *   - Category label: Geist Mono chip treatment (Retro-Futurism #21)
+ *   - Microcopy: inline pill, less parenthetical, more editorial
  *
- * Section padding-y: --space-9 (96px desktop / 64px mobile).
- * Background is intentionally transparent — the consuming page wraps
- * this in `bg-fj-cream` or `bg-fj-neutral-50` as appropriate.
- *
- * M1.c.2.5 alignment fix: a new `align` prop controls cell-content
- * alignment. Default stays `'start'` to preserve M1.a/M1.b/M1.c.* call-
- * site visuals (backward-compat). Pass `align="center"` to opt in to
- * the centred treatment, which reads cleaner when numerals have very
- * different widths ("+210%" vs "0") — the previous left-anchored layout
- * produced ragged right-side dead space inside each grid cell. The dev
- * page renders both variants for visual comparison; production callers
- * (e.g. London page in M1.c.4) can flip to `align="center"` per call.
+ * Background is now self-contained (section handles its own bg) but
+ * the consuming page div bg still applies as a fallback — backward-compat.
  *
  * Pure server component. No client state, no animation.
  */
 
 export interface BoringStat {
-  /** The big number/value, e.g. "+210%", "500+", "0" */
   value: string;
-  /** The descriptive label, e.g. "qualified leads in 90 days" */
   label: string;
-  /** Optional micro-line, rendered parenthesised below the label. Plain
-   *  Inter body text post M1.d.2 — italic styling dropped. */
   microcopy?: string;
+  categoryLabel?: string;
 }
 
 export interface BoringStatsRowProps {
-  /** 1–3 stats. Renders 1, 2, or 3 columns at lg+ to match length. */
   stats: BoringStat[];
-  /** Cell-content alignment. Default `'start'` (legacy left-anchored
-   *  per M1.a). Pass `'center'` for the M1.c.2.5 alignment fix. */
   align?: 'start' | 'center';
 }
 
@@ -44,8 +31,6 @@ export default function BoringStatsRow({
   stats,
   align = 'start',
 }: BoringStatsRowProps) {
-  // Cap responsive columns at the stat count so a 1- or 2-stat row
-  // doesn't end up with an empty grid cell stretching the layout.
   const lgCols =
     stats.length === 1
       ? 'lg:grid-cols-1'
@@ -59,18 +44,68 @@ export default function BoringStatsRow({
       : 'items-start text-left';
 
   return (
-    <section className="py-16 lg:py-24">
+    <section
+      style={{
+        /*
+         * Uniform tinted band — the section IS the design element, not
+         * individual number glows. A single horizontal gradient wash
+         * (lighter at centre, slightly deeper at edges) reads as intentional
+         * and premium. Stripe/HubSpot/Linear all use this containment
+         * approach rather than per-element decorations on light backgrounds.
+         */
+        background: 'linear-gradient(135deg, #E8EFFE 0%, #F4F7FF 50%, #E8EFFE 100%)',
+        borderTop: '1px solid rgba(0,82,204,0.14)',
+        borderBottom: '1px solid rgba(0,82,204,0.14)',
+      }}
+      className="py-12 md:py-16"
+    >
       <div className="mx-auto max-w-[1120px] px-4 lg:px-6">
-        <div
-          className={`grid grid-cols-1 gap-x-16 gap-y-12 sm:grid-cols-2 ${lgCols}`}
-        >
+        <div className={`grid grid-cols-1 gap-y-10 sm:grid-cols-2 ${lgCols}`}>
           {stats.map((stat, i) => (
-            <div key={i} className={`flex flex-col ${cellAlign}`}>
-              {/* Number — Clash Display via .fj-display, Jet Blue, --type-stat */}
+            <div
+              key={i}
+              className={`relative flex flex-col sm:px-10 sm:first:pl-0 sm:last:pr-0 ${cellAlign}`}
+            >
+              {/* ── Gradient vertical divider (all but last) ──────────── */}
+              {i < stats.length - 1 && (
+                <div
+                  className="pointer-events-none absolute right-0 top-[5%] hidden h-[90%] w-px sm:block"
+                  style={{
+                    background: 'linear-gradient(180deg, transparent 0%, rgba(0,82,204,0.28) 25%, rgba(0,82,204,0.28) 75%, transparent 100%)',
+                  }}
+                  aria-hidden="true"
+                />
+              )}
+
+              {/* ── Category label chip ────────────────────────────────── */}
+              {stat.categoryLabel && (
+                <div
+                  className="mb-4 inline-flex items-center gap-1.5 self-start rounded-full px-3 py-1 font-fj-mono font-bold uppercase text-fj-jet-blue"
+                  style={{
+                    fontSize: '9px',
+                    letterSpacing: '0.13em',
+                    background: 'rgba(255,255,255,0.70)',
+                    border: '1px solid rgba(0,82,204,0.20)',
+                  }}
+                  aria-hidden="true"
+                >
+                  <span
+                    className="inline-block h-1 w-1 rounded-full bg-fj-jet-blue"
+                    aria-hidden="true"
+                  />
+                  {stat.categoryLabel}
+                </div>
+              )}
+
+              {/* ── Number ────────────────────────────────────────────── */}
+              {/*
+               * No per-element glow — the uniform section background is the
+               * design container. Numbers speak for themselves at this scale.
+               */}
               <p
-                className="fj-display font-medium text-fj-jet-blue"
+                className="fj-display whitespace-nowrap font-bold text-fj-jet-blue"
                 style={{
-                  fontSize: 'clamp(3.5rem, 8vw, 5.5rem)',
+                  fontSize: 'clamp(3rem, 7vw, 4.75rem)',
                   lineHeight: 1,
                   letterSpacing: '-0.04em',
                 }}
@@ -78,30 +113,21 @@ export default function BoringStatsRow({
                 {stat.value}
               </p>
 
-              {/* Label — Geist, ink, weight 600, --type-body */}
+              {/* ── Label ─────────────────────────────────────────────── */}
               <p
-                className="mt-3 font-fj-body font-semibold text-fj-ink"
-                style={{
-                  fontSize: '1.0625rem',
-                  lineHeight: 1.6,
-                }}
+                className="mt-4 font-fj-body font-semibold text-fj-ink"
+                style={{ fontSize: '1.0625rem', lineHeight: 1.5 }}
               >
                 {stat.label}
               </p>
 
-              {/* Microcopy — plain Geist body, neutral-600, parenthesised.
-               * M1.d.2: italic dropped per the M1.d.1.1 canon (Fraunces-italic
-               * boring-stats parenthetical pattern is gone — Clash doesn't
-               * render inline italic at body scale gracefully). */}
+              {/* ── Microcopy ─────────────────────────────────────────── */}
               {stat.microcopy && (
                 <p
-                  className="mt-2 font-fj-body text-fj-neutral-600"
-                  style={{
-                    fontSize: '0.9375rem',
-                    lineHeight: 1.55,
-                  }}
+                  className="mt-2 font-fj-body text-fj-neutral-500"
+                  style={{ fontSize: '0.875rem', lineHeight: 1.55 }}
                 >
-                  ({stat.microcopy})
+                  {stat.microcopy}
                 </p>
               )}
             </div>
