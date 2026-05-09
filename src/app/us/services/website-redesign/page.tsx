@@ -804,14 +804,15 @@ export default function WebsiteRedesignPage() {
         />
 
         {/* ── 7. OUR PROCESS ───────────────────────────────────────────────── */}
+        <div id="process">
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          id="process"
           headline="From Free Audit to Live Redesign — in 5 Structured Stages"
           lead="We don't start designing until we understand your goals. Every stage ends with a deliverable you review and approve — so no design work, no development, and no launch happens without your sign-off."
           stages={REDESIGN_JOURNEY_STAGES}
           closingNote="5 STAGES · 7 DAYS (5-PAGE) TO 6 WEEKS (E-COMMERCE) · FREE AUDIT BEFORE ANY COMMITMENT"
         />
+        </div>
 
         {/* ── 8. US MARKET CONTEXT ─────────────────────────────────────────── */}
         <CityContextSection
