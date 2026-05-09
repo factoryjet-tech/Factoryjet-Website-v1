@@ -7,3 +7,5 @@ compatibility_date = "2024-01-01"
 [ai]
 # Disable AI hints injection in robots.txt
 ai_hints_in_robots_txt = false
+
+pages_build_output_dir = "out"
