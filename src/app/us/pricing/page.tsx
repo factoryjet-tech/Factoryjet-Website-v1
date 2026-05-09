@@ -134,39 +134,34 @@ const breadcrumbSchema = {
 
 const journeyStages: ServiceJourneyStage[] = [
   {
-    stage: '01',
+    number: '01',
     title: 'Free Consultation & Quote',
     description:
       'Tell us what you need — or just describe your business. We scope the project, confirm page count, and send a fixed quote within 24 hours. No surprise change orders later.',
-    duration: 'Same day',
   },
   {
-    stage: '02',
+    number: '02',
     title: 'Design Review',
     description:
       'We build a full homepage design first. You review it, request changes, and approve before we write a single line of code. This is where we lock in your brand direction.',
-    duration: 'Days 1–3',
   },
   {
-    stage: '03',
+    number: '03',
     title: 'Development',
     description:
       'Approved design goes straight to development. We build on Next.js or Shopify, set up your CMS, and wire in any integrations — CRM, forms, booking tools, payments.',
-    duration: 'Days 3–6',
   },
   {
-    stage: '04',
+    number: '04',
     title: 'Content & SEO',
     description:
       'We apply your copy (or write it — ask us), set up meta titles, descriptions, schema markup, Google Search Console, and Analytics. Your site is findable from day one.',
-    duration: 'Days 5–7',
   },
   {
-    stage: '05',
+    number: '05',
     title: 'Launch & Handoff',
     description:
       'Site goes live on your domain. You get a walkthrough recording, admin access, and 30 days of post-launch support. Most clients are live by day 7.',
-    duration: 'Day 7',
   },
 ];
 

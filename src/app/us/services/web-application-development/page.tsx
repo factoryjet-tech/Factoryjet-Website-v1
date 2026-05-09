@@ -124,39 +124,34 @@ const breadcrumbSchema = {
 
 const journeyStages: ServiceJourneyStage[] = [
   {
-    stage: '01',
+    number: '01',
     title: 'Discovery & Scope Definition',
     description:
       'We map every user role, every data model, and every third-party integration before writing a line of code. This prevents scope creep — the #1 reason web app projects go over budget.',
-    duration: 'Week 1',
   },
   {
-    stage: '02',
+    number: '02',
     title: 'Architecture & Tech Stack',
     description:
       'We select the right stack for your use case — Next.js + Supabase for most apps, Laravel for complex APIs, React Native for mobile. Architecture is documented before development starts.',
-    duration: 'Week 1–2',
   },
   {
-    stage: '03',
+    number: '03',
     title: 'MVP Build — Core Features First',
     description:
       'We build the core user workflow first so you can test with real users early. Authentication, the primary feature, and basic admin. You have a working app before the full feature set is done.',
-    duration: 'Weeks 2–6',
   },
   {
-    stage: '04',
+    number: '04',
     title: 'Integrations & Secondary Features',
     description:
       'Payment processing, email automation, third-party API connections, reporting dashboards, and any secondary user flows. Each is delivered as a testable sprint.',
-    duration: 'Weeks 5–10',
   },
   {
-    stage: '05',
+    number: '05',
     title: 'QA, Launch & Handoff',
     description:
       'Comprehensive QA across devices and browsers. Load testing for your expected traffic volume. Deploy to production with monitoring, error tracking, and a full technical handoff document.',
-    duration: 'Final 2 weeks',
   },
 ];
 

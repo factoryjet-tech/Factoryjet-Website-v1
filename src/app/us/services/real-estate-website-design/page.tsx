@@ -124,39 +124,34 @@ const breadcrumbSchema = {
 
 const journeyStages: ServiceJourneyStage[] = [
   {
-    stage: '01',
+    number: '01',
     title: 'Discovery & Strategy',
     description:
       'We map your market — target neighborhoods, buyer vs. seller focus, competitor sites, and the search terms your clients use. Your site is built around your specific geography, not a generic real estate template.',
-    duration: 'Day 1',
   },
   {
-    stage: '02',
+    number: '02',
     title: 'Design — Agent Brand First',
     description:
       'Real estate is a relationship business. Your site leads with your face, your track record, and your market expertise — not just listings. We design a homepage that builds trust before it shows a search bar.',
-    duration: 'Days 1–3',
   },
   {
-    stage: '03',
+    number: '03',
     title: 'IDX Integration',
     description:
       'We connect your IDX provider, configure search filters for your MLS, and style the listing display to match your brand. No off-the-shelf widget look — listings look native to your site.',
-    duration: 'Days 3–5',
   },
   {
-    stage: '04',
+    number: '04',
     title: 'Neighborhood Pages & Local SEO',
     description:
       'Every target neighborhood gets its own page: market data, what the area is like, schools, and what you love about it. These pages are your primary organic search targets.',
-    duration: 'Days 4–6',
   },
   {
-    stage: '05',
+    number: '05',
     title: 'Launch & Lead Flow Setup',
     description:
       'Site goes live on your domain. CRM integration configured, contact forms connected, and Google Analytics + Search Console set up. You start capturing leads on day one.',
-    duration: 'Day 7',
   },
 ];
 
