@@ -4,7 +4,3 @@
 name = "factoryjet"
 compatibility_date = "2024-01-01"
 pages_build_output_dir = "out"
-
-[ai]
-# Disable AI hints injection in robots.txt
-ai_hints_in_robots_txt = false
