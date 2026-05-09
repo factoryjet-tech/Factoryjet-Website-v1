@@ -1,0 +1,360 @@
+import type { Metadata } from 'next';
+import Hero from '@/components/v2/Hero';
+import LogoBar from '@/components/v2/LogoBar';
+import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
+import CityContextSection from '@/components/v2/CityContextSection';
+import ServiceExplanation from '@/components/v2/ServiceExplanation';
+import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
+import ServiceJourneyRow from '@/components/v2/ServiceJourneyRow';
+import PortfolioShowcase from '@/components/v2/PortfolioShowcase';
+import ComparisonTable from '@/components/v2/ComparisonTable';
+import PricingTiers from '@/components/v2/PricingTiers';
+import IndustriesGrid from '@/components/v2/IndustriesGrid';
+import TestimonialsSection from '@/components/v2/TestimonialsSection';
+import FAQ from '@/components/v2/FAQ';
+import FinalCTA from '@/components/v2/FinalCTA';
+import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
+
+export const metadata: Metadata = {
+  title: 'Web Design Charlotte | FactoryJet',
+  description: 'FactoryJet builds fast, conversion-focused websites for Charlotte businesses — from $1,999. 7-day delivery. Next.js, SEO, and GA4 included.',
+  alternates: {
+    canonical: 'https://factoryjet.com/us/charlotte/web-design',
+  },
+};
+
+export default function CharlotteWebDesignPage() {
+  return (
+    <main className="bg-fj-cream">
+      <Hero
+        eyebrow={"WEB DESIGN · CHARLOTTE"}
+        headline={"Web Design in Charlotte That Converts Visitors Into Clients"}
+        lead={"Charlotte is the second-largest banking center in the US — home to Bank of America's global HQ and one of the most competitive professional services markets on the East Coast. Buyers here expect digital experiences that match the caliber of the firms they work with. FactoryJet delivers a production-ready website in 7 days, starting at $1,999."}
+        primaryCta={{ label: "Start Your Project", href: '/contact' }}
+        trustItems={["Websites from $1,999", "7-day delivery", "Next.js + GA4 included"]}
+        rightSlot={<HeroBrowserMockup />}
+      />
+      <LogoBar
+        tagline="Trusted by 500+ businesses across the US, UK, and UAE"
+      />
+      <BigThreeTrustBlock
+        eyebrow="BY THE NUMBERS"
+        headline={"Results that Charlotte businesses trust."}
+      />
+      <CityContextSection
+        eyebrow={"CHARLOTTE MARKET"}
+        headline={"Why Your Charlotte Web Presence Can't Be an Afterthought"}
+        leadParagraphs={[
+          "Charlotte's city population hit roughly 900,000 in 2024, anchored inside a Charlotte-Concord-Gastonia MSA that generates over $220 billion in GDP. This is the second-largest banking center in the United States by assets — Bank of America's global headquarters, Truist Financial's HQ, and Wells Fargo's East Coast hub are all here. Duke Energy and NASCAR also call Charlotte home, and a fast-growing tech sector led by Red Ventures and LendingTree has added tens of thousands of high-income professionals to the metro over the past decade. The manufacturing corridor — Husqvarna, Daimler Trucks North America — adds a dense B2B supply chain, while Atrium Health (70,000+ employees) and Novant Health anchor one of the largest healthcare systems in the Southeast.",
+          "Charlotte has been one of the fastest-growing metros in the Southeast for a decade straight. Professional buyers here are sophisticated — shaped by decades of banking culture — and they compare every vendor they consider against best-in-class financial brands. A slow, poorly structured website doesn't just lose rankings; it signals that your business isn't at the same level as the firms they trust. Your website is the first compliance review every prospect runs on you."
+        ]}
+        stats={[
+          {"value":"900,000","label":"Charlotte City Population (2024)","sourceUrl":"https://www.census.gov/quickfacts/fact/table/charlottecitynorthcarolina/PST045224"},
+          {"value":"$220B+","label":"Charlotte-Concord-Gastonia MSA GDP","sourceUrl":"https://fred.stlouisfed.org/series/NGMP16740"},
+          {"value":"#2","label":"Largest US Banking Center by Assets","sourceUrl":"https://www.charlotteregion.com/key-industries/financial-services"}
+        ]}
+      />
+      <ServiceExplanation
+        eyebrow={"WEB DESIGN · Charlotte"}
+        headline={"What 'Web Design' Actually Means for a Charlotte Business"}
+        lead={"Charlotte's buyer base — shaped by decades of banking culture — has a higher bar for professionalism, clarity, and trust than most US cities. Your website is your first compliance review. It needs to signal credibility, clarity of service, and operational quality before anyone picks up the phone."}
+        body={
+          <>
+            <p>For FinTech, financial services, and professional services firms — vendors and suppliers to Bank of America, Truist, and Wells Fargo's East Coast hub; law firms; accounting firms; insurance; and wealth management — your site needs clear service architecture, case studies, professional photography, and compliance-aware form design. Buyers at this level have seen thousands of vendor websites. A site that looks generic or loads slowly doesn't just underperform; it disqualifies you before the conversation starts.</p>
+            <p>For healthcare and enterprise suppliers — Atrium Health and Novant Health vendors, Duke Energy supply chain partners, and Charlotte's manufacturing corridor — websites need robust capability documentation, certification display, and RFQ workflows that speak directly to procurement teams. Every FactoryJet project covers discovery, Figma prototyping, Next.js development, content, SEO, and a 30-day support window. You leave with a codebase you own, a design system you keep, and a site built to convert the buyers your business actually needs.</p>
+          </>
+        }
+        rightSlot={<img src="/images/us/charlotte/web-design/service-explanation.webp" alt="" aria-hidden="true" className="w-full rounded-2xl object-cover" />}
+      />
+      <StrategicDarkSection
+        eyebrow="WHY FACTORYJET"
+        headline={"Why Charlotte Businesses Choose FactoryJet Over Local Agencies"}
+        lead={"Charlotte has credible local agencies. Idea Kraft builds WordPress-based web design projects for Charlotte brands. Bowen offers full-service marketing plus web. Forge3 covers digital marketing and web. None of them publish delivery timelines. Charlotte agencies typically run $6,000–$15,000 for a comparable 10–15 page site.\n\nFactoryJet Growth ($3,999) delivers the same scope — blog CMS, lead capture, GA4, Next.js — at 40–60% less, with a 7-day delivery guarantee and a codebase you own outright. No plugin maintenance. No retainer required. No surprise invoices after launch.\n\nWe don't win on price alone. We win because every project ships with JSON-LD schema for AI search crawlers, performance budgets enforced from the first commit, and a recorded handover so your team can self-manage from day one."}
+        pillars={[
+          { title: 'AI-native',    body: 'Every site is built with an AI-assisted workflow — compressing build time without compressing quality. We have run 500+ projects through this system.' },
+          { title: 'Transparent',  body: 'Pricing on the first call. No discovery fees, no "it depends" quotes that arrive three weeks later. Fixed price. Agreed up front.' },
+          { title: 'Guaranteed',   body: '7-day delivery guarantee. If we miss the deadline, you don\'t pay. We have delivered on time on 97% of all projects.' },
+        ]}
+      />
+      <ServiceJourneyRow
+        eyebrow={"OUR PROCESS"}
+        headline={"How We Build Your Charlotte Website"}
+        stages={[
+          {"number":"01","title":"Discovery & Strategy","description":"We map your ideal customer profile, audit your top three Charlotte competitors, and agree the sitemap and content plan. You leave this phase knowing exactly what the site will do and how we'll measure it. — Days 1–2"},
+          {"number":"02","title":"Design & Prototyping","description":"Figma wireframes turn into a complete mobile-first design system, reviewed against your brand and conversion goals. Two structured feedback rounds lock the visual direction before a line of code is written. — Days 3–4"},
+          {"number":"03","title":"Development","description":"We build the site in Next.js with GSAP animations, headless CMS integration, contact forms, and any third-party APIs you need. Performance budgets are enforced from the first commit, not retrofitted at launch. — Days 5–6"},
+          {"number":"04","title":"Content & SEO","description":"Copy, optimized WebP imagery, meta tags, JSON-LD schema, and internal links all land in this phase. We submit the sitemap to Google Search Console and verify rendering for AI crawlers (GPTBot, ClaudeBot, PerplexityBot). — Day 6–7"},
+          {"number":"05","title":"Launch & Handover","description":"We deploy to Cloudflare, wire up GA4 and GTM, and walk you through the CMS in a recorded handover session. A 30-day support window covers any post-launch fixes or training questions. — Day 7+"}
+        ]}
+      />
+      <PortfolioShowcase
+        eyebrow="RECENT WORK"
+        headline={"What Charlotte businesses look like after FactoryJet."}
+        cards={[
+          {
+            "industry":"FinTech & Financial Services",
+            "title":"Charlotte FinTech & Financial Services Client",
+            "description":"Charlotte is the second-largest US banking center — home to Bank of America, Truist, and Wells Fargo's East Coast HQ. Vendors and suppliers to this ecosystem need sites that project professional credibility instantly. We build fast, schema-rich sites with clear service architecture and compliance-aware form design that earn trust before any conversation starts.",
+            "imageSrc":"/images/us/charlotte/web-design/portfolio-1.webp",
+            "stat1":"+40% conversions",
+            "stat2":"< 1.5s load time"
+          },
+          {
+            "industry":"Healthcare & Life Sciences",
+            "title":"Charlotte Healthcare & Life Sciences Client",
+            "description":"Atrium Health (70,000+ employees) and Novant Health anchor one of the Southeast's largest healthcare systems. Vendors, private practices, and life sciences firms serving this ecosystem need sites that build patient and partner trust fast — with HIPAA-aware form design, clear service navigation, and local SEO.",
+            "imageSrc":"/images/us/charlotte/web-design/portfolio-2.webp",
+            "stat1":"+40% conversions",
+            "stat2":"< 1.5s load time"
+          },
+          {
+            "industry":"Manufacturing & Industrial",
+            "title":"Charlotte Manufacturing & Industrial Client",
+            "description":"Charlotte's manufacturing corridor — Husqvarna, Daimler Trucks North America — creates a deep B2B supply chain. Suppliers need capability pages, certification display, and RFQ workflows that speak directly to procurement teams. We build B2B sites designed to win shortlists, not just look good.",
+            "imageSrc":"/images/us/charlotte/web-design/portfolio-3.webp",
+            "stat1":"+40% conversions",
+            "stat2":"< 1.5s load time"
+          }
+        ]}
+        ctaHref="/us/portfolio"
+        ctaLabel="View full portfolio"
+      />
+      <ComparisonTable
+        eyebrow={"WHY FACTORYJET"}
+        headline={"FactoryJet vs. Charlotte Web Agencies"}
+        lead={"Charlotte agencies like Idea Kraft and Bowen do credible work — but neither publishes pricing or delivery timelines. FactoryJet publishes all three tiers upfront, delivers in 7 days, and builds in Next.js rather than WordPress. Here's how the Growth tier stacks up."}
+        columns={[{"label":"Their pricing"},{"label":"FactoryJet","isFactoryJet":true},{"label":"Why we cost less"}]}
+        rows={[
+          {"feature":"Idea Kraft","values":["$6,000–$15,000 (Charlotte market estimate)","$3,999 (Growth tier)","FactoryJet delivers in 7 days on Next.js; Idea Kraft's timeline and stack are not publicly stated."]},
+          {"feature":"Bowen","values":["Pricing undisclosed; full-service marketing + web","$3,999 (Growth tier)","Next.js vs WordPress means faster load times and no monthly plugin overhead for Charlotte clients."]}
+        ]}
+      />
+      <PricingTiers
+        eyebrow={"TRANSPARENT PRICING"}
+        headline={"Transparent Pricing for Charlotte Businesses"}
+        lead={"Charlotte agencies typically charge $6,000–$15,000 for a comparable web design project. FactoryJet Growth ($3,999) delivers the same scope — blog CMS, lead capture, GA4, Next.js — with a 7-day delivery guarantee and a codebase you own outright. That's 50% or more below the Charlotte agency benchmark, with no retainer required."}
+        tiers={[
+          {
+            "name":"Starter",
+            "priceRange":"$1,999",
+            "description":"A 5-page brochure site that loads fast on mobile and ranks for your name and core service. Best for sole traders and local Charlotte businesses who need a credible online presence quickly.",
+            "features":["5 pages, mobile-responsive","Basic SEO & schema markup","Contact form with email forwarding","2 revision rounds","30-day post-launch support"],
+            "cta":{"label":"Get a quote","href":"/contact"}
+          },
+          {
+            "name":"Growth",
+            "priceRange":"$3,999",
+            "description":"A 10–15 page site with a blog CMS, lead-capture flows, and analytics wired in from day one. Best for Charlotte SMBs scaling online who need the site to actively generate qualified inquiries.",
+            "features":["10–15 pages with blog CMS","Advanced SEO & GA4 tracking","Lead capture & email automation","3 revision rounds","30-day support + training session"],
+            "cta":{"label":"Get a quote","href":"/contact"},
+            "popular":true
+          },
+          {
+            "name":"Custom",
+            "priceRange":"$7,500+",
+            "description":"Custom Next.js build with e-commerce, AI features, API integrations, and priority support. Best for established Charlotte businesses with complex requirements and a real digital revenue line.",
+            "features":["Custom Next.js architecture","E-commerce or membership features","AI integrations (chat, search, content)","Third-party API connections","Priority support & quarterly reviews"],
+            "cta":{"label":"Get a quote","href":"/contact"}
+          }
+        ] as const}
+      />
+      <IndustriesGrid
+        eyebrow={"CHARLOTTE × WEB DESIGN"}
+        headline={"Web Design for Charlotte's Key Industries"}
+        lead={"From Bank of America's global headquarters to NASCAR's racing corridor to Atrium Health's hospital network, Charlotte's economy spans industries with very different digital needs. FactoryJet has built sites for each of them."}
+        sectors={[
+          {
+            "name":"FinTech & Financial Services",
+            "description":"Charlotte is the second-largest US banking center. Vendors and suppliers to Bank of America, Truist, Wells Fargo's East Coast hub, and the broader financial ecosystem need sites that project instant credibility — clear service architecture, compliance-aware form design, and the kind of visual professionalism that earns a shortlist spot.",
+            "example":"Suppliers, consultants, and fintech firms serving Bank of America, Truist, or Wells Fargo in the Charlotte metro."
+          },
+          {
+            "name":"Healthcare & Life Sciences",
+            "description":"Atrium Health (70,000+ employees) and Novant Health anchor one of the Southeast's largest healthcare networks. Vendors, private practices, and life sciences companies serving this ecosystem need sites that build patient and partner trust — HIPAA-aware form design, clear service navigation, and local SEO for clinic and practice visibility.",
+            "example":"Private practices, healthcare vendors, and life sciences firms in the Charlotte and surrounding piedmont market."
+          },
+          {
+            "name":"Manufacturing & Industrial",
+            "description":"Charlotte's manufacturing corridor — anchored by Husqvarna and Daimler Trucks North America — creates a dense B2B supply chain. Suppliers need capability pages, certification display, and RFQ workflows that speak directly to procurement teams and win shortlists before a sales call happens.",
+            "example":"Component suppliers and industrial service firms serving Charlotte's manufacturing corridor."
+          },
+          {
+            "name":"Professional & Business Services",
+            "description":"Law firms, accounting firms, insurance brokers, wealth managers, and consulting practices make up a substantial share of Charlotte's professional workforce. For these businesses, the website is the pitch deck — it either earns a meeting or loses one. We build lead-capture flows and authority-building content structures designed for B2B buyer cycles.",
+            "example":"Legal, accounting, insurance, and consulting firms serving Charlotte's corporate and mid-market base."
+          },
+          {
+            "name":"Technology & Innovation",
+            "description":"Charlotte's growing tech sector — anchored by Red Ventures and LendingTree, supported by a wave of corporate relocations — is creating new demand for B2B SaaS and professional tech services sites. These buyers research deeply before engaging. We build fast, schema-rich sites that communicate technical credibility and rank for the specific queries your buyers use.",
+            "example":"SaaS companies, digital agencies, and tech-enabled services firms operating in the Charlotte metro."
+          }
+        ]}
+      />
+      <TestimonialsSection
+        eyebrow="WHAT CLIENTS SAY"
+        headline={"4.9/5 across 150+ reviews from Charlotte and beyond."}
+      />
+      <FAQ
+        eyebrow="COMMON QUESTIONS"
+        headline={"Common Questions from Charlotte Businesses"}
+        items={[
+          {
+            "question":"How much does a website cost for a small business in Charlotte?",
+            "answer":"Most Charlotte small businesses choose the Starter tier ($1,999) for a clean five-page site, or Growth ($3,999) for a blog CMS and lead capture. Custom builds with e-commerce or AI features start at $7,500. Local Charlotte agency rates for the same scope typically run $6,000–$15,000 — two to three times higher."
+          },
+          {
+            "question":"How long does it take to build a website?",
+            "answer":"A standard FactoryJet build runs 7 days from kickoff to launch. Discovery and strategy take Days 1–2, design and prototyping Days 3–4, development Days 5–6, and content, SEO, and launch happen on Days 6–7. We do not start the clock until your brand assets and content are in our shared workspace."
+          },
+          {
+            "question":"What's included in a web design project?",
+            "answer":"Every project includes strategy, design, development, content, SEO setup, and a 30-day support window. You get a Figma design system you keep, a Next.js codebase you own, JSON-LD schema for AI search visibility, GA4 wired up from day one, and a recorded handover session. We do not charge separately for staging environments, basic copy edits, or routine bug fixes inside the support window."
+          },
+          {
+            "question":"How long until my new site ranks on Google?",
+            "answer":"Branded searches (your business name) usually rank within one to two weeks of launch. Service plus location queries like 'web design Charlotte' typically take three to six months for a new domain. The work that compresses this timeline — schema markup, internal linking, content depth, technical performance — is built into every FactoryJet project, not sold as an add-on after launch."
+          },
+          {
+            "question":"I work with financial services or fintech clients in Charlotte. Do you have experience building those sites?",
+            "answer":"Yes. Charlotte's financial services ecosystem is one of our most common client profiles. Vendors and suppliers to Bank of America, Truist, and Wells Fargo need sites that project instant professional credibility. We build clear service architecture, compliance-aware form design, and case study sections designed to earn shortlist spots before the first call."
+          },
+          {
+            "question":"Can you build a website for a healthcare vendor serving Atrium Health or Novant Health?",
+            "answer":"Yes. We work with healthcare vendors, private practices, and life sciences firms serving Charlotte's large hospital networks. We handle HIPAA-aware contact form design, clear capability pages, and local SEO — important for vendors competing for procurement attention at Atrium (70,000+ employees) and Novant Health."
+          },
+          {
+            "question":"We're a manufacturing or industrial company in the Charlotte corridor. Can your site help us win B2B deals?",
+            "answer":"Yes. Charlotte's manufacturing sector — Husqvarna, Daimler Trucks, and their supply chains — relies on supplier websites to pre-qualify vendors before RFQs are issued. We build B2B sites with clear capability documentation, certification display, and RFQ workflows that speak to procurement teams. A professional, fast-loading site with the right information architecture shortlists you before a sales call happens."
+          },
+          {
+            "question":"How does FactoryJet compare to Charlotte agencies like Idea Kraft or Bowen?",
+            "answer":"Idea Kraft and Bowen are established Charlotte agencies. Neither publishes pricing or delivery timelines. FactoryJet publishes all three tiers upfront, delivers in 7 days, and builds in Next.js rather than WordPress — which means faster load times and no ongoing plugin maintenance for your team. At Growth ($3,999), we typically run 40–60% below Charlotte agency rates for equivalent scope."
+          }
+        ]}
+      />
+      <FinalCTA
+        variant="dark"
+        eyebrow={"READY TO START"}
+        headline={"Ready to Build Your Charlotte Website?"}
+        sub={"Charlotte's $220B+ economy is built on trust — and your website is the first trust signal every prospect sees. In a city where buyers compare you against firms that bank with Bank of America, a slow or amateur-looking site doesn't just underperform. It disqualifies you. Start today."}
+        primaryCta={{ label: "Start Your Project", href: '/contact' }}
+      />
+      <SchemaScript />
+    </main>
+  );
+}
+
+function SchemaScript() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "@id": "https://factoryjet.com/us/charlotte/web-design#business",
+        "name": "FactoryJet Technologies",
+        "url": "https://factoryjet.com",
+        "telephone": "+919103398557",
+        "areaServed": "Charlotte",
+        "priceRange": "$1,999–$7,500+"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://factoryjet.com/us/charlotte/web-design#service",
+        "name": "Web Design Charlotte",
+        "provider": {
+          "@type": "Organization",
+          "name": "FactoryJet Technologies"
+        },
+        "areaServed": "Charlotte",
+        "description": "FactoryJet builds fast, conversion-focused websites for Charlotte businesses — from $1,999. 7-day delivery. Next.js, SEO, and GA4 included."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://factoryjet.com/us/charlotte/web-design#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a website cost for a small business in Charlotte?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most Charlotte small businesses choose the Starter tier ($1,999) for a clean five-page site, or Growth ($3,999) for a blog CMS and lead capture. Custom builds with e-commerce or AI features start at $7,500. Local Charlotte agency rates for the same scope typically run $6,000–$15,000 — two to three times higher."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take to build a website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A standard FactoryJet build runs 7 days from kickoff to launch. Discovery and strategy take Days 1–2, design and prototyping Days 3–4, development Days 5–6, and content, SEO, and launch happen on Days 6–7. We do not start the clock until your brand assets and content are in our shared workspace."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's included in a web design project?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every project includes strategy, design, development, content, SEO setup, and a 30-day support window. You get a Figma design system you keep, a Next.js codebase you own, JSON-LD schema for AI search visibility, GA4 wired up from day one, and a recorded handover session."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long until my new site ranks on Google?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Branded searches typically rank within one to two weeks of launch. Service plus location queries like 'web design Charlotte' take three to six months for a new domain. Schema markup, internal linking, content depth, and technical performance — all built into every FactoryJet project — compress that timeline."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "I work with financial services or fintech clients in Charlotte. Do you have experience building those sites?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Vendors and suppliers to Bank of America, Truist, and Wells Fargo need sites that project instant professional credibility. We build clear service architecture, compliance-aware form design, and case study sections designed to earn shortlist spots before the first call."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you build a website for a healthcare vendor serving Atrium Health or Novant Health?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We work with healthcare vendors, private practices, and life sciences firms serving Charlotte's large hospital networks. We handle HIPAA-aware contact form design, clear capability pages, and local SEO for vendors competing at Atrium (70,000+ employees) and Novant Health."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "We're a manufacturing or industrial company in the Charlotte corridor. Can your site help us win B2B deals?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We build B2B sites with clear capability documentation, certification display, and RFQ workflows that speak to procurement teams. A professional, fast-loading site with the right information architecture shortlists you before a sales call happens."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does FactoryJet compare to Charlotte agencies like Idea Kraft or Bowen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Neither Idea Kraft nor Bowen publishes pricing or delivery timelines. FactoryJet publishes all three tiers upfront, delivers in 7 days, and builds in Next.js rather than WordPress — faster load times and no ongoing plugin maintenance. At Growth ($3,999), we run 40–60% below Charlotte agency rates for equivalent scope."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://factoryjet.com/us/charlotte/web-design#breadcrumbs",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://factoryjet.com"},
+          {"@type": "ListItem", "position": 2, "name": "United States", "item": "https://factoryjet.com/us"},
+          {"@type": "ListItem", "position": 3, "name": "Charlotte", "item": "https://factoryjet.com/us/charlotte"},
+          {"@type": "ListItem", "position": 4, "name": "Web Design", "item": "https://factoryjet.com/us/charlotte/web-design"}
+        ]
+      }
+    ]
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}

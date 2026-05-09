@@ -1,0 +1,284 @@
+import type { Metadata } from 'next';
+import Hero from '@/components/v2/Hero';
+import LogoBar from '@/components/v2/LogoBar';
+import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
+import CityContextSection from '@/components/v2/CityContextSection';
+import ServiceExplanation from '@/components/v2/ServiceExplanation';
+import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
+import ServiceJourneyRow from '@/components/v2/ServiceJourneyRow';
+import PortfolioShowcase from '@/components/v2/PortfolioShowcase';
+import ComparisonTable from '@/components/v2/ComparisonTable';
+import PricingTiers from '@/components/v2/PricingTiers';
+import IndustriesGrid from '@/components/v2/IndustriesGrid';
+import TestimonialsSection from '@/components/v2/TestimonialsSection';
+import FAQ from '@/components/v2/FAQ';
+import FinalCTA from '@/components/v2/FinalCTA';
+import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
+
+export const metadata: Metadata = {
+  title: 'Web Design Miami | FactoryJet',
+  description: 'FactoryJet builds fast, conversion-focused websites for Miami businesses — from $1,999. 7-day delivery. Next.js, SEO, and GA4 included.',
+  alternates: {
+    canonical: 'https://factoryjet.com/us/miami/web-design',
+  },
+};
+
+export default function MiamiWebDesignPage() {
+  return (
+    <main className="bg-fj-cream">
+      <Hero
+        eyebrow={"WEB DESIGN · MIAMI"}
+        headline={"Web Design in Miami That Converts Visitors Into Clients"}
+        lead={"Miami businesses compete in one of the fastest-moving markets in the US — Latin American trade, global finance, and a booming tech scene all converging in one city. FactoryJet delivers a production-ready website in 7 days, starting at $1,999. You own the code, the design files, and the results."}
+        primaryCta={{ label: "Start Your Project", href: '/contact' }}
+        trustItems={["Websites from $1,999","7-day delivery","Next.js + GA4 included"]}
+        rightSlot={<HeroBrowserMockup />}
+      />
+      <LogoBar
+        tagline="Trusted by 500+ businesses across the US, UK, and UAE"
+      />
+      <BigThreeTrustBlock
+        eyebrow="BY THE NUMBERS"
+        headline={"Results that Miami businesses trust."}
+      />
+      <CityContextSection
+        eyebrow={"MIAMI MARKET"}
+        headline={"Why Your Miami Web Presence Can't Be an Afterthought"}
+        leadParagraphs={["Miami's metro economy is a genuine global crossroads. The Miami-Fort Lauderdale-West Palm Beach MSA generates $413B+ in GDP, anchored by 80+ international banks operating out of the Brickell financial corridor, a $20B+ annual tourism economy driven by South Beach and the cruise industry, and a luxury real estate market that competes with New York and London for international buyers. The Magic City Innovation District signals Miami's growing tech credibility, while Latin American HQs and trade relationships make the city the de facto US gateway to a market of 650 million consumers. Miami city proper holds 2.7M residents, with the broader metro at 6.2M+ as of 2024. In a market where your competition isn't just across town — it's across borders — a slow, unclear website doesn't just lose local rankings. It loses international deals to the firm whose site loaded first and answered the question in two languages."]}
+        stats={[{"value":"6.2M+","label":"Miami-Fort Lauderdale-West Palm Beach Metro Population (2024)","sourceUrl":"https://www.census.gov/quickfacts/fact/table/miamidadecountyflorida/PST045224"},{"value":"$413B+","label":"Miami-Fort Lauderdale-West Palm Beach MSA GDP","sourceUrl":"https://fred.stlouisfed.org/series/NGMP33100"},{"value":"80+","label":"International Banks with Miami Operations","sourceUrl":"https://www.miamidade.gov/global/economy/trade-and-finance.page"}]}
+      />
+      <ServiceExplanation
+        eyebrow={"WEB DESIGN · Miami"}
+        headline={"What 'Web Design' Actually Means for a Miami Business"}
+        lead={"Miami's bilingual market (English and Spanish), global finance clientele, and tourism-driven consumer base create web requirements you won't find in most agency playbooks. FactoryJet builds with multilingual-ready architecture from day one, fast load times for mobile users on the go, and lead capture flows tuned for international B2B buyers who evaluate you before they ever pick up the phone."}
+        body={<><p>For FinTech and financial services companies along the Brickell corridor — international banks, wealth management firms, payment processors, and the consultancies that serve them — a website needs to project regulatory credibility fast. Buyers in this sector read service architecture pages before they read testimonials. We structure your site to communicate compliance credibility, clear capability scope, and trust signals (certifications, client logos, regulatory disclosures) in the first scroll.</p><p>For real estate and tourism businesses — the industries that collectively define Miami's global brand — your website is competing with international firms for buyers who may never visit your office before wiring a deposit. Miami's $20B+ tourism economy and booming luxury real estate market require sites that convert international visitors into leads: gallery-heavy layouts with fast image delivery, multilingual UX, and booking or inquiry flows that work on a phone in any time zone. Every FactoryJet project covers discovery, Figma prototyping, development, content, SEO, and a 30-day support window. You leave with a codebase you own, a design system you keep, and a site built to rank — not just to look good in a screenshot.</p></>}
+        rightSlot={<img src="/images/us/miami/web-design/service-explanation.webp" alt="" aria-hidden="true" className="w-full rounded-2xl object-cover" />}
+      />
+      <StrategicDarkSection
+        eyebrow="WHY FACTORYJET"
+        headline={"Why Miami Businesses Choose FactoryJet Over Local Agencies"}
+        lead={"Miami has strong local agencies — Refresh Agency handles digital marketing and web for Miami brands, The Duel operates out of Wynwood doing branding and web, and Absolute Web has built e-commerce and web design projects across South Florida for years. All credible. None publishes a 7-day delivery commitment or builds in Next.js as standard.\n\nFactoryJet's Growth tier ($3,999) covers 10–15 pages, a blog CMS, lead capture, multilingual-ready architecture, and GA4 analytics — 50–60% below the Miami agency benchmark for equivalent scope, with a faster timeline and a codebase that doesn't require monthly plugin fees.\n\nWe don't win on price alone. We win because every project ships with JSON-LD schema for AI search crawlers, performance budgets enforced from the first commit, multilingual-ready architecture for Miami's bilingual market, and a recorded handover so your team can self-manage from day one. No lock-in. No proprietary platform. No surprise invoices after launch."}
+        pillars={[
+          { title: 'AI-native',    body: 'Every site is built with AI-assisted workflow — compressing build time without compressing quality. We have run 500+ projects through this system.' },
+          { title: 'Transparent',  body: 'Pricing on the first call. No discovery fees, no \'it depends\' quotes that arrive three weeks later. Fixed price. Agreed up front.' },
+          { title: 'Guaranteed',   body: '7-day delivery guarantee. If we miss the deadline, you don\'t pay. We have delivered on time on 97% of all projects.' },
+        ]}
+      />
+      <ServiceJourneyRow
+        eyebrow={"OUR PROCESS"}
+        headline={"How We Build Your Miami Website"}
+        stages={[
+          {"number":"01","title":"Discovery & Strategy","description":"We map your ideal customer profile, audit the top three competitors in your Miami market, and agree the sitemap and content plan — including multilingual scope if needed. You leave this phase knowing exactly what the site will do and how we will measure it. — Days 1–2"},
+          {"number":"02","title":"Design & Prototyping","description":"Figma wireframes turn into a complete mobile-first design system, reviewed against your brand and conversion goals. Two structured feedback rounds lock the visual direction before a line of code is written. Fast turnaround keeps the 7-day clock on track. — Days 3–4"},
+          {"number":"03","title":"Development","description":"We build the site in Next.js with GSAP animations, headless CMS integration, contact forms, and any third-party APIs you need. Multilingual-ready architecture is scaffolded from the first commit — not bolted on afterward. Performance budgets are enforced throughout. — Days 5–6"},
+          {"number":"04","title":"Content & SEO","description":"Copy, optimised WebP imagery, meta tags, JSON-LD schema, and internal links all land in this phase. We submit the sitemap to Google Search Console and verify rendering for AI crawlers (GPTBot, ClaudeBot, PerplexityBot). Spanish metadata added where in scope. — Day 6–7"},
+          {"number":"05","title":"Launch & Handover","description":"We deploy to Cloudflare, wire up GA4 and GTM, and walk you through the CMS in a recorded handover session. A 30-day support window covers any post-launch fixes or training questions. — Day 7+"}
+        ]}
+      />
+      <PortfolioShowcase
+        eyebrow="RECENT WORK"
+        headline={"What Miami businesses look like after FactoryJet."}
+        cards={[
+          {"industry":"FinTech & Financial Services","title":"Miami FinTech & Financial Services Client","description":"Brickell's financial corridor hosts 80+ international banks and a growing FinTech ecosystem. Companies here need sites that communicate regulatory credibility, clear service architecture, and trust signals to international buyers evaluating multiple firms simultaneously. We build fast, schema-rich sites that convert sophisticated financial clients.","imageSrc":"/images/us/miami/web-design/portfolio-1.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"},
+          {"industry":"Real Estate & Luxury Property","title":"Miami Real Estate & Luxury Property Client","description":"Miami's luxury real estate market competes globally for buyers who may never visit before making a decision. Sites need gallery-heavy layouts, fast image delivery for international connections, IDX integration, and inquiry flows that work across time zones. We build for the international buyer, not just the local one.","imageSrc":"/images/us/miami/web-design/portfolio-2.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"},
+          {"industry":"Tourism & Hospitality","title":"Miami Tourism & Hospitality Client","description":"Miami's $20B+ annual tourism economy runs on first impressions — and the first impression is always the website. South Beach hotels, restaurant groups, and cruise-adjacent businesses need mobile-first, visually compelling sites with booking conversion flows that capture visitors before they bounce to a competitor.","imageSrc":"/images/us/miami/web-design/portfolio-3.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"}
+        ]}
+        ctaHref="/us/portfolio"
+        ctaLabel="View full portfolio"
+      />
+      <ComparisonTable
+        eyebrow={"WHY FACTORYJET"}
+        headline={"Why Miami Businesses Choose FactoryJet Over Local Agencies"}
+        lead={"Miami has credible local agencies — Refresh Agency and Absolute Web both have track records. Neither publishes a 7-day delivery commitment or builds in Next.js as standard. FactoryJet's Growth tier ($3,999) delivers equivalent scope — 10–15 pages, CMS, multilingual-ready architecture, lead capture, GA4 — at 50–60% below the Miami benchmark, with a codebase you own outright and no monthly plugin overhead."}
+        columns={[{"label":"Their pricing"},{"label":"FactoryJet","isFactoryJet":true},{"label":"Why we cost less"}]}
+        rows={[
+          {"feature":"Refresh Agency","values":["Pricing not publicly disclosed; Miami-based digital marketing + web agency","$3,999 (Growth tier)","FactoryJet delivers in 7 days on Next.js with multilingual-ready architecture; Refresh Agency timeline and stack are not publicly stated."]},
+          {"feature":"Absolute Web","values":["E-commerce and web design projects typically $8,000–$20,000+ based on published case studies","$3,999 (Growth tier)","Next.js vs platform-dependent builds means faster load times, no monthly plugin overhead, and a codebase Miami clients own outright."]}
+        ]}
+      />
+      <PricingTiers
+        eyebrow={"TRANSPARENT PRICING"}
+        headline={"Transparent Pricing for Miami Businesses"}
+        lead={"Miami agency rates for web design typically start at $8,000 and run to $20,000+ for projects with comparable scope. FactoryJet's Growth tier delivers 10–15 pages, a blog CMS, multilingual-ready architecture, SEO, and analytics for $3,999 — 50–60% below the Miami benchmark, with 7-day delivery and a Next.js codebase you own outright. No retainer required."}
+        tiers={[
+          {"name":"Starter","priceRange":"$1,999","description":"5-page brochure site, fast mobile load, ranks for your name and core service. Best for local Miami businesses and sole traders.","features":["5 pages, mobile-responsive","Basic SEO & schema markup","Contact form with email forwarding","2 revision rounds","30-day post-launch support"],"cta":{"label":"Get a quote","href":"/contact"}},
+          {"name":"Growth","priceRange":"$3,999","description":"10–15 page site with blog CMS, lead-capture, multilingual-ready architecture, and analytics. Best for Miami SMBs scaling online.","features":["10–15 pages with blog CMS","Advanced SEO & GA4 tracking","Multilingual-ready architecture","Lead capture & email automation","30-day support + training session"],"cta":{"label":"Get a quote","href":"/contact"},"popular":true},
+          {"name":"Custom","priceRange":"$7,500+","description":"Custom Next.js with e-commerce, AI features, API integrations, and priority support. Best for complex Miami businesses with international requirements.","features":["Custom Next.js architecture","E-commerce or membership features","AI integrations (chat, search, content)","Third-party API connections","Priority support & quarterly reviews"],"cta":{"label":"Get a quote","href":"/contact"}}
+        ] as const}
+      />
+      <IndustriesGrid
+        eyebrow={"MIAMI × WEB DESIGN"}
+        headline={"Web Design for Miami's Key Industries"}
+        lead={"From Brickell's finance corridor to the Art Basel crowd in Wynwood, Miami's economy spans industries with very different digital needs. FactoryJet has built sites for each of them."}
+        sectors={[
+          {"name":"FinTech & Financial Services","description":"Brickell City Centre hosts 80+ international banks and a growing FinTech ecosystem covering payments, wealth management, and cross-border finance. Companies here need sites that communicate regulatory credibility, clear service architecture, and trust signals to international buyers evaluating multiple firms simultaneously. We build fast, schema-rich sites that rank and convert.","example":"Wealth management firms, payment processors, and FinTech startups serving the Brickell corridor and Latin American clients."},
+          {"name":"Real Estate & Luxury Property","description":"Miami's luxury real estate market competes globally — with international buyers from Latin America, Europe, and beyond making decisions remotely. Sites need gallery-heavy layouts, fast image delivery, IDX integration, and inquiry flows optimised for buyers in multiple time zones. We build for the international buyer, not just the local one.","example":"Luxury brokerages, property developers, and property management companies serving Miami-Dade and Broward counties."},
+          {"name":"Tourism & Hospitality","description":"Miami's $20B+ annual tourism economy runs on first impressions — and the first impression is always the website. South Beach hotels, restaurant groups, cruise-adjacent businesses, and tour operators need mobile-first, visually compelling sites with booking conversion flows that capture visitors before they bounce to a competitor platform.","example":"Boutique hotels, restaurant groups, and tour operators serving South Beach, Brickell, and the Port of Miami."},
+          {"name":"Healthcare & Life Sciences","description":"Jackson Health System employs 14,000+ staff and the University of Miami Health System anchors a broader healthcare cluster of 300+ biotech and life sciences companies across Miami-Dade. Sites in this sector need HIPAA-aware contact forms, clear service navigation for patients and partners, and local SEO that competes in a dense provider market.","example":"Private practices, life sciences vendors, and healthcare service firms across Miami-Dade and Broward counties."},
+          {"name":"Professional & Business Services","description":"Latin American HQs, international consultancies, law firms, and accounting practices serving cross-border clients make up a significant slice of Miami's professional services economy. These businesses need authority-building content, bilingual capability signals, and lead capture flows designed for longer B2B sales cycles with international prospects.","example":"Law firms, consultancies, and accounting practices serving Latin American corporate clients from Miami offices."}
+        ]}
+      />
+      <TestimonialsSection
+        eyebrow="WHAT CLIENTS SAY"
+        headline={"4.9/5 across 150+ reviews from Miami and beyond."}
+      />
+      <FAQ
+        eyebrow="COMMON QUESTIONS"
+        headline={"Common Questions from Miami Businesses"}
+        items={[
+          {"question":"How much does a website cost for a small business in Miami?","answer":"Most Miami small businesses choose the Starter tier ($1,999) for a clean five-page site or Growth ($3,999) for a blog CMS, multilingual-ready architecture, and lead capture. Custom builds with e-commerce or AI features start at $7,500. Local Miami agency rates for comparable scope typically run $8,000–$20,000+."},
+          {"question":"How long does it take to build a website?","answer":"A standard FactoryJet build completes in 7 days from kickoff to launch. Days 1–2 cover discovery and strategy, Days 3–4 cover design and prototyping, Days 5–6 cover development, and Day 7 covers content, SEO finalization, and launch. We do not start the clock until your brand assets and content are in our shared workspace."},
+          {"question":"What's included in a web design project?","answer":"Every project includes strategy, design, development, content, SEO setup, and a 30-day support window. You get a Figma design system you keep, a Next.js codebase you own, JSON-LD schema for AI search visibility, GA4 wired up, and a recorded handover session. We do not charge separately for staging environments, basic copy edits, or routine bug fixes inside the support window."},
+          {"question":"How long until my new Miami site ranks on Google?","answer":"Branded searches (your business name) typically rank within one to two weeks of launch. Service plus location queries like 'web design Miami' or 'FinTech website Miami' take three to six months for a new domain. The work that compresses this timeline — schema, internal linking, content depth, technical performance — is built into every FactoryJet project, not sold as an add-on after launch."},
+          {"question":"Do you build websites for FinTech and financial services companies in Brickell?","answer":"Yes. Miami's Brickell corridor is one of our most common client profiles. We build sites that communicate regulatory credibility and service architecture to international buyers who research before they talk to anyone. That means clear capability pages, trust signals (certifications, regulatory disclosures, client logos), and lead-capture flows designed for sophisticated B2B buyers."},
+          {"question":"Can you build multilingual websites — English and Spanish?","answer":"Yes. Miami's bilingual market is a core design constraint, not an afterthought. FactoryJet's Growth tier includes multilingual-ready architecture from the first commit — meaning the codebase is structured to support Spanish content without a full rebuild later. We can also deliver fully translated Spanish pages if content is provided, and we build Spanish metadata for SEO."},
+          {"question":"How does FactoryJet compare to Miami agencies like Refresh Agency or Absolute Web?","answer":"Refresh Agency and Absolute Web are credible Miami agencies with track records. Neither publishes a 7-day delivery commitment. Refresh Agency does not publish pricing. Absolute Web's e-commerce projects typically run $8,000–$20,000+. FactoryJet publishes all three tiers upfront, delivers in 7 days, and builds in Next.js — which means faster load times and no monthly plugin overhead for your team."},
+          {"question":"We're a real estate company in Miami targeting international buyers. What do you build?","answer":"Gallery-heavy layouts, fast image delivery (WebP optimised for international connections), IDX integration capability, inquiry forms that work across time zones, and multilingual-ready architecture for buyers browsing in Spanish, Portuguese, or other languages. We also build schema markup that helps your listings appear in AI search results — increasingly important as international buyers research remotely before visiting."}
+        ]}
+      />
+      <FinalCTA
+        variant="dark"
+        eyebrow={"READY TO START"}
+        headline={"Ready to Build Your Miami Website?"}
+        sub={"Miami's $413B metro economy moves at international speed. Every week without a high-performing website is a week your competitors are capturing the searches — and the clients — you should own. Start today and have a sitemap ready within 72 hours."}
+        primaryCta={{ label: "Start Your Project", href: '/contact' }}
+      />
+      <SchemaScript />
+    </main>
+  );
+}
+
+function SchemaScript() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "@id": "https://factoryjet.com/us/miami/web-design#business",
+        "name": "FactoryJet Technologies",
+        "url": "https://factoryjet.com",
+        "telephone": "+919103398557",
+        "areaServed": "Miami",
+        "priceRange": "$1,999–$7,500+"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://factoryjet.com/us/miami/web-design#service",
+        "name": "Web Design Miami",
+        "provider": {
+          "@type": "Organization",
+          "name": "FactoryJet Technologies"
+        },
+        "areaServed": "Miami",
+        "description": "FactoryJet builds fast, conversion-focused websites for Miami businesses — from $1,999. 7-day delivery. Next.js, SEO, and GA4 included."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://factoryjet.com/us/miami/web-design#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a website cost for a small business in Miami?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most Miami small businesses choose the Starter tier ($1,999) for a clean five-page site or Growth ($3,999) for a blog CMS, multilingual-ready architecture, and lead capture. Custom builds with e-commerce or AI features start at $7,500. Local Miami agency rates for comparable scope typically run $8,000–$20,000+."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take to build a website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A standard FactoryJet build completes in 7 days from kickoff to launch. Days 1–2 cover discovery and strategy, Days 3–4 cover design and prototyping, Days 5–6 cover development, and Day 7 covers content, SEO finalization, and launch. We do not start the clock until your brand assets and content are in our shared workspace."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's included in a web design project?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every project includes strategy, design, development, content, SEO setup, and a 30-day support window. You get a Figma design system you keep, a Next.js codebase you own, JSON-LD schema for AI search visibility, GA4 wired up, and a recorded handover session. We do not charge separately for staging environments, basic copy edits, or routine bug fixes inside the support window."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long until my new Miami site ranks on Google?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Branded searches (your business name) typically rank within one to two weeks of launch. Service plus location queries like 'web design Miami' or 'FinTech website Miami' take three to six months for a new domain. The work that compresses this timeline — schema, internal linking, content depth, technical performance — is built into every FactoryJet project, not sold as an add-on after launch."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you build websites for FinTech and financial services companies in Brickell?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Miami's Brickell corridor is one of our most common client profiles. We build sites that communicate regulatory credibility and service architecture to international buyers who research before they talk to anyone. That means clear capability pages, trust signals (certifications, regulatory disclosures, client logos), and lead-capture flows designed for sophisticated B2B buyers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you build multilingual websites — English and Spanish?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Miami's bilingual market is a core design constraint, not an afterthought. FactoryJet's Growth tier includes multilingual-ready architecture from the first commit — meaning the codebase is structured to support Spanish content without a full rebuild later. We can also deliver fully translated Spanish pages if content is provided, and we build Spanish metadata for SEO."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does FactoryJet compare to Miami agencies like Refresh Agency or Absolute Web?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Refresh Agency and Absolute Web are credible Miami agencies with track records. Neither publishes a 7-day delivery commitment. Refresh Agency does not publish pricing. Absolute Web's e-commerce projects typically run $8,000–$20,000+. FactoryJet publishes all three tiers upfront, delivers in 7 days, and builds in Next.js — which means faster load times and no monthly plugin overhead for your team."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "We're a real estate company in Miami targeting international buyers. What do you build?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Gallery-heavy layouts, fast image delivery (WebP optimised for international connections), IDX integration capability, inquiry forms that work across time zones, and multilingual-ready architecture for buyers browsing in Spanish, Portuguese, or other languages. We also build schema markup that helps your listings appear in AI search results — increasingly important as international buyers research remotely before visiting."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://factoryjet.com/us/miami/web-design#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://factoryjet.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "United States",
+            "item": "https://factoryjet.com/us"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Miami",
+            "item": "https://factoryjet.com/us/miami"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Web Design",
+            "item": "https://factoryjet.com/us/miami/web-design"
+          }
+        ]
+      }
+    ]
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
