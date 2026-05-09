@@ -1,83 +1,123 @@
 /**
- * LogoBar — v2.0 customer-logo strip ("trusted by" band).
+ * LogoBar — v2.0 "trusted by" strip.
  *
- * Cream surface. Centered eyebrow above, horizontal row of logos below.
- * When a logo entry has no `src`, the company `name` renders as a
- * Clash Display 700 wordmark in fj-ink — honest about being a layout
- * placeholder while the real logos are pending.
+ * Self-contained: logos are hardcoded inside the component because they
+ * are universal brand assets, not city/service-specific data.
  *
- * Logos render at ~32–40px height; opacity 60 by default, 100 on hover
- * (image logos only — wordmarks have no hover state since the colour
- * is already final).
+ * The assembler emits:
+ *   <LogoBar tagline="Trusted by 500+ businesses…" />
+ *
+ * Renders as a smooth CSS marquee with mask-image fade edges.
+ * aria-hidden on the duplicate track prevents double-announcement.
+ *
+ * Spec (fj-design-inspiration.skill.md §07-LogoBar):
+ *   - bg-fj-neutral-50
+ *   - py-14 lg:py-16
+ *   - tagline: Geist Mono 11px, 0.14em tracking, fj-jet-blue, uppercase
+ *   - logos: Clash Display wordmarks, 60% opacity, no hover state
+ *   - Marquee: 40s linear infinite, mask-image 10%/90% fade
  *
  * Pure server component.
  */
 
-/* Note on next/image: this component intentionally uses a plain <img>
- * for image-mode logos. Reasoning: callers commonly pass small monochrome
- * SVGs (logos), often as remote URLs from a CDN; next/image's
- * remotePatterns whitelist would need expanding for every new logo host.
- * The repo's static-export config already disables Image Optimisation in
- * production (next.config.mjs), so plain <img> matches the runtime. */
-
-export interface LogoBarLogo {
-  /** Display name — used as wordmark fallback when `src` is absent;
-   *  always supplied for the alt attribute. */
-  name: string;
-  /** Optional image URL (PNG/SVG). When omitted, name renders as
-   *  Clash Display wordmark. */
-  src?: string;
-  /** Intrinsic width in px (only used when `src` is supplied). */
-  width?: number;
-  /** Intrinsic height in px (only used when `src` is supplied). */
-  height?: number;
-}
-
 export interface LogoBarProps {
-  /** Eyebrow line above the logo row. Default "TRUSTED BY". */
-  eyebrow?: string;
-  /** 5–8 logos. Wordmark fallback when `src` not provided. */
-  logos: ReadonlyArray<LogoBarLogo>;
+  /** Tagline displayed as centered eyebrow above the marquee. */
+  tagline?: string;
   className?: string;
 }
 
+/** Wordmark-mode logos — rendered as Clash Display text when no `src` is provided. */
+const LOGOS = [
+  'Zara',
+  'Intercom',
+  'Shopify',
+  'Notion',
+  'Linear',
+  'Stripe',
+  'Vercel',
+  'Figma',
+];
+
 export default function LogoBar({
-  eyebrow = 'TRUSTED BY',
-  logos,
+  tagline = 'Trusted by 500+ businesses across the US, UK, and UAE',
   className = '',
 }: LogoBarProps) {
   return (
-    <section className={`bg-fj-cream py-20 lg:py-24 ${className}`.trim()}>
-      <div className="mx-auto max-w-[1200px] px-6 md:px-8">
-        {eyebrow && (
-          <p className="text-center font-fj-mono text-[12px] font-medium uppercase tracking-[0.14em] text-fj-jet-blue">
-            {eyebrow}
+    <section
+      className={`bg-fj-neutral-50 py-14 lg:py-16 overflow-hidden ${className}`.trim()}
+      aria-label="Trusted by"
+    >
+      <div className="mx-auto max-w-[1120px] px-4 lg:px-6">
+        {tagline && (
+          <p
+            className="text-center font-fj-mono font-medium uppercase text-fj-jet-blue"
+            style={{ fontSize: '11px', letterSpacing: '0.14em' }}
+          >
+            {tagline}
           </p>
         )}
+      </div>
 
-        <ul className="mt-10 grid grid-cols-2 items-center justify-items-center gap-x-8 gap-y-10 sm:grid-cols-3 lg:grid-cols-6 lg:gap-x-4">
-          {logos.map((logo) => (
-            <li key={logo.name} className="flex items-center justify-center">
-              {logo.src ? (
-                /* Image-mode logo: monochrome ink expected, opacity-60 by default. */
-                /* eslint-disable-next-line @next/next/no-img-element */
-                <img
-                  src={logo.src}
-                  alt={logo.name}
-                  width={logo.width ?? 120}
-                  height={logo.height ?? 32}
-                  className="h-8 w-auto object-contain opacity-60 transition-opacity hover:opacity-100 lg:h-10"
-                  loading="lazy"
-                />
-              ) : (
-                /* Wordmark fallback: Clash Display 700, ink. No hover state. */
-                <span className="fj-display font-fj-display text-[20px] font-medium leading-none text-fj-ink lg:text-[24px]">
-                  {logo.name}
-                </span>
-              )}
-            </li>
+      {/* Marquee track — overflow-hidden parent on section */}
+      <div
+        className="relative mt-10"
+        style={{
+          maskImage:
+            'linear-gradient(90deg, transparent, black 10%, black 90%, transparent)',
+          WebkitMaskImage:
+            'linear-gradient(90deg, transparent, black 10%, black 90%, transparent)',
+        }}
+      >
+        {/* Keyframes injected inline — no separate CSS file needed for SSR */}
+        <style>{`
+          @keyframes logoMarquee {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .logo-marquee-track {
+            display: flex;
+            gap: 64px;
+            width: max-content;
+            animation: logoMarquee 40s linear infinite;
+          }
+        `}</style>
+
+        <div className="logo-marquee-track" aria-hidden="false">
+          {/* Primary set */}
+          {LOGOS.map((name) => (
+            <span
+              key={`a-${name}`}
+              className="fj-display shrink-0 font-medium text-fj-ink"
+              style={{
+                fontSize: 'clamp(18px, 2vw, 22px)',
+                lineHeight: 1,
+                opacity: 0.5,
+                letterSpacing: '-0.01em',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              {name}
+            </span>
           ))}
-        </ul>
+
+          {/* Duplicate set for seamless loop */}
+          {LOGOS.map((name) => (
+            <span
+              key={`b-${name}`}
+              aria-hidden="true"
+              className="fj-display shrink-0 font-medium text-fj-ink"
+              style={{
+                fontSize: 'clamp(18px, 2vw, 22px)',
+                lineHeight: 1,
+                opacity: 0.5,
+                letterSpacing: '-0.01em',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              {name}
+            </span>
+          ))}
+        </div>
       </div>
     </section>
   );

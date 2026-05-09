@@ -52,19 +52,32 @@ gradient H2, and full-bleed stock-photo backgrounds are NOT adopted.
 - Editorial restraint, single accent colour per moment.
 - All M1.a/M1.b/M1.c.* component layouts.
 
-**18 components currently in this directory** (no list changes in M1.d.1
-— per-component reskin patches strip italic-emphasis className
-applications + Fraunces-italic boring-stats applications in M1.d.2 →
-M1.d.5):
+**20 components currently in this directory** (2 new components added in
+pipeline v2.1 to complete the 15-section landing page system):
 
 ```
 BigThreeTrustBlock     CityContextSection     CaseStudyCard
 BoringStatsRow         ComparisonTable        FAQ
 FinalCTA               Heading                Hero
 ImageBlock             IndustriesGrid         LogoBar
-PricingTiers           ServiceExplanation     ServiceJourneyRow
-SiteFooter             SiteHeader             StrategicDarkSection
+PortfolioShowcase      PricingTiers           ServiceExplanation
+ServiceJourneyRow      SiteFooter             SiteHeader
+StrategicDarkSection   TestimonialsSection
 ```
+
+**v2.1 API changes (pipeline alignment):**
+- `BigThreeTrustBlock` — 3 core trust stats are now hardcoded inside the
+  component. Assembler injects `eyebrow`, `headline`, and optional
+  `cityCount` from enriched city data. Old `stats` tuple prop removed.
+- `StrategicDarkSection` — now a full content section (not a generic
+  children wrapper). Accepts `eyebrow`, `headline`, `lead`, `pillars`.
+- `LogoBar` — logos hardcoded as self-contained marquee; only `tagline`
+  prop injected by assembler. Old `logos` array prop removed.
+- `PortfolioShowcase` (new) — 3 industry-matched portfolio cards.
+  Accepts `eyebrow`, `headline`, `cards`, `ctaHref`, `ctaLabel`.
+- `TestimonialsSection` (new) — 3-up dark-surface testimonials with
+  platform badges. Testimonials hardcoded; `eyebrow` and `headline`
+  injected by assembler.
 
 **M1.d roadmap:**
 

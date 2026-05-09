@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import { Heading } from './Heading';
+import MotionFadeUp from './MotionFadeUp';
 
 /**
  * ComparisonTable — v2.0 comparison block per factoryjet.DESIGN.md §5.6.
@@ -43,6 +44,15 @@ export interface ComparisonTableProps {
   /** H2 content (plain text post M1.d.2 — italic-emphasis pattern dropped). */
   headline: ReactNode;
   lead?: string;
+  /** Optional pull-quote panel rendered to the right of the headline on lg+
+   *  viewports. When provided, the intro switches from single-col to a 7/5
+   *  asymmetric grid. */
+  pullQuote?: {
+    /** Large display stat or short quote fragment (e.g. "3–5×"). */
+    stat: string;
+    /** Caption beneath the stat (e.g. "cheaper than a London agency"). */
+    caption: string;
+  };
   /** Typically 2–3 columns; spec §5.6 envisions up to 5. The FactoryJet
    *  column should sit leftmost per spec — caller orders the array. */
   columns: ReadonlyArray<ComparisonColumn>;
@@ -62,29 +72,76 @@ export default function ComparisonTable({
   eyebrow,
   headline,
   lead,
+  pullQuote,
   columns,
   rows,
   footer,
 }: ComparisonTableProps) {
+  const hasPullQuote = !!pullQuote;
+
   return (
-    <section className="bg-fj-cream py-24 md:py-32 overflow-x-clip">
+    <section className="bg-fj-cream py-14 md:py-20 overflow-x-clip">
       <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-        {/* Header */}
-        <div className="max-w-[820px]">
-          {eyebrow && <p className="fj-eyebrow">{eyebrow}</p>}
-          <Heading
-            as="h2"
-            size="h2"
-            className={`text-fj-ink ${eyebrow ? 'mt-6' : ''}`}
-          >
-            {headline}
-          </Heading>
-          {lead && (
-            <p className="mt-6 max-w-[640px] font-fj-body text-[1.0625rem] leading-[1.6] text-fj-neutral-600">
-              {lead}
-            </p>
-          )}
-        </div>
+        {/* Header — 2-col with pull-quote when provided, single-col otherwise */}
+        {hasPullQuote ? (
+          <MotionFadeUp className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-16">
+            {/* Left: eyebrow + headline + lead */}
+            <div className="lg:col-span-7">
+              {eyebrow && <p className="fj-eyebrow">{eyebrow}</p>}
+              <Heading
+                as="h2"
+                size="h2"
+                className={`text-fj-ink ${eyebrow ? 'mt-6' : ''}`}
+              >
+                {headline}
+              </Heading>
+              {lead && (
+                <p className="mt-6 font-fj-body text-[1.0625rem] leading-[1.6] text-fj-neutral-600">
+                  {lead}
+                </p>
+              )}
+            </div>
+            {/* Right: pull-quote panel */}
+            <div className="lg:col-span-5">
+              <div
+                className="rounded-2xl bg-white p-8 md:p-10 overflow-hidden"
+                style={{
+                  border: '1px solid #E5E7EB',
+                  borderTopWidth: '3px',
+                  borderTopStyle: 'solid',
+                  borderTopColor: '#0052CC',
+                }}
+              >
+                <div className="mb-5 h-[3px] w-10 rounded-full bg-fj-jet-blue" aria-hidden="true" />
+                <p
+                  className="font-fj-display fj-display font-bold text-fj-jet-blue leading-none tracking-[-0.02em]"
+                  style={{ fontSize: 'clamp(3rem,6vw,5rem)' }}
+                >
+                  {pullQuote.stat}
+                </p>
+                <p className="mt-4 font-fj-body text-[1rem] leading-[1.55] text-fj-neutral-600">
+                  {pullQuote.caption}
+                </p>
+              </div>
+            </div>
+          </MotionFadeUp>
+        ) : (
+          <MotionFadeUp className="max-w-[820px]">
+            {eyebrow && <p className="fj-eyebrow">{eyebrow}</p>}
+            <Heading
+              as="h2"
+              size="h2"
+              className={`text-fj-ink ${eyebrow ? 'mt-6' : ''}`}
+            >
+              {headline}
+            </Heading>
+            {lead && (
+              <p className="mt-6 max-w-[640px] font-fj-body text-[1.0625rem] leading-[1.6] text-fj-neutral-600">
+                {lead}
+              </p>
+            )}
+          </MotionFadeUp>
+        )}
 
         {/* Table wrapper — horizontal scroll on narrow viewports */}
         <div className="mt-12 overflow-x-auto">
@@ -105,6 +162,7 @@ export default function ComparisonTable({
                         ? 'bg-fj-jet-blue-tint text-fj-jet-blue'
                         : 'text-fj-neutral-400'
                     }`}
+                    style={col.isFactoryJet ? { borderTopWidth: '3px', borderTopStyle: 'solid', borderTopColor: '#0052CC' } : undefined}
                   >
                     {col.label}
                   </th>
@@ -113,7 +171,7 @@ export default function ComparisonTable({
             </thead>
             <tbody>
               {rows.map((row, ri) => (
-                <tr key={ri} className="border-t border-fj-neutral-200">
+                <tr key={ri} className="border-t border-fj-neutral-200 transition-colors hover:bg-fj-neutral-50/40">
                   <th
                     scope="row"
                     className={`sticky left-0 z-10 bg-fj-cream ${ROW_LABEL_TYPE}`}
