@@ -26,20 +26,20 @@ export interface LogoBarProps {
   className?: string;
 }
 
-/** Wordmark-mode logos — rendered as Clash Display text when no `src` is provided. */
+/** Industry/sector labels — rendered as Clash Display text. */
 const LOGOS = [
-  'Zara',
-  'Intercom',
-  'Shopify',
-  'Notion',
-  'Linear',
-  'Stripe',
-  'Vercel',
-  'Figma',
+  'Real Estate',
+  'Law Firms',
+  'E-Commerce',
+  'SaaS',
+  'Healthcare',
+  'Restaurants',
+  'Retail',
+  'Consultancies',
 ];
 
 export default function LogoBar({
-  tagline = 'Trusted by 500+ businesses across the US, UK, and UAE',
+  tagline = '500+ businesses served across these sectors',
   className = '',
 }: LogoBarProps) {
   return (
