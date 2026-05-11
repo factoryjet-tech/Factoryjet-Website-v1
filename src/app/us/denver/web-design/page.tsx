@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { webDesignPriorityCityAlternatesUS } from '@/data/hreflangMap';
 import Hero from '@/components/v2/Hero';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
   description: 'FactoryJet builds fast, conversion-focused websites for Denver businesses — from $1,999. 7-day delivery. Next.js, SEO, and GA4 included.',
   alternates: {
     canonical: 'https://factoryjet.com/us/denver/web-design',
+    languages: webDesignPriorityCityAlternatesUS.denver,
   },
 };
 

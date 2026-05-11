@@ -3,6 +3,7 @@
 // Do not edit by hand — re-run `pnpm assemble --city austin --service web-design --country us` after copy regeneration.
 
 import type { Metadata } from 'next';
+import { webDesignPriorityCityAlternatesUS } from '@/data/hreflangMap';
 import Hero from '@/components/v2/Hero';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
   description: 'FactoryJet builds fast, conversion-focused websites for Austin businesses — from $1,500. 7-day delivery on Starter sites. Next.js, SEO, and GA4 included.',
   alternates: {
     canonical: 'https://factoryjet.com/us/austin/web-design',
+    languages: webDesignPriorityCityAlternatesUS.austin,
   },
 };
 

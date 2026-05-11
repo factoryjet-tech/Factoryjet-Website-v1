@@ -151,6 +151,47 @@ export const webDesignCityAlternatesUS = {
 } as const
 
 // ---------------------------------------------------------------------------
+// US priority city pages — /us/{city}/web-design route pattern
+// (no India / UAE equivalents exist)
+// Per CITY PAGE RULE: only en-US + x-default.
+// ---------------------------------------------------------------------------
+
+export const webDesignPriorityCityAlternatesUS = {
+  austin: {
+    'en-US': 'https://factoryjet.com/us/austin/web-design',
+    'x-default': 'https://factoryjet.com/us/austin/web-design',
+  },
+  charlotte: {
+    'en-US': 'https://factoryjet.com/us/charlotte/web-design',
+    'x-default': 'https://factoryjet.com/us/charlotte/web-design',
+  },
+  denver: {
+    'en-US': 'https://factoryjet.com/us/denver/web-design',
+    'x-default': 'https://factoryjet.com/us/denver/web-design',
+  },
+  miami: {
+    'en-US': 'https://factoryjet.com/us/miami/web-design',
+    'x-default': 'https://factoryjet.com/us/miami/web-design',
+  },
+  nashville: {
+    'en-US': 'https://factoryjet.com/us/nashville/web-design',
+    'x-default': 'https://factoryjet.com/us/nashville/web-design',
+  },
+  portland: {
+    'en-US': 'https://factoryjet.com/us/portland/web-design',
+    'x-default': 'https://factoryjet.com/us/portland/web-design',
+  },
+  raleigh: {
+    'en-US': 'https://factoryjet.com/us/raleigh/web-design',
+    'x-default': 'https://factoryjet.com/us/raleigh/web-design',
+  },
+  tampa: {
+    'en-US': 'https://factoryjet.com/us/tampa/web-design',
+    'x-default': 'https://factoryjet.com/us/tampa/web-design',
+  },
+} as const
+
+// ---------------------------------------------------------------------------
 // US-only e-commerce city pages  (no India / UAE equivalents exist)
 // Per CITY PAGE RULE: only en-US + x-default.
 // ---------------------------------------------------------------------------
