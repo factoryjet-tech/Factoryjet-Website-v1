@@ -1,8 +1,6 @@
 'use client';
 
 import React from 'react';
-import Header from '@/components/Header';
-import FooterUS from '@/components/FooterUS';
 import { useContactModal } from '@/context/ContactModalContext';
 import { HeroSection } from './components/HeroSection';
 import { TrustBar } from './components/TrustBar';
@@ -24,7 +22,6 @@ export default function AIAgentDevPage() {
 
   return (
     <div className="min-h-screen flex flex-col font-sans text-slate-700 bg-white selection:bg-primary/20 selection:text-primary">
-      <Header basePath="" variant="transparent" hideLocations />
       <SchemaMarkup />
       <main className="overflow-x-hidden">
         <HeroSection />
@@ -41,7 +38,6 @@ export default function AIAgentDevPage() {
         <FAQSection />
         <FinalCTA />
       </main>
-      <FooterUS onCtaClick={() => openModal('us', 'ai')} hideLocations />
     </div>
   );
 }

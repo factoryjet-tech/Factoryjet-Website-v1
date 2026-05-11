@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import AIAgentDevPage from '@/lib/legacy-pages/AIAgentDev'
+import SiteHeader from '@/components/v2/SiteHeader'
+import SiteFooter from '@/components/v2/SiteFooter'
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
@@ -57,12 +59,14 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
+      <SiteHeader />
       <BreadcrumbSchema items={[
         { name: 'Home', url: 'https://factoryjet.com' },
         { name: 'Services', url: 'https://factoryjet.com/services' },
         { name: 'AI Agent Development', url: 'https://factoryjet.com/services/ai-agent-development' },
       ]} />
       <AIAgentDevPage />
+      <SiteFooter />
     </>
   )
 }

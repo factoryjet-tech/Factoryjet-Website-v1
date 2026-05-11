@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import AIServicePage from '@/lib/legacy-pages/UsAIServicePage/App'
+import SiteHeader from '@/components/v2/SiteHeader'
+import SiteFooter from '@/components/v2/SiteFooter'
 import { aiWorkflowAutomationData } from '@/lib/legacy-pages/UsAIServicePage/data/ai-workflow-automation'
 
 export const metadata: Metadata = {
@@ -39,5 +41,11 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <AIServicePage data={aiWorkflowAutomationData} region="in" />
+  return (
+    <>
+      <SiteHeader />
+      <AIServicePage data={aiWorkflowAutomationData} region="in" />
+      <SiteFooter />
+    </>
+  )
 }

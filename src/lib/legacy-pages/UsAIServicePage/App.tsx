@@ -2,9 +2,6 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Header from '@/components/Header';
-import FooterUS from '@/components/FooterUS';
-import Footer from '@/components/Footer';
 import { useContactModal } from '@/context/ContactModalContext';
 import AuthorByline from '@/components/AuthorByline';
 import {
@@ -120,7 +117,6 @@ export default function AIServicePage({ data, region = 'us' }: { data: AIService
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Header basePath={region === 'us' ? '/us' : ''} hideLocations />
 
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#0F172A] text-white pt-24 pb-16">
@@ -457,7 +453,6 @@ export default function AIServicePage({ data, region = 'us' }: { data: AIService
         </div>
       </section>
 
-      {region === 'us' ? <FooterUS onCtaClick={onCta} hideLocations /> : <Footer />}
     </div>
   );
 }
