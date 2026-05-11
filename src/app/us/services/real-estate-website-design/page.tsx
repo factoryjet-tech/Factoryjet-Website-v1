@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import { usServiceAlternates } from '@/data/hreflangMap';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
@@ -37,7 +39,10 @@ export const metadata: Metadata = {
     description: 'Custom real estate agent websites with IDX from $2,499. 7-day delivery. No ongoing platform fees.',
     images: ['https://factoryjet.com/logo.png'],
   },
-  alternates: { canonical: 'https://factoryjet.com/us/services/real-estate-website-design' },
+  alternates: {
+    canonical: 'https://factoryjet.com/us/services/real-estate-website-design',
+    languages: usServiceAlternates['real-estate-website-design'],
+  },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
@@ -652,7 +657,7 @@ export default function RealEstateWebsiteDesignPage() {
         objectionHandler="7-day delivery. IDX integration included. No ongoing platform fees. Free quote in 24 hours."
       />
 
-      <SiteFooter />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }

@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import { pricingAlternates } from '@/data/hreflangMap';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
@@ -37,7 +39,10 @@ export const metadata: Metadata = {
     description: 'Transparent website pricing for US businesses. 5-page site from $1,499. Fixed price, 7-day delivery.',
     images: ['https://factoryjet.com/logo.png'],
   },
-  alternates: { canonical: 'https://factoryjet.com/us/pricing' },
+  alternates: {
+    canonical: 'https://factoryjet.com/us/pricing',
+    languages: pricingAlternates,
+  },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
@@ -653,7 +658,7 @@ export default function PricingPage() {
         objectionHandler="Fixed price. 7-day delivery. 500+ US businesses served. Free quote in 24 hours."
       />
 
-      <SiteFooter />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }

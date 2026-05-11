@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import NewYorkFAQPage from '@/lib/legacy-pages/NewYorkFAQ/App'
 import { faqData } from '@/lib/legacy-pages/NewYorkFAQ/data/faqData'
+import { newYorkSubPageAlternates } from '@/data/hreflangMap'
 
 export const metadata: Metadata = {
   title: 'Web Design FAQ New York City | Common Questions | FactoryJet NYC',
@@ -29,6 +30,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/us/services/web-design/new-york/faq',
+    languages: newYorkSubPageAlternates.faq,
   },
   robots: {
     index: true,

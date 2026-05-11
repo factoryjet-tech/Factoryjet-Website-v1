@@ -218,3 +218,64 @@ export const ecommerceCityAlternatesUS: Record<string, { 'en-US': string; 'x-def
     'x-default': 'https://factoryjet.com/us/services/ecommerce-development/fargo',
   },
 }
+
+// ===========================================================================
+// US-ONLY GENERAL PAGES
+// ===========================================================================
+
+/** Portfolio (US only — no India/UAE equivalent) */
+export const portfolioAlternatesUS = {
+  'en-US': 'https://factoryjet.com/us/portfolio',
+  'x-default': 'https://factoryjet.com/us/portfolio',
+} as const
+
+// ===========================================================================
+// US-ONLY SERVICE PAGES
+// Per CITY PAGE RULE: only en-US + x-default.
+// ===========================================================================
+
+export const usServiceAlternates = {
+  'ai-agents': {
+    'en-US': 'https://factoryjet.com/us/services/ai-agents',
+    'x-default': 'https://factoryjet.com/us/services/ai-agents',
+  },
+  'ai-automation': {
+    'en-US': 'https://factoryjet.com/us/services/ai-automation',
+    'x-default': 'https://factoryjet.com/us/services/ai-automation',
+  },
+  'law-firm-website-design': {
+    'en-US': 'https://factoryjet.com/us/services/law-firm-website-design',
+    'x-default': 'https://factoryjet.com/us/services/law-firm-website-design',
+  },
+  'real-estate-website-design': {
+    'en-US': 'https://factoryjet.com/us/services/real-estate-website-design',
+    'x-default': 'https://factoryjet.com/us/services/real-estate-website-design',
+  },
+  'web-application-development': {
+    'en-US': 'https://factoryjet.com/us/services/web-application-development',
+    'x-default': 'https://factoryjet.com/us/services/web-application-development',
+  },
+  'website-redesign': {
+    'en-US': 'https://factoryjet.com/us/services/website-redesign',
+    'x-default': 'https://factoryjet.com/us/services/website-redesign',
+  },
+  'wordpress-development': {
+    'en-US': 'https://factoryjet.com/us/services/wordpress-development',
+    'x-default': 'https://factoryjet.com/us/services/wordpress-development',
+  },
+} as const
+
+// ===========================================================================
+// NEW YORK SUB-PAGES (US only)
+// ===========================================================================
+
+export const newYorkSubPageAlternates = {
+  faq: {
+    'en-US': 'https://factoryjet.com/us/services/web-design/new-york/faq',
+    'x-default': 'https://factoryjet.com/us/services/web-design/new-york/faq',
+  },
+  services: {
+    'en-US': 'https://factoryjet.com/us/services/web-design/new-york/services',
+    'x-default': 'https://factoryjet.com/us/services/web-design/new-york/services',
+  },
+} as const

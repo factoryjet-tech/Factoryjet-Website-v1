@@ -4,6 +4,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import PortfolioGrid from './PortfolioGrid';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import { portfolioAlternatesUS } from '@/data/hreflangMap';
 
 export const metadata: Metadata = {
   title: "Portfolio - Websites We've Built for Ambitious Brands | FactoryJet USA",
@@ -45,6 +46,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/us/portfolio',
+    languages: portfolioAlternatesUS,
   },
 };
 

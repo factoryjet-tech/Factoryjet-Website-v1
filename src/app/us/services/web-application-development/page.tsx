@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import { usServiceAlternates } from '@/data/hreflangMap';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
@@ -37,7 +39,10 @@ export const metadata: Metadata = {
     description: 'Custom web apps from $7,500. Fixed price. 60-day bug warranty. 60–70% below US agency rates.',
     images: ['https://factoryjet.com/logo.png'],
   },
-  alternates: { canonical: 'https://factoryjet.com/us/services/web-application-development' },
+  alternates: {
+    canonical: 'https://factoryjet.com/us/services/web-application-development',
+    languages: usServiceAlternates['web-application-development'],
+  },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
@@ -686,7 +691,7 @@ export default function WebApplicationDevelopmentPage() {
         objectionHandler="Fixed price. 60-day bug warranty. Full source code on handoff. Free discovery call first."
       />
 
-      <SiteFooter />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }

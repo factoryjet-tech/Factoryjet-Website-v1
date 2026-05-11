@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import NewYorkServiceAndPricingPage from '@/lib/legacy-pages/NewYorkServiceAndPricingPage/App'
+import { newYorkSubPageAlternates } from '@/data/hreflangMap'
 
 export const metadata: Metadata = {
   title: 'Web Design Services & Pricing in New York City | FactoryJet NYC',
@@ -28,6 +29,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/us/services/web-design/new-york/services',
+    languages: newYorkSubPageAlternates.services,
   },
   robots: {
     index: true,

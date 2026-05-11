@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import { usServiceAlternates } from '@/data/hreflangMap';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
@@ -51,6 +53,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/us/services/wordpress-development',
+    languages: usServiceAlternates['wordpress-development'],
   },
   robots: {
     index: true,
@@ -885,7 +888,7 @@ export default function WordPressDevelopmentPage() {
 
       </main>
 
-      <SiteFooter />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }
