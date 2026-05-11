@@ -9,7 +9,7 @@ import FinalCTA from './components/FinalCTA';
 function App() {
   return (
     <div className="min-h-screen bg-white">
-      <main className="pt-20">
+      <main className="pt-8">
         {/* Section 14: Comprehensive FAQ */}
         <FAQSection />
 

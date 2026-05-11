@@ -16,7 +16,7 @@ export default function App() {
   return (
     <main className="min-h-screen w-full bg-[#F8FAFC] text-[#0F172A]">
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-[#0F172A] to-[#1E293B] text-white">
+      <section className="pt-12 pb-16 bg-gradient-to-b from-[#0F172A] to-[#1E293B] text-white">
         <div className="container mx-auto px-6 max-w-7xl text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight font-heading">
             Web Development Services in <span className="text-[#FF6B35]">New York City</span>

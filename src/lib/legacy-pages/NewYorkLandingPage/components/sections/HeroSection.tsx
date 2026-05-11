@@ -11,7 +11,7 @@ export const HeroSection: React.FC = () => {
   const openModal = () => openContactModal('us');
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-32 pb-20 bg-[#0052CC] overflow-hidden selection:bg-orange-500 selection:text-white">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-12 pb-20 bg-[#0052CC] overflow-hidden selection:bg-orange-500 selection:text-white">
 
       {/* Background Matrix/Code Texture - Optimized for performance */}
       <div 

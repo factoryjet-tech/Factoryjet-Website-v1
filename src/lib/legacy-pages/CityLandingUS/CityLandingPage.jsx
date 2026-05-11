@@ -72,8 +72,8 @@ body, .fj-root { font-family: var(--font); color: var(--navy); background: #fff;
 .fj-nav-cta { background: var(--orange); color: #fff; padding: 10px 20px; border-radius: 8px; font-weight: 600; font-size: 13px; border: none; cursor: pointer; font-family: var(--font); min-height: 44px; display: flex; align-items: center; }
 
 /* ── HERO ── */
-.fj-hero { background: var(--bg-dark); padding: 120px var(--section-px) 52px; position: relative; overflow: hidden; }
-@media(min-width:640px){ .fj-hero { padding: 140px var(--section-px) 64px; } }
+.fj-hero { background: var(--bg-dark); padding: 40px var(--section-px) 52px; position: relative; overflow: hidden; }
+@media(min-width:640px){ .fj-hero { padding: 48px var(--section-px) 64px; } }
 .fj-hero-glow1 { position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(0,82,204,0.12) 0%, transparent 60%); pointer-events: none; }
 .fj-hero-glow2 { position: absolute; bottom: -80px; left: -80px; width: 250px; height: 250px; background: radial-gradient(circle, rgba(255,107,53,0.06) 0%, transparent 60%); pointer-events: none; }
 .fj-hero-grid { position: absolute; inset: 0; opacity: 0.03; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 48px 48px; }
