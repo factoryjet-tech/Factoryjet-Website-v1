@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { homeAlternates } from '@/data/hreflangMap'
 import HomePage from '@/pages/Home'
+import SiteHeader from '@/components/v2/SiteHeader'
+import SiteFooter from '@/components/v2/SiteFooter'
 
 export const metadata: Metadata = {
   title: 'FactoryJet - Professional Website Design & E-Commerce Development Company India',
@@ -46,5 +48,11 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <HomePage />
+  return (
+    <>
+      <SiteHeader />
+      <HomePage />
+      <SiteFooter />
+    </>
+  )
 }

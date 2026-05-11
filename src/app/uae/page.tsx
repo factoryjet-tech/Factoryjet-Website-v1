@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import { homeAlternates } from '@/data/hreflangMap'
 import UaePage from '@/pages/UaePage'
+import SiteHeader from '@/components/v2/SiteHeader'
+import SiteFooter from '@/components/v2/SiteFooter'
 
 // LocalBusiness structured data for SEO
 const localBusinessJsonLd = {
@@ -136,7 +138,9 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
 
+      <SiteHeader />
       <UaePage />
+      <SiteFooter />
     </>
   )
 }

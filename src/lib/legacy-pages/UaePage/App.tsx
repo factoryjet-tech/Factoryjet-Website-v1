@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import Header from '@/components/Header';
 import Hero from './components/Hero';
 import AgencyInfo from './components/AgencyInfo';
 import WhyDubai from './components/WhyDubai';
@@ -45,7 +44,6 @@ function App() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Header basePath="/uae" variant="transparent" />
       <main>
         <Hero onOpenModal={() => setIsModalOpen(true)} />
         <AgencyInfo />

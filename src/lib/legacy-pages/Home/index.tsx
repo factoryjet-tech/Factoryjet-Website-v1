@@ -6,12 +6,6 @@ import dynamic from "next/dynamic";
 // Critical above-the-fold components - load immediately
 import Hero from "./components/Hero";
 
-// Dynamically import Header with SSR for SEO
-const Header = dynamic(() => import("./../../../components/Header"), {
-  ssr: true,
-  loading: () => <div className="h-16 md:h-20" />,
-});
-
 // Lazy load all below-the-fold components with dynamic imports for better code splitting
 const About = dynamic(() => import("./components/About"), { ssr: false });
 const Services = dynamic(() => import("./components/Services"), { ssr: false });
@@ -22,7 +16,6 @@ const Pricing = dynamic(() => import("./components/Pricing"), { ssr: false });
 const Testimonials = dynamic(() => import("./components/Testimonials"), { ssr: false });
 const FAQ = dynamic(() => import("./components/FAQ"), { ssr: false });
 const CTA = dynamic(() => import("./components/CTA"), { ssr: false });
-const Footer = dynamic(() => import("./../../../components/Footer"), { ssr: false });
 
 // Minimal loading placeholder
 const SectionLoader = () => <div className="min-h-[100px]" aria-hidden="true" />;
@@ -30,7 +23,6 @@ const SectionLoader = () => <div className="min-h-[100px]" aria-hidden="true" />
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
-      <Header variant="transparent" />
       <main>
         <Hero />
         <Suspense fallback={<SectionLoader />}>
@@ -61,9 +53,6 @@ export default function HomePage() {
           <CTA />
         </Suspense>
       </main>
-      <Suspense fallback={<SectionLoader />}>
-        <Footer />
-      </Suspense>
     </div>
   );
 }
