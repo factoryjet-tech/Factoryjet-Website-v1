@@ -1,8 +1,10 @@
-# Netlify/Cloudflare Pages redirect: www to non-www
-https://www.factoryjet.com/* https://factoryjet.com/:splat 301!
+# NOTE: www → non-www redirect is handled by Cloudflare Dashboard
+# Redirect Rule "www_to_non_www" (301, Dynamic, fires first)
+# expression: (http.host eq "www.factoryjet.com")
+# target: concat("https://factoryjet.com", http.request.uri.path)
 
-# Issue #19: Legacy Shopify route → canonical URL
-/ecommerce-development/shopify-development /services/shopify-development 301!
+# NOTE: /ecommerce-development/shopify-development → /services/shopify-development
+# is handled by Cloudflare Dashboard rule "shopify_legacy_ecommerce_redirect" (301)
 
 # Foundation Patch #3: old /uk/sitemap-*.xml URLs → native sitemap-index
 /uk/sitemap-index.xml      /sitemap.xml                  301
