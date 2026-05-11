@@ -7,7 +7,7 @@ import AuthorByline from '@/components/AuthorByline';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative pt-24 pb-12 overflow-hidden bg-gradient-mesh min-h-screen flex items-center">
+    <section className="relative pt-10 pb-12 overflow-hidden bg-gradient-mesh min-h-screen flex items-center">
       {/* Background Shapes */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-40">
         <div className="absolute -top-[10%] -left-[10%] w-[50%] h-[50%] bg-blue-200/50 rounded-full blur-[100px]" />

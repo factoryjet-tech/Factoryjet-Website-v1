@@ -9,7 +9,7 @@ const Hero = () => {
   const { openModal } = useContactModal();
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-slate-50 pt-24 md:pt-20">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-slate-50 pt-10 md:pt-8">
       {/* Abstract Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-[-10%] right-[-5%] w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-jetBlue/5 rounded-full blur-3xl" />

@@ -692,7 +692,7 @@ const FactoryJetPricing = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       {/* --- HERO SECTION --- */}
-      <header className="relative pt-28 md:pt-24 pb-12 md:pb-16 px-4 text-center bg-gradient-to-b from-white via-blue-50/30 to-slate-50">
+      <header className="relative pt-14 md:pt-16 pb-12 md:pb-16 px-4 text-center bg-gradient-to-b from-white via-blue-50/30 to-slate-50">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl md:text-6xl font-heading font-bold text-jet-navy mb-4 md:mb-6 tracking-tight">
             Transparent, <span className="text-jet-blue">Value-Driven</span>{" "}
@@ -706,7 +706,7 @@ const FactoryJetPricing = () => {
       </header>
 
       {/* --- TAB SWITCHER --- */}
-      <div className="sticky top-20 md:top-4 z-40 mx-auto max-w-full md:max-w-fit px-2 mb-8 md:mb-12">
+      <div className="sticky top-20 z-30 mx-auto max-w-full md:max-w-fit px-2 mb-8 md:mb-12">
         <div className="bg-white/90 backdrop-blur-md p-1 md:p-1.5 rounded-full border border-slate-200 shadow-lg flex items-center space-x-1 overflow-x-auto no-scrollbar">
           {tabs.map((tab) => (
             <button

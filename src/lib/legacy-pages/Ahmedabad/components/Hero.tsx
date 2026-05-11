@@ -11,7 +11,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
   return (
-    <section className="relative min-h-[85vh] sm:min-h-[92vh] flex items-center pt-16 pb-8 md:pt-20 md:pb-10 bg-white overflow-hidden">
+    <section className="relative min-h-[85vh] sm:min-h-[92vh] flex items-center pt-8 pb-8 md:pt-10 md:pb-10 bg-white overflow-hidden">
       {/* Dynamic Background Accents */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-50 rounded-full blur-[140px] opacity-70 -z-10" />
       <div className="absolute -bottom-24 -left-24 w-[400px] h-[400px] bg-orange-50 rounded-full blur-[100px] opacity-50 -z-10" />

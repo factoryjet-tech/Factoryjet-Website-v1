@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
   ];
 
   return (
-    <section className="relative overflow-hidden pt-24 pb-8 md:pt-28 md:pb-12 lg:pt-36 lg:pb-24 bg-[#0052CC] min-h-[85vh] md:min-h-[90vh] flex items-center">
+    <section className="relative overflow-hidden pt-10 pb-8 md:pt-12 md:pb-12 lg:pt-16 lg:pb-24 bg-[#0052CC] min-h-[85vh] md:min-h-[90vh] flex items-center">
       {/* 1. Stunning Jet Blue Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0052CC] via-[#053885] to-[#02122b]"></div>
 

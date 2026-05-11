@@ -27,7 +27,7 @@ const PARTNERS = [
 
 const Hero = () => {
     return (
-        <header className="relative pt-24 pb-20 overflow-hidden bg-slate-50">
+        <header className="relative pt-10 pb-20 overflow-hidden bg-slate-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                 <h1 className="text-5xl md:text-6xl font-heading font-bold text-navy tracking-tight mb-6 leading-tight">
                     Transparent, <span className="text-jet-blue">Value-Driven</span><br className="hidden md:block" /> Pricing

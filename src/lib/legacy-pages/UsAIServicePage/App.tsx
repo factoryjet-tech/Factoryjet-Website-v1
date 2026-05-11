@@ -119,7 +119,7 @@ export default function AIServicePage({ data, region = 'us' }: { data: AIService
       />
 
       {/* Hero */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#0F172A] text-white pt-24 pb-16">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#0F172A] text-white pt-10 pb-16">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div animate={{ x: [0, 50, -50, 0], y: [0, -50, 50, 0], scale: [1, 1.2, 1] }} transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }} className="absolute -top-[10%] -left-[10%] w-[80vw] md:w-[800px] h-[80vw] md:h-[800px] bg-[#0052CC] opacity-20 rounded-full blur-[120px] will-change-transform" />
           <motion.div animate={{ x: [0, -70, 70, 0], y: [0, 70, -70, 0], scale: [1, 1.1, 1] }} transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }} className="absolute top-[30%] -right-[10%] w-[60vw] md:w-[600px] h-[60vw] md:h-[600px] bg-[#FF6B35] opacity-10 rounded-full blur-[100px] will-change-transform" />

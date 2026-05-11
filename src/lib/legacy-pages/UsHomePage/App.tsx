@@ -125,7 +125,7 @@ const Counter = ({ from, to }: { from: number; to: number }) => {
 
 const Hero = ({ onCtaClick }: { onCtaClick: () => void }) => {
   return (
-    <section className="relative min-h-[100dvh] flex items-center overflow-visible bg-[#0F172A] text-white pt-24 pb-16">
+    <section className="relative min-h-[100dvh] flex items-center overflow-visible bg-[#0F172A] text-white pt-10 pb-16">
       {/* Background Treatments */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div 

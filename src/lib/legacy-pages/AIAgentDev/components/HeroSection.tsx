@@ -24,7 +24,7 @@ export function HeroSection() {
       {/* Gradient orb - bottom left */}
       <div className="absolute -bottom-40 -left-40 w-[400px] h-[400px] rounded-full bg-[#FF6B35] opacity-[0.05] blur-[100px]" />
 
-      <div className="relative max-w-7xl mx-auto px-5 sm:px-8 pt-32 pb-16 md:pt-40 md:pb-24">
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-8 pt-12 pb-16 md:pt-16 md:pb-24">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="mb-8">
           <ol className="flex items-center gap-2 text-sm text-gray-500">

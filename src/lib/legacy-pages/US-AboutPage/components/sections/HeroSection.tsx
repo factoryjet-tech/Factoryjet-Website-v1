@@ -252,7 +252,7 @@ export default function HeroSection({ onCtaClick }: HeroSectionProps) {
       />
 
       {/* --- MAIN CONTENT --- */}
-      <Container className="relative z-10 flex flex-col items-center justify-center h-full pt-24 md:pt-0">
+      <Container className="relative z-10 flex flex-col items-center justify-center h-full pt-10 md:pt-0">
         
         {/* Eyebrow */}
         <motion.div 

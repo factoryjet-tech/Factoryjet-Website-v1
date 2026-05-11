@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative w-full bg-hero-gradient pt-24 pb-16 md:pt-28 md:pb-20 px-4 md:px-8 overflow-hidden">
+    <section className="relative w-full bg-hero-gradient pt-10 pb-16 md:pt-12 md:pb-20 px-4 md:px-8 overflow-hidden">
       {/* Background Effects - Optimized for Mobile */}
       <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] pointer-events-none"></div>
       <div className="absolute top-0 right-0 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-white/5 rounded-full blur-2xl md:blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>

@@ -18,7 +18,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
   ];
 
   return (
-    <section className="relative min-h-screen bg-white overflow-hidden pt-24 md:pt-20">
+    <section className="relative min-h-screen bg-white overflow-hidden pt-10 md:pt-8">
       {/* Ambient Glow Effects */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-100 rounded-full blur-[150px] opacity-30 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-orange-100 rounded-full blur-[120px] opacity-20 pointer-events-none" />

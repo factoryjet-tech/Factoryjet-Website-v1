@@ -13,7 +13,7 @@ const trackWhatsAppConversion = () => {
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative bg-jetBlue text-white overflow-hidden pb-12 md:pb-16 pt-20 md:pt-24 lg:pt-32">
+    <section className="relative bg-jetBlue text-white overflow-hidden pb-12 md:pb-16 pt-8 md:pt-10 lg:pt-12">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <svg className="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">

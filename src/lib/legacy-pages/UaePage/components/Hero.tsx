@@ -43,7 +43,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
              backgroundSize: '32px 32px'
         }}></div>
 
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-20 pt-24 pb-10 lg:py-0 w-full relative z-10">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-20 pt-10 pb-10 lg:py-0 w-full relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-[58%_42%] gap-8 lg:gap-12 items-center w-full">
                 
                 {/* === LEFT COLUMN === */}

@@ -17,7 +17,7 @@ export const Hero = () => {
   // const opacity = useTransform(scrollY, [0, 300], [1, 0]); 
 
   return (
-    <section className="relative min-h-[100vh] flex flex-col justify-center overflow-hidden bg-slate-50 pt-24 md:pt-20">
+    <section className="relative min-h-[100vh] flex flex-col justify-center overflow-hidden bg-slate-50 pt-10 md:pt-8">
       {/* 1. Cinematic Background */}
       <div className="absolute inset-0 pointer-events-none select-none">
         {/* Main Aura */}

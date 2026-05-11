@@ -72,7 +72,7 @@ const LeadCaptureForm = ({ className = "" }: { className?: string }) => (
 
 export const Hero = () => {
   return (
-    <section className="relative pt-28 pb-12 lg:pt-32 lg:pb-24 bg-jet-navy overflow-hidden min-h-[95vh] flex items-center">
+    <section className="relative pt-10 pb-12 lg:pt-12 lg:pb-24 bg-jet-navy overflow-hidden min-h-[95vh] flex items-center">
       {/* Cinematic Ambient Background */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#1e3a8a] via-jet-navy to-[#050A15] opacity-80"></div>
       <div className="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] bg-jet-blue/30 rounded-full blur-[120px] pointer-events-none mix-blend-screen opacity-50"></div>

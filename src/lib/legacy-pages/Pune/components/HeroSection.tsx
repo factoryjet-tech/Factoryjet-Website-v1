@@ -17,7 +17,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenModal }) => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-white via-blue-50/30 to-white pt-24 pb-16">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-white via-blue-50/30 to-white pt-10 pb-16">
       {/* Ambient Glow Effects */}
       <div className="absolute top-20 -left-40 w-96 h-96 bg-jet-blue/10 rounded-full blur-3xl" />
       <div className="absolute bottom-20 -right-40 w-96 h-96 bg-jet-orange/10 rounded-full blur-3xl" />

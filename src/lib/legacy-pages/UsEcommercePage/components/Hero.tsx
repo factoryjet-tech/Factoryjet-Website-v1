@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
   const { openForm } = useLeadCapture();
 
   return (
-    <div className="relative bg-slate-900 min-h-[100dvh] flex items-center justify-center overflow-hidden pt-32 pb-12 md:pt-40 md:pb-0">
+    <div className="relative bg-slate-900 min-h-[100dvh] flex items-center justify-center overflow-hidden pt-12 pb-12 md:pt-16 md:pb-0">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-jet-dark via-jet-dark to-jet-blue/20" />
 
