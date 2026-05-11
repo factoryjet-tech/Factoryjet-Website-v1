@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Source_Serif_4, Fraunces } from 'next/font/google'
+import { Inter, Source_Serif_4, Fraunces, Cormorant_Garamond } from 'next/font/google'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import '../index.css'
@@ -38,6 +38,18 @@ const fraunces = Fraunces({
   variable: '--font-fraunces',
   display: 'swap',
   axes: ['SOFT', 'WONK', 'opsz'],
+})
+
+// Cormorant Garamond — editorial serif for v3 homepage hero headlines.
+// High-contrast thick/thin strokes at display sizes. Italic weight used
+// for the orange accent conviction word (AxisFlow-style pattern).
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  variable: '--font-cormorant',
+  display: 'swap',
+  weight: ['400', '600'],
+  style: ['normal', 'italic'],
+  fallback: ['Georgia', 'serif'],
 })
 
 
@@ -99,7 +111,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${sourceSerif.variable} ${fraunces.variable} ${GeistSans.variable} ${GeistMono.variable}`}>
+    <html lang="en" className={`${inter.variable} ${sourceSerif.variable} ${fraunces.variable} ${cormorant.variable} ${GeistSans.variable} ${GeistMono.variable}`}>
       <head>
         {/* Preconnect to critical origins */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

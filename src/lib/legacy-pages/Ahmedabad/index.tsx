@@ -2,8 +2,6 @@
 
 import React, { useState } from 'react';
 import Script from 'next/script';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import Hero from './components/Hero';
 import StickyMobileBar from './components/StickyMobileBar';
 import SocialProof from './components/SocialProof';
@@ -108,7 +106,6 @@ const AhmedabadPage: React.FC = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Header variant="solid" />
       <main>
         <Hero onCtaClick={openModal} />
         <SocialProof />
@@ -122,8 +119,6 @@ const AhmedabadPage: React.FC = () => {
         <FAQ />
         <CTA onCtaClick={openModal} />
       </main>
-      {/* <Footer /> */} {/* Commented out - using global Footer instead */}
-      <Footer />
       <WhatsAppButton />
       <StickyMobileBar />
       <ExitIntentPopup />

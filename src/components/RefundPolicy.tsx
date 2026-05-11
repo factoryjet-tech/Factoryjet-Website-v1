@@ -1,8 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Header from "./Header"
-import Footer from './Footer';
 export default function RefundPolicy() {
   const [activeSection, setActiveSection] = useState<number | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -135,7 +133,6 @@ export default function RefundPolicy() {
   ];
 
   return (<>
-    <Header variant="solid" />
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 mt-9">
       {/* Decorative background elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
@@ -318,7 +315,6 @@ export default function RefundPolicy() {
         }
       `}</style>
     </div>
-    <Footer/>
     </>
   );
 }

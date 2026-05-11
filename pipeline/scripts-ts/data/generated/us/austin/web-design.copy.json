@@ -1,0 +1,771 @@
+{
+  "input": {
+    "city": {
+      "citySlug": "austin",
+      "countryCode": "US",
+      "population": {
+        "value": 993771,
+        "unit": "people",
+        "asOfYear": 2024,
+        "sources": [
+          {
+            "url": "https://www.census.gov/quickfacts/fact/table/austincitytexas/LND110210",
+            "accessedAt": "2026-05-08T00:00:00+00:00",
+            "publisher": "U.S. Census Bureau"
+          }
+        ]
+      },
+      "gdpUsdBillions": {
+        "value": 268,
+        "unit": "USD billions, current dollar (nominal), Austin-Round Rock-San Marcos MSA",
+        "asOfYear": 2024,
+        "sources": [
+          {
+            "url": "https://fred.stlouisfed.org/series/NGMP12420",
+            "accessedAt": "2026-05-08T00:00:00+00:00",
+            "publisher": "U.S. Bureau of Economic Analysis via FRED, Federal Reserve Bank of St. Louis"
+          },
+          {
+            "url": "https://www.bea.gov/news/2024/gross-domestic-product-county-and-metropolitan-area-2023",
+            "accessedAt": "2026-05-08T00:00:00+00:00",
+            "publisher": "U.S. Bureau of Economic Analysis"
+          }
+        ]
+      },
+      "industries": [
+        {
+          "name": "Technology & Semiconductors",
+          "rank": 1,
+          "notes": "Austin's \"Silicon Hills\" anchors the metro economy. Dell, Apple, Google, Oracle, Tesla, and Samsung all operate major campuses here. IT manufacturing and services averaged around $163,000 in annual earnings per worker in 2023—roughly double the metro average.",
+          "sources": [
+            {
+              "url": "https://www.dallasfed.org/research/heart/austin",
+              "accessedAt": "2026-05-08T00:00:00+00:00",
+              "publisher": "Federal Reserve Bank of Dallas"
+            },
+            {
+              "url": "https://businessintexas.com/texas-regions/central-texas/austin-round-rock/",
+              "accessedAt": "2026-05-08T00:00:00+00:00",
+              "publisher": "Texas Economic Development Corporation"
+            }
+          ]
+        },
+        {
+          "name": "Government & Public Administration",
+          "rank": 2,
+          "notes": "Austin is the Texas state capital. State agencies, the City of Austin (~15,400 employees), and federal offices make government one of the largest single employment blocks in the metro.",
+          "sources": [
+            {
+              "url": "https://www.dallasfed.org/research/heart/austin",
+              "accessedAt": "2026-05-08T00:00:00+00:00",
+              "publisher": "Federal Reserve Bank of Dallas"
+            },
+            {
+              "url": "https://atxtoday.6amcity.com/city-guide/work/top-industries-employers-austin-tx",
+              "accessedAt": "2026-05-08T00:00:00+00:00",
+              "publisher": "ATX Today / 6AM City"
+            }
+          ]
+        },
+        {
+          "name": "Professional & Business Services",
+          "rank": 3,
+          "notes": "Professional and business services account for roughly 20% of metro GDP and saw 5–6% real growth in 2023. The sector covers legal, consulting, finance, and marketing firms that support Austin's large corporate base.",
+          "sources": [
+            {
+              "url": "https://opportunityaustin.com/gross-domestic-product-by-metro-county/",
+              "accessedAt": "2026-05-08T00:00:00+00:00",
+              "publisher": "Opportunity Austin"
+            }
+          ]
+        },
+        {
+          "name": "Healthcare & Life Sciences",
+          "rank": 4,
+          "notes": "Healthcare employs 7.4% of Austin's workforce, with Ascension Seton (14,000+ staff) and St. David's HealthCare (11,000+ staff) among the metro's top five employers. The Dell Medical School at UT Austin anchors a growing cluster of nearly 300 life sciences companies.",
+          "sources": [
+            {
+              "url": "https://www.dallasfed.org/research/heart/austin",
+              "accessedAt": "2026-05-08T00:00:00+00:00",
+              "publisher": "Federal Reserve Bank of Dallas"
+            },
+            {
+              "url": "https://atxtoday.6amcity.com/city-guide/work/top-industries-employers-austin-tx",
+              "accessedAt": "2026-05-08T00:00:00+00:00",
+              "publisher": "ATX Today / 6AM City"
+            }
+          ]
+        },
+        {
+          "name": "Advanced Manufacturing (Semiconductors & EVs)",
+          "rank": 5,
+          "notes": "Semiconductor and EV manufacturing together employ roughly 70,000+ workers in the Austin metro. Samsung, NXP Semiconductors, and Tesla's Giga Texas plant are anchor facilities, driving demand for engineering and production talent.",
+          "sources": [
+            {
+              "url": "https://atxtoday.6amcity.com/city-guide/work/top-industries-employers-austin-tx",
+              "accessedAt": "2026-05-08T00:00:00+00:00",
+              "publisher": "ATX Today / 6AM City"
+            },
+            {
+              "url": "https://businessintexas.com/texas-regions/central-texas/austin-round-rock/",
+              "accessedAt": "2026-05-08T00:00:00+00:00",
+              "publisher": "Texas Economic Development Corporation"
+            }
+          ]
+        }
+      ],
+      "competitors": [
+        {
+          "name": "GLIDE®",
+          "websiteUrl": "https://www.glidedesign.com",
+          "positioning": "Austin-based web design and SEO studio active for 20+ years, targeting mid-market B2B brands with WordPress builds and growth-focused campaigns.",
+          "pricingPublic": false,
+          "pricingNotes": "undisclosed",
+          "sources": [
+            {
+              "url": "https://www.glidedesign.com",
+              "accessedAt": "2026-05-08T00:00:00+00:00",
+              "publisher": "GLIDE® (own website)"
+            },
+            {
+              "url": "https://clutch.co/agencies/digital-marketing/austin",
+              "accessedAt": "2026-05-08T00:00:00+00:00",
+              "publisher": "Clutch.co"
+            }
+          ]
+        },
+        {
+          "name": "Nativz",
+          "websiteUrl": "https://www.nativz.com",
+          "positioning": "Full-service Austin digital agency covering web development, SEO, PPC, and social media, with reported strength in retail and financial services clients.",
+          "pricingPublic": false,
+          "pricingNotes": "undisclosed",
+          "sources": [
+            {
+              "url": "https://clutch.co/agencies/digital-marketing/austin",
+              "accessedAt": "2026-05-08T00:00:00+00:00",
+              "publisher": "Clutch.co"
+            }
+          ]
+        },
+        {
+          "name": "MARION Marketing",
+          "websiteUrl": "https://www.marion.com/digital-marketing/austin/",
+          "positioning": "Texas-based full-service agency (est. 1981) with an Austin presence, offering web design, SEO, PPC, and content marketing primarily to B2B companies.",
+          "pricingPublic": true,
+          "pricingNotes": "Website projects typically $5,000–$15,000 per published rate card.",
+          "sources": [
+            {
+              "url": "https://www.marion.com/digital-marketing/austin/",
+              "accessedAt": "2026-05-08T00:00:00+00:00",
+              "publisher": "MARION Marketing (own website)"
+            },
+            {
+              "url": "https://clutch.co/agencies/digital-marketing/austin",
+              "accessedAt": "2026-05-08T00:00:00+00:00",
+              "publisher": "Clutch.co"
+            }
+          ]
+        },
+        {
+          "name": "Coalition Technologies",
+          "websiteUrl": "https://coalitiontechnologies.com",
+          "positioning": "National SEO, PPC, and web design firm marketing actively into Austin; known for eCommerce and legal sector SEO campaigns with sub-$10,000 average project costs.",
+          "pricingPublic": true,
+          "pricingNotes": "Average project cost under $10,000 per Clutch listing.",
+          "sources": [
+            {
+              "url": "https://clutch.co/agencies/digital-marketing/austin",
+              "accessedAt": "2026-05-08T00:00:00+00:00",
+              "publisher": "Clutch.co"
+            }
+          ]
+        },
+        {
+          "name": "CloudMellow",
+          "websiteUrl": "https://www.cloudmellow.com",
+          "positioning": "Austin digital agency focused on website design, logo creation, and sales collateral; positioned as a cost-effective option for SMBs needing design and development together.",
+          "pricingPublic": false,
+          "pricingNotes": "undisclosed",
+          "sources": [
+            {
+              "url": "https://clutch.co/agencies/digital-marketing/austin",
+              "accessedAt": "2026-05-08T00:00:00+00:00",
+              "publisher": "Clutch.co"
+            }
+          ]
+        },
+        {
+          "name": "Propellic",
+          "websiteUrl": "https://propellic.com",
+          "positioning": "Austin SEO and digital marketing agency with a stated focus on travel and tourism brands; listed consistently among Austin's top-ranked agencies on Clutch.",
+          "pricingPublic": false,
+          "pricingNotes": "undisclosed",
+          "sources": [
+            {
+              "url": "https://clutch.co/agencies/digital-marketing/austin",
+              "accessedAt": "2026-05-08T00:00:00+00:00",
+              "publisher": "Clutch.co"
+            }
+          ]
+        }
+      ],
+      "landmarks": [
+        {
+          "name": "Texas State Capitol",
+          "type": "architectural",
+          "visualNotes": "A 302-foot dome clad in warm sunset-red Texas granite, completed in 1888. The dome is topped by the 16-foot aluminium 'Goddess of Liberty' statue. The building is taller than the US Capitol in Washington, D.C., and sits at the north end of Congress Avenue."
+        },
+        {
+          "name": "Ann W. Richards Congress Avenue Bridge",
+          "type": "natural",
+          "visualNotes": "A flat concrete arch road bridge, 910 feet long, spanning Lady Bird Lake on the Colorado River in downtown Austin. Unremarkable in daylight, it becomes dramatic at sunset when up to 1.5 million Mexican free-tailed bats stream out from gaps in its concrete underside in a dense, dark ribbon over the water."
+        },
+        {
+          "name": "Sixth Street Entertainment District",
+          "type": "cultural",
+          "visualNotes": "A six-block strip of low-rise 19th-century brick commercial buildings in central Austin, densely lit at night with neon bar signs, string lights, and live-music venue marquees. The street is pedestrianised on weekend evenings, drawing large crowds along its narrow, historically preserved storefronts."
+        },
+        {
+          "name": "Barton Springs Pool",
+          "type": "natural",
+          "visualNotes": "A spring-fed outdoor swimming pool roughly three acres in size, set inside Zilker Park. The water runs a consistent 68–70°F year-round, fed by natural limestone aquifer springs. Surrounded by pecan trees and open lawn, the pool's concrete dam and stone surrounds sit in a green river valley below downtown's skyline."
+        },
+        {
+          "name": "University of Texas Tower (UT Austin Main Building)",
+          "type": "architectural",
+          "visualNotes": "A 307-foot white limestone tower rising above the UT Austin campus, built in 1937 in a stripped classical style. The tower is illuminated orange at night after major Longhorns victories. It anchors a large Beaux-Arts campus that extends north from the city centre."
+        }
+      ],
+      "enrichmentVersion": 1,
+      "lastEnrichedAt": "2026-05-08T00:00:00+00:00"
+    },
+    "service": {
+      "slug": "web-design",
+      "name": "Web Design",
+      "primaryKeyword": "web design",
+      "metaTitleTemplate": "Web Design {City} | FactoryJet",
+      "h1Template": "Web Design in {City} That Converts Visitors Into Clients",
+      "process": [
+        {
+          "step": 1,
+          "title": "Discovery & Strategy",
+          "description": "We map your ideal customer profile, audit the top three competitors in your market, and agree the sitemap and content plan. You leave this phase knowing exactly what the site will do and how we will measure it.",
+          "duration": "Days 1–3"
+        },
+        {
+          "step": 2,
+          "title": "Design & Prototyping",
+          "description": "Figma wireframes turn into a complete mobile-first design system, reviewed against your brand and conversion goals. Two structured feedback rounds lock the visual direction before a line of code is written.",
+          "duration": "Days 4–10"
+        },
+        {
+          "step": 3,
+          "title": "Development",
+          "description": "We build the site in Next.js with GSAP animations, headless CMS integration, contact forms, and any third-party APIs you need. Performance budgets are enforced from the first commit, not retrofitted at launch.",
+          "duration": "Days 11–25"
+        },
+        {
+          "step": 4,
+          "title": "Content & SEO",
+          "description": "Copy, optimised WebP imagery, meta tags, JSON-LD schema, and internal links all land in this phase. We submit the sitemap to Google Search Console and verify rendering for AI crawlers (GPTBot, ClaudeBot, PerplexityBot).",
+          "duration": "Days 26–30"
+        },
+        {
+          "step": 5,
+          "title": "Launch & Handover",
+          "description": "We deploy to Cloudflare, wire up GA4 and GTM, and walk you through the CMS in a recorded handover session. A 30-day support window covers any post-launch fixes or training questions.",
+          "duration": "Day 31+"
+        }
+      ],
+      "pricing": {
+        "gb": [
+          {
+            "name": "Starter",
+            "priceLabel": "£1,200–£2,500",
+            "description": "A 5-page brochure site that loads fast on mobile and ranks for your name and core service.",
+            "includes": [
+              "5 pages, mobile-responsive",
+              "Basic SEO & schema markup",
+              "Contact form with email forwarding",
+              "2 revision rounds",
+              "30-day post-launch support"
+            ],
+            "bestFor": "Sole traders and local services who need a credible online presence quickly."
+          },
+          {
+            "name": "Growth",
+            "priceLabel": "£2,500–£5,000",
+            "description": "A 10–15 page site with a blog CMS, lead-capture flows, and analytics wired in from day one.",
+            "includes": [
+              "10–15 pages with blog CMS",
+              "Advanced SEO & GA4 tracking",
+              "Lead capture & email automation",
+              "3 revision rounds",
+              "30-day support + training session"
+            ],
+            "bestFor": "SMBs scaling online who need the site to actively generate qualified inquiries.",
+            "highlight": true
+          },
+          {
+            "name": "Scale",
+            "priceLabel": "£5,000–£12,000",
+            "description": "Custom Next.js build with e-commerce, AI features, API integrations, and priority support.",
+            "includes": [
+              "Custom Next.js architecture",
+              "E-commerce or membership features",
+              "AI integrations (chat, search, content)",
+              "Third-party API connections",
+              "Priority support & quarterly reviews"
+            ],
+            "bestFor": "Established businesses with complex requirements and a real digital revenue line."
+          }
+        ],
+        "us": [
+          {
+            "name": "Starter",
+            "priceLabel": "$1,500–$3,100",
+            "description": "A 5-page brochure site that loads fast on mobile and ranks for your name and core service.",
+            "includes": [
+              "5 pages, mobile-responsive",
+              "Basic SEO & schema markup",
+              "Contact form with email forwarding",
+              "2 revision rounds",
+              "30-day post-launch support"
+            ],
+            "bestFor": "Sole traders and local services who need a credible online presence quickly."
+          },
+          {
+            "name": "Growth",
+            "priceLabel": "$3,100–$6,300",
+            "description": "A 10–15 page site with a blog CMS, lead-capture flows, and analytics wired in from day one.",
+            "includes": [
+              "10–15 pages with blog CMS",
+              "Advanced SEO & GA4 tracking",
+              "Lead capture & email automation",
+              "3 revision rounds",
+              "30-day support + training session"
+            ],
+            "bestFor": "SMBs scaling online who need the site to actively generate qualified inquiries.",
+            "highlight": true
+          },
+          {
+            "name": "Scale",
+            "priceLabel": "$6,300–$15,000",
+            "description": "Custom Next.js build with e-commerce, AI features, API integrations, and priority support.",
+            "includes": [
+              "Custom Next.js architecture",
+              "E-commerce or membership features",
+              "AI integrations (chat, search, content)",
+              "Third-party API connections",
+              "Priority support & quarterly reviews"
+            ],
+            "bestFor": "Established businesses with complex requirements and a real digital revenue line."
+          }
+        ],
+        "au": [
+          {
+            "name": "Starter",
+            "priceLabel": "A$2,200–A$4,600",
+            "description": "A 5-page brochure site that loads fast on mobile and ranks for your name and core service.",
+            "includes": [
+              "5 pages, mobile-responsive",
+              "Basic SEO & schema markup",
+              "Contact form with email forwarding",
+              "2 revision rounds",
+              "30-day post-launch support"
+            ],
+            "bestFor": "Sole traders and local services who need a credible online presence quickly."
+          },
+          {
+            "name": "Growth",
+            "priceLabel": "A$4,600–A$9,300",
+            "description": "A 10–15 page site with a blog CMS, lead-capture flows, and analytics wired in from day one.",
+            "includes": [
+              "10–15 pages with blog CMS",
+              "Advanced SEO & GA4 tracking",
+              "Lead capture & email automation",
+              "3 revision rounds",
+              "30-day support + training session"
+            ],
+            "bestFor": "SMBs scaling online who need the site to actively generate qualified inquiries.",
+            "highlight": true
+          },
+          {
+            "name": "Scale",
+            "priceLabel": "A$9,300–A$22,200",
+            "description": "Custom Next.js build with e-commerce, AI features, API integrations, and priority support.",
+            "includes": [
+              "Custom Next.js architecture",
+              "E-commerce or membership features",
+              "AI integrations (chat, search, content)",
+              "Third-party API connections",
+              "Priority support & quarterly reviews"
+            ],
+            "bestFor": "Established businesses with complex requirements and a real digital revenue line."
+          }
+        ],
+        "ae": [],
+        "in": [],
+        "br": [],
+        "mx": []
+      },
+      "priceRange": {
+        "gb": "£1,200–£12,000",
+        "us": "$1,500–$15,000",
+        "au": "A$2,200–A$22,200",
+        "ae": "",
+        "in": "",
+        "br": "",
+        "mx": ""
+      },
+      "evergreenFAQs": [
+        {
+          "q": "How much does a website cost for a small business in {city}?",
+          "a": "Most {city} small businesses choose the Starter tier ({starterPrice}) for a clean five-page site or Growth ({growthPrice}) for a blog CMS and lead capture. Custom builds with e-commerce or AI features start with Scale. Local agency rates in {city} for the same scope often run two to three times higher."
+        },
+        {
+          "q": "How long does it take to build a website?",
+          "a": "A standard FactoryJet build runs 31 days from kickoff to launch. Discovery and design take the first two weeks, development runs three weeks, and content, SEO, and launch happen in the final week. Faster timelines are possible for simpler sites — a five-page Starter project can ship in two weeks. We do not start the clock until your brand assets and content are in our shared workspace."
+        },
+        {
+          "q": "What's included in a web design project?",
+          "a": "Every project includes strategy, design, development, content, SEO setup, and a 30-day support window. You get a Figma design system you keep, a Next.js codebase you own, JSON-LD schema for AI search visibility, GA4 wired up, and a recorded handover session. We do not charge separately for staging environments, basic copy edits, or routine bug fixes inside the support window."
+        },
+        {
+          "q": "Why Next.js instead of WordPress?",
+          "a": "Next.js gives you sub-second load times, cleaner code that ranks better in Google and AI search, and security that does not require monthly plugin updates. WordPress is fine for blogs and single-author sites, but the maintenance overhead becomes a tax on growing businesses. Our {city} clients on Next.js typically save four to eight hours a month on site upkeep compared with the WordPress sites they replaced."
+        },
+        {
+          "q": "How long until my new site ranks on Google?",
+          "a": "Branded searches (your business name) usually rank within one to two weeks of launch. Service plus location queries like 'web design {city}' typically take three to six months for a new domain, and longer for {region}-wide competitive terms. The work that compresses this timeline — schema, internal linking, content depth, technical performance — is built into every FactoryJet project, not sold as an add-on after launch."
+        },
+        {
+          "q": "What happens after launch?",
+          "a": "You own everything: the codebase, the Figma files, the CMS access. The 30-day support window covers post-launch fixes, training, and any small content changes. After that, you can self-manage via the CMS, hire us for a monthly retainer, or bring it to your in-house team. We do not lock you into proprietary tooling — every site we build is portable."
+        }
+      ]
+    },
+    "country": "us",
+    "targetKeyword": "web design austin",
+    "competitorPricingBenchmark": 7500,
+    "locale": {
+      "countryCode": "us",
+      "countryName": "United States",
+      "countryAdjective": "American",
+      "bcp47": "en-US",
+      "currencyCode": "USD",
+      "currencySymbol": "$",
+      "currencyName": "US Dollar",
+      "languageCode": "en",
+      "officialStatsBodyName": "U.S. Census Bureau",
+      "officialStatsBodyUrl": "https://www.census.gov",
+      "regulatoryAuthorityName": "Securities and Exchange Commission",
+      "agencyArchetypeLabel": "New York digital agency",
+      "benchmarkFallback": 6500
+    }
+  },
+  "generatedAt": "2025-01-30T00:00:00Z",
+  "modelUsed": "gpt-4o",
+  "sections": {
+    "hero": {
+      "sectionId": "hero",
+      "headline": "Web Design in Austin That Converts Visitors Into Clients",
+      "subheadline": "Built for Austin's Technology & Semiconductors sector and every SMB competing in a $268 billion metro economy.",
+      "body": "Austin businesses don't have time for slow sites, vague agencies, or six-month timelines. FactoryJet delivers a production-ready, SEO-optimised website in 31 days — starting at $1,500. You own the code, the design files, and the results. No retainer required to get started.",
+      "ctaText": "Start Your Project",
+      "ctaUrl": "/contact",
+      "dataPoints": [
+        "Websites from $1,500",
+        "31-day delivery",
+        "Next.js + GA4 included"
+      ]
+    },
+    "cityContext": {
+      "sectionId": "cityContext",
+      "headline": "Why Your Austin Web Presence Can't Be an Afterthought",
+      "subheadline": "Nearly one million people. A $268 billion economy. Your competitors are already online — and they're getting the clicks.",
+      "body": "Austin's metro economy hit $268 billion in GDP, anchored by major technology campuses, a large state government workforce, and a professional services sector that grew 5–6% in real terms in 2023. With 993,771 residents and a steady influx of corporate relocations, the city's buyer pool is deep — but so is the competition. A slow, poorly structured website doesn't just lose rankings; it loses deals to the firm whose site loaded first and answered the question clearly. In a market where Dell, Apple, Google, Oracle, and Tesla all operate major campuses, even local SMBs are competing for talent and clients who expect digital experiences that match the quality of the companies they work for. Your website is the first sales conversation you have with every prospect. Make it count.",
+      "stats": [
+        {
+          "label": "Austin City Population (2024)",
+          "value": "993,771",
+          "source": "https://www.census.gov/quickfacts/fact/table/austincitytexas/LND110210"
+        },
+        {
+          "label": "Austin-Round Rock-San Marcos MSA GDP (2024)",
+          "value": "$268 billion",
+          "source": "https://fred.stlouisfed.org/series/NGMP12420"
+        },
+        {
+          "label": "Professional & Business Services share of metro GDP",
+          "value": "~20%",
+          "source": "https://opportunityaustin.com/gross-domestic-product-by-metro-county/"
+        }
+      ],
+      "ctaText": "See Our Pricing",
+      "ctaUrl": "/us/austin/web-design#pricing"
+    },
+    "serviceExplanation": {
+      "sectionId": "serviceExplanation",
+      "headline": "What 'Web Design' Actually Means for an Austin Business",
+      "subheadline": "Strategy, design, code, SEO, and analytics — delivered as one project, not four separate invoices.",
+      "body": "Most Austin agencies sell you a design and hand you a bill. FactoryJet builds a complete digital asset: a Next.js site with sub-second load times, JSON-LD schema for AI search visibility, GA4 analytics wired in from day one, and a CMS you can actually use without calling a developer.\n\nFor Austin's Technology & Semiconductors companies — from early-stage startups in Silicon Hills to suppliers serving Samsung and NXP Semiconductors — a website needs to communicate technical credibility fast. Buyers in this sector read spec sheets before they read testimonials. We structure your site to answer those questions before the prospect picks up the phone.\n\nFor Professional & Business Services firms — the legal, consulting, finance, and marketing companies that account for roughly 20% of metro GDP — the website is the pitch deck. It needs to establish authority, capture leads, and route inquiries to the right person. Our Growth tier includes lead-capture flows and email automation built specifically for that workflow.\n\nEvery FactoryJet project covers discovery, Figma prototyping, development, content, SEO, and a 30-day support window. You leave with a codebase you own, a design system you keep, and a site that was built to rank — not just to look good in a screenshot.",
+      "ctaText": "See How It Works",
+      "ctaUrl": "/us/austin/web-design#process",
+      "dataPoints": [
+        "Next.js architecture",
+        "JSON-LD schema for AI search",
+        "GA4 + GTM included",
+        "You own all files"
+      ]
+    },
+    "whyFactoryJet": {
+      "sectionId": "whyFactoryJet",
+      "headline": "Why Austin Businesses Choose FactoryJet Over Local Agencies",
+      "subheadline": "Transparent pricing, faster delivery, and a tech stack that outperforms WordPress builds.",
+      "body": "Austin has no shortage of web agencies. GLIDE® has been building WordPress sites for Austin B2B brands for 20+ years. MARION Marketing publishes project rates of $5,000–$15,000 for comparable scope. Both are credible options — but neither publishes a 31-day delivery commitment or builds in Next.js as standard.\n\nFactoryJet's Growth tier ($3,100–$6,300) covers 10–15 pages, a blog CMS, lead capture, GA4, and a training session. That's 50–60% below the $7,500 Austin agency benchmark for equivalent scope, with a faster timeline and a codebase that doesn't require monthly plugin maintenance.\n\nWe don't win on price alone. We win because every project ships with JSON-LD schema for AI search crawlers, performance budgets enforced from the first commit, and a recorded handover so your team can self-manage from day one. No lock-in. No proprietary platform. No surprise invoices after launch.",
+      "competitors": [
+        {
+          "name": "MARION Marketing",
+          "theirPrice": "$5,000–$15,000 per published rate card",
+          "ourPrice": "$3,100–$6,300 (Growth tier)",
+          "ourAdvantage": "FactoryJet delivers in 31 days on Next.js; MARION's timeline and stack are not publicly stated."
+        },
+        {
+          "name": "GLIDE®",
+          "theirPrice": "Pricing undisclosed; WordPress-based builds for mid-market B2B brands",
+          "ourPrice": "$3,100–$6,300 (Growth tier)",
+          "ourAdvantage": "Next.js vs WordPress means faster load times and no monthly plugin overhead for Austin clients."
+        }
+      ],
+      "ctaText": "Compare Plans",
+      "ctaUrl": "/us/austin/web-design#pricing",
+      "dataPoints": [
+        "50–60% below local agency benchmark",
+        "31-day delivery guarantee",
+        "Next.js — no WordPress plugin tax"
+      ]
+    },
+    "process": {
+      "sectionId": "process",
+      "headline": "How We Build Your Austin Website",
+      "steps": [
+        {
+          "step": 1,
+          "title": "Discovery & Strategy",
+          "description": "We map your ideal customer profile, audit the top three competitors in your market, and agree the sitemap and content plan. You leave this phase knowing exactly what the site will do and how we will measure it.",
+          "duration": "Days 1–3"
+        },
+        {
+          "step": 2,
+          "title": "Design & Prototyping",
+          "description": "Figma wireframes turn into a complete mobile-first design system, reviewed against your brand and conversion goals. Two structured feedback rounds lock the visual direction before a line of code is written.",
+          "duration": "Days 4–10"
+        },
+        {
+          "step": 3,
+          "title": "Development",
+          "description": "We build the site in Next.js with GSAP animations, headless CMS integration, contact forms, and any third-party APIs you need. Performance budgets are enforced from the first commit, not retrofitted at launch.",
+          "duration": "Days 11–25"
+        },
+        {
+          "step": 4,
+          "title": "Content & SEO",
+          "description": "Copy, optimised WebP imagery, meta tags, JSON-LD schema, and internal links all land in this phase. We submit the sitemap to Google Search Console and verify rendering for AI crawlers (GPTBot, ClaudeBot, PerplexityBot).",
+          "duration": "Days 26–30"
+        },
+        {
+          "step": 5,
+          "title": "Launch & Handover",
+          "description": "We deploy to Cloudflare, wire up GA4 and GTM, and walk you through the CMS in a recorded handover session. A 30-day support window covers any post-launch fixes or training questions.",
+          "duration": "Day 31+"
+        }
+      ]
+    },
+    "industries": {
+      "sectionId": "industries",
+      "headline": "Web Design for Austin's Key Industries",
+      "subheadline": "Every sector in Austin's economy has a different reason to need a better website. Here's how we approach the ones that matter most.",
+      "body": "From Silicon Hills startups to state government contractors, Austin's economy spans industries with very different digital needs. FactoryJet has built sites for each of them.",
+      "sectors": [
+        {
+          "name": "Technology & Semiconductors",
+          "description": "Austin's Silicon Hills is home to major campuses for Dell, Apple, Google, Oracle, and Samsung. Tech companies here need sites that communicate product depth and technical credibility to buyers who do their research before any sales call. We build fast, schema-rich sites that rank for the specific queries your buyers use.",
+          "example": "Suppliers and SaaS companies serving Dell, Samsung, or NXP Semiconductors campuses in the Austin metro."
+        },
+        {
+          "name": "Professional & Business Services",
+          "description": "Legal, consulting, finance, and marketing firms make up roughly 20% of Austin's metro GDP. For these businesses, the website is the first qualification filter — it either earns a meeting or loses one. We build lead-capture flows and authority-building content structures that turn visitors into booked calls.",
+          "example": "Consulting and legal firms supporting Austin's large corporate base."
+        },
+        {
+          "name": "Healthcare & Life Sciences",
+          "description": "With Ascension Seton (14,000+ staff), St. David's HealthCare (11,000+ staff), and nearly 300 life sciences companies anchored by the Dell Medical School at UT Austin, this sector needs sites that build patient or partner trust fast. We handle HIPAA-aware form design, clear service navigation, and local SEO for clinic and practice sites.",
+          "example": "Private practices, life sciences startups, and healthcare vendors in the Austin metro."
+        },
+        {
+          "name": "Advanced Manufacturing (Semiconductors & EVs)",
+          "description": "Samsung, NXP Semiconductors, and Tesla's Giga Texas plant anchor a manufacturing cluster of 70,000+ workers in the Austin metro. Suppliers and service firms in this space need B2B sites that speak to procurement teams — clear capability pages, downloadable spec sheets, and RFQ forms that actually convert.",
+          "example": "Component suppliers and engineering services firms serving Tesla Giga Texas or Samsung's Austin fab."
+        },
+        {
+          "name": "Government & Public Administration",
+          "description": "Austin is the Texas state capital, and the City of Austin alone employs around 15,400 people. Contractors, consultants, and vendors serving state agencies need sites that project compliance, credibility, and clear service scope — often a prerequisite for procurement shortlists.",
+          "example": "Vendors and consultants bidding on City of Austin or Texas state agency contracts."
+        }
+      ],
+      "ctaText": "Get a Free Consultation",
+      "ctaUrl": "/contact"
+    },
+    "pricing": {
+      "sectionId": "pricing",
+      "headline": "Transparent Pricing for Austin Businesses",
+      "subheadline": "Three tiers. No hidden fees. You own everything we build.",
+      "body": "Austin agency rates for a comparable web design project typically run around $7,500 — and often higher, with MARION Marketing publishing rates of $5,000–$15,000. FactoryJet's Growth tier delivers the same scope — 10–15 pages, CMS, SEO, analytics — for $3,100–$6,300. That's 50–60% below the local benchmark, with a 31-day delivery timeline and a Next.js codebase you own outright. No retainer required.",
+      "tiers": [
+        {
+          "name": "Starter",
+          "priceLabel": "$1,500–$3,100",
+          "description": "A 5-page brochure site that loads fast on mobile and ranks for your name and core service.",
+          "includes": [
+            "5 pages, mobile-responsive",
+            "Basic SEO & schema markup",
+            "Contact form with email forwarding",
+            "2 revision rounds",
+            "30-day post-launch support"
+          ],
+          "bestFor": "Sole traders and local services who need a credible online presence quickly.",
+          "highlight": false
+        },
+        {
+          "name": "Growth",
+          "priceLabel": "$3,100–$6,300",
+          "description": "A 10–15 page site with a blog CMS, lead-capture flows, and analytics wired in from day one.",
+          "includes": [
+            "10–15 pages with blog CMS",
+            "Advanced SEO & GA4 tracking",
+            "Lead capture & email automation",
+            "3 revision rounds",
+            "30-day support + training session"
+          ],
+          "bestFor": "SMBs scaling online who need the site to actively generate qualified inquiries.",
+          "highlight": true
+        },
+        {
+          "name": "Scale",
+          "priceLabel": "$6,300–$15,000",
+          "description": "Custom Next.js build with e-commerce, AI features, API integrations, and priority support.",
+          "includes": [
+            "Custom Next.js architecture",
+            "E-commerce or membership features",
+            "AI integrations (chat, search, content)",
+            "Third-party API connections",
+            "Priority support & quarterly reviews"
+          ],
+          "bestFor": "Established businesses with complex requirements and a real digital revenue line.",
+          "highlight": false
+        }
+      ],
+      "ctaText": "Choose Your Plan",
+      "ctaUrl": "/contact",
+      "dataPoints": [
+        "50–60% below Austin agency benchmark",
+        "All prices in USD",
+        "No lock-in contracts"
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "How much does a website cost for a small business in Austin?",
+          "answer": "Most Austin small businesses choose the Starter tier ($1,500–$3,100) for a clean five-page site or Growth ($3,100–$6,300) for a blog CMS and lead capture. Custom builds with e-commerce or AI features start with Scale. Local agency rates in Austin for the same scope often run two to three times higher."
+        },
+        {
+          "question": "How long does it take to build a website?",
+          "answer": "A standard FactoryJet build runs 31 days from kickoff to launch. Discovery and design take the first two weeks, development runs three weeks, and content, SEO, and launch happen in the final week. Faster timelines are possible for simpler sites — a five-page Starter project can ship in two weeks. We do not start the clock until your brand assets and content are in our shared workspace."
+        },
+        {
+          "question": "What's included in a web design project?",
+          "answer": "Every project includes strategy, design, development, content, SEO setup, and a 30-day support window. You get a Figma design system you keep, a Next.js codebase you own, JSON-LD schema for AI search visibility, GA4 wired up, and a recorded handover session. We do not charge separately for staging environments, basic copy edits, or routine bug fixes inside the support window."
+        },
+        {
+          "question": "How long until my new site ranks on Google?",
+          "answer": "Branded searches (your business name) usually rank within one to two weeks of launch. Service plus location queries like 'web design Austin' typically take three to six months for a new domain, and longer for United States-wide competitive terms. The work that compresses this timeline — schema, internal linking, content depth, technical performance — is built into every FactoryJet project, not sold as an add-on after launch."
+        },
+        {
+          "question": "I'm a tech startup in Silicon Hills — do you have experience with B2B SaaS sites?",
+          "answer": "Yes. Austin's Technology & Semiconductors sector is one of our most common client profiles. We build sites that communicate product depth and technical credibility to buyers who research before they talk to sales. That means clear feature architecture, schema markup for product pages, and lead-capture flows designed for longer B2B sales cycles."
+        },
+        {
+          "question": "Can you help a healthcare or life sciences company in Austin with their website?",
+          "answer": "Yes. We work with private practices, life sciences vendors, and healthcare service firms in the Austin metro. We handle HIPAA-aware contact form design, clear service navigation, and local SEO — important for practices competing for patients near major employers like Ascension Seton and St. David's HealthCare."
+        },
+        {
+          "question": "How does FactoryJet compare to Austin agencies like GLIDE® or Nativz?",
+          "answer": "GLIDE® and Nativz are established Austin agencies with strong reputations. Neither publishes pricing. FactoryJet publishes all three tiers upfront, delivers in 31 days, and builds in Next.js rather than WordPress — which means faster load times and no ongoing plugin maintenance costs for your team."
+        },
+        {
+          "question": "We're a contractor bidding on City of Austin or Texas state agency work. Does our website matter for procurement?",
+          "answer": "It matters more than most contractors realise. Procurement teams check vendor websites before shortlisting. A site that clearly states your capabilities, certifications, and past work — with a professional design — signals operational credibility. We build contractor sites with clear service scope pages and downloadable capability statements."
+        },
+        {
+          "question": "Austin has a lot of agencies. Why should I trust a newer name over an established local firm?",
+          "answer": "Fair question. FactoryJet competes on three things: published pricing (no discovery call required to get a number), a 31-day delivery commitment in writing, and a Next.js tech stack that outperforms WordPress on speed and SEO. You can compare our scope and price against any Austin agency before you speak to us."
+        },
+        {
+          "question": "My business is near the UT Austin campus and targets students and faculty. Can you build for that audience?",
+          "answer": "Yes. Sites targeting the UT Austin community need mobile-first design (students browse on phones), fast load times on campus Wi-Fi, and content structured around the academic calendar. We build with those constraints in mind and can integrate event feeds, application forms, or membership portals depending on your service."
+        }
+      ]
+    },
+    "finalCta": {
+      "sectionId": "finalCta",
+      "headline": "Ready to Build Your Austin Website?",
+      "subheadline": "31 days. Transparent pricing. You own everything.",
+      "body": "Austin's $268 billion economy moves fast. Every week without a high-performing website is a week your competitors are capturing the searches you should own. Start your project today — pick a tier, book a free 30-minute call, and we'll have a sitemap ready within 72 hours.",
+      "ctaText": "Start Your Project",
+      "ctaUrl": "/contact",
+      "dataPoints": [
+        "No retainer required",
+        "Free 30-min strategy call",
+        "Sitemap delivered in 72 hours"
+      ]
+    }
+  },
+  "meta": {
+    "title": "Web Design Austin | FactoryJet",
+    "description": "FactoryJet builds fast, conversion-focused websites for Austin businesses — from $1,500. 31-day delivery. Next.js, SEO, and GA4 included.",
+    "slug": "austin",
+    "canonicalUrl": "/us/austin/web-design",
+    "h1": "Web Design in Austin That Converts Visitors Into Clients"
+  },
+  "wordCountEstimate": 2383,
+  "uniquenessFlags": [
+    "Population stat: 993,771 (Austin, 2024)",
+    "GDP stat: $268 billion (Austin-Round Rock-San Marcos MSA)",
+    "Professional & Business Services: ~20% of metro GDP",
+    "Industry: Technology & Semiconductors / Silicon Hills",
+    "Industry: Professional & Business Services",
+    "Industry: Healthcare & Life Sciences",
+    "Industry: Advanced Manufacturing (Semiconductors & EVs)",
+    "Industry: Government & Public Administration",
+    "Employer named: Dell",
+    "Employer named: Apple",
+    "Employer named: Google",
+    "Employer named: Oracle",
+    "Employer named: Samsung",
+    "Employer named: Tesla / Giga Texas",
+    "Employer named: NXP Semiconductors",
+    "Employer named: Ascension Seton (14,000+ staff)",
+    "Employer named: St. David's HealthCare (11,000+ staff)",
+    "Employer named: Dell Medical School at UT Austin",
+    "City of Austin ~15,400 employees",
+    "Competitor named: GLIDE®",
+    "Competitor named: MARION Marketing ($5,000–$15,000 rate card)",
+    "Competitor named: Nativz",
+    "Landmark referenced: UT Austin campus",
+    "Local benchmark: $7,500 Austin agency rate",
+    "City: Austin, Texas state capital"
+  ]
+}

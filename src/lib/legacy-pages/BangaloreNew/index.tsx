@@ -2,8 +2,6 @@
 
 import React from 'react';
 import Script from 'next/script';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import Hero, { HeroDetailedText } from './components/Hero';
 import { SocialProof, About, ProblemSection, SolutionSection } from './components/ContentBlocks';
 import { Services, Process, Technologies, Pricing } from './components/ServiceBlocks';
@@ -93,7 +91,6 @@ const BangalorePage = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Header variant="solid" />
       <main className="min-h-screen w-full overflow-x-hidden font-sans">
         <Hero />
         <HeroDetailedText />
@@ -112,7 +109,6 @@ const BangalorePage = () => {
         <LocalSEO />
         <FinalCTA />
       </main>
-      <Footer />
       <MobileStickyCTA />
     </>
   );

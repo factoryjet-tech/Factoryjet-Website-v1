@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import Footer from '@/components/Footer'
+import SiteHeader from '@/components/v2/SiteHeader'
+import SiteFooter from '@/components/v2/SiteFooter'
 import { CaseStudyPage } from '@/pages/Case/components/CaseStudyPage'
 import { CASE_STUDIES } from '@/pages/Case/data.constants'
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
@@ -83,8 +84,9 @@ export default async function Page({ params }: Props) {
         { name: 'Case Studies', url: 'https://factoryjet.com/case' },
         { name: caseStudy.title, url: `https://factoryjet.com/case/${resolvedParams.slug}` },
       ]} />
+      <SiteHeader />
       <CaseStudyPage caseStudy={caseStudy} />
-      <Footer />
+      <SiteFooter />
     </>
   )
 }

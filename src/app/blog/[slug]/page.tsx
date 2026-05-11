@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Script from 'next/script'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import SiteHeader from '@/components/v2/SiteHeader'
+import SiteFooter from '@/components/v2/SiteFooter'
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 import { BlogPostPage } from '@/pages/Blog/components/BlogPostPage'
 import { POSTS } from '@/pages/Blog/posts'
@@ -171,9 +171,9 @@ export default async function Page({ params }: Props) {
         />
       )}
 
-      <Header variant="solid" />
+      <SiteHeader />
       <BlogPostPage post={post} />
-      <Footer />
+      <SiteFooter />
     </>
   )
 }

@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 import BlogPage from '@/pages/Blog'
+import SiteHeader from '@/components/v2/SiteHeader'
+import SiteFooter from '@/components/v2/SiteFooter'
 
 // Blog listing page structured data
 const blogListJsonLd = {
@@ -65,6 +67,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
+      <SiteHeader />
       {/* Breadcrumb Structured Data */}
       <BreadcrumbSchema items={[
         { name: 'Home', url: 'https://factoryjet.com' },
@@ -79,6 +82,7 @@ export default function Page() {
       />
 
       <BlogPage />
+      <SiteFooter />
     </>
   )
 }

@@ -1,8 +1,6 @@
 'use client';
 
 import Script from 'next/script';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import Hero from './components/Hero';
 import SocialProof from './components/SocialProof';
 import AboutEntity from './components/AboutEntity';
@@ -197,7 +195,6 @@ function ChennaiPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Header variant="solid" />
       <StickyWhatsApp />
       <ExitIntentModal />
       
@@ -216,8 +213,6 @@ function ChennaiPage() {
       <FAQ />
       <Locations />
       <FinalCTA />
-      {/* <Footer /> */} {/* Commented out - using global Footer instead */}
-      <Footer />
     </div>
   );
 }

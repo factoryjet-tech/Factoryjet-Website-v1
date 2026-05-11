@@ -1,14 +1,12 @@
 'use client';
 
 import React from 'react';
-import Header from '@/components/Header';
 import Hero from './components/Hero';
 import ContactMethods from './components/ContactMethods';
 import ContactForm from './components/ContactForm';
 import Locations from './components/Locations';
 import SupportSection from './components/SupportSection';
 import FAQ from './components/FAQ';
-import Footer from './components/Footer';
 import { trackContactClick, trackCTAClick } from '@/utils/gtm';
 
 const contactFaqs = [
@@ -94,7 +92,6 @@ const ContactPage: React.FC = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <div className="min-h-screen bg-white pb-24 md:pb-0">
-        <Header variant="transparent" />
         <main>
           <Hero />
           <ContactMethods />
@@ -104,7 +101,6 @@ const ContactPage: React.FC = () => {
           <FAQ />
         </main>
 
-        <Footer />
 
         <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 p-4 z-40 flex gap-3 shadow-neumorphic">
           <a

@@ -4,8 +4,6 @@ import React, { useState, useMemo } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import { FilterTabs } from './components/FilterTabs';
 import { CaseCard } from './components/CaseCard';
 import { CASE_STUDIES } from './data.constants';
@@ -30,7 +28,6 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#F9FAFB] flex flex-col font-sans">
-      <Header variant="solid" />
       
       <main className="flex-grow pt-20 md:pt-32 pb-12 md:pb-24">
         {/* Hero Section */}
@@ -128,7 +125,6 @@ const App: React.FC = () => {
         </section>
       </main>
 
-      <Footer />
     </div>
   );
 };

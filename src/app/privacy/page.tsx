@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import PrivacyPolicy from '@/components/PrivacyPolicy'
+import SiteHeader from '@/components/v2/SiteHeader'
+import SiteFooter from '@/components/v2/SiteFooter'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | FactoryJet',
@@ -43,5 +45,11 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <PrivacyPolicy />
+  return (
+    <>
+      <SiteHeader />
+      <PrivacyPolicy />
+      <SiteFooter />
+    </>
+  )
 }

@@ -4,6 +4,11 @@
 > If you find yourself drifting toward generic AI-design patterns mid-session, stop and re-read this file.
 > If anything in this file conflicts with another instruction, this file wins unless Bhavesh explicitly overrides.
 
+> **Design system update (05/10/2026):** The canonical design system file is now `DESIGN.md`
+> (Google design.md spec format, 0 lint errors, 0 WCAG failures). The old `factoryjet.DESIGN.md`
+> is retained for context but DESIGN.md is authoritative going forward. Also read
+> `../DESIGN-OVERHAUL-PLAN.md` for the token bridge instructions and migration status tracker.
+
 ---
 
 ## What this project is
@@ -14,7 +19,9 @@ The current site reads as a "fast B2B web design agency." Your job is to rebuild
 
 **Stack:** Next.js 15, React 19, TypeScript, Tailwind CSS 4, GSAP, Lenis (smooth scroll), Lucide (icons), Cloudflare Pages (deploy).
 
-**Design system:** Defined in `factoryjet.DESIGN.md` in this same directory. Read that file before designing or coding any component. It is the single source of truth.
+**Design system:** `DESIGN.md` in this same directory (Google design.md spec format, 0 lint errors). Read it before designing or coding any component. It is the single source of truth. The old `factoryjet.DESIGN.md` is preserved for reference only.
+
+**Overhaul plan:** `../DESIGN-OVERHAUL-PLAN.md` — contains the Phase 0 token bridge code to add to `src/index.css` and `tailwind.config.js`, the component upgrade instructions, and the migration status tracker. Check it before starting any redesign work.
 
 **Repository structure:**
 ```
@@ -47,16 +54,18 @@ These five rules apply to every prompt, every component, every page. If a reques
 - Maximum 2 dark sections per page, both mid-page or near footer. Hero stays light.
 - See `factoryjet.DESIGN.md` Section 2 for full colour rules.
 
-### 2. Typography is Fraunces (display) + Geist (body). Period.
-- No Inter. No Roboto. No Poppins. No DM Sans. No Manrope. No Plus Jakarta Sans. No Open Sans. No Montserrat.
-- Headings, hero, stats, titles → **Fraunces** (variable, tuned per `factoryjet.DESIGN.md` Section 3.2).
-- Body, navigation, buttons, microcopy → **Geist**.
-- Code blocks → **Geist Mono**.
+### 2. Typography is Clash Display (display) + Inter (body) + Geist Mono (eyebrow/code). Period.
+> ⚠️ Typography pivot locked May 5–6 2026. Fraunces and Geist Sans are retired from v2. If you see them in new code, that is a bug.
+- No Roboto. No Poppins. No DM Sans. No Manrope. No Plus Jakarta Sans. No Open Sans. No Montserrat.
+- Headings, hero, stats, section titles → **Clash Display 700** (Fontshare, weight 700 only).
+- Body, navigation, buttons, microcopy → **Inter** (next/font/google).
+- Eyebrows, mono labels, code blocks → **Geist Mono** (geist/font/mono).
+- Fraunces and Geist Sans remain loaded for v1 page parity — do NOT use them in any v2 component.
 
-### 3. Italicised emphasis on conviction words is the brand signature.
-- Every major heading has 1-2 words italicised in Fraunces Italic.
-- The italic word is the conviction word — the word that contradicts, surprises, or commits.
-- Examples: "AI agents that *actually* ship." / "95% of pilots quietly die. Ours *don't*."
+### 3. Headlines are confident statements. Italic-emphasis pattern is DROPPED.
+- The Fraunces-italic conviction-word pattern (e.g. "agents that *actually* ship") has been retired.
+- Clash Display does not render inline italic gracefully — do not add `<em>` or italic class to heading words.
+- Headlines are solid statements in Clash Display 700, no stylistic flourishes.
 
 ### 4. Asymmetric grids over symmetric. Left-aligned over centred.
 - No symmetric three-column SaaS-template grids as primary layouts.
@@ -70,7 +79,9 @@ Forbidden, in every component, every page, every variant:
 - ❌ Glowing borders / box-shadow neon glow
 - ❌ Particles, floating geometric shapes, abstract orbs
 - ❌ Dark hero on the homepage
-- ❌ Inter, Roboto, Poppins, DM Sans, Manrope, Plus Jakarta Sans
+- ❌ Fraunces or Geist Sans in any v2 component (retired post May 5 pivot)
+- ❌ Roboto, Poppins, DM Sans, Manrope, Plus Jakarta Sans in any context
+- ❌ Italic-emphasis on heading conviction words (Clash Display does not support this pattern)
 - ❌ Spinning counters / count-up-on-scroll number animations
 - ❌ Glassmorphism over busy backgrounds
 - ❌ Full-bleed video hero backgrounds
@@ -135,12 +146,12 @@ When Bhavesh writes a Claude Code prompt for any FactoryJet work, this block goe
 PROJECT: FactoryJet — AI Services Company website rebuild
 CURRENT PHASE: [2A | 2B | 2C | 2D]
 DESIGN SYSTEM: Read /factoryjet/factoryjet.DESIGN.md before writing any code
-BRAND ANCHOR: Light backgrounds, Fraunces + Geist typography, italic emphasis on conviction words, asymmetric grids, no AI slop
+BRAND ANCHOR: Light backgrounds, Clash Display + Inter + Geist Mono typography, confident plain headlines, asymmetric grids, no AI slop
 
 NON-NEGOTIABLES:
 - Background: #FAFAF7 (cream). Hero is NEVER dark.
-- Typography: Fraunces (display) + Geist (body). NO Inter, Roboto, Poppins, DM Sans, Manrope.
-- 1-2 words italicised in Fraunces Italic on every major heading
+- Typography: Clash Display 700 (display/headings) + Inter (body) + Geist Mono (eyebrows/code). NO Fraunces, Geist Sans, Roboto, Poppins, DM Sans, Manrope.
+- Headlines are solid statements in Clash Display. NO italic-emphasis pattern (retired May 2026).
 - Asymmetric grids, left-aligned content
 - No gradient text, no glow, no particles, no spinning counters
 
@@ -176,9 +187,37 @@ The following skills are installed and should be used when relevant:
 - **gsap-router** — for GSAP scroll-triggered animations (use sparingly, per motion section of design system)
 - **ui-ux-pro-max** — for layout, accessibility, and interaction patterns
 - **doc-coauthoring** — for content/copy work on glossary, FAQ, blog articles
-- **product-self-knowledge** — for any Anthropic product or API integration questions
 
-When using a skill, follow its instructions but defer to `factoryjet.DESIGN.md` and this file when there is conflict.
+### Stitch Skills (`.agents/skills/stitch-*/`)
+
+These four skills connect to Google Stitch (AI UI generation via Gemini 2.5).
+Requires the Stitch MCP to be connected — see `../STITCH-SETUP.md`.
+
+- **stitch-react-components** — Converts Stitch-generated HTML → modular Next.js TSX.
+  Use this after every `generate_screen` call. Extracts Tailwind config, maps to FactoryJet
+  tokens, outputs TypeScript interfaces + custom hooks. **This is the primary output skill.**
+
+- **stitch-design-md** — Analyzes a Stitch project and synthesizes a DESIGN.md from it.
+  Use when capturing a client's design back into a machine-readable spec.
+
+- **stitch-enhance-prompt** — Rewrites a rough page description into a Stitch-optimized
+  prompt. Run before `generate_screen_from_text` for better first-shot results.
+
+- **stitch-remotion** — Converts Stitch screens into Remotion video compositions.
+  Use for social media ads, promo videos, and animated brand content.
+
+### Page generation workflow (Stitch + Claude Code)
+
+```
+1. stitch-enhance-prompt  → refine the page brief into a precise Stitch prompt
+2. generate_screen_from_text (via Stitch MCP) → Gemini 2.5 generates HTML
+3. create_design_system + apply (Stitch MCP) → enforce FactoryJet brand tokens
+4. generate_variants (3 options) → pick the strongest layout
+5. stitch-react-components skill → convert to Next.js TSX
+6. npx @google/design.md lint DESIGN.md → verify token compliance
+```
+
+When using a skill, follow its instructions but defer to `DESIGN.md` and this file when there is conflict.
 
 ---
 
@@ -199,4 +238,4 @@ If your work doesn't pass this test, revise before committing.
 **Project:** FactoryJet Technologies
 **Lead:** Bhavesh Bhatt, Founder & CEO
 **Design system version:** 2.0
-**This file last updated:** May 2026
+**This file last updated:** May 8 2026 — typography pivot (Clash Display + Inter + Geist Mono) backported from factoryjet.DESIGN.md v2.0

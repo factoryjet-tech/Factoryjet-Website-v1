@@ -1,7 +1,5 @@
 'use client';
 
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import Hero from './components/Hero';
 import Stats from './components/Stats';
 import StoryTimeline from './components/StoryTimeline';
@@ -33,7 +31,6 @@ export default function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Header variant="solid" />
       <main>
         <Hero />
         <Stats />
@@ -45,7 +42,6 @@ export default function AboutPage() {
         <FAQ />
         <CTA />
       </main>
-      <Footer />
     </div>
   );
 }

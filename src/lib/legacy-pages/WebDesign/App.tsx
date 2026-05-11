@@ -1,8 +1,6 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import { Hero } from './components/Hero';
 import { Services } from './components/Services';
 import { Features } from './components/Features';
@@ -111,7 +109,6 @@ function App() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <main className="min-h-screen bg-white font-sans text-slate-900 selection:bg-jet-orange/20 selection:text-jet-orange">
-        <Header variant="solid" />
 
         <Hero />
         <Services />
@@ -125,7 +122,6 @@ function App() {
         <Locations />
         <Info />
 
-        <Footer />
       </main>
     </>
   );

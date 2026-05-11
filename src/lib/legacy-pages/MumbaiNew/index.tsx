@@ -1,8 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import Hero from './components/Hero';
 import {
   SocialProof,
@@ -118,7 +116,6 @@ const MumbaiPage = () => {
         }}
       />
 
-      <Header variant="solid" />
 
       <main className="min-h-screen w-full overflow-x-hidden font-sans">
         <Hero />
@@ -139,7 +136,6 @@ const MumbaiPage = () => {
       </main>
 
       {/* <FooterLocal /> */} {/* Commented out - using global Footer instead */}
-      <Footer />
       <StickyMobileCTA />
       <ExitIntentModal />
       <ContactModal isOpen={isContactModalOpen} onClose={() => setIsContactModalOpen(false)} />

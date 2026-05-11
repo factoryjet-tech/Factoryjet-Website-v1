@@ -3,9 +3,6 @@
 import React, { useState, useMemo, useRef } from 'react';
 import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import Link from 'next/link';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import FooterUS from '@/components/FooterUS';
 import { ArrowRight, ExternalLink, Globe, Sparkles } from 'lucide-react';
 import { useContactModal } from '@/context/ContactModalContext';
 import { trackCTAClick } from '@/utils/gtm';
@@ -153,7 +150,6 @@ const PortfolioPage: React.FC<PortfolioPageProps> = ({ basePath = '' }) => {
 
   return (
     <div className="min-h-screen bg-[#F9FAFB] flex flex-col font-sans">
-      <Header variant="solid" basePath={basePath || undefined} />
 
       <main className="flex-grow pt-20 md:pt-32 pb-12 md:pb-24">
         {/* Hero Section */}
@@ -263,7 +259,6 @@ const PortfolioPage: React.FC<PortfolioPageProps> = ({ basePath = '' }) => {
         </section>
       </main>
 
-      {isUS ? <FooterUS /> : <Footer />}
     </div>
   );
 };

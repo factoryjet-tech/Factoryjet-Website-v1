@@ -13,6 +13,7 @@
     "test:parser": "tsx scripts/test-parser.ts",
     "generate": "tsx src/step7/index.ts",
     "assemble": "tsx src/step7/assembler.ts",
+    "generate-images": "tsx scripts/generate-images.ts",
     "typecheck": "tsc --noEmit"
   },
   "engines": {

@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { contactAlternates } from '@/data/hreflangMap'
 import ContactPage from '@/pages/Contact'
+import SiteHeader from '@/components/v2/SiteHeader'
+import SiteFooter from '@/components/v2/SiteFooter'
 
 export const metadata: Metadata = {
   title: 'Contact Us - Get a Free Quote | Web & E-Commerce Development | FactoryJet',
@@ -46,5 +48,11 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <ContactPage />
+  return (
+    <>
+      <SiteHeader />
+      <ContactPage />
+      <SiteFooter />
+    </>
+  )
 }

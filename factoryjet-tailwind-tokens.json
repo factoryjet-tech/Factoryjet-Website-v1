@@ -1,0 +1,240 @@
+{
+  "theme": {
+    "extend": {
+      "colors": {
+        "surface": "#fafaf7",
+        "surface-dim": "#f0f0ec",
+        "surface-bright": "#ffffff",
+        "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f8f8f5",
+        "surface-container": "#efefea",
+        "surface-container-high": "#e5e7eb",
+        "surface-container-highest": "#d9d9d2",
+        "on-surface": "#1a1a1a",
+        "on-surface-variant": "#64748b",
+        "inverse-surface": "#2a2a2a",
+        "inverse-on-surface": "#f5f5f2",
+        "outline": "#8a8a82",
+        "outline-variant": "#d9d9d2",
+        "primary": "#0052cc",
+        "on-primary": "#ffffff",
+        "primary-container": "#e6f0ff",
+        "on-primary-container": "#003d99",
+        "inverse-primary": "#4a8fff",
+        "primary-fixed": "#4a8fff",
+        "primary-fixed-dim": "#3b82f6",
+        "on-primary-fixed": "#ffffff",
+        "on-primary-fixed-variant": "#003d99",
+        "secondary": "#ff6b35",
+        "on-secondary": "#ffffff",
+        "secondary-container": "#fef3e8",
+        "on-secondary-container": "#7a2d00",
+        "secondary-fixed": "#ffd4c0",
+        "secondary-fixed-dim": "#ff6b35",
+        "on-secondary-fixed": "#ffffff",
+        "on-secondary-fixed-variant": "#cc4a15",
+        "tertiary": "#10b981",
+        "on-tertiary": "#ffffff",
+        "tertiary-container": "#e8faf1",
+        "on-tertiary-container": "#065f46",
+        "tertiary-fixed": "#a7f3d0",
+        "tertiary-fixed-dim": "#10b981",
+        "on-tertiary-fixed": "#ffffff",
+        "on-tertiary-fixed-variant": "#065f46",
+        "error": "#dc2626",
+        "on-error": "#ffffff",
+        "error-container": "#fee2e2",
+        "on-error-container": "#991b1b",
+        "background": "#fafaf7",
+        "on-background": "#1a1a1a",
+        "surface-variant": "#d9d9d2",
+        "surface-dark": "#0a0f1c",
+        "surface-dark-deep": "#070b14",
+        "on-surface-dark": "#f5f5f2",
+        "on-surface-dark-variant": "#a0aec0",
+        "surface-tint": "#0052cc"
+      },
+      "fontFamily": {
+        "display-xl": [
+          "Clash Display"
+        ],
+        "display-lg": [
+          "Clash Display"
+        ],
+        "display-md": [
+          "Clash Display"
+        ],
+        "headline-lg": [
+          "Clash Display"
+        ],
+        "headline-md": [
+          "Clash Display"
+        ],
+        "title-lg": [
+          "Inter"
+        ],
+        "title-md": [
+          "Inter"
+        ],
+        "body-lg": [
+          "Inter"
+        ],
+        "body-md": [
+          "Inter"
+        ],
+        "body-sm": [
+          "Inter"
+        ],
+        "label-lg": [
+          "Geist Mono"
+        ],
+        "label-md": [
+          "Geist Mono"
+        ],
+        "label-sm": [
+          "Geist Mono"
+        ],
+        "editorial": [
+          "Source Serif 4"
+        ]
+      },
+      "fontSize": {
+        "display-xl": [
+          "96px",
+          {
+            "lineHeight": "100px",
+            "letterSpacing": "-0.02em",
+            "fontWeight": "500"
+          }
+        ],
+        "display-lg": [
+          "64px",
+          {
+            "lineHeight": "72px",
+            "letterSpacing": "-0.02em",
+            "fontWeight": "500"
+          }
+        ],
+        "display-md": [
+          "48px",
+          {
+            "lineHeight": "56px",
+            "letterSpacing": "-0.01em",
+            "fontWeight": "500"
+          }
+        ],
+        "headline-lg": [
+          "36px",
+          {
+            "lineHeight": "44px",
+            "letterSpacing": "-0.02em",
+            "fontWeight": "600"
+          }
+        ],
+        "headline-md": [
+          "28px",
+          {
+            "lineHeight": "36px",
+            "letterSpacing": "-0.01em",
+            "fontWeight": "600"
+          }
+        ],
+        "title-lg": [
+          "22px",
+          {
+            "lineHeight": "32px",
+            "letterSpacing": "0em",
+            "fontWeight": "500"
+          }
+        ],
+        "title-md": [
+          "18px",
+          {
+            "lineHeight": "28px",
+            "letterSpacing": "0em",
+            "fontWeight": "500"
+          }
+        ],
+        "body-lg": [
+          "18px",
+          {
+            "lineHeight": "30px",
+            "letterSpacing": "0em",
+            "fontWeight": "400"
+          }
+        ],
+        "body-md": [
+          "16px",
+          {
+            "lineHeight": "24px",
+            "letterSpacing": "0em",
+            "fontWeight": "400"
+          }
+        ],
+        "body-sm": [
+          "14px",
+          {
+            "lineHeight": "22px",
+            "letterSpacing": "0em",
+            "fontWeight": "400"
+          }
+        ],
+        "label-lg": [
+          "13px",
+          {
+            "lineHeight": "20px",
+            "letterSpacing": "0.08em",
+            "fontWeight": "500"
+          }
+        ],
+        "label-md": [
+          "11px",
+          {
+            "lineHeight": "16px",
+            "letterSpacing": "0.1em",
+            "fontWeight": "500"
+          }
+        ],
+        "label-sm": [
+          "10px",
+          {
+            "lineHeight": "14px",
+            "letterSpacing": "0.12em",
+            "fontWeight": "500"
+          }
+        ],
+        "editorial": [
+          "22px",
+          {
+            "lineHeight": "34px",
+            "letterSpacing": "0em",
+            "fontWeight": "400"
+          }
+        ]
+      },
+      "borderRadius": {
+        "sm": "0.25rem",
+        "DEFAULT": "0.5rem",
+        "md": "0.75rem",
+        "lg": "1rem",
+        "xl": "1.25rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "unit": "8px",
+        "xs": "4px",
+        "sm": "8px",
+        "md": "16px",
+        "lg": "24px",
+        "xl": "40px",
+        "2xl": "64px",
+        "section-sm": "40px",
+        "section-md": "56px",
+        "section-lg": "80px",
+        "gutter": "24px",
+        "container-max": "1280px",
+        "card-padding": "24px"
+      }
+    }
+  }
+}

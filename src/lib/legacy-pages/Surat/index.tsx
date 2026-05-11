@@ -3,8 +3,6 @@
 import React, { lazy, Suspense, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Script from 'next/script';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import Hero from './components/Hero';
 import SocialProof from './components/SocialProof';
 
@@ -130,7 +128,6 @@ const SuratPage: React.FC = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Header variant="solid" />
       <Hero onOpenModal={openModal} />
       <SocialProof />
 
@@ -144,8 +141,6 @@ const SuratPage: React.FC = () => {
         <Pricing onOpenModal={openModal} />
         <FAQ />
         <CTA onOpenModal={openModal} />
-        {/* <Footer /> */} {/* Commented out - using global Footer instead */}
-        <Footer />
         <WhatsAppButton />
         <StickyMobileBar />
         <LeadFormModal isOpen={isModalOpen} onClose={closeModal} />

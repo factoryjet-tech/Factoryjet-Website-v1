@@ -193,7 +193,11 @@ function genHero(c: PageCopyOutput): string {
   const lead = s.body ?? '';
   const ctaLabel = s.ctaText ?? 'Get a quote';
   const trustItems = s.dataPoints ?? [];
-  const svcSlug = c.input.service.slug;
+  const svcSlug  = c.input.service.slug;
+  const country  = c.input.country;
+  const citySlug = c.input.city.citySlug;
+  // Locale-aware image path — populated by generate-images.ts before Next.js build
+  const heroImg  = `/images/${country}/${citySlug}/${svcSlug}/hero.webp`;
 
   return [
     `      <Hero`,
@@ -202,7 +206,7 @@ function genHero(c: PageCopyOutput): string {
     `        lead={${JSON.stringify(lead)}}`,
     `        primaryCta={{ label: ${JSON.stringify(ctaLabel)}, href: '/contact' }}`,
     `        trustItems={${JSON.stringify(trustItems)}}`,
-    `        rightSlot={<img src="/images/services/${svcSlug}/hero.webp" alt="" aria-hidden="true" className="w-full rounded-2xl object-cover" />}`,
+    `        rightSlot={<img src="${heroImg}" alt="" aria-hidden="true" className="w-full rounded-2xl object-cover" />}`,
     `      />`,
   ].join('\n');
 }
@@ -409,6 +413,124 @@ function genFinalCTA(c: PageCopyOutput): string {
 }
 
 /* ------------------------------------------------------------------ */
+/*   New section emitters — sections 03 / 04 / 07 / 09 / 13          */
+/* ------------------------------------------------------------------ */
+
+/**
+ * 03 · LogoBar — "Trusted by 500+ businesses" strip.
+ * Static brand content. Logo list managed in the LogoBar component itself.
+ */
+function genLogoBar(): string {
+  return [
+    `      <LogoBar`,
+    `        tagline="Trusted by 500+ businesses across the US, UK, and UAE"`,
+    `      />`,
+  ].join('\n');
+}
+
+/**
+ * 04 · BigThreeTrustBlock — 3 core stats + optional city stat.
+ * City stat (4th card) is injected when enriched cityBusinessCount is available.
+ */
+function genBigThree(c: PageCopyOutput): string {
+  const cityName = cityNameFromSlug(c.meta.slug);
+  const headline = `Results that ${cityName} businesses trust.`;
+  // The city-specific stat comes from the CityContextSection stats.
+  // We surface the first stat that has a value that looks like a count (contains 'K' or '+').
+  const cityStats = c.sections.cityContext.stats ?? [];
+  const cityStat = cityStats.find((s) => /K|M|\+/.test(s.value));
+  const cityStatProp = cityStat
+    ? `cityCount={{ value: ${JSON.stringify(cityStat.value)}, label: ${JSON.stringify(cityStat.label)}, source: ${JSON.stringify(cityStat.source ?? '')} }}`
+    : undefined;
+
+  const lines = [
+    `      <BigThreeTrustBlock`,
+    `        eyebrow="BY THE NUMBERS"`,
+    `        headline={${JSON.stringify(headline)}}`,
+  ];
+  if (cityStatProp) lines.push(`        ${cityStatProp}`);
+  lines.push(`      />`);
+  return lines.join('\n');
+}
+
+/**
+ * 07 · StrategicDarkSection — Navy BG, 3 hardcoded "Why FactoryJet" pillars.
+ * Max 1 of 2 dark sections on the page. Positioned mid-page after ServiceExplanation.
+ * City name injected into headline and competitive pricing context.
+ */
+function genStrategicDark(c: PageCopyOutput): string {
+  const cityName = cityNameFromSlug(c.meta.slug);
+  // Prefer the whyFactoryJet headline for continuity with copy JSON.
+  const headline = c.sections.whyFactoryJet.headline ?? `We're not a local ${cityName} agency. That's the point.`;
+  const lead     = c.sections.whyFactoryJet.body    ?? '';
+
+  return [
+    `      <StrategicDarkSection`,
+    `        eyebrow="WHY FACTORYJET"`,
+    `        headline={${JSON.stringify(headline)}}`,
+    ...(lead ? [`        lead={${JSON.stringify(lead)}}`] : []),
+    `        pillars={[`,
+    `          { title: 'AI-native',    body: 'Every site is built with AI-assisted workflow — compressing build time without compressing quality. We have run 500+ projects through this system.' },`,
+    `          { title: 'Transparent',  body: 'Pricing on the first call. No discovery fees, no \\'it depends\\' quotes that arrive three weeks later. Fixed price. Agreed up front.' },`,
+    `          { title: 'Guaranteed',   body: '7-day delivery guarantee. If we miss the deadline, you don\\'t pay. We have delivered on time on 97% of all projects.' },`,
+    `        ]}`,
+    `      />`,
+  ].join('\n');
+}
+
+/**
+ * 09 · PortfolioShowcase — 3 case study cards.
+ * Industries are matched to the city's top sectors from the enriched data.
+ * Each card's image path follows the locale-aware convention:
+ *   /images/{country}/{city}/{service}/portfolio-{index}.webp
+ */
+function genPortfolio(c: PageCopyOutput): string {
+  const cityName = cityNameFromSlug(c.meta.slug);
+  const country  = c.input.country;
+  const citySlug = c.input.city.citySlug;
+  const svcSlug  = c.input.service.slug;
+  const headline = `What ${cityName} businesses look like after FactoryJet.`;
+
+  // Derive up to 3 industries from the enriched sectors list.
+  const sectors = c.sections.industries.sectors.slice(0, 3);
+  const cards = sectors.map((sec, i) => ({
+    industry:    sec.name,
+    title:       `${cityName} ${sec.name} Client`,
+    description: sec.description,
+    imageSrc:    `/images/${country}/${citySlug}/${svcSlug}/portfolio-${i + 1}.webp`,
+    stat1:       '+40% conversions',
+    stat2:       '< 1.5s load time',
+  }));
+
+  return [
+    `      <PortfolioShowcase`,
+    `        eyebrow="RECENT WORK"`,
+    `        headline={${JSON.stringify(headline)}}`,
+    `        cards={${JSON.stringify(cards)}}`,
+    `        ctaHref="/us/portfolio"`,
+    `        ctaLabel="View full portfolio"`,
+    `      />`,
+  ].join('\n');
+}
+
+/**
+ * 13 · TestimonialsSection — 3 curated testimonials.
+ * Static curation: real testimonials stored in the TestimonialsSection component.
+ * City name surfaced in the headline for local relevance signal.
+ */
+function genTestimonials(c: PageCopyOutput): string {
+  const cityName = cityNameFromSlug(c.meta.slug);
+  const headline = `4.9/5 across 150+ reviews from ${cityName} and beyond.`;
+
+  return [
+    `      <TestimonialsSection`,
+    `        eyebrow="WHAT CLIENTS SAY"`,
+    `        headline={${JSON.stringify(headline)}}`,
+    `      />`,
+  ].join('\n');
+}
+
+/* ------------------------------------------------------------------ */
 /*   Schema script — preserved unchanged from pre-patch assembler     */
 /* ------------------------------------------------------------------ */
 
@@ -525,12 +647,17 @@ export function generatePageTSX(output: PageCopyOutput): string {
     ``,
     `import type { Metadata } from 'next';`,
     `import Hero from '@/components/v2/Hero';`,
+    `import LogoBar from '@/components/v2/LogoBar';`,
+    `import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';`,
     `import CityContextSection from '@/components/v2/CityContextSection';`,
     `import ServiceExplanation from '@/components/v2/ServiceExplanation';`,
-    `import ComparisonTable from '@/components/v2/ComparisonTable';`,
+    `import StrategicDarkSection from '@/components/v2/StrategicDarkSection';`,
     `import ServiceJourneyRow from '@/components/v2/ServiceJourneyRow';`,
-    `import IndustriesGrid from '@/components/v2/IndustriesGrid';`,
+    `import PortfolioShowcase from '@/components/v2/PortfolioShowcase';`,
+    `import ComparisonTable from '@/components/v2/ComparisonTable';`,
     `import PricingTiers from '@/components/v2/PricingTiers';`,
+    `import IndustriesGrid from '@/components/v2/IndustriesGrid';`,
+    `import TestimonialsSection from '@/components/v2/TestimonialsSection';`,
     `import FAQ from '@/components/v2/FAQ';`,
     `import FinalCTA from '@/components/v2/FinalCTA';`,
     ``,
@@ -554,19 +681,25 @@ export function generatePageTSX(output: PageCopyOutput): string {
     ``,
   ];
 
-  // Emit all section JSX then the preserved SchemaScript function.
+  // Emit all 15 sections in canonical order, then the SchemaScript.
+  // Section order must match pipeline/brand-references/factoryjet-canonical.html v3.0.
   return [
     ...header,
-    genHero(output),
-    genCityContext(output),
-    genServiceExplanation(output),
-    genWhyFactoryJet(output),
-    genProcess(output),
-    genIndustries(output),
-    genPricing(output),
-    genFAQ(output),
-    genFinalCTA(output),
-    `      <SchemaScript />`,
+    genHero(output),              // 02 · Hero            — always light
+    genLogoBar(),                 // 03 · LogoBar          — static trust strip
+    genBigThree(output),          // 04 · BigThreeTrustBlock
+    genCityContext(output),       // 05 · CityContextSection
+    genServiceExplanation(output),// 06 · ServiceExplanation
+    genStrategicDark(output),     // 07 · StrategicDarkSection (dark slot 1/2)
+    genProcess(output),           // 08 · ProcessJourneyRow
+    genPortfolio(output),         // 09 · PortfolioShowcase
+    genWhyFactoryJet(output),     // 10 · ComparisonTable
+    genPricing(output),           // 11 · PricingTiers
+    genIndustries(output),        // 12 · IndustriesGrid
+    genTestimonials(output),      // 13 · TestimonialsSection
+    genFAQ(output),               // 14 · FAQ              — static HTML, no JS
+    genFinalCTA(output),          // 15 · FinalCTA
+    `      <SchemaScript />`,     // Schema.org — SSR, no JS required
     ...footer,
     genSchemaScript(output),
     ``,

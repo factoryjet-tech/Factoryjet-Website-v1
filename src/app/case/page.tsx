@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import CasePage from '@/pages/Case'
+import SiteHeader from '@/components/v2/SiteHeader'
+import SiteFooter from '@/components/v2/SiteFooter'
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
@@ -47,11 +49,13 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
+      <SiteHeader />
       <BreadcrumbSchema items={[
         { name: 'Home', url: 'https://factoryjet.com' },
         { name: 'Case Studies', url: 'https://factoryjet.com/case' },
       ]} />
       <CasePage />
+      <SiteFooter />
     </>
   )
 }

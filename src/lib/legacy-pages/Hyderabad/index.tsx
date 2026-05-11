@@ -1,8 +1,6 @@
 'use client';
 
 import Script from 'next/script';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import { Hero, SocialProof, EntityBlock, Problems, Solution } from './components/HeroAndIntro';
 import { Services, Process, TechStack, Pricing, Industries } from './components/ServicesAndOfferings';
 import { CaseStudies, Testimonials, FAQ, LocalSEO, FinalCTA } from './components/SocialProofAndFooter';
@@ -90,7 +88,6 @@ function HyderabadPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Header variant="solid" />
       <Hero />
       <SocialProof />
       <EntityBlock />
@@ -106,8 +103,6 @@ function HyderabadPage() {
       <FAQ />
       <LocalSEO />
       <FinalCTA />
-      {/* <Footer /> */} {/* Commented out - using global Footer instead */}
-      <Footer />
       <StickyWhatsApp />
       <ExitIntentPopup />
     </main>

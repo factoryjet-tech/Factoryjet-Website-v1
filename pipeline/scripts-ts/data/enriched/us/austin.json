@@ -1,0 +1,240 @@
+{
+  "citySlug": "austin",
+  "countryCode": "US",
+  "population": {
+    "value": 993771,
+    "unit": "people",
+    "asOfYear": 2024,
+    "sources": [
+      {
+        "url": "https://www.census.gov/quickfacts/fact/table/austincitytexas/LND110210",
+        "accessedAt": "2026-05-08T00:00:00+00:00",
+        "publisher": "U.S. Census Bureau"
+      }
+    ]
+  },
+  "gdpUsdBillions": {
+    "value": 268,
+    "unit": "USD billions, current dollar (nominal), Austin-Round Rock-San Marcos MSA",
+    "asOfYear": 2024,
+    "sources": [
+      {
+        "url": "https://fred.stlouisfed.org/series/NGMP12420",
+        "accessedAt": "2026-05-08T00:00:00+00:00",
+        "publisher": "U.S. Bureau of Economic Analysis via FRED, Federal Reserve Bank of St. Louis"
+      },
+      {
+        "url": "https://www.bea.gov/news/2024/gross-domestic-product-county-and-metropolitan-area-2023",
+        "accessedAt": "2026-05-08T00:00:00+00:00",
+        "publisher": "U.S. Bureau of Economic Analysis"
+      }
+    ]
+  },
+  "industries": [
+    {
+      "name": "Technology & Semiconductors",
+      "rank": 1,
+      "notes": "Austin's \"Silicon Hills\" anchors the metro economy. Dell, Apple, Google, Oracle, Tesla, and Samsung all operate major campuses here. IT manufacturing and services averaged around $163,000 in annual earnings per worker in 2023—roughly double the metro average.",
+      "sources": [
+        {
+          "url": "https://www.dallasfed.org/research/heart/austin",
+          "accessedAt": "2026-05-08T00:00:00+00:00",
+          "publisher": "Federal Reserve Bank of Dallas"
+        },
+        {
+          "url": "https://businessintexas.com/texas-regions/central-texas/austin-round-rock/",
+          "accessedAt": "2026-05-08T00:00:00+00:00",
+          "publisher": "Texas Economic Development Corporation"
+        }
+      ]
+    },
+    {
+      "name": "Government & Public Administration",
+      "rank": 2,
+      "notes": "Austin is the Texas state capital. State agencies, the City of Austin (~15,400 employees), and federal offices make government one of the largest single employment blocks in the metro.",
+      "sources": [
+        {
+          "url": "https://www.dallasfed.org/research/heart/austin",
+          "accessedAt": "2026-05-08T00:00:00+00:00",
+          "publisher": "Federal Reserve Bank of Dallas"
+        },
+        {
+          "url": "https://atxtoday.6amcity.com/city-guide/work/top-industries-employers-austin-tx",
+          "accessedAt": "2026-05-08T00:00:00+00:00",
+          "publisher": "ATX Today / 6AM City"
+        }
+      ]
+    },
+    {
+      "name": "Professional & Business Services",
+      "rank": 3,
+      "notes": "Professional and business services account for roughly 20% of metro GDP and saw 5–6% real growth in 2023. The sector covers legal, consulting, finance, and marketing firms that support Austin's large corporate base.",
+      "sources": [
+        {
+          "url": "https://opportunityaustin.com/gross-domestic-product-by-metro-county/",
+          "accessedAt": "2026-05-08T00:00:00+00:00",
+          "publisher": "Opportunity Austin"
+        }
+      ]
+    },
+    {
+      "name": "Healthcare & Life Sciences",
+      "rank": 4,
+      "notes": "Healthcare employs 7.4% of Austin's workforce, with Ascension Seton (14,000+ staff) and St. David's HealthCare (11,000+ staff) among the metro's top five employers. The Dell Medical School at UT Austin anchors a growing cluster of nearly 300 life sciences companies.",
+      "sources": [
+        {
+          "url": "https://www.dallasfed.org/research/heart/austin",
+          "accessedAt": "2026-05-08T00:00:00+00:00",
+          "publisher": "Federal Reserve Bank of Dallas"
+        },
+        {
+          "url": "https://atxtoday.6amcity.com/city-guide/work/top-industries-employers-austin-tx",
+          "accessedAt": "2026-05-08T00:00:00+00:00",
+          "publisher": "ATX Today / 6AM City"
+        }
+      ]
+    },
+    {
+      "name": "Advanced Manufacturing (Semiconductors & EVs)",
+      "rank": 5,
+      "notes": "Semiconductor and EV manufacturing together employ roughly 70,000+ workers in the Austin metro. Samsung, NXP Semiconductors, and Tesla's Giga Texas plant are anchor facilities, driving demand for engineering and production talent.",
+      "sources": [
+        {
+          "url": "https://atxtoday.6amcity.com/city-guide/work/top-industries-employers-austin-tx",
+          "accessedAt": "2026-05-08T00:00:00+00:00",
+          "publisher": "ATX Today / 6AM City"
+        },
+        {
+          "url": "https://businessintexas.com/texas-regions/central-texas/austin-round-rock/",
+          "accessedAt": "2026-05-08T00:00:00+00:00",
+          "publisher": "Texas Economic Development Corporation"
+        }
+      ]
+    }
+  ],
+  "competitors": [
+    {
+      "name": "GLIDE®",
+      "websiteUrl": "https://www.glidedesign.com",
+      "positioning": "Austin-based web design and SEO studio active for 20+ years, targeting mid-market B2B brands with WordPress builds and growth-focused campaigns.",
+      "pricingPublic": false,
+      "pricingNotes": "undisclosed",
+      "sources": [
+        {
+          "url": "https://www.glidedesign.com",
+          "accessedAt": "2026-05-08T00:00:00+00:00",
+          "publisher": "GLIDE® (own website)"
+        },
+        {
+          "url": "https://clutch.co/agencies/digital-marketing/austin",
+          "accessedAt": "2026-05-08T00:00:00+00:00",
+          "publisher": "Clutch.co"
+        }
+      ]
+    },
+    {
+      "name": "Nativz",
+      "websiteUrl": "https://www.nativz.com",
+      "positioning": "Full-service Austin digital agency covering web development, SEO, PPC, and social media, with reported strength in retail and financial services clients.",
+      "pricingPublic": false,
+      "pricingNotes": "undisclosed",
+      "sources": [
+        {
+          "url": "https://clutch.co/agencies/digital-marketing/austin",
+          "accessedAt": "2026-05-08T00:00:00+00:00",
+          "publisher": "Clutch.co"
+        }
+      ]
+    },
+    {
+      "name": "MARION Marketing",
+      "websiteUrl": "https://www.marion.com/digital-marketing/austin/",
+      "positioning": "Texas-based full-service agency (est. 1981) with an Austin presence, offering web design, SEO, PPC, and content marketing primarily to B2B companies.",
+      "pricingPublic": true,
+      "pricingNotes": "Website projects typically $5,000–$15,000 per published rate card.",
+      "sources": [
+        {
+          "url": "https://www.marion.com/digital-marketing/austin/",
+          "accessedAt": "2026-05-08T00:00:00+00:00",
+          "publisher": "MARION Marketing (own website)"
+        },
+        {
+          "url": "https://clutch.co/agencies/digital-marketing/austin",
+          "accessedAt": "2026-05-08T00:00:00+00:00",
+          "publisher": "Clutch.co"
+        }
+      ]
+    },
+    {
+      "name": "Coalition Technologies",
+      "websiteUrl": "https://coalitiontechnologies.com",
+      "positioning": "National SEO, PPC, and web design firm marketing actively into Austin; known for eCommerce and legal sector SEO campaigns with sub-$10,000 average project costs.",
+      "pricingPublic": true,
+      "pricingNotes": "Average project cost under $10,000 per Clutch listing.",
+      "sources": [
+        {
+          "url": "https://clutch.co/agencies/digital-marketing/austin",
+          "accessedAt": "2026-05-08T00:00:00+00:00",
+          "publisher": "Clutch.co"
+        }
+      ]
+    },
+    {
+      "name": "CloudMellow",
+      "websiteUrl": "https://www.cloudmellow.com",
+      "positioning": "Austin digital agency focused on website design, logo creation, and sales collateral; positioned as a cost-effective option for SMBs needing design and development together.",
+      "pricingPublic": false,
+      "pricingNotes": "undisclosed",
+      "sources": [
+        {
+          "url": "https://clutch.co/agencies/digital-marketing/austin",
+          "accessedAt": "2026-05-08T00:00:00+00:00",
+          "publisher": "Clutch.co"
+        }
+      ]
+    },
+    {
+      "name": "Propellic",
+      "websiteUrl": "https://propellic.com",
+      "positioning": "Austin SEO and digital marketing agency with a stated focus on travel and tourism brands; listed consistently among Austin's top-ranked agencies on Clutch.",
+      "pricingPublic": false,
+      "pricingNotes": "undisclosed",
+      "sources": [
+        {
+          "url": "https://clutch.co/agencies/digital-marketing/austin",
+          "accessedAt": "2026-05-08T00:00:00+00:00",
+          "publisher": "Clutch.co"
+        }
+      ]
+    }
+  ],
+  "landmarks": [
+    {
+      "name": "Texas State Capitol",
+      "type": "architectural",
+      "visualNotes": "A 302-foot dome clad in warm sunset-red Texas granite, completed in 1888. The dome is topped by the 16-foot aluminium 'Goddess of Liberty' statue. The building is taller than the US Capitol in Washington, D.C., and sits at the north end of Congress Avenue."
+    },
+    {
+      "name": "Ann W. Richards Congress Avenue Bridge",
+      "type": "natural",
+      "visualNotes": "A flat concrete arch road bridge, 910 feet long, spanning Lady Bird Lake on the Colorado River in downtown Austin. Unremarkable in daylight, it becomes dramatic at sunset when up to 1.5 million Mexican free-tailed bats stream out from gaps in its concrete underside in a dense, dark ribbon over the water."
+    },
+    {
+      "name": "Sixth Street Entertainment District",
+      "type": "cultural",
+      "visualNotes": "A six-block strip of low-rise 19th-century brick commercial buildings in central Austin, densely lit at night with neon bar signs, string lights, and live-music venue marquees. The street is pedestrianised on weekend evenings, drawing large crowds along its narrow, historically preserved storefronts."
+    },
+    {
+      "name": "Barton Springs Pool",
+      "type": "natural",
+      "visualNotes": "A spring-fed outdoor swimming pool roughly three acres in size, set inside Zilker Park. The water runs a consistent 68–70°F year-round, fed by natural limestone aquifer springs. Surrounded by pecan trees and open lawn, the pool's concrete dam and stone surrounds sit in a green river valley below downtown's skyline."
+    },
+    {
+      "name": "University of Texas Tower (UT Austin Main Building)",
+      "type": "architectural",
+      "visualNotes": "A 307-foot white limestone tower rising above the UT Austin campus, built in 1937 in a stripped classical style. The tower is illuminated orange at night after major Longhorns victories. It anchors a large Beaux-Arts campus that extends north from the city centre."
+    }
+  ],
+  "enrichmentVersion": 1,
+  "lastEnrichedAt": "2026-05-08T00:00:00+00:00"
+}

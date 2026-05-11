@@ -85,13 +85,22 @@ export function validateEnrichment(input: unknown): ValidationResult {
   const now = Date.now();
   const maxAgeMs = ACCESSED_AT_MAX_AGE_DAYS * 24 * 60 * 60 * 1000;
 
-  // Headline stats: hosts must be on HEADLINE_STAT_HOSTS.
+  // Headline stats: at least ONE source must be on HEADLINE_STAT_HOSTS.
+  // Additional sources may be on SECONDARY_HOSTS (supplementary context is fine).
   const checkHeadline = (
     path: string,
     sources: ReadonlyArray<{ url: string; accessedAt: string }>,
   ) => {
+    const hasPrimarySource = sources.some((s) => isHeadlineStatHost(s.url));
+    if (!hasPrimarySource) {
+      issues.push({
+        path: `${path}.sources`,
+        message: `at least one source must be from a primary government statistics host`,
+      });
+    }
     sources.forEach((s, i) => {
-      if (!isHeadlineStatHost(s.url)) {
+      // Non-primary sources are fine if they're on the secondary allowlist.
+      if (!isHeadlineStatHost(s.url) && !isAcceptableSecondaryHost(s.url)) {
         issues.push({
           path: `${path}.sources[${i}].url`,
           message: `host of "${s.url}" is not on the headline-stat allowlist`,

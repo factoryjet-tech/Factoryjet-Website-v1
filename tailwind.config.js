@@ -41,6 +41,11 @@ export default {
         // the pivot to reach for explicitly.
         'clash': ['"Clash Display"', '"Clash Display Fallback"', '"Arial Black"', 'system-ui', 'sans-serif'],
 
+        // Cormorant Garamond — editorial serif for v3 homepage hero.
+        // High-contrast display serif with italic support for accent words.
+        // Use font-fj-serif for hero H1 only. Body stays Inter.
+        'fj-serif': ['var(--font-cormorant)', 'Georgia', 'serif'],
+
         // Legacy keys — kept defined for v1 page parity. v2 components
         // will not consume them. fraunces and sourceSerif still resolve
         // via the next/font variables wired in src/app/layout.tsx.

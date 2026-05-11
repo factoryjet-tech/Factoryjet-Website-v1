@@ -27,7 +27,25 @@ export const HEADLINE_STAT_HOSTS: ReadonlyArray<string> = [
   'census.gov',
   'bea.gov',
   'bls.gov',
-  'fred.stlouisfed.org',                    // Fed economic data
+  'fred.stlouisfed.org',                    // St. Louis Fed — FRED economic data
+  // US Federal Reserve regional banks (all publish primary economic research)
+  'dallasfed.org',
+  'newyorkfed.org',
+  'chicagofed.org',
+  'atlantafed.org',
+  'bostonfed.org',
+  'clevelandfed.org',
+  'kansascityfed.org',
+  'minneapolisfed.org',
+  'philadelphiafed.org',
+  'richmondfed.org',
+  'sanfranciscofed.org',
+  'stlouisfed.org',
+  // US Census data aggregators / official portals
+  'censusreporter.org',                     // Wraps Census Bureau ACS data
+  'data.census.gov',
+  // US city/state government portals (.gov TLD catch-all covers services.austintexas.gov etc.)
+  'gov',
   // International primary stats sometimes used for cross-checks
   'oecd.org',
   'worldbank.org',
@@ -91,6 +109,51 @@ export const SECONDARY_HOSTS: ReadonlyArray<string> = [
   'nytimes.com',
   'inc.com',
   'fastcompany.com',
+  'businessinsider.com',
+  'techcrunch.com',
+  'axios.com',
+  'statesman.com',                           // Austin American-Statesman
+  'bizjournals.com',                         // American City Business Journals network
+  // US city / regional news & local media.
+  '6amcity.com',                             // City-specific local news (atxtoday, etc.)
+  'kut.org',                                 // Austin public radio
+  'austinmonitor.com',                       // Austin civic news
+  // US economic development & chamber networks.
+  'austinchamber.com',
+  'opportunityaustin.com',
+  'austintexas.gov',
+  'miamidade.gov',
+  'denvergov.org',
+  'nashville.gov',
+  'portland.gov',
+  'charlottenc.gov',
+  'raleighnc.gov',
+  'tampagov.net',
+  'houston.org',
+  'dallaschamber.org',
+  'choosechicago.com',
+  'selectdc.com',
+  'laedc.org',                               // LA Economic Development Corp
+  'sanjose.org',                             // SJ Chamber
+  'opportunityseattle.com',
+  // US tourism & travel (landmarks).
+  'visaustin.com',
+  'miamiandbeaches.com',
+  'visitdenver.com',
+  'visitmusiccity.com',
+  'travelportland.com',
+  'visitcharlotte.com',
+  'visitraleigh.com',
+  'visittampabay.com',
+  // PR wire services (often used to source chamber stats).
+  'prnewswire.com',
+  'businesswire.com',
+  'globenewswire.com',
+  // Texas / regional economic development.
+  'businessintexas.com',
+  'texaswideopenforbusiness.com',
+  'gov.texas.gov',
+  'texasrealtors.com',
 ];
 
 function normalizeHost(input: string): string | null {

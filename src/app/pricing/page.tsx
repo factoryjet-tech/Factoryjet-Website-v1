@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { pricingAlternates } from '@/data/hreflangMap'
 import PricingPage from '@/pages/Pricing'
+import SiteHeader from '@/components/v2/SiteHeader'
+import SiteFooter from '@/components/v2/SiteFooter'
 
 export const metadata: Metadata = {
   title: 'Transparent Pricing Plans | Web & E-Commerce Development Packages | FactoryJet',
@@ -46,5 +48,11 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <PricingPage />
+  return (
+    <>
+      <SiteHeader />
+      <PricingPage />
+      <SiteFooter />
+    </>
+  )
 }
