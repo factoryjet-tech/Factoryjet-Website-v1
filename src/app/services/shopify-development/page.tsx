@@ -52,5 +52,11 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <ShopifyDevelopmentPage />;
+  return (
+    <>
+      <SiteHeader />
+      <ShopifyDevelopmentPage />
+      <SiteFooter />
+    </>
+  );
 }

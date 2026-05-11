@@ -74,6 +74,7 @@ export default function Page() {
 
   return (
     <>
+      <SiteHeader />
       <BreadcrumbSchema items={[
         { name: 'Home', url: 'https://factoryjet.com/us' },
         { name: 'Services', url: 'https://factoryjet.com/us/services' },
@@ -86,6 +87,7 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <NewYorkLandingPage />
+      <SiteFooter />
     </>
   )
 }

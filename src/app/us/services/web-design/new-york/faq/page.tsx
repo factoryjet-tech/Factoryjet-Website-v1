@@ -64,11 +64,13 @@ const faqSchema = {
 export default function Page() {
   return (
     <>
+      <SiteHeader />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <NewYorkFAQPage />
+      <SiteFooter />
     </>
   )
 }
