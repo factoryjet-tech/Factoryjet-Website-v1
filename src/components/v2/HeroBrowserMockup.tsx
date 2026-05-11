@@ -24,7 +24,7 @@ export default function HeroBrowserMockup({ className = '' }: { className?: stri
           </div>
           <div className="min-w-0 flex-1">
             <div className="truncate rounded-md bg-white px-3 py-1.5 font-mono text-[11px] leading-none text-[#9CA3AF]">
-              austinhardwaresupply.com
+              wetstonelabs.com
             </div>
           </div>
         </div>
