@@ -4,6 +4,7 @@ import { faqAlternates } from '@/data/hreflangMap';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import FaqContent from './FaqContent';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 export const metadata: Metadata = {
   title: 'FAQ | Web Development Questions | FactoryJet USA',
@@ -149,7 +150,7 @@ export default function USFaqPage() {
         <FaqContent />
       </main>
 
-      <SiteFooter />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }

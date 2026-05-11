@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import { webDesignCityAlternatesUS } from '@/data/hreflangMap';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
@@ -366,7 +367,7 @@ export default function ClevelandWebDesignPage() {
 
       </main>
 
-      <SiteFooter />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }

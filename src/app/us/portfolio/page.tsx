@@ -3,6 +3,7 @@ import Script from 'next/script';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import PortfolioGrid from './PortfolioGrid';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 export const metadata: Metadata = {
   title: "Portfolio - Websites We've Built for Ambitious Brands | FactoryJet USA",
@@ -81,7 +82,7 @@ export default function USPortfolioPage() {
         <PortfolioGrid />
       </main>
 
-      <SiteFooter />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }
