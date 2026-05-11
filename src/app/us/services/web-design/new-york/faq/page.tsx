@@ -2,6 +2,9 @@ import type { Metadata } from 'next'
 import NewYorkFAQPage from '@/lib/legacy-pages/NewYorkFAQ/App'
 import { faqData } from '@/lib/legacy-pages/NewYorkFAQ/data/faqData'
 import { newYorkSubPageAlternates } from '@/data/hreflangMap'
+import SiteHeader from '@/components/v2/SiteHeader'
+import SiteFooter from '@/components/v2/SiteFooter'
+
 
 export const metadata: Metadata = {
   title: 'Web Design FAQ New York City | Common Questions | FactoryJet NYC',

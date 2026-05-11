@@ -3,6 +3,9 @@ import Script from 'next/script'
 import { webDesignCityAlternatesUS } from '@/data/hreflangMap'
 import NewYorkLandingPage from '@/lib/legacy-pages/NewYorkLandingPage/App'
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
+import SiteHeader from '@/components/v2/SiteHeader'
+import SiteFooter from '@/components/v2/SiteFooter'
+
 
 export const metadata: Metadata = {
   title: 'Professional Web Design Company in New York City | FactoryJet NYC',

@@ -1,8 +1,6 @@
 'use client';
 
 import React from 'react';
-import Header from '@/components/Header';
-import FooterUS from '@/components/FooterUS';
 import { useContactModal } from '@/context/ContactModalContext';
 import WordPressDevelopment from './components/services/WordPressDevelopment';
 import WebflowDevelopment from './components/services/WebflowDevelopment';
@@ -17,8 +15,6 @@ export default function App() {
 
   return (
     <main className="min-h-screen w-full bg-[#F8FAFC] text-[#0F172A]">
-      <Header basePath="/us/services/web-design/new-york" variant="solid" />
-
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-[#0F172A] to-[#1E293B] text-white">
         <div className="container mx-auto px-6 max-w-7xl text-center">
@@ -69,7 +65,6 @@ export default function App() {
         </div>
       </section>
 
-      <FooterUS onCtaClick={openUsModal} />
     </main>
   );
 }

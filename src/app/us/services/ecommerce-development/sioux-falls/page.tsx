@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { ecommerceCityAlternatesUS } from '@/data/hreflangMap'
 import SiouxFallsPage from '@/lib/legacy-pages/CityLandingUS/SiouxFallsPage'
+import SiteHeader from '@/components/v2/SiteHeader'
+import SiteFooter from '@/components/v2/SiteFooter'
+
 
 export const metadata: Metadata = {
   title: 'E-Commerce Development Sioux Falls | Shopify Agency - FactoryJet',
@@ -45,5 +48,11 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <SiouxFallsPage />
+  return (
+    <>
+      <SiteHeader />
+      <SiouxFallsPage />
+      <SiteFooter />
+    </>
+  );
 }

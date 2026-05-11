@@ -1,8 +1,6 @@
 'use client';
 
 import React from 'react';
-import Header from '@/components/Header';
-import FooterUS from '@/components/FooterUS';
 import { useContactModal } from '@/context/ContactModalContext';
 import { HeroSection } from './components/sections/HeroSection';
 import { TrustIndicators } from './components/sections/TrustIndicators';
@@ -18,7 +16,6 @@ function App() {
 
   return (
     <main className="min-h-screen bg-slate-50 font-sans">
-      <Header basePath="/us/services/web-design/new-york" variant="transparent" />
       <HeroSection />
       <TrustIndicators />
       <WhyNYC />
@@ -26,7 +23,6 @@ function App() {
       <HiddenCostTable />
       <FactoryJetDifference />
       <ServicesIntro />
-      <FooterUS onCtaClick={openUsModal} />
     </main>
   );
 }

@@ -1,6 +1,4 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
-import Header from "@/components/Header";
-import FooterUS from "@/components/FooterUS";
 import { useContactModal } from "@/context/ContactModalContext";
 import AuthorByline from "@/components/AuthorByline";
 
@@ -450,8 +448,6 @@ function LandingPage({ cityKey }) {
       <style>{GLOBAL_CSS}</style>
       <SchemaBlock c={c} />
 
-      <Header basePath={`/us/services/ecommerce-development/${c.slug}`} variant="solid" />
-
       <main id="main-content">
         {/* ── HERO ── */}
         <section className="fj-hero" aria-labelledby="hero-heading">
@@ -623,7 +619,6 @@ function LandingPage({ cityKey }) {
         </section>
       </main>
 
-      <FooterUS onCtaClick={() => openModal('us')} />
     </div>
   );
 }

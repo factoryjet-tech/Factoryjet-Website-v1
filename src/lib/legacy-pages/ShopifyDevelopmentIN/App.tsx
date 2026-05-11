@@ -2,8 +2,6 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useContactModal } from '@/context/ContactModalContext';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import '../ShopifyDevelopment/shopify.css';
 
 import HeroSection from './components/HeroSection';
@@ -194,7 +192,6 @@ export default function ShopifyDevelopmentINPage() {
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(shopifyFaqSchema) }}
     />
-    <Header variant="transparent" basePath="" />
     <div className="shopify-page">
       <HeroSection handleCta={handleCta} />
       <TrustStrip />
@@ -218,7 +215,6 @@ export default function ShopifyDevelopmentINPage() {
       <FaqSection handleCta={handleCta} faqFilter={faqFilter} setFaqFilter={setFaqFilter} faqSearch={faqSearch} setFaqSearch={setFaqSearch} clearFqSearch={clearFqSearch} />
       <FinalCta handleCta={handleCta} />
     </div>
-    <Footer />
     </>
   );
 }

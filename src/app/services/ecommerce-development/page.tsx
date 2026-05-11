@@ -2,6 +2,9 @@ import type { Metadata } from 'next'
 import { ecommerceAlternates } from '@/data/hreflangMap'
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 import EcommPage from '@/pages/Ecomm'
+import SiteHeader from '@/components/v2/SiteHeader'
+import SiteFooter from '@/components/v2/SiteFooter'
+
 
 export const metadata: Metadata = {
   title: 'E-Commerce Development Services | Custom Online Store Solutions | FactoryJet',

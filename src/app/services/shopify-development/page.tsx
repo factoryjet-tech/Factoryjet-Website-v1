@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
 import ShopifyDevelopmentPage from '@/pages/ShopifyDevelopmentIN';
+import SiteHeader from '@/components/v2/SiteHeader'
+import SiteFooter from '@/components/v2/SiteFooter'
+
 
 export const metadata: Metadata = {
   title: 'Shopify & Shopify Plus E-Commerce Development Services | FactoryJet',

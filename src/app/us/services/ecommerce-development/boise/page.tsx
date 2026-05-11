@@ -2,6 +2,9 @@ import type { Metadata } from 'next'
 import { ecommerceCityAlternatesUS } from '@/data/hreflangMap'
 import BoisePage from '@/lib/legacy-pages/CityLandingUS/BoisePage'
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
+import SiteHeader from '@/components/v2/SiteHeader'
+import SiteFooter from '@/components/v2/SiteFooter'
+
 
 export const metadata: Metadata = {
   title: 'E-Commerce Development Boise | Shopify & AI Agency - FactoryJet',
@@ -46,5 +49,11 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <BoisePage />
+  return (
+    <>
+      <SiteHeader />
+      <BoisePage />
+      <SiteFooter />
+    </>
+  );
 }

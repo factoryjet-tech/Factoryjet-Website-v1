@@ -1,8 +1,6 @@
 'use client';
 
 import React from 'react';
-import Header from '@/components/Header';
-import FooterUS from '@/components/FooterUS';
 import { useContactModal } from '@/context/ContactModalContext';
 import SkipLink from './components/ui/SkipLink';
 import ScrollProgress from './components/animations/ScrollProgress';
@@ -52,8 +50,6 @@ export default function App() {
       <SkipLink />
       <ScrollProgress />
 
-      <Header basePath="/us/about" variant="transparent" />
-
       <main id="main-content">
         <HeroSection onCtaClick={openUsModal} />
         <ProblemSection />
@@ -69,8 +65,6 @@ export default function App() {
         <FAQSection onCtaClick={openUsModal} />
         <FinalCTASection onCtaClick={openUsModal} />
       </main>
-
-      <FooterUS onCtaClick={openUsModal} />
 
       <FloatingActionButton />
     </div>

@@ -26,8 +26,6 @@ import {
 } from './data.constants';
 import { useContactModal } from '@/context/ContactModalContext';
 import { trackCTAClick } from '@/utils/gtm';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import AuthorByline from '@/components/AuthorByline';
 
 // --- Utility Hooks & Components ---
@@ -977,7 +975,6 @@ export default function App() {
       />
       <div className="min-h-screen bg-slate-50 font-sans selection:bg-jetOrange selection:text-white">
         <MeshGradientBackground />
-        <Header variant="solid" />
         <Hero />
         <MarketReality />
         <BusinessModels />
@@ -987,7 +984,6 @@ export default function App() {
         <CaseStudies />
         <FAQAccordion />
         <CTA />
-        <Footer />
       </div>
     </>
   );

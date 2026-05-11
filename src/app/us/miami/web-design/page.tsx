@@ -15,6 +15,9 @@ import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
+import SiteHeader from '@/components/v2/SiteHeader'
+import SiteFooter from '@/components/v2/SiteFooter'
+
 
 export const metadata: Metadata = {
   title: 'Web Design Miami | FactoryJet',
@@ -27,6 +30,8 @@ export const metadata: Metadata = {
 
 export default function MiamiWebDesignPage() {
   return (
+    <>
+      <SiteHeader />
     <main className="bg-fj-cream">
       <Hero
         eyebrow={"WEB DESIGN · MIAMI"}
@@ -147,6 +152,8 @@ export default function MiamiWebDesignPage() {
       />
       <SchemaScript />
     </main>
+      <SiteFooter />
+    </>
   );
 }
 

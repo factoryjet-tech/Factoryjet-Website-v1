@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { ecommerceCityAlternatesUS } from '@/data/hreflangMap'
 import ChattanoogaPage from '@/lib/legacy-pages/CityLandingUS/ChattanoogaPage'
+import SiteHeader from '@/components/v2/SiteHeader'
+import SiteFooter from '@/components/v2/SiteFooter'
+
 
 export const metadata: Metadata = {
   title: 'Shopify Development Chattanooga | E-Commerce & AI Agency - FactoryJet',
@@ -45,5 +48,11 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <ChattanoogaPage />
+  return (
+    <>
+      <SiteHeader />
+      <ChattanoogaPage />
+      <SiteFooter />
+    </>
+  );
 }

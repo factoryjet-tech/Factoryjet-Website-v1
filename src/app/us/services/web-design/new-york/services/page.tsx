@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import NewYorkServiceAndPricingPage from '@/lib/legacy-pages/NewYorkServiceAndPricingPage/App'
 import { newYorkSubPageAlternates } from '@/data/hreflangMap'
+import SiteHeader from '@/components/v2/SiteHeader'
+import SiteFooter from '@/components/v2/SiteFooter'
+
 
 export const metadata: Metadata = {
   title: 'Web Design Services & Pricing in New York City | FactoryJet NYC',
@@ -45,5 +48,11 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <NewYorkServiceAndPricingPage />
+  return (
+    <>
+      <SiteHeader />
+      <NewYorkServiceAndPricingPage />
+      <SiteFooter />
+    </>
+  );
 }
