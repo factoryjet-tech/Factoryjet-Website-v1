@@ -1,10 +1,13 @@
-import type { Metadata } from 'next'
-import PortfolioPage from '@/pages/Portfolio/App'
-import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
+import type { Metadata } from 'next';
+import Script from 'next/script';
+import SiteHeader from '@/components/v2/SiteHeader';
+import SiteFooter from '@/components/v2/SiteFooter';
+import PortfolioGrid from './PortfolioGrid';
 
 export const metadata: Metadata = {
-  title: 'Portfolio - Websites We\'ve Built for Ambitious Brands | FactoryJet USA',
-  description: 'Explore FactoryJet\'s portfolio of stunning websites — from e-commerce stores to SaaS platforms. See the diverse range of projects we\'ve delivered for businesses worldwide.',
+  title: "Portfolio - Websites We've Built for Ambitious Brands | FactoryJet USA",
+  description:
+    "Explore FactoryJet's portfolio of stunning websites — from e-commerce stores to SaaS platforms. See the diverse range of projects we've delivered for businesses worldwide.",
   authors: [{ name: 'FactoryJet' }],
   robots: {
     index: true,
@@ -42,16 +45,43 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://factoryjet.com/us/portfolio',
   },
-}
+};
 
-export default function Page() {
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/us' },
+    { '@type': 'ListItem', position: 2, name: 'Portfolio', item: 'https://factoryjet.com/us/portfolio' },
+  ],
+};
+
+export default function USPortfolioPage() {
   return (
     <>
-      <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://factoryjet.com/us' },
-        { name: 'Portfolio', url: 'https://factoryjet.com/us/portfolio' },
-      ]} />
-      <PortfolioPage basePath="/us" />
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }}
+      />
+
+      <SiteHeader
+        navLinks={[
+          { label: 'Services', href: '/us/services/web-design' },
+          { label: 'Shopify', href: '/us/services/shopify-development' },
+          { label: 'AI Agents', href: '/us/services/ai-agents' },
+          { label: 'Pricing', href: '/us/pricing' },
+          { label: 'Portfolio', href: '/us/portfolio' },
+          { label: 'FAQ', href: '/us/faq' },
+        ]}
+        cta={{ label: 'Free Strategy Call', href: '/contact' }}
+      />
+
+      <main className="bg-fj-cream min-h-screen">
+        <PortfolioGrid />
+      </main>
+
+      <SiteFooter />
     </>
-  )
+  );
 }

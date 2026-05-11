@@ -127,47 +127,27 @@ export default function V2FoundationUSPage() {
 
       {/* === BigThreeTrustBlock === */}
       <SectionLabel slug="BigThreeTrustBlock" />
+      {/* v2.1: stats are hardcoded inside the component. Assembler injects
+          eyebrow, headline, and optional cityCount from enriched data. */}
       <BigThreeTrustBlock
-        stats={[
-          {
-            number: '60-day',
-            label: 'average time-to-value',
-            microcopy: "we'll tell you if yours will be longer",
-          },
-          {
-            number: '100%',
-            label: 'code ownership',
-            microcopy: "yes, even when it's annoying for us",
-          },
-          {
-            number: '4.9/5',
-            label: 'across 500+ projects',
-            microcopy: 'we count the 4-star ones too',
-          },
-        ]}
+        eyebrow="BY THE NUMBERS"
+        headline="Results that New York businesses trust."
+        cityCount={{ value: '230K+', label: 'active businesses in NYC', source: 'US Census Bureau' }}
       />
 
       {/* === StrategicDarkSection === */}
       <SectionLabel slug="StrategicDarkSection" />
-      <StrategicDarkSection>
-        <h2
-          className="fj-display font-semibold"
-          style={{
-            fontSize: 'clamp(2rem, 5vw, 3.5rem)',
-            lineHeight: 1.1,
-            letterSpacing: '-0.02em',
-          }}
-        >
-          Pilots that actually ship.
-        </h2>
-        <p
-          className="mt-6 max-w-[640px] font-fj-body text-fj-charcoal-text"
-          style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}
-        >
-          Strategic dark sections appear no more than twice per page —
-          a deliberate rhythm break, not a default surface.
-        </p>
-      </StrategicDarkSection>
+      {/* v2.1: full content section — accepts eyebrow, headline, lead, pillars. */}
+      <StrategicDarkSection
+        eyebrow="WHY FACTORYJET"
+        headline="We're not a local New York agency. That's the point."
+        lead="Strategic dark sections appear no more than twice per page — a deliberate rhythm break, not a default surface."
+        pillars={[
+          { title: 'AI-native', body: 'Every site is built with AI-assisted workflow — compressing build time without compressing quality. We have run 500+ projects through this system.' },
+          { title: 'Transparent', body: 'Pricing on the first call. No discovery fees, no "it depends" quotes that arrive three weeks later. Fixed price. Agreed up front.' },
+          { title: 'Guaranteed', body: "7-day delivery guarantee. If we miss the deadline, you don't pay. We have delivered on time on 97% of all projects." },
+        ]}
+      />
 
       {/* === Hero (with rightSlot) === */}
       <SectionLabel slug="M1.b — Hero (with rightSlot)" />
@@ -550,18 +530,9 @@ export default function V2FoundationUSPage() {
       </div>
 
       {/* === LogoBar === */}
-      <SectionLabel slug="M1.c.2.5 — LogoBar (DEMO · placeholder wordmarks)" />
-      <LogoBar
-        eyebrow="DEMO · PLACEHOLDER WORDMARKS"
-        logos={[
-          { name: 'Atlas Legal' },
-          { name: 'Bright Health' },
-          { name: 'Forge & Co' },
-          { name: 'Westmount Realty' },
-          { name: 'Northstar Labs' },
-          { name: 'Pebble Finance' },
-        ]}
-      />
+      <SectionLabel slug="M1.c.2.5 — LogoBar (self-contained marquee)" />
+      {/* v2.1: logos are hardcoded inside LogoBar; only tagline is injected. */}
+      <LogoBar tagline="Trusted by 500+ businesses across the US, UK, and UAE" />
 
       {/* === CaseStudyCard (3 cards) === */}
       <SectionLabel slug="M1.c.2.5 — CaseStudyCard (3-card grid)" />
