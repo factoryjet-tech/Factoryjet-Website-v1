@@ -25,7 +25,7 @@ interface AuthorPageProps {
 
 export const AuthorPage: React.FC<AuthorPageProps> = ({ author, posts }) => {
   return (
-    <div className="min-h-screen bg-slate-50 pt-16 md:pt-20">
+    <div className="min-h-screen bg-slate-50">
       {/* Hero Section */}
       <section className="relative bg-white border-b border-gray-100 overflow-hidden">
         {/* Background Pattern */}

@@ -341,7 +341,7 @@ export const Home: React.FC = () => {
       price: "$3,999",
       billing: "fixed",
       badge: "Most Popular",
-      description: "Comprehensive Business Website in 3 Weeks",
+      description: "Comprehensive Business Website in 7 Days",
       features: [
         "12 Total Pages + Blog Platform",
         "Premium Design & Animations",
@@ -360,7 +360,7 @@ export const Home: React.FC = () => {
       name: "Scale",
       price: "$7,999",
       billing: "fixed",
-      description: "Enterprise-Grade Website in 5 Weeks",
+      description: "Enterprise-Grade Website in 7 Days",
       features: [
         "25+ Total Pages & Custom Design",
         "Member Login & Advanced Search",
@@ -382,7 +382,7 @@ export const Home: React.FC = () => {
       name: "Store Launch",
       price: "$2,999",
       billing: "fixed",
-      description: "Professional Online Store in 3 Weeks",
+      description: "Professional Online Store in 7 Days",
       features: [
         "Setup & Config (Up to 50 Products)",
         "Professional Store Design",

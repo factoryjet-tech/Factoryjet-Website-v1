@@ -23,7 +23,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 font-sans selection:bg-jetBlue selection:text-white pt-20 md:pt-24">
+    <div className="min-h-screen bg-slate-50 font-sans selection:bg-jetBlue selection:text-white">
 
       {/* Header Section */}
       <header className="pt-8 pb-6 md:pt-16 md:pb-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">

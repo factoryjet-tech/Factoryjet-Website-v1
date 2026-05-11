@@ -29,7 +29,7 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#F9FAFB] flex flex-col font-sans">
       
-      <main className="flex-grow pt-20 md:pt-32 pb-12 md:pb-24">
+      <main className="flex-grow pt-8 md:pt-12 pb-12 md:pb-24">
         {/* Hero Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 md:mb-16 text-center">
           <motion.div

@@ -6,7 +6,7 @@ export const WEB_PACKAGES = [
   {
     id: 'launch',
     name: 'Launch',
-    subtitle: 'Professional Website in 2 Weeks',
+    subtitle: 'Professional Website in 7 Days',
     price: '$1,999',
     period: 'One-Time Fixed Fee',
     save: 'Save $12,850',
@@ -77,7 +77,7 @@ export const ECOM_PACKAGES = [
   {
     id: 'store_launch',
     name: 'Store Launch',
-    subtitle: 'Professional Store in 3 Weeks',
+    subtitle: 'Professional Store in 7 Days',
     price: '$2,999',
     period: 'One-Time Fixed Fee',
     save: 'Save $38,850',

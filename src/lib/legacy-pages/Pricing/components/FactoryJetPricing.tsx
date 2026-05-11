@@ -705,6 +705,9 @@ const FactoryJetPricing = () => {
         </div>
       </header>
 
+      {/* Tab + Pricing Grid — sticky tab is bounded to this container so it doesn't overlap the CTA below */}
+      <div>
+
       {/* --- TAB SWITCHER --- */}
       <div className="sticky top-20 z-30 mx-auto max-w-full md:max-w-fit px-2 mb-8 md:mb-12">
         <div className="bg-white/90 backdrop-blur-md p-1 md:p-1.5 rounded-full border border-slate-200 shadow-lg flex items-center space-x-1 overflow-x-auto no-scrollbar">
@@ -750,6 +753,7 @@ const FactoryJetPricing = () => {
           </motion.div>
         </AnimatePresence>
       </section>
+      </div>{/* end Tab + Pricing Grid container */}
 
       {/* --- ADVANCED FAQ SECTION --- */}
       <section className="max-w-6xl mx-auto mt-16 md:mt-32 px-4 md:px-8 overflow-x-hidden">

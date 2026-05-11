@@ -116,7 +116,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
   const imageUrl = imageError ? '/blog_placeholder.jpeg' : post.imageUrl;
 
   return (
-    <div className="min-h-screen bg-slate-50 relative pt-16 md:pt-20">
+    <div className="min-h-screen bg-slate-50 relative">
       <ReadingProgress />
       <StickyCallToAction />
 
