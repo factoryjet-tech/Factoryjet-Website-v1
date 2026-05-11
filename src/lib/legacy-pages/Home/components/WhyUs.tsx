@@ -40,7 +40,7 @@ const WhyUs: React.FC = () => {
     {
       icon: Clock,
       title: "7-Day Delivery",
-      desc: "Speed matters. We deliver standard websites in 7 days and stores in 4-8 weeks without compromising quality."
+      desc: "Speed matters. We deliver standard websites in just 7 days — without compromising quality."
     },
     {
       icon: Search,

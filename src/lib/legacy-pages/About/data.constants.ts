@@ -193,7 +193,7 @@ export const FAQS: FAQItem[] = [
   },
   {
     question: "How long will it take before I see actual results?",
-    answer: "It depends on the project, but we move fast. A website can be live in 4 weeks. Digital marketing usually shows traction in 3 months. An ERP implementation might take 3-6 months. We'll give you a realistic timeline day one, not a 'guesstimate'."
+    answer: "It depends on the project, but we move fast. A website can be live in as little as 7 days. Digital marketing usually shows traction in 3 months. An ERP implementation might take 3-6 months. We'll give you a realistic timeline day one, not a 'guesstimate'."
   },
   {
     question: "How involved do I need to be? I'm already swamped.",

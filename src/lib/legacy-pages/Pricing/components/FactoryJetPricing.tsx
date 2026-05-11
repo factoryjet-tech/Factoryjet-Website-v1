@@ -457,7 +457,7 @@ const FAQ_DATA = [
       },
       {
         q: "What is the typical timeline for a 'Business' plan?",
-        a: "Usually 4-6 weeks. Week 1 is Discovery/Design. Weeks 2-4 are Development & Integration. Week 5 is QA/Testing. Week 6 is Launch & Handover.",
+        a: "Starter and Business websites launch in 7 days. Enterprise builds with complex integrations are scoped individually — you'll get a day-by-day delivery plan at kickoff, not a vague estimate.",
       },
       {
         q: "Do I own the Intellectual Property (IP)?",

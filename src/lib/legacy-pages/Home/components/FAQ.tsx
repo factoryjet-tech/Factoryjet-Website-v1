@@ -36,7 +36,7 @@ const faqData: Record<string, Array<{ q: string; a: string }>> = {
   strategy: [
     {
       q: "How long does it *really* take to launch a website?",
-      a: "We move fast. For our **Starter** and **Business** packages, we have a strict **7-14 day delivery timeline**. Custom Enterprise projects or complex E-commerce stores typically take 3-5 weeks depending on the number of products and custom features."
+      a: "We move fast. For our **Starter** and **Business** packages, we have a strict **7-day delivery timeline**. Custom Enterprise projects or complex E-commerce stores have tailored timelines — we scope these upfront so there are zero surprises."
     },
     {
       q: "Who owns the code and design after you're done?",

@@ -235,7 +235,7 @@ const PortfolioPage: React.FC<PortfolioPageProps> = ({ basePath = '' }) => {
                 Want a website like these?
               </h2>
               <p className="text-slate-400 max-w-xl mx-auto mb-6 md:mb-10 text-base md:text-lg px-2 md:px-0">
-                Let&apos;s build something exceptional together. Get a world-class website delivered in weeks, not months.
+                Let&apos;s build something exceptional together. Get a world-class website delivered in as little as 7 days.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4">
                 <button
