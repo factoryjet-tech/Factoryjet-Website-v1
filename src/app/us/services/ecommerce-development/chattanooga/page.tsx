@@ -6,28 +6,28 @@ import SiteFooter from '@/components/v2/SiteFooter'
 
 
 export const metadata: Metadata = {
-  title: 'Shopify Development Chattanooga | E-Commerce & AI Agency - FactoryJet',
-  description: 'Gig City deserves gig-speed e-commerce. Custom Shopify & AI-powered stores for Chattanooga businesses. 10 Gbps infrastructure meets conversion-optimized design.',
+  title: 'Shopify Developer Chattanooga TN | 7-Day Launch from $2,999 | FactoryJet',
+  description: 'Best Shopify developer in Chattanooga: stores live in 7 days from $2,999. Gig City e-commerce specialists — Shopify, WooCommerce & AI. 500+ projects, 4.9★ rating. Free audit.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Development Chattanooga | E-Commerce & AI Agency - FactoryJet',
-    description: 'Custom Shopify & AI-powered stores for Chattanooga businesses. Gig-speed e-commerce for Gig City.',
+    title: 'Shopify Developer Chattanooga TN | 7-Day Launch from $2,999 | FactoryJet',
+    description: 'Best Shopify developer in Chattanooga: stores live in 7 days from $2,999. Gig City e-commerce specialists — Shopify, WooCommerce & AI. Free audit.',
     url: 'https://factoryjet.com/us/services/ecommerce-development/chattanooga',
     images: [
       {
         url: 'https://factoryjet.com/logo.png',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet - E-Commerce Development Chattanooga',
+        alt: 'FactoryJet - Shopify Developer Chattanooga TN',
       },
     ],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify Development Chattanooga | FactoryJet',
-    description: 'Custom Shopify & AI-powered stores for Chattanooga businesses. Gig-speed e-commerce for Gig City.',
+    title: 'Shopify Developer Chattanooga TN | 7-Day Launch from $2,999 | FactoryJet',
+    description: 'Best Shopify developer in Chattanooga: stores live in 7 days from $2,999. Gig City e-commerce specialists. Free audit.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
