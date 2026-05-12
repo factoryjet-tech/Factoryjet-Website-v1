@@ -119,11 +119,10 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
-        {/* Fontshare — Clash Display (all regions) */}
-        <link rel="preconnect" href="https://api.fontshare.com" crossOrigin="" />
-        <link rel="preconnect" href="https://cdn.fontshare.com" crossOrigin="" />
-        <link rel="preload" as="style" href="https://api.fontshare.com/v2/css?f[]=clash-display@700,600&display=swap" />
-        <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@700,600&display=swap" fetchPriority="high" />
+        {/* Clash Display — self-hosted woff2 (eliminates Fontshare CDN round-trip).
+            Preload the 700 weight first — it is the LCP font on all V2 hero headlines. */}
+        <link rel="preload" as="font" type="font/woff2" href="/fonts/clash-display-700.woff2" crossOrigin="anonymous" />
+        <link rel="preload" as="font" type="font/woff2" href="/fonts/clash-display-600.woff2" crossOrigin="anonymous" />
 
         {/* Structured Data - Organization Schema */}
         <Script
