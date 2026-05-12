@@ -1,7 +1,17 @@
+# ── CANONICAL URL STRATEGY ──────────────────────────────────────────────────
+# Preferred canonical: https://factoryjet.com (no www, HTTPS)
+# All per-page Next.js metadata includes an explicit `alternates.canonical`.
+# Root metadataBase in layout.tsx is set to https://factoryjet.com.
+#
 # NOTE: www → non-www redirect is handled by Cloudflare Dashboard
 # Redirect Rule "www_to_non_www" (301, Dynamic, fires first)
 # expression: (http.host eq "www.factoryjet.com")
 # target: concat("https://factoryjet.com", http.request.uri.path)
+#
+# NOTE: HTTP → HTTPS is enforced at the Cloudflare SSL/TLS layer.
+# Go to Cloudflare Dashboard → SSL/TLS → Edge Certificates →
+# "Always Use HTTPS" must be ON. This forces 301 for all http:// requests
+# before they reach Pages. Do NOT handle HTTP→HTTPS in this file.
 
 # NOTE: /ecommerce-development/shopify-development → /services/shopify-development
 # is handled by Cloudflare Dashboard rule "shopify_legacy_ecommerce_redirect" (301)

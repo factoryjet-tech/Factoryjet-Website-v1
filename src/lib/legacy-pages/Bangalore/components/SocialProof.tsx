@@ -11,7 +11,6 @@ const SocialProof: React.FC = () => {
     'Rukman Transport',
     'Belle Maison',
     'Mawa UAE',
-    'Commerceflo',
     'Grofresh',
   ];
 

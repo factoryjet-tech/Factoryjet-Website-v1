@@ -58,10 +58,6 @@ When a US SMB searches "web design agency Austin" or "Shopify developer Miami", 
 
 Next.js 15, React 19, TypeScript, Tailwind CSS 4, GSAP, Firebase, Cloudflare Pages
 
-## Sister Company
-
-Commerceflo.ai — AI-native unified commerce ERP SaaS platform
-
 ## URLs
 
 ### Core Pages

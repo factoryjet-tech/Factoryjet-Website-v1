@@ -25,7 +25,7 @@ const Testimonials: React.FC = () => {
     },
   ];
 
-  const additionalClients = ['Flying Pixel', 'Formative Concepts', 'Rukman Transport', 'Commerceflo', 'Mawa UAE'];
+  const additionalClients = ['Flying Pixel', 'Formative Concepts', 'Rukman Transport', 'Mawa UAE'];
 
   const stats = [
     { value: '8+', label: 'Success Stories' },

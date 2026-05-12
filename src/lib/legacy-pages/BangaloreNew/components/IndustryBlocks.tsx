@@ -52,23 +52,22 @@ export const CaseStudies = () => {
                     <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-[#0052CC]">
                         <div className="flex justify-between items-start mb-4">
                             <div>
-                                <h3 className="text-2xl font-bold text-[#0F172A]">Commerceflo</h3>
-                                <p className="text-sm text-slate-500 font-bold">Industry: E-Commerce Technology / SaaS | Location: Bangalore</p>
+                                <h3 className="text-2xl font-bold text-[#0F172A]">Impulse Branding Solutions</h3>
+                                <p className="text-sm text-slate-500 font-bold">Industry: Branding & Architecture | Location: India</p>
                             </div>
-                            <span className="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">Result: 340% More Leads</span>
+                            <span className="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">Result: ₹3 Cr Revenue</span>
                         </div>
-                        <p className="text-slate-700 text-base mb-4"><strong>Challenge:</strong> Commerceflo, an AI-powered e-commerce platform, needed a website that showcased their advanced technology while generating leads from D2C brands and enterprise retailers. Their existing site failed to communicate their value proposition and had poor conversion rates.</p>
-                        <p className="text-slate-700 text-base mb-4"><strong>Solution:</strong> FactoryJet designed and developed a modern SaaS website with interactive product demos, industry-specific landing pages, HubSpot integration, case study showcases, and performance-optimized architecture.</p>
+                        <p className="text-slate-700 text-base mb-4"><strong>Challenge:</strong> Impulse Branding was stuck on a legacy HTML site that was impossible to update without a developer. Their portfolio was always outdated, costing them bids on major contracts ahead of a key industry summit.</p>
+                        <p className="text-slate-700 text-base mb-4"><strong>Solution:</strong> FactoryJet executed a rapid migration to WordPress + Breakdance in just 14 days. Built a dynamic portfolio system and optimized for GEO and AI-driven search to drive global organic traffic and citations.</p>
                         <div className="bg-slate-50 p-4 rounded text-sm mb-4">
                             <strong className="block mb-2 text-slate-900">Results:</strong>
                             <ul className="grid grid-cols-2 gap-2 text-slate-700 font-medium">
-                                <li>📈 340% increase in demo requests</li>
-                                <li>📈 First page Google rankings for 25+ keywords</li>
-                                <li>📈 2.5x improvement in time-on-site</li>
-                                <li>📈 150% increase in organic traffic</li>
+                                <li>📈 125% increase in organic traffic</li>
+                                <li>📈 ₹3 Crore revenue influenced (6 months)</li>
+                                <li>📈 Site delivered in 14 days</li>
+                                <li>📈 Cited by Google Gemini in search results</li>
                             </ul>
                         </div>
-                        <blockquote className="italic text-slate-600 text-sm border-l-2 border-slate-300 pl-4 font-medium">"FactoryJet understood our complex SaaS product and created a website that effectively communicates our value to e-commerce brands. The lead generation has been phenomenal." — Founder, Commerceflo</blockquote>
                     </div>
 
                     <div className="bg-white p-8 rounded-xl shadow-lg border-l-4 border-[#FF6B35]">

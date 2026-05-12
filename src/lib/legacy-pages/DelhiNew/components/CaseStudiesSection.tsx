@@ -2,10 +2,10 @@ import React from 'react';
 
 const CASE_STUDIES = [
   {
-    category: "E-Commerce SaaS",
-    title: "Commerceflo",
-    description: "340% increase in demo requests and first page Google rankings for 25+ keywords after full platform redesign.",
-    tags: ["Next.js", "Tailwind"]
+    category: "Branding Agency",
+    title: "Impulse Branding Solutions",
+    description: "125% organic traffic increase and ₹3 Cr revenue in 6 months after rapid migration from legacy HTML to modern stack.",
+    tags: ["WordPress", "Breakdance", "SEO"]
   },
   {
     category: "Home Decor E-Commerce",

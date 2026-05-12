@@ -15,7 +15,6 @@ const PARTNERS = [
   "Google Cloud",
   "Stripe Verified",
   "Microsoft",
-  "Commerceflo",
   "HubSpot",
   "ZOHO",
   "AWS",

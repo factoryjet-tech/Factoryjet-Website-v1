@@ -54,7 +54,7 @@ const TECHNOLOGY_FAQS = [
 const SERVICES_FAQS = [
   {
     q: "Do you build e-commerce websites for Manchester businesses?",
-    a: "Yes. We build on Shopify, WooCommerce, and our own Commerceflo.ai platform. Manchester's retail and e-commerce sector is growing rapidly. We build stores that convert, not just display products.",
+    a: "Yes. We build on Shopify, WooCommerce, and custom headless e-commerce platforms. Manchester's retail and e-commerce sector is growing rapidly. We build stores that convert, not just display products.",
   },
   {
     q: "Can you redesign my existing Manchester website?",

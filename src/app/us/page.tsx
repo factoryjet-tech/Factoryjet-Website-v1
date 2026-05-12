@@ -20,24 +20,24 @@ import FinalCTA from '@/components/v2/FinalCTA';
    SEO / Metadata
 ───────────────────────────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: 'Leading B2B Web Design Agency in USA | FactoryJet',
+  title: 'Web Design for US Small Businesses | 7-Day Delivery, 60% Less | FactoryJet',
   description:
-    'FactoryJet is a B2B web design agency USA businesses trust for high-converting websites delivered in 7 days. Fixed pricing, full code ownership, and zero vendor lock-in.',
+    'Your website live in 7 days at 60% less than US agencies. 500+ businesses served. Fixed pricing, full code ownership, zero vendor lock-in. Book a free strategy call.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Leading B2B Web Design Agency in USA | FactoryJet',
+    title: 'Web Design for US Small Businesses | 7-Day Delivery, 60% Less | FactoryJet',
     description:
-      'FactoryJet is a B2B web design agency USA businesses trust for high-converting websites delivered in 7 days. Fixed pricing, full code ownership, and zero vendor lock-in.',
+      'Your website live in 7 days at 60% less than US agencies. 500+ businesses served. Fixed pricing, full code ownership, zero vendor lock-in. Book a free strategy call.',
     url: 'https://factoryjet.com/us',
-    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet - Web Design Company USA' }],
+    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet - Web Design Agency for US Small Businesses' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Leading B2B Web Design Agency in USA | FactoryJet',
+    title: 'Web Design for US Small Businesses | 7-Day Delivery, 60% Less | FactoryJet',
     description:
-      'FactoryJet is a B2B web design agency USA businesses trust for high-converting websites delivered in 7 days. Fixed pricing, full code ownership, and zero vendor lock-in.',
+      'Websites in 7 days, 60% less than US agencies. 500+ businesses served. Fixed pricing, full code ownership, zero lock-in.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {

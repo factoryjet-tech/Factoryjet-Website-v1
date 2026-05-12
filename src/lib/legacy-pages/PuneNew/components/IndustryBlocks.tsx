@@ -33,20 +33,6 @@ export const Industries = () => {
 export const CaseStudies = () => {
   const caseStudies = [
     {
-      name: "Commerceflo",
-      bg: "bg-jet-navy",
-      tags: [
-        { label: "SaaS", color: "bg-blue-50 text-jet-blue" },
-        { label: "AI Platform", color: "bg-green-50 text-green-700" }
-      ],
-      title: "Commerceflo - AI E-Commerce Platform",
-      description: "Developed a high-performance marketing website and merchant onboarding portal.",
-      metrics: [
-        { value: "500+", label: "Merchant Inquiries" },
-        { value: "3x", label: "Conversion Rate" }
-      ]
-    },
-    {
       name: "Impulse Branding",
       bg: "bg-jet-blue",
       tags: [

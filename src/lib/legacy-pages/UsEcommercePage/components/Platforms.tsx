@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { Section, SectionHeader, Button } from './ui/Section';
-import { Check, ShoppingBag, Globe, Zap, Server, Code, Layers, BrainCircuit, LayoutGrid, RotateCw } from 'lucide-react';
+import { Check, ShoppingBag, Globe, Zap, Server, Code, Layers } from 'lucide-react';
 import { useLeadCapture } from '../context/LeadCaptureContext';
 
 const platforms = [
   { id: 'shopify', name: 'Shopify / Plus', icon: ShoppingBag, color: 'text-[#96bf48]' },
-  { id: 'commerceflo', name: 'Commerceflo.ai', icon: BrainCircuit, color: 'text-indigo-500' },
   { id: 'adobe', name: 'Adobe Commerce', icon: Layers, color: 'text-[#f15923]' },
   { id: 'woo', name: 'WooCommerce', icon: ShoppingBag, color: 'text-[#7f54b3]' },
   { id: 'spree', name: 'Spree Commerce', icon: Code, color: 'text-[#DB3637]' },
@@ -69,83 +68,6 @@ const Platforms: React.FC = () => {
             </div>
             
             <Button className="w-full md:w-auto" onClick={() => openForm('Shopify Development')}>Get Your Shopify Quote →</Button>
-          </div>
-        );
-      case 'commerceflo':
-        return (
-          <div className="animate-fade-in">
-             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mb-4">
-               <BrainCircuit className="h-8 w-8 text-indigo-600 flex-shrink-0" />
-               <h3 className="text-xl md:text-2xl font-heading font-bold">Commerceflo.ai: The AI-Native Omnichannel Solution</h3>
-             </div>
-             
-             <p className="text-jet-gray mb-6 leading-relaxed text-base md:text-lg">
-               <strong>Sell Everywhere. Manage Once.</strong> Commerceflo.ai is an AI-Native Omnichannel Commerce Platform designed to be the central nervous system for ambitious SMEs. It replaces the chaotic "Franken-stack" of disconnected apps with a single, unified operating system.
-             </p>
-             
-             <div className="bg-indigo-50 border border-indigo-100 rounded-lg p-5 md:p-6 mb-8">
-               <h4 className="font-bold text-indigo-900 mb-4 text-lg">Why Commerceflo?</h4>
-               <div className="grid md:grid-cols-3 gap-6">
-                 <div>
-                   <div className="flex items-center gap-2 font-bold text-indigo-800 mb-2">
-                     <LayoutGrid className="h-4 w-4"/> Unified Hub
-                   </div>
-                   <p className="text-sm text-indigo-700 leading-relaxed">
-                     One Catalog, One Inventory Pool, and One Order Hub across all sales channels—B2C, B2B, Marketplaces, Social, and POS.
-                   </p>
-                 </div>
-                 <div>
-                   <div className="flex items-center gap-2 font-bold text-indigo-800 mb-2">
-                     <BrainCircuit className="h-4 w-4"/> AI Co-Pilot
-                   </div>
-                   <p className="text-sm text-indigo-700 leading-relaxed">
-                     An AI engine that acts as <strong>The Doer</strong> (Automating tasks), <strong>The Analyst</strong> (Optimizing pricing/inventory), and <strong>The Strategist</strong> (Identifying growth).
-                   </p>
-                 </div>
-                 <div>
-                   <div className="flex items-center gap-2 font-bold text-indigo-800 mb-2">
-                     <RotateCw className="h-4 w-4"/> Channel Sync
-                   </div>
-                   <p className="text-sm text-indigo-700 leading-relaxed">
-                     Eliminate "Channel Chaos." Real-time sync preventing inventory blindness and disconnected data silos.
-                   </p>
-                 </div>
-               </div>
-             </div>
-
-             <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div>
-                  <h4 className="font-bold mb-3 text-jet-dark">Core Capabilities</h4>
-                  <ul className="space-y-3 text-sm text-jet-gray">
-                    <li className="flex items-start gap-2"><Check className="h-4 w-4 text-jet-green mt-1 flex-shrink-0"/> <strong>Unified PIM:</strong> One source of truth for products & attributes.</li>
-                    <li className="flex items-start gap-2"><Check className="h-4 w-4 text-jet-green mt-1 flex-shrink-0"/> <strong>Centralized OMS:</strong> All orders (Amazon, B2B, DTC) in one list.</li>
-                    <li className="flex items-start gap-2"><Check className="h-4 w-4 text-jet-green mt-1 flex-shrink-0"/> <strong>Smart WMS:</strong> Multi-location inventory routing logic.</li>
-                    <li className="flex items-start gap-2"><Check className="h-4 w-4 text-jet-green mt-1 flex-shrink-0"/> <strong>Native B2B:</strong> Custom price lists, portals, and customer tiers.</li>
-                  </ul>
-                </div>
-                 <div>
-                  <h4 className="font-bold mb-3 text-jet-dark">The AI Advantage</h4>
-                  <ul className="space-y-3 text-sm text-jet-gray">
-                    <li className="flex items-start gap-2"><Check className="h-4 w-4 text-jet-green mt-1 flex-shrink-0"/> <strong>Automation:</strong> Saves 20+ hours/week on manual data entry.</li>
-                    <li className="flex items-start gap-2"><Check className="h-4 w-4 text-jet-green mt-1 flex-shrink-0"/> <strong>Dynamic Pricing:</strong> Auto-match competitors for Buy Box wins.</li>
-                    <li className="flex items-start gap-2"><Check className="h-4 w-4 text-jet-green mt-1 flex-shrink-0"/> <strong>Growth:</strong> AI-powered bundle suggestions to increase AOV.</li>
-                    <li className="flex items-start gap-2"><Check className="h-4 w-4 text-jet-green mt-1 flex-shrink-0"/> <strong>Content:</strong> AI-generated SEO descriptions for every channel.</li>
-                  </ul>
-                </div>
-             </div>
-
-             <div className="bg-slate-900 text-white p-4 rounded-lg flex flex-col md:flex-row justify-between items-center mb-6">
-                <div className="mb-4 md:mb-0 w-full md:w-auto">
-                  <span className="font-bold text-indigo-400 block mb-1">Ideal For:</span>
-                  <span className="text-sm text-slate-300">Ambitious SMEs ($500k - $20M revenue) facing "App Fatigue" and "Channel Chaos".</span>
-                </div>
-                <div className="text-left md:text-right w-full md:w-auto">
-                   <div className="text-2xl font-bold text-jet-green">Reduce Costs</div>
-                   <div className="text-xs text-slate-400">Boost Profitability</div>
-                </div>
-             </div>
-
-             <Button className="bg-indigo-600 hover:bg-indigo-700 w-full md:w-auto" onClick={() => openForm('Commerceflo Platform')}>Get Your Commerceflo Quote →</Button>
           </div>
         );
       case 'adobe':
@@ -315,8 +237,8 @@ const Platforms: React.FC = () => {
                  <p className="text-sm mt-2 text-jet-gray">Shopify's React-based headless framework. React, Remix, Oxygen hosting. Best for Shopify merchants.</p>
                </div>
                <div className="border border-slate-200 p-5 rounded-lg hover:shadow-md transition">
-                 <h4 className="font-bold text-jet-blue">Commerceflo API</h4>
-                 <p className="text-sm mt-2 text-jet-gray">Headless-first architecture. Connect any frontend to the AI-Native engine.</p>
+                 <h4 className="font-bold text-jet-blue">BigCommerce Headless</h4>
+                 <p className="text-sm mt-2 text-jet-gray">API-first architecture. Decouple your frontend while keeping BigCommerce as the commerce engine.</p>
                </div>
                <div className="border border-slate-200 p-5 rounded-lg hover:shadow-md transition">
                  <h4 className="font-bold text-jet-blue">Commercetools</h4>
@@ -384,7 +306,7 @@ const Platforms: React.FC = () => {
       <div className="bg-blue-50 border-l-4 border-jet-blue p-6 rounded-r-lg max-w-4xl mx-auto mb-12 shadow-sm">
         <p className="text-sm text-jet-blue font-bold mb-2 uppercase tracking-wide">💡 Quick Answer</p>
         <p className="text-jet-gray text-base leading-relaxed">
-          The best e-commerce platform depends on your business model. <strong>Shopify</strong> for DTC. <strong>Commerceflo</strong> for unified B2B/B2C & AI automation. <strong>Adobe Commerce</strong> for complex enterprise needs. <strong>Headless</strong> for ultimate customization.
+          The best e-commerce platform depends on your business model. <strong>Shopify</strong> for DTC and fast-launch stores. <strong>Adobe Commerce</strong> for complex B2B enterprise needs. <strong>WooCommerce</strong> for content-driven commerce. <strong>Headless</strong> for ultimate customization and performance.
         </p>
       </div>
 
@@ -435,7 +357,7 @@ const Platforms: React.FC = () => {
           <tbody className="divide-y divide-slate-100">
             {[
               { p: 'Shopify', best: 'DTC Brands', cost: '$29/mo', time: '2-4 weeks', b2b: 'Limited', head: 'Hydrogen' },
-              { p: 'Commerceflo', best: 'Unified B2B/B2C SMBs', cost: 'Custom', time: '3-6 weeks', b2b: 'Native', head: 'API-First' },
+              { p: 'BigCommerce', best: 'Mid-Market B2B/B2C', cost: '$300/mo', time: '4-8 weeks', b2b: 'Native', head: 'Yes' },
               { p: 'Adobe Commerce', best: 'Complex Enterprise', cost: '$22K+/yr', time: '12-24 weeks', b2b: 'Excellent', head: 'Yes' },
               { p: 'WooCommerce', best: 'Content Commerce', cost: '$0 + hosting', time: '4-8 weeks', b2b: 'Plugin-based', head: 'API' },
               { p: 'Spree Commerce', best: 'Ruby Custom Apps', cost: '$0', time: '8-16 weeks', b2b: 'Yes', head: 'Yes' },

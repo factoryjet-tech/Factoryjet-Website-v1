@@ -44,19 +44,6 @@ const Portfolio: React.FC = () => {
       width: 662,
       height: 372,
       slug: "belle-maison"
-    },
-    {
-      category: "AI-Native SaaS",
-      client: "Commerceflo.ai",
-      founder: "Rajapandian Alagarsamy",
-      metric: "Global Traffic & AI Citations",
-      desc: "30+ page high-performance website for an AI startup. Integrated HubSpot CRM for lead gen. Optimized for AEO/AIO to drive global traffic and convert visitors into leads.",
-      image: "/case-commerceflo.webp",
-      color: "bg-emerald-600",
-      icon: Zap,
-      width: 662,
-      height: 372,
-      slug: "commerceflo"
     }
   ];
 

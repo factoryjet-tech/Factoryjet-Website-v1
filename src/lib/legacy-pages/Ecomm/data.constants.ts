@@ -2,8 +2,8 @@
 import { BusinessModel, Platform, FeatureSet, ProcessStep, CaseStudy, FAQItem } from './data.types';
 
 export const HERO_CONTENT = {
-  headline: "Professional E-Commerce Platform Development - Shopify, WooCommerce, Commerceflo.ai for SMB Online Stores",
-  subheadline: "FactoryJet builds high-converting e-commerce stores that sell. With 25+ years of e-commerce expertise, we specialize in DTC, B2C, B2B, multi-vendor marketplaces, and quick-commerce apps across Shopify, WooCommerce, Magento, Commerceflo.ai, and custom platforms. Average client sees 150%+ sales increase within 12 months.",
+  headline: "Professional E-Commerce Platform Development — Shopify, WooCommerce & Custom Platforms for SMB Online Stores",
+  subheadline: "FactoryJet builds high-converting e-commerce stores that sell. With 25+ years of e-commerce expertise, we specialize in DTC, B2C, B2B, multi-vendor marketplaces, and quick-commerce apps across Shopify, WooCommerce, Magento, BigCommerce, and custom platforms. Average client sees 150%+ sales increase within 12 months.",
   ctas: [
     { text: "Launch Your E-Commerce Store", primary: true },
     { text: "View E-Commerce Portfolio", primary: false },
@@ -116,15 +116,6 @@ export const PLATFORMS: Platform[] = [
     cost: "₹3,00,000 - ₹15,00,000+ depending on complexity",
     timeline: "12-24 weeks for enterprise implementations",
     roi: "Long-term investment, but supports massive scale"
-  },
-  {
-    name: "Commerceflo.ai",
-    description: "Next-generation AI-powered e-commerce platform designed for modern sellers. Built with AI at its core.",
-    why: ["AI-powered product recommendations", "Intelligent inventory management", "Automated marketing optimization", "Dynamic pricing", "Predictive analytics", "Modern, fast platform", "Built for omnichannel"],
-    bestFor: ["Forward-thinking brands", "Companies wanting AI features", "Omnichannel sellers", "Data-driven businesses", "Growth-focused companies"],
-    cost: "Depends on features and usage",
-    timeline: "4-6 weeks to launch",
-    roi: "Faster scaling with AI optimization"
   },
   {
     name: "PrestaShop",
@@ -445,10 +436,6 @@ export const FAQS: FAQItem[] = [
     answer: "Shopify for quick launch and ease of use. WooCommerce for more customization and lower ongoing costs. We recommend Shopify for most SMBs launching their first store."
   },
   {
-    category: "Platform Selection",
-    question: "Is Commerceflo.ai worth it?",
-    answer: "If you want AI-powered features and omnichannel selling, yes. It's better than older platforms but may be overkill for simple stores. We can help you evaluate."
-  },
   {
     category: "Platform Selection",
     question: "Can I migrate from Shopify to WooCommerce later?",

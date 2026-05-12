@@ -356,23 +356,6 @@ export const faqData: FAQCategory[] = [
         )
       },
       {
-        id: "what-is-commerceflo",
-        question: "What is Commerceflo.ai?",
-        answer: (
-          <div className="space-y-3">
-            <p><strong>Commerceflo.ai</strong> is an advanced AI-native orchestration platform that we integrate to automate e-commerce operations. Think of it as an "operating system" for your store that works 24/7.</p>
-            <div className="bg-slate-50 p-3 rounded border border-slate-200">
-               <h5 className="font-bold text-sm text-jet-navy mb-2">Key Capabilities:</h5>
-               <ul className="list-disc pl-5 text-xs text-slate-600 space-y-1">
-                  <li><strong>Automated Catalog Management:</strong> It fixes broken product tags, optimizes descriptions for SEO, and normalizes image sizes automatically.</li>
-                  <li><strong>Inventory Intelligence:</strong> It predicts stockouts based on sales velocity and seasonality before they happen.</li>
-                  <li><strong>Customer Flow:</strong> It analyzes user behavior to suggest real-time layout adjustments that improve conversion rates (CRO).</li>
-               </ul>
-            </div>
-          </div>
-        )
-      },
-      {
         id: "magento-adobe-commerce",
         question: "Do you support Adobe Commerce (Magento)?",
         answer: (

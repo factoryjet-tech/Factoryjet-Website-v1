@@ -93,19 +93,6 @@ const Portfolio: React.FC = () => {
       color: 'bg-emerald-500/10 text-emerald-500 border-emerald-200',
     },
     {
-      id: 7,
-      category: 'ecommerce',
-      badge: 'Corporate Website + Full SEO Stack',
-      client: 'Commerceflo',
-      industry: 'E-Commerce Technology Platform',
-      services: 'Corporate Website Design, SEO, GEO, AEO, AIO Optimization',
-      result: 'Thought Leadership in E-Commerce Space',
-      description: 'Designed a cutting-edge corporate website for this AI-powered e-commerce platform. Implemented full-stack search optimization to establish Commerceflo as an authority in the e-commerce technology space. Content optimized for AI search visibility and featured snippets.',
-      outcomes: 'Industry authority positioning, SaaS lead generation, AI search dominance',
-      icon: Zap,
-      color: 'bg-cyan-500/10 text-cyan-500 border-cyan-200',
-    },
-    {
       id: 8,
       category: 'erp',
       badge: 'ERP Implementation + Digital Transformation',
@@ -230,7 +217,7 @@ const Portfolio: React.FC = () => {
           className="mt-12 text-center"
         >
           <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-jet-slate">
-            <span className="font-bold">8 Success Stories</span>
+            <span className="font-bold">7 Success Stories</span>
             <span className="text-slate-300">|</span>
             <span className="font-bold">4 Industries</span>
             <span className="text-slate-300">|</span>

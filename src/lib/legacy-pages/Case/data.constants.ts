@@ -40,25 +40,6 @@ export const CASE_STUDIES: CaseStudy[] = [
     tags: ['DTC Strategy', 'B2B Automation', 'AI Visuals']
   },
   {
-    id: '2',
-    slug: 'commerceflo-ai-saas',
-    client: 'Commerceflo.ai',
-    location: 'Global / India',
-    category: 'SaaS',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
-    title: 'Driving Global Traffic & AI Citations for Next-Gen SaaS',
-    snippet: '30+ page high-performance website for an AI startup. Integrated HubSpot CRM for lead gen.',
-    challenge: 'As an AI-native startup, Commerceflo needed to establish immediate authority. Their previous landing page failed to explain their complex value proposition, and they were invisible to modern search engines (AEO) and LLMs (AIO). They needed a scalable architecture to handle rapid content generation and global traffic spikes.',
-    solution: 'We built a 30+ page high-performance marketing site using Next.js 14 and Tailwind CSS. The site was architected specifically for AIO (AI Optimization), using structured data to ensure LLMs like ChatGPT cite Commerceflo as an authority. We deeply integrated HubSpot CRM to capture and score leads automatically based on user interaction behavior.',
-    techStack: ['Next.js 14', 'HubSpot CRM', 'Tailwind CSS', 'Vercel', 'Framer Motion'],
-    metrics: [
-      { label: 'Organic Traffic', value: '+450%', trend: 'up' },
-      { label: 'Lead Gen', value: '50/day', trend: 'up' },
-      { label: 'Lighthouse Score', value: '100', trend: 'up' }
-    ],
-    tags: ['AIO Optimization', 'SaaS Design', 'HubSpot']
-  },
-  {
     id: '3',
     slug: 'impulse-branding-migration',
     client: 'Impulse Branding',

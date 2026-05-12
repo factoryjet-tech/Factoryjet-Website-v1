@@ -243,11 +243,10 @@ SECTION 13: CASE STUDIES
 [H2] Success Stories: Bangalore & Pan-India Businesses Transformed
 [H3] Real Results from Bangalore & Pan-India Clients — See How We've Helped Businesses Like Yours
 
-Commerceflo Industry: E-Commerce Technology / SaaS | Location: Bangalore Result: 340% More Leads
-Commerceflo, an AI-powered e-commerce platform, needed a website that clearly communicated their technology while generating leads from D2C brands and enterprise retailers. Their existing site was converting poorly and failing to tell their story.
-FactoryJet designed and developed a modern SaaS website with interactive product demos, industry-specific landing pages, HubSpot integration, case study showcases, and performance-optimized architecture.
-📈 340% increase in demo requests 📈 First-page Google rankings for 25+ keywords 📈 2.5x improvement in time-on-site 📈 150% increase in organic traffic
-"FactoryJet understood our complex SaaS product and created a website that effectively communicates our value to e-commerce brands. The lead generation has been phenomenal." — Founder, Commerceflo
+Impulse Branding Solutions Industry: Branding & Marketing Agency | Location: India Result: ₹3 Cr Revenue in 6 Months
+Impulse Branding Solutions needed a modern corporate website that matched their premium positioning and converted visitors into clients. Their legacy site was underperforming in both SEO and lead generation.
+FactoryJet built a high-performance WordPress site with Breakdance, implementing full-stack SEO including GEO, AEO, and AIO optimization for visibility across Google and AI search platforms like Perplexity and ChatGPT.
+📈 125% organic traffic increase 📈 ₹3 Crore revenue in first 6 months 📈 14-day delivery 📈 Cited by Google Gemini in AI search results
 
 Grofresh Agro Industry: Agriculture / E-Commerce | Location: Pan-India Result: ₹2.5 Cr Revenue
 Grofresh Agro, a fresh produce supplier, wanted to launch B2B e-commerce operations serving restaurants, hotels, and retailers across major cities including Bangalore — with complex bulk ordering and route optimization.

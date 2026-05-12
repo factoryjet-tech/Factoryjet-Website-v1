@@ -26,7 +26,7 @@ const Technologies: React.FC = () => {
            <GlassCard className="p-6">
               <h3 className="font-bold text-jet-navy mb-3">E-Commerce Platforms</h3>
               <div className="flex flex-wrap gap-2">
-                 {['WooCommerce', 'Shopify', 'Magento', 'Commerceflo.ai', 'Custom Solutions'].map(t => <span key={t} className="bg-slate-100 text-jet-slate px-2 py-1 rounded text-sm">{t}</span>)}
+                 {['WooCommerce', 'Shopify', 'Magento', 'BigCommerce', 'Custom Solutions'].map(t => <span key={t} className="bg-slate-100 text-jet-slate px-2 py-1 rounded text-sm">{t}</span>)}
               </div>
            </GlassCard>
            <GlassCard className="p-6">

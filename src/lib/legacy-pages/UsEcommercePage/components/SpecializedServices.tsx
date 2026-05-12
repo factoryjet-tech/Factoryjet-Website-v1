@@ -18,7 +18,7 @@ export const B2BCommerce: React.FC = () => {
       <div className="bg-blue-50 border-l-4 border-jet-blue p-6 rounded-r-lg max-w-4xl mx-auto mb-12 shadow-sm">
         <p className="text-sm text-jet-blue font-bold mb-2 uppercase tracking-wide">💡 Quick Answer</p>
         <p className="text-jet-gray text-base leading-relaxed">
-          B2B e-commerce development creates wholesale ordering platforms with customer-specific pricing, quote management, purchase order support, and ERP integration. Unlike B2C stores, B2B platforms handle complex pricing tiers, approval workflows, and account-based purchasing. FactoryJet specializes in <strong>Commerceflo</strong>, <strong>Shopify Plus B2B</strong>, <strong>Adobe Commerce B2B</strong>, <strong>OroCommerce</strong>, and custom wholesale solutions.
+          B2B e-commerce development creates wholesale ordering platforms with customer-specific pricing, quote management, purchase order support, and ERP integration. Unlike B2C stores, B2B platforms handle complex pricing tiers, approval workflows, and account-based purchasing. FactoryJet specializes in <strong>Shopify Plus B2B</strong>, <strong>Adobe Commerce B2B</strong>, <strong>OroCommerce</strong>, and custom wholesale solutions.
         </p>
       </div>
       
@@ -49,7 +49,7 @@ export const B2BCommerce: React.FC = () => {
           <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm mb-6">
              <h4 className="font-bold mb-3 text-jet-dark text-sm uppercase tracking-wide">B2B Case Study Highlight</h4>
              <p className="text-sm font-bold text-jet-blue mb-1">Manufacturing Distributor B2B Portal</p>
-             <p className="text-sm text-jet-gray mb-3">Legacy phone ordering to Commerceflo AI-Native Platform.</p>
+             <p className="text-sm text-jet-gray mb-3">Legacy phone ordering modernized to a custom B2B e-commerce portal.</p>
              <div className="flex flex-wrap gap-4 text-xs font-bold text-jet-green">
                <span>📈 +68% Online Orders</span>
                <span>⏱️ -96% Processing Time</span>
@@ -67,17 +67,17 @@ export const B2BCommerce: React.FC = () => {
                 <thead>
                   <tr className="text-left text-slate-500">
                     <th className="pb-2 pr-4">Feature</th>
-                    <th className="pb-2 pr-4">Commerceflo</th>
+                    <th className="pb-2 pr-4">OroCommerce</th>
                     <th className="pb-2 pr-4">Shopify B2B</th>
                     <th className="pb-2">Adobe Commerce</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
-                  <tr><td className="py-2 font-medium">Customer Pricing</td><td className="text-jet-green">✅ Native & AI</td><td className="text-jet-green">✅ Native</td><td>✅ Native</td></tr>
+                  <tr><td className="py-2 font-medium">Customer Pricing</td><td className="text-jet-green">✅ Native</td><td className="text-jet-green">✅ Native</td><td>✅ Native</td></tr>
                   <tr><td className="py-2 font-medium">Quote Mgmt</td><td className="text-jet-green">✅ Native</td><td className="text-yellow-600">⚠️ App Req</td><td>✅ Built-in</td></tr>
                   <tr><td className="py-2 font-medium">Purchase Orders</td><td className="text-jet-green">✅ Native</td><td className="text-yellow-600">⚠️ Limited</td><td>✅ Native</td></tr>
                   <tr><td className="py-2 font-medium">Approval Workflows</td><td className="text-jet-green">✅ Yes</td><td className="text-red-500">❌ No</td><td>✅ Yes</td></tr>
-                  <tr><td className="py-2 font-medium">Starting Price</td><td>Flexible</td><td>$2,500/mo</td><td>$22K+/yr</td></tr>
+                  <tr><td className="py-2 font-medium">Starting Price</td><td>~$25K+/yr</td><td>$2,500/mo</td><td>$22K+/yr</td></tr>
                 </tbody>
               </table>
             </div>

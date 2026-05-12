@@ -786,12 +786,12 @@ export const CaseStudiesSection = () => (
           <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
              <div className="h-48 bg-gray-200 flex items-center justify-center text-gray-400">Project Image Placeholder</div>
              <div className="p-6 lg:p-8">
-                <div className="text-xs font-bold text-jet-orange uppercase mb-2">E-Commerce SaaS</div>
-                <h3 className="text-xl lg:text-2xl font-bold text-navy mb-3 lg:mb-4">Commerceflo</h3>
-                <p className="text-slate mb-6 text-sm">340% increase in demo requests and first page Google rankings for 25+ keywords after full platform redesign.</p>
+                <div className="text-xs font-bold text-jet-orange uppercase mb-2">Branding Agency</div>
+                <h3 className="text-xl lg:text-2xl font-bold text-navy mb-3 lg:mb-4">Impulse Branding Solutions</h3>
+                <p className="text-slate mb-6 text-sm">125% organic traffic increase and ₹3 Cr revenue in 6 months after rapid migration from legacy HTML to modern stack.</p>
                 <div className="flex flex-wrap gap-2">
-                   <span className="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium">Next.js</span>
-                   <span className="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium">Tailwind</span>
+                   <span className="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium">WordPress</span>
+                   <span className="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium">SEO</span>
                 </div>
              </div>
           </div>

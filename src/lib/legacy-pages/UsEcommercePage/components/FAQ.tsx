@@ -40,20 +40,12 @@ const faqData = [
   },
   {
     id: 'ai-commerce',
-    category: 'AI & Commerceflo',
+    category: 'AI-Native Commerce',
     icon: BrainCircuit,
     questions: [
       {
         q: 'What exactly is AI-native e-commerce, and why does it matter?',
         a: 'AI-native e-commerce means your store is built for speed, search visibility, automation, and conversion intelligence from day one. At FactoryJet, this includes structured data, schema markup, answer-first content architecture, AI-ready product pages, and integrations that improve visibility across Google, AI Overviews, ChatGPT, and other generative search engines.'
-      },
-      {
-        q: 'What is Commerceflo.ai in simple terms?',
-        a: 'Commerceflo.ai is a unified commerce operating system for growing brands that want to manage products, inventory, orders, B2B sales, marketplaces, and social commerce from one platform. Instead of using multiple disconnected tools, it centralizes catalog, stock, order routing, and analytics into one dashboard for easier scaling.'
-      },
-      {
-        q: 'Is Commerceflo a true multi-channel solution?',
-        a: 'Yes. Commerceflo supports true multi-channel commerce by connecting your website, B2B portal, marketplaces, social commerce channels, and POS systems into one unified backend. This reduces inventory mismatch, improves order visibility, and allows centralized management across all sales channels.'
       }
     ]
   },
