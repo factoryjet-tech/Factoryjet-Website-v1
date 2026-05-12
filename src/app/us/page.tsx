@@ -296,8 +296,8 @@ export default function USHomePage() {
 
         {/* ── 7. TESTIMONIALS ──────────────────────────────────────────────── */}
         <TestimonialsSection
-          eyebrow="VERIFIED CLIENT WORK"
-          headline="Real projects. Every URL is live — click and verify."
+          eyebrow="VERIFIED CLIENT WORK · 4.9★ RATING"
+          headline="4.9/5 across 500+ projects. Every URL is live: open it, run PageSpeed, inspect the code."
         />
 
         {/* ── 8. FAQ ───────────────────────────────────────────────────────── */}

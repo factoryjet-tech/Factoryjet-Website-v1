@@ -117,6 +117,7 @@ export default function PortfolioShowcase({
                   className="w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   style={{ aspectRatio: '4 / 3' }}
                   loading="lazy"
+                  decoding="async"
                   width={600}
                   height={450}
                 />

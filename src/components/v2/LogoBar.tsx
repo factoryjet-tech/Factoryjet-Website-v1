@@ -26,20 +26,26 @@ export interface LogoBarProps {
   className?: string;
 }
 
-/** Industry/sector labels — rendered as Clash Display text. */
+/**
+ * Real client names from the FactoryJet portfolio.
+ * These appear in the marquee as Clash Display wordmarks.
+ * Update this list as new notable clients are added.
+ */
 const LOGOS = [
-  'Real Estate',
-  'Law Firms',
-  'E-Commerce',
-  'SaaS',
-  'Healthcare',
-  'Restaurants',
-  'Retail',
-  'Consultancies',
+  'WetStone Labs',
+  'CuraShield',
+  'MindSource',
+  'StegoHunt',
+  'VidAML',
+  'KD Associates',
+  'Belle Maison',
+  'Formative Concepts',
+  'Impulse Branding',
+  'Baxter & Reed',
 ];
 
 export default function LogoBar({
-  tagline = '500+ businesses served across these sectors',
+  tagline = 'Trusted by 500+ businesses across the US, UK, and UAE',
   className = '',
 }: LogoBarProps) {
   return (
