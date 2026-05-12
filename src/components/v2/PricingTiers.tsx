@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import MotionFadeUp from './MotionFadeUp';
+import ModalCTAButton from './ModalCTAButton';
+import type { ModalRegion } from '../../context/ContactModalContext';
 
 /**
  * PricingTiers — v2.1 visual upgrade.
@@ -31,7 +33,7 @@ export interface PricingTier {
   description: string;
   /** 5–8 bullets per spec. */
   features: ReadonlyArray<string>;
-  cta: { label: string; href: string };
+  cta: { label: string; href?: string; modal?: true; region?: ModalRegion };
   /** Exactly one tier should be popular (typically the middle). */
   popular?: boolean;
 }
@@ -234,13 +236,23 @@ function TierCard({ tier }: { tier: PricingTier }) {
 
           {/* CTA — inverted: white bg + blue text */}
           <div className="mt-8">
-            <Link
-              href={tier.cta.href}
-              className="block w-full rounded-xl bg-white px-6 py-3.5 text-center font-fj-body font-semibold text-fj-jet-blue transition-all hover:bg-[#F0F4FF] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-              style={{ fontSize: '0.9375rem' }}
-            >
-              {tier.cta.label}
-            </Link>
+            {tier.cta.modal ? (
+              <ModalCTAButton
+                label={tier.cta.label}
+                region={tier.cta.region ?? 'us'}
+                btnVariant="secondary-light"
+                className="block w-full rounded-xl bg-white px-6 py-3.5 text-center font-fj-body font-semibold text-fj-jet-blue transition-all hover:bg-[#F0F4FF] focus-visible:outline-white"
+                style={{ fontSize: '0.9375rem', borderRadius: '0.75rem', border: 'none' }}
+              />
+            ) : (
+              <Link
+                href={tier.cta.href ?? '/contact'}
+                className="block w-full rounded-xl bg-white px-6 py-3.5 text-center font-fj-body font-semibold text-fj-jet-blue transition-all hover:bg-[#F0F4FF] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                style={{ fontSize: '0.9375rem' }}
+              >
+                {tier.cta.label}
+              </Link>
+            )}
           </div>
         </div>
       </div>
@@ -333,13 +345,23 @@ function TierCard({ tier }: { tier: PricingTier }) {
 
         {/* CTA — outlined blue → fills on hover */}
         <div className="mt-8">
-          <Link
-            href={tier.cta.href}
-            className="block w-full rounded-xl border border-fj-jet-blue bg-transparent px-6 py-3.5 text-center font-fj-body font-semibold text-fj-jet-blue transition-all hover:bg-fj-jet-blue hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue"
-            style={{ fontSize: '0.9375rem' }}
-          >
-            {tier.cta.label}
-          </Link>
+          {tier.cta.modal ? (
+            <ModalCTAButton
+              label={tier.cta.label}
+              region={tier.cta.region ?? 'us'}
+              btnVariant="secondary-light"
+              className="block w-full rounded-xl border border-fj-jet-blue bg-transparent px-6 py-3.5 text-center font-fj-body font-semibold text-fj-jet-blue transition-all hover:bg-fj-jet-blue hover:text-white focus-visible:outline-fj-jet-blue"
+              style={{ fontSize: '0.9375rem' }}
+            />
+          ) : (
+            <Link
+              href={tier.cta.href ?? '/contact'}
+              className="block w-full rounded-xl border border-fj-jet-blue bg-transparent px-6 py-3.5 text-center font-fj-body font-semibold text-fj-jet-blue transition-all hover:bg-fj-jet-blue hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue"
+              style={{ fontSize: '0.9375rem' }}
+            >
+              {tier.cta.label}
+            </Link>
+          )}
         </div>
 
       </div>

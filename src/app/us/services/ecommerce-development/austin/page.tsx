@@ -78,7 +78,7 @@ export default function Page() {
           eyebrow="E-COMMERCE DEVELOPMENT · AUSTIN"
           headline="Shopify Developer Austin — E-Commerce Stores for Texas Businesses"
           lead="Austin's Silicon Hills runs on ambition. FactoryJet builds the Shopify stores to match — live in 7 days from $2,999, at 50–60% below local agency rates. Shopify, WooCommerce & AI-powered stores for DTC founders, tech brands, food & beverage, and SXSW-era innovators. 500+ projects, 4.9★."
-          primaryCta={{ label: 'Get a Free Shopify Audit', href: '/contact' }}
+          primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
           trustItems={['Shopify stores from $2,999', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup />}
         />
@@ -314,7 +314,7 @@ export default function Page() {
                 'JSON-LD schema + AEO SEO setup',
                 '30-day post-launch support',
               ],
-              cta: { label: 'Get a quote', href: '/contact' },
+              cta: { label: 'Get a quote', modal: true, region: 'us' },
             },
             {
               name: 'Shopify Growth',
@@ -330,7 +330,7 @@ export default function Page() {
                 'AI product recommendations integration',
                 'Priority support + training session',
               ],
-              cta: { label: 'Get a quote', href: '/contact' },
+              cta: { label: 'Get a quote', modal: true, region: 'us' },
               popular: true,
             },
             {
@@ -347,7 +347,7 @@ export default function Page() {
                 'AEO content for ChatGPT & Perplexity',
                 'Quarterly performance reviews',
               ],
-              cta: { label: 'Get a quote', href: '/contact' },
+              cta: { label: 'Get a quote', modal: true, region: 'us' },
             },
           ] as const}
         />
@@ -483,7 +483,7 @@ export default function Page() {
           eyebrow="READY TO START"
           headline="Ready to Build Your Austin Shopify Store?"
           sub="Austin's DTC market is growing faster than most brands can keep up with. Every week without a high-performing Shopify store is a week your competitors are capturing the searches — and the sales — you should own. Pick a tier, book a free 30-minute audit, and we'll have a store blueprint ready within 72 hours."
-          primaryCta={{ label: 'Get a Free Shopify Audit', href: '/contact' }}
+          primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
         />
 
       </main>

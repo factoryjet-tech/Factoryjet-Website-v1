@@ -60,7 +60,7 @@ export default function Page() {
           eyebrow="E-COMMERCE DEVELOPMENT · PORTLAND"
           headline="Shopify Developer Portland — E-Commerce Stores for Oregon's Independent Brands"
           lead="The only Portland e-commerce agency that launches in 7 days at 50–60% below local rates. Oregon has zero sales tax — the ultimate margin advantage for DTC brands. Shopify, WooCommerce & AI-powered stores for outdoor brands, independent makers, food businesses, and 'Keep Portland Weird' entrepreneurs. 500+ projects, 4.9★ rating."
-          primaryCta={{ label: 'Get a Free Shopify Audit', href: '/contact' }}
+          primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
           trustItems={['Shopify stores from $2,999', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup />}
         />
@@ -282,7 +282,7 @@ export default function Page() {
                 'JSON-LD schema + AEO SEO setup',
                 '30-day post-launch support',
               ],
-              cta: { label: 'Get a quote', href: '/contact' },
+              cta: { label: 'Get a quote', modal: true, region: 'us' },
             },
             {
               name: 'Shopify Growth',
@@ -298,7 +298,7 @@ export default function Page() {
                 'AI product recommendations integration',
                 'Priority support + training session',
               ],
-              cta: { label: 'Get a quote', href: '/contact' },
+              cta: { label: 'Get a quote', modal: true, region: 'us' },
               popular: true,
             },
             {
@@ -315,7 +315,7 @@ export default function Page() {
                 'AEO content for ChatGPT & Perplexity',
                 'Quarterly performance reviews',
               ],
-              cta: { label: 'Get a quote', href: '/contact' },
+              cta: { label: 'Get a quote', modal: true, region: 'us' },
             },
           ] as const}
         />
@@ -451,7 +451,7 @@ export default function Page() {
           eyebrow="READY TO START"
           headline="Ready to Build Your Portland Shopify Store?"
           sub="Oregon's zero sales tax is a competitive advantage most Portland brands aren't using. Every week without a high-performing Shopify store is a week your competitors own the searches you should. Book a free 30-minute audit and we'll have a store blueprint ready within 72 hours."
-          primaryCta={{ label: 'Get a Free Shopify Audit', href: '/contact' }}
+          primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
         />
 
       </main>

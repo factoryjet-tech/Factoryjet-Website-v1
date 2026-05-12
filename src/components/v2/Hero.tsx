@@ -2,6 +2,8 @@ import type { ReactNode } from 'react';
 import Link from 'next/link';
 
 import Heading from './Heading';
+import ModalCTAButton from './ModalCTAButton';
+import type { ModalRegion } from '../../context/ContactModalContext';
 
 /**
  * Hero — v2.1 visual upgrade.
@@ -23,8 +25,8 @@ export interface HeroProps {
   eyebrow?: string;
   headline: ReactNode;
   lead?: string;
-  primaryCta?: { label: string; href: string };
-  secondaryCta?: { label: string; href: string };
+  primaryCta?: { label: string; href?: string; modal?: true; region?: ModalRegion };
+  secondaryCta?: { label: string; href?: string; modal?: true; region?: ModalRegion };
   trustItems?: string[];
   rightSlot?: ReactNode;
 }
@@ -186,29 +188,45 @@ function HeroContent({
       {(primaryCta || secondaryCta) && (
         <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
           {primaryCta && (
-            <Link
-              href={primaryCta.href}
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-fj-jet-blue px-7 py-3.5 font-fj-body text-base font-semibold text-white transition-all hover:bg-[#003D99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue"
-              style={{
-                /* Button as light source — Stripe/Linear technique */
-                boxShadow: '0 4px 24px rgba(0,82,204,0.35), 0 1px 4px rgba(0,82,204,0.20)',
-              }}
-            >
-              {primaryCta.label}
-              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/20" aria-hidden="true">
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-                  <path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </span>
-            </Link>
+            primaryCta.modal ? (
+              <ModalCTAButton
+                label={primaryCta.label}
+                region={primaryCta.region ?? 'us'}
+                btnVariant="primary-light"
+                style={{ boxShadow: '0 4px 24px rgba(0,82,204,0.35), 0 1px 4px rgba(0,82,204,0.20)' }}
+              />
+            ) : (
+              <Link
+                href={primaryCta.href ?? '/contact'}
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-fj-jet-blue px-7 py-3.5 font-fj-body text-base font-semibold text-white transition-all hover:bg-[#003D99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue"
+                style={{
+                  boxShadow: '0 4px 24px rgba(0,82,204,0.35), 0 1px 4px rgba(0,82,204,0.20)',
+                }}
+              >
+                {primaryCta.label}
+                <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/20" aria-hidden="true">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                    <path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </span>
+              </Link>
+            )
           )}
           {secondaryCta && (
-            <Link
-              href={secondaryCta.href}
-              className="inline-flex items-center justify-center rounded-full border border-fj-neutral-200 bg-white/60 px-7 py-3.5 font-fj-body text-base font-semibold text-fj-ink backdrop-blur-sm transition-colors hover:border-fj-neutral-400 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue"
-            >
-              {secondaryCta.label}
-            </Link>
+            secondaryCta.modal ? (
+              <ModalCTAButton
+                label={secondaryCta.label}
+                region={secondaryCta.region ?? 'us'}
+                btnVariant="secondary-light"
+              />
+            ) : (
+              <Link
+                href={secondaryCta.href ?? '/contact'}
+                className="inline-flex items-center justify-center rounded-full border border-fj-neutral-200 bg-white/60 px-7 py-3.5 font-fj-body text-base font-semibold text-fj-ink backdrop-blur-sm transition-colors hover:border-fj-neutral-400 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue"
+              >
+                {secondaryCta.label}
+              </Link>
+            )
           )}
         </div>
       )}

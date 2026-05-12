@@ -60,7 +60,7 @@ export default function Page() {
           eyebrow="E-COMMERCE DEVELOPMENT · CHARLOTTE"
           headline="Shopify Developer Charlotte — E-Commerce Stores for North Carolina Businesses"
           lead="The only Charlotte e-commerce agency that launches in 7 days at 50–60% below local rates. Shopify, WooCommerce & AI-powered stores for Queen City's DTC brands, NASCAR ecosystem, financial services adjacent brands, and fast-growing Charlotte tech scene. 500+ projects, 4.9★ rating."
-          primaryCta={{ label: 'Get a Free Shopify Audit', href: '/contact' }}
+          primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
           trustItems={['Shopify stores from $2,999', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup />}
         />
@@ -285,7 +285,7 @@ export default function Page() {
                 'JSON-LD schema + AEO SEO setup',
                 '30-day post-launch support',
               ],
-              cta: { label: 'Get a quote', href: '/contact' },
+              cta: { label: 'Get a quote', modal: true, region: 'us' },
             },
             {
               name: 'Shopify Growth',
@@ -301,7 +301,7 @@ export default function Page() {
                 'AI product recommendations integration',
                 'Priority support + training session',
               ],
-              cta: { label: 'Get a quote', href: '/contact' },
+              cta: { label: 'Get a quote', modal: true, region: 'us' },
               popular: true,
             },
             {
@@ -318,7 +318,7 @@ export default function Page() {
                 'AEO content for ChatGPT & Perplexity',
                 'Quarterly performance reviews',
               ],
-              cta: { label: 'Get a quote', href: '/contact' },
+              cta: { label: 'Get a quote', modal: true, region: 'us' },
             },
           ] as const}
         />
@@ -454,7 +454,7 @@ export default function Page() {
           eyebrow="READY TO START"
           headline="Ready to Build Your Charlotte Shopify Store?"
           sub="Queen City's banking corridor, NASCAR fan base, and fast-growing DTC market are generating revenue that a great Shopify store should be capturing. Every week without one is a week your competitors own the searches you should. Book a free 30-minute audit and we'll have a store blueprint ready within 72 hours."
-          primaryCta={{ label: 'Get a Free Shopify Audit', href: '/contact' }}
+          primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
         />
 
       </main>

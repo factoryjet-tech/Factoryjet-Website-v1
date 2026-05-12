@@ -78,7 +78,7 @@ export default function Page() {
           eyebrow="E-COMMERCE DEVELOPMENT · TAMPA"
           headline="Shopify Developer Tampa — E-Commerce Stores for Gulf Coast Businesses"
           lead="Tampa is one of the fastest-growing economies in Florida — $200B GDP, zero state income tax, and a booming DTC market across healthcare, marine, food, and tourism. FactoryJet builds the Shopify stores to capture it — live in 7 days from $2,999, at 50–60% below local agency rates. 500+ projects, 4.9★."
-          primaryCta={{ label: 'Get a Free Shopify Audit', href: '/contact' }}
+          primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
           trustItems={['Shopify stores from $2,999', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup />}
         />
@@ -315,7 +315,7 @@ export default function Page() {
                 'JSON-LD schema + AEO SEO setup',
                 '30-day post-launch support',
               ],
-              cta: { label: 'Get a quote', href: '/contact' },
+              cta: { label: 'Get a quote', modal: true, region: 'us' },
             },
             {
               name: 'Shopify Growth',
@@ -331,7 +331,7 @@ export default function Page() {
                 'AI product recommendations integration',
                 'Priority support + training session',
               ],
-              cta: { label: 'Get a quote', href: '/contact' },
+              cta: { label: 'Get a quote', modal: true, region: 'us' },
               popular: true,
             },
             {
@@ -348,7 +348,7 @@ export default function Page() {
                 'AEO content for ChatGPT & Perplexity',
                 'Quarterly performance reviews',
               ],
-              cta: { label: 'Get a quote', href: '/contact' },
+              cta: { label: 'Get a quote', modal: true, region: 'us' },
             },
           ] as const}
         />
@@ -484,7 +484,7 @@ export default function Page() {
           eyebrow="READY TO START"
           headline="Ready to Build Your Tampa Shopify Store?"
           sub="Tampa's Gulf Coast economy is growing faster than most brands can keep up with. Every week without a high-performing Shopify store is a week your competitors are capturing the searches — and the sales — you should own. Pick a tier, book a free 30-minute audit, and we'll have a store blueprint ready within 72 hours."
-          primaryCta={{ label: 'Get a Free Shopify Audit', href: '/contact' }}
+          primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
         />
 
       </main>
