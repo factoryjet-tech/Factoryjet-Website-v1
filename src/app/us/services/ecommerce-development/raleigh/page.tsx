@@ -58,7 +58,7 @@ export default function Page() {
         {/* ── 1. HERO ────────────────────────────────────────────────── */}
         <Hero
           eyebrow="E-COMMERCE DEVELOPMENT · RALEIGH"
-          headline="Shopify Developer Raleigh — E-Commerce Stores for the Research Triangle"
+          headline="Shopify Developer Raleigh for the Research Triangle"
           lead="The only Raleigh e-commerce agency that launches in 7 days at 50–60% below local rates. Shopify, WooCommerce & AI-powered stores for the Research Triangle's tech brands, life sciences companies, NC State entrepreneurs, and Durham-Chapel Hill DTC founders. 500+ projects, 4.9★ rating."
           primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
           trustItems={['Shopify stores from $2,999', '7-day delivery guarantee', '500+ stores launched']}

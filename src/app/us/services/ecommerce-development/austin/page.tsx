@@ -76,7 +76,7 @@ export default function Page() {
         {/* ── 1. HERO (dark) ─────────────────────────────────────────── */}
         <Hero
           eyebrow="E-COMMERCE DEVELOPMENT · AUSTIN"
-          headline="Shopify Developer Austin — E-Commerce Stores for Texas Businesses"
+          headline="Shopify Developer Austin for Texas Businesses"
           lead="Austin's Silicon Hills runs on ambition. FactoryJet builds the Shopify stores to match — live in 7 days from $2,999, at 50–60% below local agency rates. Shopify, WooCommerce & AI-powered stores for DTC founders, tech brands, food & beverage, and SXSW-era innovators. 500+ projects, 4.9★."
           primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
           trustItems={['Shopify stores from $2,999', '7-day delivery guarantee', '500+ stores launched']}
