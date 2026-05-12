@@ -114,8 +114,6 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${sourceSerif.variable} ${fraunces.variable} ${cormorant.variable} ${GeistSans.variable} ${GeistMono.variable}`}>
       <head>
         {/* Preconnect to critical origins */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 

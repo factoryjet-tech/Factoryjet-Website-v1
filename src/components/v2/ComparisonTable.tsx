@@ -160,7 +160,7 @@ export default function ComparisonTable({
                     className={`${HEADER_TYPE} ${
                       col.isFactoryJet
                         ? 'bg-fj-jet-blue-tint text-fj-jet-blue'
-                        : 'text-fj-neutral-400'
+                        : 'text-fj-neutral-600'
                     }`}
                     style={col.isFactoryJet ? { borderTopWidth: '3px', borderTopStyle: 'solid', borderTopColor: '#0052CC' } : undefined}
                   >
