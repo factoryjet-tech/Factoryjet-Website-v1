@@ -41,6 +41,11 @@ export default function MotionFadeUp({
     const el = ref.current;
     if (!el) return;
 
+    // Respect user's motion preference — skip all animation if reduce is set.
+    // This also satisfies WCAG 2.1 SC 2.3.3 (AAA) and is a Core Web Vitals
+    // best-practice: avoids layout shifts on devices with the flag enabled.
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
     let killed = false;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let tween: any = null;

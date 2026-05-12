@@ -97,7 +97,7 @@ export default function BigThreeTrustBlock({
             )}
             {headline && (
               <p
-                className="mt-2 font-fj-body text-fj-neutral-400"
+                className="mt-2 font-fj-body text-fj-neutral-600"
                 style={{ fontSize: '0.9375rem', lineHeight: 1.5 }}
               >
                 {headline}

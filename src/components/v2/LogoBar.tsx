@@ -86,6 +86,11 @@ export default function LogoBar({
             width: max-content;
             animation: logoMarquee 40s linear infinite;
           }
+          @media (prefers-reduced-motion: reduce) {
+            .logo-marquee-track {
+              animation: none;
+            }
+          }
         `}</style>
 
         <div className="logo-marquee-track" aria-hidden="false">
