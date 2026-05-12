@@ -53,18 +53,36 @@ export default function MotionFadeUp({
     // Set initial state
     gsap.set(el, { opacity: 0, y: 28 });
 
-    const tween = gsap.to(el, {
-      opacity: 1,
-      y: 0,
-      duration: 0.55,
-      delay,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: el,
-        start: 'top 88%',
-        once,
-      },
-    });
+    // If the element is already in the viewport when the page loads
+    // (above-the-fold sections), ScrollTrigger's 'top 88%' will never fire
+    // because the scroll position starts at 0 and the element is already
+    // past the trigger point. Animate immediately in that case.
+    const rect = el.getBoundingClientRect();
+    const alreadyInView = rect.top < window.innerHeight * 0.88;
+
+    let tween: gsap.core.Tween;
+    if (alreadyInView) {
+      tween = gsap.to(el, {
+        opacity: 1,
+        y: 0,
+        duration: 0.55,
+        delay,
+        ease: 'power2.out',
+      });
+    } else {
+      tween = gsap.to(el, {
+        opacity: 1,
+        y: 0,
+        duration: 0.55,
+        delay,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 88%',
+          once,
+        },
+      });
+    }
 
     return () => {
       tween.kill();
