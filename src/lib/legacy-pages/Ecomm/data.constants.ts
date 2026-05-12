@@ -436,7 +436,6 @@ export const FAQS: FAQItem[] = [
     answer: "Shopify for quick launch and ease of use. WooCommerce for more customization and lower ongoing costs. We recommend Shopify for most SMBs launching their first store."
   },
   {
-  {
     category: "Platform Selection",
     question: "Can I migrate from Shopify to WooCommerce later?",
     answer: "Yes, but it requires planning. We handle data migration, redirects, and can minimize disruption."
