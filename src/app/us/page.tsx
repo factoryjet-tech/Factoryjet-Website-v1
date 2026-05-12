@@ -20,24 +20,24 @@ import FinalCTA from '@/components/v2/FinalCTA';
    SEO / Metadata
 ───────────────────────────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: 'Web Design for US Small Businesses | 7-Day Delivery, 60% Less | FactoryJet',
+  title: 'Web Design Agency USA | Websites in 7 Days from $1,999 — 60% Less | FactoryJet',
   description:
-    'Your website live in 7 days at 60% less than US agencies. 500+ businesses served. Fixed pricing, full code ownership, zero vendor lock-in. Book a free strategy call.',
+    'Top-rated US web design agency: custom websites live in 7 days from $1,999 — 60% less than US agencies. Shopify, Next.js, WordPress. 500+ businesses served. Free strategy call.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design for US Small Businesses | 7-Day Delivery, 60% Less | FactoryJet',
+    title: 'Web Design Agency USA | Websites in 7 Days from $1,999 — 60% Less | FactoryJet',
     description:
-      'Your website live in 7 days at 60% less than US agencies. 500+ businesses served. Fixed pricing, full code ownership, zero vendor lock-in. Book a free strategy call.',
+      'Custom websites live in 7 days from $1,999 — 60% less than US agencies. 500+ businesses served. Shopify, Next.js, WordPress. Free strategy call.',
     url: 'https://factoryjet.com/us',
-    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet - Web Design Agency for US Small Businesses' }],
+    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet - Web Design Agency USA' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web Design for US Small Businesses | 7-Day Delivery, 60% Less | FactoryJet',
+    title: 'Web Design Agency USA | 7 Days from $1,999 — 60% Less | FactoryJet',
     description:
-      'Websites in 7 days, 60% less than US agencies. 500+ businesses served. Fixed pricing, full code ownership, zero lock-in.',
+      'Custom websites live in 7 days from $1,999 — 60% less than US agencies. Shopify, Next.js, WordPress. 500+ businesses served.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {

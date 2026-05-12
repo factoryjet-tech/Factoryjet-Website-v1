@@ -6,28 +6,28 @@ import SiteFooter from '@/components/v2/SiteFooter'
 
 
 export const metadata: Metadata = {
-  title: 'E-Commerce Development Fargo | Shopify & AI Agency - FactoryJet',
-  description: 'Custom Shopify & e-commerce stores for Fargo businesses. From Microsoft\'s backyard to Main Street — AI-powered development. Free audit.',
+  title: 'Shopify Developer Fargo ND | E-Commerce Development from $2,999 | FactoryJet',
+  description: 'Best Shopify developer in Fargo, North Dakota: stores live in 7 days from $2,999. Silicon Prairie e-commerce specialists — Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'E-Commerce Development Fargo | Shopify & AI Agency - FactoryJet',
-    description: 'Custom Shopify & e-commerce stores for Fargo businesses. AI-powered development for the Silicon Prairie.',
+    title: 'Shopify Developer Fargo ND | E-Commerce Development from $2,999 | FactoryJet',
+    description: 'Best Shopify developer in Fargo, North Dakota: stores live in 7 days from $2,999. Silicon Prairie e-commerce specialists — Shopify, WooCommerce & AI. Free audit.',
     url: 'https://factoryjet.com/us/services/ecommerce-development/fargo',
     images: [
       {
         url: 'https://factoryjet.com/logo.png',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet - E-Commerce Development Fargo',
+        alt: 'FactoryJet - Shopify Developer Fargo ND',
       },
     ],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'E-Commerce Development Fargo | FactoryJet',
-    description: 'Custom Shopify & e-commerce stores for Fargo businesses. AI-powered development for the Silicon Prairie.',
+    title: 'Shopify Developer Fargo ND | E-Commerce from $2,999 | FactoryJet',
+    description: 'Best Shopify developer in Fargo ND: stores live in 7 days from $2,999. Silicon Prairie e-commerce specialists. Free audit.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
