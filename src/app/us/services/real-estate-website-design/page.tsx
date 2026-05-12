@@ -583,7 +583,7 @@ export default function RealEstateWebsiteDesignPage() {
       <div id="process">
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="From Market Strategy to Live Site — in 5 Stages"
+          headline="From Market Strategy to Live Site: 5 Stages"
           lead="Every real estate website FactoryJet builds starts with your market, not a template. Here's how a typical agent site comes together in 7 days."
           stages={journeyStages}
           closingNote="5 STAGES · 7-DAY DELIVERY · IDX INTEGRATION INCLUDED · FREE QUOTE IN 24 HOURS"
@@ -617,7 +617,7 @@ export default function RealEstateWebsiteDesignPage() {
       <div id="pricing">
         <PricingTiers
           eyebrow="REAL ESTATE WEBSITE PRICING"
-          headline="Fixed-Price Real Estate Websites — No Ongoing Platform Fees"
+          headline="Fixed-Price Real Estate Websites: No Ongoing Platform Fees"
           lead="Every tier includes a fixed scope, a fixed price, and a delivery timeline we stand behind. You own the site outright — no platform lock-in, no monthly subscription to FactoryJet."
           tiers={PRICING_TIERS}
           footnote="IDX provider monthly fees ($50–$150/mo) are paid directly to your IDX provider — not FactoryJet. No ongoing FactoryJet fees after launch."
@@ -650,7 +650,7 @@ export default function RealEstateWebsiteDesignPage() {
       <FinalCTA
         variant="dark"
         eyebrow="START YOUR PROJECT"
-        headline="Get a custom real estate website that ranks in your market — in 7 days"
+        headline="Get a custom real estate website that ranks in your market, in 7 days"
         sub="Tell us your market, your neighborhoods, and your IDX provider. We'll send a free quote within 24 hours. No sales call required."
         primaryCta={{ label: 'Get a Free Quote', href: '/contact' }}
         secondaryCta={{ label: 'See All Pricing', href: '/us/pricing' }}

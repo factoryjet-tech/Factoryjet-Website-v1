@@ -97,7 +97,7 @@ export default function Page() {
         {/* ── 4. CITY CONTEXT (light / cream) ───────────────────────── */}
         <CityContextSection
           eyebrow="AUSTIN MARKET"
-          headline="Silicon Hills Has the Brands — Now Build the Store That Converts"
+          headline="Silicon Hills Has the Brands. Now Build the Store That Converts"
           leadParagraphs={[
             "Austin has become one of the fastest-growing tech ecosystems in North America. Dell Technologies, Apple's 133-acre campus, Tesla's Gigafactory, Oracle's relocated HQ, and over 7,600 tech companies have made Austin the fifth-largest tech hub in the US. That concentration of talent, capital, and consumer spending creates a DTC opportunity unmatched in the South. FactoryJet builds Shopify stores that capture it — mobile-first, Lighthouse 95+, with AI product discovery and AEO content that gets cited by ChatGPT and Google AI Overviews.",
           ]}

@@ -859,7 +859,7 @@ export default function ShopifyPage() {
         {/* ── 8. TECH STACK ────────────────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="OUR TECH STACK"
-          headline="Built on Shopify's Native Tools — No Bloated App Stacks"
+          headline="Built on Shopify's Native Tools: No Bloated App Stacks"
           lead="We build in Liquid and Hydrogen — Shopify's own languages — so your theme performs at platform speed, not plugin speed."
           reverseOnDesktop
           body={
@@ -1040,7 +1040,7 @@ export default function ShopifyPage() {
           <FinalCTA
             variant="dark"
             eyebrow="READY TO START"
-            headline="Book a Free Shopify Store Audit — No Obligation"
+            headline="Book a Free Shopify Store Audit, No Obligation"
             sub="In 30 minutes, we'll audit your current store or platform, identify the specific pages losing you the most revenue, and give you a fixed price to fix it. No pitch. No pressure. An honest assessment from engineers who've built 120+ stores."
             primaryCta={{ label: 'Book Your Free Store Audit', href: '/contact' }}
             secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}

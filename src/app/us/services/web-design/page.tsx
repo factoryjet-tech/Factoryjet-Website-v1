@@ -873,7 +873,7 @@ export default function WebDesignPage() {
         {/* ── 8. FULL TECH STACK ───────────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="OUR TECH STACK"
-          headline="Modern Web Technologies — Zero Black-Box Builders"
+          headline="Modern Web Technologies: Zero Black-Box Builders"
           lead="We build with the same tools that power Stripe, Vercel, and Linear — not page builders, visual editors, or bloated themes. Your site loads fast because the code is clean."
           reverseOnDesktop
           body={
@@ -1054,7 +1054,7 @@ export default function WebDesignPage() {
           <FinalCTA
             variant="dark"
             eyebrow="READY TO START"
-            headline="Book a Free Website Audit — No Obligation"
+            headline="Book a Free Website Audit, No Obligation"
             sub="In 30 minutes, we'll audit your current site, show you exactly what's hurting performance and conversions, and give you a fixed price to fix it. No pitch. No pressure. Just an honest assessment from engineers who build for a living."
             primaryCta={{ label: 'Book Your Free Audit', href: '/contact' }}
             secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}

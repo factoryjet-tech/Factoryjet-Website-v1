@@ -77,7 +77,7 @@ export default function Page() {
         {/* ── 4. CITY CONTEXT ─────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="MIAMI MARKET"
-          headline="Miami's Global Consumer Base Is Ready — Is Your Store?"
+          headline="Miami's Global Consumer Base Is Ready. Is Your Store?"
           leadParagraphs={[
             "Miami is the gateway between the US and Latin America, processing $85 billion in international trade annually through Port Miami and Miami International Airport. The city's 6.1 million metro residents are among the highest-spending consumers in the US — average household income in Brickell and Coral Gables exceeds $120,000. And with 26 million annual visitors, Miami's tourism economy creates a retail and DTC opportunity that most businesses fail to capture digitally. FactoryJet builds Shopify stores that convert Miami's multilingual, multi-currency customer base — including Spanish-language SEO and Latin American shipping flows.",
             "Miami's Silicon Beach tech scene has grown to 8,000+ startups, fueled by Citadel's relocation from Chicago and the arrival of Goldman Sachs, Blackstone, and Microsoft offices in Brickell. Art Basel Miami Beach (85,000 attendees, $1B in art sales) makes Miami the global pulse point for premium DTC brands. FactoryJet builds Shopify stores that match Miami's premium aesthetic and multicultural reach.",

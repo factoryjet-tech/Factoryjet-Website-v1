@@ -825,7 +825,7 @@ export default function EcommerceDevelopmentPage() {
         {/* ── 8. TECH STACK ────────────────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="OUR TECH STACK"
-          headline="Platform-Agnostic Engineering — We Use What Fits Your Business"
+          headline="Platform-Agnostic Engineering: We Use What Fits Your Business"
           lead="We don't have a preferred platform vendor. We have a standard of build quality that applies regardless of which platform you're on."
           reverseOnDesktop
           body={
@@ -1021,7 +1021,7 @@ export default function EcommerceDevelopmentPage() {
           <FinalCTA
             variant="dark"
             eyebrow="READY TO START"
-            headline="Book a Free E-Commerce Consultation — No Obligation"
+            headline="Book a Free E-Commerce Consultation, No Obligation"
             sub="In 30 minutes, we'll audit your current store or platform, identify what's costing you revenue, recommend the right tech stack, and give you a fixed price. No pitch. No pressure. An honest assessment from engineers who've built 500+ stores."
             primaryCta={{ label: 'Book Your Free Consultation', href: '/contact' }}
             secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}

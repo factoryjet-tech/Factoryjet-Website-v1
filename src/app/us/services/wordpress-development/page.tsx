@@ -691,7 +691,7 @@ export default function WordPressDevelopmentPage() {
         {/* ── 4. WHAT WE BUILD ─────────────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="WORDPRESS DEVELOPMENT EXPLAINED"
-          headline="Why Custom WordPress Themes Outperform Page Builders — and Why Most Agencies Still Use Them"
+          headline="Why Custom WordPress Themes Outperform Page Builders, and Why Most Agencies Still Use Them"
           lead="Page builders make agencies faster and more profitable — not you. They ship faster because they're templating with a drag-and-drop framework, but the output is bloated code that loads slowly, fails Core Web Vitals, and produces Lighthouse scores that actively suppress your search rankings. Custom theme development takes longer because it's built to your spec — and it performs accordingly."
           body={
             <>
@@ -809,7 +809,7 @@ export default function WordPressDevelopmentPage() {
         {/* ── 7. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="From Discovery to Custom WordPress Launch — in 5 Structured Stages"
+          headline="From Discovery to Custom WordPress Launch: 5 Structured Stages"
           lead="Nothing gets built without a plan. Nothing launches without sign-off. Every stage produces a deliverable you review before we move to the next one."
           stages={WP_JOURNEY_STAGES}
           closingNote="5 STAGES · 3 WEEKS (10 PAGES) TO 10 WEEKS (LARGE CUSTOM BUILDS) · FREE CONSULTATION FIRST"
@@ -818,7 +818,7 @@ export default function WordPressDevelopmentPage() {
         {/* ── 8. US MARKET CONTEXT ─────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="THE US WORDPRESS MARKET"
-          headline="WordPress Demand Is Growing — But Most of It Is Still Built on Page Builders"
+          headline="WordPress Demand Is Growing, But Most of It Is Still Built on Page Builders"
           leadParagraphs={[
             "WordPress powers 43% of the internet and continues to grow market share. The demand for WordPress web design agencies has increased 50% year-over-year as small businesses recognize the flexibility and SEO advantages of a properly built WordPress site over closed SaaS platforms. But the majority of that demand is still being met by agencies using page builders — which means most WordPress websites being built in 2025 are starting with a performance deficit they\'ll carry for the life of the site.",
             "In competitive markets — Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, and Tampa — the performance gap between page builder sites and custom theme sites translates directly into search ranking differences. Two businesses in the same city with the same content quality will rank differently if one has a custom WordPress theme passing Core Web Vitals and one has an Elementor build failing them. That\'s a mechanical advantage that compounding over time.",
@@ -845,7 +845,7 @@ export default function WordPressDevelopmentPage() {
         <div id="pricing">
           <PricingTiers
             eyebrow="TRANSPARENT PRICING"
-            headline="Fixed-Price Custom WordPress Development — No Hourly Billing"
+            headline="Fixed-Price Custom WordPress Development: No Hourly Billing"
             lead="Fixed scope. Fixed price. Fixed timeline. You know what you're getting and what it costs before any work begins."
             tiers={PRICING_TIERS}
             footnote="All prices in USD. Hosting ($20–$150/month), domain registration, and ongoing plugin license costs are separate. Maintenance retainer available post-launch for updates and content changes. You own all source code, design files, and CMS credentials at handoff."
@@ -869,7 +869,7 @@ export default function WordPressDevelopmentPage() {
         {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Every Question We Get About Custom WordPress Development — Answered Straight"
+          headline="Every Question We Get About Custom WordPress Development, Answered Straight"
           lead="No jargon. No agency spin. Clear answers to the questions every business owner asks before starting a WordPress project."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
@@ -879,7 +879,7 @@ export default function WordPressDevelopmentPage() {
         <FinalCTA
           variant="dark"
           eyebrow="START WITH A FREE CONSULTATION"
-          headline="Book a Free WordPress Consultation — Get a Scope and Quote in 48 Hours"
+          headline="Book a Free WordPress Consultation and Get a Scope and Quote in 48 Hours"
           sub="In 30 minutes, we'll review your current site, understand your goals, and tell you exactly what a custom WordPress build would include — the page structure, technical architecture, timeline, and fixed cost. No pitch deck. No discovery retainer. Just a straight assessment from engineers who've built 500+ WordPress sites for US businesses."
           primaryCta={{ label: 'Book Your Free WordPress Consultation', href: '/contact' }}
           secondaryCta={{ label: 'See Website Redesign Services', href: '/us/services/website-redesign' }}

@@ -333,7 +333,7 @@ export default function ClevelandWebDesignPage() {
         {/* ── 6. HOW IT WORKS ──────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="YOUR PATH TO LAUNCH"
-          headline="5 Steps, Zero Surprises — From Strategy Call to Live Website"
+          headline="5 Steps, Zero Surprises: From Strategy Call to Live Website"
           lead="We don't start designing until we understand your goals. Every stage ends with a deliverable you review and approve — so no design, no development, and no launch happens without your sign-off."
           stages={JOURNEY_STAGES}
           closingNote="5 STAGES · 7 DAYS (UP TO 5 PAGES) · FREE STRATEGY CALL BEFORE ANY COMMITMENT"

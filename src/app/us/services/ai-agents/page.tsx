@@ -836,7 +836,7 @@ export default function AIAgentsPage() {
         {/* ── 3. WHAT IS AN AI AGENT ───────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="AI EXPLAINED"
-          headline="What Is an AI Agent — and Why Does Your Business Need One?"
+          headline="What Is an AI Agent, and Why Does Your Business Need One?"
           lead="A chatbot answers questions. An AI agent takes action. It connects to your tools, reads inputs, makes decisions, and completes multi-step workflows — without a human directing every step."
           body={
             <>
@@ -1059,7 +1059,7 @@ export default function AIAgentsPage() {
         {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="How We Build Your AI Agent — from Strategy Call to Go-Live"
+          headline="How We Build Your AI Agent: from Strategy Call to Go-Live"
           lead="A structured 5-stage process that keeps you informed at every step and delivers a working AI agent — not a PowerPoint about one."
           stages={AI_JOURNEY_STAGES}
           closingNote="5 STAGES · 2–12 WEEKS TO FIRST AGENT IN PRODUCTION · WEEKLY DEMOS THROUGHOUT"
@@ -1073,7 +1073,7 @@ export default function AIAgentsPage() {
         {/* ── 8. OUR FULL AI SERVICES SUITE ────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="OUR AI SERVICES"
-          headline="More Than AI Agents — a Full AI Solutions Practice"
+          headline="More Than AI Agents: a Full AI Solutions Practice"
           lead="FactoryJet isn't a one-trick AI shop. We offer a complete range of AI services so you can build once and scale — from a single agent to a company-wide AI layer."
           reverseOnDesktop
           body={
@@ -1281,7 +1281,7 @@ export default function AIAgentsPage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO START"
-          headline="Book a Free AI Strategy Call — No Obligation"
+          headline="Book a Free AI Strategy Call, No Obligation"
           sub="In 30 minutes, we'll map your top automation opportunity, estimate the ROI, and tell you exactly what it would cost to build. No pitch. No pressure. Just a straight answer from an engineer who's built it before."
           primaryCta={{ label: 'Book Your Free Call', href: '/contact' }}
           secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}

@@ -77,7 +77,7 @@ export default function Page() {
         {/* ── 4. CITY CONTEXT ─────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="NASHVILLE MARKET"
-          headline="16 Million Visitors Per Year — Is Your Nashville Store Ready to Sell?"
+          headline="16 Million Visitors Per Year. Is Your Nashville Store Ready to Sell?"
           leadParagraphs={[
             "Nashville draws 16 million visitors annually generating $9.1 billion in economic impact — making it the #1 tourism destination in the Southeast US. That visitor economy drives retail demand for music merchandise, local food brands, whiskey and spirits, Nashville-made apparel, and souvenirs. Yet most Nashville businesses capture only a fraction of this spending because their e-commerce stores are either non-existent or built on templates that don't convert. FactoryJet builds Shopify stores that turn Nashville's tourism foot traffic into recurring digital revenue — with smart email capture, local pickup options, and tourist-targeted gifting flows.",
             "Nashville is America's healthcare capital. HCA Healthcare, Vanderbilt University Medical Center, Ascension Saint Thomas, and 500+ healthcare companies generate $76 billion in annual revenue and employ 280,000 people. Tennessee has no state income tax (the Hall Tax was fully repealed in 2021) — Nashville entrepreneurs keep more of their income than founders in 41 other states. Our $2,999 starting price combined with Tennessee's zero income tax makes Nashville one of the most profitable cities in the US to run a DTC brand.",

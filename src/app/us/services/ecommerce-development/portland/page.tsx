@@ -77,7 +77,7 @@ export default function Page() {
         {/* ── 4. CITY CONTEXT ─────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="PORTLAND MARKET"
-          headline="Oregon's Zero Sales Tax Is Your E-Commerce Superpower — Use It"
+          headline="Oregon's Zero Sales Tax Is Your E-Commerce Superpower. Use It"
           leadParagraphs={[
             "Oregon is one of only five US states with zero sales tax — meaning Portland businesses never collect or remit sales tax on in-state purchases. For e-commerce, this simplifies Shopify's tax configuration dramatically: no nexus compliance headaches, no rate lookups, no county-level overrides for Oregon customers. You simply don't charge Oregon residents sales tax. FactoryJet configures this correctly in every Portland build and eliminates the tax complexity that consumes weeks at other agencies.",
             "Portland is the global headquarters of Nike (Washington County/Beaverton), Adidas North America, Columbia Sportswear, Danner Boots, and Pendleton Woolen Mills. That concentration of world-class outdoor and lifestyle brands creates a Portland consumer standard — people here know what good product photography, storytelling, and DTC brand experience look like. FactoryJet builds Shopify stores that meet that standard: editorial photography layouts, premium typefaces, GSAP scroll animations, and conversion flows that match the sophistication of the brands Portland consumers already love.",

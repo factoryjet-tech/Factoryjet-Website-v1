@@ -691,7 +691,7 @@ export default function WebsiteRedesignPage() {
         {/* ── 4. WHAT IS A WEBSITE REDESIGN ────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="WEBSITE REDESIGN EXPLAINED"
-          headline="What a Website Redesign Service Actually Does — and Why Most Sites Need One By Year Three"
+          headline="What a Website Redesign Service Actually Does, and Why Most Sites Need One by Year Three"
           lead="A website redesign is not a visual refresh. It's a structural rebuild that addresses the underlying reasons your current site isn't generating the leads and revenue it should — slow load times, poor mobile experience, weak conversion architecture, and SEO gaps that compound over time. The design is the last thing we touch, not the first."
           body={
             <>
@@ -810,7 +810,7 @@ export default function WebsiteRedesignPage() {
         <div id="process">
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="From Free Audit to Live Redesign — in 5 Structured Stages"
+          headline="From Free Audit to Live Redesign: 5 Structured Stages"
           lead="We don't start designing until we understand your goals. Every stage ends with a deliverable you review and approve — so no design work, no development, and no launch happens without your sign-off."
           stages={REDESIGN_JOURNEY_STAGES}
           closingNote="5 STAGES · 7 DAYS (5-PAGE) TO 6 WEEKS (E-COMMERCE) · FREE AUDIT BEFORE ANY COMMITMENT"
@@ -847,7 +847,7 @@ export default function WebsiteRedesignPage() {
         <div id="pricing">
           <PricingTiers
             eyebrow="TRANSPARENT PRICING"
-            headline="Fixed-Price Website Redesign — Know the Cost Before You Commit"
+            headline="Fixed-Price Website Redesign: Know the Cost Before You Commit"
             lead="No hourly billing. No discovery retainers. No 'it depends.' Every tier has a fixed scope, a fixed price, and a delivery timeline we put in writing."
             tiers={PRICING_TIERS}
             footnote="All prices in USD. Hosting ($20–$80/month), domain registration, and third-party SaaS tools (booking, live chat, email marketing) are separate ongoing costs — we don't mark these up. You own all design files, source code, and CMS credentials at handoff."
@@ -871,7 +871,7 @@ export default function WebsiteRedesignPage() {
         {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Every Question We Get Before a Website Redesign — Answered Straight"
+          headline="Every Question We Get Before a Website Redesign, Answered Straight"
           lead="No jargon. No design-speak. Clear answers to the questions every business owner asks before committing to a redesign."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
@@ -881,7 +881,7 @@ export default function WebsiteRedesignPage() {
         <FinalCTA
           variant="dark"
           eyebrow="START WITH A FREE AUDIT"
-          headline="Book a Free Website Redesign Audit — Walk Away With a Plan"
+          headline="Book a Free Website Redesign Audit and Walk Away With a Plan"
           sub="In 30 minutes, we'll audit your current site's speed, mobile experience, and conversion gaps — then tell you exactly what a redesign would include, how long it takes, and what it costs. No pitch. No pressure. Just a straight assessment from a team that's redesigned 500+ small business websites — and knows what actually moves the needle."
           primaryCta={{ label: 'Book Your Free Redesign Audit', href: '/contact' }}
           secondaryCta={{ label: 'See WordPress Development', href: '/us/services/wordpress-development' }}

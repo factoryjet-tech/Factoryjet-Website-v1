@@ -706,7 +706,7 @@ export default function AIAutomationPage() {
         {/* ── 4. WHAT IS AN AI AUTOMATION AGENCY ───────────────────────────── */}
         <ServiceExplanation
           eyebrow="AI AUTOMATION EXPLAINED"
-          headline="What an AI Automation Agency Does — and Why It's Different from a Chatbot or a Zapier Freelancer"
+          headline="What an AI Automation Agency Does, and Why It's Different from a Chatbot or a Zapier Freelancer"
           lead="An AI automation agency doesn't build you a chatbot and call it done. It maps your manual workflows, connects your tools via API, adds an AI decision layer where routing alone isn't smart enough, and hands you a system that runs your operations while your team focuses on the work that actually needs a human."
           body={
             <>
@@ -795,7 +795,7 @@ export default function AIAutomationPage() {
         {/* ── 5. THE PROBLEM (DARK) ─────────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="THE COST OF MANUAL WORK"
-          headline="20 hours a week in manual work is $36,400 a year in lost productivity — per employee."
+          headline="20 hours a week in manual work is $36,400 a year in lost productivity, per employee."
           lead="At a fully-loaded labor cost of $35/hour, 20 manual hours per week per employee equals $36,400 per year spent on work that contributes zero strategic value. Multiply that across a team of 5 and it's $182,000 annually — in copying data between tools, writing the same emails, and running the same reports. Most SMBs automate this in 3–5 weeks for $8,000. The math is not complicated."
           pillars={[
             {
@@ -824,7 +824,7 @@ export default function AIAutomationPage() {
         {/* ── 7. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="From Free Audit to Automated Workflow — in 5 Structured Stages"
+          headline="From Free Audit to Automated Workflow: 5 Structured Stages"
           lead="We don't start building until we understand your process completely. Every stage ends with a deliverable you review and approve — so nothing gets built that you didn't ask for."
           stages={AUTOMATION_JOURNEY_STAGES}
           closingNote="5 STAGES · 3 DAYS TO 4 WEEKS · FREE AUDIT BEFORE ANY COMMITMENT"
@@ -860,7 +860,7 @@ export default function AIAutomationPage() {
         <div id="pricing">
           <PricingTiers
             eyebrow="TRANSPARENT PRICING"
-            headline="Fixed-Price AI Automation — No Hourly Billing, No Scope Creep"
+            headline="Fixed-Price AI Automation: No Hourly Billing, No Scope Creep"
             lead="Every tier includes a fixed scope, a fixed price, and a delivery timeline we stand behind. No discovery retainer. No surprise invoices. No 'it depends' until after you've committed."
             tiers={PRICING_TIERS}
             footnote="All prices in USD. Monthly tool subscription fees (Make.com, Zapier) and AI API costs ($10–$80/month for most SMB workflows) are separate — we never mark these up. You own all workflow configurations and API connections."
@@ -884,7 +884,7 @@ export default function AIAutomationPage() {
         {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Every Question We Get on the Free Automation Audit Call — Answered Straight"
+          headline="Every Question We Get on the Free Automation Audit Call, Answered Straight"
           lead="No jargon. No vendor-speak. Just clear answers to the questions every business owner asks before committing to automation."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
@@ -894,7 +894,7 @@ export default function AIAutomationPage() {
         <FinalCTA
           variant="dark"
           eyebrow="START WITH A FREE AUDIT"
-          headline="Book a Free Automation Audit — Walk Away With a Roadmap"
+          headline="Book a Free Automation Audit and Walk Away With a Roadmap"
           sub="In 30 minutes, we'll identify your 3 highest-value automation opportunities, estimate the hours you'll recover each week, and tell you exactly what it costs to build. No pitch. No pressure. Just a straight answer from an engineer who's built it before — for a business exactly like yours."
           primaryCta={{ label: 'Book Your Free Audit', href: '/contact' }}
           secondaryCta={{ label: 'See AI Agent Services', href: '/us/services/ai-agents' }}

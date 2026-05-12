@@ -583,7 +583,7 @@ export default function PricingPage() {
       <div id="process">
         <ServiceJourneyRow
           eyebrow="HOW IT WORKS"
-          headline="From Free Quote to Live Website — in 5 Steps"
+          headline="From Free Quote to Live Website: 5 Steps"
           lead="Every FactoryJet project follows the same five-stage process. You know exactly where you are at every point — no black-box development."
           stages={journeyStages}
           closingNote="5 STAGES · 7-DAY DELIVERY GUARANTEE · FREE QUOTE IN 24 HOURS"
@@ -593,7 +593,7 @@ export default function PricingPage() {
       {/* ── 8. CITY CONTEXT ── */}
       <CityContextSection
         eyebrow="SERVING US BUSINESSES"
-        headline="Professional website design for US small businesses — from $1,499"
+        headline="Professional website design for US small businesses, starting from $1,499"
         leadParagraphs={[
           "FactoryJet works with small businesses across the United States. Whether you're a retail shop in Austin, a law firm in Miami, a DTC brand in Denver, or a service business in Charlotte — our process is built for US time zones, US audiences, and US search behavior.",
           "Our pricing is in USD, our delivery timelines run on US business days, and our SEO work targets US search audiences. Every package includes the same fixed price and 7-day delivery guarantee regardless of where your business is located.",
@@ -617,7 +617,7 @@ export default function PricingPage() {
       <div id="pricing">
         <PricingTiers
           eyebrow="WEBSITE DESIGN PACKAGES"
-          headline="Fixed-Price Website Packages — No Hourly Billing, No Surprises"
+          headline="Fixed-Price Website Packages: No Hourly Billing, No Surprises"
           lead="Every tier includes a fixed scope, a fixed price, and a delivery timeline we stand behind. No discovery retainer. No surprise invoices."
           tiers={PRICING_TIERS}
           footnote="All prices in USD. Copywriting, custom photography, and premium plugin licenses are priced separately if needed — itemized before you sign."
@@ -627,7 +627,7 @@ export default function PricingPage() {
       {/* ── 11. ALL SERVICES ── */}
       <IndustriesGrid
         eyebrow="ALL SERVICES"
-        headline="Every service we offer — with transparent pricing"
+        headline="Every service we offer, with transparent pricing"
         lead="FactoryJet builds websites, e-commerce stores, web applications, and AI automation systems. All fixed price. All delivered by the same team."
         sectors={SERVICES_SECTORS}
       />
@@ -641,7 +641,7 @@ export default function PricingPage() {
       {/* ── 13. FAQ ── */}
       <FAQ
         eyebrow="PRICING FAQ"
-        headline="Every question about website cost — answered honestly"
+        headline="Every question about website cost, answered honestly"
         lead="No jargon. No vendor-speak. Just clear answers to the questions every business owner asks before committing to a web project."
         categories={FAQ_CATEGORIES}
         items={FAQ_ITEMS}
@@ -651,7 +651,7 @@ export default function PricingPage() {
       <FinalCTA
         variant="dark"
         eyebrow="GET YOUR QUOTE"
-        headline="Find out exactly what your website will cost — in 24 hours"
+        headline="Find out exactly what your website will cost, in 24 hours"
         sub="Tell us what you need. We'll send a fixed-price quote within one business day. No sales call required, no commitment to respond."
         primaryCta={{ label: 'Get a Free Quote', href: '/contact' }}
         secondaryCta={{ label: 'See Our Work', href: '/us/portfolio' }}

@@ -502,7 +502,7 @@ export default function WebApplicationDevelopmentPage() {
       {/* ── 1. HERO ── */}
       <Hero
         eyebrow="WEB APPLICATION DEVELOPMENT"
-        headline="Custom Web Applications Built for US Businesses — Starting at $7,500"
+        headline="Custom Web Applications Built for US Businesses, Starting at $7,500"
         lead="Booking systems, customer portals, SaaS MVPs, internal dashboards. FactoryJet builds production-ready web apps at 60–70% below US development agency rates — fixed price, phased delivery, 60-day bug warranty."
         primaryCta={{ label: 'Get a Free Estimate', href: '/contact' }}
         secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
@@ -616,7 +616,7 @@ export default function WebApplicationDevelopmentPage() {
       <div id="process">
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="From Concept to Production-Ready App — in Five Structured Phases"
+          headline="From Concept to Production-Ready App: Five Structured Phases"
           lead="Every FactoryJet web application project follows the same five-phase process. You have visibility into every phase and a working product to test before final delivery."
           stages={journeyStages}
           closingNote="5 PHASES · FIXED PRICE · 60-DAY BUG WARRANTY · FULL SOURCE CODE HANDOFF"
@@ -626,7 +626,7 @@ export default function WebApplicationDevelopmentPage() {
       {/* ── 8. CITY CONTEXT ── */}
       <CityContextSection
         eyebrow="SERVING US BUSINESSES"
-        headline="Custom web application development for US businesses — remote-first, US-time-zone friendly"
+        headline="Custom web application development for US businesses, remote-first and US-time-zone friendly"
         leadParagraphs={[
           "FactoryJet works with US businesses across every industry and city. Our engineering team is India-based but runs on US East and West Coast time zones. Daily standups, Slack access, and weekly video reviews keep you connected to your project without the overhead of a local agency.",
           "We've delivered web applications to businesses in Austin, Miami, Denver, Nashville, Charlotte, Portland, Raleigh, Tampa, and across the US. Industry experience includes healthcare, legal, real estate, e-commerce, field services, and SaaS.",
@@ -650,7 +650,7 @@ export default function WebApplicationDevelopmentPage() {
       <div id="pricing">
         <PricingTiers
           eyebrow="WEB APPLICATION PRICING"
-          headline="Fixed-Price Web Application Packages — Scoped Before We Start"
+          headline="Fixed-Price Web Application Packages: Scoped Before We Start"
           lead="Every tier includes a fixed scope, a fixed price, and a delivery timeline we stand behind. No discovery retainer. No surprise invoices. No 'it depends' until after you've committed."
           tiers={PRICING_TIERS}
           footnote="All prices in USD. All projects start with a free discovery call and a written specification. The price is fixed to the spec."

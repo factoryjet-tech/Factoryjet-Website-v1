@@ -714,7 +714,7 @@ export default function LawFirmWebsiteDesignPage() {
         {/* ── 4. WHAT MAKES LEGAL DIFFERENT ────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="LAW FIRM WEBSITE DESIGN EXPLAINED"
-          headline="Why a Law Firm Website Is Different From a General Business Site — and What That Means for the Build"
+          headline="Why a Law Firm Website Is Different From a General Business Site, and What That Means for the Build"
           lead="A law firm website has a higher credibility threshold, more specific SEO requirements, bar advertising rules governing what you can claim, and a more complex intake process than most business types. Building one correctly requires understanding these requirements before touching a design tool — not discovering them after launch."
           body={
             <>
@@ -832,7 +832,7 @@ export default function LawFirmWebsiteDesignPage() {
         {/* ── 7. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="From Legal SEO Audit to Live Law Firm Website — in 5 Structured Stages"
+          headline="From Legal SEO Audit to Live Law Firm Website: 5 Structured Stages"
           lead="Every law firm website starts with understanding your market — who you compete with, what queries you should rank for, and where your current site is falling short. Design doesn't start until strategy is approved."
           stages={LEGAL_JOURNEY_STAGES}
           closingNote="5 STAGES · 4 WEEKS (SMALL FIRM) TO 14 WEEKS (LARGE FIRM) · FREE SEO AUDIT BEFORE ANY COMMITMENT"
@@ -868,7 +868,7 @@ export default function LawFirmWebsiteDesignPage() {
         <div id="pricing">
           <PricingTiers
             eyebrow="TRANSPARENT PRICING"
-            headline="Fixed-Price Law Firm Website Design — Know the Cost Before You Commit"
+            headline="Fixed-Price Law Firm Website Design: Know the Cost Before You Commit"
             lead="No hourly billing. No monthly subscriptions on a site you don't own. Fixed scope, fixed price, and a site your firm owns outright at handoff."
             tiers={PRICING_TIERS}
             footnote="All prices in USD. Hosting ($30–$150/month), domain registration, and third-party integrations (booking software, live chat) are separate. You own all source code, design files, and CMS credentials at handoff — no ongoing payments to FactoryJet required after launch."
@@ -892,7 +892,7 @@ export default function LawFirmWebsiteDesignPage() {
         {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Every Question Attorneys Ask Before Starting a Website Project — Answered Straight"
+          headline="Every Question Attorneys Ask Before Starting a Website Project, Answered Straight"
           lead="No agency spin. No legal jargon. Clear answers to what law firms actually need to know before committing to a website project."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
@@ -902,7 +902,7 @@ export default function LawFirmWebsiteDesignPage() {
         <FinalCTA
           variant="dark"
           eyebrow="START WITH A FREE LEGAL SEO AUDIT"
-          headline="Book a Free Legal SEO Audit — Walk Away With a Clear Picture of Where You Stand"
+          headline="Book a Free Legal SEO Audit and Walk Away With a Clear Picture of Where You Stand"
           sub="In 30 minutes, we'll audit your current site's local search performance, analyze the top-ranking competing firms in your market, identify the practice area pages and schema gaps that are costing you organic traffic, and tell you exactly what it costs to fix. No agency pitch. No retainer required to get started. Just a straight assessment from a team that's built law firm websites for US attorneys for 25 years."
           primaryCta={{ label: 'Book Your Free Legal SEO Audit', href: '/contact' }}
           secondaryCta={{ label: 'See All Website Redesign Services', href: '/us/services/website-redesign' }}

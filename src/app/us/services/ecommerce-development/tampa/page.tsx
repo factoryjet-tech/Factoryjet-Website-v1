@@ -97,7 +97,7 @@ export default function Page() {
         {/* ── 4. CITY CONTEXT (light / cream) ───────────────────────── */}
         <CityContextSection
           eyebrow="TAMPA MARKET"
-          headline="The Gulf Coast Economy Is Growing — Build the Store That Captures It"
+          headline="The Gulf Coast Economy Is Growing. Build the Store That Captures It"
           leadParagraphs={[
             "Tampa's $200B GDP is fueled by healthcare giants (BayCare, AdventHealth, Moffitt Cancer Center, Tampa General), Port Tampa Bay — the largest port in Florida — defense and aerospace (MacDill Air Force Base, L3Harris), and a thriving tourism economy with 24M annual visitors. Florida's 0% state income tax and Tampa's 7.5% Hillsborough County sales tax make this one of the most DTC-friendly metros in the Southeast. Add Ybor City's Cuban heritage food scene, a fast-growing tech sector anchored by Embarc Collective, and Gulf Coast marine culture, and you have a city with e-commerce demand across half a dozen distinct verticals. FactoryJet builds Shopify stores that rank for all of them — mobile-first, Lighthouse 95+, with AI product discovery and AEO content structured for ChatGPT and Google AI Overviews.",
           ]}
