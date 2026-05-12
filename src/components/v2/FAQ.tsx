@@ -135,7 +135,7 @@ export default function FAQ({
         <div className="mx-auto max-w-[1120px] px-6 md:px-8">
           <MotionFadeUp className="mx-auto max-w-[760px] text-center">
             {eyebrow && <p className="fj-eyebrow">{eyebrow}</p>}
-            <Heading as="h2" size="h2" className={`text-fj-ink ${eyebrow ? 'mt-6' : ''}`}>
+            <Heading as="h2" size="h3" className={`text-fj-ink ${eyebrow ? 'mt-6' : ''}`}>
               {headline}
             </Heading>
             {lead && (
@@ -176,7 +176,7 @@ export default function FAQ({
           {eyebrow && <p className="fj-eyebrow">{eyebrow}</p>}
           <Heading
             as="h2"
-            size="h2"
+            size="h3"
             className={`text-fj-ink ${eyebrow ? 'mt-6' : ''} max-w-[640px]`}
           >
             {headline}

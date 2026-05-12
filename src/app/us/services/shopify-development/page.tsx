@@ -647,7 +647,7 @@ export default function ShopifyPage() {
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
           eyebrow="SHOPIFY DEVELOPMENT · USA"
-          headline="Custom Shopify Stores That Sell — Not Just Look Good"
+          headline="Custom Shopify Stores That Sell, Not Just Look Good"
           lead="Generic Shopify themes convert below 1%. FactoryJet builds custom Shopify and Shopify Plus stores — designed in Figma, built in Liquid — that are fast, on-brand, and optimized for your specific customer journey. 60–70% cheaper than a US Shopify agency."
           primaryCta={{ label: 'Book a Free Store Audit', href: '/contact' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}

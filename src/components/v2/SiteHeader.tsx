@@ -34,7 +34,7 @@ const DEFAULT_NAV_LINKS: ReadonlyArray<{ label: string; href: string }> = [
   { label: 'Blog', href: '/blog' },
 ];
 
-const DEFAULT_CTA = { label: 'Book a call', href: '/contact' };
+const DEFAULT_CTA = { label: 'Free Strategy Call', href: '/contact' };
 
 export default function SiteHeader({
   logoText = 'FactoryJet',

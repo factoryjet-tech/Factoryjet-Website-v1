@@ -616,7 +616,7 @@ export default function EcommerceDevelopmentPage() {
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
           eyebrow="E-COMMERCE DEVELOPMENT · USA"
-          headline="An Online Store That Sells — on Any Platform, at Any Scale"
+          headline="An Online Store That Sells on Any Platform, at Any Scale"
           lead="Most US e-commerce stores are built on generic themes and convert below 1%. FactoryJet builds custom Shopify, WooCommerce, BigCommerce, and headless stores — designed in Figma, engineered for conversion — at 60–70% the cost of a US e-commerce agency."
           primaryCta={{ label: 'Book a Free Consultation', href: '/contact' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}

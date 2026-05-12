@@ -243,7 +243,7 @@ export default function USHomePage() {
           lead="FactoryJet helps US businesses launch high-converting websites in as little as 7 days. From custom Next.js applications to WordPress, Shopify, and scalable React builds, we create conversion-focused websites engineered for speed, SEO, and qualified lead generation — with full GitHub ownership and zero vendor lock-in. Trusted by 523+ businesses across SaaS, Cybersecurity, Healthcare, IT, and Professional Services."
           primaryCta={{ label: 'Get Your Free Strategy Call', href: '/contact' }}
           secondaryCta={{ label: 'Request a Free Technical & SEO Audit', href: '/contact' }}
-          trustItems={['523+ Projects Delivered', '7-day delivery', '60–70% cheaper than US agencies']}
+          trustItems={['Websites from $1,999', '7-day delivery', '60–70% cheaper than US agencies', '523+ Projects Delivered']}
           rightSlot={<HeroBrowserMockup />}
         />
 
@@ -288,7 +288,7 @@ export default function USHomePage() {
         {/* ── 6. HOW IT WORKS ──────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="YOUR PATH TO LAUNCH"
-          headline="5 Steps, Zero Surprises — From Strategy Call to Live Website"
+          headline="5 Steps, Zero Surprises: From Strategy Call to Live Website"
           lead="We don't start designing until we understand your goals. Every stage ends with a deliverable you review and approve — so no design, no development, and no launch happens without your sign-off."
           stages={JOURNEY_STAGES}
           closingNote="5 STAGES · 7 DAYS (UP TO 5 PAGES) · FREE STRATEGY CALL BEFORE ANY COMMITMENT"

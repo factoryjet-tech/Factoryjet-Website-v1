@@ -651,7 +651,7 @@ export default function WebDesignPage() {
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
           eyebrow="WEB DESIGN · USA"
-          headline="A Website That Converts — Launched in 7 Days"
+          headline="A Website That Converts, Launched in 7 Days"
           lead="Most US small businesses are losing customers to slow, outdated websites. FactoryJet builds custom, high-performance websites in Next.js, WordPress, and Shopify — designed in Figma, built to Lighthouse 100, and delivered at 60–70% the cost of a US agency."
           primaryCta={{ label: 'Book a Free Website Audit', href: '/contact' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
@@ -827,7 +827,7 @@ export default function WebDesignPage() {
         {/* ── 4. THE PROBLEM (DARK) ─────────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="THE PROBLEM"
-          headline="Your website is losing you customers — and you might not know it."
+          headline="Your website is losing you customers. You might not know it yet."
           lead="An outdated, slow, or confusing website doesn't just look unprofessional. It actively costs you leads, conversions, and Google rankings. The good news: it's fixable in 7 days."
           pillars={[
             {
