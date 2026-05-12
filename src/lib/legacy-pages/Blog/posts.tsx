@@ -4192,20 +4192,20 @@ export const POSTS: BlogPost[] = [
 {
   id: '22',
   slug: 'top-web-design-companies-mumbai',
-  title: "Top 10 Web Design Companies in Mumbai (2026 Expert Review)",
-  excerpt: "Looking for the best web design company in Mumbai? Compare top 10 agencies by portfolio, pricing, and SEO-readiness. Make a smarter choice in 2026.",
+  title: "Best Web Design & E-Commerce Development Companies in Mumbai (2026 Expert Review)",
+  excerpt: "Compare Mumbai's best web design and e-commerce development agencies by portfolio, pricing, and tech stack. From ₹10,000 websites to full custom builds — make the right choice in 2026.",
   hideExcerptOnPage: true,
   category: 'Web Design & Strategy',
   author: 'Bhavesh Barot',
   date: 'Apr 1, 2026',
   readTime: '14 min read',
   imageUrl: '/top-web-design-companies-mumbai/best web design companies mumbai 2026.webp',
-  imageAlt: 'Best web design companies in Mumbai compared for 2026',
+  imageAlt: 'Best web design and e-commerce development companies in Mumbai 2026',
   imageFit: 'contain',
   isFeatured: true,
   meta: {
-    title: "Best 10 Web Design Companies in Mumbai (2026)",
-    description: "Looking for the best web design company in Mumbai? Compare top 10 agencies by portfolio, pricing, and SEO-readiness. Make a smarter choice in 2026."
+    title: "Best Web Design & E-Commerce Development Companies in Mumbai 2026 | FactoryJet",
+    description: "Compare Mumbai's best web design and e-commerce development agencies. Pricing from ₹10,000. Portfolio quality, tech stack, and SEO-readiness reviewed — 2026 updated guide."
   },
   faqs: [
     { q: "Which is the best web design company in Mumbai?", a: "FactoryJet ranks among the top choices for conversion-focused websites. Creaa Designs is excellent for brand-driven projects. For e-commerce, Bloom Agency and Eskon Web Solutions are strong options. The best choice depends on your business goals and budget." },
