@@ -6,28 +6,28 @@ import SiteFooter from '@/components/v2/SiteFooter'
 
 
 export const metadata: Metadata = {
-  title: 'E-Commerce Development Sioux Falls | Shopify Agency - FactoryJet',
-  description: 'Custom Shopify & e-commerce development for Sioux Falls businesses. No state income tax = higher margins. Enterprise-grade stores from $2,999. Free audit.',
+  title: 'Shopify Developer Sioux Falls SD | E-Commerce from $2,999 | FactoryJet',
+  description: 'Top-rated Shopify developer in Sioux Falls, South Dakota: stores live in 7 days from $2,999. Zero state income tax = higher margins. Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'E-Commerce Development Sioux Falls | Shopify Agency - FactoryJet',
-    description: 'Custom Shopify & e-commerce development for Sioux Falls businesses. No state income tax = higher margins.',
+    title: 'Shopify Developer Sioux Falls SD | E-Commerce from $2,999 | FactoryJet',
+    description: 'Top-rated Shopify developer in Sioux Falls SD: stores live in 7 days from $2,999. Zero state income tax = higher e-commerce margins. Free audit.',
     url: 'https://factoryjet.com/us/services/ecommerce-development/sioux-falls',
     images: [
       {
         url: 'https://factoryjet.com/logo.png',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet - E-Commerce Development Sioux Falls',
+        alt: 'FactoryJet - Shopify Developer Sioux Falls SD',
       },
     ],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'E-Commerce Development Sioux Falls | FactoryJet',
-    description: 'Custom Shopify & e-commerce development for Sioux Falls businesses. No state income tax = higher margins.',
+    title: 'Shopify Developer Sioux Falls SD | E-Commerce from $2,999 | FactoryJet',
+    description: 'Top-rated Shopify developer in Sioux Falls SD: stores live in 7 days from $2,999. Zero state income tax. Free audit.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {

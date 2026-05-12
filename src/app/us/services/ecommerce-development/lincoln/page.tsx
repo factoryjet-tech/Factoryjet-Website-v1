@@ -6,28 +6,28 @@ import SiteFooter from '@/components/v2/SiteFooter'
 
 
 export const metadata: Metadata = {
-  title: 'E-Commerce Development Lincoln NE | Shopify & AI Agency - FactoryJet',
-  description: 'Professional e-commerce development for Lincoln, Nebraska businesses. From UNL startups to Main Street retailers — Shopify stores that convert. Free audit.',
+  title: 'Shopify Agency Lincoln NE | E-Commerce Development from $2,999 | FactoryJet',
+  description: 'Top-rated Shopify agency in Lincoln, Nebraska: stores live in 7 days from $2,999. Silicon Prairie e-commerce specialists — Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'E-Commerce Development Lincoln NE | Shopify & AI Agency - FactoryJet',
-    description: 'Professional e-commerce development for Lincoln, Nebraska businesses. Shopify stores that convert.',
+    title: 'Shopify Agency Lincoln NE | E-Commerce Development from $2,999 | FactoryJet',
+    description: 'Top-rated Shopify agency in Lincoln, Nebraska: stores live in 7 days from $2,999. Silicon Prairie specialists — Shopify, WooCommerce & AI. Free audit.',
     url: 'https://factoryjet.com/us/services/ecommerce-development/lincoln',
     images: [
       {
         url: 'https://factoryjet.com/logo.png',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet - E-Commerce Development Lincoln',
+        alt: 'FactoryJet - Shopify Agency Lincoln NE',
       },
     ],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'E-Commerce Development Lincoln NE | FactoryJet',
-    description: 'Professional e-commerce development for Lincoln, Nebraska businesses. Shopify stores that convert.',
+    title: 'Shopify Agency Lincoln NE | E-Commerce from $2,999 | FactoryJet',
+    description: 'Top-rated Shopify agency in Lincoln NE: stores live in 7 days from $2,999. Silicon Prairie e-commerce specialists. Free audit.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
