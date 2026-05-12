@@ -919,15 +919,30 @@ export default function EcommerceDevelopmentPage() {
                   The best ROI in e-commerce is usually a better store, not more ad spend.
                 </p>
               </div>
-              <div className="mt-5 flex flex-wrap gap-2" aria-hidden="true">
-                {['Austin TX', 'Miami FL', 'Denver CO', 'Nashville TN', 'Portland OR', 'Charlotte NC', 'Raleigh NC', 'Tampa FL'].map((city) => (
-                  <span
-                    key={city}
-                    className="inline-flex items-center rounded-full border border-fj-jet-blue/25 bg-fj-jet-blue/8 px-3 py-1 font-fj-mono font-medium text-fj-jet-blue"
+              <div className="mt-5 flex flex-wrap gap-2">
+                {[
+                  { label: 'Austin TX',      slug: 'austin' },
+                  { label: 'Miami FL',       slug: 'miami' },
+                  { label: 'Denver CO',      slug: 'denver' },
+                  { label: 'Nashville TN',   slug: 'nashville' },
+                  { label: 'Portland OR',    slug: 'portland' },
+                  { label: 'Charlotte NC',   slug: 'charlotte' },
+                  { label: 'Raleigh NC',     slug: 'raleigh' },
+                  { label: 'Tampa FL',       slug: 'tampa' },
+                  { label: 'Chattanooga TN', slug: 'chattanooga' },
+                  { label: 'Boise ID',       slug: 'boise' },
+                  { label: 'Fargo ND',       slug: 'fargo' },
+                  { label: 'Lincoln NE',     slug: 'lincoln' },
+                  { label: 'Sioux Falls SD', slug: 'sioux-falls' },
+                ].map(({ label, slug }) => (
+                  <a
+                    key={slug}
+                    href={`/us/services/ecommerce-development/${slug}`}
+                    className="inline-flex items-center rounded-full border border-fj-jet-blue/25 bg-fj-jet-blue/8 px-3 py-1 font-fj-mono font-medium text-fj-jet-blue hover:bg-fj-jet-blue/15 transition-colors"
                     style={{ fontSize: '10px', letterSpacing: '0.08em' }}
                   >
-                    {city}
-                  </span>
+                    {label}
+                  </a>
                 ))}
               </div>
             </>

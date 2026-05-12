@@ -217,6 +217,38 @@ export const ecommerceCityAlternatesUS: Record<string, { 'en-US': string; 'x-def
     'en-US': 'https://factoryjet.com/us/services/ecommerce-development/fargo',
     'x-default': 'https://factoryjet.com/us/services/ecommerce-development/fargo',
   },
+  'austin': {
+    'en-US': 'https://factoryjet.com/us/services/ecommerce-development/austin',
+    'x-default': 'https://factoryjet.com/us/services/ecommerce-development/austin',
+  },
+  'miami': {
+    'en-US': 'https://factoryjet.com/us/services/ecommerce-development/miami',
+    'x-default': 'https://factoryjet.com/us/services/ecommerce-development/miami',
+  },
+  'denver': {
+    'en-US': 'https://factoryjet.com/us/services/ecommerce-development/denver',
+    'x-default': 'https://factoryjet.com/us/services/ecommerce-development/denver',
+  },
+  'nashville': {
+    'en-US': 'https://factoryjet.com/us/services/ecommerce-development/nashville',
+    'x-default': 'https://factoryjet.com/us/services/ecommerce-development/nashville',
+  },
+  'portland': {
+    'en-US': 'https://factoryjet.com/us/services/ecommerce-development/portland',
+    'x-default': 'https://factoryjet.com/us/services/ecommerce-development/portland',
+  },
+  'charlotte': {
+    'en-US': 'https://factoryjet.com/us/services/ecommerce-development/charlotte',
+    'x-default': 'https://factoryjet.com/us/services/ecommerce-development/charlotte',
+  },
+  'raleigh': {
+    'en-US': 'https://factoryjet.com/us/services/ecommerce-development/raleigh',
+    'x-default': 'https://factoryjet.com/us/services/ecommerce-development/raleigh',
+  },
+  'tampa': {
+    'en-US': 'https://factoryjet.com/us/services/ecommerce-development/tampa',
+    'x-default': 'https://factoryjet.com/us/services/ecommerce-development/tampa',
+  },
 }
 
 // ===========================================================================
