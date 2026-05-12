@@ -3,6 +3,9 @@ import { BlogPost } from './data.types';
 import { NativeAd } from './components/NativeAd';
 import { post as howUkSmbsEvaluateWoocommerceAgency2026Post } from './posts/how-uk-smbs-evaluate-woocommerce-agency-2026';
 import { post as evaluateWebDesignAgencyUsSmbs2026Post } from './posts/evaluate-web-design-agency-us-smbs-2026';
+import { post as websiteCostSmallBusinessUsa2026Post } from './posts/website-cost-small-business-usa-2026';
+import { post as shopifyVsCustomWebsiteUsSmallBusiness2026Post } from './posts/shopify-vs-custom-website-us-small-business-2026';
+import { post as bestWebDesignAgencyUsSmallBusiness2026Post } from './posts/best-web-design-agency-us-small-business-2026';
 import { post as aiAgentsUkSmbsGuidePost } from './posts/ai-agents-uk-smbs-guide';
 import { post as woocommerceSeoTipsUkStoresPost } from './posts/woocommerce-seo-tips-uk-stores';
 import { post as shopifyVsWoocommerceUkSmbsPost } from './posts/shopify-vs-woocommerce-uk-smbs';
@@ -4587,6 +4590,9 @@ export const POSTS: BlogPost[] = [
 
   howUkSmbsEvaluateWoocommerceAgency2026Post,
   evaluateWebDesignAgencyUsSmbs2026Post,
+  websiteCostSmallBusinessUsa2026Post,
+  shopifyVsCustomWebsiteUsSmallBusiness2026Post,
+  bestWebDesignAgencyUsSmallBusiness2026Post,
   chooseWebDesignAgencyUkSmbQuestions2026Post,
   woocommerceSeoTipsUkStoresPost,
   shopifyVsWoocommerceUkSmbsPost,
