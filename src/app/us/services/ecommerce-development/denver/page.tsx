@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ecommerceCityAlternatesUS } from '@/data/hreflangMap'
+import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
 import DenverPage from '@/lib/legacy-pages/CityLandingUS/DenverPage'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
@@ -47,9 +48,19 @@ export const metadata: Metadata = {
   },
 }
 
+function SchemaScript() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: getEcommerceCitySchema('denver') }}
+    />
+  );
+}
+
 export default function Page() {
   return (
     <>
+      <SchemaScript />
       <SiteHeader />
       <DenverPage />
       <SiteFooter />

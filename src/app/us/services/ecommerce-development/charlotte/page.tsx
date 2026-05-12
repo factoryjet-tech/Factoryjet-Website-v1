@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ecommerceCityAlternatesUS } from '@/data/hreflangMap'
+import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
 import CharlottePage from '@/lib/legacy-pages/CityLandingUS/CharlottePage'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
@@ -47,9 +48,19 @@ export const metadata: Metadata = {
   },
 }
 
+function SchemaScript() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: getEcommerceCitySchema('charlotte') }}
+    />
+  );
+}
+
 export default function Page() {
   return (
     <>
+      <SchemaScript />
       <SiteHeader />
       <CharlottePage />
       <SiteFooter />
