@@ -46,20 +46,26 @@ export default function HeroImageMockup({ className = '' }: { className?: string
     <div className={`relative select-none ${className}`}>
 
       {/* ── Hero image ──────────────────────────────────────────────────── */}
+      {/*
+       * Container fixes the height so the image fills the right slot properly.
+       * object-cover + object-right crops to show the browser mockup (right half)
+       * rather than the left badge area of the 16:9 source image.
+       */}
       <div
-        className="overflow-hidden rounded-2xl"
+        className="relative overflow-hidden rounded-2xl"
         style={{
+          height: 'clamp(300px, 45vw, 540px)',
           boxShadow: '0 24px 64px -12px rgba(15,15,18,0.18), 0 4px 16px -4px rgba(15,15,18,0.10)',
         }}
       >
         <Image
           src="/images/hero-us.webp"
           alt="FactoryJet builds high-converting e-commerce and business websites for US small businesses"
-          width={2752}
-          height={1536}
-          className="w-full h-auto block"
+          fill
+          className="object-cover object-right"
           priority
           quality={90}
+          sizes="(max-width: 1024px) 100vw, 45vw"
         />
       </div>
 
