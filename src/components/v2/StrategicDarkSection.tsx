@@ -73,29 +73,29 @@ export default function StrategicDarkSection({
         backgroundSize: '28px 28px, 100% 100%',
       }}
     >
-      {/* ── Aurora orb — electric blue, top-right ────────────────────────── */}
+      {/* ── Aurora orb — orange, top-right ──────────────────────────────── */}
       <div
         className="pointer-events-none absolute -right-32 -top-32 h-[680px] w-[680px] rounded-full"
         style={{
-          background: 'radial-gradient(circle, rgba(0,82,204,0.60) 0%, rgba(0,82,204,0.18) 45%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(240,90,40,0.40) 0%, rgba(240,90,40,0.10) 45%, transparent 70%)',
           filter: 'blur(40px)',
         }}
         aria-hidden="true"
       />
-      {/* ── Aurora orb — indigo/violet, bottom-left ──────────────────────── */}
+      {/* ── Aurora orb — amber, bottom-left ──────────────────────────────── */}
       <div
         className="pointer-events-none absolute -bottom-32 -left-16 h-[520px] w-[520px] rounded-full"
         style={{
-          background: 'radial-gradient(circle, rgba(99,102,241,0.32) 0%, rgba(99,102,241,0.08) 50%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(240,90,40,0.20) 0%, rgba(240,90,40,0.06) 50%, transparent 70%)',
           filter: 'blur(48px)',
         }}
         aria-hidden="true"
       />
-      {/* ── Aurora orb — violet accent, center-left ──────────────────────── */}
+      {/* ── Aurora orb — warm accent, center-left ────────────────────────── */}
       <div
         className="pointer-events-none absolute left-[15%] top-[30%] h-[360px] w-[360px] rounded-full"
         style={{
-          background: 'radial-gradient(circle, rgba(124,58,237,0.18) 0%, transparent 65%)',
+          background: 'radial-gradient(circle, rgba(240,90,40,0.12) 0%, transparent 65%)',
           filter: 'blur(56px)',
         }}
         aria-hidden="true"
@@ -109,7 +109,7 @@ export default function StrategicDarkSection({
           {eyebrow && (
             <p
               className="font-fj-mono font-medium uppercase"
-              style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#7EB3FF' }}
+              style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#F05A28' }}
             >
               {eyebrow}
             </p>
@@ -152,8 +152,8 @@ export default function StrategicDarkSection({
                 borderStyle: 'solid',
                 borderColor: 'rgba(255, 255, 255, 0.10)',
                 borderTopWidth: '2px',
-                borderTopColor: 'rgba(0, 82, 204, 0.70)',
-                boxShadow: '0 0 0 1px rgba(0,82,204,0.20), 0 4px 32px rgba(0,0,0,0.55), 0 1px 0 0 rgba(255,255,255,0.07) inset',
+                borderTopColor: 'rgba(240,90,40,0.70)',
+                boxShadow: '0 0 0 1px rgba(240,90,40,0.20), 0 4px 32px rgba(0,0,0,0.55), 0 1px 0 0 rgba(255,255,255,0.07) inset',
               }}
             >
               {/* Crystal inner highlight — thin shimmer line across top */}
@@ -169,16 +169,17 @@ export default function StrategicDarkSection({
               <div
                 className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                 style={{
-                  boxShadow: '0 0 0 1px rgba(0,82,204,0.50), 0 0 48px rgba(0,82,204,0.28)',
-                  background: 'rgba(0,82,204,0.06)',
+                  boxShadow: '0 0 0 1px rgba(240,90,40,0.50), 0 0 48px rgba(240,90,40,0.20)',
+                  background: 'rgba(240,90,40,0.06)',
                 }}
                 aria-hidden="true"
               />
 
               {/* Watermark number */}
               <span
-                className="fj-display pointer-events-none absolute right-4 top-2 select-none font-bold text-fj-jet-blue"
+                className="fj-display pointer-events-none absolute right-4 top-2 select-none font-bold"
                 style={{
+                  color: '#F05A28',
                   fontSize: '5.5rem',
                   lineHeight: 1,
                   opacity: 0.07,
@@ -189,9 +190,10 @@ export default function StrategicDarkSection({
                 {String(i + 1).padStart(2, '0')}
               </span>
 
-              {/* Jet Blue accent bar */}
+              {/* Orange accent bar */}
               <div
-                className="mb-4 h-[3px] w-8 rounded-full bg-fj-jet-blue"
+                className="mb-4 h-[3px] w-8 rounded-full"
+                style={{ background: '#F05A28' }}
                 aria-hidden="true"
               />
 

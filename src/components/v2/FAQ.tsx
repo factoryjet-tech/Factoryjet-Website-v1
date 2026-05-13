@@ -81,13 +81,13 @@ function AccordionItem({ item }: { item: FAQItem }) {
         data-faq-question
         className="flex cursor-pointer list-none items-start justify-between gap-5 py-5 [&::-webkit-details-marker]:hidden"
       >
-        <span className="font-fj-body text-[1rem] font-semibold leading-[1.55] text-fj-ink transition-colors group-open:text-fj-jet-blue">
+        <span className="font-fj-body text-[1rem] font-semibold leading-[1.55] text-fj-ink transition-colors group-open:text-[#F05A28]">
           {item.question}
         </span>
         {/* Chevron pill */}
         <span
           aria-hidden="true"
-          className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-fj-neutral-200 bg-white text-fj-neutral-400 transition-all group-open:border-fj-jet-blue/30 group-open:bg-fj-jet-blue/5 group-open:text-fj-jet-blue"
+          className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-fj-neutral-200 bg-white text-fj-neutral-400 transition-all group-open:border-[#F05A28]/30 group-open:bg-[#F05A28]/5 group-open:text-[#F05A28]"
         >
           <ChevronDown className="transition-transform duration-200 group-open:rotate-180" />
         </span>
@@ -198,7 +198,7 @@ export default function FAQ({
               <a
                 key={cat.key}
                 href={`#faq-${cat.key}`}
-                className="inline-flex flex-shrink-0 items-center gap-1.5 rounded-full border border-fj-neutral-200 bg-white px-4 py-2 font-fj-body text-[0.8125rem] font-medium text-fj-neutral-600 transition-colors hover:border-fj-jet-blue hover:text-fj-jet-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue"
+                className="inline-flex flex-shrink-0 items-center gap-1.5 rounded-full border border-fj-neutral-200 bg-white px-4 py-2 font-fj-body text-[0.8125rem] font-medium text-fj-neutral-600 transition-colors hover:border-[#F05A28] hover:text-[#F05A28] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F05A28]"
               >
                 {cat.label}
                 <span
@@ -232,10 +232,11 @@ export default function FAQ({
                       {/* Category header */}
                       <div className="mb-1 flex items-center gap-3 pb-4">
                         <div
-                          className="h-[3px] w-8 flex-shrink-0 rounded-full bg-fj-jet-blue"
+                          className="h-[3px] w-8 flex-shrink-0 rounded-full"
+                          style={{ background: '#F05A28' }}
                           aria-hidden="true"
                         />
-                        <p className="fj-eyebrow text-fj-jet-blue">{cat.label}</p>
+                        <p className="fj-eyebrow" style={{ color: '#F05A28' }}>{cat.label}</p>
                       </div>
 
                       {/* Accordion items */}
@@ -268,7 +269,8 @@ export default function FAQ({
               {/* Sidebar header */}
               <div className="mb-4 flex items-center gap-3 border-b border-fj-neutral-100 pb-4">
                 <div
-                  className="h-[3px] w-6 flex-shrink-0 rounded-full bg-fj-jet-blue"
+                  className="h-[3px] w-6 flex-shrink-0 rounded-full"
+                  style={{ background: '#F05A28' }}
                   aria-hidden="true"
                 />
                 <p className="font-fj-mono text-[0.6875rem] font-bold tracking-[0.12em] uppercase text-fj-neutral-400">
@@ -285,13 +287,13 @@ export default function FAQ({
                       <li key={cat.key}>
                         <a
                           href={`#faq-${cat.key}`}
-                          className="group flex items-center justify-between rounded-lg px-3 py-2.5 transition-colors hover:bg-fj-jet-blue/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue"
+                          className="group flex items-center justify-between rounded-lg px-3 py-2.5 transition-colors hover:bg-[#F05A28]/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F05A28]"
                         >
-                          <span className="font-fj-body text-[0.9375rem] font-medium text-fj-neutral-600 transition-colors group-hover:text-fj-jet-blue">
+                          <span className="font-fj-body text-[0.9375rem] font-medium text-fj-neutral-600 transition-colors group-hover:text-[#F05A28]">
                             {cat.label}
                           </span>
                           <span
-                            className="ml-2 inline-flex h-5 min-w-[1.25rem] items-center justify-center rounded-full bg-fj-neutral-100 px-1.5 font-fj-mono text-[0.625rem] font-bold text-fj-neutral-400 transition-colors group-hover:bg-fj-jet-blue/10 group-hover:text-fj-jet-blue"
+                            className="ml-2 inline-flex h-5 min-w-[1.25rem] items-center justify-center rounded-full bg-fj-neutral-100 px-1.5 font-fj-mono text-[0.625rem] font-bold text-fj-neutral-400 transition-colors group-hover:bg-[#F05A28]/10 group-hover:text-[#F05A28]"
                             aria-hidden="true"
                           >
                             {count}
@@ -310,7 +312,8 @@ export default function FAQ({
                 </p>
                 <a
                   href="#final-cta"
-                  className="mt-2 inline-flex items-center gap-1.5 font-fj-body text-[0.8125rem] font-semibold text-fj-jet-blue hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue"
+                  className="mt-2 inline-flex items-center gap-1.5 font-fj-body text-[0.8125rem] font-semibold hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F05A28]"
+                  style={{ color: '#F05A28' }}
                 >
                   Book a free strategy call
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">

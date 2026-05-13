@@ -133,7 +133,7 @@ export default function ServiceJourneyRow({
           <div
             className="pointer-events-none absolute inset-x-0 top-[22px] hidden h-px lg:block"
             style={{
-              background: 'linear-gradient(90deg, transparent 0%, rgba(0,82,204,0.22) 8%, rgba(0,82,204,0.22) 92%, transparent 100%)',
+              background: 'linear-gradient(90deg, transparent 0%, rgba(240,90,40,0.22) 8%, rgba(240,90,40,0.22) 92%, transparent 100%)',
             }}
             aria-hidden="true"
           />
@@ -151,9 +151,10 @@ export default function ServiceJourneyRow({
                    * the bloom. z-10 ensures circles sit above the connector line.
                    */}
                   <div
-                    className="relative z-10 flex h-11 w-11 items-center justify-center rounded-full bg-fj-jet-blue font-fj-mono text-[0.875rem] font-bold text-white"
+                    className="relative z-10 flex h-11 w-11 items-center justify-center rounded-full font-fj-mono text-[0.875rem] font-bold text-white"
                     style={{
-                      boxShadow: '0 0 0 5px rgba(0,82,204,0.12), 0 0 22px rgba(0,82,204,0.32)',
+                      background: '#F05A28',
+                      boxShadow: '0 0 0 5px rgba(240,90,40,0.12), 0 0 22px rgba(240,90,40,0.32)',
                     }}
                     aria-hidden="true"
                   >
@@ -162,8 +163,8 @@ export default function ServiceJourneyRow({
 
                   {/* ── Stage label ──────────────────────────────────── */}
                   <p
-                    className="mt-4 font-fj-mono font-semibold uppercase text-fj-jet-blue"
-                    style={{ fontSize: '10px', letterSpacing: '0.14em', opacity: 0.65 }}
+                    className="mt-4 font-fj-mono font-semibold uppercase"
+                    style={{ color: '#F05A28', fontSize: '10px', letterSpacing: '0.14em', opacity: 0.65 }}
                     aria-hidden="true"
                   >
                     STAGE {stage.number}
@@ -190,9 +191,9 @@ export default function ServiceJourneyRow({
                   <div
                     className="mt-3 rounded-xl p-4"
                     style={{
-                      background: 'linear-gradient(160deg, #FFFFFF 0%, #F4F7FF 100%)',
-                      border: '1px solid rgba(0,82,204,0.10)',
-                      boxShadow: '0 2px 8px rgba(0,82,204,0.05)',
+                      background: 'linear-gradient(160deg, #FFFFFF 0%, #FDF6F3 100%)',
+                      border: '1px solid rgba(240,90,40,0.10)',
+                      boxShadow: '0 2px 8px rgba(240,90,40,0.05)',
                     }}
                   >
                     <p
@@ -219,7 +220,7 @@ export default function ServiceJourneyRow({
             <div
               className="h-px flex-1"
               style={{
-                background: 'linear-gradient(90deg, transparent 0%, rgba(0,82,204,0.20) 100%)',
+                background: 'linear-gradient(90deg, transparent 0%, rgba(240,90,40,0.20) 100%)',
               }}
             />
             <p
@@ -232,7 +233,7 @@ export default function ServiceJourneyRow({
             <div
               className="h-px flex-1"
               style={{
-                background: 'linear-gradient(90deg, rgba(0,82,204,0.20) 0%, transparent 100%)',
+                background: 'linear-gradient(90deg, rgba(240,90,40,0.20) 0%, transparent 100%)',
               }}
             />
           </div>

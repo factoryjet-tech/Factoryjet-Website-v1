@@ -59,33 +59,33 @@ export default function FinalCTA({
           backgroundSize: '28px 28px, 100% 100%',
         }}
       >
-        {/* Blue aurora — left-center */}
+        {/* Orange aurora — left-center */}
         <div
           className="pointer-events-none absolute"
           style={{
             left: '-10%', top: '15%',
             width: '720px', height: '720px',
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(0,82,204,0.42) 0%, transparent 65%)',
+            background: 'radial-gradient(circle, rgba(240,90,40,0.28) 0%, transparent 65%)',
             filter: 'blur(48px)',
           }}
           aria-hidden="true"
         />
 
-        {/* Indigo aurora — right-center */}
+        {/* Warm amber aurora — right-center */}
         <div
           className="pointer-events-none absolute"
           style={{
             right: '-8%', top: '25%',
             width: '580px', height: '580px',
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(99,102,241,0.30) 0%, transparent 65%)',
+            background: 'radial-gradient(circle, rgba(240,90,40,0.16) 0%, transparent 65%)',
             filter: 'blur(56px)',
           }}
           aria-hidden="true"
         />
 
-        {/* Violet accent — bottom-center */}
+        {/* Amber accent — bottom-center */}
         <div
           className="pointer-events-none absolute"
           style={{
@@ -93,7 +93,7 @@ export default function FinalCTA({
             transform: 'translateX(-50%)',
             width: '440px', height: '440px',
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(124,58,237,0.20) 0%, transparent 65%)',
+            background: 'radial-gradient(circle, rgba(240,90,40,0.12) 0%, transparent 65%)',
             filter: 'blur(60px)',
           }}
           aria-hidden="true"
@@ -104,7 +104,7 @@ export default function FinalCTA({
           {eyebrow && (
             <p
               className="font-fj-mono font-bold uppercase"
-              style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#7EB3FF' }}
+              style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#F05A28' }}
             >
               {eyebrow}
             </p>
@@ -136,14 +136,15 @@ export default function FinalCTA({
                 label={primaryCta.label}
                 region={primaryCta.region ?? 'us'}
                 btnVariant="primary-dark"
-                style={{ boxShadow: '0 0 0 1px rgba(0,82,204,0.50), 0 8px 48px rgba(0,82,204,0.55), 0 2px 12px rgba(0,82,204,0.35)' }}
+                style={{ boxShadow: '0 0 0 1px rgba(240,90,40,0.50), 0 8px 48px rgba(240,90,40,0.40), 0 2px 12px rgba(240,90,40,0.30)' }}
               />
             ) : (
               <Link
                 href={primaryCta.href ?? '/contact'}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-fj-jet-blue px-8 py-3.5 font-fj-body text-base font-semibold text-white transition-all hover:bg-[#003D99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue"
+                className="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3.5 font-fj-body text-base font-semibold text-white transition-all hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F05A28]"
                 style={{
-                  boxShadow: '0 0 0 1px rgba(0,82,204,0.50), 0 8px 48px rgba(0,82,204,0.55), 0 2px 12px rgba(0,82,204,0.35)',
+                  background: '#F05A28',
+                  boxShadow: '0 0 0 1px rgba(240,90,40,0.50), 0 8px 48px rgba(240,90,40,0.40), 0 2px 12px rgba(240,90,40,0.30)',
                 }}
               >
                 {primaryCta.label}
@@ -193,7 +194,7 @@ export default function FinalCTA({
       style={{
         backgroundImage: [
           'radial-gradient(circle, rgba(0,0,0,0.028) 1px, transparent 1px)',
-          'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(0,82,204,0.040) 0%, transparent 65%)',
+          'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(240,90,40,0.040) 0%, transparent 65%)',
         ].join(', '),
         backgroundSize: '28px 28px, 100% 100%',
         backgroundColor: '#FAFAF7',
@@ -203,7 +204,7 @@ export default function FinalCTA({
       <div
         className="pointer-events-none absolute inset-x-0 top-0 h-px"
         style={{
-          background: 'linear-gradient(90deg, transparent 0%, rgba(0,82,204,0.15) 30%, rgba(0,82,204,0.15) 70%, transparent 100%)',
+          background: 'linear-gradient(90deg, transparent 0%, rgba(240,90,40,0.15) 30%, rgba(240,90,40,0.15) 70%, transparent 100%)',
         }}
         aria-hidden="true"
       />
@@ -238,14 +239,15 @@ export default function FinalCTA({
               label={primaryCta.label}
               region={primaryCta.region ?? 'us'}
               btnVariant="primary-light"
-              style={{ boxShadow: '0 4px 24px rgba(0,82,204,0.30), 0 1px 4px rgba(0,82,204,0.15)' }}
+              style={{ boxShadow: '0 4px 24px rgba(240,90,40,0.30), 0 1px 4px rgba(240,90,40,0.15)' }}
             />
           ) : (
             <Link
               href={primaryCta.href ?? '/contact'}
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-fj-jet-blue px-8 py-3.5 font-fj-body text-base font-semibold text-white transition-all hover:bg-[#003D99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue"
+              className="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3.5 font-fj-body text-base font-semibold text-white transition-all hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F05A28]"
               style={{
-                boxShadow: '0 4px 24px rgba(0,82,204,0.30), 0 1px 4px rgba(0,82,204,0.15)',
+                background: '#F05A28',
+                boxShadow: '0 4px 24px rgba(240,90,40,0.30), 0 1px 4px rgba(240,90,40,0.15)',
               }}
             >
               {primaryCta.label}
@@ -267,7 +269,7 @@ export default function FinalCTA({
             ) : (
               <Link
                 href={secondaryCta.href ?? '/contact'}
-                className="inline-flex items-center justify-center rounded-full border border-fj-neutral-200 bg-white/60 px-7 py-3.5 font-fj-body text-base font-semibold text-fj-ink backdrop-blur-sm transition-colors hover:border-fj-neutral-400 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue"
+                className="inline-flex items-center justify-center rounded-full border border-fj-neutral-200 bg-white/60 px-7 py-3.5 font-fj-body text-base font-semibold text-fj-ink backdrop-blur-sm transition-colors hover:border-fj-neutral-400 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F05A28]"
               >
                 {secondaryCta.label}
               </Link>
