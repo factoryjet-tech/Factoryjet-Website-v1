@@ -16,6 +16,7 @@ import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import PricingTiers from '@/components/v2/PricingTiers';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import ServiceHeroImageBand from '@/components/v2/ServiceHeroImageBand';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -694,6 +695,18 @@ export default function WebDesignPage() {
               </div>
             </div>
           }
+        />
+
+        {/* ── 1b. SERVICE HERO IMAGE BAND ─────────────────────────────────── */}
+        <ServiceHeroImageBand
+          imageSrc="/images/services/web-design-hero-band.jpg"
+          imageAlt="FactoryJet web design team working on a custom website for a US small business"
+          stats={[
+            { value: '500+', label: 'Websites Delivered' },
+            { value: '7 Days', label: 'Delivery Guarantee' },
+            { value: 'From $1,999', label: 'Fixed Price, Confirmed Upfront' },
+            { value: '25 Yrs', label: 'Web Design Expertise' },
+          ]}
         />
 
         {/* ── 2. TRUST STATS ───────────────────────────────────────────────── */}

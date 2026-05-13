@@ -1,16 +1,15 @@
 /**
  * BoringStatsRow — v2.1 visual upgrade.
  *
- * Design language (Path A — CSS/JSX only):
- *   - Numbers are the hero: ambient radial glow disc behind each value
- *     (Ambient Glow & Bloom #15) + Maxi Typography treatment (#13)
- *   - Section: white + dot grid + centre bloom — consistent system language
- *   - Gradient vertical dividers replace plain neutral-200 divide lines
- *   - Category label: Geist Mono chip treatment (Retro-Futurism #21)
- *   - Microcopy: inline pill, less parenthetical, more editorial
+ * Design language (v2.2 orange pivot — CSS/JSX only):
+ *   - Numbers are the hero: large display values in #F05A28 orange inline style
+ *   - Section: cream #FAFAF7 + orange-tinted top/bottom borders
+ *   - Gradient vertical dividers: orange-keyed rgba(240,90,40,0.22)
+ *   - Category label chip: orange border + orange dot, no blue
+ *   - Microcopy: editorial Inter body text
  *
- * Background is now self-contained (section handles its own bg) but
- * the consuming page div bg still applies as a fallback — backward-compat.
+ * Orange rule: color '#F05A28' always via inline style.
+ * fj-jet-blue / text-fj-jet-blue are NEVER used in v2 components.
  *
  * Pure server component. No client state, no animation.
  */
@@ -53,9 +52,9 @@ export default function BoringStatsRow({
          * and premium. Stripe/HubSpot/Linear all use this containment
          * approach rather than per-element decorations on light backgrounds.
          */
-        background: 'linear-gradient(135deg, #E8EFFE 0%, #F4F7FF 50%, #E8EFFE 100%)',
-        borderTop: '1px solid rgba(0,82,204,0.14)',
-        borderBottom: '1px solid rgba(0,82,204,0.14)',
+        backgroundColor: '#FAFAF7',
+        borderTop: '1.5px solid rgba(240,90,40,0.18)',
+        borderBottom: '1.5px solid rgba(240,90,40,0.18)',
       }}
       className="py-12 md:py-16"
     >
@@ -71,7 +70,7 @@ export default function BoringStatsRow({
                 <div
                   className="pointer-events-none absolute right-0 top-[5%] hidden h-[90%] w-px sm:block"
                   style={{
-                    background: 'linear-gradient(180deg, transparent 0%, rgba(0,82,204,0.28) 25%, rgba(0,82,204,0.28) 75%, transparent 100%)',
+                    background: 'linear-gradient(180deg, transparent 0%, rgba(240,90,40,0.22) 25%, rgba(240,90,40,0.22) 75%, transparent 100%)',
                   }}
                   aria-hidden="true"
                 />
@@ -80,17 +79,19 @@ export default function BoringStatsRow({
               {/* ── Category label chip ────────────────────────────────── */}
               {stat.categoryLabel && (
                 <div
-                  className="mb-4 inline-flex items-center gap-1.5 self-start rounded-full px-3 py-1 font-fj-mono font-bold uppercase text-fj-jet-blue"
+                  className="mb-4 inline-flex items-center gap-1.5 self-start rounded-full px-3 py-1 font-fj-mono font-bold uppercase"
                   style={{
                     fontSize: '9px',
                     letterSpacing: '0.13em',
-                    background: 'rgba(255,255,255,0.70)',
-                    border: '1px solid rgba(0,82,204,0.20)',
+                    color: '#F05A28',
+                    background: 'rgba(240,90,40,0.06)',
+                    border: '1px solid rgba(240,90,40,0.22)',
                   }}
                   aria-hidden="true"
                 >
                   <span
-                    className="inline-block h-1 w-1 rounded-full bg-fj-jet-blue"
+                    className="inline-block h-1 w-1 rounded-full"
+                    style={{ backgroundColor: '#F05A28' }}
                     aria-hidden="true"
                   />
                   {stat.categoryLabel}
@@ -103,8 +104,9 @@ export default function BoringStatsRow({
                * design container. Numbers speak for themselves at this scale.
                */}
               <p
-                className="fj-display whitespace-nowrap font-bold text-fj-jet-blue"
+                className="fj-display whitespace-nowrap font-bold"
                 style={{
+                  color: '#F05A28',
                   fontSize: 'clamp(3rem, 7vw, 4.75rem)',
                   lineHeight: 1,
                   letterSpacing: '-0.04em',
