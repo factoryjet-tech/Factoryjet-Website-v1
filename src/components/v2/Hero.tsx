@@ -198,17 +198,15 @@ function HeroContent({
             ) : (
               <Link
                 href={primaryCta.href ?? '/contact'}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-fj-jet-blue px-7 py-3.5 font-fj-body text-base font-semibold text-white transition-all hover:bg-[#003D99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-fj-jet-blue px-5 py-2.5 font-fj-body text-[0.9375rem] font-semibold text-white transition-all hover:bg-[#003D99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue"
                 style={{
                   boxShadow: '0 4px 24px rgba(0,82,204,0.35), 0 1px 4px rgba(0,82,204,0.20)',
                 }}
               >
                 {primaryCta.label}
-                <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/20" aria-hidden="true">
-                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-                    <path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path d="M3 7h8M7.5 3.5l3.5 3.5-3.5 3.5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
               </Link>
             )
           )}
@@ -222,7 +220,7 @@ function HeroContent({
             ) : (
               <Link
                 href={secondaryCta.href ?? '/contact'}
-                className="inline-flex items-center justify-center rounded-full border border-fj-neutral-200 bg-white/60 px-7 py-3.5 font-fj-body text-base font-semibold text-fj-ink backdrop-blur-sm transition-colors hover:border-fj-neutral-400 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue"
+                className="inline-flex items-center justify-center rounded-full border border-fj-neutral-200 bg-white/60 px-5 py-2.5 font-fj-body text-[0.9375rem] font-semibold text-fj-ink backdrop-blur-sm transition-colors hover:border-fj-neutral-400 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue"
               >
                 {secondaryCta.label}
               </Link>

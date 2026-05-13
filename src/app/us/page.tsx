@@ -56,46 +56,98 @@ export const metadata: Metadata = {
 ───────────────────────────────────────────────────────────────────────────── */
 const SERVICES = [
   {
-    icon: '🌐',
-    name: 'Web Design Solutions',
+    name: 'Web Design & Development',
     description:
-      'Websites built to win deals — enterprise-ready design, conversion architecture, SEO-friendly structure, and sub-2-second performance. Starting at $1,999. 7-day delivery.',
-    href: '/us/services/web-design',
+      'Custom websites engineered for speed, SEO, and conversions. Lighthouse 100/100, Core Web Vitals green, full GitHub ownership. Starting at $1,999. 7-day delivery.',
+    linkLabel: 'See web design services',
+    linkHref: '/us/services/web-design',
   },
   {
-    icon: '🛍️',
+    name: 'Shopify Development',
+    description:
+      'Custom Shopify stores built for conversion — fast, branded, and fully owned. From DTC launches to store migrations. Starting at $2,499. 7–14 day delivery.',
+    linkLabel: 'See Shopify services',
+    linkHref: '/us/services/shopify-development',
+  },
+  {
     name: 'E-Commerce Development',
     description:
       'Convert browsers into buyers with optimised product pages, streamlined checkout flows, and mobile-first performance. Starting at $4,999. 7–14 day delivery.',
-    href: '/us/services/ecommerce-development',
+    linkLabel: 'See e-commerce services',
+    linkHref: '/us/services/ecommerce-development',
   },
   {
-    icon: '🔄',
-    name: 'Website Redesign',
-    description:
-      'Modernise your site without losing SEO equity. Optimised for lead generation, usability, and Core Web Vitals performance. Starting at $2,499. 7-day delivery.',
-    href: '/us/services/website-redesign',
-  },
-  {
-    icon: '⚡',
-    name: 'Shopify Development',
-    description:
-      'Custom Shopify stores built for conversion — fast, branded, and fully owned. From DTC launches to store migrations, delivered in 7–14 days.',
-    href: '/us/services/shopify-development',
-  },
-  {
-    icon: '🤖',
     name: 'AI Agent Development',
     description:
       'Deploy AI agents that qualify leads, answer support queries, and automate workflows — integrated directly into your website or business stack.',
-    href: '/us/services/ai-agents',
+    linkLabel: 'See AI agent services',
+    linkHref: '/us/services/ai-agents',
   },
   {
-    icon: '⚖️',
-    name: 'Law Firm Website Design',
+    name: 'AI SEO',
     description:
-      'Authority-building websites for US law firms — designed to convert prospective clients, pass bar association guidelines, and rank locally. Starting at $1,999.',
-    href: '/us/services/law-firm-website-design',
+      'AI-powered keyword research, content strategy, and technical SEO that gets your business found in Google Search, AI Overviews, and ChatGPT recommendations.',
+    linkLabel: 'Learn about AI SEO',
+    linkHref: '/contact',
+  },
+  {
+    name: 'AI Creative Studio',
+    description:
+      'Brand identity, ad creative, landing page copy, and visual assets — produced with AI-native workflows at a fraction of traditional creative agency timelines and cost.',
+    linkLabel: 'Explore AI creative',
+    linkHref: '/contact',
+  },
+  {
+    name: 'Website Redesign',
+    description:
+      'Modernise your site without losing SEO equity. Optimised for lead generation, usability, and Core Web Vitals performance. Starting at $2,499. 7-day delivery.',
+    linkLabel: 'See redesign services',
+    linkHref: '/us/services/website-redesign',
+  },
+];
+
+const INDUSTRIES = [
+  {
+    name: 'Law Firms & Legal Services',
+    description:
+      'Authority-building websites that convert prospective clients, comply with bar association guidelines, and rank in local search. Starting at $1,999.',
+    linkLabel: 'See law firm websites',
+    linkHref: '/us/services/law-firm-website-design',
+  },
+  {
+    name: 'Real Estate',
+    description:
+      'Property listing sites, agent portals, and IDX-integrated platforms that turn browsers into booked showings and captured leads.',
+    linkLabel: 'See real estate websites',
+    linkHref: '/us/services/real-estate-website-design',
+  },
+  {
+    name: 'Healthcare & MedTech',
+    description:
+      'HIPAA-aware, accessibility-compliant web experiences for practices, clinics, and health tech companies — built to earn patient trust and drive appointments.',
+    linkLabel: 'See healthcare websites',
+    linkHref: '/contact',
+  },
+  {
+    name: 'SaaS & Tech Startups',
+    description:
+      'High-converting SaaS landing pages, documentation hubs, and product marketing sites — built on Next.js for maximum performance and SEO.',
+    linkLabel: 'See SaaS websites',
+    linkHref: '/contact',
+  },
+  {
+    name: 'E-Commerce & DTC Brands',
+    description:
+      'Custom Shopify and headless commerce storefronts that outperform templates — faster load times, higher AOV, and better mobile conversion rates.',
+    linkLabel: 'See e-commerce builds',
+    linkHref: '/us/services/ecommerce-development',
+  },
+  {
+    name: 'Professional Services',
+    description:
+      'Accountants, consultants, financial advisors, and agencies — we build credibility-first websites that generate qualified inbound leads on autopilot.',
+    linkLabel: 'See professional services',
+    linkHref: '/contact',
   },
 ];
 
@@ -239,32 +291,40 @@ export default function USHomePage() {
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
           eyebrow="ACCEPTING NEW CLIENTS"
-          headline="B2B Web Design Agency in USA for High-Converting Websites"
-          lead="FactoryJet helps US businesses launch high-converting websites in as little as 7 days. From custom Next.js applications to WordPress, Shopify, and scalable React builds, we create conversion-focused websites engineered for speed, SEO, and qualified lead generation — with full GitHub ownership and zero vendor lock-in. Trusted by 523+ businesses across SaaS, Cybersecurity, Healthcare, IT, and Professional Services."
-          primaryCta={{ label: 'Get Your Free Strategy Call', href: '/contact' }}
-          secondaryCta={{ label: 'Request a Free Technical & SEO Audit', href: '/contact' }}
-          trustItems={['Websites from $1,999', '7-day delivery', '60–70% cheaper than US agencies', '523+ Projects Delivered']}
+          headline="Web Design Agency USA — Sites Live in 7 Days from $1,999"
+          lead="FactoryJet builds high-converting websites for US businesses — 60–70% less than US agencies, with full code ownership and a 7-day delivery guarantee. 523+ businesses served."
+          primaryCta={{ label: 'Get a Free Strategy Call', href: '/contact' }}
+          secondaryCta={{ label: 'Free Technical & SEO Audit', href: '/contact' }}
+          trustItems={['From $1,999', '7-day delivery', '60–70% less than US agencies', '523+ projects delivered']}
           rightSlot={<HeroBrowserMockup />}
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
         <LogoBar tagline="Trusted by 500+ businesses across Austin, Miami, Denver, Nashville, Portland and beyond" />
 
-        {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
+        {/* ── 3. SERVICES ──────────────────────────────────────────────────── */}
+        <IndustriesGrid
+          eyebrow="OUR SERVICES"
+          headline="Everything You Need to Compete Online — Built in 7 Days"
+          lead="From custom websites and Shopify stores to AI agents and AI SEO — every service ships with fixed pricing, full code ownership, and a 7-day delivery guarantee."
+          sectors={SERVICES}
+        />
+
+        {/* ── 4. INDUSTRIES ────────────────────────────────────────────────── */}
+        <IndustriesGrid
+          eyebrow="INDUSTRIES WE SERVE"
+          headline="Built for the Industries Where Credibility Closes Deals"
+          lead="We specialise in sectors where trust, speed, and technical precision determine whether a visitor becomes a client. Every build is tailored to your buyers, not adapted from a generic template."
+          sectors={INDUSTRIES}
+        />
+
+        {/* ── 5. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="523 websites. 7-day delivery. $50M+ in client revenue generated."
         />
 
-        {/* ── 4. SERVICES ──────────────────────────────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="OUR SERVICES"
-          headline="Professional Web Design Services for US B2B Companies"
-          lead="From high-converting business websites to complex e-commerce platforms, we build scalable digital assets using Next.js, WordPress, Shopify, Webflow, and custom React frameworks. Every project ships in 7 days with fixed pricing and full code ownership."
-          sectors={SERVICES}
-        />
-
-        {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
+        {/* ── 6. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why US Companies Choose FactoryJet for B2B Web Design"
@@ -285,7 +345,7 @@ export default function USHomePage() {
           ]}
         />
 
-        {/* ── 6. HOW IT WORKS ──────────────────────────────────────────────── */}
+        {/* ── 7. HOW IT WORKS ──────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="YOUR PATH TO LAUNCH"
           headline="5 Steps, Zero Surprises: From Strategy Call to Live Website"
@@ -294,13 +354,13 @@ export default function USHomePage() {
           closingNote="5 STAGES · 7 DAYS (UP TO 5 PAGES) · FREE STRATEGY CALL BEFORE ANY COMMITMENT"
         />
 
-        {/* ── 7. TESTIMONIALS ──────────────────────────────────────────────── */}
+        {/* ── 8. TESTIMONIALS ──────────────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="VERIFIED CLIENT WORK · 4.9★ RATING"
           headline="4.9/5 across 500+ projects. Every URL is live: open it, run PageSpeed, inspect the code."
         />
 
-        {/* ── 8. FAQ ───────────────────────────────────────────────────────── */}
+        {/* ── 9. FAQ ───────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Frequently Asked Questions: B2B Web Design in the USA"
@@ -308,7 +368,7 @@ export default function USHomePage() {
           items={FAQ_ITEMS}
         />
 
-        {/* ── 9. FINAL CTA ─────────────────────────────────────────────────── */}
+        {/* ── 10. FINAL CTA ────────────────────────────────────────────────── */}
         <FinalCTA
           variant="dark"
           eyebrow="START WITH A FREE STRATEGY CALL"
