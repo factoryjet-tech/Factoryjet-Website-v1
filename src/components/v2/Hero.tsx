@@ -87,6 +87,7 @@ export default function Hero({
                 primaryCta={primaryCta}
                 secondaryCta={secondaryCta}
                 trustItems={trustItems}
+                hasSlot={true}
               />
             </div>
             <div className="lg:col-span-6">{rightSlot}</div>
@@ -117,7 +118,8 @@ function HeroContent({
   primaryCta,
   secondaryCta,
   trustItems,
-}: Omit<HeroProps, 'rightSlot'>) {
+  hasSlot = false,
+}: Omit<HeroProps, 'rightSlot'> & { hasSlot?: boolean }) {
   return (
     <>
       {/* ── Announcement pill ─────────────────────────────────────────── */}
@@ -185,7 +187,7 @@ function HeroContent({
       <Heading
         as="h1"
         size="hero"
-        className={`text-fj-ink max-w-[28ch] [text-wrap:initial] ${eyebrow || announcementPill ? 'mt-2 lg:mt-3' : ''}`}
+        className={`text-fj-ink max-w-[28ch] [text-wrap:initial] ${hasSlot ? '!text-[clamp(1.75rem,3.1vw,2.375rem)]' : ''} ${eyebrow || announcementPill ? 'mt-2 lg:mt-3' : ''}`}
       >
         {headline}
       </Heading>
