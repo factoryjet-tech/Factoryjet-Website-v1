@@ -1,167 +1,176 @@
+import Link from 'next/link';
+
 /**
- * BigThreeTrustBlock — v2.1 visual upgrade.
+ * BigThreeTrustBlock — v2.2 Option B asymmetric redesign.
  *
- * Design language (Path A — CSS/JSX only):
- *   - Uniform tinted band (same system as BoringStatsRow) — the section IS
- *     the design container. No per-element glows on light backgrounds.
- *   - Gradient vertical dividers replace flat divide-x lines (same technique
- *     as BoringStatsRow — fades in/out, never clips at edges)
- *   - Numbers: text-fj-jet-blue on the tinted band — intentional color harmony
- *   - Blue accent bars above each number (Jasper/Aura pattern — kept from v2.0)
- *   - Padding reduced from py-14 lg:py-20 to py-10 md:py-12 — trust strip
- *     sits more naturally between Hero and the next content section
- *
- * Positioned immediately after Hero per B2B non-negotiable rule #1:
- * logo bar / trust strip must be section 2 — universal convention.
+ * Design language:
+ *   - Background: cream #FAFAF7 — matches Hero and page base tone
+ *   - Orange top/bottom borders (1.5px rgba(240,90,40,0.22)) as section delimiter
+ *   - Asymmetric split: left 57% hero number panel / right 43% two-stat stack
+ *   - Thin orange vertical divider between panels (desktop only)
+ *   - Left: 523+ in orange at 4rem+, keyword-rich description, orange CTA pill
+ *   - Right: 7-day delivery + 60–70% less, each with orange accent bar
+ *   - All accent color (#F05A28) applied via inline style — no Tailwind palette entry
+ *   - No year references. High-volume keywords embedded in copy.
  *
  * Pure server component.
  */
 
-export interface CityCountStat {
-  value: string;
-  label: string;
-  source?: string;
-}
-
 export interface BigThreeTrustBlockProps {
   eyebrow?: string;
   headline?: string;
-  cityCount?: CityCountStat;
+  /** Unused in Option B layout — kept for API compatibility */
+  cityCount?: { value: string; label: string; source?: string };
 }
-
-interface StatCell {
-  number: string;
-  label: string;
-  microcopy?: string;
-}
-
-const CORE_STATS: [StatCell, StatCell, StatCell] = [
-  {
-    number: '500+',
-    label: 'businesses served',
-    microcopy: 'US, UK, and UAE clients since 1999',
-  },
-  {
-    number: '7-day',
-    label: 'delivery guarantee',
-    microcopy: '97% of projects delivered on time',
-  },
-  {
-    number: '60–70%',
-    label: 'cheaper than US agencies',
-    microcopy: 'same output, India-based team cost structure',
-  },
-];
 
 export default function BigThreeTrustBlock({
   eyebrow,
-  headline,
-  cityCount,
 }: BigThreeTrustBlockProps) {
-  const allStats: StatCell[] = cityCount
-    ? [
-        ...CORE_STATS,
-        {
-          number: cityCount.value,
-          label: cityCount.label,
-          microcopy: cityCount.source ? `source: ${cityCount.source}` : undefined,
-        },
-      ]
-    : [...CORE_STATS];
-
-  const gridCols =
-    allStats.length === 4
-      ? 'sm:grid-cols-2 lg:grid-cols-4'
-      : 'sm:grid-cols-3';
-
   return (
     <section
       style={{
-        background: 'linear-gradient(135deg, #E8EFFE 0%, #F4F7FF 50%, #E8EFFE 100%)',
-        borderTop: '1px solid rgba(0,82,204,0.14)',
-        borderBottom: '1px solid rgba(0,82,204,0.14)',
+        backgroundColor: '#FAFAF7',
+        borderTop: '1.5px solid rgba(240,90,40,0.22)',
+        borderBottom: '1.5px solid rgba(240,90,40,0.22)',
       }}
-      className="py-10 md:py-12"
+      className="py-10 md:py-14"
     >
       <div className="mx-auto max-w-[1120px] px-6 md:px-8">
 
-        {(eyebrow || headline) && (
-          <div className="mb-10">
+        {/* Asymmetric grid: left 57 / divider 1px / right 43 */}
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[57fr_1px_43fr] lg:gap-0 lg:items-center">
+
+          {/* ── Left panel ─────────────────────────────────────────────── */}
+          <div className="lg:pr-14">
+
+            {/* Eyebrow */}
             {eyebrow && (
               <p
-                className="font-fj-mono font-medium uppercase text-fj-jet-blue"
-                style={{ fontSize: '11px', letterSpacing: '0.14em' }}
+                className="font-fj-mono font-semibold uppercase mb-4"
+                style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#F05A28' }}
               >
                 {eyebrow}
               </p>
             )}
-            {headline && (
-              <p
-                className="mt-2 font-fj-body text-fj-neutral-600"
-                style={{ fontSize: '0.9375rem', lineHeight: 1.5 }}
-              >
-                {headline}
-              </p>
-            )}
-          </div>
-        )}
 
-        <div className={`grid grid-cols-1 gap-y-10 ${gridCols}`}>
-          {allStats.map((stat, i) => (
-            <div
-              key={i}
-              className="relative flex flex-col sm:px-10 sm:first:pl-0 sm:last:pr-0"
+            {/* Hero number */}
+            <p
+              className="fj-display font-bold"
+              style={{
+                fontSize: 'clamp(3rem, 5vw, 4.5rem)',
+                lineHeight: 1,
+                letterSpacing: '-0.04em',
+                color: '#F05A28',
+              }}
             >
-              {/* ── Gradient vertical divider (all but last) ─────────── */}
-              {i < allStats.length - 1 && (
-                <div
-                  className="pointer-events-none absolute right-0 top-[5%] hidden h-[90%] w-px sm:block"
-                  style={{
-                    background: 'linear-gradient(180deg, transparent 0%, rgba(0,82,204,0.28) 25%, rgba(0,82,204,0.28) 75%, transparent 100%)',
-                  }}
-                  aria-hidden="true"
-                />
-              )}
+              523+
+            </p>
 
-              {/* Blue accent bar */}
-              <div
-                className="mb-5 h-[3px] w-10 rounded-full bg-fj-jet-blue"
+            {/* Keyword-rich description */}
+            <p
+              className="mt-4 font-fj-body text-fj-neutral-600"
+              style={{ fontSize: '0.9375rem', lineHeight: 1.65, maxWidth: '420px' }}
+            >
+              Websites designed and built for US small businesses, Shopify stores,
+              B2B companies, and DTC brands. Affordable web design services —
+              60–70% less than US agencies, with full code ownership and a
+              7-day delivery guarantee.
+            </p>
+
+            {/* CTA pill */}
+            <Link
+              href="/contact"
+              className="mt-6 inline-flex items-center gap-2 rounded-full font-fj-body font-semibold text-white transition-opacity hover:opacity-90"
+              style={{
+                background: '#F05A28',
+                padding: '10px 22px',
+                fontSize: '0.9rem',
+                boxShadow: '0 4px 18px rgba(240,90,40,0.30)',
+              }}
+            >
+              Book a free strategy call
+              <span
+                className="inline-flex h-5 w-5 items-center justify-center rounded-full"
+                style={{ background: 'rgba(255,255,255,0.22)' }}
                 aria-hidden="true"
+              >
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                  <path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </span>
+            </Link>
+          </div>
+
+          {/* ── Vertical divider — desktop only ───────────────────────── */}
+          <div
+            className="hidden lg:block self-stretch"
+            style={{ background: 'rgba(240,90,40,0.20)' }}
+            aria-hidden="true"
+          />
+
+          {/* ── Right panel — two stacked stats ───────────────────────── */}
+          <div className="lg:pl-14 flex flex-col gap-8">
+
+            {/* Stat 1 — 7-day delivery */}
+            <div>
+              <div
+                aria-hidden="true"
+                style={{ width: 28, height: 3, background: '#F05A28', borderRadius: 2, marginBottom: 12 }}
               />
-
-              {/* Number */}
               <p
-                className="fj-display font-bold text-fj-jet-blue whitespace-nowrap"
-                style={{
-                  fontSize: 'clamp(2.5rem, 5.5vw, 4rem)',
-                  lineHeight: 1,
-                  letterSpacing: '-0.04em',
-                }}
+                className="fj-display font-bold text-fj-ink"
+                style={{ fontSize: 'clamp(1.875rem, 3vw, 2.75rem)', lineHeight: 1, letterSpacing: '-0.03em' }}
               >
-                {stat.number}
+                7 Days
               </p>
-
-              {/* Label */}
               <p
-                className="mt-3 font-fj-body font-semibold text-fj-ink"
-                style={{ fontSize: '0.9375rem', lineHeight: 1.5 }}
+                className="mt-2 font-fj-body font-semibold text-fj-ink"
+                style={{ fontSize: '0.9375rem' }}
               >
-                {stat.label}
+                Website Delivery Guarantee
               </p>
-
-              {/* Microcopy */}
-              {stat.microcopy && (
-                <p
-                  className="mt-1.5 font-fj-body text-fj-neutral-500"
-                  style={{ fontSize: '0.8125rem', lineHeight: 1.55, fontWeight: 500 }}
-                >
-                  {stat.microcopy}
-                </p>
-              )}
+              <p
+                className="mt-1.5 font-fj-body text-fj-neutral-500"
+                style={{ fontSize: '0.8125rem', lineHeight: 1.55, fontWeight: 500 }}
+              >
+                Custom web design, live in 7 days — or you don&apos;t pay
+              </p>
             </div>
-          ))}
-        </div>
 
+            {/* Thin horizontal divider between stats */}
+            <div
+              aria-hidden="true"
+              style={{ height: '1px', background: 'rgba(240,90,40,0.16)', borderRadius: 1 }}
+            />
+
+            {/* Stat 2 — 60–70% less */}
+            <div>
+              <div
+                aria-hidden="true"
+                style={{ width: 28, height: 3, background: '#F05A28', borderRadius: 2, marginBottom: 12 }}
+              />
+              <p
+                className="fj-display font-bold text-fj-ink"
+                style={{ fontSize: 'clamp(1.875rem, 3vw, 2.75rem)', lineHeight: 1, letterSpacing: '-0.03em' }}
+              >
+                60–70%
+              </p>
+              <p
+                className="mt-2 font-fj-body font-semibold text-fj-ink"
+                style={{ fontSize: '0.9375rem' }}
+              >
+                Less Than US Web Design Agencies
+              </p>
+              <p
+                className="mt-1.5 font-fj-body text-fj-neutral-500"
+                style={{ fontSize: '0.8125rem', lineHeight: 1.55, fontWeight: 500 }}
+              >
+                Professional website design from $1,999 — fixed price, confirmed upfront
+              </p>
+            </div>
+
+          </div>
+        </div>
       </div>
     </section>
   );
