@@ -78,7 +78,7 @@ export default function Hero({
       <div className="mx-auto max-w-[1120px] px-6 md:px-8">
         {hasRightSlot ? (
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12 lg:items-center">
-            <div className="lg:col-span-7">
+            <div className="lg:col-span-6">
               <HeroContent
                 announcementPill={announcementPill}
                 eyebrow={eyebrow}
@@ -89,7 +89,7 @@ export default function Hero({
                 trustItems={trustItems}
               />
             </div>
-            <div className="lg:col-span-5">{rightSlot}</div>
+            <div className="lg:col-span-6">{rightSlot}</div>
           </div>
         ) : (
           <div className="max-w-[820px]">
@@ -185,7 +185,7 @@ function HeroContent({
       <Heading
         as="h1"
         size="hero"
-        className={`text-fj-ink max-w-[28ch] ${eyebrow || announcementPill ? 'mt-2 lg:mt-3' : ''}`}
+        className={`text-fj-ink max-w-[28ch] [text-wrap:initial] ${eyebrow || announcementPill ? 'mt-2 lg:mt-3' : ''}`}
       >
         {headline}
       </Heading>
@@ -258,7 +258,7 @@ function HeroContent({
       {/* ── Trust strip ───────────────────────────────────────────────── */}
       {trustItems && trustItems.length > 0 && (
         <div
-          className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2"
+          className="mt-5 flex flex-nowrap items-center gap-x-4 overflow-hidden"
           style={{ fontSize: '0.8125rem' }}
         >
           {trustItems.map((item, i) => (

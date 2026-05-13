@@ -83,7 +83,8 @@ export default function SiteHeader({
             </a>
             <Link
               href={cta.href}
-              className="hidden items-center justify-center rounded-lg bg-fj-jet-blue px-5 py-2.5 font-fj-body text-[14px] font-semibold text-white transition-opacity hover:opacity-90 sm:inline-flex"
+              className="hidden items-center justify-center rounded-full px-5 py-2.5 font-fj-body text-[14px] font-semibold text-white transition-opacity hover:opacity-90 sm:inline-flex"
+              style={{ background: '#F05A28' }}
             >
               {cta.label}
             </Link>
