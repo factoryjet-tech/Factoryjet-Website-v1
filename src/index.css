@@ -2,22 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ── Clash Display — self-hosted (eliminates Fontshare CDN latency on LCP) ── */
-@font-face {
-  font-family: 'Clash Display';
-  src: url('/fonts/clash-display-700.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Clash Display';
-  src: url('/fonts/clash-display-600.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
+/* ── Plus Jakarta Sans is loaded via next/font in layout.tsx ── */
+/* (Clash Display @font-face removed — Sprint 8 font swap) */
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -194,23 +180,13 @@ body {
 }
 
 /* ──────────────────────────────────────────────────────────────────
-   Clash Display — font fallback metrics + utility class.
-   Hoisted from src/app/uk/layout.tsx (Issue #24) so non-UK pages can
-   use Clash per the design system. The Fontshare @font-face itself is
-   loaded via stylesheet <link> in src/app/layout.tsx <head>.
-   Fallback metrics prevent CLS during font swap.
+   Plus Jakarta Sans — display/heading font (Sprint 8 replacement for Clash Display).
+   Loaded via next/font in layout.tsx as --font-plus-jakarta.
+   font-clash token remapped here so all existing call sites
+   (font-clash, fj-display) automatically pick up Plus Jakarta Sans.
    ────────────────────────────────────────────────────────────────── */
-@font-face {
-  font-family: 'Clash Display Fallback';
-  src: local('Arial Black'), local('Helvetica Neue Bold'), local('Arial Bold');
-  size-adjust: 108%;
-  ascent-override: 92%;
-  descent-override: 22%;
-  line-gap-override: 0%;
-}
-
 :root {
-  --font-clash: 'Clash Display', 'Clash Display Fallback', 'Arial Black', system-ui, sans-serif;
+  --font-clash: var(--font-plus-jakarta), system-ui, sans-serif;
 }
 
 .font-clash {
@@ -255,13 +231,14 @@ body {
   --fj-jet-blue-on-dark: #4A8FFF;
 }
 
-/* Display utility class — now Clash Display 700 per the M1.d.1 pivot.
- * --font-clash is defined above (line ~187) from the Fontshare load
- * wired in src/app/layout.tsx. */
+/* Display utility class — Plus Jakarta Sans 700/800 (Sprint 8).
+ * --font-clash remapped above to var(--font-plus-jakarta).
+ * Slightly tighter tracking than Clash Display; weight 700 is
+ * the canonical heading weight for Plus Jakarta Sans. */
 .fj-display {
   font-family: var(--font-clash);
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
 }
 
 /* Eyebrow utility — Geist Mono tracked-caps, fj-jet-blue default;

@@ -26,20 +26,21 @@ export default {
         heading: ['Poppins', 'Inter', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
 
-        // === FactoryJet Design System v2.0 (post M1.d.1 pivot) ===
-        // Display (canonical for v2 going forward): Clash Display 700.
+        // === FactoryJet Design System v2.0 — Sprint 8 font pivot ===
+        // Display (canonical): Plus Jakarta Sans (replaces Clash Display).
+        // Geometric humanist sans — professional, warm, modern.
         // Body: Inter. Mono: Geist Mono.
-        // The fj-display key is RETAINED but now resolves to Clash so
-        // every existing v2 call site (font-fj-display) auto-picks up
-        // the new font without TSX edits. Subsequent reskin patches
-        // (M1.d.2–M1.d.5) may replace these utilities per component.
-        'fj-display': ['"Clash Display"', '"Clash Display Fallback"', '"Arial Black"', 'system-ui', 'sans-serif'],
+        // fj-display and clash both remap here so every existing
+        // call site (font-fj-display, font-clash) picks up PJS automatically.
+        'fj-display': ['var(--font-plus-jakarta)', 'system-ui', 'sans-serif'],
         'fj-body': ['var(--font-inter)', 'sans-serif'],
         'fj-mono': ['var(--font-geist-mono)', 'ui-monospace', 'Consolas', 'monospace'],
 
-        // New canonical Clash Display key for components authored after
-        // the pivot to reach for explicitly.
-        'clash': ['"Clash Display"', '"Clash Display Fallback"', '"Arial Black"', 'system-ui', 'sans-serif'],
+        // Canonical heading key for all v2+ components.
+        'clash': ['var(--font-plus-jakarta)', 'system-ui', 'sans-serif'],
+
+        // Explicit Plus Jakarta Sans key — use font-plus-jakarta in new components.
+        'plus-jakarta': ['var(--font-plus-jakarta)', 'system-ui', 'sans-serif'],
 
         // Cormorant Garamond — editorial serif for v3 homepage hero.
         // High-contrast display serif with italic support for accent words.
