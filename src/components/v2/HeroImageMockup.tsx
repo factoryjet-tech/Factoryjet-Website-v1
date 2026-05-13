@@ -48,13 +48,16 @@ export default function HeroImageMockup({ className = '' }: { className?: string
       {/* ── Hero image ──────────────────────────────────────────────────── */}
       {/*
        * Container fixes the height so the image fills the right slot properly.
-       * object-cover + object-right crops to show the browser mockup (right half)
-       * rather than the left badge area of the 16:9 source image.
+       * object-cover + objectPosition 55% centers on the browser mockup without
+       * aggressively cutting the left side of the browser window.
+       * The source image is 16:9 landscape; the container is near-square, so
+       * object-cover always crops horizontally. 55% from left shows the full
+       * browser chrome while avoiding the far-left badge pill area.
        */}
       <div
         className="relative overflow-hidden rounded-2xl"
         style={{
-          height: 'clamp(300px, 45vw, 540px)',
+          height: 'clamp(280px, 40vw, 500px)',
           boxShadow: '0 24px 64px -12px rgba(15,15,18,0.18), 0 4px 16px -4px rgba(15,15,18,0.10)',
         }}
       >
@@ -62,7 +65,8 @@ export default function HeroImageMockup({ className = '' }: { className?: string
           src="/images/hero-us.webp"
           alt="FactoryJet builds high-converting e-commerce and business websites for US small businesses"
           fill
-          className="object-cover object-right"
+          className="object-cover"
+          style={{ objectPosition: '55% center' }}
           priority
           quality={90}
           sizes="(max-width: 1024px) 100vw, 45vw"
