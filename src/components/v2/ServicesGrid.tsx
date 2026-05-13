@@ -142,7 +142,7 @@ const SERVICES: Service[] = [
       'Ongoing performance tuning',
     ],
     stackLabel: 'Built with',
-    stack: ['GPT-4o', 'Claude Sonnet 4', 'Gemini 2.5 Pro', 'n8n', 'LangGraph'],
+    stack: ['Google Gemini', 'Anthropic Claude', 'OpenAI ChatGPT', 'KIMI', 'n8n'],
     primaryCta: { label: 'See AI agent services', href: '/us/services/ai-agents' },
     secondaryCta: { label: 'Book a free call', href: '/contact' },
     icon: <Bot size={ICON_SIZE} />,
@@ -184,7 +184,7 @@ const SERVICES: Service[] = [
       'Batch delivery ready for launch',
     ],
     stackLabel: 'Powered by',
-    stack: ['Midjourney v7', 'Flux 1.1 Pro', 'Veo 3.1', 'Kling 3.0', 'Runway Gen-3'],
+    stack: ['Higgsfield', 'Seedance', 'FLUX', 'Kling', 'LTX', 'HeyGen'],
     primaryCta: { label: 'Explore AI Creative Studio', href: '/contact' },
     secondaryCta: { label: 'Book a free call', href: '/contact' },
     icon: <Sparkles size={ICON_SIZE} />,
@@ -205,7 +205,7 @@ const PROGRESS_TICK = 50;
 const RESUME_DELAY = 3000;
 
 const ORANGE = '#F05A28';
-const DARK_NAV = '#18181f';
+const LIGHT_NAV = '#F2F1EC';
 const DARK_PANEL = '#111118';
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -310,8 +310,8 @@ export default function ServicesGrid() {
               <span style={{ color: ORANGE }}>Compete Online</span>
             </h2>
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-              From custom websites and Shopify stores to AI agents and AI SEO — seven specialised
-              services, one agency, fixed pricing, and full code ownership on every project.
+              From web design and Shopify development to AI agents and AI-powered SEO — seven
+              specialised services, transparent pricing, and every deliverable fully yours on handover.
             </p>
           </div>
 
@@ -324,7 +324,7 @@ export default function ServicesGrid() {
           >
 
             {/* ── MOBILE chip nav ──────────────────────────────────────────── */}
-            <div className="block lg:hidden" style={{ backgroundColor: DARK_NAV }}>
+            <div className="block lg:hidden" style={{ backgroundColor: '#18181f' }}>
               {/* Mobile progress bar */}
               <div className="h-0.5 w-full" style={{ backgroundColor: 'rgba(255,255,255,0.08)' }}>
                 <div
@@ -366,10 +366,15 @@ export default function ServicesGrid() {
               {/* LEFT NAV — desktop only */}
               <div
                 className="hidden lg:flex flex-col"
-                style={{ width: 260, backgroundColor: DARK_NAV, flexShrink: 0 }}
+                style={{
+                  width: 260,
+                  backgroundColor: LIGHT_NAV,
+                  flexShrink: 0,
+                  borderRight: '1px solid rgba(0,0,0,0.08)',
+                }}
               >
                 {/* Desktop progress bar */}
-                <div className="h-0.5 w-full" style={{ backgroundColor: 'rgba(255,255,255,0.08)' }}>
+                <div className="h-0.5 w-full" style={{ backgroundColor: 'rgba(0,0,0,0.08)' }}>
                   <div
                     className="h-0.5"
                     style={{ width: `${progress}%`, backgroundColor: ORANGE, transition: 'none' }}
@@ -382,7 +387,7 @@ export default function ServicesGrid() {
                       {/* Category label */}
                       <p
                         className="px-5 pt-3 pb-2 text-xs font-semibold tracking-widest uppercase"
-                        style={{ color: 'rgba(255,255,255,0.28)' }}
+                        style={{ color: 'rgba(0,0,0,0.35)' }}
                       >
                         {cat.label}
                       </p>
@@ -396,7 +401,7 @@ export default function ServicesGrid() {
                             onClick={() => handleSelect(id)}
                             className="w-full text-left px-5 py-2.5 flex items-center gap-3"
                             style={{
-                              backgroundColor: isActive ? 'rgba(240,90,40,0.12)' : 'transparent',
+                              backgroundColor: isActive ? 'rgba(240,90,40,0.1)' : 'transparent',
                               borderLeft: isActive
                                 ? `2px solid ${ORANGE}`
                                 : '2px solid transparent',
@@ -405,19 +410,19 @@ export default function ServicesGrid() {
                           >
                             <span
                               className="text-xs font-mono w-6 flex-shrink-0"
-                              style={{ color: isActive ? ORANGE : 'rgba(255,255,255,0.22)' }}
+                              style={{ color: isActive ? ORANGE : 'rgba(0,0,0,0.28)' }}
                             >
                               {svc.num}
                             </span>
                             <span
                               className="flex-shrink-0"
-                              style={{ color: isActive ? ORANGE : 'rgba(255,255,255,0.32)' }}
+                              style={{ color: isActive ? ORANGE : 'rgba(0,0,0,0.32)' }}
                             >
                               {svc.icon}
                             </span>
                             <span
                               className="text-sm font-medium leading-tight"
-                              style={{ color: isActive ? '#fff' : 'rgba(255,255,255,0.52)' }}
+                              style={{ color: isActive ? '#111118' : 'rgba(0,0,0,0.55)' }}
                             >
                               {svc.name}
                             </span>
@@ -434,7 +439,7 @@ export default function ServicesGrid() {
                       {catIdx < CATEGORIES.length - 1 && (
                         <div
                           className="mx-5 mt-3"
-                          style={{ height: 1, backgroundColor: 'rgba(255,255,255,0.06)' }}
+                          style={{ height: 1, backgroundColor: 'rgba(0,0,0,0.07)' }}
                         />
                       )}
                     </div>
@@ -445,11 +450,11 @@ export default function ServicesGrid() {
                 <div
                   className="px-5 py-4"
                   style={{
-                    backgroundColor: 'rgba(240,90,40,0.1)',
-                    borderTop: '1px solid rgba(240,90,40,0.18)',
+                    backgroundColor: 'rgba(240,90,40,0.07)',
+                    borderTop: '1px solid rgba(240,90,40,0.15)',
                   }}
                 >
-                  <p className="text-xs mb-2" style={{ color: 'rgba(255,255,255,0.4)' }}>
+                  <p className="text-xs mb-2" style={{ color: 'rgba(0,0,0,0.45)' }}>
                     Not sure which service fits?
                   </p>
                   <Link
