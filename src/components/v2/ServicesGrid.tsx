@@ -1,568 +1,615 @@
-import type { ReactNode } from 'react';
+'use client';
+
+import { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
-import MotionFadeUp from './MotionFadeUp';
+import {
+  Globe,
+  RefreshCw,
+  ShoppingCart,
+  CreditCard,
+  Bot,
+  BarChart2,
+  Sparkles,
+  Check,
+  Clock,
+  ArrowRight,
+} from 'lucide-react';
 
-/**
- * ServicesGrid — v1.0 (Sprint 11 design system)
- *
- * Dedicated Services section component. Replaces IndustriesGrid for the
- * "Our Services" use case.
- *
- * Design language:
- *   - Two-column section header (headline left / lead + CTA right)
- *   - Bento grid: featured card (col-span-2) + 6 service cards + 1 CTA card
- *     → Perfect 3×3 on LG, clean stacking on MD/SM
- *   - Cards: icon badge (the ONE decorative element per premium template rule),
- *     gradient fill, 3px blue top-cap, depth shadow, hover lift + ring glow
- *   - No watermark numbers — cleaner than IndustriesGrid
- *   - Price chip (blue tint) + delivery chip (green) on each card
- *   - Featured card: wider layout with "What's included" feature panel
- *   - CTA card: blue gradient — visually distinct, Linear-style grid terminator
- *
- * Pure server component.
- */
+/* ─────────────────────────────────────────────────────────────────────────────
+   Types
+───────────────────────────────────────────────────────────────────────────── */
+type ServiceId = 1 | 2 | 3 | 4 | 5 | 6 | 7;
 
-/* ─── Icon system ─────────────────────────────────────────────────────────── */
-
-export type ServiceIconType =
-  | 'web'
-  | 'shopify'
-  | 'ecommerce'
-  | 'ai-agent'
-  | 'ai-seo'
-  | 'ai-creative'
-  | 'redesign';
-
-interface IconMeta {
-  color: string;
-  bg: string;
-  el: ReactNode;
-}
-
-const ICONS: Record<ServiceIconType, IconMeta> = {
-  web: {
-    color: '#0052CC',
-    bg: 'rgba(0,82,204,0.10)',
-    el: (
-      <svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <rect x="2" y="3" width="16" height="14" rx="2" />
-        <path d="M2 7.5h16" />
-        <circle cx="5.5" cy="5.25" r=".75" fill="currentColor" stroke="none" />
-        <circle cx="8"   cy="5.25" r=".75" fill="currentColor" stroke="none" />
-        <circle cx="10.5" cy="5.25" r=".75" fill="currentColor" stroke="none" />
-      </svg>
-    ),
-  },
-  shopify: {
-    color: '#15803D',
-    bg: 'rgba(21,128,61,0.09)',
-    el: (
-      <svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M5.5 8.5V7a4.5 4.5 0 019 0v1.5" />
-        <rect x="2.5" y="8.5" width="15" height="9" rx="2" />
-        <path d="M8 13.5a2 2 0 004 0" />
-      </svg>
-    ),
-  },
-  ecommerce: {
-    color: '#C2410C',
-    bg: 'rgba(194,65,12,0.08)',
-    el: (
-      <svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M1.5 2.5H4L6 13H15.5L17.5 6.5H5.5" />
-        <circle cx="8"   cy="16.5" r="1.25" />
-        <circle cx="13.5" cy="16.5" r="1.25" />
-      </svg>
-    ),
-  },
-  'ai-agent': {
-    color: '#6D28D9',
-    bg: 'rgba(109,40,217,0.08)',
-    el: (
-      <svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <rect x="3" y="4.5" width="14" height="11" rx="2" />
-        <circle cx="7.5"  cy="9.5" r="1.25" />
-        <circle cx="12.5" cy="9.5" r="1.25" />
-        <path d="M7.5 13h5" />
-        <path d="M7 3.5v1.5M13 3.5v1.5" />
-      </svg>
-    ),
-  },
-  'ai-seo': {
-    color: '#0369A1',
-    bg: 'rgba(3,105,161,0.09)',
-    el: (
-      <svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <circle cx="8.5" cy="8.5" r="5.5" />
-        <path d="M12.5 12.5L17.5 17.5" />
-        {/* Sparkle above the magnifier */}
-        <path d="M14.5 3l.4.8.8.4-.8.4-.4.8-.4-.8-.8-.4.8-.4z" fill="currentColor" stroke="none" />
-      </svg>
-    ),
-  },
-  'ai-creative': {
-    color: '#9D174D',
-    bg: 'rgba(157,23,77,0.08)',
-    el: (
-      <svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        {/* Brush stroke */}
-        <path d="M3.5 16.5L13 7" />
-        <path d="M13 7l2.5-2.5" />
-        <circle cx="16.5" cy="3.5" r="1.25" />
-        {/* Star */}
-        <path d="M7 4l.6 1.2 1.2.6-1.2.6L7 7.6l-.6-1.2-1.2-.6 1.2-.6z" fill="currentColor" stroke="none" />
-      </svg>
-    ),
-  },
-  redesign: {
-    color: '#0D9488',
-    bg: 'rgba(13,148,136,0.09)',
-    el: (
-      <svg viewBox="0 0 20 20" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M3.5 10a6.5 6.5 0 0111-4.7" />
-        <path d="M16.5 10a6.5 6.5 0 01-11 4.7" />
-        <polyline points="3.5,3.5 3.5,10 10,10" />
-        <polyline points="16.5,16.5 16.5,10 10,10" />
-      </svg>
-    ),
-  },
-};
-
-function IconBadge({ type, size = 40 }: { type: ServiceIconType; size?: number }) {
-  const meta = ICONS[type];
-  return (
-    <span
-      className="inline-flex flex-shrink-0 items-center justify-center rounded-xl"
-      style={{
-        width: size,
-        height: size,
-        background: meta.bg,
-        color: meta.color,
-      }}
-      aria-hidden="true"
-    >
-      {meta.el}
-    </span>
-  );
-}
-
-/* ─── Badge chips ─────────────────────────────────────────────────────────── */
-
-function PriceChip({ label }: { label: string }) {
-  return (
-    <span
-      className="inline-flex items-center rounded-full px-2.5 py-0.5 font-fj-body font-semibold"
-      style={{ fontSize: '0.7rem', background: 'rgba(0,82,204,0.08)', color: '#0052CC', letterSpacing: '0.01em' }}
-    >
-      {label}
-    </span>
-  );
-}
-
-function DeliveryChip({ label }: { label: string }) {
-  return (
-    <span
-      className="inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 font-fj-body font-semibold"
-      style={{ fontSize: '0.7rem', background: 'rgba(22,163,74,0.09)', color: '#15803D', letterSpacing: '0.01em' }}
-    >
-      <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#15803D]" aria-hidden="true" />
-      {label}
-    </span>
-  );
-}
-
-/* ─── Types ───────────────────────────────────────────────────────────────── */
-
-export interface ServiceItem {
+interface Service {
+  id: ServiceId;
+  num: string;
+  category: 'Web' | 'E-Commerce' | 'AI Services';
   name: string;
-  description: string;
-  iconType: ServiceIconType;
-  /** Short label, e.g. "From $1,999" */
-  price?: string;
-  /** Short label, e.g. "7-day delivery" */
-  delivery?: string;
-  /** Feature bullets shown only on the featured (first) card */
-  features?: readonly string[];
-  linkLabel?: string;
-  linkHref?: string;
+  tagline: string;
+  timeline: string;
+  timelineLabel: string;
+  deliverables: string[];
+  stackLabel: string;
+  stack: string[];
+  primaryCta: { label: string; href: string };
+  secondaryCta: { label: string; href: string };
+  icon: React.ReactNode;
 }
 
-export interface ServicesGridCtaCard {
-  headline: string;
-  sub: string;
-  btnLabel: string;
-  btnHref: string;
-}
+/* ─────────────────────────────────────────────────────────────────────────────
+   Service Data
+───────────────────────────────────────────────────────────────────────────── */
+const ICON_SIZE = 20;
 
-export interface ServicesGridProps {
-  eyebrow?: string;
-  headline: ReactNode;
-  lead?: string;
-  /** First item automatically renders as the featured card (lg:col-span-2). */
-  services: ReadonlyArray<ServiceItem>;
-  /** Optional blue CTA card appended as the last grid cell. */
-  ctaCard?: ServicesGridCtaCard;
-  /** Override the "Explore all services" link. Default: /us/services/web-design */
-  exploreHref?: string;
-}
+const SERVICES: Service[] = [
+  {
+    id: 1,
+    num: '01',
+    category: 'Web',
+    name: 'Web Design & Development',
+    tagline: 'Custom websites engineered for speed, SEO, and conversions — shipped in 7 days.',
+    timeline: '7-day delivery',
+    timelineLabel: 'Delivery',
+    deliverables: [
+      'Lighthouse 100/100 performance score',
+      'Mobile-first responsive design',
+      'GA4 + Google Search Console setup',
+      'Full GitHub ownership on delivery',
+      '30-day post-launch support window',
+    ],
+    stackLabel: 'Built on',
+    stack: ['WordPress', 'Next.js', 'Webflow', 'Framer', 'Custom Stack'],
+    primaryCta: { label: 'See web design services', href: '/us/services/web-design' },
+    secondaryCta: { label: 'Book a free call', href: '/contact' },
+    icon: <Globe size={ICON_SIZE} />,
+  },
+  {
+    id: 2,
+    num: '02',
+    category: 'Web',
+    name: 'Website Redesign',
+    tagline: 'Modernise your site without losing SEO equity — Core Web Vitals green in 7 days.',
+    timeline: '7-day delivery',
+    timelineLabel: 'Delivery',
+    deliverables: [
+      'Full visual & UX overhaul',
+      'Core Web Vitals fix & Lighthouse audit',
+      'SEO-safe content migration',
+      'On-page SEO & schema markup',
+      'Structured redirect mapping',
+    ],
+    stackLabel: 'We migrate from',
+    stack: ['WordPress', 'Wix', 'Squarespace', 'Webflow', 'Legacy HTML'],
+    primaryCta: { label: 'See redesign services', href: '/us/services/website-redesign' },
+    secondaryCta: { label: 'Book a free call', href: '/contact' },
+    icon: <RefreshCw size={ICON_SIZE} />,
+  },
+  {
+    id: 3,
+    num: '03',
+    category: 'E-Commerce',
+    name: 'Shopify Development',
+    tagline: 'Custom Shopify stores built for conversion — fast, branded, and fully yours.',
+    timeline: '7–14 days',
+    timelineLabel: 'Timeline',
+    deliverables: [
+      'Custom theme design (no templates)',
+      'Full product catalog & collections setup',
+      'Payment gateway & checkout optimisation',
+      'Inventory, shipping & tax configuration',
+      'Mobile-first storefront performance',
+    ],
+    stackLabel: 'Platform',
+    stack: ['Shopify', 'Shopify Plus'],
+    primaryCta: { label: 'See Shopify services', href: '/us/services/shopify-development' },
+    secondaryCta: { label: 'Book a free call', href: '/contact' },
+    icon: <ShoppingCart size={ICON_SIZE} />,
+  },
+  {
+    id: 4,
+    num: '04',
+    category: 'E-Commerce',
+    name: 'Custom E-Commerce',
+    tagline: 'Headless storefronts with multi-currency, ERP integration, and no platform limits.',
+    timeline: '4–6 weeks',
+    timelineLabel: 'Timeline',
+    deliverables: [
+      'Custom storefront architecture',
+      'Payment, tax & ERP integration',
+      'Multi-currency & global checkout',
+      'Headless & composable commerce',
+      'Performance-first product pages',
+    ],
+    stackLabel: 'Platforms',
+    stack: ['WooCommerce', 'Magento', 'Commerceflo', 'Headless / Custom'],
+    primaryCta: { label: 'See e-commerce services', href: '/us/services/ecommerce-development' },
+    secondaryCta: { label: 'Book a free call', href: '/contact' },
+    icon: <CreditCard size={ICON_SIZE} />,
+  },
+  {
+    id: 5,
+    num: '05',
+    category: 'AI Services',
+    name: 'AI Agent Development',
+    tagline: 'Deploy AI agents that qualify leads, handle support, and automate workflows 24/7.',
+    timeline: '4–6 weeks',
+    timelineLabel: 'Build time',
+    deliverables: [
+      'AI agent architecture & design',
+      'CRM, API & webhook integrations',
+      'Human-in-the-loop escalation flows',
+      'Testing, QA & production monitoring',
+      'Ongoing performance tuning',
+    ],
+    stackLabel: 'Built with',
+    stack: ['GPT-4o', 'Claude Sonnet 4', 'Gemini 2.5 Pro', 'n8n', 'LangGraph'],
+    primaryCta: { label: 'See AI agent services', href: '/us/services/ai-agents' },
+    secondaryCta: { label: 'Book a free call', href: '/contact' },
+    icon: <Bot size={ICON_SIZE} />,
+  },
+  {
+    id: 6,
+    num: '06',
+    category: 'AI Services',
+    name: 'AI SEO',
+    tagline: 'Get found in Google AI Overviews, ChatGPT, Perplexity, and Gemini — not just search.',
+    timeline: 'Ongoing · 30-day onboarding',
+    timelineLabel: 'Engagement',
+    deliverables: [
+      'GEO + AEO optimisation strategy',
+      'Schema markup, entity linking & citable content',
+      'Programmatic page generation at scale',
+      'Weekly AI search visibility reports',
+      'Content authority & topical cluster build',
+    ],
+    stackLabel: 'Ranking you on',
+    stack: ['Google AI Overviews', 'ChatGPT', 'Perplexity', 'Gemini', 'Claude.ai'],
+    primaryCta: { label: 'Learn about AI SEO', href: '/contact' },
+    secondaryCta: { label: 'Book a free call', href: '/contact' },
+    icon: <BarChart2 size={ICON_SIZE} />,
+  },
+  {
+    id: 7,
+    num: '07',
+    category: 'AI Services',
+    name: 'AI Creative Studio',
+    tagline: 'Brand-consistent AI images, video, and ad creative — delivered in 48 hours.',
+    timeline: '48-hr turnaround',
+    timelineLabel: 'Turnaround',
+    deliverables: [
+      'AI image & video ad creative',
+      'Brand-consistent visual output',
+      'Social, display & performance ad packs',
+      'Dedicated creative team + variants',
+      'Batch delivery ready for launch',
+    ],
+    stackLabel: 'Powered by',
+    stack: ['Midjourney v7', 'Flux 1.1 Pro', 'Veo 3.1', 'Kling 3.0', 'Runway Gen-3'],
+    primaryCta: { label: 'Explore AI Creative Studio', href: '/contact' },
+    secondaryCta: { label: 'Book a free call', href: '/contact' },
+    icon: <Sparkles size={ICON_SIZE} />,
+  },
+];
 
-/* ─── Main component ──────────────────────────────────────────────────────── */
+const CATEGORIES: { label: 'Web' | 'E-Commerce' | 'AI Services'; ids: ServiceId[] }[] = [
+  { label: 'Web', ids: [1, 2] },
+  { label: 'E-Commerce', ids: [3, 4] },
+  { label: 'AI Services', ids: [5, 6, 7] },
+];
 
-export default function ServicesGrid({
-  eyebrow,
-  headline,
-  lead,
-  services,
-  ctaCard,
-  exploreHref = '/us/services/web-design',
-}: ServicesGridProps) {
-  const [featured, ...rest] = services;
+/* ─────────────────────────────────────────────────────────────────────────────
+   Constants
+───────────────────────────────────────────────────────────────────────────── */
+const AUTO_INTERVAL = 5000;
+const PROGRESS_TICK = 50;
+const RESUME_DELAY = 3000;
+
+const ORANGE = '#F05A28';
+const DARK_NAV = '#18181f';
+const DARK_PANEL = '#111118';
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Component
+───────────────────────────────────────────────────────────────────────────── */
+export default function ServicesGrid() {
+  const [activeId, setActiveId] = useState<ServiceId>(1);
+  const [progress, setProgress] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  const chipNavRef = useRef<HTMLDivElement>(null);
+  const pausedRef = useRef(false);
+  const resumeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const activeService = SERVICES.find((s) => s.id === activeId)!;
+
+  /* ── Sync pausedRef ───────────────────────────────────────────────────── */
+  useEffect(() => {
+    pausedRef.current = paused;
+  }, [paused]);
+
+  /* ── Auto-advance ─────────────────────────────────────────────────────── */
+  useEffect(() => {
+    if (paused) return;
+    const timer = setTimeout(() => {
+      if (pausedRef.current) return;
+      setActiveId((prev) => {
+        const idx = SERVICES.findIndex((s) => s.id === prev);
+        return SERVICES[(idx + 1) % SERVICES.length].id as ServiceId;
+      });
+    }, AUTO_INTERVAL);
+    return () => clearTimeout(timer);
+  }, [activeId, paused]);
+
+  /* ── Progress bar ─────────────────────────────────────────────────────── */
+  useEffect(() => {
+    setProgress(0);
+    if (paused) return;
+    const interval = setInterval(() => {
+      if (pausedRef.current) return;
+      setProgress((p) => Math.min(p + (PROGRESS_TICK / AUTO_INTERVAL) * 100, 100));
+    }, PROGRESS_TICK);
+    return () => clearInterval(interval);
+  }, [activeId, paused]);
+
+  /* ── Mobile chip auto-scroll ──────────────────────────────────────────── */
+  useEffect(() => {
+    const nav = chipNavRef.current;
+    if (!nav) return;
+    const chip = nav.querySelector<HTMLElement>(`[data-chip="${activeId}"]`);
+    if (!chip) return;
+    const navW = nav.offsetWidth;
+    const chipLeft = chip.offsetLeft;
+    const chipW = chip.offsetWidth;
+    nav.scrollTo({ left: chipLeft - navW / 2 + chipW / 2, behavior: 'smooth' });
+  }, [activeId]);
+
+  /* ── Handlers ─────────────────────────────────────────────────────────── */
+  const handleSelect = useCallback((id: ServiceId) => {
+    setActiveId(id);
+    setPaused(true);
+    setProgress(0);
+    if (resumeTimerRef.current) clearTimeout(resumeTimerRef.current);
+    resumeTimerRef.current = setTimeout(() => setPaused(false), RESUME_DELAY);
+  }, []);
+
+  const handleMouseEnter = useCallback(() => setPaused(true), []);
+  const handleMouseLeave = useCallback(() => {
+    if (resumeTimerRef.current) clearTimeout(resumeTimerRef.current);
+    setPaused(false);
+  }, []);
+
+  /* ── Dot grid SVG data URI ────────────────────────────────────────────── */
+  const dotGrid =
+    "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Ccircle cx='1' cy='1' r='1' fill='%23ffffff' fill-opacity='0.06'/%3E%3C/svg%3E\")";
 
   return (
-    <section
-      className="py-10 md:py-14"
-      style={{
-        backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.055) 1px, transparent 1px)',
-        backgroundSize: '28px 28px',
-        backgroundColor: '#FAFAF7',
-      }}
-    >
-      <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+    <>
+      <style>{`
+        @keyframes svFadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        .sv-panel-content { animation: svFadeIn 0.35s ease both; }
+        .sv-chip-nav { scrollbar-width: none; -ms-overflow-style: none; }
+        .sv-chip-nav::-webkit-scrollbar { display: none; }
+      `}</style>
 
-        {/* ── Two-column section header ──────────────────────────────────────── */}
-        <div className="mb-10 grid grid-cols-1 gap-6 md:mb-12 lg:grid-cols-2 lg:gap-16">
-          <div>
-            {eyebrow && <p className="fj-eyebrow">{eyebrow}</p>}
-            <h2
-              className={`fj-display font-semibold text-fj-ink ${eyebrow ? 'mt-3' : ''}`}
-              style={{
-                fontSize: 'clamp(1.625rem, 3vw, 2.5rem)',
-                lineHeight: 1.1,
-                letterSpacing: '-0.025em',
-              }}
-            >
-              {headline}
-            </h2>
-          </div>
-          {lead && (
-            <div className="flex flex-col justify-end gap-4 lg:pt-1">
-              <p
-                className="font-fj-body text-fj-neutral-600"
-                style={{ fontSize: '1.0625rem', lineHeight: 1.65 }}
-              >
-                {lead}
-              </p>
-              <Link
-                href={exploreHref}
-                className="inline-flex w-fit items-center gap-1.5 font-fj-body text-sm font-semibold text-fj-jet-blue hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue"
-              >
-                Explore all services
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                  <path d="M3 7h8M7.5 3.5l3.5 3.5-3.5 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </Link>
-            </div>
-          )}
-        </div>
+      <section id="services" style={{ backgroundColor: '#FAFAF7' }} className="py-14 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* ── Bento grid ────────────────────────────────────────────────────── */}
-        {/*
-         * LG (3-col):
-         *   Row 1: [featured ×2] [card-1]
-         *   Row 2: [card-2] [card-3] [card-4]
-         *   Row 3: [card-5] [card-6] [ctaCard]
-         *
-         * MD (2-col):
-         *   Row 1: [featured ×2]
-         *   Rows 2-4: pairs of cards
-         *   Row 5: [ctaCard ×2] (full-width footer)
-         *
-         * SM: single column throughout.
-         */}
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-
-          {/* Featured card — spans 2 cols on MD and LG */}
-          {featured && (
-            <div className="md:col-span-2 lg:col-span-2">
-              <MotionFadeUp delay={0}>
-                <FeaturedCard service={featured} />
-              </MotionFadeUp>
-            </div>
-          )}
-
-          {/* Regular service cards */}
-          {rest.map((service, i) => (
-            <div key={service.name}>
-              <MotionFadeUp delay={(i + 1) * 0.06}>
-                <ServiceCard service={service} />
-              </MotionFadeUp>
-            </div>
-          ))}
-
-          {/* CTA card — full-width on MD, 1-col on LG */}
-          {ctaCard && (
-            <div className="md:col-span-2 lg:col-span-1">
-              <MotionFadeUp delay={(rest.length + 1) * 0.06}>
-                <CtaCard {...ctaCard} />
-              </MotionFadeUp>
-            </div>
-          )}
-
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ─── Featured card (col-span-2) ─────────────────────────────────────────── */
-
-function FeaturedCard({ service }: { service: ServiceItem }) {
-  return (
-    <div className="group relative h-full">
-      {/* Hover ring — outside overflow-hidden so it's never clipped */}
-      <div
-        className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-        style={{ boxShadow: '0 0 0 2px rgba(0,82,204,0.40), 0 16px 48px rgba(0,82,204,0.14)' }}
-        aria-hidden="true"
-      />
-
-      <article
-        className="relative flex h-full flex-col overflow-hidden rounded-2xl p-7 transition-transform duration-300 group-hover:-translate-y-1.5 lg:flex-row lg:gap-8"
-        style={{
-          background: 'linear-gradient(140deg, #FFFFFF 0%, #EBF2FF 100%)',
-          border: '1px solid rgba(0,82,204,0.16)',
-          borderTopWidth: '3px',
-          borderTopColor: 'rgba(0,82,204,0.75)',
-          boxShadow: '0 4px 24px rgba(0,82,204,0.07), 0 1px 4px rgba(0,0,0,0.05)',
-        }}
-      >
-        {/* Crystal shimmer — 1px hairline at very top */}
-        <div
-          className="pointer-events-none absolute inset-x-0 top-0 h-px"
-          style={{ background: 'linear-gradient(90deg, transparent 0%, rgba(0,82,204,0.38) 40%, rgba(0,82,204,0.38) 60%, transparent 100%)' }}
-          aria-hidden="true"
-        />
-
-        {/* Left column: icon, title, description, badges, CTA */}
-        <div className="flex flex-col lg:flex-1">
-          <IconBadge type={service.iconType} size={44} />
-
-          <h3
-            className="fj-display mt-4 font-semibold text-fj-ink"
-            style={{ fontSize: '1.375rem', lineHeight: 1.2, letterSpacing: '-0.022em' }}
-          >
-            {service.name}
-          </h3>
-
-          <p
-            className="mt-3 font-fj-body text-fj-neutral-600"
-            style={{ fontSize: '0.9375rem', lineHeight: 1.65 }}
-          >
-            {service.description}
-          </p>
-
-          {/* Price + delivery chips */}
-          {(service.price || service.delivery) && (
-            <div className="mt-4 flex flex-wrap items-center gap-2">
-              {service.price    && <PriceChip    label={service.price}    />}
-              {service.delivery && <DeliveryChip label={service.delivery} />}
-            </div>
-          )}
-
-          {/* Primary CTA button */}
-          {service.linkLabel && service.linkHref && (
-            <Link
-              href={service.linkHref}
-              className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-fj-jet-blue px-5 py-2.5 font-fj-body text-[0.9rem] font-semibold text-white transition-all hover:bg-[#003D99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue"
-              style={{ boxShadow: '0 4px 16px rgba(0,82,204,0.28)' }}
-            >
-              {service.linkLabel}
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                <path d="M3 7h8M7.5 3.5l3.5 3.5-3.5 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </Link>
-          )}
-        </div>
-
-        {/* Right panel: "What's included" feature checklist — only on LG */}
-        {service.features && service.features.length > 0 && (
-          <div
-            className="mt-6 flex-shrink-0 rounded-xl p-5 lg:mt-0 lg:w-[230px]"
-            style={{
-              background: 'rgba(0,82,204,0.05)',
-              border: '1px solid rgba(0,82,204,0.10)',
-            }}
-          >
+          {/* Section header */}
+          <div className="mb-12 md:mb-16 max-w-3xl">
             <p
-              className="font-fj-body font-semibold uppercase tracking-widest text-fj-jet-blue"
-              style={{ fontSize: '9.5px', letterSpacing: '0.12em', opacity: 0.75 }}
+              className="text-xs font-semibold tracking-widest uppercase mb-3"
+              style={{ color: ORANGE }}
             >
-              What&apos;s included
+              OUR SERVICES
             </p>
-            <ul className="mt-3 flex flex-col gap-3">
-              {service.features.map((feat) => (
-                <li key={feat} className="flex items-start gap-2.5">
-                  <span className="mt-[1px] flex-shrink-0">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                      <circle cx="7" cy="7" r="6.5" fill="rgba(0,82,204,0.12)" stroke="rgba(0,82,204,0.24)" strokeWidth="0.75" />
-                      <path d="M4.5 7l2 2L9.5 4.5" stroke="#0052CC" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </span>
-                  <span
-                    className="font-fj-body font-medium text-fj-neutral-600"
-                    style={{ fontSize: '0.8125rem', lineHeight: 1.5 }}
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
+              Everything You Need to{' '}
+              <span style={{ color: ORANGE }}>Compete Online</span>
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+              From custom websites and Shopify stores to AI agents and AI SEO — seven specialised
+              services, one agency, fixed pricing, and full code ownership on every project.
+            </p>
+          </div>
+
+          {/* Split panel container */}
+          <div
+            className="rounded-2xl overflow-hidden shadow-xl"
+            style={{ border: '1px solid rgba(0,0,0,0.1)' }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+
+            {/* ── MOBILE chip nav ──────────────────────────────────────────── */}
+            <div className="block lg:hidden" style={{ backgroundColor: DARK_NAV }}>
+              {/* Mobile progress bar */}
+              <div className="h-0.5 w-full" style={{ backgroundColor: 'rgba(255,255,255,0.08)' }}>
+                <div
+                  className="h-0.5"
+                  style={{ width: `${progress}%`, backgroundColor: ORANGE, transition: 'none' }}
+                />
+              </div>
+
+              <div
+                ref={chipNavRef}
+                className="sv-chip-nav flex gap-2 px-4 py-3 overflow-x-auto"
+              >
+                {SERVICES.map((svc) => {
+                  const isActive = activeId === svc.id;
+                  return (
+                    <button
+                      key={svc.id}
+                      data-chip={svc.id}
+                      onClick={() => handleSelect(svc.id)}
+                      className="flex-shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium"
+                      style={{
+                        backgroundColor: isActive ? ORANGE : 'rgba(255,255,255,0.08)',
+                        color: isActive ? '#fff' : 'rgba(255,255,255,0.55)',
+                        border: isActive ? `1px solid ${ORANGE}` : '1px solid rgba(255,255,255,0.12)',
+                        transition: 'background-color 0.15s, color 0.15s',
+                      }}
+                    >
+                      <span className="text-xs font-mono opacity-70">{svc.num}</span>
+                      <span>{svc.name}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* ── Main layout ───────────────────────────────────────────────── */}
+            <div className="flex flex-col lg:flex-row" style={{ minHeight: 500 }}>
+
+              {/* LEFT NAV — desktop only */}
+              <div
+                className="hidden lg:flex flex-col"
+                style={{ width: 260, backgroundColor: DARK_NAV, flexShrink: 0 }}
+              >
+                {/* Desktop progress bar */}
+                <div className="h-0.5 w-full" style={{ backgroundColor: 'rgba(255,255,255,0.08)' }}>
+                  <div
+                    className="h-0.5"
+                    style={{ width: `${progress}%`, backgroundColor: ORANGE, transition: 'none' }}
+                  />
+                </div>
+
+                <nav className="flex-1 py-5">
+                  {CATEGORIES.map((cat, catIdx) => (
+                    <div key={cat.label} className={catIdx > 0 ? 'mt-1' : ''}>
+                      {/* Category label */}
+                      <p
+                        className="px-5 pt-3 pb-2 text-xs font-semibold tracking-widest uppercase"
+                        style={{ color: 'rgba(255,255,255,0.28)' }}
+                      >
+                        {cat.label}
+                      </p>
+
+                      {cat.ids.map((id) => {
+                        const svc = SERVICES.find((s) => s.id === id)!;
+                        const isActive = activeId === id;
+                        return (
+                          <button
+                            key={id}
+                            onClick={() => handleSelect(id)}
+                            className="w-full text-left px-5 py-2.5 flex items-center gap-3"
+                            style={{
+                              backgroundColor: isActive ? 'rgba(240,90,40,0.12)' : 'transparent',
+                              borderLeft: isActive
+                                ? `2px solid ${ORANGE}`
+                                : '2px solid transparent',
+                              transition: 'background-color 0.15s',
+                            }}
+                          >
+                            <span
+                              className="text-xs font-mono w-6 flex-shrink-0"
+                              style={{ color: isActive ? ORANGE : 'rgba(255,255,255,0.22)' }}
+                            >
+                              {svc.num}
+                            </span>
+                            <span
+                              className="flex-shrink-0"
+                              style={{ color: isActive ? ORANGE : 'rgba(255,255,255,0.32)' }}
+                            >
+                              {svc.icon}
+                            </span>
+                            <span
+                              className="text-sm font-medium leading-tight"
+                              style={{ color: isActive ? '#fff' : 'rgba(255,255,255,0.52)' }}
+                            >
+                              {svc.name}
+                            </span>
+                            {isActive && (
+                              <span
+                                className="ml-auto w-1.5 h-1.5 rounded-full flex-shrink-0"
+                                style={{ backgroundColor: ORANGE }}
+                              />
+                            )}
+                          </button>
+                        );
+                      })}
+
+                      {catIdx < CATEGORIES.length - 1 && (
+                        <div
+                          className="mx-5 mt-3"
+                          style={{ height: 1, backgroundColor: 'rgba(255,255,255,0.06)' }}
+                        />
+                      )}
+                    </div>
+                  ))}
+                </nav>
+
+                {/* CTA strip */}
+                <div
+                  className="px-5 py-4"
+                  style={{
+                    backgroundColor: 'rgba(240,90,40,0.1)',
+                    borderTop: '1px solid rgba(240,90,40,0.18)',
+                  }}
+                >
+                  <p className="text-xs mb-2" style={{ color: 'rgba(255,255,255,0.4)' }}>
+                    Not sure which service fits?
+                  </p>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold hover:opacity-80 transition-opacity"
+                    style={{ color: ORANGE }}
                   >
-                    {feat}
-                  </span>
-                </li>
-              ))}
-            </ul>
+                    Book a free strategy call <ArrowRight size={13} />
+                  </Link>
+                </div>
+              </div>
+
+              {/* RIGHT DETAIL PANEL */}
+              <div
+                className="flex-1 relative overflow-hidden"
+                style={{ backgroundColor: DARK_PANEL, backgroundImage: dotGrid }}
+              >
+                {/* Large background number */}
+                <div
+                  className="absolute bottom-4 right-6 font-bold select-none pointer-events-none leading-none"
+                  aria-hidden="true"
+                  style={{
+                    fontSize: 'clamp(80px, 12vw, 160px)',
+                    color: '#ffffff',
+                    opacity: 0.04,
+                  }}
+                >
+                  {activeService.num}
+                </div>
+
+                {/* Animated content — key forces remount for fade-in */}
+                <div
+                  key={activeId}
+                  className="sv-panel-content relative z-10 flex flex-col h-full p-6 sm:p-8 lg:p-10"
+                >
+                  {/* Category + timeline badges */}
+                  <div className="flex flex-wrap items-center gap-2.5 mb-5">
+                    <span
+                      className="text-xs font-semibold tracking-widest uppercase px-2.5 py-1 rounded-full"
+                      style={{ backgroundColor: 'rgba(240,90,40,0.15)', color: ORANGE }}
+                    >
+                      {activeService.category}
+                    </span>
+                    <span
+                      className="inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full"
+                      style={{
+                        backgroundColor: 'rgba(255,255,255,0.06)',
+                        color: 'rgba(255,255,255,0.52)',
+                        border: '1px solid rgba(255,255,255,0.1)',
+                      }}
+                    >
+                      <Clock size={11} />
+                      {activeService.timelineLabel}: {activeService.timeline}
+                    </span>
+                  </div>
+
+                  {/* Heading */}
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight mb-3">
+                    {activeService.name}
+                  </h3>
+
+                  {/* Tagline */}
+                  <p
+                    className="text-base sm:text-lg leading-relaxed mb-6"
+                    style={{ color: 'rgba(255,255,255,0.58)' }}
+                  >
+                    {activeService.tagline}
+                  </p>
+
+                  {/* Divider */}
+                  <div
+                    className="mb-6"
+                    style={{ height: 1, backgroundColor: 'rgba(255,255,255,0.08)' }}
+                  />
+
+                  {/* Deliverables + Stack */}
+                  <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 mb-8">
+                    {/* Deliverables */}
+                    <div className="flex-1 min-w-0">
+                      <p
+                        className="text-xs font-semibold tracking-widest uppercase mb-3"
+                        style={{ color: 'rgba(255,255,255,0.28)' }}
+                      >
+                        What you get
+                      </p>
+                      <ul className="space-y-2">
+                        {activeService.deliverables.map((item) => (
+                          <li key={item} className="flex items-start gap-2.5">
+                            <Check
+                              size={13}
+                              className="flex-shrink-0 mt-0.5"
+                              style={{ color: ORANGE }}
+                            />
+                            <span
+                              className="text-sm leading-snug"
+                              style={{ color: 'rgba(255,255,255,0.72)' }}
+                            >
+                              {item}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Tech stack pills */}
+                    <div className="flex-shrink-0 sm:w-52 lg:w-56">
+                      <p
+                        className="text-xs font-semibold tracking-widest uppercase mb-3"
+                        style={{ color: 'rgba(255,255,255,0.28)' }}
+                      >
+                        {activeService.stackLabel}
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {activeService.stack.map((tech) => (
+                          <span
+                            key={tech}
+                            className="text-xs font-medium px-2.5 py-1 rounded-md"
+                            style={{
+                              backgroundColor: 'rgba(255,255,255,0.07)',
+                              color: 'rgba(255,255,255,0.68)',
+                              border: '1px solid rgba(255,255,255,0.1)',
+                            }}
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* CTAs */}
+                  <div className="flex flex-wrap gap-3 mt-auto pt-2">
+                    <Link
+                      href={activeService.primaryCta.href}
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white hover:opacity-90 transition-opacity"
+                      style={{ backgroundColor: ORANGE }}
+                    >
+                      {activeService.primaryCta.label}
+                      <ArrowRight size={14} />
+                    </Link>
+                    <Link
+                      href={activeService.secondaryCta.href}
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-white/10 transition-colors"
+                      style={{
+                        backgroundColor: 'rgba(255,255,255,0.07)',
+                        color: 'rgba(255,255,255,0.72)',
+                        border: '1px solid rgba(255,255,255,0.12)',
+                      }}
+                    >
+                      {activeService.secondaryCta.label}
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        )}
-      </article>
-    </div>
-  );
-}
+          {/* /split panel */}
 
-/* ─── Regular service card ────────────────────────────────────────────────── */
-
-function ServiceCard({ service }: { service: ServiceItem }) {
-  return (
-    <div className="group relative h-full">
-      {/* Hover ring — outside overflow-hidden */}
-      <div
-        className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-        style={{ boxShadow: '0 0 0 2px rgba(0,82,204,0.35), 0 12px 40px rgba(0,82,204,0.11)' }}
-        aria-hidden="true"
-      />
-
-      <article
-        className="relative flex h-full flex-col overflow-hidden rounded-2xl p-6 transition-transform duration-300 group-hover:-translate-y-1.5"
-        style={{
-          background: 'linear-gradient(165deg, #FFFFFF 0%, #F2F6FF 100%)',
-          border: '1px solid rgba(0,82,204,0.11)',
-          borderTopWidth: '3px',
-          borderTopColor: 'rgba(0,82,204,0.60)',
-          boxShadow: '0 4px 20px rgba(0,82,204,0.05), 0 1px 4px rgba(0,0,0,0.04)',
-        }}
-      >
-        {/* Crystal shimmer */}
-        <div
-          className="pointer-events-none absolute inset-x-0 top-0 h-px"
-          style={{ background: 'linear-gradient(90deg, transparent, rgba(0,82,204,0.28), transparent)' }}
-          aria-hidden="true"
-        />
-
-        <IconBadge type={service.iconType} size={40} />
-
-        <h3
-          className="fj-display mt-4 font-semibold text-fj-ink"
-          style={{ fontSize: '1.0625rem', lineHeight: 1.3, letterSpacing: '-0.015em' }}
-        >
-          {service.name}
-        </h3>
-
-        <p
-          className="mt-2.5 flex-1 font-fj-body text-fj-neutral-600"
-          style={{ fontSize: '0.9rem', lineHeight: 1.6 }}
-        >
-          {service.description}
-        </p>
-
-        {/* Price + delivery chips */}
-        {(service.price || service.delivery) && (
-          <div className="mt-4 flex flex-wrap items-center gap-2">
-            {service.price    && <PriceChip    label={service.price}    />}
-            {service.delivery && <DeliveryChip label={service.delivery} />}
-          </div>
-        )}
-
-        {/* Text link CTA */}
-        {service.linkLabel && service.linkHref && (
-          <Link
-            href={service.linkHref}
-            className="mt-4 inline-flex items-center gap-1.5 font-fj-body text-[0.875rem] font-semibold text-fj-jet-blue hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue"
-          >
-            {service.linkLabel}
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-              <path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </Link>
-        )}
-      </article>
-    </div>
-  );
-}
-
-/* ─── Blue CTA card (grid terminator) ────────────────────────────────────── */
-
-function CtaCard({ headline, sub, btnLabel, btnHref }: ServicesGridCtaCard) {
-  return (
-    <div className="relative h-full min-h-[220px]">
-      <article
-        className="relative flex h-full flex-col items-start justify-between overflow-hidden rounded-2xl p-7"
-        style={{
-          background: 'linear-gradient(145deg, #0052CC 0%, #003D99 100%)',
-          boxShadow: '0 8px 32px rgba(0,82,204,0.26), 0 2px 8px rgba(0,0,0,0.10)',
-        }}
-      >
-        {/* Dot grid overlay — same pattern as section bg, but white on blue */}
-        <div
-          className="pointer-events-none absolute inset-0"
-          style={{
-            backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 1px)',
-            backgroundSize: '20px 20px',
-          }}
-          aria-hidden="true"
-        />
-        {/* Soft bloom top-right */}
-        <div
-          className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full"
-          style={{ background: 'rgba(147,197,253,0.22)', filter: 'blur(28px)' }}
-          aria-hidden="true"
-        />
-
-        {/* Content */}
-        <div className="relative">
-          {/* Live indicator */}
-          <div className="mb-2 flex items-center gap-2">
-            <span className="relative flex h-2 w-2 flex-shrink-0" aria-hidden="true">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-70" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
-            </span>
-            <span
-              className="font-fj-body font-semibold uppercase tracking-widest text-white/60"
-              style={{ fontSize: '9px', letterSpacing: '0.14em' }}
-            >
-              Accepting new clients
-            </span>
-          </div>
-
-          <h3
-            className="fj-display mt-2 font-semibold text-white"
-            style={{ fontSize: '1.1875rem', lineHeight: 1.25, letterSpacing: '-0.02em' }}
-          >
-            {headline}
-          </h3>
-          <p
-            className="mt-2.5 font-fj-body text-white/72"
-            style={{ fontSize: '0.875rem', lineHeight: 1.6 }}
-          >
-            {sub}
-          </p>
         </div>
-
-        {/* CTA button */}
-        <Link
-          href={btnHref}
-          className="relative mt-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 font-fj-body text-[0.875rem] font-semibold text-fj-jet-blue transition-all hover:bg-blue-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-        >
-          {btnLabel}
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-            <path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </Link>
-      </article>
-    </div>
+      </section>
+    </>
   );
 }
