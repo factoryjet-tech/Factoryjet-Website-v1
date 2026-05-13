@@ -6,7 +6,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
-import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
+import HeroImageMockup from '@/components/v2/HeroImageMockup';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
@@ -296,7 +296,7 @@ export default function USHomePage() {
           primaryCta={{ label: 'Get a Free Strategy Call', href: '/contact' }}
           secondaryCta={{ label: 'Free Technical & SEO Audit', href: '/contact' }}
           trustItems={['From $1,999', '7-day delivery', '60–70% less than US agencies', '523+ projects delivered']}
-          rightSlot={<HeroBrowserMockup />}
+          rightSlot={<HeroImageMockup />}
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
