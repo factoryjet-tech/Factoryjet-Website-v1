@@ -8,10 +8,13 @@
  * Next.js <Link>. Visually pixel-identical to the existing Link buttons.
  *
  * Variants map to the four CTA appearances used across v2 sections:
- *   primary-light   — blue fill, light-bg sections (Hero, FinalCTA light)
- *   primary-dark    — blue fill + intense glow, dark sections (FinalCTA dark)
+ *   primary-light   — orange fill, light-bg sections (Hero, FinalCTA light)
+ *   primary-dark    — orange fill + glow, dark sections (FinalCTA dark)
  *   secondary-light — frosted glass, light-bg sections (Hero secondary)
  *   secondary-dark  — ghost/border, dark sections (FinalCTA dark secondary)
+ *
+ * Primary orange (#F05A28) applied via inline style — cannot use Tailwind
+ * custom classes for non-palette hex values.
  */
 
 import type { CSSProperties } from 'react';
@@ -39,9 +42,9 @@ export default function ModalCTAButton({
 
   const base: Record<ModalCTAButtonProps['btnVariant'] & string, string> = {
     'primary-light':
-      'inline-flex items-center justify-center gap-2 rounded-full bg-fj-jet-blue px-7 py-3.5 font-fj-body text-base font-semibold text-white transition-all hover:bg-[#003D99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue',
+      'inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-fj-body text-base font-semibold text-white transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2',
     'primary-dark':
-      'inline-flex items-center justify-center gap-2 rounded-full bg-fj-jet-blue px-8 py-3.5 font-fj-body text-base font-semibold text-white transition-all hover:bg-[#003D99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue',
+      'inline-flex items-center justify-center gap-2 rounded-full px-8 py-3.5 font-fj-body text-base font-semibold text-white transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2',
     'secondary-light':
       'inline-flex items-center justify-center rounded-full border border-fj-neutral-200 bg-white/60 px-7 py-3.5 font-fj-body text-base font-semibold text-fj-ink backdrop-blur-sm transition-colors hover:border-fj-neutral-400 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue',
     'secondary-dark':
@@ -50,17 +53,28 @@ export default function ModalCTAButton({
 
   const isPrimary = btnVariant === 'primary-light' || btnVariant === 'primary-dark';
 
+  // Orange inline styles for primary variants — merged with any caller-supplied style
+  const resolvedStyle: CSSProperties = isPrimary
+    ? {
+        background: '#F05A28',
+        boxShadow: '0 4px 20px rgba(240,90,40,0.38), 0 1px 4px rgba(240,90,40,0.22)',
+        outlineColor: '#F05A28',
+        ...style,
+      }
+    : { ...style };
+
   return (
     <button
       type="button"
       onClick={() => openModal(region, modalVariant)}
       className={`${base[btnVariant]} ${className}`}
-      style={style}
+      style={resolvedStyle}
     >
       {label}
       {isPrimary && (
         <span
-          className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/20"
+          className="inline-flex h-5 w-5 items-center justify-center rounded-full"
+          style={{ background: 'rgba(255,255,255,0.22)' }}
           aria-hidden="true"
         >
           <svg width="10" height="10" viewBox="0 0 10 10" fill="none">

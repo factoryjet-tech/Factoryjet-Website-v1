@@ -195,12 +195,12 @@ export default function USHomePage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
-          eyebrow="ACCEPTING NEW CLIENTS"
-          headline="Web Design Agency USA — Sites Live in 7 Days from $1,999"
-          lead="FactoryJet builds high-converting websites for US businesses — 60–70% less than US agencies, with full code ownership and a 7-day delivery guarantee. 523+ businesses served."
+          announcementPill={{ text: 'Accepting New Clients — 7-Day Delivery' }}
+          headline="Affordable Web Design for US Small Businesses — Live in 7 Days"
+          lead="FactoryJet is a web design agency building high-converting websites and Shopify stores for US small businesses — 60–70% less than local agencies, with full code ownership and a guaranteed delivery."
           primaryCta={{ label: 'Get a Free Strategy Call', href: '/contact' }}
-          secondaryCta={{ label: 'Free Technical & SEO Audit', href: '/contact' }}
-          trustItems={['From $1,999', '7-day delivery', '60–70% less than US agencies', '523+ projects delivered']}
+          secondaryCta={{ label: 'Free SEO Audit', href: '/contact' }}
+          trustItems={['From $1,999', '7-day delivery guaranteed', '60–70% less than US agencies', '523+ projects delivered']}
           rightSlot={<HeroImageMockup />}
         />
 
