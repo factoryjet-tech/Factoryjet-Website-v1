@@ -9,6 +9,7 @@ import Hero from '@/components/v2/Hero';
 import HeroImageMockup from '@/components/v2/HeroImageMockup';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
+import ServicesGrid from '@/components/v2/ServicesGrid';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
 import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/ServiceJourneyRow';
@@ -58,21 +59,38 @@ const SERVICES = [
   {
     name: 'Web Design & Development',
     description:
-      'Custom websites engineered for speed, SEO, and conversions. Lighthouse 100/100, Core Web Vitals green, full GitHub ownership. Starting at $1,999. 7-day delivery.',
+      'Custom websites engineered for speed, SEO, and conversions. Lighthouse 100/100, Core Web Vitals green, full GitHub ownership — delivered in 7 days.',
+    iconType: 'web' as const,
+    price: 'From $1,999',
+    delivery: '7-day delivery',
+    features: [
+      'Lighthouse 100/100 performance score',
+      'Core Web Vitals green across all pages',
+      'Full GitHub ownership on delivery',
+      'Mobile-first responsive design',
+      'GA4 + Search Console setup',
+      '30-day post-launch support window',
+    ],
     linkLabel: 'See web design services',
     linkHref: '/us/services/web-design',
   },
   {
     name: 'Shopify Development',
     description:
-      'Custom Shopify stores built for conversion — fast, branded, and fully owned. From DTC launches to store migrations. Starting at $2,499. 7–14 day delivery.',
+      'Custom Shopify stores built for conversion — fast, branded, and fully owned. From DTC launches to store migrations.',
+    iconType: 'shopify' as const,
+    price: 'From $2,499',
+    delivery: '7–14 days',
     linkLabel: 'See Shopify services',
     linkHref: '/us/services/shopify-development',
   },
   {
     name: 'E-Commerce Development',
     description:
-      'Convert browsers into buyers with optimised product pages, streamlined checkout flows, and mobile-first performance. Starting at $4,999. 7–14 day delivery.',
+      'Convert browsers into buyers with optimised product pages, streamlined checkout flows, and mobile-first performance.',
+    iconType: 'ecommerce' as const,
+    price: 'From $4,999',
+    delivery: '7–14 days',
     linkLabel: 'See e-commerce services',
     linkHref: '/us/services/ecommerce-development',
   },
@@ -80,6 +98,7 @@ const SERVICES = [
     name: 'AI Agent Development',
     description:
       'Deploy AI agents that qualify leads, answer support queries, and automate workflows — integrated directly into your website or business stack.',
+    iconType: 'ai-agent' as const,
     linkLabel: 'See AI agent services',
     linkHref: '/us/services/ai-agents',
   },
@@ -87,24 +106,36 @@ const SERVICES = [
     name: 'AI SEO',
     description:
       'AI-powered keyword research, content strategy, and technical SEO that gets your business found in Google Search, AI Overviews, and ChatGPT recommendations.',
+    iconType: 'ai-seo' as const,
     linkLabel: 'Learn about AI SEO',
     linkHref: '/contact',
   },
   {
     name: 'AI Creative Studio',
     description:
-      'Brand identity, ad creative, landing page copy, and visual assets — produced with AI-native workflows at a fraction of traditional creative agency timelines and cost.',
+      'Brand identity, ad creative, landing page copy, and visual assets — produced with AI-native workflows at a fraction of traditional agency timelines.',
+    iconType: 'ai-creative' as const,
     linkLabel: 'Explore AI creative',
     linkHref: '/contact',
   },
   {
     name: 'Website Redesign',
     description:
-      'Modernise your site without losing SEO equity. Optimised for lead generation, usability, and Core Web Vitals performance. Starting at $2,499. 7-day delivery.',
+      'Modernise your site without losing SEO equity. Optimised for lead generation, usability, and Core Web Vitals performance.',
+    iconType: 'redesign' as const,
+    price: 'From $2,499',
+    delivery: '7-day delivery',
     linkLabel: 'See redesign services',
     linkHref: '/us/services/website-redesign',
   },
-];
+] satisfies import('@/components/v2/ServicesGrid').ServiceItem[];
+
+const SERVICES_CTA = {
+  headline: "Not sure which service fits?",
+  sub: "Tell us your goals — we'll recommend the right solution and quote a fixed price within 24 hours.",
+  btnLabel: 'Book a free call',
+  btnHref: '/contact',
+};
 
 const INDUSTRIES = [
   {
@@ -303,11 +334,12 @@ export default function USHomePage() {
         <LogoBar tagline="Trusted by 500+ businesses across Austin, Miami, Denver, Nashville, Portland and beyond" />
 
         {/* ── 3. SERVICES ──────────────────────────────────────────────────── */}
-        <IndustriesGrid
+        <ServicesGrid
           eyebrow="OUR SERVICES"
           headline="Everything You Need to Compete Online — Built in 7 Days"
           lead="From custom websites and Shopify stores to AI agents and AI SEO — every service ships with fixed pricing, full code ownership, and a 7-day delivery guarantee."
-          sectors={SERVICES}
+          services={SERVICES}
+          ctaCard={SERVICES_CTA}
         />
 
         {/* ── 4. INDUSTRIES ────────────────────────────────────────────────── */}
