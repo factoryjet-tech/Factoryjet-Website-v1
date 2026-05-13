@@ -55,50 +55,6 @@ export const metadata: Metadata = {
 /* ─────────────────────────────────────────────────────────────────────────────
    Data
 ───────────────────────────────────────────────────────────────────────────── */
-const INDUSTRIES = [
-  {
-    name: 'Law Firms & Legal Services',
-    description:
-      'Authority-building websites that convert prospective clients, comply with bar association guidelines, and rank in local search. Starting at $1,999.',
-    linkLabel: 'See law firm websites',
-    linkHref: '/us/services/law-firm-website-design',
-  },
-  {
-    name: 'Real Estate',
-    description:
-      'Property listing sites, agent portals, and IDX-integrated platforms that turn browsers into booked showings and captured leads.',
-    linkLabel: 'See real estate websites',
-    linkHref: '/us/services/real-estate-website-design',
-  },
-  {
-    name: 'Healthcare & MedTech',
-    description:
-      'HIPAA-aware, accessibility-compliant web experiences for practices, clinics, and health tech companies — built to earn patient trust and drive appointments.',
-    linkLabel: 'See healthcare websites',
-    linkHref: '/contact',
-  },
-  {
-    name: 'SaaS & Tech Startups',
-    description:
-      'High-converting SaaS landing pages, documentation hubs, and product marketing sites — built on Next.js for maximum performance and SEO.',
-    linkLabel: 'See SaaS websites',
-    linkHref: '/contact',
-  },
-  {
-    name: 'E-Commerce & DTC Brands',
-    description:
-      'Custom Shopify and headless commerce storefronts that outperform templates — faster load times, higher AOV, and better mobile conversion rates.',
-    linkLabel: 'See e-commerce builds',
-    linkHref: '/us/services/ecommerce-development',
-  },
-  {
-    name: 'Professional Services',
-    description:
-      'Accountants, consultants, financial advisors, and agencies — we build credibility-first websites that generate qualified inbound leads on autopilot.',
-    linkLabel: 'See professional services',
-    linkHref: '/contact',
-  },
-];
 
 const JOURNEY_STAGES: ServiceJourneyStage[] = [
   {
@@ -255,12 +211,7 @@ export default function USHomePage() {
         <ServicesGrid />
 
         {/* ── 4. INDUSTRIES ────────────────────────────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="INDUSTRIES WE SERVE"
-          headline="Built for the Industries Where Credibility Closes Deals"
-          lead="We specialise in sectors where trust, speed, and technical precision determine whether a visitor becomes a client. Every build is tailored to your buyers, not adapted from a generic template."
-          sectors={INDUSTRIES}
-        />
+        <IndustriesGrid />
 
         {/* ── 5. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock

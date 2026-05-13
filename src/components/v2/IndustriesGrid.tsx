@@ -1,213 +1,590 @@
 import Link from 'next/link';
-import MotionFadeUp from './MotionFadeUp';
-
-/**
- * IndustriesGrid — v2.1 visual upgrade.
- *
- * Design language (Path A — CSS/JSX only):
- *   - Section bg: cream + Vercel-style dot grid + centre blue radial bloom
- *   - Cards: gradient fill (white → light blue-tinted), 3px blue top-cap,
- *     depth shadow, large watermark number, crystal shimmer line
- *   - Hover: outer ring glow via wrapper div (not clipped by overflow-hidden)
- *     + translate-y-1 lift
- *   - Section header: tighter clamp matching StrategicDarkSection
- *
- * Pure server component.
- */
-
 import type { ReactNode } from 'react';
 
+/**
+ * IndustriesGrid — v2.1 dark strategic section.
+ *
+ * Design: Editorial zig-zag layout on #0c0c17 background.
+ * Crystal UI cards (glass gradient + border-top highlight + inset glow).
+ * 4 background refraction blobs. Watermark numbers bottom-right of each card.
+ * Self-contained — no props. Pure server component.
+ *
+ * Layout (desktop):
+ *   Row 1: [2fr E-Commerce content]          [1fr Orange stat]
+ *   Row 2: [1fr Orange stat]                 [2fr Professional Services]
+ *   Row 3: [1fr Healthcare] [1fr Retail]
+ *   Row 4: [1fr Restaurants] [1fr Real Estate]
+ */
+
+/* ── Legacy props interface — kept for backward-compat with existing pages ── */
+// All fields optional so callers that still pass eyebrow/headline/sectors
+// continue to typecheck without modification. The new component ignores them
+// and renders from its own hardcoded data.
 export interface IndustryCard {
   name: string;
-  /** ~30–60 words describing the sector and what's at stake. */
   description: string;
-  /** Optional 1-line example or stat in Jet Blue. */
   example?: string;
-  /** Optional follow-on link (paired — both label and href, or neither). */
   linkLabel?: string;
   linkHref?: string;
+  icon?: string;
+  href?: string;
 }
-
 export interface IndustriesGridProps {
   eyebrow?: string;
-  headline: ReactNode;
+  headline?: ReactNode;
   lead?: string;
-  /** 4–6 sectors per spec. */
-  sectors: ReadonlyArray<IndustryCard>;
+  sectors?: ReadonlyArray<IndustryCard>;
 }
 
-export default function IndustriesGrid({
-  eyebrow,
-  headline,
-  lead,
-  sectors,
-}: IndustriesGridProps) {
+const ORANGE = '#F05A28';
+const DARK_BG = '#0c0c17';
+
+/* ── Static section copy ───────────────────────────────────────────────── */
+
+const EYEBROW = 'INDUSTRIES WE SERVE';
+const HEADLINE = 'Built for the Industries Where Credibility Closes Deals';
+const LEAD =
+  'We specialise in sectors where trust, speed, and technical precision determine whether a visitor becomes a client. Every build is tailored to your buyers, not adapted from a generic template.';
+
+/* ── Industry data ─────────────────────────────────────────────────────── */
+
+const INDUSTRIES = [
+  {
+    id: 1,
+    name: 'E-Commerce & DTC Brands',
+    description:
+      'Custom Shopify and headless commerce storefronts that outperform templates — faster load times, higher AOV, and better mobile conversion rates for direct-to-consumer brands.',
+    stat: '+38%',
+    statLabel: 'avg. conversion lift on custom Shopify vs. off-the-shelf template builds',
+    chips: ['Shopify', 'Headless', 'DTC', 'Klaviyo'],
+    linkHref: '/us/services/ecommerce-development',
+    linkLabel: 'See e-commerce builds',
+  },
+  {
+    id: 2,
+    name: 'Professional Services',
+    description:
+      'Accountants, consultants, financial advisors, and agencies — credibility-first websites built to generate qualified inbound leads and shorten long B2B sales cycles.',
+    stat: '3.2×',
+    statLabel: 'more qualified inbound leads within 90 days of launch',
+    chips: ['Consulting', 'Finance', 'Agencies', 'B2B'],
+    linkHref: '/contact',
+    linkLabel: 'Talk to us',
+  },
+  {
+    id: 3,
+    name: 'Healthcare & MedTech',
+    description:
+      'HIPAA-aware, ADA-compliant web experiences for practices, clinics, and health tech companies — built to earn patient trust and drive appointment bookings.',
+    stat: '+52%',
+    statLabel: 'increase in appointment bookings after redesign',
+    chips: ['HIPAA-aware', 'ADA', 'MedTech'],
+    linkHref: '/contact',
+    linkLabel: 'Talk to us',
+  },
+  {
+    id: 4,
+    name: 'Retail & Local Businesses',
+    description:
+      'Mobile-first sites optimised for local search, foot traffic, and repeat customers — delivering measurable ROI for brick-and-mortar and omnichannel brands.',
+    stat: '+41%',
+    statLabel: 'increase in local organic search traffic within 60 days',
+    chips: ['Local SEO', 'Google Maps', 'Mobile-First'],
+    linkHref: '/contact',
+    linkLabel: 'Talk to us',
+  },
+  {
+    id: 5,
+    name: 'Restaurants & Hospitality',
+    description:
+      'High-converting reservation pages, rich menu experiences, and loyalty-building sites that turn first-time visitors into regulars and drive repeat bookings.',
+    stat: '+29%',
+    statLabel: 'more online reservations vs. generic restaurant template sites',
+    chips: ['Reservations', 'Menus', 'Loyalty'],
+    linkHref: '/contact',
+    linkLabel: 'Talk to us',
+  },
+  {
+    id: 6,
+    name: 'Real Estate',
+    description:
+      'Property listing sites, agent portals, and IDX-integrated platforms that turn browsers into booked showings, captured leads, and closed deals.',
+    stat: '4.7×',
+    statLabel: 'more lead form submissions on custom vs. template real estate sites',
+    chips: ['IDX Integration', 'Lead Capture', 'Agent Portals'],
+    linkHref: '/us/services/real-estate-website-design',
+    linkLabel: 'See real estate builds',
+  },
+];
+
+type Industry = (typeof INDUSTRIES)[number];
+
+/* ── Shared crystal card base style ───────────────────────────────────── */
+
+const CRYSTAL: React.CSSProperties = {
+  background:
+    'linear-gradient(145deg, rgba(255,255,255,0.09) 0%, rgba(255,255,255,0.05) 100%)',
+  border: '0.5px solid rgba(255,255,255,0.11)',
+  borderTop: '1px solid rgba(255,255,255,0.28)',
+  boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.16)',
+  padding: '28px',
+  position: 'relative',
+  overflow: 'hidden',
+};
+
+/* ── Sub-components ────────────────────────────────────────────────────── */
+
+function CrystalTopShimmer() {
   return (
-    <section
-      className="py-10 md:py-14"
+    <div
+      aria-hidden="true"
       style={{
-        /*
-         * Three-layer background (painted front→back):
-         *   1. Dot grid — same Vercel/Stripe pattern used on dark sections
-         *   2. Centre blue radial bloom — creates a light-source effect,
-         *      gives the section depth vs. a flat cream surface
-         *   3. Cream base colour
-         */
-        backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.068) 1px, transparent 1px)',
-        backgroundSize: '28px 28px',
-        backgroundColor: '#FAFAF7',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        height: 1,
+        background:
+          'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.32) 40%, rgba(255,255,255,0.32) 60%, transparent 100%)',
+        pointerEvents: 'none',
+      }}
+    />
+  );
+}
+
+function WatermarkNum({ n }: { n: number }) {
+  return (
+    <span
+      aria-hidden="true"
+      style={{
+        position: 'absolute',
+        bottom: -14,
+        right: 14,
+        fontSize: 88,
+        lineHeight: 1,
+        fontWeight: 700,
+        color: 'rgba(240,90,40,0.08)',
+        fontFamily: 'var(--font-fj-mono, monospace)',
+        userSelect: 'none',
+        pointerEvents: 'none',
+        letterSpacing: '-0.04em',
       }}
     >
-      <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+      {String(n).padStart(2, '0')}
+    </span>
+  );
+}
 
-        {/* ── Section header ─────────────────────────────────────────────── */}
-        <div className="max-w-[720px]">
-          {eyebrow && (
-            <p className="fj-eyebrow">{eyebrow}</p>
-          )}
-          <h2
-            className={`fj-display font-semibold text-fj-ink ${eyebrow ? 'mt-3' : ''}`}
+function ServiceChips({ items }: { items: string[] }) {
+  return (
+    <div className="mt-4 flex flex-wrap gap-2">
+      {items.map((chip) => (
+        <span
+          key={chip}
+          style={{
+            background: 'rgba(240,90,40,0.14)',
+            color: ORANGE,
+            border: '0.5px solid rgba(240,90,40,0.30)',
+            borderRadius: 20,
+            padding: '3px 10px',
+            fontSize: 11,
+            fontWeight: 600,
+            letterSpacing: '0.06em',
+            fontFamily: 'var(--font-fj-mono, monospace)',
+          }}
+        >
+          {chip}
+        </span>
+      ))}
+    </div>
+  );
+}
+
+/** Full industry content card */
+function IndustryCard({ industry, titleSize = 24 }: { industry: Industry; titleSize?: number }) {
+  return (
+    <div style={CRYSTAL}>
+      <CrystalTopShimmer />
+      <WatermarkNum n={industry.id} />
+
+      {/* Orange accent bar */}
+      <div
+        aria-hidden="true"
+        style={{ width: 28, height: 3, borderRadius: 99, background: ORANGE, marginBottom: 16 }}
+      />
+
+      <h3
+        style={{
+          fontSize: titleSize,
+          fontWeight: 600,
+          color: '#FFFFFF',
+          lineHeight: 1.2,
+          letterSpacing: '-0.022em',
+          paddingRight: 52,
+        }}
+      >
+        {industry.name}
+      </h3>
+
+      <p
+        style={{
+          marginTop: 12,
+          fontSize: 15,
+          lineHeight: 1.65,
+          color: 'rgba(255,255,255,0.55)',
+          maxWidth: 500,
+        }}
+      >
+        {industry.description}
+      </p>
+
+      {/* Outcome stat */}
+      <div
+        style={{
+          marginTop: 20,
+          paddingTop: 16,
+          borderTop: '0.5px solid rgba(255,255,255,0.10)',
+          display: 'flex',
+          alignItems: 'baseline',
+          gap: 10,
+        }}
+      >
+        <span style={{ fontSize: 26, fontWeight: 500, color: ORANGE, lineHeight: 1 }}>
+          {industry.stat}
+        </span>
+        <span
+          style={{
+            fontSize: 12,
+            color: 'rgba(255,255,255,0.38)',
+            lineHeight: 1.4,
+            maxWidth: 260,
+          }}
+        >
+          {industry.statLabel}
+        </span>
+      </div>
+
+      <ServiceChips items={industry.chips} />
+
+      <Link
+        href={industry.linkHref}
+        style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: 5,
+          marginTop: 20,
+          fontSize: 13,
+          fontWeight: 600,
+          color: ORANGE,
+          textDecoration: 'none',
+        }}
+      >
+        {industry.linkLabel}
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+          <path
+            d="M2.5 6h7M6.5 3l3 3-3 3"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </Link>
+    </div>
+  );
+}
+
+/** Orange stat/proof card used between industry rows */
+function OrangeStatCard({
+  stat,
+  statLabel,
+  tagline,
+}: {
+  stat: string;
+  statLabel: string;
+  tagline?: string;
+}) {
+  return (
+    <div
+      style={{
+        background: ORANGE,
+        padding: '36px 28px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'flex-start',
+        position: 'relative',
+        overflow: 'hidden',
+        minHeight: 200,
+      }}
+    >
+      {/* Decorative circles */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          top: -50,
+          right: -50,
+          width: 200,
+          height: 200,
+          borderRadius: '50%',
+          background: 'rgba(255,255,255,0.10)',
+          pointerEvents: 'none',
+        }}
+      />
+      <div
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          bottom: -30,
+          left: -30,
+          width: 110,
+          height: 110,
+          borderRadius: '50%',
+          background: 'rgba(255,255,255,0.07)',
+          pointerEvents: 'none',
+        }}
+      />
+
+      <span
+        style={{
+          fontSize: 'clamp(3rem, 6vw, 4.5rem)',
+          fontWeight: 700,
+          color: '#fff',
+          lineHeight: 1,
+          letterSpacing: '-0.04em',
+        }}
+      >
+        {stat}
+      </span>
+      <p
+        style={{
+          marginTop: 12,
+          fontSize: 14,
+          color: 'rgba(255,255,255,0.80)',
+          lineHeight: 1.5,
+          maxWidth: 220,
+        }}
+      >
+        {statLabel}
+      </p>
+      {tagline && (
+        <p
+          style={{
+            marginTop: 20,
+            fontSize: 10,
+            fontWeight: 700,
+            letterSpacing: '0.12em',
+            color: 'rgba(255,255,255,0.55)',
+            textTransform: 'uppercase',
+            fontFamily: 'var(--font-fj-mono, monospace)',
+          }}
+        >
+          {tagline}
+        </p>
+      )}
+    </div>
+  );
+}
+
+/* ── Main export ───────────────────────────────────────────────────────── */
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export default function IndustriesGrid(_props: IndustriesGridProps = {}) {
+  return (
+    <section
+      style={{ background: DARK_BG, position: 'relative', overflow: 'hidden' }}
+      className="py-14 md:py-20"
+    >
+      {/* ── Background refraction blobs ──────────────────────────────── */}
+      <div aria-hidden="true" className="pointer-events-none select-none">
+        {/* Orange — top-left */}
+        <div
+          style={{
+            position: 'absolute',
+            top: -80,
+            left: -80,
+            width: 480,
+            height: 480,
+            borderRadius: '50%',
+            background: 'rgba(240,90,40,0.14)',
+            filter: 'blur(120px)',
+            zIndex: 0,
+          }}
+        />
+        {/* Purple — bottom-right */}
+        <div
+          style={{
+            position: 'absolute',
+            bottom: -80,
+            right: -60,
+            width: 440,
+            height: 440,
+            borderRadius: '50%',
+            background: 'rgba(110,40,220,0.11)',
+            filter: 'blur(110px)',
+            zIndex: 0,
+          }}
+        />
+        {/* Blue — centre */}
+        <div
+          style={{
+            position: 'absolute',
+            top: '40%',
+            left: '45%',
+            width: 360,
+            height: 360,
+            borderRadius: '50%',
+            background: 'rgba(20,70,210,0.07)',
+            filter: 'blur(100px)',
+            zIndex: 0,
+          }}
+        />
+        {/* Small orange — top-right */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 60,
+            right: 100,
+            width: 220,
+            height: 220,
+            borderRadius: '50%',
+            background: 'rgba(240,90,40,0.08)',
+            filter: 'blur(80px)',
+            zIndex: 0,
+          }}
+        />
+      </div>
+
+      {/* ── Content ──────────────────────────────────────────────────── */}
+      <div
+        className="mx-auto max-w-[1120px] px-6 md:px-8"
+        style={{ position: 'relative', zIndex: 1 }}
+      >
+        {/* Section header */}
+        <div className="max-w-[680px]">
+          <p
             style={{
-              fontSize: 'clamp(1.625rem, 3vw, 2.5rem)',
-              lineHeight: 1.1,
-              letterSpacing: '-0.025em',
+              fontSize: 11,
+              fontWeight: 700,
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase',
+              color: ORANGE,
+              fontFamily: 'var(--font-fj-mono, monospace)',
             }}
           >
-            {headline}
+            {EYEBROW}
+          </p>
+          <h2
+            style={{
+              fontSize: 'clamp(1.5rem, 3vw, 2.25rem)',
+              fontWeight: 600,
+              color: '#FFFFFF',
+              lineHeight: 1.1,
+              letterSpacing: '-0.025em',
+              marginTop: 12,
+            }}
+          >
+            {HEADLINE}
           </h2>
-          {lead && (
-            <p
-              className="mt-4 max-w-[580px] font-fj-body text-fj-neutral-600"
-              style={{ fontSize: '1rem', lineHeight: 1.65 }}
-            >
-              {lead}
-            </p>
-          )}
+          <p
+            style={{
+              marginTop: 14,
+              fontSize: 15,
+              lineHeight: 1.7,
+              color: 'rgba(255,255,255,0.42)',
+              maxWidth: 560,
+            }}
+          >
+            {LEAD}
+          </p>
         </div>
 
-        {/* ── Sectors grid ───────────────────────────────────────────────── */}
-        <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {sectors.map((sector, i) => (
-            <MotionFadeUp key={i} delay={i * 0.06}>
-              {/*
-               * Wrapper: carries the `group` class and hosts the outer hover
-               * ring. Sits OUTSIDE the article's overflow-hidden so the glow
-               * is never clipped.
-               */}
-              <div className="group relative h-full">
+        {/* ── Zig-zag grid rows ─────────────────────────────────────── */}
+        <div
+          style={{
+            marginTop: 48,
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 3,
+            overflow: 'hidden',
+            borderRadius: 12,
+          }}
+        >
+          {/* Row 1 — [2fr content] [1fr orange stat] */}
+          <div className="grid grid-cols-1 gap-[3px] lg:grid-cols-[2fr_1fr]">
+            <IndustryCard industry={INDUSTRIES[0]} titleSize={24} />
+            <OrangeStatCard
+              stat="523+"
+              statLabel="US businesses served across 30+ industries"
+              tagline="7-day delivery · fixed pricing"
+            />
+          </div>
 
-                {/* ── Outer hover ring (not clipped) ────────────────────── */}
-                <div
-                  className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                  style={{
-                    boxShadow: '0 0 0 2px rgba(0,82,204,0.40), 0 16px 48px rgba(0,82,204,0.16)',
-                  }}
-                  aria-hidden="true"
-                />
+          {/* Row 2 — [1fr orange stat] [2fr content] */}
+          <div className="grid grid-cols-1 gap-[3px] lg:grid-cols-[1fr_2fr]">
+            <OrangeStatCard
+              stat="60–70%"
+              statLabel="less than US agency pricing, with full code ownership on day one"
+              tagline="no retainers · no lock-in"
+            />
+            <IndustryCard industry={INDUSTRIES[1]} titleSize={24} />
+          </div>
 
-                <article
-                  className="relative flex h-full flex-col overflow-hidden rounded-2xl p-6 transition-transform duration-300 group-hover:-translate-y-1.5"
-                  style={{
-                    /*
-                     * Gradient fill: pure white top → light blue-tinted bottom.
-                     * Immediately signals "designed card" vs. flat white box.
-                     * Inspired by Stripe product feature cards.
-                     */
-                    background: 'linear-gradient(165deg, #FFFFFF 0%, #EEF3FF 100%)',
-                    borderWidth: '1px',
-                    borderStyle: 'solid',
-                    borderColor: 'rgba(0,82,204,0.14)',
-                    borderTopWidth: '3px',
-                    borderTopColor: 'rgba(0,82,204,0.70)',
-                    boxShadow: '0 4px 20px rgba(0,82,204,0.07), 0 1px 4px rgba(0,0,0,0.05)',
-                  }}
-                >
+          {/* Row 3 — [1fr] [1fr] 2×2 grid */}
+          <div className="grid grid-cols-1 gap-[3px] sm:grid-cols-2">
+            <IndustryCard industry={INDUSTRIES[2]} titleSize={22} />
+            <IndustryCard industry={INDUSTRIES[3]} titleSize={22} />
+          </div>
 
-                  {/* Crystal shimmer — blue-tinted, matches the gradient fill */}
-                  <div
-                    className="pointer-events-none absolute inset-x-0 top-0 h-[1px]"
-                    style={{
-                      background: 'linear-gradient(90deg, transparent 0%, rgba(0,82,204,0.35) 35%, rgba(0,82,204,0.35) 65%, transparent 100%)',
-                    }}
-                    aria-hidden="true"
-                  />
+          {/* Row 4 — [1fr] [1fr] 2×2 grid */}
+          <div className="grid grid-cols-1 gap-[3px] sm:grid-cols-2">
+            <IndustryCard industry={INDUSTRIES[4]} titleSize={22} />
+            <IndustryCard industry={INDUSTRIES[5]} titleSize={22} />
+          </div>
+        </div>
 
-                  {/* Large watermark number — faint, right-aligned (Stripe/Linear pattern) */}
-                  <span
-                    className="fj-display pointer-events-none absolute right-3 top-1 select-none font-bold text-fj-jet-blue"
-                    style={{
-                      fontSize: '5rem',
-                      lineHeight: 1,
-                      opacity: 0.07,
-                      letterSpacing: '-0.04em',
-                    }}
-                    aria-hidden="true"
-                  >
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-
-                  {/* Jet Blue accent bar */}
-                  <div
-                    className="mb-4 h-[3px] w-8 rounded-full bg-fj-jet-blue"
-                    aria-hidden="true"
-                  />
-
-                  {/* ── Card body ──────────────────────────────────────── */}
-                  <div className="flex flex-1 flex-col">
-                    <h3
-                      className="fj-display pr-10 font-semibold text-fj-ink"
-                      style={{
-                        fontSize: '1.125rem',
-                        lineHeight: 1.3,
-                        letterSpacing: '-0.02em',
-                      }}
-                    >
-                      {sector.name}
-                    </h3>
-
-                    <p
-                      className="mt-3 flex-1 font-fj-body text-fj-neutral-600"
-                      style={{ fontSize: '0.9375rem', lineHeight: 1.6 }}
-                    >
-                      {sector.description}
-                    </p>
-
-                    {/* Example stat — footer with blue-tinted divider */}
-                    {sector.example && (
-                      <div
-                        className="mt-4 pt-4"
-                        style={{ borderTop: '1px solid rgba(0,82,204,0.12)' }}
-                      >
-                        <p
-                          className="inline-flex items-center gap-2 font-fj-mono font-semibold text-fj-jet-blue"
-                          style={{ fontSize: '11px', letterSpacing: '0.07em' }}
-                        >
-                          <span
-                            className="inline-block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-fj-jet-blue"
-                            aria-hidden="true"
-                          />
-                          {sector.example}
-                        </p>
-                      </div>
-                    )}
-
-                    {/* Optional CTA link */}
-                    {sector.linkLabel && sector.linkHref && (
-                      <Link
-                        href={sector.linkHref}
-                        className="mt-4 inline-flex items-center gap-1.5 font-fj-body text-[0.875rem] font-semibold text-fj-jet-blue hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue"
-                      >
-                        {sector.linkLabel}
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-                          <path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </Link>
-                    )}
-                  </div>
-                </article>
-              </div>
-            </MotionFadeUp>
-          ))}
+        {/* ── CTA strip ─────────────────────────────────────────────── */}
+        <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <Link
+            href="/contact"
+            style={{
+              display: 'inline-block',
+              background: ORANGE,
+              color: '#fff',
+              padding: '12px 28px',
+              borderRadius: 8,
+              fontSize: 14,
+              fontWeight: 600,
+              textDecoration: 'none',
+              letterSpacing: '-0.01em',
+            }}
+          >
+            Get a Free Strategy Call
+          </Link>
+          <Link
+            href="/us/portfolio"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 5,
+              color: 'rgba(255,255,255,0.65)',
+              fontSize: 14,
+              fontWeight: 500,
+              textDecoration: 'none',
+            }}
+          >
+            See our portfolio
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+              <path
+                d="M2.5 6h7M6.5 3l3 3-3 3"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </Link>
         </div>
       </div>
     </section>
