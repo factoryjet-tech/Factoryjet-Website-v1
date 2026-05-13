@@ -663,8 +663,8 @@ export default function WebDesignPage() {
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
               <p
-                className="font-fj-mono font-medium uppercase text-fj-jet-blue"
-                style={{ fontSize: '11px', letterSpacing: '0.14em' }}
+                className="font-fj-mono font-medium uppercase"
+                style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#F05A28' }}
               >
                 WHAT YOUR WEBSITE SHOULD DO
               </p>
@@ -678,7 +678,7 @@ export default function WebDesignPage() {
                   'Convert at 2–4% or better — most template sites convert below 1%',
                 ].map((point, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-fj-jet-blue/10 font-fj-mono text-[10px] font-bold text-fj-jet-blue">
+                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#F05A28]">
                       {i + 1}
                     </span>
                     <p className="font-fj-body text-[0.875rem] leading-[1.5] text-fj-neutral-600">
@@ -721,7 +721,7 @@ export default function WebDesignPage() {
                 ].map((cap) => (
                   <span
                     key={cap}
-                    className="inline-flex items-center rounded-full border border-fj-jet-blue/25 bg-fj-jet-blue/8 px-3 py-1 font-fj-mono font-semibold uppercase text-fj-jet-blue"
+                    className="inline-flex items-center rounded-full border border-[#F05A28]/25 bg-[#F05A28]/8 px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {cap}
@@ -744,8 +744,8 @@ export default function WebDesignPage() {
                     className="rounded-xl border border-fj-neutral-200 bg-white px-3 py-4 text-center shadow-sm"
                   >
                     <p
-                      className="fj-display font-bold text-fj-jet-blue"
-                      style={{ fontSize: '1.375rem', lineHeight: 1, letterSpacing: '-0.03em' }}
+                      className="fj-display font-bold"
+                      style={{ fontSize: '1.375rem', lineHeight: 1, letterSpacing: '-0.03em', color: '#F05A28' }}
                     >
                       {b.value}
                     </p>
@@ -760,7 +760,7 @@ export default function WebDesignPage() {
               </div>
 
               {/* Pull-quote — aria-hidden decorative */}
-              <div className="border-l-2 border-fj-jet-blue pl-5 py-1" aria-hidden>
+              <div className="border-l-2 pl-5 py-1" style={{ borderLeftColor: '#F05A28' }} aria-hidden>
                 <p
                   className="font-fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.1875rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
@@ -807,7 +807,7 @@ export default function WebDesignPage() {
                         {item.note}
                       </p>
                     </div>
-                    <p className="fj-display flex-shrink-0 font-bold text-fj-jet-blue" style={{ fontSize: '1.125rem', letterSpacing: '-0.02em' }}>
+                    <p className="fj-display flex-shrink-0 font-bold" style={{ fontSize: '1.125rem', letterSpacing: '-0.02em', color: '#F05A28' }}>
                       {item.score}
                     </p>
                   </div>
@@ -815,7 +815,7 @@ export default function WebDesignPage() {
               </div>
               {/* Footer */}
               <div className="border-t border-fj-neutral-100 bg-fj-neutral-50 px-7 py-5">
-                <div className="mb-2 h-[3px] w-8 rounded-full bg-fj-jet-blue" aria-hidden="true" />
+                <div className="mb-2 h-[3px] w-8 rounded-full" style={{ background: '#F05A28' }} aria-hidden="true" />
                 <p className="fj-display font-semibold text-fj-ink" style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}>
                   Verified before every handover.
                 </p>
@@ -882,7 +882,7 @@ export default function WebDesignPage() {
                 {['Next.js', 'React', 'TypeScript', 'WordPress', 'Shopify', 'Tailwind CSS', 'Figma', 'Sanity CMS'].map((tech) => (
                   <span
                     key={tech}
-                    className="inline-flex items-center rounded-full border border-fj-jet-blue/25 bg-fj-jet-blue/8 px-3 py-1 font-fj-mono font-semibold uppercase text-fj-jet-blue"
+                    className="inline-flex items-center rounded-full border border-[#F05A28]/25 bg-[#F05A28]/8 px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {tech}
@@ -914,7 +914,7 @@ export default function WebDesignPage() {
                 borderStyle: 'solid',
                 borderColor: 'rgb(229, 231, 235)',
                 borderTopWidth: '2px',
-                borderTopColor: '#0052CC',
+                borderTopColor: '#F05A28',
               }}
             >
               <div className="border-b border-fj-neutral-100 px-8 py-5">
@@ -934,7 +934,7 @@ export default function WebDesignPage() {
                 ].map((item) => (
                   <div key={item.category} className="flex items-center justify-between gap-4 py-3.5">
                     <div className="flex items-center gap-2.5">
-                      <div className="h-1.5 w-1.5 shrink-0 rounded-full bg-fj-jet-blue/50" aria-hidden="true" />
+                      <div className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#F05A28]/50" aria-hidden="true" />
                       <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">{item.category}</p>
                     </div>
                     <p className="text-right font-fj-body text-[0.875rem] text-fj-neutral-600">{item.tools}</p>
@@ -942,7 +942,7 @@ export default function WebDesignPage() {
                 ))}
               </div>
               <div className="border-t border-fj-neutral-100 bg-fj-neutral-50 px-8 py-5">
-                <div className="mb-2 h-[3px] w-8 rounded-full bg-fj-jet-blue" aria-hidden="true" />
+                <div className="mb-2 h-[3px] w-8 rounded-full" style={{ background: '#F05A28' }} aria-hidden="true" />
                 <p className="fj-display font-semibold text-fj-ink" style={{ fontSize: '1.0625rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}>
                   You own the repo. Zero lock-in.
                 </p>
@@ -962,7 +962,7 @@ export default function WebDesignPage() {
           ]}
           bodySlot={
             <>
-              <div className="border-l-2 border-fj-jet-blue py-1 pl-5" aria-hidden="true">
+              <div className="border-l-2 py-1 pl-5" style={{ borderLeftColor: '#F05A28' }} aria-hidden="true">
                 <p className="fj-display font-semibold text-fj-ink" style={{ fontSize: '1.125rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}>
                   Your website is your hardest-working sales rep — and it&apos;s on 24/7.
                 </p>
@@ -971,7 +971,7 @@ export default function WebDesignPage() {
                 {['Austin TX', 'Miami FL', 'Denver CO', 'Nashville TN', 'Portland OR', 'Charlotte NC', 'Raleigh NC', 'Tampa FL'].map((city) => (
                   <span
                     key={city}
-                    className="inline-flex items-center rounded-full border border-fj-jet-blue/25 bg-fj-jet-blue/8 px-3 py-1 font-fj-mono font-medium text-fj-jet-blue"
+                    className="inline-flex items-center rounded-full border border-[#F05A28]/25 bg-[#F05A28]/8 px-3 py-1 font-fj-mono font-medium text-[#F05A28]"
                     style={{ fontSize: '10px', letterSpacing: '0.08em' }}
                   >
                     {city}
