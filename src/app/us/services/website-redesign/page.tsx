@@ -6,6 +6,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import ServiceHeroImageBand from '@/components/v2/ServiceHeroImageBand';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -677,6 +678,18 @@ export default function WebsiteRedesignPage() {
               </div>
             </div>
           }
+        />
+
+        {/* ── 1b. HERO IMAGE BAND ──────────────────────────────────────────── */}
+        <ServiceHeroImageBand
+          imageSrc="/images/services/card-redesign.webp"
+          imageAlt="Before and after website redesign shown side by side in a browser — FactoryJet website redesign"
+          stats={[
+            { value: '500+', label: 'Redesigns Delivered' },
+            { value: '7 Days', label: 'Delivery Guarantee' },
+            { value: '60–70%', label: 'Cheaper Than US Agencies' },
+            { value: '25 Yrs', label: 'Web Design Expertise' },
+          ]}
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}

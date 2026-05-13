@@ -6,6 +6,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import ServiceHeroImageBand from '@/components/v2/ServiceHeroImageBand';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -496,6 +497,18 @@ export default function RealEstateWebsiteDesignPage() {
             ))}
           </div>
         }
+      />
+
+      {/* ── 1b. HERO IMAGE BAND ──────────────────────────────────────────── */}
+      <ServiceHeroImageBand
+        imageSrc="/images/services/card-real-estate.webp"
+        imageAlt="Real estate agent website with property listings on a MacBook — FactoryJet real estate website design"
+        stats={[
+          { value: '500+', label: 'Agent Sites Built' },
+          { value: '7 Days', label: 'Delivery Guarantee' },
+          { value: 'From $2,499', label: 'Fixed Price, IDX Included' },
+          { value: '25 Yrs', label: 'Real Estate Web Expertise' },
+        ]}
       />
 
       {/* ── 2. LOGO BAR ── */}

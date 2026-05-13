@@ -6,6 +6,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import ServiceHeroImageBand from '@/components/v2/ServiceHeroImageBand';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -700,6 +701,18 @@ export default function LawFirmWebsiteDesignPage() {
               </div>
             </div>
           }
+        />
+
+        {/* ── 1b. HERO IMAGE BAND ──────────────────────────────────────────── */}
+        <ServiceHeroImageBand
+          imageSrc="/images/services/card-law-firm.webp"
+          imageAlt="Professional law firm website homepage on a MacBook — FactoryJet law firm website design"
+          stats={[
+            { value: '500+', label: 'Professional Sites Built' },
+            { value: '7 Days', label: 'Delivery Guarantee' },
+            { value: 'From $2,499', label: 'Fixed Price, Confirmed Upfront' },
+            { value: '25 Yrs', label: 'Legal Web Expertise' },
+          ]}
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}

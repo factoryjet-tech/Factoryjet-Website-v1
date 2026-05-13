@@ -6,6 +6,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import ServiceHeroImageBand from '@/components/v2/ServiceHeroImageBand';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -530,6 +531,18 @@ export default function WebApplicationDevelopmentPage() {
             <p className="text-xs text-white/30 font-fj-body pt-1">Not sure? Tell us what you need. We&apos;ll tell you if a simpler solution works better.</p>
           </div>
         }
+      />
+
+      {/* ── 1b. HERO IMAGE BAND ──────────────────────────────────────────── */}
+      <ServiceHeroImageBand
+        imageSrc="/images/services/card-webapp.webp"
+        imageAlt="SaaS analytics dashboard on an ultrawide monitor — FactoryJet web application development"
+        stats={[
+          { value: '$7,500', label: 'MVP Starting Price' },
+          { value: '4–8 Wks', label: 'Typical Build Time' },
+          { value: '60–70%', label: 'Cheaper Than US Agencies' },
+          { value: '25 Yrs', label: 'Software Expertise' },
+        ]}
       />
 
       {/* ── 2. LOGO BAR ── */}

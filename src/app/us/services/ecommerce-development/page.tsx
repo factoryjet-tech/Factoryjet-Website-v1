@@ -2,9 +2,12 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import { ecommerceAlternates } from '@/data/hreflangMap';
 
+import Image from 'next/image';
+
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import ServiceHeroImageBand from '@/components/v2/ServiceHeroImageBand';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
 import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
@@ -14,6 +17,7 @@ import BoringStatsRow from '@/components/v2/BoringStatsRow';
 import CityContextSection from '@/components/v2/CityContextSection';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import PricingTiers from '@/components/v2/PricingTiers';
+import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 
@@ -658,6 +662,18 @@ export default function EcommerceDevelopmentPage() {
           }
         />
 
+        {/* ── 1b. HERO IMAGE BAND ──────────────────────────────────────────── */}
+        <ServiceHeroImageBand
+          imageSrc="/images/services/card-ecommerce.webp"
+          imageAlt="Custom e-commerce checkout flow on dual screens — FactoryJet e-commerce development"
+          stats={[
+            { value: '500+', label: 'Businesses Served' },
+            { value: '7 Days', label: 'Delivery Guarantee' },
+            { value: 'From $3,999', label: 'Fixed Price, Confirmed Upfront' },
+            { value: '25 Yrs', label: 'E-Commerce Expertise' },
+          ]}
+        />
+
         {/* ── 2. TRUST STATS ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
@@ -818,9 +834,85 @@ export default function EcommerceDevelopmentPage() {
         />
 
         {/* ── 7. STATS BAND ────────────────────────────────────────────────── */}
-        <div className="bg-fj-neutral-50">
-          <BoringStatsRow stats={ECOMM_STATS} align="center" />
-        </div>
+        <section
+          className="py-12 md:py-16"
+          style={{
+            backgroundColor: '#FAFAF7',
+            borderTop: '1.5px solid rgba(240,90,40,0.18)',
+            borderBottom: '1.5px solid rgba(240,90,40,0.18)',
+          }}
+        >
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_380px] lg:items-center lg:gap-16">
+
+              {/* Stats */}
+              <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
+                {ECOMM_STATS.map((stat) => (
+                  <div key={stat.value}>
+                    {stat.categoryLabel && (
+                      <div
+                        className="mb-3 inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-fj-mono font-bold uppercase"
+                        style={{
+                          fontSize: '9px',
+                          letterSpacing: '0.13em',
+                          color: '#F05A28',
+                          background: 'rgba(240,90,40,0.06)',
+                          border: '1px solid rgba(240,90,40,0.22)',
+                        }}
+                      >
+                        <span
+                          className="inline-block h-1 w-1 rounded-full"
+                          style={{ backgroundColor: '#F05A28' }}
+                          aria-hidden="true"
+                        />
+                        {stat.categoryLabel}
+                      </div>
+                    )}
+                    <p
+                      className="fj-display font-bold"
+                      style={{
+                        fontSize: 'clamp(2.25rem, 4vw, 3.25rem)',
+                        lineHeight: 1,
+                        letterSpacing: '-0.04em',
+                        color: '#F05A28',
+                      }}
+                    >
+                      {stat.value}
+                    </p>
+                    <p
+                      className="mt-3 font-fj-body font-semibold text-fj-ink"
+                      style={{ fontSize: '0.9375rem', lineHeight: 1.5 }}
+                    >
+                      {stat.label}
+                    </p>
+                    {stat.microcopy && (
+                      <p
+                        className="mt-1.5 font-fj-body text-fj-neutral-400"
+                        style={{ fontSize: '0.8125rem', lineHeight: 1.55 }}
+                      >
+                        {stat.microcopy}
+                      </p>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              {/* Photo */}
+              <div
+                className="relative w-full overflow-hidden rounded-2xl"
+                style={{ aspectRatio: '5 / 3' }}
+              >
+                <Image
+                  src="/images/services/web-design-stats-photo.webp"
+                  alt="FactoryJet team reviewing a newly launched e-commerce store with a client"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 380px"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* ── 8. TECH STACK ────────────────────────────────────────────────── */}
         <ServiceExplanation
@@ -970,6 +1062,12 @@ export default function EcommerceDevelopmentPage() {
           headline="E-Commerce Built for How Your Category Actually Sells"
           lead="Fashion needs size guides and variant swatches. Food needs perishable shipping logic. B2B needs net terms and volume pricing. We build for the actual purchase journey in your category."
           sectors={INDUSTRIES}
+        />
+
+        {/* ── 11b. TESTIMONIALS ─────────────────────────────────────────────── */}
+        <TestimonialsSection
+          eyebrow="CLIENT RESULTS"
+          headline="What US founders say after we build their e-commerce store"
         />
 
         {/* ── 12. PRICING ──────────────────────────────────────────────────── */}
