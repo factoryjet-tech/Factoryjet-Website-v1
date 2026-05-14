@@ -298,6 +298,35 @@ export const usServiceAlternates = {
 } as const
 
 // ===========================================================================
+// US CITY × AI SERVICE PAGES (US only)
+// Pattern: /us/{city}/ai-agents or /us/{city}/ai-automation
+// Per CITY PAGE RULE: only en-US + x-default.
+// ===========================================================================
+
+export const usCityAIAlternates = {
+  'austin-ai-agents': {
+    'en-US': 'https://factoryjet.com/us/austin/ai-agents',
+    'x-default': 'https://factoryjet.com/us/austin/ai-agents',
+  },
+  'denver-ai-agents': {
+    'en-US': 'https://factoryjet.com/us/denver/ai-agents',
+    'x-default': 'https://factoryjet.com/us/denver/ai-agents',
+  },
+  'raleigh-ai-agents': {
+    'en-US': 'https://factoryjet.com/us/raleigh/ai-agents',
+    'x-default': 'https://factoryjet.com/us/raleigh/ai-agents',
+  },
+  'miami-ai-automation': {
+    'en-US': 'https://factoryjet.com/us/miami/ai-automation',
+    'x-default': 'https://factoryjet.com/us/miami/ai-automation',
+  },
+  'charlotte-ai-automation': {
+    'en-US': 'https://factoryjet.com/us/charlotte/ai-automation',
+    'x-default': 'https://factoryjet.com/us/charlotte/ai-automation',
+  },
+} as const
+
+// ===========================================================================
 // NEW YORK SUB-PAGES (US only)
 // ===========================================================================
 
