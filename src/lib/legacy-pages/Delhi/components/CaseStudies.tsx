@@ -50,7 +50,7 @@ const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenModal }) => {
       industry: 'E-Commerce & Retail',
       location: 'Delhi (Karol Bagh)',
       title: 'Fashion Brand — ₹5 Cr D2C Revenue via Shopify',
-      client: 'Women's ethnic wear brand based in Karol Bagh',
+      client: 'Women\'s ethnic wear brand based in Karol Bagh',
       challenge: 'Selling only through third-party marketplaces (Amazon, Flipkart) — losing 25-30% margins. Wanted own D2C channel.',
       solution: 'Built Shopify store with custom theme, UPI/card payments (Razorpay), WhatsApp commerce, Instagram integration, and influencer collaboration campaigns.',
       results: [

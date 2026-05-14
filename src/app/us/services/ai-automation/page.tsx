@@ -610,6 +610,31 @@ const FAQ_ITEMS = [
     answer:
       'Yes — on a strategy call we share case studies relevant to your industry and workflow type. Published examples: an e-commerce brand whose support ticket automation deflected 68% of tier-1 tickets in the first 30 days; a professional services firm whose invoice automation recovered 11 hours per week across the AP team; a real estate team whose lead follow-up automation increased contacted-within-5-minutes rate from 12% to 94%. If we haven\'t worked in your specific industry, we\'ll say so upfront.',
   },
+
+  {
+    category: 'what-is-automation',
+    question: 'Can you automate my Shopify, WooCommerce, or e-commerce store operations?',
+    answer:
+      'Yes — e-commerce operations automation is one of our most impactful categories. Common Shopify and WooCommerce automations we build: inventory reorder alerts triggered when stock drops below threshold (notifies supplier and creates PO automatically); order fulfillment routing based on SKU and warehouse location; abandoned cart recovery sequences that adjust messaging based on cart value, customer lifetime value, and time elapsed; post-purchase review request automation with smart timing; return/refund processing automation that handles standard cases without human review; and supplier invoice reconciliation against Shopify order data. The average e-commerce client recovers 8–15 hours of weekly operations time within 90 days of deploying these automations.',
+  },
+  {
+    category: 'technical',
+    question: 'Can FactoryJet build AI automations that work alongside n8n, Make, or Zapier?',
+    answer:
+      'Yes — FactoryJet works across all major automation platforms. We build native n8n workflows for businesses that want on-premise or self-hosted automation (n8n is our preferred platform for complex multi-step workflows — it\'s more powerful than Zapier and far cheaper at scale). We build Make (Integromat) scenarios for businesses that prefer a visual canvas. We extend existing Zapier workflows with AI steps via OpenAI and Anthropic API calls. And we build fully custom automation agents in Python or Node.js for workflows that require logic too complex for visual builders. If you have an existing Make or Zapier stack, we can audit it, identify bottlenecks, and either optimize in-place or migrate to n8n to reduce per-task costs.',
+  },
+  {
+    category: 'what-is-automation',
+    question: 'How do I know if my business process is a good candidate for AI automation?',
+    answer:
+      'A process is a strong automation candidate when it has four characteristics: it\'s repetitive (done more than 10 times per week), rule-based (the decision logic can be written down as \'if X then Y\'), data-driven (it involves moving, transforming, or acting on data), and currently done by a human who\'d rather be doing something else. Strong candidates: invoice processing, lead routing, customer support tier-1 responses, report generation, social media scheduling, CRM data enrichment, and order processing. Weak candidates: strategic decisions, creative judgment calls, relationship-building conversations, and novel situations requiring human context. On a discovery call, FactoryJet maps your top 10 workflows and identifies the 2–3 with the highest automation ROI.',
+  },
+  {
+    category: 'trust',
+    question: 'Does FactoryJet offer ongoing AI automation support and monitoring after deployment?',
+    answer:
+      'Yes — automation monitoring is critical because integrations break when third-party APIs change their schemas or rate limits. Every automation FactoryJet builds includes: error handling and alerting (Slack or email notifications when a workflow fails), 30 days of post-deployment support to catch edge cases, and full documentation so your team understands what each workflow does. Beyond that, FactoryJet offers automation retainer plans from $249/month: workflow monitoring, API update response within 24 hours, monthly performance reports (tasks processed, time saved, error rates), and 2 hours of optimization work per month. Unmonitored automations silently fail — FactoryJet retainer clients know about failures before their customers do.',
+  },
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────

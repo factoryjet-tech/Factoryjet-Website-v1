@@ -596,6 +596,19 @@ const FAQ_ITEMS = [
     answer:
       'Every project includes two rounds of design revisions before development begins. If the first mockup isn\'t the right direction, you tell us — that\'s what the revision rounds are for. We\'ve found that redesigns that go through the proper strategy phase (sitemap approval, content brief, competitive analysis) very rarely produce a first mockup that needs a full direction change, because the design is grounded in decisions you\'ve already made and approved. We also do a free kickoff call before any design work starts to align on style references so there are no surprises when the first mockup arrives.',
   },
+
+  {
+    category: 'process',
+    question: 'Can a website redesign add e-commerce, booking, or payment capabilities I don\'t have now?',
+    answer:
+      'Yes — adding new functional capabilities is one of the most common reasons clients come to FactoryJet for a redesign rather than just a refresh. We add: Shopify e-commerce to an existing service or content site (product catalog, checkout, payments), appointment booking and scheduling (Calendly, Cal.com, or custom-built), online payment for services (Stripe Checkout), client intake forms with CRM routing, membership and gated content sections, event registration with payment, and AI chatbot integration. The redesign process treats new functionality as a first-class requirement — not an afterthought bolted onto an existing template. New features are scoped in the discovery phase so pricing is fixed before design begins.',
+  },
+  {
+    category: 'trust',
+    question: 'Does FactoryJet offer ongoing support and maintenance after a website redesign?',
+    answer:
+      'Yes — every redesign project includes a 14–30 day post-launch support window for bug fixes, content corrections, and minor adjustments at no additional charge. Beyond that, FactoryJet offers website maintenance plans from $199/month: security updates (critical for WordPress sites), plugin and dependency updates, daily automated backups, uptime monitoring, and 2 hours of content and minor design changes per month. We also offer a 90-day redesign performance review: a structured analysis of before-and-after conversion rates, organic traffic, and Core Web Vitals to verify the redesign is delivering measurable business results. Redesign clients who skip maintenance typically see performance degradation within 12 months as outdated dependencies accumulate security vulnerabilities.',
+  },
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────

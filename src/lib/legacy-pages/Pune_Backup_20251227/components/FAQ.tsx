@@ -9,15 +9,15 @@ const FAQ: React.FC = () => {
   const faqs = [
     {
       question: 'How long does it take to build a website?',
-      answer: 'Business websites: 3-4 weeks (faster than most Mumbai agencies)\nE-commerce stores: 4-5 weeks\nWe share progress via WhatsApp daily—you're never in the dark.',
+      answer: 'Business websites: 3-4 weeks (faster than most Mumbai agencies)\nE-commerce stores: 4-5 weeks\nWe share progress via WhatsApp daily—you\'re never in the dark.',
     },
     {
       question: 'What payment options do you integrate?',
-      answer: 'All of them! UPI (GPay, PhonePe, Paytm), Razorpay, Credit/Debit Cards, Net Banking, EMI options, and COD for e-commerce. We're a Razorpay Partner.',
+      answer: 'All of them! UPI (GPay, PhonePe, Paytm), Razorpay, Credit/Debit Cards, Net Banking, EMI options, and COD for e-commerce. We\'re a Razorpay Partner.',
     },
     {
       question: 'Can I meet your team in person?',
-      answer: 'Absolutely! We serve Pune businesses directly. Visit our office or we'll come to you. Most clients prefer a mix of in-person kickoff + WhatsApp updates.',
+      answer: 'Absolutely! We serve Pune businesses directly. Visit our office or we\'ll come to you. Most clients prefer a mix of in-person kickoff + WhatsApp updates.',
     },
     {
       question: 'Do you work with businesses outside Pune?',
@@ -25,7 +25,7 @@ const FAQ: React.FC = () => {
     },
     {
       question: "What if I already have a website but it's not working?",
-      answer: 'We offer free website audits. We'll tell you exactly what's wrong and how to fix it—whether you hire us or not. No strings attached.',
+      answer: 'We offer free website audits. We\'ll tell you exactly what\'s wrong and how to fix it—whether you hire us or not. No strings attached.',
     },
     {
       question: 'Do you provide SEO to rank on Google?',
@@ -41,11 +41,11 @@ const FAQ: React.FC = () => {
     },
     {
       question: "What if I'm not satisfied with the design?",
-      answer: 'Unlimited revisions until you love it. We don't launch until you're 100% happy. Plus, we show you mockups before building anything.',
+      answer: 'Unlimited revisions until you love it. We don\'t launch until you\'re 100% happy. Plus, we show you mockups before building anything.',
     },
     {
       question: 'How do I get started?',
-      answer: 'Simple! Book a free 15-min call or WhatsApp us. We'll understand your needs and send a proposal within 24 hours.',
+      answer: 'Simple! Book a free 15-min call or WhatsApp us. We\'ll understand your needs and send a proposal within 24 hours.',
     },
   ];
 

@@ -1,4 +1,8 @@
+'use client';
+
 import Link from 'next/link';
+import { useContactModal } from '../../context/ContactModalContext';
+import type { ModalRegion } from '../../context/ContactModalContext';
 
 /**
  * SiteHeader — v2.0 top-of-page chrome.
@@ -12,29 +16,33 @@ import Link from 'next/link';
  * pointing to "#menu" — honest about being a static prototype, no
  * hamburger JS.
  *
- * Sticky-on-scroll deliberately omitted in this iteration. CSS-only
- * sticky is trivial to add later (`sticky top-0 z-40`) when a real page
- * consumes it.
- *
- * Pure server component.
+ * Client component — required to wire modal CTAs via useContactModal hook.
  */
+
+/** A nav item or CTA can be either a plain link or a modal trigger. */
+type CtaItem = {
+  label: string;
+  href?: string;
+  modal?: boolean;
+  region?: ModalRegion;
+};
 
 export interface SiteHeaderProps {
   logoText?: string;
   logoHref?: string;
-  navLinks?: ReadonlyArray<{ label: string; href: string }>;
-  cta?: { label: string; href: string };
+  navLinks?: ReadonlyArray<CtaItem>;
+  cta?: CtaItem;
   className?: string;
 }
 
-const DEFAULT_NAV_LINKS: ReadonlyArray<{ label: string; href: string }> = [
+const DEFAULT_NAV_LINKS: ReadonlyArray<CtaItem> = [
   { label: 'Services', href: '/services' },
   { label: 'Portfolio', href: '/portfolio' },
   { label: 'Pricing', href: '/pricing' },
   { label: 'Blog', href: '/blog' },
 ];
 
-const DEFAULT_CTA = { label: 'Free Strategy Call', href: '/contact' };
+const DEFAULT_CTA: CtaItem = { label: 'Free Strategy Call', href: '/contact' };
 
 export default function SiteHeader({
   logoText = 'FactoryJet',
@@ -43,6 +51,8 @@ export default function SiteHeader({
   cta = DEFAULT_CTA,
   className = '',
 }: SiteHeaderProps) {
+  const { openModal } = useContactModal();
+
   return (
     <header
       className={`sticky top-0 z-40 bg-fj-cream/95 backdrop-blur-sm border-b border-fj-neutral-200 ${className}`.trim()}
@@ -62,15 +72,26 @@ export default function SiteHeader({
             aria-label="Primary"
             className="hidden items-center gap-8 md:flex"
           >
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="font-fj-body text-[15px] text-fj-ink transition-colors hover:text-[#F05A28]"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link, i) =>
+              link.modal ? (
+                <button
+                  key={`modal-${i}`}
+                  type="button"
+                  onClick={() => openModal(link.region ?? 'us')}
+                  className="font-fj-body text-[15px] text-fj-ink transition-colors hover:text-[#F05A28]"
+                >
+                  {link.label}
+                </button>
+              ) : (
+                <Link
+                  key={link.href ?? `link-${i}`}
+                  href={link.href ?? '#'}
+                  className="font-fj-body text-[15px] text-fj-ink transition-colors hover:text-[#F05A28]"
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
           </nav>
 
           {/* CTA + mobile menu placeholder */}
@@ -81,13 +102,24 @@ export default function SiteHeader({
             >
               Menu
             </a>
-            <Link
-              href={cta.href}
-              className="hidden items-center justify-center rounded-full px-5 py-2.5 font-fj-body text-[14px] font-semibold text-white transition-opacity hover:opacity-90 sm:inline-flex"
-              style={{ background: '#F05A28' }}
-            >
-              {cta.label}
-            </Link>
+            {cta.modal ? (
+              <button
+                type="button"
+                onClick={() => openModal(cta.region ?? 'us')}
+                className="hidden items-center justify-center rounded-full px-5 py-2.5 font-fj-body text-[14px] font-semibold text-white transition-opacity hover:opacity-90 sm:inline-flex"
+                style={{ background: '#F05A28' }}
+              >
+                {cta.label}
+              </button>
+            ) : (
+              <Link
+                href={cta.href ?? '/contact'}
+                className="hidden items-center justify-center rounded-full px-5 py-2.5 font-fj-body text-[14px] font-semibold text-white transition-opacity hover:opacity-90 sm:inline-flex"
+                style={{ background: '#F05A28' }}
+              >
+                {cta.label}
+              </Link>
+            )}
           </div>
         </div>
       </div>

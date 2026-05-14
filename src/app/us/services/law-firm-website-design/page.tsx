@@ -614,6 +614,19 @@ const FAQ_ITEMS = [
     answer:
       'The lead attorney or managing partner needs to be involved at three specific points: kickoff (to align on messaging, practice area priorities, and design direction), design review (to approve the visual direction before development), and content approval (to review attorney bios and practice area copy before they go live). Between those touchpoints, a firm administrator or marketing coordinator can handle day-to-day communication. We structure the project to minimize senior attorney time while ensuring the decisions that need attorney judgment get made by the right person.',
   },
+
+  {
+    category: 'trust',
+    question: 'Can you build a law firm website with a client intake form, client portal, or scheduling integration?',
+    answer:
+      'Yes — functional client intake is one of the most important conversion elements on a law firm website, and one that most agencies treat as an afterthought. FactoryJet builds: multi-step intake forms with practice-area-specific field logic (personal injury intake asks different questions than business formation intake), Calendly or Cal.com scheduling integration for consultation booking directly from the website, secure client portal access using password-protected pages or dedicated portal software (Clio, MyCase, or custom-built), electronic retainer agreement signing via DocuSign or PandaDoc embedded in the intake flow, and CRM routing that creates a new matter record in Clio or Lawmatics automatically when a form is submitted. A well-built intake flow can increase qualified consultation bookings by 40–60% over a contact form alone.',
+  },
+  {
+    category: 'trust',
+    question: 'What ongoing support does FactoryJet offer after a law firm website launches?',
+    answer:
+      'Every law firm website project includes a 30-day post-launch support window for bug fixes, content corrections, and attorney bio updates. Beyond that, FactoryJet offers monthly maintenance plans from $199/month: WordPress or Next.js security updates, plugin and dependency updates, daily backups, uptime monitoring, Google Search Console monitoring for indexing issues, and 2 hours of content updates per month (new attorney bios, practice area pages, blog posts). Law firm websites require particular attention to state bar advertising rule compliance — FactoryJet reviews all content updates for disclaimer requirements and state-specific ethical rules before publishing. We also offer annual website audits covering Core Web Vitals performance, local SEO health, and conversion rate optimization.',
+  },
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────

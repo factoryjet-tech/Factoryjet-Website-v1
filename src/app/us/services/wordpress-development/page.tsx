@@ -596,6 +596,19 @@ const FAQ_ITEMS = [
     answer:
       'You own everything: the WordPress installation, the custom theme code (delivered via a private GitHub repository), the design files (Figma access shared at handover), all plugin licenses, your hosting account, and your domain. We don\'t retain any ownership or access after the project ends. You can take the project to another agency or in-house developer at any time — we deliver everything they\'d need to continue working on it without having to reverse-engineer or rebuild from scratch.',
   },
+
+  {
+    category: 'technical',
+    question: 'Can you build a WordPress e-commerce site with WooCommerce for selling products online?',
+    answer:
+      'Yes — WooCommerce is the world\'s most-used e-commerce platform by install count, powering 35%+ of all online stores. FactoryJet builds WooCommerce stores integrated into custom WordPress themes: product catalog with unlimited variants and custom attributes, Stripe and PayPal payment gateway integration, subscription products via WooCommerce Subscriptions, B2B wholesale pricing via WholesaleX or Wholesale Gorilla, Australian and US sales tax configuration via TaxJar or Avalara, and product SEO including schema markup for Google Shopping eligibility. WooCommerce makes the most sense when: you need a content-heavy store (recipes, tutorials, how-tos alongside products), you already have significant WordPress SEO equity, or you need specific WooCommerce-only integrations your CRM or ERP supports. For pure e-commerce without a content dependency, Shopify usually delivers a faster build and lower maintenance overhead.',
+  },
+  {
+    category: 'trust',
+    question: 'Does FactoryJet offer ongoing WordPress maintenance and support after launch?',
+    answer:
+      'Yes — WordPress maintenance is essential, not optional. WordPress is the world\'s most targeted CMS for security vulnerabilities — sites running outdated plugins and core versions are actively exploited. FactoryJet\'s WordPress maintenance plans from $199/month include: weekly WordPress core, theme, and plugin updates tested on a staging environment before applying to production; daily UpdraftPlus backups stored off-site; uptime monitoring with immediate alerts; Google Search Console monitoring for crawl errors and indexing issues; malware scanning via Wordfence or Sucuri; and 2 hours of content and minor design updates per month. Maintenance clients have never experienced a WordPress hack while under our care. Unmanaged WordPress sites are typically compromised within 18–24 months of launch as security patches go unapplied.',
+  },
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────

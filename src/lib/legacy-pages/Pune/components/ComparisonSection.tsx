@@ -20,7 +20,7 @@ const ComparisonSection: React.FC = () => {
     {
       number: 1,
       title: 'Pune Market Expertise',
-      description: 'We understand the Pune market — from tech-savvy Hinjewadi IT companies to traditional PCMC manufacturers. Our designs reflect local business culture while maintaining global standards. We understand the IT-Manufacturing duality that defines Pune's economy.',
+      description: 'We understand the Pune market — from tech-savvy Hinjewadi IT companies to traditional PCMC manufacturers. Our designs reflect local business culture while maintaining global standards. We understand the IT-Manufacturing duality that defines Pune\'s economy.',
     },
     {
       number: 2,
@@ -35,7 +35,7 @@ const ComparisonSection: React.FC = () => {
     {
       number: 4,
       title: 'Full-Stack Capability',
-      description: 'We don't just design websites. We build e-commerce stores, integrate CRMs, set up ERPs, and run digital marketing. One partner for all your digital needs.',
+      description: 'We don\'t just design websites. We build e-commerce stores, integrate CRMs, set up ERPs, and run digital marketing. One partner for all your digital needs.',
     },
     {
       number: 5,
@@ -50,7 +50,7 @@ const ComparisonSection: React.FC = () => {
     {
       number: 7,
       title: 'SEO Built-In',
-      description: 'Every website we build is optimized for Google from day one. No extra charges for basic SEO — it's included.',
+      description: 'Every website we build is optimized for Google from day one. No extra charges for basic SEO — it\'s included.',
     },
     {
       number: 8,

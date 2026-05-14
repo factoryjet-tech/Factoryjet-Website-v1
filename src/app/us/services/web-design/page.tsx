@@ -617,6 +617,31 @@ const FAQ_ITEMS = [
     answer:
       'Yes — our portfolio is at factoryjet.com/portfolio and covers business websites, e-commerce stores, landing pages, and web applications across multiple industries. On strategy calls we\'ll share relevant examples for your specific industry and use case.',
   },
+
+  {
+    category: 'technical',
+    question: 'Do you build websites with AI features, AI chatbots, or AI-powered functionality?',
+    answer:
+      'Yes — AI functionality is increasingly a standard website feature, not a premium add-on. FactoryJet builds: AI chatbots trained on your website content, FAQs, and service catalog (powered by OpenAI or Anthropic, integrated via Vercel AI SDK); AI lead qualification forms that score and route inquiries before they reach your inbox; AI-generated content pipelines that keep your blog and product descriptions updated for AI search (AEO); and AEO-optimized FAQ pages structured to appear in ChatGPT, Perplexity, and Google AI Overviews. AI chatbot integration adds $800–$1,500 to a standard website project and is available on all platform stacks (Next.js, WordPress, Webflow).',
+  },
+  {
+    category: 'seo',
+    question: 'How do you optimize a website for Google and AI search (AEO)?',
+    answer:
+      'FactoryJet builds two layers of search visibility into every website: technical SEO (the baseline every site needs) and AEO (Answer Engine Optimization — the new layer that captures AI-generated search results). Technical SEO includes: Core Web Vitals compliance (Lighthouse 90+), structured data schema (Organization, WebSite, FAQPage, BreadcrumbList, Service), sitemap submission to Google Search Console, canonical URL configuration, and mobile-first page architecture. AEO goes further: FAQ content structured as direct answers to how your buyers search in ChatGPT and Perplexity, entity markup that identifies your business to AI knowledge graphs, and \'People Also Ask\' optimization. AEO is 18–24 months ahead of where most US web agencies are — early adopters are winning AI answer positions competitors haven\'t claimed.',
+  },
+  {
+    category: 'process',
+    question: 'Can you build a website with booking, scheduling, payment, or intake form capabilities?',
+    answer:
+      'Yes — functional capabilities beyond content are a standard part of our website builds. We integrate: appointment booking (Calendly, Cal.com, Acuity Scheduling, or custom-built scheduling logic), intake and lead capture forms (with email + CRM routing to HubSpot, Salesforce, or Pipedrive), online payment for services (Stripe Checkout, Stripe Payment Links, or embedded Stripe Elements), client portal logins (members-only content access), and event registration with payment. For law firms, medical practices, home services, and professional services businesses, these functional elements are often the primary conversion mechanism — FactoryJet builds them with the same care as the design.',
+  },
+  {
+    category: 'trust',
+    question: 'Does FactoryJet offer website maintenance and ongoing support after launch?',
+    answer:
+      'Yes — every website project includes a 14–30 day post-launch support window for bug fixes and minor adjustments. Beyond that, FactoryJet offers monthly website maintenance plans from $199/month: WordPress security updates, plugin and theme updates, daily automated backups, uptime monitoring, and 2 hours of content and minor design changes per month. For Next.js and Webflow sites, maintenance includes dependency updates, performance monitoring, and content updates. Maintenance clients also get priority response windows for urgent issues and access to a dedicated engineer who knows their site\'s codebase. Unmanaged websites develop security vulnerabilities and performance degradation within 6–12 months — maintenance prevents both.',
+  },
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────

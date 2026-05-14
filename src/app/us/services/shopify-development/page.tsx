@@ -614,6 +614,37 @@ const FAQ_ITEMS = [
     answer:
       'Yes. If you have a working store with existing sales and traffic, we never rebuild blindly. We audit what\'s performing, identify specific conversion bottlenecks (slow product pages, broken mobile checkout, confusing navigation), and scope targeted improvements — not a full rebuild unless the codebase genuinely can\'t be salvaged. Sometimes the fix is a new theme. Sometimes it\'s optimizing three pages.',
   },
+
+  {
+    category: 'platform',
+    question: 'Can you build a Shopify store for B2B wholesale or dealer ordering?',
+    answer:
+      'Yes — Shopify B2B is increasingly a core use case. For Shopify Plus clients, we configure the native B2B features: company accounts, contact management, custom price lists per company, net payment terms (net-30, net-60), tax exemptions, and a dedicated B2B storefront with password-protected catalog access. For standard Shopify, we implement B2B via apps: Wholesale Gorilla, WholesaleX, or Locksmith for catalog gating. We configure PO upload, minimum order quantities, volume discount tiers, and reorder pads. Shopify\'s B2B handles $40B+ in annual wholesale transactions — it\'s a mature feature set that replaces standalone wholesale portals.',
+  },
+  {
+    category: 'platform',
+    question: 'Can you build a subscription Shopify store for a product that ships on a recurring basis?',
+    answer:
+      'Yes — Shopify subscription stores are a core FactoryJet specialty. We integrate Recharge (the Shopify subscription leader, powering brands like Dr. Axe, Graza, and Hydrant), Bold Subscriptions, or Skio depending on your catalog and churn management needs. Implementation includes: subscription product configuration (frequency options, trial periods, build-a-box), subscription management portal for customers (pause, skip, swap, cancel), cancel-save flows designed to recover 15–25% of would-be churners, subscription analytics dashboard, and Klaviyo integration for subscriber retention emails. Subscription builds typically add $1,000–$2,500 to a base Shopify project.',
+  },
+  {
+    category: 'seo',
+    question: 'How does FactoryJet optimize Shopify stores for Google, and what about AI search?',
+    answer:
+      'Shopify has technical SEO quirks that generic developers miss: duplicate content from collection/product URL patterns, auto-generated pagination parameters that dilute crawl budget, and theme-generated JavaScript that blocks initial page paint and Core Web Vitals scores. FactoryJet fixes all three and adds AEO (Answer Engine Optimization) for ChatGPT and Perplexity: Product schema with price, availability, and review aggregation; FAQPage schema targeting \'best [product]\', \'how to use [product]\', and \'is [product] worth it\' queries; and BreadcrumbList schema for category pages. Stores built with AEO get cited in AI-generated answers — a zero-click traffic source that\'s growing 40% year-over-year.',
+  },
+  {
+    category: 'trust',
+    question: 'What makes a Shopify store actually convert vs. just look good?',
+    answer:
+      'Four things separate high-converting Shopify stores from visually nice ones that underperform: (1) Mobile checkout — 65% of traffic is mobile; one-tap Apple/Google Pay and a clean 3-step checkout recover 20–30% of mobile abandonment. (2) Product page trust signals — reviews, stock scarcity, return policy summary, and size guides placed above the fold near the Add-to-Cart button. (3) Page speed — every 100ms of load time improvement increases conversion by 1%; FactoryJet targets LCP under 2.5s on mobile. (4) Post-purchase upsells — a native Shopify post-purchase offer page can increase AOV 12–18% with zero additional ad spend. Every FactoryJet build implements all four.',
+  },
+  {
+    category: 'trust',
+    question: 'Does FactoryJet offer ongoing Shopify support after launch?',
+    answer:
+      'Yes — every Shopify project includes a 30-day post-launch support window for bug fixes, minor adjustments, and launch questions. Beyond that, FactoryJet offers monthly retainer plans from $299/month: up to 4 hours of Shopify development, same-day priority bug response, and access to the engineer who built your store. Common retainer work includes: new collection page builds, metafield schema updates, app integrations, Klaviyo flow updates, seasonal landing pages for Black Friday/Cyber Monday, and performance optimization reviews. We also offer a one-time Shopify Audit package — a 2-hour review of conversion rate, technical SEO, Core Web Vitals, and checkout flow — that clients often run 60–90 days after launch.',
+  },
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────

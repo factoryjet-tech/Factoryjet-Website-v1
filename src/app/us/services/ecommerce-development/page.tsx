@@ -583,6 +583,49 @@ const FAQ_ITEMS = [
     answer:
       'Yes — 100%. The full codebase is delivered to your GitHub repository on launch day. You own every file, every integration, and all API credentials. No proprietary platform, no monthly FactoryJet retainer required to keep your store running. Any developer — ours or someone you hire later — can maintain and extend it.',
   },
+
+  {
+    category: 'platform',
+    question: 'Can you build a subscription or recurring-revenue e-commerce store?',
+    answer:
+      'Yes — subscription e-commerce is one of the highest-ROI models we build. We implement subscription logic using Recharge (the Shopify standard), Bold Subscriptions, or WooCommerce Subscriptions depending on your platform. Subscription products include: subscription boxes (monthly, quarterly), consumable replenishment programs (coffee, supplements, pet food), digital membership access, and B2B auto-replenishment. Subscription stores generate 30–50% higher customer lifetime value than one-time-purchase stores. We configure cancel flows designed to reduce churn, tiered subscription pricing, and loyalty points for subscribers.',
+  },
+  {
+    category: 'technical',
+    question: 'Do you build B2B e-commerce stores with wholesale pricing and net terms?',
+    answer:
+      'Yes — B2B e-commerce is a growing part of our work. We build: wholesale ordering portals with tiered dealer pricing (show retail price to consumers, wholesale price to authenticated dealers), net-30/net-60 payment terms via Resolve Pay, Apruve, or Shopify\'s native B2B tools, company account management with multiple users per buyer account, custom price lists per customer segment, minimum order quantity enforcement, purchase order upload, and reorder pads. Shopify Plus includes native B2B features; standard Shopify B2B is handled via apps. WooCommerce B2B uses WholesaleX or B2BKing.',
+  },
+  {
+    category: 'technical',
+    question: 'How do I optimize my e-commerce store for mobile shoppers?',
+    answer:
+      'Mobile accounts for 65–75% of US e-commerce traffic but only 55–60% of revenue — the gap is caused by poor mobile checkout UX. FactoryJet closes it with: mobile-first layout design (375px screen built before desktop), one-tap Apple Pay and Google Pay checkout (eliminates the single largest cart abandonment point), thumb-friendly product page layouts with sticky Add-to-Cart buttons, lazy-loaded images that deliver fast initial paint on mobile networks, and Google Core Web Vitals compliance (LCP under 2.5s, CLS below 0.1, INP under 200ms). Every store passes Lighthouse 90+ on mobile before delivery.',
+  },
+  {
+    category: 'technical',
+    question: 'Can you build a multi-language or international e-commerce store?',
+    answer:
+      'Yes — international e-commerce configuration is a standard capability. We implement Shopify Markets for multi-language, multi-currency storefronts: automatic currency conversion with presentment currencies, translated product descriptions and collection pages via Shopify\'s Translate & Adapt app or Weglot, international shipping zones with zone-specific carrier rate calculations, duty and import tax display at checkout via Shopify\'s Landed Cost feature, HS tariff code fields for customs declarations, and international payment methods (Klarna for EU, iDEAL for Netherlands, Mercado Pago for Latin America). We also handle IOSS registration guidance for EU sales above €150 thresholds.',
+  },
+  {
+    category: 'seo',
+    question: 'How does FactoryJet optimize e-commerce stores for Google and AI search?',
+    answer:
+      'Beyond standard technical SEO, FactoryJet builds AEO (Answer Engine Optimization) into every store — structured content that appears in ChatGPT, Perplexity, and Google AI Overviews. This means: Product schema with pricing, availability, and ratings for Google Shopping; FAQPage schema targeting transactional questions consumers ask about your category; BreadcrumbList schema for category page signals; collection page copy answering \'what is [product category]\' and \'best [product] for [use case]\' queries; and internal linking that creates topic authority clusters. Early adopters of AEO are winning significant zero-click search positions their competitors haven\'t claimed yet.',
+  },
+  {
+    category: 'trust',
+    question: 'What ongoing support does FactoryJet offer after my store launches?',
+    answer:
+      'Every e-commerce project includes a 14–30 day post-launch support window covering bug fixes, minor adjustments, and launch questions at no additional charge. Beyond that, FactoryJet offers monthly retainer plans from $299/month: up to 4 hours of development time, priority same-day bug response, and access to a dedicated engineer who knows your codebase. Retainer clients get pre-built seasonal campaign assets, quarterly performance reviews, and priority scheduling for new feature development. We also offer one-time project engagements for specific post-launch work: new collections, checkout A/B tests, app integrations, and performance audits.',
+  },
+  {
+    category: 'trust',
+    question: 'How do I know if I need an e-commerce agency or a freelancer for my store?',
+    answer:
+      'A freelancer works well for: a simple theme installation, a single-app integration, or a small catalog store with no custom requirements. An agency makes sense when: you need a custom design (not a theme), you\'re migrating from another platform with SEO equity to protect, you have complex product logic (variants, subscriptions, B2B pricing), or you need the project delivered on a deadline. FactoryJet operates at agency quality with transparent fixed pricing — you get a full team (designer, developer, QA) at the cost of a mid-market freelancer, with a 7-day delivery guarantee on standard Shopify builds.',
+  },
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────
