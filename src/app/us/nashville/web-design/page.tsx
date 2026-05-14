@@ -64,7 +64,7 @@ export default function NashvilleWebDesignPage() {
         headline={"What 'Web Design' Actually Means for a Nashville Business"}
         lead={"Nashville's economy splits between global healthcare IT (where B2B buyers do deep research before any sales call) and hospitality/entertainment (where consumer trust is built in seconds on mobile). Both require very different web strategies — and FactoryJet builds for both."}
         body={<><p>For Healthcare IT and professional services firms — vendors in the HCA Healthcare ecosystem, Vanderbilt University Medical Center partners, and companies operating within the Change Healthcare supply chain — a website needs to demonstrate compliance awareness, technical depth, and case study evidence. Buyers in this space evaluate vendors long before they pick up the phone. We structure sites to answer those due-diligence questions clearly, with lead-capture forms that route to the right person immediately and content architecture that builds credibility at every scroll depth.</p><p>For hospitality, tourism, and entertainment businesses — Broadway venues, hotels, event companies, festival organizers, music-related businesses, and the service firms that support 15M+ annual visitors — sites need to convert mobile visitors arriving from Google Maps and social in seconds. That means fast booking flows, event calendar integrations, and mobile-first design built to perform on spotty venue Wi-Fi. Every FactoryJet project covers discovery, Figma prototyping, Next.js development, content, SEO, GA4 analytics, and a 30-day support window. You leave with a codebase you own, a design system you keep, and a site built to rank — not just to look good in a mockup.</p></>}
-        rightSlot={<img src="/images/us/nashville/web-design/service-explanation.webp" alt="" aria-hidden="true" className="w-full rounded-2xl object-cover" />}
+        rightSlot={<img src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden="true" className="w-full rounded-2xl object-cover" />}
       />
       <StrategicDarkSection
         eyebrow="WHY FACTORYJET"
@@ -115,7 +115,7 @@ export default function NashvilleWebDesignPage() {
             "industry": "Healthcare IT & Professional Services",
             "title": "Nashville Healthcare IT & Professional Services Client",
             "description": "Nashville's healthcare IT ecosystem — anchored by HCA Healthcare ($60B revenue), Vanderbilt University Medical Center, and Change Healthcare — demands websites that project compliance awareness, technical depth, and verifiable case study evidence. We build sites for vendors and professional services firms in this ecosystem that convert B2B researchers into booked discovery calls.",
-            "imageSrc": "/images/us/nashville/web-design/portfolio-1.webp",
+            "imageSrc": "/images/us/nashville/ecommerce/portfolio-1.webp",
             "stat1": "+40% conversions",
             "stat2": "< 1.5s load time"
           },
@@ -123,7 +123,7 @@ export default function NashvilleWebDesignPage() {
             "industry": "Hospitality & Entertainment",
             "title": "Nashville Hospitality & Entertainment Client",
             "description": "Nashville draws 15M+ visitors annually. Broadway venues, hotels, event companies, and hospitality brands need sites that convert mobile visitors from Google Maps and social in seconds — with fast booking flows, event calendars, and mobile-first design that performs even on spotty venue Wi-Fi. We build for that exact environment.",
-            "imageSrc": "/images/us/nashville/web-design/portfolio-2.webp",
+            "imageSrc": "/images/us/nashville/ecommerce/portfolio-2.webp",
             "stat1": "+40% conversions",
             "stat2": "< 1.5s load time"
           },
@@ -131,7 +131,7 @@ export default function NashvilleWebDesignPage() {
             "industry": "Music Industry & Creative Businesses",
             "title": "Nashville Music Industry & Creative Business Client",
             "description": "Nashville's music economy generates $10B+ annually, supporting record labels, recording studios, artist management firms, music licensing agencies, and creative businesses of every scale. These brands need websites that reflect creative credibility while driving real commercial outcomes — portfolio depth, booking inquiries, and licensing leads.",
-            "imageSrc": "/images/us/nashville/web-design/portfolio-3.webp",
+            "imageSrc": "/images/us/nashville/ecommerce/portfolio-3.webp",
             "stat1": "+40% conversions",
             "stat2": "< 1.5s load time"
           }
@@ -160,6 +160,38 @@ export default function NashvilleWebDesignPage() {
               "$3,999 (Growth tier) — 7-day delivery",
               "Next.js vs WordPress means faster load times and no monthly plugin overhead. FactoryJet publishes all pricing before the first call."
             ]
+          }
+        ]}
+      />
+      <IndustriesGrid
+        eyebrow={"NASHVILLE × WEB DESIGN"}
+        headline={"Web Design for Nashville's Key Industries"}
+        lead={"From healthcare IT vendors to Broadway venue operators, Nashville's economy spans industries with very different digital needs. FactoryJet has built sites for each of them."}
+        sectors={[
+          {
+            "name": "Healthcare IT & Life Sciences",
+            "description": "Nashville is the #1 US city for healthcare IT. HCA Healthcare ($60B revenue), Vanderbilt University Medical Center, and Change Healthcare anchor an ecosystem of vendors, SaaS platforms, and professional services firms. Sites in this space need to demonstrate technical depth, compliance awareness, and case study credibility — and lead-capture flows that route to the right person fast.",
+            "example": "Vendors, SaaS platforms, and consulting firms serving HCA Healthcare, Vanderbilt, or the Change Healthcare ecosystem."
+          },
+          {
+            "name": "Hospitality & Tourism",
+            "description": "Nashville draws 15M+ annual visitors — and every hotel, venue, tour operator, and experience brand is competing for that traffic. Sites need to convert mobile visitors from Google Maps and social in seconds, with fast booking flows, event calendars, and performance that holds up on spotty venue Wi-Fi.",
+            "example": "Hotels, vacation rentals, tour operators, event venues, and hospitality brands serving Nashville's 15M+ annual visitors."
+          },
+          {
+            "name": "Music & Entertainment",
+            "description": "Nashville's music economy generates $10B+ annually, supporting record labels, recording studios, artist management firms, licensing agencies, and creative businesses of every scale. These brands need websites that project creative credibility while driving real commercial outcomes — portfolio depth, booking inquiries, and licensing leads.",
+            "example": "Record labels, recording studios, artist management firms, music licensing agencies, and entertainment brands."
+          },
+          {
+            "name": "Professional & Business Services",
+            "description": "Nashville's corporate relocation wave — driven by companies leaving high-tax states — has created a fast-growing professional services market: law firms, consulting firms, financial advisors, staffing agencies, and marketing companies. For these businesses, the website is the first qualification filter. We build lead-capture flows and authority-building content structures that turn visitors into booked calls.",
+            "example": "Law firms, consulting firms, financial advisors, and business services companies supporting Nashville's corporate relocation wave."
+          },
+          {
+            "name": "Real Estate & Construction",
+            "description": "Nashville's building boom is one of the most visible in the South. Developers, general contractors, real estate firms, and architecture practices are competing for buyers and project leads in a market where inventory moves fast. We build sites with project portfolio galleries, lead capture, and local SEO targeting Nashville's high-demand neighborhoods and submarkets.",
+            "example": "Developers, general contractors, real estate agencies, and architecture firms operating in Nashville's booming construction market."
           }
         ]}
       />
@@ -210,38 +242,6 @@ export default function NashvilleWebDesignPage() {
           }
         ] as const}
       />
-      <IndustriesGrid
-        eyebrow={"NASHVILLE × WEB DESIGN"}
-        headline={"Web Design for Nashville's Key Industries"}
-        lead={"From healthcare IT vendors to Broadway venue operators, Nashville's economy spans industries with very different digital needs. FactoryJet has built sites for each of them."}
-        sectors={[
-          {
-            "name": "Healthcare IT & Life Sciences",
-            "description": "Nashville is the #1 US city for healthcare IT. HCA Healthcare ($60B revenue), Vanderbilt University Medical Center, and Change Healthcare anchor an ecosystem of vendors, SaaS platforms, and professional services firms. Sites in this space need to demonstrate technical depth, compliance awareness, and case study credibility — and lead-capture flows that route to the right person fast.",
-            "example": "Vendors, SaaS platforms, and consulting firms serving HCA Healthcare, Vanderbilt, or the Change Healthcare ecosystem."
-          },
-          {
-            "name": "Hospitality & Tourism",
-            "description": "Nashville draws 15M+ annual visitors — and every hotel, venue, tour operator, and experience brand is competing for that traffic. Sites need to convert mobile visitors from Google Maps and social in seconds, with fast booking flows, event calendars, and performance that holds up on spotty venue Wi-Fi.",
-            "example": "Hotels, vacation rentals, tour operators, event venues, and hospitality brands serving Nashville's 15M+ annual visitors."
-          },
-          {
-            "name": "Music & Entertainment",
-            "description": "Nashville's music economy generates $10B+ annually, supporting record labels, recording studios, artist management firms, licensing agencies, and creative businesses of every scale. These brands need websites that project creative credibility while driving real commercial outcomes — portfolio depth, booking inquiries, and licensing leads.",
-            "example": "Record labels, recording studios, artist management firms, music licensing agencies, and entertainment brands."
-          },
-          {
-            "name": "Professional & Business Services",
-            "description": "Nashville's corporate relocation wave — driven by companies leaving high-tax states — has created a fast-growing professional services market: law firms, consulting firms, financial advisors, staffing agencies, and marketing companies. For these businesses, the website is the first qualification filter. We build lead-capture flows and authority-building content structures that turn visitors into booked calls.",
-            "example": "Law firms, consulting firms, financial advisors, and business services companies supporting Nashville's corporate relocation wave."
-          },
-          {
-            "name": "Real Estate & Construction",
-            "description": "Nashville's building boom is one of the most visible in the South. Developers, general contractors, real estate firms, and architecture practices are competing for buyers and project leads in a market where inventory moves fast. We build sites with project portfolio galleries, lead capture, and local SEO targeting Nashville's high-demand neighborhoods and submarkets.",
-            "example": "Developers, general contractors, real estate agencies, and architecture firms operating in Nashville's booming construction market."
-          }
-        ]}
-      />
       <TestimonialsSection
         eyebrow="WHAT CLIENTS SAY"
         headline={"4.9/5 across 150+ reviews from Nashville and beyond."}
@@ -281,6 +281,62 @@ export default function NashvilleWebDesignPage() {
           {
             "question": "How does FactoryJet compare to Nashville agencies like Bullhorn Creative or Southern Web Group?",
             "answer": "Bullhorn Creative and Southern Web Group are established Nashville shops. Neither publishes pricing or a delivery timeline publicly. FactoryJet publishes all three tiers upfront, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — which means faster load times and no ongoing plugin maintenance costs for your team. You can compare our scope and price against any Nashville agency before you speak to us."
+          },
+          {
+            "question": "Do I own the website after it's built, or am I locked into a platform?",
+            "answer": "You own everything — the Next.js codebase, the Figma design files, and the hosting configuration. There is no proprietary CMS lock-in, no mandatory retainer, and no monthly platform fee. You can take the code to any developer or hosting provider at any time. Most clients choose to stay with us for ongoing work, but that's always their call."
+          },
+          {
+            "question": "What tech stack do you build on, and why does it matter for my Nashville business?",
+            "answer": "We build on Next.js deployed to Cloudflare Pages, with a headless CMS for content editing. Next.js produces static pages that load significantly faster than WordPress — typically under 1.5 seconds on mobile — which directly affects Google rankings and visitor bounce rates. For Nashville businesses competing on local search, that performance gap over a WordPress competitor is a real and measurable advantage."
+          },
+          {
+            "question": "How does the site perform on mobile? Nashville visitors are often on their phones.",
+            "answer": "Mobile-first is the default, not an afterthought. Every FactoryJet build targets Lighthouse 100/100 and green Core Web Vitals on mobile. Given that a large share of Nashville's hospitality and entertainment searches happen on phones — often on Broadway, at venues, or while a visitor is already in the city — mobile performance is non-negotiable and tested before launch."
+          },
+          {
+            "question": "Can you add e-commerce to a Nashville business website?",
+            "answer": "Yes. Whether you need a simple product catalog with Stripe checkout, a full Shopify integration, or a custom e-commerce build, we handle it at the Custom tier ($7,500+). Nashville's retail, food-and-beverage, and music merchandise businesses frequently need both a storefront and a service site in one — we architect that so it doesn't feel bolted on."
+          },
+          {
+            "question": "What AI features can you add to a Nashville business website?",
+            "answer": "Common AI integrations include site-search powered by vector embeddings, AI chat assistants trained on your services and FAQs, and AI-assisted content tools for blog or product descriptions. These are typically part of Custom tier projects. For Nashville's healthcare IT vendors, AI-assisted knowledge bases are a particularly strong fit for complex technical products."
+          },
+          {
+            "question": "We're in Germantown or 12South — do you know Nashville's neighborhoods well enough to write relevant copy?",
+            "answer": "Yes. We research Nashville's neighborhoods as part of discovery — from Germantown's hospitality corridor and 12South's boutique retail strip to the Gulch's high-rise residential and SoBro's entertainment district. Local specificity in copy and schema markup improves relevance for neighborhood-level searches, which is where a lot of Nashville's foot-traffic-dependent businesses win."
+          },
+          {
+            "question": "We're based in Brentwood or Franklin — do you serve the Nashville suburbs?",
+            "answer": "Yes. We regularly work with businesses based in Brentwood, Franklin, Murfreesboro, and Hendersonville. The Nashville-Murfreesboro-Franklin MSA is one market for us. Local SEO targeting can include suburb-specific service pages if your business draws clients from multiple parts of the metro."
+          },
+          {
+            "question": "I own a restaurant or bar in Nashville. What does a good website actually need?",
+            "answer": "For Nashville's food and beverage scene, the essentials are: a fast-loading mobile menu, a reservation or waitlist integration (OpenTable, Resy, or a custom flow), event calendar support for live music nights, and Google Maps / Apple Maps schema so you show up correctly in local search. We also build out private dining or buyout inquiry forms, which drive significant revenue for venues that don't advertise them properly."
+          },
+          {
+            "question": "I'm a real estate agent or developer in Nashville — what do I need from a website?",
+            "answer": "Real estate and development sites in Nashville need listing integration (IDX feeds or custom portfolio galleries), neighborhood-specific landing pages for high-demand areas like East Nashville, Green Hills, and Bellevue, and lead capture forms that route inquiries immediately. For developers, a project pipeline page with renderings and status updates can significantly reduce inbound inquiry load on your team."
+          },
+          {
+            "question": "We're a company relocating to Nashville from another state. Can you build us a Nashville-facing website quickly?",
+            "answer": "Yes — the 7-day delivery guarantee exists precisely for situations like this. Corporate relocations often need a local web presence established before the physical move is complete. We can build a Nashville-specific landing page or full site quickly, with local schema, phone numbers, and address details, so you show up in Nashville searches from day one."
+          },
+          {
+            "question": "Can you be flexible on the 7-day timeline if we need more time for approvals?",
+            "answer": "The 7-day clock starts when we have everything we need from you — brand assets, copy inputs, and stakeholder approvals. If your internal process requires longer review cycles, we can agree a phased schedule upfront. The guarantee still applies to the development phase we control. We flag this in the kickoff so there are no surprises."
+          },
+          {
+            "question": "What does your design process actually look like from the client's side?",
+            "answer": "After a kickoff call, you'll receive a Figma prototype for review — typically within 48 hours. You review it, leave comments directly in Figma, and we revise. Most clients go through two rounds of design review before development starts. You always see what you're getting before a line of code is written. Nothing ships that you haven't approved."
+          },
+          {
+            "question": "Can I see examples of websites you've built for Nashville businesses?",
+            "answer": "Yes — the portfolio link on this page shows recent work across Nashville's key sectors. We can also share sector-specific examples on a call if you want to see work from your exact industry, whether that's healthcare IT, hospitality, or professional services."
+          },
+          {
+            "question": "What is GA4 and do I actually need it?",
+            "answer": "GA4 is Google's current analytics platform — it replaced Universal Analytics in 2023 and is what Google uses to track who visits your site, which pages they read, and whether they fill out your contact form. Every FactoryJet project includes GA4 wired up before launch, with the key conversion events already configured. You get a plain-English walkthrough in the handover session so you know what you're looking at without needing to be a data analyst."
           }
         ]}
       />
@@ -388,6 +444,118 @@ function SchemaScript() {
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Neither publishes pricing or a delivery timeline publicly. FactoryJet publishes all three tiers upfront, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — which means faster load times and no ongoing plugin maintenance costs for your team."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I own the website after it's built, or am I locked into a platform?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You own everything — the Next.js codebase, the Figma design files, and the hosting configuration. There is no proprietary CMS lock-in, no mandatory retainer, and no monthly platform fee. You can take the code to any developer or hosting provider at any time."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What tech stack do you build on, and why does it matter for my Nashville business?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We build on Next.js deployed to Cloudflare Pages, with a headless CMS for content editing. Next.js produces static pages that load significantly faster than WordPress — typically under 1.5 seconds on mobile — which directly affects Google rankings and visitor bounce rates."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the site perform on mobile? Nashville visitors are often on their phones.",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mobile-first is the default, not an afterthought. Every FactoryJet build targets Lighthouse 100/100 and green Core Web Vitals on mobile. Given that a large share of Nashville's hospitality and entertainment searches happen on phones, mobile performance is non-negotiable and tested before launch."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you add e-commerce to a Nashville business website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Whether you need a simple product catalog with Stripe checkout, a full Shopify integration, or a custom e-commerce build, we handle it at the Custom tier ($7,500+). Nashville's retail, food-and-beverage, and music merchandise businesses frequently need both a storefront and a service site in one."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What AI features can you add to a Nashville business website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Common AI integrations include site-search powered by vector embeddings, AI chat assistants trained on your services and FAQs, and AI-assisted content tools for blog or product descriptions. For Nashville's healthcare IT vendors, AI-assisted knowledge bases are a particularly strong fit for complex technical products."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "We're in Germantown or 12South — do you know Nashville's neighborhoods well enough to write relevant copy?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We research Nashville's neighborhoods as part of discovery — from Germantown's hospitality corridor and 12South's boutique retail strip to the Gulch's high-rise residential and SoBro's entertainment district. Local specificity in copy and schema markup improves relevance for neighborhood-level searches."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "We're based in Brentwood or Franklin — do you serve the Nashville suburbs?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We regularly work with businesses based in Brentwood, Franklin, Murfreesboro, and Hendersonville. The Nashville-Murfreesboro-Franklin MSA is one market for us. Local SEO targeting can include suburb-specific service pages if your business draws clients from multiple parts of the metro."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "I own a restaurant or bar in Nashville. What does a good website actually need?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For Nashville's food and beverage scene, the essentials are: a fast-loading mobile menu, a reservation or waitlist integration, event calendar support for live music nights, and Google Maps schema so you show up correctly in local search. We also build private dining or buyout inquiry forms, which drive significant revenue for venues that don't advertise them properly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "I'm a real estate agent or developer in Nashville — what do I need from a website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Real estate and development sites in Nashville need listing integration, neighborhood-specific landing pages for high-demand areas like East Nashville, Green Hills, and Bellevue, and lead capture forms that route inquiries immediately. For developers, a project pipeline page with renderings and status updates can significantly reduce inbound inquiry load."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "We're a company relocating to Nashville from another state. Can you build us a Nashville-facing website quickly?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — the 7-day delivery guarantee exists precisely for situations like this. Corporate relocations often need a local web presence established before the physical move is complete. We can build a Nashville-specific landing page or full site quickly, with local schema, phone numbers, and address details, so you show up in Nashville searches from day one."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you be flexible on the 7-day timeline if we need more time for approvals?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The 7-day clock starts when we have everything we need from you — brand assets, copy inputs, and stakeholder approvals. If your internal process requires longer review cycles, we can agree a phased schedule upfront. The guarantee still applies to the development phase we control."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does your design process actually look like from the client's side?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "After a kickoff call, you'll receive a Figma prototype for review — typically within 48 hours. You review it, leave comments directly in Figma, and we revise. Most clients go through two rounds of design review before development starts. Nothing ships that you haven't approved."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I see examples of websites you've built for Nashville businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — the portfolio link on this page shows recent work across Nashville's key sectors. We can also share sector-specific examples on a call if you want to see work from your exact industry, whether that's healthcare IT, hospitality, or professional services."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is GA4 and do I actually need it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "GA4 is Google's current analytics platform — it tracks who visits your site, which pages they read, and whether they fill out your contact form. Every FactoryJet project includes GA4 wired up before launch, with the key conversion events already configured. You get a plain-English walkthrough in the handover session so you know what you're looking at without needing to be a data analyst."
             }
           }
         ]

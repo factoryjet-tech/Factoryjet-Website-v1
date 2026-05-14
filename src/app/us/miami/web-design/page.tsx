@@ -60,7 +60,7 @@ export default function MiamiWebDesignPage() {
         headline={"What 'Web Design' Actually Means for a Miami Business"}
         lead={"Miami's bilingual market (English and Spanish), global finance clientele, and tourism-driven consumer base create web requirements you won't find in most agency playbooks. FactoryJet builds with multilingual-ready architecture from day one, fast load times for mobile users on the go, and lead capture flows tuned for international B2B buyers who evaluate you before they ever pick up the phone."}
         body={<><p>For FinTech and financial services companies along the Brickell corridor — international banks, wealth management firms, payment processors, and the consultancies that serve them — a website needs to project regulatory credibility fast. Buyers in this sector read service architecture pages before they read testimonials. We structure your site to communicate compliance credibility, clear capability scope, and trust signals (certifications, client logos, regulatory disclosures) in the first scroll.</p><p>For real estate and tourism businesses — the industries that collectively define Miami's global brand — your website is competing with international firms for buyers who may never visit your office before wiring a deposit. Miami's $20B+ tourism economy and booming luxury real estate market require sites that convert international visitors into leads: gallery-heavy layouts with fast image delivery, multilingual UX, and booking or inquiry flows that work on a phone in any time zone. Every FactoryJet project covers discovery, Figma prototyping, development, content, SEO, and a 30-day support window. You leave with a codebase you own, a design system you keep, and a site built to rank — not just to look good in a screenshot.</p></>}
-        rightSlot={<img src="/images/us/miami/web-design/service-explanation.webp" alt="" aria-hidden="true" className="w-full rounded-2xl object-cover" />}
+        rightSlot={<img src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden="true" className="w-full rounded-2xl object-cover" />}
       />
       <StrategicDarkSection
         eyebrow="WHY FACTORYJET"
@@ -87,9 +87,9 @@ export default function MiamiWebDesignPage() {
         eyebrow="RECENT WORK"
         headline={"What Miami businesses look like after FactoryJet."}
         cards={[
-          {"industry":"FinTech & Financial Services","title":"Miami FinTech & Financial Services Client","description":"Brickell's financial corridor hosts 80+ international banks and a growing FinTech ecosystem. Companies here need sites that communicate regulatory credibility, clear service architecture, and trust signals to international buyers evaluating multiple firms simultaneously. We build fast, schema-rich sites that convert sophisticated financial clients.","imageSrc":"/images/us/miami/web-design/portfolio-1.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"},
-          {"industry":"Real Estate & Luxury Property","title":"Miami Real Estate & Luxury Property Client","description":"Miami's luxury real estate market competes globally for buyers who may never visit before making a decision. Sites need gallery-heavy layouts, fast image delivery for international connections, IDX integration, and inquiry flows that work across time zones. We build for the international buyer, not just the local one.","imageSrc":"/images/us/miami/web-design/portfolio-2.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"},
-          {"industry":"Tourism & Hospitality","title":"Miami Tourism & Hospitality Client","description":"Miami's $20B+ annual tourism economy runs on first impressions — and the first impression is always the website. South Beach hotels, restaurant groups, and cruise-adjacent businesses need mobile-first, visually compelling sites with booking conversion flows that capture visitors before they bounce to a competitor.","imageSrc":"/images/us/miami/web-design/portfolio-3.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"}
+          {"industry":"FinTech & Financial Services","title":"Miami FinTech & Financial Services Client","description":"Brickell's financial corridor hosts 80+ international banks and a growing FinTech ecosystem. Companies here need sites that communicate regulatory credibility, clear service architecture, and trust signals to international buyers evaluating multiple firms simultaneously. We build fast, schema-rich sites that convert sophisticated financial clients.","imageSrc":"/images/us/miami/ecommerce/portfolio-1.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"},
+          {"industry":"Real Estate & Luxury Property","title":"Miami Real Estate & Luxury Property Client","description":"Miami's luxury real estate market competes globally for buyers who may never visit before making a decision. Sites need gallery-heavy layouts, fast image delivery for international connections, IDX integration, and inquiry flows that work across time zones. We build for the international buyer, not just the local one.","imageSrc":"/images/us/miami/ecommerce/portfolio-2.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"},
+          {"industry":"Tourism & Hospitality","title":"Miami Tourism & Hospitality Client","description":"Miami's $20B+ annual tourism economy runs on first impressions — and the first impression is always the website. South Beach hotels, restaurant groups, and cruise-adjacent businesses need mobile-first, visually compelling sites with booking conversion flows that capture visitors before they bounce to a competitor.","imageSrc":"/images/us/miami/ecommerce/portfolio-3.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"}
         ]}
         ctaHref="/us/portfolio"
         ctaLabel="View full portfolio"
@@ -104,16 +104,6 @@ export default function MiamiWebDesignPage() {
           {"feature":"Absolute Web","values":["E-commerce and web design projects typically $8,000–$20,000+ based on published case studies","$3,999 (Growth tier)","Next.js vs platform-dependent builds means faster load times, no monthly plugin overhead, and a codebase Miami clients own outright."]}
         ]}
       />
-      <PricingTiers
-        eyebrow={"TRANSPARENT PRICING"}
-        headline={"Transparent Pricing for Miami Businesses"}
-        lead={"Miami agency rates for web design typically start at $8,000 and run to $20,000+ for projects with comparable scope. FactoryJet's Growth tier delivers 10–15 pages, a blog CMS, multilingual-ready architecture, SEO, and analytics for $3,999 — 50–60% below the Miami benchmark, with 7-day delivery and a Next.js codebase you own outright. No retainer required."}
-        tiers={[
-          {"name":"Starter","priceRange":"$1,999","description":"5-page brochure site, fast mobile load, ranks for your name and core service. Best for local Miami businesses and sole traders.","features":["5 pages, mobile-responsive","Basic SEO & schema markup","Contact form with email forwarding","2 revision rounds","30-day post-launch support"],"cta":{"label":"Get a quote","href":"/contact"}},
-          {"name":"Growth","priceRange":"$3,999","description":"10–15 page site with blog CMS, lead-capture, multilingual-ready architecture, and analytics. Best for Miami SMBs scaling online.","features":["10–15 pages with blog CMS","Advanced SEO & GA4 tracking","Multilingual-ready architecture","Lead capture & email automation","30-day support + training session"],"cta":{"label":"Get a quote","href":"/contact"},"popular":true},
-          {"name":"Custom","priceRange":"$7,500+","description":"Custom Next.js with e-commerce, AI features, API integrations, and priority support. Best for complex Miami businesses with international requirements.","features":["Custom Next.js architecture","E-commerce or membership features","AI integrations (chat, search, content)","Third-party API connections","Priority support & quarterly reviews"],"cta":{"label":"Get a quote","href":"/contact"}}
-        ] as const}
-      />
       <IndustriesGrid
         eyebrow={"MIAMI × WEB DESIGN"}
         headline={"Web Design for Miami's Key Industries"}
@@ -125,6 +115,16 @@ export default function MiamiWebDesignPage() {
           {"name":"Healthcare & Life Sciences","description":"Jackson Health System employs 14,000+ staff and the University of Miami Health System anchors a broader healthcare cluster of 300+ biotech and life sciences companies across Miami-Dade. Sites in this sector need HIPAA-aware contact forms, clear service navigation for patients and partners, and local SEO that competes in a dense provider market.","example":"Private practices, life sciences vendors, and healthcare service firms across Miami-Dade and Broward counties."},
           {"name":"Professional & Business Services","description":"Latin American HQs, international consultancies, law firms, and accounting practices serving cross-border clients make up a significant slice of Miami's professional services economy. These businesses need authority-building content, bilingual capability signals, and lead capture flows designed for longer B2B sales cycles with international prospects.","example":"Law firms, consultancies, and accounting practices serving Latin American corporate clients from Miami offices."}
         ]}
+      />
+      <PricingTiers
+        eyebrow={"TRANSPARENT PRICING"}
+        headline={"Transparent Pricing for Miami Businesses"}
+        lead={"Miami agency rates for web design typically start at $8,000 and run to $20,000+ for projects with comparable scope. FactoryJet's Growth tier delivers 10–15 pages, a blog CMS, multilingual-ready architecture, SEO, and analytics for $3,999 — 50–60% below the Miami benchmark, with 7-day delivery and a Next.js codebase you own outright. No retainer required."}
+        tiers={[
+          {"name":"Starter","priceRange":"$1,999","description":"5-page brochure site, fast mobile load, ranks for your name and core service. Best for local Miami businesses and sole traders.","features":["5 pages, mobile-responsive","Basic SEO & schema markup","Contact form with email forwarding","2 revision rounds","30-day post-launch support"],"cta":{"label":"Get a quote","href":"/contact"}},
+          {"name":"Growth","priceRange":"$3,999","description":"10–15 page site with blog CMS, lead-capture, multilingual-ready architecture, and analytics. Best for Miami SMBs scaling online.","features":["10–15 pages with blog CMS","Advanced SEO & GA4 tracking","Multilingual-ready architecture","Lead capture & email automation","30-day support + training session"],"cta":{"label":"Get a quote","href":"/contact"},"popular":true},
+          {"name":"Custom","priceRange":"$7,500+","description":"Custom Next.js with e-commerce, AI features, API integrations, and priority support. Best for complex Miami businesses with international requirements.","features":["Custom Next.js architecture","E-commerce or membership features","AI integrations (chat, search, content)","Third-party API connections","Priority support & quarterly reviews"],"cta":{"label":"Get a quote","href":"/contact"}}
+        ] as const}
       />
       <TestimonialsSection
         eyebrow="WHAT CLIENTS SAY"
@@ -141,7 +141,22 @@ export default function MiamiWebDesignPage() {
           {"question":"Do you build websites for FinTech and financial services companies in Brickell?","answer":"Yes. Miami's Brickell corridor is one of our most common client profiles. We build sites that communicate regulatory credibility and service architecture to international buyers who research before they talk to anyone. That means clear capability pages, trust signals (certifications, regulatory disclosures, client logos), and lead-capture flows designed for sophisticated B2B buyers."},
           {"question":"Can you build multilingual websites — English and Spanish?","answer":"Yes. Miami's bilingual market is a core design constraint, not an afterthought. FactoryJet's Growth tier includes multilingual-ready architecture from the first commit — meaning the codebase is structured to support Spanish content without a full rebuild later. We can also deliver fully translated Spanish pages if content is provided, and we build Spanish metadata for SEO."},
           {"question":"How does FactoryJet compare to Miami agencies like Refresh Agency or Absolute Web?","answer":"Refresh Agency and Absolute Web are credible Miami agencies with track records. Neither publishes a 7-day delivery commitment. Refresh Agency does not publish pricing. Absolute Web's e-commerce projects typically run $8,000–$20,000+. FactoryJet publishes all three tiers upfront, delivers in 7 days, and builds in Next.js — which means faster load times and no monthly plugin overhead for your team."},
-          {"question":"We're a real estate company in Miami targeting international buyers. What do you build?","answer":"Gallery-heavy layouts, fast image delivery (WebP optimized for international connections), IDX integration capability, inquiry forms that work across time zones, and multilingual-ready architecture for buyers browsing in Spanish, Portuguese, or other languages. We also build schema markup that helps your listings appear in AI search results — increasingly important as international buyers research remotely before visiting."}
+          {"question":"We're a real estate company in Miami targeting international buyers. What do you build?","answer":"Gallery-heavy layouts, fast image delivery (WebP optimized for international connections), IDX integration capability, inquiry forms that work across time zones, and multilingual-ready architecture for buyers browsing in Spanish, Portuguese, or other languages. We also build schema markup that helps your listings appear in AI search results — increasingly important as international buyers research remotely before visiting."},
+          {"question":"Do you handle website maintenance after launch?","answer":"Yes. Every project includes a 30-day post-launch support window covering bug fixes, content updates, and training questions at no extra cost. After that, we offer ongoing maintenance packages for businesses that want regular updates, performance monitoring, and priority turnaround on changes. Most Miami clients on retainer pay a flat monthly fee and never deal with a surprise invoice."},
+          {"question":"Who owns the website code and design files after the project?","answer":"You do — fully. FactoryJet hands over the complete Next.js codebase, all Figma design files, and any CMS credentials at the end of every project. There is no proprietary platform, no lock-in, and no monthly fee tied to the build itself. You can host it anywhere, hand it to another developer, or manage it in-house."},
+          {"question":"Can you build a website that works well for Spanish-speaking customers in Little Havana or Doral?","answer":"Absolutely. Miami's Spanish-speaking market — particularly in neighborhoods like Little Havana, Doral, and Hialeah — is too large to ignore. We build bilingual sites with proper hreflang tags, Spanish metadata, and content structures designed for both language audiences. If you provide Spanish copy, we implement it cleanly. If you need translation guidance, we can coordinate that as part of the project scope."},
+          {"question":"Do you build e-commerce websites for Miami businesses?","answer":"Yes. Our Custom tier ($7,500+) covers full e-commerce builds — product catalogs, checkout flows, payment integrations, and inventory management. Miami's retail and DTC brands often need sites that handle both English and Spanish-speaking shoppers and process international orders. We build on Next.js with headless commerce architecture so you own the stack and aren't paying monthly platform fees that scale against your revenue."},
+          {"question":"We run a luxury brand in Coral Gables or Miami Beach. Can you design a site that matches our positioning?","answer":"Yes. Luxury brand sites require a different visual language — generous whitespace, high-resolution imagery with fast delivery, restrained typography, and conversion flows that feel premium rather than pushy. We have built luxury brand sites for the Coral Gables and Miami Beach markets and understand the balance between aesthetic ambition and measurable performance. The result looks like a $30,000 agency build because we build to the same visual standards, just without the overhead."},
+          {"question":"What about international SEO? My clients come from Latin America and Europe.","answer":"International SEO is built into our Growth and Custom tiers. That includes hreflang tags for language and region targeting, Spanish-language metadata, schema markup that AI crawlers can parse in multiple languages, and page speed optimization for international connections that may not have US-level bandwidth. Miami businesses with Latin American client bases often see significant organic traffic gains from proper hreflang implementation alone."},
+          {"question":"My business gets a lot of tourist traffic in season. How do you design for mobile visitors who are already in Miami?","answer":"Mobile-first is our default — not a feature we charge extra for. Every site we build loads fast on 4G connections, renders cleanly on any screen size, and puts the most important actions (call, book, inquiry) within a single thumb tap. For tourism and hospitality businesses in South Beach or Wynwood, we also optimize for 'near me' search intent so visitors already in the area find you on Google Maps and your site simultaneously."},
+          {"question":"We're a restaurant group in Miami Beach or Wynwood. What should our website include?","answer":"At minimum: a fast-loading menu (ideally a PDF and an HTML version for SEO), a reservation or inquiry flow, high-quality food and venue photography with WebP delivery, and Google Maps integration. For groups with multiple locations — common in Miami Beach and Wynwood — we build multi-location architecture that ranks each venue independently. We also wire up GA4 so you can see which traffic source is driving reservations."},
+          {"question":"Can you integrate IDX property search for a real estate site?","answer":"Yes. IDX integration is available in our Custom tier and connects your site to the MLS database so visitors can search live listings directly on your site rather than bouncing to Zillow or Realtor.com. For Miami's luxury and international buyer market, we pair IDX with multilingual UX and fast image delivery so the search experience works for international buyers browsing from Latin America or Europe."},
+          {"question":"Do you add AI features like chatbots or smart search to websites?","answer":"Yes, on the Custom tier. We integrate AI chat (using APIs from OpenAI or Anthropic depending on fit), semantic search for product or content libraries, and AI-assisted lead qualification flows. For Miami businesses with high international inquiry volume — common in real estate, FinTech, and professional services — an AI-powered intake form that qualifies leads in English and Spanish before routing them to your team can meaningfully reduce response time and increase conversion rate."},
+          {"question":"How do I know my new site will actually be fast enough for international visitors?","answer":"We enforce Core Web Vitals green and Lighthouse performance scores above 90 on every build. Images are delivered as WebP via Cloudflare's global CDN, which has edge nodes in Miami and across Latin America. JavaScript is code-split and deferred where possible. We do not ship third-party scripts without a performance review. For international visitors connecting from São Paulo, Buenos Aires, or Madrid — common for Miami's business and tourism markets — these choices mean a site that loads in under two seconds rather than five."},
+          {"question":"How many revisions are included and how does the feedback process work?","answer":"Starter tier includes two structured revision rounds at the design stage before development begins. Growth and Custom tiers include three. Revisions happen in a shared Figma file with comments — not email threads — so feedback is tracked, actioned, and confirmed in one place. We do not make scope-expanding changes during revision rounds without a separate agreement, but minor adjustments to layout, copy, and color are covered."},
+          {"question":"Where will my site be hosted, and what does that cost?","answer":"We deploy to Cloudflare Pages, which has a generous free tier that covers most FactoryJet sites indefinitely. Cloudflare's global CDN is particularly fast for Miami businesses with international audiences — edge nodes in Latin America mean faster load times for clients in Colombia, Brazil, or Argentina. If your project requires a managed database or server-side logic, we provision on Vercel or Railway and give you the credentials outright. Hosting costs are typically $0–$20/month depending on traffic volume."},
+          {"question":"What kind of ROI can I expect from a new website?","answer":"The most direct ROI drivers are organic search traffic, lead form conversion rate, and time-to-response for inbound inquiries. Miami businesses in professional services and real estate typically see meaningful organic traffic gains within 90 days of a properly SEO-structured launch. E-commerce and hospitality sites often see conversion rate improvements within the first 30 days if the previous site had significant UX or speed issues. We wire GA4 from day one so you have a clear before/after picture — not anecdotes."},
+          {"question":"Does FactoryJet work with businesses in Fort Lauderdale and the broader South Florida corridor?","answer":"Yes. We serve the full South Florida market — Miami-Dade, Broward, and Palm Beach counties. Fort Lauderdale businesses in marine, aviation, finance, and tourism are a common fit. The 7-day timeline and fixed pricing work the same regardless of your specific city, and we build with local SEO structures that target your actual service area — whether that's Fort Lauderdale, Aventura, or Coral Gables."}
         ]}
       />
       <FinalCTA
@@ -248,6 +263,126 @@ function SchemaScript() {
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Gallery-heavy layouts, fast image delivery (WebP optimized for international connections), IDX integration capability, inquiry forms that work across time zones, and multilingual-ready architecture for buyers browsing in Spanish, Portuguese, or other languages. We also build schema markup that helps your listings appear in AI search results — increasingly important as international buyers research remotely before visiting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you handle website maintenance after launch?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Every project includes a 30-day post-launch support window covering bug fixes, content updates, and training questions at no extra cost. After that, we offer ongoing maintenance packages for businesses that want regular updates, performance monitoring, and priority turnaround on changes. Most Miami clients on retainer pay a flat monthly fee and never deal with a surprise invoice."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who owns the website code and design files after the project?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You do — fully. FactoryJet hands over the complete Next.js codebase, all Figma design files, and any CMS credentials at the end of every project. There is no proprietary platform, no lock-in, and no monthly fee tied to the build itself. You can host it anywhere, hand it to another developer, or manage it in-house."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you build a website that works well for Spanish-speaking customers in Little Havana or Doral?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. Miami's Spanish-speaking market — particularly in neighborhoods like Little Havana, Doral, and Hialeah — is too large to ignore. We build bilingual sites with proper hreflang tags, Spanish metadata, and content structures designed for both language audiences. If you provide Spanish copy, we implement it cleanly. If you need translation guidance, we can coordinate that as part of the project scope."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you build e-commerce websites for Miami businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Our Custom tier ($7,500+) covers full e-commerce builds — product catalogs, checkout flows, payment integrations, and inventory management. Miami's retail and DTC brands often need sites that handle both English and Spanish-speaking shoppers and process international orders. We build on Next.js with headless commerce architecture so you own the stack and aren't paying monthly platform fees that scale against your revenue."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "We run a luxury brand in Coral Gables or Miami Beach. Can you design a site that matches our positioning?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Luxury brand sites require a different visual language — generous whitespace, high-resolution imagery with fast delivery, restrained typography, and conversion flows that feel premium rather than pushy. We have built luxury brand sites for the Coral Gables and Miami Beach markets and understand the balance between aesthetic ambition and measurable performance. The result looks like a $30,000 agency build because we build to the same visual standards, just without the overhead."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What about international SEO? My clients come from Latin America and Europe.",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "International SEO is built into our Growth and Custom tiers. That includes hreflang tags for language and region targeting, Spanish-language metadata, schema markup that AI crawlers can parse in multiple languages, and page speed optimization for international connections that may not have US-level bandwidth. Miami businesses with Latin American client bases often see significant organic traffic gains from proper hreflang implementation alone."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "My business gets a lot of tourist traffic in season. How do you design for mobile visitors who are already in Miami?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mobile-first is our default — not a feature we charge extra for. Every site we build loads fast on 4G connections, renders cleanly on any screen size, and puts the most important actions (call, book, inquiry) within a single thumb tap. For tourism and hospitality businesses in South Beach or Wynwood, we also optimize for 'near me' search intent so visitors already in the area find you on Google Maps and your site simultaneously."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "We're a restaurant group in Miami Beach or Wynwood. What should our website include?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "At minimum: a fast-loading menu (ideally a PDF and an HTML version for SEO), a reservation or inquiry flow, high-quality food and venue photography with WebP delivery, and Google Maps integration. For groups with multiple locations — common in Miami Beach and Wynwood — we build multi-location architecture that ranks each venue independently. We also wire up GA4 so you can see which traffic source is driving reservations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you integrate IDX property search for a real estate site?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. IDX integration is available in our Custom tier and connects your site to the MLS database so visitors can search live listings directly on your site rather than bouncing to Zillow or Realtor.com. For Miami's luxury and international buyer market, we pair IDX with multilingual UX and fast image delivery so the search experience works for international buyers browsing from Latin America or Europe."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you add AI features like chatbots or smart search to websites?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, on the Custom tier. We integrate AI chat (using APIs from OpenAI or Anthropic depending on fit), semantic search for product or content libraries, and AI-assisted lead qualification flows. For Miami businesses with high international inquiry volume — common in real estate, FinTech, and professional services — an AI-powered intake form that qualifies leads in English and Spanish before routing them to your team can meaningfully reduce response time and increase conversion rate."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I know my new site will actually be fast enough for international visitors?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We enforce Core Web Vitals green and Lighthouse performance scores above 90 on every build. Images are delivered as WebP via Cloudflare's global CDN, which has edge nodes in Miami and across Latin America. JavaScript is code-split and deferred where possible. We do not ship third-party scripts without a performance review. For international visitors connecting from São Paulo, Buenos Aires, or Madrid — common for Miami's business and tourism markets — these choices mean a site that loads in under two seconds rather than five."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many revisions are included and how does the feedback process work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Starter tier includes two structured revision rounds at the design stage before development begins. Growth and Custom tiers include three. Revisions happen in a shared Figma file with comments — not email threads — so feedback is tracked, actioned, and confirmed in one place. We do not make scope-expanding changes during revision rounds without a separate agreement, but minor adjustments to layout, copy, and color are covered."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where will my site be hosted, and what does that cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We deploy to Cloudflare Pages, which has a generous free tier that covers most FactoryJet sites indefinitely. Cloudflare's global CDN is particularly fast for Miami businesses with international audiences — edge nodes in Latin America mean faster load times for clients in Colombia, Brazil, or Argentina. If your project requires a managed database or server-side logic, we provision on Vercel or Railway and give you the credentials outright. Hosting costs are typically $0–$20/month depending on traffic volume."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What kind of ROI can I expect from a new website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The most direct ROI drivers are organic search traffic, lead form conversion rate, and time-to-response for inbound inquiries. Miami businesses in professional services and real estate typically see meaningful organic traffic gains within 90 days of a properly SEO-structured launch. E-commerce and hospitality sites often see conversion rate improvements within the first 30 days if the previous site had significant UX or speed issues. We wire GA4 from day one so you have a clear before/after picture — not anecdotes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does FactoryJet work with businesses in Fort Lauderdale and the broader South Florida corridor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We serve the full South Florida market — Miami-Dade, Broward, and Palm Beach counties. Fort Lauderdale businesses in marine, aviation, finance, and tourism are a common fit. The 7-day timeline and fixed pricing work the same regardless of your specific city, and we build with local SEO structures that target your actual service area — whether that's Fort Lauderdale, Aventura, or Coral Gables."
             }
           }
         ]

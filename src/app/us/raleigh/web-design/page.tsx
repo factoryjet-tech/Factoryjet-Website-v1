@@ -64,7 +64,7 @@ export default function RaleighWebDesignPage() {
         headline={"What 'Web Design' Actually Means for a Raleigh Business"}
         lead={"The Research Triangle buyer is skeptical by nature — these are scientists, engineers, and researchers who evaluate evidence before making decisions. Your website needs to present proof, not promises. Clear case studies, precise service descriptions, performance data, and JSON-LD schema that gets you into AI search results matter here more than anywhere."}
         body={<><p>Biotech, pharma, and life sciences vendors serving the RTP cluster — CROs and suppliers working alongside Biogen, Syneos Health, and the broader pharma ecosystem — need sites with technical credibility baked in. That means publication and study references where appropriate, regulatory context, clean professional design that signals GMP-level attention to detail, and content structured to answer procurement-level questions before the first call. A generic template site will not survive scrutiny from a sourcing manager at a top-5 pharma company.</p><p>Technology and SaaS companies in the Cisco and Red Hat ecosystem, NC State spinouts, and Triangle-area startups face a different challenge: communicating product depth to buyers who are technical themselves. These sites need product-depth pages, integration documentation, and demo or trial conversion flows tuned for a longer B2B sales cycle. Every FactoryJet project covers discovery, Figma prototyping, development, content, SEO, and a 30-day support window. You leave with a codebase you own, a design system you keep, JSON-LD schema for AI search visibility, GA4 wired from day one, and a recorded handover so your team can self-manage without calling a developer.</p></>}
-        rightSlot={<img src="/images/us/raleigh/web-design/service-explanation.webp" alt="" aria-hidden="true" className="w-full rounded-2xl object-cover" />}
+        rightSlot={<img src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden="true" className="w-full rounded-2xl object-cover" />}
       />
       <StrategicDarkSection
         eyebrow="WHY FACTORYJET"
@@ -91,9 +91,9 @@ export default function RaleighWebDesignPage() {
         eyebrow="RECENT WORK"
         headline={"What Raleigh businesses look like after FactoryJet."}
         cards={[
-          {"industry":"Biotech & Life Sciences","title":"Biotech & Life Sciences Client","description":"Serving the RTP pharma cluster — Biogen, Syneos Health, and ecosystem vendors — these sites require technical credibility, regulatory context, and precision design that signals GMP-level attention to detail. We structure content to answer procurement-level questions before the first call.","imageSrc":"/images/us/raleigh/web-design/portfolio-1.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"},
-          {"industry":"Technology & SaaS","title":"Technology & SaaS Client","description":"For Cisco and Red Hat ecosystem suppliers, NC State spinouts, and Triangle-area startups, we build product-depth pages, integration documentation, and demo or trial conversion flows tuned for technical buyers with long B2B sales cycles.","imageSrc":"/images/us/raleigh/web-design/portfolio-2.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"},
-          {"industry":"Professional Services","title":"Professional Services Client","description":"University spinouts, consulting firms, legal and finance practices serving RTP companies need sites that establish authority, capture leads, and route inquiries efficiently. We build lead-capture flows and authority-building content structures that turn visitors into booked calls.","imageSrc":"/images/us/raleigh/web-design/portfolio-3.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"}
+          {"industry":"Biotech & Life Sciences","title":"Biotech & Life Sciences Client","description":"Serving the RTP pharma cluster — Biogen, Syneos Health, and ecosystem vendors — these sites require technical credibility, regulatory context, and precision design that signals GMP-level attention to detail. We structure content to answer procurement-level questions before the first call.","imageSrc":"/images/us/raleigh/ecommerce/portfolio-1.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"},
+          {"industry":"Technology & SaaS","title":"Technology & SaaS Client","description":"For Cisco and Red Hat ecosystem suppliers, NC State spinouts, and Triangle-area startups, we build product-depth pages, integration documentation, and demo or trial conversion flows tuned for technical buyers with long B2B sales cycles.","imageSrc":"/images/us/raleigh/ecommerce/portfolio-2.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"},
+          {"industry":"Professional Services","title":"Professional Services Client","description":"University spinouts, consulting firms, legal and finance practices serving RTP companies need sites that establish authority, capture leads, and route inquiries efficiently. We build lead-capture flows and authority-building content structures that turn visitors into booked calls.","imageSrc":"/images/us/raleigh/ecommerce/portfolio-3.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"}
         ]}
         ctaHref="/us/portfolio"
         ctaLabel="View full portfolio"
@@ -108,16 +108,6 @@ export default function RaleighWebDesignPage() {
           {"feature":"iFactory","values":["$5,000–$15,000 (Triangle benchmark, timeline not published)","$3,999 (Growth tier)","Next.js vs. WordPress means faster load times, no monthly plugin maintenance, and a codebase you own."]}
         ]}
       />
-      <PricingTiers
-        eyebrow={"TRANSPARENT PRICING"}
-        headline={"Transparent Pricing for Raleigh Businesses"}
-        lead={"Triangle-area agencies typically charge $5,000–$15,000 for a comparable web project. FactoryJet Growth ($3,999) delivers the same scope — 7-day delivery, Next.js, code you own, no plugin maintenance. No retainer required."}
-        tiers={[
-          {"name":"Starter","priceRange":"$1,999","description":"A 5-page brochure site that loads fast on mobile and ranks for your name and core service. Best for sole traders and local services who need a credible online presence quickly.","features":["5 pages, mobile-responsive","Basic SEO & schema markup","Contact form with email forwarding","2 revision rounds","30-day post-launch support"],"cta":{"label":"Get a quote","href":"/contact"}},
-          {"name":"Growth","priceRange":"$3,999","description":"A 10–15 page site with a blog CMS, lead-capture flows, and analytics wired in from day one. Best for Raleigh SMBs scaling online who need the site to actively generate qualified inquiries — especially for technical or B2B audiences.","features":["10–15 pages with blog CMS","Advanced SEO & GA4 tracking","Lead capture & email automation","3 revision rounds","30-day support + training session"],"cta":{"label":"Get a quote","href":"/contact"},"popular":true},
-          {"name":"Custom","priceRange":"$7,500+","description":"Custom Next.js build with e-commerce, AI features, API integrations, and priority support. Best for established RTP-adjacent businesses with complex requirements and a real digital revenue line.","features":["Custom Next.js architecture","E-commerce or membership features","AI integrations (chat, search, content)","Third-party API connections","Priority support & quarterly reviews"],"cta":{"label":"Get a quote","href":"/contact"}}
-        ] as const}
-      />
       <IndustriesGrid
         eyebrow={"RALEIGH × WEB DESIGN"}
         headline={"Web Design for Raleigh's Key Industries"}
@@ -129,6 +119,16 @@ export default function RaleighWebDesignPage() {
           {"name":"Professional & Business Services","description":"Consulting, legal, finance, and marketing firms serving RTP companies make up a significant share of the Triangle economy. These businesses need websites that establish authority quickly, capture leads efficiently, and route inquiries to the right person — the site is the pitch deck.","example":"Consulting, legal, and finance firms supporting Raleigh's corporate and research base."},
           {"name":"Healthcare","description":"WakeMed, Duke Health, and UNC Health anchor one of the largest healthcare clusters in the Southeast. Private practices, healthcare vendors, and healthtech companies in the Triangle need sites with HIPAA-aware form design, clear service navigation, and local SEO tuned for high-intent patient or partner searches.","example":"Private practices, healthcare vendors, and healthtech companies serving WakeMed, Duke Health, and UNC Health."}
         ]}
+      />
+      <PricingTiers
+        eyebrow={"TRANSPARENT PRICING"}
+        headline={"Transparent Pricing for Raleigh Businesses"}
+        lead={"Triangle-area agencies typically charge $5,000–$15,000 for a comparable web project. FactoryJet Growth ($3,999) delivers the same scope — 7-day delivery, Next.js, code you own, no plugin maintenance. No retainer required."}
+        tiers={[
+          {"name":"Starter","priceRange":"$1,999","description":"A 5-page brochure site that loads fast on mobile and ranks for your name and core service. Best for sole traders and local services who need a credible online presence quickly.","features":["5 pages, mobile-responsive","Basic SEO & schema markup","Contact form with email forwarding","2 revision rounds","30-day post-launch support"],"cta":{"label":"Get a quote","href":"/contact"}},
+          {"name":"Growth","priceRange":"$3,999","description":"A 10–15 page site with a blog CMS, lead-capture flows, and analytics wired in from day one. Best for Raleigh SMBs scaling online who need the site to actively generate qualified inquiries — especially for technical or B2B audiences.","features":["10–15 pages with blog CMS","Advanced SEO & GA4 tracking","Lead capture & email automation","3 revision rounds","30-day support + training session"],"cta":{"label":"Get a quote","href":"/contact"},"popular":true},
+          {"name":"Custom","priceRange":"$7,500+","description":"Custom Next.js build with e-commerce, AI features, API integrations, and priority support. Best for established RTP-adjacent businesses with complex requirements and a real digital revenue line.","features":["Custom Next.js architecture","E-commerce or membership features","AI integrations (chat, search, content)","Third-party API connections","Priority support & quarterly reviews"],"cta":{"label":"Get a quote","href":"/contact"}}
+        ] as const}
       />
       <TestimonialsSection
         eyebrow="WHAT CLIENTS SAY"
@@ -145,7 +145,21 @@ export default function RaleighWebDesignPage() {
           {"question":"We're a biotech or pharma vendor serving the RTP cluster — do you understand what our website needs?","answer":"Yes. Buyers in the pharma and life sciences space evaluate evidence before making decisions. That means your site needs technical credibility: precise service descriptions, publication or study references where appropriate, regulatory context, and design that signals GMP-level attention to detail. We structure content to answer procurement-level questions before the first sales call — because in this sector, the website is often the pre-qualification filter."},
           {"question":"We're a tech startup or SaaS company in the Triangle — can you build for a technical buyer audience?","answer":"Yes. We build product-depth pages, integration documentation, and demo or trial conversion flows tuned for technical buyers with longer B2B sales cycles. For Cisco and Red Hat ecosystem suppliers, NC State spinouts, and Triangle-area SaaS companies, this is our most common project profile."},
           {"question":"We're a university spinout or research-adjacent company — what does our website need?","answer":"University spinouts need to bridge academic credibility with commercial clarity. That means translating research into buyer-facing value propositions, structuring content around business outcomes rather than methodology, and using design that signals precision without being impenetrable to non-technical buyers. We've built sites for this profile before and know the balance required."},
-          {"question":"How does FactoryJet compare to Raleigh agencies like Forge3 or iFactory?","answer":"Forge3 and iFactory are established Raleigh agencies with solid reputations. Neither publishes delivery timelines or pricing. FactoryJet publishes all three tiers upfront, delivers in 7 days in writing, and builds in Next.js rather than WordPress — which means faster load times, no monthly plugin maintenance costs, and a codebase your team can manage without a developer on retainer."}
+          {"question":"How does FactoryJet compare to Raleigh agencies like Forge3 or iFactory?","answer":"Forge3 and iFactory are established Raleigh agencies with solid reputations. Neither publishes delivery timelines or pricing. FactoryJet publishes all three tiers upfront, delivers in 7 days in writing, and builds in Next.js rather than WordPress — which means faster load times, no monthly plugin maintenance costs, and a codebase your team can manage without a developer on retainer."},
+          {"question":"Do you handle website maintenance after launch?","answer":"Yes. Every project includes a 30-day post-launch support window covering bug fixes, content updates, and CMS training questions. After that, you can manage the site yourself — the recorded handover session and CMS are designed for non-developers. We also offer ongoing maintenance retainers for Raleigh businesses that want a dedicated team handling updates, performance monitoring, and security patches."},
+          {"question":"Who owns the code and design after the project is done?","answer":"You own everything — the Next.js codebase, the Figma design system, all copy and imagery we produce. There's no vendor lock-in, no proprietary platform, and no monthly license fee to keep your site running. You can take the code to any developer or host it anywhere. Most Raleigh clients keep it on Cloudflare Pages because the performance and edge caching are hard to beat."},
+          {"question":"We're serving federal government or research institutions in the Triangle — what do we need on our site?","answer":"Government and research institution vendors in the Triangle face strict procurement requirements — sites need to communicate compliance credentials, past performance, and NAICS codes clearly. We structure service pages around the questions a contracting officer asks, not the questions a consumer asks. If you're pursuing SBIR grants or federal contracts through NC State's Office of Technology Commercialization, that positioning needs to be explicit and findable."},
+          {"question":"Can you build a website for a restaurant or food business in the Raleigh area?","answer":"Yes. Raleigh's food scene — from Hillsborough Street and Five Points to downtown Raleigh's restaurant renaissance — is competitive. A restaurant site needs fast mobile load times (most diners search on phone, walking), online reservation integration, menu pages that render beautifully, and local SEO tuned for 'near me' searches. We also wire up Google Business Profile schema so your hours and menu data appear directly in search results."},
+          {"question":"I'm a real estate professional in Cary, Apex, or Holly Springs — can you build a site that generates leads?","answer":"Absolutely. The Raleigh metro suburbs — Cary, Apex, Holly Springs, Morrisville — are among the fastest-growing residential markets in the Southeast. A real estate site for this market needs IDX integration or a curated listing approach, hyper-local neighborhood pages optimized for searches like 'homes for sale in Apex NC,' and a lead capture flow that routes inquiries directly to your CRM. We build all of this into the Growth and Custom tiers."},
+          {"question":"Do you build e-commerce sites for Triangle-area retail businesses?","answer":"Yes. Whether you're a boutique in Five Points, a specialty retailer near NC State's campus, or a DTC brand shipping out of the Triangle, we build Shopify storefronts and custom Next.js e-commerce sites. We handle product setup, payment integration, shipping configuration, and SEO for category and product pages. The Custom tier ($7,500+) is where most e-commerce projects land."},
+          {"question":"Can you add AI features like a chatbot or AI search to our site?","answer":"Yes. The Custom tier includes AI integrations — chatbots trained on your service documentation, AI-powered site search, content recommendation engines, and lead qualification flows. For SaaS companies in the Cisco and Red Hat ecosystem or NC State spinouts building AI products, we can also build product demo experiences and interactive feature showcases. These are production features, not proof-of-concept prototypes."},
+          {"question":"What analytics will I actually be able to see after launch?","answer":"Every project ships with GA4 wired up and a GTM container configured. You get event tracking for contact form submissions, CTA clicks, scroll depth, and any conversion goal specific to your business. For Raleigh B2B businesses with longer sales cycles, we also set up attribution reporting so you can see which channels — organic search, LinkedIn, referral — are driving your most qualified inquiries. We walk through the dashboard in the recorded handover session."},
+          {"question":"How do you handle the design process — will I have input?","answer":"Yes, and it's structured so feedback is efficient rather than open-ended. After discovery, we deliver Figma wireframes covering every page. You review and comment in Figma, we incorporate feedback, and a second round locks the direction. We don't start writing code until the design is approved. This prevents the expensive mid-build changes that inflate timelines at agencies that skip structured prototyping."},
+          {"question":"How many revision rounds are included?","answer":"Starter includes two revision rounds, Growth includes three. Revisions happen at the Figma stage — before development — where changes are fast and free. Structural changes after development begins are scoped and quoted separately, but in practice this rarely happens because the prototyping phase catches everything. We've run this process on 500+ projects and the two-round structure works."},
+          {"question":"Where will the site be hosted and who handles that?","answer":"We deploy to Cloudflare Pages by default — it's free at the usage levels most SMBs need, delivers sub-100ms response times globally, and has zero cold-start latency because Next.js pages are served from the edge. We handle the initial setup, domain configuration, and SSL. After handover, Cloudflare's dashboard is straightforward enough that your team can manage it without a developer."},
+          {"question":"What's the ROI on a new website for a Raleigh B2B business?","answer":"For a B2B company serving RTP companies, a single new client won from organic search often pays for the site multiple times over. We've seen Raleigh consulting and professional services firms convert one additional enterprise inquiry per month from a properly structured site — at average deal sizes of $20,000–$100,000, the math is straightforward. We build sites to generate measurable pipeline, not just look good in a portfolio."},
+          {"question":"Can you build a site for a healthcare practice or healthtech company in the Triangle?","answer":"Yes. Healthcare sites in the Triangle — whether a private practice, a vendor to WakeMed or Duke Health, or a healthtech startup — need HIPAA-aware contact form design (no PHI in unencrypted fields), clear service navigation, and local SEO tuned for high-intent patient or partner searches. We don't use contact form tools that store sensitive data on third-party servers. For healthtech companies raising Series A or pursuing hospital partnerships, we also build investor-facing and partnership sections alongside the marketing site."},
+          {"question":"We're a professional services firm targeting SAS Institute, Biogen, or other major RTP employers — how do you position a site for enterprise B2B?","answer":"Enterprise B2B sites targeting RTP's anchor companies need to pass a procurement-level credibility check before a sourcing manager will forward your site to their team. That means clear case studies with named outcomes (not just logos), precise service descriptions that match how buyers scope work, social proof from recognizable organizations, and a site that loads in under two seconds on any device. We build the positioning strategy, content architecture, and technical foundation as a single integrated project — not three separate engagements."}
         ]}
       />
       <FinalCTA
@@ -252,6 +266,118 @@ function SchemaScript() {
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Forge3 and iFactory are established Raleigh agencies with solid reputations. Neither publishes delivery timelines or pricing. FactoryJet publishes all three tiers upfront, delivers in 7 days in writing, and builds in Next.js rather than WordPress — which means faster load times, no monthly plugin maintenance costs, and a codebase your team can manage without a developer on retainer."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you handle website maintenance after launch?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Every project includes a 30-day post-launch support window covering bug fixes, content updates, and CMS training questions. After that, you can manage the site yourself — the recorded handover session and CMS are designed for non-developers. We also offer ongoing maintenance retainers for Raleigh businesses that want a dedicated team handling updates, performance monitoring, and security patches."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who owns the code and design after the project is done?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You own everything — the Next.js codebase, the Figma design system, all copy and imagery we produce. There's no vendor lock-in, no proprietary platform, and no monthly license fee to keep your site running. You can take the code to any developer or host it anywhere. Most Raleigh clients keep it on Cloudflare Pages because the performance and edge caching are hard to beat."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "We're serving federal government or research institutions in the Triangle — what do we need on our site?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Government and research institution vendors in the Triangle face strict procurement requirements — sites need to communicate compliance credentials, past performance, and NAICS codes clearly. We structure service pages around the questions a contracting officer asks, not the questions a consumer asks. If you're pursuing SBIR grants or federal contracts through NC State's Office of Technology Commercialization, that positioning needs to be explicit and findable."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you build a website for a restaurant or food business in the Raleigh area?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Raleigh's food scene — from Hillsborough Street and Five Points to downtown Raleigh's restaurant renaissance — is competitive. A restaurant site needs fast mobile load times (most diners search on phone, walking), online reservation integration, menu pages that render beautifully, and local SEO tuned for 'near me' searches. We also wire up Google Business Profile schema so your hours and menu data appear directly in search results."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "I'm a real estate professional in Cary, Apex, or Holly Springs — can you build a site that generates leads?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. The Raleigh metro suburbs — Cary, Apex, Holly Springs, Morrisville — are among the fastest-growing residential markets in the Southeast. A real estate site for this market needs IDX integration or a curated listing approach, hyper-local neighborhood pages optimized for searches like 'homes for sale in Apex NC,' and a lead capture flow that routes inquiries directly to your CRM. We build all of this into the Growth and Custom tiers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you build e-commerce sites for Triangle-area retail businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Whether you're a boutique in Five Points, a specialty retailer near NC State's campus, or a DTC brand shipping out of the Triangle, we build Shopify storefronts and custom Next.js e-commerce sites. We handle product setup, payment integration, shipping configuration, and SEO for category and product pages. The Custom tier ($7,500+) is where most e-commerce projects land."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you add AI features like a chatbot or AI search to our site?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The Custom tier includes AI integrations — chatbots trained on your service documentation, AI-powered site search, content recommendation engines, and lead qualification flows. For SaaS companies in the Cisco and Red Hat ecosystem or NC State spinouts building AI products, we can also build product demo experiences and interactive feature showcases. These are production features, not proof-of-concept prototypes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What analytics will I actually be able to see after launch?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every project ships with GA4 wired up and a GTM container configured. You get event tracking for contact form submissions, CTA clicks, scroll depth, and any conversion goal specific to your business. For Raleigh B2B businesses with longer sales cycles, we also set up attribution reporting so you can see which channels — organic search, LinkedIn, referral — are driving your most qualified inquiries. We walk through the dashboard in the recorded handover session."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you handle the design process — will I have input?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, and it's structured so feedback is efficient rather than open-ended. After discovery, we deliver Figma wireframes covering every page. You review and comment in Figma, we incorporate feedback, and a second round locks the direction. We don't start writing code until the design is approved. This prevents the expensive mid-build changes that inflate timelines at agencies that skip structured prototyping."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many revision rounds are included?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Starter includes two revision rounds, Growth includes three. Revisions happen at the Figma stage — before development — where changes are fast and free. Structural changes after development begins are scoped and quoted separately, but in practice this rarely happens because the prototyping phase catches everything. We've run this process on 500+ projects and the two-round structure works."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where will the site be hosted and who handles that?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We deploy to Cloudflare Pages by default — it's free at the usage levels most SMBs need, delivers sub-100ms response times globally, and has zero cold-start latency because Next.js pages are served from the edge. We handle the initial setup, domain configuration, and SSL. After handover, Cloudflare's dashboard is straightforward enough that your team can manage it without a developer."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the ROI on a new website for a Raleigh B2B business?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For a B2B company serving RTP companies, a single new client won from organic search often pays for the site multiple times over. We've seen Raleigh consulting and professional services firms convert one additional enterprise inquiry per month from a properly structured site — at average deal sizes of $20,000–$100,000, the math is straightforward. We build sites to generate measurable pipeline, not just look good in a portfolio."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you build a site for a healthcare practice or healthtech company in the Triangle?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Healthcare sites in the Triangle — whether a private practice, a vendor to WakeMed or Duke Health, or a healthtech startup — need HIPAA-aware contact form design (no PHI in unencrypted fields), clear service navigation, and local SEO tuned for high-intent patient or partner searches. We don't use contact form tools that store sensitive data on third-party servers. For healthtech companies raising Series A or pursuing hospital partnerships, we also build investor-facing and partnership sections alongside the marketing site."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "We're a professional services firm targeting SAS Institute, Biogen, or other major RTP employers — how do you position a site for enterprise B2B?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Enterprise B2B sites targeting RTP's anchor companies need to pass a procurement-level credibility check before a sourcing manager will forward your site to their team. That means clear case studies with named outcomes (not just logos), precise service descriptions that match how buyers scope work, social proof from recognizable organizations, and a site that loads in under two seconds on any device. We build the positioning strategy, content architecture, and technical foundation as a single integrated project — not three separate engagements."
             }
           }
         ]

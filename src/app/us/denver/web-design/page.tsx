@@ -64,7 +64,7 @@ export default function DenverWebDesignPage() {
         headline={"What 'Web Design' Actually Means for a Denver Business"}
         lead={"Denver's buyer is outdoor-lifestyle aware, tech-savvy, and ESG-conscious. Sites need to communicate authenticity and performance, not just look good. FactoryJet builds with Next.js for sub-second load times, schema for AI search visibility, and conversion flows tuned for Denver's mobile-heavy audience."}
         body={<><p>Outdoor, lifestyle, and DTC brands — Patagonia retailers, ski and snowboard brands, cycling companies, and Colorado-native consumer goods — need photo-heavy layouts with fast WebP delivery, e-commerce or booking integration, and brand storytelling that resonates with Colorado values. We structure these sites to showcase product quality and sustainability credentials without sacrificing speed or SEO.</p><p>Aerospace and energy B2B suppliers — firms serving Lockheed Martin, United Launch Alliance, Chevron's Denver operations, or Halliburton's regional office — need capability pages, RFQ forms, downloadable spec sheets, and technical credibility signals that speak directly to procurement teams. FactoryJet handles every stage: discovery, Figma prototyping, Next.js development, content, SEO, and a 30-day support window. You leave with a codebase you own, a design system you keep, and a site built to rank — not just to look good in a screenshot.</p></>}
-        rightSlot={<img src="/images/us/denver/web-design/service-explanation.webp" alt="" aria-hidden="true" className="w-full rounded-2xl object-cover" />}
+        rightSlot={<img src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden="true" className="w-full rounded-2xl object-cover" />}
       />
       <StrategicDarkSection
         eyebrow="WHY FACTORYJET"
@@ -91,9 +91,9 @@ export default function DenverWebDesignPage() {
         eyebrow="RECENT WORK"
         headline={"What Denver businesses look like after FactoryJet."}
         cards={[
-          {"industry":"Outdoor & Lifestyle Brands","title":"Denver Outdoor & Lifestyle Client","description":"Colorado's outdoor market is one of the most competitive in the country — Patagonia retailers, ski and snowboard brands, cycling companies, and DTC outdoor goods all vying for buyers who research extensively before purchasing. We build photo-heavy, fast-loading sites with WebP delivery, e-commerce or booking integration, and brand storytelling that resonates with Colorado values and sustainability expectations.","imageSrc":"/images/us/denver/web-design/portfolio-1.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"},
-          {"industry":"Aerospace & Defense","title":"Denver Aerospace & Defense Client","description":"Suppliers to Lockheed Martin, Raytheon, and United Launch Alliance in the Denver metro need sites that communicate engineering credibility to procurement teams who research vendors before any RFQ is issued. We build capability pages, downloadable spec sheets, and RFQ forms designed for longer B2B sales cycles in regulated industries.","imageSrc":"/images/us/denver/web-design/portfolio-2.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"},
-          {"industry":"Cannabis & Regulated Industries","title":"Denver Cannabis & Regulated Industry Client","description":"Denver's $1.5B+ licensed cannabis sector operates under strict advertising and compliance rules — which means the website is often the primary sales and brand-building channel. We build compliance-aware sites with clear product category navigation, age-gate flows, and conversion-focused layouts that work within Colorado's regulatory framework.","imageSrc":"/images/us/denver/web-design/portfolio-3.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"}
+          {"industry":"Outdoor & Lifestyle Brands","title":"Denver Outdoor & Lifestyle Client","description":"Colorado's outdoor market is one of the most competitive in the country — Patagonia retailers, ski and snowboard brands, cycling companies, and DTC outdoor goods all vying for buyers who research extensively before purchasing. We build photo-heavy, fast-loading sites with WebP delivery, e-commerce or booking integration, and brand storytelling that resonates with Colorado values and sustainability expectations.","imageSrc":"/images/us/denver/ecommerce/portfolio-1.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"},
+          {"industry":"Aerospace & Defense","title":"Denver Aerospace & Defense Client","description":"Suppliers to Lockheed Martin, Raytheon, and United Launch Alliance in the Denver metro need sites that communicate engineering credibility to procurement teams who research vendors before any RFQ is issued. We build capability pages, downloadable spec sheets, and RFQ forms designed for longer B2B sales cycles in regulated industries.","imageSrc":"/images/us/denver/ecommerce/portfolio-2.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"},
+          {"industry":"Cannabis & Regulated Industries","title":"Denver Cannabis & Regulated Industry Client","description":"Denver's $1.5B+ licensed cannabis sector operates under strict advertising and compliance rules — which means the website is often the primary sales and brand-building channel. We build compliance-aware sites with clear product category navigation, age-gate flows, and conversion-focused layouts that work within Colorado's regulatory framework.","imageSrc":"/images/us/denver/ecommerce/portfolio-3.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"}
         ]}
         ctaHref="/us/portfolio"
         ctaLabel="View full portfolio"
@@ -108,16 +108,6 @@ export default function DenverWebDesignPage() {
           {"feature":"Webolutions (Denver)","values":["Pricing undisclosed; WordPress/HubSpot builds for Colorado B2B brands","$3,999 (Growth tier)","Next.js vs WordPress means faster load times and no monthly plugin maintenance overhead for Denver clients."]}
         ]}
       />
-      <PricingTiers
-        eyebrow={"TRANSPARENT PRICING"}
-        headline={"Transparent Pricing for Denver Businesses"}
-        lead={"Denver agency rates for a comparable web design project start at $5,000+ — Fruition openly publishes $5,000–$20,000+ for similar scope. FactoryJet's Growth tier ($3,999) delivers 10–15 pages, CMS, SEO, analytics — 7-day delivery, Next.js, code you own outright. No retainer required."}
-        tiers={[
-          {"name":"Starter","priceRange":"$1,999","description":"A 5-page brochure site that loads fast on mobile and ranks for your name and core service. Best for Denver sole traders, local services, and early-stage outdoor brands who need a credible online presence fast.","features":["5 pages, mobile-responsive","Basic SEO & schema markup","Contact form with email forwarding","2 revision rounds","30-day post-launch support"],"cta":{"label":"Get a quote","href":"/contact"}},
-          {"name":"Growth","priceRange":"$3,999","description":"A 10–15 page site with a blog CMS, lead-capture flows, and analytics wired in from day one. Includes Colorado outdoor/lifestyle-ready image optimization and e-commerce or booking integration. Best for Denver SMBs scaling online who need the site to actively generate qualified inquiries.","features":["10–15 pages with blog CMS","Advanced SEO & GA4 tracking","Lead capture & email automation","E-commerce or booking integration","3 revision rounds","30-day support + training session"],"cta":{"label":"Get a quote","href":"/contact"},"popular":true},
-          {"name":"Custom","priceRange":"$7,500+","description":"Custom Next.js build with e-commerce, AI features, API integrations, RFQ workflows, and priority support. Best for established Denver businesses — aerospace suppliers, cannabis operators, energy firms — with complex requirements and a real digital revenue line.","features":["Custom Next.js architecture","E-commerce or membership features","AI integrations (chat, search, content)","Third-party API & RFQ connections","Priority support & quarterly reviews"],"cta":{"label":"Get a quote","href":"/contact"}}
-        ] as const}
-      />
       <IndustriesGrid
         eyebrow={"DENVER × WEB DESIGN"}
         headline={"Web Design for Denver's Key Industries"}
@@ -129,6 +119,16 @@ export default function DenverWebDesignPage() {
           {"name":"Technology & SaaS","description":"Amazon, Google, and Twitter maintain offices in Denver's LoDo tech corridor, anchoring a growing SaaS and tech startup ecosystem. Technology companies here need sites that communicate product depth and technical credibility to buyers who research thoroughly before any sales call — fast, schema-rich, with lead-capture flows built for longer B2B sales cycles.","example":"SaaS startups and tech vendors operating in Denver's LoDo corridor or serving the broader Colorado tech market."},
           {"name":"Cannabis & Regulated Industries","description":"Denver's licensed cannabis industry generates $1.5B+ in annual sales — one of the most mature regulated markets in the country. Operating under strict advertising and compliance rules, cannabis businesses rely on their website as the primary brand-building and sales channel. We build compliance-aware sites with clear product navigation, age-gate flows, and conversion-focused layouts within Colorado's regulatory framework.","example":"Licensed dispensaries, cannabis brands, and ancillary cannabis businesses operating in the Denver metro."}
         ]}
+      />
+      <PricingTiers
+        eyebrow={"TRANSPARENT PRICING"}
+        headline={"Transparent Pricing for Denver Businesses"}
+        lead={"Denver agency rates for a comparable web design project start at $5,000+ — Fruition openly publishes $5,000–$20,000+ for similar scope. FactoryJet's Growth tier ($3,999) delivers 10–15 pages, CMS, SEO, analytics — 7-day delivery, Next.js, code you own outright. No retainer required."}
+        tiers={[
+          {"name":"Starter","priceRange":"$1,999","description":"A 5-page brochure site that loads fast on mobile and ranks for your name and core service. Best for Denver sole traders, local services, and early-stage outdoor brands who need a credible online presence fast.","features":["5 pages, mobile-responsive","Basic SEO & schema markup","Contact form with email forwarding","2 revision rounds","30-day post-launch support"],"cta":{"label":"Get a quote","href":"/contact"}},
+          {"name":"Growth","priceRange":"$3,999","description":"A 10–15 page site with a blog CMS, lead-capture flows, and analytics wired in from day one. Includes Colorado outdoor/lifestyle-ready image optimization and e-commerce or booking integration. Best for Denver SMBs scaling online who need the site to actively generate qualified inquiries.","features":["10–15 pages with blog CMS","Advanced SEO & GA4 tracking","Lead capture & email automation","E-commerce or booking integration","3 revision rounds","30-day support + training session"],"cta":{"label":"Get a quote","href":"/contact"},"popular":true},
+          {"name":"Custom","priceRange":"$7,500+","description":"Custom Next.js build with e-commerce, AI features, API integrations, RFQ workflows, and priority support. Best for established Denver businesses — aerospace suppliers, cannabis operators, energy firms — with complex requirements and a real digital revenue line.","features":["Custom Next.js architecture","E-commerce or membership features","AI integrations (chat, search, content)","Third-party API & RFQ connections","Priority support & quarterly reviews"],"cta":{"label":"Get a quote","href":"/contact"}}
+        ] as const}
       />
       <TestimonialsSection
         eyebrow="WHAT CLIENTS SAY"
@@ -145,7 +145,21 @@ export default function DenverWebDesignPage() {
           {"question":"I run an outdoor or DTC brand in Colorado. Do you have experience with that kind of site?","answer":"Yes — outdoor and lifestyle brands are one of our most common Denver client profiles. We build photo-heavy layouts with fast WebP delivery, e-commerce or booking integration via Shopify or custom Next.js, and brand storytelling that resonates with Colorado buyers who care about product quality, sustainability credentials, and authenticity. We know how to make a product feel premium without sacrificing page speed."},
           {"question":"We're an aerospace or defense supplier serving Lockheed Martin or United Launch Alliance. Can you build a B2B site for that market?","answer":"Yes. Aerospace and defense suppliers need sites that speak to procurement teams — clear capability pages, downloadable spec sheets, RFQ forms that actually route correctly, and technical credibility signals on every page. We have built B2B sites for suppliers in regulated industries and understand the difference between a site that looks professional and one that moves a procurement shortlist."},
           {"question":"Our business is in the cannabis industry. Can you build a compliant website?","answer":"Yes. Denver's cannabis sector operates under strict Colorado MED advertising rules, which means the website is often the most important marketing channel. We build compliance-aware sites with proper age-gate flows, clear product category navigation, no prohibited health claims, and conversion-focused layouts that work within the regulatory framework. We'll confirm the compliance requirements specific to your license type at discovery."},
-          {"question":"How does FactoryJet compare to Webolutions or Fruition in Denver?","answer":"Webolutions and Fruition are established Denver agencies with strong local reputations. Fruition openly publishes rates of $5,000–$20,000+ for comparable scope; Webolutions does not publish pricing or delivery timelines. FactoryJet publishes all three tiers upfront, delivers in 7 days on a 7-day guarantee, and builds in Next.js rather than WordPress or HubSpot — which means faster Core Web Vitals and no ongoing plugin maintenance costs for your team."}
+          {"question":"How does FactoryJet compare to Webolutions or Fruition in Denver?","answer":"Webolutions and Fruition are established Denver agencies with strong local reputations. Fruition openly publishes rates of $5,000–$20,000+ for comparable scope; Webolutions does not publish pricing or delivery timelines. FactoryJet publishes all three tiers upfront, delivers in 7 days on a 7-day guarantee, and builds in Next.js rather than WordPress or HubSpot — which means faster Core Web Vitals and no ongoing plugin maintenance costs for your team."},
+          {"question":"Who owns the code and design files after the project?","answer":"You do — completely. We hand over the full Next.js codebase, Figma design files, and any third-party credentials on launch day. There is no license fee, no proprietary platform lock-in, and no ongoing dependency on FactoryJet to keep the site running. Denver businesses that have moved from WordPress agencies often cite platform lock-in as the biggest hidden cost — we eliminate that entirely."},
+          {"question":"What happens after the 30-day support window ends?","answer":"Most Denver clients handle routine content updates themselves through the CMS — it takes five minutes and no technical background. For ongoing development work, SEO retainers, or feature additions, we offer monthly arrangements at transparent hourly rates. You are never required to stay on retainer, and we are happy to hand off cleanly to your in-house developer or another agency if that's the right move for your business."},
+          {"question":"Can you build a site that works for both Denver locals and customers across the Boulder corridor and Colorado Springs?","answer":"Yes. Regional reach across the Front Range — from Fort Collins through Denver to Colorado Springs — is a common requirement for Colorado businesses. We build with proper local SEO structure, including city-specific landing pages and schema markup, so your site can rank for searches in multiple Colorado markets without cannibalizing itself. We'll map out the sitemap architecture in the discovery phase to cover your full service area."},
+          {"question":"Do you build e-commerce sites for Denver brands selling physical products?","answer":"Yes. E-commerce is a significant part of our Denver work — particularly for outdoor gear, ski and snowboard brands, craft goods, and DTC Colorado consumer products. We integrate Shopify for product catalog management or build custom Next.js e-commerce with Stripe for brands that want full code ownership. Both options include mobile-optimized checkout flows, product image optimization, and GA4 e-commerce event tracking."},
+          {"question":"My business is near the Denver Tech Center. Can you handle enterprise-level requirements?","answer":"The Denver Tech Center's anchor tenants — DXC Technology, Dish Network, and Charles Schwab among them — have set a high bar for B2B digital credibility in the south metro. For enterprise-adjacent requirements like SSO integration, CRM connectivity, gated resource libraries, or multi-location site structures, we use the Custom tier ($7,500+) and scope the full requirements in discovery before quoting. No surprises after you've approved the budget."},
+          {"question":"Will my site load fast for users in mountain towns or rural Colorado where connectivity is slower?","answer":"Yes, and it's something we build for explicitly. Next.js with static generation, aggressive image optimization via WebP and AVIF, and Cloudflare's global edge network means your site loads fast on a ski resort's spotty Wi-Fi in Breckenridge or on a 4G connection in Grand Junction. Core Web Vitals green scores on mobile are a non-negotiable baseline for every project — not an upsell."},
+          {"question":"Can you add AI-powered features like chat, search, or content recommendations to a Denver site?","answer":"Yes. AI feature integration is part of our Custom tier — conversational lead capture, semantic site search, personalized content recommendations, and AI-driven product finders are all buildable on the Next.js stack we use. For Denver B2B clients, AI-powered RFQ assistants and specification matching tools are particularly useful. We scope these in discovery so you know the cost and timeline before any development starts."},
+          {"question":"Do you set up analytics and conversion tracking, or is that extra?","answer":"GA4 with full event tracking is included in every tier — it is not an add-on. Google Tag Manager, goal configuration for form submissions and CTA clicks, and a 30-day GA4 data check are all standard. For Denver e-commerce clients, we wire up full GA4 e-commerce tracking including product views, add-to-cart, and purchase events. We also connect Google Search Console and submit your sitemap on launch day."},
+          {"question":"How many rounds of revisions do I get, and what counts as a revision?","answer":"Starter projects include two structured revision rounds; Growth and Custom projects include three. A revision round is a consolidated batch of feedback — we ask you to collect all comments in one document rather than sending changes piecemeal. This keeps the project on the 7-day schedule. Revisions within the 30-day post-launch support window for bug fixes or minor copy tweaks are included at no additional charge."},
+          {"question":"I'm a government contractor in the Denver area. Can you build a site that meets federal contractor presentation standards?","answer":"Yes. Government contractors serving entities at Buckley Space Force Base, Peterson Space Force Base, or the broader Colorado defense community need sites that project technical credibility without flashy consumer-brand aesthetics. We build clean, fast, professionally structured capability sites with proper CAGE code and NAICS code presentation, downloadable past performance summaries, and RFQ flows appropriate for prime and sub-contractor contexts."},
+          {"question":"We're a Denver startup. Is FactoryJet right for an early-stage company?","answer":"Yes — startups are a common client profile. Denver's startup scene, anchored by Galvanize in RiNo and a growing coworking ecosystem across LoDo and Cherry Creek, produces a lot of early-stage companies that need a credible web presence fast without burning runway on a $15,000 agency project. The Starter tier ($1,999) is built for exactly this situation: a production-ready site in 7 days that you can grow as the company scales."},
+          {"question":"What does the site hosting setup look like after launch?","answer":"We deploy to Cloudflare Pages, which gives you a global CDN, automatic HTTPS, and zero downtime deployments at no additional cost. Your domain stays in your own registrar account — we never hold domains. The Next.js codebase deploys directly from your GitHub repository, so any developer can pick up where we left off without proprietary platform knowledge. Hosting costs for a typical Denver business site run $0–$20/month on this stack."},
+          {"question":"Can you help with SEO for Denver's craft beer or ski industry specifically?","answer":"Yes. Denver's craft beer scene — anchored by Great Divide, Breckenridge Brewery, and dozens of independent taprooms — and Colorado's ski industry are two verticals where local search intent is very specific and high-converting. We build location-specific SEO structures, schema markup for breweries (including taproom hours, events, and beer catalog), and content architecture for outdoor and ski brands targeting both local Denver buyers and national visitors planning Colorado trips."},
+          {"question":"How do I get started?","answer":"Click 'Start Your Project' anywhere on this page. We'll ask for your business type, project scope, and timeline — it takes about three minutes. From there, a brief discovery conversation (phone or Zoom, 20 minutes) locks the scope, and we issue a fixed-price proposal the same day. If you approve it, we start the 7-day clock within 24 hours of receiving your brand assets and content."}
         ]}
       />
       <FinalCTA
@@ -252,6 +266,118 @@ function SchemaScript() {
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Fruition openly publishes rates of $5,000–$20,000+ for comparable scope; Webolutions does not publish pricing or delivery timelines. FactoryJet publishes all three tiers upfront, delivers in 7 days on a 7-day guarantee, and builds in Next.js rather than WordPress — which means faster Core Web Vitals and no ongoing plugin maintenance costs for your team."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who owns the code and design files after the project?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You do — completely. We hand over the full Next.js codebase, Figma design files, and any third-party credentials on launch day. There is no license fee, no proprietary platform lock-in, and no ongoing dependency on FactoryJet to keep the site running."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens after the 30-day support window ends?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most Denver clients handle routine content updates themselves through the CMS. For ongoing development work, SEO retainers, or feature additions, we offer monthly arrangements at transparent hourly rates. You are never required to stay on retainer."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you build a site that works for both Denver locals and customers across the Boulder corridor and Colorado Springs?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Regional reach across the Front Range — from Fort Collins through Denver to Colorado Springs — is a common requirement for Colorado businesses. We build with proper local SEO structure, including city-specific landing pages and schema markup, so your site can rank for searches in multiple Colorado markets without cannibalizing itself."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you build e-commerce sites for Denver brands selling physical products?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. E-commerce is a significant part of our Denver work — particularly for outdoor gear, ski and snowboard brands, craft goods, and DTC Colorado consumer products. We integrate Shopify for product catalog management or build custom Next.js e-commerce with Stripe for brands that want full code ownership."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "My business is near the Denver Tech Center. Can you handle enterprise-level requirements?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. For enterprise-adjacent requirements like SSO integration, CRM connectivity, gated resource libraries, or multi-location site structures, we use the Custom tier ($7,500+) and scope the full requirements in discovery before quoting. No surprises after you've approved the budget."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will my site load fast for users in mountain towns or rural Colorado where connectivity is slower?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Next.js with static generation, aggressive image optimization via WebP and AVIF, and Cloudflare's global edge network means your site loads fast on a ski resort's spotty Wi-Fi in Breckenridge or on a 4G connection in Grand Junction. Core Web Vitals green scores on mobile are a non-negotiable baseline for every project."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you add AI-powered features like chat, search, or content recommendations to a Denver site?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. AI feature integration is part of our Custom tier — conversational lead capture, semantic site search, personalized content recommendations, and AI-driven product finders are all buildable on the Next.js stack we use. We scope these in discovery so you know the cost and timeline before any development starts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you set up analytics and conversion tracking, or is that extra?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "GA4 with full event tracking is included in every tier — it is not an add-on. Google Tag Manager, goal configuration for form submissions and CTA clicks, and a 30-day GA4 data check are all standard. We also connect Google Search Console and submit your sitemap on launch day."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many rounds of revisions do I get, and what counts as a revision?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Starter projects include two structured revision rounds; Growth and Custom projects include three. A revision round is a consolidated batch of feedback. Revisions within the 30-day post-launch support window for bug fixes or minor copy tweaks are included at no additional charge."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "I'm a government contractor in the Denver area. Can you build a site that meets federal contractor presentation standards?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Government contractors serving entities at Buckley Space Force Base or Peterson Space Force Base need sites that project technical credibility. We build clean, fast capability sites with proper CAGE code and NAICS code presentation, downloadable past performance summaries, and RFQ flows appropriate for prime and sub-contractor contexts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "We're a Denver startup. Is FactoryJet right for an early-stage company?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — startups are a common client profile. Denver's startup scene, anchored by Galvanize in RiNo and a growing coworking ecosystem across LoDo and Cherry Creek, produces early-stage companies that need a credible web presence fast without burning runway. The Starter tier ($1,999) is built for exactly this situation: a production-ready site in 7 days that you can grow as the company scales."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does the site hosting setup look like after launch?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We deploy to Cloudflare Pages, which gives you a global CDN, automatic HTTPS, and zero downtime deployments. Your domain stays in your own registrar account — we never hold domains. Hosting costs for a typical Denver business site run $0–$20/month on this stack."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you help with SEO for Denver's craft beer or ski industry specifically?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Denver's craft beer scene and Colorado's ski industry are two verticals where local search intent is very specific and high-converting. We build location-specific SEO structures, schema markup for breweries, and content architecture for outdoor and ski brands targeting both local Denver buyers and national visitors planning Colorado trips."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I get started?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Click 'Start Your Project' anywhere on this page. We'll ask for your business type, project scope, and timeline — it takes about three minutes. A brief discovery conversation (20 minutes) locks the scope, and we issue a fixed-price proposal the same day. If you approve it, we start the 7-day clock within 24 hours of receiving your brand assets and content."
             }
           }
         ]

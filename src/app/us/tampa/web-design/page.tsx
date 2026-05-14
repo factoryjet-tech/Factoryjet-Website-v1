@@ -64,7 +64,7 @@ export default function TampaWebDesignPage() {
         headline={"What 'Web Design' Actually Means for a Tampa Business"}
         lead={"Tampa's buyer mix is unusually diverse — defense contractors reading RFQ-eligible vendor sites, healthcare procurement teams vetting suppliers against BayCare and Moffitt standards, financial clients comparing RIAs and advisors, and hospitality guests making split-second mobile booking decisions. Each segment requires a different web strategy. FactoryJet builds for all of them."}
         body={<><p>Healthcare and life sciences vendors serving BayCare, Moffitt, Tampa General, and their supply chains need sites that project compliance and operational credibility — with clear service scope and case study evidence front and center. HIPAA-aware forms, professional photography, and clean navigation are non-negotiable. Procurement teams in this sector vet vendors digitally before any meeting is scheduled, and a weak web presence is often an automatic disqualification.</p><p>Finance, defense, and professional services firms — Raymond James ecosystem vendors, MacDill AFB defense contractors, legal and consulting firms — need authority-building content structures, RFQ or proposal request workflows, and technical credibility signals that meet the bar set by sophisticated institutional buyers. FactoryJet handles the full scope: strategy, design, development, content, SEO, and a codebase you own outright. No WordPress lock-in. No monthly plugin invoices.</p></>}
-        rightSlot={<img src="/images/us/tampa/web-design/service-explanation.webp" alt="" aria-hidden="true" className="w-full rounded-2xl object-cover" />}
+        rightSlot={<img src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden="true" className="w-full rounded-2xl object-cover" />}
       />
       <StrategicDarkSection
         eyebrow="WHY FACTORYJET"
@@ -91,9 +91,9 @@ export default function TampaWebDesignPage() {
         eyebrow="RECENT WORK"
         headline={"What Tampa businesses look like after FactoryJet."}
         cards={[
-          {"industry":"Healthcare & Life Sciences","title":"Healthcare & Life Sciences Client","description":"BayCare, Moffitt Cancer Center, and Tampa General anchor one of Florida's largest healthcare ecosystems. Vendors, suppliers, and practice groups serving these institutions need sites that project compliance, operational credibility, and patient trust. We build with HIPAA-aware form design, clear service scope, and case study evidence that passes procurement scrutiny.","imageSrc":"/images/us/tampa/web-design/portfolio-1.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"},
-          {"industry":"Finance & Professional Services","title":"Finance & Professional Services Client","description":"Tampa's Raymond James ecosystem, financial advisory firms, RIAs, and professional services companies compete for clients who compare advisors and vendors digitally before making any contact. We build authority-driven sites with lead-capture flows, credential displays, and content structures that earn the meeting.","imageSrc":"/images/us/tampa/web-design/portfolio-2.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"},
-          {"industry":"Defense & Government Contracting","title":"Defense & Government Contracting Client","description":"MacDill AFB — home to CENTCOM and SOCOM — generates a substantial defense contractor market in the Tampa Bay area. Contractors need capability statement pages, RFQ request workflows, and technical credibility signals that meet the bar set by DoD procurement teams. We build sites that work as digital qualification tools.","imageSrc":"/images/us/tampa/web-design/portfolio-3.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"}
+          {"industry":"Healthcare & Life Sciences","title":"Healthcare & Life Sciences Client","description":"BayCare, Moffitt Cancer Center, and Tampa General anchor one of Florida's largest healthcare ecosystems. Vendors, suppliers, and practice groups serving these institutions need sites that project compliance, operational credibility, and patient trust. We build with HIPAA-aware form design, clear service scope, and case study evidence that passes procurement scrutiny.","imageSrc":"/images/us/tampa/ecommerce/portfolio-1.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"},
+          {"industry":"Finance & Professional Services","title":"Finance & Professional Services Client","description":"Tampa's Raymond James ecosystem, financial advisory firms, RIAs, and professional services companies compete for clients who compare advisors and vendors digitally before making any contact. We build authority-driven sites with lead-capture flows, credential displays, and content structures that earn the meeting.","imageSrc":"/images/us/tampa/ecommerce/portfolio-2.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"},
+          {"industry":"Defense & Government Contracting","title":"Defense & Government Contracting Client","description":"MacDill AFB — home to CENTCOM and SOCOM — generates a substantial defense contractor market in the Tampa Bay area. Contractors need capability statement pages, RFQ request workflows, and technical credibility signals that meet the bar set by DoD procurement teams. We build sites that work as digital qualification tools.","imageSrc":"/images/us/tampa/ecommerce/portfolio-3.webp","stat1":"+40% conversions","stat2":"< 1.5s load time"}
         ]}
         ctaHref="/us/portfolio"
         ctaLabel="View full portfolio"
@@ -108,16 +108,6 @@ export default function TampaWebDesignPage() {
           {"feature":"Digital Media Solutions","values":["Pricing undisclosed; Tampa-based digital marketing + web","$3,999 (Growth tier)","Next.js vs WordPress means faster load times and no ongoing plugin overhead. Fixed price, 7-day delivery."]},
         ]}
       />
-      <PricingTiers
-        eyebrow={"TRANSPARENT PRICING"}
-        headline={"Transparent Pricing for Tampa Businesses"}
-        lead={"Tampa agencies like Bayshore Solutions start from $5,000 for web design. FactoryJet Growth ($3,999) delivers 10–15 pages, CMS, SEO, analytics — 7-day delivery, Next.js, code you own — at or below Bayshore's entry price. No retainer required."}
-        tiers={[
-          {"name":"Starter","priceRange":"$1,999","description":"A 5-page brochure site that loads fast on mobile and ranks for your name and core service. Best for sole traders and local Tampa businesses who need a credible online presence quickly.","features":["5 pages, mobile-responsive","Basic SEO & schema markup","Contact form with email forwarding","2 revision rounds","30-day post-launch support"],"cta":{"label":"Get a quote","href":"/contact"}},
-          {"name":"Growth","priceRange":"$3,999","description":"A 10–15 page site with a blog CMS, lead-capture flows, and analytics wired in from day one. Best for Tampa SMBs scaling online who need the site to actively generate qualified inquiries.","features":["10–15 pages with blog CMS","Advanced SEO & GA4 tracking","Lead capture & email automation","3 revision rounds","30-day support + training session"],"cta":{"label":"Get a quote","href":"/contact"},"popular":true},
-          {"name":"Custom","priceRange":"$7,500+","description":"Custom Next.js build with e-commerce, AI features, API integrations, and priority support. Best for established Tampa businesses with complex requirements and a real digital revenue line.","features":["Custom Next.js architecture","E-commerce or membership features","AI integrations (chat, search, content)","Third-party API connections","Priority support & quarterly reviews"],"cta":{"label":"Get a quote","href":"/contact"}}
-        ] as const}
-      />
       <IndustriesGrid
         eyebrow={"TAMPA × WEB DESIGN"}
         headline={"Web Design for Tampa's Key Industries"}
@@ -129,6 +119,16 @@ export default function TampaWebDesignPage() {
           {"name":"Technology & SaaS","description":"Tampa's tech scene is growing fast — ConnectWise, WillowTree, and a wave of companies relocating from New York and the Bay Area are building a real tech cluster on the Gulf Coast. SaaS companies and tech vendors need sites that communicate product depth, technical credibility, and conversion-optimized trial or demo flows.","example":"SaaS companies and tech vendors building in Tampa's emerging tech corridor."},
           {"name":"Hospitality & Tourism","description":"Busch Gardens, Hard Rock Hotel, and the Port of Tampa drive year-round visitor spending across the region. Hospitality businesses need mobile-first designs, fast booking flows, and SEO-optimized local content that captures guests making split-second decisions on their phones.","example":"Hotels, tour operators, and hospitality businesses serving the Tampa Bay tourism market."},
         ]}
+      />
+      <PricingTiers
+        eyebrow={"TRANSPARENT PRICING"}
+        headline={"Transparent Pricing for Tampa Businesses"}
+        lead={"Tampa agencies like Bayshore Solutions start from $5,000 for web design. FactoryJet Growth ($3,999) delivers 10–15 pages, CMS, SEO, analytics — 7-day delivery, Next.js, code you own — at or below Bayshore's entry price. No retainer required."}
+        tiers={[
+          {"name":"Starter","priceRange":"$1,999","description":"A 5-page brochure site that loads fast on mobile and ranks for your name and core service. Best for sole traders and local Tampa businesses who need a credible online presence quickly.","features":["5 pages, mobile-responsive","Basic SEO & schema markup","Contact form with email forwarding","2 revision rounds","30-day post-launch support"],"cta":{"label":"Get a quote","href":"/contact"}},
+          {"name":"Growth","priceRange":"$3,999","description":"A 10–15 page site with a blog CMS, lead-capture flows, and analytics wired in from day one. Best for Tampa SMBs scaling online who need the site to actively generate qualified inquiries.","features":["10–15 pages with blog CMS","Advanced SEO & GA4 tracking","Lead capture & email automation","3 revision rounds","30-day support + training session"],"cta":{"label":"Get a quote","href":"/contact"},"popular":true},
+          {"name":"Custom","priceRange":"$7,500+","description":"Custom Next.js build with e-commerce, AI features, API integrations, and priority support. Best for established Tampa businesses with complex requirements and a real digital revenue line.","features":["Custom Next.js architecture","E-commerce or membership features","AI integrations (chat, search, content)","Third-party API connections","Priority support & quarterly reviews"],"cta":{"label":"Get a quote","href":"/contact"}}
+        ] as const}
       />
       <TestimonialsSection
         eyebrow="WHAT CLIENTS SAY"
@@ -146,6 +146,20 @@ export default function TampaWebDesignPage() {
           {"question":"We're a defense contractor supporting MacDill AFB. What does a contractor site need?","answer":"A MacDill AFB contractor site needs a clear capabilities page, past performance evidence, NAICS code visibility, and an RFQ or proposal request form that routes to the right team. We build these as standalone authority sites or as sections within a broader company site — depending on whether DoD contracting is your primary or secondary revenue line."},
           {"question":"I'm a financial advisor or RIA in Tampa. What does my website need to convert prospects?","answer":"Financial advisor and RIA sites live or die on credibility signals: credentials displayed prominently, a clear investment philosophy, client testimonials that comply with SEC advertising rules, and a frictionless contact or consultation booking flow. We build these with SEO structured around the queries your prospects use — things like 'fee-only financial advisor Tampa' — and lead-capture forms that qualify before they convert."},
           {"question":"How does FactoryJet compare to Bayshore Solutions or Digital Media Solutions?","answer":"Bayshore Solutions is Tampa's most established web agency with a strong WordPress and HubSpot track record — and publishes rates from $5,000. Digital Media Solutions offers web plus digital marketing from a Tampa HQ. FactoryJet Growth ($3,999) delivers comparable or greater scope — 10–15 pages, CMS, SEO, analytics — in 7 days, in Next.js, at or below Bayshore's entry price. No WordPress maintenance overhead. No retainer lock-in."},
+          {"question":"Do you handle website maintenance after launch?","answer":"Yes. Every project includes a 30-day post-launch support window at no extra cost. After that, we offer optional maintenance plans covering security updates, CMS upgrades, performance monitoring, and content edits. Because we build on Next.js — not WordPress — there are no plugin conflicts or monthly update emergencies to manage."},
+          {"question":"Do I own the code and design files after launch?","answer":"You own everything — the Next.js codebase, the Figma design system, all content, and all assets. We hand it all over on launch day with a recorded walkthrough. You can host it anywhere, hand it to another developer, or self-manage the CMS from day one. No lock-in, no proprietary platform, no hidden licensing."},
+          {"question":"Can you build a CENTCOM or SOCOM contractor capability site that meets DoD digital standards?","answer":"Yes. CENTCOM and SOCOM contractors in the MacDill AFB ecosystem need sites that function as digital prequalification tools — capability statements, past performance summaries, clearance level disclosures where appropriate, and clear contact workflows for contracting officers. We understand the procurement context and build accordingly, including schema markup that helps your site surface in relevant government procurement searches."},
+          {"question":"I run a restaurant or bar in Ybor City or South Howard Ave. Do I need more than a basic website?","answer":"Yes, and here's why: most guests in the Ybor City and South Howard Ave dining corridor make booking and walk-in decisions on mobile. Your site needs to load under two seconds on a phone, display your menu in a crawlable format (not a PDF), support OpenTable or Resy integrations, and include schema markup so Google pulls your hours and location correctly. We build this as standard — no add-on fees for mobile optimization or schema."},
+          {"question":"We're a real estate firm in Tampa's fast-growing market. What should our website prioritize?","answer":"Tampa's real estate market — from Hyde Park and Channelside to the St. Pete corridor and Clearwater — moves fast, and buyers research heavily online before contacting an agent. Your site needs IDX integration or a custom property search, neighborhood landing pages targeting the searches your buyers use, and a lead-capture flow that routes inquiries to the right agent immediately. We can wire all of this into a Next.js site that outperforms typical WordPress IDX builds on speed and SEO."},
+          {"question":"Can you build an e-commerce site for a Tampa retail brand?","answer":"Yes. Tampa retail brands — whether you're selling locally in Hyde Park, Channelside, or online nationally — need a storefront that loads fast on mobile, handles inventory cleanly, and converts visitors without friction. We build on Next.js with Shopify headless or custom checkout depending on your volume and product catalog. Every build includes GA4, schema markup, and a CMS your team can manage without developer help."},
+          {"question":"We're in the cruise or maritime industry near Port Tampa Bay. What do we need?","answer":"Businesses serving Port Tampa Bay — cruise logistics, maritime supply, port services, passenger experience companies — often sell to institutional buyers and cruise line procurement teams. Your site needs to project operational scale, compliance credentials, and a clear scope of services. We build these with the same authority-driven content architecture we use for defense contractors: capability pages, case studies, and a contact workflow that routes to the right person."},
+          {"question":"Can you add AI features like chatbots or smart search to my site?","answer":"Yes. Our Custom tier ($7,500+) includes AI integrations — on-site chat trained on your service catalog, semantic search for knowledge bases or product catalogs, and AI-assisted content personalization. For Tampa healthcare and professional services clients, we scope these carefully to avoid HIPAA or compliance edge cases. We'll tell you what's appropriate for your industry before we build anything."},
+          {"question":"How does the revision process work?","answer":"Starter tier includes two structured revision rounds; Growth includes three. Revisions happen in Figma before a line of code is written — so changes are fast and don't require rebuilding pages. We use a shared feedback doc so nothing gets lost in email threads. Scope changes that add new pages or features are quoted separately and agreed in writing before work starts."},
+          {"question":"Where will my site be hosted, and how fast will it be?","answer":"We deploy to Cloudflare Pages by default — a global CDN with 200+ edge locations that puts your site within milliseconds of visitors anywhere in the US, including Tampa, St. Pete, Clearwater, and Sarasota. Target load times are under 1.5 seconds on mobile. We enforce Lighthouse performance budgets from the first commit and hand over the metrics on launch day."},
+          {"question":"Can you build a site for a professional services firm targeting Pinellas County or Sarasota clients?","answer":"Yes. Many Tampa-based professional services firms — law practices, accounting firms, consultants — serve clients across the broader Tampa Bay metro including Pinellas County, Clearwater, St. Pete, and the Sarasota corridor. We build city and neighborhood landing pages targeting each sub-market so your firm surfaces in local searches across the region, not just in Tampa proper."},
+          {"question":"I'm opening a hotel or short-term rental near Amalie Arena or Raymond James Stadium. What does my site need?","answer":"Guests booking near Amalie Arena (Lightning, concerts) or Raymond James Stadium (Buccaneers, events) are often event-driven — they search for availability around specific dates and want to book immediately. Your site needs a fast mobile booking flow, event-aware availability messaging, and schema markup that surfaces your property in Google's hotel and rental results. We build these with direct booking in mind, reducing your dependency on OTA commissions."},
+          {"question":"What analytics and reporting do I get after launch?","answer":"Every project ships with GA4 fully configured — events, conversion goals, and a dashboard view your team can read without a data analyst. We also connect Google Search Console and verify your sitemap. For Growth and Custom tiers, we include a GTM container so you can add pixels and tracking tags without touching the codebase. You own all analytics accounts; we don't intermediary your data."},
+          {"question":"Can a new website actually improve my ROI, or is it just a sunk cost?","answer":"A well-built site in Tampa's competitive market pays for itself when it converts visitors who would otherwise have gone to a competitor. The Starter tier at $1,999 typically recovers its cost with two or three new clients — in healthcare, finance, or professional services, often with a single engagement. We track conversions from day one and build with measurable outcomes in mind, not just aesthetics."},
         ]}
       />
       <FinalCTA
@@ -252,6 +266,118 @@ function SchemaScript() {
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Bayshore Solutions is Tampa's most established web agency with a strong WordPress and HubSpot track record — and publishes rates from $5,000. Digital Media Solutions offers web plus digital marketing from a Tampa HQ. FactoryJet Growth ($3,999) delivers comparable or greater scope — 10–15 pages, CMS, SEO, analytics — in 7 days, in Next.js, at or below Bayshore's entry price. No WordPress maintenance overhead. No retainer lock-in."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you handle website maintenance after launch?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Every project includes a 30-day post-launch support window at no extra cost. After that, we offer optional maintenance plans covering security updates, CMS upgrades, performance monitoring, and content edits. Because we build on Next.js — not WordPress — there are no plugin conflicts or monthly update emergencies to manage."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I own the code and design files after launch?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You own everything — the Next.js codebase, the Figma design system, all content, and all assets. We hand it all over on launch day with a recorded walkthrough. You can host it anywhere, hand it to another developer, or self-manage the CMS from day one. No lock-in, no proprietary platform, no hidden licensing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you build a CENTCOM or SOCOM contractor capability site that meets DoD digital standards?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. CENTCOM and SOCOM contractors in the MacDill AFB ecosystem need sites that function as digital prequalification tools — capability statements, past performance summaries, clearance level disclosures where appropriate, and clear contact workflows for contracting officers. We understand the procurement context and build accordingly, including schema markup that helps your site surface in relevant government procurement searches."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "I run a restaurant or bar in Ybor City or South Howard Ave. Do I need more than a basic website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, and here's why: most guests in the Ybor City and South Howard Ave dining corridor make booking and walk-in decisions on mobile. Your site needs to load under two seconds on a phone, display your menu in a crawlable format (not a PDF), support OpenTable or Resy integrations, and include schema markup so Google pulls your hours and location correctly. We build this as standard — no add-on fees for mobile optimization or schema."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "We're a real estate firm in Tampa's fast-growing market. What should our website prioritize?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tampa's real estate market — from Hyde Park and Channelside to the St. Pete corridor and Clearwater — moves fast, and buyers research heavily online before contacting an agent. Your site needs IDX integration or a custom property search, neighborhood landing pages targeting the searches your buyers use, and a lead-capture flow that routes inquiries to the right agent immediately. We can wire all of this into a Next.js site that outperforms typical WordPress IDX builds on speed and SEO."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you build an e-commerce site for a Tampa retail brand?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Tampa retail brands — whether you're selling locally in Hyde Park, Channelside, or online nationally — need a storefront that loads fast on mobile, handles inventory cleanly, and converts visitors without friction. We build on Next.js with Shopify headless or custom checkout depending on your volume and product catalog. Every build includes GA4, schema markup, and a CMS your team can manage without developer help."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "We're in the cruise or maritime industry near Port Tampa Bay. What do we need?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Businesses serving Port Tampa Bay — cruise logistics, maritime supply, port services, passenger experience companies — often sell to institutional buyers and cruise line procurement teams. Your site needs to project operational scale, compliance credentials, and a clear scope of services. We build these with the same authority-driven content architecture we use for defense contractors: capability pages, case studies, and a contact workflow that routes to the right person."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you add AI features like chatbots or smart search to my site?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Our Custom tier ($7,500+) includes AI integrations — on-site chat trained on your service catalog, semantic search for knowledge bases or product catalogs, and AI-assisted content personalization. For Tampa healthcare and professional services clients, we scope these carefully to avoid HIPAA or compliance edge cases. We'll tell you what's appropriate for your industry before we build anything."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the revision process work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Starter tier includes two structured revision rounds; Growth includes three. Revisions happen in Figma before a line of code is written — so changes are fast and don't require rebuilding pages. We use a shared feedback doc so nothing gets lost in email threads. Scope changes that add new pages or features are quoted separately and agreed in writing before work starts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where will my site be hosted, and how fast will it be?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We deploy to Cloudflare Pages by default — a global CDN with 200+ edge locations that puts your site within milliseconds of visitors anywhere in the US, including Tampa, St. Pete, Clearwater, and Sarasota. Target load times are under 1.5 seconds on mobile. We enforce Lighthouse performance budgets from the first commit and hand over the metrics on launch day."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you build a site for a professional services firm targeting Pinellas County or Sarasota clients?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Many Tampa-based professional services firms — law practices, accounting firms, consultants — serve clients across the broader Tampa Bay metro including Pinellas County, Clearwater, St. Pete, and the Sarasota corridor. We build city and neighborhood landing pages targeting each sub-market so your firm surfaces in local searches across the region, not just in Tampa proper."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "I'm opening a hotel or short-term rental near Amalie Arena or Raymond James Stadium. What does my site need?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Guests booking near Amalie Arena (Lightning, concerts) or Raymond James Stadium (Buccaneers, events) are often event-driven — they search for availability around specific dates and want to book immediately. Your site needs a fast mobile booking flow, event-aware availability messaging, and schema markup that surfaces your property in Google's hotel and rental results. We build these with direct booking in mind, reducing your dependency on OTA commissions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What analytics and reporting do I get after launch?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every project ships with GA4 fully configured — events, conversion goals, and a dashboard view your team can read without a data analyst. We also connect Google Search Console and verify your sitemap. For Growth and Custom tiers, we include a GTM container so you can add pixels and tracking tags without touching the codebase. You own all analytics accounts; we don't intermediary your data."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can a new website actually improve my ROI, or is it just a sunk cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A well-built site in Tampa's competitive market pays for itself when it converts visitors who would otherwise have gone to a competitor. The Starter tier at $1,999 typically recovers its cost with two or three new clients — in healthcare, finance, or professional services, often with a single engagement. We track conversions from day one and build with measurable outcomes in mind, not just aesthetics."
             }
           }
         ]

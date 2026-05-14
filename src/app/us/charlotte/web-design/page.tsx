@@ -72,7 +72,7 @@ export default function CharlotteWebDesignPage() {
             <p>For healthcare and enterprise suppliers — Atrium Health and Novant Health vendors, Duke Energy supply chain partners, and Charlotte's manufacturing corridor — websites need robust capability documentation, certification display, and RFQ workflows that speak directly to procurement teams. Every FactoryJet project covers discovery, Figma prototyping, Next.js development, content, SEO, and a 30-day support window. You leave with a codebase you own, a design system you keep, and a site built to convert the buyers your business actually needs.</p>
           </>
         }
-        rightSlot={<img src="/images/us/charlotte/web-design/service-explanation.webp" alt="" aria-hidden="true" className="w-full rounded-2xl object-cover" />}
+        rightSlot={<img src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden="true" className="w-full rounded-2xl object-cover" />}
       />
       <StrategicDarkSection
         eyebrow="WHY FACTORYJET"
@@ -103,7 +103,7 @@ export default function CharlotteWebDesignPage() {
             "industry":"FinTech & Financial Services",
             "title":"Charlotte FinTech & Financial Services Client",
             "description":"Charlotte is the second-largest US banking center — home to Bank of America, Truist, and Wells Fargo's East Coast HQ. Vendors and suppliers to this ecosystem need sites that project professional credibility instantly. We build fast, schema-rich sites with clear service architecture and compliance-aware form design that earn trust before any conversation starts.",
-            "imageSrc":"/images/us/charlotte/web-design/portfolio-1.webp",
+            "imageSrc":"/images/us/charlotte/ecommerce/portfolio-1.webp",
             "stat1":"+40% conversions",
             "stat2":"< 1.5s load time"
           },
@@ -111,7 +111,7 @@ export default function CharlotteWebDesignPage() {
             "industry":"Healthcare & Life Sciences",
             "title":"Charlotte Healthcare & Life Sciences Client",
             "description":"Atrium Health (70,000+ employees) and Novant Health anchor one of the Southeast's largest healthcare systems. Vendors, private practices, and life sciences firms serving this ecosystem need sites that build patient and partner trust fast — with HIPAA-aware form design, clear service navigation, and local SEO.",
-            "imageSrc":"/images/us/charlotte/web-design/portfolio-2.webp",
+            "imageSrc":"/images/us/charlotte/ecommerce/portfolio-2.webp",
             "stat1":"+40% conversions",
             "stat2":"< 1.5s load time"
           },
@@ -119,7 +119,7 @@ export default function CharlotteWebDesignPage() {
             "industry":"Manufacturing & Industrial",
             "title":"Charlotte Manufacturing & Industrial Client",
             "description":"Charlotte's manufacturing corridor — Husqvarna, Daimler Trucks North America — creates a deep B2B supply chain. Suppliers need capability pages, certification display, and RFQ workflows that speak directly to procurement teams. We build B2B sites designed to win shortlists, not just look good.",
-            "imageSrc":"/images/us/charlotte/web-design/portfolio-3.webp",
+            "imageSrc":"/images/us/charlotte/ecommerce/portfolio-3.webp",
             "stat1":"+40% conversions",
             "stat2":"< 1.5s load time"
           }
@@ -136,35 +136,6 @@ export default function CharlotteWebDesignPage() {
           {"feature":"Idea Kraft","values":["$6,000–$15,000 (Charlotte market estimate)","$3,999 (Growth tier)","FactoryJet delivers in 7 days on Next.js; Idea Kraft's timeline and stack are not publicly stated."]},
           {"feature":"Bowen","values":["Pricing undisclosed; full-service marketing + web","$3,999 (Growth tier)","Next.js vs WordPress means faster load times and no monthly plugin overhead for Charlotte clients."]}
         ]}
-      />
-      <PricingTiers
-        eyebrow={"TRANSPARENT PRICING"}
-        headline={"Transparent Pricing for Charlotte Businesses"}
-        lead={"Charlotte agencies typically charge $6,000–$15,000 for a comparable web design project. FactoryJet Growth ($3,999) delivers the same scope — blog CMS, lead capture, GA4, Next.js — with a 7-day delivery guarantee and a codebase you own outright. That's 50% or more below the Charlotte agency benchmark, with no retainer required."}
-        tiers={[
-          {
-            "name":"Starter",
-            "priceRange":"$1,999",
-            "description":"A 5-page brochure site that loads fast on mobile and ranks for your name and core service. Best for sole traders and local Charlotte businesses who need a credible online presence quickly.",
-            "features":["5 pages, mobile-responsive","Basic SEO & schema markup","Contact form with email forwarding","2 revision rounds","30-day post-launch support"],
-            "cta":{"label":"Get a quote","href":"/contact"}
-          },
-          {
-            "name":"Growth",
-            "priceRange":"$3,999",
-            "description":"A 10–15 page site with a blog CMS, lead-capture flows, and analytics wired in from day one. Best for Charlotte SMBs scaling online who need the site to actively generate qualified inquiries.",
-            "features":["10–15 pages with blog CMS","Advanced SEO & GA4 tracking","Lead capture & email automation","3 revision rounds","30-day support + training session"],
-            "cta":{"label":"Get a quote","href":"/contact"},
-            "popular":true
-          },
-          {
-            "name":"Custom",
-            "priceRange":"$7,500+",
-            "description":"Custom Next.js build with e-commerce, AI features, API integrations, and priority support. Best for established Charlotte businesses with complex requirements and a real digital revenue line.",
-            "features":["Custom Next.js architecture","E-commerce or membership features","AI integrations (chat, search, content)","Third-party API connections","Priority support & quarterly reviews"],
-            "cta":{"label":"Get a quote","href":"/contact"}
-          }
-        ] as const}
       />
       <IndustriesGrid
         eyebrow={"CHARLOTTE × WEB DESIGN"}
@@ -197,6 +168,35 @@ export default function CharlotteWebDesignPage() {
             "example":"SaaS companies, digital agencies, and tech-enabled services firms operating in the Charlotte metro."
           }
         ]}
+      />
+      <PricingTiers
+        eyebrow={"TRANSPARENT PRICING"}
+        headline={"Transparent Pricing for Charlotte Businesses"}
+        lead={"Charlotte agencies typically charge $6,000–$15,000 for a comparable web design project. FactoryJet Growth ($3,999) delivers the same scope — blog CMS, lead capture, GA4, Next.js — with a 7-day delivery guarantee and a codebase you own outright. That's 50% or more below the Charlotte agency benchmark, with no retainer required."}
+        tiers={[
+          {
+            "name":"Starter",
+            "priceRange":"$1,999",
+            "description":"A 5-page brochure site that loads fast on mobile and ranks for your name and core service. Best for sole traders and local Charlotte businesses who need a credible online presence quickly.",
+            "features":["5 pages, mobile-responsive","Basic SEO & schema markup","Contact form with email forwarding","2 revision rounds","30-day post-launch support"],
+            "cta":{"label":"Get a quote","href":"/contact"}
+          },
+          {
+            "name":"Growth",
+            "priceRange":"$3,999",
+            "description":"A 10–15 page site with a blog CMS, lead-capture flows, and analytics wired in from day one. Best for Charlotte SMBs scaling online who need the site to actively generate qualified inquiries.",
+            "features":["10–15 pages with blog CMS","Advanced SEO & GA4 tracking","Lead capture & email automation","3 revision rounds","30-day support + training session"],
+            "cta":{"label":"Get a quote","href":"/contact"},
+            "popular":true
+          },
+          {
+            "name":"Custom",
+            "priceRange":"$7,500+",
+            "description":"Custom Next.js build with e-commerce, AI features, API integrations, and priority support. Best for established Charlotte businesses with complex requirements and a real digital revenue line.",
+            "features":["Custom Next.js architecture","E-commerce or membership features","AI integrations (chat, search, content)","Third-party API connections","Priority support & quarterly reviews"],
+            "cta":{"label":"Get a quote","href":"/contact"}
+          }
+        ] as const}
       />
       <TestimonialsSection
         eyebrow="WHAT CLIENTS SAY"
@@ -237,6 +237,62 @@ export default function CharlotteWebDesignPage() {
           {
             "question":"How does FactoryJet compare to Charlotte agencies like Idea Kraft or Bowen?",
             "answer":"Idea Kraft and Bowen are established Charlotte agencies. Neither publishes pricing or delivery timelines. FactoryJet publishes all three tiers upfront, delivers in 7 days, and builds in Next.js rather than WordPress — which means faster load times and no ongoing plugin maintenance for your team. At Growth ($3,999), we typically run 40–60% below Charlotte agency rates for equivalent scope."
+          },
+          {
+            "question":"Do you handle ongoing website maintenance after launch?",
+            "answer":"Every project includes a 30-day post-launch support window covering bug fixes, copy tweaks, and training questions. Beyond that, we offer ongoing maintenance retainers for clients who want monthly performance audits, content updates, and priority turnaround. A lot of Charlotte businesses in SouthPark and Ballantyne use us for quarterly refreshes as their service lines grow."
+          },
+          {
+            "question":"Who owns the code and design files after the project is done?",
+            "answer":"You do — 100%. We hand over the full Next.js codebase, the Figma design files, and all content assets on launch day. No licensing fees, no vendor lock-in. You can hand it to any developer you choose and they can pick it up from where we left off."
+          },
+          {
+            "question":"My business serves the Charlotte Douglas airport corridor and logistics sector. Can you build a B2B site for that?",
+            "answer":"Yes. The Charlotte Douglas corridor is one of the busiest logistics and distribution hubs in the Southeast. We build B2B sites with capability documentation, fleet or service overviews, RFQ forms, and partner portal integrations designed for the logistics, freight, and distribution clients who operate in that corridor."
+          },
+          {
+            "question":"We're a restaurant or hospitality business in Uptown Charlotte or NoDa. What does a good site look like for us?",
+            "answer":"For restaurants and hospitality businesses, the site needs to load fast on mobile, surface your menu and reservation link immediately, and rank for local Charlotte searches. We build sites with OpenTable or Resy integrations, Google Maps schema, event calendar support, and high-quality food and interior photography sections. Uptown Charlotte and NoDa foot traffic is highly mobile-driven, so we optimize for sub-1.5-second mobile load times as a baseline."
+          },
+          {
+            "question":"Can you add AI features like a chatbot or smart search to our Charlotte business website?",
+            "answer":"Yes. Our Custom tier ($7,500+) includes AI integrations — trained chatbots for lead qualification, AI-powered site search, and content recommendation engines. These are particularly useful for financial services and healthcare vendors in Charlotte who handle a high volume of inbound inquiries and want to triage them before a human picks up the phone."
+          },
+          {
+            "question":"How do you handle analytics and conversion tracking?",
+            "answer":"GA4 and Google Tag Manager are wired up on every project before launch. We configure event tracking for form submissions, CTA clicks, scroll depth, and any custom goals specific to your business. For Charlotte financial services and healthcare clients, we also set up conversion segments so you can separate high-value lead types from general traffic."
+          },
+          {
+            "question":"Is the site going to work well on mobile? Most of my Charlotte customers are on their phones.",
+            "answer":"Mobile-first is non-negotiable on every FactoryJet project. We design and build for mobile before desktop, enforce Core Web Vitals green scores at launch, and test across current iOS and Android browsers. Charlotte's demographic skews heavily toward mobile professionals — we aim for sub-1.5-second load times on a 4G connection as a baseline."
+          },
+          {
+            "question":"We're a retail business in SouthPark Mall or Ballantyne. Do you build e-commerce sites?",
+            "answer":"Yes. Our Custom tier covers Shopify builds, Next.js e-commerce with headless CMS, and hybrid sites that combine content marketing with a product catalog. For Charlotte retail clients, we also build local SEO structures that help you rank for neighborhood-level searches — SouthPark, Ballantyne, Steele Creek — not just city-wide."
+          },
+          {
+            "question":"Do you have experience with NASCAR, motorsports, or Charlotte Motor Speedway-related businesses?",
+            "answer":"Yes. Charlotte's motorsports ecosystem — anchored by Charlotte Motor Speedway and teams based out of Concord and Mooresville — creates demand for event-driven websites, team sponsor pages, merchandise e-commerce, and B2B supplier sites. We've built sites for motorsports-adjacent businesses that handle high-traffic event windows and sponsor visibility requirements."
+          },
+          {
+            "question":"We're based in Concord, Huntersville, or Lake Norman — not technically Charlotte. Can you still help?",
+            "answer":"Absolutely. We work with businesses across the entire Charlotte metro — Concord, Huntersville, Mooresville, Lake Norman, Fort Mill SC, and beyond. We build in local SEO for your specific sub-market so you rank in the neighborhoods and communities your customers are actually searching from, not just Charlotte city-wide."
+          },
+          {
+            "question":"How does the design revision process work?",
+            "answer":"Starter tier includes two structured revision rounds; Growth includes three. Each round is a focused review session — we share the Figma prototype, you give consolidated feedback, and we turn it around within 24 hours. We don't do open-ended revision loops. Every change request is scoped and documented so there are no surprises on scope or timeline."
+          },
+          {
+            "question":"Where is the site hosted and how does that affect performance for Charlotte visitors?",
+            "answer":"We deploy to Cloudflare Pages by default, which serves your site from edge nodes closest to your visitors. For Charlotte-area users, that means sub-100ms server response times under normal load. Cloudflare's global CDN also handles traffic spikes — useful for Charlotte businesses running event promotions or seasonal campaigns — without requiring you to manage server infrastructure."
+          },
+          {
+            "question":"Can you help a Fort Mill SC or Research Triangle-adjacent business that serves the Charlotte market?",
+            "answer":"Yes. We work with businesses on both sides of the NC/SC border who sell into the Charlotte metro. Fort Mill is one of the fastest-growing suburbs in the region, and Research Triangle proximity means many Charlotte-adjacent B2B firms serve both markets. We build geo-targeted content structures that let a single site rank in multiple metro areas simultaneously."
+          },
+          {
+            "question":"What's the ROI on a professionally built website for a Charlotte business?",
+            "answer":"A FactoryJet Growth site at $3,999 typically pays for itself with two to three additional qualified leads converted per month — often within 60 to 90 days of launch for Charlotte professional services firms. Charlotte's competitive market means the cost of a slow or unprofessional site isn't just missed rankings — it's prospects who bounced to a competitor before they ever called you."
           }
         ]}
       />
@@ -344,6 +400,118 @@ function SchemaScript() {
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Neither Idea Kraft nor Bowen publishes pricing or delivery timelines. FactoryJet publishes all three tiers upfront, delivers in 7 days, and builds in Next.js rather than WordPress — faster load times and no ongoing plugin maintenance. At Growth ($3,999), we run 40–60% below Charlotte agency rates for equivalent scope."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you handle ongoing website maintenance after launch?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every project includes a 30-day post-launch support window covering bug fixes, copy tweaks, and training questions. Beyond that, we offer ongoing maintenance retainers for clients who want monthly performance audits, content updates, and priority turnaround. Many Charlotte businesses in SouthPark and Ballantyne use us for quarterly refreshes as their service lines grow."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who owns the code and design files after the project is done?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You do — 100%. We hand over the full Next.js codebase, the Figma design files, and all content assets on launch day. No licensing fees, no vendor lock-in. You can hand it to any developer you choose and they can pick it up from where we left off."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "My business serves the Charlotte Douglas airport corridor and logistics sector. Can you build a B2B site for that?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The Charlotte Douglas corridor is one of the busiest logistics and distribution hubs in the Southeast. We build B2B sites with capability documentation, fleet or service overviews, RFQ forms, and partner portal integrations designed for logistics, freight, and distribution clients who operate in that corridor."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "We're a restaurant or hospitality business in Uptown Charlotte or NoDa. What does a good site look like for us?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For restaurants and hospitality businesses, the site needs to load fast on mobile, surface your menu and reservation link immediately, and rank for local Charlotte searches. We build sites with OpenTable or Resy integrations, Google Maps schema, event calendar support, and high-quality photography sections. Uptown Charlotte and NoDa foot traffic is highly mobile-driven, so we optimize for sub-1.5-second mobile load times as a baseline."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you add AI features like a chatbot or smart search to our Charlotte business website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Our Custom tier ($7,500+) includes AI integrations — trained chatbots for lead qualification, AI-powered site search, and content recommendation engines. These are particularly useful for financial services and healthcare vendors in Charlotte who handle a high volume of inbound inquiries and want to triage them before a human picks up the phone."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you handle analytics and conversion tracking?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "GA4 and Google Tag Manager are wired up on every project before launch. We configure event tracking for form submissions, CTA clicks, scroll depth, and any custom goals specific to your business. For Charlotte financial services and healthcare clients, we also set up conversion segments so you can separate high-value lead types from general traffic."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the site going to work well on mobile? Most of my Charlotte customers are on their phones.",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mobile-first is non-negotiable on every FactoryJet project. We design and build for mobile before desktop, enforce Core Web Vitals green scores at launch, and test across current iOS and Android browsers. Charlotte's demographic skews heavily toward mobile professionals — we aim for sub-1.5-second load times on a 4G connection as a baseline."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "We're a retail business in SouthPark Mall or Ballantyne. Do you build e-commerce sites?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Our Custom tier covers Shopify builds, Next.js e-commerce with headless CMS, and hybrid sites that combine content marketing with a product catalog. For Charlotte retail clients, we also build local SEO structures that help you rank for neighborhood-level searches — SouthPark, Ballantyne, Steele Creek — not just city-wide."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you have experience with NASCAR, motorsports, or Charlotte Motor Speedway-related businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Charlotte's motorsports ecosystem — anchored by Charlotte Motor Speedway and teams based out of Concord and Mooresville — creates demand for event-driven websites, team sponsor pages, merchandise e-commerce, and B2B supplier sites. We've built sites for motorsports-adjacent businesses that handle high-traffic event windows and sponsor visibility requirements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "We're based in Concord, Huntersville, or Lake Norman — not technically Charlotte. Can you still help?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. We work with businesses across the entire Charlotte metro — Concord, Huntersville, Mooresville, Lake Norman, Fort Mill SC, and beyond. We build in local SEO for your specific sub-market so you rank in the neighborhoods and communities your customers are actually searching from, not just Charlotte city-wide."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the design revision process work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Starter tier includes two structured revision rounds; Growth includes three. Each round is a focused review session — we share the Figma prototype, you give consolidated feedback, and we turn it around within 24 hours. We don't do open-ended revision loops. Every change request is scoped and documented so there are no surprises on scope or timeline."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where is the site hosted and how does that affect performance for Charlotte visitors?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We deploy to Cloudflare Pages by default, which serves your site from edge nodes closest to your visitors. For Charlotte-area users, that means sub-100ms server response times under normal load. Cloudflare's global CDN also handles traffic spikes — useful for Charlotte businesses running event promotions or seasonal campaigns — without requiring you to manage server infrastructure."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you help a Fort Mill SC or Research Triangle-adjacent business that serves the Charlotte market?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We work with businesses on both sides of the NC/SC border who sell into the Charlotte metro. Fort Mill is one of the fastest-growing suburbs in the region, and Research Triangle proximity means many Charlotte-adjacent B2B firms serve both markets. We build geo-targeted content structures that let a single site rank in multiple metro areas simultaneously."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the ROI on a professionally built website for a Charlotte business?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A FactoryJet Growth site at $3,999 typically pays for itself with two to three additional qualified leads converted per month — often within 60 to 90 days of launch for Charlotte professional services firms. Charlotte's competitive market means the cost of a slow or unprofessional site isn't just missed rankings — it's prospects who bounced to a competitor before they ever called you."
             }
           }
         ]
