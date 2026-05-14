@@ -43,14 +43,14 @@ const AI_SERVICES = [
 ] as const;
 
 const LOCATIONS = [
-  { label: 'Austin',    state: 'TX', href: '/us/austin' },
-  { label: 'Denver',    state: 'CO', href: '/us/denver' },
-  { label: 'Miami',     state: 'FL', href: '/us/miami' },
-  { label: 'Charlotte', state: 'NC', href: '/us/charlotte' },
-  { label: 'Raleigh',   state: 'NC', href: '/us/raleigh' },
-  { label: 'Tampa',     state: 'FL', href: '/us/tampa' },
-  { label: 'Nashville', state: 'TN', href: '/us/nashville' },
-  { label: 'Portland',  state: 'OR', href: '/us/portland' },
+  { label: 'Austin',    state: 'TX', href: '/us/austin/web-design' },
+  { label: 'Denver',    state: 'CO', href: '/us/denver/web-design' },
+  { label: 'Miami',     state: 'FL', href: '/us/miami/web-design' },
+  { label: 'Charlotte', state: 'NC', href: '/us/charlotte/web-design' },
+  { label: 'Raleigh',   state: 'NC', href: '/us/raleigh/web-design' },
+  { label: 'Tampa',     state: 'FL', href: '/us/tampa/web-design' },
+  { label: 'Nashville', state: 'TN', href: '/us/nashville/web-design' },
+  { label: 'Portland',  state: 'OR', href: '/us/portland/web-design' },
 ] as const;
 
 // ─── Types ────────────────────────────────────────────────────────────────────

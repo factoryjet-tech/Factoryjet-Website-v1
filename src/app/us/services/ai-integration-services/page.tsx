@@ -143,7 +143,7 @@ const faqSchema = {
       name: 'Why is FactoryJet 60–70% cheaper than US AI integration agencies?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Our engineering team is India-based. Same quality of API architecture, prompt engineering, and integration delivery at dramatically lower labor costs. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated agency overhead.',
+        text: 'Our engineering team brings 25+ years of focused expertise. Same quality of API architecture, prompt engineering, and integration delivery at dramatically lower labor costs. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated agency overhead.',
       },
     },
     {
@@ -247,7 +247,7 @@ const faqSchema = {
       name: 'How is FactoryJet different from a US AI development agency?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Three differences: price (60–70% cheaper — India-based engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it — no account managers, project coordinators, or solution architects adding cost and latency), and SMB depth (500+ small business projects since 1999). We understand what AI integration actually looks like in a 15-person business, not just in an enterprise with a dedicated IT department.',
+        text: 'Three differences: price (60–70% cheaper — specialized engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it — no account managers, project coordinators, or solution architects adding cost and latency), and SMB depth (500+ small business projects since 1999). We understand what AI integration actually looks like in a 15-person business, not just in an enterprise with a dedicated IT department.',
       },
     },
   ],
@@ -392,7 +392,7 @@ const ROI_STATS = [
   {
     value: '60–70%',
     label: 'cheaper than comparable US AI integration agencies',
-    microcopy: 'India-based engineers, US-caliber output',
+    microcopy: 'specialized engineers, US-caliber output',
     categoryLabel: 'COST ADVANTAGE',
   },
 ];
@@ -633,7 +633,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'Why is FactoryJet 60–70% cheaper than US AI integration agencies?',
     answer:
-      'Our engineering team is India-based. Same quality of API architecture, prompt engineering, and delivery at dramatically lower labor costs. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated overhead.',
+      'Our engineering team brings 25+ years of focused expertise. Same quality of API architecture, prompt engineering, and delivery at dramatically lower labor costs. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated overhead.',
   },
   {
     category: 'pricing',
@@ -709,7 +709,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US AI development agency?',
     answer:
-      'Three differences: price (60–70% cheaper — India-based engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand AI integration inside a 15-person company, not just enterprises with dedicated IT departments).',
+      'Three differences: price (60–70% cheaper — specialized engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand AI integration inside a 15-person company, not just enterprises with dedicated IT departments).',
   },
 ];
 

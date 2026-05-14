@@ -290,7 +290,7 @@ const ROI_STATS = [
   {
     value: '60–70%',
     label: 'cheaper than a comparable Austin or US AI agency',
-    microcopy: 'India-based engineers, US-caliber output, 25 years serving US businesses',
+    microcopy: '25+ years experience, US-caliber output',
     categoryLabel: 'COST ADVANTAGE',
   },
 ];
@@ -578,7 +578,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'Why is FactoryJet 60–70% cheaper than Austin AI agencies?',
     answer:
-      'Our engineering team is India-based. Same quality of AI architecture, conversation design, and delivery — at dramatically lower labor costs. We\'ve served US businesses for 25 years. When you brief us, an engineer reads it, not an account manager. No overhead layers, no inflated Austin office rates. The savings go to you.',
+      'Our engineering team brings 25+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery — at dramatically lower labor costs. We\'ve served US businesses for 25 years. When you brief us, an engineer reads it, not an account manager. No overhead layers, no inflated Austin office rates. The savings go to you.',
   },
   {
     category: 'pricing',
@@ -623,7 +623,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a local Austin AI development agency?',
     answer:
-      'Three differences: price (60–70% cheaper — India-based engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it — weeks, not months), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 10-person Austin business, not just enterprise AI theory). Austin agencies add Silicon Hills overhead to their rates. We don\'t.',
+      'Three differences: price (60–70% cheaper — specialized engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it — weeks, not months), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 10-person Austin business, not just enterprise AI theory). Austin agencies add Silicon Hills overhead to their rates. We don\'t.',
   },
   {
     category: 'trust',
@@ -901,7 +901,7 @@ export default function AustinAIAgentsPage() {
             {
               icon: '💸',
               title: 'Austin agency rates are some of the highest in the South',
-              body: 'Austin AI agencies benefit from the same tech wage inflation as the rest of Silicon Hills. Build costs for comparable work are $15,000–$40,000+ locally. FactoryJet delivers the same quality at 60–70% less — India-based engineers who have been serving US businesses for 25 years, without the 6th Street overhead.',
+              body: 'Austin AI agencies benefit from the same tech wage inflation as the rest of Silicon Hills. Build costs for comparable work are $15,000–$40,000+ locally. FactoryJet delivers the same quality at 60–70% less — specialized engineers who have been serving US businesses for 25 years, without the 6th Street overhead.',
             },
           ]}
         />

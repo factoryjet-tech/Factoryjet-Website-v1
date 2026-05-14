@@ -274,7 +274,7 @@ const ECOMM_STATS = [
   {
     value: '60–70%',
     label: 'cheaper than a comparable US e-commerce development agency',
-    microcopy: 'same design quality, same engineering standard, India-based cost structure',
+    microcopy: 'same design quality, same engineering standard, 60–70% cost savings',
     categoryLabel: 'COST ADVANTAGE',
   },
 ];
@@ -533,7 +533,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'Why is FactoryJet cheaper than US e-commerce agencies?',
     answer:
-      'Our engineering and design team is India-based. The same Figma-first design process, the same platform engineering quality, the same Lighthouse audit before handover — at dramatically lower labor costs. We\'ve been building e-commerce for US businesses since 2005. You\'re paying for the build, not our office overhead or account management layers.',
+      'Our engineering and design team is specialized. The same Figma-first design process, the same platform engineering quality, the same Lighthouse audit before handover — at dramatically lower labor costs. We\'ve been building e-commerce for US businesses since 2005. You\'re paying for the build, not our office overhead or account management layers.',
   },
 
   /* ── Migrations ── */
@@ -575,7 +575,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US e-commerce agency?',
     answer:
-      'Three things: price (60–70% cheaper — India-based team serving US businesses since 1999), ownership (full codebase delivered to your GitHub on launch day, zero lock-in), and honesty (we\'ll tell you when a simpler solution fits better than a more expensive one). We\'ve delivered 500+ projects for US businesses. We know what actually drives e-commerce revenue versus what looks good in a proposal.',
+      'Three things: price (60–70% cheaper — specialized team serving US businesses since 1999), ownership (full codebase delivered to your GitHub on launch day, zero lock-in), and honesty (we\'ll tell you when a simpler solution fits better than a more expensive one). We\'ve delivered 500+ projects for US businesses. We know what actually drives e-commerce revenue versus what looks good in a proposal.',
   },
   {
     category: 'trust',
@@ -854,7 +854,7 @@ export default function EcommerceDevelopmentPage() {
             {
               icon: '💸',
               title: 'US e-commerce agencies quote $15,000–$60,000 for this',
-              body: 'A mid-tier US e-commerce agency charges $15,000–$60,000 for a custom store build, before retainers, migration fees, or app configuration. FactoryJet delivers the same Figma-first design, the same platform engineering quality, and the same Lighthouse audit at 60–70% less — because our team is India-based and has been building for US clients since 1999.',
+              body: 'A mid-tier US e-commerce agency charges $15,000–$60,000 for a custom store build, before retainers, migration fees, or app configuration. FactoryJet delivers the same Figma-first design, the same platform engineering quality, and the same Lighthouse audit at 60–70% less — because of our efficient low-overhead structure and has been building for US clients since 1999.',
             },
           ]}
         />

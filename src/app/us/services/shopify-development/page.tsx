@@ -532,7 +532,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'Why is FactoryJet cheaper than US Shopify agencies?',
     answer:
-      'Our design and engineering team is India-based. That\'s the full explanation. The same Figma-first design process, the same Liquid and Hydrogen engineering, the same Lighthouse performance standards — at dramatically lower labor costs. We\'ve built Shopify stores for US brands since Shopify launched. We don\'t have layers of account management and project coordinators inflating your invoice.',
+      'Our design and engineering team is specialized. That\'s the full explanation. The same Figma-first design process, the same Liquid and Hydrogen engineering, the same Lighthouse performance standards — at dramatically lower labor costs. We\'ve built Shopify stores for US brands since Shopify launched. We don\'t have layers of account management and project coordinators inflating your invoice.',
   },
 
   /* ── Platform & Tech ── */
@@ -606,7 +606,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from hiring a US Shopify agency?',
     answer:
-      'Three differences: price (60–70% cheaper, India-based team serving US brands since 1999), speed (3–5 weeks vs. 3–6 months at most US agencies), and ownership (full code delivery on launch day, not held behind a retainer). We\'ve built 120+ Shopify stores across DTC, B2B, and enterprise brands. We understand what actually drives conversion on a product page — not just what looks good in a proposal.',
+      'Three differences: price (60–70% cheaper, specialized team serving US brands since 1999), speed (3–5 weeks vs. 3–6 months at most US agencies), and ownership (full code delivery on launch day, not held behind a retainer). We\'ve built 120+ Shopify stores across DTC, B2B, and enterprise brands. We understand what actually drives conversion on a product page — not just what looks good in a proposal.',
   },
   {
     category: 'trust',
@@ -876,7 +876,7 @@ export default function ShopifyPage() {
             {
               icon: '💸',
               title: 'US Shopify agencies charge $15,000–$50,000 for this',
-              body: 'A mid-tier US Shopify agency charges $15,000–$50,000 for a custom theme build — before retainers, app configuration, or migration fees. FactoryJet delivers the same Figma-first design, the same Liquid engineering, and the same Lighthouse performance audit at 60–70% less. Our India-based team has been building e-commerce since 2005.',
+              body: 'A mid-tier US Shopify agency charges $15,000–$50,000 for a custom theme build — before retainers, app configuration, or migration fees. FactoryJet delivers the same Figma-first design, the same Liquid engineering, and the same Lighthouse performance audit at 60–70% less. Our specialized team has been building e-commerce since 2005.',
             },
           ]}
         />

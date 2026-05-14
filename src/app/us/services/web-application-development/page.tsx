@@ -60,7 +60,7 @@ const faqSchema = {
       name: 'How much does web application development cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet's web application development starts at $7,500 for an MVP. Mid-complexity apps run $15,000–$30,000. Full-scale SaaS platforms run $30,000–$80,000. US development agencies typically charge $50,000–$200,000+ for comparable scope. Our India-based engineering team delivers at 60–70% below US rates with the same technology stack.",
+        text: "FactoryJet's web application development starts at $7,500 for an MVP. Mid-complexity apps run $15,000–$30,000. Full-scale SaaS platforms run $30,000–$80,000. US development agencies typically charge $50,000–$200,000+ for comparable scope. Our specialized engineering team delivers at 60–70% below US rates with the same technology stack.",
       },
     },
     {
@@ -641,7 +641,7 @@ export default function WebApplicationDevelopmentPage() {
         eyebrow="SERVING US BUSINESSES"
         headline="Custom web application development for US businesses, remote-first and US-time-zone friendly"
         leadParagraphs={[
-          "FactoryJet works with US businesses across every industry and city. Our engineering team is India-based but runs on US East and West Coast time zones. Daily standups, Slack access, and weekly video reviews keep you connected to your project without the overhead of a local agency.",
+          "FactoryJet works with US businesses across every industry and city. Our engineering team is specialized but runs on US East and West Coast time zones. Daily standups, Slack access, and weekly video reviews keep you connected to your project without the overhead of a local agency.",
           "We've delivered web applications to businesses in Austin, Miami, Denver, Nashville, Charlotte, Portland, Raleigh, Tampa, and across the US. Industry experience includes healthcare, legal, real estate, e-commerce, field services, and SaaS.",
           "Fixed price. Full source code on handoff. 60-day bug warranty on every project. No ongoing lock-in to FactoryJet for future development if you want to bring it in-house.",
         ]}
@@ -653,7 +653,7 @@ export default function WebApplicationDevelopmentPage() {
         eyebrow="HOW WE COMPARE"
         headline="FactoryJet vs. US Dev Agency vs. Freelancer vs. No-Code"
         lead="Not all development options are equal. Here's what the decision looks like when you compare side by side — on price, capability, and what you're left with after delivery."
-        pullQuote={{ stat: '60–70%', caption: 'below US development agency rates — same engineering depth, India-based cost structure.' }}
+        pullQuote={{ stat: '60–70%', caption: 'below US development agency rates — same engineering depth, low-overhead cost structure.' }}
         columns={COMPARISON_COLUMNS}
         rows={COMPARISON_ROWS}
         footer="Prices reflect typical US market ranges as of 2025. No-code platform monthly fees compound over time and limit scalability."

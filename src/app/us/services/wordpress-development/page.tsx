@@ -82,7 +82,7 @@ const faqSchema = {
       name: 'How much does a custom WordPress website cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s custom WordPress website design starts at $1,999 for a business website (up to 10 pages, custom theme, no page builders). Full business websites with 15–30 pages, custom post types, and advanced functionality typically run $3,500–$8,000. WordPress e-commerce sites (WooCommerce) start at $4,999. These prices are 60–70% below comparable US WordPress agencies — our India-based team has built WordPress sites for US businesses for 25+ years with no reduction in engineering quality.',
+        text: 'FactoryJet\'s custom WordPress website design starts at $1,999 for a business website (up to 10 pages, custom theme, no page builders). Full business websites with 15–30 pages, custom post types, and advanced functionality typically run $3,500–$8,000. WordPress e-commerce sites (WooCommerce) start at $4,999. These prices are 60–70% below comparable US WordPress agencies — our experienced team has built WordPress sites for US businesses for 25+ years with no reduction in engineering quality.',
       },
     },
     {
@@ -536,7 +536,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a custom WordPress website cost?',
     answer:
-      'FactoryJet\'s custom WordPress websites start at $1,999 for up to 10 pages with a custom theme, no page builders, mobile-first build, and full SEO setup. Business sites with 15–30 pages and custom post types typically run $3,500–$8,000. WooCommerce stores start at $4,999. These prices are 60–70% below comparable US WordPress agencies — our India-based engineering team has built WordPress sites for US businesses for 25+ years with the same engineering standards, none of the US agency overhead.',
+      'FactoryJet\'s custom WordPress websites start at $1,999 for up to 10 pages with a custom theme, no page builders, mobile-first build, and full SEO setup. Business sites with 15–30 pages and custom post types typically run $3,500–$8,000. WooCommerce stores start at $4,999. These prices are 60–70% below comparable US WordPress agencies — our engineering team has built WordPress sites for US businesses for 25+ years with the same engineering standards, none of the US agency overhead.',
   },
   {
     category: 'pricing',
@@ -576,7 +576,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US WordPress agency?',
     answer:
-      'Three differences: price (60–70% cheaper — India-based engineers serving US businesses since 1999, no US agency overhead), engineering standards (we build to the same spec a good US agency would — custom theme, no page builders, Core Web Vitals target, documented code — without the inflated timeline), and SMB-specific experience (500+ small business projects means we know what a 10-person company actually needs from WordPress and what it doesn\'t — you won\'t get oversold on features that a $50M company uses but you\'ll never touch). We also don\'t use proprietary tools: everything we build runs on standard WordPress and can be maintained by any competent developer after handover.',
+      'Three differences: price (60–70% cheaper — specialized engineers serving US businesses since 1999, no US agency overhead), engineering standards (we build to the same spec a good US agency would — custom theme, no page builders, Core Web Vitals target, documented code — without the inflated timeline), and SMB-specific experience (500+ small business projects means we know what a 10-person company actually needs from WordPress and what it doesn\'t — you won\'t get oversold on features that a $50M company uses but you\'ll never touch). We also don\'t use proprietary tools: everything we build runs on standard WordPress and can be maintained by any competent developer after handover.',
   },
   {
     category: 'trust',
@@ -824,21 +824,21 @@ export default function WordPressDevelopmentPage() {
           ]}
         />
 
-        {/* ── 6. WHAT WE BUILD ─────────────────────────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="WHAT WE BUILD"
-          headline="Six Types of Custom WordPress Projects We Deliver"
-          lead="Every WordPress project is different. Here are the six most common types we build — and what makes each one technically distinct."
-          sectors={WP_SERVICES}
-        />
-
-        {/* ── 7. OUR PROCESS ───────────────────────────────────────────────── */}
+        {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
           headline="From Discovery to Custom WordPress Launch: 5 Structured Stages"
           lead="Nothing gets built without a plan. Nothing launches without sign-off. Every stage produces a deliverable you review before we move to the next one."
           stages={WP_JOURNEY_STAGES}
           closingNote="5 STAGES · 3 WEEKS (10 PAGES) TO 10 WEEKS (LARGE CUSTOM BUILDS) · FREE CONSULTATION FIRST"
+        />
+
+        {/* ── 7. WHAT WE BUILD ─────────────────────────────────────────────── */}
+        <IndustriesGrid
+          eyebrow="WHAT WE BUILD"
+          headline="Six Types of Custom WordPress Projects We Deliver"
+          lead="Every WordPress project is different. Here are the six most common types we build — and what makes each one technically distinct."
+          sectors={WP_SERVICES}
         />
 
         {/* ── 8. US MARKET CONTEXT ─────────────────────────────────────────── */}

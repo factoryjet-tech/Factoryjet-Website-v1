@@ -67,7 +67,7 @@ const faqSchema = {
       name: 'Why is FactoryJet so much cheaper than a US web design agency?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet's engineering team is India-based, with 25+ years of experience serving US clients. We do not have a downtown office, account managers, or a sales department. Those costs are exactly what US agencies pass through to clients — often doubling or tripling the actual development cost. You get the same quality, the same technology stack, and the same 7-day delivery guarantee.",
+        text: "FactoryJet's engineering team is specialized, with 25+ years of experience serving US clients. We do not have a downtown office, account managers, or a sales department. Those costs are exactly what US agencies pass through to clients — often doubling or tripling the actual development cost. You get the same quality, the same technology stack, and the same 7-day delivery guarantee.",
       },
     },
     {
@@ -334,7 +334,7 @@ const FAQ_ITEMS = [
   {
     category: 'cost',
     question: 'Why is FactoryJet cheaper than US web design agencies?',
-    answer: "FactoryJet's engineering team is India-based, with 25+ years of experience serving US clients. US agencies charge $150–$250/hour because they're paying for downtown office leases, account managers, and a sales team — none of which make your website better. Our fixed packages give you the same tech stack (Next.js, Shopify, React), the same design quality, and the same SEO rigor at 60–70% lower cost.",
+    answer: "FactoryJet's engineering team is specialized, with 25+ years of experience serving US clients. US agencies charge $150–$250/hour because they're paying for downtown office leases, account managers, and a sales team — none of which make your website better. Our fixed packages give you the same tech stack (Next.js, Shopify, React), the same design quality, and the same SEO rigor at 60–70% lower cost.",
   },
   {
     category: 'cost',
@@ -430,7 +430,7 @@ const FAQ_ITEMS = [
 const MARKET_STATS = [
   {
     value: '60–70%',
-    label: 'below comparable US web agency rates — same quality, India-based cost structure',
+    label: 'below comparable US web agency rates — same quality, low-overhead cost structure',
     sourceUrl: 'https://factoryjet.com/us/pricing',
     sourceLabel: 'FactoryJet Pricing',
   },
@@ -554,7 +554,7 @@ export default function PricingPage() {
       <StrategicDarkSection
         eyebrow="THE REAL REASON US AGENCIES COST SO MUCH"
         headline="You're not paying for a better website. You're paying for their office."
-        lead="The average US web design agency bills $150–$250 per hour. Of that, maybe $60–$80 goes to the developer actually building your site. The rest covers downtown rent, a project manager who sends weekly update emails, an account executive who sold you the deal, and a business development team working on their next client. FactoryJet has none of that. Our engineering is India-based, 25+ years experienced, and our fixed-price model means we win when you launch on time — not when the project drags."
+        lead="The average US web design agency bills $150–$250 per hour. Of that, maybe $60–$80 goes to the developer actually building your site. The rest covers downtown rent, a project manager who sends weekly update emails, an account executive who sold you the deal, and a business development team working on their next client. FactoryJet has none of that. Our engineering is specialized, 25+ years experienced, and our fixed-price model means we win when you launch on time — not when the project drags."
         pillars={[
           {
             title: 'No account manager markup',
@@ -607,7 +607,7 @@ export default function PricingPage() {
         eyebrow="HOW WE COMPARE"
         headline="FactoryJet vs. US Agency vs. Freelancer vs. DIY Builder"
         lead="Not all website options are equal. Here's what the decision looks like when you compare side by side — on price, quality, and what you're left with after launch."
-        pullQuote={{ stat: '60–70%', caption: 'below US agency rates — same quality, India-based cost structure.' }}
+        pullQuote={{ stat: '60–70%', caption: 'below US agency rates — same quality, low-overhead cost structure.' }}
         columns={COMPARISON_COLUMNS}
         rows={COMPARISON_ROWS}
         footer="Prices reflect typical US market ranges as of 2025. DIY platform monthly costs compound over time and include no ownership of the underlying site."

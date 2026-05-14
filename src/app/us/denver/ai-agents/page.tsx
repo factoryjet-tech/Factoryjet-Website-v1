@@ -290,7 +290,7 @@ const ROI_STATS = [
   {
     value: '60–70%',
     label: 'cheaper than a comparable Denver or US AI agency',
-    microcopy: 'India-based engineers, US-caliber output, 25 years serving US businesses',
+    microcopy: '25+ years experience, US-caliber output',
     categoryLabel: 'COST ADVANTAGE',
   },
 ];
@@ -578,7 +578,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'Why is FactoryJet 60–70% cheaper than Denver AI agencies?',
     answer:
-      'Our engineering team is India-based. Same quality of AI architecture, conversation design, and delivery — at dramatically lower labor costs. We\'ve served US businesses for 25 years. When you brief us, an engineer reads it, not an account manager. No Cherry Creek or LoDo office rates built into the quote.',
+      'Our engineering team brings 25+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery — at dramatically lower labor costs. We\'ve served US businesses for 25 years. When you brief us, an engineer reads it, not an account manager. No Cherry Creek or LoDo office rates built into the quote.',
   },
   {
     category: 'pricing',
@@ -623,7 +623,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a local Denver AI development agency?',
     answer:
-      'Three differences: price (60–70% cheaper — India-based engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it — weeks, not months), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 12-person Denver company, not just enterprise AI theory).',
+      'Three differences: price (60–70% cheaper — specialized engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it — weeks, not months), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 12-person Denver company, not just enterprise AI theory).',
   },
   {
     category: 'trust',
@@ -901,7 +901,7 @@ export default function DenverAIAgentsPage() {
             {
               icon: '💸',
               title: 'Local Denver agency rates reflect local Denver costs',
-              body: 'A Denver AI agency building at LoDo rates will quote $15,000–$40,000+ for the same chatbot FactoryJet delivers starting at $3,000. The difference is our engineering team is India-based — serving US businesses for 25 years, at dramatically lower overhead, without compromising the quality of the AI architecture or the conversation design.',
+              body: 'A Denver AI agency building at LoDo rates will quote $15,000–$40,000+ for the same chatbot FactoryJet delivers starting at $3,000. The difference is our engineering team is specialized — serving US businesses for 25 years, at dramatically lower overhead, without compromising the quality of the AI architecture or the conversation design.',
             },
           ]}
         />

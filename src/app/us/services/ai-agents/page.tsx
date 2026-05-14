@@ -232,7 +232,7 @@ const faqSchema = {
       name: 'How is FactoryJet different from hiring a US AI development agency?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Three differences: price (60–70% cheaper, India-based engineers serving US businesses for 25+ years), speed (no account management layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand the operational reality of businesses your size, not just enterprise AI theory).',
+        text: 'Three differences: price (60–70% cheaper, specialized engineers serving US businesses for 25+ years), speed (no account management layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand the operational reality of businesses your size, not just enterprise AI theory).',
       },
     },
     {
@@ -391,7 +391,7 @@ const ROI_STATS = [
   {
     value: '60–70%',
     label: 'cheaper than a comparable US AI agency',
-    microcopy: 'same output quality, India-based cost structure',
+    microcopy: 'same output quality, 60–70% lower cost',
     categoryLabel: 'COST ADVANTAGE',
   },
 ];
@@ -737,7 +737,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from hiring a US AI development agency?',
     answer:
-      'Three differences that matter: price (60–70% cheaper because our engineers are India-based, serving US businesses for 25+ years), speed (no layers of account management between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand the operational reality of businesses your size, not just enterprise AI theory). We also won\'t pitch you an AI agent when a simpler automation would do the job.',
+      'Three differences that matter: price (60–70% cheaper because of our efficient low-overhead structure, serving US businesses for 25+ years), speed (no layers of account management between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand the operational reality of businesses your size, not just enterprise AI theory). We also won\'t pitch you an AI agent when a simpler automation would do the job.',
   },
   {
     category: 'trust',
@@ -1043,7 +1043,7 @@ export default function AIAgentsPage() {
             {
               icon: '💸',
               title: 'US AI agencies are priced for enterprise, not SMBs',
-              body: 'A mid-tier US AI development agency quotes $40,000–$150,000 for a production AI system. That\'s before the retainer. FactoryJet delivers the same engineering quality at 60–70% less — because our India-based team has the same skills with a radically different cost structure.',
+              body: 'A mid-tier US AI development agency quotes $40,000–$150,000 for a production AI system. That\'s before the retainer. FactoryJet delivers the same engineering quality at 60–70% less — because our experienced team has the same skills with a radically different cost structure.',
             },
           ]}
         />

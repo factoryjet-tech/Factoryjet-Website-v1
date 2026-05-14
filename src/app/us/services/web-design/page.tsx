@@ -289,7 +289,7 @@ const WEB_STATS = [
   {
     value: '60–70%',
     label: 'cheaper than a comparable US web design agency',
-    microcopy: 'same Next.js / Figma / Lighthouse quality, India-based cost structure',
+    microcopy: 'same Next.js / Figma / Lighthouse quality, 60–70% lower cost',
     categoryLabel: 'COST ADVANTAGE',
   },
 ];
@@ -561,7 +561,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'Why is FactoryJet so much cheaper than US agencies?',
     answer:
-      'Our design and engineering team is India-based. That\'s the answer. The same Next.js expertise, the same Figma design quality, the same Lighthouse 100 performance — at dramatically lower labor costs. We\'ve served US businesses since 1999. We don\'t have layers of account management, project coordinators, and sales reps inflating your invoice. You brief an engineer and a designer; they build it.',
+      'Our design and engineering team is specialized. That\'s the answer. The same Next.js expertise, the same Figma design quality, the same Lighthouse 100 performance — at dramatically lower labor costs. We\'ve served US businesses since 1999. We don\'t have layers of account management, project coordinators, and sales reps inflating your invoice. You brief an engineer and a designer; they build it.',
   },
 
   /* ── Technical & Performance ── */
@@ -609,7 +609,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US web agency?',
     answer:
-      'Three differences that matter: price (60–70% cheaper because our team is India-based, serving US businesses for 25+ years), speed (7-day delivery on standard sites — most US agencies quote 6–12 weeks), and ownership (you get the full codebase on launch day — no retainer required to keep your site online). We\'ve delivered 500+ websites for US businesses across every industry. We aren\'t selling you a template with a custom logo.',
+      'Three differences that matter: price (60–70% cheaper because of our efficient low-overhead structure, serving US businesses for 25+ years), speed (7-day delivery on standard sites — most US agencies quote 6–12 weeks), and ownership (you get the full codebase on launch day — no retainer required to keep your site online). We\'ve delivered 500+ websites for US businesses across every industry. We aren\'t selling you a template with a custom logo.',
   },
   {
     category: 'trust',
@@ -883,7 +883,7 @@ export default function WebDesignPage() {
             {
               icon: '💸',
               title: 'US agencies charge $8,000–$25,000 for the same work',
-              body: 'A mid-tier US web agency charges $2,500+ per page before revisions, project management fees, and hosting markup. FactoryJet delivers the same Figma-first design, Next.js engineering, and Lighthouse 100 performance — at 60–70% less — because our team is India-based with 25 years of serving US clients.',
+              body: 'A mid-tier US web agency charges $2,500+ per page before revisions, project management fees, and hosting markup. FactoryJet delivers the same Figma-first design, Next.js engineering, and Lighthouse 100 performance — at 60–70% less — because of our efficient low-overhead structure with 25 years of serving US clients.',
             },
           ]}
         />

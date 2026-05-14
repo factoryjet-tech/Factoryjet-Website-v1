@@ -32,6 +32,18 @@
 # NYC sub-pages: /services/ is thin; parent page covers same content
 /us/services/web-design/new-york/services   /us/services/web-design/new-york   301
 
+# ── US CITY HUB REDIRECTS ────────────────────────────────────────────────────
+# /us/{city} has no page.tsx — redirect to the city web-design landing page.
+# These fire when users type the hub URL directly or follow an old external link.
+/us/austin     /us/austin/web-design     301
+/us/miami      /us/miami/web-design      301
+/us/denver     /us/denver/web-design     301
+/us/nashville  /us/nashville/web-design  301
+/us/portland   /us/portland/web-design   301
+/us/charlotte  /us/charlotte/web-design  301
+/us/raleigh    /us/raleigh/web-design    301
+/us/tampa      /us/tampa/web-design      301
+
 # Tier-3 e-commerce city pages on old theme → main e-commerce service page
 /us/services/ecommerce-development/boise        /us/services/ecommerce-development   301
 /us/services/ecommerce-development/chattanooga  /us/services/ecommerce-development   301

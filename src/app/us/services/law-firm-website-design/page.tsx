@@ -82,7 +82,7 @@ const faqSchema = {
       name: 'How much does a law firm website design cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s law firm website design starts at $2,499 for a professional attorney website (up to 10 pages, custom design, attorney profiles, practice area pages, consultation request forms, and on-page SEO). Full law firm websites with 15–30 pages, multiple attorney profiles, blog, and local SEO optimization typically run $4,500–$9,000. These prices are 60–70% below comparable US legal web design agencies — which routinely charge $10,000–$40,000 for the same scope. Our India-based engineering team has served US law firms for 25+ years.',
+        text: 'FactoryJet\'s law firm website design starts at $2,499 for a professional attorney website (up to 10 pages, custom design, attorney profiles, practice area pages, consultation request forms, and on-page SEO). Full law firm websites with 15–30 pages, multiple attorney profiles, blog, and local SEO optimization typically run $4,500–$9,000. These prices are 60–70% below comparable US legal web design agencies — which routinely charge $10,000–$40,000 for the same scope. Our specialized engineering team has served US law firms for 25+ years.',
       },
     },
     {
@@ -554,7 +554,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a law firm website design cost?',
     answer:
-      'FactoryJet\'s law firm website design starts at $2,499 for a solo or small firm website (up to 10 pages, custom design, practice area pages, attorney profile, and intake form). Full law firm websites with 15–30 pages and multiple attorneys run $4,500–$9,000. Large firm builds with 30+ pages and multi-location architecture start at $9,000. These prices are 60–70% below comparable US legal web design agencies — which charge $10,000–$40,000 for equivalent scope. Our India-based engineering team has built legal websites for US firms for 25+ years.',
+      'FactoryJet\'s law firm website design starts at $2,499 for a solo or small firm website (up to 10 pages, custom design, practice area pages, attorney profile, and intake form). Full law firm websites with 15–30 pages and multiple attorneys run $4,500–$9,000. Large firm builds with 30+ pages and multi-location architecture start at $9,000. These prices are 60–70% below comparable US legal web design agencies — which charge $10,000–$40,000 for equivalent scope. Our specialized engineering team has built legal websites for US firms for 25+ years.',
   },
   {
     category: 'pricing',
@@ -600,7 +600,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US legal web design agency?',
     answer:
-      'Three differences: price (60–70% cheaper — US legal web design agencies charge $10,000–$40,000 for projects we deliver at $2,499–$9,000, because our India-based team has none of the US overhead), legal website expertise (we\'ve built legal websites for US firms for 25+ years — we know the schema types, the bar advertising disclosure requirements, the conversion patterns specific to legal, and the local SEO architecture that works for attorney websites specifically), and ownership (you own everything we build — source code, design files, CMS credentials — unlike FindLaw and Martindale subscription products where you pay monthly for a site that was never yours).',
+      'Three differences: price (60–70% cheaper — US legal web design agencies charge $10,000–$40,000 for projects we deliver at $2,499–$9,000, because our experienced team has none of the US overhead), legal website expertise (we\'ve built legal websites for US firms for 25+ years — we know the schema types, the bar advertising disclosure requirements, the conversion patterns specific to legal, and the local SEO architecture that works for attorney websites specifically), and ownership (you own everything we build — source code, design files, CMS credentials — unlike FindLaw and Martindale subscription products where you pay monthly for a site that was never yours).',
   },
   {
     category: 'trust',
@@ -883,7 +883,7 @@ export default function LawFirmWebsiteDesignPage() {
           lead="Law firm website options vary dramatically in quality, ownership terms, and long-term value. Here's the honest comparison."
           pullQuote={{
             stat: '60–70%',
-            caption: 'cheaper than a comparable US legal web design agency — same engineering depth, legal schema expertise, India-based cost structure.',
+            caption: 'cheaper than a comparable US legal web design agency — same engineering depth, legal schema expertise, low-overhead cost structure.',
           }}
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}

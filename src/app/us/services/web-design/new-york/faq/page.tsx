@@ -89,7 +89,7 @@ const FAQ_ITEMS = [
     category: 'timeline',
     question: 'How does your team deliver faster than a Manhattan web design agency?',
     answer:
-      'Manhattan web design agencies carry overhead that creates latency: account management layers, internal review cycles, and billable-hour pressure. FactoryJet\'s India-based engineering team works directly from your brief — no intermediary. When you submit a project, an engineer reads it, not an account manager. Combine that with 25 years of repeatable workflows for professional website services New York clients and we consistently deliver in weeks, not months.',
+      'Manhattan web design agencies carry overhead that creates latency: account management layers, internal review cycles, and billable-hour pressure. FactoryJet\'s specialized engineering team works directly from your brief — no intermediary. When you submit a project, an engineer reads it, not an account manager. Combine that with 25 years of repeatable workflows for professional website services New York clients and we consistently deliver in weeks, not months.',
   },
   {
     category: 'timeline',
@@ -109,13 +109,13 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a website cost for a New York City business?',
     answer:
-      'FactoryJet\'s website design packages New York start at $1,500 for a 5-page professional site and scale to $8,000–$15,000+ for custom e-commerce or web application builds. For context: web design cost New York City at a Manhattan agency typically runs $8,000–$40,000 for the same scope. The difference is our India-based delivery model — same quality output, 60–70% less overhead. Exact pricing is scoped on a free strategy call.',
+      'FactoryJet\'s website design packages New York start at $1,500 for a 5-page professional site and scale to $8,000–$15,000+ for custom e-commerce or web application builds. For context: web design cost New York City at a Manhattan agency typically runs $8,000–$40,000 for the same scope. The difference is our efficient delivery model — same quality output, 60–70% less overhead. Exact pricing is scoped on a free strategy call.',
   },
   {
     category: 'pricing',
     question: 'Why is FactoryJet 60–70% cheaper than a NYC web design agency?',
     answer:
-      'A web design agency New York in Midtown carries Manhattan rent, US-market salaries, and multiple overhead layers — all of which land in your invoice. FactoryJet\'s engineering team is India-based with 25+ years serving US clients. No Midtown office, no account management markup, no bloated team structure. We pass the savings to you. The output is the same: production-grade code, mobile-first responsive design, conversion-focused layouts, and Lighthouse 100 performance.',
+      'A web design agency New York in Midtown carries Manhattan rent, US-market salaries, and multiple overhead layers — all of which land in your invoice. FactoryJet\'s engineering team is specialized with 25+ years serving US clients. No Midtown office, no account management markup, no bloated team structure. We pass the savings to you. The output is the same: production-grade code, mobile-first responsive design, conversion-focused layouts, and Lighthouse 100 performance.',
   },
   {
     category: 'pricing',
@@ -139,7 +139,7 @@ const FAQ_ITEMS = [
   /* ── NYC-Specific ── */
   {
     category: 'nyc',
-    question: 'You\'re India-based — how does that work for a New York business?',
+    question: 'You\'re specialized — how does that work for a New York business?',
     answer:
       'We\'ve worked with US businesses for 25 years, hundreds of them on the East Coast. All project communication happens during EST business hours (9am–6pm). Calls, Slack, project management — all in your timezone. Contracts are standard US agreements in USD. We\'ve built sites for NYC restaurants, law firms, real estate teams, finance companies, healthcare practices, and e-commerce brands — the workflow is exactly what you\'d expect from a professional web designer New York, except you save 60–70% on the invoice.',
   },

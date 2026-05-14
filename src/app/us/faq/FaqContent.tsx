@@ -5,9 +5,6 @@ import {
   Search,
   ChevronDown,
   ChevronRight,
-  MessageCircle,
-  Phone,
-  Mail,
   Sparkles,
   Zap,
   CheckCircle2,
@@ -15,6 +12,8 @@ import {
 import Link from 'next/link';
 import { faqData } from '@/lib/legacy-pages/US-FAQ/data';
 import { FAQItem, SearchResult } from '@/lib/legacy-pages/US-FAQ/types';
+import LogoBar from '@/components/v2/LogoBar';
+import FinalCTA from '@/components/v2/FinalCTA';
 
 /* ─── Helpers ────────────────────────────────────────────────────────────── */
 
@@ -310,52 +309,6 @@ const SearchResults = ({ results, onSelect }: { results: SearchResult[]; onSelec
 
 /* ─── Contact CTA ────────────────────────────────────────────────────────── */
 
-const ContactCTA = () => (
-  <section className="bg-[#F05A28] text-white py-14 md:py-20 px-4">
-    <div className="max-w-4xl mx-auto text-center">
-      <h2 className="text-3xl font-fj-display font-bold mb-4">Can&apos;t find what you&apos;re looking for?</h2>
-      <p className="text-blue-100 font-fj-body mb-10 text-lg">
-        Our AI-native experts are ready to help you navigate your digital transformation.
-      </p>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Link
-          href="/contact"
-          className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-xl hover:bg-white hover:text-[#F05A28] transition-all group text-left"
-        >
-          <div className="bg-white/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[rgba(240,90,40,0.08)] group-hover:text-[#F05A28] transition-colors">
-            <MessageCircle size={24} aria-hidden="true" />
-          </div>
-          <h3 className="font-bold text-lg mb-1 font-fj-display">Live Chat</h3>
-          <p className="text-sm opacity-80 group-hover:opacity-100 font-fj-body">Chat with an expert now</p>
-        </Link>
-
-        <Link
-          href="/contact"
-          className="bg-white text-[#F05A28] p-6 rounded-xl shadow-xl hover:-translate-y-1 transition-transform text-left"
-        >
-          <div className="bg-[rgba(240,90,40,0.08)] w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-            <Phone size={24} aria-hidden="true" />
-          </div>
-          <h3 className="font-bold text-lg mb-1 font-fj-display">Schedule Call</h3>
-          <p className="text-sm text-fj-neutral-600 font-fj-body">Book 30-min consultation</p>
-        </Link>
-
-        <a
-          href="mailto:connect@factoryjet.com"
-          className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-xl hover:bg-white hover:text-[#F05A28] transition-all group text-left"
-        >
-          <div className="bg-white/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[rgba(240,90,40,0.08)] group-hover:text-[#F05A28] transition-colors">
-            <Mail size={24} aria-hidden="true" />
-          </div>
-          <h3 className="font-bold text-lg mb-1 font-fj-display">Email Us</h3>
-          <p className="text-sm opacity-80 group-hover:opacity-100 font-fj-body">Get answer within 4 hours</p>
-        </a>
-      </div>
-    </div>
-  </section>
-);
-
 /* ─── Main Component ─────────────────────────────────────────────────────── */
 
 export default function FaqContent() {
@@ -426,6 +379,9 @@ export default function FaqContent() {
       {/* Hero with search */}
       <Hero searchValue={searchQuery} onSearchChange={setSearchQuery} />
 
+      {/* Trust signal */}
+      <LogoBar tagline="Trusted by 500+ US businesses — answered by the same team that built their sites" />
+
       {/* Popular questions quick links */}
       {!isSearching && <QuickLinks onSelectQuestion={handleSelectSearchResult} />}
 
@@ -482,8 +438,16 @@ export default function FaqContent() {
         </div>
       </div>
 
-      {/* Contact CTA */}
-      <ContactCTA />
+      {/* Final CTA */}
+      <FinalCTA
+        variant="dark"
+        eyebrow="STILL HAVE QUESTIONS?"
+        headline="Can't find what you're looking for?"
+        sub="Our team answers every inquiry within 4 business hours. Free strategy calls available — no commitment required."
+        primaryCta={{ label: 'Book a Free Strategy Call', href: '/contact' }}
+        secondaryCta={{ label: 'Email Us', href: 'mailto:connect@factoryjet.com' }}
+        objectionHandler="No commitment. No sales pitch. Just answers."
+      />
     </>
   );
 }

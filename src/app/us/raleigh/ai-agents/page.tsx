@@ -290,7 +290,7 @@ const ROI_STATS = [
   {
     value: '60–70%',
     label: 'cheaper than a comparable Research Triangle or US AI agency',
-    microcopy: 'India-based engineers, US-caliber output, 25 years serving US businesses',
+    microcopy: '25+ years experience, US-caliber output',
     categoryLabel: 'COST ADVANTAGE',
   },
 ];
@@ -578,7 +578,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'Why is FactoryJet 60–70% cheaper than Raleigh AI agencies?',
     answer:
-      'Our engineering team is India-based. Same quality of AI architecture, conversation design, and delivery — at dramatically lower labor costs. We\'ve served US businesses for 25 years. When you brief us, an engineer reads it, not an account manager. No Research Triangle Park office overhead built into the quote.',
+      'Our engineering team brings 25+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery — at dramatically lower labor costs. We\'ve served US businesses for 25 years. When you brief us, an engineer reads it, not an account manager. No Research Triangle Park office overhead built into the quote.',
   },
   {
     category: 'pricing',
@@ -623,7 +623,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a local Raleigh AI development agency?',
     answer:
-      'Three differences: price (60–70% cheaper — India-based engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it — weeks, not months), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 15-person Raleigh company, not just enterprise AI theory). Research Triangle agencies charge enterprise rates. We don\'t.',
+      'Three differences: price (60–70% cheaper — specialized engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it — weeks, not months), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 15-person Raleigh company, not just enterprise AI theory). Research Triangle agencies charge enterprise rates. We don\'t.',
   },
   {
     category: 'trust',
@@ -901,7 +901,7 @@ export default function RaleighAIAgentsPage() {
             {
               icon: '💸',
               title: 'Triangle agency rates reflect Triangle costs',
-              body: 'Research Triangle AI agencies have Research Triangle overhead — office space, tech wages, account management teams. The same chatbot they build for $15,000–$35,000 starts at $3,000 with FactoryJet. India-based engineers serving US businesses for 25 years, without the RTP premium baked into every invoice.',
+              body: 'Research Triangle AI agencies have Research Triangle overhead — office space, tech wages, account management teams. The same chatbot they build for $15,000–$35,000 starts at $3,000 with FactoryJet. specialized engineers serving US businesses for 25 years, without the RTP premium baked into every invoice.',
             },
           ]}
         />

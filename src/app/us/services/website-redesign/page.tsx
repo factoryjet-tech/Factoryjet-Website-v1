@@ -82,7 +82,7 @@ const faqSchema = {
       name: 'How much does a website redesign cost for a small business?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s website redesign services start at $1,499 for a up to 5-page professional redesign delivered in 7 days. Full business website redesigns with 10–20 pages, custom design, and CMS integration typically run $3,500–$7,500. E-commerce redesigns on Shopify or WooCommerce start at $4,999. These prices are 60–70% below comparable US web design agencies — our India-based engineering team has served US businesses for 25+ years while maintaining full US business hours communication.',
+        text: 'FactoryJet\'s website redesign services start at $1,499 for a up to 5-page professional redesign delivered in 7 days. Full business website redesigns with 10–20 pages, custom design, and CMS integration typically run $3,500–$7,500. E-commerce redesigns on Shopify or WooCommerce start at $4,999. These prices are 60–70% below comparable US web design agencies — our engineering team has served US businesses for 25+ years while maintaining full US business hours communication.',
       },
     },
     {
@@ -536,7 +536,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a website redesign cost for a small business?',
     answer:
-      'FactoryJet\'s website redesign services start at $1,499 for up to 5 pages delivered in 7 days. Business website redesigns (10–20 pages with custom design and CMS) typically run $3,500–$7,500. E-commerce redesigns on Shopify or WooCommerce start at $4,999. These prices are 60–70% below comparable US agencies — our India-based engineering team has served US businesses for 25+ years without the overhead of a US agency.',
+      'FactoryJet\'s website redesign services start at $1,499 for up to 5 pages delivered in 7 days. Business website redesigns (10–20 pages with custom design and CMS) typically run $3,500–$7,500. E-commerce redesigns on Shopify or WooCommerce start at $4,999. These prices are 60–70% below comparable US agencies — our engineering team has served US businesses for 25+ years without the overhead of a US agency.',
   },
   {
     category: 'pricing',
@@ -576,7 +576,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US website redesign agency?',
     answer:
-      'Three differences: price (60–70% cheaper — India-based engineers serving US businesses since 1999, no layers of account managers and PMs inflating your bill), speed (we deliver 5-page redesigns in 7 days — US agencies averaging 8–16 weeks for the same scope), and SMB focus (500+ small business projects means we understand the operational reality of your size — you don\'t need enterprise features, you need a site that generates leads and loads fast on a phone). We also own your outcome, not your timeline: fixed prices mean you know the cost before you commit, not after.',
+      'Three differences: price (60–70% cheaper — specialized engineers serving US businesses since 1999, no layers of account managers and PMs inflating your bill), speed (we deliver 5-page redesigns in 7 days — US agencies averaging 8–16 weeks for the same scope), and SMB focus (500+ small business projects means we understand the operational reality of your size — you don\'t need enterprise features, you need a site that generates leads and loads fast on a phone). We also own your outcome, not your timeline: fixed prices mean you know the cost before you commit, not after.',
   },
   {
     category: 'trust',
@@ -819,20 +819,12 @@ export default function WebsiteRedesignPage() {
             },
             {
               title: 'US agencies charge enterprise prices for SMB problems',
-              body: 'The average US web design agency charges $15,000–$50,000 for a business website redesign, with 8–16 week timelines and hourly billing that makes the final cost unpredictable. That pricing was built for companies with design directors, multiple stakeholder reviews, and RFP processes. FactoryJet delivers the same quality of engineering for 60–70% less — because our India-based team has served US businesses for 25+ years with none of the overhead. Fixed-price contracts mean you know the cost before we start, not after.',
+              body: 'The average US web design agency charges $15,000–$50,000 for a business website redesign, with 8–16 week timelines and hourly billing that makes the final cost unpredictable. That pricing was built for companies with design directors, multiple stakeholder reviews, and RFP processes. FactoryJet delivers the same quality of engineering for 60–70% less — because our experienced team has served US businesses for 25+ years with none of the overhead. Fixed-price contracts mean you know the cost before we start, not after.',
             },
           ]}
         />
 
-        {/* ── 6. WHAT WE REDESIGN ──────────────────────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="WHAT WE REDESIGN"
-          headline="Six Types of Website Redesign Projects We Deliver for US Small Businesses"
-          lead="Every redesign starts with a specific problem. Here are the six most common — and what the solution actually looks like."
-          sectors={REDESIGN_SERVICES}
-        />
-
-        {/* ── 7. OUR PROCESS ───────────────────────────────────────────────── */}
+        {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
         <div id="process">
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
@@ -842,6 +834,14 @@ export default function WebsiteRedesignPage() {
           closingNote="5 STAGES · 7 DAYS (5-PAGE) TO 6 WEEKS (E-COMMERCE) · FREE AUDIT BEFORE ANY COMMITMENT"
         />
         </div>
+
+        {/* ── 7. WHAT WE REDESIGN ──────────────────────────────────────────── */}
+        <IndustriesGrid
+          eyebrow="WHAT WE REDESIGN"
+          headline="Six Types of Website Redesign Projects We Deliver for US Small Businesses"
+          lead="Every redesign starts with a specific problem. Here are the six most common — and what the solution actually looks like."
+          sectors={REDESIGN_SERVICES}
+        />
 
         {/* ── 8. US MARKET CONTEXT ─────────────────────────────────────────── */}
         <CityContextSection

@@ -143,7 +143,7 @@ const faqSchema = {
       name: 'Why is FactoryJet 60–70% cheaper than US automation agencies?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Our engineering team is India-based. Same quality of workflow architecture, integration engineering, and delivery at dramatically lower labor costs. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated agency overhead.',
+        text: 'Our engineering team brings 25+ years of focused expertise. Same quality of workflow architecture, integration engineering, and delivery at dramatically lower labor costs. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated agency overhead.',
       },
     },
     {
@@ -223,7 +223,7 @@ const faqSchema = {
       name: 'How is FactoryJet different from hiring a US automation consultant?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Three differences: price (60–70% cheaper — India-based engineers serving US businesses for 25+ years), speed (no sales layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we know the operational reality of businesses your size, not just enterprise theory). We also won\'t propose AI automation for a workflow where a simple Zap would do the job.',
+        text: 'Three differences: price (60–70% cheaper — specialized engineers serving US businesses for 25+ years), speed (no sales layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we know the operational reality of businesses your size, not just enterprise theory). We also won\'t propose AI automation for a workflow where a simple Zap would do the job.',
       },
     },
     {
@@ -390,7 +390,7 @@ const ROI_STATS = [
   {
     value: '60–70%',
     label: 'cheaper than a comparable US automation agency',
-    microcopy: 'India-based engineers, US-caliber output',
+    microcopy: 'specialized engineers, US-caliber output',
     categoryLabel: 'COST ADVANTAGE',
   },
 ];
@@ -632,7 +632,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'Why is FactoryJet 60–70% cheaper than US automation agencies?',
     answer:
-      'Our engineering team is India-based. Same quality of workflow architecture, integration engineering, and delivery at dramatically lower labor costs. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated agency overhead.',
+      'Our engineering team brings 25+ years of focused expertise. Same quality of workflow architecture, integration engineering, and delivery at dramatically lower labor costs. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated agency overhead.',
   },
   {
     category: 'pricing',
@@ -702,7 +702,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US automation consultant?',
     answer:
-      'Three differences: price (60–70% cheaper because our engineers are India-based, serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand operations inside a 15-person company, not just enterprise theory). We also won\'t propose AI automation when a simpler solution would do the job.',
+      'Three differences: price (60–70% cheaper because of our efficient low-overhead structure, serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand operations inside a 15-person company, not just enterprise theory). We also won\'t propose AI automation when a simpler solution would do the job.',
   },
 ];
 
@@ -974,7 +974,7 @@ export default function AIWorkflowAutomationPage() {
             {
               icon: '💸',
               title: 'Enterprise automation tools are priced for enterprise budgets',
-              body: 'Salesforce automation, SAP workflows, and US automation consulting firms charge $40,000+ for systems that are frankly overkill for a 20-person business. FactoryJet builds the same capability for 60–70% less — because our India-based engineering team has the skills with a radically different cost structure, and we don\'t try to solve simple problems with expensive platforms.',
+              body: 'Salesforce automation, SAP workflows, and US automation consulting firms charge $40,000+ for systems that are frankly overkill for a 20-person business. FactoryJet builds the same capability for 60–70% less — because our engineering team has the skills with a radically different cost structure, and we don\'t try to solve simple problems with expensive platforms.',
             },
           ]}
         />

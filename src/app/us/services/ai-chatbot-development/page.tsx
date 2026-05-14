@@ -143,7 +143,7 @@ const faqSchema = {
       name: 'Why is FactoryJet 60–70% cheaper than US chatbot agencies?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Our engineering team is India-based. Same quality of AI architecture, conversation design, and delivery at dramatically lower labor costs. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated agency rates.',
+        text: 'Our engineering team brings 25+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery at dramatically lower labor costs. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated agency rates.',
       },
     },
     {
@@ -239,7 +239,7 @@ const faqSchema = {
       name: 'How is FactoryJet different from a US AI development agency?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Three differences: price (60–70% cheaper — India-based engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 10-person company, not just enterprise theory).',
+        text: 'Three differences: price (60–70% cheaper — specialized engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 10-person company, not just enterprise theory).',
       },
     },
   ],
@@ -390,7 +390,7 @@ const ROI_STATS = [
   {
     value: '60–70%',
     label: 'cheaper than a comparable US chatbot agency',
-    microcopy: 'India-based engineers, US-caliber output',
+    microcopy: 'specialized engineers, US-caliber output',
     categoryLabel: 'COST ADVANTAGE',
   },
 ];
@@ -632,7 +632,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'Why is FactoryJet 60–70% cheaper than US chatbot agencies?',
     answer:
-      'Our engineering team is India-based. Same quality of AI architecture, conversation design, and delivery at dramatically lower labor costs. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated agency rates.',
+      'Our engineering team brings 25+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery at dramatically lower labor costs. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated agency rates.',
   },
   {
     category: 'pricing',
@@ -702,7 +702,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US AI development agency?',
     answer:
-      'Three differences: price (60–70% cheaper because our engineers are India-based, serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 10-person company, not just enterprise AI theory).',
+      'Three differences: price (60–70% cheaper because of our efficient low-overhead structure, serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 10-person company, not just enterprise AI theory).',
   },
 ];
 

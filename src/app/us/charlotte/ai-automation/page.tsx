@@ -290,7 +290,7 @@ const ROI_STATS = [
   {
     value: '60–70%',
     label: 'cheaper than a comparable Charlotte or US automation agency',
-    microcopy: 'India-based engineers, US-caliber output, 25 years serving US businesses',
+    microcopy: '25+ years experience, US-caliber output',
     categoryLabel: 'COST ADVANTAGE',
   },
 ];
@@ -578,7 +578,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'Why is FactoryJet 60–70% cheaper than Charlotte automation agencies?',
     answer:
-      'Our engineering team is India-based. Same quality of workflow architecture, compliance design, and delivery — at dramatically lower labor costs. We\'ve served US businesses for 25 years. When you brief us, an engineer reads it, not an account manager. No South End or Uptown Charlotte office rates built into the quote — and no bloated project team staffed to justify a larger invoice.',
+      'Our engineering team brings 25+ years of focused expertise. Same quality of workflow architecture, compliance design, and delivery — at dramatically lower labor costs. We\'ve served US businesses for 25 years. When you brief us, an engineer reads it, not an account manager. No South End or Uptown Charlotte office rates built into the quote — and no bloated project team staffed to justify a larger invoice.',
   },
   {
     category: 'pricing',
@@ -629,7 +629,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a local Charlotte automation agency?',
     answer:
-      'Three differences: price (60–70% cheaper — India-based engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it — weeks, not quarters), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 20-person Charlotte financial services firm or a regional logistics company, including the compliance and audit requirements those industries carry).',
+      'Three differences: price (60–70% cheaper — specialized engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it — weeks, not quarters), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 20-person Charlotte financial services firm or a regional logistics company, including the compliance and audit requirements those industries carry).',
   },
 ];
 
@@ -901,7 +901,7 @@ export default function CharlotteAIAutomationPage() {
             {
               icon: '💸',
               title: 'Charlotte agency rates reflect Uptown overhead, not output',
-              body: 'A Charlotte automation agency building in Uptown or South End will quote $15,000–$50,000+ for the same workflow FactoryJet delivers starting at $4,000. The difference is our engineering team is India-based — serving US businesses for 25 years, without the Charlotte overhead, without compromising the quality of the compliance design or the integration architecture.',
+              body: 'A Charlotte automation agency building in Uptown or South End will quote $15,000–$50,000+ for the same workflow FactoryJet delivers starting at $4,000. The difference is our engineering team is specialized — serving US businesses for 25 years, without the Charlotte overhead, without compromising the quality of the compliance design or the integration architecture.',
             },
           ]}
         />

@@ -97,7 +97,7 @@ const faqSchema = {
       name: 'How much does AI automation cost for a small business?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s AI automation services start at $2,500 for a single-workflow automation (one process, one set of tool connections). Most small businesses choose the Growth tier at $8,000, which covers 3–5 interconnected workflows with an AI decision layer, full tool integrations, and a 30-day support window. Enterprise automation platforms with multi-department scope start at $20,000. All prices are 60–70% below comparable US automation agencies — our engineering team is India-based with 25+ years serving US businesses.',
+        text: 'FactoryJet\'s AI automation services start at $2,500 for a single-workflow automation (one process, one set of tool connections). Most small businesses choose the Growth tier at $8,000, which covers 3–5 interconnected workflows with an AI decision layer, full tool integrations, and a 30-day support window. Enterprise automation platforms with multi-department scope start at $20,000. All prices are 60–70% below comparable US automation agencies — our engineering team brings 25+ years serving US businesses.',
       },
     },
     {
@@ -145,7 +145,7 @@ const faqSchema = {
       name: 'How is FactoryJet different from a US AI automation agency?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Three differences: price (60–70% cheaper — India-based engineers serving US businesses since 1999), speed (no account manager layers between your brief and the engineer building it — we start in days, not weeks), and SMB realism (500+ small business projects mean we know where automation actually breaks in a 10-person company and build around it). We also don\'t lock you into proprietary platforms — every automation we build runs on tools you own or can self-manage.',
+        text: 'Three differences: price (60–70% cheaper than comparable US automation agencies — no account manager layers inflating your invoice), speed (we start building in days, not weeks — no procurement process, no discovery retainer, no waiting for a kickoff slot months out), and SMB realism (500+ small business projects mean we know where automation actually breaks in a 10-person company and build around it). We also don\'t lock you into proprietary platforms — every automation we build runs on tools you own or can self-manage.',
       },
     },
     {
@@ -556,7 +556,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does AI automation cost for a small business?',
     answer:
-      'FactoryJet\'s AI automation starts at $2,500 for a single-workflow automation. Most small businesses choose the Growth tier at $8,000, which covers 3–5 interconnected workflows with an AI decision layer, full CRM integration, a monitoring dashboard, and a 30-day support window. Enterprise platforms with multi-department scope start at $20,000. All prices are 60–70% below comparable US automation agencies — our India-based engineering team has served US businesses for 25+ years.',
+      'FactoryJet\'s AI automation starts at $2,500 for a single-workflow automation. Most small businesses choose the Growth tier at $8,000, which covers 3–5 interconnected workflows with an AI decision layer, full CRM integration, a monitoring dashboard, and a 30-day support window. Enterprise platforms with multi-department scope start at $20,000. All prices are 60–70% below comparable US automation agencies — our engineering team has served US businesses for 25+ years.',
   },
   {
     category: 'pricing',
@@ -602,7 +602,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US AI automation agency?',
     answer:
-      'Three differences: price (60–70% cheaper — India-based engineers serving US businesses since 1999, no account manager layers inflating your invoice), speed (we start building in days, not weeks — no procurement process, no discovery retainer, no waiting for a kickoff slot three months out), and SMB realism (500+ small business projects mean we\'ve seen every edge case in a 10-person company\'s data and we build around it). We also recommend the simplest tool that solves your problem — we won\'t oversell custom AI agents when a Zapier workflow would do the job faster and cheaper.',
+      'Three differences: price (60–70% cheaper than comparable US automation agencies — no account manager layers inflating your invoice), speed (we start building in days, not weeks — no procurement process, no discovery retainer, no waiting for a kickoff slot three months out), and SMB realism (500+ small business projects mean we\'ve seen every edge case in a 10-person company\'s data and we build around it). We also recommend the simplest tool that solves your problem — we won\'t oversell custom AI agents when a Zapier workflow would do the job faster and cheaper.',
   },
   {
     category: 'trust',
@@ -874,7 +874,7 @@ export default function AIAutomationPage() {
           lead="Not all automation options are equal. Here's what the decision actually looks like when you compare side by side — on price, capability, and what you're left with after the project ends."
           pullQuote={{
             stat: '60–70%',
-            caption: 'cheaper than a comparable US AI automation agency — same engineering depth, India-based cost structure.',
+            caption: 'cheaper than a comparable US AI automation agency — same engineering depth, without the agency overhead.',
           }}
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}
