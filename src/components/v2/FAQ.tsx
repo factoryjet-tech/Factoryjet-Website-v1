@@ -3,19 +3,22 @@ import { Heading } from './Heading';
 import MotionFadeUp from './MotionFadeUp';
 
 /**
- * FAQ — v2.0 FAQ block, accordion edition.
+ * FAQ — v2.1 FAQ block, Linear Minimal edition.
  *
  * Layout:
- *   Desktop (lg+): 8/12 left col (accordion Q-A) + 4/12 right sticky sidebar
- *                  (category navigation).
+ *   Desktop (lg+): 3/12 left sticky sidebar (category nav) + 9/12 right col (accordion Q-A).
  *   Mobile:        horizontal pill nav strip → stacked accordion below.
+ *
+ * Design: Linear-inspired minimal sidebar — no card, just a clean left-anchored
+ * nav list. Active indicator = orange 2px left border. Open accordion answers
+ * get an orange left-border accent with padding for visual rhythm.
  *
  * Accordion: native <details>/<summary> — zero JavaScript, fully accessible,
  * Lighthouse-safe. `group-open:` Tailwind variants drive the chevron rotation
- * and question-text colour change via pure CSS.
+ * and colour change via pure CSS.
  *
- * AI citation: browsers and AI crawlers (GPTBot, ClaudeBot, PerplexityBot)
- * index <details> content even when collapsed — content is in the DOM.
+ * AI citation (GEO): <details> content is in the DOM even when collapsed —
+ * AI crawlers (GPTBot, ClaudeBot, PerplexityBot) index all answer text.
  *
  * Active state: CSS :target on the section ID highlights the category header
  * when users jump via anchor link. Sidebar nav uses hover-only — zero JS.
@@ -81,20 +84,24 @@ function AccordionItem({ item }: { item: FAQItem }) {
         data-faq-question
         className="flex cursor-pointer list-none items-start justify-between gap-5 py-5 [&::-webkit-details-marker]:hidden"
       >
-        <span className="font-fj-body text-[1rem] font-semibold leading-[1.55] text-fj-ink transition-colors group-open:text-[#F05A28]">
+        <span className="font-fj-body text-[0.9375rem] font-semibold leading-[1.55] text-fj-ink transition-colors group-open:text-[#F05A28]">
           {item.question}
         </span>
-        {/* Chevron pill */}
+        {/* Chevron */}
         <span
           aria-hidden="true"
           className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-fj-neutral-200 bg-white text-fj-neutral-400 transition-all group-open:border-[#F05A28]/30 group-open:bg-[#F05A28]/5 group-open:text-[#F05A28]"
         >
-          <ChevronDown className="transition-transform duration-200 group-open:rotate-180" />
+          <ChevronDown className="transition-transform duration-[220ms] ease-in-out group-open:rotate-180" />
         </span>
       </summary>
 
-      {/* Answer — in DOM even when closed; AI crawlers index it */}
-      <div className="pb-6 pt-0.5">
+      {/* Answer — in DOM even when closed; AI crawlers index it.
+          Orange left-border accent when open (group-open: reads the <details open> attr). */}
+      <div
+        className="pb-6 pt-0.5 group-open:border-l-2 group-open:pl-4"
+        style={{ borderLeftColor: '#F05A28' }}
+      >
         <p
           data-faq-answer
           className="font-fj-body text-[0.9375rem] leading-[1.7] text-fj-neutral-600"
@@ -166,7 +173,7 @@ export default function FAQ({
     );
   }
 
-  /* ── Categorised accordion layout ────────────────────────────────────── */
+  /* ── Categorised accordion layout — Linear Minimal ────────────────────── */
   return (
     <section className="bg-fj-cream py-14 md:py-20">
       <div className="mx-auto max-w-[1120px] px-6 md:px-8">
@@ -212,88 +219,34 @@ export default function FAQ({
           </div>
         </div>
 
-        {/* ── Two-column layout ─────────────────────────────────────────── */}
+        {/* ── Two-column layout: LEFT sidebar nav + RIGHT accordion ─────── */}
         <div className="mt-10 grid grid-cols-1 gap-x-14 lg:mt-12 lg:grid-cols-12">
 
-          {/* ── LEFT: Accordion Q-A (col-span-8) ─────────────────────── */}
-          <div className="lg:col-span-8">
-            <div className="space-y-10">
-              {categories!.map((cat, ci) => {
-                const catItems = grouped[cat.key] ?? [];
-                if (catItems.length === 0) return null;
-                return (
-                  <div
-                    key={cat.key}
-                    id={`faq-${cat.key}`}
-                    // :target CSS hook — scroll-mt so sticky header doesn't cover anchor
-                    className="scroll-mt-28"
-                  >
-                    <MotionFadeUp delay={ci * 0.04}>
-                      {/* Category header */}
-                      <div className="mb-1 flex items-center gap-3 pb-4">
-                        <div
-                          className="h-[3px] w-8 flex-shrink-0 rounded-full"
-                          style={{ background: '#F05A28' }}
-                          aria-hidden="true"
-                        />
-                        <p className="fj-eyebrow" style={{ color: '#F05A28' }}>{cat.label}</p>
-                      </div>
+          {/* ── LEFT: Sticky sidebar nav (col-span-3, desktop only) ──── */}
+          <div className="hidden lg:block lg:col-span-3">
+            <div className="sticky top-24">
 
-                      {/* Accordion items */}
-                      <div>
-                        {catItems.map((item, i) => (
-                          <AccordionItem key={i} item={item} />
-                        ))}
-                        {/* Bottom border on last item */}
-                        <div className="border-t border-fj-neutral-200" />
-                      </div>
-                    </MotionFadeUp>
-                  </div>
-                );
-              })}
-            </div>
+              {/* Sidebar label */}
+              <p className="mb-3 font-fj-mono text-[0.625rem] font-bold tracking-[0.14em] uppercase text-fj-neutral-400">
+                Topics
+              </p>
 
-            {/* Freshness note */}
-            <p
-              className="mt-10 font-fj-mono text-[0.6875rem] tracking-[0.08em] text-fj-neutral-300 uppercase"
-              aria-hidden="true"
-            >
-              {totalCount} questions · answers reflect current FactoryJet services
-            </p>
-          </div>
-
-          {/* ── RIGHT: Sticky sidebar (col-span-4, desktop only) ─────── */}
-          <div className="hidden lg:block lg:col-span-4">
-            <div className="sticky top-24 rounded-2xl border border-fj-neutral-200 bg-white p-6">
-
-              {/* Sidebar header */}
-              <div className="mb-4 flex items-center gap-3 border-b border-fj-neutral-100 pb-4">
-                <div
-                  className="h-[3px] w-6 flex-shrink-0 rounded-full"
-                  style={{ background: '#F05A28' }}
-                  aria-hidden="true"
-                />
-                <p className="font-fj-mono text-[0.6875rem] font-bold tracking-[0.12em] uppercase text-fj-neutral-400">
-                  Topics
-                </p>
-              </div>
-
-              {/* Nav list */}
+              {/* Nav list — Linear Minimal style with left-border indicator */}
               <nav aria-label="FAQ topics">
-                <ul className="space-y-1" role="list">
+                <ul className="space-y-0.5" role="list">
                   {categories!.map((cat) => {
                     const count = grouped[cat.key]?.length ?? 0;
                     return (
                       <li key={cat.key}>
                         <a
                           href={`#faq-${cat.key}`}
-                          className="group flex items-center justify-between rounded-lg px-3 py-2.5 transition-colors hover:bg-[#F05A28]/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F05A28]"
+                          className="group flex items-center justify-between border-l-2 border-transparent px-3 py-2.5 transition-all duration-150 hover:border-[#F05A28] hover:bg-[#F05A28]/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F05A28]"
                         >
-                          <span className="font-fj-body text-[0.9375rem] font-medium text-fj-neutral-600 transition-colors group-hover:text-[#F05A28]">
+                          <span className="font-fj-body text-[0.875rem] font-medium text-fj-neutral-500 transition-colors group-hover:text-[#F05A28]">
                             {cat.label}
                           </span>
                           <span
-                            className="ml-2 inline-flex h-5 min-w-[1.25rem] items-center justify-center rounded-full bg-fj-neutral-100 px-1.5 font-fj-mono text-[0.625rem] font-bold text-fj-neutral-400 transition-colors group-hover:bg-[#F05A28]/10 group-hover:text-[#F05A28]"
+                            className="ml-2 inline-flex h-4 min-w-[1rem] items-center justify-center rounded-full bg-fj-neutral-100 px-1 font-fj-mono text-[0.5625rem] font-bold text-fj-neutral-400 transition-colors group-hover:bg-[#F05A28]/10 group-hover:text-[#F05A28]"
                             aria-hidden="true"
                           >
                             {count}
@@ -305,8 +258,8 @@ export default function FAQ({
                 </ul>
               </nav>
 
-              {/* CTA nudge at bottom of sidebar */}
-              <div className="mt-5 border-t border-fj-neutral-100 pt-5">
+              {/* Thin divider */}
+              <div className="mt-5 border-t border-fj-neutral-200 pt-5">
                 <p className="font-fj-body text-[0.8125rem] leading-[1.55] text-fj-neutral-400">
                   Can&rsquo;t find your answer?
                 </p>
@@ -321,6 +274,54 @@ export default function FAQ({
                   </svg>
                 </a>
               </div>
+
+              {/* Freshness note */}
+              <p
+                className="mt-6 font-fj-mono text-[0.5625rem] tracking-[0.08em] text-fj-neutral-300 uppercase"
+                aria-hidden="true"
+              >
+                {totalCount} questions
+              </p>
+            </div>
+          </div>
+
+          {/* ── RIGHT: Accordion Q-A (col-span-9) ────────────────────── */}
+          <div className="lg:col-span-9">
+            <div className="space-y-10">
+              {categories!.map((cat, ci) => {
+                const catItems = grouped[cat.key] ?? [];
+                if (catItems.length === 0) return null;
+                return (
+                  <div
+                    key={cat.key}
+                    id={`faq-${cat.key}`}
+                    className="scroll-mt-28"
+                  >
+                    <MotionFadeUp delay={ci * 0.04}>
+                      {/* Category header — thin orange accent bar + label */}
+                      <div className="mb-1 flex items-center gap-3 pb-4">
+                        <div
+                          className="h-[2px] w-6 flex-shrink-0"
+                          style={{ background: '#F05A28' }}
+                          aria-hidden="true"
+                        />
+                        <p className="font-fj-mono text-[0.6875rem] font-bold tracking-[0.12em] uppercase" style={{ color: '#F05A28' }}>
+                          {cat.label}
+                        </p>
+                      </div>
+
+                      {/* Accordion items */}
+                      <div>
+                        {catItems.map((item, i) => (
+                          <AccordionItem key={i} item={item} />
+                        ))}
+                        {/* Bottom border on last item */}
+                        <div className="border-t border-fj-neutral-200" />
+                      </div>
+                    </MotionFadeUp>
+                  </div>
+                );
+              })}
             </div>
           </div>
 

@@ -114,6 +114,30 @@ const faqSchema = {
         text: 'Yes. Compliance-aware automation is a core capability for Charlotte\'s financial and healthcare industries. We build automations with full audit trails (every workflow run logged with inputs, decisions, and outputs), least-privilege data access, self-hosted infrastructure options for sensitive environments, and structured exception handling that routes compliance edge cases to human review rather than processing them automatically. For healthcare clients, this includes HIPAA-aligned data handling. For financial services, this includes audit-ready logging that maps to your control framework.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'Can AI automation connect to Charlotte banking, healthcare, and logistics platforms with audit trails?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes — AI workflow automation integrates with the platforms Charlotte\'s regulated industries use. Common connections include Salesforce and nCino for financial services, Epic and Meditech for healthcare, QuickBooks and SAP for accounting, and major TMS and WMS platforms for logistics. For Charlotte banking and healthcare clients, every integration includes an immutable audit log — every workflow run recorded with inputs, decision logic, outputs, and timestamps — as standard.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can Charlotte compliance, legal, or risk teams review the automation logic before go-live?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes — compliance review before deployment is built into every regulated-industry engagement. We run a dedicated staging period where your Charlotte compliance, legal, or risk team can review the automation\'s decision logic, exception handling, and audit trail outputs before any production data is processed. For financial services and healthcare clients, this ensures your internal control team — and your auditors — have full visibility. We document the automation in a format designed for SOC 2, HIPAA, and banking audit review.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do Charlotte financial services or healthcare businesses pay extra for compliance architecture in automation builds?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No surprise add-ons. Full audit trail logging, least-privilege data access, self-hosted infrastructure options, and HIPAA-aligned data handling are included in our Enterprise tier starting at $20,000 — not charged as separate line items. For most Charlotte financial services and logistics clients, the Growth tier at $10,000 already includes the audit trail and exception handling they need. We scope this accurately during discovery — no additions after kickoff when your budget is committed.',
+      },
+    },
   ],
 };
 
@@ -471,6 +495,13 @@ const FAQ_ITEMS = [
       'We build on n8n and Make.com for workflow orchestration, GPT-4o and Claude for the AI reasoning layer, Python scripts for complex data transformation, and LangChain for multi-step AI decision chains. For Charlotte financial and healthcare clients with sensitive data requirements, n8n offers a self-hosted option with full audit trails and no data leaving your environment. We choose the stack based on your workflow complexity, compliance requirements, and self-hosting preferences.',
   },
 
+  {
+    category: 'what-is',
+    question: 'Can AI automation connect to Charlotte banking, healthcare, and logistics platforms with full audit trails?',
+    answer:
+      'Yes — AI workflow automation integrates with the platforms Charlotte\'s regulated industries use. Common connections include Salesforce and nCino for financial services, Epic and Meditech for healthcare, QuickBooks and SAP for accounting, and major TMS and WMS platforms for logistics. For Charlotte banking and healthcare clients, every integration includes an immutable audit log — every workflow run recorded with inputs, decision logic, outputs, and timestamps — as standard, not as a separate line item.',
+  },
+
   /* ── AI Automation in Charlotte ── */
   {
     category: 'charlotte',
@@ -529,6 +560,13 @@ const FAQ_ITEMS = [
       'Every engagement includes a 30-day post-launch window. We monitor workflow execution, fix any failures, handle API changes from connected platforms, and deliver a team training session. After 30 days you can self-manage (the monitoring dashboard shows every run and exception with full audit trail access), continue on a monthly retainer for new workflow development, or both.',
   },
 
+  {
+    category: 'process',
+    question: 'Can Charlotte compliance, legal, or risk teams review the automation logic before it goes live?',
+    answer:
+      'Yes — compliance review before deployment is built into every regulated-industry engagement. We run a dedicated staging period where your Charlotte compliance, legal, or risk team can review the automation\'s decision logic, exception handling, and audit trail outputs before any production data is processed. For financial services and healthcare clients, this review ensures your internal control team — and your auditors — have full visibility. We document the automation architecture in a format designed for SOC 2, HIPAA, and banking audit review.',
+  },
+
   /* ── Pricing & ROI ── */
   {
     category: 'pricing',
@@ -553,6 +591,13 @@ const FAQ_ITEMS = [
     question: 'Are there ongoing costs after the automation is built?',
     answer:
       'Two types: platform costs (n8n self-hosted is free; Make.com runs $9–$29/month for most SMB workflow volumes) and AI model API costs (typically $20–$100/month depending on how much AI reasoning your workflows use — paid directly to OpenAI or Anthropic). Neither is marked up by FactoryJet. Optional monthly retainer for new workflow development or ongoing support.',
+  },
+
+  {
+    category: 'pricing',
+    question: 'Do Charlotte financial services or healthcare businesses pay extra for compliance architecture in automation builds?',
+    answer:
+      'No surprise add-ons. Full audit trail logging, least-privilege data access, self-hosted infrastructure options, and HIPAA-aligned data handling are included in our Enterprise tier starting at $20,000 — not separate line items added after scoping. For most Charlotte financial services and logistics clients, the Growth tier at $10,000 already includes the audit trail and exception handling they need. We scope this accurately during discovery so your budget commitment is firm before any work begins.',
   },
 
   /* ── Trust & Results ── */

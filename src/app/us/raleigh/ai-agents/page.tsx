@@ -114,6 +114,30 @@ const faqSchema = {
         text: 'Yes — the Research Triangle is one of the most educated and technology-forward markets in the US. The concentration of PhD researchers, engineers, and technology companies means both business buyers and consumers are comfortable with AI-driven interactions. Biotech and pharma companies in the Triangle are already investing heavily in AI for internal workflows. Businesses that deploy customer-facing AI agents in this market find high acceptance rates and strong performance in lead qualification and support automation.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'Can a Raleigh AI agent connect to biotech CRMs, Salesforce, or custom research platforms?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes — AI agents integrate with the platforms Research Triangle companies run on. Common connections include Salesforce and HubSpot for CRM, Zendesk and Intercom for support, Calendly and Google Calendar for scheduling, Slack for internal routing, and custom APIs for proprietary biotech and SaaS platforms. For Raleigh companies on modern tech stacks, 70–80% of the integration infrastructure is already in place. We build the AI agent layer on top of what you have.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can our Raleigh compliance or legal team review the AI agent before it goes live?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes — compliance review before deployment is built into every regulated-industry engagement. We run a staged testing period where your Research Triangle compliance, legal, or risk team interacts with the agent using real scenarios before any production customer conversations begin. For Raleigh biotech and healthcare clients, this includes reviewing how the agent handles sensitive topic escalation, PHI avoidance, and fallback behavior. We document everything in a format designed for internal control review.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do Raleigh biotech or healthcare clients pay extra for HIPAA-aware agent configurations?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No surprise add-ons. HIPAA-aware data handling, PHI avoidance, audit trail logging, and private LLM deployment options are included in our Enterprise tier starting at $15,000 — not charged as separate line items. For most Raleigh healthcare and life sciences clients, the Growth tier at $8,000 already covers the compliance handling they need. We scope this accurately during the discovery session so your budget commitment is clear before work starts.',
+      },
+    },
   ],
 };
 
@@ -471,6 +495,13 @@ const FAQ_ITEMS = [
       'We use GPT-4o (OpenAI), Claude 3.5 Sonnet (Anthropic), and Gemini (Google) depending on your use case, data sensitivity, and budget. For regulated industries in the Research Triangle — healthcare, biotech, legal — we configure the agent with strict data handling rules and can use private LLM deployments. We use Voiceflow, Botpress, and LangChain for orchestration. We pick the model that fits your workflow and compliance requirements.',
   },
 
+  {
+    category: 'what-is',
+    question: 'Can a Raleigh AI agent connect to biotech CRMs, Salesforce, or custom research platforms?',
+    answer:
+      'Yes — AI agents integrate with the platforms Research Triangle companies run on. Common connections include Salesforce and HubSpot for CRM, Zendesk and Intercom for support, Calendly and Google Calendar for scheduling, Slack for internal team routing, and custom APIs for proprietary biotech and SaaS platforms. For Raleigh companies on modern tech stacks, 70–80% of the integration infrastructure is already in place. We build the AI agent layer on top of what you have — no rebuilding your stack.',
+  },
+
   /* ── AI Agents in Raleigh ── */
   {
     category: 'raleigh',
@@ -529,6 +560,13 @@ const FAQ_ITEMS = [
       'Every engagement includes a 30-day post-launch window. We monitor conversation logs, fix incorrect answers, tune response quality based on real usage, and deliver a recorded training session for your Raleigh team. After 30 days you can continue on a monthly retainer or manage it yourself — the dashboard is built for non-technical operators.',
   },
 
+  {
+    category: 'process',
+    question: 'Can our Raleigh compliance or legal team review the AI agent before it goes live?',
+    answer:
+      'Yes — compliance review before deployment is built into every regulated-industry engagement. We run a staged testing period where your Research Triangle compliance, legal, or risk team interacts with the agent using real scenarios before any production customer conversations begin. For Raleigh biotech and healthcare clients, this includes reviewing how the agent handles sensitive topic escalation, PHI avoidance, and fallback behavior. We document everything in a format designed for internal control review and audit records.',
+  },
+
   /* ── Pricing & ROI ── */
   {
     category: 'pricing',
@@ -553,6 +591,13 @@ const FAQ_ITEMS = [
     question: 'Are there ongoing costs after the agent is built?',
     answer:
       'Two types: API usage (typically $30–$150/month for most Raleigh SMB agent volumes — paid directly to OpenAI or Anthropic, not marked up by us) and optionally a monthly optimization retainer. Many clients self-manage after the 30-day post-launch window. Enterprise clients with compliance requirements often retain us for ongoing monitoring.',
+  },
+
+  {
+    category: 'pricing',
+    question: 'Do Raleigh biotech or healthcare clients pay extra for HIPAA-aware or compliance-configured agents?',
+    answer:
+      'No surprise add-ons. HIPAA-aware data handling, PHI avoidance in the conversation layer, audit trail logging, and private LLM deployment options are included in the Enterprise tier starting at $15,000 — not charged as separate line items. For most Raleigh healthcare and life sciences clients, the Growth tier at $8,000 already covers the compliance handling they need. We scope this accurately during the discovery session so your budget commitment is clear before work starts.',
   },
 
   /* ── Trust & Results ── */

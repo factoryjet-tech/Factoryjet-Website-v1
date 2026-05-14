@@ -114,6 +114,30 @@ const faqSchema = {
         text: 'Yes. Denver ranks consistently among the top US metros for startup activity and technology adoption. The city\'s mix of tech-native transplants, outdoor industry digital brands, and a growing SaaS ecosystem means customers are comfortable with AI-powered interactions and expect fast digital responses. Businesses that deploy AI agents in Denver report particularly strong results in after-hours lead capture — a critical advantage given the city\'s active lifestyle culture that has people browsing and buying outside of traditional business hours.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'Can a Denver AI agent connect to tools like HubSpot, Shopify, and Google Calendar?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes — AI agents integrate natively with the platforms Denver businesses already use. Common connections include HubSpot and Salesforce for CRM, Shopify and WooCommerce for e-commerce, Google Calendar and Calendly for scheduling, Zendesk and Freshdesk for support ticketing, Slack for team alerts, and Twilio for SMS. Most Denver businesses are already on standard platforms, which means 70–80% of the integration work is already done. We build the agent layer on top of your existing stack.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can a Denver AI agent run on my website, Instagram, and WhatsApp simultaneously?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes — multi-channel deployment is included on Growth and Enterprise plans. A single AI agent handles conversations across your website chat widget, WhatsApp Business, Instagram DMs, Facebook Messenger, and SMS. Denver outdoor and lifestyle brands with strong social audiences see 35–50% of inbound inquiries through Instagram and Facebook, not just the website. One agent, one configuration, consistent answers across all channels.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is there a payment plan for Denver AI agent projects?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'FactoryJet uses milestone-based payments — 50% at kickoff and 50% at delivery for Starter projects. For Growth ($8,000) and Enterprise ($15,000+) engagements: 40% at kickoff, 40% at testing approval, 20% at launch. Payments align with working deliverables you can test — not with calendar dates. No large upfront commitment before you\'ve seen the Denver AI agent working on real business scenarios.',
+      },
+    },
   ],
 };
 
@@ -471,6 +495,13 @@ const FAQ_ITEMS = [
       'We use GPT-4o (OpenAI), Claude 3.5 Sonnet (Anthropic), and Gemini (Google) depending on your use case, data sensitivity, and budget. For most Denver customer-facing agents, GPT-4o or Claude delivers the best balance of accuracy and cost. We use Voiceflow, Botpress, and LangChain for orchestration. We pick the model that fits your workflow — not the most expensive one on the market.',
   },
 
+  {
+    category: 'what-is',
+    question: 'Can a Denver AI agent connect to tools like HubSpot, Shopify, and Google Calendar?',
+    answer:
+      'Yes — AI agents integrate natively with the platforms Denver businesses already use. Common connections include HubSpot and Salesforce for CRM, Shopify and WooCommerce for e-commerce, Google Calendar and Calendly for scheduling, Zendesk and Freshdesk for support ticketing, Slack for internal team alerts, and Twilio for SMS. Most Denver businesses are already on standard platforms, which means 70–80% of the integration work is already done. We build the AI agent layer on top — you keep your existing stack.',
+  },
+
   /* ── AI Agents in Denver ── */
   {
     category: 'denver',
@@ -529,6 +560,13 @@ const FAQ_ITEMS = [
       'Every engagement includes a 30-day post-launch window. We monitor conversation logs, fix incorrect answers, tune response quality based on real usage, and deliver a recorded training session for your Denver team. After 30 days you can continue on a monthly retainer or manage it yourself — the dashboard is built for non-technical operators.',
   },
 
+  {
+    category: 'process',
+    question: 'Can a Denver AI agent run on my website, Instagram, and WhatsApp simultaneously?',
+    answer:
+      'Yes — multi-channel deployment is included on Growth and Enterprise plans. A single AI agent handles conversations across your website chat widget, WhatsApp Business, Instagram DMs, Facebook Messenger, and SMS — with consistent, on-brand answers on every channel. Denver outdoor and lifestyle brands with strong social audiences see 35–50% of inbound inquiries through Instagram and Facebook, not just the website. One agent, one configuration, all channels covered.',
+  },
+
   /* ── Pricing & ROI ── */
   {
     category: 'pricing',
@@ -553,6 +591,13 @@ const FAQ_ITEMS = [
     question: 'Are there ongoing costs after the agent is built?',
     answer:
       'Two types: API usage (typically $30–$150/month for most Denver SMB agent volumes — paid directly to OpenAI or Anthropic, not marked up by us) and optionally a monthly optimization retainer for new flows or integrations. Many clients self-manage after the 30-day post-launch window.',
+  },
+
+  {
+    category: 'pricing',
+    question: 'Is there a payment plan for Denver AI agent projects, or is everything due at kickoff?',
+    answer:
+      'FactoryJet uses milestone-based payments — 50% at kickoff and 50% at delivery for Starter projects. For Growth ($8,000) and Enterprise ($15,000+) engagements, we offer a three-payment structure: 40% at kickoff, 40% at testing approval, and 20% at launch. Payments align with working deliverables you can interact with — not with project calendar dates. No large upfront commitment before you\'ve seen the Denver AI agent handling real business scenarios.',
   },
 
   /* ── Trust & Results ── */

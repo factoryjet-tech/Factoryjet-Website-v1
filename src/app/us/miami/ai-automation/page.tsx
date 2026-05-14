@@ -114,6 +114,30 @@ const faqSchema = {
         text: 'Yes. We build bilingual automation workflows that detect the language of an inbound message or document and route accordingly — responding in English or Spanish, classifying content correctly, and triggering the right workflow branch. For Miami businesses with significant Spanish-speaking customer bases, this eliminates the manual sorting and translation overhead that slows down customer response times and creates errors.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'Can AI automation connect to Miami hospitality PMS systems, QuickBooks, or freight platforms?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes — AI workflow automation integrates with the platforms Miami businesses run on. Common connections include Cloudbeds, Mews, and Opera PMS for hospitality, QuickBooks and Xero for accounting, HubSpot and Salesforce for CRM, Shopify for e-commerce, and TMS and ERP platforms for logistics and trade. Most Miami businesses are on platforms we\'ve integrated before, which means faster deployment and fewer surprises. We confirm compatibility during discovery before quoting.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Will bilingual automation work correctly for Miami workflows that mix English and Spanish in the same message?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes — GPT-4o and Claude handle code-switching natively, which is common in Miami\'s bilingual business environment. The automation classifies and routes correctly even when messages mix English and Spanish in the same sentence. During staging, we test specifically against Miami-typical language patterns — hospitality, trade, and professional services vocabulary in both languages. Correct bilingual routing is part of our acceptance criteria before any automation goes live.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is there a payment plan for Miami AI automation projects?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'FactoryJet uses milestone-based payments. For the $4,000 Starter tier: 50% at kickoff and 50% at delivery. For Growth ($10,000) and Enterprise ($20,000) tiers: 40% at kickoff, 40% at staging approval, 20% at launch. Payments align with working automations you\'ve tested — not with calendar dates. No large upfront commitment before you\'ve seen the Miami AI automation running on your real bilingual business data.',
+      },
+    },
   ],
 };
 
@@ -471,6 +495,13 @@ const FAQ_ITEMS = [
       'We build on n8n and Make.com for workflow orchestration, GPT-4o and Claude for the AI reasoning layer, Python scripts for complex data transformation, and LangChain for multi-step AI decision chains. We choose the stack based on your workflow complexity, data sensitivity, self-hosting preferences, and language requirements. n8n gives a self-hosted option with full audit trails; Make.com is faster to deploy for simpler multi-app workflows.',
   },
 
+  {
+    category: 'what-is',
+    question: 'Can AI automation connect to Miami-specific tools like hospitality PMS systems, QuickBooks, or freight platforms?',
+    answer:
+      'Yes — AI workflow automation integrates with the platforms Miami businesses run on. Common connections include Cloudbeds, Mews, and Opera PMS for hospitality, QuickBooks and Xero for accounting, HubSpot and Salesforce for CRM, Shopify for e-commerce, and TMS and ERP platforms for logistics and trade operations. Most Miami businesses are on platforms we\'ve integrated before, which means faster deployment and fewer surprises. We confirm compatibility during the discovery session before quoting your project.',
+  },
+
   /* ── AI Automation in Miami ── */
   {
     category: 'miami',
@@ -529,6 +560,13 @@ const FAQ_ITEMS = [
       'Every engagement includes a 30-day post-launch window. We monitor workflow execution, fix any failures, handle API changes from connected platforms, and deliver a team training session. After 30 days you can self-manage (the monitoring dashboard shows every run and exception), continue on a monthly retainer for new workflow development, or both.',
   },
 
+  {
+    category: 'process',
+    question: 'Will bilingual automation work correctly for Miami workflows that mix English and Spanish in the same message?',
+    answer:
+      'Yes — GPT-4o and Claude handle code-switching natively, which is common in Miami\'s bilingual business environment. The automation classifies and routes correctly even when messages mix English and Spanish in the same sentence. During our staging period, we test specifically against Miami-typical language patterns — hospitality, trade, and professional services vocabulary in both languages. Correct bilingual routing is part of our acceptance criteria before any automation goes live with your real workflows.',
+  },
+
   /* ── Pricing & ROI ── */
   {
     category: 'pricing',
@@ -553,6 +591,13 @@ const FAQ_ITEMS = [
     question: 'Are there ongoing costs after the automation is built?',
     answer:
       'Two types: platform costs (n8n self-hosted is free; Make.com runs $9–$29/month for most SMB workflow volumes) and AI model API costs (typically $20–$100/month depending on how much AI reasoning your workflows use — paid directly to OpenAI or Anthropic). Neither is marked up by FactoryJet. Optional monthly retainer for new workflow development or ongoing support.',
+  },
+
+  {
+    category: 'pricing',
+    question: 'Is there a payment plan for Miami AI automation projects, or is everything due at kickoff?',
+    answer:
+      'FactoryJet uses milestone-based payments. For the $4,000 Starter tier: 50% at kickoff and 50% at delivery. For Growth ($10,000) and Enterprise ($20,000) tiers: 40% at kickoff, 40% at staging approval, 20% at launch. Your payments align with working automations you\'ve tested and approved — not with calendar dates. No large upfront commitment before you\'ve seen the Miami AI automation running against your real bilingual business data.',
   },
 
   /* ── Trust & Results ── */

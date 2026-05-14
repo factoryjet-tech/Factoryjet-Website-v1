@@ -114,6 +114,30 @@ const faqSchema = {
         text: 'Austin is one of the fastest AI-adoption markets in the US. The tech community normalizes AI tools faster than most cities, customers expect digital-first interactions, and the startup culture rewards businesses that move quickly. Early AI agent adopters in Austin\'s hospitality, real estate, and professional services sectors are already seeing competitive advantages — capturing leads other businesses are losing after hours and reducing support overhead in a tight labor market.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'Can an AI agent connect to my existing tools like HubSpot, Shopify, or Google Calendar?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes — AI agents integrate natively with the platforms Austin businesses already run on. Common connections include HubSpot and Salesforce for CRM, Shopify and WooCommerce for e-commerce, Google Calendar and Calendly for scheduling, Zendesk and Freshdesk for support ticketing, Slack for internal alerts, and Twilio for SMS. Most Austin businesses already have 70–80% of the integration infrastructure in place. We build the agent layer on top — you don\'t rebuild your stack.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can an Austin AI agent deploy on my website, Instagram DMs, and WhatsApp at the same time?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes — multi-channel deployment is standard on Growth and Enterprise plans. A single AI agent handles customer conversations across your website chat widget, WhatsApp Business, Instagram DMs, Facebook Messenger, and SMS simultaneously. Austin businesses with active social audiences see 30–50% of their lead inquiries coming through Instagram and Facebook, not just the website. One agent, consistent answers, all channels covered.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is there a payment plan for Austin AI agent projects, or is everything due at kickoff?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'FactoryJet uses milestone-based payments — 50% at kickoff and 50% at delivery for Starter projects. For Growth ($8,000) and Enterprise ($15,000+) engagements, we offer a three-payment structure: 40% at kickoff, 40% at testing approval, and 20% at launch. Your payments align with working deliverables you can interact with — not with calendar dates. No large upfront commitment before you\'ve seen the agent handling real Austin business scenarios.',
+      },
+    },
   ],
 };
 
@@ -471,6 +495,13 @@ const FAQ_ITEMS = [
       'We use GPT-4o (OpenAI), Claude 3.5 Sonnet (Anthropic), and Gemini (Google) depending on your use case, data sensitivity, and budget. For most Austin customer-facing agents, GPT-4o or Claude delivers the best balance of accuracy and cost. We use Voiceflow, Botpress, and LangChain for orchestration. We choose the model that fits your workflow — not the most expensive one.',
   },
 
+  {
+    category: 'what-is',
+    question: 'Can an AI agent connect to my existing tools like HubSpot, Shopify, or Google Calendar?',
+    answer:
+      'Yes — AI agents integrate natively with the platforms Austin businesses already run on. Common connections include HubSpot and Salesforce for CRM, Shopify and WooCommerce for e-commerce, Google Calendar and Calendly for scheduling, Zendesk and Freshdesk for support ticketing, Slack for internal alerts, and Twilio for SMS. Most Austin businesses already have 70–80% of the integration infrastructure in place because they\'re on standard platforms. We build the agent layer on top — you don\'t rebuild your stack.',
+  },
+
   /* ── AI Agents in Austin ── */
   {
     category: 'austin',
@@ -529,6 +560,13 @@ const FAQ_ITEMS = [
       'Every engagement includes a 30-day post-launch window. We monitor conversation logs, fix incorrect answers, tune response quality based on real usage, and deliver a recorded training session for your Austin team. After 30 days you can continue on a monthly retainer or manage it yourself — the dashboard is built for non-technical operators.',
   },
 
+  {
+    category: 'process',
+    question: 'Can an Austin AI agent deploy on my website, Instagram DMs, and WhatsApp at the same time?',
+    answer:
+      'Yes — multi-channel deployment is standard on Growth and Enterprise plans. A single AI agent handles customer conversations across your website chat widget, WhatsApp Business, Instagram DMs, Facebook Messenger, and SMS simultaneously — with consistent answers and tone on every channel. Austin businesses with active social audiences see 30–50% of their lead inquiries coming through Instagram and Facebook, not just the website. One agent covers all of it.',
+  },
+
   /* ── Pricing & ROI ── */
   {
     category: 'pricing',
@@ -553,6 +591,13 @@ const FAQ_ITEMS = [
     question: 'Are there ongoing costs after the agent is built?',
     answer:
       'Two types: API usage (typically $30–$150/month for most Austin SMB agent volumes — paid directly to OpenAI or Anthropic, not marked up by us) and optionally a monthly optimization retainer for new flows or integrations. Many clients self-manage after the 30-day post-launch window.',
+  },
+
+  {
+    category: 'pricing',
+    question: 'Is there a payment plan, or do I pay the full cost upfront?',
+    answer:
+      'FactoryJet uses milestone-based payments — 50% at project kickoff and 50% at delivery for Starter builds. For Growth ($8,000) and Enterprise ($15,000+) projects, we offer a three-payment structure: 40% at kickoff, 40% at testing approval, 20% at launch. Your payments align with working deliverables you can test — not with dates on a calendar. No large upfront risk before you\'ve seen the Austin AI agent working on real customer scenarios.',
   },
 
   /* ── Trust & Results ── */
