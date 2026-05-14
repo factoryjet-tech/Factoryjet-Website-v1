@@ -7,24 +7,109 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FinalCTA from '@/components/v2/FinalCTA';
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design & Development Services USA | FactoryJet',
+  title: 'Web Design & Development Services for US Small Businesses | FactoryJet',
   description:
-    'FactoryJet builds custom websites, Shopify stores, and web applications for US small businesses. 7-day delivery, 60–70% less than US agencies. Fixed price, full code ownership.',
+    'FactoryJet builds custom websites, Shopify stores, AI agents, and web applications for US small businesses. 7-day delivery, 60–70% less than US agencies. Fixed price, full code ownership. Serving Austin, Miami, Denver, Nashville & more.',
   alternates: { canonical: 'https://factoryjet.com/us/services' },
   openGraph: {
     title: 'Web Design & Development Services USA | FactoryJet',
     description:
-      '500+ websites built for US businesses. Custom web design, Shopify development, and web apps — delivered in 7 days at 60–70% less than a US agency.',
+      '500+ websites built for US businesses. Custom web design, Shopify development, AI agents, and web apps — delivered in 7 days at 60–70% less than a US agency.',
     url: 'https://factoryjet.com/us/services',
     siteName: 'FactoryJet',
     type: 'website',
   },
+  other: {
+    'geo.region': 'US',
+    'geo.placename': 'United States',
+  },
+};
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   JSON-LD
+───────────────────────────────────────────────────────────────────────────── */
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'ItemList',
+      name: 'FactoryJet Web Design & Development Services',
+      description: 'Complete web design and development services for US small businesses',
+      numberOfItems: 10,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Custom Web Design', url: 'https://factoryjet.com/us/services/web-design' },
+        { '@type': 'ListItem', position: 2, name: 'Shopify Development', url: 'https://factoryjet.com/us/services/shopify-development' },
+        { '@type': 'ListItem', position: 3, name: 'Custom E-commerce Development', url: 'https://factoryjet.com/us/services/ecommerce-development' },
+        { '@type': 'ListItem', position: 4, name: 'Web Application Development', url: 'https://factoryjet.com/us/services/web-application-development' },
+        { '@type': 'ListItem', position: 5, name: 'Website Redesign', url: 'https://factoryjet.com/us/services/website-redesign' },
+        { '@type': 'ListItem', position: 6, name: 'WordPress Development', url: 'https://factoryjet.com/us/services/wordpress-development' },
+        { '@type': 'ListItem', position: 7, name: 'AI Agent Development', url: 'https://factoryjet.com/us/services/ai-agents' },
+        { '@type': 'ListItem', position: 8, name: 'AI Automation', url: 'https://factoryjet.com/us/services/ai-automation' },
+        { '@type': 'ListItem', position: 9, name: 'Law Firm Website Design', url: 'https://factoryjet.com/us/services/law-firm-website-design' },
+        { '@type': 'ListItem', position: 10, name: 'Real Estate Website Design', url: 'https://factoryjet.com/us/services/real-estate-website-design' },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/us' },
+        { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://factoryjet.com/us/services' },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'How much do FactoryJet\'s web design services cost?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'FactoryJet\'s web design services start at $1,999 for a 5-page business website. Shopify stores start at $2,499. All prices are fixed and confirmed before work begins — no hourly billing, no scope surprises.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How long does it actually take to get a website built?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Standard 5-page websites go live in 7 business days. Shopify stores take 10–14 days. Complex web applications typically run 3–6 weeks. Every project has a fixed delivery date agreed upfront.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Why is FactoryJet 60–70% cheaper than US web design agencies?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'We\'re based in India with 25+ years of experience serving the US market. Our overhead is lower, so we pass the savings on. You get the same Figma design quality, the same Next.js engineering, and the same responsive support — just without the US agency markup.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do I own my website after FactoryJet builds it?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes, 100%. Full source code ownership transfers to you on final payment. We hand over the GitHub repo, all assets, and complete documentation. You\'re never locked into a proprietary platform or monthly fee.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can FactoryJet build AI-powered features into my website?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Absolutely. We offer dedicated AI Agent Development and AI Automation services — everything from AI chatbots and lead qualification agents to full workflow automation. These can be added to any new or existing website.',
+          },
+        },
+      ],
+    },
+  ],
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -98,6 +183,145 @@ const SERVICES = [
     cta: 'See WordPress Services',
     featured: false,
   },
+  {
+    image: '/images/services/card-webapp.webp',
+    imageAlt: 'AI agent workflow dashboard showing automated task routing and lead qualification',
+    eyebrow: 'AI · NEW',
+    title: 'AI Agent Development',
+    description:
+      'Custom AI agents that qualify leads, answer customer questions, and automate repetitive workflows — 24/7, no extra headcount.',
+    href: '/us/services/ai-agents',
+    cta: 'See AI Agent Services',
+    featured: false,
+  },
+  {
+    image: '/images/services/card-webapp.webp',
+    imageAlt: 'AI automation workflow diagram connecting CRM, email, and support systems',
+    eyebrow: 'AI · AUTOMATION',
+    title: 'AI Automation',
+    description:
+      'Connect your tools. Automate your ops. We build n8n, Zapier, and custom AI pipelines that save 10–30 hours a week.',
+    href: '/us/services/ai-automation',
+    cta: 'See AI Automation',
+    featured: false,
+  },
+  {
+    image: '/images/services/card-law-firm.webp',
+    imageAlt: 'Law firm website on a MacBook showing a professional attorney profile page',
+    eyebrow: 'LEGAL',
+    title: 'Law Firm Websites',
+    description:
+      'High-converting attorney websites that rank for local searches and turn visitors into consultation requests.',
+    href: '/us/services/law-firm-website-design',
+    cta: 'See Law Firm Services',
+    featured: false,
+  },
+  {
+    image: '/images/services/card-real-estate.webp',
+    imageAlt: 'Real estate agent website on a laptop showing property listings and search filters',
+    eyebrow: 'REAL ESTATE',
+    title: 'Real Estate Websites',
+    description:
+      'IDX-integrated property listing sites, agent portfolios, and brokerage platforms that generate leads on autopilot.',
+    href: '/us/services/real-estate-website-design',
+    cta: 'See Real Estate Services',
+    featured: false,
+  },
+];
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   FAQ data
+───────────────────────────────────────────────────────────────────────────── */
+
+const FAQS = [
+  {
+    q: 'How much does a website cost with FactoryJet?',
+    a: 'A standard 5-page small business website starts at $1,999. Shopify stores start at $2,499. Custom web apps and AI integrations are scoped individually — but every project gets a fixed price confirmed in writing before we start. No billing surprises, ever.',
+  },
+  {
+    q: 'Can you really deliver a website in 7 days?',
+    a: 'Yes — for standard business websites up to 5 pages. We\'ve done it 500+ times. The 7-day clock starts the day you approve the Figma design. If we miss the deadline for any reason on our end, you don\'t pay.',
+  },
+  {
+    q: 'Why is your pricing so much lower than US web design agencies?',
+    a: 'We\'re based in India with a team that has 25+ years of experience specifically serving the US market. Our operational costs are lower. We pass that directly to you — not to fund downtown office space. The design quality, code quality, and communication are exactly what you\'d get from a US agency at $8,000–$15,000.',
+  },
+  {
+    q: 'What\'s included in the fixed price?',
+    a: 'Design (Figma files), development, mobile responsiveness, basic on-page SEO setup, Google Analytics integration, and one round of revisions. Hosting, domain, and content writing are separate unless you add them.',
+  },
+  {
+    q: 'Do I get the source code?',
+    a: 'Yes. Full code ownership is non-negotiable at FactoryJet. We hand over the complete GitHub repository on final payment. You can host it anywhere, modify it yourself, or hand it to another developer.',
+  },
+  {
+    q: 'Which platform do you build on?',
+    a: 'Most business sites go on Next.js (our default — fastest performance, Lighthouse 100). We also build on WordPress, Shopify, and Webflow depending on your content management needs. We\'ll recommend the right fit on the discovery call.',
+  },
+  {
+    q: 'Do you work with US small businesses specifically?',
+    a: 'That\'s our entire focus for FactoryJet\'s US division. We\'ve worked with 500+ businesses across Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, Tampa, and other US cities. Our whole process — pricing, delivery, communication hours — is designed around US SMBs.',
+  },
+  {
+    q: 'What industries do you serve?',
+    a: 'We\'ve built for retail, DTC brands, law firms, real estate agents, restaurants, professional services, SaaS companies, healthcare providers, and more. If you\'re a US small business that needs a website, we\'ve probably built one for a similar company.',
+  },
+  {
+    q: 'Can you redesign my existing website without killing my SEO?',
+    a: 'Yes, and we\'re careful about it. Our redesign process includes a full SEO audit before we touch anything. We preserve URL structure, redirect any changed URLs, and migrate meta tags. We\'ve never had a client lose significant rankings from a FactoryJet redesign.',
+  },
+  {
+    q: 'What Shopify services do you offer?',
+    a: 'Custom Liquid theme development, Shopify Plus setup, headless Shopify with Next.js, product page optimization, checkout customization, app integrations, and Shopify migrations from WooCommerce or Magento. We cover the full stack.',
+  },
+  {
+    q: 'Do you build WooCommerce or Magento stores?',
+    a: 'Yes. We build on WooCommerce for businesses that need WordPress-based e-commerce, and Magento for larger catalogs with complex B2B pricing rules. We\'ll help you choose the right platform based on your order volume and catalog size.',
+  },
+  {
+    q: 'What\'s an AI agent, and does my small business actually need one?',
+    a: 'An AI agent is a software program that handles repetitive tasks — answering customer questions, qualifying leads, routing support tickets, sending follow-up emails. If you\'re manually handling any of those at scale, an AI agent probably saves you 10–30 hours a week. We scope them honestly — if you don\'t need one yet, we\'ll tell you.',
+  },
+  {
+    q: 'How does AI automation differ from AI agent development?',
+    a: 'AI automation connects your existing tools (CRM, email, calendar, Slack) and triggers actions based on rules. AI agents are more autonomous — they reason, make decisions, and respond dynamically. Most businesses start with automation and add agents as they scale.',
+  },
+  {
+    q: 'Do you build websites for law firms?',
+    a: 'Yes. We have a dedicated law firm website design service with attorney-specific conversion patterns — practice area pages, attorney bio templates, case result displays, consultation booking forms, and local SEO optimization for city + practice area terms.',
+  },
+  {
+    q: 'Can you build a real estate website with MLS/IDX listings?',
+    a: 'Yes. We integrate IDX feeds (Showcase IDX, iHomefinder, and others) for live property listings and search. We also build custom property CMS setups for brokerages that want more control than a standard IDX plugin.',
+  },
+  {
+    q: 'How do I get started?',
+    a: 'Book a free 30-minute strategy call. We\'ll look at your current site (if you have one), understand your goals, and send a fixed-price proposal within 24 hours. No sales pitch, just a practical conversation about what you need.',
+  },
+  {
+    q: 'What happens if I need changes after the site is live?',
+    a: 'Minor text and image changes are included in the first 30 days after launch. After that, we offer flexible retainer packages or fixed-price change requests. Nothing is open-ended — every piece of post-launch work is priced upfront.',
+  },
+  {
+    q: 'Do you provide website maintenance?',
+    a: 'Yes. We offer monthly maintenance plans covering security updates, plugin updates, uptime monitoring, and performance checks. Plans start at $99/month.',
+  },
+  {
+    q: 'Can you help with SEO after the website is built?',
+    a: 'We handle technical SEO setup as part of every build — site speed, structured data, meta tags, sitemap, Core Web Vitals. For ongoing SEO (content, link building, local citations), we offer separate SEO retainers.',
+  },
+  {
+    q: 'How is FactoryJet different from Fiverr or Upwork freelancers?',
+    a: 'FactoryJet is a structured agency with a defined process, dedicated project managers, quality review layers, and a delivery guarantee. Freelancers can be great, but you\'re taking on the management risk yourself. With us, you get one point of contact, predictable delivery, and someone accountable if something goes wrong.',
+  },
+  {
+    q: 'Do you sign NDAs?',
+    a: 'Yes. We\'ll sign your NDA before the discovery call if you need it. Mutual NDAs are also available. Your business ideas, designs, and data never leave our secure project environment.',
+  },
+  {
+    q: 'Can I see examples of websites you\'ve built for US businesses?',
+    a: 'Yes — visit our portfolio at factoryjet.com/us/portfolio to see live case studies. We also share Figma design files and Lighthouse scores on request.',
+  },
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -124,22 +348,25 @@ function ArrowIcon() {
 export default function USServicesHubPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <SiteHeader />
 
       <main className="bg-fj-cream">
 
         {/* ── HERO ─────────────────────────────────────────────────────────── */}
         <section className="relative overflow-hidden" style={{ minHeight: 'clamp(360px, 45vw, 520px)' }}>
-          {/* Background image */}
           <Image
             src="/images/services/services-hub-hero.webp"
-            alt="Designer's desk with Figma mockups, keyboard, and wireframes — FactoryJet web design studio"
+            alt="Designer\'s desk with Figma mockups, keyboard, and wireframes — FactoryJet web design studio"
             fill
             className="object-cover object-center"
             sizes="100vw"
             priority
           />
-          {/* Dark overlay */}
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
@@ -148,7 +375,6 @@ export default function USServicesHubPage() {
             aria-hidden="true"
           />
 
-          {/* Content */}
           <div className="relative mx-auto max-w-[1120px] px-6 py-16 md:px-8 md:py-24">
             <p
               className="font-fj-mono font-bold uppercase"
@@ -163,10 +389,10 @@ export default function USServicesHubPage() {
                 lineHeight: 1.07,
                 letterSpacing: '-0.03em',
                 color: '#F5F5F2',
-                maxWidth: '18ch',
+                maxWidth: '20ch',
               }}
             >
-              Web Design & Development for US Businesses
+              Web Design & Development Services for US Small Businesses
             </h1>
             <p
               className="mt-5 font-fj-body"
@@ -177,33 +403,24 @@ export default function USServicesHubPage() {
                 maxWidth: '540px',
               }}
             >
-              6 services. Fixed price, confirmed upfront. Delivered in 7 days.
-              60–70% less than a US agency — same Figma design, same Next.js engineering.
+              Fixed price confirmed upfront. Delivered in 7 days.
+              60–70% less than a US agency — same Figma design, same Next.js engineering, full code ownership.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-fj-body text-base font-semibold text-white transition-opacity hover:opacity-90"
-                style={{
-                  background: '#F05A28',
-                  boxShadow: '0 0 0 1px rgba(240,90,40,0.50), 0 8px 32px rgba(240,90,40,0.35)',
-                }}
-              >
-                Book a Free Strategy Call
-                <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/20">
-                  <ArrowIcon />
-                </span>
-              </Link>
+              <ModalCTAButton
+                label="Book a Free Strategy Call"
+                region="us"
+                btnVariant="primary-dark"
+              />
               <Link
                 href="#services"
                 className="inline-flex items-center justify-center rounded-full border border-white/25 px-7 py-3.5 font-fj-body text-base font-semibold text-white transition-colors hover:border-white/40 hover:bg-white/10"
               >
-                Browse Services
+                Browse All Services
               </Link>
             </div>
 
-            {/* Trust chips */}
             <div className="mt-8 flex flex-wrap gap-2">
               {['500+ websites delivered', '7-day delivery guarantee', 'From $1,999 fixed price', 'Full code ownership'].map((item) => (
                 <span
@@ -232,7 +449,6 @@ export default function USServicesHubPage() {
         <section id="services" className="py-14 md:py-20" style={{ backgroundColor: '#FAFAF7' }}>
           <div className="mx-auto max-w-[1120px] px-6 md:px-8">
 
-            {/* Section header */}
             <div className="mb-12">
               <p
                 className="font-fj-mono font-bold uppercase"
@@ -246,10 +462,10 @@ export default function USServicesHubPage() {
                   fontSize: 'clamp(1.875rem, 3.5vw, 2.75rem)',
                   lineHeight: 1.08,
                   letterSpacing: '-0.03em',
-                  maxWidth: '22ch',
+                  maxWidth: '26ch',
                 }}
               >
-                Six Services for US Small Businesses
+                Everything You Need to Launch and Grow Online
               </h2>
               <p
                 className="mt-4 font-fj-body text-fj-neutral-600"
@@ -260,7 +476,6 @@ export default function USServicesHubPage() {
               </p>
             </div>
 
-            {/* Cards grid */}
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {SERVICES.map((service) => (
                 <Link
@@ -272,7 +487,6 @@ export default function USServicesHubPage() {
                     boxShadow: '0 2px 12px -2px rgba(15,15,18,0.08)',
                   }}
                 >
-                  {/* Card image */}
                   <div className="relative w-full overflow-hidden" style={{ aspectRatio: '8 / 5' }}>
                     <Image
                       src={service.image}
@@ -281,7 +495,6 @@ export default function USServicesHubPage() {
                       className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
-                    {/* Orange bottom-border accent on image */}
                     <div
                       className="pointer-events-none absolute inset-x-0 bottom-0 h-[3px]"
                       style={{ background: '#F05A28' }}
@@ -289,7 +502,6 @@ export default function USServicesHubPage() {
                     />
                   </div>
 
-                  {/* Card body */}
                   <div className="flex flex-1 flex-col p-6">
                     <p
                       className="font-fj-mono font-bold uppercase"
@@ -356,16 +568,66 @@ export default function USServicesHubPage() {
                   Book a free 30-minute discovery call. We&apos;ll recommend the right approach for your business and budget.
                 </p>
               </div>
-              <Link
-                href="/contact"
-                className="inline-flex shrink-0 items-center gap-2 rounded-full px-6 py-3 font-fj-body text-sm font-semibold text-white transition-opacity hover:opacity-90"
-                style={{ background: '#F05A28', boxShadow: '0 4px 18px rgba(240,90,40,0.28)' }}
-              >
-                Book Free Call
-                <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-white/20">
-                  <ArrowIcon />
-                </span>
-              </Link>
+              <ModalCTAButton
+                label="Book Free Call"
+                region="us"
+                btnVariant="primary-light"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* ── GEO CONTEXT ──────────────────────────────────────────────────── */}
+        <section className="py-14 md:py-20" style={{ backgroundColor: '#F5F5F2' }}>
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <p
+              className="font-fj-mono font-bold uppercase"
+              style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#F05A28' }}
+            >
+              WHERE WE WORK
+            </p>
+            <h2
+              className="fj-display mt-3 font-semibold text-fj-ink"
+              style={{
+                fontSize: 'clamp(1.5rem, 2.8vw, 2.25rem)',
+                lineHeight: 1.1,
+                letterSpacing: '-0.025em',
+                maxWidth: '30ch',
+              }}
+            >
+              Serving US Small Businesses Coast to Coast
+            </h2>
+            <p
+              className="mt-4 font-fj-body text-fj-neutral-600"
+              style={{ fontSize: '1rem', lineHeight: 1.65, maxWidth: '580px' }}
+            >
+              We work 100% remotely, which means we deliver the same quality whether you&apos;re in a major city
+              or a small town. That said, we have deep familiarity with business climates in these markets:
+            </p>
+            <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              {[
+                { city: 'Austin, TX', desc: 'Tech startups & DTC brands' },
+                { city: 'Miami, FL', desc: 'Hospitality & retail' },
+                { city: 'Denver, CO', desc: 'Outdoor, health & wellness' },
+                { city: 'Nashville, TN', desc: 'Entertainment & services' },
+                { city: 'Portland, OR', desc: 'Creative & food industry' },
+                { city: 'Charlotte, NC', desc: 'Finance & professional services' },
+                { city: 'Raleigh, NC', desc: 'Research & SaaS' },
+                { city: 'Tampa, FL', desc: 'Healthcare & real estate' },
+              ].map(({ city, desc }) => (
+                <div
+                  key={city}
+                  className="rounded-xl bg-white p-4"
+                  style={{ border: '1px solid rgba(15,15,18,0.07)' }}
+                >
+                  <p className="fj-display font-semibold text-fj-ink" style={{ fontSize: '0.9375rem' }}>
+                    {city}
+                  </p>
+                  <p className="mt-1 font-fj-body text-fj-neutral-600" style={{ fontSize: '0.8125rem' }}>
+                    {desc}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -376,14 +638,60 @@ export default function USServicesHubPage() {
           headline="What US founders say after we build their site"
         />
 
+        {/* ── FAQ ──────────────────────────────────────────────────────────── */}
+        <section className="py-14 md:py-20" style={{ backgroundColor: '#FAFAF7' }}>
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <p
+              className="font-fj-mono font-bold uppercase"
+              style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#F05A28' }}
+            >
+              COMMON QUESTIONS
+            </p>
+            <h2
+              className="fj-display mt-3 font-semibold text-fj-ink"
+              style={{
+                fontSize: 'clamp(1.5rem, 2.8vw, 2.25rem)',
+                lineHeight: 1.1,
+                letterSpacing: '-0.025em',
+                maxWidth: '28ch',
+              }}
+            >
+              Questions US Business Owners Ask Before Getting Started
+            </h2>
+
+            <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
+              {FAQS.map(({ q, a }) => (
+                <div
+                  key={q}
+                  className="rounded-2xl bg-white p-6"
+                  style={{ border: '1px solid rgba(15,15,18,0.07)' }}
+                >
+                  <p
+                    className="fj-display font-semibold text-fj-ink"
+                    style={{ fontSize: '0.9375rem', lineHeight: 1.35, letterSpacing: '-0.01em' }}
+                  >
+                    {q}
+                  </p>
+                  <p
+                    className="mt-3 font-fj-body text-fj-neutral-600"
+                    style={{ fontSize: '0.875rem', lineHeight: 1.65 }}
+                  >
+                    {a}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ── FINAL CTA ────────────────────────────────────────────────────── */}
         <FinalCTA
           variant="dark"
           eyebrow="READY TO START"
           headline="Get a Fixed Price in 24 Hours"
-          sub="Tell us what you need. We'll review your current site, recommend the right service, and send a fixed-price proposal within 24 hours. No hourly billing. No surprises."
+          sub="Tell us what you need. We\'ll review your current site, recommend the right service, and send a fixed-price proposal within 24 hours. No hourly billing. No surprises."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'us' }}
-          secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
+          secondaryCta={{ label: 'See Our Portfolio', href: '/us/portfolio' }}
           objectionHandler="Fixed price confirmed upfront. Full code ownership. 7-day delivery guarantee."
         />
 
