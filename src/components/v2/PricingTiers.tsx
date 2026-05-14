@@ -4,21 +4,17 @@ import ModalCTAButton from './ModalCTAButton';
 import type { ModalRegion } from '../../context/ContactModalContext';
 
 /**
- * PricingTiers — v2.1 visual upgrade.
+ * PricingTiers — v2.2 orange/charcoal upgrade.
  *
- * Design language (Path A — CSS/JSX only):
- *   - Section bg: dot grid + top-centre bloom + cream base (same system as
- *     IndustriesGrid — consistent language across all card-grid sections)
- *   - Headline: clamp(1.625rem, 3vw, 2.5rem) replacing <Heading size="h2">
- *     which was oversizing at clamp(2rem, 4vw, 3.5rem)
- *   - Non-popular cards: full v2.1 card pattern — gradient fill
- *     (white→EEF3FF), 3px blue top-cap, crystal shimmer line, outer ring
- *     hover (wrapper div OUTSIDE overflow-hidden — no glow clipping)
- *   - Popular card: full dark-blue gradient (#003D99→#0052CC→#1A6AE8), white
- *     text, elevated shadow, MOST POPULAR chip, inverted CTA (white bg + blue
- *     text). Pulled 12px upward via -mt-3 on desktop to appear elevated.
- *   - Feature checkmarks: SVG circle+tick icons replacing plain text ✓
- *   - CTA buttons: rounded-xl (not rounded-lg) for premium feel
+ * Design language:
+ *   - Section bg: dot grid + cream base (#FAFAF7) — same system as rest of v2
+ *   - Non-popular cards: white bg, 3px orange top-cap (#F05A28), orange circle
+ *     checkmarks, orange outlined CTA (fills on hover), orange hover ring
+ *   - Popular card: charcoal dark (#0F0F12) with 3px orange top-cap, orange
+ *     price text, orange circle checkmarks, solid orange CTA. Elevated -mt-3.
+ *   - All blue (#0052CC / #003D99) removed — full v2 orange/charcoal system.
+ *   - Feature checkmarks: SVG circle+tick icons
+ *   - CTA buttons: rounded-xl for premium feel
  *
  * Tuple-typed `tiers` enforces exactly three at compile time.
  * Pure server component.
@@ -128,7 +124,7 @@ export default function PricingTiers({
 function TierCard({ tier }: { tier: PricingTier }) {
   const isPopular = tier.popular === true;
 
-  /* ─── Popular (dark blue) card ─────────────────────────────────────────── */
+  /* ─── Popular (charcoal + orange) card ────────────────────────────────── */
   if (isPopular) {
     return (
       /*
@@ -137,11 +133,11 @@ function TierCard({ tier }: { tier: PricingTier }) {
        */
       <div className="group relative lg:-mt-3">
 
-        {/* Outer hover ring — white glow (inverted from standard blue ring) */}
+        {/* Outer hover ring — orange ambient glow */}
         <div
           className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
           style={{
-            boxShadow: '0 0 0 2px rgba(255,255,255,0.28), 0 24px 80px rgba(0,82,204,0.50)',
+            boxShadow: '0 0 0 2px rgba(240,90,40,0.50), 0 24px 80px rgba(240,90,40,0.28)',
           }}
           aria-hidden="true"
         />
@@ -149,15 +145,21 @@ function TierCard({ tier }: { tier: PricingTier }) {
         <div
           className="relative flex h-full flex-col overflow-hidden rounded-2xl p-8 transition-transform duration-300 group-hover:-translate-y-1"
           style={{
-            background: 'linear-gradient(155deg, #003D99 0%, #0052CC 50%, #1A6AE8 100%)',
-            boxShadow: '0 24px 72px rgba(0,82,204,0.42), 0 8px 24px rgba(0,82,204,0.28), 0 2px 8px rgba(0,82,204,0.20)',
+            background: '#0F0F12',
+            borderTopWidth: '3px',
+            borderTopStyle: 'solid',
+            borderTopColor: '#F05A28',
+            borderWidth: '1px',
+            borderStyle: 'solid',
+            borderColor: 'rgba(240,90,40,0.18)',
+            boxShadow: '0 24px 72px rgba(240,90,40,0.20), 0 8px 24px rgba(0,0,0,0.40), 0 2px 8px rgba(0,0,0,0.28)',
           }}
         >
-          {/* Crystal shimmer — white on dark */}
+          {/* Crystal shimmer — orange on dark */}
           <div
             className="pointer-events-none absolute inset-x-0 top-0 h-[1px]"
             style={{
-              background: 'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.38) 35%, rgba(255,255,255,0.38) 65%, transparent 100%)',
+              background: 'linear-gradient(90deg, transparent 0%, rgba(240,90,40,0.55) 35%, rgba(240,90,40,0.55) 65%, transparent 100%)',
             }}
             aria-hidden="true"
           />
@@ -168,13 +170,13 @@ function TierCard({ tier }: { tier: PricingTier }) {
             style={{
               fontSize: '9px',
               letterSpacing: '0.14em',
-              background: 'rgba(255,255,255,0.18)',
-              border: '1px solid rgba(255,255,255,0.28)',
-              color: 'rgba(255,255,255,0.92)',
+              background: 'rgba(240,90,40,0.15)',
+              border: '1px solid rgba(240,90,40,0.35)',
+              color: '#F05A28',
               padding: '4px 10px',
             }}
           >
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-white" aria-hidden="true" />
+            <span className="inline-block h-1.5 w-1.5 rounded-full" style={{ background: '#F05A28' }} aria-hidden="true" />
             MOST POPULAR
           </div>
 
@@ -191,14 +193,14 @@ function TierCard({ tier }: { tier: PricingTier }) {
             {tier.name}
           </h3>
 
-          {/* Price */}
+          {/* Price — orange accent */}
           <p
             className="fj-display font-bold mt-6"
             style={{
               fontSize: 'clamp(1.625rem, 3vw, 2.5rem)',
               lineHeight: 1.05,
               letterSpacing: '-0.03em',
-              color: '#FFFFFF',
+              color: '#F05A28',
             }}
           >
             {tier.priceRange}
@@ -210,7 +212,7 @@ function TierCard({ tier }: { tier: PricingTier }) {
             style={{
               fontSize: '0.9375rem',
               lineHeight: 1.6,
-              color: 'rgba(255,255,255,0.75)',
+              color: 'rgba(255,255,255,0.65)',
             }}
           >
             {tier.description}
@@ -222,33 +224,33 @@ function TierCard({ tier }: { tier: PricingTier }) {
               <li
                 key={i}
                 className="flex items-start gap-3 font-fj-body"
-                style={{ fontSize: '0.9375rem', color: 'rgba(255,255,255,0.88)' }}
+                style={{ fontSize: '0.9375rem', color: 'rgba(255,255,255,0.82)' }}
               >
-                {/* White circle checkmark */}
+                {/* Orange circle checkmark */}
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" className="mt-[2px] flex-shrink-0">
-                  <circle cx="8" cy="8" r="7.5" stroke="rgba(255,255,255,0.30)" fill="rgba(255,255,255,0.10)"/>
-                  <path d="M4.5 8l2.5 2.5 4-5" stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+                  <circle cx="8" cy="8" r="7.5" stroke="rgba(240,90,40,0.40)" fill="rgba(240,90,40,0.12)"/>
+                  <path d="M4.5 8l2.5 2.5 4-5" stroke="#F05A28" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
                 <span>{f}</span>
               </li>
             ))}
           </ul>
 
-          {/* CTA — inverted: white bg + blue text */}
+          {/* CTA — solid orange fill */}
           <div className="mt-8">
             {tier.cta.modal ? (
               <ModalCTAButton
                 label={tier.cta.label}
                 region={tier.cta.region ?? 'us'}
-                btnVariant="secondary-light"
-                className="block w-full rounded-xl bg-white px-6 py-3.5 text-center font-fj-body font-semibold text-[#F05A28] transition-all hover:bg-[#F0F4FF] focus-visible:outline-white"
-                style={{ fontSize: '0.9375rem', borderRadius: '0.75rem', border: 'none' }}
+                btnVariant="primary-light"
+                className="block w-full rounded-xl px-6 py-3.5 text-center font-fj-body font-semibold text-white transition-all focus-visible:outline-white"
+                style={{ fontSize: '0.9375rem', background: '#F05A28', borderRadius: '0.75rem', border: 'none' }}
               />
             ) : (
               <Link
                 href={tier.cta.href ?? '/contact'}
-                className="block w-full rounded-xl bg-white px-6 py-3.5 text-center font-fj-body font-semibold text-[#F05A28] transition-all hover:bg-[#F0F4FF] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-                style={{ fontSize: '0.9375rem' }}
+                className="block w-full rounded-xl px-6 py-3.5 text-center font-fj-body font-semibold text-white transition-all hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F05A28]"
+                style={{ fontSize: '0.9375rem', background: '#F05A28', boxShadow: '0 4px 16px rgba(240,90,40,0.38)' }}
               >
                 {tier.cta.label}
               </Link>
@@ -263,11 +265,11 @@ function TierCard({ tier }: { tier: PricingTier }) {
   return (
     <div className="group relative h-full">
 
-      {/* Outer hover ring — blue glow OUTSIDE overflow-hidden */}
+      {/* Outer hover ring — orange glow OUTSIDE overflow-hidden */}
       <div
         className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         style={{
-          boxShadow: '0 0 0 2px rgba(0,82,204,0.38), 0 16px 48px rgba(0,82,204,0.14)',
+          boxShadow: '0 0 0 2px rgba(240,90,40,0.38), 0 16px 48px rgba(240,90,40,0.10)',
         }}
         aria-hidden="true"
       />
@@ -275,20 +277,20 @@ function TierCard({ tier }: { tier: PricingTier }) {
       <div
         className="relative flex h-full flex-col overflow-hidden rounded-2xl p-8 transition-transform duration-300 group-hover:-translate-y-1"
         style={{
-          background: 'linear-gradient(165deg, #FFFFFF 0%, #EEF3FF 100%)',
+          background: '#FFFFFF',
           borderWidth: '1px',
           borderStyle: 'solid',
-          borderColor: 'rgba(0,82,204,0.12)',
+          borderColor: 'rgba(0,0,0,0.08)',
           borderTopWidth: '3px',
-          borderTopColor: 'rgba(0,82,204,0.65)',
-          boxShadow: '0 4px 20px rgba(0,82,204,0.07), 0 1px 4px rgba(0,0,0,0.05)',
+          borderTopColor: '#F05A28',
+          boxShadow: '0 4px 20px rgba(240,90,40,0.06), 0 1px 4px rgba(0,0,0,0.05)',
         }}
       >
-        {/* Crystal shimmer */}
+        {/* Crystal shimmer — orange */}
         <div
           className="pointer-events-none absolute inset-x-0 top-0 h-[1px]"
           style={{
-            background: 'linear-gradient(90deg, transparent 0%, rgba(0,82,204,0.30) 35%, rgba(0,82,204,0.30) 65%, transparent 100%)',
+            background: 'linear-gradient(90deg, transparent 0%, rgba(240,90,40,0.30) 35%, rgba(240,90,40,0.30) 65%, transparent 100%)',
           }}
           aria-hidden="true"
         />
@@ -333,10 +335,10 @@ function TierCard({ tier }: { tier: PricingTier }) {
               className="flex items-start gap-3 font-fj-body text-fj-ink"
               style={{ fontSize: '0.9375rem' }}
             >
-              {/* Blue circle checkmark */}
+              {/* Orange circle checkmark */}
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" className="mt-[2px] flex-shrink-0">
-                <circle cx="8" cy="8" r="7.5" stroke="rgba(0,82,204,0.25)" fill="rgba(0,82,204,0.06)"/>
-                <path d="M4.5 8l2.5 2.5 4-5" stroke="#0052CC" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+                <circle cx="8" cy="8" r="7.5" stroke="rgba(240,90,40,0.28)" fill="rgba(240,90,40,0.06)"/>
+                <path d="M4.5 8l2.5 2.5 4-5" stroke="#F05A28" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
               <span>{f}</span>
             </li>
