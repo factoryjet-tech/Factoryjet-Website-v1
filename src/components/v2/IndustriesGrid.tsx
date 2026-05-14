@@ -86,7 +86,7 @@ const INDUSTRIES = [
     id: 4,
     name: 'Retail & Local Businesses',
     description:
-      'Mobile-first sites optimised for local search, foot traffic, and repeat customers — delivering measurable ROI for brick-and-mortar and omnichannel brands.',
+      'Mobile-first sites optimized for local search, foot traffic, and repeat customers — delivering measurable ROI for brick-and-mortar and omnichannel brands.',
     stat: '+41%',
     statLabel: 'increase in local organic search traffic within 60 days',
     chips: ['Local SEO', 'Google Maps', 'Mobile-First'],

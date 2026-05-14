@@ -79,7 +79,7 @@ const JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '04',
     title: 'Content & SEO',
     description:
-      'Copy, optimised WebP imagery, meta tags, JSON-LD schema, and internal links all land in this phase. We submit the sitemap to Google Search Console and verify rendering for AI crawlers.',
+      'Copy, optimized WebP imagery, meta tags, JSON-LD schema, and internal links all land in this phase. We submit the sitemap to Google Search Console and verify rendering for AI crawlers.',
   },
   {
     number: '05',
@@ -108,7 +108,7 @@ const FAQ_ITEMS = [
   {
     question: 'Which platform is best for a B2B business website?',
     answer:
-      "The right platform depends on your business requirements. WordPress offers maximum SEO flexibility and content control. Webflow provides design precision with manageable maintenance. Shopify is optimised for e-commerce conversion. Next.js and custom React stacks suit high-performance or application-like builds. FactoryJet recommends based on your goals — not internal capability constraints.",
+      "The right platform depends on your business requirements. WordPress offers maximum SEO flexibility and content control. Webflow provides design precision with manageable maintenance. Shopify is optimized for e-commerce conversion. Next.js and custom React stacks suit high-performance or application-like builds. FactoryJet recommends based on your goals — not internal capability constraints.",
   },
   {
     question: 'Can you redesign my website without losing Google rankings?',

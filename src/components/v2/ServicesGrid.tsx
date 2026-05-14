@@ -74,7 +74,7 @@ const SERVICES: Service[] = [
     num: '02',
     category: 'Web Development',
     name: 'Website Redesign',
-    tagline: 'Modernise your site without losing SEO equity — Core Web Vitals green in 7 days.',
+    tagline: 'Modernize your site without losing SEO equity — Core Web Vitals green in 7 days.',
     timeline: '7-day delivery',
     timelineLabel: 'Delivery',
     deliverables: [
@@ -292,7 +292,7 @@ export default function ServicesGrid() {
               className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4"
               style={{ color: '#111118' }}
             >
-              Seven specialised services.{' '}
+              Seven specialized services.{' '}
               <span style={{ color: ORANGE }}>One accountable team.</span>
             </h2>
             <p className="text-base sm:text-lg leading-relaxed" style={{ color: '#666' }}>

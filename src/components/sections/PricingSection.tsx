@@ -44,7 +44,7 @@ const PRICING_TIERS = [
       "Up to 50 products",
       "Payment gateway integration",
       "Delivery options setup",
-      "SEO-optimised product pages",
+      "SEO-optimized product pages",
       "AI chatbot for sales",
     ],
     highlighted: false,

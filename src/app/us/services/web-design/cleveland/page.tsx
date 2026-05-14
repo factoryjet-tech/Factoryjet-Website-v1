@@ -79,14 +79,14 @@ const SERVICES = [
     icon: '🛍️',
     name: 'E-Commerce Development',
     description:
-      'Shopify and WooCommerce stores built to convert Cleveland shoppers. Optimised checkout flows, mobile-first performance, full product migration. Starting at $4,999.',
+      'Shopify and WooCommerce stores built to convert Cleveland shoppers. Optimized checkout flows, mobile-first performance, full product migration. Starting at $4,999.',
     href: '/us/services/ecommerce-development',
   },
   {
     icon: '🔄',
     name: 'Website Redesign',
     description:
-      'Modernise your Cleveland business site without losing SEO equity. We preserve URL structure, redirect map, and rankings while upgrading design and speed.',
+      'Modernize your Cleveland business site without losing SEO equity. We preserve URL structure, redirect map, and rankings while upgrading design and speed.',
     href: '/us/services/website-redesign',
   },
   {
@@ -107,7 +107,7 @@ const SERVICES = [
     icon: '🏥',
     name: 'Healthcare & Legal Sites',
     description:
-      'HIPAA-aware healthcare websites and authority-building law firm sites for Cleveland practices. Compliant, credible, and conversion-optimised.',
+      'HIPAA-aware healthcare websites and authority-building law firm sites for Cleveland practices. Compliant, credible, and conversion-optimized.',
     href: '/us/services/web-design',
   },
 ];
@@ -135,7 +135,7 @@ const JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '04',
     title: 'Content & SEO',
     description:
-      'Copy, optimised WebP imagery, meta tags, JSON-LD schema, and internal links all land in this phase. We submit the sitemap to Google Search Console and verify rendering for AI crawlers.',
+      'Copy, optimized WebP imagery, meta tags, JSON-LD schema, and internal links all land in this phase. We submit the sitemap to Google Search Console and verify rendering for AI crawlers.',
   },
   {
     number: '05',
@@ -176,7 +176,7 @@ const FAQ_ITEMS = [
   {
     question: 'What platform do you build websites on?',
     answer:
-      'We recommend the best platform for your specific goals. WordPress offers maximum SEO flexibility and content control. Shopify is optimised for e-commerce conversion. Webflow provides design precision with manageable maintenance. Next.js and custom React stacks suit high-performance or application-like builds. We recommend based on your requirements — not internal capability constraints.',
+      'We recommend the best platform for your specific goals. WordPress offers maximum SEO flexibility and content control. Shopify is optimized for e-commerce conversion. Webflow provides design precision with manageable maintenance. Next.js and custom React stacks suit high-performance or application-like builds. We recommend based on your requirements — not internal capability constraints.',
     category: 'technical',
   },
   {

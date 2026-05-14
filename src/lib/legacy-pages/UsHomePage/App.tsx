@@ -1046,12 +1046,12 @@ const Services = ({ onCtaClick }: { onCtaClick: () => void }) => {
                 
                 <h3 className="text-3xl font-bold text-[#0F172A] mb-4 font-space">E-Commerce Development</h3>
                 <p className="text-slate-600 mb-8 text-lg leading-relaxed">
-                  Convert browsers into buyers with optimised product pages, streamlined checkout flows, and mobile-first performance.
+                  Convert browsers into buyers with optimized product pages, streamlined checkout flows, and mobile-first performance.
                 </p>
 
                 <div className="space-y-4 mb-8 flex-grow">
                    {[
-                     "Convert Browsers to Buyers: Optimised product pages and frictionless checkout",
+                     "Convert Browsers to Buyers: Optimized product pages and frictionless checkout",
                      "Upsells & Repeat Customers: Strategic features that increase average order value",
                      "Scalable Systems: Flexible inventory and payment integration for growth",
                      "Mobile-First Performance: 60%+ of B2B shoppers browse on mobile"
@@ -1091,7 +1091,7 @@ const Services = ({ onCtaClick }: { onCtaClick: () => void }) => {
              {
                title: "Website Redesign",
                icon: <RefreshCw size={24} />,
-               desc: "Modernise your site without losing SEO equity. Optimised for lead generation, usability, and Core Web Vitals performance.",
+               desc: "Modernize your site without losing SEO equity. Optimized for lead generation, usability, and Core Web Vitals performance.",
                price: "$2,499+",
                time: "7 Days",
                color: "text-teal-600",
@@ -1158,7 +1158,7 @@ const CaseStudies = () => {
       category: "Cybersecurity",
       filterCategory: "Cybersecurity",
       challenge: "Website failed to communicate enterprise-level cybersecurity authority — resulting in low trust signals and underperforming lead quality.",
-      solution: "Full brand repositioning with trust-first enterprise UX, structured credibility signals, and optimised service pages targeting decision-makers.",
+      solution: "Full brand repositioning with trust-first enterprise UX, structured credibility signals, and optimized service pages targeting decision-makers.",
       quote: "Qualified lead volume more than tripled within 60 days of launch.",
       link: "/case",
       image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800",
@@ -1170,7 +1170,7 @@ const CaseStudies = () => {
       category: "Healthcare Technology",
       filterCategory: "Healthcare",
       challenge: "Healthcare platform too complex for prospects to evaluate independently — creating friction in the evaluation and buying process.",
-      solution: "Simplified navigation structure, interactive product walkthroughs, and optimised CTAs aligned with WCAG and HIPAA-aware design standards.",
+      solution: "Simplified navigation structure, interactive product walkthroughs, and optimized CTAs aligned with WCAG and HIPAA-aware design standards.",
       quote: "Sales cycle shortened by 40% — reducing cost of acquisition and increasing close rates.",
       link: "/case",
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800",
@@ -1388,7 +1388,7 @@ const Industries = () => {
     {
       name: "Cybersecurity",
       icon: <ShieldCheck size={32} />,
-      desc: "Build authority instantly with a design that signals technical competence and enterprise credibility. Conversion-focused UX and SEO-optimised for competitive keywords.",
+      desc: "Build authority instantly with a design that signals technical competence and enterprise credibility. Conversion-focused UX and SEO-optimized for competitive keywords.",
       bg: "bg-blue-50",
       color: "text-blue-600"
     },
@@ -1437,7 +1437,7 @@ const Industries = () => {
     {
       name: "E-Commerce",
       icon: <ShoppingCart size={32} />,
-      desc: "Convert browsers to buyers with optimised product pages and checkout flows. Mobile-first design built for the 60%+ of B2B shoppers browsing on mobile.",
+      desc: "Convert browsers to buyers with optimized product pages and checkout flows. Mobile-first design built for the 60%+ of B2B shoppers browsing on mobile.",
       bg: "bg-green-50",
       color: "text-green-600"
     }
@@ -2089,7 +2089,7 @@ const FAQ = () => {
     },
     {
       question: "Which platform is best for a B2B business website?",
-      answer: "The right platform depends on your business requirements. WordPress offers maximum SEO flexibility and content control. Webflow provides design precision with manageable maintenance. Shopify is optimised for e-commerce conversion. Next.js and custom React stacks suit high-performance or application-like builds. FactoryJet recommends based on your goals — not internal capability constraints."
+      answer: "The right platform depends on your business requirements. WordPress offers maximum SEO flexibility and content control. Webflow provides design precision with manageable maintenance. Shopify is optimized for e-commerce conversion. Next.js and custom React stacks suit high-performance or application-like builds. FactoryJet recommends based on your goals — not internal capability constraints."
     },
     {
       question: "Can you redesign my website without losing Google rankings?",
