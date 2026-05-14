@@ -443,6 +443,38 @@ export default function Page() {
               answer:
                 "Every Denver Shopify store includes: custom design (not a theme), full Shopify development, Denver sales tax setup (all 8 components + Front Range municipalities), payment gateway integration, product catalog setup, mobile-first responsive design, Core Web Vitals optimization (Lighthouse 90+), JSON-LD schema, AEO content for AI search visibility, GSAP micro-animations, 30 days of post-launch support, and a launch walkthrough. Starting at $2,999 — no hidden fees.",
             },
+            {
+              question: 'Can you build a Shopify store for a Denver ski, snowboard, or winter sports brand?',
+              answer: "Yes — ski and winter sports is Denver's most important e-commerce category and a core FactoryJet specialty. Denver is the gateway to Vail, Breckenridge, Keystone, Arapahoe Basin, and 26+ Colorado ski resorts within a 2-hour drive. We build Shopify stores for: ski and snowboard equipment retailers, après-ski apparel and lifestyle brands, ski resort merchandise shops, winter sports accessory companies, and ski rental platforms with deposit-plus-rental-period logic. Colorado's 60M+ annual ski visits generate enormous DTC demand — a well-built Shopify store lets Denver outdoor brands capture resort-town spend at full retail margins instead of losing it to REI or Amazon.",
+            },
+            {
+              question: 'How do I get my Denver Shopify store ranked on Google and in AI search?',
+              answer: "FactoryJet builds every Denver Shopify store with SEO and AEO foundations targeting Colorado-specific search intent. We implement: FAQPage + LocalBusiness + Product JSON-LD schema for Google, ChatGPT, Perplexity, and Google AI Overviews; page titles and meta descriptions targeting 'Denver [product]', 'Colorado outdoor gear', 'buy [product] Denver'; Core Web Vitals optimization (Lighthouse 90+, sub-1.5s load on mobile); and an AEO content plan that answers the exact questions Denver consumers ask about your product category. Denver's outdoor and cannabis consumer bases are heavy searchers — structured content that appears in AI-generated answers captures zero-click search intent that traditional SEO misses.",
+            },
+            {
+              question: 'Do you build subscription or membership Shopify stores for Denver brands?',
+              answer: "Yes — subscription commerce is a natural fit for Denver's outdoor and lifestyle brands. We build: gear maintenance subscription programs for outdoor equipment companies, craft beer club subscriptions for Colorado breweries, supplement and nutrition membership programs, ski wax and accessory replenishment subscriptions, and outdoor lifestyle product boxes. Denver's outdoor consumer is habit-driven and brand-loyal — subscription programs generate 30–50% higher customer lifetime value than one-time-purchase stores. FactoryJet builds subscription stores with Recharge or native Shopify Subscriptions, mountain lifestyle UX, and conversion flows optimized for Denver's adventure-focused consumer.",
+            },
+            {
+              question: 'What payment methods should my Denver Shopify store accept?',
+              answer: "Every Denver Shopify store should accept: Shopify Payments (lowest fees, seamless integration), PayPal (30%+ of first-time purchasers prefer PayPal), Apple Pay and Google Pay (critical for Denver's tech-savvy outdoor consumers — reduces checkout friction by 40%), Afterpay and Shop Pay Installments for high-ticket outdoor gear purchases (bikes, skis, kayaks). For Denver's B2B outdoor gear wholesale buyers, add net-30 invoicing via Shopify's B2B tools. For Denver cannabis-adjacent and wellness brands, FactoryJet configures high-risk payment processors (Authorize.net, NMI) that accept hemp and CBD products. All payment configuration is included in the standard 7-day build.",
+            },
+            {
+              question: 'Can you build a Shopify store for a Denver tech startup or SaaS company?',
+              answer: "Yes — Denver's fast-growing tech scene (Palantir HQ, DoorDash major office, Gusto, Ibotta, Ping Identity, and hundreds of growth-stage startups) creates e-commerce demand for hardware accessories, branded merchandise, and B2B self-serve portals. We build Shopify stores for: developer tool companies with swag and license stores, hardware/IoT startups with accessory and replacement part stores, B2B SaaS companies with self-serve annual subscription purchasing, and tech-forward DTC brands that need headless Next.js performance. Denver's I-25 tech corridor expects fast, well-designed stores — FactoryJet builds Lighthouse 100/100 stores that match the product quality of Denver's best tech companies.",
+            },
+            {
+              question: 'Do you serve Boulder and Fort Collins in addition to Denver?',
+              answer: "Yes — FactoryJet serves the entire Colorado Front Range: Denver, Boulder, Fort Collins, Colorado Springs, Aurora, Lakewood, Arvada, Westminster, Thornton, and all metros along the I-25 corridor. Boulder's outdoor and natural products brands (Celestial Seasonings, Crocs, Eco-Products, many craft spirits) represent a distinct e-commerce opportunity from Denver's urban market. Fort Collins has its own strong craft brewing and outdoor apparel ecosystem (New Belgium, Odell Brewing). FactoryJet configures city-specific tax rates for every Front Range municipality and builds stores that rank for both city-level and Colorado-level search queries.",
+            },
+            {
+              question: 'How do I sell outdoor gear internationally from my Denver Shopify store?',
+              answer: "FactoryJet configures Shopify Markets for international outdoor gear selling: multi-currency display (USD + CAD, GBP, EUR, AUD, NZD — key outdoor markets), international shipping zones with DHL and FedEx International carrier rate calculators, HS tariff codes for outdoor equipment (helmets, skis, climbing gear have specific customs classifications), duty and import tax display at checkout, and country-specific shipping restrictions for regulated items (lithium batteries in headlamps, pressurized avalanche airbags). Colorado's outdoor brands have natural international audiences in Canada, Australia, the UK, Norway, Switzerland, and Japan — FactoryJet removes the friction that prevents international sales.",
+            },
+            {
+              question: 'Does FactoryJet offer ongoing Shopify maintenance and support plans for Denver businesses?',
+              answer: "Yes — ongoing support is built into how FactoryJet works with Denver clients. Every build includes a 30-day support window. Post-launch options: monthly retainer plans from $299/month (up to 4 hours development, priority response, same-day bug fixes), seasonal campaign builds for Denver's outdoor calendar (ski season November–April, summer outdoor July–August, Black Friday), and performance reviews. Denver's outdoor brands operate on a seasonal calendar — FactoryJet retainer clients get pre-built seasonal landing pages, inventory collection updates, and promotion flows ready before each season's peak. We document every build so your Denver team can manage daily operations independently.",
+            },
           ]}
         />
 

@@ -444,6 +444,38 @@ export default function Page() {
               answer:
                 'Every Miami Shopify store includes: custom design (not a template), full Shopify development and configuration, Florida sales tax setup (7% Miami-Dade), payment gateway integration, product catalog setup (bilingual optional), mobile-first responsive design, Core Web Vitals optimization (Lighthouse 90+), Google Search Console setup, JSON-LD schema (FAQPage + Service + BreadcrumbList), AEO content for AI search visibility, 30 days of post-launch support. From $2,999.',
             },
+            {
+              question: 'Can you build a Shopify store for a Miami nightlife, events, or entertainment brand?',
+              answer: "Yes — Miami's $27B tourism and entertainment economy generates massive DTC demand for merchandise, experiences, and branded goods. We build Shopify stores for: Miami nightclub merchandise brands, music festival official merchandise shops, DJ and artist merchandise with limited-edition drops, event photography brands, and luxury beach club branded goods. Miami entertainment brands have unique needs: limited-edition drop mechanics (time-gated product releases for event nights), VIP package bundles, international shipping to Latin American fans, and Spanish-English bilingual product pages. FactoryJet builds all of these natively into your Shopify store.",
+            },
+            {
+              question: 'How do I rank my Miami Shopify store on Google and in AI search?',
+              answer: "FactoryJet builds every Miami Shopify store with a full SEO and AEO foundation targeting Miami-specific search intent. We implement: FAQPage + LocalBusiness + Product JSON-LD schema for Google and AI crawlers (ChatGPT, Perplexity, Google AI Overviews); bilingual keyword optimization in English and Spanish for Miami's dual-language market; page titles and meta descriptions targeting 'Miami [product]', 'buy [product] Miami', and 'Miami [industry] store'; Core Web Vitals optimization (Lighthouse 90+); and structured internal linking. Miami's 26M annual tourists also search 'buy [product] in Miami' and 'Miami souvenir shop' — we optimize for visitor search intent alongside local buyer intent.",
+            },
+            {
+              question: 'Do you build Shopify stores for Miami real estate or hospitality brands?',
+              answer: "Yes — Miami's $46B real estate market and luxury hospitality economy create significant product and service e-commerce. We build Shopify stores for: luxury home staging and décor brands targeting Miami's $1M+ condo market, hotel gift shops and branded merchandise, vacation rental amenity product stores, boat and yacht accessory retailers, and luxury outdoor living brands. Miami's ultra-high-net-worth consumer base (the highest density of $30M+ wealth households in Florida) means premium aesthetics and high AOV are baseline expectations — FactoryJet builds stores that match the luxury positioning of Miami's real estate and hospitality brands.",
+            },
+            {
+              question: 'What payment methods should a Miami Shopify store accept?',
+              answer: "Miami's multilingual, multi-national consumer base requires a broader payment method stack than most US cities. Every Miami Shopify store should accept: Shopify Payments (core US market), PayPal (dominant across Latin America for US dollar purchases), Apple Pay and Google Pay (high mobile adoption in South Florida), Afterpay for installment purchases, and Klarna for EU and international tourists. For Latin American customer bases specifically, add Mercado Pago (dominant in Brazil, Argentina, Mexico) via Shopify's third-party gateway integration. For Miami's luxury market, add Sezzle or Shop Pay Installments for high-AOV items. FactoryJet configures the full payment stack during your standard build.",
+            },
+            {
+              question: 'Can you build a subscription Shopify store for Miami health, beauty, or wellness brands?',
+              answer: "Yes — Miami's beauty, wellness, and luxury lifestyle culture drives strong subscription commerce demand. We build Shopify subscription stores for: premium skincare and beauty box subscriptions, supplement and nutrition clubs, luxury wellness membership programs, blow-dry bar and spa product bundles, and fashion rental or styling box services. Miami's health-conscious, appearance-focused consumer base has among the highest subscription lifetime values of any US market. FactoryJet builds subscription stores with Recharge or native Shopify subscriptions, Spanish and English product descriptions, and conversion flows optimized for Miami's mobile-first luxury buyer.",
+            },
+            {
+              question: 'Does FactoryJet offer Shopify SEO services for Miami businesses?',
+              answer: "Yes — FactoryJet builds technical SEO and AEO (Answer Engine Optimization) into every Miami Shopify store from day one, and offers ongoing SEO content services. The standard build includes: JSON-LD schema (FAQPage, LocalBusiness, Product), canonical tags, XML sitemap, Google Search Console setup, Core Web Vitals optimization, and keyword-optimized page structure. Ongoing SEO content packages start at $499/month: monthly blog posts targeting Miami-specific keywords, product description rewrites for AI search visibility, and FAQ content aligned with how Miami consumers ask questions in ChatGPT and Perplexity. Miami's competitive e-commerce landscape requires consistent content production — FactoryJet's content team understands South Florida's market.",
+            },
+            {
+              question: 'How does FactoryJet handle international shipping configuration for Miami brands?',
+              answer: "Miami brands typically need the most sophisticated international shipping setup of any US city. FactoryJet configures: Shopify Markets with multi-currency support (USD + BRL, MXN, COP, EUR, GBP as needed), international carrier rate calculators (DHL, FedEx International, USPS First Class International), HS tariff codes for product categories, duty and import tax display at checkout for international buyers, restricted shipping zones for regulated products (tobacco, spirits, CBD), and country-specific payment method integrations (Mercado Pago for LATAM, iDEAL for Netherlands). We also configure Florida's export compliance requirements for high-value shipments and IOSS for EU customers buying above €150 thresholds.",
+            },
+            {
+              question: 'Does FactoryJet offer ongoing Shopify support plans for Miami businesses?',
+              answer: "Yes — FactoryJet offers post-launch support structured for Miami's seasonally driven market. Every Miami build includes a 30-day support window. Beyond that, ongoing options include: monthly retainer plans from $299/month (4 hours development, priority SLA), seasonal campaign build packages (Black Friday/Cyber Monday, New Year holiday promotions, Art Basel merchandise drops), bilingual content updates, and performance optimization reviews. Miami's high-volume tourism seasons (winter snowbirds November–April, Art Basel in December, Ultra Music Festival in March) create predictable traffic spikes that benefit from pre-planned landing pages and promotion flows — FactoryJet can build these as part of a retainer.",
+            },
           ]}
         />
 

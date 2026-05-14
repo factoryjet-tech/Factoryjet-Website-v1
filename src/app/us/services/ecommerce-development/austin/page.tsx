@@ -474,6 +474,38 @@ export default function Page() {
               answer:
                 'Every Austin Shopify store includes: custom design (not a theme), full Shopify development and configuration, Texas sales tax setup (8.25% Travis County), payment gateway integration (Shopify Payments, PayPal, Afterpay), product catalog setup, mobile-first responsive design, Core Web Vitals optimization (Lighthouse 90+), Google Search Console setup, FAQPage + Service + BreadcrumbList JSON-LD schema, AI search visibility (AEO for ChatGPT, Perplexity, Google AI Overviews), 30 days of post-launch support, and a launch walkthrough. Starting at $2,999 — no hidden fees.',
             },
+            {
+              question: 'Can you build a subscription or recurring-revenue Shopify store for Austin brands?',
+              answer: "Yes — subscription commerce is one of Austin's fastest-growing e-commerce models. Silicon Hills SaaS culture has primed Austin consumers to expect subscription products, and Austin's food, coffee, and wellness brands are well-positioned to build recurring revenue. FactoryJet builds Shopify subscription stores with Recharge, Bold Subscriptions, or native Shopify subscriptions: monthly boxes, coffee roaster subscriptions, meal kit programs, software access bundles, and fan club memberships. We also build B2B annual billing portals for Austin SaaS and tech tools. A Shopify subscription store typically generates 30–50% higher lifetime customer value than one-time-purchase stores.",
+            },
+            {
+              question: 'How do I get my Austin Shopify store ranked on Google and in AI search?',
+              answer: "FactoryJet builds every Austin Shopify store with a full SEO and AEO (Answer Engine Optimization) foundation: FAQPage + Service + BreadcrumbList + Product JSON-LD schema so Google, ChatGPT, Perplexity, and Google AI Overviews can surface your store in answer boxes; keyword-optimized page titles, meta descriptions, and H1s targeting Austin-specific search terms (e.g. 'Austin BBQ sauce shop', 'buy Austin hot sauce online'); blog content strategy using Google Ads keyword data for your category; Core Web Vitals optimization (Lighthouse 90+) which Google uses as a ranking signal; and internal linking architecture. Most Austin clients see measurable organic growth within 60–90 days of launch.",
+            },
+            {
+              question: 'Do you build headless Shopify stores for Austin tech companies?',
+              answer: "Yes — headless Shopify is a natural fit for Austin's tech-forward brands. A headless build uses Shopify as the e-commerce backend (inventory, checkout, payments) with a Next.js 15 frontend delivering sub-500ms page loads, 100/100 Lighthouse scores, and fully custom UI that no Shopify theme can match. FactoryJet builds headless Shopify stores for Austin SaaS companies with accessory and swag stores, hardware/IoT brands with complex product configurators, and DTC brands that need editorial design quality. Headless starts at $5,999 and includes Shopify Hydrogen-compatible architecture, Cloudflare Pages deployment, and full TypeScript codebase ownership.",
+            },
+            {
+              question: 'What payment methods should my Austin Shopify store accept?',
+              answer: "Every Austin Shopify store should accept: Shopify Payments (lowest transaction fees, instant Shopify dashboard integration), PayPal (30%+ of US online shoppers prefer PayPal for first purchases), Apple Pay and Google Pay (critical for Austin's mobile-heavy tech consumer base — reduces checkout friction by 40%), and Afterpay or Shop Pay Installments for orders above $100. For B2B Austin brands, add net-30/net-60 invoicing via Shopify's B2B tools. For Austin food and beverage brands, add restaurant-style tipping at checkout. FactoryJet configures all payment methods during the standard 7-day build — no extra fees.",
+            },
+            {
+              question: 'Can you build a Shopify store for an Austin outdoor or fitness brand?',
+              answer: "Absolutely — Austin's outdoor culture (Barton Springs, Barton Creek Greenbelt, Lake Travis, Town Lake) creates strong demand for fitness and outdoor e-commerce. We build Shopify stores for cycling brands, rock climbing gear retailers, kayak and paddleboard companies, trail running brands, and CrossFit / functional fitness equipment. Austin-specific builds include: gear rental add-ons (deposit + rental period logic), guide service booking integrations, subscription fitness equipment programs, and community memberships with product discounts. Austin's outdoor culture expects fast, mobile-optimized stores — FactoryJet delivers Lighthouse 90+ on every outdoor build.",
+            },
+            {
+              question: 'Do you build Shopify stores for Austin real estate or home services brands?',
+              answer: "Yes — Austin's real estate boom (fastest-appreciating housing market 2018–2023) created a huge market for home improvement, interior design, and home services e-commerce. We build Shopify stores for: custom furniture and home décor brands targeting Austin's new-build market, smart home product retailers, luxury outdoor living brands (pergolas, outdoor kitchens, pools), home cleaning and maintenance subscription services, and interior design product studios. Austin's $400,000+ median home price means high-AOV home goods and renovation spending — FactoryJet builds stores that convert that intent into online revenue.",
+            },
+            {
+              question: 'How do I sell internationally from my Austin Shopify store?',
+              answer: "FactoryJet configures Shopify Markets for international selling: multi-currency display (USD + CAD, GBP, EUR, AUD as needed), international shipping zones with zone-based carrier rate calculation, HS tariff code fields for customs declarations, duty and import tax display at checkout (Shopify's Landed Cost feature), international payment methods (iDEAL for Netherlands, Klarna for Europe), and IOSS configuration for EU buyers above €150. Austin's tech and food brands regularly ship to Canada, the UK, Australia, and Europe. We configure your store to convert international visitors at the same rate as US buyers — currency barriers kill 40% of international orders on unconfigured stores.",
+            },
+            {
+              question: 'Does FactoryJet offer ongoing Shopify support and retainer plans for Austin businesses?',
+              answer: "Yes — ongoing support is a significant part of our Austin client relationships. After launch, FactoryJet offers: a 30-day included support window (bug fixes, minor adjustments, launch questions); monthly retainer plans starting at $299/month (up to 4 hours of development time, priority response); and project-based ongoing work for new feature builds, seasonal campaigns, and catalog expansions. Austin's SaaS and tech culture means our clients often want iterative product improvements post-launch — we accommodate that with monthly sprint-style retainer arrangements. Every Austin build includes a documented handoff so your team can self-manage day-to-day operations.",
+            },
           ]}
         />
 

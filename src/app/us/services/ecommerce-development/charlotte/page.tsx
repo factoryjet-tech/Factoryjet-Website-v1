@@ -445,6 +445,38 @@ export default function Page() {
               answer:
                 "Every Charlotte Shopify store includes: custom design (not a theme), full Shopify development, NC sales tax setup (7.25% Mecklenburg County), payment gateway integration, product catalog setup, mobile-first responsive design, Lighthouse 90+ optimization, JSON-LD schema, AEO content for AI search visibility, 30 days of post-launch support, and a launch walkthrough. Starting at $2,999 — no hidden fees.",
             },
+            {
+              question: 'Can you build a Shopify store for a Charlotte apparel, lifestyle, or DTC brand?',
+              answer: "Absolutely — Charlotte's DTC apparel scene is growing fast. Queen City's cultural identity — Southern lifestyle, NASCAR heritage, banking corridor professional aesthetic, and Carolina Panthers fan culture — creates strong national brand demand. We build Shopify stores for: Southern lifestyle apparel brands, NASCAR-adjacent merchandise companies, Charlotte-themed lifestyle goods, professional attire brands targeting the banking corridor, and fan merchandise stores. Charlotte apparel brands sell nationally on place identity and brand storytelling — FactoryJet builds stores with editorial photography layouts, Shopify's lookbook features, and conversion flows optimized for repeat buyers. Stores from $2,999, live in 7 days.",
+            },
+            {
+              question: 'How do I rank my Charlotte Shopify store on Google and in AI search?',
+              answer: "FactoryJet builds every Charlotte Shopify store with SEO and AEO (Answer Engine Optimization) foundations. We implement: FAQPage + LocalBusiness + Product JSON-LD schema for Google, ChatGPT, Perplexity, and Google AI Overviews; keyword-optimized meta titles targeting 'Charlotte [product]', 'buy [product] Charlotte NC', 'North Carolina [industry] store'; Core Web Vitals optimization (Lighthouse 90+); North Carolina tax compliance (a trustworthiness signal for Google); and AEO content structured as answers to how Charlotte consumers search for your category. Charlotte's fast-growing professional population is mobile-heavy and AI-search-forward — your store's JSON-LD schema determines whether it appears in ChatGPT or Perplexity answers for Charlotte product queries.",
+            },
+            {
+              question: 'Do you build subscription Shopify stores for Charlotte brands?',
+              answer: "Yes — subscription commerce is well-suited to Charlotte's brand-loyal consumer base. We build: craft beer club subscriptions for Charlotte's craft brewery scene (NoDa Brewing, Birdsong Brewing, Wooden Robot), NASCAR fan merchandise subscriptions (exclusive monthly team gear for superfans), Southern food and hot sauce clubs, professional lifestyle product subscriptions targeting the banking corridor, and wellness product clubs for Charlotte's health-conscious professional market. Charlotte's consumer is loyal to brands that deliver consistent quality — a well-structured subscription converts that loyalty into predictable recurring revenue. FactoryJet builds with Recharge or native Shopify Subscriptions and configures NC sales tax for recurring billing.",
+            },
+            {
+              question: 'What payment methods should a Charlotte Shopify store accept?',
+              answer: "Every Charlotte Shopify store should accept: Shopify Payments (lowest transaction fees), PayPal (30%+ of US first-time buyers), Apple Pay and Google Pay (Charlotte's banking corridor professionals are heavy Apple device users — one-tap checkout boosts mobile conversion by 40%), and Afterpay or Shop Pay Installments for orders over $100. For Charlotte's NASCAR merchandise stores, add gift card purchasing with email delivery (gifts are a major revenue driver in sports merchandise). For Charlotte's B2B banking-corridor stores, configure net-30/net-60 institutional invoicing and PO payment terms via Shopify's B2B tools. All payment configuration is included in the standard 7-day build at no extra charge.",
+            },
+            {
+              question: 'Can you build a Shopify store for a Charlotte health, fitness, or wellness brand?',
+              answer: "Yes — Charlotte's health and wellness market is one of the strongest in the Southeast. The banking corridor's $150,000+ income households spend significantly on premium wellness: supplements, fitness equipment, athleisure apparel, spa and beauty products, and specialty health foods. We build Shopify stores for: premium supplement brands, Charlotte fitness studios selling branded apparel and equipment, med spa product lines, health food and nutrition subscription boxes, and wellness coaching product bundles. Charlotte-specific wellness e-commerce needs: subscription billing, bundle product configurations, loyalty rewards programs, and B2B bulk ordering for corporate wellness programs (Bank of America and Wells Fargo both run large wellness benefit programs).",
+            },
+            {
+              question: 'Do you serve Concord, Gastonia, Mooresville, and other Charlotte suburbs?',
+              answer: "Yes — FactoryJet serves the entire Charlotte metro: Charlotte/Mecklenburg County, Concord/Cabarrus County, Gastonia/Gaston County, Mooresville/Iredell County, Rock Hill, SC (Charlotte's largest suburb), Fort Mill, SC, Kannapolis, Monroe, Huntersville, Matthews, Mint Hill, and Cornelius. Each area has distinct business characteristics: Concord is home to Concord Mills (the Southeast's largest mall) and race shop tourism, Mooresville is NASCAR technical center territory, and Rock Hill is Charlotte's fast-growing South Carolina suburb. FactoryJet configures NC and SC destination-based sales tax for cross-border Charlotte metro orders and builds stores that rank for both Charlotte and Greater Carolinas searches.",
+            },
+            {
+              question: 'How does FactoryJet optimize Charlotte Shopify stores for mobile shoppers?',
+              answer: "Charlotte's mobile shopping adoption is above the US average — the banking corridor's professional population is iPhone-heavy and shops on mobile during commutes and lunch breaks. FactoryJet optimizes every Charlotte Shopify store for mobile with: mobile-first design (375px layouts before desktop), Google Core Web Vitals compliance (LCP under 2.5s, CLS under 0.1, INP under 200ms), one-tap Apple Pay and Google Pay checkout, thumb-friendly navigation and button sizing, and lazy-loaded image optimization that delivers fast initial page loads on Charlotte's 5G networks. NASCAR merchandise stores in particular see high mobile traffic during race weekends — FactoryJet ensures your store handles those traffic spikes without performance degradation.",
+            },
+            {
+              question: 'Does FactoryJet offer ongoing Shopify maintenance plans for Charlotte businesses?',
+              answer: "Yes — FactoryJet offers post-launch support built around Charlotte's business calendar. Every build includes a 30-day support window. Ongoing options: monthly retainer from $299/month (4 hours development time, same-day priority bug response), seasonal campaign builds (NASCAR season merchandise drops, holiday banking corridor corporate gifting campaigns, Panthers/Hornets fan merchandise launches), and quarterly performance reviews. Charlotte's NASCAR brands in particular benefit from on-call support — a team winning at Bristol or Talladega creates instant merchandise demand spikes that require same-day inventory and landing page updates. FactoryJet retainer clients get priority response for exactly these moments.",
+            },
           ]}
         />
 

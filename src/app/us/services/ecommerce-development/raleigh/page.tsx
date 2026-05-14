@@ -442,6 +442,38 @@ export default function Page() {
               answer:
                 "Every Raleigh Shopify store includes: custom design (not a theme), full Shopify development, NC sales tax setup (7.25% Wake County), payment gateway integration, product catalog setup, mobile-first responsive design, Lighthouse 90+ optimization, JSON-LD schema, AEO content for AI search visibility, 30 days of post-launch support, and a launch walkthrough. Starting at $2,999 — no hidden fees.",
             },
+            {
+              question: 'Can you build a Shopify store for a Raleigh, Durham, or Chapel Hill apparel or brand?',
+              answer: "Absolutely — the Research Triangle has a rich DTC brand ecosystem built around NC State (Wolfpack), UNC (Tar Heels), Duke (Blue Devils), university alumni culture, and Bull City Durham's independent maker scene. We build Shopify stores for: university-adjacent apparel and lifestyle brands, Durham craft food and beverage brands, Chapel Hill artisan goods, Research Triangle professional lifestyle products, and Southern apparel companies with national reach. RTP's highly educated, tech-forward consumer base is an ideal DTC buyer — sophisticated, brand-aware, and willing to pay a premium for quality. FactoryJet builds stores that convert the Triangle's discerning consumer into repeat buyers.",
+            },
+            {
+              question: 'How do I rank my Raleigh Shopify store on Google and in AI search?',
+              answer: "FactoryJet builds every Raleigh Shopify store with full SEO and AEO foundations. We implement: FAQPage + LocalBusiness + Product JSON-LD schema for Google, ChatGPT, Perplexity, and Google AI Overviews; keyword-optimized titles targeting 'Raleigh [product]', 'Research Triangle [industry]', 'NC [product] store'; Core Web Vitals optimization (Lighthouse 90+); and AEO content aligned with how RTP's AI-literate consumers research purchases in ChatGPT and Perplexity. Raleigh-Durham is one of the highest-AI-adoption metros in the US — your store's JSON-LD schema determines whether it appears in AI-generated answers for Triangle product queries. Most Raleigh competitors haven't optimized for AI search yet — early movers win the most valuable positions.",
+            },
+            {
+              question: 'Do you build subscription Shopify stores for Research Triangle brands?',
+              answer: "Yes — subscription commerce fits the RTP consumer perfectly. The Triangle's 300,000+ university-affiliated population and tech professional base are comfortable with subscription billing from their SaaS product experiences. We build: craft beer club subscriptions for Raleigh's thriving brewery scene (Trophy, Clouds, Lynnwood), coffee roaster subscriptions for Triangle specialty coffee brands, B2B SaaS license renewal portals for RTP tech companies, life sciences lab supply subscriptions with PO billing, and NC State / UNC fan merchandise subscriptions. FactoryJet builds with Recharge or native Shopify Subscriptions, NC Wake County tax configuration for recurring billing, and conversion flows optimized for the Triangle's brand-loyal professional consumer.",
+            },
+            {
+              question: 'What payment methods should a Raleigh Shopify store accept?',
+              answer: "Every Raleigh Shopify store should accept: Shopify Payments, PayPal (30%+ of first-time US online buyers), Apple Pay and Google Pay (RTP's tech worker population is among the highest Apple adoption rate in the Southeast), and Afterpay or Shop Pay Installments for premium orders. For Raleigh's B2B tech and life sciences stores, configure institutional PO payment terms, net-30/net-60 invoicing, and corporate credit card billing via Shopify's B2B portal. For Raleigh's craft brewery stores, integrate age verification before payment collection. For Triangle university-adjacent brands, Venmo checkout integration appeals to the student demographic. FactoryJet configures the full payment stack in the standard 7-day build.",
+            },
+            {
+              question: 'Can you build a Shopify store for an NC State, UNC, or Duke-adjacent brand?',
+              answer: "Yes — university-adjacent brands are a core Raleigh specialty. We build Shopify stores for: independent apparel and lifestyle brands inspired by Wolfpack, Tar Heels, or Blue Devils culture (not official licensed merchandise — that requires university licensing); alumni lifestyle brands selling to the 400,000+ Triangle university alumni nationwide; brands built around ACC rivalry culture (merchandise, gifts, game-day accessories); and student entrepreneur DTC brands launching from the UNC, Duke, or NC State startup ecosystem. Triangle university towns have three distinct alumni brand audiences: NC State's engineering and agriculture culture in Raleigh, UNC's liberal arts and healthcare culture in Chapel Hill, and Duke's business and law culture in Durham.",
+            },
+            {
+              question: 'Do you serve Cary, Apex, Morrisville, and Holly Springs in addition to Raleigh?',
+              answer: "Yes — FactoryJet serves the entire Wake County and Greater Triangle: Raleigh, Cary, Apex, Morrisville, Holly Springs, Fuquay-Varina, Garner, Clayton, and all Triangle ZIP codes. Cary is one of the fastest-growing and highest-income suburbs in the US (nicknamed 'Containment Area for Relocated Yankees' — it's a high-purchasing-power market). Morrisville is home to major tech employers (Cisco, SAS Institute, IBM RTP). Holly Springs and Apex are young-family markets with strong home goods and lifestyle product demand. FactoryJet configures Wake County's 7.25% sales tax for all Triangle municipalities and builds stores that rank for both city-level and Triangle-region searches.",
+            },
+            {
+              question: 'How does FactoryJet optimize Raleigh Shopify stores for mobile shoppers?',
+              answer: "Raleigh-Durham's tech professional population is a mobile-shopping leader — high smartphone penetration, heavy app usage, and AI-assisted shopping behavior. FactoryJet optimizes every Raleigh Shopify store for mobile with: mobile-first layouts (375px before desktop), Google Core Web Vitals compliance (Lighthouse 90+, sub-1.5s LCP on mobile), one-tap Apple Pay and Google Pay at checkout (the single biggest mobile conversion improvement), lazy-loaded images that don't block initial paint, and AEO structured content that surfaces in AI-generated mobile search answers. Triangle consumers are more likely than average US buyers to search in ChatGPT or Perplexity before purchasing — optimizing for AI search captures intent that traditional Google results miss.",
+            },
+            {
+              question: 'Does FactoryJet offer ongoing Shopify support plans for Raleigh businesses?',
+              answer: "Yes — FactoryJet offers post-launch support designed for the Triangle's startup and growth-stage business culture. Every build includes a 30-day support window. Ongoing options: monthly retainer from $299/month (4 hours development, same-day priority response), performance reviews every 90 days, RTP-specific campaign builds (SAS Global Forum merchandise, NC State / UNC rivalry season drops, Triangle startup ecosystem launch campaigns), and iterative feature additions. Raleigh's startup culture values iterative improvement over set-and-forget launches — FactoryJet retainer clients treat their Shopify store like a product and ship updates regularly. We've built long-term relationships with multiple Triangle brands across multiple product iterations.",
+            },
           ]}
         />
 
