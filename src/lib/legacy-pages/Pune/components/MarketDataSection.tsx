@@ -4,7 +4,7 @@ import { Users, DollarSign, Building2, Wifi, TrendingUp, MapPin } from 'lucide-r
 
 const MarketDataSection: React.FC = () => {
   const marketStats = [
-    { icon: Users, number: '7.4+ million', label: 'Metro population — Maharashtra\'s second-largest city', color: 'text-jet-blue' },
+    { icon: Users, number: '7.4+ million', label: 'Metro population — Maharashtra's second-largest city', color: 'text-jet-blue' },
     { icon: DollarSign, number: '$69 billion', label: 'GDP contribution — Major economic powerhouse', color: 'text-jet-green' },
     { icon: Building2, number: '800+', label: 'IT companies in Hinjewadi alone — Rajiv Gandhi Infotech Park', color: 'text-jet-orange' },
     { icon: Wifi, number: '85%', label: 'Internet penetration — Higher than national average', color: 'text-purple-600' },

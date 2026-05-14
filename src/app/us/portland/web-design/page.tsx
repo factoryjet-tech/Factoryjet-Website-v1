@@ -37,7 +37,7 @@ export default function PortlandWebDesignPage() {
         eyebrow={"WEB DESIGN · PORTLAND"}
         headline={"Web Design in Portland That Converts Visitors Into Clients"}
         lead={"Portland businesses operate at the intersection of sustainability, outdoor lifestyle, and Pacific Northwest tech — a buyer base that researches deeply, values authenticity, and will bounce from a slow site in seconds. FactoryJet delivers a production-ready website in 7 days, starting at $1,999. You own the code, the design files, and the results."}
-        primaryCta={{ label: "Start Your Project", href: '/contact' }}
+        primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
         trustItems={["Websites from $1,999", "7-day delivery", "Next.js + GA4 included"]}
         rightSlot={<HeroBrowserMockup />}
       />
@@ -152,7 +152,7 @@ export default function PortlandWebDesignPage() {
         eyebrow={"READY TO START"}
         headline={"Ready to Build Your Portland Website?"}
         sub={"Portland's $190B+ metro economy rewards businesses that show up with substance. In a city where buyers read your About page before they call, a slow or shallow website doesn't just underperform — it actively loses trust. Start today and have a sitemap ready within 72 hours."}
-        primaryCta={{ label: "Start Your Project", href: '/contact' }}
+        primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
       />
       <SchemaScript />
     </main>

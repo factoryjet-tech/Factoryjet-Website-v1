@@ -4,7 +4,7 @@ import ServiceCard from '../ServiceCard';
 
 export default function WebflowDevelopment() {
   const benefits = [
-    { icon: <Palette className="w-6 h-6" />, title: 'Pixel-Perfect Design Control', desc: 'No templates. No compromises. Every pixel exactly where you want it. Webflow\'s visual development platform lets us create designs that would be impossible or prohibitively expensive with traditional WordPress development.' },
+    { icon: <Palette className="w-6 h-6" />, title: 'Pixel-Perfect Design Control', desc: 'No templates. No compromises. Every pixel exactly where you want it. Webflow's visual development platform lets us create designs that would be impossible or prohibitively expensive with traditional WordPress development.' },
     { icon: <Zap className="w-6 h-6" />, title: 'Blazing Fast Performance', desc: 'Webflow sites load incredibly fast right out of the box. Built-in CDN, optimized hosting, and clean code mean your visitors get instant page loads—critical for impatient NYC audiences.' },
     { icon: <Rocket className="w-6 h-6" />, title: 'Animations & Interactions', desc: 'Create engaging, memorable experiences with smooth animations, scroll effects, and micro-interactions. The kind of polish that separates premium NYC brands from the competition.' },
     { icon: <Wrench className="w-6 h-6" />, title: 'Easy Client Management', desc: 'You get a user-friendly CMS that non-technical team members can actually use. Update content, publish blog posts, manage products—all without touching code.' }

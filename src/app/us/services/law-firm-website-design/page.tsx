@@ -401,7 +401,7 @@ const PRICING_TIERS = [
       'Mobile-first, Core Web Vitals pass',
       '14-day post-launch support',
     ],
-    cta: { label: 'Book a Free Legal SEO Audit', href: '/contact' },
+    cta: { label: 'Book a Free Legal SEO Audit', modal: true, region: 'us' },
   },
   {
     name: 'Full Law Firm Website',
@@ -420,7 +420,7 @@ const PRICING_TIERS = [
       'Two design revision rounds included',
       '30-day post-launch support',
     ],
-    cta: { label: 'Get a Custom Quote', href: '/contact' },
+    cta: { label: 'Get a Custom Quote', modal: true, region: 'us' },
     popular: true,
   },
   {
@@ -440,7 +440,7 @@ const PRICING_TIERS = [
       'Dedicated project manager throughout',
       '60-day post-launch support and iteration window',
     ],
-    cta: { label: 'Schedule a Firm Consultation', href: '/contact' },
+    cta: { label: 'Schedule a Firm Consultation', modal: true, region: 'us' },
   },
 ] as const;
 
@@ -646,9 +646,9 @@ export default function LawFirmWebsiteDesignPage() {
           { label: 'Law Firm Design', href: '/us/services/law-firm-website-design' },
           { label: 'Website Redesign', href: '/us/services/website-redesign' },
           { label: 'Pricing', href: '#pricing' },
-          { label: 'Contact', href: '/contact' },
+          { label: 'Contact', modal: true, region: 'us' },
         ]}
-        cta={{ label: 'Free Legal SEO Audit', href: '/contact' }}
+        cta={{ label: 'Free Legal SEO Audit', modal: true, region: 'us' }}
       />
 
       <main className="bg-fj-cream">
@@ -658,7 +658,7 @@ export default function LawFirmWebsiteDesignPage() {
           eyebrow="LAW FIRM WEBSITE DESIGN · USA"
           headline="Law Firm Websites That Rank Locally and Convert Visitors Into Consultations"
           lead="62% of people searching for an attorney start on Google — and 70% contact the first firm whose site earns their trust. FactoryJet designs law firm websites for US attorneys with individual practice area pages, attorney profiles that build credibility, and consultation intake flows that convert. Starting at $2,499. 60–70% cheaper than US legal web design agencies."
-          primaryCta={{ label: 'Book a Free Legal SEO Audit', href: '/contact' }}
+          primaryCta={{ label: 'Book a Free Legal SEO Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ professional service sites delivered',
@@ -668,7 +668,7 @@ export default function LawFirmWebsiteDesignPage() {
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
               <p
-                className="font-fj-mono font-medium uppercase text-fj-jet-blue"
+                className="font-fj-mono font-medium uppercase text-[#F05A28]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
                 WHAT YOUR CURRENT SITE IS COSTING YOUR FIRM
@@ -694,7 +694,7 @@ export default function LawFirmWebsiteDesignPage() {
                   <div key={i} className="rounded-xl border border-fj-neutral-100 bg-fj-neutral-50 p-4">
                     <p className="font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-red-400">Current Reality</p>
                     <p className="mt-1 font-fj-body text-[0.8125rem] leading-[1.5] text-fj-neutral-600">{row.before}</p>
-                    <p className="mt-2 font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-emerald-600">After FactoryJet</p>
+                    <p className="mt-2 font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-[#F05A28]">After FactoryJet</p>
                     <p className="mt-1 font-fj-body text-[0.8125rem] leading-[1.5] text-fj-neutral-600">{row.after}</p>
                   </div>
                 ))}
@@ -735,7 +735,7 @@ export default function LawFirmWebsiteDesignPage() {
                 {['LegalService Schema', 'Attorney Schema', 'Practice Area SEO', 'GBP Optimization', 'Intake Forms', 'Bar Compliance', 'Mobile-First', 'Core Web Vitals'].map((tool) => (
                   <span
                     key={tool}
-                    className="inline-flex items-center rounded-full border border-fj-jet-blue/25 bg-fj-jet-blue/8 px-3 py-1 font-fj-mono font-semibold uppercase text-fj-jet-blue"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {tool}
@@ -746,7 +746,7 @@ export default function LawFirmWebsiteDesignPage() {
                 Legal is the highest-CPC vertical in professional services search — at $7,559 average cost-per-click, the organic ranking that replaces a paid click is worth more in legal than in almost any other industry. That competitive intensity means the bar for what a law firm website needs to do is higher than a general business site — and the gap between a well-built site and a poorly built one shows up directly in consultation volume.
               </p>
               <div
-                className="border-l-2 border-fj-jet-blue pl-5 py-1"
+                className="border-l-2 border-[#F05A28] pl-5 py-1"
                 aria-hidden
               >
                 <p
@@ -760,7 +760,7 @@ export default function LawFirmWebsiteDesignPage() {
                 FactoryJet builds law firm websites with three primary goals: rank in local search for your specific practice areas and geography, establish credibility the moment a visitor arrives, and convert that visitor into a consultation request with as little friction as possible. The specific technical requirements for each: individual practice area pages with LegalService schema (ranking), authority-first design with professional photography and credentials (credibility), and multi-step intake forms with clear process expectations (conversion).
               </p>
               <p>
-                For firms currently on FindLaw, Martindale, or Avvo subscription sites: you are paying a monthly fee for a template you don't own, designed identically to your competitors, that performs poorly on Core Web Vitals. We regularly help firms migrate off these platforms to custom sites — preserving their review history through Google Business Profile and rebuilding their search presence on a foundation they actually own. For firms needing a <a href="/us/services/website-redesign" className="text-fj-jet-blue underline underline-offset-2">full website redesign</a> from an existing template, we handle that migration as well.
+                For firms currently on FindLaw, Martindale, or Avvo subscription sites: you are paying a monthly fee for a template you don't own, designed identically to your competitors, that performs poorly on Core Web Vitals. We regularly help firms migrate off these platforms to custom sites — preserving their review history through Google Business Profile and rebuilding their search presence on a foundation they actually own. For firms needing a <a href="/us/services/website-redesign" className="text-[#F05A28] underline underline-offset-2">full website redesign</a> from an existing template, we handle that migration as well.
               </p>
             </>
           }
@@ -796,7 +796,7 @@ export default function LawFirmWebsiteDesignPage() {
                 ].map((item) => (
                   <div key={item.category} className="flex items-center justify-between gap-4 py-3.5">
                     <div className="flex items-center gap-2.5">
-                      <div className="h-1.5 w-1.5 shrink-0 rounded-full bg-fj-jet-blue/50" aria-hidden="true" />
+                      <div className="h-1.5 w-1.5 shrink-0 rounded-full bg-[rgba(240,90,40,0.50)]" aria-hidden="true" />
                       <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">{item.category}</p>
                     </div>
                     <p className="text-right font-fj-body text-[0.8125rem] text-fj-neutral-500">{item.tools}</p>
@@ -804,7 +804,7 @@ export default function LawFirmWebsiteDesignPage() {
                 ))}
               </div>
               <div className="border-t border-fj-neutral-100 bg-fj-neutral-50 px-7 py-5">
-                <div className="mb-2 h-[3px] w-8 rounded-full bg-fj-jet-blue" aria-hidden="true" />
+                <div className="mb-2 h-[3px] w-8 rounded-full bg-[#F05A28]" aria-hidden="true" />
                 <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">
                   You own the site. No monthly subscription fees.
                 </p>
@@ -917,7 +917,7 @@ export default function LawFirmWebsiteDesignPage() {
           eyebrow="START WITH A FREE LEGAL SEO AUDIT"
           headline="Book a Free Legal SEO Audit and Walk Away With a Clear Picture of Where You Stand"
           sub="In 30 minutes, we'll audit your current site's local search performance, analyze the top-ranking competing firms in your market, identify the practice area pages and schema gaps that are costing you organic traffic, and tell you exactly what it costs to fix. No agency pitch. No retainer required to get started. Just a straight assessment from a team that's built law firm websites for US attorneys for 25 years."
-          primaryCta={{ label: 'Book Your Free Legal SEO Audit', href: '/contact' }}
+          primaryCta={{ label: 'Book Your Free Legal SEO Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See All Website Redesign Services', href: '/us/services/website-redesign' }}
           objectionHandler="Solo firm starts at $2,499. You own everything at handoff. Free audit first. No commitment until you\'ve seen the plan."
         />

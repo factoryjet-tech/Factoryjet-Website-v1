@@ -72,7 +72,7 @@ export default function CaseStudyCard({
       )}
 
       {industry && (
-        <p className="font-fj-mono text-[12px] font-medium uppercase tracking-[0.14em] text-fj-jet-blue">
+        <p className="font-fj-mono text-[12px] font-medium uppercase tracking-[0.14em] text-[#F05A28]">
           {industry}
         </p>
       )}
@@ -95,7 +95,7 @@ export default function CaseStudyCard({
         <div className="mt-8 flex flex-grow flex-wrap items-end gap-x-8 gap-y-4 border-t border-fj-neutral-200 pt-6">
           {metrics.map((m, i) => (
             <div key={i}>
-              <p className="fj-display font-fj-display text-[2rem] font-medium leading-none tracking-[-0.025em] text-fj-jet-blue">
+              <p className="fj-display font-fj-display text-[2rem] font-medium leading-none tracking-[-0.025em] text-[#F05A28]">
                 {m.value}
               </p>
               <p className="mt-2 font-fj-body text-[13px] leading-[1.5] text-fj-neutral-600">
@@ -110,7 +110,7 @@ export default function CaseStudyCard({
         <div className="mt-6 flex justify-end">
           <span
             aria-hidden
-            className="font-fj-body text-[18px] font-medium text-fj-jet-blue"
+            className="font-fj-body text-[18px] font-medium text-[#F05A28]"
           >
             →
           </span>

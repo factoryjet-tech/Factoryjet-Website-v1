@@ -188,7 +188,7 @@ export default function USHomePage() {
           { label: 'Portfolio', href: '/us/portfolio' },
           { label: 'FAQ', href: '/us/faq' },
         ]}
-        cta={{ label: 'Free Strategy Call', href: '/contact' }}
+        cta={{ label: 'Free Strategy Call', modal: true, region: 'us' }}
       />
 
       <main className="bg-fj-cream">
@@ -198,8 +198,8 @@ export default function USHomePage() {
           announcementPill={{ text: 'Accepting New Clients — 7-Day Delivery' }}
           headline={<>Affordable Web Design<br className="hidden lg:block" /> for US Small Businesses.<br className="hidden lg:block" /> Live in 7 Days</>}
           lead="FactoryJet is a web design agency building high-converting websites and Shopify stores for US small businesses. 60 to 70% less than local agencies, with full code ownership and a guaranteed delivery."
-          primaryCta={{ label: 'Get a Free Strategy Call', href: '/contact' }}
-          secondaryCta={{ label: 'Free SEO Audit', href: '/contact' }}
+          primaryCta={{ label: 'Get a Free Strategy Call', modal: true, region: 'us' }}
+          secondaryCta={{ label: 'Free SEO Audit', modal: true, region: 'us' }}
           trustItems={['From $1,999', '7-Day Delivery', '60–70% Less', '523+ Projects']}
           rightSlot={<HeroImageMockup />}
         />
@@ -269,8 +269,8 @@ export default function USHomePage() {
           eyebrow="START WITH A FREE STRATEGY CALL"
           headline="Transform Your B2B Website Into a Lead-Generating Machine"
           sub="Stop losing qualified leads to competitors with faster, higher-converting websites. Partner with FactoryJet — a B2B web design agency USA businesses trust — to launch a high-converting, performance-driven website in 7 days. No obligation. 100% free consultation."
-          primaryCta={{ label: 'Get Your Free Strategy Call', href: '/contact' }}
-          secondaryCta={{ label: 'Request a Free Technical & SEO Audit', href: '/contact' }}
+          primaryCta={{ label: 'Get Your Free Strategy Call', modal: true, region: 'us' }}
+          secondaryCta={{ label: 'Request a Free Technical & SEO Audit', modal: true, region: 'us' }}
           objectionHandler="Fixed pricing. 7-day delivery. Full code ownership. Free strategy call first."
         />
 

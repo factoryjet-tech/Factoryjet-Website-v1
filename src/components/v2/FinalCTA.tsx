@@ -13,7 +13,7 @@ import type { ModalRegion } from '../../context/ContactModalContext';
  *   - Aurora orbs: blue left-center + indigo right-center + violet bottom-
  *     center. Different positioning from StrategicDarkSection so adjacent
  *     dark sections feel compositionally distinct
- *   - Eyebrow: inline color '#7EB3FF' — fj-eyebrow/text-fj-jet-blue is too
+ *   - Eyebrow: inline color '#7EB3FF' — fj-eyebrow/text-[#F05A28] is too
  *     dark on dark backgrounds. Never use fj-eyebrow class on dark sections.
  *   - Headline: clamp(1.875rem, 3.5vw, 3rem) — slightly larger than body
  *     section headlines (urgency signal) but still viewport-safe

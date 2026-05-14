@@ -444,7 +444,7 @@ const PRICING_TIERS = [
       'Lighthouse 95+ on delivery',
       'Full code ownership — GitHub transfer on launch',
     ],
-    cta: { label: 'Book a Free Consultation', href: '/contact' },
+    cta: { label: 'Book a Free Consultation', modal: true, region: 'us' },
   },
   {
     name: 'Advanced E-Commerce',
@@ -462,7 +462,7 @@ const PRICING_TIERS = [
       'Post-purchase upsell flow',
       '30-day post-launch support window',
     ],
-    cta: { label: 'Get a Custom Quote', href: '/contact' },
+    cta: { label: 'Get a Custom Quote', modal: true, region: 'us' },
     popular: true,
   },
   {
@@ -481,7 +481,7 @@ const PRICING_TIERS = [
       'Dedicated engineering point of contact',
       '90-day post-launch support and iteration',
     ],
-    cta: { label: 'Schedule a Discovery Call', href: '/contact' },
+    cta: { label: 'Schedule a Discovery Call', modal: true, region: 'us' },
   },
 ] as const;
 
@@ -610,9 +610,9 @@ export default function EcommerceDevelopmentPage() {
           { label: 'E-Commerce', href: '/us/services/ecommerce-development' },
           { label: 'Portfolio', href: '/portfolio' },
           { label: 'Pricing', href: '#pricing' },
-          { label: 'Contact', href: '/contact' },
+          { label: 'Contact', modal: true, region: 'us' },
         ]}
-        cta={{ label: 'Book a Free Consultation', href: '/contact' }}
+        cta={{ label: 'Book a Free Consultation', modal: true, region: 'us' }}
       />
 
       <main className="bg-fj-cream">
@@ -622,7 +622,7 @@ export default function EcommerceDevelopmentPage() {
           eyebrow="E-COMMERCE DEVELOPMENT · USA"
           headline="An Online Store That Sells on Any Platform, at Any Scale"
           lead="Most US e-commerce stores are built on generic themes and convert below 1%. FactoryJet builds custom Shopify, WooCommerce, BigCommerce, and headless stores — designed in Figma, engineered for conversion — at 60–70% the cost of a US e-commerce agency."
-          primaryCta={{ label: 'Book a Free Consultation', href: '/contact' }}
+          primaryCta={{ label: 'Book a Free Consultation', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',
@@ -632,7 +632,7 @@ export default function EcommerceDevelopmentPage() {
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
               <p
-                className="font-fj-mono font-medium uppercase text-fj-jet-blue"
+                className="font-fj-mono font-medium uppercase text-[#F05A28]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
                 THE COST OF A 1% CONVERSION RATE
@@ -652,8 +652,8 @@ export default function EcommerceDevelopmentPage() {
                     <p className="fj-display font-semibold text-fj-ink" style={{ fontSize: '1rem', letterSpacing: '-0.02em' }}>{row.value}</p>
                   </div>
                 ))}
-                <div className="rounded-xl bg-fj-jet-blue/8 px-4 py-3">
-                  <p className="font-fj-body text-[0.875rem] font-semibold text-fj-jet-blue">
+                <div className="rounded-xl bg-[rgba(240,90,40,0.08)] px-4 py-3">
+                  <p className="font-fj-body text-[0.875rem] font-semibold text-[#F05A28]">
                     +$5,200/month from the same traffic. A custom store pays for itself in under 60 days.
                   </p>
                 </div>
@@ -699,7 +699,7 @@ export default function EcommerceDevelopmentPage() {
                 ].map((cap) => (
                   <span
                     key={cap}
-                    className="inline-flex items-center rounded-full border border-fj-jet-blue/25 bg-fj-jet-blue/8 px-3 py-1 font-fj-mono font-semibold uppercase text-fj-jet-blue"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {cap}
@@ -722,7 +722,7 @@ export default function EcommerceDevelopmentPage() {
                     className="rounded-xl border border-fj-neutral-200 bg-white px-3 py-4 text-center shadow-sm"
                   >
                     <p
-                      className="fj-display font-bold text-fj-jet-blue"
+                      className="fj-display font-bold text-[#F05A28]"
                       style={{ fontSize: '1.375rem', lineHeight: 1, letterSpacing: '-0.03em' }}
                     >
                       {b.value}
@@ -737,7 +737,7 @@ export default function EcommerceDevelopmentPage() {
                 ))}
               </div>
 
-              <div className="border-l-2 border-fj-jet-blue pl-5 py-1" aria-hidden>
+              <div className="border-l-2 border-[#F05A28] pl-5 py-1" aria-hidden>
                 <p
                   className="font-fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.1875rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
@@ -772,7 +772,7 @@ export default function EcommerceDevelopmentPage() {
                   <div key={item.platform} className="py-3.5">
                     <div className="flex items-center justify-between gap-4">
                       <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">{item.platform}</p>
-                      <p className="fj-display flex-shrink-0 font-bold text-fj-jet-blue" style={{ fontSize: '0.9375rem', letterSpacing: '-0.02em' }}>
+                      <p className="fj-display flex-shrink-0 font-bold text-[#F05A28]" style={{ fontSize: '0.9375rem', letterSpacing: '-0.02em' }}>
                         {item.starting}
                       </p>
                     </div>
@@ -783,7 +783,7 @@ export default function EcommerceDevelopmentPage() {
                 ))}
               </div>
               <div className="border-t border-fj-neutral-100 bg-fj-neutral-50 px-7 py-5">
-                <div className="mb-2 h-[3px] w-8 rounded-full bg-fj-jet-blue" aria-hidden="true" />
+                <div className="mb-2 h-[3px] w-8 rounded-full bg-[#F05A28]" aria-hidden="true" />
                 <p className="fj-display font-semibold text-fj-ink" style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}>
                   We recommend the right platform. We don&apos;t push the most expensive one.
                 </p>
@@ -926,7 +926,7 @@ export default function EcommerceDevelopmentPage() {
                 {['Next.js', 'Shopify Liquid', 'WooCommerce', 'BigCommerce Stencil', 'Figma', 'Stripe', 'Klaviyo', 'ReCharge'].map((tech) => (
                   <span
                     key={tech}
-                    className="inline-flex items-center rounded-full border border-fj-jet-blue/25 bg-fj-jet-blue/8 px-3 py-1 font-fj-mono font-semibold uppercase text-fj-jet-blue"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {tech}
@@ -978,7 +978,7 @@ export default function EcommerceDevelopmentPage() {
                 ].map((item) => (
                   <div key={item.category} className="flex items-center justify-between gap-4 py-3.5">
                     <div className="flex items-center gap-2.5">
-                      <div className="h-1.5 w-1.5 shrink-0 rounded-full bg-fj-jet-blue/50" aria-hidden="true" />
+                      <div className="h-1.5 w-1.5 shrink-0 rounded-full bg-[rgba(240,90,40,0.50)]" aria-hidden="true" />
                       <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">{item.category}</p>
                     </div>
                     <p className="text-right font-fj-body text-[0.875rem] text-fj-neutral-600">{item.tools}</p>
@@ -986,7 +986,7 @@ export default function EcommerceDevelopmentPage() {
                 ))}
               </div>
               <div className="border-t border-fj-neutral-100 bg-fj-neutral-50 px-8 py-5">
-                <div className="mb-2 h-[3px] w-8 rounded-full bg-fj-jet-blue" aria-hidden="true" />
+                <div className="mb-2 h-[3px] w-8 rounded-full bg-[#F05A28]" aria-hidden="true" />
                 <p className="fj-display font-semibold text-fj-ink" style={{ fontSize: '1.0625rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}>
                   Full stack. Code ownership. Zero lock-in.
                 </p>
@@ -1006,7 +1006,7 @@ export default function EcommerceDevelopmentPage() {
           ]}
           bodySlot={
             <>
-              <div className="border-l-2 border-fj-jet-blue py-1 pl-5" aria-hidden="true">
+              <div className="border-l-2 border-[#F05A28] py-1 pl-5" aria-hidden="true">
                 <p className="fj-display font-semibold text-fj-ink" style={{ fontSize: '1.125rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}>
                   The best ROI in e-commerce is usually a better store, not more ad spend.
                 </p>
@@ -1030,7 +1030,7 @@ export default function EcommerceDevelopmentPage() {
                   <a
                     key={slug}
                     href={`/us/services/ecommerce-development/${slug}`}
-                    className="inline-flex items-center rounded-full border border-fj-jet-blue/25 bg-fj-jet-blue/8 px-3 py-1 font-fj-mono font-medium text-fj-jet-blue hover:bg-fj-jet-blue/15 transition-colors"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#F05A28] hover:bg-[rgba(240,90,40,0.15)] transition-colors"
                     style={{ fontSize: '10px', letterSpacing: '0.08em' }}
                   >
                     {label}
@@ -1121,7 +1121,7 @@ export default function EcommerceDevelopmentPage() {
             eyebrow="READY TO START"
             headline="Book a Free E-Commerce Consultation, No Obligation"
             sub="In 30 minutes, we'll audit your current store or platform, identify what's costing you revenue, recommend the right tech stack, and give you a fixed price. No pitch. No pressure. An honest assessment from engineers who've built 500+ stores."
-            primaryCta={{ label: 'Book Your Free Consultation', href: '/contact' }}
+            primaryCta={{ label: 'Book Your Free Consultation', modal: true, region: 'us' }}
             secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
             objectionHandler="Fixed price. Full code ownership. Platform-agnostic. 500+ businesses served."
           />

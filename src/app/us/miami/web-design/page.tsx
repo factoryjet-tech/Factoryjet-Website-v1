@@ -37,7 +37,7 @@ export default function MiamiWebDesignPage() {
         eyebrow={"WEB DESIGN · MIAMI"}
         headline={"Web Design in Miami That Converts Visitors Into Clients"}
         lead={"Miami businesses compete in one of the fastest-moving markets in the US — Latin American trade, global finance, and a booming tech scene all converging in one city. FactoryJet delivers a production-ready website in 7 days, starting at $1,999. You own the code, the design files, and the results."}
-        primaryCta={{ label: "Start Your Project", href: '/contact' }}
+        primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
         trustItems={["Websites from $1,999","7-day delivery","Next.js + GA4 included"]}
         rightSlot={<HeroBrowserMockup />}
       />
@@ -148,7 +148,7 @@ export default function MiamiWebDesignPage() {
         eyebrow={"READY TO START"}
         headline={"Ready to Build Your Miami Website?"}
         sub={"Miami's $413B metro economy moves at international speed. Every week without a high-performing website is a week your competitors are capturing the searches — and the clients — you should own. Start today and have a sitemap ready within 72 hours."}
-        primaryCta={{ label: "Start Your Project", href: '/contact' }}
+        primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
       />
       <SchemaScript />
     </main>

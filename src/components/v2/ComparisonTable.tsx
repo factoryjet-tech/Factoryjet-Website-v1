@@ -112,9 +112,9 @@ export default function ComparisonTable({
                   borderTopColor: '#0052CC',
                 }}
               >
-                <div className="mb-5 h-[3px] w-10 rounded-full bg-fj-jet-blue" aria-hidden="true" />
+                <div className="mb-5 h-[3px] w-10 rounded-full bg-[#F05A28]" aria-hidden="true" />
                 <p
-                  className="font-fj-display fj-display font-bold text-fj-jet-blue leading-none tracking-[-0.02em]"
+                  className="font-fj-display fj-display font-bold text-[#F05A28] leading-none tracking-[-0.02em]"
                   style={{ fontSize: 'clamp(3rem,6vw,5rem)' }}
                 >
                   {pullQuote.stat}
@@ -159,7 +159,7 @@ export default function ComparisonTable({
                     scope="col"
                     className={`${HEADER_TYPE} ${
                       col.isFactoryJet
-                        ? 'bg-fj-jet-blue-tint text-fj-jet-blue'
+                        ? 'bg-[#F05A28]-tint text-[#F05A28]'
                         : 'text-fj-neutral-600'
                     }`}
                     style={col.isFactoryJet ? { borderTopWidth: '3px', borderTopStyle: 'solid', borderTopColor: '#0052CC' } : undefined}
@@ -181,7 +181,7 @@ export default function ComparisonTable({
                   {row.values.map((value, ci) => {
                     const col = columns[ci];
                     const cellClass = col?.isFactoryJet
-                      ? `${CELL_BASE} bg-fj-jet-blue-tint font-semibold`
+                      ? `${CELL_BASE} bg-[#F05A28]-tint font-semibold`
                       : CELL_BASE;
                     return (
                       <td key={ci} className={cellClass}>
@@ -219,7 +219,7 @@ export interface CompareIconProps {
 }
 
 const ICON_COLOR: Record<CompareIconProps['kind'], string> = {
-  yes: 'text-fj-jet-blue',
+  yes: 'text-[#F05A28]',
   partial: 'text-fj-neutral-400',
   no: 'text-fj-neutral-200',
 };

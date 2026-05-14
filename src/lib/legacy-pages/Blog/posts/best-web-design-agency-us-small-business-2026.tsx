@@ -23,7 +23,7 @@ export const post: BlogPost = {
     'Agencies delivering in 7–21 days use modern tooling (Next.js, CI/CD pipelines, component libraries) — not shortcuts. Slow agencies are often disorganized, not thorough.',
     'The "local agency" premium is rarely justified for SMBs: offshore-with-US-support agencies deliver identical technical output at 60–70% lower cost.',
     'WCAG 2.2 accessibility compliance is non-negotiable in 2026 — ADA website lawsuits hit 4,605 US cases in 2023, with settlements averaging $25,000.',
-    'Ask for three named client references you can call independently — not testimonials on the agency\'s own website.',
+    'Ask for three named client references you can call independently — not testimonials on the agency's own website.',
     'FactoryJet delivers custom small business websites in 7 days starting at $1,999 with Lighthouse 100/100 scores and US-hour project management.',
   ],
   faqs: [
@@ -171,7 +171,7 @@ export const post: BlogPost = {
         </table>
       </div>
       <p className="mb-4">
-        When you test an agency\'s portfolio sites and find scores of 60/100 on mobile Performance, you're looking at sites that load in 5–8 seconds. Portent's benchmark study of 10 million e-commerce sessions found that sites loading in 1 second convert 3x better than sites loading in 5 seconds. That agency is building sites that cost their clients revenue every day. Don't let them cost you yours.
+        When you test an agency's portfolio sites and find scores of 60/100 on mobile Performance, you're looking at sites that load in 5–8 seconds. Portent's benchmark study of 10 million e-commerce sessions found that sites loading in 1 second convert 3x better than sites loading in 5 seconds. That agency is building sites that cost their clients revenue every day. Don't let them cost you yours.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Accessibility: The Legal and Commercial Case for WCAG 2.2</h2>

@@ -6,7 +6,7 @@ export const post: BlogPost = {
   slug: 'shopify-vs-custom-website-us-small-business-2026',
   title: 'Shopify vs. Custom Website for US Small Business: Which Is Right for You in 2026?',
   excerpt:
-    'Shopify is the right choice for most US small business e-commerce in 2026. Custom websites win when you need content-SEO depth, unique checkout logic, or deep third-party integrations that Shopify\'s app ecosystem can\'t handle. This guide maps your business type to the correct decision — with real costs, trade-offs, and the questions that actually separate the two options.',
+    'Shopify is the right choice for most US small business e-commerce in 2026. Custom websites win when you need content-SEO depth, unique checkout logic, or deep third-party integrations that Shopify's app ecosystem can't handle. This guide maps your business type to the correct decision — with real costs, trade-offs, and the questions that actually separate the two options.',
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'May 13, 2026',
@@ -21,7 +21,7 @@ export const post: BlogPost = {
     'Shopify is right for 80% of US small business e-commerce — it handles PCI compliance, hosting, and scaling automatically at $79–$299/month.',
     'Custom websites (Next.js, WordPress) outperform Shopify on content SEO: they rank for 2–3x more blog-driven keywords because of superior technical architecture.',
     'A Shopify store built by an agency costs $2,499–$6,000; a comparable custom e-commerce site costs $8,000–$25,000 — the 3–4x price difference is real.',
-    'Shopify\'s 0.5–2% transaction fees on third-party gateways cost $5,000–$20,000/year on $500K+ revenue — at that scale, custom can pay for itself within 18 months.',
+    'Shopify's 0.5–2% transaction fees on third-party gateways cost $5,000–$20,000/year on $500K+ revenue — at that scale, custom can pay for itself within 18 months.',
     'Service businesses (no products) should almost always use a custom site: Shopify is optimized for products and adds unnecessary complexity and cost for service-only models.',
     'The hybrid approach — Shopify for the store, custom site for the blog/content hub — is the power move for brands where content drives acquisition.',
     'FactoryJet builds both Shopify stores and custom websites for US small businesses, with 7-day delivery starting at $1,999 (custom) and $2,499 (Shopify).',

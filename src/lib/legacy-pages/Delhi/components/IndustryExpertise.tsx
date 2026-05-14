@@ -45,7 +45,7 @@ const IndustryExpertise: React.FC<IndustryExpertiseProps> = ({ onOpenModal }) =>
       icon: Briefcase,
       name: 'Corporate & Professional Services',
       locations: 'Connaught Place, Aerocity, Cyber City',
-      description: 'Premium corporate websites for consulting firms, legal practices, CA firms, and professional services in Delhi NCR\'s business districts.',
+      description: 'Premium corporate websites for consulting firms, legal practices, CA firms, and professional services in Delhi NCR's business districts.',
       services: 'Corporate Website Design, Service Showcase, Client Portals, Appointment Booking',
       examples: 'Consulting firms, law firms, CA/CS practices, architects',
       color: 'text-gray-700',

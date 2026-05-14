@@ -105,7 +105,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop',
     title: 'Generating 500+ Organic Leads via High-Performance Design',
     snippet: 'Designed website with powerful lead gen forms. Generated over 500 leads purely from organic traffic.',
-    challenge: 'As a creative agency, Fliying Pixel needed a website that walked the talk. Their existing portfolio was visually appealing but functionally weak—it wasn\'t converting visitors into inquiries. They needed a balance of stunning aesthetics and rigorous conversion rate optimization (CRO).',
+    challenge: 'As a creative agency, Fliying Pixel needed a website that walked the talk. Their existing portfolio was visually appealing but functionally weak—it wasn't converting visitors into inquiries. They needed a balance of stunning aesthetics and rigorous conversion rate optimization (CRO).',
     solution: 'We deployed a visually rich website with highly optimized conversion funnels. We utilized WIX Studio for its design flexibility but superimposed a custom SEO and AIO strategy layer. By creating high-value content pillars around their services, we drove a massive influx of organic traffic, resulting in over 500 qualified leads without paid ads.',
     techStack: ['Wix Studio', 'Velo API', 'Google Analytics 4', 'Zapier'],
     metrics: [
@@ -124,7 +124,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop',
     title: '300% Organic Traffic Surge for Logistics Leader',
     snippet: 'Transformed digital presence. Google rankings and GMB profile improved drastically.',
-    challenge: 'In the competitive logistics sector, trust is currency. Rukman Transport had a minimal digital presence that didn\'t reflect their fleet size or reliability. They were losing local B2B contracts to competitors who simply looked more professional online.',
+    challenge: 'In the competitive logistics sector, trust is currency. Rukman Transport had a minimal digital presence that didn't reflect their fleet size or reliability. They were losing local B2B contracts to competitors who simply looked more professional online.',
     solution: 'We overhauled their digital brand identity and executed a hyper-local SEO strategy. We optimized their Google My Business (GMB) profile and built a professional, fast-loading website that highlighted their fleet capabilities and safety records. The result was a 300% increase in organic search visibility for high-intent keywords like "industrial transport India".',
     techStack: ['WordPress', 'Yoast SEO', 'Google Maps API', 'Schema Markup'],
     metrics: [
@@ -145,7 +145,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2032&auto=format&fit=crop',
     title: 'Bank-Grade Security & 40% Lower Bounce Rate',
     snippet: 'Moving from legacy HTML to Next.js for security and speed.',
-    challenge: 'Apex FinTech\'s legacy platform was failing security audits and suffering from slow load times, causing a high bounce rate among tech-savvy users. They needed a modernization partner who understood both performance and strict financial compliance regulations.',
+    challenge: 'Apex FinTech's legacy platform was failing security audits and suffering from slow load times, causing a high bounce rate among tech-savvy users. They needed a modernization partner who understood both performance and strict financial compliance regulations.',
     solution: 'FactoryJet re-architected their frontend using Next.js with strict Content Security Policies (CSP). We implemented server-side rendering (SSR) for blazing fast initial loads and integrated Auth0 for bank-grade identity management. The new interface is not only secure but fluid, reducing bounce rates by 40%.',
     techStack: ['Next.js', 'TypeScript', 'Auth0', 'AWS Lambda'],
     metrics: [
@@ -183,7 +183,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2053&auto=format&fit=crop',
     title: '$50M in Property Sales via 3D Web Experience',
     snippet: 'High-end, 3D interactive website (Three.js) for selling off-plan properties.',
-    challenge: 'Selling off-plan luxury villas requires immersion. Static images were not enough to convince international investors to commit millions to unbuilt properties in Dubai\'s competitive market.',
+    challenge: 'Selling off-plan luxury villas requires immersion. Static images were not enough to convince international investors to commit millions to unbuilt properties in Dubai's competitive market.',
     solution: 'We built a cinematic, WebGL-powered experience using Three.js and React Fiber. Users can take hyper-realistic 3D walkthroughs of the villas directly in the browser, changing finishes and lighting in real-time. This immersive confidence-builder led to the complete sell-out of two major projects online.',
     techStack: ['Three.js', 'React Three Fiber', 'WebGL', 'Blender'],
     metrics: [
@@ -221,7 +221,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=2072&auto=format&fit=crop',
     title: '2x Speed & 35% Conversion Lift: Shopify Plus Migration',
     snippet: 'Handling 50,000 SKUs and complex European tax rules.',
-    challenge: 'Nordic Auto Parts was struggling with Magento\'s maintenance costs and slow performance. They needed to manage 50,000 SKUs across multiple European countries, each with complex VAT rules.',
+    challenge: 'Nordic Auto Parts was struggling with Magento's maintenance costs and slow performance. They needed to manage 50,000 SKUs across multiple European countries, each with complex VAT rules.',
     solution: 'We executed a massive migration to Shopify Plus. We used Shopify Scripts to automate complex EU VAT calculations at checkout. We also implemented a headless frontend for the product catalog to ensure instant search and filtering across their massive inventory. Load times dropped by half, boosting conversions by 35%.',
     techStack: ['Shopify Plus', 'Algolia', 'Vue.js', 'Liquid'],
     metrics: [
@@ -240,7 +240,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop',
     title: 'Gamifying Education: 50,000 Monthly Active Users',
     snippet: 'Building a gamified learning platform for K-12 students using MERN stack.',
-    challenge: 'Student engagement was low on Eduverse\'s legacy platform. Students found the content boring and retention rates were plummeting.',
+    challenge: 'Student engagement was low on Eduverse's legacy platform. Students found the content boring and retention rates were plummeting.',
     solution: 'We completely rebuilt the LMS using the MERN stack, introducing "Gamification" mechanics. Students now earn XP, badges, and unlock levels as they learn. We used WebSockets for real-time multiplayer quizzes. The platform now hosts 50,000 active monthly users who spend 3x more time learning.',
     techStack: ['MongoDB', 'Express', 'React', 'Node.js', 'Socket.io'],
     metrics: [
@@ -278,7 +278,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     image: 'https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1974&auto=format&fit=crop',
     title: 'Scaling Subscription Revenue to $100k MRR',
     snippet: 'WooCommerce Subscriptions setup with custom churn-reduction logic.',
-    challenge: 'Pure Organics had a great product but high churn. Customers were cancelling because they couldn\'t easily pause or skip deliveries.',
+    challenge: 'Pure Organics had a great product but high churn. Customers were cancelling because they couldn't easily pause or skip deliveries.',
     solution: 'We built a highly flexible subscription portal on WooCommerce. We added custom "Save the Sale" logic that offers discounts or "Skip Month" options when a user tries to cancel. This friction-reducing UI helped stabilize their revenue, pushing them to $100k Monthly Recurring Revenue.',
     techStack: ['WooCommerce', 'React', 'Stripe', 'PHP'],
     metrics: [
@@ -373,7 +373,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1965&auto=format&fit=crop',
     title: 'Securing $5M Seed Round with Crystal Clear Messaging',
     snippet: 'Motion-heavy (Framer Motion) landing page explaining complex LLM tech.',
-    challenge: 'TechStream had groundbreaking technology but a confusing story. Investors couldn\'t grasp the complexity of their LLM infrastructure from their static slide deck.',
+    challenge: 'TechStream had groundbreaking technology but a confusing story. Investors couldn't grasp the complexity of their LLM infrastructure from their static slide deck.',
     solution: 'We built a scroll-triggered, interactive storytelling site using Framer Motion. As users scroll, complex diagrams animate and simplify, visually explaining the "how" behind the tech. The clarity and polish of the site were cited by lead investors as a key factor in closing their $5M seed round.',
     techStack: ['React', 'Framer Motion', 'Lottie', 'Next.js'],
     metrics: [

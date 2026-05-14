@@ -23,7 +23,7 @@ export const post: BlogPost = {
     'US domestic agencies typically charge $8,000–$25,000 for the same deliverable that offshore-with-US-support teams deliver for $2,000–$5,000.',
     'Monthly maintenance costs $99–$299 from a professional agency; skipping maintenance leads to security breaches that cost $5,000–$50,000 to remediate.',
     'A slow website (load time over 3 seconds) loses 53% of mobile visitors before the page even loads — speed is a direct revenue metric.',
-    'Price anchoring matters: get three quotes, compare scope line-by-line, and reject any agency that won\'t provide an itemized statement of work.',
+    'Price anchoring matters: get three quotes, compare scope line-by-line, and reject any agency that won't provide an itemized statement of work.',
     'FactoryJet delivers 5-page professional websites in 7 days starting at $1,999 — US SMB benchmark for offshore-quality-at-offshore-price with US communication.',
   ],
   faqs: [

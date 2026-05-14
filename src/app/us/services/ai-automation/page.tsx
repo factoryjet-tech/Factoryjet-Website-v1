@@ -413,7 +413,7 @@ const PRICING_TIERS = [
       '14-day post-launch support window',
       'Recorded monitoring dashboard walkthrough',
     ],
-    cta: { label: 'Book a Free Audit', href: '/contact' },
+    cta: { label: 'Book a Free Audit', modal: true, region: 'us' },
   },
   {
     name: 'Growth',
@@ -430,7 +430,7 @@ const PRICING_TIERS = [
       '30-day post-launch support window',
       'Monthly retainer option for ongoing improvements',
     ],
-    cta: { label: 'Get a Custom Quote', href: '/contact' },
+    cta: { label: 'Get a Custom Quote', modal: true, region: 'us' },
     popular: true,
   },
   {
@@ -448,7 +448,7 @@ const PRICING_TIERS = [
       '90-day post-launch support and iteration window',
       'Quarterly automation roadmap review',
     ],
-    cta: { label: 'Schedule an Enterprise Call', href: '/contact' },
+    cta: { label: 'Schedule an Enterprise Call', modal: true, region: 'us' },
   },
 ] as const;
 
@@ -637,9 +637,9 @@ export default function AIAutomationPage() {
           { label: 'AI Automation', href: '/us/services/ai-automation' },
           { label: 'AI Agents', href: '/us/services/ai-agents' },
           { label: 'Pricing', href: '#pricing' },
-          { label: 'Contact', href: '/contact' },
+          { label: 'Contact', modal: true, region: 'us' },
         ]}
-        cta={{ label: 'Free Automation Audit', href: '/contact' }}
+        cta={{ label: 'Free Automation Audit', modal: true, region: 'us' }}
       />
 
       <main className="bg-fj-cream">
@@ -649,7 +649,7 @@ export default function AIAutomationPage() {
           eyebrow="AI AUTOMATION AGENCY · USA"
           headline="The AI Automation Agency Built for US Small Businesses"
           lead="Your team is spending 20+ hours a week on work that should run itself — copying data between tools, chasing invoices, following up on leads, writing the same reports. FactoryJet connects your stack, automates the manual steps, and builds in AI decision-making where routing alone isn't enough. Starting at $2,500. 60–70% cheaper than a US agency."
-          primaryCta={{ label: 'Book a Free Automation Audit', href: '/contact' }}
+          primaryCta={{ label: 'Book a Free Automation Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses automated',
@@ -659,7 +659,7 @@ export default function AIAutomationPage() {
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
               <p
-                className="font-fj-mono font-medium uppercase text-fj-jet-blue"
+                className="font-fj-mono font-medium uppercase text-[#F05A28]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
                 AUTOMATION IN ACTION
@@ -685,7 +685,7 @@ export default function AIAutomationPage() {
                   <div key={i} className="rounded-xl border border-fj-neutral-100 bg-fj-neutral-50 p-4">
                     <p className="font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-red-400">Before</p>
                     <p className="mt-1 font-fj-body text-[0.8125rem] leading-[1.5] text-fj-neutral-600">{row.before}</p>
-                    <p className="mt-2 font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-emerald-600">After</p>
+                    <p className="mt-2 font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-[#F05A28]">After</p>
                     <p className="mt-1 font-fj-body text-[0.8125rem] leading-[1.5] text-fj-neutral-600">{row.after}</p>
                   </div>
                 ))}
@@ -714,7 +714,7 @@ export default function AIAutomationPage() {
                 {['n8n', 'Make.com', 'Zapier', 'HubSpot', 'Claude AI', 'GPT-4o', 'Salesforce', 'Shopify'].map((tool) => (
                   <span
                     key={tool}
-                    className="inline-flex items-center rounded-full border border-fj-jet-blue/25 bg-fj-jet-blue/8 px-3 py-1 font-fj-mono font-semibold uppercase text-fj-jet-blue"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {tool}
@@ -725,7 +725,7 @@ export default function AIAutomationPage() {
                 A Zapier freelancer connects two tools and calls it automation. A US automation agency charges $30,000 and takes six months. FactoryJet sits in the middle — and builds above both. We map your full workflow, handle the edge cases that break simple automations, and add an AI layer (Claude, GPT-4o) for the steps that require reading, classifying, or generating content rather than just routing a signal.
               </p>
               <div
-                className="border-l-2 border-fj-jet-blue pl-5 py-1"
+                className="border-l-2 border-[#F05A28] pl-5 py-1"
                 aria-hidden
               >
                 <p
@@ -775,7 +775,7 @@ export default function AIAutomationPage() {
                 ].map((item) => (
                   <div key={item.category} className="flex items-center justify-between gap-4 py-3.5">
                     <div className="flex items-center gap-2.5">
-                      <div className="h-1.5 w-1.5 shrink-0 rounded-full bg-fj-jet-blue/50" aria-hidden="true" />
+                      <div className="h-1.5 w-1.5 shrink-0 rounded-full bg-[rgba(240,90,40,0.50)]" aria-hidden="true" />
                       <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">{item.category}</p>
                     </div>
                     <p className="text-right font-fj-body text-[0.8125rem] text-fj-neutral-500">{item.tools}</p>
@@ -783,7 +783,7 @@ export default function AIAutomationPage() {
                 ))}
               </div>
               <div className="border-t border-fj-neutral-100 bg-fj-neutral-50 px-7 py-5">
-                <div className="mb-2 h-[3px] w-8 rounded-full bg-fj-jet-blue" aria-hidden="true" />
+                <div className="mb-2 h-[3px] w-8 rounded-full bg-[#F05A28]" aria-hidden="true" />
                 <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">
                   If it has an API, we can automate it.
                 </p>
@@ -896,7 +896,7 @@ export default function AIAutomationPage() {
           eyebrow="START WITH A FREE AUDIT"
           headline="Book a Free Automation Audit and Walk Away With a Roadmap"
           sub="In 30 minutes, we'll identify your 3 highest-value automation opportunities, estimate the hours you'll recover each week, and tell you exactly what it costs to build. No pitch. No pressure. Just a straight answer from an engineer who's built it before — for a business exactly like yours."
-          primaryCta={{ label: 'Book Your Free Audit', href: '/contact' }}
+          primaryCta={{ label: 'Book Your Free Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See AI Agent Services', href: '/us/services/ai-agents' }}
           objectionHandler="Starts at $2,500. Fixed price. Free audit first. No commitment until you've seen the plan."
         />

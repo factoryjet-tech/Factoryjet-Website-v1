@@ -464,7 +464,7 @@ const PRICING_TIERS = [
       'Code delivered to your GitHub on launch',
       '2–3 week delivery from design sign-off',
     ],
-    cta: { label: 'Book a Free Store Audit', href: '/contact' },
+    cta: { label: 'Book a Free Store Audit', modal: true, region: 'us' },
   },
   {
     name: 'Full Store Build',
@@ -482,7 +482,7 @@ const PRICING_TIERS = [
       'Post-launch Lighthouse audit and Core Web Vitals report',
       '30-day post-launch support window',
     ],
-    cta: { label: 'Get a Custom Quote', href: '/contact' },
+    cta: { label: 'Get a Custom Quote', modal: true, region: 'us' },
     popular: true,
   },
   {
@@ -500,7 +500,7 @@ const PRICING_TIERS = [
       'Dedicated engineering point of contact',
       '90-day post-launch support and iteration window',
     ],
-    cta: { label: 'Schedule a Plus Consultation', href: '/contact' },
+    cta: { label: 'Schedule a Plus Consultation', modal: true, region: 'us' },
   },
 ] as const;
 
@@ -641,9 +641,9 @@ export default function ShopifyPage() {
           { label: 'Shopify', href: '/us/services/shopify-development' },
           { label: 'Portfolio', href: '/portfolio' },
           { label: 'Pricing', href: '#pricing' },
-          { label: 'Contact', href: '/contact' },
+          { label: 'Contact', modal: true, region: 'us' },
         ]}
-        cta={{ label: 'Book a Free Store Audit', href: '/contact' }}
+        cta={{ label: 'Book a Free Store Audit', modal: true, region: 'us' }}
       />
 
       <main className="bg-fj-cream">
@@ -653,7 +653,7 @@ export default function ShopifyPage() {
           eyebrow="SHOPIFY DEVELOPMENT · USA"
           headline="Custom Shopify Stores That Sell, Not Just Look Good"
           lead="Generic Shopify themes convert below 1%. FactoryJet builds custom Shopify and Shopify Plus stores — designed in Figma, built in Liquid — that are fast, on-brand, and optimized for your specific customer journey. 60–70% cheaper than a US Shopify agency."
-          primaryCta={{ label: 'Book a Free Store Audit', href: '/contact' }}
+          primaryCta={{ label: 'Book a Free Store Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '120+ Shopify stores launched',
@@ -663,7 +663,7 @@ export default function ShopifyPage() {
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
               <p
-                className="font-fj-mono font-medium uppercase text-fj-jet-blue"
+                className="font-fj-mono font-medium uppercase text-[#F05A28]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
                 WHAT A CUSTOM SHOPIFY STORE CHANGES
@@ -678,7 +678,7 @@ export default function ShopifyPage() {
                   'Confusing navigation and buried CTAs → cart abandonment rate 70%+',
                 ].map((point, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-fj-jet-blue/10 font-fj-mono text-[10px] font-bold text-fj-jet-blue">
+                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#F05A28]">
                       {i + 1}
                     </span>
                     <p className="font-fj-body text-[0.875rem] leading-[1.5] text-fj-neutral-600">
@@ -732,7 +732,7 @@ export default function ShopifyPage() {
                 ].map((cap) => (
                   <span
                     key={cap}
-                    className="inline-flex items-center rounded-full border border-fj-jet-blue/25 bg-fj-jet-blue/8 px-3 py-1 font-fj-mono font-semibold uppercase text-fj-jet-blue"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {cap}
@@ -755,7 +755,7 @@ export default function ShopifyPage() {
                     className="rounded-xl border border-fj-neutral-200 bg-white px-3 py-4 text-center shadow-sm"
                   >
                     <p
-                      className="fj-display font-bold text-fj-jet-blue"
+                      className="fj-display font-bold text-[#F05A28]"
                       style={{ fontSize: '1.375rem', lineHeight: 1, letterSpacing: '-0.03em' }}
                     >
                       {b.value}
@@ -770,7 +770,7 @@ export default function ShopifyPage() {
                 ))}
               </div>
 
-              <div className="border-l-2 border-fj-jet-blue pl-5 py-1" aria-hidden>
+              <div className="border-l-2 border-[#F05A28] pl-5 py-1" aria-hidden>
                 <p
                   className="font-fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.1875rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
@@ -810,14 +810,14 @@ export default function ShopifyPage() {
                       <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">{item.metric}</p>
                       <p className="font-fj-mono text-[0.6875rem] text-fj-neutral-400" style={{ letterSpacing: '0.04em' }}>{item.note}</p>
                     </div>
-                    <p className="fj-display flex-shrink-0 font-bold text-fj-jet-blue" style={{ fontSize: '1.125rem', letterSpacing: '-0.02em' }}>
+                    <p className="fj-display flex-shrink-0 font-bold text-[#F05A28]" style={{ fontSize: '1.125rem', letterSpacing: '-0.02em' }}>
                       {item.score}
                     </p>
                   </div>
                 ))}
               </div>
               <div className="border-t border-fj-neutral-100 bg-fj-neutral-50 px-7 py-5">
-                <div className="mb-2 h-[3px] w-8 rounded-full bg-fj-jet-blue" aria-hidden="true" />
+                <div className="mb-2 h-[3px] w-8 rounded-full bg-[#F05A28]" aria-hidden="true" />
                 <p className="fj-display font-semibold text-fj-ink" style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}>
                   Audited before every handover.
                 </p>
@@ -960,7 +960,7 @@ export default function ShopifyPage() {
                 {['Shopify Liquid', 'Hydrogen', 'Remix', 'Figma', 'Klaviyo', 'ReCharge', 'Yotpo', 'Shopify Flow'].map((tech) => (
                   <span
                     key={tech}
-                    className="inline-flex items-center rounded-full border border-fj-jet-blue/25 bg-fj-jet-blue/8 px-3 py-1 font-fj-mono font-semibold uppercase text-fj-jet-blue"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {tech}
@@ -1012,7 +1012,7 @@ export default function ShopifyPage() {
                 ].map((item) => (
                   <div key={item.category} className="flex items-center justify-between gap-4 py-3.5">
                     <div className="flex items-center gap-2.5">
-                      <div className="h-1.5 w-1.5 shrink-0 rounded-full bg-fj-jet-blue/50" aria-hidden="true" />
+                      <div className="h-1.5 w-1.5 shrink-0 rounded-full bg-[rgba(240,90,40,0.50)]" aria-hidden="true" />
                       <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">{item.category}</p>
                     </div>
                     <p className="text-right font-fj-body text-[0.875rem] text-fj-neutral-600">{item.tools}</p>
@@ -1020,7 +1020,7 @@ export default function ShopifyPage() {
                 ))}
               </div>
               <div className="border-t border-fj-neutral-100 bg-fj-neutral-50 px-8 py-5">
-                <div className="mb-2 h-[3px] w-8 rounded-full bg-fj-jet-blue" aria-hidden="true" />
+                <div className="mb-2 h-[3px] w-8 rounded-full bg-[#F05A28]" aria-hidden="true" />
                 <p className="fj-display font-semibold text-fj-ink" style={{ fontSize: '1.0625rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}>
                   Shopify-native. No third-party lock-in.
                 </p>
@@ -1040,7 +1040,7 @@ export default function ShopifyPage() {
           ]}
           bodySlot={
             <>
-              <div className="border-l-2 border-fj-jet-blue py-1 pl-5" aria-hidden="true">
+              <div className="border-l-2 border-[#F05A28] py-1 pl-5" aria-hidden="true">
                 <p className="fj-display font-semibold text-fj-ink" style={{ fontSize: '1.125rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}>
                   Same traffic. Better theme. More revenue.
                 </p>
@@ -1049,7 +1049,7 @@ export default function ShopifyPage() {
                 {['Austin TX', 'Miami FL', 'Denver CO', 'Nashville TN', 'Portland OR', 'Charlotte NC', 'Raleigh NC', 'Tampa FL'].map((city) => (
                   <span
                     key={city}
-                    className="inline-flex items-center rounded-full border border-fj-jet-blue/25 bg-fj-jet-blue/8 px-3 py-1 font-fj-mono font-medium text-fj-jet-blue"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#F05A28]"
                     style={{ fontSize: '10px', letterSpacing: '0.08em' }}
                   >
                     {city}
@@ -1140,7 +1140,7 @@ export default function ShopifyPage() {
             eyebrow="READY TO START"
             headline="Book a Free Shopify Store Audit, No Obligation"
             sub="In 30 minutes, we'll audit your current store or platform, identify the specific pages losing you the most revenue, and give you a fixed price to fix it. No pitch. No pressure. An honest assessment from engineers who've built 120+ stores."
-            primaryCta={{ label: 'Book Your Free Store Audit', href: '/contact' }}
+            primaryCta={{ label: 'Book Your Free Store Audit', modal: true, region: 'us' }}
             secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
             objectionHandler="Fixed price. Full code ownership. 120+ Shopify stores delivered."
           />

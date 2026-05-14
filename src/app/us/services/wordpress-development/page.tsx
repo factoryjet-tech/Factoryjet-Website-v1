@@ -383,7 +383,7 @@ const PRICING_TIERS = [
       'Google Analytics 4 + Search Console setup',
       '14-day post-launch support',
     ],
-    cta: { label: 'Book a Free Consultation', href: '/contact' },
+    cta: { label: 'Book a Free Consultation', modal: true, region: 'us' },
   },
   {
     name: 'Business WordPress',
@@ -401,7 +401,7 @@ const PRICING_TIERS = [
       'Google Analytics 4 with custom event tracking',
       '30-day post-launch support',
     ],
-    cta: { label: 'Get a Custom Quote', href: '/contact' },
+    cta: { label: 'Get a Custom Quote', modal: true, region: 'us' },
     popular: true,
   },
   {
@@ -420,7 +420,7 @@ const PRICING_TIERS = [
       'Core Web Vitals pass with full catalog',
       '30-day post-launch support',
     ],
-    cta: { label: 'Schedule a WooCommerce Consultation', href: '/contact' },
+    cta: { label: 'Schedule a WooCommerce Consultation', modal: true, region: 'us' },
   },
 ] as const;
 
@@ -623,9 +623,9 @@ export default function WordPressDevelopmentPage() {
           { label: 'WordPress', href: '/us/services/wordpress-development' },
           { label: 'Website Redesign', href: '/us/services/website-redesign' },
           { label: 'Pricing', href: '#pricing' },
-          { label: 'Contact', href: '/contact' },
+          { label: 'Contact', modal: true, region: 'us' },
         ]}
-        cta={{ label: 'Free WordPress Consultation', href: '/contact' }}
+        cta={{ label: 'Free WordPress Consultation', modal: true, region: 'us' }}
       />
 
       <main className="bg-fj-cream">
@@ -635,7 +635,7 @@ export default function WordPressDevelopmentPage() {
           eyebrow="WORDPRESS WEB DESIGN AGENCY · USA"
           headline="Custom WordPress Websites That Load Fast, Rank, and Convert"
           lead="Most WordPress agencies build on Elementor or Divi — page builders that produce bloated code, fail Core Web Vitals, and hurt your Google rankings. FactoryJet builds custom WordPress themes from scratch: clean code, fast load times, and mobile-first design. Starting at $1,999. 60–70% cheaper than a US WordPress agency."
-          primaryCta={{ label: 'Book a Free WordPress Consultation', href: '/contact' }}
+          primaryCta={{ label: 'Book a Free WordPress Consultation', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ WordPress projects delivered',
@@ -645,7 +645,7 @@ export default function WordPressDevelopmentPage() {
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
               <p
-                className="font-fj-mono font-medium uppercase text-fj-jet-blue"
+                className="font-fj-mono font-medium uppercase text-[#F05A28]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
                 PAGE BUILDER VS. CUSTOM THEME
@@ -671,7 +671,7 @@ export default function WordPressDevelopmentPage() {
                   <div key={i} className="rounded-xl border border-fj-neutral-100 bg-fj-neutral-50 p-4">
                     <p className="font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-red-400">Page Builder</p>
                     <p className="mt-1 font-fj-body text-[0.8125rem] leading-[1.5] text-fj-neutral-600">{row.before}</p>
-                    <p className="mt-2 font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-emerald-600">Custom Theme</p>
+                    <p className="mt-2 font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-[#F05A28]">Custom Theme</p>
                     <p className="mt-1 font-fj-body text-[0.8125rem] leading-[1.5] text-fj-neutral-600">{row.after}</p>
                   </div>
                 ))}
@@ -712,7 +712,7 @@ export default function WordPressDevelopmentPage() {
                 {['WordPress', 'WooCommerce', 'PHP', 'Gutenberg', 'Yoast SEO', 'WP Rocket', 'Figma', 'Custom Themes'].map((tool) => (
                   <span
                     key={tool}
-                    className="inline-flex items-center rounded-full border border-fj-jet-blue/25 bg-fj-jet-blue/8 px-3 py-1 font-fj-mono font-semibold uppercase text-fj-jet-blue"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {tool}
@@ -723,7 +723,7 @@ export default function WordPressDevelopmentPage() {
                 WordPress is the most powerful CMS in the world when built correctly. It's also the most commonly botched when agencies take shortcuts. The shortcut is always a page builder — Elementor, Divi, WPBakery — tools that enable faster delivery for the agency at the cost of your site's performance, SEO, and long-term maintainability.
               </p>
               <div
-                className="border-l-2 border-fj-jet-blue pl-5 py-1"
+                className="border-l-2 border-[#F05A28] pl-5 py-1"
                 aria-hidden
               >
                 <p
@@ -737,7 +737,7 @@ export default function WordPressDevelopmentPage() {
                 FactoryJet builds WordPress themes in PHP with Gutenberg custom blocks — the native WordPress block editor, extended with components designed to your brand system. No page builder framework. No inherited CSS from a parent theme. No plugin dependency for layout control. Your site loads what it needs and nothing else, which is why our WordPress builds consistently pass Core Web Vitals on the same shared hosting that makes page builder sites fail.
               </p>
               <p>
-                For businesses needing e-commerce, we build on WooCommerce with custom product and checkout templates — not the default WooCommerce theme or a storefront theme. Our WooCommerce builds target 2–3% conversion rates vs. the 0.5–1% typical of default theme implementations. If you need a <a href="/us/services/website-redesign" className="text-fj-jet-blue underline underline-offset-2">website redesign</a> from an existing page builder, we handle that migration as well — preserving your content and Google history while rebuilding the performance and design from the ground up.
+                For businesses needing e-commerce, we build on WooCommerce with custom product and checkout templates — not the default WooCommerce theme or a storefront theme. Our WooCommerce builds target 2–3% conversion rates vs. the 0.5–1% typical of default theme implementations. If you need a <a href="/us/services/website-redesign" className="text-[#F05A28] underline underline-offset-2">website redesign</a> from an existing page builder, we handle that migration as well — preserving your content and Google history while rebuilding the performance and design from the ground up.
               </p>
             </>
           }
@@ -773,7 +773,7 @@ export default function WordPressDevelopmentPage() {
                 ].map((item) => (
                   <div key={item.category} className="flex items-center justify-between gap-4 py-3.5">
                     <div className="flex items-center gap-2.5">
-                      <div className="h-1.5 w-1.5 shrink-0 rounded-full bg-fj-jet-blue/50" aria-hidden="true" />
+                      <div className="h-1.5 w-1.5 shrink-0 rounded-full bg-[rgba(240,90,40,0.50)]" aria-hidden="true" />
                       <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">{item.category}</p>
                     </div>
                     <p className="text-right font-fj-body text-[0.8125rem] text-fj-neutral-500">{item.tools}</p>
@@ -781,7 +781,7 @@ export default function WordPressDevelopmentPage() {
                 ))}
               </div>
               <div className="border-t border-fj-neutral-100 bg-fj-neutral-50 px-7 py-5">
-                <div className="mb-2 h-[3px] w-8 rounded-full bg-fj-jet-blue" aria-hidden="true" />
+                <div className="mb-2 h-[3px] w-8 rounded-full bg-[#F05A28]" aria-hidden="true" />
                 <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">
                   Every site. Lighthouse 85+. Core Web Vitals pass.
                 </p>
@@ -894,7 +894,7 @@ export default function WordPressDevelopmentPage() {
           eyebrow="START WITH A FREE CONSULTATION"
           headline="Book a Free WordPress Consultation and Get a Scope and Quote in 48 Hours"
           sub="In 30 minutes, we'll review your current site, understand your goals, and tell you exactly what a custom WordPress build would include — the page structure, technical architecture, timeline, and fixed cost. No pitch deck. No discovery retainer. Just a straight assessment from engineers who've built 500+ WordPress sites for US businesses."
-          primaryCta={{ label: 'Book Your Free WordPress Consultation', href: '/contact' }}
+          primaryCta={{ label: 'Book Your Free WordPress Consultation', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Website Redesign Services', href: '/us/services/website-redesign' }}
           objectionHandler="Starts at $1,999. Custom theme, no page builders. Fixed price. Free consultation first."
         />

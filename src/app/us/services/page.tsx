@@ -382,7 +382,7 @@ export default function USServicesHubPage() {
           eyebrow="READY TO START"
           headline="Get a Fixed Price in 24 Hours"
           sub="Tell us what you need. We'll review your current site, recommend the right service, and send a fixed-price proposal within 24 hours. No hourly billing. No surprises."
-          primaryCta={{ label: 'Book a Free Strategy Call', href: '/contact' }}
+          primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
           objectionHandler="Fixed price confirmed upfront. Full code ownership. 7-day delivery guarantee."
         />

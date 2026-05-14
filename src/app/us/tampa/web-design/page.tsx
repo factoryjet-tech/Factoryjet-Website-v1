@@ -37,7 +37,7 @@ export default function TampaWebDesignPage() {
         eyebrow={"WEB DESIGN · TAMPA"}
         headline={"Web Design in Tampa That Converts Visitors Into Clients"}
         lead={"Tampa Bay is one of Florida's fastest-growing business markets — healthcare, finance, defense contracting, and a booming tech scene all converging on the Gulf Coast. FactoryJet delivers a production-ready website in 7 days, starting at $1,999. You own the code, the design files, and the results."}
-        primaryCta={{ label: "Start Your Project", href: '/contact' }}
+        primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
         trustItems={["Websites from $1,999", "7-day delivery", "Next.js + GA4 included"]}
         rightSlot={<HeroBrowserMockup />}
       />
@@ -152,7 +152,7 @@ export default function TampaWebDesignPage() {
         eyebrow={"READY TO START"}
         headline={"Ready to Build Your Tampa Website?"}
         sub={"Tampa Bay's $178B+ economy spans healthcare, defense, finance, and hospitality — and every segment has buyers who will judge your website before they judge your pitch. Every week without a high-performing site is a week your competitors are earning the trust you should have. Start today."}
-        primaryCta={{ label: "Start Your Project", href: '/contact' }}
+        primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
       />
       <SchemaScript />
     </main>

@@ -136,7 +136,7 @@ export default function CityContextSection({
 
                     {/* Data-point label */}
                     <p
-                      className="mb-3 font-fj-mono font-bold uppercase text-fj-jet-blue"
+                      className="mb-3 font-fj-mono font-bold uppercase text-[#F05A28]"
                       style={{ fontSize: '9px', letterSpacing: '0.14em', opacity: 0.65 }}
                       aria-hidden="true"
                     >
@@ -145,7 +145,7 @@ export default function CityContextSection({
 
                     {/* Stat value */}
                     <p
-                      className="fj-display whitespace-nowrap font-bold leading-none text-fj-jet-blue"
+                      className="fj-display whitespace-nowrap font-bold leading-none text-[#F05A28]"
                       style={{
                         fontSize: 'clamp(2.25rem, 4vw, 3.25rem)',
                         letterSpacing: '-0.04em',
@@ -167,7 +167,7 @@ export default function CityContextSection({
                       href={s.sourceUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-4 inline-flex items-center gap-1.5 rounded-full font-fj-mono font-medium text-fj-neutral-400 transition-colors hover:text-fj-jet-blue"
+                      className="mt-4 inline-flex items-center gap-1.5 rounded-full font-fj-mono font-medium text-fj-neutral-400 transition-colors hover:text-[#F05A28]"
                       style={{
                         fontSize: '10px',
                         letterSpacing: '0.07em',

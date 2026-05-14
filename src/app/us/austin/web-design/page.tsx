@@ -41,7 +41,7 @@ export default function AustinWebDesignPage() {
         eyebrow={"WEB DESIGN · AUSTIN"}
         headline={"Web Design in Austin That Converts Visitors Into Clients"}
         lead={"Austin businesses don't have time for slow sites, vague agencies, or six-month timelines. FactoryJet delivers a production-ready website in 7 days — starting at $1,500. You own the code, the design files, and the results."}
-        primaryCta={{ label: "Start Your Project", href: '/contact' }}
+        primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
         trustItems={["Websites from $1,500","7-day delivery","Next.js + GA4 included"]}
         rightSlot={<HeroBrowserMockup />}
       />
@@ -124,7 +124,7 @@ export default function AustinWebDesignPage() {
         eyebrow={"READY TO START"}
         headline={"Ready to Build Your Austin Website?"}
         sub={"Austin's $268 billion economy moves fast. Every week without a high-performing website is a week your competitors are capturing the searches you should own. Start your project today — pick a tier, book a free 30-minute call, and we'll have a sitemap ready within 72 hours."}
-        primaryCta={{ label: "Start Your Project", href: '/contact' }}
+        primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
       />
       <SchemaScript />
     </main>

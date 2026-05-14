@@ -66,7 +66,7 @@ export default function SiteHeader({
               <Link
                 key={link.href}
                 href={link.href}
-                className="font-fj-body text-[15px] text-fj-ink transition-colors hover:text-fj-jet-blue"
+                className="font-fj-body text-[15px] text-fj-ink transition-colors hover:text-[#F05A28]"
               >
                 {link.label}
               </Link>

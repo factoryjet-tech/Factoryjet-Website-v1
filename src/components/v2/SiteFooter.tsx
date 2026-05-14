@@ -95,7 +95,7 @@ export default function SiteFooter({
   const headingClass = isDark ? 'text-fj-charcoal-muted' : 'text-fj-neutral-400';
   const linkClass = isDark
     ? 'text-fj-charcoal-text hover:text-white transition-colors'
-    : 'text-fj-ink hover:text-fj-jet-blue transition-colors';
+    : 'text-fj-ink hover:text-[#F05A28] transition-colors';
   const dividerClass = isDark
     ? 'border-t border-white/10'
     : 'border-t border-fj-neutral-200';

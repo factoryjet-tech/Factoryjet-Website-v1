@@ -274,7 +274,7 @@ const PRICING_TIERS = [
       '7-day delivery',
       '30 days post-launch support',
     ],
-    cta: { label: 'Get Started', href: '/contact' },
+    cta: { label: 'Get Started', modal: true, region: 'us' },
   },
   {
     name: 'Growth',
@@ -290,7 +290,7 @@ const PRICING_TIERS = [
       '14-day delivery',
       '30 days post-launch support',
     ],
-    cta: { label: 'Get Started', href: '/contact' },
+    cta: { label: 'Get Started', modal: true, region: 'us' },
     popular: true,
   },
   {
@@ -307,7 +307,7 @@ const PRICING_TIERS = [
       '7-day delivery',
       '30 days post-launch support',
     ],
-    cta: { label: 'Get Started', href: '/contact' },
+    cta: { label: 'Get Started', modal: true, region: 'us' },
   },
 ] as const;
 
@@ -466,7 +466,7 @@ export default function PricingPage() {
         eyebrow="WEBSITE DESIGN COST — 2025"
         headline="How Much Does a Website Cost? Here's the Actual Number."
         lead="US agencies charge $8,000–$35,000 for a business website. FactoryJet builds the same quality site for $1,499–$7,500 — fixed price, 7-day delivery, no hidden fees. Here's the breakdown."
-        primaryCta={{ label: 'Get a Free Quote', href: '/contact' }}
+        primaryCta={{ label: 'Get a Free Quote', modal: true, region: 'us' }}
         secondaryCta={{ label: 'See All Packages', href: '#pricing' }}
         trustItems={['500+ US businesses served', '7-day delivery guarantee', '60–70% below US agency rates']}
         rightSlot={
@@ -474,7 +474,7 @@ export default function PricingPage() {
             <p className="text-xs font-fj-mono uppercase tracking-widest text-white/50 mb-4">2025 Price Comparison</p>
             <div className="grid grid-cols-3 gap-2 text-xs font-fj-body mb-2">
               <span className="text-white/40">Service</span>
-              <span className="text-fj-jet-blue font-semibold text-center">FactoryJet</span>
+              <span className="text-[#F05A28] font-semibold text-center">FactoryJet</span>
               <span className="text-white/40 text-center">US Agency</span>
             </div>
             {[
@@ -487,7 +487,7 @@ export default function PricingPage() {
             ].map(([service, fj, us]) => (
               <div key={service} className="grid grid-cols-3 gap-2 py-2 border-t border-white/5 items-center">
                 <span className="text-white/70 text-xs">{service}</span>
-                <span className="text-green-400 font-semibold text-sm text-center">{fj}</span>
+                <span className="text-[#F05A28] font-semibold text-sm text-center">{fj}</span>
                 <span className="text-white/40 text-xs text-center line-through">{us}</span>
               </div>
             ))}
@@ -540,10 +540,10 @@ export default function PricingPage() {
                   <p className="text-sm font-semibold font-fj-body text-fj-ink">{label}</p>
                   <p className="text-xs text-fj-ink/50 font-fj-body">{note}</p>
                 </div>
-                <span className="text-fj-jet-blue font-bold font-fj-display text-base">{price}</span>
+                <span className="text-[#F05A28] font-bold font-fj-display text-base">{price}</span>
               </div>
             ))}
-            <a href="/contact" className="block mt-4 text-center text-sm font-semibold text-fj-jet-blue font-fj-body hover:underline">
+            <a href="/contact" className="block mt-4 text-center text-sm font-semibold text-[#F05A28] font-fj-body hover:underline">
               Get a free quote →
             </a>
           </div>
@@ -653,7 +653,7 @@ export default function PricingPage() {
         eyebrow="GET YOUR QUOTE"
         headline="Find out exactly what your website will cost, in 24 hours"
         sub="Tell us what you need. We'll send a fixed-price quote within one business day. No sales call required, no commitment to respond."
-        primaryCta={{ label: 'Get a Free Quote', href: '/contact' }}
+        primaryCta={{ label: 'Get a Free Quote', modal: true, region: 'us' }}
         secondaryCta={{ label: 'See Our Work', href: '/us/portfolio' }}
         objectionHandler="Fixed price. 7-day delivery. 500+ US businesses served. Free quote in 24 hours."
       />

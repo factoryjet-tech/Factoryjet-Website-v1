@@ -49,13 +49,13 @@ export function HomepageHero() {
             <div className="flex flex-wrap gap-4 mt-2">
               <a
                 href="/get-started"
-                className="bg-fj-jet-blue text-white px-8 py-3.5 rounded-lg text-sm font-semibold font-inter hover:bg-[#003D99] transition-colors shadow-sm"
+                className="bg-[#F05A28] text-white px-8 py-3.5 rounded-lg text-sm font-semibold font-inter hover:bg-[#003D99] transition-colors shadow-sm"
               >
                 Get Started Free
               </a>
               <a
                 href="/portfolio"
-                className="bg-transparent border border-fj-jet-blue text-fj-jet-blue px-8 py-3.5 rounded-lg text-sm font-semibold font-inter hover:bg-fj-jet-blue-tint transition-colors"
+                className="bg-transparent border border-[#F05A28] text-[#F05A28] px-8 py-3.5 rounded-lg text-sm font-semibold font-inter hover:bg-[#F05A28]-tint transition-colors"
               >
                 See Our Work
               </a>
@@ -65,7 +65,7 @@ export function HomepageHero() {
             <div className="flex flex-wrap gap-6 mt-4 pt-6 border-t border-fj-neutral-200 w-full">
               {trustBadges.map((badge) => (
                 <div key={badge} className="flex items-center gap-2 text-[#64748B]">
-                  <CheckCircle2 className="w-5 h-5 text-fj-jet-blue shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-[#F05A28] shrink-0" />
                   <span className="font-inter text-sm font-semibold">{badge}</span>
                 </div>
               ))}
@@ -93,8 +93,8 @@ export function HomepageHero() {
               {/* Browser content area — placeholder UI skeleton */}
               <div className="aspect-video bg-[#F8FAFC] relative overflow-hidden">
                 <div className="absolute inset-0 p-4 flex flex-col gap-3">
-                  <div className="w-1/3 h-3.5 bg-fj-jet-blue/20 rounded-full" />
-                  <div className="w-1/2 h-8 bg-fj-jet-blue rounded-lg" />
+                  <div className="w-1/3 h-3.5 bg-[rgba(240,90,40,0.20)] rounded-full" />
+                  <div className="w-1/2 h-8 bg-[#F05A28] rounded-lg" />
                   <div className="grid grid-cols-3 gap-3 mt-2">
                     {[0, 1, 2].map((i) => (
                       <div

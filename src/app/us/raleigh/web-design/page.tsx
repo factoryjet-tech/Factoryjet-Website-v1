@@ -37,7 +37,7 @@ export default function RaleighWebDesignPage() {
         eyebrow={"WEB DESIGN · RALEIGH"}
         headline={"Web Design in Raleigh That Converts Visitors Into Clients"}
         lead={"Raleigh sits at the heart of Research Triangle Park — the most research-intensive region in the US, home to Cisco, Red Hat, IBM, and dozens of biotech firms. Buyers here are highly educated, deeply skeptical, and will read your website like a peer review. FactoryJet delivers a production-ready website in 7 days, starting at $1,999."}
-        primaryCta={{ label: "Start Your Project", href: '/contact' }}
+        primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
         trustItems={["Websites from $1,999", "7-day delivery", "Next.js + GA4 included"]}
         rightSlot={<HeroBrowserMockup />}
       />
@@ -152,7 +152,7 @@ export default function RaleighWebDesignPage() {
         eyebrow={"READY TO START"}
         headline={"Ready to Build Your Raleigh Website?"}
         sub={"Research Triangle Park companies set a high bar for everything — including the websites of the vendors and partners they work with. Every week without a credible, fast-loading website is a week your competitors are getting the meeting you should have gotten. Start today."}
-        primaryCta={{ label: "Start Your Project", href: '/contact' }}
+        primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
       />
       <SchemaScript />
     </main>

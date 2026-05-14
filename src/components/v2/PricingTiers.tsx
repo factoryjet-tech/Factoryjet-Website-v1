@@ -241,13 +241,13 @@ function TierCard({ tier }: { tier: PricingTier }) {
                 label={tier.cta.label}
                 region={tier.cta.region ?? 'us'}
                 btnVariant="secondary-light"
-                className="block w-full rounded-xl bg-white px-6 py-3.5 text-center font-fj-body font-semibold text-fj-jet-blue transition-all hover:bg-[#F0F4FF] focus-visible:outline-white"
+                className="block w-full rounded-xl bg-white px-6 py-3.5 text-center font-fj-body font-semibold text-[#F05A28] transition-all hover:bg-[#F0F4FF] focus-visible:outline-white"
                 style={{ fontSize: '0.9375rem', borderRadius: '0.75rem', border: 'none' }}
               />
             ) : (
               <Link
                 href={tier.cta.href ?? '/contact'}
-                className="block w-full rounded-xl bg-white px-6 py-3.5 text-center font-fj-body font-semibold text-fj-jet-blue transition-all hover:bg-[#F0F4FF] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                className="block w-full rounded-xl bg-white px-6 py-3.5 text-center font-fj-body font-semibold text-[#F05A28] transition-all hover:bg-[#F0F4FF] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                 style={{ fontSize: '0.9375rem' }}
               >
                 {tier.cta.label}
@@ -350,13 +350,13 @@ function TierCard({ tier }: { tier: PricingTier }) {
               label={tier.cta.label}
               region={tier.cta.region ?? 'us'}
               btnVariant="secondary-light"
-              className="block w-full rounded-xl border border-fj-jet-blue bg-transparent px-6 py-3.5 text-center font-fj-body font-semibold text-fj-jet-blue transition-all hover:bg-fj-jet-blue hover:text-white focus-visible:outline-fj-jet-blue"
+              className="block w-full rounded-xl border border-[#F05A28] bg-transparent px-6 py-3.5 text-center font-fj-body font-semibold text-[#F05A28] transition-all hover:bg-[#F05A28] hover:text-white focus-visible:outline-[#F05A28]"
               style={{ fontSize: '0.9375rem' }}
             />
           ) : (
             <Link
               href={tier.cta.href ?? '/contact'}
-              className="block w-full rounded-xl border border-fj-jet-blue bg-transparent px-6 py-3.5 text-center font-fj-body font-semibold text-fj-jet-blue transition-all hover:bg-fj-jet-blue hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue"
+              className="block w-full rounded-xl border border-[#F05A28] bg-transparent px-6 py-3.5 text-center font-fj-body font-semibold text-[#F05A28] transition-all hover:bg-[#F05A28] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F05A28]"
               style={{ fontSize: '0.9375rem' }}
             >
               {tier.cta.label}

@@ -71,7 +71,7 @@ export default function PortfolioShowcase({
           <div className="max-w-[600px]">
             {eyebrow && (
               <p
-                className="font-fj-mono font-medium uppercase text-fj-jet-blue"
+                className="font-fj-mono font-medium uppercase text-[#F05A28]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
                 {eyebrow}
@@ -93,7 +93,7 @@ export default function PortfolioShowcase({
           {ctaHref && (
             <Link
               href={ctaHref}
-              className="hidden md:inline-flex items-center gap-2 shrink-0 font-fj-body text-[0.9375rem] font-semibold text-fj-ink border-b-2 border-fj-ink pb-0.5 hover:text-fj-jet-blue hover:border-fj-jet-blue transition-colors"
+              className="hidden md:inline-flex items-center gap-2 shrink-0 font-fj-body text-[0.9375rem] font-semibold text-fj-ink border-b-2 border-fj-ink pb-0.5 hover:text-[#F05A28] hover:border-[#F05A28] transition-colors"
             >
               {ctaLabel}
               <span aria-hidden="true">→</span>
@@ -127,7 +127,7 @@ export default function PortfolioShowcase({
               <div className="flex flex-1 flex-col gap-4 p-5 lg:p-6">
                 {/* Industry pill */}
                 <span
-                  className="self-start rounded-full font-fj-mono font-medium uppercase text-fj-jet-blue"
+                  className="self-start rounded-full font-fj-mono font-medium uppercase text-[#F05A28]"
                   style={{
                     fontSize: '10px',
                     letterSpacing: '0.12em',
@@ -199,7 +199,7 @@ export default function PortfolioShowcase({
           <div className="mt-10 flex justify-center md:hidden">
             <Link
               href={ctaHref}
-              className="inline-flex items-center gap-2 font-fj-body text-[0.9375rem] font-semibold text-fj-ink border-b-2 border-fj-ink pb-0.5 hover:text-fj-jet-blue hover:border-fj-jet-blue transition-colors"
+              className="inline-flex items-center gap-2 font-fj-body text-[0.9375rem] font-semibold text-fj-ink border-b-2 border-fj-ink pb-0.5 hover:text-[#F05A28] hover:border-[#F05A28] transition-colors"
             >
               {ctaLabel}
               <span aria-hidden="true">→</span>

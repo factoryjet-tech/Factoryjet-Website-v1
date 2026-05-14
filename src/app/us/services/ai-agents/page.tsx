@@ -559,7 +559,7 @@ const PRICING_TIERS = [
       '14-day post-launch support window',
       'Full code and API key ownership',
     ],
-    cta: { label: 'Book a Free Strategy Call', href: '/contact' },
+    cta: { label: 'Book a Free Strategy Call', modal: true, region: 'us' },
   },
   {
     name: 'Growth',
@@ -576,7 +576,7 @@ const PRICING_TIERS = [
       '30-day post-launch support window',
       'Monthly retainer option for ongoing improvements',
     ],
-    cta: { label: 'Get a Custom Quote', href: '/contact' },
+    cta: { label: 'Get a Custom Quote', modal: true, region: 'us' },
     popular: true,
   },
   {
@@ -594,7 +594,7 @@ const PRICING_TIERS = [
       '90-day post-launch support and iteration window',
       'Quarterly AI roadmap review',
     ],
-    cta: { label: 'Schedule an Enterprise Call', href: '/contact' },
+    cta: { label: 'Schedule an Enterprise Call', modal: true, region: 'us' },
   },
 ] as const;
 
@@ -772,9 +772,9 @@ export default function AIAgentsPage() {
           { label: 'AI Agents', href: '/us/services/ai-agents' },
           { label: 'Portfolio', href: '/portfolio' },
           { label: 'Pricing', href: '#pricing' },
-          { label: 'Contact', href: '/contact' },
+          { label: 'Contact', modal: true, region: 'us' },
         ]}
-        cta={{ label: 'Book a Free Call', href: '/contact' }}
+        cta={{ label: 'Book a Free Call', modal: true, region: 'us' }}
       />
 
       <main className="bg-fj-cream">
@@ -784,7 +784,7 @@ export default function AIAgentsPage() {
           eyebrow="AI AGENT DEVELOPMENT · USA"
           headline="AI Agents That Run Your Business While You Sleep"
           lead="Your competitors are automating the work that costs you 20 hours a week. FactoryJet builds custom AI agents — for customer support, sales, operations, and more — that work around the clock, integrate with your existing tools, and cost 60–70% less than a US AI agency."
-          primaryCta={{ label: 'Book a Free AI Strategy Call', href: '/contact' }}
+          primaryCta={{ label: 'Book a Free AI Strategy Call', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',
@@ -794,7 +794,7 @@ export default function AIAgentsPage() {
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
               <p
-                className="font-fj-mono font-medium uppercase text-fj-jet-blue"
+                className="font-fj-mono font-medium uppercase text-[#F05A28]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
                 AI AGENT IN ACTION
@@ -809,7 +809,7 @@ export default function AIAgentsPage() {
                   'Invoice arrives by email → agent extracts data → logs to QuickBooks → notifies AP',
                 ].map((step, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-fj-jet-blue/10 font-fj-mono text-[10px] font-bold text-fj-jet-blue">
+                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#F05A28]">
                       {i + 1}
                     </span>
                     <p className="font-fj-body text-[0.875rem] leading-[1.5] text-fj-neutral-600">
@@ -856,7 +856,7 @@ export default function AIAgentsPage() {
                 ].map((cap) => (
                   <span
                     key={cap}
-                    className="inline-flex items-center rounded-full border border-fj-jet-blue/25 bg-fj-jet-blue/8 px-3 py-1 font-fj-mono font-semibold uppercase text-fj-jet-blue"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {cap}
@@ -879,7 +879,7 @@ export default function AIAgentsPage() {
                     className="rounded-xl border border-fj-neutral-200 bg-white px-3 py-4 text-center shadow-sm"
                   >
                     <p
-                      className="fj-display font-bold text-fj-jet-blue"
+                      className="fj-display font-bold text-[#F05A28]"
                       style={{ fontSize: '1.375rem', lineHeight: 1, letterSpacing: '-0.03em' }}
                     >
                       {b.value}
@@ -896,7 +896,7 @@ export default function AIAgentsPage() {
 
               {/* ── Editorial pull-quote before para 2 (aria-hidden — decorative) ── */}
               <div
-                className="border-l-2 border-fj-jet-blue pl-5 py-1"
+                className="border-l-2 border-[#F05A28] pl-5 py-1"
                 aria-hidden
               >
                 <p
@@ -926,7 +926,7 @@ export default function AIAgentsPage() {
                     key={ind}
                     className="flex items-center gap-2.5 rounded-lg border border-fj-neutral-200 bg-white px-3.5 py-2.5"
                   >
-                    <div className="h-1.5 w-1.5 shrink-0 rounded-full bg-fj-jet-blue" />
+                    <div className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#F05A28]" />
                     <p
                       className="font-fj-body font-medium text-fj-neutral-600"
                       style={{ fontSize: '0.8125rem' }}
@@ -978,7 +978,7 @@ export default function AIAgentsPage() {
                   <div key={item.step} className="flex gap-4">
                     {/* Left column: numbered circle + connector line */}
                     <div className="flex shrink-0 flex-col items-center">
-                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-fj-jet-blue font-fj-mono text-[11px] font-bold text-white">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#F05A28] font-fj-mono text-[11px] font-bold text-white">
                         {item.step}
                       </div>
                       {i < arr.length - 1 && (
@@ -1009,7 +1009,7 @@ export default function AIAgentsPage() {
 
               {/* Stat — full-width tinted footer stripe */}
               <div className="border-t border-fj-neutral-200 bg-fj-neutral-50 px-7 py-6">
-                <div className="mb-3 h-[3px] w-8 rounded-full bg-fj-jet-blue" aria-hidden />
+                <div className="mb-3 h-[3px] w-8 rounded-full bg-[#F05A28]" aria-hidden />
                 <p
                   className="fj-display font-bold text-fj-ink"
                   style={{ fontSize: '2.75rem', lineHeight: 1, letterSpacing: '-0.04em' }}
@@ -1083,7 +1083,7 @@ export default function AIAgentsPage() {
                 {['AI Agents', 'AI Automation', 'AI-Native Software', 'AI Apps', 'AI SEO', 'AI Video'].map((svc) => (
                   <span
                     key={svc}
-                    className="inline-flex items-center rounded-full border border-fj-jet-blue/25 bg-fj-jet-blue/8 px-3 py-1 font-fj-mono font-semibold uppercase text-fj-jet-blue"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {svc}
@@ -1144,7 +1144,7 @@ export default function AIAgentsPage() {
                 ].map((item) => (
                   <div key={item.category} className="flex items-center justify-between gap-4 py-3.5">
                     <div className="flex items-center gap-2.5">
-                      <div className="h-1.5 w-1.5 shrink-0 rounded-full bg-fj-jet-blue/50" aria-hidden="true" />
+                      <div className="h-1.5 w-1.5 shrink-0 rounded-full bg-[rgba(240,90,40,0.50)]" aria-hidden="true" />
                       <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">
                         {item.category}
                       </p>
@@ -1158,7 +1158,7 @@ export default function AIAgentsPage() {
 
               {/* Footer stripe */}
               <div className="border-t border-fj-neutral-100 bg-fj-neutral-50 px-8 py-5">
-                <div className="mb-2 h-[3px] w-8 rounded-full bg-fj-jet-blue" aria-hidden="true" />
+                <div className="mb-2 h-[3px] w-8 rounded-full bg-[#F05A28]" aria-hidden="true" />
                 <p
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.0625rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
@@ -1183,7 +1183,7 @@ export default function AIAgentsPage() {
             <>
               {/* Pull-quote — decorative, aria-hidden */}
               <div
-                className="border-l-2 border-fj-jet-blue py-1 pl-5"
+                className="border-l-2 border-[#F05A28] py-1 pl-5"
                 aria-hidden="true"
               >
                 <p
@@ -1198,7 +1198,7 @@ export default function AIAgentsPage() {
                 {['Austin TX', 'Miami FL', 'Denver CO', 'Nashville TN', 'Portland OR', 'Charlotte NC', 'Raleigh NC', 'Tampa FL'].map((city) => (
                   <span
                     key={city}
-                    className="inline-flex items-center rounded-full border border-fj-jet-blue/25 bg-fj-jet-blue/8 px-3 py-1 font-fj-mono font-medium text-fj-jet-blue"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#F05A28]"
                     style={{ fontSize: '10px', letterSpacing: '0.08em' }}
                   >
                     {city}
@@ -1283,7 +1283,7 @@ export default function AIAgentsPage() {
           eyebrow="READY TO START"
           headline="Book a Free AI Strategy Call, No Obligation"
           sub="In 30 minutes, we'll map your top automation opportunity, estimate the ROI, and tell you exactly what it would cost to build. No pitch. No pressure. Just a straight answer from an engineer who's built it before."
-          primaryCta={{ label: 'Book Your Free Call', href: '/contact' }}
+          primaryCta={{ label: 'Book Your Free Call', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
           objectionHandler="Most clients see ROI within 12 weeks. Free call, fixed price, no hidden fees."
         />

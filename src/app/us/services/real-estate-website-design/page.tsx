@@ -274,7 +274,7 @@ const PRICING_TIERS = [
       '7-day delivery',
       '30 days post-launch support',
     ],
-    cta: { label: 'Get Started', href: '/contact' },
+    cta: { label: 'Get Started', modal: true, region: 'us' },
   },
   {
     name: 'Team / Brokerage',
@@ -292,7 +292,7 @@ const PRICING_TIERS = [
       '14-day delivery',
       '30 days post-launch support',
     ],
-    cta: { label: 'Get Started', href: '/contact' },
+    cta: { label: 'Get Started', modal: true, region: 'us' },
     popular: true,
   },
   {
@@ -311,7 +311,7 @@ const PRICING_TIERS = [
       '4–6 week delivery',
       '60 days post-launch support',
     ],
-    cta: { label: 'Get Started', href: '/contact' },
+    cta: { label: 'Get Started', modal: true, region: 'us' },
   },
 ] as const;
 
@@ -470,7 +470,7 @@ export default function RealEstateWebsiteDesignPage() {
         eyebrow="REAL ESTATE WEBSITE DESIGN"
         headline="Real Estate Websites That Rank Locally and Convert Visitors Into Leads"
         lead="Custom agent, team, and brokerage websites with IDX integration and neighborhood pages — built to outrank generic templates on local search. Starting at $2,499. 7-day delivery. No ongoing platform fees."
-        primaryCta={{ label: 'Get a Free Quote', href: '/contact' }}
+        primaryCta={{ label: 'Get a Free Quote', modal: true, region: 'us' }}
         secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
         trustItems={['IDX integration included', '7-day delivery guarantee', 'No ongoing platform fees']}
         rightSlot={
@@ -478,7 +478,7 @@ export default function RealEstateWebsiteDesignPage() {
             <p className="text-xs font-fj-mono uppercase tracking-widest text-white/50">Platform Comparison</p>
             <div className="grid grid-cols-3 gap-2 text-xs font-fj-body pb-2 border-b border-white/10">
               <span className="text-white/40"></span>
-              <span className="text-fj-jet-blue font-semibold text-center">FactoryJet</span>
+              <span className="text-[#F05A28] font-semibold text-center">FactoryJet</span>
               <span className="text-white/40 text-center">Real Geeks / kvCORE</span>
             </div>
             {[
@@ -491,7 +491,7 @@ export default function RealEstateWebsiteDesignPage() {
             ].map(([feature, fj, other]) => (
               <div key={feature} className="grid grid-cols-3 gap-2 py-2 border-t border-white/5 items-center text-xs font-fj-body">
                 <span className="text-white/50">{feature}</span>
-                <span className="text-green-400 text-center">{fj}</span>
+                <span className="text-[#F05A28] text-center">{fj}</span>
                 <span className="text-white/40 text-center">{other}</span>
               </div>
             ))}
@@ -552,7 +552,7 @@ export default function RealEstateWebsiteDesignPage() {
               { item: '7-day delivery', note: 'Agent sites up to 10 pages' },
             ].map(({ item, note }) => (
               <div key={item} className="flex items-start gap-3 py-2 border-t border-fj-charcoal/10 first:border-0">
-                <div className="w-2 h-2 rounded-full bg-fj-jet-blue mt-1.5 shrink-0" />
+                <div className="w-2 h-2 rounded-full bg-[#F05A28] mt-1.5 shrink-0" />
                 <div>
                   <p className="text-sm font-semibold font-fj-body text-fj-ink">{item}</p>
                   <p className="text-xs text-fj-ink/50 font-fj-body">{note}</p>
@@ -665,7 +665,7 @@ export default function RealEstateWebsiteDesignPage() {
         eyebrow="START YOUR PROJECT"
         headline="Get a custom real estate website that ranks in your market, in 7 days"
         sub="Tell us your market, your neighborhoods, and your IDX provider. We'll send a free quote within 24 hours. No sales call required."
-        primaryCta={{ label: 'Get a Free Quote', href: '/contact' }}
+        primaryCta={{ label: 'Get a Free Quote', modal: true, region: 'us' }}
         secondaryCta={{ label: 'See All Pricing', href: '/us/pricing' }}
         objectionHandler="7-day delivery. IDX integration included. No ongoing platform fees. Free quote in 24 hours."
       />

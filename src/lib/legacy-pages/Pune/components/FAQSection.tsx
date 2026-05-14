@@ -27,7 +27,7 @@ const FAQSection: React.FC = () => {
       },
       {
         q: 'Why are you cheaper than other Pune agencies?',
-        a: 'We use AI-enhanced design processes, have a streamlined workflow, and focus on SMBs (lower marketing costs). We also leverage technology to reduce manual effort — savings we pass to clients. Lower cost doesn\'t mean lower quality.',
+        a: 'We use AI-enhanced design processes, have a streamlined workflow, and focus on SMBs (lower marketing costs). We also leverage technology to reduce manual effort — savings we pass to clients. Lower cost doesn't mean lower quality.',
       },
       {
         q: 'Do you have hidden costs?',

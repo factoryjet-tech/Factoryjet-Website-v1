@@ -383,7 +383,7 @@ const PRICING_TIERS = [
       'Google Analytics + Search Console setup',
       '14-day post-launch support',
     ],
-    cta: { label: 'Book a Free Redesign Audit', href: '/contact' },
+    cta: { label: 'Book a Free Redesign Audit', modal: true, region: 'us' },
   },
   {
     name: 'Business Redesign',
@@ -401,7 +401,7 @@ const PRICING_TIERS = [
       'Google Analytics 4 with event tracking',
       '30-day post-launch support',
     ],
-    cta: { label: 'Get a Custom Quote', href: '/contact' },
+    cta: { label: 'Get a Custom Quote', modal: true, region: 'us' },
     popular: true,
   },
   {
@@ -420,7 +420,7 @@ const PRICING_TIERS = [
       'Payment gateway and shipping configuration review',
       '30-day post-launch support',
     ],
-    cta: { label: 'Schedule an E-Commerce Consultation', href: '/contact' },
+    cta: { label: 'Schedule an E-Commerce Consultation', modal: true, region: 'us' },
   },
 ] as const;
 
@@ -623,9 +623,9 @@ export default function WebsiteRedesignPage() {
           { label: 'Website Redesign', href: '/us/services/website-redesign' },
           { label: 'WordPress', href: '/us/services/wordpress-development' },
           { label: 'Pricing', href: '#pricing' },
-          { label: 'Contact', href: '/contact' },
+          { label: 'Contact', modal: true, region: 'us' },
         ]}
-        cta={{ label: 'Free Redesign Audit', href: '/contact' }}
+        cta={{ label: 'Free Redesign Audit', modal: true, region: 'us' }}
       />
 
       <main className="bg-fj-cream">
@@ -635,7 +635,7 @@ export default function WebsiteRedesignPage() {
           eyebrow="WEBSITE REDESIGN SERVICES · USA"
           headline="Website Redesign Services That Actually Generate Leads"
           lead="Your current website is costing you customers every day — slow load times, poor mobile experience, and a homepage that doesn't convert visitors into leads. FactoryJet redesigns your site with modern design, mobile-first builds, and conversion-focused structure. Up to 5 pages in 7 days. Starting at $1,499. 60–70% cheaper than a US agency."
-          primaryCta={{ label: 'Book a Free Redesign Audit', href: '/contact' }}
+          primaryCta={{ label: 'Book a Free Redesign Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ redesigns delivered',
@@ -645,7 +645,7 @@ export default function WebsiteRedesignPage() {
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
               <p
-                className="font-fj-mono font-medium uppercase text-fj-jet-blue"
+                className="font-fj-mono font-medium uppercase text-[#F05A28]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
                 WHAT YOUR CURRENT SITE IS COSTING YOU
@@ -671,7 +671,7 @@ export default function WebsiteRedesignPage() {
                   <div key={i} className="rounded-xl border border-fj-neutral-100 bg-fj-neutral-50 p-4">
                     <p className="font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-red-400">Before</p>
                     <p className="mt-1 font-fj-body text-[0.8125rem] leading-[1.5] text-fj-neutral-600">{row.before}</p>
-                    <p className="mt-2 font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-emerald-600">After</p>
+                    <p className="mt-2 font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-[#F05A28]">After</p>
                     <p className="mt-1 font-fj-body text-[0.8125rem] leading-[1.5] text-fj-neutral-600">{row.after}</p>
                   </div>
                 ))}
@@ -712,7 +712,7 @@ export default function WebsiteRedesignPage() {
                 {['Next.js', 'React', 'WordPress', 'Shopify', 'WooCommerce', 'Tailwind CSS', 'Figma', 'Core Web Vitals'].map((tool) => (
                   <span
                     key={tool}
-                    className="inline-flex items-center rounded-full border border-fj-jet-blue/25 bg-fj-jet-blue/8 px-3 py-1 font-fj-mono font-semibold uppercase text-fj-jet-blue"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {tool}
@@ -723,7 +723,7 @@ export default function WebsiteRedesignPage() {
                 Most small business websites are built fast and revisited rarely. By year three, they carry the weight of every shortcut taken at launch: page builder bloat that makes them slow, a mobile experience designed as an afterthought, and a homepage that describes what you do rather than communicating why a visitor should care. None of that is fixed by a new color palette.
               </p>
               <div
-                className="border-l-2 border-fj-jet-blue pl-5 py-1"
+                className="border-l-2 border-[#F05A28] pl-5 py-1"
                 aria-hidden
               >
                 <p
@@ -737,7 +737,7 @@ export default function WebsiteRedesignPage() {
                 FactoryJet starts every redesign with a performance and conversion audit of your current site — not because we want to add scope, but because the specific problems driving your lost leads are always unique. A restaurant site and a law firm site have completely different conversion bottlenecks. A site built on Elementor has different performance problems than one built on a static generator. We diagnose first, then design.
               </p>
               <p>
-                Our redesigns are built without page builders — using clean Next.js or custom WordPress themes that load fast, pass Core Web Vitals, and give Google exactly the mobile experience signals it needs to rank your site. For <a href="/us/services/wordpress-development" className="text-fj-jet-blue underline underline-offset-2">WordPress projects</a>, we build custom themes from scratch. For businesses needing maximum performance, we build on Next.js with static generation. The tech stack follows your requirements — not our preferences.
+                Our redesigns are built without page builders — using clean Next.js or custom WordPress themes that load fast, pass Core Web Vitals, and give Google exactly the mobile experience signals it needs to rank your site. For <a href="/us/services/wordpress-development" className="text-[#F05A28] underline underline-offset-2">WordPress projects</a>, we build custom themes from scratch. For businesses needing maximum performance, we build on Next.js with static generation. The tech stack follows your requirements — not our preferences.
               </p>
             </>
           }
@@ -773,7 +773,7 @@ export default function WebsiteRedesignPage() {
                 ].map((item) => (
                   <div key={item.category} className="flex items-center justify-between gap-4 py-3.5">
                     <div className="flex items-center gap-2.5">
-                      <div className="h-1.5 w-1.5 shrink-0 rounded-full bg-fj-jet-blue/50" aria-hidden="true" />
+                      <div className="h-1.5 w-1.5 shrink-0 rounded-full bg-[rgba(240,90,40,0.50)]" aria-hidden="true" />
                       <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">{item.category}</p>
                     </div>
                     <p className="text-right font-fj-body text-[0.8125rem] text-fj-neutral-500">{item.tools}</p>
@@ -781,7 +781,7 @@ export default function WebsiteRedesignPage() {
                 ))}
               </div>
               <div className="border-t border-fj-neutral-100 bg-fj-neutral-50 px-7 py-5">
-                <div className="mb-2 h-[3px] w-8 rounded-full bg-fj-jet-blue" aria-hidden="true" />
+                <div className="mb-2 h-[3px] w-8 rounded-full bg-[#F05A28]" aria-hidden="true" />
                 <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">
                   Fixed price. You own everything at handoff.
                 </p>
@@ -896,7 +896,7 @@ export default function WebsiteRedesignPage() {
           eyebrow="START WITH A FREE AUDIT"
           headline="Book a Free Website Redesign Audit and Walk Away With a Plan"
           sub="In 30 minutes, we'll audit your current site's speed, mobile experience, and conversion gaps — then tell you exactly what a redesign would include, how long it takes, and what it costs. No pitch. No pressure. Just a straight assessment from a team that's redesigned 500+ small business websites — and knows what actually moves the needle."
-          primaryCta={{ label: 'Book Your Free Redesign Audit', href: '/contact' }}
+          primaryCta={{ label: 'Book Your Free Redesign Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See WordPress Development', href: '/us/services/wordpress-development' }}
           objectionHandler="Starts at $1,499. Up to 5 pages in 7 days. Fixed price. Free audit first."
         />

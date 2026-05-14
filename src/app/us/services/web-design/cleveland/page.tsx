@@ -276,7 +276,7 @@ export default function ClevelandWebDesignPage() {
           { label: 'Portfolio', href: '/us/portfolio' },
           { label: 'FAQ', href: '/us/faq' },
         ]}
-        cta={{ label: 'Free Strategy Call', href: '/contact' }}
+        cta={{ label: 'Free Strategy Call', modal: true, region: 'us' }}
       />
 
       <main className="bg-fj-cream">
@@ -286,8 +286,8 @@ export default function ClevelandWebDesignPage() {
           eyebrow="WEB DESIGN · CLEVELAND, OHIO"
           headline="Web Design Company in Cleveland, Ohio for High-Converting Websites"
           lead="FactoryJet helps Cleveland businesses launch professional, high-converting websites in as little as 7 days. Fixed pricing, full code ownership, and zero vendor lock-in. Trusted by 500+ businesses across the US — 60–70% cheaper than comparable Cleveland agencies."
-          primaryCta={{ label: 'Get Your Free Strategy Call', href: '/contact' }}
-          secondaryCta={{ label: 'Request a Free Technical & SEO Audit', href: '/contact' }}
+          primaryCta={{ label: 'Get Your Free Strategy Call', modal: true, region: 'us' }}
+          secondaryCta={{ label: 'Request a Free Technical & SEO Audit', modal: true, region: 'us' }}
           trustItems={['7-day delivery guarantee', 'Fixed pricing from $1,999', '60–70% cheaper than local agencies']}
           rightSlot={<HeroBrowserMockup />}
         />
@@ -360,8 +360,8 @@ export default function ClevelandWebDesignPage() {
           eyebrow="START WITH A FREE STRATEGY CALL"
           headline="Ready to Build Your Cleveland Website?"
           sub="Stop losing qualified leads to competitors with faster, higher-converting websites. Partner with FactoryJet — a web design company Cleveland businesses trust — to launch a high-converting website in 7 days. No obligation. 100% free consultation."
-          primaryCta={{ label: 'Get Your Free Strategy Call', href: '/contact' }}
-          secondaryCta={{ label: 'Request a Free Technical & SEO Audit', href: '/contact' }}
+          primaryCta={{ label: 'Get Your Free Strategy Call', modal: true, region: 'us' }}
+          secondaryCta={{ label: 'Request a Free Technical & SEO Audit', modal: true, region: 'us' }}
           objectionHandler="Fixed pricing. 7-day delivery. Full code ownership. Free strategy call first."
         />
 

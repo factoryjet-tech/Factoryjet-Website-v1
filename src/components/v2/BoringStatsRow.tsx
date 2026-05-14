@@ -9,7 +9,7 @@
  *   - Microcopy: editorial Inter body text
  *
  * Orange rule: color '#F05A28' always via inline style.
- * fj-jet-blue / text-fj-jet-blue are NEVER used in v2 components.
+ * fj-jet-blue / text-[#F05A28] are NEVER used in v2 components.
  *
  * Pure server component. No client state, no animation.
  */

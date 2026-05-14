@@ -46,7 +46,7 @@ export default function ModalCTAButton({
     'primary-dark':
       'inline-flex items-center justify-center gap-2 rounded-full px-8 py-3.5 font-fj-body text-base font-semibold text-white transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2',
     'secondary-light':
-      'inline-flex items-center justify-center rounded-full border border-fj-neutral-200 bg-white/60 px-7 py-3.5 font-fj-body text-base font-semibold text-fj-ink backdrop-blur-sm transition-colors hover:border-fj-neutral-400 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue',
+      'inline-flex items-center justify-center rounded-full border border-fj-neutral-200 bg-white/60 px-7 py-3.5 font-fj-body text-base font-semibold text-fj-ink backdrop-blur-sm transition-colors hover:border-fj-neutral-400 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F05A28]',
     'secondary-dark':
       'inline-flex items-center justify-center rounded-full border border-white/25 bg-transparent px-7 py-3.5 font-fj-body text-base font-semibold text-fj-charcoal-text transition-colors hover:border-white/40 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white',
   };

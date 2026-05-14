@@ -244,7 +244,7 @@ function HeroContent({
             ) : (
               <Link
                 href={secondaryCta.href ?? '/contact'}
-                className="inline-flex items-center justify-center rounded-full px-6 py-3 font-fj-body text-[0.9375rem] font-semibold text-fj-ink backdrop-blur-sm transition-colors hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fj-jet-blue"
+                className="inline-flex items-center justify-center rounded-full px-6 py-3 font-fj-body text-[0.9375rem] font-semibold text-fj-ink backdrop-blur-sm transition-colors hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F05A28]"
                 style={{
                   background: 'rgba(255,255,255,0.70)',
                   border: '1px solid rgba(15,15,18,0.14)',

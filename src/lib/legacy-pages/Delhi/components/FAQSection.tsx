@@ -16,7 +16,7 @@ const FAQSection: React.FC = () => {
           a: 'Our starter package begins at ₹29,999 for a professional 5-page website (Home, About, Services, Contact, Gallery). This includes mobile-responsive design, SEO optimization, contact forms, WhatsApp integration, and 1 year of free hosting + domain. Perfect for small businesses in Delhi, Noida, Gurgaon.',
         },
         {
-          q: 'What\'s included in the ₹29,999 package?',
+          q: 'What's included in the ₹29,999 package?',
           a: 'Everything a Delhi NCR business needs to get online: Custom design (not templates), 5 pages, mobile optimization, basic SEO, contact forms, WhatsApp button, Google Maps integration, SSL security, 1-year hosting + domain, 30 days of post-launch support, and unlimited revisions during development.',
         },
         {
@@ -24,7 +24,7 @@ const FAQSection: React.FC = () => {
           a: 'Yes! We offer EMI options for projects above ₹50,000. For example, our ₹49,999 e-commerce package can be split into 3 monthly installments of ₹16,666 + GST. We also offer 0% interest for the first 3 months for Gurgaon/Noida corporates.',
         },
         {
-          q: 'What\'s the difference between your ₹29,999 and ₹49,999 packages?',
+          q: 'What's the difference between your ₹29,999 and ₹49,999 packages?',
           a: '₹29,999 = Static website (5-8 pages, perfect for service businesses). ₹49,999 = E-commerce store (Shopify/WooCommerce, unlimited products, payment gateway, inventory management). Choose based on your business model: services → static; selling products → e-commerce.',
         },
         {
@@ -33,7 +33,7 @@ const FAQSection: React.FC = () => {
         },
         {
           q: 'What does your Annual Maintenance Contract (AMC) include?',
-          a: 'Our ₹15,000/year AMC includes unlimited content updates, plugin/security updates, monthly backups, uptime monitoring, 24/7 WhatsApp support, quarterly SEO health checks, and priority bug fixes. Ideal for Delhi NCR businesses that want peace of mind and don\'t have in-house tech teams.',
+          a: 'Our ₹15,000/year AMC includes unlimited content updates, plugin/security updates, monthly backups, uptime monitoring, 24/7 WhatsApp support, quarterly SEO health checks, and priority bug fixes. Ideal for Delhi NCR businesses that want peace of mind and don't have in-house tech teams.',
         },
       ],
     },
@@ -43,7 +43,7 @@ const FAQSection: React.FC = () => {
       faqs: [
         {
           q: 'How long does it take to build a website in Delhi NCR?',
-          a: 'Our average delivery time is 7 days for a basic website (5-8 pages) and 14 days for an e-commerce store. Custom web apps take 4-8 weeks depending on complexity. We\'re 50% faster than the Delhi NCR industry average (14 days) because of our AI-enhanced design process and dedicated local team.',
+          a: 'Our average delivery time is 7 days for a basic website (5-8 pages) and 14 days for an e-commerce store. Custom web apps take 4-8 weeks depending on complexity. We're 50% faster than the Delhi NCR industry average (14 days) because of our AI-enhanced design process and dedicated local team.',
         },
         {
           q: 'What is your step-by-step website development process?',
@@ -59,11 +59,11 @@ const FAQSection: React.FC = () => {
         },
         {
           q: 'What happens after I pay the advance?',
-          a: 'Within 24 hours: Kickoff call to discuss your vision. Day 2-3: We send wireframes (structure) for approval. Day 4-5: Design mockup ready. Day 6-7: Development + testing. Day 8-10: Your feedback + revisions. Day 10-14: Final testing + launch. You\'re involved at every step but we do all the heavy lifting.',
+          a: 'Within 24 hours: Kickoff call to discuss your vision. Day 2-3: We send wireframes (structure) for approval. Day 4-5: Design mockup ready. Day 6-7: Development + testing. Day 8-10: Your feedback + revisions. Day 10-14: Final testing + launch. You're involved at every step but we do all the heavy lifting.',
         },
         {
           q: 'Do I need to visit your Delhi NCR office, or is everything online?',
-          a: 'Everything is 100% online — we work with clients across Delhi, Gurgaon, Noida, Faridabad without in-person meetings. However, if you\'re in Connaught Place, Gurgaon, or Noida and prefer a face-to-face kickoff, we\'re happy to meet at your office or a nearby cafe (no extra charge).',
+          a: 'Everything is 100% online — we work with clients across Delhi, Gurgaon, Noida, Faridabad without in-person meetings. However, if you're in Connaught Place, Gurgaon, or Noida and prefer a face-to-face kickoff, we're happy to meet at your office or a nearby cafe (no extra charge).',
         },
       ],
     },
@@ -77,7 +77,7 @@ const FAQSection: React.FC = () => {
         },
         {
           q: 'Will my website work on mobile phones? (Mobile responsiveness)',
-          a: 'Yes, 100%. Every website we build is mobile-first, meaning it\'s designed for phones first, then tablets, then desktops. 82% of Delhi NCR traffic is mobile, so we prioritize mobile UX. Your site will look perfect on all devices — iPhone, Android, iPad, laptops.',
+          a: 'Yes, 100%. Every website we build is mobile-first, meaning it's designed for phones first, then tablets, then desktops. 82% of Delhi NCR traffic is mobile, so we prioritize mobile UX. Your site will look perfect on all devices — iPhone, Android, iPad, laptops.',
         },
         {
           q: 'Will my website be SEO-optimized for Delhi NCR searches?',
@@ -89,11 +89,11 @@ const FAQSection: React.FC = () => {
         },
         {
           q: 'Do you provide website hosting and domain registration?',
-          a: 'Yes. We provide 1 year of free hosting (Indian servers for fast Delhi NCR loading) + 1 domain (.com, .in, or .co.in). From Year 2: Hosting ₹3,999/year, Domain ₹999/year. Or you can use your own hosting — we\'re flexible.',
+          a: 'Yes. We provide 1 year of free hosting (Indian servers for fast Delhi NCR loading) + 1 domain (.com, .in, or .co.in). From Year 2: Hosting ₹3,999/year, Domain ₹999/year. Or you can use your own hosting — we're flexible.',
         },
         {
           q: 'Can I update the website myself after launch, or do I need you?',
-          a: 'You can! We build on user-friendly platforms like WordPress/Shopify with admin dashboards. After launch, we provide 1-hour training (video call) so you can edit text, add images, publish blogs, and manage products yourself. For complex changes, we\'re always available (AMC clients get unlimited edits).',
+          a: 'You can! We build on user-friendly platforms like WordPress/Shopify with admin dashboards. After launch, we provide 1-hour training (video call) so you can edit text, add images, publish blogs, and manage products yourself. For complex changes, we're always available (AMC clients get unlimited edits).',
         },
       ],
     },

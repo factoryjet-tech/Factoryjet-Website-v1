@@ -459,7 +459,7 @@ const PRICING_TIERS = [
       'Full code ownership — transferred to your GitHub on launch',
       '7-business-day delivery from design sign-off',
     ],
-    cta: { label: 'Book a Free Audit Call', href: '/contact' },
+    cta: { label: 'Book a Free Audit Call', modal: true, region: 'us' },
   },
   {
     name: 'Growth',
@@ -478,7 +478,7 @@ const PRICING_TIERS = [
       'Team content training walkthrough (recorded)',
       'Full code ownership on launch day',
     ],
-    cta: { label: 'Get a Custom Quote', href: '/contact' },
+    cta: { label: 'Get a Custom Quote', modal: true, region: 'us' },
     popular: true,
   },
   {
@@ -497,7 +497,7 @@ const PRICING_TIERS = [
       'Performance SLA: Core Web Vitals green on launch',
       '30-day post-launch support window',
     ],
-    cta: { label: 'Schedule a Scoping Call', href: '/contact' },
+    cta: { label: 'Schedule a Scoping Call', modal: true, region: 'us' },
   },
 ] as const;
 
@@ -644,9 +644,9 @@ export default function WebDesignPage() {
           { label: 'Web Design', href: '/us/services/web-design' },
           { label: 'Portfolio', href: '/portfolio' },
           { label: 'Pricing', href: '#pricing' },
-          { label: 'Contact', href: '/contact' },
+          { label: 'Contact', modal: true, region: 'us' },
         ]}
-        cta={{ label: 'Book a Free Audit', href: '/contact' }}
+        cta={{ label: 'Book a Free Audit', modal: true, region: 'us' }}
       />
 
       <main className="bg-fj-cream">
@@ -656,7 +656,7 @@ export default function WebDesignPage() {
           eyebrow="WEB DESIGN · USA"
           headline="A Website That Converts, Launched in 7 Days"
           lead="Most US small businesses are losing customers to slow, outdated websites. FactoryJet builds custom, high-performance websites in Next.js, WordPress, and Shopify — designed in Figma, built to Lighthouse 100, and delivered at 60–70% the cost of a US agency."
-          primaryCta={{ label: 'Book a Free Website Audit', href: '/contact' }}
+          primaryCta={{ label: 'Book a Free Website Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ websites delivered',
@@ -1153,7 +1153,7 @@ export default function WebDesignPage() {
             eyebrow="READY TO START"
             headline="Book a Free Website Audit, No Obligation"
             sub="In 30 minutes, we'll audit your current site, show you exactly what's hurting performance and conversions, and give you a fixed price to fix it. No pitch. No pressure. Just an honest assessment from engineers who build for a living."
-            primaryCta={{ label: 'Book Your Free Audit', href: '/contact' }}
+            primaryCta={{ label: 'Book Your Free Audit', modal: true, region: 'us' }}
             secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
             objectionHandler="Lighthouse 100 guaranteed. Full code ownership. 7-day delivery. Fixed price."
           />

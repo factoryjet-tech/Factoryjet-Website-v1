@@ -37,7 +37,7 @@ export default function CharlotteWebDesignPage() {
         eyebrow={"WEB DESIGN · CHARLOTTE"}
         headline={"Web Design in Charlotte That Converts Visitors Into Clients"}
         lead={"Charlotte is the second-largest banking center in the US — home to Bank of America's global HQ and one of the most competitive professional services markets on the East Coast. Buyers here expect digital experiences that match the caliber of the firms they work with. FactoryJet delivers a production-ready website in 7 days, starting at $1,999."}
-        primaryCta={{ label: "Start Your Project", href: '/contact' }}
+        primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
         trustItems={["Websites from $1,999", "7-day delivery", "Next.js + GA4 included"]}
         rightSlot={<HeroBrowserMockup />}
       />
@@ -244,7 +244,7 @@ export default function CharlotteWebDesignPage() {
         eyebrow={"READY TO START"}
         headline={"Ready to Build Your Charlotte Website?"}
         sub={"Charlotte's $220B+ economy is built on trust — and your website is the first trust signal every prospect sees. In a city where buyers compare you against firms that bank with Bank of America, a slow or amateur-looking site doesn't just underperform. It disqualifies you. Start today."}
-        primaryCta={{ label: "Start Your Project", href: '/contact' }}
+        primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
       />
       <SchemaScript />
     </main>

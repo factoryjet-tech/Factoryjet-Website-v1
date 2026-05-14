@@ -109,17 +109,17 @@ const Hero = React.memo(({ searchValue, onSearchChange }: { searchValue: string;
   return (
     <div className="relative bg-fj-charcoal text-fj-charcoal-text overflow-hidden">
       {/* Bloom accents */}
-      <div className="absolute -top-24 -right-24 w-96 h-96 bg-fj-jet-blue/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#F05A28]/20 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-fj-jet-orange/15 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative max-w-4xl mx-auto px-4 pt-24 pb-28 text-center">
-        <Badge className="bg-fj-jet-blue/20 text-fj-jet-blue-on-dark border border-fj-jet-blue/30 mb-6 backdrop-blur-sm">
+        <Badge className="bg-[#F05A28]/20 text-[#F05A28]-on-dark border border-[#F05A28]/30 mb-6 backdrop-blur-sm">
           <Sparkles size={12} className="mr-1" aria-hidden="true" /> AI-Native Agency Help Center
         </Badge>
 
         <h1 className="font-fj-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight">
           How can we help you{' '}
-          <span className="text-fj-jet-blue-on-dark">scale?</span>
+          <span className="text-[#F05A28]-on-dark">scale?</span>
         </h1>
 
         <p className="text-lg md:text-xl text-fj-charcoal-muted font-fj-body mb-10 max-w-2xl mx-auto leading-relaxed">
@@ -128,7 +128,7 @@ const Hero = React.memo(({ searchValue, onSearchChange }: { searchValue: string;
 
         {/* Search bar */}
         <div className="relative max-w-2xl mx-auto group">
-          <div className="absolute inset-0 bg-fj-jet-blue rounded-2xl blur opacity-20 group-hover:opacity-35 transition-opacity" />
+          <div className="absolute inset-0 bg-[#F05A28] rounded-2xl blur opacity-20 group-hover:opacity-35 transition-opacity" />
           <div className="relative bg-white rounded-2xl shadow-xl flex items-center p-2 transform group-hover:-translate-y-0.5 transition-all">
             <Search className="text-fj-neutral-200 ml-4 w-6 h-6" aria-hidden="true" />
             <label htmlFor="faq-search" className="sr-only">Search FAQs</label>
@@ -171,14 +171,14 @@ const QuickLinks = React.memo(({ onSelectQuestion }: { onSelectQuestion: (id: st
           <button
             key={item.id}
             onClick={() => onSelectQuestion(item.id)}
-            className="bg-white p-5 rounded-xl shadow-lg shadow-fj-ink/5 hover:shadow-xl hover:shadow-fj-jet-blue/10 hover:-translate-y-1 transition-all duration-300 text-left border border-fj-neutral-100 hover:border-fj-jet-blue-tint group"
+            className="bg-white p-5 rounded-xl shadow-lg shadow-fj-ink/5 hover:shadow-xl hover:shadow-fj-jet-blue/10 hover:-translate-y-1 transition-all duration-300 text-left border border-fj-neutral-100 hover:border-[#F05A28]-tint group"
             aria-label={`View popular question: ${item.question}`}
           >
             <div className="flex items-start justify-between mb-2">
-              <span className="bg-fj-jet-blue-tint text-fj-jet-blue p-2 rounded-lg group-hover:bg-fj-jet-blue group-hover:text-white transition-colors">
+              <span className="bg-[rgba(240,90,40,0.08)] text-[#F05A28] p-2 rounded-lg group-hover:bg-[#F05A28] group-hover:text-white transition-colors">
                 <Zap size={18} aria-hidden="true" />
               </span>
-              <ChevronRight size={16} className="text-fj-neutral-200 group-hover:text-fj-jet-blue transition-colors" aria-hidden="true" />
+              <ChevronRight size={16} className="text-fj-neutral-200 group-hover:text-[#F05A28] transition-colors" aria-hidden="true" />
             </div>
             <p className="font-semibold text-fj-ink text-sm leading-snug font-fj-body">{item.question}</p>
           </button>
@@ -196,7 +196,7 @@ const AccordionItem = React.memo(({ item, isOpen, onToggle }: { item: FAQItem; i
   const contentId = `accordion-content-${item.id}`;
 
   return (
-    <div className={`border rounded-xl bg-white overflow-hidden transition-all duration-300 ${isOpen ? 'ring-2 ring-fj-jet-blue/20 shadow-md border-fj-jet-blue-tint' : 'border-fj-neutral-100 hover:border-fj-jet-blue-tint'}`}>
+    <div className={`border rounded-xl bg-white overflow-hidden transition-all duration-300 ${isOpen ? 'ring-2 ring-fj-jet-blue/20 shadow-md border-[#F05A28]-tint' : 'border-fj-neutral-100 hover:border-[#F05A28]-tint'}`}>
       <h3>
         <button
           id={headerId}
@@ -205,10 +205,10 @@ const AccordionItem = React.memo(({ item, isOpen, onToggle }: { item: FAQItem; i
           onClick={onToggle}
           className="w-full flex items-center justify-between p-5 text-left focus:outline-none"
         >
-          <span className={`text-base md:text-lg font-semibold pr-8 transition-colors font-fj-display ${isOpen ? 'text-fj-jet-blue' : 'text-fj-ink'}`}>
+          <span className={`text-base md:text-lg font-semibold pr-8 transition-colors font-fj-display ${isOpen ? 'text-[#F05A28]' : 'text-fj-ink'}`}>
             {item.question}
           </span>
-          <span className={`flex-shrink-0 ml-4 p-2 rounded-full transition-transform duration-300 ${isOpen ? 'rotate-180 bg-fj-jet-blue-tint text-fj-jet-blue' : 'bg-fj-neutral-50 text-fj-neutral-400'}`}>
+          <span className={`flex-shrink-0 ml-4 p-2 rounded-full transition-transform duration-300 ${isOpen ? 'rotate-180 bg-[rgba(240,90,40,0.08)] text-[#F05A28]' : 'bg-fj-neutral-50 text-fj-neutral-400'}`}>
             <ChevronDown size={20} aria-hidden="true" />
           </span>
         </button>
@@ -249,11 +249,11 @@ const Sidebar = React.memo(({ activeCategory, onCategorySelect }: { activeCatego
           aria-current={isActive ? 'page' : undefined}
           className={`group flex items-center px-4 py-3 text-sm font-medium font-fj-body rounded-lg transition-all duration-200 ${
             isActive
-              ? 'bg-fj-jet-blue text-white shadow-md shadow-fj-jet-blue/20'
+              ? 'bg-[#F05A28] text-white shadow-md shadow-fj-jet-blue/20'
               : 'text-fj-neutral-600 hover:bg-fj-neutral-50 hover:text-fj-ink'
           }`}
         >
-          <Icon className={`mr-3 h-5 w-5 transition-colors ${isActive ? 'text-white' : 'text-fj-neutral-200 group-hover:text-fj-jet-blue'}`} aria-hidden="true" />
+          <Icon className={`mr-3 h-5 w-5 transition-colors ${isActive ? 'text-white' : 'text-fj-neutral-200 group-hover:text-[#F05A28]'}`} aria-hidden="true" />
           {category.title}
           {isActive && <ChevronRight className="ml-auto w-4 h-4 opacity-75" aria-hidden="true" />}
         </a>
@@ -285,20 +285,20 @@ const SearchResults = ({ results, onSelect }: { results: SearchResult[]; onSelec
         <div
           key={`${result.categoryId}-${result.item.id}-${idx}`}
           role="listitem"
-          className="bg-white p-6 rounded-xl border border-fj-neutral-100 shadow-sm hover:shadow-md hover:border-fj-jet-blue-tint transition-all cursor-pointer group"
+          className="bg-white p-6 rounded-xl border border-fj-neutral-100 shadow-sm hover:shadow-md hover:border-[#F05A28]-tint transition-all cursor-pointer group"
           onClick={() => onSelect(result.item.id)}
           tabIndex={0}
           onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onSelect(result.item.id); } }}
         >
           <div className="flex items-center gap-2 mb-2">
-            <Badge className="bg-fj-neutral-50 text-fj-neutral-600 group-hover:bg-fj-jet-blue-tint group-hover:text-fj-jet-blue transition-colors">
+            <Badge className="bg-fj-neutral-50 text-fj-neutral-600 group-hover:bg-[rgba(240,90,40,0.08)] group-hover:text-[#F05A28] transition-colors">
               {result.categoryTitle}
             </Badge>
             {result.matchType === 'answer' && (
-              <Badge className="bg-fj-jet-blue-tint text-fj-jet-blue border border-fj-jet-blue/10">Found in answer</Badge>
+              <Badge className="bg-[rgba(240,90,40,0.08)] text-[#F05A28] border border-[#F05A28]/10">Found in answer</Badge>
             )}
           </div>
-          <h3 className="text-lg font-bold text-fj-ink group-hover:text-fj-jet-blue transition-colors mb-2 font-fj-display">
+          <h3 className="text-lg font-bold text-fj-ink group-hover:text-[#F05A28] transition-colors mb-2 font-fj-display">
             {result.item.question}
           </h3>
           <div className="text-fj-neutral-400 text-sm font-fj-body line-clamp-2">Click to view detailed answer...</div>
@@ -311,7 +311,7 @@ const SearchResults = ({ results, onSelect }: { results: SearchResult[]; onSelec
 /* ─── Contact CTA ────────────────────────────────────────────────────────── */
 
 const ContactCTA = () => (
-  <section className="bg-fj-jet-blue text-white py-14 md:py-20 px-4">
+  <section className="bg-[#F05A28] text-white py-14 md:py-20 px-4">
     <div className="max-w-4xl mx-auto text-center">
       <h2 className="text-3xl font-fj-display font-bold mb-4">Can&apos;t find what you&apos;re looking for?</h2>
       <p className="text-blue-100 font-fj-body mb-10 text-lg">
@@ -321,9 +321,9 @@ const ContactCTA = () => (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <Link
           href="/contact"
-          className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-xl hover:bg-white hover:text-fj-jet-blue transition-all group text-left"
+          className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-xl hover:bg-white hover:text-[#F05A28] transition-all group text-left"
         >
-          <div className="bg-white/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-fj-jet-blue-tint group-hover:text-fj-jet-blue transition-colors">
+          <div className="bg-white/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[rgba(240,90,40,0.08)] group-hover:text-[#F05A28] transition-colors">
             <MessageCircle size={24} aria-hidden="true" />
           </div>
           <h3 className="font-bold text-lg mb-1 font-fj-display">Live Chat</h3>
@@ -332,9 +332,9 @@ const ContactCTA = () => (
 
         <Link
           href="/contact"
-          className="bg-white text-fj-jet-blue p-6 rounded-xl shadow-xl hover:-translate-y-1 transition-transform text-left"
+          className="bg-white text-[#F05A28] p-6 rounded-xl shadow-xl hover:-translate-y-1 transition-transform text-left"
         >
-          <div className="bg-fj-jet-blue-tint w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+          <div className="bg-[rgba(240,90,40,0.08)] w-12 h-12 rounded-lg flex items-center justify-center mb-4">
             <Phone size={24} aria-hidden="true" />
           </div>
           <h3 className="font-bold text-lg mb-1 font-fj-display">Schedule Call</h3>
@@ -343,9 +343,9 @@ const ContactCTA = () => (
 
         <a
           href="mailto:connect@factoryjet.com"
-          className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-xl hover:bg-white hover:text-fj-jet-blue transition-all group text-left"
+          className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-xl hover:bg-white hover:text-[#F05A28] transition-all group text-left"
         >
-          <div className="bg-white/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-fj-jet-blue-tint group-hover:text-fj-jet-blue transition-colors">
+          <div className="bg-white/20 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[rgba(240,90,40,0.08)] group-hover:text-[#F05A28] transition-colors">
             <Mail size={24} aria-hidden="true" />
           </div>
           <h3 className="font-bold text-lg mb-1 font-fj-display">Email Us</h3>
@@ -454,7 +454,7 @@ export default function FaqContent() {
                 {faqData.map((category) => (
                   <section key={category.id} id={category.id} className="scroll-mt-24">
                     <div className="flex items-center gap-3 mb-6">
-                      <div className="p-2 bg-fj-jet-blue-tint text-fj-jet-blue rounded-lg">
+                      <div className="p-2 bg-[rgba(240,90,40,0.08)] text-[#F05A28] rounded-lg">
                         <category.icon size={24} aria-hidden="true" />
                       </div>
                       <div>

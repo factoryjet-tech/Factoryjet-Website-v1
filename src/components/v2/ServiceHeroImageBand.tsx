@@ -18,7 +18,7 @@ import Image from 'next/image';
  *   - Stat labels: font-fj-body (Inter) small, text-fj-charcoal-muted
  *
  * Orange rule: color '#F05A28' always via inline style on static elements.
- * fj-jet-blue / text-fj-jet-blue are NEVER used in v2 components.
+ * fj-jet-blue / text-[#F05A28] are NEVER used in v2 components.
  *
  * Pure server component.
  */

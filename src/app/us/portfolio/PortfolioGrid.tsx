@@ -50,7 +50,7 @@ const PortfolioCard: React.FC<{ item: PortfolioItem }> = ({ item }) => {
           {/* Logo Area */}
           <div className="relative overflow-hidden h-48 md:h-64 w-full bg-gradient-to-br from-fj-neutral-50 via-white to-fj-neutral-50">
             <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #1A1A1A 1px, transparent 0)', backgroundSize: '24px 24px' }} />
-            <div className="absolute -top-12 -right-12 w-40 h-40 bg-fj-jet-blue/5 rounded-full blur-2xl" />
+            <div className="absolute -top-12 -right-12 w-40 h-40 bg-[#F05A28]/5 rounded-full blur-2xl" />
             <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-fj-jet-orange/5 rounded-full blur-2xl" />
 
             {/* Category badge */}
@@ -94,7 +94,7 @@ const PortfolioCard: React.FC<{ item: PortfolioItem }> = ({ item }) => {
           <div className="p-4 md:p-6 flex flex-col flex-grow font-fj-body">
             <div className="flex justify-between items-start mb-2">
               <div className="flex-1">
-                <h3 className="text-lg md:text-xl font-bold text-fj-ink mb-1 font-fj-display group-hover:text-fj-jet-blue transition-colors">
+                <h3 className="text-lg md:text-xl font-bold text-fj-ink mb-1 font-fj-display group-hover:text-[#F05A28] transition-colors">
                   {item.name}
                 </h3>
                 <p className="text-fj-neutral-400 text-xs md:text-sm line-clamp-2 leading-relaxed">
@@ -106,13 +106,13 @@ const PortfolioCard: React.FC<{ item: PortfolioItem }> = ({ item }) => {
             <div className="mt-auto pt-4 md:pt-5 border-t border-fj-neutral-100">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2 text-xs md:text-sm text-fj-neutral-400">
-                  <Globe size={14} className="text-fj-jet-blue" />
+                  <Globe size={14} className="text-[#F05A28]" />
                   <span className="truncate max-w-[180px]">
                     {item.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')}
                   </span>
                 </div>
                 <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-[-10px] group-hover:translate-x-0 hidden md:block">
-                  <div className="text-fj-jet-blue font-medium text-sm flex items-center gap-1">
+                  <div className="text-[#F05A28] font-medium text-sm flex items-center gap-1">
                     Visit <ExternalLink size={14} />
                   </div>
                 </div>
@@ -148,7 +148,7 @@ export default function PortfolioGrid() {
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
       <section className="py-14 md:py-20 text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-xs font-semibold tracking-[0.15em] uppercase text-fj-jet-blue font-fj-body mb-4">
+          <p className="text-xs font-semibold tracking-[0.15em] uppercase text-[#F05A28] font-fj-body mb-4">
             Our Portfolio
           </p>
           <h1 className="font-fj-display text-4xl md:text-5xl lg:text-6xl font-bold text-fj-ink mb-6 tracking-tight">
@@ -166,8 +166,8 @@ export default function PortfolioGrid() {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 md:px-5 py-2 md:py-2.5 rounded-full text-xs md:text-sm font-medium font-fj-body transition-all duration-200 ${
                   selectedCategory === cat
-                    ? 'bg-fj-jet-blue text-white shadow-lg shadow-fj-jet-blue/25'
-                    : 'bg-white text-fj-neutral-600 border border-fj-neutral-200 hover:border-fj-jet-blue/30 hover:text-fj-jet-blue'
+                    ? 'bg-[#F05A28] text-white shadow-lg shadow-fj-jet-blue/25'
+                    : 'bg-white text-fj-neutral-600 border border-fj-neutral-200 hover:border-[#F05A28]/30 hover:text-[#F05A28]'
                 }`}
               >
                 {cat}
@@ -202,7 +202,7 @@ export default function PortfolioGrid() {
               <p className="text-fj-neutral-400 font-fj-body text-lg">No projects found for this category.</p>
               <button
                 onClick={() => setSelectedCategory('All')}
-                className="mt-4 text-fj-jet-blue font-medium font-fj-body hover:underline"
+                className="mt-4 text-[#F05A28] font-medium font-fj-body hover:underline"
               >
                 View all projects
               </button>
@@ -215,11 +215,11 @@ export default function PortfolioGrid() {
       <section className="pb-14 md:pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-fj-charcoal rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-16 text-center relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-64 h-64 bg-fj-jet-blue/20 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2" />
+            <div className="absolute top-0 left-0 w-64 h-64 bg-[#F05A28]/20 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2" />
             <div className="absolute bottom-0 right-0 w-64 h-64 bg-fj-jet-orange/20 rounded-full blur-[100px] translate-x-1/2 translate-y-1/2" />
 
             <div className="relative z-10">
-              <p className="text-xs font-semibold tracking-[0.15em] uppercase text-fj-jet-blue-on-dark font-fj-body mb-4">
+              <p className="text-xs font-semibold tracking-[0.15em] uppercase text-[#F05A28]-on-dark font-fj-body mb-4">
                 Start Your Project
               </p>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-fj-charcoal-text mb-4 md:mb-6 font-fj-display">

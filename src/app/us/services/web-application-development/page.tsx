@@ -282,7 +282,7 @@ const PRICING_TIERS = [
       '60-day bug warranty',
       'Full source code + docs on handoff',
     ],
-    cta: { label: 'Get a Scope & Quote', href: '/contact' },
+    cta: { label: 'Get a Scope & Quote', modal: true, region: 'us' },
   },
   {
     name: 'Growth Platform',
@@ -300,7 +300,7 @@ const PRICING_TIERS = [
       '8–14 week delivery',
       '60-day bug warranty',
     ],
-    cta: { label: 'Get a Scope & Quote', href: '/contact' },
+    cta: { label: 'Get a Scope & Quote', modal: true, region: 'us' },
     popular: true,
   },
   {
@@ -319,7 +319,7 @@ const PRICING_TIERS = [
       'Full technical documentation',
       'Dedicated engineering contact',
     ],
-    cta: { label: 'Schedule a Discovery Call', href: '/contact' },
+    cta: { label: 'Schedule a Discovery Call', modal: true, region: 'us' },
   },
 ] as const;
 
@@ -505,7 +505,7 @@ export default function WebApplicationDevelopmentPage() {
         eyebrow="WEB APPLICATION DEVELOPMENT"
         headline="Custom Web Applications Built for US Businesses, Starting at $7,500"
         lead="Booking systems, customer portals, SaaS MVPs, internal dashboards. FactoryJet builds production-ready web apps at 60–70% below US development agency rates — fixed price, phased delivery, 60-day bug warranty."
-        primaryCta={{ label: 'Get a Free Estimate', href: '/contact' }}
+        primaryCta={{ label: 'Get a Free Estimate', modal: true, region: 'us' }}
         secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
         trustItems={['500+ US businesses served', '25+ years engineering experience', '60–70% below US agency rates']}
         rightSlot={
@@ -513,9 +513,9 @@ export default function WebApplicationDevelopmentPage() {
             <p className="text-xs font-fj-mono uppercase tracking-widest text-white/50">Build vs. Buy Decision Framework</p>
             <div className="space-y-3">
               {[
-                { trigger: 'Users log in and take actions', verdict: 'Custom web app', color: 'text-green-400' },
-                { trigger: "Off-the-shelf tools don't quite fit", verdict: 'Custom web app', color: 'text-green-400' },
-                { trigger: "You're paying for features you don't use", verdict: 'Custom web app', color: 'text-green-400' },
+                { trigger: 'Users log in and take actions', verdict: 'Custom web app', color: 'text-[#F05A28]' },
+                { trigger: "Off-the-shelf tools don't quite fit", verdict: 'Custom web app', color: 'text-[#F05A28]' },
+                { trigger: "You're paying for features you don't use", verdict: 'Custom web app', color: 'text-[#F05A28]' },
                 { trigger: 'Mostly static content + contact form', verdict: 'Website is fine', color: 'text-yellow-400' },
                 { trigger: 'Standard e-commerce, no custom logic', verdict: 'Shopify works', color: 'text-yellow-400' },
               ].map(({ trigger, verdict, color }) => (
@@ -585,7 +585,7 @@ export default function WebApplicationDevelopmentPage() {
               { type: 'Data & Reporting Apps', detail: 'Analytics, custom exports, alerts' },
             ].map(({ type, detail }) => (
               <div key={type} className="flex items-start gap-3 py-2 border-t border-fj-charcoal/10 first:border-0">
-                <div className="w-2 h-2 rounded-full bg-fj-jet-blue mt-1.5 shrink-0" />
+                <div className="w-2 h-2 rounded-full bg-[#F05A28] mt-1.5 shrink-0" />
                 <div>
                   <p className="text-sm font-semibold font-fj-body text-fj-ink">{type}</p>
                   <p className="text-xs text-fj-ink/50 font-fj-body">{detail}</p>
@@ -699,7 +699,7 @@ export default function WebApplicationDevelopmentPage() {
         eyebrow="START YOUR PROJECT"
         headline="Tell us what you need to build. We'll scope it and send a fixed price."
         sub="No commitment to respond. We do a 30-minute discovery call, map your requirements, and send a written scope + fixed price within 48 hours. If the numbers work, we start. If not, you have a free scope document."
-        primaryCta={{ label: 'Schedule a Free Discovery Call', href: '/contact' }}
+        primaryCta={{ label: 'Schedule a Free Discovery Call', modal: true, region: 'us' }}
         secondaryCta={{ label: 'See Pricing', href: '/us/pricing' }}
         objectionHandler="Fixed price. 60-day bug warranty. Full source code on handoff. Free discovery call first."
       />
