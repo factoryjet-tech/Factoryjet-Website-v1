@@ -1099,14 +1099,6 @@ export default function EcommerceDevelopmentPage() {
           footer="Prices and timelines reflect typical US market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
         />
 
-        {/* ── 11. INDUSTRIES ───────────────────────────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="INDUSTRIES WE SERVE"
-          headline="E-Commerce Built for How Your Category Actually Sells"
-          lead="Fashion needs size guides and variant swatches. Food needs perishable shipping logic. B2B needs net terms and volume pricing. We build for the actual purchase journey in your category."
-          sectors={INDUSTRIES}
-        />
-
         {/* ── 11b. TESTIMONIALS ─────────────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"

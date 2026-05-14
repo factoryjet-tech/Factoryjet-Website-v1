@@ -27,3 +27,14 @@
 /sitemap-us.xml      /sitemap-us/sitemap.xml      301
 /sitemap-uae.xml     /sitemap-uae/sitemap.xml     301
 /sitemap-blog.xml    /sitemap-blog/sitemap.xml    301
+
+# ── LEGACY PAGE RETIREMENT (Task C, 2026-05-14) ──────────────────────────────
+# NYC sub-pages: /services/ is thin; parent page covers same content
+/us/services/web-design/new-york/services   /us/services/web-design/new-york   301
+
+# Tier-3 e-commerce city pages on old theme → main e-commerce service page
+/us/services/ecommerce-development/boise        /us/services/ecommerce-development   301
+/us/services/ecommerce-development/chattanooga  /us/services/ecommerce-development   301
+/us/services/ecommerce-development/fargo        /us/services/ecommerce-development   301
+/us/services/ecommerce-development/lincoln      /us/services/ecommerce-development   301
+/us/services/ecommerce-development/sioux-falls  /us/services/ecommerce-development   301

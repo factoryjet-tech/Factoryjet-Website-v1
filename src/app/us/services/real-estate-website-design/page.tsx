@@ -637,13 +637,6 @@ export default function RealEstateWebsiteDesignPage() {
         />
       </div>
 
-      {/* ── 11. RELATED SERVICES ── */}
-      <IndustriesGrid
-        eyebrow="RELATED SERVICES"
-        headline="Other FactoryJet services used by real estate professionals"
-        sectors={RELATED_SERVICES}
-      />
-
       {/* ── 12. TESTIMONIALS ── */}
       <TestimonialsSection
         eyebrow="CLIENT RESULTS"

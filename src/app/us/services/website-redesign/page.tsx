@@ -880,14 +880,6 @@ export default function WebsiteRedesignPage() {
           />
         </div>
 
-        {/* ── 11. INDUSTRIES ───────────────────────────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="INDUSTRIES WE REDESIGN FOR"
-          headline="Website Redesign Built for the Way Your Industry Actually Converts"
-          lead="A restaurant site and a law firm site have completely different conversion patterns. We redesign for your industry's specific buyer behavior — not a generic template."
-          sectors={INDUSTRIES}
-        />
-
         {/* ── 12. TESTIMONIALS ─────────────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="WHAT CLIENTS SAY"

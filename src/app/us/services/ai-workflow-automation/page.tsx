@@ -1001,53 +1001,6 @@ export default function AIWorkflowAutomationPage() {
           <BoringStatsRow stats={MARKET_STATS} align="center" />
         </div>
 
-        {/* ── 8. INDUSTRIES ────────────────────────────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="INDUSTRIES WE SERVE"
-          headline="AI Workflow Automation Built for Your Industry's Specific Processes"
-          lead="Generic automation advice doesn't account for industry-specific data models, compliance requirements, or the actual workflows inside your type of business. We build for what your team actually does."
-          sectors={[
-            {
-              name: 'E-Commerce & Retail',
-              description:
-                'Order fulfillment updates, inventory threshold alerts, reorder POs, post-purchase email sequences, return processing, and supplier communication — automated end-to-end, connected to Shopify, WooCommerce, and your 3PL.',
-              example: 'One DTC brand eliminated 30 hours/week of manual order management.',
-              linkLabel: 'See e-commerce automation',
-              linkHref: '/contact',
-            },
-            {
-              name: 'Professional Services',
-              description:
-                'Automated client onboarding, project status updates, weekly reporting to stakeholders, proposal follow-up sequences, and timesheet-to-invoice workflows — so consultants and account managers spend time on clients, not admin.',
-              example: 'Consultancies reclaim 8–12 hours per week per person.',
-            },
-            {
-              name: 'Healthcare & Wellness',
-              description:
-                'Patient intake form processing, appointment reminder sequences, post-visit follow-up, referral coordination, and insurance pre-authorization tracking — built with HIPAA-aware data handling and full audit trails.',
-              example: 'Practices reduce front-desk admin by 5–7 hours per day.',
-            },
-            {
-              name: 'Real Estate',
-              description:
-                'Lead routing from Zillow, Realtor.com, and your website, automated follow-up sequences by buyer/seller stage, listing update notifications, and transaction coordination checklists — so agents spend time on clients, not inbox.',
-              example: 'Teams report 40% more listings managed per agent.',
-            },
-            {
-              name: 'Finance & Accounting',
-              description:
-                'Invoice processing, expense categorization, bank reconciliation flagging, month-end close task automation, and client deliverable reminders — built to connect QuickBooks, Xero, or NetSuite to your document workflow.',
-              example: 'Accounting firms cut month-end close time by 30–40%.',
-            },
-            {
-              name: 'SaaS & Technology',
-              description:
-                'User onboarding sequences, churn signal detection and routing, NPS follow-up automation, internal bug triage workflows, and product usage report generation — connected to your product database, CRM, and team tools.',
-              example: 'SaaS teams report 50% reduction in manual customer success tasks.',
-            },
-          ]}
-        />
-
         {/* ── 9. ROI STATS ─────────────────────────────────────────────────── */}
         <div className="bg-fj-neutral-50">
           <BoringStatsRow stats={ROI_STATS} align="center" />

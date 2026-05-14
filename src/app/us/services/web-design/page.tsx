@@ -1113,14 +1113,6 @@ export default function WebDesignPage() {
           footer="Prices and timelines reflect typical US market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
         />
 
-        {/* ── 11. INDUSTRIES ───────────────────────────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="INDUSTRIES WE SERVE"
-          headline="Web Design Built for the Way Your Industry Actually Works"
-          lead="Home service companies need click-to-call and Google Maps. Law firms need trust signals and intake forms. E-commerce brands need conversion-optimized product pages. We build for the real workflow."
-          sectors={INDUSTRIES}
-        />
-
         {/* ── 12. TESTIMONIALS ─────────────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"

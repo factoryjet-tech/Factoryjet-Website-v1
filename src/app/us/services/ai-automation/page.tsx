@@ -892,14 +892,6 @@ export default function AIAutomationPage() {
           />
         </div>
 
-        {/* ── 11. INDUSTRIES ───────────────────────────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="INDUSTRIES WE AUTOMATE"
-          headline="AI Automation Built for the Operational Reality of Your Industry"
-          lead="Generic automation breaks on industry-specific data formats, compliance requirements, and workflow quirks. We've built for yours before — here's what that looks like."
-          sectors={INDUSTRIES}
-        />
-
         {/* ── 12. TESTIMONIALS ─────────────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="WHAT CLIENTS SAY"

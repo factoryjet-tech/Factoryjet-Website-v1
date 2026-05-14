@@ -55,9 +55,17 @@ const nextConfig = {
   // which Cloudflare Pages applies. These entries cover dev/preview only.
   async redirects() {
     return [
+      // UK sitemap legacy URLs
       { source: '/uk/sitemap-index.xml',    destination: '/sitemap.xml',            permanent: true },
       { source: '/uk/sitemap-cities.xml',   destination: '/sitemap-uk/sitemap.xml', permanent: true },
       { source: '/uk/sitemap-services.xml', destination: '/sitemap-uk/sitemap.xml', permanent: true },
+      // Legacy page retirement (2026-05-14) — also in /public/_redirects for Cloudflare Pages
+      { source: '/us/services/web-design/new-york/services',          destination: '/us/services/web-design/new-york',      permanent: true },
+      { source: '/us/services/ecommerce-development/boise',           destination: '/us/services/ecommerce-development',    permanent: true },
+      { source: '/us/services/ecommerce-development/chattanooga',     destination: '/us/services/ecommerce-development',    permanent: true },
+      { source: '/us/services/ecommerce-development/fargo',           destination: '/us/services/ecommerce-development',    permanent: true },
+      { source: '/us/services/ecommerce-development/lincoln',         destination: '/us/services/ecommerce-development',    permanent: true },
+      { source: '/us/services/ecommerce-development/sioux-falls',     destination: '/us/services/ecommerce-development',    permanent: true },
     ]
   },
 

@@ -1224,14 +1224,6 @@ export default function AIAgentsPage() {
           footer="Prices and timelines reflect typical market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
         />
 
-        {/* ── 11. INDUSTRIES WE SERVE ──────────────────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="INDUSTRIES WE SERVE"
-          headline="AI Agents Built for the Industries Where the Complexity Is Real"
-          lead="We don't build generic demos. Every engagement starts with your industry's specific workflows, compliance requirements, and operational realities."
-          sectors={INDUSTRIES}
-        />
-
         {/* ── 12. PRICING ──────────────────────────────────────────────────── */}
         <div id="pricing">
           <PricingTiers

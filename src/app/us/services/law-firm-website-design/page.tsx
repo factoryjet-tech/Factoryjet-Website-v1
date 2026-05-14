@@ -901,14 +901,6 @@ export default function LawFirmWebsiteDesignPage() {
           />
         </div>
 
-        {/* ── 11. PRACTICE AREAS WE DESIGN FOR ─────────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="PRACTICE AREAS WE DESIGN FOR"
-          headline="Law Firm Website Design for Every Major Practice Area"
-          lead="Each practice area has different search intent, different trust signals, and different conversion dynamics. We design for yours specifically."
-          sectors={PRACTICE_AREAS}
-        />
-
         {/* ── 12. TESTIMONIALS ─────────────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="WHAT CLIENTS SAY"

@@ -670,14 +670,6 @@ export default function WebApplicationDevelopmentPage() {
         />
       </div>
 
-      {/* ── 11. INDUSTRIES ── */}
-      <IndustriesGrid
-        eyebrow="INDUSTRIES WE SERVE"
-        headline="Web applications we've built across US business verticals"
-        lead="Generic software breaks on industry-specific data formats, compliance requirements, and workflow quirks. We've built for yours before."
-        sectors={INDUSTRIES}
-      />
-
       {/* ── 12. TESTIMONIALS ── */}
       <TestimonialsSection
         eyebrow="CLIENT RESULTS"

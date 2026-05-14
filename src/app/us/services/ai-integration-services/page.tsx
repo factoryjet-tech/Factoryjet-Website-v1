@@ -1008,53 +1008,6 @@ export default function AIIntegrationServicesPage() {
           <BoringStatsRow stats={MARKET_STATS} align="center" />
         </div>
 
-        {/* ── 8. INDUSTRIES ────────────────────────────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="INDUSTRIES WE SERVE"
-          headline="AI Integration for the Tools Your Industry Actually Uses"
-          lead="Every industry has a different software stack and different workflows where AI delivers the most value. We know the common stacks and the specific integration patterns that work."
-          sectors={[
-            {
-              name: 'E-Commerce & Retail',
-              description:
-                'AI product description generation in Shopify or WooCommerce admin, customer review sentiment analysis, personalized recommendation APIs, and AI-written SEO metadata — connected to your existing product database and publishing workflow.',
-              example: '18–25% conversion lift on AI-written vs. manually written product pages.',
-              linkLabel: 'See e-commerce AI',
-              linkHref: '/contact',
-            },
-            {
-              name: 'Sales & CRM',
-              description:
-                'AI email draft generation inside HubSpot, Salesforce, or Pipedrive — pulling from contact history and deal context to generate personalized outreach with one click. Plus AI lead scoring, meeting summary generation, and follow-up sequencing.',
-              example: 'Sales teams cut email writing time by 80%.',
-            },
-            {
-              name: 'Customer Support',
-              description:
-                'AI ticket classification and priority tagging before agents open tickets, AI-drafted reply suggestions based on your knowledge base, and customer sentiment detection — integrated directly into Zendesk, Intercom, or Freshdesk.',
-              example: '35% reduction in average ticket handle time.',
-            },
-            {
-              name: 'Legal & Professional Services',
-              description:
-                'AI contract clause extraction and risk flagging, document classification, matter intake form processing, and AI-assisted brief drafting — integrated with your document management system (iManage, NetDocuments, or Google Drive).',
-              example: '2–3 hours saved per contract review.',
-            },
-            {
-              name: 'Healthcare & Life Sciences',
-              description:
-                'Clinical note summarization, patient intake form data extraction, referral routing, and medical record classification — built with HIPAA-aware data handling and private LLM deployment options that keep patient data off third-party servers.',
-              example: 'Clinicians reclaim 30–45 minutes per day on documentation.',
-            },
-            {
-              name: 'SaaS & Technology',
-              description:
-                'In-product AI features (writing assistance, smart suggestions, automated categorization), AI-powered customer success tooling connected to your product database, and internal knowledge base Q&A bots for engineering and support teams.',
-              example: 'SaaS teams ship AI features in weeks, not quarters.',
-            },
-          ]}
-        />
-
         {/* ── 9. ROI STATS ─────────────────────────────────────────────────── */}
         <div className="bg-fj-neutral-50">
           <BoringStatsRow stats={ROI_STATS} align="center" />

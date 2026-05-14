@@ -878,14 +878,6 @@ export default function WordPressDevelopmentPage() {
           />
         </div>
 
-        {/* ── 11. INDUSTRIES ───────────────────────────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="INDUSTRIES WE BUILD FOR"
-          headline="Custom WordPress for the Specific Requirements of Your Industry"
-          lead="Generic WordPress themes don't know your industry. We do — here's what custom WordPress development looks like in yours."
-          sectors={INDUSTRIES}
-        />
-
         {/* ── 12. TESTIMONIALS ─────────────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="WHAT CLIENTS SAY"

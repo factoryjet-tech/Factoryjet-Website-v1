@@ -624,14 +624,6 @@ export default function PricingPage() {
         />
       </div>
 
-      {/* ── 11. ALL SERVICES ── */}
-      <IndustriesGrid
-        eyebrow="ALL SERVICES"
-        headline="Every service we offer, with transparent pricing"
-        lead="FactoryJet builds websites, e-commerce stores, web applications, and AI automation systems. All fixed price. All delivered by the same team."
-        sectors={SERVICES_SECTORS}
-      />
-
       {/* ── 12. TESTIMONIALS ── */}
       <TestimonialsSection
         eyebrow="CLIENT RESULTS"

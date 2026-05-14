@@ -1001,53 +1001,6 @@ export default function AIChatbotDevelopmentPage() {
           <BoringStatsRow stats={MARKET_STATS} align="center" />
         </div>
 
-        {/* ── 8. INDUSTRIES ────────────────────────────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="INDUSTRIES WE SERVE"
-          headline="AI Chatbots Built for Your Industry — Not Generic Templates"
-          lead="Every industry has different questions, regulations, and success metrics. We build chatbots with that specificity baked in."
-          sectors={[
-            {
-              name: 'E-Commerce & Retail',
-              description:
-                'Order tracking, returns processing, product recommendations, and restock alerts — handled automatically. Chatbots integrate directly with Shopify, WooCommerce, and BigCommerce to pull live inventory and order data.',
-              example: 'One DTC brand reduced "where\'s my order?" tickets by 72% in 45 days.',
-              linkLabel: 'See e-commerce chatbots',
-              linkHref: '/contact',
-            },
-            {
-              name: 'Healthcare & Wellness',
-              description:
-                'Appointment booking, intake form collection, pre-visit instructions, and post-visit follow-up — automated with privacy-first architecture. HIPAA-aware design with full conversation audit trails and no PII stored in the chat layer.',
-              example: 'Clinics fill 30–40% more slots from after-hours website traffic.',
-            },
-            {
-              name: 'Real Estate',
-              description:
-                'Qualify inbound leads from your website and listings, answer common buyer and seller questions, and book consultations to your calendar automatically — without a receptionist monitoring a chat inbox.',
-              example: 'Agents book 35% more showings without increasing ad spend.',
-            },
-            {
-              name: 'Legal & Professional Services',
-              description:
-                'Intake chatbots that ask the right qualifying questions, determine service fit, collect case details, and schedule consultations — so attorneys and consultants only spend time with clients who are genuinely a match.',
-              example: 'Law firms see 50% reduction in time spent on unqualified intake calls.',
-            },
-            {
-              name: 'SaaS & Technology',
-              description:
-                'In-app support chatbots that deflect tickets, guide users through product features, answer billing questions, and escalate to success managers when churn signals appear. Connects to your product database and CRM.',
-              example: 'SaaS companies report 25% reduction in support tickets within 60 days.',
-            },
-            {
-              name: 'Local & Service Businesses',
-              description:
-                'Restaurants, salons, contractors, and home services businesses use AI chatbots to handle booking requests, service quotes, and FAQs 24/7 — capturing leads at 11 p.m. when a competitor\'s voicemail picks up.',
-              example: 'Service businesses capture 30% more leads from after-hours traffic.',
-            },
-          ]}
-        />
-
         {/* ── 9. ROI STATS ─────────────────────────────────────────────────── */}
         <div className="bg-fj-neutral-50">
           <BoringStatsRow stats={ROI_STATS} align="center" />

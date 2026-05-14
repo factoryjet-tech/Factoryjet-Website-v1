@@ -1106,14 +1106,6 @@ export default function ShopifyPage() {
           footer="Prices and timelines reflect typical US market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
         />
 
-        {/* ── 11. INDUSTRIES ───────────────────────────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="INDUSTRIES WE SERVE"
-          headline="Shopify Stores Built for How Your Industry Actually Sells"
-          lead="DTC fashion needs different product page logic than B2B wholesale. High-AOV furniture needs different trust signals than impulse-buy consumables. We design for your customer's actual purchase journey."
-          sectors={INDUSTRIES}
-        />
-
         {/* ── 11b. TESTIMONIALS ─────────────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
