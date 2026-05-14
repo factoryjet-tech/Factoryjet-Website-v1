@@ -50,3 +50,16 @@
 /us/services/ecommerce-development/fargo        /us/services/ecommerce-development   301
 /us/services/ecommerce-development/lincoln      /us/services/ecommerce-development   301
 /us/services/ecommerce-development/sioux-falls  /us/services/ecommerce-development   301
+
+# ── NEW YORK & CLEVELAND URL MIGRATION (2026-05-14) ───────────────────────────
+# Old /services/web-design/{city} → new /us/{city}/web-design (SEO canonical migration)
+/us/services/web-design/new-york   /us/new-york/web-design   301
+/us/services/web-design/cleveland  /us/cleveland/web-design  301
+
+# Sub-pages of old NYC URL → new canonical
+/us/services/web-design/new-york/faq       /us/new-york/web-design  301
+/us/services/web-design/new-york/services  /us/new-york/web-design  301
+
+# City hub redirects (no page.tsx at hub level)
+/us/new-york   /us/new-york/web-design   301
+/us/cleveland  /us/cleveland/web-design  301

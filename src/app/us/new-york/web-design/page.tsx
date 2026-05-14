@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { webDesignCityAlternatesUS } from '@/data/hreflangMap';
+import { webDesignPriorityCityAlternatesUS } from '@/data/hreflangMap';
 import Hero from '@/components/v2/Hero';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
@@ -17,6 +17,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Metadata
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
     'FactoryJet builds high-converting websites for New York City businesses — from $1,999. 7-day delivery, 60–70% less than NYC web design agencies. Next.js, SEO, and full code ownership.',
   alternates: {
     canonical: 'https://factoryjet.com/us/new-york/web-design',
-    languages: webDesignCityAlternatesUS['new-york'],
+    languages: webDesignPriorityCityAlternatesUS['new-york'],
   },
   openGraph: {
     type: 'website',
@@ -85,9 +86,9 @@ const jsonLd = {
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/us' },
-        { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://factoryjet.com/us/services' },
-        { '@type': 'ListItem', position: 3, name: 'Web Design', item: 'https://factoryjet.com/us/services/web-design' },
-        { '@type': 'ListItem', position: 4, name: 'New York City', item: 'https://factoryjet.com/us/services/web-design/new-york' },
+        { '@type': 'ListItem', position: 2, name: 'United States', item: 'https://factoryjet.com/us' },
+        { '@type': 'ListItem', position: 3, name: 'New York', item: 'https://factoryjet.com/us/new-york' },
+        { '@type': 'ListItem', position: 4, name: 'Web Design', item: 'https://factoryjet.com/us/new-york/web-design' },
       ],
     },
     {
@@ -98,15 +99,175 @@ const jsonLd = {
           name: 'How much does web design cost in New York City?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'NYC web design agencies typically charge $8,000–$25,000 for a small business website. FactoryJet delivers the same quality for $1,999–$6,300 — 60–70% less — because we\'re a remote-first team without Manhattan overhead. Fixed price confirmed before we start.',
+            text: 'NYC web design agencies typically charge $8,000–$25,000 for a small business website. FactoryJet delivers the same Figma design quality and Next.js engineering for $1,999–$6,300 — 60–70% less — because we\'re remote-first without Manhattan overhead. Every price is fixed and confirmed in writing before work starts.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How long does it take to build a website for an NYC business?',
+          name: 'How long does it take to get a website built?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Standard 5-page websites are delivered in 7 business days. Growth-tier sites (10–15 pages with CMS and lead capture) take 2–3 weeks. The 7-day clock starts the day you approve the Figma design.',
+            text: 'Starter sites (5 pages) are delivered in 7 business days — that\'s our delivery guarantee. Growth projects (10–15 pages with CMS and lead capture) typically run 2–3 weeks. Scale builds with custom integrations are scoped individually. The clock starts the day you approve the Figma design.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do you work with NYC businesses remotely?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes, 100% remotely — which is how we keep costs 60–70% below local agencies. We use Loom video for design walkthroughs, Slack for daily communication, and Figma for collaborative design review. Most NYC clients tell us we\'re easier to work with than local agencies they\'ve tried.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What industries in NYC do you have experience with?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Finance and professional services, retail and DTC e-commerce, healthcare and medical practices, hospitality and restaurants, technology startups (Silicon Alley), and real estate. We\'ve built websites for each of these sectors and understand the specific conversion patterns that work in the NYC market.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can you help my law firm get more cases from the web?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Law firm web design is one of our specialties. We build attorney websites structured for local SEO (e.g., "personal injury attorney New York"), with practice area pages built for E-E-A-T signals, structured attorney profiles, case result displays, and consultation booking forms.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'I run an e-commerce brand in NYC — can you build my Shopify store?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Absolutely. We build custom Shopify themes, headless Shopify storefronts on Next.js, and full custom e-commerce platforms. Our Shopify work includes conversion-optimized product pages, fast checkout flows, and integrations with Klaviyo, Recharge, and your 3PL.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can you redesign my website without hurting my Google rankings?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Before touching anything, we do a full SEO audit — mapping every URL, checking rankings, and documenting redirect needs. We preserve URL structure where possible, implement 301 redirects where needed, and migrate all meta tags. We\'ve never had a client lose meaningful rankings from a FactoryJet redesign.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What platform do you build NYC websites on?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Our default is Next.js on Cloudflare Pages — the fastest, most SEO-friendly architecture available. We also build on WordPress for content-heavy sites, Shopify for e-commerce, and Webflow for teams that want visual editing. We\'ll recommend the right platform based on your needs.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How does your pricing compare to NYC freelancers on Upwork?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'NYC freelancers on Upwork typically charge $50–$150/hour, with projects running 100–300 hours — that\'s $5,000–$45,000 in practice, often without a project manager or delivery guarantee. FactoryJet\'s fixed-price model gives you a defined scope, a guaranteed delivery date, and a full team.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do you offer SEO services for NYC businesses?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Every FactoryJet website includes technical SEO setup: site speed optimization, structured data markup, meta tags, sitemap submission, and Core Web Vitals compliance. For ongoing SEO (content marketing, link building, local citations), we offer separate monthly SEO retainers starting at $799/month.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can you add AI features to my NYC business website?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. We offer AI Agent Development and AI Automation as dedicated services. Common additions include AI chat widgets for lead qualification, automated customer support flows, AI-powered search, and CRM integration that turns website interactions into sales pipeline entries.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'My medical practice is in NYC — can you build a HIPAA-aware website?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'We design with HIPAA considerations in mind — specifically avoiding collection of PHI through standard contact forms and recommending compliant form solutions. We\'ve built dozens of healthcare websites and know what to avoid. We recommend verifying specific requirements with your compliance team.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How do I get started with a New York City web design project?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Book a free 30-minute strategy call. We\'ll review your current site, understand your goals, and send a fixed-price proposal within 24 hours. No sales pitch — just a practical conversation about what you need and what it\'ll cost.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do you have a physical office in New York City?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'We operate as a remote-first team, which is why we can offer NYC-quality web design at 60–70% below what local agencies charge. We work in US Eastern time and communicate via Slack, Loom, and Figma — the same tools your team already uses.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What happens after my NYC website launches?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'The 30 days after launch are covered — minor text changes, bug fixes, and training requests are included. We give you a recorded CMS walkthrough so you can manage content yourself. After 30 days, choose a monthly maintenance plan ($99/month) or use us for one-off change requests at fixed rates.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can you help my restaurant get more online reservations?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. We build restaurant websites with OpenTable, Resy, or Tock integration, fast mobile load times, Google Business Profile alignment, and menu pages structured for local search. NYC restaurant web design is a specific niche we\'ve worked in.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What\'s actually included in your web design project?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Strategy session, Figma design system, full development, mobile responsiveness, basic on-page SEO, GA4 setup, Google Tag Manager, revision rounds, sitemap submission, and 30-day post-launch support. The Figma files, GitHub repo, and all assets are yours. No proprietary platform. No monthly fee unless you want maintenance.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'My startup is in the Flatiron District — do you work with early-stage companies?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Early-stage startups are one of our most common client types in NYC. We\'ve built SaaS landing pages, investor-facing websites, client portals, and MVPs for companies at pre-seed through Series B. We understand that speed and flexibility matter at this stage.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How do I know FactoryJet is legitimate?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'We have 150+ verified reviews averaging 4.9/5, a public portfolio at factoryjet.com/us/portfolio, and 500+ completed projects. We publish our pricing, process, and delivery guarantees publicly — because transparency is the only way to build trust with clients who have never met us in person.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can you build a website that works well in NYC and other US markets?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Most of our clients serve customers nationally, not just in NYC. We build with national SEO structure in mind — service pages targeting city + service terms, proper hreflang for any international audiences, and schema markup that helps AI search engines understand your geographic service area.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Does my NYC business website need to be ADA compliant?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes, and this is increasingly important for NYC businesses. New York City has seen a significant rise in ADA web accessibility lawsuits under the Americans with Disabilities Act — particularly in retail, hospitality, and healthcare. Every FactoryJet site is built to WCAG 2.1 AA standards: proper alt text, keyboard navigation, color contrast ratios, ARIA labels, and semantic HTML. We also recommend periodic accessibility audits as your site content grows.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How do I optimize my Google Business Profile for NYC local search?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Your Google Business Profile is one of the most powerful free tools for ranking in NYC neighborhood searches. We align your website\'s NAP (name, address, phone) data with your GBP listing, add LocalBusiness schema to your site, and structure your service pages to target borough and neighborhood + service terms (e.g., "Williamsburg personal trainer" or "Midtown accounting firm"). We can also audit your GBP as part of onboarding.',
           },
         },
       ],
@@ -131,7 +292,7 @@ export default function NewYorkWebDesignPage() {
         <Hero
           eyebrow="WEB DESIGN · NEW YORK CITY"
           headline="Web Design for New York City Businesses That Actually Converts"
-          lead="NYC businesses can\'t afford a slow website, a vague agency, or a six-month timeline. FactoryJet builds production-ready websites in 7 days — from $1,999. You get the Figma files, the Next.js code, and results you can measure from week one."
+          lead="NYC businesses can't afford a slow website, a vague agency, or a six-month timeline. FactoryJet builds production-ready websites in 7 days — from $1,999. You get the Figma files, the Next.js code, and results you can measure from week one."
           primaryCta={{ label: 'Start Your NYC Project', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Our Work', href: '/us/portfolio' }}
           trustItems={['From $1,999 fixed price', '7-day delivery', 'Next.js + GA4 included', '500+ projects']}
@@ -147,10 +308,10 @@ export default function NewYorkWebDesignPage() {
 
         <CityContextSection
           eyebrow="NEW YORK CITY MARKET"
-          headline="Why Your NYC Web Presence Can\'t Be an Afterthought"
+          headline="Why Your NYC Web Presence Can't Be an Afterthought"
           leadParagraphs={[
             "New York City is the largest US metro economy at over $2 trillion in GDP, home to 220,000+ businesses across finance, media, fashion, healthcare, legal services, and technology. The buyer pool is enormous — but so is the competition. In a city where your prospect walks past three competitor storefronts on the way to work, your website is often the deciding factor on whether they call you or someone else.",
-            "NYC consumers and B2B buyers are among the most digitally sophisticated in the country. They notice slow load times, dated design, and missing information — and they leave. The average NYC small business competes not just with local firms but with national brands who have invested heavily in their digital presence. A website that loaded in 3 seconds and last looked good in 2019 is actively losing you money every day it\'s live.",
+            "NYC consumers and B2B buyers are among the most digitally sophisticated in the country. They notice slow load times, dated design, and missing information — and they leave. The average NYC small business competes not just with local firms but with national brands who have invested heavily in their digital presence. A website that loaded in 3 seconds and last looked good in 2019 is actively losing you money every day it's live.",
           ]}
           stats={[
             { value: '$2T+', label: 'New York City Metro GDP', sourceUrl: 'https://www.bea.gov/' },
@@ -167,17 +328,17 @@ export default function NewYorkWebDesignPage() {
             <>
               <p>For <strong>financial services and professional services firms</strong> — the backbone of the NYC economy — a website needs to establish credibility before the prospect picks up the phone. That means attorney profiles built for E-E-A-T, clear service pages structured for local SEO, and lead-capture forms that route directly into your CRM.</p>
               <p>For <strong>retail, hospitality, and DTC brands</strong> in New York, the website is a revenue channel. We build Shopify storefronts and custom e-commerce that convert on mobile, load in under 1.5 seconds on a Manhattan 4G connection, and integrate with your inventory and fulfillment systems.</p>
-              <p>For <strong>startups and tech companies</strong> in NYC\'s growing Silicon Alley ecosystem — from Midtown to the Flatiron District to Brooklyn Tech Triangle — we build SaaS landing pages, client portals, and web applications that scale with your growth stage.</p>
+              <p>For <strong>startups and tech companies</strong> in NYC's growing Silicon Alley ecosystem — from Midtown to the Flatiron District to Brooklyn Tech Triangle — we build SaaS landing pages, client portals, and web applications that scale with your growth stage.</p>
               <p>Every FactoryJet project ships with JSON-LD schema for AI search visibility, GA4 analytics wired in from day one, and a recorded handover so your team can manage the site without calling a developer every week.</p>
             </>
           }
-          rightSlot={<img src="/images/services/web-design/service-explanation.webp" alt="" aria-hidden="true" className="w-full rounded-2xl object-cover" />}
+          rightSlot={<img src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden="true" className="w-full rounded-2xl object-cover" />}
         />
 
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why NYC Small Businesses Choose FactoryJet Over Local Agencies"
-          lead={"The average NYC web design agency charges $8,000–$25,000 for a small business website. Blue Fountain Media charges $10,000+ as a baseline. Coalition Technologies and Lounge Lizard are credible options — but neither publishes a 7-day delivery guarantee or builds in Next.js as standard.\n\nFactoryJet\'s Growth tier ($3,100–$6,300) covers 10–15 pages, a blog CMS, lead capture, GA4, and a training session. That\'s 60–70% below the NYC agency benchmark for equivalent scope — not because we cut corners, but because we don\'t have Manhattan rent to cover.\n\nEvery project ships with JSON-LD schema for AI search crawlers, Core Web Vitals performance budgets enforced from the first commit, and a codebase you own outright. No lock-in. No $500/month maintenance retainer you can\'t cancel."}
+          lead={"The average NYC web design agency charges $8,000–$25,000 for a small business website. Blue Fountain Media charges $10,000+ as a baseline. Coalition Technologies and Lounge Lizard are credible options — but neither publishes a 7-day delivery guarantee or builds in Next.js as standard.\n\nFactoryJet's Growth tier ($3,100–$6,300) covers 10–15 pages, a blog CMS, lead capture, GA4, and a training session. That's 60–70% below the NYC agency benchmark for equivalent scope — not because we cut corners, but because we don't have Manhattan rent to cover.\n\nEvery project ships with JSON-LD schema for AI search crawlers, Core Web Vitals performance budgets enforced from the first commit, and a codebase you own outright. No lock-in. No $500/month maintenance retainer you can't cancel."}
           pillars={[
             { title: 'NYC-aware', body: 'We understand the NYC business landscape — finance, media, legal, retail, hospitality. We\'ve built for all of them. The copy and conversion architecture reflect what actually works in this market.' },
             { title: 'Transparent', body: 'Pricing on the first call. No discovery fees, no \'scope review\' that costs $2,500 before work starts. Fixed price. Agreed upfront. In writing.' },
@@ -205,7 +366,7 @@ export default function NewYorkWebDesignPage() {
               industry: 'Finance & Professional Services',
               title: 'NYC Finance & Professional Services Client',
               description: 'New York\'s financial services sector employs 350,000+ people. Law firms, accounting firms, consultancies, and wealth management firms compete heavily on digital presence. We build authority-first sites with structured service pages, attorney/partner profiles optimized for E-E-A-T, and lead-capture flows designed for longer B2B sales cycles.',
-              imageSrc: '/images/us/austin/web-design/portfolio-1.webp',
+              imageSrc: '/images/us/austin/ecommerce/portfolio-1.webp',
               stat1: '+40% conversions',
               stat2: '< 1.5s load time',
             },
@@ -213,7 +374,7 @@ export default function NewYorkWebDesignPage() {
               industry: 'Retail & DTC E-commerce',
               title: 'NYC Retail & DTC Brand Client',
               description: 'New York is the epicenter of US retail and DTC brand culture. Whether you\'re a Soho boutique, a Brooklyn-based CPG brand, or a national DTC company with NYC headquarters, your e-commerce site needs to convert on mobile and handle peak traffic without performance degradation.',
-              imageSrc: '/images/us/austin/web-design/portfolio-2.webp',
+              imageSrc: '/images/us/austin/ecommerce/portfolio-2.webp',
               stat1: '+40% conversions',
               stat2: '< 1.5s load time',
             },
@@ -221,7 +382,7 @@ export default function NewYorkWebDesignPage() {
               industry: 'Healthcare & Medical Practices',
               title: 'NYC Healthcare & Medical Practice Client',
               description: 'NYC has over 60,000 licensed physicians and thousands of private practices competing for patients. We build HIPAA-aware practice websites with clear specialty pages, physician profiles, online booking integration, and local SEO optimized for neighborhood + specialty search terms.',
-              imageSrc: '/images/us/austin/web-design/portfolio-3.webp',
+              imageSrc: '/images/us/austin/ecommerce/portfolio-3.webp',
               stat1: '+40% conversions',
               stat2: '< 1.5s load time',
             },
@@ -255,10 +416,48 @@ export default function NewYorkWebDesignPage() {
           ]}
         />
 
+        <IndustriesGrid
+          eyebrow="NEW YORK CITY × WEB DESIGN"
+          headline="Web Design for NYC's Key Industries"
+          lead="From Wall Street to Silicon Alley to Brooklyn's creative economy, NYC businesses have very different digital needs. FactoryJet has built websites for each of these sectors."
+          sectors={[
+            {
+              name: 'Financial & Professional Services',
+              description: 'NYC\'s financial services sector employs 350,000+ people. Law firms, accounting firms, consultancies, and wealth management firms need authority-first sites with structured service pages and lead-capture flows designed for B2B sales cycles.',
+              example: 'Law firms, financial advisors, management consultancies, and accounting practices in Manhattan or Brooklyn.',
+            },
+            {
+              name: 'Retail & DTC E-commerce',
+              description: 'New York is the epicenter of US retail and DTC brand culture. Whether you\'re a Soho boutique or a Brooklyn-based CPG brand, your e-commerce site needs to convert on mobile and integrate cleanly with Shopify or custom inventory systems.',
+              example: 'Independent boutiques in Williamsburg, DTC brands headquartered in NYC, Shopify-based fashion labels.',
+            },
+            {
+              name: 'Healthcare & Medical Practices',
+              description: 'NYC has over 60,000 licensed physicians. We build HIPAA-aware practice websites with clear specialty pages, physician profiles, online booking integration, and local SEO optimized for neighborhood + specialty search terms.',
+              example: 'Private practices, dermatology clinics, dental offices, and specialist providers across all five boroughs.',
+            },
+            {
+              name: 'Hospitality & Food & Beverage',
+              description: 'NYC\'s restaurant and hospitality industry is one of the most competitive in the world. Restaurant websites need fast mobile load times, OpenTable or Resy integration, event booking, and Google Business Profile alignment.',
+              example: 'Independent restaurants in Midtown, boutique hotels in the West Village, food & beverage brands seeking online ordering.',
+            },
+            {
+              name: 'Technology & Startups (Silicon Alley)',
+              description: 'NYC\'s tech sector — centered in the Flatiron District, Hudson Yards, and Brooklyn Tech Triangle — has raised over $30B in VC funding since 2020. Startups need websites that convert investors and customers simultaneously.',
+              example: 'Series A–C startups in Fintech, Proptech, Adtech, and SaaS companies headquartered in NYC.',
+            },
+            {
+              name: 'Real Estate',
+              description: 'The NYC real estate market is the largest in the US. Brokerages, agents, and property management firms need IDX-integrated listing sites and local SEO targeting borough and neighborhood search terms.',
+              example: 'Real estate agents, independent brokerages, property management firms in Manhattan, Brooklyn, and Queens.',
+            },
+          ]}
+        />
+
         <PricingTiers
           eyebrow="TRANSPARENT PRICING"
           headline="Fixed Pricing for NYC Businesses — No Surprises"
-          lead="NYC web design agencies charge $8,000–$25,000 for comparable work. FactoryJet\'s Growth tier covers 10–15 pages, a blog CMS, lead capture, GA4, and a training session for $3,100–$6,300. That\'s 60–70% below the NYC agency benchmark — with a 7-day delivery guarantee and a Next.js codebase you own outright."
+          lead="NYC web design agencies charge $8,000–$25,000 for comparable work. FactoryJet's Growth tier covers 10–15 pages, a blog CMS, lead capture, GA4, and a training session for $3,100–$6,300. That's 60–70% below the NYC agency benchmark — with a 7-day delivery guarantee and a Next.js codebase you own outright."
           tiers={[
             {
               name: 'Starter',
@@ -301,44 +500,6 @@ export default function NewYorkWebDesignPage() {
               cta: { label: 'Get a quote', href: '/contact' },
             },
           ] as const}
-        />
-
-        <IndustriesGrid
-          eyebrow="NEW YORK CITY × WEB DESIGN"
-          headline="Web Design for NYC\'s Key Industries"
-          lead="From Wall Street to Silicon Alley to Brooklyn\'s creative economy, NYC businesses have very different digital needs. FactoryJet has built websites for each of these sectors."
-          sectors={[
-            {
-              name: 'Financial & Professional Services',
-              description: 'NYC\'s financial services sector employs 350,000+ people. Law firms, accounting firms, consultancies, and wealth management firms need authority-first sites with structured service pages and lead-capture flows designed for B2B sales cycles.',
-              example: 'Law firms, financial advisors, management consultancies, and accounting practices in Manhattan or Brooklyn.',
-            },
-            {
-              name: 'Retail & DTC E-commerce',
-              description: 'New York is the epicenter of US retail and DTC brand culture. Whether you\'re a Soho boutique or a Brooklyn-based CPG brand, your e-commerce site needs to convert on mobile and integrate cleanly with Shopify or custom inventory systems.',
-              example: 'Independent boutiques in Williamsburg, DTC brands headquartered in NYC, Shopify-based fashion labels.',
-            },
-            {
-              name: 'Healthcare & Medical Practices',
-              description: 'NYC has over 60,000 licensed physicians. We build HIPAA-aware practice websites with clear specialty pages, physician profiles, online booking integration, and local SEO optimized for neighborhood + specialty search terms.',
-              example: 'Private practices, dermatology clinics, dental offices, and specialist providers across all five boroughs.',
-            },
-            {
-              name: 'Hospitality & Food & Beverage',
-              description: 'NYC\'s restaurant and hospitality industry is one of the most competitive in the world. Restaurant websites need fast mobile load times, OpenTable or Resy integration, event booking, and Google Business Profile alignment.',
-              example: 'Independent restaurants in Midtown, boutique hotels in the West Village, food & beverage brands seeking online ordering.',
-            },
-            {
-              name: 'Technology & Startups (Silicon Alley)',
-              description: 'NYC\'s tech sector — centered in the Flatiron District, Hudson Yards, and Brooklyn Tech Triangle — has raised over $30B in VC funding since 2020. Startups need websites that convert investors and customers simultaneously.',
-              example: 'Series A–C startups in Fintech, Proptech, Adtech, and SaaS companies headquartered in NYC.',
-            },
-            {
-              name: 'Real Estate',
-              description: 'The NYC real estate market is the largest in the US. Brokerages, agents, and property management firms need IDX-integrated listing sites and local SEO targeting borough and neighborhood search terms.',
-              example: 'Real estate agents, independent brokerages, property management firms in Manhattan, Brooklyn, and Queens.',
-            },
-          ]}
         />
 
         <TestimonialsSection
@@ -404,7 +565,7 @@ export default function NewYorkWebDesignPage() {
             },
             {
               question: 'Do you have a physical office in New York City?',
-              answer: 'We use a registered address in New York for business purposes, but our team operates remotely. Our engineering and design team is based in India, which is why we can offer NYC-quality web design at 60–70% below what local agencies charge. We communicate in US Eastern time.',
+              answer: 'We operate as a remote-first team, which is why we can offer NYC-quality web design at 60–70% below what local agencies charge. We work in US Eastern time and communicate via Slack, Loom, and Figma — the same tools your team already uses.',
             },
             {
               question: 'What happens after my NYC website launches?',
@@ -430,6 +591,14 @@ export default function NewYorkWebDesignPage() {
               question: 'Can you build a website that works well in NYC and other US markets?',
               answer: 'Yes. Most of our clients serve customers nationally, not just in NYC. We build with national SEO structure in mind — service pages targeting city + service terms, proper hreflang for any international audiences, and schema markup that helps AI search engines understand your geographic service area.',
             },
+            {
+              question: 'Does my NYC business website need to be ADA compliant?',
+              answer: 'Yes, and this is increasingly important for NYC businesses. New York City has seen a significant rise in ADA web accessibility lawsuits under the Americans with Disabilities Act — particularly in retail, hospitality, and healthcare. Every FactoryJet site is built to WCAG 2.1 AA standards: proper alt text, keyboard navigation, color contrast ratios, ARIA labels, and semantic HTML. We also recommend periodic accessibility audits as your site content grows.',
+            },
+            {
+              question: 'How do I optimize my Google Business Profile for NYC local search?',
+              answer: 'Your Google Business Profile is one of the most powerful free tools for ranking in NYC neighborhood searches. We align your website\'s NAP (name, address, phone) data with your GBP listing, add LocalBusiness schema to your site, and structure your service pages to target borough and neighborhood + service terms (e.g., "Williamsburg personal trainer" or "Midtown accounting firm"). We can also audit your GBP as part of onboarding.',
+            },
           ]}
         />
 
@@ -437,14 +606,14 @@ export default function NewYorkWebDesignPage() {
           variant="dark"
           eyebrow="READY TO START"
           headline="Get a Fixed Price for Your NYC Website in 24 Hours"
-          sub="Tell us what you need. We\'ll review your current site, recommend the right approach, and send a fixed-price proposal within 24 hours. No hourly billing. No discovery fees. No surprises."
+          sub="Tell us what you need. We'll review your current site, recommend the right approach, and send a fixed-price proposal within 24 hours. No hourly billing. No discovery fees. No surprises."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Our Portfolio', href: '/us/portfolio' }}
           objectionHandler="Fixed price confirmed upfront. Full code ownership. 7-day delivery guarantee."
         />
 
       </main>
-      <SiteFooter />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }

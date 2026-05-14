@@ -189,6 +189,14 @@ export const webDesignPriorityCityAlternatesUS = {
     'en-US': 'https://factoryjet.com/us/tampa/web-design',
     'x-default': 'https://factoryjet.com/us/tampa/web-design',
   },
+  'new-york': {
+    'en-US': 'https://factoryjet.com/us/new-york/web-design',
+    'x-default': 'https://factoryjet.com/us/new-york/web-design',
+  },
+  cleveland: {
+    'en-US': 'https://factoryjet.com/us/cleveland/web-design',
+    'x-default': 'https://factoryjet.com/us/cleveland/web-design',
+  },
 } as const
 
 // ---------------------------------------------------------------------------

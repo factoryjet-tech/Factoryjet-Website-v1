@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: 'Professional Web Design Company in Cleveland, Ohio | FactoryJet',
     description:
       'AI-native web development company in Cleveland. Enterprise-quality websites delivered in 7 days at 60-70% lower cost.',
-    url: 'https://factoryjet.com/us/services/web-design/cleveland',
+    url: 'https://factoryjet.com/us/cleveland/web-design',
     images: [
       {
         url: 'https://factoryjet.com/logo.png',
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
-    canonical: 'https://factoryjet.com/us/services/web-design/cleveland',
+    canonical: 'https://factoryjet.com/us/cleveland/web-design',
     languages: webDesignCityAlternatesUS['cleveland'],
   },
   robots: {
@@ -221,7 +221,7 @@ const LOCAL_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'FactoryJet',
-  url: 'https://factoryjet.com/us/services/web-design/cleveland',
+  url: 'https://factoryjet.com/us/cleveland/web-design',
   telephone: '+1-216-600-1234',
   email: 'connect@factoryjet.com',
   address: {
