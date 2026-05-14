@@ -34,9 +34,9 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/us/services/ai-chatbot-development',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/images/us/services/hero-ai-chatbot.webp',
         width: 1200,
-        height: 630,
+        height: 800,
         alt: 'FactoryJet - AI Chatbot Development Services USA',
       },
     ],
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: 'AI Chatbot Development Services USA | FactoryJet',
     description:
       'Custom AI chatbots for US small businesses. 60–70% cheaper. 2–3 week delivery. Free strategy call.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/images/us/services/hero-ai-chatbot.webp'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/us/services/ai-chatbot-development',
