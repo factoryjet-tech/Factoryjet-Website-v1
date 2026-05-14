@@ -859,21 +859,21 @@ export default function EcommerceDevelopmentPage() {
           ]}
         />
 
-        {/* ── 5. WHAT WE BUILD ─────────────────────────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="WHAT WE BUILD"
-          headline="Six E-Commerce Services for US Businesses"
-          lead="From a Shopify launch to a fully custom marketplace — we scope the right engagement for your platform, catalog complexity, and revenue stage."
-          sectors={ECOMM_SERVICES}
-        />
-
-        {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
+        {/* ── 5. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
           headline="From Platform Decision to Live Store in 5 Stages"
           lead="Discovery before we commit to a platform. Design approval before we commit to code. Full checkout testing before we commit to launch."
           stages={ECOMM_JOURNEY_STAGES}
           closingNote="5 STAGES · 3–14 WEEKS TO LAUNCH · PLATFORM-AGNOSTIC · ZERO DOWNTIME LAUNCH DAY"
+        />
+
+        {/* ── 6. WHAT WE BUILD ─────────────────────────────────────────────── */}
+        <IndustriesGrid
+          eyebrow="WHAT WE BUILD"
+          headline="Six E-Commerce Services for US Businesses"
+          lead="From a Shopify launch to a fully custom marketplace — we scope the right engagement for your platform, catalog complexity, and revenue stage."
+          sectors={ECOMM_SERVICES}
         />
 
         {/* ── 7. STATS BAND ────────────────────────────────────────────────── */}

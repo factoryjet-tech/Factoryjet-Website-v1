@@ -571,15 +571,7 @@ export default function PricingPage() {
         ]}
       />
 
-      {/* ── 6. COST FACTORS ── */}
-      <IndustriesGrid
-        eyebrow="WHAT MOVES THE NUMBER"
-        headline="Six factors that drive website design cost"
-        lead="Understand these six variables and you can estimate your own project cost before talking to anyone."
-        sectors={PRICING_SECTORS}
-      />
-
-      {/* ── 7. SERVICE JOURNEY ── */}
+      {/* ── 6. SERVICE JOURNEY ── */}
       <div id="process">
         <ServiceJourneyRow
           eyebrow="HOW IT WORKS"
@@ -589,6 +581,14 @@ export default function PricingPage() {
           closingNote="5 STAGES · 7-DAY DELIVERY GUARANTEE · FREE QUOTE IN 24 HOURS"
         />
       </div>
+
+      {/* ── 7. COST FACTORS ── */}
+      <IndustriesGrid
+        eyebrow="WHAT MOVES THE NUMBER"
+        headline="Six factors that drive website design cost"
+        lead="Understand these six variables and you can estimate your own project cost before talking to anyone."
+        sectors={PRICING_SECTORS}
+      />
 
       {/* ── 8. CITY CONTEXT ── */}
       <CityContextSection

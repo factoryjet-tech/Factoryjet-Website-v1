@@ -979,21 +979,21 @@ export default function AIWorkflowAutomationPage() {
           ]}
         />
 
-        {/* ── 5. AUTOMATION TYPES ──────────────────────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="WHAT WE BUILD"
-          headline="Six Workflow Automations That Pay for Themselves Fast"
-          lead="These are the automations that consistently have the clearest ROI for US small and mid-sized businesses. We build all six — and help you figure out which one to prioritize first."
-          sectors={AUTOMATION_TYPES}
-        />
-
-        {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
+        {/* ── 5. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
           headline="From Strategy Call to Live Automation in 2–4 Weeks"
           lead="A structured 5-stage process that keeps you informed at every step and delivers working automation — not a proposal about automation."
           stages={AUTOMATION_JOURNEY_STAGES}
           closingNote="5 STAGES · 2–12 WEEKS DEPENDING ON SCOPE · WEEKLY DEMOS THROUGHOUT"
+        />
+
+        {/* ── 6. AUTOMATION TYPES ──────────────────────────────────────────── */}
+        <IndustriesGrid
+          eyebrow="WHAT WE BUILD"
+          headline="Six Workflow Automations That Pay for Themselves Fast"
+          lead="These are the automations that consistently have the clearest ROI for US small and mid-sized businesses. We build all six — and help you figure out which one to prioritize first."
+          sectors={AUTOMATION_TYPES}
         />
 
         {/* ── 7. MARKET STATS ──────────────────────────────────────────────── */}

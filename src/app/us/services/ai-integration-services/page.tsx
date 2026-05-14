@@ -986,21 +986,21 @@ export default function AIIntegrationServicesPage() {
           ]}
         />
 
-        {/* ── 5. INTEGRATION TYPES ─────────────────────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="WHAT WE BUILD"
-          headline="Six AI Integration Categories That Deliver Immediate ROI"
-          lead="These are the integrations with the clearest, fastest payback for US small and mid-sized businesses. We build all six and help you identify which one to start with."
-          sectors={INTEGRATION_TYPES}
-        />
-
-        {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
+        {/* ── 5. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
           headline="From Discovery to AI-Powered Software in 1–6 Weeks"
           lead="A tight 4-stage process focused on getting AI working inside your existing tools as fast as possible — with full quality control built in at every step."
           stages={INTEGRATION_JOURNEY_STAGES}
           closingNote="4 STAGES · 1–12 WEEKS DEPENDING ON SCOPE · WEEKLY DEMOS THROUGHOUT"
+        />
+
+        {/* ── 6. INTEGRATION TYPES ─────────────────────────────────────────── */}
+        <IndustriesGrid
+          eyebrow="WHAT WE BUILD"
+          headline="Six AI Integration Categories That Deliver Immediate ROI"
+          lead="These are the integrations with the clearest, fastest payback for US small and mid-sized businesses. We build all six and help you identify which one to start with."
+          sectors={INTEGRATION_TYPES}
         />
 
         {/* ── 7. MARKET STATS ──────────────────────────────────────────────── */}

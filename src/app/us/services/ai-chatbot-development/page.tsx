@@ -979,21 +979,21 @@ export default function AIChatbotDevelopmentPage() {
           ]}
         />
 
-        {/* ── 5. CHATBOT TYPES ─────────────────────────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="WHAT WE BUILD"
-          headline="Six Types of AI Chatbots We Build for US Businesses"
-          lead="Different problems call for different chatbot architectures. We build all six types and help you figure out which one fits your situation before we start."
-          sectors={CHATBOT_TYPES}
-        />
-
-        {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
+        {/* ── 5. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
           headline="From Strategy Call to Live Chatbot in 2–5 Weeks"
           lead="A structured 5-stage process that keeps you informed at every step and delivers a working chatbot — not a slide deck about one."
           stages={CHATBOT_JOURNEY_STAGES}
           closingNote="5 STAGES · 2–5 WEEKS TO LAUNCH · WEEKLY DEMOS THROUGHOUT"
+        />
+
+        {/* ── 6. CHATBOT TYPES ─────────────────────────────────────────────── */}
+        <IndustriesGrid
+          eyebrow="WHAT WE BUILD"
+          headline="Six Types of AI Chatbots We Build for US Businesses"
+          lead="Different problems call for different chatbot architectures. We build all six types and help you figure out which one fits your situation before we start."
+          sectors={CHATBOT_TYPES}
         />
 
         {/* ── 7. MARKET STATS ──────────────────────────────────────────────── */}

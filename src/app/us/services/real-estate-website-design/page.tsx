@@ -584,15 +584,7 @@ export default function RealEstateWebsiteDesignPage() {
         ]}
       />
 
-      {/* ── 6. WHO WE BUILD FOR ── */}
-      <IndustriesGrid
-        eyebrow="WHO WE BUILD FOR"
-        headline="Real estate websites for every business model in the industry"
-        lead="Agent sites, team sites, brokerage platforms, and property management portals — each with a different structure, different lead strategy, and different price point."
-        sectors={USE_CASES}
-      />
-
-      {/* ── 7. SERVICE JOURNEY ── */}
+      {/* ── 6. SERVICE JOURNEY ── */}
       <div id="process">
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
@@ -602,6 +594,14 @@ export default function RealEstateWebsiteDesignPage() {
           closingNote="5 STAGES · 7-DAY DELIVERY · IDX INTEGRATION INCLUDED · FREE QUOTE IN 24 HOURS"
         />
       </div>
+
+      {/* ── 7. WHO WE BUILD FOR ── */}
+      <IndustriesGrid
+        eyebrow="WHO WE BUILD FOR"
+        headline="Real estate websites for every business model in the industry"
+        lead="Agent sites, team sites, brokerage platforms, and property management portals — each with a different structure, different lead strategy, and different price point."
+        sectors={USE_CASES}
+      />
 
       {/* ── 8. CITY CONTEXT ── */}
       <CityContextSection

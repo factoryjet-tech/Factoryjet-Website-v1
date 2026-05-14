@@ -838,21 +838,21 @@ export default function AIAutomationPage() {
           ]}
         />
 
-        {/* ── 6. WHAT WE AUTOMATE ───────────────────────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="WHAT WE AUTOMATE"
-          headline="Six High-ROI Workflow Categories We Automate for US Small Businesses"
-          lead="Every business has a different bottleneck. These are the six workflow categories that consistently deliver the highest return on automation investment for the SMBs we work with."
-          sectors={AUTOMATION_TYPES}
-        />
-
-        {/* ── 7. OUR PROCESS ───────────────────────────────────────────────── */}
+        {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
           headline="From Free Audit to Automated Workflow: 5 Structured Stages"
           lead="We don't start building until we understand your process completely. Every stage ends with a deliverable you review and approve — so nothing gets built that you didn't ask for."
           stages={AUTOMATION_JOURNEY_STAGES}
           closingNote="5 STAGES · 3 DAYS TO 4 WEEKS · FREE AUDIT BEFORE ANY COMMITMENT"
+        />
+
+        {/* ── 7. WHAT WE AUTOMATE ───────────────────────────────────────────── */}
+        <IndustriesGrid
+          eyebrow="WHAT WE AUTOMATE"
+          headline="Six High-ROI Workflow Categories We Automate for US Small Businesses"
+          lead="Every business has a different bottleneck. These are the six workflow categories that consistently deliver the highest return on automation investment for the SMBs we work with."
+          sectors={AUTOMATION_TYPES}
         />
 
         {/* ── 8. US MARKET CONTEXT ─────────────────────────────────────────── */}

@@ -17,6 +17,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns'
 
 
 export const metadata: Metadata = {
@@ -292,7 +293,7 @@ export default function NashvilleWebDesignPage() {
       />
       <SchemaScript />
     </main>
-      <SiteFooter />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }

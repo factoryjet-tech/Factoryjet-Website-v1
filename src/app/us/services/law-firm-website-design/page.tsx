@@ -847,21 +847,21 @@ export default function LawFirmWebsiteDesignPage() {
           ]}
         />
 
-        {/* ── 6. WHAT WE BUILD FOR LAW FIRMS ───────────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="WHAT WE BUILD FOR LAW FIRMS"
-          headline="Six Essential Elements of a High-Performing Law Firm Website"
-          lead="Each element serves a specific function in the ranking-to-conversion path. Here's what we build and why each one matters."
-          sectors={LEGAL_SERVICES}
-        />
-
-        {/* ── 7. OUR PROCESS ───────────────────────────────────────────────── */}
+        {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
           headline="From Legal SEO Audit to Live Law Firm Website: 5 Structured Stages"
           lead="Every law firm website starts with understanding your market — who you compete with, what queries you should rank for, and where your current site is falling short. Design doesn't start until strategy is approved."
           stages={LEGAL_JOURNEY_STAGES}
           closingNote="5 STAGES · 4 WEEKS (SMALL FIRM) TO 14 WEEKS (LARGE FIRM) · FREE SEO AUDIT BEFORE ANY COMMITMENT"
+        />
+
+        {/* ── 7. WHAT WE BUILD FOR LAW FIRMS ───────────────────────────────── */}
+        <IndustriesGrid
+          eyebrow="WHAT WE BUILD FOR LAW FIRMS"
+          headline="Six Essential Elements of a High-Performing Law Firm Website"
+          lead="Each element serves a specific function in the ranking-to-conversion path. Here's what we build and why each one matters."
+          sectors={LEGAL_SERVICES}
         />
 
         {/* ── 8. US LEGAL MARKET CONTEXT ───────────────────────────────────── */}

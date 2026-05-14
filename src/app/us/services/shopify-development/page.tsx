@@ -881,21 +881,21 @@ export default function ShopifyPage() {
           ]}
         />
 
-        {/* ── 5. WHAT WE BUILD ─────────────────────────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="WHAT WE BUILD"
-          headline="Six Shopify Services for US E-Commerce Brands"
-          lead="From a custom theme on an existing store to a full Shopify Plus B2B platform — we scope the right engagement for where your business is and where it's going."
-          sectors={SHOPIFY_SERVICES}
-        />
-
-        {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
+        {/* ── 5. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
           headline="From Store Audit to Live Launch in 5 Stages"
           lead="A structured build process with design approval before engineering, a staging store before DNS switch, and a full Lighthouse audit before you sign off."
           stages={SHOPIFY_JOURNEY_STAGES}
           closingNote="5 STAGES · 3–5 WEEKS TO LAUNCH · FIGMA APPROVAL BEFORE BUILD · ZERO DOWNTIME LAUNCH"
+        />
+
+        {/* ── 6. WHAT WE BUILD ─────────────────────────────────────────────── */}
+        <IndustriesGrid
+          eyebrow="WHAT WE BUILD"
+          headline="Six Shopify Services for US E-Commerce Brands"
+          lead="From a custom theme on an existing store to a full Shopify Plus B2B platform — we scope the right engagement for where your business is and where it's going."
+          sectors={SHOPIFY_SERVICES}
         />
 
         {/* ── 7. STATS BAND ────────────────────────────────────────────────── */}

@@ -1048,21 +1048,21 @@ export default function AIAgentsPage() {
           ]}
         />
 
-        {/* ── 5. WHAT WE BUILD (AI AGENT TYPES) ───────────────────────────── */}
-        <IndustriesGrid
-          eyebrow="WHAT WE BUILD"
-          headline="Six Categories of AI Agents We Build for US Businesses"
-          lead="Every business has different bottlenecks. We build the right type of AI agent for your highest-impact use case — not a generic template you'll outgrow in three months."
-          sectors={AI_AGENT_TYPES}
-        />
-
-        {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
+        {/* ── 5. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
           headline="How We Build Your AI Agent: from Strategy Call to Go-Live"
           lead="A structured 5-stage process that keeps you informed at every step and delivers a working AI agent — not a PowerPoint about one."
           stages={AI_JOURNEY_STAGES}
           closingNote="5 STAGES · 2–12 WEEKS TO FIRST AGENT IN PRODUCTION · WEEKLY DEMOS THROUGHOUT"
+        />
+
+        {/* ── 6. WHAT WE BUILD (AI AGENT TYPES) ───────────────────────────── */}
+        <IndustriesGrid
+          eyebrow="WHAT WE BUILD"
+          headline="Six Categories of AI Agents We Build for US Businesses"
+          lead="Every business has different bottlenecks. We build the right type of AI agent for your highest-impact use case — not a generic template you'll outgrow in three months."
+          sectors={AI_AGENT_TYPES}
         />
 
         {/* ── 7. ROI STATS ─────────────────────────────────────────────────── */}
