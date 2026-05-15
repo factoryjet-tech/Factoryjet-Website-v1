@@ -44,12 +44,13 @@ const AI_SERVICES = [
 
 const LOCATIONS = [
   { label: 'Austin',    state: 'TX', href: '/us/austin/web-design' },
-  { label: 'Denver',    state: 'CO', href: '/us/denver/web-design' },
   { label: 'Miami',     state: 'FL', href: '/us/miami/web-design' },
+  { label: 'Denver',    state: 'CO', href: '/us/denver/web-design' },
+  { label: 'Nashville', state: 'TN', href: '/us/nashville/web-design' },
+  { label: 'New York',  state: 'NY', href: '/us/new-york/web-design' },
   { label: 'Charlotte', state: 'NC', href: '/us/charlotte/web-design' },
   { label: 'Raleigh',   state: 'NC', href: '/us/raleigh/web-design' },
   { label: 'Tampa',     state: 'FL', href: '/us/tampa/web-design' },
-  { label: 'Nashville', state: 'TN', href: '/us/nashville/web-design' },
   { label: 'Portland',  state: 'OR', href: '/us/portland/web-design' },
 ] as const;
 

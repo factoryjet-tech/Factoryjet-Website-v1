@@ -69,6 +69,14 @@ function SchemaScript() {
   )
 }
 
+
+const FAQ_CATEGORIES = [
+  { key: 'pricing',   label: 'Pricing & Timeline' },
+  { key: 'included',  label: "What's Included" },
+  { key: 'technical', label: 'Platform & SEO' },
+  { key: 'local',     label: 'Local Expertise' },
+  { key: 'support',   label: 'Support & Ownership' },
+];
 export default function Page() {
   return (
     <>
@@ -377,84 +385,105 @@ export default function Page() {
         <FAQ
           eyebrow="COMMON QUESTIONS"
           headline="Common Questions from Lincoln E-Commerce Businesses"
+          categories={FAQ_CATEGORIES}
           items={[
             {
+              category: 'local',
               question: 'Do you have specific experience with Shopify development in Lincoln, Nebraska?',
               answer: "Yes — we've built e-commerce stores for businesses across the Lincoln metro and broader Nebraska market. We understand Nebraska buyers, the ag-tech sector around UNL, the Husker merchandise market, and Nebraska's straightforward sales tax structure.",
             },
             {
+              category: 'pricing',
               question: "What's Nebraska's sales tax, and how does it apply to my Shopify store?",
               answer: "Nebraska has a 5.5% state sales tax. Lincoln itself adds a local tax that brings the combined rate to approximately 7% (5.5% state + 1.5% city). We configure Shopify Tax to automatically calculate and collect the correct amount based on the buyer's specific location. If you sell into other states and exceed their economic nexus thresholds, we configure multi-state tax handling too.",
             },
             {
+              category: 'local',
               question: 'How does the 7-day delivery guarantee work?',
               answer: "Once you approve your proposal and send the deposit, the 7-day clock starts. We design, build, configure, and launch your complete Shopify store within that window. If we miss the deadline for any reason on our end, you receive a full refund. We've never had to issue one.",
             },
             {
+              category: 'local',
               question: 'Can you build a Shopify store for Husker merchandise or university-related products?',
               answer: "Yes — we've built merchandise stores for university and sports-adjacent brands. Important note: if you plan to use University of Nebraska's official trademarks, you'll need a UNL licensing agreement. If you're selling Husker-inspired or fan-culture products that don't use official marks, no licensing is required. We'll help you structure the store correctly for either situation.",
             },
             {
+              category: 'local',
               question: 'I run a farm or ag business in Nebraska. Can I sell products online?',
               answer: "Absolutely — and this is one of the fastest-growing segments we serve. Nebraska's ag businesses are increasingly selling direct: equipment parts, inputs, specialty crops, value-added food products, and branded farm merchandise. We build Shopify stores with B2B wholesale pricing for commercial buyers, volume discounts, net payment terms, and inventory management that connects with your existing systems.",
             },
             {
+              category: 'local',
               question: 'Can you build a B2B wholesale portal for a Lincoln manufacturing company?',
               answer: "Yes. Our Growth and Headless packages include full B2B wholesale functionality — separate pricing tiers by customer group, minimum order quantities, volume discounts, net 30/60/90 payment terms, and a wholesale buyer portal with unique login. Nebraska manufacturers and industrial suppliers are a core segment for us.",
             },
             {
+              category: 'local',
               question: "What's the difference between you and Omaha-based agencies for Lincoln businesses?",
               answer: "Several Omaha agencies serve Lincoln clients, and some do good work. The issues are typically: they charge Omaha overhead prices to Lincoln businesses, Lincoln projects get lower priority than their Omaha accounts, and timelines stretch as a result. We serve Lincoln businesses with the same priority as any other client — and our 7-day delivery is non-negotiable regardless of your city.",
             },
             {
+              category: 'local',
               question: "I've heard Sproutbox does good Shopify work in Lincoln. Why should I consider FactoryJet?",
               answer: "Sproutbox does solid design work — they're a broad-service digital agency. If you want Shopify as your primary platform and want a team for whom Shopify is the only thing they do, that's us. 500+ stores deep vs. being one of many services in an agency's portfolio. We're also faster (7 days) and significantly less expensive.",
             },
             {
+              category: 'included',
               question: 'How does Shopify handle subscription or recurring orders for Lincoln businesses?',
               answer: "We integrate Shopify Subscriptions or Recharge depending on your needs. Subscription commerce works exceptionally well for Nebraska food producers, supplement brands, and pet supply businesses. We set up the subscriber portal, discount logic, pause/skip/cancel flows, and Klaviyo email sequences that keep churn low.",
             },
             {
+              category: 'pricing',
               question: 'Can you integrate my Shopify store with my existing POS or inventory system?',
               answer: "Yes. If you're running Shopify POS in a Lincoln retail location, the inventory sync is automatic. For other POS systems (Square, Lightspeed, Clover), we build the integration. For Lincoln businesses with ERP systems or custom inventory software, we build API connections through our Headless package.",
             },
             {
+              category: 'pricing',
               question: 'What does a Shopify store typically cost in Lincoln, Nebraska?',
               answer: "Local Lincoln and Omaha agencies typically charge $7,000–$20,000 for a Shopify build with 6–14 week timelines. Freelancers run $1,500–$6,000 with variable quality and no accountability. We charge $2,999–$15,999 depending on complexity, deliver in 7 days, and back it with a money-back guarantee.",
             },
             {
+              category: 'technical',
               question: 'Can you help me rank on Google for Shopify-related searches in Lincoln?',
               answer: "Every store we build is fully SEO-configured out of the box: optimized metadata, JSON-LD schema, fast load times (Core Web Vitals green), mobile-first design, and a clean sitemap submitted to Google Search Console on launch day. For Lincoln businesses, we also optimize for local search signals so you appear in 'near me' queries.",
             },
             {
+              category: 'local',
               question: "I already have a Shopify store but it's not performing. Can you audit and fix it?",
               answer: "Yes. Our free 24-hour audit covers speed scores, checkout abandonment rate, mobile UX issues, conversion funnel gaps, and theme code problems. We then provide a specific list of what's broken and a fixed price to fix it.",
             },
             {
+              category: 'local',
               question: 'Do you work with startups and early-stage businesses in Lincoln?',
               answer: "Yes. Lincoln's startup ecosystem — particularly around UNL's innovation programs and the NMotion accelerator — produces a lot of early-stage product companies. We work with pre-revenue and early-stage businesses. For most startups, the right starting point is our Standard package at $2,999 to validate the product concept before investing in advanced features.",
             },
             {
+              category: 'local',
               question: 'How do I handle shipping and fulfillment for Nebraska buyers?',
               answer: "We configure Shopify's shipping module with USPS, UPS, and FedEx carrier-calculated rates based on package weight and destination. For Nebraska agricultural products, we factor in perishable shipping constraints. For high-volume operations, we integrate ShipStation or EasyPost for warehouse management.",
             },
             {
+              category: 'technical',
               question: 'Can you set up Google Shopping for my Lincoln product business?',
               answer: "Google Shopping is included in our Growth and Headless packages and available as a paid add-on for Standard. We set up Google Merchant Center, configure your product feed, write optimized product titles and descriptions, and link to Google Ads.",
             },
             {
+              category: 'local',
               question: "I'm a food producer in Nebraska. Can I ship food products nationally through my Shopify store?",
               answer: "Yes, with some planning. Most shelf-stable packaged food products can be shipped nationwide without restriction. Meat and dairy require USDA/FDA compliance and specific labeling. Alcohol has state-by-state shipping restrictions. We've helped Nebraska food producers navigate these requirements many times.",
             },
             {
+              category: 'support',
               question: 'Do you offer ongoing maintenance and support after launch?',
               answer: "Yes. Every project includes 30 days of post-launch support — bug fixes, adjustments, questions answered same-day. After that, monthly maintenance plans start at $299/month and include theme updates, app maintenance, speed monitoring, and priority support.",
             },
             {
+              category: 'local',
               question: "What makes FactoryJet different from a Nebraska freelancer I found on LinkedIn?",
               answer: "A freelancer might be excellent — or they might disappear after the deposit. We're a 25-person team with project managers, designers, developers, and QA working in parallel. We have 500+ stores as proof. We put a contractual delivery deadline in writing. No freelancer will ever offer you that.",
             },
             {
+              category: 'local',
               question: "I'm outside Lincoln — Kearney, Grand Island, or another Nebraska city. Do you serve me?",
               answer: "Absolutely. We serve businesses across all of Nebraska. Nebraska's 5.5% sales tax applies statewide, so there's no configuration difference for non-Lincoln cities. Remote collaboration is our normal — most of our projects are handled entirely over Zoom and Slack.",
             },

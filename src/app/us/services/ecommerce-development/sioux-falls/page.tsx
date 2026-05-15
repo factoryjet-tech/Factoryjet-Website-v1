@@ -69,6 +69,14 @@ function SchemaScript() {
   )
 }
 
+
+const FAQ_CATEGORIES = [
+  { key: 'pricing',   label: 'Pricing & Timeline' },
+  { key: 'included',  label: "What's Included" },
+  { key: 'technical', label: 'Platform & SEO' },
+  { key: 'local',     label: 'Local Expertise' },
+  { key: 'support',   label: 'Support & Ownership' },
+];
 export default function Page() {
   return (
     <>
@@ -347,84 +355,105 @@ export default function Page() {
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Everything Sioux Falls business owners ask before hiring us"
+          categories={FAQ_CATEGORIES}
           items={[
             {
+              category: 'local',
               question: 'Do you have experience with Shopify development in Sioux Falls and South Dakota?',
               answer: "Yes — we've built stores for businesses across the Sioux Falls metro and broader South Dakota market. We understand SD buyers, the ag-driven market, the financial services sector that Sioux Falls is known for, and South Dakota's uniquely business-friendly tax structure.",
             },
             {
+              category: 'pricing',
               question: "South Dakota has no state income tax. Does that advantage extend to e-commerce businesses?",
               answer: "Yes — for e-commerce business owners operating in South Dakota, the absence of state income tax means more of your online sales revenue stays in your pocket. This is one of the reasons Sioux Falls has attracted so many businesses over the past decade. For your customers, what matters is sales tax — which we configure automatically for SD and any other states where you have tax nexus.",
             },
             {
+              category: 'pricing',
               question: "What's the sales tax rate for a Sioux Falls Shopify store?",
               answer: "South Dakota charges a 4.5% state sales tax. Sioux Falls adds a 2% municipal tax, bringing the combined rate to 6.5% for orders shipped to Sioux Falls addresses. Other SD cities have different local rates. We configure Shopify Tax to automatically calculate and collect the correct rate based on each buyer's shipping address — including handling multi-state nexus if your volume triggers out-of-state collection obligations.",
             },
             {
+              category: 'local',
               question: "How does the 7-day delivery guarantee work?",
               answer: "Once you approve your proposal and send the deposit, the 7-day clock starts. We design, build, configure, and launch your complete Shopify store within that window. If we miss the deadline for any reason on our end, you get a full refund. It's in writing, it's contractual, and we've never had to issue one.",
             },
             {
+              category: 'local',
               question: "I know Lawrence & Schiller is a big agency in Sioux Falls. Why would I hire FactoryJet instead?",
               answer: "Lawrence & Schiller is excellent for large-scale brand campaigns, traditional media, and enterprise marketing. If you need a TV buy or a full rebrand, they're a solid choice. If you need a Shopify store built fast and well at a price that makes sense for a growing SMB, that's our lane. We specialize exclusively in Shopify, launch in 7 days, start at $2,999, and put the deadline in writing.",
             },
             {
+              category: 'local',
               question: "Can you build a Shopify store for a South Dakota agricultural business?",
               answer: "Absolutely — ag businesses are one of our strongest verticals. We've built stores for equipment parts dealers, farm input suppliers, ranch merchandise brands, and direct-to-consumer food producers across the Dakotas. We understand the SD ag buyer: they purchase on mobile, need detailed product specs, and often buy in volume. We build for all of that — including B2B wholesale portals with tiered pricing for commercial accounts.",
             },
             {
+              category: 'local',
               question: "Sioux Falls has a big financial services sector. Can you build e-commerce for fintech or financial product companies?",
               answer: "Yes. Financial services companies in Sioux Falls increasingly sell physical products (branded merchandise, educational materials, financial planning tools) and digital products online. We've built stores for financial education companies, professional services firms with product lines, and fintech companies with physical product components. Compliance-friendly product descriptions and terms are something we factor in from the start.",
             },
             {
+              category: 'pricing',
               question: "Can you integrate with Sanford Health or Avera's supplier networks?",
               answer: "If you're a vendor selling products to Sanford Health, Avera, or other Sioux Falls health systems through an e-commerce channel, we can build a B2B store with PO-based purchasing, net payment terms, and customer-specific pricing. We've built procurement stores for healthcare suppliers. Contact us with your specific integration requirements and we'll scope it accurately.",
             },
             {
+              category: 'local',
               question: "How do you handle shipping to rural South Dakota addresses?",
               answer: "South Dakota is geographically large with significant rural population. We configure USPS Priority Mail as the primary carrier for rural SD addresses — it's the most reliable and economical option for remote areas. We set up carrier-calculated shipping rates at checkout so buyers in rural counties see accurate shipping costs. For perishable or fragile products, we configure appropriate carrier restrictions.",
             },
             {
+              category: 'local',
               question: "What's the difference between FactoryJet and a local Sioux Falls web developer?",
               answer: "A local developer might be great — or might be a one-person shop who disappears mid-project. With FactoryJet you get a 25-person team (designers, developers, project managers, QA) working in parallel, 500+ stores as proof, a written delivery guarantee, and fixed pricing. No local freelancer offers all four.",
             },
             {
+              category: 'local',
               question: "Can you build a store that handles both South Dakota retail and B2B wholesale?",
               answer: "Yes — this is one of our specialties. Many SD businesses sell retail DTC and also sell wholesale to retailers, distributors, or commercial buyers. We build unified Shopify stores with separate retail and wholesale pricing tiers, wholesale-only product visibility, login-gated B2B pricing, minimum order quantities, and net payment terms. Retail and wholesale customers experience the same store but with different pricing rules applied automatically.",
             },
             {
+              category: 'pricing',
               question: "How much does a Shopify store typically cost in Sioux Falls?",
               answer: "Local Sioux Falls agencies charge $6,000–$25,000 for a Shopify build with 6–16 week timelines. Freelancers run $1,500–$6,000 with variable quality. We charge $2,999–$15,999 depending on complexity, deliver in 7 days, and back it with a money-back guarantee. Better quality, faster delivery, and a guarantee — at 60% less than the local agency rate.",
             },
             {
+              category: 'technical',
               question: "Do you set up Google Shopping for Sioux Falls product businesses?",
               answer: "Google Shopping is included in our Growth and Headless packages and available as a paid add-on for Standard. We create your Google Merchant Center account, configure the product feed with correct SD tax rules, optimize product titles and descriptions, and link to Google Ads. For Sioux Falls product businesses, Google Shopping is typically the first high-ROI advertising channel to activate.",
             },
             {
+              category: 'local',
               question: "I already have a Shopify store that's not performing. Can you audit and fix it?",
               answer: "Yes — our free 24-hour audit covers speed scores (Core Web Vitals), checkout abandonment, mobile UX, conversion funnel gaps, and theme code issues. We give you a specific list of what's broken and a fixed price to fix it. Common problems we find: slow themes, unoptimized product images, broken mobile checkout, poor product page structure, and missing upsells.",
             },
             {
+              category: 'local',
               question: "Can you help a Sioux Falls retail store add an online sales channel?",
               answer: "This is one of the most common projects we do — a brick-and-mortar retailer in Sioux Falls that wants to add online. We build the Shopify store, sync it with your existing POS (if you're on Shopify POS, Square, or Lightspeed), configure local pickup as a shipping option, and ensure your in-store and online inventory stays in sync automatically.",
             },
             {
+              category: 'support',
               question: "Do you offer ongoing maintenance after launch?",
               answer: "Yes. Every project includes 30 days of post-launch support at no additional cost. After that, monthly maintenance plans start at $299/month — theme updates, app updates, speed monitoring, and priority support. Most of our long-term clients stay on maintenance plans because it means their store never breaks without someone watching it.",
             },
             {
+              category: 'local',
               question: "I'm outside Sioux Falls — Rapid City, Aberdeen, or the Black Hills. Do you serve my area?",
               answer: "Absolutely. We serve businesses across all of South Dakota — Sioux Falls, Rapid City, Aberdeen, Watertown, Brookings, Pierre, the Black Hills, and everywhere else. Tax configuration is the same statewide (4.5% SD state rate), with local rates varying by city. Remote collaboration is our standard — most projects are handled entirely over Zoom and Slack.",
             },
             {
+              category: 'local',
               question: "Can you build a Shopify store for a Black Hills or Mount Rushmore area tourism business?",
               answer: "Yes — tourism and hospitality businesses in the Black Hills area are a growing segment. We build stores for souvenir and gift businesses, outdoor gear retailers, experience-based companies selling merchandise and gift cards, and regional food brands that drive tourist purchases. Local pickup, regional shipping, and gift-card integration are all part of the standard toolkit.",
             },
             {
+              category: 'local',
               question: "What e-commerce platform is right for my South Dakota business — Shopify, WooCommerce, or something else?",
               answer: "For 95% of Sioux Falls and South Dakota SMBs, Shopify is the right answer. It handles South Dakota sales tax automatically, runs fast with no server management, has the best app ecosystem for marketing integrations, and requires zero technical maintenance. WooCommerce works if you're deeply committed to WordPress and have ongoing development resources. Headless Shopify makes sense for high-volume businesses needing sub-second performance.",
             },
             {
+              category: 'local',
               question: "How do I get started with FactoryJet?",
               answer: "Book a free 45-minute strategy call. We ask about your business, your products, and your goals — then tell you exactly what we'd build and what it would cost. No commitment, no pressure — you'll leave with a clear picture of the right path forward whether you hire us or not. Click the button below to schedule.",
             },

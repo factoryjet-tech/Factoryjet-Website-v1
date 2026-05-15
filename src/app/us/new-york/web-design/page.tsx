@@ -279,6 +279,14 @@ const jsonLd = {
    Page
 ───────────────────────────────────────────────────────────────────────────── */
 
+
+const FAQ_CATEGORIES = [
+  { key: 'pricing',   label: 'Pricing & Timeline' },
+  { key: 'included',  label: "What's Included" },
+  { key: 'technical', label: 'Technical & SEO' },
+  { key: 'local',     label: 'Local Expertise' },
+  { key: 'support',   label: 'Support & Ownership' },
+];
 export default function NewYorkWebDesignPage() {
   return (
     <>
@@ -510,92 +518,115 @@ export default function NewYorkWebDesignPage() {
         <FAQ
           eyebrow="COMMON QUESTIONS"
           headline="Questions NYC Business Owners Ask Before Getting Started"
+          categories={FAQ_CATEGORIES}
           items={[
             {
+              category: 'pricing',
               question: 'How much does web design cost in New York City?',
               answer: 'NYC web design agencies typically charge $8,000–$25,000 for a small business website. FactoryJet delivers the same Figma design quality and Next.js engineering for $1,999–$6,300 — 60–70% less — because we\'re remote-first without Manhattan overhead. Every price is fixed and confirmed in writing before work starts.',
             },
             {
+              category: 'pricing',
               question: 'How long does it take to get a website built?',
               answer: 'Starter sites (5 pages) are delivered in 7 business days — that\'s our delivery guarantee. Growth projects (10–15 pages with CMS and lead capture) typically run 2–3 weeks. Scale builds with custom integrations are scoped individually. The clock starts the day you approve the Figma design.',
             },
             {
+              category: 'local',
               question: 'Do you work with NYC businesses remotely?',
               answer: 'Yes, 100% remotely — which is how we keep costs 60–70% below local agencies. We use Loom video for design walkthroughs, Slack for daily communication, and Figma for collaborative design review. Most NYC clients tell us we\'re easier to work with than local agencies they\'ve tried.',
             },
             {
+              category: 'local',
               question: 'What industries in NYC do you have experience with?',
               answer: 'Finance and professional services, retail and DTC e-commerce, healthcare and medical practices, hospitality and restaurants, technology startups (Silicon Alley), and real estate. We\'ve built websites for each of these sectors and understand the specific conversion patterns that work in the NYC market.',
             },
             {
+              category: 'local',
               question: 'Can you help my law firm get more cases from the web?',
               answer: 'Yes. Law firm web design is one of our specialties. We build attorney websites structured for local SEO (e.g., "personal injury attorney New York"), with practice area pages built for E-E-A-T signals, structured attorney profiles, case result displays, and consultation booking forms.',
             },
             {
+              category: 'included',
               question: 'I run an e-commerce brand in NYC — can you build my Shopify store?',
               answer: 'Absolutely. We build custom Shopify themes, headless Shopify storefronts on Next.js, and full custom e-commerce platforms. Our Shopify work includes conversion-optimized product pages, fast checkout flows, and integrations with Klaviyo, Recharge, and your 3PL.',
             },
             {
+              category: 'technical',
               question: 'Can you redesign my website without hurting my Google rankings?',
               answer: 'Yes. Before touching anything, we do a full SEO audit — mapping every URL, checking rankings, and documenting redirect needs. We preserve URL structure where possible, implement 301 redirects where needed, and migrate all meta tags. We\'ve never had a client lose meaningful rankings from a FactoryJet redesign.',
             },
             {
+              category: 'technical',
               question: 'What platform do you build NYC websites on?',
               answer: 'Our default is Next.js on Cloudflare Pages — the fastest, most SEO-friendly architecture available. We also build on WordPress for content-heavy sites, Shopify for e-commerce, and Webflow for teams that want visual editing. We\'ll recommend the right platform based on your needs.',
             },
             {
+              category: 'pricing',
               question: 'How does your pricing compare to NYC freelancers on Upwork?',
               answer: 'NYC freelancers on Upwork typically charge $50–$150/hour, with projects running 100–300 hours — that\'s $5,000–$45,000 in practice, often without a project manager or delivery guarantee. FactoryJet\'s fixed-price model gives you a defined scope, a guaranteed delivery date, and a full team.',
             },
             {
+              category: 'technical',
               question: 'Do you offer SEO services for NYC businesses?',
               answer: 'Every FactoryJet website includes technical SEO setup: site speed optimization, structured data markup, meta tags, sitemap submission, and Core Web Vitals compliance. For ongoing SEO (content marketing, link building, local citations), we offer separate monthly SEO retainers starting at $799/month.',
             },
             {
+              category: 'included',
               question: 'Can you add AI features to my NYC business website?',
               answer: 'Yes. We offer AI Agent Development and AI Automation as dedicated services. Common additions include AI chat widgets for lead qualification, automated customer support flows, AI-powered search, and CRM integration that turns website interactions into sales pipeline entries.',
             },
             {
+              category: 'local',
               question: 'My medical practice is in NYC — can you build a HIPAA-aware website?',
               answer: 'We design with HIPAA considerations in mind — specifically avoiding collection of PHI through standard contact forms and recommending compliant form solutions. We\'ve built dozens of healthcare websites and know what to avoid. We recommend verifying specific requirements with your compliance team.',
             },
             {
+              category: 'local',
               question: 'How do I get started with a New York City web design project?',
               answer: 'Book a free 30-minute strategy call. We\'ll review your current site, understand your goals, and send a fixed-price proposal within 24 hours. No sales pitch — just a practical conversation about what you need and what it\'ll cost.',
             },
             {
+              category: 'local',
               question: 'Do you have a physical office in New York City?',
               answer: 'We operate as a remote-first team, which is why we can offer NYC-quality web design at 60–70% below what local agencies charge. We work in US Eastern time and communicate via Slack, Loom, and Figma — the same tools your team already uses.',
             },
             {
+              category: 'local',
               question: 'What happens after my NYC website launches?',
               answer: 'The 30 days after launch are covered — minor text changes, bug fixes, and training requests are included. We give you a recorded CMS walkthrough so you can manage content yourself. After 30 days, choose a monthly maintenance plan ($99/month) or use us for one-off change requests at fixed rates.',
             },
             {
+              category: 'local',
               question: 'Can you help my restaurant get more online reservations?',
               answer: 'Yes. We build restaurant websites with OpenTable, Resy, or Tock integration, fast mobile load times, Google Business Profile alignment, and menu pages structured for local search. NYC restaurant web design is a specific niche we\'ve worked in.',
             },
             {
+              category: 'local',
               question: 'What\'s actually included in your web design project?',
               answer: 'Strategy session, Figma design system, full development, mobile responsiveness, basic on-page SEO, GA4 setup, Google Tag Manager, revision rounds, sitemap submission, and 30-day post-launch support. The Figma files, GitHub repo, and all assets are yours. No proprietary platform. No monthly fee unless you want maintenance.',
             },
             {
+              category: 'local',
               question: 'My startup is in the Flatiron District — do you work with early-stage companies?',
               answer: 'Yes. Early-stage startups are one of our most common client types in NYC. We\'ve built SaaS landing pages, investor-facing websites, client portals, and MVPs for companies at pre-seed through Series B. We understand that speed and flexibility matter at this stage.',
             },
             {
+              category: 'local',
               question: 'How do I know FactoryJet is legitimate?',
               answer: 'We have 150+ verified reviews averaging 4.9/5, a public portfolio at factoryjet.com/us/portfolio, and 500+ completed projects. We publish our pricing, process, and delivery guarantees publicly — because transparency is the only way to build trust with clients who have never met us in person.',
             },
             {
+              category: 'local',
               question: 'Can you build a website that works well in NYC and other US markets?',
               answer: 'Yes. Most of our clients serve customers nationally, not just in NYC. We build with national SEO structure in mind — service pages targeting city + service terms, proper hreflang for any international audiences, and schema markup that helps AI search engines understand your geographic service area.',
             },
             {
+              category: 'technical',
               question: 'Does my NYC business website need to be ADA compliant?',
               answer: 'Yes, and this is increasingly important for NYC businesses. New York City has seen a significant rise in ADA web accessibility lawsuits under the Americans with Disabilities Act — particularly in retail, hospitality, and healthcare. Every FactoryJet site is built to WCAG 2.1 AA standards: proper alt text, keyboard navigation, color contrast ratios, ARIA labels, and semantic HTML. We also recommend periodic accessibility audits as your site content grows.',
             },
             {
+              category: 'technical',
               question: 'How do I optimize my Google Business Profile for NYC local search?',
               answer: 'Your Google Business Profile is one of the most powerful free tools for ranking in NYC neighborhood searches. We align your website\'s NAP (name, address, phone) data with your GBP listing, add LocalBusiness schema to your site, and structure your service pages to target borough and neighborhood + service terms (e.g., "Williamsburg personal trainer" or "Midtown accounting firm"). We can also audit your GBP as part of onboarding.',
             },

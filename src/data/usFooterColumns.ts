@@ -16,9 +16,12 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
     heading: 'Services',
     links: [
       { label: 'Web Design',             href: '/us/services/web-design' },
-      { label: 'Shopify Development',    href: '/us/services/shopify-development' },
-      { label: 'AI Agents',              href: '/us/services/ai-agents' },
       { label: 'E-Commerce',             href: '/us/services/ecommerce-development' },
+      { label: 'Shopify Development',    href: '/us/services/shopify-development' },
+      { label: 'WordPress Development',  href: '/us/services/wordpress-development' },
+      { label: 'Web App Development',    href: '/us/services/web-application-development' },
+      { label: 'AI Agents',              href: '/us/services/ai-agents' },
+      { label: 'AI Automation',          href: '/us/services/ai-automation' },
     ],
   },
   {
@@ -30,6 +33,19 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'FAQ',        href: '/us/faq' },
       { label: 'Blog',       href: '/blog' },
       { label: 'Contact',    href: '/contact' },
+    ],
+  },
+  {
+    heading: 'Locations',
+    links: [
+      { label: 'Austin, TX',    href: '/us/austin/web-design' },
+      { label: 'Miami, FL',     href: '/us/miami/web-design' },
+      { label: 'Denver, CO',    href: '/us/denver/web-design' },
+      { label: 'Nashville, TN', href: '/us/nashville/web-design' },
+      { label: 'New York, NY',  href: '/us/new-york/web-design' },
+      { label: 'Charlotte, NC', href: '/us/charlotte/web-design' },
+      { label: 'Tampa, FL',     href: '/us/tampa/web-design' },
+      { label: 'Portland, OR',  href: '/us/portland/web-design' },
     ],
   },
 ];

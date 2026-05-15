@@ -69,6 +69,14 @@ function SchemaScript() {
   )
 }
 
+
+const FAQ_CATEGORIES = [
+  { key: 'pricing',   label: 'Pricing & Timeline' },
+  { key: 'included',  label: "What's Included" },
+  { key: 'technical', label: 'Platform & SEO' },
+  { key: 'local',     label: 'Local Expertise' },
+  { key: 'support',   label: 'Support & Ownership' },
+];
 export default function Page() {
   return (
     <>
@@ -377,88 +385,110 @@ export default function Page() {
         <FAQ
           eyebrow="COMMON QUESTIONS"
           headline="Common Questions from Fargo E-Commerce Businesses"
+          categories={FAQ_CATEGORIES}
           items={[
             {
+              category: 'local',
               question: 'Do you actually have experience with Shopify development in Fargo, ND?',
               answer: "Yes — we've built stores for businesses across the Fargo-Moorhead metro, from ag-equipment dealers in the Red River Valley to downtown Fargo boutiques on Broadway. We understand the cross-border ND/MN market, the ag-tech buyer behavior, and the tax rules that trip up most developers.",
             },
             {
+              category: 'local',
               question: 'How does the 7-day delivery guarantee actually work?',
               answer: "Once you approve your project proposal and send the deposit, the 7-day clock starts. We design, build, configure, and launch your full Shopify store in that window. If we miss the deadline for any reason on our end, you get a full refund. We've never missed a deadline.",
             },
             {
+              category: 'pricing',
               question: 'How do you handle North Dakota sales tax on a Shopify store?',
               answer: "North Dakota charges a 5% state sales tax, and Fargo adds a 2% city tax on top — bringing the combined rate to 7%. We configure Shopify Tax to automatically calculate and collect the right amount based on customer location. We also set up MN sales tax rules for your Moorhead buyers across the river.",
             },
             {
+              category: 'pricing',
               question: 'What about Minnesota buyers from Moorhead? Do I need to collect MN sales tax too?',
               answer: "It depends on your sales volume into Minnesota. If you exceed Minnesota's economic nexus threshold ($100,000 in sales or 200 transactions), you're required to collect MN's 6.875% state tax plus applicable local taxes. We configure your Shopify store to handle both ND and MN tax rules from day one.",
             },
             {
+              category: 'pricing',
               question: 'Can you build a Shopify store with B2B wholesale pricing for my ag or manufacturing business?',
               answer: "Absolutely — this is one of our specialties in Fargo. We build B2B wholesale portals with tiered pricing by customer group, volume discounts, minimum order quantities, and net payment terms. Your wholesale buyers get a separate login experience from your retail customers.",
             },
             {
+              category: 'local',
               question: "I've heard Onsharp is the go-to agency in Fargo. Why should I consider FactoryJet instead?",
               answer: "Onsharp is a great full-service agency — excellent for enterprise clients with $50K+ budgets and complex digital marketing needs. But if you're a growing SMB who specifically needs a Shopify store built well and launched fast, you're paying for a lot of overhead you don't need. We specialize exclusively in Shopify, start at $2,999, launch in 7 days, and back it with a guarantee.",
             },
             {
+              category: 'local',
               question: "What's the difference between you and AdShark Marketing for e-commerce?",
               answer: "AdShark is excellent at paid media — Google Ads, Meta Ads, programmatic. They're a marketing agency, not a Shopify development shop. If your store is already built and you need ads management, talk to AdShark. If you need a store built first, that's where we come in. Many clients work with both: we build the store, they manage the ads.",
             },
             {
+              category: 'pricing',
               question: 'How does FactoryJet compare to Bluestem Media for Shopify work?',
               answer: "Bluestem has been around for decades and does solid WordPress work. Shopify is a secondary offering for them, not their primary platform. If you want a team for whom Shopify is the only thing they do — 500+ stores deep — that's us. We also launch in 7 days vs. their typical 4–8 week timeline.",
             },
             {
+              category: 'included',
               question: "I'm a manufacturer in Fargo. Can you build a product catalog with thousands of SKUs?",
               answer: "Yes. Our Headless Shopify package is built for exactly this use case — ag equipment parts, industrial components, or manufactured goods with complex variant trees. We handle bulk CSV product imports, variant matrices, B2B pricing tiers, and integration with your existing ERP or inventory management system.",
             },
             {
+              category: 'local',
               question: 'Does Microsoft TechSpark or Emerging Prairie offer any e-commerce grants or subsidies?',
               answer: "Microsoft TechSpark's Fargo initiative includes digital skills programs and some technology credits, but direct e-commerce store grants aren't currently part of the program. The most accessible path for most Fargo SMBs is working with an affordable specialist — which is exactly the gap we fill at $2,999.",
             },
             {
+              category: 'pricing',
               question: 'What e-commerce platform should I use — Shopify, WooCommerce, or something else?',
               answer: "For 95% of Fargo SMBs, Shopify is the right answer. It handles North Dakota sales tax automatically, runs fast out of the box, has the best app ecosystem for marketing integrations, and requires zero server maintenance. WooCommerce can work if you're deeply committed to WordPress and have a developer on staff to maintain it.",
             },
             {
+              category: 'pricing',
               question: 'Can you integrate my Shopify store with my existing point-of-sale system?',
               answer: "Yes. If you're running Shopify POS, the integration is seamless — your online and in-store inventory sync automatically. If you're on a different POS system (Square, Lightspeed, Clover), we build a custom integration or use a middleware connector. This is common for downtown Fargo retailers who run a physical store and want to add an online channel.",
             },
             {
+              category: 'support',
               question: 'Do you do ongoing Shopify maintenance and support after launch?',
               answer: "Every project includes 30 days of post-launch support at no extra cost. After that, we offer monthly maintenance plans starting at $299/month that include theme updates, app maintenance, speed monitoring, and priority support. Many Fargo clients stay on maintenance plans for years.",
             },
             {
+              category: 'pricing',
               question: 'How much does a Shopify store cost in Fargo compared to hiring locally?',
               answer: "Local Fargo agencies typically charge $6,000–$20,000 for a Shopify build with 4–12 week timelines. Freelancers on Upwork run $1,500–$5,000 with variable quality. We charge $2,999–$15,999 depending on complexity, deliver in 7 days, and back it with a money-back guarantee.",
             },
             {
+              category: 'technical',
               question: 'Can you help me set up Google Shopping for my Fargo Shopify store?',
               answer: "Yes — Google Shopping setup is included in our Growth and Headless packages and available as an add-on for Standard. We create your Google Merchant Center account, configure your product feed, set up feed rules for ND/MN pricing, and link it to Google Ads.",
             },
             {
+              category: 'included',
               question: "I'm running a craft brewery in Fargo. Can I sell merchandise and beer subscriptions online?",
               answer: "Yes. North Dakota has specific alcohol shipping laws that restrict direct-to-consumer beer shipping — but merchandise, branded apparel, glassware, and non-alcoholic products can be sold and shipped without restriction. We build brewery merchandise stores with event ticketing, merchandise bundles, and local pickup options.",
             },
             {
+              category: 'local',
               question: 'Do you build Shopify stores for agricultural businesses — like seed dealers or precision ag companies?',
               answer: "This is a growing segment for us. Ag-tech companies, seed dealers, equipment parts suppliers, and precision ag businesses are all building e-commerce channels as farmers increasingly research and purchase online. We understand the ND ag buyer: mobile, spec-focused, and often purchasing for large operations with multi-location accounts.",
             },
             {
+              category: 'local',
               question: "What's your process if I already have a Shopify store but it's slow or not converting?",
               answer: "We start with a free audit — speed scores, conversion funnel analysis, mobile UX review, and checkout abandonment data. Then we give you a specific list of what's broken and what it'll cost to fix. Common issues: slow theme code, unoptimized product images, broken mobile checkout, missing upsells, poor product page copy.",
             },
             {
+              category: 'local',
               question: "I'm in Moorhead, MN — not Fargo. Do you still serve my area?",
               answer: "Absolutely. The Fargo-Moorhead metro is one market in our eyes. We serve businesses on both sides of the Red River — Moorhead, West Fargo, Dilworth, Barnesville, and across the region. The only difference for you as a Moorhead business is that Minnesota tax rules apply from day one, which we configure automatically.",
             },
             {
+              category: 'local',
               question: "How do I get started? What's the first step?",
               answer: "Book a free 45-minute strategy call. No sales pitch, no pressure — we ask about your business, your products, and your goals, then tell you exactly what we'd build and what it would cost. You'll leave the call with a clear picture of the right path forward.",
             },
             {
+              category: 'included',
               question: "What if I need more than just a Shopify store — like custom web apps or integrations?",
               answer: "We build custom web applications, CRMs, booking systems, and complex API integrations beyond standard Shopify. If your business has a workflow that needs custom software — like a dealer portal, a custom configurator, or an ERP integration — our full-stack team handles those projects too.",
             },

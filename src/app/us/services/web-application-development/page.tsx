@@ -509,26 +509,26 @@ export default function WebApplicationDevelopmentPage() {
         secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
         trustItems={['500+ US businesses served', '25+ years engineering experience', '60–70% below US agency rates']}
         rightSlot={
-          <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-6 space-y-4">
-            <p className="text-xs font-fj-mono uppercase tracking-widest text-white/50">Build vs. Buy Decision Framework</p>
+          <div className="rounded-2xl border border-fj-neutral-200 bg-white p-6 space-y-4">
+            <p className="text-xs font-fj-mono uppercase tracking-widest text-fj-neutral-400">Build vs. Buy Decision Framework</p>
             <div className="space-y-3">
               {[
                 { trigger: 'Users log in and take actions', verdict: 'Custom web app', color: 'text-[#F05A28]' },
                 { trigger: "Off-the-shelf tools don't quite fit", verdict: 'Custom web app', color: 'text-[#F05A28]' },
                 { trigger: "You're paying for features you don't use", verdict: 'Custom web app', color: 'text-[#F05A28]' },
-                { trigger: 'Mostly static content + contact form', verdict: 'Website is fine', color: 'text-yellow-400' },
-                { trigger: 'Standard e-commerce, no custom logic', verdict: 'Shopify works', color: 'text-yellow-400' },
+                { trigger: 'Mostly static content + contact form', verdict: 'Website is fine', color: 'text-amber-600' },
+                { trigger: 'Standard e-commerce, no custom logic', verdict: 'Shopify works', color: 'text-amber-600' },
               ].map(({ trigger, verdict, color }) => (
                 <div key={trigger} className="flex items-start gap-3 text-sm font-fj-body">
-                  <span className="text-white/40 mt-0.5 shrink-0">→</span>
+                  <span className="text-fj-neutral-400 mt-0.5 shrink-0">→</span>
                   <div>
-                    <span className="text-white/70">{trigger}</span>
+                    <span className="text-fj-neutral-600">{trigger}</span>
                     <span className={`ml-2 font-semibold ${color}`}>→ {verdict}</span>
                   </div>
                 </div>
               ))}
             </div>
-            <p className="text-xs text-white/30 font-fj-body pt-1">Not sure? Tell us what you need. We&apos;ll tell you if a simpler solution works better.</p>
+            <p className="text-xs text-fj-neutral-400 font-fj-body pt-1">Not sure? Tell us what you need. We&apos;ll tell you if a simpler solution works better.</p>
           </div>
         }
       />

@@ -3,6 +3,8 @@ import Script from 'next/script';
 
 import Image from 'next/image';
 
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
@@ -1171,7 +1173,7 @@ export default function ShopifyPage() {
 
       </main>
 
-      <SiteFooter />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }

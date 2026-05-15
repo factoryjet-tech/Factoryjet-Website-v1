@@ -89,68 +89,98 @@ const JOURNEY_STAGES: ServiceJourneyStage[] = [
   },
 ];
 
+const FAQ_CATEGORIES = [
+  { key: 'about',     label: 'About FactoryJet' },
+  { key: 'pricing',   label: 'Pricing & Delivery' },
+  { key: 'process',   label: 'Our Process' },
+  { key: 'platform',  label: 'Platform & Ownership' },
+  { key: 'getting-started', label: 'Getting Started' },
+];
+
 const FAQ_ITEMS = [
+  /* ── About FactoryJet ── */
   {
+    category: 'about',
     question: 'What is a B2B web design agency?',
     answer:
       'A B2B web design agency builds websites specifically designed to generate qualified leads, establish buyer trust, and support long sales cycles for business-focused companies. Unlike general web studios, B2B agencies structure every design decision around business outcomes — not aesthetics alone.',
   },
   {
-    question: 'How long does it take to build a B2B website?',
-    answer:
-      'FactoryJet delivers most standard B2B websites in 7 days. A typical 5–10 page project includes strategy on day one, design sprint within the first 3 days, development and QA by days 5–6, and live launch on day 7. Complex e-commerce or custom integration projects may extend to 7–14 days.',
-  },
-  {
-    question: 'How much does a professional B2B website cost in the USA?',
-    answer:
-      "B2B website design in the USA typically ranges from $1,999 for a focused business website to $15,000+ for enterprise builds with custom integrations. FactoryJet's fixed-price model means your full investment is confirmed before work begins — no discovery-phase billing, no surprise invoices.",
-  },
-  {
-    question: 'Which platform is best for a B2B business website?',
-    answer:
-      "The right platform depends on your business requirements. WordPress offers maximum SEO flexibility and content control. Webflow provides design precision with manageable maintenance. Shopify is optimized for e-commerce conversion. Next.js and custom React stacks suit high-performance or application-like builds. FactoryJet recommends based on your goals — not internal capability constraints.",
-  },
-  {
-    question: 'Can you redesign my website without losing Google rankings?',
-    answer:
-      "Yes. FactoryJet's redesign process preserves existing URL structures, redirects, and SEO equity. We conduct a technical audit before migration and monitor search performance post-launch to protect rankings built over time.",
-  },
-  {
-    question: 'Do I own the code after the project?',
-    answer:
-      'Yes — 100%. Every FactoryJet project includes a full GitHub repository transfer upon completion. Your code, design assets, and all project files are yours outright. No retainer required. No ongoing dependency.',
-  },
-  {
-    question: 'Is hosting included, and do you mark it up?',
-    answer:
-      "Hosting and deployment are always configured in your own account — never ours. There is no hosting markup, no proprietary infrastructure, and no exit fee. You maintain full control of your hosting environment from day one.",
-  },
-  {
-    question: 'Do you use templates?',
-    answer:
-      'No. Every FactoryJet website is built from a custom design brief. We do not resell or modify off-the-shelf templates. Custom builds allow us to structure every page for your specific buyers and conversion goals.',
-  },
-  {
-    question: 'How are you so much faster than other agencies?',
-    answer:
-      'FactoryJet was built AI-native from day one. We use AI to run parallel workstreams — concept generation, wireframing, and development scaffolding — that traditional agencies run sequentially. Human designers and developers focus on strategy, refinement, and quality assurance. The result is 7-day delivery without sacrificing quality.',
-  },
-  {
-    question: 'Will I be able to update the site myself?',
-    answer:
-      'Yes. All builds include a CMS — WordPress or Webflow depending on your platform — that allows your team to update content, images, blog posts, and pages without developer involvement.',
-  },
-  {
-    question: "What if I don't like the design?",
-    answer:
-      'FactoryJet offers a 14-day money-back guarantee if the design phase does not meet expectations. We also build in a structured revision process to ensure the final design reflects your brand and goals before development begins.',
-  },
-  {
+    category: 'about',
     question: 'What industries do you specialise in?',
     answer:
       'FactoryJet focuses on B2B industries where technical credibility and buyer trust drive conversions: cybersecurity, healthcare and MedTech, IT and managed services, SaaS, professional services, and manufacturing. See our case studies for sector-specific results.',
   },
   {
+    category: 'about',
+    question: 'How are you so much faster than other agencies?',
+    answer:
+      'FactoryJet was built AI-native from day one. We use AI to run parallel workstreams — concept generation, wireframing, and development scaffolding — that traditional agencies run sequentially. Human designers and developers focus on strategy, refinement, and quality assurance. The result is 7-day delivery without sacrificing quality.',
+  },
+
+  /* ── Pricing & Delivery ── */
+  {
+    category: 'pricing',
+    question: 'How much does a professional B2B website cost in the USA?',
+    answer:
+      "B2B website design in the USA typically ranges from $1,999 for a focused business website to $15,000+ for enterprise builds with custom integrations. FactoryJet's fixed-price model means your full investment is confirmed before work begins — no discovery-phase billing, no surprise invoices.",
+  },
+  {
+    category: 'pricing',
+    question: 'How long does it take to build a B2B website?',
+    answer:
+      'FactoryJet delivers most standard B2B websites in 7 days. A typical 5–10 page project includes strategy on day one, design sprint within the first 3 days, development and QA by days 5–6, and live launch on day 7. Complex e-commerce or custom integration projects may extend to 7–14 days.',
+  },
+  {
+    category: 'pricing',
+    question: 'Is hosting included, and do you mark it up?',
+    answer:
+      "Hosting and deployment are always configured in your own account — never ours. There is no hosting markup, no proprietary infrastructure, and no exit fee. You maintain full control of your hosting environment from day one.",
+  },
+
+  /* ── Our Process ── */
+  {
+    category: 'process',
+    question: 'Do you use templates?',
+    answer:
+      'No. Every FactoryJet website is built from a custom design brief. We do not resell or modify off-the-shelf templates. Custom builds allow us to structure every page for your specific buyers and conversion goals.',
+  },
+  {
+    category: 'process',
+    question: "What if I don't like the design?",
+    answer:
+      'FactoryJet offers a 14-day money-back guarantee if the design phase does not meet expectations. We also build in a structured revision process to ensure the final design reflects your brand and goals before development begins.',
+  },
+  {
+    category: 'process',
+    question: 'Can you redesign my website without losing Google rankings?',
+    answer:
+      "Yes. FactoryJet's redesign process preserves existing URL structures, redirects, and SEO equity. We conduct a technical audit before migration and monitor search performance post-launch to protect rankings built over time.",
+  },
+
+  /* ── Platform & Ownership ── */
+  {
+    category: 'platform',
+    question: 'Which platform is best for a B2B business website?',
+    answer:
+      "The right platform depends on your business requirements. WordPress offers maximum SEO flexibility and content control. Webflow provides design precision with manageable maintenance. Shopify is optimized for e-commerce conversion. Next.js and custom React stacks suit high-performance or application-like builds. FactoryJet recommends based on your goals — not internal capability constraints.",
+  },
+  {
+    category: 'platform',
+    question: 'Do I own the code after the project?',
+    answer:
+      'Yes — 100%. Every FactoryJet project includes a full GitHub repository transfer upon completion. Your code, design assets, and all project files are yours outright. No retainer required. No ongoing dependency.',
+  },
+  {
+    category: 'platform',
+    question: 'Will I be able to update the site myself?',
+    answer:
+      'Yes. All builds include a CMS — WordPress or Webflow depending on your platform — that allows your team to update content, images, blog posts, and pages without developer involvement.',
+  },
+
+  /* ── Getting Started ── */
+  {
+    category: 'getting-started',
     question: 'How do I get started?',
     answer:
       "Book a free strategy call. We'll learn about your goals, current challenges, and target buyers — and deliver a clear roadmap and fixed quote within 24 hours. No obligation. No discovery-phase billing.",
@@ -260,6 +290,7 @@ export default function USHomePage() {
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Frequently Asked Questions: B2B Web Design in the USA"
           lead="Everything you need to know about working with us."
+          categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
 
