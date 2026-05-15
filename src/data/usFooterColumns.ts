@@ -28,12 +28,13 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
   {
     heading: 'Company',
     links: [
-      { label: 'About',      href: '/us/about' },
-      { label: 'Portfolio',  href: '/us/portfolio' },
-      { label: 'Pricing',    href: '/us/pricing' },
-      { label: 'FAQ',        href: '/us/faq' },
-      { label: 'Blog',       href: '/blog' },
-      { label: 'Contact',    href: '/contact' },
+      { label: 'About',           href: '/us/about' },
+      { label: 'Portfolio',       href: '/us/portfolio' },
+      { label: 'Pricing',         href: '/us/pricing' },
+      { label: 'Website Cost',    href: '/us/website-cost' },
+      { label: 'FAQ',             href: '/us/faq' },
+      { label: 'Blog',            href: '/blog' },
+      { label: 'Contact',         href: '/contact' },
     ],
   },
   {

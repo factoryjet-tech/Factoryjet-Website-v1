@@ -86,6 +86,12 @@ export const faqAlternates = {
   'x-default': 'https://factoryjet.com/us/faq',
 } as const
 
+/** Website Cost guide page (US only — no India equivalent) */
+export const websiteCostAlternates = {
+  'en-US': 'https://factoryjet.com/us/website-cost',
+  'x-default': 'https://factoryjet.com/us/website-cost',
+} as const
+
 /** AI Agency service page (US only — no India equivalent) */
 export const aiAgencyAlternates = {
   'en-US': 'https://factoryjet.com/us/services/ai-agency',
