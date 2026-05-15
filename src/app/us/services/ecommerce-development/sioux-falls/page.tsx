@@ -267,7 +267,7 @@ export default function Page() {
                 'Google Analytics 4 + Search Console',
                 '30-day post-launch support',
               ],
-              cta: { label: 'Start with Standard', modal: 'contact', region: 'us' },
+              cta: { label: 'Start with Standard', modal: true, region: 'us' },
             },
             {
               name: 'Growth',
@@ -283,7 +283,7 @@ export default function Page() {
                 'Subscription & recurring order support',
                 'Speed optimization (sub-2s load)',
               ],
-              cta: { label: 'Start with Growth', modal: 'contact', region: 'us' },
+              cta: { label: 'Start with Growth', modal: true, region: 'us' },
               popular: true,
             },
             {
@@ -300,7 +300,7 @@ export default function Page() {
                 'Dedicated project manager',
                 '60-day post-launch support',
               ],
-              cta: { label: 'Start with Headless', modal: 'contact', region: 'us' },
+              cta: { label: 'Start with Headless', modal: true, region: 'us' },
             },
           ] as const}
         />
