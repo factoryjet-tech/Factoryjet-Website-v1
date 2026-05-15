@@ -91,10 +91,11 @@ const UAE_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
   {
     heading: 'Company',
     links: [
-      { label: 'About',     href: '/about' },
-      { label: 'Portfolio', href: '/portfolio' },
-      { label: 'Blog',      href: '/blog' },
-      { label: 'Contact',   href: '/contact' },
+      { label: 'About',        href: '/about' },
+      { label: 'Portfolio',    href: '/portfolio' },
+      { label: 'Case Studies', href: '/case' },
+      { label: 'Blog',         href: '/blog' },
+      { label: 'Contact',      href: '/contact' },
     ],
   },
   {

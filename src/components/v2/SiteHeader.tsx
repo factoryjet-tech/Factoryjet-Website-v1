@@ -19,6 +19,8 @@ import {
   X,
   Menu,
   ArrowRight,
+  FileText,
+  BookOpen,
 } from 'lucide-react';
 import { useContactModal } from '../../context/ContactModalContext';
 import type { ModalRegion } from '../../context/ContactModalContext';
@@ -105,6 +107,13 @@ const UAE_LOCATIONS = [
   { label: 'Dubai',     state: 'DXB', href: '/uae' },
   { label: 'Abu Dhabi', state: 'AUH', href: '/uae' },
   { label: 'Sharjah',   state: 'SHJ', href: '/uae' },
+] as const;
+
+// ─── Resources — shared across all locales ────────────────────────────────────
+
+const RESOURCES = [
+  { icon: FileText,  label: 'Blog',         href: '/blog', desc: 'Expert insights & industry trends' },
+  { icon: BookOpen,  label: 'Case Studies',  href: '/case', desc: 'Real results from real projects' },
 ] as const;
 
 // ─── Locale config map ────────────────────────────────────────────────────────
@@ -225,10 +234,11 @@ export default function SiteHeader({
   const { openModal } = useContactModal();
   const cfg = LOCALE_CONFIG[locale];
 
-  const [openDropdown, setOpenDropdown] = useState<'services' | 'locations' | null>(null);
+  const [openDropdown, setOpenDropdown] = useState<'services' | 'locations' | 'resources' | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [mobileLocationsOpen, setMobileLocationsOpen] = useState(false);
+  const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Close dropdown on Escape; clear timer on unmount
@@ -252,7 +262,7 @@ export default function SiteHeader({
     return () => { document.body.style.overflow = ''; };
   }, [mobileOpen]);
 
-  const openDrop = (id: 'services' | 'locations') => {
+  const openDrop = (id: 'services' | 'locations' | 'resources') => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
     setOpenDropdown(id);
   };
@@ -443,6 +453,47 @@ export default function SiteHeader({
                 )}
               </div>
 
+              {/* Resources trigger + dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => openDrop('resources')}
+                onMouseLeave={scheduleClosed}
+              >
+                <button
+                  type="button"
+                  aria-expanded={openDropdown === 'resources'}
+                  aria-haspopup="menu"
+                  className="flex items-center gap-1 rounded-lg px-3 py-2 font-fj-body text-[14.5px] text-fj-ink transition-colors hover:bg-fj-neutral-100 hover:text-[#F05A28]"
+                >
+                  Resources
+                  <ChevronDown
+                    size={14}
+                    strokeWidth={2}
+                    className={`transition-transform duration-200 ${openDropdown === 'resources' ? 'rotate-180 text-[#F05A28]' : 'text-fj-neutral-400'}`}
+                  />
+                </button>
+
+                {openDropdown === 'resources' && (
+                  <div
+                    className="absolute left-0 top-full pt-2.5"
+                    onMouseEnter={keepOpen}
+                    onMouseLeave={scheduleClosed}
+                    role="menu"
+                  >
+                    <div className="w-[260px] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white p-3 shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
+                      <p className="mb-2 px-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
+                        Resources
+                      </p>
+                      <div className="space-y-0.5">
+                        {RESOURCES.map((r) => (
+                          <ServiceCard key={r.href} icon={r.icon} label={r.label} href={r.href} desc={r.desc} />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+
               {/* Flat nav links */}
               <Link
                 href={cfg.portfolioHref}
@@ -607,6 +658,38 @@ export default function SiteHeader({
                     <MapPin size={12} strokeWidth={2} className="flex-shrink-0 text-fj-neutral-300" />
                     {loc.label}
                     <span className="text-[12px] text-fj-neutral-400">{loc.state}</span>
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Resources accordion */}
+          <div className="border-b border-fj-neutral-100">
+            <button
+              type="button"
+              aria-expanded={mobileResourcesOpen}
+              onClick={() => setMobileResourcesOpen((v) => !v)}
+              className="flex w-full items-center justify-between py-4 font-fj-body text-[15px] font-semibold text-fj-ink"
+            >
+              Resources
+              <ChevronDown
+                size={16}
+                strokeWidth={2}
+                className={`text-fj-neutral-400 transition-transform duration-200 ${mobileResourcesOpen ? 'rotate-180' : ''}`}
+              />
+            </button>
+            {mobileResourcesOpen && (
+              <div className="pb-3">
+                {RESOURCES.map((r) => (
+                  <Link
+                    key={r.href}
+                    href={r.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]"
+                  >
+                    <r.icon size={14} strokeWidth={1.8} className="flex-shrink-0 text-[#F05A28]" />
+                    {r.label}
                   </Link>
                 ))}
               </div>
