@@ -341,7 +341,7 @@ const PRICING_TIERS = [
     name: 'Custom Plugin',
     priceRange: 'From $1,499',
     description:
-      'A custom WooCommerce plugin or extension that adds functionality your business needs and existing plugins can't provide — built using WooCommerce hooks and filters, not core file edits.',
+      `A custom WooCommerce plugin or extension that adds functionality your business needs and existing plugins can't provide — built using WooCommerce hooks and filters, not core file edits.`,
     features: [
       'Custom WooCommerce plugin architecture',
       'Proper use of WooCommerce hooks and filters',

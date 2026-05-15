@@ -324,7 +324,7 @@ const PRICING_TIERS = [
     name: 'Module Development',
     priceRange: 'From $2,999',
     description:
-      'Custom Magento 2 module or extension development — built to Magento coding standards, documented, and tested. Ideal for adding custom functionality, building admin features, or extending Magento's native capabilities.',
+      `Custom Magento 2 module or extension development — built to Magento coding standards, documented, and tested. Ideal for adding custom functionality, building admin features, or extending Magento's native capabilities.`,
     features: [
       'Custom module architecture and development',
       'Admin UI components (grids, forms, ACL)',
