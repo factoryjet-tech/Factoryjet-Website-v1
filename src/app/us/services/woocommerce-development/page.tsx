@@ -19,7 +19,7 @@ import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 
-/* ─────────────────────────────────────────────────────────────────────────────
+/* ----------------------------------------------------------------------------─
    SEO / Metadata
    Primary:   "woocommerce developer" (1,000/mo)
               "woocommerce development" (590/mo)
@@ -27,7 +27,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
    Secondary: "woocommerce developer for hire" · "woocommerce custom development"
               "woocommerce plugin development" · "woocommerce store development"
               "woocommerce expert" · "hire woocommerce developer"
-───────────────────────────────────────────────────────────────────────────── */
+--------------------------------------------------------------------------─-- */
 
 export const metadata: Metadata = {
   title: 'WooCommerce Development Services — Custom Stores & Plugins | FactoryJet',
@@ -74,9 +74,9 @@ export const metadata: Metadata = {
   },
 };
 
-/* ─────────────────────────────────────────────────────────────────────────────
+/* ----------------------------------------------------------------------------─
    JSON-LD Schemas — FAQPage · Service · BreadcrumbList
-───────────────────────────────────────────────────────────────────────────── */
+--------------------------------------------------------------------------─-- */
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -170,9 +170,9 @@ const breadcrumbSchema = {
   ],
 };
 
-/* ─────────────────────────────────────────────────────────────────────────────
+/* ----------------------------------------------------------------------------─
    Section Data
-───────────────────────────────────────────────────────────────────────────── */
+--------------------------------------------------------------------------─-- */
 
 const JOURNEY_STAGES: ServiceJourneyStage[] = [
   {
@@ -374,7 +374,7 @@ const PRICING_TIERS = [
   },
 ] as const;
 
-/* ─── FAQ Categories ─────────────────────────────────────────────────────── */
+/* ─-- FAQ Categories ----------------------------------------------------─-- */
 const FAQ_CATEGORIES = [
   { key: 'platform',    label: 'Platform & Technology' },
   { key: 'development', label: 'Development Work' },
@@ -384,7 +384,7 @@ const FAQ_CATEGORIES = [
 ];
 
 const FAQ_ITEMS = [
-  // ── Platform & Technology ──────────────────────────────────────────────
+  // -- Platform & Technology ----------------------------------------------
   {
     question: 'Is WooCommerce free?',
     answer: `WooCommerce the plugin is free and open source. Your costs come from hosting ($15–$100/month for a WooCommerce-appropriate server), your domain ($12–$20/year), a theme ($50–$300 one-time, or free custom-built), and any premium plugins you need ($50–$300/year each). A basic WooCommerce store can run on $200–$400/year in infrastructure. A professionally built store with custom development and good hosting costs $3,000–$10,000 upfront, then $200–$600/year to run.`,
@@ -411,7 +411,7 @@ const FAQ_ITEMS = [
     category: 'platform',
   },
 
-  // ── Development Work ───────────────────────────────────────────────────
+  // -- Development Work --------------------------------------------------─
   {
     question: 'What is a WooCommerce custom plugin?',
     answer: `A custom WooCommerce plugin extends or modifies WooCommerce functionality without editing core files. Custom plugins can add new product types, modify checkout behavior, add admin reports, create custom pricing rules, build custom shipping rate calculators, integrate third-party APIs, or modify the order management workflow. They use WooCommerce's hooks (actions and filters) to modify behavior safely — meaning your customizations survive WooCommerce updates, unlike modifications to template files or core code.`,
@@ -438,7 +438,7 @@ const FAQ_ITEMS = [
     category: 'development',
   },
 
-  // ── Performance & SEO ─────────────────────────────────────────────────
+  // -- Performance & SEO ------------------------------------------------─
   {
     question: 'Why is my WooCommerce store slow?',
     answer: `WooCommerce stores are slow for a few common reasons: inadequate hosting (shared hosting doesn't have the RAM for WooCommerce), no caching setup (WooCommerce disables standard WordPress page cache for logged-in users and cart pages, requiring a dedicated WooCommerce caching solution), unoptimized images, too many plugins making excessive database queries, or a bloated theme loading unnecessary scripts. FactoryJet's performance audit identifies the root causes and fixes them — typically a combination of hosting upgrade, caching configuration, and query optimization.`,
@@ -460,7 +460,7 @@ const FAQ_ITEMS = [
     category: 'performance',
   },
 
-  // ── Cost & Pricing ─────────────────────────────────────────────────────
+  // -- Cost & Pricing ----------------------------------------------------─
   {
     question: 'How much does WooCommerce development cost compared to Shopify development?',
     answer: `WooCommerce development typically costs slightly less than equivalent Shopify development because there are fewer licensing constraints and the platform is more open. A custom WooCommerce store from FactoryJet starts at $2,999 vs. a comparable Shopify store starting at $2,999 — similar upfront. The ongoing cost difference is more significant: WooCommerce hosting costs $200–$600/year; Shopify charges $948–$4,788/year in platform fees alone. For businesses with high GMV, WooCommerce's lower ongoing cost often justifies the slightly higher technical management burden.`,
@@ -477,7 +477,7 @@ const FAQ_ITEMS = [
     category: 'cost',
   },
 
-  // ── Working with FactoryJet ─────────────────────────────────────────────
+  // -- Working with FactoryJet --------------------------------------------─
   {
     question: 'Do you work with existing WooCommerce stores or only new builds?',
     answer: `Both. A significant portion of FactoryJet's WooCommerce work is extending, optimizing, or fixing existing stores — adding functionality, improving performance, migrating to better hosting, fixing broken plugins, or adding payment and shipping integrations. For existing store work, we start with a technical audit and provide a fixed-price proposal for the specific changes you need. We don't bill by the hour for discovery — you get a clear scope and price before committing.`,
@@ -505,9 +505,9 @@ const FAQ_ITEMS = [
   },
 ];
 
-/* ─────────────────────────────────────────────────────────────────────────────
+/* ----------------------------------------------------------------------------─
    Page
-───────────────────────────────────────────────────────────────────────────── */
+--------------------------------------------------------------------------─-- */
 
 export default function WoocommerceDevelopmentPage() {
   return (
@@ -523,17 +523,24 @@ export default function WoocommerceDevelopmentPage() {
         {JSON.stringify(breadcrumbSchema)}
       </Script>
 
-      <SiteHeader region="us" />
+      <SiteHeader
+        navLinks={[
+          { label: 'Web Design', href: '/us/services/web-design' },
+          { label: 'E-Commerce', href: '/us/services/ecommerce-development' },
+          { label: 'Pricing', href: '#pricing' },
+          { label: 'FAQ', href: '#faq' },
+        ]}
+        cta={{ label: 'Get a Free Quote', modal: true, region: 'us' }}
+      />
 
       <main>
-        {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
+        {/* -- 1. HERO -------------------------------------------------------- */}
         <Hero
           eyebrow="WOOCOMMERCE DEVELOPMENT SERVICES"
           headline="Senior WooCommerce developers. Custom stores and plugins. 60–70% less than US agencies."
           lead="Custom WooCommerce store builds, plugin development, B2B functionality, ERP integrations, and performance optimization — fixed-price projects delivered by senior developers with 25+ years of WordPress experience."
           primaryCta={{ label: 'Get a Free Quote', modal: true, region: 'us' }}
           secondaryCta={{ label: 'View Our Work', href: '/us/portfolio' }}
-          region="us"
           rightSlot={
             <div className="w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">
               <div className="border-b border-fj-neutral-100 px-7 py-4">
@@ -577,16 +584,16 @@ export default function WoocommerceDevelopmentPage() {
           }
         />
 
-        {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
+        {/* -- 2. LOGO BAR ---------------------------------------------------- */}
         <LogoBar tagline="500+ US e-commerce businesses trust FactoryJet — from custom plugins to full WooCommerce builds" />
 
-        {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
+        {/* -- 3. TRUST BLOCK ----------------------------------------------─-- */}
         <BigThreeTrustBlock
           eyebrow="WHY FACTORYJET FOR WOOCOMMERCE"
           headline="Senior WooCommerce developers. Fixed-price proposals. 60–70% cheaper than US agencies."
         />
 
-        {/* ── 4. WHAT WE BUILD ─────────────────────────────────────────────── */}
+        {/* -- 4. WHAT WE BUILD --------------------------------------------─-- */}
         <ServiceExplanation
           eyebrow="WHAT WE BUILD"
           headline="Custom WooCommerce Development That Goes Beyond What Plugins Can Do"
@@ -669,13 +676,13 @@ export default function WoocommerceDevelopmentPage() {
           }
         />
 
-        {/* ── 5. INDUSTRIES ────────────────────────────────────────────────── */}
+        {/* -- 5. INDUSTRIES -------------------------------------------------- */}
         <IndustriesGrid
           eyebrow="INDUSTRIES WE SERVE"
           headline="WooCommerce Development for US E-Commerce Businesses in Every Category"
         />
 
-        {/* ── 6. WHAT GOES WRONG ───────────────────────────────────────────── */}
+        {/* -- 6. WHAT GOES WRONG ------------------------------------------─-- */}
         <StrategicDarkSection
           eyebrow="WHAT GOES WRONG"
           headline="Three WooCommerce Development Mistakes That Cost Businesses Money"
@@ -696,7 +703,7 @@ export default function WoocommerceDevelopmentPage() {
           ]}
         />
 
-        {/* ── 7. COMPARISON TABLE ──────────────────────────────────────────── */}
+        {/* -- 7. COMPARISON TABLE -------------------------------------------- */}
         <ComparisonTable
           eyebrow="HOW YOUR OPTIONS COMPARE"
           headline="FactoryJet vs. Freelancer vs. US Agency vs. Offshore Shop"
@@ -710,12 +717,12 @@ export default function WoocommerceDevelopmentPage() {
           footer="Prices reflect 2025 US market rates. US agency costs based on $150–$250/hour for equivalent project scope."
         />
 
-        {/* ── 8. STATS ─────────────────────────────────────────────────────── */}
+        {/* -- 8. STATS ----------------------------------------------------─-- */}
         <div className="bg-fj-neutral-50">
           <BoringStatsRow stats={STATS} align="center" />
         </div>
 
-        {/* ── 9. HOW WE WORK ───────────────────────────────────────────────── */}
+        {/* -- 9. HOW WE WORK ----------------------------------------------─-- */}
         <ServiceExplanation
           eyebrow="OUR APPROACH"
           headline="Fixed Prices. WooCommerce Standards. Full Code Ownership. No Lock-In."
@@ -778,7 +785,7 @@ export default function WoocommerceDevelopmentPage() {
           }
         />
 
-        {/* ── 10. HOW IT WORKS ─────────────────────────────────────────────── */}
+        {/* -- 10. HOW IT WORKS --------------------------------------------─-- */}
         <ServiceJourneyRow
           eyebrow="HOW IT WORKS"
           headline="From Discovery Call to Live Store — 5 Stages"
@@ -786,7 +793,7 @@ export default function WoocommerceDevelopmentPage() {
           stages={JOURNEY_STAGES}
         />
 
-        {/* ── 11. PRICING ──────────────────────────────────────────────────── */}
+        {/* -- 11. PRICING ---------------------------------------------------- */}
         <PricingTiers
           eyebrow="PRICING"
           headline="Fixed-Price WooCommerce Development Packages"
@@ -794,10 +801,13 @@ export default function WoocommerceDevelopmentPage() {
           tiers={PRICING_TIERS}
         />
 
-        {/* ── 12. TESTIMONIALS ─────────────────────────────────────────────── */}
-        <TestimonialsSection region="us" />
+        {/* -- 12. TESTIMONIALS --------------------------------------------─-- */}
+        <TestimonialsSection
+          eyebrow="WHAT CLIENTS SAY"
+          headline="4.9/5 across 500+ projects. Real results from real businesses."
+        />
 
-        {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}
+        {/* -- 13. FAQ -------------------------------------------------------- */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Everything US Businesses Ask About WooCommerce Development"
@@ -805,18 +815,19 @@ export default function WoocommerceDevelopmentPage() {
           items={FAQ_ITEMS}
         />
 
-        {/* ── 14. FINAL CTA ────────────────────────────────────────────────── */}
+        {/* -- 14. FINAL CTA -------------------------------------------------- */}
         <FinalCTA
           variant="dark"
           eyebrow="GET STARTED"
           headline="Ready to build or improve your WooCommerce store?"
-          lead="Book a free 30-minute discovery call. We'll scope your project, answer your technical questions, and give you a fixed-price proposal within 24–48 hours. No obligation."
+          sub="Book a free 30-minute discovery call. We'll scope your project, answer your technical questions, and give you a fixed-price proposal within 24–48 hours. No obligation."
           primaryCta={{ label: 'Book Your Free Discovery Call', modal: true, region: 'us' }}
           secondaryCta={{ label: 'View Our E-Commerce Work', href: '/us/portfolio' }}
+          objectionHandler="No commitment required. Fixed-price proposal within 24–48 hours."
         />
       </main>
 
-      <SiteFooter region="us" linkColumns={US_FOOTER_COLUMNS} />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }

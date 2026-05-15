@@ -19,7 +19,7 @@ import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 
-/* ─────────────────────────────────────────────────────────────────────────────
+/* ----------------------------------------------------------------------------─
    SEO / Metadata
    Primary:   "magento development" (2,400/mo)
               "magento development services" (480/mo)
@@ -27,7 +27,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
               "magento development agency" (210/mo)
    Secondary: "magento developer" · "magento ecommerce development"
               "magento 2 development" · "magento custom development"
-───────────────────────────────────────────────────────────────────────────── */
+--------------------------------------------------------------------------─-- */
 
 export const metadata: Metadata = {
   title: 'Magento Development Services — Custom Adobe Commerce Builds | FactoryJet',
@@ -74,9 +74,9 @@ export const metadata: Metadata = {
   },
 };
 
-/* ─────────────────────────────────────────────────────────────────────────────
+/* ----------------------------------------------------------------------------─
    JSON-LD Schemas — FAQPage · Service · BreadcrumbList
-───────────────────────────────────────────────────────────────────────────── */
+--------------------------------------------------------------------------─-- */
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -170,9 +170,9 @@ const breadcrumbSchema = {
   ],
 };
 
-/* ─────────────────────────────────────────────────────────────────────────────
+/* ----------------------------------------------------------------------------─
    Section Data
-───────────────────────────────────────────────────────────────────────────── */
+--------------------------------------------------------------------------─-- */
 
 const JOURNEY_STAGES: ServiceJourneyStage[] = [
   {
@@ -374,7 +374,7 @@ const PRICING_TIERS = [
   },
 ] as const;
 
-/* ─── FAQ Categories ─────────────────────────────────────────────────────── */
+/* ─-- FAQ Categories ----------------------------------------------------─-- */
 const FAQ_CATEGORIES = [
   { key: 'platform',    label: 'Platform & Technology' },
   { key: 'migration',   label: 'Magento Migration' },
@@ -384,7 +384,7 @@ const FAQ_CATEGORIES = [
 ];
 
 const FAQ_ITEMS = [
-  // ── Platform & Technology ──────────────────────────────────────────────
+  // -- Platform & Technology ----------------------------------------------
   {
     question: 'What is the difference between Magento Open Source and Adobe Commerce?',
     answer: `Magento Open Source (formerly Magento Community Edition) is the free, self-hosted version of Magento 2. Adobe Commerce (formerly Magento Commerce / Enterprise Edition) is the paid version with additional features: advanced B2B functionality, customer segmentation, loyalty programs, visual merchandising, page builder, and cloud hosting options. Most small and mid-market businesses run on Magento Open Source. Adobe Commerce is typically justified at $5M+ GMV or when you need the advanced B2B and merchandising features.`,
@@ -411,7 +411,7 @@ const FAQ_ITEMS = [
     category: 'platform',
   },
 
-  // ── Magento Migration ──────────────────────────────────────────────────
+  // -- Magento Migration --------------------------------------------------
   {
     question: 'Is Magento 1 still safe to use in 2025?',
     answer: `No — Magento 1 reached official end-of-life in June 2020. It no longer receives security patches from Adobe. Running a Magento 1 store in 2025 means running unpatched security vulnerabilities that are actively exploited by automated attacks. Payment card industry (PCI DSS) compliance is also increasingly difficult to maintain on an unsupported platform. If you're still on Magento 1, migration to Magento 2 or an alternative platform is urgent.`,
@@ -438,7 +438,7 @@ const FAQ_ITEMS = [
     category: 'migration',
   },
 
-  // ── Development Work ───────────────────────────────────────────────────
+  // -- Development Work --------------------------------------------------─
   {
     question: 'What is a Magento custom module?',
     answer: `A Magento module is a self-contained package of code that extends or modifies Magento's functionality. Custom modules add features that aren't part of Magento's core — for example: a custom shipping rate calculator, a product configurator, a wholesale price management system, a custom loyalty rewards system, or a Magento-to-ERP sync. Modules follow Magento's architecture (plugins, observers, preferences, service contracts) and install via Composer without modifying core files.`,
@@ -465,7 +465,7 @@ const FAQ_ITEMS = [
     category: 'development',
   },
 
-  // ── Cost & Pricing ─────────────────────────────────────────────────────
+  // -- Cost & Pricing ----------------------------------------------------─
   {
     question: 'Why is Magento development so expensive in the US?',
     answer: `US Magento development is expensive for two reasons: Magento expertise is specialized (fewer developers know it deeply compared to WordPress or Shopify), and US agencies charge $150–$300/hour. A custom module that takes 40 hours to build properly costs $6,000–$12,000 at those rates. FactoryJet's senior Magento developers work at significantly lower hourly rates due to our India-based team structure — delivering the same technical depth at 60–70% lower cost.`,
@@ -487,7 +487,7 @@ const FAQ_ITEMS = [
     category: 'cost',
   },
 
-  // ── Working with FactoryJet ─────────────────────────────────────────────
+  // -- Working with FactoryJet --------------------------------------------─
   {
     question: 'What happens during the Magento technical consultation?',
     answer: `The free technical consultation is a 30–45 minute call where we understand your current Magento environment (or your requirements for a new build), your technical goals, your timeline, and any constraints. For existing stores, we'll ask you to share access to your Magento admin and hosting so we can do a technical audit before quoting. You'll get a fixed-price proposal within 2–3 business days of the audit. No obligation to proceed.`,
@@ -515,9 +515,9 @@ const FAQ_ITEMS = [
   },
 ];
 
-/* ─────────────────────────────────────────────────────────────────────────────
+/* ----------------------------------------------------------------------------─
    Page
-───────────────────────────────────────────────────────────────────────────── */
+--------------------------------------------------------------------------─-- */
 
 export default function MagentoDevelopmentPage() {
   return (
@@ -533,17 +533,24 @@ export default function MagentoDevelopmentPage() {
         {JSON.stringify(breadcrumbSchema)}
       </Script>
 
-      <SiteHeader region="us" />
+      <SiteHeader
+        navLinks={[
+          { label: 'Web Design', href: '/us/services/web-design' },
+          { label: 'E-Commerce', href: '/us/services/ecommerce-development' },
+          { label: 'Pricing', href: '#pricing' },
+          { label: 'FAQ', href: '#faq' },
+        ]}
+        cta={{ label: 'Get a Free Quote', modal: true, region: 'us' }}
+      />
 
       <main>
-        {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
+        {/* -- 1. HERO -------------------------------------------------------- */}
         <Hero
           eyebrow="MAGENTO DEVELOPMENT SERVICES"
           headline="Senior Magento developers. Fixed-price projects. 60–70% less than US agencies."
           lead="Custom module development, Magento 1 to 2 migrations, Adobe Commerce builds, ERP integrations, and performance optimization — delivered by Magento-certified engineers since 1999."
           primaryCta={{ label: 'Get a Free Technical Consultation', modal: true, region: 'us' }}
           secondaryCta={{ label: 'View Our Work', href: '/us/portfolio' }}
-          region="us"
           rightSlot={
             <div className="w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">
               <div className="border-b border-fj-neutral-100 px-7 py-4">
@@ -587,16 +594,16 @@ export default function MagentoDevelopmentPage() {
           }
         />
 
-        {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
+        {/* -- 2. LOGO BAR ---------------------------------------------------- */}
         <LogoBar tagline="500+ US e-commerce businesses trust FactoryJet — from custom modules to full Magento migrations" />
 
-        {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
+        {/* -- 3. TRUST BLOCK ----------------------------------------------─-- */}
         <BigThreeTrustBlock
           eyebrow="WHY FACTORYJET FOR MAGENTO"
           headline="Magento-certified engineers. Fixed-price proposals. 60–70% less than what US agencies charge."
         />
 
-        {/* ── 4. WHAT WE BUILD ─────────────────────────────────────────────── */}
+        {/* -- 4. WHAT WE BUILD --------------------------------------------─-- */}
         <ServiceExplanation
           eyebrow="WHAT WE BUILD"
           headline="Every Type of Magento Development — From Modules to Full Migrations"
@@ -679,13 +686,13 @@ export default function MagentoDevelopmentPage() {
           }
         />
 
-        {/* ── 5. INDUSTRIES ────────────────────────────────────────────────── */}
+        {/* -- 5. INDUSTRIES -------------------------------------------------- */}
         <IndustriesGrid
           eyebrow="INDUSTRIES WE SERVE"
           headline="Magento Development for US E-Commerce Businesses in Every Industry"
         />
 
-        {/* ── 6. WHY MAGENTO MIGRATIONS FAIL ──────────────────────────────── */}
+        {/* -- 6. WHY MAGENTO MIGRATIONS FAIL -------------------------------- */}
         <StrategicDarkSection
           eyebrow="WHERE MAGENTO PROJECTS GO WRONG"
           headline="Three Reasons Magento Projects Go Over Budget and Miss Deadlines"
@@ -706,7 +713,7 @@ export default function MagentoDevelopmentPage() {
           ]}
         />
 
-        {/* ── 7. COMPARISON TABLE ──────────────────────────────────────────── */}
+        {/* -- 7. COMPARISON TABLE -------------------------------------------- */}
         <ComparisonTable
           eyebrow="HOW YOUR OPTIONS COMPARE"
           headline="FactoryJet vs. Freelancer vs. US Agency vs. Offshore Shop"
@@ -720,12 +727,12 @@ export default function MagentoDevelopmentPage() {
           footer="Prices reflect 2025 US market rates. Hourly rates converted to project costs for a 40-hour custom module engagement."
         />
 
-        {/* ── 8. STATS ─────────────────────────────────────────────────────── */}
+        {/* -- 8. STATS ----------------------------------------------------─-- */}
         <div className="bg-fj-neutral-50">
           <BoringStatsRow stats={STATS} align="center" />
         </div>
 
-        {/* ── 9. HOW WE WORK ───────────────────────────────────────────────── */}
+        {/* -- 9. HOW WE WORK ----------------------------------------------─-- */}
         <ServiceExplanation
           eyebrow="OUR ENGINEERING APPROACH"
           headline="Fixed Prices. Senior Engineers. Magento Standards. Full Documentation."
@@ -788,7 +795,7 @@ export default function MagentoDevelopmentPage() {
           }
         />
 
-        {/* ── 10. HOW IT WORKS ─────────────────────────────────────────────── */}
+        {/* -- 10. HOW IT WORKS --------------------------------------------─-- */}
         <ServiceJourneyRow
           eyebrow="HOW IT WORKS"
           headline="From Technical Discovery to Production — 5 Stages"
@@ -796,7 +803,7 @@ export default function MagentoDevelopmentPage() {
           stages={JOURNEY_STAGES}
         />
 
-        {/* ── 11. PRICING ──────────────────────────────────────────────────── */}
+        {/* -- 11. PRICING ---------------------------------------------------- */}
         <PricingTiers
           eyebrow="PRICING"
           headline="Fixed-Price Magento Development Packages"
@@ -804,10 +811,13 @@ export default function MagentoDevelopmentPage() {
           tiers={PRICING_TIERS}
         />
 
-        {/* ── 12. TESTIMONIALS ─────────────────────────────────────────────── */}
-        <TestimonialsSection region="us" />
+        {/* -- 12. TESTIMONIALS --------------------------------------------─-- */}
+        <TestimonialsSection
+          eyebrow="WHAT CLIENTS SAY"
+          headline="4.9/5 across 500+ projects. Real results from real businesses."
+        />
 
-        {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}
+        {/* -- 13. FAQ -------------------------------------------------------- */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Everything US Businesses Ask About Magento Development"
@@ -815,18 +825,19 @@ export default function MagentoDevelopmentPage() {
           items={FAQ_ITEMS}
         />
 
-        {/* ── 14. FINAL CTA ────────────────────────────────────────────────── */}
+        {/* -- 14. FINAL CTA -------------------------------------------------- */}
         <FinalCTA
           variant="dark"
           eyebrow="GET STARTED"
           headline="Ready to talk Magento?"
-          lead="Book a free 30–45 minute technical consultation. We'll understand your project, audit what's needed, and give you a fixed-price proposal within 2–3 business days. No obligation."
+          sub="Book a free 30–45 minute technical consultation. We'll understand your project, audit what's needed, and give you a fixed-price proposal within 2–3 business days. No obligation."
           primaryCta={{ label: 'Book Your Free Technical Consultation', modal: true, region: 'us' }}
           secondaryCta={{ label: 'View Our E-Commerce Work', href: '/us/portfolio' }}
+          objectionHandler="No commitment required. Fixed-price proposal delivered within 2–3 business days."
         />
       </main>
 
-      <SiteFooter region="us" linkColumns={US_FOOTER_COLUMNS} />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }

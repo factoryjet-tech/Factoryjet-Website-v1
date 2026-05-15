@@ -19,7 +19,7 @@ import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 
-/* ─────────────────────────────────────────────────────────────────────────────
+/* ----------------------------------------------------------------------------─
    SEO / Metadata
    Primary:   "small business website design services" (4,400/mo)
               "website builders for small business" (6,600/mo)
@@ -28,7 +28,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
               "website design for small business" (2,900/mo)
    Secondary: "small business website designer" · "affordable small business website"
               "professional website for small business" · "small business web designer"
-───────────────────────────────────────────────────────────────────────────── */
+--------------------------------------------------------------------------─-- */
 
 export const metadata: Metadata = {
   title: 'Small Business Website Design Services — From $1,999, Delivered in 7 Days | FactoryJet',
@@ -75,9 +75,9 @@ export const metadata: Metadata = {
   },
 };
 
-/* ─────────────────────────────────────────────────────────────────────────────
+/* ----------------------------------------------------------------------------─
    JSON-LD Schemas — FAQPage · Service · BreadcrumbList
-───────────────────────────────────────────────────────────────────────────── */
+--------------------------------------------------------------------------─-- */
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -171,9 +171,9 @@ const breadcrumbSchema = {
   ],
 };
 
-/* ─────────────────────────────────────────────────────────────────────────────
+/* ----------------------------------------------------------------------------─
    Section Data
-───────────────────────────────────────────────────────────────────────────── */
+--------------------------------------------------------------------------─-- */
 
 const JOURNEY_STAGES: ServiceJourneyStage[] = [
   {
@@ -365,7 +365,7 @@ const PRICING_TIERS = [
   },
 ] as const;
 
-/* ─── FAQ Categories ─────────────────────────────────────────────────────── */
+/* ─-- FAQ Categories ----------------------------------------------------─-- */
 const FAQ_CATEGORIES = [
   { key: 'planning',      label: 'Planning Your Site' },
   { key: 'design',        label: 'Design & Build' },
@@ -375,7 +375,7 @@ const FAQ_CATEGORIES = [
 ];
 
 const FAQ_ITEMS = [
-  // ── Planning Your Site ─────────────────────────────────────────────────
+  // -- Planning Your Site ------------------------------------------------─
   {
     question: 'What pages does a small business website need?',
     answer: `Most small business websites need 5–8 core pages: a homepage, a services or products page, an about page, a contact page, and ideally a blog or FAQ for SEO. If you serve multiple locations or industries, each may need its own dedicated landing page. The homepage does the heavy lifting — it needs to answer "what do you do, who is it for, and why should I trust you" within the first 5 seconds. Every other page exists to go deeper on one of those questions.`,
@@ -402,7 +402,7 @@ const FAQ_ITEMS = [
     category: 'planning',
   },
 
-  // ── Design & Build ─────────────────────────────────────────────────────
+  // -- Design & Build ----------------------------------------------------─
   {
     question: 'What does "mobile-first" web design actually mean?',
     answer: `Mobile-first means the website is designed starting with the phone layout, then adapted up to tablet and desktop — not the other way around. It matters because 60%+ of web traffic is mobile, Google uses mobile-first indexing (meaning your mobile site determines your search ranking), and users are much less patient on mobile. A site designed desktop-first often gets "squished" onto phones as an afterthought and performs poorly on both the user experience and SEO fronts.`,
@@ -429,7 +429,7 @@ const FAQ_ITEMS = [
     category: 'design',
   },
 
-  // ── Cost & Pricing ─────────────────────────────────────────────────────
+  // -- Cost & Pricing ----------------------------------------------------─
   {
     question: 'How much should a small business spend on a website?',
     answer: `A small business that relies on its website to generate leads should budget $1,500–$5,000 for a professionally built site. That range covers a quality freelance designer on the low end and a boutique agency like FactoryJet in the mid-range. US agencies start at $8,000–$15,000 for basic small business sites. Going below $1,500 usually means a template swap without real design thinking, no SEO setup, and no accountability — which is often worse than no website at all.`,
@@ -456,7 +456,7 @@ const FAQ_ITEMS = [
     category: 'cost',
   },
 
-  // ── SEO & Traffic ──────────────────────────────────────────────────────
+  // -- SEO & Traffic ------------------------------------------------------
   {
     question: 'Does my small business website need SEO?',
     answer: `Yes — if you want people to find you through Google, your website needs SEO. Most small business owners discover that a beautifully designed site with no SEO gets zero organic traffic. Every FactoryJet website includes on-page SEO: optimized title tags and meta descriptions, schema markup for your business type, an XML sitemap, Google Search Console setup, and page speed optimization. This is the technical SEO foundation — ongoing content and link building are separate strategies we can advise on.`,
@@ -483,7 +483,7 @@ const FAQ_ITEMS = [
     category: 'seo',
   },
 
-  // ── Working with FactoryJet ─────────────────────────────────────────────
+  // -- Working with FactoryJet --------------------------------------------─
   {
     question: 'What happens during the free strategy call?',
     answer: `The strategy call is a 30-minute video or phone call with a FactoryJet project lead. We cover: what your business does and who you serve, what you want the website to accomplish, what pages and features you need, your timeline and any constraints, and your design preferences. At the end of the call, we give you a fixed-price proposal. There's no obligation to move forward — the call is genuinely about figuring out if we're a good fit for your project.`,
@@ -511,9 +511,9 @@ const FAQ_ITEMS = [
   },
 ];
 
-/* ─────────────────────────────────────────────────────────────────────────────
+/* ----------------------------------------------------------------------------─
    Page
-───────────────────────────────────────────────────────────────────────────── */
+--------------------------------------------------------------------------─-- */
 
 export default function SmallBusinessWebDesignPage() {
   return (
@@ -529,17 +529,24 @@ export default function SmallBusinessWebDesignPage() {
         {JSON.stringify(breadcrumbSchema)}
       </Script>
 
-      <SiteHeader region="us" />
+      <SiteHeader
+        navLinks={[
+          { label: 'Web Design', href: '/us/services/web-design' },
+          { label: 'E-Commerce', href: '/us/services/ecommerce-development' },
+          { label: 'Pricing', href: '#pricing' },
+          { label: 'FAQ', href: '#faq' },
+        ]}
+        cta={{ label: 'Get a Free Quote', modal: true, region: 'us' }}
+      />
 
       <main>
-        {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
+        {/* -- 1. HERO -------------------------------------------------------- */}
         <Hero
           eyebrow="SMALL BUSINESS WEBSITE DESIGN"
           headline="A website your customers trust. Built in 7 days. Starting at $1,999."
           lead="Custom-designed (not a template), mobile-first, Lighthouse 100 performance, full SEO setup — and delivered to your domain in 7 days. 500+ US small businesses served since 1999."
           primaryCta={{ label: 'Get a Free Quote', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Our Work', href: '/us/portfolio' }}
-          region="us"
           rightSlot={
             <div className="w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">
               <div className="border-b border-fj-neutral-100 px-7 py-4">
@@ -585,16 +592,16 @@ export default function SmallBusinessWebDesignPage() {
           }
         />
 
-        {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
+        {/* -- 2. LOGO BAR ---------------------------------------------------- */}
         <LogoBar tagline="500+ US small businesses trust FactoryJet — from Austin and Miami to Denver, Nashville, and Portland" />
 
-        {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
+        {/* -- 3. TRUST BLOCK ----------------------------------------------─-- */}
         <BigThreeTrustBlock
           eyebrow="WHY SMALL BUSINESSES CHOOSE FACTORYJET"
           headline="Custom-designed websites from $1,999. Delivered in 7 days. 60–70% cheaper than US agencies."
         />
 
-        {/* ── 4. WHAT MAKES A GOOD SMALL BUSINESS WEBSITE ─────────────────── */}
+        {/* -- 4. WHAT MAKES A GOOD SMALL BUSINESS WEBSITE ----------------─-- */}
         <ServiceExplanation
           eyebrow="WHAT ACTUALLY MATTERS"
           headline="Most Small Business Websites Fail at the Same Three Things"
@@ -680,13 +687,13 @@ export default function SmallBusinessWebDesignPage() {
           }
         />
 
-        {/* ── 5. INDUSTRIES WE SERVE ───────────────────────────────────────── */}
+        {/* -- 5. INDUSTRIES WE SERVE --------------------------------------─-- */}
         <IndustriesGrid
           eyebrow="INDUSTRIES WE SERVE"
           headline="We've Built Websites for 500+ US Small Businesses — Across Every Industry"
         />
 
-        {/* ── 6. WHY US AGENCIES AREN'T THE ANSWER ─────────────────────────── */}
+        {/* -- 6. WHY US AGENCIES AREN'T THE ANSWER ------------------------─-- */}
         <StrategicDarkSection
           eyebrow="THE AGENCY PROBLEM"
           headline={`Three Reasons US Agencies Are Overkill for Most Small Businesses`}
@@ -707,7 +714,7 @@ export default function SmallBusinessWebDesignPage() {
           ]}
         />
 
-        {/* ── 7. COMPARISON TABLE ──────────────────────────────────────────── */}
+        {/* -- 7. COMPARISON TABLE -------------------------------------------- */}
         <ComparisonTable
           eyebrow="HOW YOUR OPTIONS COMPARE"
           headline="FactoryJet vs. DIY Builder vs. Freelancer vs. US Agency"
@@ -721,12 +728,12 @@ export default function SmallBusinessWebDesignPage() {
           footer="Prices reflect 2025 US market rates. DIY costs exclude time investment. Agency costs vary by market and firm size."
         />
 
-        {/* ── 8. STATS ─────────────────────────────────────────────────────── */}
+        {/* -- 8. STATS ----------------------------------------------------─-- */}
         <div className="bg-fj-neutral-50">
           <BoringStatsRow stats={STATS} align="center" />
         </div>
 
-        {/* ── 9. HOW WE'RE DIFFERENT ───────────────────────────────────────── */}
+        {/* -- 9. HOW WE'RE DIFFERENT --------------------------------------─-- */}
         <ServiceExplanation
           eyebrow="OUR APPROACH"
           headline="Senior Engineers. Fixed Price. 7-Day Delivery. Full Ownership."
@@ -790,7 +797,7 @@ export default function SmallBusinessWebDesignPage() {
           }
         />
 
-        {/* ── 10. HOW IT WORKS ─────────────────────────────────────────────── */}
+        {/* -- 10. HOW IT WORKS --------------------------------------------─-- */}
         <ServiceJourneyRow
           eyebrow="HOW IT WORKS"
           headline="From Strategy Call to Live Website in 5 Steps"
@@ -798,7 +805,7 @@ export default function SmallBusinessWebDesignPage() {
           stages={JOURNEY_STAGES}
         />
 
-        {/* ── 11. PRICING ──────────────────────────────────────────────────── */}
+        {/* -- 11. PRICING ---------------------------------------------------- */}
         <PricingTiers
           eyebrow="PRICING"
           headline="Fixed-Price Small Business Website Packages"
@@ -806,10 +813,13 @@ export default function SmallBusinessWebDesignPage() {
           tiers={PRICING_TIERS}
         />
 
-        {/* ── 12. TESTIMONIALS ─────────────────────────────────────────────── */}
-        <TestimonialsSection region="us" />
+        {/* -- 12. TESTIMONIALS --------------------------------------------─-- */}
+        <TestimonialsSection
+          eyebrow="WHAT CLIENTS SAY"
+          headline="4.9/5 across 500+ projects. Real results from real businesses."
+        />
 
-        {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}
+        {/* -- 13. FAQ -------------------------------------------------------- */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Everything US Small Business Owners Ask About Web Design"
@@ -817,18 +827,19 @@ export default function SmallBusinessWebDesignPage() {
           items={FAQ_ITEMS}
         />
 
-        {/* ── 14. FINAL CTA ────────────────────────────────────────────────── */}
+        {/* -- 14. FINAL CTA -------------------------------------------------- */}
         <FinalCTA
           variant="dark"
           eyebrow="GET STARTED"
           headline="Ready to get a website that actually works?"
-          lead="Book a free 30-minute strategy call. We'll scope your project, answer every question, and give you a fixed-price proposal — no obligation, no sales pressure."
+          sub="Book a free 30-minute strategy call. We'll scope your project, answer every question, and give you a fixed-price proposal — no obligation, no sales pressure."
           primaryCta={{ label: 'Book Your Free Strategy Call', modal: true, region: 'us' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/us/portfolio' }}
+          objectionHandler="No commitment required. Most clients get a proposal within 24 hours."
         />
       </main>
 
-      <SiteFooter region="us" linkColumns={US_FOOTER_COLUMNS} />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }
