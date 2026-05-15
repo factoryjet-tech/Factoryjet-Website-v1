@@ -44,12 +44,9 @@
 /us/raleigh    /us/raleigh/web-design    301
 /us/tampa      /us/tampa/web-design      301
 
-# Tier-3 e-commerce city pages on old theme → main e-commerce service page
-/us/services/ecommerce-development/boise        /us/services/ecommerce-development   301
-/us/services/ecommerce-development/chattanooga  /us/services/ecommerce-development   301
-/us/services/ecommerce-development/fargo        /us/services/ecommerce-development   301
-/us/services/ecommerce-development/lincoln      /us/services/ecommerce-development   301
-/us/services/ecommerce-development/sioux-falls  /us/services/ecommerce-development   301
+# NOTE: Tier-3 e-commerce city pages (boise, chattanooga, fargo, lincoln, sioux-falls)
+# were previously redirected here while on the legacy theme.
+# All 5 have been migrated to v2 page.tsx — redirects removed 2026-05-15.
 
 # ── NEW YORK & CLEVELAND URL MIGRATION (2026-05-14) ───────────────────────────
 # Old /services/web-design/{city} → new /us/{city}/web-design (SEO canonical migration)
