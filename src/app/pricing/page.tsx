@@ -50,9 +50,9 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <SiteHeader />
+      <SiteHeader locale="in" />
       <PricingPage />
-      <SiteFooter />
+      <SiteFooter locale="in" />
     </>
   )
 }

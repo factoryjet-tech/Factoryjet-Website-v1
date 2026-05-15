@@ -118,9 +118,9 @@ export default async function Page({ params }: Props) {
         />
       )}
 
-      <SiteHeader />
+      <SiteHeader locale="in" />
       <AuthorPage author={author} posts={authorPosts} />
-      <SiteFooter />
+      <SiteFooter locale="in" />
     </>
   )
 }

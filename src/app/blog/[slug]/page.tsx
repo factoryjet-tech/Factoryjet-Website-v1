@@ -171,9 +171,9 @@ export default async function Page({ params }: Props) {
         />
       )}
 
-      <SiteHeader />
+      <SiteHeader locale="in" />
       <BlogPostPage post={post} />
-      <SiteFooter />
+      <SiteFooter locale="in" />
     </>
   )
 }

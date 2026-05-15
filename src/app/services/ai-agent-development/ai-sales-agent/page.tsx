@@ -43,9 +43,9 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <SiteHeader />
+      <SiteHeader locale="in" />
       <AIServicePage data={aiSalesAgentData} region="in" />
-      <SiteFooter />
+      <SiteFooter locale="in" />
     </>
   )
 }

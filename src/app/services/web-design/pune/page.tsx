@@ -50,7 +50,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <SiteHeader />
+      <SiteHeader locale="in" />
       <BreadcrumbSchema items={[
         { name: 'Home', url: 'https://factoryjet.com' },
         { name: 'Services', url: 'https://factoryjet.com/services' },
@@ -58,7 +58,7 @@ export default function Page() {
         { name: 'Pune', url: 'https://factoryjet.com/services/web-design/pune' },
       ]} />
       <PuneNewPage />
-      <SiteFooter />
+      <SiteFooter locale="in" />
     </>
   )
 }

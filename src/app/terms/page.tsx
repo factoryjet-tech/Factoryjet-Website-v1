@@ -47,9 +47,9 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <SiteHeader />
+      <SiteHeader locale="in" />
       <TermsAndConditions />
-      <SiteFooter />
+      <SiteFooter locale="in" />
     </>
   )
 }

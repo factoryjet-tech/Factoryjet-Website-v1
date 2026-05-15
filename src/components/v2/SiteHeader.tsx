@@ -23,26 +23,30 @@ import {
 import { useContactModal } from '../../context/ContactModalContext';
 import type { ModalRegion } from '../../context/ContactModalContext';
 
-// ─── Nav data ─────────────────────────────────────────────────────────────────
+// ─── Locale type ──────────────────────────────────────────────────────────────
 
-const WEB_SERVICES = [
-  { icon: Globe,      label: 'Web Design',          href: '/us/services/web-design',              desc: 'Conversion-focused sites' },
-  { icon: ShoppingBag, label: 'Shopify Development', href: '/us/services/shopify-development',     desc: 'Custom storefronts & themes' },
-  { icon: ShoppingCart, label: 'E-commerce',         href: '/us/services/ecommerce-development',   desc: 'End-to-end online stores' },
-  { icon: Code,       label: 'Web App Development',  href: '/us/services/web-application-development', desc: 'Complex web apps' },
-  { icon: FileCode,   label: 'WordPress',            href: '/us/services/wordpress-development',   desc: 'Custom WP sites & plugins' },
-  { icon: RefreshCw,  label: 'Website Redesign',     href: '/us/services/website-redesign',        desc: 'Modernize your existing site' },
+export type SiteHeaderLocale = 'us' | 'in' | 'uae';
+
+// ─── US nav data ──────────────────────────────────────────────────────────────
+
+const US_WEB_SERVICES = [
+  { icon: Globe,        label: 'Web Design',          href: '/us/services/web-design',                      desc: 'Conversion-focused sites' },
+  { icon: ShoppingBag,  label: 'Shopify Development', href: '/us/services/shopify-development',             desc: 'Custom storefronts & themes' },
+  { icon: ShoppingCart, label: 'E-commerce',          href: '/us/services/ecommerce-development',           desc: 'End-to-end online stores' },
+  { icon: Code,         label: 'Web App Development', href: '/us/services/web-application-development',     desc: 'Complex web apps' },
+  { icon: FileCode,     label: 'WordPress',           href: '/us/services/wordpress-development',           desc: 'Custom WP sites & plugins' },
+  { icon: RefreshCw,    label: 'Website Redesign',    href: '/us/services/website-redesign',                desc: 'Modernize your existing site' },
 ] as const;
 
-const AI_SERVICES = [
-  { icon: Bot,          label: 'AI Agents',        href: '/us/services/ai-agents',               desc: 'Autonomous task automation' },
-  { icon: Zap,          label: 'AI Automation',    href: '/us/services/ai-automation',           desc: 'Eliminate repetitive work' },
-  { icon: MessageSquare, label: 'AI Chatbot',      href: '/us/services/ai-chatbot-development',  desc: 'Smart customer support' },
-  { icon: Layers,       label: 'AI Workflow',      href: '/us/services/ai-workflow-automation',  desc: 'End-to-end process flows' },
-  { icon: Link2,        label: 'AI Integration',   href: '/us/services/ai-integration-services', desc: 'Connect AI to your stack' },
+const US_AI_SERVICES = [
+  { icon: Bot,           label: 'AI Agents',      href: '/us/services/ai-agents',               desc: 'Autonomous task automation' },
+  { icon: Zap,           label: 'AI Automation',  href: '/us/services/ai-automation',           desc: 'Eliminate repetitive work' },
+  { icon: MessageSquare, label: 'AI Chatbot',     href: '/us/services/ai-chatbot-development',  desc: 'Smart customer support' },
+  { icon: Layers,        label: 'AI Workflow',    href: '/us/services/ai-workflow-automation',  desc: 'End-to-end process flows' },
+  { icon: Link2,         label: 'AI Integration', href: '/us/services/ai-integration-services', desc: 'Connect AI to your stack' },
 ] as const;
 
-const LOCATIONS = [
+const US_LOCATIONS = [
   { label: 'Austin',    state: 'TX', href: '/us/austin/web-design' },
   { label: 'Miami',     state: 'FL', href: '/us/miami/web-design' },
   { label: 'Denver',    state: 'CO', href: '/us/denver/web-design' },
@@ -54,9 +58,107 @@ const LOCATIONS = [
   { label: 'Portland',  state: 'OR', href: '/us/portland/web-design' },
 ] as const;
 
+// ─── India nav data ───────────────────────────────────────────────────────────
+
+const IN_WEB_SERVICES = [
+  { icon: Globe,        label: 'Web Design',           href: '/services/web-design',            desc: 'Custom, conversion-focused sites' },
+  { icon: ShoppingBag,  label: 'Shopify Development',  href: '/services/shopify-development',   desc: 'Custom storefronts & themes' },
+  { icon: ShoppingCart, label: 'E-Commerce',           href: '/services/ecommerce-development', desc: 'End-to-end online stores' },
+  { icon: Bot,          label: 'AI Agent Development', href: '/services/ai-agent-development',  desc: 'Autonomous AI that works for you' },
+] as const;
+
+const IN_AI_SERVICES = [
+  { icon: MessageSquare, label: 'AI Chatbot',         href: '/services/ai-agent-development/ai-chatbot',             desc: 'Smart customer support' },
+  { icon: ShoppingCart,  label: 'AI Sales Agent',     href: '/services/ai-agent-development/ai-sales-agent',         desc: 'AI-powered sales outreach' },
+  { icon: Zap,           label: 'AI Marketing Agent', href: '/services/ai-agent-development/ai-marketing-agent',     desc: 'Automate marketing workflows' },
+  { icon: Layers,        label: 'AI Workflow',        href: '/services/ai-agent-development/ai-workflow-automation', desc: 'End-to-end process flows' },
+  { icon: Bot,           label: 'AI Voice Agent',     href: '/services/ai-agent-development/ai-voice-agent',         desc: 'Voice-based AI assistants' },
+] as const;
+
+const IN_LOCATIONS = [
+  { label: 'Mumbai',    state: 'MH', href: '/services/web-design/mumbai' },
+  { label: 'Delhi',     state: 'DL', href: '/services/web-design/delhi' },
+  { label: 'Bangalore', state: 'KA', href: '/services/web-design/bangalore' },
+  { label: 'Chennai',   state: 'TN', href: '/services/web-design/chennai' },
+  { label: 'Hyderabad', state: 'TS', href: '/services/web-design/hyderabad' },
+  { label: 'Pune',      state: 'MH', href: '/services/web-design/pune' },
+  { label: 'Ahmedabad', state: 'GJ', href: '/services/web-design/ahmedabad' },
+  { label: 'Surat',     state: 'GJ', href: '/services/web-design/surat' },
+] as const;
+
+// ─── UAE nav data ─────────────────────────────────────────────────────────────
+
+const UAE_WEB_SERVICES = [
+  { icon: Globe,        label: 'Web Design',           href: '/services/web-design',            desc: 'Custom, conversion-focused sites' },
+  { icon: ShoppingBag,  label: 'Shopify Development',  href: '/services/shopify-development',   desc: 'Custom storefronts & themes' },
+  { icon: ShoppingCart, label: 'E-Commerce',           href: '/services/ecommerce-development', desc: 'End-to-end online stores' },
+  { icon: Bot,          label: 'AI Agent Development', href: '/services/ai-agent-development',  desc: 'Autonomous AI that works for you' },
+] as const;
+
+const UAE_AI_SERVICES = [
+  { icon: MessageSquare, label: 'AI Chatbot',    href: '/services/ai-agent-development/ai-chatbot',             desc: 'Smart customer support' },
+  { icon: Zap,           label: 'AI Automation', href: '/services/ai-agent-development/ai-workflow-automation', desc: 'Automate repetitive work' },
+  { icon: Bot,           label: 'AI Voice Agent',href: '/services/ai-agent-development/ai-voice-agent',         desc: 'Voice-based AI assistants' },
+] as const;
+
+const UAE_LOCATIONS = [
+  { label: 'Dubai',     state: 'DXB', href: '/uae' },
+  { label: 'Abu Dhabi', state: 'AUH', href: '/uae' },
+  { label: 'Sharjah',   state: 'SHJ', href: '/uae' },
+] as const;
+
+// ─── Locale config map ────────────────────────────────────────────────────────
+
+const LOCALE_CONFIG = {
+  us: {
+    webServices:     US_WEB_SERVICES,
+    aiServices:      US_AI_SERVICES,
+    locations:       US_LOCATIONS,
+    locationsLabel:  'US Cities We Serve',
+    portfolioHref:   '/us/portfolio',
+    pricingHref:     '/us/pricing',
+    featuredHeadline:'7-Day Delivery Guarantee',
+    featuredBody:    'Up to 5-page sites shipped in 7 days — or your money back. 60–70% cheaper than US agencies.',
+    featuredStats:   ['500+ US businesses served', '25+ years of expertise', 'No hidden fees'],
+    featuredCtaLabel:'See pricing',
+    featuredCtaHref: '/us/pricing',
+    modalRegion:     'us' as ModalRegion,
+    defaultCtaLabel: 'Free Strategy Call',
+  },
+  in: {
+    webServices:     IN_WEB_SERVICES,
+    aiServices:      IN_AI_SERVICES,
+    locations:       IN_LOCATIONS,
+    locationsLabel:  'Indian Cities We Serve',
+    portfolioHref:   '/portfolio',
+    pricingHref:     '/pricing',
+    featuredHeadline:'7-Day Delivery Guarantee',
+    featuredBody:    'Custom websites delivered in 7 days. 60–70% cheaper than US & UK agencies.',
+    featuredStats:   ['500+ businesses served', '25+ years of expertise', 'Fixed-price projects'],
+    featuredCtaLabel:'See our work',
+    featuredCtaHref: '/portfolio',
+    modalRegion:     'in' as ModalRegion,
+    defaultCtaLabel: 'Free Strategy Call',
+  },
+  uae: {
+    webServices:     UAE_WEB_SERVICES,
+    aiServices:      UAE_AI_SERVICES,
+    locations:       UAE_LOCATIONS,
+    locationsLabel:  'UAE Cities We Serve',
+    portfolioHref:   '/portfolio',
+    pricingHref:     '/uae',
+    featuredHeadline:'7-Day Delivery Guarantee',
+    featuredBody:    'Custom websites for Dubai & UAE businesses. 60–70% less than local agencies.',
+    featuredStats:   ['500+ businesses served', '25+ years of expertise', 'No hidden fees'],
+    featuredCtaLabel:'See our work',
+    featuredCtaHref: '/portfolio',
+    modalRegion:     'in' as ModalRegion, // UAE served by India team; 'uae' not in ModalRegion
+    defaultCtaLabel: 'Get a Free Quote',
+  },
+} as const;
+
 // ─── Types ────────────────────────────────────────────────────────────────────
 
-/** @deprecated SiteHeader now owns its nav. Kept for backwards-compat only. */
 type CtaItem = {
   label: string;
   href?: string;
@@ -65,11 +167,13 @@ type CtaItem = {
 };
 
 export interface SiteHeaderProps {
+  /** Controls which locale's nav data, cities, and links are shown. Default: 'us'. */
+  locale?: SiteHeaderLocale;
   logoText?: string;
   logoHref?: string;
   /** @deprecated SiteHeader now manages its own mega-nav. This prop is ignored. */
   navLinks?: ReadonlyArray<CtaItem>;
-  /** Pass a custom CTA item to override the default "Free Strategy Call" modal. */
+  /** Pass a custom CTA item to override the default modal CTA. */
   cta?: CtaItem;
   className?: string;
 }
@@ -112,12 +216,15 @@ function ServiceCard({
 // ─── Main component ────────────────────────────────────────────────────────────
 
 export default function SiteHeader({
+  locale = 'us',
   logoText = 'FactoryJet',
   logoHref = '/',
   cta,
   className = '',
 }: SiteHeaderProps) {
   const { openModal } = useContactModal();
+  const cfg = LOCALE_CONFIG[locale];
+
   const [openDropdown, setOpenDropdown] = useState<'services' | 'locations' | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
@@ -160,17 +267,17 @@ export default function SiteHeader({
 
   const handleCta = () => {
     if (cta?.modal) {
-      openModal(cta.region ?? 'us');
+      openModal(cta.region ?? cfg.modalRegion);
     } else if (cta?.href) {
       window.location.href = cta.href;
     } else {
-      openModal('us');
+      openModal(cfg.modalRegion);
     }
   };
 
   return (
     <>
-      {/* ── Main header bar ─────────────────────────────────────────────── */}
+      {/* -- Main header bar ------------------------------------------------- */}
       <header
         className={`sticky top-0 z-40 bg-fj-cream/95 backdrop-blur-sm border-b border-fj-neutral-200 ${className}`.trim()}
       >
@@ -188,7 +295,7 @@ export default function SiteHeader({
             {/* Desktop nav */}
             <nav aria-label="Primary" className="hidden items-center gap-0.5 md:flex">
 
-              {/* ── Services trigger + mega-dropdown ── */}
+              {/* Services trigger + mega-dropdown */}
               <div
                 className="relative"
                 onMouseEnter={() => openDrop('services')}
@@ -224,7 +331,7 @@ export default function SiteHeader({
                             Web Services
                           </p>
                           <div className="space-y-0.5">
-                            {WEB_SERVICES.map((s) => (
+                            {cfg.webServices.map((s) => (
                               <ServiceCard key={s.href} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
                             ))}
                           </div>
@@ -236,7 +343,7 @@ export default function SiteHeader({
                             AI Services
                           </p>
                           <div className="space-y-0.5">
-                            {AI_SERVICES.map((s) => (
+                            {cfg.aiServices.map((s) => (
                               <ServiceCard key={s.href} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
                             ))}
                           </div>
@@ -252,13 +359,13 @@ export default function SiteHeader({
                               Why FactoryJet
                             </p>
                             <p className="font-fj-display text-[19px] font-semibold leading-tight text-white">
-                              7-Day Delivery Guarantee
+                              {cfg.featuredHeadline}
                             </p>
                             <p className="mt-2 font-fj-body text-[12px] leading-relaxed text-white/75">
-                              Up to 5-page sites shipped in 7 days — or your money back. 60–70% cheaper than US agencies.
+                              {cfg.featuredBody}
                             </p>
                             <ul className="mt-4 space-y-2">
-                              {['500+ US businesses served', '25+ years of expertise', 'No hidden fees'].map((item) => (
+                              {cfg.featuredStats.map((item) => (
                                 <li key={item} className="flex items-center gap-2">
                                   <span className="flex h-[18px] w-[18px] flex-shrink-0 items-center justify-center rounded-full bg-white/20">
                                     <svg width="8" height="6" viewBox="0 0 8 6" fill="none" aria-hidden="true">
@@ -271,10 +378,10 @@ export default function SiteHeader({
                             </ul>
                           </div>
                           <Link
-                            href="/us/pricing"
+                            href={cfg.featuredCtaHref}
                             className="mt-5 flex items-center gap-1.5 font-fj-body text-[12.5px] font-semibold text-white/80 transition-colors hover:text-white"
                           >
-                            See pricing
+                            {cfg.featuredCtaLabel}
                             <ArrowRight size={13} strokeWidth={2} />
                           </Link>
                         </div>
@@ -285,7 +392,7 @@ export default function SiteHeader({
                 )}
               </div>
 
-              {/* ── Locations trigger + dropdown ── */}
+              {/* Locations trigger + dropdown */}
               <div
                 className="relative"
                 onMouseEnter={() => openDrop('locations')}
@@ -314,12 +421,12 @@ export default function SiteHeader({
                   >
                     <div className="w-[300px] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white p-5 shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
                       <p className="mb-3 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
-                        US Cities We Serve
+                        {cfg.locationsLabel}
                       </p>
                       <div className="grid grid-cols-2 gap-1">
-                        {LOCATIONS.map((loc) => (
+                        {cfg.locations.map((loc) => (
                           <Link
-                            key={loc.href}
+                            key={`${loc.href}-${loc.label}`}
                             href={loc.href}
                             className="group flex items-center gap-2 rounded-lg px-2.5 py-2 transition-colors hover:bg-[#F05A28]/5"
                           >
@@ -336,15 +443,15 @@ export default function SiteHeader({
                 )}
               </div>
 
-              {/* ── Flat nav links ── */}
+              {/* Flat nav links */}
               <Link
-                href="/us/portfolio"
+                href={cfg.portfolioHref}
                 className="rounded-lg px-3 py-2 font-fj-body text-[14.5px] text-fj-ink transition-colors hover:bg-fj-neutral-100 hover:text-[#F05A28]"
               >
                 Portfolio
               </Link>
               <Link
-                href="/us/pricing"
+                href={cfg.pricingHref}
                 className="rounded-lg px-3 py-2 font-fj-body text-[14.5px] text-fj-ink transition-colors hover:bg-fj-neutral-100 hover:text-[#F05A28]"
               >
                 Pricing
@@ -373,7 +480,7 @@ export default function SiteHeader({
                 className="hidden items-center justify-center rounded-full px-5 py-2.5 font-fj-body text-[14px] font-semibold text-white transition-opacity hover:opacity-90 md:inline-flex"
                 style={{ background: '#F05A28' }}
               >
-                {cta?.label ?? 'Free Strategy Call'}
+                {cta?.label ?? cfg.defaultCtaLabel}
               </button>
             </div>
 
@@ -381,7 +488,7 @@ export default function SiteHeader({
         </div>
       </header>
 
-      {/* ── Mobile drawer ───────────────────────────────────────────────────── */}
+      {/* -- Mobile drawer --------------------------------------------------- */}
 
       {/* Backdrop */}
       <div
@@ -405,11 +512,11 @@ export default function SiteHeader({
         {/* Drawer header */}
         <div className="flex h-16 flex-shrink-0 items-center justify-between border-b border-fj-neutral-100 px-5">
           <Link
-            href="/"
+            href={logoHref}
             onClick={() => setMobileOpen(false)}
             className="font-fj-display text-[20px] font-medium text-fj-ink"
           >
-            FactoryJet
+            {logoText}
           </Link>
           <button
             type="button"
@@ -444,7 +551,7 @@ export default function SiteHeader({
                 <p className="mb-1 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">
                   Web Services
                 </p>
-                {WEB_SERVICES.map((s) => (
+                {cfg.webServices.map((s) => (
                   <Link
                     key={s.href}
                     href={s.href}
@@ -458,7 +565,7 @@ export default function SiteHeader({
                 <p className="mb-1 mt-3 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">
                   AI Services
                 </p>
-                {AI_SERVICES.map((s) => (
+                {cfg.aiServices.map((s) => (
                   <Link
                     key={s.href}
                     href={s.href}
@@ -490,9 +597,9 @@ export default function SiteHeader({
             </button>
             {mobileLocationsOpen && (
               <div className="grid grid-cols-2 gap-1 pb-3">
-                {LOCATIONS.map((loc) => (
+                {cfg.locations.map((loc) => (
                   <Link
-                    key={loc.href}
+                    key={`${loc.href}-${loc.label}`}
                     href={loc.href}
                     onClick={() => setMobileOpen(false)}
                     className="flex items-center gap-1.5 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]"
@@ -508,14 +615,14 @@ export default function SiteHeader({
 
           {/* Flat links */}
           <Link
-            href="/us/portfolio"
+            href={cfg.portfolioHref}
             onClick={() => setMobileOpen(false)}
             className="block border-b border-fj-neutral-100 py-4 font-fj-body text-[15px] font-semibold text-fj-ink transition-colors hover:text-[#F05A28]"
           >
             Portfolio
           </Link>
           <Link
-            href="/us/pricing"
+            href={cfg.pricingHref}
             onClick={() => setMobileOpen(false)}
             className="block border-b border-fj-neutral-100 py-4 font-fj-body text-[15px] font-semibold text-fj-ink transition-colors hover:text-[#F05A28]"
           >
@@ -530,12 +637,12 @@ export default function SiteHeader({
             type="button"
             onClick={() => {
               setMobileOpen(false);
-              openModal('us');
+              openModal(cfg.modalRegion);
             }}
             className="flex w-full items-center justify-center rounded-full py-3.5 font-fj-body text-[15px] font-semibold text-white transition-opacity hover:opacity-90"
             style={{ background: '#F05A28' }}
           >
-            Free Strategy Call
+            {cfg.defaultCtaLabel}
           </button>
         </div>
 

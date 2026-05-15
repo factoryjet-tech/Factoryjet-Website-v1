@@ -24,13 +24,15 @@ export interface SiteFooterColumn {
   links: ReadonlyArray<SiteFooterLink>;
 }
 
+export type SiteFooterLocale = 'us' | 'in' | 'uae';
+
 export interface SiteFooterProps {
+  /** Controls which locale's default link columns are used when no explicit
+   *  `linkColumns` prop is passed. Default: 'in' (India/global routes). */
+  locale?: SiteFooterLocale;
   logoText?: string;
   tagline?: string;
-  /** Defaults exclude a Locations column post-M1.d.3 — the previous default
-   *  hardcoded UK cities, which broke the locale-agnostic v2 contract. Pass
-   *  an explicit `linkColumns` array (typically including a Locations column
-   *  with the relevant per-locale city list) when locale routing is needed. */
+  /** Explicit column override — takes precedence over `locale` defaults. */
   linkColumns?: ReadonlyArray<SiteFooterColumn>;
   bottomRow?: {
     copyright?: string;
@@ -40,33 +42,80 @@ export interface SiteFooterProps {
   className?: string;
 }
 
-const DEFAULT_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
+// ─── India / global default columns ──────────────────────────────────────────
+const IN_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
   {
     heading: 'Services',
     links: [
-      { label: 'Web Design', href: '/services/web-design' },
-      { label: 'E-Commerce', href: '/services/ecommerce-development' },
+      { label: 'Web Design',           href: '/services/web-design' },
+      { label: 'E-Commerce',           href: '/services/ecommerce-development' },
+      { label: 'Shopify Development',  href: '/services/shopify-development' },
       { label: 'AI Agent Development', href: '/services/ai-agent-development' },
-      { label: 'AI SEO (GEO/AEO)', href: '/services/ai-seo' },
-      { label: 'Shopify Development', href: '/services/shopify-development' },
     ],
   },
   {
     heading: 'Company',
     links: [
-      { label: 'About', href: '/about' },
-      { label: 'Portfolio', href: '/portfolio' },
+      { label: 'About',        href: '/about' },
+      { label: 'Portfolio',    href: '/portfolio' },
       { label: 'Case Studies', href: '/case' },
-      { label: 'Blog', href: '/blog' },
-      { label: 'Contact', href: '/contact' },
+      { label: 'Blog',         href: '/blog' },
+      { label: 'Contact',      href: '/contact' },
     ],
   },
-  // M1.d.3: Locations column removed from defaults. The previous default
-  // hardcoded country-specific cities, which broke the locale-agnostic v2
-  // contract. Callers pass an explicit Locations column with the relevant
-  // per-locale city list via the `linkColumns` prop when locale routing
-  // requires it.
+  {
+    heading: 'Locations',
+    links: [
+      { label: 'Mumbai',    href: '/services/web-design/mumbai' },
+      { label: 'Delhi',     href: '/services/web-design/delhi' },
+      { label: 'Bangalore', href: '/services/web-design/bangalore' },
+      { label: 'Chennai',   href: '/services/web-design/chennai' },
+      { label: 'Hyderabad', href: '/services/web-design/hyderabad' },
+      { label: 'Pune',      href: '/services/web-design/pune' },
+      { label: 'Ahmedabad', href: '/services/web-design/ahmedabad' },
+    ],
+  },
 ];
+
+// ─── UAE default columns ──────────────────────────────────────────────────────
+const UAE_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
+  {
+    heading: 'Services',
+    links: [
+      { label: 'Web Design',           href: '/services/web-design' },
+      { label: 'E-Commerce',           href: '/services/ecommerce-development' },
+      { label: 'Shopify Development',  href: '/services/shopify-development' },
+      { label: 'AI Agent Development', href: '/services/ai-agent-development' },
+    ],
+  },
+  {
+    heading: 'Company',
+    links: [
+      { label: 'About',     href: '/about' },
+      { label: 'Portfolio', href: '/portfolio' },
+      { label: 'Blog',      href: '/blog' },
+      { label: 'Contact',   href: '/contact' },
+    ],
+  },
+  {
+    heading: 'UAE',
+    links: [
+      { label: 'Dubai',     href: '/uae' },
+      { label: 'Abu Dhabi', href: '/uae' },
+      { label: 'Sharjah',   href: '/uae' },
+    ],
+  },
+];
+
+// ─── Locale column map ────────────────────────────────────────────────────────
+const LOCALE_COLUMNS: Record<SiteFooterLocale, ReadonlyArray<SiteFooterColumn>> = {
+  in:  IN_COLUMNS,
+  uae: UAE_COLUMNS,
+  us:  IN_COLUMNS, // US pages always pass explicit linkColumns; this is a safe fallback
+};
+
+/** @deprecated kept for backwards-compat — callers should pass locale prop instead */
+const DEFAULT_COLUMNS = IN_COLUMNS;
 
 const DEFAULT_BOTTOM_ROW = {
   copyright: '© 2026 FactoryJet Technologies',
@@ -77,13 +126,16 @@ const DEFAULT_BOTTOM_ROW = {
 };
 
 export default function SiteFooter({
+  locale = 'in',
   logoText = 'FactoryJet',
   tagline = 'AI-native digital agency for SMBs.',
-  linkColumns = DEFAULT_COLUMNS,
+  linkColumns,
   bottomRow = DEFAULT_BOTTOM_ROW,
   variant = 'light',
   className = '',
 }: SiteFooterProps) {
+  // Explicit linkColumns prop takes precedence; fall back to locale-based defaults
+  const resolvedColumns = linkColumns ?? LOCALE_COLUMNS[locale] ?? DEFAULT_COLUMNS;
   const isDark = variant === 'dark';
 
   /* Variant-conditional Tailwind class lookups — kept in named consts for
@@ -126,7 +178,7 @@ export default function SiteFooter({
 
           {/* Link columns (8 of 12, 3 cols inside) */}
           <div className="grid grid-cols-1 gap-12 sm:grid-cols-3 lg:col-span-8 lg:gap-8">
-            {linkColumns.map((col) => (
+            {resolvedColumns.map((col) => (
               <div key={col.heading}>
                 <p
                   className={`font-fj-body text-[12px] font-semibold uppercase tracking-[0.14em] ${headingClass}`}

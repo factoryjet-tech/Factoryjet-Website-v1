@@ -138,9 +138,9 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
 
-      <SiteHeader />
+      <SiteHeader locale="uae" />
       <UaePage />
-      <SiteFooter />
+      <SiteFooter locale="uae" />
     </>
   )
 }

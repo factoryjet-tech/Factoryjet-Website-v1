@@ -84,9 +84,9 @@ export default async function Page({ params }: Props) {
         { name: 'Case Studies', url: 'https://factoryjet.com/case' },
         { name: caseStudy.title, url: `https://factoryjet.com/case/${resolvedParams.slug}` },
       ]} />
-      <SiteHeader />
+      <SiteHeader locale="in" />
       <CaseStudyPage caseStudy={caseStudy} />
-      <SiteFooter />
+      <SiteFooter locale="in" />
     </>
   )
 }
