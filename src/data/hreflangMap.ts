@@ -98,6 +98,24 @@ export const aiAgencyAlternates = {
   'x-default': 'https://factoryjet.com/us/services/ai-agency',
 } as const
 
+/** Small Business Website Design service page (US only — no India equivalent) */
+export const smallBusinessWebDesignAlternates = {
+  'en-US': 'https://factoryjet.com/us/services/small-business-website-design',
+  'x-default': 'https://factoryjet.com/us/services/small-business-website-design',
+} as const
+
+/** Magento Development service page (US only — no India equivalent) */
+export const magentoDevelopmentAlternates = {
+  'en-US': 'https://factoryjet.com/us/services/magento-development',
+  'x-default': 'https://factoryjet.com/us/services/magento-development',
+} as const
+
+/** WooCommerce Development service page (US only — no India equivalent) */
+export const woocommerceDevelopmentAlternates = {
+  'en-US': 'https://factoryjet.com/us/services/woocommerce-development',
+  'x-default': 'https://factoryjet.com/us/services/woocommerce-development',
+} as const
+
 // ===========================================================================
 // CITY-SPECIFIC SERVICE PAGES
 // ===========================================================================
