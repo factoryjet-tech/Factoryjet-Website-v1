@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import Image from 'next/image';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import { aiAgencyAlternates } from '@/data/hreflangMap';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
@@ -57,6 +58,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/us/services/ai-agency',
+    languages: aiAgencyAlternates,
   },
   robots: {
     index: true,

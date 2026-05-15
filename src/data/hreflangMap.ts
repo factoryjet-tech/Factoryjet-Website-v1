@@ -86,6 +86,12 @@ export const faqAlternates = {
   'x-default': 'https://factoryjet.com/us/faq',
 } as const
 
+/** AI Agency service page (US only — no India equivalent) */
+export const aiAgencyAlternates = {
+  'en-US': 'https://factoryjet.com/us/services/ai-agency',
+  'x-default': 'https://factoryjet.com/us/services/ai-agency',
+} as const
+
 // ===========================================================================
 // CITY-SPECIFIC SERVICE PAGES
 // ===========================================================================
