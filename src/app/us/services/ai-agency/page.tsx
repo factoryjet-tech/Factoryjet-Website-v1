@@ -1056,7 +1056,7 @@ export default function AIAgencyPage() {
         <ServiceJourneyRow
           eyebrow="HOW WE WORK"
           headline="From Free Strategy Call to Production AI — Here's Every Step"
-          lead="No black boxes, no "we'll show you when it's done." Every stage has a deliverable you review before we move forward. Fixed scope, fixed price, and a working AI system at the end — not a slide deck about one."
+          lead={`No black boxes, no "we'll show you when it's done." Every stage has a deliverable you review before we move forward. Fixed scope, fixed price, and a working AI system at the end — not a slide deck about one.`}
           stages={JOURNEY_STAGES}
           closingNote="5 STAGES · 2–12 WEEKS TO FIRST PRODUCTION AI · FREE STRATEGY CALL BEFORE ANY COMMITMENT"
         />
