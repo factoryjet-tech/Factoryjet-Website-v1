@@ -157,7 +157,7 @@ export default function Page() {
             {
               icon: 'zap',
               title: 'Launch While Others Plan',
-              description: 'Lincoln agencies are booking into next quarter. We launch your store in 7 days. While they're in kickoff meetings, you're already making sales.',
+              description: "Lincoln agencies are booking into next quarter. We launch your store in 7 days. While they're in kickoff meetings, you're already making sales.",
             },
             {
               icon: 'dollar-sign',
@@ -167,7 +167,7 @@ export default function Page() {
             {
               icon: 'trending-up',
               title: 'Built to Convert',
-              description: 'Pretty stores that don't convert are expensive billboards. Every section, CTA, and checkout flow is optimized around conversion data from 500+ stores we've launched.',
+              description: "Pretty stores that don't convert are expensive billboards. Every section, CTA, and checkout flow is optimized around conversion data from 500+ stores we've launched.",
             },
           ]}
         />
@@ -336,7 +336,7 @@ export default function Page() {
             {
               icon: 'shirt',
               title: 'University Apparel & Merch',
-              description: 'Husker merchandise, campus brands, and alumni goods businesses serving UNL's 25,000+ students and massive national fan base.',
+              description: "Husker merchandise, campus brands, and alumni goods businesses serving UNL's 25,000+ students and massive national fan base.",
             },
             {
               icon: 'package',
@@ -356,7 +356,7 @@ export default function Page() {
             {
               icon: 'heart',
               title: 'Health & Wellness',
-              description: 'Supplement brands, fitness studios, and wellness businesses serving Lincoln's health-conscious university and professional market.',
+              description: "Supplement brands, fitness studios, and wellness businesses serving Lincoln's health-conscious university and professional market.",
             },
           ]}
         />

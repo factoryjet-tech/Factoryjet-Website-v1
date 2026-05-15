@@ -157,7 +157,7 @@ export default function Page() {
             {
               icon: 'zap',
               title: 'Speed Without Compromise',
-              description: 'Boise's market moves fast — new brands launch every week. We get you live in 7 days with a store that looks like it cost three times as much. Your competitors are still in agency kickoff meetings.',
+              description: "Boise's market moves fast — new brands launch every week. We get you live in 7 days with a store that looks like it cost three times as much. Your competitors are still in agency kickoff meetings.",
             },
             {
               icon: 'shield',
@@ -167,7 +167,7 @@ export default function Page() {
             {
               icon: 'trending-up',
               title: 'Conversion-Focused',
-              description: 'A store that looks good but doesn't convert is an expensive hobby. Every design decision we make — layout, CTAs, checkout flow, upsells — is grounded in e-commerce conversion data from 500+ stores.',
+              description: "A store that looks good but doesn't convert is an expensive hobby. Every design decision we make — layout, CTAs, checkout flow, upsells — is grounded in e-commerce conversion data from 500+ stores.",
             },
           ]}
         />
@@ -331,7 +331,7 @@ export default function Page() {
             {
               icon: 'mountain',
               title: 'Outdoor & Adventure',
-              description: 'Gear brands, apparel companies, and outdoor adventure businesses serving Idaho's active lifestyle community.',
+              description: "Gear brands, apparel companies, and outdoor adventure businesses serving Idaho's active lifestyle community.",
             },
             {
               icon: 'tractor',
@@ -351,12 +351,12 @@ export default function Page() {
             {
               icon: 'home',
               title: 'Home & Living',
-              description: 'Idaho-made furniture, home décor, and artisan goods brands selling to Treasure Valley's growing homeowner market.',
+              description: "Idaho-made furniture, home décor, and artisan goods brands selling to Treasure Valley's growing homeowner market.",
             },
             {
               icon: 'cpu',
               title: 'Tech & SaaS Products',
-              description: 'Boise's growing tech sector — hardware products, tech accessories, and SaaS companies with physical product lines.',
+              description: "Boise's growing tech sector — hardware products, tech accessories, and SaaS companies with physical product lines.",
             },
           ]}
         />

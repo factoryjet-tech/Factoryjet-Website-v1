@@ -97,7 +97,7 @@ export default function Page() {
             {
               stat: '7 Days',
               label: 'Store Goes Live',
-              description: 'From kickoff to a fully live Shopify store in one week — guaranteed. While other agencies schedule you for next quarter, you're already selling.',
+              description: "From kickoff to a fully live Shopify store in one week — guaranteed. While other agencies schedule you for next quarter, you're already selling.",
             },
             {
               stat: '60% Less',
@@ -162,12 +162,12 @@ export default function Page() {
             {
               icon: 'shield',
               title: 'Fixed Price, Always',
-              description: 'You know exactly what you're paying before you pay anything. No hourly surprises, no scope changes, no "we need another $2K." What we quote is what you pay.',
+              description: 'You know exactly what you\'re paying before you pay anything. No hourly surprises, no scope changes, no "we need another $2K." What we quote is what you pay.',
             },
             {
               icon: 'trending-up',
               title: 'Revenue-First Design',
-              description: 'Every design decision — layout, CTAs, checkout flow, product pages — is made to maximize conversion. A store that looks good but doesn't sell is just an expensive photo gallery.',
+              description: "Every design decision — layout, CTAs, checkout flow, product pages — is made to maximize conversion. A store that looks good but doesn't sell is just an expensive photo gallery.",
             },
           ]}
         />
@@ -341,7 +341,7 @@ export default function Page() {
             {
               icon: 'heart',
               title: 'Health Systems & Wellness',
-              description: 'Sanford Health and Avera's supplier networks, wellness brands, and health-product companies serving SD's growing market.',
+              description: "Sanford Health and Avera's supplier networks, wellness brands, and health-product companies serving SD's growing market.",
             },
             {
               icon: 'store',

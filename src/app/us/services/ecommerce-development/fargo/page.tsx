@@ -167,7 +167,7 @@ export default function Page() {
             {
               icon: 'trending-up',
               title: 'Built to Convert',
-              description: 'Beautiful isn't enough. Every section, button, and product page is designed around conversion rate optimization principles — because a store that doesn't sell isn't a store, it's a brochure.',
+              description: "Beautiful isn't enough. Every section, button, and product page is designed around conversion rate optimization principles — because a store that doesn't sell isn't a store, it's a brochure.",
             },
           ]}
         />
