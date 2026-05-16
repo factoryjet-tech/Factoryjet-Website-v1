@@ -270,7 +270,14 @@ export default function HomePageV2() {
       <LogoBar tagline="Trusted by 500+ businesses across India, the US, and the UK" />
 
       {/* 3 — Big Three Trust Block (cream) */}
-      <BigThreeTrustBlock eyebrow="WHY FACTORYJET" />
+      <BigThreeTrustBlock
+        eyebrow="WHY FACTORYJET"
+        illustrations={{
+          businesses: '/images/trust/businesses.webp',
+          delivery:   '/images/trust/delivery.webp',
+          savings:    '/images/trust/savings.webp',
+        }}
+      />
 
       {/* 4 — Services Grid (white) */}
       <ServicesGrid />

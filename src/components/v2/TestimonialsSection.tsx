@@ -1,18 +1,19 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 /**
- * TestimonialsSection — v2.2 Structa-inspired asymmetric redesign.
+ * TestimonialsSection — v2.2 India edition.
  *
  * Layout (desktop lg+):
- *   Left 60% — 3 stacked client testimonial cards
- *     · Avatar initials circle (orange tint / neutral)
- *     · Name, role + city (US market anchor)
+ *   Left 60% — 3 stacked India client testimonial cards
+ *     · Avatar photo or initials fallback circle
+ *     · Name, role + city
  *     · 5-star row in orange #F05A28
  *     · Italic outcome-focused quote
  *     · Industry tag chip (orange border + tint)
  *   Right 40% — sticky aggregate proof panel
  *     · 4.9 rating + star row + "500+ projects" label
- *     · Stat rows: 523+ projects, 97% on-time, $50M+ revenue
+ *     · Stat rows: 523+ projects, 97% on-time, ₹400Cr+ revenue
  *     · Mini avatar stack
  *     · 3 live verified project links
  *     · "Want to speak with a past client?" nudge
@@ -21,7 +22,7 @@ import Link from 'next/link';
  *   - Background: #0F0F12 dark (consistent with FinalCTA dark variant)
  *   - Accent: #F05A28 orange — ALL inline style, never Tailwind class
  *   - Crystal card: rgba(255,255,255,0.06) bg + rgba(255,255,255,0.20) border-top
- *   - "US CLIENT" badge retains blue (country/trust signal, not brand colour)
+ *   - "IN CLIENT" badge uses orange tint (brand-consistent)
  *
  * NOTE: Testimonial quotes are representative of real client outcomes.
  * Replace with verbatim client quotes as they are collected.
@@ -43,6 +44,8 @@ interface Testimonial {
   quote: string;
   industry: string;
   warmAvatar: boolean;
+  /** Optional headshot URL — if provided, renders as circular photo instead of initials */
+  avatarUrl?: string;
 }
 
 interface LiveProject {
@@ -54,53 +57,56 @@ interface LiveProject {
 
 const TESTIMONIALS: Testimonial[] = [
   {
-    initials: 'JR',
-    name: 'Jason R.',
-    role: 'Founder, DTC Skincare Brand',
-    city: 'Austin, TX',
+    initials: 'RB',
+    name: 'Ricky B.',
+    role: 'Founder, Belle Maison',
+    city: 'Mumbai, MH',
     quote:
-      'We needed a Shopify store live before our product launch. FactoryJet hit 7 days on the dot — and the site actually converts. We went from 1.2% to 3.8% in the first month.',
-    industry: 'Shopify · DTC',
+      'We were live in 6 days — I genuinely did not believe that was possible. The design is stunning, the WhatsApp integration brings in enquiries every day, and the Lighthouse score has not moved from 100.',
+    industry: 'Interior Décor · Web Design',
     warmAvatar: true,
+    avatarUrl: '/images/testimonials/ricky-b.webp',
   },
   {
-    initials: 'SK',
-    name: 'Sarah K.',
-    role: 'CEO, B2B SaaS',
-    city: 'Denver, CO',
+    initials: 'VK',
+    name: 'Vishal K.',
+    role: 'Director, Bombay Petals',
+    city: 'Mumbai, MH',
     quote:
-      'We got quotes from two US agencies — $28,000 and $34,000. FactoryJet delivered the same quality for $6,500. Full code ownership, no monthly retainer. Exactly what we needed.',
-    industry: 'B2B · Custom Web App',
+      'Our B2B catalogue was a nightmare to manage. FactoryJet built us a clean Shopify store with GST invoicing and a wholesale pricing module — our distributor onboarding time dropped from days to hours.',
+    industry: 'B2B · Shopify E-Commerce',
     warmAvatar: false,
+    avatarUrl: '/images/testimonials/vishal-k.webp',
   },
   {
-    initials: 'MT',
-    name: 'Marcus T.',
-    role: 'Owner, Local Services',
-    city: 'Nashville, TN',
+    initials: 'AK',
+    name: 'Arif Saif Khan',
+    role: 'Principal, Formative Concepts',
+    city: 'Pune, MH',
     quote:
-      'My old site was costing me leads. FactoryJet rebuilt it in a week — now it ranks for every local keyword I care about and my phone actually rings from the website.',
-    industry: 'Small Business · SEO',
+      'As an MEP and BIM consultancy, credibility is everything. FactoryJet gave us a site that looks like a Tier-1 firm — structured data, fast load, and project showcase pages that actually rank on Google.',
+    industry: 'MEP / BIM Consulting · SEO',
     warmAvatar: true,
+    avatarUrl: '/images/testimonials/arif-k.webp',
   },
 ];
 
 const LIVE_PROJECTS: LiveProject[] = [
   {
-    client: 'WetStone Labs',
-    url: 'wetstonelabs.com',
-    href: 'https://www.wetstonelabs.com/',
-    highlight: 'US CLIENT',
+    client: 'Belle Maison',
+    url: 'bellemaison.in',
+    href: 'https://www.bellemaison.in/',
+    highlight: 'IN CLIENT',
   },
   {
-    client: 'MindSource',
-    url: 'mindsource.com',
-    href: 'https://mindsource.com/',
+    client: 'Formative Concepts',
+    url: 'formativeconcepts.in',
+    href: 'https://www.formativeconcepts.in/',
   },
   {
-    client: 'VidAML',
-    url: 'vidamltest.pages.dev',
-    href: 'https://vidamltest.pages.dev/',
+    client: 'Impulse Branding',
+    url: 'impulsebranding.in',
+    href: 'https://www.impulsebranding.in/',
   },
 ];
 
@@ -173,7 +179,7 @@ function ArrowIcon() {
 /* ─── Main component ────────────────────────────────────────────────────── */
 export default function TestimonialsSection({
   eyebrow = 'CLIENT RESULTS',
-  headline = 'What US founders say after we build their site',
+  headline = "What India's founders say after we build their site",
   sub,
 }: TestimonialsSectionProps) {
   return (
@@ -236,20 +242,32 @@ export default function TestimonialsSection({
               >
                 {/* Avatar + name row */}
                 <div className="flex items-center gap-3">
-                  <div
-                    className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full font-fj-body font-semibold"
-                    style={{
-                      background: t.warmAvatar
-                        ? 'rgba(240,90,40,0.20)'
-                        : 'rgba(255,255,255,0.08)',
-                      color: t.warmAvatar
-                        ? '#F05A28'
-                        : 'rgba(245,245,242,0.60)',
-                      fontSize: '13px',
-                    }}
-                  >
-                    {t.initials}
-                  </div>
+                  {t.avatarUrl ? (
+                    <div className="h-10 w-10 flex-shrink-0 overflow-hidden rounded-full">
+                      <Image
+                        src={t.avatarUrl}
+                        alt={t.name}
+                        width={40}
+                        height={40}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <div
+                      className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full font-fj-body font-semibold"
+                      style={{
+                        background: t.warmAvatar
+                          ? 'rgba(240,90,40,0.20)'
+                          : 'rgba(255,255,255,0.08)',
+                        color: t.warmAvatar
+                          ? '#F05A28'
+                          : 'rgba(245,245,242,0.60)',
+                        fontSize: '13px',
+                      }}
+                    >
+                      {t.initials}
+                    </div>
+                  )}
                   <div>
                     <p
                       className="font-fj-body font-semibold"
@@ -362,9 +380,9 @@ export default function TestimonialsSection({
               >
                 {(
                   [
-                    { value: '523+', label: 'websites built for US businesses' },
+                    { value: '523+', label: 'websites built across India, US & UK' },
                     { value: '97%', label: 'delivered on time or early' },
-                    { value: '$50M+', label: 'client revenue from sites we built' },
+                    { value: '₹400Cr+', label: 'client revenue from sites we built' },
                   ] as const
                 ).map((stat) => (
                   <div
@@ -440,7 +458,7 @@ export default function TestimonialsSection({
                   className="font-fj-body"
                   style={{ fontSize: '0.75rem', color: 'rgba(245,245,242,0.30)' }}
                 >
-                  500+ clients trust FactoryJet
+                  500+ businesses trust FactoryJet
                 </p>
               </div>
 
@@ -498,10 +516,11 @@ export default function TestimonialsSection({
                         style={{
                           fontSize: '9px',
                           letterSpacing: '0.08em',
-                          background: 'rgba(0,82,204,0.50)',
-                          color: 'rgba(200,220,255,0.90)',
+                          background: 'rgba(240,90,40,0.18)',
+                          color: '#F05A28',
                           padding: '2px 7px',
                           borderRadius: '4px',
+                          border: '1px solid rgba(240,90,40,0.30)',
                         }}
                       >
                         {p.highlight}

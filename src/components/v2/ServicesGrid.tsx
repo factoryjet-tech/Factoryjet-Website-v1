@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import {
   Globe,
@@ -33,6 +34,8 @@ interface Service {
   primaryCta: { label: string; href: string };
   secondaryCta: { label: string; href: string };
   icon: React.ReactNode;
+  /** Optional background image path (public/images/services/…) rendered at low opacity */
+  imageSrc?: string;
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -68,6 +71,7 @@ const SERVICES: Service[] = [
     primaryCta: { label: 'See web design services', href: '/us/services/web-design' },
     secondaryCta: { label: 'Book a free call', href: '/contact' },
     icon: <Globe size={ICON_SIZE} />,
+    imageSrc: '/images/services/web-design.webp',
   },
   {
     id: 2,
@@ -89,6 +93,7 @@ const SERVICES: Service[] = [
     primaryCta: { label: 'See redesign services', href: '/us/services/website-redesign' },
     secondaryCta: { label: 'Book a free call', href: '/contact' },
     icon: <RefreshCw size={ICON_SIZE} />,
+    imageSrc: '/images/services/website-redesign.webp',
   },
   {
     id: 3,
@@ -110,6 +115,7 @@ const SERVICES: Service[] = [
     primaryCta: { label: 'See Shopify services', href: '/us/services/shopify-development' },
     secondaryCta: { label: 'Book a free call', href: '/contact' },
     icon: <ShoppingCart size={ICON_SIZE} />,
+    imageSrc: '/images/services/shopify.webp',
   },
   {
     id: 4,
@@ -131,6 +137,7 @@ const SERVICES: Service[] = [
     primaryCta: { label: 'See e-commerce services', href: '/us/services/ecommerce-development' },
     secondaryCta: { label: 'Book a free call', href: '/contact' },
     icon: <CreditCard size={ICON_SIZE} />,
+    imageSrc: '/images/services/custom-ecommerce.webp',
   },
   {
     id: 5,
@@ -152,6 +159,7 @@ const SERVICES: Service[] = [
     primaryCta: { label: 'See AI agent services', href: '/us/services/ai-agents' },
     secondaryCta: { label: 'Book a free call', href: '/contact' },
     icon: <Bot size={ICON_SIZE} />,
+    imageSrc: '/images/services/ai-agents.webp',
   },
   {
     id: 6,
@@ -173,6 +181,7 @@ const SERVICES: Service[] = [
     primaryCta: { label: 'Learn about AI SEO', href: '/contact' },
     secondaryCta: { label: 'Book a free call', href: '/contact' },
     icon: <BarChart2 size={ICON_SIZE} />,
+    imageSrc: '/images/services/ai-seo.webp',
   },
   {
     id: 7,
@@ -194,6 +203,7 @@ const SERVICES: Service[] = [
     primaryCta: { label: 'Explore AI Creative Studio', href: '/contact' },
     secondaryCta: { label: 'Book a free call', href: '/contact' },
     icon: <Sparkles size={ICON_SIZE} />,
+    imageSrc: '/images/services/ai-creative.webp',
   },
 ];
 
@@ -433,6 +443,29 @@ export default function ServicesGrid() {
                     'linear-gradient(145deg, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.86) 100%)',
                 }}
               >
+                {/* Background service image — rendered per active service at 12% opacity */}
+                {activeService.imageSrc && (
+                  <div
+                    aria-hidden="true"
+                    style={{
+                      position: 'absolute',
+                      inset: 0,
+                      zIndex: 0,
+                      pointerEvents: 'none',
+                      opacity: 0.12,
+                    }}
+                  >
+                    <Image
+                      key={activeService.id}
+                      src={activeService.imageSrc}
+                      alt=""
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 60vw"
+                      className="object-cover object-center"
+                    />
+                  </div>
+                )}
+
                 {/* Pre-blurred colour blobs for crystal depth */}
                 <div
                   aria-hidden="true"
