@@ -62,6 +62,55 @@ export const metadata: Metadata = {
   },
 }
 
+const CHN_COMPARISON_COLUMNS = [
+  { label: 'FactoryJet', isFactoryJet: true },
+  { label: 'Chennai Agency' },
+  { label: 'Freelancer' },
+] as const;
+
+const CHN_COMPARISON_ROWS = [
+  {
+    feature: 'Starting price',
+    values: ['₹25,000', '₹80,000+', '₹15,000–₹40,000'],
+  },
+  {
+    feature: 'Delivery timeline',
+    values: ['7 days', '6–12 weeks', '3–8 weeks'],
+  },
+  {
+    feature: 'Lighthouse 100 score',
+    values: [
+      <CompareIcon key="fj" kind="yes" />,
+      <CompareIcon key="ca" kind="no" />,
+      <CompareIcon key="fr" kind="partial" />,
+    ],
+  },
+  {
+    feature: 'B2B / Industrial expertise',
+    values: [
+      <CompareIcon key="fj" kind="yes" />,
+      <CompareIcon key="ca" kind="partial" />,
+      <CompareIcon key="fr" kind="partial" />,
+    ],
+  },
+  {
+    feature: 'Fixed-price guarantee',
+    values: [
+      <CompareIcon key="fj" kind="yes" />,
+      <CompareIcon key="ca" kind="no" />,
+      <CompareIcon key="fr" kind="no" />,
+    ],
+  },
+  {
+    feature: 'Post-launch support',
+    values: [
+      <CompareIcon key="fj" kind="yes" />,
+      <CompareIcon key="ca" kind="partial" />,
+      <CompareIcon key="fr" kind="no" />,
+    ],
+  },
+];
+
 export default function Page() {
   const localBusinessSchema = {
     '@context': 'https://schema.org',
@@ -215,57 +264,6 @@ export default function Page() {
       step: '04',
       title: 'Review & Launch',
       description: 'You review, we refine, and your site goes live — typically within 7 days of kickoff.',
-    },
-  ]
-
-  const comparisonRows = [
-    {
-      feature: 'Delivery Time',
-      columns: [
-        { label: 'FactoryJet', isFactoryJet: true, value: <CompareIcon type="text" text="7 days" /> },
-        { label: 'Chennai Agency', value: <CompareIcon type="text" text="6–12 weeks" /> },
-        { label: 'Freelancer', value: <CompareIcon type="text" text="3–8 weeks" /> },
-      ],
-    },
-    {
-      feature: 'Starting Price',
-      columns: [
-        { label: 'FactoryJet', isFactoryJet: true, value: <CompareIcon type="text" text="₹25,000" /> },
-        { label: 'Chennai Agency', value: <CompareIcon type="text" text="₹80,000+" /> },
-        { label: 'Freelancer', value: <CompareIcon type="text" text="₹15,000–₹40,000" /> },
-      ],
-    },
-    {
-      feature: 'Lighthouse 100 Score',
-      columns: [
-        { label: 'FactoryJet', isFactoryJet: true, value: <CompareIcon type="check" /> },
-        { label: 'Chennai Agency', value: <CompareIcon type="cross" /> },
-        { label: 'Freelancer', value: <CompareIcon type="partial" /> },
-      ],
-    },
-    {
-      feature: 'B2B / Industrial Expertise',
-      columns: [
-        { label: 'FactoryJet', isFactoryJet: true, value: <CompareIcon type="check" /> },
-        { label: 'Chennai Agency', value: <CompareIcon type="partial" /> },
-        { label: 'Freelancer', value: <CompareIcon type="partial" /> },
-      ],
-    },
-    {
-      feature: 'Fixed-Price Guarantee',
-      columns: [
-        { label: 'FactoryJet', isFactoryJet: true, value: <CompareIcon type="check" /> },
-        { label: 'Chennai Agency', value: <CompareIcon type="cross" /> },
-        { label: 'Freelancer', value: <CompareIcon type="cross" /> },
-      ],
-    },
-    {
-      feature: 'Post-Launch Support',
-      columns: [
-        { label: 'FactoryJet', isFactoryJet: true, value: <CompareIcon type="check" /> },
-        { label: 'Chennai Agency', value: <CompareIcon type="partial" /> },
-        { label: 'Freelancer', value: <CompareIcon type="cross" /> },
-      ],
     },
   ]
 
@@ -498,7 +496,18 @@ export default function Page() {
       <StrategicDarkSection {...darkSectionProps} />
       <ServiceJourneyRow steps={journeySteps} />
       <PortfolioShowcase />
-      <ComparisonTable rows={comparisonRows} />
+      <ComparisonTable
+          eyebrow="HOW WE COMPARE"
+          headline="FactoryJet vs. Chennai Agency vs. Freelancer"
+          lead="Not all web design options in Chennai deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
+          pullQuote={{
+            stat: '₹25,000',
+            caption: 'starting price — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a ₹80,000+ Chennai agency project.',
+          }}
+          columns={CHN_COMPARISON_COLUMNS}
+          rows={CHN_COMPARISON_ROWS}
+          footer="Prices reflect typical Chennai market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
+        />
       <IndustriesGrid industries={industries} city="Chennai" />
       <PricingTiers tiers={pricingTiers} />
       <TestimonialsSection />
