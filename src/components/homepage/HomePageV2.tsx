@@ -1,4 +1,5 @@
-import HomepageHeroV3 from '@/components/v2/HomepageHeroV3';
+import Hero from '@/components/v2/Hero';
+import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServicesGrid from '@/components/v2/ServicesGrid';
@@ -244,8 +245,26 @@ const JOURNEY_STAGES = [
 export default function HomePageV2() {
   return (
     <>
-      {/* 1 — Hero (cream, light) */}
-      <HomepageHeroV3 />
+      {/* 1 — Hero (cream, light — India v2) */}
+      <Hero
+        announcementPill={{
+          text: 'New: AI SEO now includes Google AI Overviews',
+          href: '#aiseo',
+        }}
+        eyebrow="INDIA'S FASTEST WEB STUDIO"
+        headline={
+          <>
+            Websites &amp; E-Commerce
+            <br className="hidden lg:block" />
+            {' '}for India&apos;s Growing Brands.
+          </>
+        }
+        lead="7-day delivery on Starter sites. Lighthouse 100/100. AI SEO built in from day one. 500+ businesses launched across India, the US, and the UK."
+        primaryCta={{ label: 'Start Your Project', modal: true, region: 'in' }}
+        secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919699977699' }}
+        trustItems={['500+ businesses', '7-day delivery', 'Lighthouse 100/100', '60–70% vs agencies']}
+        rightSlot={<HeroBrowserMockup />}
+      />
 
       {/* 2 — Logo bar (light) */}
       <LogoBar tagline="Trusted by 500+ businesses across India, the US, and the UK" />

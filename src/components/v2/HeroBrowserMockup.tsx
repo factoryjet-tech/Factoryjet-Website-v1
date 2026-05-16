@@ -24,7 +24,7 @@ export default function HeroBrowserMockup({ className = '' }: { className?: stri
           </div>
           <div className="min-w-0 flex-1">
             <div className="truncate rounded-md bg-white px-3 py-1.5 font-mono text-[11px] leading-none text-[#6B7280]">
-              wetstonelabs.com
+              bellemaison.in
             </div>
           </div>
         </div>
@@ -35,21 +35,21 @@ export default function HeroBrowserMockup({ className = '' }: { className?: stri
           {/* Navbar */}
           <div className="flex items-center justify-between bg-[#0F0F12] px-5 py-2.5">
             <div className="flex items-center gap-1.5">
-              <span className="block h-2 w-2 rounded-sm bg-[#0052CC]" />
+              <span className="block h-2 w-2 rounded-sm bg-[#F05A28]" />
               <span className="block h-2 w-14 rounded-sm bg-white/60" />
             </div>
             <div className="flex items-center gap-3">
               <span className="block h-1.5 w-8 rounded-full bg-white/25" />
               <span className="block h-1.5 w-8 rounded-full bg-white/25" />
               <span className="block h-1.5 w-8 rounded-full bg-white/25" />
-              <span className="block h-5 w-20 rounded-md bg-[#0052CC]" />
+              <span className="block h-5 w-20 rounded-md bg-[#F05A28]" />
             </div>
           </div>
 
           {/* Hero area */}
           <div className="px-5 pb-4 pt-5">
             {/* Eyebrow */}
-            <span className="mb-3 block h-1.5 w-20 rounded-full bg-[#0052CC]/60" />
+            <span className="mb-3 block h-1.5 w-20 rounded-full bg-[#F05A28]/60" />
             {/* Headline skeleton */}
             <div className="mb-3 space-y-2">
               <span className="block h-4 w-[95%] rounded-md bg-[#0F0F12]" />
@@ -64,7 +64,7 @@ export default function HeroBrowserMockup({ className = '' }: { className?: stri
             </div>
             {/* CTAs */}
             <div className="flex gap-2.5">
-              <span className="block h-7 w-24 rounded-lg bg-[#0052CC]" />
+              <span className="block h-7 w-24 rounded-lg bg-[#F05A28]" />
               <span className="block h-7 w-20 rounded-lg" style={{ border: '1px solid rgba(15,15,18,0.12)' }} />
             </div>
           </div>
@@ -91,7 +91,7 @@ export default function HeroBrowserMockup({ className = '' }: { className?: stri
           {/* Dark section preview */}
           <div className="px-5 pb-5">
             <div className="overflow-hidden rounded-xl bg-[#0F0F12] p-4">
-              <span className="mb-2 block h-1.5 w-14 rounded-full bg-[#0052CC]/70" />
+              <span className="mb-2 block h-1.5 w-14 rounded-full bg-[#F05A28]/70" />
               <span className="mb-1.5 block h-3 w-[85%] rounded-md bg-white/80" />
               <span className="mb-4 block h-3 w-[65%] rounded-md bg-white/55" />
               <div className="grid grid-cols-3 gap-2">
@@ -124,7 +124,7 @@ export default function HeroBrowserMockup({ className = '' }: { className?: stri
           boxShadow: '0 8px 24px -4px rgba(15,15,18,0.14)',
         }}
       >
-        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#0052CC]">
+        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#F05A28]">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <polyline
               points="22 7 13.5 15.5 8.5 10.5 2 17"
@@ -143,7 +143,7 @@ export default function HeroBrowserMockup({ className = '' }: { className?: stri
           </svg>
         </div>
         <div>
-          <p className="text-[11px] font-bold leading-tight text-[#0F0F12]">98 / 100</p>
+          <p className="text-[11px] font-bold leading-tight text-[#0F0F12]">100 / 100</p>
           <p className="text-[10px] leading-tight text-[#6B7280]">Lighthouse score</p>
         </div>
       </div>
@@ -179,7 +179,7 @@ export default function HeroBrowserMockup({ className = '' }: { className?: stri
         </div>
         <div>
           <p className="text-[11px] font-bold leading-tight text-[#0F0F12]">Live in 6 days</p>
-          <p className="text-[10px] leading-tight text-[#6B7280]">Austin, TX · 2024</p>
+          <p className="text-[10px] leading-tight text-[#6B7280]">Mumbai, IN · 2025</p>
         </div>
       </div>
 
