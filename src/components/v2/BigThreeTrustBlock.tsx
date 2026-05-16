@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 /**
@@ -22,17 +21,10 @@ export interface BigThreeTrustBlockProps {
   headline?: string;
   /** Unused in Option B layout — kept for API compatibility */
   cityCount?: { value: string; label: string; source?: string };
-  /** Optional illustration image paths for the three stats */
-  illustrations?: {
-    businesses?: string;
-    delivery?: string;
-    savings?: string;
-  };
 }
 
 export default function BigThreeTrustBlock({
   eyebrow,
-  illustrations,
 }: BigThreeTrustBlockProps) {
   return (
     <section
@@ -61,20 +53,6 @@ export default function BigThreeTrustBlock({
               </p>
             )}
 
-            {/* Illustration — businesses stat */}
-            {illustrations?.businesses && (
-              <div className="mb-4">
-                <Image
-                  src={illustrations.businesses}
-                  alt=""
-                  width={56}
-                  height={56}
-                  aria-hidden="true"
-                  className="opacity-85"
-                />
-              </div>
-            )}
-
             {/* Hero number */}
             <p
               className="fj-display font-bold"
@@ -95,8 +73,8 @@ export default function BigThreeTrustBlock({
             >
               Websites designed and built for US small businesses, Shopify stores,
               B2B companies, and DTC brands. Affordable web design services —
-              60–70% less than US agencies, your codebase delivered in full,
-              and a 7-day delivery guarantee.
+              60–70% less than US agencies, with full code ownership and a
+              7-day delivery guarantee.
             </p>
 
             {/* CTA pill */}
@@ -110,7 +88,7 @@ export default function BigThreeTrustBlock({
                 boxShadow: '0 4px 18px rgba(240,90,40,0.30)',
               }}
             >
-              Book a strategy call
+              Book a free strategy call
               <span
                 className="inline-flex h-5 w-5 items-center justify-center rounded-full"
                 style={{ background: 'rgba(255,255,255,0.22)' }}
@@ -135,18 +113,6 @@ export default function BigThreeTrustBlock({
 
             {/* Stat 1 — 7-day delivery */}
             <div>
-              {illustrations?.delivery && (
-                <div className="mb-3">
-                  <Image
-                    src={illustrations.delivery}
-                    alt=""
-                    width={48}
-                    height={48}
-                    aria-hidden="true"
-                    className="opacity-85"
-                  />
-                </div>
-              )}
               <div
                 aria-hidden="true"
                 style={{ width: 28, height: 3, background: '#F05A28', borderRadius: 2, marginBottom: 12 }}
@@ -179,18 +145,6 @@ export default function BigThreeTrustBlock({
 
             {/* Stat 2 — 60–70% less */}
             <div>
-              {illustrations?.savings && (
-                <div className="mb-3">
-                  <Image
-                    src={illustrations.savings}
-                    alt=""
-                    width={48}
-                    height={48}
-                    aria-hidden="true"
-                    className="opacity-85"
-                  />
-                </div>
-              )}
               <div
                 aria-hidden="true"
                 style={{ width: 28, height: 3, background: '#F05A28', borderRadius: 2, marginBottom: 12 }}

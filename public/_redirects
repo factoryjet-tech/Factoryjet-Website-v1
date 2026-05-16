@@ -60,21 +60,3 @@
 # City hub redirects (no page.tsx at hub level)
 /us/new-york   /us/new-york/web-design   301
 /us/cleveland  /us/cleveland/web-design  301
-
-# ── INDIA SERVICE URL MIGRATION (2026-05-16) ────────────────────────────────
-# Dropping /services/ prefix from India web-design city pages
-# Old: /services/web-design/[city]  →  New: /web-design/[city]
-/services/web-design                     /web-design                     301
-/services/web-design/ahmedabad           /web-design/ahmedabad           301
-/services/web-design/bangalore           /web-design/bangalore           301
-/services/web-design/chennai             /web-design/chennai             301
-/services/web-design/delhi               /web-design/delhi               301
-/services/web-design/hyderabad           /web-design/hyderabad           301
-/services/web-design/madurai             /web-design/madurai             301
-/services/web-design/mumbai              /web-design/mumbai              301
-/services/web-design/pune                /web-design/pune                301
-/services/web-design/surat               /web-design/surat               301
-
-# Old: /services/ecommerce-development/[city]  →  New: /ecommerce-development/[city]
-/services/ecommerce-development          /ecommerce-development          301
-/services/ecommerce-development/mumbai   /ecommerce-development/mumbai   301

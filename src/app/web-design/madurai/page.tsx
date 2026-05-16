@@ -1,18 +1,33 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { webDesignCityAlternatesIN } from '@/data/hreflangMap'
-import MaduraiNewPage from '@/pages/MaduraiNew'
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
-import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
+import Hero from '@/components/v2/Hero'
+import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup'
+import LogoBar from '@/components/v2/LogoBar'
+import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock'
+import CityContextSection from '@/components/v2/CityContextSection'
+import ServiceExplanation from '@/components/v2/ServiceExplanation'
+import StrategicDarkSection from '@/components/v2/StrategicDarkSection'
+import ServiceJourneyRow from '@/components/v2/ServiceJourneyRow'
+import PortfolioShowcase from '@/components/v2/PortfolioShowcase'
+import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable'
+import IndustriesGrid from '@/components/v2/IndustriesGrid'
+import PricingTiers from '@/components/v2/PricingTiers'
+import TestimonialsSection from '@/components/v2/TestimonialsSection'
+import FAQ from '@/components/v2/FAQ'
+import FinalCTA from '@/components/v2/FinalCTA'
 
 export const metadata: Metadata = {
   title: 'Professional Web Design Company in Madurai | FactoryJet',
-  description: 'Reliable web design company in Madurai building affordable, performance-focused websites across Anna Nagar & KK Nagar.',
+  description: 'Reliable web design company in Madurai building affordable, performance-focused websites for textile, engineering, healthcare, and retail businesses across Anna Nagar & KK Nagar. 7-day delivery.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Web Design Company in Madurai | Professional Website Design Services',
-    description: 'Award-winning Web Design Company in Madurai. Beautiful, conversion-focused websites with modern UI/UX. Mobile-responsive, fast-loading designs.',
+    description: 'Award-winning Web Design Company in Madurai. Fast, conversion-focused websites for textile, engineering & healthcare businesses. 7-day delivery, INR pricing.',
     url: 'https://factoryjet.com/web-design/madurai',
     images: [
       {
@@ -48,16 +63,447 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'FactoryJet Web Design Madurai',
+    description: 'Professional web design company serving Madurai businesses across textile, engineering, healthcare, education, and tourism sectors.',
+    url: 'https://factoryjet.com/web-design/madurai',
+    telephone: '+91-XXXXXXXXXX',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Madurai',
+      addressRegion: 'Tamil Nadu',
+      addressCountry: 'IN',
+    },
+    areaServed: [
+      { '@type': 'City', name: 'Madurai' },
+      { '@type': 'City', name: 'Dindigul' },
+      { '@type': 'City', name: 'Virudhunagar' },
+    ],
+    priceRange: '₹₹',
+    serviceType: 'Web Design',
+  }
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'How much does a website cost in Madurai?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Website projects in Madurai start from ₹25,000 for a professional 5-page site. We offer transparent, fixed pricing with no hidden costs — ideal for Madurai SMEs and MSMEs.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you serve textile and garment businesses in Madurai?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. We build product catalogue sites, export portals, and brand websites for Madurai\'s textile and garment manufacturers targeting domestic and export markets.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can you build a website for a Madurai hospital or healthcare provider?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. We build patient-friendly hospital websites, clinic pages, and specialist practice sites optimized for local search in Madurai and the surrounding districts.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How fast can you deliver a website for my Madurai business?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We deliver 5-page websites in 7 days. Larger projects with custom features are scoped individually but we maintain rapid delivery for all standard engagements.',
+        },
+      },
+    ],
+  }
+
+  const heroProps = {
+    eyebrow: 'WEB DESIGN · MADURAI',
+    headline: "Madurai's Growing Businesses Deserve a Website That Works as Hard as They Do",
+    subheadline:
+      "Tamil Nadu's second-largest city is a hub for textiles, engineering, healthcare, and one of India's most iconic temple tourism destinations. Your website should help you compete beyond city limits — and win.",
+    primaryCTA: { label: 'Start Your Project', modal: true as const, region: 'in' as const },
+    secondaryCTA: { label: 'View Our Work', href: '/portfolio' },
+    stats: [
+      { value: '7-Day', label: 'Delivery Guarantee' },
+      { value: '500+', label: 'Businesses Served' },
+      { value: '₹25K', label: 'Starting Price' },
+    ],
+  }
+
+  const cityContextProps = {
+    city: 'Madurai',
+    headline: "Tamil Nadu's Second City — Rich in Commerce, Heritage, and Ambition",
+    body: "Madurai is more than the temple city. It is a significant textile and garment manufacturing hub, a growing center for auto parts and engineering components, and home to some of Tamil Nadu's most reputed hospitals and medical colleges. The city's MSME sector — spanning trading, manufacturing, and services — employs hundreds of thousands and supplies markets across India and overseas.",
+    body2:
+      "As digital adoption accelerates across South India, Madurai businesses that invest in credible websites gain outsized advantages: ranking on Google for district-wide searches, attracting out-of-city clients, and projecting the kind of professionalism that closes larger deals. A well-built website is the single best growth investment for a Madurai SME.",
+    stats: [
+      { value: "2nd Largest", label: "City in Tamil Nadu by Commerce & Population" },
+      { value: "₹80,000 Cr+", label: "Madurai District GDP" },
+      { value: "Major Export Hub", label: "Textile, Garment & Engineering Exports" },
+    ],
+  }
+
+  const serviceExplanationProps = {
+    headline: 'Madurai Has Many Business Types — We Serve All of Them',
+    body: "From MSME manufacturers in Kappalur to hospital chains in Anna Nagar, and from engineering exporters to temple tourism operators, Madurai's business diversity is its strength. We build websites that serve each segment's unique needs.",
+    rightSlot: {
+      title: 'What Your Buyers Care About',
+      items: [
+        {
+          label: 'B2B / Manufacturing & Export (Kappalur SIDCO / Mattuthavani)',
+          description:
+            'Product specifications, export certifications, capacity statements, and professional imagery. B2B and international buyers form impressions from your website before ever calling you.',
+        },
+        {
+          label: 'Local / Retail, Healthcare & Services (Anna Nagar / KK Nagar / SS Colony)',
+          description:
+            'Google Maps optimization, patient or customer reviews, service menus, and clear contact CTAs. Local Madurai consumers search on mobile — your site must load fast and make it easy to act.',
+        },
+      ],
+    },
+  }
+
+  const darkSectionProps = {
+    eyebrow: 'WHY FACTORYJET',
+    headline: 'Built for Madurai Businesses That Are Ready to Grow',
+    points: [
+      {
+        title: '7-Day Delivery',
+        body: 'Production-ready 5-page websites in 7 days. No waiting months for a local agency to deliver.',
+      },
+      {
+        title: 'SME-Friendly INR Pricing',
+        body: 'Projects start at ₹25,000 — affordable for Madurai MSMEs without compromising on quality or performance.',
+      },
+      {
+        title: 'Tamil Nadu Market Expertise',
+        body: "We understand how Tamil Nadu buyers research, evaluate, and decide. Our sites are designed with that buyer psychology in mind.",
+      },
+      {
+        title: 'Lighthouse 100 Performance',
+        body: 'Every site scores green on Core Web Vitals — fast on Madurai 4G networks, instant on broadband.',
+      },
+    ],
+    cta: { label: 'See Our Portfolio', href: '/portfolio' },
+  }
+
+  const journeySteps = [
+    {
+      step: '01',
+      title: 'Discovery Call',
+      description: 'We learn your business, your customers, and your goals in a focused 30-minute call.',
+    },
+    {
+      step: '02',
+      title: 'Strategy & Wireframe',
+      description: 'We map your site structure around how Madurai and Tamil Nadu buyers evaluate and act.',
+    },
+    {
+      step: '03',
+      title: 'Design & Build',
+      description: 'Design and development run in parallel. Real progress every day — not sequential hand-offs.',
+    },
+    {
+      step: '04',
+      title: 'Review & Launch',
+      description: 'Two rounds of revisions, then your site goes live — most standard projects within 7 days.',
+    },
+  ]
+
+  const comparisonRows = [
+    {
+      feature: 'Delivery Time',
+      columns: [
+        { label: 'FactoryJet', isFactoryJet: true, value: <CompareIcon type="text" text="7 days" /> },
+        { label: 'Madurai Agency', value: <CompareIcon type="text" text="6–10 weeks" /> },
+        { label: 'Freelancer', value: <CompareIcon type="text" text="3–8 weeks" /> },
+      ],
+    },
+    {
+      feature: 'Starting Price',
+      columns: [
+        { label: 'FactoryJet', isFactoryJet: true, value: <CompareIcon type="text" text="₹25,000" /> },
+        { label: 'Madurai Agency', value: <CompareIcon type="text" text="₹50,000+" /> },
+        { label: 'Freelancer', value: <CompareIcon type="text" text="₹8,000–₹25,000" /> },
+      ],
+    },
+    {
+      feature: 'Lighthouse 100 Score',
+      columns: [
+        { label: 'FactoryJet', isFactoryJet: true, value: <CompareIcon type="check" /> },
+        { label: 'Madurai Agency', value: <CompareIcon type="cross" /> },
+        { label: 'Freelancer', value: <CompareIcon type="partial" /> },
+      ],
+    },
+    {
+      feature: 'SME / MSME Expertise',
+      columns: [
+        { label: 'FactoryJet', isFactoryJet: true, value: <CompareIcon type="check" /> },
+        { label: 'Madurai Agency', value: <CompareIcon type="partial" /> },
+        { label: 'Freelancer', value: <CompareIcon type="partial" /> },
+      ],
+    },
+    {
+      feature: 'Fixed-Price Guarantee',
+      columns: [
+        { label: 'FactoryJet', isFactoryJet: true, value: <CompareIcon type="check" /> },
+        { label: 'Madurai Agency', value: <CompareIcon type="cross" /> },
+        { label: 'Freelancer', value: <CompareIcon type="cross" /> },
+      ],
+    },
+    {
+      feature: 'Post-Launch Support',
+      columns: [
+        { label: 'FactoryJet', isFactoryJet: true, value: <CompareIcon type="check" /> },
+        { label: 'Madurai Agency', value: <CompareIcon type="partial" /> },
+        { label: 'Freelancer', value: <CompareIcon type="cross" /> },
+      ],
+    },
+  ]
+
+  const industries = [
+    {
+      icon: '🧵',
+      name: 'Textile & Garments',
+      description: 'Export-ready product sites and catalogues for Madurai\'s textile manufacturers, dyers, and garment exporters.',
+    },
+    {
+      icon: '⚙️',
+      name: 'Engineering & Auto Parts',
+      description: 'B2B capability sites and supplier portals for engineering component manufacturers and auto parts vendors.',
+    },
+    {
+      icon: '🏥',
+      name: 'Healthcare & Hospitals',
+      description: 'Patient-friendly websites for Madurai hospitals, specialist clinics, and diagnostic centres — built for local search.',
+    },
+    {
+      icon: '🎓',
+      name: 'Education',
+      description: 'Lead-generating sites for engineering colleges, arts colleges, coaching institutes, and tutorial centres in Madurai.',
+    },
+    {
+      icon: '🛒',
+      name: 'Trading & Retail',
+      description: 'Online presence and e-commerce sites for wholesale traders, retail stores, and FMCG distributors.',
+    },
+    {
+      icon: '🕌',
+      name: 'Tourism & Hospitality',
+      description: 'Booking-focused websites for Madurai hotels, resorts, tour operators, and pilgrimage travel businesses.',
+    },
+  ]
+
+  const pricingTiers = [
+    {
+      name: 'Starter',
+      price: '₹25,000',
+      description: 'For small Madurai businesses and solo operators needing a credible web presence quickly.',
+      features: [
+        '5 pages',
+        'Mobile-first design',
+        'Contact & enquiry form',
+        '7-day delivery',
+        'Basic SEO setup',
+        '30-day support',
+      ],
+      cta: { label: 'Get Started', modal: true as const, region: 'in' as const },
+    },
+    {
+      name: 'Growth',
+      price: '₹50,000',
+      description: 'For growing Madurai businesses needing more pages, stronger design, and better lead generation.',
+      features: [
+        'Up to 12 pages',
+        'Custom UI design system',
+        'Blog / news section',
+        'WhatsApp & CRM integration',
+        'Advanced SEO setup',
+        '60-day support',
+      ],
+      cta: { label: 'Get Started', modal: true as const, region: 'in' as const },
+      highlighted: true,
+    },
+    {
+      name: 'Enterprise',
+      price: '₹1,00,000+',
+      description: 'For hospitals, colleges, or manufacturers needing custom portals or multi-location websites.',
+      features: [
+        'Unlimited pages',
+        'Custom web application',
+        'Multi-location or multi-department',
+        'Tamil + English bilingual',
+        'Priority delivery & support',
+        'Dedicated project manager',
+      ],
+      cta: { label: 'Contact Us', modal: true as const, region: 'in' as const },
+    },
+  ] as const
+
+  const faqCategories = [
+    {
+      id: 'pricing',
+      label: 'Pricing',
+      questions: [
+        {
+          question: 'What does a website cost for a Madurai business?',
+          answer: 'Our Madurai projects start at ₹25,000 for a 5-page site. Growth packages run ₹50,000 and enterprise custom builds start at ₹1,00,000. All pricing is fixed — no surprise additions.',
+        },
+        {
+          question: 'Do you offer installment payment options?',
+          answer: 'Yes. Standard split is 50% at kickoff and 50% on delivery. For larger hospital or educational institution websites we can structure 3-stage payments.',
+        },
+        {
+          question: 'Are there monthly fees after the website is built?',
+          answer: 'No mandatory monthly fees. Hosting, domain, and optional maintenance are separate and clearly quoted before you sign.',
+        },
+        {
+          question: 'Is the pricing affordable for small Madurai businesses?',
+          answer: "Yes. Our Starter package at ₹25,000 is specifically designed for SMEs and MSMEs. We don't compromise on quality — we've built efficient processes that let us deliver premium websites at accessible prices.",
+        },
+      ],
+    },
+    {
+      id: 'process',
+      label: 'Process',
+      questions: [
+        {
+          question: 'How does the 7-day website delivery work?',
+          answer: 'After kickoff call and content submission, design and development happen in parallel. You receive a review link on day 5, we finalize revisions by day 6, and the site goes live on day 7.',
+        },
+        {
+          question: 'What information do I need to provide to get started?',
+          answer: 'Your business logo, basic information about your services, and any existing photos or content. We guide you through a structured brief that takes under 30 minutes.',
+        },
+        {
+          question: 'How many revisions can I request?',
+          answer: 'Two rounds of revisions are included in all packages. Additional revisions are billed at a flat rate communicated upfront.',
+        },
+        {
+          question: 'Do you write the website content for me?',
+          answer: 'Yes. Professional copywriting is included in all packages. We write in clear, professional English and you review and approve everything before launch.',
+        },
+      ],
+    },
+    {
+      id: 'technical',
+      label: 'Technical',
+      questions: [
+        {
+          question: 'Will my Madurai business rank on Google?',
+          answer: 'Every site is built with on-page SEO best practices — proper heading structure, meta tags, schema markup, Google Maps integration, and fast loading. For ongoing content SEO we offer separate retainer packages.',
+        },
+        {
+          question: 'Will the website work on mobile phones?',
+          answer: 'All our builds are mobile-first. Given that most Madurai users browse on smartphones, this is non-negotiable. We test across iOS and Android at multiple screen sizes.',
+        },
+        {
+          question: 'Can the website support Tamil language content?',
+          answer: 'Yes. We can build bilingual Tamil + English websites for businesses targeting local consumers. Proper Unicode rendering and font support for Tamil script is included.',
+        },
+        {
+          question: 'Can I update the website content myself?',
+          answer: 'Yes. WordPress builds include a CMS training session so you can manage your own content. For Next.js builds we provide a simple editing workflow.',
+        },
+      ],
+    },
+    {
+      id: 'ecommerce',
+      label: 'E-Commerce',
+      questions: [
+        {
+          question: 'Can you build an online store for my Madurai retail business?',
+          answer: 'Yes. We build Shopify and custom e-commerce sites for retail, D2C, and wholesale businesses. Prices start at ₹50,000 for a fully functional online store.',
+        },
+        {
+          question: 'Do you support Indian payment gateways?',
+          answer: 'Yes — Razorpay, PayU, and CCAvenue are standard. UPI and net banking supported out of the box.',
+        },
+        {
+          question: 'Can you build an online booking system for my hotel or tour operator?',
+          answer: 'Yes. We integrate booking forms, availability calendars, and WhatsApp booking flows for Madurai hospitality and tourism businesses.',
+        },
+        {
+          question: 'Can you build a patient appointment booking system for a hospital?',
+          answer: 'Yes. We build hospital websites with online appointment booking, department pages, doctor profiles, and patient enquiry forms — all optimized for local Madurai search.',
+        },
+      ],
+    },
+    {
+      id: 'local',
+      label: 'Madurai',
+      questions: [
+        {
+          question: 'Do you build websites for textile exporters in Madurai?',
+          answer: "Yes. We build export-facing product catalogues, company profile sites, and B2B inquiry portals for Madurai's textile, garment, and dyeing industry — targeting domestic buyers and international importers.",
+        },
+        {
+          question: 'Can you build a website for a Madurai hospital or medical college?',
+          answer: "Yes. We build comprehensive hospital websites with specialty department pages, doctor profiles, appointment booking, and local SEO optimized for searches across Madurai, Dindigul, and Virudhunagar districts.",
+        },
+        {
+          question: 'Do you support Tamil-language websites for local customers?',
+          answer: "Yes. We build Tamil + English bilingual websites for businesses targeting local Madurai consumers. Our Enterprise tier includes full bilingual content support with proper Tamil script rendering.",
+        },
+        {
+          question: 'Can you help a Madurai business attract customers from other Tamil Nadu cities?',
+          answer: "Absolutely. Many Madurai clients — especially hospitals, colleges, and manufacturers — use their websites to attract patients, students, and buyers from Tirunelveli, Dindigul, Ramanathapuram, and beyond. We design and optimize for that reach.",
+        },
+      ],
+    },
+  ]
+
+  const finalCTAProps = {
+    headline: "Ready to Put Madurai's Best Businesses Online?",
+    subheadline:
+      "Join 500+ businesses that trust FactoryJet. Whether you're a textile exporter, a hospital, an engineering manufacturer, or a retail brand — we deliver a world-class website in 7 days.",
+    primaryCTA: { label: 'Start Your Project', modal: true as const, region: 'in' as const },
+    secondaryCTA: { label: 'View Portfolio', href: '/portfolio' },
+  }
+
   return (
     <>
+      <Script
+        id="mdu-local-business-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <Script
+        id="mdu-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <SiteHeader locale="in" />
-      <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://factoryjet.com' },
-        { name: 'Services', url: 'https://factoryjet.com/services' },
-        { name: 'Web Design', url: 'https://factoryjet.com/web-design' },
-        { name: 'Madurai', url: 'https://factoryjet.com/web-design/madurai' },
-      ]} />
-      <MaduraiNewPage />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Web Design', url: 'https://factoryjet.com/web-design' },
+          { name: 'Madurai', url: 'https://factoryjet.com/web-design/madurai' },
+        ]}
+      />
+      <Hero {...heroProps} />
+      <HeroBrowserMockup />
+      <LogoBar />
+      <BigThreeTrustBlock />
+      <CityContextSection {...cityContextProps} />
+      <ServiceExplanation {...serviceExplanationProps} />
+      <StrategicDarkSection {...darkSectionProps} />
+      <ServiceJourneyRow steps={journeySteps} />
+      <PortfolioShowcase />
+      <ComparisonTable rows={comparisonRows} />
+      <IndustriesGrid industries={industries} city="Madurai" />
+      <PricingTiers tiers={pricingTiers} />
+      <TestimonialsSection />
+      <FAQ categories={faqCategories} />
+      <FinalCTA {...finalCTAProps} />
       <SiteFooter locale="in" />
     </>
   )

@@ -1,25 +1,60 @@
-import type { Metadata } from 'next'
-import { webDesignCityAlternatesIN } from '@/data/hreflangMap'
-import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
-import DelhiUpdatedPage from '@/pages/DelhiUpdated/App'
-import SiteHeader from '@/components/v2/SiteHeader'
-import SiteFooter from '@/components/v2/SiteFooter'
+import type { Metadata } from 'next';
+import Script from 'next/script';
+import { webDesignCityAlternatesIN } from '@/data/hreflangMap';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import Hero from '@/components/v2/Hero';
+import LogoBar from '@/components/v2/LogoBar';
+import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
+import CityContextSection from '@/components/v2/CityContextSection';
+import ServiceExplanation from '@/components/v2/ServiceExplanation';
+import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
+import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/ServiceJourneyRow';
+import PortfolioShowcase from '@/components/v2/PortfolioShowcase';
+import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
+import IndustriesGrid from '@/components/v2/IndustriesGrid';
+import PricingTiers from '@/components/v2/PricingTiers';
+import TestimonialsSection from '@/components/v2/TestimonialsSection';
+import FAQ from '@/components/v2/FAQ';
+import FinalCTA from '@/components/v2/FinalCTA';
+import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
+import SiteHeader from '@/components/v2/SiteHeader';
+import SiteFooter from '@/components/v2/SiteFooter';
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   SEO / Metadata
+───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Delhi – Trusted & Result-Driven Experts',
-  description: 'Leading web design company in Delhi delivering high-performance websites for corporates and startups. Serving Connaught Place, Gurgaon & Noida.',
+  title: 'Web Design Company in Delhi | From ₹25,000 | 7-Day Delivery | FactoryJet',
+  description:
+    'FactoryJet is a web design company in Delhi NCR building fast, SEO-optimized websites for corporates, government vendors, fashion brands, and growing businesses. From ₹25,000. 7-day delivery. Serving Connaught Place, Gurgaon, Noida, and South Delhi.',
+  keywords: [
+    'web design company in Delhi',
+    'website design Delhi',
+    'web development company Delhi',
+    'website design company Delhi NCR',
+    'affordable web design Delhi',
+    'professional website design Delhi',
+    'web design Connaught Place',
+    'web design Gurgaon',
+    'corporate website design Delhi',
+    'government vendor website Delhi',
+    'Next.js web development Delhi',
+    'web design agency Delhi NCR',
+  ],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Delhi | Professional Website Design Services',
-    description: 'Award-winning Web Design Company in Delhi. Beautiful, conversion-focused websites with modern UI/UX. Mobile-responsive, fast-loading designs.',
+    title: 'Web Design Company in Delhi NCR | From ₹25,000 | FactoryJet',
+    description:
+      'Professional website design company in Delhi NCR — Next.js, SEO, and GA4 included. 7-day delivery. From ₹25,000. Serving Connaught Place, Gurgaon, Noida, South Delhi.',
     url: 'https://factoryjet.com/web-design/delhi',
     images: [
       {
         url: 'https://factoryjet.com/logo.png',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet - Web Design Company in Delhi',
+        alt: 'FactoryJet — Web Design Company in Delhi',
       },
     ],
     locale: 'en_IN',
@@ -27,7 +62,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Web Design Company in Delhi | FactoryJet',
-    description: 'Award-winning Web Design Company in Delhi. Beautiful, conversion-focused websites with modern UI/UX.',
+    description:
+      'Website design company in Delhi NCR. From ₹25,000. 7-day delivery. Next.js, SEO, GA4 included.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
@@ -45,20 +81,784 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-}
+};
 
-export default function Page() {
+/* ─────────────────────────────────────────────────────────────────────────────
+   JSON-LD Schemas
+───────────────────────────────────────────────────────────────────────────── */
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  '@id': 'https://factoryjet.com/#organization',
+  name: 'FactoryJet',
+  description:
+    'Web design company in Delhi NCR building fast, SEO-optimized websites for corporates, government vendors, fashion brands, and growing businesses. From ₹25,000. 7-day delivery guarantee.',
+  url: 'https://factoryjet.com/web-design/delhi',
+  telephone: '+919699977699',
+  email: 'connect@factoryjet.com',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'New Delhi',
+    addressRegion: 'Delhi',
+    addressCountry: 'IN',
+  },
+  areaServed: [
+    { '@type': 'City', name: 'New Delhi' },
+    { '@type': 'City', name: 'Gurgaon' },
+    { '@type': 'City', name: 'Noida' },
+  ],
+  serviceType: 'Web Design and Development',
+  priceRange: '₹₹',
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Web Design Services Delhi',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        name: 'Starter Website',
+        price: '25000',
+        priceCurrency: 'INR',
+        description: '5-page business website, mobile-responsive, basic SEO, contact form.',
+      },
+      {
+        '@type': 'Offer',
+        name: 'Growth Website',
+        price: '50000',
+        priceCurrency: 'INR',
+        description: '10–15 page website with blog CMS, lead capture, GA4, and advanced SEO.',
+      },
+      {
+        '@type': 'Offer',
+        name: 'Custom Website',
+        price: '100000',
+        priceCurrency: 'INR',
+        description: 'Custom Next.js build with e-commerce, booking systems, or AI integrations.',
+      },
+    ],
+  },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How much does a website cost for a business in Delhi?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "FactoryJet's web design for Delhi businesses starts at ₹25,000 for a 5-page Starter site. The Growth tier (₹50,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds start at ₹1,00,000. Delhi NCR agency rates for comparable scope typically run ₹1,50,000–₹5,00,000.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does it take to build a website in Delhi?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A standard FactoryJet build delivers in 7 days from kickoff to launch. Discovery and design take the first two days, development runs through days five and six, and content, SEO, and launch happen on day seven.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you build websites for government contractors and PSU vendors in Delhi?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes — government contractors, PSU vendors, and defence and infrastructure companies are part of our Delhi client base. These businesses need websites that project credibility, past project portfolios, empanelment credentials, and compliance documentation that satisfies government procurement requirements.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Will my Delhi business website rank on Google?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Technical SEO is built in: JSON-LD schema markup, optimised title and meta tags, Core Web Vitals green on mobile, internal linking, XML sitemap submitted to Google Search Console, and WebP images. Branded searches rank within 1–2 weeks. Service + location queries take 3–6 months for a new domain.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I own the website after it is built?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes — 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required, no platform lock-in.',
+      },
+    },
+  ],
+};
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Section data
+───────────────────────────────────────────────────────────────────────────── */
+
+const DEL_JOURNEY_STAGES: ServiceJourneyStage[] = [
+  {
+    number: '01',
+    title: 'Discovery & Strategy',
+    description:
+      "We map your ideal customer profile against Delhi NCR's market — whether that's a government procurement officer evaluating vendors, a corporate buyer in Gurgaon, or a consumer browsing on mobile in South Delhi. We audit your top competitors and agree the sitemap. — Days 1–2",
+  },
+  {
+    number: '02',
+    title: 'Design & Prototyping',
+    description:
+      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts. — Days 3–4',
+  },
+  {
+    number: '03',
+    title: 'Development',
+    description:
+      'Built in Next.js deployed to Cloudflare CDN — sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, booking flows, and any third-party APIs your business uses. Performance budgets enforced from the first commit. — Days 5–6',
+  },
+  {
+    number: '04',
+    title: 'Content & SEO',
+    description:
+      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Delhi-specific local SEO targeting built in. — Day 6–7',
+  },
+  {
+    number: '05',
+    title: 'Launch & Handover',
+    description:
+      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included. — Day 7+',
+  },
+];
+
+const DEL_FAQ_CATEGORIES = [
+  { key: 'pricing',   label: 'Pricing & Timeline' },
+  { key: 'included',  label: "What's Included" },
+  { key: 'technical', label: 'Technical & SEO' },
+  { key: 'local',     label: 'Delhi NCR Local' },
+  { key: 'support',   label: 'Support & Ownership' },
+];
+
+const DEL_FAQ_ITEMS = [
+
+  /* ── Pricing & Timeline ── */
+  {
+    category: 'pricing',
+    question: 'How much does a website cost for a business in Delhi?',
+    answer:
+      "FactoryJet's web design for Delhi businesses starts at ₹25,000 for a 5-page Starter site. The Growth tier (₹50,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds start at ₹1,00,000. Delhi NCR agency rates for comparable scope typically run ₹1,50,000–₹5,00,000.",
+  },
+  {
+    category: 'pricing',
+    question: 'How long does it take to build a website?',
+    answer:
+      'A standard FactoryJet build delivers in 7 days from kickoff to launch. Discovery and design take the first two days, development days three through six, and content, SEO, and launch on day seven.',
+  },
+  {
+    category: 'pricing',
+    question: 'Why is FactoryJet cheaper than Delhi web agencies?',
+    answer:
+      "We are a specialised web engineering team — not a full-service agency with large account management overhead in Gurgaon or CP. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. You pay for the build, not our admin structure.",
+  },
+  {
+    category: 'pricing',
+    question: 'What is the 7-day delivery guarantee?',
+    answer:
+      'If we miss the agreed delivery date, you do not pay. The guarantee applies to the development phase we control — design, build, content, and launch. We have delivered on time on 97% of all projects.',
+  },
+
+  /* ── What's Included ── */
+  {
+    category: 'included',
+    question: "What's included in a web design project?",
+    answer:
+      'Every FactoryJet project includes strategy, Figma design, Next.js development, basic copywriting, technical SEO setup (schema, meta, sitemap), GA4 analytics, and a 30-day post-launch support window. You receive the full codebase in your GitHub on launch day.',
+  },
+  {
+    category: 'included',
+    question: 'Do you write the content for my website?',
+    answer:
+      'Basic copywriting for headings, hero text, and service descriptions is included. Full SEO content is available as an add-on. We send a content brief before development starts so you know exactly what to provide.',
+  },
+  {
+    category: 'included',
+    question: 'Do you provide website hosting?',
+    answer:
+      "We deploy to Cloudflare Pages, which is free for most projects. You own your own Cloudflare account — we configure it for you. No monthly hosting fee to us.",
+  },
+  {
+    category: 'included',
+    question: 'Can I update the website myself after launch?',
+    answer:
+      'Yes. Every Growth and Custom tier project includes a headless CMS integration (Sanity or Contentful) so your team can update content without touching code.',
+  },
+
+  /* ── Technical & SEO ── */
+  {
+    category: 'technical',
+    question: 'Will my website rank on Google India?',
+    answer:
+      'Technical SEO is built into every project: JSON-LD schema markup, optimised title and meta templates, Core Web Vitals green on mobile, internal linking, XML sitemap submitted to Google Search Console, and WebP images. Branded searches typically rank within 1–2 weeks.',
+  },
+  {
+    category: 'technical',
+    question: 'What tech stack do you build on?',
+    answer:
+      "We build on Next.js deployed to Cloudflare's global CDN — sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Delhi businesses competing on Google's Core Web Vitals signals, that performance gap directly affects rankings.",
+  },
+  {
+    category: 'technical',
+    question: 'How does the site perform on mobile?',
+    answer:
+      'Mobile-first is the default. Every build targets Lighthouse 90+ and green Core Web Vitals on mobile before launch. We design at 375px before desktop, serve WebP images via Cloudflare CDN with lazy loading.',
+  },
+  {
+    category: 'technical',
+    question: 'Do you set up Google Analytics and Search Console?',
+    answer:
+      'Yes — GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, phone clicks) are configured from day one. Search Console verified and sitemap submitted.',
+  },
+
+  /* ── Delhi NCR Local ── */
+  {
+    category: 'local',
+    question: 'Do you build websites for government contractors and PSU vendors in Delhi?',
+    answer:
+      "Yes — government contractors, PSU vendors, and defence and infrastructure companies are part of our Delhi client base. These businesses need websites that project credibility, past project portfolios, empanelment credentials, and compliance documentation. We build with authority-first architecture designed for government procurement evaluation.",
+  },
+  {
+    category: 'local',
+    question: 'Can you build websites for fashion, lifestyle, and D2C brands in Delhi?',
+    answer:
+      "Yes. Delhi NCR's fashion and lifestyle ecosystem is one of India's most vibrant — from designer labels in Hauz Khas and Khan Market to D2C brands in Saket and Noida. Consumer-facing websites need sub-1.5s load times on 4G, above-the-fold product display, Razorpay one-tap checkout, and Instagram integration. We build these mobile-first, every time.",
+  },
+  {
+    category: 'local',
+    question: "Do you know Delhi NCR's business districts well enough to write relevant copy?",
+    answer:
+      "Yes. We research Delhi NCR's business geography as part of discovery — from Connaught Place's corporate hub and South Delhi's premium retail to Gurgaon's Cyber City IT corridor, Noida's Sector 18 commercial zone, and Okhla's industrial estate. Local specificity in copy and LocalBusiness schema improves relevance for district-level and neighbourhood-level searches.",
+  },
+  {
+    category: 'local',
+    question: 'How does FactoryJet compare to Delhi web agencies?',
+    answer:
+      "Delhi NCR web agencies typically charge ₹1,50,000–₹5,00,000 for a comparable project and deliver in 8–20 weeks. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at 60–70% less.",
+  },
+
+  /* ── Support & Ownership ── */
+  {
+    category: 'support',
+    question: 'Do I own the website after it is built?',
+    answer:
+      'Yes — 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required. No proprietary platform lock-in.',
+  },
+  {
+    category: 'support',
+    question: 'What support do you provide after launch?',
+    answer:
+      'Every project includes a 30-day post-launch support window covering bug fixes and minor adjustments at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans from ₹4,999/month.',
+  },
+  {
+    category: 'support',
+    question: 'What happens if something breaks after launch?',
+    answer:
+      'Within the 30-day support window, any bugs are fixed at no cost and typically within 24 hours. Because your site is on Cloudflare Pages, the most common causes of downtime — server crashes, plugin conflicts, database failures — simply do not apply.',
+  },
+  {
+    category: 'support',
+    question: 'Do you offer ongoing retainer services for Delhi businesses?',
+    answer:
+      'Yes. Monthly retainers from ₹4,999/month cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling and a dedicated engineer.',
+  },
+];
+
+const DEL_COMPARISON_COLUMNS = [
+  { label: 'FactoryJet', isFactoryJet: true },
+  { label: 'Delhi Agency' },
+  { label: 'Freelancer' },
+  { label: 'Template (Wix/Squarespace)' },
+] as const;
+
+const DEL_COMPARISON_ROWS = [
+  {
+    feature: 'Starting price',
+    values: ['₹25,000', '₹1,50,000–₹5,00,000', '₹15,000–₹80,000', '₹0–₹15,000 (you build it)'],
+  },
+  {
+    feature: 'Delivery timeline',
+    values: ['7 days', '8–20 weeks', '4–16 weeks (unreliable)', '1–2 weeks (you build it)'],
+  },
+  {
+    feature: 'Custom Figma design',
+    values: [
+      <CompareIcon key="fj" kind="yes" />,
+      <CompareIcon key="da" kind="yes" />,
+      <CompareIcon key="fr" kind="partial" />,
+      <CompareIcon key="tp" kind="no" />,
+    ],
+  },
+  {
+    feature: 'Next.js (not WordPress)',
+    values: [
+      <CompareIcon key="fj" kind="yes" />,
+      <CompareIcon key="da" kind="partial" />,
+      <CompareIcon key="fr" kind="partial" />,
+      <CompareIcon key="tp" kind="no" />,
+    ],
+  },
+  {
+    feature: 'Technical SEO built in',
+    values: [
+      <CompareIcon key="fj" kind="yes" />,
+      <CompareIcon key="da" kind="partial" />,
+      <CompareIcon key="fr" kind="partial" />,
+      <CompareIcon key="tp" kind="no" />,
+    ],
+  },
+  {
+    feature: 'Lighthouse 90+ on mobile',
+    values: [
+      <CompareIcon key="fj" kind="yes" />,
+      <CompareIcon key="da" kind="partial" />,
+      <CompareIcon key="fr" kind="partial" />,
+      <CompareIcon key="tp" kind="no" />,
+    ],
+  },
+  {
+    feature: 'GA4 + GTM wired up',
+    values: [
+      <CompareIcon key="fj" kind="yes" />,
+      <CompareIcon key="da" kind="partial" />,
+      <CompareIcon key="fr" kind="no" />,
+      <CompareIcon key="tp" kind="no" />,
+    ],
+  },
+  {
+    feature: 'Published pricing (no surprises)',
+    values: [
+      <CompareIcon key="fj" kind="yes" />,
+      <CompareIcon key="da" kind="no" />,
+      <CompareIcon key="fr" kind="partial" />,
+      <CompareIcon key="tp" kind="yes" />,
+    ],
+  },
+  {
+    feature: 'Full codebase to your GitHub',
+    values: [
+      <CompareIcon key="fj" kind="yes" />,
+      <CompareIcon key="da" kind="partial" />,
+      <CompareIcon key="fr" kind="yes" />,
+      <CompareIcon key="tp" kind="no" />,
+    ],
+  },
+  {
+    feature: '7-day delivery guarantee',
+    values: [
+      <CompareIcon key="fj" kind="yes" />,
+      <CompareIcon key="da" kind="no" />,
+      <CompareIcon key="fr" kind="no" />,
+      <CompareIcon key="tp" kind="no" />,
+    ],
+  },
+];
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Page
+───────────────────────────────────────────────────────────────────────────── */
+
+export default function DelhiWebDesignPage() {
   return (
     <>
+      <Script
+        id="del-local-business-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <Script
+        id="del-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       <SiteHeader locale="in" />
-      <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://factoryjet.com' },
-        { name: 'Services', url: 'https://factoryjet.com/services' },
-        { name: 'Web Design', url: 'https://factoryjet.com/web-design' },
-        { name: 'Delhi', url: 'https://factoryjet.com/web-design/delhi' },
-      ]} />
-      <DelhiUpdatedPage />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: 'https://factoryjet.com' },
+          { name: 'Web Design', url: 'https://factoryjet.com/web-design' },
+          { name: 'Delhi', url: 'https://factoryjet.com/web-design/delhi' },
+        ]}
+      />
+
+      <main className="bg-fj-cream">
+
+        {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
+        <Hero
+          eyebrow="WEB DESIGN · DELHI NCR"
+          headline="Website Design in Delhi NCR for Corporates, Government Vendors, Fashion Brands, and Growing Businesses"
+          lead="Delhi NCR is India's largest consumer market, national capital, and home to India's densest concentration of government contractors, corporate headquarters, and D2C brands. Connaught Place, Gurgaon Cyber City, Noida Sector 18, and South Delhi's premium retail all compete for the same digital real estate. FactoryJet builds from ₹25,000 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
+          primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
+          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
+          trustItems={[
+            'Websites from ₹25,000',
+            '7-day delivery guarantee',
+            '500+ businesses built',
+          ]}
+          rightSlot={<HeroBrowserMockup />}
+        />
+
+        {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
+        <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
+
+        {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
+        <BigThreeTrustBlock
+          eyebrow="BY THE NUMBERS"
+          headline="500+ websites built. 25 years of web engineering. One 7-day guarantee."
+        />
+
+        {/* ── 4. CITY CONTEXT ──────────────────────────────────────────────── */}
+        <CityContextSection
+          eyebrow="DELHI NCR MARKET"
+          headline="Why Your Delhi NCR Web Presence Is a Competitive Advantage"
+          leadParagraphs={[
+            "Delhi NCR is India's political capital, its largest consumer market, and one of its fastest-growing technology and startup hubs. The National Capital Region spans New Delhi, Gurgaon (Gurugram), Noida, Faridabad, and Ghaziabad — a combined economy of over ₹15 lakh crore and a population of 32 million. Connaught Place and the CBD host India's highest concentration of government ministry contractors, corporate headquarters, and professional services firms. Gurgaon's Cyber City and DLF Cyberhub are home to the India offices of every major global consulting firm, BFSI company, and tech company. Noida's Sector 18 and Sector 62 house India's second-largest media and IT corridor after Bangalore's Electronic City.",
+            "This creates a web design requirement unique to Delhi NCR: a government contractor in Connaught Place needs a completely different site architecture from a fashion D2C brand in Hauz Khas or a fintech startup in Gurgaon. Government contractors need compliance-aware content and project credential portfolios. Fashion brands need mobile-first speed and Instagram-integrated product discovery. SaaS startups need demo request flows and investor credibility signals. FactoryJet builds for all of them.",
+            "Delhi NCR's competitive market is unforgiving — the businesses with a faster, better-structured web presence consistently win the first impression. A 1-second load improvement increases conversions by 7%. A properly structured service capability page indexed by Google can double inbound enquiry volume. These outcomes are engineered into every FactoryJet project from day one — not sold as add-ons.",
+          ]}
+          stats={[
+            {
+              value: '32M+',
+              label: "Delhi NCR population — India's largest metropolitan region by size and economic output",
+              sourceUrl: 'https://censusindia.gov.in/',
+              sourceLabel: 'Census India',
+            },
+            {
+              value: '₹15L Cr+',
+              label: "Delhi NCR's estimated GDP — India's third-largest city economy",
+              sourceUrl: 'https://mospi.gov.in/',
+              sourceLabel: 'MoSPI',
+            },
+            {
+              value: '#1',
+              label: "Delhi is India's largest consumer market and the country's most competitive retail geography",
+              sourceUrl: 'https://dpiit.gov.in/',
+              sourceLabel: 'DPIIT',
+            },
+          ]}
+        />
+
+        {/* ── 5. SERVICE EXPLANATION ───────────────────────────────────────── */}
+        <ServiceExplanation
+          eyebrow="WEB DESIGN · DELHI NCR"
+          headline="What 'Web Design' Actually Means for a Delhi Business"
+          lead="Delhi NCR's economy spans government and PSU clients with compliance-first requirements, corporate and BFSI buyers with long evaluation cycles, and D2C consumers deciding in under 10 seconds on mobile. FactoryJet builds for all three."
+          body={
+            <>
+              <p>
+                For Delhi NCR&apos;s government contractors, PSU vendors, and corporate B2B
+                businesses in Connaught Place, Gurgaon, and Noida — a website needs to project
+                credibility, delivery capability, and project track record. Government procurement
+                teams and enterprise buyers evaluate vendors for weeks. The site needs to display
+                empanelment credentials, past project portfolios, compliance certifications, and
+                provide a frictionless inquiry form. We build these sites with authority-first
+                architecture designed for B2G and B2B sales cycles.
+              </p>
+              <p>
+                For Delhi NCR&apos;s fashion brands, D2C companies, hospitality businesses, and
+                consumer service providers in South Delhi, Gurgaon, and Noida — the challenge is
+                entirely different. Consumers arrive on mobile from Instagram or Google and decide
+                in seconds. The site needs to load under 1.5 seconds on 4G, present the product or
+                service above the fold, and make the next step obvious. We build these mobile-first,
+                every time — at 375px before 1440px, with Lighthouse 90+ performance before launch.
+              </p>
+              <p>
+                Every FactoryJet Delhi project covers discovery, Figma prototyping, Next.js
+                development, SEO, GA4, and a 30-day support window. You leave with a codebase you
+                own and a site built to rank and convert.
+              </p>
+            </>
+          }
+          rightSlot={
+            <div className="w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">
+              <div className="border-b border-fj-neutral-100 px-7 py-4">
+                <p
+                  className="font-fj-mono font-medium uppercase text-fj-neutral-400"
+                  style={{ fontSize: '11px', letterSpacing: '0.14em' }}
+                >
+                  Two buyer types. One framework.
+                </p>
+              </div>
+              <div className="divide-y divide-fj-neutral-100">
+                {[
+                  {
+                    type: 'B2B / B2G / Corporate',
+                    need: 'Credentials + compliance + RFP flow',
+                    area: 'Connaught Place · Gurgaon · Noida Sector 62',
+                    colour: '#F05A28',
+                  },
+                  {
+                    type: 'D2C / Consumer & Retail',
+                    need: 'Speed + mobile + instant CTA',
+                    area: 'South Delhi · Hauz Khas · Saket · Lajpat Nagar',
+                    colour: '#0F0F12',
+                  },
+                ].map((row) => (
+                  <div key={row.type} className="px-7 py-5">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div
+                        className="h-2 w-2 rounded-full flex-shrink-0"
+                        style={{ backgroundColor: row.colour }}
+                        aria-hidden="true"
+                      />
+                      <p
+                        className="font-fj-body font-semibold text-fj-ink"
+                        style={{ fontSize: '0.9375rem' }}
+                      >
+                        {row.type}
+                      </p>
+                    </div>
+                    <p
+                      className="font-fj-body text-fj-neutral-500 mb-1"
+                      style={{ fontSize: '0.875rem' }}
+                    >
+                      {row.need}
+                    </p>
+                    <p
+                      className="font-fj-mono font-medium text-fj-neutral-400"
+                      style={{ fontSize: '0.6875rem', letterSpacing: '0.06em' }}
+                    >
+                      {row.area}
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <div className="border-t border-fj-neutral-100 bg-fj-neutral-50 px-7 py-5">
+                <div className="mb-2 h-[3px] w-8 rounded-full bg-[#F05A28]" aria-hidden="true" />
+                <p
+                  className="fj-display font-semibold text-fj-ink"
+                  style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
+                >
+                  Same engineering quality. Strategy tailored to your buyer.
+                </p>
+              </div>
+            </div>
+          }
+        />
+
+        {/* ── 6. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
+        <StrategicDarkSection
+          eyebrow="WHY FACTORYJET"
+          headline="Why Delhi Businesses Choose FactoryJet Over Local Agencies"
+          lead="Delhi NCR web agencies typically charge ₹1,50,000–₹5,00,000 for a comparable project and take 8–20 weeks to deliver — without publishing their rates or timeline upfront. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. At 60–70% below the Delhi agency benchmark for the same scope."
+          pillars={[
+            {
+              icon: '⚡',
+              title: '7-day delivery. In writing. Or you do not pay.',
+              body: "Delhi moves fast — a corporate or government vendor waiting 16 weeks for a website they briefed in Q1 is losing procurement cycles to competitors who already have one. FactoryJet delivers in 7 days, with the guarantee written into the project agreement. We have delivered on time on 97% of all projects since 2005.",
+            },
+            {
+              icon: '🏗️',
+              title: 'Next.js, not WordPress. The performance gap is real.',
+              body: 'WordPress loads server-side PHP and fires 40–60 database queries per page load. Next.js generates static files served from Cloudflare CDN globally. The result: sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Delhi businesses competing on Google\'s Core Web Vitals, that gap directly affects rankings.',
+            },
+            {
+              icon: '📋',
+              title: 'Fixed price. Published before the first call.',
+              body: "We publish all three tiers — ₹25,000, ₹50,000, and ₹1,00,000+ — before you speak to us. No discovery fees, no 'it depends' quotes. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch.",
+            },
+          ]}
+        />
+
+        {/* ── 7. OUR PROCESS ───────────────────────────────────────────────── */}
+        <ServiceJourneyRow
+          eyebrow="OUR PROCESS"
+          headline="How We Build Your Delhi Website in 7 Days"
+          lead="Buyer strategy agreed before design. Mobile approval before development. SEO and analytics wired before launch."
+          stages={DEL_JOURNEY_STAGES}
+          closingNote="5 STAGES · 7 DAYS · NEXT.JS + CLOUDFLARE · GA4 STANDARD · ZERO DOWNTIME LAUNCH"
+        />
+
+        {/* ── 8. PORTFOLIO ─────────────────────────────────────────────────── */}
+        <PortfolioShowcase
+          eyebrow="RECENT WORK"
+          headline="What India's businesses look like after FactoryJet."
+          cards={[
+            {
+              industry: 'Interior Décor · Web Design',
+              title: 'Belle Maison — Mumbai',
+              description:
+                "Belle Maison is a premium interior décor brand. FactoryJet built their v2 website on Next.js with a Figma-designed product showcase, WhatsApp inquiry flow, and SEO targeting high-value search queries. Lighthouse 95+ on mobile before launch.",
+              imageSrc: '/images/ecommerce/mumbai/portfolio-belle-maison.webp',
+              stat1: 'Lighthouse 95+',
+              stat2: 'Next.js · WhatsApp',
+            },
+            {
+              industry: 'B2B · Shopify E-Commerce',
+              title: 'Bombay Petals — Mumbai',
+              description:
+                'Bombay Petals is a B2B artificial plants and décor supplier. FactoryJet built a dual-storefront solution — B2B wholesale portal with volume pricing and a D2C consumer store — on a unified Shopify backend. Razorpay + Shiprocket integrated.',
+              imageSrc: '/images/portfolio/formative-concepts.webp',
+              stat1: '₹1.5 Cr in Y1',
+              stat2: '7-day delivery',
+            },
+            {
+              industry: 'MEP / BIM Consulting · SEO',
+              title: 'Formative Concepts — Pune',
+              description:
+                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on Next.js with authority-first architecture for B2B project enquiries — credentials display, project portfolio, and technical SEO.',
+              imageSrc: '/images/portfolio/formative-concepts.webp',
+              stat1: 'B2B authority site',
+              stat2: 'SEO + Next.js',
+            },
+          ]}
+          ctaHref="/portfolio"
+          ctaLabel="View full portfolio"
+        />
+
+        {/* ── 9. COMPARISON TABLE ──────────────────────────────────────────── */}
+        <ComparisonTable
+          eyebrow="HOW WE COMPARE"
+          headline="FactoryJet vs. Delhi Agency vs. Freelancer vs. Template Builder"
+          lead="Not all web design options in Delhi NCR deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
+          pullQuote={{
+            stat: '₹25,000',
+            caption:
+              'starting price — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a ₹3,00,000 Delhi agency project.',
+          }}
+          columns={DEL_COMPARISON_COLUMNS}
+          rows={DEL_COMPARISON_ROWS}
+          footer="Prices reflect typical Delhi NCR market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
+        />
+
+        {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
+        <IndustriesGrid
+          eyebrow="DELHI NCR × WEB DESIGN"
+          headline="Web Design for Delhi NCR's Key Industries"
+          lead="From Connaught Place government contractors to Gurgaon BFSI firms to Hauz Khas fashion brands — Delhi NCR's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
+          sectors={[
+            {
+              name: 'Government & PSU Vendors',
+              description:
+                "Delhi's status as India's national capital means it houses the largest concentration of government ministry contractors, defence vendors, and PSU suppliers in the country. These businesses need websites projecting credibility, past project portfolios, empanelment credentials, quality certifications, and compliance documentation to satisfy government procurement evaluation. Authority-first architecture — not template designs.",
+              example:
+                'Government contractors, defence and infrastructure vendors, and PSU suppliers operating from Delhi and competing for central government procurement.',
+            },
+            {
+              name: 'Fashion & Retail',
+              description:
+                "Delhi NCR is India's fashion capital — home to Sarojini Nagar wholesale markets, Lajpat Nagar retail corridors, Hauz Khas designer labels, and a rapidly growing D2C fashion ecosystem in Noida and Gurgaon. Fashion and retail websites need mobile-first speed, Instagram product integration, Razorpay checkout, and conversion-optimised product display.",
+              example:
+                'Fashion brands, retail businesses, and D2C apparel companies serving consumers across Delhi NCR and selling nationally.',
+            },
+            {
+              name: 'Education & Coaching',
+              description:
+                "Delhi NCR is home to India's largest concentration of coaching institutes, professional training companies, and educational institutions. Education websites need course catalog architecture, batch booking flows, teacher profiles, and result-focused testimonials. Local SEO targeting competitive exam and course keywords is built in.",
+              example:
+                'Competitive exam coaching institutes, skill training companies, and educational institutions serving Delhi NCR\'s student population.',
+            },
+            {
+              name: 'Healthcare & Wellness',
+              description:
+                "Delhi NCR's healthcare sector spans corporate hospital groups, specialist clinics, diagnostic chains, and a growing wellness and medtech sector. Healthcare websites need appointment booking integrations, doctor profile pages, specialty service pages, and local SEO targeting high-intent healthcare queries across the NCR.",
+              example:
+                'Specialist clinics, multi-specialty hospitals, diagnostic centres, and wellness businesses serving Delhi NCR\'s large consumer population.',
+            },
+            {
+              name: 'IT & Consulting',
+              description:
+                "Gurgaon's Cyber City and Noida's Sector 62 house the India offices of every major global consulting firm and a growing ecosystem of IT services companies, SaaS startups, and tech-enabled service businesses. These companies need websites projecting technical capability, client case studies, and engagement model transparency for enterprise B2B sales cycles.",
+              example:
+                'IT services companies, management consulting firms, and SaaS businesses operating from Gurgaon and Noida targeting Indian and global enterprise clients.',
+            },
+            {
+              name: 'F&B & Hospitality',
+              description:
+                "Delhi NCR's F&B and hospitality sector is one of India's most competitive — from premium restaurant groups in South Delhi to hotel chains across the NCR. F&B websites need reservation flows, menu architecture, event booking systems, and local SEO targeting high-intent dining and event queries. Mobile experience is non-negotiable.",
+              example:
+                'Restaurant groups, hotel properties, and hospitality businesses serving Delhi NCR\'s large and high-spending consumer market.',
+            },
+          ]}
+        />
+
+        {/* ── 11. PRICING ──────────────────────────────────────────────────── */}
+        <div id="pricing">
+          <PricingTiers
+            eyebrow="TRANSPARENT PRICING"
+            headline="Transparent, Fixed-Price Web Design for Delhi Businesses"
+            lead="Delhi NCR agency rates for comparable web projects run ₹1,50,000–₹5,00,000. FactoryJet Growth (₹50,000) delivers 10–15 pages, blog CMS, lead capture, GA4, Next.js, and a 7-day delivery guarantee — with a codebase you own outright."
+            tiers={[
+              {
+                name: 'Starter',
+                priceRange: '₹25,000',
+                description:
+                  'A 5-page business site that loads fast on mobile and ranks for your name and core service. Best for small businesses, consultants, and sole traders in Delhi NCR who need a credible online presence quickly.',
+                features: [
+                  '5 pages, mobile-responsive',
+                  'Basic SEO & LocalBusiness schema',
+                  'Contact form + WhatsApp integration',
+                  'GA4 setup',
+                  '2 revision rounds',
+                  '30-day post-launch support',
+                ],
+                cta: { label: 'Get a Quote', modal: true as const, region: 'in' as const },
+              },
+              {
+                name: 'Growth',
+                priceRange: '₹50,000',
+                description:
+                  'A 10–15 page site with blog CMS, lead-capture flows, and analytics wired in from day one. Best for Delhi NCR SMBs and growing businesses who need the site to actively generate qualified enquiries.',
+                features: [
+                  '10–15 pages with blog CMS',
+                  'Advanced SEO — schema, meta templates, internal links',
+                  'Lead capture + email automation',
+                  'GA4 + GTM + Search Console',
+                  '3 revision rounds',
+                  '30-day support + CMS training session',
+                ],
+                cta: { label: 'Get a Quote', modal: true as const, region: 'in' as const },
+                popular: true,
+              },
+              {
+                name: 'Custom',
+                priceRange: '₹1,00,000+',
+                description:
+                  'Custom Next.js build with e-commerce, booking systems, AI integrations, or API connections. Best for established Delhi businesses with complex requirements and a real digital revenue line.',
+                features: [
+                  'Custom Next.js architecture',
+                  'E-commerce (Razorpay, Shiprocket) or booking integrations',
+                  'AI integrations (chat, search, content)',
+                  'Third-party API connections (Zoho, Salesforce, HubSpot)',
+                  'Priority support + quarterly reviews',
+                  'Dedicated engineering point of contact',
+                ],
+                cta: { label: 'Book a Discovery Call', modal: true as const, region: 'in' as const },
+              },
+            ] as const}
+            footnote="All prices in INR inclusive of design, development, SEO setup, and GA4. Cloudflare Pages hosting is free for standard Next.js builds — no monthly hosting fee."
+          />
+        </div>
+
+        {/* ── 12. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
+        <TestimonialsSection
+          eyebrow="CLIENT RESULTS"
+          headline="What India's founders say after we build their site"
+        />
+
+        {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}
+        <FAQ
+          eyebrow="FREQUENTLY ASKED QUESTIONS"
+          headline="Common Questions from Delhi Businesses"
+          lead="The questions we answer on every Delhi discovery call — answered here, without the runaround."
+          categories={DEL_FAQ_CATEGORIES}
+          items={DEL_FAQ_ITEMS}
+        />
+
+        {/* ── 14. FINAL CTA (DARK) ─────────────────────────────────────────── */}
+        <FinalCTA
+          variant="dark"
+          eyebrow="READY TO START"
+          headline="Ready to Build Your Delhi Website?"
+          sub="Delhi NCR's 32 million consumers, India's largest corporate hub, and the national capital's government contracting ecosystem means every serious business is competing for the same Google rankings and buyer first impressions. Every week without a high-performing website is market share you are conceding to a competitor who already has one. Start today and have a sitemap ready within 72 hours."
+          primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
+          secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
+          objectionHandler="Fixed price. 7-day delivery. Next.js. Your codebase delivered in full on launch day."
+        />
+
+      </main>
+
       <SiteFooter locale="in" />
     </>
-  )
+  );
 }
