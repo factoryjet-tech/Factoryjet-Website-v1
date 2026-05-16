@@ -288,7 +288,7 @@ export default function Page() {
     {
       icon: '📦',
       name: 'Trading & Wholesale',
-      description: 'Credibility-building websites for Surat's commodity traders, wholesalers, and import-export businesses.',
+      description: "Credibility-building websites for Surat's commodity traders, wholesalers, and import-export businesses.",
     },
     {
       icon: '🏢',
