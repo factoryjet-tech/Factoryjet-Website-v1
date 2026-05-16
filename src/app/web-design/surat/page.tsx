@@ -278,7 +278,7 @@ export default function Page() {
     {
       icon: '🧵',
       name: 'Textile & Apparel',
-      description: 'Product catalogue sites and export portals for Surat's synthetic fabric, embroidery, and saree manufacturers.',
+      description: "Product catalogue sites and export portals for Surat's synthetic fabric, embroidery, and saree manufacturers.",
     },
     {
       icon: '🏭',
