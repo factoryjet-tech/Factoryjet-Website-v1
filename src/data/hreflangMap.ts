@@ -32,11 +32,11 @@ export const homeAlternates = {
 
 /** Full 3-locale cluster for /services/web-design ↔ /us/services/web-design */
 export const webDesignAlternates = {
-  'en-IN': 'https://factoryjet.com/services/web-design',
+  'en-IN': 'https://factoryjet.com/web-design',
   'en-US': 'https://factoryjet.com/us/services/web-design',
   'en-AE': 'https://factoryjet.com/uae',
   'en-GB': 'https://factoryjet.com/uk',
-  'x-default': 'https://factoryjet.com/services/web-design',
+  'x-default': 'https://factoryjet.com/web-design',
 } as const
 
 /** Full 3-locale cluster for /services/ecommerce-development ↔ /us/services/ecommerce-development */
@@ -127,40 +127,40 @@ export const woocommerceDevelopmentAlternates = {
 
 export const webDesignCityAlternatesIN = {
   delhi: {
-    'en-IN': 'https://factoryjet.com/services/web-design/delhi',
-    'x-default': 'https://factoryjet.com/services/web-design/delhi',
+    'en-IN': 'https://factoryjet.com/web-design/delhi',
+    'x-default': 'https://factoryjet.com/web-design/delhi',
   },
   mumbai: {
-    'en-IN': 'https://factoryjet.com/services/web-design/mumbai',
-    'x-default': 'https://factoryjet.com/services/web-design/mumbai',
+    'en-IN': 'https://factoryjet.com/web-design/mumbai',
+    'x-default': 'https://factoryjet.com/web-design/mumbai',
   },
   bangalore: {
-    'en-IN': 'https://factoryjet.com/services/web-design/bangalore',
-    'x-default': 'https://factoryjet.com/services/web-design/bangalore',
+    'en-IN': 'https://factoryjet.com/web-design/bangalore',
+    'x-default': 'https://factoryjet.com/web-design/bangalore',
   },
   chennai: {
-    'en-IN': 'https://factoryjet.com/services/web-design/chennai',
-    'x-default': 'https://factoryjet.com/services/web-design/chennai',
+    'en-IN': 'https://factoryjet.com/web-design/chennai',
+    'x-default': 'https://factoryjet.com/web-design/chennai',
   },
   hyderabad: {
-    'en-IN': 'https://factoryjet.com/services/web-design/hyderabad',
-    'x-default': 'https://factoryjet.com/services/web-design/hyderabad',
+    'en-IN': 'https://factoryjet.com/web-design/hyderabad',
+    'x-default': 'https://factoryjet.com/web-design/hyderabad',
   },
   pune: {
-    'en-IN': 'https://factoryjet.com/services/web-design/pune',
-    'x-default': 'https://factoryjet.com/services/web-design/pune',
+    'en-IN': 'https://factoryjet.com/web-design/pune',
+    'x-default': 'https://factoryjet.com/web-design/pune',
   },
   ahmedabad: {
-    'en-IN': 'https://factoryjet.com/services/web-design/ahmedabad',
-    'x-default': 'https://factoryjet.com/services/web-design/ahmedabad',
+    'en-IN': 'https://factoryjet.com/web-design/ahmedabad',
+    'x-default': 'https://factoryjet.com/web-design/ahmedabad',
   },
   madurai: {
-    'en-IN': 'https://factoryjet.com/services/web-design/madurai',
-    'x-default': 'https://factoryjet.com/services/web-design/madurai',
+    'en-IN': 'https://factoryjet.com/web-design/madurai',
+    'x-default': 'https://factoryjet.com/web-design/madurai',
   },
   surat: {
-    'en-IN': 'https://factoryjet.com/services/web-design/surat',
-    'x-default': 'https://factoryjet.com/services/web-design/surat',
+    'en-IN': 'https://factoryjet.com/web-design/surat',
+    'x-default': 'https://factoryjet.com/web-design/surat',
   },
 } as const
 

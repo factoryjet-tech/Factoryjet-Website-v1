@@ -1,0 +1,1735 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecommerce Development in Mumbai — Shopify, WooCommerce & AI-Ready Stores · FactoryJet</title>
+<meta name="description" content="Build your Mumbai ecommerce store in 7 days. Shopify, WooCommerce, custom & AI-powered stores — ₹75,000 one-time. 500+ stores shipped. Lighthouse 95+ guaranteed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+<style>
+/* ── DESIGN SYSTEM TOKENS ── */
+:root {
+  --cream:   #FAFAF7;
+  --white:   #FFFFFF;
+  --ink:     #0F0F12;
+  --orange:  #F05A28;
+  --orange-10: rgba(240,90,40,0.10);
+  --orange-08: rgba(240,90,40,0.08);
+  --orange-05: rgba(240,90,40,0.05);
+  --ink-60:  rgba(15,15,18,0.60);
+  --ink-40:  rgba(15,15,18,0.40);
+  --ink-12:  rgba(15,15,18,0.12);
+  --ink-09:  rgba(15,15,18,0.09);
+  --ink-06:  rgba(15,15,18,0.06);
+  --charcoal:#0F0F12;
+  --sans:    'Plus Jakarta Sans', sans-serif;
+  --mono:    'IBM Plex Mono', monospace;
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.06);
+  --shadow-md:  0 2px 8px rgba(0,0,0,0.06), 0 8px 32px rgba(0,0,0,0.10);
+  --shadow-lg:  0 4px 16px rgba(0,0,0,0.08), 0 16px 48px rgba(0,0,0,0.12);
+  --r:  12px;
+  --r-lg: 16px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); background: var(--cream); color: var(--ink); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img { display: block; max-width: 100%; }
+[data-lucide] { display: inline-block; vertical-align: middle; flex-shrink: 0; }
+
+/* ── NAV ── */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(250,250,247,0.92);
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--ink-09);
+  height: 68px; display: flex; align-items: center;
+  padding: 0 48px; justify-content: space-between; gap: 24px;
+}
+.nav-logo { font-weight: 800; font-size: 1.2rem; letter-spacing: -0.02em; display: flex; align-items: center; gap: 6px; }
+.nav-logo span { color: var(--orange); }
+.nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+.nav-links a { font-size: 0.875rem; font-weight: 500; color: var(--ink-60); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: var(--ink); }
+.nav-actions { display: flex; align-items: center; gap: 12px; }
+.nav-tel { font-size: 0.8rem; font-weight: 600; color: var(--ink-60); text-decoration: none; display: flex; align-items: center; gap: 5px; }
+.nav-cta { background: var(--orange); color: #fff; border: none; padding: 10px 18px; border-radius: 8px; font-family: var(--sans); font-size: 0.85rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px; box-shadow: 0 2px 8px rgba(240,90,40,0.25); transition: transform 0.15s, box-shadow 0.15s; }
+.nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(240,90,40,0.35); }
+
+/* ── BREADCRUMB ── */
+.breadcrumb-bar {
+  background: var(--white); border-bottom: 1px solid var(--ink-09);
+  padding: 9px 48px; font-family: var(--mono); font-size: 0.70rem; color: var(--ink-40);
+  letter-spacing: 0.02em; display: flex; align-items: center; gap: 6px;
+}
+.breadcrumb-bar a { color: var(--ink-40); text-decoration: none; transition: color 0.2s; }
+.breadcrumb-bar a:hover { color: var(--orange); }
+.breadcrumb-bar .sep { color: var(--ink-12); }
+.breadcrumb-bar .current { color: var(--orange); }
+
+/* ── SECTION SHELLS ── */
+.section { padding: 80px 48px; }
+.section-cream { background: var(--cream); }
+.section-white { background: var(--white); }
+.section-dark  { background: var(--charcoal); color: #fff; }
+.container { max-width: 1160px; margin: 0 auto; }
+
+/* ── EYEBROW ── */
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--mono); font-size: 0.70rem; font-weight: 500;
+  letter-spacing: 0.10em; text-transform: uppercase;
+  color: var(--orange); margin-bottom: 20px;
+}
+.eyebrow::before { content: ''; display: block; width: 20px; height: 1.5px; background: var(--orange); flex-shrink: 0; }
+.eyebrow-dark { color: rgba(240,90,40,0.85); }
+.eyebrow-dark::before { background: rgba(240,90,40,0.85); }
+
+/* ── TYPOGRAPHY ── */
+h1,h2,h3,h4 { font-family: var(--sans); font-weight: 800; letter-spacing: -0.03em; line-height: 1.12; }
+h1 { font-size: clamp(2.4rem, 4.8vw, 3.5rem); }
+h2 { font-size: clamp(1.9rem, 3.5vw, 2.7rem); }
+h3 { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; }
+p  { line-height: 1.7; color: var(--ink-60); }
+
+/* ── BUTTONS ── */
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: var(--orange); color: #fff; border: none;
+  padding: 13px 24px; border-radius: 8px;
+  font-family: var(--sans); font-size: 0.88rem; font-weight: 700;
+  cursor: pointer; text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 2px 8px rgba(240,90,40,0.30);
+}
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(240,90,40,0.38); }
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: transparent; color: var(--ink);
+  border: 1.5px solid var(--ink-09); padding: 12px 20px; border-radius: 8px;
+  font-family: var(--sans); font-size: 0.88rem; font-weight: 600;
+  cursor: pointer; text-decoration: none; transition: border-color 0.2s;
+}
+.btn-ghost:hover { border-color: var(--ink-40); }
+
+/* ── HERO ── */
+.hero {
+  background: var(--cream); min-height: calc(100vh - 68px - 37px);
+  display: flex; align-items: center; padding: 0 48px;
+}
+.hero-inner {
+  max-width: 1160px; margin: 0 auto; width: 100%;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+  padding: 56px 0;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--orange-08); border: 1px solid var(--orange-10);
+  color: var(--orange); padding: 5px 12px; border-radius: 100px;
+  font-family: var(--mono); font-size: 0.68rem; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 16px;
+}
+.hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--orange); animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.8)} }
+.hero-city { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-40); margin-bottom: 18px; display: flex; align-items: center; gap: 5px; letter-spacing: 0.04em; }
+.hero-h1 { margin-bottom: 20px; }
+.hero-h1 em { color: var(--orange); font-style: normal; }
+.hero-lead { font-size: 1.0rem; color: var(--ink-60); line-height: 1.68; margin-bottom: 28px; max-width: 480px; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
+.hero-trust-row { display: flex; gap: 18px; flex-wrap: wrap; }
+.hero-trust-item { font-size: 0.75rem; font-weight: 600; color: var(--ink-60); display: flex; align-items: center; gap: 5px; }
+.hero-trust-item [data-lucide] { width: 13px; height: 13px; color: var(--orange); }
+
+/* Hero card */
+.hero-card { background: var(--white); border-radius: var(--r-lg); box-shadow: var(--shadow-lg); overflow: hidden; border: 1px solid var(--ink-06); }
+.hero-card-img { position: relative; height: 190px; overflow: hidden; }
+.hero-card-img img { width: 100%; height: 100%; object-fit: cover; }
+.hero-card-img-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(15,15,18,0.55) 100%); }
+.hero-card-img-label { position: absolute; bottom: 10px; left: 12px; font-family: var(--mono); font-size: 0.62rem; color: rgba(255,255,255,0.85); display: flex; align-items: center; gap: 4px; letter-spacing: 0.04em; }
+.hero-card-body { padding: 18px; }
+.hcb-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.hcb-title { font-size: 0.72rem; font-weight: 700; letter-spacing: -0.01em; }
+.hcb-live { font-family: var(--mono); font-size: 0.58rem; background: rgba(240,90,40,0.12); color: var(--orange); padding: 2px 7px; border-radius: 4px; letter-spacing: 0.06em; }
+.hcb-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
+.hcb-stat { background: var(--cream); border-radius: 8px; padding: 9px 10px; }
+.hcb-stat.accent { background: var(--orange-08); }
+.hcb-stat-label { font-family: var(--mono); font-size: 0.58rem; color: var(--ink-40); margin-bottom: 2px; display: flex; align-items: center; gap: 3px; }
+.hcb-stat-val { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.03em; }
+.hcb-stat.accent .hcb-stat-val { color: var(--orange); }
+.hcb-stat-sub { font-size: 0.60rem; color: var(--ink-40); }
+.hcb-speed { display: flex; align-items: center; gap: 10px; background: var(--ink); border-radius: 8px; padding: 10px 12px; margin-bottom: 12px; }
+.hcb-speed-text { flex: 1; }
+.hcb-speed-label { font-size: 0.72rem; font-weight: 700; color: #fff; }
+.hcb-speed-sub { font-family: var(--mono); font-size: 0.56rem; color: rgba(255,255,255,0.35); letter-spacing: 0.06em; }
+.hcb-speed-badge { font-family: var(--mono); font-size: 0.55rem; color: var(--orange); border: 1px solid rgba(240,90,40,0.4); padding: 2px 6px; border-radius: 4px; letter-spacing: 0.05em; white-space: nowrap; }
+.hcb-lh { display: flex; align-items: center; gap: 6px; }
+.lh-dot { width: 28px; height: 28px; border-radius: 50%; font-size: 0.55rem; font-weight: 700; display: flex; align-items: center; justify-content: center; color: #fff; flex-shrink: 0; }
+.lh-dot.g { background: #0CCE6B; }
+.lh-label { font-family: var(--mono); font-size: 0.55rem; color: var(--ink-40); letter-spacing: 0.04em; }
+
+/* CONV STRIP */
+.conv-strip { background: var(--ink); padding: 12px 48px; }
+.conv-strip-inner { max-width: 1160px; margin: 0 auto; display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+.cs-item { font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.65); display: flex; align-items: center; gap: 6px; }
+.cs-item [data-lucide] { width: 14px; height: 14px; color: var(--orange); }
+.cs-link { margin-left: auto; font-size: 0.78rem; font-weight: 700; color: var(--orange); text-decoration: none; display: flex; align-items: center; gap: 5px; }
+
+/* ── CITY CONTEXT ── */
+.ctx-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 20px; margin: 36px 0 20px; }
+.ctx-card { background: var(--cream); border-radius: var(--r-lg); border: 1px solid var(--ink-06); overflow: hidden; }
+.ctx-card.has-img { display: flex; flex-direction: column; }
+.ctx-card.span2 { padding: 32px 36px; }
+.ctx-card-img { position: relative; flex: 1; min-height: 160px; }
+.ctx-card-img img { width: 100%; height: 100%; object-fit: cover; }
+.ctx-card-img-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,15,18,0.25) 0%, rgba(15,15,18,0.7) 100%); }
+.ctx-card-img-content { position: absolute; bottom: 16px; left: 16px; }
+.ctx-card-img-label { font-family: var(--mono); font-size: 0.60rem; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; margin-bottom: 2px; }
+.ctx-card-img-val { font-size: 2rem; font-weight: 800; color: #fff; letter-spacing: -0.04em; }
+.ctx-card-img-desc { font-size: 0.68rem; color: rgba(255,255,255,0.6); }
+.ctx-card-text-body { padding: 14px 16px; border-top: 1px solid var(--ink-06); }
+.ctx-label { font-family: var(--mono); font-size: 0.62rem; color: var(--orange); letter-spacing: 0.06em; display: flex; align-items: center; gap: 4px; margin-bottom: 6px; }
+.ctx-bullet { display: flex; align-items: flex-start; gap: 8px; font-size: 0.85rem; color: var(--ink-60); margin-bottom: 10px; line-height: 1.5; }
+.ctx-bullet [data-lucide] { width: 14px; height: 14px; color: var(--orange); margin-top: 2px; flex-shrink: 0; }
+.ctx-bottom { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 20px; }
+.ctx-mini { background: var(--white); border: 1px solid var(--ink-06); border-radius: var(--r); padding: 18px 20px; }
+.ctx-mini-label { font-family: var(--mono); font-size: 0.62rem; color: var(--ink-40); display: flex; align-items: center; gap: 5px; margin-bottom: 6px; letter-spacing: 0.04em; }
+.ctx-mini-label [data-lucide] { width: 12px; height: 12px; color: var(--orange); }
+.ctx-mini-val { font-size: 1.8rem; font-weight: 800; letter-spacing: -0.04em; color: var(--ink); margin-bottom: 2px; }
+.ctx-mini-desc { font-size: 0.72rem; color: var(--ink-40); }
+
+/* ── SERVICES ── */
+.svc-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 36px; gap: 32px; }
+.svc-header-note { font-size: 0.85rem; color: var(--ink-40); max-width: 320px; text-align: right; line-height: 1.6; }
+.svc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 16px; }
+.svc-card { background: var(--white); border-radius: var(--r); border: 1px solid var(--ink-06); padding: 24px; box-shadow: var(--shadow-sm); transition: box-shadow 0.2s, transform 0.2s; }
+.svc-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.svc-icon-wrap { width: 40px; height: 40px; border-radius: 10px; background: var(--orange-08); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+.svc-icon-wrap [data-lucide], .svc-icon-wrap i { width: 20px; height: 20px; color: var(--orange); font-size: 20px; }
+.svc-title { font-size: 0.92rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 8px; }
+.svc-desc { font-size: 0.78rem; color: var(--ink-60); line-height: 1.6; }
+
+/* Migration wide card */
+.svc-migration { background: var(--ink); border-radius: var(--r); padding: 24px 28px; display: flex; align-items: center; gap: 24px; }
+.svc-migration-icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(240,90,40,0.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.svc-migration-icon [data-lucide] { width: 24px; height: 24px; color: var(--orange); }
+.svc-migration-body { flex: 1; }
+.svc-migration-title { font-size: 1.0rem; font-weight: 700; color: #fff; margin-bottom: 5px; letter-spacing: -0.02em; }
+.svc-migration-desc { font-size: 0.80rem; color: rgba(255,255,255,0.55); line-height: 1.6; }
+.svc-migration-meta { font-family: var(--mono); font-size: 0.65rem; color: var(--orange); margin-top: 8px; display: flex; gap: 16px; flex-wrap: wrap; }
+.svc-wide { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 0; background: var(--ink); border-radius: var(--r-lg); margin-top: 16px; padding: 28px 32px; align-items: center; }
+.svc-wide-div { width: 1px; height: 40px; background: rgba(255,255,255,0.08); }
+.svc-wide-label { font-family: var(--mono); font-size: 0.62rem; color: rgba(255,255,255,0.4); display: flex; align-items: center; gap: 5px; margin-bottom: 4px; letter-spacing: 0.04em; }
+.svc-wide-label [data-lucide] { width: 12px; height: 12px; }
+.svc-wide-val { font-size: 2rem; font-weight: 800; color: #fff; letter-spacing: -0.04em; margin-bottom: 2px; }
+.svc-wide-val.orange { color: var(--orange); }
+.svc-wide-desc { font-size: 0.72rem; color: rgba(255,255,255,0.40); }
+
+/* ── PROCESS ── */
+.process-steps { display: grid; grid-template-columns: repeat(5,1fr); gap: 0; margin-top: 44px; position: relative; }
+.process-steps::before { content:''; position:absolute; top: 28px; left: 28px; right: 28px; height: 2px; background: var(--ink-06); z-index: 0; }
+.ps { position: relative; z-index: 1; padding: 0 12px; text-align: center; }
+.ps-circle { width: 56px; height: 56px; border-radius: 50%; background: var(--white); border: 2px solid var(--ink-09); display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; transition: border-color 0.2s, background 0.2s; }
+.ps-circle [data-lucide] { width: 22px; height: 22px; color: var(--ink-40); transition: color 0.2s; }
+.ps.active .ps-circle { background: var(--orange); border-color: var(--orange); box-shadow: 0 4px 16px rgba(240,90,40,0.30); }
+.ps.active .ps-circle [data-lucide] { color: #fff; }
+.ps-day { font-family: var(--mono); font-size: 0.60rem; color: var(--orange); letter-spacing: 0.08em; margin-bottom: 5px; }
+.ps-title { font-size: 0.88rem; font-weight: 700; margin-bottom: 6px; }
+.ps-desc { font-size: 0.75rem; color: var(--ink-40); line-height: 1.55; }
+
+/* ── PORTFOLIO ── */
+.portfolio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 36px; }
+.pf-card { background: var(--white); border-radius: var(--r-lg); border: 1px solid var(--ink-06); overflow: hidden; box-shadow: var(--shadow-sm); }
+.pf-img { position: relative; height: 200px; overflow: hidden; }
+.pf-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+.pf-card:hover .pf-img img { transform: scale(1.03); }
+.pf-img-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 30%, rgba(15,15,18,0.75) 100%); }
+.pf-img-tag { position: absolute; top: 10px; left: 10px; font-family: var(--mono); font-size: 0.58rem; background: rgba(15,15,18,0.7); color: rgba(255,255,255,0.85); padding: 3px 8px; border-radius: 4px; letter-spacing: 0.06em; backdrop-filter: blur(4px); }
+.pf-img-metrics { position: absolute; bottom: 10px; right: 10px; display: flex; gap: 6px; }
+.pf-img-metric { background: rgba(255,255,255,0.15); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.2); border-radius: 6px; padding: 5px 9px; text-align: center; }
+.pf-img-metric-val { font-size: 0.80rem; font-weight: 800; color: #fff; letter-spacing: -0.02em; }
+.pf-img-metric-label { font-family: var(--mono); font-size: 0.50rem; color: rgba(255,255,255,0.65); }
+.pf-body { padding: 18px 20px; }
+.pf-title { font-size: 0.92rem; font-weight: 700; margin-bottom: 6px; }
+.pf-desc { font-size: 0.78rem; color: var(--ink-60); line-height: 1.6; margin-bottom: 12px; }
+.pf-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.pf-tag { font-family: var(--mono); font-size: 0.60rem; color: var(--ink-40); border: 1px solid var(--ink-09); border-radius: 4px; padding: 3px 8px; display: flex; align-items: center; gap: 4px; }
+.pf-tag [data-lucide] { width: 10px; height: 10px; }
+
+/* ── INDUSTRIES (DARK) ── */
+.ind-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-top: 36px; }
+.ind-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: var(--r); padding: 20px; transition: background 0.2s; }
+.ind-card:hover { background: rgba(255,255,255,0.07); }
+.ind-icon-wrap { width: 36px; height: 36px; border-radius: 9px; background: rgba(240,90,40,0.15); display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+.ind-icon-wrap [data-lucide] { width: 18px; height: 18px; color: var(--orange); }
+.ind-title { font-size: 0.88rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
+.ind-desc { font-size: 0.75rem; color: rgba(255,255,255,0.45); line-height: 1.55; }
+
+/* BUFFER ROW */
+.buffer-row { background: var(--white); padding: 28px 48px; border-top: 1px solid var(--ink-06); border-bottom: 1px solid var(--ink-06); }
+.buffer-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: repeat(4,1fr); gap: 0; }
+.buffer-stat { text-align: center; padding: 8px 0; }
+.buffer-stat + .buffer-stat { border-left: 1px solid var(--ink-06); }
+.buffer-stat-val { font-size: 1.7rem; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 2px; }
+.buffer-stat-val em { color: var(--orange); font-style: normal; }
+.buffer-stat-label { font-family: var(--mono); font-size: 0.62rem; color: var(--ink-40); letter-spacing: 0.06em; }
+
+/* ── TESTIMONIALS (DARK) ── */
+.testi-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 36px; }
+.testi-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: var(--r-lg); padding: 24px; }
+.testi-card.featured { background: rgba(240,90,40,0.10); border-color: rgba(240,90,40,0.20); grid-column: span 1; }
+.testi-stars { display: flex; gap: 2px; margin-bottom: 14px; }
+.testi-stars [data-lucide] { width: 13px; height: 13px; color: #F59E0B; fill: #F59E0B; }
+.testi-quote { font-size: 0.85rem; color: rgba(255,255,255,0.75); line-height: 1.68; margin-bottom: 18px; font-style: italic; }
+.testi-author { display: flex; align-items: center; gap: 10px; }
+.testi-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--orange); color: #fff; font-size: 0.72rem; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.testi-name { font-size: 0.82rem; font-weight: 700; color: #fff; }
+.testi-role { font-family: var(--mono); font-size: 0.62rem; color: rgba(255,255,255,0.40); letter-spacing: 0.02em; }
+
+/* ── AI SECTION ── */
+.ai-intro { max-width: 760px; margin-bottom: 16px; }
+.ai-stat-strip { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-bottom: 40px; }
+.ai-stat-chip { background: var(--ink); border-radius: var(--r); padding: 18px 20px; display: flex; gap: 12px; align-items: flex-start; }
+.ai-stat-chip-icon { width: 36px; height: 36px; border-radius: 9px; background: rgba(240,90,40,0.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.ai-stat-chip-icon [data-lucide] { width: 18px; height: 18px; color: var(--orange); }
+.ai-stat-chip-val { font-size: 1.4rem; font-weight: 800; color: #fff; letter-spacing: -0.03em; line-height: 1; margin-bottom: 3px; }
+.ai-stat-chip-val span { font-size: 0.72rem; font-weight: 500; color: rgba(255,255,255,0.40); margin-left: 4px; }
+.ai-stat-chip-label { font-size: 0.72rem; color: rgba(255,255,255,0.50); line-height: 1.45; }
+.ai-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.ai-card { background: rgba(255,255,255,0.65); backdrop-filter: blur(16px) saturate(160%); -webkit-backdrop-filter: blur(16px) saturate(160%); border-radius: var(--r); border: 1px solid rgba(255,255,255,0.80); padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.9); transition: box-shadow 0.2s, transform 0.2s; position: relative; overflow: hidden; }
+.ai-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.10); transform: translateY(-3px); }
+.ai-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--orange), rgba(240,90,40,0.3)); }
+.ai-card-icon { width: 44px; height: 44px; border-radius: 11px; background: var(--orange-08); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+.ai-card-icon [data-lucide], .ai-card-icon i { width: 22px; height: 22px; color: var(--orange); font-size: 22px; }
+.ai-card-title { font-size: 0.95rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 8px; }
+.ai-card-desc { font-size: 0.78rem; color: var(--ink-60); line-height: 1.6; margin-bottom: 12px; }
+.ai-card-result { font-family: var(--mono); font-size: 0.62rem; color: var(--orange); letter-spacing: 0.04em; display: flex; align-items: center; gap: 5px; }
+.ai-card-result::before { content: '▲'; font-size: 0.55rem; }
+
+/* ── COMPARISON ── */
+.comp-card { background: var(--white); border-radius: var(--r-lg); border: 1px solid var(--ink-09); overflow: hidden; box-shadow: var(--shadow-sm); }
+.comp-head { display: grid; grid-template-columns: 2fr 1.5fr 1.5fr; background: var(--cream); border-bottom: 1px solid var(--ink-09); }
+.comp-col { padding: 16px 20px; }
+.comp-col.us { background: var(--ink); }
+.comp-col-eyebrow { font-family: var(--mono); font-size: 0.60rem; color: var(--ink-40); letter-spacing: 0.06em; margin-bottom: 4px; }
+.comp-col.us .comp-col-eyebrow { color: rgba(255,255,255,0.40); }
+.comp-col-name { font-size: 0.92rem; font-weight: 700; }
+.comp-row { display: grid; grid-template-columns: 2fr 1.5fr 1.5fr; border-bottom: 1px solid var(--ink-06); }
+.comp-row:last-child { border-bottom: none; }
+.comp-cell { padding: 13px 20px; font-size: 0.80rem; display: flex; align-items: center; gap: 6px; }
+.comp-cell.feature { color: var(--ink-60); font-weight: 500; background: var(--cream); }
+.comp-cell.us-val { background: rgba(240,90,40,0.04); }
+.check { width: 14px; height: 14px; color: #0CCE6B; flex-shrink: 0; }
+.cross { width: 14px; height: 14px; color: #FF4444; flex-shrink: 0; }
+.comp-win { font-weight: 600; }
+.comp-lose { color: var(--ink-40); }
+
+/* ── TECH STACK ── */
+.tech-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 12px; }
+.tech-card { background: var(--cream); border-radius: var(--r); border: 1px solid var(--ink-06); padding: 18px 14px; text-align: center; transition: box-shadow 0.2s; }
+.tech-card:hover { box-shadow: var(--shadow-md); }
+.tech-icon-wrap { width: 40px; height: 40px; border-radius: 10px; background: var(--white); border: 1px solid var(--ink-06); display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 22px; }
+.tech-icon-wrap [data-lucide] { width: 20px; height: 20px; color: var(--ink-60); }
+.tech-icon-wrap i.ti { color: var(--ink-60); }
+.tech-name { font-size: 0.78rem; font-weight: 700; margin-bottom: 2px; }
+.tech-note { font-family: var(--mono); font-size: 0.58rem; color: var(--ink-40); }
+
+/* ── PRICING ── */
+.pricing-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin: 40px 0 20px; }
+.price-card { background: var(--white); border-radius: var(--r-lg); border: 1.5px solid var(--ink-09); padding: 28px; position: relative; }
+.price-card.featured { border-color: var(--orange); box-shadow: 0 0 0 3px rgba(240,90,40,0.08); }
+.price-badge { font-family: var(--mono); font-size: 0.62rem; color: var(--orange); background: var(--orange-08); border: 1px solid var(--orange-10); padding: 4px 10px; border-radius: 100px; display: inline-flex; align-items: center; gap: 5px; margin-bottom: 14px; letter-spacing: 0.04em; }
+.price-badge [data-lucide] { width: 10px; height: 10px; }
+.price-tier { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-40); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+.price-amount { font-size: 2.6rem; font-weight: 800; letter-spacing: -0.04em; line-height: 1; margin-bottom: 4px; }
+.price-amount sup { font-size: 1.2rem; vertical-align: super; font-weight: 700; }
+.price-note { font-family: var(--mono); font-size: 0.62rem; color: var(--ink-40); display: flex; align-items: center; gap: 5px; margin-bottom: 18px; letter-spacing: 0.02em; }
+.price-note [data-lucide] { width: 11px; height: 11px; }
+.price-div { border: none; border-top: 1px solid var(--ink-06); margin-bottom: 16px; }
+.price-feat { font-size: 0.78rem; color: var(--ink-60); display: flex; align-items: flex-start; gap: 8px; margin-bottom: 9px; line-height: 1.5; }
+.price-feat [data-lucide] { width: 14px; height: 14px; color: var(--orange); margin-top: 2px; flex-shrink: 0; }
+.price-cta { display: flex; align-items: center; justify-content: center; gap: 7px; width: 100%; padding: 12px; border-radius: 8px; font-family: var(--sans); font-size: 0.85rem; font-weight: 700; cursor: pointer; text-decoration: none; margin-top: 20px; transition: all 0.15s; }
+.price-cta:not(.ghost) { background: var(--orange); color: #fff; box-shadow: 0 2px 8px rgba(240,90,40,0.25); }
+.price-cta:not(.ghost):hover { box-shadow: 0 4px 16px rgba(240,90,40,0.38); transform: translateY(-1px); }
+.price-cta.ghost { border: 1.5px solid var(--ink-09); color: var(--ink); }
+.price-cta.ghost:hover { border-color: var(--ink-40); }
+.pricing-note-bar { background: var(--ink); border-radius: var(--r); padding: 16px 20px; display: flex; align-items: flex-start; gap: 12px; font-size: 0.80rem; color: rgba(255,255,255,0.55); line-height: 1.6; }
+.pricing-note-bar [data-lucide] { width: 18px; height: 18px; color: var(--orange); flex-shrink: 0; margin-top: 1px; }
+.pricing-note-bar strong { color: rgba(255,255,255,0.85); }
+
+/* ── WHY US ── */
+.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 36px; }
+.why-card { background: var(--cream); border: 1px solid var(--ink-06); border-radius: var(--r-lg); padding: 24px; display: flex; gap: 16px; align-items: flex-start; }
+.why-card.accent { background: var(--orange-05); border-color: var(--orange-10); }
+.why-icon-box { width: 40px; height: 40px; border-radius: 10px; background: var(--orange-08); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.why-icon-box [data-lucide] { width: 20px; height: 20px; color: var(--orange); }
+.why-title { font-size: 0.92rem; font-weight: 700; margin-bottom: 6px; }
+.why-desc { font-size: 0.78rem; color: var(--ink-60); line-height: 1.6; }
+
+/* ── FAQ v2 — Linear Minimal sidebar + native details/summary ── */
+.faq2-mobile-pills { display: none; gap: 8px; flex-wrap: wrap; margin-top: 24px; }
+.faq2-mobile-pills a { display: inline-flex; align-items: center; gap: 5px; border: 1px solid var(--ink-12); background: #fff; border-radius: 99px; padding: 6px 14px; font-size: 0.8125rem; font-weight: 500; color: var(--ink-60); text-decoration: none; transition: all 0.15s; white-space: nowrap; }
+.faq2-mobile-pills a:hover { border-color: var(--orange); color: var(--orange); }
+.faq2-layout { display: grid; grid-template-columns: 220px 1fr; gap: 56px; margin-top: 48px; align-items: start; }
+.faq2-sidebar { position: sticky; top: 88px; }
+.faq2-topics-label { font-family: var(--mono); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-40); margin-bottom: 10px; }
+.faq2-nav { list-style: none; }
+.faq2-nav a { display: flex; align-items: center; justify-content: space-between; border-left: 2px solid transparent; padding: 10px 12px; text-decoration: none; font-size: 0.875rem; font-weight: 500; color: var(--ink-60); transition: all 0.15s; }
+.faq2-nav a:hover { border-left-color: var(--orange); background: var(--orange-05); color: var(--orange); }
+.faq2-count { font-family: var(--mono); font-size: 0.56rem; font-weight: 700; background: var(--ink-06); border-radius: 99px; padding: 2px 6px; color: var(--ink-40); }
+.faq2-nav a:hover .faq2-count { background: var(--orange-10); color: var(--orange); }
+.faq2-sidebar-footer { border-top: 1px solid var(--ink-09); margin-top: 16px; padding-top: 16px; }
+.faq2-sidebar-footer p { font-size: 0.8rem; color: var(--ink-40); margin-bottom: 8px; }
+.faq2-sidebar-footer a { font-size: 0.8rem; font-weight: 700; color: var(--orange); text-decoration: none; display: flex; align-items: center; gap: 5px; }
+.faq2-sidebar-footer a:hover { text-decoration: underline; }
+.faq2-total { font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-40); margin-top: 20px; }
+.faq2-categories { display: flex; flex-direction: column; gap: 40px; }
+.faq2-category { scroll-margin-top: 108px; }
+.faq2-cat-header { display: flex; align-items: center; gap: 12px; padding-bottom: 16px; margin-bottom: 4px; }
+.faq2-cat-bar { width: 24px; height: 2px; background: var(--orange); flex-shrink: 0; }
+.faq2-cat-label { font-family: var(--mono); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); }
+.faq2-item { border-top: 1px solid var(--ink-09); }
+.faq2-item:last-child + .faq2-bottom-border { border-top: 1px solid var(--ink-09); }
+.faq2-summary { display: flex; cursor: pointer; list-style: none; align-items: flex-start; justify-content: space-between; gap: 20px; padding: 20px 0; }
+.faq2-summary::-webkit-details-marker { display: none; }
+.faq2-q-text { font-size: 0.9375rem; font-weight: 600; line-height: 1.55; color: var(--ink); transition: color 0.15s; }
+details[open] .faq2-q-text { color: var(--orange); }
+.faq2-chevron { width: 24px; height: 24px; flex-shrink: 0; border-radius: 50%; border: 1px solid var(--ink-12); background: #fff; display: flex; align-items: center; justify-content: center; color: var(--ink-40); margin-top: 1px; transition: all 0.2s; }
+details[open] .faq2-chevron { border-color: rgba(240,90,40,0.3); background: rgba(240,90,40,0.05); color: var(--orange); }
+.faq2-chevron svg { transition: transform 0.22s ease-in-out; }
+details[open] .faq2-chevron svg { transform: rotate(180deg); }
+.faq2-answer { padding-bottom: 20px; padding-top: 2px; border-left: 2px solid var(--orange); padding-left: 16px; }
+.faq2-answer p { font-size: 0.9375rem; line-height: 1.7; color: var(--ink-60); }
+
+/* ── LOCATION ── */
+.location-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 36px; align-items: start; }
+.loc-map-card { background: var(--cream); border-radius: var(--r-lg); border: 1px solid var(--ink-06); overflow: hidden; }
+.loc-map-img { position: relative; height: 240px; }
+.loc-map-img img { width: 100%; height: 100%; object-fit: cover; }
+.loc-map-img-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(15,15,18,0.60) 100%); }
+.loc-map-label-overlay { position: absolute; bottom: 14px; left: 14px; font-family: var(--mono); font-size: 0.65rem; color: rgba(255,255,255,0.85); display: flex; align-items: center; gap: 5px; letter-spacing: 0.04em; }
+.loc-map-footer { padding: 14px 16px; }
+.loc-map-footer-label { font-family: var(--mono); font-size: 0.60rem; color: var(--orange); letter-spacing: 0.06em; margin-bottom: 2px; }
+.loc-map-footer-name { font-size: 0.88rem; font-weight: 700; }
+.loc-details h3 { margin-bottom: 12px; }
+.loc-details p { font-size: 0.85rem; margin-bottom: 20px; }
+.loc-stat-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-bottom: 20px; }
+.loc-stat { background: var(--cream); border-radius: 8px; padding: 12px; }
+.loc-stat-val { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.03em; color: var(--orange); }
+.loc-stat-label { font-family: var(--mono); font-size: 0.60rem; color: var(--ink-40); margin-top: 2px; }
+.loc-zones { font-family: var(--mono); font-size: 0.65rem; color: var(--ink-40); display: flex; align-items: center; gap: 6px; line-height: 1.7; letter-spacing: 0.02em; }
+.loc-zones [data-lucide] { width: 12px; height: 12px; color: var(--orange); flex-shrink: 0; }
+
+/* ── FINAL CTA ── */
+.final-cta { background: var(--charcoal); padding: 96px 48px; position: relative; overflow: hidden; text-align: center; }
+.final-cta::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 800px; height: 400px; background: radial-gradient(ellipse at center, rgba(240,90,40,0.12) 0%, transparent 70%); pointer-events: none; }
+.fcs { max-width: 660px; margin: 0 auto; position: relative; z-index: 1; }
+.fcs h2 { color: #fff; font-size: clamp(1.9rem,3.8vw,3rem); margin-bottom: 14px; }
+.fcs-lead { font-size: 1.0rem; color: rgba(255,255,255,0.58); line-height: 1.68; margin-bottom: 34px; }
+.fcs-actions { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; margin-bottom: 36px; }
+.btn-primary-d { display: inline-flex; align-items: center; gap: 7px; background: var(--orange); color: #fff; border: none; padding: 15px 28px; border-radius: 8px; font-family: var(--sans); font-size: 0.92rem; font-weight: 700; cursor: pointer; text-decoration: none; box-shadow: 0 4px 16px rgba(240,90,40,0.35); transition: transform 0.15s, box-shadow 0.15s; }
+.btn-primary-d:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(240,90,40,0.45); }
+.btn-outline-d { display: inline-flex; align-items: center; gap: 7px; background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.20); padding: 14px 24px; border-radius: 8px; font-family: var(--sans); font-size: 0.92rem; font-weight: 600; cursor: pointer; text-decoration: none; transition: border-color 0.2s, background 0.2s; }
+.btn-outline-d:hover { border-color: rgba(255,255,255,0.45); background: rgba(255,255,255,0.05); }
+.fcs-trust { display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; }
+.fcs-trust-item { font-size: 0.75rem; color: rgba(255,255,255,0.42); display: flex; align-items: center; gap: 5px; }
+.fcs-trust-item [data-lucide] { width: 12px; height: 12px; color: var(--orange); }
+
+/* FOOTER */
+.footer { background: var(--ink); padding: 28px 48px; text-align: center; font-family: var(--mono); font-size: 0.65rem; color: rgba(255,255,255,0.35); letter-spacing: 0.03em; }
+.footer a { color: var(--orange); text-decoration: none; }
+
+/* MOCKUP BADGE */
+.mockup-badge { position: fixed; bottom: 18px; right: 18px; background: var(--ink); color: #fff; padding: 8px 16px; border-radius: 100px; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.06em; z-index: 999; box-shadow: 0 4px 16px rgba(0,0,0,0.22); display: flex; align-items: center; gap: 6px; }
+.mockup-badge span { color: var(--orange); }
+
+/* ══ 2026 DESIGN: GLASSMORPHISM ══════════════════════════ */
+.glass {
+  background: rgba(255,255,255,0.55);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255,255,255,0.70);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07), inset 0 1px 0 rgba(255,255,255,0.9);
+}
+.glass-dark {
+  background: rgba(15,15,18,0.55);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+}
+
+/* ══ 2026 DESIGN: CRYSTAL UI ════════════════════════════ */
+.crystal {
+  background: linear-gradient(135deg, rgba(255,255,255,0.85) 0%, rgba(255,245,240,0.70) 50%, rgba(255,255,255,0.80) 100%);
+  backdrop-filter: blur(24px) brightness(1.05) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) brightness(1.05) saturate(200%);
+  border: 1px solid rgba(255,255,255,0.80);
+  box-shadow: 0 1px 0 rgba(255,255,255,1) inset, 0 -1px 0 rgba(240,90,40,0.08) inset, 0 8px 32px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+}
+.crystal::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.9) 30%, rgba(240,90,40,0.3) 60%, transparent 100%);
+}
+.crystal::after {
+  content: '';
+  position: absolute;
+  top: -60%; left: -20%;
+  width: 60%; height: 120%;
+  background: linear-gradient(105deg, rgba(255,255,255,0.25) 0%, transparent 60%);
+  transform: skewX(-20deg);
+  pointer-events: none;
+}
+
+/* ══ 2026 DESIGN: CLIP ANIMATIONS ═══════════════════════ */
+@keyframes clipReveal {
+  from { clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); opacity: 0; }
+  to   { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); opacity: 1; }
+}
+@keyframes clipSlideUp {
+  from { clip-path: inset(100% 0 0 0); transform: translateY(12px); opacity: 0; }
+  to   { clip-path: inset(0 0 0 0); transform: translateY(0); opacity: 1; }
+}
+@keyframes shimmerSlide {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.clip-reveal { animation: clipReveal 0.65s cubic-bezier(0.22,1,0.36,1) both; }
+.clip-slide  { animation: clipSlideUp 0.5s cubic-bezier(0.22,1,0.36,1) both; }
+
+/* ══ COMMERCEFLO HERO CARD ═══════════════════════════════ */
+.svc-commerceflo {
+  position: relative;
+  border-radius: var(--r-lg);
+  padding: 32px 36px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0F0F12 0%, #1a1118 40%, #0d1520 100%);
+  border: 1px solid rgba(240,90,40,0.25);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: center;
+}
+.svc-commerceflo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 50%, rgba(240,90,40,0.12) 0%, transparent 60%),
+              radial-gradient(ellipse at 20% 80%, rgba(30,80,160,0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+/* noise texture on dark section */
+.svc-commerceflo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.5;
+  pointer-events: none;
+}
+.cf-left { position: relative; z-index: 1; }
+.cf-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(240,90,40,0.15);
+  border: 1px solid rgba(240,90,40,0.30);
+  border-radius: 100px;
+  padding: 4px 12px;
+  font-family: var(--mono); font-size: 0.62rem; font-weight: 500;
+  color: var(--orange); letter-spacing: 0.10em; text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.cf-title {
+  font-size: 1.25rem; font-weight: 800; color: #fff;
+  letter-spacing: -0.03em; line-height: 1.25; margin-bottom: 8px;
+}
+.cf-title span { color: var(--orange); }
+.cf-desc { font-size: 0.865rem; color: rgba(255,255,255,0.58); line-height: 1.65; max-width: 560px; margin-bottom: 16px; }
+.cf-channels {
+  display: flex; flex-wrap: wrap; gap: 7px;
+}
+.cf-channel {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 6px; padding: 4px 10px;
+  font-family: var(--mono); font-size: 0.60rem; color: rgba(255,255,255,0.70);
+  letter-spacing: 0.04em;
+  transition: background 0.2s, border-color 0.2s;
+}
+.cf-channel:hover { background: rgba(240,90,40,0.12); border-color: rgba(240,90,40,0.30); color: var(--orange); }
+.cf-channel iconify-icon { font-size: 13px; }
+.cf-right { position: relative; z-index: 1; flex-shrink: 0; }
+.cf-cta-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--orange);
+  color: #fff; border: none; padding: 13px 22px; border-radius: 8px;
+  font-family: var(--sans); font-size: 0.87rem; font-weight: 700;
+  cursor: pointer; text-decoration: none; white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(240,90,40,0.40);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.cf-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(240,90,40,0.50); }
+.cf-stat-strip {
+  display: flex; gap: 20px; margin-top: 16px;
+}
+.cf-stat-item {
+  font-family: var(--mono); font-size: 0.60rem;
+  color: rgba(255,255,255,0.45); display: flex; align-items: center; gap: 5px;
+}
+.cf-stat-item iconify-icon { color: var(--orange); font-size: 11px; }
+
+/* ══ EXTENDED PLATFORM STRIP ════════════════════════════ */
+.svc-platform-strip {
+  display: flex; align-items: center; gap: 0;
+  border: 1px solid var(--ink-09);
+  border-radius: var(--r);
+  overflow: hidden;
+  margin-top: 12px;
+}
+.svc-platform-strip-label {
+  padding: 14px 18px;
+  background: var(--ink-06);
+  border-right: 1px solid var(--ink-09);
+  font-family: var(--mono); font-size: 0.60rem; color: var(--ink-40);
+  letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; flex-shrink: 0;
+}
+.svc-platform-chips {
+  display: flex; flex-wrap: wrap; gap: 6px; padding: 10px 16px; flex: 1;
+}
+.svc-platform-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--white); border: 1px solid var(--ink-09); border-radius: 6px;
+  padding: 5px 10px; font-size: 0.78rem; font-weight: 600; color: var(--ink);
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+}
+.svc-platform-chip:hover { border-color: var(--orange); color: var(--orange); background: var(--orange-05); }
+.svc-platform-chip iconify-icon { font-size: 15px; }
+
+/* ══ ICONIFY SIZE DEFAULTS ═══════════════════════════════ */
+iconify-icon { display: inline-block; vertical-align: middle; flex-shrink: 0; }
+.svc-icon-wrap iconify-icon { font-size: 22px; color: var(--orange); }
+.ai-card-icon iconify-icon { font-size: 22px; }
+.tech-icon-wrap iconify-icon { font-size: 22px; }
+.why-icon-box iconify-icon { font-size: 20px; color: var(--orange); }
+.nav-logo iconify-icon { font-size: 20px; color: var(--orange); }
+
+/* ══ PRICING FEATURED CARD — CRYSTAL SHINE ══════════════ */
+.price-card.featured {
+  position: relative;
+  overflow: hidden;
+}
+.price-card.featured::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--orange), rgba(255,180,100,0.8), var(--orange), transparent);
+  background-size: 200% 100%;
+  animation: shimmerSlide 2.5s linear infinite;
+}
+.price-card.featured::after {
+  content: '';
+  position: absolute;
+  top: -40%; left: -30%;
+  width: 50%; height: 80%;
+  background: linear-gradient(105deg, rgba(255,255,255,0.08) 0%, transparent 60%);
+  transform: skewX(-20deg);
+  pointer-events: none;
+}
+
+/* ══ SECTION ENTRY ANIMATIONS ════════════════════════════ */
+.section h2, .hero-h1 { animation: clipSlideUp 0.7s cubic-bezier(0.22,1,0.36,1) both; }
+</style>
+</head>
+<body>
+
+<div class="mockup-badge"><i data-lucide="layers" style="width:12px;height:12px;color:#F05A28"></i> FINAL V3 — <span>AI + MULTI-PLATFORM + REAL CLIENTS</span></div>
+
+<!-- ══ NAV ══════════════════════════════════════════════ -->
+<nav class="nav">
+  <div class="nav-logo"><iconify-icon icon="ph:factory-bold" style="font-size:20px;color:#F05A28;"></iconify-icon> Factory<span>Jet</span></div>
+  <ul class="nav-links">
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Portfolio</a></li>
+    <li><a href="#">Pricing</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="tel:+1-888-000-0000" class="nav-tel"><i data-lucide="phone" style="width:13px;height:13px"></i> +1 888-000-0000</a>
+    <button class="nav-cta"><i data-lucide="zap" style="width:14px;height:14px"></i> Get a Quote</button>
+  </div>
+</nav>
+
+<!-- ══ BREADCRUMB ════════════════════════════════════════ -->
+<div class="breadcrumb-bar">
+  <i data-lucide="home" style="width:11px;height:11px"></i>
+  <a href="#">Home</a><span class="sep">/</span>
+  <a href="#">Services</a><span class="sep">/</span>
+  <a href="#">Ecommerce Development</a><span class="sep">/</span>
+  <span class="current">Mumbai</span>
+</div>
+
+<!-- ══ HERO ══════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        Mumbai Ecommerce Development
+      </div>
+      <div class="hero-city">
+        <i data-lucide="map-pin" style="width:12px;height:12px;color:#F05A28"></i>
+        Mumbai · Maharashtra · India
+      </div>
+      <h1 class="hero-h1">
+        Ecommerce Development<br><em>in Mumbai</em>
+      </h1>
+      <p class="hero-lead">Shopify, WooCommerce & AI-powered custom stores for India's ₹4.6T digital market. 7-day delivery. Lighthouse 95+. 65% cheaper than US agencies.</p>
+      <div class="hero-actions">
+        <a href="#" class="btn-primary">Start Your Store <i data-lucide="arrow-right" style="width:15px;height:15px"></i></a>
+        <a href="#" class="btn-ghost"><i data-lucide="layout-dashboard" style="width:14px;height:14px"></i> See Portfolio</a>
+      </div>
+      <div class="hero-trust-row">
+        <div class="hero-trust-item"><i data-lucide="check-circle" style="width:14px;height:14px"></i> 500+ stores built</div>
+        <div class="hero-trust-item"><i data-lucide="zap" style="width:14px;height:14px"></i> 7-day delivery</div>
+        <div class="hero-trust-item"><i data-lucide="brain-circuit" style="width:14px;height:14px"></i> AI-ready by default</div>
+        <div class="hero-trust-item"><i data-lucide="shield-check" style="width:14px;height:14px"></i> Full code ownership</div>
+      </div>
+    </div>
+    <div>
+      <div class="hero-card">
+        <div class="hero-card-img">
+          <picture>
+            <source srcset="/images/ecommerce/mumbai/ecommerce-laptop-store.webp" type="image/webp">
+            <img src="/images/ecommerce/mumbai/ecommerce-laptop-store.jpg" alt="AI-powered ecommerce store on laptop — FactoryJet Mumbai" loading="eager">
+          </picture>
+          <div class="hero-card-img-overlay"></div>
+          <div class="hero-card-img-label">
+            <i data-lucide="monitor" style="width:11px;height:11px"></i> Live AI-ready ecommerce store — built in 7 days
+          </div>
+        </div>
+        <div class="hero-card-body">
+          <div class="hcb-header">
+            <div class="hcb-title">Mumbai Market Intelligence</div>
+            <div class="hcb-live">LIVE DATA</div>
+          </div>
+          <div class="hcb-stat-grid">
+            <div class="hcb-stat accent">
+              <div class="hcb-stat-label"><i data-lucide="trending-up" style="width:10px;height:10px"></i> Market Size</div>
+              <div class="hcb-stat-val">₹4.6T</div>
+              <div class="hcb-stat-sub">India digital market</div>
+            </div>
+            <div class="hcb-stat">
+              <div class="hcb-stat-label"><i data-lucide="users" style="width:10px;height:10px;color:#F05A28"></i> Online Shoppers</div>
+              <div class="hcb-stat-val">21.7M</div>
+              <div class="hcb-stat-sub">Mumbai metro</div>
+            </div>
+            <div class="hcb-stat">
+              <div class="hcb-stat-label"><i data-lucide="bot" style="width:10px;height:10px;color:#F05A28"></i> AI Conversion Lift</div>
+              <div class="hcb-stat-val">3.5%</div>
+              <div class="hcb-stat-sub">vs 1.6% avg</div>
+            </div>
+            <div class="hcb-stat">
+              <div class="hcb-stat-label"><i data-lucide="smartphone" style="width:10px;height:10px;color:#F05A28"></i> Mobile Share</div>
+              <div class="hcb-stat-val">78%</div>
+              <div class="hcb-stat-sub">Mobile-first buyers</div>
+            </div>
+          </div>
+          <div class="hcb-speed">
+            <div class="hcb-speed-icon"><i data-lucide="zap" style="width:20px;height:20px;color:#F05A28"></i></div>
+            <div class="hcb-speed-text">
+              <div class="hcb-speed-label">7-Day Delivery Guarantee</div>
+              <div class="hcb-speed-sub">FULL_AI_READY_STORE_LIVE_IN_7_DAYS</div>
+            </div>
+            <div class="hcb-speed-badge">GUARANTEED</div>
+          </div>
+          <div class="hcb-lh">
+            <div class="lh-dot g">95</div>
+            <div class="lh-dot g">97</div>
+            <div class="lh-dot g">98</div>
+            <div class="lh-dot g">100</div>
+            <div class="lh-label">Perf · SEO · Best Practices · A11y</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONV STRIP -->
+<div class="conv-strip">
+  <div class="conv-strip-inner">
+    <div class="cs-item"><i data-lucide="package-check" style="width:15px;height:15px"></i> 500+ stores shipped</div>
+    <div class="cs-item"><i data-lucide="zap" style="width:15px;height:15px"></i> 7-day delivery — guaranteed</div>
+    <div class="cs-item"><i data-lucide="bot" style="width:15px;height:15px"></i> AI-powered by default</div>
+    <div class="cs-item"><i data-lucide="indian-rupee" style="width:15px;height:15px"></i> 65% cheaper than US agencies</div>
+    <a href="#" class="cs-link">See pricing <i data-lucide="arrow-right" style="width:13px;height:13px"></i></a>
+  </div>
+</div>
+
+<!-- ══ CITY CONTEXT ══════════════════════════════════════ -->
+<section class="section section-white">
+  <div class="container">
+    <div class="eyebrow">Mumbai Market Intelligence</div>
+    <h2>Why Mumbai Is India's<br>Ecommerce Powerhouse</h2>
+    <div class="ctx-grid">
+      <div class="ctx-card has-img">
+        <div class="ctx-card-img">
+          <picture>
+            <source srcset="/images/ecommerce/mumbai/gateway-of-india.webp" type="image/webp">
+            <img src="/images/ecommerce/mumbai/gateway-of-india.jpg" alt="Gateway of India — Mumbai, Maharashtra">
+          </picture>
+          <div class="ctx-card-img-overlay"></div>
+          <div class="ctx-card-img-content">
+            <div class="ctx-card-img-label">MUMBAI MARKET SIZE</div>
+            <div class="ctx-card-img-val">₹4.6T</div>
+            <div class="ctx-card-img-desc">India's digital retail market</div>
+          </div>
+        </div>
+        <div class="ctx-card-text-body">
+          <div class="ctx-label"><i data-lucide="trending-up" style="width:10px;height:10px;color:#F05A28"></i> YoY Growth</div>
+          <div style="font-size:1.4rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:3px;">38% <span style="font-size:0.8rem;font-weight:500;color:var(--ink-40)">annually</span></div>
+          <div style="font-size:0.76rem;color:var(--ink-40);">Outpacing national avg of 27%</div>
+        </div>
+      </div>
+      <div class="ctx-card span2" style="padding:32px 36px;">
+        <div class="ctx-label">Market Context</div>
+        <h3 style="margin-bottom:14px;">The opportunity most Mumbai brands are missing</h3>
+        <div class="ctx-bullet"><i data-lucide="arrow-right"></i> 21.7 million active online shoppers in Mumbai metro — larger than many countries</div>
+        <div class="ctx-bullet"><i data-lucide="arrow-right"></i> ₹1,400 average order value, 22% above the national average — high-intent buyers</div>
+        <div class="ctx-bullet"><i data-lucide="arrow-right"></i> 78% mobile shopping share demands sub-2s performance on every device</div>
+        <div class="ctx-bullet"><i data-lucide="arrow-right"></i> Stores using AI personalisation convert at 3.5% vs 1.6% industry average — a 2× gap</div>
+        <div class="ctx-bullet"><i data-lucide="arrow-right"></i> Cross-border D2C exports via Mumbai port growing 31% YoY — global reach from day one</div>
+      </div>
+    </div>
+    <div class="ctx-bottom">
+      <div class="ctx-mini">
+        <div class="ctx-mini-label"><i data-lucide="smartphone"></i> Mobile Penetration</div>
+        <div class="ctx-mini-val">91%</div>
+        <div class="ctx-mini-desc">Smartphone ownership in Mumbai metro</div>
+      </div>
+      <div class="ctx-mini">
+        <div class="ctx-mini-label"><i data-lucide="store"></i> D2C Brands</div>
+        <div class="ctx-mini-val">4,200+</div>
+        <div class="ctx-mini-desc">Active D2C brands headquartered in Mumbai</div>
+      </div>
+      <div class="ctx-mini">
+        <div class="ctx-mini-label"><i data-lucide="bot"></i> AI Commerce Growth</div>
+        <div class="ctx-mini-val">3× rise</div>
+        <div class="ctx-mini-desc">AI adoption among India D2C sellers in 2025</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICES ══════════════════════════════════════════ -->
+<section class="section section-cream">
+  <div class="container">
+    <div class="svc-header">
+      <div>
+        <div class="eyebrow">What We Build</div>
+        <h2>Every Platform.<br>Every Store Type.</h2>
+      </div>
+      <div class="svc-header-note">Every store ships with AI-ready architecture, Lighthouse 95+, and mobile-first UI for Indian payment flows — regardless of platform.</div>
+    </div>
+
+    <!-- ── Commerceflo Hero Featured Card ── -->
+    <div class="svc-commerceflo">
+      <div class="cf-left">
+        <div class="cf-badge">
+          <iconify-icon icon="ph:sparkle-fill"></iconify-icon>
+          AI-Native · Featured Platform
+        </div>
+        <div class="cf-title">Commerceflo — <span>Sell Everywhere,</span> Manage From One Place</div>
+        <div class="cf-desc">The AI-native unified omnichannel platform purpose-built for Indian D2C brands. One dashboard to run your DTC store, Amazon, Flipkart, Zepto, Blinkit, Meesho, and more — with AI inventory sync, smart pricing, and unified analytics across every channel simultaneously.</div>
+        <div class="cf-channels">
+          <span class="cf-channel"><iconify-icon icon="ph:storefront-bold"></iconify-icon> DTC Store</span>
+          <span class="cf-channel"><iconify-icon icon="simple-icons:amazon"></iconify-icon> Amazon</span>
+          <span class="cf-channel"><iconify-icon icon="simple-icons:flipkart"></iconify-icon> Flipkart</span>
+          <span class="cf-channel"><iconify-icon icon="ph:lightning-bold"></iconify-icon> Zepto</span>
+          <span class="cf-channel"><iconify-icon icon="ph:bag-bold"></iconify-icon> Blinkit</span>
+          <span class="cf-channel"><iconify-icon icon="ph:shopping-cart-bold"></iconify-icon> Meesho</span>
+          <span class="cf-channel"><iconify-icon icon="ph:plus-bold"></iconify-icon> More channels</span>
+        </div>
+        <div class="cf-stat-strip">
+          <div class="cf-stat-item"><iconify-icon icon="ph:chart-line-up-bold"></iconify-icon> AI-driven inventory sync across all channels</div>
+          <div class="cf-stat-item"><iconify-icon icon="ph:robot-bold"></iconify-icon> Unified analytics dashboard</div>
+          <div class="cf-stat-item"><iconify-icon icon="ph:lightning-bold"></iconify-icon> Live in 7 days</div>
+        </div>
+      </div>
+      <div class="cf-right">
+        <a href="#" class="cf-cta-btn">Explore Commerceflo <iconify-icon icon="ph:arrow-right-bold"></iconify-icon></a>
+      </div>
+    </div>
+
+    <!-- ── Primary 3-card grid ── -->
+    <div class="svc-grid" style="grid-template-columns: repeat(3,1fr); margin-top: 12px;">
+      <div class="svc-card">
+        <div class="svc-icon-wrap"><iconify-icon icon="simple-icons:shopify"></iconify-icon></div>
+        <div class="svc-title">Shopify Development</div>
+        <div class="svc-desc">Custom Shopify themes, Liquid templating, app integrations. Razorpay, Shiprocket, Unicommerce — India-ready out of the box. Fastest path from zero to selling.</div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon-wrap"><iconify-icon icon="simple-icons:woocommerce"></iconify-icon></div>
+        <div class="svc-title">WooCommerce Development</div>
+        <div class="svc-desc">WordPress-based stores with full ownership and zero platform fees. Custom themes, WooCommerce extensions, Razorpay integration. Ideal for content-heavy brands wanting full control.</div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon-wrap"><i data-lucide="zap"></i></div>
+        <div class="svc-title">Custom & Headless</div>
+        <div class="svc-desc">Next.js storefronts with headless commerce. Sub-2s load times, Lighthouse 95+, edge-deployed on Cloudflare. Built for scale, AI integrations, and complex B2B workflows.</div>
+      </div>
+    </div>
+
+    <!-- ── Secondary platform strip ── -->
+    <div class="svc-platform-strip">
+      <div class="svc-platform-strip-label">Also on</div>
+      <div class="svc-platform-chips">
+        <span class="svc-platform-chip"><iconify-icon icon="simple-icons:magento"></iconify-icon> Magento / Adobe Commerce</span>
+        <span class="svc-platform-chip"><iconify-icon icon="ph:cloud-bold"></iconify-icon> Salesforce Commerce</span>
+        <span class="svc-platform-chip"><iconify-icon icon="simple-icons:opencart"></iconify-icon> OpenCart</span>
+        <span class="svc-platform-chip"><iconify-icon icon="simple-icons:prestashop"></iconify-icon> PrestaShop</span>
+        <span class="svc-platform-chip"><i data-lucide="palette" style="width:14px;height:14px"></i> UI/UX Design</span>
+      </div>
+    </div>
+
+    <!-- Platform Migration Wide Card -->
+    <div class="svc-migration" style="margin-top:12px;">
+      <div class="svc-migration-icon"><i data-lucide="arrow-left-right"></i></div>
+      <div class="svc-migration-body">
+        <div class="svc-migration-title">Platform Migration — Magento, WooCommerce, OpenCart, PrestaShop → Shopify, Commerceflo or Next.js</div>
+        <div class="svc-migration-desc">Running a slow legacy store? We migrate your full product catalogue, order history, customer data, and SEO 301 redirects — with zero downtime and zero ranking drops. Most migrations complete in 7 days.</div>
+        <div class="svc-migration-meta">
+          <span>✓ 40+ migrations completed</span>
+          <span>✓ Zero ranking drops — guaranteed</span>
+          <span>✓ All products, orders & customers preserved</span>
+        </div>
+      </div>
+      <a href="#" class="btn-primary" style="white-space:nowrap;flex-shrink:0;">Request an Audit <i data-lucide="arrow-right" style="width:14px;height:14px"></i></a>
+    </div>
+
+    <div class="svc-wide">
+      <div>
+        <div class="svc-wide-label"><i data-lucide="clock"></i> Our Speed</div>
+        <div class="svc-wide-val">7 Days</div>
+        <div class="svc-wide-desc">Full ecommerce store — live, tested, optimised</div>
+      </div>
+      <div class="svc-wide-div"></div>
+      <div>
+        <div class="svc-wide-label"><i data-lucide="indian-rupee"></i> Your Savings</div>
+        <div class="svc-wide-val orange">65%</div>
+        <div class="svc-wide-desc">vs. US agencies billing $150–$300/hr</div>
+      </div>
+      <div class="svc-wide-div"></div>
+      <div>
+        <div class="svc-wide-label"><i data-lucide="package-check"></i> Stores Shipped</div>
+        <div class="svc-wide-val">500+</div>
+        <div class="svc-wide-desc">Shopify, WooCommerce, headless & custom</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ AI COMMERCE ═══════════════════════════════════════ -->
+<section class="section section-white" style="background: linear-gradient(160deg, #f0f4ff 0%, #fff5f0 50%, #f5fff5 100%);"  >
+  <div class="container">
+    <div class="eyebrow">AI Commerce</div>
+    <h2>AI-Powered Features —<br>Built In, Not Bolted On</h2>
+    <div class="ai-intro" style="margin-top:14px;margin-bottom:32px;">
+      <p>Every store we build in 2026 ships AI-ready as core architecture — not an afterthought plugin. Mumbai D2C brands using AI convert at <strong style="color:var(--ink)">3.5% vs the 1.6% industry average</strong>. That 2× gap is the difference between scaling and stalling.</p>
+    </div>
+
+    <!-- AI Stats Strip -->
+    <div class="ai-stat-strip">
+      <div class="ai-stat-chip">
+        <div class="ai-stat-chip-icon"><i data-lucide="trending-up"></i></div>
+        <div>
+          <div class="ai-stat-chip-val">3.5% <span>vs 1.6% avg</span></div>
+          <div class="ai-stat-chip-label">Conversion rate for AI-enabled Mumbai ecommerce stores</div>
+        </div>
+      </div>
+      <div class="ai-stat-chip">
+        <div class="ai-stat-chip-icon"><i data-lucide="camera"></i></div>
+        <div>
+          <div class="ai-stat-chip-val">40% <span>higher</span></div>
+          <div class="ai-stat-chip-label">Conversion lift from AI visual search — critical for fashion & jewellery</div>
+        </div>
+      </div>
+      <div class="ai-stat-chip">
+        <div class="ai-stat-chip-icon"><i data-lucide="users"></i></div>
+        <div>
+          <div class="ai-stat-chip-val">3× <span>growth</span></div>
+          <div class="ai-stat-chip-label">Rise in AI adoption among India D2C sellers in 2025 alone</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI Feature Cards -->
+    <div class="ai-grid">
+      <div class="ai-card">
+        <div class="ai-card-icon"><i data-lucide="search"></i></div>
+        <div class="ai-card-title">AI Smart Search</div>
+        <div class="ai-card-desc">NLP-powered search understands natural language queries — "red party saree under ₹3,000" — not just keywords. Integrated with Shopify Search & Discovery API or custom Elasticsearch. Customers find products 3× faster.</div>
+        <div class="ai-card-result">3× faster product discovery</div>
+      </div>
+      <div class="ai-card">
+        <div class="ai-card-icon"><i data-lucide="sparkles"></i></div>
+        <div class="ai-card-title">AI Recommendations Engine</div>
+        <div class="ai-card-desc">ML-based "Frequently Bought Together" and "You May Also Like" trained on your actual buyers — not generic templates. Every product page becomes a personalised upsell engine that learns over time.</div>
+        <div class="ai-card-result">22–35% higher average order value</div>
+      </div>
+      <div class="ai-card">
+        <div class="ai-card-icon"><iconify-icon icon="simple-icons:whatsapp" style="color:#25D366;font-size:22px;"></iconify-icon></div>
+        <div class="ai-card-title">WhatsApp AI Commerce</div>
+        <div class="ai-card-desc">Conversational checkout, live order tracking, and product enquiries — all inside WhatsApp via the official Commerce API. 78% of Indian buyers prefer WhatsApp over email for order updates.</div>
+        <div class="ai-card-result">78% buyer preference for WhatsApp</div>
+      </div>
+      <div class="ai-card">
+        <div class="ai-card-icon"><i data-lucide="camera"></i></div>
+        <div class="ai-card-title">AI Visual Search</div>
+        <div class="ai-card-desc">Upload a photo, find matching products. Critical for fashion and jewellery — where buyers know what they want but not what it's called. Powered by Google Vision API. Reduces zero-result searches by 70%.</div>
+        <div class="ai-card-result">40% higher conversion for fashion & jewellery</div>
+      </div>
+      <div class="ai-card">
+        <div class="ai-card-icon"><i data-lucide="bot"></i></div>
+        <div class="ai-card-title">AI Support Chatbot</div>
+        <div class="ai-card-desc">Handles FAQs, return requests, order status, and product questions 24/7 — without human intervention. Escalates complex queries to a human on WhatsApp instantly. Trained on your catalogue and policies.</div>
+        <div class="ai-card-result">60% reduction in support tickets</div>
+      </div>
+      <div class="ai-card">
+        <div class="ai-card-icon"><i data-lucide="user-check"></i></div>
+        <div class="ai-card-title">AI Personalisation</div>
+        <div class="ai-card-desc">Dynamic homepage content, browse-based retargeting, and behavioural email triggers. Each visitor sees a store curated for them — by location, past behavior, and purchase history. Every session feels bespoke.</div>
+        <div class="ai-card-result">2.4× repeat purchase rate</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROCESS ════════════════════════════════════════════ -->
+<section class="section section-cream">
+  <div class="container">
+    <div style="max-width:500px;">
+      <div class="eyebrow">How It Works</div>
+      <h2>Launch in 7 Days.<br>Zero Guesswork.</h2>
+    </div>
+    <div class="process-steps">
+      <div class="ps">
+        <div class="ps-circle"><i data-lucide="message-circle"></i></div>
+        <div class="ps-day">DAY 1</div>
+        <div class="ps-title">Discovery Call</div>
+        <div class="ps-desc">30-min scope session. Platform recommendation, integration plan, and written brief — same day.</div>
+      </div>
+      <div class="ps">
+        <div class="ps-circle"><i data-lucide="pencil-ruler"></i></div>
+        <div class="ps-day">DAY 1–2</div>
+        <div class="ps-title">Design Direction</div>
+        <div class="ps-desc">Wireframes + design direction delivered within 24hrs of kickoff. One revision round included.</div>
+      </div>
+      <div class="ps active">
+        <div class="ps-circle"><i data-lucide="code-2"></i></div>
+        <div class="ps-day">DAY 2–5</div>
+        <div class="ps-title">Build Sprint</div>
+        <div class="ps-desc">Full development: catalogue, checkout, payments, logistics, AI integrations, mobile optimisation.</div>
+      </div>
+      <div class="ps">
+        <div class="ps-circle"><i data-lucide="shield-check"></i></div>
+        <div class="ps-day">DAY 6</div>
+        <div class="ps-title">QA & Review</div>
+        <div class="ps-desc">Cross-device testing on 6 screen sizes, Lighthouse audit, payment dry-run, client walkthrough.</div>
+      </div>
+      <div class="ps">
+        <div class="ps-circle"><i data-lucide="rocket"></i></div>
+        <div class="ps-day">DAY 7</div>
+        <div class="ps-title">Go Live</div>
+        <div class="ps-desc">DNS cutover, SSL, GA4 + Search Console setup, sitemap submission, 30-min training call.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PORTFOLIO ══════════════════════════════════════════ -->
+<section class="section section-white">
+  <div class="container">
+    <div class="eyebrow">Recent Work</div>
+    <h2>Stores We've Shipped<br>for Mumbai Brands</h2>
+    <div class="portfolio-grid">
+      <div class="pf-card">
+        <div class="pf-img">
+          <picture>
+            <source srcset="/images/ecommerce/mumbai/portfolio-belle-maison.webp" type="image/webp">
+            <img src="/images/ecommerce/mumbai/portfolio-belle-maison.jpg" alt="Belle Maison — decorative LED lighting & home decor ecommerce store">
+          </picture>
+          <div class="pf-img-overlay"></div>
+          <div class="pf-img-tag">SHOPIFY + AI · 7 DAYS</div>
+          <div class="pf-img-metrics">
+            <div class="pf-img-metric"><div class="pf-img-metric-val">+210%</div><div class="pf-img-metric-label">Revenue</div></div>
+            <div class="pf-img-metric"><div class="pf-img-metric-val">1.8s</div><div class="pf-img-metric-label">Load time</div></div>
+            <div class="pf-img-metric"><div class="pf-img-metric-val">97</div><div class="pf-img-metric-label">Lighthouse</div></div>
+          </div>
+        </div>
+        <div class="pf-body">
+          <div class="pf-title">Belle Maison — Decorative LED Lighting</div>
+          <div class="pf-desc">Shopify store for Mumbai's premium decorative LED lighting brand — chandeliers, pendant lights, wall sconces, strip lighting, and smart home lighting. AI-powered product recommendations and WhatsApp Commerce integration. Launched in 7 days with 200+ SKUs live.</div>
+          <div class="pf-tags">
+            <div class="pf-tag"><iconify-icon icon="simple-icons:shopify" style="font-size:10px;color:#96BF48;"></iconify-icon> Shopify</div>
+            <div class="pf-tag"><i data-lucide="bot"></i> AI Reco</div>
+            <div class="pf-tag"><iconify-icon icon="simple-icons:whatsapp" style="font-size:10px;color:#25D366;"></iconify-icon> WhatsApp</div>
+          </div>
+        </div>
+      </div>
+      <div class="pf-card">
+        <div class="pf-img">
+          <picture>
+            <source srcset="/images/ecommerce/mumbai/portfolio-bombay-petals.webp" type="image/webp">
+            <img src="/images/ecommerce/mumbai/portfolio-bombay-petals.jpg" alt="Bombay Petals — B2B ecommerce for artificial plants, flowers & home decor">
+          </picture>
+          <div class="pf-img-overlay"></div>
+          <div class="pf-img-tag">SHOPIFY B2B · 7 DAYS</div>
+          <div class="pf-img-metrics">
+            <div class="pf-img-metric"><div class="pf-img-metric-val">2.9×</div><div class="pf-img-metric-label">Conversion</div></div>
+            <div class="pf-img-metric"><div class="pf-img-metric-val">1.5s</div><div class="pf-img-metric-label">LCP</div></div>
+            <div class="pf-img-metric"><div class="pf-img-metric-val">97</div><div class="pf-img-metric-label">Lighthouse</div></div>
+          </div>
+        </div>
+        <div class="pf-body">
+          <div class="pf-title">Bombay Petals — B2B Home Decor &amp; Artificial Flowers</div>
+          <div class="pf-desc">Shopify B2B ecommerce store for Vishal's artificial plants, flowers, and home decor brand. Wholesale buyer accounts, tiered pricing, bulk order flows, GST invoicing, and AI product recommendations that surface the right decor sets to the right buyers.</div>
+          <div class="pf-tags">
+            <div class="pf-tag"><iconify-icon icon="simple-icons:shopify" style="font-size:10px;color:#96BF48;"></iconify-icon> Shopify</div>
+            <div class="pf-tag"><i data-lucide="building-2"></i> B2B</div>
+            <div class="pf-tag"><i data-lucide="brain-circuit"></i> AI Recs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ INDUSTRIES (DARK) ══════════════════════════════════ -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="eyebrow eyebrow-dark">Industries We Serve</div>
+    <h2>Built for Mumbai's<br>Dominant Verticals</h2>
+    <div class="ind-grid">
+      <div class="ind-card">
+        <div class="ind-icon-wrap"><i data-lucide="shirt"></i></div>
+        <div class="ind-title">Fashion & Apparel</div>
+        <div class="ind-desc">Sarees, kurtas, ethnic wear. Size guides, regional fit charts, AI visual search, virtual try-on.</div>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon-wrap"><i data-lucide="sparkles"></i></div>
+        <div class="ind-title">Beauty & Wellness</div>
+        <div class="ind-desc">D2C beauty brands with AI recommendations, subscription models, ingredient transparency, loyalty tiers.</div>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon-wrap"><i data-lucide="utensils-crossed"></i></div>
+        <div class="ind-title">Food & Gourmet</div>
+        <div class="ind-desc">Artisanal foods, spice brands, tiffin services. Freshness signals, delivery slot booking, cold-chain.</div>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon-wrap"><i data-lucide="gem"></i></div>
+        <div class="ind-title">Jewellery</div>
+        <div class="ind-desc">Gold, silver, diamonds. BIS hallmark display, AI visual search, EMI integrations, virtual try-on.</div>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon-wrap"><i data-lucide="sofa"></i></div>
+        <div class="ind-title">Home & Living</div>
+        <div class="ind-desc">Furniture, décor, kitchenware. AR room preview, AI recommendations, bulk B2B ordering.</div>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon-wrap"><i data-lucide="cpu"></i></div>
+        <div class="ind-title">Electronics</div>
+        <div class="ind-desc">Accessories, refurbished devices. AI comparison tables, warranty badge UI, HDFC/ICICI EMI.</div>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon-wrap"><i data-lucide="leaf"></i></div>
+        <div class="ind-title">Organic & Natural</div>
+        <div class="ind-desc">Ayurvedic, sustainable, FSSAI-certified organic. Certification display, sourcing story pages.</div>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon-wrap"><i data-lucide="package"></i></div>
+        <div class="ind-title">B2B & Wholesale</div>
+        <div class="ind-desc">Wholesale portals, tiered pricing, GST e-invoicing, net-30 terms, buyer login and catalogue.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUFFER STAT ROW -->
+<div class="buffer-row">
+  <div class="buffer-inner">
+    <div class="buffer-stat"><div class="buffer-stat-val"><em>500+</em></div><div class="buffer-stat-label">Stores Built</div></div>
+    <div class="buffer-stat"><div class="buffer-stat-val"><em>25+</em> yrs</div><div class="buffer-stat-label">Experience</div></div>
+    <div class="buffer-stat"><div class="buffer-stat-val"><em>7</em> days</div><div class="buffer-stat-label">Delivery SLA</div></div>
+    <div class="buffer-stat"><div class="buffer-stat-val"><em>95+</em></div><div class="buffer-stat-label">Avg Lighthouse</div></div>
+  </div>
+</div>
+
+<!-- ══ TESTIMONIALS (DARK) ════════════════════════════════ -->
+<!-- NOTE: Placeholder quotes below — replace with actual client-approved quotes before publishing -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="eyebrow eyebrow-dark">Client Results</div>
+    <h2>Mumbai Founders Who<br>Made the Switch</h2>
+    <div class="testi-grid">
+      <div class="testi-card featured">
+        <div class="testi-stars">
+          <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+        </div>
+        <p class="testi-quote">"We had tried two other agencies before FactoryJet. Both took months and delivered mediocre results. FactoryJet launched our complete Belle Maison store — chandeliers, LED lights, wall sconces, the full catalogue — in 7 days. The AI recommendations feature alone increased our average order value significantly. I wish I'd found them first."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">RB</div>
+          <div><div class="testi-name">Ricky B</div><div class="testi-role">Founder · Belle Maison, Mumbai</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">
+          <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+        </div>
+        <p class="testi-quote">"We deal with the world's largest construction companies — our website had to look credible at the first glance. FactoryJet built a professional platform for our MEP and BIM drafting services that immediately elevated how clients perceive us. The quality, the speed, the communication — nothing short of exceptional."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">AK</div>
+          <div><div class="testi-name">Arif Saif Khan</div><div class="testi-role">Founder · Formative Concepts</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">
+          <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+        </div>
+        <p class="testi-quote">"FactoryJet doesn't just build websites — they build digital businesses. Our website, SEO, and AI-powered content strategy are all handled by one team. The results have been consistent and measurable every month since we started the retainer."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">KM</div>
+          <div><div class="testi-name">Kiran Mahadik</div><div class="testi-role">Founder · Impulse Branding Solutions</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ COMPARISON ═════════════════════════════════════════ -->
+<section class="section section-cream">
+  <div class="container">
+    <div class="eyebrow">Honest Comparison</div>
+    <h2>Why Founders Choose<br>FactoryJet Over Alternatives</h2>
+    <div class="comp-card">
+      <div class="comp-head">
+        <div class="comp-col"><div class="comp-col-eyebrow">Compare on</div><div class="comp-col-name">What Matters</div></div>
+        <div class="comp-col us"><div class="comp-col-eyebrow" style="color:rgba(255,255,255,0.4)">FactoryJet</div><div class="comp-col-name" style="color:#fff">FactoryJet.com</div></div>
+        <div class="comp-col"><div class="comp-col-eyebrow">Typical Alternative</div><div class="comp-col-name">Mumbai Agency</div></div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell feature"><i data-lucide="clock" style="width:14px;height:14px;color:var(--orange);margin-right:4px"></i> Delivery timeline</div>
+        <div class="comp-cell us-val"><i data-lucide="check" class="check"></i><span class="comp-win">7 days, guaranteed</span></div>
+        <div class="comp-cell"><i data-lucide="x" class="cross"></i><span class="comp-lose">6–12 weeks</span></div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell feature"><i data-lucide="indian-rupee" style="width:14px;height:14px;color:var(--orange);margin-right:4px"></i> Pricing (5-page store)</div>
+        <div class="comp-cell us-val"><i data-lucide="check" class="check"></i><span class="comp-win">₹75,000 one-time</span></div>
+        <div class="comp-cell"><i data-lucide="x" class="cross"></i><span class="comp-lose">₹2,00,000–₹5,00,000</span></div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell feature"><i data-lucide="gauge" style="width:14px;height:14px;color:var(--orange);margin-right:4px"></i> Lighthouse score</div>
+        <div class="comp-cell us-val"><i data-lucide="check" class="check"></i><span class="comp-win">95+ guaranteed</span></div>
+        <div class="comp-cell"><i data-lucide="x" class="cross"></i><span class="comp-lose">60–75 typical</span></div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell feature"><i data-lucide="bot" style="width:14px;height:14px;color:var(--orange);margin-right:4px"></i> AI features included</div>
+        <div class="comp-cell us-val"><i data-lucide="check" class="check"></i><span class="comp-win">Built-in architecture</span></div>
+        <div class="comp-cell"><i data-lucide="x" class="cross"></i><span class="comp-lose">Extra cost or unavailable</span></div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell feature"><i data-lucide="credit-card" style="width:14px;height:14px;color:var(--orange);margin-right:4px"></i> India payment integration</div>
+        <div class="comp-cell us-val"><i data-lucide="check" class="check"></i><span class="comp-win">Razorpay, UPI, Paytm, COD</span></div>
+        <div class="comp-cell"><i data-lucide="x" class="cross"></i><span class="comp-lose">Basic, extra cost</span></div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-cell feature"><i data-lucide="headphones" style="width:14px;height:14px;color:var(--orange);margin-right:4px"></i> Post-launch support</div>
+        <div class="comp-cell us-val"><i data-lucide="check" class="check"></i><span class="comp-win">30 days included</span></div>
+        <div class="comp-cell"><i data-lucide="x" class="cross"></i><span class="comp-lose">Hourly billing</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TECH STACK ══════════════════════════════════════════ -->
+<section class="section section-white">
+  <div class="container">
+    <div style="max-width:500px;margin-bottom:44px;">
+      <div class="eyebrow">Technology</div>
+      <h2>Built on the Stack That Wins</h2>
+      <p style="margin-top:14px;">Every platform chosen for performance, AI capability, and Indian market requirements.</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <div class="tech-icon-wrap"><iconify-icon icon="simple-icons:shopify" style="color:#96BF48;"></iconify-icon></div>
+        <div class="tech-name">Shopify</div>
+        <div class="tech-note">Primary platform</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon-wrap"><iconify-icon icon="simple-icons:woocommerce" style="color:#7F54B3;"></iconify-icon></div>
+        <div class="tech-name">WooCommerce</div>
+        <div class="tech-note">Open-source store</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon-wrap"><iconify-icon icon="simple-icons:nextdotjs"></iconify-icon></div>
+        <div class="tech-name">Next.js 14</div>
+        <div class="tech-note">Headless frontend</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon-wrap"><iconify-icon icon="simple-icons:cloudflare" style="color:#F6821F;"></iconify-icon></div>
+        <div class="tech-name">Cloudflare</div>
+        <div class="tech-note">Edge CDN</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon-wrap"><i data-lucide="credit-card"></i></div>
+        <div class="tech-name">Razorpay</div>
+        <div class="tech-note">India payments</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon-wrap"><i data-lucide="truck"></i></div>
+        <div class="tech-name">Shiprocket</div>
+        <div class="tech-note">Logistics API</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon-wrap"><iconify-icon icon="simple-icons:whatsapp" style="color:#25D366;"></iconify-icon></div>
+        <div class="tech-name">WhatsApp AI</div>
+        <div class="tech-note">Commerce API</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRICING ════════════════════════════════════════════ -->
+<section class="section section-cream">
+  <div class="container">
+    <div style="text-align:center;max-width:520px;margin:0 auto 0;">
+      <div class="eyebrow" style="justify-content:center;">Transparent Pricing</div>
+      <h2>One-Time Price.<br>No Monthly Retainers.</h2>
+      <p style="margin-top:14px;">Full store ownership from day one. AI features included in Growth tier. No subscriptions, no recurring FactoryJet fees.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-tier">Starter</div>
+        <div class="price-amount"><sup>₹</sup>75,000</div>
+        <div class="price-note"><i data-lucide="clock"></i> One-time · 7-day delivery</div>
+        <hr class="price-div">
+        <div class="price-feat"><i data-lucide="check"></i> Up to 5 pages + product catalogue (50 SKUs)</div>
+        <div class="price-feat"><i data-lucide="check"></i> Shopify or WooCommerce setup & customisation</div>
+        <div class="price-feat"><i data-lucide="check"></i> Razorpay + UPI + COD payment setup</div>
+        <div class="price-feat"><i data-lucide="check"></i> Mobile-first responsive design</div>
+        <div class="price-feat"><i data-lucide="check"></i> Basic SEO + Google Analytics 4</div>
+        <div class="price-feat"><i data-lucide="check"></i> 30-day post-launch support included</div>
+        <a href="#" class="price-cta ghost">Get Started <i data-lucide="arrow-right" style="width:14px;height:14px"></i></a>
+      </div>
+      <div class="price-card featured">
+        <div class="price-badge"><i data-lucide="star"></i> Most Popular</div>
+        <div class="price-tier">Growth</div>
+        <div class="price-amount"><sup>₹</sup>1,50,000</div>
+        <div class="price-note"><i data-lucide="clock"></i> One-time · 7-day delivery</div>
+        <hr class="price-div">
+        <div class="price-feat"><i data-lucide="check"></i> Up to 15 pages + full catalogue — every SKU included</div>
+        <div class="price-feat"><i data-lucide="check"></i> Custom UI design — not a template</div>
+        <div class="price-feat"><i data-lucide="check"></i> All payment integrations (Razorpay, UPI, EMI, BNPL)</div>
+        <div class="price-feat"><i data-lucide="check"></i> Shiprocket / Delhivery logistics integration</div>
+        <div class="price-feat"><i data-lucide="check"></i> <strong>AI recommendations + smart search included</strong></div>
+        <div class="price-feat"><i data-lucide="check"></i> WhatsApp AI Commerce integration</div>
+        <div class="price-feat"><i data-lucide="check"></i> Advanced SEO + FAQPage + Product Schema</div>
+        <div class="price-feat"><i data-lucide="check"></i> Lighthouse 95+ guarantee in writing</div>
+        <div class="price-feat"><i data-lucide="check"></i> 60-day post-launch support included</div>
+        <a href="#" class="price-cta">Get Your Quote <i data-lucide="arrow-right" style="width:14px;height:14px"></i></a>
+      </div>
+      <div class="price-card">
+        <div class="price-tier">Custom / AI Commerce</div>
+        <div class="price-amount"><sup>₹</sup>3,00,000+</div>
+        <div class="price-note"><i data-lucide="file-text"></i> Scope-based · Timeline discussed</div>
+        <hr class="price-div">
+        <div class="price-feat"><i data-lucide="check"></i> Headless Next.js + custom AI backend</div>
+        <div class="price-feat"><i data-lucide="check"></i> Full AI suite: visual search, personalisation, chatbot</div>
+        <div class="price-feat"><i data-lucide="check"></i> B2B wholesale portal with buyer login</div>
+        <div class="price-feat"><i data-lucide="check"></i> ERP / WMS / SAP integrations</div>
+        <div class="price-feat"><i data-lucide="check"></i> Custom subscription + loyalty engine</div>
+        <div class="price-feat"><i data-lucide="check"></i> Multi-currency + cross-border export</div>
+        <div class="price-feat"><i data-lucide="check"></i> Dedicated project manager</div>
+        <a href="#" class="price-cta ghost">Discuss Scope <i data-lucide="arrow-right" style="width:14px;height:14px"></i></a>
+      </div>
+    </div>
+    <div class="pricing-note-bar">
+      <i data-lucide="lightbulb"></i>
+      <div>US agencies charge <strong>$150–$300/hr</strong> for the same work — that's <strong>₹12,500–₹25,000/hr</strong>. A comparable AI-powered ecommerce project costs <strong>₹8–15 lakh</strong> in the US. You save 65% with FactoryJet — same stack, better performance, AI built in.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHY US ══════════════════════════════════════════════ -->
+<section class="section section-white">
+  <div class="container">
+    <div style="max-width:500px;">
+      <div class="eyebrow">Why FactoryJet</div>
+      <h2>The Agency Built for<br>India's AI Commerce Era</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card accent">
+        <div class="why-icon-box"><i data-lucide="zap"></i></div>
+        <div>
+          <div class="why-title">7-Day Delivery Guarantee</div>
+          <div class="why-desc">Miss the deadline? Your project is on us — in writing. In 500+ projects, we've never missed. Our sprint process is a machine — and AI integrations are part of the standard build, not a week-long add-on.</div>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon-box"><i data-lucide="bot"></i></div>
+        <div>
+          <div class="why-title">AI-Ready by Default</div>
+          <div class="why-desc">We don't charge extra to make your store AI-capable. Smart search, recommendations, and WhatsApp AI are built into our architecture. Mumbai stores on our platform convert at 3.5% vs the 1.6% industry average.</div>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon-box"><i data-lucide="shield-check"></i></div>
+        <div>
+          <div class="why-title">India-Native Integrations</div>
+          <div class="why-desc">Razorpay, UPI, Paytm, Shiprocket, Delhivery, WhatsApp — integrated hundreds of times across Shopify and WooCommerce. No learning curve. No guesswork. No extra charge.</div>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon-box"><i data-lucide="gauge"></i></div>
+        <div>
+          <div class="why-title">Performance Obsessed</div>
+          <div class="why-desc">Every store ships Lighthouse 95+. Green Core Web Vitals from day one. Average LCP: 1.6s on 4G. The Indian industry average is 4.8s. That gap is your competitive advantage.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ════════════════════════════════════════════════ -->
+<section class="section section-cream">
+  <div class="container">
+    <div class="eyebrow">COMMON QUESTIONS</div>
+    <h2 style="max-width:640px;">Everything Mumbai Founders Ask Before They Sign</h2>
+
+    <!-- Mobile pill nav -->
+    <div class="faq2-mobile-pills">
+      <a href="#faq-pricing">Pricing &amp; Timeline</a>
+      <a href="#faq-platforms">Platform &amp; Tech</a>
+      <a href="#faq-ai">AI &amp; Ecommerce</a>
+      <a href="#faq-performance">Speed &amp; SEO</a>
+      <a href="#faq-process">Process &amp; Ownership</a>
+    </div>
+
+    <div class="faq2-layout">
+
+      <!-- ── LEFT: Sticky sidebar ── -->
+      <div class="faq2-sidebar">
+        <p class="faq2-topics-label">Topics</p>
+        <nav aria-label="FAQ topics">
+          <ul class="faq2-nav">
+            <li><a href="#faq-pricing">Pricing &amp; Timeline <span class="faq2-count">4</span></a></li>
+            <li><a href="#faq-platforms">Platform &amp; Tech <span class="faq2-count">4</span></a></li>
+            <li><a href="#faq-ai">AI &amp; Ecommerce <span class="faq2-count">4</span></a></li>
+            <li><a href="#faq-performance">Speed &amp; SEO <span class="faq2-count">4</span></a></li>
+            <li><a href="#faq-process">Process &amp; Ownership <span class="faq2-count">4</span></a></li>
+          </ul>
+        </nav>
+        <div class="faq2-sidebar-footer">
+          <p>Can't find your answer?</p>
+          <a href="#">Book a strategy call <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <p class="faq2-total">20 questions</p>
+      </div>
+
+      <!-- ── RIGHT: Accordion ── -->
+      <div class="faq2-body">
+        <div class="faq2-categories">
+
+          <!-- ── Pricing & Timeline ─────────────────── -->
+          <div class="faq2-category" id="faq-pricing">
+            <div class="faq2-cat-header">
+              <div class="faq2-cat-bar"></div>
+              <span class="faq2-cat-label">Pricing &amp; Timeline</span>
+            </div>
+
+            <details class="faq2-item">
+              <summary class="faq2-summary">
+                <span class="faq2-q-text">How is 7-day delivery actually possible?</span>
+                <span class="faq2-chevron"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </summary>
+              <div class="faq2-answer"><p>We run a dedicated sprint team per project — no PM bottlenecks, no queue. Design, dev, and QA happen simultaneously using our battle-tested workflow. Scope is locked on Day 1 so nothing changes mid-sprint. In 500+ projects across Shopify, WooCommerce, and custom builds, we have never missed the 7-day deadline. The guarantee is in writing — miss the deadline, the project is on us.</p></div>
+            </details>
+
+            <details class="faq2-item">
+              <summary class="faq2-summary">
+                <span class="faq2-q-text">What does ecommerce development cost in Mumbai?</span>
+                <span class="faq2-chevron"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </summary>
+              <div class="faq2-answer"><p>Our Starter plan begins at ₹75,000 one-time for a 5-page Shopify or WooCommerce store. Growth (custom design, full integrations, AI recommendations) is ₹1,50,000. Custom AI commerce builds with headless Next.js and the full AI suite start at ₹3,00,000. A comparable project at a US agency costs ₹8–15 lakh. You own 100% of the code — no monthly fees to FactoryJet beyond Shopify's own subscription if you're on that platform.</p></div>
+            </details>
+
+            <details class="faq2-item">
+              <summary class="faq2-summary">
+                <span class="faq2-q-text">What's included in the quoted price? Any hidden fees?</span>
+                <span class="faq2-chevron"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </summary>
+              <div class="faq2-answer"><p>Zero hidden fees — what you see is what you pay. Every plan includes custom design, development, QA, Razorpay/Shiprocket integration, on-page SEO, mobile optimisation, and post-launch support. We quote with full line-item transparency before you commit. Third-party costs like your Shopify subscription, domain, or SMS credits are separate — and we'll tell you exactly what those are upfront so there are no surprises on invoice day.</p></div>
+            </details>
+
+            <details class="faq2-item">
+              <summary class="faq2-summary">
+                <span class="faq2-q-text">What happens if you miss the 7-day deadline?</span>
+                <span class="faq2-chevron"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </summary>
+              <div class="faq2-answer"><p>Your project is completed at no charge — full credit, no conditions. We've never had to honour this guarantee in 500+ projects, but it exists because we believe in accountability. This is why we lock scope on Day 1 and don't start the sprint until both sides sign off on exactly what's being built. Scope creep is the #1 cause of delays at other agencies — our process eliminates it entirely.</p></div>
+            </details>
+
+            <div class="faq2-bottom-border"></div>
+          </div>
+
+          <!-- ── Platform & Tech ────────────────────── -->
+          <div class="faq2-category" id="faq-platforms">
+            <div class="faq2-cat-header">
+              <div class="faq2-cat-bar"></div>
+              <span class="faq2-cat-label">Platform &amp; Tech</span>
+            </div>
+
+            <details class="faq2-item">
+              <summary class="faq2-summary">
+                <span class="faq2-q-text">Shopify or WooCommerce — which is right for my Mumbai business?</span>
+                <span class="faq2-chevron"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </summary>
+              <div class="faq2-answer"><p>Shopify is the right choice for most Mumbai D2C brands — faster to launch, easier to manage, and Razorpay/Shiprocket integrations are rock-solid. WooCommerce suits businesses already on WordPress, those who need deep content-commerce integration, or brands wanting zero platform fees and maximum code flexibility. Magento/Adobe Commerce is for enterprises with 10,000+ SKUs and ERP systems. We'll recommend the right platform in a 15-minute consultation — and build whichever you choose at the same quality and in the same 7-day timeline.</p></div>
+            </details>
+
+            <details class="faq2-item">
+              <summary class="faq2-summary">
+                <span class="faq2-q-text">Can you migrate my existing WooCommerce, Magento, or OpenCart store?</span>
+                <span class="faq2-chevron"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </summary>
+              <div class="faq2-answer"><p>Yes — platform migration is one of our highest-demand services. We handle the complete migration: full product catalogue, customer data, order history, and all SEO 301 redirects so you don't lose a single ranking. We've completed 40+ platform migrations for Indian brands with zero ranking drops post-migration. Most WooCommerce-to-Shopify or OpenCart-to-Next.js migrations complete in 7 days. We offer a pre-migration audit — we'll map your current store and show you exactly what moves and what needs rebuilding.</p></div>
+            </details>
+
+            <details class="faq2-item">
+              <summary class="faq2-summary">
+                <span class="faq2-q-text">Do you build custom headless ecommerce stores?</span>
+                <span class="faq2-chevron"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </summary>
+              <div class="faq2-answer"><p>Yes — our Custom / AI Commerce tier runs on Next.js 14 (App Router) with Shopify or WooCommerce as the backend, Cloudflare for edge delivery, and Firebase for real-time features. Headless is ideal for brands needing sub-1-second LCP, non-standard checkout flows, or deep ERP/inventory integration. If you have a mobile app alongside your store, headless also gives you a unified API layer. We've built headless stores for fashion, B2B wholesale, and subscription-box models.</p></div>
+            </details>
+
+            <details class="faq2-item">
+              <summary class="faq2-summary">
+                <span class="faq2-q-text">Which payment gateways and shipping tools do you integrate?</span>
+                <span class="faq2-chevron"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </summary>
+              <div class="faq2-answer"><p>Payment: Razorpay, Cashfree, PayU, Paytm, HDFC PayZapp, CC Avenue, and all UPI methods. COD flows, BNPL through LazyPay and Simpl, EMI through HDFC, ICICI, and SBI cards. Shipping: Shiprocket (integrated with 20+ courier partners), Delhivery, BlueDart, Ecom Express, and Amazon Shipping. WhatsApp order notifications via official Business API. We've integrated every major Indian payment and logistics rail across 500+ projects — on Shopify, WooCommerce, and custom builds.</p></div>
+            </details>
+
+            <div class="faq2-bottom-border"></div>
+          </div>
+
+          <!-- ── AI & Ecommerce ─────────────────────── -->
+          <div class="faq2-category" id="faq-ai">
+            <div class="faq2-cat-header">
+              <div class="faq2-cat-bar"></div>
+              <span class="faq2-cat-label">AI &amp; Ecommerce</span>
+            </div>
+
+            <details class="faq2-item">
+              <summary class="faq2-summary">
+                <span class="faq2-q-text">What AI features do you build into ecommerce stores?</span>
+                <span class="faq2-chevron"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </summary>
+              <div class="faq2-answer"><p>Our AI commerce stack has six core features: (1) NLP-powered smart search that understands natural language like "red silk saree under ₹3,000", (2) ML-based product recommendations that learn from your buyers over time, (3) WhatsApp AI for conversational checkout and order tracking, (4) AI visual search — customers upload a photo and find matching products instantly, (5) a 24/7 AI support chatbot trained on your catalogue and return policy, and (6) behavioural personalisation that adapts the homepage and product feed for every individual visitor. These are not plugins bolted on after launch — they're core architecture decisions made on Day 1.</p></div>
+            </details>
+
+            <details class="faq2-item">
+              <summary class="faq2-summary">
+                <span class="faq2-q-text">Can AI features actually help my Mumbai store sell more?</span>
+                <span class="faq2-chevron"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </summary>
+              <div class="faq2-answer"><p>The data is unambiguous. In India, stores with AI-led conversion optimisation achieve 3.5% conversion rates vs the 1.6% industry average — more than double. AI visual search drives 40% higher conversion for fashion and jewellery brands, where "find me this style" is the most common search behaviour. AI product recommendations increase average order value by 22–35%. WhatsApp AI reduces cart abandonment by 18% through timely, personalised follow-ups. India saw a 3× rise in AI adoption among D2C sellers in 2025 — brands not using AI in 2026 are ceding ground every single day.</p></div>
+            </details>
+
+            <details class="faq2-item">
+              <summary class="faq2-summary">
+                <span class="faq2-q-text">Is AI ecommerce expensive? Is it included in my package?</span>
+                <span class="faq2-chevron"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </summary>
+              <div class="faq2-answer"><p>AI recommendations and smart search are included in the Growth tier (₹1,50,000). The full AI suite — visual search, WhatsApp AI, behavioural personalisation, and AI chatbot — is included in the Custom / AI Commerce tier. You won't pay ₹50,000/year for an AI plugin that bolts on awkwardly after the fact. We build it into the architecture from Day 1, which is why our AI features outperform standalone SaaS tools. If you're starting on Starter and want to add AI later, we can upgrade — no full rebuild required.</p></div>
+            </details>
+
+            <details class="faq2-item">
+              <summary class="faq2-summary">
+                <span class="faq2-q-text">Will AI features slow down my store?</span>
+                <span class="faq2-chevron"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </summary>
+              <div class="faq2-answer"><p>No — and this is a common misconception. Our AI features run on Cloudflare edge functions and async API calls, so they never block the initial page render. Recommendations and personalisation load after the critical above-the-fold content, populating in under 200ms. Smart search uses a pre-computed index — not a live ML call — so it's instantaneous. We guarantee Lighthouse 95+ on every AI-enabled store. That score is the proof that performance is never compromised for intelligence.</p></div>
+            </details>
+
+            <div class="faq2-bottom-border"></div>
+          </div>
+
+          <!-- ── Speed & SEO ────────────────────────── -->
+          <div class="faq2-category" id="faq-performance">
+            <div class="faq2-cat-header">
+              <div class="faq2-cat-bar"></div>
+              <span class="faq2-cat-label">Speed &amp; SEO</span>
+            </div>
+
+            <details class="faq2-item">
+              <summary class="faq2-summary">
+                <span class="faq2-q-text">Will my store load fast on Indian 4G networks?</span>
+                <span class="faq2-chevron"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </summary>
+              <div class="faq2-answer"><p>4G is the constraint we optimise for first. Every store ships with WebP images, aggressive lazy loading, and Cloudflare edge caching with Indian PoPs in Mumbai, Delhi, and Chennai. Our average delivered LCP is 1.6 seconds on 4G simulation. The Indian ecommerce industry average is 4.8 seconds. Every 1-second improvement in load time increases conversions by 7% — and on mobile 4G, where the majority of Indian shoppers browse, the gap between us and a typical freelancer is costing you real sales.</p></div>
+            </details>
+
+            <details class="faq2-item">
+              <summary class="faq2-summary">
+                <span class="faq2-q-text">What Lighthouse score do you guarantee?</span>
+                <span class="faq2-chevron"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </summary>
+              <div class="faq2-answer"><p>Lighthouse 95+ across Performance, Accessibility, Best Practices, and SEO — on both mobile and desktop. This is a written guarantee in your contract. Core Web Vitals targets: LCP under 2.5 seconds, CLS under 0.1, INP under 200ms. We run automated Lighthouse CI on every deployment so regressions are caught before they reach production. Lighthouse screenshots are included in your handover package — proof you can share with anyone who asks.</p></div>
+            </details>
+
+            <details class="faq2-item">
+              <summary class="faq2-summary">
+                <span class="faq2-q-text">What SEO do you include with every store?</span>
+                <span class="faq2-chevron"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </summary>
+              <div class="faq2-answer"><p>Every store includes keyword-optimised page titles and meta descriptions, semantic H1–H3 hierarchy, canonical URLs, XML sitemap auto-generation, robots.txt configuration, JSON-LD structured data (Product, BreadcrumbList, FAQPage, LocalBusiness schemas), and Open Graph tags. On Growth and Custom tiers, we add image alt-text optimisation across all products, a post-launch technical SEO audit, and 301 redirect mapping for any URLs being changed. AI SEO — Google AI Overview and ChatGPT citation optimisation — is available as a monthly add-on.</p></div>
+            </details>
+
+            <details class="faq2-item">
+              <summary class="faq2-summary">
+                <span class="faq2-q-text">How long before I start getting organic traffic from Google?</span>
+                <span class="faq2-chevron"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </summary>
+              <div class="faq2-answer"><p>New domains are typically indexed within 2–4 weeks and start ranking for lower-competition local terms within 6–12 weeks. For brand-new businesses, terms like "handmade jewellery Mumbai" or "organic cleaning products online" often appear in the top 20 within 4–8 weeks with proper on-page optimisation and a Google Business Profile. Established domains migrating platforms see ranking recovery within 4–6 weeks when 301 redirects are correctly implemented — which is exactly why our migration process is so thorough.</p></div>
+            </details>
+
+            <div class="faq2-bottom-border"></div>
+          </div>
+
+          <!-- ── Process & Ownership ─────────────────── -->
+          <div class="faq2-category" id="faq-process">
+            <div class="faq2-cat-header">
+              <div class="faq2-cat-bar"></div>
+              <span class="faq2-cat-label">Process &amp; Ownership</span>
+            </div>
+
+            <details class="faq2-item">
+              <summary class="faq2-summary">
+                <span class="faq2-q-text">Do I own the store completely after launch?</span>
+                <span class="faq2-chevron"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </summary>
+              <div class="faq2-answer"><p>100% ownership, full stop. You receive all source code, Shopify admin credentials or WooCommerce hosting access, DNS login, every third-party integration API key, and all design files in Figma format. No monthly fees to FactoryJet. No "you must use our hosting." If you decide to move to another agency tomorrow, you hand everything over and they pick up immediately where we left off. Your store, your business, your asset — we build it and step back.</p></div>
+            </details>
+
+            <details class="faq2-item">
+              <summary class="faq2-summary">
+                <span class="faq2-q-text">What support do I get after launch?</span>
+                <span class="faq2-chevron"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </summary>
+              <div class="faq2-answer"><p>Every project includes 30 days of included support (Growth tier: 60 days) — covering bug fixes, minor content updates, and any integration issues that surface post-launch. After the included window, continue on a ₹12,000/month retainer (all minor updates covered, 2-hour priority response) or pay-as-you-go at ₹800/hr. Every task is logged and billed transparently — no surprise invoices. Emergency bug fixes in the first year are always on us regardless of tier. We're not a deliver-and-disappear agency.</p></div>
+            </details>
+
+            <details class="faq2-item">
+              <summary class="faq2-summary">
+                <span class="faq2-q-text">How does the design process work — do I get a custom design?</span>
+                <span class="faq2-chevron"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </summary>
+              <div class="faq2-answer"><p>Yes — every store is designed to your brand, never slotted into a template. Day 1: discovery call to understand your brand, competitors, and customers. Days 1–2: Figma wireframes and design direction. Day 2: design approval (two revision rounds included). Days 3–6: development. Day 7: QA, real-device testing, and handover. You review and approve the design before a single line of code is written. If you have existing brand guidelines or a Figma file, we work from those. Starting from scratch? We develop your visual identity as part of the process.</p></div>
+            </details>
+
+            <details class="faq2-item">
+              <summary class="faq2-summary">
+                <span class="faq2-q-text">Can I see real examples of Mumbai ecommerce stores you've built?</span>
+                <span class="faq2-chevron"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5L7 9L11 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </summary>
+              <div class="faq2-answer"><p>Yes. Belle Maison (decorative LED lighting — chandeliers, pendant lights, wall sconces) is a live Shopify + AI store we built in 7 days. Bombay Petals is a Shopify B2B ecommerce store for artificial flowers and home decor — with wholesale buyer accounts, tiered pricing, and AI recommendations. Formative Concepts is a professional website for an MEP and BIM drafting firm that works with the world's largest construction companies. We can share live URLs during your discovery call, along with Lighthouse scores and before/after conversion data where clients have consented. Book a discovery call and we'll walk you through what we built, how long it took, and the results.</p></div>
+            </details>
+
+            <div class="faq2-bottom-border"></div>
+          </div>
+
+        </div><!-- /faq2-categories -->
+      </div><!-- /faq2-body -->
+    </div><!-- /faq2-layout -->
+  </div>
+</section>
+
+<!-- ══ LOCATION ════════════════════════════════════════════ -->
+<section class="section section-white">
+  <div class="container">
+    <div class="eyebrow">Serving Mumbai</div>
+    <h2>Built for Every Pincode<br>in the City</h2>
+    <div class="location-layout">
+      <div class="loc-map-card">
+        <div class="loc-map-img">
+          <picture>
+            <source srcset="/images/ecommerce/mumbai/gateway-of-india.webp" type="image/webp">
+            <img src="/images/ecommerce/mumbai/gateway-of-india.jpg" alt="Gateway of India — Mumbai, Maharashtra">
+          </picture>
+          <div class="loc-map-img-overlay"></div>
+          <div class="loc-map-label-overlay"><i data-lucide="map-pin"></i> Gateway of India, Mumbai</div>
+        </div>
+        <div class="loc-map-footer">
+          <div class="loc-map-footer-label">Primary Market</div>
+          <div class="loc-map-footer-name">Mumbai Metropolitan Region</div>
+        </div>
+      </div>
+      <div class="loc-details">
+        <h3>We Know Mumbai's Business Landscape</h3>
+        <p>From the fashion houses of Dharavi to the boutiques of Bandra, the wholesale markets of Dadar to the tech hubs of BKC — we've built Shopify and WooCommerce stores for businesses across every Mumbai neighbourhood. We know which payment methods convert in Andheri, what shipping SLAs Thane customers expect, and why a Bandra fashion brand needs a different AI personalisation model than a Borivali electronics shop.</p>
+        <div class="loc-stat-row">
+          <div class="loc-stat"><div class="loc-stat-val">50+</div><div class="loc-stat-label">Mumbai stores live</div></div>
+          <div class="loc-stat"><div class="loc-stat-val">8</div><div class="loc-stat-label">Zones covered</div></div>
+          <div class="loc-stat"><div class="loc-stat-val">₹1Cr+</div><div class="loc-stat-label">GMV facilitated</div></div>
+          <div class="loc-stat"><div class="loc-stat-val">2 hrs</div><div class="loc-stat-label">Response SLA</div></div>
+        </div>
+        <div class="loc-zones">
+          <i data-lucide="map-pin"></i>
+          South Mumbai · BKC · Andheri · Bandra · Navi Mumbai · Thane · Borivali · Malad · Dadar · Dharavi
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FINAL CTA (DARK) ═══════════════════════════════════ -->
+<section class="final-cta">
+  <div class="fcs">
+    <div class="eyebrow eyebrow-dark" style="justify-content:center;">Start Today</div>
+    <h2>Your Mumbai Store,<br>AI-Ready in 7 Days.</h2>
+    <p class="fcs-lead">Join 500+ brands who chose speed, quality, and value. Shopify, WooCommerce, or custom — quote in 24 hours. AI features included in the Growth tier.</p>
+    <div class="fcs-actions">
+      <a href="#" class="btn-primary-d">Get a Quote <i data-lucide="arrow-right" style="width:15px;height:15px"></i></a>
+      <a href="#" class="btn-outline-d"><i data-lucide="calendar" style="width:15px;height:15px"></i> Book Discovery Call</a>
+    </div>
+    <div class="fcs-trust">
+      <div class="fcs-trust-item"><i data-lucide="check-circle"></i> 7-day delivery guarantee</div>
+      <div class="fcs-trust-item"><i data-lucide="check-circle"></i> Deadline guarantee — backed in writing</div>
+      <div class="fcs-trust-item"><i data-lucide="check-circle"></i> AI features built in — not extra</div>
+      <div class="fcs-trust-item"><i data-lucide="check-circle"></i> 100% code ownership, all files yours</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 FactoryJet.com — AI Ecommerce Development · Mumbai · Delhi · Bangalore · Hyderabad · Chennai · Pune</p>
+  <p style="margin-top:7px;"><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Sitemap</a></p>
+</footer>
+
+<script>lucide.createIcons();</script>
+
+
+</body>
+</html>

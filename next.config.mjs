@@ -66,6 +66,20 @@ const nextConfig = {
       { source: '/us/services/ecommerce-development/fargo',           destination: '/us/services/ecommerce-development',    permanent: true },
       { source: '/us/services/ecommerce-development/lincoln',         destination: '/us/services/ecommerce-development',    permanent: true },
       { source: '/us/services/ecommerce-development/sioux-falls',     destination: '/us/services/ecommerce-development',    permanent: true },
+      // India service URL migration (2026-05-16) — drop /services/ prefix
+      // Production-effective layer is /public/_redirects (Cloudflare Pages)
+      { source: '/services/web-design',                destination: '/web-design',                permanent: true },
+      { source: '/services/web-design/ahmedabad',      destination: '/web-design/ahmedabad',      permanent: true },
+      { source: '/services/web-design/bangalore',      destination: '/web-design/bangalore',      permanent: true },
+      { source: '/services/web-design/chennai',        destination: '/web-design/chennai',        permanent: true },
+      { source: '/services/web-design/delhi',          destination: '/web-design/delhi',          permanent: true },
+      { source: '/services/web-design/hyderabad',      destination: '/web-design/hyderabad',      permanent: true },
+      { source: '/services/web-design/madurai',        destination: '/web-design/madurai',        permanent: true },
+      { source: '/services/web-design/mumbai',         destination: '/web-design/mumbai',         permanent: true },
+      { source: '/services/web-design/pune',           destination: '/web-design/pune',           permanent: true },
+      { source: '/services/web-design/surat',          destination: '/web-design/surat',          permanent: true },
+      { source: '/services/ecommerce-development',           destination: '/ecommerce-development',           permanent: true },
+      { source: '/services/ecommerce-development/mumbai',    destination: '/ecommerce-development/mumbai',    permanent: true },
     ]
   },
 
