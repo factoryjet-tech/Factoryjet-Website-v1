@@ -25,15 +25,15 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in India | 7-Day Websites From ₹40,000 | FactoryJet',
+  title: 'Web Design Company in India | 7-Day Websites From ₹29,999 | FactoryJet',
   description:
-    'FactoryJet builds high-performance, conversion-focused websites for Indian businesses — from ₹40,000. Mobile-first, Lighthouse 100, Next.js & WordPress. 7-day delivery. Full code ownership.',
+    'FactoryJet builds high-performance, conversion-focused websites for Indian businesses — from ₹29,999. Mobile-first, Lighthouse 100, Next.js & WordPress. 7-day delivery. Full code ownership.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in India | 7-Day Websites From ₹40,000 | FactoryJet',
+    title: 'Web Design Company in India | 7-Day Websites From ₹29,999 | FactoryJet',
     description:
-      'Custom websites for Indian businesses. Next.js, WordPress & Shopify. 7-day delivery. Mobile-first, Lighthouse 100. From ₹40,000.',
+      'Custom websites for Indian businesses. Next.js, WordPress & Shopify. 7-day delivery. Mobile-first, Lighthouse 100. From ₹29,999.',
     url: 'https://factoryjet.com/web-design',
     images: [
       {
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Web Design Company in India | 7-Day Websites | FactoryJet',
-    description: 'Custom websites for Indian businesses. Mobile-first. 7-day delivery. From ₹40,000.',
+    description: 'Custom websites for Indian businesses. Mobile-first. 7-day delivery. From ₹29,999.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
@@ -81,7 +81,7 @@ const faqSchema = {
       name: 'How much does a website cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s web design starts at ₹40,000 for a 5-page business website. A full business site with up to 15 pages, a blog, and CMS runs ₹80,000. E-commerce stores and custom builds start at ₹1,50,000. Indian agency rates for equivalent scope typically run ₹2,50,000–₹15,00,000.',
+        text: 'FactoryJet\'s web design starts at ₹29,999 for a 5-page business website. A full business site with up to 15 pages, a blog, and CMS runs ₹80,000. E-commerce stores and custom builds start at ₹1,50,000. Indian agency rates for equivalent scope typically run ₹2,50,000–₹15,00,000.',
       },
     },
     {
@@ -179,12 +179,12 @@ const serviceSchema = {
   },
   serviceType: 'Web Design & Development',
   description:
-    'Custom website design and development for Indian businesses — from ₹40,000. Next.js, WordPress, and Shopify. 7-day delivery on Starter tier. Lighthouse 100 performance. Mobile-first, full code ownership.',
+    'Custom website design and development for Indian businesses — from ₹29,999. Next.js, WordPress, and Shopify. 7-day delivery on Starter tier. Lighthouse 100 performance. Mobile-first, full code ownership.',
   offers: [
     {
       '@type': 'Offer',
       name: 'Starter Website',
-      price: '40000',
+      price: '29999',
       priceCurrency: 'INR',
       description: '5-page business website, mobile-first, Lighthouse 95+ guaranteed.',
     },
@@ -267,7 +267,7 @@ const IN_WEB_DESIGN_TYPES = [
   {
     name: 'Landing Pages',
     description:
-      'Single-purpose, high-converting landing pages for paid campaigns, WhatsApp funnels, and lead generation. Designed to a specific CTA, A/B-test ready, and built to load in under 2 seconds on Indian 4G networks.',
+      'Single-purpose, high-converting landing pages for paid campaigns, WhatsApp funnels, and lead generation. Designed to a specific CTA, A/B-test ready, and built to load in under 2 seconds on mobile.',
     example: 'Clients report 30–45% improvement in form conversion vs. homepage CTA.',
     linkLabel: 'Start a project',
     linkHref: '/contact',
@@ -312,7 +312,7 @@ const IN_WEB_STATS = [
     categoryLabel: 'PERFORMANCE',
   },
   {
-    value: '₹40,000',
+    value: '₹29,999',
     label: 'starting price for a 5-page website — full code ownership, no lock-in',
     microcopy: 'compare to ₹2,50,000+ from Indian agencies for equivalent scope',
     categoryLabel: 'INDIA PRICING',
@@ -390,7 +390,7 @@ const IN_COMPARISON_ROWS = [
   {
     feature: 'Starting price',
     values: [
-      'From ₹40,000',
+      'From ₹29,999',
       '₹2,50,000–₹15,00,000',
       '₹60,000–₹2,50,000',
       '₹1,000–₹4,000/month (forever)',
@@ -468,9 +468,9 @@ const IN_COMPARISON_ROWS = [
 const IN_PRICING_TIERS = [
   {
     name: 'Starter',
-    priceRange: 'From ₹40,000',
+    priceRange: 'From ₹29,999',
     description:
-      'A 5-page website that loads fast on mobile 4G, ranks for your business name and core service, and looks professional enough to convert the first-time visitor.',
+      'A 5-page website that loads fast on mobile, ranks for your business name and core service, and looks professional enough to convert the first-time visitor.',
     features: [
       'Up to 5 pages (Home, About, Services, Contact + 1 more)',
       'Custom Figma design — not a template',
@@ -570,7 +570,7 @@ const IN_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a website cost in India?',
     answer:
-      'FactoryJet\'s web design starts at ₹40,000 for a 5-page business website. A full business site with up to 15 pages, blog, and CMS runs ₹80,000. E-commerce stores and custom Next.js apps start at ₹1,50,000 — scoped after a free discovery call. Indian agency rates for equivalent scope typically run ₹2,50,000–₹15,00,000.',
+      'FactoryJet\'s web design starts at ₹29,999 for a 5-page business website. A full business site with up to 15 pages, blog, and CMS runs ₹80,000. E-commerce stores and custom Next.js apps start at ₹1,50,000 — scoped after a free discovery call. Indian agency rates for equivalent scope typically run ₹2,50,000–₹15,00,000.',
   },
   {
     category: 'pricing',
@@ -749,12 +749,12 @@ export default function WebDesignServicePage() {
         <Hero
           eyebrow="WEB DESIGN · INDIA"
           headline="A Website That Converts, Built for India's Mobile-First Market"
-          lead="70%+ of Indian web traffic is mobile. Paid ad costs are rising. Competitors are outranking you on Google. FactoryJet builds custom, high-performance websites in Next.js, WordPress, and Shopify — designed in Figma, built to Lighthouse 100, and delivered starting at ₹40,000."
+          lead="70%+ of Indian web traffic is mobile. Paid ad costs are rising. Competitors are outranking you on Google. FactoryJet builds custom, high-performance websites in Next.js, WordPress, and Shopify — designed in Figma, built to Lighthouse 100, and delivered starting at ₹29,999."
           primaryCta={{ label: 'Book a Free Website Audit', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ websites delivered',
-            'Starting at ₹40,000',
+            'Starting at ₹29,999',
             '7-day delivery guarantee',
           ]}
           rightSlot={
@@ -766,11 +766,11 @@ export default function WebDesignServicePage() {
                 WHAT YOUR WEBSITE SHOULD DO
               </p>
               <p className="mt-4 font-fj-display text-[2rem] font-medium leading-[1.1] tracking-[-0.025em] text-fj-ink">
-                Load fast on 4G. Build trust instantly. Convert India&apos;s mobile buyers.
+                Load fast on mobile. Build trust instantly. Convert India&apos;s mobile buyers.
               </p>
               <div className="mt-6 space-y-3">
                 {[
-                  'Load in under 2 seconds on mobile 4G — 70%+ of Indian traffic is mobile; slow sites lose visitors before they see you',
+                  'Load in under 2 seconds on mobile — 70%+ of Indian traffic is mobile; slow sites lose visitors before they see you',
                   'Score 95+ on Lighthouse — Google India ranks fast, accessible, technically clean sites significantly higher',
                   'Convert at 2–4% or better — most Indian business sites built on templates convert below 1%',
                 ].map((point, i) => (
@@ -831,7 +831,7 @@ export default function WebDesignServicePage() {
                 ))}
               </div>
               <p>
-                A business website has one job: turn the right visitors into paying customers. That means it needs to load fast enough that people don&apos;t leave before they see it — on Indian 4G, not just your office Wi-Fi — look credible enough that they trust you, and make the next step obvious enough that they take it. Most template-built sites fail on all three.
+                A business website has one job: turn the right visitors into paying customers. That means it needs to load fast enough that people don&apos;t leave before they see it — on mobile, not just your office Wi-Fi — look credible enough that they trust you, and make the next step obvious enough that they take it. Most template-built sites fail on all three.
               </p>
               {/* 3-col mini stats */}
               <div className="grid grid-cols-3 gap-3" aria-hidden>
@@ -869,7 +869,7 @@ export default function WebDesignServicePage() {
                 </p>
               </div>
               <p>
-                FactoryJet approaches web design the way India&apos;s top product companies do: Figma-first design, then engineering in Next.js or WordPress, with Lighthouse 100 as a non-negotiable target. We don&apos;t use page builders, visual editors, or bloated themes. The result is a site that loads fast even on 4G, ranks well on Google India, and looks intentional — because it was designed for your specific business, not adapted from someone else&apos;s template.
+                FactoryJet approaches web design the way India&apos;s top product companies do: Figma-first design, then engineering in Next.js or WordPress, with Lighthouse 100 as a non-negotiable target. We don&apos;t use page builders, visual editors, or bloated themes. The result is a site that loads fast on mobile, ranks well on Google India, and looks intentional — because it was designed for your specific business, not adapted from someone else&apos;s template.
               </p>
               <p>
                 We&apos;ve built for SMBs, D2C brands, healthcare providers, real estate developers, CA firms, law practices, coaching institutes, and SaaS companies across Mumbai, Delhi, Bangalore, Chennai, Hyderabad, Pune, Ahmedabad, and beyond. The design language changes with each business; the standard of craft doesn&apos;t. Every project gets the same full Figma design process, the same engineering rigour, and the same Lighthouse audit before launch.
@@ -891,7 +891,7 @@ export default function WebDesignServicePage() {
                   { metric: 'Lighthouse Performance', score: '99', note: 'avg. on delivery' },
                   { metric: 'Lighthouse Accessibility', score: '100', note: 'WCAG AA compliant' },
                   { metric: 'Lighthouse SEO', score: '100', note: 'technical SEO included' },
-                  { metric: 'Largest Contentful Paint', score: '<1.8s', note: 'mobile 4G India' },
+                  { metric: 'Largest Contentful Paint', score: '<1.8s', note: 'mobile — India' },
                   { metric: 'Cumulative Layout Shift', score: '0.02', note: 'well below 0.1 threshold' },
                   { metric: 'First Input Delay', score: '<50ms', note: 'instant response to taps' },
                 ].map((item) => (
@@ -939,7 +939,7 @@ export default function WebDesignServicePage() {
             {
               icon: '💸',
               title: 'Indian agencies charge ₹2,50,000+ for the same scope',
-              body: 'A mid-size Indian web agency typically charges ₹2,50,000–₹10,00,000 for a business website — without a published timeline, without guaranteed Lighthouse performance, and without a codebase you own. FactoryJet delivers the same Figma-first design, Next.js engineering, and Lighthouse 100 quality starting at ₹40,000 — with a 7-day delivery guarantee in writing.',
+              body: 'A mid-size Indian web agency typically charges ₹2,50,000–₹10,00,000 for a business website — without a published timeline, without guaranteed Lighthouse performance, and without a codebase you own. FactoryJet delivers the same Figma-first design, Next.js engineering, and Lighthouse 100 quality starting at ₹29,999 — with a 7-day delivery guarantee in writing.',
             },
           ]}
         />
@@ -1072,7 +1072,7 @@ export default function WebDesignServicePage() {
                     <p
                       className="fj-display font-bold"
                       style={{
-                        fontSize: 'clamp(2.25rem, 4vw, 3.25rem)',
+                        fontSize: 'clamp(1.875rem, 3vw, 2.5rem)',
                         lineHeight: 1,
                         letterSpacing: '-0.04em',
                         color: '#F05A28',
@@ -1081,7 +1081,7 @@ export default function WebDesignServicePage() {
                       {stat.value}
                     </p>
                     <p
-                      className="mt-3 font-fj-body font-semibold text-fj-ink"
+                      className="mt-2 font-fj-body font-semibold text-fj-ink"
                       style={{ fontSize: '0.9375rem', lineHeight: 1.5 }}
                     >
                       {stat.label}
@@ -1119,8 +1119,8 @@ export default function WebDesignServicePage() {
           eyebrow="INDIA'S DIGITAL MARKET"
           headline="Indian Businesses Can't Afford a Bad Website in 2025"
           leadParagraphs={[
-            "94% of first impressions are design-related. Your potential customers decide whether to trust you in 0.05 seconds — before they read a single word. If your website looks outdated, loads slowly, or doesn't work on a mid-range Android phone on 4G, that impression doesn't get a second chance.",
-            "India now has 800M+ internet users — the world's single largest internet market — and 70%+ of that traffic arrives via mobile. Google India uses mobile-first indexing, which means your site's mobile performance directly determines where you appear in search results. A site that loads in 5 seconds on 4G isn't just inconvenient; it's invisible.",
+            "94% of first impressions are design-related. Your potential customers decide whether to trust you in 0.05 seconds — before they read a single word. If your website looks outdated, loads slowly, or doesn't work on a mid-range Android phone, that impression doesn't get a second chance.",
+            "India now has 800M+ internet users — the world's single largest internet market — and 70%+ of that traffic arrives via mobile. Google India uses mobile-first indexing, which means your site's mobile performance directly determines where you appear in search results. A site that loads in 5 seconds on mobile isn't just inconvenient; it's invisible.",
             "FactoryJet has been building websites for businesses across Mumbai, Delhi, Bangalore, Chennai, Hyderabad, Pune, Ahmedabad, and beyond. We understand what an Indian SMB needs from a website — not enterprise-level complexity, but professional design, fast mobile performance, and a clear path to WhatsApp or a form submission. The businesses that invest in this don't just look better — they rank better and convert better from the same traffic.",
           ]}
           bodySlot={
@@ -1152,7 +1152,7 @@ export default function WebDesignServicePage() {
           headline="FactoryJet vs. Indian Agency vs. Freelancer vs. Templates"
           lead="Not all web design options are the same. Here's what the decision looks like when you compare the real trade-offs side by side — price, delivery, quality, and ownership."
           pullQuote={{
-            stat: '₹40,000',
+            stat: '₹29,999',
             caption: 'starting price. Same Figma design, Next.js engineering, and Lighthouse 100 quality as a ₹3,00,000+ Indian agency project — at a fraction of the cost.',
           }}
           columns={IN_COMPARISON_COLUMNS}

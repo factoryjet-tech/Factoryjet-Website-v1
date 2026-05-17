@@ -59,7 +59,7 @@ const App: React.FC = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <main className="min-h-screen w-full bg-slate-50">
+      <main className="min-h-screen w-full bg-[#FAFAF7]">
         <FactoryJetPricing />
       </main>
     </>

@@ -14,12 +14,13 @@ import {
   Plus,
   Minus,
   ArrowRight,
+  TrendingUp,
 } from "lucide-react";
 import { useContactModal } from '@/context/ContactModalContext';
 import { trackCTAClick } from '@/utils/gtm';
 
 // --- TYPES ---
-type PricingCategory = "website" | "ecommerce" | "amc";
+type PricingCategory = "website" | "ecommerce" | "amc" | "seo";
 
 interface PricingFeatureItem {
   category?: string;
@@ -30,7 +31,7 @@ interface PricingTier {
   name: string;
   tagline: string;
   price: string;
-  period?: string; // e.g., "/Year"
+  period?: string; // e.g., "/Year" or "/Month"
   isHero: boolean;
   features: PricingFeatureItem[];
 }
@@ -437,6 +438,163 @@ const DATA_AMC: PricingTier[] = [
   },
 ];
 
+const DATA_SEO: PricingTier[] = [
+  {
+    name: "SEO STARTER",
+    tagline: "Visibility",
+    price: "₹9,999",
+    period: "/Month",
+    isHero: false,
+    features: [
+      {
+        category: "ON-PAGE SEO",
+        features: [
+          "10 Pages Optimised",
+          "Title & Meta Tags",
+          "Header Structure (H1–H3)",
+          "Image Alt Text",
+          "Internal Linking Audit",
+        ],
+      },
+      {
+        category: "TECHNICAL SEO",
+        features: [
+          "XML Sitemap Submission",
+          "Robots.txt Optimisation",
+          "Core Web Vitals Check",
+          "Canonical Tags",
+        ],
+      },
+      {
+        category: "LOCAL SEO",
+        features: [
+          "Google Business Profile",
+          "NAP Consistency Audit",
+          "1 City Landing Page",
+        ],
+      },
+      {
+        category: "REPORTING",
+        features: [
+          "Monthly Rank Report",
+          "Google Search Console Setup",
+        ],
+      },
+    ],
+  },
+  {
+    name: "SEO GROWTH",
+    tagline: "Authority",
+    price: "₹24,999",
+    period: "/Month",
+    isHero: true,
+    features: [
+      {
+        category: "ON-PAGE SEO",
+        features: [
+          "25 Pages Optimised",
+          "Keyword Research (50 KW)",
+          "Schema Markup (JSON-LD)",
+          "Content Gap Analysis",
+          "FAQ Schema for AEO",
+        ],
+      },
+      {
+        category: "TECHNICAL SEO",
+        features: [
+          "Site Speed Optimisation",
+          "Mobile-First Audit",
+          "Crawl Error Fixes",
+          "Structured Data Audit",
+          "Redirect Management",
+        ],
+      },
+      {
+        category: "AI SEO",
+        features: [
+          "AI Answer Engine Optimisation",
+          "ChatGPT/Perplexity Visibility",
+          "Long-tail AI Query Targeting",
+          "Entity & Knowledge Graph",
+        ],
+      },
+      {
+        category: "CONTENT",
+        features: [
+          "2 SEO Blog Posts/Month",
+          "4 City Landing Pages",
+          "Competitor Analysis",
+        ],
+      },
+      {
+        category: "REPORTING",
+        features: [
+          "Weekly Rank Tracking",
+          "Monthly Strategy Call",
+          "GA4 + GSC Dashboard",
+        ],
+      },
+    ],
+  },
+  {
+    name: "SEO ENTERPRISE",
+    tagline: "Domination",
+    price: "₹59,999",
+    period: "/Month",
+    isHero: false,
+    features: [
+      {
+        category: "ON-PAGE SEO",
+        features: [
+          "Unlimited Pages",
+          "Full Keyword Universe Map",
+          "Dynamic Schema Automation",
+          "Topical Authority Build",
+          "Video SEO & Transcripts",
+        ],
+      },
+      {
+        category: "TECHNICAL SEO",
+        features: [
+          "Log File Analysis",
+          "JavaScript SEO Audit",
+          "Hreflang (Multi-Language)",
+          "International SEO",
+          "CDN + Edge Optimisation",
+        ],
+      },
+      {
+        category: "AI SEO",
+        features: [
+          "Full GEO Strategy",
+          "AI Citation Building",
+          "LLM Training Data Seeding",
+          "Voice Search (AEO) Full",
+          "Perplexity / Gemini Opt",
+        ],
+      },
+      {
+        category: "CONTENT",
+        features: [
+          "8 SEO Blog Posts/Month",
+          "Unlimited City Pages",
+          "Digital PR & Link Outreach",
+          "Video Content Strategy",
+        ],
+      },
+      {
+        category: "REPORTING",
+        features: [
+          "Real-Time Rank Dashboard",
+          "Weekly Strategy Call",
+          "Dedicated SEO Manager",
+          "Competitor Intelligence",
+        ],
+      },
+    ],
+  },
+];
+
 const FAQ_DATA = [
   {
     id: "strategy",
@@ -472,7 +630,7 @@ const FAQ_DATA = [
     items: [
       {
         q: "What do you mean by 'Hybrid AI Architecture'?",
-        a: "We use AI agents to dynamically generate schema markup, optimize image alt-text, and structure your content for Voice Search (AEO). It’s SEO on autopilot, baked into the code.",
+        a: "We use AI agents to dynamically generate schema markup, optimize image alt-text, and structure your content for Voice Search (AEO). It's SEO on autopilot, baked into the code.",
       },
       {
         q: "Why use Next.js over standard WordPress?",
@@ -562,18 +720,18 @@ const PricingCard: React.FC<{
       transition={{ duration: 0.3 }}
       className={`relative flex flex-col w-full h-full bg-white rounded-xl overflow-hidden ${
         tier.isHero
-          ? "ring-2 ring-jet-blue shadow-2xl scale-100 md:scale-105 z-10"
+          ? "ring-2 ring-[#F05A28] shadow-2xl scale-100 md:scale-105 z-10"
           : "border border-slate-200 shadow-sm hover:shadow-lg transition-shadow duration-300"
       }`}
     >
       {tier.isHero && (
-        <div className="bg-jet-blue text-white text-xs font-bold text-center py-1.5 uppercase tracking-wide">
+        <div className="bg-[#F05A28] text-white text-xs font-bold text-center py-1.5 uppercase tracking-wide">
           Most Popular Choice
         </div>
       )}
 
       <div className="p-4 md:p-6 lg:p-8 border-b border-slate-100">
-        <h3 className="text-jet-blue font-heading font-bold text-base md:text-lg lg:text-xl uppercase tracking-wider mb-2">
+        <h3 className="text-[#F05A28] font-heading font-bold text-base md:text-lg lg:text-xl uppercase tracking-wider mb-2">
           {tier.name}
         </h3>
         <p className="text-slate-500 text-xs md:text-sm font-medium mb-3 md:mb-4">
@@ -581,11 +739,11 @@ const PricingCard: React.FC<{
         </p>
 
         <div className="mb-4 md:mb-6">
-          <span className="text-[10px] md:text-xs font-semibold text-jet-orange uppercase tracking-wider">
+          <span className="text-[10px] md:text-xs font-semibold text-[#F05A28] uppercase tracking-wider">
             Starting At
           </span>
           <div className="flex items-baseline mt-1">
-            <span className="text-3xl md:text-4xl lg:text-5xl font-bold text-jet-navy tracking-tight">
+            <span className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0F0F12] tracking-tight">
               {tier.price}
             </span>
             <span className="text-slate-400 font-medium ml-2 text-xs md:text-sm">
@@ -598,8 +756,8 @@ const PricingCard: React.FC<{
           onClick={onSelectPlan}
           className={`w-full py-2.5 md:py-3 px-4 md:px-6 rounded-lg font-bold text-xs md:text-sm transition-all duration-200 transform active:scale-95 ${
             tier.isHero
-              ? "bg-jet-orange text-white hover:bg-orange-600 shadow-md hover:shadow-lg"
-              : "bg-white border-2 border-jet-blue text-jet-blue hover:bg-jet-blue hover:text-white"
+              ? "bg-[#F05A28] text-white hover:bg-[#d44d1f] shadow-md hover:shadow-lg"
+              : "bg-white border-2 border-[#F05A28] text-[#F05A28] hover:bg-[#F05A28] hover:text-white"
           }`}
         >
           {tier.isHero ? "Get Started Now" : "Select Plan"}
@@ -620,10 +778,10 @@ const PricingCard: React.FC<{
               {section.features.map((feature, fIdx) => (
                 <li
                   key={fIdx}
-                  className="px-4 md:px-6 py-2 md:py-2.5 flex items-start text-sm text-jet-slate group hover:bg-slate-50 transition-colors"
+                  className="px-4 md:px-6 py-2 md:py-2.5 flex items-start text-sm text-slate-600 group hover:bg-slate-50 transition-colors"
                 >
                   <Check
-                    className="w-3 h-3 md:w-4 md:h-4 text-jet-green min-w-[12px] md:min-w-[16px] mt-0.5 mr-2 md:mr-3"
+                    className="w-3 h-3 md:w-4 md:h-4 text-[#10B981] min-w-[12px] md:min-w-[16px] mt-0.5 mr-2 md:mr-3"
                     strokeWidth={3}
                   />
                   <span className="font-medium leading-relaxed font-mono text-[11px] md:text-xs lg:text-sm text-slate-600">
@@ -653,6 +811,7 @@ const FactoryJetPricing = () => {
   const tabs: { id: PricingCategory; label: string }[] = [
     { id: "website", label: "Website Design" },
     { id: "ecommerce", label: "E-Commerce" },
+    { id: "seo", label: "SEO & AI SEO" },
     { id: "amc", label: "AMC (Maintenance)" },
   ];
 
@@ -662,6 +821,8 @@ const FactoryJetPricing = () => {
         return DATA_ECOMMERCE;
       case "amc":
         return DATA_AMC;
+      case "seo":
+        return DATA_SEO;
       default:
         return DATA_WEBSITE;
     }
@@ -692,10 +853,17 @@ const FactoryJetPricing = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       {/* --- HERO SECTION --- */}
-      <header className="relative pt-14 md:pt-16 pb-12 md:pb-16 px-4 text-center bg-gradient-to-b from-white via-blue-50/30 to-slate-50">
+      <header className="relative pt-14 md:pt-16 pb-12 md:pb-16 px-4 text-center bg-[#FAFAF7]">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl md:text-6xl font-heading font-bold text-jet-navy mb-4 md:mb-6 tracking-tight">
-            Transparent, <span className="text-jet-blue">Value-Driven</span>{" "}
+          <p
+            className="inline-flex items-center gap-2 mb-4 font-mono text-xs font-bold uppercase tracking-widest"
+            style={{ color: '#F05A28', letterSpacing: '0.14em' }}
+          >
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#F05A28]" />
+            TRANSPARENT PRICING
+          </p>
+          <h1 className="text-3xl md:text-6xl font-heading font-bold text-[#0F0F12] mb-4 md:mb-6 tracking-tight">
+            Transparent, <span className="text-[#F05A28]">Value-Driven</span>{" "}
             Pricing
           </h1>
           <p className="text-base md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
@@ -718,13 +886,13 @@ const FactoryJetPricing = () => {
               className={`relative px-4 md:px-6 py-2 md:py-2.5 rounded-full text-xs md:text-sm font-bold transition-colors duration-200 whitespace-nowrap ${
                 activeTab === tab.id
                   ? "text-white"
-                  : "text-slate-500 hover:text-jet-navy"
+                  : "text-slate-500 hover:text-[#0F0F12]"
               }`}
             >
               {activeTab === tab.id && (
                 <motion.div
                   layoutId="activeTab"
-                  className="absolute inset-0 bg-jet-blue rounded-full shadow-md"
+                  className="absolute inset-0 bg-[#F05A28] rounded-full shadow-md"
                   transition={{ type: "spring", stiffness: 500, damping: 30 }}
                 />
               )}
@@ -758,9 +926,9 @@ const FactoryJetPricing = () => {
       {/* --- ADVANCED FAQ SECTION --- */}
       <section className="max-w-6xl mx-auto mt-16 md:mt-32 px-4 md:px-8 overflow-x-hidden">
         <div className="text-center mb-10 md:mb-16">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-jet-navy mb-3 md:mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-[#0F0F12] mb-3 md:mb-4">
             Common Questions &{" "}
-            <span className="text-jet-blue">Straight Answers</span>
+            <span className="text-[#F05A28]">Straight Answers</span>
           </h2>
           <p className="text-slate-500 text-sm md:text-base lg:text-lg">
             Everything you need to know about our process, technology, and
@@ -781,11 +949,11 @@ const FactoryJetPricing = () => {
                       key={cat.id}
                       onClick={() => {
                         setFaqCategory(cat.id);
-                        setOpenFaqIndex(0); // Reset accordion on switch
+                        setOpenFaqIndex(0);
                       }}
                       className={`flex items-center w-full p-3 md:p-4 rounded-xl text-left transition-all duration-300 relative group flex-shrink-0 lg:flex-shrink ${
                         isActive
-                          ? "bg-jet-blue text-white shadow-md"
+                          ? "bg-[#F05A28] text-white shadow-md"
                           : "text-slate-600 hover:bg-slate-50"
                       }`}
                     >
@@ -793,7 +961,7 @@ const FactoryJetPricing = () => {
                         className={`w-4 h-4 md:w-5 md:h-5 mr-2 md:mr-3 ${
                           isActive
                             ? "text-white"
-                            : "text-jet-blue group-hover:scale-110 transition-transform"
+                            : "text-[#F05A28] group-hover:scale-110 transition-transform"
                         }`}
                       />
                       <div>
@@ -802,7 +970,7 @@ const FactoryJetPricing = () => {
                         </span>
                         <span
                           className={`text-[10px] md:text-xs ${
-                            isActive ? "text-blue-200" : "text-slate-400"
+                            isActive ? "text-orange-200" : "text-slate-400"
                           }`}
                         >
                           5 Questions
@@ -840,8 +1008,8 @@ const FactoryJetPricing = () => {
                       key={idx}
                       className={`group border rounded-xl md:rounded-2xl transition-all duration-300 overflow-hidden bg-white ${
                         isOpen
-                          ? "border-jet-blue shadow-lg ring-1 ring-blue-100"
-                          : "border-slate-200 hover:border-blue-200 hover:shadow-md"
+                          ? "border-[#F05A28] shadow-lg ring-1 ring-[#F05A28]/20"
+                          : "border-slate-200 hover:border-[#F05A28]/30 hover:shadow-md"
                       }`}
                     >
                       <button
@@ -851,8 +1019,8 @@ const FactoryJetPricing = () => {
                         <span
                           className={`font-heading font-semibold text-sm md:text-base lg:text-lg pr-4 md:pr-8 transition-colors ${
                             isOpen
-                              ? "text-jet-blue"
-                              : "text-jet-navy group-hover:text-jet-blue"
+                              ? "text-[#F05A28]"
+                              : "text-[#0F0F12] group-hover:text-[#F05A28]"
                           }`}
                         >
                           {faq.q}
@@ -860,8 +1028,8 @@ const FactoryJetPricing = () => {
                         <div
                           className={`flex-shrink-0 w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
                             isOpen
-                              ? "bg-jet-blue text-white rotate-180"
-                              : "bg-slate-100 text-slate-500 group-hover:bg-blue-50"
+                              ? "bg-[#F05A28] text-white rotate-180"
+                              : "bg-slate-100 text-slate-500 group-hover:bg-orange-50"
                           }`}
                         >
                           {isOpen ? (
@@ -884,7 +1052,7 @@ const FactoryJetPricing = () => {
                               <div className="h-px w-full bg-slate-100 mb-3 md:mb-4" />
                               <div className="flex items-start">
                                 <div className="mt-1 mr-4 hidden md:block">
-                                  <div className="w-2 h-2 rounded-full bg-jet-orange" />
+                                  <div className="w-2 h-2 rounded-full bg-[#F05A28]" />
                                 </div>
                                 <p className="text-slate-600 leading-relaxed text-xs md:text-sm lg:text-base">
                                   {faq.a}
@@ -905,10 +1073,10 @@ const FactoryJetPricing = () => {
 
       {/* --- FINAL CTA --- */}
       <section className="max-w-4xl mx-auto mt-16 md:mt-32 px-4 md:px-6">
-        <div className="bg-jet-navy rounded-xl md:rounded-2xl p-6 md:p-8 lg:p-12 text-center shadow-2xl relative overflow-hidden group">
-          {/* Abstract background shape */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-jet-blue opacity-10 rounded-full transform translate-x-1/2 -translate-y-1/2 blur-3xl transition-opacity group-hover:opacity-20 duration-700" />
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-jet-orange opacity-5 rounded-full transform -translate-x-1/3 translate-y-1/3 blur-2xl" />
+        <div className="bg-[#0F0F12] rounded-xl md:rounded-2xl p-6 md:p-8 lg:p-12 text-center shadow-2xl relative overflow-hidden group">
+          {/* Abstract background shapes */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#F05A28] opacity-10 rounded-full transform translate-x-1/2 -translate-y-1/2 blur-3xl transition-opacity group-hover:opacity-20 duration-700" />
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#F05A28] opacity-5 rounded-full transform -translate-x-1/3 translate-y-1/3 blur-2xl" />
 
           <div className="relative z-10">
             <h2 className="text-xl md:text-2xl lg:text-3xl font-heading font-bold text-white mb-3 md:mb-4">
@@ -923,7 +1091,7 @@ const FactoryJetPricing = () => {
                 trackCTAClick('book_free_consultation', 'pricing_cta', 'primary');
                 openModal();
               }}
-              className="bg-jet-orange text-white hover:bg-orange-600 font-bold py-3 md:py-4 px-6 md:px-8 rounded-lg shadow-lg hover:shadow-orange-500/30 transition-all transform hover:-translate-y-1 flex items-center mx-auto text-sm md:text-base"
+              className="bg-[#F05A28] text-white hover:bg-[#d44d1f] font-bold py-3 md:py-4 px-6 md:px-8 rounded-lg shadow-lg hover:shadow-[#F05A28]/30 transition-all transform hover:-translate-y-1 flex items-center mx-auto text-sm md:text-base"
             >
               Book a Free Consultation
               <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />

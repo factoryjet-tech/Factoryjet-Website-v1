@@ -360,7 +360,7 @@ const ContactFormModal: React.FC = () => {
         <div key={s} className="flex items-center">
           <div
             className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 ${
-              s === step ? 'bg-[#0052CC] text-white scale-110'
+              s === step ? 'bg-[#F05A28] text-white scale-110'
               : s < step ? 'bg-[#10B981] text-white'
               : 'bg-slate-200 text-slate-500'
             }`}
@@ -397,11 +397,11 @@ const ContactFormModal: React.FC = () => {
               onClick={() => handleServiceSelect(service.id)}
               className={`p-4 rounded-xl border-2 text-left transition-all duration-200 ${
                 isSelected
-                  ? 'border-[#0052CC] bg-blue-50 shadow-md'
-                  : 'border-slate-200 hover:border-[#0052CC]/50 hover:bg-slate-50'
+                  ? 'border-[#F05A28] bg-orange-50 shadow-md'
+                  : 'border-slate-200 hover:border-[#F05A28]/50 hover:bg-slate-50'
               }`}
             >
-              <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${isSelected ? 'bg-[#0052CC] text-white' : 'bg-slate-100 text-[#0052CC]'}`}>
+              <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${isSelected ? 'bg-[#F05A28] text-white' : 'bg-slate-100 text-[#F05A28]'}`}>
                 <Icon size={20} />
               </div>
               <h4 className="font-bold text-[#0A0F1C] text-sm mb-1">{service.label}</h4>
@@ -426,7 +426,7 @@ const ContactFormModal: React.FC = () => {
           <input
             type="text" name="name" value={formData.name} onChange={handleInputChange}
             placeholder="John Doe" required autoComplete="name"
-            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#0052CC] focus:ring-2 focus:ring-blue-100 outline-none transition-all text-sm"
+            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#F05A28] focus:ring-2 focus:ring-orange-100 outline-none transition-all text-sm"
           />
         </div>
         <div className="col-span-2 sm:col-span-1">
@@ -434,7 +434,7 @@ const ContactFormModal: React.FC = () => {
           <input
             type="email" name="email" value={formData.email} onChange={handleInputChange}
             placeholder="john@company.com" required autoComplete="email"
-            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#0052CC] focus:ring-2 focus:ring-blue-100 outline-none transition-all text-sm"
+            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#F05A28] focus:ring-2 focus:ring-orange-100 outline-none transition-all text-sm"
           />
         </div>
         <div className="col-span-2 sm:col-span-1">
@@ -442,7 +442,7 @@ const ContactFormModal: React.FC = () => {
           <input
             type="tel" name="phone" value={formData.phone} onChange={handleInputChange}
             placeholder={region === 'us' ? '(555) 000-0000' : '+44 7700 000000'} required autoComplete="tel"
-            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#0052CC] focus:ring-2 focus:ring-blue-100 outline-none transition-all text-sm"
+            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#F05A28] focus:ring-2 focus:ring-orange-100 outline-none transition-all text-sm"
           />
         </div>
         <div className="col-span-2 sm:col-span-1">
@@ -450,7 +450,7 @@ const ContactFormModal: React.FC = () => {
           <input
             type="text" name="company" value={formData.company} onChange={handleInputChange}
             placeholder="Acme Inc." required autoComplete="organization"
-            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#0052CC] focus:ring-2 focus:ring-blue-100 outline-none transition-all text-sm"
+            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#F05A28] focus:ring-2 focus:ring-orange-100 outline-none transition-all text-sm"
           />
         </div>
       </div>
@@ -472,7 +472,7 @@ const ContactFormModal: React.FC = () => {
         <button
           type="button" onClick={() => { if (validateStep(2)) { trackFormStep('contact_form', 3, 'budget_and_message'); setStep(3); } }}
           disabled={!validateStep(2)}
-          className="flex-1 bg-[#0052CC] text-white py-3 rounded-xl font-bold transition-all disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#003D99]"
+          className="flex-1 bg-[#F05A28] text-white py-3 rounded-xl font-bold transition-all disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#d44d1f]"
         >
           Continue
         </button>
@@ -497,7 +497,7 @@ const ContactFormModal: React.FC = () => {
               <button
                 key={budget.id} type="button" onClick={() => handleBudgetSelect(budget.id)}
                 className={`p-3 rounded-xl border-2 text-left transition-all duration-200 ${
-                  isSelected ? 'border-[#0052CC] bg-blue-50' : 'border-slate-200 hover:border-[#0052CC]/50'
+                  isSelected ? 'border-[#F05A28] bg-orange-50' : 'border-slate-200 hover:border-[#F05A28]/50'
                 }`}
               >
                 <span className="font-bold text-[#0A0F1C] text-sm block">{budget.label}</span>
@@ -516,7 +516,7 @@ const ContactFormModal: React.FC = () => {
           name="message" value={formData.message} onChange={handleInputChange}
           placeholder="Tell us about your project goals, timeline, or any specific requirements..."
           rows={3}
-          className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#0052CC] focus:ring-2 focus:ring-blue-100 outline-none transition-all text-sm resize-none"
+          className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#F05A28] focus:ring-2 focus:ring-orange-100 outline-none transition-all text-sm resize-none"
         />
       </div>
 
@@ -571,7 +571,7 @@ const ContactFormModal: React.FC = () => {
       </p>
       <button
         type="button" onClick={handleClose}
-        className="bg-[#0052CC] text-white px-8 py-3 rounded-xl font-bold transition-all hover:bg-[#003D99]"
+        className="bg-[#F05A28] text-white px-8 py-3 rounded-xl font-bold transition-all hover:bg-[#d44d1f]"
       >
         Close
       </button>
@@ -606,9 +606,9 @@ const ContactFormModal: React.FC = () => {
         </button>
 
         {/* Header */}
-        <div className="bg-gradient-to-r from-[#0052CC] to-[#2563EB] px-6 py-8 text-center rounded-t-2xl">
+        <div className="bg-gradient-to-r from-[#F05A28] to-[#d44d1f] px-6 py-8 text-center rounded-t-2xl">
           <h2 className="text-2xl font-bold text-white mb-1">Let's Build Something Great</h2>
-          <p className="text-blue-100 text-sm">No commitment — free consultation</p>
+          <p className="text-white/75 text-sm">No commitment — free consultation</p>
         </div>
 
         {/* Body */}

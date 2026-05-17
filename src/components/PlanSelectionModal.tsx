@@ -126,7 +126,7 @@ const PlanSelectionModal: React.FC<PlanSelectionModalProps> = ({
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
-            <div className="bg-gradient-to-r from-jet-blue to-blue-600 px-6 py-5 text-white">
+            <div className="bg-gradient-to-r from-[#F05A28] to-[#d44d1f] px-6 py-5 text-white">
               <button
                 onClick={handleClose}
                 className="absolute top-4 right-4 p-1 rounded-full hover:bg-white/20 transition-colors"
@@ -134,7 +134,7 @@ const PlanSelectionModal: React.FC<PlanSelectionModalProps> = ({
                 <X size={20} />
               </button>
               <h3 className="text-xl font-bold">Get Started with {selectedPlan}</h3>
-              <p className="text-blue-100 text-sm mt-1">
+              <p className="text-white/75 text-sm mt-1">
                 Starting at {planPrice} | {city}
               </p>
             </div>
@@ -158,15 +158,15 @@ const PlanSelectionModal: React.FC<PlanSelectionModalProps> = ({
                   </p>
                   <button
                     onClick={handleClose}
-                    className="px-6 py-2 bg-jet-blue text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                    className="px-6 py-2 bg-[#F05A28] text-white rounded-lg font-medium hover:bg-[#d44d1f] transition-colors"
                   >
                     Close
                   </button>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="bg-blue-50 border border-blue-100 rounded-lg p-3 mb-4">
-                    <p className="text-sm text-blue-800">
+                  <div className="bg-orange-50 border border-orange-100 rounded-lg p-3 mb-4">
+                    <p className="text-sm text-[#0F0F12]">
                       <strong>Selected Plan:</strong> {selectedPlan} - {planPrice}
                     </p>
                   </div>
@@ -182,7 +182,7 @@ const PlanSelectionModal: React.FC<PlanSelectionModalProps> = ({
                       onChange={handleInputChange}
                       required
                       placeholder="Enter your full name"
-                      className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-jet-blue focus:border-jet-blue outline-none transition-all"
+                      className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#F05A28]/30 focus:border-[#F05A28] outline-none transition-all"
                     />
                   </div>
 
@@ -197,7 +197,7 @@ const PlanSelectionModal: React.FC<PlanSelectionModalProps> = ({
                       onChange={handleInputChange}
                       required
                       placeholder="+91 XXXXX XXXXX"
-                      className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-jet-blue focus:border-jet-blue outline-none transition-all"
+                      className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#F05A28]/30 focus:border-[#F05A28] outline-none transition-all"
                     />
                   </div>
 
@@ -212,7 +212,7 @@ const PlanSelectionModal: React.FC<PlanSelectionModalProps> = ({
                       onChange={handleInputChange}
                       required
                       placeholder="you@company.com"
-                      className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-jet-blue focus:border-jet-blue outline-none transition-all"
+                      className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#F05A28]/30 focus:border-[#F05A28] outline-none transition-all"
                     />
                   </div>
 
@@ -226,7 +226,7 @@ const PlanSelectionModal: React.FC<PlanSelectionModalProps> = ({
                       value={formData.company}
                       onChange={handleInputChange}
                       placeholder="Your company name"
-                      className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-jet-blue focus:border-jet-blue outline-none transition-all"
+                      className="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#F05A28]/30 focus:border-[#F05A28] outline-none transition-all"
                     />
                   </div>
 
