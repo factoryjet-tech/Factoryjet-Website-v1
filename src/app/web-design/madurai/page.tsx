@@ -423,7 +423,7 @@ const MDU_FAQ_ITEMS = [
               industry: 'Interior Décor · Web Design',
               title: 'Belle Maison — Mumbai',
               description: 'FactoryJet built their v2 website on Next.js with a Figma-designed product showcase, WhatsApp inquiry flow, and SEO targeting high-value search queries.',
-              imageSrc: '/images/ecommerce/mumbai/portfolio-belle-maison.webp',
+              imageSrc: '/images/portfolio/belle-maison.webp',
               stat1: 'Lighthouse 95+',
               stat2: 'Next.js · WhatsApp',
             },

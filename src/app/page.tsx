@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import { homeAlternates } from '@/data/hreflangMap'
-import HomePage from '@/pages/Home'
+import HomePageV2 from '@/components/homepage/HomePageV2'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 
 export const metadata: Metadata = {
-  title: 'FactoryJet - Professional Website Design & E-Commerce Development Company India',
-  description: 'FactoryJet is India\'s leading web development company offering professional website design, e-commerce development, Shopify stores, and custom web solutions. 7-day delivery, 500+ businesses served, 25+ years expertise. Get a free consultation!',
+  title: 'FactoryJet — Website Design, E-Commerce & AI SEO for Growing Businesses',
+  description: 'FactoryJet builds high-performance websites, Shopify e-commerce stores, and AI SEO campaigns for businesses in India, the US, and the UK. 7-day delivery on Starter sites. 500+ businesses served.',
   authors: [{ name: 'FactoryJet' }],
   robots: {
     index: true,
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'FactoryJet - Professional Website Design & E-Commerce Development Company',
-    description: 'India\'s leading web development company. Professional website design, e-commerce development, and custom web solutions. 7-day delivery guarantee!',
+    title: 'FactoryJet — Website Design, E-Commerce & AI SEO for Growing Businesses',
+    description: 'High-performance websites, Shopify stores, and AI SEO campaigns. 7-day delivery. 500+ businesses in India, the US, and the UK.',
     url: 'https://factoryjet.com',
     images: [
       {
@@ -51,7 +51,9 @@ export default function Page() {
   return (
     <>
       <SiteHeader locale="in" />
-      <HomePage />
+      <main>
+        <HomePageV2 />
+      </main>
       <SiteFooter locale="in" />
     </>
   )

@@ -679,7 +679,7 @@ export default function DelhiWebDesignPage() {
               title: 'Belle Maison — Mumbai',
               description:
                 "Belle Maison is a premium interior décor brand. FactoryJet built their v2 website on Next.js with a Figma-designed product showcase, WhatsApp inquiry flow, and SEO targeting high-value search queries. Lighthouse 95+ on mobile before launch.",
-              imageSrc: '/images/ecommerce/mumbai/portfolio-belle-maison.webp',
+              imageSrc: '/images/portfolio/belle-maison.webp',
               stat1: 'Lighthouse 95+',
               stat2: 'Next.js · WhatsApp',
             },
