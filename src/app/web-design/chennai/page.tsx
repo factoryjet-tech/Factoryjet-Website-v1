@@ -188,42 +188,25 @@ export default function Page() {
   }
 
   const cityContextProps = {
-    city: 'Chennai',
+    eyebrow: 'CHENNAI MARKET',
     headline: "India's Auto Capital and a Rising IT Powerhouse",
-    body: "Chennai is the undisputed automotive capital of India — home to Hyundai, Ford, BMW, and hundreds of Tier-1 and Tier-2 suppliers concentrated in Ambattur, Guindy, and Sriperumbudur. Simultaneously, the OMR IT corridor has made Chennai a top-5 software export city, with global MNCs and growing product startups calling it home.",
-    body2:
+    leadParagraphs: [
+      "Chennai is the undisputed automotive capital of India — home to Hyundai, Ford, BMW, and hundreds of Tier-1 and Tier-2 suppliers concentrated in Ambattur, Guindy, and Sriperumbudur. Simultaneously, the OMR IT corridor has made Chennai a top-5 software export city, with global MNCs and growing product startups calling it home.",
       "For businesses here, a weak website means lost RFQs, missed B2B partnerships, and invisible digital presence in a city that increasingly runs on credibility signals. Whether you're a component manufacturer needing a supplier portal or an IT firm targeting overseas clients, your website is your 24/7 sales representative.",
+    ],
     stats: [
-      { value: "$7B+", label: "IT Exports via OMR Corridor" },
-      { value: "India's Auto Capital", label: "Hyundai, Ford, BMW Manufacturing Hub" },
-      { value: "₹7L Cr+", label: "Greater Chennai GDP" },
+      { value: "$7B+", label: "IT Exports via OMR Corridor", sourceUrl: "https://nasscom.in/", sourceLabel: "NASSCOM" },
+      { value: "India's Auto Capital", label: "Hyundai, Ford, BMW Manufacturing Hub", sourceUrl: "https://acma.in/", sourceLabel: "ACMA" },
+      { value: "₹7L Cr+", label: "Greater Chennai GDP", sourceUrl: "https://mospi.gov.in/", sourceLabel: "MoSPI" },
     ],
   }
 
-  const serviceExplanationProps = {
-    headline: 'Two Chennai Markets, One Design Partner',
-    body: "Chennai's business landscape splits cleanly into industrial/B2B and IT/consumer segments — each needing a completely different web strategy. We design for both.",
-    rightSlot: {
-      title: 'What Your Buyers Care About',
-      items: [
-        {
-          label: 'Auto & Manufacturing (Ambattur / Guindy / Sriperumbudur)',
-          description:
-            'B2B credibility, ISO certifications, product catalogues, RFQ forms, and supplier capability statements. Buyers here evaluate vendors rigorously — your website must project quality.',
-        },
-        {
-          label: 'IT & Services / Consumer (OMR / Anna Nagar / Adyar)',
-          description:
-            'Fast-loading SaaS landing pages, service portfolio sites, and D2C storefronts. These audiences expect modern design, instant mobile loading, and clear value propositions.',
-        },
-      ],
-    },
-  }
+
 
   const darkSectionProps = {
     eyebrow: 'WHY FACTORYJET',
     headline: 'Built for Chennai Businesses That Mean Business',
-    points: [
+    pillars: [
       {
         title: '7-Day Delivery',
         body: 'We ship 5-page production-ready websites in 7 days. No months-long agency timelines. Just results.',
@@ -241,7 +224,6 @@ export default function Page() {
         body: 'Every site we build hits green Core Web Vitals. Fast on Chennai\'s 4G networks, faster on fibre.',
       },
     ],
-    cta: { label: 'See Our Portfolio', href: '/portfolio' },
   }
 
   const journeySteps = [
@@ -303,7 +285,7 @@ export default function Page() {
   const pricingTiers = [
     {
       name: 'Starter',
-      price: '₹25,000',
+      priceRange: '₹25,000',
       description: 'For small businesses and solo operators needing a credible online presence fast.',
       features: [
         '5 pages',
@@ -317,7 +299,7 @@ export default function Page() {
     },
     {
       name: 'Growth',
-      price: '₹50,000',
+      priceRange: '₹50,000',
       description: 'For growing businesses that need more content, better design, and stronger lead generation.',
       features: [
         'Up to 12 pages',
@@ -328,11 +310,11 @@ export default function Page() {
         '60-day support',
       ],
       cta: { label: 'Get Started', modal: true as const, region: 'in' as const },
-      highlighted: true,
+      popular: true,
     },
     {
       name: 'Enterprise',
-      price: '₹1,00,000+',
+      priceRange: '₹1,00,000+',
       description: 'For established businesses needing custom portals, integrations, or complex web applications.',
       features: [
         'Unlimited pages',
@@ -346,125 +328,43 @@ export default function Page() {
     },
   ] as const
 
-  const faqCategories = [
-    {
-      id: 'pricing',
-      label: 'Pricing',
-      questions: [
-        {
-          question: 'What does a website cost in Chennai?',
-          answer: 'Our Chennai projects start at ₹25,000 for a 5-page site. Growth packages run ₹50,000 and enterprise custom work starts at ₹1,00,000. All prices are fixed — no surprise invoices.',
-        },
-        {
-          question: 'Do you offer EMI or staged payment plans?',
-          answer: 'Yes. We typically split payments 50% at project start and 50% on delivery. For larger projects we can structure 3-stage payments.',
-        },
-        {
-          question: 'Are there any ongoing monthly fees?',
-          answer: 'The website itself has no mandatory monthly fee. Hosting, domain, and optional maintenance plans are separate and clearly itemized before you sign.',
-        },
-        {
-          question: 'Can I start with a small package and upgrade later?',
-          answer: 'Absolutely. Many clients start with the Starter package and expand their site as revenue grows. We design with scalability in mind from day one.',
-        },
-      ],
-    },
-    {
-      id: 'process',
-      label: 'Process',
-      questions: [
-        {
-          question: 'How does the 7-day delivery work?',
-          answer: 'After kickoff call and content submission, our team designs and builds in parallel. You receive a review link on day 5, we finalize revisions by day 6, and the site goes live on day 7.',
-        },
-        {
-          question: 'What do I need to provide to get started?',
-          answer: 'We need your brand assets (logo, colors if any), basic business information, and any existing content. We guide you through a simple brief that takes under 30 minutes.',
-        },
-        {
-          question: 'How many revisions are included?',
-          answer: 'Two rounds of revisions are included in all packages. Additional revisions are billed at a flat hourly rate communicated upfront.',
-        },
-        {
-          question: 'Do you handle copywriting?',
-          answer: 'Yes. All our packages include professional copywriting. You review and approve all text before the site goes live.',
-        },
-      ],
-    },
-    {
-      id: 'technical',
-      label: 'Technical',
-      questions: [
-        {
-          question: 'Will my site rank on Google?',
-          answer: 'We build every site with on-page SEO best practices — proper heading structure, meta tags, schema markup, and fast loading. For ongoing content SEO, we offer separate retainer packages.',
-        },
-        {
-          question: 'Is the site mobile-friendly?',
-          answer: 'Every site is built mobile-first. We test across iOS and Android at multiple screen sizes before delivery.',
-        },
-        {
-          question: 'What technology do you use?',
-          answer: 'Most sites are built on Next.js for performance or WordPress for client-editable content. We recommend the right stack for your needs and budget.',
-        },
-        {
-          question: 'Can I edit the site myself after launch?',
-          answer: 'Yes. WordPress builds include a CMS training session. For Next.js builds, we provide a simple content editing workflow or can integrate a headless CMS.',
-        },
-      ],
-    },
-    {
-      id: 'ecommerce',
-      label: 'E-Commerce',
-      questions: [
-        {
-          question: 'Can you build an online store for my Chennai business?',
-          answer: 'Yes. We build Shopify stores and custom e-commerce sites for retail, D2C, and B2B ordering. Prices start at ₹50,000.',
-        },
-        {
-          question: 'Do you support Indian payment gateways?',
-          answer: 'Yes — Razorpay, PayU, and CCAvenue integrations are standard. UPI and net banking are supported out of the box.',
-        },
-        {
-          question: 'Can you build a B2B ordering portal for my manufacturing business?',
-          answer: 'Yes. We build custom dealer/distributor portals with login-protected pricing, order tracking, and catalogue management.',
-        },
-        {
-          question: 'Do you handle product photography or catalogue content?',
-          answer: "We don't do in-house photography but can coordinate with Chennai-based product photographers. We handle layout, upload, and optimization of all product images.",
-        },
-      ],
-    },
-    {
-      id: 'local',
-      label: 'Chennai',
-      questions: [
-        {
-          question: 'Do you serve businesses in Ambattur and Guindy industrial estates?',
-          answer: "Yes. We have experience building supplier portals, company profiles, and product catalogues for manufacturing businesses across Ambattur, Guindy, Sriperumbudur, and Perungalathur.",
-        },
-        {
-          question: 'Can you build websites for IT companies on OMR?',
-          answer: "Absolutely. From startup landing pages in Perungudi to established IT services firms in Sholinganallur, we design modern, credibility-focused websites for Chennai's tech corridor.",
-        },
-        {
-          question: 'Do you work with Tamil-language content or bilingual sites?',
-          answer: "Yes. We can build bilingual (English + Tamil) websites for businesses targeting local consumers. Proper UTF-8 encoding and font rendering for Tamil script is included.",
-        },
-        {
-          question: 'Can you help a Chennai business target overseas clients?',
-          answer: "Yes. Many of our Chennai clients — especially in IT services and manufacturing — use their websites to attract UK, US, and Middle East buyers. We design for international credibility while keeping INR pricing.",
-        },
-      ],
-    },
-  ]
+const CHN_FAQ_CATEGORIES = [
+  { key: 'pricing', label: 'Pricing' },
+  { key: 'process', label: 'Process' },
+  { key: 'technical', label: 'Technical' },
+  { key: 'ecommerce', label: 'E-Commerce' },
+  { key: 'local', label: 'Chennai' },
+] as const;
+
+const CHN_FAQ_ITEMS = [
+  { category: 'pricing', question: 'What does a website cost in Chennai?', answer: 'Our Chennai projects start at ₹25,000 for a 5-page site. Growth packages run ₹50,000 and enterprise custom work starts at ₹1,00,000. All prices are fixed — no surprise invoices.' },
+  { category: 'pricing', question: 'Do you offer EMI or staged payment plans?', answer: 'Yes. We typically split payments 50% at project start and 50% on delivery. For larger projects we can structure 3-stage payments.' },
+  { category: 'pricing', question: 'Are there any ongoing monthly fees?', answer: 'The website itself has no mandatory monthly fee. Hosting, domain, and optional maintenance plans are separate and clearly itemized before you sign.' },
+  { category: 'pricing', question: 'Can I start with a small package and upgrade later?', answer: 'Absolutely. Many clients start with the Starter package and expand their site as revenue grows. We design with scalability in mind from day one.' },
+  { category: 'process', question: 'How does the 7-day delivery work?', answer: 'After kickoff call and content submission, our team designs and builds in parallel. You receive a review link on day 5, we finalize revisions by day 6, and the site goes live on day 7.' },
+  { category: 'process', question: 'What do I need to provide to get started?', answer: 'We need your brand assets (logo, colors if any), basic business information, and any existing content. We guide you through a simple brief that takes under 30 minutes.' },
+  { category: 'process', question: 'How many revisions are included?', answer: 'Two rounds of revisions are included in all packages. Additional revisions are billed at a flat hourly rate communicated upfront.' },
+  { category: 'process', question: 'Do you handle copywriting?', answer: 'Yes. All our packages include professional copywriting. You review and approve all text before the site goes live.' },
+  { category: 'technical', question: 'Will my site rank on Google?', answer: 'We build every site with on-page SEO best practices — proper heading structure, meta tags, schema markup, and fast loading. For ongoing content SEO, we offer separate retainer packages.' },
+  { category: 'technical', question: 'Is the site mobile-friendly?', answer: 'Every site is built mobile-first. We test across iOS and Android at multiple screen sizes before delivery.' },
+  { category: 'technical', question: 'What technology do you use?', answer: 'Most sites are built on Next.js for performance or WordPress for client-editable content. We recommend the right stack for your needs and budget.' },
+  { category: 'technical', question: 'Can I edit the site myself after launch?', answer: 'Yes. WordPress builds include a CMS training session. For Next.js builds, we provide a simple content editing workflow or can integrate a headless CMS.' },
+  { category: 'ecommerce', question: 'Can you build an online store for my Chennai business?', answer: 'Yes. We build Shopify stores and custom e-commerce sites for retail, D2C, and B2B ordering. Prices start at ₹50,000.' },
+  { category: 'ecommerce', question: 'Do you support Indian payment gateways?', answer: 'Yes — Razorpay, PayU, and CCAvenue integrations are standard. UPI and net banking are supported out of the box.' },
+  { category: 'ecommerce', question: 'Can you build a B2B ordering portal for my manufacturing business?', answer: 'Yes. We build custom dealer/distributor portals with login-protected pricing, order tracking, and catalogue management.' },
+  { category: 'ecommerce', question: 'Do you handle product photography or catalogue content?', answer: "We don't do in-house photography but can coordinate with Chennai-based product photographers. We handle layout, upload, and optimization of all product images." },
+  { category: 'local', question: 'Do you serve businesses in Ambattur and Guindy industrial estates?', answer: "Yes. We have experience building supplier portals, company profiles, and product catalogues for manufacturing businesses across Ambattur, Guindy, Sriperumbudur, and Perungalathur." },
+  { category: 'local', question: 'Can you build websites for IT companies on OMR?', answer: "Absolutely. From startup landing pages in Perungudi to established IT services firms in Sholinganallur, we design modern, credibility-focused websites for Chennai's tech corridor." },
+  { category: 'local', question: 'Do you work with Tamil-language content or bilingual sites?', answer: "Yes. We can build bilingual (English + Tamil) websites for businesses targeting local consumers. Proper UTF-8 encoding and font rendering for Tamil script is included." },
+  { category: 'local', question: 'Can you help a Chennai business target overseas clients?', answer: "Yes. Many of our Chennai clients — especially in IT services and manufacturing — use their websites to attract UK, US, and Middle East buyers. We design for international credibility while keeping INR pricing." },
+];
+
 
   const finalCTAProps = {
     headline: 'Ready to Build Your Chennai Business Online?',
-    subheadline:
-      "Join 500+ businesses that trust FactoryJet. Whether you're an auto components vendor in Ambattur or an IT firm on OMR, we deliver fast, credible websites that grow your business.",
-    primaryCTA: { label: 'Start Your Project', modal: true as const, region: 'in' as const },
-    secondaryCTA: { label: 'View Portfolio', href: '/portfolio' },
+    sub: "Join 500+ businesses that trust FactoryJet. Whether you're an auto components vendor in Ambattur or an IT firm on OMR, we deliver fast, credible websites that grow your business.",
+    primaryCta: { label: 'Start Your Project', modal: true as const, region: 'in' as const },
+    secondaryCta: { label: 'View Portfolio', href: '/portfolio' },
   }
 
   return (
@@ -492,10 +392,61 @@ export default function Page() {
       <LogoBar />
       <BigThreeTrustBlock />
       <CityContextSection {...cityContextProps} />
-      <ServiceExplanation {...serviceExplanationProps} />
+      <ServiceExplanation
+          headline="Two Chennai Markets, One Design Partner"
+          lead="Chennai's business landscape splits cleanly into industrial/B2B and IT/consumer segments — each needing a completely different web strategy. We design for both."
+          rightSlot={
+            <div className="w-full space-y-4 rounded-2xl border border-black/10 bg-white p-6 shadow-sm lg:p-8">
+              <p className="font-fj-mono font-medium uppercase text-[#F05A28]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>
+                What Your Buyers Care About
+              </p>
+              <div className="space-y-5">
+                <div>
+                  <p className="font-fj-display font-semibold text-[#0F0F12]" style={{ fontSize: '0.9375rem' }}>Auto &amp; Manufacturing (Ambattur / Guindy / Sriperumbudur)</p>
+                  <p className="mt-1 font-fj-body text-sm text-[#525252]">B2B credibility, ISO certifications, product catalogues, RFQ forms, and supplier capability statements. Buyers here evaluate vendors rigorously — your website must project quality.</p>
+                </div>
+                <div>
+                  <p className="font-fj-display font-semibold text-[#0F0F12]" style={{ fontSize: '0.9375rem' }}>IT &amp; Services / Consumer (OMR / Anna Nagar / Adyar)</p>
+                  <p className="mt-1 font-fj-body text-sm text-[#525252]">Fast-loading SaaS landing pages, service portfolio sites, and D2C storefronts. These audiences expect modern design, instant mobile loading, and clear value propositions.</p>
+                </div>
+              </div>
+            </div>
+          }
+        />
       <StrategicDarkSection {...darkSectionProps} />
-      <ServiceJourneyRow steps={journeySteps} />
-      <PortfolioShowcase />
+      <ServiceJourneyRow eyebrow="OUR PROCESS" headline="How We Build Your Chennai Website in 7 Days" />
+      <PortfolioShowcase
+          eyebrow="RECENT WORK"
+          headline="What India's businesses look like after FactoryJet."
+          cards={[
+            {
+              industry: 'Interior Décor · Web Design',
+              title: 'Belle Maison — Mumbai',
+              description: 'FactoryJet built their v2 website on Next.js with a Figma-designed product showcase, WhatsApp inquiry flow, and SEO targeting high-value search queries.',
+              imageSrc: '/images/ecommerce/mumbai/portfolio-belle-maison.webp',
+              stat1: 'Lighthouse 95+',
+              stat2: 'Next.js · WhatsApp',
+            },
+            {
+              industry: 'B2B · Shopify E-Commerce',
+              title: 'Bombay Petals — Mumbai',
+              description: 'B2B artificial plants and décor supplier. Dual-storefront solution — B2B wholesale portal with volume pricing and a D2C consumer store — on a unified Shopify backend.',
+              imageSrc: '/images/portfolio/formative-concepts.webp',
+              stat1: '7-day delivery',
+              stat2: 'Razorpay integrated',
+            },
+            {
+              industry: 'MEP / BIM Consulting · SEO',
+              title: 'Formative Concepts — Pune',
+              description: 'Authority-building website for an MEP drafting and BIM consulting firm — credentials display, project portfolio, and technical SEO for B2B project enquiries.',
+              imageSrc: '/images/portfolio/formative-concepts.webp',
+              stat1: 'B2B authority site',
+              stat2: 'SEO + Next.js',
+            },
+          ]}
+          ctaHref="/portfolio"
+          ctaLabel="View full portfolio"
+        />
       <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Chennai Agency vs. Freelancer"
@@ -508,10 +459,16 @@ export default function Page() {
           rows={CHN_COMPARISON_ROWS}
           footer="Prices reflect typical Chennai market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
         />
-      <IndustriesGrid industries={industries} city="Chennai" />
-      <PricingTiers tiers={pricingTiers} />
+      <IndustriesGrid />
+      <PricingTiers headline="Simple, Transparent Pricing for Chennai Businesses" tiers={pricingTiers} />
       <TestimonialsSection />
-      <FAQ categories={faqCategories} />
+      <FAQ
+          eyebrow="FREQUENTLY ASKED QUESTIONS"
+          headline="Common Questions from Chennai Businesses"
+          lead="Everything Chennai businesses ask before starting a project — answered straight."
+          categories={CHN_FAQ_CATEGORIES}
+          items={CHN_FAQ_ITEMS}
+        />
       <FinalCTA {...finalCTAProps} />
       <SiteFooter locale="in" />
     </>

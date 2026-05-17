@@ -188,42 +188,25 @@ export default function Page() {
   }
 
   const cityContextProps = {
-    city: 'Pune',
+    eyebrow: 'PUNE MARKET',
     headline: "The Oxford of the East, Now a Premier Tech & Auto Hub",
-    body: "Pune has transformed from a pensioner's paradise into one of India's most dynamic business cities. With 8,000+ technology companies in Hinjewadi and Kharadi, a massive automotive cluster in Chakan and Pimpri-Chinchwad, and over 50 engineering colleges, Pune sits at a unique intersection of talent, manufacturing, and innovation.",
-    body2:
+    leadParagraphs: [
+      "Pune has transformed from a pensioner's paradise into one of India's most dynamic business cities. With 8,000+ technology companies in Hinjewadi and Kharadi, a massive automotive cluster in Chakan and Pimpri-Chinchwad, and over 50 engineering colleges, Pune sits at a unique intersection of talent, manufacturing, and innovation.",
       "In a city where competition is intense across every sector, your website is often the first — and sometimes only — impression you make on a potential client, partner, or hire. A slow, outdated site costs you business. A fast, well-designed one builds authority before a single call is made.",
+    ],
     stats: [
-      { value: "8,000+", label: "Tech Companies in Hinjewadi & Kharadi" },
-      { value: "₹5.5L Cr", label: "Pune Metro GDP" },
-      { value: "Oxford of the East", label: "Premier Education & Research Hub" },
+      { value: "8,000+", label: "Tech Companies in Hinjewadi & Kharadi", sourceUrl: "https://nasscom.in/", sourceLabel: "NASSCOM" },
+      { value: "₹5.5L Cr", label: "Pune Metro GDP", sourceUrl: "https://mospi.gov.in/", sourceLabel: "MoSPI" },
+      { value: "Oxford of the East", label: "Premier Education & Research Hub", sourceUrl: "https://aicte-india.org/", sourceLabel: "AICTE" },
     ],
   }
 
-  const serviceExplanationProps = {
-    headline: 'Pune Has Two Speeds — We Design for Both',
-    body: "Pune's business ecosystem spans enterprise IT services, fast-moving startups, industrial manufacturers, and a thriving education sector. Each needs a tailored web strategy.",
-    rightSlot: {
-      title: 'What Your Buyers Care About',
-      items: [
-        {
-          label: 'B2B / IT & Auto (Hinjewadi / Kharadi / Chakan)',
-          description:
-            'Enterprise-grade design, clear service capabilities, case studies, and client logos. B2B buyers in Pune evaluate vendors with scrutiny — your site must communicate depth and reliability.',
-        },
-        {
-          label: 'D2C / Consumer & Education (Baner / Aundh / Koregaon Park)',
-          description:
-            'Conversion-focused design for consumer brands, coaching institutes, and lifestyle businesses. These audiences respond to clean aesthetics, fast load times, and clear calls to action.',
-        },
-      ],
-    },
-  }
+
 
   const darkSectionProps = {
     eyebrow: 'WHY FACTORYJET',
     headline: 'Built for Pune Businesses That Move Fast',
-    points: [
+    pillars: [
       {
         title: '7-Day Delivery',
         body: 'Production-ready 5-page websites in 7 days. No months waiting for an agency to get started.',
@@ -241,7 +224,6 @@ export default function Page() {
         body: "Every site scores green on Core Web Vitals — fast on Pune's 4G networks, lightning on broadband.",
       },
     ],
-    cta: { label: 'See Our Portfolio', href: '/portfolio' },
   }
 
   const journeySteps = [
@@ -303,7 +285,7 @@ export default function Page() {
   const pricingTiers = [
     {
       name: 'Starter',
-      price: '₹25,000',
+      priceRange: '₹25,000',
       description: 'For small businesses and solo operators needing a credible online presence fast.',
       features: [
         '5 pages',
@@ -317,7 +299,7 @@ export default function Page() {
     },
     {
       name: 'Growth',
-      price: '₹50,000',
+      priceRange: '₹50,000',
       description: 'For growing Pune businesses that need richer content, stronger design, and better lead generation.',
       features: [
         'Up to 12 pages',
@@ -328,11 +310,11 @@ export default function Page() {
         '60-day support',
       ],
       cta: { label: 'Get Started', modal: true as const, region: 'in' as const },
-      highlighted: true,
+      popular: true,
     },
     {
       name: 'Enterprise',
-      price: '₹1,00,000+',
+      priceRange: '₹1,00,000+',
       description: 'For established businesses needing custom portals, integrations, or complex web applications.',
       features: [
         'Unlimited pages',
@@ -346,125 +328,43 @@ export default function Page() {
     },
   ] as const
 
-  const faqCategories = [
-    {
-      id: 'pricing',
-      label: 'Pricing',
-      questions: [
-        {
-          question: 'What does a website cost in Pune?',
-          answer: 'Our Pune projects start at ₹25,000 for a 5-page site. Growth packages run ₹50,000 and enterprise custom work starts at ₹1,00,000. All prices are fixed — no surprise invoices.',
-        },
-        {
-          question: 'Do you offer staged payment plans?',
-          answer: 'Yes. We split payments 50% at project start and 50% on delivery. For larger projects we can structure 3-stage payments.',
-        },
-        {
-          question: 'Are there ongoing monthly fees?',
-          answer: 'No mandatory monthly fees. Hosting, domain, and optional maintenance plans are separate and clearly itemized before you sign.',
-        },
-        {
-          question: 'Can I start small and expand the site later?',
-          answer: "Yes. We design for scalability from day one. Many Pune clients start with a Starter package and add pages and features as their business grows.",
-        },
-      ],
-    },
-    {
-      id: 'process',
-      label: 'Process',
-      questions: [
-        {
-          question: 'How does the 7-day delivery work?',
-          answer: 'After kickoff call and content submission, design and development happen in parallel. You receive a review link on day 5, we finalize revisions by day 6, and the site goes live on day 7.',
-        },
-        {
-          question: 'What do I need to provide to get started?',
-          answer: 'Your logo, brand colors (if any), and basic business information. We guide you through a structured brief that takes under 30 minutes.',
-        },
-        {
-          question: 'How many revisions are included?',
-          answer: 'Two rounds of revisions are included in all packages. Additional revisions are billed at a flat rate communicated upfront.',
-        },
-        {
-          question: 'Do you handle copywriting?',
-          answer: 'Yes. Professional copywriting is included in all packages. You review and approve all text before launch.',
-        },
-      ],
-    },
-    {
-      id: 'technical',
-      label: 'Technical',
-      questions: [
-        {
-          question: 'Will my site rank on Google?',
-          answer: 'Every site is built with on-page SEO best practices — headings, meta tags, schema markup, and fast loading. For ongoing content SEO we offer separate retainer packages.',
-        },
-        {
-          question: 'Is the site mobile-friendly?',
-          answer: 'All our builds are mobile-first. We test across iOS and Android at multiple screen sizes before delivery.',
-        },
-        {
-          question: 'What technology stack do you use?',
-          answer: 'Next.js for maximum performance or WordPress for client-editable content. We recommend the right stack for your specific needs.',
-        },
-        {
-          question: 'Can I edit the website myself after launch?',
-          answer: 'Yes. WordPress builds include a CMS training session. For Next.js builds we provide a simple editing workflow or can integrate a headless CMS.',
-        },
-      ],
-    },
-    {
-      id: 'ecommerce',
-      label: 'E-Commerce',
-      questions: [
-        {
-          question: 'Can you build an online store for my Pune business?',
-          answer: 'Yes. We build Shopify stores and custom e-commerce sites for retail, D2C, and B2B ordering. Prices start at ₹50,000.',
-        },
-        {
-          question: 'Do you support Indian payment gateways?',
-          answer: 'Yes — Razorpay, PayU, and CCAvenue are standard. UPI and net banking supported out of the box.',
-        },
-        {
-          question: 'Can you build a dealer or distributor portal?',
-          answer: 'Yes. We build login-protected B2B portals with custom pricing, order tracking, and product catalogue management.',
-        },
-        {
-          question: 'Do you help with product listing and content?',
-          answer: 'Yes. We handle product page layout, image optimization, and description copy as part of the project scope.',
-        },
-      ],
-    },
-    {
-      id: 'local',
-      label: 'Pune',
-      questions: [
-        {
-          question: 'Do you serve IT companies in Hinjewadi IT Park?',
-          answer: "Yes. We build modern websites for IT services firms, SaaS startups, and product companies across Hinjewadi Phase 1, 2, and 3 — and Kharadi's emerging tech cluster.",
-        },
-        {
-          question: 'Can you build websites for auto manufacturers in Chakan?',
-          answer: "Absolutely. We design B2B supplier portals, capability websites, and product catalogues for Tier-1 and Tier-2 automotive component manufacturers in Chakan, Talegaon, and Pimpri-Chinchwad.",
-        },
-        {
-          question: 'Do you work with coaching institutes in Pune?',
-          answer: "Yes. We build lead-generating websites for JEE/NEET coaching, MBA prep, and skill development institutes — optimized to capture enquiries and drive admissions.",
-        },
-        {
-          question: 'Can you help a Pune startup attract international clients?',
-          answer: "Yes. Many of our Pune clients use their websites to target US, UK, and European buyers. We design for global credibility while keeping everything hosted and priced in India.",
-        },
-      ],
-    },
-  ]
+const PUN_FAQ_CATEGORIES = [
+  { key: 'pricing', label: 'Pricing' },
+  { key: 'process', label: 'Process' },
+  { key: 'technical', label: 'Technical' },
+  { key: 'ecommerce', label: 'E-Commerce' },
+  { key: 'local', label: 'Pune' },
+] as const;
+
+const PUN_FAQ_ITEMS = [
+  { category: 'pricing', question: 'What does a website cost in Pune?', answer: 'Our Pune projects start at ₹25,000 for a 5-page site. Growth packages run ₹50,000 and enterprise custom work starts at ₹1,00,000. All prices are fixed — no surprise invoices.' },
+  { category: 'pricing', question: 'Do you offer staged payment plans?', answer: 'Yes. We split payments 50% at project start and 50% on delivery. For larger projects we can structure 3-stage payments.' },
+  { category: 'pricing', question: 'Are there ongoing monthly fees?', answer: 'No mandatory monthly fees. Hosting, domain, and optional maintenance plans are separate and clearly itemized before you sign.' },
+  { category: 'pricing', question: 'Can I start small and expand the site later?', answer: "Yes. We design for scalability from day one. Many Pune clients start with a Starter package and add pages and features as their business grows." },
+  { category: 'process', question: 'How does the 7-day delivery work?', answer: 'After kickoff call and content submission, design and development happen in parallel. You receive a review link on day 5, we finalize revisions by day 6, and the site goes live on day 7.' },
+  { category: 'process', question: 'What do I need to provide to get started?', answer: 'Your logo, brand colors (if any), and basic business information. We guide you through a structured brief that takes under 30 minutes.' },
+  { category: 'process', question: 'How many revisions are included?', answer: 'Two rounds of revisions are included in all packages. Additional revisions are billed at a flat rate communicated upfront.' },
+  { category: 'process', question: 'Do you handle copywriting?', answer: 'Yes. Professional copywriting is included in all packages. You review and approve all text before launch.' },
+  { category: 'technical', question: 'Will my site rank on Google?', answer: 'Every site is built with on-page SEO best practices — headings, meta tags, schema markup, and fast loading. For ongoing content SEO we offer separate retainer packages.' },
+  { category: 'technical', question: 'Is the site mobile-friendly?', answer: 'All our builds are mobile-first. We test across iOS and Android at multiple screen sizes before delivery.' },
+  { category: 'technical', question: 'What technology stack do you use?', answer: 'Next.js for maximum performance or WordPress for client-editable content. We recommend the right stack for your specific needs.' },
+  { category: 'technical', question: 'Can I edit the website myself after launch?', answer: 'Yes. WordPress builds include a CMS training session. For Next.js builds we provide a simple editing workflow or can integrate a headless CMS.' },
+  { category: 'ecommerce', question: 'Can you build an online store for my Pune business?', answer: 'Yes. We build Shopify stores and custom e-commerce sites for retail, D2C, and B2B ordering. Prices start at ₹50,000.' },
+  { category: 'ecommerce', question: 'Do you support Indian payment gateways?', answer: 'Yes — Razorpay, PayU, and CCAvenue are standard. UPI and net banking supported out of the box.' },
+  { category: 'ecommerce', question: 'Can you build a dealer or distributor portal?', answer: 'Yes. We build login-protected B2B portals with custom pricing, order tracking, and product catalogue management.' },
+  { category: 'ecommerce', question: 'Do you help with product listing and content?', answer: 'Yes. We handle product page layout, image optimization, and description copy as part of the project scope.' },
+  { category: 'local', question: 'Do you serve IT companies in Hinjewadi IT Park?', answer: "Yes. We build modern websites for IT services firms, SaaS startups, and product companies across Hinjewadi Phase 1, 2, and 3 — and Kharadi's emerging tech cluster." },
+  { category: 'local', question: 'Can you build websites for auto manufacturers in Chakan?', answer: "Absolutely. We design B2B supplier portals, capability websites, and product catalogues for Tier-1 and Tier-2 automotive component manufacturers in Chakan, Talegaon, and Pimpri-Chinchwad." },
+  { category: 'local', question: 'Do you work with coaching institutes in Pune?', answer: "Yes. We build lead-generating websites for JEE/NEET coaching, MBA prep, and skill development institutes — optimized to capture enquiries and drive admissions." },
+  { category: 'local', question: 'Can you help a Pune startup attract international clients?', answer: "Yes. Many of our Pune clients use their websites to target US, UK, and European buyers. We design for global credibility while keeping everything hosted and priced in India." },
+];
+
 
   const finalCTAProps = {
     headline: 'Ready to Build a Website Pune Is Proud Of?',
-    subheadline:
-      "Join 500+ businesses that trust FactoryJet. Whether you're an IT firm in Hinjewadi, an auto supplier in Chakan, or an education brand targeting Maharashtra — we deliver in 7 days.",
-    primaryCTA: { label: 'Start Your Project', modal: true as const, region: 'in' as const },
-    secondaryCTA: { label: 'View Portfolio', href: '/portfolio' },
+    sub: "Join 500+ businesses that trust FactoryJet. Whether you're an IT firm in Hinjewadi, an auto supplier in Chakan, or an education brand targeting Maharashtra — we deliver in 7 days.",
+    primaryCta: { label: 'Start Your Project', modal: true as const, region: 'in' as const },
+    secondaryCta: { label: 'View Portfolio', href: '/portfolio' },
   }
 
   return (
@@ -492,10 +392,61 @@ export default function Page() {
       <LogoBar />
       <BigThreeTrustBlock />
       <CityContextSection {...cityContextProps} />
-      <ServiceExplanation {...serviceExplanationProps} />
+      <ServiceExplanation
+          headline="Pune Has Two Speeds — We Design for Both"
+          lead="Pune's business ecosystem spans enterprise IT services, fast-moving startups, industrial manufacturers, and a thriving education sector. Each needs a tailored web strategy."
+          rightSlot={
+            <div className="w-full space-y-4 rounded-2xl border border-black/10 bg-white p-6 shadow-sm lg:p-8">
+              <p className="font-fj-mono font-medium uppercase text-[#F05A28]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>
+                What Your Buyers Care About
+              </p>
+              <div className="space-y-5">
+                <div>
+                  <p className="font-fj-display font-semibold text-[#0F0F12]" style={{ fontSize: '0.9375rem' }}>B2B / IT &amp; Auto (Hinjewadi / Kharadi / Chakan)</p>
+                  <p className="mt-1 font-fj-body text-sm text-[#525252]">Enterprise-grade design, clear service capabilities, case studies, and client logos. B2B buyers in Pune evaluate vendors with scrutiny — your site must communicate depth and reliability.</p>
+                </div>
+                <div>
+                  <p className="font-fj-display font-semibold text-[#0F0F12]" style={{ fontSize: '0.9375rem' }}>D2C / Consumer &amp; Education (Baner / Aundh / Koregaon Park)</p>
+                  <p className="mt-1 font-fj-body text-sm text-[#525252]">Conversion-focused design for consumer brands, coaching institutes, and lifestyle businesses. These audiences respond to clean aesthetics, fast load times, and clear calls to action.</p>
+                </div>
+              </div>
+            </div>
+          }
+        />
       <StrategicDarkSection {...darkSectionProps} />
-      <ServiceJourneyRow steps={journeySteps} />
-      <PortfolioShowcase />
+      <ServiceJourneyRow eyebrow="OUR PROCESS" headline="How We Build Your Pune Website in 7 Days" />
+      <PortfolioShowcase
+          eyebrow="RECENT WORK"
+          headline="What India's businesses look like after FactoryJet."
+          cards={[
+            {
+              industry: 'Interior Décor · Web Design',
+              title: 'Belle Maison — Mumbai',
+              description: 'FactoryJet built their v2 website on Next.js with a Figma-designed product showcase, WhatsApp inquiry flow, and SEO targeting high-value search queries.',
+              imageSrc: '/images/ecommerce/mumbai/portfolio-belle-maison.webp',
+              stat1: 'Lighthouse 95+',
+              stat2: 'Next.js · WhatsApp',
+            },
+            {
+              industry: 'B2B · Shopify E-Commerce',
+              title: 'Bombay Petals — Mumbai',
+              description: 'B2B artificial plants and décor supplier. Dual-storefront solution — B2B wholesale portal with volume pricing and a D2C consumer store — on a unified Shopify backend.',
+              imageSrc: '/images/portfolio/formative-concepts.webp',
+              stat1: '7-day delivery',
+              stat2: 'Razorpay integrated',
+            },
+            {
+              industry: 'MEP / BIM Consulting · SEO',
+              title: 'Formative Concepts — Pune',
+              description: 'Authority-building website for an MEP drafting and BIM consulting firm — credentials display, project portfolio, and technical SEO for B2B project enquiries.',
+              imageSrc: '/images/portfolio/formative-concepts.webp',
+              stat1: 'B2B authority site',
+              stat2: 'SEO + Next.js',
+            },
+          ]}
+          ctaHref="/portfolio"
+          ctaLabel="View full portfolio"
+        />
       <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Pune Agency vs. Freelancer"
@@ -508,10 +459,16 @@ export default function Page() {
           rows={PUN_COMPARISON_ROWS}
           footer="Prices reflect typical Pune market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
         />
-      <IndustriesGrid industries={industries} city="Pune" />
-      <PricingTiers tiers={pricingTiers} />
+      <IndustriesGrid />
+      <PricingTiers headline="Simple, Transparent Pricing for Pune Businesses" tiers={pricingTiers} />
       <TestimonialsSection />
-      <FAQ categories={faqCategories} />
+      <FAQ
+          eyebrow="FREQUENTLY ASKED QUESTIONS"
+          headline="Common Questions from Pune Businesses"
+          lead="Everything Pune businesses ask before starting a project — answered straight."
+          categories={PUN_FAQ_CATEGORIES}
+          items={PUN_FAQ_ITEMS}
+        />
       <FinalCTA {...finalCTAProps} />
       <SiteFooter locale="in" />
     </>

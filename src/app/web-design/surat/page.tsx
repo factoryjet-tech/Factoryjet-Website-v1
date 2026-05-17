@@ -188,42 +188,25 @@ export default function Page() {
   }
 
   const cityContextProps = {
-    city: 'Surat',
+    eyebrow: 'SURAT MARKET',
     headline: "India's Fastest-Growing City, Powered by Diamonds and Textiles",
-    body: "Surat is a trading and manufacturing powerhouse unlike any other. Over 90% of the world's rough diamonds are cut and polished here. The city's textile industry supplies fabric to retail brands across India and exports to global markets. And with a young, entrepreneurial population and rising digital adoption, Surat's MSME ecosystem is one of the most dynamic in Gujarat.",
-    body2:
+    leadParagraphs: [
+      "Surat is a trading and manufacturing powerhouse unlike any other. Over 90% of the world's rough diamonds are cut and polished here. The city's textile industry supplies fabric to retail brands across India and exports to global markets. And with a young, entrepreneurial population and rising digital adoption, Surat's MSME ecosystem is one of the most dynamic in Gujarat.",
       "Yet many Surat businesses — from diamond merchants on Varachha Road to textile exporters in GIDC Sachin — still rely on WhatsApp and word-of-mouth. A credible website turns that informal trust into scalable reach: international buyers, new city customers, and a digital presence that works 24/7.",
+    ],
     stats: [
-      { value: "90%", label: "World's Diamonds Cut & Polished Here" },
-      { value: "Fastest-Growing", label: "One of India's Fastest-Growing Cities" },
-      { value: "₹1.5L Cr+", label: "Surat District GDP" },
+      { value: "90%", label: "World's Diamonds Cut & Polished Here", sourceUrl: "https://gjepc.org/", sourceLabel: "GJEPC" },
+      { value: "Fastest-Growing", label: "One of India's Fastest-Growing Cities", sourceUrl: "https://censusindia.gov.in/", sourceLabel: "Census India" },
+      { value: "₹1.5L Cr+", label: "Surat District GDP", sourceUrl: "https://mospi.gov.in/", sourceLabel: "MoSPI" },
     ],
   }
 
-  const serviceExplanationProps = {
-    headline: 'Surat Businesses Sell Locally and Globally — We Design for Both',
-    body: "Surat's economy spans high-value B2B export trades and a thriving local consumer market. The web strategy for a diamond exporter is completely different from a Vesu retail brand — we understand both.",
-    rightSlot: {
-      title: 'What Your Buyers Care About',
-      items: [
-        {
-          label: 'B2B / Diamond & Textile Export (GIDC Sachin / Hazira / Ring Road)',
-          description:
-            'Credibility, certifications, product specifications, and professional imagery. International buyers research suppliers online before making contact — your website is your digital showroom.',
-        },
-        {
-          label: 'D2C / Consumer & Retail (Adajan / Vesu / City Light)',
-          description:
-            'Clean design, fast mobile loading, and clear CTAs. Local Surat consumers respond to modern aesthetics, WhatsApp integration, and easy ways to enquire or buy.',
-        },
-      ],
-    },
-  }
+
 
   const darkSectionProps = {
     eyebrow: 'WHY FACTORYJET',
     headline: 'Built for Surat Businesses That Think Big',
-    points: [
+    pillars: [
       {
         title: '7-Day Delivery',
         body: "5-page production-ready websites in 7 days. No waiting months for a local agency's availability.",
@@ -241,7 +224,6 @@ export default function Page() {
         body: 'Every site scores green on Core Web Vitals. Fast on Surat mobile networks, instant on broadband.',
       },
     ],
-    cta: { label: 'See Our Portfolio', href: '/portfolio' },
   }
 
   const journeySteps = [
@@ -303,7 +285,7 @@ export default function Page() {
   const pricingTiers = [
     {
       name: 'Starter',
-      price: '₹25,000',
+      priceRange: '₹25,000',
       description: 'For small businesses and traders needing a credible online presence quickly.',
       features: [
         '5 pages',
@@ -317,7 +299,7 @@ export default function Page() {
     },
     {
       name: 'Growth',
-      price: '₹50,000',
+      priceRange: '₹50,000',
       description: 'For exporters and growing businesses that need product catalogues and stronger lead generation.',
       features: [
         'Up to 12 pages',
@@ -328,11 +310,11 @@ export default function Page() {
         '60-day support',
       ],
       cta: { label: 'Get Started', modal: true as const, region: 'in' as const },
-      highlighted: true,
+      popular: true,
     },
     {
       name: 'Enterprise',
-      price: '₹1,00,000+',
+      priceRange: '₹1,00,000+',
       description: 'For large exporters or manufacturers needing custom portals, B2B ordering, or multi-language sites.',
       features: [
         'Unlimited pages',
@@ -346,125 +328,43 @@ export default function Page() {
     },
   ] as const
 
-  const faqCategories = [
-    {
-      id: 'pricing',
-      label: 'Pricing',
-      questions: [
-        {
-          question: 'What does a website cost in Surat?',
-          answer: 'Our Surat projects start at ₹25,000 for a 5-page site. Growth packages including product catalogues run ₹50,000. Enterprise custom builds start at ₹1,00,000. All fixed pricing.',
-        },
-        {
-          question: 'Do you offer payment in installments?',
-          answer: 'Yes. Standard split is 50% at kickoff and 50% on delivery. For larger export portal builds we offer 3-stage payment plans.',
-        },
-        {
-          question: 'Are there ongoing monthly fees?',
-          answer: 'No mandatory monthly fees. Hosting and domain are separate and clearly quoted before you sign. Optional maintenance plans are available.',
-        },
-        {
-          question: 'Do you charge extra for Gujarati language support?',
-          answer: 'Multi-language Gujarati/English websites are available in our Enterprise tier. The additional cost depends on the amount of content to be translated.',
-        },
-      ],
-    },
-    {
-      id: 'process',
-      label: 'Process',
-      questions: [
-        {
-          question: 'How does the 7-day delivery work for Surat?',
-          answer: 'After kickoff call and content submission, design and development happen in parallel. Review link on day 5, revisions on day 6, live on day 7. Product catalogue projects may take longer depending on SKU count.',
-        },
-        {
-          question: 'What do I need to provide to get started?',
-          answer: 'Your company logo, product images (if applicable), and basic business information. We guide you through a simple brief that takes under 30 minutes to complete.',
-        },
-        {
-          question: 'How many revisions are included?',
-          answer: 'Two rounds of revisions in all packages. Additional revisions are billed at a flat rate quoted upfront.',
-        },
-        {
-          question: 'Do you handle copywriting for export-facing content?',
-          answer: 'Yes. We write professional English copy for all pages — including product descriptions crafted to appeal to international buyers.',
-        },
-      ],
-    },
-    {
-      id: 'technical',
-      label: 'Technical',
-      questions: [
-        {
-          question: 'Will my website rank for international diamond or textile searches?',
-          answer: 'We build every site with on-page SEO best practices including schema markup, fast loading, and keyword-optimized content. For sustained search rankings, we offer separate SEO retainer packages.',
-        },
-        {
-          question: 'Is the site mobile-friendly?',
-          answer: 'All builds are mobile-first. We test across iOS and Android at multiple screen sizes before delivery.',
-        },
-        {
-          question: 'Can the website support multiple currencies or international pricing?',
-          answer: 'Yes. For export-focused businesses we can display prices in USD, EUR, or AED alongside INR — or set up a contact-for-pricing model that works better for high-value B2B sales.',
-        },
-        {
-          question: 'How fast will the website load internationally?',
-          answer: 'We deploy to global CDN infrastructure (Cloudflare). Load times are under 1 second for visitors in the US, UK, UAE, and Europe.',
-        },
-      ],
-    },
-    {
-      id: 'ecommerce',
-      label: 'E-Commerce',
-      questions: [
-        {
-          question: 'Can you build an online jewellery or fabric store?',
-          answer: 'Yes. We build Shopify and custom e-commerce sites for jewellery and textile businesses — with proper product photography guidance, INR pricing, and Indian payment gateway integration.',
-        },
-        {
-          question: 'Do you support Razorpay and Indian payment gateways?',
-          answer: 'Yes — Razorpay, PayU, and CCAvenue are standard. International payment via Stripe or PayPal can also be integrated for export-facing stores.',
-        },
-        {
-          question: 'Can you build a B2B wholesale ordering portal?',
-          answer: 'Yes. Login-protected portals with dealer pricing, minimum order quantities, and catalogue downloads are available in our Enterprise tier.',
-        },
-        {
-          question: 'Do you help with product photography or image editing?',
-          answer: "We don't do in-house photography but we handle all image optimization, background removal, and layout for uploaded product images.",
-        },
-      ],
-    },
-    {
-      id: 'local',
-      label: 'Surat',
-      questions: [
-        {
-          question: 'Can you build an export-facing website for a Surat diamond manufacturer?',
-          answer: "Yes. We build digital showrooms and export-ready sites for diamond manufacturers and polishers that communicate quality, certifications (GIA, IGI), and product range to international buyers.",
-        },
-        {
-          question: 'Do you serve textile exporters in GIDC Sachin?',
-          answer: "Absolutely. We build product catalogues, exporter profile sites, and B2B inquiry portals for synthetic fabric, embroidery, and saree manufacturers in GIDC Sachin and Pandesara.",
-        },
-        {
-          question: 'Can you build a Gujarati-English bilingual website?',
-          answer: "Yes. Our Enterprise tier includes Gujarati language support with proper Devanagari rendering and locale-specific content for businesses targeting local Gujarat consumers.",
-        },
-        {
-          question: 'Do you have experience with Surat real estate developers?',
-          answer: "Yes. We build project launch sites and developer portfolio pages for Surat real estate businesses — with inquiry forms, virtual tour integrations, and location maps.",
-        },
-      ],
-    },
-  ]
+const SRT_FAQ_CATEGORIES = [
+  { key: 'pricing', label: 'Pricing' },
+  { key: 'process', label: 'Process' },
+  { key: 'technical', label: 'Technical' },
+  { key: 'ecommerce', label: 'E-Commerce' },
+  { key: 'local', label: 'Surat' },
+] as const;
+
+const SRT_FAQ_ITEMS = [
+  { category: 'pricing', question: 'What does a website cost in Surat?', answer: 'Our Surat projects start at ₹25,000 for a 5-page site. Growth packages including product catalogues run ₹50,000. Enterprise custom builds start at ₹1,00,000. All fixed pricing.' },
+  { category: 'pricing', question: 'Do you offer payment in installments?', answer: 'Yes. Standard split is 50% at kickoff and 50% on delivery. For larger export portal builds we offer 3-stage payment plans.' },
+  { category: 'pricing', question: 'Are there ongoing monthly fees?', answer: 'No mandatory monthly fees. Hosting and domain are separate and clearly quoted before you sign. Optional maintenance plans are available.' },
+  { category: 'pricing', question: 'Do you charge extra for Gujarati language support?', answer: 'Multi-language Gujarati/English websites are available in our Enterprise tier. The additional cost depends on the amount of content to be translated.' },
+  { category: 'process', question: 'How does the 7-day delivery work for Surat?', answer: 'After kickoff call and content submission, design and development happen in parallel. Review link on day 5, revisions on day 6, live on day 7. Product catalogue projects may take longer depending on SKU count.' },
+  { category: 'process', question: 'What do I need to provide to get started?', answer: 'Your company logo, product images (if applicable), and basic business information. We guide you through a simple brief that takes under 30 minutes to complete.' },
+  { category: 'process', question: 'How many revisions are included?', answer: 'Two rounds of revisions in all packages. Additional revisions are billed at a flat rate quoted upfront.' },
+  { category: 'process', question: 'Do you handle copywriting for export-facing content?', answer: 'Yes. We write professional English copy for all pages — including product descriptions crafted to appeal to international buyers.' },
+  { category: 'technical', question: 'Will my website rank for international diamond or textile searches?', answer: 'We build every site with on-page SEO best practices including schema markup, fast loading, and keyword-optimized content. For sustained search rankings, we offer separate SEO retainer packages.' },
+  { category: 'technical', question: 'Is the site mobile-friendly?', answer: 'All builds are mobile-first. We test across iOS and Android at multiple screen sizes before delivery.' },
+  { category: 'technical', question: 'Can the website support multiple currencies or international pricing?', answer: 'Yes. For export-focused businesses we can display prices in USD, EUR, or AED alongside INR — or set up a contact-for-pricing model that works better for high-value B2B sales.' },
+  { category: 'technical', question: 'How fast will the website load internationally?', answer: 'We deploy to global CDN infrastructure (Cloudflare). Load times are under 1 second for visitors in the US, UK, UAE, and Europe.' },
+  { category: 'ecommerce', question: 'Can you build an online jewellery or fabric store?', answer: 'Yes. We build Shopify and custom e-commerce sites for jewellery and textile businesses — with proper product photography guidance, INR pricing, and Indian payment gateway integration.' },
+  { category: 'ecommerce', question: 'Do you support Razorpay and Indian payment gateways?', answer: 'Yes — Razorpay, PayU, and CCAvenue are standard. International payment via Stripe or PayPal can also be integrated for export-facing stores.' },
+  { category: 'ecommerce', question: 'Can you build a B2B wholesale ordering portal?', answer: 'Yes. Login-protected portals with dealer pricing, minimum order quantities, and catalogue downloads are available in our Enterprise tier.' },
+  { category: 'ecommerce', question: 'Do you help with product photography or image editing?', answer: "We don't do in-house photography but we handle all image optimization, background removal, and layout for uploaded product images." },
+  { category: 'local', question: 'Can you build an export-facing website for a Surat diamond manufacturer?', answer: "Yes. We build digital showrooms and export-ready sites for diamond manufacturers and polishers that communicate quality, certifications (GIA, IGI), and product range to international buyers." },
+  { category: 'local', question: 'Do you serve textile exporters in GIDC Sachin?', answer: "Absolutely. We build product catalogues, exporter profile sites, and B2B inquiry portals for synthetic fabric, embroidery, and saree manufacturers in GIDC Sachin and Pandesara." },
+  { category: 'local', question: 'Can you build a Gujarati-English bilingual website?', answer: "Yes. Our Enterprise tier includes Gujarati language support with proper Devanagari rendering and locale-specific content for businesses targeting local Gujarat consumers." },
+  { category: 'local', question: 'Do you have experience with Surat real estate developers?', answer: "Yes. We build project launch sites and developer portfolio pages for Surat real estate businesses — with inquiry forms, virtual tour integrations, and location maps." },
+];
+
 
   const finalCTAProps = {
     headline: 'Ready to Build a Website as Polished as Your Diamonds?',
-    subheadline:
-      "Join 500+ businesses that trust FactoryJet. Whether you're a diamond exporter in Varachha, a textile manufacturer in GIDC Sachin, or a retail brand in Adajan — we deliver in 7 days.",
-    primaryCTA: { label: 'Start Your Project', modal: true as const, region: 'in' as const },
-    secondaryCTA: { label: 'View Portfolio', href: '/portfolio' },
+    sub: "Join 500+ businesses that trust FactoryJet. Whether you're a diamond exporter in Varachha, a textile manufacturer in GIDC Sachin, or a retail brand in Adajan — we deliver in 7 days.",
+    primaryCta: { label: 'Start Your Project', modal: true as const, region: 'in' as const },
+    secondaryCta: { label: 'View Portfolio', href: '/portfolio' },
   }
 
   return (
@@ -492,10 +392,61 @@ export default function Page() {
       <LogoBar />
       <BigThreeTrustBlock />
       <CityContextSection {...cityContextProps} />
-      <ServiceExplanation {...serviceExplanationProps} />
+      <ServiceExplanation
+          headline="Surat Businesses Sell Locally and Globally — We Design for Both"
+          lead="Surat's economy spans high-value B2B export trades and a thriving local consumer market. The web strategy for a diamond exporter is completely different from a Vesu retail brand — we understand both."
+          rightSlot={
+            <div className="w-full space-y-4 rounded-2xl border border-black/10 bg-white p-6 shadow-sm lg:p-8">
+              <p className="font-fj-mono font-medium uppercase text-[#F05A28]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>
+                What Your Buyers Care About
+              </p>
+              <div className="space-y-5">
+                <div>
+                  <p className="font-fj-display font-semibold text-[#0F0F12]" style={{ fontSize: '0.9375rem' }}>B2B / Diamond &amp; Textile Export (GIDC Sachin / Hazira / Ring Road)</p>
+                  <p className="mt-1 font-fj-body text-sm text-[#525252]">Credibility, certifications, product specifications, and professional imagery. International buyers research suppliers online before making contact — your website is your digital showroom.</p>
+                </div>
+                <div>
+                  <p className="font-fj-display font-semibold text-[#0F0F12]" style={{ fontSize: '0.9375rem' }}>D2C / Consumer &amp; Retail (Adajan / Vesu / City Light)</p>
+                  <p className="mt-1 font-fj-body text-sm text-[#525252]">Clean design, fast mobile loading, and clear CTAs. Local Surat consumers respond to modern aesthetics, WhatsApp integration, and easy ways to enquire or buy.</p>
+                </div>
+              </div>
+            </div>
+          }
+        />
       <StrategicDarkSection {...darkSectionProps} />
-      <ServiceJourneyRow steps={journeySteps} />
-      <PortfolioShowcase />
+      <ServiceJourneyRow eyebrow="OUR PROCESS" headline="How We Build Your Surat Website in 7 Days" />
+      <PortfolioShowcase
+          eyebrow="RECENT WORK"
+          headline="What India's businesses look like after FactoryJet."
+          cards={[
+            {
+              industry: 'Interior Décor · Web Design',
+              title: 'Belle Maison — Mumbai',
+              description: 'FactoryJet built their v2 website on Next.js with a Figma-designed product showcase, WhatsApp inquiry flow, and SEO targeting high-value search queries.',
+              imageSrc: '/images/ecommerce/mumbai/portfolio-belle-maison.webp',
+              stat1: 'Lighthouse 95+',
+              stat2: 'Next.js · WhatsApp',
+            },
+            {
+              industry: 'B2B · Shopify E-Commerce',
+              title: 'Bombay Petals — Mumbai',
+              description: 'B2B artificial plants and décor supplier. Dual-storefront solution — B2B wholesale portal with volume pricing and a D2C consumer store — on a unified Shopify backend.',
+              imageSrc: '/images/portfolio/formative-concepts.webp',
+              stat1: '7-day delivery',
+              stat2: 'Razorpay integrated',
+            },
+            {
+              industry: 'MEP / BIM Consulting · SEO',
+              title: 'Formative Concepts — Pune',
+              description: 'Authority-building website for an MEP drafting and BIM consulting firm — credentials display, project portfolio, and technical SEO for B2B project enquiries.',
+              imageSrc: '/images/portfolio/formative-concepts.webp',
+              stat1: 'B2B authority site',
+              stat2: 'SEO + Next.js',
+            },
+          ]}
+          ctaHref="/portfolio"
+          ctaLabel="View full portfolio"
+        />
       <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Surat Agency vs. Freelancer"
@@ -508,10 +459,16 @@ export default function Page() {
           rows={SRT_COMPARISON_ROWS}
           footer="Prices reflect typical Surat market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
         />
-      <IndustriesGrid industries={industries} city="Surat" />
-      <PricingTiers tiers={pricingTiers} />
+      <IndustriesGrid />
+      <PricingTiers headline="Simple, Transparent Pricing for Surat Businesses" tiers={pricingTiers} />
       <TestimonialsSection />
-      <FAQ categories={faqCategories} />
+      <FAQ
+          eyebrow="FREQUENTLY ASKED QUESTIONS"
+          headline="Common Questions from Surat Businesses"
+          lead="Everything Surat businesses ask before starting a project — answered straight."
+          categories={SRT_FAQ_CATEGORIES}
+          items={SRT_FAQ_ITEMS}
+        />
       <FinalCTA {...finalCTAProps} />
       <SiteFooter locale="in" />
     </>
