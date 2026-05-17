@@ -276,7 +276,7 @@ const DATA_ECOMMERCE: PricingTier[] = [
       {
         category: "ARCH",
         features: [
-          "Unlimited Products",
+          "Full Product Catalogue",
           "Bundled/Digital",
           "Distraction-Free Checkout",
           "Social Login",
@@ -449,7 +449,7 @@ const DATA_SEO: PricingTier[] = [
       {
         category: "ON-PAGE SEO",
         features: [
-          "10 Pages Optimised",
+          "5 Pages Optimised",
           "Title & Meta Tags",
           "Header Structure (H1–H3)",
           "Image Alt Text",
@@ -492,7 +492,7 @@ const DATA_SEO: PricingTier[] = [
       {
         category: "ON-PAGE SEO",
         features: [
-          "25 Pages Optimised",
+          "Up to 12 Pages Optimised",
           "Keyword Research (50 KW)",
           "Schema Markup (JSON-LD)",
           "Content Gap Analysis",
@@ -546,7 +546,7 @@ const DATA_SEO: PricingTier[] = [
       {
         category: "ON-PAGE SEO",
         features: [
-          "Unlimited Pages",
+          "Up to 25 Pages Optimised",
           "Full Keyword Universe Map",
           "Dynamic Schema Automation",
           "Topical Authority Build",
@@ -577,7 +577,7 @@ const DATA_SEO: PricingTier[] = [
         category: "CONTENT",
         features: [
           "8 SEO Blog Posts/Month",
-          "Unlimited City Pages",
+          "Up to 10 City Pages",
           "Digital PR & Link Outreach",
           "Video Content Strategy",
         ],

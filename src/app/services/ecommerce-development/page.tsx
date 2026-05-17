@@ -27,13 +27,13 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'E-Commerce Development Company in India | Shopify, WooCommerce & Custom Stores | FactoryJet',
   description:
-    'FactoryJet builds high-converting e-commerce stores for Indian businesses — Shopify, WooCommerce, custom D2C, B2B portals, and quick-commerce apps. From ₹75,000. Razorpay & UPI integrated. GST-compliant. 7-day Shopify delivery.',
+    'FactoryJet builds high-converting e-commerce stores for Indian businesses — Shopify, WooCommerce, custom D2C, B2B portals, and quick-commerce apps. From ₹59,999. Razorpay & UPI integrated. GST-compliant. 7-day Shopify delivery.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'E-Commerce Development India | Custom Online Stores From ₹75,000 | FactoryJet',
+    title: 'E-Commerce Development India | Custom Online Stores From ₹59,999 | FactoryJet',
     description:
-      'Shopify, WooCommerce, D2C, B2B, and quick-commerce for Indian businesses. Razorpay, UPI, GST-compliant. Starting at ₹75,000. 7-day delivery guarantee.',
+      'Shopify, WooCommerce, D2C, B2B, and quick-commerce for Indian businesses. Razorpay, UPI, GST-compliant. Starting at ₹59,999. 7-day delivery guarantee.',
     url: 'https://factoryjet.com/services/ecommerce-development',
     images: [
       {
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'E-Commerce Development India | Custom Online Stores | FactoryJet',
     description:
-      'Shopify, WooCommerce, D2C and B2B e-commerce for Indian businesses. Razorpay + UPI integrated. GST-compliant. From ₹75,000.',
+      'Shopify, WooCommerce, D2C and B2B e-commerce for Indian businesses. Razorpay + UPI integrated. GST-compliant. From ₹59,999.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
@@ -90,7 +90,7 @@ const faqSchema = {
       name: 'How much does e-commerce development cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet's e-commerce development starts at ₹75,000 for a standard Shopify or WooCommerce store — custom-designed, Razorpay and UPI integrated, GST-compliant, and mobile-first. Advanced stores with subscription logic, B2B pricing tiers, or product configurators run ₹1,50,000. Custom-built D2C platforms, multi-vendor marketplaces, and quick-commerce apps start at ₹3,00,000 and are scoped after a free discovery call. All prices are 50–60% lower than comparable Indian digital agencies.",
+        text: "FactoryJet's e-commerce development starts at ₹59,999 for a standard Shopify or WooCommerce store — custom-designed, Razorpay and UPI integrated, GST-compliant, and mobile-first. Advanced stores with subscription logic, B2B pricing tiers, or product configurators run ₹99,999. Custom-built D2C platforms, multi-vendor marketplaces, and quick-commerce apps start at ₹1,99,999 and are scoped after a discovery call. All prices are 50–60% lower than comparable Indian digital agencies.",
       },
     },
     {
@@ -157,12 +157,12 @@ const serviceSchema = {
   },
   serviceType: 'E-Commerce Development',
   description:
-    'Custom e-commerce development for Indian businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and quick-commerce apps. Razorpay & UPI integrated. GST-compliant. Mobile-first, Lighthouse 95+. Starting at ₹75,000.',
+    'Custom e-commerce development for Indian businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and quick-commerce apps. Razorpay & UPI integrated. GST-compliant. Mobile-first, Lighthouse 95+. Starting at ₹59,999.',
   offers: [
     {
       '@type': 'Offer',
       name: 'Shopify / WooCommerce Store',
-      price: '75000',
+      price: '59999',
       priceCurrency: 'INR',
       description:
         'Custom-designed Shopify or WooCommerce store with Razorpay, UPI, GST invoicing, Shiprocket integration, and launch.',
@@ -170,7 +170,7 @@ const serviceSchema = {
     {
       '@type': 'Offer',
       name: 'Advanced E-Commerce Store',
-      price: '150000',
+      price: '99999',
       priceCurrency: 'INR',
       description:
         'E-commerce store with subscription logic, B2B pricing tiers, product configurator, or multi-channel inventory sync.',
@@ -178,7 +178,7 @@ const serviceSchema = {
     {
       '@type': 'Offer',
       name: 'Custom Platform / Marketplace',
-      price: '300000',
+      price: '199999',
       priceCurrency: 'INR',
       description:
         'Custom D2C platform, multi-vendor marketplace, or quick-commerce app with proprietary logic and full code ownership.',
@@ -204,7 +204,7 @@ const IN_ECOMM_SERVICES = [
     description:
       'Custom WooCommerce stores on WordPress with performance-optimised themes, advanced product types (subscriptions, bundles, booking), regional language support, and a CMS your team can manage without a developer.',
     example: 'Best when you need deep content-commerce integration or already run WordPress.',
-    linkLabel: 'Get a free audit',
+    linkLabel: 'Get an Audit',
     linkHref: '/contact',
   },
   {
@@ -327,7 +327,7 @@ const IN_COMPARISON_ROWS = [
   {
     feature: 'Starting price',
     values: [
-      '₹75,000',
+      '₹59,999',
       '₹2,00,000–₹10,00,000',
       '₹50,000–₹1,50,000',
       '₹0 + ₹2,000–₹8,000/month',
@@ -414,7 +414,7 @@ const IN_COMPARISON_ROWS = [
 const IN_PRICING_TIERS = [
   {
     name: 'Starter Store',
-    priceRange: 'From ₹75,000',
+    priceRange: 'From ₹59,999',
     description:
       'A professionally designed Shopify or WooCommerce store — ready to sell on launch day. The right starting point for D2C brands and retailers going online for the first time.',
     features: [
@@ -429,11 +429,11 @@ const IN_PRICING_TIERS = [
       'Google Analytics 4 + Search Console setup',
       'Full code ownership — GitHub transfer on launch',
     ],
-    cta: { label: 'Book a Free Store Audit', modal: true as const, region: 'in' as const },
+    cta: { label: 'Book a Store Audit', modal: true as const, region: 'in' as const },
   },
   {
     name: 'Growth Store',
-    priceRange: 'From ₹1,50,000',
+    priceRange: 'From ₹99,999',
     description:
       'A full-featured store with subscription logic, B2B pricing, a product configurator, or multi-channel inventory sync — for brands with more complex selling models.',
     features: [
@@ -452,7 +452,7 @@ const IN_PRICING_TIERS = [
   },
   {
     name: 'Custom Platform',
-    priceRange: 'From ₹3,00,000',
+    priceRange: 'From ₹1,99,999',
     description:
       'A custom-built D2C platform, multi-vendor marketplace, or quick-commerce app — for businesses where Shopify and WooCommerce hit their ceiling.',
     features: [
@@ -512,7 +512,7 @@ const IN_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does e-commerce development cost in India?',
     answer:
-      "FactoryJet's e-commerce development starts at ₹75,000 for a Shopify or WooCommerce store — custom-designed in Figma, Razorpay and UPI integrated, GST-compliant invoicing, Shiprocket shipping, and a full product catalogue import. Advanced stores with subscription logic, B2B pricing, or product configurators run ₹1,50,000. Custom platforms, multi-vendor marketplaces, and quick-commerce apps start at ₹3,00,000 and are scoped after a free discovery call. All prices are 50–60% lower than comparable Indian digital agencies for the same output quality.",
+      "FactoryJet's e-commerce development starts at ₹59,999 for a Shopify or WooCommerce store — custom-designed in Figma, Razorpay and UPI integrated, GST-compliant invoicing, Shiprocket shipping, and a full product catalogue import. Advanced stores with subscription logic, B2B pricing, or product configurators run ₹99,999. Custom platforms, multi-vendor marketplaces, and quick-commerce apps start at ₹1,99,999 and are scoped after a discovery call. All prices are 50–60% lower than comparable Indian digital agencies for the same output quality.",
   },
   {
     category: 'pricing',
@@ -604,7 +604,7 @@ const IN_FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from an Indian digital agency?',
     answer:
-      'Three things: specialisation (we build e-commerce exclusively — no generic web design projects, no social media management, no SEO retainers), ownership (full codebase delivered to your GitHub on launch day, no lock-in), and honesty (we will tell you when a ₹75,000 Shopify store fits better than a ₹3,00,000 custom build). We have delivered 500+ projects for Indian and global businesses. We know what actually drives Indian e-commerce revenue — and what looks good in an agency proposal but does not move the needle.',
+      'Three things: specialisation (we build e-commerce exclusively — no generic web design projects, no social media management, no SEO retainers), ownership (full codebase delivered to your GitHub on launch day, no lock-in), and honesty (we will tell you when a ₹59,999 Shopify store fits better than a ₹1,99,999 custom build). We have delivered 500+ projects for Indian and global businesses. We know what actually drives Indian e-commerce revenue — and what looks good in an agency proposal but does not move the needle.',
   },
   {
     category: 'trust',
@@ -653,12 +653,12 @@ export default function EcommerceDevelopmentPage() {
         <Hero
           eyebrow="E-COMMERCE DEVELOPMENT · INDIA"
           headline="An Online Store That Sells — On Any Platform, at Any Scale"
-          lead="Most Indian e-commerce stores are built on generic themes and convert below 1%. FactoryJet builds custom Shopify, WooCommerce, D2C, and B2B stores — Razorpay and UPI integrated, GST-compliant, Lighthouse 95+ — from ₹75,000."
-          primaryCta={{ label: 'Book a Free Store Audit', modal: true, region: 'in' }}
+          lead="Most Indian e-commerce stores are built on generic themes and convert below 1%. FactoryJet builds custom Shopify, WooCommerce, D2C, and B2B stores — Razorpay and UPI integrated, GST-compliant, Lighthouse 95+ — from ₹59,999."
+          primaryCta={{ label: 'Book a Store Audit', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',
-            'From ₹75,000',
+            'From ₹59,999',
             'Razorpay + UPI + GST',
           ]}
           rightSlot={
@@ -805,11 +805,11 @@ export default function EcommerceDevelopmentPage() {
               </div>
               <div className="divide-y divide-fj-neutral-100 px-7">
                 {[
-                  { platform: 'Shopify', best: 'DTC brands, subscriptions, fast launch', starting: '₹75,000' },
-                  { platform: 'WooCommerce', best: 'WordPress-first, content-commerce', starting: '₹75,000' },
-                  { platform: 'BigCommerce', best: 'B2B, mid-market, multi-channel', starting: '₹1,50,000' },
-                  { platform: 'Shopify Plus', best: 'Scale, B2B wholesale, custom checkout', starting: '₹3,00,000' },
-                  { platform: 'Headless Next.js', best: 'Performance-critical, custom UX', starting: '₹3,00,000' },
+                  { platform: 'Shopify', best: 'DTC brands, subscriptions, fast launch', starting: '₹59,999' },
+                  { platform: 'WooCommerce', best: 'WordPress-first, content-commerce', starting: '₹59,999' },
+                  { platform: 'BigCommerce', best: 'B2B, mid-market, multi-channel', starting: '₹99,999' },
+                  { platform: 'Shopify Plus', best: 'Scale, B2B wholesale, custom checkout', starting: '₹1,99,999' },
+                  { platform: 'Headless Next.js', best: 'Performance-critical, custom UX', starting: '₹1,99,999' },
                   { platform: 'Multi-Vendor Marketplace', best: 'Platform model, aggregator', starting: '₹5,00,000' },
                 ].map((item) => (
                   <div key={item.platform} className="py-3.5">
@@ -864,7 +864,7 @@ export default function EcommerceDevelopmentPage() {
             },
             {
               icon: '💸',
-              title: 'Indian agencies charge ₹2–10 lakhs for what should cost ₹75,000.',
+              title: 'Indian agencies charge ₹2–10 lakhs for what should cost ₹59,999.',
               body: 'A mid-tier Indian digital agency charges ₹2,00,000–₹10,00,000 for a custom e-commerce build — and delivers a Shopify theme with logo colours changed. FactoryJet delivers a genuinely custom Figma-designed store, properly integrated with Razorpay, Shiprocket, and GST invoicing, at 50–60% less — because our structure is specialised and lean, not overhead-heavy.',
             },
           ]}
@@ -1026,7 +1026,7 @@ export default function EcommerceDevelopmentPage() {
                     <p
                       className="fj-display font-bold"
                       style={{
-                        fontSize: 'clamp(2.25rem, 4vw, 3.25rem)',
+                        fontSize: 'clamp(1.875rem, 3vw, 2.5rem)',
                         lineHeight: 1,
                         letterSpacing: '-0.04em',
                         color: '#F05A28',
@@ -1035,7 +1035,7 @@ export default function EcommerceDevelopmentPage() {
                       {stat.value}
                     </p>
                     <p
-                      className="mt-3 font-fj-body font-semibold text-fj-ink"
+                      className="mt-2 font-fj-body font-semibold text-fj-ink"
                       style={{ fontSize: '0.9375rem', lineHeight: 1.5 }}
                     >
                       {stat.label}
@@ -1125,7 +1125,7 @@ export default function EcommerceDevelopmentPage() {
           headline="FactoryJet vs. Indian Agency vs. Freelancer vs. DIY Platforms"
           lead="Not all e-commerce development options deliver the same output. Here's the honest comparison."
           pullQuote={{
-            stat: '₹75,000',
+            stat: '₹59,999',
             caption:
               'starting price — same Figma design, Razorpay integration, GST compliance, and Lighthouse performance as a ₹5,00,000 Indian agency project.',
           }}
@@ -1149,7 +1149,7 @@ export default function EcommerceDevelopmentPage() {
             headline="Transparent, Fixed-Price E-Commerce Development"
             lead="No hourly billing. No scope creep surprises. Every tier includes a fixed price, fixed scope, and a delivery timeline we stand behind."
             tiers={IN_PRICING_TIERS}
-            footnote="All prices in INR. Platform subscription fees (Shopify, BigCommerce) are billed directly by the platform. Razorpay transaction fees apply per the Razorpay standard rate card. Custom scopes are quoted after a free discovery call. You own all code and credentials on launch day."
+            footnote="All prices in INR. Platform subscription fees (Shopify, BigCommerce) are billed directly by the platform. Razorpay transaction fees apply per the Razorpay standard rate card. Custom scopes are quoted after a discovery call. You own all code and credentials on launch day."
           />
         </div>
 
@@ -1197,9 +1197,9 @@ export default function EcommerceDevelopmentPage() {
           <FinalCTA
             variant="dark"
             eyebrow="READY TO START"
-            headline="Book a Free E-Commerce Audit — No Obligation"
+            headline="Book an E-Commerce Audit — No Obligation"
             sub="In 30 minutes, we will audit your current store or business model, identify what is costing you revenue, recommend the right platform and payment stack, and give you a fixed price. No pitch. No pressure. An honest assessment from engineers who have built e-commerce for 25+ years."
-            primaryCta={{ label: 'Book Your Free Audit', modal: true, region: 'in' }}
+            primaryCta={{ label: 'Book Your Audit', modal: true, region: 'in' }}
             secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
             objectionHandler="Fixed price. Full code ownership. Razorpay + UPI + GST built in. 500+ businesses served."
           />

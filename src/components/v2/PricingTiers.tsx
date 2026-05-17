@@ -311,7 +311,7 @@ function TierCard({ tier }: { tier: PricingTier }) {
         <p
           className="fj-display font-bold mt-6 text-fj-ink"
           style={{
-            fontSize: 'clamp(1.875rem, 3.5vw, 2.75rem)',
+            fontSize: 'clamp(1.625rem, 3vw, 2.25rem)',
             lineHeight: 1.05,
             letterSpacing: '-0.03em',
           }}

@@ -215,7 +215,7 @@ const IN_SHOPIFY_SERVICES = [
     description:
       'Complete store configuration: product catalogue import, collections architecture, Razorpay + UPI payment integration, Shiprocket logistics, GST-compliant invoicing, and a live launch with DNS transfer.',
     example: 'Custom Shopify launch — theme, products, payments, logistics — in 7–14 days.',
-    linkLabel: 'Book a free call',
+    linkLabel: 'Book a Call',
     linkHref: '/contact',
   },
   {
@@ -247,7 +247,7 @@ const IN_SHOPIFY_SERVICES = [
     description:
       'Integrate and theme-configure any Shopify app (reviews, subscriptions, loyalty, upsell, bundles). Add WhatsApp order notifications, abandoned cart recovery, and shipping tracking via Interakt, Wati, or AiSensy.',
     example: 'WhatsApp abandoned cart recovery delivers 3× better open rates than email in India.',
-    linkLabel: 'Get a free assessment',
+    linkLabel: 'Get an Assessment',
     linkHref: '/contact',
   },
 ];
@@ -439,7 +439,7 @@ const IN_SHOPIFY_PRICING_TIERS = [
       'Code delivered to your GitHub on launch',
       '5–7 day delivery from design sign-off',
     ],
-    cta: { label: 'Book a Free Store Audit', modal: true as const, region: 'in' as const },
+    cta: { label: 'Book a Store Audit', modal: true as const, region: 'in' as const },
   },
   {
     name: 'Full Store Build',
@@ -496,7 +496,7 @@ const IN_SHOPIFY_FAQ_ITEMS = [
     category: 'cost',
     question: 'How much does a custom Shopify store cost in India?',
     answer:
-      "FactoryJet's Shopify development starts at ₹50,000 for a custom Liquid theme applied to an existing Shopify store. A full store build — custom theme, products, Razorpay + UPI payment integration, Shiprocket logistics, GST invoicing, WhatsApp notifications, and launch — runs ₹1,00,000. Shopify Plus builds with Checkout Extensibility, B2B wholesale portals, and multi-storefront management start at ₹2,00,000 and are scoped after a free discovery call. All prices are 50–60% lower than comparable Indian digital agencies.",
+      "FactoryJet's Shopify development starts at ₹50,000 for a custom Liquid theme applied to an existing Shopify store. A full store build — custom theme, products, Razorpay + UPI payment integration, Shiprocket logistics, GST invoicing, WhatsApp notifications, and launch — runs ₹1,00,000. Shopify Plus builds with Checkout Extensibility, B2B wholesale portals, and multi-storefront management start at ₹2,00,000 and are scoped after a discovery call. All prices are 50–60% lower than comparable Indian digital agencies.",
   },
   {
     category: 'cost',
@@ -640,7 +640,7 @@ export default function ShopifyDevelopmentPage() {
           eyebrow="SHOPIFY DEVELOPMENT · INDIA"
           headline="A Shopify Store That Sells — Built in 7 Days"
           lead="Generic Shopify themes convert at 0.8% in India. FactoryJet builds custom Shopify stores — designed in Figma, Razorpay and UPI integrated, GST-compliant, Lighthouse 95+ — from ₹50,000. In 7 days."
-          primaryCta={{ label: 'Book a Free Store Audit', modal: true, region: 'in' }}
+          primaryCta={{ label: 'Book a Store Audit', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '120+ Shopify stores launched',
@@ -1183,9 +1183,9 @@ export default function ShopifyDevelopmentPage() {
           <FinalCTA
             variant="dark"
             eyebrow="READY TO BUILD"
-            headline="Book a Free Shopify Audit — We'll Tell You Exactly What to Fix"
+            headline="Book a Shopify Audit — We'll Tell You Exactly What to Fix"
             sub="In 30 minutes, we will audit your current Shopify store or business model, identify what is costing you conversion, recommend the right Shopify plan and payment stack, and give you a fixed price. No pitch. No pressure. An honest assessment from engineers who have built 120+ Shopify stores."
-            primaryCta={{ label: 'Book Your Free Shopify Audit', modal: true, region: 'in' }}
+            primaryCta={{ label: 'Book Your Shopify Audit', modal: true, region: 'in' }}
             secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
             objectionHandler="Fixed price. 7-day delivery. Full code ownership. Razorpay + UPI + GST standard."
           />
