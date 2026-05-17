@@ -182,7 +182,7 @@ const PORTFOLIO_CARDS = [
     title: 'Formative Concepts — MEP & BIM Consulting',
     description:
       'Professional website for a leading MEP and BIM drafting consultancy that works with the world\'s largest construction companies. Designed to project credibility and technical authority to enterprise procurement teams across global markets.',
-    imageSrc: '/images/portfolio/formative-concepts.webp',
+    imageSrc: '/images/portfolio/bombay-petals.webp',
     stat1: 'Enterprise B2B',
     stat2: 'Global reach',
   },
