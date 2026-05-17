@@ -21,6 +21,13 @@ import {
   ArrowRight,
   FileText,
   BookOpen,
+  Cpu,
+  TrendingUp,
+  Megaphone,
+  Mic,
+  GitBranch,
+  Headphones,
+  CalendarClock,
 } from 'lucide-react';
 import { useContactModal } from '../../context/ContactModalContext';
 import type { ModalRegion } from '../../context/ContactModalContext';
@@ -63,18 +70,23 @@ const US_LOCATIONS = [
 // ─── India nav data ───────────────────────────────────────────────────────────
 
 const IN_WEB_SERVICES = [
-  { icon: Globe,        label: 'Web Design',           href: '/services/web-design',            desc: 'Custom, conversion-focused sites' },
-  { icon: ShoppingBag,  label: 'Shopify Development',  href: '/services/shopify-development',   desc: 'Custom storefronts & themes' },
+  { icon: Globe,        label: 'Web Design',          href: '/services/web-design',            desc: 'Custom, conversion-focused sites' },
   { icon: ShoppingCart, label: 'E-Commerce',           href: '/services/ecommerce-development', desc: 'End-to-end online stores' },
-  { icon: Bot,          label: 'AI Agent Development', href: '/services/ai-agent-development',  desc: 'Autonomous AI that works for you' },
+  { icon: ShoppingBag,  label: 'Shopify Development',  href: '/services/shopify-development',   desc: 'Custom storefronts & themes' },
 ] as const;
 
-const IN_AI_SERVICES = [
-  { icon: MessageSquare, label: 'AI Chatbot',         href: '/services/ai-agent-development/ai-chatbot',             desc: 'Smart customer support' },
-  { icon: ShoppingCart,  label: 'AI Sales Agent',     href: '/services/ai-agent-development/ai-sales-agent',         desc: 'AI-powered sales outreach' },
-  { icon: Zap,           label: 'AI Marketing Agent', href: '/services/ai-agent-development/ai-marketing-agent',     desc: 'Automate marketing workflows' },
-  { icon: Layers,        label: 'AI Workflow',        href: '/services/ai-agent-development/ai-workflow-automation', desc: 'End-to-end process flows' },
-  { icon: Bot,           label: 'AI Voice Agent',     href: '/services/ai-agent-development/ai-voice-agent',         desc: 'Voice-based AI assistants' },
+// Hub page href used in both desktop mega and mobile drawer
+const IN_AI_HUB_HREF = '/services/ai-agent-development';
+
+// All 7 India AI agents — used in desktop mega grid + mobile drawer
+const IN_AI_AGENTS = [
+  { icon: MessageSquare, label: 'AI Chatbot',             href: '/services/ai-agent-development/ai-chatbot',             desc: 'Smart 24/7 support' },
+  { icon: TrendingUp,    label: 'AI Sales Agent',         href: '/services/ai-agent-development/ai-sales-agent',         desc: 'Automated outreach' },
+  { icon: Megaphone,     label: 'AI Marketing Agent',     href: '/services/ai-agent-development/ai-marketing-agent',     desc: 'Automate campaigns' },
+  { icon: Mic,           label: 'AI Voice Agent',         href: '/services/ai-agent-development/ai-voice-agent',         desc: 'Voice-based AI calls' },
+  { icon: GitBranch,     label: 'AI Workflow Automation', href: '/services/ai-agent-development/ai-workflow-automation', desc: 'End-to-end automation' },
+  { icon: Headphones,    label: 'AI Customer Support',    href: '/services/ai-agent-development/ai-customer-support',    desc: 'Resolve tickets faster' },
+  { icon: CalendarClock, label: 'AI Scheduling Agent',    href: '/services/ai-agent-development/ai-scheduling-agent',    desc: 'Smart bookings & calendar' },
 ] as const;
 
 const IN_LOCATIONS = [
@@ -136,7 +148,7 @@ const LOCALE_CONFIG = {
   },
   in: {
     webServices:     IN_WEB_SERVICES,
-    aiServices:      IN_AI_SERVICES,
+    aiServices:      IN_AI_AGENTS,
     locations:       IN_LOCATIONS,
     locationsLabel:  'Indian Cities We Serve',
     portfolioHref:   '/portfolio',
@@ -332,72 +344,242 @@ export default function SiteHeader({
                     onMouseLeave={scheduleClosed}
                     role="menu"
                   >
-                    <div className="w-[740px] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
-                      <div className="grid grid-cols-[1fr_1fr_212px]">
+                    {locale === 'in' ? (
 
-                        {/* Web Services column */}
-                        <div className="p-5">
-                          <p className="mb-2.5 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
-                            Web Services
-                          </p>
-                          <div className="space-y-0.5">
-                            {cfg.webServices.map((s) => (
-                              <ServiceCard key={s.href} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
-                            ))}
-                          </div>
-                        </div>
+                      /* ── India mega menu: 3-col hub layout ──────────────── */
+                      <div className="w-[860px] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
+                        <div className="grid grid-cols-[208px_1fr_196px]">
 
-                        {/* AI Services column */}
-                        <div className="border-l border-fj-neutral-100 p-5">
-                          <p className="mb-2.5 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
-                            AI Services
-                          </p>
-                          <div className="space-y-0.5">
-                            {cfg.aiServices.map((s) => (
-                              <ServiceCard key={s.href} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
-                            ))}
+                          {/* Web Services column */}
+                          <div className="p-5">
+                            <p className="mb-2.5 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
+                              Web Services
+                            </p>
+                            <ServiceCard
+                              icon={IN_WEB_SERVICES[0].icon}
+                              label={IN_WEB_SERVICES[0].label}
+                              href={IN_WEB_SERVICES[0].href}
+                              desc={IN_WEB_SERVICES[0].desc}
+                            />
+                            <div className="my-2.5 border-t border-fj-neutral-100" />
+                            <p className="mb-1.5 px-2.5 font-fj-mono text-[9.5px] font-semibold uppercase tracking-[0.12em] text-fj-neutral-300">
+                              E-Commerce
+                            </p>
+                            <ServiceCard
+                              icon={IN_WEB_SERVICES[1].icon}
+                              label={IN_WEB_SERVICES[1].label}
+                              href={IN_WEB_SERVICES[1].href}
+                              desc={IN_WEB_SERVICES[1].desc}
+                            />
+                            <div className="ml-3 mt-0.5 border-l-2 border-[#F05A28]/30 pl-1">
+                              <ServiceCard
+                                icon={IN_WEB_SERVICES[2].icon}
+                                label={IN_WEB_SERVICES[2].label}
+                                href={IN_WEB_SERVICES[2].href}
+                                desc={IN_WEB_SERVICES[2].desc}
+                              />
+                            </div>
                           </div>
-                        </div>
 
-                        {/* Featured panel */}
-                        <div
-                          className="flex flex-col justify-between rounded-r-2xl p-5"
-                          style={{ background: 'linear-gradient(145deg, #F05A28 0%, #c44820 100%)' }}
-                        >
-                          <div>
-                            <p className="mb-2.5 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-white/60">
-                              Why FactoryJet
-                            </p>
-                            <p className="font-fj-display text-[19px] font-semibold leading-tight text-white">
-                              {cfg.featuredHeadline}
-                            </p>
-                            <p className="mt-2 font-fj-body text-[12px] leading-relaxed text-white/75">
-                              {cfg.featuredBody}
-                            </p>
-                            <ul className="mt-4 space-y-2">
-                              {cfg.featuredStats.map((item) => (
-                                <li key={item} className="flex items-center gap-2">
-                                  <span className="flex h-[18px] w-[18px] flex-shrink-0 items-center justify-center rounded-full bg-white/20">
-                                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" aria-hidden="true">
-                                      <path d="M1 3L3 5L7 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                                    </svg>
-                                  </span>
-                                  <span className="font-fj-body text-[11.5px] text-white/85">{item}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                          <Link
-                            href={cfg.featuredCtaHref}
-                            className="mt-5 flex items-center gap-1.5 font-fj-body text-[12.5px] font-semibold text-white/80 transition-colors hover:text-white"
+                          {/* AI Agent Development Hub column */}
+                          <div
+                            className="border-l border-fj-neutral-100 p-5"
+                            style={{
+                              backgroundImage: 'radial-gradient(#E8E4DC 1px, transparent 1px)',
+                              backgroundSize: '18px 18px',
+                              backgroundColor: '#F7F5F0',
+                            }}
                           >
-                            {cfg.featuredCtaLabel}
-                            <ArrowRight size={13} strokeWidth={2} />
-                          </Link>
-                        </div>
+                            <p className="mb-3 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
+                              AI Agent Development
+                            </p>
 
+                            {/* Hub header — links to parent hub page */}
+                            <Link
+                              href={IN_AI_HUB_HREF}
+                              className="group mb-3 flex items-center gap-3 rounded-xl border border-fj-neutral-200 bg-white p-3 transition-all hover:border-[#F05A28] hover:shadow-sm"
+                            >
+                              <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-[#F05A28] text-white">
+                                <Cpu size={17} strokeWidth={1.8} />
+                              </span>
+                              <span className="flex flex-1 flex-col">
+                                <span className="font-fj-mono text-[9.5px] font-semibold uppercase tracking-[0.1em] text-fj-neutral-400">
+                                  Hub Page
+                                </span>
+                                <span className="font-fj-body text-[13.5px] font-semibold text-fj-ink transition-colors group-hover:text-[#F05A28]">
+                                  AI Agent Development
+                                </span>
+                              </span>
+                              <span className="flex flex-col items-end gap-1.5">
+                                <span className="rounded-full bg-[#FEF0EB] px-2 py-0.5 font-fj-mono text-[10px] font-bold text-[#F05A28]">
+                                  7 agents
+                                </span>
+                                <span className="flex items-center gap-1 font-fj-body text-[11px] font-semibold text-[#F05A28]">
+                                  Explore all <ArrowRight size={10} strokeWidth={2.5} />
+                                </span>
+                              </span>
+                            </Link>
+
+                            {/* One-line tagline */}
+                            <p className="mb-3 rounded-lg border border-fj-neutral-200 bg-white px-3 py-2 font-fj-body text-[11.5px] leading-relaxed text-fj-neutral-500">
+                              Autonomous AI agents that handle support, sales, marketing, and ops — so your team focuses on growth.
+                            </p>
+
+                            {/* 2-col agents grid — last agent spans full width */}
+                            <div className="grid grid-cols-2 gap-1.5">
+                              {IN_AI_AGENTS.map((agent, idx) => (
+                                <Link
+                                  key={agent.href}
+                                  href={agent.href}
+                                  className={`group rounded-xl border border-fj-neutral-200 bg-white transition-all hover:border-[#F05A28] hover:shadow-sm ${
+                                    idx === 6
+                                      ? 'col-span-2 flex items-center gap-2.5 px-3 py-2'
+                                      : 'flex flex-col p-2.5'
+                                  }`}
+                                >
+                                  <agent.icon
+                                    size={14}
+                                    strokeWidth={1.8}
+                                    className={`text-[#F05A28] ${idx !== 6 ? 'mb-1.5' : 'flex-shrink-0'}`}
+                                  />
+                                  <span
+                                    className={`font-fj-body font-semibold leading-tight text-fj-ink transition-colors group-hover:text-[#F05A28] ${
+                                      idx !== 6 ? 'text-[12px]' : 'text-[12.5px]'
+                                    }`}
+                                  >
+                                    {agent.label}
+                                  </span>
+                                  {idx !== 6 && (
+                                    <span className="mt-0.5 font-fj-body text-[10.5px] leading-snug text-fj-neutral-400">
+                                      {agent.desc}
+                                    </span>
+                                  )}
+                                  {idx === 6 && (
+                                    <span className="ml-1 font-fj-body text-[10.5px] text-fj-neutral-400">
+                                      — {agent.desc}
+                                    </span>
+                                  )}
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+
+                          {/* Featured panel — dark charcoal for India */}
+                          <div
+                            className="flex flex-col justify-between rounded-r-2xl p-5"
+                            style={{ background: '#0F0F12' }}
+                          >
+                            <div>
+                              <p className="mb-2.5 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-white/40">
+                                Why FactoryJet
+                              </p>
+                              <p className="font-fj-display text-[18px] font-semibold leading-tight text-[#FAFAF7]">
+                                {cfg.featuredHeadline}
+                              </p>
+                              <p className="mt-2 font-fj-body text-[11.5px] leading-relaxed text-white/60">
+                                {cfg.featuredBody}
+                              </p>
+                              <ul className="mt-4 space-y-2">
+                                {cfg.featuredStats.map((item) => (
+                                  <li key={item} className="flex items-center gap-2">
+                                    <span className="flex h-[18px] w-[18px] flex-shrink-0 items-center justify-center rounded-full bg-[#1E1E22] ring-1 ring-[#F05A28]/40">
+                                      <svg width="8" height="6" viewBox="0 0 8 6" fill="none" aria-hidden="true">
+                                        <path d="M1 3L3 5L7 1" stroke="#F05A28" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                      </svg>
+                                    </span>
+                                    <span className="font-fj-body text-[11.5px] text-white/70">{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                            <div className="mt-5">
+                              <span className="mb-2 inline-block rounded-full bg-[#1E1E22] px-2 py-0.5 font-fj-mono text-[9.5px] font-bold tracking-wider text-fj-neutral-400">
+                                INDIA
+                              </span>
+                              <Link
+                                href={cfg.featuredCtaHref}
+                                className="flex items-center gap-1.5 font-fj-body text-[12.5px] font-semibold text-white/70 transition-colors hover:text-white"
+                              >
+                                {cfg.featuredCtaLabel}
+                                <ArrowRight size={13} strokeWidth={2} />
+                              </Link>
+                            </div>
+                          </div>
+
+                        </div>
                       </div>
-                    </div>
+
+                    ) : (
+
+                      /* ── Generic mega menu (US / UAE) ────────────────────── */
+                      <div className="w-[740px] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
+                        <div className="grid grid-cols-[1fr_1fr_212px]">
+
+                          {/* Web Services column */}
+                          <div className="p-5">
+                            <p className="mb-2.5 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
+                              Web Services
+                            </p>
+                            <div className="space-y-0.5">
+                              {cfg.webServices.map((s) => (
+                                <ServiceCard key={s.href} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
+                              ))}
+                            </div>
+                          </div>
+
+                          {/* AI Services column */}
+                          <div className="border-l border-fj-neutral-100 p-5">
+                            <p className="mb-2.5 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
+                              AI Services
+                            </p>
+                            <div className="space-y-0.5">
+                              {cfg.aiServices.map((s) => (
+                                <ServiceCard key={s.href} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
+                              ))}
+                            </div>
+                          </div>
+
+                          {/* Featured panel — orange gradient for US/UAE */}
+                          <div
+                            className="flex flex-col justify-between rounded-r-2xl p-5"
+                            style={{ background: 'linear-gradient(145deg, #F05A28 0%, #c44820 100%)' }}
+                          >
+                            <div>
+                              <p className="mb-2.5 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-white/60">
+                                Why FactoryJet
+                              </p>
+                              <p className="font-fj-display text-[19px] font-semibold leading-tight text-white">
+                                {cfg.featuredHeadline}
+                              </p>
+                              <p className="mt-2 font-fj-body text-[12px] leading-relaxed text-white/75">
+                                {cfg.featuredBody}
+                              </p>
+                              <ul className="mt-4 space-y-2">
+                                {cfg.featuredStats.map((item) => (
+                                  <li key={item} className="flex items-center gap-2">
+                                    <span className="flex h-[18px] w-[18px] flex-shrink-0 items-center justify-center rounded-full bg-white/20">
+                                      <svg width="8" height="6" viewBox="0 0 8 6" fill="none" aria-hidden="true">
+                                        <path d="M1 3L3 5L7 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                      </svg>
+                                    </span>
+                                    <span className="font-fj-body text-[11.5px] text-white/85">{item}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                            <Link
+                              href={cfg.featuredCtaHref}
+                              className="mt-5 flex items-center gap-1.5 font-fj-body text-[12.5px] font-semibold text-white/80 transition-colors hover:text-white"
+                            >
+                              {cfg.featuredCtaLabel}
+                              <ArrowRight size={13} strokeWidth={2} />
+                            </Link>
+                          </div>
+
+                        </div>
+                      </div>
+
+                    )}
                   </div>
                 )}
               </div>
@@ -602,20 +784,33 @@ export default function SiteHeader({
                 <p className="mb-1 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">
                   Web Services
                 </p>
-                {cfg.webServices.map((s) => (
+                {cfg.webServices.map((s, i) => (
                   <Link
                     key={s.href}
                     href={s.href}
                     onClick={() => setMobileOpen(false)}
-                    className="flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]"
+                    className={`flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]${
+                      locale === 'in' && i === 2 ? ' ml-4 border-l-2 border-[#F05A28]/30 pl-2' : ''
+                    }`}
                   >
                     <s.icon size={14} strokeWidth={1.8} className="flex-shrink-0 text-[#F05A28]" />
                     {s.label}
                   </Link>
                 ))}
-                <p className="mb-1 mt-3 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">
-                  AI Services
-                </p>
+                <div className="mb-1 mt-3 flex items-center justify-between px-1">
+                  <p className="font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">
+                    {locale === 'in' ? 'AI Agent Development' : 'AI Services'}
+                  </p>
+                  {locale === 'in' && (
+                    <Link
+                      href={IN_AI_HUB_HREF}
+                      onClick={() => setMobileOpen(false)}
+                      className="font-fj-body text-[11px] font-semibold text-[#F05A28]"
+                    >
+                      View all →
+                    </Link>
+                  )}
+                </div>
                 {cfg.aiServices.map((s) => (
                   <Link
                     key={s.href}
