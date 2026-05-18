@@ -332,7 +332,6 @@ const PRICING_TIERS = [
       'Shipping carrier integration (UPS, USPS, FedEx)',
       'Mobile-first design, Core Web Vitals optimized',
       'WooCommerce SEO — product schema, sitemaps, canonical',
-      'Full code ownership — your hosting, your server',
       '30-day post-launch support',
     ],
     cta: { label: 'Get a Free Quote', modal: true, region: 'us' },

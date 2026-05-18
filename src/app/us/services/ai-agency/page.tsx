@@ -586,7 +586,6 @@ const PRICING_TIERS = [
       'Claude or GPT-4o as the underlying model',
       'QA and prompt tuning included',
       '14-day post-launch support window',
-      'Full codebase and API key ownership on day one',
     ],
     cta: { label: 'Book a Free Strategy Call', modal: true, region: 'us' },
   },

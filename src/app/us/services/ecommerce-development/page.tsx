@@ -442,7 +442,6 @@ const PRICING_TIERS = [
       'Technical SEO: schema, sitemaps, canonical URLs',
       'Google Analytics 4 + Search Console setup',
       'Lighthouse 95+ on delivery',
-      'Full code ownership — GitHub transfer on launch',
     ],
     cta: { label: 'Book a Free Consultation', modal: true, region: 'us' },
   },

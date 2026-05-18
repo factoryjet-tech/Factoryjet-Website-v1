@@ -516,7 +516,6 @@ const PRICING_TIERS = [
       'Workflow monitoring dashboard',
       'Full workflow logic documentation',
       '14-day post-launch support window',
-      'Full code and credential ownership',
     ],
     cta: { label: 'Book a Free Strategy Call', modal: true as const, region: 'us' as const },
   },

@@ -426,7 +426,6 @@ const IN_PRICING_TIERS = [
       'Claude, GPT-4o, or Gemini as the underlying model',
       'QA, prompt tuning, and guardrail setup included',
       '14-day post-launch support window',
-      'Full code and API key ownership',
     ],
     cta: { label: 'Book a Strategy Call', modal: true as const, region: 'in' as const },
   },

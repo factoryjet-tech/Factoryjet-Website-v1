@@ -479,7 +479,6 @@ const IN_PRICING_TIERS = [
       'Technical SEO: meta tags, schema, sitemap, robots.txt',
       'Contact form + WhatsApp button integration',
       '2 rounds of design revisions',
-      'Full code ownership — transferred to your GitHub on launch',
       '7-day delivery from design sign-off',
     ],
     cta: { label: 'Book a Free Audit', modal: true as const, region: 'in' as const },

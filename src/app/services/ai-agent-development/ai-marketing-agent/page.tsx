@@ -406,7 +406,6 @@ const MARKETING_PRICING_TIERS = [
       'Instagram + Facebook post scheduling',
       'Monthly performance report',
       '3 months post-launch support',
-      'Full code ownership — no ongoing FactoryJet fee',
     ],
     cta: { label: 'Book a Free Strategy Call', modal: true as const, region: 'in' as const },
   },

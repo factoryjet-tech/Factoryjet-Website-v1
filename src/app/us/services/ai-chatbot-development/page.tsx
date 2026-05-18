@@ -516,7 +516,6 @@ const PRICING_TIERS = [
       'Admin panel to review conversations',
       'Live handoff to your email or Slack',
       '14-day post-launch support window',
-      'Full code and conversation data ownership',
     ],
     cta: { label: 'Book a Free Strategy Call', modal: true as const, region: 'us' as const },
   },

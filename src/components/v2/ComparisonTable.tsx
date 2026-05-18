@@ -115,7 +115,11 @@ export default function ComparisonTable({
                 <div className="mb-5 h-[3px] w-10 rounded-full bg-[#F05A28]" aria-hidden="true" />
                 <p
                   className="font-fj-display fj-display font-bold text-[#F05A28] leading-none tracking-[-0.02em]"
-                  style={{ fontSize: 'clamp(3rem,6vw,5rem)' }}
+                  style={{
+                    fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
+                    overflowWrap: 'anywhere',
+                    wordBreak: 'break-word',
+                  }}
                 >
                   {pullQuote.stat}
                 </p>

@@ -427,7 +427,6 @@ const IN_PRICING_TIERS = [
       'WhatsApp order notifications via Interakt or Wati',
       'Technical SEO: schema markup, sitemaps, meta tags',
       'Google Analytics 4 + Search Console setup',
-      'Full code ownership — GitHub transfer on launch',
     ],
     cta: { label: 'Book a Store Audit', modal: true as const, region: 'in' as const },
   },
