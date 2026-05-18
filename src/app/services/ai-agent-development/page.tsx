@@ -428,7 +428,7 @@ const IN_PRICING_TIERS = [
       '14-day post-launch support window',
       'Full code and API key ownership',
     ],
-    cta: { label: 'Book a Free Strategy Call', modal: true as const, region: 'in' as const },
+    cta: { label: 'Book a Strategy Call', modal: true as const, region: 'in' as const },
   },
   {
     name: 'Growth AI Platform',
@@ -721,7 +721,261 @@ export default function AIAgentDevelopmentINPage() {
           headline="500+ businesses. 25 years of building. One goal: your results."
         />
 
-        {/* ── 4. WHAT IS AN AI AGENT (LIGHT) ───────────────────────────────── */}
+        {/* ── 4. AI AGENT SERVICES GRID (WARM BLOOM BENTO) ────────────────── */}
+        <section
+          className="relative overflow-hidden py-10 md:py-14"
+          style={{ background: 'radial-gradient(ellipse 55% 50% at 85% 15%, rgba(240,90,40,0.07) 0%, transparent 70%) #FAFAF7' }}
+        >
+          {/* secondary bloom — bottom-left */}
+          <div
+            className="pointer-events-none absolute bottom-0 left-1/4 h-52 w-52 rounded-full"
+            style={{ background: 'radial-gradient(circle, rgba(240,90,40,0.04) 0%, transparent 70%)' }}
+            aria-hidden="true"
+          />
+          <div className="relative z-10 mx-auto max-w-[1120px] px-6 md:px-8">
+            {/* Section header */}
+            <p
+              className="font-fj-mono font-medium uppercase"
+              style={{ fontSize: '10px', letterSpacing: '0.13em', color: '#F05A28' }}
+            >
+              Our AI Agent Services
+            </p>
+            <h2
+              className="mt-1.5 font-fj-display font-bold text-fj-ink"
+              style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', lineHeight: 1.15, letterSpacing: '-0.025em' }}
+            >
+              Seven AI agents, one partner
+            </h2>
+            <p
+              className="mb-8 mt-2 font-fj-body text-fj-neutral-500"
+              style={{ fontSize: '0.9375rem', lineHeight: 1.6, maxWidth: '540px' }}
+            >
+              Pick the agent built for your workflow — or let us recommend the right stack for your business.
+            </p>
+
+            {/* Bento grid */}
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+              {/* ── FEATURED CARD: Workflow Automation ── col-span-2 */}
+              <div
+                className="group relative col-span-1 sm:col-span-2 flex flex-col overflow-hidden rounded-2xl p-6 transition-transform duration-200 hover:-translate-y-1"
+                style={{
+                  background: 'linear-gradient(140deg, #FEF3EE 0%, #FFF9F7 50%, #FFFFFF 100%)',
+                  border: '0.5px solid rgba(240,90,40,0.22)',
+                  boxShadow: '0 1px 3px rgba(0,0,0,0.04), 0 8px 24px rgba(240,90,40,0.08)',
+                }}
+              >
+                {/* top-cap accent */}
+                <div
+                  className="pointer-events-none absolute inset-x-0 top-0 h-[3px] rounded-t-2xl"
+                  style={{ background: 'linear-gradient(90deg, #F05A28 0%, rgba(240,90,40,0.3) 100%)' }}
+                  aria-hidden="true"
+                />
+                <div className="flex flex-1 gap-5">
+                  {/* Left panel */}
+                  <div className="flex flex-1 flex-col">
+                    {/* Icon + pill */}
+                    <div className="mb-3 flex items-start gap-3">
+                      <div
+                        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl"
+                        style={{ background: 'rgba(240,90,40,0.12)', border: '1px solid rgba(240,90,40,0.22)' }}
+                      >
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F05A28" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                          <path d="M12 3v4M4.22 6.22l2.83 2.83M3 12h4M4.22 17.78l2.83-2.83M12 21v-4M19.78 17.78l-2.83-2.83M21 12h-4M19.78 6.22l-2.83 2.83"/>
+                          <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                      </div>
+                      <span
+                        className="mt-1 font-fj-mono font-medium uppercase"
+                        style={{ fontSize: '9px', letterSpacing: '0.12em', background: 'rgba(240,90,40,0.10)', color: '#C04010', border: '0.5px solid rgba(240,90,40,0.22)', borderRadius: '999px', padding: '2px 8px' }}
+                      >
+                        Most Popular
+                      </span>
+                    </div>
+                    <h3
+                      className="font-fj-display font-bold text-fj-ink"
+                      style={{ fontSize: '1.0625rem', lineHeight: 1.2, letterSpacing: '-0.015em' }}
+                    >
+                      Workflow Automation Agent
+                    </h3>
+                    <p
+                      className="mt-1.5 font-fj-body text-fj-neutral-500"
+                      style={{ fontSize: '0.875rem', lineHeight: 1.6 }}
+                    >
+                      Eliminate repetitive hand-offs between your apps. Trigger actions across Zoho, WhatsApp, Razorpay, and Tally — automatically.
+                    </p>
+                    <a
+                      href="/services/ai-agent-development/ai-workflow-automation"
+                      className="mt-4 font-fj-body font-semibold hover:underline"
+                      style={{ fontSize: '0.8125rem', color: '#F05A28' }}
+                    >
+                      Explore Workflow Automation →
+                    </a>
+                  </div>
+
+                  {/* Right panel — flow diagram (hidden on mobile) */}
+                  <div
+                    className="hidden sm:flex shrink-0 flex-col items-center justify-center gap-1 rounded-xl px-3 py-4"
+                    style={{ minWidth: '118px', borderLeft: '0.5px solid rgba(240,90,40,0.18)', background: 'rgba(240,90,40,0.03)' }}
+                  >
+                    {/* Step 1 */}
+                    <div
+                      className="w-full rounded-lg px-2 py-1.5 text-center"
+                      style={{ background: 'rgba(240,90,40,0.06)', border: '0.5px solid rgba(240,90,40,0.15)' }}
+                    >
+                      <p className="font-fj-mono" style={{ fontSize: '8px', letterSpacing: '0.08em', color: '#6B7280' }}>INPUT</p>
+                      <p className="font-fj-body font-semibold text-fj-ink" style={{ fontSize: '9px', marginTop: '1px' }}>Shopify Order</p>
+                    </div>
+                    {/* Arrow */}
+                    <svg width="12" height="14" viewBox="0 0 12 14" fill="none" aria-hidden="true">
+                      <line x1="6" y1="0" x2="6" y2="10" stroke="rgba(240,90,40,0.4)" strokeWidth="1.2"/>
+                      <path d="M2 8l4 5 4-5" stroke="rgba(240,90,40,0.4)" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                    </svg>
+                    {/* Step 2 — highlighted */}
+                    <div
+                      className="w-full rounded-lg px-2 py-1.5 text-center"
+                      style={{ background: '#F05A28', border: '0.5px solid #D04820' }}
+                    >
+                      <p className="font-fj-body font-bold text-white" style={{ fontSize: '9px' }}>⚡ AI Agent</p>
+                    </div>
+                    {/* Arrow */}
+                    <svg width="12" height="14" viewBox="0 0 12 14" fill="none" aria-hidden="true">
+                      <line x1="6" y1="0" x2="6" y2="10" stroke="rgba(240,90,40,0.4)" strokeWidth="1.2"/>
+                      <path d="M2 8l4 5 4-5" stroke="rgba(240,90,40,0.4)" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                    </svg>
+                    {/* Step 3 */}
+                    <div
+                      className="w-full rounded-lg px-2 py-1.5 text-center"
+                      style={{ background: 'rgba(240,90,40,0.06)', border: '0.5px solid rgba(240,90,40,0.15)' }}
+                    >
+                      <p className="font-fj-mono" style={{ fontSize: '8px', letterSpacing: '0.08em', color: '#6B7280' }}>OUTPUT</p>
+                      <p className="font-fj-body font-semibold text-fj-ink" style={{ fontSize: '9px', marginTop: '1px' }}>CRM + Slack</p>
+                    </div>
+                    {/* Footer label */}
+                    <p className="mt-1 font-fj-mono" style={{ fontSize: '7px', letterSpacing: '0.06em', color: 'rgba(240,90,40,0.55)', textAlign: 'center' }}>auto · no human step</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* ── REGULAR CARDS (6) ── */}
+              {[
+                {
+                  idx: '01',
+                  title: 'AI Chatbot',
+                  desc: 'Instant answers for your website visitors, 24/7.',
+                  href: '/services/ai-agent-development/ai-chatbot',
+                  icon: (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F05A28" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                    </svg>
+                  ),
+                },
+                {
+                  idx: '02',
+                  title: 'Customer Support Agent',
+                  desc: 'Resolve tickets, escalate issues, and close the loop automatically.',
+                  href: '/services/ai-agent-development/ai-customer-support',
+                  icon: (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F05A28" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.88a16 16 0 0 0 6.32 6.32l.98-.93a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                  ),
+                },
+                {
+                  idx: '03',
+                  title: 'Marketing Agent',
+                  desc: 'Draft campaigns, schedule posts, and track performance on autopilot.',
+                  href: '/services/ai-agent-development/ai-marketing-agent',
+                  icon: (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F05A28" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                    </svg>
+                  ),
+                },
+                {
+                  idx: '04',
+                  title: 'Sales Agent',
+                  desc: 'Qualify leads, follow up, and move deals forward without lifting a finger.',
+                  href: '/services/ai-agent-development/ai-sales-agent',
+                  icon: (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F05A28" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                    </svg>
+                  ),
+                },
+                {
+                  idx: '05',
+                  title: 'Scheduling Agent',
+                  desc: 'Book appointments, send reminders, and manage calendars hands-free.',
+                  href: '/services/ai-agent-development/ai-scheduling-agent',
+                  icon: (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F05A28" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+                    </svg>
+                  ),
+                },
+                {
+                  idx: '06',
+                  title: 'Voice Agent',
+                  desc: 'Handle inbound calls, collect information, and route to the right team.',
+                  href: '/services/ai-agent-development/ai-voice-agent',
+                  icon: (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F05A28" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/>
+                    </svg>
+                  ),
+                },
+              ].map(({ idx, title, desc, href, icon }) => (
+                <div
+                  key={idx}
+                  className="group relative flex flex-col overflow-hidden rounded-2xl p-5 transition-transform duration-200 hover:-translate-y-1"
+                  style={{
+                    background: '#FFFFFF',
+                    border: '0.5px solid rgba(0,0,0,0.07)',
+                    boxShadow: '0 1px 2px rgba(0,0,0,0.03), 0 4px 12px rgba(0,0,0,0.04)',
+                  }}
+                >
+                  {/* mono index */}
+                  <span
+                    className="pointer-events-none absolute right-4 top-3 font-fj-mono font-bold"
+                    style={{ fontSize: '9px', letterSpacing: '0.08em', color: 'rgba(240,90,40,0.38)' }}
+                    aria-hidden="true"
+                  >
+                    {idx}
+                  </span>
+                  {/* icon circle */}
+                  <div
+                    className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg"
+                    style={{ background: 'rgba(240,90,40,0.09)' }}
+                  >
+                    {icon}
+                  </div>
+                  <h3
+                    className="font-fj-display font-bold text-fj-ink"
+                    style={{ fontSize: '0.9375rem', lineHeight: 1.25, letterSpacing: '-0.01em' }}
+                  >
+                    {title}
+                  </h3>
+                  <p
+                    className="mt-1 flex-1 font-fj-body text-fj-neutral-500"
+                    style={{ fontSize: '0.8125rem', lineHeight: 1.6 }}
+                  >
+                    {desc}
+                  </p>
+                  <a
+                    href={href}
+                    className="mt-3 font-fj-body font-semibold hover:underline"
+                    style={{ fontSize: '0.8125rem', color: '#F05A28' }}
+                  >
+                    Explore →
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 5. WHAT IS AN AI AGENT (LIGHT) ───────────────────────────────── */}
         <ServiceExplanation
           eyebrow="AI EXPLAINED"
           headline="What Is an AI Agent, and Why Does Your Business Need One?"
@@ -967,39 +1221,52 @@ export default function AIAgentDevelopmentINPage() {
                   className="font-fj-mono font-medium uppercase text-fj-neutral-400"
                   style={{ fontSize: '11px', letterSpacing: '0.14em' }}
                 >
-                  Six AI Agent Types We Build
+                  Seven AI Agent Services
                 </p>
               </div>
               <div className="divide-y divide-fj-neutral-100">
                 {[
                   {
-                    name: 'WhatsApp Support AI',
-                    desc: '24/7 support on Interakt/Wati. Handles queries, order status, returns, escalates to humans.',
+                    name: 'AI Chatbot',
+                    desc: 'Instant answers for your website visitors, 24/7 — no human required.',
+                    href: '/services/ai-agent-development/ai-chatbot',
                   },
                   {
-                    name: 'Sales & Lead Qualification AI',
-                    desc: 'Qualifies inbound WhatsApp/Instagram leads, sends catalogues, books demos to Zoho CRM.',
+                    name: 'Customer Support Agent',
+                    desc: 'Resolve tickets, escalate issues, and close the loop automatically on WhatsApp and web.',
+                    href: '/services/ai-agent-development/ai-customer-support',
                   },
                   {
-                    name: 'Operations & Invoice AI',
-                    desc: 'GST invoice processing, PO extraction, Tally sync — eliminates manual data entry.',
+                    name: 'Marketing Agent',
+                    desc: 'Draft campaigns, schedule posts, and track performance on autopilot.',
+                    href: '/services/ai-agent-development/ai-marketing-agent',
                   },
                   {
-                    name: 'Data & Reporting AI',
-                    desc: 'Pulls weekly metrics from CRM/ERP, writes plain-language summaries, sends to WhatsApp/Slack.',
+                    name: 'Sales Agent',
+                    desc: 'Qualify leads, follow up, and move deals forward without lifting a finger.',
+                    href: '/services/ai-agent-development/ai-sales-agent',
                   },
                   {
-                    name: 'Voice AI (IVR)',
-                    desc: 'Exotel-based agents handle inbound calls, qualify callers, book appointments, transfer live.',
+                    name: 'Scheduling Agent',
+                    desc: 'Book appointments, send reminders, and manage calendars hands-free.',
+                    href: '/services/ai-agent-development/ai-scheduling-agent',
                   },
                   {
-                    name: 'Document Processing AI',
-                    desc: 'Reads PDFs, extracts KYC/invoice data, classifies documents, routes for approval.',
+                    name: 'Voice Agent',
+                    desc: 'Handle inbound calls, collect information, and route to the right team.',
+                    href: '/services/ai-agent-development/ai-voice-agent',
+                  },
+                  {
+                    name: 'Workflow Automation Agent',
+                    desc: 'Trigger actions across Zoho, Razorpay, Tally, and Slack — automatically.',
+                    href: '/services/ai-agent-development/ai-workflow-automation',
                   },
                 ].map((item) => (
                   <div key={item.name} className="px-7 py-4">
-                    <p className="font-fj-body font-semibold text-fj-ink" style={{ fontSize: '0.9rem' }}>{item.name}</p>
-                    <p className="mt-0.5 font-fj-body text-fj-neutral-500" style={{ fontSize: '0.8125rem', lineHeight: 1.55 }}>{item.desc}</p>
+                    <a href={item.href} className="group/link">
+                      <p className="font-fj-body font-semibold text-fj-ink group-hover/link:text-[#F05A28] transition-colors" style={{ fontSize: '0.9rem' }}>{item.name}</p>
+                      <p className="mt-0.5 font-fj-body text-fj-neutral-500" style={{ fontSize: '0.8125rem', lineHeight: 1.55 }}>{item.desc}</p>
+                    </a>
                   </div>
                 ))}
               </div>
@@ -1089,24 +1356,14 @@ export default function AIAgentDevelopmentINPage() {
                 </p>
               </div>
               <div className="mt-5 flex flex-wrap gap-2">
-                {[
-                  { label: 'Mumbai', slug: 'mumbai' },
-                  { label: 'Delhi', slug: 'delhi' },
-                  { label: 'Bangalore', slug: 'bangalore' },
-                  { label: 'Hyderabad', slug: 'hyderabad' },
-                  { label: 'Chennai', slug: 'chennai' },
-                  { label: 'Pune', slug: 'pune' },
-                  { label: 'Ahmedabad', slug: 'ahmedabad' },
-                  { label: 'Kolkata', slug: 'kolkata' },
-                ].map(({ label, slug }) => (
-                  <a
-                    key={slug}
-                    href={`/services/ai-agent-development/${slug}`}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#F05A28] hover:bg-[rgba(240,90,40,0.15)] transition-colors"
+                {['Mumbai', 'Delhi', 'Bangalore', 'Hyderabad', 'Chennai', 'Pune', 'Ahmedabad', 'Kolkata'].map((city) => (
+                  <span
+                    key={city}
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#F05A28]"
                     style={{ fontSize: '10px', letterSpacing: '0.08em' }}
                   >
-                    {label}
-                  </a>
+                    {city}
+                  </span>
                 ))}
               </div>
             </>
@@ -1163,31 +1420,7 @@ export default function AIAgentDevelopmentINPage() {
           items={IN_FAQ_ITEMS}
         />
 
-        {/* ── 15. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
-        <StrategicDarkSection
-          eyebrow="WHY FACTORYJET"
-          headline="25 years building for businesses your size — now with AI"
-          lead="We have been inside 500+ Indian and global businesses. We know what a 15-person operation actually looks like. That context changes how we design AI agents — not just technically, but operationally."
-          pillars={[
-            {
-              icon: '🇮🇳',
-              title: 'We build for your stack, not a demo environment',
-              body: "We integrate with Zoho, Razorpay, Tally, Shiprocket, and WhatsApp because that's what Indian businesses actually use — not the tools that look good in a pitch deck. Your AI agent works with your existing systems on day one.",
-            },
-            {
-              icon: '📐',
-              title: 'Fixed price. You own everything.',
-              body: 'No hourly billing, no lock-in, no vendor-owned model. Fixed-price contracts, full code ownership, all API keys in your hands at delivery. After handover, you can self-manage or continue on a retainer — your choice, not ours.',
-            },
-            {
-              icon: '🏗️',
-              title: 'SMB depth that enterprise IT firms cannot replicate',
-              body: "Large IT firms build for enterprise. We've spent 25 years building for founders and operators running 10–100 person businesses. We understand your operational reality and design agents that fit your team, your budget, and your workflow — not a generic enterprise template.",
-            },
-          ]}
-        />
-
-        {/* ── 16. FINAL CTA (DARK) ─────────────────────────────────────────── */}
+        {/* ── 15. FINAL CTA (DARK) ─────────────────────────────────────────── */}
         <div id="final-cta">
           <FinalCTA
             variant="dark"
