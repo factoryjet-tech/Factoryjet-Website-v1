@@ -23,7 +23,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 font-sans selection:bg-jetBlue selection:text-white">
+    <div className="min-h-screen bg-[#FAFAF7] font-sans selection:bg-[#F05A28] selection:text-white">
 
       {/* Header Section */}
       <header className="pt-8 pb-6 md:pt-16 md:pb-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -32,7 +32,7 @@ const App: React.FC = () => {
             The FactoryJet Journal
           </p>
           <h1 className="font-display font-bold text-3xl md:text-5xl lg:text-6xl text-gray-900 mb-4 md:mb-6 leading-tight">
-            Insights for the <span className="text-jetBlue">Modern Manufacturer</span>
+            Insights for the <span className="text-[#F05A28]">Modern Manufacturer</span>
           </h1>
           <p className="text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-2xl">
             Strategies, trends, and success stories to help you scale your manufacturing business in the digital age.
@@ -55,7 +55,7 @@ const App: React.FC = () => {
               <p className="text-gray-500 text-lg">No articles found in this category.</p>
               <button 
                 onClick={() => setActiveCategory('All')}
-                className="mt-4 text-jetBlue font-medium hover:underline"
+                className="mt-4 text-[#F05A28] font-medium hover:underline"
               >
                 View all articles
               </button>
@@ -75,7 +75,7 @@ const App: React.FC = () => {
           </div>
 
           {/* Newsletter Section */}
-          <div className="mt-12 md:mt-20 bg-[#0052CC] rounded-2xl md:rounded-3xl p-6 md:p-12 text-center md:text-left relative overflow-hidden">
+          <div className="mt-12 md:mt-20 bg-[#0F0F12] rounded-2xl md:rounded-3xl p-6 md:p-12 text-center md:text-left relative overflow-hidden">
              {/* Abstract Shapes */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -mr-32 -mt-32 blur-3xl"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-jetOrange opacity-10 rounded-full -ml-32 -mb-32 blur-3xl"></div>
@@ -85,7 +85,7 @@ const App: React.FC = () => {
                 <h2 className="font-display font-bold text-2xl md:text-3xl text-white mb-3 md:mb-4">
                   Join 10,000+ Factory Owners
                 </h2>
-                <p className="text-blue-100 text-sm md:text-lg">
+                <p className="text-white/90 text-sm md:text-lg">
                   Get the latest manufacturing insights delivered straight to your inbox. No spam, ever.
                 </p>
               </div>
@@ -100,7 +100,7 @@ const App: React.FC = () => {
                     Subscribe
                   </button>
                 </div>
-                <p className="text-blue-200 text-xs mt-3 text-center sm:text-left">
+                <p className="text-white/70 text-xs mt-3 text-center sm:text-left">
                   We care about your data in our privacy policy.
                 </p>
               </div>

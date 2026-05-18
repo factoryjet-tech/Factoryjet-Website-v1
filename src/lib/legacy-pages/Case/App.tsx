@@ -27,7 +27,7 @@ const App: React.FC = () => {
   }, [selectedCategory]);
 
   return (
-    <div className="min-h-screen bg-[#F9FAFB] flex flex-col font-sans">
+    <div className="min-h-screen bg-[#FAFAF7] flex flex-col font-sans">
       
       <main className="flex-grow pt-8 md:pt-12 pb-12 md:pb-24">
         {/* Hero Section */}
@@ -39,7 +39,7 @@ const App: React.FC = () => {
           >
             <h1 className="font-display text-3xl md:text-4xl lg:text-6xl font-bold text-slate-900 mb-4 md:mb-6 tracking-tight">
               Work that drives <br className="hidden md:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+              <span className="text-[#F05A28]">
                 exponential growth
               </span>
             </h1>
@@ -81,7 +81,7 @@ const App: React.FC = () => {
                <p className="text-slate-500 text-lg">No case studies found for this category.</p>
                <button 
                  onClick={() => setSelectedCategory('All')}
-                 className="mt-4 text-primary font-medium hover:underline"
+                 className="mt-4 text-[#F05A28] font-medium hover:underline"
                >
                  View all projects
                </button>
@@ -93,7 +93,7 @@ const App: React.FC = () => {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 md:mt-32">
           <div className="bg-slate-900 rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-16 text-center relative overflow-hidden">
             {/* Background Accents */}
-            <div className="absolute top-0 left-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute top-0 left-0 w-64 h-64 bg-[#F05A28]/20 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2"></div>
             <div className="absolute bottom-0 right-0 w-64 h-64 bg-secondary/20 rounded-full blur-[100px] translate-x-1/2 translate-y-1/2"></div>
             
             <div className="relative z-10">

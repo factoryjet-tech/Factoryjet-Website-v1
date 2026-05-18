@@ -35,7 +35,7 @@ export const CategoryFilter: React.FC<CategoryFilterProps> = ({ activeCategory, 
                 className={`
                   px-3 md:px-4 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-medium transition-all duration-300 whitespace-nowrap
                   ${activeCategory === cat
-                    ? 'bg-jetBlue text-white shadow-lg shadow-blue-500/20'
+                    ? 'bg-[#F05A28] text-white shadow-lg shadow-orange-500/20'
                     : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'}
                 `}
               >
@@ -47,12 +47,12 @@ export const CategoryFilter: React.FC<CategoryFilterProps> = ({ activeCategory, 
           {/* Search Bar */}
           <div className="relative hidden md:block group">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <Search className="h-3.5 w-3.5 md:h-4 md:w-4 text-gray-400 group-focus-within:text-jetBlue transition-colors" />
+              <Search className="h-3.5 w-3.5 md:h-4 md:w-4 text-gray-400 group-focus-within:text-[#F05A28] transition-colors" />
             </div>
             <input
               type="text"
               placeholder="Search articles..."
-              className="pl-9 md:pl-10 pr-3 md:pr-4 py-1.5 md:py-2 w-56 md:w-64 bg-gray-50 border border-gray-200 rounded-full text-xs md:text-sm focus:outline-none focus:ring-2 focus:ring-jetBlue/20 focus:border-jetBlue transition-all"
+              className="pl-9 md:pl-10 pr-3 md:pr-4 py-1.5 md:py-2 w-56 md:w-64 bg-gray-50 border border-gray-200 rounded-full text-xs md:text-sm focus:outline-none focus:ring-2 focus:ring-[#F05A28]/20 focus:border-[#F05A28] transition-all"
             />
           </div>
 

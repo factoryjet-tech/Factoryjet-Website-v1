@@ -25,7 +25,7 @@ export const FilterTabs: React.FC<FilterTabsProps> = ({ selected, onSelect }) =>
               {isSelected && (
                 <motion.div
                   layoutId="activeTab"
-                  className="absolute inset-0 bg-primary rounded-full -z-10"
+                  className="absolute inset-0 bg-[#F05A28] rounded-full -z-10"
                   transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                 />
               )}

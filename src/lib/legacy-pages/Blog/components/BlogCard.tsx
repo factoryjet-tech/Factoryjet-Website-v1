@@ -49,7 +49,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post, index, onClick }) => {
       `}>
         <div>
           <div className="flex items-center gap-2 mb-2 md:mb-3">
-            <span className="px-2 md:px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-50 text-jetBlue">
+            <span className="px-2 md:px-2.5 py-0.5 rounded-full text-xs font-semibold bg-[#FFF3EE] text-[#F05A28]">
               {post.category}
             </span>
             <span className="flex items-center text-xs text-gray-400">
@@ -58,7 +58,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post, index, onClick }) => {
             </span>
           </div>
 
-          <h3 className="font-display font-bold text-gray-900 group-hover:text-jetBlue transition-colors duration-300 text-base md:text-lg lg:text-xl mb-2">
+          <h3 className="font-display font-bold text-gray-900 group-hover:text-[#F05A28] transition-colors duration-300 text-base md:text-lg lg:text-xl mb-2">
             {post.title}
           </h3>
 

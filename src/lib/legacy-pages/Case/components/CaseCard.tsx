@@ -62,7 +62,7 @@ export const CaseCard: React.FC<CaseCardProps> = ({ data, onClick }) => {
       className="group relative w-full mb-4 md:mb-8 cursor-pointer perspective-1000"
     >
       <div
-        className="bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-sm border border-slate-100 group-hover:shadow-[0_20px_50px_-12px_rgba(0,82,204,0.15)] transition-shadow duration-300 h-full flex flex-col"
+        className="bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-sm border border-slate-100 group-hover:shadow-[0_20px_50px_-12px_rgba(240,90,40,0.15)] transition-shadow duration-300 h-full flex flex-col"
         style={{ transform: "translateZ(0)" }}
       >
         {/* Image Container */}
@@ -102,7 +102,7 @@ export const CaseCard: React.FC<CaseCardProps> = ({ data, onClick }) => {
         <div className="p-4 md:p-6 flex flex-col flex-grow">
           <div className="flex justify-between items-start mb-3 md:mb-4">
             <div>
-              <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-1 group-hover:text-primary transition-colors">
+              <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-1 group-hover:text-[#F05A28] transition-colors">
                 {data.client}
               </h3>
               <p className="text-slate-500 text-xs md:text-sm line-clamp-2 leading-relaxed">
@@ -121,7 +121,7 @@ export const CaseCard: React.FC<CaseCardProps> = ({ data, onClick }) => {
                 <div className={`flex items-center gap-1 md:gap-2 px-2 md:px-3 py-1 md:py-1.5 rounded-lg border w-fit ${
                   primaryMetric.trend === 'up'
                     ? 'bg-emerald-50 border-emerald-100 text-emerald-700'
-                    : 'bg-blue-50 border-blue-100 text-blue-700'
+                    : 'bg-[#FFF3EE] border-[#F05A28]/20 text-[#C94818]'
                 }`}>
                   {primaryMetric.trend === 'up' ? <TrendingUp size={14} className="md:w-4 md:h-4" /> : <TrendingDown size={14} className="md:w-4 md:h-4" />}
                   <span className="font-mono font-bold text-base md:text-lg tracking-tight">
@@ -131,7 +131,7 @@ export const CaseCard: React.FC<CaseCardProps> = ({ data, onClick }) => {
               </div>
 
               <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-[-10px] group-hover:translate-x-0 hidden md:block">
-                <div className="text-primary font-medium text-sm flex items-center gap-1">
+                <div className="text-[#F05A28] font-medium text-sm flex items-center gap-1">
                   View <ChevronRight size={16} />
                 </div>
               </div>

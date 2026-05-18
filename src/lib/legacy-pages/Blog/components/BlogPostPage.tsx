@@ -29,15 +29,15 @@ interface BlogPostPageProps {
 }
 
 const KeyTakeaways = ({ items }: { items: string[] }) => (
-  <div className="bg-blue-50/50 border-l-4 border-jetBlue p-4 md:p-6 my-6 md:my-8 rounded-r-xl">
+  <div className="bg-[#FFF3EE]/50 border-l-4 border-[#F05A28] p-4 md:p-6 my-6 md:my-8 rounded-r-xl">
     <div className="flex items-center gap-2 mb-3 md:mb-4">
-      <Lightbulb className="w-4 h-4 md:w-5 md:h-5 text-jetBlue fill-current" />
+      <Lightbulb className="w-4 h-4 md:w-5 md:h-5 text-[#F05A28] fill-current" />
       <h3 className="font-display font-bold text-base md:text-lg text-gray-900">Key Takeaways</h3>
     </div>
     <ul className="space-y-2 md:space-y-3">
       {items.map((item, idx) => (
         <li key={idx} className="flex items-start gap-2 md:gap-3 text-gray-700 text-sm md:text-base">
-          <span className="flex-shrink-0 w-5 h-5 md:w-6 md:h-6 rounded-full bg-blue-100 text-jetBlue text-xs font-bold flex items-center justify-center mt-0.5">
+          <span className="flex-shrink-0 w-5 h-5 md:w-6 md:h-6 rounded-full bg-[#FFF3EE] text-[#F05A28] text-xs font-bold flex items-center justify-center mt-0.5">
             {idx + 1}
           </span>
           <span>{item}</span>
@@ -62,11 +62,11 @@ const FAQAccordion = ({ faqs }: { faqs: FAQItem[] }) => {
                 onClick={() => setOpenIndex(isOpen ? null : idx)}
                 className="w-full flex items-center justify-between p-4 md:p-5 text-left hover:bg-gray-50 transition-colors"
               >
-                <span className={`font-semibold text-sm md:text-base text-gray-900 ${isOpen ? 'text-jetBlue' : ''}`}>
+                <span className={`font-semibold text-sm md:text-base text-gray-900 ${isOpen ? 'text-[#F05A28]' : ''}`}>
                   {faq.q}
                 </span>
                 {isOpen ? (
-                  <ChevronUp className="w-4 h-4 md:w-5 md:h-5 text-jetBlue flex-shrink-0 ml-2" />
+                  <ChevronUp className="w-4 h-4 md:w-5 md:h-5 text-[#F05A28] flex-shrink-0 ml-2" />
                 ) : (
                   <ChevronDown className="w-4 h-4 md:w-5 md:h-5 text-gray-400 flex-shrink-0 ml-2" />
                 )}
@@ -116,7 +116,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
   const imageUrl = imageError ? '/blog_placeholder.jpeg' : post.imageUrl;
 
   return (
-    <div className="min-h-screen bg-slate-50 relative">
+    <div className="min-h-screen bg-[#FAFAF7] relative">
       <ReadingProgress />
       <StickyCallToAction />
 
@@ -125,7 +125,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 md:h-16 flex items-center justify-between">
           <Link
             href="/blog"
-            className="flex items-center text-gray-600 hover:text-jetBlue transition-colors group"
+            className="flex items-center text-gray-600 hover:text-[#F05A28] transition-colors group"
           >
             <ArrowLeft className="w-4 h-4 md:w-5 md:h-5 mr-1.5 md:mr-2 group-hover:-translate-x-1 transition-transform" />
             <span className="font-medium text-sm md:text-base">Back to Articles</span>
@@ -134,10 +134,10 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
           <div className="hidden sm:flex items-center gap-3 md:gap-4">
              <span className="text-xs md:text-sm text-gray-500">Share:</span>
              <div className="flex gap-1 md:gap-2">
-               <button className="p-1.5 md:p-2 text-gray-400 hover:text-jetBlue hover:bg-blue-50 rounded-full transition-all">
+               <button className="p-1.5 md:p-2 text-gray-400 hover:text-[#F05A28] hover:bg-[#FFF3EE] rounded-full transition-all">
                  <Twitter className="w-3.5 h-3.5 md:w-4 md:h-4" />
                </button>
-               <button className="p-1.5 md:p-2 text-gray-400 hover:text-jetBlue hover:bg-blue-50 rounded-full transition-all">
+               <button className="p-1.5 md:p-2 text-gray-400 hover:text-[#F05A28] hover:bg-[#FFF3EE] rounded-full transition-all">
                  <Linkedin className="w-3.5 h-3.5 md:w-4 md:h-4" />
                </button>
              </div>
@@ -149,7 +149,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
       <header className="bg-white border-b border-gray-100 pt-8 pb-10 md:pt-16 md:pb-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-4 md:mb-6">
-            <span className="px-2.5 md:px-3 py-0.5 md:py-1 rounded-full text-xs font-bold tracking-wide uppercase bg-blue-50 text-jetBlue">
+            <span className="px-2.5 md:px-3 py-0.5 md:py-1 rounded-full text-xs font-bold tracking-wide uppercase bg-[#FFF3EE] text-[#F05A28]">
               {post.category}
             </span>
             <span className="flex items-center text-xs md:text-sm text-gray-500">
@@ -179,18 +179,18 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
               >
                 <div className="relative">
                   <img
-                    src={authorProfile?.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(post.author)}&background=0052CC&color=fff`}
+                    src={authorProfile?.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(post.author)}&background=F05A28&color=fff`}
                     alt={`${post.author} - Author`}
                     width={48}
                     height={48}
                     loading="lazy"
                     decoding="async"
-                    className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-white shadow-[0_0_30px_-5px_rgba(0,82,204,0.3)]"
+                    className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-white shadow-[0_0_30px_-5px_rgba(240,90,40,0.3)]"
                   />
                   <div className="absolute bottom-0 right-0 w-2.5 h-2.5 md:w-3 md:h-3 bg-green-500 border-2 border-white rounded-full" aria-hidden="true"></div>
                 </div>
                 <div className="text-left">
-                  <p className="font-semibold text-gray-900 text-sm md:text-lg leading-tight group-hover/author:text-jetBlue transition-colors">{post.author}</p>
+                  <p className="font-semibold text-gray-900 text-sm md:text-lg leading-tight group-hover/author:text-[#F05A28] transition-colors">{post.author}</p>
                   <p className="text-xs md:text-sm text-gray-500">{authorProfile?.jobTitle || 'Senior Tech Journalist'}</p>
                 </div>
               </Link>
@@ -243,7 +243,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
               )}
 
               {/* Main Content Body */}
-              <div id="content" className="prose prose-slate prose-sm md:prose-base lg:prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-gray-900 prose-a:text-jetBlue prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-img:shadow-lg prose-p:leading-relaxed prose-li:text-gray-700">
+              <div id="content" className="prose prose-slate prose-sm md:prose-base lg:prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-gray-900 prose-a:text-[#F05A28] prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-img:shadow-lg prose-p:leading-relaxed prose-li:text-gray-700">
                 {post.content}
               </div>
 
@@ -255,7 +255,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
                 const authorProfile = getAuthorByName(post.author);
                 if (!authorProfile) return null;
                 return (
-                  <div className="mt-12 md:mt-16 bg-gradient-to-br from-slate-50 to-blue-50/30 rounded-xl md:rounded-2xl p-5 md:p-8 border border-gray-100" id="author">
+                  <div className="mt-12 md:mt-16 bg-gradient-to-br from-[#FAFAF7] to-[#FFF3EE]/30 rounded-xl md:rounded-2xl p-5 md:p-8 border border-gray-100" id="author">
                     <div className="flex items-start gap-4 md:gap-5">
                       <Link href={`/author/${authorProfile.slug}`} className="flex-shrink-0">
                         <img
@@ -271,11 +271,11 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
                           <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">Written by</span>
                         </div>
                         <Link href={`/author/${authorProfile.slug}`} className="group/name">
-                          <h4 className="font-display font-bold text-lg md:text-xl text-gray-900 group-hover/name:text-jetBlue transition-colors">
+                          <h4 className="font-display font-bold text-lg md:text-xl text-gray-900 group-hover/name:text-[#F05A28] transition-colors">
                             {authorProfile.name}
                           </h4>
                         </Link>
-                        <p className="text-jetBlue text-xs md:text-sm font-semibold mb-2">
+                        <p className="text-[#F05A28] text-xs md:text-sm font-semibold mb-2">
                           {authorProfile.jobTitle}
                         </p>
                         <p className="text-gray-600 text-xs md:text-sm leading-relaxed mb-3">
@@ -284,7 +284,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
                         <div className="flex flex-wrap items-center gap-2">
                           <Link
                             href={`/author/${authorProfile.slug}`}
-                            className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-jetBlue text-white text-xs font-semibold hover:bg-blue-700 transition-colors"
+                            className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-[#F05A28] text-white text-xs font-semibold hover:bg-[#C94818] transition-colors"
                           >
                             View Profile <ArrowUpRight className="w-3 h-3" />
                           </Link>
@@ -316,12 +316,12 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
             <div className="lg:sticky lg:top-24 space-y-6 md:space-y-8">
               
               {/* 1. High Converting CTA */}
-              <div className="backdrop-blur-md bg-white border border-blue-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-xl md:rounded-2xl p-5 md:p-6 relative overflow-hidden group hover:shadow-xl transition-all duration-300">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+              <div className="backdrop-blur-md bg-white border border-[#F05A28]/15 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-xl md:rounded-2xl p-5 md:p-6 relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#F05A28]/10 rounded-full -mr-16 -mt-16 blur-2xl"></div>
                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-orange-500/10 rounded-full -ml-12 -mb-12 blur-2xl"></div>
 
                 <div className="relative z-10">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-jetBlue to-blue-600 rounded-lg md:rounded-xl flex items-center justify-center text-white mb-3 md:mb-4 shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-[#F05A28] to-[#C94818] rounded-lg md:rounded-xl flex items-center justify-center text-white mb-3 md:mb-4 shadow-lg shadow-[#F05A28]/30 group-hover:scale-110 transition-transform duration-300">
                     <Rocket className="w-5 h-5 md:w-6 md:h-6" />
                   </div>
                   <h3 className="font-display font-bold text-lg md:text-xl text-gray-900 mb-2">
@@ -331,8 +331,8 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
                     Don't just read about growth. Get a high-performance, lead-generating website in just 7 days.
                   </p>
 
-                  <Link href="/contact" className="w-full bg-[#0052CC] hover:bg-blue-700 text-white font-semibold py-3 md:py-3.5 rounded-lg md:rounded-xl transition-all duration-300 shadow-lg shadow-blue-900/20 flex items-center justify-center gap-2 group/btn text-sm md:text-base">
-                    Book Free Consultation
+                  <Link href="/contact" className="w-full bg-[#F05A28] hover:bg-[#C94818] text-white font-semibold py-3 md:py-3.5 rounded-lg md:rounded-xl transition-all duration-300 shadow-lg shadow-[#F05A28]/20 flex items-center justify-center gap-2 group/btn text-sm md:text-base">
+                    Book a Consultation
                     <ArrowLeft className="w-3.5 h-3.5 md:w-4 md:h-4 rotate-180 group-hover/btn:translate-x-1 transition-transform" />
                   </Link>
                   <p className="text-center text-xs text-gray-400 mt-3">No commitment required. Limited slots.</p>
@@ -353,7 +353,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
                 <button
                   aria-label="Share this article"
                   onClick={handleShare}
-                  className="p-2 md:p-3 bg-gray-50 rounded-full hover:bg-blue-50 hover:text-jetBlue transition-colors cursor-pointer"
+                  className="p-2 md:p-3 bg-gray-50 rounded-full hover:bg-[#FFF3EE] hover:text-[#F05A28] transition-colors cursor-pointer"
                 >
                   <Share2 className="w-4 h-4 md:w-5 md:h-5" aria-hidden="true" />
                 </button>
@@ -363,7 +363,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Share on Twitter"
-                  className="p-2 md:p-3 bg-gray-50 rounded-full hover:bg-blue-50 hover:text-jetBlue transition-colors cursor-pointer"
+                  className="p-2 md:p-3 bg-gray-50 rounded-full hover:bg-[#FFF3EE] hover:text-[#F05A28] transition-colors cursor-pointer"
                 >
                   <Twitter className="w-4 h-4 md:w-5 md:h-5" aria-hidden="true" />
                 </a>
@@ -372,7 +372,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Share on LinkedIn"
-                  className="p-2 md:p-3 bg-gray-50 rounded-full hover:bg-blue-50 hover:text-jetBlue transition-colors cursor-pointer"
+                  className="p-2 md:p-3 bg-gray-50 rounded-full hover:bg-[#FFF3EE] hover:text-[#F05A28] transition-colors cursor-pointer"
                 >
                   <Linkedin className="w-4 h-4 md:w-5 md:h-5" aria-hidden="true" />
                 </a>
