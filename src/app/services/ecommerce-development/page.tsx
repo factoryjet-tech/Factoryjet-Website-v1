@@ -1167,31 +1167,7 @@ export default function EcommerceDevelopmentPage() {
           items={IN_FAQ_ITEMS}
         />
 
-        {/* ── 15. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
-        <StrategicDarkSection
-          eyebrow="WHY FACTORYJET"
-          headline="We've built e-commerce since 1999. We know what actually moves revenue in India."
-          lead="FactoryJet has delivered 500+ projects for Indian and global businesses across every e-commerce platform. We know which decisions move the needle on Indian conversion rates — and which ones just look good in an agency proposal."
-          pillars={[
-            {
-              icon: '📐',
-              title: 'Platform-agnostic. We recommend what fits — not what we prefer.',
-              body: 'Most agencies have a platform they push regardless of your situation — either because they have a reseller margin or because it is all they know. We build on Shopify, WooCommerce, BigCommerce, and custom Next.js. We make the recommendation based on your catalogue size, your team\'s technical comfort, and your revenue stage — not our partnership incentives.',
-            },
-            {
-              icon: '🇮🇳',
-              title: 'Built for Indian consumers — UPI, WhatsApp, GST, and 4G networks.',
-              body: 'Razorpay Turbo for one-tap UPI checkout. WhatsApp abandoned cart recovery (3× better than email for Indian consumers). GST-compliant auto-invoicing at order placement. WebP images delivered via Cloudflare CDN for fast 4G load times. Hindi and regional language support. Every store is built around how Indian consumers actually shop — not adapted from a US or European template.',
-            },
-            {
-              icon: '🔒',
-              title: 'Your code, your hosting, your GitHub — on launch day.',
-              body: 'The full codebase lands in your GitHub repository on the day you go live. No proprietary builder holding your store hostage. No FactoryJet retainer required to keep your store running. No agency dependency baked into your architecture. We have seen too many Indian businesses trapped in agency-hosted setups with no exit route — we do not build those.',
-            },
-          ]}
-        />
-
-        {/* ── 16. FINAL CTA ─────────────────────────────────────────────────── */}
+        {/* ── 15. FINAL CTA ─────────────────────────────────────────────────── */}
         <div id="final-cta">
           <FinalCTA
             variant="dark"
