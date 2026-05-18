@@ -321,8 +321,8 @@ const DATA_AMC: PricingTier[] = [
   {
     name: "ESSENTIAL",
     tagline: "Insurance",
-    price: "₹11,999",
-    period: "/Year",
+    price: "₹3,499",
+    period: "/Month",
     isHero: false,
     features: [
       {
@@ -341,8 +341,8 @@ const DATA_AMC: PricingTier[] = [
   {
     name: "GROWTH",
     tagline: "Protection",
-    price: "₹35,999",
-    period: "/Year",
+    price: "₹7,999",
+    period: "/Month",
     isHero: true,
     features: [
       {
@@ -392,8 +392,8 @@ const DATA_AMC: PricingTier[] = [
   {
     name: "VIP",
     tagline: "Partner",
-    price: "₹99,999",
-    period: "/Year",
+    price: "₹19,999",
+    period: "/Month",
     isHero: false,
     features: [
       {
