@@ -75,6 +75,6 @@
 /services/web-design/pune                /web-design/pune                301
 /services/web-design/surat               /web-design/surat               301
 
-# Old: /services/ecommerce-development/[city]  →  New: /ecommerce-development/[city]
-/services/ecommerce-development          /ecommerce-development          301
-/services/ecommerce-development/mumbai   /ecommerce-development/mumbai   301
+# NOTE: /ecommerce-development URL migration was reverted 2026-05-18.
+# /services/ecommerce-development is the canonical India ecommerce hub (page.tsx exists).
+# No redirect needed — page serves directly.

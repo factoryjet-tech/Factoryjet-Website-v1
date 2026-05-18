@@ -18,7 +18,7 @@ const SITE_URL = 'https://factoryjet.com'
  * Google's 50K-URL-per-file cap is respected as long as no single section
  * exceeds that limit.
  */
-const SECTIONS = ['pages', 'uk', 'us', 'uae', 'blog'] as const
+const SECTIONS = ['pages', 'india', 'uk', 'us', 'uae', 'blog'] as const
 
 export async function GET() {
   const buildTime = new Date().toISOString()
