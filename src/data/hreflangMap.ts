@@ -368,6 +368,21 @@ export const usCityAIAlternates = {
 // NEW YORK SUB-PAGES (US only)
 // ===========================================================================
 
+// ===========================================================================
+// INDIA ECOMMERCE CITY PAGES (en-IN)
+// ===========================================================================
+
+export const ecommerceCityAlternatesIN: Record<string, { 'en-IN': string; 'x-default': string }> = {
+  'mumbai': {
+    'en-IN': 'https://factoryjet.com/services/ecommerce-development/mumbai',
+    'x-default': 'https://factoryjet.com/services/ecommerce-development/mumbai',
+  },
+} as const
+
+// ===========================================================================
+// NEW YORK SUB-PAGES (US only)
+// ===========================================================================
+
 export const newYorkSubPageAlternates = {
   faq: {
     'en-US': 'https://factoryjet.com/us/services/web-design/new-york/faq',
