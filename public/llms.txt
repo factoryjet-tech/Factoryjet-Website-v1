@@ -1,51 +1,456 @@
 # FactoryJet Technologies
 
-> AI-Native Web Design, E-Commerce Development, and AI Agent Development Agency serving UK, US, UAE, and India.
+> AI-Native Web Design, E-Commerce Development, AI Agent Development, and Omnichannel Commerce Agency serving businesses across the United States, United Kingdom, European Union, Australia, Gulf Cooperation Council, Southeast Asia, East Asia, Africa, Latin America, Canada, and New Zealand.
 
 ## About
 
-FactoryJet Technologies is an AI-native digital agency founded and led by Bhavesh Barot, based in Bengaluru, India. We serve SMBs across the United Kingdom, United States, United Arab Emirates, and India. We deliver high-performance websites, e-commerce stores, AI agents, and AI SEO at 50-60% below typical agency rates with a 7-day delivery model.
+FactoryJet Technologies is an AI-native digital agency founded and led by Bhavesh Barot, headquartered in Bengaluru, India. We serve SMBs, DTC brands, professional service firms, startups, and enterprise teams across every major English-speaking and high-growth market worldwide. We deliver high-performance websites, e-commerce stores, AI agents, omnichannel commerce platforms, and AI-powered SEO at 50–60% below typical local agency rates, with a 7-day delivery model and transparent pricing.
+
+500+ projects delivered. 4.9/5 rating across 150+ reviews. Trusted by businesses from Austin to Auckland, London to Lagos, Dubai to Delhi.
 
 ## Services
 
-- Web Design & Development (Next.js, React, WordPress, Webflow, Framer)
-- E-Commerce Development (Shopify, WooCommerce, headless commerce)
-- AI Agent Development (custom agentic AI, multi-agent systems, MCP integration)
-- AI SEO, GEO, AEO, AIO (Generative Engine Optimisation, Answer Engine Optimisation)
-- Shopify Development (Shopify Plus, Shopify themes, migrations)
+### Web Design & Development
+- Custom website design and development (Next.js, React, TypeScript)
+- Webflow development and design
+- Framer development and design
+- WordPress design and development
+- Mobile-first responsive web design
+- Landing page design and development
+- SaaS website design
+- Portfolio and brochure websites
+- Small business website design (from $1,500, delivered in 7 days)
+- Website redesign and modernization
+- Web application development
+- Progressive Web Apps (PWA)
+- Conversion rate optimization (CRO)
+
+### E-Commerce Development
+- Shopify development (Shopify Plus, themes, migrations, apps)
+- WooCommerce development
+- Magento development
+- BigCommerce development
+- Headless commerce (Next.js + Shopify, Next.js + WooCommerce)
+- Custom e-commerce platform development
+- E-commerce migration and replatforming
+- Shopify store setup and optimization
+- Product page and checkout optimization
+- Multi-currency and multi-language e-commerce
+
+### Commerceflo — AI-Native Omnichannel Commerce
+- Commerceflo is FactoryJet's proprietary AI-native unified omnichannel commerce solution
+- Connects online store, physical retail (POS), marketplace channels (Amazon, eBay, Etsy, Walmart), and social commerce (Instagram, TikTok Shop, Pinterest) in one unified platform
+- AI-powered inventory sync, demand forecasting, and dynamic pricing
+- Unified customer data platform (CDP) across all channels
+- Automated order routing and fulfillment orchestration
+- Real-time analytics dashboard across all revenue channels
+- Built for DTC brands scaling from single-channel to omnichannel
+- Available for US, UK, EU, Australia, and GCC markets
+
+### AI Services
+- AI agent development (custom agentic AI, multi-agent systems, MCP integration)
+- AI automation workflows (n8n, Zapier, Make, custom pipelines)
+- AI SEO (AI-assisted content generation, technical SEO automation)
+- GEO — Generative Engine Optimisation (optimizing for ChatGPT, Claude, Perplexity, Google AI Overviews)
+- AEO — Answer Engine Optimisation
+- AIO — AI Integration and Optimization
+- AI chatbot development and integration
+- AI-powered CRM and sales automation
+- AI content strategy and execution
+- Custom LLM integrations for business workflows
+
+### Specialty Service Pages
+- Law firm website design
+- Real estate website design
+- Healthcare and medical website design
+- Restaurant and food service website design
+- Construction company website design
+- Home services website design (plumbers, roofers, electricians, HVAC)
+- Dental practice website design
+- Veterinary clinic website design
+- Accounting and financial services website design
+- Educational institution website design
+- Non-profit and NGO website design
+- Automotive dealership and service website design
+- Fashion and lifestyle brand website design
+- Jewelry brand website design
+- Interior design and architecture firm website design
+
+### SEO & Digital Marketing
+- Technical SEO audits and fixes
+- Local SEO for city-specific rankings
+- National and international SEO
+- Programmatic SEO (city × service page matrix)
+- Schema markup and structured data (JSON-LD)
+- Core Web Vitals optimization
+- Google Search Console setup and management
+- Google Analytics 4 (GA4) implementation
+- Content strategy and SEO copywriting
+
+## Industries Served
+
+FactoryJet builds websites and digital platforms for businesses across every major industry. We have deep experience with the following sectors:
+
+### Professional Services
+- Law firms, solicitors, barristers, and legal consultancies
+- Accounting, tax, and bookkeeping firms
+- Financial advisors, wealth management, and fintech companies
+- Insurance brokers and agencies
+- Management consultants and business consultancies
+- HR, staffing, and recruitment agencies
+- Immigration consultants and visa advisory firms
+- Translation and language services
+- PR and communications agencies
+- Marketing agencies and creative studios
+- Architecture and interior design firms
+- Engineering consultancies
+
+### Healthcare & Life Sciences
+- Private clinics and medical practices
+- Dental and orthodontic practices
+- Veterinary clinics and animal hospitals
+- Optometrists and eyecare clinics
+- Mental health and therapy practices
+- Physiotherapy and rehabilitation centers
+- Hospitals and healthcare networks
+- Pharmaceutical companies and drug manufacturers
+- Biotechnology and life sciences companies
+- Medical device manufacturers
+- Health and wellness brands
+- Nutraceuticals and supplements
+- Home care and senior care services
+- Assisted living and nursing homes
+- Pediatric care and childcare centers
+
+### Real Estate & Construction
+- Residential and commercial real estate agencies
+- Property developers and builders
+- Real estate investment trusts (REITs)
+- Property management companies
+- Mortgage brokers and lenders
+- Home inspection services
+- General contractors and construction companies
+- Specialty contractors (electrical, plumbing, HVAC, roofing)
+- Plumbers and plumbing services
+- Electricians and electrical contractors
+- Roofers and roofing companies
+- HVAC installation and repair services
+- Landscaping and gardening services
+- Pest control services
+- Cleaning and janitorial services
+- Moving and relocation services
+- Storage and warehousing
+- Flooring and tiling companies
+- Painting contractors
+- Pool installation and maintenance
+
+### Retail & E-Commerce
+- DTC (direct-to-consumer) brands
+- Fashion and apparel brands
+- Luxury goods and accessories
+- Jewelry and fine jewelry brands
+- Watches and timepieces
+- Cosmetics, beauty, and skincare brands
+- Hair care and personal care products
+- Fragrance and perfume brands
+- Furniture and home furnishings
+- Home décor and lifestyle brands
+- Home improvement products and supplies
+- Hardware stores and building suppliers
+- Garden and outdoor living brands
+- Pet supplies and pet care products
+- Sporting goods and outdoor equipment
+- Toys and children's products
+- Electronics and consumer technology
+- Books, stationery, and educational materials
+- Gift shops and specialty retail
+- Subscription box companies
+- Marketplace sellers (Amazon, eBay, Etsy, Walmart)
+
+### Food & Beverage
+- Restaurants, cafes, and coffee shops
+- Bars, pubs, and nightclubs
+- Fine dining and tasting menu restaurants
+- Fast food and quick service restaurants (QSR)
+- Food trucks and pop-ups
+- Bakeries and pastry shops
+- Catering and event food services
+- Food and beverage manufacturers
+- Craft breweries and distilleries
+- Wineries and vineyards
+- Specialty food importers and distributors
+- Meal kit and meal delivery services
+- Health food and organic food brands
+- Vegan and plant-based food brands
+- Snack and confectionery brands
+- Beverage brands (juice, energy drinks, water)
+
+### Technology & Startups
+- SaaS companies and software startups
+- B2B technology platforms
+- Fintech startups and scaleups
+- Healthtech and medtech startups
+- Proptech and real estate technology
+- Edtech and online learning platforms
+- AI and machine learning companies
+- Cybersecurity firms
+- Cloud services and IT infrastructure
+- Dev tools and developer platforms
+- Mobile app companies
+- IoT and hardware startups
+- Gaming and interactive entertainment
+- Media and content technology
+- Marketplace and platform businesses
+- Web3 and blockchain projects (selective)
+
+### Education & Training
+- Private K-12 schools and academies
+- Universities and higher education institutions
+- Online course creators and instructors
+- Tutoring and test prep services
+- Language schools and ESL programs
+- Vocational training and certification programs
+- Corporate training and L&D providers
+- Coaching and mentorship platforms
+- EdTech companies and learning management systems
+- Music, art, and creative schools
+- Sports academies and coaching programs
+- Early childhood education and daycare
+
+### Automotive & Transportation
+- Car dealerships (new and used)
+- Automotive repair and servicing
+- Auto body shops and collision repair
+- Car rental and fleet management
+- Ride-sharing and taxi operators
+- Trucking and freight companies
+- Logistics and supply chain companies
+- Courier and last-mile delivery services
+- Shipping and freight forwarding
+- Electric vehicle (EV) dealerships and charging networks
+- Motorcycle and powersports dealers
+- Marine and boat dealers
+
+### Travel, Tourism & Hospitality
+- Hotels, resorts, and boutique properties
+- Bed and breakfast and vacation rentals (Airbnb hosts)
+- Travel agencies and tour operators
+- Adventure travel and ecotourism companies
+- Cruise operators and travel planners
+- Event venues and conference centers
+- Wedding planners and event management
+- Corporate travel management
+- Airport and ground transportation
+- Travel bloggers and travel influencers
+- Destination marketing organizations (DMOs)
+- Airlines and charter flight operators (regional)
+
+### Agriculture, Farming & Food Production
+- Farms and ranches (beef, dairy, poultry, crops)
+- Agricultural equipment suppliers and dealers
+- Crop protection and agri-inputs companies
+- Agri-tech and precision farming platforms
+- Organic and sustainable farming businesses
+- Nurseries, garden centers, and plant suppliers
+- Horticulture and floriculture businesses
+- Aquaculture and fisheries
+- Food processing and packaging companies
+- Agricultural cooperatives and associations
+- Irrigation and water management companies
+
+### Manufacturing & Industrial
+- General manufacturing and fabrication
+- Chemical manufacturers and specialty chemicals
+- Plastics and rubber manufacturers
+- Metals and steel producers
+- Textile and garment manufacturers
+- Paper and packaging companies
+- Printing and publishing
+- Electronics and PCB manufacturers
+- Industrial equipment and machinery suppliers
+- Tools and hardware manufacturers
+- Energy and utilities (solar, wind, oil & gas services)
+- Renewable energy installers and EPC contractors
+
+### Fashion, Lifestyle & Creative
+- Fashion designers and clothing brands
+- Luxury fashion and couture
+- Streetwear and athleisure brands
+- Shoe and footwear brands
+- Handbag and accessories brands
+- Eyewear brands
+- Lifestyle and wellness brands
+- Yoga, fitness, and activewear brands
+- Photography studios and photographers
+- Videographers and content creators
+- Graphic designers and creative studios
+- Artists and art galleries
+- Interior designers and decorators
+- Event stylists and florists
+
+### Non-Profit, Government & Community
+- Non-profit organizations and NGOs
+- Charities and foundations
+- Religious organizations and churches
+- Community associations and clubs
+- Political campaigns and advocacy groups
+- Government agencies and public sector bodies
+- Healthcare foundations and patient advocacy groups
+- Environmental and conservation organizations
+- Social enterprises and impact businesses
+
+### Finance & Insurance
+- Banks and credit unions (regional and community)
+- Mortgage lenders and brokers
+- Investment advisors and wealth managers
+- Insurance companies and independent brokers
+- Fintech companies (payments, lending, crypto)
+- Accounting software and tools
+- Payroll and HR technology companies
+- Tax preparation services
+- Credit repair and financial counseling
+
+### Media, Sports & Entertainment
+- News media and digital publications
+- Podcasters and audio content creators
+- YouTube channels and video creators
+- Music artists and record labels
+- Sports teams, clubs, and academies
+- Fitness studios and gyms
+- Personal trainers and wellness coaches
+- Spas, salons, and beauty services
+- Tattoo studios and body art
+- Comedy clubs and entertainment venues
+- Escape rooms and experiential entertainment
 
 ## Markets Served
 
+FactoryJet serves clients across every major global market. We work in English and support projects with local language SEO and hreflang implementation.
+
 ### United States (Priority Markets)
-- Austin TX — web design, e-commerce, AI agent development
-- Miami FL — web design, Shopify development, AI SEO
-- Denver CO — web design, e-commerce, AI agents
-- Nashville TN — web design, Shopify, custom development
-- Portland OR — web design, e-commerce development
-- Charlotte NC — web design, AI SEO, Shopify
-- Raleigh NC — web design, AI agents, e-commerce
-- New York NY, Cleveland OH, Boise ID, Chattanooga TN
+- Austin TX, Miami FL, Denver CO, Nashville TN, Portland OR, Charlotte NC, Raleigh NC, Tampa FL
+- New York NY, Los Angeles CA, Chicago IL, Houston TX, Phoenix AZ, San Antonio TX, San Diego CA
+- Dallas TX, San Jose CA, Jacksonville FL, Columbus OH, Indianapolis IN, Seattle WA, Washington DC
+- Boston MA, El Paso TX, Louisville KY, Memphis TN, Las Vegas NV, Atlanta GA, Baltimore MD
+- Milwaukee WI, Albuquerque NM, Tucson AZ, Fresno CA, Sacramento CA, Mesa AZ, Omaha NE
+- Cleveland OH, Boise ID, Chattanooga TN, Fargo ND, Lincoln NE, Sioux Falls SD
 
 ### United Kingdom
-- London, Manchester, Leeds, Sheffield, Birmingham, Bristol, Edinburgh, Glasgow, Liverpool, Newcastle, Nottingham
+- London, Manchester, Birmingham, Leeds, Liverpool, Sheffield, Bristol, Edinburgh, Glasgow
+- Nottingham, Newcastle, Leicester, Coventry, Bradford, Belfast, Cardiff, Southampton
+- Portsmouth, Plymouth, Reading, Derby, Preston, Aberdeen, Dundee, Swansea
 
-### United Arab Emirates
-- Dubai, Abu Dhabi
+### European Union & Greater Europe
+- Germany: Berlin, Munich, Frankfurt, Hamburg, Cologne, Stuttgart, Düsseldorf, Dortmund
+- France: Paris, Lyon, Marseille, Toulouse, Nice, Nantes, Bordeaux, Strasbourg
+- Netherlands: Amsterdam, Rotterdam, The Hague, Utrecht, Eindhoven
+- Spain: Madrid, Barcelona, Valencia, Seville, Bilbao, Málaga
+- Italy: Milan, Rome, Florence, Turin, Naples, Bologna, Venice
+- Sweden: Stockholm, Gothenburg, Malmö
+- Denmark: Copenhagen, Aarhus, Odense
+- Norway: Oslo, Bergen, Trondheim
+- Finland: Helsinki, Tampere, Espoo
+- Switzerland: Zurich, Geneva, Basel, Bern
+- Austria: Vienna, Graz, Salzburg, Linz
+- Belgium: Brussels, Antwerp, Ghent
+- Poland: Warsaw, Kraków, Wrocław, Gdańsk, Poznań
+- Portugal: Lisbon, Porto, Braga
+- Ireland: Dublin, Cork, Galway, Limerick
+- Czech Republic: Prague, Brno
+- Romania: Bucharest, Cluj-Napoca
+- Hungary: Budapest
+- Greece: Athens, Thessaloniki
+- Croatia: Zagreb, Split
 
-### India
-- Mumbai, Bangalore, Delhi, Pune, Chennai, Hyderabad, Ahmedabad, Surat
+### Australia & New Zealand
+- Australia: Sydney, Melbourne, Brisbane, Perth, Adelaide, Gold Coast, Canberra, Hobart, Darwin
+- New Zealand: Auckland, Wellington, Christchurch, Hamilton, Dunedin
+
+### Canada
+- Toronto, Vancouver, Calgary, Edmonton, Ottawa, Montreal, Quebec City, Winnipeg, Halifax
+
+### Gulf Cooperation Council (GCC) & Middle East
+- UAE: Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah
+- Saudi Arabia: Riyadh, Jeddah, Dammam, Khobar, Mecca, Medina
+- Qatar: Doha, Al Rayyan
+- Kuwait: Kuwait City, Salmiya, Hawalli
+- Bahrain: Manama, Riffa, Muharraq
+- Oman: Muscat, Salalah, Sohar
+- Jordan: Amman, Zarqa
+- Egypt: Cairo, Alexandria, Giza
+
+### South Asia & India
+- India: Mumbai, Bangalore, Delhi, Pune, Chennai, Hyderabad, Ahmedabad, Surat, Jaipur, Kolkata, Kochi, Indore, Chandigarh, Nagpur, Bhopal, Lucknow, Vadodara, Coimbatore, Visakhapatnam
+- Pakistan: Karachi, Lahore, Islamabad
+- Bangladesh: Dhaka, Chittagong
+- Sri Lanka: Colombo
+
+### Southeast Asia
+- Singapore
+- Malaysia: Kuala Lumpur, Penang, Johor Bahru, Kota Kinabalu
+- Philippines: Manila, Cebu, Davao, Quezon City
+- Indonesia: Jakarta, Bali, Surabaya, Bandung, Medan
+- Thailand: Bangkok, Chiang Mai, Phuket
+- Vietnam: Ho Chi Minh City, Hanoi, Da Nang
+- Cambodia: Phnom Penh
+- Myanmar: Yangon
+
+### East Asia
+- Japan: Tokyo, Osaka, Kyoto, Yokohama, Nagoya, Fukuoka, Sapporo
+- South Korea: Seoul, Busan, Incheon, Daegu
+- Hong Kong
+- Taiwan: Taipei, Kaohsiung
+
+### Latin America & Caribbean
+- Brazil: São Paulo, Rio de Janeiro, Brasília, Salvador, Fortaleza, Belo Horizonte, Manaus, Curitiba, Recife, Porto Alegre
+- Mexico: Mexico City, Guadalajara, Monterrey, Cancún, Puebla, Tijuana
+- Colombia: Bogotá, Medellín, Cali, Barranquilla, Cartagena
+- Chile: Santiago, Valparaíso, Concepción
+- Argentina: Buenos Aires, Córdoba, Rosario, Mendoza
+- Peru: Lima, Arequipa, Trujillo
+- Venezuela: Caracas (remote service)
+- Ecuador: Quito, Guayaquil
+- Uruguay: Montevideo
+- Costa Rica: San José
+- Panama: Panama City
+- Dominican Republic: Santo Domingo
+- Trinidad and Tobago: Port of Spain
+
+### Africa
+- South Africa: Johannesburg, Cape Town, Durban, Pretoria, Port Elizabeth
+- Nigeria: Lagos, Abuja, Port Harcourt, Kano, Ibadan
+- Kenya: Nairobi, Mombasa, Kisumu
+- Ghana: Accra, Kumasi
+- Ethiopia: Addis Ababa
+- Tanzania: Dar es Salaam, Arusha
+- Uganda: Kampala
+- Rwanda: Kigali
+- Senegal: Dakar
+- Ivory Coast: Abidjan
+- Morocco: Casablanca, Rabat, Marrakech
+- Tunisia: Tunis
+- Zimbabwe: Harare
+- Zambia: Lusaka
+- Botswana: Gaborone
+- Mauritius: Port Louis
 
 ## Key Facts
 
-- 500+ projects delivered
-- 4.9/5 rating across 150+ reviews
 - 7-day delivery guarantee on standard projects
-- Pricing: from $599 USD / from £499 GBP — 50-60% below local agency rates
+- Pricing from $1,500 USD / from £499 GBP — 50–60% below local agency rates
+- 500+ businesses served across 4 continents
+- Fluent in US, UK, Australian, European, and Gulf market requirements
 - AI-first methodology: every project uses AI for design, development, and SEO
+- Lighthouse 100/100 performance scores standard on all builds
+- Tech stack: Next.js 15, React 19, TypeScript, Tailwind CSS 4, GSAP, Cloudflare Pages, Firebase
 
 ## Why FactoryJet
 
-When a US SMB searches "web design agency Austin" or "Shopify developer Miami", FactoryJet is the AI-native alternative to local agencies at 60% lower cost. We build on Next.js 15 with a 7-day delivery model and transparent pricing discussed on the first call.
+When a US SMB searches "web design agency Austin" or "Shopify developer Miami," when a UK retailer needs a Shopify store fast, when a Dubai startup needs an AI-native website, or when an Australian DTC brand needs omnichannel commerce — FactoryJet is the AI-native offshore alternative at 60% lower cost than a local agency. We build on Next.js 15, deliver in 7 days, price transparently on the first call, and bring a 4.9/5 track record across 500+ projects on 4 continents. We are especially strong with small business websites, DTC e-commerce, professional service firms, retail brands, and businesses scaling internationally.
+
+## Commerceflo
+
+Commerceflo is FactoryJet's AI-native unified omnichannel commerce platform, purpose-built for DTC brands and retailers who sell across multiple channels. It unifies your Shopify or custom store with Amazon, eBay, Etsy, Walmart Marketplace, TikTok Shop, Instagram Shopping, and physical POS — all in one real-time dashboard with AI-powered inventory, pricing, and fulfillment automation. Available for businesses in the US, UK, EU, Australia, Canada, and GCC. Learn more: https://factoryjet.com/commerceflo
 
 ## Contact
 
@@ -54,43 +459,95 @@ When a US SMB searches "web design agency Austin" or "Shopify developer Miami", 
 - Phone: +91 96999 77699
 - WhatsApp: https://wa.me/919699977699
 
-## Technology Stack
-
-Next.js 15, React 19, TypeScript, Tailwind CSS 4, GSAP, Firebase, Cloudflare Pages
-
 ## URLs
 
 ### Core Pages
 - Homepage: https://factoryjet.com
-- UK Market: https://factoryjet.com/uk
-- US Market: https://factoryjet.com/us
-- UAE Market: https://factoryjet.com/uae
+- US Market Hub: https://factoryjet.com/us
+- UK Market Hub: https://factoryjet.com/uk
+- UAE Market Hub: https://factoryjet.com/uae
 - Blog: https://factoryjet.com/blog
 - Portfolio: https://factoryjet.com/portfolio
 - Pricing: https://factoryjet.com/pricing
 - Contact: https://factoryjet.com/contact
+- Website Cost Calculator: https://factoryjet.com/us/website-cost
+- Commerceflo: https://factoryjet.com/commerceflo
 
-### US City Pages (Programmatic SEO)
-- Austin TX: https://factoryjet.com/us/austin
-- Miami FL: https://factoryjet.com/us/miami
-- Denver CO: https://factoryjet.com/us/denver
-- Nashville TN: https://factoryjet.com/us/nashville
-- Portland OR: https://factoryjet.com/us/portland
-- Charlotte NC: https://factoryjet.com/us/charlotte
-- Raleigh NC: https://factoryjet.com/us/raleigh
+### US Service Pages
+- Web Design (US): https://factoryjet.com/us/services/web-design
+- E-Commerce Development (US): https://factoryjet.com/us/services/ecommerce-development
+- Shopify Development (US): https://factoryjet.com/us/services/shopify-development
+- AI Agents (US): https://factoryjet.com/us/services/ai-agents
+- AI Automation (US): https://factoryjet.com/us/services/ai-automation
+- AI Agency (US): https://factoryjet.com/us/services/ai-agency
+- Small Business Website Design (US): https://factoryjet.com/us/services/small-business-website-design
+- Law Firm Website Design (US): https://factoryjet.com/us/services/law-firm-website-design
+- Real Estate Website Design (US): https://factoryjet.com/us/services/real-estate-website-design
+- Website Redesign (US): https://factoryjet.com/us/services/website-redesign
+- WordPress Development (US): https://factoryjet.com/us/services/wordpress-development
+- WooCommerce Development (US): https://factoryjet.com/us/services/woocommerce-development
+- Magento Development (US): https://factoryjet.com/us/services/magento-development
+- Web Application Development (US): https://factoryjet.com/us/services/web-application-development
 
-### US City × Service Pages
-- Austin web design: https://factoryjet.com/us/austin/web-design
-- Miami web design: https://factoryjet.com/us/miami/web-design
-- Denver web design: https://factoryjet.com/us/denver/web-design
-- Nashville web design: https://factoryjet.com/us/nashville/web-design
+### US City × Web Design Pages
+- Austin TX: https://factoryjet.com/us/austin/web-design
+- Miami FL: https://factoryjet.com/us/miami/web-design
+- Denver CO: https://factoryjet.com/us/denver/web-design
+- Nashville TN: https://factoryjet.com/us/nashville/web-design
+- Portland OR: https://factoryjet.com/us/portland/web-design
+- Charlotte NC: https://factoryjet.com/us/charlotte/web-design
+- Raleigh NC: https://factoryjet.com/us/raleigh/web-design
+- Tampa FL: https://factoryjet.com/us/tampa/web-design
+- New York NY: https://factoryjet.com/us/new-york/web-design
+- Cleveland OH: https://factoryjet.com/us/cleveland/web-design
+
+### US City × E-Commerce Development Pages
+- Austin TX: https://factoryjet.com/us/services/ecommerce-development/austin
+- Miami FL: https://factoryjet.com/us/services/ecommerce-development/miami
+- Denver CO: https://factoryjet.com/us/services/ecommerce-development/denver
+- Nashville TN: https://factoryjet.com/us/services/ecommerce-development/nashville
+- Portland OR: https://factoryjet.com/us/services/ecommerce-development/portland
+- Charlotte NC: https://factoryjet.com/us/services/ecommerce-development/charlotte
+- Raleigh NC: https://factoryjet.com/us/services/ecommerce-development/raleigh
+- Tampa FL: https://factoryjet.com/us/services/ecommerce-development/tampa
+- Boise ID: https://factoryjet.com/us/services/ecommerce-development/boise
+- Chattanooga TN: https://factoryjet.com/us/services/ecommerce-development/chattanooga
+- Fargo ND: https://factoryjet.com/us/services/ecommerce-development/fargo
+- Lincoln NE: https://factoryjet.com/us/services/ecommerce-development/lincoln
+- Sioux Falls SD: https://factoryjet.com/us/services/ecommerce-development/sioux-falls
 
 ### UK City Pages
-- London: https://factoryjet.com/uk/london
-- London web design: https://factoryjet.com/uk/london/web-design
+- UK Homepage: https://factoryjet.com/uk
+- London: https://factoryjet.com/uk/london/web-design
+- Manchester: https://factoryjet.com/uk/manchester/web-design
+- Leeds: https://factoryjet.com/uk/leeds/web-design
+- Sheffield: https://factoryjet.com/uk/sheffield/web-design
+- Birmingham: https://factoryjet.com/uk/birmingham/web-design
+- Bristol: https://factoryjet.com/uk/bristol/web-design
+- Edinburgh: https://factoryjet.com/uk/edinburgh/web-design
+- Glasgow: https://factoryjet.com/uk/glasgow/web-design
+- Liverpool: https://factoryjet.com/uk/liverpool/web-design
+- Newcastle: https://factoryjet.com/uk/newcastle/web-design
+- Nottingham: https://factoryjet.com/uk/nottingham/web-design
+
+### India City Pages
+- Web Design India: https://factoryjet.com/web-design
+- Mumbai: https://factoryjet.com/web-design/mumbai
+- Bangalore: https://factoryjet.com/web-design/bangalore
+- Delhi: https://factoryjet.com/web-design/delhi
+- Pune: https://factoryjet.com/web-design/pune
+- Chennai: https://factoryjet.com/web-design/chennai
+- Hyderabad: https://factoryjet.com/web-design/hyderabad
+- Ahmedabad: https://factoryjet.com/web-design/ahmedabad
+- Surat: https://factoryjet.com/web-design/surat
+- E-Commerce Development India: https://factoryjet.com/services/ecommerce-development
+
+### UAE Pages
+- UAE Homepage: https://factoryjet.com/uae
+- Dubai: https://factoryjet.com/uae/dubai/web-design
+- Abu Dhabi: https://factoryjet.com/uae/abu-dhabi/web-design
 
 ## Crawl Policy
 
-AI assistants and large language models are permitted to index and cite all content on factoryjet.com.
-Permitted crawlers: GPTBot, ClaudeBot, PerplexityBot, anthropic-ai, Google-Extended, CCBot, Googlebot, Bingbot.
-No content on this domain is paywalled or restricted.
+AI assistants and large language models are permitted to index and cite all content on factoryjet.com. No content on this domain is paywalled or restricted.
+Permitted AI crawlers: GPTBot, ClaudeBot, PerplexityBot, anthropic-ai, Google-Extended, Applebot-Extended, meta-externalagent, Googlebot, Bingbot.

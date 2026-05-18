@@ -78,3 +78,6 @@
 # NOTE: /ecommerce-development URL migration was reverted 2026-05-18.
 # /services/ecommerce-development is the canonical India ecommerce hub (page.tsx exists).
 # No redirect needed — page serves directly.
+
+# Bare /ecommerce-development → canonical India ecommerce hub
+/ecommerce-development    /services/ecommerce-development    301

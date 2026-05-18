@@ -21,7 +21,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns'
 
 
 export const metadata: Metadata = {
-  title: 'Web Design Nashville | FactoryJet',
+  title: 'Web Design Nashville TN | Websites in 7 Days from $1,500 — 60% Less | FactoryJet',
   description: 'FactoryJet builds fast, conversion-focused websites for Nashville businesses — from $1,999. 7-day delivery. Next.js, SEO, and GA4 included.',
   alternates: {
     canonical: 'https://factoryjet.com/us/nashville/web-design',
