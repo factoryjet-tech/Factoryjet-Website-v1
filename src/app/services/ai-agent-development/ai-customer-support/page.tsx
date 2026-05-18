@@ -809,29 +809,6 @@ export default function AICustomerSupportINPage() {
           items={SUPPORT_FAQ_ITEMS}
         />
 
-        <StrategicDarkSection
-          eyebrow="WHY FACTORYJET"
-          headline="25 years building for businesses your size — now with AI"
-          lead="We have been inside 500+ Indian businesses. We know what a 5-person support team drowning in WhatsApp messages actually looks like — and that context changes everything about how we design a support AI."
-          pillars={[
-            {
-              icon: '🇮🇳',
-              title: 'We integrate with your Indian support stack — not a US template',
-              body: "Tally ERP, Shiprocket, Razorpay, Interakt, Freshdesk, Zoho Desk — we integrate with the tools Indian businesses actually use. Your AI support agent checks real data from your real systems on day one. No placeholder data, no demo responses.",
-            },
-            {
-              icon: '📐',
-              title: 'Fixed price. Full ownership. No SaaS lock-in.',
-              body: 'No hourly billing. No FactoryJet subscription after delivery. Fixed-price contracts, full code and API key ownership. Your support AI, your customer data, your competitive edge.',
-            },
-            {
-              icon: '🏗️',
-              title: 'We understand Indian support patterns — global SaaS firms do not',
-              body: "GST invoice requests, Hindi queries, Shiprocket tracking lookup, Tally integration, Diwali season query spikes — these are the realities of Indian customer support. We build for them specifically, not as afterthoughts.",
-            },
-          ]}
-        />
-
         <div id="final-cta">
           <FinalCTA
             variant="dark"

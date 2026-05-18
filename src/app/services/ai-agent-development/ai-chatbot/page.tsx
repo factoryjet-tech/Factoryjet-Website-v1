@@ -1070,28 +1070,6 @@ export default function AIChatbotINPage() {
         />
 
         {/* ── 15. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
-        <StrategicDarkSection
-          eyebrow="WHY FACTORYJET"
-          headline="25 years building for businesses your size — now with AI"
-          lead="We have been inside 500+ Indian and global businesses since 1999. We know what a 15-person operation actually looks like — and that context changes everything about how we design a chatbot."
-          pillars={[
-            {
-              icon: '🇮🇳',
-              title: 'We build for your stack — not a demo environment',
-              body: "We integrate with Interakt, Wati, Zoho, Razorpay, Shopify, and Shiprocket because those are what Indian businesses actually use. Your chatbot works with your existing tools on day one — no rip-and-replace required.",
-            },
-            {
-              icon: '📐',
-              title: 'Fixed price. Full ownership. Zero SaaS lock-in.',
-              body: 'No hourly billing. No SaaS subscription to FactoryJet after delivery. Fixed-price contracts, full code and API key ownership. You can self-manage the chatbot after handover — or continue on an optional retainer. Your choice, not ours.',
-            },
-            {
-              icon: '🏗️',
-              title: 'We understand SMB operations — large IT firms do not',
-              body: "Enterprise IT firms build chatbots for companies with 500-person IT teams. We build for founders managing 10–100 person businesses. The admin dashboard, the escalation paths, the knowledge base update process — all designed for non-technical operators.",
-            },
-          ]}
-        />
 
         {/* ── 16. FINAL CTA (DARK) ─────────────────────────────────────────── */}
         <div id="final-cta">

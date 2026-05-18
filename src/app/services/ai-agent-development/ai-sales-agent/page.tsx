@@ -512,17 +512,6 @@ export default function AISalesAgentINPage() {
 
         <FAQ eyebrow="FREQUENTLY ASKED QUESTIONS" headline="Everything to Know Before You Start" lead="The questions we answer on every Indian AI sales agent discovery call — answered honestly." categories={SALES_FAQ_CATEGORIES} items={SALES_FAQ_ITEMS} />
 
-        <StrategicDarkSection
-          eyebrow="WHY FACTORYJET"
-          headline="25 years building for businesses your size — now with AI"
-          lead="We have been inside 500+ Indian and global businesses. We know what a 15-person sales team actually looks like — and that context changes everything about how we design a sales agent."
-          pillars={[
-            { icon: '🇮🇳', title: 'Built for Indian lead sources — not a US template', body: 'We integrate with 99acres, MagicBricks, Facebook Lead Ads, Instagram, Interakt, Wati, and Zoho CRM because that is what Indian sales teams actually use. Your AI sales agent works with your existing stack on day one.' },
-            { icon: '📐', title: 'Fixed price. Full ownership. No lock-in.', body: 'No hourly billing. No FactoryJet subscription after delivery. Fixed-price contracts, full code and API key ownership. Your sales agent, your data, your pipeline.' },
-            { icon: '🏗️', title: 'We understand SMB sales — enterprise IT firms do not', body: "Large IT firms build for companies with 50-person sales teams. We build for founders running 5–50 person businesses. The qualification flows, CRM mapping, and escalation logic — all designed around how your team actually works." },
-          ]}
-        />
-
         <div id="final-cta">
           <FinalCTA
             variant="dark"

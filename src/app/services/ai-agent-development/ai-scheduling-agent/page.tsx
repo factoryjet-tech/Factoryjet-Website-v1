@@ -809,29 +809,6 @@ export default function AISchedulingAgentINPage() {
           items={SCHEDULING_FAQ_ITEMS}
         />
 
-        <StrategicDarkSection
-          eyebrow="WHY FACTORYJET"
-          headline="25 years building for businesses your size — now with AI"
-          lead="We have been inside 500+ Indian businesses. We know what a 3-person clinic front desk or a 5-person real estate sales team actually looks like — and that context changes everything about how we design a scheduling AI."
-          pillars={[
-            {
-              icon: '🇮🇳',
-              title: 'Built for the Indian WhatsApp-first booking behaviour',
-              body: "We build scheduling AI for customers who message, not click. WhatsApp-native booking conversations in Hindi and English, integrated with the calendar and CRM tools Indian businesses actually use. Your customers get a frictionless booking experience in their preferred language.",
-            },
-            {
-              icon: '📐',
-              title: 'Fixed price. Full ownership. No SaaS lock-in.',
-              body: 'No hourly billing. No ongoing FactoryJet fee. Fixed-price contracts, full code ownership, and your AI scheduling agent running on your infrastructure. You own the booking flow, the calendar integration, and the customer data.',
-            },
-            {
-              icon: '📊',
-              title: 'We optimise for business outcomes — not just working software',
-              body: "A scheduling AI that books appointments but does not reduce no-shows is incomplete. We build the full flow: booking, deposit collection, reminder sequence, rescheduling, post-visit follow-up — and measure each stage to ensure the business outcome (filled calendar, low no-shows, high rebooking) is achieved.",
-            },
-          ]}
-        />
-
         <div id="final-cta">
           <FinalCTA
             variant="dark"

@@ -810,29 +810,6 @@ export default function AIVoiceAgentINPage() {
           items={VOICE_FAQ_ITEMS}
         />
 
-        <StrategicDarkSection
-          eyebrow="WHY FACTORYJET"
-          headline="25 years building for businesses your size — now with AI"
-          lead="We have been inside 500+ Indian businesses. We know what a 10-person sales team dealing with 200 daily leads actually looks like — and that context changes everything about how we design a voice agent."
-          pillars={[
-            {
-              icon: '🇮🇳',
-              title: 'We build for the Indian calling context — not a US demo',
-              body: "We integrate with Exotel, Plivo, and Indian DND APIs because those are what TRAI-compliant Indian calling requires. Our Hindi TTS and STT models are tested against actual Indian phone call quality and regional accent variation — not sanitised studio recordings.",
-            },
-            {
-              icon: '📐',
-              title: 'Fixed price. Full ownership. No platform lock-in.',
-              body: 'No hourly billing. No ongoing fee to FactoryJet. Fixed-price contracts, full code, telephony configuration, and API key ownership. Your AI caller runs on your Exotel account, connected to your CRM. You are never locked to a FactoryJet subscription to keep calling.',
-            },
-            {
-              icon: '⚖️',
-              title: 'TRAI and RBI compliance built-in — not bolted on',
-              body: "DND scrubbing, calling hour enforcement, TRAI-registered headers, mandatory opt-out — all standard in every build. For BFSI collection deployments, RBI fair practice code compliance is documented and built into the conversation flow before the first live call.",
-            },
-          ]}
-        />
-
         <div id="final-cta">
           <FinalCTA
             variant="dark"

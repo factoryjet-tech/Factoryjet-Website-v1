@@ -807,29 +807,6 @@ export default function AIWorkflowAutomationINPage() {
           items={WORKFLOW_FAQ_ITEMS}
         />
 
-        <StrategicDarkSection
-          eyebrow="WHY FACTORYJET"
-          headline="25 years building for businesses your size — now with AI"
-          lead="We have been inside 500+ Indian and global businesses since 1999. We know what a 10-person operations team actually looks like — and that context changes everything about how we design an automation."
-          pillars={[
-            {
-              icon: '🇮🇳',
-              title: 'We know the Indian tool stack — inside out',
-              body: "We have built Tally integrations, Razorpay webhooks, Zoho CRM pipelines, and Shiprocket automations for hundreds of Indian businesses. We know the quirks, the edge cases, and the workarounds. Your automation works with your actual tools on day one.",
-            },
-            {
-              icon: '📐',
-              title: 'Fixed price. Full ownership. No lock-in.',
-              body: 'No hourly billing. No ongoing fee to FactoryJet after delivery. Fixed-price contracts, full code and API key ownership. You can modify, host, and self-manage the automation — or continue on an optional retainer. Your choice.',
-            },
-            {
-              icon: '🏗️',
-              title: 'We build for operators, not engineers',
-              body: "Large IT firms build automation for companies with 10-person DevOps teams. We build for founders and ops managers who want it to work without understanding the code underneath. The admin dashboard, error alerts, and audit logs are all designed for non-technical operators.",
-            },
-          ]}
-        />
-
         <div id="final-cta">
           <FinalCTA
             variant="dark"

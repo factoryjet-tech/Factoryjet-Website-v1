@@ -1055,28 +1055,6 @@ export default function AIMarketingAgentINPage() {
         />
 
         {/* ── 15. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
-        <StrategicDarkSection
-          eyebrow="WHY FACTORYJET"
-          headline="25 years building for businesses your size — now with AI"
-          lead="We have been inside 500+ Indian and global businesses since 1999. We know what a 5-person marketing team actually looks like — and that context changes everything about how we design a marketing AI."
-          pillars={[
-            {
-              icon: '🇮🇳',
-              title: 'We build for your stack — not a US template',
-              body: "We integrate with Interakt, Wati, Zoho MarketingHub, CleverTap, Commerceflo, and Meta Ads because those are what Indian businesses actually use. Your AI marketing agent works with your existing tools on day one — no rip-and-replace required.",
-            },
-            {
-              icon: '📐',
-              title: 'Fixed price. Full ownership. Zero agency dependency.',
-              body: 'No hourly billing. No FactoryJet retainer after delivery. Fixed-price contracts, full code and API key ownership. Your campaigns, your customer data, your competitive edge — you own all of it.',
-            },
-            {
-              icon: '🏗️',
-              title: 'We understand SMB marketing — large agencies do not',
-              body: "Large marketing agencies build for brands with 50-person teams and unlimited content budgets. We build for founders managing 5–50 person businesses. The approval workflow, the brand voice training, the festival calendar setup — all designed for operators who review campaigns between customer calls.",
-            },
-          ]}
-        />
 
         {/* ── 16. FINAL CTA (DARK) ─────────────────────────────────────────── */}
         <div id="final-cta">
