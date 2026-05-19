@@ -36,3 +36,4 @@ pipeline/scripts/__pycache__/
 pipeline/scripts/*.pyc
 pipeline/brand-references/*/screenshots/
 pipeline/brand-references/_run.log
+.claude/
