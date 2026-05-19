@@ -31,7 +31,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'AI Agency for US Small Business | Agents & Chatbots | FactoryJet',
   description:
-    'FactoryJet is a US AI agency building custom AI agents, automation workflows, and chatbots for small businesses. 60–70% cheaper than US AI agencies. Starts at $5,000. Free AI strategy call.',
+    'US AI agency building custom agents, automation workflows & chatbots for small businesses. 60–70% cheaper than US AI agencies. From $5,000. Free AI strategy call.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

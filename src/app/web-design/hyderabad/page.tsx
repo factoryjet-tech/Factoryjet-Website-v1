@@ -27,7 +27,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 export const metadata: Metadata = {
   title: 'Web Design Company in Hyderabad | From ₹25,000 | FactoryJet',
   description:
-    'FactoryJet is a web design company in Hyderabad building fast, SEO-optimized websites for IT firms, pharma companies, and growing businesses. From ₹25,000. 7-day delivery. Serving HITEC City, Gachibowli, Madhapur, and Jubilee Hills.',
+    'Web design company in Hyderabad for IT firms, pharma companies & businesses. Fast websites from ₹25,000. 7-day delivery. Serving HITEC City, Gachibowli & Madhapur.',
   keywords: [
     'web design company in Hyderabad',
     'website design Hyderabad',

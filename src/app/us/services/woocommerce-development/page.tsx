@@ -32,7 +32,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'WooCommerce Development — Custom Stores & Plugins | FactoryJet',
   description:
-    'Expert WooCommerce development for US e-commerce businesses. Custom store builds, plugin development, theme customization, payment integrations, and performance optimization. 60–70% cheaper than US agencies. Free consultation.',
+    'Expert WooCommerce development for US businesses. Custom stores, plugins, themes & payment integrations. 60–70% cheaper than US agencies. Free consultation.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

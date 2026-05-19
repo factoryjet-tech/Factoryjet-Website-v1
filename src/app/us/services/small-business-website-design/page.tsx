@@ -33,7 +33,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'Small Business Website Design | From $1,999, 7 Days | FactoryJet',
   description:
-    'Professional website design for small businesses. Custom design (not templates), mobile-first, Lighthouse 100 performance, full SEO setup — starting at $1,999 and delivered in 7 days. 500+ US small businesses served.',
+    'Professional website design for US small businesses. Custom design, mobile-first, Lighthouse 100, full SEO setup. From $1,999, delivered in 7 days.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

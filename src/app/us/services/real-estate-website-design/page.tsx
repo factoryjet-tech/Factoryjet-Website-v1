@@ -23,7 +23,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'Real Estate Website Design for US Agents | FactoryJet',
   description:
-    'Custom real estate websites with IDX integration and neighborhood pages — built to rank on local search. Agent sites from $2,499. 7-day delivery. 60–70% below US agency rates.',
+    'Custom real estate websites with IDX integration — built to rank on local search. Agent sites from $2,499, 7-day delivery, 60–70% below US agency rates.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

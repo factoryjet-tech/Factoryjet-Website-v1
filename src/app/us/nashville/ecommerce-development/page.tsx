@@ -25,7 +25,7 @@ import SiteFooter from '@/components/v2/SiteFooter'
 
 export const metadata: Metadata = {
   title: 'Shopify Developer Nashville TN | From $2,999 | FactoryJet',
-  description: 'Top-rated Shopify developer in Nashville, Tennessee: stores live in 7 days from $2,999. Music City e-commerce specialists — Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
+  description: 'Top-rated Shopify developer in Nashville TN: stores live in 7 days from $2,999. Music City e-commerce — Shopify, WooCommerce & AI. 500+ projects. Free audit.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

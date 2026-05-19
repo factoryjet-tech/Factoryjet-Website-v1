@@ -26,7 +26,7 @@ import SiteFooter from '@/components/v2/SiteFooter'
 
 export const metadata: Metadata = {
   title: 'Shopify Developer Tampa FL | E-Commerce from $2,999 | FactoryJet',
-  description: 'Top-rated Shopify developer in Tampa, Florida: stores live in 7 days from $2,999. Gulf Coast e-commerce specialists — Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
+  description: 'Top-rated Shopify developer in Tampa FL: stores live in 7 days from $2,999. Gulf Coast e-commerce — Shopify, WooCommerce & AI. 500+ projects. Free audit.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

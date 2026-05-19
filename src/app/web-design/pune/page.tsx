@@ -22,7 +22,7 @@ import FinalCTA from '@/components/v2/FinalCTA'
 
 export const metadata: Metadata = {
   title: 'Trusted Web Design Company in Pune | FactoryJet',
-  description: 'Professional web design company in Pune building fast, conversion-focused websites for IT, automotive, and education businesses in Hinjewadi, Kharadi & Baner. 7-day delivery.',
+  description: 'Web design company in Pune for IT, automotive & education businesses. Fast, conversion-focused sites in Hinjewadi, Kharadi & Baner. 7-day delivery.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

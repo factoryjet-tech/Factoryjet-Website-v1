@@ -6,7 +6,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
   title: 'Our Portfolio — 500+ Websites Built | FactoryJet',
-  description: 'Explore FactoryJet\'s portfolio of stunning websites — from e-commerce stores to SaaS platforms. See the diverse range of projects we\'ve delivered for businesses worldwide.',
+  description: 'Browse FactoryJet\'s portfolio — e-commerce stores to SaaS platforms. 500+ projects delivered for businesses in India, the US & UK.',
   authors: [{ name: 'FactoryJet' }],
   robots: {
     index: true,

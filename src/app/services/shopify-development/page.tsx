@@ -26,7 +26,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'Shopify Development India | From ₹50,000 | FactoryJet',
   description:
-    'FactoryJet builds custom Shopify and Shopify Plus stores for Indian DTC brands and e-commerce businesses. Razorpay, UPI, GST invoicing, Shiprocket integrated. 7-day delivery. Full code ownership. From ₹50,000.',
+    'Custom Shopify & Shopify Plus stores for Indian DTC brands. Razorpay, UPI & GST invoicing integrated. Shiprocket connected. 7-day delivery. From ₹50,000.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

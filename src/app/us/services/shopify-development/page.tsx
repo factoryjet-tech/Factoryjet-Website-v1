@@ -29,7 +29,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'Shopify Development USA | Custom Shopify Stores | FactoryJet',
   description:
-    'FactoryJet builds custom Shopify and Shopify Plus stores for US DTC brands, B2B merchants, and e-commerce businesses. Custom themes, migrations, headless commerce. 60–70% cheaper than US agencies. Starting at $3,999.',
+    'Custom Shopify & Shopify Plus stores for US DTC brands. Custom themes, migrations & headless commerce. 60–70% cheaper than US agencies. Starting at $3,999.',
   authors: [{ name: 'FactoryJet' }],
   openGraph: {
     type: 'website',

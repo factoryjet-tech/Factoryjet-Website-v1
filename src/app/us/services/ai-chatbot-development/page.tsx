@@ -24,7 +24,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'AI Chatbot Development USA | Custom Chatbots | FactoryJet',
   description:
-    'FactoryJet builds custom AI chatbots for US small businesses — customer support, lead generation, e-commerce, and appointment booking. Deflect 60–70% of support tickets. Delivered in 2–3 weeks. Starting at $3,000. Free strategy call.',
+    'Custom AI chatbots for US businesses — customer support, lead gen, e-commerce & booking. Deflect 60–70% of support tickets. Delivered in 2–3 weeks. From $3,000.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

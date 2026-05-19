@@ -25,7 +25,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'AI Agent Development India | Custom AI Agents | FactoryJet',
   description:
-    'FactoryJet builds custom AI agents for Indian businesses — WhatsApp AI, customer support automation, sales AI, and workflow bots that connect Zoho, Razorpay, Tally, and Freshdesk. Fixed price. Deployed in weeks.',
+    'Custom AI agents for Indian businesses — WhatsApp AI, customer support, sales & workflow bots. Integrated with Zoho & Razorpay. Fixed price. Deployed in weeks.',
   keywords: [
     'AI agent development India',
     'AI agent company India',

@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Web Design & Digital Agency in London | FactoryJet',
   description:
-    'FactoryJet serves London businesses with web design, AI websites, ecommerce, SEO, and AI agents. AI-native agency, 50–60% below local agency rates. Free consultation.',
+    'FactoryJet serves London businesses with web design, AI websites, ecommerce & SEO. AI-native agency, 50–60% below local rates. Free consultation.',
   alternates: {
     canonical: 'https://factoryjet.com/uk/london',
   },

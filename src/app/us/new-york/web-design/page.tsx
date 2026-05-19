@@ -26,7 +26,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 export const metadata: Metadata = {
   title: 'Web Design New York City | NYC Web Design Agency | FactoryJet',
   description:
-    'FactoryJet builds high-converting websites for New York City businesses — from $1,999. 7-day delivery, 60–70% less than NYC web design agencies. Next.js, SEO, and full code ownership.',
+    'High-converting websites for New York City businesses from $1,999. 7-day delivery, 60–70% less than NYC agencies. Next.js, SEO & full code ownership.',
   alternates: {
     canonical: 'https://factoryjet.com/us/new-york/web-design',
     languages: webDesignPriorityCityAlternatesUS['new-york'],

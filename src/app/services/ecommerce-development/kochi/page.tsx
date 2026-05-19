@@ -26,7 +26,7 @@ import { ecommerceCityAlternatesIN } from '@/data/hreflangMap';
 export const metadata: Metadata = {
   title: 'Ecommerce Development in Kochi | From ₹59,999 | FactoryJet',
   description:
-    'FactoryJet builds high-converting Shopify, WooCommerce, and custom ecommerce stores for Kochi brands. From ₹59,999. Razorpay + UPI + COD. GST-compliant. Shiprocket integrated. 7-day delivery guarantee. Serving Kakkanad, Infopark, Edappally, MG Road, and all of Kochi.',
+    'Shopify & WooCommerce stores for Kochi brands. From ₹59,999. Razorpay, UPI & COD. GST-compliant. Shiprocket integrated. 7-day delivery guarantee.',
   keywords: [
     'ecommerce development company kochi',
     'ecommerce website development kochi',

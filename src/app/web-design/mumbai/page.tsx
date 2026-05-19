@@ -27,7 +27,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 export const metadata: Metadata = {
   title: 'Web Design Company in Mumbai | From ₹25,000 | FactoryJet',
   description:
-    'FactoryJet is a web design company in Mumbai building fast, SEO-optimized websites for B2B exporters, D2C brands, and service businesses. From ₹25,000. 7-day delivery guarantee. Serving BKC, Andheri East, Lower Parel, and Navi Mumbai.',
+    'Web design company in Mumbai for B2B exporters, D2C brands & service businesses. Fast websites from ₹25,000. 7-day delivery. Serving BKC, Andheri East & Lower Parel.',
   keywords: [
     'web design company in Mumbai',
     'website design Mumbai',

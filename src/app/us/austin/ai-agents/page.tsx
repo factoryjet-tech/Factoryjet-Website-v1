@@ -24,7 +24,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'AI Agents & Chatbots for Austin TX Businesses | FactoryJet',
   description:
-    'FactoryJet builds custom AI agents and chatbots for Austin small businesses — customer support, lead generation, appointment booking, and e-commerce automation. Serve Austin\'s fast-moving tech and hospitality market 24/7. Starting at $3,000. Free strategy call.',
+    'Custom AI agents for Austin businesses — customer support, lead gen & e-commerce automation. Serve Austin\'s tech and hospitality market 24/7. From $3,000.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

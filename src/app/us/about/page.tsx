@@ -19,7 +19,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns'
 export const metadata: Metadata = {
   title: 'About FactoryJet | Web Design Agency for US SMBs',
   description:
-    'FactoryJet is a web design agency for US small businesses. Custom websites, Shopify stores, and AI-powered web apps — delivered in 7 days at 60–70% less than traditional agencies. 500+ businesses launched.',
+    'FactoryJet builds custom websites, Shopify stores & AI apps for US small businesses — delivered in 7 days at 60–70% below agency rates. 500+ businesses launched.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

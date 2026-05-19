@@ -27,7 +27,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'Law Firm Website Design for US Attorneys | FactoryJet',
   description:
-    'FactoryJet designs professional law firm websites that rank in local search, build credibility with prospective clients, and convert visitors into consultations. Starting at $2,499. 60–70% cheaper than US legal web design agencies.',
+    'Professional law firm websites that rank in local search and convert visitors into consultations. From $2,499. 60–70% cheaper than US agencies.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

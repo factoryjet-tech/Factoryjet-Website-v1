@@ -24,7 +24,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'AI Workflow Automation for Miami FL Businesses | FactoryJet',
   description:
-    'FactoryJet builds custom AI workflow automation for Miami small businesses — lead nurturing, invoice processing, hospitality booking flows, bilingual customer outreach, and data sync. Cut 40–65% of manual task time. Starting at $4,000. Free strategy call.',
+    'AI automation for Miami businesses — lead nurturing, invoice processing, hospitality booking & bilingual outreach. Cut 40–65% of manual task time. From $4,000.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

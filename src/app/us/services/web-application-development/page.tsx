@@ -23,7 +23,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'Web Application Development for US Businesses | FactoryJet',
   description:
-    'Custom web application development starting at $7,500. Booking systems, customer portals, SaaS MVPs, dashboards — fixed price, 60–70% below US dev agency rates. Free discovery call.',
+    'Custom web application development from $7,500. Booking systems, portals, SaaS MVPs & dashboards — fixed price, 60–70% below US agency rates. Free discovery call.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

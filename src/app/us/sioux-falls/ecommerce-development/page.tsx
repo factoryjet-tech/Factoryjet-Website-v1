@@ -20,7 +20,7 @@ import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
 
 export const metadata: Metadata = {
   title: 'Shopify Developer Sioux Falls SD | From $2,999 | FactoryJet',
-  description: 'Top-rated Shopify developer in Sioux Falls, South Dakota: stores live in 7 days from $2,999. Zero state income tax = higher margins. Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
+  description: 'Top-rated Shopify developer in Sioux Falls SD: stores live in 7 days from $2,999. Zero income tax state. Shopify, WooCommerce & AI. 500+ projects. Free audit.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

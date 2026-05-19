@@ -16,7 +16,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'Web Design FAQ New York City — 25 Questions Answered | FactoryJet',
   description:
-    'Everything NYC business owners ask before hiring a web design company — cost, timeline, platforms, local SEO, ADA compliance, and why FactoryJet delivers 60–70% less than a Manhattan agency. 25 questions answered.',
+    'Everything NYC business owners ask before hiring a web design agency — cost, timeline, SEO, and why FactoryJet costs 60–70% less than Manhattan agencies.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

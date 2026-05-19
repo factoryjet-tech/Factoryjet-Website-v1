@@ -24,7 +24,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'AI Agents & Chatbots for Raleigh NC Businesses | FactoryJet',
   description:
-    'FactoryJet builds custom AI agents and chatbots for Raleigh small businesses — customer support, lead generation, appointment booking, and research tech automation. Built for the Research Triangle\'s biotech, pharma, and SaaS economy. Starting at $3,000. Free strategy call.',
+    'Custom AI agents for Raleigh NC — customer support, lead gen & booking. Built for the Research Triangle\'s biotech economy. From $3,000. Free strategy call.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

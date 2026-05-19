@@ -26,7 +26,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'AI Automation Agency for US Small Businesses | FactoryJet',
   description:
-    'FactoryJet is a US-focused AI automation agency that connects your tools, eliminates manual workflows, and saves 20+ hours per week — starting at $2,500. n8n, Make, Zapier, HubSpot, and custom AI. Free automation audit.',
+    'US-focused AI automation agency — connect tools, eliminate manual workflows, save 20+ hours/week. n8n, Make, Zapier & HubSpot. From $2,500. Free automation audit.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

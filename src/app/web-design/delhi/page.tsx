@@ -27,7 +27,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 export const metadata: Metadata = {
   title: 'Web Design Company in Delhi | From ₹25,000 | FactoryJet',
   description:
-    'FactoryJet is a web design company in Delhi NCR building fast, SEO-optimized websites for corporates, government vendors, fashion brands, and growing businesses. From ₹25,000. 7-day delivery. Serving Connaught Place, Gurgaon, Noida, and South Delhi.',
+    'Web design company in Delhi NCR for corporates & fashion brands. Fast websites from ₹25,000. 7-day delivery. Serving Connaught Place, Gurgaon & Noida.',
   keywords: [
     'web design company in Delhi',
     'website design Delhi',

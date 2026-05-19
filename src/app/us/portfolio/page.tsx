@@ -9,7 +9,7 @@ import { portfolioAlternatesUS } from '@/data/hreflangMap';
 export const metadata: Metadata = {
   title: "Portfolio - Websites We've Built for Ambitious Brands | FactoryJet USA",
   description:
-    "Explore FactoryJet's portfolio of stunning websites — from e-commerce stores to SaaS platforms. See the diverse range of projects we've delivered for businesses worldwide.",
+    "Browse FactoryJet's US portfolio — e-commerce stores, SaaS platforms & business websites. 500+ projects delivered. Find inspiration for your next project.",
   authors: [{ name: 'FactoryJet' }],
   robots: {
     index: true,

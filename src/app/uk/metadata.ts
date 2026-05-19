@@ -9,7 +9,7 @@ export const ukViewport: Viewport = {
 export const ukMetadata: Metadata = {
   title: "AI-Native Web Design, E-Commerce & SEO Agency UK | FactoryJet",
   description:
-    "FactoryJet is the UK's AI-native digital agency. Web design, Shopify development, custom AI agents & AI SEO (GEO/AEO/AIO) for British businesses. 50–60% below UK agency rates. Free audit.",
+    "UK AI-native agency: web design, Shopify development, AI agents & AI SEO (GEO/AEO) for British businesses. 50–60% below UK agency rates. Free audit.",
   alternates: {
     canonical: "https://factoryjet.com/uk",
     languages: {
@@ -23,7 +23,7 @@ export const ukMetadata: Metadata = {
   openGraph: {
     title: "AI-Native Web Design, E-Commerce & SEO Agency UK | FactoryJet",
     description:
-      "FactoryJet is the UK's AI-native digital agency. Web design, Shopify development, custom AI agents & AI SEO (GEO/AEO/AIO) for British businesses. 50–60% below UK agency rates. Free audit.",
+      "UK AI-native agency: web design, Shopify development, AI agents & AI SEO (GEO/AEO) for British businesses. 50–60% below UK agency rates. Free audit.",
     url: "https://factoryjet.com/uk",
     type: "website",
     siteName: "FactoryJet Technologies",

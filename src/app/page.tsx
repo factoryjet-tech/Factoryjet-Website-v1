@@ -6,7 +6,7 @@ import SiteFooter from '@/components/v2/SiteFooter'
 
 export const metadata: Metadata = {
   title: 'Website Design & Ecommerce Agency | FactoryJet',
-  description: 'FactoryJet builds high-performance websites, Shopify e-commerce stores, and AI SEO campaigns for businesses in India, the US, and the UK. 7-day delivery on Starter sites. 500+ businesses served.',
+  description: 'FactoryJet builds websites, Shopify stores & AI agents for businesses in India, the US & UK. 7-day delivery on starter sites. 500+ businesses served. Free quote.',
   authors: [{ name: 'FactoryJet' }],
   robots: {
     index: true,

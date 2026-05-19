@@ -20,7 +20,7 @@ import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
 
 export const metadata: Metadata = {
   title: 'Shopify Developer Fargo ND | From $2,999 | FactoryJet',
-  description: 'Best Shopify developer in Fargo, North Dakota: stores live in 7 days from $2,999. Silicon Prairie e-commerce specialists — Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
+  description: 'Best Shopify developer in Fargo ND: stores live in 7 days from $2,999. Silicon Prairie e-commerce — Shopify, WooCommerce & AI. 500+ projects. Free audit.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

@@ -25,7 +25,7 @@ import SiteFooter from '@/components/v2/SiteFooter'
 
 export const metadata: Metadata = {
   title: 'Shopify Developer Charlotte NC | From $2,999 | FactoryJet',
-  description: "Top-rated Shopify developer in Charlotte, North Carolina: stores live in 7 days from $2,999. Banking capital e-commerce specialists — Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.",
+  description: "Top-rated Shopify developer in Charlotte NC: stores live in 7 days from $2,999. Banking capital e-commerce — Shopify, WooCommerce & AI. 500+ projects. Free audit.",
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

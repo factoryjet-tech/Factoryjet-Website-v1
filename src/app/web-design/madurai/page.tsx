@@ -22,7 +22,7 @@ import FinalCTA from '@/components/v2/FinalCTA'
 
 export const metadata: Metadata = {
   title: 'Professional Web Design Company in Madurai | FactoryJet',
-  description: 'Reliable web design company in Madurai building affordable, performance-focused websites for textile, engineering, healthcare, and retail businesses across Anna Nagar & KK Nagar. 7-day delivery.',
+  description: 'Web design company in Madurai for textile, engineering & retail businesses. Affordable, performance-focused websites. Serving Anna Nagar & KK Nagar. 7-day delivery.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

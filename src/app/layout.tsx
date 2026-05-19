@@ -67,7 +67,7 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   metadataBase: new URL('https://factoryjet.com'),
   title: 'World-Class Web & E-Commerce Development Company | FactoryJet',
-  description: 'FactoryJet is a leading web & eCommerce development company delivering scalable, secure, and high-performance digital solutions. Fast delivery, affordable pricing, 150+ successful projects. Get a free consultation today!',
+  description: 'FactoryJet builds websites, Shopify stores & AI agents for India, US & UK businesses. 7-day delivery, Lighthouse 100, 500+ projects. Free consultation.',
   authors: [{ name: 'FactoryJet' }],
   robots: {
     index: true,

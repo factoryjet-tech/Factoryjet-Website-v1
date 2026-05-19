@@ -27,7 +27,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 export const metadata: Metadata = {
   title: 'Web Design Company in Ahmedabad | From ₹25,000 | FactoryJet',
   description:
-    'FactoryJet is a web design company in Ahmedabad building fast, SEO-optimized websites for textile exporters, trading firms, and growing businesses. From ₹25,000. 7-day delivery. Serving SG Highway, Vastrapur, Bodakdev, and GIFT City.',
+    'Web design company in Ahmedabad for textile exporters & trading firms. Fast websites from ₹25,000. 7-day delivery. Serving SG Highway, Vastrapur & GIFT City.',
   keywords: [
     'web design company in Ahmedabad',
     'website design Ahmedabad',

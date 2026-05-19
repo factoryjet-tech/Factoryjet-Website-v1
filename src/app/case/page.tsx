@@ -6,7 +6,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
   title: 'Case Studies — Real Client Results | FactoryJet',
-  description: 'Explore FactoryJet case studies showcasing successful web development and e-commerce projects. See how we helped businesses achieve exponential growth with modern digital solutions.',
+  description: 'Browse FactoryJet case studies — web development & e-commerce projects with measurable results. See how we've helped 500+ businesses grow online.',
   authors: [{ name: 'FactoryJet' }],
   robots: {
     index: true,

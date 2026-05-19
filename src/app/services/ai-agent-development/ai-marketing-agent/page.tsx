@@ -25,7 +25,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'AI Marketing Agent India | WhatsApp Automation | FactoryJet',
   description:
-    'FactoryJet builds AI marketing agents for Indian businesses — automate Diwali campaigns, WhatsApp broadcasts, social content, and Google/Meta Ads. Festival-aware AI that writes, schedules, and optimises every campaign in Hindi and English.',
+    'AI marketing agents for Indian businesses — automate campaigns, WhatsApp broadcasts & Google/Meta Ads. Festival-aware AI in Hindi & English. Fixed price.',
   keywords: [
     'AI marketing agent India',
     'WhatsApp broadcast automation India',

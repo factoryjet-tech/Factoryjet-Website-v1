@@ -32,7 +32,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'Magento Development — Custom Adobe Commerce | FactoryJet',
   description:
-    'Expert Magento (Adobe Commerce) development for US e-commerce businesses. Custom module development, migrations, performance optimization, and full Magento 2 builds. 60–70% cheaper than US agencies. Free consultation.',
+    'Expert Magento development for US businesses. Custom modules, migrations & performance optimization. 60–70% cheaper than US agencies. Free consultation.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

@@ -24,7 +24,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'AI Agents & Chatbots for Denver CO Businesses | FactoryJet',
   description:
-    'FactoryJet builds custom AI agents and chatbots for Denver small businesses — customer support, lead generation, appointment booking, and e-commerce automation. Built for Denver\'s outdoor, tech, and startup economy. Starting at $3,000. Free strategy call.',
+    'Custom AI agents for Denver businesses — customer support, lead gen & booking. Built for Denver\'s outdoor, tech & startup economy. From $3,000. Free strategy call.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

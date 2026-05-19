@@ -7,7 +7,7 @@ import SiteFooter from '@/components/v2/SiteFooter'
 
 export const metadata: Metadata = {
   title: 'Web Design Services & Pricing in New York City | FactoryJet NYC',
-  description: 'Comprehensive web design and development services in New York City. View our transparent pricing, service packages, and custom solutions for NYC businesses. Get your quote today!',
+  description: 'Web design services in New York City. Transparent pricing, service packages & custom solutions for NYC businesses. Get your free quote today.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

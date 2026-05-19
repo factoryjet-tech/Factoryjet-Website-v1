@@ -25,7 +25,7 @@ import SiteFooter from '@/components/v2/SiteFooter'
 
 export const metadata: Metadata = {
   title: 'Shopify Developer Denver CO | E-Commerce from $2,999 | FactoryJet',
-  description: 'Top-rated Shopify developer in Denver, Colorado: stores live in 7 days from $2,999. Mile High e-commerce specialists — Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
+  description: 'Top-rated Shopify developer in Denver CO: stores live in 7 days from $2,999. Mile High e-commerce — Shopify, WooCommerce & AI. 500+ projects. Free audit.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

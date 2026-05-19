@@ -26,7 +26,7 @@ import { ecommerceCityAlternatesIN } from '@/data/hreflangMap';
 export const metadata: Metadata = {
   title: 'Ecommerce Development in Pune | From ₹59,999 | FactoryJet',
   description:
-    'FactoryJet builds high-converting Shopify, WooCommerce, and custom ecommerce stores for Pune brands. From ₹59,999. Razorpay + UPI + COD. GST-compliant. Shiprocket integrated. 7-day delivery guarantee. Serving Koregaon Park, Hinjewadi, Viman Nagar, Baner, and all of Pune.',
+    'Shopify & WooCommerce stores for Pune brands. From ₹59,999. Razorpay, UPI & COD. GST-compliant. Shiprocket integrated. 7-day delivery guarantee.',
   keywords: [
     'ecommerce development company pune',
     'ecommerce website development pune',

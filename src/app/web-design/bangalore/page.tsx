@@ -27,7 +27,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 export const metadata: Metadata = {
   title: 'Web Design Company in Bangalore | From ₹25,000 | FactoryJet',
   description:
-    'FactoryJet is a web design company in Bangalore building fast, SEO-optimized websites for startups, IT companies, and D2C brands. From ₹25,000. 7-day delivery guarantee. Serving Koramangala, Whitefield, HSR Layout, and Electronic City.',
+    'Web design company in Bangalore for startups, IT firms & D2C brands. Fast, SEO-optimized websites from ₹25,000. 7-day delivery. Serving Koramangala & Whitefield.',
   keywords: [
     'web design company in Bangalore',
     'website design Bangalore',

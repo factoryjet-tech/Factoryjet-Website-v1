@@ -21,7 +21,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'AI Workflow Automation India | Process Automation | FactoryJet',
   description:
-    'FactoryJet builds custom AI workflow automation for Indian businesses — automate Zoho CRM pipelines, Tally entries, GST invoicing, WhatsApp follow-ups, and cross-system data flows. Fixed price. Live in 2–4 weeks.',
+    'AI workflow automation for Indian businesses — automate Zoho CRM, Tally, GST invoicing & WhatsApp follow-ups. Fixed price. Live in 2–4 weeks.',
   keywords: [
     'AI workflow automation India',
     'business process automation India',

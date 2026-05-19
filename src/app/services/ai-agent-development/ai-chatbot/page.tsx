@@ -25,7 +25,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'AI Chatbot Development India | WhatsApp Chatbot | FactoryJet',
   description:
-    'FactoryJet builds custom AI chatbots for Indian businesses — WhatsApp chat agents, website chatbots, and multilingual support bots that connect Zoho, Razorpay, Shopify, and Freshdesk. Fixed price. Live in 2–3 weeks.',
+    'Custom AI chatbots for Indian businesses — WhatsApp agents, website chatbots & multilingual bots. Integrated with Zoho, Razorpay & Shopify. Fixed price.',
   keywords: [
     'AI chatbot development India',
     'WhatsApp chatbot India',

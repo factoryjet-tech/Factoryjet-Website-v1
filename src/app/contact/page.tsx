@@ -6,7 +6,7 @@ import SiteFooter from '@/components/v2/SiteFooter'
 
 export const metadata: Metadata = {
   title: 'Get a Free Quote | FactoryJet',
-  description: 'Get in touch with FactoryJet for web development, e-commerce solutions, and digital services. Call +91 96999 77699 or email connect@factoryjet.com. Free consultation and quotes available.',
+  description: 'Contact FactoryJet for web development, e-commerce & digital services. Call us or email connect@factoryjet.com. Free consultation and quotes available.',
   authors: [{ name: 'FactoryJet' }],
   robots: {
     index: true,

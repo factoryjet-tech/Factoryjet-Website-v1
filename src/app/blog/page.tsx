@@ -24,7 +24,7 @@ const blogListJsonLd = {
 
 export const metadata: Metadata = {
   title: 'Web Development & E-Commerce Blog | FactoryJet',
-  description: 'Discover expert insights on web development, e-commerce, digital marketing, and tech trends. Get actionable tips, tutorials, and industry best practices from FactoryJet.',
+  description: 'Expert insights on web development, e-commerce, digital marketing & tech trends. Actionable tips, tutorials & best practices from FactoryJet.',
   authors: [{ name: 'FactoryJet' }],
   robots: {
     index: true,

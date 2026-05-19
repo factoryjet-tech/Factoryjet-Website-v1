@@ -21,7 +21,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'AI Customer Support Agent India | WhatsApp AI | FactoryJet',
   description:
-    'FactoryJet builds AI customer support agents for Indian businesses — deflect 70%+ of WhatsApp support queries, handle order status, returns, and FAQs in Hindi and English. Integrated with Zoho, Freshdesk, and Shopify. Fixed price.',
+    'AI customer support agents for Indian businesses — deflect 70%+ of WhatsApp queries in Hindi & English. Integrated with Zoho, Freshdesk & Shopify. Fixed price.',
   keywords: [
     'AI customer support India',
     'WhatsApp customer support AI India',

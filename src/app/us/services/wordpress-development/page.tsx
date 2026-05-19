@@ -27,7 +27,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'WordPress Development for US Businesses | FactoryJet',
   description:
-    'FactoryJet is a US-focused WordPress web design agency — custom themes, no page builders, fast load times, and mobile-first builds. Starting at $1,999. 60–70% cheaper than US WordPress agencies.',
+    'US-focused WordPress agency — custom themes, no page builders, fast loads & mobile-first builds. From $1,999. 60–70% cheaper than US WordPress agencies.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

@@ -27,7 +27,7 @@ import Image from 'next/image';
 export const metadata: Metadata = {
   title: 'Web Design Services USA | 7-Day Website Launch | FactoryJet',
   description:
-    'FactoryJet delivers web design services US businesses trust — custom Next.js, WordPress & Shopify websites. Launch in 7 days. Starting at $1,999. Full code ownership. Get a free technical audit.',
+    'Web design services US businesses trust — custom Next.js, WordPress & Shopify. Launch in 7 days from $1,999. Full code ownership. Free technical audit.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

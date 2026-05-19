@@ -7,7 +7,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
   title: 'Web Design in Surat | Professional Websites | FactoryJet',
-  description: 'Award-winning Web Design Company in Surat. Beautiful, conversion-focused websites with modern UI/UX. Mobile-responsive, fast-loading designs. Serving Adajan, Vesu, Pal, Althan & City Light. Free consultation available!',
+  description: 'Web design company in Surat. Conversion-focused websites with modern UI/UX. Mobile-responsive, fast-loading. Serving Adajan, Vesu & Althan. Free consultation.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

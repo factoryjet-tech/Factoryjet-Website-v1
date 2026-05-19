@@ -23,7 +23,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'Web Design Agency USA | 7-Day Delivery from $1,999 | FactoryJet',
   description:
-    'Top-rated US web design agency: custom websites live in 7 days from $1,999 — 60% less than US agencies. Shopify, Next.js, WordPress. 500+ businesses served. Free strategy call.',
+    'Top-rated US web design agency: custom websites live in 7 days from $1,999 — 60% less than US agencies. Shopify & Next.js. 500+ businesses served.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

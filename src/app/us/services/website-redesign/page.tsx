@@ -27,7 +27,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'Website Redesign Services for US Small Businesses | FactoryJet',
   description:
-    'FactoryJet delivers professional website redesign services for US small businesses — faster load times, modern design, and 7-day delivery for up to 5 pages. Starting at $1,499. 60–70% cheaper than US agencies.',
+    'Professional website redesign for US businesses — faster loads, modern design, 7-day delivery for 5 pages. Starting at $1,499. 60–70% cheaper than US agencies.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

@@ -25,7 +25,7 @@ import SiteFooter from '@/components/v2/SiteFooter'
 
 export const metadata: Metadata = {
   title: "Shopify Developer Portland OR | E-Commerce from $2,999 | FactoryJet",
-  description: "Top-rated Shopify developer in Portland, Oregon: stores live in 7 days from $2,999. Oregon has NO sales tax — maximize your margins. Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.",
+  description: "Top-rated Shopify developer in Portland OR: stores live in 7 days from $2,999. Oregon has no sales tax. Shopify, WooCommerce & AI. 500+ projects. Free audit.",
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
