@@ -28,13 +28,13 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns'
 // ─── Metadata ────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development Austin TX | 7-Day Delivery from $1,500 | FactoryJet',
+  title: 'Ecommerce Development Austin TX | From $1,500 | FactoryJet',
   description:
     "Austin's most affordable ecommerce development agency. Shopify, WooCommerce & custom online stores built in 7 days — 60-70% less than local Austin agencies. 500+ stores delivered. Free audit.",
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Ecommerce Development Austin TX | 7-Day Delivery from $1,500 | FactoryJet',
+    title: 'Ecommerce Development Austin TX | From $1,500 | FactoryJet',
     description:
       'Custom Shopify & WooCommerce stores built in 7 days — at 60% less than what Austin agencies charge. 500+ US brands served. No fluff. Just results.',
     url: 'https://factoryjet.com/us/austin/ecommerce-development',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ecommerce Development Austin TX | 7-Day Delivery from $1,500 | FactoryJet',
+    title: 'Ecommerce Development Austin TX | From $1,500 | FactoryJet',
     description:
       'Custom Shopify & WooCommerce stores built in 7 days — 60% less than Austin agencies. 500+ stores delivered.',
     images: ['https://factoryjet.com/logo.png'],

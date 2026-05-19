@@ -5,7 +5,7 @@ import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 
 export const metadata: Metadata = {
-  title: 'Transparent Pricing Plans | Web & E-Commerce Development Packages | FactoryJet',
+  title: 'Web & Ecommerce Pricing | Packages from $1,500 | FactoryJet',
   description: 'Explore FactoryJet pricing plans for web development and e-commerce solutions. Transparent, affordable packages starting from ₹15,000. Custom quotes available for enterprise projects.',
   authors: [{ name: 'FactoryJet' }],
   robots: {

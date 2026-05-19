@@ -19,12 +19,12 @@ import FinalCTA from '@/components/v2/FinalCTA'
 import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
 
 export const metadata: Metadata = {
-  title: 'Shopify Developer Boise ID | E-Commerce Website from $2,999 | FactoryJet',
+  title: 'Shopify Developer Boise ID | From $2,999 | FactoryJet',
   description: 'Best Shopify developer in Boise, Idaho: e-commerce websites live in 7 days from $2,999. Treasure Valley specialists — Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Developer Boise ID | E-Commerce Website from $2,999 | FactoryJet',
+    title: 'Shopify Developer Boise ID | From $2,999 | FactoryJet',
     description: 'Best Shopify developer in Boise, Idaho: e-commerce websites live in 7 days from $2,999. Treasure Valley specialists — Shopify, WooCommerce & AI. Free audit.',
     url: 'https://factoryjet.com/us/boise/ecommerce-development',
     images: [
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify Developer Boise ID | E-Commerce from $2,999 | FactoryJet',
+    title: 'Shopify Developer Boise ID | From $2,999 | FactoryJet',
     description: 'Best Shopify developer in Boise Idaho: stores live in 7 days from $2,999. Treasure Valley e-commerce specialists. Free audit.',
     images: ['https://factoryjet.com/logo.png'],
   },

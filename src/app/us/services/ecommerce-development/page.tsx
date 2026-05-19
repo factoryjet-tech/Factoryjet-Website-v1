@@ -26,7 +26,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'E-Commerce Development USA | Shopify, WooCommerce & Custom Stores | FactoryJet',
+  title: 'Ecommerce Development USA | Shopify & Custom Stores | FactoryJet',
   description:
     'FactoryJet builds high-converting e-commerce stores for US businesses — Shopify, WooCommerce, BigCommerce, and custom Next.js Commerce. Mobile-first, Lighthouse 95+, 60–70% cheaper than US agencies. Starting at $3,999.',
   openGraph: {

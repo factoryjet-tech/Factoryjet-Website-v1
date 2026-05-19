@@ -25,7 +25,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns'
 
 
 export const metadata: Metadata = {
-  title: 'Web Design Austin TX | Websites in 7 Days from $1,500 — 60% Less | FactoryJet',
+  title: 'Web Design Austin TX | 7 Days from $1,500 | FactoryJet',
   description: 'FactoryJet builds fast, conversion-focused websites for Austin businesses — from $1,500. 7-day delivery on Starter sites. Next.js, SEO, and GA4 included.',
   alternates: {
     canonical: 'https://factoryjet.com/us/austin/web-design',

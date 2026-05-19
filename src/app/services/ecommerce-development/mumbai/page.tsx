@@ -24,7 +24,7 @@ import { ecommerceCityAlternatesIN } from '@/data/hreflangMap';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development Company in Mumbai | From ₹59,999 | Shopify, WooCommerce & AI Stores | FactoryJet',
+  title: 'Ecommerce Development in Mumbai | From ₹59,999 | FactoryJet',
   description:
     'FactoryJet builds high-converting Shopify, WooCommerce, and AI-native ecommerce stores for Mumbai brands. From ₹59,999. Razorpay + UPI + COD. GST-compliant. Shiprocket integrated. 7-day delivery guarantee. Serving Andheri, BKC, Bandra, and all of MMR.',
   keywords: [

@@ -24,7 +24,7 @@ import { ecommerceCityAlternatesIN } from '@/data/hreflangMap';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development Company in Chennai | From ₹59,999 | Shopify, WooCommerce & Custom Stores | FactoryJet',
+  title: 'Ecommerce Development in Chennai | From ₹59,999 | FactoryJet',
   description:
     'FactoryJet builds high-converting Shopify, WooCommerce, and custom ecommerce stores for Chennai brands. From ₹59,999. Razorpay + UPI + COD. GST-compliant. Shiprocket integrated. 7-day delivery guarantee. Serving Anna Nagar, T. Nagar, Velachery, OMR, and all of Chennai.',
   keywords: [

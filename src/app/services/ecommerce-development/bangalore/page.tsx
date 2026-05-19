@@ -24,7 +24,7 @@ import { ecommerceCityAlternatesIN } from '@/data/hreflangMap';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development Company in Bangalore | From ₹59,999 | Shopify, WooCommerce & Custom Stores | FactoryJet',
+  title: 'Ecommerce Development in Bangalore | From ₹59,999 | FactoryJet',
   description:
     'FactoryJet builds high-converting Shopify, WooCommerce, and custom ecommerce stores for Bangalore brands. From ₹59,999. Razorpay + UPI + COD. GST-compliant. Shiprocket integrated. 7-day delivery guarantee. Serving Whitefield, Koramangala, HSR Layout, Indiranagar, and all of Bangalore.',
   keywords: [

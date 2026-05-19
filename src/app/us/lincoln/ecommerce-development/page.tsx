@@ -19,12 +19,12 @@ import FinalCTA from '@/components/v2/FinalCTA'
 import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
 
 export const metadata: Metadata = {
-  title: 'Shopify Agency Lincoln NE | E-Commerce Development from $2,999 | FactoryJet',
+  title: 'Shopify Agency Lincoln NE | From $2,999 | FactoryJet',
   description: 'Top-rated Shopify agency in Lincoln, Nebraska: stores live in 7 days from $2,999. Silicon Prairie e-commerce specialists — Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Agency Lincoln NE | E-Commerce Development from $2,999 | FactoryJet',
+    title: 'Shopify Agency Lincoln NE | From $2,999 | FactoryJet',
     description: 'Top-rated Shopify agency in Lincoln, Nebraska: stores live in 7 days from $2,999. Silicon Prairie specialists — Shopify, WooCommerce & AI. Free audit.',
     url: 'https://factoryjet.com/us/lincoln/ecommerce-development',
     images: [
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify Agency Lincoln NE | E-Commerce from $2,999 | FactoryJet',
+    title: 'Shopify Agency Lincoln NE | From $2,999 | FactoryJet',
     description: 'Top-rated Shopify agency in Lincoln NE: stores live in 7 days from $2,999. Silicon Prairie e-commerce specialists. Free audit.',
     images: ['https://factoryjet.com/logo.png'],
   },

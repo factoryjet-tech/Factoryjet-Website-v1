@@ -23,7 +23,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'AI Marketing Agent India | WhatsApp Campaign Automation for Indian Businesses | FactoryJet',
+  title: 'AI Marketing Agent India | WhatsApp Automation | FactoryJet',
   description:
     'FactoryJet builds AI marketing agents for Indian businesses — automate Diwali campaigns, WhatsApp broadcasts, social content, and Google/Meta Ads. Festival-aware AI that writes, schedules, and optimises every campaign in Hindi and English.',
   keywords: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'AI Marketing Agent India | WhatsApp Campaign Automation | FactoryJet',
+    title: 'AI Marketing Agent India | WhatsApp Automation | FactoryJet',
     description:
       'AI that plans, writes, and sends your Diwali campaign — while you run your business. WhatsApp broadcasts, social content, and ad optimisation built for India.',
     url: 'https://factoryjet.com/services/ai-agent-development/ai-marketing-agent',

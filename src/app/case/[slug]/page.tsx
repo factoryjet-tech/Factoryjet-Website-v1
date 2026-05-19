@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${caseStudy.title} - Case Study | FactoryJet`,
+    title: caseStudy.metaTitle ?? `${caseStudy.title} - Case Study | FactoryJet`,
     description: caseStudy.snippet,
     authors: [{ name: 'FactoryJet' }],
     robots: {

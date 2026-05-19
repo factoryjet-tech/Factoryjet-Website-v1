@@ -25,13 +25,13 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Law Firm Website Design for US Attorneys & Legal Practices | FactoryJet',
+  title: 'Law Firm Website Design for US Attorneys | FactoryJet',
   description:
     'FactoryJet designs professional law firm websites that rank in local search, build credibility with prospective clients, and convert visitors into consultations. Starting at $2,499. 60–70% cheaper than US legal web design agencies.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Law Firm Website Design for US Attorneys & Legal Practices | FactoryJet',
+    title: 'Law Firm Website Design for US Attorneys | FactoryJet',
     description:
       'Professional attorney website design built to rank, build trust, and generate consultation requests. FactoryJet — 60–70% cheaper than US legal web agencies.',
     url: 'https://factoryjet.com/us/services/law-firm-website-design',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Law Firm Website Design for US Attorneys & Legal Practices | FactoryJet',
+    title: 'Law Firm Website Design for US Attorneys | FactoryJet',
     description:
       'Law firm websites that rank locally, build trust, and convert visitors into consultations. FactoryJet — 60–70% cheaper than US legal web agencies. Free consultation.',
     images: ['https://factoryjet.com/logo.png'],

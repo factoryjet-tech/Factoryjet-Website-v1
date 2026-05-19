@@ -19,7 +19,7 @@ export const AUTHORS: Record<string, AuthorProfile> = {
 'Bhavesh Barot': {
   name: 'Bhavesh Barot',
   slug: 'bhavesh-barot',
-  jobTitle: 'Founder & CEO at FactoryJet | Web Design Agency for US & UK Small Businesses',
+  jobTitle: 'Founder & CEO',
   bio: 'Bhavesh Barot is the Founder and CEO of FactoryJet, a web design and e-commerce development agency that has served 500+ businesses across the US, UK, and UAE since 1999. Under his leadership, FactoryJet has delivered professional websites, Shopify stores, and custom web applications for small businesses, DTC brands, law firms, real estate agencies, and professional service providers — consistently achieving Lighthouse 100/100 performance scores and Core Web Vitals compliance. Bhavesh brings 25+ years of digital strategy and business development experience to his writing, with direct exposure to how website quality affects lead generation, conversion rates, and organic search visibility for small businesses. He has evaluated hundreds of web design agency proposals, developed FactoryJet\'s 7-day delivery methodology, and built the pricing frameworks that allow US small businesses to access enterprise-grade web development at 60–70% below typical US agency rates. His work has been informed by direct client relationships across Austin TX, Miami FL, Denver CO, Nashville TN, and other US markets.',
   shortBio: 'Founder & CEO of FactoryJet — web design and e-commerce agency serving 500+ US, UK, and UAE businesses since 1999. Expert in small business website strategy, Shopify development, and Core Web Vitals optimization.',
   yearsExperience: '25+',
@@ -69,7 +69,7 @@ export const AUTHORS: Record<string, AuthorProfile> = {
   'Rajesh Kumar': {
     name: 'Rajesh Kumar',
     slug: 'rajesh-kumar',
-    jobTitle: 'Full-Stack Developer & Enterprise Solutions Architect',
+    jobTitle: 'Full-Stack Developer',
     bio: 'Rajesh Kumar is a full-stack developer and enterprise solutions architect with 10+ years of hands-on experience building scalable web applications, ERP integrations, and e-commerce platforms. He has worked with Fortune 500 companies and high-growth startups alike, specializing in Next.js, React, and cloud-native architectures. Rajesh brings deep technical expertise in API design, database optimization, and frontend performance to every piece he writes.',
     shortBio: 'Full-Stack Developer with 10+ years of experience in enterprise web solutions.',
     yearsExperience: '10+',
@@ -95,7 +95,7 @@ export const AUTHORS: Record<string, AuthorProfile> = {
   'Vikram Malhotra': {
     name: 'Vikram Malhotra',
     slug: 'vikram-malhotra',
-    jobTitle: 'UX Designer & Conversion Optimization Specialist',
+    jobTitle: 'UX Designer',
     bio: 'Vikram Malhotra is a UX designer and conversion optimization specialist with 7+ years of experience crafting high-converting digital experiences for B2B and B2C brands. His work spans user research, design systems, A/B testing, and data-driven UX strategy. Vikram has helped businesses increase conversion rates by up to 300% through evidence-based design decisions, trust signal architecture, and behavioral psychology principles applied to web interfaces.',
     shortBio: 'UX Designer with 7+ years of experience in conversion optimization and design strategy.',
     yearsExperience: '7+',
@@ -121,7 +121,7 @@ export const AUTHORS: Record<string, AuthorProfile> = {
   'Priya Singh': {
     name: 'Priya Singh',
     slug: 'priya-singh',
-    jobTitle: 'Mobile-First Strategist & Digital Marketing Expert',
+    jobTitle: 'Mobile-First Strategist',
     bio: 'Priya Singh is a mobile-first strategist and digital marketing expert with 5+ years of experience in mobile UX, voice search optimization, and omnichannel marketing. She specializes in helping Indian businesses leverage WhatsApp Business, mobile commerce, and vernacular content strategies to reach wider audiences. Priya combines marketing automation expertise with deep understanding of mobile user behavior to create strategies that drive measurable engagement and revenue growth.',
     shortBio: 'Mobile-First Strategist with 5+ years of experience in digital marketing and mobile UX.',
     yearsExperience: '5+',
@@ -147,7 +147,7 @@ export const AUTHORS: Record<string, AuthorProfile> = {
   'Anjali Gupta': {
     name: 'Anjali Gupta',
     slug: 'anjali-gupta',
-    jobTitle: 'Web Performance Engineer & Core Web Vitals Specialist',
+    jobTitle: 'Web Performance Engineer',
     bio: 'Anjali Gupta is a web performance engineer with 6+ years of experience optimizing website speed, Core Web Vitals, and image delivery pipelines for high-traffic websites. She has worked with e-commerce platforms processing millions of monthly visitors, specializing in lazy loading strategies, CDN architecture, and next-gen image formats. Anjali is passionate about making the web faster and more accessible for users on all devices and connection speeds.',
     shortBio: 'Web Performance Engineer with 6+ years of experience in Core Web Vitals and speed optimization.',
     yearsExperience: '6+',

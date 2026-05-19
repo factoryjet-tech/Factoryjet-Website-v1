@@ -19,7 +19,7 @@ import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 
 export const metadata: Metadata = {
-  title: 'AI Voice Agent India | Hindi AI Calling Bot for Indian Businesses | FactoryJet',
+  title: 'AI Voice Agent India | Hindi AI Calling Bot | FactoryJet',
   description:
     'FactoryJet builds AI voice agents for Indian businesses — Hindi-speaking AI callers for lead qualification, appointment booking, collection follow-ups, and inbound IVR. Fixed price. Live in 3–5 weeks.',
   keywords: [

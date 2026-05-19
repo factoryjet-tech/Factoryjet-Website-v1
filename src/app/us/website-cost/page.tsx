@@ -29,7 +29,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'How Much Does a Website Cost in 2025? | Squarespace, Wix, WordPress & Custom Pricing',
+  title: 'How Much Does a Website Cost in 2025? | FactoryJet',
   description:
     'Honest website cost breakdown for US small businesses. Squarespace from $16/mo. Wix from $17/mo. Custom websites from $1,999. See what you actually get at each price point — and what agencies won\'t tell you.',
   openGraph: {

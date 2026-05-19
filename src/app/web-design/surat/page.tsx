@@ -21,7 +21,7 @@ import FAQ from '@/components/v2/FAQ'
 import FinalCTA from '@/components/v2/FinalCTA'
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Surat | Diamond & Textile Businesses | FactoryJet',
+  title: 'Web Design in Surat | Diamond & Textile | FactoryJet',
   description: 'Professional web design company in Surat building fast, export-ready websites for diamond, textile, and MSME businesses in Adajan, Vesu & GIDC Sachin. 7-day delivery.',
   openGraph: {
     type: 'website',

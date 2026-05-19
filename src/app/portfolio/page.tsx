@@ -5,7 +5,7 @@ import SiteFooter from '@/components/v2/SiteFooter'
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
-  title: 'Portfolio - Websites We\'ve Built for Ambitious Brands | FactoryJet',
+  title: 'Our Portfolio — 500+ Websites Built | FactoryJet',
   description: 'Explore FactoryJet\'s portfolio of stunning websites — from e-commerce stores to SaaS platforms. See the diverse range of projects we\'ve delivered for businesses worldwide.',
   authors: [{ name: 'FactoryJet' }],
   robots: {

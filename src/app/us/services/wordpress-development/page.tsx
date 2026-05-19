@@ -25,13 +25,13 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'WordPress Website Design & Development Agency for US Businesses | FactoryJet',
+  title: 'WordPress Development for US Businesses | FactoryJet',
   description:
     'FactoryJet is a US-focused WordPress web design agency — custom themes, no page builders, fast load times, and mobile-first builds. Starting at $1,999. 60–70% cheaper than US WordPress agencies.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'WordPress Website Design & Development Agency for US Businesses | FactoryJet',
+    title: 'WordPress Development for US Businesses | FactoryJet',
     description:
       'Custom WordPress websites for US small businesses — no page builders, fast loads, built to rank. FactoryJet: 60–70% cheaper than a US WordPress agency.',
     url: 'https://factoryjet.com/us/services/wordpress-development',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'WordPress Website Design & Development Agency for US Businesses | FactoryJet',
+    title: 'WordPress Development for US Businesses | FactoryJet',
     description:
       'Custom WordPress. No page builders. Fast, mobile-first, SEO-ready. FactoryJet — 60–70% cheaper than US WordPress agencies. Free consultation.',
     images: ['https://factoryjet.com/logo.png'],

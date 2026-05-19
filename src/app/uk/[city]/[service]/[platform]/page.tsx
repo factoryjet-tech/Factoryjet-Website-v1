@@ -30,11 +30,19 @@ export async function generateMetadata({
 
   if (!city || !service) return {}
 
-  const platformName = platform.charAt(0).toUpperCase() + platform.slice(1)
+  const platformDisplayNames: Record<string, string> = {
+    wordpress:   'WordPress',
+    shopify:     'Shopify',
+    webflow:     'Webflow',
+    nextjs:      'Next.js',
+    framer:      'Framer',
+    woocommerce: 'WooCommerce',
+  }
+  const platformName = platformDisplayNames[platform] ?? (platform.charAt(0).toUpperCase() + platform.slice(1))
 
   return {
-    title: `${platformName} Developer in ${city.name} | FactoryJet`,
-    description: `Expert ${platformName} development in ${city.name}. ${service.tagline}. Get a free quote today.`,
+    title: `${platformName} ${service.name} in ${city.name} | FactoryJet`,
+    description: `Looking for ${platformName} ${service.name.toLowerCase()} in ${city.name}? FactoryJet delivers expert ${platformName} solutions — ${service.tagline.toLowerCase()}. Get a free quote today.`,
     alternates: {
       canonical: `https://factoryjet.com/uk/${city.slug}/${service.slug}/${platform}`
     }

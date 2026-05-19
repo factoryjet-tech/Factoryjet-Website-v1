@@ -25,13 +25,13 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in India | 7-Day Websites From ₹40,000 | FactoryJet',
+  title: 'Web Design Company in India | From ₹40,000 | FactoryJet',
   description:
     'FactoryJet builds high-performance, conversion-focused websites for Indian businesses — from ₹40,000. Mobile-first, Lighthouse 100, Next.js & WordPress. 7-day delivery. Full code ownership.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in India | 7-Day Websites From ₹40,000 | FactoryJet',
+    title: 'Web Design Company in India | From ₹40,000 | FactoryJet',
     description:
       'Custom websites for Indian businesses. Next.js, WordPress & Shopify. 7-day delivery. Mobile-first, Lighthouse 100. From ₹40,000.',
     url: 'https://factoryjet.com/services/web-design',

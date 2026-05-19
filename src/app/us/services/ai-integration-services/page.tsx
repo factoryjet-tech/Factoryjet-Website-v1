@@ -22,7 +22,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'AI Integration Services USA | Connect AI to Your Business Tools | FactoryJet',
+  title: 'AI Integration Services USA | Business Automation | FactoryJet',
   description:
     'FactoryJet connects AI capabilities to your existing business software — CRM, e-commerce, ERP, and custom apps. Add AI to tools you already use. Starting at $3,500. Free strategy call.',
   openGraph: {

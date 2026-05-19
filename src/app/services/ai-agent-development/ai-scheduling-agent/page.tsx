@@ -19,7 +19,7 @@ import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 
 export const metadata: Metadata = {
-  title: 'AI Scheduling Agent India | WhatsApp Appointment Booking AI for Indian Businesses | FactoryJet',
+  title: 'AI Scheduling Agent India | WhatsApp Booking | FactoryJet',
   description:
     'FactoryJet builds AI scheduling agents for Indian businesses — automate appointment booking, site visit scheduling, demo booking, and WhatsApp-based calendar management. Integrated with Zoho, Google Calendar, and Razorpay. Fixed price.',
   keywords: [

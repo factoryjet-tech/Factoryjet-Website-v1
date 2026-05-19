@@ -5,7 +5,7 @@ import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 
 export const metadata: Metadata = {
-  title: 'About Us - Leading Web & E-Commerce Development Company | FactoryJet',
+  title: 'About Us — Web & Ecommerce Agency | FactoryJet',
   description: 'Learn about FactoryJet - a trusted web and e-commerce development company with 150+ successful projects. Meet our expert team, discover our mission to empower businesses, and see why companies choose us for their digital transformation.',
   authors: [{ name: 'FactoryJet' }],
   robots: {

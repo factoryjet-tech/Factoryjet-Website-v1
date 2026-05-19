@@ -24,12 +24,12 @@ import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 
 export const metadata: Metadata = {
-  title: 'Shopify Developer Charlotte NC | E-Commerce from $2,999 | FactoryJet',
+  title: 'Shopify Developer Charlotte NC | From $2,999 | FactoryJet',
   description: "Top-rated Shopify developer in Charlotte, North Carolina: stores live in 7 days from $2,999. Banking capital e-commerce specialists — Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.",
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Developer Charlotte NC | E-Commerce from $2,999 | FactoryJet',
+    title: 'Shopify Developer Charlotte NC | From $2,999 | FactoryJet',
     description: "Top-rated Shopify developer in Charlotte, North Carolina: stores live in 7 days from $2,999. Banking capital e-commerce specialists — Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.",
     url: 'https://factoryjet.com/us/charlotte/ecommerce-development',
     images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet - Shopify Developer Charlotte' }],
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify Developer Charlotte NC | E-Commerce from $2,999 | FactoryJet',
+    title: 'Shopify Developer Charlotte NC | From $2,999 | FactoryJet',
     description: "Top-rated Shopify developer in Charlotte, NC: stores live in 7 days from $2,999. Banking capital e-commerce specialists — Shopify, WooCommerce & AI.",
     images: ['https://factoryjet.com/logo.png'],
   },

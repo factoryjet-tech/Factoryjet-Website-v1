@@ -6,7 +6,7 @@ import SiteFooter from '@/components/v2/SiteFooter'
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Surat | Professional Website Design Services | FactoryJet',
+  title: 'Web Design in Surat | Professional Websites | FactoryJet',
   description: 'Award-winning Web Design Company in Surat. Beautiful, conversion-focused websites with modern UI/UX. Mobile-responsive, fast-loading designs. Serving Adajan, Vesu, Pal, Althan & City Light. Free consultation available!',
   openGraph: {
     type: 'website',

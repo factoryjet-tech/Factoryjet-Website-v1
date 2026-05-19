@@ -14,7 +14,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design & Development Services for US Small Businesses | FactoryJet',
+  title: 'Web Design Services for US Small Businesses | FactoryJet',
   description:
     'FactoryJet builds custom websites, Shopify stores, AI agents, and web applications for US small businesses. 7-day delivery, 60–70% less than US agencies. Fixed price, full code ownership. Serving Austin, Miami, Denver, Nashville & more.',
   alternates: { canonical: 'https://factoryjet.com/us/services' },

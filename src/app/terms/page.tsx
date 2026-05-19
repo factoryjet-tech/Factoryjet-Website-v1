@@ -48,6 +48,7 @@ export default function Page() {
   return (
     <>
       <SiteHeader locale="in" />
+      <h1 className="sr-only">Terms and Conditions</h1>
       <TermsAndConditions />
       <SiteFooter locale="in" />
     </>

@@ -19,6 +19,7 @@ export interface CaseStudy {
   category: 'E-Comm' | 'SaaS' | 'Manufacturing' | 'FinTech' | 'Real Estate' | 'Healthcare' | 'EdTech' | 'Logistics' | 'Corporate' | 'Construction' | 'Other';
   image: string;
   title: string;
+  metaTitle?: string;
   snippet: string;
   challenge: string;
   solution: string;

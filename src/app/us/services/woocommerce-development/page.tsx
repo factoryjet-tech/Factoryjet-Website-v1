@@ -30,7 +30,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 --------------------------------------------------------------------------─-- */
 
 export const metadata: Metadata = {
-  title: 'WooCommerce Development Services — Custom Stores & Plugins | FactoryJet',
+  title: 'WooCommerce Development — Custom Stores & Plugins | FactoryJet',
   description:
     'Expert WooCommerce development for US e-commerce businesses. Custom store builds, plugin development, theme customization, payment integrations, and performance optimization. 60–70% cheaper than US agencies. Free consultation.',
   openGraph: {

@@ -20,7 +20,7 @@ import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 
 export const metadata: Metadata = {
-  title: 'Website Design Cost & Pricing | How Much Does a Website Cost? | FactoryJet',
+  title: 'Website Design & Ecommerce Pricing | FactoryJet',
   description:
     'Transparent website design pricing for US small businesses. 5-page site from $1,499. Shopify stores from $2,999. Fixed price, 7-day delivery, 60–70% below US agency rates. Get a free quote.',
   openGraph: {

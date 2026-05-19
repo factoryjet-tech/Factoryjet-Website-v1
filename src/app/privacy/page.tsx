@@ -48,6 +48,7 @@ export default function Page() {
   return (
     <>
       <SiteHeader locale="in" />
+      <h1 className="sr-only">Privacy Policy</h1>
       <PrivacyPolicy />
       <SiteFooter locale="in" />
     </>

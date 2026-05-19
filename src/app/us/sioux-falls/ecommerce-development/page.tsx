@@ -19,12 +19,12 @@ import FinalCTA from '@/components/v2/FinalCTA'
 import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
 
 export const metadata: Metadata = {
-  title: 'Shopify Developer Sioux Falls SD | E-Commerce from $2,999 | FactoryJet',
+  title: 'Shopify Developer Sioux Falls SD | From $2,999 | FactoryJet',
   description: 'Top-rated Shopify developer in Sioux Falls, South Dakota: stores live in 7 days from $2,999. Zero state income tax = higher margins. Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Developer Sioux Falls SD | E-Commerce from $2,999 | FactoryJet',
+    title: 'Shopify Developer Sioux Falls SD | From $2,999 | FactoryJet',
     description: 'Top-rated Shopify developer in Sioux Falls SD: stores live in 7 days from $2,999. Zero state income tax = higher e-commerce margins. Free audit.',
     url: 'https://factoryjet.com/us/sioux-falls/ecommerce-development',
     images: [
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify Developer Sioux Falls SD | E-Commerce from $2,999 | FactoryJet',
+    title: 'Shopify Developer Sioux Falls SD | From $2,999 | FactoryJet',
     description: 'Top-rated Shopify developer in Sioux Falls SD: stores live in 7 days from $2,999. Zero state income tax. Free audit.',
     images: ['https://factoryjet.com/logo.png'],
   },

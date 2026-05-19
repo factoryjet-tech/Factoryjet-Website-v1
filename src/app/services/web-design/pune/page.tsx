@@ -6,7 +6,7 @@ import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 
 export const metadata: Metadata = {
-  title: 'Trusted Website Design Company in Pune | Custom Web Design Services',
+  title: 'Web Design Company in Pune | Custom Web Design | FactoryJet',
   description: 'Looking for a website design company in Pune? We build fast, conversion-driven websites for businesses in Hinjewadi, Kharadi & Wakad. Free consultation.',
   openGraph: {
     type: 'website',

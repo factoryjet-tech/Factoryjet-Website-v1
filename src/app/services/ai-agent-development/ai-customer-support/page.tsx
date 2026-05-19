@@ -19,7 +19,7 @@ import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 
 export const metadata: Metadata = {
-  title: 'AI Customer Support Agent India | WhatsApp Support AI for Indian Businesses | FactoryJet',
+  title: 'AI Customer Support Agent India | WhatsApp AI | FactoryJet',
   description:
     'FactoryJet builds AI customer support agents for Indian businesses — deflect 70%+ of WhatsApp support queries, handle order status, returns, and FAQs in Hindi and English. Integrated with Zoho, Freshdesk, and Shopify. Fixed price.',
   keywords: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'AI Customer Support Agent India | WhatsApp Support AI | FactoryJet',
+    title: 'AI Customer Support Agent India | WhatsApp AI | FactoryJet',
     description: 'Deflect 70%+ of WhatsApp support queries with AI. Order status, returns, FAQs in Hindi — integrated with Zoho Desk, Freshdesk, and Shopify.',
     url: 'https://factoryjet.com/services/ai-agent-development/ai-customer-support',
     images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet - AI Customer Support Agent India' }],

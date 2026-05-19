@@ -48,6 +48,7 @@ export default function Page() {
   return (
     <>
       <SiteHeader locale="in" />
+      <h1 className="sr-only">Refund Policy</h1>
       <RefundPolicy />
       <SiteFooter locale="in" />
     </>

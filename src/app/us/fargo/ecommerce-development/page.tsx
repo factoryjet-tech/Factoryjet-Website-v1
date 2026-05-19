@@ -19,12 +19,12 @@ import FinalCTA from '@/components/v2/FinalCTA'
 import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
 
 export const metadata: Metadata = {
-  title: 'Shopify Developer Fargo ND | E-Commerce Development from $2,999 | FactoryJet',
+  title: 'Shopify Developer Fargo ND | From $2,999 | FactoryJet',
   description: 'Best Shopify developer in Fargo, North Dakota: stores live in 7 days from $2,999. Silicon Prairie e-commerce specialists — Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Developer Fargo ND | E-Commerce Development from $2,999 | FactoryJet',
+    title: 'Shopify Developer Fargo ND | From $2,999 | FactoryJet',
     description: 'Best Shopify developer in Fargo, North Dakota: stores live in 7 days from $2,999. Silicon Prairie e-commerce specialists — Shopify, WooCommerce & AI. Free audit.',
     url: 'https://factoryjet.com/us/fargo/ecommerce-development',
     images: [

@@ -23,7 +23,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'AI Agent Development Services USA | Custom AI Agents for Business | FactoryJet',
+  title: 'AI Agent Development USA | Custom AI Agents | FactoryJet',
   description:
     'FactoryJet builds custom AI agents, AI automation, and AI-native software for US small businesses. Cut 60–70% of manual work. Delivered in weeks, not months. Starting at $5,000. Free AI strategy call.',
   openGraph: {

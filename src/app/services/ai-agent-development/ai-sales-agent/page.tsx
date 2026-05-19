@@ -23,7 +23,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'AI Sales Agent India | WhatsApp Lead Qualification AI for Indian Businesses | FactoryJet',
+  title: 'AI Sales Agent India | WhatsApp Lead Gen | FactoryJet',
   description:
     'FactoryJet builds AI sales agents for Indian businesses — WhatsApp lead qualification, automated follow-ups, demo booking, and CRM updates integrated with Zoho, LeadSquared, and Razorpay. Fixed price. Live in 2–4 weeks.',
   keywords: [

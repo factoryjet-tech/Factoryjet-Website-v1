@@ -27,14 +27,14 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Shopify Development Services USA | Custom Shopify Stores | FactoryJet',
+  title: 'Shopify Development USA | Custom Shopify Stores | FactoryJet',
   description:
     'FactoryJet builds custom Shopify and Shopify Plus stores for US DTC brands, B2B merchants, and e-commerce businesses. Custom themes, migrations, headless commerce. 60–70% cheaper than US agencies. Starting at $3,999.',
   authors: [{ name: 'FactoryJet' }],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Development Services USA | Custom Shopify Stores | FactoryJet',
+    title: 'Shopify Development USA | Custom Shopify Stores | FactoryJet',
     description:
       'Custom Shopify and Shopify Plus development for US brands. Custom themes, store migrations, headless commerce. 60–70% cheaper than US Shopify agencies.',
     url: 'https://factoryjet.com/us/services/shopify-development',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify Development Services USA | Custom Shopify Stores | FactoryJet',
+    title: 'Shopify Development USA | Custom Shopify Stores | FactoryJet',
     description:
       'Custom Shopify and Shopify Plus stores for US DTC brands. 60–70% cheaper. Starting at $3,999.',
     images: ['https://factoryjet.com/logo.png'],
