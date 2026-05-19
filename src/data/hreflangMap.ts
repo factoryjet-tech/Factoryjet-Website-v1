@@ -235,57 +235,57 @@ export const webDesignPriorityCityAlternatesUS = {
 // ---------------------------------------------------------------------------
 
 export const ecommerceCityAlternatesUS: Record<string, { 'en-US': string; 'x-default': string }> = {
-  'boise': {
-    'en-US': 'https://factoryjet.com/us/services/ecommerce-development/boise',
-    'x-default': 'https://factoryjet.com/us/services/ecommerce-development/boise',
-  },
-  'sioux-falls': {
-    'en-US': 'https://factoryjet.com/us/services/ecommerce-development/sioux-falls',
-    'x-default': 'https://factoryjet.com/us/services/ecommerce-development/sioux-falls',
-  },
-  'lincoln': {
-    'en-US': 'https://factoryjet.com/us/services/ecommerce-development/lincoln',
-    'x-default': 'https://factoryjet.com/us/services/ecommerce-development/lincoln',
-  },
-  'chattanooga': {
-    'en-US': 'https://factoryjet.com/us/services/ecommerce-development/chattanooga',
-    'x-default': 'https://factoryjet.com/us/services/ecommerce-development/chattanooga',
-  },
-  'fargo': {
-    'en-US': 'https://factoryjet.com/us/services/ecommerce-development/fargo',
-    'x-default': 'https://factoryjet.com/us/services/ecommerce-development/fargo',
-  },
   'austin': {
-    'en-US': 'https://factoryjet.com/us/services/ecommerce-development/austin',
-    'x-default': 'https://factoryjet.com/us/services/ecommerce-development/austin',
+    'en-US': 'https://factoryjet.com/us/austin/ecommerce-development',
+    'x-default': 'https://factoryjet.com/us/austin/ecommerce-development',
   },
-  'miami': {
-    'en-US': 'https://factoryjet.com/us/services/ecommerce-development/miami',
-    'x-default': 'https://factoryjet.com/us/services/ecommerce-development/miami',
-  },
-  'denver': {
-    'en-US': 'https://factoryjet.com/us/services/ecommerce-development/denver',
-    'x-default': 'https://factoryjet.com/us/services/ecommerce-development/denver',
-  },
-  'nashville': {
-    'en-US': 'https://factoryjet.com/us/services/ecommerce-development/nashville',
-    'x-default': 'https://factoryjet.com/us/services/ecommerce-development/nashville',
-  },
-  'portland': {
-    'en-US': 'https://factoryjet.com/us/services/ecommerce-development/portland',
-    'x-default': 'https://factoryjet.com/us/services/ecommerce-development/portland',
+  'boise': {
+    'en-US': 'https://factoryjet.com/us/boise/ecommerce-development',
+    'x-default': 'https://factoryjet.com/us/boise/ecommerce-development',
   },
   'charlotte': {
-    'en-US': 'https://factoryjet.com/us/services/ecommerce-development/charlotte',
-    'x-default': 'https://factoryjet.com/us/services/ecommerce-development/charlotte',
+    'en-US': 'https://factoryjet.com/us/charlotte/ecommerce-development',
+    'x-default': 'https://factoryjet.com/us/charlotte/ecommerce-development',
+  },
+  'chattanooga': {
+    'en-US': 'https://factoryjet.com/us/chattanooga/ecommerce-development',
+    'x-default': 'https://factoryjet.com/us/chattanooga/ecommerce-development',
+  },
+  'denver': {
+    'en-US': 'https://factoryjet.com/us/denver/ecommerce-development',
+    'x-default': 'https://factoryjet.com/us/denver/ecommerce-development',
+  },
+  'fargo': {
+    'en-US': 'https://factoryjet.com/us/fargo/ecommerce-development',
+    'x-default': 'https://factoryjet.com/us/fargo/ecommerce-development',
+  },
+  'lincoln': {
+    'en-US': 'https://factoryjet.com/us/lincoln/ecommerce-development',
+    'x-default': 'https://factoryjet.com/us/lincoln/ecommerce-development',
+  },
+  'miami': {
+    'en-US': 'https://factoryjet.com/us/miami/ecommerce-development',
+    'x-default': 'https://factoryjet.com/us/miami/ecommerce-development',
+  },
+  'nashville': {
+    'en-US': 'https://factoryjet.com/us/nashville/ecommerce-development',
+    'x-default': 'https://factoryjet.com/us/nashville/ecommerce-development',
+  },
+  'portland': {
+    'en-US': 'https://factoryjet.com/us/portland/ecommerce-development',
+    'x-default': 'https://factoryjet.com/us/portland/ecommerce-development',
   },
   'raleigh': {
-    'en-US': 'https://factoryjet.com/us/services/ecommerce-development/raleigh',
-    'x-default': 'https://factoryjet.com/us/services/ecommerce-development/raleigh',
+    'en-US': 'https://factoryjet.com/us/raleigh/ecommerce-development',
+    'x-default': 'https://factoryjet.com/us/raleigh/ecommerce-development',
+  },
+  'sioux-falls': {
+    'en-US': 'https://factoryjet.com/us/sioux-falls/ecommerce-development',
+    'x-default': 'https://factoryjet.com/us/sioux-falls/ecommerce-development',
   },
   'tampa': {
-    'en-US': 'https://factoryjet.com/us/services/ecommerce-development/tampa',
-    'x-default': 'https://factoryjet.com/us/services/ecommerce-development/tampa',
+    'en-US': 'https://factoryjet.com/us/tampa/ecommerce-development',
+    'x-default': 'https://factoryjet.com/us/tampa/ecommerce-development',
   },
 }
 

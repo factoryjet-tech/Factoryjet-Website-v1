@@ -60,11 +60,11 @@ const FooterUS: React.FC<FooterUSProps> = ({ onCtaClick, hideLocations = false }
               <ul className="space-y-4 text-slate-400">
                 <li><Link href="/us/services/web-design/new-york" onClick={() => trackNavigation('New York', '/us/services/web-design/new-york', 'footer')} className="hover:text-[#FF6B35] transition-colors">New York</Link></li>
                 <li><Link href="/us/services/web-design/cleveland" onClick={() => trackNavigation('Cleveland', '/us/services/web-design/cleveland', 'footer')} className="hover:text-[#FF6B35] transition-colors">Cleveland</Link></li>
-                <li><Link href="/us/services/ecommerce-development/boise" onClick={() => trackNavigation('Boise', '/us/services/ecommerce-development/boise', 'footer')} className="hover:text-[#FF6B35] transition-colors">Boise</Link></li>
-                <li><Link href="/us/services/ecommerce-development/sioux-falls" onClick={() => trackNavigation('Sioux Falls', '/us/services/ecommerce-development/sioux-falls', 'footer')} className="hover:text-[#FF6B35] transition-colors">Sioux Falls</Link></li>
-                <li><Link href="/us/services/ecommerce-development/lincoln" onClick={() => trackNavigation('Lincoln', '/us/services/ecommerce-development/lincoln', 'footer')} className="hover:text-[#FF6B35] transition-colors">Lincoln</Link></li>
-                <li><Link href="/us/services/ecommerce-development/chattanooga" onClick={() => trackNavigation('Chattanooga', '/us/services/ecommerce-development/chattanooga', 'footer')} className="hover:text-[#FF6B35] transition-colors">Chattanooga</Link></li>
-                <li><Link href="/us/services/ecommerce-development/fargo" onClick={() => trackNavigation('Fargo', '/us/services/ecommerce-development/fargo', 'footer')} className="hover:text-[#FF6B35] transition-colors">Fargo</Link></li>
+                <li><Link href="/us/boise/ecommerce-development" onClick={() => trackNavigation('Boise', '/us/boise/ecommerce-development', 'footer')} className="hover:text-[#FF6B35] transition-colors">Boise</Link></li>
+                <li><Link href="/us/sioux-falls/ecommerce-development" onClick={() => trackNavigation('Sioux Falls', '/us/sioux-falls/ecommerce-development', 'footer')} className="hover:text-[#FF6B35] transition-colors">Sioux Falls</Link></li>
+                <li><Link href="/us/lincoln/ecommerce-development" onClick={() => trackNavigation('Lincoln', '/us/lincoln/ecommerce-development', 'footer')} className="hover:text-[#FF6B35] transition-colors">Lincoln</Link></li>
+                <li><Link href="/us/chattanooga/ecommerce-development" onClick={() => trackNavigation('Chattanooga', '/us/chattanooga/ecommerce-development', 'footer')} className="hover:text-[#FF6B35] transition-colors">Chattanooga</Link></li>
+                <li><Link href="/us/fargo/ecommerce-development" onClick={() => trackNavigation('Fargo', '/us/fargo/ecommerce-development', 'footer')} className="hover:text-[#FF6B35] transition-colors">Fargo</Link></li>
               </ul>
             </div>
           ) : null}
