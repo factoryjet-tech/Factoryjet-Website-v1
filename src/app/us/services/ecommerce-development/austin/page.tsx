@@ -1,7 +1,7 @@
-// V2 ecommerce city page — Austin, TX
-// Design system: py-10 md:py-14 standard | 30/65/5 dark/light rhythm | Clash Display headlines
-// Schema: server-side via SchemaScript (AI-crawler visible in initial HTML)
-// Copy source: src/lib/legacy-pages/CityLandingUS/CityLandingPage.jsx → CITIES.austin
+// /us/services/ecommerce-development/austin — v2 upgrade
+// Design: v2 component library · Clash Display headlines · py-14 md:py-20 rhythm
+// Content: /content/us/austin/ecommerce-development.mdx (approved 2026-05-19)
+// Schema: server-side via SchemaScript — AI-crawler visible in initial HTML
 
 import type { Metadata } from 'next'
 import { ecommerceCityAlternatesUS } from '@/data/hreflangMap'
@@ -23,30 +23,36 @@ import FinalCTA from '@/components/v2/FinalCTA'
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns'
+
+// ─── Metadata ────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: 'Shopify Developer Austin TX | E-Commerce from $2,999 | FactoryJet',
-  description: 'Top-rated Shopify developer in Austin, Texas: stores live in 7 days from $2,999. Silicon Hills e-commerce specialists — Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
+  title: 'Ecommerce Development Austin TX | 7-Day Delivery from $1,500 | FactoryJet',
+  description:
+    "Austin's most affordable ecommerce development agency. Shopify, WooCommerce & custom online stores built in 7 days — 60-70% less than local Austin agencies. 500+ stores delivered. Free audit.",
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Developer Austin TX | E-Commerce from $2,999 | FactoryJet',
-    description: 'Top-rated Shopify developer in Austin, Texas: stores live in 7 days from $2,999. Silicon Hills e-commerce specialists — Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
+    title: 'Ecommerce Development Austin TX | 7-Day Delivery from $1,500 | FactoryJet',
+    description:
+      'Custom Shopify & WooCommerce stores built in 7 days — at 60% less than what Austin agencies charge. 500+ US brands served. No fluff. Just results.',
     url: 'https://factoryjet.com/us/services/ecommerce-development/austin',
     images: [
       {
         url: 'https://factoryjet.com/logo.png',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet - Shopify Developer Austin',
+        alt: 'FactoryJet — Ecommerce Development Austin TX',
       },
     ],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify Developer Austin TX | E-Commerce from $2,999 | FactoryJet',
-    description: 'Top-rated Shopify developer in Austin, Texas: stores live in 7 days from $2,999. Silicon Hills e-commerce specialists — Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
+    title: 'Ecommerce Development Austin TX | 7-Day Delivery from $1,500 | FactoryJet',
+    description:
+      'Custom Shopify & WooCommerce stores built in 7 days — 60% less than Austin agencies. 500+ stores delivered.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
@@ -66,97 +72,105 @@ export const metadata: Metadata = {
   },
 }
 
+// ─── FAQ Category Config ──────────────────────────────────────────────────────
 
 const FAQ_CATEGORIES = [
-  { key: 'pricing',   label: 'Pricing & Timeline' },
-  { key: 'included',  label: "What's Included" },
-  { key: 'technical', label: 'Platform & SEO' },
-  { key: 'local',     label: 'Local Expertise' },
-  { key: 'support',   label: 'Support & Ownership' },
-];
-export default function Page() {
+  { key: 'pricing',   label: 'Pricing & Budget' },
+  { key: 'platform',  label: 'Platforms & Tech' },
+  { key: 'process',   label: 'Timeline & Process' },
+  { key: 'local',     label: 'Austin-Specific' },
+  { key: 'quality',   label: 'Quality & Results' },
+]
+
+// ─── Page ─────────────────────────────────────────────────────────────────────
+
+export default function AustinEcommerceDevelopmentPage() {
   return (
     <>
       <SchemaScript />
       <SiteHeader />
       <main className="bg-fj-cream">
 
-        {/* ── 1. HERO (dark) ─────────────────────────────────────────── */}
+        {/* ── 1. HERO ──────────────────────────────────────────────────── */}
         <Hero
-          eyebrow="E-COMMERCE DEVELOPMENT · AUSTIN"
-          headline="Shopify Developer Austin for Texas Businesses"
-          lead="Austin's Silicon Hills runs on ambition. FactoryJet builds the Shopify stores to match — live in 7 days from $2,999, at 50–60% below local agency rates. Shopify, WooCommerce & AI-powered stores for DTC founders, tech brands, food & beverage, and SXSW-era innovators. 500+ projects, 4.9★."
-          primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
-          trustItems={['Shopify stores from $2,999', '7-day delivery guarantee', '500+ stores launched']}
+          eyebrow="ECOMMERCE DEVELOPMENT · AUSTIN TX"
+          headline="Your Austin Business Deserves an Online Store That Actually Sells"
+          lead="FactoryJet builds Shopify, WooCommerce, and custom ecommerce stores for Austin small businesses — delivered in 7 days, at 60–70% less than what local agencies charge. No discovery calls that go nowhere. No six-week timelines. Just a store that's open for business."
+          primaryCta={{ label: 'Get My Free Ecommerce Audit', modal: true, region: 'us' }}
+          trustItems={[
+            'Stores from $1,500',
+            '7-day delivery guarantee',
+            '500+ stores launched',
+            '4.9★ · 127 reviews',
+          ]}
           rightSlot={<HeroBrowserMockup />}
         />
 
-        {/* ── 2. LOGO BAR (light) ────────────────────────────────────── */}
+        {/* ── 2. LOGO BAR ──────────────────────────────────────────────── */}
         <LogoBar
-          tagline="Trusted by 500+ e-commerce brands across the US, UK, and UAE"
+          tagline="We build on the platforms your customers already trust"
         />
 
-        {/* ── 3. TRUST STATS (tinted band) ──────────────────────────── */}
+        {/* ── 3. TRUST STATS ───────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="Results that Austin e-commerce brands trust."
+          headline="500+ stores. 7-day delivery. 65% less than Austin agencies."
         />
 
-        {/* ── 4. CITY CONTEXT (light / cream) ───────────────────────── */}
+        {/* ── 4. CITY CONTEXT ──────────────────────────────────────────── */}
         <CityContextSection
-          eyebrow="AUSTIN MARKET"
-          headline="Silicon Hills Has the Brands. Now Build the Store That Converts"
+          eyebrow="AUSTIN ECOMMERCE LANDSCAPE"
+          headline="Austin Retail Is Moving Online — Fast. Is Your Store Ready?"
           leadParagraphs={[
-            "Austin has become one of the fastest-growing tech ecosystems in North America. Dell Technologies, Apple's 133-acre campus, Tesla's Gigafactory, Oracle's relocated HQ, and over 7,600 tech companies have made Austin the fifth-largest tech hub in the US. That concentration of talent, capital, and consumer spending creates a DTC opportunity unmatched in the South. FactoryJet builds Shopify stores that capture it — mobile-first, Lighthouse 95+, with AI product discovery and AEO content that gets cited by ChatGPT and Google AI Overviews.",
+            "Austin's retail scene has always punched above its weight. South Congress boutiques, East Austin makers, Domain anchors, the Barton Springs weekend crowd — Austin shoppers are loyal, high-income, and increasingly buying online first.",
+            "But there's a gap forming between Austin businesses with a real ecommerce presence and those still relying on Instagram DMs and 'email us to order.' Foot traffic alone doesn't cut it anymore — not when your competitor just launched a Shopify store with next-day shipping and a loyalty program.",
+            "The good news: you don't need to spend $20,000 with a local agency to compete. FactoryJet builds production-grade ecommerce stores — Shopify, WooCommerce, custom headless — for Austin businesses at India-based rates with US project management. Same quality. Radically different price.",
           ]}
           stats={[
             {
-              value: '978K+',
-              label: 'Austin City Population (2024)',
-              sourceUrl: 'https://www.census.gov/quickfacts/fact/table/austincitytexas/POP010220',
+              value: '2.3M+',
+              label: 'Austin metro consumers — median HHI 30% above US average',
+              sourceUrl: 'https://www.census.gov/quickfacts/austincountytexas',
             },
             {
-              value: '0%',
-              label: 'Texas State Income Tax — Max Margin for DTC Brands',
-              sourceUrl: 'https://comptroller.texas.gov/taxes/quick_check.php',
+              value: '67%',
+              label: 'Austin shoppers research online before buying in-store',
+              sourceUrl: 'https://www.thinkwithgoogle.com/consumer-insights/',
             },
             {
-              value: '7,600+',
-              label: 'Tech Companies in Austin — the Largest Southern Tech Hub',
-              sourceUrl: 'https://www.austinchamber.com/economic-development/austin-profile/key-industries/technology',
+              value: '34%',
+              label: 'Average YoY online revenue growth for Austin DTC brands, 2023–2025',
+              sourceUrl: 'https://www.austinchamber.com/economic-development',
             },
           ]}
         />
 
-        {/* ── 5. SERVICE EXPLANATION (white) ────────────────────────── */}
+        {/* ── 5. SERVICE EXPLANATION ───────────────────────────────────── */}
         <ServiceExplanation
-          eyebrow="E-COMMERCE DEVELOPMENT · Austin"
-          headline="What 'E-Commerce Development' Actually Means for an Austin Business"
-          lead="Most Austin agencies sell you a theme and hand you a bill. FactoryJet builds a revenue-generating Shopify store: custom design, Texas sales tax configured correctly (8.25% for Travis County), AI-powered product discovery, JSON-LD schema for AI search visibility, and a Lighthouse 95+ performance score — all in 7 days from $2,999."
+          eyebrow="ECOMMERCE DEVELOPMENT · AUSTIN"
+          headline="What 'Ecommerce Development' Actually Means for an Austin Business"
+          lead="Most Austin agencies sell you a theme and hand you a bill. FactoryJet builds a revenue-generating store: custom design, Texas sales tax configured correctly (8.25% Travis County), Lighthouse 100/100 performance, JSON-LD schema for AI search visibility, and full email automation — all in 7 days."
           body={
             <>
               <p>
-                For Austin&apos;s tech and software brands — from early-stage Silicon Hills startups to
-                suppliers serving Dell, Samsung, and Apple — an e-commerce store needs to communicate
-                product depth and technical credibility fast. Buyers here do their research before they
-                talk to sales. We structure your Shopify store to answer those questions before the
-                prospect picks up the phone, with B2B pricing tiers, subscription flows, and
-                AI-powered product recommendations built in from day one.
+                For Austin&apos;s DTC brands — from South Congress boutiques to East Austin food
+                makers and Domain-area retailers — an ecommerce store is the revenue channel. SXSW
+                brings 300,000+ visitors annually who discover Austin brands for the first time.
+                FactoryJet builds stores with gifting flows, subscription boxes, local pickup, and
+                nationwide shipping that turn that discovery moment into a recurring customer.
               </p>
               <p>
-                For Austin&apos;s food and beverage scene — YETI, Austin Eastciders, Waterloo Brewing,
-                Salt Lick BBQ, and hundreds of DTC food brands — the store is the revenue channel.
-                SXSW brings 300,000+ attendees annually, many of them discovering Austin brands for
-                the first time. FactoryJet builds Shopify stores with gifting flows, subscription
-                boxes, local pickup, and nationwide shipping configurations that turn that discovery
-                moment into a recurring customer.
+                For Austin&apos;s tech and B2B brands — suppliers to Dell, Apple, and Oracle campuses
+                or Silicon Hills SaaS companies with an accessory line — the store needs to communicate
+                product depth and technical credibility fast. We build with B2B pricing tiers,
+                subscription billing, and AI-powered product recommendations built in from day one.
               </p>
               <p>
-                Every FactoryJet e-commerce project covers discovery, platform selection, custom
-                Shopify development, product catalog setup, Texas tax configuration, Core Web Vitals
-                optimization, and AEO content for ChatGPT and Perplexity. You leave with a store you
-                own outright — no platform lock-in, no retainer required, and a 30-day support window
-                after launch.
+                Every FactoryJet ecommerce project covers platform selection, custom design, full
+                development, product catalog setup, Texas tax configuration, Core Web Vitals
+                optimization, and GEO/AEO content structured for ChatGPT and Google AI Overviews.
+                You leave with a store you own outright — no platform lock-in, no retainer required,
+                and a 30-day support window after launch.
               </p>
             </>
           }
@@ -170,110 +184,104 @@ export default function Page() {
           }
         />
 
-        {/* ── 6. STRATEGIC DARK SECTION (dark) ──────────────────────── */}
+        {/* ── 6. STRATEGIC DARK — FACTORYJET DIFFERENCE ───────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="Why Austin Businesses Choose FactoryJet Over Local Agencies"
+          headline="What $12,000 Gets You at an Austin Agency vs. FactoryJet"
           lead={
-            "Orange Label Art + Advertising and Genuine Interactive handle brand work and web design in Austin, but neither specializes in Shopify development or AI-powered e-commerce. STAC Creative focuses on branding. PopRock Digital builds on WordPress. No Austin agency combines Shopify specialization with AI development, 7-day delivery, and transparent fixed pricing.\n\nFactoryJet launches full Shopify stores in 7 days from $2,999 — 50–60% below the Austin agency benchmark. Unlike Thrive Internet Marketing (Fort Worth, $150–$300/hr, no fixed pricing) or WebFX ($10,000–$49,900 for mid-market builds), we deliver with real Austin market knowledge: Silicon Hills' tech ecosystem, Texas tax structure, and the SXSW consumer psychology that drives independent brand loyalty."
+            "Agencies like Geek Powered Studios, GLIDE®, and Bryt Designs do solid work — we're not disputing that. But they're built for clients with $20K+ budgets and 3-month timelines. If you're an Austin small business who needs a professional online store without mortgaging a quarter of your annual revenue to get it, FactoryJet is the answer.\n\nWe operate out of India with US project management, which means you get enterprise-level execution at small-business prices. Over 500 US businesses have made that trade. Most of them wish they'd found us a year earlier."
           }
           pillars={[
             {
-              title: 'AI-native',
-              body: "Every store ships with AI-powered product recommendations, AEO content optimized for ChatGPT and Perplexity, and JSON-LD schema that gets cited in Google AI Overviews. Austin's tech consumers expect AI-powered shopping experiences — we build them as standard.",
+              title: '7-day delivery',
+              body: 'Standard Shopify stores are live in 7 days from kickoff. Compare that to Geek Powered Studios (6–12 weeks) or GLIDE® (4–8 weeks). If we miss the deadline, you don\'t pay. We\'ve hit it on 97% of 500+ projects.',
             },
             {
-              title: 'Transparent',
-              body: 'Fixed pricing on the first call. Shopify from $2,999, WooCommerce from $3,499, headless from $5,999. No discovery fees, no \'it depends\' quotes, no Phase 2 invoices after launch.',
+              title: '60–70% less',
+              body: 'The average Austin ecommerce agency charges $6,500–$18,000 for a Shopify store. FactoryJet delivers the same quality for $1,500–$3,500. India-based development, US project management, full quality guarantee.',
             },
             {
-              title: 'Guaranteed',
-              body: "7-day delivery on standard Shopify builds. If we miss the deadline, you don't pay. We've delivered on time on 97% of 500+ projects — including for Austin brands preparing for SXSW drops and product launches.",
+              title: 'Lighthouse 100/100',
+              body: 'Every store we build scores 100/100 on Google Lighthouse — Performance, Accessibility, Best Practices, and SEO. Most Austin agency-built stores score 55–75. Ours start at 100 on day one.',
             },
           ]}
         />
 
-        {/* ── 7. PROCESS (light / cream) ────────────────────────────── */}
+        {/* ── 7. PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
-          eyebrow="OUR PROCESS"
-          headline="How We Build Your Austin Shopify Store"
+          eyebrow="HOW IT WORKS"
+          headline="From Kickoff to Live Store in 7 Days"
           stages={[
             {
               number: '01',
-              title: 'Discovery & Platform Selection',
+              title: 'Discovery Call (Day 1)',
               description:
-                'We map your product catalog, target customer, and revenue goals. We recommend Shopify, WooCommerce, or headless based on your SKU count, subscription needs, and B2B requirements — not what is easiest for us to build. Austin businesses get a tailored recommendation in 24 hours.',
+                '45 minutes. We learn your catalog, your brand, your Austin customer, and your goals. You leave with a clear scope and a fixed price — no estimates that balloon later.',
             },
             {
               number: '02',
-              title: 'UX Design & Store Architecture',
+              title: 'Design & Build (Days 2–5)',
               description:
-                'We design your store structure — homepage, collection pages, product pages, cart, checkout, and post-purchase flows — with conversion rate optimization built into every layout decision. Mobile-first, thumb-zone aware, and tested against Austin\'s tech-savvy consumer standard.',
+                'Our team configures your platform, builds your product pages, integrates payments and shipping, and sets up your email flows. You get daily updates via Slack so there are no surprises.',
             },
             {
               number: '03',
-              title: 'Development & Configuration',
+              title: 'Review & Revise (Day 6)',
               description:
-                'Custom Shopify theme or headless build, Texas sales tax setup (8.25% Travis County), payment gateway integration (Shopify Payments, PayPal, Afterpay), app integrations, and GSAP micro-animations. Performance budgets are enforced from the first commit — Lighthouse 90+ is non-negotiable.',
+                'You get a staging link. We go through every page together, you mark everything that needs adjustment, and we fix it. No limit on rounds — we keep going until it\'s right.',
             },
             {
               number: '04',
-              title: 'Products, Content & SEO',
+              title: 'Launch (Day 7)',
               description:
-                'Product catalog upload, optimized descriptions, alt tags, meta fields, JSON-LD schema (FAQPage, Product, BreadcrumbList), and AEO content structured to get cited by ChatGPT, Perplexity, and Google AI Overviews. We submit to Google Search Console and verify AI crawler rendering.',
-            },
-            {
-              number: '05',
-              title: 'Launch & Growth Enablement',
-              description:
-                'Cloudflare/Vercel deploy, GA4 e-commerce tracking, GTM events, and a recorded launch walkthrough. Your 30-day support window covers post-launch fixes, additional product uploads, and training so your Austin team can self-manage from day one. No retainer required.',
+                'Your store goes live. DNS is propagated, payment processing is tested end-to-end, Google Analytics and Search Console are connected, and your first order can land within hours.',
             },
           ]}
         />
 
-        {/* ── 8. PORTFOLIO (white) ──────────────────────────────────── */}
+        {/* ── 8. PORTFOLIO ─────────────────────────────────────────────── */}
         <PortfolioShowcase
           eyebrow="RECENT WORK"
-          headline="What Austin e-commerce brands look like after FactoryJet."
+          headline="Stores we've launched for US brands."
           cards={[
             {
-              industry: 'Tech & Software Brands',
-              title: 'Austin Tech & SaaS E-Commerce Client',
+              industry: 'Apparel & DTC',
+              title: 'Austin Apparel DTC Brand',
               description:
-                "Silicon Hills is home to Dell, Apple, Google, Oracle, and 7,600+ tech companies. Tech brands here need Shopify stores that communicate product depth and technical credibility to buyers who research before they buy. We build stores with B2B pricing tiers, subscription billing, and API integrations that match the sophistication of Austin's tech ecosystem.",
+                'Full Shopify build with size-guide overlays, fit quiz, loyalty program, and Klaviyo post-purchase sequences. Custom theme — not a template. Launched 6 days after kickoff.',
               imageSrc: '/images/us/austin/ecommerce/portfolio-1.webp',
-              stat1: '+40% conversion rate',
-              stat2: '< 1.2s load time',
+              stat1: '3.2× conversion improvement',
+              stat2: '6-day launch',
             },
             {
-              industry: 'Food & Beverage',
-              title: 'Austin Food & Beverage DTC Client',
+              industry: 'Specialty Food & Beverage',
+              title: 'Austin Food Brand — Subscription & Wholesale',
               description:
-                "SXSW brings 300,000 attendees. Austin's food scene — YETI, Austin Eastciders, Salt Lick BBQ — runs on DTC and wholesale simultaneously. We build Shopify stores with gifting flows, subscription boxes, local pickup, age verification, and TABC-compliant shipping configurations. Texas's 'Keep Austin Weird' ethos drives independent brand loyalty at rates 40% above the national average.",
+                'WooCommerce with subscription boxes, local Austin pickup zones, and a corporate gifting portal. Complex shipping rules — cold chain, perishable zones, TABC compliance — handled without a single plugin conflict.',
               imageSrc: '/images/us/austin/ecommerce/portfolio-2.webp',
-              stat1: '+52% AOV increase',
+              stat1: '$48K MRR in 90 days',
               stat2: '7-day launch',
             },
             {
-              industry: 'Outdoor & Lifestyle',
-              title: 'Austin Outdoor & Lifestyle Brand Client',
+              industry: 'Health & Wellness',
+              title: 'Health Brand — Shopify Plus Migration',
               description:
-                "Austin's outdoor lifestyle — Barton Springs, Lady Bird Lake, Greenbelt climbing, and 300+ days of sunshine — drives DTC demand for gear, apparel, and experience products. We build Shopify stores for outdoor apparel brands, gear retailers, wellness products, and adventure experiences with rental calendars, waiver integrations, and subscription models.",
+                'Shopify Plus migration from Magento 1. Headless frontend with Next.js, custom subscription logic, and B2B wholesale pricing. Zero downtime during migration. Lighthouse 98/100 at launch.',
               imageSrc: '/images/us/austin/ecommerce/portfolio-3.webp',
-              stat1: '+38% repeat orders',
-              stat2: 'Lighthouse 96',
+              stat1: '98/100 Lighthouse',
+              stat2: '1.2s load time',
             },
           ]}
           ctaHref="/us/portfolio"
           ctaLabel="View full portfolio"
         />
 
-        {/* ── 9. COMPARISON TABLE (cream) ───────────────────────────── */}
+        {/* ── 9. COMPARISON TABLE ──────────────────────────────────────── */}
         <ComparisonTable
-          eyebrow="WHY FACTORYJET"
-          headline="FactoryJet vs Austin E-Commerce Agencies"
+          eyebrow="COMPARE YOUR OPTIONS"
+          headline="Austin Ecommerce Development: Your Real Options"
           lead={
-            "Austin has no shortage of web agencies. Orange Label Art + Advertising and Genuine Interactive handle brand and web work at $8,000–$25,000 starting prices. Thrive Internet Marketing ranks nationally for Austin searches but operates from Fort Worth at $150–$300/hr with no fixed pricing and 4–8 week timelines.\n\nFactoryJet delivers a full Shopify store in 7 days from $2,999 — with AI-powered features those agencies don't offer at any price point in the SMB range. No lock-in. No retainer. No surprise invoices."
+            "Austin has no shortage of ecommerce agencies. Geek Powered Studios, GLIDE®, and Bryt Designs all do solid work — for clients with $12,000–$30,000 budgets and 2–4 months to spare. FactoryJet serves the Austin small business owner who needs a professional online store but doesn't have enterprise-level resources. Same quality, different economics."
           }
           columns={[
             { label: 'Their pricing' },
@@ -282,276 +290,334 @@ export default function Page() {
           ]}
           rows={[
             {
-              feature: 'Orange Label Art + Advertising',
+              feature: 'Geek Powered Studios (Austin)',
               values: [
-                '$8,000–$25,000 (branding + web focus, not Shopify specialists)',
-                'From $2,999 (Shopify Standard)',
-                'FactoryJet specializes exclusively in e-commerce and delivers in 7 days. Orange Label focuses on brand strategy and general web design — no published Shopify pricing or AI capabilities.',
+                '$8,000–$20,000 for a standard Shopify build. 6–12 week timeline.',
+                'From $1,500 · 7-day delivery',
+                'India-based senior devs, US project management. Same output quality, 65% lower cost. No discovery fees, no hourly billing surprises.',
               ],
             },
             {
-              feature: 'Thrive Internet Marketing',
+              feature: 'GLIDE® (Austin)',
               values: [
-                '$150–$300/hr, no fixed pricing, 4–8 week timelines (Fort Worth-based)',
-                'From $2,999 fixed price, 7-day delivery',
-                'Thrive is a digital marketing agency with web development as a side service. FactoryJet builds exclusively on Shopify and Next.js with AI features, fixed pricing, and 7-day delivery — Thrive offers none of these.',
+                'Project-based, undisclosed. Primarily WordPress/WooCommerce. 4–8 weeks typical.',
+                'From $1,500 · 7-day delivery',
+                'FactoryJet specializes in Shopify and custom headless ecommerce. Fixed pricing, guaranteed 7-day timeline, Lighthouse 100/100 on every project.',
+              ],
+            },
+            {
+              feature: 'Bryt Designs (Austin)',
+              values: [
+                '$5,000–$15,000 depending on scope. Typically 6–10 weeks.',
+                'From $1,500 · 7-day delivery',
+                'FactoryJet delivers equivalent or better output in a fraction of the time. AI-powered features (AEO content, product recommendations) included at no extra charge.',
               ],
             },
           ]}
         />
 
-        {/* ── 10. PRICING (white) ───────────────────────────────────── */}
+        {/* ── 10. PRICING ──────────────────────────────────────────────── */}
         <PricingTiers
           eyebrow="TRANSPARENT PRICING"
-          headline="Transparent Pricing for Austin E-Commerce Businesses"
+          headline="Simple Pricing. No Surprises. No Hidden Fees."
           lead={
-            "Austin agency rates for a comparable Shopify build typically run $8,000–$25,000 — and national agencies like WebFX quote $10,000–$49,900 for mid-market scope. FactoryJet delivers a full custom Shopify store from $2,999 — that's 50–60% below the Austin benchmark — with a faster timeline and a codebase you own outright. Stores ship in 7 days. No retainer required."
+            "Austin agency rates for a comparable Shopify store typically run $8,000–$20,000. FactoryJet delivers the same quality for $1,500–$5,000. Every plan includes: project management, unlimited revisions during build, 30 days post-launch support, Lighthouse 100/100 guarantee, and same-week kickoff. No contracts. No retainers."
           }
           tiers={[
             {
-              name: 'Shopify Standard',
-              priceRange: '$2,999–$4,999',
+              name: 'Starter Store',
+              priceRange: '$1,500–$2,500',
               description:
-                'A fully custom Shopify store live in 7 days. Best for Austin DTC founders, food & beverage brands, and lifestyle businesses launching their first online store or replacing a template.',
+                'A production-ready Shopify or WooCommerce store live in 5 days. For solo founders, product launches, and Austin businesses entering ecommerce for the first time.',
               features: [
-                'Custom Shopify theme (not a template)',
-                'Up to 100 products uploaded & configured',
-                'Texas sales tax setup (8.25% Travis County)',
-                'Shopify Payments + PayPal + Afterpay',
-                'Mobile-first, Lighthouse 90+ performance',
-                'JSON-LD schema + AEO SEO setup',
-                '30-day post-launch support',
+                'Shopify or WooCommerce setup',
+                'Up to 50 products configured',
+                'Custom homepage, collection & product pages',
+                'Payment gateway + Texas tax setup (8.25%)',
+                'Mobile-first, Lighthouse 100/100',
+                'Basic email automation (welcome + cart)',
+                'Google Analytics 4 + Search Console',
+                '30 days post-launch support',
               ],
               cta: { label: 'Get a quote', modal: true, region: 'us' },
             },
             {
-              name: 'Shopify Growth',
-              priceRange: '$4,999–$8,999',
+              name: 'Growth Store',
+              priceRange: '$2,800–$4,500',
               description:
-                'Advanced Shopify build with subscriptions, B2B tiered pricing, or multi-currency. Best for Austin tech brands, food subscription businesses, and established DTC brands scaling online revenue.',
+                'A conversion-optimized store with subscriptions, loyalty, and Klaviyo flows. For established Austin brands ready to scale online revenue.',
               features: [
-                'Everything in Shopify Standard',
-                'Subscription billing (Recharge / Skio)',
-                'B2B dealer pricing & wholesale portal',
-                'Multi-currency + international shipping',
-                'GSAP micro-animations & editorial design',
-                'AI product recommendations integration',
-                'Priority support + training session',
+                'Everything in Starter, plus:',
+                'Up to 250 products configured',
+                'Custom filters, search & navigation',
+                'Loyalty program or subscription setup',
+                'Klaviyo email flows (5 automated sequences)',
+                'Upsell & cross-sell integrations',
+                'Local Austin pickup / delivery options',
+                'Blog setup + CRO pass',
               ],
               cta: { label: 'Get a quote', modal: true, region: 'us' },
               popular: true,
             },
             {
-              name: 'Custom / Headless',
-              priceRange: '$8,999–$15,999',
+              name: 'Enterprise / Custom',
+              priceRange: 'From $4,500',
               description:
-                'Next.js headless storefront with Shopify or Medusa backend. For Austin brands that need sub-500ms load times, custom API integrations, or a B2B portal that outperforms every competitor.',
+                'Custom Shopify Plus or headless (Next.js) build for high-volume Austin brands, B2B wholesale operations, and complex integration requirements.',
               features: [
-                'Next.js headless frontend (Lighthouse 95+)',
-                'Shopify or Medusa e-commerce backend',
-                'Custom API & ERP integrations',
-                'B2B portal: PO payments, dealer tiers',
-                'AI chatbot trained on your catalog',
-                'AEO content for ChatGPT & Perplexity',
-                'Quarterly performance reviews',
+                'Everything in Growth, plus:',
+                'Unlimited products',
+                'B2B wholesale pricing portal',
+                'ERP, POS, or 3PL integrations',
+                'Headless Next.js frontend (Lighthouse 100)',
+                'Multi-warehouse inventory setup',
+                'Custom Shopify apps or plugins',
+                'Dedicated PM throughout',
               ],
               cta: { label: 'Get a quote', modal: true, region: 'us' },
             },
           ] as const}
         />
 
-        {/* ── 11. INDUSTRIES (cream) ────────────────────────────────── */}
+        {/* ── 11. INDUSTRIES ───────────────────────────────────────────── */}
         <IndustriesGrid
-          eyebrow="AUSTIN × E-COMMERCE"
-          headline="E-Commerce Development for Austin's Key Industries"
-          lead="From Silicon Hills SaaS companies to SXSW food brands, Austin's economy spans industries with very different e-commerce needs. FactoryJet has built stores for each of them."
+          eyebrow="AUSTIN × ECOMMERCE"
+          headline="We've Launched Stores in Every Vertical That Matters to Austin"
+          lead="From South Congress DTC brands to Silicon Hills tech companies, Austin's economy spans industries with very different ecommerce needs. FactoryJet has built stores for each of them."
           sectors={[
             {
-              name: 'Tech & Software Brands',
+              name: 'Apparel & DTC',
               description:
-                "DTC and B2B stores for Austin's SaaS, hardware, and software companies — subscription billing, upgrade flows, software license portals, and developer tool swag shops. Silicon Hills brands need stores that communicate technical credibility to buyers who research before they buy.",
+                "Lookbooks, size guides, fit quizzes, and Klaviyo sequences that turn browsers into repeat buyers. Austin's DTC fashion brands are our most common engagement — we've done 140+ apparel stores.",
               example:
-                'SaaS companies, hardware startups, and software accessory brands serving Dell, Apple, and Oracle campuses in Austin.',
+                "South Congress boutiques, East Austin independent brands, and DTC apparel founders targeting Austin's high-income consumer base.",
             },
             {
               name: 'Food & Beverage',
               description:
-                "Online stores for Austin's famous food brands — BBQ, craft beer, hot sauce, specialty foods — with gifting flows, subscription boxes, local pickup, and nationwide cold-chain shipping. SXSW tourists discover Austin food brands digitally; a good Shopify store converts that discovery into recurring revenue.",
+                'Perishable shipping rules, subscription boxes, local pickup zones, corporate gifting portals, and TABC-compliant alcohol flows — every edge case Austin food brands throw at us, handled.',
               example:
-                'Craft breweries, hot sauce brands, BBQ gift set companies, and Austin Eastciders-style DTC beverage brands.',
-            },
-            {
-              name: 'Outdoor & Lifestyle',
-              description:
-                "Gear shops, apparel stores, and experience booking for Austin's outdoor and wellness community. Barton Springs, Lady Bird Lake, and Greenbelt climbing drive demand for outdoor gear, athleisure, and wellness products — all well-suited to subscription and bundle models.",
-              example:
-                "Outdoor apparel brands, gear rental platforms, and wellness product companies serving Austin's active lifestyle consumer.",
-            },
-            {
-              name: 'Music & Events',
-              description:
-                "Merchandise stores, vinyl shops, limited-edition drops, and fan club subscriptions for Austin's world-class music scene. SXSW, ACL Fest, and the 6th Street live music economy generate artist-to-fan DTC revenue that most brands leave on the table by not having a proper Shopify store.",
-              example:
-                'SXSW artists, Austin record labels, independent musicians, and event merchandise brands.',
+                'Craft breweries, BBQ brands, specialty hot sauce companies, subscription meal kits, and restaurant merch stores.',
             },
             {
               name: 'Health & Wellness',
               description:
-                "Supplement, wellness product, and fitness brand stores with subscription models and auto-ship flows. Austin's health-conscious tech workforce spends premium on wellness — stores need fast load times, trust-building UX, and subscription billing built into the foundation.",
+                "Supplement stores, fitness equipment, yoga studios selling online — compliance-aware product pages, subscription models, and trust-building UX. Austin's health-forward consumer expects all of it.",
               example:
-                "Supplement brands, fitness equipment companies, and wellness product DTC stores serving Austin's health-forward consumer base.",
+                "Supplement brands, fitness equipment retailers, and wellness DTC companies serving Austin's active, health-conscious population.",
             },
             {
-              name: 'Home & Interior Design',
+              name: 'Home & Living',
               description:
-                "Shopify stores for Austin's booming home furnishings, interior design, and renovation market. Austin's rapid population growth and strong relocation economy create sustained demand for premium home goods — from solo makers to established interior brands shipping nationwide.",
+                "Furniture, décor, candles, custom prints — large-SKU catalogs with rich filtering, room visualizers, and freight shipping integrations. Austin's real estate boom drives sustained home goods demand.",
               example:
-                'Home furnishings brands, interior design product lines, and artisan goods makers in the Austin metro.',
+                'Artisan furniture makers, home décor brands, candle companies, and interior design product studios in the Austin metro.',
+            },
+            {
+              name: 'Pets & Animals',
+              description:
+                "Austin loves its dogs. We've built stores for pet food subscriptions, custom collar brands, grooming service booking, and veterinary supply companies with complex vet-only portals.",
+              example:
+                "Independent pet food brands, custom pet accessories, and Austin's growing veterinary supply market.",
+            },
+            {
+              name: 'Musical Instruments & Merch',
+              description:
+                'Austin is a music city. Instrument rentals, sheet music downloads, lesson packages, merch drops, fan subscriptions, and high-ticket gear with financing integration — we know this vertical.',
+              example:
+                'SXSW artist merchandise stores, Austin record labels, independent musicians, and instrument retailers.',
+            },
+            {
+              name: 'Automotive & Outdoor',
+              description:
+                "From trailer hitches to camping gear to custom overlanding rigs. Complex variant matrices, fitment guides, and freight shipping handled properly. Austin's outdoor lifestyle drives sustained demand.",
+              example:
+                "Outdoor gear retailers, overlanding brands, cycling shops, and automotive accessory companies serving Austin's active community.",
+            },
+            {
+              name: 'Tech & Gadgets',
+              description:
+                'Pre-order flows, crowdfunding integrations, bundle builders, warranty registration, B2B portals for SaaS accessory lines — built for Silicon Hills hardware and consumer tech brands.',
+              example:
+                "Consumer electronics brands, hardware startups, and SaaS companies with physical product lines in the Austin tech ecosystem.",
             },
           ]}
         />
 
-        {/* ── 12. TESTIMONIALS (white) ──────────────────────────────── */}
+        {/* ── 12. TESTIMONIALS ─────────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="WHAT CLIENTS SAY"
-          headline="4.9/5 across 150+ reviews from Austin and beyond."
+          headline="4.9/5 across 127 reviews from Austin and beyond."
         />
 
-        {/* ── 13. FAQ (cream) ───────────────────────────────────────── */}
+        {/* ── 13. FAQ ──────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="COMMON QUESTIONS"
-          headline="Common Questions from Austin E-Commerce Businesses"
+          headline="Everything Austin Business Owners Ask Before Getting Started"
           categories={FAQ_CATEGORIES}
           items={[
+
+            /* ─ Pricing & Budget ─ */
             {
-              category: 'local',
-              question: 'Who is the best Shopify developer in Austin, TX?',
+              category: 'pricing',
+              question: 'How much does ecommerce development cost in Austin, TX?',
               answer:
-                "FactoryJet is Austin's top-rated Shopify development agency — 500+ projects delivered, 4.9★ rating, and the only shop in Silicon Hills combining Shopify e-commerce with AI agent development. Unlike local Austin agencies (Orange Label, Genuine Interactive, STAC Creative) that specialize in branding and WordPress, FactoryJet builds exclusively on Shopify and Next.js 15. Unlike national agencies (Thrive, WebFX) that quote $10K–$50K and multi-month timelines, we launch in 7 days from $2,999.",
+                "Austin ecommerce agencies typically charge $6,500–$25,000+ for a Shopify or WooCommerce store, depending on complexity. At FactoryJet, a production-ready ecommerce store starts at $1,500 for Shopify and $4,500 for fully custom builds. The difference comes from our India-based development team and lean operations — not from cutting corners on quality. We guarantee Lighthouse 100/100 on every project regardless of tier.",
             },
             {
               category: 'pricing',
-              question: 'How much does Shopify development cost in Austin?',
+              question: 'Why is FactoryJet so much cheaper than Austin agencies?',
               answer:
-                'Shopify stores start at $2,999 at FactoryJet — compared to $8,000–$25,000 at established Austin agencies. WooCommerce stores start at $3,499, and custom headless e-commerce builds start at $5,999. Every project includes custom design, full development, Texas sales tax configuration (8.25% for Austin/Travis County), product catalog setup, mobile-first responsive design, and 30 days of post-launch support. No hidden fees, no Phase 2 upsells.',
+                "We're headquartered in India with US project management and client communication. India-based senior developers with 10+ years of experience earn a fraction of what Austin developers command — and we pass that savings directly to you. Your project manager is US-based, your communication is in US timezone, and your code quality is indistinguishable from what a $15,000 Austin agency would produce. We've been doing this for 25 years with 500+ stores as proof.",
             },
             {
               category: 'pricing',
-              question: 'What Texas sales tax rate should my Austin Shopify store charge?',
+              question: 'Are there any hidden fees I should know about?',
               answer:
-                'Austin businesses in Travis County should configure Shopify to collect 8.25% combined sales tax: Texas state rate of 6.25% plus the City of Austin local rate of 2.0%. Texas uses destination-based sales tax — you charge the rate at the buyer\'s shipping address, not your business location. FactoryJet configures your complete Texas tax settings during every Shopify build, including the correct rates for customers in Houston (8.25%), Dallas (8.25%), and San Antonio (8.25%). Texas also exempts certain agricultural products and resale items, which we configure for relevant stores.',
+                "None. Your quote covers everything: design, development, testing, launch, and 30 days of post-launch support. We don't charge extra for revisions during the build phase, platform setup, or standard integrations like Klaviyo and Google Analytics. The only time the price changes is if your project scope expands significantly during the build — and we always discuss that before acting.",
             },
             {
               category: 'pricing',
-              question: 'How long does it take to build a Shopify store in Austin?',
+              question: 'Do you offer payment plans?',
               answer:
-                'FactoryJet launches standard Shopify stores in 7 days. Compare that to Thrive Internet Marketing (4–8 weeks), Genuine Interactive (6–12 weeks), or national agencies like WebFX (8–16 weeks). Our 7-day timeline is possible because we design in code — no Figma-to-handoff delay — and use a component architecture optimized for rapid deployment. Complex builds with custom features (subscriptions, B2B portals, multi-currency) may take 2–3 weeks.',
+                "Yes. Projects over $2,000 can be split into 50% at kickoff and 50% at launch. For projects over $4,000, we offer a three-payment structure: 40% kickoff, 30% mid-build, 30% at launch. We accept all major US credit cards, ACH bank transfer, and wire.",
+            },
+
+            /* ─ Platforms & Tech ─ */
+            {
+              category: 'platform',
+              question: 'Which ecommerce platform is right for my Austin business?',
+              answer:
+                "For most Austin small businesses just getting into ecommerce, Shopify is the right call — it's reliable, has an enormous app ecosystem, and requires zero server maintenance. WooCommerce makes sense if you're already on WordPress and want full ownership of your data and code. Custom headless builds (Next.js + Shopify/Medusa) are for businesses with complex requirements: custom pricing engines, ERP integrations, or very high traffic. We'll recommend the right platform on your discovery call based on your actual situation.",
             },
             {
-              category: 'pricing',
-              question: 'Does Austin have any e-commerce advantages over other US cities?',
+              category: 'platform',
+              question: 'Can you migrate my existing store to a new platform?',
               answer:
-                "Yes — several. Texas has no state income tax, giving Austin-based DTC entrepreneurs higher take-home margins than founders in California or New York. Texas's 8.25% sales tax is competitive compared to California (up to 10.75%) and many Northeast states. Austin's population growth (fastest-growing US city 2010–2024) creates an expanding local customer base. And the concentration of tech-savvy consumers in Silicon Hills means higher average order values and lower customer acquisition costs for B2B and SaaS-adjacent e-commerce.",
+                "Yes, this is one of our most common requests. We migrate Austin businesses from legacy platforms — Magento, Volusion, 3dcart, outdated custom builds — to modern Shopify or WooCommerce installs. Migrations include: product catalog with all images and metafields, customer records, historical order data, blog content, and 301 redirect maps so your SEO rankings survive the switch. We've done 80+ migrations without a single client losing their organic rankings.",
+            },
+            {
+              category: 'platform',
+              question: 'Do you work with Shopify Plus?',
+              answer:
+                "Yes. We have Shopify Plus experience including checkout extensibility, B2B features, automation flows (Shopify Flow), metaobject-based content architecture, and multi-storefront setups. We also handle Shopify Plus migrations — moving clients from standard Shopify, BigCommerce, or Magento to Plus without disrupting their business.",
+            },
+            {
+              category: 'platform',
+              question: 'Will my store work on mobile?',
+              answer:
+                "Every store we build is mobile-first by design — not mobile-adapted after the fact. Austin shoppers are increasingly purchasing on their phones. We test on real devices across iOS and Android, not just browser emulators. Mobile conversion rate optimization is baked into our process, not an add-on.",
+            },
+
+            /* ─ Timeline & Process ─ */
+            {
+              category: 'process',
+              question: 'How can you really build a store in 7 days?',
+              answer:
+                "Because we've done it 500+ times. We have a production system — discovery templates, design component libraries, tested integration setups, and a QA checklist — that lets us build fast without being sloppy. The 7-day clock starts at your kickoff call, and it accounts for your review time and revision rounds. The only thing that extends the timeline is if you need time to gather content (product photos, copy) or if the scope grows significantly. We tell you that upfront.",
+            },
+            {
+              category: 'process',
+              question: 'What do I need to provide before we start?',
+              answer:
+                "Product photos (or we'll advise on stock photography), product descriptions, your logo in vector format (SVG or AI), and your brand colors. If you have existing brand guidelines, great — if not, we'll work with what you have. You don't need to have everything perfect on day one; we'll guide you through it.",
+            },
+            {
+              category: 'process',
+              question: 'Can I still run my business during the build?',
+              answer:
+                "Yes. We build on a staging environment completely separate from any existing website you have. Your current site stays live and untouched until you're ready to launch the new one. On launch day, we handle the DNS switch — usually overnight so your customers don't see any downtime.",
+            },
+            {
+              category: 'process',
+              question: 'What happens after my store launches?',
+              answer:
+                "You get 30 days of post-launch support included — bug fixes, small adjustments, questions answered. After 30 days, you can manage the store independently (we'll provide training), hire us for ongoing work on a project basis, or enroll in a monthly maintenance plan. We're not going anywhere.",
+            },
+
+            /* ─ Austin-Specific ─ */
+            {
+              category: 'local',
+              question: 'Do you know Austin\'s local market and customer behavior?',
+              answer:
+                "We've worked with dozens of Austin businesses across sectors — food & beverage, apparel, health, home goods, tech startups in the Domain and along 6th Street. We understand that Austin shoppers are brand-loyal, environmentally conscious, and willing to pay premium for quality. We build stores that reflect that — not generic templates that look like they could be from anywhere.",
             },
             {
               category: 'local',
-              question: 'Do you build Shopify stores for Austin food and beverage brands?',
+              question: 'Can you integrate local Austin delivery or pickup options?',
               answer:
-                "Yes — Austin's food and beverage scene is one of our core Austin specialties. We build DTC stores for BBQ brands (nationwide shipping), craft breweries and distilleries (TX TABC compliance), hot sauce and specialty food companies, and subscription box businesses. Austin food brands have unique needs: age verification for alcohol, refrigerated shipping options, Texas Cottage Food exemptions, and gifting flows for corporate customers. FactoryJet builds all of these natively into Shopify.",
+                "Yes. We configure local delivery radius rules, store pickup options with time-slot selection, and curbside pickup flows for Austin businesses with physical locations. We've set this up for South Congress boutiques, East Austin restaurants, and Domain-area retailers. Local pickup and delivery can be a real competitive advantage for Austin brands competing with national players.",
             },
             {
               category: 'local',
-              question: 'Can you build a Shopify store for a SXSW or music-related Austin brand?',
+              question: 'I already have a website from a local Austin agency. Can FactoryJet add an online store to it?',
               answer:
-                "Absolutely. Austin's music and events economy generates $1.8B annually, and most artists and event brands undermonetize their digital presence. We build Shopify stores for artist merchandise, vinyl and physical media shops, event ticket integrations, limited-edition drops, fan membership subscriptions, and digital downloads. We integrate with Bandcamp, Spotify for Artists, and ticket platforms to create a unified commerce experience for Austin's creative economy.",
-            },
-            {
-              category: 'pricing',
-              question: 'How does FactoryJet compare to Thrive Internet Marketing for Austin Shopify development?',
-              answer:
-                "Thrive Internet Marketing is a Fort Worth-based agency that markets heavily in Austin but has no local presence. They charge $150–$300/hr with no fixed pricing, quote 4–8 week timelines, and primarily offer SEO and digital marketing with web development as a side service. FactoryJet specializes exclusively in Shopify development and AI-powered e-commerce, delivers in 7 days, prices transparently from $2,999, and has real Austin market knowledge — including Silicon Hills' tech ecosystem, Texas tax structure, and SXSW-era consumer behavior.",
+                "Absolutely. We can either add an ecommerce section to your existing site, build a separate Shopify store that lives on a subdomain (like shop.yourbrand.com), or rebuild your entire site with ecommerce built in from the start. We'll assess your current setup on the discovery call and recommend the cleanest path forward.",
             },
             {
               category: 'local',
-              question: 'Does my Austin business need Shopify or WooCommerce?',
+              question: 'How do you compare to Austin agencies like Geek Powered Studios, GLIDE®, or Bryt Designs?',
               answer:
-                'For most Austin businesses, Shopify is the better choice: faster to launch (7 days), lower ongoing maintenance costs, better App Store for subscriptions and B2B, and superior mobile checkout conversion. WooCommerce makes sense if you already have a WordPress site with significant SEO equity and need tight CMS control. At FactoryJet, Shopify stores start at $2,999 and WooCommerce at $3,499. We\'ll recommend the right platform based on your catalog size, subscription needs, B2B requirements, and existing tech stack.',
+                "They're established agencies that do good work — primarily for clients with $15,000–$50,000 budgets and months to spare. FactoryJet serves the Austin small business owner who needs a professional ecommerce store but doesn't have enterprise-level resources. Our quality is comparable; our price and timeline are not. If your budget is under $6,000 and you need to be selling online within two weeks, FactoryJet is the honest choice.",
             },
+
+            /* ─ Quality & Results ─ */
             {
-              category: 'pricing',
-              question: 'Can you migrate my Austin business from WooCommerce or Squarespace to Shopify?',
+              category: 'quality',
+              question: 'What does "Lighthouse 100/100" actually mean for my business?',
               answer:
-                'Yes — we migrate Austin businesses from WooCommerce, BigCommerce, Magento, Squarespace, Wix, and custom platforms to Shopify. Migration includes: full product catalog transfer, customer data, order history, URL redirect mapping (preserving Google rankings), metafield migration, Texas tax reconfiguration, and SEO continuity setup. We implement 301 redirects for every old URL so your Austin local search rankings survive the migration. Timeline: 7–14 days depending on catalog size.',
+                "Google's Lighthouse score measures Performance, Accessibility, Best Practices, and SEO on a 0–100 scale. A score of 100 on Performance means your store loads fast on real mobile connections — under 1.5 seconds. That directly improves your Google ranking, reduces your bounce rate, and increases the likelihood that a shopper who clicks your ad actually completes a purchase. Most Austin agency-built stores score 55–75. Ours start at 100 on day one.",
             },
             {
-              category: 'included',
-              question: 'What AI services are available for Austin small businesses?',
+              category: 'quality',
+              question: 'Will my store rank on Google for Austin ecommerce searches?',
               answer:
-                "FactoryJet is the only Austin e-commerce agency that builds production AI agents alongside Shopify development. We build: AI chatbots trained on your catalog and FAQs, AI-powered lead qualification agents, customer service automation (order status, returns, product recommendations), and AI content pipelines that keep your store's blog and product descriptions optimized for ChatGPT, Perplexity, and Google AI Overviews. Austin's tech ecosystem makes AI adoption a competitive necessity — FactoryJet gets you there in weeks, not months.",
+                "We build every store with technical SEO in place from launch: proper schema markup, clean URL structures, meta tags, sitemap, robots.txt, image optimization, and Core Web Vitals compliance. We also set up Google Search Console and Analytics so you can track your rankings. What we don't do is ongoing SEO content — that's a separate service. But your store's technical foundation will be solid from the first day it's live.",
             },
             {
-              category: 'included',
-              question: 'What is included in a FactoryJet Shopify build for an Austin business?',
+              category: 'quality',
+              question: 'Can you guarantee conversions or revenue?',
               answer:
-                'Every Austin Shopify store includes: custom design (not a theme), full Shopify development and configuration, Texas sales tax setup (8.25% Travis County), payment gateway integration (Shopify Payments, PayPal, Afterpay), product catalog setup, mobile-first responsive design, Core Web Vitals optimization (Lighthouse 90+), Google Search Console setup, FAQPage + Service + BreadcrumbList JSON-LD schema, AI search visibility (AEO for ChatGPT, Perplexity, Google AI Overviews), 30 days of post-launch support, and a launch walkthrough. Starting at $2,999 — no hidden fees.',
+                "No. Anyone who guarantees revenue is selling you something. What we guarantee: a beautiful, fast-loading, mobile-optimized store built to conversion best practices — clean product pages, frictionless checkout, trust signals in the right places, and a user experience that doesn't drive potential customers away. What happens after launch depends on your products, pricing, marketing, and offer. We give you the best possible foundation.",
             },
             {
-              category: 'included',
-              question: 'Can you build a subscription or recurring-revenue Shopify store for Austin brands?',
-              answer: "Yes — subscription commerce is one of Austin's fastest-growing e-commerce models. Silicon Hills SaaS culture has primed Austin consumers to expect subscription products, and Austin's food, coffee, and wellness brands are well-positioned to build recurring revenue. FactoryJet builds Shopify subscription stores with Recharge, Bold Subscriptions, or native Shopify subscriptions: monthly boxes, coffee roaster subscriptions, meal kit programs, software access bundles, and fan club memberships. We also build B2B annual billing portals for Austin SaaS and tech tools. A Shopify subscription store typically generates 30–50% higher lifetime customer value than one-time-purchase stores.",
+              category: 'quality',
+              question: 'What\'s your refund policy if I\'m not happy?',
+              answer:
+                "If your store isn't what we agreed on in the scope document, we fix it — no argument, no extra charge. We don't offer refunds after work has begun, because we invest real hours from day one. That's why our discovery call is thorough: we want you to know exactly what you're getting before you commit. In 500+ projects, we've never had a client who didn't get a store they were genuinely happy with.",
             },
             {
-              category: 'technical',
-              question: 'How do I get my Austin Shopify store ranked on Google and in AI search?',
-              answer: "FactoryJet builds every Austin Shopify store with a full SEO and AEO (Answer Engine Optimization) foundation: FAQPage + Service + BreadcrumbList + Product JSON-LD schema so Google, ChatGPT, Perplexity, and Google AI Overviews can surface your store in answer boxes; keyword-optimized page titles, meta descriptions, and H1s targeting Austin-specific search terms (e.g. 'Austin BBQ sauce shop', 'buy Austin hot sauce online'); blog content strategy using Google Ads keyword data for your category; Core Web Vitals optimization (Lighthouse 90+) which Google uses as a ranking signal; and internal linking architecture. Most Austin clients see measurable organic growth within 60–90 days of launch.",
+              category: 'quality',
+              question: 'Do you provide training so I can manage my own store?',
+              answer:
+                "Yes. At launch, we do a 60-minute recorded walkthrough via Zoom covering: adding and editing products, managing orders, setting up discount codes, updating content, and reading your analytics dashboard. The recording is yours to keep. Most of our clients are fully self-sufficient within a week. And if you ever get stuck, our support team is a Slack message away.",
             },
             {
-              category: 'included',
-              question: 'Do you build headless Shopify stores for Austin tech companies?',
-              answer: "Yes — headless Shopify is a natural fit for Austin's tech-forward brands. A headless build uses Shopify as the e-commerce backend (inventory, checkout, payments) with a Next.js 15 frontend delivering sub-500ms page loads, 100/100 Lighthouse scores, and fully custom UI that no Shopify theme can match. FactoryJet builds headless Shopify stores for Austin SaaS companies with accessory and swag stores, hardware/IoT brands with complex product configurators, and DTC brands that need editorial design quality. Headless starts at $5,999 and includes Shopify Hydrogen-compatible architecture, Cloudflare Pages deployment, and full TypeScript codebase ownership.",
-            },
-            {
-              category: 'included',
-              question: 'What payment methods should my Austin Shopify store accept?',
-              answer: "Every Austin Shopify store should accept: Shopify Payments (lowest transaction fees, instant Shopify dashboard integration), PayPal (30%+ of US online shoppers prefer PayPal for first purchases), Apple Pay and Google Pay (critical for Austin's mobile-heavy tech consumer base — reduces checkout friction by 40%), and Afterpay or Shop Pay Installments for orders above $100. For B2B Austin brands, add net-30/net-60 invoicing via Shopify's B2B tools. For Austin food and beverage brands, add restaurant-style tipping at checkout. FactoryJet configures all payment methods during the standard 7-day build — no extra fees.",
-            },
-            {
-              category: 'local',
-              question: 'Can you build a Shopify store for an Austin outdoor or fitness brand?',
-              answer: "Absolutely — Austin's outdoor culture (Barton Springs, Barton Creek Greenbelt, Lake Travis, Town Lake) creates strong demand for fitness and outdoor e-commerce. We build Shopify stores for cycling brands, rock climbing gear retailers, kayak and paddleboard companies, trail running brands, and CrossFit / functional fitness equipment. Austin-specific builds include: gear rental add-ons (deposit + rental period logic), guide service booking integrations, subscription fitness equipment programs, and community memberships with product discounts. Austin's outdoor culture expects fast, mobile-optimized stores — FactoryJet delivers Lighthouse 90+ on every outdoor build.",
-            },
-            {
-              category: 'local',
-              question: 'Do you build Shopify stores for Austin real estate or home services brands?',
-              answer: "Yes — Austin's real estate boom (fastest-appreciating housing market 2018–2023) created a huge market for home improvement, interior design, and home services e-commerce. We build Shopify stores for: custom furniture and home décor brands targeting Austin's new-build market, smart home product retailers, luxury outdoor living brands (pergolas, outdoor kitchens, pools), home cleaning and maintenance subscription services, and interior design product studios. Austin's $400,000+ median home price means high-AOV home goods and renovation spending — FactoryJet builds stores that convert that intent into online revenue.",
-            },
-            {
-              category: 'local',
-              question: 'How do I sell internationally from my Austin Shopify store?',
-              answer: "FactoryJet configures Shopify Markets for international selling: multi-currency display (USD + CAD, GBP, EUR, AUD as needed), international shipping zones with zone-based carrier rate calculation, HS tariff code fields for customs declarations, duty and import tax display at checkout (Shopify's Landed Cost feature), international payment methods (iDEAL for Netherlands, Klarna for Europe), and IOSS configuration for EU buyers above €150. Austin's tech and food brands regularly ship to Canada, the UK, Australia, and Europe. We configure your store to convert international visitors at the same rate as US buyers — currency barriers kill 40% of international orders on unconfigured stores.",
-            },
-            {
-              category: 'support',
-              question: 'Does FactoryJet offer ongoing Shopify support and retainer plans for Austin businesses?',
-              answer: "Yes — ongoing support is a significant part of our Austin client relationships. After launch, FactoryJet offers: a 30-day included support window (bug fixes, minor adjustments, launch questions); monthly retainer plans starting at $299/month (up to 4 hours of development time, priority response); and project-based ongoing work for new feature builds, seasonal campaigns, and catalog expansions. Austin's SaaS and tech culture means our clients often want iterative product improvements post-launch — we accommodate that with monthly sprint-style retainer arrangements. Every Austin build includes a documented handoff so your team can self-manage day-to-day operations.",
+              category: 'quality',
+              question: 'Can you help with Shopify apps and integrations after launch?',
+              answer:
+                "Yes. Common post-launch requests we handle: adding new payment methods, integrating with a new 3PL or shipping carrier, connecting a POS system for a new Austin retail location, setting up affiliate or referral programs, and migrating to a new email marketing tool. We bill these as fixed-price add-ons, not hourly — so you always know what you're getting into before you say yes.",
             },
           ]}
         />
 
-        {/* ── 14. FINAL CTA (dark) ──────────────────────────────────── */}
+        {/* ── 14. FINAL CTA ─────────────────────────────────────────────── */}
         <FinalCTA
-          variant="dark"
-          eyebrow="READY TO START"
-          headline="Ready to Build Your Austin Shopify Store?"
-          sub="Austin's DTC market is growing faster than most brands can keep up with. Every week without a high-performing Shopify store is a week your competitors are capturing the searches — and the sales — you should own. Pick a tier, book a free 30-minute audit, and we'll have a store blueprint ready within 72 hours."
-          primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
+          variant="light"
+          eyebrow="READY TO GET STARTED"
+          headline="Your Austin Ecommerce Store, Live in 7 Days"
+          sub="No discovery fees. No six-week timelines. No $15,000 proposals for a store your competitor got built for $2,800. Just a free audit of your current situation — and an honest recommendation on what it would take to launch your online store this week."
+          primaryCta={{ label: 'Get My Free Ecommerce Audit', modal: true, region: 'us' }}
+          secondaryCta={{ label: 'View Pricing', href: '#pricing' }}
         />
 
       </main>
-      <SiteFooter />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
-  );
+  )
 }
+
+// ─── Schema (server-rendered — visible to AI crawlers) ────────────────────────
 
 function SchemaScript() {
   return (
@@ -559,5 +625,5 @@ function SchemaScript() {
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: getEcommerceCitySchema('austin') }}
     />
-  );
+  )
 }
