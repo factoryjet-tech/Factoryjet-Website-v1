@@ -123,7 +123,7 @@ export default function ClevelandWebDesignPage() {
               "industry": "Healthcare & Medical",
               "title": "Cleveland Healthcare & Medical Client",
               "description": "Cleveland's healthcare ecosystem — anchored by Cleveland Clinic (#2 hospital in the world), University Hospitals, and Medical Mutual — demands websites that project compliance awareness, clinical credibility, and technical depth. We build sites for vendors, suppliers, and professional services firms in this ecosystem that convert B2B researchers into booked discovery calls.",
-              "imageSrc": "/images/us/austin/ecommerce/portfolio-1.webp",
+              "imageSrc": "/images/us/cleveland/web-design/portfolio-1.webp",
               "stat1": "+40% conversions",
               "stat2": "< 1.5s load time"
             },
@@ -131,7 +131,7 @@ export default function ClevelandWebDesignPage() {
               "industry": "Manufacturing & Industrial",
               "title": "Cleveland Manufacturing & Industrial Client",
               "description": "Cleveland is one of America's great manufacturing cities. Parker Hannifin, Eaton, Rockwell Automation, and the broader aerospace and industrial equipment supply chain need websites that communicate engineering capability, certifications, and case study evidence to procurement teams. We build sites that qualify suppliers — not just describe them.",
-              "imageSrc": "/images/us/austin/ecommerce/portfolio-2.webp",
+              "imageSrc": "/images/us/cleveland/web-design/portfolio-2.webp",
               "stat1": "+40% conversions",
               "stat2": "< 1.5s load time"
             },
@@ -139,7 +139,7 @@ export default function ClevelandWebDesignPage() {
               "industry": "Professional & Financial Services",
               "title": "Cleveland Professional & Financial Services Client",
               "description": "KeyBank, Progressive Insurance, and Sherwin-Williams anchor Cleveland's professional services ecosystem — supporting law firms, consulting firms, financial advisors, insurance brokers, and specialty service businesses. These clients need sites that function as the first qualification filter for sophisticated B2B buyers, with authority-building content and lead capture that routes inquiries to the right person fast.",
-              "imageSrc": "/images/us/austin/ecommerce/portfolio-3.webp",
+              "imageSrc": "/images/us/cleveland/web-design/portfolio-3.webp",
               "stat1": "+40% conversions",
               "stat2": "< 1.5s load time"
             }
