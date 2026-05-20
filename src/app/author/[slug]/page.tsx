@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${author.name} - ${author.jobTitle} | FactoryJet`,
+    title: `${author.name} | ${author.jobTitle}, FactoryJet Web Design`,
     description: author.bio,
     authors: [{ name: author.name }],
     robots: {

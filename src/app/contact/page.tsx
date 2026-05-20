@@ -5,7 +5,7 @@ import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 
 export const metadata: Metadata = {
-  title: 'Get a Free Quote | FactoryJet',
+  title: 'Contact Us — Get a Free Web Design Quote | FactoryJet',
   description: 'Contact FactoryJet for web development, e-commerce & digital services. Call us or email connect@factoryjet.com. Free consultation and quotes available.',
   authors: [{ name: 'FactoryJet' }],
   robots: {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Contact FactoryJet - Get Your Free Quote Today',
+    title: 'Contact FactoryJet — Get a Free Web Project Quote Today',
     description: 'Ready to transform your digital presence? Contact our expert team for web development and e-commerce solutions. Call +91 96999 77699 for a free consultation.',
     url: 'https://factoryjet.com/contact',
     images: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact FactoryJet - Get Your Free Quote Today',
+    title: 'Contact FactoryJet — Get a Free Web Project Quote Today',
     description: 'Ready to transform your digital presence? Contact our expert team today.',
     images: ['https://factoryjet.com/logo.png'],
   },

@@ -5,7 +5,7 @@ import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 
 export const metadata: Metadata = {
-  title: 'About Us — Web & Ecommerce Agency | FactoryJet',
+  title: 'About FactoryJet | Web Design & Ecommerce Development',
   description: 'Learn how FactoryJet delivers websites & Shopify stores for US, UK & Indian businesses in 7 days. 500+ projects, 25+ years expertise. Trusted by SMBs worldwide.',
   authors: [{ name: 'FactoryJet' }],
   robots: {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'About FactoryJet - Your Trusted Digital Partner',
+    title: 'About FactoryJet — Your Trusted Web & Digital Partner',
     description: 'Meet the team behind 150+ successful projects. Expert web & e-commerce development with a mission to empower businesses through innovative digital solutions.',
     url: 'https://factoryjet.com/about',
     images: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About FactoryJet - Your Trusted Digital Partner',
+    title: 'About FactoryJet — Your Trusted Web & Digital Partner',
     description: 'Meet the team behind 150+ successful projects. Expert web & e-commerce development company.',
     images: ['https://factoryjet.com/logo.png'],
   },

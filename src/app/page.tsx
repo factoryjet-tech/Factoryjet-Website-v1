@@ -6,7 +6,7 @@ import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 
 export const metadata: Metadata = {
-  title: 'Website Design & Ecommerce Agency | FactoryJet',
+  title: 'Web Design & Ecommerce Development Agency | FactoryJet',
   description: 'FactoryJet builds websites, Shopify stores & AI agents for businesses in India, the US & UK. 7-day delivery on starter sites. 500+ businesses served. Free quote.',
   authors: [{ name: 'FactoryJet' }],
   robots: {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Website Design & Ecommerce Agency | FactoryJet',
+    title: 'Web Design & Ecommerce Development Agency | FactoryJet',
     description: 'High-performance websites, Shopify stores, and AI SEO campaigns. 7-day delivery. 500+ businesses in India, the US, and the UK.',
     url: 'https://factoryjet.com',
     images: [

@@ -5,7 +5,7 @@ import SiteFooter from '@/components/v2/SiteFooter'
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
-  title: 'Case Studies — Real Client Results | FactoryJet',
+  title: 'Web Design Case Studies — Real Client Results | FactoryJet',
   description: 'Browse FactoryJet case studies — web development & e-commerce projects with measurable results. See how we helped 500+ businesses grow online.',
   authors: [{ name: 'FactoryJet' }],
   robots: {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'FactoryJet Case Studies - Work That Drives Growth',
+    title: 'FactoryJet Case Studies — Work That Drives Real Growth',
     description: 'Explore our portfolio of successful web development and e-commerce projects. Real results from global leaders in E-commerce, SaaS, and Enterprise.',
     url: 'https://factoryjet.com/case',
     images: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FactoryJet Case Studies - Work That Drives Growth',
+    title: 'FactoryJet Case Studies — Work That Drives Real Growth',
     description: 'Explore successful web development and e-commerce projects with real business results.',
     images: ['https://factoryjet.com/logo.png'],
   },

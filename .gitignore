@@ -29,6 +29,7 @@ npm-debug.log*
 # Next.js
 next-env.d.ts
 .vercel
+tsconfig_noext.json
 
 # Brand audit pipeline (Patch #5)
 pipeline/scripts/.venv/
