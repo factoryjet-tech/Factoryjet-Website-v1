@@ -56,7 +56,7 @@ export default function LogoBar({
       <div className="mx-auto max-w-[1120px] px-4 lg:px-6">
         {tagline && (
           <p
-            className="text-center font-fj-mono font-medium uppercase text-[#F05A28]"
+            className="text-center font-fj-mono font-medium uppercase text-[#C94A1A]"
             style={{ fontSize: '11px', letterSpacing: '0.14em' }}
           >
             {tagline}

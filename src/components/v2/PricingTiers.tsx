@@ -172,7 +172,7 @@ function TierCard({ tier }: { tier: PricingTier }) {
               letterSpacing: '0.14em',
               background: 'rgba(240,90,40,0.15)',
               border: '1px solid rgba(240,90,40,0.35)',
-              color: '#F05A28',
+              color: '#C94A1A',
               padding: '4px 10px',
             }}
           >
@@ -200,7 +200,7 @@ function TierCard({ tier }: { tier: PricingTier }) {
               fontSize: 'clamp(1.625rem, 3vw, 2.5rem)',
               lineHeight: 1.05,
               letterSpacing: '-0.03em',
-              color: '#F05A28',
+              color: '#C94A1A',
             }}
           >
             {tier.priceRange}
@@ -352,13 +352,13 @@ function TierCard({ tier }: { tier: PricingTier }) {
               label={tier.cta.label}
               region={tier.cta.region ?? 'us'}
               btnVariant="secondary-light"
-              className="block w-full rounded-xl border border-[#F05A28] bg-transparent px-6 py-3.5 text-center font-fj-body font-semibold text-[#F05A28] transition-all hover:bg-[#F05A28] hover:text-white focus-visible:outline-[#F05A28]"
+              className="block w-full rounded-xl border border-[#F05A28] bg-transparent px-6 py-3.5 text-center font-fj-body font-semibold text-[#C94A1A] transition-all hover:bg-[#F05A28] hover:text-white focus-visible:outline-[#F05A28]"
               style={{ fontSize: '0.9375rem' }}
             />
           ) : (
             <Link
               href={tier.cta.href ?? '/contact'}
-              className="block w-full rounded-xl border border-[#F05A28] bg-transparent px-6 py-3.5 text-center font-fj-body font-semibold text-[#F05A28] transition-all hover:bg-[#F05A28] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F05A28]"
+              className="block w-full rounded-xl border border-[#F05A28] bg-transparent px-6 py-3.5 text-center font-fj-body font-semibold text-[#C94A1A] transition-all hover:bg-[#F05A28] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F05A28]"
               style={{ fontSize: '0.9375rem' }}
             >
               {tier.cta.label}

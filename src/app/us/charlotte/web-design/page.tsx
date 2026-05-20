@@ -81,7 +81,7 @@ export default function CharlotteWebDesignPage() {
             <p>For healthcare and enterprise suppliers — Atrium Health and Novant Health vendors, Duke Energy supply chain partners, and Charlotte's manufacturing corridor — websites need robust capability documentation, certification display, and RFQ workflows that speak directly to procurement teams. Every FactoryJet project covers discovery, Figma prototyping, Next.js development, content, SEO, and a 30-day support window. You leave with a codebase you own, a design system you keep, and a site built to convert the buyers your business actually needs.</p>
           </>
         }
-        rightSlot={<img src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden="true" className="w-full rounded-2xl object-cover" />}
+        rightSlot={<img src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden="true" width={1200} height={800} className="w-full rounded-2xl object-cover" loading="lazy" />}
       />
       <StrategicDarkSection
         eyebrow="WHY FACTORYJET"

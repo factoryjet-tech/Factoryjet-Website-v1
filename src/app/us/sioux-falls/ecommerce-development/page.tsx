@@ -144,6 +144,8 @@ export default function Page() {
             <img
               src="/images/us/services/service-web-design-process.webp"
               alt="Shopify development process for Sioux Falls South Dakota businesses"
+              width={1200}
+              height={800}
               className="rounded-2xl w-full object-cover"
               loading="lazy"
             />

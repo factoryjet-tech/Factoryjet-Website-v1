@@ -26,6 +26,14 @@
     "react-dom": "^19.0.0",
     "tailwind-merge": "^3.4.0"
   },
+  "browserslist": [
+    "chrome >= 90",
+    "firefox >= 90",
+    "safari >= 14",
+    "edge >= 90",
+    "not ie 11",
+    "not dead"
+  ],
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.13.16",
     "@types/node": "^22.14.0",

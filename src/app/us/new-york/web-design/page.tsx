@@ -340,7 +340,7 @@ export default function NewYorkWebDesignPage() {
               <p>Every FactoryJet project ships with JSON-LD schema for AI search visibility, GA4 analytics wired in from day one, and a recorded handover so your team can manage the site without calling a developer every week.</p>
             </>
           }
-          rightSlot={<img src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden="true" className="w-full rounded-2xl object-cover" />}
+          rightSlot={<img src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden="true" width={1200} height={800} className="w-full rounded-2xl object-cover" loading="lazy" />}
         />
 
         <StrategicDarkSection

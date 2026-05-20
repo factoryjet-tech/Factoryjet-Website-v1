@@ -139,7 +139,10 @@ export default function Page() {
               src="/images/us/services/service-web-design-process.webp"
               alt=""
               aria-hidden="true"
+              width={1200}
+              height={800}
               className="w-full rounded-2xl object-cover"
+              loading="lazy"
             />
           }
         />

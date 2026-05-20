@@ -241,9 +241,9 @@ body {
   letter-spacing: -0.025em;
 }
 
-/* Eyebrow utility — Geist Mono tracked-caps, brand orange (#F05A28).
- * On dark surfaces (.fj-on-dark) the same orange is used — it reads
- * clearly over charcoal/navy and matches the FactoryJet brand palette. */
+/* Eyebrow utility — Geist Mono tracked-caps, brand orange.
+ * Light surfaces: #C94A1A (darkened for WCAG AA 4.5:1 contrast on white/cream).
+ * Dark surfaces (.fj-on-dark): #F05A28 (passes AA at 5.4:1 on navy/charcoal). */
 .fj-eyebrow {
   font-family: var(--font-geist-mono), ui-monospace, monospace;
   font-size: 0.8125rem;
@@ -251,7 +251,7 @@ body {
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #F05A28;
+  color: #C94A1A;
 }
 .fj-on-dark .fj-eyebrow {
   color: #F05A28;

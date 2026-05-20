@@ -822,7 +822,7 @@ function LandingPage({ cityKey }) {
           <h2 id="test-heading" className="fj-h2">Real Results from Real Businesses</h2>
           <div style={{display:"grid",gap:16}}>
             {TESTIMONIALS.map((t,i)=><article key={i} className="fj-testimonial">
-              <div className="fj-stars" aria-label="5 out of 5 stars">{[1,2,3,4,5].map(s=><Star key={s}/>)}</div>
+              <div className="fj-stars" role="img" aria-label="5 out of 5 stars">{[1,2,3,4,5].map(s=><Star key={s}/>)}</div>
               <blockquote style={{fontSize:14,color:"var(--slate)",lineHeight:1.65,margin:"0 0 16px",fontStyle:"normal"}}>"{t.quote}"</blockquote>
               <div className="fj-testimonial-footer">
                 <div><div style={{fontWeight:700,fontSize:14,color:"var(--navy)"}}>{t.name}</div><div style={{fontSize:12,color:"var(--gray-light)"}}>{t.biz}</div></div>

@@ -132,7 +132,7 @@ function HeroContent({
               style={{
                 border: '1px solid rgba(240,90,40,0.25)',
                 background: 'rgba(240,90,40,0.08)',
-                color: '#F05A28',
+                color: '#C94A1A',
               }}
             >
               {/* Pulsing orange live-indicator dot */}
@@ -157,7 +157,7 @@ function HeroContent({
               style={{
                 border: '1px solid rgba(240,90,40,0.25)',
                 background: 'rgba(240,90,40,0.08)',
-                color: '#F05A28',
+                color: '#C94A1A',
               }}
             >
               <span className="relative flex h-2 w-2 flex-shrink-0" aria-hidden="true">
@@ -178,7 +178,7 @@ function HeroContent({
 
       {/* Eyebrow — orange to match brand accent */}
       {eyebrow && (
-        <p className="fj-eyebrow mb-3" style={{ color: '#F05A28' }}>
+        <p className="fj-eyebrow mb-3">
           {eyebrow}
         </p>
       )}

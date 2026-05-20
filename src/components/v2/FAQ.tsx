@@ -84,13 +84,13 @@ function AccordionItem({ item }: { item: FAQItem }) {
         data-faq-question
         className="flex cursor-pointer list-none items-start justify-between gap-5 py-5 [&::-webkit-details-marker]:hidden"
       >
-        <span className="font-fj-body text-[0.9375rem] font-semibold leading-[1.55] text-fj-ink transition-colors group-open:text-[#F05A28]">
+        <span className="font-fj-body text-[0.9375rem] font-semibold leading-[1.55] text-fj-ink transition-colors group-open:text-[#C94A1A]">
           {item.question}
         </span>
         {/* Chevron */}
         <span
           aria-hidden="true"
-          className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-fj-neutral-200 bg-white text-fj-neutral-400 transition-all group-open:border-[#F05A28]/30 group-open:bg-[#F05A28]/5 group-open:text-[#F05A28]"
+          className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-fj-neutral-200 bg-white text-fj-neutral-400 transition-all group-open:border-[#F05A28]/30 group-open:bg-[#F05A28]/5 group-open:text-[#C94A1A]"
         >
           <ChevronDown className="transition-transform duration-[220ms] ease-in-out group-open:rotate-180" />
         </span>
@@ -205,7 +205,7 @@ export default function FAQ({
               <a
                 key={cat.key}
                 href={`#faq-${cat.key}`}
-                className="inline-flex flex-shrink-0 items-center gap-1.5 rounded-full border border-fj-neutral-200 bg-white px-4 py-2 font-fj-body text-[0.8125rem] font-medium text-fj-neutral-600 transition-colors hover:border-[#F05A28] hover:text-[#F05A28] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F05A28]"
+                className="inline-flex flex-shrink-0 items-center gap-1.5 rounded-full border border-fj-neutral-200 bg-white px-4 py-2 font-fj-body text-[0.8125rem] font-medium text-fj-neutral-600 transition-colors hover:border-[#F05A28] hover:text-[#C94A1A] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F05A28]"
               >
                 {cat.label}
                 <span
@@ -242,11 +242,11 @@ export default function FAQ({
                           href={`#faq-${cat.key}`}
                           className="group flex items-center justify-between border-l-2 border-transparent px-3 py-2.5 transition-all duration-150 hover:border-[#F05A28] hover:bg-[#F05A28]/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F05A28]"
                         >
-                          <span className="font-fj-body text-[0.875rem] font-medium text-fj-neutral-500 transition-colors group-hover:text-[#F05A28]">
+                          <span className="font-fj-body text-[0.875rem] font-medium text-fj-neutral-500 transition-colors group-hover:text-[#C94A1A]">
                             {cat.label}
                           </span>
                           <span
-                            className="ml-2 inline-flex h-4 min-w-[1rem] items-center justify-center rounded-full bg-fj-neutral-100 px-1 font-fj-mono text-[0.5625rem] font-bold text-fj-neutral-400 transition-colors group-hover:bg-[#F05A28]/10 group-hover:text-[#F05A28]"
+                            className="ml-2 inline-flex h-4 min-w-[1rem] items-center justify-center rounded-full bg-fj-neutral-100 px-1 font-fj-mono text-[0.5625rem] font-bold text-fj-neutral-400 transition-colors group-hover:bg-[#F05A28]/10 group-hover:text-[#C94A1A]"
                             aria-hidden="true"
                           >
                             {count}
@@ -266,7 +266,7 @@ export default function FAQ({
                 <a
                   href="#final-cta"
                   className="mt-2 inline-flex items-center gap-1.5 font-fj-body text-[0.8125rem] font-semibold hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F05A28]"
-                  style={{ color: '#F05A28' }}
+                  style={{ color: '#C94A1A' }}
                 >
                   Book a free strategy call
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
@@ -305,7 +305,7 @@ export default function FAQ({
                           style={{ background: '#F05A28' }}
                           aria-hidden="true"
                         />
-                        <p className="font-fj-mono text-[0.6875rem] font-bold tracking-[0.12em] uppercase" style={{ color: '#F05A28' }}>
+                        <p className="font-fj-mono text-[0.6875rem] font-bold tracking-[0.12em] uppercase" style={{ color: '#C94A1A' }}>
                           {cat.label}
                         </p>
                       </div>

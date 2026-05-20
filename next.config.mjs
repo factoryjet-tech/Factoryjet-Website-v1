@@ -44,6 +44,8 @@ const nextConfig = {
   // Experimental optimizations
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion', 'firebase', 'firebase/firestore', 'firebase/app'],
+    // Inline critical CSS and defer the rest — reduces render-blocking CSS chunk
+    optimizeCss: true,
   },
 
   // Enable gzip compression

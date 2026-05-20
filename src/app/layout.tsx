@@ -204,8 +204,8 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-white text-slate-900 antialiased">
-        {/* Google Tag Manager - load after user interaction for better performance */}
-        <Script id="google-tag-manager" strategy="afterInteractive">
+        {/* Google Tag Manager - lazy load to minimize blocking / cookie impact */}
+        <Script id="google-tag-manager" strategy="lazyOnload">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -223,12 +223,12 @@ export default function RootLayout({
           />
         </noscript>
 
-        {/* Google Analytics - deferred to improve initial load */}
+        {/* Google Analytics - lazy load to minimize cookie impact */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-11127037244"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

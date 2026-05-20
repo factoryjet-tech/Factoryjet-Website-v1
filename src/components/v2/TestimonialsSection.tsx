@@ -113,7 +113,7 @@ const LIVE_PROJECTS: LiveProject[] = [
 /* ─── Star row ──────────────────────────────────────────────────────────── */
 function StarRow({ size = 13 }: { size?: number }) {
   return (
-    <div className="flex items-center gap-0.5" aria-label="5 out of 5 stars">
+    <div className="flex items-center gap-0.5" role="img" aria-label="5 out of 5 stars">
       {Array.from({ length: 5 }).map((_, i) => (
         <svg
           key={i}
