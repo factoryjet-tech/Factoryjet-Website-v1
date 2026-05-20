@@ -762,7 +762,7 @@ export default function WordPressDevelopmentPage() {
                 borderStyle: 'solid',
                 borderColor: 'rgb(229, 231, 235)',
                 borderTopWidth: '2px',
-                borderTopColor: '#0052CC',
+                borderTopColor: '#F05A28',
               }}
             >
               <div className="border-b border-fj-neutral-100 px-7 py-4">

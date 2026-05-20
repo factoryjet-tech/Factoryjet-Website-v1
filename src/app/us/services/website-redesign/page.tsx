@@ -25,13 +25,13 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Website Redesign Services for US Small Businesses | FactoryJet',
+  title: 'Website Redesign Services for Small Businesses | FactoryJet',
   description:
     'Professional website redesign for US businesses — faster loads, modern design, 7-day delivery for 5 pages. Starting at $1,499. 60–70% cheaper than US agencies.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Website Redesign Services for US Small Businesses | FactoryJet',
+    title: 'Website Redesign Services for Small Businesses | FactoryJet',
     description:
       'Your website is losing you customers. FactoryJet redesigns it — modern, fast, mobile-first — in 7 days. 60–70% cheaper than a US web design agency.',
     url: 'https://factoryjet.com/us/services/website-redesign',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Website Redesign Services for US Small Businesses | FactoryJet',
+    title: 'Website Redesign Services for Small Businesses | FactoryJet',
     description:
       'Modern redesign in 7 days. Fast, mobile-first, conversion-focused. FactoryJet — 60–70% cheaper than US agencies. Free redesign audit.',
     images: ['https://factoryjet.com/logo.png'],
@@ -762,7 +762,7 @@ export default function WebsiteRedesignPage() {
                 borderStyle: 'solid',
                 borderColor: 'rgb(229, 231, 235)',
                 borderTopWidth: '2px',
-                borderTopColor: '#0052CC',
+                borderTopColor: '#F05A28',
               }}
             >
               <div className="border-b border-fj-neutral-100 px-7 py-4">

@@ -22,7 +22,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'AI Workflow Automation USA | Business Process AI | FactoryJet',
+  title: 'AI Workflow Automation USA | Process AI | FactoryJet',
   description:
     'Custom AI workflow automation for US businesses — lead nurturing, invoice processing & data sync. Cut 40–65% of manual task time. From $4,000.',
   openGraph: {

@@ -1117,7 +1117,7 @@ export default function AIAgentsPage() {
                 borderStyle: 'solid',
                 borderColor: 'rgb(229, 231, 235)',
                 borderTopWidth: '2px',
-                borderTopColor: '#0052CC',
+                borderTopColor: '#F05A28',
               }}
             >
               {/* Card header */}
