@@ -304,7 +304,7 @@ export default function NewYorkWebDesignPage() {
           primaryCta={{ label: 'Start Your NYC Project', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Our Work', href: '/us/portfolio' }}
           trustItems={['From $1,999 fixed price', '7-day delivery', 'Next.js + GA4 included', '500+ projects']}
-          rightSlot={<HeroBrowserMockup />}
+          rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="New York, NY" badgeLabel="Live in 7 days" />}
         />
 
         <LogoBar tagline="Trusted by 500+ US businesses from New York to San Francisco" />

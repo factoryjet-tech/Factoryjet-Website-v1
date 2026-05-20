@@ -70,7 +70,7 @@ export default function Page() {
           lead="The only Nashville e-commerce agency that launches in 7 days at 50–60% below local rates. Shopify, WooCommerce & AI-powered stores for Music City's artists, healthcare brands, restaurants, tourism businesses, and Tennessee entrepreneurs. 500+ projects, 4.9★ rating."
           primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
           trustItems={['Shopify stores from $2,999', '7-day delivery guarantee', '500+ stores launched']}
-          rightSlot={<HeroBrowserMockup />}
+          rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Nashville, TN" badgeLabel="Live in 7 days" />}
         />
 
         {/* ── 2. LOGO BAR ─────────────────────────────────────────────── */}

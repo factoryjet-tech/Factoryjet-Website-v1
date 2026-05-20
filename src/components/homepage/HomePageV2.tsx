@@ -263,7 +263,7 @@ export default function HomePageV2() {
         primaryCta={{ label: 'Start Your Project', modal: true, region: 'in' }}
         secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919699977699' }}
         trustItems={['500+ businesses', '7-day delivery', 'Lighthouse 100/100', '60–70% vs agencies']}
-        rightSlot={<HeroBrowserMockup />}
+        rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="New York, NY" badgeLabel="Live in 7 days" />}
       />
 
       {/* 2 — Logo bar (light) */}

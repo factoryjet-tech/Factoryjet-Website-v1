@@ -70,7 +70,7 @@ export default function Page() {
           lead="The only Portland e-commerce agency that launches in 7 days at 50–60% below local rates. Oregon has zero sales tax — the ultimate margin advantage for DTC brands. Shopify, WooCommerce & AI-powered stores for outdoor brands, independent makers, food businesses, and 'Keep Portland Weird' entrepreneurs. 500+ projects, 4.9★ rating."
           primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
           trustItems={['Shopify stores from $2,999', '7-day delivery guarantee', '500+ stores launched']}
-          rightSlot={<HeroBrowserMockup />}
+          rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Portland, OR" badgeLabel="Live in 7 days" />}
         />
 
         {/* ── 2. LOGO BAR ─────────────────────────────────────────────── */}

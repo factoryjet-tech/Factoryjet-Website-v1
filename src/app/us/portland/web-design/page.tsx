@@ -49,7 +49,7 @@ export default function PortlandWebDesignPage() {
         lead={"Portland businesses operate at the intersection of sustainability, outdoor lifestyle, and Pacific Northwest tech — a buyer base that researches deeply, values authenticity, and will bounce from a slow site in seconds. FactoryJet delivers a production-ready website in 7 days, starting at $1,999. You own the code, the design files, and the results."}
         primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
         trustItems={["Websites from $1,999", "7-day delivery", "Next.js + GA4 included"]}
-        rightSlot={<HeroBrowserMockup />}
+        rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Portland, OR" badgeLabel="Live in 7 days" />}
       />
       <LogoBar
         tagline="Trusted by 500+ businesses across the US, UK, and UAE"

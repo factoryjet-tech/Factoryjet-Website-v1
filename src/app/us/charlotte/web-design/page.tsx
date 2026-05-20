@@ -49,7 +49,7 @@ export default function CharlotteWebDesignPage() {
         lead={"Charlotte is the second-largest banking center in the US — home to Bank of America's global HQ and one of the most competitive professional services markets on the East Coast. Buyers here expect digital experiences that match the caliber of the firms they work with. FactoryJet delivers a production-ready website in 7 days, starting at $1,999."}
         primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
         trustItems={["Websites from $1,999", "7-day delivery", "Next.js + GA4 included"]}
-        rightSlot={<HeroBrowserMockup />}
+        rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Charlotte, NC" badgeLabel="Live in 7 days" />}
       />
       <LogoBar
         tagline="Trusted by 500+ businesses across the US, UK, and UAE"

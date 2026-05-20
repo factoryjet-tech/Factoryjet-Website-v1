@@ -103,7 +103,7 @@ export default function AustinEcommerceDevelopmentPage() {
             '500+ stores launched',
             '4.9★ · 127 reviews',
           ]}
-          rightSlot={<HeroBrowserMockup />}
+          rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Austin, TX" badgeLabel="Live in 7 days" />}
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────── */}

@@ -71,7 +71,7 @@ export default function Page() {
           lead="Gig City runs on 10 Gbps fiber and forward-thinking ambition. FactoryJet builds the Shopify stores to match — live in 7 days from $2,999, at 50–60% below local agency rates. Shopify, WooCommerce & AI-powered stores for Chattanooga's outdoor brands, manufacturers, craft beverage companies, and CO.LAB-era innovators. 500+ projects, 4.9★."
           primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
           trustItems={['Shopify stores from $2,999', '7-day delivery guarantee', '500+ stores launched']}
-          rightSlot={<HeroBrowserMockup />}
+          rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Chattanooga, TN" badgeLabel="Live in 7 days" />}
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────── */}

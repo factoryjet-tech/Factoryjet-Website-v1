@@ -88,7 +88,7 @@ export default function Page() {
           lead="Tampa is one of the fastest-growing economies in Florida — $200B GDP, zero state income tax, and a booming DTC market across healthcare, marine, food, and tourism. FactoryJet builds the Shopify stores to capture it — live in 7 days from $2,999, at 50–60% below local agency rates. 500+ projects, 4.9★."
           primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
           trustItems={['Shopify stores from $2,999', '7-day delivery guarantee', '500+ stores launched']}
-          rightSlot={<HeroBrowserMockup />}
+          rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Tampa, FL" badgeLabel="Live in 7 days" />}
         />
 
         {/* ── 2. LOGO BAR (light) ────────────────────────────────────── */}

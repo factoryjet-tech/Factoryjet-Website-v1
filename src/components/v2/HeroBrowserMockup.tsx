@@ -6,9 +6,33 @@
  *
  * Pure server component — no images, no client JS, no external deps.
  * Works as a placeholder until real project screenshots are available.
+ *
+ * Props
+ * ─────
+ * mockupUrl     — URL shown in the browser address bar.
+ *                 India default: 'bellemaison.in'
+ *                 US pages:      'yourbusiness.com'
+ *                 UK pages:      'yourbusiness.co.uk'
+ *
+ * badgeCity     — City + region shown in the delivery badge.
+ *                 India default: 'Mumbai, IN'
+ *                 Pass the page's own city, e.g. 'Austin, TX'
+ *
+ * badgeLabel    — First line of the delivery badge.
+ *                 India default: 'Live in 6 days'
+ *                 US/UK:         'Live in 7 days'
  */
-
-export default function HeroBrowserMockup({ className = '' }: { className?: string }) {
+export default function HeroBrowserMockup({
+  className = '',
+  mockupUrl = 'bellemaison.in',
+  badgeCity = 'Mumbai, IN',
+  badgeLabel = 'Live in 6 days',
+}: {
+  className?: string;
+  mockupUrl?: string;
+  badgeCity?: string;
+  badgeLabel?: string;
+}) {
   return (
     <div className={`relative select-none py-6 pr-6 ${className}`}>
 
@@ -24,7 +48,7 @@ export default function HeroBrowserMockup({ className = '' }: { className?: stri
           </div>
           <div className="min-w-0 flex-1">
             <div className="truncate rounded-md bg-white px-3 py-1.5 font-mono text-[11px] leading-none text-[#6B7280]">
-              bellemaison.in
+              {mockupUrl}
             </div>
           </div>
         </div>
@@ -178,8 +202,8 @@ export default function HeroBrowserMockup({ className = '' }: { className?: stri
           </svg>
         </div>
         <div>
-          <p className="text-[11px] font-bold leading-tight text-[#0F0F12]">Live in 6 days</p>
-          <p className="text-[10px] leading-tight text-[#6B7280]">Mumbai, IN · 2025</p>
+          <p className="text-[11px] font-bold leading-tight text-[#0F0F12]">{badgeLabel}</p>
+          <p className="text-[10px] leading-tight text-[#6B7280]">{badgeCity} · 2025</p>
         </div>
       </div>
 
