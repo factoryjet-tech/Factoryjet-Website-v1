@@ -311,6 +311,7 @@ export default function HomePageV2() {
 
       {/* 9 — Testimonials (DARK) */}
       <TestimonialsSection
+        region="us"
         eyebrow="WHAT CLIENTS SAY"
         headline="4.9/5 across 150+ reviews from India, US & UK."
       />

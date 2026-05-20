@@ -634,6 +634,7 @@ export default function USServicesHubPage() {
 
         {/* ── TESTIMONIALS ─────────────────────────────────────────────────── */}
         <TestimonialsSection
+          region="us"
           eyebrow="CLIENT RESULTS"
           headline="What US founders say after we build their site"
         />

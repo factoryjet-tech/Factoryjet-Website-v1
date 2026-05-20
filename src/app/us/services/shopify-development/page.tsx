@@ -1110,6 +1110,7 @@ export default function ShopifyPage() {
 
         {/* ── 11b. TESTIMONIALS ─────────────────────────────────────────────── */}
         <TestimonialsSection
+          region="us"
           eyebrow="CLIENT RESULTS"
           headline="What US founders say after we build their Shopify store"
         />

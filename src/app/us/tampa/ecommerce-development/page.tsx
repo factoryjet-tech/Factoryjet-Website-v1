@@ -414,6 +414,7 @@ export default function Page() {
 
         {/* ── 12. TESTIMONIALS (white) ──────────────────────────────── */}
         <TestimonialsSection
+          region="us"
           eyebrow="WHAT CLIENTS SAY"
           headline="4.9/5 across 150+ reviews from Tampa and beyond."
         />

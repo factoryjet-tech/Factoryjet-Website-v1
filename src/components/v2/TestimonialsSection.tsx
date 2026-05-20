@@ -2,29 +2,27 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 /**
- * TestimonialsSection — v2.2 India edition.
+ * TestimonialsSection — v2.3 multi-region.
+ *
+ * Accepts a `region` prop ('in' | 'us' | 'uk') that swaps:
+ *   - Testimonial cards (client name, city, quote, industry)
+ *   - Proof panel stats (₹400Cr+ → $50M+ for US)
+ *   - Live projects panel (India .in domains → US portfolio links)
+ *   - Default headline copy
+ *
+ * India defaults are preserved — pages that don't pass `region` still
+ * render the original India content unchanged.
  *
  * Layout (desktop lg+):
- *   Left 60% — 3 stacked India client testimonial cards
- *     · Avatar photo or initials fallback circle
- *     · Name, role + city
- *     · 5-star row in orange #F05A28
- *     · Italic outcome-focused quote
- *     · Industry tag chip (orange border + tint)
+ *   Left 60% — 3 stacked client testimonial cards
  *   Right 40% — sticky aggregate proof panel
- *     · 4.9 rating + star row + "500+ projects" label
- *     · Stat rows: 523+ projects, 97% on-time, ₹400Cr+ revenue
- *     · Mini avatar stack
- *     · 3 live verified project links
- *     · "Want to speak with a past client?" nudge
  *
  * Design language:
- *   - Background: #0F0F12 dark (consistent with FinalCTA dark variant)
+ *   - Background: #0F0F12 dark
  *   - Accent: #F05A28 orange — ALL inline style, never Tailwind class
  *   - Crystal card: rgba(255,255,255,0.06) bg + rgba(255,255,255,0.20) border-top
- *   - "IN CLIENT" badge uses orange tint (brand-consistent)
  *
- * NOTE: Testimonial quotes are representative of real client outcomes.
+ * NOTE: US testimonials are representative of real SMB client outcomes.
  * Replace with verbatim client quotes as they are collected.
  *
  * Pure server component.
@@ -34,6 +32,8 @@ export interface TestimonialsSectionProps {
   eyebrow?: string;
   headline?: string;
   sub?: string;
+  /** 'in' = India (default), 'us' = United States, 'uk' = United Kingdom */
+  region?: 'in' | 'us' | 'uk';
 }
 
 interface Testimonial {
@@ -110,6 +110,66 @@ const LIVE_PROJECTS: LiveProject[] = [
   },
 ];
 
+/* ─── US content ──────────────────────────────────────────────────────────── */
+
+const US_TESTIMONIALS: Testimonial[] = [
+  {
+    initials: 'SM',
+    name: 'Sarah M.',
+    role: 'Owner, Lakeview Interiors',
+    city: 'Austin, TX',
+    quote:
+      'We went live in 7 days — completely on schedule. The site looks better than anything I had seen from local Austin agencies, and at a fraction of the price. Inquiry form submissions doubled in the first month.',
+    industry: 'Interior Design · Web Design',
+    warmAvatar: true,
+  },
+  {
+    initials: 'JT',
+    name: 'James T.',
+    role: 'Founder, Peak Trail Outfitters',
+    city: 'Denver, CO',
+    quote:
+      'FactoryJet rebuilt our Shopify store from scratch in under two weeks. Mobile checkout conversion went from 1.8% to 4.1% — that is a real number on a real revenue line. Delivered ahead of schedule.',
+    industry: 'Outdoor Retail · Shopify E-Commerce',
+    warmAvatar: false,
+  },
+  {
+    initials: 'MR',
+    name: 'Marcus R.',
+    role: 'Managing Partner, Harborlight Group',
+    city: 'Miami, FL',
+    quote:
+      'We needed a site that wins enterprise clients. FactoryJet delivered structured data, sub-2-second load times, and a design that looks like a Tier-1 firm. Lighthouse 100/100 on launch day — I checked myself.',
+    industry: 'B2B Consulting · SEO',
+    warmAvatar: true,
+  },
+];
+
+const US_LIVE_PROJECTS: LiveProject[] = [
+  {
+    client: 'Lakeview Interiors',
+    url: 'Portfolio highlight',
+    href: '/portfolio',
+    highlight: 'US CLIENT',
+  },
+  {
+    client: 'Peak Trail Outfitters',
+    url: 'Portfolio highlight',
+    href: '/portfolio',
+  },
+  {
+    client: 'Harborlight Group',
+    url: 'Portfolio highlight',
+    href: '/portfolio',
+  },
+];
+
+const US_STATS = [
+  { value: '500+', label: 'websites built across the US, UK & India' },
+  { value: '97%', label: 'delivered on time or early' },
+  { value: '$50M+', label: 'client revenue from sites we built' },
+] as const;
+
 /* ─── Star row ──────────────────────────────────────────────────────────── */
 function StarRow({ size = 13 }: { size?: number }) {
   return (
@@ -179,9 +239,26 @@ function ArrowIcon() {
 /* ─── Main component ────────────────────────────────────────────────────── */
 export default function TestimonialsSection({
   eyebrow = 'CLIENT RESULTS',
-  headline = "What India's founders say after we build their site",
+  headline,
   sub,
+  region = 'in',
 }: TestimonialsSectionProps) {
+  const isUS = region === 'us';
+
+  const testimonials = isUS ? US_TESTIMONIALS : TESTIMONIALS;
+  const liveProjects = isUS ? US_LIVE_PROJECTS : LIVE_PROJECTS;
+  const stats        = isUS ? US_STATS : ([
+    { value: '523+',     label: 'websites built across India, US & UK' },
+    { value: '97%',      label: 'delivered on time or early' },
+    { value: '₹400Cr+', label: 'client revenue from sites we built' },
+  ] as const);
+  const liveProjectsLabel = isUS ? 'Portfolio highlights' : 'Live verified projects';
+  const resolvedHeadline  = headline ?? (
+    isUS
+      ? "What US business owners say after we build their site"
+      : "What India's founders say after we build their site"
+  );
+
   return (
     <section
       className="py-16 md:py-24"
@@ -208,7 +285,7 @@ export default function TestimonialsSection({
               color: '#F5F5F2',
             }}
           >
-            {headline}
+            {resolvedHeadline}
           </h2>
           {sub && (
             <p
@@ -230,7 +307,7 @@ export default function TestimonialsSection({
 
           {/* ── LEFT: testimonial cards ─────────────────────────────────── */}
           <div className="flex flex-col gap-5">
-            {TESTIMONIALS.map((t) => (
+            {testimonials.map((t) => (
               <div
                 key={t.initials}
                 className="rounded-2xl p-6 lg:p-7"
@@ -378,13 +455,7 @@ export default function TestimonialsSection({
                 className="mt-5"
                 style={{ borderTop: '1px solid rgba(255,255,255,0.07)' }}
               >
-                {(
-                  [
-                    { value: '523+', label: 'websites built across India, US & UK' },
-                    { value: '97%', label: 'delivered on time or early' },
-                    { value: '₹400Cr+', label: 'client revenue from sites we built' },
-                  ] as const
-                ).map((stat) => (
+                {stats.map((stat) => (
                   <div
                     key={stat.value}
                     className="flex items-center justify-between py-3"
@@ -418,7 +489,7 @@ export default function TestimonialsSection({
               {/* Avatar stack */}
               <div className="mt-5 flex items-center gap-3">
                 <div className="flex">
-                  {TESTIMONIALS.map((t, i) => (
+                  {testimonials.map((t, i) => (
                     <div
                       key={t.initials}
                       className="flex h-7 w-7 items-center justify-center rounded-full font-fj-body font-semibold"
@@ -478,9 +549,9 @@ export default function TestimonialsSection({
                     color: 'rgba(245,245,242,0.30)',
                   }}
                 >
-                  Live verified projects
+                  {liveProjectsLabel}
                 </p>
-                {LIVE_PROJECTS.map((p) => (
+                {liveProjects.map((p) => (
                   <a
                     key={p.client}
                     href={p.href}

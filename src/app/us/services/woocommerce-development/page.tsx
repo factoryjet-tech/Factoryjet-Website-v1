@@ -802,6 +802,7 @@ export default function WoocommerceDevelopmentPage() {
 
         {/* -- 12. TESTIMONIALS --------------------------------------------─-- */}
         <TestimonialsSection
+          region="us"
           eyebrow="WHAT CLIENTS SAY"
           headline="4.9/5 across 500+ projects. Real results from real businesses."
         />

@@ -626,6 +626,7 @@ export default function PricingPage() {
 
       {/* ── 12. TESTIMONIALS ── */}
       <TestimonialsSection
+        region="us"
         eyebrow="CLIENT RESULTS"
         headline="What US business owners say about FactoryJet's pricing and quality."
       />

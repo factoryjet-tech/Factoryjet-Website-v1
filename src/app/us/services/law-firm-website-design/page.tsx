@@ -903,6 +903,7 @@ export default function LawFirmWebsiteDesignPage() {
 
         {/* ── 12. TESTIMONIALS ─────────────────────────────────────────────── */}
         <TestimonialsSection
+          region="us"
           eyebrow="WHAT CLIENTS SAY"
           headline="4.9/5 across 150+ reviews from US businesses and professional practices."
         />

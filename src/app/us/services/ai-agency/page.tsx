@@ -1222,6 +1222,7 @@ export default function AIAgencyPage() {
 
         {/* ── 15. TESTIMONIALS ─────────────────────────────────────────────── */}
         <TestimonialsSection
+          region="us"
           eyebrow="WHAT CLIENTS SAY"
           headline="4.9/5 across 500+ projects. Real results from real businesses."
         />

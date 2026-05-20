@@ -264,6 +264,7 @@ export default function ClevelandWebDesignPage() {
           ] as const}
         />
         <TestimonialsSection
+          region="us"
           eyebrow="WHAT CLIENTS SAY"
           headline={"4.9/5 across 150+ reviews from Cleveland and beyond."}
         />

@@ -446,6 +446,7 @@ export default function AustinEcommerceDevelopmentPage() {
 
         {/* ── 12. TESTIMONIALS ─────────────────────────────────────────── */}
         <TestimonialsSection
+          region="us"
           eyebrow="WHAT CLIENTS SAY"
           headline="4.9/5 across 127 reviews from Austin and beyond."
         />

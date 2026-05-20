@@ -140,6 +140,7 @@ export default function RaleighWebDesignPage() {
         ] as const}
       />
       <TestimonialsSection
+        region="us"
         eyebrow="WHAT CLIENTS SAY"
         headline={"4.9/5 across 150+ reviews from Raleigh and beyond."}
       />

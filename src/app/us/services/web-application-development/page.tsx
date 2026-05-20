@@ -672,6 +672,7 @@ export default function WebApplicationDevelopmentPage() {
 
       {/* ── 12. TESTIMONIALS ── */}
       <TestimonialsSection
+        region="us"
         eyebrow="CLIENT RESULTS"
         headline="What US businesses say about FactoryJet web application development."
       />

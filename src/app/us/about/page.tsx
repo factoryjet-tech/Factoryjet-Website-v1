@@ -351,6 +351,7 @@ export default function AboutPage() {
 
       {/* ── 7. TESTIMONIALS (DARK — self-contained bg) ──────────────────── */}
       <TestimonialsSection
+        region="us"
         eyebrow="CLIENT RESULTS"
         headline="Real outcomes for real US businesses"
         sub="From DTC ecommerce brands to law firms to SaaS startups — here's what our clients say about working with FactoryJet."

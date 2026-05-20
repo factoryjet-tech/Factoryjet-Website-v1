@@ -349,6 +349,7 @@ export default function Page() {
 
         {/* TESTIMONIALS */}
         <TestimonialsSection
+          region="us"
           eyebrow="WHAT OUR CLIENTS SAY"
           headline="Real results from real businesses"
         />

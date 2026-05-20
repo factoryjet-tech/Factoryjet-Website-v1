@@ -1113,6 +1113,7 @@ export default function WebDesignPage() {
 
         {/* ── 12. TESTIMONIALS ─────────────────────────────────────────────── */}
         <TestimonialsSection
+          region="us"
           eyebrow="CLIENT RESULTS"
           headline="What US founders say after we build their site"
         />

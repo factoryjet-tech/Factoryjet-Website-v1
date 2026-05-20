@@ -639,6 +639,7 @@ export default function RealEstateWebsiteDesignPage() {
 
       {/* ── 12. TESTIMONIALS ── */}
       <TestimonialsSection
+        region="us"
         eyebrow="CLIENT RESULTS"
         headline="What real estate professionals say about FactoryJet."
       />
