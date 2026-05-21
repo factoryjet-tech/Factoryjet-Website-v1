@@ -14,7 +14,8 @@ import ConditionalContactModal from '../components/ConditionalContactModal'
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
   variable: '--font-plus-jakarta',
-  display: 'swap',
+  display: 'optional',
+  preload: true,
   weight: ['400', '500', '600', '700', '800'],
   fallback: ['system-ui', 'sans-serif'],
 })
@@ -222,21 +223,6 @@ export default function RootLayout({
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
-
-        {/* Google Analytics - lazy load to minimize cookie impact */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-11127037244"
-          strategy="lazyOnload"
-        />
-        <Script id="google-analytics" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-11127037244', { 'send_page_view': false });
-            gtag('config', 'G-N40S2Q8E1J');
-          `}
-        </Script>
 
         <ContactModalProvider>
           <ScrollToTop />
