@@ -14,7 +14,7 @@ import ConditionalContactModal from '../components/ConditionalContactModal'
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
   variable: '--font-plus-jakarta',
-  display: 'optional',
+  display: 'swap',
   preload: true,
   weight: ['400', '500', '600', '700', '800'],
   fallback: ['system-ui', 'sans-serif'],
