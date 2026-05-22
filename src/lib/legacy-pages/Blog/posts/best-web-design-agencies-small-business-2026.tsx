@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/best-web-design-agencies-small-business-2026-hero.jpg",
   meta: {
-    title: "Best Web Design Agencies for Small Businesses 2026",
-    description: "Compare top web design agencies offering enterprise features at SMB prices. Real pricing, performance benchmarks, and what to expect in 2026 from £1,500-£8,000 builds.",
+    title: "Best Web Design Agencies for Small Business 2026: Top 8 Ranked",
+    description: "Compare the 8 best web design agencies for US small businesses under $5M revenue. Real pricing ($1,500–$8,000), performance scores, and turnaround times included.",
   },
   keyTakeaways: [
     "Enterprise features like headless CMS, AI chatbots, and 90+ Lighthouse scores are now standard at SMB price points (£1,500-£8,000) when working with AI-native agencies.",

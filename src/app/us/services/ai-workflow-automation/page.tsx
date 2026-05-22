@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/us/services/ai-workflow-automation',
-    languages: usServiceAlternates['ai-automation'],
+    languages: usServiceAlternates['ai-workflow-automation'],
   },
   robots: {
     index: true,

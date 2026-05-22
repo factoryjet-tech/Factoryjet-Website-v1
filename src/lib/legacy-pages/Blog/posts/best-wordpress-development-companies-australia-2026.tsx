@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/best-wordpress-development-companies-australia-2026-hero.jpg",
   meta: {
-    title: "Best WordPress Developers for Australian Small Business 2026",
-    description: "Compare top WordPress development companies serving Australian SMBs in 2026. Enterprise features, transparent pricing, real client outcomes. Find your ideal WordPress partner.",
+    title: "Best WordPress Developers for Small Business in Australia 2026",
+    description: "Compare Australia's top WordPress development companies for SMBs. Includes pricing, portfolio quality, average turnaround, and which agency is best for under $5K builds.",
   },
   keyTakeaways: [
     "Australian SMBs typically pay AUD $4,000–$15,000 for custom WordPress sites, but offshore specialists like FactoryJet deliver comparable quality at 50–60% lower cost (£1,500–£8,000 / ~AUD $2,900–$15,500).",

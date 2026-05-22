@@ -63,7 +63,7 @@ type CitySchemaInput = {
 // ─── Schema builder ───────────────────────────────────────────────────────────
 
 function buildSchema(c: CitySchemaInput): string {
-  const url = `https://factoryjet.com/us/services/ecommerce-development/${c.slug}/`;
+  const url = `https://factoryjet.com/us/${c.slug}/ecommerce-development/`;
   const schema = {
     '@context': 'https://schema.org',
     '@graph': [

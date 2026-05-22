@@ -3,7 +3,7 @@ import Image from 'next/image';
 /**
  * HeroImageMockup — v2.3 hero right-slot visual.
  *
- * Uses the AI-generated browser mockup image (hero-us-mockup.png) which
+ * Uses the AI-generated browser mockup image (hero-us-mockup.webp) which
  * already contains baked-in floating badge chips (523+ businesses served,
  * 60–70% less than US agencies, 7-day delivery) and an orange radial glow.
  *
@@ -17,7 +17,7 @@ export default function HeroImageMockup({ className = '' }: { className?: string
   return (
     <div className={`relative select-none ${className}`}>
       <Image
-        src="/images/hero-us-mockup.png"
+        src="/images/hero-us-mockup.webp"
         alt="FactoryJet builds high-converting Shopify stores and websites for US small businesses — live in 7 days"
         width={2600}
         height={1451}

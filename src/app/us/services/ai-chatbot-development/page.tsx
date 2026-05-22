@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/us/services/ai-chatbot-development',
-    languages: usServiceAlternates['ai-agents'],
+    languages: usServiceAlternates['ai-chatbot-development'],
   },
   robots: {
     index: true,

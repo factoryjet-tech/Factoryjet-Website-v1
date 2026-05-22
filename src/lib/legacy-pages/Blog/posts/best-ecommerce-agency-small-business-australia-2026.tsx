@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/best-ecommerce-agency-small-business-australia-2026-hero.jpg",
   meta: {
-    title: "Best E-Commerce Agency Australia 2026: AI Solutions Under £5K",
-    description: "Compare AI-native e-commerce agencies for Australian SMBs. FactoryJet delivers Next.js, Shopify, and custom B2B stores under £5K with 92+ Lighthouse performance and 2-4 week turnaround.",
+    title: "Best E-Commerce Agency for Small Business in Australia (2026)",
+    description: "Top 6 Australian e-commerce agencies for SMBs compared on price, tech stack, and delivery time. Includes AI-native options under $5K AUD with Lighthouse 90+ scores.",
   },
   keyTakeaways: [
     "Australian small businesses pay AUD $8,000-$15,000 for local e-commerce builds; offshore AI-native agencies deliver equivalent platforms for £2,000-£5,000 (AUD $3,800-$9,500) with faster turnaround.",

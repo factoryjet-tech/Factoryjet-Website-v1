@@ -13,9 +13,9 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: '/blog-images/shopify-vs-custom-website-us-small-business-2026-hero.jpg',
   meta: {
-    title: 'Shopify vs. Custom Website for US Small Business (2026)',
+    title: 'Shopify vs Custom Website for Small Business: 2026 Cost Comparison',
     description:
-      'Shopify vs. custom website: which is right for your US small business in 2026? Compare costs, SEO, scalability, and control. Includes decision framework for DTC, service, and B2B businesses.',
+      'Shopify starts at $39/mo. Custom sites run $5K–$20K upfront. This 2026 guide helps US small business owners choose based on revenue stage, product type, and growth goals.',
   },
   keyTakeaways: [
     'Shopify is right for 80% of US small business e-commerce — it handles PCI compliance, hosting, and scaling automatically at $79–$299/month.',

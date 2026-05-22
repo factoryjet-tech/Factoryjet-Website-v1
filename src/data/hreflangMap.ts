@@ -169,17 +169,6 @@ export const webDesignCityAlternatesIN = {
 // Per CITY PAGE RULE: only en-US + x-default.
 // ---------------------------------------------------------------------------
 
-export const webDesignCityAlternatesUS = {
-  'new-york': {
-    'en-US': 'https://factoryjet.com/us/services/web-design/new-york',
-    'x-default': 'https://factoryjet.com/us/services/web-design/new-york',
-  },
-  'cleveland': {
-    'en-US': 'https://factoryjet.com/us/services/web-design/cleveland',
-    'x-default': 'https://factoryjet.com/us/services/web-design/cleveland',
-  },
-} as const
-
 // ---------------------------------------------------------------------------
 // US priority city pages — /us/{city}/web-design route pattern
 // (no India / UAE equivalents exist)
@@ -333,6 +322,18 @@ export const usServiceAlternates = {
     'en-US': 'https://factoryjet.com/us/services/wordpress-development',
     'x-default': 'https://factoryjet.com/us/services/wordpress-development',
   },
+  'ai-chatbot-development': {
+    'en-US': 'https://factoryjet.com/us/services/ai-chatbot-development',
+    'x-default': 'https://factoryjet.com/us/services/ai-chatbot-development',
+  },
+  'ai-integration-services': {
+    'en-US': 'https://factoryjet.com/us/services/ai-integration-services',
+    'x-default': 'https://factoryjet.com/us/services/ai-integration-services',
+  },
+  'ai-workflow-automation': {
+    'en-US': 'https://factoryjet.com/us/services/ai-workflow-automation',
+    'x-default': 'https://factoryjet.com/us/services/ai-workflow-automation',
+  },
 } as const
 
 // ===========================================================================
@@ -431,13 +432,3 @@ export const ecommerceCityAlternatesIN: Record<string, { 'en-IN': string; 'x-def
 // NEW YORK SUB-PAGES (US only)
 // ===========================================================================
 
-export const newYorkSubPageAlternates = {
-  faq: {
-    'en-US': 'https://factoryjet.com/us/services/web-design/new-york/faq',
-    'x-default': 'https://factoryjet.com/us/services/web-design/new-york/faq',
-  },
-  services: {
-    'en-US': 'https://factoryjet.com/us/services/web-design/new-york/services',
-    'x-default': 'https://factoryjet.com/us/services/web-design/new-york/services',
-  },
-} as const

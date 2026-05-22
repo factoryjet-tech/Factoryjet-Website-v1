@@ -134,6 +134,10 @@ export default function Page() {
               src="/images/us/denver/ecommerce/service-explanation.webp"
               alt=""
               aria-hidden="true"
+              width={800}
+              height={600}
+              loading="lazy"
+              decoding="async"
               className="w-full rounded-2xl object-cover"
             />
           }

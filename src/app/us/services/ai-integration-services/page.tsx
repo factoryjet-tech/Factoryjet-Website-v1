@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/us/services/ai-integration-services',
-    languages: usServiceAlternates['ai-agents'],
+    languages: usServiceAlternates['ai-integration-services'],
   },
   robots: {
     index: true,

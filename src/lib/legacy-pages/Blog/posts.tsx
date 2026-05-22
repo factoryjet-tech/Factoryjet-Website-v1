@@ -803,8 +803,8 @@ export const POSTS: BlogPost[] = [
   title: "Mobile-Only Design vs Responsive Design: The Complete 2026 Strategy Guide",
   excerpt: "Most users never open your site on a laptop. This guide compares mobile-only design and responsive design, explains why mobile-first is no longer optional, and covers the UX patterns that convert in 2026.",
   meta: {
-    title: "Mobile-Only Design vs Responsive Design | Strategy Guide 2026 | FactoryJet",
-    description: "What is mobile-only design and how does it compare to responsive design? This guide covers mobile-first UX, thumb zones, navigation patterns, Google mobile-first indexing, and actionable strategy for 2026.",
+    title: "Mobile-Only vs Responsive Design: Which Wins in 2026?",
+    description: "Mobile-first indexing is live. This guide compares mobile-only and responsive design across UX, SEO, and conversion rate — with the 2026 verdict for US small businesses.",
   },
   category: 'Web Design & Strategy',
   author: 'Bhavesh Barot',
@@ -3859,8 +3859,8 @@ export const POSTS: BlogPost[] = [
   imageUrl: '/what-is-webflow-guide-2026.webp',
   isFeatured: true,
   meta: {
-    title: "What is Webflow? Features, Pricing & Comparison (2026)",
-    description: "Compare Webflow with WordPress, Wix & Framer. Learn Webflow features, pricing, pros, and when to use it in this complete 2026 guide."
+    title: "What Is Webflow? Features, Pricing & Honest Review (2026)",
+    description: "Webflow lets you build fast, SEO-ready sites without code. This guide covers Webflow pricing (Free–$39/mo), features, and when it beats WordPress or Wix in 2026."
   },
   faqs: [
     { q: "What is Webflow used for?", a: "Webflow is used to design, build, and host websites without writing code. Common use cases include marketing sites, portfolios, blogs, SaaS landing pages, and e-commerce stores." },
