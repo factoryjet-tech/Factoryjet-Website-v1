@@ -137,6 +137,14 @@ const serviceSchema = {
     '@type': 'Organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      ratingCount: '150',
+      reviewCount: '150',
+      bestRating: '5',
+      worstRating: '1',
+    },
   },
   areaServed: {
     '@type': 'Country',
@@ -627,6 +635,46 @@ const FAQ_ITEMS = [
   },
 ];
 
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How FactoryJet builds your e-commerce store in 7 days',
+  description: 'Our proven 7-day process for delivering professional, conversion-optimized e-commerce stores for US businesses.',
+  totalTime: 'P7D',
+  step: [
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'Day 1 — Discovery Call',
+      text: 'We learn your business, goals, and target audience. We define the sitemap, content strategy, and technical requirements.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Day 2 — Strategy & Structure',
+      text: 'We finalize your site architecture, wireframes, and content outline. You approve the plan before any design begins.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'Days 3–4 — Design',
+      text: 'We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'Days 5–6 — Development & SEO',
+      text: 'We build your site in Next.js or WordPress, optimize Core Web Vitals, add structured data, and connect all integrations.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 5,
+      name: 'Day 7 — Launch',
+      text: 'Your website goes live. We handle DNS, SSL, final QA, and provide training plus 30-day post-launch support.',
+    },
+  ],
+};
+
 /* ─────────────────────────────────────────────────────────────────────────────
    Page
 ───────────────────────────────────────────────────────────────────────────── */
@@ -644,6 +692,11 @@ export default function EcommerceDevelopmentPage() {
         id="ecommerce-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <Script
+        id="ecommerce-howto-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
 
       <SiteHeader

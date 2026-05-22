@@ -60,6 +60,21 @@ export const metadata: Metadata = {
    JSON-LD
 ───────────────────────────────────────────────────────────────────────────── */
 
+const howToJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How FactoryJet builds your New York website in 7 days',
+  description: 'Our proven 7-day process for delivering a professional, SEO-optimized website for New York businesses.',
+  totalTime: 'P7D',
+  step: [
+    { '@type': 'HowToStep', position: 1, name: 'Day 1 — Discovery Call', text: 'We learn your business, goals, and competitive landscape in New York. We define the sitemap, content strategy, and technical requirements.' },
+    { '@type': 'HowToStep', position: 2, name: 'Day 2 — Strategy & Structure', text: 'We finalize your site architecture, wireframes, and content outline. You approve the plan before any design begins.' },
+    { '@type': 'HowToStep', position: 3, name: 'Days 3–4 — Design', text: 'We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs.' },
+    { '@type': 'HowToStep', position: 4, name: 'Days 5–6 — Development & SEO', text: 'We build your site in Next.js or WordPress, optimize Core Web Vitals, add local SEO for New York, structured data, and connect all integrations.' },
+    { '@type': 'HowToStep', position: 5, name: 'Day 7 — Launch', text: 'Your New York website goes live. We handle DNS, SSL, final QA, and provide training plus 30-day post-launch support.' },
+  ],
+};
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -81,6 +96,7 @@ const jsonLd = {
       areaServed: { '@type': 'City', name: 'New York City' },
       priceRange: '$1,999 – $15,000+',
       description: 'FactoryJet is a web design agency building high-converting websites for NYC small businesses. 7-day delivery, fixed pricing, full code ownership.',
+      aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', ratingCount: '150', reviewCount: '150', bestRating: '5', worstRating: '1' },
     },
     {
       '@type': 'BreadcrumbList',
@@ -290,6 +306,10 @@ const FAQ_CATEGORIES = [
 export default function NewYorkWebDesignPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

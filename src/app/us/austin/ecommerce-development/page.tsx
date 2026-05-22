@@ -30,7 +30,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns'
 export const metadata: Metadata = {
   title: 'Ecommerce Development Austin TX | From $1,500 | FactoryJet',
   description:
-    "Austin's most affordable ecommerce development agency. Shopify, WooCommerce & custom online stores built in 7 days — 60-70% less than local Austin agencies. 500+ stores delivered. Free audit.",
+    "Austin ecommerce development by FactoryJet — Shopify, WooCommerce & custom stores, 60–70% less than local agencies. Launches in 7 days from $2,999. Free audit.",
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

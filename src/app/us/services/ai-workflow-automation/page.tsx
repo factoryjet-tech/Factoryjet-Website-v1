@@ -284,6 +284,54 @@ const serviceSchema = {
       description: 'Complex multi-department automation with custom business logic and compliance.',
     },
   ],
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    ratingCount: '150',
+    reviewCount: '150',
+    bestRating: '5',
+    worstRating: '1',
+  },
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How FactoryJet builds your AI workflow automation solution in 7 days',
+  description: 'Our 7-day process for delivering production-ready AI agents and automation for businesses.',
+  totalTime: 'P7D',
+  step: [
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'Day 1 — Discovery & Use-Case Mapping',
+      text: 'We audit your workflows, identify the highest-ROI automation opportunities, and define the exact scope of your AI solution.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Day 2 — Architecture & Data Planning',
+      text: 'We design the AI architecture, select the right models and APIs, and map your data sources and integration points.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'Days 3–4 — Build & Integrate',
+      text: 'We build your AI agents or automation workflows and integrate them with your existing tools, CRM, and business systems.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'Days 5–6 — Testing & Optimization',
+      text: 'We run comprehensive testing across edge cases, optimize for accuracy and latency, and add monitoring and alerting.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 5,
+      name: 'Day 7 — Launch & Training',
+      text: 'Your AI solution goes live. We train your team, provide documentation, and offer 30-day post-launch support.',
+    },
+  ],
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -722,6 +770,11 @@ export default function AIWorkflowAutomationPage() {
         id="ai-automation-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <Script
+        id="ai-workflow-automation-howto-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
 
       <SiteHeader

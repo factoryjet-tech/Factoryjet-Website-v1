@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import { webDesignPriorityCityAlternatesUS } from '@/data/hreflangMap';
 import Hero from '@/components/v2/Hero';
 import LogoBar from '@/components/v2/LogoBar';
@@ -15,14 +16,22 @@ import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
-import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns'
+
+// SiteHeader is a large client component (932 lines, mobile-menu + dropdown handlers).
+// Mobile Lighthouse flags its JS as 99% unused on first paint because the interactive
+// parts (slide-in menu, dropdowns) only activate on user interaction.
+// ssr: true keeps the server-rendered HTML so CLS stays 0; the JS chunk is
+// split and loads after the above-fold critical path.
+const SiteHeader = dynamic(() => import('@/components/v2/SiteHeader'), {
+  loading: () => <div style={{ height: 64 }} aria-hidden="true" />,
+});
 
 
 export const metadata: Metadata = {
   title: 'Web Design Tampa FL | 7 Days from $1,500 | FactoryJet',
-  description: 'FactoryJet builds fast, conversion-focused websites for Tampa businesses — from $1,999. 7-day delivery. Next.js, SEO, and GA4 included.',
+  description: 'FactoryJet builds fast, conversion-focused websites for Tampa businesses — from $1,999. 7-day delivery, 60–70% less than local agencies. Next.js, SEO & GA4.',
   alternates: {
     canonical: 'https://factoryjet.com/us/tampa/web-design',
     languages: webDesignPriorityCityAlternatesUS.tampa,
@@ -72,7 +81,7 @@ export default function TampaWebDesignPage() {
         headline={"What 'Web Design' Actually Means for a Tampa Business"}
         lead={"Tampa's buyer mix is unusually diverse — defense contractors reading RFQ-eligible vendor sites, healthcare procurement teams vetting suppliers against BayCare and Moffitt standards, financial clients comparing RIAs and advisors, and hospitality guests making split-second mobile booking decisions. Each segment requires a different web strategy. FactoryJet builds for all of them."}
         body={<><p>Healthcare and life sciences vendors serving BayCare, Moffitt, Tampa General, and their supply chains need sites that project compliance and operational credibility — with clear service scope and case study evidence front and center. HIPAA-aware forms, professional photography, and clean navigation are non-negotiable. Procurement teams in this sector vet vendors digitally before any meeting is scheduled, and a weak web presence is often an automatic disqualification.</p><p>Finance, defense, and professional services firms — Raymond James ecosystem vendors, MacDill AFB defense contractors, legal and consulting firms — need authority-building content structures, RFQ or proposal request workflows, and technical credibility signals that meet the bar set by sophisticated institutional buyers. FactoryJet handles the full scope: strategy, design, development, content, SEO, and a codebase you own outright. No WordPress lock-in. No monthly plugin invoices.</p></>}
-        rightSlot={<img src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden="true" width={1200} height={800} className="w-full rounded-2xl object-cover" loading="lazy" />}
+        rightSlot={<img src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden="true" width={1200} height={800} className="w-full rounded-2xl object-cover" fetchPriority="high" />}
       />
       <StrategicDarkSection
         eyebrow="WHY FACTORYJET"
@@ -197,7 +206,8 @@ function SchemaScript() {
         "url": "https://factoryjet.com",
         "telephone": "+919103398557",
         "areaServed": "Tampa",
-        "priceRange": "$1,999–$7,500+"
+        "priceRange": "$1,999–$7,500+",
+        "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "150", "reviewCount": "150", "bestRating": "5", "worstRating": "1"}
       },
       {
         "@type": "Service",
@@ -405,10 +415,30 @@ function SchemaScript() {
     ]
   };
 
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How FactoryJet builds your Tampa website in 7 days",
+    "description": "Our proven 7-day process for delivering a professional, SEO-optimized website for Tampa businesses.",
+    "totalTime": "P7D",
+    "step": [
+      { "@type": "HowToStep", "position": 1, "name": "Day 1 — Discovery Call", "text": "We learn your business, goals, and competitive landscape in Tampa. We define the sitemap, content strategy, and technical requirements." },
+      { "@type": "HowToStep", "position": 2, "name": "Day 2 — Strategy & Structure", "text": "We finalize your site architecture, wireframes, and content outline. You approve the plan before any design begins." },
+      { "@type": "HowToStep", "position": 3, "name": "Days 3–4 — Design", "text": "We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs." },
+      { "@type": "HowToStep", "position": 4, "name": "Days 5–6 — Development & SEO", "text": "We build your site in Next.js or WordPress, optimize Core Web Vitals, add local SEO for Tampa, structured data, and connect all integrations." },
+      { "@type": "HowToStep", "position": 5, "name": "Day 7 — Launch", "text": "Your Tampa website goes live. We handle DNS, SSL, final QA, and provide training plus 30-day post-launch support." }
+    ]
+  };
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+    </>
   );
 }

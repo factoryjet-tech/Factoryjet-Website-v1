@@ -102,8 +102,10 @@ function buildSchema(c: CitySchemaInput): string {
         aggregateRating: {
           '@type': 'AggregateRating',
           ratingValue: '4.9',
-          reviewCount: '127',
+          ratingCount: '150',
+          reviewCount: '150',
           bestRating: '5',
+          worstRating: '1',
         },
       },
       {
@@ -161,6 +163,44 @@ function buildSchema(c: CitySchemaInput): string {
             item: 'https://factoryjet.com/us/services/ecommerce-development/',
           },
           { '@type': 'ListItem', position: 3, name: `${c.city}, ${c.state}`, item: url },
+        ],
+      },
+      {
+        '@type': 'HowTo',
+        name: `How FactoryJet builds your ${c.city} e-commerce store in 7 days`,
+        description: `Our 7-day process for launching a professional, conversion-optimized e-commerce store for ${c.city} businesses.`,
+        totalTime: 'P7D',
+        step: [
+          {
+            '@type': 'HowToStep',
+            position: 1,
+            name: 'Day 1 — Discovery & Platform Selection',
+            text: `We learn your products, brand, and goals. We recommend Shopify, WooCommerce, or custom — whichever fits your ${c.city} business best.`,
+          },
+          {
+            '@type': 'HowToStep',
+            position: 2,
+            name: 'Days 2–3 — Store Design & Branding',
+            text: 'We design your storefront with mobile-first layouts, brand colors, and conversion-focused product pages that turn visitors into buyers.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 3,
+            name: 'Days 4–5 — Product Setup & Development',
+            text: 'We build and configure your product catalog, payment gateways, shipping zones, and all custom functionality your store needs.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 4,
+            name: 'Day 6 — Testing, SEO & Performance',
+            text: 'We run full QA across devices, optimize page speed, add schema markup, and configure analytics so you launch ready to rank and sell.',
+          },
+          {
+            '@type': 'HowToStep',
+            position: 5,
+            name: 'Day 7 — Launch & Handoff',
+            text: `Your ${c.city} e-commerce store goes live. We provide full training, documentation, and 30-day post-launch support.`,
+          },
         ],
       },
     ],

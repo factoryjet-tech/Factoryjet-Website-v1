@@ -104,6 +104,14 @@ const organizationData = {
     areaServed: 'US',
     availableLanguage: 'English',
   },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    ratingCount: '150',
+    reviewCount: '150',
+    bestRating: '5',
+    worstRating: '1',
+  },
 };
 
 const breadcrumbData = {
@@ -112,6 +120,46 @@ const breadcrumbData = {
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/us' },
     { '@type': 'ListItem', position: 2, name: 'FAQ', item: 'https://factoryjet.com/us/faq' },
+  ],
+};
+
+const howToData = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How FactoryJet builds your website in 7 days',
+  description: 'Our proven 7-day process for delivering professional, SEO-optimized websites for US businesses.',
+  totalTime: 'P7D',
+  step: [
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'Day 1 — Discovery Call',
+      text: 'We learn your business, goals, and target audience. We define the sitemap, content strategy, and technical requirements.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Day 2 — Strategy & Structure',
+      text: 'We finalize your site architecture, wireframes, and content outline. You approve the plan before any design begins.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'Days 3–4 — Design',
+      text: 'We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'Days 5–6 — Development & SEO',
+      text: 'We build your site in Next.js or WordPress, optimize Core Web Vitals, add structured data, and connect all integrations.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 5,
+      name: 'Day 7 — Launch',
+      text: 'Your website goes live. We handle DNS, SSL, final QA, and provide training plus 30-day post-launch support.',
+    },
   ],
 };
 
@@ -132,6 +180,11 @@ export default function USFaqPage() {
         id="breadcrumb-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+      />
+      <Script
+        id="howto-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToData) }}
       />
 
       <SiteHeader
