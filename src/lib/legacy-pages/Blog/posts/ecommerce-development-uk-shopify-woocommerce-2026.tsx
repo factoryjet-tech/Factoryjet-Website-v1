@@ -189,6 +189,8 @@ export const post: BlogPost = {
       <p className="mb-4">➡ Learn more: <a href="/pricing" className="text-blue-600 underline hover:text-blue-800 transition-colors">Pricing</a></p>
 
 
+      <p className="mb-6">➡ Looking to launch your Shopify store? <a href="/us/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet Shopify development for US businesses</a> — custom theme, full product setup, delivered in 7 days from $2,499. Also explore our <a href="/us/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">e-commerce development services</a>.</p>
+
       <div className="my-12 rounded-2xl bg-[#0052CC] p-8 sm:p-10 text-center not-prose">
         <h3 className="text-white text-2xl font-bold mb-3">Ready to transform your business?</h3>
         <p className="text-blue-100 mb-6 max-w-xl mx-auto">We'll review your specific situation and recommend the right approach. No obligation.</p>

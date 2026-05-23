@@ -32,6 +32,28 @@ export const metadata: Metadata = {
     canonical: 'https://factoryjet.com/us/austin/web-design',
     languages: webDesignPriorityCityAlternatesUS.austin,
   },
+  openGraph: {
+    type: 'website',
+    siteName: 'FactoryJet',
+    title: 'Web Design Austin TX | 7 Days from $1,500 | FactoryJet',
+    description: 'FactoryJet builds fast, conversion-focused websites for Austin businesses — from $1,500. 7-day delivery on Starter sites. Next.js, SEO, and GA4 included.',
+    url: 'https://factoryjet.com/us/austin/web-design/',
+    images: [
+      {
+        url: 'https://factoryjet.com/logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'FactoryJet Web Design — Austin, TX',
+      },
+    ],
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Web Design Austin TX | 7 Days from $1,500 | FactoryJet',
+    description: 'FactoryJet builds fast, conversion-focused websites for Austin businesses — from $1,500. 7-day delivery on Starter sites. Next.js, SEO, and GA4 included.',
+    images: ['https://factoryjet.com/logo.png'],
+  },
 };
 
 
@@ -191,6 +213,19 @@ function SchemaScript() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Web Design Austin TX | 7 Days from $1,500 | FactoryJet",
+          "url": "https://factoryjet.com/us/austin/web-design/",
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["h1", ".faq-answer", "[data-speakable]"]
+          }
+        }) }}
       />
       <script
       type="application/ld+json"

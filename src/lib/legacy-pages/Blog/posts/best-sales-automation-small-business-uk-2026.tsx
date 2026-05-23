@@ -146,6 +146,8 @@ export const post: BlogPost = {
       <p className="mb-4">➡ Learn more: <a href="/services/ai-agent-development/ai-sales-agent" className="text-blue-600 underline hover:text-blue-800 transition-colors">Ai Sales Agent</a></p>
 
 
+      <p className="mb-6">➡ Explore what's possible: <a href="/us/services/ai-automation" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet AI Automation for US businesses</a> — custom workflows built in weeks, not months. Or see our <a href="/us/services/ai-agents" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI agents service</a> for autonomous task handling.</p>
+
       <div className="my-12 rounded-2xl bg-[#0052CC] p-8 sm:p-10 text-center not-prose">
         <h3 className="text-white text-2xl font-bold mb-3">Ready to transform your business?</h3>
         <p className="text-blue-100 mb-6 max-w-xl mx-auto">We'll review your specific situation and recommend the right approach. No obligation.</p>

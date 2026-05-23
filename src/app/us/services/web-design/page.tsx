@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import Link from 'next/link';
 import { webDesignAlternates } from '@/data/hreflangMap';
 
 import SiteHeader from '@/components/v2/SiteHeader';
@@ -713,6 +714,20 @@ export default function WebDesignPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
+      <Script
+        id="speakable-schema-web-design-service"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Web Design Services USA | 7-Day Website Launch | FactoryJet",
+          "url": "https://factoryjet.com/us/services/web-design/",
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["h1", ".faq-answer", "[data-speakable]"]
+          }
+        }) }}
+      />
 
       <SiteHeader
         navLinks={[
@@ -1214,6 +1229,32 @@ export default function WebDesignPage() {
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
+
+        {/* Cities We Serve — internal linking for SEO */}
+        <section className="py-10 bg-[#FAFAF7]">
+          <div className="max-w-6xl mx-auto px-6">
+            <p className="text-sm font-semibold text-[#F05A28] uppercase tracking-widest mb-3">Serving the US</p>
+            <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">Web Design Services by City</h2>
+            <div className="flex flex-wrap gap-3">
+              {[
+                { city: 'Austin, TX', href: '/us/austin/web-design/' },
+                { city: 'Miami, FL', href: '/us/miami/web-design/' },
+                { city: 'Denver, CO', href: '/us/denver/web-design/' },
+                { city: 'Nashville, TN', href: '/us/nashville/web-design/' },
+                { city: 'Portland, OR', href: '/us/portland/web-design/' },
+                { city: 'Charlotte, NC', href: '/us/charlotte/web-design/' },
+                { city: 'Raleigh, NC', href: '/us/raleigh/web-design/' },
+                { city: 'Tampa, FL', href: '/us/tampa/web-design/' },
+                { city: 'New York, NY', href: '/us/new-york/web-design/' },
+                { city: 'Cleveland, OH', href: '/us/cleveland/web-design/' },
+              ].map(({ city, href }) => (
+                <Link key={href} href={href} className="px-4 py-2 rounded-full border border-[#F05A28] text-[#F05A28] text-sm font-medium hover:bg-[#F05A28] hover:text-white transition-colors">
+                  {city}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* ── 15. FINAL CTA ─────────────────────────────────────────────────── */}
         <div id="final-cta">

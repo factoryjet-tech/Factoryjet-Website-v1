@@ -48,6 +48,16 @@ import { post as bestSalesAutomationSmallBusinessUk2026Post } from './posts/best
 import { post as salesAutomationToolsUkSmbsRoi2026Post } from './posts/sales-automation-tools-uk-smbs-roi-2026';
 import { post as sellAiAutomationServicesUkAgencyPlaybook2026Post } from './posts/sell-ai-automation-services-uk-agency-playbook-2026';
 import { post as chooseWebDesignAgencyUk2026QuestionsPost } from './posts/choose-web-design-agency-uk-2026-questions';
+import { post as webDesignAustinTxSmallBusinessGuide2026Post } from './posts/web-design-austin-tx-small-business-guide-2026';
+import { post as webDesignMiamiFLSmallBusiness2026Post } from './posts/web-design-miami-fl-small-business-2026';
+import { post as shopifyStoreSetupUsSmallBusiness7DaysPost } from './posts/shopify-store-setup-us-small-business-7-days';
+import { post as websiteRedesignCostUsSmallBusiness2026Post } from './posts/website-redesign-cost-us-small-business-2026';
+import { post as ecommerceDevelopmentDenverCoSmallBusinessPost } from './posts/ecommerce-development-denver-co-small-business';
+import { post as webDesignNashvilleTnSmallBusiness2026Post } from './posts/web-design-nashville-tn-small-business-2026';
+import { post as webDesignCharlotteNcSmallBusiness2026Post } from './posts/web-design-charlotte-nc-small-business-2026';
+import { post as webDesignDenverCoSmallBusiness2026Post } from './posts/web-design-denver-co-small-business-2026';
+import { post as aiAgentsSmallBusinessUsa2026Post } from './posts/ai-agents-small-business-usa-2026';
+import { post as howMuchDoesWebsiteCostSmallBusinessUsa2026Post } from './posts/how-much-does-a-website-cost-small-business-usa-2026';
 
 export const POSTS: BlogPost[] = [
   // --- WEB DESIGN & STRATEGY ---
@@ -4635,4 +4645,14 @@ export const POSTS: BlogPost[] = [
   salesAutomationToolsUkSmbsRoi2026Post,
   sellAiAutomationServicesUkAgencyPlaybook2026Post,
   chooseWebDesignAgencyUk2026QuestionsPost,
+  webDesignAustinTxSmallBusinessGuide2026Post,
+  webDesignMiamiFLSmallBusiness2026Post,
+  shopifyStoreSetupUsSmallBusiness7DaysPost,
+  websiteRedesignCostUsSmallBusiness2026Post,
+  ecommerceDevelopmentDenverCoSmallBusinessPost,
+  webDesignNashvilleTnSmallBusiness2026Post,
+  webDesignCharlotteNcSmallBusiness2026Post,
+  webDesignDenverCoSmallBusiness2026Post,
+  aiAgentsSmallBusinessUsa2026Post,
+  howMuchDoesWebsiteCostSmallBusinessUsa2026Post,
 ];

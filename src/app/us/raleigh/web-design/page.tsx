@@ -28,6 +28,28 @@ export const metadata: Metadata = {
     canonical: 'https://factoryjet.com/us/raleigh/web-design',
     languages: webDesignPriorityCityAlternatesUS.raleigh,
   },
+  openGraph: {
+    type: 'website',
+    siteName: 'FactoryJet',
+    title: 'Web Design Raleigh NC | 7 Days from $1,500 | FactoryJet',
+    description: 'FactoryJet builds fast, conversion-focused websites for Raleigh businesses — from $1,999. 7-day delivery, 60–70% less than local agencies. Next.js, SEO & GA4.',
+    url: 'https://factoryjet.com/us/raleigh/web-design/',
+    images: [
+      {
+        url: 'https://factoryjet.com/logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'FactoryJet Web Design — Raleigh, NC',
+      },
+    ],
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Web Design Raleigh NC | 7 Days from $1,500 | FactoryJet',
+    description: 'FactoryJet builds fast, conversion-focused websites for Raleigh businesses — from $1,999. 7-day delivery, 60–70% less than local agencies. Next.js, SEO & GA4.',
+    images: ['https://factoryjet.com/logo.png'],
+  },
 };
 
 
@@ -408,6 +430,19 @@ function SchemaScript() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Web Design Raleigh NC | 7 Days from $1,500 | FactoryJet",
+          "url": "https://factoryjet.com/us/raleigh/web-design/",
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["h1", ".faq-answer", "[data-speakable]"]
+          }
+        }) }}
       />
     </>
   );

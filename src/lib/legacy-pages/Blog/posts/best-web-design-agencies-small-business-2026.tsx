@@ -179,6 +179,8 @@ export const post: BlogPost = {
       <p className="mb-4">➡ Learn more: <a href="/about" className="text-blue-600 underline hover:text-blue-800 transition-colors">About</a></p>
 
 
+      <p className="mb-6">➡ Serving US clients? <a href="/us/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet delivers professional US business websites</a> — from $1,999, 7-day delivery, Lighthouse 100/100. See our <a href="/us/" className="text-blue-600 underline hover:text-blue-800 transition-colors">US services hub</a> for full pricing and packages.</p>
+
       <div className="my-12 rounded-2xl bg-[#0052CC] p-8 sm:p-10 text-center not-prose">
         <h3 className="text-white text-2xl font-bold mb-3">Ready to transform your business?</h3>
         <p className="text-blue-100 mb-6 max-w-xl mx-auto">We'll review your specific situation and recommend the right approach. No obligation.</p>

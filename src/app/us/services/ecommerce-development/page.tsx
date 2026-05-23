@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import Link from 'next/link';
 import { ecommerceAlternates } from '@/data/hreflangMap';
 
 import Image from 'next/image';
@@ -698,6 +699,20 @@ export default function EcommerceDevelopmentPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
+      <Script
+        id="speakable-schema-ecommerce-development"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Ecommerce Development USA | Shopify & Custom Stores | FactoryJet",
+          "url": "https://factoryjet.com/us/services/ecommerce-development/",
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["h1", ".faq-answer", "[data-speakable]"]
+          }
+        }) }}
+      />
 
       <SiteHeader
         navLinks={[
@@ -1201,6 +1216,37 @@ export default function EcommerceDevelopmentPage() {
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
+
+        {/* Cities We Serve — internal linking for SEO */}
+        <section className="py-10 bg-[#FAFAF7]">
+          <div className="max-w-6xl mx-auto px-6">
+            <p className="text-sm font-semibold text-[#F05A28] uppercase tracking-widest mb-3">Serving the US</p>
+            <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">E-Commerce Development Services by City</h2>
+            <div className="flex flex-wrap gap-3">
+              {[
+                { city: 'Austin, TX', href: '/us/austin/ecommerce-development/' },
+                { city: 'Miami, FL', href: '/us/miami/ecommerce-development/' },
+                { city: 'Denver, CO', href: '/us/denver/ecommerce-development/' },
+                { city: 'Nashville, TN', href: '/us/nashville/ecommerce-development/' },
+                { city: 'Portland, OR', href: '/us/portland/ecommerce-development/' },
+                { city: 'Charlotte, NC', href: '/us/charlotte/ecommerce-development/' },
+                { city: 'Raleigh, NC', href: '/us/raleigh/ecommerce-development/' },
+                { city: 'Tampa, FL', href: '/us/tampa/ecommerce-development/' },
+                { city: 'New York, NY', href: '/us/new-york/ecommerce-development/' },
+                { city: 'Cleveland, OH', href: '/us/cleveland/ecommerce-development/' },
+                { city: 'Boise, ID', href: '/us/boise/ecommerce-development/' },
+                { city: 'Sioux Falls, SD', href: '/us/sioux-falls/ecommerce-development/' },
+                { city: 'Lincoln, NE', href: '/us/lincoln/ecommerce-development/' },
+                { city: 'Chattanooga, TN', href: '/us/chattanooga/ecommerce-development/' },
+                { city: 'Fargo, ND', href: '/us/fargo/ecommerce-development/' },
+              ].map(({ city, href }) => (
+                <Link key={href} href={href} className="px-4 py-2 rounded-full border border-[#F05A28] text-[#F05A28] text-sm font-medium hover:bg-[#F05A28] hover:text-white transition-colors">
+                  {city}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* ── 15. FINAL CTA ─────────────────────────────────────────────────── */}
         <div id="final-cta">

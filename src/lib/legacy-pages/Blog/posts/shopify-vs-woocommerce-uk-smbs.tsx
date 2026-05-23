@@ -179,6 +179,8 @@ export const post: BlogPost = {
         </table>
       </div>
 
+      <p className="mb-6">➡ We build both: <a href="/us/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify stores from $2,499</a> and <a href="/us/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">custom websites from $1,999</a> — both delivered in 7 days for US small businesses.</p>
+
       <div className="my-12 rounded-2xl bg-[#0052CC] p-8 sm:p-10 text-center not-prose">
         <h3 className="text-white text-2xl font-bold mb-3">Ready to transform your business?</h3>
         <p className="text-blue-100 mb-6 max-w-xl mx-auto">We'll review your specific situation and recommend the right approach. No obligation.</p>

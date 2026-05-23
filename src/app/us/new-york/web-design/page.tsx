@@ -38,13 +38,22 @@ export const metadata: Metadata = {
     title: 'Web Design New York City | FactoryJet',
     description:
       'Fast, conversion-focused websites for NYC small businesses. 7-day delivery, fixed price from $1,999. Next.js performance, Figma design, full code ownership.',
-    url: 'https://factoryjet.com/us/new-york/web-design',
+    url: 'https://factoryjet.com/us/new-york/web-design/',
+    images: [
+      {
+        url: 'https://factoryjet.com/logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'FactoryJet Web Design — New York, NY',
+      },
+    ],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Web Design NYC | FactoryJet',
     description: 'New York City web design agency — faster, cheaper, and better. Fixed price from $1,999. 7-day delivery.',
+    images: ['https://factoryjet.com/logo.png'],
   },
   robots: {
     index: true,
@@ -314,6 +323,19 @@ export default function NewYorkWebDesignPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Web Design New York City | NYC Web Design Agency | FactoryJet",
+          "url": "https://factoryjet.com/us/new-york/web-design/",
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["h1", ".faq-answer", "[data-speakable]"]
+          }
+        }) }}
       />
       <SiteHeader />
       <main className="bg-fj-cream">

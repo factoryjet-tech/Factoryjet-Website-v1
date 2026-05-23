@@ -267,6 +267,63 @@ function AgencyStatCard() {
   )
 }
 
+const reviewSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'FactoryJet',
+  url: 'https://factoryjet.com',
+  review: [
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'Ricky B.' },
+      reviewBody:
+        'We were live in 6 days — I genuinely did not believe that was possible. The design is stunning, the WhatsApp integration brings in enquiries every day, and the Lighthouse score has not moved from 100.',
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      datePublished: '2026-01-15',
+    },
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'Vishal K.' },
+      reviewBody:
+        'Our B2B catalogue was a nightmare to manage. FactoryJet built us a clean Shopify store with GST invoicing and a wholesale pricing module — our distributor onboarding time dropped from days to hours.',
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      datePublished: '2025-11-08',
+    },
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'Arif Saif Khan' },
+      reviewBody:
+        'As an MEP and BIM consultancy, credibility is everything. FactoryJet gave us a site that looks like a Tier-1 firm — structured data, fast load, and project showcase pages that actually rank on Google.',
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      datePublished: '2025-09-22',
+    },
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'Sarah M.' },
+      reviewBody:
+        'We went live in 7 days — completely on schedule. The site looks better than anything I had seen from local Austin agencies, and at a fraction of the price. Inquiry form submissions doubled in the first month.',
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      datePublished: '2025-10-14',
+    },
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'James T.' },
+      reviewBody:
+        'FactoryJet rebuilt our Shopify store from scratch in under two weeks. Mobile checkout conversion went from 1.8% to 4.1% — that is a real number on a real revenue line. Delivered ahead of schedule.',
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      datePublished: '2025-12-03',
+    },
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'Marcus R.' },
+      reviewBody:
+        'We needed a site that wins enterprise clients. FactoryJet delivered structured data, sub-2-second load times, and a design that looks like a Tier-1 firm. Lighthouse 100/100 on launch day — I checked myself.',
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      datePublished: '2026-02-19',
+    },
+  ],
+}
+
 const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
@@ -320,6 +377,23 @@ export default function AboutPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "About FactoryJet | Web Design Agency for US SMBs",
+          "url": "https://factoryjet.com/us/about/",
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["h1", ".faq-answer", "[data-speakable]"]
+          }
+        }) }}
       />
 
       <SiteHeader />

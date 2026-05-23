@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import Link from 'next/link';
 import { usServiceAlternates } from '@/data/hreflangMap';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
@@ -708,6 +709,20 @@ export default function AIAutomationPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
+      <Script
+        id="speakable-schema-ai-automation"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "AI Automation Agency for US Small Businesses | FactoryJet",
+          "url": "https://factoryjet.com/us/services/ai-automation/",
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["h1", ".faq-answer", "[data-speakable]"]
+          }
+        }) }}
+      />
 
       <SiteHeader
         navLinks={[
@@ -960,6 +975,24 @@ export default function AIAutomationPage() {
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
+
+        {/* Cities We Serve — internal linking for SEO */}
+        <section className="py-10 bg-[#FAFAF7]">
+          <div className="max-w-6xl mx-auto px-6">
+            <p className="text-sm font-semibold text-[#F05A28] uppercase tracking-widest mb-3">Serving the US</p>
+            <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">AI Automation Services by City</h2>
+            <div className="flex flex-wrap gap-3">
+              {[
+                { city: 'Miami, FL', href: '/us/miami/ai-automation/' },
+                { city: 'Charlotte, NC', href: '/us/charlotte/ai-automation/' },
+              ].map(({ city, href }) => (
+                <Link key={href} href={href} className="px-4 py-2 rounded-full border border-[#F05A28] text-[#F05A28] text-sm font-medium hover:bg-[#F05A28] hover:text-white transition-colors">
+                  {city}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* ── 14. FINAL CTA ─────────────────────────────────────────────────── */}
         <FinalCTA
