@@ -20,6 +20,7 @@ import TestimonialsSection from '@/components/v2/TestimonialsSection'
 import FAQ from '@/components/v2/FAQ'
 import FinalCTA from '@/components/v2/FinalCTA'
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup'
+import Link from 'next/link'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 
@@ -512,6 +513,24 @@ export default function Page() {
           ]}
         />
 
+
+        {/* Cross-link: Related Services in Denver */}
+        <section className="py-10 bg-[#FAFAF7]">
+          <div className="max-w-5xl mx-auto px-6 text-center">
+            <p className="text-sm font-mono text-[#F05A28] uppercase tracking-widest mb-4">
+              Also in Denver
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link
+                href="/us/denver/web-design/"
+                className="px-5 py-2 rounded-full border border-[#F05A28] text-[#F05A28] text-sm font-medium hover:bg-[#F05A28] hover:text-white transition-colors"
+              >
+                Web Design →
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* ── 14. FINAL CTA ───────────────────────────────────────────── */}
         <FinalCTA
           variant="dark"
@@ -520,7 +539,6 @@ export default function Page() {
           sub="Colorado's outdoor economy, craft brewery scene, and tech-forward consumers are growing faster than most brands can keep up with. Every week without a high-performing Shopify store is a week your competitors own the searches you should. Book a free 30-minute audit and we'll have a store blueprint ready within 72 hours."
           primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
         />
-
       </main>
       <SiteFooter />
     </>

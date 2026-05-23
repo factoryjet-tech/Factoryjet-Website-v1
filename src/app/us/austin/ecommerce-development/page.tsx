@@ -21,6 +21,7 @@ import TestimonialsSection from '@/components/v2/TestimonialsSection'
 import FAQ from '@/components/v2/FAQ'
 import FinalCTA from '@/components/v2/FinalCTA'
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup'
+import Link from 'next/link'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns'
@@ -606,6 +607,24 @@ export default function AustinEcommerceDevelopmentPage() {
           ]}
         />
 
+
+        {/* Cross-link: Related Services in Austin */}
+        <section className="py-10 bg-[#FAFAF7]">
+          <div className="max-w-5xl mx-auto px-6 text-center">
+            <p className="text-sm font-mono text-[#F05A28] uppercase tracking-widest mb-4">
+              Also in Austin
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link
+                href="/us/austin/web-design/"
+                className="px-5 py-2 rounded-full border border-[#F05A28] text-[#F05A28] text-sm font-medium hover:bg-[#F05A28] hover:text-white transition-colors"
+              >
+                Web Design →
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* ── 14. FINAL CTA ─────────────────────────────────────────────── */}
         <FinalCTA
           variant="light"
@@ -615,7 +634,6 @@ export default function AustinEcommerceDevelopmentPage() {
           primaryCta={{ label: 'Get My Free Ecommerce Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'View Pricing', href: '#pricing' }}
         />
-
       </main>
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>

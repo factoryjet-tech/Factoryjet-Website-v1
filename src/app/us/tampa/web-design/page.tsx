@@ -19,6 +19,7 @@ import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteFooter from '@/components/v2/SiteFooter'
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns'
 import Image from 'next/image'
+import Link from 'next/link'
 
 // SiteHeader is a large client component (932 lines, mobile-menu + dropdown handlers).
 // Mobile Lighthouse flags its JS as 99% unused on first paint because the interactive
@@ -204,6 +205,22 @@ export default function TampaWebDesignPage() {
           {"category":"pricing","question":"Can a new website actually improve my ROI, or is it just a sunk cost?","answer":"A well-built site in Tampa's competitive market pays for itself when it converts visitors who would otherwise have gone to a competitor. The Starter tier at $1,999 typically recovers its cost with two or three new clients — in healthcare, finance, or professional services, often with a single engagement. We track conversions from day one and build with measurable outcomes in mind, not just aesthetics."},
         ]}
       />
+      {/* Cross-link: Related Services in Tampa */}
+      <section className="py-10 bg-[#FAFAF7]">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <p className="text-sm font-mono text-[#F05A28] uppercase tracking-widest mb-4">
+            Also in Tampa
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link
+              href="/us/tampa/ecommerce-development/"
+              className="px-5 py-2 rounded-full border border-[#F05A28] text-[#F05A28] text-sm font-medium hover:bg-[#F05A28] hover:text-white transition-colors"
+            >
+              Ecommerce Development →
+            </Link>
+          </div>
+        </div>
+      </section>
       <FinalCTA
         variant="dark"
         eyebrow={"READY TO START"}
