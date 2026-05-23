@@ -40,14 +40,14 @@ export const metadata: Metadata = {
     title: 'AI Customer Support Agent India | WhatsApp AI | FactoryJet',
     description: 'Deflect 70%+ of WhatsApp support queries with AI. Order status, returns, FAQs in Hindi — integrated with Zoho Desk, Freshdesk, and Shopify.',
     url: 'https://factoryjet.com/services/ai-agent-development/ai-customer-support',
-    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet - AI Customer Support Agent India' }],
+    images: [{ url: 'https://factoryjet.com/images/services/ai-agents.webp', width: 1200, height: 630, alt: 'FactoryJet AI Agent Development Services' }],
     locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AI Customer Support Agent India | FactoryJet',
     description: '70%+ WhatsApp ticket deflection. Hindi AI support. Freshdesk + Zoho + Shopify integrated. Fixed price.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/images/services/ai-agents.webp'],
   },
   alternates: { canonical: 'https://factoryjet.com/services/ai-agent-development/ai-customer-support' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
@@ -112,7 +112,18 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'AI Customer Support Agent Development India',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '150',
+      bestRating: '5',
+      worstRating: '1',
+    },
+  },
   description: 'Custom AI customer support agents for Indian businesses — WhatsApp support, Freshdesk integration, Hindi and English handling, order status, returns, and FAQ automation.',
   areaServed: 'IN',
   serviceType: 'AI Customer Support Automation',
@@ -121,6 +132,17 @@ const serviceSchema = {
     { '@type': 'Offer', name: 'Multi-Channel Support Platform', price: '500000', priceCurrency: 'INR', description: 'WhatsApp + website + Freshdesk/Zoho Desk unified AI support with analytics.' },
     { '@type': 'Offer', name: 'Enterprise Support Automation Suite', price: '1000000', priceCurrency: 'INR', description: 'Full multi-channel support automation with AI routing, ERP integration, and CSAT tracking.' },
   ],
+};
+
+const speakableSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/ai-agent-development/ai-customer-support#webpage',
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', 'h2:first-of-type'],
+  },
+  url: 'https://factoryjet.com/services/ai-agent-development/ai-customer-support',
 };
 
 const SUPPORT_JOURNEY_STAGES: ServiceJourneyStage[] = [
@@ -496,6 +518,10 @@ export default function AICustomerSupportINPage() {
     <>
       <Script id="ai-customer-support-in-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="ai-customer-support-in-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
+      />
 
       <SiteHeader
         locale="in"

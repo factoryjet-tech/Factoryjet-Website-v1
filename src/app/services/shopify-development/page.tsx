@@ -36,10 +36,10 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/services/shopify-development',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/images/services/card-shopify.webp',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet Shopify Development India',
+        alt: 'FactoryJet Shopify Development Services',
       },
     ],
     locale: 'en_IN',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: 'Shopify Development India | Custom Shopify Stores | FactoryJet',
     description:
       'Custom Shopify stores for Indian DTC brands. Razorpay + UPI + GST built in. 7-day delivery. From ₹50,000.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/images/services/card-shopify.webp'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/shopify-development',
@@ -161,6 +161,13 @@ const serviceSchema = {
     },
     telephone: '+919699977699',
     email: 'connect@factoryjet.com',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '150',
+      bestRating: '5',
+      worstRating: '1',
+    },
   },
   areaServed: {
     '@type': 'Country',
@@ -610,6 +617,17 @@ const IN_SHOPIFY_FAQ_ITEMS = [
    Page
 ───────────────────────────────────────────────────────────────────────────── */
 
+const speakableSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/shopify-development#webpage',
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', 'h2:first-of-type'],
+  },
+  url: 'https://factoryjet.com/services/shopify-development',
+};
+
 export default function ShopifyDevelopmentPage() {
   return (
     <>
@@ -622,6 +640,10 @@ export default function ShopifyDevelopmentPage() {
         id="in-shopify-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
       />
 
       <SiteHeader locale="in" />

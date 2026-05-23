@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/web-design',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/images/services/web-design.webp',
         width: 1200,
         height: 630,
         alt: 'FactoryJet Web Design Company India',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Web Design Company in India | 7-Day Websites | FactoryJet',
     description: 'Custom websites for Indian businesses. Mobile-first. 7-day delivery. From ₹29,999.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/web-design',
@@ -207,7 +207,20 @@ const serviceSchema = {
     '@type': 'AggregateRating',
     ratingValue: '4.9',
     reviewCount: '150',
+    bestRating: '5',
+    worstRating: '1',
   },
+};
+
+const speakableSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/web-design#webpage',
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', 'h2:first-of-type'],
+  },
+  url: 'https://factoryjet.com/web-design',
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -730,6 +743,10 @@ export default function WebDesignServicePage() {
         id="in-web-design-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
       />
 
       <SiteHeader locale="in" />

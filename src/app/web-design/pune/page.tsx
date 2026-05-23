@@ -31,10 +31,10 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/web-design/pune',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/images/services/web-design.webp',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet - Web Design Company in Pune',
+        alt: 'FactoryJet Web Design Services in Pune',
       },
     ],
     locale: 'en_IN',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Web Design Company in Pune | FactoryJet',
     description: 'Award-winning Web Design Company in Pune. Beautiful, conversion-focused websites with modern UI/UX.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/web-design/pune',
@@ -132,6 +132,13 @@ export default function Page() {
     ],
     priceRange: '₹₹',
     serviceType: 'Web Design',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '150',
+      bestRating: '5',
+      worstRating: '1',
+    },
   }
 
   const faqSchema = {
@@ -360,6 +367,63 @@ const PUN_FAQ_ITEMS = [
 ];
 
 
+  const howToSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    '@id': `https://factoryjet.com/web-design/pune#howto`,
+    name: `How FactoryJet builds your Pune website in 7 days`,
+    description: `Our 7-day process for delivering a professional, AI-powered website for Pune businesses.`,
+    estimatedCost: {
+      '@type': 'MonetaryAmount',
+      currency: 'INR',
+      minValue: '25000',
+    },
+    totalTime: 'P7D',
+    step: [
+      {
+        '@type': 'HowToStep',
+        position: 1,
+        name: 'Day 1 — Discovery Call',
+        text: `We learn your business, your Pune market, your goals, and what you need the website to do.`,
+      },
+      {
+        '@type': 'HowToStep',
+        position: 2,
+        name: 'Day 2 — Strategy & Structure',
+        text: `We map your site architecture, research your Pune competitors, identify your top keywords, and write the first draft of your page copy.`,
+      },
+      {
+        '@type': 'HowToStep',
+        position: 3,
+        name: 'Days 3–4 — Design',
+        text: 'Your bespoke design is created — homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 4,
+        name: 'Days 5–6 — Development & SEO',
+        text: `Your approved design is built in code — fast, mobile-first, and SEO-optimised. Pune local schema markup added. Google Analytics and Search Console connected.`,
+      },
+      {
+        '@type': 'HowToStep',
+        position: 5,
+        name: 'Day 7 — Launch',
+        text: 'Final review, testing across 5 devices, and go-live. You receive full handover documentation and a 30-minute training session.',
+      },
+    ],
+  };
+
+  const speakableSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `https://factoryjet.com/web-design/pune#webpage`,
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', 'h2:first-of-type'],
+    },
+    url: `https://factoryjet.com/web-design/pune`,
+  };
+
   const finalCTAProps = {
     headline: 'Ready to Build a Website Pune Is Proud Of?',
     sub: "Join 500+ businesses that trust FactoryJet. Whether you're an IT firm in Hinjewadi, an auto supplier in Chakan, or an education brand targeting Maharashtra — we deliver in 7 days.",
@@ -378,6 +442,14 @@ const PUN_FAQ_ITEMS = [
         id="pun-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
       />
       <SiteHeader locale="in" />
       <BreadcrumbSchema

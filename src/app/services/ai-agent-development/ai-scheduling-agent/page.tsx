@@ -40,14 +40,14 @@ export const metadata: Metadata = {
     title: 'AI Scheduling Agent India | WhatsApp Appointment Booking AI | FactoryJet',
     description: 'AI that books site visits, demos, and appointments on WhatsApp — in Hindi and English, integrated with Google Calendar and Zoho. Fixed price.',
     url: 'https://factoryjet.com/services/ai-agent-development/ai-scheduling-agent',
-    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet - AI Scheduling Agent India' }],
+    images: [{ url: 'https://factoryjet.com/images/services/ai-agents.webp', width: 1200, height: 630, alt: 'FactoryJet AI Agent Development Services' }],
     locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AI Scheduling Agent India | FactoryJet',
     description: 'Automate appointment booking on WhatsApp in Hindi and English. Google Calendar + Zoho integrated. Fixed price.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/images/services/ai-agents.webp'],
   },
   alternates: { canonical: 'https://factoryjet.com/services/ai-agent-development/ai-scheduling-agent' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
@@ -112,7 +112,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'AI Scheduling Agent Development India',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com', aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '150', bestRating: '5', worstRating: '1' } },
   description: 'Custom AI scheduling agents for Indian businesses — automate appointment booking on WhatsApp in Hindi and English with Google Calendar, Zoho Bookings, and Razorpay integration.',
   areaServed: 'IN',
   serviceType: 'AI Appointment Scheduling Automation',
@@ -121,6 +121,17 @@ const serviceSchema = {
     { '@type': 'Offer', name: 'Multi-Resource Scheduling Platform', price: '350000', priceCurrency: 'INR', description: 'Multi-staff, multi-service scheduling with Zoho CRM sync, reminders, and rescheduling flows.' },
     { '@type': 'Offer', name: 'Enterprise Scheduling Suite', price: '700000', priceCurrency: 'INR', description: 'Multi-location, multi-language scheduling with payment collection, analytics, and ERP integration.' },
   ],
+};
+
+const speakableSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/ai-agent-development/ai-scheduling-agent#webpage',
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', 'h2:first-of-type'],
+  },
+  url: 'https://factoryjet.com/services/ai-agent-development/ai-scheduling-agent',
 };
 
 const SCHEDULING_JOURNEY_STAGES: ServiceJourneyStage[] = [
@@ -496,6 +507,10 @@ export default function AISchedulingAgentINPage() {
     <>
       <Script id="ai-scheduling-agent-in-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="ai-scheduling-agent-in-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
+      />
 
       <SiteHeader
         locale="in"

@@ -47,10 +47,10 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/services/ai-agent-development/ai-chatbot',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/images/services/ai-agents.webp',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet - AI Chatbot Development India',
+        alt: 'FactoryJet AI Agent Development Services',
       },
     ],
     locale: 'en_IN',
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: 'AI Chatbot Development India | FactoryJet',
     description:
       'WhatsApp chatbots, website AI chat, and support bots for Indian businesses. Fixed price. Hindi + English ready.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/images/services/ai-agents.webp'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/ai-agent-development/ai-chatbot',
@@ -146,6 +146,13 @@ const serviceSchema = {
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
     address: { '@type': 'PostalAddress', addressCountry: 'IN' },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '150',
+      bestRating: '5',
+      worstRating: '1',
+    },
   },
   areaServed: { '@type': 'Country', name: 'India' },
   serviceType: 'AI Chatbot Development',
@@ -174,6 +181,17 @@ const serviceSchema = {
       description: 'Website + WhatsApp + support portal chatbot with Zoho/Freshdesk/Shopify integration.',
     },
   ],
+};
+
+const speakableSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/ai-agent-development/ai-chatbot#webpage',
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', 'h2:first-of-type'],
+  },
+  url: 'https://factoryjet.com/services/ai-agent-development/ai-chatbot',
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -606,6 +624,10 @@ export default function AIChatbotINPage() {
         id="ai-chatbot-in-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
       />
 
       <SiteHeader

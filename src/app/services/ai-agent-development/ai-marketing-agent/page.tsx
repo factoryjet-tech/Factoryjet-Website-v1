@@ -47,10 +47,10 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/services/ai-agent-development/ai-marketing-agent',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/images/services/ai-agents.webp',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet - AI Marketing Agent India',
+        alt: 'FactoryJet AI Agent Development Services',
       },
     ],
     locale: 'en_IN',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Marketing Agent India | FactoryJet',
     description: 'WhatsApp broadcast automation, Diwali campaigns, and AI content in Hindi and English. Fixed price.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/images/services/ai-agents.webp'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/ai-agent-development/ai-marketing-agent',
@@ -144,6 +144,13 @@ const serviceSchema = {
     '@type': 'Organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '150',
+      bestRating: '5',
+      worstRating: '1',
+    },
   },
   description:
     'Custom AI marketing agents for Indian businesses — automate WhatsApp broadcasts, festival campaigns, social content, and Google/Meta Ads optimisation with vernacular language support.',
@@ -172,6 +179,17 @@ const serviceSchema = {
       description: 'Multi-brand, multi-language autonomous campaign execution with predictive timing and real-time ad budget reallocation.',
     },
   ],
+};
+
+const speakableSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/ai-agent-development/ai-marketing-agent#webpage',
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', 'h2:first-of-type'],
+  },
+  url: 'https://factoryjet.com/services/ai-agent-development/ai-marketing-agent',
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -607,6 +625,10 @@ export default function AIMarketingAgentINPage() {
         id="ai-marketing-agent-in-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
       />
 
       <SiteHeader

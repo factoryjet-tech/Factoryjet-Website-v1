@@ -47,10 +47,10 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/services/ai-agent-development',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/images/services/ai-agents.webp',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet - AI Agent Development Services India',
+        alt: 'FactoryJet AI Agent Development Services',
       },
     ],
     locale: 'en_IN',
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: 'AI Agent Development Services India | FactoryJet',
     description:
       'WhatsApp AI, customer support automation, sales agents for Indian businesses. Fixed price. Fast delivery.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/images/services/ai-agents.webp'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/ai-agent-development',
@@ -165,6 +165,13 @@ const serviceSchema = {
       '@type': 'PostalAddress',
       addressCountry: 'IN',
     },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '150',
+      bestRating: '5',
+      worstRating: '1',
+    },
   },
   areaServed: {
     '@type': 'Country',
@@ -196,6 +203,17 @@ const serviceSchema = {
       description: 'Multi-agent orchestration platform with custom LLM and private deployment.',
     },
   ],
+};
+
+const speakableSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/ai-agent-development#webpage',
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', 'h2:first-of-type'],
+  },
+  url: 'https://factoryjet.com/services/ai-agent-development',
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -639,6 +657,10 @@ export default function AIAgentDevelopmentINPage() {
         id="ai-agents-in-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
       />
 
       <SiteHeader

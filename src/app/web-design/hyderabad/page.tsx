@@ -51,10 +51,10 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/web-design/hyderabad',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/images/services/web-design.webp',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet — Web Design Company in Hyderabad',
+        alt: 'FactoryJet Web Design Services in Hyderabad',
       },
     ],
     locale: 'en_IN',
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     title: 'Web Design Company in Hyderabad | FactoryJet',
     description:
       'Website design company in Hyderabad. From ₹25,000. 7-day delivery. Next.js, SEO, GA4 included.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/web-design/hyderabad',
@@ -110,6 +110,13 @@ const localBusinessSchema = {
   ],
   serviceType: 'Web Design and Development',
   priceRange: '₹₹',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '150',
+    bestRating: '5',
+    worstRating: '1',
+  },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Web Design Services Hyderabad',
@@ -454,6 +461,63 @@ const HYD_COMPARISON_ROWS = [
   },
 ];
 
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  '@id': `https://factoryjet.com/web-design/hyderabad#howto`,
+  name: `How FactoryJet builds your Hyderabad website in 7 days`,
+  description: `Our 7-day process for delivering a professional, AI-powered website for Hyderabad businesses.`,
+  estimatedCost: {
+    '@type': 'MonetaryAmount',
+    currency: 'INR',
+    minValue: '25000',
+  },
+  totalTime: 'P7D',
+  step: [
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'Day 1 — Discovery Call',
+      text: `We learn your business, your Hyderabad market, your goals, and what you need the website to do.`,
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Day 2 — Strategy & Structure',
+      text: `We map your site architecture, research your Hyderabad competitors, identify your top keywords, and write the first draft of your page copy.`,
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'Days 3–4 — Design',
+      text: 'Your bespoke design is created — homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'Days 5–6 — Development & SEO',
+      text: `Your approved design is built in code — fast, mobile-first, and SEO-optimised. Hyderabad local schema markup added. Google Analytics and Search Console connected.`,
+    },
+    {
+      '@type': 'HowToStep',
+      position: 5,
+      name: 'Day 7 — Launch',
+      text: 'Final review, testing across 5 devices, and go-live. You receive full handover documentation and a 30-minute training session.',
+    },
+  ],
+};
+
+const speakableSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `https://factoryjet.com/web-design/hyderabad#webpage`,
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', 'h2:first-of-type'],
+  },
+  url: `https://factoryjet.com/web-design/hyderabad`,
+};
+
 /* ─────────────────────────────────────────────────────────────────────────────
    Page
 ───────────────────────────────────────────────────────────────────────────── */
@@ -470,6 +534,14 @@ export default function HyderabadWebDesignPage() {
         id="hyd-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
       />
 
       <SiteHeader locale="in" />

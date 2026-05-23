@@ -53,10 +53,10 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/services/ecommerce-development/surat',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/images/services/card-ecommerce.webp',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet — Ecommerce Development Company in Surat',
+        alt: 'FactoryJet Ecommerce Development Services',
       },
     ],
     locale: 'en_IN',
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: 'Ecommerce Development Surat | From ₹59,999 | FactoryJet',
     description:
       'Shopify, WooCommerce & custom ecommerce for Surat brands. Razorpay + GST + Shiprocket. From ₹59,999.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/ecommerce-development/surat',
@@ -208,6 +208,13 @@ const localBusinessSchema = {
     'Ring Road', 'Katargam', 'Sachin GIDC',
   ],
   priceRange: '₹₹',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '150',
+    bestRating: '5',
+    worstRating: '1',
+  },
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -396,6 +403,17 @@ const SURAT_ECOM_FAQ_ITEMS = [
    Page
 ───────────────────────────────────────────────────────────────────────────── */
 
+const speakableSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/ecommerce-development/surat#webpage',
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', 'h2:first-of-type'],
+  },
+  url: 'https://factoryjet.com/services/ecommerce-development/surat',
+};
+
 export default function SuratEcommercePage() {
   return (
     <>
@@ -413,6 +431,10 @@ export default function SuratEcommercePage() {
         id="surat-ecom-local-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
       />
 
       <SiteHeader locale="in" />

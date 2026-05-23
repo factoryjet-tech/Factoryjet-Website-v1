@@ -45,14 +45,14 @@ export const metadata: Metadata = {
     description:
       'AI sales agents that qualify WhatsApp leads, book demos, and update Zoho CRM — 24/7, in Hindi and English. Fixed price.',
     url: 'https://factoryjet.com/services/ai-agent-development/ai-sales-agent',
-    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet - AI Sales Agent India' }],
+    images: [{ url: 'https://factoryjet.com/images/services/ai-agents.webp', width: 1200, height: 630, alt: 'FactoryJet AI Agent Development Services' }],
     locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AI Sales Agent India | FactoryJet',
     description: 'WhatsApp lead qualification, automated follow-ups, and demo booking for Indian businesses. Fixed price.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/images/services/ai-agents.webp'],
   },
   alternates: { canonical: 'https://factoryjet.com/services/ai-agent-development/ai-sales-agent' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
@@ -121,7 +121,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'AI Sales Agent Development India',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com', address: { '@type': 'PostalAddress', addressCountry: 'IN' } },
+  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com', address: { '@type': 'PostalAddress', addressCountry: 'IN' }, aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '150', bestRating: '5', worstRating: '1' } },
   areaServed: { '@type': 'Country', name: 'India' },
   serviceType: 'AI Sales Agent Development',
   description: 'AI sales agents for Indian businesses — WhatsApp lead qualification, automated follow-ups, demo booking, and CRM updates. Fixed price. Live in 2–4 weeks.',
@@ -134,6 +134,17 @@ const serviceSchema = {
 /* ─────────────────────────────────────────────────────────────────────────────
    Section data
 ───────────────────────────────────────────────────────────────────────────── */
+
+const speakableSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/ai-agent-development/ai-sales-agent#webpage',
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', 'h2:first-of-type'],
+  },
+  url: 'https://factoryjet.com/services/ai-agent-development/ai-sales-agent',
+};
 
 const SALES_JOURNEY_STAGES: ServiceJourneyStage[] = [
   { number: '01', title: 'Discover', description: 'We map your current lead sources, ideal customer profile, and qualification criteria your best reps use — so the AI replicates your best human instincts.' },
@@ -273,6 +284,10 @@ export default function AISalesAgentINPage() {
     <>
       <Script id="ai-sales-agent-in-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="ai-sales-agent-in-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
+      />
 
       <SiteHeader locale="in" navLinks={[{ label: 'Services', href: '/services' }, { label: 'AI Agents', href: '/services/ai-agent-development' }, { label: 'Portfolio', href: '/portfolio' }, { label: 'Pricing', href: '#pricing' }, { label: 'Contact', modal: true, region: 'in' }]} cta={{ label: 'Book a Free Call', modal: true, region: 'in' }} />
 

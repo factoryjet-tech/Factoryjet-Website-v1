@@ -19,7 +19,7 @@ import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 
 export const metadata: Metadata = {
-  title: 'AI Workflow Automation India | Process Automation | FactoryJet',
+  title: 'AI Workflow Automation India | FactoryJet',
   description:
     'AI workflow automation for Indian businesses — automate Zoho CRM, Tally, GST invoicing & WhatsApp follow-ups. Fixed price. Live in 2–4 weeks.',
   keywords: [
@@ -40,14 +40,14 @@ export const metadata: Metadata = {
     title: 'AI Workflow Automation India | FactoryJet',
     description: 'Custom AI workflow automation for Indian businesses. Automate Zoho, Tally, GST, WhatsApp, and cross-system data flows. Fixed price.',
     url: 'https://factoryjet.com/services/ai-agent-development/ai-workflow-automation',
-    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet - AI Workflow Automation India' }],
+    images: [{ url: 'https://factoryjet.com/images/services/ai-agents.webp', width: 1200, height: 630, alt: 'FactoryJet AI Agent Development Services' }],
     locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AI Workflow Automation India | FactoryJet',
     description: 'Automate Zoho, Tally, GST, and WhatsApp workflows. Fixed price. Live in 2–4 weeks.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/images/services/ai-agents.webp'],
   },
   alternates: { canonical: 'https://factoryjet.com/services/ai-agent-development/ai-workflow-automation' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
@@ -112,7 +112,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'AI Workflow Automation Development India',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com', aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '150', bestRating: '5', worstRating: '1' } },
   description: 'Custom AI workflow automation for Indian businesses — connect Zoho, Tally, Shopify, WhatsApp, Razorpay, and 20+ tools into automated pipelines with AI decision logic.',
   areaServed: 'IN',
   serviceType: 'AI Workflow Automation',
@@ -121,6 +121,17 @@ const serviceSchema = {
     { '@type': 'Offer', name: 'Multi-System Workflow Platform', price: '350000', priceCurrency: 'INR', description: '5–10 connected tools with AI routing, data transformation, and error handling.' },
     { '@type': 'Offer', name: 'Full Business Automation Suite', price: '700000', priceCurrency: 'INR', description: 'End-to-end business automation with AI decision logic across sales, ops, finance, and support.' },
   ],
+};
+
+const speakableSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/ai-agent-development/ai-workflow-automation#webpage',
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', 'h2:first-of-type'],
+  },
+  url: 'https://factoryjet.com/services/ai-agent-development/ai-workflow-automation',
 };
 
 const WORKFLOW_JOURNEY_STAGES: ServiceJourneyStage[] = [
@@ -492,6 +503,10 @@ export default function AIWorkflowAutomationINPage() {
     <>
       <Script id="ai-workflow-automation-in-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="ai-workflow-automation-in-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
+      />
 
       <SiteHeader
         locale="in"

@@ -40,14 +40,14 @@ export const metadata: Metadata = {
     title: 'AI Voice Agent India | Hindi AI Calling Bot | FactoryJet',
     description: 'Hindi AI voice agents for lead qualification, appointment booking, and collection follow-ups. Fixed price. Live in 3–5 weeks.',
     url: 'https://factoryjet.com/services/ai-agent-development/ai-voice-agent',
-    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet - AI Voice Agent India' }],
+    images: [{ url: 'https://factoryjet.com/images/services/ai-agents.webp', width: 1200, height: 630, alt: 'FactoryJet AI Agent Development Services' }],
     locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AI Voice Agent India | FactoryJet',
     description: 'Hindi AI callers for lead qualification, appointments, and collections. Fixed price.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/images/services/ai-agents.webp'],
   },
   alternates: { canonical: 'https://factoryjet.com/services/ai-agent-development/ai-voice-agent' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
@@ -112,7 +112,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'AI Voice Agent Development India',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com', aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '150', bestRating: '5', worstRating: '1' } },
   description: 'Custom AI voice agents for Indian businesses — Hindi AI callers for lead qualification, appointment booking, collection follow-ups, and inbound IVR with Zoho CRM integration.',
   areaServed: 'IN',
   serviceType: 'AI Voice Agent Development',
@@ -121,6 +121,17 @@ const serviceSchema = {
     { '@type': 'Offer', name: 'Full Voice AI Platform', price: '600000', priceCurrency: 'INR', description: 'Inbound + outbound voice AI with Zoho CRM integration, call recording, and analytics dashboard.' },
     { '@type': 'Offer', name: 'Enterprise Voice AI', price: '1200000', priceCurrency: 'INR', description: 'Multi-language, multi-campaign voice AI with full telephony infrastructure and TRAI-compliant stack.' },
   ],
+};
+
+const speakableSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/ai-agent-development/ai-voice-agent#webpage',
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', 'h2:first-of-type'],
+  },
+  url: 'https://factoryjet.com/services/ai-agent-development/ai-voice-agent',
 };
 
 const VOICE_JOURNEY_STAGES: ServiceJourneyStage[] = [
@@ -496,6 +507,10 @@ export default function AIVoiceAgentINPage() {
     <>
       <Script id="ai-voice-agent-in-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="ai-voice-agent-in-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
+      />
 
       <SiteHeader
         locale="in"
