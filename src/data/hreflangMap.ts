@@ -168,6 +168,10 @@ export const webDesignCityAlternatesIN = {
     'en-IN': 'https://factoryjet.com/web-design/surat',
     'x-default': 'https://factoryjet.com/web-design/surat',
   },
+  indore: {
+    'en-IN': 'https://factoryjet.com/web-design/indore',
+    'x-default': 'https://factoryjet.com/web-design/indore',
+  },
 } as const
 
 // ---------------------------------------------------------------------------
