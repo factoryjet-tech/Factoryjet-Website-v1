@@ -145,7 +145,7 @@ sed -i 's|@/lib/gsap|@/lib/gsap|g' ./src/app/uk/leeds/sections/*.tsx
 - **Tailwind CSS 4**: Full utility-based design system
 - **Color Palette**: 
   - Dark: `#0a0f1c`, `#1a2332`, `#2d3e5f`
-  - Brand Blue: `#0052CC`, `#1a6fff`
+  - Brand Blue: `#F05A28`, `#1a6fff`
   - Accent Orange: `#FF6B35`
   - Green: `#10B981`
   - Neutrals: `#6B7280`, `#E5E7EB`

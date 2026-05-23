@@ -210,7 +210,7 @@ function PlusIcon({ open }: { open: boolean }) {
         flex: "none",
         transform: open ? "rotate(45deg)" : "rotate(0deg)",
         transition: "transform 300ms ease",
-        color: open ? "#0052CC" : "#6b7280",
+        color: open ? "#F05A28" : "#6b7280",
       }}
     >
       <line x1="12" y1="5" x2="12" y2="19" />
@@ -383,7 +383,7 @@ export default function FAQ() {
               <p
                 data-faq-head
                 style={{
-                  color: "#0052CC",
+                  color: "#F05A28",
                   fontFamily: "var(--font-sans)",
                   fontWeight: 600,
                   fontSize: 12,
@@ -441,10 +441,10 @@ export default function FAQ() {
                             fontFamily: "var(--font-sans)",
                             fontWeight: isActive ? 600 : 500,
                             fontSize: 14,
-                            color: isActive ? "#0052CC" : "#6b7280",
+                            color: isActive ? "#F05A28" : "#6b7280",
                             backgroundColor: isActive ? "#F0F7FF" : "transparent",
                             borderLeft: isActive
-                              ? "3px solid #0052CC"
+                              ? "3px solid #F05A28"
                               : "3px solid transparent",
                             borderBottom: "1px solid #E2E8F0",
                             paddingTop: 12,
@@ -459,7 +459,7 @@ export default function FAQ() {
                           {cat.count != null && (
                             <span
                               style={{
-                                color: isActive ? "#0052CC" : "#9CA3AF",
+                                color: isActive ? "#F05A28" : "#9CA3AF",
                                 fontSize: 12,
                                 fontWeight: 500,
                                 fontVariantNumeric: "tabular-nums",
@@ -498,9 +498,9 @@ export default function FAQ() {
                         padding: "10px 16px",
                         minHeight: 44,
                         color: isActive ? "#FFFFFF" : "#374151",
-                        backgroundColor: isActive ? "#0052CC" : "#F1F5F9",
+                        backgroundColor: isActive ? "#F05A28" : "#F1F5F9",
                         border: isActive
-                          ? "1px solid #0052CC"
+                          ? "1px solid #F05A28"
                           : "1px solid #E2E8F0",
                       }}
                     >

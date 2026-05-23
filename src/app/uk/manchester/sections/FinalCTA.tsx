@@ -25,7 +25,7 @@ const SERVICE_OPTIONS = [
 
 // Shared Tailwind class string for all form inputs, textarea, and select
 const inputCls =
-  "bg-white/10 border border-white/20 text-white placeholder-gray-400 rounded-lg px-4 py-3 focus:border-[#0052CC] focus:ring-1 focus:ring-[#0052CC] focus:outline-none w-full";
+  "bg-white/10 border border-white/20 text-white placeholder-gray-400 rounded-lg px-4 py-3 focus:border-[#F05A28] focus:ring-1 focus:ring-[#F05A28] focus:outline-none w-full";
 
 const inputErrorCls =
   "bg-white/10 border border-red-400 text-white placeholder-gray-400 rounded-lg px-4 py-3 focus:border-red-400 focus:ring-1 focus:ring-red-400 focus:outline-none w-full";
@@ -73,7 +73,7 @@ function StepIndicator({ currentStep }: { currentStep: number }) {
                   background: isCompleted
                     ? "#10B981"
                     : isCurrent
-                    ? "#0052CC"
+                    ? "#F05A28"
                     : "rgba(255,255,255,0.2)",
                   color: isCompleted || isCurrent ? "white" : "rgba(255,255,255,0.4)",
                 }}
@@ -324,7 +324,7 @@ export default function FinalCTA() {
                 href="mailto:connect@factoryjet.com"
                 className="flex items-center gap-3 transition-opacity duration-200 hover:opacity-80"
               >
-                <Mail size={17} style={{ color: "#0052CC", flexShrink: 0 }} aria-hidden="true" />
+                <Mail size={17} style={{ color: "#F05A28", flexShrink: 0 }} aria-hidden="true" />
                 <span style={{ fontSize: "14px", color: "rgba(255,255,255,0.6)" }}>
                   connect@factoryjet.com
                 </span>
@@ -440,7 +440,7 @@ export default function FinalCTA() {
                         onClick={handleStep1Next}
                         className="font-semibold rounded-lg transition-all duration-200 hover:brightness-110 mt-1"
                         style={{
-                          background: "#0052CC",
+                          background: "#F05A28",
                           color: "white",
                           padding: "14px 16px",
                           fontSize: "15px",
@@ -477,7 +477,7 @@ export default function FinalCTA() {
                           className={
                             errors.service
                               ? "bg-white/10 border border-red-400 text-white rounded-lg px-4 py-3 focus:border-red-400 focus:outline-none w-full cursor-pointer"
-                              : "bg-white/10 border border-white/20 text-white rounded-lg px-4 py-3 focus:border-[#0052CC] focus:outline-none w-full cursor-pointer"
+                              : "bg-white/10 border border-white/20 text-white rounded-lg px-4 py-3 focus:border-[#F05A28] focus:outline-none w-full cursor-pointer"
                           }
                         >
                           <option value="" style={{ background: "#0a0f1c" }}>Select a service…</option>
@@ -528,7 +528,7 @@ export default function FinalCTA() {
                           onClick={handleStep2Next}
                           className="flex-1 font-semibold rounded-lg transition-all duration-200 hover:brightness-110"
                           style={{
-                            background: "#0052CC",
+                            background: "#F05A28",
                             color: "white",
                             padding: "14px 16px",
                             fontSize: "15px",

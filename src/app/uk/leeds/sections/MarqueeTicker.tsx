@@ -13,7 +13,7 @@ function TickerItem({ label }: { label: string }) {
     <>
       <span className="whitespace-nowrap">{label}</span>
       {/* Diamond separator */}
-      <span className="text-[#0052CC] mx-4 select-none" aria-hidden="true">
+      <span className="text-[#F05A28] mx-4 select-none" aria-hidden="true">
         ◆
       </span>
     </>

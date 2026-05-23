@@ -3,7 +3,7 @@ import Script from "next/script";
 import BirminghamPage from "./BirminghamPage";
 
 export const metadata: Metadata = {
-  title: "AI Web Design Agency Birmingham | FactoryJet — UK's AI-Native Agency",
+  title: "AI Web Design Agency Birmingham | FactoryJet",
   description:
     "AI-native web design, Shopify development, AI agents and AI SEO for Birmingham's 60,000 businesses. 50–60% below Jewellery Quarter agency rates. From Paradise Quarter to Brindleyplace — built for the second city.",
   alternates: {
@@ -57,6 +57,7 @@ const schema = {
         "latitude": 52.4862,
         "longitude": -1.8904,
       },
+      "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "150", "bestRating": "5", "worstRating": "1"},
     },
     {
       "@type": "Service",
@@ -212,7 +213,7 @@ const schema = {
     },
     {
       "@type": "WebPage",
-      "name": "AI Web Design Agency Birmingham | FactoryJet — UK's AI-Native Agency",
+      "name": "AI Web Design Agency Birmingham | FactoryJet",
       "url": "https://factoryjet.com/uk/birmingham",
       "description":
         "AI-native web design, AI agents & AI SEO agency in Birmingham. 50–60% below local agency rates.",

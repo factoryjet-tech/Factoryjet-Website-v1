@@ -48,7 +48,7 @@ export default function FinalCTA() {
       aria-label="Ready to build Liverpool's most ambitious website"
       className="relative w-full overflow-hidden"
       style={{
-        backgroundColor: "#0052CC",
+        backgroundColor: "#F05A28",
         color: "#FFFFFF",
         maxWidth: "100vw",
       }}
@@ -168,7 +168,7 @@ export default function FinalCTA() {
               className="inline-flex items-center justify-center gap-2"
               style={{
                 backgroundColor: "#FFFFFF",
-                color: "#0052CC",
+                color: "#F05A28",
                 padding: "17px 32px",
                 borderRadius: 8,
                 fontFamily: "var(--font-sans)",

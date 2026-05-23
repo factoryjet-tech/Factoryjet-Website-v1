@@ -47,7 +47,7 @@ export default function FinalCTA() {
       id="contact"
       aria-label="Ready to future-proof your UK business"
       className="relative w-full overflow-hidden"
-      style={{ backgroundColor: "#0052CC", color: "#FFFFFF", maxWidth: "100vw" }}
+      style={{ backgroundColor: "#F05A28", color: "#FFFFFF", maxWidth: "100vw" }}
     >
       {/* Decorative stat watermarks — behind content */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
@@ -159,7 +159,7 @@ export default function FinalCTA() {
               className="inline-flex items-center justify-center gap-2"
               style={{
                 backgroundColor: "#FFFFFF",
-                color: "#0052CC",
+                color: "#F05A28",
                 padding: "17px 32px",
                 borderRadius: 8,
                 fontFamily: "var(--font-sans)",

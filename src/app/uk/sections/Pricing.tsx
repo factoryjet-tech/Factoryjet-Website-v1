@@ -192,7 +192,7 @@ export default function Pricing() {
         <div className="flex flex-col items-center text-center">
           <p
             style={{
-              color: "#0052CC",
+              color: "#F05A28",
               fontFamily: "var(--font-sans)",
               fontWeight: 600,
               fontSize: 13,
@@ -329,13 +329,13 @@ export default function Pricing() {
                     <div
                       className="px-6 py-6"
                       style={{
-                        color: "#0052CC",
+                        color: "#F05A28",
                         fontFamily: "var(--font-sans)",
                         fontWeight: 700,
                         fontSize: 16,
                         lineHeight: 1.4,
                         backgroundColor: "rgba(0,82,204,0.04)",
-                        borderLeft: "3px solid #0052CC",
+                        borderLeft: "3px solid #F05A28",
                         borderRight: "1px solid #E2E8F0",
                       }}
                     >
@@ -384,7 +384,7 @@ export default function Pricing() {
             }}
             className="inline-flex items-center justify-center"
             style={{
-              backgroundColor: "#0052CC",
+              backgroundColor: "#F05A28",
               color: "#FFFFFF",
               padding: "16px 28px",
               borderRadius: 8,
@@ -428,7 +428,7 @@ export default function Pricing() {
               transition: "border-color 0.2s ease-out, transform 0.2s ease-out",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = "#0052CC";
+              e.currentTarget.style.borderColor = "#F05A28";
               e.currentTarget.style.transform = "translateY(-1px)";
             }}
             onMouseLeave={(e) => {

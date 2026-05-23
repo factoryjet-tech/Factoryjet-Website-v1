@@ -125,7 +125,7 @@ export default function CompetitorComparison() {
         <div ref={headerRef}>
           <p
             className="font-semibold uppercase"
-            style={{ color: "#0052CC", fontSize: "13px", letterSpacing: "0.15em", marginBottom: "16px" }}
+            style={{ color: "#F05A28", fontSize: "13px", letterSpacing: "0.15em", marginBottom: "16px" }}
           >
             How We Compare
           </p>
@@ -186,7 +186,7 @@ export default function CompetitorComparison() {
                 <th
                   className="text-left uppercase"
                   style={{
-                    background: "#0052CC",
+                    background: "#F05A28",
                     padding: "16px 24px",
                     fontSize: "13px",
                     letterSpacing: "0.08em",
@@ -251,7 +251,7 @@ export default function CompetitorComparison() {
                         aria-hidden="true"
                       />
                       <span
-                        style={{ fontSize: "14px", color: "#0052CC", fontWeight: 600 }}
+                        style={{ fontSize: "14px", color: "#F05A28", fontWeight: 600 }}
                       >
                         {factoryjet}
                       </span>

@@ -55,7 +55,7 @@ function StepNode({ num }: { num: number }) {
         width: "64px",
         height: "64px",
         background: "rgba(0,82,204,0.2)",
-        border: "2px solid #0052CC",
+        border: "2px solid #F05A28",
         zIndex: 10,
         position: "relative",
       }}
@@ -63,7 +63,7 @@ function StepNode({ num }: { num: number }) {
     >
       <span
         className="font-clash"
-        style={{ fontSize: "28px", color: "#0052CC", lineHeight: 1 }}
+        style={{ fontSize: "28px", color: "#F05A28", lineHeight: 1 }}
       >
         {num}
       </span>

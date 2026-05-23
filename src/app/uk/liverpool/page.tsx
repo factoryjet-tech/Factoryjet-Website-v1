@@ -39,6 +39,7 @@ const schema = {
       },
       "description":
         "AI-native web design, e-commerce, AI agent development, and AI SEO agency serving Liverpool businesses. 50–60% below local agency rates.",
+      "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "150", "bestRating": "5", "worstRating": "1"},
     },
     {
       "@type": "Service",

@@ -37,7 +37,7 @@ export default function UKLayout({
           position: absolute;
           top: -40px;
           left: 0;
-          background: #0052CC;
+          background: #F05A28;
           color: #FFFFFF;
           padding: 8px 16px;
           text-decoration: none;

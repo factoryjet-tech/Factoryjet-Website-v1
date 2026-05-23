@@ -95,7 +95,7 @@ export default function SocialProof() {
                 background: "white",
                 padding: "28px",
                 boxShadow: "0 4px 16px rgba(0,0,0,0.25)",
-                borderLeft: "3px solid #0052CC",
+                borderLeft: "3px solid #F05A28",
                 display: "flex",
                 flexDirection: "column",
                 gap: "16px",
@@ -140,7 +140,7 @@ export default function SocialProof() {
                 <span
                   style={{
                     fontSize: "22px",
-                    color: "#0052CC",
+                    color: "#F05A28",
                     fontStyle: "normal",
                     lineHeight: 0,
                     verticalAlign: "-6px",

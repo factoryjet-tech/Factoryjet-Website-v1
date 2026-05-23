@@ -146,7 +146,7 @@ export default function AIVisibility() {
                 <span
                   className="font-bold inline-block rounded-md"
                   style={{
-                    background: "#0052CC",
+                    background: "#F05A28",
                     color: "white",
                     fontSize: "12px",
                     padding: "4px 8px",

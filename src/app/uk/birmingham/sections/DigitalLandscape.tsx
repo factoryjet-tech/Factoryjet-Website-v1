@@ -17,7 +17,7 @@ const STATS: Stat[] = [
     value: "£31.9bn",
     label: "Birmingham city region GDP",
     ringPct: 88,
-    ringColor: "#0052CC",
+    ringColor: "#F05A28",
     span2: true,
   },
   {
@@ -36,7 +36,7 @@ const STATS: Stat[] = [
     value: "£2.9bn+",
     label: "Active regeneration investment (Paradise + Smithfield)",
     ringPct: 65,
-    ringColor: "#0052CC",
+    ringColor: "#F05A28",
   },
 ];
 
@@ -68,7 +68,7 @@ export default function DigitalLandscape() {
         const pct = Number(ring.dataset.ringFill ?? "100");
         const target = CIRC - (CIRC * pct) / 100;
         const ringColor =
-          ring.getAttribute("data-ring-color") ?? "#0052CC";
+          ring.getAttribute("data-ring-color") ?? "#F05A28";
         gsap.fromTo(
           ring,
           { strokeDashoffset: CIRC },
@@ -190,12 +190,12 @@ export default function DigitalLandscape() {
             {/* Pull quote */}
             <figure
               className="mt-10 border-l-4 pl-6 py-2"
-              style={{ borderColor: "#0052CC" }}
+              style={{ borderColor: "#F05A28" }}
             >
               <blockquote
                 className="font-clash"
                 style={{
-                  color: "#0052CC",
+                  color: "#F05A28",
                   fontWeight: 600,
                   fontSize: "clamp(18px, 1.8vw, 22px)",
                   lineHeight: 1.4,

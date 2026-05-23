@@ -112,7 +112,7 @@ export default function IndustriesGrid() {
           <p
             className="font-semibold uppercase"
             style={{
-              color: "#0052CC",
+              color: "#F05A28",
               fontSize: "13px",
               letterSpacing: "0.15em",
               marginBottom: "16px",

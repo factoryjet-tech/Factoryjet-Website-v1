@@ -159,7 +159,7 @@ function Panel({ service }: { service: Service }) {
           <div
             className="flex items-center gap-3"
             style={{
-              color: service.featured ? "#FF6B35" : "#0052CC",
+              color: service.featured ? "#FF6B35" : "#F05A28",
               fontFamily: "var(--font-sans)",
               fontWeight: 600,
               fontSize: 12,
@@ -172,7 +172,7 @@ function Panel({ service }: { service: Service }) {
               aria-hidden="true"
               className="inline-block h-px w-8"
               style={{
-                backgroundColor: service.featured ? "#FF6B35" : "#0052CC",
+                backgroundColor: service.featured ? "#FF6B35" : "#F05A28",
               }}
             />
             <span>{service.name}</span>
@@ -362,7 +362,7 @@ export default function Services() {
         >
           <p
             style={{
-              color: "#0052CC",
+              color: "#F05A28",
               fontFamily: "var(--font-sans)",
               fontWeight: 600,
               fontSize: 13,

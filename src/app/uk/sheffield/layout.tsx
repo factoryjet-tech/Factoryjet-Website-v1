@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Web Design Sheffield — AI-Powered Websites Built in 7 Days | FactoryJet",
+  title: "Web Design Sheffield | AI Websites in 7 Days | FactoryJet",
   description:
     "Professional web design Sheffield. Custom AI-powered websites for Sheffield SMBs built in 7 days. From £799. No lock-ins. Serving Kelham Island to the city centre.",
   keywords: [
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://factoryjet.com/uk/sheffield" },
   openGraph: {
-    title: "Web Design Sheffield — AI-Powered Websites Built in 7 Days | FactoryJet",
+    title: "Web Design Sheffield | AI Websites in 7 Days | FactoryJet",
     description:
       "Professional web design Sheffield. Custom AI-powered websites for Sheffield SMBs built in 7 days. From £799. No lock-ins.",
     url: "https://factoryjet.com/uk/sheffield",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Design Sheffield — AI-Powered Websites Built in 7 Days | FactoryJet",
+    title: "Web Design Sheffield | AI Websites in 7 Days | FactoryJet",
     description:
       "Professional web design Sheffield. Custom AI-powered websites for Sheffield SMBs built in 7 days. From £799. No lock-ins.",
   },
@@ -46,6 +46,7 @@ const localBusinessSchema = {
   },
   areaServed: ["Sheffield", "Rotherham", "Barnsley", "Doncaster"],
   sameAs: ["https://factoryjet.com"],
+  aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "150", bestRating: "5", worstRating: "1" },
 };
 
 const serviceSchema = {

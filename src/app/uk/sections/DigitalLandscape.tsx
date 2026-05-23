@@ -96,7 +96,7 @@ export default function DigitalLandscape() {
         <div className="flex flex-col items-center text-center">
           <p
             style={{
-              color: "#0052CC",
+              color: "#F05A28",
               fontFamily: "var(--font-sans)",
               fontWeight: 600,
               fontSize: 13,
@@ -260,7 +260,7 @@ export default function DigitalLandscape() {
                 backgroundColor: "#FFFFFF",
                 border: "1px solid #E2E8F0",
                 borderRadius: 12,
-                borderLeft: s.span2 ? "3px solid #0052CC" : "1px solid #E2E8F0",
+                borderLeft: s.span2 ? "3px solid #F05A28" : "1px solid #E2E8F0",
                 minHeight: 180,
                 boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
               }}
@@ -297,7 +297,7 @@ export default function DigitalLandscape() {
                   cy="32"
                   r={R}
                   fill="none"
-                  stroke="#0052CC"
+                  stroke="#F05A28"
                   strokeWidth="3"
                   strokeLinecap="round"
                   style={{
@@ -312,7 +312,7 @@ export default function DigitalLandscape() {
               <div
                 className="font-clash"
                 style={{
-                  color: "#0052CC",
+                  color: "#F05A28",
                   fontWeight: 700,
                   fontSize: s.span2 ? 64 : 56,
                   lineHeight: 1,
@@ -350,7 +350,7 @@ export default function DigitalLandscape() {
           <blockquote
             className="font-clash"
             style={{
-              color: "#0052CC",
+              color: "#F05A28",
               fontWeight: 600,
               fontSize: "clamp(22px, 2.5vw, 28px)",
               lineHeight: 1.4,

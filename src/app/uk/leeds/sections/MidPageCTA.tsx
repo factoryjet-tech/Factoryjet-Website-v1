@@ -8,7 +8,7 @@ export default function MidPageCTA() {
   const openModal = () => openContactModal('uk', 'default');
   return (
     <div
-      style={{ background: "#0052CC", padding: "64px 0" }}
+      style={{ background: "#F05A28", padding: "64px 0" }}
       aria-label="Call to action"
     >
       <div

@@ -181,7 +181,7 @@ export default function ServiceExplanation() {
           <p
             className="font-semibold uppercase"
             style={{
-              color: "#0052CC",
+              color: "#F05A28",
               fontSize: "13px",
               letterSpacing: "0.15em",
               marginBottom: "16px",
@@ -241,7 +241,7 @@ export default function ServiceExplanation() {
                   style={{ width: "48px", height: "48px", background: "#EEF2FF" }}
                   aria-hidden="true"
                 >
-                  <BarChart3 size={22} color="#0052CC" strokeWidth={2} />
+                  <BarChart3 size={22} color="#F05A28" strokeWidth={2} />
                 </div>
 
                 <p
@@ -303,7 +303,7 @@ export default function ServiceExplanation() {
                   el.style.transform = "translateY(-3px)";
                   el.style.boxShadow =
                     "0 10px 25px -5px rgba(0,0,0,0.1), 0 4px 10px -2px rgba(0,0,0,0.05)";
-                  el.style.borderColor = "#0052CC";
+                  el.style.borderColor = "#F05A28";
                 }}
                 onMouseLeave={(e) => {
                   const el = e.currentTarget;
@@ -318,7 +318,7 @@ export default function ServiceExplanation() {
                   style={{ width: "44px", height: "44px", background: "#EEF2FF" }}
                   aria-hidden="true"
                 >
-                  <Icon size={20} color="#0052CC" strokeWidth={2} />
+                  <Icon size={20} color="#F05A28" strokeWidth={2} />
                 </div>
 
                 <h3

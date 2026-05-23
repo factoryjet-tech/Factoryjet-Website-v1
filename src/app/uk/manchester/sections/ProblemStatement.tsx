@@ -75,7 +75,7 @@ export default function ProblemStatement() {
         <blockquote
           ref={pullRef}
           style={{
-            borderLeft: "4px solid #0052CC",
+            borderLeft: "4px solid #F05A28",
             paddingLeft: "32px",
             margin: "0 0 48px 0",
           }}
@@ -85,7 +85,7 @@ export default function ProblemStatement() {
             style={{
               fontSize: "clamp(1.3rem, 1.1rem + 0.8vw, 1.8rem)",
               lineHeight: 1.35,
-              color: "#0052CC",
+              color: "#F05A28",
               fontStyle: "italic",
             }}
           >

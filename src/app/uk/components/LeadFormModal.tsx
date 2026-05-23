@@ -251,7 +251,7 @@ export default function LeadFormModal() {
         }
         .fj-input:focus {
           outline: none;
-          border-color: #0052CC;
+          border-color: #F05A28;
           box-shadow: 0 0 0 2px rgba(0,82,204,0.25);
         }
       `}</style>
@@ -528,12 +528,12 @@ function StepIndicator({ step }: { step: StepId }) {
         const bg = isDone
           ? "#10B981"
           : isActive
-            ? "#0052CC"
+            ? "#F05A28"
             : "transparent";
         const border = isDone
           ? "1px solid #10B981"
           : isActive
-            ? "1px solid #0052CC"
+            ? "1px solid #F05A28"
             : "1px solid #E2E8F0";
         return (
           <span
@@ -728,7 +728,7 @@ function SuccessState({ onClose }: { onClose: () => void }) {
         style={{
           display: "inline-block",
           marginTop: 18,
-          color: "#0052CC",
+          color: "#F05A28",
           fontFamily: "var(--font-sans)",
           fontSize: 14,
           fontWeight: 600,
@@ -769,7 +769,7 @@ function inputStyle(invalid: boolean): React.CSSProperties {
 const primaryBtnStyle: React.CSSProperties = {
   display: "block",
   width: "100%",
-  backgroundColor: "#0052CC",
+  backgroundColor: "#F05A28",
   color: "#FFFFFF",
   border: "none",
   borderRadius: 8,

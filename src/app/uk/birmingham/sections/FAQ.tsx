@@ -217,7 +217,7 @@ export default function FAQ() {
                       minWidth: 40,
                       backgroundColor: "rgba(0,82,204,0.08)",
                       border: "1px solid rgba(0,82,204,0.2)",
-                      color: "#0052CC",
+                      color: "#F05A28",
                       fontFamily: "var(--font-sans)",
                       fontSize: 13,
                       fontVariantNumeric: "tabular-nums",

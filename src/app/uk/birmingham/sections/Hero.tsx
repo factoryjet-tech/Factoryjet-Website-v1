@@ -421,7 +421,7 @@ export default function Hero() {
             }}
             className="w-full sm:w-auto rounded-lg px-7 py-3.5 text-[15px] font-semibold text-white transition-transform duration-200 will-change-transform hover:-translate-y-0.5"
             style={{
-              backgroundColor: "#0052CC",
+              backgroundColor: "#F05A28",
               fontFamily: "var(--font-sans)",
               minHeight: 48,
             }}

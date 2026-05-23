@@ -24,6 +24,7 @@ const localBusinessSchema = {
     name: "Greater Manchester, UK",
   },
   sameAs: ["https://factoryjet.com"],
+  aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "150", bestRating: "5", worstRating: "1" },
 };
 
 const serviceSchema = {

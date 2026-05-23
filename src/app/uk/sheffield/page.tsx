@@ -460,7 +460,7 @@ export default function SheffieldPage() {
           {/* ── Wordmark ───────────────────────────────────────────── */}
           <Link href="/" className="flex flex-col leading-none flex-shrink-0">
             <span className="font-clash text-[#0a0a0a] text-[20px] md:text-[22px] font-bold tracking-[-0.03em]">
-              Factory<span className="text-[#0052CC]">Jet</span>
+              Factory<span className="text-[#F05A28]">Jet</span>
             </span>
             <span className="hidden sm:block text-[10px] font-semibold uppercase tracking-[0.1em] text-[#6B7280] mt-[3px]">
               Web Design Sheffield
@@ -537,7 +537,7 @@ export default function SheffieldPage() {
         <section className="relative h-screen flex items-center bg-white overflow-hidden">
 
           {/* Jet Blue 3px rule — pinned to top of page */}
-          <div className="fixed top-0 left-0 right-0 h-[3px] bg-[#0052CC] z-[60]" />
+          <div className="fixed top-0 left-0 right-0 h-[3px] bg-[#F05A28] z-[60]" />
 
           {/* Dot grid background */}
           <div
@@ -579,7 +579,7 @@ export default function SheffieldPage() {
                 </span>
 
                 {/* Label */}
-                <p className="relative z-10 text-[12px] font-semibold uppercase tracking-[0.1em] text-[#0052CC] mb-3">
+                <p className="relative z-10 text-[12px] font-semibold uppercase tracking-[0.1em] text-[#F05A28] mb-3">
                   WEB DESIGN SHEFFIELD · SOUTH YORKSHIRE
                 </p>
 
@@ -591,7 +591,7 @@ export default function SheffieldPage() {
                 >
                   Web Design Sheffield —<br />
                   Built &amp; Live in<br />
-                  <span className="text-[#0052CC]">7 Days</span>
+                  <span className="text-[#F05A28]">7 Days</span>
                 </h1>
 
                 {/* Subheading */}
@@ -617,14 +617,14 @@ export default function SheffieldPage() {
                 <div className="relative z-10 flex flex-col sm:flex-row gap-3 mb-6">
                   <button
                     onClick={() => openModal('uk')}
-                    className="group inline-flex items-center justify-center gap-2 bg-[#0052CC] hover:bg-[#1a6fff] text-white text-[16px] font-semibold px-8 py-[13px] rounded-lg transition-all duration-200 hover:-translate-y-[1px] w-full sm:w-auto"
+                    className="group inline-flex items-center justify-center gap-2 bg-[#F05A28] hover:bg-[#1a6fff] text-white text-[16px] font-semibold px-8 py-[13px] rounded-lg transition-all duration-200 hover:-translate-y-[1px] w-full sm:w-auto"
                   >
                     Get My Free Quote
                     <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
                   </button>
                   <Link
                     href="/portfolio"
-                    className="inline-flex items-center justify-center gap-2 border border-[#343A40] hover:border-[#0052CC] hover:text-[#0052CC] text-[#343A40] text-[16px] font-semibold px-8 py-[13px] rounded-lg transition-all duration-200 w-full sm:w-auto"
+                    className="inline-flex items-center justify-center gap-2 border border-[#343A40] hover:border-[#F05A28] hover:text-[#F05A28] text-[#343A40] text-[16px] font-semibold px-8 py-[13px] rounded-lg transition-all duration-200 w-full sm:w-auto"
                   >
                     See Our Work
                   </Link>
@@ -688,7 +688,7 @@ export default function SheffieldPage() {
 
               {/* ── Left column ──────────────────────────────────────── */}
               <div ref={whyLeftRef} data-gsap="true" className="flex flex-col">
-                <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#0052CC] mb-4">
+                <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#F05A28] mb-4">
                   Why FactoryJet
                 </p>
                 <h2
@@ -714,7 +714,7 @@ export default function SheffieldPage() {
                       ].join(" ")}
                     >
                       <span
-                        className="font-clash font-bold text-[#0052CC] leading-none flex-shrink-0 mt-[2px]"
+                        className="font-clash font-bold text-[#F05A28] leading-none flex-shrink-0 mt-[2px]"
                         style={{ fontSize: "28px" }}
                       >
                         {b.num}
@@ -756,16 +756,16 @@ export default function SheffieldPage() {
                   <div className="flex flex-col gap-[6px]">
                     <div className="flex items-center justify-between">
                       <span className="text-[13px] font-semibold text-[#0a0a0a]">FactoryJet</span>
-                      <span className="text-[12px] font-bold text-[#0052CC]">7 days</span>
+                      <span className="text-[12px] font-bold text-[#F05A28]">7 days</span>
                     </div>
                     <div className="h-[8px] w-full rounded-full bg-[#F1F3F5]">
-                      <div className="h-full w-[12%] rounded-full bg-[#0052CC]" />
+                      <div className="h-full w-[12%] rounded-full bg-[#F05A28]" />
                     </div>
                   </div>
 
                   <p className="text-[12px] text-[#6B7280] pt-2 border-t border-[#E9ECEF]">
                     Our AI-assisted process is{" "}
-                    <span className="font-bold text-[#0052CC]">up to 8× faster</span>{" "}
+                    <span className="font-bold text-[#F05A28]">up to 8× faster</span>{" "}
                     than traditional Sheffield agencies — zero compromise on quality.
                   </p>
                 </div>
@@ -779,7 +779,7 @@ export default function SheffieldPage() {
                     {/* FactoryJet price */}
                     <div className="flex flex-col gap-1">
                       <span
-                        className="font-clash font-bold leading-none text-[#0052CC]"
+                        className="font-clash font-bold leading-none text-[#F05A28]"
                         style={{ fontSize: "48px" }}
                       >
                         £799
@@ -823,7 +823,7 @@ export default function SheffieldPage() {
 
             {/* Section header */}
             <div className="max-w-[680px] mb-14">
-              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#0052CC] mb-4">
+              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#F05A28] mb-4">
                 Our Services
               </p>
               <h2
@@ -842,7 +842,7 @@ export default function SheffieldPage() {
             {/* Bento grid */}
             <div className="bento-services">
               {/* Web Design */}
-              <div className="bento-web group rounded-2xl border border-[#E9ECEF] bg-white p-5 md:p-7 flex flex-col gap-4 hover:border-[#0052CC]/30 hover:-translate-y-1 transition-all duration-300">
+              <div className="bento-web group rounded-2xl border border-[#E9ECEF] bg-white p-5 md:p-7 flex flex-col gap-4 hover:border-[#F05A28]/30 hover:-translate-y-1 transition-all duration-300">
                 <div className="w-10 h-10 rounded-xl bg-[#EEF4FF] flex items-center justify-center flex-shrink-0">
                   <MonitorIcon />
                 </div>
@@ -861,7 +861,7 @@ export default function SheffieldPage() {
               </div>
 
               {/* AI — featured, spans 2 rows */}
-              <div className="bento-ai group rounded-2xl border-2 border-[#0052CC] bg-[#0052CC] p-5 md:p-7 flex flex-col gap-4 hover:shadow-[0_0_40px_rgba(0,82,204,0.35)] transition-all duration-300">
+              <div className="bento-ai group rounded-2xl border-2 border-[#F05A28] bg-[#F05A28] p-5 md:p-7 flex flex-col gap-4 hover:shadow-[0_0_40px_rgba(0,82,204,0.35)] transition-all duration-300">
                 {/* Blinking cursor element */}
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center flex-shrink-0">
@@ -899,7 +899,7 @@ export default function SheffieldPage() {
               </div>
 
               {/* E-Commerce */}
-              <div className="bento-ecom group rounded-2xl border border-[#E9ECEF] bg-white p-5 md:p-7 flex flex-col gap-4 hover:border-[#0052CC]/30 hover:-translate-y-1 transition-all duration-300">
+              <div className="bento-ecom group rounded-2xl border border-[#E9ECEF] bg-white p-5 md:p-7 flex flex-col gap-4 hover:border-[#F05A28]/30 hover:-translate-y-1 transition-all duration-300">
                 <div className="w-10 h-10 rounded-xl bg-[#EEF4FF] flex items-center justify-center flex-shrink-0">
                   <CartIcon />
                 </div>
@@ -918,7 +918,7 @@ export default function SheffieldPage() {
               </div>
 
               {/* Redesign */}
-              <div className="bento-redesign group rounded-2xl border border-[#E9ECEF] bg-white p-5 md:p-7 flex flex-col gap-4 hover:border-[#0052CC]/30 hover:-translate-y-1 transition-all duration-300">
+              <div className="bento-redesign group rounded-2xl border border-[#E9ECEF] bg-white p-5 md:p-7 flex flex-col gap-4 hover:border-[#F05A28]/30 hover:-translate-y-1 transition-all duration-300">
                 <div className="w-10 h-10 rounded-xl bg-[#EEF4FF] flex items-center justify-center flex-shrink-0">
                   <RefreshIcon />
                 </div>
@@ -937,7 +937,7 @@ export default function SheffieldPage() {
               </div>
 
               {/* SEO */}
-              <div className="bento-seo group rounded-2xl border border-[#E9ECEF] bg-white p-5 md:p-7 flex flex-col gap-4 hover:border-[#0052CC]/30 hover:-translate-y-1 transition-all duration-300">
+              <div className="bento-seo group rounded-2xl border border-[#E9ECEF] bg-white p-5 md:p-7 flex flex-col gap-4 hover:border-[#F05A28]/30 hover:-translate-y-1 transition-all duration-300">
                 <div className="w-10 h-10 rounded-xl bg-[#EEF4FF] flex items-center justify-center flex-shrink-0">
                   <TrendIcon />
                 </div>
@@ -983,7 +983,7 @@ export default function SheffieldPage() {
           <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-10 lg:px-20 py-24">
 
             {/* Label */}
-            <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#0052CC] text-center mb-16">
+            <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#F05A28] text-center mb-16">
               By The Numbers
             </p>
 
@@ -1020,7 +1020,7 @@ export default function SheffieldPage() {
           </div>
 
           {/* Pull-quote band */}
-          <div className="relative z-10 w-full bg-[#0052CC] py-[60px] px-6">
+          <div className="relative z-10 w-full bg-[#F05A28] py-[60px] px-6">
             <p
               className="font-clash font-bold text-white text-center leading-[1.15] tracking-[-0.03em] max-w-[900px] mx-auto"
               style={{ fontSize: "clamp(24px, 3vw, 40px)" }}
@@ -1044,7 +1044,7 @@ export default function SheffieldPage() {
 
             {/* Header */}
             <div className="max-w-[640px] mx-auto text-center mb-16">
-              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#0052CC] mb-4">
+              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#F05A28] mb-4">
                 Our Process
               </p>
               <h2
@@ -1075,15 +1075,15 @@ export default function SheffieldPage() {
                         className={[
                           "w-10 h-10 md:w-12 md:h-12 rounded-full flex-shrink-0 flex items-center justify-center border-2 font-clash font-bold text-[13px] md:text-[14px]",
                           i === PROCESS_STEPS.length - 1
-                            ? "bg-[#0052CC] border-[#0052CC] text-white"
-                            : "bg-white border-[#E9ECEF] text-[#0052CC]",
+                            ? "bg-[#F05A28] border-[#F05A28] text-white"
+                            : "bg-white border-[#E9ECEF] text-[#F05A28]",
                         ].join(" ")}
                       >
                         {step.label}
                       </div>
                       {/* Text */}
                       <div className="lg:text-center">
-                        <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#0052CC] mb-1">
+                        <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#F05A28] mb-1">
                           {step.day}
                         </p>
                         <h3 className="text-[16px] font-semibold text-[#0a0a0a] mb-1">
@@ -1127,7 +1127,7 @@ export default function SheffieldPage() {
 
               {/* ── Left column ──────────────────────────────────────── */}
               <div ref={aiLeftRef} data-gsap="true" className="flex flex-col">
-                <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#0052CC] mb-5">
+                <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#F05A28] mb-5">
                   The AI Advantage
                 </p>
                 <h2
@@ -1150,7 +1150,7 @@ export default function SheffieldPage() {
                       ].join(" ")}
                     >
                       {/* Square icon */}
-                      <div className="w-2 h-2 rounded-[2px] bg-[#0052CC] flex-shrink-0 mt-[6px]" />
+                      <div className="w-2 h-2 rounded-[2px] bg-[#F05A28] flex-shrink-0 mt-[6px]" />
                       <div>
                         <h3 className="text-[16px] font-semibold text-white mb-1">
                           {f.title}
@@ -1166,7 +1166,7 @@ export default function SheffieldPage() {
                 <div className="mt-8">
                   <button
                     onClick={() => openModal('uk')}
-                    className="group inline-flex items-center gap-2 text-[#0052CC] border border-[#0052CC]/40 hover:bg-[#0052CC]/10 text-[15px] font-semibold px-6 py-3 rounded-lg transition-all duration-200"
+                    className="group inline-flex items-center gap-2 text-[#F05A28] border border-[#F05A28]/40 hover:bg-[#F05A28]/10 text-[15px] font-semibold px-6 py-3 rounded-lg transition-all duration-200"
                   >
                     See AI-powered Sheffield websites
                     <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
@@ -1200,7 +1200,7 @@ export default function SheffieldPage() {
           <div className="w-full max-w-[1400px] mx-auto px-6 md:px-10 lg:px-20 py-24">
             {/* Header */}
             <div className="max-w-[560px] mb-16">
-              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#0052CC] mb-4">
+              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#F05A28] mb-4">
                 Client Stories
               </p>
               <h2
@@ -1222,7 +1222,7 @@ export default function SheffieldPage() {
                     "bg-white rounded-2xl p-6 md:p-8 flex flex-col gap-5",
                     i === 1 ? "md:mt-10" : i === 2 ? "md:mt-5" : "",
                   ].join(" ")}
-                  style={{ borderLeft: "3px solid #0052CC" }}
+                  style={{ borderLeft: "3px solid #F05A28" }}
                 >
                   {/* Stars */}
                   <div className="flex gap-1">
@@ -1255,7 +1255,7 @@ export default function SheffieldPage() {
             <div className="max-w-[680px] mx-auto">
               {/* Header */}
               <div className="text-center mb-14">
-                <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#0052CC] mb-4">
+                <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#F05A28] mb-4">
                   Common Questions
                 </p>
                 <h2
@@ -1278,8 +1278,8 @@ export default function SheffieldPage() {
                         className={[
                           "text-[16px] font-semibold leading-snug transition-colors duration-200",
                           openFaq === i
-                            ? "text-[#0052CC]"
-                            : "text-[#0a0a0a] group-hover:text-[#0052CC]",
+                            ? "text-[#F05A28]"
+                            : "text-[#0a0a0a] group-hover:text-[#F05A28]",
                         ].join(" ")}
                       >
                         {item.q}
@@ -1310,13 +1310,13 @@ export default function SheffieldPage() {
 
         {/* ════════════════════════════════════════════════════════════════
             SECTION 12 — LOCAL CREDIBILITY
-            bg #0052CC full-bleed. GSAP count-up on 4 stats.
+            bg #F05A28 full-bleed. GSAP count-up on 4 stats.
             SHEFFIELD watermark.
         ════════════════════════════════════════════════════════════════ */}
         <section
           id="local"
           ref={credRef}
-          className="bg-[#0052CC] overflow-hidden relative"
+          className="bg-[#F05A28] overflow-hidden relative"
         >
           {/* SHEFFIELD watermark */}
           <div className="absolute inset-0 flex items-center justify-center select-none pointer-events-none overflow-hidden">
@@ -1396,7 +1396,7 @@ export default function SheffieldPage() {
               {/* ── Left: copy + contact ─────────────────────────── */}
               <div className="flex flex-col gap-8">
                 <div>
-                  <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#0052CC] mb-5">
+                  <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#F05A28] mb-5">
                     Get In Touch
                   </p>
                   <h2
@@ -1452,7 +1452,7 @@ export default function SheffieldPage() {
                       id="name"
                       type="text"
                       placeholder="Your full name"
-                      className="bg-[#0a0a0a] border border-white/[0.1] rounded-lg px-4 py-3 text-[14px] text-white placeholder-white/20 focus:outline-none focus:border-[#0052CC]/60 transition-colors duration-200"
+                      className="bg-[#0a0a0a] border border-white/[0.1] rounded-lg px-4 py-3 text-[14px] text-white placeholder-white/20 focus:outline-none focus:border-[#F05A28]/60 transition-colors duration-200"
                     />
                   </div>
                   <div className="flex flex-col gap-2">
@@ -1463,7 +1463,7 @@ export default function SheffieldPage() {
                       id="business"
                       type="text"
                       placeholder="Business name"
-                      className="bg-[#0a0a0a] border border-white/[0.1] rounded-lg px-4 py-3 text-[14px] text-white placeholder-white/20 focus:outline-none focus:border-[#0052CC]/60 transition-colors duration-200"
+                      className="bg-[#0a0a0a] border border-white/[0.1] rounded-lg px-4 py-3 text-[14px] text-white placeholder-white/20 focus:outline-none focus:border-[#F05A28]/60 transition-colors duration-200"
                     />
                   </div>
                 </div>
@@ -1475,7 +1475,7 @@ export default function SheffieldPage() {
                     id="email"
                     type="email"
                     placeholder="your@email.com"
-                    className="bg-[#0a0a0a] border border-white/[0.1] rounded-lg px-4 py-3 text-[14px] text-white placeholder-white/20 focus:outline-none focus:border-[#0052CC]/60 transition-colors duration-200"
+                    className="bg-[#0a0a0a] border border-white/[0.1] rounded-lg px-4 py-3 text-[14px] text-white placeholder-white/20 focus:outline-none focus:border-[#F05A28]/60 transition-colors duration-200"
                   />
                 </div>
                 <div className="flex flex-col gap-2">
@@ -1485,7 +1485,7 @@ export default function SheffieldPage() {
                   <select
                     id="package"
                     defaultValue=""
-                    className="bg-[#0a0a0a] border border-white/[0.1] rounded-lg px-4 py-3 text-[14px] text-white/60 focus:outline-none focus:border-[#0052CC]/60 transition-colors duration-200"
+                    className="bg-[#0a0a0a] border border-white/[0.1] rounded-lg px-4 py-3 text-[14px] text-white/60 focus:outline-none focus:border-[#F05A28]/60 transition-colors duration-200"
                   >
                     <option value="" disabled>Select a package</option>
                     <option value="starter">Starter — £799</option>
@@ -1502,7 +1502,7 @@ export default function SheffieldPage() {
                     id="message"
                     rows={4}
                     placeholder="What does your business do? What are you looking to achieve with your website?"
-                    className="bg-[#0a0a0a] border border-white/[0.1] rounded-lg px-4 py-3 text-[14px] text-white placeholder-white/20 focus:outline-none focus:border-[#0052CC]/60 transition-colors duration-200 resize-none"
+                    className="bg-[#0a0a0a] border border-white/[0.1] rounded-lg px-4 py-3 text-[14px] text-white placeholder-white/20 focus:outline-none focus:border-[#F05A28]/60 transition-colors duration-200 resize-none"
                   />
                 </div>
                 <button
@@ -1536,7 +1536,7 @@ export default function SheffieldPage() {
             <div className="flex flex-col gap-4">
               <Link href="/" className="flex flex-col leading-none w-fit">
                 <span className="font-clash text-white text-[22px] font-bold tracking-[-0.03em]">
-                  Factory<span className="text-[#0052CC]">Jet</span>
+                  Factory<span className="text-[#F05A28]">Jet</span>
                 </span>
                 <span className="text-[10px] font-semibold uppercase tracking-[0.1em] text-[#6B7280] mt-[3px]">
                   Web Design Sheffield
@@ -1646,7 +1646,7 @@ function BrowserMockup({ onCtaClick }: { onCtaClick: () => void }) {
 
         {/* Miniature nav */}
         <div className="flex items-center gap-3 pb-3 border-b border-[#F1F3F5]">
-          <div className="h-[8px] w-16 rounded bg-[#0052CC]" />
+          <div className="h-[8px] w-16 rounded bg-[#F05A28]" />
           <div className="flex-1" />
           <div className="h-[7px] w-8 rounded bg-[#343A40]/20" />
           <div className="h-[7px] w-8 rounded bg-[#343A40]/15" />
@@ -1662,12 +1662,12 @@ function BrowserMockup({ onCtaClick }: { onCtaClick: () => void }) {
           >
             SHEFFIELD
           </div>
-          <div className="h-[4px] w-10 rounded bg-[#0052CC] relative z-10" />
+          <div className="h-[4px] w-10 rounded bg-[#F05A28] relative z-10" />
           <div className="h-[10px] w-4/5 rounded bg-[#0a0a0a]/15 relative z-10" />
           <div className="h-[10px] w-3/5 rounded bg-[#0a0a0a]/10 relative z-10" />
           <div className="h-[8px] w-2/3 rounded bg-[#0a0a0a]/08 relative z-10" />
           <div className="flex gap-2 mt-1 relative z-10">
-            <div className="h-8 w-[90px] rounded-lg bg-[#0052CC]" />
+            <div className="h-8 w-[90px] rounded-lg bg-[#F05A28]" />
             <div className="h-8 w-[80px] rounded-lg border border-[#343A40]/20" />
           </div>
         </div>
@@ -1681,7 +1681,7 @@ function BrowserMockup({ onCtaClick }: { onCtaClick: () => void }) {
           ].map((stat) => (
             <div
               key={stat.label}
-              className="flex-1 rounded-xl bg-[#0052CC] flex flex-col items-center justify-center py-3 gap-[3px]"
+              className="flex-1 rounded-xl bg-[#F05A28] flex flex-col items-center justify-center py-3 gap-[3px]"
             >
               <span className="font-clash text-[14px] font-bold text-white">
                 {stat.label}
@@ -1738,7 +1738,7 @@ function MarqueeItems() {
           <span className="text-[12px] md:text-[15px] font-semibold uppercase tracking-[0.1em] text-white/90 px-4 md:px-8">
             {item}
           </span>
-          <span className="w-[5px] h-[5px] rounded-full bg-[#0052CC] flex-shrink-0" />
+          <span className="w-[5px] h-[5px] rounded-full bg-[#F05A28] flex-shrink-0" />
         </span>
       ))}
     </span>
@@ -1765,19 +1765,19 @@ function BentoTag({ label, dark }: { label: string; dark: boolean }) {
 // ─── Inline SVG icon wrappers (avoid prop type issues with Lucide) ────────────
 
 function MonitorIcon() {
-  return <Monitor size={20} strokeWidth={1.8} className="text-[#0052CC]" />;
+  return <Monitor size={20} strokeWidth={1.8} className="text-[#F05A28]" />;
 }
 function BotIcon() {
   return <Bot size={20} strokeWidth={1.8} className="text-white" />;
 }
 function CartIcon() {
-  return <ShoppingCart size={20} strokeWidth={1.8} className="text-[#0052CC]" />;
+  return <ShoppingCart size={20} strokeWidth={1.8} className="text-[#F05A28]" />;
 }
 function RefreshIcon() {
-  return <RefreshCw size={20} strokeWidth={1.8} className="text-[#0052CC]" />;
+  return <RefreshCw size={20} strokeWidth={1.8} className="text-[#F05A28]" />;
 }
 function TrendIcon() {
-  return <TrendingUp size={20} strokeWidth={1.8} className="text-[#0052CC]" />;
+  return <TrendingUp size={20} strokeWidth={1.8} className="text-[#F05A28]" />;
 }
 
 // ─── AI Chat Mockup (Section 8) ───────────────────────────────────────────────
@@ -1792,7 +1792,7 @@ function AIChatMockup() {
     >
       {/* Header */}
       <div className="flex items-center gap-3 px-5 py-4 border-b border-white/[0.06] bg-[#13132a]">
-        <div className="w-8 h-8 rounded-full bg-[#0052CC] flex items-center justify-center flex-shrink-0">
+        <div className="w-8 h-8 rounded-full bg-[#F05A28] flex items-center justify-center flex-shrink-0">
           <Bot size={16} strokeWidth={2} className="text-white" />
         </div>
         <div>
@@ -1809,10 +1809,10 @@ function AIChatMockup() {
 
         {/* AI message */}
         <div className="flex items-start gap-3 max-w-[85%]">
-          <div className="w-6 h-6 rounded-full bg-[#0052CC] flex items-center justify-center flex-shrink-0 mt-1">
+          <div className="w-6 h-6 rounded-full bg-[#F05A28] flex items-center justify-center flex-shrink-0 mt-1">
             <Bot size={12} strokeWidth={2} className="text-white" />
           </div>
-          <div className="bg-[#0052CC] rounded-2xl rounded-tl-sm px-4 py-3">
+          <div className="bg-[#F05A28] rounded-2xl rounded-tl-sm px-4 py-3">
             <p className="text-[13px] text-white leading-[1.6]">
               Hi! I&rsquo;m the FactoryJet AI. I can help you get a Sheffield website quote, answer questions, or book a consultation. What do you need?
             </p>
@@ -1830,10 +1830,10 @@ function AIChatMockup() {
 
         {/* AI reply */}
         <div className="flex items-start gap-3 max-w-[90%]">
-          <div className="w-6 h-6 rounded-full bg-[#0052CC] flex items-center justify-center flex-shrink-0 mt-1">
+          <div className="w-6 h-6 rounded-full bg-[#F05A28] flex items-center justify-center flex-shrink-0 mt-1">
             <Bot size={12} strokeWidth={2} className="text-white" />
           </div>
-          <div className="bg-[#0052CC] rounded-2xl rounded-tl-sm px-4 py-3">
+          <div className="bg-[#F05A28] rounded-2xl rounded-tl-sm px-4 py-3">
             <p className="text-[13px] text-white leading-[1.6]" suppressHydrationWarning>
               Great question! Our{" "}
               <span className="font-semibold">Starter package is £799</span>
@@ -1845,8 +1845,8 @@ function AIChatMockup() {
 
         {/* Typing indicator */}
         <div className="flex items-center gap-3">
-          <div className="w-6 h-6 rounded-full bg-[#0052CC]/30 flex items-center justify-center flex-shrink-0">
-            <Bot size={12} strokeWidth={2} className="text-[#0052CC]" />
+          <div className="w-6 h-6 rounded-full bg-[#F05A28]/30 flex items-center justify-center flex-shrink-0">
+            <Bot size={12} strokeWidth={2} className="text-[#F05A28]" />
           </div>
           <div className="bg-[#252540] rounded-2xl rounded-tl-sm px-4 py-3 flex items-center gap-[5px]">
             <span className="w-[6px] h-[6px] rounded-full bg-white/50 animate-bounce-dot" style={{ animationDelay: "0ms" }} />
@@ -1861,7 +1861,7 @@ function AIChatMockup() {
         <div className="flex-1 h-9 bg-white/[0.06] rounded-lg px-3 flex items-center">
           <span className="text-[12px] text-white/25">Type a message…</span>
         </div>
-        <div className="w-9 h-9 rounded-lg bg-[#0052CC] flex items-center justify-center flex-shrink-0">
+        <div className="w-9 h-9 rounded-lg bg-[#F05A28] flex items-center justify-center flex-shrink-0">
           <span className="text-white text-[14px]">↑</span>
         </div>
       </div>

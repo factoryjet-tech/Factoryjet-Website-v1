@@ -135,7 +135,7 @@ export default function Pricing() {
           <p
             className="font-semibold uppercase"
             style={{
-              color: "#0052CC",
+              color: "#F05A28",
               fontSize: "13px",
               letterSpacing: "0.15em",
               marginBottom: "16px",
@@ -201,7 +201,7 @@ export default function Pricing() {
                 <th
                   className="text-left uppercase"
                   style={{
-                    background: "#0052CC",
+                    background: "#F05A28",
                     padding: "14px 20px",
                     fontSize: "13px",
                     letterSpacing: "0.08em",
@@ -277,7 +277,7 @@ export default function Pricing() {
                     <span
                       style={{
                         fontSize: "14px",
-                        color: "#0052CC",
+                        color: "#F05A28",
                         fontWeight: 600,
                       }}
                     >
@@ -332,7 +332,7 @@ export default function Pricing() {
             <p
               className="font-semibold uppercase"
               style={{
-                color: "#0052CC",
+                color: "#F05A28",
                 fontSize: "12px",
                 letterSpacing: "0.12em",
                 marginBottom: "16px",
@@ -395,8 +395,8 @@ export default function Pricing() {
                 fontSize: "15px",
               }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = "#0052CC";
-                (e.currentTarget as HTMLAnchorElement).style.color = "#0052CC";
+                (e.currentTarget as HTMLAnchorElement).style.borderColor = "#F05A28";
+                (e.currentTarget as HTMLAnchorElement).style.color = "#F05A28";
               }}
               onMouseLeave={(e) => {
                 (e.currentTarget as HTMLAnchorElement).style.borderColor = "#E5E7EB";

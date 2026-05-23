@@ -140,7 +140,7 @@ function BeforeAfterSlider() {
             background: "white",
             boxShadow: "0 4px 16px rgba(0,0,0,0.35)",
             fontSize: "16px",
-            color: "#0052CC",
+            color: "#F05A28",
             fontWeight: 700,
             letterSpacing: "-1px",
             userSelect: "none",
@@ -291,7 +291,7 @@ export default function CaseStudy() {
           <p
             className="font-semibold uppercase"
             style={{
-              color: "#0052CC",
+              color: "#F05A28",
               fontSize: "13px",
               letterSpacing: "0.15em",
               marginBottom: "16px",

@@ -74,7 +74,7 @@ const TECH: Tech[] = [
     colClass: "lg:col-span-6 lg:col-start-4",
     offsetPx: 48,
     parallax: 50,
-    accent: "#0052CC",
+    accent: "#F05A28",
     mark: "⚡",
   },
 ];

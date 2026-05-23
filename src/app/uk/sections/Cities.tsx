@@ -233,9 +233,9 @@ function CityCard({ city }: { city: City }) {
           <span
             className="inline-flex items-center rounded-full px-3 py-1 text-[11px] font-semibold"
             style={{
-              backgroundColor: "#0052CC",
+              backgroundColor: "#F05A28",
               color: "#FFFFFF",
-              border: "1px solid #0052CC",
+              border: "1px solid #F05A28",
               fontFamily: "var(--font-sans)",
               letterSpacing: "0.02em",
             }}
@@ -250,7 +250,7 @@ function CityCard({ city }: { city: City }) {
         aria-hidden="true"
         className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100"
         style={{
-          backgroundColor: "#0052CC",
+          backgroundColor: "#F05A28",
           color: "#ffffff",
         }}
       >
@@ -336,7 +336,7 @@ export default function Cities() {
         <div className="flex flex-col items-center text-center">
           <p
             style={{
-              color: "#0052CC",
+              color: "#F05A28",
               fontFamily: "var(--font-sans)",
               fontWeight: 600,
               fontSize: 13,

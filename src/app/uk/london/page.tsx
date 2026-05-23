@@ -23,13 +23,13 @@ export default function LondonPage() {
         <div className="mt-8 flex gap-4 flex-wrap">
           <a
             href="/uk/london/web-design"
-            className="bg-[#0052CC] text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            className="bg-[#F05A28] text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
           >
             Web Design London
           </a>
           <a
             href="/contact"
-            className="border border-[#0052CC] text-[#0052CC] px-6 py-3 rounded-lg font-semibold hover:bg-[#0052CC] hover:text-white transition-colors"
+            className="border border-[#F05A28] text-[#F05A28] px-6 py-3 rounded-lg font-semibold hover:bg-[#F05A28] hover:text-white transition-colors"
           >
             Get a Free Quote
           </a>
