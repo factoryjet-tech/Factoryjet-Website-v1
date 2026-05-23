@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     siteName: "FactoryJet",
     locale: "en_GB",
     type: "website",
+    images: [{ url: '/images/uk/city-sheffield.jpg', width: 1200, height: 630, alt: 'Web Design Sheffield — FactoryJet' }],
   },
   twitter: {
     card: "summary_large_image",
@@ -155,6 +156,14 @@ const howToSchema = {
   ],
 };
 
+const speakableSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://factoryjet.com/uk/sheffield#webpage",
+  "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2:first-of-type"] },
+  "url": "https://factoryjet.com/uk/sheffield"
+};
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -228,6 +237,10 @@ export default function SheffieldUKLayout({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
       />
       {children}
     </>

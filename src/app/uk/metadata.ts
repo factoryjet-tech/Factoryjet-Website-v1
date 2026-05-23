@@ -28,6 +28,14 @@ export const ukMetadata: Metadata = {
     type: "website",
     siteName: "FactoryJet Technologies",
     locale: "en_GB",
+    images: [
+      {
+        url: "/images/uk/hero-uk.webp",
+        width: 1200,
+        height: 630,
+        alt: "UK Web Design Agency — FactoryJet",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",

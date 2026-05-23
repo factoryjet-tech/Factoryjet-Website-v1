@@ -84,12 +84,12 @@ export default function PricingSection() {
               key={i}
               className={`rounded-2xl p-8 transition-all duration-300 ${
                 tier.highlighted
-                  ? "bg-white border-2 border-[#0052CC] shadow-lg scale-105"
-                  : "bg-white border border-[#E9ECEF] hover:border-[#0052CC]"
+                  ? "bg-white border-2 border-[#F05A28] shadow-lg scale-105"
+                  : "bg-white border border-[#E9ECEF] hover:border-[#F05A28]"
               }`}
             >
               {tier.highlighted && (
-                <div className="inline-block bg-[#0052CC] text-white px-4 py-1 rounded-full text-xs font-bold mb-4">
+                <div className="inline-block bg-[#F05A28] text-white px-4 py-1 rounded-full text-xs font-bold mb-4">
                   Most Popular
                 </div>
               )}

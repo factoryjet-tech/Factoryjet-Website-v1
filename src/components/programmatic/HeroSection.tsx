@@ -64,7 +64,7 @@ export function HeroSection({
             <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link
                 href={primaryCta.href}
-                className="inline-flex items-center justify-center rounded-lg bg-jet-blue px-6 py-3.5 text-base font-medium text-white transition-colors hover:bg-[#003D99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-jet-blue"
+                className="inline-flex items-center justify-center rounded-lg bg-jet-blue px-6 py-3.5 text-base font-medium text-white transition-colors hover:bg-[#0F0F12] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-jet-blue"
               >
                 {primaryCta.label}
               </Link>

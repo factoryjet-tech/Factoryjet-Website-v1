@@ -49,7 +49,7 @@ export function HomepageHero() {
             <div className="flex flex-wrap gap-4 mt-2">
               <a
                 href="/get-started"
-                className="bg-[#F05A28] text-white px-8 py-3.5 rounded-lg text-sm font-semibold font-inter hover:bg-[#003D99] transition-colors shadow-sm"
+                className="bg-[#F05A28] text-white px-8 py-3.5 rounded-lg text-sm font-semibold font-inter hover:bg-[#0F0F12] transition-colors shadow-sm"
               >
                 Get Started Free
               </a>

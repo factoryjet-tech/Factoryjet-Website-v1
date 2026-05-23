@@ -12,7 +12,7 @@ import type { ModalRegion } from '../../context/ContactModalContext';
  *     checkmarks, orange outlined CTA (fills on hover), orange hover ring
  *   - Popular card: charcoal dark (#0F0F12) with 3px orange top-cap, orange
  *     price text, orange circle checkmarks, solid orange CTA. Elevated -mt-3.
- *   - All blue (#0052CC / #003D99) removed — full v2 orange/charcoal system.
+ *   - All blue (#F05A28 / #0F0F12) removed — full v2 orange/charcoal system.
  *   - Feature checkmarks: SVG circle+tick icons
  *   - CTA buttons: rounded-xl for premium feel
  *

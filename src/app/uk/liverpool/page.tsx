@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     description:
       "Award-winning AI-native web design, e-commerce & AI agent development for Liverpool businesses. £11bn investment pipeline. Free quote.",
     url: "https://factoryjet.com/uk/liverpool",
+    images: [{ url: '/images/uk/city-liverpool.jpg', width: 1200, height: 630, alt: 'Web Design Liverpool — FactoryJet' }],
   },
 };
 
@@ -193,6 +194,12 @@ const schema = {
         "name": "FactoryJet",
         "url": "https://factoryjet.com",
       },
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://factoryjet.com/uk/liverpool#webpage",
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2:first-of-type"] },
+      "url": "https://factoryjet.com/uk/liverpool",
     },
   ],
 };

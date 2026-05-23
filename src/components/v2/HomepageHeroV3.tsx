@@ -218,7 +218,7 @@ export default function HomepageHeroV3() {
                 style={{
                   fontSize: '14.5px',
                   padding: '14px 28px',
-                  background: '#0052CC',
+                  background: '#F05A28',
                   boxShadow: '0 1px 2px rgba(0,82,204,0.25), 0 4px 16px rgba(0,82,204,0.18)',
                 }}
               >
@@ -247,7 +247,7 @@ export default function HomepageHeroV3() {
             >
               {trustItems.map((item) => (
                 <div key={item} className="flex items-center gap-2 text-[#64748B]">
-                  <CheckCircle2 className="w-4 h-4 text-[#0052CC] shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#F05A28] shrink-0" />
                   <span className="font-fj-body text-[13px] font-medium">{item}</span>
                 </div>
               ))}
@@ -411,7 +411,7 @@ export default function HomepageHeroV3() {
                   <polyline
                     points="0,24 20,18 40,21 60,11 80,14 100,5 120,8 140,2 150,4"
                     fill="none"
-                    stroke="#0052CC"
+                    stroke="#F05A28"
                     strokeWidth="1.75"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -478,7 +478,7 @@ export default function HomepageHeroV3() {
                       className="flex-1 rounded-full"
                       style={{
                         height: '6px',
-                        background: day <= 3 ? '#0052CC' : 'rgba(0,82,204,0.13)',
+                        background: day <= 3 ? '#F05A28' : 'rgba(0,82,204,0.13)',
                       }}
                     />
                   ))}
@@ -487,7 +487,7 @@ export default function HomepageHeroV3() {
                   <span className="font-fj-body text-[10px] text-[#64748B]">Day 1</span>
                   <span className="font-fj-body text-[10px] text-[#64748B]">Day 7</span>
                 </div>
-                <p className="font-fj-body font-semibold" style={{ fontSize: '12px', color: '#0052CC' }}>
+                <p className="font-fj-body font-semibold" style={{ fontSize: '12px', color: '#F05A28' }}>
                   Day 3 · On track →
                 </p>
               </div>
@@ -512,7 +512,7 @@ export default function HomepageHeroV3() {
                   Active now
                 </p>
                 {[
-                  { label: 'Design', pct: 85, color: '#0052CC' },
+                  { label: 'Design', pct: 85, color: '#F05A28' },
                   { label: 'Build', pct: 60, color: '#FF6B35' },
                   { label: 'QA', pct: 40, color: '#10B981' },
                 ].map(({ label, pct, color }) => (

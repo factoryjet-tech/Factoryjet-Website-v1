@@ -3,7 +3,7 @@
 /**
  * MeshGradient — lightweight WebGL organic mesh gradient.
  * Stripe-style slow movement. Pauses when off-screen via IntersectionObserver.
- * Colors: #0052CC (60%) • #0A0F1C (30%) • #FF6B35 (10%)
+ * Colors: #F05A28 (60%) • #0A0F1C (30%) • #FF6B35 (10%)
  * Fallback: CSS radial-gradient via parent (this component renders null on error).
  */
 import { useEffect, useRef } from "react";
@@ -35,7 +35,7 @@ void main(){
   float orange = smoothstep(0.78, 1.0, 0.5 + 0.5*n(vec2(a*0.9 + 1.7, b*0.8 - 1.3 + t*0.01)));
 
   vec3 dark   = vec3(0.039, 0.059, 0.110); // #0A0F1C
-  vec3 blue   = vec3(0.000, 0.322, 0.800); // #0052CC
+  vec3 blue   = vec3(0.000, 0.322, 0.800); // #F05A28
   vec3 orangeC= vec3(1.000, 0.420, 0.208); // #FF6B35
 
   vec3 col = mix(dark, blue, m1 * 0.85);
@@ -183,7 +183,7 @@ export default function MeshGradient() {
         opacity: 0.5,
         // CSS fallback if WebGL fails — same palette
         background:
-          "radial-gradient(60% 50% at 30% 35%, #0052CC 0%, transparent 60%), radial-gradient(45% 40% at 75% 70%, rgba(255,107,53,0.35) 0%, transparent 55%), #0A0F1C",
+          "radial-gradient(60% 50% at 30% 35%, #F05A28 0%, transparent 60%), radial-gradient(45% 40% at 75% 70%, rgba(255,107,53,0.35) 0%, transparent 55%), #0A0F1C",
       }}
     />
   );

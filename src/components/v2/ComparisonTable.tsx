@@ -109,7 +109,7 @@ export default function ComparisonTable({
                   border: '1px solid #E5E7EB',
                   borderTopWidth: '3px',
                   borderTopStyle: 'solid',
-                  borderTopColor: '#0052CC',
+                  borderTopColor: '#F05A28',
                 }}
               >
                 <div className="mb-5 h-[3px] w-10 rounded-full bg-[#F05A28]" aria-hidden="true" />
@@ -166,7 +166,7 @@ export default function ComparisonTable({
                         ? 'bg-[#F05A28]-tint text-[#F05A28]'
                         : 'text-fj-neutral-600'
                     }`}
-                    style={col.isFactoryJet ? { borderTopWidth: '3px', borderTopStyle: 'solid', borderTopColor: '#0052CC' } : undefined}
+                    style={col.isFactoryJet ? { borderTopWidth: '3px', borderTopStyle: 'solid', borderTopColor: '#F05A28' } : undefined}
                   >
                     {col.label}
                   </th>

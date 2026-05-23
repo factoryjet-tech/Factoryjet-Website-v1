@@ -38,6 +38,25 @@ export default function UKPage() {
         />
       ))}
 
+      {/* JSON-LD: WebPage + Speakable */}
+      <Script
+        id="ld-webpage-speakable"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": "https://factoryjet.com/uk#webpage",
+            speakable: {
+              "@type": "SpeakableSpecification",
+              cssSelector: ["h1", "h2:first-of-type"],
+            },
+            url: "https://factoryjet.com/uk",
+          }),
+        }}
+      />
+
       <main id="main-content" className="min-h-screen bg-white">
         <Hero />
         <DigitalLandscape />
