@@ -58,6 +58,7 @@ import { post as webDesignCharlotteNcSmallBusiness2026Post } from './posts/web-d
 import { post as webDesignDenverCoSmallBusiness2026Post } from './posts/web-design-denver-co-small-business-2026';
 import { post as aiAgentsSmallBusinessUsa2026Post } from './posts/ai-agents-small-business-usa-2026';
 import { post as howMuchDoesWebsiteCostSmallBusinessUsa2026Post } from './posts/how-much-does-a-website-cost-small-business-usa-2026';
+import { post as websiteDevelopmentCostIndia2026Post } from './posts/website-development-cost-india-2026';
 
 export const POSTS: BlogPost[] = [
   // --- WEB DESIGN & STRATEGY ---
@@ -4655,4 +4656,5 @@ export const POSTS: BlogPost[] = [
   webDesignDenverCoSmallBusiness2026Post,
   aiAgentsSmallBusinessUsa2026Post,
   howMuchDoesWebsiteCostSmallBusinessUsa2026Post,
+  websiteDevelopmentCostIndia2026Post,
 ];
