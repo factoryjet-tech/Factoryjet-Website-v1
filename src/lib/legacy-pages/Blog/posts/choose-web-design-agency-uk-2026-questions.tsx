@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/choose-web-design-agency-uk-2026-questions-hero.jpg",
   meta: {
-    title: "Choose a Web Design Agency UK 2026: 12 Essential Questions",
-    description: "UK SMB guide to choosing a web design agency in 2026. 12 questions covering performance, pricing, AI integration, and delivery timelines that protect your investment.",
+    title: "12 Questions to Ask Every Web Design Agency UK — 2026 Guide",
+    description: "Separate agencies that deliver results from those selling pretty mockups. These 12 questions cover pricing, AI, performance, and timelines — ask before you sign anything.",
   },
   keyTakeaways: [
     "Performance guarantees matter more than portfolio aesthetics — demand Lighthouse scores above 90 and Core Web Vitals compliance before signing.",

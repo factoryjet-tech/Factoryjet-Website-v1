@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/website-redesign-cost-uk-2026-complete-pricing-guide-hero.jpg",
   meta: {
-    title: "Website Redesign Cost UK 2026: SMB Pricing Guide (5-200 Staff)",
-    description: "UK website redesign costs £1,500–£8,000 for SMBs in 2026. Compare platforms, agency rates, hidden fees, and ROI timelines. Real pricing from 500+ projects.",
+    title: "Website Redesign Cost UK 2026: Full Pricing Guide for SMBs",
+    description: "UK website redesigns cost £1,500-£8,000 for SMBs in 2026. Learn what drives the price, which hidden fees to watch for, and how to budget based on 500+ real projects.",
   },
   keyTakeaways: [
     "UK SMB website redesigns range £1,500–£8,000 in 2026, with Next.js and WordPress dominating the mid-market and Shopify leading e-commerce rebuilds.",

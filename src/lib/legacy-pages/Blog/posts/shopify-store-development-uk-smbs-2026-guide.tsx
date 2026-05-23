@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/shopify-store-development-uk-smbs-2026-guide-hero.jpg",
   meta: {
-    title: "Shopify Store Development UK SMBs 2026: Complete Agency Guide",
-    description: "Launch and scale your Shopify store in 2026. UK SMB guide covering setup costs (£2K-£8K), payment integration, GDPR compliance, and growth strategies from a Bengaluru agency serving 500+ businesses.",
+    title: "Shopify Store Development for UK SMBs in 2026: Setup to Scale",
+    description: "Launch a Shopify store in 2-4 weeks from £2,000. This UK SMB guide covers GDPR compliance, payment setup, ongoing costs, and scaling strategies that actually work.",
   },
   keyTakeaways: [
     "Professional Shopify stores for UK SMBs cost £2,000-£8,000 to build and £99-£300/month to maintain, with 2-4 week delivery timelines when working with experienced agencies.",

@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/seo-recruitment-agencies-uk-2026-hero.jpg",
   meta: {
-    title: "SEO for Recruitment Agencies UK 2026: AI-Powered Pipeline Strategies",
-    description: "UK recruitment agencies: rank in Google AI Overviews, ChatGPT, and Perplexity with AI-native SEO. Fill your pipeline with candidates and clients who search in 2026.",
+    title: "SEO for UK Recruitment Agencies in 2026: Fill Your Pipeline Faster",
+    description: "64% of UK job seekers now start in ChatGPT or Perplexity. Learn how UK recruitment agencies rank in AI Overviews and drive more candidates and clients organically.",
   },
   keyTakeaways: [
     "By 2026, 64% of UK job seekers and hiring managers start their search in AI tools like ChatGPT and Perplexity, not traditional search engines—your SEO must optimise for AI Overviews (AIO) and generative engine optimisation (GEO).",

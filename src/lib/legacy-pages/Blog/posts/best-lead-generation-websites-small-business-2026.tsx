@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/best-lead-generation-websites-small-business-2026-hero.jpg",
   meta: {
-    title: "Best Lead Gen Websites for Small Business 2026 | ROI Comparison",
-    description: "Compare 12 lead generation website platforms for small businesses in 2026. Real ROI data, pricing, features, and conversion benchmarks to help you choose the right solution.",
+    title: "12 Best Lead Generation Website Platforms for Small Business 2026",
+    description: "Find the best lead gen website for your small business. We compare 12 platforms on real ROI data, pricing, AI chat, and CRM integrations — so you don't overpay.",
   },
   keyTakeaways: [
     "Lead generation websites in 2026 must include AI chat, mobile-first design, and CRM integration to compete—static contact forms alone convert under 2%.",

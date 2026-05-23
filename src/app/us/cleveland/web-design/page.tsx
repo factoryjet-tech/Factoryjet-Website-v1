@@ -18,6 +18,7 @@ import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Web Design Cleveland | FactoryJet',
@@ -72,7 +73,7 @@ export default function ClevelandWebDesignPage() {
           headline={"What 'Web Design' Actually Means for a Cleveland Business"}
           lead={"Cleveland's economy splits between two dominant categories: B2B-heavy sectors (healthcare, manufacturing, financial services) where buyers research extensively before any call, and consumer-facing businesses (hospitality, retail, restaurants near West Side Market and East 4th Street) where trust is built in seconds on mobile. Both require different web strategies — and FactoryJet builds for both."}
           body={<><p>For healthcare vendors, Cleveland Clinic ecosystem suppliers, University Hospitals partners, and professional services firms — a website needs to demonstrate compliance awareness, technical depth, and verifiable case study evidence. Procurement teams at institutions like Cleveland Clinic evaluate vendors long before picking up the phone. We structure sites to answer those due-diligence questions clearly, with lead-capture forms that route to the right person immediately and content architecture that builds credibility at every scroll depth.</p><p>For manufacturers, Parker Hannifin and Eaton ecosystem suppliers, and B2B industrial firms — sites need to communicate engineering credibility, certifications, production capabilities, and industry-specific case studies. These are not brochure sites; they are qualification tools used by procurement managers across the supply chain. For consumer-facing businesses near Ohio City, Tremont, Detroit Shoreway, and downtown Cleveland — restaurants, retailers, hospitality brands, and service businesses — sites need to convert mobile visitors from Google Maps and social in seconds, with fast booking flows and mobile-first performance. Every FactoryJet project covers discovery, Figma prototyping, Next.js development, content, SEO, GA4 analytics, and a 30-day support window. You leave with a codebase you own, a design system you keep, and a site built to rank — not just look good in a mockup.</p></>}
-          rightSlot={<img src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden="true" width={1200} height={800} className="w-full rounded-2xl object-cover" loading="lazy" />}
+          rightSlot={<Image src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden={true} width={1200} height={800} className="w-full rounded-2xl object-cover" />}
         />
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"

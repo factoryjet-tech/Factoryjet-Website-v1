@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/choose-best-web-design-agency-uk-2026-checklist-hero.jpg",
   meta: {
-    title: "Choose Best Web Design Agency UK 2026: 12-Point SMB Checklist",
-    description: "12-point checklist for UK SMBs choosing a web design agency in 2026. Compare pricing, technical standards, delivery speed, and support models to avoid costly mistakes.",
+    title: "How to Choose a UK Web Design Agency in 2026: 12-Point Checklist",
+    description: "Use this 12-point checklist before hiring a UK web design agency. Covers pricing, Lighthouse scores, delivery speed, and the red flags that predict a costly mistake.",
   },
   keyTakeaways: [
     "Demand Lighthouse Performance scores above 90 and Core Web Vitals compliance as baseline technical standards—anything less costs you search visibility and conversions.",

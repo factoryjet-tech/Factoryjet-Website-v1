@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/how-to-build-online-store-uk-smb-guide-2026-hero.jpg",
   meta: {
-    title: "How to Build an Online Store in 2026: UK SMB Guide",
-    description: "Step-by-step guide for UK SMB founders: choose Shopify, WooCommerce, or custom, integrate AI agents, set up payments, and launch your online store in 2026.",
+    title: "How to Build an Online Store in 2026: UK Founder's Step-by-Step",
+    description: "Choose your platform, set up payments, add AI agents, and launch. This step-by-step guide gives UK SMB founders real costs and timelines for building an online store in 2026.",
   },
   keyTakeaways: [
     "Shopify suits fast launches (2–3 weeks) with £29–£259/month plans; WooCommerce offers full control for £500–£3,000 upfront but needs hosting and maintenance.",

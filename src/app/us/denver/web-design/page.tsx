@@ -18,6 +18,7 @@ import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns'
+import Image from 'next/image'
 
 
 export const metadata: Metadata = {
@@ -73,7 +74,7 @@ export default function DenverWebDesignPage() {
         headline={"What 'Web Design' Actually Means for a Denver Business"}
         lead={"Denver's buyer is outdoor-lifestyle aware, tech-savvy, and ESG-conscious. Sites need to communicate authenticity and performance, not just look good. FactoryJet builds with Next.js for sub-second load times, schema for AI search visibility, and conversion flows tuned for Denver's mobile-heavy audience."}
         body={<><p>Outdoor, lifestyle, and DTC brands — Patagonia retailers, ski and snowboard brands, cycling companies, and Colorado-native consumer goods — need photo-heavy layouts with fast WebP delivery, e-commerce or booking integration, and brand storytelling that resonates with Colorado values. We structure these sites to showcase product quality and sustainability credentials without sacrificing speed or SEO.</p><p>Aerospace and energy B2B suppliers — firms serving Lockheed Martin, United Launch Alliance, Chevron's Denver operations, or Halliburton's regional office — need capability pages, RFQ forms, downloadable spec sheets, and technical credibility signals that speak directly to procurement teams. FactoryJet handles every stage: discovery, Figma prototyping, Next.js development, content, SEO, and a 30-day support window. You leave with a codebase you own, a design system you keep, and a site built to rank — not just to look good in a screenshot.</p></>}
-        rightSlot={<img src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden="true" width={1200} height={800} className="w-full rounded-2xl object-cover" loading="lazy" />}
+        rightSlot={<Image src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden={true} width={1200} height={800} className="w-full rounded-2xl object-cover" />}
       />
       <StrategicDarkSection
         eyebrow="WHY FACTORYJET"

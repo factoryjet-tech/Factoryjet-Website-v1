@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/web-development-agency-uk-2026-custom-ai-solutions-hero.jpg",
   meta: {
-    title: "Web Development Agency UK 2026: Custom + AI Solutions for SMBs",
-    description: "UK web development agencies in 2026 deliver custom Next.js sites with AI agents. Lighthouse 92+ performance, 2-4 week builds, 50-60% below local rates. Real SMB outcomes.",
+    title: "UK Web Development Agency 2026: Custom Sites + AI Agents for SMBs",
+    description: "Get Lighthouse 92+ performance, AI agents, and 2-4 week delivery at 50-60% less than typical UK rates. See what modern web development looks like for growing SMBs in 2026.",
   },
   keyTakeaways: [
     "UK web agencies in 2026 combine Next.js 15, WordPress, and Shopify with AI agents for chatbots, sales automation, and customer support—delivering complete digital systems, not just websites.",

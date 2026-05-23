@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/sales-automation-ai-uk-smbs-workflows-hero.jpg",
   meta: {
-    title: "Sales Automation AI for UK SMBs: 7 Workflows That Closed £2.4M",
-    description: "Seven AI sales automation workflows that helped UK SMBs close £2.4M in 2026. Reduce sales cycles 43% with automated lead qualification, follow-ups, and proposals.",
+    title: "7 AI Sales Automation Workflows That Closed £2.4M for UK SMBs",
+    description: "These 7 AI workflows reduced UK SMB sales cycles by 43% and closed £2.4M in new revenue in 2026. See how to automate qualification, follow-ups, and proposals.",
   },
   keyTakeaways: [
     "AI lead qualification workflows score and route prospects in under 90 seconds, eliminating manual triage that previously consumed 8-12 hours weekly for UK sales teams.",

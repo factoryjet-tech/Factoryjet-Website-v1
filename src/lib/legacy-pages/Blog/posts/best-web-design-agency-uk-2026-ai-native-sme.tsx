@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/best-web-design-agency-uk-2026-ai-native-sme-hero.jpg",
   meta: {
-    title: "Best Web Design Agency UK 2026: AI-Native SMB Solutions",
-    description: "FactoryJet: AI-native web design for UK SMBs. 500+ businesses served, Lighthouse 92+, 2-4 week delivery, 50-60% below UK rates. Next.js, WordPress, Shopify.",
+    title: "Best AI-Native Web Design Agency UK for SMBs in 2026",
+    description: "Get Lighthouse 92+ performance, 2-4 week delivery, and 50-60% savings vs local UK rates. See how AI-native web design helps SMBs get better sites without overpaying.",
   },
   keyTakeaways: [
     "AI-native agencies deliver 50-60% cost savings versus traditional UK web design firms while maintaining Lighthouse Performance scores of 92+ across all builds.",

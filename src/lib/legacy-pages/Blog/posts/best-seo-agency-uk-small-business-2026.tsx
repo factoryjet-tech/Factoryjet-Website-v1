@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/best-seo-agency-uk-small-business-2026-hero.jpg",
   meta: {
-    title: "Best SEO Agency UK for Small Business 2026 | FactoryJet",
-    description: "Find the best SEO agency for UK small businesses in 2026. Enterprise technical SEO, AI content optimisation, and GEO/AEO strategies at SMB-friendly pricing from £500/month.",
+    title: "Best SEO Agency for UK Small Businesses in 2026 — From £500/mo",
+    description: "Get enterprise technical SEO, AI content, and GEO/AEO strategies at SMB pricing. See what separates top UK SEO agencies in 2026 — and what to avoid before you sign.",
   },
   keyTakeaways: [
     "Traditional UK SEO agencies charge £1,500-£3,000/month for basic services; AI-native agencies like FactoryJet deliver enterprise technical SEO, GEO optimisation, and AIO strategies from £500/month.",

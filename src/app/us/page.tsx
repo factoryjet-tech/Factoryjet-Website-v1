@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
-import { homeAlternates } from '@/data/hreflangMap';
+import { usHubAlternates } from '@/data/hreflangMap';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 import SiteHeader from '@/components/v2/SiteHeader';
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/us',
-    languages: homeAlternates,
+    languages: usHubAlternates,
   },
   robots: {
     index: true,

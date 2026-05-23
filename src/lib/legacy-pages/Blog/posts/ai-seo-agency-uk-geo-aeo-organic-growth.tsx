@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/ai-seo-agency-uk-geo-aeo-organic-growth-hero.jpg",
   meta: {
-    title: "AI SEO Agency UK: 3x Organic Growth with GEO & AEO in 2026",
-    description: "Discover how 500+ UK SMBs achieved 3x organic growth in 2026 using AI SEO (GEO & AEO). Learn the exact strategies that get your business cited by ChatGPT, Perplexity, and Google AI Overviews.",
+    title: "AI SEO for UK SMBs: Get Cited by ChatGPT & Google in 2026",
+    description: "60% of UK searches are now answered by AI before anyone clicks. Learn how 500+ SMBs used GEO & AEO to get cited by ChatGPT, Perplexity, and Google AI Overviews.",
   },
   keyTakeaways: [
     "60% of UK searches in 2026 are answered by AI engines (ChatGPT, Perplexity, Google AI Overviews) before users click any website, making traditional SEO insufficient.",

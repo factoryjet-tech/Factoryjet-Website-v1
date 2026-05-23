@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/how-to-build-online-store-uk-smb-2026-hero.jpg",
   meta: {
-    title: "How to Build an Online Store UK 2026: Shopify vs WooCommerce vs Custom",
-    description: "Compare Shopify, WooCommerce, and custom e-commerce platforms for UK SMBs in 2026. Real costs, compliance requirements, and platform selection framework included.",
+    title: "How to Build an Online Store in the UK in 2026: Full Roadmap",
+    description: "Shopify from £29/mo, WooCommerce from £50/mo, or custom for B2B? This UK SMB guide covers real costs, GDPR compliance, and how to choose the right platform in 2026.",
   },
   keyTakeaways: [
     "Shopify costs £29–£384/mo and handles hosting, security, and PCI compliance automatically—ideal for product-focused retailers launching in under two weeks.",

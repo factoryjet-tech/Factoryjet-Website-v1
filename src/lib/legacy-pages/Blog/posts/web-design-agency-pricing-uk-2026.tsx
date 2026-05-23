@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/web-design-agency-pricing-uk-2026-hero.jpg",
   meta: {
-    title: "UK Web Design Agency Pricing 2026: Complete Cost Breakdown",
-    description: "UK web design agencies charge £1,500–£15,000 for websites in 2026. See pricing by service type, platform, location, and how to avoid overpaying for standard builds.",
+    title: "How Much Do UK Web Design Agencies Charge in 2026?",
+    description: "Web design in the UK costs £1,500-£25,000 in 2026 depending on service type and location. See the full pricing breakdown by platform, scope, and agency location.",
   },
   keyTakeaways: [
     "Standard business websites from UK agencies cost £1,500–£8,000 in 2026, with London agencies charging 40–60% more than regional providers for identical deliverables.",

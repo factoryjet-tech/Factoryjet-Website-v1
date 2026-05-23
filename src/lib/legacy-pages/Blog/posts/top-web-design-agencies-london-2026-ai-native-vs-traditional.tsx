@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/top-web-design-agencies-london-2026-ai-native-vs-traditional-hero.jpg",
   meta: {
-    title: "Top Web Design Agencies London 2026: AI-Native vs Traditional Guide",
-    description: "Compare London web design agencies in 2026: traditional vs AI-native pricing, delivery timelines, tech stacks. Real SMB costs, Lighthouse benchmarks, and when to choose each model.",
+    title: "London Web Design Agencies 2026: AI-Native vs Traditional — Compared",
+    description: "Traditional London agencies charge £8K-£25K for 8-week builds. AI-native firms deliver the same in 2-4 weeks from £1,500. Find out which model is right for your SMB.",
   },
   keyTakeaways: [
     "Traditional London agencies charge £8,000–£25,000 for 6–12 week builds; AI-native firms deliver in 2–4 weeks at £1,500–£8,000 using Next.js 15, Vercel, and automated workflows.",

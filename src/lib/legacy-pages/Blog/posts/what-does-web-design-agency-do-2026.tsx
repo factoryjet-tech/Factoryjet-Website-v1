@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/what-does-web-design-agency-do-2026-hero.jpg",
   meta: {
-    title: "What Does a Web Design Agency Do in 2026? | FactoryJet",
-    description: "Web design agencies in 2026 build performance-optimized sites, integrate AI tools, architect conversion funnels, maintain security, and engineer search visibility—not just layouts.",
+    title: "What Does a Web Design Agency Actually Do in 2026?",
+    description: "Modern agencies do more than build pages. Learn what a web design agency actually delivers in 2026 — Core Web Vitals, AI integration, conversion architecture, and SEO.",
   },
   keyTakeaways: [
     "2026 agencies deliver technical infrastructure (Core Web Vitals, security, hosting) alongside design—visual work represents roughly 30% of total scope.",

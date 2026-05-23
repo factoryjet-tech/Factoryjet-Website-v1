@@ -18,6 +18,7 @@ import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns'
+import Image from 'next/image'
 
 
 export const metadata: Metadata = {
@@ -73,7 +74,7 @@ export default function RaleighWebDesignPage() {
         headline={"What 'Web Design' Actually Means for a Raleigh Business"}
         lead={"The Research Triangle buyer is skeptical by nature — these are scientists, engineers, and researchers who evaluate evidence before making decisions. Your website needs to present proof, not promises. Clear case studies, precise service descriptions, performance data, and JSON-LD schema that gets you into AI search results matter here more than anywhere."}
         body={<><p>Biotech, pharma, and life sciences vendors serving the RTP cluster — CROs and suppliers working alongside Biogen, Syneos Health, and the broader pharma ecosystem — need sites with technical credibility baked in. That means publication and study references where appropriate, regulatory context, clean professional design that signals GMP-level attention to detail, and content structured to answer procurement-level questions before the first call. A generic template site will not survive scrutiny from a sourcing manager at a top-5 pharma company.</p><p>Technology and SaaS companies in the Cisco and Red Hat ecosystem, NC State spinouts, and Triangle-area startups face a different challenge: communicating product depth to buyers who are technical themselves. These sites need product-depth pages, integration documentation, and demo or trial conversion flows tuned for a longer B2B sales cycle. Every FactoryJet project covers discovery, Figma prototyping, development, content, SEO, and a 30-day support window. You leave with a codebase you own, a design system you keep, JSON-LD schema for AI search visibility, GA4 wired from day one, and a recorded handover so your team can self-manage without calling a developer.</p></>}
-        rightSlot={<img src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden="true" width={1200} height={800} className="w-full rounded-2xl object-cover" loading="lazy" />}
+        rightSlot={<Image src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden={true} width={1200} height={800} className="w-full rounded-2xl object-cover" />}
       />
       <StrategicDarkSection
         eyebrow="WHY FACTORYJET"

@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/evaluate-web-design-agency-us-smbs-2026-hero.jpg",
   meta: {
-    title: "How to Evaluate a Web Design Agency (US SMBs 2026)",
-    description: "US SMBs: evaluate web design agencies on Core Web Vitals, AI workflows, transparent pricing, and real client outcomes. Eight criteria that predict ROI in 2026.",
+    title: "8 Criteria US Small Businesses Should Use to Evaluate Agencies",
+    description: "Don't judge a web design agency by its portfolio. Learn the 8 criteria US SMBs should use in 2026 — Core Web Vitals, AI workflows, pricing transparency, real outcomes.",
   },
   keyTakeaways: [
     "Demand Lighthouse Performance scores above 90 for desktop and mobile—anything lower costs you search visibility and conversion rate in 2026.",

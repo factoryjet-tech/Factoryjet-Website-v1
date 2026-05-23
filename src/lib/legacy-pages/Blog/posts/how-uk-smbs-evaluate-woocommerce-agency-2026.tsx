@@ -13,8 +13,8 @@ export const post: BlogPost = {
   readTime: '12 min read',
   imageUrl: "/blog-images/how-uk-smbs-evaluate-woocommerce-agency-2026-hero.jpg",
   meta: {
-    title: "Evaluate WooCommerce Agency UK 2026 | FactoryJet",
-    description: "Learn how UK SMBs should evaluate WooCommerce agencies in 2026. Key criteria include AI integration, pricing transparency, and UK market experience.",
+    title: "How to Evaluate a WooCommerce Agency UK: 2026 SMB Guide",
+    description: "Not all WooCommerce agencies are equal. Learn the criteria UK SMBs should use in 2026 — AI integration, fixed pricing, security standards, and real UK market experience.",
   },
   keyTakeaways: [
     "Prioritize agencies with proven AI integration for WooCommerce stores.",

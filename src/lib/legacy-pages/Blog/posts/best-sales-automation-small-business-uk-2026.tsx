@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/best-sales-automation-small-business-uk-2026-hero.jpg",
   meta: {
-    title: "Best Sales Automation for Small Business UK 2026 | Buyer's Guide",
-    description: "Compare HubSpot, Zoho, and custom AI sales automation for UK SMBs. Real pricing, compliance, ROI data. See which platform fits your budget and growth stage in 2026.",
+    title: "HubSpot vs Zoho vs Custom AI: Best Sales Automation UK 2026",
+    description: "HubSpot, Zoho, or custom AI — which fits your UK SMB? Compare real pricing, GDPR compliance, and ROI data for all three sales automation platforms in 2026.",
   },
   keyTakeaways: [
     "HubSpot costs £480-£4,800/year but offers the deepest native integrations and UK data residency; best for businesses already using HubSpot CRM or planning Series A fundraising.",

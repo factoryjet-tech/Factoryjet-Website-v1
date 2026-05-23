@@ -140,7 +140,22 @@
       "Bash(gh api *)",
       "Bash(pnpm approve-builds *)",
       "Bash(pnpm rebuild *)",
-      "Bash(pnpm next *)"
+      "Bash(pnpm next *)",
+      "Skill(superpowers:using-superpowers)",
+      "Skill(superpowers:using-superpowers:*)",
+      "Skill(skills:focused-fix)",
+      "Skill(skills:focused-fix:*)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\('browserslist','NOT_FOUND'\\), indent=2\\)\\)\")",
+      "Bash(sort -rk5)",
+      "Bash(awk '$5 >= 40000 && $5 <= 60000 {print}')",
+      "Bash(npx tailwindcss *)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); deps=d.get\\('dependencies',{}\\); print\\('critters' in deps, deps.get\\('critters','not found'\\)\\)\")",
+      "Bash(gzip -k -c /Users/bhaveshbarot/FactoryJet/website/.next/static/chunks/0wo.imb25fbgy.css)",
+      "Bash(gzip -k -c /Users/bhaveshbarot/FactoryJet/website/.next/static/chunks/0u0t2ad~qh9iu.css)",
+      "Skill(deploy-to-vercel)",
+      "Skill(deploy-to-vercel:*)",
+      "Bash(git remote *)",
+      "Bash(vercel whoami *)"
     ]
   }
 }

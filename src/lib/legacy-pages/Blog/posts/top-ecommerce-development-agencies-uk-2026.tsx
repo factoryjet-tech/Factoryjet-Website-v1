@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/top-ecommerce-development-agencies-uk-2026-hero.jpg",
   meta: {
-    title: "Top E-Commerce Agencies UK 2026: SMB Selection Guide",
-    description: "Compare UK e-commerce development agencies for 2026. Pricing, platforms, delivery timelines, and selection criteria for SMBs seeking conversion-focused online stores.",
+    title: "Top UK E-Commerce Development Agencies for SMBs in 2026",
+    description: "Choosing the wrong e-commerce agency wastes thousands. Compare UK agencies on pricing (£2K-£25K), delivery speed, platform expertise, and post-launch support.",
   },
   keyTakeaways: [
     "UK e-commerce agency pricing ranges £2,000–£25,000 for SMB projects; offshore-supported agencies like FactoryJet deliver at 50–60% below local rates while maintaining UK project management.",

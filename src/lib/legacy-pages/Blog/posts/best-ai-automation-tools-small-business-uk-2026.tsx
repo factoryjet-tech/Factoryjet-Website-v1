@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/best-ai-automation-tools-small-business-uk-2026-hero.jpg",
   meta: {
-    title: "15 Best AI Automation Tools for UK Small Business 2026",
-    description: "Compare 15 AI automation tools for UK SMBs. Real pricing, integration guides, and use cases for customer service, marketing, sales automation in 2026.",
+    title: "15 Best AI Automation Tools for UK Small Businesses (2026)",
+    description: "Save 15-30 hours a week with the right AI tools. We compare 15 platforms by UK pricing, integrations, and real use cases for support, sales, and marketing in 2026.",
   },
   keyTakeaways: [
     "UK SMBs using AI automation report 15-30 hours saved weekly on repetitive tasks like email responses, appointment scheduling, and data entry.",

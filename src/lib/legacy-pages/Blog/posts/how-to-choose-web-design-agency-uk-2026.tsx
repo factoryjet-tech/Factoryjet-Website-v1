@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/how-to-choose-web-design-agency-uk-2026-hero.jpg",
   meta: {
-    title: "How to Choose a Web Design Agency UK 2026: 12 Essential Questions",
-    description: "12 questions UK SMBs must ask before hiring a web design agency in 2026. Based on 500+ projects, 25+ years expertise. Avoid costly mistakes, get business results.",
+    title: "How to Choose a Web Design Agency UK in 2026 — 12 Questions",
+    description: "From 500+ projects: 12 questions that separate agencies who deliver from those that drain your budget. Ask these before you sign anything with a UK web design agency.",
   },
   keyTakeaways: [
     "Ask for Lighthouse Performance scores upfront — agencies confident in their work will share 90+ scores immediately, while vague promises signal technical debt ahead.",

@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/choose-web-design-agency-uk-smb-questions-2026-hero.jpg",
   meta: {
-    title: "Choose a Web Design Agency UK: 12 Questions SMBs Must Ask (2026)",
-    description: "UK SMB guide to choosing a web design agency in 2026. 12 essential questions covering performance, pricing, timelines, and red flags. Compare local vs offshore options.",
+    title: "12 Questions UK SMBs Must Ask a Web Design Agency in 2026",
+    description: "Don't hire a web design agency until you've asked these 12 questions. Covers performance standards, fixed pricing, red flags, and when local vs offshore makes sense.",
   },
   keyTakeaways: [
     "Request Lighthouse performance scores upfront — agencies confident in their work will show 90+ scores across Performance, Accessibility, SEO, and Best Practices.",

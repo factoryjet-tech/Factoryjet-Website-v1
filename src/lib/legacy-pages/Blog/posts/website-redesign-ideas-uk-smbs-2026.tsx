@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/website-redesign-ideas-uk-smbs-2026-hero.jpg",
   meta: {
-    title: "25 Website Redesign Ideas for UK SMBs in 2026 | FactoryJet",
-    description: "Boost conversions 40-60% with AI-first website redesign ideas for UK SMBs. 25 practical strategies from conversational UI to voice navigation, tested across 500+ businesses.",
+    title: "25 Website Redesign Ideas for UK SMBs That Convert in 2026",
+    description: "Boost conversions 40-60% with AI-first redesign strategies. 25 practical ideas — from conversational UI to voice navigation — tested across 500+ UK businesses.",
   },
   keyTakeaways: [
     "AI-powered conversational interfaces reduce bounce rates by 35-45% for UK SMBs by answering visitor questions in real-time without requiring form fills or phone calls.",

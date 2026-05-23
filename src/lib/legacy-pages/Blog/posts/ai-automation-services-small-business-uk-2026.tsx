@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/ai-automation-services-small-business-uk-2026-hero.jpg",
   meta: {
-    title: "AI Automation Services for UK Small Businesses 2026 | Agency Guide",
-    description: "Compare AI automation services for UK SMBs in 2026. Pricing from £3,000, implementation timelines, vetting criteria, and ROI benchmarks for customer support, sales, and operations automation.",
+    title: "Best AI Automation Services for UK Small Businesses 2026",
+    description: "AI automation for UK SMBs starts at £3,000 with ROI in 3-6 months. Compare agencies, pricing models, and vetting criteria before you hire in 2026.",
   },
   keyTakeaways: [
     "AI automation for UK SMBs starts at £3,000 for basic chatbots, with customer support agents typically paying for themselves within 3-6 months through reduced staffing costs.",

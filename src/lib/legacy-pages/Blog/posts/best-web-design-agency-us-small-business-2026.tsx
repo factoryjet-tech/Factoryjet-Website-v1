@@ -13,9 +13,8 @@ export const post: BlogPost = {
   readTime: '15 min read',
   imageUrl: '/blog-images/best-web-design-agency-us-small-business-2026-hero.jpg',
   meta: {
-    title: 'Best Web Design Agency for US Small Business in 2026: Top Picks',
-    description:
-      'The 7 best US web design agencies for small businesses ranked by price, speed, and results. Includes agencies delivering Lighthouse 90+ sites from $1,500 to $8,000.',
+    title: "7 Best Web Design Agencies for US Small Businesses in 2026",
+    description: "We rank 7 top web design agencies for US small businesses on price ($1,500-$8,000), delivery speed, and Lighthouse 90+ scores. Find out which one delivers real results.",
   },
   keyTakeaways: [
     'The best agencies prove quality with PageSpeed Insights URLs on live client sites — scores above 90 on mobile. Never hire based on portfolio screenshots alone.',

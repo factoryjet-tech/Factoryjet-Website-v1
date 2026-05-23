@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/ecommerce-development-uk-shopify-woocommerce-2026-hero.jpg",
   meta: {
-    title: "E-Commerce Development UK: Shopify vs WooCommerce 2026 Guide",
-    description: "Compare Shopify and WooCommerce for UK SMBs in 2026. Real pricing, features, scalability, and platform choice framework for growing online stores.",
+    title: "Shopify vs WooCommerce for UK E-Commerce Development in 2026",
+    description: "WooCommerce is 40-60% cheaper long-term for UK stores doing £10K+/mo. Compare real pricing, platform features, and scalability to pick the right build in 2026.",
   },
   keyTakeaways: [
     "Shopify costs £25–£384/month plus 1.5–2% transaction fees; WooCommerce hosting starts at £8/month with no platform fees, making it 40–60% cheaper long-term for UK stores processing over £10k monthly.",

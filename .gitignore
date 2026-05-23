@@ -38,3 +38,16 @@ pipeline/scripts/*.pyc
 pipeline/brand-references/*/screenshots/
 pipeline/brand-references/_run.log
 .claude/
+yadav-preview/
+
+# Netlify deploy artifacts
+deploy-*.zip
+
+# Client project files (not part of FactoryJet website source)
+yadav-*.html
+yadav-*.docx
+Yadav-*.docx
+convert-images.sh
+
+# TypeScript incremental build cache
+tsconfig.tsbuildinfo

@@ -1,10 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/lib/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx}',
+    './src/pages/**/*.{js,ts,jsx,tsx}',
+    './src/lib/**/*.{js,ts,jsx,tsx}',
+    './src/utils/**/*.{js,ts,jsx,tsx}',
+    './src/context/**/*.{js,ts,jsx,tsx}',
+    './src/data/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
@@ -23,7 +26,6 @@ export default {
 
         // Existing keys preserved for backward compatibility with legacy pages.
         // New programmatic components use font-sans / font-serif / font-display.
-        heading: ['Poppins', 'Inter', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
 
         // === FactoryJet Design System v2.0 — Sprint 8 font pivot ===
@@ -47,17 +49,8 @@ export default {
         // Use font-fj-serif for hero H1 only. Body stays Inter.
         'fj-serif': ['var(--font-cormorant)', 'Georgia', 'serif'],
 
-        // Legacy keys — kept defined for v1 page parity. v2 components
-        // will not consume them. fraunces and sourceSerif still resolve
-        // via the next/font variables wired in src/app/layout.tsx.
-        'fraunces': ['var(--font-fraunces)', 'Georgia', 'serif'],
-        'geist': ['var(--font-geist-sans)', 'system-ui', '-apple-system', 'sans-serif'],
-        'sourceSerif': ['var(--font-source-serif)', 'Georgia', 'serif'],
+        // geistMono retained — used by v2 eyebrow/code utilities.
         'geistMono': ['var(--font-geist-mono)', 'ui-monospace', 'Consolas', 'monospace'],
-
-        // Explicit opt-in fallback for any LEGACY component observed to
-        // render with the wrong font after a future cleanup.
-        'legacy-inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
       },
       fontSize: {
         // Apple/Anthropic-grounded type scale. Weight 500 (not 700) for display

@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/sell-ai-automation-services-uk-agency-playbook-2026-hero.jpg",
   meta: {
-    title: "Sell AI Automation Services 2026: UK Agency Playbook",
-    description: "Learn how to sell AI automation services in 2026 with proven UK agency tactics: ROI-first positioning, vertical use cases, transparent pricing, and trust-building frameworks.",
+    title: "How to Sell AI Automation Services in 2026: UK Agency Playbook",
+    description: "25+ years of agency experience in one playbook. Learn ROI-first positioning, vertical use cases, and pricing strategies that UK SMBs trust when buying AI automation.",
   },
   keyTakeaways: [
     "Position AI automation as a business-outcome investment, not a technology purchase—lead with cost savings, time recovery, and revenue impact in the first 90 days.",

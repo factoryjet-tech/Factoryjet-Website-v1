@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/shopify-vs-woocommerce-uk-smbs-hero.jpg",
   meta: {
-    title: "Shopify vs WooCommerce UK: Best Platform for Small Business 2026",
-    description: "Compare Shopify vs WooCommerce for UK small businesses. Real costs, payment fees, VAT handling, and which platform suits your budget and technical skills in 2025.",
+    title: "Shopify vs WooCommerce for UK Small Businesses in 2026",
+    description: "WooCommerce costs 40-60% less over 3 years for UK stores doing £50K+. Compare platform costs, transaction fees, VAT handling, and which one fits your business in 2026.",
   },
   keyTakeaways: [
     "WooCommerce total cost of ownership is typically 40-60% lower than Shopify over three years for UK SMBs processing £50,000+ annually, once you factor in transaction fees and app costs.",

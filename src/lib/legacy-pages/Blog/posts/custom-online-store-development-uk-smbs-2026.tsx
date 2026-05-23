@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/custom-online-store-development-uk-smbs-2026-hero.jpg",
   meta: {
-    title: "Custom Online Store Development UK SMBs 2026 | FactoryJet",
-    description: "Enterprise e-commerce features for UK SMBs at £2,000-£8,000. Multi-currency, B2B workflows, AI personalisation. 2-4 week delivery. Real client examples from Staines to Mumbai.",
+    title: "Custom Online Store Development for UK SMBs in 2026",
+    description: "Multi-currency checkout, B2B workflows, and AI personalisation from £2,000 — no £50K price tag. See how UK SMBs get enterprise e-commerce features in 2026.",
   },
   keyTakeaways: [
     "Custom online stores for UK SMBs now cost £2,000-£8,000 versus £50,000+ from traditional agencies, with 2-4 week delivery timelines replacing 3-6 month projects.",

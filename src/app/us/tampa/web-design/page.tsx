@@ -18,6 +18,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteFooter from '@/components/v2/SiteFooter'
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns'
+import Image from 'next/image'
 
 // SiteHeader is a large client component (932 lines, mobile-menu + dropdown handlers).
 // Mobile Lighthouse flags its JS as 99% unused on first paint because the interactive
@@ -81,7 +82,7 @@ export default function TampaWebDesignPage() {
         headline={"What 'Web Design' Actually Means for a Tampa Business"}
         lead={"Tampa's buyer mix is unusually diverse — defense contractors reading RFQ-eligible vendor sites, healthcare procurement teams vetting suppliers against BayCare and Moffitt standards, financial clients comparing RIAs and advisors, and hospitality guests making split-second mobile booking decisions. Each segment requires a different web strategy. FactoryJet builds for all of them."}
         body={<><p>Healthcare and life sciences vendors serving BayCare, Moffitt, Tampa General, and their supply chains need sites that project compliance and operational credibility — with clear service scope and case study evidence front and center. HIPAA-aware forms, professional photography, and clean navigation are non-negotiable. Procurement teams in this sector vet vendors digitally before any meeting is scheduled, and a weak web presence is often an automatic disqualification.</p><p>Finance, defense, and professional services firms — Raymond James ecosystem vendors, MacDill AFB defense contractors, legal and consulting firms — need authority-building content structures, RFQ or proposal request workflows, and technical credibility signals that meet the bar set by sophisticated institutional buyers. FactoryJet handles the full scope: strategy, design, development, content, SEO, and a codebase you own outright. No WordPress lock-in. No monthly plugin invoices.</p></>}
-        rightSlot={<img src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden="true" width={1200} height={800} className="w-full rounded-2xl object-cover" fetchPriority="high" />}
+        rightSlot={<Image src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden={true} width={1200} height={800} className="w-full rounded-2xl object-cover" />}
       />
       <StrategicDarkSection
         eyebrow="WHY FACTORYJET"

@@ -60,8 +60,8 @@ export const POSTS: BlogPost[] = [
   author: 'Bhavesh Barot',
   date: 'Mar 7, 2026',
   meta: {
-    title: "Hidden Cost of Cheap Websites in India (2026 Guide for SMEs)",
-    description: "A ₹10,000 website may seem affordable, but the hidden cost of cheap websites in India includes lost leads, poor SEO, security risks, and rebuild expenses. Updated 2026 guide for SMEs."
+    title: "The Real Cost of a Cheap Website in India — 2026 SME Guide",
+    description: "A ₹10,000 website looks affordable until it costs you leads and rankings. Learn what Indian businesses actually lose — and what a proper site costs to build in 2026."
   },
   readTime: '12 min read',
   imageUrl: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=2000',

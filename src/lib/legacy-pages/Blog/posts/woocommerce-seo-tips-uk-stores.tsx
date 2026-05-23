@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/woocommerce-seo-tips-uk-stores-hero.jpg",
   meta: {
-    title: "WooCommerce SEO Tips for UK Stores | 12 Tactics That Work in 2026",
-    description: "Proven WooCommerce SEO tips for UK stores: product schema, crawl optimisation, local search intent, and technical fixes that drive organic traffic and sales in British markets.",
+    title: "12 WooCommerce SEO Tips for UK Stores That Drive Organic Sales",
+    description: "These 12 WooCommerce SEO tactics fix the issues UK stores actually face — crawl waste, missing product schema, and British search intent. See which ones move the needle.",
   },
   keyTakeaways: [
     "Product schema markup increases click-through rates by 20-30% in UK search results and improves visibility in Google Shopping and AI overviews.",

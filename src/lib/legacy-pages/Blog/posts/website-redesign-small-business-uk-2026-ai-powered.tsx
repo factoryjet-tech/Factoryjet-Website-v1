@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/website-redesign-small-business-uk-2026-ai-powered-hero.jpg",
   meta: {
-    title: "Website Redesign for Small Business UK 2026: AI 4-Week Guide",
-    description: "Complete your UK small business website redesign in 4 weeks with AI tools. Lighthouse 92+ scores, £1,500-£8,000 budgets, and proven frameworks for 2026.",
+    title: "Website Redesign for UK Small Business in 4 Weeks — 2026 Guide",
+    description: "Redesign your UK small business website in 4 weeks from £1,500 using AI workflows. Get Lighthouse 92+ scores and avoid the pitfalls that waste £8,000+ on failed projects.",
   },
   keyTakeaways: [
     "AI-powered redesign workflows now deliver production-ready UK small business websites in 4 weeks, down from the 12-16 week traditional agency timeline.",

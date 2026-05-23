@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/ai-agents-business-operations-uk-smbs-2026-hero.jpg",
   meta: {
-    title: "AI Agents for Business Operations 2026: UK SMB Cost Savings Guide",
-    description: "UK SMBs cut ops costs 25-35% with AI agents handling support, sales, and admin. Real implementation roadmap, ROI timelines, and vendor selection criteria for 2026.",
+    title: "Cut Ops Costs 35% with AI Agents: UK SMB Guide 2026",
+    description: "UK SMBs cut ops costs 25-35% using AI agents for support, sales, and admin. See which workflows to automate first, real ROI timelines, and how to get started.",
   },
   keyTakeaways: [
     "UK SMBs deploying AI agents for customer support, sales qualification, and appointment booking report 25-35% operational cost reductions within 6-9 months of implementation.",

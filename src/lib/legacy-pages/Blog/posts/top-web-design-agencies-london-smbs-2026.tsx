@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/top-web-design-agencies-london-smbs-2026-hero.jpg",
   meta: {
-    title: "Top 12 Web Design Agencies in London for SMBs (2026)",
-    description: "Compare 12 London web design agencies for SMBs. Pricing, portfolios, technical stacks, and delivery timelines evaluated. Find your 2026 partner.",
+    title: "Top 12 London Web Design Agencies for Growing SMBs in 2026",
+    description: "London web design agencies range from £2K to £50K+ per project. We compare 12 on SMB focus, pricing, tech stacks, and delivery speed to help you find the right fit.",
   },
   keyTakeaways: [
     "London agency pricing ranges £2,000–£50,000+ per project; SMBs typically need £3,000–£12,000 budgets for professional sites with CMS and mobile optimization.",

@@ -18,6 +18,7 @@ import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns'
+import Image from 'next/image'
 
 
 export const metadata: Metadata = {
@@ -69,7 +70,7 @@ export default function MiamiWebDesignPage() {
         headline={"What 'Web Design' Actually Means for a Miami Business"}
         lead={"Miami's bilingual market (English and Spanish), global finance clientele, and tourism-driven consumer base create web requirements you won't find in most agency playbooks. FactoryJet builds with multilingual-ready architecture from day one, fast load times for mobile users on the go, and lead capture flows tuned for international B2B buyers who evaluate you before they ever pick up the phone."}
         body={<><p>For FinTech and financial services companies along the Brickell corridor — international banks, wealth management firms, payment processors, and the consultancies that serve them — a website needs to project regulatory credibility fast. Buyers in this sector read service architecture pages before they read testimonials. We structure your site to communicate compliance credibility, clear capability scope, and trust signals (certifications, client logos, regulatory disclosures) in the first scroll.</p><p>For real estate and tourism businesses — the industries that collectively define Miami's global brand — your website is competing with international firms for buyers who may never visit your office before wiring a deposit. Miami's $20B+ tourism economy and booming luxury real estate market require sites that convert international visitors into leads: gallery-heavy layouts with fast image delivery, multilingual UX, and booking or inquiry flows that work on a phone in any time zone. Every FactoryJet project covers discovery, Figma prototyping, development, content, SEO, and a 30-day support window. You leave with a codebase you own, a design system you keep, and a site built to rank — not just to look good in a screenshot.</p></>}
-        rightSlot={<img src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden="true" width={1200} height={800} className="w-full rounded-2xl object-cover" loading="lazy" />}
+        rightSlot={<Image src="/images/us/services/service-web-design-process.webp" alt="" aria-hidden={true} width={1200} height={800} className="w-full rounded-2xl object-cover" />}
       />
       <StrategicDarkSection
         eyebrow="WHY FACTORYJET"

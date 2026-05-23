@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/best-online-store-development-small-business-uk-2026-hero.jpg",
   meta: {
-    title: "Best Online Store Development for Small Businesses UK 2026",
-    description: "UK SMBs get enterprise e-commerce features—AI inventory, B2B workflows, omnichannel selling—for £2,000–£8,000. Compare platforms, costs, and real implementations.",
+    title: "Best Online Store Development for UK Small Businesses 2026",
+    description: "AI inventory, B2B workflows, omnichannel selling — enterprise e-commerce now costs UK SMBs just £2,000-£8,000. Compare platforms and real builds to find your fit.",
   },
   keyTakeaways: [
     "Enterprise e-commerce features—AI inventory management, B2B quote workflows, multi-channel sync—now cost £2,000–£8,000 instead of £50,000+ for UK small businesses in 2026.",

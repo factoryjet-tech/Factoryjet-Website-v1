@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/create-ai-agents-business-uk-smb-guide-2026-hero.jpg",
   meta: {
-    title: "Create AI Agents for UK Business 2026 | SMB Implementation Guide",
-    description: "Build AI agents for customer support, sales, and operations. UK SMB guide covers platforms, costs, compliance, and 60-90 day deployment roadmaps for 2026.",
+    title: "How to Create AI Agents for Your UK Business in 2026",
+    description: "Build AI agents that handle support, sales, and ops 24/7. This UK SMB guide covers platforms, costs from £3K, compliance, and a 60-90 day deployment roadmap.",
   },
   keyTakeaways: [
     "AI agents handle customer support, sales qualification, appointment booking, and order processing without human intervention, reducing response times from hours to seconds.",

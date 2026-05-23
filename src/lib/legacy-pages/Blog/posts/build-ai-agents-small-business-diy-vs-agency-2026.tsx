@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/build-ai-agents-small-business-diy-vs-agency-2026-hero.jpg",
   meta: {
-    title: "Build AI Agents for Small Business: DIY vs Agency 2026",
-    description: "Compare DIY platforms vs agency-built AI agents for small businesses. Real costs, timelines, and capabilities to help you choose the right approach in 2026.",
+    title: "Build AI Agents for Your Business: DIY vs Agency in 2026",
+    description: "DIY AI agents cost £0-£500/mo but take 40-80 hours to set up. Agency builds run £3K-£15K. Find out which route saves more time and money for your small business.",
   },
   keyTakeaways: [
     "DIY platforms like Voiceflow, Botpress, and Make.com cost £0-£500/month but require 40-80 hours of learning and setup time for basic agents.",

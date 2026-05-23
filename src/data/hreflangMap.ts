@@ -26,6 +26,12 @@ export const homeAlternates = {
   'x-default': 'https://factoryjet.com',
 } as const
 
+/** US market hub page (/us) — US-only, no India/UAE equivalent */
+export const usHubAlternates = {
+  'en-US': 'https://factoryjet.com/us',
+  'x-default': 'https://factoryjet.com/us',
+} as const
+
 // ===========================================================================
 // SERVICE PAGES (IN + US variants exist; UAE points to /uae landing)
 // ===========================================================================

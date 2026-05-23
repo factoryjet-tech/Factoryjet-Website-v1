@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/ai-agents-uk-smbs-guide-hero.jpg",
   meta: {
-    title: "AI Agents for UK SMBs: Implementation Guide 2026",
-    description: "AI agents automate support, sales, and ops for UK SMBs. Cut costs 40-60%, handle 24/7 inquiries. Real pricing, use cases, and implementation timelines inside.",
+    title: "AI Agents for UK Small Businesses: Complete 2026 Guide",
+    description: "Learn how UK SMBs use AI agents to automate support, sales, and ops — cutting costs 40-60% with 24/7 coverage. Real pricing, use cases, and timelines to get started.",
   },
   keyTakeaways: [
     "AI agents handle customer support, sales qualification, appointment booking, and order tracking autonomously—freeing UK SMB teams to focus on growth.",

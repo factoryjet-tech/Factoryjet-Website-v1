@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/best-web-design-companies-small-business-australia-hero.jpg",
   meta: {
-    title: "15 Best Web Design Companies for Small Business Australia 2026",
-    description: "Compare 15 top web design companies for small businesses in Australia. Real pricing, platforms, delivery times, and client results ranked by SMB value.",
+    title: "15 Best Web Design Companies for Australian Small Business 2026",
+    description: "15 Australian web design companies ranked by SMB value. Compare pricing (AUD $2,500-$12K), platforms, delivery time, and real client results to find your match.",
   },
   keyTakeaways: [
     "Australian SMBs pay AUD $2,500–$12,000 for professional websites, with offshore agencies offering 40-60% savings while maintaining quality standards.",

@@ -12,8 +12,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/uk-web-design-agency-pricing-2026-smb-guide-hero.jpg",
   meta: {
-    title: "UK Web Design Agency Pricing 2026: SMB Cost Guide (5-200 Staff)",
-    description: "UK web design agencies charge £1,500–£25,000 for SMB sites in 2026. Compare brochure, e-commerce, and custom builds. Real pricing from London, Manchester, Birmingham, and offshore partners.",
+    title: "UK Web Design Agency Pricing Guide 2026 for SMBs (5-200 Staff)",
+    description: "UK web design agencies charge £1,500-£25,000 for SMB sites in 2026. See real pricing by service type and location — brochure, e-commerce, and custom builds.",
   },
   keyTakeaways: [
     "UK web design agencies charge £1,500–£8,000 for brochure sites, £3,000–£15,000 for e-commerce, and £10,000–£25,000+ for custom platforms in 2026.",
