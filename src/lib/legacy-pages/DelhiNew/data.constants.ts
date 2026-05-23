@@ -309,7 +309,7 @@ export const PRICING_PLANS: PricingTab[] = [
           { title: "PERFORMANCE", items: ["Core Web Vitals \"Green\"", "Lazy Loading", "Global Edge Network", "Redis Object Caching"] },
           { title: "SECURITY", items: ["Wildcard SSL", "DDoS Mitigation", "Enterprise Spam Firewall", "Real-Time Redundant Backups"] },
           { title: "CONVERSION", items: ["Exit Intent Popups", "AI Chatbot Ready", "CRM Integration", "Heatmaps", "Auto-Social Posting"] },
-          { title: "HOSTING", items: ["99.99% Uptime", "High-Frequency Compute", "Unlimited G-Suite Emails"] }
+          { title: "HOSTING", items: ["99.99% Uptime", "High-Frequency Compute", "G-Suite Emails (as per plan)"] }
         ]
       }
     ]
@@ -350,7 +350,7 @@ export const PRICING_PLANS: PricingTab[] = [
         period: "+ GST",
         buttonText: "Select Plan",
         categories: [
-          { title: "ARCH", items: ["Unlimited Products", "Bundled/Digital", "Distraction-Free Checkout", "Social Login"] },
+          { title: "ARCH", items: ["Products scoped per project", "Bundled/Digital", "Distraction-Free Checkout", "Social Login"] },
           { title: "MARKETING", items: ["BOGO Logic", "Verified Badges", "SMS/WhatsApp Notifs", "In-Cart Upsells", "AI Search & Filter"] },
           { title: "PAYMENTS", items: ["International (Stripe)", "Pincode Check", "Multi-State Tax", "GST Tax Invoices"] },
           { title: "SEO/TECH", items: ["Google Merchant Feed", "Video Gallery", "Redis Caching for Store"] },

@@ -46,7 +46,7 @@ const PRICING_PLANS = {
         { cat: "PERFORMANCE", items: ["Core Web Vitals \"Green\"", "Lazy Loading", "Global Edge Network", "Redis Object Caching"] },
         { cat: "SECURITY", items: ["Wildcard SSL", "DDoS Mitigation", "Enterprise Spam Firewall", "Real-Time Redundant Backups"] },
         { cat: "CONVERSION", items: ["Exit Intent Popups", "AI Chatbot Ready", "CRM Integration", "Heatmaps", "Auto-Social Posting"] },
-        { cat: "HOSTING", items: ["99.99% Uptime", "High-Frequency Compute", "Unlimited G-Suite Emails"] }
+        { cat: "HOSTING", items: ["99.99% Uptime", "High-Frequency Compute", "G-Suite Emails (as per plan)"] }
       ]
     }
   ],
@@ -80,7 +80,7 @@ const PRICING_PLANS = {
       price: "₹1,99,999",
       suffix: "+ GST",
       features: [
-        { cat: "ARCH", items: ["Unlimited Products", "Bundled/Digital", "Distraction-Free Checkout", "Social Login"] },
+        { cat: "ARCH", items: ["Products scoped per project", "Bundled/Digital", "Distraction-Free Checkout", "Social Login"] },
         { cat: "MARKETING", items: ["BOGO Logic", "Verified Badges", "SMS/WhatsApp Notifs", "In-Cart Upsells", "AI Search & Filter"] },
         { cat: "PAYMENTS", items: ["International (Stripe)", "Pincode Check", "Multi-State Tax", "GST Tax Invoices"] },
         { cat: "SEO/TECH", items: ["Google Merchant Feed", "Video Gallery", "Redis Caching for Store"] },

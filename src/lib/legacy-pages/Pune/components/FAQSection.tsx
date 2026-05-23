@@ -139,7 +139,7 @@ const FAQSection: React.FC = () => {
       },
       {
         q: 'How many products can my store handle?',
-        a: 'Unlimited on all platforms. Our standard setup includes 100 products, but we can configure for 1,000+ or 10,000+ SKUs based on your needs.',
+        a: 'Our standard setup includes 100 products. We can configure for 1,000+ or 10,000+ SKUs based on your needs — the platform supports large catalogs.',
       },
       {
         q: 'Can you integrate with my inventory software?',

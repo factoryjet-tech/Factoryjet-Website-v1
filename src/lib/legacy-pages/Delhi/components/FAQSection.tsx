@@ -17,7 +17,7 @@ const FAQSection: React.FC = () => {
         },
         {
           q: 'What\'s included in the ₹29,999 package?',
-          a: 'Everything a Delhi NCR business needs to get online: Custom design (not templates), 5 pages, mobile optimization, basic SEO, contact forms, WhatsApp button, Google Maps integration, SSL security, 1-year hosting + domain, 30 days of post-launch support, and unlimited revisions during development.',
+          a: 'Everything a Delhi NCR business needs to get online: Custom design (not templates), 5 pages, mobile optimization, basic SEO, contact forms, WhatsApp button, Google Maps integration, SSL security, 1-year hosting + domain, 30 days of post-launch support, and revisions within the agreed scope during development.',
         },
         {
           q: 'Do you offer monthly payment plans for Delhi businesses?',
@@ -25,15 +25,15 @@ const FAQSection: React.FC = () => {
         },
         {
           q: 'What\'s the difference between your ₹29,999 and ₹49,999 packages?',
-          a: '₹29,999 = Static website (5-8 pages, perfect for service businesses). ₹49,999 = E-commerce store (Shopify/WooCommerce, unlimited products, payment gateway, inventory management). Choose based on your business model: services → static; selling products → e-commerce.',
+          a: '₹29,999 = Static website (5-8 pages, perfect for service businesses). ₹49,999 = E-commerce store (Shopify/WooCommerce, products scoped per project, payment gateway, inventory management). Choose based on your business model: services → static; selling products → e-commerce.',
         },
         {
           q: 'Are there any hidden costs after the initial payment?',
-          a: 'No hidden costs. The quoted price includes everything for Year 1. From Year 2, you only pay for hosting renewal (₹3,999/year) and domain renewal (₹999/year). Optional: AMC ₹15,000/year for unlimited edits + priority support. Completely transparent — no surprises.',
+          a: 'No hidden costs. The quoted price includes everything for Year 1. From Year 2, you only pay for hosting renewal (₹3,999/year) and domain renewal (₹999/year). Optional: AMC ₹15,000/year for edits as per SLA + priority support. Completely transparent — no surprises.',
         },
         {
           q: 'What does your Annual Maintenance Contract (AMC) include?',
-          a: 'Our ₹15,000/year AMC includes unlimited content updates, plugin/security updates, monthly backups, uptime monitoring, 24/7 WhatsApp support, quarterly SEO health checks, and priority bug fixes. Ideal for Delhi NCR businesses that want peace of mind and don\'t have in-house tech teams.',
+          a: 'Our ₹15,000/year AMC includes content updates as per agreed SLA, plugin/security updates, monthly backups, uptime monitoring, 24/7 WhatsApp support, quarterly SEO health checks, and priority bug fixes. Ideal for Delhi NCR businesses that want peace of mind and don\'t have in-house tech teams.',
         },
       ],
     },
@@ -103,11 +103,11 @@ const FAQSection: React.FC = () => {
       faqs: [
         {
           q: 'Do you offer post-launch support for Delhi NCR businesses?',
-          a: 'Yes. Every project includes 30 days of free post-launch support (bug fixes, minor tweaks). After 30 days: Pay-per-request (₹2,000/hour) or AMC (₹15,000/year for unlimited support). WhatsApp support available 9 AM - 7 PM IST, Monday to Saturday.',
+          a: 'Yes. Every project includes 30 days of free post-launch support (bug fixes, minor tweaks). After 30 days: Pay-per-request (₹2,000/hour) or AMC (₹15,000/year for SLA-based support). WhatsApp support available 9 AM - 7 PM IST, Monday to Saturday.',
         },
         {
           q: 'What if I need changes after the website is live?',
-          a: 'Minor changes (text edits, image swaps) are free for 30 days. Major changes (new pages, design overhauls) are charged separately. AMC clients get unlimited changes included. We respond within 24 hours for all support requests from Delhi NCR clients.',
+          a: 'Minor changes (text edits, image swaps) are free for 30 days. Major changes (new pages, design overhauls) are charged separately. AMC clients get changes as per the agreed SLA. We respond within 24 hours for all support requests from Delhi NCR clients.',
         },
         {
           q: 'Do you provide content writing services for Delhi businesses?',
@@ -115,7 +115,7 @@ const FAQSection: React.FC = () => {
         },
         {
           q: 'Can you help with logo design and branding for my Delhi business?',
-          a: 'Yes. Logo design package: ₹8,000 (3 concepts, unlimited revisions, vector files). Full branding (logo + business card + letterhead + social media kit): ₹20,000. Not included in website packages but can be bundled for a discount.',
+          a: 'Yes. Logo design package: ₹8,000 (3 concepts, revisions within scope, vector files). Full branding (logo + business card + letterhead + social media kit): ₹20,000. Not included in website packages but can be bundled for a discount.',
         },
         {
           q: 'Do you provide digital marketing services (SEO, Google Ads, social media)?',

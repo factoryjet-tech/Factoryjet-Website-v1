@@ -620,7 +620,7 @@ export const PricingSection: React.FC<SectionProps> = ({ onOpenModal }) => {
                 <FeatureHeader text="Hosting" />
                 <FeatureItem text="99.99% Uptime" />
                 <FeatureItem text="High-Frequency Compute" />
-                <FeatureItem text="Unlimited G-Suite Emails" />
+                <FeatureItem text="G-Suite Emails (as per plan)" />
               </div>
             </>
           )}
@@ -713,7 +713,7 @@ export const PricingSection: React.FC<SectionProps> = ({ onOpenModal }) => {
                 </button>
 
                 <FeatureHeader text="Arch" />
-                <FeatureItem text="Unlimited Products" />
+                <FeatureItem text="Products scoped per project" />
                 <FeatureItem text="Bundled/Digital" />
                 <FeatureItem text="Distraction-Free Checkout" />
                 <FeatureItem text="Social Login" />

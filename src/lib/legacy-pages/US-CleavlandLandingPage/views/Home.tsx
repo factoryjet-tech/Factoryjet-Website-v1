@@ -544,7 +544,7 @@ export const Home: React.FC = () => {
       description: "White-Glove Service + Strategic Growth",
       features: [
         "Real-Time Monitoring & Hourly Backups",
-        "Unlimited Content Updates",
+        "Content Updates as per agreed SLA",
         "5 Hours Development Time Included",
         "Advanced Analytics & CRO",
         "Monthly Strategy Calls",

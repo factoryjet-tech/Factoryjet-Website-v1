@@ -39,7 +39,7 @@ export default function ECommerceDevelopment() {
             <div className="bg-[#FF6B35]/10 text-[#FF6B35] border border-[#FF6B35]/20 px-3 py-1 rounded-full text-sm inline-block mb-8 font-medium">Best for: WordPress users, full control</div>
             <ul className="space-y-3 text-[#334155]">
               <li className="flex items-center gap-2"><div className="w-1 h-1 bg-[#0052CC] rounded-full"></div> 6-10 week development</li>
-              <li className="flex items-center gap-2"><div className="w-1 h-1 bg-[#0052CC] rounded-full"></div> Unlimited customization</li>
+              <li className="flex items-center gap-2"><div className="w-1 h-1 bg-[#0052CC] rounded-full"></div> Deep open-source customization</li>
               <li className="flex items-center gap-2"><div className="w-1 h-1 bg-[#0052CC] rounded-full"></div> Lower ongoing fees</li>
               <li className="flex items-center gap-2"><div className="w-1 h-1 bg-[#0052CC] rounded-full"></div> Complete ownership</li>
               <li className="flex items-center gap-2"><div className="w-1 h-1 bg-[#0052CC] rounded-full"></div> Plugin ecosystem</li>

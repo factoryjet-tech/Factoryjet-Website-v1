@@ -61,7 +61,7 @@ export const SITE_DATA = {
     },
     {
       question: "How many revisions are included in the design process?",
-      answer: "Unlimited revisions during the design phase. We work until you're 100% satisfied before moving to development. Our collaborative process ensures your vision is perfectly captured in the final design."
+      answer: "Revisions within the agreed scope during the design phase. We work until you're 100% satisfied before moving to development. Our collaborative process ensures your vision is perfectly captured in the final design."
     },
     {
       question: "Can I update content myself after the website is launched?",

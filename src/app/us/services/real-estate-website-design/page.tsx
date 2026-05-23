@@ -536,7 +536,7 @@ export default function RealEstateWebsiteDesignPage() {
               ['Custom Design', '✓ Fully custom', '✗ Template only'],
               ['You Own the Site', '✓ Outright', '✗ Subscription'],
               ['CRM Choice', '✓ Any CRM', '✗ Locked to theirs'],
-              ['Neighborhood Pages', '✓ Unlimited', '✗ Limited'],
+              ['Neighborhood Pages', '✓ Scoped per brief', '✗ Limited'],
             ].map(([feature, fj, other]) => (
               <div key={feature} className="grid grid-cols-3 gap-2 py-2 border-t border-white/5 items-center text-xs font-fj-body">
                 <span className="text-white/50">{feature}</span>

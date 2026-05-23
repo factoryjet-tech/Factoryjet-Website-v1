@@ -11,13 +11,13 @@ export const servicesData: ServiceItem[] = [
     title: "Manufacturer Business Website",
     idealFor: "Medium manufacturers, established exporters",
     description: "Comprehensive manufacturer website for established industrial businesses. Full product catalog, export credentials, and lead generation optimization from an experienced website design company in Mumbai.",
-    features: ["Up to 15 Pages Custom Design", "Unlimited Product Catalog", "Export Credentials Section (ISO, CE, FDA)", "Factory Gallery & Machinery Photos", "Client Testimonials Section", "Blog for Industry Content", "Advanced SEO Optimization", "CRM Integration Ready", "60 Days Support"]
+    features: ["Up to 15 Pages Custom Design", "Full Product Catalog (scoped per brief)", "Export Credentials Section (ISO, CE, FDA)", "Factory Gallery & Machinery Photos", "Client Testimonials Section", "Blog for Industry Content", "Advanced SEO Optimization", "CRM Integration Ready", "60 Days Support"]
   },
   {
     title: "Industrial Catalog Website",
     idealFor: "Large manufacturers, distributors with extensive product lines",
     description: "Complete product catalog website for manufacturers with 100+ products. Category management, specifications, datasheets, and bulk inquiry system.",
-    features: ["Unlimited Pages", "Advanced Product Catalog System", "Category & Sub-category Management", "Product Specifications & Datasheets", "Bulk Inquiry/RFQ System", "Dealer Locator (Optional)", "Multi-language Support", "Export Market Targeting", "90 Days Support"]
+    features: ["Pages scoped per project", "Advanced Product Catalog System", "Category & Sub-category Management", "Product Specifications & Datasheets", "Bulk Inquiry/RFQ System", "Dealer Locator (Optional)", "Multi-language Support", "Export Market Targeting", "90 Days Support"]
   },
   {
     title: "B2B E-Commerce Portal",

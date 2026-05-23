@@ -212,7 +212,7 @@ export const aiVoiceAgentData: AIServicePageData = {
       description: 'Best for high-volume businesses or multi-location operations.',
       features: [
         'Everything in Growth, plus:',
-        'Unlimited conversation flows',
+        'Conversation flows scoped per project brief',
         'Multi-location support',
         'Advanced call routing logic',
         'Custom voice development',

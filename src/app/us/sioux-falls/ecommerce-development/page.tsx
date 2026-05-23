@@ -303,7 +303,7 @@ export default function Page() {
               features: [
                 'Everything in Growth',
                 'Headless Shopify + Next.js frontend',
-                'Unlimited products & collections',
+                'Large catalog — products & collections scoped per project',
                 'ERP / inventory system integration',
                 'Multi-location fulfillment logic',
                 'Sub-1s load time, Lighthouse 100',

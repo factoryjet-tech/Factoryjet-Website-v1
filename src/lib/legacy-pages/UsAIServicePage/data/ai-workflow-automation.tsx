@@ -101,7 +101,7 @@ export const aiWorkflowAutomationData: AIServicePageData = {
       price: '$14,999',
       description: 'Organization-wide process automation.',
       features: [
-        'Unlimited workflows',
+        'Workflows scoped per project brief',
         '200+ system integrations',
         'Custom business rule engine',
         'Cross-department orchestration',

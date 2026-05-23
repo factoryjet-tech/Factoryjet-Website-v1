@@ -40,9 +40,9 @@ const services = [
     priceRange: "AED 50,000+",
     description: "For enterprise needs, our custom web development services utilize React, Next.js, and Python. We are the custom web development company for scalable, secure applications.",
     bestFor: "Complex applications, unique requirements, high-traffic sites",
-    features: ["Complete customization", "Proprietary features", "Unlimited scalability"],
+    features: ["Complete customization", "Proprietary features", "Built to scale with your business"],
     timeline: "8-12 weeks",
-    keyBenefit: "Total control and unlimited possibilities",
+    keyBenefit: "Total control and long-term flexibility",
     accentColor: "#0052CC",
     Icon: Code
   }

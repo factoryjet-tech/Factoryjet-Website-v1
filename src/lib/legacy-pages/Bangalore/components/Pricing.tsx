@@ -120,7 +120,7 @@ const Pricing: React.FC<PricingProps> = ({ onOpenModal }) => {
       price: '₹1,99,999',
       description: 'Perfect for: Large catalogs, B2B, marketplaces',
       features: [
-        'Unlimited Products',
+        'Products scoped per project',
         'Multi-Vendor Marketplace Option',
         'Advanced Analytics + Reports',
         'ERP Integration (Tally/Zoho)',
@@ -159,7 +159,7 @@ const Pricing: React.FC<PricingProps> = ({ onOpenModal }) => {
       price: '₹9,999/month',
       features: [
         'Everything in Standard +',
-        'Unlimited content updates',
+        'Content updates as per agreed SLA',
         'Priority support (2-hour response)',
         'Monthly SEO reports',
         'Dedicated account manager',

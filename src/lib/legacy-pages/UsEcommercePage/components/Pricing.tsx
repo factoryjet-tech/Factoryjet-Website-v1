@@ -26,7 +26,7 @@ const tiers = [
     price: "$25,000",
     range: "– $49,999",
     desc: "Best for high-growth brands and B2B commerce.",
-    features: ["Shopify Plus / Adobe / Headless", "Fully custom storefront", "Unlimited products", "ERP / CRM integrations", "B2B features", "7–14 day delivery", "90-day support"],
+    features: ["Shopify Plus / Adobe / Headless", "Fully custom storefront", "Products scoped per project", "ERP / CRM integrations", "B2B features", "7–14 day delivery", "90-day support"],
     cta: "Go Pro"
   },
   {

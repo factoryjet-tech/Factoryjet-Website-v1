@@ -125,7 +125,7 @@ export const aiChatbotData: AIServicePageData = {
       features: [
         'Everything in Growth, plus:',
         'Omnichannel deployment',
-        'Unlimited knowledge base',
+        'Knowledge base scoped per project brief',
         'Deep multi-system integrations',
         'Custom chat interface design',
         'A/B testing capabilities',
@@ -145,7 +145,7 @@ export const aiChatbotData: AIServicePageData = {
     {
       question: 'How much does a custom AI chatbot cost?',
       answer:
-        'Starting from $1,999 for single-channel. Growth at $4,499 adds multi-channel. Enterprise at $9,999 covers omnichannel with unlimited knowledge base training. No per-conversation fees.',
+        'Starting from $1,999 for single-channel. Growth at $4,499 adds multi-channel. Enterprise at $9,999 covers omnichannel with extensive knowledge base training scoped per project. No per-conversation fees.',
     },
     {
       question: 'How long does deployment take?',

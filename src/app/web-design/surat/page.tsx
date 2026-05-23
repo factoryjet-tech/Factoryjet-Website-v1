@@ -324,7 +324,7 @@ export default function Page() {
       priceRange: '₹1,00,000+',
       description: 'For large exporters or manufacturers needing custom portals, B2B ordering, or multi-language sites.',
       features: [
-        'Unlimited pages',
+        'Pages scoped per project',
         'Custom web application',
         'Multi-language (English + Gujarati)',
         'B2B ordering or dealer portal',

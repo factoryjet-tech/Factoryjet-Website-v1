@@ -118,7 +118,7 @@ export default function WebflowDevelopment() {
               <h5 className="text-xl font-bold text-[#0F172A] mb-2 font-heading">Webflow Premium</h5>
               <div className="text-3xl font-bold text-[#0052CC] mb-6">$20,000 - $40,000+</div>
               <ul className="space-y-4 mb-6 text-[#334155]">
-                <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#0052CC] rounded-full"></div> Unlimited pages</li>
+                <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#0052CC] rounded-full"></div> Pages scoped per project</li>
                 <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#0052CC] rounded-full"></div> Complex animations</li>
                 <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#0052CC] rounded-full"></div> E-commerce</li>
                 <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-[#0052CC] rounded-full"></div> Custom functionality</li>

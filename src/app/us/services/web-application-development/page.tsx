@@ -321,7 +321,7 @@ const PRICING_TIERS = [
       'Self-serve onboarding + plan management',
       'Usage metering + limits',
       'API with documentation',
-      'Unlimited integrations',
+      'Integrations scoped per project brief',
       'Advanced permissions + SSO',
       'Load testing + scalability review',
       'Full technical documentation',

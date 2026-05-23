@@ -36,7 +36,7 @@ const Process: React.FC<ProcessProps> = ({ onCtaClick }) => {
               <div className="w-14 h-14 md:w-16 md:h-16 bg-jet-orange text-white rounded-full flex items-center justify-center mx-auto mb-5 md:mb-6 shadow-lg shadow-orange-100 border-4 border-white">
                 <Palette size={28} />
               </div>
-              <span className="inline-block px-3 py-1 bg-orange-50 text-jet-orange text-[10px] font-bold rounded-full uppercase mb-4 tracking-wider">Unlimited Revisions</span>
+              <span className="inline-block px-3 py-1 bg-orange-50 text-jet-orange text-[10px] font-bold rounded-full uppercase mb-4 tracking-wider">Revisions Included</span>
               <h3 className="text-xl font-bold mb-4 text-jet-navy">Design & Mockups</h3>
               <p className="text-sm text-jet-slate leading-relaxed">
                 See your website before we build it. We share progress via WhatsApp daily. You only pay when you love the design.

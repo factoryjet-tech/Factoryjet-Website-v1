@@ -263,7 +263,7 @@ export const PRICING_TIERS = [
     price: 7999,
     priceLabel: "Custom quoted",
     idealFor: "Enterprises, complex sites",
-    features: ["Unlimited pages", "E-commerce capabilities", "Complex CMS architecture", "Advanced interactions (GSAP)", "Programmatic SEO", "Third-party integrations", "Priority support (90 days)", "Dedicated project manager"],
+    features: ["Pages scoped per project", "E-commerce capabilities", "Complex CMS architecture", "Advanced interactions (GSAP)", "Programmatic SEO", "Third-party integrations", "Priority support (90 days)", "Dedicated project manager"],
     timeline: "4-5 weeks",
     cta: "Request Custom Quote",
     popular: false

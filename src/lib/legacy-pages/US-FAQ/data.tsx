@@ -615,7 +615,7 @@ export const faqData: FAQCategory[] = [
         question: "What if I'm not happy with the work?",
         answer: (
           <p>
-            We offer <strong>unlimited design revisions</strong> during the design phase and 2 rounds after development. 
+            We offer <strong>design revisions within agreed scope</strong> during the design phase and 2 rounds after development.
             We also have a <strong>14-day money-back guarantee</strong> if you are not satisfied after the discovery phase.
           </p>
         )

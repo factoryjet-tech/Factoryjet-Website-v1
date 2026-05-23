@@ -275,7 +275,7 @@ const Pricing: React.FC = () => {
         {
           category: "STORE ARCHITECTURE",
           items: [
-            "Unlimited Products",
+            "Large catalog — products scoped per project",
             "Bundled/Digital Products",
             "Distraction-Free Checkout",
             "Social Login",

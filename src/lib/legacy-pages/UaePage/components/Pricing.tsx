@@ -77,7 +77,7 @@ const pricingData: Record<PricingCategory, PricingTier[]> = {
       price: "Contact Us",
       subtitle: "Get a custom quote",
       features: [
-        "Unlimited Custom Pages",
+        "Pages scoped per project",
         "Custom Web App Development",
         "Cloud Architecture (AWS/Azure)",
         "Advanced Security & RBAC",
@@ -132,7 +132,7 @@ const pricingData: Record<PricingCategory, PricingTier[]> = {
       subtitle: "~$13,600 USD",
       features: [
         "Up to 5,000 Products",
-        "Unlimited Pages",
+        "Pages scoped per project",
         "Multi-Currency & Multi-Language",
         "Subscription Management",
         "Multi-Channel Selling (Amazon/Noon)",
@@ -149,7 +149,7 @@ const pricingData: Record<PricingCategory, PricingTier[]> = {
       subtitle: "Get a custom quote",
       features: [
         "Multi-Vendor Marketplace",
-        "Unlimited Vendors & Products",
+        "Vendors & products scoped per project",
         "Custom Platform Development",
         "Microservices Architecture",
         "AI-Powered Search & Recommendations",

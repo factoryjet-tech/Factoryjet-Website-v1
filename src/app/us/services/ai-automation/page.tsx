@@ -488,7 +488,7 @@ const PRICING_TIERS = [
     description:
       'Multi-department automation platform with custom AI logic, compliance controls, and a dedicated engineering partner. For businesses where manual workflows are a company-wide problem.',
     features: [
-      'Unlimited workflow automations across departments',
+      'Workflow automations fully scoped per project brief',
       'Custom AI models trained on your internal data and terminology',
       'Compliance-ready architecture (HIPAA, SOC 2, or financial services)',
       'Multi-tool orchestration (ERP, CRM, support desk, e-commerce)',

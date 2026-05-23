@@ -490,7 +490,7 @@ const PRICING_TIERS = [
     description:
       'Complex business logic automation with multi-language support, international system integrations, compliance requirements, and a dedicated engineering partner. Ideal for Miami trade, hospitality, and financial services companies.',
     features: [
-      'Unlimited workflow development within agreed scope',
+      'Workflow development fully scoped per project brief',
       'International and cross-border system integrations',
       'Multi-language workflow support (English, Spanish, Portuguese)',
       'Custom AI decision logic for complex document types',

@@ -374,7 +374,7 @@ const WORKFLOW_PRICING_TIERS = [
     priceRange: 'From ₹7,00,000',
     description: 'End-to-end automation across sales, operations, finance, and support for scaling Indian businesses.',
     features: [
-      'Unlimited system integrations',
+      'System integrations scoped per project brief',
       'AI document processing (invoices, contracts, KYC)',
       'Full sales pipeline automation (lead → close → invoice)',
       'Operations automation (order → fulfilment → accounting)',

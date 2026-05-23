@@ -285,7 +285,7 @@ export const PRICING_PLANS: PricingTab[] = [
           { title: "PERFORMANCE", items: ["Core Web Vitals \"Green\"", "Lazy Loading", "Global Edge Network", "Redis Object Caching"] },
           { title: "SECURITY", items: ["Wildcard SSL", "DDoS Mitigation", "Enterprise Spam Firewall", "Real-Time Redundant Backups"] },
           { title: "CONVERSION", items: ["Exit Intent Popups", "AI Chatbot Ready", "CRM Integration", "Heatmaps", "Auto-Social Posting"] },
-          { title: "HOSTING", items: ["99.99% Uptime", "High-Frequency Compute", "Unlimited G-Suite Emails"] }
+          { title: "HOSTING", items: ["99.99% Uptime", "High-Frequency Compute", "G-Suite Emails (as per plan)"] }
         ]
       }
     ]
@@ -326,7 +326,7 @@ export const PRICING_PLANS: PricingTab[] = [
         period: "+ GST",
         buttonText: "Select Plan",
         categories: [
-          { title: "ARCH", items: ["Unlimited Products", "Bundled/Digital", "Distraction-Free Checkout", "Social Login"] },
+          { title: "ARCH", items: ["Products scoped per project", "Bundled/Digital", "Distraction-Free Checkout", "Social Login"] },
           { title: "MARKETING", items: ["BOGO Logic", "Verified Badges", "SMS/WhatsApp Notifs", "In-Cart Upsells", "AI Search & Filter"] },
           { title: "PAYMENTS", items: ["International (Stripe)", "Pincode Check", "Multi-State Tax", "GST Tax Invoices"] },
           { title: "SEO/TECH", items: ["Google Merchant Feed", "Video Gallery", "Redis Caching for Store"] },
@@ -474,7 +474,7 @@ export const FAQS: FAQItem[] = [
   {
     category: "Timeline",
     question: "How many revision rounds are included in website design projects?",
-    answer: "FactoryJet includes 2 revision rounds in all Delhi NCR website packages. Our revision process: Round 1 - Design Phase: Review initial designs and provide feedback (unlimited minor tweaks, 2 major revisions). Round 2 - Development Phase: Review functional website and request adjustments. Post-launch: 30-day period for bug fixes and minor adjustments. Additional revision rounds beyond the included 2 are billed at ₹5,000-15,000 depending on scope. To avoid excess revisions, we encourage thorough feedback in each round. Most Delhi NCR clients are satisfied within the included revision rounds."
+    answer: "FactoryJet includes 2 revision rounds in all Delhi NCR website packages. Our revision process: Round 1 - Design Phase: Review initial designs and provide feedback (minor tweaks within scope, 2 major revisions). Round 2 - Development Phase: Review functional website and request adjustments. Post-launch: 30-day period for bug fixes and minor adjustments. Additional revision rounds beyond the included 2 are billed at ₹5,000-15,000 depending on scope. To avoid excess revisions, we encourage thorough feedback in each round. Most Delhi NCR clients are satisfied within the included revision rounds."
   },
   {
     category: "Timeline",

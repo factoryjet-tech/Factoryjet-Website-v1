@@ -324,7 +324,7 @@ export default function Page() {
       priceRange: '₹1,00,000+',
       description: 'For established businesses needing custom portals, integrations, or complex web applications.',
       features: [
-        'Unlimited pages',
+        'Pages scoped per project',
         'Custom web application',
         'ERP / CRM integrations',
         'Client or dealer portal',

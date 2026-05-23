@@ -43,7 +43,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenModal }) => {
       subtitle: 'Shopify, WooCommerce, Magento — Full Online Store Setup',
       description: 'Complete e-commerce solutions for Delhi NCR retailers and D2C brands. Integrated with UPI, Razorpay, Paytm, Shiprocket, and WhatsApp for instant checkouts.',
       features: [
-        'Product catalog (unlimited products)',
+        'Product catalog (scoped per project)',
         'Payment gateway integration (UPI, cards, wallets)',
         'Shipping integration (Delhivery, Shiprocket)',
         'Inventory management',

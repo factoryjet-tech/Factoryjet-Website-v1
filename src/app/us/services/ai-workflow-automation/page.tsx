@@ -591,7 +591,7 @@ const PRICING_TIERS = [
     description:
       'Complex multi-department automation with custom business logic, compliance requirements, and a dedicated engineering partner.',
     features: [
-      'Unlimited workflow automations across departments',
+      'Workflow automations fully scoped per project brief',
       'Complex multi-branch business logic and decision trees',
       'Private LLM deployment for sensitive data processing',
       'Enterprise ERP and legacy system integration',

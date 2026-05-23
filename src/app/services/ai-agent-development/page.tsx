@@ -471,7 +471,7 @@ const IN_PRICING_TIERS = [
     description:
       'A full multi-agent AI system with private deployment, custom LLM fine-tuning, and a dedicated engineering partner for large Indian enterprises.',
     features: [
-      'Unlimited agent workflows and tool integrations',
+      'Agent workflows & tool integrations scoped per project brief',
       'Custom LLM fine-tuning on your proprietary business data',
       'Private cloud or on-premise deployment for regulated sectors',
       'Multi-department rollout (support, sales, ops, finance)',

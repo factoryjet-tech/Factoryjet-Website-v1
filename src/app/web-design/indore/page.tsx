@@ -27,7 +27,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 export const metadata: Metadata = {
   title: 'Web Design Company in Indore | Website Development Indore | FactoryJet',
   description:
-    'Best web design company in Indore. Professional websites from ₹25,000. 7-day delivery, 500+ businesses served. Serving Vijay Nagar, AB Road, Palasia, Scheme 54, Rau & all of Indore.',
+    'Best web design company in Indore. Professional websites from ₹29,999. 7-day delivery, 500+ businesses served. Serving Vijay Nagar, AB Road, Palasia, Scheme 54, Rau & all of Indore.',
   keywords: [
     'web design company in Indore',
     'website design Indore',
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Indore | From ₹25,000 | FactoryJet',
+    title: 'Web Design Company in Indore | From ₹29,999 | FactoryJet',
     description:
-      'Professional web design company in Indore — Next.js, SEO, and GA4 included. 7-day delivery. From ₹25,000. Serving Vijay Nagar, AB Road, Palasia, Scheme 54, Scheme 78.',
+      'Professional web design company in Indore — Next.js, SEO, and GA4 included. 7-day delivery. From ₹29,999. Serving Vijay Nagar, AB Road, Palasia, Scheme 54, Scheme 78.',
     url: 'https://factoryjet.com/web-design/indore',
     images: [
       {
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Web Design Company in Indore | FactoryJet',
     description:
-      'Website design company in Indore. From ₹25,000. 7-day delivery. Next.js, SEO, GA4 included.',
+      'Website design company in Indore. From ₹29,999. 7-day delivery. Next.js, SEO, GA4 included.',
     images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {
@@ -95,7 +95,7 @@ const localBusinessSchema = {
   '@id': 'https://factoryjet.com/#organization',
   name: 'FactoryJet — Web Design Indore',
   description:
-    'Web design company in Indore building fast, SEO-optimized websites for D2C brands, coaching institutes, manufacturers, and SMBs. From ₹25,000. 7-day delivery guarantee.',
+    'Web design company in Indore building fast, SEO-optimized websites for D2C brands, coaching institutes, manufacturers, and SMBs. From ₹29,999. 7-day delivery guarantee.',
   url: 'https://factoryjet.com/web-design/indore',
   telephone: '+919699977699',
   email: 'connect@factoryjet.com',
@@ -127,14 +127,14 @@ const localBusinessSchema = {
       {
         '@type': 'Offer',
         name: 'Starter Website',
-        price: '25000',
+        price: '29999',
         priceCurrency: 'INR',
         description: '5-page business website, mobile-responsive, basic SEO, contact form.',
       },
       {
         '@type': 'Offer',
         name: 'Growth Website',
-        price: '50000',
+        price: '80000',
         priceCurrency: 'INR',
         description:
           '10–15 page website with blog CMS, lead capture, GA4, and advanced SEO.',
@@ -142,7 +142,7 @@ const localBusinessSchema = {
       {
         '@type': 'Offer',
         name: 'Custom Website',
-        price: '100000',
+        price: '150000',
         priceCurrency: 'INR',
         description:
           'Custom Next.js build with e-commerce, booking systems, or AI integrations.',
@@ -160,7 +160,7 @@ const faqSchema = {
       name: 'How much does web design cost in Indore in 2026?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet's web design for Indore businesses starts at ₹25,000 for a 5-page Starter site. The Growth tier (₹50,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds with e-commerce, booking systems, or AI integrations start at ₹1,00,000. Local Indore agencies typically quote ₹40,000–₹2,00,000 for comparable scope — often without a published timeline or a codebase you own outright.",
+        text: "FactoryJet's web design for Indore businesses starts at ₹29,999 for a 5-page Starter site. The Growth tier (₹80,000) covers up to 15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds with e-commerce, booking systems, or AI integrations start at ₹1,50,000. Local Indore agencies typically quote ₹40,000–₹2,00,000 for comparable scope — often without a published timeline or a codebase you own outright.",
       },
     },
     {
@@ -192,7 +192,7 @@ const faqSchema = {
       name: 'Indore mein website banane ka kharcha kitna hai?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet mein website ₹25,000 se shuru hoti hai — 5-page business site ke liye. Growth plan ₹50,000 mein 10–15 pages, blog CMS, aur GA4 analytics deta hai. Custom ecommerce ya web app ₹1,00,000+ se shuru hota hai. Indore ke local agencies usually ₹40,000–₹2,00,000 charge karte hain same kaam ke liye — aur delivery 4–12 hafte mein hoti hai.',
+        text: 'FactoryJet mein website ₹29,999 se shuru hoti hai — 5-page business site ke liye. Growth plan ₹80,000 mein 15 pages tak, blog CMS, aur GA4 analytics deta hai. Custom ecommerce ya web app ₹1,50,000 se shuru hota hai. Indore ke local agencies usually ₹40,000–₹2,00,000 charge karte hain same kaam ke liye — aur delivery 4–12 hafte mein hoti hai.',
       },
     },
     {
@@ -216,7 +216,7 @@ const howToSchema = {
   estimatedCost: {
     '@type': 'MonetaryAmount',
     currency: 'INR',
-    minValue: '25000',
+    minValue: '29999',
   },
   totalTime: 'P7D',
   step: [
@@ -316,13 +316,13 @@ const INDORE_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does web design cost in Indore in 2026?',
     answer:
-      "FactoryJet's web design for Indore businesses starts at ₹25,000 for a 5-page Starter site. The Growth tier (₹50,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds with e-commerce, booking systems, or AI integrations start at ₹1,00,000. Local Indore agencies typically quote ₹40,000–₹2,00,000 for comparable scope — often without a published timeline or a codebase you own outright.",
+      "FactoryJet's web design for Indore businesses starts at ₹29,999 for a 5-page Starter site. The Growth tier (₹80,000) covers up to 15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds with e-commerce, booking systems, or AI integrations start at ₹1,50,000. Local Indore agencies typically quote ₹40,000–₹2,00,000 for comparable scope — often without a published timeline or a codebase you own outright.",
   },
   {
     category: 'pricing',
     question: 'Indore mein website banane ka kharcha kitna hai?',
     answer:
-      'FactoryJet mein website ₹25,000 se shuru hoti hai — 5 pages ki basic business site ke liye. Growth plan ₹50,000 mein 10–15 pages, blog CMS, aur GA4 analytics deta hai. Custom ecommerce ya web app ₹1,00,000 se upar hota hai. Indore ke local agencies ₹40,000–₹2,00,000 tak charge karte hain. Hamari prices fixed hain — koi hidden charges nahi.',
+      'FactoryJet mein website ₹29,999 se shuru hoti hai — 5 pages ki basic business site ke liye. Growth plan ₹80,000 mein 15 pages tak, blog CMS, aur GA4 analytics deta hai. Custom ecommerce ya web app ₹1,50,000 se shuru hota hai. Indore ke local agencies ₹40,000–₹2,00,000 tak charge karte hain. Hamari prices fixed hain — koi hidden charges nahi.',
   },
   {
     category: 'pricing',
@@ -400,7 +400,7 @@ const INDORE_FAQ_ITEMS = [
     category: 'local',
     question: 'Which is the best web design company in Indore?',
     answer:
-      "FactoryJet brings 25+ years of web engineering experience and 500+ businesses served — far exceeding the typical Indore agency's 2–5 years and 50–200 client portfolio. We build in Next.js (not WordPress), publish fixed prices before the first call, and guarantee 7-day delivery in writing. Our clients across Madhya Pradesh consistently report Lighthouse 100/100 scores and first-page Google rankings within 3–6 months. We let the work and the numbers make the case.",
+      "FactoryJet brings 25+ years of web engineering experience and 500+ businesses served — far exceeding the typical Indore agency's 2–5 years and 50–200 client portfolio. We build in Next.js (not WordPress), publish fixed prices from ₹29,999 before the first call, and guarantee 7-day delivery in writing. Our clients across Madhya Pradesh consistently report Lighthouse 100/100 scores and first-page Google rankings within 3–6 months. We let the work and the numbers make the case.",
   },
   {
     category: 'local',
@@ -430,7 +430,7 @@ const INDORE_FAQ_ITEMS = [
     category: 'local',
     question: 'How does FactoryJet compare to Indore web design agencies?',
     answer:
-      "Indore agencies typically charge ₹40,000–₹2,00,000 for a comparable project and take 4–12 weeks to deliver — often without publishing rates upfront. FactoryJet publishes all three pricing tiers before you call, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster site, a shorter timeline, and a codebase you own outright — at 60–70% less than the Indore agency benchmark.",
+      "Indore agencies typically charge ₹40,000–₹2,00,000 for a comparable project and take 4–12 weeks to deliver — often without publishing rates upfront. FactoryJet publishes all three pricing tiers (from ₹29,999) before you call, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster site, a shorter timeline, and a codebase you own outright — at 60–70% less than the Indore agency benchmark.",
   },
   {
     category: 'local',
@@ -470,7 +470,7 @@ const INDORE_COMPARISON_COLUMNS = [
 const INDORE_COMPARISON_ROWS = [
   {
     feature: 'Starting price',
-    values: ['₹25,000', '₹40,000–₹2,00,000', '₹10,000–₹60,000', '₹0–₹10,000 (you build it)'],
+    values: ['₹29,999', '₹40,000–₹2,00,000', '₹10,000–₹60,000', '₹0–₹10,000 (you build it)'],
   },
   {
     feature: 'Delivery timeline',
@@ -596,13 +596,13 @@ export default function IndoreWebDesignPage() {
         <Hero
           eyebrow="WEB DESIGN · INDORE"
           headline="Web Design Company in Indore"
-          lead="Indore is Madhya Pradesh's commercial capital — home to 65,000+ SMEs, 500+ startups, a booming D2C ecosystem, and IT parks at Scheme 78 and Bengali Square that are attracting serious tech investment. From coaching institutes in Vijay Nagar to FMCG exporters on AB Road to manufacturers in Pithampur, Indore's businesses are competing for customers online every day. FactoryJet builds high-performance websites from ₹25,000 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
+          lead="Indore is Madhya Pradesh's commercial capital — home to 65,000+ SMEs, 500+ startups, a booming D2C ecosystem, and IT parks at Scheme 78 and Bengali Square that are attracting serious tech investment. From coaching institutes in Vijay Nagar to FMCG exporters on AB Road to manufacturers in Pithampur, Indore's businesses are competing for customers online every day. FactoryJet builds high-performance websites from ₹29,999 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
           primaryCta={{ label: 'Get Free Indore Website Quote', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Pricing', href: '#pricing' }}
           trustItems={[
             '7-Day Delivery',
             '500+ Businesses Served',
-            'From ₹25,000',
+            'From ₹29,999',
           ]}
           rightSlot={<HeroBrowserMockup />}
         />
@@ -789,7 +789,7 @@ export default function IndoreWebDesignPage() {
             {
               icon: '📋',
               title: 'Fixed price. Published before the first call.',
-              body: 'We publish all three tiers — ₹25,000, ₹50,000, and ₹1,00,000+ — before you speak to us. No discovery fees, no "it depends" quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your site running. No proprietary platform lock-in.',
+              body: 'We publish all three tiers — ₹29,999, ₹80,000, and ₹1,50,000+ — before you speak to us. No discovery fees, no "it depends" quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your site running. No proprietary platform lock-in.',
             },
           ]}
         />
@@ -850,7 +850,7 @@ export default function IndoreWebDesignPage() {
           headline="FactoryJet vs. Indore Agency vs. Freelancer vs. Template Builder"
           lead="Not all web design options in Indore deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
           pullQuote={{
-            stat: '₹25,000',
+            stat: '₹29,999',
             caption:
               'starting price — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a ₹2,00,000 Indore agency project.',
           }}
@@ -994,39 +994,298 @@ export default function IndoreWebDesignPage() {
           </div>
         </section>
 
-        {/* ── 12. PRICING ──────────────────────────────────────────────────── */}
+        {/* ── 12. PLATFORM & TECHNOLOGY ────────────────────────────────────── */}
+        {/*
+          Platform-agnostic positioning. WordPress, Next.js, Shopify, Webflow,
+          Custom dev, Wix/Squarespace migration coverage.
+          Inserted before Pricing so visitors understand what they are paying for.
+        */}
+        <section className="py-14 md:py-20 bg-white">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <p
+              className="font-fj-mono font-medium uppercase text-fj-orange mb-4"
+              style={{ fontSize: '11px', letterSpacing: '0.14em' }}
+            >
+              PLATFORM & TECHNOLOGY
+            </p>
+            <h2
+              className="fj-display font-semibold text-fj-ink mb-4"
+              style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', letterSpacing: '-0.02em' }}
+            >
+              We Recommend the Right Platform for Your Business — Not the Easiest One for Us
+            </h2>
+            <p className="font-fj-body text-fj-neutral-500 mb-12 max-w-2xl" style={{ fontSize: '1rem' }}>
+              Most Indore web agencies build everything on WordPress because it is the platform they know.
+              FactoryJet is platform-agnostic — we evaluate your business goals, traffic expectations,
+              and team capabilities before recommending a tech stack. Here is how we think about each option.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+              {/* Next.js */}
+              <div className="rounded-2xl border border-fj-neutral-200 bg-fj-cream p-7 flex flex-col gap-4">
+                <div className="flex items-center gap-3">
+                  <div
+                    className="h-10 w-10 rounded-xl flex items-center justify-center flex-shrink-0"
+                    style={{ backgroundColor: '#0F0F12' }}
+                    aria-hidden="true"
+                  >
+                    <span className="text-white font-bold" style={{ fontSize: '0.75rem' }}>NX</span>
+                  </div>
+                  <div>
+                    <p className="font-fj-body font-semibold text-fj-ink" style={{ fontSize: '1rem' }}>Next.js</p>
+                    <p
+                      className="font-fj-mono font-medium text-fj-orange"
+                      style={{ fontSize: '0.6875rem', letterSpacing: '0.08em' }}
+                    >
+                      OUR DEFAULT RECOMMENDATION
+                    </p>
+                  </div>
+                </div>
+                <p className="font-fj-body text-fj-neutral-500" style={{ fontSize: '0.9rem', lineHeight: 1.65 }}>
+                  High-performance React framework deployed to Cloudflare CDN. Static pages load under
+                  1.5 seconds on Indian 4G — significantly faster than server-rendered alternatives.
+                  Lighthouse 100/100 is achievable by default. No monthly plugin overhead. Full codebase
+                  ownership. Our top pick for businesses where speed, SEO, and performance matter.
+                </p>
+                <p
+                  className="font-fj-mono font-medium text-fj-neutral-400 mt-auto"
+                  style={{ fontSize: '0.6875rem', letterSpacing: '0.06em' }}
+                >
+                  BEST FOR: IT startups · B2B manufacturers · Marketing sites · SaaS
+                </p>
+              </div>
+
+              {/* WordPress */}
+              <div className="rounded-2xl border border-fj-neutral-200 bg-fj-cream p-7 flex flex-col gap-4">
+                <div className="flex items-center gap-3">
+                  <div
+                    className="h-10 w-10 rounded-xl flex items-center justify-center flex-shrink-0"
+                    style={{ backgroundColor: '#21759B' }}
+                    aria-hidden="true"
+                  >
+                    <span className="text-white font-bold" style={{ fontSize: '0.75rem' }}>WP</span>
+                  </div>
+                  <div>
+                    <p className="font-fj-body font-semibold text-fj-ink" style={{ fontSize: '1rem' }}>WordPress</p>
+                    <p
+                      className="font-fj-mono font-medium text-fj-neutral-400"
+                      style={{ fontSize: '0.6875rem', letterSpacing: '0.08em' }}
+                    >
+                      CUSTOM THEMES · NOT TEMPLATES
+                    </p>
+                  </div>
+                </div>
+                <p className="font-fj-body text-fj-neutral-500" style={{ fontSize: '0.9rem', lineHeight: 1.65 }}>
+                  The most widely used CMS globally — and for good reason. WordPress is excellent for
+                  content-heavy sites, blogs, and service businesses where your team wants to manage
+                  pages without developer help. FactoryJet builds custom WordPress themes from scratch —
+                  no pre-packaged templates, no Elementor drag-and-drop bloat that tanks your performance.
+                  We tune WordPress installs to achieve Core Web Vitals green before handover.
+                </p>
+                <p
+                  className="font-fj-mono font-medium text-fj-neutral-400 mt-auto"
+                  style={{ fontSize: '0.6875rem', letterSpacing: '0.06em' }}
+                >
+                  BEST FOR: Content sites · Blogs · Service businesses · Editorial teams
+                </p>
+              </div>
+
+              {/* Shopify */}
+              <div className="rounded-2xl border border-fj-neutral-200 bg-fj-cream p-7 flex flex-col gap-4">
+                <div className="flex items-center gap-3">
+                  <div
+                    className="h-10 w-10 rounded-xl flex items-center justify-center flex-shrink-0"
+                    style={{ backgroundColor: '#96BF48' }}
+                    aria-hidden="true"
+                  >
+                    <span className="text-white font-bold" style={{ fontSize: '0.75rem' }}>SH</span>
+                  </div>
+                  <div>
+                    <p className="font-fj-body font-semibold text-fj-ink" style={{ fontSize: '1rem' }}>Shopify</p>
+                    <p
+                      className="font-fj-mono font-medium text-fj-neutral-400"
+                      style={{ fontSize: '0.6875rem', letterSpacing: '0.08em' }}
+                    >
+                      D2C & RETAIL ECOMMERCE
+                    </p>
+                  </div>
+                </div>
+                <p className="font-fj-body text-fj-neutral-500" style={{ fontSize: '0.9rem', lineHeight: 1.65 }}>
+                  For D2C and retail businesses that want to sell online quickly, Shopify is the
+                  fastest path to a reliable store. Razorpay, PhonePe, UPI, and Shiprocket all
+                  integrate natively. Inventory management, abandoned cart recovery, and discount
+                  logic are built in. FactoryJet builds Shopify stores with custom Liquid themes —
+                  not off-the-shelf templates — and wires up WhatsApp order notifications and
+                  Shiprocket dispatch automation from day one.
+                </p>
+                <p
+                  className="font-fj-mono font-medium text-fj-neutral-400 mt-auto"
+                  style={{ fontSize: '0.6875rem', letterSpacing: '0.06em' }}
+                >
+                  BEST FOR: D2C brands · Retail stores · FMCG exporters · Jewellery
+                </p>
+              </div>
+
+              {/* Webflow */}
+              <div className="rounded-2xl border border-fj-neutral-200 bg-fj-cream p-7 flex flex-col gap-4">
+                <div className="flex items-center gap-3">
+                  <div
+                    className="h-10 w-10 rounded-xl flex items-center justify-center flex-shrink-0"
+                    style={{ backgroundColor: '#4353FF' }}
+                    aria-hidden="true"
+                  >
+                    <span className="text-white font-bold" style={{ fontSize: '0.75rem' }}>WF</span>
+                  </div>
+                  <div>
+                    <p className="font-fj-body font-semibold text-fj-ink" style={{ fontSize: '1rem' }}>Webflow</p>
+                    <p
+                      className="font-fj-mono font-medium text-fj-neutral-400"
+                      style={{ fontSize: '0.6875rem', letterSpacing: '0.08em' }}
+                    >
+                      VISUAL CMS WITH DESIGN CONTROL
+                    </p>
+                  </div>
+                </div>
+                <p className="font-fj-body text-fj-neutral-500" style={{ fontSize: '0.9rem', lineHeight: 1.65 }}>
+                  Webflow suits businesses that need a visually flexible CMS — where the marketing or
+                  design team wants to control layout and content without writing code. It delivers
+                  strong performance out of the box and a clean CMS editor. FactoryJet builds custom
+                  Webflow projects when the use case calls for it — typically for design agencies,
+                  creative studios, and marketing-led businesses that need frequent visual updates.
+                </p>
+                <p
+                  className="font-fj-mono font-medium text-fj-neutral-400 mt-auto"
+                  style={{ fontSize: '0.6875rem', letterSpacing: '0.06em' }}
+                >
+                  BEST FOR: Creative studios · Design agencies · Marketing-led businesses
+                </p>
+              </div>
+
+              {/* Custom Development */}
+              <div className="rounded-2xl border border-fj-orange/20 bg-fj-cream p-7 flex flex-col gap-4" style={{ borderColor: 'rgba(240, 90, 40, 0.2)' }}>
+                <div className="flex items-center gap-3">
+                  <div
+                    className="h-10 w-10 rounded-xl flex items-center justify-center flex-shrink-0"
+                    style={{ backgroundColor: '#F05A28' }}
+                    aria-hidden="true"
+                  >
+                    <span className="text-white font-bold" style={{ fontSize: '0.75rem' }}>{'{}'}</span>
+                  </div>
+                  <div>
+                    <p className="font-fj-body font-semibold text-fj-ink" style={{ fontSize: '1rem' }}>Custom Development</p>
+                    <p
+                      className="font-fj-mono font-medium text-fj-orange"
+                      style={{ fontSize: '0.6875rem', letterSpacing: '0.08em' }}
+                    >
+                      WHEN NO PLATFORM FITS
+                    </p>
+                  </div>
+                </div>
+                <p className="font-fj-body text-fj-neutral-500" style={{ fontSize: '0.9rem', lineHeight: 1.65 }}>
+                  Some businesses have requirements that no off-the-shelf platform can handle cleanly —
+                  complex booking engines, multi-tenant portals, B2B procurement systems, or custom
+                  workflow automation. FactoryJet builds fully bespoke solutions in Next.js with
+                  PostgreSQL, Firebase, or Supabase backends. Scope and architecture defined per
+                  project brief after a technical discovery session.
+                </p>
+                <p
+                  className="font-fj-mono font-medium text-fj-neutral-400 mt-auto"
+                  style={{ fontSize: '0.6875rem', letterSpacing: '0.06em' }}
+                >
+                  BEST FOR: SaaS products · Booking portals · B2B platforms · Web apps
+                </p>
+              </div>
+
+              {/* Wix / Squarespace migration */}
+              <div className="rounded-2xl border border-fj-neutral-200 bg-fj-neutral-50 p-7 flex flex-col gap-4">
+                <div className="flex items-center gap-3">
+                  <div
+                    className="h-10 w-10 rounded-xl flex items-center justify-center flex-shrink-0"
+                    style={{ backgroundColor: '#0F0F12', opacity: 0.6 }}
+                    aria-hidden="true"
+                  >
+                    <span className="text-white font-bold" style={{ fontSize: '0.75rem' }}>→</span>
+                  </div>
+                  <div>
+                    <p className="font-fj-body font-semibold text-fj-ink" style={{ fontSize: '1rem' }}>Wix / Squarespace</p>
+                    <p
+                      className="font-fj-mono font-medium text-fj-neutral-400"
+                      style={{ fontSize: '0.6875rem', letterSpacing: '0.08em' }}
+                    >
+                      WE MIGRATE YOU OFF THESE
+                    </p>
+                  </div>
+                </div>
+                <p className="font-fj-body text-fj-neutral-500" style={{ fontSize: '0.9rem', lineHeight: 1.65 }}>
+                  Wix and Squarespace are good starting points — but they have a ceiling. Performance
+                  is constrained by the platform, SEO customisation is limited, and you can never
+                  export your full site. Many Indore businesses outgrow them within 12–18 months.
+                  FactoryJet migrates businesses off Wix and Squarespace to custom Next.js or
+                  WordPress builds — with zero downtime, full SEO redirect mapping, and no loss of
+                  Google rankings in the transition.
+                </p>
+                <p
+                  className="font-fj-mono font-medium text-fj-neutral-400 mt-auto"
+                  style={{ fontSize: '0.6875rem', letterSpacing: '0.06em' }}
+                >
+                  WE DO: Platform migrations · SEO redirect mapping · Zero-downtime cutover
+                </p>
+              </div>
+
+            </div>
+
+            <div className="mt-10 rounded-2xl border border-fj-neutral-200 bg-fj-cream px-8 py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <p className="font-fj-body text-fj-neutral-600" style={{ fontSize: '0.9375rem' }}>
+                Not sure which platform is right for your Indore business? We will tell you honestly
+                on the discovery call — even if the answer is "stick with what you have."
+              </p>
+              <a
+                href="#pricing"
+                className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-fj-body font-semibold text-white flex-shrink-0"
+                style={{ backgroundColor: '#F05A28', fontSize: '0.9375rem' }}
+              >
+                See Pricing
+                <span aria-hidden="true">↓</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 13. PRICING (was 12) ─────────────────────────────────────────── */}
         <div id="pricing">
           <PricingTiers
             eyebrow="TRANSPARENT PRICING"
             headline="Transparent, Fixed-Price Web Design for Indore Businesses"
-            lead="Indore agency rates for comparable web projects run ₹40,000–₹2,00,000. FactoryJet Growth (₹50,000) delivers 10–15 pages, blog CMS, lead capture, GA4, Next.js, and a 7-day delivery guarantee — with a codebase you own outright. No retainer required. No proprietary platform. No surprise invoices. See full INR pricing."
+            lead="Indore agency rates for comparable web projects run ₹40,000–₹2,00,000. FactoryJet Growth (₹80,000) delivers up to 15 pages, blog CMS, lead capture, GA4, Next.js, and a 7-day delivery guarantee — with a codebase you own outright. No retainer required. No proprietary platform. No surprise invoices. See full INR pricing."
             tiers={[
               {
                 name: 'Starter',
-                priceRange: '₹25,000',
+                priceRange: 'From ₹29,999',
                 description:
                   'A 5-page business site that loads fast on mobile and ranks for your name and core service. Best for new businesses, service providers, and SMBs in Indore who need a credible online presence quickly — coaching institutes, clinics, consultants, and local retailers.',
                 features: [
-                  '5 pages, mobile-responsive',
-                  'Basic SEO & LocalBusiness schema',
+                  '5-page website, mobile-first',
+                  'Lighthouse 95+ performance',
+                  'Technical SEO & LocalBusiness schema',
+                  'Custom Figma design',
                   'Contact form + WhatsApp integration',
                   'GA4 setup',
-                  '2 revision rounds',
                   '30-day post-launch support',
                 ],
                 cta: { label: 'Get a Quote', modal: true as const, region: 'in' as const },
               },
               {
                 name: 'Growth',
-                priceRange: '₹50,000',
+                priceRange: 'From ₹80,000',
                 description:
-                  'A 10–15 page site with blog CMS, lead-capture flows, and analytics wired in from day one. Best for Indore SMBs scaling online — coaching institutes running multiple batches, D2C brands building a content engine, or B2B manufacturers generating inbound RFQs.',
+                  'Up to 15 pages with blog CMS, lead-capture flows, and analytics wired in from day one. Best for Indore SMBs scaling online — coaching institutes running multiple batches, D2C brands building a content engine, or B2B manufacturers generating inbound RFQs.',
                 features: [
-                  '10–15 pages with blog CMS',
+                  'Up to 15 pages with blog setup',
+                  'CMS integration (Sanity or Contentful)',
                   'Advanced SEO — schema, meta templates, internal links',
                   'Lead capture + email automation',
                   'GA4 + GTM + Search Console',
-                  '3 revision rounds',
                   '30-day support + CMS training session',
                 ],
                 cta: { label: 'Get a Quote', modal: true as const, region: 'in' as const },
@@ -1034,14 +1293,15 @@ export default function IndoreWebDesignPage() {
               },
               {
                 name: 'Custom',
-                priceRange: '₹1,00,000+',
+                priceRange: 'From ₹1,50,000',
                 description:
-                  'Custom Next.js build with e-commerce, booking systems, AI integrations, or API connections. Best for established Indore businesses with complex requirements — Shopify stores with Razorpay and Shiprocket, WhatsApp chatbot integrations, or SaaS product websites.',
+                  'E-commerce, Next.js web apps, large marketing sites, and complex integrations. Pages and scope defined per project brief. Best for established Indore businesses with specific requirements — Razorpay/PhonePe/UPI checkout, third-party API connections, or SaaS product websites.',
                 features: [
-                  'Custom Next.js architecture',
-                  'E-commerce (Razorpay, UPI, Shiprocket) or booking integrations',
-                  'AI integrations (WhatsApp chatbot, search, content)',
+                  'E-commerce (Razorpay, PhonePe, UPI)',
+                  'Next.js web apps & large marketing sites',
                   'Third-party API connections (Zoho, Tally, Salesforce)',
+                  'AI integrations (WhatsApp chatbot, search, content)',
+                  'Pages & scope defined per project brief',
                   'Priority support + quarterly reviews',
                   'Dedicated engineering point of contact',
                 ],

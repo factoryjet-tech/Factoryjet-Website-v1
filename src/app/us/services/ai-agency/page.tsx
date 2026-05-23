@@ -661,7 +661,7 @@ const PRICING_TIERS = [
     description:
       'A full multi-agent AI system with custom LLM fine-tuning, private deployment options, and a dedicated engineering partner. For businesses ready to build AI into their operating infrastructure.',
     features: [
-      'Unlimited agent workflows and integrations',
+      'Agent workflows & integrations scoped per project brief',
       'Custom LLM fine-tuning on your proprietary data',
       'Private cloud or on-premise deployment option',
       'Multi-department rollout with change management support',

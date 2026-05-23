@@ -508,7 +508,7 @@ const IN_PRICING_TIERS = [
     description:
       'E-commerce stores, Next.js web applications, large marketing sites, and complex builds with Indian payment gateway and third-party API integrations.',
     features: [
-      'Unlimited pages — scoped per project',
+      'Pages & scope defined per project',
       'Shopify, WooCommerce, or custom Next.js e-commerce',
       'Razorpay, PhonePe, UPI, and PayU payment integrations',
       'Third-party API connections (CRM, ERP, booking systems)',
@@ -587,7 +587,7 @@ const IN_FAQ_ITEMS = [
     category: 'pricing',
     question: 'Do you offer website maintenance contracts (AMC)?',
     answer:
-      'Yes. AMC plans start at ₹2,999/month (Basic: security updates, SSL renewal, uptime monitoring, monthly health report), ₹4,999/month (Standard: adds 5 content updates/mo, SEO optimization, performance monitoring), and ₹10,000/month (Premium: unlimited content updates, active SEO strategy, design refresh, dedicated account manager). AMC is optional — your website continues to run without it.',
+      'Yes. AMC plans start at ₹2,999/month (Basic: security updates, SSL renewal, uptime monitoring, monthly health report), ₹4,999/month (Standard: adds 5 content updates/mo, SEO optimization, performance monitoring), and ₹10,000/month (Premium: content updates as per agreed SLA, active SEO strategy, design refresh, dedicated account manager). AMC is optional — your website continues to run without it.',
   },
 
   /* ── Technical & Performance ── */

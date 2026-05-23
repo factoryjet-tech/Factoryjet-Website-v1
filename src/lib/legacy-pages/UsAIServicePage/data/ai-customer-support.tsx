@@ -199,7 +199,7 @@ export const aiCustomerSupportData: AIServicePageData = {
       description: 'For businesses with complex support operations, multiple product lines, or regulatory requirements.',
       features: [
         'Full omnichannel AI agent',
-        'Unlimited knowledge base training',
+        'Knowledge base training scoped per project brief',
         'Custom system integrations',
         'Proactive outreach capabilities',
         'Advanced analytics & reporting',

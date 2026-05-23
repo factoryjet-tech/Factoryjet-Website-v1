@@ -111,7 +111,7 @@ export const aiSalesAgentData: AIServicePageData = {
       description: 'For enterprise sales with complex pipelines.',
       features: [
         'Full-pipeline AI SDR',
-        'Unlimited channels',
+        'Channels scoped per project brief',
         'Custom qualification frameworks',
         'ABM targeting integration',
         'Advanced pipeline analytics',

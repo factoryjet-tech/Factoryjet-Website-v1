@@ -104,7 +104,7 @@ const Platforms: React.FC = () => {
         return (
           <div className="animate-fade-in">
             <h3 className="text-2xl font-heading font-bold mb-4">WooCommerce Development: Flexible E-Commerce on WordPress</h3>
-             <p className="text-jet-gray mb-6 leading-relaxed">WooCommerce is an open-source e-commerce plugin for WordPress, powering over 5 million stores globally. It offers unlimited customization, content marketing integration, and full ownership with no platform fees.</p>
+             <p className="text-jet-gray mb-6 leading-relaxed">WooCommerce is an open-source e-commerce plugin for WordPress, powering over 5 million stores globally. It offers deep open-source customization, content marketing integration, and full ownership with no platform fees.</p>
              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
                <div className="p-4 border border-slate-200 rounded text-center shadow-sm">
                  <div className="text-2xl md:text-3xl font-bold text-jet-blue mb-1">28%</div>

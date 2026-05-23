@@ -295,7 +295,7 @@ const Pricing: React.FC<PricingProps> = ({ onCtaClick }) => {
         {
           title: "CORE",
           items: [
-            "Unlimited Products",
+            "Products scoped per project",
             "B2B Wholesale Portal",
             "Custom ERP Sync",
           ],
@@ -380,7 +380,7 @@ const Pricing: React.FC<PricingProps> = ({ onCtaClick }) => {
         {
           title: "TECH",
           items: [
-            "Unlimited Content Updates",
+            "Content Updates as per agreed SLA",
             "SEO Monitoring",
             "Custom Dev Support",
           ],

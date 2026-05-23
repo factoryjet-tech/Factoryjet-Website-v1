@@ -113,7 +113,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({ onOpenModal }) => {
     {
       tier: 'Premium',
       monthlyCost: '₹9,999/mo',
-      includes: 'Standard + unlimited updates, priority support, SEO updates',
+      includes: 'Standard + updates as per agreed SLA, priority support, SEO updates',
       color: 'border-jet-orange',
     },
   ];

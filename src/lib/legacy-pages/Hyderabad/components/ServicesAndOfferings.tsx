@@ -159,7 +159,7 @@ export const Process = () => (
             day: "Day 2",
             title: "Design Mockups",
             icon: "🎨",
-            desc: "Custom wireframes and design mockups based on your brand. 2-3 design options for review. Unlimited revisions at design stage.",
+            desc: "Custom wireframes and design mockups based on your brand. 2-3 design options for review. Revisions within agreed scope at design stage.",
           },
           {
             day: "Day 3-4",
@@ -578,7 +578,7 @@ const PRICING_DATA: Record<PricingCategory, PricingPlan[]> = {
         {
           category: "ARCH",
           items: [
-            "Unlimited Products",
+            "Products scoped per project",
             "Bundled/Digital",
             "Distraction-Free Checkout",
             "Social Login",

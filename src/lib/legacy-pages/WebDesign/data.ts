@@ -155,7 +155,7 @@ export const HOSTING_AMC = {
       name: "Premium AMC",
       price: "₹10,000",
       period: "/mo",
-      features: ["Everything in Standard", "Unlimited Content Updates", "Active Content Strategy", "SEO Content Optimization", "Design Updates & Refresh", "New Feature Development", "Conversion Rate Optimization", "Social Media Posting", "Dedicated Account Manager", "24/7 Phone Support"]
+      features: ["Everything in Standard", "Content Updates as per agreed SLA", "Active Content Strategy", "SEO Content Optimization", "Design Updates & Refresh", "New Feature Development", "Conversion Rate Optimization", "Social Media Posting", "Dedicated Account Manager", "24/7 Phone Support"]
     }
   ]
 };

@@ -93,7 +93,7 @@ export const PLATFORMS: Platform[] = [
   {
     name: "WooCommerce",
     description: "Open-source e-commerce platform built on WordPress. Flexible, customizable, and cost-effective.",
-    why: ["Open source (no licensing fees)", "Highly customizable", "WordPress integration (blogs, content)", "Large developer community", "Affordable hosting", "Control over all data", "Unlimited products/scalability"],
+    why: ["Open source (no licensing fees)", "Highly customizable", "WordPress integration (blogs, content)", "Large developer community", "Affordable hosting", "Control over all data", "Large catalog support with no platform ceiling"],
     bestFor: ["Companies wanting full customization", "Businesses with WordPress sites", "Content-heavy retailers", "Companies with technical team", "Budget-conscious enterprises"],
     cost: "₹60,000 - ₹4,00,000 depending on customization",
     timeline: "6-12 weeks from start to launch",
@@ -206,7 +206,7 @@ export const FEATURE_SETS: FeatureSet[] = [
     icon: "Package",
     description: "Centralized control for your entire catalog.",
     items: [
-      { text: "Unlimited product catalog", icon: "Database" },
+      { text: "Product catalog scoped per project", icon: "Database" },
       { text: "Variants (size, color, etc.)", icon: "Layers" },
       { text: "Digital and physical products", icon: "FileDigit" },
       { text: "Product images and videos", icon: "Image" },

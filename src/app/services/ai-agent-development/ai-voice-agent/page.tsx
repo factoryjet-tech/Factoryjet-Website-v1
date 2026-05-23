@@ -377,7 +377,7 @@ const VOICE_PRICING_TIERS = [
     priceRange: 'From ₹12,00,000',
     description: 'Multi-language, multi-campaign voice AI with full telephony infrastructure for high-volume businesses.',
     features: [
-      'Unlimited calling flows and campaigns',
+      'Calling flows & campaigns scoped per project brief',
       'Multi-language support (up to 5 languages)',
       'Full telephony infrastructure setup (SIP trunk, number provisioning)',
       'BFSI collection compliance (RBI fair practice guidelines)',

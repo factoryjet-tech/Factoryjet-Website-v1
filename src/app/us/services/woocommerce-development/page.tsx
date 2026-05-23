@@ -399,7 +399,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'What is the difference between WooCommerce and Shopify?',
-    answer: `WooCommerce runs on WordPress — you control your hosting, your data, and your code. There are no platform transaction fees, and customization is unlimited. Shopify is a hosted SaaS platform — lower technical overhead, but you pay monthly fees ($79–$399/month) plus transaction fees, and customization has hard limits. WooCommerce has a higher ceiling but requires more technical management. Shopify is simpler but has ongoing platform costs. FactoryJet builds on both — we'll help you choose the right platform on the discovery call.`,
+    answer: `WooCommerce runs on WordPress — you control your hosting, your data, and your code. There are no platform transaction fees, and customization has no hard platform ceiling. Shopify is a hosted SaaS platform — lower technical overhead, but you pay monthly fees ($79–$399/month) plus transaction fees, and customization has hard limits. WooCommerce has a higher ceiling but requires more technical management. Shopify is simpler but has ongoing platform costs. FactoryJet builds on both — we'll help you choose the right platform on the discovery call.`,
     category: 'platform',
   },
   {

@@ -326,7 +326,7 @@ export default function AustinEcommerceDevelopmentPage() {
           eyebrow="TRANSPARENT PRICING"
           headline="Simple Pricing. No Surprises. No Hidden Fees."
           lead={
-            "Austin agency rates for a comparable Shopify store typically run $8,000–$20,000. FactoryJet delivers the same quality for $1,500–$5,000. Every plan includes: project management, unlimited revisions during build, 30 days post-launch support, Lighthouse 100/100 guarantee, and same-week kickoff. No contracts. No retainers."
+            "Austin agency rates for a comparable Shopify store typically run $8,000–$20,000. FactoryJet delivers the same quality for $1,500–$5,000. Every plan includes: project management, revisions within agreed build scope, 30 days post-launch support, Lighthouse 100/100 guarantee, and same-week kickoff. No contracts. No retainers."
           }
           tiers={[
             {
@@ -371,7 +371,7 @@ export default function AustinEcommerceDevelopmentPage() {
                 'Custom Shopify Plus or headless (Next.js) build for high-volume Austin brands, B2B wholesale operations, and complex integration requirements.',
               features: [
                 'Everything in Growth, plus:',
-                'Unlimited products',
+                'Large catalog — products scoped per project',
                 'B2B wholesale pricing portal',
                 'ERP, POS, or 3PL integrations',
                 'Headless Next.js frontend (Lighthouse 100)',

@@ -9,7 +9,7 @@ const FAQ: React.FC = () => {
     { q: "How long does it take to build a website?", a: "Business websites typically take 3-4 weeks (faster than most Ahmedabad agencies). E-commerce stores take 4-5 weeks. We share progress via WhatsApp daily." },
     { q: "What payment options do you integrate?", a: "We integrate all major Indian payment methods: UPI (GPay, PhonePe, Paytm), Razorpay, Credit/Debit Cards, Net Banking, and COD for e-commerce stores." },
     { q: "Can I meet your team in person?", a: "Absolutely! We're based in Gujarat. You can visit our office in Navrangpura, Ahmedabad, or we can meet you at your business location anywhere in Gujarat." },
-    { q: "What if I'm not satisfied with the design?", a: "We offer unlimited revisions until you love the design. We don't launch until you're 100% happy with every single detail." },
+    { q: "What if I'm not satisfied with the design?", a: "We offer revisions within agreed scope until you love the design. We don't launch until you're 100% happy with every single detail." },
     { q: "Do you provide SEO to rank on Google?", a: "Yes, every site we build includes basic SEO + Google My Business setup. For specific rankings like 'best jeweller in Ahmedabad', we offer premium SEO packages." },
     { q: "Do you work with businesses outside Ahmedabad?", a: "Yes! We serve clients across Gujarat including Surat, Vadodara, Rajkot, and Gandhinagar. We also work with businesses pan-India and internationally." }
   ];

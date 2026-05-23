@@ -534,7 +534,7 @@ const PRICING_TIERS = [
     description:
       'E-commerce stores, Next.js web applications, large marketing sites, and complex builds with third-party API integrations.',
     features: [
-      'Unlimited pages — scoped per project',
+      'Pages & scope defined per project',
       'Shopify, Next.js Commerce, or custom e-commerce',
       'Third-party API integrations (Stripe, Twilio, HubSpot, etc.)',
       'Custom animations and interactive UI components',

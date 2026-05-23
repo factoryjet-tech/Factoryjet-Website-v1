@@ -490,7 +490,7 @@ const PRICING_TIERS = [
     description:
       'Complex business logic automation with compliance-aware design, financial or healthcare system integrations, and multi-department workflow coverage. Ideal for Charlotte financial services, healthcare, and logistics companies.',
     features: [
-      'Unlimited workflow development within agreed scope',
+      'Workflow development fully scoped per project brief',
       'Financial and healthcare system integrations (EHR, ERP, core banking)',
       'Compliance-aware design (HIPAA, SOC 2, banking audit requirements)',
       'Custom AI decision logic for complex document types',

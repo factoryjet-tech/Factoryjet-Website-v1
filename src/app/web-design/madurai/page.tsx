@@ -324,7 +324,7 @@ export default function Page() {
       priceRange: '₹1,00,000+',
       description: 'For hospitals, colleges, or manufacturers needing custom portals or multi-location websites.',
       features: [
-        'Unlimited pages',
+        'Pages scoped per project',
         'Custom web application',
         'Multi-location or multi-department',
         'Tamil + English bilingual',

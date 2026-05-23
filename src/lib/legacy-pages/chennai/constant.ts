@@ -100,7 +100,7 @@ export const SERVICES: (ServiceItem & { icon: any; colSpan?: number })[] = [
     description:
       "Perfect for: Large enterprises, corporations. Enterprise-grade website with advanced functionality for established Chennai corporations.",
     features: [
-      "Unlimited custom pages",
+      "Pages scoped per project",
       "Multi-language support",
       "Advanced UI/UX design",
       "Investor relations section",
@@ -443,7 +443,7 @@ export const PRICING_TABS = {
       isPopular: false,
       sections: {
         ARCH: [
-          "Unlimited Products",
+          "Products scoped per project",
           "Bundled/Digital",
           "Distraction-Free Checkout",
           "Social Login",
@@ -577,7 +577,7 @@ export const FAQS: FAQItem[] = [
   {
     question: "Do you offer website maintenance services?",
     answer:
-      "Yes, our Annual Maintenance Contracts (AMC) ensure your website stays updated and secure: Basic (₹2,999/month): Hosting, security, backups, 2-hour support. Standard (₹5,999/month): + Content updates, monitoring. Premium (₹9,999/month): + SEO maintenance, priority support. Enterprise (₹14,999/month): + Dedicated manager, unlimited updates.",
+      "Yes, our Annual Maintenance Contracts (AMC) ensure your website stays updated and secure: Basic (₹2,999/month): Hosting, security, backups, 2-hour support. Standard (₹5,999/month): + Content updates, monitoring. Premium (₹9,999/month): + SEO maintenance, priority support. Enterprise (₹14,999/month): + Dedicated manager, updates as per agreed SLA.",
   },
   {
     question: "Can I visit your Chennai office?",

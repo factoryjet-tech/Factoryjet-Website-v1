@@ -381,6 +381,16 @@ export default function SiteHeader({
                                 desc={IN_WEB_SERVICES[2].desc}
                               />
                             </div>
+                            <div className="my-2.5 border-t border-fj-neutral-100" />
+                            <p className="mb-1.5 px-2.5 font-fj-mono text-[9.5px] font-semibold uppercase tracking-[0.12em] text-fj-neutral-300">
+                              Messaging
+                            </p>
+                            <ServiceCard
+                              icon={IN_WEB_SERVICES[3].icon}
+                              label={IN_WEB_SERVICES[3].label}
+                              href={IN_WEB_SERVICES[3].href}
+                              desc={IN_WEB_SERVICES[3].desc}
+                            />
                           </div>
 
                           {/* AI Agent Development Hub column */}

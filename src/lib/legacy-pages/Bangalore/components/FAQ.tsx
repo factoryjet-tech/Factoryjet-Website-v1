@@ -41,7 +41,7 @@ const FAQ: React.FC = () => {
     },
     {
       question: "What if I'm not satisfied with the design?",
-      answer: 'Unlimited revisions until you love it. We don\'t launch until you\'re 100% happy. Plus, we show you mockups before building anything.',
+      answer: 'Revisions within the agreed scope until you love it. We don\'t launch until you\'re 100% happy. Plus, we show you mockups before building anything.',
     },
     {
       question: 'How do I get started?',

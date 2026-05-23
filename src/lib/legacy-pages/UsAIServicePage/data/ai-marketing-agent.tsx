@@ -124,7 +124,7 @@ export const aiMarketingAgentData: AIServicePageData = {
       description: 'For complex marketing stacks.',
       features: [
         'Full-stack marketing AI',
-        'Unlimited content generation',
+        'Content generation scoped per project brief',
         'Advanced ad optimization',
         'Custom attribution modeling',
         'ABM campaign support',

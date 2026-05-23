@@ -255,7 +255,7 @@ export const AMC_PACKAGES = [
         features: [
             { category: 'PROTECTION', items: ['Real-Time Monitor', 'Pen Testing', 'Hourly Backups', '1-Year Retention', 'Load Testing'] },
             { category: 'STRATEGY', items: ['Advanced Analytics', 'CRO', 'Heatmaps', 'Monthly Strategy'] },
-            { category: 'SUPPORT', items: ['Unlimited Updates', '5 New Pages/mo', '5 Hrs Dev Time', '1h Response', 'Dedicated Manager'] }
+            { category: 'SUPPORT', items: ['Updates as per SLA', '5 New Pages/mo', '5 Hrs Dev Time', '1h Response', 'Dedicated Manager'] }
         ]
     }
 ];

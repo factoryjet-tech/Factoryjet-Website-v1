@@ -102,7 +102,7 @@ export const aiSchedulingAgentData: AIServicePageData = {
       description: 'For multi-location operations.',
       features: [
         'Multi-location support',
-        'Unlimited providers',
+        'Providers scoped per project brief',
         'Custom booking workflows',
         'EHR / PMS integration',
         'HIPAA-compliant architecture',
