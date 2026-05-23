@@ -73,6 +73,7 @@ const IN_WEB_SERVICES = [
   { icon: Globe,        label: 'Web Design',          href: '/services/web-design',            desc: 'Custom, conversion-focused sites' },
   { icon: ShoppingCart, label: 'E-Commerce',           href: '/services/ecommerce-development', desc: 'End-to-end online stores' },
   { icon: ShoppingBag,  label: 'Shopify Development',  href: '/services/shopify-development',   desc: 'Custom storefronts & themes' },
+  { icon: MessageSquare, label: 'WhatsApp Chatbot',   href: '/whatsapp-chatbot/',              desc: 'Automate orders, leads & support' },
 ] as const;
 
 // Hub page href used in both desktop mega and mobile drawer
@@ -98,6 +99,7 @@ const IN_LOCATIONS = [
   { label: 'Pune',      state: 'MH', href: '/services/web-design/pune' },
   { label: 'Ahmedabad', state: 'GJ', href: '/services/web-design/ahmedabad' },
   { label: 'Surat',     state: 'GJ', href: '/services/web-design/surat' },
+  { label: 'Indore',    state: 'MP', href: '/web-design/indore' },
 ] as const;
 
 // ─── UAE nav data ─────────────────────────────────────────────────────────────

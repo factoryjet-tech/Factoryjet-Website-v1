@@ -50,6 +50,7 @@ const IN_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'Web Design',           href: '/services/web-design' },
       { label: 'E-Commerce',           href: '/services/ecommerce-development' },
       { label: 'Shopify Development',  href: '/services/shopify-development' },
+      { label: 'WhatsApp Chatbot',     href: '/whatsapp-chatbot/' },
       { label: 'AI Agent Development', href: '/services/ai-agent-development' },
     ],
   },
@@ -73,6 +74,7 @@ const IN_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'Hyderabad', href: '/services/web-design/hyderabad' },
       { label: 'Pune',      href: '/services/web-design/pune' },
       { label: 'Ahmedabad', href: '/services/web-design/ahmedabad' },
+      { label: 'Indore',    href: '/web-design/indore' },
     ],
   },
 ];
