@@ -16,6 +16,7 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid'
 import TestimonialsSection from '@/components/v2/TestimonialsSection'
 import FAQ from '@/components/v2/FAQ'
 import FinalCTA from '@/components/v2/FinalCTA'
+import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS'
 import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
 
 export const metadata: Metadata = {
@@ -494,6 +495,7 @@ export default function Page() {
         />
 
         {/* FINAL CTA */}
+        <EcommerceCityLinksUS currentCity="lincoln" />
         <FinalCTA
           variant="dark"
           eyebrow="READY TO START"

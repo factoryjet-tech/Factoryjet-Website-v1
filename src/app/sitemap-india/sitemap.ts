@@ -27,6 +27,7 @@ type ChangeFreq = MetadataRoute.Sitemap[number]['changeFrequency']
 const INDIA_WEB_DESIGN_CITIES = [
   'ahmedabad',
   'bangalore',
+  'bhubaneswar',
   'chennai',
   'coimbatore',
   'delhi',
@@ -46,6 +47,23 @@ const INDIA_WEB_DESIGN_CITIES = [
   'thiruvananthapuram',
   'vadodara',
   'visakhapatnam',
+] as const
+
+// ── India ecommerce city pages (canonical: /services/ecommerce-development/[city]) ──
+const INDIA_ECOMMERCE_CITIES = [
+  'ahmedabad',
+  'bangalore',
+  'chandigarh',
+  'chennai',
+  'delhi',
+  'hyderabad',
+  'jaipur',
+  'kochi',
+  'kolkata',
+  'lucknow',
+  'mumbai',
+  'pune',
+  'surat',
 ] as const
 
 // ── India AI agent sub-pages ──────────────────────────────────────────────────
@@ -117,6 +135,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
+  // ── India ecommerce city pages ───────────────────────────────────────────────
+  const ecommerceCities: MetadataRoute.Sitemap = INDIA_ECOMMERCE_CITIES.map((city) => ({
+    url: `${SITE_URL}/services/ecommerce-development/${city}`,
+    lastModified: getFileLastMod(`src/app/services/ecommerce-development/${city}/page.tsx`),
+    changeFrequency: CHANGEFREQ.city as ChangeFreq,
+    priority: PRIORITY.city,
+  }))
+
   // ── AI agent sub-pages ───────────────────────────────────────────────────────
   const aiSubPages: MetadataRoute.Sitemap = AI_SUB_PAGES.map((slug) => ({
     url: `${SITE_URL}/services/ai-agent-development/${slug}`,
@@ -132,6 +158,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     webDesignHub,
     ...webDesignCities,
     ...serviceHubs,
+    ...ecommerceCities,
     ...aiSubPages,
   ]
 }

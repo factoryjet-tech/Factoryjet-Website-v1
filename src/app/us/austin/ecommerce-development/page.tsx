@@ -20,6 +20,7 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid'
 import TestimonialsSection from '@/components/v2/TestimonialsSection'
 import FAQ from '@/components/v2/FAQ'
 import FinalCTA from '@/components/v2/FinalCTA'
+import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS'
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup'
 import Link from 'next/link'
 import SiteHeader from '@/components/v2/SiteHeader'
@@ -626,6 +627,7 @@ export default function AustinEcommerceDevelopmentPage() {
         </section>
 
         {/* ── 14. FINAL CTA ─────────────────────────────────────────────── */}
+        <EcommerceCityLinksUS currentCity="austin" />
         <FinalCTA
           variant="light"
           eyebrow="READY TO GET STARTED"
