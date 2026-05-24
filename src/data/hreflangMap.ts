@@ -172,6 +172,34 @@ export const webDesignCityAlternatesIN = {
     'en-IN': 'https://factoryjet.com/web-design/indore',
     'x-default': 'https://factoryjet.com/web-design/indore',
   },
+  visakhapatnam: {
+    'en-IN': 'https://factoryjet.com/web-design/visakhapatnam',
+    'x-default': 'https://factoryjet.com/web-design/visakhapatnam',
+  },
+  coimbatore: {
+    'en-IN': 'https://factoryjet.com/web-design/coimbatore',
+    'x-default': 'https://factoryjet.com/web-design/coimbatore',
+  },
+  jaipur: {
+    'en-IN': 'https://factoryjet.com/web-design/jaipur',
+    'x-default': 'https://factoryjet.com/web-design/jaipur',
+  },
+  kochi: {
+    'en-IN': 'https://factoryjet.com/web-design/kochi',
+    'x-default': 'https://factoryjet.com/web-design/kochi',
+  },
+  kolkata: {
+    'en-IN': 'https://factoryjet.com/web-design/kolkata',
+    'x-default': 'https://factoryjet.com/web-design/kolkata',
+  },
+  noida: {
+    'en-IN': 'https://factoryjet.com/web-design/noida',
+    'x-default': 'https://factoryjet.com/web-design/noida',
+  },
+  gurgaon: {
+    'en-IN': 'https://factoryjet.com/web-design/gurgaon',
+    'x-default': 'https://factoryjet.com/web-design/gurgaon',
+  },
 } as const
 
 // ---------------------------------------------------------------------------

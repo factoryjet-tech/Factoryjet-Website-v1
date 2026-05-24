@@ -13,8 +13,12 @@ const nextConfig = {
   ...(process.env.NODE_ENV === 'production' && { output: 'export' }),
 
   // Image optimization settings
+  // NOTE: unoptimized flag removed — static export (output:'export') does not support
+  // Next.js server-side image optimization, but the flag was also killing WebP conversion
+  // and format negotiation in edge/preview environments. Cloudflare Pages handles
+  // image compression at the CDN layer; local images should be pre-optimized WebP.
   images: {
-    unoptimized: process.env.NODE_ENV === 'production',
+    unoptimized: false,
     remotePatterns: [
       {
         protocol: 'https',

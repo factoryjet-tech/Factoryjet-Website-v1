@@ -28,12 +28,20 @@ const INDIA_WEB_DESIGN_CITIES = [
   'ahmedabad',
   'bangalore',
   'chennai',
+  'coimbatore',
   'delhi',
+  'gurgaon',
   'hyderabad',
+  'indore',
+  'jaipur',
+  'kochi',
+  'kolkata',
   'madurai',
   'mumbai',
+  'noida',
   'pune',
   'surat',
+  'visakhapatnam',
 ] as const
 
 // ── India AI agent sub-pages ──────────────────────────────────────────────────
@@ -74,8 +82,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: PRIORITY.service,
     },
     {
-      url: `${SITE_URL}/services/shopify-development`,
+      url: `${SITE_URL}/shopify-development`,
       lastModified: getFileLastMod('src/app/services/shopify-development/page.tsx'),
+      changeFrequency: CHANGEFREQ.service as ChangeFreq,
+      priority: PRIORITY.service,
+    },
+    {
+      url: `${SITE_URL}/wordpress-development`,
+      lastModified: getFileLastMod('src/app/wordpress-development/page.tsx'),
+      changeFrequency: CHANGEFREQ.service as ChangeFreq,
+      priority: PRIORITY.service,
+    },
+    {
+      url: `${SITE_URL}/n8n-automation`,
+      lastModified: getFileLastMod('src/app/n8n-automation/page.tsx'),
+      changeFrequency: CHANGEFREQ.service as ChangeFreq,
+      priority: PRIORITY.service,
+    },
+    {
+      url: `${SITE_URL}/whatsapp-chatbot`,
+      lastModified: getFileLastMod('src/app/whatsapp-chatbot/page.tsx'),
       changeFrequency: CHANGEFREQ.service as ChangeFreq,
       priority: PRIORITY.service,
     },

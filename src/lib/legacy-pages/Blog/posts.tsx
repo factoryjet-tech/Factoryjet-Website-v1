@@ -1450,6 +1450,10 @@ export const POSTS: BlogPost[] = [
   date: 'Oct 05, 2024',
   readTime: '7 min read',
   imageUrl: 'https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&q=80&w=2000',
+  meta: {
+    title: "Quick Commerce App Design: UI Patterns Winning India's 10-Minute Delivery Race (2026)",
+    description: "UI patterns, speed benchmarks, and design principles that convert in India's hypercompetitive quick commerce market. Blinkit, Zepto, Swiggy Instamart analysis.",
+  },
   keyTakeaways: [
     "Simple and focused interfaces help users act quickly without thinking.",
     "Reorder and repeat purchase flows drive daily usage and retention.",
@@ -1796,6 +1800,10 @@ export const POSTS: BlogPost[] = [
   date: 'Oct 01, 2024',
   readTime: '11 min read',
   imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2000',
+  meta: {
+    title: "How WordPress Sites Get Hacked — And How to Stop It Before It Happens",
+    description: "The exact vulnerabilities hackers exploit in WordPress sites — outdated plugins, weak credentials, shared hosting — and the fixes that prevent 90% of successful attacks.",
+  },
   keyTakeaways: [
     "Outdated plugins and themes are the most common attack vectors.",
     "Weak credentials still account for a large percentage of breaches.",
@@ -2152,6 +2160,10 @@ export const POSTS: BlogPost[] = [
   date: 'Sep 25, 2024',
   readTime: '9 min read',
   imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2000',
+  meta: {
+    title: "Core Web Vitals 2026: The Only Metrics That Actually Affect Your Google Rankings",
+    description: "LCP, CLS, INP explained in plain English — plus the actionable fixes that actually move your Core Web Vitals score and improve your search rankings.",
+  },
   keyTakeaways: [
     "Largest Contentful Paint defines how fast your main content becomes visible.",
     "Interaction to Next Paint measures real world responsiveness, not just first clicks.",
@@ -2360,6 +2372,10 @@ export const POSTS: BlogPost[] = [
   date: 'Sep 22, 2024',
   readTime: '7 min read',
   imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=2000',
+  meta: {
+    title: "Website Downtime Cost Calculator: What Every Hour Offline Costs Your Business",
+    description: "Calculate your real downtime cost per hour — lost revenue, customer trust damage, SEO impact — and see what a proper maintenance contract actually saves you annually.",
+  },
   keyTakeaways: [
     "Downtime cost should be calculated per hour, not per incident.",
     "Lost revenue is only one part of downtime damage.",
@@ -2541,6 +2557,10 @@ export const POSTS: BlogPost[] = [
   date: 'Sep 20, 2024',
   readTime: '8 min read',
   imageUrl: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=2000',
+  meta: {
+    title: "WordPress Running Slow? How Plugin Bloat Kills Your Site Speed (And How to Fix It)",
+    description: "The audit process to identify bloated plugins, deactivate safely, and cut your WordPress load time in half — without breaking your site.",
+  },
   keyTakeaways: [
     "Every plugin adds execution cost, even if it seems small.",
     "Inactive plugins can still create security and maintenance risks.",
@@ -2794,6 +2814,10 @@ export const POSTS: BlogPost[] = [
   date: 'Sep 18, 2024',
   readTime: '10 min read',
   imageUrl: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=2000',
+  meta: {
+    title: "AI Search Optimization (AIO): How to Rank on ChatGPT, Perplexity & Google AI in 2026",
+    description: "How to structure your content so ChatGPT, Perplexity, and Google AI Overviews cite your brand in generated answers — with practical schema and content strategies.",
+  },
   keyTakeaways: [
     "Modern optimization focuses on answers instead of just rankings.",
     "Structured and clear content helps AI systems understand your business.",
@@ -3384,6 +3408,10 @@ export const POSTS: BlogPost[] = [
   date: 'Sep 10, 2024',
   readTime: '7 min read',
   imageUrl: 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=2000',
+  meta: {
+    title: "Color Psychology in Indian E-Commerce: Which Colors Drive More Conversions",
+    description: "Research-backed color psychology for Indian e-commerce — what converts in fashion, FMCG, jewellery, and food. Includes Flipkart, Meesho, and Nykaa analysis.",
+  },
   keyTakeaways: [
     "Color perception in India is shaped by culture, religion, and daily context.",
     "Red can signal celebration or urgency depending on usage.",
@@ -3648,6 +3676,10 @@ export const POSTS: BlogPost[] = [
   date: 'Sep 08, 2024',
   readTime: '9 min read',
   imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=2000',
+  meta: {
+    title: "Why Startups Should Start With Low-Code (And When to Go Custom)",
+    description: "When Bubble, Webflow, or Shopify beats custom code — and the 3 clear signals that tell you it's time to go full custom. With real startup examples.",
+  },
   keyTakeaways: [
     "Speed to market matters more than technical elegance at the MVP stage.",
     "Low code platforms allow founders to iterate daily based on user feedback.",

@@ -52,11 +52,11 @@ export const metadata: Metadata = {
     images: ['https://factoryjet.com/images/services/card-shopify.webp'],
   },
   alternates: {
-    canonical: 'https://factoryjet.com/services/shopify-development',
+    canonical: 'https://factoryjet.com/shopify-development',
     languages: {
-      'en-in': 'https://factoryjet.com/services/shopify-development',
+      'en-in': 'https://factoryjet.com/shopify-development',
       'en-us': 'https://factoryjet.com/us/services/shopify-development',
-      'x-default': 'https://factoryjet.com/services/shopify-development',
+      'x-default': 'https://factoryjet.com/shopify-development',
     },
   },
   robots: {

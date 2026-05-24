@@ -82,6 +82,13 @@
 # Bare /ecommerce-development → canonical India ecommerce hub
 /ecommerce-development    /services/ecommerce-development    301
 
+# ── SHOPIFY INDIA URL MIGRATION (2026-05-24) ─────────────────────────────────
+# /services/shopify-development → /shopify-development (drop /services/ prefix)
+/services/shopify-development    /shopify-development/    301
+
+# ── NEW INDIA SERVICE PAGES (2026-05-24) ─────────────────────────────────────
+# WordPress Development and n8n Automation pages at clean root-level URLs
+
 # ── US ECOMMERCE CITY URL MIGRATION (2026-05-19) ─────────────────────────────
 # Old service-first /us/services/ecommerce-development/{city}/
 # → New city-first /us/{city}/ecommerce-development/
