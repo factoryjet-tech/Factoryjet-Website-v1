@@ -70,9 +70,9 @@ const US_LOCATIONS = [
 // ─── India nav data ───────────────────────────────────────────────────────────
 
 const IN_WEB_SERVICES = [
-  { icon: Globe,        label: 'Web Design',          href: '/services/web-design',            desc: 'Custom, conversion-focused sites' },
+  { icon: Globe,        label: 'Web Design',          href: '/web-design',                     desc: 'Custom, conversion-focused sites' },
   { icon: ShoppingCart, label: 'E-Commerce',           href: '/services/ecommerce-development', desc: 'End-to-end online stores' },
-  { icon: ShoppingBag,  label: 'Shopify Development',  href: '/services/shopify-development',   desc: 'Custom storefronts & themes' },
+  { icon: ShoppingBag,  label: 'Shopify Development',  href: '/shopify-development',            desc: 'Custom storefronts & themes' },
   { icon: MessageSquare, label: 'WhatsApp Chatbot',   href: '/whatsapp-chatbot/',              desc: 'Automate orders, leads & support' },
 ] as const;
 
@@ -91,15 +91,18 @@ const IN_AI_AGENTS = [
 ] as const;
 
 const IN_LOCATIONS = [
-  { label: 'Mumbai',    state: 'MH', href: '/services/web-design/mumbai' },
-  { label: 'Delhi',     state: 'DL', href: '/services/web-design/delhi' },
-  { label: 'Bangalore', state: 'KA', href: '/services/web-design/bangalore' },
-  { label: 'Chennai',   state: 'TN', href: '/services/web-design/chennai' },
-  { label: 'Hyderabad', state: 'TS', href: '/services/web-design/hyderabad' },
-  { label: 'Pune',      state: 'MH', href: '/services/web-design/pune' },
-  { label: 'Ahmedabad', state: 'GJ', href: '/services/web-design/ahmedabad' },
-  { label: 'Surat',     state: 'GJ', href: '/services/web-design/surat' },
-  { label: 'Indore',    state: 'MP', href: '/web-design/indore' },
+  { label: 'Mumbai',         state: 'MH', href: '/web-design/mumbai' },
+  { label: 'Delhi',          state: 'DL', href: '/web-design/delhi' },
+  { label: 'Bangalore',      state: 'KA', href: '/web-design/bangalore' },
+  { label: 'Chennai',        state: 'TN', href: '/web-design/chennai' },
+  { label: 'Hyderabad',      state: 'TS', href: '/web-design/hyderabad' },
+  { label: 'Pune',           state: 'MH', href: '/web-design/pune' },
+  { label: 'Ahmedabad',      state: 'GJ', href: '/web-design/ahmedabad' },
+  { label: 'Surat',          state: 'GJ', href: '/web-design/surat' },
+  { label: 'Indore',         state: 'MP', href: '/web-design/indore' },
+  { label: 'Kolkata',        state: 'WB', href: '/web-design/kolkata' },
+  { label: 'Jaipur',         state: 'RJ', href: '/web-design/jaipur' },
+  { label: 'Kochi',          state: 'KL', href: '/web-design/kochi' },
 ] as const;
 
 // ─── UAE nav data ─────────────────────────────────────────────────────────────

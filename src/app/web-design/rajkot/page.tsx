@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
-import { webDesignCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
 import LogoBar from '@/components/v2/LogoBar';
@@ -25,52 +24,55 @@ import SiteFooter from '@/components/v2/SiteFooter';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Coimbatore | From ₹29,999 | FactoryJet',
+  title: 'Web Design Company in Rajkot | From ₹29,999 | FactoryJet',
   description:
-    'Web design company in Coimbatore for textile manufacturers, pump & engineering firms, and IT businesses. From ₹29,999. 7-day delivery. Serving Avinashi Road, Peelamedu & RS Puram.',
+    'Web design company in Rajkot for auto component exporters, engineering manufacturers & MSME businesses. Fast websites from ₹29,999. 7-day delivery. Serving GIDC Metoda, Shapar-Veraval & Aji.',
   keywords: [
-    'web design company in Coimbatore',
-    'website design Coimbatore',
-    'web development company Coimbatore',
-    'website design company Coimbatore',
-    'affordable web design Coimbatore',
-    'professional website design Coimbatore',
-    'web design Avinashi Road',
-    'web design Peelamedu',
-    'textile website design Coimbatore',
-    'engineering company website Coimbatore',
-    'Next.js web development Coimbatore',
-    'web design agency Coimbatore',
-    'pump industry website Coimbatore',
-    'IT company website design Coimbatore',
+    'web design company in Rajkot',
+    'website design Rajkot',
+    'web development Rajkot',
+    'Rajkot website designer',
+    'ecommerce website Rajkot',
+    'affordable web design Rajkot',
+    'web design for auto parts companies Rajkot',
+    'MSME website design Rajkot',
+    'engineering company website Rajkot',
+    'GIDC Metoda business website',
+    'Shapar Veraval industrial website',
+    'web design agency Rajkot',
+    'casting foundry website Rajkot',
+    'pump valve manufacturer website Rajkot',
   ],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Coimbatore | From ₹29,999 | FactoryJet',
+    title: 'Web Design Company in Rajkot | From ₹29,999 | FactoryJet',
     description:
-      'Professional website design company in Coimbatore — Next.js, SEO, and GA4 included. 7-day delivery. From ₹29,999. Serving Avinashi Road, Peelamedu, RS Puram, Gandhipuram.',
-    url: 'https://factoryjet.com/web-design/coimbatore',
+      "Professional website design company in Rajkot — Next.js, SEO, and GA4 included. 7-day delivery. From ₹29,999. Serving GIDC Metoda, Shapar-Veraval, Aji, and Rajkot's auto component & engineering clusters.",
+    url: 'https://factoryjet.com/web-design/rajkot',
     images: [
       {
         url: 'https://factoryjet.com/images/services/web-design.webp',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet Web Design Services in Coimbatore',
+        alt: 'FactoryJet Web Design Services in Rajkot',
       },
     ],
     locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web Design Company in Coimbatore | FactoryJet',
+    title: 'Web Design Company in Rajkot | FactoryJet',
     description:
-      'Website design company in Coimbatore. From ₹29,999. 7-day delivery. Next.js, SEO, GA4 included.',
+      "Website design company in Rajkot for auto component exporters & engineering MSMEs. From ₹29,999. 7-day delivery.",
     images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {
-    canonical: 'https://factoryjet.com/web-design/coimbatore',
-    languages: webDesignCityAlternatesIN['coimbatore'],
+    canonical: 'https://factoryjet.com/web-design/rajkot',
+    languages: {
+      'en-IN': 'https://factoryjet.com/web-design/rajkot',
+      'x-default': 'https://factoryjet.com/web-design/rajkot',
+    },
   },
   robots: {
     index: true,
@@ -95,20 +97,20 @@ const localBusinessSchema = {
   '@id': 'https://factoryjet.com/#organization',
   name: 'FactoryJet',
   description:
-    'Web design company in Coimbatore building fast, SEO-optimized websites for textile manufacturers, pump & engineering firms, IT companies, and growing businesses. From ₹29,999. 7-day delivery guarantee.',
-  url: 'https://factoryjet.com/web-design/coimbatore',
+    'Web design company in Rajkot building fast, SEO-optimized websites for auto component exporters, engineering manufacturers, foundry and casting units, pump and valve companies, and MSME businesses. From ₹29,999. 7-day delivery guarantee.',
+  url: 'https://factoryjet.com/web-design/rajkot',
   telephone: '+919699977699',
   email: 'connect@factoryjet.com',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Coimbatore',
-    addressRegion: 'Tamil Nadu',
+    addressLocality: 'Rajkot',
+    addressRegion: 'Gujarat',
     addressCountry: 'IN',
   },
   areaServed: [
-    { '@type': 'City', name: 'Coimbatore' },
-    { '@type': 'City', name: 'Tirupur' },
-    { '@type': 'City', name: 'Erode' },
+    { '@type': 'City', name: 'Rajkot' },
+    { '@type': 'City', name: 'Gondal' },
+    { '@type': 'City', name: 'Morbi' },
   ],
   serviceType: 'Web Design and Development',
   priceRange: '₹₹',
@@ -121,7 +123,7 @@ const localBusinessSchema = {
   },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Web Design Services Coimbatore',
+    name: 'Web Design Services Rajkot',
     itemListElement: [
       {
         '@type': 'Offer',
@@ -142,7 +144,7 @@ const localBusinessSchema = {
         name: 'Custom Website',
         price: '150000',
         priceCurrency: 'INR',
-        description: 'Custom Next.js build with e-commerce, booking systems, or AI integrations.',
+        description: 'Custom Next.js build with product catalogs, export portals, or API integrations for Rajkot manufacturers.',
       },
     ],
   },
@@ -154,15 +156,15 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'How much does a website cost for a business in Coimbatore?',
+      name: 'How much does a website cost for a business in Rajkot?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet's web design for Coimbatore businesses starts at ₹29,999 for a 5-page Starter site. The Growth tier (₹80,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds start at ₹1,50,000. Coimbatore agency rates for comparable scope typically run ₹80,000–₹2,50,000.",
+        text: "FactoryJet's web design for Rajkot businesses starts at ₹29,999 for a 5-page Starter site. The Growth tier (₹80,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds start at ₹1,50,000. Rajkot agency rates for comparable scope typically run ₹80,000–₹2,50,000.",
       },
     },
     {
       '@type': 'Question',
-      name: 'How long does it take to build a website in Coimbatore?',
+      name: 'How long does it take to build a website in Rajkot?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'A standard FactoryJet build delivers in 7 days from kickoff to launch. Discovery and design take the first two days, development runs through days five and six, and content, SEO, and launch happen on day seven.',
@@ -170,15 +172,15 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Do you build websites for textile manufacturers and pump companies in Coimbatore?',
+      name: 'Do you build websites for auto component exporters in Rajkot?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Yes — textile manufacturers, pump and engineering firms, and MSME exporters are a core client profile for us in Coimbatore. We build websites optimised for international B2B buyer research: export credentials display, product catalog with inquiry forms, ISO/BIS certification pages, and technical SEO targeting English-language searches from buyers in the US, EU, and Middle East.",
+        text: "Yes — auto component exporters, engineering manufacturers, foundry and casting units, pump and valve companies, and MSME businesses are a core client profile for us in Rajkot. We build websites optimised for international B2B buyer research: export credentials display, product catalog with inquiry forms, quality certifications, and technical SEO targeting English-language searches from buyers in the USA, Germany, Japan, and UAE.",
       },
     },
     {
       '@type': 'Question',
-      name: 'Will my Coimbatore business website rank on Google?',
+      name: 'Will my Rajkot business website rank on Google?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Technical SEO is built in: JSON-LD schema markup, optimised title and meta tags, Core Web Vitals green on mobile, internal linking, XML sitemap submitted to Google Search Console, and WebP images. Branded searches rank within 1–2 weeks. Service + location queries take 3–6 months for a new domain.',
@@ -199,30 +201,30 @@ const faqSchema = {
    Section data
 ───────────────────────────────────────────────────────────────────────────── */
 
-const CBE_JOURNEY_STAGES: ServiceJourneyStage[] = [
+const RJT_JOURNEY_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
     title: 'Discovery & Strategy',
     description:
-      "We map your ideal customer profile against Coimbatore's market — whether that's an international buyer sourcing pumps or textiles, an IT services company targeting enterprise clients, a healthcare provider reaching local patients, or a D2C brand selling across India. We audit your top competitors and agree the sitemap and content plan. — Days 1–2",
+      "We map your ideal customer profile against Rajkot's market — whether that's a German or Japanese OEM buyer sourcing auto components from GIDC Metoda, a domestic B2B buyer procuring pumps and valves, or a jeweller in Rajkot's gold market targeting retail consumers. We audit your top competitors and agree the sitemap and content plan. — Days 1–2",
   },
   {
     number: '02',
     title: 'Design & Prototyping',
     description:
-      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts. — Days 3–4',
+      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, RFQ form, product inquiry field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts. — Days 3–4',
   },
   {
     number: '03',
     title: 'Development',
     description:
-      'Built in Next.js deployed to Cloudflare CDN — sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, product catalog systems, and any third-party APIs your business uses. Performance budgets enforced from the first commit. — Days 5–6',
+      "Built in Next.js deployed to Cloudflare CDN — sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, product catalog systems, export inquiry portals, and any third-party APIs your engineering or manufacturing business uses. Performance budgets enforced from the first commit. — Days 5–6",
   },
   {
     number: '04',
     title: 'Content & SEO',
     description:
-      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Coimbatore-specific local SEO targeting built in. — Day 6–7',
+      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Rajkot-specific local SEO and export-market keyword targeting built in. — Day 6–7',
   },
   {
     number: '05',
@@ -232,22 +234,22 @@ const CBE_JOURNEY_STAGES: ServiceJourneyStage[] = [
   },
 ];
 
-const CBE_FAQ_CATEGORIES = [
+const RJT_FAQ_CATEGORIES = [
   { key: 'pricing',   label: 'Pricing & Timeline' },
   { key: 'included',  label: "What's Included" },
   { key: 'technical', label: 'Technical & SEO' },
-  { key: 'local',     label: 'Coimbatore Local' },
+  { key: 'local',     label: 'Rajkot Local' },
   { key: 'support',   label: 'Support & Ownership' },
 ];
 
-const CBE_FAQ_ITEMS = [
+const RJT_FAQ_ITEMS = [
 
   /* ── Pricing & Timeline ── */
   {
     category: 'pricing',
-    question: 'How much does a website cost for a business in Coimbatore?',
+    question: 'How much does a website cost for a business in Rajkot?',
     answer:
-      "FactoryJet's web design for Coimbatore businesses starts at ₹29,999 for a 5-page Starter site. The Growth tier (₹80,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds start at ₹1,50,000. Coimbatore agency rates for comparable scope typically run ₹80,000–₹2,50,000.",
+      "FactoryJet's web design for Rajkot businesses starts at ₹29,999 for a 5-page Starter site. The Growth tier (₹80,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds start at ₹1,50,000. Rajkot agency rates for comparable scope typically run ₹80,000–₹2,50,000.",
   },
   {
     category: 'pricing',
@@ -257,9 +259,9 @@ const CBE_FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet cheaper than Coimbatore web agencies?',
+    question: 'Why is FactoryJet cheaper than Rajkot web agencies?',
     answer:
-      "We are a specialised web engineering team — not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. You pay for the build, not our admin structure.",
+      "We are a specialised web engineering team — not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost than comparable Rajkot agencies. You pay for the build, not our admin structure.",
   },
   {
     category: 'pricing',
@@ -279,7 +281,7 @@ const CBE_FAQ_ITEMS = [
     category: 'included',
     question: 'Do you write the content for my website?',
     answer:
-      'Basic copywriting for headings, hero text, and service descriptions is included. Full SEO content is available as an add-on. We send a content brief before development starts so you know exactly what to provide.',
+      'Basic copywriting for headings, hero text, and service descriptions is included. Full SEO content and export-facing product copy for auto components or engineering products is available as an add-on. We send a content brief before development starts so you know exactly what to provide.',
   },
   {
     category: 'included',
@@ -291,21 +293,21 @@ const CBE_FAQ_ITEMS = [
     category: 'included',
     question: 'Can I update the website myself after launch?',
     answer:
-      'Yes. Every Growth and Custom tier project includes a headless CMS integration (Sanity or Contentful) so your team can update content without touching code.',
+      'Yes. Every Growth and Custom tier project includes a headless CMS integration (Sanity or Contentful) so your team can update product listings, certifications, and content without touching code.',
   },
 
   /* ── Technical & SEO ── */
   {
     category: 'technical',
-    question: 'Will my website rank on Google India?',
+    question: 'Will my website rank on Google India and international search?',
     answer:
-      'Technical SEO is built into every project: JSON-LD schema markup, optimised title and meta templates, Core Web Vitals green on mobile, internal linking, XML sitemap submitted to Google Search Console, and WebP images. Branded searches typically rank within 1–2 weeks.',
+      'Technical SEO is built into every project: JSON-LD schema markup, optimised title and meta templates, Core Web Vitals green on mobile, internal linking, XML sitemap submitted to Google Search Console, and WebP images. Branded searches typically rank within 1–2 weeks. For auto component exporters, we target English-language searches from buyers in the US, Germany, and Japan.',
   },
   {
     category: 'technical',
     question: 'What tech stack do you build on?',
     answer:
-      "We build on Next.js deployed to Cloudflare's global CDN — sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Coimbatore businesses competing on Google's Core Web Vitals, that performance gap directly affects rankings.",
+      "We build on Next.js deployed to Cloudflare's global CDN — sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Rajkot engineering and manufacturing businesses competing on Google's Core Web Vitals, that performance gap directly affects rankings and international buyer impressions.",
   },
   {
     category: 'technical',
@@ -317,33 +319,33 @@ const CBE_FAQ_ITEMS = [
     category: 'technical',
     question: 'Do you set up Google Analytics and Search Console?',
     answer:
-      'Yes — GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, product enquiry clicks) are configured from day one. Search Console verified and sitemap submitted.',
+      'Yes — GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (RFQ form submissions, WhatsApp clicks, product enquiry clicks, catalog download clicks) are configured from day one. Search Console verified and sitemap submitted.',
   },
 
-  /* ── Coimbatore Local ── */
+  /* ── Rajkot Local ── */
   {
     category: 'local',
-    question: 'Do you build websites for textile manufacturers and pump companies in Coimbatore?',
+    question: 'Do you build websites for auto component exporters in Rajkot?',
     answer:
-      "Yes — textile manufacturers, pump and engineering firms, and MSME exporters are a core client profile for us in Coimbatore. Coimbatore is the world's largest pump manufacturing cluster and Tamil Nadu's textile capital. We build websites optimised for international B2B buyer research: export credentials, product catalog with inquiry forms, ISO/BIS certification pages, and technical SEO targeting English-language searches from buyers in the US, EU, and Middle East.",
+      "Yes — auto component exporters are a core client profile for us in Rajkot. The city is India's #1 cluster for auto parts including bearings, castings, and forgings — exporting to OEMs in the USA, Germany, and Japan. We build export-facing websites with product catalog systems, quality certification display (IATF, ISO), and B2B inquiry flows designed for international automotive procurement teams.",
   },
   {
     category: 'local',
-    question: 'Can you build websites for IT companies on Avinashi Road and Peelamedu?',
+    question: 'Can you build websites for engineering manufacturers in GIDC Metoda or Shapar-Veraval?',
     answer:
-      "Yes. Avinashi Road and Peelamedu are Coimbatore's IT corridor — home to software companies, IT parks, and tech services firms targeting enterprise clients in India and abroad. We build IT services websites with product-led architecture, case study portfolios, and lead flows designed for B2B software sales cycles.",
+      "Yes. GIDC Metoda and Shapar-Veraval are home to thousands of engineering MSMEs — machine tool manufacturers, die and mould makers, pump and valve companies, and precision casting units. We build B2B company profile sites with product range display, manufacturing capability pages, and inquiry forms designed for industrial procurement buyers.",
   },
   {
     category: 'local',
-    question: "Do you know Coimbatore's business districts well enough to write relevant copy?",
+    question: "Do you know Rajkot's industrial clusters well enough to write relevant copy?",
     answer:
-      "Yes. We research Coimbatore's business geography as part of discovery — from Avinashi Road's IT corridor and Peelamedu's tech parks near the airport, to RS Puram's premium retail and commercial strip, Gandhipuram's high-street commercial hub, SIPCOT's industrial estates, and the Tirupur textile corridor just 55km away. Local specificity in copy and LocalBusiness schema improves relevance for neighbourhood-level searches.",
+      "Yes. We research Rajkot's business geography as part of discovery — from GIDC Aji (the oldest industrial estate), GIDC Metoda (auto components), and GIDC Shapar-Veraval (one of Asia's largest industrial estates by area), to Rajkot's gold jewellery market and the city's trading community. Local specificity in copy and LocalBusiness schema improves relevance for industry-level and neighbourhood-level searches.",
   },
   {
     category: 'local',
-    question: 'How does FactoryJet compare to Coimbatore web agencies?',
+    question: 'How does FactoryJet compare to Rajkot web agencies?',
     answer:
-      "Coimbatore web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and deliver in 4–12 weeks. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at 60–70% less.",
+      "Rajkot web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and deliver in 6–16 weeks. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at 60–70% less.",
   },
 
   /* ── Support & Ownership ── */
@@ -367,45 +369,33 @@ const CBE_FAQ_ITEMS = [
   },
   {
     category: 'support',
-    question: 'Do you offer ongoing retainer services for Coimbatore businesses?',
+    question: 'Do you offer ongoing retainer services for Rajkot businesses?',
     answer:
-      'Yes. Monthly retainers from ₹4,999/month cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling and a dedicated engineer.',
-  },
-  {
-    category: 'support',
-    question: 'Can you help migrate my existing Coimbatore business website to Next.js?',
-    answer:
-      'Yes. We handle full migrations from WordPress, Wix, Squarespace, or custom-coded sites to Next.js on Cloudflare. The migration includes a technical SEO audit, 301 redirect mapping for all existing URLs, and performance optimisation so you do not lose any ranking equity in the transition.',
-  },
-  {
-    category: 'local',
-    question: 'Do you build e-commerce websites for Coimbatore businesses?',
-    answer:
-      "Yes. For Coimbatore businesses selling online — whether it's industrial pumps B2B or garments D2C — we build e-commerce on Shopify or Next.js with Razorpay and Shiprocket integrated. The Growth tier includes a basic product catalog; Custom tier covers full transactional e-commerce with inventory management.",
+      'Yes. Monthly retainers from ₹4,999/month cover ongoing development work, content updates, new product pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling and a dedicated engineer.',
   },
 ];
 
-const CBE_COMPARISON_COLUMNS = [
+const RJT_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
-  { label: 'Coimbatore Agency' },
+  { label: 'Rajkot Agency' },
   { label: 'Freelancer' },
   { label: 'Template (Wix/Squarespace)' },
 ] as const;
 
-const CBE_COMPARISON_ROWS = [
+const RJT_COMPARISON_ROWS = [
   {
     feature: 'Starting price',
-    values: ['₹29,999', '₹80,000–₹2,50,000', '₹10,000–₹60,000', '₹0–₹15,000 (you build it)'],
+    values: ['₹29,999', '₹80,000–₹2,50,000', '₹10,000–₹50,000', '₹0–₹15,000 (you build it)'],
   },
   {
     feature: 'Delivery timeline',
-    values: ['7 days', '4–12 weeks', '3–10 weeks (unreliable)', '1–2 weeks (you build it)'],
+    values: ['7 days', '6–16 weeks', '3–12 weeks (unreliable)', '1–2 weeks (you build it)'],
   },
   {
     feature: 'Custom Figma design',
     values: [
       <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="ca" kind="yes" />,
+      <CompareIcon key="ra" kind="yes" />,
       <CompareIcon key="fr" kind="partial" />,
       <CompareIcon key="tp" kind="no" />,
     ],
@@ -414,7 +404,7 @@ const CBE_COMPARISON_ROWS = [
     feature: 'Next.js (not WordPress)',
     values: [
       <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="ca" kind="partial" />,
+      <CompareIcon key="ra" kind="partial" />,
       <CompareIcon key="fr" kind="partial" />,
       <CompareIcon key="tp" kind="no" />,
     ],
@@ -423,7 +413,7 @@ const CBE_COMPARISON_ROWS = [
     feature: 'Technical SEO built in',
     values: [
       <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="ca" kind="partial" />,
+      <CompareIcon key="ra" kind="partial" />,
       <CompareIcon key="fr" kind="partial" />,
       <CompareIcon key="tp" kind="no" />,
     ],
@@ -432,7 +422,7 @@ const CBE_COMPARISON_ROWS = [
     feature: 'Lighthouse 90+ on mobile',
     values: [
       <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="ca" kind="partial" />,
+      <CompareIcon key="ra" kind="partial" />,
       <CompareIcon key="fr" kind="partial" />,
       <CompareIcon key="tp" kind="no" />,
     ],
@@ -441,7 +431,7 @@ const CBE_COMPARISON_ROWS = [
     feature: 'GA4 + GTM wired up',
     values: [
       <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="ca" kind="partial" />,
+      <CompareIcon key="ra" kind="partial" />,
       <CompareIcon key="fr" kind="no" />,
       <CompareIcon key="tp" kind="no" />,
     ],
@@ -450,7 +440,7 @@ const CBE_COMPARISON_ROWS = [
     feature: 'Published pricing (no surprises)',
     values: [
       <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="ca" kind="no" />,
+      <CompareIcon key="ra" kind="no" />,
       <CompareIcon key="fr" kind="partial" />,
       <CompareIcon key="tp" kind="yes" />,
     ],
@@ -459,7 +449,7 @@ const CBE_COMPARISON_ROWS = [
     feature: 'Full codebase to your GitHub',
     values: [
       <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="ca" kind="partial" />,
+      <CompareIcon key="ra" kind="partial" />,
       <CompareIcon key="fr" kind="yes" />,
       <CompareIcon key="tp" kind="no" />,
     ],
@@ -468,7 +458,7 @@ const CBE_COMPARISON_ROWS = [
     feature: '7-day delivery guarantee',
     values: [
       <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="ca" kind="no" />,
+      <CompareIcon key="ra" kind="no" />,
       <CompareIcon key="fr" kind="no" />,
       <CompareIcon key="tp" kind="no" />,
     ],
@@ -478,9 +468,9 @@ const CBE_COMPARISON_ROWS = [
 const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
-  '@id': `https://factoryjet.com/web-design/coimbatore#howto`,
-  name: `How FactoryJet builds your Coimbatore website in 7 days`,
-  description: `Our 7-day process for delivering a professional, high-performance website for Coimbatore businesses.`,
+  '@id': `https://factoryjet.com/web-design/rajkot#howto`,
+  name: `How FactoryJet builds your Rajkot website in 7 days`,
+  description: `Our 7-day process for delivering a professional, export-ready website for Rajkot engineering and manufacturing businesses.`,
   estimatedCost: {
     '@type': 'MonetaryAmount',
     currency: 'INR',
@@ -492,13 +482,13 @@ const howToSchema = {
       '@type': 'HowToStep',
       position: 1,
       name: 'Day 1 — Discovery Call',
-      text: `We learn your business, your Coimbatore market, your goals, and what you need the website to do.`,
+      text: `We learn your business, your Rajkot market, your goals, and what you need the website to do — whether you are targeting OEM buyers in Germany, distributors in the US, or domestic B2B procurement teams.`,
     },
     {
       '@type': 'HowToStep',
       position: 2,
       name: 'Day 2 — Strategy & Structure',
-      text: `We map your site architecture, research your Coimbatore competitors, identify your top keywords, and write the first draft of your page copy.`,
+      text: `We map your site architecture, research your Rajkot and sector competitors, identify your top export and local keywords, and write the first draft of your page copy.`,
     },
     {
       '@type': 'HowToStep',
@@ -510,7 +500,7 @@ const howToSchema = {
       '@type': 'HowToStep',
       position: 4,
       name: 'Days 5–6 — Development & SEO',
-      text: `Your approved design is built in code — fast, mobile-first, and SEO-optimised. Coimbatore local schema markup added. Google Analytics and Search Console connected.`,
+      text: `Your approved design is built in code — fast, mobile-first, and SEO-optimised. Rajkot local schema markup added. Product catalog, RFQ form, and export inquiry systems built. Google Analytics and Search Console connected.`,
     },
     {
       '@type': 'HowToStep',
@@ -524,28 +514,28 @@ const howToSchema = {
 const speakableSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  '@id': `https://factoryjet.com/web-design/coimbatore#webpage`,
+  '@id': `https://factoryjet.com/web-design/rajkot#webpage`,
   speakable: {
     '@type': 'SpeakableSpecification',
     cssSelector: ['h1', 'h2:first-of-type'],
   },
-  url: `https://factoryjet.com/web-design/coimbatore`,
+  url: `https://factoryjet.com/web-design/rajkot`,
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Page
 ───────────────────────────────────────────────────────────────────────────── */
 
-export default function CoimbatoreWebDesignPage() {
+export default function RajkotWebDesignPage() {
   return (
     <>
       <Script
-        id="cbe-local-business-schema"
+        id="rjt-local-business-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       <Script
-        id="cbe-faq-schema"
+        id="rjt-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
@@ -563,7 +553,7 @@ export default function CoimbatoreWebDesignPage() {
         items={[
           { name: 'Home', url: 'https://factoryjet.com' },
           { name: 'Web Design', url: 'https://factoryjet.com/web-design' },
-          { name: 'Coimbatore', url: 'https://factoryjet.com/web-design/coimbatore' },
+          { name: 'Rajkot', url: 'https://factoryjet.com/web-design/rajkot' },
         ]}
       />
 
@@ -571,9 +561,9 @@ export default function CoimbatoreWebDesignPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
-          eyebrow="WEB DESIGN · COIMBATORE"
-          headline="Website Design in Coimbatore for Pump Manufacturers, Textile Firms, and Fast-Growing IT Companies"
-          lead="Coimbatore is Tamil Nadu's industrial powerhouse — the world's largest pump manufacturing cluster, a major textile and garments hub, and a rising IT corridor along Avinashi Road. With 262+ startups and over 25,000 MSMEs, it is one of India's most under-served major cities for quality web design. FactoryJet builds from ₹29,999 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
+          eyebrow="WEB DESIGN · RAJKOT"
+          headline="Website Design in Rajkot for Auto Component Exporters, Engineering Manufacturers, and MSME Businesses"
+          lead="Rajkot is Gujarat's engineering powerhouse — home to 250,000+ MSMEs, India's #1 auto parts cluster, and GIDC Shapar-Veraval, one of Asia's largest industrial estates. From machine tool makers in GIDC Metoda to gold jewellers in the city centre, Rajkot businesses compete for international buyers and domestic contracts every day. FactoryJet builds from ₹29,999 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
@@ -595,63 +585,66 @@ export default function CoimbatoreWebDesignPage() {
 
         {/* ── 4. CITY CONTEXT ──────────────────────────────────────────────── */}
         <CityContextSection
-          eyebrow="COIMBATORE MARKET"
-          headline="Why Your Coimbatore Web Presence Is a Business Asset"
+          eyebrow="RAJKOT MARKET"
+          headline="Why Your Rajkot Web Presence Is an Export Asset"
           leadParagraphs={[
-            "Coimbatore is not a secondary city — it is a global manufacturing capital hiding in plain sight. The city and its surrounding district account for more than 30% of India's total pump production and a significant share of the world's wet grinder and textile machinery output. The Tirupur corridor just 55km away adds textile and garment export volumes that rival entire states. Coimbatore's MSME density is among the highest in Tamil Nadu, with over 25,000 registered units spanning engineering, textiles, food processing, healthcare, and IT. Yet the city's digital agency landscape remains far thinner than Chennai or Bangalore — meaning the quality gap between a professionally built website and what most Coimbatore businesses currently have is enormous.",
-            "This creates a web design opportunity unique to Coimbatore. A pump manufacturer in Singanallur needs a fundamentally different site architecture from an IT company on Avinashi Road, a garment exporter in Tirupur corridor, or a hospital in RS Puram. International B2B buyers from the US, EU, and Middle East research Indian pump and engineering vendors for weeks before making contact. Export-oriented textile firms need product catalogs, mill credentials, and RFQ forms optimised for fabric buyers in Japan, Europe, and the US. IT companies targeting enterprise clients need authority-first positioning and case study architecture. FactoryJet builds for all of them — because we start with the buyer journey, not the template.",
-            "Coimbatore businesses that invest in a high-performing website now are capturing search rankings, buyer first impressions, and the digital credibility that their slower competitors are conceding every week. The gap between having a quality site and not having one is widening — and in a city where the competition for international buyers is intensifying, the cost of waiting is real.",
+            "Rajkot is called the Manchester of Saurashtra — and for good reason. The city is India's undisputed capital for auto component manufacturing, home to more than 3,500 engineering units producing bearings, castings, forgings, dies and molds, pumps, valves, and machine tools that export to OEMs in the USA, Germany, and Japan. With 250,000+ registered MSMEs — the highest MSME density per capita in India — Rajkot's industrial spine runs through GIDC Aji (the oldest), GIDC Metoda (auto components), and GIDC Shapar-Veraval, one of the largest industrial estates in Asia by land area. Gold jewellery is the city's second major export pillar — Rajkot is Gujarat's second-largest gold jewellery market after Surat.",
+            "This manufacturing depth creates a specific web design problem: most Rajkot MSMEs still rely on WhatsApp, trade directories, and word-of-mouth to reach buyers. International procurement teams from Bosch, Toyota, Cummins, and Caterpillar search Google before they ever send an RFQ. A foundry or precision machining unit with no website — or a slow, outdated one — is invisible to those buyers. The businesses that invest in a credible, fast, export-ready website today are capturing the first-page real estate their competitors are conceding.",
+            "The opportunity is significant and the competitive bar in Rajkot is still low. Most engineering and manufacturing businesses in the city either have no website or one built on a dated template. FactoryJet builds export-ready, technically sound websites for exactly this market — with authority-first architecture, product catalog systems, and international buyer SEO built in.",
           ]}
           stats={[
             {
-              value: '25,000+',
-              label: "Registered MSMEs in Coimbatore district — Tamil Nadu's second-largest MSME hub",
+              value: '250K+',
+              label: 'Registered MSMEs in Rajkot district — highest MSME density per capita in India',
               sourceUrl: 'https://msme.gov.in/',
               sourceLabel: 'Ministry of MSME',
             },
             {
-              value: 'Pump Capital',
-              label: "Coimbatore produces over 30% of India's pumps — the world's largest pump manufacturing cluster",
-              sourceUrl: 'https://www.coimbatorepumps.com/',
-              sourceLabel: 'Coimbatore Pumps & Motors Manufacturers Association',
+              value: '3,500+',
+              label: "Engineering units in Rajkot — India's #1 auto parts manufacturing cluster",
+              sourceUrl: 'https://rajkot.nic.in/',
+              sourceLabel: 'Rajkot District NIC',
             },
             {
-              value: '262+',
-              label: "Active startups in Coimbatore's growing entrepreneurship ecosystem",
-              sourceUrl: 'https://startuptn.in/',
-              sourceLabel: 'StartupTN',
+              value: 'Asia #1',
+              label: 'GIDC Shapar-Veraval — one of Asia\'s largest industrial estates by land area',
+              sourceUrl: 'https://gidc.gujarat.gov.in/',
+              sourceLabel: 'GIDC Gujarat',
             },
           ]}
         />
 
         {/* ── 5. SERVICE EXPLANATION ───────────────────────────────────────── */}
         <ServiceExplanation
-          eyebrow="WEB DESIGN · COIMBATORE"
-          headline="What 'Web Design' Actually Means for a Coimbatore Business"
-          lead="Coimbatore's economy runs on three very different buyer behaviours — international B2B buyers doing weeks of vendor research, domestic enterprise clients evaluating IT and services firms, and local consumers making fast decisions on mobile. Each needs a different web strategy. FactoryJet builds for all three."
+          eyebrow="WEB DESIGN · RAJKOT"
+          headline="What 'Web Design' Actually Means for a Rajkot Manufacturing or Engineering Business"
+          lead="Rajkot's economy runs on two very different buyer types — international OEM and B2B procurement teams doing weeks of vendor research, and domestic traders and distributors deciding faster. Both need very different web strategies. FactoryJet builds for both."
           body={
             <>
               <p>
-                For Coimbatore&apos;s pump manufacturers, textile exporters, engineering firms, and
-                MSME businesses — the website needs to project manufacturing credentials, product
-                range, and export capability to international B2B buyers in the US, EU, and Middle
-                East. These buyers research vendors for weeks before making contact. The site needs
-                to answer their due-diligence questions: certifications, production capacity, past
-                export clients, and a frictionless RFQ form. We build these sites with
+                For Rajkot&apos;s auto component exporters, foundry and casting units, pump and
+                valve manufacturers, and precision engineering MSMEs — the website needs to project
+                manufacturing capability, quality certifications (IATF 16949, ISO 9001, TS),
+                export credentials, and product range to international procurement teams in the US,
+                Germany, and Japan. These buyers research vendors for weeks before making contact.
+                The site needs to answer their due-diligence questions: production capacity, past
+                clients, quality standards, and a frictionless RFQ form. We build these sites with
                 authority-first architecture, product catalog systems, and lead-capture flows
-                designed for B2B export sales cycles.
+                designed for long B2B sales cycles.
               </p>
               <p>
-                For IT companies on Avinashi Road and Peelamedu, education institutions, and
-                professional services firms — the challenge is establishing digital credibility at
-                scale. These businesses compete nationally and internationally for clients who will
-                research them thoroughly before engaging. Authority-first positioning, strong case
-                study architecture, and conversion-optimised enquiry flows are non-negotiable.
+                For Rajkot&apos;s gold jewellers, traders, retail businesses, and service
+                companies — the challenge is different. Consumer and domestic B2B buyers need
+                mobile-first speed, clear product or service presentation, and instant contact
+                options. WhatsApp integration, clean product showcase, and conversion-optimised
+                inquiry forms are the priority. We build for both buyer types because we start
+                every project with the buyer journey in mind — not the template.
               </p>
               <p>
-                Every FactoryJet Coimbatore project covers discovery, Figma prototyping, Next.js
+                Every FactoryJet Rajkot project covers discovery, Figma prototyping, Next.js
                 development, SEO, GA4, and a 30-day support window. You leave with a codebase you
-                own, a design system you keep, and a site built to rank and convert.
+                own, a design system you keep, and a site built to rank and convert — whether your
+                buyer is in Rajkot, Mumbai, or Düsseldorf.
               </p>
             </>
           }
@@ -662,28 +655,22 @@ export default function CoimbatoreWebDesignPage() {
                   className="font-fj-mono font-medium uppercase text-fj-neutral-400"
                   style={{ fontSize: '11px', letterSpacing: '0.14em' }}
                 >
-                  Three buyer types. One framework.
+                  Two buyer types. One framework.
                 </p>
               </div>
               <div className="divide-y divide-fj-neutral-100">
                 {[
                   {
-                    type: 'B2B / Export & Manufacturing',
+                    type: 'B2B / Export & Industrial',
                     need: 'Credentials + catalog + RFQ',
-                    area: 'Singanallur · SIPCOT · Peelamedu · Tirupur corridor',
+                    area: 'GIDC Metoda · GIDC Shapar-Veraval · GIDC Aji',
                     colour: '#F05A28',
-                  },
-                  {
-                    type: 'IT & Professional Services',
-                    need: 'Authority + case studies + enquiry',
-                    area: 'Avinashi Road · Peelamedu IT Park · Saibaba Colony',
-                    colour: '#0F0F12',
                   },
                   {
                     type: 'D2C / Consumer & Retail',
                     need: 'Speed + mobile + instant CTA',
-                    area: 'RS Puram · Gandhipuram · Saibaba Colony · Race Course',
-                    colour: '#6B7280',
+                    area: 'Rajkot City Centre · Gondal Road · Kalawad Road',
+                    colour: '#0F0F12',
                   },
                 ].map((row) => (
                   <div key={row.type} className="px-7 py-5">
@@ -731,18 +718,18 @@ export default function CoimbatoreWebDesignPage() {
         {/* ── 6. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="Why Coimbatore Businesses Choose FactoryJet Over Local Agencies"
-          lead="Coimbatore web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and take 4–12 weeks to deliver. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, a codebase you own outright. At 60–70% below the Coimbatore agency benchmark for the same scope."
+          headline="Why Rajkot Businesses Choose FactoryJet Over Local Agencies"
+          lead="Rajkot web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and take 6–16 weeks to deliver. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, a codebase you own outright. At 60–70% below the Rajkot agency benchmark for the same scope."
           pillars={[
             {
               icon: '⚡',
               title: '7-day delivery. In writing. Or you do not pay.',
-              body: "Coimbatore's manufacturing and export community moves on timelines and results. Waiting 10 weeks for a website while your competitor captures the international buyer in their search results is not a viable strategy. FactoryJet delivers in 7 days, with the guarantee written into the project agreement. We have delivered on time on 97% of all projects since 2005.",
+              body: "Rajkot's engineering and manufacturing businesses operate on tight delivery schedules — the website should be no different. Waiting 12 weeks for a site briefed in March is not acceptable when the export season is already underway. FactoryJet delivers in 7 days, with the guarantee written into the project agreement. We have delivered on time on 97% of all projects since 2005.",
             },
             {
               icon: '🏗️',
               title: 'Next.js, not WordPress. The performance gap is real.',
-              body: 'WordPress loads server-side PHP and fires 40–60 database queries per page load. Next.js generates static files served from Cloudflare CDN globally. The result: sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Coimbatore businesses competing on Google\'s Core Web Vitals, that gap directly affects rankings.',
+              body: "WordPress loads server-side PHP and fires 40–60 database queries per page load. Next.js generates static files served from Cloudflare CDN globally. The result: sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Rajkot manufacturers competing for international buyers on Google, that performance gap directly affects rankings and first impressions.",
             },
             {
               icon: '📋',
@@ -755,9 +742,9 @@ export default function CoimbatoreWebDesignPage() {
         {/* ── 7. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="How We Build Your Coimbatore Website in 7 Days"
+          headline="How We Build Your Rajkot Website in 7 Days"
           lead="Buyer strategy agreed before design. Mobile approval before development. SEO and analytics wired before launch."
-          stages={CBE_JOURNEY_STAGES}
+          stages={RJT_JOURNEY_STAGES}
           closingNote="5 STAGES · 7 DAYS · NEXT.JS + CLOUDFLARE · GA4 STANDARD · ZERO DOWNTIME LAUNCH"
         />
 
@@ -801,65 +788,65 @@ export default function CoimbatoreWebDesignPage() {
         {/* ── 9. COMPARISON TABLE ──────────────────────────────────────────── */}
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. Coimbatore Agency vs. Freelancer vs. Template Builder"
-          lead="Not all web design options in Coimbatore deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
+          headline="FactoryJet vs. Rajkot Agency vs. Freelancer vs. Template Builder"
+          lead="Not all web design options in Rajkot deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
           pullQuote={{
             stat: '₹29,999',
             caption:
-              'starting price — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a ₹2,00,000 Coimbatore agency project.',
+              'starting price — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a ₹1,50,000 Rajkot agency project.',
           }}
-          columns={CBE_COMPARISON_COLUMNS}
-          rows={CBE_COMPARISON_ROWS}
-          footer="Prices reflect typical Coimbatore market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
+          columns={RJT_COMPARISON_COLUMNS}
+          rows={RJT_COMPARISON_ROWS}
+          footer="Prices reflect typical Rajkot market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
         <IndustriesGrid
-          eyebrow="COIMBATORE × WEB DESIGN"
-          headline="Web Design for Coimbatore's Key Industries"
-          lead="From pump manufacturers and textile exporters to IT companies and healthcare providers — Coimbatore's economy spans industries with very different digital requirements. FactoryJet has the architecture for each."
+          eyebrow="RAJKOT × WEB DESIGN"
+          headline="Web Design for Rajkot's Key Industries"
+          lead="From auto component exporters and precision engineering manufacturers to gold jewellers, traders, and professional services — Rajkot's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
           sectors={[
             {
-              name: 'Engineering & Pumps',
+              name: 'Auto Components & Engineering',
               description:
-                "Coimbatore is the world's largest pump manufacturing cluster — home to hundreds of pump, motor, and engineering equipment manufacturers exporting globally. These businesses need websites that project manufacturing capability, ISO/BIS certifications, product specifications, and export credentials to international industrial buyers in the US, Europe, Middle East, and Southeast Asia. Product catalog systems, technical specification sheets, and B2B inquiry flows are standard.",
+                "Rajkot is India's #1 auto component cluster — home to 3,500+ units manufacturing bearings, castings, forgings, dies, molds, and precision parts for OEMs in the USA, Germany, and Japan. These exporters need websites that project manufacturing capability, quality certifications (IATF, ISO), production capacity, and a frictionless RFQ flow. We build export-ready sites with product catalog systems and international buyer SEO.",
               example:
-                'Pump and motor manufacturers, engineering equipment exporters, and precision engineering firms targeting international OEMs and industrial buyers.',
+                'Auto component manufacturers and exporters in GIDC Metoda, Aji, and Shapar-Veraval targeting OEM buyers in the US, Germany, and Japan.',
             },
             {
-              name: 'Textile & Garments',
+              name: 'Foundry, Casting & Forging',
               description:
-                "Coimbatore and the nearby Tirupur corridor form Tamil Nadu's textile backbone — producing cotton yarn, knitted garments, hosiery, and woven fabrics for global fashion brands and retailers. Textile businesses need websites that display product range, fabric specifications, certifications (GOTS, OEKO-TEX), and production capacity to international B2B buyers. Export-ready catalog architecture and RFQ forms are essential.",
+                "Rajkot's foundry and casting sector is one of the largest in India — producing grey iron, ductile iron, and alloy steel castings for automotive, agricultural, and industrial applications. These businesses compete for domestic and export contracts where a professional website with process capability display, tolerance specifications, and metallurgy certifications is a key qualification signal.",
               example:
-                'Yarn spinners, knitted garment exporters, hosiery manufacturers, and fabric mills in Coimbatore and the Tirupur corridor targeting global fashion and retail buyers.',
+                'Foundry units, casting manufacturers, and forging companies in GIDC Metoda and Shapar-Veraval targeting B2B procurement across India and overseas.',
             },
             {
-              name: 'IT & Software Services',
+              name: 'Pumps, Valves & Fluid Equipment',
               description:
-                "Coimbatore's IT sector is growing fast along Avinashi Road and in Peelamedu — home to software companies, SaaS startups, IT services firms, and tech product companies targeting enterprise clients across India and abroad. IT services websites need product-led architecture, case study portfolios, service capability pages, and lead flows designed for B2B software and services sales cycles.",
+                "Rajkot is a major manufacturing hub for industrial pumps, valves, and fluid handling equipment — supplying the oil & gas, chemical, water treatment, and agriculture sectors. These businesses need websites that communicate product range, pressure and flow specifications, industry certifications, and dealer network coverage. B2B product catalog systems and inquiry portals are standard.",
               example:
-                'Software development companies, IT services firms, SaaS startups, and tech product companies based in Avinashi Road IT corridor and Peelamedu IT parks.',
+                'Pump manufacturers, valve producers, and fluid equipment suppliers targeting process industry buyers across India and international markets.',
             },
             {
-              name: 'Education & Ed-Tech',
+              name: 'Gold Jewellery & Retail',
               description:
-                "Coimbatore is home to over 100 engineering colleges, arts and science colleges, and business schools — and a growing ed-tech startup scene. Educational institutions need websites that communicate course credibility, placement records, faculty credentials, and admission processes to prospective students and parents. Ed-tech companies need product-led architecture with demo request flows and online enrollment capability.",
+                "Rajkot is Gujarat's second-largest gold jewellery market — with a dense concentration of jewellers, bullion traders, and fine jewellery manufacturers in the city centre. Retail jewellers need websites that showcase product collections with quality photography, communicate purity and hallmarking credentials, and drive store footfall and WhatsApp inquiries. Consumer-first design with mobile speed is the priority.",
               example:
-                'Engineering colleges, arts and science institutions, professional training institutes, and ed-tech startups in Coimbatore targeting students and working professionals.',
+                'Gold jewellers, bullion traders, and fine jewellery manufacturers in Rajkot city centre targeting retail and wholesale buyers.',
             },
             {
-              name: 'Healthcare & Hospitals',
+              name: 'Machine Tools & Dies',
               description:
-                "Coimbatore has a strong healthcare ecosystem — from large multi-specialty hospitals and specialty clinics to diagnostic centres and Ayurvedic wellness centres. Healthcare businesses need websites that project clinical credibility, specialist credentials, department capability, and streamlined appointment booking — designed to convert local patient searches and attract medical tourism from smaller towns in Tamil Nadu and Kerala.",
+                "Rajkot has a strong machine tool and die & mould manufacturing cluster supplying the auto and engineering industries. These businesses need B2B authority sites that showcase tooling capability, precision tolerances, material compatibility, and project experience to industrial procurement teams. Technical product specifications and capability documentation are key website assets.",
               example:
-                'Multi-specialty hospitals, specialty clinics, diagnostic centres, dental practices, and Ayurvedic wellness centres serving Coimbatore and the broader Western Tamil Nadu and Kerala border region.',
+                'Machine tool manufacturers, die and mould makers, and precision engineering units in Rajkot GIDC industrial zones.',
             },
             {
-              name: 'Agri-Business & Food Processing',
+              name: 'Trading & Professional Services',
               description:
-                "Coimbatore district's agricultural hinterland produces coconuts, turmeric, cotton, and vegetables — and the city has a significant food processing and agri-commodity trading sector. Food processing businesses and agri-exporters need websites that display product range, certifications (FSSAI, APEDA, organic), export credentials, and inquiry forms optimised for institutional and international buyers.",
+                "Rajkot's commercial base includes FMCG distributors, commodity traders, and a strong CA, legal, and consulting community serving Gujarat's large MSME sector. For trading businesses, the website projects scale and reliability. For professional services, it is the first qualification filter. We build authority-first sites with clear service pages and lead-capture flows.",
               example:
-                'Coconut oil producers, spice exporters, food processing companies, agri-commodity traders, and APEDA-registered exporters targeting domestic and international food buyers.',
+                "Traders, distributors, CA firms, legal practices, and management consultants serving Rajkot's business community.",
             },
           ]}
         />
@@ -868,14 +855,14 @@ export default function CoimbatoreWebDesignPage() {
         <div id="pricing">
           <PricingTiers
             eyebrow="TRANSPARENT PRICING"
-            headline="Transparent, Fixed-Price Web Design for Coimbatore Businesses"
-            lead="Coimbatore agency rates for comparable web projects run ₹80,000–₹2,50,000. FactoryJet Growth (₹80,000) delivers 10–15 pages, blog CMS, lead capture, GA4, Next.js, and a 7-day delivery guarantee — with a codebase you own outright."
+            headline="Transparent, Fixed-Price Web Design for Rajkot Businesses"
+            lead="Rajkot agency rates for comparable web projects run ₹80,000–₹2,50,000. FactoryJet Growth (₹80,000) delivers 10–15 pages, blog CMS, lead capture, GA4, Next.js, and a 7-day delivery guarantee — with a codebase you own outright."
             tiers={[
               {
                 name: 'Starter',
                 priceRange: '₹29,999',
                 description:
-                  'A 5-page business site that loads fast on mobile and ranks for your name and core service. Best for small businesses, traders, and sole practitioners in Coimbatore who need a credible online presence quickly.',
+                  'A 5-page business site that loads fast on mobile and ranks for your name and core service. Best for small manufacturers, traders, jewellers, and sole practitioners in Rajkot who need a credible online presence quickly.',
                 features: [
                   '5 pages, mobile-responsive',
                   'Basic SEO & LocalBusiness schema',
@@ -890,11 +877,11 @@ export default function CoimbatoreWebDesignPage() {
                 name: 'Growth',
                 priceRange: '₹80,000',
                 description:
-                  'A 10–15 page site with blog CMS, lead-capture flows, and analytics wired in from day one. Best for Coimbatore SMBs, exporters, and IT companies scaling online who need the site to actively generate qualified enquiries.',
+                  'A 10–15 page site with product catalog, RFQ forms, lead-capture flows, and analytics wired in from day one. Best for Rajkot MSMEs, auto component exporters, and engineering manufacturers scaling their online presence.',
                 features: [
                   '10–15 pages with blog CMS',
                   'Advanced SEO — schema, meta templates, internal links',
-                  'Lead capture + email automation',
+                  'Product catalog + RFQ / inquiry forms',
                   'GA4 + GTM + Search Console',
                   '3 revision rounds',
                   '30-day support + CMS training session',
@@ -906,12 +893,13 @@ export default function CoimbatoreWebDesignPage() {
                 name: 'Custom',
                 priceRange: '₹1,50,000+',
                 description:
-                  'Custom Next.js build with product catalogs, booking systems, AI integrations, or API connections. Best for established Coimbatore businesses with complex requirements and a real digital revenue line.',
+                  'Custom Next.js build with export portals, product catalog systems, dealer portals, AI integrations, or API connections. Best for established Rajkot manufacturers and exporters with complex requirements and an active international sales pipeline.',
                 features: [
                   'Custom Next.js architecture',
-                  'Product catalog or e-commerce (Razorpay, Shiprocket)',
-                  'AI integrations (chat, search, content)',
-                  'Third-party API connections (Tally, Zoho)',
+                  'Export portal or B2B dealer ordering',
+                  'Product catalog with specifications (PDF export)',
+                  'AI integrations (chat, search, inquiry routing)',
+                  'Third-party API connections (Tally, Zoho, ERP)',
                   'Priority support + quarterly reviews',
                   'Dedicated engineering point of contact',
                 ],
@@ -931,18 +919,18 @@ export default function CoimbatoreWebDesignPage() {
         {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Common Questions from Coimbatore Businesses"
-          lead="The questions we answer on every Coimbatore discovery call — answered here, without the runaround."
-          categories={CBE_FAQ_CATEGORIES}
-          items={CBE_FAQ_ITEMS}
+          headline="Common Questions from Rajkot Businesses"
+          lead="The questions we answer on every Rajkot discovery call — answered here, without the runaround."
+          categories={RJT_FAQ_CATEGORIES}
+          items={RJT_FAQ_ITEMS}
         />
 
         {/* ── 14. FINAL CTA (DARK) ─────────────────────────────────────────── */}
         <FinalCTA
           variant="dark"
           eyebrow="READY TO START"
-          headline="Ready to Build Your Coimbatore Website?"
-          sub="Coimbatore's pump exports, textile production, and growing IT sector mean serious businesses are competing for the same international buyer impressions and the same Google rankings. Every week without a high-performing website is ground you are conceding to a competitor who already has one. Start today and have a sitemap ready within 72 hours."
+          headline="Ready to Build Your Rajkot Website?"
+          sub="Rajkot's 250,000+ MSMEs, India's #1 auto component cluster, and GIDC Shapar-Veraval's industrial scale mean serious businesses are competing for the same international buyer impressions and the same Google rankings every day. Every week without a high-performing website is ground you are conceding to a competitor who already has one. Start today and have a sitemap ready within 72 hours."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
           objectionHandler="Fixed price. 7-day delivery. Next.js. Your codebase delivered in full on launch day."

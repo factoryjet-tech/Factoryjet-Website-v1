@@ -200,6 +200,26 @@ export const webDesignCityAlternatesIN = {
     'en-IN': 'https://factoryjet.com/web-design/gurgaon',
     'x-default': 'https://factoryjet.com/web-design/gurgaon',
   },
+  nagpur: {
+    'en-IN': 'https://factoryjet.com/web-design/nagpur',
+    'x-default': 'https://factoryjet.com/web-design/nagpur',
+  },
+  vadodara: {
+    'en-IN': 'https://factoryjet.com/web-design/vadodara',
+    'x-default': 'https://factoryjet.com/web-design/vadodara',
+  },
+  bhubaneswar: {
+    'en-IN': 'https://factoryjet.com/web-design/bhubaneswar',
+    'x-default': 'https://factoryjet.com/web-design/bhubaneswar',
+  },
+  thiruvananthapuram: {
+    'en-IN': 'https://factoryjet.com/web-design/thiruvananthapuram',
+    'x-default': 'https://factoryjet.com/web-design/thiruvananthapuram',
+  },
+  rajkot: {
+    'en-IN': 'https://factoryjet.com/web-design/rajkot',
+    'x-default': 'https://factoryjet.com/web-design/rajkot',
+  },
 } as const
 
 // ---------------------------------------------------------------------------

@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
-import { webDesignCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
 import LogoBar from '@/components/v2/LogoBar';
@@ -25,52 +24,55 @@ import SiteFooter from '@/components/v2/SiteFooter';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Kochi | From ₹29,999 | FactoryJet',
+  title: 'Web Design Company in Thiruvananthapuram | From ₹29,999 | FactoryJet',
   description:
-    'Web design company in Kochi for IT firms, tourism businesses, exporters & startups. Fast websites from ₹29,999. 7-day delivery. Serving Infopark, Kakkanad, MG Road & Fort Kochi.',
+    'Web design company in Thiruvananthapuram (Trivandrum) for IT startups, government contractors, ISRO ecosystem firms & tourism businesses. Fast websites from ₹29,999. 7-day delivery. Serving Technopark, Kazhakuttam & Pattom.',
   keywords: [
-    'web design company in Kochi',
-    'website design Kochi',
-    'web development company Kochi',
-    'website design company Kochi',
-    'affordable web design Kochi',
-    'professional website design Kochi',
-    'web design Ernakulam',
-    'web design Infopark',
-    'IT company website design Kochi',
-    'tourism website design Kochi',
-    'Next.js web development Kochi',
-    'web design agency Kochi Kerala',
-    'website design Kerala',
-    'web design Kakkanad',
+    'web design company in Thiruvananthapuram',
+    'website design Trivandrum',
+    'web development Thiruvananthapuram',
+    'website design company Thiruvananthapuram',
+    'Trivandrum website designer',
+    'Technopark startup website design',
+    'affordable web design Kerala capital',
+    'web design Trivandrum',
+    'web design for startups Trivandrum',
+    'Kerala Startup Mission website design',
+    'KSUM startup website Thiruvananthapuram',
+    'web design agency Thiruvananthapuram',
+    'Next.js web development Trivandrum',
+    'government contractor website design Thiruvananthapuram',
   ],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Kochi | From ₹29,999 | FactoryJet',
+    title: 'Web Design Company in Thiruvananthapuram | From ₹29,999 | FactoryJet',
     description:
-      'Professional website design company in Kochi — Next.js, SEO, and GA4 included. 7-day delivery. From ₹29,999. Serving Infopark, Kakkanad, MG Road Ernakulam, Fort Kochi & Edapally.',
-    url: 'https://factoryjet.com/web-design/kochi',
+      "Professional website design company in Thiruvananthapuram (Trivandrum) — Next.js, SEO, and GA4 included. 7-day delivery. From ₹29,999. Serving Technopark, Kazhakuttam, Pattom & Kerala's capital business district.",
+    url: 'https://factoryjet.com/web-design/thiruvananthapuram',
     images: [
       {
         url: 'https://factoryjet.com/images/services/web-design.webp',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet Web Design Services in Kochi',
+        alt: 'FactoryJet Web Design Services in Thiruvananthapuram',
       },
     ],
     locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web Design Company in Kochi | FactoryJet',
+    title: 'Web Design Company in Thiruvananthapuram | FactoryJet',
     description:
-      'Website design company in Kochi. From ₹29,999. 7-day delivery. Next.js, SEO, GA4 included.',
+      'Website design company in Thiruvananthapuram (Trivandrum). From ₹29,999. 7-day delivery. Next.js, SEO, GA4 included.',
     images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {
-    canonical: 'https://factoryjet.com/web-design/kochi',
-    languages: webDesignCityAlternatesIN['kochi'],
+    canonical: 'https://factoryjet.com/web-design/thiruvananthapuram',
+    languages: {
+      'en-IN': 'https://factoryjet.com/web-design/thiruvananthapuram',
+      'x-default': 'https://factoryjet.com/web-design/thiruvananthapuram',
+    },
   },
   robots: {
     index: true,
@@ -95,20 +97,20 @@ const localBusinessSchema = {
   '@id': 'https://factoryjet.com/#organization',
   name: 'FactoryJet',
   description:
-    'Web design company in Kochi building fast, SEO-optimized websites for IT firms, tourism businesses, exporters, and startups. From ₹29,999. 7-day delivery guarantee.',
-  url: 'https://factoryjet.com/web-design/kochi',
+    "Web design company in Thiruvananthapuram (Trivandrum) building fast, SEO-optimized websites for IT startups, government contractors, ISRO ecosystem firms, tourism businesses, and Ayurveda brands. From ₹29,999. 7-day delivery guarantee.",
+  url: 'https://factoryjet.com/web-design/thiruvananthapuram',
   telephone: '+919699977699',
   email: 'connect@factoryjet.com',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Kochi',
+    addressLocality: 'Thiruvananthapuram',
     addressRegion: 'Kerala',
     addressCountry: 'IN',
   },
   areaServed: [
-    { '@type': 'City', name: 'Kochi' },
-    { '@type': 'City', name: 'Ernakulam' },
-    { '@type': 'City', name: 'Kakkanad' },
+    { '@type': 'City', name: 'Thiruvananthapuram' },
+    { '@type': 'City', name: 'Trivandrum' },
+    { '@type': 'City', name: 'Kazhakuttam' },
   ],
   serviceType: 'Web Design and Development',
   priceRange: '₹₹',
@@ -121,7 +123,7 @@ const localBusinessSchema = {
   },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Web Design Services Kochi',
+    name: 'Web Design Services Thiruvananthapuram',
     itemListElement: [
       {
         '@type': 'Offer',
@@ -154,15 +156,15 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'How much does a website cost for a business in Kochi?',
+      name: 'How much does a website cost for a business in Thiruvananthapuram?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet's web design for Kochi businesses starts at ₹29,999 for a 5-page Starter site. The Growth tier (₹80,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds start at ₹1,50,000. Kochi and Trivandrum agency rates for comparable scope typically run ₹1,20,000–₹3,50,000.",
+        text: "FactoryJet's web design for Thiruvananthapuram (Trivandrum) businesses starts at ₹29,999 for a 5-page Starter site. The Growth tier (₹80,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds start at ₹1,50,000. Thiruvananthapuram and Kochi agency rates for comparable scope typically run ₹1,20,000–₹3,50,000.",
       },
     },
     {
       '@type': 'Question',
-      name: 'How long does it take to build a website in Kochi?',
+      name: 'How long does it take to build a website in Thiruvananthapuram?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'A standard FactoryJet build delivers in 7 days from kickoff to launch. Discovery and design take the first two days, development runs through days five and six, and content, SEO, and launch happen on day seven.',
@@ -170,15 +172,15 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Do you build websites for IT companies at Infopark Kochi?',
+      name: 'Do you build websites for IT startups at Technopark Trivandrum?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Yes — IT and software companies at Infopark and Technopark are a core client profile. We build websites optimised for B2B tech sales: service capability architecture, case study display, technology stack credentials, and lead flows designed for enterprise procurement cycles.",
+        text: "Yes — IT startups and software companies at Technopark (India's first IT park, established 1990) are a core client profile. We build websites optimised for B2B tech sales: service capability architecture, technology stack credentials, case study display, and lead flows designed for enterprise procurement and investor evaluation cycles.",
       },
     },
     {
       '@type': 'Question',
-      name: 'Will my Kochi business website rank on Google?',
+      name: 'Will my Thiruvananthapuram business website rank on Google?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Technical SEO is built in: JSON-LD schema markup, optimised title and meta tags, Core Web Vitals green on mobile, internal linking, XML sitemap submitted to Google Search Console, and WebP images. Branded searches rank within 1–2 weeks. Service + location queries take 3–6 months for a new domain.',
@@ -199,12 +201,12 @@ const faqSchema = {
    Section data
 ───────────────────────────────────────────────────────────────────────────── */
 
-const KOCHI_JOURNEY_STAGES: ServiceJourneyStage[] = [
+const TVM_JOURNEY_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
     title: 'Discovery & Strategy',
     description:
-      "We map your ideal customer profile against Kochi's market — whether that's an international buyer researching a Kerala seafood or spice exporter, a tourist planning a backwater trip through Fort Kochi, an enterprise procurement team evaluating an Infopark IT vendor, or an NRI business owner launching a new venture. We audit your top competitors and agree the sitemap and content plan. — Days 1–2",
+      "We map your ideal customer profile against Thiruvananthapuram's market — whether that's an enterprise procurement team evaluating a Technopark startup, a government or defence agency contractor, an ISRO ecosystem firm, a Kovalam tourism operator, or an Ayurveda wellness brand targeting international clients. We audit your top competitors and agree the sitemap and content plan. — Days 1–2",
   },
   {
     number: '02',
@@ -216,13 +218,13 @@ const KOCHI_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '03',
     title: 'Development',
     description:
-      "Built in Next.js deployed to Cloudflare CDN — sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, booking systems for tourism businesses, product catalog systems for exporters, and any third-party APIs your business uses. Kerala's high internet-penetration audience expects fast, modern web experiences — performance budgets enforced from the first commit. — Days 5–6",
+      "Built in Next.js deployed to Cloudflare CDN — sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, government RFP inquiry flows, booking systems for tourism and Ayurveda businesses, and any third-party APIs your business uses. Thiruvananthapuram's highly educated, internet-literate audience expects fast, modern web experiences — performance budgets enforced from the first commit. — Days 5–6",
   },
   {
     number: '04',
     title: 'Content & SEO',
     description:
-      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Kochi-specific local SEO targeting built in — including bilingual search intent awareness for Malayalam + English queries. — Day 6–7',
+      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Thiruvananthapuram-specific local SEO targeting built in — including both "Thiruvananthapuram" and "Trivandrum" search intent coverage. — Day 6–7',
   },
   {
     number: '05',
@@ -232,22 +234,22 @@ const KOCHI_JOURNEY_STAGES: ServiceJourneyStage[] = [
   },
 ];
 
-const KOCHI_FAQ_CATEGORIES = [
+const TVM_FAQ_CATEGORIES = [
   { key: 'pricing',   label: 'Pricing & Timeline' },
   { key: 'included',  label: "What's Included" },
   { key: 'technical', label: 'Technical & SEO' },
-  { key: 'local',     label: 'Kochi Local' },
+  { key: 'local',     label: 'Trivandrum Local' },
   { key: 'support',   label: 'Support & Ownership' },
 ];
 
-const KOCHI_FAQ_ITEMS = [
+const TVM_FAQ_ITEMS = [
 
   /* ── Pricing & Timeline ── */
   {
     category: 'pricing',
-    question: 'How much does a website cost for a business in Kochi?',
+    question: 'How much does a website cost for a business in Thiruvananthapuram?',
     answer:
-      "FactoryJet's web design for Kochi businesses starts at ₹29,999 for a 5-page Starter site. The Growth tier (₹80,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds start at ₹1,50,000. Kochi and Trivandrum agency rates for comparable scope typically run ₹1,20,000–₹3,50,000.",
+      "FactoryJet's web design for Thiruvananthapuram (Trivandrum) businesses starts at ₹29,999 for a 5-page Starter site. The Growth tier (₹80,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds start at ₹1,50,000. Thiruvananthapuram and Kochi agency rates for comparable scope typically run ₹1,20,000–₹3,50,000.",
   },
   {
     category: 'pricing',
@@ -257,7 +259,7 @@ const KOCHI_FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet cheaper than Kochi web agencies?',
+    question: 'Why is FactoryJet cheaper than Thiruvananthapuram web agencies?',
     answer:
       "We are a specialised web engineering team — not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. You pay for the build, not our admin structure.",
   },
@@ -299,13 +301,13 @@ const KOCHI_FAQ_ITEMS = [
     category: 'technical',
     question: 'Will my website rank on Google India?',
     answer:
-      "Technical SEO is built into every project: JSON-LD schema markup, optimised title and meta templates, Core Web Vitals green on mobile, internal linking, XML sitemap submitted to Google Search Console, and WebP images. Kerala has India's highest internet penetration — your audience is online and actively searching. Branded searches typically rank within 1–2 weeks.",
+      "Technical SEO is built into every project: JSON-LD schema markup, optimised title and meta templates, Core Web Vitals green on mobile, internal linking, XML sitemap submitted to Google Search Console, and WebP images. Kerala has India's highest internet penetration and literacy rate — your audience is online, informed, and actively searching for services like yours. Branded searches typically rank within 1–2 weeks.",
   },
   {
     category: 'technical',
     question: 'What tech stack do you build on?',
     answer:
-      "We build on Next.js deployed to Cloudflare's global CDN — sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Kochi businesses competing on Google's Core Web Vitals, that performance gap directly affects rankings.",
+      "We build on Next.js deployed to Cloudflare's global CDN — sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Thiruvananthapuram businesses competing on Google's Core Web Vitals, that performance gap directly affects rankings.",
   },
   {
     category: 'technical',
@@ -320,30 +322,42 @@ const KOCHI_FAQ_ITEMS = [
       'Yes — GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, booking enquiry clicks) are configured from day one. Search Console verified and sitemap submitted.',
   },
 
-  /* ── Kochi Local ── */
+  /* ── Trivandrum Local ── */
   {
     category: 'local',
-    question: 'Do you build websites for IT companies at Infopark Kochi?',
+    question: 'Is it "Thiruvananthapuram" or "Trivandrum" — which name should I use for SEO?',
     answer:
-      "Yes — IT and software companies at Infopark and the broader Kakkanad tech corridor are a core client profile. We build websites optimised for B2B tech sales: service capability architecture, case study and credentials display, technology stack showcase, and lead flows designed for enterprise procurement cycles. Kerala's IT sector is growing fast — a high-performance website is no longer optional.",
+      'Both names matter for SEO and both are searched actively. "Trivandrum" is the historically anglicised name still widely used by locals, NRIs, and older businesses. "Thiruvananthapuram" is the official name used in formal, government, and institutional contexts. FactoryJet targets both names in your page copy, meta tags, and schema markup — so your site captures searchers using either term. You lose traffic if you pick only one.',
   },
   {
     category: 'local',
-    question: 'Can you build tourism and hospitality websites for Fort Kochi and backwater operators?',
+    question: 'Do you build websites for IT startups at Technopark Trivandrum?',
     answer:
-      "Yes. Tourism is Kochi's headline industry — Fort Kochi's heritage quarter, Kumarakom's backwaters, Alappuzha houseboats, and Munnar hill stations attract hundreds of thousands of visitors each year. Tourism businesses need mobile-first booking flows, gallery-rich design, TripAdvisor review integration, and international buyer UX. We build for English-language international search as well as domestic travel searches.",
+      "Yes — IT and software companies at Technopark are a core client profile. Technopark is India's first IT park (established 1990) and houses 450+ companies including Infosys, UST Global, TCS, and IBS Group. We build websites optimised for B2B tech sales: service capability architecture, technology stack credentials, case study display, and lead flows designed for enterprise procurement cycles. Startups supported by Kerala Startup Mission (KSUM) — which has its HQ in Thiruvananthapuram — benefit from sites with investor-credibility signals and product-led architecture.",
   },
   {
     category: 'local',
-    question: "Do you know Kochi's business districts well enough to write relevant copy?",
+    question: 'Can you build websites for government contractors and ISRO ecosystem firms?',
     answer:
-      "Yes. We research Kochi's business geography as part of discovery — from Infopark's IT cluster in Kakkanad and the Kochi Smart City precinct to MG Road Ernakulam's commercial high street, Fort Kochi's heritage tourism zone, and Edapally's emerging commercial corridor. Local specificity in copy and LocalBusiness schema improves relevance for neighbourhood-level searches.",
+      "Yes. Thiruvananthapuram hosts the Kerala Secretariat, all major state government departments, and ISRO's Vikram Sarabhai Space Centre (VSSC) — one of India's most important space research organisations. Government contractors and ISRO ecosystem firms (systems integrators, engineering consultants, technology suppliers) need authority-first websites: capability credentials, past project portfolio, compliance documentation, and RFP inquiry flows. We build for institutional buyers who research thoroughly before engaging.",
   },
   {
     category: 'local',
-    question: 'How does FactoryJet compare to Kochi and Trivandrum web agencies?',
+    question: "Do you know Thiruvananthapuram's business districts well enough to write relevant copy?",
     answer:
-      "Kochi and Trivandrum web agencies typically charge ₹1,20,000–₹3,50,000 for a comparable project and deliver in 6–16 weeks. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at 60–70% less.",
+      "Yes. We research Thiruvananthapuram's business geography as part of discovery — from Technopark's IT campus at Kazhakuttam and the Pattom government quarter to Kovalam's beach tourism corridor, Vanchiyoor's legal and professional services precinct, and the emerging commercial belt along NH 66. Local specificity in copy and LocalBusiness schema improves relevance for neighbourhood-level searches.",
+  },
+  {
+    category: 'local',
+    question: 'How does FactoryJet compare to Thiruvananthapuram web agencies?',
+    answer:
+      "Thiruvananthapuram and Kochi web agencies typically charge ₹1,20,000–₹3,50,000 for a comparable project and deliver in 6–16 weeks. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at 60–70% less.",
+  },
+  {
+    category: 'local',
+    question: 'Do you build websites for Ayurveda and wellness brands in Thiruvananthapuram?',
+    answer:
+      "Yes. Thiruvananthapuram is one of Kerala's most important Ayurveda and wellness hubs — home to internationally recognised hospitals, Ayurvedic resorts, and traditional vaidya practices. Ayurveda businesses targeting international wellness travellers and medical tourists need gallery-rich mobile-first design, online booking systems, international patient UX, and SEO targeting English-language searches from the US, UK, Germany, and the Gulf.",
   },
 
   /* ── Support & Ownership ── */
@@ -367,7 +381,7 @@ const KOCHI_FAQ_ITEMS = [
   },
   {
     category: 'support',
-    question: 'Do you offer ongoing retainer services for Kochi businesses?',
+    question: 'Do you offer ongoing retainer services for Thiruvananthapuram businesses?',
     answer:
       'Yes. Monthly retainers from ₹4,999/month cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling and a dedicated engineer.',
   },
@@ -375,24 +389,18 @@ const KOCHI_FAQ_ITEMS = [
     category: 'support',
     question: 'Can NRI business owners work with FactoryJet remotely?',
     answer:
-      "Absolutely. Kerala has one of India's largest NRI diaspora communities, and many Kochi businesses are NRI-owned or NRI-funded. Our entire process is remote-first — discovery calls, design previews, approvals, and handover all happen asynchronously or over video. We work across time zones by default.",
-  },
-  {
-    category: 'local',
-    question: 'Do you build websites for Kochi seafood and spice exporters?',
-    answer:
-      'Yes. Kochi is a key hub for Kerala seafood exports (one of India\'s largest seafood export corridors) and spice trade. Export businesses need websites that project certifications, product quality, processing capacity, and cold chain credentials to international buyers. We build B2B export sites with product catalog systems, inquiry forms optimised for global buyer flows, and SEO targeting English-language searches from procurement teams in the US, EU, and Middle East.',
+      "Absolutely. Kerala has one of India's largest NRI diaspora communities, and many Thiruvananthapuram businesses are NRI-owned or NRI-funded. Our entire process is remote-first — discovery calls, design previews, approvals, and handover all happen asynchronously or over video. We work across time zones by default.",
   },
 ];
 
-const KOCHI_COMPARISON_COLUMNS = [
+const TVM_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
-  { label: 'Kochi/Trivandrum Agency' },
+  { label: 'Trivandrum/Kochi Agency' },
   { label: 'Freelancer' },
   { label: 'Template (Wix/Squarespace)' },
 ] as const;
 
-const KOCHI_COMPARISON_ROWS = [
+const TVM_COMPARISON_ROWS = [
   {
     feature: 'Starting price',
     values: ['₹29,999', '₹1,20,000–₹3,50,000', '₹10,000–₹60,000', '₹0–₹15,000 (you build it)'],
@@ -405,7 +413,7 @@ const KOCHI_COMPARISON_ROWS = [
     feature: 'Custom Figma design',
     values: [
       <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="ka" kind="yes" />,
+      <CompareIcon key="ta" kind="yes" />,
       <CompareIcon key="fr" kind="partial" />,
       <CompareIcon key="tp" kind="no" />,
     ],
@@ -414,7 +422,7 @@ const KOCHI_COMPARISON_ROWS = [
     feature: 'Next.js (not WordPress)',
     values: [
       <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="ka" kind="partial" />,
+      <CompareIcon key="ta" kind="partial" />,
       <CompareIcon key="fr" kind="partial" />,
       <CompareIcon key="tp" kind="no" />,
     ],
@@ -423,7 +431,7 @@ const KOCHI_COMPARISON_ROWS = [
     feature: 'Technical SEO built in',
     values: [
       <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="ka" kind="partial" />,
+      <CompareIcon key="ta" kind="partial" />,
       <CompareIcon key="fr" kind="partial" />,
       <CompareIcon key="tp" kind="no" />,
     ],
@@ -432,7 +440,7 @@ const KOCHI_COMPARISON_ROWS = [
     feature: 'Lighthouse 90+ on mobile',
     values: [
       <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="ka" kind="partial" />,
+      <CompareIcon key="ta" kind="partial" />,
       <CompareIcon key="fr" kind="partial" />,
       <CompareIcon key="tp" kind="no" />,
     ],
@@ -441,7 +449,7 @@ const KOCHI_COMPARISON_ROWS = [
     feature: 'GA4 + GTM wired up',
     values: [
       <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="ka" kind="partial" />,
+      <CompareIcon key="ta" kind="partial" />,
       <CompareIcon key="fr" kind="no" />,
       <CompareIcon key="tp" kind="no" />,
     ],
@@ -450,7 +458,7 @@ const KOCHI_COMPARISON_ROWS = [
     feature: 'Published pricing (no surprises)',
     values: [
       <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="ka" kind="no" />,
+      <CompareIcon key="ta" kind="no" />,
       <CompareIcon key="fr" kind="partial" />,
       <CompareIcon key="tp" kind="yes" />,
     ],
@@ -459,7 +467,7 @@ const KOCHI_COMPARISON_ROWS = [
     feature: 'Full codebase to your GitHub',
     values: [
       <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="ka" kind="partial" />,
+      <CompareIcon key="ta" kind="partial" />,
       <CompareIcon key="fr" kind="yes" />,
       <CompareIcon key="tp" kind="no" />,
     ],
@@ -468,7 +476,7 @@ const KOCHI_COMPARISON_ROWS = [
     feature: '7-day delivery guarantee',
     values: [
       <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="ka" kind="no" />,
+      <CompareIcon key="ta" kind="no" />,
       <CompareIcon key="fr" kind="no" />,
       <CompareIcon key="tp" kind="no" />,
     ],
@@ -478,9 +486,9 @@ const KOCHI_COMPARISON_ROWS = [
 const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
-  '@id': `https://factoryjet.com/web-design/kochi#howto`,
-  name: `How FactoryJet builds your Kochi website in 7 days`,
-  description: `Our 7-day process for delivering a professional, AI-powered website for Kochi businesses.`,
+  '@id': `https://factoryjet.com/web-design/thiruvananthapuram#howto`,
+  name: `How FactoryJet builds your Thiruvananthapuram website in 7 days`,
+  description: `Our 7-day process for delivering a professional, AI-powered website for Thiruvananthapuram (Trivandrum) businesses.`,
   estimatedCost: {
     '@type': 'MonetaryAmount',
     currency: 'INR',
@@ -492,13 +500,13 @@ const howToSchema = {
       '@type': 'HowToStep',
       position: 1,
       name: 'Day 1 — Discovery Call',
-      text: `We learn your business, your Kochi market, your goals, and what you need the website to do.`,
+      text: `We learn your business, your Thiruvananthapuram market, your goals, and what you need the website to do.`,
     },
     {
       '@type': 'HowToStep',
       position: 2,
       name: 'Day 2 — Strategy & Structure',
-      text: `We map your site architecture, research your Kochi competitors, identify your top keywords, and write the first draft of your page copy.`,
+      text: `We map your site architecture, research your Trivandrum competitors, identify your top keywords (covering both "Thiruvananthapuram" and "Trivandrum" search terms), and write the first draft of your page copy.`,
     },
     {
       '@type': 'HowToStep',
@@ -510,7 +518,7 @@ const howToSchema = {
       '@type': 'HowToStep',
       position: 4,
       name: 'Days 5–6 — Development & SEO',
-      text: `Your approved design is built in code — fast, mobile-first, and SEO-optimised. Kochi local schema markup added. Google Analytics and Search Console connected.`,
+      text: `Your approved design is built in code — fast, mobile-first, and SEO-optimised. Thiruvananthapuram local schema markup added. Google Analytics and Search Console connected.`,
     },
     {
       '@type': 'HowToStep',
@@ -524,28 +532,28 @@ const howToSchema = {
 const speakableSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  '@id': `https://factoryjet.com/web-design/kochi#webpage`,
+  '@id': `https://factoryjet.com/web-design/thiruvananthapuram#webpage`,
   speakable: {
     '@type': 'SpeakableSpecification',
     cssSelector: ['h1', 'h2:first-of-type'],
   },
-  url: `https://factoryjet.com/web-design/kochi`,
+  url: `https://factoryjet.com/web-design/thiruvananthapuram`,
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Page
 ───────────────────────────────────────────────────────────────────────────── */
 
-export default function KochiWebDesignPage() {
+export default function ThiruvananthapuramWebDesignPage() {
   return (
     <>
       <Script
-        id="kochi-local-business-schema"
+        id="tvm-local-business-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       <Script
-        id="kochi-faq-schema"
+        id="tvm-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
@@ -563,7 +571,7 @@ export default function KochiWebDesignPage() {
         items={[
           { name: 'Home', url: 'https://factoryjet.com' },
           { name: 'Web Design', url: 'https://factoryjet.com/web-design' },
-          { name: 'Kochi', url: 'https://factoryjet.com/web-design/kochi' },
+          { name: 'Thiruvananthapuram', url: 'https://factoryjet.com/web-design/thiruvananthapuram' },
         ]}
       />
 
@@ -571,9 +579,9 @@ export default function KochiWebDesignPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
-          eyebrow="WEB DESIGN · KOCHI"
-          headline="Website Design in Kochi for IT Firms, Tourism Businesses, Exporters, and Kerala's Growing Startups"
-          lead="Kochi is Kerala's Smart City, the engine of India's most internet-literate state, and a city where Infopark's 450+ IT companies, Fort Kochi's tourism economy, a thriving seafood and spice export sector, and a fast-growing startup community all compete for the same digital attention. Kerala has India's highest internet penetration and highest literacy rate — your audience is online, informed, and comparing you against your competitors right now. FactoryJet builds from ₹29,999 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
+          eyebrow="WEB DESIGN · THIRUVANANTHAPURAM"
+          headline="Website Design in Thiruvananthapuram for IT Startups, Government Contractors, ISRO Ecosystem Firms, and Kerala's Capital City Businesses"
+          lead="Thiruvananthapuram — Kerala's capital and India's startup-first city — is home to Technopark (India's first IT park), Kerala Startup Mission HQ, ISRO's Vikram Sarabhai Space Centre, and the nerve centre of state governance. From Technopark's 450+ companies and 75,000+ IT professionals to Kovalam's tourism economy and Thiruvananthapuram's Ayurveda corridor — this city runs on ambition and academic excellence. Businesses here search both 'Thiruvananthapuram' and 'Trivandrum' — FactoryJet targets both. From ₹29,999 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
@@ -595,67 +603,68 @@ export default function KochiWebDesignPage() {
 
         {/* ── 4. CITY CONTEXT ──────────────────────────────────────────────── */}
         <CityContextSection
-          eyebrow="KOCHI MARKET"
-          headline="Why Your Kochi Web Presence Is a Business Asset"
+          eyebrow="THIRUVANANTHAPURAM MARKET"
+          headline="Why Your Thiruvananthapuram Web Presence Is a Business Asset"
           leadParagraphs={[
-            "Kochi is Kerala's commercial capital and the state's digital frontline. Kerala consistently ranks as India's highest internet-penetrated state — with over 54% internet penetration against a national average of 43% — and has India's highest literacy rate at 96.2%. This is not a population that stumbles onto your website by accident. They are researching you, comparing you, and deciding whether to contact you — entirely online. A high-performing website in Kochi is not a nice-to-have; it is the first and most-scrutinised touchpoint in your sales process.",
-            "Kochi's economy is multi-layered. Infopark — one of India's largest IT parks — houses 450+ companies employing over 70,000 professionals and generating billions in annual revenue. The Kerala Startup Mission (KSUM) has supported 5,000+ startups, with Kochi and Thiruvananthapuram as the primary hubs. The Kochi Smart City project and Kochi Metro are accelerating commercial development in Kakkanad and Edapally. Fort Kochi's heritage tourism draws international visitors and high-end NRI-funded hospitality businesses. And the Kochi Port and nearby Cochin Fisheries Harbour make the city a critical hub for seafood, spice, and commodity exports.",
-            "Kerala's large NRI diaspora — over 20 lakh Keralites work abroad, mostly in the Gulf — means many Kochi businesses are NRI-owned or NRI-funded, and expect international-quality web presence as a baseline. A website that looks like it was built in 2015 is not competitive in a market where the business owner has been comparing it against Dubai and London competitors. FactoryJet builds websites that match the ambition of Kochi's most forward-thinking businesses.",
+            "Thiruvananthapuram — known to millions as Trivandrum — is not just Kerala's administrative capital; it is the state's intellectual and startup engine. India's first IT park, Technopark, was established here in 1990 — decades before 'startup ecosystem' was a common phrase. Today it houses 450+ companies employing 75,000+ IT professionals, including global names like Infosys, UST Global, TCS, and IBS Group. Kerala Startup Mission (KSUM) has its headquarters here, having supported 4,500+ startups across the state. ISRO's Vikram Sarabhai Space Centre — one of India's most prestigious research institutions — drives a significant space technology and engineering ecosystem in the city. This is not a city of traders; it is a city of engineers, academics, and institution-builders. And that means the quality bar for digital presence is exceptionally high.",
+            "Thiruvananthapuram's economy spans several completely distinct sectors. The IT and software sector at Technopark and the broader Kazhakuttam corridor competes for international enterprise clients. The government and public sector — Kerala Secretariat, KSITIL, and dozens of state agencies — drives a large ecosystem of contractors and consultants. Tourism anchors around Kovalam beach, the Padmanabhaswamy Temple heritage circuit, and the Kerala backwater gateway. And Thiruvananthapuram's Ayurveda and wellness sector — internationally recognised for authentic traditional practice — attracts medical tourists from Europe, the Gulf, and the US. Each of these sectors requires a completely different web architecture, buyer psychology, and SEO strategy.",
+            "A critical nuance for search: the city is searched as both 'Thiruvananthapuram' (official, formal) and 'Trivandrum' (widely used locally, by NRIs, and in colloquial English). Businesses that target only one variant lose a significant share of search traffic. FactoryJet builds sites that capture both — with dual-keyword coverage in meta tags, body copy, and LocalBusiness schema. Every week without a properly optimised web presence is search traffic conceded to a competitor who already has one.",
           ]}
           stats={[
             {
               value: '450+',
-              label: "IT companies at Infopark Kochi — employing 70,000+ professionals",
-              sourceUrl: 'https://infopark.in/',
-              sourceLabel: 'Infopark Kerala',
+              label: "Companies at Technopark Trivandrum — India's first IT park, employing 75,000+ professionals",
+              sourceUrl: 'https://www.technopark.org/',
+              sourceLabel: 'Technopark Kerala',
             },
             {
-              value: '5,000+',
-              label: "Startups supported by Kerala Startup Mission (KSUM) — Kochi is the primary hub",
+              value: '4,500+',
+              label: "Startups supported by Kerala Startup Mission (KSUM) — HQ in Thiruvananthapuram",
               sourceUrl: 'https://startupmission.kerala.gov.in/',
               sourceLabel: 'Kerala Startup Mission',
             },
             {
-              value: '96.2%',
-              label: "Kerala literacy rate — India's highest. Your customers research extensively before buying.",
-              sourceUrl: 'https://censusindia.gov.in/',
-              sourceLabel: 'Census of India',
+              value: 'VSSC',
+              label: "ISRO's Vikram Sarabhai Space Centre — major employer and space tech ecosystem anchor",
+              sourceUrl: 'https://www.vssc.gov.in/',
+              sourceLabel: 'ISRO VSSC',
             },
           ]}
         />
 
         {/* ── 5. SERVICE EXPLANATION ───────────────────────────────────────── */}
         <ServiceExplanation
-          eyebrow="WEB DESIGN · KOCHI"
-          headline="What 'Web Design' Actually Means for a Kochi Business"
-          lead="Kochi's economy spans IT services, tourism, exports, startups, and a large NRI business community — each with completely different buyer journeys and web strategies. FactoryJet builds for all of them, because we start every project with the buyer journey in mind — not the template."
+          eyebrow="WEB DESIGN · THIRUVANANTHAPURAM"
+          headline="What 'Web Design' Actually Means for a Thiruvananthapuram Business"
+          lead="Thiruvananthapuram's economy runs on four very different buyer profiles — IT enterprise procurement, government contracting, international tourism, and Ayurveda medical tourism. Each needs a completely different web strategy. FactoryJet builds for all of them, because we start every project with the buyer journey in mind — not the template."
           body={
             <>
               <p>
-                For Kochi&apos;s IT and software companies at Infopark — the website needs to
-                project technical capability, team credentials, and past project scope to
-                enterprise procurement teams and international clients. IT services websites
-                need case study architecture, technology stack display, certifications, and
-                lead flows designed for longer B2B sales cycles. We build these sites with
-                authority-first architecture and conversion flows optimised for enterprise RFQ.
+                For IT and software companies at Technopark — the website needs to project
+                technical capability, team credentials, and past project scope to enterprise
+                procurement teams and international clients. These buyers research for weeks.
+                IT services sites need case study architecture, technology stack display,
+                certifications, and lead flows designed for longer B2B sales cycles. Startups
+                backed by KSUM need investor-credibility signals alongside product-led
+                conversion flows.
               </p>
               <p>
-                For tourism and hospitality businesses in Fort Kochi, Kumarakom, and the
-                backwater corridor — the website needs gallery-rich, mobile-first design, fast
-                booking flows, and international buyer UX. Tourism audiences make decisions
-                on emotion and imagery. We build tourism sites that convert research into
-                bookings, with TripAdvisor integration, WhatsApp inquiry flows, and SEO
-                targeting English-language searches from international travellers.
+                For government contractors, ISRO ecosystem firms, and consultants serving
+                Kerala&apos;s public sector — the website is a capability statement.
+                Institutional buyers evaluate credentials, past project portfolio, compliance
+                documentation, and team expertise before issuing RFPs. We build authority-first
+                sites with credentials display and inquiry flows optimised for government
+                procurement research timelines.
               </p>
               <p>
-                For seafood and spice exporters operating through Kochi Port — the challenge
-                is international B2B credibility. Buyers in the US, EU, Japan, and the Middle
-                East research Indian vendors for weeks. Export sites need certifications,
-                product quality documentation, processing capacity display, and frictionless
-                RFQ forms. For NRI-owned businesses and startups emerging from KSUM — the
-                site needs to match the international quality benchmark their owners have
-                experienced abroad. Every FactoryJet Kochi project covers discovery, Figma
-                prototyping, Next.js development, SEO, GA4, and a 30-day support window.
+                For tourism operators along the Kovalam corridor, Ayurveda wellness centres,
+                and hospitality businesses in Thiruvananthapuram — the website is the booking
+                engine. International travellers from Europe, the Gulf, and the US research
+                experiences on mobile, compare galleries, read reviews, and book entirely
+                online. We build gallery-rich, mobile-first sites with fast booking flows
+                and international buyer UX. Every FactoryJet Thiruvananthapuram project
+                covers discovery, Figma prototyping, Next.js development, SEO targeting
+                both city name variants, GA4, and a 30-day support window.
               </p>
             </>
           }
@@ -672,27 +681,27 @@ export default function KochiWebDesignPage() {
               <div className="divide-y divide-fj-neutral-100">
                 {[
                   {
-                    type: 'IT & Software (Infopark)',
+                    type: 'IT & Software (Technopark)',
                     need: 'Credentials + case studies + enterprise RFQ',
-                    area: 'Infopark · Kakkanad · Kochi Smart City',
+                    area: 'Technopark · Kazhakuttam · KSUM',
                     colour: '#F05A28',
+                  },
+                  {
+                    type: 'Government & ISRO Ecosystem',
+                    need: 'Capability statement + RFP inquiry flow',
+                    area: 'Secretariat · VSSC · KSITIL · Pattom',
+                    colour: '#0F0F12',
                   },
                   {
                     type: 'Tourism & Hospitality',
                     need: 'Gallery + booking flow + international UX',
-                    area: 'Fort Kochi · Kumarakom · Alleppey',
-                    colour: '#0F0F12',
-                  },
-                  {
-                    type: 'Export & Trade',
-                    need: 'Certifications + catalog + global buyer RFQ',
-                    area: 'Kochi Port · Willingdon Island · Mattancherry',
+                    area: 'Kovalam · Varkala · Padmanabhaswamy',
                     colour: '#F05A28',
                   },
                   {
-                    type: 'Startup & NRI Business',
-                    need: 'International quality + speed + conversion',
-                    area: 'KSUM · Edapally · MG Road Ernakulam',
+                    type: 'Ayurveda & Wellness',
+                    need: 'Medical credibility + booking + international reach',
+                    area: 'Thiruvananthapuram wellness corridor · NRI & EU travellers',
                     colour: '#0F0F12',
                   },
                 ].map((row) => (
@@ -741,18 +750,18 @@ export default function KochiWebDesignPage() {
         {/* ── 6. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="Why Kochi Businesses Choose FactoryJet Over Local Agencies"
-          lead="Kochi and Trivandrum web agencies typically charge ₹1,20,000–₹3,50,000 for a comparable project and take 6–16 weeks to deliver. Kerala's business community is one of India's most digitally sophisticated — and that means the quality bar is higher, not lower. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. At 60–70% below the Kerala agency benchmark for the same scope."
+          headline="Why Thiruvananthapuram Businesses Choose FactoryJet Over Local Agencies"
+          lead="Thiruvananthapuram and Kochi web agencies typically charge ₹1,20,000–₹3,50,000 for a comparable project and take 6–16 weeks to deliver. Trivandrum's business community — educated, technically literate, and internationally connected — has high standards for digital quality. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. At 60–70% below the Kerala agency benchmark for the same scope."
           pillars={[
             {
               icon: '⚡',
               title: '7-day delivery. In writing. Or you do not pay.',
-              body: "Kerala's business community is fast-moving, informed, and impatient with poor execution. Waiting 12 weeks for a website that should have been live in March is not acceptable when your Infopark competitor already has one. FactoryJet delivers in 7 days, with the guarantee written into the project agreement. We have delivered on time on 97% of all projects since 2005.",
+              body: "Thiruvananthapuram's Technopark companies, government contractors, and startup founders move fast. Waiting 14 weeks for a website that should have been live in April is not acceptable when KSUM's demo day is in three weeks. FactoryJet delivers in 7 days, with the guarantee written into the project agreement. We have delivered on time on 97% of all projects since 2005.",
             },
             {
               icon: '🏗️',
-              title: 'Next.js, not WordPress. Kerala\'s audience notices.',
-              body: "Kerala has India's highest internet penetration — your audience is sophisticated and uses fast mobile connections. WordPress loads server-side PHP and fires 40–60 database queries per page load. Next.js generates static files served from Cloudflare CDN globally. The result: sub-1.5s load times on 4G versus 4–6s for WordPress. For businesses competing on Google's Core Web Vitals, that gap directly affects rankings.",
+              title: "Next.js, not WordPress. Trivandrum's audience notices.",
+              body: "Thiruvananthapuram has India's most technically literate business population — Technopark engineers, ISRO researchers, and KSUM startup founders know exactly what a fast website feels like versus a slow one. WordPress loads server-side PHP and fires 40–60 database queries per page load. Next.js generates static files served from Cloudflare CDN globally. The result: sub-1.5s load times on 4G versus 4–6s for WordPress. That gap is visible to your audience.",
             },
             {
               icon: '📋',
@@ -765,9 +774,9 @@ export default function KochiWebDesignPage() {
         {/* ── 7. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="How We Build Your Kochi Website in 7 Days"
+          headline="How We Build Your Thiruvananthapuram Website in 7 Days"
           lead="Buyer strategy agreed before design. Mobile approval before development. SEO and analytics wired before launch."
-          stages={KOCHI_JOURNEY_STAGES}
+          stages={TVM_JOURNEY_STAGES}
           closingNote="5 STAGES · 7 DAYS · NEXT.JS + CLOUDFLARE · GA4 STANDARD · ZERO DOWNTIME LAUNCH"
         />
 
@@ -811,65 +820,65 @@ export default function KochiWebDesignPage() {
         {/* ── 9. COMPARISON TABLE ──────────────────────────────────────────── */}
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. Kochi/Trivandrum Agency vs. Freelancer vs. Template Builder"
-          lead="Not all web design options in Kerala deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
+          headline="FactoryJet vs. Trivandrum/Kochi Agency vs. Freelancer vs. Template Builder"
+          lead="Not all web design options in Thiruvananthapuram deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
           pullQuote={{
             stat: '₹29,999',
             caption:
-              'starting price — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a ₹2,50,000 Kochi agency project.',
+              'starting price — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a ₹2,50,000 Trivandrum agency project.',
           }}
-          columns={KOCHI_COMPARISON_COLUMNS}
-          rows={KOCHI_COMPARISON_ROWS}
+          columns={TVM_COMPARISON_COLUMNS}
+          rows={TVM_COMPARISON_ROWS}
           footer="Prices reflect typical Kerala market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
         <IndustriesGrid
-          eyebrow="KOCHI × WEB DESIGN"
-          headline="Web Design for Kochi's Key Industries"
-          lead="From IT firms at Infopark and tourism operators in Fort Kochi to seafood exporters at Kochi Port and startups from KSUM — Kochi's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
+          eyebrow="THIRUVANANTHAPURAM × WEB DESIGN"
+          headline="Web Design for Thiruvananthapuram's Key Industries"
+          lead="From IT startups at Technopark and government contractors to Kovalam tourism operators and Ayurveda wellness brands — Thiruvananthapuram's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
           sectors={[
             {
-              name: 'IT & Software Services',
+              name: 'IT & Software (Technopark)',
               description:
-                "Infopark Kochi houses 450+ IT and software companies employing over 70,000 professionals. Kerala's IT sector — ITES, software products, and digital services — is one of India's fastest growing. IT services websites need authority-first architecture: service capability pages, technology stack display, team credentials, case studies, and lead flows designed for enterprise procurement cycles. International clients research for weeks before making contact.",
+                "Technopark — India's first IT park, established in 1990 — houses 450+ companies employing 75,000+ professionals. From global IT giants like Infosys, TCS, and UST Global to ambitious product startups backed by KSUM, Thiruvananthapuram's IT sector is one of India's most established. IT services websites need authority-first architecture: capability pages, technology stack display, case studies, team credentials, and lead flows designed for enterprise procurement cycles. International clients research for weeks before engaging.",
               example:
-                'Software development companies, ITES firms, SaaS product startups, and digital agencies operating from Infopark and Kakkanad.',
+                'Software development companies, ITES firms, SaaS product startups, and digital agencies operating from Technopark campus and the Kazhakuttam corridor.',
+            },
+            {
+              name: 'Government & Public Sector',
+              description:
+                "Thiruvananthapuram hosts the Kerala Secretariat, all major state government departments, KSITIL (Kerala State IT Infrastructure Ltd), and the headquarters of dozens of public sector undertakings. This creates a large ecosystem of government contractors, systems integrators, engineering consultants, and technology suppliers. These businesses need websites that function as institutional capability statements — past project portfolio, team credentials, compliance documentation, and RFP inquiry flows.",
+              example:
+                'Government IT contractors, systems integrators, engineering consultants, and professional services firms serving Kerala public sector organisations.',
+            },
+            {
+              name: 'ISRO & Space Tech Ecosystem',
+              description:
+                "ISRO's Vikram Sarabhai Space Centre (VSSC) in Thiruvananthapuram is one of India's most important space research and launch vehicle development centres. VSSC anchors a significant ecosystem of engineering firms, technology suppliers, precision manufacturers, and research institutions. Businesses in this ecosystem need websites that convey technical excellence, certifications, and institutional credibility — not consumer-facing design.",
+              example:
+                "Engineering firms, precision technology suppliers, testing laboratories, and research organisations serving ISRO and India's space technology sector.",
             },
             {
               name: 'Tourism & Hospitality',
               description:
-                "Kochi is the gateway to Kerala — one of India's top domestic and international tourism destinations. Fort Kochi's heritage quarter, the backwater houseboat network from Alappuzha, Munnar's hill stations, and Kochi's international cruise terminal together attract millions of visitors annually. Tourism businesses need gallery-rich mobile-first design, booking engine integration, TripAdvisor review display, and international buyer UX with multi-currency support.",
+                "Thiruvananthapuram is Kerala's tourism gateway — home to Kovalam beach (one of India's most famous international beach destinations), the Padmanabhaswamy Temple heritage circuit, and the southern backwaters near Varkala. Tourism businesses serve a demanding mix of domestic travellers, international leisure tourists, and NRI families visiting from the Gulf and Europe. Tourism sites need gallery-rich mobile-first design, fast booking flows, WhatsApp inquiry integration, and international buyer UX.",
               example:
-                'Heritage homestays and boutique hotels in Fort Kochi, backwater houseboat operators, Ayurvedic resorts, and inbound tourism agencies.',
+                "Beach resorts, heritage homestays, tour operators, and travel agencies operating in and around Kovalam, Varkala, and Thiruvananthapuram's heritage zone.",
             },
             {
-              name: 'Seafood & Spice Exports',
+              name: 'Ayurveda & Wellness',
               description:
-                "Kochi is one of India's most important seafood export hubs — the Cochin Fisheries Harbour handles thousands of tonnes of processed seafood annually for markets in the US, EU, Japan, and Southeast Asia. Kerala's spice trade (pepper, cardamom, ginger) runs through Kochi's commodity markets. Export businesses need certifications display, product quality documentation, cold chain credentials, and B2B inquiry flows targeting international procurement buyers.",
+                "Thiruvananthapuram is one of Kerala's most important authentic Ayurveda destinations — home to internationally recognised hospitals, traditional vaidya practices, and wellness retreats attracting medical tourists from Europe, the Gulf, and the US. Ayurveda businesses competing for international clients need gallery-rich design, multi-language consideration, online booking systems, doctor and treatment credentials display, and SEO targeting English-language searches from international travellers.",
               example:
-                'Seafood processing and export companies, spice exporters, and commodity traders operating through Kochi Port and Willingdon Island.',
+                'Ayurvedic hospitals, wellness retreats, traditional vaidya practices, and Panchakarma centres targeting domestic and international medical tourism patients.',
             },
             {
-              name: 'Fintech & Startups',
+              name: 'Education & Professional Services',
               description:
-                "Kerala Startup Mission (KSUM) has supported 5,000+ startups, with Kochi as the primary commercial hub. KSUM's T-Hub, Maker Village, and Startup Village ecosystems are producing fintech, edtech, agritech, and D2C startups at an accelerating rate. Startup websites need product-led architecture, investor credibility signals, demo request flows, and performance designed for rapid iteration and fundraise timelines.",
+                "Thiruvananthapuram hosts the College of Engineering Trivandrum (est. 1939), Kerala University, and dozens of professional colleges. The city's educated workforce supports a strong CA, legal, and consulting ecosystem. Professional services firms need authority-first sites that project credibility to institutional clients — credentials display, service capability pages, team profiles, and lead-capture flows that convert research into booked consultations.",
               example:
-                "Tech startups, fintech companies, SaaS products, and D2C brands emerging from Kochi's KSUM and private startup ecosystem.",
-            },
-            {
-              name: 'Healthcare & Wellness',
-              description:
-                "Kerala is India's healthcare tourism leader — with internationally accredited hospitals in Kochi and a globally recognised Ayurveda sector. Hospitals, specialty clinics, and Ayurvedic wellness centres serve a demanding mix of domestic patients, Gulf NRI medical tourists, and international wellness travellers. Healthcare websites need NABH credential display, doctor profile pages, appointment booking systems, and international patient UX.",
-              example:
-                'Multi-specialty hospitals, Ayurvedic resorts and clinics, dental chains, and wellness centres targeting domestic and international patients.',
-            },
-            {
-              name: 'NRI Business & Professional Services',
-              description:
-                "Kerala's NRI diaspora — over 20 lakh Keralites working abroad, primarily in the Gulf — creates a distinctive business category: NRI-owned companies that require international-quality web presence as a baseline expectation. CA firms, real estate developers, legal practices, and professional services businesses serving Kochi's NRI community need authority-first sites with professional credential display, service capability pages, and lead-capture flows that convert international enquiries.",
-              example:
-                'CA and CS firms, real estate developers, corporate law practices, and professional services firms serving Kochi and the NRI community.',
+                "CA and CS firms, corporate law practices, management consultants, and HR firms serving Thiruvananthapuram's government, IT, and business community.",
             },
           ]}
         />
@@ -878,14 +887,14 @@ export default function KochiWebDesignPage() {
         <div id="pricing">
           <PricingTiers
             eyebrow="TRANSPARENT PRICING"
-            headline="Transparent, Fixed-Price Web Design for Kochi Businesses"
+            headline="Transparent, Fixed-Price Web Design for Thiruvananthapuram Businesses"
             lead="Kerala agency rates for comparable web projects run ₹1,20,000–₹3,50,000. FactoryJet Growth (₹80,000) delivers 10–15 pages, blog CMS, lead capture, GA4, Next.js, and a 7-day delivery guarantee — with a codebase you own outright."
             tiers={[
               {
                 name: 'Starter',
                 priceRange: '₹29,999',
                 description:
-                  'A 5-page business site that loads fast on mobile and ranks for your name and core service. Best for small businesses, tourism operators, and sole practitioners in Kochi who need a credible online presence quickly.',
+                  'A 5-page business site that loads fast on mobile and ranks for your name and core service. Best for small businesses, tourism operators, and sole practitioners in Thiruvananthapuram who need a credible online presence quickly.',
                 features: [
                   '5 pages, mobile-responsive',
                   'Basic SEO & LocalBusiness schema',
@@ -900,7 +909,7 @@ export default function KochiWebDesignPage() {
                 name: 'Growth',
                 priceRange: '₹80,000',
                 description:
-                  'A 10–15 page site with blog CMS, lead-capture flows, and analytics wired in from day one. Best for Kochi IT companies, exporters, and SMBs scaling online who need the site to actively generate qualified enquiries.',
+                  'A 10–15 page site with blog CMS, lead-capture flows, and analytics wired in from day one. Best for Technopark IT companies, government contractors, and SMBs in Thiruvananthapuram scaling online who need the site to actively generate qualified enquiries.',
                 features: [
                   '10–15 pages with blog CMS',
                   'Advanced SEO — schema, meta templates, internal links',
@@ -916,12 +925,12 @@ export default function KochiWebDesignPage() {
                 name: 'Custom',
                 priceRange: '₹1,50,000+',
                 description:
-                  'Custom Next.js build with booking systems, product catalogs, AI integrations, or API connections. Best for established Kochi businesses — Infopark IT firms, tourism operators, exporters — with complex requirements and a real digital revenue line.',
+                  'Custom Next.js build with booking systems, product catalogs, AI integrations, or API connections. Best for established Thiruvananthapuram businesses — IT firms, Ayurveda resorts, government contractors — with complex requirements and a real digital revenue line.',
                 features: [
                   'Custom Next.js architecture',
                   'Booking systems or e-commerce (Razorpay, Shiprocket)',
                   'AI integrations (chat, search, content)',
-                  'Third-party API connections (Zoho, Tally, tourism platforms)',
+                  'Third-party API connections (Zoho, Tally, government portals)',
                   'Priority support + quarterly reviews',
                   'Dedicated engineering point of contact',
                 ],
@@ -941,18 +950,18 @@ export default function KochiWebDesignPage() {
         {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Common Questions from Kochi Businesses"
-          lead="The questions we answer on every Kochi discovery call — answered here, without the runaround."
-          categories={KOCHI_FAQ_CATEGORIES}
-          items={KOCHI_FAQ_ITEMS}
+          headline="Common Questions from Thiruvananthapuram Businesses"
+          lead="The questions we answer on every Trivandrum discovery call — answered here, without the runaround."
+          categories={TVM_FAQ_CATEGORIES}
+          items={TVM_FAQ_ITEMS}
         />
 
         {/* ── 14. FINAL CTA (DARK) ─────────────────────────────────────────── */}
         <FinalCTA
           variant="dark"
           eyebrow="READY TO START"
-          headline="Ready to Build Your Kochi Website?"
-          sub="Kochi's IT companies, tourism operators, export businesses, and startups are all competing for the same Google rankings and the same first impressions from a digital audience that is more informed than anywhere else in India. Kerala has India's highest internet penetration and literacy rate — your audience is researching you right now. Every week without a high-performing website is ground you are conceding to a competitor who already has one. Start today and have a sitemap ready within 72 hours."
+          headline="Ready to Build Your Thiruvananthapuram Website?"
+          sub="Thiruvananthapuram's IT companies, government contractors, ISRO ecosystem firms, tourism operators, and Ayurveda businesses are all competing for the same Google rankings and the same first impressions from a digitally sophisticated audience. Kerala has India's highest internet penetration and literacy rate — your ideal customer is researching you right now, comparing your site against every competitor in the city. Whether they search 'Thiruvananthapuram' or 'Trivandrum', FactoryJet makes sure they find you. Every week without a high-performing website is ground you are conceding. Start today and have a sitemap ready within 72 hours."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
           objectionHandler="Fixed price. 7-day delivery. Next.js. Your codebase delivered in full on launch day."

@@ -38,9 +38,13 @@ const INDIA_WEB_DESIGN_CITIES = [
   'kolkata',
   'madurai',
   'mumbai',
+  'nagpur',
   'noida',
   'pune',
+  'rajkot',
   'surat',
+  'thiruvananthapuram',
+  'vadodara',
   'visakhapatnam',
 ] as const
 
@@ -83,7 +87,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${SITE_URL}/shopify-development`,
-      lastModified: getFileLastMod('src/app/services/shopify-development/page.tsx'),
+      lastModified: getFileLastMod('src/app/shopify-development/page.tsx'),
       changeFrequency: CHANGEFREQ.service as ChangeFreq,
       priority: PRIORITY.service,
     },
