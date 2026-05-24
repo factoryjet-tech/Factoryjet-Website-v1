@@ -75,7 +75,7 @@ export const POSTS: BlogPost[] = [
     description: "A ₹10,000 website looks affordable until it costs you leads and rankings. Learn what Indian businesses actually lose — and what a proper site costs to build in 2026."
   },
   readTime: '12 min read',
-  imageUrl: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=2000',
+  imageUrl: '/blog-images/hidden-cost-of-cheap-websites-india.webp',
 
   keyTakeaways: [
     "Low-cost templates skip proper SEO structure, semantic HTML, and schema — making it harder for Google to index and rank your pages.",
@@ -274,7 +274,7 @@ export const POSTS: BlogPost[] = [
   author: 'Bhavesh Barot',
   date: 'Oct 22, 2024',
   readTime: '10 min read',
-  imageUrl: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=2000',
+  imageUrl: '/blog-images/react-vs-wordpress.webp',
   meta: {
     title: "React vs WordPress: Which Is Better in 2026?",
     description: "Compare React vs WordPress for performance, SEO, cost, and scalability. Find out which platform is right for your business in our 2026 expert guide."
@@ -553,7 +553,7 @@ export const POSTS: BlogPost[] = [
   author: 'Bhavesh Barot',
   date: 'Oct 20, 2024',
   readTime: '8 min read',
-  imageUrl: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=2000',
+  imageUrl: '/blog-images/website-redesign-checklist-2026.webp',
   keyTakeaways: [
     "Review Core Web Vitals and page speed before planning any redesign work.",
     "Preserve existing SEO value by mapping and redirecting all important URLs.",
@@ -684,7 +684,7 @@ export const POSTS: BlogPost[] = [
   author: 'Bhavesh Barot',
   date: 'Oct 18, 2024',
   readTime: '7 min read',
-  imageUrl: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=2000',
+  imageUrl: '/blog-images/b2b-web-design-trust-signals.webp',
   keyTakeaways: [
     "Certifications and compliance badges should be visible without scrolling.",
     "Real images of teams, offices, and factories build far more trust than stock photos.",
@@ -821,7 +821,7 @@ export const POSTS: BlogPost[] = [
   author: 'Bhavesh Barot',
   date: 'Oct 15, 2024',
   readTime: '6 min read',
-  imageUrl: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=2000',
+  imageUrl: '/blog-images/mobile-only-design-strategy.webp',
   keyTakeaways: [
     "Mobile-only design means building for phones first, not shrinking desktop layouts later.",
     "Navigation must be reachable using one hand — thumb zone placement beats top nav.",
@@ -958,7 +958,7 @@ export const POSTS: BlogPost[] = [
   author: 'Bhavesh Barot',
   date: 'Oct 12, 2024',
   readTime: '15 min read',
-  imageUrl: 'https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&q=80&w=2000',
+  imageUrl: '/blog-images/shopify-vs-woocommerce-india-comparison.webp',
   keyTakeaways: [
     "Shopify allows fast launches but ongoing transaction costs increase as revenue grows.",
     "WooCommerce offers flexibility and control but requires technical maintenance.",
@@ -1117,7 +1117,7 @@ export const POSTS: BlogPost[] = [
   author: 'Bhavesh Barot',
   date: 'Oct 10, 2024',
   readTime: '8 min read',
-  imageUrl: 'https://images.unsplash.com/photo-1555421689-d68471e189f2?auto=format&fit=crop&q=80&w=2000',
+  imageUrl: '/blog-images/reduce-cart-abandonment-ui-ux.webp',
   keyTakeaways: [
     "Guest checkout reduces friction and removes unnecessary decision making.",
     "Showing full costs early builds trust and reduces last step exits.",
@@ -1282,7 +1282,7 @@ export const POSTS: BlogPost[] = [
   author: 'Bhavesh Barot',
   date: 'Oct 08, 2024',
   readTime: '10 min read',
-  imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000',
+  imageUrl: '/blog-images/scaling-ecommerce-infrastructure.webp',
   keyTakeaways: [
     "Cloud infrastructure allows systems to scale automatically during demand surges.",
     "Caching layers reduce database load and improve response times.",
@@ -1449,7 +1449,7 @@ export const POSTS: BlogPost[] = [
   author: 'Bhavesh Barot',
   date: 'Oct 05, 2024',
   readTime: '7 min read',
-  imageUrl: 'https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&q=80&w=2000',
+  imageUrl: '/blog-images/quick-commerce-app-design-trends.webp',
   meta: {
     title: "Quick Commerce App Design: UI Patterns Winning India's 10-Minute Delivery Race (2026)",
     description: "UI patterns, speed benchmarks, and design principles that convert in India's hypercompetitive quick commerce market. Blinkit, Zepto, Swiggy Instamart analysis.",
@@ -1632,7 +1632,7 @@ export const POSTS: BlogPost[] = [
   author: 'Bhavesh Barot',
   date: 'Oct 03, 2024',
   readTime: '9 min read',
-  imageUrl: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&q=80&w=2000',
+  imageUrl: '/blog-images/best-payment-gateway-india-2026.webp',
   keyTakeaways: [
     "Razorpay performs well for Indian cards and net banking.",
     "Stripe is suitable for international and export focused businesses.",
@@ -1799,7 +1799,7 @@ export const POSTS: BlogPost[] = [
   author: 'Bhavesh Barot',
   date: 'Oct 01, 2024',
   readTime: '11 min read',
-  imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2000',
+  imageUrl: '/blog-images/wordpress-security-audit-guide.webp',
   meta: {
     title: "How WordPress Sites Get Hacked — And How to Stop It Before It Happens",
     description: "The exact vulnerabilities hackers exploit in WordPress sites — outdated plugins, weak credentials, shared hosting — and the fixes that prevent 90% of successful attacks.",
@@ -1996,7 +1996,7 @@ export const POSTS: BlogPost[] = [
   author: 'Bhavesh Barot',
   date: 'Sep 28, 2024',
   readTime: '6 min read',
-  imageUrl: 'https://images.unsplash.com/photo-1504384308090-c54be3855833?auto=format&fit=crop&q=80&w=2000',
+  imageUrl: '/blog-images/importance-of-website-maintenance-seo.webp',
   keyTakeaways: [
     "Regular content updates signal relevance and activity to search engines.",
     "Broken links and outdated pages slowly reduce domain trust.",
@@ -2159,7 +2159,7 @@ export const POSTS: BlogPost[] = [
   author: 'Bhavesh Barot',
   date: 'Sep 25, 2024',
   readTime: '9 min read',
-  imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2000',
+  imageUrl: '/blog-images/core-web-vitals-optimization-service.webp',
   meta: {
     title: "Core Web Vitals 2026: The Only Metrics That Actually Affect Your Google Rankings",
     description: "LCP, CLS, INP explained in plain English — plus the actionable fixes that actually move your Core Web Vitals score and improve your search rankings.",
@@ -2371,7 +2371,7 @@ export const POSTS: BlogPost[] = [
   author: 'Bhavesh Barot',
   date: 'Sep 22, 2024',
   readTime: '7 min read',
-  imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=2000',
+  imageUrl: '/blog-images/cost-of-website-downtime-calculator.webp',
   meta: {
     title: "Website Downtime Cost Calculator: What Every Hour Offline Costs Your Business",
     description: "Calculate your real downtime cost per hour — lost revenue, customer trust damage, SEO impact — and see what a proper maintenance contract actually saves you annually.",
@@ -2556,7 +2556,7 @@ export const POSTS: BlogPost[] = [
   author: 'Bhavesh Barot',
   date: 'Sep 20, 2024',
   readTime: '8 min read',
-  imageUrl: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=2000',
+  imageUrl: '/blog-images/wordpress-speed-optimization-plugin-audit.webp',
   meta: {
     title: "WordPress Running Slow? How Plugin Bloat Kills Your Site Speed (And How to Fix It)",
     description: "The audit process to identify bloated plugins, deactivate safely, and cut your WordPress load time in half — without breaking your site.",
@@ -2813,7 +2813,7 @@ export const POSTS: BlogPost[] = [
   author: 'Bhavesh Barot',
   date: 'Sep 18, 2024',
   readTime: '10 min read',
-  imageUrl: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=2000',
+  imageUrl: '/blog-images/aio-artificial-intelligence-optimization-guide.webp',
   meta: {
     title: "AI Search Optimization (AIO): How to Rank on ChatGPT, Perplexity & Google AI in 2026",
     description: "How to structure your content so ChatGPT, Perplexity, and Google AI Overviews cite your brand in generated answers — with practical schema and content strategies.",
@@ -2980,7 +2980,7 @@ export const POSTS: BlogPost[] = [
   author: 'Bhavesh Barot',
   date: 'Sep 15, 2024',
   readTime: '12 min read',
-  imageUrl: 'https://images.unsplash.com/photo-1558494949-ef526b0042a0?auto=format&fit=crop&q=80&w=2000',
+  imageUrl: '/blog-images/headless-commerce-pros-cons.webp',
   keyTakeaways: [
     "Headless commerce separates presentation from backend logic using APIs.",
     "It enables faster experiences and greater design control across devices.",
@@ -3230,7 +3230,7 @@ export const POSTS: BlogPost[] = [
   author: 'Bhavesh Barot',
   date: 'Sep 12, 2024',
   readTime: '8 min read',
-  imageUrl: 'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=2000',
+  imageUrl: '/blog-images/local-seo-multi-location-business.webp',
   keyTakeaways: [
     "Each location needs its own dedicated and meaningful landing page.",
     "Hreflang tags help search engines serve the correct regional version.",
@@ -3407,7 +3407,7 @@ export const POSTS: BlogPost[] = [
   author: 'Bhavesh Barot',
   date: 'Sep 10, 2024',
   readTime: '7 min read',
-  imageUrl: 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=2000',
+  imageUrl: '/blog-images/color-psychology-web-design-india.webp',
   meta: {
     title: "Color Psychology in Indian E-Commerce: Which Colors Drive More Conversions",
     description: "Research-backed color psychology for Indian e-commerce — what converts in fashion, FMCG, jewellery, and food. Includes Flipkart, Meesho, and Nykaa analysis.",
@@ -3675,7 +3675,7 @@ export const POSTS: BlogPost[] = [
   author: 'Bhavesh Barot',
   date: 'Sep 08, 2024',
   readTime: '9 min read',
-  imageUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=2000',
+  imageUrl: '/blog-images/mvp-development-strategy-startups.webp',
   meta: {
     title: "Why Startups Should Start With Low-Code (And When to Go Custom)",
     description: "When Bubble, Webflow, or Shopify beats custom code — and the 3 clear signals that tell you it's time to go full custom. With real startup examples.",

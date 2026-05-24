@@ -32,10 +32,10 @@ const App: React.FC = () => {
             The FactoryJet Journal
           </p>
           <h1 className="font-display font-bold text-3xl md:text-5xl lg:text-6xl text-gray-900 mb-4 md:mb-6 leading-tight">
-            Insights for the <span className="text-[#F05A28]">Modern Manufacturer</span>
+            Web &amp; Digital Insights for <span className="text-[#F05A28]">Growing Brands</span>
           </h1>
           <p className="text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-2xl">
-            Strategies, trends, and success stories to help you scale your manufacturing business in the digital age.
+            Expert strategies on web design, e-commerce, AI, and digital growth for SMBs across India and the US.
           </p>
         </div>
       </header>

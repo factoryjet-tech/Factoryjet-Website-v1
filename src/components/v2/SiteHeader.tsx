@@ -28,6 +28,8 @@ import {
   GitBranch,
   Headphones,
   CalendarClock,
+  Workflow,
+  LayoutTemplate,
 } from 'lucide-react';
 import { useContactModal } from '../../context/ContactModalContext';
 import type { ModalRegion } from '../../context/ContactModalContext';
@@ -70,10 +72,12 @@ const US_LOCATIONS = [
 // ─── India nav data ───────────────────────────────────────────────────────────
 
 const IN_WEB_SERVICES = [
-  { icon: Globe,        label: 'Web Design',          href: '/web-design',                     desc: 'Custom, conversion-focused sites' },
-  { icon: ShoppingCart, label: 'E-Commerce',           href: '/services/ecommerce-development', desc: 'End-to-end online stores' },
-  { icon: ShoppingBag,  label: 'Shopify Development',  href: '/shopify-development',            desc: 'Custom storefronts & themes' },
-  { icon: MessageSquare, label: 'WhatsApp Chatbot',   href: '/whatsapp-chatbot/',              desc: 'Automate orders, leads & support' },
+  { icon: Globe,          label: 'Web Design',          href: '/web-design',                     desc: 'Custom, conversion-focused sites' },
+  { icon: LayoutTemplate, label: 'WordPress',           href: '/wordpress-development',          desc: 'Custom WP sites & plugins' },
+  { icon: ShoppingCart,   label: 'E-Commerce',          href: '/services/ecommerce-development', desc: 'End-to-end online stores' },
+  { icon: ShoppingBag,    label: 'Shopify Development', href: '/shopify-development',            desc: 'Custom storefronts & themes' },
+  { icon: Workflow,       label: 'n8n Automation',      href: '/n8n-automation',                 desc: 'No-code workflow automation' },
+  { icon: MessageSquare,  label: 'WhatsApp Chatbot',    href: '/whatsapp-chatbot/',              desc: 'Automate orders, leads & support' },
 ] as const;
 
 // Hub page href used in both desktop mega and mobile drawer
@@ -90,19 +94,43 @@ const IN_AI_AGENTS = [
   { icon: CalendarClock, label: 'AI Scheduling Agent',    href: '/services/ai-agent-development/ai-scheduling-agent',    desc: 'Smart bookings & calendar' },
 ] as const;
 
+// Regional groupings for the 3-column mega Locations panel (India)
+const IN_LOCATIONS_WEST = [
+  { label: 'Mumbai',    state: 'MH', href: '/web-design/mumbai' },
+  { label: 'Pune',      state: 'MH', href: '/web-design/pune' },
+  { label: 'Ahmedabad', state: 'GJ', href: '/web-design/ahmedabad' },
+  { label: 'Surat',     state: 'GJ', href: '/web-design/surat' },
+  { label: 'Vadodara',  state: 'GJ', href: '/web-design/vadodara' },
+  { label: 'Rajkot',    state: 'GJ', href: '/web-design/rajkot' },
+  { label: 'Indore',    state: 'MP', href: '/web-design/indore' },
+] as const;
+
+const IN_LOCATIONS_SOUTH = [
+  { label: 'Bangalore',         state: 'KA', href: '/web-design/bangalore' },
+  { label: 'Chennai',           state: 'TN', href: '/web-design/chennai' },
+  { label: 'Hyderabad',         state: 'TS', href: '/web-design/hyderabad' },
+  { label: 'Kochi',             state: 'KL', href: '/web-design/kochi' },
+  { label: 'Coimbatore',        state: 'TN', href: '/web-design/coimbatore' },
+  { label: 'Madurai',           state: 'TN', href: '/web-design/madurai' },
+  { label: 'Visakhapatnam',     state: 'AP', href: '/web-design/visakhapatnam' },
+  { label: 'Nagpur',            state: 'MH', href: '/web-design/nagpur' },
+  { label: 'Thiruvananthapuram',state: 'KL', href: '/web-design/thiruvananthapuram' },
+] as const;
+
+const IN_LOCATIONS_NORTH_EAST = [
+  { label: 'Delhi',        state: 'DL', href: '/web-design/delhi' },
+  { label: 'Noida',        state: 'UP', href: '/web-design/noida' },
+  { label: 'Gurgaon',      state: 'HR', href: '/web-design/gurgaon' },
+  { label: 'Jaipur',       state: 'RJ', href: '/web-design/jaipur' },
+  { label: 'Kolkata',      state: 'WB', href: '/web-design/kolkata' },
+  { label: 'Bhubaneswar',  state: 'OD', href: '/web-design/bhubaneswar' },
+] as const;
+
+// Flat array kept for mobile drawer (renders a simple list)
 const IN_LOCATIONS = [
-  { label: 'Mumbai',         state: 'MH', href: '/web-design/mumbai' },
-  { label: 'Delhi',          state: 'DL', href: '/web-design/delhi' },
-  { label: 'Bangalore',      state: 'KA', href: '/web-design/bangalore' },
-  { label: 'Chennai',        state: 'TN', href: '/web-design/chennai' },
-  { label: 'Hyderabad',      state: 'TS', href: '/web-design/hyderabad' },
-  { label: 'Pune',           state: 'MH', href: '/web-design/pune' },
-  { label: 'Ahmedabad',      state: 'GJ', href: '/web-design/ahmedabad' },
-  { label: 'Surat',          state: 'GJ', href: '/web-design/surat' },
-  { label: 'Indore',         state: 'MP', href: '/web-design/indore' },
-  { label: 'Kolkata',        state: 'WB', href: '/web-design/kolkata' },
-  { label: 'Jaipur',         state: 'RJ', href: '/web-design/jaipur' },
-  { label: 'Kochi',          state: 'KL', href: '/web-design/kochi' },
+  ...IN_LOCATIONS_WEST,
+  ...IN_LOCATIONS_SOUTH,
+  ...IN_LOCATIONS_NORTH_EAST,
 ] as const;
 
 // ─── UAE nav data ─────────────────────────────────────────────────────────────
@@ -344,7 +372,7 @@ export default function SiteHeader({
 
                 {openDropdown === 'services' && (
                   <div
-                    className="absolute left-0 top-full pt-2.5"
+                    className="absolute left-0 top-full z-50 pt-2.5"
                     onMouseEnter={keepOpen}
                     onMouseLeave={scheduleClosed}
                     role="menu"
@@ -360,39 +388,59 @@ export default function SiteHeader({
                             <p className="mb-2.5 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
                               Web Services
                             </p>
+                            {/* Web Design */}
                             <ServiceCard
                               icon={IN_WEB_SERVICES[0].icon}
                               label={IN_WEB_SERVICES[0].label}
                               href={IN_WEB_SERVICES[0].href}
                               desc={IN_WEB_SERVICES[0].desc}
                             />
-                            <div className="my-2.5 border-t border-fj-neutral-100" />
-                            <p className="mb-1.5 px-2.5 font-fj-mono text-[9.5px] font-semibold uppercase tracking-[0.12em] text-fj-neutral-300">
-                              E-Commerce
-                            </p>
+                            {/* WordPress */}
                             <ServiceCard
                               icon={IN_WEB_SERVICES[1].icon}
                               label={IN_WEB_SERVICES[1].label}
                               href={IN_WEB_SERVICES[1].href}
                               desc={IN_WEB_SERVICES[1].desc}
                             />
-                            <div className="ml-3 mt-0.5 border-l-2 border-[#F05A28]/30 pl-1">
-                              <ServiceCard
-                                icon={IN_WEB_SERVICES[2].icon}
-                                label={IN_WEB_SERVICES[2].label}
-                                href={IN_WEB_SERVICES[2].href}
-                                desc={IN_WEB_SERVICES[2].desc}
-                              />
-                            </div>
+
                             <div className="my-2.5 border-t border-fj-neutral-100" />
                             <p className="mb-1.5 px-2.5 font-fj-mono text-[9.5px] font-semibold uppercase tracking-[0.12em] text-fj-neutral-300">
-                              Messaging
+                              E-Commerce
                             </p>
+                            {/* E-Commerce */}
                             <ServiceCard
-                              icon={IN_WEB_SERVICES[3].icon}
-                              label={IN_WEB_SERVICES[3].label}
-                              href={IN_WEB_SERVICES[3].href}
-                              desc={IN_WEB_SERVICES[3].desc}
+                              icon={IN_WEB_SERVICES[2].icon}
+                              label={IN_WEB_SERVICES[2].label}
+                              href={IN_WEB_SERVICES[2].href}
+                              desc={IN_WEB_SERVICES[2].desc}
+                            />
+                            {/* Shopify — indented as sub-service */}
+                            <div className="ml-3 mt-0.5 border-l-2 border-[#F05A28]/30 pl-1">
+                              <ServiceCard
+                                icon={IN_WEB_SERVICES[3].icon}
+                                label={IN_WEB_SERVICES[3].label}
+                                href={IN_WEB_SERVICES[3].href}
+                                desc={IN_WEB_SERVICES[3].desc}
+                              />
+                            </div>
+
+                            <div className="my-2.5 border-t border-fj-neutral-100" />
+                            <p className="mb-1.5 px-2.5 font-fj-mono text-[9.5px] font-semibold uppercase tracking-[0.12em] text-fj-neutral-300">
+                              Automation &amp; Messaging
+                            </p>
+                            {/* n8n Automation */}
+                            <ServiceCard
+                              icon={IN_WEB_SERVICES[4].icon}
+                              label={IN_WEB_SERVICES[4].label}
+                              href={IN_WEB_SERVICES[4].href}
+                              desc={IN_WEB_SERVICES[4].desc}
+                            />
+                            {/* WhatsApp Chatbot */}
+                            <ServiceCard
+                              icon={IN_WEB_SERVICES[5].icon}
+                              label={IN_WEB_SERVICES[5].label}
+                              href={IN_WEB_SERVICES[5].href}
+                              desc={IN_WEB_SERVICES[5].desc}
                             />
                           </div>
 
@@ -621,31 +669,119 @@ export default function SiteHeader({
 
                 {openDropdown === 'locations' && (
                   <div
-                    className="absolute left-0 top-full pt-2.5"
+                    className="absolute left-0 top-full z-50 pt-2.5"
                     onMouseEnter={keepOpen}
                     onMouseLeave={scheduleClosed}
                     role="menu"
                   >
-                    <div className="w-[300px] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white p-5 shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
-                      <p className="mb-3 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
-                        {cfg.locationsLabel}
-                      </p>
-                      <div className="grid grid-cols-2 gap-1">
-                        {cfg.locations.map((loc) => (
+                    {locale === 'in' ? (
+
+                      /* ── India: Regional 3-column mega locations panel ──── */
+                      <div className="w-[620px] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
+                        {/* Header row */}
+                        <div className="flex items-center justify-between border-b border-fj-neutral-100 px-5 py-3">
+                          <p className="font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
+                            Indian Cities We Serve
+                          </p>
                           <Link
-                            key={`${loc.href}-${loc.label}`}
-                            href={loc.href}
-                            className="group flex items-center gap-2 rounded-lg px-2.5 py-2 transition-colors hover:bg-[#F05A28]/5"
+                            href="/web-design"
+                            className="flex items-center gap-1 font-fj-body text-[11.5px] font-semibold text-[#F05A28] transition-opacity hover:opacity-75"
                           >
-                            <MapPin size={11} strokeWidth={2} className="flex-shrink-0 text-fj-neutral-300 transition-colors group-hover:text-[#F05A28]" />
-                            <span className="font-fj-body text-[13px] text-fj-ink transition-colors group-hover:text-[#F05A28]">
-                              {loc.label}
-                              <span className="ml-1 text-[11px] text-fj-neutral-400">{loc.state}</span>
-                            </span>
+                            View all 22 cities <ArrowRight size={11} strokeWidth={2.5} />
                           </Link>
-                        ))}
+                        </div>
+
+                        {/* 3-column regional grid */}
+                        <div className="grid grid-cols-3 divide-x divide-fj-neutral-100 p-2">
+
+                          {/* West & Central */}
+                          <div className="px-3 py-2">
+                            <p className="mb-2 px-1.5 font-fj-mono text-[9px] font-bold uppercase tracking-[0.18em] text-fj-neutral-300">
+                              West &amp; Central
+                            </p>
+                            {IN_LOCATIONS_WEST.map((loc) => (
+                              <Link
+                                key={loc.href}
+                                href={loc.href}
+                                className="group flex items-center gap-2 rounded-lg px-1.5 py-1.5 transition-colors hover:bg-[#F05A28]/5"
+                              >
+                                <MapPin size={10} strokeWidth={2} className="flex-shrink-0 text-fj-neutral-300 transition-colors group-hover:text-[#F05A28]" />
+                                <span className="font-fj-body text-[12.5px] text-fj-ink transition-colors group-hover:text-[#F05A28]">
+                                  {loc.label}
+                                  <span className="ml-1 text-[10.5px] text-fj-neutral-400">{loc.state}</span>
+                                </span>
+                              </Link>
+                            ))}
+                          </div>
+
+                          {/* South */}
+                          <div className="px-3 py-2">
+                            <p className="mb-2 px-1.5 font-fj-mono text-[9px] font-bold uppercase tracking-[0.18em] text-fj-neutral-300">
+                              South
+                            </p>
+                            {IN_LOCATIONS_SOUTH.map((loc) => (
+                              <Link
+                                key={loc.href}
+                                href={loc.href}
+                                className="group flex items-center gap-2 rounded-lg px-1.5 py-1.5 transition-colors hover:bg-[#F05A28]/5"
+                              >
+                                <MapPin size={10} strokeWidth={2} className="flex-shrink-0 text-fj-neutral-300 transition-colors group-hover:text-[#F05A28]" />
+                                <span className="font-fj-body text-[12.5px] text-fj-ink transition-colors group-hover:text-[#F05A28]">
+                                  {loc.label}
+                                  <span className="ml-1 text-[10.5px] text-fj-neutral-400">{loc.state}</span>
+                                </span>
+                              </Link>
+                            ))}
+                          </div>
+
+                          {/* North & East */}
+                          <div className="px-3 py-2">
+                            <p className="mb-2 px-1.5 font-fj-mono text-[9px] font-bold uppercase tracking-[0.18em] text-fj-neutral-300">
+                              North &amp; East
+                            </p>
+                            {IN_LOCATIONS_NORTH_EAST.map((loc) => (
+                              <Link
+                                key={loc.href}
+                                href={loc.href}
+                                className="group flex items-center gap-2 rounded-lg px-1.5 py-1.5 transition-colors hover:bg-[#F05A28]/5"
+                              >
+                                <MapPin size={10} strokeWidth={2} className="flex-shrink-0 text-fj-neutral-300 transition-colors group-hover:text-[#F05A28]" />
+                                <span className="font-fj-body text-[12.5px] text-fj-ink transition-colors group-hover:text-[#F05A28]">
+                                  {loc.label}
+                                  <span className="ml-1 text-[10.5px] text-fj-neutral-400">{loc.state}</span>
+                                </span>
+                              </Link>
+                            ))}
+                          </div>
+
+                        </div>
                       </div>
-                    </div>
+
+                    ) : (
+
+                      /* ── US / UAE: simple 2-col compact panel ─────────── */
+                      <div className="w-[300px] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white p-5 shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
+                        <p className="mb-3 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
+                          {cfg.locationsLabel}
+                        </p>
+                        <div className="grid grid-cols-2 gap-1">
+                          {cfg.locations.map((loc) => (
+                            <Link
+                              key={`${loc.href}-${loc.label}`}
+                              href={loc.href}
+                              className="group flex items-center gap-2 rounded-lg px-2.5 py-2 transition-colors hover:bg-[#F05A28]/5"
+                            >
+                              <MapPin size={11} strokeWidth={2} className="flex-shrink-0 text-fj-neutral-300 transition-colors group-hover:text-[#F05A28]" />
+                              <span className="font-fj-body text-[13px] text-fj-ink transition-colors group-hover:text-[#F05A28]">
+                                {loc.label}
+                                <span className="ml-1 text-[11px] text-fj-neutral-400">{loc.state}</span>
+                              </span>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+
+                    )}
                   </div>
                 )}
               </div>
@@ -672,7 +808,7 @@ export default function SiteHeader({
 
                 {openDropdown === 'resources' && (
                   <div
-                    className="absolute left-0 top-full pt-2.5"
+                    className="absolute left-0 top-full z-50 pt-2.5"
                     onMouseEnter={keepOpen}
                     onMouseLeave={scheduleClosed}
                     role="menu"
@@ -796,47 +932,77 @@ export default function SiteHeader({
             </button>
             {mobileServicesOpen && (
               <div className="pb-3">
-                <p className="mb-1 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">
-                  Web Services
-                </p>
-                {cfg.webServices.map((s, i) => (
-                  <Link
-                    key={s.href}
-                    href={s.href}
-                    onClick={() => setMobileOpen(false)}
-                    className={`flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]${
-                      locale === 'in' && i === 2 ? ' ml-4 border-l-2 border-[#F05A28]/30 pl-2' : ''
-                    }`}
-                  >
-                    <s.icon size={14} strokeWidth={1.8} className="flex-shrink-0 text-[#F05A28]" />
-                    {s.label}
-                  </Link>
-                ))}
-                <div className="mb-1 mt-3 flex items-center justify-between px-1">
-                  <p className="font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">
-                    {locale === 'in' ? 'AI Agent Development' : 'AI Services'}
-                  </p>
-                  {locale === 'in' && (
-                    <Link
-                      href={IN_AI_HUB_HREF}
-                      onClick={() => setMobileOpen(false)}
-                      className="font-fj-body text-[11px] font-semibold text-[#F05A28]"
-                    >
-                      View all →
-                    </Link>
-                  )}
-                </div>
-                {cfg.aiServices.map((s) => (
-                  <Link
-                    key={s.href}
-                    href={s.href}
-                    onClick={() => setMobileOpen(false)}
-                    className="flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]"
-                  >
-                    <s.icon size={14} strokeWidth={1.8} className="flex-shrink-0 text-[#F05A28]" />
-                    {s.label}
-                  </Link>
-                ))}
+                {locale === 'in' ? (
+                  /* India mobile services — grouped with section labels */
+                  <>
+                    {/* Group 1: Web Services (indices 0-1) */}
+                    <p className="mb-1 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">Web Services</p>
+                    {IN_WEB_SERVICES.slice(0, 2).map((s) => {
+                      const Icon = s.icon;
+                      return (
+                        <Link key={s.href} href={s.href} onClick={() => setMobileOpen(false)} className="flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]">
+                          <Icon size={14} strokeWidth={1.8} className="flex-shrink-0 text-[#F05A28]" />
+                          {s.label}
+                        </Link>
+                      );
+                    })}
+                    {/* Group 2: E-Commerce (indices 2-3) */}
+                    <p className="mb-1 mt-2.5 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-300">E-Commerce</p>
+                    {IN_WEB_SERVICES.slice(2, 4).map((s, i) => {
+                      const Icon = s.icon;
+                      return (
+                        <Link key={s.href} href={s.href} onClick={() => setMobileOpen(false)}
+                          className={`flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]${i === 1 ? ' ml-4 border-l-2 border-[#F05A28]/30 pl-2' : ''}`}>
+                          <Icon size={14} strokeWidth={1.8} className="flex-shrink-0 text-[#F05A28]" />
+                          {s.label}
+                        </Link>
+                      );
+                    })}
+                    {/* Group 3: Automation & Messaging (indices 4-5) */}
+                    <p className="mb-1 mt-2.5 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-300">Automation &amp; Messaging</p>
+                    {IN_WEB_SERVICES.slice(4, 6).map((s) => {
+                      const Icon = s.icon;
+                      return (
+                        <Link key={s.href} href={s.href} onClick={() => setMobileOpen(false)} className="flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]">
+                          <Icon size={14} strokeWidth={1.8} className="flex-shrink-0 text-[#F05A28]" />
+                          {s.label}
+                        </Link>
+                      );
+                    })}
+                    {/* AI Agents */}
+                    <div className="mb-1 mt-3 flex items-center justify-between px-1">
+                      <p className="font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">AI Agent Development</p>
+                      <Link href={IN_AI_HUB_HREF} onClick={() => setMobileOpen(false)} className="font-fj-body text-[11px] font-semibold text-[#F05A28]">View all →</Link>
+                    </div>
+                    {cfg.aiServices.map((s) => {
+                      const Icon = s.icon;
+                      return (
+                        <Link key={s.href} href={s.href} onClick={() => setMobileOpen(false)} className="flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]">
+                          <Icon size={14} strokeWidth={1.8} className="flex-shrink-0 text-[#F05A28]" />
+                          {s.label}
+                        </Link>
+                      );
+                    })}
+                  </>
+                ) : (
+                  /* US / UAE mobile services — flat list */
+                  <>
+                    <p className="mb-1 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">Web Services</p>
+                    {cfg.webServices.map((s) => (
+                      <Link key={s.href} href={s.href} onClick={() => setMobileOpen(false)} className="flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]">
+                        <s.icon size={14} strokeWidth={1.8} className="flex-shrink-0 text-[#F05A28]" />
+                        {s.label}
+                      </Link>
+                    ))}
+                    <p className="mb-1 mt-3 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">AI Services</p>
+                    {cfg.aiServices.map((s) => (
+                      <Link key={s.href} href={s.href} onClick={() => setMobileOpen(false)} className="flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]">
+                        <s.icon size={14} strokeWidth={1.8} className="flex-shrink-0 text-[#F05A28]" />
+                        {s.label}
+                      </Link>
+                    ))}
+                  </>
+                )}
               </div>
             )}
           </div>
