@@ -32,13 +32,13 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'WooCommerce Development — Custom Stores & Plugins | FactoryJet',
   description:
-    'Expert WooCommerce development for US businesses. Custom stores, plugins, themes & payment integrations. 60–70% cheaper than US agencies. Free consultation.',
+    'Expert WooCommerce development for US businesses. Custom stores, plugins, themes & payment integrations. fixed-price, milestone-paid. Free consultation.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'WooCommerce Development Services | FactoryJet',
     description:
-      'Custom WooCommerce store builds, plugin development, and integrations for US businesses. Senior WooCommerce developers, fixed-price projects — 60–70% cheaper than US agencies.',
+      'Custom WooCommerce store builds, plugin development, and integrations for US businesses. Senior WooCommerce developers, fixed-price projects',
     url: 'https://factoryjet.com/us/services/woocommerce-development',
     images: [
       {
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'WooCommerce Development Services | FactoryJet',
     description:
-      'Custom WooCommerce stores, plugin development, and integrations. Fixed-price projects, senior developers, 60–70% cheaper than US agencies.',
+      'Custom WooCommerce stores, plugin development, and integrations. Fixed-price projects, senior developers',
     images: ['https://factoryjet.com/images/us/hero-us.webp'],
   },
   alternates: {
@@ -95,7 +95,7 @@ const faqSchema = {
       name: 'How much does WooCommerce development cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'WooCommerce development costs depend on scope. A custom WooCommerce store with a unique theme and standard plugins typically costs $2,999–$8,000. Custom plugin development runs $1,500–$6,000. Complex stores with custom checkout flows, ERP integrations, and B2B pricing cost $8,000–$25,000+. US agencies charge $100–$250/hour for WooCommerce work. FactoryJet builds WooCommerce stores at 60–70% lower cost with senior developers on every project.',
+        text: 'WooCommerce development costs depend on scope. A custom WooCommerce store with a unique theme and standard plugins typically costs $2,999–$8,000. Custom plugin development runs $1,500–$6,000. Complex stores with custom checkout flows, ERP integrations, and B2B pricing cost $8,000–$25,000+. US agencies charge $100–$250/hour for WooCommerce work. FactoryJet builds WooCommerce stores at significantly lower cost with senior developers on every project.',
       },
     },
     {
@@ -111,7 +111,7 @@ const faqSchema = {
       name: 'How much does FactoryJet charge for WooCommerce development?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet builds WooCommerce stores starting at $2,999 for a standard store with a custom theme and up to 50 products configured. Custom plugin development starts at $1,499. Complex stores with custom functionality start at $4,999. All projects are fixed-price with no hourly billing. Compared to US agencies charging $100–$250/hour, FactoryJet delivers 60–70% in cost savings with senior WooCommerce developers on every project.',
+        text: 'FactoryJet builds WooCommerce stores starting at $2,999 for a standard store with a custom theme and up to 50 products configured. Custom plugin development starts at $1,499. Complex stores with custom functionality start at $4,999. All projects are fixed-price and milestone-paid with no hourly billing. Compared to US agencies charging $100–$250/hour, FactoryJet delivers predictable cost from quote to launch with senior WooCommerce developers on every project and full code ownership at handoff.',
       },
     },
     {
@@ -223,10 +223,10 @@ const STATS = [
     categoryLabel: 'OUR STARTING PRICE',
   },
   {
-    value: '60–70%',
-    label: 'cheaper than US WooCommerce development agencies',
-    microcopy: 'senior developers, no US overhead',
-    categoryLabel: 'COST ADVANTAGE',
+    value: 'Fixed Price',
+    label: 'milestone-paid WooCommerce builds with full code ownership',
+    microcopy: 'senior developers on every project — no scope-creep invoices',
+    categoryLabel: 'PRICING MODEL',
   },
   {
     value: '25+',
@@ -299,7 +299,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '60–70% lower cost than US agencies',
+    feature: 'significantly lower cost than US agencies',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="fl" kind="partial" />,
@@ -587,7 +587,7 @@ export default function WoocommerceDevelopmentPage() {
         {/* -- 1. HERO -------------------------------------------------------- */}
         <Hero
           eyebrow="WOOCOMMERCE DEVELOPMENT SERVICES"
-          headline="Senior WooCommerce developers. Custom stores and plugins. 60–70% less than US agencies."
+          headline="Senior WooCommerce developers. Custom stores and plugins. fixed-price, milestone-paid."
           lead="Custom WooCommerce store builds, plugin development, B2B functionality, ERP integrations, and performance optimization — fixed-price projects delivered by senior developers with 25+ years of WordPress experience."
           primaryCta={{ label: 'Get a Free Quote', modal: true, region: 'us' }}
           secondaryCta={{ label: 'View Our Work', href: '/us/portfolio' }}
@@ -640,7 +640,7 @@ export default function WoocommerceDevelopmentPage() {
         {/* -- 3. TRUST BLOCK ----------------------------------------------─-- */}
         <BigThreeTrustBlock
           eyebrow="WHY FACTORYJET FOR WOOCOMMERCE"
-          headline="Senior WooCommerce developers. Fixed-price proposals. 60–70% cheaper than US agencies."
+          headline="Senior WooCommerce developers. Fixed-price proposals. fixed-price, milestone-paid."
         />
 
         {/* -- 4. WHAT WE BUILD --------------------------------------------─-- */}

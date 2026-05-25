@@ -51,3 +51,6 @@ convert-images.sh
 
 # TypeScript incremental build cache
 tsconfig.tsbuildinfo
+
+# FUSE mount artifacts (Cowork sandbox)
+.fuse_hidden*

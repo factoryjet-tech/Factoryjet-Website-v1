@@ -93,30 +93,30 @@
 # Old service-first /us/services/ecommerce-development/{city}/
 # → New city-first /us/{city}/ecommerce-development/
 # Matches exact path and any sub-paths (/* catches trailing slash variants)
-/us/services/ecommerce-development/austin/*        /us/austin/ecommerce-development/        301
-/us/services/ecommerce-development/boise/*         /us/boise/ecommerce-development/         301
-/us/services/ecommerce-development/charlotte/*     /us/charlotte/ecommerce-development/     301
-/us/services/ecommerce-development/chattanooga/*   /us/chattanooga/ecommerce-development/   301
-/us/services/ecommerce-development/denver/*        /us/denver/ecommerce-development/        301
-/us/services/ecommerce-development/fargo/*         /us/fargo/ecommerce-development/         301
-/us/services/ecommerce-development/lincoln/*       /us/lincoln/ecommerce-development/       301
-/us/services/ecommerce-development/miami/*         /us/miami/ecommerce-development/         301
-/us/services/ecommerce-development/nashville/*     /us/nashville/ecommerce-development/     301
-/us/services/ecommerce-development/portland/*      /us/portland/ecommerce-development/      301
-/us/services/ecommerce-development/raleigh/*       /us/raleigh/ecommerce-development/       301
-/us/services/ecommerce-development/sioux-falls/*   /us/sioux-falls/ecommerce-development/   301
-/us/services/ecommerce-development/tampa/*         /us/tampa/ecommerce-development/         301
+/us/services/ecommerce-development/austin/*        /us/austin/ecommerce-development        301
+/us/services/ecommerce-development/boise/*         /us/boise/ecommerce-development         301
+/us/services/ecommerce-development/charlotte/*     /us/charlotte/ecommerce-development     301
+/us/services/ecommerce-development/chattanooga/*   /us/chattanooga/ecommerce-development   301
+/us/services/ecommerce-development/denver/*        /us/denver/ecommerce-development        301
+/us/services/ecommerce-development/fargo/*         /us/fargo/ecommerce-development         301
+/us/services/ecommerce-development/lincoln/*       /us/lincoln/ecommerce-development       301
+/us/services/ecommerce-development/miami/*         /us/miami/ecommerce-development         301
+/us/services/ecommerce-development/nashville/*     /us/nashville/ecommerce-development     301
+/us/services/ecommerce-development/portland/*      /us/portland/ecommerce-development      301
+/us/services/ecommerce-development/raleigh/*       /us/raleigh/ecommerce-development       301
+/us/services/ecommerce-development/sioux-falls/*   /us/sioux-falls/ecommerce-development   301
+/us/services/ecommerce-development/tampa/*         /us/tampa/ecommerce-development         301
 # Exact-path variants (no trailing slash)
-/us/services/ecommerce-development/austin          /us/austin/ecommerce-development/        301
-/us/services/ecommerce-development/boise           /us/boise/ecommerce-development/         301
-/us/services/ecommerce-development/charlotte       /us/charlotte/ecommerce-development/     301
-/us/services/ecommerce-development/chattanooga     /us/chattanooga/ecommerce-development/   301
-/us/services/ecommerce-development/denver          /us/denver/ecommerce-development/        301
-/us/services/ecommerce-development/fargo           /us/fargo/ecommerce-development/         301
-/us/services/ecommerce-development/lincoln         /us/lincoln/ecommerce-development/       301
-/us/services/ecommerce-development/miami           /us/miami/ecommerce-development/         301
-/us/services/ecommerce-development/nashville       /us/nashville/ecommerce-development/     301
-/us/services/ecommerce-development/portland        /us/portland/ecommerce-development/      301
-/us/services/ecommerce-development/raleigh         /us/raleigh/ecommerce-development/       301
-/us/services/ecommerce-development/sioux-falls     /us/sioux-falls/ecommerce-development/   301
-/us/services/ecommerce-development/tampa           /us/tampa/ecommerce-development/         301
+/us/services/ecommerce-development/austin          /us/austin/ecommerce-development        301
+/us/services/ecommerce-development/boise           /us/boise/ecommerce-development         301
+/us/services/ecommerce-development/charlotte       /us/charlotte/ecommerce-development     301
+/us/services/ecommerce-development/chattanooga     /us/chattanooga/ecommerce-development   301
+/us/services/ecommerce-development/denver          /us/denver/ecommerce-development        301
+/us/services/ecommerce-development/fargo           /us/fargo/ecommerce-development         301
+/us/services/ecommerce-development/lincoln         /us/lincoln/ecommerce-development       301
+/us/services/ecommerce-development/miami           /us/miami/ecommerce-development         301
+/us/services/ecommerce-development/nashville       /us/nashville/ecommerce-development     301
+/us/services/ecommerce-development/portland        /us/portland/ecommerce-development      301
+/us/services/ecommerce-development/raleigh         /us/raleigh/ecommerce-development       301
+/us/services/ecommerce-development/sioux-falls     /us/sioux-falls/ecommerce-development   301
+/us/services/ecommerce-development/tampa           /us/tampa/ecommerce-development         301

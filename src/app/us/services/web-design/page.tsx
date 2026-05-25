@@ -26,15 +26,15 @@ import Image from 'next/image';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Services USA | 7-Day Website Launch | FactoryJet',
+  title: 'Web Design Agency USA — 7-Day Launches From $1,999 [2026]',
   description:
-    'Web design services US businesses trust — custom Next.js, WordPress & Shopify. Launch in 7 days from $1,999. Full code ownership. Free technical audit.',
+    'Web design agency for US small businesses. Custom Next.js, WordPress & Shopify sites, live in 7 days from $1,999. Full code ownership. Book a free strategy call.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Services USA | 7-Day Website Launch | FactoryJet',
+    title: 'Web Design Agency USA — 7-Day Launches From $1,999 [2026]',
     description:
-      'Custom websites for US small businesses. Next.js, WordPress & Shopify. 7-day delivery. 60–70% cheaper than US agencies. Starting at $1,999.',
+      'Web design agency for US small businesses. Custom Next.js, WordPress & Shopify sites, live in 7 days from $1,999. Full code ownership. Book a free strategy call.',
     url: 'https://factoryjet.com/us/services/web-design',
     images: [
       {
@@ -48,9 +48,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web Design Services USA | 7-Day Website Launch | FactoryJet',
+    title: 'Web Design Agency USA — 7-Day Launches From $1,999 [2026]',
     description:
-      'Custom websites for US small businesses. 7-day delivery. 60–70% cheaper than US agencies. Starting at $1,999.',
+      'Web design agency for US small businesses. Custom Next.js, WordPress & Shopify sites, live in 7 days from $1,999. Full code ownership. Book a free strategy call.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
@@ -91,7 +91,7 @@ const faqSchema = {
       name: 'How much does a custom website cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s web design starts at $1,999 for a 5-page business website. A full business site with up to 15 pages, a blog, and CMS runs $3,999. E-commerce, custom Next.js apps, and larger projects start at $7,500. All prices are 60–70% lower than comparable US web agencies.',
+        text: 'FactoryJet\'s web design starts at $1,999 for a 5-page business website. A full business site with up to 15 pages, a blog, and CMS runs $3,999. E-commerce, custom Next.js apps, and larger projects start at $7,500. All prices are significantly lower than comparable US web agencies.',
       },
     },
     {
@@ -112,10 +112,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'What makes FactoryJet cheaper than US web agencies?',
+      name: 'How does FactoryJet keep web design pricing fixed and predictable?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Our engineering and design team is based in India. Same quality — Next.js expertise, Figma design, Lighthouse 100 performance — at dramatically lower labor costs. We\'ve served US businesses since 1999. We don\'t have layers of account management, project coordinators, and sales reps inflating your invoice.',
+        text: 'We work fixed-price and milestone-paid — every project is scoped upfront with no hourly billing and no scope-creep invoices. Serving US businesses since 1999 means we estimate accurately on the first call, so the quote you sign is what you pay. You get a senior-only team — no account-management or project-coordinator layers — delivering Next.js expertise, Figma design, and Lighthouse 100 performance, with full code ownership at handoff.',
       },
     },
     {
@@ -168,7 +168,7 @@ const serviceSchema = {
   },
   serviceType: 'Web Design & Development',
   description:
-    'Custom website design and development for US small businesses. Next.js, WordPress, and Shopify. 7-day delivery. Lighthouse 100 performance. 60–70% cheaper than US agencies. Starting at $1,999.',
+    'Custom website design and development for US small businesses. Next.js, WordPress, and Shopify. 7-day delivery. Lighthouse 100 performance. fixed-price, milestone-paid. Starting at $1,999.',
   offers: [
     {
       '@type': 'Offer',
@@ -336,10 +336,10 @@ const WEB_STATS = [
     categoryLabel: 'PERFORMANCE',
   },
   {
-    value: '60–70%',
-    label: 'cheaper than a comparable US web design agency',
-    microcopy: 'same Next.js / Figma / Lighthouse quality, 60–70% lower cost',
-    categoryLabel: 'COST ADVANTAGE',
+    value: 'Fixed Price',
+    label: 'milestone-paid web design with full code ownership',
+    microcopy: 'senior Next.js / Figma / Lighthouse engineering — predictable from quote to launch',
+    categoryLabel: 'PRICING MODEL',
   },
 ];
 
@@ -590,7 +590,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a custom website cost?',
     answer:
-      'FactoryJet\'s web design starts at $1,999 for a 5-page business website. A full business site with up to 15 pages, a blog, and CMS integration runs $3,999. E-commerce stores, custom Next.js applications, and larger projects start at $7,500 — scoped after a free discovery call. All prices are 60–70% lower than comparable US web agencies.',
+      'FactoryJet\'s web design starts at $1,999 for a 5-page business website. A full business site with up to 15 pages, a blog, and CMS integration runs $3,999. E-commerce stores, custom Next.js applications, and larger projects start at $7,500 — scoped after a free discovery call. All prices are significantly lower than comparable US web agencies.',
   },
   {
     category: 'pricing',
@@ -606,9 +606,9 @@ const FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet so much cheaper than US agencies?',
+    question: 'How does FactoryJet keep web design pricing fixed and predictable?',
     answer:
-      'Our design and engineering team is specialized. That\'s the answer. The same Next.js expertise, the same Figma design quality, the same Lighthouse 100 performance — at dramatically lower labor costs. We\'ve served US businesses since 1999. We don\'t have layers of account management, project coordinators, and sales reps inflating your invoice. You brief an engineer and a designer; they build it.',
+      'We work fixed-price and milestone-paid — every project is scoped upfront with no hourly billing and no scope-creep invoices. Serving US businesses since 1999 means we estimate accurately on the first call, so the quote you sign is what you pay. You brief an engineer and a designer who build it directly — no account-management or project-coordinator layers — delivering Next.js expertise, Figma design quality, and Lighthouse 100 performance, with full code ownership at handoff.',
   },
 
   /* ── Technical & Performance ── */
@@ -656,7 +656,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US web agency?',
     answer:
-      'Three differences that matter: price (60–70% cheaper because of our efficient low-overhead structure, serving US businesses for 25+ years), speed (7-day delivery on standard sites — most US agencies quote 6–12 weeks), and ownership (you get the full codebase on launch day — no retainer required to keep your site online). We\'ve delivered 500+ websites for US businesses across every industry. We aren\'t selling you a template with a custom logo.',
+      'Three differences that matter: pricing model (fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices, backed by 25+ years serving US businesses), speed (7-day delivery on standard sites — most US agencies quote 6–12 weeks), and ownership (you get the full codebase on launch day — no retainer required to keep your site online). We\'ve delivered 500+ websites for US businesses across every industry. We aren\'t selling you a template with a custom logo.',
   },
   {
     category: 'trust',
@@ -746,7 +746,7 @@ export default function WebDesignPage() {
         <Hero
           eyebrow="WEB DESIGN · USA"
           headline="A Website That Converts, Launched in 7 Days"
-          lead="Most US small businesses are losing customers to slow, outdated websites. FactoryJet builds custom, high-performance websites in Next.js, WordPress, and Shopify — designed in Figma, built to Lighthouse 100, and delivered at 60–70% the cost of a US agency."
+          lead="Most US small businesses are losing customers to slow, outdated websites. FactoryJet builds custom, high-performance websites in Next.js, WordPress, and Shopify — designed in Figma, built to Lighthouse 100, and delivered fixed-price with full code ownership at handoff."
           primaryCta={{ label: 'Book a Free Website Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
@@ -949,7 +949,7 @@ export default function WebDesignPage() {
             {
               icon: '💸',
               title: 'US agencies charge $8,000–$25,000 for the same work',
-              body: 'A mid-tier US web agency charges $2,500+ per page before revisions, project management fees, and hosting markup. FactoryJet delivers the same Figma-first design, Next.js engineering, and Lighthouse 100 performance — at 60–70% less — because of our efficient low-overhead structure with 25 years of serving US clients.',
+              body: 'A mid-tier US web agency charges $2,500+ per page before revisions, project management fees, and hosting markup. FactoryJet delivers the same Figma-first design, Next.js engineering, and Lighthouse 100 performance — fixed-price, milestone-paid, with full code ownership at handoff. 25 years serving US clients means we scope accurately on the first call.',
             },
           ]}
         />

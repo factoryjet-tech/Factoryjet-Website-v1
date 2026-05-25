@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'AI Workflow Automation Services USA | FactoryJet',
     description:
-      'Custom AI workflow automation for US SMBs. Built on n8n, Make.com, and LangChain. 60–70% cheaper than US automation agencies. Fast delivery.',
+      'Custom AI workflow automation for US SMBs. Built on n8n, Make.com, and LangChain. fixed-price, milestone-paid. Fast delivery.',
     url: 'https://factoryjet.com/us/services/ai-workflow-automation',
     images: [
       {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Workflow Automation Services USA | FactoryJet',
     description:
-      'Custom AI workflow automation for US small businesses. 60–70% cheaper. 2–4 week delivery. Free strategy call.',
+      'Custom AI workflow automation for US small businesses. fixed-price. 2–4 week delivery. Free strategy call.',
     images: ['https://factoryjet.com/images/us/services/hero-ai-workflow.webp'],
   },
   alternates: {
@@ -135,15 +135,15 @@ const faqSchema = {
       name: 'How much does AI workflow automation cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s AI workflow automation starts at $4,000 for a focused single-workflow build (Starter tier). The Growth tier at $10,000 covers a multi-workflow automation platform connecting 3–5 systems with an operations dashboard and 30-day support — the most popular option for US SMBs. Enterprise automation with complex business logic, custom integrations, and compliance requirements starts at $20,000. All prices are 60–70% lower than US automation agencies.',
+        text: 'FactoryJet\'s AI workflow automation starts at $4,000 for a focused single-workflow build (Starter tier). The Growth tier at $10,000 covers a multi-workflow automation platform connecting 3–5 systems with an operations dashboard and 30-day support — the most popular option for US SMBs. Enterprise automation with complex business logic, custom integrations, and compliance requirements starts at $20,000. All prices are significantly lower than US automation agencies.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Why is FactoryJet 60–70% cheaper than US automation agencies?',
+      name: 'Why is FactoryJet fixed-price, milestone-paid?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Our engineering team brings 25+ years of focused expertise. Same quality of workflow architecture, integration engineering, and delivery at dramatically lower labor costs. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated agency overhead.',
+        text: 'We work fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices. Our engineering team brings 25+ years of focused expertise serving US businesses. You get production-grade workflow architecture, integration engineering, and delivery. You brief an engineer; that engineer builds it. No account management layers between your brief and the build. Full code ownership at handoff.',
       },
     },
     {
@@ -223,7 +223,7 @@ const faqSchema = {
       name: 'How is FactoryJet different from hiring a US automation consultant?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Three differences: price (60–70% cheaper — specialized engineers serving US businesses for 25+ years), speed (no sales layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we know the operational reality of businesses your size, not just enterprise theory). We also won\'t propose AI automation for a workflow where a simple Zap would do the job.',
+        text: 'Three differences: price (specialized engineers serving US businesses for 25+ years), speed (no sales layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we know the operational reality of businesses your size, not just enterprise theory). We also won\'t propose AI automation for a workflow where a simple Zap would do the job.',
       },
     },
     {
@@ -436,10 +436,10 @@ const ROI_STATS = [
     categoryLabel: 'LEAD RESPONSE',
   },
   {
-    value: '60–70%',
-    label: 'cheaper than a comparable US automation agency',
-    microcopy: 'specialized engineers, US-caliber output',
-    categoryLabel: 'COST ADVANTAGE',
+    value: 'Fixed Price',
+    label: 'milestone-paid automation builds with full code ownership',
+    microcopy: 'specialized engineers, US-caliber output — predictable from quote to launch',
+    categoryLabel: 'PRICING MODEL',
   },
 ];
 
@@ -673,13 +673,13 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does AI workflow automation cost?',
     answer:
-      'FactoryJet\'s automation starts at $4,000 for a single focused workflow build. The Growth tier at $10,000 covers a multi-workflow platform connecting 3–5 systems with an operations dashboard — the most popular option for US SMBs. Enterprise automation with complex business logic starts at $20,000. All prices are 60–70% lower than US automation agencies.',
+      'FactoryJet\'s automation starts at $4,000 for a single focused workflow build. The Growth tier at $10,000 covers a multi-workflow platform connecting 3–5 systems with an operations dashboard — the most popular option for US SMBs. Enterprise automation with complex business logic starts at $20,000. All prices are significantly lower than US automation agencies.',
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet 60–70% cheaper than US automation agencies?',
+    question: 'Why is FactoryJet fixed-price, milestone-paid?',
     answer:
-      'Our engineering team brings 25+ years of focused expertise. Same quality of workflow architecture, integration engineering, and delivery at dramatically lower labor costs. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated agency overhead.',
+      'We work fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices. Our engineering team brings 25+ years of focused expertise serving US businesses. You get production-grade workflow architecture, integration engineering, and delivery. You brief an engineer; that engineer builds it. No account management layers between your brief and the build. Full code ownership at handoff.',
   },
   {
     category: 'pricing',
@@ -749,7 +749,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US automation consultant?',
     answer:
-      'Three differences: price (60–70% cheaper because of our efficient low-overhead structure, serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand operations inside a 15-person company, not just enterprise theory). We also won\'t propose AI automation when a simpler solution would do the job.',
+      'Three differences: pricing model (fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices, backed by 25+ years serving US businesses), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand operations inside a 15-person company, not just enterprise theory). We also won\'t propose AI automation when a simpler solution would do the job.',
   },
 ];
 
@@ -794,13 +794,13 @@ export default function AIWorkflowAutomationPage() {
         <Hero
           eyebrow="AI WORKFLOW AUTOMATION · USA"
           headline="Automate the Work That's Eating Your Team's Day"
-          lead="Manual data entry, repetitive follow-ups, document processing, cross-system updates — your team is doing the same tasks over and over. FactoryJet builds AI workflow automation that handles these processes 24/7, connects your existing tools, and costs 60–70% less than a US automation agency."
+          lead="Manual data entry, repetitive follow-ups, document processing, cross-system updates — your team is doing the same tasks over and over. FactoryJet builds AI workflow automation that handles these processes 24/7, connects your existing tools, and costs fixed-price vs a US automation agency."
           primaryCta={{ label: 'Book a Free Automation Strategy Call', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',
             'Starting at $4,000',
-            '60–70% cheaper than US agencies',
+            'fixed-price, milestone-paid',
           ]}
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
@@ -1026,7 +1026,7 @@ export default function AIWorkflowAutomationPage() {
             {
               icon: '💸',
               title: 'Enterprise automation tools are priced for enterprise budgets',
-              body: 'Salesforce automation, SAP workflows, and US automation consulting firms charge $40,000+ for systems that are frankly overkill for a 20-person business. FactoryJet builds the same capability for 60–70% less — because our engineering team has the skills with a radically different cost structure, and we don\'t try to solve simple problems with expensive platforms.',
+              body: 'Salesforce automation, SAP workflows, and US automation consulting firms charge $40,000+ for systems that are frankly overkill for a 20-person business. FactoryJet builds the same capability for fixed-price — because our engineering team has the skills with a radically different cost structure, and we don\'t try to solve simple problems with expensive platforms.',
             },
           ]}
         />

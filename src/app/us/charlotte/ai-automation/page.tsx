@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'AI Workflow Automation for Charlotte NC Businesses | FactoryJet',
     description:
-      'Custom AI workflow automation for Charlotte NC businesses. Built on n8n, Make.com, and LangChain. 60–70% cheaper than Charlotte automation agencies. Free strategy call.',
+      'Custom AI workflow automation for Charlotte NC businesses. Built on n8n, Make.com, and LangChain. fixed-price, milestone-paid. Free strategy call.',
     url: 'https://factoryjet.com/us/charlotte/ai-automation',
     images: [
       {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Workflow Automation for Charlotte NC Businesses | FactoryJet',
     description:
-      'Custom AI workflow automation for Charlotte NC businesses. 60–70% cheaper than local agencies. Free strategy call.',
+      'Custom AI workflow automation for Charlotte NC businesses. fixed-price, milestone-paid. Free strategy call.',
     images: ['https://factoryjet.com/images/us/charlotte/hero-charlotte.webp'],
   },
   alternates: {
@@ -103,7 +103,7 @@ const faqSchema = {
       name: 'How much does AI workflow automation cost for a Charlotte business?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s AI workflow automation starts at $4,000 for a focused single-workflow build. The Growth tier at $10,000 covers a multi-workflow automation platform connecting 3–5 systems with an operations dashboard and 30-day support — the most popular option for Charlotte SMBs. Enterprise automation with complex compliance logic, financial services workflows, and multi-department integrations starts at $20,000. All prices are 60–70% lower than comparable Charlotte or national automation agencies.',
+        text: 'FactoryJet\'s AI workflow automation starts at $4,000 for a focused single-workflow build. The Growth tier at $10,000 covers a multi-workflow automation platform connecting 3–5 systems with an operations dashboard and 30-day support — the most popular option for Charlotte SMBs. Enterprise automation with complex compliance logic, financial services workflows, and multi-department integrations starts at $20,000. All prices are significantly lower than comparable Charlotte or national automation agencies.',
       },
     },
     {
@@ -336,10 +336,10 @@ const ROI_STATS = [
     categoryLabel: 'LEAD SPEED',
   },
   {
-    value: '60–70%',
-    label: 'cheaper than a comparable Charlotte or US automation agency',
-    microcopy: '25+ years experience, US-caliber output',
-    categoryLabel: 'COST ADVANTAGE',
+    value: 'Fixed Price',
+    label: 'milestone-paid with full code ownership — 25+ years experience, US-caliber output',
+    microcopy: 'predictable from quote to launch — no scope-creep invoices',
+    categoryLabel: 'PRICING MODEL',
   },
 ];
 
@@ -618,11 +618,11 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does AI workflow automation cost for a Charlotte business?',
     answer:
-      'FactoryJet\'s AI workflow automation starts at $4,000 for a focused single-workflow build. The Growth tier at $10,000 covers a multi-workflow platform connecting 3–5 systems with an operations dashboard — the most popular option for Charlotte SMBs. Enterprise automation with complex compliance logic, financial or healthcare system integrations, and multi-department coverage starts at $20,000. All prices are 60–70% lower than comparable Charlotte or national automation agencies.',
+      'FactoryJet\'s AI workflow automation starts at $4,000 for a focused single-workflow build. The Growth tier at $10,000 covers a multi-workflow platform connecting 3–5 systems with an operations dashboard — the most popular option for Charlotte SMBs. Enterprise automation with complex compliance logic, financial or healthcare system integrations, and multi-department coverage starts at $20,000. All prices are significantly lower than comparable Charlotte or national automation agencies.',
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet 60–70% cheaper than Charlotte automation agencies?',
+    question: 'Why is FactoryJet fixed-price, milestone-paid?',
     answer:
       'Our engineering team brings 25+ years of focused expertise. Same quality of workflow architecture, compliance design, and delivery — at dramatically lower labor costs. We\'ve served US businesses for 25 years. When you brief us, an engineer reads it, not an account manager. No South End or Uptown Charlotte office rates built into the quote — and no bloated project team staffed to justify a larger invoice.',
   },
@@ -675,7 +675,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a local Charlotte automation agency?',
     answer:
-      'Three differences: price (60–70% cheaper — specialized engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it — weeks, not quarters), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 20-person Charlotte financial services firm or a regional logistics company, including the compliance and audit requirements those industries carry).',
+      'Three differences: price (specialized engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it — weeks, not quarters), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 20-person Charlotte financial services firm or a regional logistics company, including the compliance and audit requirements those industries carry).',
   },
 ];
 
@@ -720,13 +720,13 @@ export default function CharlotteAIAutomationPage() {
         <Hero
           eyebrow="AI WORKFLOW AUTOMATION · CHARLOTTE, NC"
           headline="Charlotte's Financial District, Health Systems, and Logistics Companies Are Automating the Workflows That Don't Need a Human"
-          lead="Charlotte's economy runs on high-volume, compliance-sensitive workflows — financial document processing, logistics coordination, healthcare intake, and client onboarding. FactoryJet builds custom AI workflow automation for Charlotte businesses that eliminates manual task time at 60–70% less than a local agency."
+          lead="Charlotte's economy runs on high-volume, compliance-sensitive workflows — financial document processing, logistics coordination, healthcare intake, and client onboarding. FactoryJet builds custom AI workflow automation for Charlotte businesses that eliminates manual task time at fixed-price vs a local agency."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',
             'Starting at $4,000',
-            '60–70% cheaper than Charlotte agencies',
+            'engineered for measurable outcomes',
           ]}
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
@@ -1013,7 +1013,7 @@ export default function CharlotteAIAutomationPage() {
             {
               icon: '⚡',
               title: 'Speed without cutting corners',
-              body: 'A Charlotte automation agency has account managers, coordinators, and a sales team to keep fed. We don\'t. When you brief us, an engineer reads it — not an account manager. That\'s why our timelines are weeks, not quarters. And why our price is 60–70% lower.',
+              body: 'A Charlotte automation agency has account managers, coordinators, and a sales team to keep fed. We don\'t. When you brief us, an engineer reads it — not an account manager. That\'s why our timelines are weeks, not quarters. And why our price is significantly lower.',
             },
             {
               icon: '🔐',

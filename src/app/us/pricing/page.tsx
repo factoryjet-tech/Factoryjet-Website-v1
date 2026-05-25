@@ -20,23 +20,23 @@ import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 
 export const metadata: Metadata = {
-  title: 'Website Design & Ecommerce Pricing | FactoryJet',
+  title: 'Website Design Pricing 2026 — From $1,499 (Fixed Price)',
   description:
-    'Transparent website pricing for US small businesses. 5-page sites from $1,499. Shopify stores from $2,999. Fixed price, 7-day delivery, 60–70% below US rates.',
+    'Real US website design pricing: 5-page sites $1,499, Shopify $2,999, web apps $7,500. No hourly billing, no surprises. Live in 7 days. See the full price sheet.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Website Design Cost & Pricing | FactoryJet',
+    title: 'Website Design Pricing 2026 — From $1,499 (Fixed Price)',
     description:
-      'How much does a website cost? FactoryJet transparent pricing: 5-page site $1,499, 15-page site $3,500, Shopify from $2,999. Fixed price. 7-day delivery.',
+      'Real US website design pricing: 5-page sites $1,499, Shopify $2,999, web apps $7,500. No hourly billing, no surprises. Live in 7 days. See the full price sheet.',
     url: 'https://factoryjet.com/us/pricing',
     images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet — Website Design Pricing USA' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Website Design Cost & Pricing | FactoryJet',
-    description: 'Transparent website pricing for US businesses. 5-page site from $1,499. Fixed price, 7-day delivery.',
+    title: 'Website Design Pricing 2026 — From $1,499 (Fixed Price)',
+    description: 'Real US website design pricing: 5-page sites $1,499, Shopify $2,999, web apps $7,500. No hourly billing, no surprises. Live in 7 days. See the full price sheet.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
@@ -64,10 +64,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Why is FactoryJet so much cheaper than a US web design agency?',
+      name: 'How does FactoryJet keep pricing fixed and predictable?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet's engineering team is specialized, with 25+ years of experience serving US clients. We do not have a downtown office, account managers, or a sales department. Those costs are exactly what US agencies pass through to clients — often doubling or tripling the actual development cost. You get the same quality, the same technology stack, and the same 7-day delivery guarantee.",
+        text: "We work fixed-price and milestone-paid — every project is scoped upfront with no hourly billing and no scope-creep invoices. Our 25+ years serving US clients means we estimate accurately on the first call, so the quote you sign is what you pay. You get senior-engineering quality, the same Next.js / Shopify / React tech stack a US agency would deliver, US-hour project management, and a 7-day delivery guarantee — with full code ownership at handoff.",
       },
     },
     {
@@ -381,8 +381,8 @@ const FAQ_ITEMS = [
   },
   {
     category: 'cost',
-    question: 'Why is FactoryJet cheaper than US web design agencies?',
-    answer: "FactoryJet's engineering team is specialized, with 25+ years of experience serving US clients. US agencies charge $150–$250/hour because they're paying for downtown office leases, account managers, and a sales team — none of which make your website better. Our fixed packages give you the same tech stack (Next.js, Shopify, React), the same design quality, and the same SEO rigor at 60–70% lower cost.",
+    question: 'How does FactoryJet keep pricing fixed and predictable?',
+    answer: "We work fixed-price and milestone-paid — every project is scoped upfront with no hourly billing, no change orders for scope already described, and no scope-creep invoices. Our 25+ years serving US clients means we estimate accurately on the first call, so the quote you sign is what you pay. You get the same tech stack (Next.js, Shopify, React), the same design quality, and the same SEO rigor — with full code ownership at handoff.",
   },
   {
     category: 'cost',
@@ -477,8 +477,8 @@ const FAQ_ITEMS = [
 
 const MARKET_STATS = [
   {
-    value: '60–70%',
-    label: 'below comparable US web agency rates — same quality, low-overhead cost structure',
+    value: 'Fixed Price',
+    label: 'milestone-paid web design projects — predictable from quote to launch with full code ownership',
     sourceUrl: 'https://factoryjet.com/us/pricing',
     sourceLabel: 'FactoryJet Pricing',
   },
@@ -517,7 +517,7 @@ export default function PricingPage() {
         lead="US agencies charge $8,000–$35,000 for a business website. FactoryJet builds the same quality site for $1,499–$7,500 — fixed price, 7-day delivery, no hidden fees. Here's the breakdown."
         primaryCta={{ label: 'Get a Free Quote', modal: true, region: 'us' }}
         secondaryCta={{ label: 'See All Packages', href: '#pricing' }}
-        trustItems={['500+ US businesses served', '7-day delivery guarantee', '60–70% below US agency rates']}
+        trustItems={['500+ US businesses served', '7-day delivery guarantee', 'below US agency rates']}
         rightSlot={
           <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-6 space-y-3">
             <p className="text-xs font-fj-mono uppercase tracking-widest text-white/50 mb-4">2025 Price Comparison</p>
@@ -611,7 +611,7 @@ export default function PricingPage() {
           },
           {
             title: 'No downtown office overhead',
-            body: 'A San Francisco or New York design agency needs $15,000–$40,000/month in rent to exist. That cost is in your invoice whether you know it or not. Our team works from India — world-class engineering, zero real estate overhead.',
+            body: 'A San Francisco or New York design agency needs $15,000–$40,000/month in rent to exist. That cost is in your invoice whether you know it or not. We run lean — world-class engineering, zero real estate overhead.',
           },
           {
             title: 'Fixed price means we absorb the risk',
@@ -656,7 +656,7 @@ export default function PricingPage() {
         eyebrow="HOW WE COMPARE"
         headline="FactoryJet vs. US Agency vs. Freelancer vs. DIY Builder"
         lead="Not all website options are equal. Here's what the decision looks like when you compare side by side — on price, quality, and what you're left with after launch."
-        pullQuote={{ stat: '60–70%', caption: 'below US agency rates — same quality, low-overhead cost structure.' }}
+        pullQuote={{ stat: 'Fixed Price', caption: 'milestone-paid with full code ownership — predictable from quote to launch.' }}
         columns={COMPARISON_COLUMNS}
         rows={COMPARISON_ROWS}
         footer="Prices reflect typical US market ranges as of 2025. DIY platform monthly costs compound over time and include no ownership of the underlying site."

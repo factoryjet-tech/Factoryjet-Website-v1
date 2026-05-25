@@ -16,12 +16,12 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 export const metadata: Metadata = {
   title: 'Web Design Services for US Small Businesses | FactoryJet',
   description:
-    'Custom websites, Shopify stores, AI agents & web apps for US small businesses. 7-day delivery, 60–70% less than US agencies. Fixed price, full code ownership.',
+    'Custom websites, Shopify stores, AI agents & web apps for US small businesses. 7-day delivery, fixed-price, milestone-paid. Full code ownership, no retainers.',
   alternates: { canonical: 'https://factoryjet.com/us/services' },
   openGraph: {
     title: 'Web Design & Development Services USA | FactoryJet',
     description:
-      '500+ websites built for US businesses. Custom web design, Shopify development, AI agents, and web apps — delivered in 7 days at 60–70% less than a US agency.',
+      '500+ websites built for US businesses. Custom web design, Shopify development, AI agents, and web apps — delivered in 7 days, engineered for measurable outcomes.',
     url: 'https://factoryjet.com/us/services',
     siteName: 'FactoryJet',
     type: 'website',
@@ -98,10 +98,10 @@ const jsonLd = {
         },
         {
           '@type': 'Question',
-          name: 'Why is FactoryJet 60–70% cheaper than US web design agencies?',
+          name: 'How does FactoryJet keep pricing fixed and predictable?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'We\'re based in India with 25+ years of experience serving the US market. Our overhead is lower, so we pass the savings on. You get the same Figma design quality, the same Next.js engineering, and the same responsive support — just without the US agency markup.',
+            text: 'We work fixed-price and milestone-paid — 25+ years of delivery experience serving the US market lets us scope accurately on the first call. You get senior Figma design, Next.js engineering, and responsive US-hour project management without hourly billing surprises.',
           },
         },
         {
@@ -297,7 +297,7 @@ const FAQS = [
   },
   {
     q: 'Why is your pricing so much lower than US web design agencies?',
-    a: 'We\'re based in India with a team that has 25+ years of experience specifically serving the US market. Our operational costs are lower. We pass that directly to you — not to fund downtown office space. The design quality, code quality, and communication are exactly what you\'d get from a US agency at $8,000–$15,000.',
+    a: 'We work fixed-price and milestone-paid, with 25+ years of experience specifically serving the US market and US-hour project management. Our lean operations let us scope accurately on the first call. The design quality, code quality, and communication are exactly what you\'d get from a US agency quoting $8,000–$15,000.',
   },
   {
     q: 'What\'s included in the fixed price?',
@@ -461,7 +461,7 @@ export default function USServicesHubPage() {
               }}
             >
               Fixed price confirmed upfront. Delivered in 7 days.
-              60–70% less than a US agency — same Figma design, same Next.js engineering, full code ownership.
+              Fixed-price, milestone-paid — same Figma design, same Next.js engineering, full code ownership.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">

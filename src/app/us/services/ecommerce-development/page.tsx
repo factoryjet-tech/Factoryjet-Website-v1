@@ -29,13 +29,13 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'Ecommerce Development USA | Shopify & Custom Stores | FactoryJet',
   description:
-    'High-converting Shopify, WooCommerce & BigCommerce stores for US businesses. Mobile-first, Lighthouse 95+, 60–70% cheaper than US agencies. Starting at $3,999.',
+    'High-converting Shopify, WooCommerce & BigCommerce stores for US businesses. Mobile-first, Lighthouse 95+ Starting at $3,999.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'E-Commerce Development USA | Custom Online Stores | FactoryJet',
     description:
-      'Shopify, WooCommerce, BigCommerce, and custom e-commerce for US businesses. 60–70% cheaper. Conversion-optimized. Starting at $3,999.',
+      'Shopify, WooCommerce, BigCommerce, and custom e-commerce for US businesses. fixed-price. Conversion-optimized. Starting at $3,999.',
     url: 'https://factoryjet.com/us/services/ecommerce-development',
     images: [
       {
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'E-Commerce Development USA | Custom Online Stores | FactoryJet',
     description:
-      'Shopify, WooCommerce, BigCommerce, and custom e-commerce for US businesses. 60–70% cheaper than US agencies.',
+      'Shopify, WooCommerce, BigCommerce, and custom e-commerce for US businesses. fixed-price, milestone-paid.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
@@ -92,7 +92,7 @@ const faqSchema = {
       name: 'How much does e-commerce development cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s e-commerce development starts at $3,999 for a platform store build (Shopify or WooCommerce with a custom theme). A full store with advanced features — product configurator, subscription logic, B2B pricing, or a headless frontend — runs $9,500–$20,000. Fully custom e-commerce platforms with proprietary product logic, multi-vendor marketplaces, or complex ERP integrations start at $20,000 and are scoped after discovery. All prices are 60–70% lower than comparable US agencies.',
+        text: 'FactoryJet\'s e-commerce development starts at $3,999 for a platform store build (Shopify or WooCommerce with a custom theme). A full store with advanced features — product configurator, subscription logic, B2B pricing, or a headless frontend — runs $9,500–$20,000. Fully custom e-commerce platforms with proprietary product logic, multi-vendor marketplaces, or complex ERP integrations start at $20,000 and are scoped after discovery. All prices are significantly lower than comparable US agencies.',
       },
     },
     {
@@ -153,7 +153,7 @@ const serviceSchema = {
   },
   serviceType: 'E-Commerce Development',
   description:
-    'Custom e-commerce development for US businesses. Shopify, WooCommerce, BigCommerce, and headless Next.js Commerce. Conversion-optimized, mobile-first, Lighthouse 95+. 60–70% cheaper than US agencies.',
+    'Custom e-commerce development for US businesses. Shopify, WooCommerce, BigCommerce, and headless Next.js Commerce. Conversion-optimized, mobile-first, Lighthouse 95+. fixed-price, milestone-paid.',
   offers: [
     {
       '@type': 'Offer',
@@ -281,10 +281,10 @@ const ECOMM_STATS = [
     categoryLabel: 'CONVERSION LIFT',
   },
   {
-    value: '60–70%',
-    label: 'cheaper than a comparable US e-commerce development agency',
-    microcopy: 'same design quality, same engineering standard, 60–70% cost savings',
-    categoryLabel: 'COST ADVANTAGE',
+    value: 'Fixed Price',
+    label: 'milestone-paid e-commerce builds with full code ownership',
+    microcopy: 'same design quality, same engineering standard — predictable from quote to launch',
+    categoryLabel: 'PRICING MODEL',
   },
 ];
 
@@ -529,7 +529,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does e-commerce development cost?',
     answer:
-      'FactoryJet\'s e-commerce development starts at $3,999 for a platform store build (Shopify or WooCommerce with a custom theme, products, payments, and launch). Advanced stores with subscription logic, B2B pricing, or product configurators run $9,500. Headless storefronts, custom platforms, and multi-vendor marketplaces start at $20,000 and are scoped after a free discovery call. All prices are 60–70% lower than comparable US e-commerce agencies.',
+      'FactoryJet\'s e-commerce development starts at $3,999 for a platform store build (Shopify or WooCommerce with a custom theme, products, payments, and launch). Advanced stores with subscription logic, B2B pricing, or product configurators run $9,500. Headless storefronts, custom platforms, and multi-vendor marketplaces start at $20,000 and are scoped after a free discovery call. All prices are significantly lower than comparable US e-commerce agencies.',
   },
   {
     category: 'pricing',
@@ -539,9 +539,9 @@ const FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet cheaper than US e-commerce agencies?',
+    question: 'How does FactoryJet keep e-commerce pricing fixed and predictable?',
     answer:
-      'Our engineering and design team is specialized. The same Figma-first design process, the same platform engineering quality, the same Lighthouse audit before handover — at dramatically lower labor costs. We\'ve been building e-commerce for US businesses since 2005. You\'re paying for the build, not our office overhead or account management layers.',
+      'We work fixed-price and milestone-paid — every store is scoped upfront with no hourly billing and no scope-creep invoices. Building e-commerce for US businesses since 2005 means we estimate accurately on the first call, so the quote you sign is what you pay. You get the same Figma-first design process, the same platform engineering quality, the same Lighthouse audit before handover — and full code ownership at handoff.',
   },
 
   /* ── Migrations ── */
@@ -583,7 +583,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US e-commerce agency?',
     answer:
-      'Three things: price (60–70% cheaper — specialized team serving US businesses since 1999), ownership (full codebase delivered to your GitHub on launch day, zero lock-in), and honesty (we\'ll tell you when a simpler solution fits better than a more expensive one). We\'ve delivered 500+ projects for US businesses. We know what actually drives e-commerce revenue versus what looks good in a proposal.',
+      'Three things: price (fixed-price — specialized team serving US businesses since 1999), ownership (full codebase delivered to your GitHub on launch day, zero lock-in), and honesty (we\'ll tell you when a simpler solution fits better than a more expensive one). We\'ve delivered 500+ projects for US businesses. We know what actually drives e-commerce revenue versus what looks good in a proposal.',
   },
   {
     category: 'trust',
@@ -731,7 +731,7 @@ export default function EcommerceDevelopmentPage() {
         <Hero
           eyebrow="E-COMMERCE DEVELOPMENT · USA"
           headline="An Online Store That Sells on Any Platform, at Any Scale"
-          lead="Most US e-commerce stores are built on generic themes and convert below 1%. FactoryJet builds custom Shopify, WooCommerce, BigCommerce, and headless stores — designed in Figma, engineered for conversion — at 60–70% the cost of a US e-commerce agency."
+          lead="Most US e-commerce stores are built on generic themes and convert below 1%. FactoryJet builds custom Shopify, WooCommerce, BigCommerce, and headless stores — designed in Figma, engineered for conversion — fixed-price, milestone-paid, and predictable from quote to launch."
           primaryCta={{ label: 'Book a Free Consultation', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
@@ -921,7 +921,7 @@ export default function EcommerceDevelopmentPage() {
             {
               icon: '💸',
               title: 'US e-commerce agencies quote $15,000–$60,000 for this',
-              body: 'A mid-tier US e-commerce agency charges $15,000–$60,000 for a custom store build, before retainers, migration fees, or app configuration. FactoryJet delivers the same Figma-first design, the same platform engineering quality, and the same Lighthouse audit at 60–70% less — because of our efficient low-overhead structure and has been building for US clients since 1999.',
+              body: 'A mid-tier US e-commerce agency charges $15,000–$60,000 for a custom store build, before retainers, migration fees, or app configuration. FactoryJet delivers the same Figma-first design, the same platform engineering quality, and the same Lighthouse audit — fixed-price, milestone-paid, with full code ownership at handoff. We have been building e-commerce for US clients since 1999.',
             },
           ]}
         />

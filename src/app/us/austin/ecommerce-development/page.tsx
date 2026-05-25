@@ -32,13 +32,13 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns'
 export const metadata: Metadata = {
   title: 'Ecommerce Development Austin TX | From $1,500 | FactoryJet',
   description:
-    "Austin ecommerce development by FactoryJet — Shopify, WooCommerce & custom stores, 60–70% less than local agencies. Launches in 7 days from $2,999. Free audit.",
+    "Austin ecommerce development by FactoryJet — Shopify, WooCommerce & custom stores Launches in 7 days from $2,999. Free audit.",
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Ecommerce Development Austin TX | From $1,500 | FactoryJet',
     description:
-      'Custom Shopify & WooCommerce stores built in 7 days — at 60% less than what Austin agencies charge. 500+ US brands served. No fluff. Just results.',
+      'Custom Shopify & WooCommerce stores built in 7 days — at fixed-price vs local benchmarks. 500+ US brands served. No fluff. Just results.',
     url: 'https://factoryjet.com/us/austin/ecommerce-development',
     images: [
       {
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ecommerce Development Austin TX | From $1,500 | FactoryJet',
     description:
-      'Custom Shopify & WooCommerce stores built in 7 days — 60% less than Austin agencies. 500+ stores delivered.',
+      'Custom Shopify & WooCommerce stores built in 7 days — fixed-price vs local agency benchmarks. 500+ stores delivered.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
@@ -97,7 +97,7 @@ export default function AustinEcommerceDevelopmentPage() {
         <Hero
           eyebrow="ECOMMERCE DEVELOPMENT · AUSTIN TX"
           headline="Your Austin Business Deserves an Online Store That Actually Sells"
-          lead="FactoryJet builds Shopify, WooCommerce, and custom ecommerce stores for Austin small businesses — delivered in 7 days, at 60–70% less than what local agencies charge. No discovery calls that go nowhere. No six-week timelines. Just a store that's open for business."
+          lead="FactoryJet builds Shopify, WooCommerce, and custom ecommerce stores for Austin small businesses — delivered in 7 days, at fixed-price, milestone-paid. No discovery calls that go nowhere. No six-week timelines. Just a store that's open for business."
           primaryCta={{ label: 'Get My Free Ecommerce Audit', modal: true, region: 'us' }}
           trustItems={[
             'Stores from $1,500',
@@ -126,7 +126,7 @@ export default function AustinEcommerceDevelopmentPage() {
           leadParagraphs={[
             "Austin's retail scene has always punched above its weight. South Congress boutiques, East Austin makers, Domain anchors, the Barton Springs weekend crowd — Austin shoppers are loyal, high-income, and increasingly buying online first.",
             "But there's a gap forming between Austin businesses with a real ecommerce presence and those still relying on Instagram DMs and 'email us to order.' Foot traffic alone doesn't cut it anymore — not when your competitor just launched a Shopify store with next-day shipping and a loyalty program.",
-            "The good news: you don't need to spend $20,000 with a local agency to compete. FactoryJet builds production-grade ecommerce stores — Shopify, WooCommerce, custom headless — for Austin businesses at India-based rates with US project management. Same quality. Radically different price.",
+            "The good news: you don't need to spend $20,000 with a local agency to compete. FactoryJet builds production-grade ecommerce stores — Shopify, WooCommerce, custom headless — for Austin businesses at fixed-price tiers with US project management. Same quality. Radically different price.",
           ]}
           stats={[
             {
@@ -195,7 +195,7 @@ export default function AustinEcommerceDevelopmentPage() {
           eyebrow="WHY FACTORYJET"
           headline="What $12,000 Gets You at an Austin Agency vs. FactoryJet"
           lead={
-            "Agencies like Geek Powered Studios, GLIDE®, and Bryt Designs do solid work — we're not disputing that. But they're built for clients with $20K+ budgets and 3-month timelines. If you're an Austin small business who needs a professional online store without mortgaging a quarter of your annual revenue to get it, FactoryJet is the answer.\n\nWe operate out of India with US project management, which means you get enterprise-level execution at small-business prices. Over 500 US businesses have made that trade. Most of them wish they'd found us a year earlier."
+            "Agencies like Geek Powered Studios, GLIDE®, and Bryt Designs do solid work — we're not disputing that. But they're built for clients with $20K+ budgets and 3-month timelines. If you're an Austin small business who needs a professional online store without mortgaging a quarter of your annual revenue to get it, FactoryJet is the answer.\n\nWe run a senior-only engineering team with US-hour project management — fixed-price, milestone-paid, with full code ownership at handoff. You get enterprise-level execution at small-business prices and predictable cost from quote to launch. Over 500 US businesses have made that trade. Most of them wish they'd found us a year earlier."
           }
           pillars={[
             {
@@ -203,8 +203,8 @@ export default function AustinEcommerceDevelopmentPage() {
               body: 'Standard Shopify stores are live in 7 days from kickoff. Compare that to Geek Powered Studios (6–12 weeks) or GLIDE® (4–8 weeks). If we miss the deadline, you don\'t pay. We\'ve hit it on 97% of 500+ projects.',
             },
             {
-              title: '60–70% less',
-              body: 'The average Austin ecommerce agency charges $6,500–$18,000 for a Shopify store. FactoryJet delivers the same quality for $1,500–$3,500. India-based development, US project management, full quality guarantee.',
+              title: 'fixed-price',
+              body: 'The average Austin ecommerce agency charges $6,500–$18,000 for a Shopify store. FactoryJet delivers the same quality for $1,500–$3,500. Fixed-price builds, US project management, full quality guarantee.',
             },
             {
               title: 'Lighthouse 100/100',
@@ -300,7 +300,7 @@ export default function AustinEcommerceDevelopmentPage() {
               values: [
                 '$8,000–$20,000 for a standard Shopify build. 6–12 week timeline.',
                 'From $1,500 · 7-day delivery',
-                'India-based senior devs, US project management. Same output quality, 65% lower cost. No discovery fees, no hourly billing surprises.',
+                'Senior devs, US project management. Same output quality, 65% lower cost. No discovery fees, no hourly billing surprises.',
               ],
             },
             {
@@ -469,13 +469,13 @@ export default function AustinEcommerceDevelopmentPage() {
               category: 'pricing',
               question: 'How much does ecommerce development cost in Austin, TX?',
               answer:
-                "Austin ecommerce agencies typically charge $6,500–$25,000+ for a Shopify or WooCommerce store, depending on complexity. At FactoryJet, a production-ready ecommerce store starts at $1,500 for Shopify and $4,500 for fully custom builds. The difference comes from our India-based development team and lean operations — not from cutting corners on quality. We guarantee Lighthouse 100/100 on every project regardless of tier.",
+                "Austin ecommerce agencies typically charge $6,500–$25,000+ for a Shopify or WooCommerce store, depending on complexity. At FactoryJet, a production-ready ecommerce store starts at $1,500 for Shopify and $4,500 for fully custom builds. The difference comes from our lean operations — not from cutting corners on quality. We guarantee Lighthouse 100/100 on every project regardless of tier.",
             },
             {
               category: 'pricing',
-              question: 'Why is FactoryJet so much cheaper than Austin agencies?',
+              question: 'How does FactoryJet keep Austin store pricing fixed and predictable?',
               answer:
-                "We're headquartered in India with US project management and client communication. India-based senior developers with 10+ years of experience earn a fraction of what Austin developers command — and we pass that savings directly to you. Your project manager is US-based, your communication is in US timezone, and your code quality is indistinguishable from what a $15,000 Austin agency would produce. We've been doing this for 25 years with 500+ stores as proof.",
+                "We work fixed-price and milestone-paid — every store is scoped upfront with no hourly billing and no scope-creep invoices. 25 years of experience with 500+ stores means we estimate accurately on the first call, so the quote you sign is what you pay. You get US-hour project management, US-timezone communication, and senior developers with 10+ years of experience — delivering code quality indistinguishable from what a $15,000 Austin agency would produce, with full code ownership at handoff.",
             },
             {
               category: 'pricing',

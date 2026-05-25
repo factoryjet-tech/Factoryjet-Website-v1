@@ -23,22 +23,22 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'Web Design Agency USA | 7-Day Delivery from $1,999 | FactoryJet',
   description:
-    'Top-rated US web design agency: custom websites live in 7 days from $1,999 — 60% less than US agencies. Shopify & Next.js. 500+ businesses served.',
+    'Top-rated US web design agency: custom websites live in 7 days from $1,999. Fixed-price Shopify & Next.js builds. 500+ businesses served.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Agency USA | Websites in 7 Days from $1,999 — 60% Less | FactoryJet',
+    title: 'Web Design Agency USA | Websites in 7 Days from $1,999 — Fixed Price | FactoryJet',
     description:
-      'Custom websites live in 7 days from $1,999 — 60% less than US agencies. 500+ businesses served. Shopify, Next.js, WordPress. Free strategy call.',
+      'Custom websites live in 7 days from $1,999, fixed-price. 500+ businesses served. Shopify, Next.js, WordPress. Free strategy call.',
     url: 'https://factoryjet.com/us',
     images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet - Web Design Agency USA' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web Design Agency USA | 7 Days from $1,999 — 60% Less | FactoryJet',
+    title: 'Web Design Agency USA | 7 Days from $1,999 — Fixed Price | FactoryJet',
     description:
-      'Custom websites live in 7 days from $1,999 — 60% less than US agencies. Shopify, Next.js, WordPress. 500+ businesses served.',
+      'Custom websites live in 7 days from $1,999, fixed-price. Shopify, Next.js, WordPress. 500+ businesses served.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
@@ -367,11 +367,11 @@ export default function USHomePage() {
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
           announcementPill={{ text: 'Accepting New Clients — 7-Day Delivery' }}
-          headline={<>Affordable Web Design<br className="hidden lg:block" /> for US Small Businesses.<br className="hidden lg:block" /> Live in 7 Days</>}
-          lead="FactoryJet is a web design agency building high-converting websites and Shopify stores for US small businesses. 60 to 70% less than local agencies, with full code ownership and a guaranteed delivery."
+          headline={<>Fixed-Price Web Design<br className="hidden lg:block" /> for US Small Businesses.<br className="hidden lg:block" /> Live in 7 Days</>}
+          lead="FactoryJet is a web design agency building high-converting websites and Shopify stores for US small businesses. Fixed-price, milestone-paid, with full code ownership and a guaranteed delivery."
           primaryCta={{ label: 'Get a Free Strategy Call', modal: true, region: 'us' }}
           secondaryCta={{ label: 'Free SEO Audit', modal: true, region: 'us' }}
-          trustItems={['From $1,999', '7-Day Delivery', '60–70% Less', '523+ Projects']}
+          trustItems={['From $1,999', '7-Day Delivery', 'Fixed Price', '523+ Projects']}
           rightSlot={<HeroImageMockup />}
         />
 
@@ -394,7 +394,7 @@ export default function USHomePage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why US Companies Choose FactoryJet for B2B Web Design"
-          lead="US web agencies charge $15,000–$50,000 for websites FactoryJet delivers for 60–70% less — with a 7-day guarantee, fixed pricing, and a codebase that's yours the moment we launch. No discovery fees. No retainers. No vendor lock-in."
+          lead="US web agencies quote $15,000–$50,000 and 6–12 week timelines. FactoryJet ships fixed-price, milestone-paid websites in 7 days — with a codebase that's yours the moment we launch. No discovery fees. No retainers. No vendor lock-in."
           pillars={[
             {
               title: 'AI-Native Speed',

@@ -20,13 +20,13 @@ import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS'
 import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
 
 export const metadata: Metadata = {
-  title: 'Shopify Developer Fargo ND | From $2,999 | FactoryJet',
-  description: 'Best Shopify developer in Fargo ND: stores live in 7 days from $2,999. Silicon Prairie e-commerce — Shopify, WooCommerce & AI. 500+ projects. Free audit.',
+  title: 'Shopify Developer Fargo ND — Live in 7 Days, From $2,999',
+  description: 'Need a Shopify store live in Fargo, ND in 7 days? Fixed-price builds from $2,999. Silicon Prairie e-commerce experts. 500+ launched. Book a free strategy call.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Developer Fargo ND | From $2,999 | FactoryJet',
-    description: 'Best Shopify developer in Fargo, North Dakota: stores live in 7 days from $2,999. Silicon Prairie e-commerce specialists — Shopify, WooCommerce & AI. Free audit.',
+    title: 'Shopify Developer Fargo ND — Live in 7 Days, From $2,999',
+    description: 'Need a Shopify store live in Fargo, ND in 7 days? Fixed-price builds from $2,999. Silicon Prairie e-commerce experts. 500+ launched. Book a free strategy call.',
     url: 'https://factoryjet.com/us/fargo/ecommerce-development',
     images: [
       {
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify Developer Fargo ND | E-Commerce from $2,999 | FactoryJet',
-    description: 'Best Shopify developer in Fargo ND: stores live in 7 days from $2,999. Silicon Prairie e-commerce specialists. Free audit.',
+    title: 'Shopify Developer Fargo ND — Live in 7 Days, From $2,999',
+    description: 'Need a Shopify store live in Fargo, ND in 7 days? Fixed-price builds from $2,999. Silicon Prairie e-commerce experts. 500+ launched. Book a free strategy call.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
@@ -89,7 +89,7 @@ export default function Page() {
         <Hero
           eyebrow="E-COMMERCE DEVELOPMENT · FARGO, ND"
           headline="Shopify Developer Fargo for Silicon Prairie Businesses"
-          lead="Fargo's fastest-growing brands are ditching slow local agencies and launching high-converting Shopify stores in 7 days — at 60% less than what Onsharp or AdShark charge for the same work."
+          lead="Fargo's fastest-growing brands are ditching slow local agencies and launching high-converting Shopify stores in 7 days — at fixed-price vs local benchmarks."
           primaryCta={{ label: 'Get Your Free Store Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={['500+ Stores Launched', '7-Day Delivery', '4.9★ Rated', 'From $2,999']}
@@ -262,7 +262,7 @@ export default function Page() {
               values: [
                 '$8,000–$20,000 (full-service digital agency, excellent for enterprise, 6–12 week timelines)',
                 'From $2,999 fixed price, 7-day delivery',
-                'Onsharp is great for enterprise clients with $50K+ budgets and complex marketing needs. FactoryJet gives Fargo SMBs the same Shopify quality at 60–70% less, with a guaranteed 7-day timeline.',
+                'Onsharp is great for enterprise clients with $50K+ budgets and complex marketing needs. FactoryJet gives Fargo SMBs the same Shopify quality at fixed-price, with a guaranteed 7-day timeline.',
               ],
             },
             {
@@ -439,7 +439,7 @@ export default function Page() {
             {
               category: 'local',
               question: 'Does Microsoft TechSpark or Emerging Prairie offer any e-commerce grants or subsidies?',
-              answer: "Microsoft TechSpark's Fargo initiative includes digital skills programs and some technology credits, but direct e-commerce store grants aren't currently part of the program. The most accessible path for most Fargo SMBs is working with an affordable specialist — which is exactly the gap we fill at $2,999.",
+              answer: "Microsoft TechSpark's Fargo initiative includes digital skills programs and some technology credits, but direct e-commerce store grants aren't currently part of the program. The most accessible path for most Fargo SMBs is working with a fixed-price specialist who can scope the work upfront — which is exactly the gap we fill at $2,999.",
             },
             {
               category: 'pricing',

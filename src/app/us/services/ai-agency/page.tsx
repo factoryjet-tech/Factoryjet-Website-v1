@@ -31,13 +31,13 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'AI Agency for US Small Business | Agents & Chatbots | FactoryJet',
   description:
-    'US AI agency building custom agents, automation workflows & chatbots for small businesses. 60–70% cheaper than US AI agencies. From $5,000. Free AI strategy call.',
+    'US AI agency building custom agents, automation workflows & chatbots for small businesses. fixed-price, milestone-paid. From $5,000. Free AI strategy call.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'AI Agency for US Small Business | FactoryJet',
     description:
-      'Custom AI agents, automation, and chatbots for US small businesses. 60–70% cheaper than US AI agencies. Starting at $5,000. Free AI strategy call.',
+      'Custom AI agents, automation, and chatbots for US small businesses. fixed-price, milestone-paid. Starting at $5,000. Free AI strategy call.',
     url: 'https://factoryjet.com/us/services/ai-agency',
     images: [
       {
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Agency USA | AI Agents, Automation & Chatbots | FactoryJet',
     description:
-      'Custom AI agents and automation for US small businesses. 60–70% cheaper than US AI agencies. Fixed price. Free strategy call.',
+      'Custom AI agents and automation for US small businesses. fixed-price, milestone-paid. Fixed price. Free strategy call.',
     images: ['https://factoryjet.com/images/us/services/ai-agency/og-ai-agency.jpg'],
   },
   alternates: {
@@ -206,15 +206,15 @@ const faqSchema = {
       name: 'How much does it cost to hire an AI agency?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s AI projects start at $5,000 for a focused single-workflow agent and go to $25,000+ for multi-agent enterprise platforms. Most small businesses land in the $10,000 to $18,000 range — that\'s our Growth tier, covering multiple interconnected workflows, CRM integrations, a management dashboard, and a 30-day support window. US AI agencies typically quote $40,000 to $150,000 for equivalent scope. We deliver for 60 to 70% less because our team structure is fundamentally leaner, not because we cut corners on engineering quality.',
+        text: 'FactoryJet\'s AI projects start at $5,000 for a focused single-workflow agent and go to $25,000+ for multi-agent enterprise platforms. Most small businesses land in the $10,000 to $18,000 range — that\'s our Growth tier, covering multiple interconnected workflows, CRM integrations, a management dashboard, and a 30-day support window. US AI agencies typically quote $40,000 to $150,000 for equivalent scope. We deliver at fixed-price because our team structure is fundamentally leaner, not because we cut corners on engineering quality.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Why is FactoryJet cheaper than most US AI development agencies?',
+      name: 'How does FactoryJet keep AI development pricing fixed and predictable?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Our engineering team is based in India. That\'s the full explanation — no complicated story. The same quality of architecture, code review, and delivery at dramatically lower labor costs. US AI agencies charge $200 to $400/hour because their engineers cost $150,000+ per year in salaries alone, plus Manhattan rent, account management layers, and sales teams. We have experienced engineers, a lean structure, and a 25-year track record serving US businesses. That savings goes directly into your invoice.',
+        text: 'We work fixed-price and milestone-paid — every AI project is scoped upfront with no hourly billing and no scope-creep invoices. Our 25-year track record serving US businesses means we estimate accurately on the first call, so the quote you sign is what you pay. You get a senior-only team — no account-management layers — delivering production-grade architecture, code review, and delivery, with full code ownership at handoff.',
       },
     },
     {
@@ -298,7 +298,7 @@ const serviceSchema = {
   areaServed: { '@type': 'Country', name: 'United States' },
   serviceType: 'AI Agency',
   description:
-    'FactoryJet is a US AI agency building custom AI agents, automation workflows, AI chatbots, and AI-native software for US small businesses. 60–70% cheaper than comparable US AI agencies. Fixed pricing, full code ownership.',
+    'FactoryJet is a US AI agency building custom AI agents, automation workflows, AI chatbots, and AI-native software for US small businesses. fixed-price, milestone-paid. Fixed pricing, full code ownership.',
   offers: [
     { '@type': 'Offer', name: 'Starter AI Build', price: '5000', priceCurrency: 'USD', description: 'Single-workflow AI agent or automation for one focused business problem.' },
     { '@type': 'Offer', name: 'Growth AI Platform', price: '12000', priceCurrency: 'USD', description: 'Multi-workflow AI platform with CRM integrations and management dashboard.' },
@@ -787,13 +787,13 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does it cost to hire an AI agency?',
     answer:
-      'FactoryJet starts at $5,000 for a focused single-workflow build and goes to $25,000+ for multi-agent enterprise systems. Most small businesses land in the $10,000 to $18,000 range — our Growth tier, covering multiple interconnected workflows, CRM integrations, a management dashboard, and a 30-day support window. US AI agencies typically quote $40,000 to $150,000 for equivalent scope. We deliver for 60 to 70% less because our team structure is fundamentally leaner — not because engineering quality is different.',
+      'FactoryJet starts at $5,000 for a focused single-workflow build and goes to $25,000+ for multi-agent enterprise systems. Most small businesses land in the $10,000 to $18,000 range — our Growth tier, covering multiple interconnected workflows, CRM integrations, a management dashboard, and a 30-day support window. US AI agencies typically quote $40,000 to $150,000 for equivalent scope. We deliver at fixed-price because our team structure is fundamentally leaner — not because engineering quality is different.',
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet cheaper than most US AI development agencies?',
+    question: 'How does FactoryJet keep AI development pricing fixed and predictable?',
     answer:
-      'Our engineering team is based in India — that\'s the full explanation. Same quality of architecture, code review, and delivery at dramatically lower labor costs. US AI agencies charge $200 to $400/hour because their engineers cost $150,000+ in annual salaries alone, plus Manhattan rent, account management layers, and sales teams that need feeding. We have experienced engineers, a lean structure, and 25 years of serving US businesses. That cost difference goes directly back to you as a lower price.',
+      'We work fixed-price and milestone-paid — every AI project is scoped upfront with no hourly billing and no scope-creep invoices. 25 years serving US businesses means we estimate accurately on the first call, so the quote you sign is what you pay. You get experienced engineers in a lean structure — no account-management or sales layers — delivering production-grade architecture, code review, and handover, with full code ownership at handoff.',
   },
   {
     category: 'pricing',
@@ -892,10 +892,10 @@ export default function AIAgencyPage() {
         <Hero
           eyebrow="AI AGENCY · UNITED STATES"
           headline={<>The AI Agency That<br className="hidden lg:block" /> Actually Delivers —<br className="hidden lg:block" /> Not Just Decks</>}
-          lead="FactoryJet is a US AI agency building custom AI agents, automation workflows, and chatbots for small businesses since 2019. 500+ production systems delivered. 60–70% cheaper than US AI agencies. Fixed price. Free strategy call."
+          lead="FactoryJet is a US AI agency building custom AI agents, automation workflows, and chatbots for small businesses since 2019. 500+ production systems delivered. fixed-price, milestone-paid. Fixed price. Free strategy call."
           primaryCta={{ label: 'Book a Free AI Strategy Call', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
-          trustItems={['500+ businesses served', 'Starting at $5,000', '60–70% cheaper', '25 years building']}
+          trustItems={['500+ businesses served', 'Starting at $5,000', 'fixed-price', '25 years building']}
           rightSlot={
             <div className="w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">
               {/* Card header */}
@@ -1161,8 +1161,8 @@ export default function AIAgencyPage() {
           headline="FactoryJet vs. US AI Agency vs. Freelancer vs. DIY Tools"
           lead="Four options for getting AI built. They are not equal. Here's what the decision actually looks like when you compare them side by side on the things that matter."
           pullQuote={{
-            stat: '60–70%',
-            caption: 'cheaper than a comparable US AI agency — same engineering quality, fundamentally leaner team structure.',
+            stat: 'Fixed Price',
+            caption: 'milestone-paid with full code ownership — same engineering quality, predictable from quote to launch.',
           }}
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}

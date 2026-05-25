@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'AI Agents & Chatbots for Denver CO Businesses | FactoryJet',
     description:
-      'Custom AI agents for Denver businesses. Built on GPT-4o and Claude. 60–70% cheaper than Denver AI agencies. Fast delivery. Free strategy call.',
+      'Custom AI agents for Denver businesses. Built on GPT-4o and Claude. fixed-price, milestone-paid. Fast delivery. Free strategy call.',
     url: 'https://factoryjet.com/us/denver/ai-agents',
     images: [
       {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Agents & Chatbots for Denver CO Businesses | FactoryJet',
     description:
-      'Custom AI agents for Denver CO businesses. 60–70% cheaper than local agencies. Free strategy call.',
+      'Custom AI agents for Denver CO businesses. fixed-price, milestone-paid. Free strategy call.',
     images: ['https://factoryjet.com/images/us/denver/hero-denver.webp'],
   },
   alternates: {
@@ -103,7 +103,7 @@ const faqSchema = {
       name: 'How much does an AI agent cost for a Denver business?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s AI agents start at $3,000 for a single-purpose Starter agent. The Growth tier at $8,000 covers multi-intent agents with CRM integration, live handoff, and a conversation dashboard — the most popular option for Denver SMBs. Custom enterprise agents start at $15,000. All prices are 60–70% lower than comparable Denver or national AI agencies.',
+        text: 'FactoryJet\'s AI agents start at $3,000 for a single-purpose Starter agent. The Growth tier at $8,000 covers multi-intent agents with CRM integration, live handoff, and a conversation dashboard — the most popular option for Denver SMBs. Custom enterprise agents start at $15,000. All prices are significantly lower than comparable Denver or national AI agencies.',
       },
     },
     {
@@ -336,10 +336,10 @@ const ROI_STATS = [
     categoryLabel: 'RESPONSE SPEED',
   },
   {
-    value: '60–70%',
-    label: 'cheaper than a comparable Denver or US AI agency',
-    microcopy: '25+ years experience, US-caliber output',
-    categoryLabel: 'COST ADVANTAGE',
+    value: 'Fixed Price',
+    label: 'milestone-paid with full code ownership — 25+ years experience, US-caliber output',
+    microcopy: 'predictable from quote to launch — no scope-creep invoices',
+    categoryLabel: 'PRICING MODEL',
   },
 ];
 
@@ -619,11 +619,11 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does an AI agent cost for a Denver business?',
     answer:
-      'FactoryJet\'s AI agents start at $3,000 for a single-purpose Starter agent. The Growth tier at $8,000 covers multi-intent agents with CRM integration, live handoff, and a conversation dashboard — the most popular option for Denver SMBs. Custom enterprise agents start at $15,000. All prices are 60–70% lower than comparable Denver or national AI agencies.',
+      'FactoryJet\'s AI agents start at $3,000 for a single-purpose Starter agent. The Growth tier at $8,000 covers multi-intent agents with CRM integration, live handoff, and a conversation dashboard — the most popular option for Denver SMBs. Custom enterprise agents start at $15,000. All prices are significantly lower than comparable Denver or national AI agencies.',
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet 60–70% cheaper than Denver AI agencies?',
+    question: 'Why is FactoryJet fixed-price, milestone-paid?',
     answer:
       'Our engineering team brings 25+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery — at dramatically lower labor costs. We\'ve served US businesses for 25 years. When you brief us, an engineer reads it, not an account manager. No Cherry Creek or LoDo office rates built into the quote.',
   },
@@ -670,7 +670,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a local Denver AI development agency?',
     answer:
-      'Three differences: price (60–70% cheaper — specialized engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it — weeks, not months), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 12-person Denver company, not just enterprise AI theory).',
+      'Three differences: price (specialized engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it — weeks, not months), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 12-person Denver company, not just enterprise AI theory).',
   },
   {
     category: 'trust',
@@ -721,13 +721,13 @@ export default function DenverAIAgentsPage() {
         <Hero
           eyebrow="AI AGENTS · DENVER, CO"
           headline="Denver Businesses Are Capturing More Leads While the Mountains Are Still Dark"
-          lead="Denver's market is competitive, seasonal, and increasingly digital-first. FactoryJet builds custom AI agents for Denver businesses — customer support, lead generation, appointment booking, and e-commerce automation — that respond in seconds, connect to your existing tools, and cost 60–70% less than a local Denver agency."
+          lead="Denver's market is competitive, seasonal, and increasingly digital-first. FactoryJet builds custom AI agents for Denver businesses — customer support, lead generation, appointment booking, and e-commerce automation — that respond in seconds, connect to your existing tools, and cost fixed-price vs a local Denver agency."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',
             'Starting at $3,000',
-            '60–70% cheaper than Denver agencies',
+            'engineered for measurable outcomes',
           ]}
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
@@ -1014,7 +1014,7 @@ export default function DenverAIAgentsPage() {
             {
               icon: '⚡',
               title: 'Speed without cutting corners',
-              body: 'A Denver AI agency has account managers, coordinators, and a sales team to feed. We don\'t. When you brief us, an engineer reads it — not an account manager. That\'s why our timelines are weeks, not quarters. And why our price is 60–70% lower.',
+              body: 'A Denver AI agency has account managers, coordinators, and a sales team to feed. We don\'t. When you brief us, an engineer reads it — not an account manager. That\'s why our timelines are weeks, not quarters. And why our price is significantly lower.',
             },
             {
               icon: '💡',

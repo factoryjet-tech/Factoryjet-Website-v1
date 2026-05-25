@@ -20,13 +20,13 @@ import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS'
 import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
 
 export const metadata: Metadata = {
-  title: 'Shopify Developer Boise ID | From $2,999 | FactoryJet',
-  description: 'Best Shopify developer in Boise ID: stores live in 7 days from $2,999. Treasure Valley specialists — Shopify, WooCommerce & AI. 500+ projects. Free audit.',
+  title: 'Shopify Developer Boise, ID — 7-Day Builds From $2,999',
+  description: 'Launch a Shopify store in Boise, ID in 7 days from $2,999. Treasure Valley e-commerce experts — fixed price, full code ownership. Book a free strategy call.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Developer Boise ID | From $2,999 | FactoryJet',
-    description: 'Best Shopify developer in Boise, Idaho: e-commerce websites live in 7 days from $2,999. Treasure Valley specialists — Shopify, WooCommerce & AI. Free audit.',
+    title: 'Shopify Developer Boise, ID — 7-Day Builds From $2,999',
+    description: 'Launch a Shopify store in Boise, ID in 7 days from $2,999. Treasure Valley e-commerce experts — fixed price, full code ownership. Book a free strategy call.',
     url: 'https://factoryjet.com/us/boise/ecommerce-development',
     images: [
       {
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify Developer Boise ID | From $2,999 | FactoryJet',
-    description: 'Best Shopify developer in Boise Idaho: stores live in 7 days from $2,999. Treasure Valley e-commerce specialists. Free audit.',
+    title: 'Shopify Developer Boise, ID — 7-Day Builds From $2,999',
+    description: 'Launch a Shopify store in Boise, ID in 7 days from $2,999. Treasure Valley e-commerce experts — fixed price, full code ownership. Book a free strategy call.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
@@ -89,7 +89,7 @@ export default function Page() {
         <Hero
           eyebrow="E-COMMERCE DEVELOPMENT · BOISE, ID"
           headline="Shopify Developer Boise for Treasure Valley Businesses"
-          lead="Boise is one of the fastest-growing cities in America — and the businesses winning online aren't waiting months for a local agency. They're launching professional Shopify stores in 7 days at 60% less than what Boise agencies charge."
+          lead="Boise is one of the fastest-growing cities in America — and the businesses winning online aren't waiting months for a local agency. They're launching professional Shopify stores in 7 days at fixed-price vs local benchmarks."
           primaryCta={{ label: 'Get Your Free Store Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={['500+ Stores Launched', '7-Day Delivery', '4.9★ Rated', 'From $2,999']}
@@ -264,7 +264,7 @@ export default function Page() {
               values: [
                 '$8,000–$25,000 (high-quality Shopify agency, strong portfolio, built for enterprise brands with 8–14 week timelines)',
                 'From $2,999 fixed price, 7-day delivery',
-                'Mode Effect does excellent work for brands with $15K+ budgets. FactoryJet delivers the same Shopify quality at 60–70% less with a guaranteed 7-day timeline — built for Boise SMBs.',
+                'Mode Effect does excellent work for brands with $15K+ budgets. FactoryJet delivers the same Shopify quality at fixed-price with a guaranteed 7-day timeline — built for Boise SMBs.',
               ],
             },
             {

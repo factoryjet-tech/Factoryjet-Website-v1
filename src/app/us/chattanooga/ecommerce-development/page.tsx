@@ -26,21 +26,21 @@ import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 
 export const metadata: Metadata = {
-  title: 'Shopify Developer Chattanooga TN | From $2,999 | FactoryJet',
-  description: 'Top-rated Shopify developer in Chattanooga TN: stores live in 7 days from $2,999. Gig City e-commerce — Shopify, WooCommerce & AI. 500+ projects. Free audit.',
+  title: 'Shopify Developer Chattanooga, TN — 7-Day Builds From $2,999',
+  description: 'Launch a Shopify store in Chattanooga, TN in 7 days from $2,999. Gig City e-commerce specialists — fixed price, full code ownership. Book a free strategy call.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Developer Chattanooga TN | From $2,999 | FactoryJet',
-    description: 'Top-rated Shopify developer in Chattanooga, Tennessee: stores live in 7 days from $2,999. Gig City e-commerce specialists — Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
+    title: 'Shopify Developer Chattanooga, TN — 7-Day Builds From $2,999',
+    description: 'Launch a Shopify store in Chattanooga, TN in 7 days from $2,999. Gig City e-commerce specialists — fixed price, full code ownership. Book a free strategy call.',
     url: 'https://factoryjet.com/us/chattanooga/ecommerce-development',
     images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet - Shopify Developer Chattanooga TN' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify Developer Chattanooga TN | From $2,999 | FactoryJet',
-    description: 'Top-rated Shopify developer in Chattanooga TN: stores live in 7 days from $2,999. Gig City e-commerce specialists. Free audit.',
+    title: 'Shopify Developer Chattanooga, TN — 7-Day Builds From $2,999',
+    description: 'Launch a Shopify store in Chattanooga, TN in 7 days from $2,999. Gig City e-commerce specialists — fixed price, full code ownership. Book a free strategy call.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {

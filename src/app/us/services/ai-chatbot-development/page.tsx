@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'AI Chatbot Development Services USA | FactoryJet',
     description:
-      'Custom AI chatbots for customer support, lead gen, and e-commerce. Built on GPT-4o and Claude. 60–70% cheaper than US chatbot agencies. Fast delivery.',
+      'Custom AI chatbots for customer support, lead gen, and e-commerce. Built on GPT-4o and Claude. fixed-price, milestone-paid. Fast delivery.',
     url: 'https://factoryjet.com/us/services/ai-chatbot-development',
     images: [
       {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Chatbot Development Services USA | FactoryJet',
     description:
-      'Custom AI chatbots for US small businesses. 60–70% cheaper. 2–3 week delivery. Free strategy call.',
+      'Custom AI chatbots for US small businesses. fixed-price. 2–3 week delivery. Free strategy call.',
     images: ['https://factoryjet.com/images/us/services/hero-ai-chatbot.webp'],
   },
   alternates: {
@@ -135,12 +135,12 @@ const faqSchema = {
       name: 'How much does AI chatbot development cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s AI chatbots start at $3,000 for a single-purpose Starter bot. The Growth tier at $8,000 covers multi-intent chatbots with CRM integration, live handoff, and a conversation dashboard — the most popular option for US SMBs. Custom enterprise chatbots with fine-tuning and multi-channel deployment start at $15,000. All prices are 60–70% lower than comparable US chatbot agencies.',
+        text: 'FactoryJet\'s AI chatbots start at $3,000 for a single-purpose Starter bot. The Growth tier at $8,000 covers multi-intent chatbots with CRM integration, live handoff, and a conversation dashboard — the most popular option for US SMBs. Custom enterprise chatbots with fine-tuning and multi-channel deployment start at $15,000. All prices are significantly lower than comparable US chatbot agencies.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Why is FactoryJet 60–70% cheaper than US chatbot agencies?',
+      name: 'Why is FactoryJet fixed-price, milestone-paid?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Our engineering team brings 25+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery at dramatically lower labor costs. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated agency rates.',
@@ -239,7 +239,7 @@ const faqSchema = {
       name: 'How is FactoryJet different from a US AI development agency?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Three differences: price (60–70% cheaper — specialized engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 10-person company, not just enterprise theory).',
+        text: 'Three differences: price (specialized engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 10-person company, not just enterprise theory).',
       },
     },
   ],
@@ -436,10 +436,10 @@ const ROI_STATS = [
     categoryLabel: 'RESPONSE SPEED',
   },
   {
-    value: '60–70%',
-    label: 'cheaper than a comparable US chatbot agency',
-    microcopy: 'specialized engineers, US-caliber output',
-    categoryLabel: 'COST ADVANTAGE',
+    value: 'Fixed Price',
+    label: 'milestone-paid chatbot builds with full code ownership',
+    microcopy: 'specialized engineers, US-caliber output — predictable from quote to launch',
+    categoryLabel: 'PRICING MODEL',
   },
 ];
 
@@ -673,11 +673,11 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does AI chatbot development cost?',
     answer:
-      'FactoryJet\'s AI chatbots start at $3,000 for a single-purpose Starter bot. The Growth tier at $8,000 covers multi-intent chatbots with CRM integration, live handoff, and a conversation dashboard — the most popular option for US SMBs. Custom enterprise chatbots with fine-tuning and multi-channel deployment start at $15,000. All prices are 60–70% lower than US chatbot agencies.',
+      'FactoryJet\'s AI chatbots start at $3,000 for a single-purpose Starter bot. The Growth tier at $8,000 covers multi-intent chatbots with CRM integration, live handoff, and a conversation dashboard — the most popular option for US SMBs. Custom enterprise chatbots with fine-tuning and multi-channel deployment start at $15,000. All prices are significantly lower than US chatbot agencies.',
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet 60–70% cheaper than US chatbot agencies?',
+    question: 'Why is FactoryJet fixed-price, milestone-paid?',
     answer:
       'Our engineering team brings 25+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery at dramatically lower labor costs. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated agency rates.',
   },
@@ -749,7 +749,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US AI development agency?',
     answer:
-      'Three differences: price (60–70% cheaper because of our efficient low-overhead structure, serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 10-person company, not just enterprise AI theory).',
+      'Three differences: pricing model (fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices, backed by 25+ years serving US businesses), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 10-person company, not just enterprise AI theory).',
   },
 ];
 
@@ -794,13 +794,13 @@ export default function AIChatbotDevelopmentPage() {
         <Hero
           eyebrow="AI CHATBOT DEVELOPMENT · USA"
           headline="A Chatbot That Answers, Qualifies, and Books — While You're Asleep"
-          lead="Your best customers expect an answer in seconds, not hours. FactoryJet builds custom AI chatbots — for customer support, lead generation, e-commerce, and appointment booking — that respond instantly, connect to your existing tools, and cost 60–70% less than a US chatbot agency."
+          lead="Your best customers expect an answer in seconds, not hours. FactoryJet builds custom AI chatbots — for customer support, lead generation, e-commerce, and appointment booking — that respond instantly, connect to your existing tools, and cost fixed-price vs a US chatbot agency."
           primaryCta={{ label: 'Book a Free Chatbot Strategy Call', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',
             'Starting at $3,000',
-            '60–70% cheaper than US agencies',
+            'fixed-price, milestone-paid',
           ]}
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">

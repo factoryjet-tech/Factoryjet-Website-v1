@@ -25,9 +25,9 @@ import Image from 'next/image';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design New York City | NYC Web Design Agency | FactoryJet',
+  title: 'NYC Web Design Agency — Custom Sites in 7 Days From $1,999',
   description:
-    'High-converting websites for New York City businesses from $1,999. 7-day delivery, 60–70% less than NYC agencies. Next.js, SEO & full code ownership.',
+    'Custom websites for New York City businesses, live in 7 days from $1,999. Next.js performance, full code ownership, US-hour PM. Book a free strategy call.',
   alternates: {
     canonical: 'https://factoryjet.com/us/new-york/web-design',
     languages: webDesignPriorityCityAlternatesUS['new-york'],
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design New York City | FactoryJet',
+    title: 'NYC Web Design Agency — Custom Sites in 7 Days From $1,999',
     description:
-      'Fast, conversion-focused websites for NYC small businesses. 7-day delivery, fixed price from $1,999. Next.js performance, Figma design, full code ownership.',
+      'Custom websites for New York City businesses, live in 7 days from $1,999. Next.js performance, full code ownership, US-hour PM. Book a free strategy call.',
     url: 'https://factoryjet.com/us/new-york/web-design/',
     images: [
       {
@@ -51,8 +51,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web Design NYC | FactoryJet',
-    description: 'New York City web design agency — faster, cheaper, and better. Fixed price from $1,999. 7-day delivery.',
+    title: 'NYC Web Design Agency — Custom Sites in 7 Days From $1,999',
+    description: 'Custom websites for New York City businesses, live in 7 days from $1,999. Next.js performance, full code ownership, US-hour PM. Book a free strategy call.',
     images: ['https://factoryjet.com/logo.png'],
   },
   robots: {
@@ -125,7 +125,7 @@ const jsonLd = {
           name: 'How much does web design cost in New York City?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'NYC web design agencies typically charge $8,000–$25,000 for a small business website. FactoryJet delivers the same Figma design quality and Next.js engineering for $1,999–$6,300 — 60–70% less — because we\'re remote-first without Manhattan overhead. Every price is fixed and confirmed in writing before work starts.',
+            text: 'NYC web design agencies typically charge $8,000–$25,000 for a small business website. FactoryJet delivers the same Figma design quality and Next.js engineering for $1,999–$6,300 — fixed-price — because we\'re remote-first without Manhattan overhead. Every price is fixed and confirmed in writing before work starts.',
           },
         },
         {
@@ -141,7 +141,7 @@ const jsonLd = {
           name: 'Do you work with NYC businesses remotely?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes, 100% remotely — which is how we keep costs 60–70% below local agencies. We use Loom video for design walkthroughs, Slack for daily communication, and Figma for collaborative design review. Most NYC clients tell us we\'re easier to work with than local agencies they\'ve tried.',
+            text: 'Yes, 100% remotely — which is how we keep costs significantly below local agency benchmarks. We use Loom video for design walkthroughs, Slack for daily communication, and Figma for collaborative design review. Most NYC clients tell us we\'re easier to work with than local agencies they\'ve tried.',
           },
         },
         {
@@ -229,7 +229,7 @@ const jsonLd = {
           name: 'Do you have a physical office in New York City?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'We operate as a remote-first team, which is why we can offer NYC-quality web design at 60–70% below what local agencies charge. We work in US Eastern time and communicate via Slack, Loom, and Figma — the same tools your team already uses.',
+            text: 'We operate as a remote-first team, which is why we can offer NYC-quality web design at significantly below local agency benchmarks. We work in US Eastern time and communicate via Slack, Loom, and Figma — the same tools your team already uses.',
           },
         },
         {
@@ -389,7 +389,7 @@ export default function NewYorkWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why NYC Small Businesses Choose FactoryJet Over Local Agencies"
-          lead={"The average NYC web design agency charges $8,000–$25,000 for a small business website. Blue Fountain Media charges $10,000+ as a baseline. Coalition Technologies and Lounge Lizard are credible options — but neither publishes a 7-day delivery guarantee or builds in Next.js as standard.\n\nFactoryJet's Growth tier ($3,100–$6,300) covers 10–15 pages, a blog CMS, lead capture, GA4, and a training session. That's 60–70% below the NYC agency benchmark for equivalent scope — not because we cut corners, but because we don't have Manhattan rent to cover.\n\nEvery project ships with JSON-LD schema for AI search crawlers, Core Web Vitals performance budgets enforced from the first commit, and a codebase you own outright. No lock-in. No $500/month maintenance retainer you can't cancel."}
+          lead={"The average NYC web design agency charges $8,000–$25,000 for a small business website. Blue Fountain Media charges $10,000+ as a baseline. Coalition Technologies and Lounge Lizard are credible options — but neither publishes a 7-day delivery guarantee or builds in Next.js as standard.\n\nFactoryJet's Growth tier ($3,100–$6,300) covers 10–15 pages, a blog CMS, lead capture, GA4, and a training session. That's significantly below the NYC agency benchmark for equivalent scope — not because we cut corners, but because we don't have Manhattan rent to cover.\n\nEvery project ships with JSON-LD schema for AI search crawlers, Core Web Vitals performance budgets enforced from the first commit, and a codebase you own outright. No lock-in. No $500/month maintenance retainer you can't cancel."}
           pillars={[
             { title: 'NYC-aware', body: 'We understand the NYC business landscape — finance, media, legal, retail, hospitality. We\'ve built for all of them. The copy and conversion architecture reflect what actually works in this market.' },
             { title: 'Transparent', body: 'Pricing on the first call. No discovery fees, no \'scope review\' that costs $2,500 before work starts. Fixed price. Agreed upfront. In writing.' },
@@ -508,7 +508,7 @@ export default function NewYorkWebDesignPage() {
         <PricingTiers
           eyebrow="TRANSPARENT PRICING"
           headline="Fixed Pricing for NYC Businesses — No Surprises"
-          lead="NYC web design agencies charge $8,000–$25,000 for comparable work. FactoryJet's Growth tier covers 10–15 pages, a blog CMS, lead capture, GA4, and a training session for $3,100–$6,300. That's 60–70% below the NYC agency benchmark — with a 7-day delivery guarantee and a Next.js codebase you own outright."
+          lead="NYC web design agencies charge $8,000–$25,000 for comparable work. FactoryJet's Growth tier covers 10–15 pages, a blog CMS, lead capture, GA4, and a training session for $3,100–$6,300. That's significantly below the NYC agency benchmark — with a 7-day delivery guarantee and a Next.js codebase you own outright."
           tiers={[
             {
               name: 'Starter',
@@ -567,7 +567,7 @@ export default function NewYorkWebDesignPage() {
             {
               category: 'pricing',
               question: 'How much does web design cost in New York City?',
-              answer: 'NYC web design agencies typically charge $8,000–$25,000 for a small business website. FactoryJet delivers the same Figma design quality and Next.js engineering for $1,999–$6,300 — 60–70% less — because we\'re remote-first without Manhattan overhead. Every price is fixed and confirmed in writing before work starts.',
+              answer: 'NYC web design agencies typically charge $8,000–$25,000 for a small business website. FactoryJet delivers the same Figma design quality and Next.js engineering for $1,999–$6,300 — fixed-price — because we\'re remote-first without Manhattan overhead. Every price is fixed and confirmed in writing before work starts.',
             },
             {
               category: 'pricing',
@@ -577,7 +577,7 @@ export default function NewYorkWebDesignPage() {
             {
               category: 'local',
               question: 'Do you work with NYC businesses remotely?',
-              answer: 'Yes, 100% remotely — which is how we keep costs 60–70% below local agencies. We use Loom video for design walkthroughs, Slack for daily communication, and Figma for collaborative design review. Most NYC clients tell us we\'re easier to work with than local agencies they\'ve tried.',
+              answer: 'Yes, 100% remotely — which is how we keep costs significantly below local agency benchmarks. We use Loom video for design walkthroughs, Slack for daily communication, and Figma for collaborative design review. Most NYC clients tell us we\'re easier to work with than local agencies they\'ve tried.',
             },
             {
               category: 'local',
@@ -632,7 +632,7 @@ export default function NewYorkWebDesignPage() {
             {
               category: 'local',
               question: 'Do you have a physical office in New York City?',
-              answer: 'We operate as a remote-first team, which is why we can offer NYC-quality web design at 60–70% below what local agencies charge. We work in US Eastern time and communicate via Slack, Loom, and Figma — the same tools your team already uses.',
+              answer: 'We operate as a remote-first team, which is why we can offer NYC-quality web design at significantly below local agency benchmarks. We work in US Eastern time and communicate via Slack, Loom, and Figma — the same tools your team already uses.',
             },
             {
               category: 'local',

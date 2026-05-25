@@ -32,7 +32,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'Magento Development — Custom Adobe Commerce | FactoryJet',
   description:
-    'Expert Magento development for US businesses. Custom modules, migrations & performance optimization. 60–70% cheaper than US agencies. Free consultation.',
+    'Expert Magento development for US businesses. Custom modules, migrations & performance optimization. fixed-price, milestone-paid. Free consultation.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Magento Development Services | FactoryJet',
     description:
-      'Custom Magento and Adobe Commerce development. Module builds, migrations, performance tuning — 60–70% cheaper than US agencies.',
+      'Custom Magento and Adobe Commerce development. Module builds, migrations, performance tuning',
     images: ['https://factoryjet.com/images/us/hero-us.webp'],
   },
   alternates: {
@@ -95,7 +95,7 @@ const faqSchema = {
       name: 'How much does Magento development cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Magento development costs depend heavily on scope. A custom module or extension typically costs $2,000–$8,000. A full Magento 2 store build runs $8,000–$40,000+ depending on complexity. A Magento 1 to Magento 2 migration costs $5,000–$20,000. US agencies charge $150–$300/hour for Magento development. FactoryJet builds and migrates Magento stores at 60–70% lower cost with senior Magento-certified developers on every project.',
+        text: 'Magento development costs depend heavily on scope. A custom module or extension typically costs $2,000–$8,000. A full Magento 2 store build runs $8,000–$40,000+ depending on complexity. A Magento 1 to Magento 2 migration costs $5,000–$20,000. US agencies charge $150–$300/hour for Magento development. FactoryJet builds and migrates Magento stores at significantly lower cost with senior Magento-certified developers on every project.',
       },
     },
     {
@@ -223,10 +223,10 @@ const STATS = [
     categoryLabel: 'EXPERIENCE',
   },
   {
-    value: '60–70%',
-    label: 'cheaper than US Magento development agencies',
-    microcopy: 'senior-only team, no bloated US overhead',
-    categoryLabel: 'COST ADVANTAGE',
+    value: 'Fixed Price',
+    label: 'milestone-paid Magento builds with full code ownership',
+    microcopy: 'senior-only team — predictable from quote to launch',
+    categoryLabel: 'PRICING MODEL',
   },
   {
     value: '500+',
@@ -299,7 +299,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '60–70% lower cost than US agencies',
+    feature: 'significantly lower cost than US agencies',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="fl" kind="partial" />,
@@ -476,7 +476,7 @@ const FAQ_ITEMS = [
   // -- Cost & Pricing ----------------------------------------------------─
   {
     question: 'Why is Magento development so expensive in the US?',
-    answer: `US Magento development is expensive for two reasons: Magento expertise is specialized (fewer developers know it deeply compared to WordPress or Shopify), and US agencies charge $150–$300/hour. A custom module that takes 40 hours to build properly costs $6,000–$12,000 at those rates. FactoryJet's senior Magento developers work at significantly lower hourly rates due to our India-based team structure — delivering the same technical depth at 60–70% lower cost.`,
+    answer: `US Magento development is expensive for two reasons: Magento expertise is specialized (fewer developers know it deeply compared to WordPress or Shopify), and US agencies charge $150–$300/hour. A custom module that takes 40 hours to build properly costs $6,000–$12,000 at those rates. FactoryJet's senior Magento developers work at significantly lower hourly rates due to our lean team structure — delivering the same technical depth at significantly lower cost.`,
     category: 'cost',
   },
   {
@@ -518,7 +518,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'What time zone does FactoryJet work in for Magento projects?',
-    answer: `FactoryJet's engineering team is based in India but serves US clients exclusively. We schedule all client communication (calls, reviews, demos) during US business hours — typically 9 AM–5 PM Eastern. Daily async updates are provided through your preferred tool (Slack, email, or project management). For urgent production issues, we provide same-day response during business hours and best-effort off-hours response for critical emergencies.`,
+    answer: `FactoryJet serves US clients exclusively. We schedule all client communication (calls, reviews, demos) during US business hours — typically 9 AM–5 PM Eastern. Daily async updates are provided through your preferred tool (Slack, email, or project management). For urgent production issues, we provide same-day response during business hours and best-effort off-hours response for critical emergencies.`,
     category: 'factoryjet',
   },
 ];
@@ -598,7 +598,7 @@ export default function MagentoDevelopmentPage() {
         {/* -- 1. HERO -------------------------------------------------------- */}
         <Hero
           eyebrow="MAGENTO DEVELOPMENT SERVICES"
-          headline="Senior Magento developers. Fixed-price projects. 60–70% less than US agencies."
+          headline="Senior Magento developers. Fixed-price projects. fixed-price, milestone-paid."
           lead="Custom module development, Magento 1 to 2 migrations, Adobe Commerce builds, ERP integrations, and performance optimization — delivered by Magento-certified engineers since 1999."
           primaryCta={{ label: 'Get a Free Technical Consultation', modal: true, region: 'us' }}
           secondaryCta={{ label: 'View Our Work', href: '/us/portfolio' }}
@@ -651,7 +651,7 @@ export default function MagentoDevelopmentPage() {
         {/* -- 3. TRUST BLOCK ----------------------------------------------─-- */}
         <BigThreeTrustBlock
           eyebrow="WHY FACTORYJET FOR MAGENTO"
-          headline="Magento-certified engineers. Fixed-price proposals. 60–70% less than what US agencies charge."
+          headline="Magento-certified engineers. Fixed-price proposals. fixed-price, milestone-paid."
         />
 
         {/* -- 4. WHAT WE BUILD --------------------------------------------─-- */}
@@ -770,8 +770,8 @@ export default function MagentoDevelopmentPage() {
           headline="FactoryJet vs. Freelancer vs. US Agency vs. Offshore Shop"
           lead="Not all Magento developers are equal. Here's what separates senior Magento expertise from the alternatives — and what the decision actually costs."
           pullQuote={{
-            stat: '60–70%',
-            caption: 'lower cost than US Magento development agencies — senior engineers, fixed-price projects, no bloated overhead.',
+            stat: 'Fixed Price',
+            caption: 'milestone-paid Magento builds with full code ownership — senior engineers on every project.',
           }}
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}

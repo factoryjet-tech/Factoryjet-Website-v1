@@ -28,16 +28,16 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Shopify Development USA | Custom Shopify Stores | FactoryJet',
+  title: 'Shopify Development Agency USA — Custom Stores From $3,999',
   description:
-    'Custom Shopify & Shopify Plus stores for US DTC brands. Custom themes, migrations & headless commerce. 60–70% cheaper than US agencies. Starting at $3,999.',
+    'Custom Shopify & Shopify Plus builds for US DTC brands. Headless commerce, migrations, theme builds — live in 7 days from $3,999. 120+ stores launched. Free audit.',
   authors: [{ name: 'FactoryJet' }],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Development USA | Custom Shopify Stores | FactoryJet',
+    title: 'Shopify Development Agency USA — Custom Stores From $3,999',
     description:
-      'Custom Shopify and Shopify Plus development for US brands. Custom themes, store migrations, headless commerce. 60–70% cheaper than US Shopify agencies.',
+      'Custom Shopify & Shopify Plus builds for US DTC brands. Headless commerce, migrations, theme builds — live in 7 days from $3,999. 120+ stores launched. Free audit.',
     url: 'https://factoryjet.com/us/services/shopify-development',
     images: [
       {
@@ -51,9 +51,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify Development USA | Custom Shopify Stores | FactoryJet',
+    title: 'Shopify Development Agency USA — Custom Stores From $3,999',
     description:
-      'Custom Shopify and Shopify Plus stores for US DTC brands. 60–70% cheaper. Starting at $3,999.',
+      'Custom Shopify & Shopify Plus builds for US DTC brands. Headless commerce, migrations, theme builds — live in 7 days from $3,999. 120+ stores launched. Free audit.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
@@ -90,7 +90,7 @@ const faqSchema = {
       name: 'How much does a custom Shopify store cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s Shopify development starts at $3,999 for a custom theme build on an existing Shopify store. A full store build with custom theme, product setup, payment integration, and launch runs $7,500. Shopify Plus builds with advanced checkout customization, B2B features, and multi-store setups start at $15,000. All prices are 60–70% lower than comparable US Shopify agencies.',
+        text: 'FactoryJet\'s Shopify development starts at $3,999 for a custom theme build on an existing Shopify store. A full store build with custom theme, product setup, payment integration, and launch runs $7,500. Shopify Plus builds with advanced checkout customization, B2B features, and multi-store setups start at $15,000. All prices are significantly lower than comparable US Shopify agencies.',
       },
     },
     {
@@ -175,7 +175,7 @@ const serviceSchema = {
   },
   serviceType: 'Shopify Development',
   description:
-    'Custom Shopify and Shopify Plus store development for US DTC brands, B2B merchants, and e-commerce businesses. Custom themes, store migrations, headless Hydrogen builds. 60–70% cheaper than US Shopify agencies.',
+    'Custom Shopify and Shopify Plus store development for US DTC brands, B2B merchants, and e-commerce businesses. Custom themes, store migrations, headless Hydrogen builds. fixed-price, milestone-paid.',
   offers: [
     {
       '@type': 'Offer',
@@ -303,10 +303,10 @@ const SHOPIFY_STATS = [
     categoryLabel: 'STORES LAUNCHED',
   },
   {
-    value: '60–70%',
-    label: 'cheaper than a comparable US Shopify development agency',
-    microcopy: 'same Figma design, Liquid engineering, and Lighthouse performance',
-    categoryLabel: 'COST ADVANTAGE',
+    value: 'Fixed Price',
+    label: 'milestone-paid Shopify builds with full code ownership',
+    microcopy: 'senior Figma design, Liquid engineering, and Lighthouse performance — predictable from quote to launch',
+    categoryLabel: 'PRICING MODEL',
   },
 ];
 
@@ -531,7 +531,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a custom Shopify store cost?',
     answer:
-      'FactoryJet\'s Shopify development starts at $3,999 for a custom Liquid theme build on an existing store. A full store build — custom theme, product catalog setup, payment configuration, shipping, apps, and launch — runs $7,500. Shopify Plus builds with checkout customization, B2B portals, or headless Hydrogen storefronts start at $15,000. All prices are 60–70% lower than comparable US Shopify agencies.',
+      'FactoryJet\'s Shopify development starts at $3,999 for a custom Liquid theme build on an existing store. A full store build — custom theme, product catalog setup, payment configuration, shipping, apps, and launch — runs $7,500. Shopify Plus builds with checkout customization, B2B portals, or headless Hydrogen storefronts start at $15,000. All prices are significantly lower than comparable US Shopify agencies.',
   },
   {
     category: 'pricing',
@@ -541,9 +541,9 @@ const FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet cheaper than US Shopify agencies?',
+    question: 'How does FactoryJet keep Shopify pricing fixed and predictable?',
     answer:
-      'Our design and engineering team is specialized. That\'s the full explanation. The same Figma-first design process, the same Liquid and Hydrogen engineering, the same Lighthouse performance standards — at dramatically lower labor costs. We\'ve built Shopify stores for US brands since Shopify launched. We don\'t have layers of account management and project coordinators inflating your invoice.',
+      'We work fixed-price and milestone-paid — every Shopify build is scoped upfront with no hourly billing and no scope-creep invoices. Building Shopify stores for US brands since Shopify launched means we estimate accurately on the first call, so the quote you sign is what you pay. You get the same Figma-first design process, the same Liquid and Hydrogen engineering, and the same Lighthouse performance standards — with full code ownership at handoff.',
   },
 
   /* ── Platform & Tech ── */
@@ -617,7 +617,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from hiring a US Shopify agency?',
     answer:
-      'Three differences: price (60–70% cheaper, specialized team serving US brands since 1999), speed (3–5 weeks vs. 3–6 months at most US agencies), and ownership (full code delivery on launch day, not held behind a retainer). We\'ve built 120+ Shopify stores across DTC, B2B, and enterprise brands. We understand what actually drives conversion on a product page — not just what looks good in a proposal.',
+      'Three differences: price (fixed-price, specialized team serving US brands since 1999), speed (3–5 weeks vs. 3–6 months at most US agencies), and ownership (full code delivery on launch day, not held behind a retainer). We\'ve built 120+ Shopify stores across DTC, B2B, and enterprise brands. We understand what actually drives conversion on a product page — not just what looks good in a proposal.',
   },
   {
     category: 'trust',
@@ -753,13 +753,13 @@ export default function ShopifyPage() {
         <Hero
           eyebrow="SHOPIFY DEVELOPMENT · USA"
           headline="Custom Shopify Stores That Sell, Not Just Look Good"
-          lead="Generic Shopify themes convert below 1%. FactoryJet builds custom Shopify and Shopify Plus stores — designed in Figma, built in Liquid — that are fast, on-brand, and optimized for your specific customer journey. 60–70% cheaper than a US Shopify agency."
+          lead="Generic Shopify themes convert below 1%. FactoryJet builds custom Shopify and Shopify Plus stores — designed in Figma, built in Liquid — that are fast, on-brand, and optimized for your specific customer journey. engineered for measurable outcomes."
           primaryCta={{ label: 'Book a Free Store Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '120+ Shopify stores launched',
             'Starting at $3,999',
-            '60–70% cheaper than US agencies',
+            'fixed-price, milestone-paid',
           ]}
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
@@ -946,7 +946,7 @@ export default function ShopifyPage() {
             {
               icon: '💸',
               title: 'US Shopify agencies charge $15,000–$50,000 for this',
-              body: 'A mid-tier US Shopify agency charges $15,000–$50,000 for a custom theme build — before retainers, app configuration, or migration fees. FactoryJet delivers the same Figma-first design, the same Liquid engineering, and the same Lighthouse performance audit at 60–70% less. Our specialized team has been building e-commerce since 2005.',
+              body: 'A mid-tier US Shopify agency charges $15,000–$50,000 for a custom theme build — before retainers, app configuration, or migration fees. FactoryJet delivers the same Figma-first design, the same Liquid engineering, and the same Lighthouse performance audit at fixed-price. Our specialized team has been building e-commerce since 2005.',
             },
           ]}
         />

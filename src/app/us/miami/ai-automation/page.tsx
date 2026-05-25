@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'AI Workflow Automation for Miami FL Businesses | FactoryJet',
     description:
-      'Custom AI workflow automation for Miami businesses. Built on n8n, Make.com, and LangChain. 60–70% cheaper than Miami automation agencies. Free strategy call.',
+      'Custom AI workflow automation for Miami businesses. Built on n8n, Make.com, and LangChain. fixed-price, milestone-paid. Free strategy call.',
     url: 'https://factoryjet.com/us/miami/ai-automation',
     images: [
       {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Workflow Automation for Miami FL Businesses | FactoryJet',
     description:
-      'Custom AI workflow automation for Miami FL businesses. 60–70% cheaper than local agencies. Free strategy call.',
+      'Custom AI workflow automation for Miami FL businesses. fixed-price, milestone-paid. Free strategy call.',
     images: ['https://factoryjet.com/images/us/miami/hero-miami.webp'],
   },
   alternates: {
@@ -103,7 +103,7 @@ const faqSchema = {
       name: 'How much does AI workflow automation cost for a Miami business?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s AI workflow automation starts at $4,000 for a focused single-workflow build. The Growth tier at $10,000 covers a multi-workflow automation platform connecting 3–5 systems with an operations dashboard and 30-day support — the most popular option for Miami SMBs. Enterprise automation with complex business logic, multi-language workflows, and international integrations starts at $20,000. All prices are 60–70% lower than comparable Miami or national automation agencies.',
+        text: 'FactoryJet\'s AI workflow automation starts at $4,000 for a focused single-workflow build. The Growth tier at $10,000 covers a multi-workflow automation platform connecting 3–5 systems with an operations dashboard and 30-day support — the most popular option for Miami SMBs. Enterprise automation with complex business logic, multi-language workflows, and international integrations starts at $20,000. All prices are significantly lower than comparable Miami or national automation agencies.',
       },
     },
     {
@@ -336,10 +336,10 @@ const ROI_STATS = [
     categoryLabel: 'LEAD SPEED',
   },
   {
-    value: '60–70%',
-    label: 'cheaper than a comparable Miami or US automation agency',
-    microcopy: '25+ years experience, US-caliber output',
-    categoryLabel: 'COST ADVANTAGE',
+    value: 'Fixed Price',
+    label: 'milestone-paid with full code ownership — 25+ years experience, US-caliber output',
+    microcopy: 'predictable from quote to launch — no scope-creep invoices',
+    categoryLabel: 'PRICING MODEL',
   },
 ];
 
@@ -618,11 +618,11 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does AI workflow automation cost for a Miami business?',
     answer:
-      'FactoryJet\'s AI workflow automation starts at $4,000 for a focused single-workflow build. The Growth tier at $10,000 covers a multi-workflow platform connecting 3–5 systems with an operations dashboard — the most popular option for Miami SMBs. Enterprise automation with complex logic, multi-language support, and international integrations starts at $20,000. All prices are 60–70% lower than comparable Miami or national automation agencies.',
+      'FactoryJet\'s AI workflow automation starts at $4,000 for a focused single-workflow build. The Growth tier at $10,000 covers a multi-workflow platform connecting 3–5 systems with an operations dashboard — the most popular option for Miami SMBs. Enterprise automation with complex logic, multi-language support, and international integrations starts at $20,000. All prices are significantly lower than comparable Miami or national automation agencies.',
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet 60–70% cheaper than Miami automation agencies?',
+    question: 'Why is FactoryJet fixed-price, milestone-paid?',
     answer:
       'Our engineering team brings 25+ years of focused expertise. Same quality of workflow architecture, integration engineering, and delivery — at dramatically lower labor costs. We\'ve served US businesses for 25 years. When you brief us, an engineer reads it, not an account manager. No Brickell or Wynwood office rates built into the quote.',
   },
@@ -675,7 +675,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a local Miami automation agency?',
     answer:
-      'Three differences: price (60–70% cheaper — specialized engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it — weeks, not months), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 15-person Miami business, including the bilingual and international complexity that\'s unique to this market).',
+      'Three differences: price (specialized engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it — weeks, not months), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 15-person Miami business, including the bilingual and international complexity that\'s unique to this market).',
   },
 ];
 
@@ -720,13 +720,13 @@ export default function MiamiAIAutomationPage() {
         <Hero
           eyebrow="AI WORKFLOW AUTOMATION · MIAMI, FL"
           headline="Miami Businesses Are Automating the Workflows That Were Eating Their Team Alive"
-          lead="Miami's hospitality, real estate, and international trade economy runs on high-volume, repeating workflows. FactoryJet builds custom AI workflow automation for Miami businesses — lead nurturing, invoice processing, bilingual routing, booking coordination, and data sync — at 60–70% less than a local agency."
+          lead="Miami's hospitality, real estate, and international trade economy runs on high-volume, repeating workflows. FactoryJet builds custom AI workflow automation for Miami businesses — lead nurturing, invoice processing, bilingual routing, booking coordination, and data sync — at fixed-price vs a local agency."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',
             'Starting at $4,000',
-            '60–70% cheaper than Miami agencies',
+            'engineered for measurable outcomes',
           ]}
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
@@ -1013,7 +1013,7 @@ export default function MiamiAIAutomationPage() {
             {
               icon: '⚡',
               title: 'Speed without cutting corners',
-              body: 'A Miami automation agency has account managers, coordinators, and a sales team to keep fed. We don\'t. When you brief us, an engineer reads it — not an account manager. That\'s why our timelines are weeks, not quarters. And why our price is 60–70% lower.',
+              body: 'A Miami automation agency has account managers, coordinators, and a sales team to keep fed. We don\'t. When you brief us, an engineer reads it — not an account manager. That\'s why our timelines are weeks, not quarters. And why our price is significantly lower.',
             },
             {
               icon: '💡',

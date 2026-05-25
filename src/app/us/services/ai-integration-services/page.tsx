@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'AI Integration Services USA | FactoryJet',
     description:
-      'Connect GPT-4o, Claude, and AI models to your CRM, e-commerce platform, ERP, and custom software. 60–70% cheaper than US AI integration agencies. Fast delivery.',
+      'Connect GPT-4o, Claude, and AI models to your CRM, e-commerce platform, ERP, and custom software. fixed-price, milestone-paid. Fast delivery.',
     url: 'https://factoryjet.com/us/services/ai-integration-services',
     images: [
       {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Integration Services USA | FactoryJet',
     description:
-      'Connect AI to your existing business tools. 60–70% cheaper than US agencies. Fast delivery. Free strategy call.',
+      'Connect AI to your existing business tools. fixed-price, milestone-paid. Fast delivery. Free strategy call.',
     images: ['https://factoryjet.com/images/us/services/hero-ai-integration.webp'],
   },
   alternates: {
@@ -135,15 +135,15 @@ const faqSchema = {
       name: 'How much do AI integration services cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s AI integrations start at $3,500 for a focused single-system integration. The Growth tier at $9,000 covers multi-system AI integration with a unified API layer and monitoring — the most popular option for US SMBs. Enterprise integrations with custom model fine-tuning, legacy system APIs, and compliance requirements start at $18,000. All prices are 60–70% lower than US AI integration agencies.',
+        text: 'FactoryJet\'s AI integrations start at $3,500 for a focused single-system integration. The Growth tier at $9,000 covers multi-system AI integration with a unified API layer and monitoring — the most popular option for US SMBs. Enterprise integrations with custom model fine-tuning, legacy system APIs, and compliance requirements start at $18,000. All prices are significantly lower than US AI integration agencies.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Why is FactoryJet 60–70% cheaper than US AI integration agencies?',
+      name: 'Why is FactoryJet fixed-price, milestone-paid?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Our engineering team brings 25+ years of focused expertise. Same quality of API architecture, prompt engineering, and integration delivery at dramatically lower labor costs. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated agency overhead.',
+        text: 'We work fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices. Our engineering team brings 25+ years of focused expertise serving US businesses. You get production-grade API architecture, prompt engineering, and integration delivery. You brief an engineer; that engineer builds it. No account management layers between your brief and the build. Full code ownership at handoff.',
       },
     },
     {
@@ -247,7 +247,7 @@ const faqSchema = {
       name: 'How is FactoryJet different from a US AI development agency?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Three differences: price (60–70% cheaper — specialized engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it — no account managers, project coordinators, or solution architects adding cost and latency), and SMB depth (500+ small business projects since 1999). We understand what AI integration actually looks like in a 15-person business, not just in an enterprise with a dedicated IT department.',
+        text: 'Three differences: price (specialized engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it — no account managers, project coordinators, or solution architects adding cost and latency), and SMB depth (500+ small business projects since 1999). We understand what AI integration actually looks like in a 15-person business, not just in an enterprise with a dedicated IT department.',
       },
     },
   ],
@@ -438,10 +438,10 @@ const ROI_STATS = [
     categoryLabel: 'SUPPORT EFFICIENCY',
   },
   {
-    value: '60–70%',
-    label: 'cheaper than comparable US AI integration agencies',
-    microcopy: 'specialized engineers, US-caliber output',
-    categoryLabel: 'COST ADVANTAGE',
+    value: 'Fixed Price',
+    label: 'milestone-paid AI integration with full code ownership',
+    microcopy: 'specialized engineers, US-caliber output — predictable from quote to launch',
+    categoryLabel: 'PRICING MODEL',
   },
 ];
 
@@ -675,11 +675,11 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much do AI integration services cost?',
     answer:
-      'FactoryJet\'s AI integrations start at $3,500 for a focused single-system integration. The Growth tier at $9,000 covers multi-system integration with a unified API layer and monitoring. Enterprise integrations with fine-tuning and legacy APIs start at $18,000. All prices are 60–70% lower than US AI integration agencies.',
+      'FactoryJet\'s AI integrations start at $3,500 for a focused single-system integration. The Growth tier at $9,000 covers multi-system integration with a unified API layer and monitoring. Enterprise integrations with fine-tuning and legacy APIs start at $18,000. All prices are significantly lower than US AI integration agencies.',
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet 60–70% cheaper than US AI integration agencies?',
+    question: 'Why is FactoryJet fixed-price, milestone-paid?',
     answer:
       'Our engineering team brings 25+ years of focused expertise. Same quality of API architecture, prompt engineering, and delivery at dramatically lower labor costs. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated overhead.',
   },
@@ -757,7 +757,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US AI development agency?',
     answer:
-      'Three differences: price (60–70% cheaper — specialized engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand AI integration inside a 15-person company, not just enterprises with dedicated IT departments).',
+      'Three differences: price (specialized engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand AI integration inside a 15-person company, not just enterprises with dedicated IT departments).',
   },
 ];
 
@@ -808,7 +808,7 @@ export default function AIIntegrationServicesPage() {
           trustItems={[
             '500+ businesses served',
             'Starting at $3,500',
-            '60–70% cheaper than US agencies',
+            'fixed-price, milestone-paid',
           ]}
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
@@ -1034,7 +1034,7 @@ export default function AIIntegrationServicesPage() {
             {
               icon: '💸',
               title: 'Custom integrations used to require expensive US engineering teams',
-              body: 'Connecting AI to a legacy CRM or custom internal tool requires real engineering — it\'s not a no-code project. US AI integration agencies charge $15,000–$50,000 for this work. FactoryJet delivers the same engineering quality at 60–70% less, with the same level of API architecture, prompt engineering, and production reliability.',
+              body: 'Connecting AI to a legacy CRM or custom internal tool requires real engineering — it\'s not a no-code project. US AI integration agencies charge $15,000–$50,000 for this work. FactoryJet delivers the same engineering quality at fixed-price, with the same level of API architecture, prompt engineering, and production reliability.',
             },
           ]}
         />

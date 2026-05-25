@@ -24,7 +24,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Web Design Charlotte NC | 7 Days from $1,500 | FactoryJet',
-  description: 'FactoryJet builds fast, conversion-focused websites for Charlotte businesses — from $1,999. 7-day delivery, 60–70% less than local agencies. Next.js, SEO & GA4.',
+  description: 'FactoryJet builds fast, conversion-focused websites for Charlotte businesses — from $1,999. 7-day delivery, fixed-price. Next.js, SEO & GA4.',
   alternates: {
     canonical: 'https://factoryjet.com/us/charlotte/web-design',
     languages: webDesignPriorityCityAlternatesUS.charlotte,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Web Design Charlotte NC | 7 Days from $1,500 | FactoryJet',
-    description: 'FactoryJet builds fast, conversion-focused websites for Charlotte businesses — from $1,999. 7-day delivery, 60–70% less than local agencies. Next.js, SEO & GA4.',
+    description: 'FactoryJet builds fast, conversion-focused websites for Charlotte businesses — from $1,999. 7-day delivery, fixed-price. Next.js, SEO & GA4.',
     url: 'https://factoryjet.com/us/charlotte/web-design/',
     images: [
       {
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Web Design Charlotte NC | 7 Days from $1,500 | FactoryJet',
-    description: 'FactoryJet builds fast, conversion-focused websites for Charlotte businesses — from $1,999. 7-day delivery, 60–70% less than local agencies. Next.js, SEO & GA4.',
+    description: 'FactoryJet builds fast, conversion-focused websites for Charlotte businesses — from $1,999. 7-day delivery, fixed-price. Next.js, SEO & GA4.',
     images: ['https://factoryjet.com/logo.png'],
   },
 };
@@ -110,7 +110,7 @@ export default function CharlotteWebDesignPage() {
       <StrategicDarkSection
         eyebrow="WHY FACTORYJET"
         headline={"Why Charlotte Businesses Choose FactoryJet Over Local Agencies"}
-        lead={"Charlotte has credible local agencies. Idea Kraft builds WordPress-based web design projects for Charlotte brands. Bowen offers full-service marketing plus web. Forge3 covers digital marketing and web. None of them publish delivery timelines. Charlotte agencies typically run $6,000–$15,000 for a comparable 10–15 page site.\n\nFactoryJet Growth ($3,999) delivers the same scope — blog CMS, lead capture, GA4, Next.js — at 40–60% less, with a 7-day delivery guarantee and a codebase you own outright. No plugin maintenance. No retainer required. No surprise invoices after launch.\n\nWe don't win on price alone. We win because every project ships with JSON-LD schema for AI search crawlers, performance budgets enforced from the first commit, and a recorded handover so your team can self-manage from day one."}
+        lead={"Charlotte has credible local agencies. Idea Kraft builds WordPress-based web design projects for Charlotte brands. Bowen offers full-service marketing plus web. Forge3 covers digital marketing and web. None of them publish delivery timelines. Charlotte agencies typically run $6,000–$15,000 for a comparable 10–15 page site.\n\nFactoryJet Growth ($3,999) delivers the same scope — blog CMS, lead capture, GA4, Next.js — at a fixed price, with a 7-day delivery guarantee and a codebase you own outright. No plugin maintenance. No retainer required. No surprise invoices after launch.\n\nWe don't win on price alone. We win because every project ships with JSON-LD schema for AI search crawlers, performance budgets enforced from the first commit, and a recorded handover so your team can self-manage from day one."}
         pillars={[
           { title: 'AI-native',    body: 'Every site is built with an AI-assisted workflow — compressing build time without compressing quality. We have run 500+ projects through this system.' },
           { title: 'Transparent',  body: 'Pricing on the first call. No discovery fees, no "it depends" quotes that arrive three weeks later. Fixed price. Agreed up front.' },

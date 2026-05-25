@@ -33,7 +33,7 @@ const SiteHeader = dynamic(() => import('@/components/v2/SiteHeader'), {
 
 export const metadata: Metadata = {
   title: 'Web Design Tampa FL | 7 Days from $1,500 | FactoryJet',
-  description: 'FactoryJet builds fast, conversion-focused websites for Tampa businesses — from $1,999. 7-day delivery, 60–70% less than local agencies. Next.js, SEO & GA4.',
+  description: 'FactoryJet builds fast, conversion-focused websites for Tampa businesses — from $1,999. 7-day delivery, fixed-price. Next.js, SEO & GA4.',
   alternates: {
     canonical: 'https://factoryjet.com/us/tampa/web-design',
     languages: webDesignPriorityCityAlternatesUS.tampa,
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Web Design Tampa FL | 7 Days from $1,500 | FactoryJet',
-    description: 'FactoryJet builds fast, conversion-focused websites for Tampa businesses — from $1,999. 7-day delivery, 60–70% less than local agencies. Next.js, SEO & GA4.',
+    description: 'FactoryJet builds fast, conversion-focused websites for Tampa businesses — from $1,999. 7-day delivery, fixed-price. Next.js, SEO & GA4.',
     url: 'https://factoryjet.com/us/tampa/web-design/',
     images: [
       {
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Web Design Tampa FL | 7 Days from $1,500 | FactoryJet',
-    description: 'FactoryJet builds fast, conversion-focused websites for Tampa businesses — from $1,999. 7-day delivery, 60–70% less than local agencies. Next.js, SEO & GA4.',
+    description: 'FactoryJet builds fast, conversion-focused websites for Tampa businesses — from $1,999. 7-day delivery, fixed-price. Next.js, SEO & GA4.',
     images: ['https://factoryjet.com/logo.png'],
   },
 };

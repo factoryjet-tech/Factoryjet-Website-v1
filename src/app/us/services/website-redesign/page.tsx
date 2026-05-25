@@ -25,15 +25,15 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Website Redesign Services for Small Businesses | FactoryJet',
+  title: 'Website Redesign Services USA — 7-Day Refresh From $1,499',
   description:
-    'Professional website redesign for US businesses — faster loads, modern design, 7-day delivery for 5 pages. Starting at $1,499. 60–70% cheaper than US agencies.',
+    'Modern website redesign for US small businesses. Faster loads, better conversions, live in 7 days from $1,499. Free site audit + Lighthouse benchmark included.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Website Redesign Services for Small Businesses | FactoryJet',
+    title: 'Website Redesign Services USA — 7-Day Refresh From $1,499',
     description:
-      'Your website is losing you customers. FactoryJet redesigns it — modern, fast, mobile-first — in 7 days. 60–70% cheaper than a US web design agency.',
+      'Modern website redesign for US small businesses. Faster loads, better conversions, live in 7 days from $1,499. Free site audit + Lighthouse benchmark included.',
     url: 'https://factoryjet.com/us/services/website-redesign',
     images: [
       {
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Website Redesign Services for Small Businesses | FactoryJet',
+    title: 'Website Redesign Services USA — 7-Day Refresh From $1,499',
     description:
-      'Modern redesign in 7 days. Fast, mobile-first, conversion-focused. FactoryJet — 60–70% cheaper than US agencies. Free redesign audit.',
+      'Modern website redesign for US small businesses. Faster loads, better conversions, live in 7 days from $1,499. Free site audit + Lighthouse benchmark included.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
@@ -82,7 +82,7 @@ const faqSchema = {
       name: 'How much does a website redesign cost for a small business?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s website redesign services start at $1,499 for a up to 5-page professional redesign delivered in 7 days. Full business website redesigns with 10–20 pages, custom design, and CMS integration typically run $3,500–$7,500. E-commerce redesigns on Shopify or WooCommerce start at $4,999. These prices are 60–70% below comparable US web design agencies — our engineering team has served US businesses for 25+ years while maintaining full US business hours communication.',
+        text: 'FactoryJet\'s website redesign services start at $1,499 for a up to 5-page professional redesign delivered in 7 days. Full business website redesigns with 10–20 pages, custom design, and CMS integration typically run $3,500–$7,500. E-commerce redesigns on Shopify or WooCommerce start at $4,999. Fixed-price and milestone-paid — our engineering team has served US businesses for 25+ years with US-hour project management.',
       },
     },
     {
@@ -159,7 +159,7 @@ const serviceSchema = {
   },
   serviceType: 'Website Redesign',
   description:
-    'FactoryJet delivers professional website redesign services for US small businesses — modern design, mobile-first builds, fast load times, and 7-day delivery for up to 5 pages. 60–70% cheaper than US agencies.',
+    'FactoryJet delivers professional website redesign services for US small businesses — modern design, mobile-first builds, fast load times, and 7-day delivery for up to 5 pages. Fixed-price, milestone-paid.',
   offers: [
     {
       '@type': 'Offer',
@@ -544,7 +544,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a website redesign cost for a small business?',
     answer:
-      'FactoryJet\'s website redesign services start at $1,499 for up to 5 pages delivered in 7 days. Business website redesigns (10–20 pages with custom design and CMS) typically run $3,500–$7,500. E-commerce redesigns on Shopify or WooCommerce start at $4,999. These prices are 60–70% below comparable US agencies — our engineering team has served US businesses for 25+ years without the overhead of a US agency.',
+      'FactoryJet\'s website redesign services start at $1,499 for up to 5 pages delivered in 7 days. Business website redesigns (10–20 pages with custom design and CMS) typically run $3,500–$7,500. E-commerce redesigns on Shopify or WooCommerce start at $4,999. Fixed-price and milestone-paid — our engineering team has served US businesses for 25+ years with lean operations and US-hour project management.',
   },
   {
     category: 'pricing',
@@ -584,7 +584,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US website redesign agency?',
     answer:
-      'Three differences: price (60–70% cheaper — specialized engineers serving US businesses since 1999, no layers of account managers and PMs inflating your bill), speed (we deliver 5-page redesigns in 7 days — US agencies averaging 8–16 weeks for the same scope), and SMB focus (500+ small business projects means we understand the operational reality of your size — you don\'t need enterprise features, you need a site that generates leads and loads fast on a phone). We also own your outcome, not your timeline: fixed prices mean you know the cost before you commit, not after.',
+      'Three differences: pricing model (fixed-price and milestone-paid, with specialized engineers serving US businesses since 1999 — no layers of account managers and PMs inflating your bill), speed (we deliver 5-page redesigns in 7 days — US agencies average 8–16 weeks for the same scope), and SMB focus (500+ small business projects means we understand the operational reality of your size — you don\'t need enterprise features, you need a site that generates leads and loads fast on a phone). We also own your outcome, not your timeline: fixed prices mean you know the cost before you commit, not after.',
   },
   {
     category: 'trust',
@@ -700,7 +700,7 @@ export default function WebsiteRedesignPage() {
         <Hero
           eyebrow="WEBSITE REDESIGN SERVICES · USA"
           headline="Website Redesign Services That Actually Generate Leads"
-          lead="Your current website is costing you customers every day — slow load times, poor mobile experience, and a homepage that doesn't convert visitors into leads. FactoryJet redesigns your site with modern design, mobile-first builds, and conversion-focused structure. Up to 5 pages in 7 days. Starting at $1,499. 60–70% cheaper than a US agency."
+          lead="Your current website is costing you customers every day — slow load times, poor mobile experience, and a homepage that doesn't convert visitors into leads. FactoryJet redesigns your site with modern design, mobile-first builds, and conversion-focused structure. Up to 5 pages in 7 days. Starting at $1,499. Fixed-price and milestone-paid."
           primaryCta={{ label: 'Book a Free Redesign Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
@@ -753,7 +753,7 @@ export default function WebsiteRedesignPage() {
           stats={[
             { value: '500+', label: 'Redesigns Delivered' },
             { value: '7 Days', label: 'Delivery Guarantee' },
-            { value: '60–70%', label: 'Cheaper Than US Agencies' },
+            { value: 'Fixed', label: 'Price, Milestone-Paid' },
             { value: '25 Yrs', label: 'Web Design Expertise' },
           ]}
         />
@@ -872,7 +872,7 @@ export default function WebsiteRedesignPage() {
             },
             {
               title: 'US agencies charge enterprise prices for SMB problems',
-              body: 'The average US web design agency charges $15,000–$50,000 for a business website redesign, with 8–16 week timelines and hourly billing that makes the final cost unpredictable. That pricing was built for companies with design directors, multiple stakeholder reviews, and RFP processes. FactoryJet delivers the same quality of engineering for 60–70% less — because our experienced team has served US businesses for 25+ years with none of the overhead. Fixed-price contracts mean you know the cost before we start, not after.',
+              body: 'The average US web design agency quotes $15,000–$50,000 for a business website redesign, with 8–16 week timelines and hourly billing that makes the final cost unpredictable. That pricing was built for companies with design directors, multiple stakeholder reviews, and RFP processes. FactoryJet delivers the same quality of engineering — fixed-price and milestone-paid — because our experienced team has served US businesses for 25+ years with lean operations. Fixed-price contracts mean you know the cost before we start, not after.',
             },
           ]}
         />

@@ -134,7 +134,7 @@ const faqSchema = {
       name: 'Why is web design so expensive at big agencies?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'US web design agencies are expensive because they carry significant overhead: Manhattan or San Francisco office space, large teams with project managers, account managers, UX researchers, and copywriters — all billing at US salaries. A $20,000 website project at a US agency might involve 8–12 people each billing $150–$300/hour. FactoryJet is structured differently: a lean, senior-only team based in India, serving US clients at 60–70% lower cost without the overhead. Same engineering quality, fundamentally different cost structure.',
+        text: 'US web design agencies are expensive because they carry significant overhead: Manhattan or San Francisco office space, large teams with project managers, account managers, UX researchers, and copywriters — all billing at US salaries. A $20,000 website project at a US agency might involve 8–12 people each billing $150–$300/hour. FactoryJet is structured differently: a lean, senior-only team serving US clients at significantly lower cost without the overhead. Same engineering quality, fundamentally different cost structure.',
       },
     },
     {
@@ -150,7 +150,7 @@ const faqSchema = {
       name: 'How much does FactoryJet charge for a website?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet builds custom websites for US small businesses starting at $1,999 for a 5-page site, delivered in 7 days. E-commerce sites start at $2,999. Web application development starts at $7,999. Every project is fixed-price — no hourly billing, no scope creep, no surprise invoices. Compared to US agencies charging $8,000–$40,000 for equivalent work, FactoryJet delivers the same professional quality at 60–70% lower cost. Book a free strategy call to get a custom quote for your project.',
+        text: 'FactoryJet builds custom websites for US small businesses starting at $1,999 for a 5-page site, delivered in 7 days. E-commerce sites start at $2,999. Web application development starts at $7,999. Every project is fixed-price — no hourly billing, no scope creep, no surprise invoices. Compared to US agencies charging $8,000–$40,000 for equivalent work, FactoryJet delivers the same professional quality at significantly lower cost. Book a free strategy call to get a custom quote for your project.',
       },
     },
     {
@@ -382,10 +382,10 @@ const STATS = [
     categoryLabel: 'OUR STARTING PRICE',
   },
   {
-    value: '60–70%',
-    label: 'cheaper than US web design agencies',
-    microcopy: 'same engineering quality, leaner team structure',
-    categoryLabel: 'COST ADVANTAGE',
+    value: 'Fixed Price',
+    label: 'milestone-paid with full code ownership',
+    microcopy: 'predictable from quote to launch — no scope-creep invoices',
+    categoryLabel: 'PRICING MODEL',
   },
   {
     value: '7 days',
@@ -569,7 +569,7 @@ const FAQ_ITEMS = [
   // ── Agency & Freelancer ────────────────────────────────────────────────
   {
     question: 'Why do web design agencies charge so much?',
-    answer: `US web design agencies charge $8,000–$50,000+ because they carry significant overhead: US salaries, office space in major cities, large teams (account managers, project managers, UX researchers, copywriters, QA testers), and enterprise-level processes for projects that often don't need them. A $20,000 agency project might involve 10 people each billing $150–$250/hour. FactoryJet is structured differently — a senior-only engineering team based in India, no agency overhead, US-facing service. That's how we deliver the same quality at 60–70% lower cost.`,
+    answer: `US web design agencies charge $8,000–$50,000+ because they bill hourly across large teams: account managers, project managers, UX researchers, copywriters, QA testers — and enterprise-level processes for projects that often don't need them. A $20,000 agency project might involve 10 people each billing $150–$250/hour, with scope-creep invoices on top. FactoryJet is structured differently — a senior-only engineering team with US-hour project management, fixed-price and milestone-paid, with full code ownership at handoff. The quote you sign is what you pay.`,
     category: 'agency-costs',
   },
   {
@@ -613,12 +613,12 @@ const FAQ_ITEMS = [
   // ── FactoryJet Pricing ────────────────────────────────────────────────
   {
     question: 'How much does FactoryJet charge to build a website?',
-    answer: `FactoryJet's website pricing starts at $1,999 for a custom 5-page website, delivered in 7 days. E-commerce stores start at $2,999. Larger sites with 10–15 pages start at $3,499. Web application development starts at $7,999. All projects are fixed price — you know the number before we start, and it doesn't change. Compared to US agencies charging $8,000–$40,000 for equivalent work, FactoryJet delivers the same professional quality at 60–70% lower cost because our engineering team is based in India while we serve US clients directly.`,
+    answer: `FactoryJet's website pricing starts at $1,999 for a custom 5-page website, delivered in 7 days. E-commerce stores start at $2,999. Larger sites with 10–15 pages start at $3,499. Web application development starts at $7,999. All projects are fixed price — you know the number before we start, and it doesn't change. Compared to US agencies charging $8,000–$40,000 for equivalent work, FactoryJet delivers the same professional quality at significantly lower cost because we run lean and serve US clients directly.`,
     category: 'factoryjet',
   },
   {
-    question: 'How can FactoryJet be so much cheaper than US agencies?',
-    answer: `FactoryJet's engineering team is based in India, where senior developer salaries are 70–80% lower than US equivalents. We don't carry US office overhead, large account management teams, or enterprise-level process bureaucracy. We're a lean, senior-only team that has built 500+ websites since 1999 — we're fast and accurate because we've solved most problems before. The savings go directly to you. The work quality is the same: the same Next.js, the same WordPress, the same Lighthouse 100 scores your US agency would deliver.`,
+    question: 'How does FactoryJet keep pricing fixed and predictable?',
+    answer: `We work fixed-price and milestone-paid — every project is scoped upfront with no hourly billing and no scope-creep invoices. Our 500+ projects since 1999 mean we estimate accurately on the first call, so the quote you sign is what you pay. You get a senior-only team — no account-management layers, no process bureaucracy — delivering the same Next.js, WordPress, and Lighthouse 100 quality your US agency would deliver, with full code ownership at handoff.`,
     category: 'factoryjet',
   },
   {
@@ -707,7 +707,7 @@ export default function WebsiteCostPage() {
           lead="Squarespace from $16/mo. Wix from $17/mo. Freelancers from $1,000. US agencies from $8,000. FactoryJet from $1,999. Here's what you actually get at each price point — and the trade-offs no one talks about."
           primaryCta={{ label: 'Get a Free Custom Quote', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Our Pricing', href: '#pricing' }}
-          trustItems={['Fixed price, always', '7-day delivery', '60–70% cheaper than US agencies', '500+ websites built']}
+          trustItems={['Fixed price, always', '7-day delivery', 'fixed-price, milestone-paid', '500+ websites built']}
           rightSlot={
             <div className="w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">
               {/* Header */}
@@ -760,7 +760,7 @@ export default function WebsiteCostPage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="WHY FACTORYJET"
-          headline="Professional websites from $1,999. Delivered in 7 days. 60–70% less than US agencies."
+          headline="Professional websites from $1,999. Delivered in 7 days. fixed-price, milestone-paid."
         />
 
         {/* ── 4. THE HONEST COST BREAKDOWN ─────────────────────────────────── */}
@@ -910,7 +910,7 @@ export default function WebsiteCostPage() {
               </p>
 
               <p>
-                Our engineering team is based in India, serving US clients directly. No US office overhead, no bloated account management team, no junior developers billing at senior rates. Senior engineers doing the work on every project. The cost savings go to you, not to our office lease in Manhattan.
+                Our lean senior-only team serves US clients directly with fixed-price, milestone-paid contracts. No bloated account management team, no junior developers billing at senior rates, no scope-creep invoices. Senior engineers doing the work on every project. The quote you sign is what you pay, with full code ownership at handoff.
               </p>
 
               <div className="border-l-2 border-[#F05A28] py-1 pl-5" aria-hidden>
@@ -918,7 +918,7 @@ export default function WebsiteCostPage() {
                   className="font-fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.125rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
                 >
-                  60–70% cheaper than a US agency. Same engineering quality. The math isn't complicated.
+                  engineered for measurable outcomes. Same engineering quality. The math isn't complicated.
                 </p>
               </div>
 

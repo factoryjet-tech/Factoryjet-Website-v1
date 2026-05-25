@@ -19,7 +19,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns'
 export const metadata: Metadata = {
   title: 'About FactoryJet | Web Design Agency for US SMBs',
   description:
-    'FactoryJet builds custom websites, Shopify stores & AI apps for US small businesses — delivered in 7 days at 60–70% below agency rates. 500+ businesses launched.',
+    'FactoryJet builds custom websites, Shopify stores & AI apps for US small businesses — delivered in 7 days, engineered for measurable outcomes. 500+ businesses launched.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'About FactoryJet | Web Design Agency for US SMBs',
     description:
-      'Fixed-price custom web design. 7-day delivery. 60–70% more affordable than local agencies.',
+      'Fixed-price custom web design. 7-day delivery. Engineered for measurable outcomes.',
     images: ['https://factoryjet.com/og/about.png'],
   },
   alternates: {
@@ -78,7 +78,7 @@ const jsonLd = {
         height: 120,
       },
       description:
-        'FactoryJet is a web design agency for US small businesses. We deliver custom websites, Shopify stores, and AI-powered web applications in 7 days at 60–70% less than traditional US agencies.',
+        'FactoryJet is a web design agency for US small businesses. We deliver custom websites, Shopify stores, and AI-powered web applications in 7 days — engineered for measurable outcomes, fixed-price, milestone-paid.',
       foundingDate: '2000',
       numberOfEmployees: {
         '@type': 'QuantitativeValue',
@@ -100,7 +100,7 @@ const jsonLd = {
         'Next.js Development',
         'AI Web Design',
         'Small Business Website Design',
-        'Affordable Web Design USA',
+        'Fixed-Price Web Design USA',
       ],
       contactPoint: {
         '@type': 'ContactPoint',
@@ -146,7 +146,7 @@ const jsonLd = {
           name: 'How much does a custom website cost with FactoryJet?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'FactoryJet offers fixed-price custom website design starting significantly below what US agencies typically charge — usually 60–70% less. There are no hourly billing surprises. Every project is scoped and priced upfront.',
+            text: 'FactoryJet offers fixed-price custom website design with milestone-based payments. There are no hourly billing surprises. Every project is scoped and priced upfront — engineered for measurable outcomes.',
           },
         },
         {
@@ -258,9 +258,9 @@ function AgencyStatCard() {
             className="fj-display font-bold"
             style={{ fontSize: '1.75rem', color: '#F05A28', letterSpacing: '-0.02em' }}
           >
-            60–70%
+            500+
           </p>
-          <p className="mt-1 font-fj-body text-[0.8125rem] text-fj-neutral-500">Cost savings</p>
+          <p className="mt-1 font-fj-body text-[0.8125rem] text-fj-neutral-500">Businesses launched</p>
         </div>
       </div>
     </div>
@@ -402,13 +402,13 @@ export default function AboutPage() {
       <Hero
         eyebrow="ABOUT FACTORYJET"
         headline="The Web Agency Built for US Small Businesses"
-        lead="Enterprise-quality websites at 60–70% less than what traditional agencies charge. Fixed price. 7-day delivery. 500+ US businesses launched."
+        lead="Enterprise-quality websites engineered for measurable outcomes. Fixed price. 7-day delivery. 500+ US businesses launched."
         primaryCta={{ label: 'Start Your Project', modal: true, region: 'us' }}
         secondaryCta={{ label: 'See Our Work', href: '/us/portfolio' }}
         trustItems={[
           '500+ businesses launched',
           '7-day delivery guarantee',
-          '60–70% cost savings',
+          'Fixed-price, milestone-paid',
           'Fixed-price — no surprises',
         ]}
       />
@@ -489,8 +489,8 @@ export default function AboutPage() {
         headline="FactoryJet vs. traditional web agencies"
         lead="Most businesses waste months and tens of thousands of dollars before they find an agency that actually delivers. See exactly how we stack up."
         pullQuote={{
-          stat: '60–70%',
-          caption: 'lower cost than comparable US web design agencies — with faster turnaround and better performance scores.',
+          stat: '7 days',
+          caption: 'fixed-price delivery for up to 5-page sites — with faster turnaround and better performance scores than typical agencies.',
         }}
         columns={[
           { label: 'FactoryJet', isFactoryJet: true },

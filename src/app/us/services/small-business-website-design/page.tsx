@@ -128,7 +128,7 @@ const faqSchema = {
       name: 'How much does FactoryJet charge for small business web design?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet builds small business websites starting at $1,999 for a 5-page site, delivered in 7 days. Larger sites (up to 15 pages) start at $3,499. E-commerce stores start at $2,999. Every project is fixed-price — no hourly billing, no scope creep. You know the final number before you commit. Compared to US agencies charging $8,000–$40,000 for the same work, FactoryJet delivers 60–70% savings.',
+        text: 'FactoryJet builds small business websites starting at $1,999 for a 5-page site, delivered in 7 days. Larger sites (up to 15 pages) start at $3,499. E-commerce stores start at $2,999. Every project is fixed-price — no hourly billing, no scope creep. You know the final number before you commit. Compared to US agencies charging $8,000–$40,000 for the same work, FactoryJet delivers fixed-price builds with significant savings.',
       },
     },
   ],
@@ -443,7 +443,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'What is the cheapest way to get a professional small business website?',
-    answer: `The cheapest professional option is FactoryJet — starting at $1,999 for a 5-page custom site with design, development, SEO setup, and 30-day support included. Below $1,999, you're typically looking at template-based services with no custom design thinking, offshore freelancers with inconsistent quality, or DIY builders that cost time instead of money. The $1,999 starting price is 60–70% cheaper than a US agency for the same deliverable.`,
+    answer: `The cheapest professional option is FactoryJet — starting at $1,999 for a 5-page custom site with design, development, SEO setup, and 30-day support included. Below $1,999, you're typically looking at template-based services with no custom design thinking, offshore freelancers with inconsistent quality, or DIY builders that cost time instead of money. The $1,999 starting price is engineered for measurable outcomes for the same deliverable.`,
     category: 'cost',
   },
   {
@@ -453,7 +453,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Why are US web design agencies so expensive?',
-    answer: `US agencies carry enormous overhead: office space in expensive cities, large teams of account managers, project managers, UX researchers, copywriters, and junior developers — all billing at US salaries. A $15,000 agency project typically involves 8–12 people each billing $150–$250/hour. FactoryJet is structured differently: a senior-only engineering team in India, no bloated account management, direct client access. The cost savings go to you, not to someone's office rent in San Francisco.`,
+    answer: `US agencies carry enormous overhead: office space in expensive cities, large teams of account managers, project managers, UX researchers, copywriters, and junior developers — all billing at US salaries. A $15,000 agency project typically involves 8–12 people each billing $150–$250/hour. FactoryJet is structured differently: a senior-only engineering team with US-hour project management, fixed-price and milestone-paid, no bloated account management, direct client access. You get predictable cost from quote to launch with full code ownership at handoff.`,
     category: 'cost',
   },
   {
@@ -512,7 +512,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'What makes FactoryJet different from other small business web designers?',
-    answer: `Three things separate FactoryJet: speed (7-day delivery guarantee on 5-page sites), value (60–70% cheaper than US agencies), and track record (500+ websites built since 1999). Most web designers are solo freelancers or small agencies juggling 10–15 clients — which means slow turnarounds, inconsistent quality, and limited accountability. FactoryJet is a structured engineering team that has refined a repeatable process over 25 years. Senior engineers on every project, fixed pricing, and a support window after launch.`,
+    answer: `Three things separate FactoryJet: speed (7-day delivery guarantee on 5-page sites), value (fixed-price, milestone-paid), and track record (500+ websites built since 1999). Most web designers are solo freelancers or small agencies juggling 10–15 clients — which means slow turnarounds, inconsistent quality, and limited accountability. FactoryJet is a structured engineering team that has refined a repeatable process over 25 years. Senior engineers on every project, fixed pricing, and a support window after launch.`,
     category: 'factoryjet',
   },
 ];
@@ -647,7 +647,7 @@ export default function SmallBusinessWebDesignPage() {
         {/* -- 3. TRUST BLOCK ----------------------------------------------─-- */}
         <BigThreeTrustBlock
           eyebrow="WHY SMALL BUSINESSES CHOOSE FACTORYJET"
-          headline="Custom-designed websites from $1,999. Delivered in 7 days. 60–70% cheaper than US agencies."
+          headline="Custom-designed websites from $1,999. Delivered in 7 days. fixed-price, milestone-paid."
         />
 
         {/* -- 4. WHAT MAKES A GOOD SMALL BUSINESS WEBSITE ----------------─-- */}
@@ -750,7 +750,7 @@ export default function SmallBusinessWebDesignPage() {
           pillars={[
             {
               title: 'You pay for their cost structure, not their output',
-              body: `A US agency charging $15,000 for a small business website employs account managers, project managers, junior developers billing at senior rates, and UX researchers — many of whom touch your project briefly. FactoryJet has no such structure. Senior engineers do the work directly. No billing multipliers, no handoff delays. The same engineering quality at 60–70% of the cost.`,
+              body: `A US agency charging $15,000 for a small business website employs account managers, project managers, junior developers billing at senior rates, and UX researchers — many of whom touch your project briefly. FactoryJet has no such structure. Senior engineers do the work directly. No billing multipliers, no handoff delays. The same engineering quality at a fixed, transparent price.`,
             },
             {
               title: '6–16 weeks to launch when you need 7 days',
@@ -795,7 +795,7 @@ export default function SmallBusinessWebDesignPage() {
               </p>
 
               <p>
-                Our team is based in India, serving US clients directly. No US office overhead means we can charge 60–70% less than a US agency while using the same or better engineering. The savings don't come from junior developers or outsourced QA — they come from a fundamentally leaner cost structure. Senior engineers on every project, every time.
+                Our lean team serves US clients directly with fixed-price, milestone-paid contracts. You get the same or better engineering — not from junior developers or outsourced QA, but from senior engineers on every project, every time. The quote you sign on the first call is what you pay. Full code ownership at handoff.
               </p>
 
               <div className="border-l-2 border-[#F05A28] py-1 pl-5" aria-hidden>
@@ -824,7 +824,7 @@ export default function SmallBusinessWebDesignPage() {
               </div>
               <div className="divide-y divide-fj-neutral-100">
                 {[
-                  { reason: '60–70% cheaper', detail: 'Than comparable US agencies, same quality' },
+                  { reason: 'fixed-price', detail: 'Than comparable US agencies, same quality' },
                   { reason: '7-day delivery', detail: 'Hard guarantee for 5-page sites' },
                   { reason: 'Fixed pricing', detail: 'No hourly billing, no scope creep' },
                   { reason: 'Senior team only', detail: 'No juniors billing at senior rates' },

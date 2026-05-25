@@ -20,13 +20,13 @@ import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS'
 import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
 
 export const metadata: Metadata = {
-  title: 'Shopify Developer Sioux Falls SD | From $2,999 | FactoryJet',
-  description: 'Top-rated Shopify developer in Sioux Falls SD: stores live in 7 days from $2,999. Zero income tax state. Shopify, WooCommerce & AI. 500+ projects. Free audit.',
+  title: 'Shopify Developer Sioux Falls, SD — 7-Day Builds From $2,999',
+  description: 'Launch a Shopify store in Sioux Falls in 7 days from $2,999. South Dakota DTC specialists — fixed price, no platform lock-in. Book a free strategy call.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Developer Sioux Falls SD | From $2,999 | FactoryJet',
-    description: 'Top-rated Shopify developer in Sioux Falls SD: stores live in 7 days from $2,999. Zero state income tax = higher e-commerce margins. Free audit.',
+    title: 'Shopify Developer Sioux Falls, SD — 7-Day Builds From $2,999',
+    description: 'Launch a Shopify store in Sioux Falls in 7 days from $2,999. South Dakota DTC specialists — fixed price, no platform lock-in. Book a free strategy call.',
     url: 'https://factoryjet.com/us/sioux-falls/ecommerce-development',
     images: [
       {
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify Developer Sioux Falls SD | From $2,999 | FactoryJet',
-    description: 'Top-rated Shopify developer in Sioux Falls SD: stores live in 7 days from $2,999. Zero state income tax. Free audit.',
+    title: 'Shopify Developer Sioux Falls, SD — 7-Day Builds From $2,999',
+    description: 'Launch a Shopify store in Sioux Falls in 7 days from $2,999. South Dakota DTC specialists — fixed price, no platform lock-in. Book a free strategy call.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
@@ -89,7 +89,7 @@ export default function Page() {
         <Hero
           eyebrow="E-COMMERCE DEVELOPMENT · SIOUX FALLS, SD"
           headline="Shopify Developer Sioux Falls for South Dakota Businesses"
-          lead="South Dakota has zero state income tax — the best business climate in the Midwest. Smart Sioux Falls businesses are pairing that advantage with a high-converting Shopify store that launches in 7 days at 60% less than local agencies charge."
+          lead="South Dakota has zero state income tax — the best business climate in the Midwest. Smart Sioux Falls businesses are pairing that advantage with a high-converting Shopify store that launches in 7 days at fixed-price tiers charge."
           primaryCta={{ label: 'Get Your Free Store Audit', href: '/contact' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={['500+ Stores Launched', '7-Day Delivery', '4.9★ Rated', 'From $2,999']}
@@ -103,7 +103,7 @@ export default function Page() {
         {/* BIG THREE TRUST BLOCK */}
         <BigThreeTrustBlock
           eyebrow="WHY FACTORYJET"
-          headline="The fastest, most affordable Shopify developer in South Dakota"
+          headline="The fastest, most predictable fixed-price Shopify developer in South Dakota"
         />
 
         {/* CITY CONTEXT */}
@@ -419,7 +419,7 @@ export default function Page() {
             {
               category: 'pricing',
               question: "How much does a Shopify store typically cost in Sioux Falls?",
-              answer: "Local Sioux Falls agencies charge $6,000–$25,000 for a Shopify build with 6–16 week timelines. Freelancers run $1,500–$6,000 with variable quality. We charge $2,999–$15,999 depending on complexity, deliver in 7 days, and back it with a money-back guarantee. Better quality, faster delivery, and a guarantee — at 60% less than the local agency rate.",
+              answer: "Local Sioux Falls agencies charge $6,000–$25,000 for a Shopify build with 6–16 week timelines. Freelancers run $1,500–$6,000 with variable quality. We charge $2,999–$15,999 depending on complexity, deliver in 7 days, and back it with a money-back guarantee. Better quality, faster delivery, and a guarantee — at fixed-price tiers. than the local agency rate.",
             },
             {
               category: 'technical',

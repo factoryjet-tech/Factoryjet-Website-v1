@@ -89,7 +89,7 @@ export default function Page() {
         <Hero
           eyebrow="E-COMMERCE DEVELOPMENT · LINCOLN, NE"
           headline="Shopify Agency Lincoln NE for Nebraska Businesses"
-          lead="Lincoln is the Silicon Prairie's university town, ag-tech hub, and fastest-growing mid-market city — and the businesses winning online here aren't waiting 3 months for a local agency. They launch in 7 days at 60% less."
+          lead="Lincoln is the Silicon Prairie's university town, ag-tech hub, and fastest-growing mid-market city — and the businesses winning online here aren't waiting 3 months for a local agency. They launch in 7 days at fixed-price tiers."
           primaryCta={{ label: 'Get Your Free Store Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={['500+ Stores Launched', '7-Day Delivery', '4.9★ Rated', 'From $2,999']}
@@ -262,7 +262,7 @@ export default function Page() {
               values: [
                 '$10,000–$30,000 (full-service advertising agency, strong on branding and media, Shopify is one of dozens of services, 8–16 week timelines)',
                 'From $2,999 fixed price, 7-day delivery',
-                'Swanson Russell is a top-tier branding and advertising agency — not a Shopify e-commerce specialist. FactoryJet builds exclusively on Shopify, launches in 7 days, and costs 60–70% less.',
+                'Swanson Russell is a top-tier branding and advertising agency — not a Shopify e-commerce specialist. FactoryJet builds exclusively on Shopify, launches in 7 days, and costs fixed-price.',
               ],
             },
             {

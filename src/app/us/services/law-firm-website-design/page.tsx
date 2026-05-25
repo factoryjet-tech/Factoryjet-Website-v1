@@ -27,13 +27,13 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'Law Firm Website Design for US Attorneys | FactoryJet',
   description:
-    'Professional law firm websites that rank in local search and convert visitors into consultations. From $2,499. 60–70% cheaper than US agencies.',
+    'Professional law firm websites that rank in local search and convert visitors into consultations. From $2,499. fixed-price, milestone-paid.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Law Firm Website Design for US Attorneys | FactoryJet',
     description:
-      'Professional attorney website design built to rank, build trust, and generate consultation requests. FactoryJet — 60–70% cheaper than US legal web agencies.',
+      'Professional attorney website design built to rank, build trust, and generate consultation requests. FactoryJet',
     url: 'https://factoryjet.com/us/services/law-firm-website-design',
     images: [
       {
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Law Firm Website Design for US Attorneys | FactoryJet',
     description:
-      'Law firm websites that rank locally, build trust, and convert visitors into consultations. FactoryJet — 60–70% cheaper than US legal web agencies. Free consultation.',
+      'Law firm websites that rank locally, build trust, and convert visitors into consultations. FactoryJet Free consultation.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
@@ -82,7 +82,7 @@ const faqSchema = {
       name: 'How much does a law firm website design cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s law firm website design starts at $2,499 for a professional attorney website (up to 10 pages, custom design, attorney profiles, practice area pages, consultation request forms, and on-page SEO). Full law firm websites with 15–30 pages, multiple attorney profiles, blog, and local SEO optimization typically run $4,500–$9,000. These prices are 60–70% below comparable US legal web design agencies — which routinely charge $10,000–$40,000 for the same scope. Our specialized engineering team has served US law firms for 25+ years.',
+        text: 'FactoryJet\'s law firm website design starts at $2,499 for a professional attorney website (up to 10 pages, custom design, attorney profiles, practice area pages, consultation request forms, and on-page SEO). Full law firm websites with 15–30 pages, multiple attorney profiles, blog, and local SEO optimization typically run $4,500–$9,000. These prices are significantly below comparable US legal web design agency benchmarks — which routinely charge $10,000–$40,000 for the same scope. Our specialized engineering team has served US law firms for 25+ years.',
       },
     },
     {
@@ -159,7 +159,7 @@ const serviceSchema = {
   },
   serviceType: 'Law Firm Website Design',
   description:
-    'FactoryJet designs professional law firm websites for US attorneys and legal practices — custom design, practice area SEO, attorney profiles, consultation intake forms, and local schema markup. 60–70% cheaper than US legal web design agencies.',
+    'FactoryJet designs professional law firm websites for US attorneys and legal practices — custom design, practice area SEO, attorney profiles, consultation intake forms, and local schema markup. fixed-price, milestone-paid.',
   offers: [
     {
       '@type': 'Offer',
@@ -562,7 +562,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a law firm website design cost?',
     answer:
-      'FactoryJet\'s law firm website design starts at $2,499 for a solo or small firm website (up to 10 pages, custom design, practice area pages, attorney profile, and intake form). Full law firm websites with 15–30 pages and multiple attorneys run $4,500–$9,000. Large firm builds with 30+ pages and multi-location architecture start at $9,000. These prices are 60–70% below comparable US legal web design agencies — which charge $10,000–$40,000 for equivalent scope. Our specialized engineering team has built legal websites for US firms for 25+ years.',
+      'FactoryJet\'s law firm website design starts at $2,499 for a solo or small firm website (up to 10 pages, custom design, practice area pages, attorney profile, and intake form). Full law firm websites with 15–30 pages and multiple attorneys run $4,500–$9,000. Large firm builds with 30+ pages and multi-location architecture start at $9,000. These prices are significantly below comparable US legal web design agency benchmarks — which charge $10,000–$40,000 for equivalent scope. Our specialized engineering team has built legal websites for US firms for 25+ years.',
   },
   {
     category: 'pricing',
@@ -608,7 +608,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US legal web design agency?',
     answer:
-      'Three differences: price (60–70% cheaper — US legal web design agencies charge $10,000–$40,000 for projects we deliver at $2,499–$9,000, because our experienced team has none of the US overhead), legal website expertise (we\'ve built legal websites for US firms for 25+ years — we know the schema types, the bar advertising disclosure requirements, the conversion patterns specific to legal, and the local SEO architecture that works for attorney websites specifically), and ownership (you own everything we build — source code, design files, CMS credentials — unlike FindLaw and Martindale subscription products where you pay monthly for a site that was never yours).',
+      'Three differences: pricing model (fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices, while US legal web design agencies charge $10,000–$40,000 with hourly retainers for projects we deliver at $2,499–$9,000), legal website expertise (we\'ve built legal websites for US firms for 25+ years — we know the schema types, the bar advertising disclosure requirements, the conversion patterns specific to legal, and the local SEO architecture that works for attorney websites specifically), and ownership (you own everything we build — source code, design files, CMS credentials — unlike FindLaw and Martindale subscription products where you pay monthly for a site that was never yours).',
   },
   {
     category: 'trust',
@@ -723,7 +723,7 @@ export default function LawFirmWebsiteDesignPage() {
         <Hero
           eyebrow="LAW FIRM WEBSITE DESIGN · USA"
           headline="Law Firm Websites That Rank Locally and Convert Visitors Into Consultations"
-          lead="62% of people searching for an attorney start on Google — and 70% contact the first firm whose site earns their trust. FactoryJet designs law firm websites for US attorneys with individual practice area pages, attorney profiles that build credibility, and consultation intake flows that convert. Starting at $2,499. 60–70% cheaper than US legal web design agencies."
+          lead="62% of people searching for an attorney start on Google — and 70% contact the first firm whose site earns their trust. FactoryJet designs law firm websites for US attorneys with individual practice area pages, attorney profiles that build credibility, and consultation intake flows that convert. Starting at $2,499. fixed-price, milestone-paid."
           primaryCta={{ label: 'Book a Free Legal SEO Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
@@ -935,8 +935,8 @@ export default function LawFirmWebsiteDesignPage() {
           headline="FactoryJet vs. US Legal Agency vs. FindLaw/Martindale vs. Generic Freelancer"
           lead="Law firm website options vary dramatically in quality, ownership terms, and long-term value. Here's the honest comparison."
           pullQuote={{
-            stat: '60–70%',
-            caption: 'cheaper than a comparable US legal web design agency — same engineering depth, legal schema expertise, low-overhead cost structure.',
+            stat: 'Fixed Price',
+            caption: 'milestone-paid law firm websites with full code ownership — same engineering depth, legal schema expertise, predictable from quote to launch.',
           }}
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}

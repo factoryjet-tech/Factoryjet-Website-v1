@@ -27,13 +27,13 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'WordPress Development for US Businesses | FactoryJet',
   description:
-    'US-focused WordPress agency — custom themes, no page builders, fast loads & mobile-first builds. From $1,999. 60–70% cheaper than US WordPress agencies.',
+    'US-focused WordPress agency — custom themes, no page builders, fast loads & mobile-first builds. From $1,999. Fixed-price, milestone-paid.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'WordPress Development for US Businesses | FactoryJet',
     description:
-      'Custom WordPress websites for US small businesses — no page builders, fast loads, built to rank. FactoryJet: 60–70% cheaper than a US WordPress agency.',
+      'Custom WordPress websites for US small businesses — no page builders, fast loads, built to rank. FactoryJet: fixed-price, milestone-paid.',
     url: 'https://factoryjet.com/us/services/wordpress-development',
     images: [
       {
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'WordPress Development for US Businesses | FactoryJet',
     description:
-      'Custom WordPress. No page builders. Fast, mobile-first, SEO-ready. FactoryJet — 60–70% cheaper than US WordPress agencies. Free consultation.',
+      'Custom WordPress. No page builders. Fast, mobile-first, SEO-ready. FactoryJet — fixed-price, milestone-paid. Free consultation.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
@@ -82,7 +82,7 @@ const faqSchema = {
       name: 'How much does a custom WordPress website cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s custom WordPress website design starts at $1,999 for a business website (up to 10 pages, custom theme, no page builders). Full business websites with 15–30 pages, custom post types, and advanced functionality typically run $3,500–$8,000. WordPress e-commerce sites (WooCommerce) start at $4,999. These prices are 60–70% below comparable US WordPress agencies — our experienced team has built WordPress sites for US businesses for 25+ years with no reduction in engineering quality.',
+        text: 'FactoryJet\'s custom WordPress website design starts at $1,999 for a business website (up to 10 pages, custom theme, no page builders). Full business websites with 15–30 pages, custom post types, and advanced functionality typically run $3,500–$8,000. WordPress e-commerce sites (WooCommerce) start at $4,999. Fixed-price and milestone-paid — our experienced team has built WordPress sites for US businesses for 25+ years with the same engineering quality.',
       },
     },
     {
@@ -159,7 +159,7 @@ const serviceSchema = {
   },
   serviceType: 'WordPress Web Design and Development',
   description:
-    'FactoryJet is a US-focused WordPress web design and development agency — custom themes, no page builders, fast load times, mobile-first builds, and full SEO setup. 60–70% cheaper than US WordPress agencies.',
+    'FactoryJet is a US-focused WordPress web design and development agency — custom themes, no page builders, fast load times, mobile-first builds, and full SEO setup. Fixed-price, milestone-paid.',
   offers: [
     {
       '@type': 'Offer',
@@ -544,7 +544,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a custom WordPress website cost?',
     answer:
-      'FactoryJet\'s custom WordPress websites start at $1,999 for up to 10 pages with a custom theme, no page builders, mobile-first build, and full SEO setup. Business sites with 15–30 pages and custom post types typically run $3,500–$8,000. WooCommerce stores start at $4,999. These prices are 60–70% below comparable US WordPress agencies — our engineering team has built WordPress sites for US businesses for 25+ years with the same engineering standards, none of the US agency overhead.',
+      'FactoryJet\'s custom WordPress websites start at $1,999 for up to 10 pages with a custom theme, no page builders, mobile-first build, and full SEO setup. Business sites with 15–30 pages and custom post types typically run $3,500–$8,000. WooCommerce stores start at $4,999. Fixed-price and milestone-paid — our engineering team has built WordPress sites for US businesses for 25+ years with the same engineering standards, leaner operations.',
   },
   {
     category: 'pricing',
@@ -584,7 +584,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US WordPress agency?',
     answer:
-      'Three differences: price (60–70% cheaper — specialized engineers serving US businesses since 1999, no US agency overhead), engineering standards (we build to the same spec a good US agency would — custom theme, no page builders, Core Web Vitals target, documented code — without the inflated timeline), and SMB-specific experience (500+ small business projects means we know what a 10-person company actually needs from WordPress and what it doesn\'t — you won\'t get oversold on features that a $50M company uses but you\'ll never touch). We also don\'t use proprietary tools: everything we build runs on standard WordPress and can be maintained by any competent developer after handover.',
+      'Three differences: pricing model (fixed-price and milestone-paid — specialized engineers serving US businesses since 1999, leaner operations), engineering standards (we build to the same spec a good US agency would — custom theme, no page builders, Core Web Vitals target, documented code — without the inflated timeline), and SMB-specific experience (500+ small business projects means we know what a 10-person company actually needs from WordPress and what it doesn\'t — you won\'t get oversold on features that a $50M company uses but you\'ll never touch). We also don\'t use proprietary tools: everything we build runs on standard WordPress and can be maintained by any competent developer after handover.',
   },
   {
     category: 'trust',
@@ -700,7 +700,7 @@ export default function WordPressDevelopmentPage() {
         <Hero
           eyebrow="WORDPRESS WEB DESIGN AGENCY · USA"
           headline="Custom WordPress Websites That Load Fast, Rank, and Convert"
-          lead="Most WordPress agencies build on Elementor or Divi — page builders that produce bloated code, fail Core Web Vitals, and hurt your Google rankings. FactoryJet builds custom WordPress themes from scratch: clean code, fast load times, and mobile-first design. Starting at $1,999. 60–70% cheaper than a US WordPress agency."
+          lead="Most WordPress agencies build on Elementor or Divi — page builders that produce bloated code, fail Core Web Vitals, and hurt your Google rankings. FactoryJet builds custom WordPress themes from scratch: clean code, fast load times, and mobile-first design. Starting at $1,999. Fixed-price and milestone-paid."
           primaryCta={{ label: 'Book a Free WordPress Consultation', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[

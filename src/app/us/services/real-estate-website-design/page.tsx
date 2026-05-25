@@ -21,23 +21,23 @@ import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 
 export const metadata: Metadata = {
-  title: 'Real Estate Website Design for US Agents | FactoryJet',
+  title: 'Real Estate Website Design — IDX Sites From $2,499 (7 Days)',
   description:
-    'Custom real estate websites with IDX integration — built to rank on local search. Agent sites from $2,499, 7-day delivery, 60–70% below US agency rates.',
+    'IDX-integrated real estate websites that rank locally. Custom agent sites from $2,499, brokerages from $4,500. Live in 7 days, no platform fees. Free demo call.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Real Estate Website Design for US Agents | FactoryJet',
+    title: 'Real Estate Website Design — IDX Sites From $2,499 (7 Days)',
     description:
-      'Real estate websites that rank locally. IDX integration, neighborhood pages, lead capture — custom design from $2,499. No ongoing platform fees. 7-day delivery.',
+      'IDX-integrated real estate websites that rank locally. Custom agent sites from $2,499, brokerages from $4,500. Live in 7 days, no platform fees. Free demo call.',
     url: 'https://factoryjet.com/us/services/real-estate-website-design',
     images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet — Real Estate Website Design USA' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Real Estate Website Design | FactoryJet',
-    description: 'Custom real estate agent websites with IDX from $2,499. 7-day delivery. No ongoing platform fees.',
+    title: 'Real Estate Website Design — IDX Sites From $2,499 (7 Days)',
+    description: 'IDX-integrated real estate websites that rank locally. Custom agent sites from $2,499, brokerages from $4,500. Live in 7 days, no platform fees. Free demo call.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {

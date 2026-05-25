@@ -24,7 +24,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Web Design Raleigh NC | 7 Days from $1,500 | FactoryJet',
-  description: 'FactoryJet builds fast, conversion-focused websites for Raleigh businesses — from $1,999. 7-day delivery, 60–70% less than local agencies. Next.js, SEO & GA4.',
+  description: 'FactoryJet builds fast, conversion-focused websites for Raleigh businesses — from $1,999. 7-day delivery, fixed-price and milestone-paid. Next.js, SEO & GA4.',
   alternates: {
     canonical: 'https://factoryjet.com/us/raleigh/web-design',
     languages: webDesignPriorityCityAlternatesUS.raleigh,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Web Design Raleigh NC | 7 Days from $1,500 | FactoryJet',
-    description: 'FactoryJet builds fast, conversion-focused websites for Raleigh businesses — from $1,999. 7-day delivery, 60–70% less than local agencies. Next.js, SEO & GA4.',
+    description: 'FactoryJet builds fast, conversion-focused websites for Raleigh businesses — from $1,999. 7-day delivery, fixed-price and milestone-paid. Next.js, SEO & GA4.',
     url: 'https://factoryjet.com/us/raleigh/web-design/',
     images: [
       {
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Web Design Raleigh NC | 7 Days from $1,500 | FactoryJet',
-    description: 'FactoryJet builds fast, conversion-focused websites for Raleigh businesses — from $1,999. 7-day delivery, 60–70% less than local agencies. Next.js, SEO & GA4.',
+    description: 'FactoryJet builds fast, conversion-focused websites for Raleigh businesses — from $1,999. 7-day delivery, fixed-price and milestone-paid. Next.js, SEO & GA4.',
     images: ['https://factoryjet.com/logo.png'],
   },
 };

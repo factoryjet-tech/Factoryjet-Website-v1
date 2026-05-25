@@ -23,13 +23,13 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'Web Application Development for US Businesses | FactoryJet',
   description:
-    'Custom web application development from $7,500. Booking systems, portals, SaaS MVPs & dashboards — fixed price, 60–70% below US agency rates. Free discovery call.',
+    'Custom web application development from $7,500. Booking systems, portals, SaaS MVPs & dashboards — fixed price, below US agency rates. Free discovery call.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Web Application Development for US Businesses | FactoryJet',
     description:
-      'Fixed-price web app development from $7,500. MVP to full SaaS platform. 60–70% below US agency rates. 60-day bug warranty. Full source code on handoff.',
+      'Fixed-price web app development from $7,500. MVP to full SaaS platform. below US agency rates. 60-day bug warranty. Full source code on handoff.',
     url: 'https://factoryjet.com/us/services/web-application-development',
     images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet — Web Application Development USA' }],
     locale: 'en_US',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Web Application Development for US Businesses | FactoryJet',
-    description: 'Custom web apps from $7,500. Fixed price. 60-day bug warranty. 60–70% below US agency rates.',
+    description: 'Custom web apps from $7,500. Fixed price. 60-day bug warranty. below US agency rates.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
@@ -60,7 +60,7 @@ const faqSchema = {
       name: 'How much does web application development cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet's web application development starts at $7,500 for an MVP. Mid-complexity apps run $15,000–$30,000. Full-scale SaaS platforms run $30,000–$80,000. US development agencies typically charge $50,000–$200,000+ for comparable scope. Our specialized engineering team delivers at 60–70% below US rates with the same technology stack.",
+        text: "FactoryJet's web application development starts at $7,500 for an MVP. Mid-complexity apps run $15,000–$30,000. Full-scale SaaS platforms run $30,000–$80,000. US development agencies typically charge $50,000–$200,000+ for comparable scope. Our specialized engineering team delivers at below US rates with the same technology stack.",
       },
     },
     {
@@ -553,10 +553,10 @@ export default function WebApplicationDevelopmentPage() {
       <Hero
         eyebrow="WEB APPLICATION DEVELOPMENT"
         headline="Custom Web Applications Built for US Businesses, Starting at $7,500"
-        lead="Booking systems, customer portals, SaaS MVPs, internal dashboards. FactoryJet builds production-ready web apps at 60–70% below US development agency rates — fixed price, phased delivery, 60-day bug warranty."
+        lead="Booking systems, customer portals, SaaS MVPs, internal dashboards. FactoryJet builds production-ready web apps at below US development agency benchmarks — fixed price, phased delivery, 60-day bug warranty."
         primaryCta={{ label: 'Get a Free Estimate', modal: true, region: 'us' }}
         secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
-        trustItems={['500+ US businesses served', '25+ years engineering experience', '60–70% below US agency rates']}
+        trustItems={['500+ US businesses served', '25+ years engineering experience', 'below US agency rates']}
         rightSlot={
           <div className="rounded-2xl border border-fj-neutral-200 bg-white p-6 space-y-4">
             <p className="text-xs font-fj-mono uppercase tracking-widest text-fj-neutral-400">Build vs. Buy Decision Framework</p>
@@ -589,7 +589,7 @@ export default function WebApplicationDevelopmentPage() {
         stats={[
           { value: '$7,500', label: 'MVP Starting Price' },
           { value: '4–8 Wks', label: 'Typical Build Time' },
-          { value: '60–70%', label: 'Cheaper Than US Agencies' },
+          { value: 'Fixed Price', label: 'Milestone-Paid' },
           { value: '25 Yrs', label: 'Software Expertise' },
         ]}
       />
@@ -702,7 +702,7 @@ export default function WebApplicationDevelopmentPage() {
         eyebrow="HOW WE COMPARE"
         headline="FactoryJet vs. US Dev Agency vs. Freelancer vs. No-Code"
         lead="Not all development options are equal. Here's what the decision looks like when you compare side by side — on price, capability, and what you're left with after delivery."
-        pullQuote={{ stat: '60–70%', caption: 'below US development agency rates — same engineering depth, low-overhead cost structure.' }}
+        pullQuote={{ stat: 'Fixed Price', caption: 'milestone-paid with full code ownership — same engineering depth, predictable from quote to launch.' }}
         columns={COMPARISON_COLUMNS}
         rows={COMPARISON_ROWS}
         footer="Prices reflect typical US market ranges as of 2025. No-code platform monthly fees compound over time and limit scalability."
