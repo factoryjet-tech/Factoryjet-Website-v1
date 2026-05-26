@@ -524,8 +524,8 @@ export default function IndustriesGrid(_props: IndustriesGridProps = {}) {
           {/* Row 2 — [1fr orange stat] [2fr content] */}
           <div className="grid grid-cols-1 gap-[3px] lg:grid-cols-[1fr_2fr]">
             <OrangeStatCard
-              stat="60–70%"
-              statLabel="less than US agency pricing, with full code ownership on day one"
+              stat="Day 1"
+              statLabel="code & data ownership on every project, with full GitHub repo handover at launch"
               tagline="no retainers · no lock-in"
             />
             <IndustryCard industry={INDUSTRIES[1]} titleSize={24} />
@@ -560,7 +560,7 @@ export default function IndustriesGrid(_props: IndustriesGridProps = {}) {
               letterSpacing: '-0.01em',
             }}
           >
-            Get a Free Strategy Call
+            Get a Free Quote
           </Link>
           <Link
             href="/us/portfolio"

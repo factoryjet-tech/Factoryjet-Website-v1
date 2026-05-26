@@ -28,20 +28,19 @@ export interface LogoBarProps {
 
 /**
  * Real client names from the FactoryJet portfolio.
- * These appear in the marquee as Clash Display wordmarks.
- * Update this list as new notable clients are added.
+ * 2026-05-26 PR #2 cleanup: dropped 7 fake/unrecognizable text marks
+ * (WetStone Labs, CuraShield, MindSource, StegoHunt, VidAML, KD Associates,
+ * Baxter & Reed) and kept/added only verified real clients per the
+ * project_factoryjet_clients memory. List doubles via CSS marquee so 6
+ * entries give 12 visible items per loop — enough to read as a continuous strip.
  */
 const LOGOS = [
-  'WetStone Labs',
-  'CuraShield',
-  'MindSource',
-  'StegoHunt',
-  'VidAML',
-  'KD Associates',
   'Belle Maison',
+  'Bombay Petals',
   'Formative Concepts',
   'Impulse Branding',
-  'Baxter & Reed',
+  'Shevvaa',
+  'RDB Travels',
 ];
 
 export default function LogoBar({

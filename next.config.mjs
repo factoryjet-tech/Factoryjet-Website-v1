@@ -13,12 +13,18 @@ const nextConfig = {
   ...(process.env.NODE_ENV === 'production' && { output: 'export' }),
 
   // Image optimization settings
-  // NOTE: unoptimized flag removed — static export (output:'export') does not support
-  // Next.js server-side image optimization, but the flag was also killing WebP conversion
-  // and format negotiation in edge/preview environments. Cloudflare Pages handles
-  // image compression at the CDN layer; local images should be pre-optimized WebP.
+  // 2026-05-26 PR #2 fix: unoptimized restored to TRUE.
+  //   Why: output:'export' (static export) does not support /_next/image
+  //   optimization. Cloudflare Pages static deploy returns 404 on every
+  //   /_next/image?url=... request, leaving every <Image> component on
+  //   the site silently broken. Verified via curl on factoryjet.com.
+  //   Setting unoptimized:true forces <Image> to use raw /images/...
+  //   paths, which Cloudflare serves correctly.
+  //   Trade-off: no runtime AVIF/WebP conversion or responsive srcset,
+  //   but our source files are already pre-optimized WebP at sensible
+  //   widths, so the trade-off is acceptable.
   images: {
-    unoptimized: false,
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',

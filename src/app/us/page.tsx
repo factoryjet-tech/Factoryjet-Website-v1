@@ -727,14 +727,14 @@ export default function USHomePage() {
           { label: 'Portfolio', href: '/us/portfolio' },
           { label: 'FAQ',       href: '/us/faq' },
         ]}
-        cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }}
+        cta={{ label: 'Get a Quote', modal: true, region: 'us' }}
       />
 
       <main className="bg-fj-cream">
 
         {/* ── 1. HERO — V1 Engineered Outcomes with gradient text + floating stat badges ── */}
         <Hero
-          announcementPill={{ text: 'Bhavesh takes every discovery call' }}
+          announcementPill={{ text: 'Now booking — 7-day delivery on standard scope' }}
           eyebrow="ENGINEERED OUTCOMES · AI-NATIVE · US-FOCUSED"
           headline={
             <>
@@ -752,7 +752,7 @@ export default function USHomePage() {
             </>
           }
           lead="FactoryJet is an AI-native US digital partner. We engineer websites, e-commerce stores, and AI agents that pay for themselves in 90 days — fixed-price, milestone-paid, with code you own from day one. Talk to the founder before you commit."
-          primaryCta={{ label: 'Talk to the Founder', href: 'https://calendly.com/bhavesh-factoryjet/30min' }}
+          primaryCta={{ label: 'Start Your Project', href: '/us/pricing' }}
           secondaryCta={{ label: 'See our services', href: '#services' }}
           trustItems={['Senior engineers, not SDRs', 'Fixed price, milestone-paid', 'Code & data ownership Day 1']}
           rightSlot={<HeroVisualSlot />}
@@ -764,15 +764,10 @@ export default function USHomePage() {
         {/* ── 3. LOGO BAR — Framework B+ tagline ── */}
         <LogoBar tagline="Trusted by 500+ businesses scaling outcomes across web, e-commerce, and AI." />
 
-        {/* ── 4. TALK TO THE FOUNDER (full + light) — founder block above the fold ── */}
-        <TalkToFounder
-          variant="full"
-          theme="light"
-          eyebrow="FOUNDER ACCESS"
-          mailtoSubject="FactoryJet project enquiry"
-        />
-
-        {/* ── 5. BENTO SERVICES GRID (light) ── */}
+        {/* ── 4. BENTO SERVICES GRID (light) ── */}
+        {/* Note: above-the-fold TalkToFounder section removed 2026-05-26 per Bhavesh
+            request to dial down founder-CTA repetition. Sole dedicated founder
+            section is now the dark closing banner above the footer (section 14). */}
         <BentoServicesGrid />
 
         {/* ── 6. PAIN PATTERNS (DARK) — Here is what is broken ── */}
@@ -790,7 +785,7 @@ export default function USHomePage() {
           headline="5 stages, zero surprises: from discovery call to live website in 7 days."
           lead="We do not start designing until we understand your goals. Every stage ends with a deliverable you review and approve — so no design, no development, and no launch happens without your sign-off."
           stages={JOURNEY_STAGES}
-          closingNote="5 STAGES · 7 DAYS (UP TO 5 PAGES) · TALK TO THE FOUNDER BEFORE ANY COMMITMENT"
+          closingNote="5 STAGES · 7 DAYS (UP TO 5 PAGES) · FIXED PRICE PER SCOPE"
         />
 
         {/* ── 10. METHODOLOGY BAR (DARK) — Here is our branded approach ── */}
