@@ -143,7 +143,7 @@ export default function Page() {
           }
           rightSlot={
             <img
-              src="/images/us/services/service-web-design-process.webp"
+              src="/images/us/sioux-falls/ecommerce/service-explanation.webp"
               alt="Shopify development process for Sioux Falls South Dakota businesses"
               width={1200}
               height={800}
@@ -215,21 +215,21 @@ export default function Page() {
           headline="Stores we've built for businesses like yours"
           cards={[
             {
-              imageSrc: '/images/us/austin/ecommerce/portfolio-1.webp',
+              imageSrc: '/images/us/sioux-falls/ecommerce/portfolio-1.webp',
               title: 'Agricultural Products & Equipment',
               industry: 'Shopify Plus · B2B Wholesale',
               description: 'A full B2B wholesale store for a South Dakota ag supplier — tiered pricing, dealer portals, and rural-optimized mobile checkout.',
               stat1: '310% increase in online orders within 90 days',
             },
             {
-              imageSrc: '/images/us/austin/ecommerce/portfolio-2.webp',
+              imageSrc: '/images/us/sioux-falls/ecommerce/portfolio-2.webp',
               title: 'Regional Specialty Food Brand',
               industry: 'Shopify · DTC + Subscription',
               description: 'A direct-to-consumer food brand shipping South Dakota products nationwide — launched in 7 days with subscription box integration.',
               stat1: 'Launched in 7 days — $22K first-month revenue',
             },
             {
-              imageSrc: '/images/us/austin/ecommerce/portfolio-3.webp',
+              imageSrc: '/images/us/sioux-falls/ecommerce/portfolio-3.webp',
               title: 'Downtown Retail & Gift Shop',
               industry: 'Shopify · DTC + Local Pickup',
               description: 'A Sioux Falls boutique adding an online channel with local pickup — synced with in-store POS and inventory in real time.',

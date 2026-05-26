@@ -15,6 +15,7 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteFooter from '@/components/v2/SiteFooter'
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns'
@@ -221,6 +222,7 @@ export default function TampaWebDesignPage() {
           </div>
         </div>
       </section>
+      <WebDesignCityLinksUS currentCity="tampa" />
       <FinalCTA
         variant="dark"
         eyebrow={"READY TO START"}

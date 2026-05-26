@@ -148,7 +148,7 @@ export default function Page() {
           }
           rightSlot={
             <img
-              src="/images/us/services/service-web-design-process.webp"
+              src="/images/us/lincoln/ecommerce/service-explanation.webp"
               alt="Shopify development process for Lincoln Nebraska businesses"
               width={1200}
               height={800}
@@ -221,7 +221,7 @@ export default function Page() {
               industry: 'Ag-Tech & Equipment',
               title: 'Nebraska Agricultural Equipment Store',
               description: "A Nebraska ag equipment parts dealer needed a B2B wholesale portal with tiered dealer pricing, bulk ordering, and inventory sync. We launched in 7 days with Nebraska tax configured, dealer login portal, and a product catalog of 2,500+ SKUs.",
-              imageSrc: '/images/us/austin/ecommerce/portfolio-1.webp',
+              imageSrc: '/images/us/lincoln/ecommerce/portfolio-1.webp',
               stat1: '+290% online orders',
               stat2: '7-day launch',
             },
@@ -229,7 +229,7 @@ export default function Page() {
               industry: 'University Apparel & Merchandise',
               title: 'Nebraska University Merchandise Brand',
               description: "A Lincoln merchandise brand serving UNL students and Husker fans needed a Shopify store with game-day promotional support, mobile-first checkout, and Klaviyo automation for alumni buyers. Launched in 7 days with $34K in first-month revenue.",
-              imageSrc: '/images/us/austin/ecommerce/portfolio-2.webp',
+              imageSrc: '/images/us/lincoln/ecommerce/portfolio-2.webp',
               stat1: '$34K first-month revenue',
               stat2: 'Launched in 7 days',
             },
@@ -237,7 +237,7 @@ export default function Page() {
               industry: 'Nebraska Food & Specialty',
               title: 'Nebraska Specialty Food Producer',
               description: "A Nebraska food producer needed to go DTC nationally with subscription box options, local pickup, and compliant food labeling. We built a Shopify store with Recharge subscription integration and Google Shopping feed, achieving 4.1% conversion from launch.",
-              imageSrc: '/images/us/austin/ecommerce/portfolio-3.webp',
+              imageSrc: '/images/us/lincoln/ecommerce/portfolio-3.webp',
               stat1: '4.1% conversion rate',
               stat2: 'From day one',
             },

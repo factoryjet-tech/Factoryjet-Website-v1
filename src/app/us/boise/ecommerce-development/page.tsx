@@ -150,7 +150,7 @@ export default function Page() {
           }
           rightSlot={
             <img
-              src="/images/us/services/service-web-design-process.webp"
+              src="/images/us/boise/ecommerce/service-explanation.webp"
               alt="Shopify development process for Boise Idaho businesses"
               width={1200}
               height={800}
@@ -223,7 +223,7 @@ export default function Page() {
               industry: 'Outdoor Gear & Apparel',
               title: 'Treasure Valley Outdoor Brand',
               description: "Idaho's outdoor economy spans hiking, skiing, mountain biking, and rafting — with buyers who shop on mobile from the trail and expect instant load times and clean product photography. We built a Shopify store with Google Shopping integration, gear variant configurations, and Klaviyo automation that turned first-time buyers into repeat customers.",
-              imageSrc: '/images/us/austin/ecommerce/portfolio-1.webp',
+              imageSrc: '/images/us/boise/ecommerce/portfolio-1.webp',
               stat1: '+218% revenue in 60 days',
               stat2: '7-day launch',
             },
@@ -231,7 +231,7 @@ export default function Page() {
               industry: 'Farm-Direct Food',
               title: 'Idaho Farm-Direct Producer',
               description: "Farm-direct and Idaho-made food products are one of the fastest-growing e-commerce categories — consumers actively seek out local, traceable products. We built a Shopify store with subscription box options, local pickup scheduling, and CSA-style delivery management, launching in 7 days.",
-              imageSrc: '/images/us/austin/ecommerce/portfolio-2.webp',
+              imageSrc: '/images/us/boise/ecommerce/portfolio-2.webp',
               stat1: '$19K first-month revenue',
               stat2: 'Launched in 7 days',
             },
@@ -239,7 +239,7 @@ export default function Page() {
               industry: 'Health & Wellness',
               title: 'Boise Health & Wellness Brand',
               description: "Boise's health-conscious demographic is one of the best markets in the Mountain West for wellness brands. We built a Shopify store with subscription billing via Recharge, bundle builders, loyalty programs, and a Klaviyo email sequence that reduced churn and increased customer lifetime value.",
-              imageSrc: '/images/us/austin/ecommerce/portfolio-3.webp',
+              imageSrc: '/images/us/boise/ecommerce/portfolio-3.webp',
               stat1: '3.8% conversion rate',
               stat2: 'vs 1.4% previous store',
             },

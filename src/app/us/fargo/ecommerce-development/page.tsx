@@ -148,7 +148,7 @@ export default function Page() {
           }
           rightSlot={
             <img
-              src="/images/us/services/service-web-design-process.webp"
+              src="/images/us/fargo/ecommerce/service-explanation.webp"
               alt="Shopify development process for Fargo ND businesses"
               width={1200}
               height={800}
@@ -221,7 +221,7 @@ export default function Page() {
               industry: 'Ag-Tech & Equipment',
               title: 'Agricultural Equipment Parts Store',
               description: 'A Fargo-area ag equipment parts dealer needed a B2B wholesale portal with tiered dealer pricing, bulk ordering, and multi-location inventory sync. We launched in 7 days with ND and MN tax configured, dealer login portal, and a product catalog of 3,000+ SKUs.',
-              imageSrc: '/images/us/austin/ecommerce/portfolio-1.webp',
+              imageSrc: '/images/us/fargo/ecommerce/portfolio-1.webp',
               stat1: '+340% online parts orders',
               stat2: '7-day launch',
             },
@@ -229,7 +229,7 @@ export default function Page() {
               industry: 'Craft Beverage & Merchandise',
               title: 'Fargo Craft Brewery Shop',
               description: "A downtown Fargo brewery needed a merchandise and event store that worked for locals and shipped branded gear nationwide. We built Shopify with event ticketing integration, merchandise bundles, local pickup, and Klaviyo email automation.",
-              imageSrc: '/images/us/austin/ecommerce/portfolio-2.webp',
+              imageSrc: '/images/us/fargo/ecommerce/portfolio-2.webp',
               stat1: '$28K first-month revenue',
               stat2: 'Launched in 6 days',
             },
@@ -237,7 +237,7 @@ export default function Page() {
               industry: 'Home & Outdoor Goods',
               title: 'Fargo Home & Outdoor Brand',
               description: 'A Fargo-Moorhead home goods brand sold through local markets but had no online channel. We built a Shopify store with Google Shopping integration, cross-border ND/MN shipping zones, and a Klaviyo welcome series that converted 22% of email subscribers to buyers.',
-              imageSrc: '/images/us/austin/ecommerce/portfolio-3.webp',
+              imageSrc: '/images/us/fargo/ecommerce/portfolio-3.webp',
               stat1: '4.2% conversion rate',
               stat2: 'vs 1.8% industry avg',
             },

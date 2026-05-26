@@ -137,7 +137,7 @@ export default function Page() {
           }
           rightSlot={
             <img
-              src="/images/us/services/service-web-design-process.webp"
+              src="/images/us/chattanooga/ecommerce/service-explanation.webp"
               alt=""
               aria-hidden="true"
               width={1200}
@@ -219,7 +219,7 @@ export default function Page() {
               title: 'Chattanooga Outdoor & Adventure Client',
               description:
                 "Chattanooga's outdoor economy spans rock climbing, kayaking, hang gliding, and mountain biking — with 10.7M annual visitors who spend on gear and guided experiences. We build Shopify stores with rental calendars, booking integrations, adventure-specific product configurations, seasonal drops, and gear subscription boxes. Every store loads under 1.5 seconds on mobile — because outdoor shoppers research and buy from the trail.",
-              imageSrc: '/images/us/austin/ecommerce/portfolio-1.webp',
+              imageSrc: '/images/us/chattanooga/ecommerce/portfolio-1.webp',
               stat1: '+43% conversion rate',
               stat2: '7-day launch',
             },
@@ -228,7 +228,7 @@ export default function Page() {
               title: 'Chattanooga Craft Beverage & Food Client',
               description:
                 "Chattanooga's growing craft brewery, distillery, and specialty food scene sells to locals, tourists, and nationwide DTC audiences simultaneously. We build Shopify stores with age verification, TABC-aware shipping configurations, subscription beer and spirits clubs, gift box builders, and gifting flows for the 10.7M annual visitors who want to take a taste of Chattanooga home with them.",
-              imageSrc: '/images/us/austin/ecommerce/portfolio-2.webp',
+              imageSrc: '/images/us/chattanooga/ecommerce/portfolio-2.webp',
               stat1: '+49% AOV increase',
               stat2: 'Lighthouse 95',
             },
@@ -237,7 +237,7 @@ export default function Page() {
               title: 'Chattanooga Manufacturing & Industrial Client',
               description:
                 "The Tennessee Valley's manufacturing base needs B2B ordering infrastructure that reduces sales overhead. We build Shopify B2B portals with dealer pricing tiers, bulk ordering, net-30/net-60 payment terms, purchase order workflows, and equipment configurators. Chattanooga manufacturers use our portals to process 300+ dealer orders monthly without adding sales headcount.",
-              imageSrc: '/images/us/austin/ecommerce/portfolio-3.webp',
+              imageSrc: '/images/us/chattanooga/ecommerce/portfolio-3.webp',
               stat1: '+35% repeat orders',
               stat2: '< 1.3s load time',
             },
