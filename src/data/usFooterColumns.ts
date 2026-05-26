@@ -23,6 +23,7 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'AI Agents',              href: '/us/services/ai-agents' },
       { label: 'AI Automation',          href: '/us/services/ai-automation' },
       { label: 'AI Agency',              href: '/us/services/ai-agency' },
+      { label: 'AI SEO',                 href: '/us/services/ai-seo' },
       { label: 'Small Business Design',  href: '/us/services/small-business-website-design' },
       { label: 'Magento Development',    href: '/us/services/magento-development' },
       { label: 'WooCommerce Dev',        href: '/us/services/woocommerce-development' },

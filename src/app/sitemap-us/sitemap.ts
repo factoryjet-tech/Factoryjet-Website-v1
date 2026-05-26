@@ -34,6 +34,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/us/services/ai-agents',                           source: 'src/app/us/services/ai-agents/page.tsx' },
   { path: '/us/services/ai-automation',                       source: 'src/app/us/services/ai-automation/page.tsx' },
   { path: '/us/services/ai-agency',                           source: 'src/app/us/services/ai-agency/page.tsx' },
+  { path: '/us/services/ai-seo',                              source: 'src/app/us/services/ai-seo/page.tsx' },
   { path: '/us/services/small-business-website-design',       source: 'src/app/us/services/small-business-website-design/page.tsx' },
   { path: '/us/services/magento-development',                 source: 'src/app/us/services/magento-development/page.tsx' },
   { path: '/us/services/woocommerce-development',             source: 'src/app/us/services/woocommerce-development/page.tsx' },

@@ -27,9 +27,18 @@ export const homeAlternates = {
 } as const
 
 /** US market hub page (/us) — US-only, no India/UAE equivalent */
+/**
+ * /us homepage. Bilingual cluster mirrors India / homepage's emission so
+ * Google sees consistent reciprocal hreflang. Fixed 2026-05-25 in PR #2 —
+ * previously emitted only en-US + x-default, leaving the en-IN reciprocal
+ * to /us asymmetric vs India's en-US → /us back-pointer.
+ */
 export const usHubAlternates = {
+  'en-IN': 'https://factoryjet.com',
   'en-US': 'https://factoryjet.com/us',
-  'x-default': 'https://factoryjet.com/us',
+  'en-AE': 'https://factoryjet.com/uae',
+  'en-GB': 'https://factoryjet.com/uk',
+  'x-default': 'https://factoryjet.com',
 } as const
 
 // ===========================================================================
@@ -120,6 +129,21 @@ export const magentoDevelopmentAlternates = {
 export const woocommerceDevelopmentAlternates = {
   'en-US': 'https://factoryjet.com/us/services/woocommerce-development',
   'x-default': 'https://factoryjet.com/us/services/woocommerce-development',
+} as const
+
+/**
+ * AI SEO / GEO / AEO service page — bilingual cluster.
+ * US:    /us/services/ai-seo
+ * India: /ai-seo  (root path, matches India URL pattern for services)
+ * UAE / UK: generic regional landings.
+ * Added 2026-05-25 in PR #2 for the new Framework B+ AI SEO service.
+ */
+export const aiSeoAlternates = {
+  'en-IN': 'https://factoryjet.com/ai-seo',
+  'en-US': 'https://factoryjet.com/us/services/ai-seo',
+  'en-AE': 'https://factoryjet.com/uae',
+  'en-GB': 'https://factoryjet.com/uk',
+  'x-default': 'https://factoryjet.com/ai-seo',
 } as const
 
 // ===========================================================================

@@ -15,6 +15,7 @@ import {
   MessageSquare,
   Layers,
   Link2,
+  Search,
   MapPin,
   X,
   Menu,
@@ -55,6 +56,7 @@ const US_AI_SERVICES = [
   { icon: MessageSquare, label: 'AI Chatbot',     href: '/us/services/ai-chatbot-development',  desc: 'Smart customer support' },
   { icon: Layers,        label: 'AI Workflow',    href: '/us/services/ai-workflow-automation',  desc: 'End-to-end process flows' },
   { icon: Link2,         label: 'AI Integration', href: '/us/services/ai-integration-services', desc: 'Connect AI to your stack' },
+  { icon: Search,        label: 'AI SEO',         href: '/us/services/ai-seo',                  desc: 'Get cited by AI engines' },
 ] as const;
 
 const US_LOCATIONS = [
