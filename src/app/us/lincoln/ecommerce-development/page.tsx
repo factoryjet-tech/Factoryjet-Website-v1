@@ -186,7 +186,7 @@ export default function Page() {
           stages={[
             {
               number: '01',
-              title: 'Free Strategy Call',
+              title: 'Strategy Call',
               description: 'We learn about your Lincoln business, your products, and your customers in 45 minutes — no pitch, just honest advice on what you need.',
             },
             {
@@ -500,7 +500,7 @@ export default function Page() {
           variant="dark"
           eyebrow="READY TO START"
           headline="Ready to Launch Your Lincoln Shopify Store in 7 Days?"
-          sub="Book a free 45-minute strategy call. We'll audit your current setup, recommend the right package, and give you a fixed price — no commitment required."
+          sub="Book a 45-minute strategy call. We'll audit your current setup, recommend the right package, and give you a fixed price — no commitment required."
           primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Our Work', href: '/us/portfolio' }}
         />

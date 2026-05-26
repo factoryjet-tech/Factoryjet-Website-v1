@@ -150,7 +150,7 @@ const faqSchema = {
       name: 'How much does FactoryJet charge for a website?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet builds custom websites for US small businesses starting at $1,999 for a 5-page site, delivered in 7 days. E-commerce sites start at $2,999. Web application development starts at $7,999. Every project is fixed-price — no hourly billing, no scope creep, no surprise invoices. Compared to US agencies charging $8,000–$40,000 for equivalent work, FactoryJet delivers the same professional quality at significantly lower cost. Book a free strategy call to get a custom quote for your project.',
+        text: 'FactoryJet builds custom websites for US small businesses starting at $1,999 for a 5-page site, delivered in 7 days. E-commerce sites start at $2,999. Web application development starts at $7,999. Every project is fixed-price — no hourly billing, no scope creep, no surprise invoices. Compared to US agencies charging $8,000–$40,000 for equivalent work, FactoryJet delivers the same professional quality at significantly lower cost. Get a quote in 24 hours for your project.',
       },
     },
     {
@@ -344,7 +344,7 @@ const PLATFORM_PRICING = [
 const JOURNEY_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Free Strategy Call',
+    title: 'Strategy Call',
     description:
       'A 30-minute call to understand your goals, audience, and must-have functionality. We scope the project, discuss the design direction, and give you a fixed price before you commit to anything. No obligation.',
   },
@@ -976,7 +976,7 @@ export default function WebsiteCostPage() {
             headline="Fixed-Price Websites From $1,999 — Know Your Number Before We Start"
             lead="No hourly billing. No scope creep. No 'we underestimated' conversations mid-project. Every tier has a fixed scope, a fixed price, and a 7-day delivery timeline we stand behind."
             tiers={PRICING_TIERS}
-            footnote="All prices in USD. Larger projects quoted after a free strategy call. 30-day post-launch support included in every tier. Full code ownership on launch day."
+            footnote="All prices in USD. Larger projects quoted after a discovery call. 30-day post-launch support included in every tier. Full code ownership on launch day."
           />
         </div>
 
@@ -986,7 +986,7 @@ export default function WebsiteCostPage() {
           headline="From Quote to Live Website — Here's Every Step"
           lead="No surprises, no black boxes. Every stage has a deliverable you review and approve. Fixed scope, fixed price, and a live website at the end — not a mood board about one."
           stages={JOURNEY_STAGES}
-          closingNote="5 STAGES · 7-DAY DELIVERY ON 5-PAGE SITES · FREE STRATEGY CALL BEFORE ANY COMMITMENT"
+          closingNote="5 STAGES · 7-DAY DELIVERY ON 5-PAGE SITES · STRATEGY CALL BEFORE ANY COMMITMENT"
         />
 
         {/* ── 11. TESTIMONIALS ─────────────────────────────────────────────── */}
@@ -1012,7 +1012,7 @@ export default function WebsiteCostPage() {
           variant="dark"
           eyebrow="GET A FIXED PRICE"
           headline="Tell Us What You Need — We'll Quote a Fixed Price in 24 Hours"
-          sub="No hourly estimates. No 'it depends.' Book a free 30-minute call and walk away with a fixed price, a delivery timeline, and a clear picture of what you're getting. 500+ websites built. 25 years in business. We've priced this before."
+          sub="No hourly estimates. No 'it depends.' Book a 30-minute call and walk away with a fixed price, a delivery timeline, and a clear picture of what you're getting. 500+ websites built. 25 years in business. We've priced this before."
           primaryCta={{ label: 'Get My Free Quote', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Our Work', href: '/us/portfolio' }}
           objectionHandler="Fixed price confirmed upfront. 7-day delivery on 5-page sites. Full code ownership. 30-day post-launch support. Free call before any commitment."

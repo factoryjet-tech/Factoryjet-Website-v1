@@ -231,7 +231,7 @@ const faqSchema = {
       name: 'Do you have case studies showing workflow automation results?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. An e-commerce brand\'s order fulfillment automation eliminated 30 hours per week of manual data entry. A professional services firm\'s lead follow-up automation reduced average response time from 4 hours to under 90 seconds, increasing qualified pipeline by 35%. An accounting firm\'s invoice processing automation cut document handling time by 75%. We share relevant case studies during a free strategy call.',
+        text: 'Yes. An e-commerce brand\'s order fulfillment automation eliminated 30 hours per week of manual data entry. A professional services firm\'s lead follow-up automation reduced average response time from 4 hours to under 90 seconds, increasing qualified pipeline by 35%. An accounting firm\'s invoice processing automation cut document handling time by 75%. We share relevant case studies during a discovery call.',
       },
     },
     {
@@ -565,7 +565,7 @@ const PRICING_TIERS = [
       'Full workflow logic documentation',
       '14-day post-launch support window',
     ],
-    cta: { label: 'Book a Free Strategy Call', modal: true as const, region: 'us' as const },
+    cta: { label: 'Get a Quote', modal: true as const, region: 'us' as const },
   },
   {
     name: 'Growth',
@@ -743,7 +743,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'What results have other businesses gotten from FactoryJet automation?',
     answer:
-      'An e-commerce brand\'s order fulfillment automation eliminated 30 hours per week of manual data entry. A professional services firm\'s lead follow-up automation cut average response time from 4 hours to 90 seconds, increasing qualified pipeline by 35%. An accounting firm\'s invoice processing automation cut document handling time by 75%. We share relevant case studies during a free strategy call.',
+      'An e-commerce brand\'s order fulfillment automation eliminated 30 hours per week of manual data entry. A professional services firm\'s lead follow-up automation cut average response time from 4 hours to 90 seconds, increasing qualified pipeline by 35%. An accounting firm\'s invoice processing automation cut document handling time by 75%. We share relevant case studies during a discovery call.',
   },
   {
     category: 'trust',
@@ -785,7 +785,7 @@ export default function AIWorkflowAutomationPage() {
           { label: 'Pricing', href: '#pricing' },
           { label: 'Contact', modal: true, region: 'us' },
         ]}
-        cta={{ label: 'Book a Free Call', modal: true, region: 'us' }}
+        cta={{ label: 'Book a Call', modal: true, region: 'us' }}
       />
 
       <main className="bg-fj-cream">
@@ -795,7 +795,7 @@ export default function AIWorkflowAutomationPage() {
           eyebrow="AI WORKFLOW AUTOMATION · USA"
           headline="Automate the Work That's Eating Your Team's Day"
           lead="Manual data entry, repetitive follow-ups, document processing, cross-system updates — your team is doing the same tasks over and over. FactoryJet builds AI workflow automation that handles these processes 24/7, connects your existing tools, and costs fixed-price vs a US automation agency."
-          primaryCta={{ label: 'Book a Free Automation Strategy Call', modal: true, region: 'us' }}
+          primaryCta={{ label: 'Book an Automation Strategy Call', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',
@@ -1116,9 +1116,9 @@ export default function AIWorkflowAutomationPage() {
           <FinalCTA
             variant="dark"
             eyebrow="READY TO AUTOMATE"
-            headline="Book a Free 30-Minute Workflow Automation Strategy Call"
+            headline="Book a 30-Minute Workflow Automation Strategy Call"
             sub="We'll map your highest-value automation opportunity, estimate how many hours per week it would recover, and give you a fixed-price quote — before you commit to anything."
-            primaryCta={{ label: 'Book Your Free Strategy Call', modal: true, region: 'us' }}
+            primaryCta={{ label: 'Get a Quote', modal: true, region: 'us' }}
             secondaryCta={{ label: 'See All AI Services', href: '/us/services' }}
             objectionHandler="Most clients see full ROI within 2–4 months. Free call, fixed price, no hidden fees."
           />

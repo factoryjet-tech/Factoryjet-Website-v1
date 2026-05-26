@@ -507,7 +507,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'How do I get started with FactoryJet WooCommerce development?',
-    answer: `Book a free 30-minute discovery call. We'll discuss your store requirements, your timeline, your budget, and the technical approach that makes sense for your situation. For existing stores, we'll do a quick technical audit before providing a quote. For new builds, we'll scope the project on the call and follow up with a fixed-price proposal within 24–48 hours. No obligation to move forward, and no sales pressure on the call — we focus on figuring out if we're the right fit.`,
+    answer: `Book a 30-minute discovery call. We'll discuss your store requirements, your timeline, your budget, and the technical approach that makes sense for your situation. For existing stores, we'll do a quick technical audit before providing a quote. For new builds, we'll scope the project on the call and follow up with a fixed-price proposal within 24–48 hours. No obligation to move forward, and no sales pressure on the call — we focus on figuring out if we're the right fit.`,
     category: 'factoryjet',
   },
 ];
@@ -871,7 +871,7 @@ export default function WoocommerceDevelopmentPage() {
           variant="dark"
           eyebrow="GET STARTED"
           headline="Ready to build or improve your WooCommerce store?"
-          sub="Book a free 30-minute discovery call. We'll scope your project, answer your technical questions, and give you a fixed-price proposal within 24–48 hours. No obligation."
+          sub="Book a 30-minute discovery call. We'll scope your project, answer your technical questions, and give you a fixed-price proposal within 24–48 hours. No obligation."
           primaryCta={{ label: 'Book Your Free Discovery Call', modal: true, region: 'us' }}
           secondaryCta={{ label: 'View Our E-Commerce Work', href: '/us/portfolio' }}
           objectionHandler="No commitment required. Fixed-price proposal within 24–48 hours."

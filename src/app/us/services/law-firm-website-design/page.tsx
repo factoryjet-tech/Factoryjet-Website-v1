@@ -409,7 +409,7 @@ const PRICING_TIERS = [
       'Mobile-first, Core Web Vitals pass',
       '14-day post-launch support',
     ],
-    cta: { label: 'Book a Free Legal SEO Audit', modal: true, region: 'us' },
+    cta: { label: 'Book a Legal SEO Audit', modal: true, region: 'us' },
   },
   {
     name: 'Full Law Firm Website',
@@ -724,7 +724,7 @@ export default function LawFirmWebsiteDesignPage() {
           eyebrow="LAW FIRM WEBSITE DESIGN · USA"
           headline="Law Firm Websites That Rank Locally and Convert Visitors Into Consultations"
           lead="62% of people searching for an attorney start on Google — and 70% contact the first firm whose site earns their trust. FactoryJet designs law firm websites for US attorneys with individual practice area pages, attorney profiles that build credibility, and consultation intake flows that convert. Starting at $2,499. fixed-price, milestone-paid."
-          primaryCta={{ label: 'Book a Free Legal SEO Audit', modal: true, region: 'us' }}
+          primaryCta={{ label: 'Book a Legal SEO Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ professional service sites delivered',
@@ -974,7 +974,7 @@ export default function LawFirmWebsiteDesignPage() {
         <FinalCTA
           variant="dark"
           eyebrow="START WITH A FREE LEGAL SEO AUDIT"
-          headline="Book a Free Legal SEO Audit and Walk Away With a Clear Picture of Where You Stand"
+          headline="Book a Legal SEO Audit and Walk Away With a Clear Picture of Where You Stand"
           sub="In 30 minutes, we'll audit your current site's local search performance, analyze the top-ranking competing firms in your market, identify the practice area pages and schema gaps that are costing you organic traffic, and tell you exactly what it costs to fix. No agency pitch. No retainer required to get started. Just a straight assessment from a team that's built law firm websites for US attorneys for 25 years."
           primaryCta={{ label: 'Book Your Free Legal SEO Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See All Website Redesign Services', href: '/us/services/website-redesign' }}

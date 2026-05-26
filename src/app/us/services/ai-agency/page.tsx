@@ -467,7 +467,7 @@ const INDUSTRIES_SERVED = [
 const JOURNEY_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Free Strategy Call',
+    title: 'Strategy Call',
     description:
       'A 30-minute call where we map your highest-value automation opportunity, estimate the ROI, and tell you what it would cost to build. No pitch. No obligation. Most clients leave the call with a clear picture of where to start even if they don\'t hire us.',
   },
@@ -635,7 +635,7 @@ const PRICING_TIERS = [
       'QA and prompt tuning included',
       '14-day post-launch support window',
     ],
-    cta: { label: 'Book a Free Strategy Call', modal: true, region: 'us' },
+    cta: { label: 'Talk to the Founder', modal: true, region: 'us' },
   },
   {
     name: 'Growth',
@@ -883,7 +883,7 @@ export default function AIAgencyPage() {
           { label: 'Pricing', href: '#pricing' },
           { label: 'FAQ', href: '#faq' },
         ]}
-        cta={{ label: 'Free AI Strategy Call', modal: true, region: 'us' }}
+        cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }}
       />
 
       <main className="bg-fj-cream">
@@ -893,7 +893,7 @@ export default function AIAgencyPage() {
           eyebrow="AI AGENCY · UNITED STATES"
           headline={<>The AI Agency That<br className="hidden lg:block" /> Actually Delivers —<br className="hidden lg:block" /> Not Just Decks</>}
           lead="FactoryJet is a US AI agency building custom AI agents, automation workflows, and chatbots for small businesses since 2019. 500+ production systems delivered. fixed-price, milestone-paid. Fixed price. Talk to the founder."
-          primaryCta={{ label: 'Book a Free AI Strategy Call', modal: true, region: 'us' }}
+          primaryCta={{ label: 'Talk to the Founder', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={['500+ businesses served', 'Starting at $5,000', 'fixed-price', '25 years building']}
           rightSlot={
@@ -1109,10 +1109,10 @@ export default function AIAgencyPage() {
         {/* ── 7. HOW WE WORK ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="HOW WE WORK"
-          headline="From Free Strategy Call to Production AI — Here's Every Step"
+          headline="From Strategy Call to Production AI — Here's Every Step"
           lead={`No black boxes, no "we'll show you when it's done." Every stage has a deliverable you review before we move forward. Fixed scope, fixed price, and a working AI system at the end — not a slide deck about one.`}
           stages={JOURNEY_STAGES}
-          closingNote="5 STAGES · 2–12 WEEKS TO FIRST PRODUCTION AI · FREE STRATEGY CALL BEFORE ANY COMMITMENT"
+          closingNote="5 STAGES · 2–12 WEEKS TO FIRST PRODUCTION AI · STRATEGY CALL BEFORE ANY COMMITMENT"
         />
 
         {/* ── 8. ROI STATS ─────────────────────────────────────────────────── */}
@@ -1234,7 +1234,7 @@ export default function AIAgencyPage() {
             headline="Fixed-Price AI Development — Know Your Number Before We Start"
             lead="US AI agencies typically quote $40,000–$150,000 for projects we deliver for $5,000–$25,000. Every FactoryJet tier has a fixed scope, a fixed price, and a delivery timeline we stand behind. No hourly billing. No scope creep."
             tiers={PRICING_TIERS}
-            footnote="All prices in USD. Custom enterprise scopes quoted after a free strategy call. Monthly retainer options available. Full codebase and API key ownership included in every tier."
+            footnote="All prices in USD. Custom enterprise scopes quoted after a discovery call. Monthly retainer options available. Full codebase and API key ownership included in every tier."
           />
         </div>
 
@@ -1295,9 +1295,9 @@ export default function AIAgencyPage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO BUILD"
-          headline="Book a Free AI Strategy Call — Find Your Highest-Value Automation in 30 Minutes"
+          headline="Talk to the Founder — Find Your Highest-Value Automation in 30 Minutes"
           sub="Tell us what your team does repeatedly that shouldn't require a human. We'll map the workflow, estimate the ROI, and tell you exactly what it would cost to automate it. No pitch. No sales pressure. No obligation. Just a straight answer from an engineer who has built it before."
-          primaryCta={{ label: 'Book Your Free AI Strategy Call', modal: true, region: 'us' }}
+          primaryCta={{ label: 'Talk to the Founder', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Our Work', href: '/us/portfolio' }}
           objectionHandler="Fixed price confirmed upfront. Full code ownership. 30-day post-launch support. Free call before any commitment."
         />

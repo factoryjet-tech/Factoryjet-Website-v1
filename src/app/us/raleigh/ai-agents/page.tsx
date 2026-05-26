@@ -465,7 +465,7 @@ const PRICING_TIERS = [
       'Live handoff to your email or Slack',
       '14-day post-launch support window',
     ],
-    cta: { label: 'Book a Free Strategy Call', modal: true as const, region: 'us' as const },
+    cta: { label: 'Get a Quote', modal: true as const, region: 'us' as const },
   },
   {
     name: 'Growth',
@@ -712,7 +712,7 @@ export default function RaleighAIAgentsPage() {
           { label: 'Pricing', href: '#pricing' },
           { label: 'Contact', modal: true, region: 'us' },
         ]}
-        cta={{ label: 'Book a Free Call', modal: true, region: 'us' }}
+        cta={{ label: 'Book a Call', modal: true, region: 'us' }}
       />
 
       <main className="bg-fj-cream">
@@ -722,7 +722,7 @@ export default function RaleighAIAgentsPage() {
           eyebrow="AI AGENTS · RALEIGH, NC"
           headline="Research Triangle Businesses Are Automating the Work That Doesn't Require a PhD"
           lead="Raleigh's economy runs on specialized talent. FactoryJet builds custom AI agents for Raleigh businesses — customer support, lead qualification, appointment booking, and knowledge management — that handle the routine inbound so your team focuses on the high-value work that drove you to the Triangle."
-          primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'us' }}
+          primaryCta={{ label: 'Get a Quote', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',
@@ -1001,7 +1001,7 @@ export default function RaleighAIAgentsPage() {
             headline="Transparent, Fixed-Price AI Agent Development for Raleigh Businesses"
             lead="No hourly billing. No scope creep surprises. Every tier includes a fixed scope, a fixed price, and a delivery timeline we stand behind."
             tiers={PRICING_TIERS}
-            footnote="All prices in USD. Custom enterprise scopes with compliance architecture quoted after a free strategy call. Monthly retainer options available. You own all code and conversation data."
+            footnote="All prices in USD. Custom enterprise scopes with compliance architecture quoted after a discovery call. Monthly retainer options available. You own all code and conversation data."
           />
         </div>
 
@@ -1043,9 +1043,9 @@ export default function RaleighAIAgentsPage() {
           <FinalCTA
             variant="dark"
             eyebrow="READY TO START"
-            headline="Book a Free 30-Minute AI Agent Strategy Call"
+            headline="Book a 30-Minute AI Agent Strategy Call"
             sub="We'll review your current inbound volume and workflows, identify where an AI agent would make the biggest difference for your Raleigh business, and give you a fixed-price estimate — before you commit to anything."
-            primaryCta={{ label: 'Book Your Free Strategy Call', modal: true, region: 'us' }}
+            primaryCta={{ label: 'Get a Quote', modal: true, region: 'us' }}
             secondaryCta={{ label: 'See All AI Services', href: '/us/services' }}
             objectionHandler="Most Raleigh clients see full ROI within 90 days. Free call, fixed price, no hidden fees."
           />

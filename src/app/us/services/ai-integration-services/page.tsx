@@ -239,7 +239,7 @@ const faqSchema = {
       name: 'Do you have examples of AI integrations you\'ve built for businesses like mine?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. A Shopify brand\'s product description generator cut copywriting time by 80% while improving conversion rates 18%. A B2B SaaS company\'s HubSpot AI integration reduced sales rep email writing time from 45 minutes to 8 minutes per day. A legal firm\'s contract review integration flagged key clauses in uploaded PDFs, saving 2–3 hours per contract review. We share relevant case studies during a free strategy call.',
+        text: 'Yes. A Shopify brand\'s product description generator cut copywriting time by 80% while improving conversion rates 18%. A B2B SaaS company\'s HubSpot AI integration reduced sales rep email writing time from 45 minutes to 8 minutes per day. A legal firm\'s contract review integration flagged key clauses in uploaded PDFs, saving 2–3 hours per contract review. We share relevant case studies during a discovery call.',
       },
     },
     {
@@ -567,7 +567,7 @@ const PRICING_TIERS = [
       'Full integration documentation and code ownership',
       '14-day post-launch support window',
     ],
-    cta: { label: 'Book a Free Strategy Call', modal: true as const, region: 'us' as const },
+    cta: { label: 'Get a Quote', modal: true as const, region: 'us' as const },
   },
   {
     name: 'Growth',
@@ -745,7 +745,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'What results have other businesses gotten from FactoryJet AI integrations?',
     answer:
-      'A Shopify brand\'s product description integration cut copywriting time by 80% and improved conversion 18%. A B2B SaaS company\'s HubSpot integration reduced sales email writing time from 45 to 8 minutes per day. A legal firm\'s contract review integration saved 2–3 hours per contract review. We share relevant case studies during a free strategy call.',
+      'A Shopify brand\'s product description integration cut copywriting time by 80% and improved conversion 18%. A B2B SaaS company\'s HubSpot integration reduced sales email writing time from 45 to 8 minutes per day. A legal firm\'s contract review integration saved 2–3 hours per contract review. We share relevant case studies during a discovery call.',
   },
   {
     category: 'trust',
@@ -793,7 +793,7 @@ export default function AIIntegrationServicesPage() {
           { label: 'Pricing', href: '#pricing' },
           { label: 'Contact', modal: true, region: 'us' },
         ]}
-        cta={{ label: 'Book a Free Call', modal: true, region: 'us' }}
+        cta={{ label: 'Book a Call', modal: true, region: 'us' }}
       />
 
       <main className="bg-fj-cream">
@@ -803,7 +803,7 @@ export default function AIIntegrationServicesPage() {
           eyebrow="AI INTEGRATION SERVICES · USA"
           headline="Add AI to the Tools You Already Use — Without Replacing Them"
           lead="Your CRM, e-commerce platform, support desk, and internal apps can all be smarter — right now, without a wholesale software replacement. FactoryJet integrates GPT-4o and Claude into your existing stack so your team gets AI capabilities inside the tools they already know."
-          primaryCta={{ label: 'Book a Free AI Integration Call', modal: true, region: 'us' }}
+          primaryCta={{ label: 'Book an AI Integration Call', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',
@@ -1124,9 +1124,9 @@ export default function AIIntegrationServicesPage() {
           <FinalCTA
             variant="dark"
             eyebrow="READY TO ADD AI TO YOUR STACK"
-            headline="Book a Free 30-Minute AI Integration Strategy Call"
+            headline="Book a 30-Minute AI Integration Strategy Call"
             sub="We'll audit your current software stack, identify the highest-value integration opportunity, and give you a fixed-price estimate — before you commit to anything."
-            primaryCta={{ label: 'Book Your Free Strategy Call', modal: true, region: 'us' }}
+            primaryCta={{ label: 'Get a Quote', modal: true, region: 'us' }}
             secondaryCta={{ label: 'See All AI Services', href: '/us/services' }}
             objectionHandler="Most integrations pay for themselves within 60–90 days. Free call, fixed price, no hidden fees."
           />

@@ -186,7 +186,7 @@ const breadcrumbSchema = {
 const JOURNEY_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Free Strategy Call',
+    title: 'Strategy Call',
     description:
       'A 30-minute call to understand your business, your audience, and what you need the site to do. We scope the project, agree on the page structure, and give you a fixed price before you commit to anything. No obligation.',
   },
@@ -491,7 +491,7 @@ const FAQ_ITEMS = [
 
   // -- Working with FactoryJet --------------------------------------------─
   {
-    question: 'What happens during the free strategy call?',
+    question: 'What happens during the strategy call?',
     answer: `The strategy call is a 30-minute video or phone call with a FactoryJet project lead. We cover: what your business does and who you serve, what you want the website to accomplish, what pages and features you need, your timeline and any constraints, and your design preferences. At the end of the call, we give you a fixed-price proposal. There's no obligation to move forward — the call is genuinely about figuring out if we're a good fit for your project.`,
     category: 'factoryjet',
   },
@@ -882,8 +882,8 @@ export default function SmallBusinessWebDesignPage() {
           variant="dark"
           eyebrow="GET STARTED"
           headline="Ready to get a website that actually works?"
-          sub="Book a free 30-minute strategy call. We'll scope your project, answer every question, and give you a fixed-price proposal — no obligation, no sales pressure."
-          primaryCta={{ label: 'Book Your Free Strategy Call', modal: true, region: 'us' }}
+          sub="Book a 30-minute strategy call. We'll scope your project, answer every question, and give you a fixed-price proposal — no obligation, no sales pressure."
+          primaryCta={{ label: 'Get a Quote', modal: true, region: 'us' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/us/portfolio' }}
           objectionHandler="No commitment required. Most clients get a proposal within 24 hours."
         />

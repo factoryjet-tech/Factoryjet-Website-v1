@@ -607,7 +607,7 @@ const PRICING_TIERS = [
       'QA and prompt tuning included',
       '14-day post-launch support window',
     ],
-    cta: { label: 'Book a Free Strategy Call', modal: true, region: 'us' },
+    cta: { label: 'Talk to the Founder', modal: true, region: 'us' },
   },
   {
     name: 'Growth',
@@ -841,7 +841,7 @@ export default function AIAgentsPage() {
           { label: 'Pricing', href: '#pricing' },
           { label: 'Contact', modal: true, region: 'us' },
         ]}
-        cta={{ label: 'Book a Free Call', modal: true, region: 'us' }}
+        cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }}
       />
 
       <main className="bg-fj-cream">
@@ -851,7 +851,7 @@ export default function AIAgentsPage() {
           eyebrow="AI AGENT DEVELOPMENT · USA"
           headline="AI Agents That Run Your Business While You Sleep"
           lead="Your competitors are automating the work that costs you 20 hours a week. FactoryJet builds custom AI agents — for customer support, sales, operations, and more — that work around the clock, integrate with your existing tools, and cost fixed-price vs a US AI agency."
-          primaryCta={{ label: 'Book a Free AI Strategy Call', modal: true, region: 'us' }}
+          primaryCta={{ label: 'Talk to the Founder', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',
@@ -1298,7 +1298,7 @@ export default function AIAgentsPage() {
             headline="Transparent, Fixed-Price AI Development"
             lead="No hourly billing. No scope creep surprises. Every tier includes a fixed scope, a fixed price, and a delivery timeline we stand behind."
             tiers={PRICING_TIERS}
-            footnote="All prices in USD. Custom enterprise scopes quoted after a free strategy call. Monthly retainer options available. You own all code and API keys."
+            footnote="All prices in USD. Custom enterprise scopes quoted after a discovery call. Monthly retainer options available. You own all code and API keys."
           />
         </div>
 
@@ -1359,9 +1359,9 @@ export default function AIAgentsPage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO START"
-          headline="Book a Free AI Strategy Call, No Obligation"
+          headline="Talk to the Founder — No Obligation"
           sub="In 30 minutes, we'll map your top automation opportunity, estimate the ROI, and tell you exactly what it would cost to build. No pitch. No pressure. Just a straight answer from an engineer who's built it before."
-          primaryCta={{ label: 'Book Your Free Call', modal: true, region: 'us' }}
+          primaryCta={{ label: 'Talk to the Founder', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
           objectionHandler="Most clients see ROI within 12 weeks. Free call, fixed price, no hidden fees."
         />

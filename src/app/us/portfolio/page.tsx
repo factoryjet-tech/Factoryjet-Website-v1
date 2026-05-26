@@ -142,7 +142,7 @@ export default function USPortfolioPage() {
           { label: 'Portfolio', href: '/us/portfolio' },
           { label: 'FAQ', href: '/us/faq' },
         ]}
-        cta={{ label: 'Free Strategy Call', href: '/contact' }}
+        cta={{ label: 'Get a Quote', href: '/contact' }}
       />
 
       <main className="bg-fj-cream min-h-screen">

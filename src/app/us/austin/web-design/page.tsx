@@ -175,7 +175,7 @@ export default function AustinWebDesignPage() {
         variant="dark"
         eyebrow={"READY TO START"}
         headline={"Ready to Build Your Austin Website?"}
-        sub={"Austin's $268 billion economy moves fast. Every week without a high-performing website is a week your competitors are capturing the searches you should own. Start your project today — pick a tier, book a free 30-minute call, and we'll have a sitemap ready within 72 hours."}
+        sub={"Austin's $268 billion economy moves fast. Every week without a high-performing website is a week your competitors are capturing the searches you should own. Start your project today — pick a tier, book a 30-minute call, and we'll have a sitemap ready within 72 hours."}
         primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
       />
       <SchemaScript />

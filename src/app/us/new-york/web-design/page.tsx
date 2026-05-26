@@ -221,7 +221,7 @@ const jsonLd = {
           name: 'How do I get started with a New York City web design project?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Book a free 30-minute strategy call. We\'ll review your current site, understand your goals, and send a fixed-price proposal within 24 hours. No sales pitch — just a practical conversation about what you need and what it\'ll cost.',
+            text: 'Book a 30-minute strategy call. We\'ll review your current site, understand your goals, and send a fixed-price proposal within 24 hours. No sales pitch — just a practical conversation about what you need and what it\'ll cost.',
           },
         },
         {
@@ -627,7 +627,7 @@ export default function NewYorkWebDesignPage() {
             {
               category: 'local',
               question: 'How do I get started with a New York City web design project?',
-              answer: 'Book a free 30-minute strategy call. We\'ll review your current site, understand your goals, and send a fixed-price proposal within 24 hours. No sales pitch — just a practical conversation about what you need and what it\'ll cost.',
+              answer: 'Book a 30-minute strategy call. We\'ll review your current site, understand your goals, and send a fixed-price proposal within 24 hours. No sales pitch — just a practical conversation about what you need and what it\'ll cost.',
             },
             {
               category: 'local',
@@ -682,7 +682,7 @@ export default function NewYorkWebDesignPage() {
           eyebrow="READY TO START"
           headline="Get a Fixed Price for Your NYC Website in 24 Hours"
           sub="Tell us what you need. We'll review your current site, recommend the right approach, and send a fixed-price proposal within 24 hours. No hourly billing. No discovery fees. No surprises."
-          primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'us' }}
+          primaryCta={{ label: 'Get a Quote', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Our Portfolio', href: '/us/portfolio' }}
           objectionHandler="Fixed price confirmed upfront. Full code ownership. 7-day delivery guarantee."
         />

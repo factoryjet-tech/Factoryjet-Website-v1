@@ -443,8 +443,8 @@ export default function FaqContent() {
         variant="dark"
         eyebrow="STILL HAVE QUESTIONS?"
         headline="Can't find what you're looking for?"
-        sub="Our team answers every inquiry within 4 business hours. Free strategy calls available — no commitment required."
-        primaryCta={{ label: 'Book a Free Strategy Call', href: '/contact' }}
+        sub="Our team answers every inquiry within 4 business hours. Talk to the founder — no commitment required."
+        primaryCta={{ label: 'Talk to the Founder', href: '/contact' }}
         secondaryCta={{ label: 'Email Us', href: 'mailto:connect@factoryjet.com' }}
         objectionHandler="No commitment. No sales pitch. Just answers."
       />

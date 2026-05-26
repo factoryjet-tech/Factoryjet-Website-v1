@@ -391,7 +391,7 @@ const PRICING_TIERS = [
       'Google Analytics + Search Console setup',
       '14-day post-launch support',
     ],
-    cta: { label: 'Book a Free Redesign Audit', modal: true, region: 'us' },
+    cta: { label: 'Book a Redesign Audit', modal: true, region: 'us' },
   },
   {
     name: 'Business Redesign',
@@ -701,7 +701,7 @@ export default function WebsiteRedesignPage() {
           eyebrow="WEBSITE REDESIGN SERVICES · USA"
           headline="Website Redesign Services That Actually Generate Leads"
           lead="Your current website is costing you customers every day — slow load times, poor mobile experience, and a homepage that doesn't convert visitors into leads. FactoryJet redesigns your site with modern design, mobile-first builds, and conversion-focused structure. Up to 5 pages in 7 days. Starting at $1,499. Fixed-price and milestone-paid."
-          primaryCta={{ label: 'Book a Free Redesign Audit', modal: true, region: 'us' }}
+          primaryCta={{ label: 'Book a Redesign Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ redesigns delivered',
@@ -953,7 +953,7 @@ export default function WebsiteRedesignPage() {
         <FinalCTA
           variant="dark"
           eyebrow="START WITH A FREE AUDIT"
-          headline="Book a Free Website Redesign Audit and Walk Away With a Plan"
+          headline="Book a Website Redesign Audit and Walk Away With a Plan"
           sub="In 30 minutes, we'll audit your current site's speed, mobile experience, and conversion gaps — then tell you exactly what a redesign would include, how long it takes, and what it costs. No pitch. No pressure. Just a straight assessment from a team that's redesigned 500+ small business websites — and knows what actually moves the needle."
           primaryCta={{ label: 'Book Your Free Redesign Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See WordPress Development', href: '/us/services/wordpress-development' }}

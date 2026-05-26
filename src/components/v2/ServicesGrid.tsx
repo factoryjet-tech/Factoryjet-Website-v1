@@ -69,7 +69,7 @@ const SERVICES: Service[] = [
     stackLabel: 'Built on',
     stack: ['WordPress', 'Next.js', 'Webflow', 'Framer', 'Custom Stack'],
     primaryCta: { label: 'See web design services', href: '/us/services/web-design' },
-    secondaryCta: { label: 'Book a free call', href: '/contact' },
+    secondaryCta: { label: 'Book a call', href: '/contact' },
     icon: <Globe size={ICON_SIZE} />,
     imageSrc: '/images/services/web-design.webp',
   },
@@ -91,7 +91,7 @@ const SERVICES: Service[] = [
     stackLabel: 'We migrate from',
     stack: ['WordPress', 'Wix', 'Squarespace', 'Webflow', 'Legacy HTML'],
     primaryCta: { label: 'See redesign services', href: '/us/services/website-redesign' },
-    secondaryCta: { label: 'Book a free call', href: '/contact' },
+    secondaryCta: { label: 'Book a call', href: '/contact' },
     icon: <RefreshCw size={ICON_SIZE} />,
     imageSrc: '/images/services/website-redesign.webp',
   },
@@ -113,7 +113,7 @@ const SERVICES: Service[] = [
     stackLabel: 'Platform',
     stack: ['Shopify', 'Shopify Plus'],
     primaryCta: { label: 'See Shopify services', href: '/us/services/shopify-development' },
-    secondaryCta: { label: 'Book a free call', href: '/contact' },
+    secondaryCta: { label: 'Book a call', href: '/contact' },
     icon: <ShoppingCart size={ICON_SIZE} />,
     imageSrc: '/images/services/shopify.webp',
   },
@@ -135,7 +135,7 @@ const SERVICES: Service[] = [
     stackLabel: 'Platforms',
     stack: ['WooCommerce', 'Magento', 'Commerceflow', 'Headless / Custom'],
     primaryCta: { label: 'See e-commerce services', href: '/us/services/ecommerce-development' },
-    secondaryCta: { label: 'Book a free call', href: '/contact' },
+    secondaryCta: { label: 'Book a call', href: '/contact' },
     icon: <CreditCard size={ICON_SIZE} />,
     imageSrc: '/images/services/custom-ecommerce.webp',
   },
@@ -157,7 +157,7 @@ const SERVICES: Service[] = [
     stackLabel: 'Built with',
     stack: ['Google Gemini', 'Anthropic Claude', 'OpenAI ChatGPT', 'KIMI', 'n8n'],
     primaryCta: { label: 'See AI agent services', href: '/us/services/ai-agents' },
-    secondaryCta: { label: 'Book a free call', href: '/contact' },
+    secondaryCta: { label: 'Book a call', href: '/contact' },
     icon: <Bot size={ICON_SIZE} />,
     imageSrc: '/images/services/ai-agents.webp',
   },
@@ -179,7 +179,7 @@ const SERVICES: Service[] = [
     stackLabel: 'Ranking you on',
     stack: ['Google AI Overviews', 'ChatGPT', 'Perplexity', 'Gemini', 'Claude.ai'],
     primaryCta: { label: 'Learn about AI SEO', href: '/contact' },
-    secondaryCta: { label: 'Book a free call', href: '/contact' },
+    secondaryCta: { label: 'Book a call', href: '/contact' },
     icon: <BarChart2 size={ICON_SIZE} />,
     imageSrc: '/images/services/ai-seo.webp',
   },
@@ -201,7 +201,7 @@ const SERVICES: Service[] = [
     stackLabel: 'Powered by',
     stack: ['Higgsfield', 'Seedance', 'FLUX', 'Kling', 'LTX', 'HeyGen'],
     primaryCta: { label: 'Explore AI Creative Studio', href: '/contact' },
-    secondaryCta: { label: 'Book a free call', href: '/contact' },
+    secondaryCta: { label: 'Book a call', href: '/contact' },
     icon: <Sparkles size={ICON_SIZE} />,
     imageSrc: '/images/services/ai-creative.webp',
   },
@@ -430,7 +430,7 @@ export default function ServicesGrid() {
                     className="inline-flex items-center gap-1.5 text-sm font-semibold hover:opacity-80 transition-opacity"
                     style={{ color: ORANGE }}
                   >
-                    Book a free strategy call <ArrowRight size={13} />
+                    Get a quote <ArrowRight size={13} />
                   </Link>
                 </div>
               </div>

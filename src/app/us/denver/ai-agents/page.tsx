@@ -465,7 +465,7 @@ const PRICING_TIERS = [
       'Live handoff to your email or Slack',
       '14-day post-launch support window',
     ],
-    cta: { label: 'Book a Free Strategy Call', modal: true as const, region: 'us' as const },
+    cta: { label: 'Get a Quote', modal: true as const, region: 'us' as const },
   },
   {
     name: 'Growth',
@@ -712,7 +712,7 @@ export default function DenverAIAgentsPage() {
           { label: 'Pricing', href: '#pricing' },
           { label: 'Contact', modal: true, region: 'us' },
         ]}
-        cta={{ label: 'Book a Free Call', modal: true, region: 'us' }}
+        cta={{ label: 'Book a Call', modal: true, region: 'us' }}
       />
 
       <main className="bg-fj-cream">
@@ -722,7 +722,7 @@ export default function DenverAIAgentsPage() {
           eyebrow="AI AGENTS · DENVER, CO"
           headline="Denver Businesses Are Capturing More Leads While the Mountains Are Still Dark"
           lead="Denver's market is competitive, seasonal, and increasingly digital-first. FactoryJet builds custom AI agents for Denver businesses — customer support, lead generation, appointment booking, and e-commerce automation — that respond in seconds, connect to your existing tools, and cost fixed-price vs a local Denver agency."
-          primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'us' }}
+          primaryCta={{ label: 'Get a Quote', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',
@@ -1001,7 +1001,7 @@ export default function DenverAIAgentsPage() {
             headline="Transparent, Fixed-Price AI Agent Development for Denver Businesses"
             lead="No hourly billing. No scope creep surprises. Every tier includes a fixed scope, a fixed price, and a delivery timeline we stand behind."
             tiers={PRICING_TIERS}
-            footnote="All prices in USD. Custom enterprise scopes quoted after a free strategy call. Monthly retainer options available. You own all code and conversation data."
+            footnote="All prices in USD. Custom enterprise scopes quoted after a discovery call. Monthly retainer options available. You own all code and conversation data."
           />
         </div>
 
@@ -1043,9 +1043,9 @@ export default function DenverAIAgentsPage() {
           <FinalCTA
             variant="dark"
             eyebrow="READY TO START"
-            headline="Book a Free 30-Minute AI Agent Strategy Call"
+            headline="Book a 30-Minute AI Agent Strategy Call"
             sub="We'll review your current support or lead flow, identify where an AI agent would make the biggest difference for your Denver business, and give you a fixed-price estimate — before you commit to anything."
-            primaryCta={{ label: 'Book Your Free Strategy Call', modal: true, region: 'us' }}
+            primaryCta={{ label: 'Get a Quote', modal: true, region: 'us' }}
             secondaryCta={{ label: 'See All AI Services', href: '/us/services' }}
             objectionHandler="Most Denver clients see full ROI within 90 days. Free call, fixed price, no hidden fees."
           />

@@ -537,7 +537,7 @@ export default function Page() {
           variant="dark"
           eyebrow="READY TO START"
           headline="Ready to Build Your Raleigh Shopify Store?"
-          sub="Research Triangle's tech brands, life sciences companies, and food-forward entrepreneurs are generating revenue that a great Shopify store should be capturing. Every week without one is a week your competitors own the searches you should. Book a free 30-minute audit and we'll have a store blueprint ready within 72 hours."
+          sub="Research Triangle's tech brands, life sciences companies, and food-forward entrepreneurs are generating revenue that a great Shopify store should be capturing. Every week without one is a week your competitors own the searches you should. Book a 30-minute audit and we'll have a store blueprint ready within 72 hours."
           primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
         />
       </main>

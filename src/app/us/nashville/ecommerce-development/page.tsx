@@ -536,7 +536,7 @@ export default function Page() {
           variant="dark"
           eyebrow="READY TO START"
           headline="Ready to Build Your Nashville Shopify Store?"
-          sub="Music City's tourism economy, healthcare sector, and artist brands are all generating revenue that a great Shopify store should be capturing. Every week without one is a week your competitors own the searches you should. Book a free 30-minute audit and we'll have a store blueprint ready within 72 hours."
+          sub="Music City's tourism economy, healthcare sector, and artist brands are all generating revenue that a great Shopify store should be capturing. Every week without one is a week your competitors own the searches you should. Book a 30-minute audit and we'll have a store blueprint ready within 72 hours."
           primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
         />
       </main>

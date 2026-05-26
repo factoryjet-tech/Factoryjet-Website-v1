@@ -452,7 +452,7 @@ const PRICING_TIERS = [
       'Google Analytics 4 + Search Console setup',
       'Lighthouse 95+ on delivery',
     ],
-    cta: { label: 'Book a Free Consultation', modal: true, region: 'us' },
+    cta: { label: 'Book a Consultation', modal: true, region: 'us' },
   },
   {
     name: 'Advanced E-Commerce',
@@ -722,7 +722,7 @@ export default function EcommerceDevelopmentPage() {
           { label: 'Pricing', href: '#pricing' },
           { label: 'Contact', modal: true, region: 'us' },
         ]}
-        cta={{ label: 'Book a Free Consultation', modal: true, region: 'us' }}
+        cta={{ label: 'Book a Consultation', modal: true, region: 'us' }}
       />
 
       <main className="bg-fj-cream">
@@ -732,7 +732,7 @@ export default function EcommerceDevelopmentPage() {
           eyebrow="E-COMMERCE DEVELOPMENT · USA"
           headline="An Online Store That Sells on Any Platform, at Any Scale"
           lead="Most US e-commerce stores are built on generic themes and convert below 1%. FactoryJet builds custom Shopify, WooCommerce, BigCommerce, and headless stores — designed in Figma, engineered for conversion — fixed-price, milestone-paid, and predictable from quote to launch."
-          primaryCta={{ label: 'Book a Free Consultation', modal: true, region: 'us' }}
+          primaryCta={{ label: 'Book a Consultation', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',
@@ -1253,7 +1253,7 @@ export default function EcommerceDevelopmentPage() {
           <FinalCTA
             variant="dark"
             eyebrow="READY TO START"
-            headline="Book a Free E-Commerce Consultation, No Obligation"
+            headline="Book an E-Commerce Consultation, No Obligation"
             sub="In 30 minutes, we'll audit your current store or platform, identify what's costing you revenue, recommend the right tech stack, and give you a fixed price. No pitch. No pressure. An honest assessment from engineers who've built 500+ stores."
             primaryCta={{ label: 'Book Your Free Consultation', modal: true, region: 'us' }}
             secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}

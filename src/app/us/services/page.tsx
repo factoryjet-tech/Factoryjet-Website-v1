@@ -349,7 +349,7 @@ const FAQS = [
   },
   {
     q: 'How do I get started?',
-    a: 'Book a free 30-minute strategy call. We\'ll look at your current site (if you have one), understand your goals, and send a fixed-price proposal within 24 hours. No sales pitch, just a practical conversation about what you need.',
+    a: 'Book a 30-minute strategy call. We\'ll look at your current site (if you have one), understand your goals, and send a fixed-price proposal within 24 hours. No sales pitch, just a practical conversation about what you need.',
   },
   {
     q: 'What happens if I need changes after the site is live?',
@@ -466,7 +466,7 @@ export default function USServicesHubPage() {
 
             <div className="mt-8 flex flex-wrap gap-3">
               <ModalCTAButton
-                label="Book a Free Strategy Call"
+                label="Get a Quote"
                 region="us"
                 btnVariant="primary-dark"
               />
@@ -622,7 +622,7 @@ export default function USServicesHubPage() {
                   Not sure which service you need?
                 </p>
                 <p className="mt-1 font-fj-body text-fj-neutral-600" style={{ fontSize: '0.875rem' }}>
-                  Book a free 30-minute discovery call. We&apos;ll recommend the right approach for your business and budget.
+                  Book a 30-minute discovery call. We&apos;ll recommend the right approach for your business and budget.
                 </p>
               </div>
               <ModalCTAButton
@@ -748,7 +748,7 @@ export default function USServicesHubPage() {
           eyebrow="READY TO START"
           headline="Get a Fixed Price in 24 Hours"
           sub="Tell us what you need. We\'ll review your current site, recommend the right service, and send a fixed-price proposal within 24 hours. No hourly billing. No surprises."
-          primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'us' }}
+          primaryCta={{ label: 'Get a Quote', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Our Portfolio', href: '/us/portfolio' }}
           objectionHandler="Fixed price confirmed upfront. Full code ownership. 7-day delivery guarantee."
         />

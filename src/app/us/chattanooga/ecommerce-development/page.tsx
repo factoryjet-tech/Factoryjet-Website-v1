@@ -543,7 +543,7 @@ export default function Page() {
           variant="dark"
           eyebrow="READY TO START"
           headline="Ready to Build Your Chattanooga Shopify Store?"
-          sub="Gig City's e-commerce market is growing faster than most businesses can capture. Every week without a high-performing Shopify store is a week your competitors are owning the searches — and the sales — you should have. Pick a tier, book a free 30-minute audit, and we'll have your store blueprint ready within 72 hours."
+          sub="Gig City's e-commerce market is growing faster than most businesses can capture. Every week without a high-performing Shopify store is a week your competitors are owning the searches — and the sales — you should have. Pick a tier, book a 30-minute audit, and we'll have your store blueprint ready within 72 hours."
           primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
         />
 

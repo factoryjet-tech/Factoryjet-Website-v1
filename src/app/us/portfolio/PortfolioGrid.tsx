@@ -233,7 +233,7 @@ export default function PortfolioGrid() {
                   href="/contact"
                   className="w-full sm:w-auto bg-fj-jet-orange hover:bg-orange-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-bold font-fj-body transition-all shadow-lg hover:shadow-orange-500/30 text-center text-sm md:text-base"
                 >
-                  Get Your Free Strategy Call
+                  Get a Quote
                 </Link>
                 <Link
                   href="/us/pricing"

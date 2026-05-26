@@ -284,7 +284,7 @@ const WEB_DESIGN_TYPES = [
     description:
       'We audit your existing site, identify what\'s hurting performance and conversions, preserve your URL structure and SEO equity, and rebuild on a modern tech stack — with zero downtime on launch day.',
     example: 'Clients average 40% improvement in Google PageSpeed score post-redesign.',
-    linkLabel: 'Book a free audit',
+    linkLabel: 'Book an audit',
     linkHref: '/contact',
   },
 ];
@@ -507,7 +507,7 @@ const PRICING_TIERS = [
       '2 rounds of design revisions',
       '7-business-day delivery from design sign-off',
     ],
-    cta: { label: 'Book a Free Audit Call', modal: true, region: 'us' },
+    cta: { label: 'Book an Audit Call', modal: true, region: 'us' },
   },
   {
     name: 'Growth',
@@ -737,7 +737,7 @@ export default function WebDesignPage() {
           { label: 'Pricing', href: '#pricing' },
           { label: 'Contact', modal: true, region: 'us' },
         ]}
-        cta={{ label: 'Book a Free Audit', modal: true, region: 'us' }}
+        cta={{ label: 'Book an Audit', modal: true, region: 'us' }}
       />
 
       <main className="bg-fj-cream">
@@ -747,7 +747,7 @@ export default function WebDesignPage() {
           eyebrow="WEB DESIGN · USA"
           headline="A Website That Converts, Launched in 7 Days"
           lead="Most US small businesses are losing customers to slow, outdated websites. FactoryJet builds custom, high-performance websites in Next.js, WordPress, and Shopify — designed in Figma, built to Lighthouse 100, and delivered fixed-price with full code ownership at handoff."
-          primaryCta={{ label: 'Book a Free Website Audit', modal: true, region: 'us' }}
+          primaryCta={{ label: 'Book a Website Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ websites delivered',
@@ -1261,7 +1261,7 @@ export default function WebDesignPage() {
           <FinalCTA
             variant="dark"
             eyebrow="READY TO START"
-            headline="Book a Free Website Audit, No Obligation"
+            headline="Book a Website Audit, No Obligation"
             sub="In 30 minutes, we'll audit your current site, show you exactly what's hurting performance and conversions, and give you a fixed price to fix it. No pitch. No pressure. Just an honest assessment from engineers who build for a living."
             primaryCta={{ label: 'Book Your Free Audit', modal: true, region: 'us' }}
             secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}

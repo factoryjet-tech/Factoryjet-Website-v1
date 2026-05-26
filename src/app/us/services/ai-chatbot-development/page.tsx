@@ -565,7 +565,7 @@ const PRICING_TIERS = [
       'Live handoff to your email or Slack',
       '14-day post-launch support window',
     ],
-    cta: { label: 'Book a Free Strategy Call', modal: true as const, region: 'us' as const },
+    cta: { label: 'Get a Quote', modal: true as const, region: 'us' as const },
   },
   {
     name: 'Growth',
@@ -785,7 +785,7 @@ export default function AIChatbotDevelopmentPage() {
           { label: 'Pricing', href: '#pricing' },
           { label: 'Contact', modal: true, region: 'us' },
         ]}
-        cta={{ label: 'Book a Free Call', modal: true, region: 'us' }}
+        cta={{ label: 'Book a Call', modal: true, region: 'us' }}
       />
 
       <main className="bg-fj-cream">
@@ -795,7 +795,7 @@ export default function AIChatbotDevelopmentPage() {
           eyebrow="AI CHATBOT DEVELOPMENT · USA"
           headline="A Chatbot That Answers, Qualifies, and Books — While You're Asleep"
           lead="Your best customers expect an answer in seconds, not hours. FactoryJet builds custom AI chatbots — for customer support, lead generation, e-commerce, and appointment booking — that respond instantly, connect to your existing tools, and cost fixed-price vs a US chatbot agency."
-          primaryCta={{ label: 'Book a Free Chatbot Strategy Call', modal: true, region: 'us' }}
+          primaryCta={{ label: 'Book a Chatbot Strategy Call', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',
@@ -1074,7 +1074,7 @@ export default function AIChatbotDevelopmentPage() {
             headline="Transparent, Fixed-Price AI Chatbot Development"
             lead="No hourly billing. No scope creep surprises. Every tier includes a fixed scope, a fixed price, and a delivery timeline we stand behind."
             tiers={PRICING_TIERS}
-            footnote="All prices in USD. Custom enterprise scopes quoted after a free strategy call. Monthly retainer options available. You own all code and conversation data."
+            footnote="All prices in USD. Custom enterprise scopes quoted after a discovery call. Monthly retainer options available. You own all code and conversation data."
           />
         </div>
 
@@ -1116,9 +1116,9 @@ export default function AIChatbotDevelopmentPage() {
           <FinalCTA
             variant="dark"
             eyebrow="READY TO START"
-            headline="Book a Free 30-Minute Chatbot Strategy Call"
+            headline="Book a 30-Minute Chatbot Strategy Call"
             sub="We'll review your current support or lead flow, identify where a chatbot would make the biggest difference, and give you a fixed-price estimate — before you commit to anything."
-            primaryCta={{ label: 'Book Your Free Strategy Call', modal: true, region: 'us' }}
+            primaryCta={{ label: 'Get a Quote', modal: true, region: 'us' }}
             secondaryCta={{ label: 'See All AI Services', href: '/us/services' }}
             objectionHandler="Most clients see full ROI within 90 days. Free call, fixed price, no hidden fees."
           />

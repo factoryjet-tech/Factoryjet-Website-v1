@@ -882,7 +882,7 @@ export default function MagentoDevelopmentPage() {
           variant="dark"
           eyebrow="GET STARTED"
           headline="Ready to talk Magento?"
-          sub="Book a free 30–45 minute technical consultation. We'll understand your project, audit what's needed, and give you a fixed-price proposal within 2–3 business days. No obligation."
+          sub="Book a 30–45 minute technical consultation. We'll understand your project, audit what's needed, and give you a fixed-price proposal within 2–3 business days. No obligation."
           primaryCta={{ label: 'Book Your Free Technical Consultation', modal: true, region: 'us' }}
           secondaryCta={{ label: 'View Our E-Commerce Work', href: '/us/portfolio' }}
           objectionHandler="No commitment required. Fixed-price proposal delivered within 2–3 business days."

@@ -188,7 +188,7 @@ export default function Page() {
           stages={[
             {
               number: '01',
-              title: 'Free Strategy Call',
+              title: 'Strategy Call',
               description: 'We spend 45 minutes learning about your products, your Boise customers, and your revenue goals — no sales pitch, just honest advice about what to build.',
             },
             {
@@ -481,7 +481,7 @@ export default function Page() {
             {
               category: 'local',
               question: 'How do I get started with FactoryJet?',
-              answer: "Book a free 45-minute strategy call. We'll learn about your business, your products, and your goals — then tell you exactly what we'd build and what it costs. You'll leave the call with clarity on the right path forward, no strings attached.",
+              answer: "Book a 45-minute strategy call. We'll learn about your business, your products, and your goals — then tell you exactly what we'd build and what it costs. You'll leave the call with clarity on the right path forward, no strings attached.",
             },
             {
               category: 'included',
@@ -507,7 +507,7 @@ export default function Page() {
           variant="dark"
           eyebrow="READY TO START"
           headline="Ready to Launch Your Boise Shopify Store in 7 Days?"
-          sub="Book a free 45-minute strategy call. We'll audit your current setup, recommend the right package, and give you a fixed price — no commitment required."
+          sub="Book a 45-minute strategy call. We'll audit your current setup, recommend the right package, and give you a fixed price — no commitment required."
           primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Our Work', href: '/us/portfolio' }}
         />

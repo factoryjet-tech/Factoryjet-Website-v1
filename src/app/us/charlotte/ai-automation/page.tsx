@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'AI Workflow Automation for Charlotte NC Businesses | FactoryJet',
     description:
-      'Custom AI workflow automation for Charlotte NC businesses. Built on n8n, Make.com, and LangChain. fixed-price, milestone-paid. Free strategy call.',
+      'Custom AI workflow automation for Charlotte NC businesses. Built on n8n, Make.com, and LangChain. fixed-price, milestone-paid. Get a quote.',
     url: 'https://factoryjet.com/us/charlotte/ai-automation',
     images: [
       {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Workflow Automation for Charlotte NC Businesses | FactoryJet',
     description:
-      'Custom AI workflow automation for Charlotte NC businesses. fixed-price, milestone-paid. Free strategy call.',
+      'Custom AI workflow automation for Charlotte NC businesses. fixed-price, milestone-paid. Get a quote.',
     images: ['https://factoryjet.com/images/us/charlotte/hero-charlotte.webp'],
   },
   alternates: {
@@ -465,7 +465,7 @@ const PRICING_TIERS = [
       'Monitoring dashboard showing every workflow run',
       '14-day post-launch support window',
     ],
-    cta: { label: 'Book a Free Strategy Call', modal: true as const, region: 'us' as const },
+    cta: { label: 'Get a Quote', modal: true as const, region: 'us' as const },
   },
   {
     name: 'Growth',
@@ -711,7 +711,7 @@ export default function CharlotteAIAutomationPage() {
           { label: 'Pricing', href: '#pricing' },
           { label: 'Contact', modal: true, region: 'us' },
         ]}
-        cta={{ label: 'Book a Free Call', modal: true, region: 'us' }}
+        cta={{ label: 'Book a Call', modal: true, region: 'us' }}
       />
 
       <main className="bg-fj-cream">
@@ -721,7 +721,7 @@ export default function CharlotteAIAutomationPage() {
           eyebrow="AI WORKFLOW AUTOMATION · CHARLOTTE, NC"
           headline="Charlotte's Financial District, Health Systems, and Logistics Companies Are Automating the Workflows That Don't Need a Human"
           lead="Charlotte's economy runs on high-volume, compliance-sensitive workflows — financial document processing, logistics coordination, healthcare intake, and client onboarding. FactoryJet builds custom AI workflow automation for Charlotte businesses that eliminates manual task time at fixed-price vs a local agency."
-          primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'us' }}
+          primaryCta={{ label: 'Get a Quote', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',
@@ -1000,7 +1000,7 @@ export default function CharlotteAIAutomationPage() {
             headline="Transparent, Fixed-Price AI Workflow Automation for Charlotte Businesses"
             lead="No hourly billing. No scope creep surprises. Every tier includes a fixed scope, a fixed price, and a delivery timeline we stand behind."
             tiers={PRICING_TIERS}
-            footnote="All prices in USD. Custom enterprise scopes quoted after a free strategy call. Monthly retainer options available. You own all automation code and workflow data."
+            footnote="All prices in USD. Custom enterprise scopes quoted after a discovery call. Monthly retainer options available. You own all automation code and workflow data."
           />
         </div>
 
@@ -1042,9 +1042,9 @@ export default function CharlotteAIAutomationPage() {
           <FinalCTA
             variant="dark"
             eyebrow="READY TO START"
-            headline="Book a Free 30-Minute Workflow Automation Strategy Call"
+            headline="Book a 30-Minute Workflow Automation Strategy Call"
             sub="We'll map your highest-volume workflows, identify where AI automation would make the biggest difference for your Charlotte business — including any compliance and audit trail requirements — and give you a fixed-price estimate before you commit to anything."
-            primaryCta={{ label: 'Book Your Free Strategy Call', modal: true, region: 'us' }}
+            primaryCta={{ label: 'Get a Quote', modal: true, region: 'us' }}
             secondaryCta={{ label: 'See All AI Services', href: '/us/services' }}
             objectionHandler="Most Charlotte clients see full ROI within one quarter. Free call, fixed price, no hidden fees."
           />

@@ -186,7 +186,7 @@ export default function Page() {
           stages={[
             {
               number: '01',
-              title: 'Free Strategy Call',
+              title: 'Strategy Call',
               description: 'We spend 45 minutes learning your products, your customers, and your revenue goals. No sales pitch — just honest advice on what you actually need to build.',
             },
             {
@@ -489,7 +489,7 @@ export default function Page() {
             {
               category: 'local',
               question: "How do I get started? What's the first step?",
-              answer: "Book a free 45-minute strategy call. No sales pitch, no pressure — we ask about your business, your products, and your goals, then tell you exactly what we'd build and what it would cost. You'll leave the call with a clear picture of the right path forward.",
+              answer: "Book a 45-minute strategy call. No sales pitch, no pressure — we ask about your business, your products, and your goals, then tell you exactly what we'd build and what it would cost. You'll leave the call with a clear picture of the right path forward.",
             },
             {
               category: 'included',
@@ -505,7 +505,7 @@ export default function Page() {
           variant="dark"
           eyebrow="READY TO START"
           headline="Ready to Launch Your Fargo Shopify Store in 7 Days?"
-          sub="Book a free 45-minute strategy call. We'll audit your current setup, recommend the right package, and give you a fixed price before you commit to anything."
+          sub="Book a 45-minute strategy call. We'll audit your current setup, recommend the right package, and give you a fixed price before you commit to anything."
           primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Our Work', href: '/us/portfolio' }}
         />

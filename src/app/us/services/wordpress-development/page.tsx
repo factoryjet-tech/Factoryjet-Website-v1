@@ -391,7 +391,7 @@ const PRICING_TIERS = [
       'Google Analytics 4 + Search Console setup',
       '14-day post-launch support',
     ],
-    cta: { label: 'Book a Free Consultation', modal: true, region: 'us' },
+    cta: { label: 'Book a Consultation', modal: true, region: 'us' },
   },
   {
     name: 'Business WordPress',
@@ -701,7 +701,7 @@ export default function WordPressDevelopmentPage() {
           eyebrow="WORDPRESS WEB DESIGN AGENCY · USA"
           headline="Custom WordPress Websites That Load Fast, Rank, and Convert"
           lead="Most WordPress agencies build on Elementor or Divi — page builders that produce bloated code, fail Core Web Vitals, and hurt your Google rankings. FactoryJet builds custom WordPress themes from scratch: clean code, fast load times, and mobile-first design. Starting at $1,999. Fixed-price and milestone-paid."
-          primaryCta={{ label: 'Book a Free WordPress Consultation', modal: true, region: 'us' }}
+          primaryCta={{ label: 'Book a WordPress Consultation', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ WordPress projects delivered',
@@ -951,7 +951,7 @@ export default function WordPressDevelopmentPage() {
         <FinalCTA
           variant="dark"
           eyebrow="START WITH A FREE CONSULTATION"
-          headline="Book a Free WordPress Consultation and Get a Scope and Quote in 48 Hours"
+          headline="Book a WordPress Consultation and Get a Scope and Quote in 48 Hours"
           sub="In 30 minutes, we'll review your current site, understand your goals, and tell you exactly what a custom WordPress build would include — the page structure, technical architecture, timeline, and fixed cost. No pitch deck. No discovery retainer. Just a straight assessment from engineers who've built 500+ WordPress sites for US businesses."
           primaryCta={{ label: 'Book Your Free WordPress Consultation', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Website Redesign Services', href: '/us/services/website-redesign' }}

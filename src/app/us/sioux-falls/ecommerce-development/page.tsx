@@ -183,7 +183,7 @@ export default function Page() {
           stages={[
             {
               number: '01',
-              title: 'Free Strategy Call',
+              title: 'Strategy Call',
               description: 'We learn about your Sioux Falls business, your products, and your customers in 45 minutes. Honest advice — no sales pitch.',
             },
             {
@@ -459,7 +459,7 @@ export default function Page() {
             {
               category: 'local',
               question: "How do I get started with FactoryJet?",
-              answer: "Book a free 45-minute strategy call. We ask about your business, your products, and your goals — then tell you exactly what we'd build and what it would cost. No commitment, no pressure — you'll leave with a clear picture of the right path forward whether you hire us or not. Click the button below to schedule.",
+              answer: "Book a 45-minute strategy call. We ask about your business, your products, and your goals — then tell you exactly what we'd build and what it would cost. No commitment, no pressure — you'll leave with a clear picture of the right path forward whether you hire us or not. Click the button below to schedule.",
             },
           ]}
         />
@@ -469,8 +469,8 @@ export default function Page() {
         <FinalCTA
           variant="dark"
           headline="Ready to launch your Sioux Falls Shopify store in 7 days?"
-          sub="Book a free 45-minute strategy call. We'll audit your current setup, recommend the right package, and give you a fixed price before you commit to anything."
-          primaryCta={{ label: 'Book Your Free Strategy Call', href: '/contact' }}
+          sub="Book a 45-minute strategy call. We'll audit your current setup, recommend the right package, and give you a fixed price before you commit to anything."
+          primaryCta={{ label: 'Get a Quote', href: '/contact' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
         />
 

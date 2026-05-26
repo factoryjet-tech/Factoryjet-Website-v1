@@ -194,7 +194,7 @@ const LOCALE_CONFIG = {
     featuredCtaLabel:'See our work',
     featuredCtaHref: '/portfolio',
     modalRegion:     'in' as ModalRegion,
-    defaultCtaLabel: 'Free Strategy Call',
+    defaultCtaLabel: 'Get a Quote',
   },
   uae: {
     webServices:     UAE_WEB_SERVICES,

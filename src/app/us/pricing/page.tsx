@@ -164,7 +164,7 @@ const howToSchema = {
 const journeyStages: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Free Consultation & Quote',
+    title: 'Consultation & Quote',
     description: 'Tell us what you need. We scope the project, confirm page count, and send a fixed quote within 24 hours. No surprise change orders later.',
   },
   {

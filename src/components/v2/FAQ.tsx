@@ -268,7 +268,7 @@ export default function FAQ({
                   className="mt-2 inline-flex items-center gap-1.5 font-fj-body text-[0.8125rem] font-semibold hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F05A28]"
                   style={{ color: '#C94A1A' }}
                 >
-                  Book a free strategy call
+                  Talk to the founder
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
                     <path d="M2.5 6h7M6.5 3l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>

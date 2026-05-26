@@ -538,7 +538,7 @@ export default function Page() {
           variant="dark"
           eyebrow="READY TO START"
           headline="Ready to Build Your Denver Shopify Store?"
-          sub="Colorado's outdoor economy, craft brewery scene, and tech-forward consumers are growing faster than most brands can keep up with. Every week without a high-performing Shopify store is a week your competitors own the searches you should. Book a free 30-minute audit and we'll have a store blueprint ready within 72 hours."
+          sub="Colorado's outdoor economy, craft brewery scene, and tech-forward consumers are growing faster than most brands can keep up with. Every week without a high-performing Shopify store is a week your competitors own the searches you should. Book a 30-minute audit and we'll have a store blueprint ready within 72 hours."
           primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
         />
       </main>

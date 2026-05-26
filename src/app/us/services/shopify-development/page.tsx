@@ -219,7 +219,7 @@ const SHOPIFY_SERVICES = [
     description:
       'Full store configuration from scratch: product catalog import, collections architecture, payment providers (Stripe, PayPal, Shop Pay), shipping zones, tax setup, and launch with DNS transfer.',
     example: 'Complete Shopify launch — theme, products, payments — in 3–5 weeks.',
-    linkLabel: 'Book a free call',
+    linkLabel: 'Book a call',
     linkHref: '/contact',
   },
   {
@@ -475,7 +475,7 @@ const PRICING_TIERS = [
       'Code delivered to your GitHub on launch',
       '2–3 week delivery from design sign-off',
     ],
-    cta: { label: 'Book a Free Store Audit', modal: true, region: 'us' },
+    cta: { label: 'Book a Store Audit', modal: true, region: 'us' },
   },
   {
     name: 'Full Store Build',
@@ -744,7 +744,7 @@ export default function ShopifyPage() {
           { label: 'Pricing', href: '#pricing' },
           { label: 'Contact', modal: true, region: 'us' },
         ]}
-        cta={{ label: 'Book a Free Store Audit', modal: true, region: 'us' }}
+        cta={{ label: 'Book a Store Audit', modal: true, region: 'us' }}
       />
 
       <main className="bg-fj-cream">
@@ -754,7 +754,7 @@ export default function ShopifyPage() {
           eyebrow="SHOPIFY DEVELOPMENT · USA"
           headline="Custom Shopify Stores That Sell, Not Just Look Good"
           lead="Generic Shopify themes convert below 1%. FactoryJet builds custom Shopify and Shopify Plus stores — designed in Figma, built in Liquid — that are fast, on-brand, and optimized for your specific customer journey. engineered for measurable outcomes."
-          primaryCta={{ label: 'Book a Free Store Audit', modal: true, region: 'us' }}
+          primaryCta={{ label: 'Book a Store Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '120+ Shopify stores launched',
@@ -1256,7 +1256,7 @@ export default function ShopifyPage() {
           <FinalCTA
             variant="dark"
             eyebrow="READY TO START"
-            headline="Book a Free Shopify Store Audit, No Obligation"
+            headline="Book a Shopify Store Audit, No Obligation"
             sub="In 30 minutes, we'll audit your current store or platform, identify the specific pages losing you the most revenue, and give you a fixed price to fix it. No pitch. No pressure. An honest assessment from engineers who've built 120+ stores."
             primaryCta={{ label: 'Book Your Free Store Audit', modal: true, region: 'us' }}
             secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}

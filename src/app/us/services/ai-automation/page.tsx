@@ -462,7 +462,7 @@ const PRICING_TIERS = [
       '14-day post-launch support window',
       'Recorded monitoring dashboard walkthrough',
     ],
-    cta: { label: 'Book a Free Audit', modal: true, region: 'us' },
+    cta: { label: 'Book an Audit', modal: true, region: 'us' },
   },
   {
     name: 'Growth',
@@ -742,7 +742,7 @@ export default function AIAutomationPage() {
           eyebrow="AI AUTOMATION AGENCY · USA"
           headline="The AI Automation Agency Built for US Small Businesses"
           lead="Your team is spending 20+ hours a week on work that should run itself — copying data between tools, chasing invoices, following up on leads, writing the same reports. FactoryJet connects your stack, automates the manual steps, and builds in AI decision-making where routing alone isn't enough. Starting at $2,500. Fixed-price and milestone-paid."
-          primaryCta={{ label: 'Book a Free Automation Audit', modal: true, region: 'us' }}
+          primaryCta={{ label: 'Book an Automation Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses automated',
@@ -998,7 +998,7 @@ export default function AIAutomationPage() {
         <FinalCTA
           variant="dark"
           eyebrow="START WITH A FREE AUDIT"
-          headline="Book a Free Automation Audit and Walk Away With a Roadmap"
+          headline="Book an Automation Audit and Walk Away With a Roadmap"
           sub="In 30 minutes, we'll identify your 3 highest-value automation opportunities, estimate the hours you'll recover each week, and tell you exactly what it costs to build. No pitch. No pressure. Just a straight answer from an engineer who's built it before — for a business exactly like yours."
           primaryCta={{ label: 'Book Your Free Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See AI Agent Services', href: '/us/services/ai-agents' }}
