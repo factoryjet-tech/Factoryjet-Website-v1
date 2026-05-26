@@ -21,12 +21,12 @@ import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
 
 export const metadata: Metadata = {
   title: 'Shopify Developer Boise, ID — 7-Day Builds From $2,999',
-  description: 'Launch a Shopify store in Boise, ID in 7 days from $2,999. Treasure Valley e-commerce experts — fixed price, full code ownership. Book a free strategy call.',
+  description: 'Launch a Shopify store in Boise, ID in 7 days from $2,999. Treasure Valley e-commerce experts — fixed price, full code ownership. Get a quote.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Shopify Developer Boise, ID — 7-Day Builds From $2,999',
-    description: 'Launch a Shopify store in Boise, ID in 7 days from $2,999. Treasure Valley e-commerce experts — fixed price, full code ownership. Book a free strategy call.',
+    description: 'Launch a Shopify store in Boise, ID in 7 days from $2,999. Treasure Valley e-commerce experts — fixed price, full code ownership. Get a quote.',
     url: 'https://factoryjet.com/us/boise/ecommerce-development',
     images: [
       {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Shopify Developer Boise, ID — 7-Day Builds From $2,999',
-    description: 'Launch a Shopify store in Boise, ID in 7 days from $2,999. Treasure Valley e-commerce experts — fixed price, full code ownership. Book a free strategy call.',
+    description: 'Launch a Shopify store in Boise, ID in 7 days from $2,999. Treasure Valley e-commerce experts — fixed price, full code ownership. Get a quote.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {

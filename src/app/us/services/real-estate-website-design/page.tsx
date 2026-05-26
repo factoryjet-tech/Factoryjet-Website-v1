@@ -23,13 +23,13 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'Real Estate Website Design — IDX Sites From $2,499 (7 Days)',
   description:
-    'IDX-integrated real estate websites that rank locally. Custom agent sites from $2,499, brokerages from $4,500. Live in 7 days, no platform fees. Free demo call.',
+    'IDX-integrated real estate websites that rank locally. Agent sites from $2,499, brokerages from $4,500. Live in 7 days, code ownership at handoff.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Real Estate Website Design — IDX Sites From $2,499 (7 Days)',
     description:
-      'IDX-integrated real estate websites that rank locally. Custom agent sites from $2,499, brokerages from $4,500. Live in 7 days, no platform fees. Free demo call.',
+      'IDX-integrated real estate websites that rank locally. Agent sites from $2,499, brokerages from $4,500. Live in 7 days, code ownership at handoff.',
     url: 'https://factoryjet.com/us/services/real-estate-website-design',
     images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet — Real Estate Website Design USA' }],
     locale: 'en_US',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Real Estate Website Design — IDX Sites From $2,499 (7 Days)',
-    description: 'IDX-integrated real estate websites that rank locally. Custom agent sites from $2,499, brokerages from $4,500. Live in 7 days, no platform fees. Free demo call.',
+    description: 'IDX-integrated real estate websites that rank locally. Agent sites from $2,499, brokerages from $4,500. Live in 7 days, code ownership at handoff.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {

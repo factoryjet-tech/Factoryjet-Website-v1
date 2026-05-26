@@ -21,12 +21,12 @@ import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
 
 export const metadata: Metadata = {
   title: 'Shopify Developer Sioux Falls, SD — 7-Day Builds From $2,999',
-  description: 'Launch a Shopify store in Sioux Falls in 7 days from $2,999. South Dakota DTC specialists — fixed price, no platform lock-in. Book a free strategy call.',
+  description: 'Launch a Shopify store in Sioux Falls in 7 days from $2,999. South Dakota DTC specialists — fixed price, no platform lock-in. Get a quote.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Shopify Developer Sioux Falls, SD — 7-Day Builds From $2,999',
-    description: 'Launch a Shopify store in Sioux Falls in 7 days from $2,999. South Dakota DTC specialists — fixed price, no platform lock-in. Book a free strategy call.',
+    description: 'Launch a Shopify store in Sioux Falls in 7 days from $2,999. South Dakota DTC specialists — fixed price, no platform lock-in. Get a quote.',
     url: 'https://factoryjet.com/us/sioux-falls/ecommerce-development',
     images: [
       {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Shopify Developer Sioux Falls, SD — 7-Day Builds From $2,999',
-    description: 'Launch a Shopify store in Sioux Falls in 7 days from $2,999. South Dakota DTC specialists — fixed price, no platform lock-in. Book a free strategy call.',
+    description: 'Launch a Shopify store in Sioux Falls in 7 days from $2,999. South Dakota DTC specialists — fixed price, no platform lock-in. Get a quote.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {

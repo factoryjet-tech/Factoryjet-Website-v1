@@ -27,7 +27,7 @@ import Image from 'next/image';
 export const metadata: Metadata = {
   title: 'NYC Web Design Agency — Custom Sites in 7 Days From $1,999',
   description:
-    'Custom websites for New York City businesses, live in 7 days from $1,999. Next.js performance, full code ownership, US-hour PM. Book a free strategy call.',
+    'Custom websites for New York City businesses, live in 7 days from $1,999. Next.js performance, full code ownership, US-hour project management.',
   alternates: {
     canonical: 'https://factoryjet.com/us/new-york/web-design',
     languages: webDesignPriorityCityAlternatesUS['new-york'],
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'NYC Web Design Agency — Custom Sites in 7 Days From $1,999',
     description:
-      'Custom websites for New York City businesses, live in 7 days from $1,999. Next.js performance, full code ownership, US-hour PM. Book a free strategy call.',
+      'Custom websites for New York City businesses, live in 7 days from $1,999. Next.js performance, full code ownership, US-hour project management.',
     url: 'https://factoryjet.com/us/new-york/web-design/',
     images: [
       {
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'NYC Web Design Agency — Custom Sites in 7 Days From $1,999',
-    description: 'Custom websites for New York City businesses, live in 7 days from $1,999. Next.js performance, full code ownership, US-hour PM. Book a free strategy call.',
+    description: 'Custom websites for New York City businesses, live in 7 days from $1,999. Next.js performance, full code ownership, US-hour project management.',
     images: ['https://factoryjet.com/logo.png'],
   },
   robots: {

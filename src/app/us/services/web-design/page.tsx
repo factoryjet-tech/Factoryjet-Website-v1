@@ -28,13 +28,13 @@ import Image from 'next/image';
 export const metadata: Metadata = {
   title: 'Web Design Agency USA — 7-Day Launches From $1,999 [2026]',
   description:
-    'Web design agency for US small businesses. Custom Next.js, WordPress & Shopify sites, live in 7 days from $1,999. Full code ownership. Book a free strategy call.',
+    'Web design agency for US small businesses. Custom Next.js, WordPress & Shopify sites, live in 7 days from $1,999. Full code ownership. Get a quote in 24 hours.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Web Design Agency USA — 7-Day Launches From $1,999 [2026]',
     description:
-      'Web design agency for US small businesses. Custom Next.js, WordPress & Shopify sites, live in 7 days from $1,999. Full code ownership. Book a free strategy call.',
+      'Web design agency for US small businesses. Custom Next.js, WordPress & Shopify sites, live in 7 days from $1,999. Full code ownership. Get a quote in 24 hours.',
     url: 'https://factoryjet.com/us/services/web-design',
     images: [
       {
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Web Design Agency USA — 7-Day Launches From $1,999 [2026]',
     description:
-      'Web design agency for US small businesses. Custom Next.js, WordPress & Shopify sites, live in 7 days from $1,999. Full code ownership. Book a free strategy call.',
+      'Web design agency for US small businesses. Custom Next.js, WordPress & Shopify sites, live in 7 days from $1,999. Full code ownership. Get a quote in 24 hours.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {

@@ -21,12 +21,12 @@ import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
 
 export const metadata: Metadata = {
   title: 'Shopify Developer Fargo ND — Live in 7 Days, From $2,999',
-  description: 'Need a Shopify store live in Fargo, ND in 7 days? Fixed-price builds from $2,999. Silicon Prairie e-commerce experts. 500+ launched. Book a free strategy call.',
+  description: 'Shopify stores live in Fargo, ND in 7 days. Fixed-price from $2,999. Silicon Prairie e-commerce experts. 500+ launched, code ownership Day 1.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Shopify Developer Fargo ND — Live in 7 Days, From $2,999',
-    description: 'Need a Shopify store live in Fargo, ND in 7 days? Fixed-price builds from $2,999. Silicon Prairie e-commerce experts. 500+ launched. Book a free strategy call.',
+    description: 'Shopify stores live in Fargo, ND in 7 days. Fixed-price from $2,999. Silicon Prairie e-commerce experts. 500+ launched, code ownership Day 1.',
     url: 'https://factoryjet.com/us/fargo/ecommerce-development',
     images: [
       {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Shopify Developer Fargo ND — Live in 7 Days, From $2,999',
-    description: 'Need a Shopify store live in Fargo, ND in 7 days? Fixed-price builds from $2,999. Silicon Prairie e-commerce experts. 500+ launched. Book a free strategy call.',
+    description: 'Shopify stores live in Fargo, ND in 7 days. Fixed-price from $2,999. Silicon Prairie e-commerce experts. 500+ launched, code ownership Day 1.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {

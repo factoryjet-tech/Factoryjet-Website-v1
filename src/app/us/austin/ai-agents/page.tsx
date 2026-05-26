@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'AI Agents & Chatbots for Austin TX Businesses | FactoryJet',
     description:
-      'Custom AI agents for Austin businesses. Built on GPT-4o and Claude. fixed-price, milestone-paid. Fast delivery. Free strategy call.',
+      'Custom AI agents for Austin businesses. Built on GPT-4o and Claude. fixed-price, milestone-paid. Fast delivery. Get a quote.',
     url: 'https://factoryjet.com/us/austin/ai-agents',
     images: [
       {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Agents & Chatbots for Austin TX Businesses | FactoryJet',
     description:
-      'Custom AI agents for Austin TX businesses. fixed-price, milestone-paid. Free strategy call.',
+      'Custom AI agents for Austin TX businesses. fixed-price, milestone-paid. Get a quote.',
     images: ['https://factoryjet.com/images/us/austin/hero-austin.webp'],
   },
   alternates: {

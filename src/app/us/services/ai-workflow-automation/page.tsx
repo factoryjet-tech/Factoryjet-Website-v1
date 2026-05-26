@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Workflow Automation Services USA | FactoryJet',
     description:
-      'Custom AI workflow automation for US small businesses. fixed-price. 2–4 week delivery. Free strategy call.',
+      'Custom AI workflow automation for US small businesses. fixed-price. 2–4 week delivery. Get a quote.',
     images: ['https://factoryjet.com/images/us/services/hero-ai-workflow.webp'],
   },
   alternates: {

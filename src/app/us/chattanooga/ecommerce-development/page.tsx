@@ -27,12 +27,12 @@ import SiteFooter from '@/components/v2/SiteFooter'
 
 export const metadata: Metadata = {
   title: 'Shopify Developer Chattanooga, TN — 7-Day Builds From $2,999',
-  description: 'Launch a Shopify store in Chattanooga, TN in 7 days from $2,999. Gig City e-commerce specialists — fixed price, full code ownership. Book a free strategy call.',
+  description: 'Launch a Shopify store in Chattanooga, TN in 7 days from $2,999. Gig City e-commerce specialists — fixed price, full code ownership, no retainers.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Shopify Developer Chattanooga, TN — 7-Day Builds From $2,999',
-    description: 'Launch a Shopify store in Chattanooga, TN in 7 days from $2,999. Gig City e-commerce specialists — fixed price, full code ownership. Book a free strategy call.',
+    description: 'Launch a Shopify store in Chattanooga, TN in 7 days from $2,999. Gig City e-commerce specialists — fixed price, full code ownership, no retainers.',
     url: 'https://factoryjet.com/us/chattanooga/ecommerce-development',
     images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet - Shopify Developer Chattanooga TN' }],
     locale: 'en_US',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Shopify Developer Chattanooga, TN — 7-Day Builds From $2,999',
-    description: 'Launch a Shopify store in Chattanooga, TN in 7 days from $2,999. Gig City e-commerce specialists — fixed price, full code ownership. Book a free strategy call.',
+    description: 'Launch a Shopify store in Chattanooga, TN in 7 days from $2,999. Gig City e-commerce specialists — fixed price, full code ownership, no retainers.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {

@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Chatbot Development Services USA | FactoryJet',
     description:
-      'Custom AI chatbots for US small businesses. fixed-price. 2–3 week delivery. Free strategy call.',
+      'Custom AI chatbots for US small businesses. fixed-price. 2–3 week delivery. Get a quote.',
     images: ['https://factoryjet.com/images/us/services/hero-ai-chatbot.webp'],
   },
   alternates: {

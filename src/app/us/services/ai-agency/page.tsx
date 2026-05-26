@@ -31,13 +31,13 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'AI Agency for US Small Business | Agents & Chatbots | FactoryJet',
   description:
-    'US AI agency building custom agents, automation workflows & chatbots for small businesses. fixed-price, milestone-paid. From $5,000. Free AI strategy call.',
+    'US AI agency building custom agents, automation workflows & chatbots for small businesses. fixed-price, milestone-paid. From $5,000. Talk to the founder.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'AI Agency for US Small Business | FactoryJet',
     description:
-      'Custom AI agents, automation, and chatbots for US small businesses. fixed-price, milestone-paid. Starting at $5,000. Free AI strategy call.',
+      'Custom AI agents, automation, and chatbots for US small businesses. fixed-price, milestone-paid. Starting at $5,000. Talk to the founder.',
     url: 'https://factoryjet.com/us/services/ai-agency',
     images: [
       {
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Agency USA | AI Agents, Automation & Chatbots | FactoryJet',
     description:
-      'Custom AI agents and automation for US small businesses. fixed-price, milestone-paid. Fixed price. Free strategy call.',
+      'Custom AI agents and automation for US small businesses. fixed-price, milestone-paid. Fixed price. Talk to the founder.',
     images: ['https://factoryjet.com/images/us/services/ai-agency/og-ai-agency.jpg'],
   },
   alternates: {
@@ -892,7 +892,7 @@ export default function AIAgencyPage() {
         <Hero
           eyebrow="AI AGENCY · UNITED STATES"
           headline={<>The AI Agency That<br className="hidden lg:block" /> Actually Delivers —<br className="hidden lg:block" /> Not Just Decks</>}
-          lead="FactoryJet is a US AI agency building custom AI agents, automation workflows, and chatbots for small businesses since 2019. 500+ production systems delivered. fixed-price, milestone-paid. Fixed price. Free strategy call."
+          lead="FactoryJet is a US AI agency building custom AI agents, automation workflows, and chatbots for small businesses since 2019. 500+ production systems delivered. fixed-price, milestone-paid. Fixed price. Talk to the founder."
           primaryCta={{ label: 'Book a Free AI Strategy Call', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={['500+ businesses served', 'Starting at $5,000', 'fixed-price', '25 years building']}
@@ -934,7 +934,7 @@ export default function AIAgencyPage() {
               {/* Footer */}
               <div className="border-t border-fj-neutral-100 bg-fj-neutral-50 px-7 py-5">
                 <p className="font-fj-body text-[0.8125rem] text-fj-neutral-500">
-                  Fixed price on every project. Full code ownership on day one. Free strategy call before any commitment.
+                  Fixed price on every project. Full code ownership on day one. Talk to the founder before any commitment.
                 </p>
               </div>
             </div>

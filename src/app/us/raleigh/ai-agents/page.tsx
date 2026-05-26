@@ -24,13 +24,13 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'AI Agents & Chatbots for Raleigh NC Businesses | FactoryJet',
   description:
-    'Custom AI agents for Raleigh NC — customer support, lead gen & booking. Built for the Research Triangle\'s biotech economy. From $3,000. Free strategy call.',
+    'Custom AI agents for Raleigh NC — customer support, lead gen & booking. Built for the Research Triangle\'s biotech economy. From $3,000. Get a quote.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'AI Agents & Chatbots for Raleigh NC Businesses | FactoryJet',
     description:
-      'Custom AI agents for Raleigh businesses. Built on GPT-4o and Claude. fixed-price, milestone-paid. Fast delivery. Free strategy call.',
+      'Custom AI agents for Raleigh businesses. Built on GPT-4o and Claude. fixed-price, milestone-paid. Fast delivery. Get a quote.',
     url: 'https://factoryjet.com/us/raleigh/ai-agents',
     images: [
       {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Agents & Chatbots for Raleigh NC Businesses | FactoryJet',
     description:
-      'Custom AI agents for Raleigh NC businesses. fixed-price, milestone-paid. Free strategy call.',
+      'Custom AI agents for Raleigh NC businesses. fixed-price, milestone-paid. Get a quote.',
     images: ['https://factoryjet.com/images/us/raleigh/hero-raleigh.webp'],
   },
   alternates: {

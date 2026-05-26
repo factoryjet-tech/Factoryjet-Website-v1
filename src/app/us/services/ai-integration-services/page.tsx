@@ -24,7 +24,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'AI Integration Services USA | Automation | FactoryJet',
   description:
-    'Add AI to your existing business software — CRM, e-commerce, ERP & custom apps. Expert AI integration from $3,500. Free strategy call.',
+    'Add AI to your existing business software — CRM, e-commerce, ERP & custom apps. Expert AI integration from $3,500. Get a quote.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Integration Services USA | FactoryJet',
     description:
-      'Connect AI to your existing business tools. fixed-price, milestone-paid. Fast delivery. Free strategy call.',
+      'Connect AI to your existing business tools. fixed-price, milestone-paid. Fast delivery. Get a quote.',
     images: ['https://factoryjet.com/images/us/services/hero-ai-integration.webp'],
   },
   alternates: {

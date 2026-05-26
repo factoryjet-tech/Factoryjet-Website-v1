@@ -24,13 +24,13 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'AI Agents & Chatbots for Denver CO Businesses | FactoryJet',
   description:
-    'Custom AI agents for Denver businesses — customer support, lead gen & booking. Built for Denver\'s outdoor, tech & startup economy. From $3,000. Free strategy call.',
+    'Custom AI agents for Denver businesses — customer support, lead gen & booking. Built for Denver\'s outdoor, tech & startup economy. From $3,000. Get a quote.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'AI Agents & Chatbots for Denver CO Businesses | FactoryJet',
     description:
-      'Custom AI agents for Denver businesses. Built on GPT-4o and Claude. fixed-price, milestone-paid. Fast delivery. Free strategy call.',
+      'Custom AI agents for Denver businesses. Built on GPT-4o and Claude. fixed-price, milestone-paid. Fast delivery. Get a quote.',
     url: 'https://factoryjet.com/us/denver/ai-agents',
     images: [
       {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Agents & Chatbots for Denver CO Businesses | FactoryJet',
     description:
-      'Custom AI agents for Denver CO businesses. fixed-price, milestone-paid. Free strategy call.',
+      'Custom AI agents for Denver CO businesses. fixed-price, milestone-paid. Get a quote.',
     images: ['https://factoryjet.com/images/us/denver/hero-denver.webp'],
   },
   alternates: {
