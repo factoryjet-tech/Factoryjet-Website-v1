@@ -8,11 +8,13 @@ declare global {
 
 // Google Ads Conversion Labels
 export const CONVERSIONS = {
-  WHATSAPP_CLICK:  "AW-11127037244/N5PhCPWusNQbELy65Lkp", // already live
-  FORM_SUBMISSION: "AW-11127037244/aqsvCJCk8ZQcELy65Lkp", // form submit conversion
+  WHATSAPP_CLICK:       "AW-11127037244/N5PhCPWusNQbELy65Lkp", // already live
+  FORM_SUBMISSION:      "AW-11127037244/aqsvCJCk8ZQcELy65Lkp", // old account — keep firing in parallel
+  FORM_SUBMISSION_US:   "AW-18185532850/rZxjCNuivbQcELLrxN9D", // new US account (created 2026-05-27)
 };
 
-// Fire a Google Ads form submission conversion event via gtag
+// Fire a Google Ads form submission conversion event via gtag.
+// Fires both accounts in parallel: old (₹50) stays live, new US ($1,999 USD) added alongside.
 export const trackFormSubmission = () => {
   if (
     typeof window !== "undefined" &&
@@ -20,6 +22,11 @@ export const trackFormSubmission = () => {
   ) {
     (window as any).gtag("event", "conversion", {
       send_to: CONVERSIONS.FORM_SUBMISSION,
+    });
+    (window as any).gtag("event", "conversion", {
+      send_to: CONVERSIONS.FORM_SUBMISSION_US,
+      value: 1999,
+      currency: "USD",
     });
   }
 };

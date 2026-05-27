@@ -224,6 +224,17 @@ export default function RootLayout({
           />
         </noscript>
 
+        {/* Google Ads — dual-account gtag.js (AW-11127037244 + AW-18185532850).
+            Loaded directly because GTM only manages AW-11127037244 internally.
+            Both accounts must be configured so conversion events route correctly. */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18185532850"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-dual-account-config" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-11127037244');gtag('config','AW-18185532850');`}
+        </Script>
+
         <ContactModalProvider>
           <ScrollToTop />
           {children}
