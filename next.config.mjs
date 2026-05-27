@@ -71,6 +71,9 @@ const nextConfig = {
       { source: '/uk/sitemap-index.xml',    destination: '/sitemap.xml',            permanent: true },
       { source: '/uk/sitemap-cities.xml',   destination: '/sitemap-uk/sitemap.xml', permanent: true },
       { source: '/uk/sitemap-services.xml', destination: '/sitemap-uk/sitemap.xml', permanent: true },
+      // UK platform route deprecation (2026-05-27, PR #3) — production-effective
+      // layer is /public/_redirects. Mirror here for dev/preview parity.
+      { source: '/uk/:city/:service/:platform', destination: '/uk/:city/:service', permanent: true },
       // Legacy page retirement (2026-05-14) — also in /public/_redirects for Cloudflare Pages
       { source: '/us/services/web-design/new-york/services',          destination: '/us/services/web-design/new-york',      permanent: true },
       { source: '/us/services/ecommerce-development/boise',           destination: '/us/services/ecommerce-development',    permanent: true },

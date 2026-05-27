@@ -33,20 +33,14 @@ const BESPOKE_UK_CITY_SLUGS: ReadonlySet<string> = new Set([
   'sheffield',
 ])
 
-// Mirrors the hardcoded platform whitelist in
-// src/app/uk/[city]/[service]/[platform]/page.tsx — keep in sync.
-const VALID_PLATFORMS = new Set([
-  'shopify',
-  'woocommerce',
-  'webflow',
-  'wordpress',
-  'nextjs',
-  'framer',
-])
-
+// PR #3 (2026-05-27): The /uk/[city]/[service]/[platform] route was
+// deprecated and deleted. It generated ~450 templated doorway-pattern URLs
+// (15 dynamic cities × 6 services × ~5 platforms) that consumed crawl budget
+// without converting clicks (1 click across all UK in 90 days). Production
+// redirect /uk/:city/:service/:platform → /uk/:city/:service lives in
+// /public/_redirects. See audit-current-state/16_uk_framework_b_plus_plan_2026-05-27.md.
 const DYNAMIC_CITY_PAGE = 'src/app/uk/[city]/page.tsx'
 const DYNAMIC_CITY_SERVICE_PAGE = 'src/app/uk/[city]/[service]/page.tsx'
-const DYNAMIC_CITY_SERVICE_PLATFORM_PAGE = 'src/app/uk/[city]/[service]/[platform]/page.tsx'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const ukIndex: MetadataRoute.Sitemap[number] = {
@@ -98,25 +92,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   )
 
-  // City × service × platform — replicates the iteration shape of
-  // src/app/uk/[city]/[service]/[platform]/page.tsx's generateStaticParams,
-  // which (post-Patch #2) iterates dynamicCities, not all cities.
-  const cityServicePlatform: MetadataRoute.Sitemap = dynamicCities.flatMap((city) =>
-    services.flatMap((service) =>
-      (service.platforms || [])
-        .filter((p) => VALID_PLATFORMS.has(p))
-        .map((platform) => ({
-          url: `${SITE_URL}/uk/${city.slug}/${service.slug}/${platform}`,
-          lastModified: getMaxLastMod(
-            `src/data/uk/cities/${city.slug}.json`,
-            `src/data/uk/services/${service.slug}.json`,
-            DYNAMIC_CITY_SERVICE_PLATFORM_PAGE,
-          ),
-          changeFrequency: CHANGEFREQ.dynamic as ChangeFreq,
-          priority: PRIORITY.dynamic,
-        }))
-    )
-  )
+  // City × service × platform branch removed in PR #3 (2026-05-27).
+  // Production redirect handles inbound traffic to the deleted URLs.
 
   // Bespoke city × service pages — pipeline-generated landing pages that
   // live as static segments under src/app/uk/{city}/{service}/page.tsx.
@@ -139,7 +116,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ukIndex,
     ...cityHubs,
     ...cityService,
-    ...cityServicePlatform,
     ...bespokeCityService,
   ]
 }

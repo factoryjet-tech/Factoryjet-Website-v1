@@ -89,6 +89,22 @@
 # ── NEW INDIA SERVICE PAGES (2026-05-24) ─────────────────────────────────────
 # WordPress Development and n8n Automation pages at clean root-level URLs
 
+# ── UK PLATFORM ROUTE DEPRECATION (2026-05-27, PR #3) ───────────────────────
+# Kill the /uk/{city}/{service}/{platform} doorway-page pattern.
+# This route generated ~450 templated URLs (15 dynamic cities × 6 services
+# × ~5 platforms) that delivered 1 click in 90 days while consuming crawl
+# budget that should go to US pages.
+#
+# Redirect strategy: preserve city + service intent, drop only the platform
+# specificity. Mirrors the US ecommerce migration pattern below (one level
+# of URL collapse to the parent intent).
+#
+# NOTE: This is the FIRST placeholder rule in this file. Cloudflare Pages
+# _redirects supports :placeholder syntax per their docs. If this rule
+# fails to activate on first deploy, fall back to the 90 explicit rules
+# documented in audit-current-state/16_uk_framework_b_plus_plan_2026-05-27.md.
+/uk/:city/:service/:platform   /uk/:city/:service   301
+
 # ── US ECOMMERCE CITY URL MIGRATION (2026-05-19) ─────────────────────────────
 # Old service-first /us/services/ecommerce-development/{city}/
 # → New city-first /us/{city}/ecommerce-development/
