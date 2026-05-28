@@ -37,6 +37,7 @@ const sourceSerif = Source_Serif_4({
   variable: '--font-source-serif',
   display: 'swap',
   weight: ['400', '500', '600'],
+  preload: false,
   fallback: ['Georgia', 'serif'],
 })
 
@@ -50,6 +51,7 @@ const fraunces = Fraunces({
   variable: '--font-fraunces',
   display: 'swap',
   axes: ['SOFT', 'WONK', 'opsz'],
+  preload: false,
 })
 
 // Cormorant Garamond — editorial serif for v3 homepage hero headlines.
@@ -61,6 +63,7 @@ const cormorant = Cormorant_Garamond({
   display: 'swap',
   weight: ['400', '600'],
   style: ['normal', 'italic'],
+  preload: false,
   fallback: ['Georgia', 'serif'],
 })
 
@@ -128,11 +131,6 @@ export default function RootLayout({
         {/* Preconnect to critical origins */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-
-        {/* Clash Display — self-hosted woff2 (eliminates Fontshare CDN round-trip).
-            Preload the 700 weight first — it is the LCP font on all V2 hero headlines. */}
-        <link rel="preload" as="font" type="font/woff2" href="/fonts/clash-display-700.woff2" crossOrigin="anonymous" />
-        <link rel="preload" as="font" type="font/woff2" href="/fonts/clash-display-600.woff2" crossOrigin="anonymous" />
 
         {/* Structured Data - Organization Schema */}
         <Script
@@ -226,12 +224,15 @@ export default function RootLayout({
 
         {/* Google Ads — dual-account gtag.js (AW-11127037244 + AW-18185532850).
             Loaded directly because GTM only manages AW-11127037244 internally.
-            Both accounts must be configured so conversion events route correctly. */}
+            Both accounts must be configured so conversion events route correctly.
+            lazyOnload chosen because trackFormSubmission() (src/utils/gtm.ts) only
+            fires inside user form-submit handlers — always post window.load. Moves
+            ~205 ms of main-thread time out of the TBT window. */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-18185532850"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="gtag-dual-account-config" strategy="afterInteractive">
+        <Script id="gtag-dual-account-config" strategy="lazyOnload">
           {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-11127037244');gtag('config','AW-18185532850');`}
         </Script>
 
