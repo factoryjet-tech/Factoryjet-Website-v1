@@ -29,8 +29,8 @@
 /sitemap-blog.xml    /sitemap-blog/sitemap.xml    301
 
 # ── LEGACY PAGE RETIREMENT (Task C, 2026-05-14) ──────────────────────────────
-# NYC sub-pages: /services/ is thin; parent page covers same content
-/us/services/web-design/new-york/services   /us/services/web-design/new-york   301
+# NOTE: NYC /services rule moved to canonical block below (line ~58) to avoid
+# the redirect chain Cloudflare flagged on 2026-05-29 deploy.
 
 # ── US CITY HUB REDIRECTS ────────────────────────────────────────────────────
 # /us/{city} has no page.tsx — redirect to the city web-design landing page.
