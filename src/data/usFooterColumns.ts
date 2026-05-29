@@ -37,7 +37,7 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'Pricing',         href: '/us/pricing' },
       { label: 'Website Cost',    href: '/us/website-cost' },
       { label: 'FAQ',             href: '/us/faq' },
-      { label: 'Case Studies',    href: '/case' },
+      { label: 'Case Studies',    href: '/case-studies' },
       { label: 'Blog',            href: '/blog' },
       { label: 'Contact',         href: '/contact' },
     ],

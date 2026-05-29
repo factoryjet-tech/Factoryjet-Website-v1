@@ -1,7 +1,15 @@
 import type { MetadataRoute } from 'next'
 import { getAllAuthors } from '@/data/authors'
-import { CASE_STUDIES } from '@/lib/legacy-pages/Case/data.constants'
 import { getFileLastMod } from '@/lib/sitemap-helpers'
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Note: case studies were migrated 2026-05-28 to the new `/case-studies/`
+   route family per Report 26. The per-slug entries (and the index URL) are
+   now emitted by sitemap-case-studies/sitemap.ts using the new CASE_STUDIES
+   data source at src/data/case-studies/index.ts. The legacy `/case/` topNav
+   entry is removed from this sitemap — Bhavesh deletes the legacy /case
+   route after production verification of the 301 redirects.
+   ──────────────────────────────────────────────────────────────────────────── */
 
 export const dynamic = 'force-static'
 
@@ -33,7 +41,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/contact',   source: 'src/app/contact/page.tsx' },
     { path: '/portfolio', source: 'src/app/portfolio/page.tsx' },
     { path: '/pricing',   source: 'src/app/pricing/page.tsx' },
-    { path: '/case',      source: 'src/app/case/page.tsx' },
     { path: '/sitemap',   source: 'src/app/sitemap/page.tsx' },
   ]
 
@@ -49,15 +56,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${SITE_URL}/author/${a.slug}`,
     lastModified: authorsLastMod,
     changeFrequency: CHANGEFREQ.topNav as ChangeFreq,
-    priority: PRIORITY.dynamic,
-  }))
-
-  // All 20 case studies are driven by the same data file — share lastmod.
-  const casesLastMod = getFileLastMod('src/lib/legacy-pages/Case/data.constants.ts')
-  const cases = CASE_STUDIES.map((c) => ({
-    url: `${SITE_URL}/case/${c.slug}`,
-    lastModified: casesLastMod,
-    changeFrequency: CHANGEFREQ.dynamic as ChangeFreq,
     priority: PRIORITY.dynamic,
   }))
 
@@ -81,6 +79,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: PRIORITY.legal,
     })),
     ...authors,
-    ...cases,
   ]
 }

@@ -59,6 +59,16 @@ import { post as webDesignDenverCoSmallBusiness2026Post } from './posts/web-desi
 import { post as aiAgentsSmallBusinessUsa2026Post } from './posts/ai-agents-small-business-usa-2026';
 import { post as howMuchDoesWebsiteCostSmallBusinessUsa2026Post } from './posts/how-much-does-a-website-cost-small-business-usa-2026';
 import { post as websiteDevelopmentCostIndia2026Post } from './posts/website-development-cost-india-2026';
+import { post as shopifyVsWoocommerceUsSmallBusiness2026Post } from './posts/shopify-vs-woocommerce-us-small-business-2026';
+import { post as aiChatbotsVsAiAgentsBusinessPost } from './posts/ai-chatbots-vs-ai-agents-business';
+import { post as bestEcommercePlatformTampaBoutiquesDtc2026Post } from './posts/best-ecommerce-platform-tampa-boutiques-dtc-2026';
+import { post as customWebDevelopmentVsWordpressUsSmallBusiness2026Post } from './posts/custom-web-development-vs-wordpress-us-small-business-2026';
+import { post as boiseShopifyDevelopmentGuideIdahoSmallBusiness2026Post } from './posts/boise-shopify-development-guide-idaho-small-business-2026';
+import { post as nycB2bCorporateWebDesignGuide2026Post } from './posts/nyc-b2b-corporate-web-design-guide-2026';
+import { post as austinEcommerceCheckoutOptimization2026Post } from './posts/austin-ecommerce-checkout-optimization-2026';
+import { post as raleighShopifyTrainingSupportTriangleNc2026Post } from './posts/raleigh-shopify-training-support-triangle-nc-2026';
+import { post as customShopifyThemeDevelopmentUsBrands2026Post } from './posts/custom-shopify-theme-development-us-brands-2026';
+import { post as webflowVsWordpressUsSmallBusiness2026Post } from './posts/webflow-vs-wordpress-us-small-business-2026';
 
 export const POSTS: BlogPost[] = [
   // --- WEB DESIGN & STRATEGY ---
@@ -814,8 +824,8 @@ export const POSTS: BlogPost[] = [
   title: "Mobile-Only Design vs Responsive Design: The Complete 2026 Strategy Guide",
   excerpt: "Most users never open your site on a laptop. This guide compares mobile-only design and responsive design, explains why mobile-first is no longer optional, and covers the UX patterns that convert in 2026.",
   meta: {
-    title: "Mobile-Only vs Responsive Design: Which Wins in 2026?",
-    description: "Mobile-first indexing is live. This guide compares mobile-only and responsive design across UX, SEO, and conversion rate — with the 2026 verdict for US small businesses.",
+    title: "Mobile-Only vs Responsive Design: What's the Difference?",
+    description: "A plain-English 2026 comparison of mobile-only and responsive design — UX, performance, SEO, and when to pick which for your small business website.",
   },
   category: 'Web Design & Strategy',
   author: 'Bhavesh Barot',
@@ -4689,4 +4699,14 @@ export const POSTS: BlogPost[] = [
   aiAgentsSmallBusinessUsa2026Post,
   howMuchDoesWebsiteCostSmallBusinessUsa2026Post,
   websiteDevelopmentCostIndia2026Post,
+  shopifyVsWoocommerceUsSmallBusiness2026Post,
+  aiChatbotsVsAiAgentsBusinessPost,
+  bestEcommercePlatformTampaBoutiquesDtc2026Post,
+  customWebDevelopmentVsWordpressUsSmallBusiness2026Post,
+  boiseShopifyDevelopmentGuideIdahoSmallBusiness2026Post,
+  nycB2bCorporateWebDesignGuide2026Post,
+  austinEcommerceCheckoutOptimization2026Post,
+  raleighShopifyTrainingSupportTriangleNc2026Post,
+  customShopifyThemeDevelopmentUsBrands2026Post,
+  webflowVsWordpressUsSmallBusiness2026Post,
 ];

@@ -61,7 +61,7 @@ const IN_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
     links: [
       { label: 'About',        href: '/about' },
       { label: 'Portfolio',    href: '/portfolio' },
-      { label: 'Case Studies', href: '/case' },
+      { label: 'Case Studies', href: '/case-studies' },
       { label: 'Blog',         href: '/blog' },
       { label: 'Contact',      href: '/contact' },
     ],
@@ -101,7 +101,7 @@ const UAE_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
     links: [
       { label: 'About',        href: '/about' },
       { label: 'Portfolio',    href: '/portfolio' },
-      { label: 'Case Studies', href: '/case' },
+      { label: 'Case Studies', href: '/case-studies' },
       { label: 'Blog',         href: '/blog' },
       { label: 'Contact',      href: '/contact' },
     ],

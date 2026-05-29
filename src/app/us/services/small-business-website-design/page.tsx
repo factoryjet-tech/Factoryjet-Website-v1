@@ -877,6 +877,22 @@ export default function SmallBusinessWebDesignPage() {
           items={FAQ_ITEMS}
         />
 
+        {/* Related Reading — internal linking to blog posts */}
+        <section className="py-10 bg-[#FAFAF7]">
+          <div className="max-w-6xl mx-auto px-6">
+            <p className="text-sm font-semibold text-[#F05A28] uppercase tracking-widest mb-3">Related Reading</p>
+            <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">Keep learning before you commit</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <a href="/blog/nyc-b2b-corporate-web-design-guide-2026" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
+                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">NYC B2B corporate web design: lessons from 2026 builds</p>
+              </a>
+              <a href="/blog/custom-web-development-vs-wordpress-us-small-business-2026" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
+                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Custom web development vs WordPress: small business decision guide</p>
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* -- 14. FINAL CTA -------------------------------------------------- */}
         <FinalCTA
           variant="dark"

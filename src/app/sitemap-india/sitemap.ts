@@ -66,6 +66,13 @@ const INDIA_ECOMMERCE_CITIES = [
   'surat',
 ] as const
 
+// ── India SEO city pages (canonical: /seo/[city]) ────────────────────────────
+const INDIA_SEO_CITIES = [
+  'mumbai',
+  'bangalore',
+  'pune',
+] as const
+
 // ── India AI agent sub-pages ──────────────────────────────────────────────────
 const AI_SUB_PAGES = [
   'ai-chatbot',
@@ -133,7 +140,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: CHANGEFREQ.service as ChangeFreq,
       priority: PRIORITY.service,
     },
+    {
+      url: `${SITE_URL}/seo`,
+      lastModified: getFileLastMod('src/app/seo/page.tsx'),
+      changeFrequency: CHANGEFREQ.service as ChangeFreq,
+      priority: PRIORITY.service,
+    },
   ]
+
+  // ── India SEO city pages ─────────────────────────────────────────────────────
+  const seoCities: MetadataRoute.Sitemap = INDIA_SEO_CITIES.map((city) => ({
+    url: `${SITE_URL}/seo/${city}`,
+    lastModified: getFileLastMod(`src/app/seo/${city}/page.tsx`),
+    changeFrequency: CHANGEFREQ.city as ChangeFreq,
+    priority: PRIORITY.city,
+  }))
 
   // ── India ecommerce city pages ───────────────────────────────────────────────
   const ecommerceCities: MetadataRoute.Sitemap = INDIA_ECOMMERCE_CITIES.map((city) => ({
@@ -158,6 +179,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     webDesignHub,
     ...webDesignCities,
     ...serviceHubs,
+    ...seoCities,
     ...ecommerceCities,
     ...aiSubPages,
   ]

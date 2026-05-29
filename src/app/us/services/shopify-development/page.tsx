@@ -1251,6 +1251,25 @@ export default function ShopifyPage() {
           </div>
         </section>
 
+        {/* Related Reading — internal linking to blog posts */}
+        <section className="py-10 bg-[#FAFAF7]">
+          <div className="max-w-6xl mx-auto px-6">
+            <p className="text-sm font-semibold text-[#F05A28] uppercase tracking-widest mb-3">Related Reading</p>
+            <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">Keep learning before you commit</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <Link href="/blog/shopify-vs-woocommerce-us-small-business-2026" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
+                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Shopify vs WooCommerce for US small businesses in 2026</p>
+              </Link>
+              <Link href="/blog/boise-shopify-development-guide-idaho-small-business-2026" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
+                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Boise Shopify development for Idaho small businesses</p>
+              </Link>
+              <Link href="/blog/austin-ecommerce-checkout-optimization-2026" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
+                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Austin ecommerce checkout optimization playbook</p>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* ── 15. FINAL CTA ─────────────────────────────────────────────────── */}
         <div id="final-cta">
           <FinalCTA

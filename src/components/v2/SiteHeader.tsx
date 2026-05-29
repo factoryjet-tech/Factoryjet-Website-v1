@@ -160,7 +160,7 @@ const UAE_LOCATIONS = [
 
 const RESOURCES = [
   { icon: FileText,  label: 'Blog',         href: '/blog', desc: 'Expert insights & industry trends' },
-  { icon: BookOpen,  label: 'Case Studies',  href: '/case', desc: 'Real results from real projects' },
+  { icon: BookOpen,  label: 'Case Studies',  href: '/case-studies', desc: 'Real results from real projects' },
 ] as const;
 
 // ─── Locale config map ────────────────────────────────────────────────────────

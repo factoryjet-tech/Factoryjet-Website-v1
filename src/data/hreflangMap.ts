@@ -511,6 +511,33 @@ export const ecommerceCityAlternatesIN: Record<string, { 'en-IN': string; 'x-def
 } as const
 
 // ===========================================================================
+// SEO SERVICE PAGES (India only — no US/UAE equivalents yet)
+// Per CITY PAGE RULE: India-only pages emit only en-IN + x-default.
+// ===========================================================================
+
+/** /seo hub — India only. */
+export const seoHubAlternates = {
+  'en-IN': 'https://factoryjet.com/seo',
+  'x-default': 'https://factoryjet.com/seo',
+} as const
+
+/** /seo/[city] pages — India only. */
+export const seoCityAlternatesIN = {
+  mumbai: {
+    'en-IN': 'https://factoryjet.com/seo/mumbai',
+    'x-default': 'https://factoryjet.com/seo/mumbai',
+  },
+  bangalore: {
+    'en-IN': 'https://factoryjet.com/seo/bangalore',
+    'x-default': 'https://factoryjet.com/seo/bangalore',
+  },
+  pune: {
+    'en-IN': 'https://factoryjet.com/seo/pune',
+    'x-default': 'https://factoryjet.com/seo/pune',
+  },
+} as const
+
+// ===========================================================================
 // NEW YORK SUB-PAGES (US only)
 // ===========================================================================
 
