@@ -7,6 +7,7 @@ import { ContactModalProvider } from '../context/ContactModalContext'
 import Script from 'next/script'
 import ScrollToTop from '../components/ScrollToTop'
 import ConditionalContactModal from '../components/ConditionalContactModal'
+import ProductionAnalytics from '../components/ProductionAnalytics'
 
 // Plus Jakarta Sans — primary display font (Sprint 8, replaces Clash Display).
 // Geometric humanist sans: precise yet warm, professional for US SMB market.
@@ -203,14 +204,9 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-white text-slate-900 antialiased">
-        {/* Google Tag Manager - lazy load to minimize blocking / cookie impact */}
-        <Script id="google-tag-manager" strategy="lazyOnload">
-          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-PKWD8SHF');`}
-        </Script>
+        {/* Analytics (GTM + Google Ads) — loads on the production hostname only
+            so Cloudflare *.pages.dev preview deploys don't pollute GA4/Ads. */}
+        <ProductionAnalytics />
 
         {/* Google Tag Manager (noscript) */}
         <noscript>
@@ -222,19 +218,6 @@ export default function RootLayout({
           />
         </noscript>
 
-        {/* Google Ads — dual-account gtag.js (AW-11127037244 + AW-18185532850).
-            Loaded directly because GTM only manages AW-11127037244 internally.
-            Both accounts must be configured so conversion events route correctly.
-            lazyOnload chosen because trackFormSubmission() (src/utils/gtm.ts) only
-            fires inside user form-submit handlers — always post window.load. Moves
-            ~205 ms of main-thread time out of the TBT window. */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-18185532850"
-          strategy="lazyOnload"
-        />
-        <Script id="gtag-dual-account-config" strategy="lazyOnload">
-          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-11127037244');gtag('config','AW-18185532850');`}
-        </Script>
 
         <ContactModalProvider>
           <ScrollToTop />
