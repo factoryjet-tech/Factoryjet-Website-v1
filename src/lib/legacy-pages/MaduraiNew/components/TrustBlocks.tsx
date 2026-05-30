@@ -3,6 +3,7 @@ import { Star, ChevronDown, Rocket, Phone, MapPin, Mail } from 'lucide-react';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/firebase';
 import { TESTIMONIALS, FAQS, CONTACT } from '../data.constants';
+import LeadFormInline from '@/components/LeadFormInline';
 
 const SectionTitle = ({ title, subtitle }: { title: string; subtitle?: string }) => (
   <div className="text-center mb-12 px-4">
@@ -202,65 +203,12 @@ export const FinalCTA = () => {
 
         {/* Contact Form */}
         <div id="final-cta-form" className="mt-16 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 max-w-2xl mx-auto">
-          <h3 className="text-2xl font-bold mb-6">Or Send Us a Message</h3>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input
-                type="text"
-                id="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Your Name"
-                className="w-full h-12 px-4 rounded-lg border border-white/30 bg-white/20 text-white placeholder-white/70 focus:ring-2 focus:ring-white focus:border-transparent outline-none"
-                required
-              />
-              <input
-                type="tel"
-                id="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                placeholder="Phone Number"
-                className="w-full h-12 px-4 rounded-lg border border-white/30 bg-white/20 text-white placeholder-white/70 focus:ring-2 focus:ring-white focus:border-transparent outline-none"
-                required
-              />
-            </div>
-            <input
-              type="email"
-              id="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Email Address"
-              className="w-full h-12 px-4 rounded-lg border border-white/30 bg-white/20 text-white placeholder-white/70 focus:ring-2 focus:ring-white focus:border-transparent outline-none"
-              required
-            />
-            <textarea
-              id="message"
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Tell us about your project..."
-              rows={4}
-              className="w-full px-4 py-3 rounded-lg border border-white/30 bg-white/20 text-white placeholder-white/70 focus:ring-2 focus:ring-white focus:border-transparent outline-none resize-none"
-            />
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full h-12 bg-white text-[#0052CC] font-bold rounded-lg hover:bg-gray-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {isSubmitting ? 'Sending...' : 'Send Message'}
-            </button>
-
-            {submitStatus === 'success' && (
-              <div className="bg-green-500/20 border border-green-500/50 text-white px-4 py-2 rounded-lg text-sm">
-                Thank you! We'll contact you within 2 hours.
-              </div>
-            )}
-
-            {submitStatus === 'error' && (
-              <div className="bg-red-500/20 border border-red-500/50 text-white px-4 py-2 rounded-lg text-sm">
-                Something went wrong. Please try again.
-              </div>
-            )}
-          </form>
+          <LeadFormInline
+            region="in"
+            source="madurai_final_cta"
+            heading="Send us a message"
+            subheading="Just your name and email to start — we reply within 2 hours."
+          />
         </div>
       </div>
     </section>

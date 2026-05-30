@@ -2,6 +2,7 @@ import React, { useState, FormEvent } from 'react';
 import { Star, MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/firebase';
+import LeadFormInline from '@/components/LeadFormInline';
 
 const FAQ_DATA = [
   { q: "How much does website design cost in Pune?", a: "Website design in Pune typically costs between ₹15,000 and ₹5,00,000 depending on features, functionality, and project complexity. Basic business websites start from ₹15,000, while advanced e-commerce or custom platforms require a higher budget." },
@@ -224,55 +225,12 @@ export const FinalCTA = () => {
         </div>
 
         <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 max-w-2xl mx-auto mb-8">
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input
-                type="text"
-                placeholder="Your Name *"
-                value={formData.name}
-                onChange={(e) => setFormData({...formData, name: e.target.value})}
-                className="w-full bg-white/20 border border-white/30 rounded-lg px-4 py-3 text-white placeholder-blue-200 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all"
-                required
-              />
-              <input
-                type="tel"
-                placeholder="Phone Number *"
-                value={formData.phone}
-                onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                className="w-full bg-white/20 border border-white/30 rounded-lg px-4 py-3 text-white placeholder-blue-200 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all"
-                required
-              />
-            </div>
-            <input
-              type="email"
-              placeholder="Email Address *"
-              value={formData.email}
-              onChange={(e) => setFormData({...formData, email: e.target.value})}
-              className="w-full bg-white/20 border border-white/30 rounded-lg px-4 py-3 text-white placeholder-blue-200 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all"
-              required
-            />
-            <textarea
-              placeholder="Tell us about your project"
-              value={formData.message}
-              onChange={(e) => setFormData({...formData, message: e.target.value})}
-              rows={4}
-              className="w-full bg-white/20 border border-white/30 rounded-lg px-4 py-3 text-white placeholder-blue-200 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all"
-            ></textarea>
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full bg-jet-orange hover:bg-orange-600 text-white px-8 py-3.5 md:px-10 md:py-5 rounded-lg font-bold text-lg md:text-xl transition-all shadow-xl hover:shadow-orange-500/50 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {isSubmitting ? 'Submitting...' : 'Get Free Quote Today'}
-            </button>
-
-            {submitStatus === 'success' && (
-              <p className="text-green-300 text-sm text-center">Thank you! We'll contact you within 2 hours.</p>
-            )}
-            {submitStatus === 'error' && (
-              <p className="text-red-300 text-sm text-center">Something went wrong. Please try again.</p>
-            )}
-          </form>
+          <LeadFormInline
+            region="in"
+            source="pune_final_cta"
+            heading="Ready to launch your website?"
+            subheading="Just your name and email to start — we reply within 2 hours."
+          />
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">

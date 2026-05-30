@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Star, CheckCircle, ArrowRight } from 'lucide-react';
-import HeroForm from './HeroForm';
+import LeadFormInline from '@/components/LeadFormInline';
 
 // Official WhatsApp icon SVG
 const WhatsAppIcon: React.FC<{ size?: number; className?: string }> = ({
@@ -114,8 +114,15 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
                 </div>
 
                 {/* === RIGHT COLUMN (Contact Form) === */}
-                <div className={`flex justify-center items-center h-full relative transition-all duration-1000 delay-300 order-2 lg:order-2 ${mounted ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                    <HeroForm />
+                <div className={`flex justify-center items-center h-full relative transition-all duration-1000 delay-300 order-2 lg:order-2 w-full ${mounted ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+                    <div className="w-full">
+                      <LeadFormInline
+                        region="in"
+                        source="uae_hero"
+                        heading="Get a free consultation"
+                        subheading="Custom proposal in 2 hours — just your name and email."
+                      />
+                    </div>
                 </div>
 
             </div>

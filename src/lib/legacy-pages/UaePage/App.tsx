@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
+import { useContactModal } from '@/context/ContactModalContext';
 import Hero from './components/Hero';
 import AgencyInfo from './components/AgencyInfo';
 import WhyDubai from './components/WhyDubai';
@@ -14,7 +15,6 @@ import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import WhatsAppFloat from './components/WhatsAppFloat';
-import ContactModal from './components/ContactModal';
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -36,7 +36,7 @@ const faqSchema = {
 };
 
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { openModal } = useContactModal();
 
   return (
     <div className="font-sans antialiased text-navy bg-offwhite min-h-screen relative selection:bg-primary/30">
@@ -45,21 +45,20 @@ function App() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <main>
-        <Hero onOpenModal={() => setIsModalOpen(true)} />
+        <Hero onOpenModal={() => openModal('in')} />
         <AgencyInfo />
         <WhyDubai />
         <Services />
-        <Comparison onOpenModal={() => setIsModalOpen(true)} />
-        <Industries onOpenModal={() => setIsModalOpen(true)} />
+        <Comparison onOpenModal={() => openModal('in')} />
+        <Industries onOpenModal={() => openModal('in')} />
         <Process />
-        <Features onOpenModal={() => setIsModalOpen(true)} />
-        <SuccessStories onOpenModal={() => setIsModalOpen(true)} />
-        <Pricing onOpenModal={() => setIsModalOpen(true)} />
+        <Features onOpenModal={() => openModal('in')} />
+        <SuccessStories onOpenModal={() => openModal('in')} />
+        <Pricing onOpenModal={() => openModal('in')} />
         <FAQ />
       </main>
       <Contact />
       <WhatsAppFloat />
-      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }

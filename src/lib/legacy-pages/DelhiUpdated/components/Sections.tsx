@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { trackWhatsAppConversion } from '@/utils/gtm';
+import LeadFormInline from '@/components/LeadFormInline';
 import {
   Check, Star, MapPin, ArrowRight, Clock, Shield, Globe,
   Smartphone, BarChart3, Users, Zap, Layout, Code2,
@@ -85,67 +86,12 @@ export const HeroSection = () => {
           <div className="lg:col-span-5 w-full">
             <div className="glass-card p-5 lg:p-6 rounded-2xl relative overflow-hidden border border-white/20 shadow-2xl">
                 <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-jet-blue to-jet-orange"></div>
-                <div className="text-center mb-4">
-                  <h3 className="text-xl lg:text-2xl font-bold text-white mb-1 font-heading">Get Free Consultation</h3>
-                  <p className="text-blue-100 text-xs lg:text-sm opacity-90">Custom proposal in 2 hours. Starts at ₹29,999.</p>
-                </div>
-
-                <form onSubmit={handleSubmit} className="space-y-3">
-                  <div className="group">
-                    <input 
-                      type="text" name="name" placeholder="Full Name" required 
-                      className="w-full px-4 py-2.5 lg:px-5 lg:py-3 rounded-xl bg-white/95 border-2 border-transparent focus:border-jet-blue focus:ring-0 outline-none text-navy placeholder-gray-400 font-medium transition-all group-hover:bg-white min-h-[42px] text-sm"
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="group">
-                    <input 
-                      type="tel" name="phone" placeholder="Phone Number (+91)" required 
-                      className="w-full px-4 py-2.5 lg:px-5 lg:py-3 rounded-xl bg-white/95 border-2 border-transparent focus:border-jet-blue focus:ring-0 outline-none text-navy placeholder-gray-400 font-medium transition-all group-hover:bg-white min-h-[42px] text-sm"
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="group">
-                    <input 
-                      type="email" name="email" placeholder="Email Address" required 
-                      className="w-full px-4 py-2.5 lg:px-5 lg:py-3 rounded-xl bg-white/95 border-2 border-transparent focus:border-jet-blue focus:ring-0 outline-none text-navy placeholder-gray-400 font-medium transition-all group-hover:bg-white min-h-[42px] text-sm"
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="group">
-                    <select name="businessType" className="w-full px-4 py-2.5 lg:px-5 lg:py-3 rounded-xl bg-white/95 border-2 border-transparent focus:border-jet-blue focus:ring-0 outline-none text-navy font-medium transition-all group-hover:bg-white appearance-none min-h-[42px] text-sm" onChange={handleChange}>
-                      <option value="">Select Business Type</option>
-                      <option value="startup">Startup / Tech Company</option>
-                      <option value="ecommerce">E-Commerce / D2C Brand</option>
-                      <option value="enterprise">Enterprise / Corporate</option>
-                      <option value="manufacturing">Manufacturing Company</option>
-                      <option value="professional">Professional Services</option>
-                      <option value="healthcare">Healthcare / Clinic</option>
-                      <option value="realestate">Real Estate</option>
-                      <option value="education">Educational Institution</option>
-                      <option value="restaurant">Restaurant / Hospitality</option>
-                      <option value="other">Other Business</option>
-                    </select>
-                  </div>
-                  <div className="group">
-                    <select name="budget" className="w-full px-4 py-2.5 lg:px-5 lg:py-3 rounded-xl bg-white/95 border-2 border-transparent focus:border-jet-blue focus:ring-0 outline-none text-navy font-medium transition-all group-hover:bg-white appearance-none min-h-[42px] text-sm" onChange={handleChange}>
-                      <option value="">Select Budget Range</option>
-                      <option value="under50k">Under ₹50,000</option>
-                      <option value="50k-100k">₹50,000 - ₹1,00,000</option>
-                      <option value="100k-250k">₹1,00,000 - ₹2,50,000</option>
-                      <option value="above250k">Above ₹2,50,000</option>
-                    </select>
-                  </div>
-
-                  <button type="submit" className="w-full bg-jet-blue hover:bg-jet-blue-light text-white font-bold py-3 rounded-xl shadow-lg transform transition hover:scale-[1.02] active:scale-95 text-lg flex items-center justify-center min-h-[48px]">
-                    Get Free Quote Now
-                  </button>
-                  
-                  <div className="text-[10px] text-center text-blue-200 mt-2 flex items-center justify-center gap-1 opacity-80">
-                    <Shield size={12} /> 
-                    <span>100% Secure. No spam guaranteed.</span>
-                  </div>
-                </form>
+                <LeadFormInline
+                  region="in"
+                  source="delhi_hero"
+                  heading="Get a free consultation"
+                  subheading="Custom proposal in 2 hours — just your name and email."
+                />
             </div>
           </div>
         </div>

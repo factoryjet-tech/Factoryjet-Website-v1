@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Facebook, Instagram, Twitter, Linkedin, Mail, MapPin, ArrowRight, CheckCircle2, Clock, Calendar, Check } from 'lucide-react';
 import { trackFormSubmission } from '@/utils/gtm';
+import LeadFormInline from '@/components/LeadFormInline';
 
 const Contact: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -170,112 +171,12 @@ const Contact: React.FC = () => {
                             <p className="text-gray-400">We'll get back to you within 2 hours.</p>
                           </div>
                         ) : (
-                          <form className="space-y-5" onSubmit={handleSubmit}>
-                              <div>
-                                  <label className="sr-only">Full Name</label>
-                                  <input
-                                      type="text"
-                                      placeholder="Full Name *"
-                                      required
-                                      value={formData.name}
-                                      onChange={e => updateField('name', e.target.value)}
-                                      className="w-full bg-white border border-[#E2E8F0] text-[#0F172A] placeholder:text-gray-500 px-5 py-4 rounded-xl focus:outline-none focus:border-[#0052CC] focus:ring-4 focus:ring-[#0052CC]/10 transition-all"
-                                  />
-                              </div>
-
-                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                  <div>
-                                      <label className="sr-only">Email Address</label>
-                                      <input
-                                          type="email"
-                                          placeholder="Email Address *"
-                                          required
-                                          value={formData.email}
-                                          onChange={e => updateField('email', e.target.value)}
-                                          className="w-full bg-white border border-[#E2E8F0] text-[#0F172A] placeholder:text-gray-500 px-5 py-4 rounded-xl focus:outline-none focus:border-[#0052CC] focus:ring-4 focus:ring-[#0052CC]/10 transition-all"
-                                      />
-                                  </div>
-                                  <div>
-                                      <label className="sr-only">Phone Number</label>
-                                      <input
-                                          type="tel"
-                                          placeholder="Phone Number *"
-                                          required
-                                          value={formData.phone}
-                                          onChange={e => updateField('phone', e.target.value)}
-                                          className="w-full bg-white border border-[#E2E8F0] text-[#0F172A] placeholder:text-gray-500 px-5 py-4 rounded-xl focus:outline-none focus:border-[#0052CC] focus:ring-4 focus:ring-[#0052CC]/10 transition-all"
-                                      />
-                                  </div>
-                              </div>
-
-                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                  <div>
-                                      <label className="sr-only">Service</label>
-                                      <select
-                                        value={formData.service}
-                                        onChange={e => updateField('service', e.target.value)}
-                                        required
-                                        className="w-full bg-white border border-[#E2E8F0] text-[#0F172A] px-5 py-4 rounded-xl focus:outline-none focus:border-[#0052CC] focus:ring-4 focus:ring-[#0052CC]/10 transition-all"
-                                      >
-                                          <option value="" disabled>Select Service *</option>
-                                          <option value="Website Design">Website Design</option>
-                                          <option value="E-Commerce">E-Commerce</option>
-                                          <option value="Mobile App">Mobile App</option>
-                                          <option value="AMC / Support">AMC / Support</option>
-                                      </select>
-                                  </div>
-                                  <div>
-                                      <label className="sr-only">Budget</label>
-                                      <select
-                                        value={formData.budget}
-                                        onChange={e => updateField('budget', e.target.value)}
-                                        className="w-full bg-white border border-[#E2E8F0] text-[#0F172A] px-5 py-4 rounded-xl focus:outline-none focus:border-[#0052CC] focus:ring-4 focus:ring-[#0052CC]/10 transition-all"
-                                      >
-                                          <option value="" disabled>Est. Budget</option>
-                                          <option value="Under AED 15k">Under AED 15k</option>
-                                          <option value="AED 15k - 30k">AED 15k - 30k</option>
-                                          <option value="AED 30k - 50k">AED 30k - 50k</option>
-                                          <option value="AED 50k+">AED 50k+</option>
-                                      </select>
-                                  </div>
-                              </div>
-
-                              <div>
-                                  <label className="sr-only">Message</label>
-                                  <textarea
-                                      placeholder="Tell us about your project..."
-                                      rows={4}
-                                      value={formData.message}
-                                      onChange={e => updateField('message', e.target.value)}
-                                      className="w-full bg-white border border-[#E2E8F0] text-[#0F172A] placeholder:text-gray-500 px-5 py-4 rounded-xl focus:outline-none focus:border-[#0052CC] focus:ring-4 focus:ring-[#0052CC]/10 transition-all resize-none"
-                                  ></textarea>
-                              </div>
-
-                              {error && (
-                                <div className="bg-red-500/10 border border-red-500/20 text-red-400 px-4 py-3 rounded-lg text-sm">
-                                  {error}
-                                </div>
-                              )}
-
-                              <button
-                                type="submit"
-                                disabled={isSubmitting}
-                                className="w-full bg-[#FF6B35] hover:bg-[#e55a28] text-white font-bold py-4 rounded-xl shadow-[0_4px_14px_rgba(255,107,53,0.4)] hover:shadow-[0_6px_20px_rgba(255,107,53,0.6)] hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
-                              >
-                                  {isSubmitting ? (
-                                    <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>
-                                  ) : (
-                                    <>
-                                      Get Free Consultation
-                                      <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-                                    </>
-                                  )}
-                              </button>
-
-                              <p className="text-center text-xs text-gray-500 mt-4">
-                                  100% Privacy Guaranteed. No spam.
-                              </p>
-                          </form>
+                          <LeadFormInline
+                            region="in"
+                            source="uae_contact"
+                            heading="Get a free consultation"
+                            subheading="Just your name and email to start — we reply within 2 hours."
+                          />
                         )}
                     </div>
                 </div>

@@ -5,7 +5,8 @@ import { Hero, SocialProof, EntityBlock, Problems, Solution } from './components
 import { Services, Process, TechStack, Pricing, Industries } from './components/ServicesAndOfferings';
 import { CaseStudies, Testimonials, FAQ, LocalSEO, FinalCTA } from './components/SocialProofAndFooter';
 // import { CaseStudies, Testimonials, FAQ, LocalSEO, FinalCTA, Footer } from './components/SocialProofAndFooter'; // Commented out Footer - using global Footer instead
-import { StickyWhatsApp, ExitIntentPopup } from './components/MarketingOverlays';
+import { StickyWhatsApp } from './components/MarketingOverlays';
+import ExitIntentLeadForm from '@/components/ExitIntentLeadForm';
 
 function HyderabadPage() {
   const schemaMarkup = {
@@ -104,7 +105,7 @@ function HyderabadPage() {
       <LocalSEO />
       <FinalCTA />
       <StickyWhatsApp />
-      <ExitIntentPopup />
+      <ExitIntentLeadForm region="in" source="hyderabad_exit" />
     </main>
   );
 }

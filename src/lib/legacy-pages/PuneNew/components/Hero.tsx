@@ -1,54 +1,8 @@
-import React, { useState, FormEvent } from 'react';
+import React from 'react';
 import { Check, MessageSquare } from 'lucide-react';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-import { db } from '@/firebase';
+import LeadFormInline from '@/components/LeadFormInline';
 
 export const Hero = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    websiteType: '',
-    budget: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-
-    try {
-      // Using direct db import
-      // Direct db usage
-
-      await addDoc(collection(db, 'pune_leads'), {
-        ...formData,
-        source: 'Hero Form',
-        timestamp: serverTimestamp(),
-        page: 'Pune'
-      });
-
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        phone: '',
-        email: '',
-        websiteType: '',
-        budget: ''
-      });
-
-      setTimeout(() => setSubmitStatus('idle'), 5000);
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      setSubmitStatus('error');
-      setTimeout(() => setSubmitStatus('idle'), 5000);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <section className="relative pt-24 pb-12 lg:pt-30 lg:pb-32 overflow-hidden bg-white min-h-screen flex items-center">
       <div className="absolute inset-0 bg-gradient-to-br from-[#F0F5FF] via-white to-white z-0"></div>
@@ -91,89 +45,17 @@ export const Hero = () => {
           </div>
         </div>
 
-        <div className="order-2 lg:col-span-5 w-full">
-          <div className="bg-white p-6 md:p-8 rounded-2xl shadow-xl border border-jet-light">
-            <h3 className="text-xl md:text-2xl font-heading font-bold text-jet-navy mb-2">Get Free Consultation</h3>
-            <p className="text-jet-gray mb-6 text-xs md:text-sm">Custom proposal in 2 hours. Starts at ₹15,000.</p>
-
-            <form onSubmit={handleSubmit} className="space-y-3 md:space-y-4">
-              <div>
-                <input
-                  type="text"
-                  placeholder="Full Name *"
-                  value={formData.name}
-                  onChange={(e) => setFormData({...formData, name: e.target.value})}
-                  className="w-full bg-jet-white border border-jet-light rounded-lg px-4 py-3 text-jet-navy placeholder-jet-gray focus:outline-none focus:border-jet-blue focus:ring-1 focus:ring-jet-blue transition-all text-sm md:text-base"
-                  required
-                />
-              </div>
-              <div>
-                <input
-                  type="email"
-                  placeholder="Business Email *"
-                  value={formData.email}
-                  onChange={(e) => setFormData({...formData, email: e.target.value})}
-                  className="w-full bg-jet-white border border-jet-light rounded-lg px-4 py-3 text-jet-navy placeholder-jet-gray focus:outline-none focus:border-jet-blue focus:ring-1 focus:ring-jet-blue transition-all text-sm md:text-base"
-                  required
-                />
-              </div>
-              <div>
-                <input
-                  type="tel"
-                  placeholder="Phone Number (+91) *"
-                  value={formData.phone}
-                  onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                  className="w-full bg-jet-white border border-jet-light rounded-lg px-4 py-3 text-jet-navy placeholder-jet-gray focus:outline-none focus:border-jet-blue focus:ring-1 focus:ring-jet-blue transition-all text-sm md:text-base"
-                  required
-                />
-              </div>
-              <div>
-                <select
-                  value={formData.websiteType}
-                  onChange={(e) => setFormData({...formData, websiteType: e.target.value})}
-                  className="w-full bg-jet-white border border-jet-light rounded-lg px-4 py-3 text-jet-navy focus:outline-none focus:border-jet-blue focus:ring-1 focus:ring-jet-blue transition-all appearance-none cursor-pointer text-sm md:text-base"
-                >
-                  <option value="">Select Website Type</option>
-                  <option value="business">Business Website</option>
-                  <option value="ecommerce">E-commerce / Shopify</option>
-                  <option value="portfolio">Portfolio</option>
-                  <option value="custom">Custom Web App</option>
-                </select>
-              </div>
-              <div>
-                <select
-                  value={formData.budget}
-                  onChange={(e) => setFormData({...formData, budget: e.target.value})}
-                  className="w-full bg-jet-white border border-jet-light rounded-lg px-4 py-3 text-jet-navy focus:outline-none focus:border-jet-blue focus:ring-1 focus:ring-jet-blue transition-all appearance-none cursor-pointer text-sm md:text-base"
-                >
-                  <option value="">Budget Range</option>
-                  <option value="15-30">₹15K - ₹30K</option>
-                  <option value="30-50">₹30K - ₹50K</option>
-                  <option value="50-100">₹50K - ₹1L</option>
-                  <option value="100+">₹1L+</option>
-                </select>
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-jet-blue hover:bg-blue-700 text-white font-bold py-3.5 md:py-4 rounded-lg shadow-lg hover:shadow-blue-500/30 transition-all mt-2 text-sm md:text-base disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isSubmitting ? 'Submitting...' : 'Get Free Quote Now'}
-              </button>
-
-              {submitStatus === 'success' && (
-                <p className="text-green-600 text-sm text-center">Thank you! We'll contact you within 2 hours.</p>
-              )}
-              {submitStatus === 'error' && (
-                <p className="text-red-600 text-sm text-center">Something went wrong. Please try again.</p>
-              )}
-
-              <p className="text-[10px] md:text-xs text-jet-gray text-center mt-2 md:mt-3">Your data is 100% secure. Response in 2 hours.</p>
-            </form>
-          </div>
+        <div className="order-2 lg:col-span-5 w-full" id="contact">
+          <LeadFormInline
+            region="in"
+            source="pune_hero"
+            heading="Get a free consultation"
+            subheading="Custom proposal in 2 hours — just your name and email."
+          />
         </div>
       </div>
     </section>
   );
 };
+
+export default Hero;

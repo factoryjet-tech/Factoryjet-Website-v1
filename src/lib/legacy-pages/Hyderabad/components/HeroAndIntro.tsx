@@ -2,71 +2,18 @@ import React from 'react';
 import { CheckCircle, ArrowRight, ShieldCheck, Star, Clock, Lock, XCircle, TrendingDown, Smartphone, MessageCircle } from 'lucide-react';
 import { SITE_DATA } from '../data.constants';
 import AuthorByline from '@/components/AuthorByline';
+import LeadFormInline from '@/components/LeadFormInline';
 
 // --- Components ---
 
 const LeadCaptureForm = ({ className = "" }: { className?: string }) => (
-  <div className={`backdrop-blur-xl bg-white/10 rounded-2xl shadow-2xl p-6 lg:p-8 border border-white/20 relative overflow-hidden group hover:border-white/30 transition-all duration-500 ${className}`}>
-    {/* Top Accent Line */}
-    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-jet-blue via-jet-orange to-jet-green"></div>
-    
-    <div className="mb-6">
-      <h3 className="text-2xl font-heading font-bold text-white mb-2">Get Free Consultation</h3>
-      <p className="text-sm text-blue-100/90 font-medium">Custom proposal in 2 hours. <span className="text-jet-green font-bold">100% Free.</span></p>
-    </div>
-
-    <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-      <div className="space-y-4">
-        <input 
-          type="text" 
-          placeholder="Your Name" 
-          required 
-          className="w-full px-4 py-3.5 rounded-lg border border-white/20 bg-gray-50 text-jet-navy placeholder-gray-500 focus:border-jet-blue focus:ring-4 focus:ring-jet-blue/20 outline-none transition-all font-medium backdrop-blur-sm shadow-inner" 
-        />
-        <input 
-          type="tel" 
-          placeholder="Phone Number" 
-          required 
-          className="w-full px-4 py-3.5 rounded-lg border border-white/20 bg-gray-50 text-jet-navy placeholder-gray-500 focus:border-jet-blue focus:ring-4 focus:ring-jet-blue/20 outline-none transition-all font-medium backdrop-blur-sm shadow-inner" 
-        />
-        <input 
-          type="email" 
-          placeholder="Email Address" 
-          className="w-full px-4 py-3.5 rounded-lg border border-white/20 bg-gray-50 text-jet-navy placeholder-gray-500 focus:border-jet-blue focus:ring-4 focus:ring-jet-blue/20 outline-none transition-all font-medium backdrop-blur-sm shadow-inner" 
-        />
-        <div className="grid grid-cols-2 gap-4">
-          <select className="w-full px-4 py-3.5 rounded-lg border border-white/20 bg-gray-50 text-jet-navy focus:border-jet-blue focus:ring-4 focus:ring-jet-blue/20 outline-none transition-all cursor-pointer font-medium appearance-none shadow-inner">
-            <option>IT Services</option>
-            <option>SaaS / Startup</option>
-            <option>Pharma</option>
-            <option>Healthcare</option>
-            <option>Retail / Ecom</option>
-            <option>Other</option>
-          </select>
-          <select className="w-full px-4 py-3.5 rounded-lg border border-white/20 bg-gray-50 text-jet-navy focus:border-jet-blue focus:ring-4 focus:ring-jet-blue/20 outline-none transition-all cursor-pointer font-medium appearance-none shadow-inner">
-            <option>Budget?</option>
-            <option>&lt; ₹50k</option>
-            <option>₹50k - ₹1L</option>
-            <option>₹1L - ₹3L</option>
-            <option>&gt; ₹3L</option>
-          </select>
-        </div>
-      </div>
-
-      <button type="submit" className="w-full bg-jet-orange text-white py-4 rounded-lg font-bold hover:bg-[#ff7a47] transition-all shadow-lg shadow-jet-orange/20 hover:shadow-jet-orange/40 transform hover:-translate-y-0.5 flex items-center justify-center gap-2 text-lg mt-2 group-hover:scale-[1.02] duration-300 ring-2 ring-transparent focus:ring-white">
-        Get Free Consultation <ArrowRight size={20} />
-      </button>
-      
-      {/* Trust Badges under Form */}
-      <div className="flex items-center justify-center gap-6 pt-5 border-t border-white/10 mt-2">
-        <div className="flex items-center gap-1.5 text-[11px] text-blue-100/80 font-bold tracking-wide uppercase">
-          <Lock size={12} className="text-jet-green" /> SSL Secure
-        </div>
-        <div className="flex items-center gap-1.5 text-[11px] text-blue-100/80 font-bold tracking-wide uppercase">
-          <ShieldCheck size={12} className="text-jet-blue" /> Privacy Guaranteed
-        </div>
-      </div>
-    </form>
+  <div className={className}>
+    <LeadFormInline
+      region="in"
+      source="hyderabad_hero"
+      heading="Get a free consultation"
+      subheading="Custom proposal in 2 hours — just your name and email."
+    />
   </div>
 );
 

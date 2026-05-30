@@ -4,6 +4,7 @@ import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/firebase';
 import { TRUST_INDICATORS, CONTACT } from '../data.constants';
 import AuthorByline from '@/components/AuthorByline';
+import LeadFormInline from '@/components/LeadFormInline';
 
 export const Hero = () => {
   const [formData, setFormData] = useState({
@@ -100,88 +101,12 @@ export const Hero = () => {
           {/* Right Form - Glassmorphism */}
           <div className="w-full lg:w-2/5">
             <div className="bg-white/40 backdrop-blur-xl border border-white/50 rounded-2xl shadow-2xl p-5 md:p-8">
-              <h3 className="text-2xl font-bold text-[#0F172A] mb-2">Get Free Consultation</h3>
-              <p className="text-sm text-[#64748B] mb-4">Custom proposal in 2 hours. Starts at ₹15,000.</p>
-
-              <form className="space-y-3" onSubmit={handleSubmit}>
-                <input
-                  type="text"
-                  id="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Your Name"
-                  className="w-full h-10 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0052CC] focus:border-transparent bg-white/80"
-                  required
-                />
-                <input
-                  type="tel"
-                  id="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  placeholder="Phone Number (+91)"
-                  className="w-full h-10 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0052CC] focus:border-transparent bg-white/80"
-                  required
-                />
-                <input
-                  type="email"
-                  id="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Email Address"
-                  className="w-full h-10 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0052CC] focus:border-transparent bg-white/80"
-                  required
-                />
-
-                <select
-                  id="businessType"
-                  value={formData.businessType}
-                  onChange={handleChange}
-                  className="w-full h-10 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0052CC] focus:border-transparent bg-white/80"
-                >
-                  <option value="">Select Business Type</option>
-                  <option>Retail / Shop</option>
-                  <option>Manufacturing</option>
-                  <option>Healthcare</option>
-                  <option>Education</option>
-                  <option>Other</option>
-                </select>
-
-                <select
-                  id="budget"
-                  value={formData.budget}
-                  onChange={handleChange}
-                  className="w-full h-10 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0052CC] focus:border-transparent bg-white/80"
-                >
-                  <option value="">Budget Range</option>
-                  <option>Under ₹50,000</option>
-                  <option>₹50,000 - ₹1 Lakh</option>
-                  <option>Above ₹1 Lakh</option>
-                </select>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full text-lg shadow-blue-200 h-12 inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 px-6 py-3 min-h-[44px] cursor-pointer bg-[#0052CC] text-white hover:bg-blue-700 shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? 'Submitting...' : 'Get Free Quote Now'}
-                </button>
-
-                {submitStatus === 'success' && (
-                  <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-2 rounded-lg text-sm">
-                    Thank you! We'll contact you within 2 hours.
-                  </div>
-                )}
-
-                {submitStatus === 'error' && (
-                  <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-2 rounded-lg text-sm">
-                    Something went wrong. Please try again.
-                  </div>
-                )}
-
-                <p className="text-xs text-center text-gray-500 flex items-center justify-center pt-1">
-                  <span className="mr-1">🔒</span> Your data is 100% secure.
-                </p>
-              </form>
+              <LeadFormInline
+                region="in"
+                source="madurai_hero"
+                heading="Get a free consultation"
+                subheading="Custom proposal in 2 hours — just your name and email."
+              />
             </div>
           </div>
         </div>

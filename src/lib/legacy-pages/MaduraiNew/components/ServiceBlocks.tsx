@@ -3,6 +3,7 @@ import { Clock, Check, Search, Layout, Code, Rocket } from 'lucide-react';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/firebase';
 import { SERVICES, PRICING_TABS } from '../data.constants';
+import LeadFormInline from '@/components/LeadFormInline';
 
 const SectionTitle = ({ title, subtitle }: { title: string; subtitle?: string }) => (
   <div className="text-center mb-12 px-4">
@@ -141,67 +142,12 @@ export const Services = () => {
               </div>
 
               <div className="p-6 md:p-8 overflow-y-auto custom-scrollbar">
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Full Name</label>
-                    <input
-                      type="text"
-                      id="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="Eg. Suresh Kumar"
-                      className="w-full h-11 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0052CC] focus:border-transparent bg-gray-50 focus:bg-white transition-all outline-none"
-                      required
-                    />
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Phone Number</label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        placeholder="+91 98765 43210"
-                        className="w-full h-11 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0052CC] focus:border-transparent bg-gray-50 focus:bg-white transition-all outline-none"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Email Address</label>
-                      <input
-                        type="email"
-                        id="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        placeholder="name@company.com"
-                        className="w-full h-11 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#0052CC] focus:border-transparent bg-gray-50 focus:bg-white transition-all outline-none"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full text-lg shadow-lg shadow-blue-200/50 mt-4 h-12 relative overflow-hidden inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 px-6 py-3 bg-[#0052CC] text-white hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    {isSubmitting ? 'Submitting...' : 'Get My Custom Proposal'}
-                  </button>
-
-                  {submitStatus === 'success' && (
-                    <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-2 rounded-lg text-sm">
-                      Thank you! We'll contact you within 2 hours.
-                    </div>
-                  )}
-
-                  {submitStatus === 'error' && (
-                    <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-2 rounded-lg text-sm">
-                      Something went wrong. Please try again.
-                    </div>
-                  )}
-                </form>
+                <LeadFormInline
+                  region="in"
+                  source="madurai_service_quote"
+                  heading="Get your custom proposal"
+                  subheading="Just your name and email to start — we respond within 2 hours."
+                />
               </div>
             </div>
           </div>

@@ -4,6 +4,7 @@ import Button from './Button';
 import { Check, ArrowRight, Star, ShieldCheck, CreditCard, Lock, MessageCircle } from 'lucide-react';
 import { TRUST_BADGES } from '../constant';
 import AuthorByline from '@/components/AuthorByline';
+import LeadFormInline from '@/components/LeadFormInline';
 
 const Hero: React.FC = () => {
   return (
@@ -87,33 +88,12 @@ const Hero: React.FC = () => {
             >
               <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-jet-blue via-jet-orange to-jet-green" />
               
-              <h3 className="text-xl sm:text-2xl font-bold font-heading mb-2 text-jet-navy">Get Free Consultation</h3>
-              <p className="text-jet-slate text-sm mb-6">Response within 2 hours. Enterprise quality, SMB pricing.</p>
-
-              <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-                <div>
-                  <input type="text" placeholder="Your Name" className="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-jet-navy placeholder-slate-400 focus:outline-none focus:border-jet-blue focus:ring-1 focus:ring-jet-blue transition-colors shadow-sm" />
-                </div>
-                <div>
-                  <input type="tel" placeholder="Phone Number" className="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-jet-navy placeholder-slate-400 focus:outline-none focus:border-jet-blue focus:ring-1 focus:ring-jet-blue transition-colors shadow-sm" />
-                </div>
-                <div>
-                  <input type="email" placeholder="Email Address" className="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-jet-navy placeholder-slate-400 focus:outline-none focus:border-jet-blue focus:ring-1 focus:ring-jet-blue transition-colors shadow-sm" />
-                </div>
-                <div>
-                  <select className="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 text-jet-navy placeholder-slate-400 focus:outline-none focus:border-jet-blue focus:ring-1 focus:ring-jet-blue transition-colors appearance-none shadow-sm">
-                     <option>Select Business Type</option>
-                     <option>Startup / Small Business</option>
-                     <option>Corporate / Enterprise</option>
-                     <option>E-Commerce</option>
-                     <option>Other</option>
-                  </select>
-                </div>
-                
-                <Button variant="primary" className="w-full py-4 text-lg font-bold group shadow-jet-blue/30">
-                  Get Free Consultation <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-                </Button>
-              </form>
+              <LeadFormInline
+                region="in"
+                source="chennai_hero"
+                heading="Get a free consultation"
+                subheading="Response within 2 hours — just your name and email."
+              />
               
               <div className="mt-6 pt-4 border-t border-slate-200/60">
                  <p className="text-[10px] uppercase tracking-wider text-center text-slate-400 mb-2 font-bold">100% Secure & Confidential</p>

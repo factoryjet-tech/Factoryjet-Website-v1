@@ -3,6 +3,7 @@ import { Check, MapPin, TrendingUp, Users, ShieldCheck, Zap } from 'lucide-react
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/firebase';
 import { trackWhatsAppConversion } from '@/utils/gtm';
+import LeadFormInline from '@/components/LeadFormInline';
 
 export const Hero = () => {
   const [formData, setFormData] = useState({
@@ -118,118 +119,12 @@ export const Hero = () => {
               <div className="absolute -top-6 -right-6 bg-[#0052CC] text-white px-4 py-2 rounded-lg font-bold shadow-lg transform rotate-3">
                 Response in 2 hrs
               </div>
-              <h3 className="text-2xl font-bold text-[#0F172A] mb-1">Get Free Consultation</h3>
-              <p className="text-slate-700 mb-6 font-medium text-lg">Custom proposal in 2 hours. Starts at ₹29,999.</p>
-
-              {submitStatus === 'success' && (
-                <div className="mb-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 font-medium">
-                  Thank you! We'll contact you within 2 hours.
-                </div>
-              )}
-
-              {submitStatus === 'error' && (
-                <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800 font-medium">
-                  Something went wrong. Please try again.
-                </div>
-              )}
-
-              <form className="space-y-4" onSubmit={handleSubmit}>
-                <div>
-                  <label htmlFor="name" className="block text-sm font-bold text-slate-800 mb-1">Your Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-900 placeholder-slate-500 focus:border-[#0052CC] focus:ring-4 focus:ring-blue-500/10 outline-none transition-all"
-                    placeholder="Enter your full name"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-bold text-slate-800 mb-1">Phone Number</label>
-                  <div className="relative">
-                    <span className="absolute left-4 top-3.5 text-slate-600 font-bold border-r border-slate-200 pr-2">+91</span>
-                    <input
-                      type="tel"
-                      id="phone"
-                      required
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full pl-16 pr-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-900 placeholder-slate-500 focus:border-[#0052CC] focus:ring-4 focus:ring-blue-500/10 outline-none transition-all"
-                      placeholder="Mobile number"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-bold text-slate-800 mb-1">Email Address</label>
-                  <input
-                    type="email"
-                    id="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-900 placeholder-slate-500 focus:border-[#0052CC] focus:ring-4 focus:ring-blue-500/10 outline-none transition-all"
-                    placeholder="name@company.com"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="businessType" className="block text-sm font-bold text-slate-800 mb-1">Select Business Type</label>
-                  <select
-                    id="businessType"
-                    required
-                    value={formData.businessType}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-900 focus:border-[#0052CC] focus:ring-4 focus:ring-blue-500/10 outline-none transition-all"
-                  >
-                    <option value="">Select type...</option>
-                    <option>Startup / Tech Company</option>
-                    <option>E-Commerce / D2C Brand</option>
-                    <option>Enterprise / Corporate</option>
-                    <option>Manufacturing Company</option>
-                    <option>Professional Services</option>
-                    <option>Healthcare / Clinic</option>
-                    <option>Real Estate</option>
-                    <option>Educational Institution</option>
-                    <option>Restaurant / Hospitality</option>
-                    <option>Other Business</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="budget" className="block text-sm font-bold text-slate-800 mb-1">Budget Range</label>
-                  <select
-                    id="budget"
-                    required
-                    value={formData.budget}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-slate-900 focus:border-[#0052CC] focus:ring-4 focus:ring-blue-500/10 outline-none transition-all"
-                  >
-                    <option value="">Select range...</option>
-                    <option>Under ₹50,000</option>
-                    <option>₹50,000 - ₹1,00,000</option>
-                    <option>₹1,00,000 - ₹2,50,000</option>
-                    <option>Above ₹2,50,000</option>
-                  </select>
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-[#0052CC] hover:bg-blue-700 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-blue-900/20 transition-all mt-4 transform active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? 'Submitting...' : 'Get Free Quote Now'}
-                </button>
-
-                <div className="text-center mt-4">
-                    <p className="text-xs text-slate-600 flex items-center justify-center gap-1 font-medium">
-                    <ShieldCheck className="w-3 h-3" /> Data is 100% secure. No spam.
-                    </p>
-                </div>
-              </form>
+              <LeadFormInline
+                region="in"
+                source="bangalore_hero"
+                heading="Get a free consultation"
+                subheading="Custom proposal in 2 hours — just your name and email."
+              />
             </div>
           </div>
 

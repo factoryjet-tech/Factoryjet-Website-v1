@@ -16,7 +16,7 @@ import CaseStudies from './components/CaseStudies';
 import FinalCTA from './components/FinalCTA';
 import GlassCard from './components/GlassCard';
 import StickyWhatsApp from './components/StickyWhatsApp';
-import ExitIntentModal from './components/ExitIntentModal';
+import ExitIntentLeadForm from '@/components/ExitIntentLeadForm';
 import { INDUSTRIES, TESTIMONIALS } from './constant';
 import { Star } from 'lucide-react';
 
@@ -196,8 +196,8 @@ function ChennaiPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <StickyWhatsApp />
-      <ExitIntentModal />
-      
+      <ExitIntentLeadForm region="in" source="chennai_exit" />
+
       <Hero />
       <SocialProof />
       <AboutEntity />
