@@ -170,7 +170,7 @@ export default function EcommerceSeoPage() {
 
         <BigThreeTrustBlock eyebrow="BY THE NUMBERS" headline="500+ sites done. 4.9 average rating. Ecommerce SEO that gets your store found." />
 
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="WHAT'S INCLUDED"
           headline="What We Actually Do for Your Store"
           lead="Getting an online store found is not one trick. Google has to find your best pages, read them easily, and trust them enough to show them when people are ready to buy. We work on all the parts that matter for a store. Here is everything we cover."
@@ -272,7 +272,7 @@ export default function EcommerceSeoPage() {
           footer="FactoryJet plans run month to month, with 30 days notice to pause or stop."
         />
 
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="ECOMMERCE SEO BY CITY"
           headline="Want Ecommerce SEO Built for Your City?"
           lead="This page explains what ecommerce SEO is. If you want work built for your own city, where we know the market and how people search, start here."
@@ -286,7 +286,7 @@ export default function EcommerceSeoPage() {
           ]}
         />
 
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="WHO IT'S FOR"
           headline="Ecommerce SEO for Stores That Want to Sell More"
           lead="If you sell online, ecommerce SEO is the steadiest way to turn searches into sales without paying for every click. These are the stores we help most."

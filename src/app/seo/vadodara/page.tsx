@@ -297,7 +297,7 @@ export default function VadodaraSeoPage() {
           footer="FactoryJet SEO plans run month to month, with 30 days notice to pause or stop."
         />
 
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="VADODARA × SEO"
           headline="SEO for Vadodara's Key Industries"
           lead="From Makarpura power equipment to Nandesari chemicals to Halol pharma, Vadodara's industries compete on very different searches. FactoryJet has done SEO for technical, business buyers."

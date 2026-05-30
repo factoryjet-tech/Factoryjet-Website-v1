@@ -170,7 +170,7 @@ export default function SeoAuditPage() {
 
         <BigThreeTrustBlock eyebrow="BY THE NUMBERS" headline="500+ sites done. 4.9 average rating. An SEO audit that tells you the truth." />
 
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="WHAT'S INCLUDED"
           headline="What We Actually Check for You"
           lead="A good audit is not one quick scan. Where you rank comes down to lots of moving parts working together. We check all the parts that matter, then explain what we find in plain words. Here is everything we look at."
@@ -271,7 +271,7 @@ export default function SeoAuditPage() {
           footer="The first SEO audit check is free, with no strings. Any deeper work is priced up front, with no long contract."
         />
 
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="WHO IT'S FOR"
           headline="Who an SEO Audit Is For"
           lead="If you are not sure why your website is not getting customers, a check is the fastest way to find out. These are the situations where an audit helps most."

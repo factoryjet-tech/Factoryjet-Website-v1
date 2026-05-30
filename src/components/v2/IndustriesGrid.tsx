@@ -34,6 +34,14 @@ export interface IndustriesGridProps {
   headline?: ReactNode;
   lead?: string;
   sectors?: ReadonlyArray<IndustryCard>;
+  /**
+   * Render mode.
+   *  - undefined / 'showcase' (default): the hardcoded US "Industries We Serve"
+   *    block. Used by ~95 existing pages — behaviour unchanged.
+   *  - 'cards': render the passed eyebrow/headline/lead/sectors as a light
+   *    card grid (opt-in). Used by the India SEO pages.
+   */
+  variant?: 'showcase' | 'cards';
 }
 
 const ORANGE = '#F05A28';
@@ -387,10 +395,113 @@ function OrangeStatCard({
   );
 }
 
+/* ── Prop-driven light card grid (opt-in via variant="cards") ───────────── */
+
+function PropCardsGrid({
+  eyebrow,
+  headline,
+  lead,
+  sectors,
+}: {
+  eyebrow?: string;
+  headline?: ReactNode;
+  lead?: string;
+  sectors: ReadonlyArray<IndustryCard>;
+}) {
+  return (
+    <section className="relative bg-fj-cream py-14 md:py-20">
+      <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+        {eyebrow && (
+          <p
+            className="font-fj-mono font-medium uppercase text-[#F05A28]"
+            style={{ fontSize: '11px', letterSpacing: '0.14em' }}
+          >
+            {eyebrow}
+          </p>
+        )}
+        {headline && (
+          <h2
+            className="fj-display mt-3 font-semibold text-fj-ink"
+            style={{ fontSize: 'clamp(1.6rem, 3vw, 2.4rem)', lineHeight: 1.15, letterSpacing: '-0.02em' }}
+          >
+            {headline}
+          </h2>
+        )}
+        {lead && (
+          <p
+            className="mt-4 max-w-2xl font-fj-body text-fj-neutral-600"
+            style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}
+          >
+            {lead}
+          </p>
+        )}
+
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {sectors.map((s) => {
+            const content = (
+              <>
+                <h3
+                  className="fj-display font-semibold text-fj-ink"
+                  style={{ fontSize: '1.125rem', lineHeight: 1.25, letterSpacing: '-0.01em' }}
+                >
+                  {s.name}
+                </h3>
+                <p
+                  className="mt-2 font-fj-body text-fj-neutral-600"
+                  style={{ fontSize: '0.9375rem', lineHeight: 1.6 }}
+                >
+                  {s.description}
+                </p>
+                {s.example && !s.linkHref && (
+                  <p
+                    className="mt-3 font-fj-mono uppercase text-fj-neutral-400"
+                    style={{ fontSize: '11px', letterSpacing: '0.06em' }}
+                  >
+                    {s.example}
+                  </p>
+                )}
+                {s.linkHref && (
+                  <span
+                    className="mt-4 inline-flex items-center gap-1 font-fj-body font-semibold text-[#F05A28]"
+                    style={{ fontSize: '0.875rem' }}
+                  >
+                    {s.linkLabel || s.example || 'Learn more'}
+                    <span aria-hidden="true">→</span>
+                  </span>
+                )}
+              </>
+            );
+            const cls =
+              'block rounded-2xl border border-fj-neutral-200 bg-white p-6 transition hover:border-[#F05A28]';
+            return s.linkHref ? (
+              <Link key={s.name} href={s.linkHref} className={cls}>
+                {content}
+              </Link>
+            ) : (
+              <div key={s.name} className={cls}>
+                {content}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ── Main export ───────────────────────────────────────────────────────── */
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export default function IndustriesGrid(_props: IndustriesGridProps = {}) {
+export default function IndustriesGrid(props: IndustriesGridProps = {}) {
+  if (props.variant === 'cards') {
+    return (
+      <PropCardsGrid
+        eyebrow={props.eyebrow}
+        headline={props.headline}
+        lead={props.lead}
+        sectors={props.sectors ?? []}
+      />
+    );
+  }
   return (
     <section
       style={{ background: DARK_BG, position: 'relative', overflow: 'hidden' }}

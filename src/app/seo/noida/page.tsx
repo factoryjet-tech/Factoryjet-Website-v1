@@ -297,7 +297,7 @@ export default function NoidaSeoPage() {
           footer="FactoryJet SEO plans run month to month, with 30 days notice to pause or stop."
         />
 
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="NOIDA × SEO"
           headline="SEO for Noida's Key Industries"
           lead="From the Sector 62 IT corridor to Expressway startups, Noida's industries compete on very different searches. FactoryJet has done SEO across each."

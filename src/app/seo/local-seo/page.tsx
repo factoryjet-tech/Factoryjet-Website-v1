@@ -171,7 +171,7 @@ export default function LocalSeoPage() {
 
         <BigThreeTrustBlock eyebrow="BY THE NUMBERS" headline="500+ sites done. 4.9 average rating. Local SEO that gets you found." />
 
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="WHAT'S INCLUDED"
           headline="What We Actually Do for You"
           lead="Getting into the top three on the map is not one trick. Google looks at how close you are, how well you match the search, and how trusted you look. We work on all the parts you can control. Here is everything we cover."
@@ -272,7 +272,7 @@ export default function LocalSeoPage() {
           footer="FactoryJet plans run month to month, with 30 days notice to pause or stop."
         />
 
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="LOCAL SEO BY CITY"
           headline="Want Local SEO Built for Your City?"
           lead="This page explains what local SEO is. If you want work built for your own city, where we know the areas, the rivals, and how people search, start here."
@@ -286,7 +286,7 @@ export default function LocalSeoPage() {
           ]}
         />
 
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="WHO IT'S FOR"
           headline="Local SEO for Businesses That Serve a Place"
           lead="If your customers come from nearby, local SEO is the fastest way to turn searches into calls and visits. These are the businesses we help most."

@@ -170,7 +170,7 @@ export default function TechnicalSeoPage() {
 
         <BigThreeTrustBlock eyebrow="BY THE NUMBERS" headline="500+ sites done. 4.9 average rating. Technical SEO that gets your site found." />
 
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="WHAT'S INCLUDED"
           headline="What We Actually Do for You"
           lead="Technical SEO is not one trick. It is a set of fixes that make your site fast and easy for Google to find, read, and trust. We work on all the parts under the hood. Here is everything we cover."
@@ -272,7 +272,7 @@ export default function TechnicalSeoPage() {
           footer="FactoryJet plans run month to month, with 30 days notice to pause or stop."
         />
 
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="WHO IT'S FOR"
           headline="Technical SEO for Sites That Need a Solid Base"
           lead="If Google is struggling to read your site, or it loads slowly, technical SEO is the fastest way to unlock the rankings your content deserves. These are the sites we help most."

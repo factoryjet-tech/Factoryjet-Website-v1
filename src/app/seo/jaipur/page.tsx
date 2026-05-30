@@ -296,7 +296,7 @@ export default function JaipurSeoPage() {
           footer="FactoryJet SEO plans run month to month, with 30 days notice to pause or stop."
         />
 
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="JAIPUR × SEO"
           headline="SEO for Jaipur's Key Industries"
           lead="From Johari Bazaar jewellers to Sanganer block-printers to Pink City hotels, Jaipur's industries compete on very different searches. FactoryJet has done SEO across each."

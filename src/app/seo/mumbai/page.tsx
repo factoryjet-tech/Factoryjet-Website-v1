@@ -297,7 +297,7 @@ export default function MumbaiSeoPage() {
           footer="FactoryJet SEO plans run month to month, with 30 days notice to pause or stop."
         />
 
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="MUMBAI × SEO"
           headline="SEO for Mumbai's Key Industries"
           lead="From BKC finance to Andheri media to the Bharat Diamond Bourse, Mumbai's industries compete on very different searches. FactoryJet has done SEO across each."

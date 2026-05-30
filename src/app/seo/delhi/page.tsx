@@ -298,7 +298,7 @@ export default function DelhiSeoPage() {
           footer="FactoryJet SEO plans run month to month, with 30 days notice to pause or stop."
         />
 
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="DELHI × SEO"
           headline="SEO for Delhi's Key Industries"
           lead="From Nehru Place IT trade to Sadar Bazaar wholesale to handicraft export houses, Delhi's industries compete on very different searches. FactoryJet has done SEO across each."

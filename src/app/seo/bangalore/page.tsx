@@ -297,7 +297,7 @@ export default function BangaloreSeoPage() {
           footer="FactoryJet SEO plans run month to month, with 30 days notice to pause or stop."
         />
 
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="BANGALORE × SEO"
           headline="SEO for Bangalore's Key Industries"
           lead="From Koramangala software to Whitefield IT to Indiranagar online brands, Bangalore's industries compete on very different searches. FactoryJet has done SEO across each."

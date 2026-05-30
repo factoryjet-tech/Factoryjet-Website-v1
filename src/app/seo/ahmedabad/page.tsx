@@ -297,7 +297,7 @@ export default function AhmedabadSeoPage() {
           footer="FactoryJet SEO plans run month to month, with 30 days notice to pause or stop."
         />
 
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="AHMEDABAD × SEO"
           headline="SEO for Ahmedabad's Key Industries"
           lead="From Changodar pharma to Vatva chemicals to Sanand engineering, Ahmedabad's industries compete on very different searches. FactoryJet has done SEO across each."

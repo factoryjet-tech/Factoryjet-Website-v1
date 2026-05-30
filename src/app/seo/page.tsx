@@ -459,7 +459,7 @@ export default function SeoHubPage() {
         />
 
         {/* ── 4. WHAT SEO INCLUDES ─────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="WHAT'S INCLUDED"
           headline="What We Actually Do When We Do Your SEO"
           lead="SEO is not one thing. It is six jobs that have to work together. A perfect, fast site with no content will not show up. Great content on a slow site Google cannot read will not show up either. We do all six."
@@ -469,6 +469,8 @@ export default function SeoHubPage() {
               description:
                 'Making your site fast and easy for Google to read: quick loading, the hidden code that explains your pages, a tidy sitemap, and no duplicate or missing pages. This is the base everything else sits on.',
               example: 'Speed, clean code, easy for Google to read.',
+              linkLabel: 'Explore Technical SEO',
+              linkHref: '/seo/technical-seo',
             },
             {
               name: 'On-Page SEO',
@@ -481,12 +483,16 @@ export default function SeoHubPage() {
               description:
                 'Earning real links from genuine websites with real visitors, through PR and honest mentions. No spammy link networks, no bought links, nothing that risks a punishment from Google.',
               example: 'Real links from trusted sites.',
+              linkLabel: 'Explore Link Building',
+              linkHref: '/seo/link-building',
             },
             {
               name: 'Local SEO + Google Business Profile',
               description:
                 'Getting you into the top three on the map for "near me" searches: your free Google listing set up and looked after, your details matching everywhere, and a plan for reviews. Vital for shops and local services.',
               example: 'Top of the map + Google listing.',
+              linkLabel: 'Explore Local SEO',
+              linkHref: '/seo/local-seo',
             },
             {
               name: 'Content SEO',
@@ -499,6 +505,8 @@ export default function SeoHubPage() {
               description:
                 'Setting up your content so Google AI answers, ChatGPT, and Perplexity point to your business: clear questions and answers, the right hidden code, and facts they can quote.',
               example: 'Get named by AI, not skipped.',
+              linkLabel: 'Explore AI SEO',
+              linkHref: '/ai-seo',
             },
           ]}
         />
@@ -591,7 +599,7 @@ export default function SeoHubPage() {
         />
 
         {/* ── 9. CITIES WE SERVE ───────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="CITIES WE SERVE"
           headline="SEO Built for Your City"
           lead="Competition, how people search, and the searches that bring buyers are different in every city. We build city-by-city SEO for India's toughest markets, and add more cities as we grow."
@@ -664,7 +672,7 @@ export default function SeoHubPage() {
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="INDUSTRIES WE SERVE"
           headline="SEO for India's Small Business Sectors"
           lead="Different industries compete on different searches and different buyer journeys. We have done SEO across all of these."
@@ -673,6 +681,8 @@ export default function SeoHubPage() {
               name: 'Online Stores & Brands',
               description:
                 'Category and product pages, the hidden product details Google reads, big menus kept tidy, and buying guides that bring buyers, not just browsers. On Shopify or custom stores.',
+              linkLabel: 'Explore Ecommerce SEO',
+              linkHref: '/seo/ecommerce-seo',
             },
             {
               name: 'Professional Services',

@@ -296,7 +296,7 @@ export default function PuneSeoPage() {
           footer="FactoryJet SEO plans run month to month, with 30 days notice to pause or stop."
         />
 
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="PUNE × SEO"
           headline="SEO for Pune's Key Industries"
           lead="From Hinjewadi IT to Chakan car parts to the city's colleges, Pune's industries compete on very different searches. FactoryJet has done SEO across each."

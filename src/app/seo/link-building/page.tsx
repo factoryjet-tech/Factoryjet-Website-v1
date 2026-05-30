@@ -168,7 +168,7 @@ export default function LinkBuildingPage() {
 
         <BigThreeTrustBlock eyebrow="BY THE NUMBERS" headline="500+ sites done. 4.9 average rating. Real links that lift you safely." />
 
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="WHAT'S INCLUDED"
           headline="What We Actually Do for You"
           lead="Good link building is not one trick. It is a few honest ways to earn real links from sites people trust. We do the work that helps you safely, and skip the shortcuts that can get you punished. Here is everything we cover."
@@ -270,7 +270,7 @@ export default function LinkBuildingPage() {
           footer="FactoryJet plans run month to month, with 30 days notice to pause or stop."
         />
 
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="WHO IT'S FOR"
           headline="Link Building for Businesses That Are Ready to Climb"
           lead="If your pages are good but stuck, the missing piece is often trust, and trust comes from real links. These are the businesses we help most with link building."
