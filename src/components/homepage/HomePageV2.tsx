@@ -198,7 +198,7 @@ const WHY_FJ_PILLARS = [
   {
     icon: '₹',
     title: '60–70% Below Market Rate',
-    body: 'Indian market rates for comparable Next.js work from a US or UK agency run 2–3× higher. FactoryJet delivers the same tech stack, the same design quality, and the same performance benchmarks — at a fraction of the price.',
+    body: 'Indian market rates for comparable Next.js work from a US or traditional agency run 2–3× higher. FactoryJet delivers the same tech stack, the same design quality, and the same performance benchmarks — at a fraction of the price.',
   },
   {
     icon: '🤖',

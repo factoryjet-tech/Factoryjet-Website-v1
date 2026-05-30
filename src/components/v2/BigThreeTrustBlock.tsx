@@ -136,7 +136,7 @@ export default function BigThreeTrustBlock({
             >
               Websites designed and built for US small businesses, Shopify stores,
               B2B companies, and DTC brands. Affordable web design services —
-              60–70% less than US agencies, your codebase delivered in full,
+              60–70% less than traditional agencies, your codebase delivered in full,
               and a 7-day delivery guarantee.
             </p>
 

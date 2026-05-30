@@ -143,7 +143,7 @@ const faqSchema = {
       name: 'Why is FactoryJet fixed-price, milestone-paid?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Our engineering team brings 25+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery at dramatically lower labor costs. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated agency rates.',
+        text: 'Our engineering team brings 25+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery without the overhead that inflates traditional agency invoices. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated agency rates.',
       },
     },
     {
@@ -679,7 +679,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'Why is FactoryJet fixed-price, milestone-paid?',
     answer:
-      'Our engineering team brings 25+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery at dramatically lower labor costs. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated agency rates.',
+      'Our engineering team brings 25+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery without the overhead that inflates traditional agency invoices. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated agency rates.',
   },
   {
     category: 'pricing',
@@ -1061,7 +1061,7 @@ export default function AIChatbotDevelopmentPage() {
         {/* ── 10. COMPARISON TABLE ─────────────────────────────────────────── */}
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. US Agency vs. DIY Tool vs. Freelancer"
+          headline="FactoryJet vs. Traditional Agency vs. DIY Tool vs. Freelancer"
           lead="The honest breakdown: what you actually get, at what price, and how fast."
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}

@@ -236,7 +236,7 @@ export default function Pricing() {
             Pricing transparency is a core principle. One of the most common
             searches we see is how much does a website cost UK — and the honest
             answer is that most UK businesses are overpaying dramatically. Here
-            is how FactoryJet’s pricing compares to the UK agency market across
+            is how FactoryJet’s pricing compares to the traditional agency market across
             all four of our services.
           </p>
         </div>
@@ -263,7 +263,7 @@ export default function Pricing() {
                   color: "#FFFFFF",
                 }}
               >
-                {["Service", "UK Agency Average", "FactoryJet Price", "Your Saving"].map(
+                {["Service", "Traditional Agency Average", "FactoryJet Price", "Your Saving"].map(
                   (h, i) => (
                     <div
                       key={h}

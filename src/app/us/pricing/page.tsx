@@ -60,7 +60,7 @@ const faqSchema = {
       name: 'How much does a website cost for a small business?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A professional small business website costs between $1,499 and $7,500 depending on scope, at FactoryJet. A basic 5-page site starts at $1,499. A growth-focused 15-page site with blog, lead capture, and CRM integration runs $3,500. Custom web applications start at $7,500. US agencies typically charge $8,000–$35,000 for comparable work.',
+        text: 'A professional small business website costs between $1,499 and $7,500 depending on scope, at FactoryJet. A basic 5-page site starts at $1,499. A growth-focused 15-page site with blog, lead capture, and CRM integration runs $3,500. Custom web applications start at $7,500. Traditional agencies typically charge $8,000–$35,000 for comparable work.',
       },
     },
     {
@@ -68,7 +68,7 @@ const faqSchema = {
       name: 'How does FactoryJet keep pricing fixed and predictable?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "We work fixed-price and milestone-paid — every project is scoped upfront with no hourly billing and no scope-creep invoices. Our 25+ years serving US clients means we estimate accurately on the first call, so the quote you sign is what you pay. You get senior-engineering quality, the same Next.js / Shopify / React tech stack a US agency would deliver, US-hour project management, and a 7-day delivery guarantee — with full code ownership at handoff.",
+        text: "We work fixed-price and milestone-paid — every project is scoped upfront with no hourly billing and no scope-creep invoices. Our 25+ years serving US clients means we estimate accurately on the first call, so the quote you sign is what you pay. You get senior-engineering quality, the same Next.js / Shopify / React tech stack a traditional agency would deliver, US-hour project management, and a 7-day delivery guarantee — with full code ownership at handoff.",
       },
     },
     {
@@ -373,7 +373,7 @@ const FAQ_ITEMS = [
   {
     category: 'cost',
     question: 'How much does a website cost for a small business?',
-    answer: "A professional small business website from FactoryJet starts at $1,499 for a 5-page site and goes up to $7,500 for a 15-page site with advanced SEO, blog, and CRM integrations. US agencies typically charge $8,000–$35,000 for the same scope. The cost is driven by three things: page count, custom functionality, and integrations. We'll give you a fixed quote within 24 hours — no estimate ranges, no billable hours.",
+    answer: "A professional small business website from FactoryJet starts at $1,499 for a 5-page site and goes up to $7,500 for a 15-page site with advanced SEO, blog, and CRM integrations. Traditional agencies typically charge $8,000–$35,000 for the same scope. The cost is driven by three things: page count, custom functionality, and integrations. We'll give you a fixed quote within 24 hours — no estimate ranges, no billable hours.",
   },
   {
     category: 'cost',
@@ -394,12 +394,12 @@ const FAQ_ITEMS = [
   {
     category: 'ecommerce',
     question: 'How much does a Shopify website cost?',
-    answer: "A custom Shopify store from FactoryJet starts at $2,999. That covers custom theme development (no paid templates), up to 50 products configured, collections/navigation setup, payment gateway integration, shipping rates, email notification setup, and mobile optimization. Shopify monthly fees ($39–$399/month) are paid directly to Shopify. US agencies typically charge $12,000–$40,000 for comparable Shopify work.",
+    answer: "A custom Shopify store from FactoryJet starts at $2,999. That covers custom theme development (no paid templates), up to 50 products configured, collections/navigation setup, payment gateway integration, shipping rates, email notification setup, and mobile optimization. Shopify monthly fees ($39–$399/month) are paid directly to Shopify. Traditional agencies typically charge $12,000–$40,000 for comparable Shopify work.",
   },
   {
     category: 'ecommerce',
     question: 'How much does a WooCommerce website cost?',
-    answer: 'WooCommerce development starts at $1,999 for a custom WordPress + WooCommerce site with up to 25 products. WooCommerce itself is free, but hosting costs $30–$100/month. Custom WooCommerce builds typically run $1,999–$6,000 at FactoryJet versus $10,000–$30,000 at US agencies. WooCommerce is better for content-heavy businesses that also sell; Shopify is better for pure e-commerce with higher product volume.',
+    answer: 'WooCommerce development starts at $1,999 for a custom WordPress + WooCommerce site with up to 25 products. WooCommerce itself is free, but hosting costs $30–$100/month. Custom WooCommerce builds typically run $1,999–$6,000 at FactoryJet versus $10,000–$30,000 at traditional agencies. WooCommerce is better for content-heavy businesses that also sell; Shopify is better for pure e-commerce with higher product volume.',
   },
   {
     category: 'ecommerce',
@@ -515,17 +515,17 @@ export default function PricingPage() {
       <Hero
         eyebrow="WEBSITE DESIGN COST — 2026"
         headline="How Much Does a Website Cost? Here's the Actual Number."
-        lead="US agencies charge $8,000–$35,000 for a business website. FactoryJet builds the same quality site for $1,499–$7,500 — fixed price, 7-day delivery, no hidden fees. Here's the breakdown."
+        lead="Most agencies take 8–12 weeks, bill by the hour, and route you through account managers. FactoryJet ships your site in 7 days at a fixed price — senior engineers, no middle layers, no surprise invoices. Plans from $1,499–$7,500. Here's the breakdown."
         primaryCta={{ label: 'Get a Free Quote', modal: true, region: 'us' }}
         secondaryCta={{ label: 'See All Packages', href: '#pricing' }}
-        trustItems={['500+ US businesses served', '7-day delivery guarantee', 'below US agency rates']}
+        trustItems={['500+ businesses served', '7-day delivery guarantee', 'Senior engineers, fixed price']}
         rightSlot={
-          <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-6 space-y-3">
-            <p className="text-xs font-fj-mono uppercase tracking-widest text-white/50 mb-4">2026 Price Comparison</p>
+          <div className="rounded-2xl border border-fj-charcoal/15 bg-white p-6 space-y-3 shadow-sm">
+            <p className="text-xs font-fj-mono uppercase tracking-widest text-fj-ink/50 mb-4">FactoryJet vs a typical agency</p>
             <div className="grid grid-cols-3 gap-2 text-xs font-fj-body mb-2">
-              <span className="text-white/40">Service</span>
+              <span className="text-fj-ink/40">Service</span>
               <span className="text-[#F05A28] font-semibold text-center">FactoryJet</span>
-              <span className="text-white/40 text-center">US Agency</span>
+              <span className="text-fj-ink/40 text-center">Typical Agency</span>
             </div>
             {[
               ['5-Page Site', '$1,499', '$8K–$15K'],
@@ -535,13 +535,13 @@ export default function PricingPage() {
               ['Redesign', '$3,500', '$12K–$30K'],
               ['Web App MVP', '$7,500', '$30K–$80K'],
             ].map(([service, fj, us]) => (
-              <div key={service} className="grid grid-cols-3 gap-2 py-2 border-t border-white/5 items-center">
-                <span className="text-white/70 text-xs">{service}</span>
+              <div key={service} className="grid grid-cols-3 gap-2 py-2 border-t border-fj-charcoal/10 items-center">
+                <span className="text-fj-ink/70 text-xs">{service}</span>
                 <span className="text-[#F05A28] font-semibold text-sm text-center">{fj}</span>
-                <span className="text-white/40 text-xs text-center line-through">{us}</span>
+                <span className="text-fj-ink/40 text-xs text-center line-through">{us}</span>
               </div>
             ))}
-            <p className="text-xs text-white/30 pt-2 font-fj-body">Fixed price. No hourly billing. No surprise invoices.</p>
+            <p className="text-xs text-fj-ink/50 pt-2 font-fj-body">Fixed price, 7-day delivery. Senior engineers, no hourly billing.</p>
           </div>
         }
       />
@@ -558,7 +558,7 @@ export default function PricingPage() {
       {/* ── 9. COMPARISON TABLE ── */}
       <ComparisonTable
         eyebrow="HOW WE COMPARE"
-        headline="FactoryJet vs. US Agency vs. Freelancer vs. DIY Builder"
+        headline="FactoryJet vs. Traditional Agency vs. Freelancer vs. DIY Builder"
         lead="Not all website options are equal. Here's what the decision looks like when you compare side by side — on price, quality, and what you're left with after launch."
         pullQuote={{ stat: 'Fixed Price', caption: 'milestone-paid with full code ownership — predictable from quote to launch.' }}
         columns={COMPARISON_COLUMNS}

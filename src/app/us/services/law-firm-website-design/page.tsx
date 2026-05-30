@@ -940,7 +940,7 @@ export default function LawFirmWebsiteDesignPage() {
           }}
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}
-          footer="FindLaw/Martindale subscription pricing ranges from $400–$2,000/month — you never own the site. FactoryJet fixed-price contracts cover full scope; you own the code and design files at handoff. US agency prices reflect typical legal vertical market rates as of 2026."
+          footer="FindLaw/Martindale subscription pricing ranges from $400–$2,000/month — you never own the site. FactoryJet fixed-price contracts cover full scope; you own the code and design files at handoff. Traditional agency prices reflect typical legal vertical market rates as of 2026."
         />
 
         {/* ── 10. PRICING ──────────────────────────────────────────────────── */}

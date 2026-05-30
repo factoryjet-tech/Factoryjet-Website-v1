@@ -584,7 +584,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US website redesign agency?',
     answer:
-      'Three differences: pricing model (fixed-price and milestone-paid, with specialized engineers serving US businesses since 1999 — no layers of account managers and PMs inflating your bill), speed (we deliver 5-page redesigns in 7 days — US agencies average 8–16 weeks for the same scope), and SMB focus (500+ small business projects means we understand the operational reality of your size — you don\'t need enterprise features, you need a site that generates leads and loads fast on a phone). We also own your outcome, not your timeline: fixed prices mean you know the cost before you commit, not after.',
+      'Three differences: pricing model (fixed-price and milestone-paid, with specialized engineers serving US businesses since 1999 — no layers of account managers and PMs inflating your bill), speed (we deliver 5-page redesigns in 7 days — traditional agencies average 8–16 weeks for the same scope), and SMB focus (500+ small business projects means we understand the operational reality of your size — you don\'t need enterprise features, you need a site that generates leads and loads fast on a phone). We also own your outcome, not your timeline: fixed prices mean you know the cost before you commit, not after.',
   },
   {
     category: 'trust',
@@ -871,7 +871,7 @@ export default function WebsiteRedesignPage() {
               body: 'Google uses mobile-first indexing — meaning it evaluates and ranks your site based on the mobile version, not the desktop version. Sites with poor Core Web Vitals (Largest Contentful Paint, Interaction to Next Paint, Cumulative Layout Shift) are actively downranked relative to competitors who pass. If your site was built before 2021 without explicit mobile optimization, it is almost certainly underperforming in search relative to what your content would otherwise earn. A redesign that passes Core Web Vitals is an SEO investment, not just a visual one.',
             },
             {
-              title: 'US agencies charge enterprise prices for SMB problems',
+              title: 'Traditional agencies charge enterprise prices for SMB problems',
               body: 'The average US web design agency quotes $15,000–$50,000 for a business website redesign, with 8–16 week timelines and hourly billing that makes the final cost unpredictable. That pricing was built for companies with design directors, multiple stakeholder reviews, and RFP processes. FactoryJet delivers the same quality of engineering — fixed-price and milestone-paid — because our experienced team has served US businesses for 25+ years with lean operations. Fixed-price contracts mean you know the cost before we start, not after.',
             },
           ]}
@@ -911,7 +911,7 @@ export default function WebsiteRedesignPage() {
         {/* ── 9. COMPARISON TABLE ──────────────────────────────────────────── */}
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. US Agency vs. WordPress Theme vs. Freelancer"
+          headline="FactoryJet vs. Traditional Agency vs. WordPress Theme vs. Freelancer"
           lead="Website redesign options vary dramatically in quality, cost, and delivery time. Here's what the decision actually looks like when you compare side by side."
           pullQuote={{
             stat: '7 days',
@@ -919,7 +919,7 @@ export default function WebsiteRedesignPage() {
           }}
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}
-          footer="Prices reflect typical market ranges as of 2026. FactoryJet fixed-price contracts cover full scope — no hourly overages. US agency timelines reflect project management and approval cycle overhead, not engineering hours."
+          footer="Prices reflect typical market ranges as of 2026. FactoryJet fixed-price contracts cover full scope — no hourly overages. Traditional agency timelines reflect project management and approval cycle overhead, not engineering hours."
         />
 
         {/* ── 10. PRICING ──────────────────────────────────────────────────── */}

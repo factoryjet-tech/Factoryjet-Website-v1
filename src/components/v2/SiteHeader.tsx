@@ -202,7 +202,7 @@ const LOCALE_CONFIG = {
     pricingHref:     '/pricing',
     aboutHref:       '/about',
     featuredHeadline:'7-Day Delivery Guarantee',
-    featuredBody:    'Custom websites delivered in 7 days. 60–70% cheaper than US & UK agencies.',
+    featuredBody:    'Custom websites delivered in 7 days. 60–70% cheaper than US & traditional agencies.',
     featuredStats:   ['500+ businesses served', '25+ years of expertise', 'Fixed-price projects'],
     featuredCtaLabel:'See our work',
     featuredCtaHref: '/portfolio',

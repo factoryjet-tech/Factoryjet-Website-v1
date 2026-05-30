@@ -407,7 +407,7 @@ const INDUSTRIES = [
 
 const COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
-  { label: 'US Agency' },
+  { label: 'Traditional Agency' },
   { label: 'Freelancer' },
   { label: 'Template (Squarespace/Wix)' },
 ] as const;
@@ -656,7 +656,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US web agency?',
     answer:
-      'Three differences that matter: pricing model (fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices, backed by 25+ years serving US businesses), speed (7-day delivery on standard sites — most US agencies quote 6–12 weeks), and ownership (you get the full codebase on launch day — no retainer required to keep your site online). We\'ve delivered 500+ websites for US businesses across every industry. We aren\'t selling you a template with a custom logo.',
+      'Three differences that matter: pricing model (fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices, backed by 25+ years serving US businesses), speed (7-day delivery on standard sites — most traditional agencies quote 6–12 weeks), and ownership (you get the full codebase on launch day — no retainer required to keep your site online). We\'ve delivered 500+ websites for US businesses across every industry. We aren\'t selling you a template with a custom logo.',
   },
   {
     category: 'trust',
@@ -948,7 +948,7 @@ export default function WebDesignPage() {
             },
             {
               icon: '💸',
-              title: 'US agencies charge $8,000–$25,000 for the same work',
+              title: 'Traditional agencies charge $8,000–$25,000 for the same work',
               body: 'A mid-tier US web agency charges $2,500+ per page before revisions, project management fees, and hosting markup. FactoryJet delivers the same Figma-first design, Next.js engineering, and Lighthouse 100 performance — fixed-price, milestone-paid, with full code ownership at handoff. 25 years serving US clients means we scope accurately on the first call.',
             },
           ]}
@@ -1168,11 +1168,11 @@ export default function WebDesignPage() {
         {/* ── 10. COMPARISON TABLE ─────────────────────────────────────────── */}
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. US Agency vs. Freelancer vs. Templates"
+          headline="FactoryJet vs. Traditional Agency vs. Freelancer vs. Templates"
           lead="Not all web design options are the same. Here's what the decision looks like when you compare the real tradeoffs side by side."
           pullQuote={{
             stat: '$1,999',
-            caption: 'starting price. Same Figma design, Next.js engineering, and Lighthouse 100 quality as a $15,000 US agency project.',
+            caption: 'starting price. Same Figma design, Next.js engineering, and Lighthouse 100 quality as a $15,000 traditional agency project.',
           }}
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}
@@ -1206,7 +1206,7 @@ export default function WebDesignPage() {
             {
               icon: '⚡',
               title: '7-day delivery — not 12 weeks',
-              body: 'US agencies take 6–12 weeks because they have account managers, project coordinators, and approval layers between your brief and the keyboard. We don\'t. When you brief us, a designer and an engineer work on it. That\'s why we ship in 7 days.',
+              body: 'traditional agencies take 6–12 weeks because they have account managers, project coordinators, and approval layers between your brief and the keyboard. We don\'t. When you brief us, a designer and an engineer work on it. That\'s why we ship in 7 days.',
             },
             {
               icon: '🎯',

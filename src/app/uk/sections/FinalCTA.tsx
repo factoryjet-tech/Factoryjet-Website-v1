@@ -143,7 +143,7 @@ export default function FinalCTA() {
             Whether you need a high-performance website, a revenue-generating
             online store, custom AI agents that work 24/7, or AI SEO that gets
             you found in ChatGPT and Google alike — FactoryJet delivers it all
-            at pricing that makes traditional UK agencies uncomfortable. Start
+            at pricing that makes traditional traditional agencies uncomfortable. Start
             with a free digital audit.
           </p>
 

@@ -1061,7 +1061,7 @@ export default function AIWorkflowAutomationPage() {
         {/* ── 10. COMPARISON TABLE ─────────────────────────────────────────── */}
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. US Agency vs. DIY Tools vs. Freelancer"
+          headline="FactoryJet vs. Traditional Agency vs. DIY Tools vs. Freelancer"
           lead="The honest breakdown: what you actually get, at what price, and how fast."
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}

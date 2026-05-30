@@ -110,7 +110,7 @@ const faqSchema = {
       name: 'How much does a WordPress website cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'WordPress software is free, but you\'ll need hosting ($5–$50/month), a domain ($12–$20/year), and usually a premium theme ($50–$200 one-time) or page builder plugin ($50–$300/year). A DIY WordPress site can cost as little as $100–$500/year in total. A professionally built WordPress site by a freelancer runs $2,000–$10,000. A custom WordPress build by a US agency typically costs $8,000–$40,000+. FactoryJet builds custom WordPress websites for US small businesses starting at $2,499 — fully designed, SEO-configured, and delivered in 7 days.',
+        text: 'WordPress software is free, but you\'ll need hosting ($5–$50/month), a domain ($12–$20/year), and usually a premium theme ($50–$200 one-time) or page builder plugin ($50–$300/year). A DIY WordPress site can cost as little as $100–$500/year in total. A professionally built WordPress site by a freelancer runs $2,000–$10,000. A custom WordPress build by a traditional agency typically costs $8,000–$40,000+. FactoryJet builds custom WordPress websites for US small businesses starting at $2,499 — fully designed, SEO-configured, and delivered in 7 days.',
       },
     },
     {
@@ -118,7 +118,7 @@ const faqSchema = {
       name: 'How much should a website cost for a small business?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A small business website that\'s professionally designed, mobile-optimized, SEO-ready, and actually converts visitors into leads should cost $1,500–$8,000 for most businesses. That range covers a freelance designer on the low end and a boutique web design agency like FactoryJet in the middle. US agencies typically charge $8,000–$40,000 for equivalent work. The cheapest option (DIY builders) will save money upfront but cost you in time, design quality, and often in lost conversions.',
+        text: 'A small business website that\'s professionally designed, mobile-optimized, SEO-ready, and actually converts visitors into leads should cost $1,500–$8,000 for most businesses. That range covers a freelance designer on the low end and a boutique web design agency like FactoryJet in the middle. Traditional agencies typically charge $8,000–$40,000 for equivalent work. The cheapest option (DIY builders) will save money upfront but cost you in time, design quality, and often in lost conversions.',
       },
     },
     {
@@ -126,7 +126,7 @@ const faqSchema = {
       name: 'What is the average cost of a website design?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The average cost of website design depends heavily on who you hire. Freelance designers average $2,000–$8,000 for a small business site. Boutique web design agencies like FactoryJet charge $1,999–$8,999. Mid-size US agencies charge $8,000–$25,000. Large agencies and enterprise web studios charge $25,000–$150,000+. The sweet spot for most US small businesses is $2,000–$6,000 — enough to get a genuinely professional site without overpaying for agency overhead.',
+        text: 'The average cost of website design depends heavily on who you hire. Freelance designers average $2,000–$8,000 for a small business site. Boutique web design agencies like FactoryJet charge $1,999–$8,999. Mid-size Traditional agencies charge $8,000–$25,000. Large agencies and enterprise web studios charge $25,000–$150,000+. The sweet spot for most US small businesses is $2,000–$6,000 — enough to get a genuinely professional site without overpaying for agency overhead.',
       },
     },
     {
@@ -134,7 +134,7 @@ const faqSchema = {
       name: 'Why is web design so expensive at big agencies?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'US web design agencies are expensive because they carry significant overhead: Manhattan or San Francisco office space, large teams with project managers, account managers, UX researchers, and copywriters — all billing at US salaries. A $20,000 website project at a US agency might involve 8–12 people each billing $150–$300/hour. FactoryJet is structured differently: a lean, senior-only team serving US clients at significantly lower cost without the overhead. Same engineering quality, fundamentally different cost structure.',
+        text: 'US web design agencies are expensive because they carry significant overhead: Manhattan or San Francisco office space, large teams with project managers, account managers, UX researchers, and copywriters — all billing at US salaries. A $20,000 website project at a traditional agency might involve 8–12 people each billing $150–$300/hour. FactoryJet is structured differently: a lean, senior-only team serving US clients at significantly lower cost without the overhead. Same engineering quality, fundamentally different cost structure.',
       },
     },
     {
@@ -150,7 +150,7 @@ const faqSchema = {
       name: 'How much does FactoryJet charge for a website?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet builds custom websites for US small businesses starting at $1,999 for a 5-page site, delivered in 7 days. E-commerce sites start at $2,999. Web application development starts at $7,999. Every project is fixed-price — no hourly billing, no scope creep, no surprise invoices. Compared to US agencies charging $8,000–$40,000 for equivalent work, FactoryJet delivers the same professional quality at significantly lower cost. Get a quote in 24 hours for your project.',
+        text: 'FactoryJet builds custom websites for US small businesses starting at $1,999 for a 5-page site, delivered in 7 days. E-commerce sites start at $2,999. Web application development starts at $7,999. Every project is fixed-price — no hourly billing, no scope creep, no surprise invoices. Compared to traditional agencies charging $8,000–$40,000 for equivalent work, FactoryJet delivers the same professional quality at significantly lower cost. Get a quote in 24 hours for your project.',
       },
     },
     {
@@ -174,7 +174,7 @@ const faqSchema = {
       name: 'How long does it take to build a website?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A DIY website builder can produce something in a weekend, but a professionally designed small business site typically takes 3–8 weeks at most US agencies. FactoryJet delivers 5-page websites in 7 days — a hard delivery guarantee. Larger projects (e-commerce, web apps) take 2–6 weeks. The timeline varies based on how quickly you provide content, feedback, and approvals, but our project structure is designed to minimize delays and keep everything moving.',
+        text: 'A DIY website builder can produce something in a weekend, but a professionally designed small business site typically takes 3–8 weeks at most traditional agencies. FactoryJet delivers 5-page websites in 7 days — a hard delivery guarantee. Larger projects (e-commerce, web apps) take 2–6 weeks. The timeline varies based on how quickly you provide content, feedback, and approvals, but our project structure is designed to minimize delays and keep everything moving.',
       },
     },
   ],
@@ -390,7 +390,7 @@ const STATS = [
   {
     value: '7 days',
     label: 'delivery guarantee for 5-page websites',
-    microcopy: 'vs. 6–16 weeks at most US agencies',
+    microcopy: 'vs. 6–16 weeks at most traditional agencies',
     categoryLabel: 'DELIVERY SPEED',
   },
 ];
@@ -399,7 +399,7 @@ const COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
   { label: 'DIY Builder' },
   { label: 'Freelancer' },
-  { label: 'US Agency' },
+  { label: 'Traditional Agency' },
 ] as const;
 
 const COMPARISON_ROWS = [
@@ -613,12 +613,12 @@ const FAQ_ITEMS = [
   // ── FactoryJet Pricing ────────────────────────────────────────────────
   {
     question: 'How much does FactoryJet charge to build a website?',
-    answer: `FactoryJet's website pricing starts at $1,999 for a custom 5-page website, delivered in 7 days. E-commerce stores start at $2,999. Larger sites with 10–15 pages start at $3,499. Web application development starts at $7,999. All projects are fixed price — you know the number before we start, and it doesn't change. Compared to US agencies charging $8,000–$40,000 for equivalent work, FactoryJet delivers the same professional quality at significantly lower cost because we run lean and serve US clients directly.`,
+    answer: `FactoryJet's website pricing starts at $1,999 for a custom 5-page website, delivered in 7 days. E-commerce stores start at $2,999. Larger sites with 10–15 pages start at $3,499. Web application development starts at $7,999. All projects are fixed price — you know the number before we start, and it doesn't change. Compared to traditional agencies charging $8,000–$40,000 for equivalent work, FactoryJet delivers the same professional quality at significantly lower cost because we run lean and serve US clients directly.`,
     category: 'factoryjet',
   },
   {
     question: 'How does FactoryJet keep pricing fixed and predictable?',
-    answer: `We work fixed-price and milestone-paid — every project is scoped upfront with no hourly billing and no scope-creep invoices. Our 500+ projects since 1999 mean we estimate accurately on the first call, so the quote you sign is what you pay. You get a senior-only team — no account-management layers, no process bureaucracy — delivering the same Next.js, WordPress, and Lighthouse 100 quality your US agency would deliver, with full code ownership at handoff.`,
+    answer: `We work fixed-price and milestone-paid — every project is scoped upfront with no hourly billing and no scope-creep invoices. Our 500+ projects since 1999 mean we estimate accurately on the first call, so the quote you sign is what you pay. You get a senior-only team — no account-management layers, no process bureaucracy — delivering the same Next.js, WordPress, and Lighthouse 100 quality your traditional agency would deliver, with full code ownership at handoff.`,
     category: 'factoryjet',
   },
   {
@@ -704,7 +704,7 @@ export default function WebsiteCostPage() {
         <Hero
           eyebrow="WEBSITE COST GUIDE · 2025"
           headline={<>How Much Does a<br className="hidden lg:block" /> Website Really Cost?<br className="hidden lg:block" /> The Honest Answer.</>}
-          lead="Squarespace from $16/mo. Wix from $17/mo. Freelancers from $1,000. US agencies from $8,000. FactoryJet from $1,999. Here's what you actually get at each price point — and the trade-offs no one talks about."
+          lead="Squarespace from $16/mo. Wix from $17/mo. Freelancers from $1,000. Traditional agencies from $8,000. FactoryJet from $1,999. Here's what you actually get at each price point — and the trade-offs no one talks about."
           primaryCta={{ label: 'Get a Free Custom Quote', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Our Pricing', href: '#pricing' }}
           trustItems={['Fixed price, always', '7-day delivery', 'fixed-price, milestone-paid', '500+ websites built']}
@@ -831,7 +831,7 @@ export default function WebsiteCostPage() {
                   { item: 'Budget freelancer', visible: '$500–$1,500', hidden: 'No SEO, no support, no accountability' },
                   { item: 'Template designer', visible: '$800–$2,000', hidden: 'Looks like 10,000 other sites' },
                   { item: 'Offshore Upwork hire', visible: '$300–$800', hidden: 'Revision hell, missed deadlines' },
-                  { item: 'US agency "starter" pkg', visible: '$8,000–$15,000', hidden: 'Junior team, senior billing rate' },
+                  { item: 'traditional agency "starter" pkg', visible: '$8,000–$15,000', hidden: 'Junior team, senior billing rate' },
                 ].map(({ item, visible, hidden }) => (
                   <div key={item} className="py-3.5">
                     <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">{item}</p>
@@ -881,11 +881,11 @@ export default function WebsiteCostPage() {
         {/* ── 6. COMPARISON TABLE ──────────────────────────────────────────── */}
         <ComparisonTable
           eyebrow="HOW YOUR OPTIONS COMPARE"
-          headline="FactoryJet vs. DIY Builder vs. Freelancer vs. US Agency"
+          headline="FactoryJet vs. DIY Builder vs. Freelancer vs. Traditional Agency"
           lead="Four ways to get a website built. They're not equal — here's what the decision actually looks like when you compare on the things that matter for a growing business."
           pullQuote={{
             stat: '$1,999',
-            caption: 'starting price for a professionally built 5-page website, delivered in 7 days. US agencies start at $8,000 for equivalent work.',
+            caption: 'starting price for a professionally built 5-page website, delivered in 7 days. Traditional agencies start at $8,000 for equivalent work.',
           }}
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}

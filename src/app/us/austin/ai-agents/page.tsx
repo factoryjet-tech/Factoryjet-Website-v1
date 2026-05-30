@@ -625,7 +625,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'Why is FactoryJet fixed-price, milestone-paid?',
     answer:
-      'Our engineering team brings 25+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery — at dramatically lower labor costs. We\'ve served US businesses for 25 years. When you brief us, an engineer reads it, not an account manager. No overhead layers, no inflated Austin office rates. The savings go to you.',
+      'Our engineering team brings 25+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery — without the overhead that inflates traditional agency invoices. We\'ve served US businesses for 25 years. When you brief us, an engineer reads it, not an account manager. No overhead layers, no inflated Austin office rates. The savings go to you.',
   },
   {
     category: 'pricing',

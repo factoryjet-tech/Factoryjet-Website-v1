@@ -95,7 +95,7 @@ const faqSchema = {
       name: 'How much does Magento development cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Magento development costs depend heavily on scope. A custom module or extension typically costs $2,000–$8,000. A full Magento 2 store build runs $8,000–$40,000+ depending on complexity. A Magento 1 to Magento 2 migration costs $5,000–$20,000. US agencies charge $150–$300/hour for Magento development. FactoryJet builds and migrates Magento stores at significantly lower cost with senior Magento-certified developers on every project.',
+        text: 'Magento development costs depend heavily on scope. A custom module or extension typically costs $2,000–$8,000. A full Magento 2 store build runs $8,000–$40,000+ depending on complexity. A Magento 1 to Magento 2 migration costs $5,000–$20,000. Traditional agencies charge $150–$300/hour for Magento development. FactoryJet builds and migrates Magento stores at significantly lower cost with senior Magento-certified developers on every project.',
       },
     },
     {
@@ -239,7 +239,7 @@ const STATS = [
 const COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
   { label: 'Freelancer' },
-  { label: 'US Agency' },
+  { label: 'Traditional Agency' },
   { label: 'Offshore Shop' },
 ] as const;
 
@@ -299,7 +299,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'significantly lower cost than US agencies',
+    feature: 'significantly lower cost than traditional agencies',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="fl" kind="partial" />,
@@ -476,7 +476,7 @@ const FAQ_ITEMS = [
   // -- Cost & Pricing ----------------------------------------------------─
   {
     question: 'Why is Magento development so expensive in the US?',
-    answer: `US Magento development is expensive for two reasons: Magento expertise is specialized (fewer developers know it deeply compared to WordPress or Shopify), and US agencies charge $150–$300/hour. A custom module that takes 40 hours to build properly costs $6,000–$12,000 at those rates. FactoryJet's senior Magento developers work at significantly lower hourly rates due to our lean team structure — delivering the same technical depth at significantly lower cost.`,
+    answer: `US Magento development is expensive for two reasons: Magento expertise is specialized (fewer developers know it deeply compared to WordPress or Shopify), and Traditional agencies charge $150–$300/hour. A custom module that takes 40 hours to build properly costs $6,000–$12,000 at those rates. FactoryJet's senior Magento developers work at significantly lower hourly rates due to our lean team structure — delivering the same technical depth at significantly lower cost.`,
     category: 'cost',
   },
   {
@@ -767,7 +767,7 @@ export default function MagentoDevelopmentPage() {
         {/* -- 7. COMPARISON TABLE -------------------------------------------- */}
         <ComparisonTable
           eyebrow="HOW YOUR OPTIONS COMPARE"
-          headline="FactoryJet vs. Freelancer vs. US Agency vs. Offshore Shop"
+          headline="FactoryJet vs. Freelancer vs. Traditional Agency vs. Offshore Shop"
           lead="Not all Magento developers are equal. Here's what separates senior Magento expertise from the alternatives — and what the decision actually costs."
           pullQuote={{
             stat: 'Fixed Price',

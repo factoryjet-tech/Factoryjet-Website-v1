@@ -681,7 +681,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'Why is FactoryJet fixed-price, milestone-paid?',
     answer:
-      'Our engineering team brings 25+ years of focused expertise. Same quality of API architecture, prompt engineering, and delivery at dramatically lower labor costs. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated overhead.',
+      'Our engineering team brings 25+ years of focused expertise. Same quality of API architecture, prompt engineering, and delivery without the overhead that inflates traditional agency invoices. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated overhead.',
   },
   {
     category: 'pricing',
@@ -1069,7 +1069,7 @@ export default function AIIntegrationServicesPage() {
         {/* ── 10. COMPARISON TABLE ─────────────────────────────────────────── */}
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. US Agency vs. SaaS AI Add-Ons vs. In-House Dev"
+          headline="FactoryJet vs. Traditional Agency vs. SaaS AI Add-Ons vs. In-House Dev"
           lead="The honest breakdown of cost, capability, and timeline across your options."
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}

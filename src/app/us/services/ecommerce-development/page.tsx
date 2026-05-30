@@ -92,7 +92,7 @@ const faqSchema = {
       name: 'How much does e-commerce development cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s e-commerce development starts at $3,999 for a platform store build (Shopify or WooCommerce with a custom theme). A full store with advanced features — product configurator, subscription logic, B2B pricing, or a headless frontend — runs $9,500–$20,000. Fully custom e-commerce platforms with proprietary product logic, multi-vendor marketplaces, or complex ERP integrations start at $20,000 and are scoped after discovery. All prices are significantly lower than comparable US agencies.',
+        text: 'FactoryJet\'s e-commerce development starts at $3,999 for a platform store build (Shopify or WooCommerce with a custom theme). A full store with advanced features — product configurator, subscription logic, B2B pricing, or a headless frontend — runs $9,500–$20,000. Fully custom e-commerce platforms with proprietary product logic, multi-vendor marketplaces, or complex ERP integrations start at $20,000 and are scoped after discovery. All prices are significantly lower than comparable traditional agencies.',
       },
     },
     {
@@ -1155,11 +1155,11 @@ export default function EcommerceDevelopmentPage() {
         {/* ── 10. COMPARISON TABLE ─────────────────────────────────────────── */}
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. US Agency vs. Freelancer vs. DIY Platforms"
+          headline="FactoryJet vs. Traditional Agency vs. Freelancer vs. DIY Platforms"
           lead="Not all e-commerce development options deliver the same output. Here's the honest comparison."
           pullQuote={{
             stat: '$3,999',
-            caption: 'starting price — same Figma design, platform engineering, and Lighthouse audits as a $20,000 US agency project.',
+            caption: 'starting price — same Figma design, platform engineering, and Lighthouse audits as a $20,000 traditional agency project.',
           }}
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}

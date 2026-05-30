@@ -617,7 +617,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from hiring a US Shopify agency?',
     answer:
-      'Three differences: price (fixed-price, specialized team serving US brands since 1999), speed (3–5 weeks vs. 3–6 months at most US agencies), and ownership (full code delivery on launch day, not held behind a retainer). We\'ve built 120+ Shopify stores across DTC, B2B, and enterprise brands. We understand what actually drives conversion on a product page — not just what looks good in a proposal.',
+      'Three differences: price (fixed-price, specialized team serving US brands since 1999), speed (3–5 weeks vs. 3–6 months at most traditional agencies), and ownership (full code delivery on launch day, not held behind a retainer). We\'ve built 120+ Shopify stores across DTC, B2B, and enterprise brands. We understand what actually drives conversion on a product page — not just what looks good in a proposal.',
   },
   {
     category: 'trust',
@@ -1208,7 +1208,7 @@ export default function ShopifyPage() {
             {
               icon: '⚡',
               title: 'Figma approval before a line of Liquid',
-              body: 'We show you desktop and mobile mockups for every key page before opening a code editor. If the direction is wrong, we fix it in Figma — not after 3 weeks of engineering. This is how we deliver in 3–5 weeks when US agencies quote 6 months.',
+              body: 'We show you desktop and mobile mockups for every key page before opening a code editor. If the direction is wrong, we fix it in Figma — not after 3 weeks of engineering. This is how we deliver in 3–5 weeks when traditional agencies quote 6 months.',
             },
             {
               icon: '🔒',

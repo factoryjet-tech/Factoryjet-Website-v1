@@ -88,7 +88,7 @@ const faqSchema = {
       name: 'How much does a small business website cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A professionally designed small business website costs $1,999–$8,000 depending on complexity. FactoryJet builds custom small business websites starting at $1,999 for a 5-page site. That includes custom design, mobile-first development, on-page SEO, contact forms, Google Analytics setup, and 30 days of post-launch support. US agencies typically charge $8,000–$40,000 for equivalent work.',
+        text: 'A professionally designed small business website costs $1,999–$8,000 depending on complexity. FactoryJet builds custom small business websites starting at $1,999 for a 5-page site. That includes custom design, mobile-first development, on-page SEO, contact forms, Google Analytics setup, and 30 days of post-launch support. Traditional agencies typically charge $8,000–$40,000 for equivalent work.',
       },
     },
     {
@@ -104,7 +104,7 @@ const faqSchema = {
       name: 'How long does it take to build a small business website?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet delivers 5-page small business websites in 7 days — a hard delivery guarantee. Most US agencies take 6–16 weeks for the same scope. Our 7-day timeline is possible because of our senior-only team, proven build process, and streamlined client feedback workflow. The clock starts when you send us your content.',
+        text: 'FactoryJet delivers 5-page small business websites in 7 days — a hard delivery guarantee. Most traditional agencies take 6–16 weeks for the same scope. Our 7-day timeline is possible because of our senior-only team, proven build process, and streamlined client feedback workflow. The clock starts when you send us your content.',
       },
     },
     {
@@ -128,7 +128,7 @@ const faqSchema = {
       name: 'How much does FactoryJet charge for small business web design?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet builds small business websites starting at $1,999 for a 5-page site, delivered in 7 days. Larger sites (up to 15 pages) start at $3,499. E-commerce stores start at $2,999. Every project is fixed-price — no hourly billing, no scope creep. You know the final number before you commit. Compared to US agencies charging $8,000–$40,000 for the same work, FactoryJet delivers fixed-price builds with significant savings.',
+        text: 'FactoryJet builds small business websites starting at $1,999 for a 5-page site, delivered in 7 days. Larger sites (up to 15 pages) start at $3,499. E-commerce stores start at $2,999. Every project is fixed-price — no hourly billing, no scope creep. You know the final number before you commit. Compared to traditional agencies charging $8,000–$40,000 for the same work, FactoryJet delivers fixed-price builds with significant savings.',
       },
     },
   ],
@@ -226,7 +226,7 @@ const STATS = [
   {
     value: '7 days',
     label: 'delivery guarantee for 5-page websites',
-    microcopy: 'vs. 6–16 weeks at most US agencies',
+    microcopy: 'vs. 6–16 weeks at most traditional agencies',
     categoryLabel: 'DELIVERY SPEED',
   },
   {
@@ -241,7 +241,7 @@ const COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
   { label: 'DIY Builder' },
   { label: 'Freelancer' },
-  { label: 'US Agency' },
+  { label: 'Traditional Agency' },
 ] as const;
 
 const COMPARISON_ROWS = [
@@ -421,7 +421,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'How long does a small business website take to build?',
-    answer: `FactoryJet delivers 5-page websites in 7 days — a hard delivery guarantee from when you send us your content. Larger sites (up to 15 pages) take 2–3 weeks. E-commerce stores take 2–4 weeks depending on product count. US agencies typically quote 6–16 weeks for the same scope. Our speed comes from a structured build process and a senior-only team that doesn't have project handoff delays or internal review bottlenecks.`,
+    answer: `FactoryJet delivers 5-page websites in 7 days — a hard delivery guarantee from when you send us your content. Larger sites (up to 15 pages) take 2–3 weeks. E-commerce stores take 2–4 weeks depending on product count. Traditional agencies typically quote 6–16 weeks for the same scope. Our speed comes from a structured build process and a senior-only team that doesn't have project handoff delays or internal review bottlenecks.`,
     category: 'design',
   },
   {
@@ -438,12 +438,12 @@ const FAQ_ITEMS = [
   // -- Cost & Pricing ----------------------------------------------------─
   {
     question: 'How much should a small business spend on a website?',
-    answer: `A small business that relies on its website to generate leads should budget $1,500–$5,000 for a professionally built site. That range covers a quality freelance designer on the low end and a boutique agency like FactoryJet in the mid-range. US agencies start at $8,000–$15,000 for basic small business sites. Going below $1,500 usually means a template swap without real design thinking, no SEO setup, and no accountability — which is often worse than no website at all.`,
+    answer: `A small business that relies on its website to generate leads should budget $1,500–$5,000 for a professionally built site. That range covers a quality freelance designer on the low end and a boutique agency like FactoryJet in the mid-range. Traditional agencies start at $8,000–$15,000 for basic small business sites. Going below $1,500 usually means a template swap without real design thinking, no SEO setup, and no accountability — which is often worse than no website at all.`,
     category: 'cost',
   },
   {
     question: 'What is the cheapest way to get a professional small business website?',
-    answer: `The cheapest professional option is FactoryJet — starting at $1,999 for a 5-page custom site with design, development, SEO setup, and 30-day support included. Below $1,999, you're typically looking at template-based services with no custom design thinking, offshore freelancers with inconsistent quality, or DIY builders that cost time instead of money. The $1,999 starting price is engineered for measurable outcomes for the same deliverable.`,
+    answer: `The best-value professional option is FactoryJet — starting at $1,999 for a 5-page custom site with design, development, SEO setup, and 30-day support included. Below $1,999, you're typically looking at template-based services with no custom design thinking, offshore freelancers with inconsistent quality, or DIY builders that cost time instead of money. The $1,999 starting price is engineered for measurable outcomes for the same deliverable.`,
     category: 'cost',
   },
   {
@@ -453,7 +453,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Why are US web design agencies so expensive?',
-    answer: `US agencies carry enormous overhead: office space in expensive cities, large teams of account managers, project managers, UX researchers, copywriters, and junior developers — all billing at US salaries. A $15,000 agency project typically involves 8–12 people each billing $150–$250/hour. FactoryJet is structured differently: a senior-only engineering team with US-hour project management, fixed-price and milestone-paid, no bloated account management, direct client access. You get predictable cost from quote to launch with full code ownership at handoff.`,
+    answer: `traditional agencies carry enormous overhead: office space in expensive cities, large teams of account managers, project managers, UX researchers, copywriters, and junior developers — all billing at US salaries. A $15,000 agency project typically involves 8–12 people each billing $150–$250/hour. FactoryJet is structured differently: a senior-only engineering team with US-hour project management, fixed-price and milestone-paid, no bloated account management, direct client access. You get predictable cost from quote to launch with full code ownership at handoff.`,
     category: 'cost',
   },
   {
@@ -712,7 +712,7 @@ export default function SmallBusinessWebDesignPage() {
                   { scenario: 'Slow load speed (3s+)', cost: '53% mobile abandonment', subtext: 'Google penalizes slow sites in rankings' },
                   { scenario: 'Template design', cost: 'High bounce rate', subtext: '75% judge credibility by design' },
                   { scenario: 'No on-page SEO', cost: 'Zero organic traffic', subtext: 'Invisible to search engines' },
-                  { scenario: 'US agency build', cost: '$8,000–$40,000', subtext: '6–16 week wait before launch' },
+                  { scenario: 'traditional agency build', cost: '$8,000–$40,000', subtext: '6–16 week wait before launch' },
                 ].map(({ scenario, cost, subtext }) => (
                   <div key={scenario} className="py-3.5">
                     <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">{scenario}</p>
@@ -745,16 +745,16 @@ export default function SmallBusinessWebDesignPage() {
         {/* -- 6. WHY US AGENCIES AREN'T THE ANSWER ------------------------─-- */}
         <StrategicDarkSection
           eyebrow="THE AGENCY PROBLEM"
-          headline={`Three Reasons US Agencies Are Overkill for Most Small Businesses`}
+          headline={`Three Reasons Traditional Agencies Are Overkill for Most Small Businesses`}
           lead="US web design agencies do great work for enterprise clients with $30K+ budgets. For most small businesses, you're paying for overhead you don't need — and waiting longer than you have to."
           pillars={[
             {
               title: 'You pay for their cost structure, not their output',
-              body: `A US agency charging $15,000 for a small business website employs account managers, project managers, junior developers billing at senior rates, and UX researchers — many of whom touch your project briefly. FactoryJet has no such structure. Senior engineers do the work directly. No billing multipliers, no handoff delays. The same engineering quality at a fixed, transparent price.`,
+              body: `A traditional agency charging $15,000 for a small business website employs account managers, project managers, junior developers billing at senior rates, and UX researchers — many of whom touch your project briefly. FactoryJet has no such structure. Senior engineers do the work directly. No billing multipliers, no handoff delays. The same engineering quality at a fixed, transparent price.`,
             },
             {
               title: '6–16 weeks to launch when you need 7 days',
-              body: `A small business replacing an outdated website or launching a new one doesn't have 3–4 months to wait. Every month without a working site is a month of missed leads. US agencies have long timelines because they have long internal review cycles, multiple approval stages, and too many projects running simultaneously. FactoryJet's process is designed for speed: one senior team, one project at a time, 7-day delivery guarantee.`,
+              body: `A small business replacing an outdated website or launching a new one doesn't have 3–4 months to wait. Every month without a working site is a month of missed leads. Traditional agencies have long timelines because they have long internal review cycles, multiple approval stages, and too many projects running simultaneously. FactoryJet's process is designed for speed: one senior team, one project at a time, 7-day delivery guarantee.`,
             },
             {
               title: `Templates dressed up as custom design`,
@@ -766,11 +766,11 @@ export default function SmallBusinessWebDesignPage() {
         {/* -- 7. COMPARISON TABLE -------------------------------------------- */}
         <ComparisonTable
           eyebrow="HOW YOUR OPTIONS COMPARE"
-          headline="FactoryJet vs. DIY Builder vs. Freelancer vs. US Agency"
+          headline="FactoryJet vs. DIY Builder vs. Freelancer vs. Traditional Agency"
           lead="Four ways to get a small business website. Here's what the decision actually looks like when you compare on the things that matter — cost, speed, quality, and ownership."
           pullQuote={{
             stat: '7 days',
-            caption: 'delivery guarantee for 5-page small business websites. US agencies average 6–16 weeks for the same scope.',
+            caption: 'delivery guarantee for 5-page small business websites. Traditional agencies average 6–16 weeks for the same scope.',
           }}
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}
@@ -824,7 +824,7 @@ export default function SmallBusinessWebDesignPage() {
               </div>
               <div className="divide-y divide-fj-neutral-100">
                 {[
-                  { reason: 'fixed-price', detail: 'Than comparable US agencies, same quality' },
+                  { reason: 'fixed-price', detail: 'Than comparable traditional agencies, same quality' },
                   { reason: '7-day delivery', detail: 'Hard guarantee for 5-page sites' },
                   { reason: 'Fixed pricing', detail: 'No hourly billing, no scope creep' },
                   { reason: 'Senior team only', detail: 'No juniors billing at senior rates' },

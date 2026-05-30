@@ -166,7 +166,7 @@ export default function Pricing() {
               marginBottom: "48px",
             }}
           >
-            Local agencies typically charge £4,500–£8,000 for a standard business website, £8,000–£15,000 for an e-commerce store, and £1,000–£2,000 per month for SEO. FactoryJet delivers superior technology at significantly lower price points because our AI-augmented workflow and global delivery model eliminate the overhead that inflates UK agency pricing.
+            Local agencies typically charge £4,500–£8,000 for a standard business website, £8,000–£15,000 for an e-commerce store, and £1,000–£2,000 per month for SEO. FactoryJet delivers superior technology at significantly lower price points because our AI-augmented workflow and global delivery model eliminate the overhead that inflates traditional agency pricing.
           </p>
         </div>
 

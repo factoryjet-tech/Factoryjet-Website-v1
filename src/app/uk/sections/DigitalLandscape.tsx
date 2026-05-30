@@ -161,7 +161,7 @@ export default function DigitalLandscape() {
                 and next-generation search optimisation — including generative
                 engine optimisation (GEO), answer engine optimisation (AEO),
                 and AI optimisation (AIO) — at 50–60% below what traditional
-                UK agencies charge.
+                Traditional agencies charge.
               </p>
               <p>
                 The United Kingdom has the largest AI sector in Europe and

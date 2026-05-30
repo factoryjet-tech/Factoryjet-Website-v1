@@ -584,7 +584,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US WordPress agency?',
     answer:
-      'Three differences: pricing model (fixed-price and milestone-paid — specialized engineers serving US businesses since 1999, leaner operations), engineering standards (we build to the same spec a good US agency would — custom theme, no page builders, Core Web Vitals target, documented code — without the inflated timeline), and SMB-specific experience (500+ small business projects means we know what a 10-person company actually needs from WordPress and what it doesn\'t — you won\'t get oversold on features that a $50M company uses but you\'ll never touch). We also don\'t use proprietary tools: everything we build runs on standard WordPress and can be maintained by any competent developer after handover.',
+      'Three differences: pricing model (fixed-price and milestone-paid — specialized engineers serving US businesses since 1999, leaner operations), engineering standards (we build to the same spec a good traditional agency would — custom theme, no page builders, Core Web Vitals target, documented code — without the inflated timeline), and SMB-specific experience (500+ small business projects means we know what a 10-person company actually needs from WordPress and what it doesn\'t — you won\'t get oversold on features that a $50M company uses but you\'ll never touch). We also don\'t use proprietary tools: everything we build runs on standard WordPress and can be maintained by any competent developer after handover.',
   },
   {
     category: 'trust',

@@ -297,7 +297,7 @@ const FAQS = [
   },
   {
     q: 'Why is your pricing so much lower than US web design agencies?',
-    a: 'We work fixed-price and milestone-paid, with 25+ years of experience specifically serving the US market and US-hour project management. Our lean operations let us scope accurately on the first call. The design quality, code quality, and communication are exactly what you\'d get from a US agency quoting $8,000–$15,000.',
+    a: 'We work fixed-price and milestone-paid, with 25+ years of experience specifically serving the US market and US-hour project management. Our lean operations let us scope accurately on the first call. The design quality, code quality, and communication are exactly what you\'d get from a traditional agency quoting $8,000–$15,000.',
   },
   {
     q: 'What\'s included in the fixed price?',

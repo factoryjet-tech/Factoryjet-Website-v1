@@ -23,13 +23,13 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'Web Application Development for US Businesses | FactoryJet',
   description:
-    'Custom web application development from $7,500. Booking systems, portals, SaaS MVPs & dashboards — fixed price, below US agency rates. Free discovery call.',
+    'Custom web application development from $7,500. Booking systems, portals, SaaS MVPs & dashboards — fixed price, below traditional agency rates. Free discovery call.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Web Application Development for US Businesses | FactoryJet',
     description:
-      'Fixed-price web app development from $7,500. MVP to full SaaS platform. below US agency rates. 60-day bug warranty. Full source code on handoff.',
+      'Fixed-price web app development from $7,500. MVP to full SaaS platform. below traditional agency rates. 60-day bug warranty. Full source code on handoff.',
     url: 'https://factoryjet.com/us/services/web-application-development',
     images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet — Web Application Development USA' }],
     locale: 'en_US',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Web Application Development for US Businesses | FactoryJet',
-    description: 'Custom web apps from $7,500. Fixed price. 60-day bug warranty. below US agency rates.',
+    description: 'Custom web apps from $7,500. Fixed price. 60-day bug warranty. below traditional agency rates.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
@@ -477,7 +477,7 @@ const FAQ_ITEMS = [
 const MARKET_STATS = [
   {
     value: '$7,500',
-    label: 'starting price for a production-ready web application MVP — vs. $50,000+ at US agencies',
+    label: 'starting price for a production-ready web application MVP — vs. $50,000+ at traditional agencies',
     sourceUrl: 'https://factoryjet.com/us/pricing',
     sourceLabel: 'FactoryJet Pricing',
   },
@@ -556,7 +556,7 @@ export default function WebApplicationDevelopmentPage() {
         lead="Booking systems, customer portals, SaaS MVPs, internal dashboards. FactoryJet builds production-ready web apps at below US development agency benchmarks — fixed price, phased delivery, 60-day bug warranty."
         primaryCta={{ label: 'Get a Free Estimate', modal: true, region: 'us' }}
         secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
-        trustItems={['500+ US businesses served', '25+ years engineering experience', 'below US agency rates']}
+        trustItems={['500+ US businesses served', '25+ years engineering experience', 'below traditional agency rates']}
         rightSlot={
           <div className="rounded-2xl border border-fj-neutral-200 bg-white p-6 space-y-4">
             <p className="text-xs font-fj-mono uppercase tracking-widest text-fj-neutral-400">Build vs. Buy Decision Framework</p>

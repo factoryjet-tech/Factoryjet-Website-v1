@@ -60,7 +60,7 @@ const faqStructuredData = {
       name: 'How much does a website cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Our fixed-price packages range from $1,999 (Launch) to $7,999 (Scale), saving you 55-75% compared to US agencies. Launch Package: $1,999 for 5-7 pages, 10-14 business days. Growth Package: $3,999 for 12 pages, 14-21 business days. Scale Package: $7,999 for 25+ pages, 21-35 business days.',
+        text: 'Our fixed-price packages range from $1,999 (Launch) to $7,999 (Scale), saving you 55-75% compared to traditional agencies. Launch Package: $1,999 for 5-7 pages, 10-14 business days. Growth Package: $3,999 for 12 pages, 14-21 business days. Scale Package: $7,999 for 25+ pages, 21-35 business days.',
       },
     },
     {

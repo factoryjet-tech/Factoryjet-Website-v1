@@ -11,7 +11,7 @@ const organization = {
   url: "https://factoryjet.com",
   logo: "https://factoryjet.com/logo.png",
   description:
-    "FactoryJet is the UK’s AI-native digital agency. Web design, Shopify development, custom AI agents & AI SEO (GEO/AEO/AIO) for British businesses. 50–60% below UK agency rates.",
+    "FactoryJet is the UK’s AI-native digital agency. Web design, Shopify development, custom AI agents & AI SEO (GEO/AEO/AIO) for British businesses. 50–60% below traditional agency rates.",
   areaServed: {
     "@type": "Country",
     name: "United Kingdom",
@@ -44,7 +44,7 @@ const services = [
     serviceType: "Web Design & Development",
     name: "Web Design & Development for UK Businesses",
     description:
-      "Next.js 15 + Tailwind CSS 4 websites for UK businesses. Lighthouse 90+, under two-second loads, built for both Google and AI search visibility. 50–60% below UK agency averages.",
+      "Next.js 15 + Tailwind CSS 4 websites for UK businesses. Lighthouse 90+, under two-second loads, built for both Google and AI search visibility. 50–60% below traditional agency averages.",
     provider,
     areaServed,
     url: "https://factoryjet.com/uk/web-design",
@@ -123,11 +123,11 @@ const services = [
 const faqPairs: Array<{ q: string; a: string }> = [
   {
     q: "How much does a website cost in the UK in 2026?",
-    a: "UK website costs vary significantly. Basic template websites cost £500–£2,500. Standard business websites from agencies run £3,000–£12,000. Custom-built sites on modern frameworks range from £10,000–£50,000, and enterprise projects can exceed £100,000. FactoryJet delivers professional, custom-built websites on Next.js 15 starting from £1,500, with most projects falling in the £2,000–£8,000 range — 50–60% below the UK agency average for comparable or superior quality. For UK business owners, remember that website design and development is a legitimate business expense for HMRC purposes, which can reduce the effective cost by 19–25% depending on your tax bracket.",
+    a: "UK website costs vary significantly. Basic template websites cost £500–£2,500. Standard business websites from agencies run £3,000–£12,000. Custom-built sites on modern frameworks range from £10,000–£50,000, and enterprise projects can exceed £100,000. FactoryJet delivers professional, custom-built websites on Next.js 15 starting from £1,500, with most projects falling in the £2,000–£8,000 range — 50–60% below the traditional agency average for comparable or superior quality. For UK business owners, remember that website design and development is a legitimate business expense for HMRC purposes, which can reduce the effective cost by 19–25% depending on your tax bracket.",
   },
   {
     q: "What is the best website design company in the UK?",
-    a: "The best website design company depends on your specific needs and budget. Large agencies like Pentagram and Moving Brands serve enterprise clients at premium rates. Mid-market agencies charge £8,000–£25,000 per project. FactoryJet occupies a unique position as the UK’s AI-native web design agency — delivering enterprise-grade quality on the same technology stack as Stripe and Vercel (Next.js 15, Tailwind CSS 4) at 50–60% below traditional UK agency rates. Every site we build scores 90+ on Google Lighthouse and is optimised for both Google and AI search engines from day one.",
+    a: "The best website design company depends on your specific needs and budget. Large agencies like Pentagram and Moving Brands serve enterprise clients at premium rates. Mid-market agencies charge £8,000–£25,000 per project. FactoryJet occupies a unique position as the UK’s AI-native web design agency — delivering enterprise-grade quality on the same technology stack as Stripe and Vercel (Next.js 15, Tailwind CSS 4) at 50–60% below traditional traditional agency rates. Every site we build scores 90+ on Google Lighthouse and is optimised for both Google and AI search engines from day one.",
   },
   {
     q: "How long does it take to build a website in the UK?",
@@ -167,7 +167,7 @@ const faqPairs: Array<{ q: string; a: string }> = [
   },
   {
     q: "How long does it take to build an e-commerce store in the UK?",
-    a: "With FactoryJet, a Shopify or WooCommerce store can be designed, built, and launched in 3–6 weeks. This includes custom theme development, product data migration if applicable, UK payment gateway integration, shipping configuration, and launch-ready e-commerce SEO. Most UK agencies quote 8–16 weeks for the same scope. Our faster turnaround comes from building on a component-based architecture with AI-assisted development, not from cutting corners.",
+    a: "With FactoryJet, a Shopify or WooCommerce store can be designed, built, and launched in 3–6 weeks. This includes custom theme development, product data migration if applicable, UK payment gateway integration, shipping configuration, and launch-ready e-commerce SEO. Most traditional agencies quote 8–16 weeks for the same scope. Our faster turnaround comes from building on a component-based architecture with AI-assisted development, not from cutting corners.",
   },
   {
     q: "What is an AI agent and how is it different from a chatbot?",
@@ -191,7 +191,7 @@ const faqPairs: Array<{ q: string; a: string }> = [
   },
   {
     q: "What is generative engine optimisation (GEO) and how is it different from traditional SEO?",
-    a: "Generative engine optimisation is the practice of structuring your website content so that AI-powered search tools — Google AI Overviews, ChatGPT, Perplexity AI, Claude, and others — reference and cite your business in their responses. Traditional SEO focuses on ranking in Google’s organic results list. GEO focuses on being the source that AI systems draw from when answering user queries directly. The GEO market is valued at $848 million growing at 50.5% CAGR to a projected $19.8 billion by 2034. AI search traffic converts at 4.4 times the rate of traditional organic. FactoryJet is one of the few UK agencies offering GEO as a dedicated service.",
+    a: "Generative engine optimisation is the practice of structuring your website content so that AI-powered search tools — Google AI Overviews, ChatGPT, Perplexity AI, Claude, and others — reference and cite your business in their responses. Traditional SEO focuses on ranking in Google’s organic results list. GEO focuses on being the source that AI systems draw from when answering user queries directly. The GEO market is valued at $848 million growing at 50.5% CAGR to a projected $19.8 billion by 2034. AI search traffic converts at 4.4 times the rate of traditional organic. FactoryJet is one of the few traditional agencies offering GEO as a dedicated service.",
   },
   {
     q: "What is answer engine optimisation (AEO)?",
@@ -207,7 +207,7 @@ const faqPairs: Array<{ q: string; a: string }> = [
   },
   {
     q: "How much does SEO cost in the UK?",
-    a: "UK SEO pricing varies widely. Freelance SEO consultants charge £300–£800 per month. Mid-range agencies charge £1,500–£3,000 per month. Enterprise SEO from large agencies runs £5,000–£15,000+ per month. FactoryJet’s monthly SEO retainer starts from £500 per month for traditional SEO combined with AI SEO (GEO/AEO/AIO). Our AI SEO-only service — covering generative engine optimisation, answer engine optimisation, and AI visibility — starts from £500 per month, a service that almost no other UK agency offers at any price.",
+    a: "UK SEO pricing varies widely. Freelance SEO consultants charge £300–£800 per month. Mid-range agencies charge £1,500–£3,000 per month. Enterprise SEO from large agencies runs £5,000–£15,000+ per month. FactoryJet’s monthly SEO retainer starts from £500 per month for traditional SEO combined with AI SEO (GEO/AEO/AIO). Our AI SEO-only service — covering generative engine optimisation, answer engine optimisation, and AI visibility — starts from £500 per month, a service that almost no other traditional agency offers at any price.",
   },
   {
     q: "What is llms.txt and do I need it?",
@@ -218,7 +218,7 @@ const faqPairs: Array<{ q: string; a: string }> = [
     a: "Share of AI voice measures how frequently AI systems like ChatGPT, Claude, Perplexity, and Google AI Overviews reference and recommend your brand compared to competitors. It is the AI equivalent of share of voice in traditional marketing. FactoryJet tracks share of AI voice by systematically querying AI platforms with your target keywords and measuring how often your brand appears versus competitors. This gives you visibility into a channel that most UK businesses are completely blind to — and one that is growing at 527% year-over-year in referral traffic.",
   },
   {
-    q: "Why is FactoryJet 50–60% cheaper than UK agencies?",
+    q: "Why is FactoryJet 50–60% cheaper than traditional agencies?",
     a: "Three reasons. First, we are based in Bengaluru, India, which gives us access to world-class engineering talent at a fraction of UK salary costs. Second, our AI-augmented development workflow eliminates the inefficiencies that inflate traditional agency billing — we use AI throughout design generation, code review, testing, and quality assurance. Third, we build on a component-based architecture that allows us to assemble high-quality sites faster than agencies building from scratch every time. The savings are structural, not quality-driven. Every site we deliver scores 90+ on Google Lighthouse — matching or exceeding the quality of agencies charging three times more.",
   },
   {

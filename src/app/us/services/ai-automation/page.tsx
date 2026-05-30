@@ -938,7 +938,7 @@ export default function AIAutomationPage() {
         {/* ── 9. COMPARISON TABLE ──────────────────────────────────────────── */}
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. US Agency vs. DIY Tools vs. Freelancer"
+          headline="FactoryJet vs. Traditional Agency vs. DIY Tools vs. Freelancer"
           lead="Not all automation options are equal. Here's what the decision actually looks like when you compare side by side — on price, capability, and what you're left with after the project ends."
           pullQuote={{
             stat: 'Fixed Price',

@@ -95,7 +95,7 @@ const faqSchema = {
       name: 'How much does WooCommerce development cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'WooCommerce development costs depend on scope. A custom WooCommerce store with a unique theme and standard plugins typically costs $2,999–$8,000. Custom plugin development runs $1,500–$6,000. Complex stores with custom checkout flows, ERP integrations, and B2B pricing cost $8,000–$25,000+. US agencies charge $100–$250/hour for WooCommerce work. FactoryJet builds WooCommerce stores at significantly lower cost with senior developers on every project.',
+        text: 'WooCommerce development costs depend on scope. A custom WooCommerce store with a unique theme and standard plugins typically costs $2,999–$8,000. Custom plugin development runs $1,500–$6,000. Complex stores with custom checkout flows, ERP integrations, and B2B pricing cost $8,000–$25,000+. Traditional agencies charge $100–$250/hour for WooCommerce work. FactoryJet builds WooCommerce stores at significantly lower cost with senior developers on every project.',
       },
     },
     {
@@ -111,7 +111,7 @@ const faqSchema = {
       name: 'How much does FactoryJet charge for WooCommerce development?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet builds WooCommerce stores starting at $2,999 for a standard store with a custom theme and up to 50 products configured. Custom plugin development starts at $1,499. Complex stores with custom functionality start at $4,999. All projects are fixed-price and milestone-paid with no hourly billing. Compared to US agencies charging $100–$250/hour, FactoryJet delivers predictable cost from quote to launch with senior WooCommerce developers on every project and full code ownership at handoff.',
+        text: 'FactoryJet builds WooCommerce stores starting at $2,999 for a standard store with a custom theme and up to 50 products configured. Custom plugin development starts at $1,499. Complex stores with custom functionality start at $4,999. All projects are fixed-price and milestone-paid with no hourly billing. Compared to traditional agencies charging $100–$250/hour, FactoryJet delivers predictable cost from quote to launch with senior WooCommerce developers on every project and full code ownership at handoff.',
       },
     },
     {
@@ -239,7 +239,7 @@ const STATS = [
 const COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
   { label: 'Freelancer' },
-  { label: 'US Agency' },
+  { label: 'Traditional Agency' },
   { label: 'Offshore Shop' },
 ] as const;
 
@@ -299,7 +299,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'significantly lower cost than US agencies',
+    feature: 'significantly lower cost than traditional agencies',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="fl" kind="partial" />,
@@ -756,7 +756,7 @@ export default function WoocommerceDevelopmentPage() {
         {/* -- 7. COMPARISON TABLE -------------------------------------------- */}
         <ComparisonTable
           eyebrow="HOW YOUR OPTIONS COMPARE"
-          headline="FactoryJet vs. Freelancer vs. US Agency vs. Offshore Shop"
+          headline="FactoryJet vs. Freelancer vs. Traditional Agency vs. Offshore Shop"
           lead="Not all WooCommerce developers are equal. Here's how FactoryJet compares to the alternatives on the dimensions that matter for your store."
           pullQuote={{
             stat: '$2,999',
@@ -764,7 +764,7 @@ export default function WoocommerceDevelopmentPage() {
           }}
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}
-          footer="Prices reflect 2025 US market rates. US agency costs based on $150–$250/hour for equivalent project scope."
+          footer="Prices reflect 2025 US market rates. Traditional agency costs based on $150–$250/hour for equivalent project scope."
         />
 
         {/* -- 8. STATS ----------------------------------------------------─-- */}
