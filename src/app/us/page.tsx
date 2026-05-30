@@ -752,7 +752,7 @@ export default function USHomePage() {
             </>
           }
           lead="FactoryJet is an AI-native US digital partner. We engineer websites, e-commerce stores, and AI agents that pay for themselves in 90 days — fixed-price, milestone-paid, with code you own from day one. Talk to the founder before you commit."
-          primaryCta={{ label: 'Start Your Project', href: '/us/pricing' }}
+          primaryCta={{ label: 'Start Your Project', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See our services', href: '#services' }}
           trustItems={['Senior engineers, not SDRs', 'Fixed price, milestone-paid', 'Code & data ownership Day 1']}
           rightSlot={<HeroVisualSlot />}
