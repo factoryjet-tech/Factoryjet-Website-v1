@@ -57,6 +57,18 @@ const IN_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
     ],
   },
   {
+    heading: 'SEO',
+    links: [
+      { label: 'SEO Services',  href: '/seo' },
+      { label: 'Local SEO',     href: '/seo/local-seo' },
+      { label: 'Technical SEO', href: '/seo/technical-seo' },
+      { label: 'Ecommerce SEO', href: '/seo/ecommerce-seo' },
+      { label: 'Link Building', href: '/seo/link-building' },
+      { label: 'SEO Audit',     href: '/seo/seo-audit' },
+      { label: 'AI SEO',        href: '/ai-seo' },
+    ],
+  },
+  {
     heading: 'Company',
     links: [
       { label: 'About',        href: '/about' },
@@ -186,7 +198,7 @@ export default function SiteFooter({
           </div>
 
           {/* Link columns (8 of 12, 3 cols inside) */}
-          <div className="grid grid-cols-1 gap-12 sm:grid-cols-3 lg:col-span-8 lg:gap-8">
+          <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:col-span-8 lg:grid-cols-4 lg:gap-8">
             {resolvedColumns.map((col) => (
               <div key={col.heading}>
                 <p

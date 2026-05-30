@@ -96,6 +96,17 @@ const IN_AI_AGENTS = [
   { icon: CalendarClock, label: 'AI Scheduling Agent',    href: '/services/ai-agent-development/ai-scheduling-agent',    desc: 'Smart bookings & calendar' },
 ] as const;
 
+// SEO hub + sub-services (India only) — new "SEO & AI Search" column in the Services mega
+const IN_SEO_HUB_HREF = '/seo';
+const IN_SEO_SERVICES = [
+  { icon: MapPin,       label: 'Local SEO',     href: '/seo/local-seo',     desc: 'Map pack and near-me' },
+  { icon: Code,         label: 'Technical SEO', href: '/seo/technical-seo', desc: 'Fast, readable site' },
+  { icon: ShoppingCart, label: 'Ecommerce SEO', href: '/seo/ecommerce-seo', desc: 'SEO for online stores' },
+  { icon: Link2,        label: 'Link Building', href: '/seo/link-building', desc: 'Real off-page links' },
+  { icon: Search,       label: 'SEO Audit',     href: '/seo/seo-audit',     desc: 'Free site check' },
+  { icon: Cpu,          label: 'AI SEO',        href: '/ai-seo',            desc: 'Get cited by AI' },
+] as const;
+
 // Regional groupings for the 3-column mega Locations panel (India)
 const IN_LOCATIONS_WEST = [
   { label: 'Mumbai',    state: 'MH', href: '/web-design/mumbai' },
@@ -173,6 +184,7 @@ const LOCALE_CONFIG = {
     locationsLabel:  'US Cities We Serve',
     portfolioHref:   '/us/portfolio',
     pricingHref:     '/us/pricing',
+    aboutHref:       '/us/about',
     featuredHeadline:'7-Day Delivery Guarantee',
     featuredBody:    'Up to 5-page sites shipped in 7 days. Fixed-price, milestone-paid, with code you own from day one.',
     featuredStats:   ['500+ US businesses served', '25+ years of expertise', 'Fixed-price, milestone-paid'],
@@ -188,6 +200,7 @@ const LOCALE_CONFIG = {
     locationsLabel:  'Indian Cities We Serve',
     portfolioHref:   '/portfolio',
     pricingHref:     '/pricing',
+    aboutHref:       '/about',
     featuredHeadline:'7-Day Delivery Guarantee',
     featuredBody:    'Custom websites delivered in 7 days. 60–70% cheaper than US & UK agencies.',
     featuredStats:   ['500+ businesses served', '25+ years of expertise', 'Fixed-price projects'],
@@ -203,6 +216,7 @@ const LOCALE_CONFIG = {
     locationsLabel:  'UAE Cities We Serve',
     portfolioHref:   '/portfolio',
     pricingHref:     '/uae',
+    aboutHref:       '/about',
     featuredHeadline:'7-Day Delivery Guarantee',
     featuredBody:    'Custom websites for Dubai & UAE businesses. 60–70% less than local agencies.',
     featuredStats:   ['500+ businesses served', '25+ years of expertise', 'No hidden fees'],
@@ -382,8 +396,8 @@ export default function SiteHeader({
                     {locale === 'in' ? (
 
                       /* ── India mega menu: 3-col hub layout ──────────────── */
-                      <div className="w-[860px] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
-                        <div className="grid grid-cols-[208px_1fr_196px]">
+                      <div className="w-[1060px] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
+                        <div className="grid grid-cols-[200px_236px_minmax(0,1fr)_188px]">
 
                           {/* Web Services column */}
                           <div className="p-5">
@@ -444,6 +458,47 @@ export default function SiteHeader({
                               href={IN_WEB_SERVICES[5].href}
                               desc={IN_WEB_SERVICES[5].desc}
                             />
+                          </div>
+
+                          {/* SEO & AI Search column (NEW) */}
+                          <div className="border-l border-fj-neutral-100 p-5" style={{ backgroundColor: '#FFFDFB' }}>
+                            <p className="mb-2.5 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
+                              SEO &amp; AI Search
+                            </p>
+
+                            {/* SEO hub card */}
+                            <Link
+                              href={IN_SEO_HUB_HREF}
+                              className="group mb-2.5 flex items-center gap-3 rounded-xl border border-[#F3C9B6] p-3 transition-all hover:border-[#F05A28] hover:shadow-sm"
+                              style={{ background: 'linear-gradient(135deg,#FCEEE8,#FFF6F1)' }}
+                            >
+                              <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-[#F05A28] text-white">
+                                <TrendingUp size={17} strokeWidth={1.8} />
+                              </span>
+                              <span className="flex flex-1 flex-col">
+                                <span className="font-fj-body text-[13.5px] font-semibold text-fj-ink transition-colors group-hover:text-[#F05A28]">
+                                  SEO Services
+                                </span>
+                                <span className="font-fj-body text-[11px] leading-snug text-fj-neutral-500">
+                                  Rank on Google and get cited by AI
+                                </span>
+                              </span>
+                            </Link>
+
+                            {/* Sub-services */}
+                            <div className="space-y-0.5">
+                              {IN_SEO_SERVICES.map((s) => (
+                                <ServiceCard key={s.href} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
+                              ))}
+                            </div>
+
+                            {/* SEO by city */}
+                            <Link
+                              href={IN_SEO_HUB_HREF}
+                              className="mt-2 flex items-center gap-1 px-2.5 font-fj-body text-[11.5px] font-semibold text-[#F05A28] transition-opacity hover:opacity-75"
+                            >
+                              SEO by city <ArrowRight size={11} strokeWidth={2.5} />
+                            </Link>
                           </div>
 
                           {/* AI Agent Development Hub column */}
@@ -831,6 +886,12 @@ export default function SiteHeader({
 
               {/* Flat nav links */}
               <Link
+                href={cfg.aboutHref}
+                className="rounded-lg px-3 py-2 font-fj-body text-[14.5px] text-fj-ink transition-colors hover:bg-fj-neutral-100 hover:text-[#F05A28]"
+              >
+                About
+              </Link>
+              <Link
                 href={cfg.portfolioHref}
                 className="rounded-lg px-3 py-2 font-fj-body text-[14.5px] text-fj-ink transition-colors hover:bg-fj-neutral-100 hover:text-[#F05A28]"
               >
@@ -985,6 +1046,20 @@ export default function SiteHeader({
                         </Link>
                       );
                     })}
+                    {/* SEO & AI Search */}
+                    <div className="mb-1 mt-3 flex items-center justify-between px-1">
+                      <p className="font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">SEO &amp; AI Search</p>
+                      <Link href={IN_SEO_HUB_HREF} onClick={() => setMobileOpen(false)} className="font-fj-body text-[11px] font-semibold text-[#F05A28]">SEO hub →</Link>
+                    </div>
+                    {IN_SEO_SERVICES.map((s) => {
+                      const Icon = s.icon;
+                      return (
+                        <Link key={s.href} href={s.href} onClick={() => setMobileOpen(false)} className="flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]">
+                          <Icon size={14} strokeWidth={1.8} className="flex-shrink-0 text-[#F05A28]" />
+                          {s.label}
+                        </Link>
+                      );
+                    })}
                   </>
                 ) : (
                   /* US / UAE mobile services — flat list */
@@ -1075,6 +1150,13 @@ export default function SiteHeader({
           </div>
 
           {/* Flat links */}
+          <Link
+            href={cfg.aboutHref}
+            onClick={() => setMobileOpen(false)}
+            className="block border-b border-fj-neutral-100 py-4 font-fj-body text-[15px] font-semibold text-fj-ink transition-colors hover:text-[#F05A28]"
+          >
+            About
+          </Link>
           <Link
             href={cfg.portfolioHref}
             onClick={() => setMobileOpen(false)}
