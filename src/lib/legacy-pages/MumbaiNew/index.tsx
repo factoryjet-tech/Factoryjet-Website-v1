@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
+import { useContactModal } from '@/context/ContactModalContext';
 import Hero from './components/Hero';
 import {
   SocialProof,
@@ -22,15 +23,12 @@ import {
 } from './components/DetailedSections';
 // import FooterLocal from './components/FooterLocal'; // Commented out - using global Footer instead
 import ExitIntentModal from './components/ExitIntentModal';
-import ContactModal from './components/ContactModal';
 import StickyMobileCTA from './components/StickyMobileCTA';
 
 const MumbaiPage = () => {
-  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const { openModal } = useContactModal();
 
-  const openContactModal = () => {
-    setIsContactModalOpen(true);
-  };
+  const openContactModal = () => openModal('in');
 
   return (
     <>
@@ -138,7 +136,6 @@ const MumbaiPage = () => {
       {/* <FooterLocal /> */} {/* Commented out - using global Footer instead */}
       <StickyMobileCTA />
       <ExitIntentModal />
-      <ContactModal isOpen={isContactModalOpen} onClose={() => setIsContactModalOpen(false)} />
     </>
   );
 };

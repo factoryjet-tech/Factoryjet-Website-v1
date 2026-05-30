@@ -1,58 +1,8 @@
-import React, { useState, FormEvent } from 'react';
+import React from 'react';
 import { CheckCircle, MessageCircle } from 'lucide-react';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-import { db } from '@/firebase';
+import LeadFormInline from '@/components/LeadFormInline';
 
 const Hero: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    businessType: '',
-    budget: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-
-    try {
-      await addDoc(collection(db, 'mumbai_leads'), {
-        ...formData,
-        source: 'Hero Form',
-        timestamp: serverTimestamp(),
-        page: 'Mumbai'
-      });
-
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        phone: '',
-        email: '',
-        businessType: '',
-        budget: ''
-      });
-
-      setTimeout(() => setSubmitStatus('idle'), 5000);
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      setSubmitStatus('error');
-      setTimeout(() => setSubmitStatus('idle'), 5000);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.id]: e.target.value
-    }));
-  };
-
   return (
     <section className="relative w-full bg-hero-gradient pt-10 pb-16 md:pt-12 md:pb-20 px-4 md:px-8 overflow-hidden">
       {/* Background Effects - Optimized for Mobile */}
@@ -120,113 +70,14 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Form (Span 5) */}
+          {/* Right Column: Standard lead form (Span 5) */}
           <div className="lg:col-span-5 relative mt-6 lg:mt-0" id="quote-form">
-            {/* Reduced Blur for Mobile Performance */}
-            <div className="bg-white/10 backdrop-blur-md md:backdrop-blur-xl border border-white/20 rounded-2xl p-6 md:p-8 shadow-2xl relative overflow-hidden group hover:border-white/30 transition-all">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary to-accent"></div>
-
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold text-white mb-1">Get Free Consultation</h3>
-                <p className="text-blue-200 text-sm">Custom proposal in 2 hours. Packages for every stage.</p>
-              </div>
-
-              <form className="space-y-4" onSubmit={handleSubmit}>
-                <div className="space-y-1">
-                  <label className="text-xs font-semibold text-blue-100 uppercase ml-1">Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Enter your name"
-                    className="w-full px-4 py-3 min-h-[48px] rounded-lg bg-white border border-light text-navy placeholder:text-slate-500 focus:ring-2 focus:ring-accent transition-all text-base"
-                    required
-                  />
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="space-y-1">
-                    <label className="text-xs font-semibold text-blue-100 uppercase ml-1">Phone</label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder="+91..."
-                      className="w-full px-4 py-3 min-h-[48px] rounded-lg bg-white border border-light text-navy placeholder:text-slate-500 focus:ring-2 focus:ring-accent transition-all text-base"
-                      required
-                    />
-                  </div>
-                  <div className="space-y-1">
-                    <label className="text-xs font-semibold text-blue-100 uppercase ml-1">Email</label>
-                    <input
-                      type="email"
-                      id="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="name@company.com"
-                      className="w-full px-4 py-3 min-h-[48px] rounded-lg bg-white border border-light text-navy placeholder:text-slate-500 focus:ring-2 focus:ring-accent transition-all text-base"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-1">
-                  <label className="text-xs font-semibold text-blue-100 uppercase ml-1">Business Type</label>
-                  <select
-                    id="businessType"
-                    value={formData.businessType}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 min-h-[48px] rounded-lg bg-white border border-light text-navy focus:ring-2 focus:ring-accent transition-all text-base"
-                  >
-                    <option value="">Select Industry...</option>
-                    <option value="Manufacturing">Manufacturing Company</option>
-                    <option value="Exporter">Exporter / Importer</option>
-                    <option value="Wholesale">Wholesaler / Distributor</option>
-                    <option value="Engineering">Engineering / Fabrication</option>
-                    <option value="Pharma">Chemical / Pharma</option>
-                    <option value="Textile">Textile / Garments</option>
-                    <option value="Food">Food Processing</option>
-                  </select>
-                </div>
-
-                <div className="space-y-1">
-                  <label className="text-xs font-semibold text-blue-100 uppercase ml-1">Budget</label>
-                  <select
-                    id="budget"
-                    value={formData.budget}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 min-h-[48px] rounded-lg bg-white border border-light text-navy focus:ring-2 focus:ring-accent transition-all text-base"
-                  >
-                    <option value="">Estimated Budget...</option>
-                    <option value="Starter">Starter</option>
-                    <option value="Growth">Growth</option>
-                    <option value="Pro">Professional</option>
-                    <option value="Enterprise">Enterprise</option>
-                  </select>
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-secondary hover:bg-orange-600 text-white font-bold py-4 min-h-[52px] rounded-lg text-lg shadow-lg hover:shadow-orange-500/30 transition-all transform hover:-translate-y-0.5 mt-2 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? 'Submitting...' : 'Get Free Quote Now'}
-                </button>
-
-                {submitStatus === 'success' && (
-                  <p className="text-green-300 text-sm text-center">Thank you! We'll contact you within 2 hours.</p>
-                )}
-                {submitStatus === 'error' && (
-                  <p className="text-red-300 text-sm text-center">Something went wrong. Please try again.</p>
-                )}
-
-                <p className="text-[10px] text-center text-blue-200 opacity-80 mt-3">
-                  100% Secure. We respect your privacy. Response in 2 hours.
-                </p>
-              </form>
-            </div>
+            <LeadFormInline
+              region="in"
+              source="mumbai_hero"
+              heading="Get a free consultation"
+              subheading="Just your name and email — custom proposal within 2 hours."
+            />
           </div>
         </div>
 
