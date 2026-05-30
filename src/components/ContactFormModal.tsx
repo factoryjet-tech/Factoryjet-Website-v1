@@ -1,20 +1,18 @@
 'use client';
 
 /**
- * ContactFormModal — v2.0 multi-step auto-progress contact form.
+ * ContactFormModal — v3.0 low-friction 2-step contact form.
  *
- * Changes from v1:
- *   - Auto-progress: Step 1 advances immediately on service selection.
- *     Step 2 advances automatically once all 4 required fields are valid
- *     (500 ms debounce so the user sees completion before transition).
- *   - All fields mandatory: name, email, phone, company all required on Step 2.
- *   - Cloudflare Turnstile bot protection on Step 3.
- *     Set NEXT_PUBLIC_TURNSTILE_SITE_KEY in .env.local and Cloudflare Pages
- *     → Settings → Environment variables. The token is stored alongside the
- *     Firestore submission; add a Cloudflare Pages Function at
- *     functions/api/verify-turnstile.ts for full server-side verification.
- *   - Framer Motion removed from step transitions (CSS transitions only,
- *     reduces bundle size and avoids spring physics).
+ * Changes from v2 (2026-05-30, conversion-recovery rebuild — form was at 91%
+ * abandonment in GA4: 22 form_start → 2 form_submit):
+ *   - 2 steps instead of 3. Step 1: service selection. Step 2: contact + submit.
+ *   - Only Name + Email are required. Phone, Company, Message are OPTIONAL.
+ *   - Budget question removed entirely (qualify on the call).
+ *   - No visible CAPTCHA / no blocked submit: Cloudflare Turnstile runs in
+ *     `appearance: 'interaction-only'` mode (invisible unless a challenge is
+ *     actually needed) and the token is sent if present but never gates submit.
+ *   - Honeypot field (`company_website`) added for spam protection.
+ *   - All GA4/GTM events preserved (form_start, form_step, form_submit/success/error).
  */
 
 import React, { useState, useEffect, useRef } from 'react';
@@ -41,12 +39,10 @@ import {
   trackFormError,
   trackFormSubmission,
   trackServiceSelection,
-  trackBudgetSelection,
   trackButtonClick,
 } from '../utils/gtm';
 
 type ServiceType = 'website' | 'ecommerce' | 'maintenance' | 'other';
-type BudgetRange = 'starter' | 'business' | 'enterprise' | 'not-sure';
 
 interface FormData {
   name: string;
@@ -54,7 +50,6 @@ interface FormData {
   phone: string;
   company: string;
   service: ServiceType | '';
-  budget: BudgetRange | '';
   message: string;
   turnstileToken: string;
 }
@@ -78,27 +73,6 @@ const aiServices: typeof defaultServices = [
   { id: 'other',       label: 'Other / Custom',        icon: Rocket,     description: 'Custom development needs' },
 ];
 
-const budgetsIN = [
-  { id: 'starter'  as BudgetRange, label: 'Starter',   range: '₹25K - ₹50K'    },
-  { id: 'business' as BudgetRange, label: 'Business',  range: '₹50K - ₹1.2L'   },
-  { id: 'enterprise' as BudgetRange, label: 'Enterprise', range: '₹1.2L+'       },
-  { id: 'not-sure' as BudgetRange, label: 'Not Sure',  range: 'Need guidance'   },
-];
-
-const budgetsUS = [
-  { id: 'starter'  as BudgetRange, label: 'Launch',     range: '$1,999 - $3,499' },
-  { id: 'business' as BudgetRange, label: 'Growth',     range: '$3,999 - $6,999' },
-  { id: 'enterprise' as BudgetRange, label: 'Scale',    range: '$7,999 - $14,999' },
-  { id: 'not-sure' as BudgetRange, label: 'Not Sure',   range: 'Need guidance'   },
-];
-
-const budgetsUK = [
-  { id: 'starter'  as BudgetRange, label: 'Starter',   range: '£799 - £1,499'   },
-  { id: 'business' as BudgetRange, label: 'Business',  range: '£1,499 - £2,499' },
-  { id: 'enterprise' as BudgetRange, label: 'Enterprise', range: '£4,999+'      },
-  { id: 'not-sure' as BudgetRange, label: 'Not Sure',  range: 'Need guidance'   },
-];
-
 // Extend window type for Cloudflare Turnstile
 declare global {
   interface Window {
@@ -111,24 +85,25 @@ declare global {
   }
 }
 
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 const ContactFormModal: React.FC = () => {
   const { isOpen, region, variant, closeModal } = useContactModal();
-  const budgets = region === 'us' ? budgetsUS : region === 'uk' ? budgetsUK : budgetsIN;
   const services = variant === 'ai' ? aiServices : defaultServices;
 
-  const [step, setStep] = useState<1 | 2 | 3>(1);
+  const [step, setStep] = useState<1 | 2>(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  // Prevent double-fire of auto-advance on Step 2
-  const autoAdvancedRef = useRef(false);
+  // Honeypot — real users never fill this; bots often do.
+  const [honeypot, setHoneypot] = useState('');
   // Cloudflare Turnstile
   const turnstileContainerRef = useRef<HTMLDivElement>(null);
   const turnstileWidgetId = useRef<string | null>(null);
 
   const [formData, setFormData] = useState<FormData>({
     name: '', email: '', phone: '', company: '',
-    service: '', budget: '', message: '', turnstileToken: '',
+    service: '', message: '', turnstileToken: '',
   });
 
   // ── Body scroll lock ──────────────────────────────────────────────────────
@@ -160,10 +135,11 @@ const ContactFormModal: React.FC = () => {
     });
   }, [isOpen]);
 
-  // ── Cloudflare Turnstile — mount when step 3 becomes visible ─────────────
+  // ── Cloudflare Turnstile — mount on Step 2, invisible (interaction-only) ──
+  // Runs in the background; only shows a challenge if Cloudflare deems it
+  // necessary. The token is captured if produced but never gates the submit.
   useEffect(() => {
-    if (step !== 3) {
-      // Clean up widget if navigating away from step 3
+    if (step !== 2) {
       if (turnstileWidgetId.current && window.turnstile) {
         window.turnstile.remove(turnstileWidgetId.current);
         turnstileWidgetId.current = null;
@@ -183,6 +159,7 @@ const ContactFormModal: React.FC = () => {
         'expired-callback': () => setFormData((prev) => ({ ...prev, turnstileToken: '' })),
         'error-callback': () => setFormData((prev) => ({ ...prev, turnstileToken: '' })),
         theme: 'light',
+        appearance: 'interaction-only',
         size: 'normal',
       });
     };
@@ -192,7 +169,6 @@ const ContactFormModal: React.FC = () => {
       return;
     }
 
-    // Load script only once
     const scriptId = 'cf-turnstile-script';
     if (!document.getElementById(scriptId)) {
       const script = document.createElement('script');
@@ -203,39 +179,14 @@ const ContactFormModal: React.FC = () => {
       script.onload = renderWidget;
       document.head.appendChild(script);
     } else {
-      // Script already injected but Turnstile not ready yet — poll briefly
       let attempts = 0;
       const poll = setInterval(() => {
         attempts++;
         if (window.turnstile) { clearInterval(poll); renderWidget(); }
-        if (attempts > 50) clearInterval(poll); // give up after 5 s
+        if (attempts > 50) clearInterval(poll);
       }, 100);
     }
   }, [step]);
-
-  // ── Auto-progress Step 2 → 3 ─────────────────────────────────────────────
-  // Fires automatically once all four required fields are filled and valid.
-  // 500 ms debounce so the last-typed character has a moment to register.
-  useEffect(() => {
-    if (step !== 2) { autoAdvancedRef.current = false; return; }
-    if (autoAdvancedRef.current) return;
-
-    const allValid =
-      formData.name.trim().length > 0 &&
-      /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email) &&
-      formData.phone.trim().length >= 7 &&
-      formData.company.trim().length > 0;
-
-    if (!allValid) return;
-
-    const timer = setTimeout(() => {
-      autoAdvancedRef.current = true;
-      trackFormStep('contact_form', 3, 'budget_and_message');
-      setStep(3);
-    }, 500);
-
-    return () => clearTimeout(timer);
-  }, [formData.name, formData.email, formData.phone, formData.company, step]);
 
   // ── Field handlers ────────────────────────────────────────────────────────
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -268,42 +219,28 @@ const ContactFormModal: React.FC = () => {
     }, 350);
   };
 
-  const handleBudgetSelect = (budgetId: BudgetRange) => {
-    const budgetInfo = budgets.find((b) => b.id === budgetId);
-    trackBudgetSelection(budgetId, budgetInfo?.range ?? budgetId);
-    setFormData((prev) => ({ ...prev, budget: budgetId }));
-  };
-
-  const validateStep = (currentStep: number): boolean => {
-    if (currentStep === 1) return formData.service !== '';
-    if (currentStep === 2) {
-      return (
-        formData.name.trim() !== '' &&
-        formData.email.trim() !== '' &&
-        /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email) &&
-        formData.phone.trim().length >= 7 &&
-        formData.company.trim() !== ''
-      );
-    }
-    return true;
-  };
+  // Only Name + Email are required. Everything else is optional.
+  const canSubmit = (): boolean =>
+    formData.name.trim() !== '' && EMAIL_RE.test(formData.email);
 
   const handleBack = () => {
     trackButtonClick('back', `form_step_${step}`);
-    setStep((prev) => Math.max(prev - 1, 1) as 1 | 2 | 3);
+    setStep(1);
   };
 
   // ── Submit ────────────────────────────────────────────────────────────────
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.turnstileToken) {
-      setError('Please complete the human verification above.');
+    // Silent bot drop — honeypot filled.
+    if (honeypot.trim() !== '') { setIsSuccess(true); return; }
+    if (!canSubmit()) {
+      setError('Please enter your name and a valid email.');
       return;
     }
     setIsSubmitting(true);
     setError(null);
 
-    trackFormSubmit('contact_form', { service: formData.service, budget: formData.budget });
+    trackFormSubmit('contact_form', { service: formData.service });
 
     try {
       const now = new Date();
@@ -318,7 +255,6 @@ const ContactFormModal: React.FC = () => {
         phone: formData.phone,
         company: formData.company,
         service: formData.service,
-        budget: formData.budget,
         message: formData.message,
         region,
         turnstileToken: formData.turnstileToken,
@@ -347,16 +283,16 @@ const ContactFormModal: React.FC = () => {
       setStep(1);
       setIsSuccess(false);
       setError(null);
-      autoAdvancedRef.current = false;
+      setHoneypot('');
       turnstileWidgetId.current = null;
-      setFormData({ name: '', email: '', phone: '', company: '', service: '', budget: '', message: '', turnstileToken: '' });
+      setFormData({ name: '', email: '', phone: '', company: '', service: '', message: '', turnstileToken: '' });
     }, 300);
   };
 
-  // ── Step indicator ────────────────────────────────────────────────────────
+  // ── Step indicator (2 steps) ──────────────────────────────────────────────
   const renderStepIndicator = () => (
     <div className="flex items-center justify-center gap-2 mb-8">
-      {[1, 2, 3].map((s) => (
+      {[1, 2].map((s) => (
         <div key={s} className="flex items-center">
           <div
             className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 ${
@@ -367,7 +303,7 @@ const ContactFormModal: React.FC = () => {
           >
             {s < step ? <CheckCircle size={16} /> : s}
           </div>
-          {s < 3 && (
+          {s < 2 && (
             <div
               className={`w-12 h-1 mx-1 rounded transition-colors duration-300 ${
                 s < step ? 'bg-[#10B981]' : 'bg-slate-200'
@@ -413,12 +349,12 @@ const ContactFormModal: React.FC = () => {
     </div>
   );
 
-  // ── Step 2: Contact details ───────────────────────────────────────────────
+  // ── Step 2: Contact details + submit ──────────────────────────────────────
   const renderStep2 = () => (
     <div className="space-y-5 animate-fadeIn">
       <div className="text-center mb-6">
-        <h3 className="text-xl font-bold text-[#0A0F1C] mb-2">Tell us about yourself</h3>
-        <p className="text-slate-500 text-sm">Fill all fields — we'll continue automatically</p>
+        <h3 className="text-xl font-bold text-[#0A0F1C] mb-2">How can we reach you?</h3>
+        <p className="text-slate-500 text-sm">Just your name and email — the rest is optional.</p>
       </div>
       <div className="grid grid-cols-2 gap-4">
         <div className="col-span-2 sm:col-span-1">
@@ -438,101 +374,50 @@ const ContactFormModal: React.FC = () => {
           />
         </div>
         <div className="col-span-2 sm:col-span-1">
-          <label className="block text-sm font-medium text-slate-700 mb-1.5">Phone Number *</label>
+          <label className="block text-sm font-medium text-slate-700 mb-1.5">
+            Phone <span className="text-slate-400 font-normal">(optional — for a faster callback)</span>
+          </label>
           <input
             type="tel" name="phone" value={formData.phone} onChange={handleInputChange}
-            placeholder={region === 'us' ? '(555) 000-0000' : '+44 7700 000000'} required autoComplete="tel"
+            placeholder={region === 'us' ? '(555) 000-0000' : '+44 7700 000000'} autoComplete="tel"
             className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#F05A28] focus:ring-2 focus:ring-orange-100 outline-none transition-all text-sm"
           />
         </div>
         <div className="col-span-2 sm:col-span-1">
-          <label className="block text-sm font-medium text-slate-700 mb-1.5">Company Name *</label>
+          <label className="block text-sm font-medium text-slate-700 mb-1.5">
+            Company <span className="text-slate-400 font-normal">(optional)</span>
+          </label>
           <input
             type="text" name="company" value={formData.company} onChange={handleInputChange}
-            placeholder="Acme Inc." required autoComplete="organization"
+            placeholder="Acme Inc." autoComplete="organization"
             className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#F05A28] focus:ring-2 focus:ring-orange-100 outline-none transition-all text-sm"
+          />
+        </div>
+        <div className="col-span-2">
+          <label className="block text-sm font-medium text-slate-700 mb-1.5">
+            Anything we should know? <span className="text-slate-400 font-normal">(optional)</span>
+          </label>
+          <textarea
+            name="message" value={formData.message} onChange={handleInputChange}
+            placeholder="A sentence about your project, timeline, or goals…"
+            rows={3}
+            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#F05A28] focus:ring-2 focus:ring-orange-100 outline-none transition-all text-sm resize-none"
           />
         </div>
       </div>
 
-      {/* Progress hint shown once all fields valid */}
-      {validateStep(2) && (
-        <p className="text-center text-xs text-[#10B981] font-medium animate-fadeIn">
-          ✓ All set — taking you to the next step…
-        </p>
-      )}
-
-      <div className="flex gap-3 pt-2">
-        <button
-          type="button" onClick={handleBack}
-          className="flex-1 bg-slate-100 text-slate-700 py-3 rounded-xl font-bold transition-all hover:bg-slate-200"
-        >
-          Back
-        </button>
-        <button
-          type="button" onClick={() => { if (validateStep(2)) { trackFormStep('contact_form', 3, 'budget_and_message'); setStep(3); } }}
-          disabled={!validateStep(2)}
-          className="flex-1 bg-[#F05A28] text-white py-3 rounded-xl font-bold transition-all disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[#d44d1f]"
-        >
-          Continue
-        </button>
-      </div>
-    </div>
-  );
-
-  // ── Step 3: Budget + Turnstile + Submit ───────────────────────────────────
-  const renderStep3 = () => (
-    <div className="space-y-5 animate-fadeIn">
-      <div className="text-center mb-6">
-        <h3 className="text-xl font-bold text-[#0A0F1C] mb-2">Almost there!</h3>
-        <p className="text-slate-500 text-sm">Share your budget and verify you're human</p>
-      </div>
-
-      <div>
-        <label className="block text-sm font-medium text-slate-700 mb-3">Budget Range</label>
-        <div className="grid grid-cols-2 gap-3">
-          {budgets.map((budget) => {
-            const isSelected = formData.budget === budget.id;
-            return (
-              <button
-                key={budget.id} type="button" onClick={() => handleBudgetSelect(budget.id)}
-                className={`p-3 rounded-xl border-2 text-left transition-all duration-200 ${
-                  isSelected ? 'border-[#F05A28] bg-orange-50' : 'border-slate-200 hover:border-[#F05A28]/50'
-                }`}
-              >
-                <span className="font-bold text-[#0A0F1C] text-sm block">{budget.label}</span>
-                <span className="text-xs text-slate-500">{budget.range}</span>
-              </button>
-            );
-          })}
-        </div>
-      </div>
-
-      <div>
-        <label className="block text-sm font-medium text-slate-700 mb-1.5">
-          Project Details <span className="text-slate-400 font-normal">(optional)</span>
+      {/* Honeypot — visually hidden, off-screen; real users never see/fill it. */}
+      <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', top: 'auto', height: 0, width: 0, overflow: 'hidden' }}>
+        <label>Company website
+          <input
+            type="text" name="company_website" tabIndex={-1} autoComplete="off"
+            value={honeypot} onChange={(e) => setHoneypot(e.target.value)}
+          />
         </label>
-        <textarea
-          name="message" value={formData.message} onChange={handleInputChange}
-          placeholder="Tell us about your project goals, timeline, or any specific requirements..."
-          rows={3}
-          className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#F05A28] focus:ring-2 focus:ring-orange-100 outline-none transition-all text-sm resize-none"
-        />
       </div>
 
-      {/* ── Cloudflare Turnstile ── */}
-      <div>
-        <label className="block text-sm font-medium text-slate-700 mb-2">
-          Human Verification *
-        </label>
-        <div ref={turnstileContainerRef} className="min-h-[65px]" />
-        {!formData.turnstileToken && (
-          <p className="mt-1 text-xs text-slate-400">Complete the verification above to submit</p>
-        )}
-        {formData.turnstileToken && (
-          <p className="mt-1 text-xs text-[#10B981] font-medium">✓ Verified</p>
-        )}
-      </div>
+      {/* Invisible Turnstile (interaction-only): no visible widget unless challenged. */}
+      <div ref={turnstileContainerRef} className="empty:hidden" />
 
       {error && (
         <div className="bg-red-50 text-red-600 px-4 py-3 rounded-xl text-sm">{error}</div>
@@ -546,16 +431,17 @@ const ContactFormModal: React.FC = () => {
           Back
         </button>
         <button
-          type="submit" disabled={isSubmitting || !formData.turnstileToken}
-          className="flex-1 bg-[#FF6B35] text-white py-3 rounded-xl font-bold transition-all hover:bg-orange-600 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+          type="submit" disabled={isSubmitting || !canSubmit()}
+          className="flex-1 bg-[#F05A28] text-white py-3 rounded-xl font-bold transition-all hover:bg-[#d44d1f] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
         >
           {isSubmitting ? (
-            <><Loader2 size={18} className="animate-spin" />Submitting…</>
+            <><Loader2 size={18} className="animate-spin" />Sending…</>
           ) : (
             <><Send size={18} />Send Request</>
           )}
         </button>
       </div>
+      <p className="text-center text-xs text-slate-400">We reply within 24 hours. No spam, no obligation.</p>
     </div>
   );
 
@@ -618,7 +504,6 @@ const ContactFormModal: React.FC = () => {
               {renderStepIndicator()}
               {step === 1 && renderStep1()}
               {step === 2 && renderStep2()}
-              {step === 3 && renderStep3()}
             </>
           )}
         </form>
