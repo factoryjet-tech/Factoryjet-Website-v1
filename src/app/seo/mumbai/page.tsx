@@ -21,7 +21,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 export const metadata: Metadata = {
   title: 'SEO Agency in Mumbai | AI-Native SEO Company | FactoryJet',
   description:
-    'SEO agency in Mumbai for banks & finance, media, online brands, and gem & pharma exporters. Win across India, abroad, and in Google AI answers. No lock-in. Serving BKC, Nariman Point, Andheri, SEEPZ & Lower Parel.',
+    'SEO company in Mumbai for banks, finance, media, online brands, and gem and pharma exporters. Win across India, abroad, and in Google AI answers. No lock-in.',
   keywords: [
     'seo agency in mumbai',
     'seo company in mumbai',
@@ -73,7 +73,6 @@ const localBusinessSchema = {
   geo: { '@type': 'GeoCircle', geoMidpoint: { '@type': 'GeoCoordinates', latitude: 19.076, longitude: 72.8777 }, geoRadius: '50000' },
   serviceType: 'Search Engine Optimisation',
   priceRange: '₹₹',
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '500', bestRating: '5', worstRating: '1' },
 };
 
 const serviceSchema = {
@@ -87,17 +86,6 @@ const serviceSchema = {
   provider: { '@type': 'Organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Mumbai' },
   offers: { '@type': 'Offer', price: '19999', priceCurrency: 'INR', description: 'SEO services for Indian businesses start from ₹19,999/month. Month to month, no lock-in.' },
-};
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'How much does SEO cost in Mumbai?', acceptedAnswer: { '@type': 'Answer', text: 'We do not sell fixed packages. We look at what you need and only charge for work that moves you up Google. As a rough guide, our SEO plans for Indian businesses start at ₹19,999 a month, with an exact price after a free check. There is no long contract. You pay month to month and can stop with 30 days notice.' } },
-    { '@type': 'Question', name: 'Can you do SEO for a Mumbai gems, jewellery, or pharma exporter selling globally?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, and it is a different game from local SEO. Exporters near the Bharat Diamond Bourse, SEEPZ, and the big pharma firms need the simple English searches that overseas buyers use, content that builds trust with buyers and regulators, and a presence in AI answers like ChatGPT and Google. We chase orders from abroad, not "near me" searches.' } },
-    { '@type': 'Question', name: 'Do you do SEO for a Mumbai bank, fintech, or media brand competing across India?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Mumbai is a head-office city, so we go after all-India and category searches, build content that shows you lead your field, and add the trust signals that win in banking, finance, fintech, and media. This is national brand SEO, not the local map.' } },
-    { '@type': 'Question', name: 'Do you cover Navi Mumbai and Thane in local SEO?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. We treat Navi Mumbai (Vashi, Belapur) and Thane as part of greater Mumbai, with separate targeting, Google listing work, and local-map content for each area where you have a presence or serve customers.' } },
-  ],
 };
 
 const speakableSchema = {
@@ -146,6 +134,16 @@ const MUM_FAQ_ITEMS = [
   { category: 'reporting', question: 'How do you measure success?', answer: 'By leads and sales, not rankings for their own sake. We agree the searches that matter and what counts as a lead up front, set up Google’s free tools properly, and report on the numbers that map to your Mumbai sales.' },
   { category: 'reporting', question: 'Who works on my Mumbai account?', answer: 'A small, senior team. FactoryJet is founder-led, so you talk to the people doing the strategy and the technical work, not a junior who got your account on day two.' },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: MUM_FAQ_ITEMS.map((it) => ({
+    '@type': 'Question',
+    name: it.question,
+    acceptedAnswer: { '@type': 'Answer', text: it.answer },
+  })),
+};
 
 const MUM_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
@@ -227,12 +225,16 @@ export default function MumbaiSeoPage() {
               <p>
                 For Mumbai&apos;s banks, finance, media, and online brands in BKC, Lower Parel, Andheri, and Bandra, the
                 game is national. Banks and media compete on brand and category searches with strong, trustworthy
-                content; online brands compete on all-India shopping demand. For clinics, shops, and local services, it
-                is the local map and Google Maps.
+                content; online brands compete on{' '}
+                <a href="/seo/ecommerce-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">all-India shopping demand</a>. For clinics, shops, and local services, it
+                is the{' '}
+                <a href="/seo/local-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">local map and Google Maps</a>.
               </p>
               <p>
-                Every FactoryJet Mumbai plan covers the technical side, the right search plan for your market, and
-                Google AI answers as standard, then adds content and links over time. You keep every page, plan, and
+                Every FactoryJet Mumbai plan covers{' '}
+                <a href="/seo/technical-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">the technical side</a>, the right search plan for your market, and
+                Google AI answers as standard, then adds content and{' '}
+                <a href="/seo/link-building" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">links</a> over time. You keep every page, plan, and
                 link we build.
               </p>
             </>

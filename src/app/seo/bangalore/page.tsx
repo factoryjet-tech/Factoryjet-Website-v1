@@ -21,7 +21,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 export const metadata: Metadata = {
   title: 'SEO Company in Bangalore | AI-Native SEO Agency | FactoryJet',
   description:
-    'SEO company in Bangalore for software (SaaS), IT, startups, and online brands. Win across India, abroad, and in Google AI answers. No lock-in. Serving Koramangala, HSR Layout, Whitefield, and Indiranagar.',
+    'SEO company in Bangalore for software (SaaS), IT, startups, and online brands. Win across India, abroad, and in Google AI answers. No lock-in.',
   keywords: [
     'seo company in bangalore',
     'seo agency in bangalore',
@@ -73,7 +73,6 @@ const localBusinessSchema = {
   geo: { '@type': 'GeoCircle', geoMidpoint: { '@type': 'GeoCoordinates', latitude: 12.9716, longitude: 77.5946 }, geoRadius: '50000' },
   serviceType: 'Search Engine Optimisation',
   priceRange: '₹₹',
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '500', bestRating: '5', worstRating: '1' },
 };
 
 const serviceSchema = {
@@ -87,17 +86,6 @@ const serviceSchema = {
   provider: { '@type': 'Organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Bangalore' },
   offers: { '@type': 'Offer', price: '19999', priceCurrency: 'INR', description: 'SEO services for Indian businesses start from ₹19,999/month. Month to month, no lock-in.' },
-};
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'How much does SEO cost in Bangalore?', acceptedAnswer: { '@type': 'Answer', text: 'We do not sell fixed packages. We look at what you need and only charge for work that moves you up Google. As a rough guide, our SEO plans for Indian businesses start at ₹19,999 a month, with an exact price after a free check. There is no long contract. You pay month to month and can stop with 30 days notice.' } },
-    { '@type': 'Question', name: 'Can you rank a Bangalore software (SaaS) brand against funded and US rivals?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, and it is what we are best at here. We go after the searches where buyers compare one tool with another, build pages that win those searches, and earn real links from trusted sites, so a small Bangalore software brand can beat better-funded rivals. It takes three to six months of steady work, but the compare searches bring in ready-to-buy visitors sooner.' } },
-    { '@type': 'Question', name: 'Do you do SEO for a Bangalore online brand or store?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Bangalore online brands sell all over India, so we go after all-India demand. We sort out category and product pages, the hidden product details Google reads, big menus that can confuse Google, and buying guides. We work on Shopify and custom stores.' } },
-    { '@type': 'Question', name: 'Do you cover the Whitefield and Outer Ring Road IT belt?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. We set up local targeting and your free Google listing for Whitefield, the Outer Ring Road, Electronic City, and the Koramangala and HSR startup belt, mixing local trust with the worldwide reach IT firms need.' } },
-  ],
 };
 
 const speakableSchema = {
@@ -146,6 +134,16 @@ const BLR_FAQ_ITEMS = [
   { category: 'reporting', question: 'How do you measure success?', answer: 'By demos, leads, and sales, not rankings for their own sake. We agree the searches that matter and what counts as a lead up front, set up Google’s free tools properly, and report on the numbers that map to your sales.' },
   { category: 'reporting', question: 'Who works on my Bangalore account?', answer: 'A small, senior team. FactoryJet is founder-led, so you talk to the people doing the strategy and the technical work, not a junior who got your account on day two.' },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: BLR_FAQ_ITEMS.map((it) => ({
+    '@type': 'Question',
+    name: it.question,
+    acceptedAnswer: { '@type': 'Answer', text: it.answer },
+  })),
+};
 
 const BLR_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
@@ -226,13 +224,17 @@ export default function BangaloreSeoPage() {
               <p>
                 For Bangalore&apos;s software and online brands in Koramangala, HSR Layout, and Indiranagar, the game is
                 compare and category searches. Software buyers weigh one tool against another before they book a demo,
-                so you win with &quot;X vs Y&quot; and &quot;best X for Z&quot; pages. Online brands win with all-India
-                category and product searches and pages built to turn visits into sales. For real estate and local
-                services, it is the local map and Google Maps.
+                so you win with &quot;X vs Y&quot; and &quot;best X for Z&quot; pages. Online brands win with{' '}
+                <a href="/seo/ecommerce-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">all-India
+                category and product searches</a> and pages built to turn visits into sales. For real estate and local
+                services, it is the{' '}
+                <a href="/seo/local-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">local map and Google Maps</a>.
               </p>
               <p>
-                Every FactoryJet Bangalore plan covers the technical side, local search, and Google AI answers as
-                standard, then adds compare pages, product content, and links over time. You keep every page, plan, and
+                Every FactoryJet Bangalore plan covers{' '}
+                <a href="/seo/technical-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">the technical side</a>, local search, and Google AI answers as
+                standard, then adds compare pages, product content, and{' '}
+                <a href="/seo/link-building" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">links</a> over time. You keep every page, plan, and
                 link we build, and the reports are written for a founder, not an analyst.
               </p>
             </>

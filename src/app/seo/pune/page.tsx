@@ -21,7 +21,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 export const metadata: Metadata = {
   title: 'SEO Company in Pune | AI-Native SEO Agency | FactoryJet',
   description:
-    'SEO company in Pune for IT firms, car-part makers, pharma, coaching classes, and online brands. Win abroad, across India, and in Google AI answers. No lock-in. Serving Hinjewadi, Kharadi, Chakan, and Koregaon Park.',
+    'SEO company in Pune for IT firms, car-part makers, pharma, coaching classes, and online brands. Win abroad, across India, and in Google AI answers. No lock-in.',
   keywords: [
     'seo company in pune',
     'seo agency in pune',
@@ -73,7 +73,6 @@ const localBusinessSchema = {
   geo: { '@type': 'GeoCircle', geoMidpoint: { '@type': 'GeoCoordinates', latitude: 18.5204, longitude: 73.8567 }, geoRadius: '50000' },
   serviceType: 'Search Engine Optimisation',
   priceRange: '₹₹',
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '500', bestRating: '5', worstRating: '1' },
 };
 
 const serviceSchema = {
@@ -87,17 +86,6 @@ const serviceSchema = {
   provider: { '@type': 'Organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Pune' },
   offers: { '@type': 'Offer', price: '19999', priceCurrency: 'INR', description: 'SEO services for Indian businesses start from ₹19,999/month. Month to month, no lock-in.' },
-};
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'How much does SEO cost in Pune?', acceptedAnswer: { '@type': 'Answer', text: 'We do not sell fixed packages. We look at what you need and only charge for work that moves you up Google. As a rough guide, our SEO plans for Indian businesses start at ₹19,999 a month, with an exact price after a free check. There is no long contract. You pay month to month and can stop with 30 days notice.' } },
-    { '@type': 'Question', name: 'Can you do SEO for a Pune IT firm or GCC delivering to global clients?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. For IT firms in Hinjewadi and Kharadi we mix searches that win work from clients abroad with content that shows you are a real, trusted Pune firm. We go after searches about the services and skills buyers look for, and write the proof and case studies big buyers expect. Tough searches from abroad take 4 to 6 months.' } },
-    { '@type': 'Question', name: 'Do you handle pan-India B2B SEO for an auto-component maker in Chakan or PCMC?', acceptedAnswer: { '@type': 'Answer', text: "Yes. Car parts and engineering work is a strong fit. We go after the part and skill searches that big carmakers and their buyers use, build clear product and spec-sheet pages, and plan for the long, careful way that business buyers shop. We cover supplier sites in Chakan, Talegaon, and Pimpri-Chinchwad." } },
-    { '@type': 'Question', name: 'Can you rank a Pune coaching institute or college for a national student catchment?', acceptedAnswer: { '@type': 'Answer', text: "Yes. Pune draws students from all over India and abroad, so we go after searches about courses, results, and admissions, make sure everything works well on a phone, and build the reviews and rankings that bring in students. This is all-India SEO, not just local." } },
-  ],
 };
 
 const speakableSchema = {
@@ -146,6 +134,16 @@ const PUN_FAQ_ITEMS = [
   { category: 'reporting', question: 'How do you measure success?', answer: 'By leads, enquiries, and sales, not rankings for their own sake. We agree the searches that matter and what counts as a lead up front, set up Google’s free tools properly, and report on the numbers that map to your Pune sales.' },
   { category: 'reporting', question: 'Who works on my Pune account?', answer: 'A small, senior team. FactoryJet is founder-led, so you talk to the people doing the strategy and the technical work, not a junior who got your account on day two.' },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: PUN_FAQ_ITEMS.map((it) => ({
+    '@type': 'Question',
+    name: it.question,
+    acceptedAnswer: { '@type': 'Answer', text: it.answer },
+  })),
+};
 
 const PUN_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
@@ -227,11 +225,15 @@ export default function PuneSeoPage() {
                 For Pune&apos;s car-part and engineering makers in Chakan, Talegaon, and PCMC, the game is selling across
                 India to other businesses. Big carmakers and their buyers search by part, by component, and by skill. For
                 coaching classes and colleges, it is searches about admissions. For smart online brands in Koregaon Park,
-                it is online-store SEO and the top three businesses on the map.
+                it is{' '}
+                <a href="/seo/ecommerce-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">online-store SEO</a> and the{' '}
+                <a href="/seo/local-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">top three businesses on the map</a>.
               </p>
               <p>
-                Every FactoryJet Pune plan covers the technical side, the right search plan for your market, and Google
-                AI answers as standard, then adds content and links over time. You keep every page, plan, and link we
+                Every FactoryJet Pune plan covers{' '}
+                <a href="/seo/technical-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">the technical side</a>, the right search plan for your market, and Google
+                AI answers as standard, then adds content and{' '}
+                <a href="/seo/link-building" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">links</a> over time. You keep every page, plan, and link we
                 build.
               </p>
             </>

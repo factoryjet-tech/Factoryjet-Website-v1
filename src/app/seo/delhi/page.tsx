@@ -21,7 +21,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 export const metadata: Metadata = {
   title: 'SEO Company in Delhi | AI-Native SEO Agency | FactoryJet',
   description:
-    'SEO company in Delhi for handicraft and jewellery exporters, Nehru Place IT traders, wholesalers, and coaching institutes. Win abroad, all over India, and in Google AI answers. No long contracts. Serving Nehru Place, Sadar Bazaar, Okhla, and Karol Bagh.',
+    'SEO company in Delhi for exporters, Nehru Place traders, wholesalers, and coaching institutes. Win abroad, across India, and in Google AI answers. No lock-in.',
   keywords: [
     'seo company in delhi',
     'seo agency in delhi',
@@ -73,7 +73,6 @@ const localBusinessSchema = {
   geo: { '@type': 'GeoCircle', geoMidpoint: { '@type': 'GeoCoordinates', latitude: 28.6139, longitude: 77.209 }, geoRadius: '50000' },
   serviceType: 'Search Engine Optimisation',
   priceRange: '₹₹',
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '500', bestRating: '5', worstRating: '1' },
 };
 
 const serviceSchema = {
@@ -87,17 +86,6 @@ const serviceSchema = {
   provider: { '@type': 'Organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Delhi' },
   offers: { '@type': 'Offer', price: '19999', priceCurrency: 'INR', description: 'SEO services for Indian businesses start from ₹19,999/month. Month to month, no lock-in.' },
-};
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'How much does SEO cost in Delhi?', acceptedAnswer: { '@type': 'Answer', text: 'We do not sell fixed packages. We look at what you need and only charge for work that moves you up Google. As a rough guide, our SEO plans for Indian businesses start at ₹19,999 a month, with an exact price after a free check. There is no long contract. You pay month to month and can stop with 30 days notice.' } },
-    { '@type': 'Question', name: 'Can you do SEO for a Delhi handicraft or jewellery exporter selling to the US and EU?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, and it is a different job from local SEO. Exporters need the simple English searches that overseas buyers use, content that shows who you are and what you can make so buyers trust you, and a place in Google AI answers and ChatGPT. We chase orders from abroad, not "near me" searches.' } },
-    { '@type': 'Question', name: 'Do you handle pan-India trade SEO for a Nehru Place or Sadar Bazaar wholesaler?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Traders and wholesalers sell all over India, so we go after supplier, dealer, and wholesale searches across the whole country, build the category and product pages buyers look for, and add the trust signals that win orders from resellers.' } },
-    { '@type': 'Question', name: 'Can you rank a Delhi coaching institute for a national student catchment?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Mukherjee Nagar and Old Rajinder Nagar draw students from all over India, so we go after searches about results, courses, and how to join, make the site work well on a phone, and build the reviews and brand trust that bring in students. This is all-India SEO, not just local.' } },
-  ],
 };
 
 const speakableSchema = {
@@ -146,6 +134,16 @@ const DEL_FAQ_ITEMS = [
   { category: 'reporting', question: 'How do you measure success?', answer: "By leads and sales, not rankings for their own sake. We agree the searches that matter and what counts as a lead up front, set up Google's free tools properly, and report on the numbers that map to your Delhi sales." },
   { category: 'reporting', question: 'Who works on my Delhi account?', answer: 'A small, senior team. FactoryJet is founder-led, so you talk to the people doing the strategy and the technical work, not a junior who got your account on day two.' },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: DEL_FAQ_ITEMS.map((it) => ({
+    '@type': 'Question',
+    name: it.question,
+    acceptedAnswer: { '@type': 'Answer', text: it.answer },
+  })),
+};
 
 const DEL_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
@@ -227,13 +225,17 @@ export default function DelhiSeoPage() {
               <p>
                 For Delhi&apos;s traders and wholesalers, the Nehru Place IT market, Sadar Bazaar and Chandni Chowk
                 wholesale, and Kashmere Gate car parts, the game is selling to businesses all over India. You win with
-                supplier, dealer, and wholesale searches across the whole country, category and product pages, and
-                content that makes resellers trust you. For clinics, coaching, and shops, it is the top three
-                businesses on the map and Google Maps, plus all-India searches from students for the coaching hubs.
+                supplier, dealer, and wholesale searches across the whole country,{' '}
+                <a href="/seo/ecommerce-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">category and product pages</a>, and
+                content that makes resellers trust you. For clinics, coaching, and shops, it is the{' '}
+                <a href="/seo/local-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">top three
+                businesses on the map</a> and Google Maps, plus all-India searches from students for the coaching hubs.
               </p>
               <p>
-                Every FactoryJet Delhi plan covers the technical side, the right search plan for your market, and
-                Google AI answers as standard, then adds content and links over time. You keep every page, plan, and
+                Every FactoryJet Delhi plan covers{' '}
+                <a href="/seo/technical-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">the technical side</a>, the right search plan for your market, and
+                Google AI answers as standard, then adds content and real{' '}
+                <a href="/seo/link-building" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">links</a> over time. You keep every page, plan, and
                 link we build.
               </p>
             </>

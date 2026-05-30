@@ -20,7 +20,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 export const metadata: Metadata = {
   title: 'Technical SEO Services in India | Fast, Search-Ready Sites | FactoryJet',
   description:
-    'Technical SEO services in India to make your site fast and easy for Google to find, read, and trust. We run a full technical SEO audit, speed your site up, fix what Google cannot read, and add the hidden code that explains your pages. No long contracts.',
+    'Technical SEO services in India to make your site fast and easy for Google to find, read, and trust. Full audit, faster pages, schema added, errors fixed.',
   keywords: [
     'technical seo services',
     'technical seo company',
@@ -62,17 +62,6 @@ const serviceSchema = {
   provider: { '@type': 'Organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com', telephone: '+919699977699' },
   areaServed: { '@type': 'Country', name: 'India' },
   offers: { '@type': 'Offer', price: '19999', priceCurrency: 'INR', description: 'SEO services for Indian businesses start from ₹19,999/month. Month to month, no lock-in.' },
-};
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'How much do technical SEO services cost in India?', acceptedAnswer: { '@type': 'Answer', text: 'We do not sell fixed packages. We look at what your site needs and only charge for work that helps Google read and trust your site. As a rough guide, our SEO plans for Indian businesses start at ₹19,999 a month, with an exact price after a free check. There is no long contract. You pay month to month and can stop with 30 days notice.' } },
-    { '@type': 'Question', name: 'What is the difference between technical SEO and on-page SEO?', acceptedAnswer: { '@type': 'Answer', text: 'Technical SEO is about the plumbing of your site: making it fast, making sure Google can find and read every page, and adding the hidden code that explains your pages. On-page SEO is about the words and pictures people see, like your headings and content. Technical SEO is the base. If Google cannot read your site or it loads slowly, even great words will not rank.' } },
-    { '@type': 'Question', name: 'What is a technical SEO audit?', acceptedAnswer: { '@type': 'Answer', text: 'A technical SEO audit is a full health check of your site. We look at how fast it loads, whether Google can find and read every page, broken or duplicate pages, the hidden code, and how tidy your site structure is. You get a plain-words report and a clear, ordered to-do list of what to fix first.' } },
-    { '@type': 'Question', name: 'Why does site speed matter for SEO?', acceptedAnswer: { '@type': 'Answer', text: 'A slow site loses customers and rankings. People leave before the page loads, and Google uses speed as one of the things it checks, especially on phones. We make your pages load fast on phones and slow connections, which helps both your rankings and your sales.' } },
-  ],
 };
 
 const speakableSchema = {
@@ -121,6 +110,16 @@ const TECH_FAQ_ITEMS = [
   { category: 'choosing', question: 'Can you work with my own developer, or do the fixes for me?', answer: 'Both. We can do the fixes ourselves, or we explain each one in plain words and hand your developer a clear, ordered to-do list so they know exactly what to do and why. We also send a one-page monthly report: how fast your site is, how many pages Google can now read, what we fixed, and the three things we will do next. Either way you get a fast, search-ready site, and nothing is left as a mystery.' },
   { category: 'choosing', question: 'Do I keep everything you build?', answer: 'Yes, all of it. The fixes, the faster code, the hidden code, the sitemap, and the to-do list belong to your business and stay with you. If you ever leave us, you keep everything. There is no special software you have to keep paying for.' },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: TECH_FAQ_ITEMS.map((it) => ({
+    '@type': 'Question',
+    name: it.question,
+    acceptedAnswer: { '@type': 'Answer', text: it.answer },
+  })),
+};
 
 const TECH_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
@@ -201,7 +200,11 @@ export default function TechnicalSeoPage() {
                 That is why so many good sites stay stuck.
               </p>
               <p>
-                So we fix this base first, then improve the pages. We make your site fast and easy for Google to read,
+                So we fix this base first, then improve the pages. Technical SEO is the foundation under the rest of
+                your{' '}
+                <a href="/seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">SEO plan</a>, from{' '}
+                <a href="/seo/local-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">local SEO</a> to{' '}
+                <a href="/seo/link-building" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">link building</a>. We make your site fast and easy for Google to read,
                 clear out the errors, and add the hidden code. Once the plumbing works, your content finally gets the
                 chance to rank.
               </p>
@@ -275,7 +278,7 @@ export default function TechnicalSeoPage() {
         <IndustriesGrid variant="cards"
           eyebrow="WHO IT'S FOR"
           headline="Technical SEO for Sites That Need a Solid Base"
-          lead="If Google is struggling to read your site, or it loads slowly, technical SEO is the fastest way to unlock the rankings your content deserves. These are the sites we help most."
+          lead="If Google is struggling to read your site, or it loads slowly, technical SEO is the fastest way to open up the rankings your content deserves. These are the sites we help most."
           sectors={[
             { name: 'Sites with lots of pages', description: 'Big sites where it is easy for pages to go missing, get duplicated, or fall out of Google. We make sure the pages you care about get found.' },
             { name: 'Online stores', description: 'Shops with many products, filters, and categories that confuse Google. We tidy the structure, fix duplicates, and add the hidden code for products and reviews.' },

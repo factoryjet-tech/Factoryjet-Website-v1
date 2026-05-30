@@ -20,7 +20,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 export const metadata: Metadata = {
   title: 'SEO Audit Services in India | Free Website Check | FactoryJet',
   description:
-    'Free SEO audit and full website SEO audit from FactoryJet. We run a complete health check of your website and show you exactly why you are not ranking and what to fix first, in plain English, ranked by what matters most. Start with a free first check, no strings.',
+    'SEO audit services in India: a full website health check that shows why you are not ranking and what to fix first, in plain English. Free first check.',
   keywords: [
     'seo audit',
     'seo audit services',
@@ -62,17 +62,6 @@ const serviceSchema = {
   provider: { '@type': 'Organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com', telephone: '+919699977699' },
   areaServed: { '@type': 'Country', name: 'India' },
   offers: { '@type': 'Offer', price: '19999', priceCurrency: 'INR', description: 'SEO services for Indian businesses start from ₹19,999/month. Month to month, no lock-in. The first SEO audit check is free.' },
-};
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'Is the free SEO audit really free?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The first check is free, with no strings and no obligation. We look at your website, find the main things holding you back, and walk you through them on a call. If you want us to do the deeper, full audit or fix the problems after that, we will tell you the price first, and you decide. You are never signed up to anything just for getting the free check.' } },
-    { '@type': 'Question', name: 'What does an SEO audit check?', acceptedAnswer: { '@type': 'Answer', text: 'We check how fast your site loads, especially on phones, whether Google can find and read every page, whether your words and pages match what people search for, your links and any risky ones, your Google listing and local presence, and your rivals, so you can see where they beat you and why. Then we write it all up in plain English.' } },
-    { '@type': 'Question', name: 'What do I actually get from the audit?', acceptedAnswer: { '@type': 'Answer', text: 'You get a plain-English report, not a 40-page PDF nobody reads. It lists what is wrong, why it matters, and a clear to-do list ranked by what will help your rankings most. We walk you through it on a call so you know exactly what to fix first, and the report is yours to keep.' } },
-    { '@type': 'Question', name: 'Do you fix the problems after the audit, or just point them out?', acceptedAnswer: { '@type': 'Answer', text: 'Both options are open. The audit tells you exactly what is wrong and what to fix first, and you can hand it to your own team. If you want us to do the work, our SEO plans for Indian businesses start at ₹19,999 a month. There is no long contract. You pay month to month and can stop with 30 days notice.' } },
-  ],
 };
 
 const speakableSchema = {
@@ -121,6 +110,16 @@ const AUDIT_FAQ_ITEMS = [
   { category: 'choosing', question: 'How is your audit different from the free online SEO checkers?', answer: 'Free online checkers run an automatic scan and spit out a long list of warnings with no sense of what matters. We use tools too, but a senior person reads your site by hand, works out which problems are really hurting you, and ranks the fixes. You get judgement, not just a printout.' },
   { category: 'choosing', question: 'Should I get an audit before hiring an SEO agency?', answer: 'Yes, it is one of the best things you can do. An honest audit shows you what is really wrong, so you know what to ask agencies for and can spot anyone selling you work you do not need. It puts you in control of the conversation instead of taking their word for it.' },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: AUDIT_FAQ_ITEMS.map((it) => ({
+    '@type': 'Question',
+    name: it.question,
+    acceptedAnswer: { '@type': 'Answer', text: it.answer },
+  })),
+};
 
 const AUDIT_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
@@ -196,13 +195,16 @@ export default function SeoAuditPage() {
                 fixing the wrong things.
               </p>
               <p>
-                We look at everything that decides where you rank, the speed, the pages, the words, the links, and your
-                Google listing, then we write a plain-English report with a clear, ranked to-do list. So you know
+                We look at everything that decides where you rank, the{' '}
+                <a href="/seo/technical-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">speed</a>, the pages, the words, the{' '}
+                <a href="/seo/link-building" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">links</a>, and your{' '}
+                <a href="/seo/local-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">Google listing</a>, then we write a plain-English report with a clear, ranked to-do list. So you know
                 exactly what to fix first, and you do not have to be an SEO expert to follow it.
               </p>
               <p>
                 The first check is free, with no strings. You can take what we find and hand it to your own team, or
-                ask us to do the work. Either way, you walk away knowing exactly what is wrong and what matters most.
+                ask us to do the full{' '}
+                <a href="/seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">SEO work</a>. Either way, you walk away knowing exactly what is wrong and what matters most.
               </p>
             </>
           }

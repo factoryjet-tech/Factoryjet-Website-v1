@@ -21,7 +21,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 export const metadata: Metadata = {
   title: 'SEO Company in Jaipur | AI-Native SEO Agency | FactoryJet',
   description:
-    'SEO company in Jaipur for gem and jewellery exporters, handicraft brands, hotels, and IT firms. Win abroad, win the top three businesses on the map, and get named in Google AI answers. No lock-in. Serving Johari Bazaar, Sitapura, Sanganer, and MI Road.',
+    'SEO company in Jaipur for gem and jewellery exporters, handicraft brands, hotels, and IT firms. Win abroad, on the local map, and in Google AI answers.',
   keywords: [
     'seo company in jaipur',
     'seo agency in jaipur',
@@ -71,7 +71,6 @@ const localBusinessSchema = {
   geo: { '@type': 'GeoCircle', geoMidpoint: { '@type': 'GeoCoordinates', latitude: 26.9124, longitude: 75.7873 }, geoRadius: '40000' },
   serviceType: 'Search Engine Optimisation',
   priceRange: '₹₹',
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '500', bestRating: '5', worstRating: '1' },
 };
 
 const serviceSchema = {
@@ -85,17 +84,6 @@ const serviceSchema = {
   provider: { '@type': 'Organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Jaipur' },
   offers: { '@type': 'Offer', price: '19999', priceCurrency: 'INR', description: 'SEO services for Indian businesses start from ₹19,999/month. Month to month, no lock-in.' },
-};
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'How much does SEO cost in Jaipur?', acceptedAnswer: { '@type': 'Answer', text: 'We do not sell fixed packages. We look at what you need and only charge for work that moves you up Google. As a rough guide, our SEO plans for Indian businesses start at ₹19,999 a month, with an exact price after a free check. There is no long contract. You pay month to month and can stop with 30 days notice.' } },
-    { '@type': 'Question', name: 'Can you do SEO for a Jaipur gems, jewellery, or handicraft exporter selling to the US and EU?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, and it is a different game from local SEO. Exporters need the simple English searches that overseas buyers use, content about who you are and what you can make so buyers and sourcing agents trust you, and a presence in AI answers like ChatGPT and Google. We chase orders from abroad, not "near me" searches.' } },
-    { '@type': 'Question', name: 'Do you do SEO for Jaipur hotels and tourism businesses?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Tourists in Jaipur come from both India and abroad, so we go after booking and travel searches, sort out your free Google listing and the map, help you collect reviews, and add the hidden code that helps hotels and tour operators win direct bookings instead of losing them to the big booking sites.' } },
-    { '@type': 'Question', name: 'Do you cover the Walled City, Sitapura, and Sanganer areas?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. We match your SEO to where you work, whether that is shops in the Walled City and MI Road, the Sitapura SEZ gems and IT cluster, or the Sanganer and Bagru block-print hubs, with separate targeting and a free Google listing for each.' } },
-  ],
 };
 
 const speakableSchema = {
@@ -144,6 +132,16 @@ const JAI_FAQ_ITEMS = [
   { category: 'reporting', question: 'How do you measure success?', answer: 'By enquiries, bookings, and sales, not rankings for their own sake. We agree the searches that matter and what counts as a lead up front, set up Google’s free tools properly, and report on the numbers that map to your sales.' },
   { category: 'reporting', question: 'Who works on my Jaipur account?', answer: 'A small, senior team. FactoryJet is founder-led, so you talk to the people doing the strategy and the technical work, not a junior who got your account on day two.' },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: JAI_FAQ_ITEMS.map((it) => ({
+    '@type': 'Question',
+    name: it.question,
+    acceptedAnswer: { '@type': 'Answer', text: it.answer },
+  })),
+};
 
 const JAI_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
@@ -226,12 +224,15 @@ export default function JaipurSeoPage() {
                 For Jaipur&apos;s hotels, heritage venues, and tour operators, the game is travel and booking searches.
                 Travellers, from India and abroad, decide on their phones. You win with a strong free Google listing,
                 Google Maps, plenty of reviews, and content that catches travel searches and turns them into direct
-                bookings. For IT firms and local services, it is a mix of searches that win work from abroad and the top
-                three businesses on the map.
+                bookings. For IT firms and local services, it is a mix of searches that win work from abroad and the{' '}
+                <a href="/seo/local-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">top
+                three businesses on the map</a>.
               </p>
               <p>
-                Every FactoryJet Jaipur plan covers the technical side, the right search plan for your market, and
-                Google AI answers as standard, then adds content and links over time. You keep every page, plan, and
+                Every FactoryJet Jaipur plan covers{' '}
+                <a href="/seo/technical-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">the technical side</a>, the right search plan for your market, and
+                Google AI answers as standard, then adds content and{' '}
+                <a href="/seo/link-building" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">links</a> over time. You keep every page, plan, and
                 link we build.
               </p>
             </>

@@ -20,7 +20,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 export const metadata: Metadata = {
   title: 'Ecommerce SEO Services in India | Get Your Store Found | FactoryJet',
   description:
-    'Ecommerce SEO services in India to get your product and category pages found on Google so more people buy. We work on the pages that sell, tidy big stores, and show your reviews in Google. Works with Shopify, WooCommerce, and custom stores. No long contracts.',
+    'Ecommerce SEO services in India to get your product and category pages found on Google so more people buy. Works with Shopify, WooCommerce, and custom stores.',
   keywords: [
     'ecommerce seo services',
     'ecommerce seo company',
@@ -62,17 +62,6 @@ const serviceSchema = {
   provider: { '@type': 'Organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com', telephone: '+919699977699' },
   areaServed: { '@type': 'Country', name: 'India' },
   offers: { '@type': 'Offer', price: '19999', priceCurrency: 'INR', description: 'SEO services for Indian businesses start from ₹19,999/month. Month to month, no lock-in.' },
-};
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'How much do ecommerce SEO services cost in India?', acceptedAnswer: { '@type': 'Answer', text: 'We do not sell fixed packages. We look at your store and only charge for work that brings in buyers. As a rough guide, our SEO plans for Indian businesses start at ₹19,999 a month, with an exact price after a free check. There is no long contract. You pay month to month and can stop with 30 days notice.' } },
-    { '@type': 'Question', name: 'How long does ecommerce SEO take to work?', acceptedAnswer: { '@type': 'Answer', text: 'Online stores take a bit longer than a small website because there are so many pages to fix. Many stores start seeing more visitors to their best pages in three to four months, with steadier sales by three to six months. We show simple early signs from the first month, like which category and product pages are starting to climb.' } },
-    { '@type': 'Question', name: 'Do you work with Shopify and WooCommerce stores?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. We work with Shopify, WooCommerce, and custom stores built in Next.js. Each one has its own quirks, and we know how to get the category pages, product pages, and big menus working on all of them.' } },
-    { '@type': 'Question', name: 'Why do my category and product pages matter most?', acceptedAnswer: { '@type': 'Answer', text: 'Category pages pull in people who are browsing for a type of product, and product pages catch people who are ready to buy. Those are the pages that make you money, so they are the pages we work on first, instead of just the home page or the blog.' } },
-  ],
 };
 
 const speakableSchema = {
@@ -121,6 +110,16 @@ const ECOM_FAQ_ITEMS = [
   { category: 'choosing', question: 'What does your monthly report look like?', answer: 'One page you can read in five minutes: which category and product pages are climbing, how many visitors and sales they bring, and the three things we will do next. We set up Google’s free tools so the numbers are real visitors and real sales, not just rankings.' },
   { category: 'choosing', question: 'Do I keep everything you build?', answer: 'Yes, all of it. Your pages, your content, your reviews setup, and the fixes we make to your store belong to your business and stay with you. If you ever leave us, you keep everything. There is no special software you have to keep paying for.' },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: ECOM_FAQ_ITEMS.map((it) => ({
+    '@type': 'Question',
+    name: it.question,
+    acceptedAnswer: { '@type': 'Answer', text: it.answer },
+  })),
+};
 
 const ECOM_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
@@ -198,10 +197,13 @@ export default function EcommerceSeoPage() {
               <p>
                 Our job is to point Google at your best category and product pages, then make those pages easy to read,
                 with clear words and the hidden details Google looks for, like price, stock, and reviews. We also tidy
-                the big menus and filters so Google does not get lost on the way there.
+                the big menus and filters with{' '}
+                <a href="/seo/technical-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">technical SEO</a> so Google does not get lost on the way there.
               </p>
               <p>
-                The result: your money-making pages show up when people are ready to buy, with star ratings next to
+                Ecommerce SEO works best as part of your wider{' '}
+                <a href="/seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">SEO plan</a>, with helpful content and{' '}
+                <a href="/seo/link-building" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">real links</a> bringing in new buyers. Your money-making pages show up when people are ready to buy, with star ratings next to
                 them in the results. Everything we build is yours, with no lock-in and no special software to keep
                 paying for.
               </p>

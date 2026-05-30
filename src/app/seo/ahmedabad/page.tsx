@@ -21,7 +21,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 export const metadata: Metadata = {
   title: 'SEO Company in Ahmedabad | AI-Native SEO Agency | FactoryJet',
   description:
-    'SEO company in Ahmedabad for pharma and denim exporters, chemical makers, and engineering firms. Win orders from abroad, win across India, and get named in Google AI answers. No long contracts. Serving Changodar, Vatva, Sanand, and SG Highway.',
+    'SEO company in Ahmedabad for pharma and denim exporters, chemical makers, and engineering firms. Win orders abroad and across India, and in Google AI answers.',
   keywords: [
     'seo company in ahmedabad',
     'seo agency in ahmedabad',
@@ -72,7 +72,6 @@ const localBusinessSchema = {
   geo: { '@type': 'GeoCircle', geoMidpoint: { '@type': 'GeoCoordinates', latitude: 23.0225, longitude: 72.5714 }, geoRadius: '50000' },
   serviceType: 'Search Engine Optimisation',
   priceRange: '₹₹',
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '500', bestRating: '5', worstRating: '1' },
 };
 
 const serviceSchema = {
@@ -86,17 +85,6 @@ const serviceSchema = {
   provider: { '@type': 'Organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Ahmedabad' },
   offers: { '@type': 'Offer', price: '19999', priceCurrency: 'INR', description: 'SEO services for Indian businesses start from ₹19,999/month. Month to month, no lock-in.' },
-};
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'How much does SEO cost in Ahmedabad?', acceptedAnswer: { '@type': 'Answer', text: 'We do not sell fixed packages. We look at what you need and only charge for work that moves you up Google. As a rough guide, our SEO plans for Indian businesses start at ₹19,999 a month, with an exact price after a free check. There is no long contract. You pay month to month and can stop with 30 days notice.' } },
-    { '@type': 'Question', name: 'Can you do SEO for an Ahmedabad pharma or denim exporter selling globally?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, and it is a different job from local SEO. Exporters need the simple English searches that overseas buyers use, content that shows you follow the rules and can deliver, and a place in Google AI answers and ChatGPT. We chase orders from buyers abroad, not "near me" searches.' } },
-    { '@type': 'Question', name: 'Do you handle pan-India B2B SEO for a chemical or dye maker in Vatva or Naroda?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Chemical, dye, and intermediate makers sell all over India, so we go after the searches buyers across India use (by supplier, grade, and use), build the product and detail pages they look for, and add the trust signals that win orders.' } },
-    { '@type': 'Question', name: 'Do you cover Gandhinagar and GIFT City businesses?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. We treat Gandhinagar and GIFT City as part of the wider Ahmedabad area, with separate targeting for the banks and finance firms there, alongside your Ahmedabad presence.' } },
-  ],
 };
 
 const speakableSchema = {
@@ -145,6 +133,16 @@ const AHM_FAQ_ITEMS = [
   { category: 'reporting', question: 'How do you measure success?', answer: 'By leads and sales, not rankings for their own sake. We agree the searches that matter and what counts as a lead up front, set up Google’s free tools properly, and report on the numbers that map to your sales.' },
   { category: 'reporting', question: 'Who works on my Ahmedabad account?', answer: 'A small, senior team. FactoryJet is founder-led, so you talk to the people doing the strategy and the technical work, not a junior who got your account on day two.' },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: AHM_FAQ_ITEMS.map((it) => ({
+    '@type': 'Question',
+    name: it.question,
+    acceptedAnswer: { '@type': 'Answer', text: it.answer },
+  })),
+};
 
 const AHM_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
@@ -226,13 +224,16 @@ export default function AhmedabadSeoPage() {
               <p>
                 For Ahmedabad&apos;s chemical, dye, and car-part makers in Vatva, Naroda, and Sanand, the game is
                 selling across India to other businesses. Buying teams search by grade, ingredient, part, and use. You
-                win with strong product and detail pages, the hidden code that helps Google understand your products,
-                and the trust signals that get you on the shortlist. For clinics, shops, and local services, it is the
-                top three businesses on the map and Google Maps.
+                win with{' '}
+                <a href="/seo/ecommerce-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">strong product and detail pages</a>, the hidden code that helps Google understand your products,
+                and the trust signals that get you on the shortlist. For clinics, shops, and local services, it is the{' '}
+                <a href="/seo/local-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">top three businesses on the map</a> and Google Maps.
               </p>
               <p>
-                Every FactoryJet Ahmedabad plan covers the technical side, the right search plan for your market, and
-                Google AI answers as standard, then adds content and links over time. You keep every page, plan, and
+                Every FactoryJet Ahmedabad plan covers{' '}
+                <a href="/seo/technical-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">the technical side</a>, the right search plan for your market, and
+                Google AI answers as standard, then adds content and{' '}
+                <a href="/seo/link-building" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">links</a> over time. You keep every page, plan, and
                 link we build.
               </p>
             </>

@@ -555,6 +555,14 @@ export const seoCityAlternatesIN = {
     'en-IN': 'https://factoryjet.com/seo/vadodara',
     'x-default': 'https://factoryjet.com/seo/vadodara',
   },
+  kolkata: {
+    'en-IN': 'https://factoryjet.com/seo/kolkata',
+    'x-default': 'https://factoryjet.com/seo/kolkata',
+  },
+  hyderabad: {
+    'en-IN': 'https://factoryjet.com/seo/hyderabad',
+    'x-default': 'https://factoryjet.com/seo/hyderabad',
+  },
 } as const
 
 /** /seo/[discipline]-seo sub-service pages — India only. */

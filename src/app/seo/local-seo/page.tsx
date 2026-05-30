@@ -20,7 +20,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 export const metadata: Metadata = {
   title: 'Local SEO Services in India | Google Business Profile & Map Pack | FactoryJet',
   description:
-    'Local SEO services in India to put your business in the top three on the Google map and in "near me" searches. We set up and look after your free Google listing, fix your details everywhere, and get you more reviews. No long contracts.',
+    'Local SEO services in India to reach the top three on the Google map and win "near me" searches. We manage your Google listing, fix details, grow reviews.',
   keywords: [
     'local seo services',
     'affordable local seo services',
@@ -62,17 +62,6 @@ const serviceSchema = {
   provider: { '@type': 'Organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com', telephone: '+919699977699' },
   areaServed: { '@type': 'Country', name: 'India' },
   offers: { '@type': 'Offer', price: '19999', priceCurrency: 'INR', description: 'SEO services for Indian businesses start from ₹19,999/month. Month to month, no lock-in.' },
-};
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'How much do local SEO services cost in India?', acceptedAnswer: { '@type': 'Answer', text: 'We do not sell fixed packages. We look at what you need and only charge for work that moves you up the map. As a rough guide, our SEO plans for Indian businesses start at ₹19,999 a month, with an exact price after a free check. There is no long contract. You pay month to month and can stop with 30 days notice.' } },
-    { '@type': 'Question', name: 'How long does local SEO take to work?', acceptedAnswer: { '@type': 'Answer', text: 'Local SEO is usually the fastest kind of SEO to show results. With a good Google listing and matching details, many businesses start moving up the map in 30 to 60 days. Busy cities and tough trades take three to four months to settle near the top. We show simple early signs from the first month, like how many people viewed your listing and called.' } },
-    { '@type': 'Question', name: 'How do I get into the top three on the Google map?', acceptedAnswer: { '@type': 'Answer', text: 'Google looks at three things: how close you are to the person searching, how well you match what they typed, and how trusted you look (reviews, mentions, links). You cannot change how close you are, so we work on the other two, which is exactly what local SEO does.' } },
-    { '@type': 'Question', name: 'Do you look after my Google Business Profile for me?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. We set up your free Google listing and then look after it every month: posts, photos, the right business type, your services, answers to questions, correct hours, and replies to reviews. Google rewards listings that stay active, so this is where most of the gain comes from.' } },
-  ],
 };
 
 const speakableSchema = {
@@ -121,6 +110,16 @@ const LOCAL_FAQ_ITEMS = [
   { category: 'choosing', question: 'What does your monthly report look like?', answer: 'One page you can read in five minutes: where you rank on the map for your main searches, how many people viewed your listing, called, or asked for directions, and the three things we will do next. We set up Google’s free tools and call tracking so the numbers are real customers, not just rankings.' },
   { category: 'choosing', question: 'Do I keep everything you build?', answer: 'Yes, all of it. Your Google listing, your pages, and your reviews belong to your business and stay with you. If you ever leave us, you keep everything. There is no special software you have to keep paying for.' },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: LOCAL_FAQ_ITEMS.map((it) => ({
+    '@type': 'Question',
+    name: it.question,
+    acceptedAnswer: { '@type': 'Answer', text: it.answer },
+  })),
+};
 
 const LOCAL_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
@@ -198,11 +197,14 @@ export default function LocalSeoPage() {
               </p>
               <p>
                 We also keep your details the same everywhere on the web. When your name, address, and phone number
-                match across Google, directories, and your own site, Google trusts you more, and that trust is part of
+                match across Google, directories, and{' '}
+                <a href="/seo/technical-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">your own site</a>, Google trusts you more, and that trust is part of
                 what decides the top three on the map.
               </p>
               <p>
-                Everything we build is yours. Your Google listing, your pages, and your reviews stay with your
+                Local SEO works best as one part of your wider{' '}
+                <a href="/seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">SEO plan</a>, sitting alongside content and{' '}
+                <a href="/seo/link-building" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">trusted local links</a>. Everything we build is yours. Your Google listing, your pages, and your reviews stay with your
                 business. There is no lock-in and no special software to keep paying for.
               </p>
             </>

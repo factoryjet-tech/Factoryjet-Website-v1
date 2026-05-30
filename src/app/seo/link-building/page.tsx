@@ -20,7 +20,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 export const metadata: Metadata = {
   title: 'Link Building Services in India | Real Links, No Spam | FactoryJet',
   description:
-    'Link building services in India that earn real links from trusted websites, the safe way. As an off page SEO and backlink building company, we use digital PR, guest articles, and helpful content. No spammy tricks, no long contracts.',
+    'Link building services in India that earn real links from trusted websites, the safe way, through digital PR, guest articles, and helpful content. No spam.',
   keywords: [
     'link building services',
     'link building company',
@@ -60,17 +60,6 @@ const serviceSchema = {
   provider: { '@type': 'Organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com', telephone: '+919699977699' },
   areaServed: { '@type': 'Country', name: 'India' },
   offers: { '@type': 'Offer', price: '19999', priceCurrency: 'INR', description: 'SEO services for Indian businesses start from ₹19,999/month. Month to month, no lock-in.' },
-};
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'How much do link building services cost in India?', acceptedAnswer: { '@type': 'Answer', text: 'We do not sell fixed packages. We look at what you need and only charge for work that earns real links. As a rough guide, our SEO plans for Indian businesses start at ₹19,999 a month, with an exact price after a free check. There is no long contract. You pay month to month and can stop with 30 days notice.' } },
-    { '@type': 'Question', name: 'What is link building in plain words?', acceptedAnswer: { '@type': 'Answer', text: 'A link is when another website mentions yours and lets people click through to you. Google treats each link from a trusted site like a vote of confidence. The more good votes you have from real, respected sites, the more Google trusts you, and the higher you can rank.' } },
-    { '@type': 'Question', name: 'Are the links you build safe?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. We only earn real links from real sites with real readers, through digital PR, guest articles, genuine directories, and helpful content. We never buy links or use spammy networks, because Google is very good at spotting those and can punish your whole site for them.' } },
-    { '@type': 'Question', name: 'How many links do I need and how long does it take?', acceptedAnswer: { '@type': 'Answer', text: 'A few great links from trusted sites beat hundreds of junk ones, so we aim for quality, not big numbers. Earning real links takes time because real people have to say yes. Most businesses start to see movement in three to six months, and it keeps building as long as we keep earning good links.' } },
-  ],
 };
 
 const speakableSchema = {
@@ -119,6 +108,16 @@ const LINK_FAQ_ITEMS = [
   { category: 'choosing', question: 'What does your monthly report look like?', answer: 'One page you can read in five minutes: the new links we earned, the sites they came from, why each one matters, and the next links we are chasing. We tie it back to your rankings so you can see the links doing their job, not just a list.' },
   { category: 'choosing', question: 'Do I keep everything you build?', answer: 'Yes, all of it. Every real link we earn lives on someone else’s trusted site and points to you, so it stays yours even if you ever leave us. There is no special software you have to keep paying for to hold onto your links.' },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: LINK_FAQ_ITEMS.map((it) => ({
+    '@type': 'Question',
+    name: it.question,
+    acceptedAnswer: { '@type': 'Answer', text: it.answer },
+  })),
+};
 
 const LINK_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
@@ -201,7 +200,10 @@ export default function LinkBuildingPage() {
               <p>
                 The catch is that fake or bought links are easy for Google to spot, and they can get your whole site
                 punished. So we only earn real links from real sites. It is slower than buying them, but it is safe,
-                and it lasts.
+                and it lasts. Links work best as one part of your wider{' '}
+                <a href="/seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">SEO plan</a>, once your{' '}
+                <a href="/seo/technical-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">technical foundations</a> and{' '}
+                <a href="/seo/local-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">local listings</a> are ready.
               </p>
             </>
           }

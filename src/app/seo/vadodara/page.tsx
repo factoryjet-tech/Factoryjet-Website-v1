@@ -21,7 +21,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 export const metadata: Metadata = {
   title: 'SEO Agency in Vadodara | AI-Native SEO Company | FactoryJet',
   description:
-    'SEO agency in Vadodara for engineering, petrochemical, pharma, and manufacturing firms. Win business across India, win export orders, and get named in Google AI answers. No lock-in. Serving Makarpura, Nandesari, Halol, and Savli.',
+    'SEO company in Vadodara for engineering, petrochemical, pharma, and manufacturing firms. Win business across India, export orders, and Google AI answers.',
   keywords: [
     'seo agency in vadodara',
     'seo company in vadodara',
@@ -72,7 +72,6 @@ const localBusinessSchema = {
   geo: { '@type': 'GeoCircle', geoMidpoint: { '@type': 'GeoCoordinates', latitude: 22.3072, longitude: 73.1812 }, geoRadius: '50000' },
   serviceType: 'Search Engine Optimisation',
   priceRange: '₹₹',
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '500', bestRating: '5', worstRating: '1' },
 };
 
 const serviceSchema = {
@@ -86,17 +85,6 @@ const serviceSchema = {
   provider: { '@type': 'Organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Vadodara' },
   offers: { '@type': 'Offer', price: '19999', priceCurrency: 'INR', description: 'SEO services for Indian businesses start from ₹19,999/month. Month to month, no lock-in.' },
-};
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'How much does SEO cost in Vadodara?', acceptedAnswer: { '@type': 'Answer', text: 'We do not sell fixed packages. We look at what you need and only charge for work that moves you up Google. As a rough guide, our SEO plans for Indian businesses start at ₹19,999 a month, with an exact price after a free check. There is no long contract. You pay month to month and can stop with 30 days notice.' } },
-    { '@type': 'Question', name: 'Can you do SEO for a Vadodara engineering or transformer manufacturer?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, and selling to other businesses is where we do our best work. We go after the searches that buying teams, power companies, and big project contractors actually use, write clear pages about what you can make, and add the trust signals that get you on a buyer’s shortlist. These deals take a long time, and good content keeps paying off.' } },
-    { '@type': 'Question', name: 'Do you handle export SEO for engineered goods and pharma?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. For firms exporting machines, rail equipment, and medicines, we go after the simple English searches overseas buyers use, write content about your certificates and what you can make so buyers and regulators trust you, and get you named in Google AI answers and ChatGPT. We chase orders from abroad, not "near me" searches.' } },
-    { '@type': 'Question', name: 'Do you cover Makarpura, Nandesari, Halol, and the GIDC estates?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. We match your SEO to your area, whether that is the Makarpura engineering belt, the Nandesari and Koyali chemical cluster, the Halol pharma zone, or the Savli industrial area, with local targeting and your free Google listing where it helps.' } },
-  ],
 };
 
 const speakableSchema = {
@@ -145,6 +133,16 @@ const VAD_FAQ_ITEMS = [
   { category: 'reporting', question: 'How do you measure success?', answer: 'By enquiries, quote requests, and sales, not rankings for their own sake. We agree the searches that matter and what counts as a lead up front, set up Google’s free tools properly, and report on the numbers that map to your sales.' },
   { category: 'reporting', question: 'Who works on my Vadodara account?', answer: 'A small, senior team. FactoryJet is founder-led, so you talk to the people doing the strategy and the technical work, not a junior who got your account on day two.' },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: VAD_FAQ_ITEMS.map((it) => ({
+    '@type': 'Question',
+    name: it.question,
+    acceptedAnswer: { '@type': 'Answer', text: it.answer },
+  })),
+};
 
 const VAD_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
@@ -220,19 +218,23 @@ export default function VadodaraSeoPage() {
                 For Vadodara&apos;s engineering, power-equipment, and chemical makers in Makarpura, Nandesari, and
                 Koyali, SEO is about winning business across India. Buying teams, power companies, and big project
                 contractors check out suppliers for weeks against a spec sheet. You win by showing up for searches about
-                what you can make, your products, grades, and how they are used, by publishing clear pages and spec
+                what you can make,{' '}
+                <a href="/seo/ecommerce-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">your products, grades, and how they are used</a>, by publishing clear pages and spec
                 sheets, and by earning the trust signals that get you on a buyer’s shortlist.
               </p>
               <p>
                 For Vadodara&apos;s exporters of machines, rail equipment, and medicines, SEO is a worldwide game built
                 on trust. Overseas buyers and regulators need content about your certificates, what you can make, and
                 how you follow the rules, all in clear simple English, plus a place in Google AI answers. For local
-                services and the city&apos;s growing IT base in Alkapuri, it is the local map plus searches from across
+                services and the city&apos;s growing IT base in Alkapuri, it is the{' '}
+                <a href="/seo/local-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">local map</a> plus searches from across
                 India.
               </p>
               <p>
-                Every FactoryJet Vadodara plan covers a fast site Google can read, the right search plan for your
-                market, and Google AI answers as standard, then adds content and links over time. You keep every page,
+                Every FactoryJet Vadodara plan covers{' '}
+                <a href="/seo/technical-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">a fast site Google can read</a>, the right search plan for your
+                market, and Google AI answers as standard, then adds content and{' '}
+                <a href="/seo/link-building" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">links</a> over time. You keep every page,
                 plan, and link we build.
               </p>
             </>

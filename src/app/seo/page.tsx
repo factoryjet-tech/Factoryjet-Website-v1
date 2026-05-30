@@ -24,7 +24,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 export const metadata: Metadata = {
   title: 'SEO Company in India | AI-Native SEO Agency | FactoryJet',
   description:
-    'SEO company in India helping small businesses in Mumbai, Bangalore, Pune and 19 cities show up on Google: the map, the normal results, and the new AI answers. No long contracts. Simple reports. 500+ sites done.',
+    'SEO company in India helping small businesses show up on Google: the map, the normal results, and the new AI answers. No long contracts. Simple reports.',
   keywords: [
     'seo company in india',
     'seo agency india',
@@ -103,45 +103,6 @@ const serviceSchema = {
     priceCurrency: 'INR',
     description: 'SEO services for Indian businesses start from ₹19,999/month. Month to month, no lock-in.',
   },
-};
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How much do SEO services cost in India?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "We do not sell fixed packages. We look at what you need and only charge for work that actually moves you up Google. As a rough guide, our SEO plans for Indian businesses start at ₹19,999 a month, and we give you an exact price after a free check. There is no long contract. You pay month to month and can stop with 30 days notice.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does SEO take to show results in India?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Simple, local, and brand searches usually start moving in 30 to 60 days. Tougher searches, like a service plus a big city, take three to six months for a site that has had no SEO before. We send a simple report every month from week one, so you can see early signs of progress long before the sales show up.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you help me show up in Google AI answers and AI search?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Yes. Google, ChatGPT, and Perplexity now answer many searches with AI before anyone clicks. We lay out your content as clear questions and answers, add the hidden code that helps these tools trust you, and write facts they can quote, so they point to your business and not just your rivals.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you require a long-term contract?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No. FactoryJet SEO runs month to month. We keep clients by showing real progress in a report you can actually read, not by tying you to a 12-month deal. You can pause or stop with 30 days notice.',
-      },
-    },
-  ],
 };
 
 const speakableSchema = {
@@ -333,6 +294,16 @@ const SEO_FAQ_ITEMS = [
       'A small, senior team, not a junior handed your account on day two. FactoryJet is founder-led, so you talk to the people doing the strategy and the technical work. AI handles the scale; people handle the judgement, the writing, and the relationship.',
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: SEO_FAQ_ITEMS.map((it) => ({
+    '@type': 'Question',
+    name: it.question,
+    acceptedAnswer: { '@type': 'Answer', text: it.answer },
+  })),
+};
 
 const SEO_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
