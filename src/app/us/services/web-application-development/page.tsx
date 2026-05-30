@@ -705,7 +705,7 @@ export default function WebApplicationDevelopmentPage() {
         pullQuote={{ stat: 'Fixed Price', caption: 'milestone-paid with full code ownership — same engineering depth, predictable from quote to launch.' }}
         columns={COMPARISON_COLUMNS}
         rows={COMPARISON_ROWS}
-        footer="Prices reflect typical US market ranges as of 2025. No-code platform monthly fees compound over time and limit scalability."
+        footer="Prices reflect typical US market ranges as of 2026. No-code platform monthly fees compound over time and limit scalability."
       />
 
       {/* ── 10. PRICING TIERS ── */}

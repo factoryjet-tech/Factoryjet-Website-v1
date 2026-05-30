@@ -1166,7 +1166,7 @@ export default function AIAgencyPage() {
           }}
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}
-          footer="Prices and timelines reflect typical market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
+          footer="Prices and timelines reflect typical market ranges as of 2026. FactoryJet fixed-price contracts available for all tiers."
         />
 
         {/* ── 11. INDUSTRIES SERVED ────────────────────────────────────────── */}

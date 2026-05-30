@@ -716,7 +716,7 @@ export default function WebsiteCostPage() {
                   className="font-fj-mono font-medium uppercase text-fj-neutral-400"
                   style={{ fontSize: '11px', letterSpacing: '0.14em' }}
                 >
-                  Website Cost at a Glance — 2025
+                  Website Cost at a Glance — 2026
                 </p>
               </div>
               {/* Rows */}
@@ -747,7 +747,7 @@ export default function WebsiteCostPage() {
               {/* Footer */}
               <div className="border-t border-fj-neutral-100 bg-fj-neutral-50 px-7 py-5">
                 <p className="font-fj-body text-[0.8125rem] text-fj-neutral-500">
-                  Prices current as of 2025. DIY builder costs exclude your time. Agency costs vary by market.
+                  Prices current as of 2026. DIY builder costs exclude your time. Agency costs vary by market.
                 </p>
               </div>
             </div>

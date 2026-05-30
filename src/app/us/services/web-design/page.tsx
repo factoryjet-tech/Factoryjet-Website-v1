@@ -1176,7 +1176,7 @@ export default function WebDesignPage() {
           }}
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}
-          footer="Prices and timelines reflect typical US market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
+          footer="Prices and timelines reflect typical US market ranges as of 2026. FactoryJet fixed-price contracts available for all tiers."
         />
 
         {/* ── 12. TESTIMONIALS ─────────────────────────────────────────────── */}

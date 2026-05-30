@@ -559,7 +559,7 @@ export default function AboutPage() {
             ],
           },
         ]}
-        footer="Pricing and timelines compared against published rates of US web design agencies serving SMBs as of 2025."
+        footer="Pricing and timelines compared against published rates of US web design agencies serving SMBs as of 2026."
       />
 
       {/* ── 9. FINAL CTA (DARK) ─────────────────────────────────────────── */}

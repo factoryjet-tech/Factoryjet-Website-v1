@@ -15,6 +15,7 @@ import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/Ser
 import CityContextSection from '@/components/v2/CityContextSection';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import PricingTiers from '@/components/v2/PricingTiers';
+import UsPricingTabs from '@/components/v2/UsPricingTabs';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
@@ -512,7 +513,7 @@ export default function PricingPage() {
 
       {/* ── 1. HERO ── */}
       <Hero
-        eyebrow="WEBSITE DESIGN COST — 2025"
+        eyebrow="WEBSITE DESIGN COST — 2026"
         headline="How Much Does a Website Cost? Here's the Actual Number."
         lead="US agencies charge $8,000–$35,000 for a business website. FactoryJet builds the same quality site for $1,499–$7,500 — fixed price, 7-day delivery, no hidden fees. Here's the breakdown."
         primaryCta={{ label: 'Get a Free Quote', modal: true, region: 'us' }}
@@ -520,7 +521,7 @@ export default function PricingPage() {
         trustItems={['500+ US businesses served', '7-day delivery guarantee', 'below US agency rates']}
         rightSlot={
           <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-6 space-y-3">
-            <p className="text-xs font-fj-mono uppercase tracking-widest text-white/50 mb-4">2025 Price Comparison</p>
+            <p className="text-xs font-fj-mono uppercase tracking-widest text-white/50 mb-4">2026 Price Comparison</p>
             <div className="grid grid-cols-3 gap-2 text-xs font-fj-body mb-2">
               <span className="text-white/40">Service</span>
               <span className="text-[#F05A28] font-semibold text-center">FactoryJet</span>
@@ -554,103 +555,6 @@ export default function PricingPage() {
         headline="Fixed price. 7-day delivery. 500+ US businesses served."
       />
 
-      {/* ── 4. SERVICE EXPLANATION ── */}
-      <ServiceExplanation
-        eyebrow="WHAT DRIVES WEBSITE COST"
-        headline="Five factors determine what your website should actually cost"
-        lead="Most website pricing quotes feel like guesswork — 'it depends' is not an answer you can budget around. Here's what actually moves the number, so you can scope your project before you call anyone."
-        body={
-          <>
-            <p>
-              Page count is the biggest lever. A 5-page site and a 20-page site are not five times more complex — but they are meaningfully different in design time, content work, and SEO structure. That&apos;s why our packages are scoped by page count.
-            </p>
-            <p>
-              Custom functionality — booking systems, member portals, configurators, subscription billing — adds engineering time beyond the design cost. These are quoted separately and always fixed-price.
-            </p>
-            <p>
-              Integrations (CRM, email platforms, payment gateways, booking tools) require configuration time. Shopify Payments takes 2 hours. A custom Salesforce sync takes 2 weeks. We scope these explicitly before the project starts, so there are no surprises mid-build.
-            </p>
-          </>
-        }
-        rightSlot={
-          <div className="rounded-2xl border border-fj-charcoal/20 bg-fj-cream p-6 space-y-3">
-            <p className="text-xs font-fj-mono uppercase tracking-widest text-fj-ink/50 mb-4">All Services — Starting Prices</p>
-            {[
-              { label: '5-Page Business Site', price: '$1,499', note: '7-day delivery' },
-              { label: '15-Page Growth Site', price: '$3,500', note: 'Blog + CRM + SEO' },
-              { label: 'Shopify / WooCommerce', price: '$2,999', note: 'Up to 50 products' },
-              { label: 'WordPress Development', price: '$1,999', note: 'Custom theme, no builders' },
-              { label: 'Website Redesign', price: '$3,500', note: '10+ pages, speed + SEO' },
-              { label: 'Web Application MVP', price: '$7,500', note: 'Custom functionality' },
-              { label: 'AI Automation', price: '$2,500', note: 'Single workflow' },
-            ].map(({ label, price, note }) => (
-              <div key={label} className="flex items-center justify-between py-2 border-t border-fj-charcoal/10 first:border-0">
-                <div>
-                  <p className="text-sm font-semibold font-fj-body text-fj-ink">{label}</p>
-                  <p className="text-xs text-fj-ink/50 font-fj-body">{note}</p>
-                </div>
-                <span className="text-[#F05A28] font-bold font-fj-display text-base">{price}</span>
-              </div>
-            ))}
-            <a href="/contact" className="block mt-4 text-center text-sm font-semibold text-[#F05A28] font-fj-body hover:underline">
-              Get a free quote →
-            </a>
-          </div>
-        }
-      />
-
-      {/* ── 5. STRATEGIC DARK SECTION ── */}
-      <StrategicDarkSection
-        eyebrow="THE REAL REASON US AGENCIES COST SO MUCH"
-        headline="You're not paying for a better website. You're paying for their office."
-        lead="The average US web design agency bills $150–$250 per hour. Of that, maybe $60–$80 goes to the developer actually building your site. The rest covers downtown rent, a project manager who sends weekly update emails, an account executive who sold you the deal, and a business development team working on their next client. FactoryJet has none of that. Our engineering is specialized, 25+ years experienced, and our fixed-price model means we win when you launch on time — not when the project drags."
-        pillars={[
-          {
-            title: 'No account manager markup',
-            body: 'US agencies layer account managers, project managers, and client success reps between you and the engineer. Each layer adds 15–25% to your invoice. At FactoryJet, your project manager is the senior engineer — one layer, no markup.',
-          },
-          {
-            title: 'No downtown office overhead',
-            body: 'A San Francisco or New York design agency needs $15,000–$40,000/month in rent to exist. That cost is in your invoice whether you know it or not. We run lean — world-class engineering, zero real estate overhead.',
-          },
-          {
-            title: 'Fixed price means we absorb the risk',
-            body: "With hourly billing, every meeting, every revision, every back-and-forth email is on your tab. With our fixed-price model, we absorb the risk of underestimating. If it takes us longer, that's our problem — not yours.",
-          },
-        ]}
-      />
-
-      {/* ── 6. SERVICE JOURNEY ── */}
-      <div id="process">
-        <ServiceJourneyRow
-          eyebrow="HOW IT WORKS"
-          headline="From Free Quote to Live Website: 5 Steps"
-          lead="Every FactoryJet project follows the same five-stage process. You know exactly where you are at every point — no black-box development."
-          stages={journeyStages}
-          closingNote="5 STAGES · 7-DAY DELIVERY GUARANTEE · FREE QUOTE IN 24 HOURS"
-        />
-      </div>
-
-      {/* ── 7. COST FACTORS ── */}
-      <IndustriesGrid
-        eyebrow="WHAT MOVES THE NUMBER"
-        headline="Six factors that drive website design cost"
-        lead="Understand these six variables and you can estimate your own project cost before talking to anyone."
-        sectors={PRICING_SECTORS}
-      />
-
-      {/* ── 8. CITY CONTEXT ── */}
-      <CityContextSection
-        eyebrow="SERVING US BUSINESSES"
-        headline="Professional website design for US small businesses, starting from $1,499"
-        leadParagraphs={[
-          "FactoryJet works with small businesses across the United States. Whether you're a retail shop in Austin, a law firm in Miami, a DTC brand in Denver, or a service business in Charlotte — our process is built for US time zones, US audiences, and US search behavior.",
-          "Our pricing is in USD, our delivery timelines run on US business days, and our SEO work targets US search audiences. Every package includes the same fixed price and 7-day delivery guarantee regardless of where your business is located.",
-          "We've served 500+ US businesses since 1999 — from solo consultants to 50-person companies. The rate stays the same. The quality stays the same. The only variable is your scope.",
-        ]}
-        stats={MARKET_STATS}
-      />
-
       {/* ── 9. COMPARISON TABLE ── */}
       <ComparisonTable
         eyebrow="HOW WE COMPARE"
@@ -659,19 +563,11 @@ export default function PricingPage() {
         pullQuote={{ stat: 'Fixed Price', caption: 'milestone-paid with full code ownership — predictable from quote to launch.' }}
         columns={COMPARISON_COLUMNS}
         rows={COMPARISON_ROWS}
-        footer="Prices reflect typical US market ranges as of 2025. DIY platform monthly costs compound over time and include no ownership of the underlying site."
+        footer="Prices reflect typical US market ranges as of 2026. DIY platform monthly costs compound over time and include no ownership of the underlying site."
       />
 
-      {/* ── 10. PRICING TIERS ── */}
-      <div id="pricing">
-        <PricingTiers
-          eyebrow="WEBSITE DESIGN PACKAGES"
-          headline="Fixed-Price Website Packages: No Hourly Billing, No Surprises"
-          lead="Every tier includes a fixed scope, a fixed price, and a delivery timeline we stand behind. No discovery retainer. No surprise invoices."
-          tiers={PRICING_TIERS}
-          footnote="All prices in USD. Copywriting, custom photography, and premium plugin licenses are priced separately if needed — itemized before you sign."
-        />
-      </div>
+      {/* ── 10. UNIFIED SAAS PRICING (all services) ── */}
+      <UsPricingTabs />
 
       {/* ── 12. TESTIMONIALS ── */}
       <TestimonialsSection
