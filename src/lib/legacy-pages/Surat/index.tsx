@@ -1,7 +1,9 @@
 'use client';
 
-import React, { lazy, Suspense, useState, useEffect } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useContactModal } from '@/context/ContactModalContext';
+import ExitIntentLeadForm from '@/components/ExitIntentLeadForm';
 import Script from 'next/script';
 import Hero from './components/Hero';
 import SocialProof from './components/SocialProof';
@@ -19,8 +21,6 @@ const CTA = lazy(() => import('./components/CTA'));
 // const Footer = lazy(() => import('./components/Footer')); // Commented out - using global Footer instead
 const WhatsAppButton = lazy(() => import('./components/WhatsAppButton'));
 const StickyMobileBar = lazy(() => import('./components/StickyMobileBar'));
-const LeadFormModal = lazy(() => import('./components/LeadFormModal'));
-const ExitIntentPopup = lazy(() => import('./components/ExitIntentPopup'));
 
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center py-20">
@@ -29,7 +29,7 @@ const LoadingSpinner = () => (
 );
 
 const SuratPage: React.FC = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { openModal: openContactModal } = useContactModal();
 
   const schemaMarkup = {
     "@context": "https://schema.org",
@@ -108,8 +108,7 @@ const SuratPage: React.FC = () => {
     }
   }, []);
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const openModal = () => openContactModal('in');
 
   return (
     <motion.div
@@ -143,8 +142,7 @@ const SuratPage: React.FC = () => {
         <CTA onOpenModal={openModal} />
         <WhatsAppButton />
         <StickyMobileBar />
-        <LeadFormModal isOpen={isModalOpen} onClose={closeModal} />
-        <ExitIntentPopup />
+        <ExitIntentLeadForm region="in" source="surat_exit" />
       </Suspense>
     </motion.div>
   );

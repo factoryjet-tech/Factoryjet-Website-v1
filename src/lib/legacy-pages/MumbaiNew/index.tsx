@@ -22,7 +22,7 @@ import {
   FaqSection
 } from './components/DetailedSections';
 // import FooterLocal from './components/FooterLocal'; // Commented out - using global Footer instead
-import ExitIntentModal from './components/ExitIntentModal';
+import ExitIntentLeadForm from '@/components/ExitIntentLeadForm';
 import StickyMobileCTA from './components/StickyMobileCTA';
 
 const MumbaiPage = () => {
@@ -135,7 +135,7 @@ const MumbaiPage = () => {
 
       {/* <FooterLocal /> */} {/* Commented out - using global Footer instead */}
       <StickyMobileCTA />
-      <ExitIntentModal />
+      <ExitIntentLeadForm region="in" source="mumbai_exit" />
     </>
   );
 };

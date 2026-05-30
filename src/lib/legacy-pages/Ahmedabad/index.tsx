@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
+import { useContactModal } from '@/context/ContactModalContext';
 import Script from 'next/script';
 import Hero from './components/Hero';
 import StickyMobileBar from './components/StickyMobileBar';
@@ -16,11 +17,10 @@ import FAQ from './components/FAQ';
 import CTA from './components/CTA';
 // import Footer from './components/Footer'; // Commented out - using global Footer instead
 import WhatsAppButton from './components/WhatsAppButton';
-import ExitIntentPopup from './components/ExitIntentPopup';
-import LeadFormModal from './components/LeadFormModal';
+import ExitIntentLeadForm from '@/components/ExitIntentLeadForm';
 
 const AhmedabadPage: React.FC = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { openModal: openContactModal } = useContactModal();
 
   const schemaMarkup = {
     "@context": "https://schema.org",
@@ -91,8 +91,7 @@ const AhmedabadPage: React.FC = () => {
     ]
   };
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const openModal = () => openContactModal('in');
 
   return (
     <div className="min-h-screen relative bg-white text-jet-navy font-body overflow-x-hidden pb-24 lg:pb-0">
@@ -121,8 +120,7 @@ const AhmedabadPage: React.FC = () => {
       </main>
       <WhatsAppButton />
       <StickyMobileBar />
-      <ExitIntentPopup />
-      <LeadFormModal isOpen={isModalOpen} onClose={closeModal} />
+      <ExitIntentLeadForm region="in" source="ahmedabad_exit" />
     </div>
   );
 };
