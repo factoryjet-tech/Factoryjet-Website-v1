@@ -10,7 +10,6 @@ import Pricing from "./sections/Pricing";
 import FAQ from "./sections/FAQ";
 import FinalCTA from "./sections/FinalCTA";
 import Footer from "./sections/Footer";
-import LeadFormModal from "./components/LeadFormModal";
 
 import { ukMetadata } from "./metadata";
 import { ukSchemas } from "./schema";
@@ -68,8 +67,6 @@ export default function UKPage() {
         <FinalCTA />
         <Footer />
       </main>
-
-      <LeadFormModal />
     </div>
   );
 }
