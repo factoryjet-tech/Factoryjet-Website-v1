@@ -7,6 +7,7 @@ import Image from 'next/image';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import RelatedGuides from '@/components/v2/RelatedGuides';
 import Hero from '@/components/v2/Hero';
 import ServiceHeroImageBand from '@/components/v2/ServiceHeroImageBand';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
@@ -1282,6 +1283,12 @@ export default function EcommerceDevelopmentPage() {
 
       </main>
 
+      <RelatedGuides
+        links={[
+          { href: '/blog/shopify-vs-custom-website-us-small-business-2026', label: 'Shopify vs a custom website for US small business' },
+          { href: '/blog/mobile-only-design-strategy', label: 'Mobile-only vs responsive design: which to pick' },
+        ]}
+      />
       <SiteFooter />
     </>
   );

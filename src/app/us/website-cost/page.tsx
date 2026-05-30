@@ -5,6 +5,7 @@ import { websiteCostAlternates } from '@/data/hreflangMap';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import RelatedGuides from '@/components/v2/RelatedGuides';
 import Hero from '@/components/v2/Hero';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
@@ -1020,6 +1021,12 @@ export default function WebsiteCostPage() {
 
       </main>
 
+      <RelatedGuides
+        links={[
+          { href: '/blog/website-cost-small-business-usa-2026', label: 'How much a small business website costs in 2026 (full guide)' },
+          { href: '/blog/shopify-vs-custom-website-us-small-business-2026', label: 'Shopify vs a custom website for US small business' },
+        ]}
+      />
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );

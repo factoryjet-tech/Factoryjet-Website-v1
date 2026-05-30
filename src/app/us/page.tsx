@@ -7,6 +7,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import RelatedGuides from '@/components/v2/RelatedGuides';
 import Hero from '@/components/v2/Hero';
 import LogoBar from '@/components/v2/LogoBar';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
@@ -825,6 +826,13 @@ export default function USHomePage() {
 
       </main>
 
+      <RelatedGuides
+        links={[
+          { href: '/blog/best-web-design-agencies-small-business-2026', label: 'Best web design agencies for small business (2026)' },
+          { href: '/blog/mobile-only-design-strategy', label: 'Mobile-only vs responsive design: which to pick' },
+          { href: '/blog/website-cost-small-business-usa-2026', label: 'How much a small business website costs in 2026' },
+        ]}
+      />
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );

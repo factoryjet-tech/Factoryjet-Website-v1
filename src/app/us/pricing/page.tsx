@@ -5,6 +5,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import RelatedGuides from '@/components/v2/RelatedGuides';
 import Hero from '@/components/v2/Hero';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
@@ -596,6 +597,12 @@ export default function PricingPage() {
         objectionHandler="Fixed price. 7-day delivery. 500+ US businesses served. Free quote in 24 hours."
       />
 
+      <RelatedGuides
+        links={[
+          { href: '/blog/website-cost-small-business-usa-2026', label: 'How much a small business website costs in 2026' },
+          { href: '/blog/shopify-vs-custom-website-us-small-business-2026', label: 'Shopify vs a custom website for US small business' },
+        ]}
+      />
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
