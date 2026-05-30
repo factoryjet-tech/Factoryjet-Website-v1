@@ -266,16 +266,16 @@ function ServiceCard({
   return (
     <Link
       href={href}
-      className="group flex items-start gap-3 rounded-xl p-2.5 transition-colors hover:bg-[#F05A28]/5"
+      className="group flex items-center gap-2.5 rounded-lg px-2 py-1.5 transition-colors hover:bg-[#F05A28]/5"
     >
-      <span className="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[#F05A28]/10 text-[#F05A28] transition-colors group-hover:bg-[#F05A28]/15">
-        <Icon size={15} strokeWidth={1.8} />
+      <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg bg-[#F05A28]/10 text-[#F05A28] transition-colors group-hover:bg-[#F05A28]/15">
+        <Icon size={14} strokeWidth={1.8} />
       </span>
-      <span className="flex flex-col min-w-0">
-        <span className="font-fj-body text-[13.5px] font-semibold leading-tight text-fj-ink transition-colors group-hover:text-[#F05A28]">
+      <span className="flex min-w-0 flex-col">
+        <span className="font-fj-body text-[13px] font-semibold leading-tight text-fj-ink transition-colors group-hover:text-[#F05A28]">
           {label}
         </span>
-        <span className="mt-0.5 font-fj-body text-[11.5px] leading-snug text-fj-neutral-400">
+        <span className="truncate font-fj-body text-[11px] leading-tight text-fj-neutral-400">
           {desc}
         </span>
       </span>
@@ -400,68 +400,23 @@ export default function SiteHeader({
                         <div className="grid grid-cols-[184px_224px_minmax(0,1fr)_172px]">
 
                           {/* Web Services column */}
-                          <div className="p-5">
-                            <p className="mb-2.5 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
+                          <div className="p-4">
+                            <p className="mb-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
                               Web Services
                             </p>
-                            {/* Web Design */}
-                            <ServiceCard
-                              icon={IN_WEB_SERVICES[0].icon}
-                              label={IN_WEB_SERVICES[0].label}
-                              href={IN_WEB_SERVICES[0].href}
-                              desc={IN_WEB_SERVICES[0].desc}
-                            />
-                            {/* WordPress */}
-                            <ServiceCard
-                              icon={IN_WEB_SERVICES[1].icon}
-                              label={IN_WEB_SERVICES[1].label}
-                              href={IN_WEB_SERVICES[1].href}
-                              desc={IN_WEB_SERVICES[1].desc}
-                            />
-
-                            <div className="my-2.5 border-t border-fj-neutral-100" />
-                            <p className="mb-1.5 px-2.5 font-fj-mono text-[9.5px] font-semibold uppercase tracking-[0.12em] text-fj-neutral-300">
-                              E-Commerce
+                            {IN_WEB_SERVICES.slice(0, 4).map((s) => (
+                              <ServiceCard key={s.href} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
+                            ))}
+                            <p className="mb-1.5 mt-3 font-fj-mono text-[9.5px] font-semibold uppercase tracking-[0.12em] text-fj-neutral-300">
+                              Automation
                             </p>
-                            {/* E-Commerce */}
-                            <ServiceCard
-                              icon={IN_WEB_SERVICES[2].icon}
-                              label={IN_WEB_SERVICES[2].label}
-                              href={IN_WEB_SERVICES[2].href}
-                              desc={IN_WEB_SERVICES[2].desc}
-                            />
-                            {/* Shopify — indented as sub-service */}
-                            <div className="ml-3 mt-0.5 border-l-2 border-[#F05A28]/30 pl-1">
-                              <ServiceCard
-                                icon={IN_WEB_SERVICES[3].icon}
-                                label={IN_WEB_SERVICES[3].label}
-                                href={IN_WEB_SERVICES[3].href}
-                                desc={IN_WEB_SERVICES[3].desc}
-                              />
-                            </div>
-
-                            <div className="my-2.5 border-t border-fj-neutral-100" />
-                            <p className="mb-1.5 px-2.5 font-fj-mono text-[9.5px] font-semibold uppercase tracking-[0.12em] text-fj-neutral-300">
-                              Automation &amp; Messaging
-                            </p>
-                            {/* n8n Automation */}
-                            <ServiceCard
-                              icon={IN_WEB_SERVICES[4].icon}
-                              label={IN_WEB_SERVICES[4].label}
-                              href={IN_WEB_SERVICES[4].href}
-                              desc={IN_WEB_SERVICES[4].desc}
-                            />
-                            {/* WhatsApp Chatbot */}
-                            <ServiceCard
-                              icon={IN_WEB_SERVICES[5].icon}
-                              label={IN_WEB_SERVICES[5].label}
-                              href={IN_WEB_SERVICES[5].href}
-                              desc={IN_WEB_SERVICES[5].desc}
-                            />
+                            {IN_WEB_SERVICES.slice(4, 6).map((s) => (
+                              <ServiceCard key={s.href} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
+                            ))}
                           </div>
 
                           {/* SEO & AI Search column (NEW) */}
-                          <div className="border-l border-fj-neutral-100 p-5" style={{ backgroundColor: '#FFFDFB' }}>
+                          <div className="border-l border-fj-neutral-100 p-4" style={{ backgroundColor: '#FFFDFB' }}>
                             <p className="mb-2.5 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
                               SEO &amp; AI Search
                             </p>
@@ -503,7 +458,7 @@ export default function SiteHeader({
 
                           {/* AI Agent Development Hub column */}
                           <div
-                            className="border-l border-fj-neutral-100 p-5"
+                            className="border-l border-fj-neutral-100 p-4"
                             style={{
                               backgroundImage: 'radial-gradient(#E8E4DC 1px, transparent 1px)',
                               backgroundSize: '18px 18px',
@@ -540,53 +495,35 @@ export default function SiteHeader({
                               </span>
                             </Link>
 
-                            {/* One-line tagline */}
-                            <p className="mb-3 rounded-lg border border-fj-neutral-200 bg-white px-3 py-2 font-fj-body text-[11.5px] leading-relaxed text-fj-neutral-500">
-                              Autonomous AI agents that handle support, sales, marketing, and ops — so your team focuses on growth.
-                            </p>
-
-                            {/* 2-col agents grid — last agent spans full width */}
+                            {/* 2-col agents grid (6 shown, hub link covers the 7th) */}
                             <div className="grid grid-cols-2 gap-1.5">
-                              {IN_AI_AGENTS.map((agent, idx) => (
+                              {IN_AI_AGENTS.slice(0, 6).map((agent) => (
                                 <Link
                                   key={agent.href}
                                   href={agent.href}
-                                  className={`group rounded-xl border border-fj-neutral-200 bg-white transition-all hover:border-[#F05A28] hover:shadow-sm ${
-                                    idx === 6
-                                      ? 'col-span-2 flex items-center gap-2.5 px-3 py-2'
-                                      : 'flex flex-col p-2.5'
-                                  }`}
+                                  className="group flex flex-col rounded-lg border border-fj-neutral-200 bg-white px-2.5 py-2 transition-all hover:border-[#F05A28] hover:shadow-sm"
                                 >
-                                  <agent.icon
-                                    size={14}
-                                    strokeWidth={1.8}
-                                    className={`text-[#F05A28] ${idx !== 6 ? 'mb-1.5' : 'flex-shrink-0'}`}
-                                  />
-                                  <span
-                                    className={`font-fj-body font-semibold leading-tight text-fj-ink transition-colors group-hover:text-[#F05A28] ${
-                                      idx !== 6 ? 'text-[12px]' : 'text-[12.5px]'
-                                    }`}
-                                  >
+                                  <agent.icon size={13} strokeWidth={1.8} className="mb-1 text-[#F05A28]" />
+                                  <span className="font-fj-body text-[12px] font-semibold leading-tight text-fj-ink transition-colors group-hover:text-[#F05A28]">
                                     {agent.label}
                                   </span>
-                                  {idx !== 6 && (
-                                    <span className="mt-0.5 font-fj-body text-[10.5px] leading-snug text-fj-neutral-400">
-                                      {agent.desc}
-                                    </span>
-                                  )}
-                                  {idx === 6 && (
-                                    <span className="ml-1 font-fj-body text-[10.5px] text-fj-neutral-400">
-                                      — {agent.desc}
-                                    </span>
-                                  )}
+                                  <span className="mt-0.5 font-fj-body text-[10.5px] leading-tight text-fj-neutral-400">
+                                    {agent.desc}
+                                  </span>
                                 </Link>
                               ))}
                             </div>
+                            <Link
+                              href={IN_AI_HUB_HREF}
+                              className="mt-2.5 inline-flex items-center gap-1 font-fj-body text-[11px] font-semibold text-[#F05A28] transition-opacity hover:opacity-75"
+                            >
+                              Explore all 7 agents <ArrowRight size={11} strokeWidth={2.5} />
+                            </Link>
                           </div>
 
                           {/* Featured panel — dark charcoal for India */}
                           <div
-                            className="flex flex-col justify-between rounded-r-2xl p-5"
+                            className="flex flex-col justify-between rounded-r-2xl p-4"
                             style={{ background: '#0F0F12' }}
                           >
                             <div>
