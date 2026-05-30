@@ -193,7 +193,7 @@ export default function VadodaraSeoPage() {
 
         <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
 
-        <BigThreeTrustBlock eyebrow="BY THE NUMBERS" headline="500+ sites done. 4.9 average rating. SEO built for factories and exporters." />
+        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="500+ sites done. 4.9 average rating. SEO built for factories and exporters." />
 
         <CityContextSection
           eyebrow="VADODARA MARKET"

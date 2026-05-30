@@ -454,6 +454,7 @@ export default function SeoHubPage() {
 
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
+          variant="statement"
           eyebrow="BY THE NUMBERS"
           headline="500+ sites done. 4.9 average rating. One report you'll actually read."
         />

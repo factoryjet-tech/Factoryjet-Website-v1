@@ -194,7 +194,7 @@ export default function NoidaSeoPage() {
 
         <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
 
-        <BigThreeTrustBlock eyebrow="BY THE NUMBERS" headline="500+ sites done. 4.9 average rating. SEO that beats bigger budgets." />
+        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="500+ sites done. 4.9 average rating. SEO that beats bigger budgets." />
 
         <CityContextSection
           eyebrow="NOIDA MARKET"

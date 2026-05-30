@@ -168,7 +168,7 @@ export default function SeoAuditPage() {
 
         <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
 
-        <BigThreeTrustBlock eyebrow="BY THE NUMBERS" headline="500+ sites done. 4.9 average rating. An SEO audit that tells you the truth." />
+        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="500+ sites done. 4.9 average rating. An SEO audit that tells you the truth." />
 
         <IndustriesGrid variant="cards"
           eyebrow="WHAT'S INCLUDED"

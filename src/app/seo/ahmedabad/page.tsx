@@ -193,7 +193,7 @@ export default function AhmedabadSeoPage() {
 
         <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
 
-        <BigThreeTrustBlock eyebrow="BY THE NUMBERS" headline="500+ sites done. 4.9 average rating. SEO built for exporters and business buyers." />
+        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="500+ sites done. 4.9 average rating. SEO built for exporters and business buyers." />
 
         <CityContextSection
           eyebrow="AHMEDABAD MARKET"

@@ -20,6 +20,14 @@ import Link from 'next/link';
 export interface BigThreeTrustBlockProps {
   eyebrow?: string;
   headline?: string;
+  /**
+   * Render mode.
+   *  - undefined / 'showcase' (default): the hardcoded US stat block
+   *    (523+, $1,999, 7-day guarantee). Used by ~105 pages — unchanged.
+   *  - 'statement': a clean cream band rendering only the eyebrow + headline
+   *    you pass. Used by the India SEO pages (no US price, no /contact CTA).
+   */
+  variant?: 'showcase' | 'statement';
   /** Unused in Option B layout — kept for API compatibility */
   cityCount?: { value: string; label: string; source?: string };
   /** Optional illustration image paths for the three stats */
@@ -32,8 +40,41 @@ export interface BigThreeTrustBlockProps {
 
 export default function BigThreeTrustBlock({
   eyebrow,
+  headline,
+  variant,
   illustrations,
 }: BigThreeTrustBlockProps) {
+  if (variant === 'statement') {
+    return (
+      <section
+        style={{
+          backgroundColor: '#FAFAF7',
+          borderTop: '1.5px solid rgba(240,90,40,0.22)',
+          borderBottom: '1.5px solid rgba(240,90,40,0.22)',
+        }}
+        className="py-12 md:py-16"
+      >
+        <div className="mx-auto max-w-[900px] px-6 md:px-8 text-center">
+          {eyebrow && (
+            <p
+              className="font-fj-mono font-semibold uppercase"
+              style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#F05A28' }}
+            >
+              {eyebrow}
+            </p>
+          )}
+          {headline && (
+            <h2
+              className="fj-display mt-3 font-semibold text-fj-ink"
+              style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
+            >
+              {headline}
+            </h2>
+          )}
+        </div>
+      </section>
+    );
+  }
   return (
     <section
       style={{

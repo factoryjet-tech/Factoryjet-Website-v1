@@ -194,7 +194,7 @@ export default function PuneSeoPage() {
 
         <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
 
-        <BigThreeTrustBlock eyebrow="BY THE NUMBERS" headline="500+ sites done. 4.9 average rating. SEO built for Pune's economy." />
+        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="500+ sites done. 4.9 average rating. SEO built for Pune's economy." />
 
         <CityContextSection
           eyebrow="PUNE MARKET"

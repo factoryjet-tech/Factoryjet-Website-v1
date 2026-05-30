@@ -168,7 +168,7 @@ export default function TechnicalSeoPage() {
 
         <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
 
-        <BigThreeTrustBlock eyebrow="BY THE NUMBERS" headline="500+ sites done. 4.9 average rating. Technical SEO that gets your site found." />
+        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="500+ sites done. 4.9 average rating. Technical SEO that gets your site found." />
 
         <IndustriesGrid variant="cards"
           eyebrow="WHAT'S INCLUDED"

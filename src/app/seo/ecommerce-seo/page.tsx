@@ -168,7 +168,7 @@ export default function EcommerceSeoPage() {
 
         <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
 
-        <BigThreeTrustBlock eyebrow="BY THE NUMBERS" headline="500+ sites done. 4.9 average rating. Ecommerce SEO that gets your store found." />
+        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="500+ sites done. 4.9 average rating. Ecommerce SEO that gets your store found." />
 
         <IndustriesGrid variant="cards"
           eyebrow="WHAT'S INCLUDED"
