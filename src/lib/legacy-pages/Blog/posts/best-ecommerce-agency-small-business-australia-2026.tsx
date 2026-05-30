@@ -12,7 +12,7 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/best-ecommerce-agency-small-business-australia-2026-hero.jpg",
   meta: {
-    title: "6 Best E-Commerce Agencies for Small Business in Australia 2026",
+    title: "6 Best E-Commerce Agencies for Small Business (Australia 2026)",
     description: "Compare Australia's top e-commerce agencies for SMBs — price, tech stack, and delivery speed. Find AI-native options under $5K AUD with Lighthouse 90+ scores.",
   },
   keyTakeaways: [

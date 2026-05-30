@@ -13,7 +13,7 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: '/blog-images/shopify-vs-custom-website-us-small-business-2026-hero.jpg',
   meta: {
-    title: "Shopify vs Custom Website for US Small Business in 2026",
+    title: "Shopify vs Custom Website 2026: Which Is Right for Your SMB?",
     description: "Shopify at $39/mo or a custom site at $5K-$20K? This guide maps US small business owners to the right choice based on revenue stage, product type, and growth goals.",
   },
   keyTakeaways: [

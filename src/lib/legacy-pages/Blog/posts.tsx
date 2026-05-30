@@ -824,7 +824,7 @@ export const POSTS: BlogPost[] = [
   title: "Mobile-Only Design vs Responsive Design: The Complete 2026 Strategy Guide",
   excerpt: "Most users never open your site on a laptop. This guide compares mobile-only design and responsive design, explains why mobile-first is no longer optional, and covers the UX patterns that convert in 2026.",
   meta: {
-    title: "Mobile-Only vs Responsive Design: What's the Difference?",
+    title: "Mobile-Only vs Responsive Design (2026): Which Should You Pick?",
     description: "A plain-English 2026 comparison of mobile-only and responsive design — UX, performance, SEO, and when to pick which for your small business website.",
   },
   category: 'Web Design & Strategy',
