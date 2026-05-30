@@ -388,7 +388,7 @@ export default function SiteHeader({
 
                 {openDropdown === 'services' && (
                   <div
-                    className="absolute left-0 top-full z-50 pt-2.5"
+                    className="fixed left-1/2 top-[72px] z-50 -translate-x-1/2 px-3 pt-2"
                     onMouseEnter={keepOpen}
                     onMouseLeave={scheduleClosed}
                     role="menu"
@@ -396,8 +396,8 @@ export default function SiteHeader({
                     {locale === 'in' ? (
 
                       /* ── India mega menu: 3-col hub layout ──────────────── */
-                      <div className="w-[1060px] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
-                        <div className="grid grid-cols-[200px_236px_minmax(0,1fr)_188px]">
+                      <div className="w-[1000px] max-w-[calc(100vw-1.5rem)] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
+                        <div className="grid grid-cols-[184px_224px_minmax(0,1fr)_172px]">
 
                           {/* Web Services column */}
                           <div className="p-5">
