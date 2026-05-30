@@ -11,7 +11,6 @@ import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
 import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/ServiceJourneyRow';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
@@ -19,14 +18,10 @@ import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 
-/* ─────────────────────────────────────────────────────────────────────────────
-   SEO / Metadata
-───────────────────────────────────────────────────────────────────────────── */
-
 export const metadata: Metadata = {
-  title: 'SEO Agency in Pune | From ₹15,000/Month | FactoryJet',
+  title: 'SEO Company in Pune | AI-Native SEO Agency | FactoryJet',
   description:
-    'SEO agency in Pune for IT services, auto-tier suppliers, education & manufacturing. From ₹15,000/month. Local pack + organic + AI Overviews. Serving Hinjewadi, Koregaon Park, Baner & Aundh.',
+    'SEO company in Pune for IT firms, car-part makers, pharma, coaching classes, and online brands. Win abroad, across India, and in Google AI answers. No lock-in. Serving Hinjewadi, Kharadi, Chakan, and Koregaon Park.',
   keywords: [
     'seo company in pune',
     'seo agency in pune',
@@ -36,91 +31,49 @@ export const metadata: Metadata = {
     'seo expert in pune',
     'seo consultant in pune',
     'pune seo',
-    'local seo pune',
   ],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'SEO Agency in Pune | From ₹15,000/Month | FactoryJet',
+    title: 'SEO Company in Pune | AI-Native SEO Agency | FactoryJet',
     description:
-      'SEO agency in Pune for IT services, auto-tier suppliers, education & manufacturing. From ₹15,000/month. Local pack + organic + AI Overviews. Serving Hinjewadi, Koregaon Park, Baner & Aundh.',
+      'SEO company in Pune for IT firms, car-part makers, pharma, coaching classes, and online brands. Win abroad, across India, and in Google AI answers. No lock-in. Serving Hinjewadi, Kharadi, Chakan, and Koregaon Park.',
     url: 'https://factoryjet.com/seo/pune',
-    images: [
-      {
-        url: 'https://factoryjet.com/images/services/seo.webp',
-        width: 1200,
-        height: 630,
-        alt: 'FactoryJet SEO Agency in Pune',
-      },
-    ],
+    images: [{ url: 'https://factoryjet.com/images/services/seo.webp', width: 1200, height: 630, alt: 'FactoryJet SEO Company in Pune' }],
     locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SEO Agency in Pune | FactoryJet',
-    description: 'SEO agency in Pune. From ₹15,000/month. Local pack + organic + AI Overviews. No lock-in.',
+    title: 'SEO Company in Pune | FactoryJet',
+    description: 'SEO company in Pune for IT, car parts, pharma, coaching, and online brands. Win abroad, across India, and in Google AI answers. No lock-in.',
     images: ['https://factoryjet.com/images/services/seo.webp'],
   },
-  alternates: {
-    canonical: 'https://factoryjet.com/seo/pune',
-    languages: seoCityAlternatesIN['pune'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
+  alternates: { canonical: 'https://factoryjet.com/seo/pune', languages: seoCityAlternatesIN['pune'] },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
-
-/* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schemas
-───────────────────────────────────────────────────────────────────────────── */
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   '@id': 'https://factoryjet.com/seo/pune#localbusiness',
-  name: 'FactoryJet — SEO Agency in Pune',
+  name: 'FactoryJet SEO Company in Pune',
   image: 'https://factoryjet.com/images/services/seo.webp',
-  description:
-    'SEO agency in Pune for IT services, auto-tier suppliers, education, and manufacturing. Technical SEO, local pack, organic, and AI Overviews optimisation. From ₹15,000/month, no lock-in.',
+  description: 'SEO company in Pune for IT firms, car-part makers, pharma, coaching classes, and online brands. We fix your site and help you win abroad, across India, and in Google AI answers. No lock-in.',
   url: 'https://factoryjet.com/seo/pune',
   telephone: '+919699977699',
   email: 'connect@factoryjet.com',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Pune',
-    addressRegion: 'Maharashtra',
-    addressCountry: 'IN',
-  },
+  address: { '@type': 'PostalAddress', addressLocality: 'Pune', addressRegion: 'Maharashtra', addressCountry: 'IN' },
   areaServed: [
     { '@type': 'City', name: 'Pune' },
-    { '@type': 'City', name: 'Pimpri-Chinchwad' },
     { '@type': 'City', name: 'Hinjewadi' },
-    { '@type': 'City', name: 'Koregaon Park' },
-    { '@type': 'City', name: 'Baner' },
+    { '@type': 'City', name: 'Kharadi' },
+    { '@type': 'City', name: 'Pimpri-Chinchwad' },
     { '@type': 'City', name: 'Chakan' },
   ],
-  geo: {
-    '@type': 'GeoCircle',
-    geoMidpoint: { '@type': 'GeoCoordinates', latitude: 18.5204, longitude: 73.8567 },
-    geoRadius: '50000',
-  },
+  geo: { '@type': 'GeoCircle', geoMidpoint: { '@type': 'GeoCoordinates', latitude: 18.5204, longitude: 73.8567 }, geoRadius: '50000' },
   serviceType: 'Search Engine Optimisation',
   priceRange: '₹₹',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '500', bestRating: '5', worstRating: '1' },
 };
 
 const serviceSchema = {
@@ -128,51 +81,22 @@ const serviceSchema = {
   '@type': 'Service',
   '@id': 'https://factoryjet.com/seo/pune#service',
   serviceType: 'SEO Services in Pune',
-  name: 'SEO Agency in Pune — FactoryJet',
-  description:
-    'SEO agency in Pune for IT services, auto-tier suppliers, education & manufacturing. From ₹15,000/month. Local pack + organic + AI Overviews.',
+  name: 'SEO Company in Pune by FactoryJet',
+  description: 'SEO company in Pune for IT firms, car-part makers, pharma, coaching classes, and online brands. Win abroad, across India, and in Google AI answers. No lock-in.',
   url: 'https://factoryjet.com/seo/pune',
   provider: { '@type': 'Organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Pune' },
-  offers: { '@type': 'Offer', price: '15000', priceCurrency: 'INR' },
+  offers: { '@type': 'Offer', price: '19999', priceCurrency: 'INR', description: 'SEO services for Indian businesses start from ₹19,999/month. Month to month, no lock-in.' },
 };
 
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How much does SEO cost in Pune?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet SEO in Pune starts at ₹15,000/month for the Starter programme — technical fixes, on-page optimisation, and local SEO. Growth (₹30,000/month) adds content and link building. Custom programmes (₹50,000+/month) cover B2B industrial, competitive, and ecommerce SEO. Pune agencies typically charge ₹35,000+/month on a 12-month lock-in. FactoryJet runs month to month.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can FactoryJet rank a Hinjewadi IT services firm against Bangalore competition?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. Pune IT services firms compete with Bangalore for global mandates, and the SEO play is to combine global organic targeting with Pune local credibility. We target service and capability keywords, build case-study and technical content that earns enterprise trust, and fix the technical foundations that hold larger competitors back. A 4–6 month effort for competitive terms.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you handle B2B SEO for Pune auto-tier suppliers in Chakan / PCMC?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Yes. Auto and industrial B2B SEO is a strong fit. We target part, component, and capability keywords that OEM and tier-1 procurement teams actually search, build product and datasheet content, and optimise for the long, technical B2B buying cycle. Chakan, Talegaon, and Pimpri-Chinchwad supplier sites included.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: "What's a realistic SEO timeline for a Pune D2C startup?",
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Branded and long-tail product rankings move in 30–60 days. Competitive premium-D2C category terms — where you may compete with Mumbai brands — take 3–5 months of content and local-pack work. Pune is less saturated than Mumbai or Bangalore, so well-executed SEO often shows results faster here.',
-      },
-    },
+    { '@type': 'Question', name: 'How much does SEO cost in Pune?', acceptedAnswer: { '@type': 'Answer', text: 'We do not sell fixed packages. We look at what you need and only charge for work that moves you up Google. As a rough guide, our SEO plans for Indian businesses start at ₹19,999 a month, with an exact price after a free check. There is no long contract. You pay month to month and can stop with 30 days notice.' } },
+    { '@type': 'Question', name: 'Can you do SEO for a Pune IT firm or GCC delivering to global clients?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. For IT firms in Hinjewadi and Kharadi we mix searches that win work from clients abroad with content that shows you are a real, trusted Pune firm. We go after searches about the services and skills buyers look for, and write the proof and case studies big buyers expect. Tough searches from abroad take 4 to 6 months.' } },
+    { '@type': 'Question', name: 'Do you handle pan-India B2B SEO for an auto-component maker in Chakan or PCMC?', acceptedAnswer: { '@type': 'Answer', text: "Yes. Car parts and engineering work is a strong fit. We go after the part and skill searches that big carmakers and their buyers use, build clear product and spec-sheet pages, and plan for the long, careful way that business buyers shop. We cover supplier sites in Chakan, Talegaon, and Pimpri-Chinchwad." } },
+    { '@type': 'Question', name: 'Can you rank a Pune coaching institute or college for a national student catchment?', acceptedAnswer: { '@type': 'Answer', text: "Yes. Pune draws students from all over India and abroad, so we go after searches about courses, results, and admissions, make sure everything works well on a phone, and build the reviews and rankings that bring in students. This is all-India SEO, not just local." } },
   ],
 };
 
@@ -184,218 +108,61 @@ const speakableSchema = {
   url: 'https://factoryjet.com/seo/pune',
 };
 
-/* ─────────────────────────────────────────────────────────────────────────────
-   Section data
-───────────────────────────────────────────────────────────────────────────── */
-
-const PUN_SEO_JOURNEY: ServiceJourneyStage[] = [
-  {
-    number: '01',
-    title: 'Audit',
-    description:
-      'Full technical, on-page, and backlink audit — crawl health, Core Web Vitals, indexation, and where you stand against the Hinjewadi, Chakan, or Koregaon Park competitors you actually lose to. Findings in plain English. — Week 1',
-  },
-  {
-    number: '02',
-    title: 'Strategy',
-    description:
-      "A Pune-specific keyword map tied to revenue — global plus local for IT, industrial B2B terms for auto and manufacturing, admissions intent for education, local pack for D2C, and the AI Overviews coverage competitors have not claimed. — Week 1–2",
-  },
-  {
-    number: '03',
-    title: 'Implementation',
-    description:
-      'Technical fixes first — schema, speed, internal linking, crawl budget — then on-page optimisation across money pages, capability pages, and Google Business Profile. — Week 2–4',
-  },
-  {
-    number: '04',
-    title: 'Content & Links',
-    description:
-      'AI-assisted briefs, human-edited copy for technical B2B and consumer audiences, and editorial links from real Indian and international sources. No PBNs, no bought links. — Ongoing',
-  },
-  {
-    number: '05',
-    title: 'Reporting',
-    description:
-      'A one-page monthly report: Pune rankings that moved, traffic that converts, leads and enquiries attributed, and the exact three things we are doing next. No lock-in. — Monthly',
-  },
+const PUN_JOURNEY: ServiceJourneyStage[] = [
+  { number: '01', title: 'Check', description: 'A full check of your Pune site: how fast it loads, whether Google can read it, the links pointing to you, and where you stand against the Hinjewadi, Chakan, or Koregaon Park rivals you lose to. In plain words. (Week 1)' },
+  { number: '02', title: 'Plan', description: 'A Pune search plan tied to sales: searches that win work from abroad for IT and pharma, the part searches that win orders across India for car parts and engineering, admissions searches for schools and colleges, and the Google AI answers your rivals have not claimed. (Week 1 to 2)' },
+  { number: '03', title: 'Build', description: 'We fix the technical side first: the hidden code, speed, and links between pages. Then we improve the pages that win you customers, plus your skill or product pages and your free Google listing. (Week 2 to 4)' },
+  { number: '04', title: 'Content & Links', description: 'Content planned with AI and written by a real editor for business buyers and shoppers alike, plus real links from genuine Indian and overseas sites. No spammy link tricks, no bought links. (Ongoing)' },
+  { number: '05', title: 'Report', description: 'A one-page monthly report. The Pune searches that moved, visits that turn into customers, the leads and enquiries we can trace, and the next three things. (Monthly)' },
 ];
 
-const PUN_SEO_FAQ_CATEGORIES = [
-  { key: 'pricing', label: 'Pricing & Timeline' },
-  { key: 'included', label: "What's Included" },
-  { key: 'technical', label: 'Technical & SEO' },
+const PUN_FAQ_CATEGORIES = [
+  { key: 'pricing', label: 'Cost & Time' },
+  { key: 'included', label: 'What You Get' },
+  { key: 'technical', label: 'Tech & Google' },
   { key: 'local', label: 'Pune Local' },
-  { key: 'reporting', label: 'Reporting & Ownership' },
+  { key: 'reporting', label: 'Reports & Ownership' },
 ];
 
-const PUN_SEO_FAQ_ITEMS = [
-  /* ── Pricing & Timeline ── */
-  {
-    category: 'pricing',
-    question: 'How much does SEO cost in Pune?',
-    answer:
-      'FactoryJet SEO in Pune starts at ₹15,000/month for the Starter programme — technical fixes, on-page optimisation, and local SEO. Growth (₹30,000/month) adds content production and link building. Custom programmes (₹50,000+/month) cover B2B industrial, competitive, and ecommerce SEO. Pune agencies typically charge ₹35,000+/month, often on a 12-month lock-in. FactoryJet runs month to month.',
-  },
-  {
-    category: 'pricing',
-    question: 'How long until I see SEO results in Pune?',
-    answer:
-      'Branded and local-pack rankings move in 30–60 days. Competitive service-plus-Pune keywords take 3–5 months. Pune is less saturated than Mumbai or Bangalore, so well-executed SEO often shows results faster here. We report leading indicators from week one.',
-  },
-  {
-    category: 'pricing',
-    question: 'Do you require a long-term contract?',
-    answer:
-      'No. SEO with FactoryJet is month to month, with 30 days notice to pause or stop. We keep Pune clients by showing measurable progress — not by locking them into a 12-month agreement.',
-  },
-  {
-    category: 'pricing',
-    question: 'Why are you cheaper than other Pune SEO agencies?',
-    answer:
-      'We are a small, AI-native team without the office and sales overhead of a full agency. AI handles research, briefs, and reporting at scale; senior humans handle strategy, editing, and technical work. You pay for what moves rankings, not the overhead.',
-  },
-  /* ── What's Included ── */
-  {
-    category: 'included',
-    question: 'What does a Pune SEO programme include?',
-    answer:
-      'Technical SEO, on-page optimisation of your money pages, and local SEO including Google Business Profile for your Pune locations. Growth and Custom tiers add human-edited content, editorial link building, and AI Overviews optimisation. Every tier includes a monthly strategy call and a one-page report.',
-  },
-  {
-    category: 'included',
-    question: 'Do you do B2B and industrial SEO?',
-    answer:
-      'Yes — and for Pune it matters. We target the part, component, capability, and service keywords that OEM and enterprise procurement teams actually search, build datasheet and capability content, and optimise for the long, technical B2B buying cycle that auto and engineering suppliers live in.',
-  },
-  {
-    category: 'included',
-    question: 'Do you write the content?',
-    answer:
-      'We do. AI builds the first-draft brief; an experienced editor turns it into copy that holds up for a technical B2B or consumer audience and answers the buyer question directly. You approve every piece before it publishes. Volume scales with your tier.',
-  },
-  {
-    category: 'included',
-    question: 'Can you do ecommerce SEO for a Pune D2C brand?',
-    answer:
-      'Yes — ecommerce SEO sits in our Custom tier. Category and product-page optimisation, product schema, faceted-navigation crawl control, and content hubs that bring buyers. We work on Shopify and custom Next.js commerce.',
-  },
-  /* ── Technical & SEO ── */
-  {
-    category: 'technical',
-    question: 'Do you optimise for Google AI Overviews?',
-    answer:
-      'Yes. A growing share of Pune commercial and B2B queries now trigger an AI Overview that answers before any click. We structure content with question-and-answer architecture, FAQ and Service schema, and citable factual passages so Google AI Overviews, ChatGPT, and Perplexity cite your business — part of every programme.',
-  },
-  {
-    category: 'technical',
-    question: 'What technical SEO work do you handle?',
-    answer:
-      'Crawl-budget control, Core Web Vitals, JSON-LD schema, sitemaps, internal-linking architecture, canonical and indexation management, and render/speed fixes. We can implement directly on a modern stack or hand your developer a precise, prioritised change list.',
-  },
-  {
-    category: 'technical',
-    question: 'Will SEO work on my existing Pune website?',
-    answer:
-      'Yes, whatever you run. WordPress and Shopify have well-understood levers; Next.js and headless builds we can often implement on directly. The audit surfaces platform-specific constraints up front. If the site is too slow or broken to rank, we say so honestly rather than charging you to optimise a foundation that cannot hold.',
-  },
-  {
-    category: 'technical',
-    question: 'Do you fix site speed and Core Web Vitals?',
-    answer:
-      'Yes. Speed is a ranking and conversion factor, so it is part of the technical phase. We target green Core Web Vitals on mobile, since most Pune search traffic is mobile on variable 4G.',
-  },
-  /* ── Pune Local ── */
-  {
-    category: 'local',
-    question: 'Can FactoryJet rank a Hinjewadi IT services firm against Bangalore competition?',
-    answer:
-      'Yes. The play is to combine global organic targeting with Pune local credibility. We target service and capability keywords, build case-study and technical content that earns enterprise trust, and fix the technical foundations that hold larger competitors back. Expect a 4–6 month effort for competitive global terms.',
-  },
-  {
-    category: 'local',
-    question: 'Do you handle B2B SEO for Pune auto-tier suppliers in Chakan / PCMC?',
-    answer:
-      'Yes. Auto and industrial B2B SEO is a strong fit. We target part, component, and capability keywords that OEM and tier-1 procurement teams search, build product and datasheet content, and optimise for the long, technical B2B buying cycle. Chakan, Talegaon, and Pimpri-Chinchwad supplier sites included.',
-  },
-  {
-    category: 'local',
-    question: 'Which Pune areas do you target in local SEO?',
-    answer:
-      'We map SEO to where your buyers are: IT in Hinjewadi, Wakad, and Kharadi; auto and manufacturing in Chakan, Talegaon, and PCMC; premium D2C and hospitality in Koregaon Park, Kalyani Nagar, and Viman Nagar; and education across the city. LocalBusiness schema with area-level areaServed improves relevance for neighbourhood searches.',
-  },
-  {
-    category: 'local',
-    question: "What's a realistic SEO timeline for a Pune D2C startup?",
-    answer:
-      'Branded and long-tail product rankings move in 30–60 days. Competitive premium-D2C category terms — where you may compete with Mumbai brands — take 3–5 months. Pune is less saturated than Mumbai or Bangalore, so results often come faster.',
-  },
-  /* ── Reporting & Ownership ── */
-  {
-    category: 'reporting',
-    question: 'What does your monthly report look like?',
-    answer:
-      'One page, five-minute read: the Pune keywords that moved and why, traffic that converts, leads and enquiries attributed to organic, and the exact three things we are doing next month. Full data available if you want it, but the summary is written for a business owner, not an analyst.',
-  },
-  {
-    category: 'reporting',
-    question: 'Do I own the content and links you build?',
-    answer:
-      'Yes — entirely. Every page, brief, and asset lives on your domain and is yours to keep. If you stop working with us, you keep all of it. No proprietary platform you must keep paying for to hold your rankings.',
-  },
-  {
-    category: 'reporting',
-    question: 'How do you measure success?',
-    answer:
-      'By leads, enquiries, and revenue — not rankings for their own sake. We agree target keywords and conversion events up front, wire up GA4 and Search Console properly, and report against the metrics that map to your Pune pipeline. A number-one ranking that brings no enquiries is a vanity metric, and we say so.',
-  },
-  {
-    category: 'reporting',
-    question: 'Who works on my Pune account?',
-    answer:
-      'A small senior team — FactoryJet is founder-led, so you talk to the people doing the strategy and technical work, not a junior who inherited your account on day two. AI handles scale; humans own judgement, editing, and the relationship.',
-  },
+const PUN_FAQ_ITEMS = [
+  { category: 'pricing', question: 'How much does SEO cost in Pune?', answer: 'We do not sell fixed packages. We look at what you need and only charge for work that moves you up Google. As a rough guide, our SEO plans for Indian businesses start at ₹19,999 a month, with an exact price after a free check. There is no long contract. You pay month to month and can stop with 30 days notice.' },
+  { category: 'pricing', question: 'How long until I see SEO results in Pune?', answer: 'Brand and local-map searches move in 30 to 60 days. Tough searches from abroad, business searches, or admissions searches take 4 to 6 months. Pune is less crowded than Mumbai or Bangalore, so good SEO often shows results faster here. We show early signs of progress from week one.' },
+  { category: 'pricing', question: 'Why is FactoryJet different from other Pune SEO agencies?', answer: 'We are a small team that uses AI plus senior people, with no big office or sales floor to pay for. AI does the research, planning, and reports at scale; experienced people do the strategy, writing, and technical work that moves rankings. You pay for the work, not the overheads.' },
+  { category: 'pricing', question: 'Do you require a long-term contract?', answer: 'No. SEO runs month to month, with 30 days notice to pause or stop. We keep Pune clients by showing real progress, not by tying them to a 12-month deal.' },
+  { category: 'included', question: 'What does a Pune SEO plan include?', answer: 'The technical side (a fast site Google can read), better pages that win customers, and the right search plan for your market, whether that is selling abroad, winning across India, bringing in students, or local. Bigger plans add content, real links, and getting picked up by Google AI answers, plus a monthly call and a one-page report.' },
+  { category: 'included', question: 'Do you do B2B and capability content for IT and engineering firms?', answer: 'Yes. For IT, car-part, and engineering firms we build pages about your skills, services, and products in the words that big buyers use. This is what gets you on the shortlist, and it is also what Google AI answers quote.' },
+  { category: 'included', question: 'Can you do ecommerce SEO for a Pune D2C brand?', answer: 'Yes. Smart online brands in Koregaon Park and Kalyani Nagar sell online and locally. We sort out category and product pages, add the hidden product details Google reads, and build helpful buying guides. We work on Shopify and custom stores.' },
+  { category: 'included', question: 'Do you write the content?', answer: 'We do. AI builds the first outline; a real editor turns it into writing that sounds human, whether the reader is a business buyer or a shopper, and answers the question directly. You approve every piece before it goes live.' },
+  { category: 'technical', question: 'Do you help me show up in Google AI answers?', answer: 'Yes. More and more Pune searches now show an AI answer before anyone clicks. We lay out content as clear questions and answers, add the hidden code that helps Google understand your site, and write facts AI can quote, so Google AI answers, ChatGPT, and Perplexity name your business. It is part of every plan.' },
+  { category: 'technical', question: "What's the difference between technical SEO and on-page SEO?", answer: 'Technical SEO is the plumbing: a fast site Google can read and trust, and the hidden code that helps Google understand your site. On-page SEO is what people see on each page, like headings, words, and the links between pages. You need both, so we fix the plumbing first, then improve the pages.' },
+  { category: 'technical', question: 'Will SEO work on my WordPress, Shopify, or Next.js site?', answer: 'Yes, we work with whatever you have. We know WordPress and Shopify inside out, and can often work directly on modern custom sites too. Our first check finds anything about your setup that needs care, so there are no surprises.' },
+  { category: 'technical', question: 'Do you fix site speed?', answer: 'Yes. A fast site both ranks better and turns more visitors into customers, so it is part of the technical work. We make your site quick on mobile, since most searches in India happen on a phone, even for business research.' },
+  { category: 'local', question: 'Can you do SEO for a Pune IT firm or GCC delivering to global clients?', answer: 'Yes. For IT firms in Hinjewadi and Kharadi we mix searches that win work from clients abroad with content that shows you are a real, trusted Pune firm. We go after searches about the services and skills buyers look for, and write the proof and case studies big buyers expect. Tough searches from abroad take 4 to 6 months.' },
+  { category: 'local', question: 'Do you handle pan-India B2B SEO for an auto-component maker in Chakan or PCMC?', answer: 'Yes. Car parts and engineering work is a strong fit. We go after the part and skill searches that big carmakers and their buyers use, build clear product and spec-sheet pages, and plan for the long, careful way that business buyers shop. We cover supplier sites in Chakan, Talegaon, and Pimpri-Chinchwad.' },
+  { category: 'local', question: 'Can you rank a Pune coaching institute or college for a national student catchment?', answer: 'Yes. Pune draws students from all over India and abroad, so we go after searches about courses, results, and admissions, make sure everything works well on a phone, and build the reviews and rankings that bring in students. This is all-India SEO, not just local.' },
+  { category: 'local', question: 'Which Pune areas do you target?', answer: 'We match your SEO to where your buyers are. IT in Hinjewadi, Wakad, and Kharadi; cars and factories in Chakan, Talegaon, and PCMC; smart online brands and hotels in Koregaon Park, Kalyani Nagar, and Viman Nagar; and schools and colleges across the city. Naming your area in your site’s hidden details helps you show up for nearby searches.' },
+  { category: 'reporting', question: 'What does your monthly report look like?', answer: 'One page, a five-minute read. The Pune searches that moved and why, visits that turn into customers, the leads and enquiries we can trace to Google, and the exact three things we are doing next month.' },
+  { category: 'reporting', question: 'Do I own the content and links you build?', answer: 'Yes, all of it. Every page, plan, and piece lives on your own website and is yours to keep. If you stop working with us, you keep everything. There is no special software you must keep paying for to hold your rankings.' },
+  { category: 'reporting', question: 'How do you measure success?', answer: 'By leads, enquiries, and sales, not rankings for their own sake. We agree the searches that matter and what counts as a lead up front, set up Google’s free tools properly, and report on the numbers that map to your Pune sales.' },
+  { category: 'reporting', question: 'Who works on my Pune account?', answer: 'A small, senior team. FactoryJet is founder-led, so you talk to the people doing the strategy and the technical work, not a junior who got your account on day two.' },
 ];
 
-const PUN_SEO_COMPARISON_COLUMNS = [
+const PUN_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
   { label: 'Pune Agency' },
   { label: 'Freelancer' },
   { label: 'DIY' },
 ] as const;
 
-const PUN_SEO_COMPARISON_ROWS = [
-  { feature: 'Starting price', values: ['₹15,000/mo', '₹35,000+/mo', '₹12,000–₹22,000/mo', '₹0 (your time)'] },
-  { feature: 'Contract lock-in', values: ['None — monthly', '6–12 months typical', 'Varies', 'N/A'] },
-  {
-    feature: 'B2B / industrial SEO',
-    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="no" />, <CompareIcon key="diy" kind="no" />],
-  },
-  {
-    feature: 'AI Overviews optimisation',
-    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="no" />, <CompareIcon key="diy" kind="no" />],
-  },
-  {
-    feature: 'Technical SEO + Core Web Vitals',
-    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="diy" kind="no" />],
-  },
-  {
-    feature: 'Editorial links (no PBNs)',
-    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="no" />, <CompareIcon key="diy" kind="no" />],
-  },
-  {
-    feature: 'Reports you can actually read',
-    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="no" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="diy" kind="no" />],
-  },
-  {
-    feature: 'You own all content & links',
-    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="yes" />, <CompareIcon key="diy" kind="yes" />],
-  },
+const PUN_COMPARISON_ROWS = [
+  { feature: 'Long contracts', values: ['None, monthly', '6 to 12 months typical', 'Varies', 'N/A'] },
+  { feature: 'Plan for abroad, India, and local', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="no" />, <CompareIcon key="diy" kind="no" />] },
+  { feature: 'Gets you into Google AI answers', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="no" />, <CompareIcon key="diy" kind="no" />] },
+  { feature: 'Fast site Google can read', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="diy" kind="no" />] },
+  { feature: 'Real links, no spammy tricks', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="no" />, <CompareIcon key="diy" kind="no" />] },
+  { feature: 'Reports you can actually read', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="no" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="diy" kind="no" />] },
+  { feature: 'You keep all content & links', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="yes" />, <CompareIcon key="diy" kind="yes" />] },
 ];
-
-/* ─────────────────────────────────────────────────────────────────────────────
-   Page
-───────────────────────────────────────────────────────────────────────────── */
 
 export default function PuneSeoPage() {
   return (
@@ -415,97 +182,70 @@ export default function PuneSeoPage() {
       />
 
       <main className="bg-fj-cream">
-
-        {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
           eyebrow="SEO · PUNE"
-          headline="SEO Agency in Pune for IT, Auto & Education Companies"
-          lead="Pune is India's #2 IT export hub, the auto OEM and tier-1 supplier capital, and home to 200+ engineering and management colleges. Hinjewadi IT companies compete with Bangalore for global tenders. Koregaon Park D2C brands compete with Mumbai for premium buyers. Auto suppliers in Chakan and PCMC compete on industrial B2B terms. FactoryJet builds SEO for Pune's specific economic drivers, from ₹15,000/month, with real reporting and zero lock-in contracts."
+          headline="The SEO Company in Pune for IT, Auto, Education, and Online Brands"
+          lead="Pune runs on three engines. IT firms in Hinjewadi and Kharadi deliver to clients all over the world. Car-part makers in Chakan and PCMC supply carmakers across India and abroad. The Oxford of the East draws students from every state, and smart online brands fill Koregaon Park. Each one searches Google in a different way. We match your SEO to the market you actually sell to, with monthly reports you can read in five minutes."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
-          trustItems={['SEO from ₹15,000/month', 'No lock-in contracts', '500+ sites optimised']}
-          rightSlot={<HeroBrowserMockup badgeLabel="Best CPC economics" badgeCity="Pune" />}
+          secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
+          trustItems={['Picked up by Google AI answers', 'No long contracts', '500+ sites done']}
+          rightSlot={<HeroBrowserMockup badgeLabel="Global + B2B" badgeCity="Pune" />}
         />
 
-        {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
         <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
 
-        {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
-        <BigThreeTrustBlock
-          eyebrow="BY THE NUMBERS"
-          headline="500+ sites optimised. 4.9 average rating. SEO built for Pune's economy."
-        />
+        <BigThreeTrustBlock eyebrow="BY THE NUMBERS" headline="500+ sites done. 4.9 average rating. SEO built for Pune's economy." />
 
-        {/* ── 4. CITY CONTEXT ──────────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="PUNE MARKET"
-          headline="Why SEO in Pune Has to Match the City's Economy"
+          headline="Why SEO in Pune Has to Match the City's Engines"
           leadParagraphs={[
-            "Pune runs on three distinct engines: IT services in Hinjewadi and Kharadi, an auto OEM and tier-1 supplier cluster in Chakan and Pimpri-Chinchwad, and one of India's densest concentrations of engineering and management colleges. Each engine searches Google in a completely different way — and most SEO agencies run the same generic playbook across all of them.",
-            "A Hinjewadi IT firm competing with Bangalore for global mandates needs global-plus-local organic. An auto supplier in Chakan needs industrial B2B keyword targeting that procurement teams actually use. An education brand needs admissions-intent content. A Koregaon Park D2C label needs local pack and premium-brand SEO. Matching strategy to engine is the whole job.",
-            "Pune is less saturated than Mumbai or Bangalore, which means well-executed SEO often shows results faster and cheaper here — the best per-click economics of any market we work in. The businesses that move now, while competitors run generic packages, capture that advantage. That is where FactoryJet works.",
+            "Pune runs on three different engines: IT firms in Hinjewadi and Kharadi, a car-parts and engineering cluster in Chakan and Pimpri-Chinchwad, and one of India's biggest groups of colleges and coaching classes. Each engine searches Google in a completely different way, and most SEO agencies use the same one-size-fits-all plan for all of them.",
+            "A Hinjewadi IT firm delivers to clients around the world and needs to be found both abroad and at home. A car-part maker in Chakan supplies carmakers across India and abroad and needs the part searches that business buyers use. A coaching class or college draws students from across India and even overseas and needs admissions searches. A Koregaon Park online brand needs online-store SEO and the local map. Matching the plan to the engine is the whole job.",
+            "Pune is less crowded than Mumbai or Bangalore, which means good SEO often shows results faster here. The businesses that move now, while rivals run the same generic plans, grab that head start. That is where FactoryJet works.",
           ]}
           stats={[
-            {
-              value: '#2',
-              label: "India's IT export hub by revenue, after Bangalore",
-              sourceUrl: 'https://stpi.in/',
-              sourceLabel: 'STPI',
-            },
-            {
-              value: '200+',
-              label: 'Engineering & management colleges in and around Pune',
-              sourceUrl: 'https://www.aicte-india.org/',
-              sourceLabel: 'AICTE',
-            },
-            {
-              value: 'Auto hub',
-              label: "Major share of India's auto OEM and tier-1 supplier capacity (Chakan / PCMC)",
-              sourceUrl: 'https://www.siam.in/',
-              sourceLabel: 'SIAM',
-            },
+            { value: '800+', label: 'IT companies in the Hinjewadi Rajiv Gandhi Infotech Park', sourceUrl: 'https://www.investindia.gov.in/', sourceLabel: 'Invest India' },
+            { value: '350+', label: 'global capability centres across Pune (Kharadi, Hinjewadi, Baner)', sourceUrl: 'https://nasscom.in/', sourceLabel: 'NASSCOM' },
+            { value: 'Auto hub', label: 'the Chakan-PCMC corridor, with 750+ component makers and major OEMs', sourceUrl: 'https://autoclusterpune.org/', sourceLabel: 'Auto Cluster Pune' },
           ]}
         />
 
-        {/* ── 5. SERVICE EXPLANATION (two buyer types) ─────────────────────── */}
         <ServiceExplanation
           eyebrow="SEO · PUNE"
           headline="What 'SEO' Actually Means for a Pune Business"
-          lead="Pune runs on two very different search behaviours — technical B2B buyers in IT and auto running long evaluations, and consumers and students deciding quickly. Each needs a different SEO strategy. FactoryJet builds for both."
+          lead="Pune sells to three markets. IT and pharma deliver to the world, car parts and engineering supply India, and schools and online brands serve students from across the country and the city. Each searches differently, so we match your plan to the market you actually sell to."
           body={
             <>
               <p>
-                For Pune&apos;s IT, auto, and manufacturing firms — in Hinjewadi, Chakan, PCMC, and
-                Magarpatta — SEO is about technical and industrial keyword targeting. OEM procurement
-                teams and enterprise buyers run weeks of research before contact. You win by ranking for
-                part, component, capability, and service keywords, publishing content that demonstrates
-                real engineering depth, and combining global organic with local credibility.
+                For Pune&apos;s IT firms and pharma exporters in Hinjewadi, Kharadi, and beyond, SEO is about reach and
+                trust. Big buyers and regulators research for weeks before they decide. You win by showing up for the
+                searches about your services, skills, and products, by publishing case studies and proof of what you can
+                do, and by being trusted both abroad and as a real Pune firm.
               </p>
               <p>
-                For Pune&apos;s premium D2C, hospitality, and education brands in Koregaon Park, Kalyani
-                Nagar, and Viman Nagar, the game is local pack and brand SEO. Consumers and students decide
-                quickly, often on mobile. You win with Google Business Profile dominance, fast pages,
-                admissions or product-intent content, and Maps optimisation for &quot;near me&quot; searches.
+                For Pune&apos;s car-part and engineering makers in Chakan, Talegaon, and PCMC, the game is selling across
+                India to other businesses. Big carmakers and their buyers search by part, by component, and by skill. For
+                coaching classes and colleges, it is searches about admissions. For smart online brands in Koregaon Park,
+                it is online-store SEO and the top three businesses on the map.
               </p>
               <p>
-                Every FactoryJet Pune programme covers technical SEO, local SEO, and AI Overviews
-                optimisation as standard — then layers industrial, education, or D2C content and links by
-                tier. You keep every page, brief, and link, and the reporting is written so you always know
-                what we are doing and why.
+                Every FactoryJet Pune plan covers the technical side, the right search plan for your market, and Google
+                AI answers as standard, then adds content and links over time. You keep every page, plan, and link we
+                build.
               </p>
             </>
           }
           rightSlot={
             <div className="w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">
               <div className="border-b border-fj-neutral-100 px-7 py-4">
-                <p className="font-fj-mono font-medium uppercase text-fj-neutral-400" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>
-                  Two buyer types. One framework.
-                </p>
+                <p className="font-fj-mono font-medium uppercase text-fj-neutral-400" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>Three markets. One plan.</p>
               </div>
               <div className="divide-y divide-fj-neutral-100">
                 {[
-                  { type: 'IT / Auto / B2B', need: 'Industrial + technical SEO', area: 'Hinjewadi · Chakan · PCMC · Magarpatta', colour: '#F05A28' },
-                  { type: 'D2C / Education / Premium retail', need: 'Local pack + brand + admissions SEO', area: 'Koregaon Park · Kalyani Nagar · Viman Nagar', colour: '#0F0F12' },
+                  { type: 'Deliver to the world', need: 'Be found abroad, show your skills', area: 'IT · GCCs · PHARMA (HINJEWADI · KHARADI)', colour: '#F05A28' },
+                  { type: 'Supply India', need: 'Part searches that business buyers use', area: 'AUTO · ENGINEERING (CHAKAN · PCMC)', colour: '#F3A07A' },
+                  { type: 'Serve students and the city', need: 'Admissions searches, online stores, the local map', area: 'EDUCATION · D2C (KOREGAON PARK)', colour: '#0F0F12' },
                 ].map((row) => (
                   <div key={row.type} className="px-7 py-5">
                     <div className="flex items-center gap-2 mb-2">
@@ -517,151 +257,72 @@ export default function PuneSeoPage() {
                   </div>
                 ))}
               </div>
-              <div className="border-t border-fj-neutral-100 bg-fj-neutral-50 px-7 py-5">
-                <div className="mb-2 h-[3px] w-8 rounded-full bg-[#F05A28]" aria-hidden="true" />
-                <p className="fj-display font-semibold text-fj-ink" style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}>
-                  Same engineering quality. Strategy tailored to your buyer.
-                </p>
-              </div>
             </div>
           }
         />
 
-        {/* ── 6. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Pune Businesses Choose FactoryJet for SEO"
-          lead="Pune SEO agencies sell 12-month contracts, junior account managers, and reports nobody reads. FactoryJet is AI-native, founder-led, month-to-month, and built around Pune's actual economic drivers — IT, auto, education, and premium D2C."
+          lead="Pune SEO agencies sell 12-month contracts, junior managers, and reports nobody reads. FactoryJet uses AI plus senior people, is founder-led, works month to month, and is built around Pune's real engines: IT, cars, education, and smart online brands."
           pillars={[
-            {
-              icon: '🤖',
-              title: 'AI-native, built for the new SERP.',
-              body: 'Pune commercial and B2B queries increasingly trigger AI Overviews that answer before any click. We optimise for AI search from day one — structured content, schema, citable passages — while most local agencies are still chasing ten blue links. AI handles research and scale; senior humans handle strategy and editing.',
-            },
-            {
-              icon: '🛡️',
-              title: 'No black-hat tactics. Ever.',
-              body: 'No PBNs, no bought links, no doorway pages. The agencies promising rank-in-30-days are the ones who get clients penalised. We build durable SEO — technical foundations, real content, editorial links — so you rank next year, not just next quarter.',
-            },
-            {
-              icon: '📊',
-              title: 'Month-to-month. Reports you read.',
-              body: "One page a month: the Pune keywords that moved, the traffic that converted, the leads attributed, and the next three things. No lock-in, no jargon, no vanity metrics. And with Pune's strong per-click economics, your budget goes further here than in Mumbai or Bangalore.",
-            },
+            { icon: '01', title: 'AI plus real people, built for the new Google.', body: 'More and more Pune searches now show an AI answer before anyone clicks. We get you ready for AI search from day one with clear, well-structured content, while most local agencies are still chasing ten blue links.' },
+            { icon: '02', title: 'No dodgy tricks. Ever.', body: 'No spammy link tricks, no bought links, no throwaway pages. We build SEO that lasts, with a solid technical base, real content, and real links from trusted sites, so you rank next year, not just next quarter.' },
+            { icon: '03', title: 'Month to month. Reports you read.', body: "One page a month. The Pune searches that moved, the visits that turned into customers, the leads we can trace, and the next three things. And because Pune is less crowded, your budget goes further here than in Mumbai or Bangalore." },
           ]}
         />
 
-        {/* ── 7. OUR PROCESS ───────────────────────────────────────────────── */}
-        <ServiceJourneyRow
-          eyebrow="OUR SEO PROCESS"
-          headline="How We Run Your Pune SEO Programme"
-          lead="Audit before strategy. Technical fixes before content. Reporting from week one."
-          stages={PUN_SEO_JOURNEY}
-          closingNote="5 STAGES · AI-NATIVE · MONTH-TO-MONTH · NO PBNs · B2B + LOCAL PACK + AI OVERVIEWS"
-        />
+        <ServiceJourneyRow eyebrow="OUR SEO PROCESS" headline="How We Run Your Pune SEO, Step by Step" lead="We check before we plan. We fix the basics before we add content. And we report from week one." stages={PUN_JOURNEY} closingNote="5 STEPS · AI PLUS REAL PEOPLE · MONTH TO MONTH · NO SPAMMY LINKS · ABROAD + INDIA + ADMISSIONS + LOCAL" />
 
-        {/* ── 8. RECENT WORK (coming soon) ─────────────────────────────────── */}
         <section className="relative overflow-hidden bg-fj-cream py-14 md:py-20">
           <div className="pointer-events-none absolute inset-0 opacity-[0.5]" aria-hidden="true" style={{ backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px)', backgroundSize: '28px 28px' }} />
           <div className="relative mx-auto max-w-3xl px-6 text-center">
             <p className="font-fj-mono font-medium uppercase text-[#F05A28]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>RECENT WORK</p>
-            <h2 className="fj-display mt-3 font-semibold text-fj-ink" style={{ fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', lineHeight: 1.15, letterSpacing: '-0.02em' }}>
-              Pune SEO case studies are on the way
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>
-              We are publishing documented SEO results — rankings, traffic, and leads — from live FactoryJet programmes in Pune and across India. The foundation is the same one behind 500+ websites we have shipped, at a 4.9 average client rating. We have already built and ranked for Pune clients, including Formative Concepts.
-            </p>
+            <h2 className="fj-display mt-3 font-semibold text-fj-ink" style={{ fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', lineHeight: 1.15, letterSpacing: '-0.02em' }}>Pune SEO results are on the way</h2>
+            <p className="mx-auto mt-4 max-w-2xl font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>We are putting together real SEO results, with rankings, visits, and enquiries, from live FactoryJet work in Pune and across India. It all sits on the same work behind 500+ websites we have built, at a 4.9 average rating, including our Pune client Formative Concepts.</p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-              <a href="/portfolio" className="inline-flex items-center gap-2 rounded-full border border-fj-ink/15 bg-white px-6 py-3 font-fj-body font-semibold text-fj-ink transition hover:border-[#F05A28] hover:text-[#F05A28]" style={{ fontSize: '0.9375rem' }}>
-                See our website portfolio →
-              </a>
+              <a href="/portfolio" className="inline-flex items-center gap-2 rounded-full border border-fj-ink/15 bg-white px-6 py-3 font-fj-body font-semibold text-fj-ink transition hover:border-[#F05A28] hover:text-[#F05A28]" style={{ fontSize: '0.9375rem' }}>See our website portfolio →</a>
             </div>
           </div>
         </section>
 
-        {/* ── 9. COMPARISON TABLE ──────────────────────────────────────────── */}
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Pune Agency vs. Freelancer vs. DIY"
-          lead="Four ways to do SEO in Pune. The honest comparison — price, lock-in, what is covered, and what you own when it is done."
-          pullQuote={{ stat: 'No lock-in', caption: "month-to-month SEO from ₹15,000 — with the B2B and AI-search strategy Pune's generic agencies do not run." }}
-          columns={PUN_SEO_COMPARISON_COLUMNS}
-          rows={PUN_SEO_COMPARISON_ROWS}
-          footer="Prices reflect typical Pune SEO market ranges as of 2025. FactoryJet programmes run month to month with 30 days notice."
+          lead="There are four ways to do SEO in Pune. Here is the honest comparison: contracts, what you actually get, and what you keep at the end."
+          pullQuote={{ stat: 'No lock-in', caption: 'month-to-month SEO with the abroad, India-wide, and admissions plan most Pune agencies do not run.' }}
+          columns={PUN_COMPARISON_COLUMNS}
+          rows={PUN_COMPARISON_ROWS}
+          footer="FactoryJet SEO plans run month to month, with 30 days notice to pause or stop."
         />
 
-        {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
         <IndustriesGrid
           eyebrow="PUNE × SEO"
           headline="SEO for Pune's Key Industries"
-          lead="From Hinjewadi IT to Chakan auto suppliers to Koregaon Park D2C — Pune's industries compete on very different queries. FactoryJet has run SEO across each."
+          lead="From Hinjewadi IT to Chakan car parts to the city's colleges, Pune's industries compete on very different searches. FactoryJet has done SEO across each."
           sectors={[
-            { name: 'IT & Software', description: 'Hinjewadi, Wakad, and Kharadi firms competing with Bangalore for global mandates. Global organic plus local credibility, capability and case-study content.' },
-            { name: 'Automotive & Engineering', description: 'Chakan, Talegaon, and PCMC OEM and tier-1 suppliers. Industrial B2B keyword targeting, datasheet and capability content, long-cycle procurement SEO.' },
-            { name: 'Education & EdTech', description: "Pune's coaching institutes, colleges, and ed-tech platforms. Admissions-intent keywords, programme-page SEO, and local pack that captures enquiries." },
-            { name: 'Manufacturing & MSME', description: 'PCMC manufacturers and MSME exporters. Credibility content, B2B keyword targeting, and technical SEO that surfaces capability to procurement buyers.' },
-            { name: 'D2C & Premium Retail', description: 'Koregaon Park, Kalyani Nagar, and Viman Nagar brands. Ecommerce and brand SEO, local pack, and Maps for premium "near me" intent.' },
-            { name: 'Professional Services', description: 'CA firms, law practices, and consultancies. Authority content and local pack that turn research into booked consultations.' },
+            { name: 'IT & Global Capability Centres', description: 'Firms in Hinjewadi and Kharadi delivering to clients around the world. Searches about your services and skills, plus content that shows you are a real, trusted Pune firm with case studies to prove it.' },
+            { name: 'Cars & Car Parts', description: 'Carmakers and their suppliers in Chakan, Talegaon, and PCMC. Searches about parts and skills for the long, careful way that business buyers across India and abroad shop.' },
+            { name: 'Pharma & Life Sciences', description: 'Pune pharma and vaccine makers selling abroad. Content that shows you follow the rules and can deliver, simple English searches, and being named by Google AI answers for buyers and procurement teams.' },
+            { name: 'Education & Coaching', description: 'The Oxford of the East: colleges, universities, and coaching classes drawing students from every state. Searches about courses, results, and admissions, all built for the phone first.' },
+            { name: 'Online Brands & Premium Retail', description: 'Brands in Koregaon Park, Kalyani Nagar, and Viman Nagar. Online-store and brand SEO, the hidden product details Google reads, buying guides, and the top three businesses on the map for high-end searches.' },
+            { name: 'Heavy Engineering & Manufacturing', description: 'The Kirloskar, Thermax, and Forbes Marshall heritage. Searches that win orders across India and abroad, content that shows your skills, and SEO aimed at company buyers.' },
           ]}
         />
 
-        {/* ── 11. PRICING ──────────────────────────────────────────────────── */}
-        <div id="pricing">
-          <PricingTiers
-            eyebrow="TRANSPARENT PRICING"
-            headline="Transparent, Month-to-Month SEO Pricing for Pune"
-            lead="Pune agencies charge ₹35,000+/month on 12-month contracts for comparable scope. FactoryJet publishes every tier, runs month to month, and lets you keep everything we build. With Pune's strong per-click economics, your budget goes further here. First results visible in 60–90 days."
-            tiers={[
-              {
-                name: 'Starter',
-                priceRange: '₹15,000/mo',
-                description: 'Technical foundations and local SEO for one Pune location. Best for SMBs and service businesses that need the local pack and core-service rankings.',
-                features: ['Full technical SEO audit + fixes', 'On-page optimisation, core pages', 'Local SEO + Google Business Profile', 'AI Overviews / FAQ schema setup', 'GA4 + Search Console wired up', 'Monthly report + strategy call'],
-                cta: { label: 'Get Started', modal: true as const, region: 'in' as const },
-              },
-              {
-                name: 'Growth',
-                priceRange: '₹30,000/mo',
-                description: 'Content and links on top of the foundations, across IT, auto, education, or D2C. Best for Pune businesses scaling organic as a real lead channel.',
-                features: ['Everything in Starter', '4 content pieces / month (human-edited)', 'B2B / industrial or D2C content focus', 'Editorial link building (no PBNs)', 'Competitor gap monitoring', 'Priority support + monthly strategy call'],
-                cta: { label: 'Get Started', modal: true as const, region: 'in' as const },
-                popular: true,
-              },
-              {
-                name: 'Custom',
-                priceRange: '₹50,000+/mo',
-                description: 'Competitive B2B industrial, national, or ecommerce SEO. Best for established Pune businesses where organic is a primary revenue line.',
-                features: ['Everything in Growth, scaled', 'Industrial B2B / large-catalogue SEO', 'Competitive national keyword targets', 'Digital PR + advanced link acquisition', 'Dedicated senior strategist', 'Custom reporting + quarterly reviews'],
-                cta: { label: 'Talk to the Founder', modal: true as const, region: 'in' as const },
-              },
-            ] as const}
-            footnote="All prices in INR per month, no lock-in. You own all content and links produced. GA4, Search Console, and reporting included on every tier. Pause or stop with 30 days notice."
-          />
-        </div>
-
-        {/* ── 12. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection eyebrow="CLIENT RESULTS" headline="What India's founders say about working with FactoryJet" region="in" />
 
-        {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}
-        <FAQ
-          eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="SEO Questions from Pune Businesses"
-          lead="The questions we answer on every Pune SEO discovery call — answered here, without the runaround."
-          categories={PUN_SEO_FAQ_CATEGORIES}
-          items={PUN_SEO_FAQ_ITEMS}
-        />
+        <FAQ eyebrow="FREQUENTLY ASKED QUESTIONS" headline="SEO Questions from Pune Businesses" lead="The questions we answer on every Pune SEO call, here in plain words." categories={PUN_FAQ_CATEGORIES} items={PUN_FAQ_ITEMS} />
 
-        {/* ── 14. FINAL CTA (DARK) ─────────────────────────────────────────── */}
         <FinalCTA
           variant="dark"
           eyebrow="READY TO START"
           headline="Ready to Win Search in Pune?"
-          sub="Pune is less saturated than Mumbai or Bangalore, which means well-executed SEO ranks faster and cheaper here — the best per-click economics of any market we work in. The businesses that move now, while competitors run generic packages, capture that edge. Start with a free audit: we will show you exactly where you stand and what the first 90 days look like."
+          sub="Pune is less crowded than Mumbai or Bangalore, which means good SEO ranks faster and costs less here. The businesses that move now, while rivals run the same generic plans, grab that head start. Start with a free check, and we will show you exactly where you stand, whether you deliver IT from Hinjewadi, supply parts from Chakan, or run a college drawing students from every state."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
-          objectionHandler="From ₹15,000/month. No lock-in. You own everything we build. Reports you'll actually read."
+          secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
+          objectionHandler="No long contracts. You keep everything we build. Reports you'll read in five minutes."
         />
-
       </main>
 
       <SiteFooter locale="in" />

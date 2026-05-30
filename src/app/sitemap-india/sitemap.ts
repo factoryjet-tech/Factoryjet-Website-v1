@@ -71,6 +71,20 @@ const INDIA_SEO_CITIES = [
   'mumbai',
   'bangalore',
   'pune',
+  'delhi',
+  'ahmedabad',
+  'noida',
+  'jaipur',
+  'vadodara',
+] as const
+
+// ── India SEO sub-service pages (canonical: /seo/[discipline]-seo) ────────────
+const INDIA_SEO_SUBSERVICES = [
+  'local-seo',
+  'technical-seo',
+  'ecommerce-seo',
+  'link-building',
+  'seo-audit',
 ] as const
 
 // ── India AI agent sub-pages ──────────────────────────────────────────────────
@@ -156,6 +170,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: PRIORITY.city,
   }))
 
+  // ── India SEO sub-service pages ──────────────────────────────────────────────
+  const seoSubServices: MetadataRoute.Sitemap = INDIA_SEO_SUBSERVICES.map((slug) => ({
+    url: `${SITE_URL}/seo/${slug}`,
+    lastModified: getFileLastMod(`src/app/seo/${slug}/page.tsx`),
+    changeFrequency: CHANGEFREQ.service as ChangeFreq,
+    priority: PRIORITY.service,
+  }))
+
   // ── India ecommerce city pages ───────────────────────────────────────────────
   const ecommerceCities: MetadataRoute.Sitemap = INDIA_ECOMMERCE_CITIES.map((city) => ({
     url: `${SITE_URL}/services/ecommerce-development/${city}`,
@@ -180,6 +202,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...webDesignCities,
     ...serviceHubs,
     ...seoCities,
+    ...seoSubServices,
     ...ecommerceCities,
     ...aiSubPages,
   ]

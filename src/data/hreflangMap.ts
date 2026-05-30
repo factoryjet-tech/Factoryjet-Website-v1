@@ -535,6 +535,50 @@ export const seoCityAlternatesIN = {
     'en-IN': 'https://factoryjet.com/seo/pune',
     'x-default': 'https://factoryjet.com/seo/pune',
   },
+  delhi: {
+    'en-IN': 'https://factoryjet.com/seo/delhi',
+    'x-default': 'https://factoryjet.com/seo/delhi',
+  },
+  ahmedabad: {
+    'en-IN': 'https://factoryjet.com/seo/ahmedabad',
+    'x-default': 'https://factoryjet.com/seo/ahmedabad',
+  },
+  noida: {
+    'en-IN': 'https://factoryjet.com/seo/noida',
+    'x-default': 'https://factoryjet.com/seo/noida',
+  },
+  jaipur: {
+    'en-IN': 'https://factoryjet.com/seo/jaipur',
+    'x-default': 'https://factoryjet.com/seo/jaipur',
+  },
+  vadodara: {
+    'en-IN': 'https://factoryjet.com/seo/vadodara',
+    'x-default': 'https://factoryjet.com/seo/vadodara',
+  },
+} as const
+
+/** /seo/[discipline]-seo sub-service pages — India only. */
+export const seoSubServiceAlternatesIN = {
+  'local-seo': {
+    'en-IN': 'https://factoryjet.com/seo/local-seo',
+    'x-default': 'https://factoryjet.com/seo/local-seo',
+  },
+  'technical-seo': {
+    'en-IN': 'https://factoryjet.com/seo/technical-seo',
+    'x-default': 'https://factoryjet.com/seo/technical-seo',
+  },
+  'ecommerce-seo': {
+    'en-IN': 'https://factoryjet.com/seo/ecommerce-seo',
+    'x-default': 'https://factoryjet.com/seo/ecommerce-seo',
+  },
+  'link-building': {
+    'en-IN': 'https://factoryjet.com/seo/link-building',
+    'x-default': 'https://factoryjet.com/seo/link-building',
+  },
+  'seo-audit': {
+    'en-IN': 'https://factoryjet.com/seo/seo-audit',
+    'x-default': 'https://factoryjet.com/seo/seo-audit',
+  },
 } as const
 
 // ===========================================================================

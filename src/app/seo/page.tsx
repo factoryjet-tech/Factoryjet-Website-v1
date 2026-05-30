@@ -10,7 +10,6 @@ import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
 import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/ServiceJourneyRow';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
@@ -23,9 +22,9 @@ import SiteFooter from '@/components/v2/SiteFooter';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'SEO Services in India | From ₹15,000/Month | FactoryJet',
+  title: 'SEO Company in India | AI-Native SEO Agency | FactoryJet',
   description:
-    'AI-native SEO agency serving Mumbai, Bangalore, Pune & 19 Indian cities. From ₹15,000/month. No lock-ins. Real reporting. 500+ sites optimised.',
+    'SEO company in India helping small businesses in Mumbai, Bangalore, Pune and 19 cities show up on Google: the map, the normal results, and the new AI answers. No long contracts. Simple reports. 500+ sites done.',
   keywords: [
     'seo company in india',
     'seo agency india',
@@ -40,9 +39,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'SEO Services in India | From ₹15,000/Month | FactoryJet',
+    title: 'SEO Company in India | AI-Native SEO Agency | FactoryJet',
     description:
-      'AI-native SEO agency serving Mumbai, Bangalore, Pune & 19 Indian cities. From ₹15,000/month. No lock-ins. Real reporting. 500+ sites optimised.',
+      'SEO company in India helping small businesses in Mumbai, Bangalore, Pune and 19 cities show up on Google: the map, the normal results, and the new AI answers. No long contracts. Simple reports. 500+ sites done.',
     url: 'https://factoryjet.com/seo',
     images: [
       {
@@ -58,7 +57,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'SEO Services in India | FactoryJet',
     description:
-      'AI-native SEO agency. From ₹15,000/month. No lock-ins. Real reporting you can read. 500+ sites optimised.',
+      'SEO company in India. No long contracts. Show up on the Google map, the normal results, and the new AI answers. Reports you can read. 500+ sites done.',
     images: ['https://factoryjet.com/images/services/seo.webp'],
   },
   alternates: {
@@ -87,9 +86,9 @@ const serviceSchema = {
   '@type': 'Service',
   '@id': 'https://factoryjet.com/seo#service',
   serviceType: 'Search Engine Optimisation',
-  name: 'SEO Services — FactoryJet',
+  name: 'SEO Services, FactoryJet',
   description:
-    'AI-native SEO agency serving Mumbai, Bangalore, Pune and 19 Indian cities. Technical SEO, on-page, local SEO, content, link building, and AI Overviews optimisation. From ₹15,000/month. No lock-in contracts.',
+    'SEO company in India for small businesses in Mumbai, Bangalore, Pune and 19 cities. We fix your site, write helpful content, get real links, look after your Google listing, and help you show up in the new AI answers. No long contracts.',
   url: 'https://factoryjet.com/seo',
   provider: {
     '@type': 'Organization',
@@ -100,9 +99,9 @@ const serviceSchema = {
   areaServed: { '@type': 'Country', name: 'India' },
   offers: {
     '@type': 'Offer',
-    price: '15000',
+    price: '19999',
     priceCurrency: 'INR',
-    description: 'SEO programmes from ₹15,000/month — Starter tier.',
+    description: 'SEO services for Indian businesses start from ₹19,999/month. Month to month, no lock-in.',
   },
 };
 
@@ -115,7 +114,7 @@ const faqSchema = {
       name: 'How much do SEO services cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet SEO starts at ₹15,000/month for the Starter programme — technical fixes, on-page optimisation, and local SEO for one location. Growth (₹30,000/month) adds content production, link building, and multi-location targeting. Custom programmes (₹50,000+/month) cover competitive national keywords and ecommerce SEO. Indian SEO agencies typically charge ₹40,000+/month for comparable scope, often locked into 12-month contracts. FactoryJet has no lock-in.",
+        text: "We do not sell fixed packages. We look at what you need and only charge for work that actually moves you up Google. As a rough guide, our SEO plans for Indian businesses start at ₹19,999 a month, and we give you an exact price after a free check. There is no long contract. You pay month to month and can stop with 30 days notice.",
       },
     },
     {
@@ -123,15 +122,15 @@ const faqSchema = {
       name: 'How long does SEO take to show results in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Branded and local-pack rankings typically move within 30–60 days. Competitive service-plus-city keywords take 3–6 months for a site with no prior SEO history. We report progress monthly from week one, so you can see leading indicators — indexation, impressions, and ranking movement — well before revenue impact lands.',
+        text: 'Simple, local, and brand searches usually start moving in 30 to 60 days. Tougher searches, like a service plus a big city, take three to six months for a site that has had no SEO before. We send a simple report every month from week one, so you can see early signs of progress long before the sales show up.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Do you optimise for Google AI Overviews and AI search?',
+      name: 'Do you help me show up in Google AI answers and AI search?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Yes. Google AI Overviews, ChatGPT, and Perplexity now answer a large share of commercial queries before a user clicks anything. We structure your content with clear question-and-answer architecture, FAQ schema, and citable, factual passages so AI engines surface and cite your business — not just your competitors.",
+        text: "Yes. Google, ChatGPT, and Perplexity now answer many searches with AI before anyone clicks. We lay out your content as clear questions and answers, add the hidden code that helps these tools trust you, and write facts they can quote, so they point to your business and not just your rivals.",
       },
     },
     {
@@ -139,7 +138,7 @@ const faqSchema = {
       name: 'Do you require a long-term contract?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. FactoryJet SEO runs month to month. We keep clients by showing measurable progress in a report you can actually read — not by locking you into a 12-month agreement. You can pause or stop with 30 days notice.',
+        text: 'No. FactoryJet SEO runs month to month. We keep clients by showing real progress in a report you can actually read, not by tying you to a 12-month deal. You can pause or stop with 30 days notice.',
       },
     },
   ],
@@ -163,143 +162,175 @@ const speakableSchema = {
 const SEO_JOURNEY_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Audit',
+    title: 'Check',
     description:
-      'We run a full technical, on-page, and backlink audit — crawl health, Core Web Vitals, indexation gaps, keyword cannibalisation, and where you stand against the three competitors you actually lose deals to. You get the findings in plain English. — Week 1',
+      'We check your whole site: how fast it loads, whether Google can find and read every page, the links pointing to you, and how you stack up against the three rivals you keep losing to. You get it all in plain words. Week 1',
   },
   {
     number: '02',
-    title: 'Strategy',
+    title: 'Plan',
     description:
-      'We build a keyword map tied to revenue, not vanity volume: which queries bring buyers, which bring tyre-kickers, and which your competitors have left open. Local pack, organic, and AI Overviews coverage planned together. — Week 1–2',
+      'We build a list of the searches that bring real buyers, not just lots of visitors, including the ones your rivals have missed. We plan the map, the normal results, and Google AI answers together. Week 1 to 2',
   },
   {
     number: '03',
-    title: 'Implementation',
+    title: 'Build',
     description:
-      'Technical fixes shipped first — schema, site speed, internal linking, crawl budget. Then on-page optimisation across your money pages. We work directly in the codebase or hand your developer a precise change list. — Week 2–4',
+      'We fix the technical side first: speed, the hidden code that helps Google understand your site, and the links between your pages. Then we improve the pages that win you customers. We do it on your site or hand your developer a clear list. Week 2 to 4',
   },
   {
     number: '04',
     title: 'Content & Links',
     description:
-      'AI-assisted content briefs, human-edited copy, and clean, editorial link acquisition. No private blog networks, no bought links, no tactics that get you penalised. Every asset targets a mapped keyword and a buyer question. — Ongoing',
+      'We plan helpful content with AI, then a real editor writes it so it sounds human and answers what buyers ask. We earn real links from trusted sites. No spammy link tricks that get you punished later. Every piece targets a real search and a real buyer question. Ongoing',
   },
   {
     number: '05',
-    title: 'Reporting',
+    title: 'Report',
     description:
-      'A monthly report written for a business owner, not an analyst — rankings that matter, traffic that converts, leads attributed, and the exact three things we are doing next. No 40-page PDF you never open. — Monthly',
+      'One page a month, written for a business owner, not a tech expert: the searches that moved, the visits that turned into customers, the leads we can trace to Google, and the three things we will do next. No 40-page file you never open. Monthly',
   },
 ];
 
 const SEO_FAQ_CATEGORIES = [
-  { key: 'pricing', label: 'Pricing & Timeline' },
-  { key: 'included', label: "What's Included" },
-  { key: 'technical', label: 'Technical' },
-  { key: 'reporting', label: 'Reporting & Ownership' },
+  { key: 'pricing', label: 'Cost & Time' },
+  { key: 'included', label: 'What You Get' },
+  { key: 'technical', label: 'Tech & Google' },
+  { key: 'choosing', label: 'Choosing an Agency' },
+  { key: 'reporting', label: 'Reports & Ownership' },
 ];
 
 const SEO_FAQ_ITEMS = [
-  /* ── Pricing & Timeline ── */
+  /* ── Cost & Time ── */
   {
     category: 'pricing',
     question: 'How much do SEO services cost in India?',
     answer:
-      "FactoryJet SEO starts at ₹15,000/month for the Starter programme — technical fixes, on-page optimisation, and local SEO for one location. Growth (₹30,000/month) adds content production, link building, and multi-location targeting. Custom programmes (₹50,000+/month) cover competitive national keywords and ecommerce SEO. Indian agencies typically charge ₹40,000+/month for comparable scope, often on a 12-month lock-in. FactoryJet runs month to month.",
+      "We do not sell fixed packages. We look at what you need and only charge for work that actually moves you up Google. As a rough guide, our SEO plans for Indian businesses start at ₹19,999 a month, and we give you an exact price after a free check. There is no long contract. You pay month to month and can stop with 30 days notice.",
   },
   {
     category: 'pricing',
     question: 'How long does SEO take to work?',
     answer:
-      'Branded and local-pack rankings usually move within 30–60 days. Competitive service-plus-city keywords take 3–6 months for a new or previously un-optimised site. We report leading indicators — indexation, impressions, ranking movement — from week one, so you see direction long before the revenue impact lands.',
+      'Simple, local, and brand searches usually start moving in 30 to 60 days. Tougher searches, like a service plus a big city, take three to six months for a site that has had no SEO before. We show you early signs of progress from the first month, so you can see things heading the right way well before the sales arrive.',
   },
   {
     category: 'pricing',
     question: 'Why is FactoryJet cheaper than other Indian SEO agencies?',
     answer:
-      'We are a small, AI-native engineering and content team — not a 40-person agency with account managers and a sales floor to fund. AI handles the heavy lifting on research, briefs, and reporting; humans handle strategy, editing, and the technical work that actually moves rankings. You pay for the work, not the overhead.',
+      'We are a small team that uses AI plus senior people, not a big agency with a sales floor and lots of managers to pay for. AI does the heavy lifting on research, content plans, and reports; experienced people do the strategy, writing, and technical work that actually moves rankings. You pay for the work, not the overheads.',
   },
   {
     category: 'pricing',
     question: 'Do I have to sign a long-term contract?',
     answer:
-      'No. FactoryJet SEO is month to month. We keep clients by showing measurable progress, not by locking them in. You can pause or stop with 30 days notice, and you keep everything we have built.',
+      'No. You pay month to month and can pause or stop with 30 days notice. We keep clients by showing real progress, not by tying them down. You keep everything we build.',
   },
-  /* ── What's Included ── */
+  /* ── What You Get ── */
   {
     category: 'included',
-    question: 'What does an SEO programme actually include?',
+    question: 'What does an SEO plan actually include?',
     answer:
-      'Every programme covers technical SEO (crawl, speed, schema, indexation), on-page optimisation of your money pages, and local SEO including Google Business Profile. Growth and Custom tiers add content production, editorial link building, and AI Overviews optimisation. You get a monthly strategy call and a report you can read in five minutes.',
+      'Every plan covers the technical side (a fast site that Google can read easily), improving the pages that win you customers, and local SEO including your free Google listing. Bigger plans add helpful content, real links from trusted sites, and getting picked up by Google AI answers. You also get a monthly call and a report you can read in five minutes.',
   },
   {
     category: 'included',
     question: 'Do you write the content, or do I?',
     answer:
-      'We do. AI generates the first-draft brief and structure; an experienced editor shapes it into copy that reads like a person wrote it and answers the buyer question directly. You review and approve every piece before it publishes. Content volume scales with your tier.',
+      'We do. AI builds the first outline; a real editor turns it into writing that sounds human and answers the buyer question directly. You read and approve every piece before it goes live. How much we write depends on the size of your plan.',
   },
   {
     category: 'included',
-    question: 'Do you do link building, and is it safe?',
+    question: 'Do you build links, and is it safe?',
     answer:
-      'Yes, on Growth and Custom tiers. We only pursue editorial links — digital PR, genuine guest contributions, and resource placements on real sites with real traffic. No private blog networks, no paid link farms, no tactics that risk a manual action. Slower, but it does not blow up your rankings six months later.',
+      'Yes, once the basics are in place. We only get real links: from genuine websites with real visitors, through PR, honest mentions, and helpful placements. No spammy link networks, no bought links, nothing that can get you punished by Google. It is slower, but it does not blow up six months later.',
   },
   {
     category: 'included',
-    question: 'Can you optimise an ecommerce store?',
+    question: 'Can you do SEO for an online store?',
     answer:
-      'Yes. Ecommerce SEO — category page optimisation, product schema, faceted-navigation crawl control, and content hubs — sits in our Custom tier. We have built and optimised stores on Shopify and custom Next.js commerce, so we work on the platform you already run.',
+      'Yes. For online stores we sort out your category and product pages, the hidden product details Google reads, big menus that can confuse Google, and helpful buying guides. We have done this on Shopify and on custom-built stores, so we work with whatever you already use.',
   },
-  /* ── Technical ── */
+  /* ── Tech & Google ── */
   {
     category: 'technical',
-    question: 'Do you optimise for Google AI Overviews and AI search?',
+    question: 'Do you help me show up in Google AI answers and AI search?',
     answer:
-      'Yes. Google AI Overviews, ChatGPT, and Perplexity now answer a large share of commercial queries before a user clicks. We structure content with clear question-and-answer architecture, FAQ and Service schema, and citable, factual passages so AI engines surface and cite your business — a core part of every programme, not an add-on.',
-  },
-  {
-    category: 'technical',
-    question: 'What technical SEO work do you handle?',
-    answer:
-      'Crawl-budget optimisation, Core Web Vitals, JSON-LD schema, XML sitemaps, internal-linking architecture, canonical and indexation control, hreflang for multi-region sites, and render and speed fixes. We can implement directly if your site is on a modern stack, or hand your developer a precise, prioritised change list.',
+      'Yes. Google, ChatGPT, and Perplexity now answer many searches with AI before anyone clicks. We lay out your content as clear questions and answers, add the hidden code that helps these tools trust you, and write facts they can quote, so they point to your business. It is part of every plan, not an extra.',
   },
   {
     category: 'technical',
-    question: 'Will SEO work on my WordPress / Shopify / Next.js site?',
+    question: 'What technical work do you handle?',
     answer:
-      'Yes. We work on whatever you run. WordPress and Shopify have well-understood SEO levers we know cold; Next.js and headless builds we can often implement on directly. The audit identifies the platform-specific constraints up front so there are no surprises later.',
+      'We make sure Google can find and read every page, your site loads fast, the hidden code is correct, your sitemap and internal links are tidy, and the right pages show up instead of duplicates. We can do it on your site directly, or hand your developer a clear, ordered to-do list.',
   },
   {
     category: 'technical',
-    question: 'Do you fix Core Web Vitals and site speed?',
+    question: 'Will SEO work on my WordPress, Shopify, or custom site?',
     answer:
-      'Yes — site speed is a ranking factor and a conversion factor, so it is part of the technical phase. We target green Core Web Vitals on mobile, since most Indian search traffic is mobile on variable 4G. Where speed problems are structural, we flag the rebuild option honestly rather than papering over it.',
+      'Yes, we work with whatever you have. We know WordPress and Shopify inside out, and we can often work directly on modern custom sites too. Our first check finds anything about your setup that needs care, so there are no surprises later.',
   },
-  /* ── Reporting & Ownership ── */
+  {
+    category: 'technical',
+    question: 'Do you fix site speed?',
+    answer:
+      'Yes. A fast site helps you rank and helps more visitors turn into customers, so speed is part of the technical work. Most people in India search on a phone, so we make sure your site is quick on mobile. If the slowness is built into the site, we tell you honestly.',
+  },
+  {
+    category: 'technical',
+    question: "What's the difference between technical SEO and on-page SEO?",
+    answer:
+      'Technical SEO is the plumbing: a fast site that Google can read and trust. On-page SEO is what people see on each page, like the headings, the words, and the links between pages. You need both. A fast site with thin content will not rank, and great content on a broken site will not either. We fix the plumbing first, then improve the pages.',
+  },
+  /* ── Choosing an Agency ── */
+  {
+    category: 'choosing',
+    question: 'How do I choose the best SEO agency in India?',
+    answer:
+      'Look past the ranking screenshots. The best SEO agency in India for you ties its work to real leads and sales, sends a report you can actually read, builds links the safe way, and never locks you into a year. Ask them to explain, in plain words, exactly what they will do in your first 90 days. If they cannot, keep looking.',
+  },
+  {
+    category: 'choosing',
+    question: 'Do I need an "SEO agency near me", or does location not matter?',
+    answer:
+      "For most businesses, location does not matter. SEO is done online, and Google decides your rankings, not where your agency sits. Searching \"SEO agency near me\" only helps if you want the odd face-to-face meeting. We work with businesses all over India through a shared workspace and a monthly call.",
+  },
+  {
+    category: 'choosing',
+    question: 'Should I hire an in-house SEO person in India or work with an agency?',
+    answer:
+      'A good in-house SEO person in India costs about ₹8 to 15 lakh a year plus tools, and one person rarely does the technical, content, and link work equally well. A team gives you all of it for far less, and you can grow or pause any time. Many clients start with FactoryJet and only hire in-house once SEO is clearly working.',
+  },
+  {
+    category: 'choosing',
+    question: 'Is cheap SEO worth it, or does it cause problems later?',
+    answer:
+      'Cheap SEO is cheap because it skips the parts that matter: real content, safe links, proper technical work. It often leans on bought links or copied text that can get you punished by Google months later. We are not the cheapest, and we are honest about why. The most expensive SEO is the kind you have to pay someone else to undo.',
+  },
+  /* ── Reports & Ownership ── */
   {
     category: 'reporting',
     question: 'What does your monthly report look like?',
     answer:
-      'One page you can read in five minutes: the keywords that moved and why, traffic that converts (not just total sessions), leads attributed to organic, and the exact three things we are doing next month. Backed by full data if you want to dig in — but the summary is written for a business owner, not an analyst.',
+      'One page you can read in five minutes: the searches that moved and why, the visits that turned into customers (not just total visits), the leads we can trace to Google, and the three things we will do next month. The full numbers are there too if you want to dig in.',
   },
   {
     category: 'reporting',
     question: 'Do I own the content and links you create?',
     answer:
-      'Yes — entirely. Every page, brief, and asset we produce is yours and lives on your domain. Links point to your site. If you stop working with us, you keep all of it. There is no proprietary platform you have to keep paying for to retain your rankings.',
+      'Yes, all of it. Every page, plan, and piece we make is yours and lives on your own website. The links point to your site. If you ever stop working with us, you keep everything. There is no special software you must keep paying for.',
   },
   {
     category: 'reporting',
     question: 'How do you measure success?',
     answer:
-      'By leads and revenue, not rankings for their own sake. We agree the target keywords and conversion events up front, wire up GA4 and Search Console properly, and report against the metrics that map to your pipeline. A number-one ranking that brings no enquiries is a vanity metric, and we say so.',
+      'By leads and sales, not rankings for their own sake. We agree the searches that matter and what counts as a lead up front, set up Google’s free tools properly, and report on the numbers that map to your sales. A number-one ranking that brings no enquiries is just a vanity number, and we will say so.',
   },
   {
     category: 'reporting',
     question: 'Who works on my account?',
     answer:
-      'A small senior team, not a junior passed your account on day two. FactoryJet is founder-led: you talk to the people doing the strategy and the technical work. AI handles scale; humans own judgement, editing, and the relationship.',
+      'A small, senior team, not a junior handed your account on day two. FactoryJet is founder-led, so you talk to the people doing the strategy and the technical work. AI handles the scale; people handle the judgement, the writing, and the relationship.',
   },
 ];
 
@@ -312,15 +343,11 @@ const SEO_COMPARISON_COLUMNS = [
 
 const SEO_COMPARISON_ROWS = [
   {
-    feature: 'Starting price',
-    values: ['₹15,000/mo', '₹40,000+/mo', '₹15,000–₹25,000/mo', '₹0 (your time)'],
+    feature: 'Long contracts',
+    values: ['None, monthly', '6 to 12 months typical', 'Varies', 'N/A'],
   },
   {
-    feature: 'Contract lock-in',
-    values: ['None — monthly', '6–12 months typical', 'Varies', 'N/A'],
-  },
-  {
-    feature: 'AI Overviews optimisation',
+    feature: 'Gets you into Google AI answers',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -329,7 +356,7 @@ const SEO_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Technical SEO + Core Web Vitals',
+    feature: 'Fast site Google can read',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -338,7 +365,7 @@ const SEO_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Editorial link building (no PBNs)',
+    feature: 'Real links, no spammy tricks',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -356,7 +383,7 @@ const SEO_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'You own all content & links',
+    feature: 'You keep all content & links',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -365,7 +392,7 @@ const SEO_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Founder-led senior team',
+    feature: 'Run by senior people, founder-led',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="no" />,
@@ -410,16 +437,16 @@ export default function SeoHubPage() {
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
           eyebrow="SEO SERVICES · INDIA"
-          headline="SEO Services That Bring Leads — Not Just Rankings"
-          lead="Google AI Overviews now answer commercial queries before anyone clicks. Voice and 'near me' searches own the local pack. The SERP your customers see in 2026 looks nothing like the one most Indian agencies still optimise for. FactoryJet builds AI-native SEO programmes for SMBs across Mumbai, Bangalore, Pune and 19 more Indian cities — from ₹15,000/month, no lock-in, with monthly reports you can actually read."
+          headline="The SEO Company in India That Brings Leads, Not Just Rankings"
+          lead="Most SEO companies in India still chase the old Google. But Google now shows an AI answer right at the top, and 'near me' searches own the local map. FactoryJet uses AI plus senior people to help Indian small businesses show up in all three: the map, the normal results, and the AI answers. Then we prove it in a report you can read in five minutes. No long contracts, and you keep every page, link, and ranking we build."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
+          secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           trustItems={[
-            'SEO from ₹15,000/month',
-            'No lock-in contracts',
-            '500+ sites optimised',
+            "Picked up by Google AI answers",
+            'No long contracts',
+            '500+ sites done',
           ]}
-          rightSlot={<HeroBrowserMockup badgeLabel="Core Web Vitals" badgeCity="India" />}
+          rightSlot={<HeroBrowserMockup badgeLabel="Fast site" badgeCity="India" />}
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
@@ -428,50 +455,50 @@ export default function SeoHubPage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ sites optimised. 4.9 average rating. One report you'll actually read."
+          headline="500+ sites done. 4.9 average rating. One report you'll actually read."
         />
 
         {/* ── 4. WHAT SEO INCLUDES ─────────────────────────────────────────── */}
         <IndustriesGrid
           eyebrow="WHAT'S INCLUDED"
-          headline="What 'SEO' Actually Includes at FactoryJet"
-          lead="SEO is not one thing — it is six disciplines that have to work together. A perfect technical site with no content does not rank. Great content on a slow, un-crawlable site does not rank either. We cover all six."
+          headline="What We Actually Do When We Do Your SEO"
+          lead="SEO is not one thing. It is six jobs that have to work together. A perfect, fast site with no content will not show up. Great content on a slow site Google cannot read will not show up either. We do all six."
           sectors={[
             {
               name: 'Technical SEO',
               description:
-                'Crawl-budget control, Core Web Vitals, JSON-LD schema, XML sitemaps, indexation and canonical management, and render/speed fixes. The foundation everything else stands on.',
-              example: 'Site speed, schema, crawlability, indexation.',
+                'Making your site fast and easy for Google to read: quick loading, the hidden code that explains your pages, a tidy sitemap, and no duplicate or missing pages. This is the base everything else sits on.',
+              example: 'Speed, clean code, easy for Google to read.',
             },
             {
               name: 'On-Page SEO',
               description:
-                'Title and meta optimisation, heading structure, keyword mapping to money pages, content depth, and internal linking that passes authority to the pages that close deals.',
-              example: 'Money-page optimisation + internal linking.',
+                'Getting each page right: the title, the headings, the words that match what people search, enough useful detail, and links to the pages that win you customers.',
+              example: 'Better pages + smart internal links.',
             },
             {
               name: 'Off-Page / Link Building',
               description:
-                'Editorial links only — digital PR, genuine contributions, and resource placements on real sites with real traffic. No PBNs, no bought links, no manual-action risk.',
-              example: 'Digital PR + editorial placements.',
+                'Earning real links from genuine websites with real visitors, through PR and honest mentions. No spammy link networks, no bought links, nothing that risks a punishment from Google.',
+              example: 'Real links from trusted sites.',
             },
             {
               name: 'Local SEO + Google Business Profile',
               description:
-                'Local-pack dominance for "near me" searches, Google Business Profile optimisation, citation consistency, and review strategy — critical for SMB B2B and service businesses.',
-              example: 'Local pack + Maps + GBP.',
+                'Getting you into the top three on the map for "near me" searches: your free Google listing set up and looked after, your details matching everywhere, and a plan for reviews. Vital for shops and local services.',
+              example: 'Top of the map + Google listing.',
             },
             {
               name: 'Content SEO',
               description:
-                'AI-assisted briefs, human-edited copy, and topic clusters that build authority around your core service. Every asset targets a mapped keyword and a real buyer question.',
-              example: 'Topic clusters + buyer-intent content.',
+                'Helpful pages and guides, planned with AI and written by a real editor, that build trust around what you do. Every piece targets a real search and a real buyer question.',
+              example: 'Guides that answer buyer questions.',
             },
             {
               name: 'AI Overviews Optimisation',
               description:
-                'Structuring content so Google AI Overviews, ChatGPT, and Perplexity cite your business. Question-and-answer architecture, FAQ schema, and citable factual passages.',
-              example: 'Get cited by AI search, not skipped.',
+                'Setting up your content so Google AI answers, ChatGPT, and Perplexity point to your business: clear questions and answers, the right hidden code, and facts they can quote.',
+              example: 'Get named by AI, not skipped.',
             },
           ]}
         />
@@ -479,23 +506,23 @@ export default function SeoHubPage() {
         {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="Why SMBs Choose FactoryJet for SEO"
-          lead="Most Indian SEO agencies sell you a 12-month contract, a junior account manager, and a 40-page report nobody reads. FactoryJet is built differently: AI-native, founder-led, month-to-month, and honest about what SEO can and cannot do for your business."
+          headline="Why Small Businesses Pick FactoryJet for SEO"
+          lead="Most Indian SEO agencies sell you a 12-month contract, a junior manager, and a 40-page report nobody reads. We are different: we use AI plus senior people, we are founder-led, we work month to month, and we are honest about what SEO can and cannot do for your business."
           pillars={[
             {
               icon: '🤖',
-              title: 'AI-native, not AI-spam.',
-              body: 'We use AI where it genuinely helps — research, content briefs, reporting, and AI Overviews optimisation — and put experienced humans on strategy, editing, and the technical work that actually moves rankings. The result is the speed of AI with the judgement of a senior team, at a price a 40-person agency cannot match.',
+              title: 'AI plus real people, not AI spam.',
+              body: 'We use AI where it truly helps, like research, content plans, and reports, and put experienced people on the strategy, writing, and technical work that actually moves rankings. You get the speed of AI with the judgement of a senior team, at a price a big agency cannot match.',
             },
             {
               icon: '🛡️',
-              title: 'No black-hat tactics. Ever.',
-              body: 'No private blog networks, no bought links, no doorway pages, no tactics that rank you for six months and then get you penalised. We build SEO the slow, durable way — technical foundations, real content, editorial links — because we want you ranking next year, not just next quarter.',
+              title: 'No dodgy tricks. Ever.',
+              body: 'No spammy link networks, no bought links, no throwaway pages, nothing that ranks you for six months and then gets you punished. We build SEO the slow, lasting way: solid basics, real content, real links, because we want you ranking next year, not just next month.',
             },
             {
               icon: '📊',
-              title: 'Reports written in plain English.',
-              body: 'One page a month: the keywords that moved, the traffic that converted, the leads attributed to organic, and the exact three things we are doing next. No vanity metrics, no jargon, no lock-in. We keep clients by showing progress — not by trapping them in a contract.',
+              title: 'Reports in plain words.',
+              body: 'One page a month: the searches that moved, the visits that turned into customers, the leads we can trace to Google, and the three things we will do next. No vanity numbers, no jargon, no lock-in. We keep clients by showing progress, not by trapping them.',
             },
           ]}
         />
@@ -503,10 +530,10 @@ export default function SeoHubPage() {
         {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR SEO PROCESS"
-          headline="How We Run Your SEO Programme"
-          lead="Audit before strategy. Technical fixes before content. Reporting from week one — so you always know what we are doing and why."
+          headline="How We Run Your SEO, Step by Step"
+          lead="We check before we plan. We fix the basics before we add content. And we report from week one, so you always know what we are doing and why."
           stages={SEO_JOURNEY_STAGES}
-          closingNote="5 STAGES · AI-NATIVE · MONTH-TO-MONTH · NO PBNs · REPORTING YOU'LL READ"
+          closingNote="5 STEPS · AI PLUS REAL PEOPLE · MONTH TO MONTH · NO SPAMMY LINKS · REPORTS YOU'LL READ"
         />
 
         {/* ── 7. RECENT WORK (coming soon) ─────────────────────────────────── */}
@@ -531,10 +558,10 @@ export default function SeoHubPage() {
               className="fj-display mt-3 font-semibold text-fj-ink"
               style={{ fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', lineHeight: 1.15, letterSpacing: '-0.02em' }}
             >
-              SEO case studies are on the way
+              SEO results are on the way
             </h2>
             <p className="mx-auto mt-4 max-w-2xl font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>
-              We are publishing documented SEO results — rankings, traffic, and leads — from live FactoryJet programmes. In the meantime, the foundation is the same one behind 500+ websites we have shipped: technical depth, real content, and a 4.9 average client rating.
+              We are putting together real SEO results, with rankings, visits, and leads, from live FactoryJet work. For now, it all sits on the same work behind 500+ websites we have built: solid basics, real content, and a 4.9 average rating from our clients.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <a
@@ -552,46 +579,86 @@ export default function SeoHubPage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Local Agency vs. Freelancer vs. DIY"
-          lead="There are four ways to do SEO in India. Here is the honest comparison — price, lock-in, what is actually covered, and what you own when it is done."
+          lead="There are four ways to do SEO in India. Here is the honest comparison: price, contracts, what you actually get, and what you keep at the end."
           pullQuote={{
             stat: 'No lock-in',
             caption:
-              'month-to-month SEO from ₹15,000 — the same AI-native programme local agencies sell on a 12-month contract at ₹40,000+.',
+              'the same AI SEO that local agencies sell on a rigid 12-month deal, run month to month. Cancel any time, and you keep every page, link, and ranking we build.',
           }}
           columns={SEO_COMPARISON_COLUMNS}
           rows={SEO_COMPARISON_ROWS}
-          footer="Prices reflect typical Indian SEO market ranges as of 2025. FactoryJet programmes run month to month with 30 days notice to pause or stop."
+          footer="Prices reflect typical Indian SEO rates as of 2025. FactoryJet plans run month to month, with 30 days notice to pause or stop."
         />
 
         {/* ── 9. CITIES WE SERVE ───────────────────────────────────────────── */}
         <IndustriesGrid
           eyebrow="CITIES WE SERVE"
-          headline="SEO Programmes Built for Your City's Market"
-          lead="Search competition, buyer behaviour, and the keywords that convert differ by city. We build city-specific SEO for India's most competitive markets — with more cities added as we grow."
+          headline="SEO Built for Your City"
+          lead="Competition, how people search, and the searches that bring buyers are different in every city. We build city-by-city SEO for India's toughest markets, and add more cities as we grow."
           sectors={[
             {
               name: 'SEO Agency in Mumbai',
               description:
-                "India's most competitive SEO market — D2C in BKC, BFSI in Nariman Point, B2B exporters in Lower Parel. Mumbai-specific keyword maps, local pack, and AI Overviews coverage.",
+                "India's toughest SEO market. Online brands in BKC, banks and finance in Nariman Point, exporters in Lower Parel. We build a Mumbai-specific plan for the map, the normal results, and Google AI answers.",
               example: 'Explore SEO in Mumbai',
               linkLabel: 'Explore SEO in Mumbai',
               linkHref: '/seo/mumbai',
             },
             {
+              name: 'SEO Agency in Delhi',
+              description:
+                'Three markets in one city. Handicraft and jewellery exporters selling to the US and Europe, the Nehru Place and Sadar Bazaar trade supplying all of India, and coaching that draws students nationwide.',
+              example: 'Explore SEO in Delhi',
+              linkLabel: 'Explore SEO in Delhi',
+              linkHref: '/seo/delhi',
+            },
+            {
               name: 'SEO Agency in Bangalore',
               description:
-                'SEO that ranks against funded competition — SaaS in Koramangala, IT services in Whitefield, D2C startups in Indiranagar. Comparison-page SEO and global-plus-local strategy.',
+                'SEO that ranks against well-funded rivals. Software firms in Koramangala, IT in Whitefield, online brands in Indiranagar. Built to win at home and abroad.',
               example: 'Explore SEO in Bangalore',
               linkLabel: 'Explore SEO in Bangalore',
               linkHref: '/seo/bangalore',
             },
             {
+              name: 'SEO Company in Ahmedabad',
+              description:
+                'An export and factory city. Pharma and denim exporters selling to 100+ countries, chemical and engineering makers supplying India, and local services across the city.',
+              example: 'Explore SEO in Ahmedabad',
+              linkLabel: 'Explore SEO in Ahmedabad',
+              linkHref: '/seo/ahmedabad',
+            },
+            {
               name: 'SEO Agency in Pune',
               description:
-                "Built for Pune's economy — IT in Hinjewadi, auto suppliers in Chakan and PCMC, premium D2C in Koregaon Park. Industrial B2B keyword targeting and local pack.",
+                "Built for Pune. IT in Hinjewadi, car-part makers in Chakan and PCMC, premium online brands in Koregaon Park. Strong on factory and B2B searches, plus the local map.",
               example: 'Explore SEO in Pune',
               linkLabel: 'Explore SEO in Pune',
               linkHref: '/seo/pune',
+            },
+            {
+              name: 'SEO Company in Noida',
+              description:
+                'North India’s tech and media hub. IT and software in the Sector 62 area, online brands along the Expressway, ranking sharper than well-funded rivals.',
+              example: 'Explore SEO in Noida',
+              linkLabel: 'Explore SEO in Noida',
+              linkHref: '/seo/noida',
+            },
+            {
+              name: 'SEO Company in Jaipur',
+              description:
+                'An export city wrapped in tourism. Gem, jewellery, and handicraft exporters selling to the US and Europe, hotels serving travellers, and IT at Mahindra World City.',
+              example: 'Explore SEO in Jaipur',
+              linkLabel: 'Explore SEO in Jaipur',
+              linkHref: '/seo/jaipur',
+            },
+            {
+              name: 'SEO Agency in Vadodara',
+              description:
+                'Heavy industry and exports. Power equipment, petrochemicals, and pharma selling to power companies, big contractors, and buyers worldwide. The least crowded market on this list.',
+              example: 'Explore SEO in Vadodara',
+              linkLabel: 'Explore SEO in Vadodara',
+              linkHref: '/seo/vadodara',
             },
           ]}
         />
@@ -599,99 +666,43 @@ export default function SeoHubPage() {
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
         <IndustriesGrid
           eyebrow="INDUSTRIES WE SERVE"
-          headline="SEO for India's SMB Sectors"
-          lead="Different industries compete on different queries and different buyer journeys. We have run SEO across all of these."
+          headline="SEO for India's Small Business Sectors"
+          lead="Different industries compete on different searches and different buyer journeys. We have done SEO across all of these."
           sectors={[
             {
-              name: 'E-Commerce & D2C',
+              name: 'Online Stores & Brands',
               description:
-                'Category and product-page SEO, product schema, faceted-navigation crawl control, and content hubs that bring buyers, not browsers. On Shopify or custom commerce.',
+                'Category and product pages, the hidden product details Google reads, big menus kept tidy, and buying guides that bring buyers, not just browsers. On Shopify or custom stores.',
             },
             {
               name: 'Professional Services',
               description:
-                'CA firms, law practices, consultancies, and agencies. Authority content, local pack, and trust signals that turn research into booked consultations.',
+                'CA firms, lawyers, consultants, and agencies. Trust-building content and a strong spot on the local map that turn research into booked meetings.',
             },
             {
               name: 'Healthcare',
               description:
-                'Clinics, diagnostics, and healthcare SaaS. Local SEO, appointment-intent keywords, and compliance-aware, E-E-A-T-strong content.',
+                'Clinics, labs, and health apps. Local SEO, appointment-ready searches, and trustworthy, careful content.',
             },
             {
               name: 'Retail',
               description:
-                'Multi-location retail and franchises. Local pack at scale, Google Business Profile management, and store-locator SEO across every branch.',
+                'Shops with many branches. Top-of-the-map across every branch, Google listings looked after, and store-finder pages.',
             },
             {
               name: 'Restaurants & Hospitality',
               description:
-                '"Near me" dominance, Maps optimisation, review strategy, and menu and booking schema — where the local pack is the whole game.',
+                'Win "near me" searches, look great on Google Maps, build reviews, and make menus and bookings easy to find, where the map is the whole game.',
             },
             {
               name: 'Real Estate',
               description:
-                'Project, locality, and developer SEO. Micro-market keyword targeting, RERA-aware content, and lead-capture pages that route enquiries to the right team.',
+                'Pages for each project and area, searches tuned to small local markets, content that follows the rules, and forms that send enquiries to the right team.',
             },
           ]}
         />
 
-        {/* ── 11. PRICING ──────────────────────────────────────────────────── */}
-        <div id="pricing">
-          <PricingTiers
-            eyebrow="TRANSPARENT PRICING"
-            headline="Transparent, Month-to-Month SEO Pricing"
-            lead="Indian agencies charge ₹40,000+/month on 12-month contracts for comparable scope. FactoryJet publishes every tier, runs month to month, and lets you keep everything we build. First results visible in 60–90 days."
-            tiers={[
-              {
-                name: 'Starter',
-                priceRange: '₹15,000/mo',
-                description:
-                  'Technical foundations and local SEO for one location. Best for SMBs and service businesses that need to show up in the local pack and rank for their core service.',
-                features: [
-                  'Full technical SEO audit + fixes',
-                  'On-page optimisation, core pages',
-                  'Local SEO + Google Business Profile',
-                  'AI Overviews / FAQ schema setup',
-                  'GA4 + Search Console wired up',
-                  'Monthly report + strategy call',
-                ],
-                cta: { label: 'Get Started', modal: true as const, region: 'in' as const },
-              },
-              {
-                name: 'Growth',
-                priceRange: '₹30,000/mo',
-                description:
-                  'Content and links added to the foundations, across multiple locations. Best for SMBs scaling organic as a real lead channel.',
-                features: [
-                  'Everything in Starter',
-                  '4 content pieces / month (human-edited)',
-                  'Editorial link building (no PBNs)',
-                  'Multi-location / multi-service targeting',
-                  'Competitor gap monitoring',
-                  'Priority support + monthly strategy call',
-                ],
-                cta: { label: 'Get Started', modal: true as const, region: 'in' as const },
-                popular: true,
-              },
-              {
-                name: 'Custom',
-                priceRange: '₹50,000+/mo',
-                description:
-                  'National-scale or ecommerce SEO for competitive markets. Best for established businesses where organic is a primary revenue line.',
-                features: [
-                  'Everything in Growth, scaled',
-                  'Ecommerce / large-catalogue SEO',
-                  'Competitive national keyword targets',
-                  'Digital PR + advanced link acquisition',
-                  'Dedicated senior strategist',
-                  'Custom reporting + quarterly reviews',
-                ],
-                cta: { label: 'Talk to the Founder', modal: true as const, region: 'in' as const },
-              },
-            ] as const}
-            footnote="All prices in INR per month, no lock-in. You own all content and links produced. GA4, Search Console, and reporting included on every tier. Pause or stop with 30 days notice."
-          />
-        </div>
+        {/* ── PRICING removed 2026-05-29 (Bhavesh), price appears only in the FAQ ── */}
 
         {/* ── 12. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
@@ -703,8 +714,8 @@ export default function SeoHubPage() {
         {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="SEO Questions, Answered Straight"
-          lead="The questions every business owner asks before starting SEO — answered here, without the runaround."
+          headline="SEO Questions, Answered Simply"
+          lead="The questions every business owner asks before starting SEO, answered here in plain words."
           categories={SEO_FAQ_CATEGORIES}
           items={SEO_FAQ_ITEMS}
         />
@@ -713,11 +724,11 @@ export default function SeoHubPage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO START"
-          headline="Ready to Rank — and Get Cited by AI?"
-          sub="The SERP is changing faster than it has in a decade. The businesses that win in 2026 are the ones structuring for AI Overviews and local intent now, while their competitors are still buying links. Start with a free audit — we will show you exactly where you stand and what the first 90 days look like."
+          headline="Ready to Rank on Google and Get Named by AI?"
+          sub="Google search is changing faster than it has in years. The businesses that win in 2026 are the ones getting ready for AI answers and local searches now, while their rivals are still buying links. Start with a free check, and we will show you exactly where you stand and what the first 90 days look like."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
-          objectionHandler="From ₹15,000/month. No lock-in. You own everything we build. Reports you'll actually read."
+          secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
+          objectionHandler="No long contracts. You keep everything we build. Reports you'll actually read in five minutes."
         />
 
       </main>
