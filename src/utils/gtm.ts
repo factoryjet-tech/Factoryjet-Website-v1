@@ -28,6 +28,13 @@ export const trackFormSubmission = () => {
       value: 1999,
       currency: "USD",
     });
+    // GA4 lead conversion — single source of truth, fired here on form success.
+    // send_to scopes it to the GA4 stream only (no double-count with the Ads conversions above).
+    (window as any).gtag("event", "Lead_Form_FactoryJet", {
+      send_to: "G-N40S2Q8E1J",
+      value: 1999,
+      currency: "USD",
+    });
   }
 };
 
