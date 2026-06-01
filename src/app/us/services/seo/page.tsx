@@ -489,7 +489,7 @@ export default function SeoServicePage() {
 
               {/* Chip: ranks on Google + AI (lavender capability) */}
               <div
-                className="absolute right-[-5%] top-[34%] z-[5] flex items-center gap-2 rounded-2xl px-4 py-2.5 font-fj-body text-[0.8125rem] font-bold text-white"
+                className="absolute right-[-4%] top-[-3%] z-[5] flex items-center gap-2 rounded-2xl px-4 py-2.5 font-fj-body text-[0.8125rem] font-bold text-white"
                 style={{ background: LAV, boxShadow: '0 18px 44px rgba(80,70,200,0.26)' }}
               >
                 Ranks on Google + AI
@@ -815,7 +815,7 @@ export default function SeoServicePage() {
               />
               {/* Float chip: senior team (no year numbers) */}
               <div
-                className="absolute -left-2 top-4 z-[6] rounded-xl bg-white px-3.5 py-2.5 font-fj-body text-[0.78rem] font-bold text-fj-ink"
+                className="absolute -left-2 top-[46%] z-[6] rounded-xl bg-white px-3.5 py-2.5 font-fj-body text-[0.78rem] font-bold text-fj-ink"
                 style={{ boxShadow: '0 16px 36px rgba(80,70,200,0.26)' }}
               >
                 A senior team

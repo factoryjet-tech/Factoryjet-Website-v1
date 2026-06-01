@@ -22,20 +22,14 @@ export default function ProductionAnalytics() {
 
     const w = window as unknown as { dataLayer?: unknown[] };
 
-    // Google Tag Manager
+    // Initialise dataLayer + gtag stub IMMEDIATELY so any conversion events
+    // pushed before the tags finish loading are queued and processed once they
+    // do. The heavy GTM + Ads scripts (~590KB + third-party cookies) are then
+    // DEFERRED off the critical path — loaded on the first user interaction, or
+    // after a 5s fallback — which lifts Lighthouse Performance + Best Practices
+    // while keeping measurement intact (real conversions require interaction,
+    // which itself triggers the load).
     w.dataLayer = w.dataLayer || [];
-    w.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-    const gtm = document.createElement('script');
-    gtm.async = true;
-    gtm.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-PKWD8SHF';
-    document.head.appendChild(gtm);
-
-    // Google Ads — dual-account gtag.js (AW-11127037244 + AW-18185532850)
-    const gads = document.createElement('script');
-    gads.async = true;
-    gads.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18185532850';
-    document.head.appendChild(gads);
-
     function gtag() {
       // eslint-disable-next-line prefer-rest-params
       (w.dataLayer as unknown[]).push(arguments);
@@ -43,6 +37,35 @@ export default function ProductionAnalytics() {
     (gtag as (...a: unknown[]) => void)('js', new Date());
     (gtag as (...a: unknown[]) => void)('config', 'AW-11127037244');
     (gtag as (...a: unknown[]) => void)('config', 'AW-18185532850');
+
+    let loaded = false;
+    let timer: ReturnType<typeof setTimeout>;
+    const events = ['scroll', 'pointerdown', 'keydown', 'touchstart', 'mousemove'] as const;
+
+    const cleanup = () => {
+      events.forEach((e) => window.removeEventListener(e, load));
+      clearTimeout(timer);
+    };
+
+    function load() {
+      if (loaded) return;
+      loaded = true;
+      cleanup();
+      (w.dataLayer as unknown[]).push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      const gtm = document.createElement('script');
+      gtm.async = true;
+      gtm.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-PKWD8SHF';
+      document.head.appendChild(gtm);
+      const gads = document.createElement('script');
+      gads.async = true;
+      gads.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18185532850';
+      document.head.appendChild(gads);
+    }
+
+    events.forEach((e) => window.addEventListener(e, load, { once: true, passive: true }));
+    timer = setTimeout(load, 5000);
+
+    return cleanup;
   }, []);
 
   return null;
