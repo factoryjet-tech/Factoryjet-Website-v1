@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter, Source_Serif_4, Fraunces, Cormorant_Garamond, Plus_Jakarta_Sans } from 'next/font/google'
-import { GeistSans } from 'geist/font/sans'
+// GeistSans intentionally NOT imported: it was preloaded (~70KB, High priority)
+// but no `font-geist-sans` utility exists in the codebase — pure render-path
+// waste racing the CSS on throttled mobile. Body font is Inter. GeistMono is
+// kept because the eyebrow/code utilities (font-fj-mono) use it.
 import { GeistMono } from 'geist/font/mono'
 import '../index.css'
 import { ContactModalProvider } from '../context/ContactModalContext'
@@ -127,7 +130,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${plusJakarta.variable} ${inter.variable} ${sourceSerif.variable} ${fraunces.variable} ${cormorant.variable} ${GeistSans.variable} ${GeistMono.variable}`}>
+    <html lang="en" className={`${plusJakarta.variable} ${inter.variable} ${sourceSerif.variable} ${fraunces.variable} ${cormorant.variable} ${GeistMono.variable}`}>
       <head>
         {/* Preconnect to critical origins */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />

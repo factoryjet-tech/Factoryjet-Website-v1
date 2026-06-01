@@ -54,8 +54,16 @@ const nextConfig = {
   // Experimental optimizations
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion', 'firebase', 'firebase/firestore', 'firebase/app'],
-    // Inline critical CSS and defer the rest — reduces render-blocking CSS chunk
-    optimizeCss: true,
+    // CSS delivery: inline route CSS into the HTML as <style> instead of a
+    // render-blocking <link>. App-Router-correct option in Next 16+.
+    //   Why not optimizeCss (critters/beasties)? That flag ONLY works on the
+    //   Pages Router — critters needs fully-rendered HTML and is incompatible
+    //   with RSC streaming, so on the App Router it is a SILENT NO-OP and Next
+    //   keeps emitting <link rel="stylesheet"> (verified in /out HTML 2026-06-01).
+    //   inlineCss removes the render-blocking CSS round-trip entirely, which was
+    //   holding mobile LCP at 4.4s (text LCP gated by a 619ms blocking stylesheet)
+    //   while FCP was already 1.5s. Works with output:'export'.
+    inlineCss: true,
   },
 
   // Enable gzip compression
