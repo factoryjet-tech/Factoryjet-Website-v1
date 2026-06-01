@@ -54,16 +54,17 @@ const nextConfig = {
   // Experimental optimizations
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion', 'firebase', 'firebase/firestore', 'firebase/app'],
-    // CSS delivery: inline route CSS into the HTML as <style> instead of a
-    // render-blocking <link>. App-Router-correct option in Next 16+.
-    //   Why not optimizeCss (critters/beasties)? That flag ONLY works on the
-    //   Pages Router — critters needs fully-rendered HTML and is incompatible
-    //   with RSC streaming, so on the App Router it is a SILENT NO-OP and Next
-    //   keeps emitting <link rel="stylesheet"> (verified in /out HTML 2026-06-01).
-    //   inlineCss removes the render-blocking CSS round-trip entirely, which was
-    //   holding mobile LCP at 4.4s (text LCP gated by a 619ms blocking stylesheet)
-    //   while FCP was already 1.5s. Works with output:'export'.
-    inlineCss: true,
+    // CSS delivery: external cached <link rel="stylesheet"> (Next default).
+    //   2026-06-02: inlineCss:true was REVERTED. It inlined the entire ~278KB
+    //   sitewide Tailwind utility bundle into every page's HTML. On desktop this
+    //   is free (PSI desktop = 100), but on throttled mobile (Slow 4G + 4x CPU)
+    //   the 278KB inline-CSS PARSE before first paint gated the text LCP, and
+    //   clean PageSpeed Insights measured mobile 79 / LCP 4.7s — WORSE than the
+    //   pre-inlineCss baseline of 84 / LCP 4.4s. A render-blocking external
+    //   stylesheet (~35KB gzip, cacheable, reused across pages) parses far less
+    //   per navigation. Verdict: inlining a large sitewide bundle is the wrong
+    //   tool here; the 278KB is genuine utilities (no pathological bloat) so it
+    //   cannot be slimmed to where inlining wins. See session 2026-06-02.
   },
 
   // Enable gzip compression
