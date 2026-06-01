@@ -132,6 +132,18 @@ export const woocommerceDevelopmentAlternates = {
 } as const
 
 /**
+ * SEO Services hub page — US only.
+ * US:    /us/services/seo
+ * The India /seo hub is India-positioned (different market, pricing, copy) and
+ * is not treated as a true locale alternate, so this page emits only
+ * en-US + x-default per the single-country page rule. Added 2026-06-01.
+ */
+export const seoServicesAlternatesUS = {
+  'en-US': 'https://factoryjet.com/us/services/seo',
+  'x-default': 'https://factoryjet.com/us/services/seo',
+} as const
+
+/**
  * AI SEO / GEO / AEO service page — bilingual cluster.
  * US:    /us/services/ai-seo
  * India: /ai-seo  (root path, matches India URL pattern for services)
