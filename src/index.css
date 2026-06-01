@@ -224,7 +224,7 @@ body {
   --fj-neutral-50: #F8F8F5;
   --fj-neutral-100: #EFEFEA;
   --fj-neutral-200: #D9D9D2;
-  --fj-neutral-400: #8A8A82;
+  --fj-neutral-400: #6B6B62;
   --fj-neutral-600: #4A4A45;
 
   /* Contrast-safe Jet Blue for use over the navy/charcoal surfaces. */
@@ -251,7 +251,7 @@ body {
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #C94A1A;
+  color: #B23E13;
 }
 .fj-on-dark .fj-eyebrow {
   color: #F05A28;

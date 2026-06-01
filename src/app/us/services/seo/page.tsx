@@ -41,13 +41,13 @@ const REVIEWED_DATE = 'June 1, 2026';
 /* Expanded "room" palette: accents drawn from the approved mockup, anchored on
    the repo's production orange + charcoal so header/footer/CTA stay consistent. */
 const ORANGE = '#F05A28';
-const ORANGE_DARK = '#C94A1A';
+const ORANGE_DARK = '#B23E13'; // WCAG AA 4.5:1+ for eyebrow text on cream/peach (#C94A1A was 4.48)
 const ORANGE_SOFT = '#FBEAE1';
 const CHARCOAL = '#0F0F12';
 const CREAM = '#FAFAF7';
 const PEACH = '#FAEDE5';
 const GREEN = '#0E5C46';
-const GREEN_BRIGHT = '#15A074';
+const GREEN_BRIGHT = '#0C7150'; // deeper green so white label text passes 4.5:1 (was #15A074 = 3.3)
 const GREEN_SOFT = '#DCEFE6';
 const LAV = '#5046C8';
 const LAV_SOFT = '#ECEAFB';
@@ -457,7 +457,7 @@ export default function SeoServicePage() {
                 className="absolute bottom-[6%] right-[-2%] z-[5] rounded-2xl px-4 py-3.5"
                 style={{ background: GREEN, color: '#fff', boxShadow: '0 18px 44px rgba(26,23,18,0.16)' }}
               >
-                <div className="font-fj-mono text-[10px] uppercase tracking-[0.08em]" style={{ color: 'rgba(255,255,255,0.62)' }}>
+                <div className="font-fj-mono text-[10px] uppercase tracking-[0.08em]" style={{ color: 'rgba(255,255,255,0.86)' }}>
                   Client rating
                 </div>
                 <div className="fj-display flex items-center gap-1.5 text-[1.4rem] font-bold leading-tight">
@@ -845,7 +845,7 @@ export default function SeoServicePage() {
                 className="fj-display mt-3.5 font-bold text-fj-ink"
                 style={{ fontSize: 'clamp(1.8rem, 3.8vw, 2.875rem)', lineHeight: 1.06, letterSpacing: '-0.025em' }}
               >
-                Real specialists, <span className="italic" style={{ color: ORANGE }}>not a content mill</span>
+                Real specialists, <span className="italic" style={{ color: ORANGE_DARK }}>not a content mill</span>
               </h2>
               <p className="mt-4 font-fj-body font-medium text-fj-neutral-600" style={{ fontSize: '1.125rem', lineHeight: 1.6 }}>
                 I run your strategy myself, so the person who scopes your SEO is the person accountable for the

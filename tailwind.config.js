@@ -106,7 +106,7 @@ export default {
         'fj-neutral-50': '#F8F8F5',
         'fj-neutral-100': '#EFEFEA',
         'fj-neutral-200': '#D9D9D2',
-        'fj-neutral-400': '#8A8A82',
+        'fj-neutral-400': '#6B6B62',
         'fj-neutral-600': '#4A4A45',
 
         // === New tokens for the ProgSEO redesign (PR #31) ===

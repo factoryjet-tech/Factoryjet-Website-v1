@@ -56,9 +56,11 @@ export default function ModalCTAButton({
   // Orange inline styles for primary variants — merged with any caller-supplied style
   const resolvedStyle: CSSProperties = isPrimary
     ? {
-        background: '#F05A28',
+        // #CE4A14 (deeper burnt orange) passes WCAG AA 4.5:1 with white label text;
+        // #F05A28 was 3.38:1 and failed. Glow keeps the brand orange feel.
+        background: '#CE4A14',
         boxShadow: '0 4px 20px rgba(240,90,40,0.38), 0 1px 4px rgba(240,90,40,0.22)',
-        outlineColor: '#F05A28',
+        outlineColor: '#CE4A14',
         ...style,
       }
     : { ...style };
