@@ -862,7 +862,7 @@ export default function SiteHeader({
                 type="button"
                 onClick={handleCta}
                 className="hidden items-center justify-center rounded-full px-5 py-2.5 font-fj-body text-[14px] font-semibold text-white transition-opacity hover:opacity-90 md:inline-flex"
-                style={{ background: '#F05A28' }}
+                style={{ background: '#C2440F' }}
               >
                 {cta?.label ?? cfg.defaultCtaLabel}
               </button>
@@ -1120,7 +1120,7 @@ export default function SiteHeader({
               openModal(cfg.modalRegion);
             }}
             className="flex w-full items-center justify-center rounded-full py-3.5 font-fj-body text-[15px] font-semibold text-white transition-opacity hover:opacity-90"
-            style={{ background: '#F05A28' }}
+            style={{ background: '#C2440F' }}
           >
             {cfg.defaultCtaLabel}
           </button>
