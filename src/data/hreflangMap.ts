@@ -155,6 +155,15 @@ export const localSeoServicesAlternatesUS = {
 } as const
 
 /**
+ * Ecommerce SEO service hub — US-only. en-US + x-default per the single-country
+ * page rule. US: /us/services/ecommerce-seo. Added 2026-06-02.
+ */
+export const ecommerceSeoServicesAlternatesUS = {
+  'en-US': 'https://factoryjet.com/us/services/ecommerce-seo',
+  'x-default': 'https://factoryjet.com/us/services/ecommerce-seo',
+} as const
+
+/**
  * AI SEO / GEO / AEO service page — bilingual cluster.
  * US:    /us/services/ai-seo
  * India: /ai-seo  (root path, matches India URL pattern for services)
