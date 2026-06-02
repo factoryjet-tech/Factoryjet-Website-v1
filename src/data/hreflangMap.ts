@@ -144,6 +144,17 @@ export const seoServicesAlternatesUS = {
 } as const
 
 /**
+ * Local SEO service hub — US-only. The India local-seo page (/seo/local-seo)
+ * targets a different market and intent, so it is intentionally NOT linked as a
+ * locale alternate. en-US + x-default per the single-country page rule.
+ * US: /us/services/local-seo. Added 2026-06-02.
+ */
+export const localSeoServicesAlternatesUS = {
+  'en-US': 'https://factoryjet.com/us/services/local-seo',
+  'x-default': 'https://factoryjet.com/us/services/local-seo',
+} as const
+
+/**
  * AI SEO / GEO / AEO service page — bilingual cluster.
  * US:    /us/services/ai-seo
  * India: /ai-seo  (root path, matches India URL pattern for services)
