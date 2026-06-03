@@ -164,6 +164,24 @@ export const ecommerceSeoServicesAlternatesUS = {
 } as const
 
 /**
+ * Small business SEO service hub — US-only. en-US + x-default per the single-country
+ * page rule. US: /us/services/small-business-seo. Added 2026-06-03.
+ */
+export const smallBusinessSeoServicesAlternatesUS = {
+  'en-US': 'https://factoryjet.com/us/services/small-business-seo',
+  'x-default': 'https://factoryjet.com/us/services/small-business-seo',
+} as const
+
+/**
+ * SEO audit & technical SEO service hub — US-only. en-US + x-default per the
+ * single-country page rule. US: /us/services/seo-audit. Added 2026-06-03.
+ */
+export const seoAuditServicesAlternatesUS = {
+  'en-US': 'https://factoryjet.com/us/services/seo-audit',
+  'x-default': 'https://factoryjet.com/us/services/seo-audit',
+} as const
+
+/**
  * AI SEO / GEO / AEO service page — bilingual cluster.
  * US:    /us/services/ai-seo
  * India: /ai-seo  (root path, matches India URL pattern for services)

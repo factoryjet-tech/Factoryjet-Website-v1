@@ -38,6 +38,8 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/us/services/seo',                                 source: 'src/app/us/services/seo/page.tsx' },
   { path: '/us/services/local-seo',                           source: 'src/app/us/services/local-seo/page.tsx' },
   { path: '/us/services/ecommerce-seo',                       source: 'src/app/us/services/ecommerce-seo/page.tsx' },
+  { path: '/us/services/small-business-seo',                  source: 'src/app/us/services/small-business-seo/page.tsx' },
+  { path: '/us/services/seo-audit',                           source: 'src/app/us/services/seo-audit/page.tsx' },
   { path: '/us/services/ai-seo',                              source: 'src/app/us/services/ai-seo/page.tsx' },
   { path: '/us/services/ai-chatbot-development',              source: 'src/app/us/services/ai-chatbot-development/page.tsx' },
   { path: '/us/services/ai-integration-services',             source: 'src/app/us/services/ai-integration-services/page.tsx' },
