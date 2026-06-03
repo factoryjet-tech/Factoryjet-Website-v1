@@ -30,15 +30,15 @@ import FinalCTA from '@/components/v2/FinalCTA';
 --------------------------------------------------------------------------─-- */
 
 export const metadata: Metadata = {
-  title: 'WooCommerce Development — Custom Stores & Plugins | FactoryJet',
+  title: 'WooCommerce Development Agency USA | Hire WooCommerce Developers | FactoryJet',
   description:
-    'Expert WooCommerce development for US businesses. Custom stores, plugins, themes & payment integrations. fixed-price, milestone-paid. Free consultation.',
+    'Hire WooCommerce developers & experts from a US WooCommerce development agency. Custom stores, store design, plugins & integrations — fixed-price, milestone-paid. Free consultation.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'WooCommerce Development Services | FactoryJet',
+    title: 'WooCommerce Development Agency USA | Hire WooCommerce Developers | FactoryJet',
     description:
-      'Custom WooCommerce store builds, plugin development, and integrations for US businesses. Senior WooCommerce developers, fixed-price projects',
+      'Hire senior WooCommerce developers & experts. Custom store builds, store design, plugin development & integrations for US businesses. Fixed-price.',
     url: 'https://factoryjet.com/us/services/woocommerce-development',
     images: [
       {
@@ -52,9 +52,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'WooCommerce Development Services | FactoryJet',
+    title: 'WooCommerce Development Agency USA | Hire WooCommerce Developers | FactoryJet',
     description:
-      'Custom WooCommerce stores, plugin development, and integrations. Fixed-price projects, senior developers',
+      'Hire WooCommerce developers & experts — custom stores, design, plugins & integrations. Fixed-price projects.',
     images: ['https://factoryjet.com/images/us/hero-us.webp'],
   },
   alternates: {
@@ -128,6 +128,38 @@ const faqSchema = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'WooCommerce handles large catalogs well when properly configured — with appropriate hosting (WP Engine or Kinsta), a good caching setup (Redis + full-page cache), and an optimized database. Stores with 10,000–50,000 SKUs run well on WooCommerce with the right infrastructure. For very large catalogs (100,000+ SKUs) with complex attributes, Magento 2 or a headless solution is often more appropriate. FactoryJet can help you choose the right platform for your specific catalog size and complexity.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does it cost to hire a WooCommerce developer?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'FactoryJet works on fixed-price projects. A professional WooCommerce store build runs $3,000–$10,000 depending on custom design, plugins, and integrations. To hire a WooCommerce developer on an ongoing basis, retainers start at $399/month covering core/plugin updates plus a defined block of development hours. US freelance WooCommerce developers typically charge $50–$120/hour with no fixed ceiling, which is why most store owners prefer a fixed-scope quote approved before work starts.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I hire a dedicated WooCommerce expert or development team?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Every build assigns you a dedicated WooCommerce expert backed by a full team — designer, developer, and QA — with one point of contact. After launch you can keep that same expert on a monthly retainer for plugin development, store customization, performance work, and new features, with direct access to the person who knows your store\'s code.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you offer WooCommerce store design and theme customization?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Both. We design and build custom WooCommerce themes from scratch, and we customize existing themes when a full rebuild is not needed. A conversion-focused designer handles layout, product-page hierarchy, trust signals, and mobile checkout flow, while our developers implement it in clean, maintainable code. WooCommerce store design and development are one engagement at FactoryJet.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can you customize my existing WooCommerce store instead of rebuilding it?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Often, yes. If your store is on a reasonable theme and a current WordPress/WooCommerce/PHP version, we can usually deliver what you need through WooCommerce customization — theme adjustments, custom plugin development, checkout changes, and performance cleanup — without a full rebuild. We assess this in a quick technical audit and recommend a rebuild only when patching would cost more than replacing.',
       },
     },
   ],
@@ -510,6 +542,26 @@ const FAQ_ITEMS = [
     answer: `Book a 30-minute discovery call. We'll discuss your store requirements, your timeline, your budget, and the technical approach that makes sense for your situation. For existing stores, we'll do a quick technical audit before providing a quote. For new builds, we'll scope the project on the call and follow up with a fixed-price proposal within 24–48 hours. No obligation to move forward, and no sales pressure on the call — we focus on figuring out if we're the right fit.`,
     category: 'factoryjet',
   },
+  {
+    question: 'How much does it cost to hire a WooCommerce developer?',
+    answer: `It depends on scope. FactoryJet works on fixed-price projects rather than open-ended hourly billing — a professional WooCommerce store build runs $3,000–$10,000 depending on custom design, plugins, and integrations. If you want to hire a WooCommerce developer on an ongoing basis, retainers start at $399/month covering core/plugin updates plus a defined block of development hours. US freelance WooCommerce developers typically charge $50–$120/hour with no fixed ceiling, which is why most store owners prefer a fixed-scope quote you approve before work starts.`,
+    category: 'cost',
+  },
+  {
+    question: 'Can I hire a dedicated WooCommerce expert or development team?',
+    answer: `Yes. Every build assigns you a dedicated WooCommerce expert backed by a full team — designer, developer, and QA — with one point of contact, so nothing gets lost in handoffs. After launch you can keep that same expert on a monthly retainer for plugin development, store customization, performance work, and new features. You always have direct access to the person who actually knows your store's code.`,
+    category: 'factoryjet',
+  },
+  {
+    question: 'Do you offer WooCommerce store design and theme customization?',
+    answer: `Both. We design and build custom WooCommerce themes from scratch, and we customize existing themes when a full rebuild isn't needed. A conversion-focused designer handles layout, product-page hierarchy, trust signals, and mobile checkout flow, while our developers implement it in clean, maintainable code. WooCommerce store design and development are one engagement at FactoryJet, not two separate vendors.`,
+    category: 'development',
+  },
+  {
+    question: 'Can you customize my existing WooCommerce store instead of rebuilding it?',
+    answer: `Often, yes. If your store is on a reasonable theme and a current WordPress/WooCommerce/PHP version, we can usually deliver what you need through WooCommerce customization — theme adjustments, custom plugin development, checkout changes, and performance cleanup — without a full rebuild. We assess this in a quick technical audit first and recommend a rebuild only when the existing foundation would cost more to patch than to replace.`,
+    category: 'development',
+  },
 ];
 
 const howToSchema = {
@@ -857,6 +909,47 @@ export default function WoocommerceDevelopmentPage() {
           eyebrow="WHAT CLIENTS SAY"
           headline="4.9/5 across 500+ projects. Real results from real businesses."
         />
+
+        {/* -- 12b. HIRE WOOCOMMERCE DEVELOPERS ------------------------------- */}
+        <section className="py-14 md:py-20 bg-[#FAFAF7]">
+          <div className="max-w-6xl mx-auto px-6">
+            <p className="text-sm font-semibold text-[#F05A28] uppercase tracking-widest mb-3">HIRE WOOCOMMERCE DEVELOPERS</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0F0F12] mb-5 max-w-3xl">Hire WooCommerce developers &amp; experts — design and build under one roof</h2>
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              <div className="text-[#3A3A40] leading-relaxed space-y-4">
+                <p>
+                  Most US store owners don&apos;t want to gamble on a marketplace listing — they want to{' '}
+                  <strong>hire a WooCommerce developer</strong> who has shipped real stores and won&apos;t vanish
+                  mid-project. As a US WooCommerce development agency, FactoryJet gives you a dedicated WooCommerce
+                  expert backed by a full team: designer, developer, and QA, all owning your build end to end.
+                </p>
+                <p>
+                  Need ongoing help instead of a one-off build? Hire a dedicated WooCommerce expert on a monthly
+                  retainer for theme work, plugin development, performance, and store customization. For a broader scope,
+                  see our{' '}
+                  <Link href="/us/services/ecommerce-development" className="text-[#F05A28] font-medium underline underline-offset-2">ecommerce development services</Link>, or
+                  weigh platforms in our{' '}
+                  <Link href="/blog/shopify-vs-woocommerce-us-small-business-2026" className="text-[#F05A28] font-medium underline underline-offset-2">Shopify vs WooCommerce guide</Link>.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-[#E5E5E0] bg-white p-7">
+                <h3 className="text-xl font-bold text-[#0F0F12] mb-3">WooCommerce store design &amp; customization</h3>
+                <ul className="space-y-2.5 text-[#3A3A40] text-[15px]">
+                  <li>• Custom WooCommerce store design &amp; theme builds</li>
+                  <li>• Store customization on your existing site — no full rebuild</li>
+                  <li>• Custom plugin development &amp; integrations</li>
+                  <li>• Speed, Core Web Vitals &amp; checkout optimization</li>
+                </ul>
+                <Link
+                  href="https://calendly.com/bhavesh-factoryjet/30min"
+                  className="mt-6 inline-flex items-center justify-center rounded-full bg-[#F05A28] px-6 py-3 text-white font-semibold hover:bg-[#d94d20] transition-colors"
+                >
+                  Talk to the Founder →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* -- 13. FAQ -------------------------------------------------------- */}
         <FAQ
