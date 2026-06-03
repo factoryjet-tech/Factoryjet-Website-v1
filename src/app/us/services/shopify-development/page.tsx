@@ -1292,7 +1292,9 @@ export default function ShopifyPage() {
                   monthly retainer for theme work, app integrations, conversion experiments, and seasonal landing
                   pages — the same engineer who built your store, not a rotating pool. Prefer a broader scope? See our
                   full{' '}
-                  <Link href="/us/services/ecommerce-development" className="text-[#F05A28] font-medium underline underline-offset-2">ecommerce development services</Link>.
+                  <Link href="/us/services/ecommerce-development" className="text-[#F05A28] font-medium underline underline-offset-2">ecommerce development services</Link>. Already
+                  selling and need traffic? See our{' '}
+                  <Link href="/us/services/shopify-seo" className="text-[#F05A28] font-medium underline underline-offset-2">Shopify SEO services</Link>.
                 </p>
               </div>
               <div className="rounded-2xl border border-[#E5E5E0] bg-white p-7">

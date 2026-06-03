@@ -66,6 +66,7 @@ const US_SEO_HUB_HREF = '/us/services/seo';
 const US_SEO_SERVICES = [
   { icon: MapPin,        label: 'Local SEO',          href: '/us/services/local-seo',          desc: 'Map pack & near-me' },
   { icon: ShoppingCart,  label: 'E-commerce SEO',     href: '/us/services/ecommerce-seo',      desc: 'Product & collection SEO' },
+  { icon: TrendingUp,    label: 'Shopify SEO',        href: '/us/services/shopify-seo',        desc: 'Rank your Shopify store' },
   { icon: Search,        label: 'SEO Audit',          href: '/us/services/seo-audit',          desc: 'Free technical site check' },
   { icon: Store,         label: 'Small Business SEO', href: '/us/services/small-business-seo', desc: 'Affordable managed SEO' },
 ] as const;
