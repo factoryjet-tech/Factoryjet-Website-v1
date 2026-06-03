@@ -57,13 +57,13 @@ const LAV_SOFT = '#ECEAFB';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'SEO Services in the US: Rankings + AI Citations That Compound | FactoryJet',
+  title: 'SEO Services USA: Local, Ecommerce, Shopify, AI SEO & Audits | FactoryJet',
   description:
     'FactoryJet is a US-focused SEO agency that grows organic traffic which compounds, ranking you on Google and getting you cited inside AI answers like AI Overviews, ChatGPT, and Perplexity. Founder-led, month-to-month, reported in leads.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'SEO Services in the US: Rankings + AI Citations That Compound | FactoryJet',
+    title: 'SEO Services USA: Local, Ecommerce, Shopify, AI SEO & Audits | FactoryJet',
     description:
       'A US-focused SEO company that combines technical SEO, expert content, and authority building so you rank on Google and get cited in AI answers. Founder-led, month-to-month, reported in revenue.',
     url: 'https://factoryjet.com/us/services/seo',
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SEO Services in the US: Rankings + AI Citations That Compound | FactoryJet',
+    title: 'SEO Services USA: Local, Ecommerce, Shopify, AI SEO & Audits | FactoryJet',
     description:
       'A US-focused SEO agency that ranks you on Google and gets you cited in AI answers. Founder-led, month-to-month, reported in leads.',
     images: ['https://factoryjet.com/logo.png'],
@@ -607,6 +607,62 @@ export default function SeoServicePage() {
                     {svc.go} <span aria-hidden="true">&rarr;</span>
                   </div>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ─── 4b. SEO SERVICES INDEX (cream) — pillar → cluster links ──── */}
+        <section className="py-14 md:py-20" style={{ background: CREAM }}>
+          <div className="mx-auto max-w-[1180px] px-6 md:px-8">
+            <p className="font-fj-mono text-[12px] font-medium uppercase tracking-[0.13em]" style={{ color: ORANGE_DARK }}>
+              Explore our SEO services
+            </p>
+            <h2
+              className="fj-display mt-3.5 font-bold text-fj-ink"
+              style={{ fontSize: 'clamp(1.8rem, 3.8vw, 2.875rem)', lineHeight: 1.06, letterSpacing: '-0.025em' }}
+            >
+              One team, every <span className="italic" style={{ color: ORANGE }}>SEO surface</span> your store needs
+            </h2>
+            <p className="mt-4 max-w-[560px] font-fj-body font-medium text-fj-neutral-600" style={{ fontSize: '1.125rem', lineHeight: 1.6 }}>
+              Pick the focus that fits where you are — or talk to the founder and we&apos;ll map the right mix.
+            </p>
+
+            <div className="mt-10 grid grid-cols-1 gap-[18px] sm:grid-cols-2 md:grid-cols-3">
+              {[
+                { label: 'Local SEO', href: '/us/services/local-seo', desc: 'Win the Google Map Pack and near-me searches.', accent: false },
+                { label: 'E-commerce SEO', href: '/us/services/ecommerce-seo', desc: 'Rank product and collection pages that convert.', accent: false },
+                { label: 'Shopify SEO', href: '/us/services/shopify-seo', desc: 'Fix duplicate URLs and thin collections, rank your store.', accent: true },
+                { label: 'AI SEO', href: '/us/services/ai-seo', desc: 'Get cited by ChatGPT, Perplexity, and Google AI Overviews.', accent: false },
+                { label: 'SEO Audit', href: '/us/services/seo-audit', desc: 'Free technical site check with a prioritized fix list.', accent: false },
+                { label: 'Small Business SEO', href: '/us/services/small-business-seo', desc: 'Affordable managed SEO for growing local brands.', accent: false },
+              ].map((svc) => (
+                <Link
+                  key={svc.href}
+                  href={svc.href}
+                  className="flex min-h-[176px] flex-col rounded-3xl bg-white p-7 transition-transform duration-300 hover:-translate-y-1"
+                  style={{ border: svc.accent ? `2px solid ${ORANGE}` : '1px solid rgba(15,15,18,0.10)' }}
+                >
+                  <div className="flex items-center justify-between">
+                    <h3 className="fj-display text-[1.2rem] font-bold text-fj-ink" style={{ letterSpacing: '-0.015em' }}>
+                      {svc.label}
+                    </h3>
+                    {svc.accent && (
+                      <span
+                        className="font-fj-mono text-[10px] font-bold uppercase tracking-[0.08em] text-white"
+                        style={{ background: ORANGE_DARK, padding: '3px 9px', borderRadius: '999px' }}
+                      >
+                        New
+                      </span>
+                    )}
+                  </div>
+                  <p className="mt-2 flex-1 font-fj-body text-[0.9375rem] text-fj-neutral-600" style={{ lineHeight: 1.5 }}>
+                    {svc.desc}
+                  </p>
+                  <span className="mt-5 font-fj-body text-[0.8125rem] font-bold" style={{ color: ORANGE_DARK }}>
+                    Explore &rarr;
+                  </span>
+                </Link>
               ))}
             </div>
           </div>
