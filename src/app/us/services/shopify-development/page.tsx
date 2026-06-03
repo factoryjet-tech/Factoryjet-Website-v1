@@ -30,14 +30,14 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'Shopify Development Agency USA — Custom Stores From $3,999',
   description:
-    'Custom Shopify & Shopify Plus builds for US DTC brands. Headless commerce, migrations, theme builds — live in 7 days from $3,999. 120+ stores launched. Free audit.',
+    'Hire vetted Shopify developers & experts for custom theme development, store design & customization, Shopify Plus & migrations — live in 7 days from $3,999. Free audit.',
   authors: [{ name: 'FactoryJet' }],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Shopify Development Agency USA — Custom Stores From $3,999',
     description:
-      'Custom Shopify & Shopify Plus builds for US DTC brands. Headless commerce, migrations, theme builds — live in 7 days from $3,999. 120+ stores launched. Free audit.',
+      'Hire vetted Shopify developers & experts for custom theme development, store design & customization, Shopify Plus & migrations — live in 7 days from $3,999. Free audit.',
     url: 'https://factoryjet.com/us/services/shopify-development',
     images: [
       {
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Shopify Development Agency USA — Custom Stores From $3,999',
     description:
-      'Custom Shopify & Shopify Plus builds for US DTC brands. Headless commerce, migrations, theme builds — live in 7 days from $3,999. 120+ stores launched. Free audit.',
+      'Hire vetted Shopify developers & experts for custom theme development, store design & customization, Shopify Plus & migrations — live in 7 days from $3,999. Free audit.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
@@ -90,7 +90,7 @@ const faqSchema = {
       name: 'How much does a custom Shopify store cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s Shopify development starts at $3,999 for a custom theme build on an existing Shopify store. A full store build with custom theme, product setup, payment integration, and launch runs $7,500. Shopify Plus builds with advanced checkout customization, B2B features, and multi-store setups start at $15,000. All prices are significantly lower than comparable US Shopify agencies.',
+        text: 'FactoryJet\'s Shopify development starts at $3,999 for a custom theme build on an existing Shopify store. A full store build with custom theme, product setup, payment integration, and launch runs $7,500. Shopify Plus builds with advanced checkout customization, B2B features, and multi-store setups start at $15,000. Every project is fixed-price and milestone-paid, so you know the full cost up front — senior engineering without traditional-agency overhead or six-month timelines.',
       },
     },
     {
@@ -147,6 +147,38 @@ const faqSchema = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'All code is delivered to your GitHub repository on launch day. You own it. You can hire any Shopify developer to work on it, or continue with FactoryJet on a project or retainer basis. We document all custom sections, metafields, and app integrations during handover so future work doesn\'t require archaeology.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does it cost to hire a Shopify developer?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A fixed-scope FactoryJet build starts at $3,999 for a custom theme on an existing store and $7,500 for a full store build, with a firm quote after discovery. To hire a Shopify developer on an ongoing basis, retainers start at $299/month for up to 4 hours of dedicated development. US freelance Shopify developers typically run $50–$150/hour, which is why most brands prefer our fixed-scope or retainer model — you know the number before work starts.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I hire a dedicated Shopify expert for my store?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Every engagement assigns you a dedicated Shopify expert — the same engineer designs, builds, and supports your store, so there is no handoff between teams. You can keep that expert on after launch through a monthly retainer for theme updates, app integrations, and conversion experiments, with direct access to the person who wrote your store\'s code.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you offer custom Shopify theme development and customization?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Both. We build custom Shopify themes from scratch — designed in Figma and coded in clean, editable Liquid — and we customize existing themes when a full rebuild is not needed. Customization covers theme section development, app styling, metafield-driven content, checkout adjustments on Shopify Plus, and performance cleanup. You own the code in your GitHub repository so any future Shopify developer can maintain it.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you provide Shopify store design as well as development?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes — design and development are one engagement at FactoryJet. A conversion-focused Shopify website designer handles layout, hierarchy, trust signals, and mobile flow, while the engineer builds it in Liquid. You approve desktop and mobile mockups in Figma before any code is written, so the store you see in design is the store you launch.',
       },
     },
   ],
@@ -531,7 +563,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a custom Shopify store cost?',
     answer:
-      'FactoryJet\'s Shopify development starts at $3,999 for a custom Liquid theme build on an existing store. A full store build — custom theme, product catalog setup, payment configuration, shipping, apps, and launch — runs $7,500. Shopify Plus builds with checkout customization, B2B portals, or headless Hydrogen storefronts start at $15,000. All prices are significantly lower than comparable US Shopify agencies.',
+      'FactoryJet\'s Shopify development starts at $3,999 for a custom Liquid theme build on an existing store. A full store build — custom theme, product catalog setup, payment configuration, shipping, apps, and launch — runs $7,500. Shopify Plus builds with checkout customization, B2B portals, or headless Hydrogen storefronts start at $15,000. Every project is fixed-price and milestone-paid, so you know the full cost up front — senior engineering without traditional-agency overhead or six-month timelines.',
   },
   {
     category: 'pricing',
@@ -655,6 +687,30 @@ const FAQ_ITEMS = [
     question: 'Does FactoryJet offer ongoing Shopify support after launch?',
     answer:
       'Yes — every Shopify project includes a 30-day post-launch support window for bug fixes, minor adjustments, and launch questions. Beyond that, FactoryJet offers monthly retainer plans from $299/month: up to 4 hours of Shopify development, same-day priority bug response, and access to the engineer who built your store. Common retainer work includes: new collection page builds, metafield schema updates, app integrations, Klaviyo flow updates, seasonal landing pages for Black Friday/Cyber Monday, and performance optimization reviews. We also offer a one-time Shopify Audit package — a 2-hour review of conversion rate, technical SEO, Core Web Vitals, and checkout flow — that clients often run 60–90 days after launch.',
+  },
+  {
+    category: 'pricing',
+    question: 'How much does it cost to hire a Shopify developer?',
+    answer:
+      'It depends on whether you need a project or ongoing capacity. A fixed-scope FactoryJet build starts at $3,999 for a custom theme on an existing store and $7,500 for a full store build, with a firm quote after discovery. If you want to hire a Shopify developer on an ongoing basis, retainers start at $299/month for up to 4 hours of dedicated development. US freelance Shopify developers typically run $50–$150/hour with no fixed ceiling, which is why most brands prefer our fixed-scope or retainer model — you know the number before work starts.',
+  },
+  {
+    category: 'trust',
+    question: 'Can I hire a dedicated Shopify expert for my store?',
+    answer:
+      'Yes. Every engagement assigns you a dedicated Shopify expert — the same engineer designs, builds, and supports your store, so there is no handoff and no context lost between teams. You can keep that expert on after launch through a monthly retainer for theme updates, app integrations, conversion experiments, and seasonal work. You always have direct access to the person who actually wrote your store\'s code.',
+  },
+  {
+    category: 'platform',
+    question: 'Do you offer custom Shopify theme development and customization?',
+    answer:
+      'Both. We build custom Shopify themes from scratch — designed in Figma and coded in clean, editable Liquid — and we customize existing themes when a full rebuild isn\'t needed. Customization work covers theme section development, app styling, metafield-driven content, checkout adjustments on Shopify Plus, and performance cleanup. You own the code in your GitHub repository either way, so any future Shopify developer can maintain it.',
+  },
+  {
+    category: 'platform',
+    question: 'Do you provide Shopify store design as well as development?',
+    answer:
+      'Yes — design and development are one engagement at FactoryJet, not separate vendors. A conversion-focused Shopify website designer handles layout, hierarchy, trust signals, and mobile flow, while the engineer builds it in Liquid. You approve desktop and mobile mockups in Figma before any code is written, so the store you see in design is the store you launch.',
   },
 ];
 
@@ -1217,6 +1273,74 @@ export default function ShopifyPage() {
             },
           ]}
         />
+
+        {/* ── 13b. HIRE A SHOPIFY DEVELOPER ─────────────────────────────────── */}
+        <section className="py-14 md:py-20 bg-[#FAFAF7]">
+          <div className="max-w-6xl mx-auto px-6">
+            <p className="text-sm font-semibold text-[#F05A28] uppercase tracking-widest mb-3">HIRE SHOPIFY DEVELOPERS</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0F0F12] mb-5 max-w-3xl">Hire a Shopify developer or a dedicated Shopify expert</h2>
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              <div className="text-[#3A3A40] leading-relaxed space-y-4">
+                <p>
+                  Most US brands don&apos;t want a marketplace gig — they want to <strong>hire a Shopify developer</strong> who
+                  has actually shipped revenue-generating stores. Every FactoryJet engagement gives you a dedicated
+                  Shopify expert who designs, builds, and launches your store end to end, then stays reachable after
+                  go-live. No account-manager telephone game, no offshore handoffs you never see.
+                </p>
+                <p>
+                  Need ongoing capacity instead of a one-off build? You can hire a Shopify expert developer on a
+                  monthly retainer for theme work, app integrations, conversion experiments, and seasonal landing
+                  pages — the same engineer who built your store, not a rotating pool. Prefer a broader scope? See our
+                  full{' '}
+                  <Link href="/us/services/ecommerce-development" className="text-[#F05A28] font-medium underline underline-offset-2">ecommerce development services</Link>.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-[#E5E5E0] bg-white p-7">
+                <h3 className="text-xl font-bold text-[#0F0F12] mb-3">When teams hire a Shopify expert from FactoryJet</h3>
+                <ul className="space-y-2.5 text-[#3A3A40] text-[15px]">
+                  <li>• You&apos;ve outgrown a template and need a custom Shopify build</li>
+                  <li>• Your in-house team needs a Shopify developer for overflow work</li>
+                  <li>• A previous freelancer disappeared mid-project</li>
+                  <li>• You&apos;re migrating to Shopify and want it done once, correctly</li>
+                </ul>
+                <Link
+                  href="https://calendly.com/bhavesh-factoryjet/30min"
+                  className="mt-6 inline-flex items-center justify-center rounded-full bg-[#F05A28] px-6 py-3 text-white font-semibold hover:bg-[#d94d20] transition-colors"
+                >
+                  Talk to the Founder →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 13c. THEME DEVELOPMENT, CUSTOMIZATION & STORE DESIGN ───────────── */}
+        <section className="py-14 md:py-20 bg-white">
+          <div className="max-w-6xl mx-auto px-6">
+            <p className="text-sm font-semibold text-[#F05A28] uppercase tracking-widest mb-3">DESIGN &amp; CUSTOMIZATION</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0F0F12] mb-5 max-w-3xl">Shopify theme development, customization &amp; store design</h2>
+            <p className="text-[#3A3A40] leading-relaxed max-w-3xl mb-8">
+              Development and design aren&apos;t separate purchases at FactoryJet — every build pairs a Shopify website
+              designer with the engineer writing the Liquid. Whether you need custom Shopify theme development from
+              scratch, store customization on top of a premium theme, or a focused redesign of your highest-traffic
+              product pages, the work is handled by one team that owns both the look and the conversion math behind it.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="rounded-2xl border border-[#E5E5E0] bg-[#FAFAF7] p-6">
+                <h3 className="text-lg font-bold text-[#0F0F12] mb-2">Custom Shopify theme development</h3>
+                <p className="text-[#3A3A40] text-[15px] leading-relaxed">Designed in Figma, built in clean Liquid with reusable sections your team can edit — not a locked page builder.</p>
+              </div>
+              <div className="rounded-2xl border border-[#E5E5E0] bg-[#FAFAF7] p-6">
+                <h3 className="text-lg font-bold text-[#0F0F12] mb-2">Shopify store customization</h3>
+                <p className="text-[#3A3A40] text-[15px] leading-relaxed">Theme tweaks, app styling, metafield-driven content, and checkout adjustments on your existing store — without a full rebuild.</p>
+              </div>
+              <div className="rounded-2xl border border-[#E5E5E0] bg-[#FAFAF7] p-6">
+                <h3 className="text-lg font-bold text-[#0F0F12] mb-2">Shopify store design &amp; redesign</h3>
+                <p className="text-[#3A3A40] text-[15px] leading-relaxed">A conversion-first Shopify website designer reworks hierarchy, trust signals, and mobile flow — the things that move revenue.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* ── 14. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
