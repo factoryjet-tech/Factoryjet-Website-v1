@@ -28,15 +28,15 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development USA | Shopify & Custom Stores | FactoryJet',
+  title: 'Ecommerce Development Company USA | Custom Online Stores | FactoryJet',
   description:
-    'High-converting Shopify, WooCommerce & BigCommerce stores for US businesses. Mobile-first, Lighthouse 95+ Starting at $3,999.',
+    'Hire ecommerce developers from a custom ecommerce development company. High-converting Shopify, WooCommerce & custom stores for US businesses. Fixed-price from $3,999.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'E-Commerce Development USA | Custom Online Stores | FactoryJet',
+    title: 'Ecommerce Development Company USA | Custom Online Stores | FactoryJet',
     description:
-      'Shopify, WooCommerce, BigCommerce, and custom e-commerce for US businesses. fixed-price. Conversion-optimized. Starting at $3,999.',
+      'Hire ecommerce developers for custom online stores. Shopify, WooCommerce & custom ecommerce development for US businesses. Fixed-price from $3,999.',
     url: 'https://factoryjet.com/us/services/ecommerce-development',
     images: [
       {
@@ -50,9 +50,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'E-Commerce Development USA | Custom Online Stores | FactoryJet',
+    title: 'Ecommerce Development Company USA | Custom Online Stores | FactoryJet',
     description:
-      'Shopify, WooCommerce, BigCommerce, and custom e-commerce for US businesses. fixed-price, milestone-paid.',
+      'Hire ecommerce developers — a custom ecommerce development company for US businesses. Fixed-price, milestone-paid.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
@@ -93,7 +93,7 @@ const faqSchema = {
       name: 'How much does e-commerce development cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s e-commerce development starts at $3,999 for a platform store build (Shopify or WooCommerce with a custom theme). A full store with advanced features — product configurator, subscription logic, B2B pricing, or a headless frontend — runs $9,500–$20,000. Fully custom e-commerce platforms with proprietary product logic, multi-vendor marketplaces, or complex ERP integrations start at $20,000 and are scoped after discovery. All prices are significantly lower than comparable traditional agencies.',
+        text: 'FactoryJet\'s e-commerce development starts at $3,999 for a platform store build (Shopify or WooCommerce with a custom theme). A full store with advanced features — product configurator, subscription logic, B2B pricing, or a headless frontend — runs $9,500–$20,000. Fully custom e-commerce platforms with proprietary product logic, multi-vendor marketplaces, or complex ERP integrations start at $20,000 and are scoped after discovery. Every project is fixed-price and milestone-paid, so you know the full cost up front — senior engineering without traditional-agency overhead or six-month timelines.',
       },
     },
     {
@@ -126,6 +126,38 @@ const faqSchema = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Every store we build includes technical e-commerce SEO: Product and BreadcrumbList schema markup for Google Shopping eligibility, optimized meta titles and descriptions for product and collection templates, canonical URLs to prevent duplicate content issues (common on Shopify and WooCommerce), compressed images with descriptive alt text, Core Web Vitals optimization, and sitemap submission to Google Search Console. Content SEO — collection page copy, blog strategy, keyword research — is available as an add-on.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does it cost to hire ecommerce developers?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'FactoryJet works on fixed-price scopes. A platform store build starts at $3,999, advanced stores with subscription or B2B logic run $9,500+, and fully custom ecommerce platforms start at $20,000, scoped after a free discovery call. To hire ecommerce developers on an ongoing basis, retainers start at $299/month for up to 4 hours of dedicated development. US freelance ecommerce developers typically charge $50–$150/hour with no ceiling, which is why most businesses prefer our fixed-scope model.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What does a custom ecommerce development company actually do?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A custom ecommerce development company designs and builds your online store end to end rather than handing you a template: custom storefront design, custom theme or platform development, payment and shipping configuration, ERP/3PL/POS integrations, SEO-safe migrations, QA, and launch — delivered by a dedicated team. You get the full codebase on GitHub at launch, so you are never locked in.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I hire a dedicated ecommerce developer, or only a full team?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Both. For a build, you get a full team (designer, developer, QA) coordinated by one point of contact. For ongoing work, you can hire a dedicated ecommerce developer on a monthly retainer — the same engineer who knows your codebase, available for feature work, integrations, and conversion experiments.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you build custom ecommerce platforms, or only Shopify and WooCommerce stores?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Both. Most US businesses are best served by Shopify or WooCommerce, and that is where we start. When off-the-shelf platforms can\'t support your product logic — multi-vendor marketplaces, proprietary pricing engines, deep ERP coupling — we operate as a custom ecommerce software development company and build a bespoke platform, typically headless on a React/Next.js front end.',
       },
     },
   ],
@@ -530,7 +562,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does e-commerce development cost?',
     answer:
-      'FactoryJet\'s e-commerce development starts at $3,999 for a platform store build (Shopify or WooCommerce with a custom theme, products, payments, and launch). Advanced stores with subscription logic, B2B pricing, or product configurators run $9,500. Headless storefronts, custom platforms, and multi-vendor marketplaces start at $20,000 and are scoped after a free discovery call. All prices are significantly lower than comparable US e-commerce agencies.',
+      'FactoryJet\'s e-commerce development starts at $3,999 for a platform store build (Shopify or WooCommerce with a custom theme, products, payments, and launch). Advanced stores with subscription logic, B2B pricing, or product configurators run $9,500. Headless storefronts, custom platforms, and multi-vendor marketplaces start at $20,000 and are scoped after a free discovery call. Every project is fixed-price and milestone-paid, so you know the full cost up front — senior engineering without traditional-agency overhead or six-month timelines.',
   },
   {
     category: 'pricing',
@@ -634,6 +666,30 @@ const FAQ_ITEMS = [
     question: 'How do I know if I need an e-commerce agency or a freelancer for my store?',
     answer:
       'A freelancer works well for: a simple theme installation, a single-app integration, or a small catalog store with no custom requirements. An agency makes sense when: you need a custom design (not a theme), you\'re migrating from another platform with SEO equity to protect, you have complex product logic (variants, subscriptions, B2B pricing), or you need the project delivered on a deadline. FactoryJet operates at agency quality with transparent fixed pricing — you get a full team (designer, developer, QA) at the cost of a mid-market freelancer, with a 7-day delivery guarantee on standard Shopify builds.',
+  },
+  {
+    category: 'pricing',
+    question: 'How much does it cost to hire ecommerce developers?',
+    answer:
+      'FactoryJet works on fixed-price scopes rather than open-ended hourly rates. A platform store build starts at $3,999, advanced stores with subscription or B2B logic run $9,500+, and fully custom ecommerce platforms start at $20,000, scoped after a free discovery call. If you want to hire ecommerce developers on an ongoing basis, retainers start at $299/month for up to 4 hours of dedicated development. US freelance ecommerce developers typically charge $50–$150/hour with no ceiling, which is why most businesses prefer our fixed-scope model.',
+  },
+  {
+    category: 'trust',
+    question: 'What does a custom ecommerce development company actually do?',
+    answer:
+      'A custom ecommerce development company designs and builds your online store end to end rather than handing you a template. For FactoryJet that means: custom storefront design, custom theme or platform development, payment and shipping configuration, ERP/3PL/POS integrations, SEO-safe migrations, QA, and launch — delivered by a dedicated team. You get the full codebase on GitHub at launch, so you are never locked into us to keep the store running.',
+  },
+  {
+    category: 'trust',
+    question: 'Can I hire a dedicated ecommerce developer, or only a full team?',
+    answer:
+      'Both options are available. For a build, you get a full team (designer, developer, QA) coordinated by one point of contact. For ongoing work, you can hire a dedicated ecommerce developer on a monthly retainer — the same engineer who knows your codebase, available for feature work, integrations, and conversion experiments without re-onboarding each time.',
+  },
+  {
+    category: 'platform',
+    question: 'Do you build custom ecommerce platforms, or only Shopify and WooCommerce stores?',
+    answer:
+      'Both. Most US businesses are best served by Shopify or WooCommerce, and that is where we start the conversation. But when off-the-shelf platforms can\'t support your product logic — multi-vendor marketplaces, proprietary pricing engines, deep ERP coupling — we operate as a custom ecommerce software development company and build a bespoke platform, typically headless on a React/Next.js front end. We recommend the simplest option that fits, not the most expensive.',
   },
 ];
 
@@ -1208,6 +1264,50 @@ export default function EcommerceDevelopmentPage() {
             },
           ]}
         />
+
+        {/* ── 13b. HIRE ECOMMERCE DEVELOPERS ────────────────────────────────── */}
+        <section className="py-14 md:py-20 bg-[#FAFAF7]">
+          <div className="max-w-6xl mx-auto px-6">
+            <p className="text-sm font-semibold text-[#F05A28] uppercase tracking-widest mb-3">HIRE ECOMMERCE DEVELOPERS</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0F0F12] mb-5 max-w-3xl">Hire ecommerce developers from a custom ecommerce development company</h2>
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              <div className="text-[#3A3A40] leading-relaxed space-y-4">
+                <p>
+                  When you <strong>hire ecommerce developers</strong> through FactoryJet, you get a full team — designer,
+                  developer, and QA — not a single freelancer juggling five other projects. As a custom ecommerce
+                  development company, we&apos;ve shipped 500+ stores for US businesses since 1999, from first-store DTC
+                  brands to multi-vendor marketplaces and ERP-integrated B2B platforms.
+                </p>
+                <p>
+                  You can hire a dedicated ecommerce developer for a fixed-scope build, or keep a team on retainer for
+                  ongoing feature work. Either way the codebase is yours on GitHub from launch day — no lock-in, no
+                  platform tax.
+                </p>
+                <p>
+                  Know your platform already? Go straight to{' '}
+                  <Link href="/us/services/shopify-development" className="text-[#F05A28] font-medium underline underline-offset-2">Shopify development</Link>,{' '}
+                  <Link href="/us/services/woocommerce-development" className="text-[#F05A28] font-medium underline underline-offset-2">WooCommerce development</Link>, or{' '}
+                  <Link href="/us/services/magento-development" className="text-[#F05A28] font-medium underline underline-offset-2">Magento development</Link>.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-[#E5E5E0] bg-white p-7">
+                <h3 className="text-xl font-bold text-[#0F0F12] mb-3">What a custom ecommerce development company handles</h3>
+                <ul className="space-y-2.5 text-[#3A3A40] text-[15px]">
+                  <li>• Custom storefronts on Shopify, WooCommerce &amp; Magento</li>
+                  <li>• Fully custom ecommerce platforms &amp; marketplaces</li>
+                  <li>• ERP, 3PL, POS &amp; payment integrations</li>
+                  <li>• Migrations with SEO-safe 301 redirect mapping</li>
+                </ul>
+                <Link
+                  href="https://calendly.com/bhavesh-factoryjet/30min"
+                  className="mt-6 inline-flex items-center justify-center rounded-full bg-[#F05A28] px-6 py-3 text-white font-semibold hover:bg-[#d94d20] transition-colors"
+                >
+                  Talk to the Founder →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* ── 14. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
