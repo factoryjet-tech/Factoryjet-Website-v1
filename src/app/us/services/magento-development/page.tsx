@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import Link from 'next/link';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import { magentoDevelopmentAlternates } from '@/data/hreflangMap';
 
@@ -30,15 +31,15 @@ import FinalCTA from '@/components/v2/FinalCTA';
 --------------------------------------------------------------------------─-- */
 
 export const metadata: Metadata = {
-  title: 'Magento Development — Custom Adobe Commerce | FactoryJet',
+  title: 'Magento Development Company USA | Hire Magento Developers | FactoryJet',
   description:
-    'Expert Magento development for US businesses. Custom modules, migrations & performance optimization. fixed-price, milestone-paid. Free consultation.',
+    'Hire certified Magento developers from a US Magento development company. Magento 2 & Adobe Commerce builds, custom modules, migrations & performance — fixed-price. Free consultation.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Magento Development Services | FactoryJet',
+    title: 'Magento Development Company USA | Hire Magento Developers | FactoryJet',
     description:
-      'Custom Magento and Adobe Commerce development for US businesses. Module development, migrations from Magento 1, performance optimization, and full-stack builds — delivered by senior engineers.',
+      'Hire certified Magento developers for US businesses. Magento 2 & Adobe Commerce builds, custom modules, migrations from Magento 1, and performance optimization — delivered by senior engineers.',
     url: 'https://factoryjet.com/us/services/magento-development',
     images: [
       {
@@ -52,9 +53,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Magento Development Services | FactoryJet',
+    title: 'Magento Development Company USA | Hire Magento Developers | FactoryJet',
     description:
-      'Custom Magento and Adobe Commerce development. Module builds, migrations, performance tuning',
+      'Hire certified Magento developers — Magento 2 & Adobe Commerce builds, custom modules, migrations & performance tuning.',
     images: ['https://factoryjet.com/images/us/hero-us.webp'],
   },
   alternates: {
@@ -128,6 +129,38 @@ const faqSchema = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'FactoryJet provides fixed-price Magento development proposals based on your specific scope. Custom module development starts at $2,999. Full Magento 2 store builds start at $7,999. Magento 1 to Magento 2 migrations start at $4,999. All projects include senior Magento-certified developers, code documentation, and a 30-day post-launch support window. Request a free technical consultation for a custom quote.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I hire certified Magento developers?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Book a discovery call and we assign a dedicated team of senior, Magento-certified developers matched to your project — Magento 2, Adobe Commerce, B2B, or migration. You can hire Magento developers for a fixed-scope build or on a monthly retainer for ongoing module development, upgrades, and performance work, on fixed-price proposals approved before work starts. US freelance Magento developers typically charge $70–$150/hour, which is why most businesses prefer our scoped-team model.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you work with Magento 2 and Adobe Commerce?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes — both. We build on Magento 2 Open Source for most small and mid-market stores, and on Adobe Commerce when you need advanced B2B, customer segmentation, or merchandising features, typically at $5M+ GMV. Our certified developers handle architecture, custom module development, theme work, and integrations on either edition, and recommend the edition that fits your business rather than the most expensive option.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does Magento development cost?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'FactoryJet works on fixed-price proposals. Custom Magento module development starts at $2,999, full Magento 2 store builds start at $7,999, and Magento 1 to Magento 2 migrations start at $4,999, scoped after a technical consultation. To hire Magento developers on an ongoing basis, retainers cover module work, upgrades, and performance monitoring. You get the cost up front rather than an open-ended hourly meter.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can you migrate my Magento 1 store to Magento 2?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Magento 1 reached end of life and no longer receives security patches, so migrating protects your store as much as it adds features. We migrate your catalog, customers, orders, and SEO URLs to Magento 2 or Adobe Commerce, rebuild custom functionality that does not carry over, map every changed URL with 301 redirects to protect rankings, and test the full checkout on staging before switching DNS. Migrations start at $4,999 and are scoped after a technical audit.',
       },
     },
   ],
@@ -521,6 +554,26 @@ const FAQ_ITEMS = [
     answer: `FactoryJet serves US clients exclusively. We schedule all client communication (calls, reviews, demos) during US business hours — typically 9 AM–5 PM Eastern. Daily async updates are provided through your preferred tool (Slack, email, or project management). For urgent production issues, we provide same-day response during business hours and best-effort off-hours response for critical emergencies.`,
     category: 'factoryjet',
   },
+  {
+    question: 'How do I hire certified Magento developers?',
+    answer: `Book a discovery call and we assign a dedicated team of senior, Magento-certified developers matched to your project — Magento 2, Adobe Commerce, B2B, or migration. You can hire Magento developers for a fixed-scope build or on a monthly retainer for ongoing module development, upgrades, and performance work. Every engagement runs on fixed-price proposals you approve before work starts, so there is no open-ended hourly billing. US freelance Magento developers typically charge $70–$150/hour, which is why most businesses prefer our scoped-team model.`,
+    category: 'factoryjet',
+  },
+  {
+    question: 'Do you work with Magento 2 and Adobe Commerce?',
+    answer: `Yes — both. We build on Magento 2 Open Source for most small and mid-market stores, and on Adobe Commerce (the paid edition) when you need advanced B2B, customer segmentation, or merchandising features, typically at $5M+ GMV. Our certified developers handle architecture, custom module development, theme work, and third-party integrations on either edition, and we'll recommend the one that fits your business rather than the most expensive option.`,
+    category: 'platform',
+  },
+  {
+    question: 'How much does Magento development cost?',
+    answer: `FactoryJet works on fixed-price proposals. Custom Magento module development starts at $2,999, full Magento 2 store builds start at $7,999, and Magento 1 to Magento 2 migrations start at $4,999, scoped after a technical consultation. To hire Magento developers on an ongoing basis, retainers cover module work, upgrades, and performance monitoring. You get the cost up front rather than an open-ended hourly meter.`,
+    category: 'cost',
+  },
+  {
+    question: 'Can you migrate my Magento 1 store to Magento 2?',
+    answer: `Yes — Magento 1 reached end of life and no longer receives security patches, so migrating is about protecting your store as much as gaining features. We migrate your catalog, customers, orders, and SEO URLs to Magento 2 or Adobe Commerce, rebuild custom functionality that doesn't carry over, map every changed URL with 301 redirects to protect rankings, and test the full checkout on staging before switching DNS. Migrations start at $4,999 and are scoped after a technical audit.`,
+    category: 'migration',
+  },
 ];
 
 const howToSchema = {
@@ -868,6 +921,45 @@ export default function MagentoDevelopmentPage() {
           eyebrow="WHAT CLIENTS SAY"
           headline="4.9/5 across 500+ projects. Real results from real businesses."
         />
+
+        {/* -- 12b. HIRE MAGENTO DEVELOPERS ----------------------------------- */}
+        <section className="py-14 md:py-20 bg-[#FAFAF7]">
+          <div className="max-w-6xl mx-auto px-6">
+            <p className="text-sm font-semibold text-[#F05A28] uppercase tracking-widest mb-3">HIRE MAGENTO DEVELOPERS</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0F0F12] mb-5 max-w-3xl">Hire certified Magento developers (Magento 2 &amp; Adobe Commerce)</h2>
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              <div className="text-[#3A3A40] leading-relaxed space-y-4">
+                <p>
+                  Magento is unforgiving — a wrong architecture decision compounds for years. When you{' '}
+                  <strong>hire Magento developers</strong> through FactoryJet, you get senior, Magento-certified
+                  engineers who have shipped Magento 2 and Adobe Commerce stores at scale, not generalists learning on
+                  your budget. As a US Magento development company, we assign a dedicated team that owns architecture,
+                  build, and performance end to end.
+                </p>
+                <p>
+                  Need ongoing capacity? Hire a dedicated Magento expert on a monthly retainer for module development,
+                  upgrades, and performance work. For a broader scope, see our{' '}
+                  <Link href="/us/services/ecommerce-development" className="text-[#F05A28] font-medium underline underline-offset-2">ecommerce development services</Link>.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-[#E5E5E0] bg-white p-7">
+                <h3 className="text-xl font-bold text-[#0F0F12] mb-3">When teams hire a certified Magento developer</h3>
+                <ul className="space-y-2.5 text-[#3A3A40] text-[15px]">
+                  <li>• Building or replatforming on Magento 2 / Adobe Commerce</li>
+                  <li>• Migrating from Magento 1 before it costs you sales</li>
+                  <li>• Custom module &amp; B2B workflow development</li>
+                  <li>• Performance, security &amp; Core Web Vitals rescue</li>
+                </ul>
+                <Link
+                  href="https://calendly.com/bhavesh-factoryjet/30min"
+                  className="mt-6 inline-flex items-center justify-center rounded-full bg-[#F05A28] px-6 py-3 text-white font-semibold hover:bg-[#d94d20] transition-colors"
+                >
+                  Talk to the Founder →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* -- 13. FAQ -------------------------------------------------------- */}
         <FAQ
