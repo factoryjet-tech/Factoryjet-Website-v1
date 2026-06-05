@@ -138,6 +138,24 @@ try {
       warns.push(`_redirects — "${s}" is both a redirect source and a destination (possible loop; reconcile direction)`);
     }
   }
+
+  /* ── 5c. redirect source shadowed by a live page (ZOMBIE) ───────────────── */
+  // If a 301 source ALSO has a real page, Cloudflare serves the page (static
+  // asset precedence) and the redirect never fires — the old URL stays live as
+  // a duplicate. This is the /services/web-design/* + Mumbai failure mode.
+  const REDIRECT_SOURCE_ALLOW = new Set([
+    // add a source path here only if a live page at that path is intentional
+  ]);
+  for (const s of srcs) {
+    if (s === '/' || s.includes('*') || s.includes(':') || REDIRECT_SOURCE_ALLOW.has(s)) continue;
+    const base = join(APP, ...s.split('/').filter(Boolean));
+    const hasPage = ['page.tsx', 'page.ts', 'page.jsx', 'page.mdx'].some((f) => {
+      try { statSync(join(base, f)); return true; } catch { return false; }
+    });
+    if (hasPage) {
+      fatals.push(`_redirects — "${s}" 301s but a live page exists at src/app${s}/page.tsx; the redirect can't fire (zombie duplicate). Delete the page (or remove the redirect).`);
+    }
+  }
 } catch { /* no _redirects */ }
 
 /* ── report ──────────────────────────────────────────────────────────────── */
