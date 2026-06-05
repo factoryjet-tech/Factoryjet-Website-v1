@@ -339,7 +339,7 @@ const GGN_FAQ_ITEMS = [
     category: 'local',
     question: 'How does FactoryJet compare to Gurgaon web agencies?',
     answer:
-      "Premium Gurgaon web agencies typically charge ₹1,50,000–₹5,00,000 for a comparable project and deliver in 8–20 weeks. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at 60–70% less.",
+      "Premium Gurgaon web agencies typically charge ₹1,50,000–₹5,00,000 for a comparable project and deliver in 8–20 weeks. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at a fixed, published price.",
   },
 
   /* ── Support & Ownership ── */
@@ -719,7 +719,7 @@ export default function GurgaonWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Gurgaon Businesses Choose FactoryJet Over Local Premium Agencies"
-          lead="Premium Gurgaon web agencies typically charge ₹1,50,000–₹5,00,000 for a comparable project and take 8–20 weeks to deliver. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, a codebase you own outright. At 60–70% below the Gurgaon premium agency benchmark for the same scope."
+          lead="Premium Gurgaon web agencies typically charge ₹1,50,000–₹5,00,000 for a comparable project and take 8–20 weeks to deliver. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, a codebase you own outright. Pricing is fixed and published upfront for the same scope."
           pillars={[
             {
               icon: '⚡',

@@ -69,7 +69,7 @@ export default function Page() {
         <Hero
           eyebrow="E-COMMERCE DEVELOPMENT · CHATTANOOGA"
           headline="Shopify Developer Chattanooga for Tennessee Businesses"
-          lead="Gig City runs on 10 Gbps fiber and forward-thinking ambition. FactoryJet builds the Shopify stores to match — live in 7 days from $2,999, at 50–60% below local agency rates. Shopify, WooCommerce & AI-powered stores for Chattanooga's outdoor brands, manufacturers, craft beverage companies, and CO.LAB-era innovators. 500+ projects, 4.9★."
+          lead="Gig City runs on 10 Gbps fiber and forward-thinking ambition. FactoryJet builds the Shopify stores to match — live in 7 days from $2,999, at a fixed, published price. Shopify, WooCommerce & AI-powered stores for Chattanooga's outdoor brands, manufacturers, craft beverage companies, and CO.LAB-era innovators. 500+ projects, 4.9★."
           primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
           trustItems={['Shopify stores from $2,999', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Chattanooga, TN" badgeLabel="Live in 7 days" />}
@@ -153,7 +153,7 @@ export default function Page() {
           eyebrow="WHY FACTORYJET"
           headline="Why Chattanooga Businesses Choose FactoryJet Over Local Agencies"
           lead={
-            "Riverworks Marketing and Papercut Interactive have served Chattanooga since the early 2000s — but neither offers Shopify specialization or AI-powered e-commerce at SMB pricing. JLB Works has 800+ clients and builds primarily on WordPress with no dedicated Shopify practice. Slamdot has built on WordPress since 2005. The national agencies ranking for 'shopify developer chattanooga' — Growisto, WebCitz — quote 7–16 week timelines, publish no pricing, and have zero Gig City market knowledge.\n\nFactoryJet launches full Shopify stores in 7 days from $2,999 — 50–60% below the Chattanooga agency benchmark. We know Hamilton County's 9.25% combined sales tax structure, the Tennessee River outdoor economy, CO.LAB's startup pipeline, and the GIGTANK ecosystem that defines Chattanooga commerce."
+            "Riverworks Marketing and Papercut Interactive have served Chattanooga since the early 2000s — but neither offers Shopify specialization or AI-powered e-commerce at SMB pricing. JLB Works has 800+ clients and builds primarily on WordPress with no dedicated Shopify practice. Slamdot has built on WordPress since 2005. The national agencies ranking for 'shopify developer chattanooga' — Growisto, WebCitz — quote 7–16 week timelines, publish no pricing, and have zero Gig City market knowledge.\n\nFactoryJet launches full Shopify stores in 7 days from $2,999 — at a fixed, published price. We know Hamilton County's 9.25% combined sales tax structure, the Tennessee River outdoor economy, CO.LAB's startup pipeline, and the GIGTANK ecosystem that defines Chattanooga commerce."
           }
           pillars={[
             {
@@ -283,7 +283,7 @@ export default function Page() {
           eyebrow="TRANSPARENT PRICING"
           headline="Transparent Pricing for Chattanooga E-Commerce Businesses"
           lead={
-            "Chattanooga agency rates for a comparable Shopify build typically run $8,000–$25,000 — and national agencies like WebCitz and Growisto quote $10,000–$50,000 with multi-month timelines. FactoryJet delivers a full custom Shopify store from $2,999 — 50–60% below the Chattanooga benchmark — with a faster timeline and a codebase you own outright. Stores ship in 7 days. No retainer required."
+            "Chattanooga agency rates for a comparable Shopify build typically run $8,000–$25,000 — and national agencies like WebCitz and Growisto quote $10,000–$50,000 with multi-month timelines. FactoryJet delivers a full custom Shopify store from $2,999 — at a fixed, published price — with a faster timeline and a codebase you own outright. Stores ship in 7 days. No retainer required."
           }
           tiers={[
             {

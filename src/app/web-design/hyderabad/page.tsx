@@ -341,7 +341,7 @@ const HYD_FAQ_ITEMS = [
     category: 'local',
     question: 'How does FactoryJet compare to Hyderabad web agencies?',
     answer:
-      "Hyderabad web agencies typically charge ₹1,25,000–₹3,50,000 for a comparable project and deliver in 8–16 weeks. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster site, shorter timeline, codebase you own — at 60–70% less.",
+      "Hyderabad web agencies typically charge ₹1,25,000–₹3,50,000 for a comparable project and deliver in 8–16 weeks. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster site, shorter timeline, codebase you own — at a fixed, published price.",
   },
 
   /* ── Support & Ownership ── */
@@ -713,7 +713,7 @@ export default function HyderabadWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Hyderabad Businesses Choose FactoryJet Over Local Agencies"
-          lead="Hyderabad web agencies typically charge ₹1,25,000–₹3,50,000 for a comparable project and take 8–16 weeks to deliver — without publishing their rates upfront. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. At 60–70% below the Hyderabad agency benchmark for the same scope."
+          lead="Hyderabad web agencies typically charge ₹1,25,000–₹3,50,000 for a comparable project and take 8–16 weeks to deliver — without publishing their rates upfront. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and published upfront for the same scope."
           pillars={[
             {
               icon: '⚡',

@@ -305,7 +305,7 @@ const WP_MARKET_STATS = [
   },
   {
     value: '₹29,999',
-    label: 'starting price for a custom WordPress site from FactoryJet — 60–70% less than most Indian agencies',
+    label: 'starting price for a custom WordPress site from FactoryJet — at a fixed, published price',
     sourceUrl: 'https://factoryjet.com/wordpress-development',
     sourceLabel: 'FactoryJet Pricing',
   },
@@ -497,7 +497,7 @@ const WP_FAQ_ITEMS = [
     category: 'pricing',
     question: 'Why is FactoryJet cheaper than other WordPress agencies in India?',
     answer:
-      "We are a specialised engineering team, not a full-service digital agency. No account management layers, no generalist designers who also do social media, no large office in an expensive city, and no inflated project manager markups. The same Figma-to-code process, the same Lighthouse audit before handover, the same technical SEO setup — at 60–70% less than a comparable Indian agency. We have been building websites since 1999. That experience is priced into the quality, not the overhead.",
+      "We are a specialised engineering team, not a full-service digital agency. No account management layers, no generalist designers who also do social media, no large office in an expensive city, and no inflated project manager markups. The same Figma-to-code process, the same Lighthouse audit before handover, the same technical SEO setup — at a fixed, published price. We have been building websites since 1999. That experience is priced into the quality, not the overhead.",
   },
 
   /* ── WordPress vs. Alternatives ── */

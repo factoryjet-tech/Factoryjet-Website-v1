@@ -15,7 +15,7 @@ export const post: BlogPost = {
   meta: {
     title: 'Web Design Miami FL: Small Business Guide 2026 | FactoryJet',
     description:
-      'Miami FL small businesses: bilingual web design, Lighthouse 100/100, 7-day delivery starting at $1,999. 60% cheaper than Miami local agencies. Complete 2026 guide.',
+      'Miami FL small businesses: bilingual web design, Lighthouse 100/100, 7-day delivery starting at $1,999. Pricing is fixed and published upfront. Complete 2026 guide.',
   },
   keyTakeaways: [
     'Miami web design agencies charge $10,000–$30,000 for a professional small business website — driven by South Florida\'s premium real estate and talent costs.',

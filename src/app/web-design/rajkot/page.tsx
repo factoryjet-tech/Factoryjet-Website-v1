@@ -345,7 +345,7 @@ const RJT_FAQ_ITEMS = [
     category: 'local',
     question: 'How does FactoryJet compare to Rajkot web agencies?',
     answer:
-      "Rajkot web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and deliver in 6–16 weeks. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at 60–70% less.",
+      "Rajkot web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and deliver in 6–16 weeks. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at a fixed, published price.",
   },
 
   /* ── Support & Ownership ── */
@@ -719,7 +719,7 @@ export default function RajkotWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Rajkot Businesses Choose FactoryJet Over Local Agencies"
-          lead="Rajkot web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and take 6–16 weeks to deliver. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, a codebase you own outright. At 60–70% below the Rajkot agency benchmark for the same scope."
+          lead="Rajkot web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and take 6–16 weeks to deliver. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, a codebase you own outright. Pricing is fixed and published upfront for the same scope."
           pillars={[
             {
               icon: '⚡',

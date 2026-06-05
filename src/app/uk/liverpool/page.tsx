@@ -5,7 +5,7 @@ import LiverpoolPage from "./LiverpoolPage";
 export const metadata: Metadata = {
   title: "Web Design Agency Liverpool | AI-Native | FactoryJet",
   description:
-    "AI-native web design, AI agents & AI SEO agency in Liverpool. 50–60% below local agency rates. Serving Albert Dock to Baltic Triangle. Free quote today.",
+    "AI-native web design, AI agents & AI SEO agency in Liverpool. Pricing is fixed and published upfront. Serving Albert Dock to Baltic Triangle. Free quote today.",
   alternates: {
     canonical: "https://factoryjet.com/uk/liverpool",
   },
@@ -39,7 +39,7 @@ const schema = {
         "addressRegion": "Merseyside",
       },
       "description":
-        "AI-native web design, e-commerce, AI agent development, and AI SEO agency serving Liverpool businesses. 50–60% below local agency rates.",
+        "AI-native web design, e-commerce, AI agent development, and AI SEO agency serving Liverpool businesses. Pricing is fixed and published upfront.",
       "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "150", "bestRating": "5", "worstRating": "1"},
     },
     {
@@ -67,7 +67,7 @@ const schema = {
           "name": "How much does web design cost in Liverpool?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Web design in Liverpool typically costs £3,500–£8,000 for a brochure website with an established local agency. FactoryJet builds comparable-quality sites at 50–60% below those rates — typically £1,500–£3,200 for brochure sites and £2,800–£9,000 for e-commerce.",
+            "text": "Web design in Liverpool typically costs £3,500–£8,000 for a brochure website with an established local agency. FactoryJet builds comparable-quality sites at a fixed, published price — typically £1,500–£3,200 for brochure sites and £2,800–£9,000 for e-commerce.",
           },
         },
         {
@@ -75,7 +75,7 @@ const schema = {
           "name": "What is the best web design agency in Liverpool?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Liverpool has several strong web agencies: Pixus (15+ years, Shopify Partner), Webrevolve (1,000+ projects), and Velstar (Shopify Platinum Partner) are the most established. For AI-native web design, AI SEO, and AI agent development, FactoryJet is the only Liverpool-focused agency operating at this capability level at 50–60% below local rates.",
+            "text": "Liverpool has several strong web agencies: Pixus (15+ years, Shopify Partner), Webrevolve (1,000+ projects), and Velstar (Shopify Platinum Partner) are the most established. For AI-native web design, AI SEO, and AI agent development, FactoryJet is the only Liverpool-focused agency operating at this capability level at a fixed, published price.",
           },
         },
         {
@@ -107,7 +107,7 @@ const schema = {
           "name": "Does FactoryJet build Shopify Plus stores for Liverpool businesses?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. We build Shopify Plus stores at 50–60% below the Liverpool market rate, delivering headless Shopify, custom checkout, Shopify Flow automation, and third-party integrations.",
+            "text": "Yes. We build Shopify Plus stores at a fixed, published price, delivering headless Shopify, custom checkout, Shopify Flow automation, and third-party integrations.",
           },
         },
         {

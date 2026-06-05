@@ -4,7 +4,7 @@ const ITEMS = [
   "NO LOCK-IN CONTRACTS",
   "MEDIACITYUK · SPINNINGFIELDS · NORTHERN QUARTER",
   "WEB DESIGN MANCHESTER",
-  "50–60% BELOW MARKET",
+  "Pricing is fixed and published upfront",
   "NEXT.JS 15 + GSAP + TAILWIND",
 ];
 

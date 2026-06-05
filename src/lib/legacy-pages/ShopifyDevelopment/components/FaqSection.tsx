@@ -49,7 +49,7 @@ export default function FaqSection({ handleCta, faqFilter, setFaqFilter, faqSear
           <h3>How much does Shopify e-commerce development cost?</h3>
           <span className="fq-chev"><svg viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd"/></svg></span>
         </button>
-        <div className="fq-a"><div className="fq-a-body">Shopify development pricing starts from <span className="fq-hl">$5,000–$15,000</span> for theme-based stores, <span className="fq-hl">$15,000–$40,000</span> for custom Shopify builds, and <span className="fq-hl">$25,000–$150,000+</span> for Shopify Plus and enterprise projects. Pricing depends on design complexity, integrations, migration scope, custom apps, and B2B requirements. FactoryJet delivers enterprise-grade quality at <span className="fq-hl">40–60% below US/UK agency rates</span>.</div></div>
+        <div className="fq-a"><div className="fq-a-body">Shopify development pricing starts from <span className="fq-hl">$5,000–$15,000</span> for theme-based stores, <span className="fq-hl">$15,000–$40,000</span> for custom Shopify builds, and <span className="fq-hl">$25,000–$150,000+</span> for Shopify Plus and enterprise projects. Pricing depends on design complexity, integrations, migration scope, custom apps, and B2B requirements. FactoryJet delivers enterprise-grade quality at <span className="fq-hl">Pricing is fixed and published upfront</span>.</div></div>
       </div>
 
 
@@ -129,7 +129,7 @@ export default function FaqSection({ handleCta, faqFilter, setFaqFilter, faqSear
           <h3>What makes FactoryJet different from other Shopify agencies?</h3>
           <span className="fq-chev"><svg viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd"/></svg></span>
         </button>
-        <div className="fq-a"><div className="fq-a-body">FactoryJet combines <span className="fq-hl">AI-native development</span>, deep Shopify expertise, and enterprise-grade execution.<ul style={{marginTop:"12px",paddingLeft:"20px"}}><li>120+ Shopify and Shopify Plus stores delivered</li><li>part of 523 websites delivered for 500+ clients globally</li><li>clients across 9 countries</li><li>40–60% below US/UK rates</li><li>built-in SEO, AEO, and GEO optimization</li></ul></div></div>
+        <div className="fq-a"><div className="fq-a-body">FactoryJet combines <span className="fq-hl">AI-native development</span>, deep Shopify expertise, and enterprise-grade execution.<ul style={{marginTop:"12px",paddingLeft:"20px"}}><li>120+ Shopify and Shopify Plus stores delivered</li><li>part of 523 websites delivered for 500+ clients globally</li><li>clients across 9 countries</li><li>Pricing is fixed and published upfront</li><li>built-in SEO, AEO, and GEO optimization</li></ul></div></div>
       </div>
 
 

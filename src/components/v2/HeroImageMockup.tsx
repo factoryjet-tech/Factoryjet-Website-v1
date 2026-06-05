@@ -5,7 +5,7 @@ import Image from 'next/image';
  *
  * Uses the AI-generated browser mockup image (hero-us-mockup.webp) which
  * already contains baked-in floating badge chips (523+ businesses served,
- * 60–70% less than traditional agencies, 7-day delivery) and an orange radial glow.
+ * at a fixed, published price, 7-day delivery) and an orange radial glow.
  *
  * No HTML badge overlays needed — the image is the complete visual.
  * Elevated box-shadow makes it "float" on the light cream hero background.

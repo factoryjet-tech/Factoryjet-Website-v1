@@ -90,7 +90,7 @@ export default function PricingSection({ handleCta, pricingTab, setPricingTab, f
               <span className="pr-svc-tag pr-svc-tag--blue">App Integrations</span>
               <span className="pr-svc-tag pr-svc-tag--blue">CRO</span>
             </div>
-            <div className="pr-savings"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg> 60% below Global rates</div>
+            <div className="pr-savings"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg> Pricing is fixed and published upfront</div>
             <div className="pr-price-from">Starting from</div>
             <div className="pr-price-row">
               <span className="pr-price">₹4,00,000</span>

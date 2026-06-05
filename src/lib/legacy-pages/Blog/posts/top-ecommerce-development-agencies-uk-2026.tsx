@@ -16,14 +16,14 @@ export const post: BlogPost = {
     description: "Choosing the wrong e-commerce agency wastes thousands. Compare UK agencies on pricing (£2K-£25K), delivery speed, platform expertise, and post-launch support.",
   },
   keyTakeaways: [
-    "UK e-commerce agency pricing ranges £2,000–£25,000 for SMB projects; offshore-supported agencies like FactoryJet deliver at 50–60% below local rates while maintaining UK project management.",
+    "UK e-commerce agency pricing ranges £2,000–£25,000 for SMB projects; offshore-supported agencies like FactoryJet deliver at a fixed, published price while maintaining UK project management.",
     "Platform choice matters more than agency size—WooCommerce suits content-heavy catalogues, Shopify works for rapid launches, and custom B2B platform builds handle complex B2B workflows.",
     "Delivery timelines separate serious agencies from portfolio builders: expect 2–4 weeks for standard stores, 6–12 weeks for custom B2B platforms with quote workflows and trade account management.",
     "Post-launch support models vary wildly—monthly retainers from £99–£500 cover security, updates, and performance monitoring; confirm what's included before signing.",
     "Real client references in your industry matter more than awards—ask for named contacts, live site URLs, and specific problems the agency solved, not just portfolio screenshots.",
   ],
   faqs: [
-    { q: "What should an e-commerce development agency in the UK cost for an SMB in 2026?", a: "Standard e-commerce builds range £2,000–£8,000 for SMBs, covering platform setup, payment integration, product catalogue, and mobile optimisation. Custom B2B platforms with quote workflows, trade accounts, and ERP integration run £8,000–£25,000. Offshore-supported UK agencies like FactoryJet deliver at £2,000–£8,000 with 2–4 week timelines, 50–60% below traditional London or Manchester rates." },
+    { q: "What should an e-commerce development agency in the UK cost for an SMB in 2026?", a: "Standard e-commerce builds range £2,000–£8,000 for SMBs, covering platform setup, payment integration, product catalogue, and mobile optimisation. Custom B2B platforms with quote workflows, trade accounts, and ERP integration run £8,000–£25,000. Offshore-supported UK agencies like FactoryJet deliver at £2,000–£8,000 with 2–4 week timelines, at a fixed, published price." },
     { q: "How long does it take a UK agency to build an e-commerce site?", a: "Standard Shopify or WooCommerce stores take 2–4 weeks from brief to launch. Custom platforms with B2B features—request-for-quote workflows, trade pricing, Net 30/60/90 terms—require 6–12 weeks. Agencies quoting 3–6 months for basic stores are either overbooked or padding timelines. Ask for a detailed project plan with milestone dates before committing." },
     { q: "Should I choose WooCommerce, Shopify, or a custom platform for my UK business?", a: "WooCommerce suits businesses with 500+ SKUs, complex product variations, or heavy content marketing needs—full control, WordPress integration, lower transaction fees. Shopify works for rapid launches, subscription products, and teams without technical staff—hosted, PCI-compliant, 2.0%–2.9% transaction fees. Custom custom headless B2B platforms handle B2B workflows that off-the-shelf solutions can't—trade accounts, multi-tier pricing, artwork approval, quote negotiation." },
     { q: "What's included in post-launch e-commerce support from UK agencies?", a: "Basic plans (£99–£150/month) cover security updates, plugin patches, uptime monitoring, and monthly backups. Mid-tier (£200–£350/month) adds performance optimisation, conversion rate analysis, and quarterly SEO audits. Premium (£400–£500/month) includes A/B testing, abandoned cart recovery setup, and priority support. Confirm response times, update frequency, and what triggers additional charges." },
@@ -50,7 +50,7 @@ export const post: BlogPost = {
       </div>
 
       <p className="text-lg leading-relaxed mb-6">
-        The best e-commerce development agencies in the UK for 2026 combine platform expertise across WooCommerce, Shopify, and custom builds with transparent pricing of £2,000–£8,000 for SMB stores, delivery in 2–4 weeks for standard projects, and verifiable client references with named contacts. Offshore-supported UK agencies deliver identical technical quality at 50–60% below London rates while maintaining Lighthouse performance scores above 92.
+        The best e-commerce development agencies in the UK for 2026 combine platform expertise across WooCommerce, Shopify, and custom builds with transparent pricing of £2,000–£8,000 for SMB stores, delivery in 2–4 weeks for standard projects, and verifiable client references with named contacts. Offshore-supported UK agencies deliver identical technical quality at a fixed, published price while maintaining Lighthouse performance scores above 92.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What UK SMBs Actually Need from an E-Commerce Agency in 2026</h2>

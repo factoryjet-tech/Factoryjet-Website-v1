@@ -69,7 +69,7 @@ export default function Page() {
         <Hero
           eyebrow="E-COMMERCE DEVELOPMENT · MIAMI"
           headline="Shopify Developer Miami for Florida's Global Market"
-          lead="The only Miami e-commerce agency that launches in 7 days at 50–60% below local rates. Shopify, WooCommerce & AI-powered stores for South Florida's luxury brands, Latin-American entrepreneurs, DTC founders, and 26M annual tourists. 500+ projects, 4.9★ rating."
+          lead="The only Miami e-commerce agency that launches in 7 days at a fixed, published price. Shopify, WooCommerce & AI-powered stores for South Florida's luxury brands, Latin-American entrepreneurs, DTC founders, and 26M annual tourists. 500+ projects, 4.9★ rating."
           primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
           trustItems={['Shopify stores from $2,999', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Miami, FL" badgeLabel="Live in 7 days" />}
@@ -151,7 +151,7 @@ export default function Page() {
           eyebrow="WHY FACTORYJET"
           headline="Why Miami Businesses Choose FactoryJet Over Local Agencies"
           lead={
-            "Absolute Web is Miami's best-known Shopify agency — they deliver excellent work but charge $8,000–$40,000+ with 8–16 week timelines, primarily serving enterprise clients. Push Group and Grazzy Digital serve mid-market Miami brands but specialize in marketing, not development. Comrade Web Agency (Chicago-based) ranks nationally for Miami queries at $8,000–$50,000. No Miami agency combines 7-day Shopify delivery with AI development and Spanish-language capabilities at under $5,000.\n\nFactoryJet launches full Shopify stores in 7 days from $2,999 — 50–60% below the Miami agency benchmark. Unlike Absolute Web or Comrade Web, we deliver with real Miami market knowledge: South Florida's multicultural consumer base, Florida tax structure, and the Latin American e-commerce opportunity most agencies overlook entirely."
+            "Absolute Web is Miami's best-known Shopify agency — they deliver excellent work but charge $8,000–$40,000+ with 8–16 week timelines, primarily serving enterprise clients. Push Group and Grazzy Digital serve mid-market Miami brands but specialize in marketing, not development. Comrade Web Agency (Chicago-based) ranks nationally for Miami queries at $8,000–$50,000. No Miami agency combines 7-day Shopify delivery with AI development and Spanish-language capabilities at under $5,000.\n\nFactoryJet launches full Shopify stores in 7 days from $2,999 — at a fixed, published price. Unlike Absolute Web or Comrade Web, we deliver with real Miami market knowledge: South Florida's multicultural consumer base, Florida tax structure, and the Latin American e-commerce opportunity most agencies overlook entirely."
           }
           pillars={[
             {
@@ -281,7 +281,7 @@ export default function Page() {
           eyebrow="TRANSPARENT PRICING"
           headline="Transparent Pricing for Miami E-Commerce Businesses"
           lead={
-            "Miami agency rates for a comparable Shopify build typically run $8,000–$40,000. National agencies like WebFX quote $10,000–$49,900. FactoryJet delivers a full custom Shopify store from $2,999 — that's 50–60% below the Miami benchmark — with bilingual Spanish capabilities, a faster timeline, and a codebase you own outright. Stores ship in 7 days. No retainer required."
+            "Miami agency rates for a comparable Shopify build typically run $8,000–$40,000. National agencies like WebFX quote $10,000–$49,900. FactoryJet delivers a full custom Shopify store from $2,999 — that's at a fixed, published price — with bilingual Spanish capabilities, a faster timeline, and a codebase you own outright. Stores ship in 7 days. No retainer required."
           }
           tiers={[
             {

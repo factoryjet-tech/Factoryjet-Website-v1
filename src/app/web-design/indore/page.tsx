@@ -184,7 +184,7 @@ const faqSchema = {
       name: 'Do you visit our Indore office for meetings?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We work fully remotely, which is precisely how we keep costs 60–70% below Indore agency rates. All meetings happen over Google Meet or Zoom in IST-friendly hours — typically 10 AM–7 PM. We support both Hindi and English communication throughout the project. Most clients find remote collaboration faster than waiting for in-person agency slots.',
+        text: 'We work fully remotely, which is precisely how we keep your costs fixed and predictable. All meetings happen over Google Meet or Zoom in IST-friendly hours — typically 10 AM–7 PM. We support both Hindi and English communication throughout the project. Most clients find remote collaboration faster than waiting for in-person agency slots.',
       },
     },
     {
@@ -424,13 +424,13 @@ const INDORE_FAQ_ITEMS = [
     category: 'local',
     question: 'Do you visit our Indore office for meetings?',
     answer:
-      'We work fully remotely — which is exactly how we keep costs 60–70% below Indore agency rates without cutting any corners on quality. All discovery calls and design reviews happen over Google Meet or Zoom, in IST-friendly hours (10 AM–7 PM). We support both Hindi and English throughout the project. Most clients find the remote model faster and more flexible than waiting for in-person agency availability.',
+      'We work fully remotely — which is exactly how we keep your costs fixed and predictable without cutting any corners on quality. All discovery calls and design reviews happen over Google Meet or Zoom, in IST-friendly hours (10 AM–7 PM). We support both Hindi and English throughout the project. Most clients find the remote model faster and more flexible than waiting for in-person agency availability.',
   },
   {
     category: 'local',
     question: 'How does FactoryJet compare to Indore web design agencies?',
     answer:
-      "Indore agencies typically charge ₹40,000–₹2,00,000 for a comparable project and take 4–12 weeks to deliver — often without publishing rates upfront. FactoryJet publishes all three pricing tiers (from ₹29,999) before you call, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster site, a shorter timeline, and a codebase you own outright — at 60–70% less than the Indore agency benchmark.",
+      "Indore agencies typically charge ₹40,000–₹2,00,000 for a comparable project and take 4–12 weeks to deliver — often without publishing rates upfront. FactoryJet publishes all three pricing tiers (from ₹29,999) before you call, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster site, a shorter timeline, and a codebase you own outright — at a fixed, published price.",
   },
   {
     category: 'local',
@@ -774,7 +774,7 @@ export default function IndoreWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Indore Businesses Choose FactoryJet Over Local Agencies"
-          lead="Indore web agencies typically charge ₹40,000–₹2,00,000 for a comparable project and take 4–12 weeks to deliver — without publishing their rates or timeline upfront. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. At 60–70% below the Indore agency benchmark for the same scope."
+          lead="Indore web agencies typically charge ₹40,000–₹2,00,000 for a comparable project and take 4–12 weeks to deliver — without publishing their rates or timeline upfront. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. All at a fixed, published price for the same scope."
           pillars={[
             {
               icon: '⚡',

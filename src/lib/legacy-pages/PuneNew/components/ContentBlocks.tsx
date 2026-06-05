@@ -131,7 +131,7 @@ export const SolutionSection = () => {
     { title: "Pune Business Expertise", desc: "We've built 500+ websites for Hinjewadi IT companies, Kharadi startups, and Chakan manufacturers." },
     { title: "Fast Delivery — 7 Days", desc: "Traditional agencies take 2-4 months. We deliver in 7 days using AI-powered processes." },
     { title: "Mobile Responsive Standard", desc: "Every FactoryJet website works perfectly on phones, tablets, and desktops. No extra charge." },
-    { title: "Starts at ₹15,000", desc: "Professional business websites starting at 60-70% cheaper than typical Pune agencies." },
+    { title: "Starts at ₹15,000", desc: "Professional business websites starting at a fixed, published price." },
     { title: "E-Commerce Specialists", desc: "Shopify and WooCommerce experts. Payment gateways, shipping, and inventory are integrated." }
   ];
 

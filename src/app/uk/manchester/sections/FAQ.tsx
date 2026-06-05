@@ -16,7 +16,7 @@ const CATEGORIES = [
 const GENERAL_FAQS = [
   {
     q: "How much does web design cost in Manchester?",
-    a: "Manchester web design costs vary enormously depending on the agency and scope. Boutique agencies charge £1,000–£5,000 for template-based sites. Established agencies like MadeByShape or Supremo charge £5,000–£25,000 for bespoke work. FactoryJet delivers AI-native, Next.js-powered websites from £1,500–£8,000 — 50–60% below the Manchester market average — with Lighthouse 90+ performance and full schema stack included.",
+    a: "Manchester web design costs vary enormously depending on the agency and scope. Boutique agencies charge £1,000–£5,000 for template-based sites. Established agencies like MadeByShape or Supremo charge £5,000–£25,000 for bespoke work. FactoryJet delivers AI-native, Next.js-powered websites from £1,500–£8,000 — at a fixed, published price — with Lighthouse 90+ performance and full schema stack included.",
   },
   {
     q: "What is the best web design agency in Manchester?",

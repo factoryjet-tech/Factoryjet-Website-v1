@@ -376,7 +376,7 @@ export default function CompetitorComparison() {
               lineHeight: 1.7,
             }}
           >
-            FactoryJet operates from Bengaluru, India with a senior engineering team that builds at the same technical level as London and Leeds agencies — but at India delivery economics. You get enterprise-grade Next.js development, GSAP animation, and conversion engineering at 50–60% below Leeds market rates. No offshore compromises: direct communication with senior engineers, UK business hours availability, and the same quality benchmarks as any Park Row agency.
+            FactoryJet operates from Bengaluru, India with a senior engineering team that builds at the same technical level as London and Leeds agencies — but at India delivery economics. You get enterprise-grade Next.js development, GSAP animation, and conversion engineering at a fixed, published price. No offshore compromises: direct communication with senior engineers, UK business hours availability, and the same quality benchmarks as any Park Row agency.
           </p>
         </div>
 

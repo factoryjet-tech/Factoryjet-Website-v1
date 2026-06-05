@@ -137,8 +137,7 @@ export default function Pricing() {
             }}
           >
             Manchester agencies typically charge £5,000–£25,000 for a custom
-            website. FactoryJet delivers the same quality — often better — at
-            50–60% below those rates.
+            website. FactoryJet delivers the same quality — often better — at a fixed, published price.
           </p>
         </div>
 

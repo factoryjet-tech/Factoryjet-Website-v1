@@ -207,7 +207,7 @@ export default function HomepageHeroV3() {
               ref={subRef}
               className="font-fj-body text-[17px] leading-[1.65] text-[#64748B] max-w-[420px] mb-10 opacity-0"
             >
-              Professional websites for US small businesses — delivered in a week, at 60–70% less than what local agencies charge.
+              Professional websites for US small businesses — delivered in a week, at a fixed, published price.
             </p>
 
             {/* CTAs */}

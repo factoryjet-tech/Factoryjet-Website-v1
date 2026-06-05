@@ -87,7 +87,7 @@ export default function HeroSection({ handleCta }: HeroSectionProps) {
               <svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84L17.3 6.9l-3.65 3.56.86 5.03L10 13.14l-4.51 2.37.86-5.03L2.7 6.92l4.91-.72L10 1z"/></svg>
               <svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84L17.3 6.9l-3.65 3.56.86 5.03L10 13.14l-4.51 2.37.86-5.03L2.7 6.92l4.91-.72L10 1z"/></svg>
             </div>
-            <div className="fc-sub">40–60% Below US/UK Agency Rates</div>
+            <div className="fc-sub">Pricing is fixed and published upfront</div>
           </div> */}
 
           {/* Dashboard content wrapper — clipped independently */}

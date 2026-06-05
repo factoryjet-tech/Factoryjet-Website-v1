@@ -347,7 +347,7 @@ const BBSR_FAQ_ITEMS = [
     category: 'local',
     question: 'How does FactoryJet compare to Bhubaneswar web agencies?',
     answer:
-      "Bhubaneswar web agencies typically charge ₹70,000–₹2,00,000 for a comparable project and deliver in 6–14 weeks. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at 60–70% less.",
+      "Bhubaneswar web agencies typically charge ₹70,000–₹2,00,000 for a comparable project and deliver in 6–14 weeks. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at a fixed, published price.",
   },
   {
     category: 'local',
@@ -743,7 +743,7 @@ export default function BhubaneswarWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Bhubaneswar Businesses Choose FactoryJet Over Local Agencies"
-          lead="Bhubaneswar web agencies typically charge ₹70,000–₹2,00,000 for a comparable project and take 6–14 weeks to deliver. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, a codebase you own outright. At 60–70% below the Bhubaneswar agency benchmark for the same scope."
+          lead="Bhubaneswar web agencies typically charge ₹70,000–₹2,00,000 for a comparable project and take 6–14 weeks to deliver. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, a codebase you own outright. Pricing is fixed and published upfront for the same scope."
           pillars={[
             {
               icon: '⚡',

@@ -343,7 +343,7 @@ const VIZAG_FAQ_ITEMS = [
     category: 'local',
     question: 'How does FactoryJet compare to Vizag web agencies?',
     answer:
-      "Visakhapatnam web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and deliver in 6–14 weeks. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at 60–70% less.",
+      "Visakhapatnam web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and deliver in 6–14 weeks. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at a fixed, published price.",
   },
 
   /* ── Support & Ownership ── */
@@ -727,7 +727,7 @@ export default function VisakhapatnamWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Visakhapatnam Businesses Choose FactoryJet Over Local Agencies"
-          lead="Visakhapatnam and Hyderabad web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and take 6–14 weeks to deliver. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, a codebase you own outright. At 60–70% below the Andhra Pradesh agency benchmark for the same scope."
+          lead="Visakhapatnam and Hyderabad web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and take 6–14 weeks to deliver. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, a codebase you own outright. Pricing is fixed and published upfront for the same scope."
           pillars={[
             {
               icon: '⚡',

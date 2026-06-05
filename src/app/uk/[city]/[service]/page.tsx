@@ -26,7 +26,7 @@ export async function generateMetadata({
 
   return {
     title: `${service.name} in ${city.name} | FactoryJet — AI-Native Web Agency`,
-    description: `Award-winning ${service.name.toLowerCase()} agency in ${city.name}. ${service.tagline}. 50-60% below local agency rates. Free quote today.`,
+    description: `Award-winning ${service.name.toLowerCase()} agency in ${city.name}. ${service.tagline}. Pricing is fixed and published upfront. Free quote today.`,
     alternates: {
       canonical: `https://factoryjet.com/uk/${city.slug}/${service.slug}`
     },

@@ -25,7 +25,7 @@ export const post: BlogPost = {
     "AI-native agencies building with Vercel, Supabase, and Stripe offer future-proof stacks; legacy PHP/MySQL architectures create technical debt within 18–24 months.",
   ],
   faqs: [
-    { q: "What should UK SMBs budget for a professional business website in 2026?", a: "Professional business websites for UK SMBs range from £1,500 for brochure sites to £8,000 for custom builds with CMS integration. E-commerce platforms start at £2,000 and scale to £8,000+ depending on product catalogue size and payment gateway complexity. Offshore-hybrid agencies like FactoryJet deliver comparable quality at 50–60% below London rates while maintaining Lighthouse 92+ performance standards." },
+    { q: "What should UK SMBs budget for a professional business website in 2026?", a: "Professional business websites for UK SMBs range from £1,500 for brochure sites to £8,000 for custom builds with CMS integration. E-commerce platforms start at £2,000 and scale to £8,000+ depending on product catalogue size and payment gateway complexity. Offshore-hybrid agencies like FactoryJet deliver comparable quality at a fixed, published price while maintaining Lighthouse 92+ performance standards." },
     { q: "How do I verify an agency's client results before signing a contract?", a: "Request named client references with contact details, city locations, and LinkedIn profiles. Run Lighthouse audits on their portfolio sites—scores below 85/100 indicate technical shortcuts. Ask for before/after Google Analytics screenshots showing traffic and conversion improvements. Agencies citing '500+ clients served' without named examples are typically resellers, not builders." },
     { q: "What's a realistic delivery timeline for a custom SMB website in 2026?", a: "Modern agencies using Next.js 15, headless CMS, and component libraries deliver in 2–4 weeks. Traditional WordPress builds take 6–12 weeks due to plugin conflicts and manual QA cycles. If an agency quotes over 8 weeks for a 10-page business site, they're either overbooked or using outdated workflows. Always negotiate milestone-based payments tied to delivery dates." },
     { q: "Why do some UK agencies charge £15K+ while others quote £3K for similar scopes?", a: "London agencies with Shoreditch offices and 20+ staff carry £8K–£12K monthly overheads, which they pass to clients. Offshore-hybrid teams in Bengaluru, Pune, or Manila operate at 40–60% lower costs without sacrificing talent—India's IT workforce includes 5.4 million developers, many trained at IITs and NITs. The £3K quote isn't 'cheap'—it's geographically arbitraged talent at market rate." },
@@ -54,7 +54,7 @@ export const post: BlogPost = {
       </div>
 
       <p className="text-lg leading-relaxed mb-6">
-        The best UK web design agencies for SMBs in 2026 deliver Lighthouse 90+ performance, transparent pricing (£1,500–£8,000 for business sites), and 2–4 week turnarounds with verified client results. Leading agencies charge 50–60% below London rates through offshore-hybrid models while maintaining UK compliance standards and technical quality that matches or exceeds that of local competitors.
+        The best UK web design agencies for SMBs in 2026 deliver Lighthouse 90+ performance, transparent pricing (£1,500–£8,000 for business sites), and 2–4 week turnarounds with verified client results. Leading agencies charge at a fixed, published price through offshore-hybrid models while maintaining UK compliance standards and technical quality that matches or exceeds that of local competitors.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">How We Ranked the 15 Best UK Web Design Agencies for SMBs</h2>
@@ -83,7 +83,7 @@ export const post: BlogPost = {
               <td className="border p-3">2–4 weeks</td>
               <td className="border p-3">92+ guaranteed</td>
               <td className="border p-3">500+ (GPSUK, others)</td>
-              <td className="border p-3">50–60% below UK rates, AI-native stack</td>
+              <td className="border p-3">Pricing is fixed and published upfront, AI-native stack</td>
             </tr>
             <tr>
               <td className="border p-3">Cyber-Duck (London)</td>

@@ -69,7 +69,7 @@ export default function Page() {
         <Hero
           eyebrow="E-COMMERCE DEVELOPMENT · RALEIGH"
           headline="Shopify Developer Raleigh for the Research Triangle"
-          lead="The only Raleigh e-commerce agency that launches in 7 days at 50–60% below local rates. Shopify, WooCommerce & AI-powered stores for the Research Triangle's tech brands, life sciences companies, NC State entrepreneurs, and Durham-Chapel Hill DTC founders. 500+ projects, 4.9★ rating."
+          lead="The only Raleigh e-commerce agency that launches in 7 days at a fixed, published price. Shopify, WooCommerce & AI-powered stores for the Research Triangle's tech brands, life sciences companies, NC State entrepreneurs, and Durham-Chapel Hill DTC founders. 500+ projects, 4.9★ rating."
           primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
           trustItems={['Shopify stores from $2,999', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Raleigh, NC" badgeLabel="Live in 7 days" />}
@@ -279,7 +279,7 @@ export default function Page() {
           eyebrow="TRANSPARENT PRICING"
           headline="Transparent Pricing for Raleigh E-Commerce Businesses"
           lead={
-            "Raleigh agency rates for a comparable Shopify build typically run $8,000–$25,000. National agencies quote $10,000–$50,000. FactoryJet delivers a full custom Shopify store from $2,999 — that's 50–60% below the Raleigh benchmark — with RTP tech sophistication, life sciences B2B capabilities, and a codebase you own outright. Stores ship in 7 days."
+            "Raleigh agency rates for a comparable Shopify build typically run $8,000–$25,000. National agencies quote $10,000–$50,000. FactoryJet delivers a full custom Shopify store from $2,999 — that's at a fixed, published price — with RTP tech sophistication, life sciences B2B capabilities, and a codebase you own outright. Stores ship in 7 days."
           }
           tiers={[
             {

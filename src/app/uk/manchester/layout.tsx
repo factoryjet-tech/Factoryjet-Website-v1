@@ -7,7 +7,7 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   name: "FactoryJet Technologies",
   description:
-    "AI-native web design agency building custom websites for Manchester businesses. Next.js 15, GSAP, Tailwind CSS 4. 50–60% below Manchester agency rates.",
+    "AI-native web design agency building custom websites for Manchester businesses. Next.js 15, GSAP, Tailwind CSS 4. Pricing is fixed and published upfront.",
   url: "https://factoryjet.com/manchester",
   email: "connect@factoryjet.com",
   priceRange: "££",
@@ -33,7 +33,7 @@ const serviceSchema = {
   serviceType: "Web Design",
   name: "Web Design Manchester",
   description:
-    "AI-native web design agency serving Manchester businesses. Custom websites built with Next.js 15, GSAP animations, and Tailwind CSS 4. 50–60% below Manchester agency rates. Lighthouse 90+ guaranteed.",
+    "AI-native web design agency serving Manchester businesses. Custom websites built with Next.js 15, GSAP animations, and Tailwind CSS 4. Pricing is fixed and published upfront. Lighthouse 90+ guaranteed.",
   provider: {
     "@type": "LocalBusiness",
     name: "FactoryJet Technologies",
@@ -140,7 +140,7 @@ const faqSchema = {
       name: "How much does web design cost in Manchester?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Manchester web design costs vary enormously. Boutique agencies charge £1,000–£5,000 for template-based sites. Established agencies like MadeByShape or Supremo charge £5,000–£25,000 for bespoke work. FactoryJet delivers AI-native, Next.js-powered websites from £1,500–£8,000 — 50–60% below the Manchester market average — with Lighthouse 90+ performance and full schema stack included.",
+        text: "Manchester web design costs vary enormously. Boutique agencies charge £1,000–£5,000 for template-based sites. Established agencies like MadeByShape or Supremo charge £5,000–£25,000 for bespoke work. FactoryJet delivers AI-native, Next.js-powered websites from £1,500–£8,000 — at a fixed, published price — with Lighthouse 90+ performance and full schema stack included.",
       },
     },
     {

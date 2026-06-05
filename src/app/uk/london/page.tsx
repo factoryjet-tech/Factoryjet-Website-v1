@@ -4,14 +4,14 @@ import Script from 'next/script';
 export const metadata: Metadata = {
   title: 'Web Design & Digital Agency in London | FactoryJet',
   description:
-    'FactoryJet serves London businesses with web design, AI websites, ecommerce & SEO. AI-native agency, 50–60% below local rates. Free consultation.',
+    'FactoryJet serves London businesses with web design, AI websites, ecommerce & SEO. AI-native agency, at a fixed, published price. Free consultation.',
   alternates: {
     canonical: 'https://factoryjet.com/uk/london',
   },
   openGraph: {
     title: 'Web Design & Digital Agency in London | FactoryJet',
     description:
-      'FactoryJet serves London businesses with web design, AI websites, ecommerce & SEO. AI-native agency, 50–60% below local rates. Free consultation.',
+      'FactoryJet serves London businesses with web design, AI websites, ecommerce & SEO. AI-native agency, at a fixed, published price. Free consultation.',
     url: 'https://factoryjet.com/uk/london',
     type: 'website',
     images: [
@@ -53,7 +53,7 @@ export default function LondonPage() {
         </h1>
         <p className="text-xl text-gray-600 mt-4 max-w-2xl">
           AI-native web design, SEO, and digital marketing for London SMBs.
-          50–60% below local agency rates.
+          Pricing is fixed and published upfront.
         </p>
         <div className="mt-8 flex gap-4 flex-wrap">
           <a

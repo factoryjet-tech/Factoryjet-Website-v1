@@ -176,7 +176,7 @@ export default function Pricing() {
               maxWidth: 960,
             }}
           >
-            50–60% Below Liverpool Agency Rates. Every Time.
+            Pricing is fixed and published upfront. Every Time.
           </h2>
 
           <span

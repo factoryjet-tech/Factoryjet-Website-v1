@@ -57,7 +57,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Can FactoryJet redesign my US small business website?',
-      a: 'Yes. FactoryJet redesigns US small business websites starting at $1,999 for a 5-page rebuild with 7-day delivery. Our redesign scope includes: new custom Next.js or WordPress build (never templates), Lighthouse 100/100 optimization, content migration for up to 10 pages, 301 redirect mapping, full technical SEO, WCAG 2.2 accessibility compliance, Google Search Console setup, and 30 days post-launch support. E-commerce redesigns start at $3,999. We\'re 60–70% less than US domestic agencies. Get a free quote at factoryjet.com/contact.',
+      a: 'Yes. FactoryJet redesigns US small business websites starting at $1,999 for a 5-page rebuild with 7-day delivery. Our redesign scope includes: new custom Next.js or WordPress build (never templates), Lighthouse 100/100 optimization, content migration for up to 10 pages, 301 redirect mapping, full technical SEO, WCAG 2.2 accessibility compliance, Google Search Console setup, and 30 days post-launch support. E-commerce redesigns start at $3,999. We\'re at a fixed, published price. Get a free quote at factoryjet.com/contact.',
     },
   ],
   content: (
@@ -156,7 +156,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Offers for US Small Business Redesigns</h2>
       <p className="mb-4">
-        FactoryJet redesigns US small business websites starting at $1,999 — 5-page rebuild, 7-day delivery, Lighthouse 100/100, content migration for up to 10 pages, 301 redirect mapping, full technical SEO, and 30-day post-launch support. E-commerce redesigns start at $3,999. 60–70% less than US domestic agencies. Fixed-price contracts with itemized scope — no surprise invoices.
+        FactoryJet redesigns US small business websites starting at $1,999 — 5-page rebuild, 7-day delivery, Lighthouse 100/100, content migration for up to 10 pages, 301 redirect mapping, full technical SEO, and 30-day post-launch support. E-commerce redesigns start at $3,999. Pricing is fixed and published upfront. Fixed-price contracts with itemized scope — no surprise invoices.
       </p>
       <p className="mb-4">
         ➡ <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free redesign quote with PageSpeed proof in 24 hours</a> · <a href="/us/portfolio" className="text-blue-600 underline hover:text-blue-800 transition-colors">View our portfolio</a>

@@ -45,12 +45,12 @@ const FAQS: Faq[] = [
   {
     cat: "web-design",
     q: "How much does a website cost in the UK in 2026?",
-    a: "UK website costs vary significantly. Basic template websites cost £500–£2,500. Standard business websites from agencies run £3,000–£12,000. Custom-built sites on modern frameworks range from £10,000–£50,000, and enterprise projects can exceed £100,000. FactoryJet delivers professional, custom-built websites on Next.js 15 starting from £1,500, with most projects falling in the £2,000–£8,000 range — 50–60% below the traditional agency average for comparable or superior quality. For UK business owners, remember that website design and development is a legitimate business expense for HMRC purposes, which can reduce the effective cost by 19–25% depending on your tax bracket.",
+    a: "UK website costs vary significantly. Basic template websites cost £500–£2,500. Standard business websites from agencies run £3,000–£12,000. Custom-built sites on modern frameworks range from £10,000–£50,000, and enterprise projects can exceed £100,000. FactoryJet delivers professional, custom-built websites on Next.js 15 starting from £1,500, with most projects falling in the £2,000–£8,000 range — at a fixed, published price for comparable or superior quality. For UK business owners, remember that website design and development is a legitimate business expense for HMRC purposes, which can reduce the effective cost by 19–25% depending on your tax bracket.",
   },
   {
     cat: "web-design",
     q: "What is the best website design company in the UK?",
-    a: "The best website design company depends on your specific needs and budget. Large agencies like Pentagram and Moving Brands serve enterprise clients at premium rates. Mid-market agencies charge £8,000–£25,000 per project. FactoryJet occupies a unique position as the UK’s AI-native web design agency — delivering enterprise-grade quality on the same technology stack as Stripe and Vercel (Next.js 15, Tailwind CSS 4) at 50–60% below traditional traditional agency rates. Every site we build scores 90+ on Google Lighthouse and is optimised for both Google and AI search engines from day one.",
+    a: "The best website design company depends on your specific needs and budget. Large agencies like Pentagram and Moving Brands serve enterprise clients at premium rates. Mid-market agencies charge £8,000–£25,000 per project. FactoryJet occupies a unique position as the UK’s AI-native web design agency — delivering enterprise-grade quality on the same technology stack as Stripe and Vercel (Next.js 15, Tailwind CSS 4) at a fixed, published price. Every site we build scores 90+ on Google Lighthouse and is optimised for both Google and AI search engines from day one.",
   },
   {
     cat: "web-design",
@@ -85,7 +85,7 @@ const FAQS: Faq[] = [
   {
     cat: "ecommerce",
     q: "How much does an e-commerce website cost in the UK?",
-    a: "UK e-commerce website costs range from £2,000 for a basic Shopify store to £50,000+ for enterprise custom builds. The average UK Shopify agency charges £8,000–£15,000 for a professional store. FactoryJet delivers Shopify and WooCommerce stores starting from £2,000, with most projects in the £3,000–£10,000 range — 50–80% below UK market rates. Every build includes UK payment gateway integration (Stripe, PayPal, Klarna, Apple Pay), Royal Mail and DPD shipping configuration, and e-commerce SEO.",
+    a: "UK e-commerce website costs range from £2,000 for a basic Shopify store to £50,000+ for enterprise custom builds. The average UK Shopify agency charges £8,000–£15,000 for a professional store. FactoryJet delivers Shopify and WooCommerce stores starting from £2,000, with most projects in the £3,000–£10,000 range — at a fixed, published price. Every build includes UK payment gateway integration (Stripe, PayPal, Klarna, Apple Pay), Royal Mail and DPD shipping configuration, and e-commerce SEO.",
   },
   {
     cat: "ecommerce",

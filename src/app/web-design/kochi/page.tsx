@@ -343,7 +343,7 @@ const KOCHI_FAQ_ITEMS = [
     category: 'local',
     question: 'How does FactoryJet compare to Kochi and Trivandrum web agencies?',
     answer:
-      "Kochi and Trivandrum web agencies typically charge ₹1,20,000–₹3,50,000 for a comparable project and deliver in 6–16 weeks. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at 60–70% less.",
+      "Kochi and Trivandrum web agencies typically charge ₹1,20,000–₹3,50,000 for a comparable project and deliver in 6–16 weeks. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at a fixed, published price.",
   },
 
   /* ── Support & Ownership ── */
@@ -742,7 +742,7 @@ export default function KochiWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Kochi Businesses Choose FactoryJet Over Local Agencies"
-          lead="Kochi and Trivandrum web agencies typically charge ₹1,20,000–₹3,50,000 for a comparable project and take 6–16 weeks to deliver. Kerala's business community is one of India's most digitally sophisticated — and that means the quality bar is higher, not lower. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. At 60–70% below the Kerala agency benchmark for the same scope."
+          lead="Kochi and Trivandrum web agencies typically charge ₹1,20,000–₹3,50,000 for a comparable project and take 6–16 weeks to deliver. Kerala's business community is one of India's most digitally sophisticated — and that means the quality bar is higher, not lower. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Pricing is fixed and published upfront for the same scope."
           pillars={[
             {
               icon: '⚡',

@@ -113,7 +113,7 @@ export default function Hero() {
           className="text-sm md:text-base text-white/70 max-w-xl mx-auto mb-6 leading-relaxed"
         >
           AI-native websites built on Next.js 15, engineered to convert.
-          Enterprise-grade performance at 50–60% below Manchester agency rates.
+          Enterprise-grade performance at a fixed, published price.
         </p>
 
         {/* 4. CTA buttons */}
@@ -152,7 +152,7 @@ export default function Hero() {
         >
           {[
             "2–4 week delivery",
-            "50–60% below market",
+            "Pricing is fixed and published upfront",
             "No lock-in contracts",
           ].map((badge) => (
             <span

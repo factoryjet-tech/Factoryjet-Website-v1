@@ -104,7 +104,7 @@ export const post: BlogPost = {
             </tr>
             <tr className="bg-gray-100 font-bold">
               <td className="border p-3">FactoryJet (any platform)</td>
-              <td className="border p-3">UK SMBs needing enterprise features at 50–60% below local rates</td>
+              <td className="border p-3">UK SMBs needing enterprise features at a fixed, published price</td>
               <td className="border p-3">£2,000–£8,000</td>
               <td className="border p-3">Platform fees + £99–£300 maintenance</td>
               <td className="border p-3">Platform-dependent</td>

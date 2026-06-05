@@ -16,11 +16,11 @@ const CATEGORIES = [
 const GENERAL_FAQS = [
   {
     q: "How much does web design cost in Leeds?",
-    a: "The average cost for a professionally built business website in Leeds ranges from £1,200 to £8,000 depending on complexity. Local agencies like Ascensor, Bolser, and Parallax typically charge £4,500–£8,000 for a standard build. Budget-focused agencies like HungryWolf and Pixelish offer pay-monthly models from £49–£85 per month. FactoryJet delivers enterprise-grade websites on Next.js 15 starting from £1,500 — that is 50–60% below typical Leeds agency rates — because our AI-augmented development process dramatically reduces production time without sacrificing quality. Our websites consistently score 90+ on Google Lighthouse Performance, which most Leeds agencies cannot match.",
+    a: "The average cost for a professionally built business website in Leeds ranges from £1,200 to £8,000 depending on complexity. Local agencies like Ascensor, Bolser, and Parallax typically charge £4,500–£8,000 for a standard build. Budget-focused agencies like HungryWolf and Pixelish offer pay-monthly models from £49–£85 per month. FactoryJet delivers enterprise-grade websites on Next.js 15 starting from £1,500 — that is at a fixed, published price — because our AI-augmented development process dramatically reduces production time without sacrificing quality. Our websites consistently score 90+ on Google Lighthouse Performance, which most Leeds agencies cannot match.",
   },
   {
     q: "Do you have a physical office in Leeds?",
-    a: "FactoryJet operates as a remote-first, AI-native agency serving Leeds businesses from our global delivery network. This is exactly how we keep pricing 50–60% below local agency rates — we do not pass the cost of Leeds city centre office space onto our clients. We are available via video call, WhatsApp, phone, and email throughout UK business hours, and we meet in person for larger engagements.",
+    a: "FactoryJet operates as a remote-first, AI-native agency serving Leeds businesses from our global delivery network. This is exactly how we keep pricing at a fixed, published price — we do not pass the cost of Leeds city centre office space onto our clients. We are available via video call, WhatsApp, phone, and email throughout UK business hours, and we meet in person for larger engagements.",
   },
   {
     q: "Do I need a website for my small business in Leeds in 2026?",

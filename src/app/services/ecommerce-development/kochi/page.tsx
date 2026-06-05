@@ -612,7 +612,7 @@ export default function KochiEcommercePage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Kochi Brands Choose FactoryJet Over Local Agencies"
-          lead="Kochi ecommerce agencies typically charge ₹2,00,000–₹10,00,000 for a comparable project and take 10–20 weeks to deliver. FactoryJet publishes all three tiers before you speak to us, guarantees 7-day delivery in writing, and builds to Lighthouse 90+ on mobile. At 50–60% below the Kochi agency benchmark for the same scope."
+          lead="Kochi ecommerce agencies typically charge ₹2,00,000–₹10,00,000 for a comparable project and take 10–20 weeks to deliver. FactoryJet publishes all three tiers before you speak to us, guarantees 7-day delivery in writing, and builds to Lighthouse 90+ on mobile. All at a fixed, published price — with the codebase yours to keep."
           pillars={[
             {
               icon: '⚡',

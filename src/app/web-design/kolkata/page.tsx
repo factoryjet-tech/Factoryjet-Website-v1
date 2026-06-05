@@ -339,7 +339,7 @@ const KOL_FAQ_ITEMS = [
     category: 'local',
     question: 'How does FactoryJet compare to Kolkata web agencies?',
     answer:
-      "Kolkata web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and deliver in 6–16 weeks. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at 60–70% less.",
+      "Kolkata web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and deliver in 6–16 weeks. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at a fixed, published price.",
   },
 
   /* ── Support & Ownership ── */
@@ -711,7 +711,7 @@ export default function KolkataWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Kolkata Businesses Choose FactoryJet Over Local Agencies"
-          lead="Kolkata web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and take 6–16 weeks to deliver. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, a codebase you own outright. At 60–70% below the Kolkata agency benchmark for the same scope."
+          lead="Kolkata web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and take 6–16 weeks to deliver. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, a codebase you own outright. Pricing is fixed and published upfront for the same scope."
           pillars={[
             {
               icon: '⚡',

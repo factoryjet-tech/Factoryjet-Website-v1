@@ -69,7 +69,7 @@ export default function Page() {
         <Hero
           eyebrow="E-COMMERCE DEVELOPMENT · CHARLOTTE"
           headline="Shopify Developer Charlotte for North Carolina Businesses"
-          lead="The only Charlotte e-commerce agency that launches in 7 days at 50–60% below local rates. Shopify, WooCommerce & AI-powered stores for Queen City's DTC brands, NASCAR ecosystem, financial services adjacent brands, and fast-growing Charlotte tech scene. 500+ projects, 4.9★ rating."
+          lead="The only Charlotte e-commerce agency that launches in 7 days at a fixed, published price. Shopify, WooCommerce & AI-powered stores for Queen City's DTC brands, NASCAR ecosystem, financial services adjacent brands, and fast-growing Charlotte tech scene. 500+ projects, 4.9★ rating."
           primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
           trustItems={['Shopify stores from $2,999', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Charlotte, NC" badgeLabel="Live in 7 days" />}
@@ -282,7 +282,7 @@ export default function Page() {
           eyebrow="TRANSPARENT PRICING"
           headline="Transparent Pricing for Charlotte E-Commerce Businesses"
           lead={
-            "Charlotte agency rates for a comparable Shopify build typically run $8,000–$25,000. National agencies like WebFX quote $10,000–$50,000. FactoryJet delivers a full custom Shopify store from $2,999 — that's 50–60% below the Charlotte benchmark — with NASCAR commerce and B2B banking-corridor capabilities, faster timeline, and a codebase you own outright."
+            "Charlotte agency rates for a comparable Shopify build typically run $8,000–$25,000. National agencies like WebFX quote $10,000–$50,000. FactoryJet delivers a full custom Shopify store from $2,999 — that's at a fixed, published price — with NASCAR commerce and B2B banking-corridor capabilities, faster timeline, and a codebase you own outright."
           }
           tiers={[
             {

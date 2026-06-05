@@ -164,7 +164,7 @@ export default function Page() {
         <StrategicDarkSection
           eyebrow="THE FACTORYJET DIFFERENCE"
           headline="Three Reasons Boise Businesses Choose Us Over Local Agencies"
-          lead="Mode Effect, Crush, and Collide are capable Boise agencies — but they're built for larger budgets and longer timelines. FactoryJet launches full Shopify stores in 7 days from $2,999, 50–60% below the Boise agency benchmark, with AI-powered features no local agency offers at SMB pricing."
+          lead="Mode Effect, Crush, and Collide are capable Boise agencies — but they're built for larger budgets and longer timelines. FactoryJet launches full Shopify stores in 7 days from $2,999, at a fixed, published price, with AI-powered features no local agency offers at SMB pricing."
           pillars={[
             {
               title: 'Speed Without Compromise',
@@ -252,7 +252,7 @@ export default function Page() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Boise's Leading Shopify Agencies"
-          lead="Mode Effect, Crush, and Collide are capable Boise agencies built for larger budgets and longer timelines. FactoryJet delivers a full Shopify store in 7 days from $2,999 — 50–60% below the Boise benchmark — with AI-powered features none of them offer at SMB pricing."
+          lead="Mode Effect, Crush, and Collide are capable Boise agencies built for larger budgets and longer timelines. FactoryJet delivers a full Shopify store in 7 days from $2,999 — at a fixed, published price — with AI-powered features none of them offer at SMB pricing."
           columns={[
             { label: 'Their pricing' },
             { label: 'FactoryJet', isFactoryJet: true },
@@ -290,7 +290,7 @@ export default function Page() {
         <PricingTiers
           eyebrow="TRANSPARENT PRICING"
           headline="Fixed-Price Shopify Packages for Boise Businesses"
-          lead="Boise agency rates for a comparable Shopify build typically run $6,000–$25,000 with 6–14 week timelines. FactoryJet delivers a full custom Shopify store from $2,999 in 7 days — 50–60% below the Boise benchmark — with a codebase you own outright."
+          lead="Boise agency rates for a comparable Shopify build typically run $6,000–$25,000 with 6–14 week timelines. FactoryJet delivers a full custom Shopify store from $2,999 in 7 days — at a fixed, published price — with a codebase you own outright."
           tiers={[
             {
               name: 'Shopify Standard',

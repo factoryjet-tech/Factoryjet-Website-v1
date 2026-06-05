@@ -343,7 +343,7 @@ const MUMBAI_FAQ_ITEMS = [
     category: 'local',
     question: 'How does FactoryJet compare to Mumbai web agencies?',
     answer:
-      "Mumbai web agencies typically charge ₹1,50,000–₹5,00,000 for a comparable project and deliver in 8–20 weeks — without publishing their rates or timeline upfront. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright — at 60–70% less.",
+      "Mumbai web agencies typically charge ₹1,50,000–₹5,00,000 for a comparable project and deliver in 8–20 weeks — without publishing their rates or timeline upfront. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright — at a fixed, published price.",
   },
 
   /* ── Support & Ownership ── */
@@ -715,7 +715,7 @@ export default function MumbaiWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Mumbai Businesses Choose FactoryJet Over Local Agencies"
-          lead="Mumbai web agencies typically charge ₹1,50,000–₹5,00,000 for a comparable project and take 8–20 weeks to deliver — without publishing their rates or timeline upfront. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. At 60–70% below the Mumbai agency benchmark for the same scope."
+          lead="Mumbai web agencies typically charge ₹1,50,000–₹5,00,000 for a comparable project and take 8–20 weeks to deliver — without publishing their rates or timeline upfront. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and published upfront for the same scope."
           pillars={[
             {
               icon: '⚡',

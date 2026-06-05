@@ -343,7 +343,7 @@ const CBE_FAQ_ITEMS = [
     category: 'local',
     question: 'How does FactoryJet compare to Coimbatore web agencies?',
     answer:
-      "Coimbatore web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and deliver in 4–12 weeks. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at 60–70% less.",
+      "Coimbatore web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and deliver in 4–12 weeks. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at a fixed, published price.",
   },
 
   /* ── Support & Ownership ── */
@@ -732,7 +732,7 @@ export default function CoimbatoreWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Coimbatore Businesses Choose FactoryJet Over Local Agencies"
-          lead="Coimbatore web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and take 4–12 weeks to deliver. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, a codebase you own outright. At 60–70% below the Coimbatore agency benchmark for the same scope."
+          lead="Coimbatore web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and take 4–12 weeks to deliver. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, a codebase you own outright. Pricing is fixed and published upfront for the same scope."
           pillars={[
             {
               icon: '⚡',

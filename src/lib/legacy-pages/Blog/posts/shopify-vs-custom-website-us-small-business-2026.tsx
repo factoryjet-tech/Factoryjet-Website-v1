@@ -275,7 +275,7 @@ export const post: BlogPost = {
         <strong>Custom websites (WordPress/Next.js):</strong> Custom design, Core Web Vitals optimization, full on-page SEO, schema markup, and 30-day post-launch support. Starting at $1,999 for a 5-page professional site, delivered in 7 days.
       </p>
       <p className="mb-4">
-        Our US-hour project management team will tell you honestly which platform fits your business — and we'll document exactly why in writing before you commit a dollar. India-based development means 60–70% less than comparable US agencies for identical technical output.
+        Our US-hour project management team will tell you honestly which platform fits your business — and we'll document exactly why in writing before you commit a dollar. India-based development means at a fixed, published price for identical technical output.
       </p>
       <p className="mb-4">
         ➡ <a href="/us/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify development packages</a> · <a href="/us/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">Custom web design packages</a> · <a href="/blog/best-ecommerce-agency-small-business-australia-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">Best e-commerce agency for small business</a> · <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free recommendation in 24 hours</a>

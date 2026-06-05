@@ -42,7 +42,7 @@ export function HomepageHero() {
 
             {/* Subtext */}
             <p className="font-inter text-lg text-[#64748B] max-w-[480px] leading-relaxed">
-              Professional websites for US small businesses. 60-70% cheaper than local agencies.
+              Professional websites for US small businesses — delivered in 7 days, fixed-price, with full code ownership.
             </p>
 
             {/* CTAs */}

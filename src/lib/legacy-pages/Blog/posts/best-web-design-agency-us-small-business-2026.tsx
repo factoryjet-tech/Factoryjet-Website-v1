@@ -274,7 +274,7 @@ export const post: BlogPost = {
         What we deliver for US SMBs: custom Next.js or WordPress builds (never purchased templates), Lighthouse 100/100 scores on every project, WCAG 2.2 Level AA compliance, full technical SEO included in base scope, 7-day delivery on 5-page sites, US business-hour project management, US-governed contracts, named US client references, and full code ownership transferred at final payment.
       </p>
       <p className="mb-4">
-        Pricing: 5-page professional website starts at $1,999. Shopify stores start at $2,499. Monthly maintenance plans from $149/month. 97% of projects delivered on time. 60–70% less expensive than comparable US domestic agencies.
+        Pricing: 5-page professional website starts at $1,999. Shopify stores start at $2,499. Monthly maintenance plans from $149/month. 97% of projects delivered on time. Pricing is fixed and published upfront.
       </p>
       <p className="mb-4">
         ➡ <a href="/us/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our web design packages</a> · <a href="/us/portfolio" className="text-blue-600 underline hover:text-blue-800 transition-colors">View our portfolio</a> · <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free quote with PageSpeed proof in 24 hours</a>

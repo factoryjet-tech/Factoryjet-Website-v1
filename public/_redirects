@@ -127,19 +127,19 @@
 # Resources mega-menu — creating credibility / AEO / GEO liability for the brand.
 # All 13 slugs redirect to the /case/ index where the 6 REAL Indian client cases live.
 # See audit-current-state/22_legacy_case_route_audit_2026-05-27.md for full context.
-/case/apex-fintech-london             /case   301
-/case/solaris-energy-sydney           /case   301
-/case/velvet-oak-dubai                /case   301
-/case/medicore-health-nyc             /case   301
-/case/nordic-auto-berlin              /case   301
-/case/eduverse-singapore              /case   301
-/case/pacific-logistics-california    /case   301
-/case/pure-organics-toronto           /case   301
-/case/zenith-law-london               /case   301
-/case/buildsmart-texas                /case   301
-/case/aura-cosmetics-paris            /case   301
-/case/gulf-oil-riyadh                 /case   301
-/case/techstream-ai-sf                /case   301
+/case/apex-fintech-london             /case-studies   301
+/case/solaris-energy-sydney           /case-studies   301
+/case/velvet-oak-dubai                /case-studies   301
+/case/medicore-health-nyc             /case-studies   301
+/case/nordic-auto-berlin              /case-studies   301
+/case/eduverse-singapore              /case-studies   301
+/case/pacific-logistics-california    /case-studies   301
+/case/pure-organics-toronto           /case-studies   301
+/case/zenith-law-london               /case-studies   301
+/case/buildsmart-texas                /case-studies   301
+/case/aura-cosmetics-paris            /case-studies   301
+/case/gulf-oil-riyadh                 /case-studies   301
+/case/techstream-ai-sf                /case-studies   301
 
 # ── US ECOMMERCE CITY URL MIGRATION (2026-05-19) ─────────────────────────────
 # Old service-first /us/services/ecommerce-development/{city}/

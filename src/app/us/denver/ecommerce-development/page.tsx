@@ -69,7 +69,7 @@ export default function Page() {
         <Hero
           eyebrow="E-COMMERCE DEVELOPMENT · DENVER"
           headline="Shopify Developer Denver for Colorado Businesses"
-          lead="The only Denver e-commerce agency that launches in 7 days at 50–60% below local rates. Shopify, WooCommerce & AI-powered stores for Colorado's outdoor brands, craft breweries, cannabis-adjacent businesses, and tech-first DTC founders. 500+ projects, 4.9★ rating."
+          lead="The only Denver e-commerce agency that launches in 7 days at a fixed, published price. Shopify, WooCommerce & AI-powered stores for Colorado's outdoor brands, craft breweries, cannabis-adjacent businesses, and tech-first DTC founders. 500+ projects, 4.9★ rating."
           primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
           trustItems={['Shopify stores from $2,999', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Denver, CO" badgeLabel="Live in 7 days" />}
@@ -150,7 +150,7 @@ export default function Page() {
           eyebrow="WHY FACTORYJET"
           headline="Why Denver Businesses Choose FactoryJet Over Local Agencies"
           lead={
-            "Fruition (Denver-based, well-established) handles mid-market web and e-commerce work but focuses on WordPress and digital marketing, not Shopify specialization. Doodle Dog Creative and Magneto IT Solutions serve the Denver market but lack AI development capabilities and 7-day delivery. Groove Commerce and TIDAL Commerce rank nationally for Denver Shopify queries at $10,000–$60,000 with no local presence.\n\nFactoryJet launches full Shopify stores in 7 days from $2,999 — 50–60% below the Denver agency benchmark. Unlike Fruition or Groove Commerce, we deliver with real Colorado market knowledge: the outdoor economy, Denver's unique tax structure, and the Front Range consumer profile that values performance as much as price."
+            "Fruition (Denver-based, well-established) handles mid-market web and e-commerce work but focuses on WordPress and digital marketing, not Shopify specialization. Doodle Dog Creative and Magneto IT Solutions serve the Denver market but lack AI development capabilities and 7-day delivery. Groove Commerce and TIDAL Commerce rank nationally for Denver Shopify queries at $10,000–$60,000 with no local presence.\n\nFactoryJet launches full Shopify stores in 7 days from $2,999 — at a fixed, published price. Unlike Fruition or Groove Commerce, we deliver with real Colorado market knowledge: the outdoor economy, Denver's unique tax structure, and the Front Range consumer profile that values performance as much as price."
           }
           pillars={[
             {
@@ -280,7 +280,7 @@ export default function Page() {
           eyebrow="TRANSPARENT PRICING"
           headline="Transparent Pricing for Denver E-Commerce Businesses"
           lead={
-            "Denver agency rates for a comparable Shopify build typically run $8,000–$25,000. National agencies like Groove Commerce quote $10,000–$60,000. FactoryJet delivers a full custom Shopify store from $2,999 — that's 50–60% below the Denver benchmark — with outdoor-specific configurations, a faster timeline, and a codebase you own outright. Stores ship in 7 days."
+            "Denver agency rates for a comparable Shopify build typically run $8,000–$25,000. National agencies like Groove Commerce quote $10,000–$60,000. FactoryJet delivers a full custom Shopify store from $2,999 — that's at a fixed, published price — with outdoor-specific configurations, a faster timeline, and a codebase you own outright. Stores ship in 7 days."
           }
           tiers={[
             {

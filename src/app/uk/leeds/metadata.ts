@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const leedsMetadata: Metadata = {
   title: "Web Design, E-Commerce & AI Agency Leeds | FactoryJet",
   description:
-    "AI-native web design, Shopify development & AI SEO (GEO/AEO) for Leeds businesses. Enterprise-grade quality. 50–60% below local agency rates. Free audit.",
+    "AI-native web design, Shopify development & AI SEO (GEO/AEO) for Leeds businesses. Enterprise-grade quality. Pricing is fixed and published upfront. Free audit.",
   keywords: [
     "web design leeds",
     "website design leeds",
@@ -24,7 +24,7 @@ export const leedsMetadata: Metadata = {
   openGraph: {
     title: "Web Design, E-Commerce & AI Agency Leeds | FactoryJet",
     description:
-      "AI-native web design, Shopify development & AI SEO (GEO/AEO) for Leeds businesses. Enterprise-grade quality. 50–60% below local agency rates. Free audit.",
+      "AI-native web design, Shopify development & AI SEO (GEO/AEO) for Leeds businesses. Enterprise-grade quality. Pricing is fixed and published upfront. Free audit.",
     url: "https://factoryjet.com/uk/leeds",
     siteName: "FactoryJet",
     locale: "en_GB",
@@ -35,7 +35,7 @@ export const leedsMetadata: Metadata = {
     card: "summary_large_image",
     title: "Web Design, E-Commerce & AI Agency Leeds | FactoryJet",
     description:
-      "AI-native web design, Shopify development & AI SEO (GEO/AEO) for Leeds businesses. Enterprise-grade quality. 50–60% below local agency rates. Free audit.",
+      "AI-native web design, Shopify development & AI SEO (GEO/AEO) for Leeds businesses. Enterprise-grade quality. Pricing is fixed and published upfront. Free audit.",
   },
   robots: { index: true, follow: true },
 };

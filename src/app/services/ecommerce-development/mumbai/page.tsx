@@ -612,7 +612,7 @@ export default function MumbaiEcommercePage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Mumbai Brands Choose FactoryJet Over Local Agencies"
-          lead="Mumbai ecommerce agencies typically charge ₹2,00,000–₹10,00,000 for a comparable project and take 10–20 weeks to deliver — without publishing their pricing upfront. FactoryJet publishes all three tiers before you speak to us, guarantees 7-day delivery in writing, and builds to Lighthouse 90+ on mobile. At 50–60% below the Mumbai agency benchmark for the same scope."
+          lead="Mumbai ecommerce agencies typically charge ₹2,00,000–₹10,00,000 for a comparable project and take 10–20 weeks to deliver — without publishing their pricing upfront. FactoryJet publishes all three tiers before you speak to us, guarantees 7-day delivery in writing, and builds to Lighthouse 90+ on mobile. All at a fixed, published price — with the codebase yours to keep."
           pillars={[
             {
               icon: '⚡',

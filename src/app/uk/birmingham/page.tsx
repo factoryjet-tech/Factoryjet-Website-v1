@@ -5,7 +5,7 @@ import BirminghamPage from "./BirminghamPage";
 export const metadata: Metadata = {
   title: "AI Web Design Agency Birmingham | FactoryJet",
   description:
-    "AI-native web design, Shopify development, AI agents and AI SEO for Birmingham's 60,000 businesses. 50–60% below Jewellery Quarter agency rates. From Paradise Quarter to Brindleyplace — built for the second city.",
+    "AI-native web design, Shopify development, AI agents and AI SEO for Birmingham's 60,000 businesses. Pricing is fixed and published upfront. From Paradise Quarter to Brindleyplace — built for the second city.",
   alternates: {
     canonical: "https://factoryjet.com/uk/birmingham",
   },
@@ -216,7 +216,7 @@ const schema = {
       "name": "AI Web Design Agency Birmingham | FactoryJet",
       "url": "https://factoryjet.com/uk/birmingham",
       "description":
-        "AI-native web design, AI agents & AI SEO agency in Birmingham. 50–60% below local agency rates.",
+        "AI-native web design, AI agents & AI SEO agency in Birmingham. Pricing is fixed and published upfront.",
       "inLanguage": "en-GB",
       "isPartOf": {
         "@type": "WebSite",

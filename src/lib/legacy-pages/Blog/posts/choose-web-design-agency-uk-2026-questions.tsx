@@ -25,7 +25,7 @@ export const post: BlogPost = {
     "Payment structures reveal agency confidence — fixed-price contracts with milestone-based payments reduce risk compared to hourly billing models.",
   ],
   faqs: [
-    { q: "What's a reasonable budget for a business website in the UK in 2026?", a: "UK agencies typically charge £5,000–£15,000 for SMB websites with custom design and basic functionality. Offshore agencies like FactoryJet deliver comparable quality at £1,500–£8,000, often 50–60% below local rates. E-commerce sites start at £2,000–£8,000 depending on product catalogue size and payment integration complexity. Budget an additional £99–£300 monthly for hosting, security, and maintenance." },
+    { q: "What's a reasonable budget for a business website in the UK in 2026?", a: "UK agencies typically charge £5,000–£15,000 for SMB websites with custom design and basic functionality. Offshore agencies like FactoryJet deliver comparable quality at £1,500–£8,000, often at a fixed, published price. E-commerce sites start at £2,000–£8,000 depending on product catalogue size and payment integration complexity. Budget an additional £99–£300 monthly for hosting, security, and maintenance." },
     { q: "How long should a professional website take to build?", a: "Standard business websites take 4–8 weeks with UK agencies, 2–4 weeks with streamlined offshore providers. E-commerce sites require 6–12 weeks for UK agencies, 3–6 weeks offshore. Delays usually stem from client feedback cycles, not technical work. Agencies promising completion under two weeks often use templates with minimal customisation." },
     { q: "What performance benchmarks should I demand?", a: "Require Google Lighthouse scores above 90 for Performance, Accessibility, Best Practices, and SEO. Insist on Core Web Vitals compliance: Largest Contentful Paint under 2.5 seconds, First Input Delay under 100 milliseconds, Cumulative Layout Shift under 0.1. These metrics directly affect Google rankings and conversion rates. Request proof via public PageSpeed Insights reports before final payment." },
     { q: "Should my agency offer AI features in 2026?", a: "Yes. Modern agencies integrate AI chatbots for customer support, personalisation engines that adapt content to visitor behaviour, and automated content generation for product descriptions or blog posts. AI voice agents for phone enquiries and AI sales agents for lead qualification are becoming standard. Agencies without AI capabilities are falling behind market expectations." },
@@ -154,7 +154,7 @@ export const post: BlogPost = {
             <tr className="bg-gray-100 font-bold">
               <td className="border p-3">FactoryJet pricing</td>
               <td className="border p-3">—</td>
-              <td className="border p-3">50–60% below UK rates</td>
+              <td className="border p-3">Pricing is fixed and published upfront</td>
             </tr>
           </tbody>
         </table>

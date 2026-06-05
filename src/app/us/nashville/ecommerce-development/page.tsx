@@ -69,7 +69,7 @@ export default function Page() {
         <Hero
           eyebrow="E-COMMERCE DEVELOPMENT · NASHVILLE"
           headline="Shopify Developer Nashville for Music City Businesses"
-          lead="The only Nashville e-commerce agency that launches in 7 days at 50–60% below local rates. Shopify, WooCommerce & AI-powered stores for Music City's artists, healthcare brands, restaurants, tourism businesses, and Tennessee entrepreneurs. 500+ projects, 4.9★ rating."
+          lead="The only Nashville e-commerce agency that launches in 7 days at a fixed, published price. Shopify, WooCommerce & AI-powered stores for Music City's artists, healthcare brands, restaurants, tourism businesses, and Tennessee entrepreneurs. 500+ projects, 4.9★ rating."
           primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
           trustItems={['Shopify stores from $2,999', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Nashville, TN" badgeLabel="Live in 7 days" />}
@@ -278,7 +278,7 @@ export default function Page() {
           eyebrow="TRANSPARENT PRICING"
           headline="Transparent Pricing for Nashville E-Commerce Businesses"
           lead={
-            "Nashville agency rates for a comparable Shopify build typically run $8,000–$25,000. National agencies like Lounge Lizard and WebFX quote $10,000–$40,000. FactoryJet delivers a full custom Shopify store from $2,999 — that's 50–60% below the Nashville benchmark — with a faster timeline and a codebase you own outright. Stores ship in 7 days. No retainer required."
+            "Nashville agency rates for a comparable Shopify build typically run $8,000–$25,000. National agencies like Lounge Lizard and WebFX quote $10,000–$40,000. FactoryJet delivers a full custom Shopify store from $2,999 — that's at a fixed, published price — with a faster timeline and a codebase you own outright. Stores ship in 7 days. No retainer required."
           }
           tiers={[
             {

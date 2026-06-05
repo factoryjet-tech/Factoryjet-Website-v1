@@ -59,7 +59,7 @@ const TECH: Tech[] = [
     id: "ai-workflow",
     name: "AI-Augmented Development Workflow",
     description:
-      "We use AI throughout our development process — from design generation to code review to quality assurance. This is not a marketing gimmick; it is the operational advantage that allows us to deliver 2–3x faster than traditional agencies while maintaining higher quality standards, and it is why we can price 50–60% below UK market rates without cutting corners.",
+      "We use AI throughout our development process — from design generation to code review to quality assurance. This is not a marketing gimmick; it is the operational advantage that allows us to deliver 2–3x faster than traditional agencies while maintaining higher quality standards, and it is why we can price at a fixed, published price without cutting corners.",
     colClass: "lg:col-span-5 lg:col-start-7",
     offsetPx: 96,
     parallax: -45,

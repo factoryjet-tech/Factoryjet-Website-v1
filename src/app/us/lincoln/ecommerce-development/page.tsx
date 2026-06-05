@@ -162,7 +162,7 @@ export default function Page() {
         <StrategicDarkSection
           eyebrow="THE FACTORYJET DIFFERENCE"
           headline="Three Reasons Lincoln Businesses Choose Us Over Local Agencies"
-          lead="Swanson Russell and Sproutbox are capable Lincoln agencies — but built for larger budgets and longer timelines. FactoryJet launches full Shopify stores in 7 days from $2,999, 50–60% below the Lincoln agency benchmark."
+          lead="Swanson Russell and Sproutbox are capable Lincoln agencies — but built for larger budgets and longer timelines. FactoryJet launches full Shopify stores in 7 days from $2,999, at a fixed, published price."
           pillars={[
             {
               title: 'Launch While Others Plan',

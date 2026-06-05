@@ -31,7 +31,7 @@ const SERVICES: Service[] = [
       "Modern website displayed on floating laptop with blue glassmorphism interface",
     imageSide: "right",
     body: [
-      "The average UK web design agency still builds on WordPress, charges £5,000–£12,000 for a business website, takes 8–12 weeks to deliver, and hands over a site that scores 60–80 on Google Lighthouse. FactoryJet builds every website on Next.js 15 and Tailwind CSS 4 — the same technology stack behind Stripe, Vercel, and Linear — delivering sites that score 90+ on Lighthouse, load in under two seconds, and cost 50–60% less than the traditional agency average.",
+      "The average UK web design agency still builds on WordPress, charges £5,000–£12,000 for a business website, takes 8–12 weeks to deliver, and hands over a site that scores 60–80 on Google Lighthouse. FactoryJet builds every website on Next.js 15 and Tailwind CSS 4 — the same technology stack behind Stripe, Vercel, and Linear — delivering sites that score 90+ on Lighthouse, load in under two seconds, and cost at a fixed, published price.",
       "We work with businesses across the entire United Kingdom, from London startups to Leeds financial firms to Edinburgh tech companies to Bristol aerospace innovators. Whether you need a bespoke website design for a professional services firm, a custom website development project with React and headless CMS architecture, a JAMstack development build for maximum performance, or an affordable web design package for a growing small business, our web development agency delivers at a quality and speed that traditional traditional agencies simply cannot match.",
       "Every website we build is mobile-responsive, SEO-optimised from day one, and structured for AI search visibility — meaning your site is built not just for Google rankings, but for ChatGPT citations, Perplexity references, and Google AI Overview mentions. We also specialise in industry-vertical web design, with experience building high-converting sites for law firms, restaurants, healthcare organisations, real estate businesses, and professional services.",
       "How much does a website cost in the UK? Most agencies charge £5,000–£12,000 for a standard site and £10,000–£25,000 for custom builds. FactoryJet starts at £1,500 for small business websites and £5,000–£8,000 for complex custom builds. Our pricing is possible because our AI-augmented development workflow eliminates the inefficiencies that inflate traditional agency costs. And for UK business owners, web design is a legitimate business expense claimable against your corporation tax or income tax with HMRC — reducing the effective cost by 19–25%.",
@@ -405,7 +405,7 @@ export default function Services() {
             }}
           >
             Web design, e-commerce, AI agents and AI SEO — delivered by one
-            AI-native team, priced 50–60% below the traditional agency average, and
+            AI-native team, priced at a fixed, published price, and
             built on the same stack as Stripe, Vercel and Linear.
           </p>
         </div>

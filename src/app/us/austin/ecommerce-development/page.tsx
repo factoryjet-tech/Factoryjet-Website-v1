@@ -116,7 +116,7 @@ export default function AustinEcommerceDevelopmentPage() {
         {/* ── 3. TRUST STATS ───────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ stores. 7-day delivery. 65% less than Austin agencies."
+          headline="500+ stores. 7-day delivery. Pricing is fixed and published upfront."
         />
 
         {/* ── 4. CITY CONTEXT ──────────────────────────────────────────── */}

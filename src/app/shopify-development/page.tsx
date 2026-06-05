@@ -944,7 +944,7 @@ export default function ShopifyDevelopmentPage() {
             {
               icon: '💸',
               title: 'Indian Shopify agencies charge ₹2–8 lakhs and deliver a theme installation.',
-              body: 'A mid-tier Indian digital agency charges ₹2,00,000–₹8,00,000 for Shopify development — and typically delivers a Shopify theme with the logo and colours customised. FactoryJet builds a genuinely custom Figma-designed Liquid theme, properly wired to Razorpay, Shiprocket, GST invoicing, and WhatsApp — at 50–60% less. Because our team is specialised and lean, not overhead-heavy.',
+              body: 'A mid-tier Indian digital agency charges ₹2,00,000–₹8,00,000 for Shopify development — and typically delivers a Shopify theme with the logo and colours customised. FactoryJet builds a genuinely custom Figma-designed Liquid theme, properly wired to Razorpay, Shiprocket, GST invoicing, and WhatsApp — at a fixed, published price. Because our team is specialised and lean, not overhead-heavy.',
             },
           ]}
         />

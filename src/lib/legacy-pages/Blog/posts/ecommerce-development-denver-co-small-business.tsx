@@ -15,7 +15,7 @@ export const post: BlogPost = {
   meta: {
     title: 'Ecommerce Development Denver CO: Small Business Guide 2026 | FactoryJet',
     description:
-      'Denver CO small businesses: Shopify and custom ecommerce development in 7 days starting at $2,499. 60% cheaper than local Denver agencies. Complete guide with costs, timelines, and FAQs.',
+      'Denver CO small businesses: Shopify and custom ecommerce development in 7 days starting at $2,499. Pricing is fixed and published upfront. Complete guide with costs, timelines, and FAQs.',
   },
   keyTakeaways: [
     'Denver ecommerce development agencies charge $12,000–$40,000 for Shopify or custom online stores — offshore agencies with US support deliver identical Lighthouse 100/100 results for $2,499–$7,999.',
@@ -142,7 +142,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Offers Denver Businesses</h2>
       <p className="mb-4">
-        FactoryJet builds Shopify and custom ecommerce stores for Denver small businesses starting at $2,499 — 7-day delivery, Lighthouse 100/100, up to 50 products loaded, Colorado sales tax configured, Google Shopping feed setup, and 30-day post-launch support. 60–70% less than Denver local agencies with identical technical quality. US business-hour project management throughout.
+        FactoryJet builds Shopify and custom ecommerce stores for Denver small businesses starting at $2,499 — 7-day delivery, Lighthouse 100/100, up to 50 products loaded, Colorado sales tax configured, Google Shopping feed setup, and 30-day post-launch support. Pricing is fixed and published upfront with identical technical quality. US business-hour project management throughout.
       </p>
       <p className="mb-4">
         ➡ <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free ecommerce quote with PageSpeed proof in 24 hours</a> · <a href="/us/services/ecommerce" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our ecommerce packages</a>

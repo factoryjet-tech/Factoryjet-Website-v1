@@ -87,7 +87,7 @@ export default function Page() {
         <Hero
           eyebrow="E-COMMERCE DEVELOPMENT · TAMPA"
           headline="Shopify Developer Tampa for Gulf Coast Businesses"
-          lead="Tampa is one of the fastest-growing economies in Florida — $200B GDP, zero state income tax, and a booming DTC market across healthcare, marine, food, and tourism. FactoryJet builds the Shopify stores to capture it — live in 7 days from $2,999, at 50–60% below local agency rates. 500+ projects, 4.9★."
+          lead="Tampa is one of the fastest-growing economies in Florida — $200B GDP, zero state income tax, and a booming DTC market across healthcare, marine, food, and tourism. FactoryJet builds the Shopify stores to capture it — live in 7 days from $2,999, at a fixed, published price. 500+ projects, 4.9★."
           primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
           trustItems={['Shopify stores from $2,999', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Tampa, FL" badgeLabel="Live in 7 days" />}
@@ -182,7 +182,7 @@ export default function Page() {
           eyebrow="WHY FACTORYJET"
           headline="Why Tampa Businesses Choose FactoryJet Over Local Agencies"
           lead={
-            "Wicked Creative is Tampa's best-known local web agency, but their focus is brand strategy and digital marketing — not Shopify development or AI-powered e-commerce. Mpls Digital ranks for Tampa searches but operates from Minneapolis with no Gulf Coast market knowledge and no fixed pricing. No Tampa agency combines Shopify specialization with AI development, 7-day delivery, and transparent fixed pricing.\n\nFactoryJet launches full Shopify stores in 7 days from $2,999 — 50–60% below the Tampa agency benchmark. Unlike Thrive Internet Marketing (Fort Worth, $150–$300/hr, no fixed pricing) or WebFX ($10,000–$49,900 for mid-market builds), we deliver with real Tampa market knowledge: Florida's tax structure, Gulf Coast consumer behavior, Ybor City's Cuban food heritage, and the healthcare-wellness DTC market that drives half of Tampa Bay's e-commerce growth."
+            "Wicked Creative is Tampa's best-known local web agency, but their focus is brand strategy and digital marketing — not Shopify development or AI-powered e-commerce. Mpls Digital ranks for Tampa searches but operates from Minneapolis with no Gulf Coast market knowledge and no fixed pricing. No Tampa agency combines Shopify specialization with AI development, 7-day delivery, and transparent fixed pricing.\n\nFactoryJet launches full Shopify stores in 7 days from $2,999 — at a fixed, published price. Unlike Thrive Internet Marketing (Fort Worth, $150–$300/hr, no fixed pricing) or WebFX ($10,000–$49,900 for mid-market builds), we deliver with real Tampa market knowledge: Florida's tax structure, Gulf Coast consumer behavior, Ybor City's Cuban food heritage, and the healthcare-wellness DTC market that drives half of Tampa Bay's e-commerce growth."
           }
           pillars={[
             {
@@ -312,7 +312,7 @@ export default function Page() {
           eyebrow="TRANSPARENT PRICING"
           headline="Transparent Pricing for Tampa E-Commerce Businesses"
           lead={
-            "Tampa agency rates for a comparable Shopify build typically run $7,500–$20,000 — and national agencies like WebFX quote $10,000–$49,900 for mid-market scope. FactoryJet delivers a full custom Shopify store from $2,999 — that's 50–60% below the Tampa benchmark — with a faster timeline and a codebase you own outright. Stores ship in 7 days. No retainer required."
+            "Tampa agency rates for a comparable Shopify build typically run $7,500–$20,000 — and national agencies like WebFX quote $10,000–$49,900 for mid-market scope. FactoryJet delivers a full custom Shopify store from $2,999 — all at a fixed, published price — with a faster timeline and a codebase you own outright. Stores ship in 7 days. No retainer required."
           }
           tiers={[
             {

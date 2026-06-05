@@ -29,7 +29,7 @@ const ROOT = process.cwd();
 const APP = join(ROOT, 'src', 'app');
 const PUBLIC = join(ROOT, 'public');
 const STRICT = process.env.STRICT === '1';
-const POSITIONING_FATAL = false; // flip to true after the positioning sweep
+const POSITIONING_FATAL = true; // positioning swept 2026-06-05 — now enforced
 
 const fatals = [];
 const warns = [];
@@ -71,8 +71,12 @@ const BANNED_FATAL = [
 ];
 const BANNED_POSITIONING = [
   { re: /cheaper than (US|UK)/i, msg: 'geo-cheap framing "cheaper than US/UK"' },
-  { re: /\d{1,2}%\s*cheaper than/i, msg: '"%-cheaper than" framing' },
-  { re: /\d{1,2}%\s*below[^.\n]{0,30}agency rates/i, msg: '"%-below agency rates" framing' },
+  // Cost-vs-others framing: a %-figure followed (within ~45 chars) by an agency/
+  // studio/rates/benchmark/market/local reference. Catches "60–70% below local
+  // rates", "below the Mumbai agency benchmark", "60–70% less than UK agencies",
+  // "below central London studios". Deliberately does NOT match internal
+  // comparisons like "20–30% cheaper than new builds" or "30% less time".
+  { re: /\d{1,2}\s*[–-]?\s*\d{0,2}%\s*(cheaper|less|below)[^.\n]{0,45}(agenc|studio|rates|benchmark|market|local)/i, msg: 'cost-vs-others positioning framing' },
 ];
 
 for (const f of srcFiles) {

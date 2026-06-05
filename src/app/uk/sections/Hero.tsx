@@ -339,7 +339,7 @@ export default function Hero() {
             }}
           >
             Enterprise-grade web design, e-commerce, AI agents &amp; AI SEO —
-            50–60% below traditional agency rates.
+            at a fixed, published price.
           </p>
         </div>
 

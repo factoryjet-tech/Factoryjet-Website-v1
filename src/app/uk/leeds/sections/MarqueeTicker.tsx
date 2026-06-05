@@ -1,6 +1,6 @@
 const ITEMS = [
   "WEB DESIGN LEEDS",
-  "50–60% BELOW LOCAL AGENCY RATES",
+  "Pricing is fixed and published upfront",
   "NEXT.JS 15 + TAILWIND CSS 4",
   "LEEDS DOCK · VICTORIA QUARTER · KIRKGATE MARKET",
   "2–4 WEEK DELIVERY",

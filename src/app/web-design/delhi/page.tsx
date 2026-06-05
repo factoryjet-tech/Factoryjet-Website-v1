@@ -341,7 +341,7 @@ const DEL_FAQ_ITEMS = [
     category: 'local',
     question: 'How does FactoryJet compare to Delhi web agencies?',
     answer:
-      "Delhi NCR web agencies typically charge ₹1,50,000–₹5,00,000 for a comparable project and deliver in 8–20 weeks. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at 60–70% less.",
+      "Delhi NCR web agencies typically charge ₹1,50,000–₹5,00,000 for a comparable project and deliver in 8–20 weeks. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at a fixed, published price.",
   },
 
   /* ── Support & Ownership ── */
@@ -712,7 +712,7 @@ export default function DelhiWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Delhi Businesses Choose FactoryJet Over Local Agencies"
-          lead="Delhi NCR web agencies typically charge ₹1,50,000–₹5,00,000 for a comparable project and take 8–20 weeks to deliver — without publishing their rates or timeline upfront. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. At 60–70% below the Delhi agency benchmark for the same scope."
+          lead="Delhi NCR web agencies typically charge ₹1,50,000–₹5,00,000 for a comparable project and take 8–20 weeks to deliver — without publishing their rates or timeline upfront. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Pricing is fixed and published upfront for the same scope."
           pillars={[
             {
               icon: '⚡',
