@@ -1237,16 +1237,16 @@ export default function WebDesignPage() {
             <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">Web Design Services by City</h2>
             <div className="flex flex-wrap gap-3">
               {[
-                { city: 'Austin, TX', href: '/us/austin/web-design/' },
-                { city: 'Miami, FL', href: '/us/miami/web-design/' },
-                { city: 'Denver, CO', href: '/us/denver/web-design/' },
-                { city: 'Nashville, TN', href: '/us/nashville/web-design/' },
-                { city: 'Portland, OR', href: '/us/portland/web-design/' },
-                { city: 'Charlotte, NC', href: '/us/charlotte/web-design/' },
-                { city: 'Raleigh, NC', href: '/us/raleigh/web-design/' },
-                { city: 'Tampa, FL', href: '/us/tampa/web-design/' },
-                { city: 'New York, NY', href: '/us/new-york/web-design/' },
-                { city: 'Cleveland, OH', href: '/us/cleveland/web-design/' },
+                { city: 'Austin, TX', href: '/us/austin/web-design' },
+                { city: 'Miami, FL', href: '/us/miami/web-design' },
+                { city: 'Denver, CO', href: '/us/denver/web-design' },
+                { city: 'Nashville, TN', href: '/us/nashville/web-design' },
+                { city: 'Portland, OR', href: '/us/portland/web-design' },
+                { city: 'Charlotte, NC', href: '/us/charlotte/web-design' },
+                { city: 'Raleigh, NC', href: '/us/raleigh/web-design' },
+                { city: 'Tampa, FL', href: '/us/tampa/web-design' },
+                { city: 'New York, NY', href: '/us/new-york/web-design' },
+                { city: 'Cleveland, OH', href: '/us/cleveland/web-design' },
               ].map(({ city, href }) => (
                 <Link key={href} href={href} className="px-4 py-2 rounded-full border border-[#F05A28] text-[#F05A28] text-sm font-medium hover:bg-[#F05A28] hover:text-white transition-colors">
                   {city}

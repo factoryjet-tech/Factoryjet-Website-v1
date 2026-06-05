@@ -51,8 +51,10 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'Nashville, TN', href: '/us/nashville/web-design' },
       { label: 'New York, NY',  href: '/us/new-york/web-design' },
       { label: 'Charlotte, NC', href: '/us/charlotte/web-design' },
+      { label: 'Raleigh, NC',   href: '/us/raleigh/web-design' },
       { label: 'Tampa, FL',     href: '/us/tampa/web-design' },
       { label: 'Portland, OR',  href: '/us/portland/web-design' },
+      { label: 'Cleveland, OH', href: '/us/cleveland/web-design' },
     ],
   },
 ];
