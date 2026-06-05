@@ -960,7 +960,7 @@ export default function WhatsAppChatbotINPage() {
         />
 
         {/* ── 9. INDUSTRIES GRID (DARK) ────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="INDUSTRIES WE BUILD FOR"
           headline="WhatsApp chatbots built for every major Indian industry"
           lead="Every industry has different conversation patterns, integrations, and compliance requirements. We build for yours — not a generic template."
@@ -1027,8 +1027,8 @@ export default function WhatsAppChatbotINPage() {
                     desc: 'Discovery to live chatbot in 7 days. No other agency at this quality level matches this timeline.',
                   },
                   {
-                    title: '60–70% cheaper than comparable agencies',
-                    desc: 'India-based team, India pricing. You get production-grade work without the inflated agency overhead.',
+                    title: 'Senior team, no agency overhead',
+                    desc: 'You work directly with the engineers who build your chatbot — no account managers or project coordinators inflating invoices. Production-grade work, fixed price upfront.',
                   },
                   {
                     title: 'India-specific stack knowledge',

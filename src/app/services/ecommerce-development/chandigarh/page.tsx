@@ -673,7 +673,7 @@ export default function ChandigarhEcommercePage() {
         />
 
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="CHANDIGARH × ECOMMERCE"
           headline="Ecommerce Development for Chandigarh's Key Commerce Verticals"
           lead="From Sector 17 premium fashion retailers to Baddi pharma manufacturers to Punjab agri brands — Chandigarh's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."

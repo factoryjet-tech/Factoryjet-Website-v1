@@ -253,7 +253,7 @@ const KOL_FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet cheaper than Kolkata web agencies?',
+    question: 'What makes FactoryJet better value than a Kolkata web agency?',
     answer:
       "We are a specialised web engineering team — not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. You pay for the build, not our admin structure.",
   },
@@ -793,7 +793,7 @@ export default function KolkataWebDesignPage() {
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="KOLKATA × WEB DESIGN"
           headline="Web Design for Kolkata's Key Industries"
           lead="From jute and tea exporters and port logistics firms to IT companies in Salt Lake and retail brands on Park Street — Kolkata's economy spans industries with very different digital requirements. FactoryJet has built for each of them."

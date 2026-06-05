@@ -102,8 +102,12 @@ const nextConfig = {
       { source: '/services/web-design/mumbai',         destination: '/web-design/mumbai',         permanent: true },
       { source: '/services/web-design/pune',           destination: '/web-design/pune',           permanent: true },
       { source: '/services/web-design/surat',          destination: '/web-design/surat',          permanent: true },
-      { source: '/services/ecommerce-development',           destination: '/ecommerce-development',           permanent: true },
-      { source: '/services/ecommerce-development/mumbai',    destination: '/ecommerce-development/mumbai',    permanent: true },
+      // NOTE (2026-06-05, FJ-003): Removed contradicting rules that sent
+      // /services/ecommerce-development(/mumbai) → /ecommerce-development(/mumbai).
+      // Canonical India ecommerce URL is /services/ecommerce-development/[city]
+      // (matches sitemap-india + page source). The reverse migration in
+      // public/_redirects (/ecommerce-development → /services/ecommerce-development)
+      // is the single source of truth. Do not re-add the inverse here.
     ]
   },
 

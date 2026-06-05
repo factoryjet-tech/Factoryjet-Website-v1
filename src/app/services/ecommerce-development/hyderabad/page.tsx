@@ -673,7 +673,7 @@ export default function HyderabadEcommercePage() {
         />
 
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="HYDERABAD × ECOMMERCE"
           headline="Ecommerce Development for Hyderabad's Key Commerce Verticals"
           lead="From Laad Bazaar pearl jewellers to HITEC City tech brands to Genome Valley pharma manufacturers — Hyderabad's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."

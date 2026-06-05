@@ -258,7 +258,7 @@ const NAG_FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet cheaper than Nagpur web agencies?',
+    question: 'What makes FactoryJet better value than a Nagpur web agency?',
     answer:
       "We are a specialised web engineering team — not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. You pay for the build, not our admin structure.",
   },
@@ -810,7 +810,7 @@ export default function NagpurWebDesignPage() {
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="NAGPUR × WEB DESIGN"
           headline="Web Design for Nagpur's Key Industries"
           lead="From logistics companies and MIDC manufacturers to MIHAN SEZ IT firms, agri-exporters, and growing service businesses — Nagpur's economy spans industries with very different digital requirements. FactoryJet has built for each of them."

@@ -673,7 +673,7 @@ export default function ChennaiEcommercePage() {
         />
 
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="CHENNAI × ECOMMERCE"
           headline="Ecommerce Development for Chennai's Key Commerce Verticals"
           lead="From Ambattur auto manufacturers to T. Nagar silk weavers to OMR IT brands — Chennai's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."

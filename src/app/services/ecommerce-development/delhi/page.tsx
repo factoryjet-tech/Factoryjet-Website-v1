@@ -673,7 +673,7 @@ export default function DelhiEcommercePage() {
         />
 
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="DELHI × ECOMMERCE"
           headline="Ecommerce Development for Delhi's Key Commerce Verticals"
           lead="From Lajpat Nagar fashion wholesalers to Karol Bagh jewellers to Okhla manufacturers — Delhi's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."

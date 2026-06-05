@@ -673,7 +673,7 @@ export default function SuratEcommercePage() {
         />
 
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="SURAT × ECOMMERCE"
           headline="Ecommerce Development for Surat's Key Commerce Verticals"
           lead="From Ring Road fabric traders to Katargam embroidery manufacturers to GIDC food producers — Surat's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."

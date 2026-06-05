@@ -57,7 +57,7 @@ const FAQ_SCHEMA = {
       name: 'What does FactoryJet do?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet is an AI-native web design and development agency headquartered in Bengaluru, India. We build custom websites, Shopify e-commerce stores, and AI agents for businesses in India, the US, the UK, and globally. We deliver projects 50–70% cheaper than local agencies and guarantee delivery of standard 5-page websites within 7 business days.',
+        text: 'FactoryJet is an AI-native web design and development agency headquartered in Bengaluru, India. We build custom websites, Shopify e-commerce stores, and AI agents for businesses in India, the US, the UK, and globally. We guarantee delivery of standard 5-page websites within 7 business days, ship every site on Next.js at Lighthouse 100/100, and hand over full code ownership — design, build, and SEO setup included.',
       },
     },
     {
@@ -102,10 +102,10 @@ const FAQ_SCHEMA = {
     },
     {
       '@type': 'Question',
-      name: 'Why is FactoryJet cheaper than US or UK web agencies?',
+      name: 'What makes FactoryJet better value than a traditional agency?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s engineering and design team is based in India, which means the same quality — Next.js expertise, Figma design, Lighthouse 100 performance — at significantly lower labor costs. There are no layers of account managers, sales reps, or project coordinators inflating invoices. FactoryJet publishes fixed prices upfront; no discovery call required for a number.',
+        text: 'You work directly with senior engineers and designers — no account managers, sales reps, or project coordinators inflating timelines or invoices. Every site is built on Next.js, ships at Lighthouse 100/100, and is delivered within 7 business days with full code ownership. Prices are published upfront, so you get a number without a discovery call. The result is faster delivery, better performance, and a codebase you own outright.',
       },
     },
     {

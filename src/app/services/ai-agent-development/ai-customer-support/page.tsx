@@ -805,7 +805,7 @@ export default function AICustomerSupportINPage() {
           footer="Prices reflect typical Indian market rates as of 2025. FactoryJet fixed-price contracts available for all tiers."
         />
 
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="WHO WE BUILD FOR"
           headline="AI customer support for every major Indian industry"
           lead="Every industry has different support query patterns, tool integrations, and compliance requirements. We build for yours."

@@ -1143,7 +1143,7 @@ export default function ShopifyDevelopmentPage() {
         />
 
         {/* ── 11. WHAT WE BUILD ─────────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="WHAT WE BUILD"
           headline="Six Shopify Services for Indian Businesses"
           lead="From a custom Liquid theme to a headless Shopify Plus enterprise build — we scope the right engagement for your brand, catalogue, and revenue stage."

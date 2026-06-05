@@ -257,7 +257,7 @@ const JPR_FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet cheaper than Jaipur web agencies?',
+    question: 'What makes FactoryJet better value than a Jaipur web agency?',
     answer:
       "We are a specialised web engineering team — not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. You pay for the build, not our admin structure.",
   },
@@ -818,7 +818,7 @@ export default function JaipurWebDesignPage() {
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="JAIPUR × WEB DESIGN"
           headline="Web Design for Jaipur's Key Industries"
           lead="From jewellery exporters and handicraft manufacturers to tourism operators and IT startups — Jaipur's economy spans industries with very different digital requirements. FactoryJet has built for each of them."

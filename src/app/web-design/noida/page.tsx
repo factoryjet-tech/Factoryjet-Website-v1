@@ -253,7 +253,7 @@ const NOIDA_FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet cheaper than Noida web agencies?',
+    question: 'What makes FactoryJet better value than a Noida web agency?',
     answer:
       "We are a specialised web engineering team — not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. You pay for the build, not our admin structure.",
   },
@@ -790,7 +790,7 @@ export default function NoidaWebDesignPage() {
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="NOIDA × WEB DESIGN"
           headline="Web Design for Noida's Key Industries"
           lead="From IT services firms and BPO companies to media production houses, NSEZ exporters, D2C startups, and pharma manufacturers — Noida's economy spans industries with very different digital requirements. FactoryJet has built for each of them."

@@ -511,7 +511,7 @@ export default function AISalesAgentINPage() {
           footer="Prices reflect typical Indian market rates as of 2025. FactoryJet fixed-price contracts available for all tiers."
         />
 
-        <IndustriesGrid eyebrow="WHO WE BUILD FOR" headline="AI sales agents for every high-lead-volume Indian industry" lead="Every industry has different lead sources, qualification criteria, and compliance requirements. We build for yours." sectors={SALES_INDUSTRIES} />
+        <IndustriesGrid variant="cards" eyebrow="WHO WE BUILD FOR" headline="AI sales agents for every high-lead-volume Indian industry" lead="Every industry has different lead sources, qualification criteria, and compliance requirements. We build for yours." sectors={SALES_INDUSTRIES} />
 
         <div id="pricing">
           <PricingTiers

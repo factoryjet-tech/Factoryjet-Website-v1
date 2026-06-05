@@ -673,7 +673,7 @@ export default function KochiEcommercePage() {
         />
 
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="KOCHI × ECOMMERCE"
           headline="Ecommerce Development for Kochi's Key Commerce Verticals"
           lead="From seafood exporters at the port to spice traders in the commercial district to IT companies in Infopark — Kochi's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."

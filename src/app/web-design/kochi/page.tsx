@@ -257,7 +257,7 @@ const KOCHI_FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet cheaper than Kochi web agencies?',
+    question: 'What makes FactoryJet better value than a Kochi web agency?',
     answer:
       "We are a specialised web engineering team — not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. You pay for the build, not our admin structure.",
   },
@@ -824,7 +824,7 @@ export default function KochiWebDesignPage() {
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="KOCHI × WEB DESIGN"
           headline="Web Design for Kochi's Key Industries"
           lead="From IT firms at Infopark and tourism operators in Fort Kochi to seafood exporters at Kochi Port and startups from KSUM — Kochi's economy spans industries with very different digital requirements. FactoryJet has built for each of them."

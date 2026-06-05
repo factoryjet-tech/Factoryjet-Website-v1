@@ -257,7 +257,7 @@ const BLR_FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet cheaper than Bangalore web agencies?',
+    question: 'What makes FactoryJet better value than a Bangalore web agency?',
     answer:
       "We are a specialised web engineering team — not a full-service agency with account managers, strategy layers, and large office overheads in Koramangala. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. We have been building websites since 1999. You pay for the build, not our overhead.",
   },
@@ -799,7 +799,7 @@ export default function BangaloreWebDesignPage() {
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="BANGALORE × WEB DESIGN"
           headline="Web Design for Bangalore's Key Industries"
           lead="From Whitefield IT parks to Koramangala startups to Indiranagar D2C brands — Bangalore's economy spans industries with very different digital requirements. FactoryJet has built for each of them."

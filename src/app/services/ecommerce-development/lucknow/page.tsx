@@ -673,7 +673,7 @@ export default function LucknowEcommercePage() {
         />
 
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="LUCKNOW × ECOMMERCE"
           headline="Ecommerce Development for Lucknow's Key Commerce Verticals"
           lead="From Chikan embroidery brands in Hazratganj to Awadhi food companies to agri producers across UP — Lucknow's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."

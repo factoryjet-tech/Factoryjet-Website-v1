@@ -253,7 +253,7 @@ const GGN_FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet cheaper than Gurgaon web agencies?',
+    question: 'What makes FactoryJet better value than a Gurgaon web agency?',
     answer:
       'We are a specialised web engineering team — not a full-service agency with large Cyber City or Golf Course Road overheads. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. You pay for the build, not our real estate.',
   },
@@ -801,7 +801,7 @@ export default function GurgaonWebDesignPage() {
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="GURGAON × WEB DESIGN"
           headline="Web Design for Gurgaon's Key Industries"
           lead="From Fortune 500 GCCs and BFSI firms to funded startups, real estate developers, and luxury retail brands — Gurgaon's economy spans industries with very different digital requirements. FactoryJet has built for each of them."

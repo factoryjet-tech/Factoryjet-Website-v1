@@ -673,7 +673,7 @@ export default function PuneEcommercePage() {
         />
 
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="PUNE × ECOMMERCE"
           headline="Ecommerce Development for Pune's Key Commerce Verticals"
           lead="From Pimpri-Chinchwad auto manufacturers to Hinjewadi IT brands to Koregaon Park lifestyle labels — Pune's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."

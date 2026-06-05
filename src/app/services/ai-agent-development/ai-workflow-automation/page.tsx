@@ -792,7 +792,7 @@ export default function AIWorkflowAutomationINPage() {
           footer="Prices reflect typical Indian market rates as of 2025. FactoryJet fixed-price contracts available for all tiers."
         />
 
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="WHO WE BUILD FOR"
           headline="AI workflow automation for every major Indian industry"
           lead="Every industry has different tools, data formats, and compliance requirements. We build for yours."

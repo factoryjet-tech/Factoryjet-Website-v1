@@ -1156,7 +1156,7 @@ export default function EcommerceDevelopmentPage() {
         />
 
         {/* ── 11. WHAT WE BUILD ─────────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="WHAT WE BUILD"
           headline="Six E-Commerce Services for Indian Businesses"
           lead="From a Shopify launch to a custom quick-commerce platform — we scope the right engagement for your business model, platform, and growth stage."

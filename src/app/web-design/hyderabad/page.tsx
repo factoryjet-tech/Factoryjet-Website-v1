@@ -255,7 +255,7 @@ const HYD_FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet cheaper than Hyderabad web agencies?',
+    question: 'What makes FactoryJet better value than a Hyderabad web agency?',
     answer:
       "We are a specialised web engineering team — not a full-service agency with multiple layers of overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. You pay for the build, not our admin structure.",
   },
@@ -795,7 +795,7 @@ export default function HyderabadWebDesignPage() {
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="HYDERABAD × WEB DESIGN"
           headline="Web Design for Hyderabad's Key Industries"
           lead="From HITEC City IT firms to Genome Valley pharma companies to Jubilee Hills retail brands — Hyderabad's economy spans industries with very different digital requirements. FactoryJet has built for each of them."

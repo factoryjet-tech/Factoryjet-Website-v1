@@ -1058,7 +1058,7 @@ export default function AIChatbotINPage() {
         />
 
         {/* ── 11. INDUSTRIES GRID (DARK) ────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="WHO WE BUILD FOR"
           headline="AI chatbots for every major Indian industry"
           lead="Every industry has different conversation patterns, integrations, and compliance requirements. We build for yours."

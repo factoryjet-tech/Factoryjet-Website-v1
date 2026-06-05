@@ -1170,7 +1170,7 @@ export default function N8nAutomationPage() {
         />
 
         {/* ── 11. USE CASES ─────────────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="WHAT WE AUTOMATE"
           headline="Eight Automation Use Cases for Indian Businesses"
           lead="From Razorpay payment to Tally invoice in 30 seconds. From new website lead to WhatsApp follow-up in under a minute. Real automation patterns for the Indian business stack."

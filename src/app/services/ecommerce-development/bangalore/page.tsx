@@ -673,7 +673,7 @@ export default function BangaloreEcommercePage() {
         />
 
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="BANGALORE × ECOMMERCE"
           headline="Ecommerce Development for Bangalore's Key Commerce Verticals"
           lead="From Whitefield tech D2C brands to Koramangala fashion labels to Electronic City B2B manufacturers — Bangalore's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."

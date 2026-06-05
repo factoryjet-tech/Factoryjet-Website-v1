@@ -258,7 +258,7 @@ const PUNE_FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet cheaper than Pune web agencies?',
+    question: 'What makes FactoryJet better value than a Pune web agency?',
     answer:
       'We are a specialised web engineering team — not a full-service agency with account managers, strategy teams, and office overheads in Baner or Koregaon Park. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at a fraction of the cost. We have been building websites since 1999. You pay for the build, not our admin structure.',
   },
@@ -634,7 +634,7 @@ export default function PuneWebDesignPage() {
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="PUNE × WEB DESIGN"
           headline="Web Design for Pune's Key Industries"
           lead="From Hinjewadi IT firms to Chakan auto suppliers to Koregaon Park D2C brands — Pune's economy spans industries with very different digital requirements. FactoryJet has built for each."

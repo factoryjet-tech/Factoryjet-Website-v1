@@ -261,7 +261,7 @@ const BBSR_FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet cheaper than Bhubaneswar web agencies?',
+    question: 'What makes FactoryJet better value than a Bhubaneswar web agency?',
     answer:
       "We are a specialised web engineering team — not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. You pay for the build, not our admin structure.",
   },
@@ -825,7 +825,7 @@ export default function BhubaneswarWebDesignPage() {
         />
 
         {/* ── 10. INDUSTRIES ──────────────────────────────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="BHUBANESWAR × WEB DESIGN"
           headline="Web Design for Bhubaneswar's Key Industries"
           lead="From IT companies in Infocity and Startup Odisha-backed startups to government contractors, KIIT and IIT Bhubaneswar adjacent businesses, temple tourism operators, steel and mining sector firms, and Odisha exporters — Bhubaneswar's economy is broader and faster-growing than most people outside the state realise. FactoryJet builds for each of them."

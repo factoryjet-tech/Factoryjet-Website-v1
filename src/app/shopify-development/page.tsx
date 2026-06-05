@@ -1251,7 +1251,7 @@ export default function ShopifyDevelopmentPage() {
         />
 
         {/* ── 12. WHAT WE BUILD ────────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="WHAT WE BUILD"
           headline="Six Shopify Services for Indian D2C Brands"
           lead="From a custom Liquid theme to a headless Shopify Plus enterprise build — we scope the right engagement for your brand, catalogue, and revenue stage."

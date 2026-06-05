@@ -259,7 +259,7 @@ const TVM_FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet cheaper than Thiruvananthapuram web agencies?',
+    question: 'What makes FactoryJet better value than a Thiruvananthapuram web agency?',
     answer:
       "We are a specialised web engineering team — not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. You pay for the build, not our admin structure.",
   },
@@ -833,7 +833,7 @@ export default function ThiruvananthapuramWebDesignPage() {
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="THIRUVANANTHAPURAM × WEB DESIGN"
           headline="Web Design for Thiruvananthapuram's Key Industries"
           lead="From IT startups at Technopark and government contractors to Kovalam tourism operators and Ayurveda wellness brands — Thiruvananthapuram's economy spans industries with very different digital requirements. FactoryJet has built for each of them."

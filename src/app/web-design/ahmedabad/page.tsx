@@ -255,7 +255,7 @@ const AMD_FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet cheaper than Ahmedabad web agencies?',
+    question: 'What makes FactoryJet better value than a Ahmedabad web agency?',
     answer:
       "We are a specialised web engineering team — not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. You pay for the build, not our admin structure.",
   },
@@ -794,7 +794,7 @@ export default function AhmedabadWebDesignPage() {
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="AHMEDABAD × WEB DESIGN"
           headline="Web Design for Ahmedabad's Key Industries"
           lead="From textile exporters and MSME manufacturers to GIFT City financial firms and SG Highway corporates — Ahmedabad's economy spans industries with very different digital requirements. FactoryJet has built for each of them."

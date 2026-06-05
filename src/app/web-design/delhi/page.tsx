@@ -255,7 +255,7 @@ const DEL_FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet cheaper than Delhi web agencies?',
+    question: 'What makes FactoryJet better value than a Delhi web agency?',
     answer:
       "We are a specialised web engineering team — not a full-service agency with large account management overhead in Gurgaon or CP. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. You pay for the build, not our admin structure.",
   },
@@ -794,7 +794,7 @@ export default function DelhiWebDesignPage() {
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="DELHI NCR × WEB DESIGN"
           headline="Web Design for Delhi NCR's Key Industries"
           lead="From Connaught Place government contractors to Gurgaon BFSI firms to Hauz Khas fashion brands — Delhi NCR's economy spans industries with very different digital requirements. FactoryJet has built for each of them."

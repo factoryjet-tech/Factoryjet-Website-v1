@@ -20,7 +20,7 @@ export const manchesterMetadata: Metadata = {
     "web design northern quarter manchester",
     "web design mediacityuk",
   ],
-  alternates: { canonical: "https://factoryjet.com/manchester" },
+  alternates: { canonical: "https://factoryjet.com/uk/manchester" },
   openGraph: {
     title: "Web Design Manchester | AI-Native Agency — FactoryJet",
     description:

@@ -338,7 +338,7 @@ const INDORE_FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet cheaper than Indore web agencies?',
+    question: 'What makes FactoryJet better value than a Indore web agency?',
     answer:
       "We are a specialised web engineering team — not a full-service agency with account managers, strategy departments, and expensive office space in Vijay Nagar or AB Road. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. We have been building websites since 1999. You pay for the build, not our overhead.",
   },
@@ -865,7 +865,7 @@ export default function IndoreWebDesignPage() {
           Very specific to Indore industries. Never generic.
           References: Pithampur, Scheme 78, Vijay Nagar, AB Road, coaching capital.
         */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="INDORE × WEB DESIGN"
           headline="Web Design for Indore's Key Industries"
           lead="From Vijay Nagar coaching institutes to Pithampur manufacturers to Scheme 78 IT startups — Indore's economy spans industries with very different digital requirements. FactoryJet has built for each of them."

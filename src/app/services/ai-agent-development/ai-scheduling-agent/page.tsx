@@ -794,7 +794,7 @@ export default function AISchedulingAgentINPage() {
           footer="Prices reflect typical Indian market rates as of 2025. FactoryJet fixed-price contracts available for all tiers."
         />
 
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="WHO WE BUILD FOR"
           headline="AI scheduling agents for every appointment-driven Indian business"
           lead="Every industry has different booking flows, calendar systems, and compliance requirements. We build for yours."

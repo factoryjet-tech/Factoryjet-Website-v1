@@ -673,7 +673,7 @@ export default function KolkataEcommercePage() {
         />
 
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="KOLKATA × ECOMMERCE"
           headline="Ecommerce Development for Kolkata's Key Commerce Verticals"
           lead="From Johurabazar jewellers to Gariahat saree traders to Tangra leather manufacturers — Kolkata's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."

@@ -257,7 +257,7 @@ const MUMBAI_FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet cheaper than Mumbai web agencies?',
+    question: 'What makes FactoryJet better value than a Mumbai web agency?',
     answer:
       "We are a specialised web engineering team — not a full-service agency with account managers, strategy teams, and large office overheads in BKC. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. We have been building websites since 1999. You pay for the build, not our admin structure.",
   },
@@ -797,7 +797,7 @@ export default function MumbaiWebDesignPage() {
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="MUMBAI × WEB DESIGN"
           headline="Web Design for Mumbai's Key Industries"
           lead="From SEEPZ export manufacturers to BKC fintech startups to Bandra D2C brands — Mumbai's economy spans industries with very different digital requirements. FactoryJet has built for each of them."

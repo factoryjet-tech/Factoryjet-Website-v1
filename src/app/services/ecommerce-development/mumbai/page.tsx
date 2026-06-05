@@ -673,7 +673,7 @@ export default function MumbaiEcommercePage() {
         />
 
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="MUMBAI × ECOMMERCE"
           headline="Ecommerce Development for Mumbai's Key Commerce Verticals"
           lead="From Zaveri Bazaar jewellers to Bandra fashion labels to Bhiwandi FMCG distributors — Mumbai's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."

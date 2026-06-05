@@ -1043,7 +1043,7 @@ export default function AIMarketingAgentINPage() {
         />
 
         {/* ── 11. INDUSTRIES GRID (DARK) ────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="WHO WE BUILD FOR"
           headline="AI marketing agents for every major Indian industry"
           lead="Every industry has different festival windows, WhatsApp use cases, and content requirements. We build for yours."

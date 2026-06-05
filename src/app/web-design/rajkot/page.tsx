@@ -259,7 +259,7 @@ const RJT_FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet cheaper than Rajkot web agencies?',
+    question: 'What makes FactoryJet better value than a Rajkot web agency?',
     answer:
       "We are a specialised web engineering team — not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost than comparable Rajkot agencies. You pay for the build, not our admin structure.",
   },
@@ -801,7 +801,7 @@ export default function RajkotWebDesignPage() {
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="RAJKOT × WEB DESIGN"
           headline="Web Design for Rajkot's Key Industries"
           lead="From auto component exporters and precision engineering manufacturers to gold jewellers, traders, and professional services — Rajkot's economy spans industries with very different digital requirements. FactoryJet has built for each of them."

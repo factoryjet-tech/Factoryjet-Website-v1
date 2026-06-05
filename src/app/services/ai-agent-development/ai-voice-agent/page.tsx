@@ -795,7 +795,7 @@ export default function AIVoiceAgentINPage() {
           footer="Prices reflect typical Indian market rates as of 2025. Telephony costs (₹0.50–₹1.50/call) are additional and billed by Exotel/Plivo."
         />
 
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="WHO WE BUILD FOR"
           headline="AI voice agents for every high-call-volume Indian industry"
           lead="Every industry has different calling scripts, compliance requirements, and CRM integration needs. We build for yours."

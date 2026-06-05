@@ -1408,7 +1408,7 @@ export default function AIAgentDevelopmentINPage() {
         />
 
         {/* ── 11. INDUSTRIES GRID ───────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="WHO WE BUILD FOR"
           headline="AI agents for every major Indian industry vertical"
           lead="Every sector, built to India-specific workflows — WhatsApp, GST, Razorpay, Zoho, and your actual business stack."

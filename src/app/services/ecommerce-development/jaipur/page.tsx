@@ -673,7 +673,7 @@ export default function JaipurEcommercePage() {
         />
 
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="JAIPUR × ECOMMERCE"
           headline="Ecommerce Development for Jaipur's Key Commerce Verticals"
           lead="From Johari Bazaar gem traders to Sanganer block printers to Makrana marble exporters — Jaipur's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."

@@ -81,6 +81,10 @@
 
 # Bare /ecommerce-development → canonical India ecommerce hub
 /ecommerce-development    /services/ecommerce-development    301
+# City paths under the retired /ecommerce-development prefix → canonical /services/ URL
+# (legacy static public/ecommerce-development/* deleted 2026-06-05; see FJ-001)
+/ecommerce-development/mumbai    /services/ecommerce-development/mumbai    301
+/ecommerce-development/*    /services/ecommerce-development/:splat    301
 
 # ── SHOPIFY INDIA URL MIGRATION (2026-05-24) ─────────────────────────────────
 # /services/shopify-development → /shopify-development (drop /services/ prefix)

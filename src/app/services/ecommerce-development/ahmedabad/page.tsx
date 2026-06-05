@@ -673,7 +673,7 @@ export default function AhmedabadEcommercePage() {
         />
 
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="AHMEDABAD × ECOMMERCE"
           headline="Ecommerce Development for Ahmedabad's Key Commerce Verticals"
           lead="From SG Highway textile traders to GIDC pharma manufacturers to Kutch artisan brands — Ahmedabad's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."

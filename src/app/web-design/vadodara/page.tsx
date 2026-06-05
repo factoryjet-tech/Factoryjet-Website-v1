@@ -257,7 +257,7 @@ const VDR_FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet cheaper than Vadodara web agencies?',
+    question: 'What makes FactoryJet better value than a Vadodara web agency?',
     answer:
       "We are a specialised web engineering team — not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. You pay for the build, not our administrative structure.",
   },
@@ -800,7 +800,7 @@ export default function VadodaraWebDesignPage() {
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="VADODARA × WEB DESIGN"
           headline="Web Design for Vadodara's Key Industries"
           lead="From petrochemical exporters and heavy engineering manufacturers to pharma companies, auto ancillary MSMEs, and B2B trading firms — Vadodara's economy spans industries with very different digital requirements. FactoryJet has built for each of them."

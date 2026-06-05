@@ -257,7 +257,7 @@ const VIZAG_FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'Why is FactoryJet cheaper than Visakhapatnam web agencies?',
+    question: 'What makes FactoryJet better value than a Visakhapatnam web agency?',
     answer:
       "We are a specialised web engineering team — not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. You pay for the build, not our admin structure.",
   },
@@ -809,7 +809,7 @@ export default function VisakhapatnamWebDesignPage() {
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
-        <IndustriesGrid
+        <IndustriesGrid variant="cards"
           eyebrow="VISAKHAPATNAM × WEB DESIGN"
           headline="Web Design for Visakhapatnam's Key Industries"
           lead="From IT and AI companies in Rushikonda SEZ to petrochemical giants in Gajuwaka, port logistics operators, pharma manufacturers, tourism operators, and defence-adjacent businesses — Vizag's economy is one of India's most diverse. FactoryJet builds for each of them."
