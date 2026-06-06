@@ -1,10 +1,12 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Source_Serif_4, Fraunces, Cormorant_Garamond, Plus_Jakarta_Sans } from 'next/font/google'
+import { Inter, Plus_Jakarta_Sans, Geist_Mono } from 'next/font/google'
 // GeistSans intentionally NOT imported: it was preloaded (~70KB, High priority)
 // but no `font-geist-sans` utility exists in the codebase — pure render-path
-// waste racing the CSS on throttled mobile. Body font is Inter. GeistMono is
-// kept because the eyebrow/code utilities (font-fj-mono) use it.
-import { GeistMono } from 'geist/font/mono'
+// waste racing the CSS on throttled mobile. Body font is Inter.
+// GeistMono switched from the `geist` package to next/font/google with
+// preload:false (2026-06-06, perf playbook lever 2): it's an eyebrow/label
+// font only and must not race critical CSS on throttled mobile. Same
+// --font-geist-mono variable, so no call-site changes.
 import '../index.css'
 import { ContactModalProvider } from '../context/ContactModalContext'
 import Script from 'next/script'
@@ -33,43 +35,21 @@ const inter = Inter({
   fallback: ['system-ui', 'arial'],
 })
 
-// Source Serif 4 — reserved for editorial moments (display H1, pull quotes).
-// Brand rule: "Inter for body and UI; Source Serif for editorial moments."
-// Loaded as a CSS variable so Tailwind utilities resolve via --font-source-serif.
-const sourceSerif = Source_Serif_4({
+const geistMono = Geist_Mono({
   subsets: ['latin'],
-  variable: '--font-source-serif',
+  variable: '--font-geist-mono',
   display: 'swap',
-  weight: ['400', '500', '600'],
   preload: false,
-  fallback: ['Georgia', 'serif'],
+  fallback: ['ui-monospace', 'Consolas', 'monospace'],
 })
 
-// === FactoryJet Design System v2.0 fonts (M0 foundation) ===
-// Fraunces — display family for v2 components. Per factoryjet.DESIGN.md §3.2,
-// the tuned axes (opsz / SOFT / WONK / GRAD) are surfaced via the
-// `.fj-display` utility class in src/index.css using font-variation-settings.
-// next/font/google can pre-bake the opsz axis here.
-const fraunces = Fraunces({
-  subsets: ['latin', 'latin-ext'],
-  variable: '--font-fraunces',
-  display: 'swap',
-  axes: ['SOFT', 'WONK', 'opsz'],
-  preload: false,
-})
-
-// Cormorant Garamond — editorial serif for v3 homepage hero headlines.
-// High-contrast thick/thin strokes at display sizes. Italic weight used
-// for the orange accent conviction word (AxisFlow-style pattern).
-const cormorant = Cormorant_Garamond({
-  subsets: ['latin'],
-  variable: '--font-cormorant',
-  display: 'swap',
-  weight: ['400', '600'],
-  style: ['normal', 'italic'],
-  preload: false,
-  fallback: ['Georgia', 'serif'],
-})
+// Source Serif 4 / Fraunces / Cormorant Garamond REMOVED (2026-06-06, perf
+// playbook lever 2): zero live usage — only consumers were the Tailwind
+// `font-serif`/`font-display` utilities rendered solely on the noindexed
+// /dev/component-gallery, which now falls back to Georgia via the fontFamily
+// fallback chain. Removing them trims their @font-face rules from the global
+// CSS bundle on every page. Verified 2026-06-06 (grep: 0 usages of
+// --font-source-serif / --font-fraunces / --font-cormorant outside layout).
 
 
 export const metadata: Metadata = {
@@ -130,7 +110,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${plusJakarta.variable} ${inter.variable} ${sourceSerif.variable} ${fraunces.variable} ${cormorant.variable} ${GeistMono.variable}`}>
+    <html lang="en" className={`${plusJakarta.variable} ${inter.variable} ${geistMono.variable}`}>
       <head>
         {/* Preconnect to critical origins */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
