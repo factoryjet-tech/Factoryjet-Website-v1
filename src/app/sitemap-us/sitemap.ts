@@ -61,6 +61,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/us/cleveland/web-design',                          source: 'src/app/us/cleveland/web-design/page.tsx' },
   { path: '/us/new-york/web-design',                           source: 'src/app/us/new-york/web-design/page.tsx' },
   { path: '/us/tampa/web-design',                              source: 'src/app/us/tampa/web-design/page.tsx' },
+  { path: '/us/tampa/seo',                                     source: 'src/app/us/tampa/seo/page.tsx' },
   { path: '/us/austin/ai-agents',                              source: 'src/app/us/austin/ai-agents/page.tsx' },
   { path: '/us/denver/ai-agents',                              source: 'src/app/us/denver/ai-agents/page.tsx' },
   { path: '/us/raleigh/ai-agents',                             source: 'src/app/us/raleigh/ai-agents/page.tsx' },
