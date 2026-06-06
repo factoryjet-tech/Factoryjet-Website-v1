@@ -27,6 +27,7 @@ import {
   Bot,
   Rocket,
   TrendingUp,
+  Sparkles,
 } from 'lucide-react';
 import { useContactModal } from '../context/ContactModalContext';
 import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
@@ -43,7 +44,7 @@ import {
   trackButtonClick,
 } from '../utils/gtm';
 
-type ServiceType = 'website' | 'ecommerce' | 'maintenance' | 'seo' | 'other';
+type ServiceType = 'website' | 'ecommerce' | 'maintenance' | 'seo' | 'ai-seo' | 'other';
 
 interface FormData {
   name: string;
@@ -61,26 +62,32 @@ const defaultServices: {
   icon: React.ElementType;
   description: string;
 }[] = [
+  /* SEO + AI SEO added 2026-06-06 (Bhavesh): the quote menu must offer the SEO
+     services we now sell. 6 cards = clean 2x3 in the grid-cols-2 picker. */
   { id: 'website',     label: 'Website Design',    icon: Monitor,    description: 'Custom high-performance websites' },
   { id: 'ecommerce',   label: 'E-Commerce',         icon: ShoppingBag, description: 'Shopify & WooCommerce stores' },
+  { id: 'seo',         label: 'SEO / Local SEO',    icon: TrendingUp, description: 'Map Pack & organic growth' },
+  { id: 'ai-seo',      label: 'AI SEO / GEO',       icon: Sparkles,   description: 'Get cited by ChatGPT & AI search' },
   { id: 'maintenance', label: 'AMC / Maintenance',  icon: Wrench,     description: 'Ongoing support & maintenance' },
   { id: 'other',       label: 'Other / Custom',     icon: Rocket,     description: 'Custom development needs' },
 ];
 
 const aiServices: typeof defaultServices = [
+  { id: 'maintenance', label: 'AI Agent Development', icon: Bot,        description: 'Custom AI agents for business' },
+  { id: 'ai-seo',      label: 'AI SEO / GEO',          icon: Sparkles,   description: 'Get cited by ChatGPT & AI search' },
   { id: 'website',     label: 'Website Design',       icon: Monitor,    description: 'Custom high-performance websites' },
   { id: 'ecommerce',   label: 'E-Commerce',            icon: ShoppingBag, description: 'Shopify & WooCommerce stores' },
-  { id: 'maintenance', label: 'AI Agent Development', icon: Bot,        description: 'Custom AI agents for business' },
+  { id: 'seo',         label: 'SEO / Local SEO',       icon: TrendingUp, description: 'Map Pack & organic growth' },
   { id: 'other',       label: 'Other / Custom',        icon: Rocket,     description: 'Custom development needs' },
 ];
 
 /* SEO-page variant: shown if the user navigates back to step 1 from a
    pre-selected SEO flow. SEO leads the list; CTA promise and form now match. */
 const seoServices: typeof defaultServices = [
-  { id: 'seo',         label: 'SEO / Local SEO',   icon: TrendingUp,  description: 'Map Pack, AI SEO & organic growth' },
+  { id: 'seo',         label: 'SEO / Local SEO',   icon: TrendingUp,  description: 'Map Pack & organic growth' },
+  { id: 'ai-seo',      label: 'AI SEO / GEO',      icon: Sparkles,    description: 'Get cited by ChatGPT & AI search' },
   { id: 'website',     label: 'Website Design',    icon: Monitor,     description: 'Custom high-performance websites' },
   { id: 'ecommerce',   label: 'E-Commerce',         icon: ShoppingBag, description: 'Shopify & WooCommerce stores' },
-  { id: 'other',       label: 'Other / Custom',     icon: Rocket,      description: 'Custom development needs' },
 ];
 
 // Extend window type for Cloudflare Turnstile
