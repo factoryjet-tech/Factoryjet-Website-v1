@@ -64,6 +64,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/us/tampa/seo',                                     source: 'src/app/us/tampa/seo/page.tsx' },
   { path: '/us/charlotte/seo',                                 source: 'src/app/us/charlotte/seo/page.tsx' },
   { path: '/us/cleveland/seo',                                 source: 'src/app/us/cleveland/seo/page.tsx' },
+  { path: '/us/nashville/seo',                                 source: 'src/app/us/nashville/seo/page.tsx' },
   { path: '/us/austin/ai-agents',                              source: 'src/app/us/austin/ai-agents/page.tsx' },
   { path: '/us/denver/ai-agents',                              source: 'src/app/us/denver/ai-agents/page.tsx' },
   { path: '/us/raleigh/ai-agents',                             source: 'src/app/us/raleigh/ai-agents/page.tsx' },
