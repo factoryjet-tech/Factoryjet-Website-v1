@@ -142,6 +142,8 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
       { q: 'Does local SEO work for contractors and home services?', a: "It's one of the strongest fits there is. HVAC, roofing, plumbing, and remodeling jobs start with a \"near me\" search, and Charlotte's growth keeps demand high. Service-area businesses without a storefront can still dominate the Map Pack." },
       { q: 'How do I compete with national franchises in Charlotte?', a: 'The Map Pack is your home-field advantage. Google ranks local results by relevance, distance, and prominence, so a well-run local profile with strong reviews routinely outranks national franchises managed from a head office.' },
       { q: 'Do I need SEO if I already run Google Ads?', a: 'Yes, they work together. Ads are a faucet that stops the moment you stop paying; SEO is an asset that keeps producing. Organic local listings earn several times more clicks than paid ads, with no per-click cost once you rank.' },
+      { q: 'How do I choose the best SEO company in Charlotte, NC?', a: 'Judge by behavior, not awards. The best Charlotte SEO company for you shows a written deliverables list, prices before you sign, month-to-month terms, full access to your own data, and realistic timelines. Anyone leading with guaranteed rankings or secret tactics is showing you the exit.' },
+      { q: 'Do I need a Charlotte SEO expert, a local SEO consultant, or an agency?', a: 'A solo SEO consultant can audit and advise, but local SEO is execution work: profile updates, citations, reviews, content, and links every month. We work like a Charlotte local SEO consultant you can call directly, with an SEO marketing agency behind it doing the monthly work.' },
       { q: 'Do you serve Concord, Gastonia, Huntersville, and Rock Hill too?', a: 'Yes. We work across the entire Charlotte metro, including Uptown, South End, NoDa, Ballantyne, University City, Matthews, Huntersville, and Rock Hill, SC.' },
     ],
   },
@@ -232,22 +234,27 @@ export default function CharlotteSeoPage() {
           </div>
         </div>
 
-        {/* DEMAND TICKER: real Semrush volumes, 2026-05 */}
-        <div className="ticker" aria-label="Monthly Google search volumes for Charlotte SEO terms, per Semrush">
-          <div className="label">Searched in Charlotte every month</div>
+        {/* DEMAND TICKER: real Semrush volumes, 2026-05.
+            role="region" so aria-label is permitted ARIA (prohibited on generic div);
+            second copy exists only for the seamless CSS loop, hidden from SR. */}
+        <section className="ticker" role="region" aria-label="Monthly Google search volumes for Charlotte SEO terms, per Semrush">
+          <div className="label" aria-hidden="true">Searched in Charlotte every month</div>
           <div className="track">
-            {[...TICKER, ...TICKER].map((t, i) => (
-              <span key={`${t.kw}-${i}`}><b>{t.kw}</b> {t.vol}</span>
+            {TICKER.map((t) => (
+              <span key={t.kw}><b>{t.kw}</b> {t.vol}</span>
+            ))}
+            {TICKER.map((t) => (
+              <span key={`${t.kw}-dup`} aria-hidden="true"><b>{t.kw}</b> {t.vol}</span>
             ))}
           </div>
-        </div>
+        </section>
 
         {/* BLUF */}
         <section className="blufsec">
           <div className="wrap">
             <div className="bluf">
               <span className="tag">The short answer</span>
-              <p>FactoryJet is a Charlotte SEO company that helps local businesses rank in Google&apos;s Map Pack and &quot;near me&quot; results. We handle Google Business Profile, citations, reviews, technical SEO, and content, billed month-to-month from $499 with a free audit and no long-term contract, working directly with senior SEO experts.</p>
+              <p>FactoryJet is a Charlotte SEO company that helps local businesses rank in Google&apos;s Map Pack and &quot;near me&quot; results. We handle Google Business Profile, citations, reviews, technical SEO, and content, billed month-to-month from $499 with a free audit and no long-term contract. Our Charlotte SEO services cover the whole metro, from Uptown to Rock Hill, and you work directly with senior SEO experts.</p>
             </div>
           </div>
         </section>
@@ -279,7 +286,7 @@ export default function CharlotteSeoPage() {
             <div className="left">
               <h2>Built for the businesses that live on local search</h2>
               <p>A metro growing this fast runs on trades, practices, and storefronts. If your customers are in Mecklenburg County or just across the line, the local pack turns straight into calls.</p>
-              <div className="districts">We work the whole metro: <b>Uptown, South End, NoDa, Plaza Midwood, University City, Ballantyne</b>, plus <b>Concord, Gastonia, Huntersville, Matthews, and Rock Hill</b>.</div>
+              <div className="districts">We run local SEO services across the whole metro: <b>Uptown, South End, NoDa, Plaza Midwood, University City, Ballantyne</b>, plus <b>Concord, Gastonia, Huntersville, Matthews, and Rock Hill</b>.</div>
             </div>
             <div>
               {VERTICAL_GROUPS.map((g) => (
@@ -301,7 +308,7 @@ export default function CharlotteSeoPage() {
         <section className="inc">
           <div className="wrap">
             <h2>Your Charlotte local SEO, end to end</h2>
-            <p className="lead">One flat monthly fee. Senior SEO experts. No add-on surprises.</p>
+            <p className="lead">SEO services in Charlotte, NC, handled by senior SEO experts. One flat monthly fee. No add-on surprises.</p>
             <div className="bento">
               <div className="bcell b-gbp">
                 <div>
@@ -316,7 +323,7 @@ export default function CharlotteSeoPage() {
               </div>
               <div className="bcell b-cit"><h3>Citations &amp; NAP cleanup</h3><p>Accurate, consistent listings across the directories Google trusts, and cleanup of the duplicates dragging you down.</p></div>
               <div className="bcell b-rev"><h3>Reviews that move rankings</h3><p>A system to earn and respond to reviews, one of the strongest local signals you actually control.</p></div>
-              <div className="bcell b-tech"><h3>On-page &amp; technical SEO</h3><p>Fast, crawlable pages, Core Web Vitals, schema, and content built around how Charlotte customers search.</p></div>
+              <div className="bcell b-tech"><h3>On-page &amp; technical SEO</h3><p>Fast, crawlable pages, Core Web Vitals, schema, and SEO optimization built around how Charlotte customers search.</p></div>
               <div className="bcell b-cont"><h3>Local content</h3><p>Service and neighborhood pages that earn rankings without reading like doorway pages.</p></div>
               <div className="bcell b-geo">
                 <h3>AI SEO / GEO</h3>
