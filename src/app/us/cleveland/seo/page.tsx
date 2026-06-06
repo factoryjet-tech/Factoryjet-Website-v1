@@ -199,7 +199,7 @@ export default function ClevelandSeoPage() {
               <h1>The Cleveland SEO company that works like an <span className="it">engineering&nbsp;shop</span></h1>
               <p className="lead">Senior engineers run your local and technical SEO. Honest monthly reports show <b>calls and leads</b>, not screenshots.</p>
               <div className="cta-row">
-                <ModalCTAButton label="Get your free Cleveland SEO audit" region="us" btnVariant="primary-light" />
+                <ModalCTAButton label="Get your free Cleveland SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
                 <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
               </div>
             </div>
@@ -317,7 +317,7 @@ export default function ClevelandSeoPage() {
             <div className="left">
               <h2>Evaluating SEO companies in Cleveland? Use this checklist.</h2>
               <p>Print it, and put every agency you talk to through it, including us. The best SEO companies in Cleveland pass all six. Anyone who fails two or more is selling risk.</p>
-              <div className="cta-row"><ModalCTAButton label="Get your free Cleveland SEO audit" region="us" btnVariant="primary-light" /></div>
+              <div className="cta-row"><ModalCTAButton label="Get your free Cleveland SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" /></div>
             </div>
             <div className="checkcard">
               <p className="ch">SEO company evaluation checklist</p>
@@ -395,7 +395,7 @@ export default function ClevelandSeoPage() {
             <h2>Ready to take your share of Cleveland&apos;s local search?</h2>
             <p className="lead">Start with a free Cleveland SEO audit. We will show you where you stand in the Map Pack, what is technically broken, and exactly what we would fix, with zero pressure to continue.</p>
             <div className="cta-row">
-              <ModalCTAButton label="Get your free Cleveland SEO audit" region="us" btnVariant="primary-light" />
+              <ModalCTAButton label="Get your free Cleveland SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
               <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
             </div>
             <p className="fine">SEO services in Cleveland, Ohio from $499/month, billed month-to-month, with a free audit and no setup fee. Also in Cleveland: <Link href="/us/cleveland/web-design">web design</Link>. See <Link href="/us/services/seo">US SEO services</Link> and our <Link href="/us/services/seo-audit">free SEO audit</Link>.</p>

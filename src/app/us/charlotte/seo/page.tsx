@@ -206,7 +206,7 @@ export default function CharlotteSeoPage() {
             <h1>Charlotte SEO for the city everyone keeps <span className="it">moving&nbsp;to</span></h1>
             <p className="lead">About 148 people arrive daily and search Google for businesses like yours. We make sure they find <b>you</b> first.</p>
             <div className="cta-row">
-              <ModalCTAButton label="Get your free Charlotte SEO audit" region="us" btnVariant="primary-light" />
+              <ModalCTAButton label="Get your free Charlotte SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
               <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
             </div>
           </div>
@@ -417,7 +417,7 @@ export default function CharlotteSeoPage() {
             <h2>Ready to own Charlotte&apos;s local search?</h2>
             <p className="lead">Start with a free Charlotte SEO audit. We will show you where you stand in the Map Pack and exactly what we would fix, with zero pressure to continue.</p>
             <div className="cta-row">
-              <ModalCTAButton label="Get your free Charlotte SEO audit" region="us" btnVariant="primary-light" />
+              <ModalCTAButton label="Get your free Charlotte SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
               <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
             </div>
             <p className="fine">Local SEO from $499/month, billed month-to-month, with a free audit and no setup fee. Also in Charlotte: <Link href="/us/charlotte/web-design">web design</Link>, <Link href="/us/charlotte/ecommerce-development">e-commerce</Link>, and <Link href="/us/charlotte/ai-automation">AI automation</Link>. <Link href="/us/services/seo">US SEO services</Link></p>

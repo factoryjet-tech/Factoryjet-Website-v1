@@ -26,6 +26,7 @@ import {
   Wrench,
   Bot,
   Rocket,
+  TrendingUp,
 } from 'lucide-react';
 import { useContactModal } from '../context/ContactModalContext';
 import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
@@ -42,7 +43,7 @@ import {
   trackButtonClick,
 } from '../utils/gtm';
 
-type ServiceType = 'website' | 'ecommerce' | 'maintenance' | 'other';
+type ServiceType = 'website' | 'ecommerce' | 'maintenance' | 'seo' | 'other';
 
 interface FormData {
   name: string;
@@ -73,6 +74,15 @@ const aiServices: typeof defaultServices = [
   { id: 'other',       label: 'Other / Custom',        icon: Rocket,     description: 'Custom development needs' },
 ];
 
+/* SEO-page variant: shown if the user navigates back to step 1 from a
+   pre-selected SEO flow. SEO leads the list; CTA promise and form now match. */
+const seoServices: typeof defaultServices = [
+  { id: 'seo',         label: 'SEO / Local SEO',   icon: TrendingUp,  description: 'Map Pack, AI SEO & organic growth' },
+  { id: 'website',     label: 'Website Design',    icon: Monitor,     description: 'Custom high-performance websites' },
+  { id: 'ecommerce',   label: 'E-Commerce',         icon: ShoppingBag, description: 'Shopify & WooCommerce stores' },
+  { id: 'other',       label: 'Other / Custom',     icon: Rocket,      description: 'Custom development needs' },
+];
+
 // Extend window type for Cloudflare Turnstile
 declare global {
   interface Window {
@@ -89,9 +99,14 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const ContactFormModal: React.FC = () => {
   const { isOpen, region, variant, closeModal } = useContactModal();
-  const services = variant === 'ai' ? aiServices : defaultServices;
+  const services =
+    variant === 'ai' ? aiServices : variant === 'seo' ? seoServices : defaultServices;
 
-  const [step, setStep] = useState<1 | 2>(1);
+  /* 'seo' variant: the CTA already states the service ("Get your free {City}
+     SEO audit"), so asking again is friction. Pre-select SEO, open on step 2:
+     a one-step form (name + email). Back still reaches the full service list. */
+  const isSeoFlow = variant === 'seo';
+  const [step, setStep] = useState<1 | 2>(isSeoFlow ? 2 : 1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -103,7 +118,7 @@ const ContactFormModal: React.FC = () => {
 
   const [formData, setFormData] = useState<FormData>({
     name: '', email: '', phone: '', company: '',
-    service: '', message: '', turnstileToken: '',
+    service: isSeoFlow ? 'seo' : '', message: '', turnstileToken: '',
   });
 
   // ── Body scroll lock ──────────────────────────────────────────────────────
@@ -129,11 +144,16 @@ const ContactFormModal: React.FC = () => {
   useEffect(() => {
     if (!isOpen) return;
     trackModalOpen('contact_form', 'cta_button');
-    trackFormStep('contact_form', 1, 'service_selection');
+    if (isSeoFlow) {
+      trackServiceSelection('seo', 'SEO / Local SEO');
+      trackFormStep('contact_form', 2, 'contact_details');
+    } else {
+      trackFormStep('contact_form', 1, 'service_selection');
+    }
     import('../firebase').then(({ initFirebase }) => {
       initFirebase().catch(() => {});
     });
-  }, [isOpen]);
+  }, [isOpen, isSeoFlow]);
 
   // ── Cloudflare Turnstile — mount on Step 2, invisible (interaction-only) ──
   // Runs in the background; only shows a challenge if Cloudflare deems it
@@ -280,12 +300,12 @@ const ContactFormModal: React.FC = () => {
     trackButtonClick('close_modal', isSuccess ? 'success_screen' : `form_step_${step}`);
     closeModal();
     setTimeout(() => {
-      setStep(1);
+      setStep(isSeoFlow ? 2 : 1);
       setIsSuccess(false);
       setError(null);
       setHoneypot('');
       turnstileWidgetId.current = null;
-      setFormData({ name: '', email: '', phone: '', company: '', service: '', message: '', turnstileToken: '' });
+      setFormData({ name: '', email: '', phone: '', company: '', service: isSeoFlow ? 'seo' : '', message: '', turnstileToken: '' });
     }, 300);
   };
 

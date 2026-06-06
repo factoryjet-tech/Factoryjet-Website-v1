@@ -185,7 +185,7 @@ export default function TampaSeoPage() {
               <h1 className="rise d2">The Tampa SEO company that gets you in the <span className="it">Map&nbsp;Pack</span></h1>
               <p className="lead rise d3">We get Tampa businesses into Google&apos;s local 3-pack: the three results customers actually call. Local SEO <b>from $499/month</b>, month-to-month, built and run by senior engineers. No lock-in, no account managers, no guesswork.</p>
               <div className="cta-row rise d4">
-                <ModalCTAButton label="Get your free Tampa SEO audit" region="us" btnVariant="primary-light" />
+                <ModalCTAButton label="Get your free Tampa SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
                 <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
               </div>
               <div className="hstat rise d5">
@@ -359,7 +359,7 @@ export default function TampaSeoPage() {
             <h2>Ready to own Tampa&apos;s local search?</h2>
             <p className="lead">Start with a free Tampa SEO audit. We will show you where you stand in the Map Pack, what is holding you back, and exactly what we would fix, with zero pressure to continue.</p>
             <div className="cta-row">
-              <ModalCTAButton label="Get your free Tampa SEO audit" region="us" btnVariant="primary-light" />
+              <ModalCTAButton label="Get your free Tampa SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
               <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
             </div>
             <p className="fine">Local SEO from $499/month · month-to-month · free audit · no setup fee · <Link href="/us/services/seo">US SEO services</Link></p>

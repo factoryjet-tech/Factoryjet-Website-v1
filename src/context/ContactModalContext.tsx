@@ -3,7 +3,9 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 export type ModalRegion = 'in' | 'us' | 'uk';
-export type ModalVariant = 'default' | 'ai';
+/* 'seo' (2026-06-06): SEO-page CTAs ("Get your free {City} SEO audit") pre-select
+   the SEO service and open on step 2, making the form effectively one step. */
+export type ModalVariant = 'default' | 'ai' | 'seo';
 
 interface ContactModalContextType {
   isOpen: boolean;
