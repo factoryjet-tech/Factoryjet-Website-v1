@@ -76,6 +76,10 @@ import { post as howToShowUpInGoogleAiOverviewsPost } from './posts/how-to-show-
 import { post as howLongDoesSeoTake2026Post } from './posts/how-long-does-seo-take-2026-month-by-month-timeline';
 import { post as isSeoDeadPost } from './posts/is-seo-dead-2026-ai-search-data';
 import { post as seoAuditCost2026Post } from './posts/seo-audit-cost-2026';
+import { post as worldCup2026EcommerceFlashSaleStoreUsPost } from './posts/world-cup-2026-ecommerce-flash-sale-store-us';
+import { post as worldCup2026SeoSmallBusinessPost } from './posts/world-cup-2026-seo-small-business';
+import { post as bigcommerceVsShopify2026FeeChangePost } from './posts/bigcommerce-vs-shopify-2026-fee-change';
+import { post as shopifyDevelopmentCost2026Post } from './posts/shopify-development-cost-2026';
 
 export const POSTS: BlogPost[] = [
   // --- WEB DESIGN & STRATEGY ---
@@ -4723,4 +4727,8 @@ export const POSTS: BlogPost[] = [
   howLongDoesSeoTake2026Post,
   isSeoDeadPost,
   seoAuditCost2026Post,
+  worldCup2026EcommerceFlashSaleStoreUsPost,
+  worldCup2026SeoSmallBusinessPost,
+  bigcommerceVsShopify2026FeeChangePost,
+  shopifyDevelopmentCost2026Post,
 ];
