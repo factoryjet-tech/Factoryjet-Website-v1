@@ -9,7 +9,7 @@ export const post: BlogPost = {
     'Tampa boutiques and DTC operators sit at a strange intersection — snowbird shoppers, summer hurricane closures, and a Hyde Park-to-Ybor retail belt that buys differently than Atlanta or Miami. This guide breaks down the right ecommerce platform for Tampa-area boutique and small-batch brands in 2026 — Shopify, WooCommerce, Squarespace, or something custom.',
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
-  date: 'Jun 12, 2026',
+  date: 'Jun 7, 2026',
   readTime: '9 min read',
   imageUrl: '/blog-images/best-ecommerce-platform-tampa-boutiques-dtc-2026.webp',
   meta: {

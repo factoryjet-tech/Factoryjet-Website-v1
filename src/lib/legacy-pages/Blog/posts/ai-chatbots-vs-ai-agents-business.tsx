@@ -9,7 +9,7 @@ export const post: BlogPost = {
     'AI chatbots answer questions; AI agents complete tasks. This guide breaks down the real difference, what each costs for a US small business, and the decision criteria for picking one, the other, or both in 2026.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
-  date: 'Jun 24, 2026',
+  date: 'Jun 7, 2026',
   readTime: '10 min read',
   imageUrl: '/blog-images/ai-chatbots-vs-ai-agents-business.webp',
   meta: {

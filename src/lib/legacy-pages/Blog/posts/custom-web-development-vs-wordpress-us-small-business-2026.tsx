@@ -9,9 +9,9 @@ export const post: BlogPost = {
     "WordPress powers roughly 43% of the web for good reason — it's fast to launch, cheap to maintain, and well-suited to most US small business sites. Custom web development wins when your product is the website itself. This guide maps the decision to your business model with real US pricing, three-year cost math, and the questions that actually separate the two.",
   category: 'Web Design & Strategy',
   author: 'Bhavesh Barot',
-  date: 'Jun 9, 2026',
+  date: 'Jun 7, 2026',
   readTime: '13 min read',
-  imageUrl: '/blog-images/custom-web-development-vs-wordpress-us-small-business-2026-hero.jpg',
+  imageUrl: '/blog-images/custom-web-development-vs-wordpress-us-small-business-2026-hero.webp',
   meta: {
     title: 'Custom Web Development vs WordPress for US Small Businesses (2026)',
     description:
