@@ -69,6 +69,13 @@ import { post as austinEcommerceCheckoutOptimization2026Post } from './posts/aus
 import { post as raleighShopifyTrainingSupportTriangleNc2026Post } from './posts/raleigh-shopify-training-support-triangle-nc-2026';
 import { post as customShopifyThemeDevelopmentUsBrands2026Post } from './posts/custom-shopify-theme-development-us-brands-2026';
 import { post as webflowVsWordpressUsSmallBusiness2026Post } from './posts/webflow-vs-wordpress-us-small-business-2026';
+import { post as seoCostSmallBusiness2026Post } from './posts/seo-cost-small-business-2026';
+import { post as howToGetChatgptToRecommendYourBusiness2026Post } from './posts/how-to-get-chatgpt-to-recommend-your-business-2026';
+import { post as geoCostSmallBusiness2026Post } from './posts/geo-cost-small-business-2026';
+import { post as howToShowUpInGoogleAiOverviewsPost } from './posts/how-to-show-up-in-google-ai-overviews-small-business';
+import { post as howLongDoesSeoTake2026Post } from './posts/how-long-does-seo-take-2026-month-by-month-timeline';
+import { post as isSeoDeadPost } from './posts/is-seo-dead-2026-ai-search-data';
+import { post as seoAuditCost2026Post } from './posts/seo-audit-cost-2026';
 
 export const POSTS: BlogPost[] = [
   // --- WEB DESIGN & STRATEGY ---
@@ -4709,4 +4716,11 @@ export const POSTS: BlogPost[] = [
   raleighShopifyTrainingSupportTriangleNc2026Post,
   customShopifyThemeDevelopmentUsBrands2026Post,
   webflowVsWordpressUsSmallBusiness2026Post,
+  seoCostSmallBusiness2026Post,
+  howToGetChatgptToRecommendYourBusiness2026Post,
+  geoCostSmallBusiness2026Post,
+  howToShowUpInGoogleAiOverviewsPost,
+  howLongDoesSeoTake2026Post,
+  isSeoDeadPost,
+  seoAuditCost2026Post,
 ];
