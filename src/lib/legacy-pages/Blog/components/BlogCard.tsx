@@ -16,7 +16,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post, index, onClick }) => {
     setImageError(true);
   };
 
-  const imageUrl = imageError ? '/blog_placeholder.jpeg' : post.imageUrl;
+  const imageUrl = imageError ? '/blog_placeholder.webp' : post.imageUrl;
 
   return (
     <motion.article
