@@ -14,7 +14,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 import type { FAQCategory } from '@/components/v2/FAQ';
 
-/* ─── FAQ Categories ─────────────────────────────────────────────────── */
+/* --- FAQ Categories --------------------------------------------------- */
 const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
   { key: 'general',   label: 'General' },
   { key: 'web',       label: 'Web Design' },
@@ -23,7 +23,7 @@ const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
   { key: 'process',   label: 'Process & Support' },
 ];
 
-/* ─── FAQ Items ──────────────────────────────────────────────────────── */
+/* --- FAQ Items -------------------------------------------------------- */
 const FAQ_ITEMS = [
   {
     question: 'What exactly does FactoryJet do?',
@@ -159,7 +159,7 @@ const FAQ_ITEMS = [
   },
 ] as const;
 
-/* ─── Portfolio Cards ────────────────────────────────────────────────── */
+/* --- Portfolio Cards -------------------------------------------------- */
 const PORTFOLIO_CARDS = [
   {
     industry: 'Decorative Lighting — D2C Ecommerce',
@@ -190,7 +190,7 @@ const PORTFOLIO_CARDS = [
   },
 ] as const;
 
-/* ─── Strategic Dark Section Pillars ─────────────────────────────────── */
+/* --- Strategic Dark Section Pillars ----------------------------------- */
 const WHY_FJ_PILLARS = [
   {
     icon: '⚡',
@@ -209,7 +209,7 @@ const WHY_FJ_PILLARS = [
   },
 ];
 
-/* ─── Journey Stages ─────────────────────────────────────────────────── */
+/* --- Journey Stages --------------------------------------------------- */
 const JOURNEY_STAGES = [
   {
     number: '01',
@@ -243,7 +243,7 @@ const JOURNEY_STAGES = [
   },
 ];
 
-/* ─── Page Component ─────────────────────────────────────────────────── */
+/* --- Page Component --------------------------------------------------- */
 export default function HomePageV2() {
   return (
     <>
