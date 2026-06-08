@@ -80,6 +80,7 @@ import { post as worldCup2026EcommerceFlashSaleStoreUsPost } from './posts/world
 import { post as worldCup2026SeoSmallBusinessPost } from './posts/world-cup-2026-seo-small-business';
 import { post as bigcommerceVsShopify2026FeeChangePost } from './posts/bigcommerce-vs-shopify-2026-fee-change';
 import { post as shopifyDevelopmentCost2026Post } from './posts/shopify-development-cost-2026';
+import { post as aiAdoptionUsSmallBusinesses2026Post } from './posts/ai-adoption-us-small-businesses-2026';
 
 export const POSTS: BlogPost[] = [
   // --- WEB DESIGN & STRATEGY ---
@@ -4731,4 +4732,5 @@ export const POSTS: BlogPost[] = [
   worldCup2026SeoSmallBusinessPost,
   bigcommerceVsShopify2026FeeChangePost,
   shopifyDevelopmentCost2026Post,
+  aiAdoptionUsSmallBusinesses2026Post,
 ];
