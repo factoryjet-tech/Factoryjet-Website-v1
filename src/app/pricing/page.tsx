@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { pricingAlternates } from '@/data/hreflangMap'
 import PricingPage from '@/pages/Pricing'
 import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA'
-import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 
