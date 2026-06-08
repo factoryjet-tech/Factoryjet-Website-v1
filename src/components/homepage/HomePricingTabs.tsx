@@ -8,7 +8,7 @@ import type { PricingTier } from '@/components/v2/PricingTiers';
 const WEB_TIERS: readonly [PricingTier, PricingTier, PricingTier] = [
   {
     name: 'Starter',
-    priceRange: '₹29,999',
+    priceRange: '',
     description:
       'A 5-page mobile-first site that loads fast and ranks for your name and core service. Right for sole traders and local businesses.',
     features: [
@@ -23,7 +23,7 @@ const WEB_TIERS: readonly [PricingTier, PricingTier, PricingTier] = [
   },
   {
     name: 'Growth',
-    priceRange: '₹59,999',
+    priceRange: '',
     description:
       'A 10–15 page site with blog CMS, lead capture, and GA4 analytics from day one. Best for SMBs scaling their digital presence.',
     features: [
@@ -39,7 +39,7 @@ const WEB_TIERS: readonly [PricingTier, PricingTier, PricingTier] = [
   },
   {
     name: 'Scale',
-    priceRange: '₹1,19,999',
+    priceRange: '',
     description:
       'Custom Next.js architecture with AI integrations, third-party APIs, and priority support. For businesses with complex digital requirements.',
     features: [
@@ -58,7 +58,7 @@ const WEB_TIERS: readonly [PricingTier, PricingTier, PricingTier] = [
 const ECOM_TIERS: readonly [PricingTier, PricingTier, PricingTier] = [
   {
     name: 'Shop Starter',
-    priceRange: '₹59,999',
+    priceRange: '',
     description:
       'A Shopify store with custom theme, product catalog, and payment gateway. Perfect for D2C brands launching online.',
     features: [
@@ -73,7 +73,7 @@ const ECOM_TIERS: readonly [PricingTier, PricingTier, PricingTier] = [
   },
   {
     name: 'Shop Pro',
-    priceRange: '₹99,999',
+    priceRange: '',
     description:
       'B2B or multi-vendor store with tiered pricing, wholesale accounts, GST invoicing, and AI product recommendations.',
     features: [
@@ -89,7 +89,7 @@ const ECOM_TIERS: readonly [PricingTier, PricingTier, PricingTier] = [
   },
   {
     name: 'E-Comm Scale',
-    priceRange: '₹1,99,999',
+    priceRange: '',
     description:
       'Headless commerce with multi-currency, ERP integration, quick-commerce, and omnichannel (Amazon, Flipkart, Meesho).',
     features: [
@@ -108,7 +108,7 @@ const ECOM_TIERS: readonly [PricingTier, PricingTier, PricingTier] = [
 const AISEO_TIERS: readonly [PricingTier, PricingTier, PricingTier] = [
   {
     name: 'Essential',
-    priceRange: '₹11,999/mo',
+    priceRange: '',
     description:
       'AI SEO foundations — structured data, AI crawler access, and local ranking setup. Ideal for businesses starting their SEO journey.',
     features: [
@@ -123,7 +123,7 @@ const AISEO_TIERS: readonly [PricingTier, PricingTier, PricingTier] = [
   },
   {
     name: 'Growth',
-    priceRange: '₹35,999/mo',
+    priceRange: '',
     description:
       'Full AI SEO engine — content strategy, AI Overview optimisation, link acquisition, and conversion tracking.',
     features: [
@@ -139,7 +139,7 @@ const AISEO_TIERS: readonly [PricingTier, PricingTier, PricingTier] = [
   },
   {
     name: 'VIP Partner',
-    priceRange: '₹99,999/mo',
+    priceRange: '',
     description:
       'Dedicated AI SEO team with full content production, digital PR, competitor intelligence, and weekly strategy sessions.',
     features: [
@@ -171,13 +171,11 @@ const PRICING_DATA: Record<TabKey, {
   web: {
     headline: 'Website Design & Development',
     lead: 'Every tier ships with a Figma design system, Next.js codebase, JSON-LD schema, GA4, and a recorded handover — from day one. Starter sites go live in 7 days. Growth and Scale projects are scoped and scheduled on your first call.',
-    footnote: 'All prices are one-time project fees. 30-day post-launch support is included in every tier.',
     tiers: WEB_TIERS,
   },
   ecom: {
     headline: 'E-Commerce Development',
     lead: 'From Shopify D2C stores to headless B2B platforms — built for the Indian market with Razorpay, UPI, GST invoicing, and WhatsApp Commerce out of the box. Every store is mobile-first, AI-ready, and built for conversion.',
-    footnote: 'All prices are one-time project fees. 30-day post-launch support is included in every tier.',
     tiers: ECOM_TIERS,
   },
   aiseo: {
