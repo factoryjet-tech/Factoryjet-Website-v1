@@ -10,6 +10,7 @@ import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 import HomePricingTabs from '@/components/homepage/HomePricingTabs';
+import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 import type { FAQCategory } from '@/components/v2/FAQ';
 
 /* ─── FAQ Categories ─────────────────────────────────────────────────── */
@@ -308,6 +309,7 @@ export default function HomePageV2() {
 
       {/* 8 — Pricing — 3 tabs (cream — buffer before dark) */}
       <HomePricingTabs />
+      <GetFreeQuoteCTA />
 
       {/* 9 — Testimonials (DARK) */}
       <TestimonialsSection
