@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "May 05, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/best-ai-automation-tools-small-business-uk-2026-hero.jpg",
+  imageUrl: "/blog-images/best-ai-automation-tools-small-business-uk-2026-hero.webp",
   meta: {
     title: "15 Best AI Automation Tools for UK Small Businesses (2026)",
     description: "Save 15-30 hours a week with the right AI tools. We compare 15 platforms by UK pricing, integrations, and real use cases for support, sales, and marketing in 2026.",

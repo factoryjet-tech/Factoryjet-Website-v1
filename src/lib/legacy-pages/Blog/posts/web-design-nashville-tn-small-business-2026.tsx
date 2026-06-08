@@ -11,7 +11,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: 'May 23, 2026',
   readTime: '12 min read',
-  imageUrl: '/blog-images/web-design-nashville-tn-small-business-2026-hero.jpg',
+  imageUrl: '/blog-images/web-design-nashville-tn-small-business-2026-hero.webp',
   meta: {
     title: 'Web Design Nashville TN: Small Business Guide & Pricing 2026',
     description:

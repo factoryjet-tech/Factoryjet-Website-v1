@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "May 05, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/create-ai-agents-business-uk-smb-guide-2026-hero.jpg",
+  imageUrl: "/blog-images/create-ai-agents-business-uk-smb-guide-2026-hero.webp",
   meta: {
     title: "How to Create AI Agents for Your UK Business in 2026",
     description: "Build AI agents that handle support, sales, and ops 24/7. This UK SMB guide covers platforms, costs from £3K, compliance, and a 60-90 day deployment roadmap.",

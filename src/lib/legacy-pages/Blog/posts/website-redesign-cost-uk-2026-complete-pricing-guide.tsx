@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "Apr 26, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/website-redesign-cost-uk-2026-complete-pricing-guide-hero.jpg",
+  imageUrl: "/blog-images/website-redesign-cost-uk-2026-complete-pricing-guide-hero.webp",
   meta: {
     title: "Website Redesign Cost UK 2026: Full Pricing Guide for SMBs",
     description: "UK website redesigns cost £1,500-£8,000 for SMBs in 2026. Learn what drives the price, which hidden fees to watch for, and how to budget based on 500+ real projects.",

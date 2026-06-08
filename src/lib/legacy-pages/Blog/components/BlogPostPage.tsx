@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { BlogPost, FAQItem } from '../data.types';
 import { ReadingProgress } from './ReadingProgress';
@@ -18,7 +17,6 @@ import {
   Rocket,
   Lightbulb,
   ChevronDown,
-  ChevronUp,
   ArrowUpRight,
   Award,
 } from 'lucide-react';
@@ -47,51 +45,26 @@ const KeyTakeaways = ({ items }: { items: string[] }) => (
   </div>
 );
 
-const FAQAccordion = ({ faqs }: { faqs: FAQItem[] }) => {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  return (
-    <div className="mt-12 md:mt-16 bg-slate-50 rounded-xl md:rounded-2xl p-5 md:p-8 border border-gray-100" id="faqs">
-      <h3 className="font-display font-bold text-xl md:text-2xl mb-4 md:mb-6 text-gray-900">Frequently Asked Questions</h3>
-      <div className="space-y-3 md:space-y-4">
-        {faqs.map((faq, idx) => {
-          const isOpen = openIndex === idx;
-          return (
-            <div key={idx} className="bg-white rounded-lg md:rounded-xl border border-gray-200 overflow-hidden">
-              <button
-                onClick={() => setOpenIndex(isOpen ? null : idx)}
-                className="w-full flex items-center justify-between p-4 md:p-5 text-left hover:bg-gray-50 transition-colors"
-              >
-                <span className={`font-semibold text-sm md:text-base text-gray-900 ${isOpen ? 'text-[#F05A28]' : ''}`}>
-                  {faq.q}
-                </span>
-                {isOpen ? (
-                  <ChevronUp className="w-4 h-4 md:w-5 md:h-5 text-[#F05A28] flex-shrink-0 ml-2" />
-                ) : (
-                  <ChevronDown className="w-4 h-4 md:w-5 md:h-5 text-gray-400 flex-shrink-0 ml-2" />
-                )}
-              </button>
-              <AnimatePresence>
-                {isOpen && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    className="overflow-hidden"
-                  >
-                    <div className="p-4 md:p-5 pt-0 text-gray-600 leading-relaxed border-t border-gray-100/50 text-sm md:text-base">
-                      {faq.a}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          );
-        })}
-      </div>
+const FAQAccordion = ({ faqs }: { faqs: FAQItem[] }) => (
+  <div className="mt-12 md:mt-16 bg-slate-50 rounded-xl md:rounded-2xl p-5 md:p-8 border border-gray-100" id="faqs">
+    <h3 className="font-display font-bold text-xl md:text-2xl mb-4 md:mb-6 text-gray-900">Frequently Asked Questions</h3>
+    <div className="space-y-3 md:space-y-4">
+      {faqs.map((faq, idx) => (
+        <details key={idx} className="bg-white rounded-lg md:rounded-xl border border-gray-200 overflow-hidden group" open={idx === 0}>
+          <summary className="w-full flex items-center justify-between p-4 md:p-5 text-left cursor-pointer hover:bg-gray-50 transition-colors list-none">
+            <span className="font-semibold text-sm md:text-base text-gray-900 group-open:text-[#F05A28]">
+              {faq.q}
+            </span>
+            <ChevronDown className="w-4 h-4 md:w-5 md:h-5 text-gray-400 group-open:text-[#F05A28] group-open:rotate-180 transition-transform flex-shrink-0 ml-2" />
+          </summary>
+          <div className="p-4 md:p-5 pt-0 text-gray-600 leading-relaxed border-t border-gray-100/50 text-sm md:text-base">
+            {faq.a}
+          </div>
+        </details>
+      ))}
     </div>
-  );
-};
+  </div>
+);
 
 export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
   const [imageError, setImageError] = useState(false);
@@ -162,13 +135,11 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
             </span>
           </div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <h1
             className="font-display font-bold text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-slate-900 leading-[1.1] mb-6 md:mb-8"
           >
             {post.title}
-          </motion.h1>
+          </h1>
 
           {(() => {
             const authorProfile = getAuthorByName(post.author);
@@ -201,10 +172,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
 
       {/* Main Image */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 -mt-6 md:-mt-12 mb-10 md:mb-16 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2 }}
+        <div
           className="rounded-xl md:rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-900/5 aspect-[16/9] md:aspect-[21/9] bg-gray-100"
         >
           <img
@@ -215,9 +183,10 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
             height={514}
             loading="eager"
             decoding="async"
+            fetchPriority="high"
             className={`w-full h-full ${post.imageFit === 'contain' ? 'object-contain' : 'object-cover'}`}
           />
-        </motion.div>
+        </div>
       </div>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24">

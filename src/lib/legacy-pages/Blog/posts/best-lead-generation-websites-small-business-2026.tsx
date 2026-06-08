@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "May 02, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/best-lead-generation-websites-small-business-2026-hero.jpg",
+  imageUrl: "/blog-images/best-lead-generation-websites-small-business-2026-hero.webp",
   meta: {
     title: "12 Best Lead Generation Website Platforms for Small Business 2026",
     description: "Find the best lead gen website for your small business. We compare 12 platforms on real ROI data, pricing, AI chat, and CRM integrations — so you don't overpay.",

@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "Apr 30, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/seo-recruitment-agencies-uk-2026-hero.jpg",
+  imageUrl: "/blog-images/seo-recruitment-agencies-uk-2026-hero.webp",
   meta: {
     title: "SEO for UK Recruitment Agencies in 2026: Fill Your Pipeline Faster",
     description: "64% of UK job seekers now start in ChatGPT or Perplexity. Learn how UK recruitment agencies rank in AI Overviews and drive more candidates and clients organically.",

@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "Apr 28, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/custom-online-store-development-uk-smbs-2026-hero.jpg",
+  imageUrl: "/blog-images/custom-online-store-development-uk-smbs-2026-hero.webp",
   meta: {
     title: "Custom Online Store Development for UK SMBs in 2026",
     description: "Multi-currency checkout, B2B workflows, and AI personalisation from £2,000 — no £50K price tag. See how UK SMBs get enterprise e-commerce features in 2026.",

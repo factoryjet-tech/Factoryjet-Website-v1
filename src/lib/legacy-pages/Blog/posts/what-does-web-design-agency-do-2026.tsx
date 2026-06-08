@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "Apr 25, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/what-does-web-design-agency-do-2026-hero.jpg",
+  imageUrl: "/blog-images/what-does-web-design-agency-do-2026-hero.webp",
   meta: {
     title: "What Does a Web Design Agency Actually Do in 2026?",
     description: "Modern agencies do more than build pages. Learn what a web design agency actually delivers in 2026 — Core Web Vitals, AI integration, conversion architecture, and SEO.",

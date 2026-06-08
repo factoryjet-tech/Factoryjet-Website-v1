@@ -1285,7 +1285,7 @@ export default function ShopifyPage() {
                   Most US brands don&apos;t want a marketplace gig — they want to <strong>hire a Shopify developer</strong> who
                   has actually shipped revenue-generating stores. Every FactoryJet engagement gives you a dedicated
                   Shopify expert who designs, builds, and launches your store end to end, then stays reachable after
-                  go-live. No account-manager telephone game, no offshore handoffs you never see.
+                  go-live. No account-manager telephone game, no invisible handoffs to contractors you never speak with.
                 </p>
                 <p>
                   Need ongoing capacity instead of a one-off build? You can hire a Shopify expert developer on a

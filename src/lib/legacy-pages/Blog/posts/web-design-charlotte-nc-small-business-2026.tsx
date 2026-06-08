@@ -11,7 +11,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: 'May 23, 2026',
   readTime: '11 min read',
-  imageUrl: '/blog-images/web-design-charlotte-nc-small-business-2026-hero.jpg',
+  imageUrl: '/blog-images/web-design-charlotte-nc-small-business-2026-hero.webp',
   meta: {
     title: 'Web Design Charlotte NC: Small Business Pricing & Agency Guide 2026',
     description:

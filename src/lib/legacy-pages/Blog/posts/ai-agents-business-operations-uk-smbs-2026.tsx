@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "May 05, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/ai-agents-business-operations-uk-smbs-2026-hero.jpg",
+  imageUrl: "/blog-images/ai-agents-business-operations-uk-smbs-2026-hero.webp",
   meta: {
     title: "Cut Ops Costs 35% with AI Agents: UK SMB Guide 2026",
     description: "UK SMBs cut ops costs 25-35% using AI agents for support, sales, and admin. See which workflows to automate first, real ROI timelines, and how to get started.",

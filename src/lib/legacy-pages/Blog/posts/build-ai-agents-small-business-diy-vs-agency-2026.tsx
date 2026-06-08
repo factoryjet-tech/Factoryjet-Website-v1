@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "May 05, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/build-ai-agents-small-business-diy-vs-agency-2026-hero.jpg",
+  imageUrl: "/blog-images/build-ai-agents-small-business-diy-vs-agency-2026-hero.webp",
   meta: {
     title: "Build AI Agents for Your Business: DIY vs Agency in 2026",
     description: "DIY AI agents cost £0-£500/mo but take 40-80 hours to set up. Agency builds run £3K-£15K. Find out which route saves more time and money for your small business.",

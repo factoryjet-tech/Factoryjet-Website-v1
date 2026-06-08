@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "May 03, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/web-development-agency-uk-2026-custom-ai-solutions-hero.jpg",
+  imageUrl: "/blog-images/web-development-agency-uk-2026-custom-ai-solutions-hero.webp",
   meta: {
     title: "UK Web Development Agency 2026: Custom Sites + AI Agents for SMBs",
     description: "Get Lighthouse 92+ performance, AI agents, and 2-4 week delivery at a fixed, published price. See what modern web development looks like for growing SMBs in 2026.",

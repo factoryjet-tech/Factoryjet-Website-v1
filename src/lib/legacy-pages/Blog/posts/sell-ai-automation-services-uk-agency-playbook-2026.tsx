@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "May 07, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/sell-ai-automation-services-uk-agency-playbook-2026-hero.jpg",
+  imageUrl: "/blog-images/sell-ai-automation-services-uk-agency-playbook-2026-hero.webp",
   meta: {
     title: "How to Sell AI Automation Services in 2026: UK Agency Playbook",
     description: "25+ years of agency experience in one playbook. Learn ROI-first positioning, vertical use cases, and pricing strategies that UK SMBs trust when buying AI automation.",

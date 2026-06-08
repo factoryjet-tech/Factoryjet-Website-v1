@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "Apr 30, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/best-web-design-companies-small-business-australia-hero.jpg",
+  imageUrl: "/blog-images/best-web-design-companies-small-business-australia-hero.webp",
   meta: {
     title: "15 Best Web Design Companies for Australian Small Business 2026",
     description: "15 Australian web design companies ranked by SMB value. Compare pricing (AUD $2,500-$12K), platforms, delivery time, and real client results to find your match.",

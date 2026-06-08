@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "May 04, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/best-online-store-development-small-business-uk-2026-hero.jpg",
+  imageUrl: "/blog-images/best-online-store-development-small-business-uk-2026-hero.webp",
   meta: {
     title: "Best Online Store Development for UK Small Businesses 2026",
     description: "AI inventory, B2B workflows, omnichannel selling — enterprise e-commerce now costs UK SMBs just £2,000-£8,000. Compare platforms and real builds to find your fit.",

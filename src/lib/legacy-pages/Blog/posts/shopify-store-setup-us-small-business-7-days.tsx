@@ -11,7 +11,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: 'May 23, 2026',
   readTime: '12 min read',
-  imageUrl: '/blog-images/shopify-store-setup-us-small-business-7-days-hero.jpg',
+  imageUrl: '/blog-images/shopify-store-setup-us-small-business-7-days-hero.webp',
   meta: {
     title: 'Launch a Shopify Store in 7 Days: US Small Business Guide 2026',
     description:

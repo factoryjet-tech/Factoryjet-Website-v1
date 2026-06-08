@@ -11,7 +11,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: 'May 23, 2026',
   readTime: '12 min read',
-  imageUrl: '/blog-images/ecommerce-development-denver-co-small-business-hero.jpg',
+  imageUrl: '/blog-images/ecommerce-development-denver-co-small-business-hero.webp',
   meta: {
     title: 'Ecommerce Development Denver CO: Small Business Guide 2026 | FactoryJet',
     description:

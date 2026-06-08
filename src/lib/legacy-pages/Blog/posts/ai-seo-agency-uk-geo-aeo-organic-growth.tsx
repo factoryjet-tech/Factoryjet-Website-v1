@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "May 06, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/ai-seo-agency-uk-geo-aeo-organic-growth-hero.jpg",
+  imageUrl: "/blog-images/ai-seo-agency-uk-geo-aeo-organic-growth-hero.webp",
   meta: {
     title: "AI SEO for UK SMBs: Get Cited by ChatGPT & Google in 2026",
     description: "60% of UK searches are now answered by AI before anyone clicks. Learn how 500+ SMBs used GEO & AEO to get cited by ChatGPT, Perplexity, and Google AI Overviews.",

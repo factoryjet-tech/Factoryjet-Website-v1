@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "May 07, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/sales-automation-ai-uk-smbs-workflows-hero.jpg",
+  imageUrl: "/blog-images/sales-automation-ai-uk-smbs-workflows-hero.webp",
   meta: {
     title: "7 AI Sales Automation Workflows That Closed £2.4M for UK SMBs",
     description: "These 7 AI workflows reduced UK SMB sales cycles by 43% and closed £2.4M in new revenue in 2026. See how to automate qualification, follow-ups, and proposals.",

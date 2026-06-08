@@ -11,7 +11,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: 'May 23, 2026',
   readTime: '11 min read',
-  imageUrl: '/blog-images/web-design-miami-fl-small-business-2026-hero.jpg',
+  imageUrl: '/blog-images/web-design-miami-fl-small-business-2026-hero.webp',
   meta: {
     title: 'Web Design Miami FL: Small Business Guide 2026 | FactoryJet',
     description:

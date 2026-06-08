@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "May 03, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/best-web-design-agency-uk-2026-ai-native-sme-hero.jpg",
+  imageUrl: "/blog-images/best-web-design-agency-uk-2026-ai-native-sme-hero.webp",
   meta: {
     title: "Best AI-Native Web Design Agency UK for SMBs in 2026",
     description: "Get Lighthouse 92+ performance, 2-4 week delivery, and 50-60% savings vs local UK rates. See how AI-native web design helps SMBs get better sites without overpaying.",

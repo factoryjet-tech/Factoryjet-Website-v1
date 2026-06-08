@@ -11,7 +11,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: 'May 23, 2026',
   readTime: '13 min read',
-  imageUrl: '/blog-images/website-redesign-cost-us-small-business-2026-hero.jpg',
+  imageUrl: '/blog-images/website-redesign-cost-us-small-business-2026-hero.webp',
   meta: {
     title: 'Website Redesign Cost for US Small Businesses in 2026 | FactoryJet',
     description:

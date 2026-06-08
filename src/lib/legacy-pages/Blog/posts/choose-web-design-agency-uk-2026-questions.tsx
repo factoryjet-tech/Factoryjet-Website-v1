@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "May 08, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/choose-web-design-agency-uk-2026-questions-hero.jpg",
+  imageUrl: "/blog-images/choose-web-design-agency-uk-2026-questions-hero.webp",
   meta: {
     title: "12 Questions to Ask Every Web Design Agency UK — 2026 Guide",
     description: "Separate agencies that deliver results from those selling pretty mockups. These 12 questions cover pricing, AI, performance, and timelines — ask before you sign anything.",

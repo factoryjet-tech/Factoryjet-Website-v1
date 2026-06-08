@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "Apr 28, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/shopify-store-development-uk-smbs-2026-guide-hero.jpg",
+  imageUrl: "/blog-images/shopify-store-development-uk-smbs-2026-guide-hero.webp",
   meta: {
     title: "Shopify Store Development for UK SMBs in 2026: Setup to Scale",
     description: "Launch a Shopify store in 2-4 weeks from £2,000. This UK SMB guide covers GDPR compliance, payment setup, ongoing costs, and scaling strategies that actually work.",

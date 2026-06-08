@@ -815,7 +815,7 @@ export default function SeoServicePage() {
                   { v: 'Add-on service', i: 'p' },
                   { v: 'Limited', i: 'p' },
                   { v: '"Good enough"', i: 'p' },
-                  { v: 'Outsourced writers', i: 'p' },
+                  { v: 'Generic writers', i: 'p' },
                   { v: 'Not on the radar', i: 'p' },
                   { v: 'Rankings & traffic', i: 'p' },
                   { v: '6 to 12 month lock-in', i: 'x' },

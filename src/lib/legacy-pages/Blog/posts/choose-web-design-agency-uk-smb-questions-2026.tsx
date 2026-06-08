@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "Apr 24, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/choose-web-design-agency-uk-smb-questions-2026-hero.jpg",
+  imageUrl: "/blog-images/choose-web-design-agency-uk-smb-questions-2026-hero.webp",
   meta: {
     title: "12 Questions UK SMBs Must Ask a Web Design Agency in 2026",
     description: "Don't hire a web design agency until you've asked these 12 questions. Covers performance standards, fixed pricing, red flags, and when local vs offshore makes sense.",

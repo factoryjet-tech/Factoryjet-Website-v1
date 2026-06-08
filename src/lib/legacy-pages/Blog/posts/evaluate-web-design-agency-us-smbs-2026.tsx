@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "Apr 23, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/evaluate-web-design-agency-us-smbs-2026-hero.jpg",
+  imageUrl: "/blog-images/evaluate-web-design-agency-us-smbs-2026-hero.webp",
   meta: {
     title: "8 Criteria US Small Businesses Should Use to Evaluate Agencies",
     description: "Don't judge a web design agency by its portfolio. Learn the 8 criteria US SMBs should use in 2026 — Core Web Vitals, AI workflows, pricing transparency, real outcomes.",

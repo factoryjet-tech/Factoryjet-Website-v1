@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "Apr 24, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/shopify-vs-woocommerce-uk-smbs-hero.jpg",
+  imageUrl: "/blog-images/shopify-vs-woocommerce-uk-smbs-hero.webp",
   meta: {
     title: "Shopify vs WooCommerce for UK Small Businesses in 2026",
     description: "WooCommerce costs 40-60% less over 3 years for UK stores doing £50K+. Compare platform costs, transaction fees, VAT handling, and which one fits your business in 2026.",

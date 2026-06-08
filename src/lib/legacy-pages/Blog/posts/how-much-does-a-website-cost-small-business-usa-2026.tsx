@@ -11,7 +11,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: 'May 23, 2026',
   readTime: '14 min read',
-  imageUrl: '/blog-images/how-much-does-a-website-cost-small-business-usa-2026-hero.jpg',
+  imageUrl: '/blog-images/how-much-does-a-website-cost-small-business-usa-2026-hero.webp',
   meta: {
     title: 'How Much Does a Website Cost for a Small Business USA? (2026 Pricing Guide)',
     description:

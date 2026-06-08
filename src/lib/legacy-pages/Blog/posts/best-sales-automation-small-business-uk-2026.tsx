@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "May 07, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/best-sales-automation-small-business-uk-2026-hero.jpg",
+  imageUrl: "/blog-images/best-sales-automation-small-business-uk-2026-hero.webp",
   meta: {
     title: "HubSpot vs Zoho vs Custom AI: Best Sales Automation UK 2026",
     description: "HubSpot, Zoho, or custom AI — which fits your UK SMB? Compare real pricing, GDPR compliance, and ROI data for all three sales automation platforms in 2026.",

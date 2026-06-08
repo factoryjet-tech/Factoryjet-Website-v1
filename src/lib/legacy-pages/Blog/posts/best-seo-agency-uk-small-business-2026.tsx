@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "May 06, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/best-seo-agency-uk-small-business-2026-hero.jpg",
+  imageUrl: "/blog-images/best-seo-agency-uk-small-business-2026-hero.webp",
   meta: {
     title: "Best SEO Agency for UK Small Businesses in 2026 — From £500/mo",
     description: "Get enterprise technical SEO, AI content, and GEO/AEO strategies at SMB pricing. See what separates top UK SEO agencies in 2026 — and what to avoid before you sign.",

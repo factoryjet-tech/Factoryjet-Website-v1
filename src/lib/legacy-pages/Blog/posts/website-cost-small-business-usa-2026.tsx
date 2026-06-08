@@ -11,7 +11,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: 'May 13, 2026',
   readTime: '16 min read',
-  imageUrl: '/blog-images/website-cost-small-business-usa-2026-hero.jpg',
+  imageUrl: '/blog-images/website-cost-small-business-usa-2026-hero.webp',
   meta: {
     title: "Small Business Website Cost 2026: $1,499–$15,000 (USA Guide)",
     description: "US small business websites run $1,500-$15,000 in 2026. Compare DIY vs freelancer vs agency pricing and see what's included at each tier to avoid overpaying.",

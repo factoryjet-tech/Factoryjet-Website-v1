@@ -11,7 +11,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "Apr 22, 2026",
   readTime: '12 min read',
-  imageUrl: "/blog-images/how-uk-smbs-evaluate-woocommerce-agency-2026-hero.jpg",
+  imageUrl: "/blog-images/how-uk-smbs-evaluate-woocommerce-agency-2026-hero.webp",
   meta: {
     title: "How to Evaluate a WooCommerce Agency UK: 2026 SMB Guide",
     description: "Not all WooCommerce agencies are equal. Learn the criteria UK SMBs should use in 2026 — AI integration, fixed pricing, security standards, and real UK market experience.",

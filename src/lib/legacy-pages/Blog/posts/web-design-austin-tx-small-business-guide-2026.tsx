@@ -11,7 +11,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: 'May 23, 2026',
   readTime: '11 min read',
-  imageUrl: '/blog-images/web-design-austin-tx-small-business-guide-2026-hero.jpg',
+  imageUrl: '/blog-images/web-design-austin-tx-small-business-guide-2026-hero.webp',
   meta: {
     title: 'Web Design Austin TX: Small Business Guide for 2026 | FactoryJet',
     description:

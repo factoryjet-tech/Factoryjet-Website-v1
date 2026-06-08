@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "Apr 30, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/best-wordpress-development-companies-australia-2026-hero.jpg",
+  imageUrl: "/blog-images/best-wordpress-development-companies-australia-2026-hero.webp",
   meta: {
     title: "Best WordPress Developers for Australian Small Business 2026",
     description: "Compare Australia's top WordPress developers for SMBs — pricing, portfolio quality, turnaround time, and which agency gives you the most value under $5K AUD.",

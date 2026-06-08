@@ -11,7 +11,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: 'Jun 2, 2026',
   readTime: '14 min read',
-  imageUrl: '/blog-images/website-development-cost-india-2026-hero.jpg',
+  imageUrl: '/blog-images/website-development-cost-india-2026-hero.webp',
   isFeatured: false,
   meta: {
     title: 'Website Development Cost in India 2026: Complete INR Breakdown | FactoryJet',

@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "Apr 28, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/how-to-build-online-store-uk-smb-2026-hero.jpg",
+  imageUrl: "/blog-images/how-to-build-online-store-uk-smb-2026-hero.webp",
   meta: {
     title: "How to Build an Online Store in the UK in 2026: Full Roadmap",
     description: "Shopify from £29/mo, WooCommerce from £50/mo, or custom for B2B? This UK SMB guide covers real costs, GDPR compliance, and how to choose the right platform in 2026.",

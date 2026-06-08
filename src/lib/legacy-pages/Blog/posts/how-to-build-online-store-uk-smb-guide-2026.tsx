@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "May 04, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/how-to-build-online-store-uk-smb-guide-2026-hero.jpg",
+  imageUrl: "/blog-images/how-to-build-online-store-uk-smb-guide-2026-hero.webp",
   meta: {
     title: "How to Build an Online Store in 2026: UK Founder's Step-by-Step",
     description: "Choose your platform, set up payments, add AI agents, and launch. This step-by-step guide gives UK SMB founders real costs and timelines for building an online store in 2026.",

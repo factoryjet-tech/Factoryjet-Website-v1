@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "May 03, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/website-redesign-small-business-uk-2026-ai-powered-hero.jpg",
+  imageUrl: "/blog-images/website-redesign-small-business-uk-2026-ai-powered-hero.webp",
   meta: {
     title: "Website Redesign for UK Small Business in 4 Weeks — 2026 Guide",
     description: "Redesign your UK small business website in 4 weeks from £1,500 using AI workflows. Get Lighthouse 92+ scores and avoid the pitfalls that waste £8,000+ on failed projects.",

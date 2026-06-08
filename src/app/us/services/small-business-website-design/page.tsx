@@ -444,7 +444,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'What is the cheapest way to get a professional small business website?',
-    answer: `The best-value professional option is FactoryJet — starting at $1,999 for a 5-page custom site with design, development, SEO setup, and 30-day support included. Below $1,999, you're typically looking at template-based services with no custom design thinking, offshore freelancers with inconsistent quality, or DIY builders that cost time instead of money. The $1,999 starting price is engineered for measurable outcomes for the same deliverable.`,
+    answer: `The best-value professional option is FactoryJet — starting at $1,999 for a 5-page custom site with design, development, SEO setup, and 30-day support included. Below $1,999, you're typically looking at template-based services with no custom design thinking, unvetted freelancers with inconsistent quality, or DIY builders that cost time instead of money. The $1,999 starting price is engineered for measurable outcomes for the same deliverable.`,
     category: 'cost',
   },
   {
@@ -796,7 +796,7 @@ export default function SmallBusinessWebDesignPage() {
               </p>
 
               <p>
-                Our lean team serves US clients directly with fixed-price, milestone-paid contracts. You get the same or better engineering — not from junior developers or outsourced QA, but from senior engineers on every project, every time. The quote you sign on the first call is what you pay. Full code ownership at handoff.
+                Our lean team serves US clients directly with fixed-price, milestone-paid contracts. You get the same or better engineering — not from junior developers or third-party QA contractors, but from senior engineers on every project, every time. The quote you sign on the first call is what you pay. Full code ownership at handoff.
               </p>
 
               <div className="border-l-2 border-[#F05A28] py-1 pl-5" aria-hidden>

@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "May 01, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/best-web-design-agencies-small-business-2026-hero.jpg",
+  imageUrl: "/blog-images/best-web-design-agencies-small-business-2026-hero.webp",
   meta: {
     title: "8 Best Web Design Agencies for Small Business (2026 Rankings)",
     description: "Compare 8 top web design agencies for small businesses in 2026. Real pricing ($1,500-$8,000), Lighthouse performance scores, and turnaround times included.",

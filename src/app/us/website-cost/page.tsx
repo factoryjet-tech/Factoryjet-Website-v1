@@ -831,7 +831,7 @@ export default function WebsiteCostPage() {
                   { item: 'DIY builder (3 years)', visible: '$576–$2,340', hidden: '120+ hrs of your time' },
                   { item: 'Budget freelancer', visible: '$500–$1,500', hidden: 'No SEO, no support, no accountability' },
                   { item: 'Template designer', visible: '$800–$2,000', hidden: 'Looks like 10,000 other sites' },
-                  { item: 'Offshore Upwork hire', visible: '$300–$800', hidden: 'Revision hell, missed deadlines' },
+                  { item: 'Upwork gig hire', visible: '$300–$800', hidden: 'Revision hell, missed deadlines' },
                   { item: 'traditional agency "starter" pkg', visible: '$8,000–$15,000', hidden: 'Junior team, senior billing rate' },
                 ].map(({ item, visible, hidden }) => (
                   <div key={item} className="py-3.5">

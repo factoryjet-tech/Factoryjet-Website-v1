@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "Apr 24, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/woocommerce-seo-tips-uk-stores-hero.jpg",
+  imageUrl: "/blog-images/woocommerce-seo-tips-uk-stores-hero.webp",
   meta: {
     title: "12 WooCommerce SEO Tips for UK Stores That Drive Organic Sales",
     description: "These 12 WooCommerce SEO tactics fix the issues UK stores actually face — crawl waste, missing product schema, and British search intent. See which ones move the needle.",

@@ -273,7 +273,7 @@ const COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
   { label: 'Freelancer' },
   { label: 'Traditional Agency' },
-  { label: 'Offshore Shop' },
+  { label: 'Budget Dev Shop' },
 ] as const;
 
 const COMPARISON_ROWS = [
@@ -809,7 +809,7 @@ export default function WoocommerceDevelopmentPage() {
         {/* -- 7. COMPARISON TABLE -------------------------------------------- */}
         <ComparisonTable
           eyebrow="HOW YOUR OPTIONS COMPARE"
-          headline="FactoryJet vs. Freelancer vs. Traditional Agency vs. Offshore Shop"
+          headline="FactoryJet vs. Freelancer vs. Traditional Agency vs. Budget Dev Shop"
           lead="Not all WooCommerce developers are equal. Here's how FactoryJet compares to the alternatives on the dimensions that matter for your store."
           pullQuote={{
             stat: '$2,999',

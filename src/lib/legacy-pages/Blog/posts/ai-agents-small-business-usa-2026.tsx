@@ -11,7 +11,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: 'May 23, 2026',
   readTime: '13 min read',
-  imageUrl: '/blog-images/ai-agents-small-business-usa-2026-hero.jpg',
+  imageUrl: '/blog-images/ai-agents-small-business-usa-2026-hero.webp',
   meta: {
     title: 'AI Agents for Small Business USA: 2026 Guide to ROI & Implementation',
     description:

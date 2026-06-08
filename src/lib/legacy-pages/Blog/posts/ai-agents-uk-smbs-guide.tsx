@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "Apr 24, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/ai-agents-uk-smbs-guide-hero.jpg",
+  imageUrl: "/blog-images/ai-agents-uk-smbs-guide-hero.webp",
   meta: {
     title: "AI Agents for UK Small Businesses: Complete 2026 Guide",
     description: "Learn how UK SMBs use AI agents to automate support, sales, and ops — cutting costs 40-60% with 24/7 coverage. Real pricing, use cases, and timelines to get started.",

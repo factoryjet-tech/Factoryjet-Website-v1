@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "Apr 25, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/top-web-design-agencies-london-smbs-2026-hero.jpg",
+  imageUrl: "/blog-images/top-web-design-agencies-london-smbs-2026-hero.webp",
   meta: {
     title: "Top 12 London Web Design Agencies for Growing SMBs in 2026",
     description: "London web design agencies range from £2K to £50K+ per project. We compare 12 on SMB focus, pricing, tech stacks, and delivery speed to help you find the right fit.",

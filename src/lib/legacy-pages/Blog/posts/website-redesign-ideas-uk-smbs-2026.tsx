@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "May 03, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/website-redesign-ideas-uk-smbs-2026-hero.jpg",
+  imageUrl: "/blog-images/website-redesign-ideas-uk-smbs-2026-hero.webp",
   meta: {
     title: "25 Website Redesign Ideas for UK SMBs That Convert in 2026",
     description: "Boost conversions 40-60% with AI-first redesign strategies. 25 practical ideas — from conversational UI to voice navigation — tested across 500+ UK businesses.",

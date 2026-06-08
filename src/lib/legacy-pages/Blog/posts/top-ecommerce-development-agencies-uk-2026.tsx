@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "May 04, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/top-ecommerce-development-agencies-uk-2026-hero.jpg",
+  imageUrl: "/blog-images/top-ecommerce-development-agencies-uk-2026-hero.webp",
   meta: {
     title: "Top UK E-Commerce Development Agencies for SMBs in 2026",
     description: "Choosing the wrong e-commerce agency wastes thousands. Compare UK agencies on pricing (£2K-£25K), delivery speed, platform expertise, and post-launch support.",

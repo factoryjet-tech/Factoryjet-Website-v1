@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "May 01, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/how-to-choose-web-design-agency-uk-2026-hero.jpg",
+  imageUrl: "/blog-images/how-to-choose-web-design-agency-uk-2026-hero.webp",
   meta: {
     title: "How to Choose a Web Design Agency UK in 2026 — 12 Questions",
     description: "From 500+ projects: 12 questions that separate agencies who deliver from those that drain your budget. Ask these before you sign anything with a UK web design agency.",

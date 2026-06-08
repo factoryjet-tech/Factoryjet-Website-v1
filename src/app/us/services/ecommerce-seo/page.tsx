@@ -253,7 +253,7 @@ function Cross() {
 
 const SCORE_ROWS = ['Who runs your strategy', 'Collection page SEO', 'Product schema & rich results', 'Technical / Core Web Vitals', 'Shopify & platform expertise', 'Content & link building', 'What we report', 'Contract terms'];
 const SCORE_FJ = ['The founder, Bhavesh', 'Core focus', 'Built in', '100/100 + schema', 'We also build the stores', 'Guides + digital PR', 'Revenue & transactions', 'Month-to-month'];
-const SCORE_AG = [['A rotating junior', 'p'], ['Products only', 'p'], ['Sometimes', 'p'], ['Limited', 'p'], ['Reads docs', 'p'], ['Outsourced', 'p'], ['Rankings & traffic', 'p'], ['6 to 12 month lock-in', 'x']] as const;
+const SCORE_AG = [['A rotating junior', 'p'], ['Products only', 'p'], ['Sometimes', 'p'], ['Limited', 'p'], ['Reads docs', 'p'], ['Generic content', 'p'], ['Rankings & traffic', 'p'], ['6 to 12 month lock-in', 'x']] as const;
 const SCORE_DIY = [['No strategist', 'x'], ['Manual', 'x'], ['App-dependent', 'p'], ['Not covered', 'x'], ['One platform', 'p'], ['You write it', 'x'], ['Data only', 'p'], ['Cancel anytime', 'c']] as const;
 
 export default function EcommerceSeoServicePage() {

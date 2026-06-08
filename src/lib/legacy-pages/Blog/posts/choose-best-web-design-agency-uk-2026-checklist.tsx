@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "May 03, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/choose-best-web-design-agency-uk-2026-checklist-hero.jpg",
+  imageUrl: "/blog-images/choose-best-web-design-agency-uk-2026-checklist-hero.webp",
   meta: {
     title: "How to Choose a UK Web Design Agency in 2026: 12-Point Checklist",
     description: "Use this 12-point checklist before hiring a UK web design agency. Covers pricing, Lighthouse scores, delivery speed, and the red flags that predict a costly mistake.",

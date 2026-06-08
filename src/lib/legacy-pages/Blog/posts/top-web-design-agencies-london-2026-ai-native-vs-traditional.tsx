@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "May 01, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/top-web-design-agencies-london-2026-ai-native-vs-traditional-hero.jpg",
+  imageUrl: "/blog-images/top-web-design-agencies-london-2026-ai-native-vs-traditional-hero.webp",
   meta: {
     title: "London Web Design Agencies 2026: AI-Native vs Traditional — Compared",
     description: "Traditional London agencies charge £8K-£25K for 8-week builds. AI-native firms deliver the same in 2-4 weeks from £1,500. Find out which model is right for your SMB.",

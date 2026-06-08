@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "May 01, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/uk-web-design-agency-pricing-2026-smb-guide-hero.jpg",
+  imageUrl: "/blog-images/uk-web-design-agency-pricing-2026-smb-guide-hero.webp",
   meta: {
     title: "UK Web Design Agency Pricing Guide 2026 for SMBs (5-200 Staff)",
     description: "UK web design agencies charge £1,500-£25,000 for SMB sites in 2026. See real pricing by service type and location — brochure, e-commerce, and custom builds.",

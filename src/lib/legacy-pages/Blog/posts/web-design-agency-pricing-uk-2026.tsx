@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "May 08, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/web-design-agency-pricing-uk-2026-hero.jpg",
+  imageUrl: "/blog-images/web-design-agency-pricing-uk-2026-hero.webp",
   meta: {
     title: "How Much Do UK Web Design Agencies Charge in 2026?",
     description: "Web design in the UK costs £1,500-£25,000 in 2026 depending on service type and location. See the full pricing breakdown by platform, scope, and agency location.",

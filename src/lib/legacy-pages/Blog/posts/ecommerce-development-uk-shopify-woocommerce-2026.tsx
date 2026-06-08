@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "Apr 28, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/ecommerce-development-uk-shopify-woocommerce-2026-hero.jpg",
+  imageUrl: "/blog-images/ecommerce-development-uk-shopify-woocommerce-2026-hero.webp",
   meta: {
     title: "Shopify vs WooCommerce for UK E-Commerce Development in 2026",
     description: "WooCommerce is 40-60% cheaper long-term for UK stores doing £10K+/mo. Compare real pricing, platform features, and scalability to pick the right build in 2026.",

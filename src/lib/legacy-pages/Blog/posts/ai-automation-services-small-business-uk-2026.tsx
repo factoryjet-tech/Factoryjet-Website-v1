@@ -10,7 +10,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: "May 05, 2026",
   readTime: '14 min read',
-  imageUrl: "/blog-images/ai-automation-services-small-business-uk-2026-hero.jpg",
+  imageUrl: "/blog-images/ai-automation-services-small-business-uk-2026-hero.webp",
   meta: {
     title: "Best AI Automation Services for UK Small Businesses 2026",
     description: "AI automation for UK SMBs starts at £3,000 with ROI in 3-6 months. Compare agencies, pricing models, and vetting criteria before you hire in 2026.",

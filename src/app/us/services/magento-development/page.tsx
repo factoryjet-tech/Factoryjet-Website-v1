@@ -273,7 +273,7 @@ const COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
   { label: 'Freelancer' },
   { label: 'Traditional Agency' },
-  { label: 'Offshore Shop' },
+  { label: 'Budget Dev Shop' },
 ] as const;
 
 const COMPARISON_ROWS = [
@@ -820,7 +820,7 @@ export default function MagentoDevelopmentPage() {
         {/* -- 7. COMPARISON TABLE -------------------------------------------- */}
         <ComparisonTable
           eyebrow="HOW YOUR OPTIONS COMPARE"
-          headline="FactoryJet vs. Freelancer vs. Traditional Agency vs. Offshore Shop"
+          headline="FactoryJet vs. Freelancer vs. Traditional Agency vs. Budget Dev Shop"
           lead="Not all Magento developers are equal. Here's what separates senior Magento expertise from the alternatives — and what the decision actually costs."
           pullQuote={{
             stat: 'Fixed Price',
