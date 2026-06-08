@@ -13,10 +13,10 @@ import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/Ser
 import CityContextSection from '@/components/v2/CityContextSection';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 
 export const metadata: Metadata = {
   title: 'AI Customer Support Agent India | WhatsApp AI | FactoryJet',
@@ -351,7 +351,7 @@ const SUPPORT_INDUSTRIES = [
 const SUPPORT_PRICING_TIERS = [
   {
     name: 'WhatsApp Support AI',
-    priceRange: 'From ₹2,50,000',
+    priceRange: '',
     description: 'A focused AI customer support agent on WhatsApp — handles order status, FAQs, and returns with live Shopify and Shiprocket data.',
     features: [
       'WhatsApp Business API on Interakt, Wati, or AiSensy',
@@ -367,7 +367,7 @@ const SUPPORT_PRICING_TIERS = [
   },
   {
     name: 'Multi-Channel Support Platform',
-    priceRange: 'From ₹5,00,000',
+    priceRange: '',
     description: 'WhatsApp + website + Freshdesk/Zoho Desk unified AI support with analytics and team inbox.',
     features: [
       'WhatsApp + website chat + Freshdesk/Zoho Desk unified inbox',
@@ -385,7 +385,7 @@ const SUPPORT_PRICING_TIERS = [
   },
   {
     name: 'Enterprise Support Automation Suite',
-    priceRange: 'From ₹10,00,000',
+    priceRange: '',
     description: 'Full multi-channel support automation for high-volume Indian businesses with deep ERP integration.',
     features: [
       'WhatsApp + website + email + portal in unified inbox',
@@ -528,9 +528,7 @@ export default function AICustomerSupportINPage() {
         navLinks={[
           { label: 'Services', href: '/services' },
           { label: 'AI Agents', href: '/services/ai-agent-development' },
-          { label: 'Portfolio', href: '/portfolio' },
-          { label: 'Pricing', href: '#pricing' },
-          { label: 'Contact', modal: true, region: 'in' },
+          { label: 'Portfolio', href: '/portfolio' },          { label: 'Contact', modal: true, region: 'in' },
         ]}
         cta={{ label: 'Book a Free Call', modal: true, region: 'in' }}
       />
@@ -551,7 +549,7 @@ export default function AICustomerSupportINPage() {
           headline="70% of Your WhatsApp Support Queries Resolved Automatically — in Hindi and English"
           lead="AI customer support agents that check Shopify orders, send Shiprocket tracking links, retrieve GST invoices from Tally, and process returns — 24/7 on WhatsApp, in Hindi and English, with Freshdesk escalation when needed. Fixed price. Live in 2–3 weeks."
           primaryCta={{ label: 'Book a Free Support AI Strategy Call', modal: true, region: 'in' }}
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
+          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ businesses served',
             'WhatsApp + Freshdesk + Zoho ready',
@@ -812,16 +810,8 @@ export default function AICustomerSupportINPage() {
           sectors={SUPPORT_INDUSTRIES}
         />
 
-        <div id="pricing">
-          <PricingTiers
-            eyebrow="PRICING"
-            headline="Transparent, Fixed-Price AI Customer Support Development"
-            lead="No hourly billing. No scope creep surprises. Every tier includes fixed price, full code ownership, and a post-launch support window."
-            tiers={SUPPORT_PRICING_TIERS}
-            footnote="All prices in INR. LLM API costs (Claude/GPT-4o, typically ₹3,000–₹12,000/month for 200–500 daily queries) are billed directly by model providers. WhatsApp BSP subscription fees (Interakt/Wati/AiSensy) are separate. Custom scopes quoted after a free discovery call."
-          />
-        </div>
 
+        <GetFreeQuoteCTA />
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
           headline="What Indian founders say after deploying our AI support agents"

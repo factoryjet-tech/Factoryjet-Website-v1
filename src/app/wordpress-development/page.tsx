@@ -14,25 +14,25 @@ import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/Ser
 import CityContextSection from '@/components/v2/CityContextSection';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'WordPress Development India | From ₹29,999 | FactoryJet',
+  title: 'WordPress Development India | | FactoryJet',
   description:
     'Professional WordPress development in India from ₹29,999. Custom themes, WooCommerce, speed optimization & SEO. 7-day delivery. 500+ websites built.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'WordPress Development India | Custom WordPress Sites From ₹29,999 | FactoryJet',
+    title: 'WordPress Development India | Custom WordPress Sites | FactoryJet',
     description:
-      'Custom WordPress development for Indian SMBs. WooCommerce with Razorpay + GST. Speed optimization. SEO-ready. 7-day delivery. From ₹29,999.',
+      'Custom WordPress development for Indian SMBs. WooCommerce with Razorpay + GST. Speed optimization. SEO-ready. 7-day delivery.',
     url: 'https://factoryjet.com/wordpress-development',
     images: [
       {
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'WordPress Development India | Custom WordPress Sites | FactoryJet',
     description:
-      'Custom WordPress development for Indian SMBs. WooCommerce + Razorpay + GST built in. 7-day delivery. From ₹29,999.',
+      'Custom WordPress development for Indian SMBs. WooCommerce + Razorpay + GST built in. 7-day delivery.',
     images: ['https://factoryjet.com/images/services/card-wordpress.webp'],
   },
   alternates: {
@@ -152,7 +152,7 @@ const WP_serviceSchema = {
     'WordPress Plugin Development',
   ],
   description:
-    'Custom WordPress and WooCommerce development for Indian SMBs. Razorpay, UPI, GST invoicing, Shiprocket integrated. 7-day delivery. From ₹29,999.',
+    'Custom WordPress and WooCommerce development for Indian SMBs. Razorpay, UPI, GST invoicing, Shiprocket integrated. 7-day delivery.',
   offers: [
     {
       '@type': 'Offer',
@@ -229,7 +229,7 @@ const WP_SERVICES = [
   {
     name: 'WordPress Maintenance & Support',
     description:
-      'Monthly WordPress maintenance for Indian businesses: core, theme, and plugin updates, daily automated backups to S3, uptime monitoring, security scanning (Wordfence), malware removal, and a dedicated engineer who knows your site. From ₹4,999/month.',
+      'Monthly WordPress maintenance for Indian businesses: core, theme, and plugin updates, daily automated backups to S3, uptime monitoring, security scanning (Wordfence), malware removal, and a dedicated engineer who knows your site./month.',
     example: 'Unmanaged WordPress sites in India are hacked within 12 months. Maintenance prevents it.',
     linkLabel: 'Get Maintenance Plan',
     linkHref: '/contact',
@@ -409,7 +409,7 @@ const WP_COMPARISON_ROWS = [
 const WP_PRICING_TIERS = [
   {
     name: 'Starter Site',
-    priceRange: 'From ₹29,999',
+    priceRange: '',
     description:
       'A custom WordPress theme with up to 5 pages — ideal for new businesses, service providers, and consultants who need a professional web presence without the agency price tag.',
     features: [
@@ -427,7 +427,7 @@ const WP_PRICING_TIERS = [
   },
   {
     name: 'Growth Site',
-    priceRange: 'From ₹80,000',
+    priceRange: '',
     description:
       'A complete WordPress business site — custom theme, up to 8 pages, speed optimization, technical SEO, blog setup, and everything needed to rank and convert in India.',
     features: [
@@ -446,7 +446,7 @@ const WP_PRICING_TIERS = [
   },
   {
     name: 'WooCommerce Store',
-    priceRange: 'From ₹1,50,000',
+    priceRange: '',
     description:
       'A full WooCommerce store built for the Indian market — Razorpay + UPI, GST invoicing, Shiprocket logistics, custom theme, and a checkout flow designed to reduce cart abandonment on mobile.',
     features: [
@@ -666,10 +666,9 @@ export default function WordPressDevelopmentPage() {
           headline="WordPress Built Right — Fast, Secure, and Ranked"
           lead="43% of the internet runs on WordPress. Most Indian WordPress sites load in 8 seconds, run on GoDaddy shared hosting, and were built by someone who discovered Elementor last month. FactoryJet builds clean, fast, custom WordPress sites — from ₹29,999. In 7 days."
           primaryCta={{ label: 'Book a Free Site Audit', modal: true, region: 'in' }}
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
+          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ websites built',
-            'From ₹29,999',
             '7-day delivery guarantee',
           ]}
           rightSlot={
@@ -1239,17 +1238,7 @@ export default function WordPressDevelopmentPage() {
           }
         />
 
-        {/* ── 13. PRICING ──────────────────────────────────────────────────── */}
-        <div id="pricing">
-          <PricingTiers
-            eyebrow="PRICING"
-            headline="Transparent, Fixed-Price WordPress Development"
-            lead="No hourly billing. No scope creep. Every tier has a fixed price, fixed scope, and a delivery timeline we stand behind."
-            tiers={WP_PRICING_TIERS}
-            footnote="All prices in INR. WordPress hosting (₹700–₹4,000/month) billed separately — we recommend and configure the right hosting for your site. Domain renewal (~₹1,000/year) billed by your registrar. You own all code and admin credentials on launch day."
-          />
-        </div>
-
+        <GetFreeQuoteCTA />
         {/* ── 14. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"

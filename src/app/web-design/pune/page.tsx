@@ -12,20 +12,20 @@ import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/Ser
 import PortfolioShowcase from '@/components/v2/PortfolioShowcase';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Pune | From ₹25,000 | FactoryJet',
+  title: 'Web Design Company in Pune | | FactoryJet',
   description:
     'Web design company in Pune for IT, auto-tier suppliers, education & D2C brands. Fast websites from ₹25,000. 7-day delivery. Serving Hinjewadi, Koregaon Park & Baner.',
   keywords: [
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Pune | From ₹25,000 | FactoryJet',
+    title: 'Web Design Company in Pune | | FactoryJet',
     description:
-      'Professional website design company in Pune — Next.js, SEO, and GA4 included. 7-day delivery. From ₹25,000. Serving Hinjewadi, Koregaon Park, Baner & PCMC.',
+      'Professional website design company in Pune — Next.js, SEO, and GA4 included. 7-day delivery. Serving Hinjewadi, Koregaon Park, Baner & PCMC.',
     url: 'https://factoryjet.com/web-design/pune',
     images: [
       {
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Web Design Company in Pune | FactoryJet',
-    description: 'Website design company in Pune. From ₹25,000. 7-day delivery. Next.js, SEO, GA4 included.',
+    description: 'Website design company in Pune. 7-day delivery. Next.js, SEO, GA4 included.',
     images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {
@@ -90,7 +90,7 @@ const localBusinessSchema = {
   name: 'FactoryJet — Web Design in Pune',
   image: 'https://factoryjet.com/images/services/web-design.webp',
   description:
-    'Web design company in Pune building fast, SEO-optimised websites for IT services, auto-tier suppliers, education, and D2C businesses. From ₹25,000. 7-day delivery guarantee.',
+    'Web design company in Pune building fast, SEO-optimised websites for IT services, auto-tier suppliers, education, and D2C businesses. 7-day delivery guarantee.',
   url: 'https://factoryjet.com/web-design/pune',
   telephone: '+919699977699',
   email: 'connect@factoryjet.com',
@@ -378,7 +378,7 @@ const PUNE_COMPARISON_COLUMNS = [
 ] as const;
 
 const PUNE_COMPARISON_ROWS = [
-  { feature: 'Starting price', values: ['₹25,000', '₹75,000–₹3,00,000', '₹15,000–₹40,000', '₹0–₹15,000 (you build it)'] },
+  { feature: 'Starting price', values: ['Get a Quote', '₹75,000–₹3,00,000', '₹15,000–₹40,000', '₹0–₹15,000 (you build it)'] },
   { feature: 'Delivery timeline', values: ['7 days', '6–16 weeks', '3–8 weeks (unreliable)', '1–2 weeks (you build it)'] },
   {
     feature: 'Custom Figma design',
@@ -401,7 +401,7 @@ const PUNE_COMPARISON_ROWS = [
     values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="pa" kind="partial" />, <CompareIcon key="fr" kind="no" />, <CompareIcon key="tp" kind="no" />],
   },
   {
-    feature: 'Published pricing (no surprises)',
+    feature: 'Transparent, fixed pricing',
     values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="pa" kind="no" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="tp" kind="yes" />],
   },
   {
@@ -443,7 +443,7 @@ export default function PuneWebDesignPage() {
           headline="Website Design in Pune That Wins B2B Tenders — Not Just Page Views"
           lead="Pune is India's #2 IT export hub, the auto OEM and tier-1 supplier capital, and the Oxford of the East with 200+ engineering and management colleges. IT firms in Hinjewadi compete with Bangalore for global tenders, auto suppliers in Chakan compete on capability, and D2C brands in Koregaon Park compete with Mumbai. FactoryJet builds from ₹25,000 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
+          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={['Websites from ₹25,000', '7-day delivery guarantee', '500+ businesses built']}
           rightSlot={<HeroBrowserMockup badgeCity="Pune" />}
         />
@@ -553,7 +553,7 @@ export default function PuneWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Pune Businesses Choose FactoryJet Over Local Agencies"
-          lead="Pune web agencies typically charge ₹75,000–₹3,00,000 for a comparable project and take 6–16 weeks to deliver — without publishing their rates or timeline upfront. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright."
+          lead="Pune web agencies typically charge ₹75,000–₹3,00,000 for a comparable project and take 6–16 weeks to deliver — without publishing their rates or timeline upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright."
           pillars={[
             {
               icon: '⚡',
@@ -568,7 +568,7 @@ export default function PuneWebDesignPage() {
             {
               icon: '📋',
               title: 'Fixed price. Published before the first call.',
-              body: "We publish all three tiers — ₹25,000, ₹50,000, and ₹1,00,000+ — before you speak to us. No discovery fees, no 'it depends' quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your site running.",
+              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your site running.",
             },
           ]}
         />
@@ -672,61 +672,7 @@ export default function PuneWebDesignPage() {
           ]}
         />
 
-        {/* ── 11. PRICING ──────────────────────────────────────────────────── */}
-        <div id="pricing">
-          <PricingTiers
-            eyebrow="TRANSPARENT PRICING"
-            headline="Transparent, Fixed-Price Web Design for Pune Businesses"
-            lead="Pune agency rates for comparable web projects run ₹75,000–₹3,00,000. FactoryJet Growth (₹50,000) delivers 10–15 pages, blog CMS, lead capture, GA4, Next.js, and a 7-day delivery guarantee — with a codebase you own outright. No retainer required. No proprietary platform. No surprise invoices."
-            tiers={[
-              {
-                name: 'Starter',
-                priceRange: '₹25,000',
-                description: 'A 5-page business site that loads fast on mobile and ranks for your name and core service. Best for sole traders, service businesses, and small businesses in Pune who need a credible online presence quickly.',
-                features: [
-                  '5 pages, mobile-responsive',
-                  'Basic SEO & LocalBusiness schema',
-                  'Contact form + WhatsApp integration',
-                  'GA4 setup',
-                  '2 revision rounds',
-                  '30-day post-launch support',
-                ],
-                cta: { label: 'Get a Quote', modal: true as const, region: 'in' as const },
-              },
-              {
-                name: 'Growth',
-                priceRange: '₹50,000',
-                description: 'A 10–15 page site with blog CMS, lead-capture flows, and analytics wired in from day one. Best for Pune SMBs scaling online who need the site to actively generate qualified enquiries.',
-                features: [
-                  '10–15 pages with blog CMS',
-                  'Advanced SEO — schema, meta templates, internal links',
-                  'Lead capture + email automation',
-                  'GA4 + GTM + Search Console',
-                  '3 revision rounds',
-                  '30-day support + CMS training session',
-                ],
-                cta: { label: 'Get a Quote', modal: true as const, region: 'in' as const },
-                popular: true,
-              },
-              {
-                name: 'Custom',
-                priceRange: '₹1,00,000+',
-                description: 'Custom Next.js build with e-commerce, dealer/distributor portals, booking systems, AI integrations, or API connections. Best for established Pune businesses with complex requirements and a real digital revenue line.',
-                features: [
-                  'Custom Next.js architecture',
-                  'E-commerce (Razorpay, Shiprocket) or dealer portals',
-                  'AI integrations (chat, search, content)',
-                  'Third-party API connections (Zoho, Tally, Salesforce)',
-                  'Priority support + quarterly reviews',
-                  'Dedicated engineering point of contact',
-                ],
-                cta: { label: 'Book a Discovery Call', modal: true as const, region: 'in' as const },
-              },
-            ] as const}
-            footnote="All prices in INR inclusive of design, development, SEO setup, and GA4. Cloudflare Pages hosting is free for standard Next.js builds — no monthly hosting fee. Domain registration billed separately if required."
-          />
-        </div>
-
+        <GetFreeQuoteCTA />
         {/* ── 12. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection eyebrow="CLIENT RESULTS" headline="What India's founders say after we build their site" region="in" />
 

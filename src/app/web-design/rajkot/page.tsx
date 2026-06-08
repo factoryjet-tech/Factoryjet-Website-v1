@@ -11,20 +11,20 @@ import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/Ser
 import PortfolioShowcase from '@/components/v2/PortfolioShowcase';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Rajkot | From ₹29,999 | FactoryJet',
+  title: 'Web Design Company in Rajkot | | FactoryJet',
   description:
     'Web design company in Rajkot for auto component exporters, engineering manufacturers & MSME businesses. Fast websites from ₹29,999. 7-day delivery. Serving GIDC Metoda, Shapar-Veraval & Aji.',
   keywords: [
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Rajkot | From ₹29,999 | FactoryJet',
+    title: 'Web Design Company in Rajkot | | FactoryJet',
     description:
-      "Professional website design company in Rajkot — Next.js, SEO, and GA4 included. 7-day delivery. From ₹29,999. Serving GIDC Metoda, Shapar-Veraval, Aji, and Rajkot's auto component & engineering clusters.",
+      "Professional website design company in Rajkot — Next.js, SEO, and GA4 included. 7-day delivery. Serving GIDC Metoda, Shapar-Veraval, Aji, and Rajkot's auto component & engineering clusters.",
     url: 'https://factoryjet.com/web-design/rajkot',
     images: [
       {
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Web Design Company in Rajkot | FactoryJet',
     description:
-      "Website design company in Rajkot for auto component exporters & engineering MSMEs. From ₹29,999. 7-day delivery.",
+      "Website design company in Rajkot for auto component exporters & engineering MSMEs. 7-day delivery.",
     images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {
@@ -97,7 +97,7 @@ const localBusinessSchema = {
   '@id': 'https://factoryjet.com/#organization',
   name: 'FactoryJet',
   description:
-    'Web design company in Rajkot building fast, SEO-optimized websites for auto component exporters, engineering manufacturers, foundry and casting units, pump and valve companies, and MSME businesses. From ₹29,999. 7-day delivery guarantee.',
+    'Web design company in Rajkot building fast, SEO-optimized websites for auto component exporters, engineering manufacturers, foundry and casting units, pump and valve companies, and MSME businesses. 7-day delivery guarantee.',
   url: 'https://factoryjet.com/web-design/rajkot',
   telephone: '+919699977699',
   email: 'connect@factoryjet.com',
@@ -345,7 +345,7 @@ const RJT_FAQ_ITEMS = [
     category: 'local',
     question: 'How does FactoryJet compare to Rajkot web agencies?',
     answer:
-      "Rajkot web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and deliver in 6–16 weeks. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at a fixed, published price.",
+      "Rajkot web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and deliver in 6–16 weeks. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at a fixed, published price.",
   },
 
   /* ── Support & Ownership ── */
@@ -385,7 +385,7 @@ const RJT_COMPARISON_COLUMNS = [
 const RJT_COMPARISON_ROWS = [
   {
     feature: 'Starting price',
-    values: ['₹29,999', '₹80,000–₹2,50,000', '₹10,000–₹50,000', '₹0–₹15,000 (you build it)'],
+    values: ['Get a Quote', '₹80,000–₹2,50,000', '₹10,000–₹50,000', '₹0–₹15,000 (you build it)'],
   },
   {
     feature: 'Delivery timeline',
@@ -437,7 +437,7 @@ const RJT_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Published pricing (no surprises)',
+    feature: 'Transparent, fixed pricing',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ra" kind="no" />,
@@ -565,9 +565,8 @@ export default function RajkotWebDesignPage() {
           headline="Website Design in Rajkot for Auto Component Exporters, Engineering Manufacturers, and MSME Businesses"
           lead="Rajkot is Gujarat's engineering powerhouse — home to 250,000+ MSMEs, India's #1 auto parts cluster, and GIDC Shapar-Veraval, one of Asia's largest industrial estates. From machine tool makers in GIDC Metoda to gold jewellers in the city centre, Rajkot businesses compete for international buyers and domestic contracts every day. FactoryJet builds from ₹29,999 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
+          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
-            'Websites from ₹29,999',
             '7-day delivery guarantee',
             '500+ businesses built',
           ]}
@@ -719,7 +718,7 @@ export default function RajkotWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Rajkot Businesses Choose FactoryJet Over Local Agencies"
-          lead="Rajkot web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and take 6–16 weeks to deliver. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, a codebase you own outright. Pricing is fixed and published upfront for the same scope."
+          lead="Rajkot web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and take 6–16 weeks to deliver. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
           pillars={[
             {
               icon: '⚡',
@@ -734,7 +733,7 @@ export default function RajkotWebDesignPage() {
             {
               icon: '📋',
               title: 'Fixed price. Published before the first call.',
-              body: "We publish all three tiers — ₹29,999, ₹80,000, and ₹1,50,000+ — before you speak to us. No discovery fees, no 'it depends' quotes. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch.",
+              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch.",
             },
           ]}
         />
@@ -851,65 +850,7 @@ export default function RajkotWebDesignPage() {
           ]}
         />
 
-        {/* ── 11. PRICING ──────────────────────────────────────────────────── */}
-        <div id="pricing">
-          <PricingTiers
-            eyebrow="TRANSPARENT PRICING"
-            headline="Transparent, Fixed-Price Web Design for Rajkot Businesses"
-            lead="Rajkot agency rates for comparable web projects run ₹80,000–₹2,50,000. FactoryJet Growth (₹80,000) delivers 10–15 pages, blog CMS, lead capture, GA4, Next.js, and a 7-day delivery guarantee — with a codebase you own outright."
-            tiers={[
-              {
-                name: 'Starter',
-                priceRange: '₹29,999',
-                description:
-                  'A 5-page business site that loads fast on mobile and ranks for your name and core service. Best for small manufacturers, traders, jewellers, and sole practitioners in Rajkot who need a credible online presence quickly.',
-                features: [
-                  '5 pages, mobile-responsive',
-                  'Basic SEO & LocalBusiness schema',
-                  'Contact form + WhatsApp integration',
-                  'GA4 setup',
-                  '2 revision rounds',
-                  '30-day post-launch support',
-                ],
-                cta: { label: 'Get a Quote', modal: true as const, region: 'in' as const },
-              },
-              {
-                name: 'Growth',
-                priceRange: '₹80,000',
-                description:
-                  'A 10–15 page site with product catalog, RFQ forms, lead-capture flows, and analytics wired in from day one. Best for Rajkot MSMEs, auto component exporters, and engineering manufacturers scaling their online presence.',
-                features: [
-                  '10–15 pages with blog CMS',
-                  'Advanced SEO — schema, meta templates, internal links',
-                  'Product catalog + RFQ / inquiry forms',
-                  'GA4 + GTM + Search Console',
-                  '3 revision rounds',
-                  '30-day support + CMS training session',
-                ],
-                cta: { label: 'Get a Quote', modal: true as const, region: 'in' as const },
-                popular: true,
-              },
-              {
-                name: 'Custom',
-                priceRange: '₹1,50,000+',
-                description:
-                  'Custom Next.js build with export portals, product catalog systems, dealer portals, AI integrations, or API connections. Best for established Rajkot manufacturers and exporters with complex requirements and an active international sales pipeline.',
-                features: [
-                  'Custom Next.js architecture',
-                  'Export portal or B2B dealer ordering',
-                  'Product catalog with specifications (PDF export)',
-                  'AI integrations (chat, search, inquiry routing)',
-                  'Third-party API connections (Tally, Zoho, ERP)',
-                  'Priority support + quarterly reviews',
-                  'Dedicated engineering point of contact',
-                ],
-                cta: { label: 'Book a Discovery Call', modal: true as const, region: 'in' as const },
-              },
-            ] as const}
-            footnote="All prices in INR inclusive of design, development, SEO setup, and GA4. Cloudflare Pages hosting is free for standard Next.js builds — no monthly hosting fee."
-          />
-        </div>
-
+        <GetFreeQuoteCTA />
         {/* ── 12. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"

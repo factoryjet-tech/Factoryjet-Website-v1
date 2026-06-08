@@ -15,10 +15,10 @@ import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/Ser
 import CityContextSection from '@/components/v2/CityContextSection';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -27,11 +27,11 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'Ecommerce Development India | Custom Stores | FactoryJet',
   description:
-    'High-converting Shopify, WooCommerce & custom stores for Indian businesses. From ₹59,999. Razorpay & UPI integrated. GST-compliant. 7-day Shopify delivery.',
+    'High-converting Shopify, WooCommerce & custom stores for Indian businesses. Razorpay & UPI integrated. GST-compliant. 7-day Shopify delivery.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'E-Commerce Development India | Custom Online Stores From ₹59,999 | FactoryJet',
+    title: 'E-Commerce Development India | Custom Online Stores | FactoryJet',
     description:
       'Shopify, WooCommerce, D2C, B2B, and quick-commerce for Indian businesses. Razorpay, UPI, GST-compliant. Starting at ₹59,999. 7-day delivery guarantee.',
     url: 'https://factoryjet.com/services/ecommerce-development',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'E-Commerce Development India | Custom Online Stores | FactoryJet',
     description:
-      'Shopify, WooCommerce, D2C and B2B e-commerce for Indian businesses. Razorpay + UPI integrated. GST-compliant. From ₹59,999.',
+      'Shopify, WooCommerce, D2C and B2B e-commerce for Indian businesses. Razorpay + UPI integrated. GST-compliant.',
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -421,7 +421,7 @@ const IN_COMPARISON_ROWS = [
 const IN_PRICING_TIERS = [
   {
     name: 'Starter Store',
-    priceRange: 'From ₹59,999',
+    priceRange: '',
     description:
       'A professionally designed Shopify or WooCommerce store — ready to sell on launch day. The right starting point for D2C brands and retailers going online for the first time.',
     features: [
@@ -439,7 +439,7 @@ const IN_PRICING_TIERS = [
   },
   {
     name: 'Growth Store',
-    priceRange: 'From ₹99,999',
+    priceRange: '',
     description:
       'A full-featured store with subscription logic, B2B pricing, a product configurator, or multi-channel inventory sync — for brands with more complex selling models.',
     features: [
@@ -458,7 +458,7 @@ const IN_PRICING_TIERS = [
   },
   {
     name: 'Custom Platform',
-    priceRange: 'From ₹1,99,999',
+    priceRange: '',
     description:
       'A custom-built D2C platform, multi-vendor marketplace, or quick-commerce app — for businesses where Shopify and WooCommerce hit their ceiling.',
     features: [
@@ -676,10 +676,9 @@ export default function EcommerceDevelopmentPage() {
           headline="An Online Store That Sells — On Any Platform, at Any Scale"
           lead="Most Indian e-commerce stores are built on generic themes and convert below 1%. FactoryJet builds custom Shopify, WooCommerce, D2C, and B2B stores — Razorpay and UPI integrated, GST-compliant, Lighthouse 95+ — from ₹59,999."
           primaryCta={{ label: 'Book a Store Audit', modal: true, region: 'in' }}
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
+          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ businesses served',
-            'From ₹59,999',
             'Razorpay + UPI + GST',
           ]}
           rightSlot={
@@ -1163,17 +1162,7 @@ export default function EcommerceDevelopmentPage() {
           sectors={IN_ECOMM_SERVICES}
         />
 
-        {/* ── 12. PRICING ──────────────────────────────────────────────────── */}
-        <div id="pricing">
-          <PricingTiers
-            eyebrow="PRICING"
-            headline="Transparent, Fixed-Price E-Commerce Development"
-            lead="No hourly billing. No scope creep surprises. Every tier includes a fixed price, fixed scope, and a delivery timeline we stand behind."
-            tiers={IN_PRICING_TIERS}
-            footnote="All prices in INR. Platform subscription fees (Shopify, BigCommerce) are billed directly by the platform. Razorpay transaction fees apply per the Razorpay standard rate card. Custom scopes are quoted after a discovery call. You own all code and credentials on launch day."
-          />
-        </div>
-
+        <GetFreeQuoteCTA />
         {/* ── 13. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"

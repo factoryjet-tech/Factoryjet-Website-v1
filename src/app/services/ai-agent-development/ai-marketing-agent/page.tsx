@@ -13,10 +13,10 @@ import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/Ser
 import CityContextSection from '@/components/v2/CityContextSection';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -413,7 +413,7 @@ const MARKETING_INDUSTRIES = [
 const MARKETING_PRICING_TIERS = [
   {
     name: 'Content AI Starter',
-    priceRange: 'From ₹2,50,000',
+    priceRange: '',
     description:
       'AI-powered content generation for social and email — always-on marketing without the agency retainer.',
     features: [
@@ -429,7 +429,7 @@ const MARKETING_PRICING_TIERS = [
   },
   {
     name: 'Full Marketing AI Platform',
-    priceRange: 'From ₹5,00,000',
+    priceRange: '',
     description:
       'WhatsApp broadcasts + email + social + ad optimisation — your full marketing stack on autopilot.',
     features: [
@@ -449,7 +449,7 @@ const MARKETING_PRICING_TIERS = [
   },
   {
     name: 'Enterprise Marketing AI',
-    priceRange: 'From ₹10,00,000',
+    priceRange: '',
     description:
       'Multi-brand, multi-language autonomous campaign execution for high-volume Indian businesses.',
     features: [
@@ -636,9 +636,7 @@ export default function AIMarketingAgentINPage() {
         navLinks={[
           { label: 'Services', href: '/services' },
           { label: 'AI Agents', href: '/services/ai-agent-development' },
-          { label: 'Portfolio', href: '/portfolio' },
-          { label: 'Pricing', href: '#pricing' },
-          { label: 'Contact', modal: true, region: 'in' },
+          { label: 'Portfolio', href: '/portfolio' },          { label: 'Contact', modal: true, region: 'in' },
         ]}
         cta={{ label: 'Book a Free Call', modal: true, region: 'in' }}
       />
@@ -660,7 +658,7 @@ export default function AIMarketingAgentINPage() {
           headline="AI That Plans, Writes & Sends Your Diwali Campaign — While You Run Your Business"
           lead="WhatsApp broadcasts, festival campaigns, social content, and ad optimisation — automated with India-first AI that writes in Hindi, understands your festival calendar, and learns which messages drive revenue. Fixed price. No agency retainer."
           primaryCta={{ label: 'Book a Free Marketing AI Strategy Call', modal: true, region: 'in' }}
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
+          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ businesses served',
             'WhatsApp + Zoho + Meta Ads ready',
@@ -1050,17 +1048,7 @@ export default function AIMarketingAgentINPage() {
           sectors={MARKETING_INDUSTRIES}
         />
 
-        {/* ── 12. PRICING (CREAM) ───────────────────────────────────────────── */}
-        <div id="pricing">
-          <PricingTiers
-            eyebrow="PRICING"
-            headline="Transparent, Fixed-Price AI Marketing Agent Development"
-            lead="No monthly agency retainer. No per-seat SaaS pricing. A custom AI marketing agent built once, delivering campaigns forever."
-            tiers={MARKETING_PRICING_TIERS}
-            footnote="All prices in INR. LLM API costs (typically ₹8,000–₹25,000/month for Indian SMB volumes) are billed directly by model providers and are not marked up by FactoryJet. WhatsApp BSP subscription fees (Interakt/Wati/AiSensy) are separate. Custom scopes quoted after a free discovery call."
-          />
-        </div>
-
+        <GetFreeQuoteCTA />
         {/* ── 13. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"

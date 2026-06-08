@@ -13,10 +13,10 @@ import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/Ser
 import CityContextSection from '@/components/v2/CityContextSection';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 
 export const metadata: Metadata = {
   title: 'AI Scheduling Agent India | WhatsApp Booking | FactoryJet',
@@ -340,7 +340,7 @@ const SCHEDULING_INDUSTRIES = [
 const SCHEDULING_PRICING_TIERS = [
   {
     name: 'WhatsApp Booking AI',
-    priceRange: 'From ₹1,80,000',
+    priceRange: '',
     description: 'A focused AI appointment booking agent on WhatsApp — single service type, single calendar, with confirmation and reminder messages.',
     features: [
       'WhatsApp Business API booking flow',
@@ -356,7 +356,7 @@ const SCHEDULING_PRICING_TIERS = [
   },
   {
     name: 'Multi-Resource Scheduling Platform',
-    priceRange: 'From ₹3,50,000',
+    priceRange: '',
     description: 'Multi-staff, multi-service scheduling with CRM sync, reminders, and no-show reduction flows.',
     features: [
       'Multiple staff members / resources',
@@ -374,7 +374,7 @@ const SCHEDULING_PRICING_TIERS = [
   },
   {
     name: 'Enterprise Scheduling Suite',
-    priceRange: 'From ₹7,00,000',
+    priceRange: '',
     description: 'Multi-location, multi-language scheduling for high-volume Indian businesses with full CRM and payment integration.',
     features: [
       'Multi-location, multi-branch scheduling',
@@ -517,9 +517,7 @@ export default function AISchedulingAgentINPage() {
         navLinks={[
           { label: 'Services', href: '/services' },
           { label: 'AI Agents', href: '/services/ai-agent-development' },
-          { label: 'Portfolio', href: '/portfolio' },
-          { label: 'Pricing', href: '#pricing' },
-          { label: 'Contact', modal: true, region: 'in' },
+          { label: 'Portfolio', href: '/portfolio' },          { label: 'Contact', modal: true, region: 'in' },
         ]}
         cta={{ label: 'Book a Free Call', modal: true, region: 'in' }}
       />
@@ -540,7 +538,7 @@ export default function AISchedulingAgentINPage() {
           headline="AI That Books Site Visits, Demos, and Clinic Appointments on WhatsApp — 24/7 in Hindi"
           lead="AI scheduling agents that check availability, book slots to Google Calendar, collect Razorpay deposits, and send WhatsApp reminders — all from a single customer message on WhatsApp, in Hindi or English. No coordinator needed. Fixed price."
           primaryCta={{ label: 'Book a Free Scheduling AI Strategy Call', modal: true, region: 'in' }}
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
+          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ businesses served',
             'WhatsApp + Google Calendar + Zoho',
@@ -801,16 +799,8 @@ export default function AISchedulingAgentINPage() {
           sectors={SCHEDULING_INDUSTRIES}
         />
 
-        <div id="pricing">
-          <PricingTiers
-            eyebrow="PRICING"
-            headline="Transparent, Fixed-Price AI Scheduling Agent Development"
-            lead="No hourly billing. No scope creep surprises. Every tier includes fixed price, full code ownership, and post-launch support."
-            tiers={SCHEDULING_PRICING_TIERS}
-            footnote="All prices in INR. LLM API costs (typically ₹1,500–₹5,000/month for 100–300 bookings/day) are billed directly by model providers. WhatsApp BSP message fees (Interakt/Wati/AiSensy) are separate. Razorpay processing fees (2% per transaction) are charged by Razorpay. Custom scopes quoted after a free discovery call."
-          />
-        </div>
 
+        <GetFreeQuoteCTA />
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
           headline="What Indian founders say after automating their appointment scheduling"

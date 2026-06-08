@@ -13,10 +13,10 @@ import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/Ser
 import CityContextSection from '@/components/v2/CityContextSection';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -417,7 +417,7 @@ const CHATBOT_INDUSTRIES = [
 const CHATBOT_PRICING_TIERS = [
   {
     name: 'Website Chatbot',
-    priceRange: 'From ₹2,50,000',
+    priceRange: '',
     description:
       'A focused AI chatbot for your website — captures leads, answers FAQs, books appointments, and qualifies visitors 24/7.',
     features: [
@@ -433,7 +433,7 @@ const CHATBOT_PRICING_TIERS = [
   },
   {
     name: 'WhatsApp AI Chatbot',
-    priceRange: 'From ₹4,00,000',
+    priceRange: '',
     description:
       'A production-grade WhatsApp AI chatbot on Interakt, Wati, or AiSensy — integrated with your CRM, store, and support tools. Our most popular India deployment.',
     features: [
@@ -451,7 +451,7 @@ const CHATBOT_PRICING_TIERS = [
   },
   {
     name: 'Multi-Channel Chatbot Platform',
-    priceRange: 'From ₹8,00,000',
+    priceRange: '',
     description:
       'Website + WhatsApp + support portal chatbot with a unified inbox, analytics dashboard, and deep ERP/CRM integration for scaling Indian businesses.',
     features: [
@@ -635,9 +635,7 @@ export default function AIChatbotINPage() {
         navLinks={[
           { label: 'Services', href: '/services' },
           { label: 'AI Agents', href: '/services/ai-agent-development' },
-          { label: 'Portfolio', href: '/portfolio' },
-          { label: 'Pricing', href: '#pricing' },
-          { label: 'Contact', modal: true, region: 'in' },
+          { label: 'Portfolio', href: '/portfolio' },          { label: 'Contact', modal: true, region: 'in' },
         ]}
         cta={{ label: 'Book a Free Call', modal: true, region: 'in' }}
       />
@@ -659,7 +657,7 @@ export default function AIChatbotINPage() {
           headline="AI Chatbots Built for Indian Customers, Live in 2–3 Weeks"
           lead="Your customers are asking the same WhatsApp questions 200 times a day. Your team is drowning in queries that an AI chatbot can handle instantly — in Hindi, English, or any regional language — while pushing data directly into Zoho, Shopify, and Razorpay. Fixed price. No ongoing SaaS fee."
           primaryCta={{ label: 'Book a Free Chatbot Strategy Call', modal: true, region: 'in' }}
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
+          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ businesses served',
             'WhatsApp + Zoho + Razorpay ready',
@@ -1065,17 +1063,7 @@ export default function AIChatbotINPage() {
           sectors={CHATBOT_INDUSTRIES}
         />
 
-        {/* ── 12. PRICING (CREAM) ───────────────────────────────────────────── */}
-        <div id="pricing">
-          <PricingTiers
-            eyebrow="PRICING"
-            headline="Transparent, Fixed-Price AI Chatbot Development"
-            lead="No hourly billing. No scope creep surprises. Every tier includes a fixed price, full code ownership, and a 30-day post-launch support window."
-            tiers={CHATBOT_PRICING_TIERS}
-            footnote="All prices in INR. LLM API costs (typically ₹3,000–₹15,000/month for Indian SMB volumes) are billed directly by model providers and are not marked up by FactoryJet. WhatsApp BSP subscription fees (Interakt/Wati/AiSensy) are separate. Custom scopes quoted after a free discovery call."
-          />
-        </div>
-
+        <GetFreeQuoteCTA />
         {/* ── 13. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"

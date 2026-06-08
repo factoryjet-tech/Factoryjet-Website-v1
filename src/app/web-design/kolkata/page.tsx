@@ -11,20 +11,20 @@ import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/Ser
 import PortfolioShowcase from '@/components/v2/PortfolioShowcase';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Kolkata | From ₹29,999 | FactoryJet',
+  title: 'Web Design Company in Kolkata | | FactoryJet',
   description:
     'Web design company in Kolkata for jute & tea traders, IT firms, and port logistics businesses. Fast websites from ₹29,999. 7-day delivery. Serving Salt Lake, Rajarhat, Park Street & Dalhousie.',
   keywords: [
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Kolkata | From ₹29,999 | FactoryJet',
+    title: 'Web Design Company in Kolkata | | FactoryJet',
     description:
-      'Professional website design company in Kolkata — Next.js, SEO, and GA4 included. 7-day delivery. From ₹29,999. Serving Salt Lake Sector V, Rajarhat, Park Street, Dalhousie, and Burrabazar.',
+      'Professional website design company in Kolkata — Next.js, SEO, and GA4 included. 7-day delivery. Serving Salt Lake Sector V, Rajarhat, Park Street, Dalhousie, and Burrabazar.',
     url: 'https://factoryjet.com/web-design/kolkata',
     images: [
       {
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Web Design Company in Kolkata | FactoryJet',
     description:
-      'Website design company in Kolkata. From ₹29,999. 7-day delivery. Next.js, SEO, GA4 included.',
+      'Website design company in Kolkata. 7-day delivery. Next.js, SEO, GA4 included.',
     images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {
@@ -91,7 +91,7 @@ const localBusinessSchema = {
   '@id': 'https://factoryjet.com/web-design/kolkata#organization',
   name: 'FactoryJet',
   description:
-    'Web design company in Kolkata building fast, SEO-optimized websites for jute & tea traders, IT firms, logistics businesses, and growing SMBs. From ₹29,999. 7-day delivery guarantee.',
+    'Web design company in Kolkata building fast, SEO-optimized websites for jute & tea traders, IT firms, logistics businesses, and growing SMBs. 7-day delivery guarantee.',
   url: 'https://factoryjet.com/web-design/kolkata',
   telephone: '+919699977699',
   email: 'connect@factoryjet.com',
@@ -339,7 +339,7 @@ const KOL_FAQ_ITEMS = [
     category: 'local',
     question: 'How does FactoryJet compare to Kolkata web agencies?',
     answer:
-      "Kolkata web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and deliver in 6–16 weeks. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at a fixed, published price.",
+      "Kolkata web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and deliver in 6–16 weeks. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at a fixed, published price.",
   },
 
   /* ── Support & Ownership ── */
@@ -379,7 +379,7 @@ const KOL_COMPARISON_COLUMNS = [
 const KOL_COMPARISON_ROWS = [
   {
     feature: 'Starting price',
-    values: ['₹29,999', '₹80,000–₹2,50,000', '₹10,000–₹60,000', '₹0–₹15,000 (you build it)'],
+    values: ['Get a Quote', '₹80,000–₹2,50,000', '₹10,000–₹60,000', '₹0–₹15,000 (you build it)'],
   },
   {
     feature: 'Delivery timeline',
@@ -431,7 +431,7 @@ const KOL_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Published pricing (no surprises)',
+    feature: 'Transparent, fixed pricing',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ka" kind="no" />,
@@ -559,9 +559,8 @@ export default function KolkataWebDesignPage() {
           headline="Website Design in Kolkata for Jute & Tea Traders, IT Firms, and East India's Growing Businesses"
           lead="Kolkata is East India's commercial capital — home to India's oldest port, the country's largest jute industry, Salt Lake's thriving IT hub, and one of India's most resilient MSME ecosystems. From Dalhousie's heritage commercial core and Burrabazar's wholesale trading to Salt Lake Sector V's IT corridor and Rajarhat New Town's emerging business district, Kolkata businesses compete nationally and internationally. FactoryJet builds from ₹29,999 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
+          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
-            'Websites from ₹29,999',
             '7-day delivery guarantee',
             '500+ businesses built',
           ]}
@@ -711,7 +710,7 @@ export default function KolkataWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Kolkata Businesses Choose FactoryJet Over Local Agencies"
-          lead="Kolkata web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and take 6–16 weeks to deliver. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, a codebase you own outright. Pricing is fixed and published upfront for the same scope."
+          lead="Kolkata web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and take 6–16 weeks to deliver. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
           pillars={[
             {
               icon: '⚡',
@@ -726,7 +725,7 @@ export default function KolkataWebDesignPage() {
             {
               icon: '📋',
               title: 'Fixed price. Published before the first call.',
-              body: "We publish all three tiers — ₹29,999, ₹80,000, and ₹1,50,000+ — before you speak to us. No discovery fees, no 'it depends' quotes. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch.",
+              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch.",
             },
           ]}
         />
@@ -843,64 +842,7 @@ export default function KolkataWebDesignPage() {
           ]}
         />
 
-        {/* ── 11. PRICING ──────────────────────────────────────────────────── */}
-        <div id="pricing">
-          <PricingTiers
-            eyebrow="TRANSPARENT PRICING"
-            headline="Transparent, Fixed-Price Web Design for Kolkata Businesses"
-            lead="Kolkata agency rates for comparable web projects run ₹80,000–₹2,50,000. FactoryJet Growth (₹80,000) delivers 10–15 pages, blog CMS, lead capture, GA4, Next.js, and a 7-day delivery guarantee — with a codebase you own outright."
-            tiers={[
-              {
-                name: 'Starter',
-                priceRange: '₹29,999',
-                description:
-                  'A 5-page business site that loads fast on mobile and ranks for your name and core service. Best for small businesses, traders, and sole practitioners in Kolkata who need a credible online presence quickly.',
-                features: [
-                  '5 pages, mobile-responsive',
-                  'Basic SEO & LocalBusiness schema',
-                  'Contact form + WhatsApp integration',
-                  'GA4 setup',
-                  '2 revision rounds',
-                  '30-day post-launch support',
-                ],
-                cta: { label: 'Get a Quote', modal: true as const, region: 'in' as const },
-              },
-              {
-                name: 'Growth',
-                priceRange: '₹80,000',
-                description:
-                  'A 10–15 page site with blog CMS, lead-capture flows, and analytics wired in from day one. Best for Kolkata SMBs and exporters scaling online who need the site to actively generate qualified enquiries.',
-                features: [
-                  '10–15 pages with blog CMS',
-                  'Advanced SEO — schema, meta templates, internal links',
-                  'Lead capture + email automation',
-                  'GA4 + GTM + Search Console',
-                  '3 revision rounds',
-                  '30-day support + CMS training session',
-                ],
-                cta: { label: 'Get a Quote', modal: true as const, region: 'in' as const },
-                popular: true,
-              },
-              {
-                name: 'Custom',
-                priceRange: '₹1,50,000+',
-                description:
-                  'Custom Next.js build with product catalogs, booking systems, AI integrations, or API connections. Best for established Kolkata businesses with complex requirements and a real digital revenue line.',
-                features: [
-                  'Custom Next.js architecture',
-                  'Product catalog or e-commerce (Razorpay, Shiprocket)',
-                  'AI integrations (chat, search, content)',
-                  'Third-party API connections (Tally, Zoho)',
-                  'Priority support + quarterly reviews',
-                  'Dedicated engineering point of contact',
-                ],
-                cta: { label: 'Book a Discovery Call', modal: true as const, region: 'in' as const },
-              },
-            ] as const}
-            footnote="All prices in INR inclusive of design, development, SEO setup, and GA4. Cloudflare Pages hosting is free for standard Next.js builds — no monthly hosting fee."
-          />
-        </div>
-
+        <GetFreeQuoteCTA />
         {/* ── 12. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"

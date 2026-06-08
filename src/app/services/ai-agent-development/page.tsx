@@ -13,10 +13,10 @@ import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/Ser
 import CityContextSection from '@/components/v2/CityContextSection';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -434,7 +434,7 @@ const IN_INDUSTRIES = [
 const IN_PRICING_TIERS = [
   {
     name: 'Starter Agent',
-    priceRange: 'From ₹4,00,000',
+    priceRange: '',
     description:
       'One focused AI agent that eliminates your highest-impact manual task. Best for businesses automating a single workflow for the first time.',
     features: [
@@ -449,7 +449,7 @@ const IN_PRICING_TIERS = [
   },
   {
     name: 'Growth AI Platform',
-    priceRange: 'From ₹12,00,000',
+    priceRange: '',
     description:
       'A multi-workflow AI platform with deeper integrations, WhatsApp automation, and a management dashboard. The most popular tier for growing Indian businesses.',
     features: [
@@ -467,7 +467,7 @@ const IN_PRICING_TIERS = [
   },
   {
     name: 'Enterprise AI System',
-    priceRange: 'From ₹20,00,000',
+    priceRange: '',
     description:
       'A full multi-agent AI system with private deployment, custom LLM fine-tuning, and a dedicated engineering partner for large Indian enterprises.',
     features: [
@@ -668,9 +668,7 @@ export default function AIAgentDevelopmentINPage() {
         navLinks={[
           { label: 'Services', href: '/services' },
           { label: 'AI Agents', href: '/services/ai-agent-development' },
-          { label: 'Portfolio', href: '/portfolio' },
-          { label: 'Pricing', href: '#pricing' },
-          { label: 'Contact', modal: true, region: 'in' },
+          { label: 'Portfolio', href: '/portfolio' },          { label: 'Contact', modal: true, region: 'in' },
         ]}
         cta={{ label: 'Book a Free Call', modal: true, region: 'in' }}
       />
@@ -691,10 +689,9 @@ export default function AIAgentDevelopmentINPage() {
           headline="AI Agents Built for Indian Business, Deployed in Weeks"
           lead="Your competitors are automating the WhatsApp queues, GST workflows, and manual data entry that cost your team 20+ hours a week. FactoryJet builds custom AI agents that connect your Indian business stack — Zoho, Razorpay, Tally, Shiprocket, WhatsApp — and work around the clock without adding headcount."
           primaryCta={{ label: 'Book a Free AI Strategy Call', modal: true, region: 'in' }}
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
+          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ businesses served',
-            'Starting from ₹4,00,000',
             'WhatsApp + Zoho + Razorpay ready',
           ]}
           rightSlot={
@@ -1415,17 +1412,7 @@ export default function AIAgentDevelopmentINPage() {
           sectors={IN_INDUSTRIES}
         />
 
-        {/* ── 12. PRICING (CREAM) ───────────────────────────────────────────── */}
-        <div id="pricing">
-          <PricingTiers
-            eyebrow="PRICING"
-            headline="Transparent, Fixed-Price AI Agent Development"
-            lead="No hourly billing. No scope creep surprises. Every tier includes a fixed price, fixed scope, and full code ownership on delivery."
-            tiers={IN_PRICING_TIERS}
-            footnote="All prices in INR. LLM API costs (typically ₹5,000–₹25,000/month) are billed directly by model providers and are not marked up by FactoryJet. WhatsApp Business API subscription fees are separate. Custom scopes are quoted after a free discovery call."
-          />
-        </div>
-
+        <GetFreeQuoteCTA />
         {/* ── 13. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"

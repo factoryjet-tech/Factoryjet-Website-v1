@@ -14,20 +14,20 @@ import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/Ser
 import CityContextSection from '@/components/v2/CityContextSection';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 import PortfolioShowcase from '@/components/v2/PortfolioShowcase';
+import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Shopify Development India | From ₹34,999 | FactoryJet',
+  title: 'Shopify Development India | | FactoryJet',
   description:
-    'Custom Shopify & Shopify Plus stores for Indian D2C brands. Razorpay + UPI + GST integrated. Shiprocket connected. 7-day delivery. From ₹34,999. 500+ businesses served.',
+    'Custom Shopify & Shopify Plus stores for Indian D2C brands. Razorpay + UPI + GST integrated. Shiprocket connected. 7-day delivery. 500+ businesses served.',
   keywords: [
     'Shopify development India',
     'Shopify store development',
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Development India | Custom Shopify Stores From ₹34,999 | FactoryJet',
+    title: 'Shopify Development India | Custom Shopify Stores | FactoryJet',
     description:
-      'Custom Shopify stores for Indian D2C brands. Razorpay + UPI integrated. GST-compliant. Shiprocket + Delhivery. 7-day delivery. From ₹34,999.',
+      'Custom Shopify stores for Indian D2C brands. Razorpay + UPI integrated. GST-compliant. Shiprocket + Delhivery. 7-day delivery.',
     url: 'https://factoryjet.com/shopify-development',
     images: [
       {
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Shopify Development India | Custom Shopify Stores | FactoryJet',
     description:
-      'Custom Shopify stores for Indian D2C brands. Razorpay + UPI + GST built in. 7-day delivery. From ₹34,999.',
+      'Custom Shopify stores for Indian D2C brands. Razorpay + UPI + GST built in. 7-day delivery.',
     images: ['https://factoryjet.com/images/services/card-shopify.webp'],
   },
   alternates: {
@@ -97,7 +97,7 @@ const SHOPIFY_serviceSchema = {
   '@id': 'https://factoryjet.com/#organization',
   name: 'FactoryJet',
   description:
-    'Custom Shopify and Shopify Plus development for Indian D2C brands and e-commerce businesses. Razorpay, UPI, GST invoicing, Shiprocket integrated. 7-day delivery. From ₹34,999.',
+    'Custom Shopify and Shopify Plus development for Indian D2C brands and e-commerce businesses. Razorpay, UPI, GST invoicing, Shiprocket integrated. 7-day delivery.',
   url: 'https://factoryjet.com/shopify-development',
   telephone: '+919699977699',
   email: 'connect@factoryjet.com',
@@ -734,10 +734,9 @@ export default function ShopifyDevelopmentPage() {
           headline="A Shopify Store That Sells — Built in 7 Days"
           lead="Generic Shopify themes convert at 0.8% in India. FactoryJet builds custom Shopify stores — designed in Figma, Razorpay and UPI integrated, GST-compliant, Lighthouse 95+ — from ₹34,999. In 7 days."
           primaryCta={{ label: 'Book a Store Audit', modal: true, region: 'in' }}
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
+          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '120+ Shopify stores launched',
-            'From ₹34,999',
             '7-day delivery guarantee',
           ]}
           rightSlot={
@@ -1258,17 +1257,7 @@ export default function ShopifyDevelopmentPage() {
           sectors={SHOPIFY_SERVICES}
         />
 
-        {/* ── 13. PRICING ──────────────────────────────────────────────────── */}
-        <div id="pricing">
-          <PricingTiers
-            eyebrow="PRICING"
-            headline="Transparent, Fixed-Price Shopify Development"
-            lead="No hourly billing. No scope creep. Every tier includes a fixed price, fixed scope, and a delivery timeline we stand behind."
-            tiers={SHOPIFY_PRICING_TIERS}
-            footnote="All prices in INR. Shopify subscription fees ($29–$299/month) are billed directly by Shopify. Razorpay transaction fees apply per the Razorpay standard rate card. Shiprocket shipping rates are billed directly by Shiprocket. You own all code and credentials on launch day."
-          />
-        </div>
-
+        <GetFreeQuoteCTA />
         {/* ── 14. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"

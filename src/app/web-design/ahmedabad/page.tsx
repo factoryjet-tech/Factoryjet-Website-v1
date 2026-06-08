@@ -12,20 +12,20 @@ import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/Ser
 import PortfolioShowcase from '@/components/v2/PortfolioShowcase';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Ahmedabad | From ₹25,000 | FactoryJet',
+  title: 'Web Design Company in Ahmedabad | | FactoryJet',
   description:
     'Web design company in Ahmedabad for textile exporters & trading firms. Fast websites from ₹25,000. 7-day delivery. Serving SG Highway, Vastrapur & GIFT City.',
   keywords: [
@@ -45,9 +45,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Ahmedabad | From ₹25,000 | FactoryJet',
+    title: 'Web Design Company in Ahmedabad | | FactoryJet',
     description:
-      'Professional website design company in Ahmedabad — Next.js, SEO, and GA4 included. 7-day delivery. From ₹25,000. Serving SG Highway, Vastrapur, Bodakdev, GIFT City.',
+      'Professional website design company in Ahmedabad — Next.js, SEO, and GA4 included. 7-day delivery. Serving SG Highway, Vastrapur, Bodakdev, GIFT City.',
     url: 'https://factoryjet.com/web-design/ahmedabad',
     images: [
       {
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Web Design Company in Ahmedabad | FactoryJet',
     description:
-      'Website design company in Ahmedabad. From ₹25,000. 7-day delivery. Next.js, SEO, GA4 included.',
+      'Website design company in Ahmedabad. 7-day delivery. Next.js, SEO, GA4 included.',
     images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {
@@ -93,7 +93,7 @@ const localBusinessSchema = {
   '@id': 'https://factoryjet.com/#organization',
   name: 'FactoryJet',
   description:
-    'Web design company in Ahmedabad building fast, SEO-optimized websites for textile exporters, trading firms, and growing businesses. From ₹25,000. 7-day delivery guarantee.',
+    'Web design company in Ahmedabad building fast, SEO-optimized websites for textile exporters, trading firms, and growing businesses. 7-day delivery guarantee.',
   url: 'https://factoryjet.com/web-design/ahmedabad',
   telephone: '+919699977699',
   email: 'connect@factoryjet.com',
@@ -341,7 +341,7 @@ const AMD_FAQ_ITEMS = [
     category: 'local',
     question: 'How does FactoryJet compare to Ahmedabad web agencies?',
     answer:
-      "Ahmedabad web agencies typically charge ₹1,00,000–₹3,00,000 for a comparable project and deliver in 6–16 weeks. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at a fixed, published price.",
+      "Ahmedabad web agencies typically charge ₹1,00,000–₹3,00,000 for a comparable project and deliver in 6–16 weeks. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at a fixed, published price.",
   },
 
   /* ── Support & Ownership ── */
@@ -381,7 +381,7 @@ const AMD_COMPARISON_COLUMNS = [
 const AMD_COMPARISON_ROWS = [
   {
     feature: 'Starting price',
-    values: ['₹25,000', '₹1,00,000–₹3,00,000', '₹10,000–₹60,000', '₹0–₹15,000 (you build it)'],
+    values: ['Get a Quote', '₹1,00,000–₹3,00,000', '₹10,000–₹60,000', '₹0–₹15,000 (you build it)'],
   },
   {
     feature: 'Delivery timeline',
@@ -433,7 +433,7 @@ const AMD_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Published pricing (no surprises)',
+    feature: 'Transparent, fixed pricing',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="aa" kind="no" />,
@@ -561,9 +561,8 @@ export default function AhmedabadWebDesignPage() {
           headline="Website Design in Ahmedabad for Textile Exporters, Trading Firms, and Growing Businesses"
           lead="Ahmedabad is India's textile capital, Gujarat's commercial hub, and home to GIFT City — India's first International Financial Services Centre. From the Textile Market and GIDC Vatva to SG Highway's corporate corridor and GIFT City's IFSC zone, Ahmedabad businesses compete globally. FactoryJet builds from ₹25,000 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
+          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
-            'Websites from ₹25,000',
             '7-day delivery guarantee',
             '500+ businesses built',
           ]}
@@ -712,7 +711,7 @@ export default function AhmedabadWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Ahmedabad Businesses Choose FactoryJet Over Local Agencies"
-          lead="Ahmedabad web agencies typically charge ₹1,00,000–₹3,00,000 for a comparable project and take 6–16 weeks to deliver. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, a codebase you own outright. Pricing is fixed and published upfront for the same scope."
+          lead="Ahmedabad web agencies typically charge ₹1,00,000–₹3,00,000 for a comparable project and take 6–16 weeks to deliver. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
           pillars={[
             {
               icon: '⚡',
@@ -727,7 +726,7 @@ export default function AhmedabadWebDesignPage() {
             {
               icon: '📋',
               title: 'Fixed price. Published before the first call.',
-              body: "We publish all three tiers — ₹25,000, ₹50,000, and ₹1,00,000+ — before you speak to us. No discovery fees, no 'it depends' quotes. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch.",
+              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch.",
             },
           ]}
         />
@@ -844,64 +843,7 @@ export default function AhmedabadWebDesignPage() {
           ]}
         />
 
-        {/* ── 11. PRICING ──────────────────────────────────────────────────── */}
-        <div id="pricing">
-          <PricingTiers
-            eyebrow="TRANSPARENT PRICING"
-            headline="Transparent, Fixed-Price Web Design for Ahmedabad Businesses"
-            lead="Ahmedabad agency rates for comparable web projects run ₹1,00,000–₹3,00,000. FactoryJet Growth (₹50,000) delivers 10–15 pages, blog CMS, lead capture, GA4, Next.js, and a 7-day delivery guarantee — with a codebase you own outright."
-            tiers={[
-              {
-                name: 'Starter',
-                priceRange: '₹25,000',
-                description:
-                  'A 5-page business site that loads fast on mobile and ranks for your name and core service. Best for small businesses, traders, and sole practitioners in Ahmedabad who need a credible online presence quickly.',
-                features: [
-                  '5 pages, mobile-responsive',
-                  'Basic SEO & LocalBusiness schema',
-                  'Contact form + WhatsApp integration',
-                  'GA4 setup',
-                  '2 revision rounds',
-                  '30-day post-launch support',
-                ],
-                cta: { label: 'Get a Quote', modal: true as const, region: 'in' as const },
-              },
-              {
-                name: 'Growth',
-                priceRange: '₹50,000',
-                description:
-                  'A 10–15 page site with blog CMS, lead-capture flows, and analytics wired in from day one. Best for Ahmedabad SMBs and exporters scaling online who need the site to actively generate qualified enquiries.',
-                features: [
-                  '10–15 pages with blog CMS',
-                  'Advanced SEO — schema, meta templates, internal links',
-                  'Lead capture + email automation',
-                  'GA4 + GTM + Search Console',
-                  '3 revision rounds',
-                  '30-day support + CMS training session',
-                ],
-                cta: { label: 'Get a Quote', modal: true as const, region: 'in' as const },
-                popular: true,
-              },
-              {
-                name: 'Custom',
-                priceRange: '₹1,00,000+',
-                description:
-                  'Custom Next.js build with product catalogs, booking systems, AI integrations, or API connections. Best for established Ahmedabad businesses with complex requirements and a real digital revenue line.',
-                features: [
-                  'Custom Next.js architecture',
-                  'Product catalog or e-commerce (Razorpay, Shiprocket)',
-                  'AI integrations (chat, search, content)',
-                  'Third-party API connections (Tally, Zoho)',
-                  'Priority support + quarterly reviews',
-                  'Dedicated engineering point of contact',
-                ],
-                cta: { label: 'Book a Discovery Call', modal: true as const, region: 'in' as const },
-              },
-            ] as const}
-            footnote="All prices in INR inclusive of design, development, SEO setup, and GA4. Cloudflare Pages hosting is free for standard Next.js builds — no monthly hosting fee."
-          />
-        </div>
-
+        <GetFreeQuoteCTA />
         {/* ── 12. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"

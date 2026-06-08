@@ -13,10 +13,10 @@ import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/Ser
 import CityContextSection from '@/components/v2/CityContextSection';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -198,7 +198,7 @@ const SALES_INDUSTRIES = [
 const SALES_PRICING_TIERS = [
   {
     name: 'Lead Qualification AI',
-    priceRange: 'From ₹3,50,000',
+    priceRange: '',
     description: 'A focused AI sales agent that qualifies inbound WhatsApp leads, pushes qualified prospects to your CRM, and follows up automatically.',
     features: [
       'WhatsApp lead qualification flow (custom to your product/service)',
@@ -213,7 +213,7 @@ const SALES_PRICING_TIERS = [
   },
   {
     name: 'Full Sales AI Platform',
-    priceRange: 'From ₹7,00,000',
+    priceRange: '',
     description: 'Multi-source lead capture, intelligent qualification, automated demo booking, and follow-up sequences — all integrated with your CRM and calendar.',
     features: [
       'Multi-source lead capture: Facebook/Instagram ads + website + WhatsApp',
@@ -229,7 +229,7 @@ const SALES_PRICING_TIERS = [
   },
   {
     name: 'Enterprise Sales AI',
-    priceRange: 'From ₹14,00,000',
+    priceRange: '',
     description: 'A full AI-powered sales pipeline — from multi-channel lead capture to deal closing support — with custom CRM workflows and analytics.',
     features: [
       'All channels: WhatsApp, website, Facebook, Instagram, 99acres, MagicBricks',
@@ -289,7 +289,7 @@ export default function AISalesAgentINPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
       />
 
-      <SiteHeader locale="in" navLinks={[{ label: 'Services', href: '/services' }, { label: 'AI Agents', href: '/services/ai-agent-development' }, { label: 'Portfolio', href: '/portfolio' }, { label: 'Pricing', href: '#pricing' }, { label: 'Contact', modal: true, region: 'in' }]} cta={{ label: 'Book a Free Call', modal: true, region: 'in' }} />
+      <SiteHeader locale="in" navLinks={[{ label: 'Services', href: '/services' }, { label: 'AI Agents', href: '/services/ai-agent-development' }, { label: 'Portfolio', href: '/portfolio' }, { label: 'Contact', modal: true, region: 'in' }]} cta={{ label: 'Book a Free Call', modal: true, region: 'in' }} />
 
       <BreadcrumbSchema items={[{ name: 'Home', url: 'https://factoryjet.com' }, { name: 'Services', url: 'https://factoryjet.com/services' }, { name: 'AI Agent Development', url: 'https://factoryjet.com/services/ai-agent-development' }, { name: 'AI Sales Agent', url: 'https://factoryjet.com/services/ai-agent-development/ai-sales-agent' }]} />
 
@@ -300,7 +300,7 @@ export default function AISalesAgentINPage() {
           headline="AI That Qualifies Your WhatsApp Leads in 60 Seconds — While You Sleep"
           lead="Your sales team is responding hours after leads enquire and losing deals to competitors who reply faster. FactoryJet AI sales agents qualify every lead immediately — in Hindi or English — book demos automatically, and push ready-to-close prospects to Zoho CRM around the clock."
           primaryCta={{ label: 'Book a Free Sales AI Strategy Call', modal: true, region: 'in' }}
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
+          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={['500+ businesses served', 'Zoho CRM + LeadSquared ready', '60-second lead response']}
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
@@ -513,16 +513,8 @@ export default function AISalesAgentINPage() {
 
         <IndustriesGrid variant="cards" eyebrow="WHO WE BUILD FOR" headline="AI sales agents for every high-lead-volume Indian industry" lead="Every industry has different lead sources, qualification criteria, and compliance requirements. We build for yours." sectors={SALES_INDUSTRIES} />
 
-        <div id="pricing">
-          <PricingTiers
-            eyebrow="PRICING"
-            headline="Transparent, Fixed-Price AI Sales Agent Development"
-            lead="No hourly billing. No scope creep surprises. Every tier includes fixed price, full code ownership, and post-launch support."
-            tiers={SALES_PRICING_TIERS}
-            footnote="All prices in INR. LLM API costs (typically ₹5,000–₹20,000/month) billed directly by model providers. WhatsApp BSP fees are separate. Custom scopes quoted after a free discovery call."
-          />
-        </div>
 
+        <GetFreeQuoteCTA />
         <TestimonialsSection eyebrow="CLIENT RESULTS" headline="What Indian founders say after deploying our AI sales agents" />
 
         <FAQ eyebrow="FREQUENTLY ASKED QUESTIONS" headline="Everything to Know Before You Start" lead="The questions we answer on every Indian AI sales agent discovery call — answered honestly." categories={SALES_FAQ_CATEGORIES} items={SALES_FAQ_ITEMS} />

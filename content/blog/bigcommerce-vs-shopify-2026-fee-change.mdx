@@ -1,0 +1,364 @@
+---
+title: "BigCommerce vs. Shopify After the June 2026 Fee Change: The Math Just Flipped"
+description: "BigCommerce changed its pricing on June 1, 2026 — new Open Payment Provider fees and lower GMV caps. Here's what the math actually looks like for US small businesses comparing BigCommerce vs. Shopify right now."
+date: "2026-06-07"
+author: "Bhavesh Barot"
+readingTime: "7 min read"
+tags: ["ecommerce", "shopify", "bigcommerce", "platform comparison", "ecommerce pricing"]
+keywords: ["bigcommerce vs shopify 2026", "bigcommerce fee change june 2026", "bigcommerce open payment provider fee", "bigcommerce vs shopify fees", "bigcommerce gmv cap", "shopify vs bigcommerce pricing"]
+image: "/blog-images/bigcommerce-vs-shopify-2026-fee-change.webp"
+imageAlt: "BigCommerce vs Shopify pricing comparison after June 2026 fee change"
+canonical: "/blog/bigcommerce-vs-shopify-2026-fee-change"
+---
+
+export const metadata = {
+  title: "BigCommerce vs. Shopify After the June 2026 Fee Change: The Math Just Flipped",
+  description: "BigCommerce changed its pricing on June 1, 2026 — new Open Payment Provider fees and lower GMV caps. Here's what the math actually looks like for US small businesses comparing BigCommerce vs. Shopify right now.",
+};
+
+<script type="application/ld+json">{`
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://factoryjet.com/blog/bigcommerce-vs-shopify-2026-fee-change#article",
+      "headline": "BigCommerce vs. Shopify After the June 2026 Fee Change: The Math Just Flipped",
+      "description": "BigCommerce changed its pricing on June 1, 2026 — new Open Payment Provider fees and lower GMV caps. Here's what the math actually looks like for US small businesses comparing BigCommerce vs. Shopify right now.",
+      "image": "https://factoryjet.com/blog-images/bigcommerce-vs-shopify-2026-fee-change.webp",
+      "author": {
+        "@type": "Person",
+        "name": "Bhavesh Barot",
+        "url": "https://factoryjet.com/about"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "FactoryJet",
+        "url": "https://factoryjet.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://factoryjet.com/logo.png"
+        }
+      },
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "mainEntityOfPage": "https://factoryjet.com/blog/bigcommerce-vs-shopify-2026-fee-change",
+      "url": "https://factoryjet.com/blog/bigcommerce-vs-shopify-2026-fee-change"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://factoryjet.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://factoryjet.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "BigCommerce vs. Shopify After the June 2026 Fee Change",
+          "item": "https://factoryjet.com/blog/bigcommerce-vs-shopify-2026-fee-change"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What did BigCommerce change on June 1, 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BigCommerce made three changes: renamed its plans (Standard becomes Core, Plus becomes Growth, Pro becomes Scale), reduced GMV caps on lower tiers (Core drops from $50K to $30K/year, Growth from $180K to $100K/year), and introduced an Open Payment Provider fee of 2.0% (Core), 1.0% (Growth), or 0.6% (Scale) for merchants using non-Embedded payment providers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the BigCommerce June 2026 fee apply to Stripe and PayPal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Stripe, PayPal Braintree, PayPal Complete Payments, PayPal Wallet, Adyen, and 15+ other providers are on BigCommerce's Embedded Payment Provider list. Orders processed through those providers are not subject to the Open Payment Provider fee."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does BigCommerce's new fee compare to Shopify's transaction fees?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Shopify has always charged 2% (Basic), 1% (Shopify plan), or 0.5% (Advanced) for third-party payment providers — with 0% only for Shopify Payments. BigCommerce now charges 2.0% (Core), 1.0% (Growth), or 0.6% (Scale) for non-Embedded providers. But BigCommerce's Embedded (free) list covers 20+ providers including Stripe and PayPal, while Shopify's free option is Shopify Payments only."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is hurt most by BigCommerce's June 2026 pricing changes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Two groups: (1) Stores selling $31K–$50K/year that were on Standard ($39/month) and are now forced onto Growth ($105/month) because Core's GMV cap dropped from $50K to $30K. (2) Merchants using non-Embedded payment providers like Square or Authorize.net, who now face a 0.6%–2.0% fee where they paid nothing before."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is NOT affected by BigCommerce's June 2026 fee change?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Merchants using any of BigCommerce's 20+ Embedded Payment Providers — including Stripe, PayPal, Adyen, Klarna, Afterpay, and Amazon Pay — pay $0 in Open Payment Provider fees. Merchants also under the new GMV caps see no plan-tier change."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is BigCommerce still better than Shopify on transaction fees?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For merchants using Stripe, PayPal, or Adyen: yes, BigCommerce is still better — 0% on those providers vs. Shopify's 0.5%–2% third-party fee. For merchants using non-Embedded providers: BigCommerce and Shopify now have near-identical fee structures, with BigCommerce slightly higher at the entry tier (2.0% vs. Shopify's 2% on Basic)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are BigCommerce's new plan names after June 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard is now Core, Plus is now Growth, Pro is now Scale, and Enterprise is now Performance. Monthly prices remain the same: Core $39/month, Growth $105/month, Scale $399/month, Performance custom."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are BigCommerce's new GMV caps after June 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Core: $30,000/year (down from $50,000 on Standard). Growth: $100,000/year (down from $180,000 on Plus). Scale: approximately $400,000/year with a per-$200K overage rate. Performance: custom."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I switch from BigCommerce to Shopify after this change?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on your payment provider. If you use Stripe, PayPal, or Adyen, staying on BigCommerce still makes sense — those are Embedded providers with 0% fees. If you use Square or another non-Embedded provider, and you're on Core, you're now looking at a 2% fee. Factor in migration costs, theme rebuild, URL redirects, and SEO re-indexing before making a move."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What payment providers are on BigCommerce's Embedded (free) list?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As of June 2026, BigCommerce's Embedded Payment Provider list includes: Adyen, Affirm, Afterpay, Amazon Pay, Bank of New Zealand, BigCommerce Payments, Checkout.com, Clearpay, Fortis, Global Payments, Klarna, PayPal Braintree, PayPal Complete Payments, PayPal Wallet, Bluesnap (Payroc), Bankful (Pinwheel), Sezzle, Stripe, TD Online Mart, Worldpay, and Zip Money."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Shopify's transaction fee if I use a third-party payment processor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Shopify charges 2% on Basic, 1% on the Shopify (Grow) plan, and 0.5% on Advanced for orders not processed through Shopify Payments. These fees have applied since Shopify launched and have not changed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does BigCommerce cost per month in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BigCommerce pricing after June 1, 2026: Core is $39/month (or $29/month billed annually), Growth is $105/month (or $79/month annually), Scale is $399/month (or $299/month annually), and Performance (enterprise) is custom pricing."
+          }
+        }
+      ]
+    }
+  ]
+}
+`}</script>
+
+For years, one of the cleanest arguments for BigCommerce over Shopify was simple: BigCommerce charged no transaction fees on third-party payment providers. You could run your store on Stripe, PayPal, or Authorize.net and keep 100% of every sale. Shopify taxed you 0.5% to 2% for the same choice.
+
+On June 1, 2026, that advantage got complicated.
+
+BigCommerce announced three changes that took effect on that date: a plan rename, reduced GMV (gross merchandise value) caps, and a new "Open Payment Provider fee" for merchants using non-approved payment processors. Every comparison article written before June is now outdated.
+
+This piece walks through what actually changed, who it affects, and what the real math looks like for US small businesses shopping between these two platforms right now.
+
+## What BigCommerce Changed on June 1, 2026 (Official Announcement)
+
+According to [BigCommerce's own blog post](https://www.bigcommerce.com/blog/bigcommerce-self-serve-pricing-changes/) published on May 11, 2026 and authored by Austin Comer, three things changed:
+
+**1. Plan renames.**
+Standard is now Core. Plus is now Growth. Pro is now Scale. Enterprise is now Performance. The monthly prices did not change.
+
+**2. Lower GMV caps.**
+The revenue thresholds that trigger automatic plan upgrades dropped significantly. The Core plan (formerly Standard) now caps at $30,000/year in GMV — down from $50,000 on Standard. Growth (formerly Plus) now caps at $100,000/year — down from $180,000 on Plus.
+
+**3. A new Open Payment Provider fee.**
+Self-serve plan merchants who process orders through payment providers not on BigCommerce's Embedded list now pay an additional fee:
+- Core: 2.0% of GMV on those orders
+- Growth: 1.0%
+- Scale: 0.6%
+- Performance (Enterprise): 0%
+
+That third change sounds alarming. The second one is quietly the more painful one for a lot of stores.
+
+## The GMV Cap Reduction Is the Sneakier Hit
+
+Here is what the GMV cap change means in practice. Say you run a small DTC brand doing $40,000 in annual sales. Before June 1, 2026, you were on the Standard plan at $39/month. Your GMV was under the $50,000 cap.
+
+After June 1, your $40,000 in revenue exceeds Core's new $30,000 cap. You get auto-upgraded to Growth at $105/month.
+
+Your revenue has not changed. Your product has not changed. Your plan costs just jumped from $39 to $105 per month — a 169% increase.
+
+BigCommerce acknowledged this in their announcement, framing it as a move to align plan tiers with business scale and noting that merchants upgrading to Growth gain access to features like abandoned cart recovery and persistent cart. But the practical reality is that stores in the $30,000–$50,000 annual GMV band are now paying significantly more.
+
+## The Open Payment Provider Fee: Who Actually Gets Hit
+
+This part requires careful reading because BigCommerce's marketing around it is targeted at Shopify.
+
+BigCommerce published [a list of 21 Embedded Payment Providers](https://www.bigcommerce.com/blog/bigcommerce-self-serve-pricing-changes/) that carry no fee. That list includes: Stripe, PayPal Braintree, PayPal Complete Payments, PayPal Wallet, Adyen, Klarna, Afterpay, Amazon Pay, Checkout.com, Clearpay, Sezzle, Worldpay, Affirm, Global Payments, Fortis, Bluesnap (powered by Payroc), Bankful (Pinwheel), TD Online Mart, Zip Money, Bank of New Zealand, and BigCommerce Payments itself.
+
+If you process through any provider on that list, the Open Payment Provider fee does not apply to those orders. Your fee is zero.
+
+Most US small businesses using Stripe, PayPal, or Adyen are in the clear. The fee hits merchants using providers not on the Embedded list — Square, Authorize.net, WooPayments, and other processors not included in BigCommerce's curated set.
+
+## Side-by-Side Comparison: BigCommerce vs. Shopify in 2026
+
+Here is how the platforms compare today, using verified pricing from [BigCommerce's official pricing page](https://www.bigcommerce.com/essentials/pricing/) and [Shopify's pricing page](https://www.shopify.com/pricing):
+
+| | BigCommerce Core | BigCommerce Growth | BigCommerce Scale | Shopify Basic | Shopify (Grow) | Shopify Advanced |
+|---|---|---|---|---|---|---|
+| **Monthly price (billed annually)** | $29/mo | $79/mo | $299/mo | $29/mo | $79/mo | $299/mo |
+| **Monthly price (billed monthly)** | $39/mo | $105/mo | $399/mo | $39/mo | $105/mo | $399/mo |
+| **GMV cap (annual)** | $30,000 | $100,000 | ~$400,000 | None | None | None |
+| **Fee-free payment option** | 20+ Embedded providers | 20+ Embedded providers | 20+ Embedded providers | Shopify Payments only | Shopify Payments only | Shopify Payments only |
+| **Third-party processor fee** | 2.0% (non-Embedded) | 1.0% (non-Embedded) | 0.6% (non-Embedded) | 2.0% | 1.0% | 0.5% |
+| **Stripe fee** | 0% (Embedded) | 0% (Embedded) | 0% (Embedded) | 2.0% | 1.0% | 0.5% |
+| **PayPal fee** | 0% (Embedded) | 0% (Embedded) | 0% (Embedded) | 2.0% | 1.0% | 0.5% |
+
+Shopify has no GMV caps — you can sell $500,000 on Basic without being auto-upgraded. BigCommerce caps Core at $30,000 and Growth at $100,000.
+
+Shopify charges 2%, 1%, or 0.5% on any payment processor other than Shopify Payments — including Stripe and PayPal. BigCommerce charges nothing on 20+ Embedded providers.
+
+## Where the Math Flipped and Where It Did Not
+
+The BigCommerce PR angle — "Shopify has one fee-free provider, we have 20+" — is technically accurate. But "the math just flipped" only describes part of the picture.
+
+**Where the math did flip:** For merchants using non-Embedded providers (Square, Authorize.net, etc.) on BigCommerce Core, there is now a 2% fee where before there was 0%. That is a real change. And for stores in the $30K–$50K GMV range, the forced upgrade to Growth is a meaningful cost jump.
+
+**Where the math did not flip:** If you are using Stripe or PayPal on BigCommerce, your fee is still 0%. On Shopify, those same providers cost you 0.5% to 2% depending on your plan. BigCommerce remains the better deal for merchants on Embedded providers.
+
+**Where Shopify wins now:** Shopify has no GMV caps. A store growing from $80,000 to $110,000 in sales stays on the same Shopify plan. On BigCommerce, hitting $101,000 on Growth triggers an upgrade to Scale at $399/month.
+
+## What to Factor In Before Switching
+
+Migrating from BigCommerce to Shopify — or the reverse — is not a weekend project. Consider:
+
+**Theme rebuild.** Shopify and BigCommerce use different templating systems. A custom BigCommerce Stencil theme does not port over. You are looking at a fresh build on Liquid.
+
+**URL structure and redirects.** Product and collection URLs differ between platforms. Without proper 301 redirects and a Google Search Console re-indexing request, you will lose organic rankings built over years. We covered the Shopify migration SEO playbook in our [ecommerce development guide](/us/services/ecommerce-development).
+
+**App ecosystem differences.** Many apps exist on both platforms, but not all. Audit your current app stack against Shopify's App Store before assuming a clean lift-and-shift.
+
+**Payment re-setup.** Switching platforms means re-connecting payment processors, verifying accounts, and potentially renegotiating rates.
+
+If you are already using Stripe or PayPal on BigCommerce and your GMV is comfortably inside the new caps, a migration is hard to justify financially.
+
+## The Stores That Should Look at Their Numbers Right Now
+
+Three situations where doing the math is worth 30 minutes of your time:
+
+**You're selling $31,000–$50,000/year on BigCommerce Standard (now Core).** Your plan probably auto-upgraded to Growth. You are now paying $105/month instead of $39. Over a year, that is $792 more. Whether Shopify (which has no cap at that GMV) makes sense depends on your payment processor and growth trajectory.
+
+**You use Square or another non-Embedded processor on BigCommerce Core.** You now pay 2% on every order through that provider. On $30,000 in GMV, that is $600/year in new fees. Switching to one of BigCommerce's Embedded providers (or comparing against Shopify Basic, which charges the same 2% for third-party processors) is worth the time.
+
+**You are evaluating platforms fresh and doing under $100,000/year.** Shopify's lack of GMV caps is a genuine structural advantage at this scale. Both platforms charge the same base prices. The fee-free payment provider list still favors BigCommerce if you plan to use Stripe or PayPal.
+
+If you want a second opinion on which platform fits your store and growth plan, the team at [FactoryJet](/us/services/ecommerce-development) has built and migrated stores on both. We can walk you through the numbers specific to your store without a sales pitch.
+
+## What This Means for Platform Selection Going Forward
+
+Neither platform won this round cleanly.
+
+BigCommerce's 20+ Embedded providers remain a genuine differentiator for merchants who already use Stripe, PayPal, or Adyen. For those merchants, the Open Payment Provider fee is irrelevant. But the GMV cap reduction is a harder sell — it forces growing stores into higher-tier plans earlier than before, and Shopify has no equivalent limit.
+
+Shopify's transaction fee structure is unchanged and applies to a wide range of third-party processors. For merchants using Shopify Payments, the platform remains competitive. For everyone else, BigCommerce still tends to cost less in payment fees.
+
+The most important thing for any US small business: your store's performance, checkout speed, and conversion rate will have far more impact on your bottom line than the difference between 0.5% and 1% in platform fees. We've seen stores on both platforms lose far more to slow page loads and a clunky checkout than they ever paid in transaction fees.
+
+If you are choosing between platforms, or thinking about migrating, we are happy to do a free platform audit and lay out the math for your store. [Book a 30-minute call with our team](https://calendly.com/bhavesh-factoryjet/30min) and we will walk through the numbers together.
+
+---
+
+## Frequently Asked Questions
+
+**What did BigCommerce change on June 1, 2026?**
+Three things: it renamed its plans (Standard to Core, Plus to Growth, Pro to Scale, Enterprise to Performance), reduced GMV caps (Core now caps at $30,000/year instead of $50,000, Growth at $100,000 instead of $180,000), and added an Open Payment Provider fee of 2.0% (Core), 1.0% (Growth), or 0.6% (Scale) for orders processed through non-Embedded payment providers.
+
+**Does the new BigCommerce fee apply to Stripe?**
+No. Stripe is on BigCommerce's Embedded Payment Provider list, which means orders through Stripe carry a 0% Open Payment Provider fee. The same applies to PayPal, Adyen, Klarna, Afterpay, Amazon Pay, and 15 other providers.
+
+**How does BigCommerce's new fee compare to Shopify's transaction fees?**
+Shopify has always charged 2% (Basic), 1% (Shopify plan), or 0.5% (Advanced) for using any payment provider other than Shopify Payments. BigCommerce's new fee structure for non-Embedded providers is 2.0% (Core), 1.0% (Growth), or 0.6% (Scale) — nearly identical on paper. The key difference is that BigCommerce's free list covers 20+ providers versus Shopify's one.
+
+**Who is hurt most by BigCommerce's pricing changes?**
+Two groups: (1) Stores doing $31,000–$50,000/year that were on Standard ($39/month) and are now auto-upgraded to Growth ($105/month) because Core's cap dropped to $30,000. (2) Merchants using non-Embedded providers like Square or Authorize.net, who now face a 0.6%–2.0% fee on those orders.
+
+**Who is not affected by BigCommerce's fee change?**
+Merchants using Stripe, PayPal, Adyen, Klarna, Afterpay, Amazon Pay, Checkout.com, Worldpay, or any of the other 21 providers on the Embedded list. Those orders carry 0% in platform fees, same as before.
+
+**Is BigCommerce still better than Shopify on payment fees?**
+For merchants using Stripe or PayPal: yes — BigCommerce is still 0% on those providers versus Shopify's 0.5%–2% for the same processors. For merchants using non-Embedded providers: the two platforms are now roughly equivalent in fee structure.
+
+**Does Shopify have GMV caps like BigCommerce?**
+No. Shopify does not cap annual GMV at any tier. You can sell $200,000/year on Basic without triggering an automatic upgrade. BigCommerce's new caps ($30K on Core, $100K on Growth) create forced upgrades that Shopify does not have.
+
+**What are BigCommerce's new plan names after June 2026?**
+Standard is now Core ($39/month billed monthly, $29/month billed annually). Plus is now Growth ($105/month, or $79/month annually). Pro is now Scale ($399/month, or $299/month annually). Enterprise is now Performance, with custom pricing.
+
+**What is BigCommerce's Embedded Payment Provider list?**
+As of June 2026, the full Embedded list is: Adyen, Affirm, Afterpay, Amazon Pay, Bank of New Zealand, BigCommerce Payments, Checkout.com, Clearpay, Fortis, Global Payments, Klarna, PayPal Braintree, PayPal Complete Payments, PayPal Wallet, Bluesnap (Payroc), Bankful (Pinwheel), Sezzle, Stripe, TD Online Mart, Worldpay, and Zip Money.
+
+**Should I switch from BigCommerce to Shopify after this change?**
+It depends on your payment provider and GMV. If you use Stripe, PayPal, or Adyen on BigCommerce and your revenue is inside the new GMV caps, a migration is hard to justify — you would be moving away from a platform that charges you 0% on those providers to one that charges 0.5%–2%. If you are near the old GMV caps and facing an auto-upgrade, or if you use a non-Embedded provider, then comparing the total cost of ownership (including migration expense) is worthwhile.
+
+**What does migrating from BigCommerce to Shopify actually cost?**
+You are looking at a theme rebuild, URL redirect mapping, app re-integration, and payment re-setup — typically several weeks of developer time. We cover this in more detail in our [ecommerce development services overview](/us/services/ecommerce-development). The platform fee savings need to outrun those one-time migration costs before a switch makes financial sense.
+
+**What is Shopify's transaction fee if I use Stripe or another third-party processor?**
+Shopify charges 2% on Basic, 1% on the Shopify (Grow) plan, and 0.5% on Advanced for orders processed outside of Shopify Payments. These rates have been in place for years and did not change in 2026.
+
+**Can BigCommerce merchants avoid the new fee entirely?**
+Yes — by routing orders through one of the 21 Embedded Payment Providers. If your current processor is not on the list, switching to Stripe, PayPal, or Adyen eliminates the fee entirely. Contact your processor to compare rates before switching.
+
+**What happens if my GMV exceeds my BigCommerce plan cap?**
+BigCommerce auto-upgrades your account to the next plan tier based on trailing 12-month GMV. According to BigCommerce's FAQ, the GMV calculation uses gross order value minus 10%. Merchants approaching a cap should plan for the pricing jump or evaluate whether Scale ($399/month) makes sense at their volume.
+
+**Does the fee change affect BigCommerce enterprise (Performance) merchants?**
+No. Performance plan merchants operating under contracted terms are explicitly exempt from the Open Payment Provider fee, per BigCommerce's official announcement.
+
+**Are Shopify and BigCommerce priced the same in 2026?**
+The base monthly prices are identical at equivalent tiers ($29/$79/$299 billed annually, or $39/$105/$399 billed monthly). The differences are in GMV caps, payment provider flexibility, and fee structures on third-party processors.
+
+**What is the BigCommerce GMV cap on the Core plan?**
+$30,000 per year, calculated on a trailing 12-month basis. Stores exceeding this are automatically moved to Growth ($105/month billed monthly, or $79/month annually).
+
+**What ecommerce platform does FactoryJet build on?**
+FactoryJet works across Shopify, custom ecommerce builds, and platform migrations. We help businesses choose the right stack for their revenue model, then build and optimize it fast. Read more in our [Shopify vs. WooCommerce comparison](/blog/shopify-vs-woocommerce-us-small-business-2026).
+
+**Is BigCommerce losing market share to Shopify because of this change?**
+Too early to say. BigCommerce's Q4 2025 earnings prepared remarks (filed with investors) noted continued investment in platform features. The June 2026 pricing change is positioned as a move toward deeper payment integrations, not a retreat. Whether merchants vote with their wallets remains to be seen.
+
+**How do I know which payment providers are Embedded on BigCommerce?**
+BigCommerce published the full Embedded Payment Provider list in their [official June 2026 pricing announcement](https://www.bigcommerce.com/blog/bigcommerce-self-serve-pricing-changes/). Any provider not on that list is treated as an Open Payment Provider and subject to the fee.
+
+**Who should I talk to about choosing between BigCommerce and Shopify?**
+If you want a clear-eyed breakdown of which platform fits your store's revenue, payment setup, and growth plan — without someone trying to sell you one over the other — [book 30 minutes with the FactoryJet team](https://calendly.com/bhavesh-factoryjet/30min). We have built on both platforms for 500+ businesses across the US.
+
+---
+
+*Sources: [BigCommerce official pricing announcement, May 2026](https://www.bigcommerce.com/blog/bigcommerce-self-serve-pricing-changes/) | [BigCommerce pricing page](https://www.bigcommerce.com/essentials/pricing/) | [Shopify pricing page](https://www.shopify.com/pricing)*
+
+---
+
+**About the Author**
+
+Bhavesh Barot is the founder of FactoryJet. He's spent 25+ years building ecommerce stores for hundreds of US businesses. FactoryJet delivers in 7 days — not 7 weeks. [Talk to Bhavesh directly](https://calendly.com/bhavesh-factoryjet/30min).

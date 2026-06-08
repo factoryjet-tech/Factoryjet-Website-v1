@@ -13,10 +13,10 @@ import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/Ser
 import CityContextSection from '@/components/v2/CityContextSection';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 
 export const metadata: Metadata = {
   title: 'AI Workflow Automation India | FactoryJet',
@@ -340,7 +340,7 @@ const WORKFLOW_INDUSTRIES = [
 const WORKFLOW_PRICING_TIERS = [
   {
     name: 'Workflow Starter',
-    priceRange: 'From ₹1,50,000',
+    priceRange: '',
     description: 'A focused two-system automation that eliminates your single biggest manual repetition.',
     features: [
       '2-system integration (e.g., Zoho CRM + WhatsApp)',
@@ -354,7 +354,7 @@ const WORKFLOW_PRICING_TIERS = [
   },
   {
     name: 'Multi-System Workflow Platform',
-    priceRange: 'From ₹3,50,000',
+    priceRange: '',
     description: '5–10 connected tools in a unified automation platform — your operations on autopilot.',
     features: [
       '5–10 system integrations',
@@ -371,7 +371,7 @@ const WORKFLOW_PRICING_TIERS = [
   },
   {
     name: 'Full Business Automation Suite',
-    priceRange: 'From ₹7,00,000',
+    priceRange: '',
     description: 'End-to-end automation across sales, operations, finance, and support for scaling Indian businesses.',
     features: [
       'System integrations scoped per project brief',
@@ -513,9 +513,7 @@ export default function AIWorkflowAutomationINPage() {
         navLinks={[
           { label: 'Services', href: '/services' },
           { label: 'AI Agents', href: '/services/ai-agent-development' },
-          { label: 'Portfolio', href: '/portfolio' },
-          { label: 'Pricing', href: '#pricing' },
-          { label: 'Contact', modal: true, region: 'in' },
+          { label: 'Portfolio', href: '/portfolio' },          { label: 'Contact', modal: true, region: 'in' },
         ]}
         cta={{ label: 'Book a Free Call', modal: true, region: 'in' }}
       />
@@ -536,7 +534,7 @@ export default function AIWorkflowAutomationINPage() {
           headline="Stop Re-Entering Data Between Zoho, Tally, and WhatsApp — Automate It Once"
           lead="Connect your Indian business tools into automated pipelines with AI. When a Razorpay payment clears, the Tally entry writes itself, the GST invoice sends itself, and the WhatsApp notification reaches your customer — all before you finish your chai. Fixed price. Live in 1–4 weeks."
           primaryCta={{ label: 'Book a Free Automation Discovery Call', modal: true, region: 'in' }}
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
+          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ businesses served',
             'Zoho + Tally + Razorpay ready',
@@ -799,16 +797,8 @@ export default function AIWorkflowAutomationINPage() {
           sectors={WORKFLOW_INDUSTRIES}
         />
 
-        <div id="pricing">
-          <PricingTiers
-            eyebrow="PRICING"
-            headline="Transparent, Fixed-Price AI Workflow Automation"
-            lead="No hourly billing. No scope creep surprises. Every tier includes a fixed price, full code ownership, and a post-launch support window."
-            tiers={WORKFLOW_PRICING_TIERS}
-            footnote="All prices in INR. n8n/Make subscription costs (₹2,000–₹6,000/month) are optional and billed separately by those platforms. LLM API costs for AI-heavy automations (₹3,000–₹12,000/month) are billed directly by model providers. Custom scopes quoted after a free discovery call."
-          />
-        </div>
 
+        <GetFreeQuoteCTA />
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
           headline="What Indian founders say after we automate their operations"

@@ -15,10 +15,10 @@ import ServiceJourneyRow from '@/components/v2/ServiceJourneyRow'
 import PortfolioShowcase from '@/components/v2/PortfolioShowcase'
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable'
 import IndustriesGrid from '@/components/v2/IndustriesGrid'
-import PricingTiers from '@/components/v2/PricingTiers'
 import TestimonialsSection from '@/components/v2/TestimonialsSection'
 import FAQ from '@/components/v2/FAQ'
 import FinalCTA from '@/components/v2/FinalCTA'
+import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 
 export const metadata: Metadata = {
   title: 'Web Design in Surat | Diamond & Textile | FactoryJet',
@@ -335,9 +335,7 @@ export default function Page() {
     },
   ] as const
 
-const SRT_FAQ_CATEGORIES = [
-  { key: 'pricing', label: 'Pricing' },
-  { key: 'process', label: 'Process' },
+const SRT_FAQ_CATEGORIES = [  { key: 'process', label: 'Process' },
   { key: 'technical', label: 'Technical' },
   { key: 'ecommerce', label: 'E-Commerce' },
   { key: 'local', label: 'Surat' },
@@ -532,7 +530,7 @@ const SRT_FAQ_ITEMS = [
           footer="Prices reflect typical Surat market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
         />
       <IndustriesGrid />
-      <PricingTiers headline="Simple, Transparent Pricing for Surat Businesses" tiers={pricingTiers} />
+        <GetFreeQuoteCTA />
       <TestimonialsSection />
       <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"

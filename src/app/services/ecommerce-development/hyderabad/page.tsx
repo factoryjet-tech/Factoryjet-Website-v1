@@ -10,7 +10,6 @@ import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/Ser
 import CityContextSection from '@/components/v2/CityContextSection';
 import PortfolioShowcase from '@/components/v2/PortfolioShowcase';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
@@ -18,15 +17,16 @@ import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { ecommerceCityAlternatesIN } from '@/data/hreflangMap';
+import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development in Hyderabad | From ₹59,999 | FactoryJet',
+  title: 'Ecommerce Development in Hyderabad | | FactoryJet',
   description:
-    'Shopify & WooCommerce stores for Hyderabad brands. From ₹59,999. Razorpay, UPI & COD. GST-compliant. Shiprocket integrated. 7-day delivery guarantee.',
+    'Shopify & WooCommerce stores for Hyderabad brands. Razorpay, UPI & COD. GST-compliant. Shiprocket integrated. 7-day delivery guarantee.',
   keywords: [
     'ecommerce development company hyderabad',
     'ecommerce website development hyderabad',
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Ecommerce Development Company in Hyderabad | From ₹59,999 | FactoryJet',
+    title: 'Ecommerce Development Company in Hyderabad | | FactoryJet',
     description:
-      'Shopify, WooCommerce, D2C, and custom ecommerce stores for Hyderabad businesses. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery. From ₹59,999.',
+      'Shopify, WooCommerce, D2C, and custom ecommerce stores for Hyderabad businesses. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
     url: 'https://factoryjet.com/services/ecommerce-development/hyderabad',
     images: [
       {
@@ -63,9 +63,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ecommerce Development Hyderabad | From ₹59,999 | FactoryJet',
+    title: 'Ecommerce Development Hyderabad | | FactoryJet',
     description:
-      'Shopify, WooCommerce & custom ecommerce for Hyderabad brands. Razorpay + GST + Shiprocket. From ₹59,999.',
+      'Shopify, WooCommerce & custom ecommerce for Hyderabad brands. Razorpay + GST + Shiprocket.',
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -191,7 +191,7 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/services/ecommerce-development/hyderabad',
   image: 'https://factoryjet.com/logo.png',
   description:
-    'Ecommerce development company serving Hyderabad businesses. Shopify, WooCommerce, and custom stores. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery. From ₹59,999.',
+    'Ecommerce development company serving Hyderabad businesses. Shopify, WooCommerce, and custom stores. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Hyderabad',
@@ -453,11 +453,10 @@ export default function HyderabadEcommercePage() {
         <Hero
           eyebrow="ECOMMERCE DEVELOPMENT · HYDERABAD"
           headline="Hyderabad's Most Trusted Ecommerce Agency — Store Live in 7 Days"
-          lead="FactoryJet builds Shopify, WooCommerce, and custom D2C stores for Hyderabad brands — Razorpay and UPI integrated, GST-compliant, Shiprocket connected, and Lighthouse 90+ before we hand you the keys. From ₹59,999. 7-day delivery guarantee."
+          lead="FactoryJet builds Shopify, WooCommerce, and custom D2C stores for Hyderabad brands — Razorpay and UPI integrated, GST-compliant, Shiprocket connected, and Lighthouse 90+ before we hand you the keys. 7-day delivery guarantee."
           primaryCta={{ label: 'Book a Free Store Audit', modal: true, region: 'in' }}
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
+          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
-            'From ₹59,999',
             '7-day delivery guarantee',
             'Razorpay + UPI + COD ready',
           ]}
@@ -627,7 +626,7 @@ export default function HyderabadEcommercePage() {
             {
               icon: '📋',
               title: 'Fixed price. Published before the first call.',
-              body: 'We publish all three tiers — ₹59,999, ₹99,999, and ₹1,99,999+ — before you speak to us. No discovery fees, no "it depends" quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your store running.',
+              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your store running.",
             },
           ]}
         />
@@ -760,73 +759,7 @@ export default function HyderabadEcommercePage() {
           ctaLabel="View full portfolio"
         />
 
-        {/* ── 10. PRICING ──────────────────────────────────────────────────── */}
-        <div id="pricing">
-          <PricingTiers
-            eyebrow="TRANSPARENT PRICING"
-            headline="Ecommerce Plans for Every Hyderabad Business Stage"
-            lead="Hyderabad agency rates for comparable ecommerce projects run ₹2,00,000–₹10,00,000. FactoryJet Growth (₹99,999) delivers a full-featured Shopify or WooCommerce store with subscriptions, B2B pricing, omnichannel integrations, Razorpay, GST invoicing, and a 7-day delivery guarantee — with a codebase you own outright."
-            tiers={[
-              {
-                name: 'Starter Store',
-                priceRange: 'From ₹59,999',
-                description:
-                  'A professionally designed Shopify or WooCommerce store ready to sell on launch day. The right starting point for D2C brands and Hyderabad retailers going online for the first time.',
-                features: [
-                  'Platform of your choice: Shopify or WooCommerce',
-                  'Custom Figma design — homepage, PDP, collections, cart',
-                  'Razorpay / PayU: UPI, cards, net banking, wallets',
-                  'GST-compliant auto-invoicing at checkout',
-                  'Shiprocket integration with real-time shipping rates',
-                  'Up to 50 products imported and configured',
-                  'WhatsApp order notifications via Interakt or Wati',
-                  'Technical SEO: schema markup, sitemaps, meta tags',
-                  'Google Analytics 4 + Search Console setup',
-                ],
-                cta: { label: 'Book a Store Audit', modal: true as const, region: 'in' as const },
-              },
-              {
-                name: 'Growth Store',
-                priceRange: 'From ₹99,999',
-                description:
-                  'A full-featured store with subscription logic, B2B pricing, a product configurator, or multi-channel inventory sync — for Hyderabad brands with more complex selling models.',
-                features: [
-                  'Everything in Starter Store, plus:',
-                  'Subscription products (recurring orders, auto-renewal)',
-                  'B2B wholesale portal with tiered dealer pricing',
-                  'Product configurator or bundle builder',
-                  'Advanced WhatsApp automation (abandoned cart, win-back)',
-                  'Multi-channel inventory sync (Amazon India, Flipkart, or 3PL)',
-                  'Reviews platform integration (Stamped, Okendo, or Judge.me)',
-                  'Post-purchase upsell flow and loyalty points setup',
-                  '30-day post-launch support window',
-                ],
-                cta: { label: 'Get a Custom Quote', modal: true as const, region: 'in' as const },
-                popular: true,
-              },
-              {
-                name: 'Custom Platform',
-                priceRange: 'From ₹1,99,999',
-                description:
-                  'A custom-built D2C platform, multi-vendor marketplace, or quick-commerce app — for businesses where Shopify and WooCommerce hit their ceiling.',
-                features: [
-                  'Custom Next.js / React Native frontend',
-                  'Custom commerce backend or Shopify headless API',
-                  'Sub-1-second page loads (streaming SSR + edge caching)',
-                  'Multi-vendor marketplace with commission & payout logic',
-                  'Quick-commerce: dark store management + route optimisation',
-                  'ERP / Tally / Zoho Books integration',
-                  'Regional language support (Telugu, Hindi + more)',
-                  'Dedicated engineering point of contact throughout',
-                  '90-day post-launch support and iteration',
-                ],
-                cta: { label: 'Schedule a Discovery Call', modal: true as const, region: 'in' as const },
-              },
-            ] as const}
-            footnote="All prices in INR. Cloudflare Pages hosting is free for Next.js builds — no monthly hosting fee. Platform subscription fees (Shopify, WooCommerce plugins) billed separately. Domain registration included on request."
-          />
-        </div>
-
+        <GetFreeQuoteCTA />
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"

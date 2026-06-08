@@ -155,7 +155,11 @@
       "Skill(deploy-to-vercel)",
       "Skill(deploy-to-vercel:*)",
       "Bash(git remote *)",
-      "Bash(vercel whoami *)"
+      "Bash(vercel whoami *)",
+      "Bash(ls -la /Users/bhaveshbarot/FactoryJet/website/trendspike_bot.py /Users/bhaveshbarot/FactoryJet/website/requirements.txt 2>&1; echo \"---\"; find /Users/bhaveshbarot/FactoryJet -maxdepth 3 -name \"trendspike*\" -o -name \"requirements.txt\" 2>/dev/null)",
+      "Bash(python3 -m pip install -r requirements.txt)",
+      "Bash(python3 -m json.tool)",
+      "Bash(python3 trendspike_bot.py)"
     ]
   }
 }

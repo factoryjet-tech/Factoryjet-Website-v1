@@ -15,25 +15,25 @@ import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/Ser
 import CityContextSection from '@/components/v2/CityContextSection';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in India | From ₹29,999 | FactoryJet',
+  title: 'Web Design Company in India | | FactoryJet',
   description:
     'Web design company in India. Conversion-focused websites from ₹29,999. Mobile-first, Lighthouse 100, Next.js & WordPress. 7-day delivery. Full code ownership.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in India | From ₹29,999 | FactoryJet',
+    title: 'Web Design Company in India | | FactoryJet',
     description:
-      'Custom websites for Indian businesses. Next.js, WordPress & Shopify. 7-day delivery. Mobile-first, Lighthouse 100. From ₹29,999.',
+      'Custom websites for Indian businesses. Next.js, WordPress & Shopify. 7-day delivery. Mobile-first, Lighthouse 100.',
     url: 'https://factoryjet.com/web-design',
     images: [
       {
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Web Design Company in India | 7-Day Websites | FactoryJet',
-    description: 'Custom websites for Indian businesses. Mobile-first. 7-day delivery. From ₹29,999.',
+    description: 'Custom websites for Indian businesses. Mobile-first. 7-day delivery.',
     images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {
@@ -403,7 +403,6 @@ const IN_COMPARISON_ROWS = [
   {
     feature: 'Starting price',
     values: [
-      'From ₹29,999',
       '₹2,50,000–₹15,00,000',
       '₹60,000–₹2,50,000',
       '₹1,000–₹4,000/month (forever)',
@@ -481,7 +480,7 @@ const IN_COMPARISON_ROWS = [
 const IN_PRICING_TIERS = [
   {
     name: 'Starter',
-    priceRange: 'From ₹29,999',
+    priceRange: '',
     description:
       'A 5-page website that loads fast on mobile, ranks for your business name and core service, and looks professional enough to convert the first-time visitor.',
     features: [
@@ -498,7 +497,7 @@ const IN_PRICING_TIERS = [
   },
   {
     name: 'Growth',
-    priceRange: 'From ₹80,000',
+    priceRange: '',
     description:
       'A full business website with CMS, blog, and advanced SEO. The most popular tier for Indian SMBs scaling their digital presence and generating consistent inbound leads.',
     features: [
@@ -517,7 +516,7 @@ const IN_PRICING_TIERS = [
   },
   {
     name: 'Custom',
-    priceRange: 'From ₹1,50,000',
+    priceRange: '',
     description:
       'E-commerce stores, Next.js web applications, large marketing sites, and complex builds with Indian payment gateway and third-party API integrations.',
     features: [
@@ -767,7 +766,7 @@ export default function WebDesignServicePage() {
           headline="A Website That Converts, Built for India's Mobile-First Market"
           lead="70%+ of Indian web traffic is mobile. Paid ad costs are rising. Competitors are outranking you on Google. FactoryJet builds custom, high-performance websites in Next.js, WordPress, and Shopify — designed in Figma, built to Lighthouse 100, and delivered starting at ₹29,999."
           primaryCta={{ label: 'Book a Free Website Audit', modal: true, region: 'in' }}
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
+          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ websites delivered',
             'Starting at ₹29,999',
@@ -1184,17 +1183,7 @@ export default function WebDesignServicePage() {
           sectors={IN_WEB_DESIGN_TYPES}
         />
 
-        {/* ── 12. PRICING TIERS (cream — buffer between two dark sections) ─────── */}
-        <div id="pricing">
-          <PricingTiers
-            eyebrow="TRANSPARENT PRICING"
-            headline="Transparent, Fixed-Price Web Design in India"
-            lead="No hourly billing. No scope surprises. Every tier includes a fixed scope, fixed price in INR, and a delivery timeline we stand behind — confirmed before a single rupee changes hands."
-            tiers={IN_PRICING_TIERS}
-            footnote="All prices in INR. Hosting is billed directly by your provider (Cloudflare Pages, Vercel, or WP Engine) — not marked up by FactoryJet. Custom scopes quoted after a free discovery call. You own all code, Figma files, and hosting credentials on launch day."
-          />
-        </div>
-
+        <GetFreeQuoteCTA />
         {/* ── 13. TESTIMONIALS (DARK) ──────────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"

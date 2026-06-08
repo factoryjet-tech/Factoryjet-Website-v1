@@ -12,20 +12,20 @@ import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/Ser
 import PortfolioShowcase from '@/components/v2/PortfolioShowcase';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Mumbai | From ₹25,000 | FactoryJet',
+  title: 'Web Design Company in Mumbai | | FactoryJet',
   description:
     'Web design company in Mumbai for B2B exporters, D2C brands & service businesses. Fast websites from ₹25,000. 7-day delivery. Serving BKC, Andheri East & Lower Parel.',
   keywords: [
@@ -45,9 +45,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Mumbai | From ₹25,000 | FactoryJet',
+    title: 'Web Design Company in Mumbai | | FactoryJet',
     description:
-      'Professional website design company in Mumbai — Next.js, SEO, and GA4 included. 7-day delivery. From ₹25,000. Serving BKC, Andheri, Lower Parel, Navi Mumbai.',
+      'Professional website design company in Mumbai — Next.js, SEO, and GA4 included. 7-day delivery. Serving BKC, Andheri, Lower Parel, Navi Mumbai.',
     url: 'https://factoryjet.com/web-design/mumbai',
     images: [
       {
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Web Design Company in Mumbai | FactoryJet',
     description:
-      'Website design company in Mumbai. From ₹25,000. 7-day delivery. Next.js, SEO, GA4 included.',
+      'Website design company in Mumbai. 7-day delivery. Next.js, SEO, GA4 included.',
     images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {
@@ -93,7 +93,7 @@ const localBusinessSchema = {
   '@id': 'https://factoryjet.com/#organization',
   name: 'FactoryJet',
   description:
-    'Web design company in Mumbai building fast, SEO-optimized websites for B2B exporters, D2C brands, and service businesses. From ₹25,000. 7-day delivery guarantee.',
+    'Web design company in Mumbai building fast, SEO-optimized websites for B2B exporters, D2C brands, and service businesses. 7-day delivery guarantee.',
   url: 'https://factoryjet.com/web-design/mumbai',
   telephone: '+919699977699',
   email: 'connect@factoryjet.com',
@@ -343,7 +343,7 @@ const MUMBAI_FAQ_ITEMS = [
     category: 'local',
     question: 'How does FactoryJet compare to Mumbai web agencies?',
     answer:
-      "Mumbai web agencies typically charge ₹1,50,000–₹5,00,000 for a comparable project and deliver in 8–20 weeks — without publishing their rates or timeline upfront. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright — at a fixed, published price.",
+      "Mumbai web agencies typically charge ₹1,50,000–₹5,00,000 for a comparable project and deliver in 8–20 weeks — without publishing their rates or timeline upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright — at a fixed, published price.",
   },
 
   /* ── Support & Ownership ── */
@@ -383,7 +383,7 @@ const MUMBAI_COMPARISON_COLUMNS = [
 const MUMBAI_COMPARISON_ROWS = [
   {
     feature: 'Starting price',
-    values: ['₹25,000', '₹1,50,000–₹5,00,000', '₹15,000–₹80,000', '₹0–₹15,000 (you build it)'],
+    values: ['Get a Quote', '₹1,50,000–₹5,00,000', '₹15,000–₹80,000', '₹0–₹15,000 (you build it)'],
   },
   {
     feature: 'Delivery timeline',
@@ -435,7 +435,7 @@ const MUMBAI_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Published pricing (no surprises)',
+    feature: 'Transparent, fixed pricing',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ma" kind="no" />,
@@ -563,9 +563,8 @@ export default function MumbaiWebDesignPage() {
           headline="Website Design in Mumbai That Converts Buyers — Not Just Looks Good"
           lead="Mumbai powers 40% of India's corporate tax revenue, houses the NSE, BSE, and RBI, and is home to over 2.5 lakh registered businesses. B2B exporters in SEEPZ, D2C startups in Andheri, and BFSI firms in BKC all compete for the same Google real estate. FactoryJet builds from ₹25,000 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
+          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
-            'Websites from ₹25,000',
             '7-day delivery guarantee',
             '500+ businesses built',
           ]}
@@ -715,7 +714,7 @@ export default function MumbaiWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Mumbai Businesses Choose FactoryJet Over Local Agencies"
-          lead="Mumbai web agencies typically charge ₹1,50,000–₹5,00,000 for a comparable project and take 8–20 weeks to deliver — without publishing their rates or timeline upfront. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and published upfront for the same scope."
+          lead="Mumbai web agencies typically charge ₹1,50,000–₹5,00,000 for a comparable project and take 8–20 weeks to deliver — without publishing their rates or timeline upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
           pillars={[
             {
               icon: '⚡',
@@ -730,7 +729,7 @@ export default function MumbaiWebDesignPage() {
             {
               icon: '📋',
               title: 'Fixed price. Published before the first call.',
-              body: "We publish all three tiers — ₹25,000, ₹50,000, and ₹1,00,000+ — before you speak to us. No discovery fees, no 'it depends' quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your site running.",
+              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your site running.",
             },
           ]}
         />
@@ -847,64 +846,7 @@ export default function MumbaiWebDesignPage() {
           ]}
         />
 
-        {/* ── 11. PRICING ──────────────────────────────────────────────────── */}
-        <div id="pricing">
-          <PricingTiers
-            eyebrow="TRANSPARENT PRICING"
-            headline="Transparent, Fixed-Price Web Design for Mumbai Businesses"
-            lead="Mumbai agency rates for comparable web projects run ₹1,50,000–₹5,00,000. FactoryJet Growth (₹50,000) delivers 10–15 pages, blog CMS, lead capture, GA4, Next.js, and a 7-day delivery guarantee — with a codebase you own outright. No retainer required. No proprietary platform. No surprise invoices."
-            tiers={[
-              {
-                name: 'Starter',
-                priceRange: '₹25,000',
-                description:
-                  'A 5-page business site that loads fast on mobile and ranks for your name and core service. Best for sole traders, service businesses, and small businesses in Mumbai who need a credible online presence quickly.',
-                features: [
-                  '5 pages, mobile-responsive',
-                  'Basic SEO & LocalBusiness schema',
-                  'Contact form + WhatsApp integration',
-                  'GA4 setup',
-                  '2 revision rounds',
-                  '30-day post-launch support',
-                ],
-                cta: { label: 'Get a Quote', modal: true as const, region: 'in' as const },
-              },
-              {
-                name: 'Growth',
-                priceRange: '₹50,000',
-                description:
-                  'A 10–15 page site with blog CMS, lead-capture flows, and analytics wired in from day one. Best for Mumbai SMBs scaling online who need the site to actively generate qualified enquiries.',
-                features: [
-                  '10–15 pages with blog CMS',
-                  'Advanced SEO — schema, meta templates, internal links',
-                  'Lead capture + email automation',
-                  'GA4 + GTM + Search Console',
-                  '3 revision rounds',
-                  '30-day support + CMS training session',
-                ],
-                cta: { label: 'Get a Quote', modal: true as const, region: 'in' as const },
-                popular: true,
-              },
-              {
-                name: 'Custom',
-                priceRange: '₹1,00,000+',
-                description:
-                  'Custom Next.js build with e-commerce, booking systems, AI integrations, or API connections. Best for established Mumbai businesses with complex requirements and a real digital revenue line.',
-                features: [
-                  'Custom Next.js architecture',
-                  'E-commerce (Razorpay, Shiprocket) or booking integrations',
-                  'AI integrations (chat, search, content)',
-                  'Third-party API connections (Zoho, Tally, Salesforce)',
-                  'Priority support + quarterly reviews',
-                  'Dedicated engineering point of contact',
-                ],
-                cta: { label: 'Book a Discovery Call', modal: true as const, region: 'in' as const },
-              },
-            ] as const}
-            footnote="All prices in INR inclusive of design, development, SEO setup, and GA4. Cloudflare Pages hosting is free for standard Next.js builds — no monthly hosting fee. Domain registration billed separately if required."
-          />
-        </div>
-
+        <GetFreeQuoteCTA />
         {/* ── 12. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"

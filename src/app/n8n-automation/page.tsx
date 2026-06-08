@@ -14,10 +14,10 @@ import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/Ser
 import CityContextSection from '@/components/v2/CityContextSection';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'n8n Automation India | Workflow Automation from ₹29,999 | FactoryJet',
     description:
-      'n8n workflow automation for Indian businesses. Connect Razorpay, WhatsApp, Zoho, Tally & 400+ tools. Self-hosted. 7-day delivery. From ₹29,999.',
+      'n8n workflow automation for Indian businesses. Connect Razorpay, WhatsApp, Zoho, Tally & 400+ tools. Self-hosted. 7-day delivery.',
     images: ['https://factoryjet.com/images/services/card-automation.webp'],
   },
   alternates: {
@@ -166,7 +166,7 @@ const N8N_SERVICE_SCHEMA = {
     'CRM Automation',
   ],
   description:
-    'n8n workflow automation for Indian businesses. Connect Razorpay, WhatsApp Business API, Tally, Zoho, Shopify, and 400+ tools. Self-hosted or cloud. 7-day delivery. From ₹29,999.',
+    'n8n workflow automation for Indian businesses. Connect Razorpay, WhatsApp Business API, Tally, Zoho, Shopify, and 400+ tools. Self-hosted or cloud. 7-day delivery.',
   offers: [
     {
       '@type': 'Offer',
@@ -448,7 +448,7 @@ const N8N_COMPARISON_ROWS = [
 const N8N_PRICING_TIERS = [
   {
     name: 'Starter',
-    priceRange: 'From ₹29,999',
+    priceRange: '',
     description:
       'The fastest way to eliminate your top 3 manual processes. Built, tested, deployed, and documented in 7 days. Best for founders and small teams automating their first workflows.',
     features: [
@@ -464,7 +464,7 @@ const N8N_PRICING_TIERS = [
   },
   {
     name: 'Growth',
-    priceRange: 'From ₹80,000',
+    priceRange: '',
     description:
       'A complete automation layer for a growing Indian business — covering sales, operations, payments, and WhatsApp communications. The most popular package for 10–50 person teams.',
     features: [
@@ -482,7 +482,7 @@ const N8N_PRICING_TIERS = [
   },
   {
     name: 'Custom Infrastructure',
-    priceRange: 'From ₹1,50,000',
+    priceRange: '',
     description:
       'A fully managed automation infrastructure for businesses replacing multiple SaaS tools or automating end-to-end operations across departments.',
     features: [
@@ -690,9 +690,8 @@ export default function N8nAutomationPage() {
           headline="Stop Paying Zapier ₹30,000/Month. Switch to n8n."
           lead="Indian businesses on Zapier pay ₹25,000–₹40,000/month for 100K automations. n8n self-hosted runs the same workflows for ₹3,000/month — server only, no per-task fees. FactoryJet builds, deploys, and maintains your n8n automation for Indian tools: Razorpay, Tally, WhatsApp, Zoho, Shiprocket, and 400+ more."
           primaryCta={{ label: 'Book a Free Automation Audit', modal: true, region: 'in' }}
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
+          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
-            'From ₹29,999',
             '7-day delivery guarantee',
             'Razorpay + Tally + WhatsApp ready',
           ]}
@@ -1177,17 +1176,7 @@ export default function N8nAutomationPage() {
           sectors={N8N_SERVICES}
         />
 
-        {/* ── 12. PRICING ──────────────────────────────────────────────────── */}
-        <div id="pricing">
-          <PricingTiers
-            eyebrow="PRICING"
-            headline="Transparent, Fixed-Price n8n Automation"
-            lead="No hourly billing. No scope creep. Every tier has a fixed price, fixed scope, and a delivery timeline we commit to."
-            tiers={N8N_PRICING_TIERS}
-            footnote="All prices in INR. Server costs (AWS, DigitalOcean, Hetzner) are billed directly to you at ₹2,000–₹5,000/month depending on automation volume. WhatsApp Business API BSP fees (Interakt, Wati) billed by the BSP. You own all n8n workflow files and credentials on handover."
-          />
-        </div>
-
+        <GetFreeQuoteCTA />
         {/* ── 13. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"

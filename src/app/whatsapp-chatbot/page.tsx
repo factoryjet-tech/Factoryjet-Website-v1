@@ -11,11 +11,11 @@ import ServiceExplanation from '@/components/v2/ServiceExplanation';
 import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
 import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/ServiceJourneyRow';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 import CityContextSection from '@/components/v2/CityContextSection';
+import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -665,9 +665,7 @@ export default function WhatsAppChatbotINPage() {
         navLinks={[
           { label: 'Services', href: '/services' },
           { label: 'WhatsApp Bot', href: '/whatsapp-chatbot/' },
-          { label: 'Portfolio', href: '/portfolio' },
-          { label: 'Pricing', href: '#pricing' },
-          { label: 'Contact', modal: true, region: 'in' },
+          { label: 'Portfolio', href: '/portfolio' },          { label: 'Contact', modal: true, region: 'in' },
         ]}
         cta={{ label: 'Get a Free Demo', modal: true, region: 'in' }}
       />
@@ -688,7 +686,7 @@ export default function WhatsAppChatbotINPage() {
           headline="WhatsApp Chatbot Development India"
           lead="India has 535 million WhatsApp users. 98% of your WhatsApp messages get opened. And 78% of Indian SMBs already use WhatsApp for business — yet most are still typing every reply by hand. Automate your orders, support, lead capture, and payments with a WhatsApp Business API chatbot. Starting ₹15,000. Live in 7 days."
           primaryCta={{ label: 'Get a Free WhatsApp Demo', modal: true, region: 'in' }}
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
+          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-Day Delivery',
             '500+ Businesses Served',
@@ -1171,17 +1169,7 @@ export default function WhatsAppChatbotINPage() {
           </div>
         </section>
 
-        {/* ── 13. PRICING (CREAM) ───────────────────────────────────────────── */}
-        <div id="pricing">
-          <PricingTiers
-            eyebrow="PRICING"
-            headline="Transparent, Fixed-Price WhatsApp Chatbot Development"
-            lead="No hourly billing. No scope creep surprises. Every tier includes a fixed price, WhatsApp Business API setup, and 30-day post-launch support."
-            tiers={WHATSAPP_PRICING_TIERS}
-            footnote="All prices in INR. WhatsApp BSP subscription fees (Interakt/Wati/AiSensy — approximately ₹2,499–₹8,000/month) are separate and billed directly by the BSP. Meta's per-conversation charges (₹0.11–₹0.86/conversation) also apply. Custom scopes quoted after a free discovery call."
-          />
-        </div>
-
+        <GetFreeQuoteCTA />
         {/* ── 14. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"

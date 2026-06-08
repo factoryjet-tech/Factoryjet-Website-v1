@@ -13,10 +13,10 @@ import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/Ser
 import CityContextSection from '@/components/v2/CityContextSection';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 
 export const metadata: Metadata = {
   title: 'AI Voice Agent India | Hindi AI Calling Bot | FactoryJet',
@@ -340,7 +340,7 @@ const VOICE_INDUSTRIES = [
 const VOICE_PRICING_TIERS = [
   {
     name: 'Outbound Voice AI',
-    priceRange: 'From ₹3,00,000',
+    priceRange: '',
     description: 'A focused AI calling agent for one outbound use case — lead qualification or appointment booking.',
     features: [
       'One outbound calling flow (qualification or booking)',
@@ -356,7 +356,7 @@ const VOICE_PRICING_TIERS = [
   },
   {
     name: 'Full Voice AI Platform',
-    priceRange: 'From ₹6,00,000',
+    priceRange: '',
     description: 'Inbound + outbound voice AI with deep CRM integration, analytics, and multi-flow support.',
     features: [
       'Inbound IVR + outbound calling flows',
@@ -374,7 +374,7 @@ const VOICE_PRICING_TIERS = [
   },
   {
     name: 'Enterprise Voice AI',
-    priceRange: 'From ₹12,00,000',
+    priceRange: '',
     description: 'Multi-language, multi-campaign voice AI with full telephony infrastructure for high-volume businesses.',
     features: [
       'Calling flows & campaigns scoped per project brief',
@@ -517,9 +517,7 @@ export default function AIVoiceAgentINPage() {
         navLinks={[
           { label: 'Services', href: '/services' },
           { label: 'AI Agents', href: '/services/ai-agent-development' },
-          { label: 'Portfolio', href: '/portfolio' },
-          { label: 'Pricing', href: '#pricing' },
-          { label: 'Contact', modal: true, region: 'in' },
+          { label: 'Portfolio', href: '/portfolio' },          { label: 'Contact', modal: true, region: 'in' },
         ]}
         cta={{ label: 'Book a Free Call', modal: true, region: 'in' }}
       />
@@ -540,7 +538,7 @@ export default function AIVoiceAgentINPage() {
           headline="A Hindi-Speaking AI Caller That Qualifies 200 Leads a Day — Without Adding Telecallers"
           lead="AI voice agents that call your leads within 5 minutes of form submission, speak in Hindi and English, update Zoho CRM automatically, and book appointments to your calendar — 24/7, at a fraction of telecaller cost. Fixed price. TRAI-compliant."
           primaryCta={{ label: 'Book a Free Voice AI Strategy Call', modal: true, region: 'in' }}
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
+          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ businesses served',
             'Hindi + regional language AI',
@@ -802,16 +800,8 @@ export default function AIVoiceAgentINPage() {
           sectors={VOICE_INDUSTRIES}
         />
 
-        <div id="pricing">
-          <PricingTiers
-            eyebrow="PRICING"
-            headline="Transparent, Fixed-Price AI Voice Agent Development"
-            lead="No hourly billing. No scope creep surprises. Every tier includes fixed price, full code ownership, and post-launch support."
-            tiers={VOICE_PRICING_TIERS}
-            footnote="All prices in INR. Telephony costs (Exotel/Plivo, ₹0.50–₹1.50/minute) are billed by the provider separately. LLM and TTS API costs (₹8,000–₹23,000/month for 100–200 calls/day) are billed directly by model providers. Custom scopes quoted after a free discovery call."
-          />
-        </div>
 
+        <GetFreeQuoteCTA />
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
           headline="What Indian founders say after deploying our AI voice agents"

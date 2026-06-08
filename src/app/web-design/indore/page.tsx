@@ -12,13 +12,13 @@ import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/Ser
 import PortfolioShowcase from '@/components/v2/PortfolioShowcase';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
-import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Indore | From ₹29,999 | FactoryJet',
+    title: 'Web Design Company in Indore | | FactoryJet',
     description:
-      'Professional web design company in Indore — Next.js, SEO, and GA4 included. 7-day delivery. From ₹29,999. Serving Vijay Nagar, AB Road, Palasia, Scheme 54, Scheme 78.',
+      'Professional web design company in Indore — Next.js, SEO, and GA4 included. 7-day delivery. Serving Vijay Nagar, AB Road, Palasia, Scheme 54, Scheme 78.',
     url: 'https://factoryjet.com/web-design/indore',
     images: [
       {
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Web Design Company in Indore | FactoryJet',
     description:
-      'Website design company in Indore. From ₹29,999. 7-day delivery. Next.js, SEO, GA4 included.',
+      'Website design company in Indore. 7-day delivery. Next.js, SEO, GA4 included.',
     images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {
@@ -95,7 +95,7 @@ const localBusinessSchema = {
   '@id': 'https://factoryjet.com/#organization',
   name: 'FactoryJet — Web Design Indore',
   description:
-    'Web design company in Indore building fast, SEO-optimized websites for D2C brands, coaching institutes, manufacturers, and SMBs. From ₹29,999. 7-day delivery guarantee.',
+    'Web design company in Indore building fast, SEO-optimized websites for D2C brands, coaching institutes, manufacturers, and SMBs. 7-day delivery guarantee.',
   url: 'https://factoryjet.com/web-design/indore',
   telephone: '+919699977699',
   email: 'connect@factoryjet.com',
@@ -470,7 +470,7 @@ const INDORE_COMPARISON_COLUMNS = [
 const INDORE_COMPARISON_ROWS = [
   {
     feature: 'Starting price',
-    values: ['₹29,999', '₹40,000–₹2,00,000', '₹10,000–₹60,000', '₹0–₹10,000 (you build it)'],
+    values: ['Get a Quote', '₹40,000–₹2,00,000', '₹10,000–₹60,000', '₹0–₹10,000 (you build it)'],
   },
   {
     feature: 'Delivery timeline',
@@ -522,7 +522,7 @@ const INDORE_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Published pricing (no surprises)',
+    feature: 'Transparent, fixed pricing',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ia" kind="no" />,
@@ -602,7 +602,6 @@ export default function IndoreWebDesignPage() {
           trustItems={[
             '7-Day Delivery',
             '500+ Businesses Served',
-            'From ₹29,999',
           ]}
           rightSlot={<HeroBrowserMockup />}
         />
@@ -774,7 +773,7 @@ export default function IndoreWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Indore Businesses Choose FactoryJet Over Local Agencies"
-          lead="Indore web agencies typically charge ₹40,000–₹2,00,000 for a comparable project and take 4–12 weeks to deliver — without publishing their rates or timeline upfront. FactoryJet publishes all three pricing tiers before you speak to us, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. All at a fixed, published price for the same scope."
+          lead="Indore web agencies typically charge ₹40,000–₹2,00,000 for a comparable project and take 4–12 weeks to deliver — without publishing their rates or timeline upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. All at a fixed, published price for the same scope."
           pillars={[
             {
               icon: '⚡',
@@ -789,7 +788,7 @@ export default function IndoreWebDesignPage() {
             {
               icon: '📋',
               title: 'Fixed price. Published before the first call.',
-              body: 'We publish all three tiers — ₹29,999, ₹80,000, and ₹1,50,000+ — before you speak to us. No discovery fees, no "it depends" quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your site running. No proprietary platform lock-in.',
+              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your site running. No proprietary platform lock-in.",
             },
           ]}
         />
@@ -1252,66 +1251,7 @@ export default function IndoreWebDesignPage() {
           </div>
         </section>
 
-        {/* ── 13. PRICING (was 12) ─────────────────────────────────────────── */}
-        <div id="pricing">
-          <PricingTiers
-            eyebrow="TRANSPARENT PRICING"
-            headline="Transparent, Fixed-Price Web Design for Indore Businesses"
-            lead="Indore agency rates for comparable web projects run ₹40,000–₹2,00,000. FactoryJet Growth (₹80,000) delivers up to 15 pages, blog CMS, lead capture, GA4, Next.js, and a 7-day delivery guarantee — with a codebase you own outright. No retainer required. No proprietary platform. No surprise invoices. See full INR pricing."
-            tiers={[
-              {
-                name: 'Starter',
-                priceRange: 'From ₹29,999',
-                description:
-                  'A 5-page business site that loads fast on mobile and ranks for your name and core service. Best for new businesses, service providers, and SMBs in Indore who need a credible online presence quickly — coaching institutes, clinics, consultants, and local retailers.',
-                features: [
-                  '5-page website, mobile-first',
-                  'Lighthouse 95+ performance',
-                  'Technical SEO & LocalBusiness schema',
-                  'Custom Figma design',
-                  'Contact form + WhatsApp integration',
-                  'GA4 setup',
-                  '30-day post-launch support',
-                ],
-                cta: { label: 'Get a Quote', modal: true as const, region: 'in' as const },
-              },
-              {
-                name: 'Growth',
-                priceRange: 'From ₹80,000',
-                description:
-                  'Up to 15 pages with blog CMS, lead-capture flows, and analytics wired in from day one. Best for Indore SMBs scaling online — coaching institutes running multiple batches, D2C brands building a content engine, or B2B manufacturers generating inbound RFQs.',
-                features: [
-                  'Up to 15 pages with blog setup',
-                  'CMS integration (Sanity or Contentful)',
-                  'Advanced SEO — schema, meta templates, internal links',
-                  'Lead capture + email automation',
-                  'GA4 + GTM + Search Console',
-                  '30-day support + CMS training session',
-                ],
-                cta: { label: 'Get a Quote', modal: true as const, region: 'in' as const },
-                popular: true,
-              },
-              {
-                name: 'Custom',
-                priceRange: 'From ₹1,50,000',
-                description:
-                  'E-commerce, Next.js web apps, large marketing sites, and complex integrations. Pages and scope defined per project brief. Best for established Indore businesses with specific requirements — Razorpay/PhonePe/UPI checkout, third-party API connections, or SaaS product websites.',
-                features: [
-                  'E-commerce (Razorpay, PhonePe, UPI)',
-                  'Next.js web apps & large marketing sites',
-                  'Third-party API connections (Zoho, Tally, Salesforce)',
-                  'AI integrations (WhatsApp chatbot, search, content)',
-                  'Pages & scope defined per project brief',
-                  'Priority support + quarterly reviews',
-                  'Dedicated engineering point of contact',
-                ],
-                cta: { label: 'Book a Discovery Call', modal: true as const, region: 'in' as const },
-              },
-            ] as const}
-            footnote="All prices in INR inclusive of design, development, SEO setup, and GA4. Cloudflare Pages hosting is free for standard Next.js builds — no monthly hosting fee to FactoryJet. Domain registration billed separately if required."
-          />
-        </div>
-
+        <GetFreeQuoteCTA />
         {/* ── 13. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
