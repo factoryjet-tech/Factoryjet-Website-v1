@@ -11,6 +11,7 @@ import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 import HomePricingTabs from '@/components/homepage/HomePricingTabs';
 import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
+import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 import type { FAQCategory } from '@/components/v2/FAQ';
 
 /* ─── FAQ Categories ─────────────────────────────────────────────────── */
