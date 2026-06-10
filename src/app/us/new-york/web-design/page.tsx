@@ -14,6 +14,7 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader';
@@ -348,6 +349,7 @@ export default function NewYorkWebDesignPage() {
           primaryCta={{ label: 'Start Your NYC Project', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Our Work', href: '/us/portfolio' }}
           trustItems={['From $1,999 fixed price', '7-day delivery', 'Next.js + GA4 included', '500+ projects']}
+          extraCta={<WhatsAppCTA city="New York" variant="light" />}
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="New York, NY" badgeLabel="Live in 7 days" />}
         />
 
@@ -686,6 +688,7 @@ export default function NewYorkWebDesignPage() {
           sub="Tell us what you need. We'll review your current site, recommend the right approach, and send a fixed-price proposal within 24 hours. No hourly billing. No discovery fees. No surprises."
           primaryCta={{ label: 'Get a Quote', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Our Portfolio', href: '/us/portfolio' }}
+          extraCta={<WhatsAppCTA city="New York" variant="dark" />}
           objectionHandler="Fixed price confirmed upfront. Full code ownership. 7-day delivery guarantee."
         />
 

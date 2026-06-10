@@ -18,6 +18,7 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader'
@@ -78,6 +79,7 @@ export default function AustinWebDesignPage() {
         lead={"Austin businesses don't have time for slow sites, vague agencies, or six-month timelines. FactoryJet delivers a production-ready website in 7 days — starting at $1,500. You own the code, the design files, and the results."}
         primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
         trustItems={["Websites from $1,500","7-day delivery","Next.js + GA4 included"]}
+        extraCta={<WhatsAppCTA city="Austin" variant="light" />}
         rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Austin, TX" badgeLabel="Live in 7 days" />}
       />
       <LogoBar
@@ -179,6 +181,7 @@ export default function AustinWebDesignPage() {
         headline={"Ready to Build Your Austin Website?"}
         sub={"Austin's $268 billion economy moves fast. Every week without a high-performing website is a week your competitors are capturing the searches you should own. Start your project today — pick a tier, book a 30-minute call, and we'll have a sitemap ready within 72 hours."}
         primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
+        extraCta={<WhatsAppCTA city="Austin" variant="dark" />}
       />
       <SchemaScript />
     </main>

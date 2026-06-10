@@ -14,6 +14,7 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader'
@@ -74,6 +75,7 @@ export default function DenverWebDesignPage() {
         lead={"Denver businesses operate in one of America's fastest-growing metros — outdoor brands, aerospace suppliers, cannabis tech, and oil & gas companies all competing for digitally-savvy buyers. FactoryJet delivers a production-ready website in 7 days, starting at $1,999. You own the code, the design files, and the results."}
         primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
         trustItems={["Websites from $1,999", "7-day delivery", "Next.js + GA4 included"]}
+        extraCta={<WhatsAppCTA city="Denver" variant="light" />}
         rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Denver, CO" badgeLabel="Live in 7 days" />}
       />
       <LogoBar
@@ -198,6 +200,7 @@ export default function DenverWebDesignPage() {
         headline={"Ready to Build Your Denver Website?"}
         sub={"Denver's $250B+ metro economy attracts buyers from across the US — and the competition for their attention is relentless. Every week without a high-performing website is a week your competitors own the searches you should. Start today and have a sitemap ready within 72 hours."}
         primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
+        extraCta={<WhatsAppCTA city="Denver" variant="dark" />}
       />
       <SchemaScript />
     </main>

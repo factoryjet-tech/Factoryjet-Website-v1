@@ -28,6 +28,8 @@ export interface HeroProps {
   lead?: string;
   primaryCta?: { label: string; href?: string; modal?: true; region?: ModalRegion };
   secondaryCta?: { label: string; href?: string; modal?: true; region?: ModalRegion };
+  /** Optional third CTA rendered after the secondary slot — e.g. WhatsAppCTA. */
+  extraCta?: ReactNode;
   trustItems?: string[];
   rightSlot?: ReactNode;
 }
@@ -39,6 +41,7 @@ export default function Hero({
   lead,
   primaryCta,
   secondaryCta,
+  extraCta,
   trustItems,
   rightSlot,
 }: HeroProps) {
@@ -86,6 +89,7 @@ export default function Hero({
                 lead={lead}
                 primaryCta={primaryCta}
                 secondaryCta={secondaryCta}
+                extraCta={extraCta}
                 trustItems={trustItems}
                 hasSlot={true}
               />
@@ -101,6 +105,7 @@ export default function Hero({
               lead={lead}
               primaryCta={primaryCta}
               secondaryCta={secondaryCta}
+              extraCta={extraCta}
               trustItems={trustItems}
             />
           </div>
@@ -117,6 +122,7 @@ function HeroContent({
   lead,
   primaryCta,
   secondaryCta,
+  extraCta,
   trustItems,
   hasSlot = false,
 }: Omit<HeroProps, 'rightSlot'> & { hasSlot?: boolean }) {
@@ -202,8 +208,8 @@ function HeroContent({
       )}
 
       {/* ── CTAs ──────────────────────────────────────────────────────── */}
-      {(primaryCta || secondaryCta) && (
-        <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+      {(primaryCta || secondaryCta || extraCta) && (
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
           {primaryCta && (
             primaryCta.modal ? (
               <ModalCTAButton
@@ -254,6 +260,7 @@ function HeroContent({
               </Link>
             )
           )}
+          {extraCta}
         </div>
       )}
 

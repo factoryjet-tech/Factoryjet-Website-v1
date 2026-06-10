@@ -14,6 +14,7 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader'
@@ -74,6 +75,7 @@ export default function CharlotteWebDesignPage() {
         lead={"Charlotte is the second-largest banking center in the US — home to Bank of America's global HQ and one of the most competitive professional services markets on the East Coast. Buyers here expect digital experiences that match the caliber of the firms they work with. FactoryJet delivers a production-ready website in 7 days, starting at $1,999."}
         primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
         trustItems={["Websites from $1,999", "7-day delivery", "Next.js + GA4 included"]}
+        extraCta={<WhatsAppCTA city="Charlotte" variant="light" />}
         rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Charlotte, NC" badgeLabel="Live in 7 days" />}
       />
       <LogoBar
@@ -266,6 +268,7 @@ export default function CharlotteWebDesignPage() {
         headline={"Ready to Build Your Charlotte Website?"}
         sub={"Charlotte's $220B+ economy is built on trust — and your website is the first trust signal every prospect sees. In a city where buyers compare you against firms that bank with Bank of America, a slow or amateur-looking site doesn't just underperform. It disqualifies you. Start today."}
         primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
+        extraCta={<WhatsAppCTA city="Charlotte" variant="dark" />}
       />
       <SchemaScript />
     </main>

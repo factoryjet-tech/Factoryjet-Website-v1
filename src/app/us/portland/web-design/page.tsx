@@ -14,6 +14,7 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader'
@@ -74,6 +75,7 @@ export default function PortlandWebDesignPage() {
         lead={"Portland businesses operate at the intersection of sustainability, outdoor lifestyle, and Pacific Northwest tech — a buyer base that researches deeply, values authenticity, and will bounce from a slow site in seconds. FactoryJet delivers a production-ready website in 7 days, starting at $1,999. You own the code, the design files, and the results."}
         primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
         trustItems={["Websites from $1,999", "7-day delivery", "Next.js + GA4 included"]}
+        extraCta={<WhatsAppCTA city="Portland" variant="light" />}
         rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Portland, OR" badgeLabel="Live in 7 days" />}
       />
       <LogoBar
@@ -198,6 +200,7 @@ export default function PortlandWebDesignPage() {
         headline={"Ready to Build Your Portland Website?"}
         sub={"Portland's $190B+ metro economy rewards businesses that show up with substance. In a city where buyers read your About page before they call, a slow or shallow website doesn't just underperform — it actively loses trust. Start today and have a sitemap ready within 72 hours."}
         primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
+        extraCta={<WhatsAppCTA city="Portland" variant="dark" />}
       />
       <SchemaScript />
     </main>

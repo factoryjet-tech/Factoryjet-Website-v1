@@ -14,6 +14,7 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader';
@@ -72,6 +73,7 @@ export default function ClevelandWebDesignPage() {
           lead={"Cleveland is one of America's most underestimated business cities — a global healthcare hub, a 200-year-old manufacturing powerhouse, and a fast-growing professional services market. FactoryJet delivers a production-ready website in 7 days, starting at $1,999. You own the code, the design files, and the results."}
           primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
           trustItems={["Websites from $1,999", "7-day delivery", "Next.js + GA4 included"]}
+          extraCta={<WhatsAppCTA city="Cleveland" variant="light" />}
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Cleveland, OH" badgeLabel="Live in 7 days" />}
         />
         <LogoBar
@@ -305,6 +307,7 @@ export default function ClevelandWebDesignPage() {
           headline={"Ready to Build Your Cleveland Website?"}
           sub={"Cleveland's $135B+ metro economy is growing on the strength of world-class healthcare, deep manufacturing roots, and a fast-expanding professional services market. New businesses arrive every week competing for the same buyers, the same Google rankings, and the same first impression. Every week without a high-performing website is ground you're giving up. Start today and have a sitemap ready within 72 hours."}
           primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
+          extraCta={<WhatsAppCTA city="Cleveland" variant="dark" />}
         />
         <SchemaScript />
       </main>

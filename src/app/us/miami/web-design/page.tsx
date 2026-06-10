@@ -14,6 +14,7 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader'
@@ -74,6 +75,7 @@ export default function MiamiWebDesignPage() {
         lead={"Miami businesses compete in one of the fastest-moving markets in the US — Latin American trade, global finance, and a booming tech scene all converging in one city. FactoryJet delivers a production-ready website in 7 days, starting at $1,999. You own the code, the design files, and the results."}
         primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
         trustItems={["Websites from $1,999","7-day delivery","Next.js + GA4 included"]}
+        extraCta={<WhatsAppCTA city="Miami" variant="light" />}
         rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Miami, FL" badgeLabel="Live in 7 days" />}
       />
       <LogoBar
@@ -194,6 +196,7 @@ export default function MiamiWebDesignPage() {
         headline={"Ready to Build Your Miami Website?"}
         sub={"Miami's $413B metro economy moves at international speed. Every week without a high-performing website is a week your competitors are capturing the searches — and the clients — you should own. Start today and have a sitemap ready within 72 hours."}
         primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
+        extraCta={<WhatsAppCTA city="Miami" variant="dark" />}
       />
       <SchemaScript />
     </main>

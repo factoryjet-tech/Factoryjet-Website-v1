@@ -14,6 +14,7 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader'
@@ -74,6 +75,7 @@ export default function NashvilleWebDesignPage() {
         lead={"Nashville is no longer just Music City — it's a healthcare IT powerhouse, a booming hospitality market, and one of the Southeast's fastest-growing business destinations. FactoryJet delivers a production-ready website in 7 days, starting at $1,999. You own the code, the design files, and the results."}
         primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
         trustItems={["Websites from $1,999", "7-day delivery", "Next.js + GA4 included"]}
+        extraCta={<WhatsAppCTA city="Nashville" variant="light" />}
         rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Nashville, TN" badgeLabel="Live in 7 days" />}
       />
       <LogoBar
@@ -310,6 +312,7 @@ export default function NashvilleWebDesignPage() {
         headline={"Ready to Build Your Nashville Website?"}
         sub={"Nashville's $130B+ metro economy is growing faster than almost any city in America. New businesses arrive every week competing for the same buyers, the same Google rankings, and the same first impression. Every week without a high-performing website is ground you're giving up. Start today and have a sitemap ready within 72 hours."}
         primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
+        extraCta={<WhatsAppCTA city="Nashville" variant="dark" />}
       />
       <SchemaScript />
     </main>

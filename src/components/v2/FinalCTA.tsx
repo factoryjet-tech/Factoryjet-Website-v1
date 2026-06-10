@@ -32,6 +32,8 @@ export interface FinalCTAProps {
   sub?: string;
   primaryCta: { label: string; href?: string; modal?: true; region?: ModalRegion };
   secondaryCta?: { label: string; href?: string; modal?: true; region?: ModalRegion };
+  /** Optional third CTA rendered after the secondary slot — e.g. WhatsAppCTA. */
+  extraCta?: ReactNode;
   objectionHandler?: string;
 }
 
@@ -42,6 +44,7 @@ export default function FinalCTA({
   sub,
   primaryCta,
   secondaryCta,
+  extraCta,
   objectionHandler,
 }: FinalCTAProps) {
   const isDark = variant === 'dark';
@@ -130,7 +133,7 @@ export default function FinalCTA({
             </p>
           )}
 
-          <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap">
             {primaryCta.modal ? (
               <ModalCTAButton
                 label={primaryCta.label}
@@ -172,6 +175,7 @@ export default function FinalCTA({
                 </Link>
               )
             )}
+            {extraCta}
           </div>
 
           {objectionHandler && (
@@ -233,7 +237,7 @@ export default function FinalCTA({
           </p>
         )}
 
-        <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap">
           {primaryCta.modal ? (
             <ModalCTAButton
               label={primaryCta.label}
@@ -275,6 +279,7 @@ export default function FinalCTA({
               </Link>
             )
           )}
+          {extraCta}
         </div>
 
         {objectionHandler && (
