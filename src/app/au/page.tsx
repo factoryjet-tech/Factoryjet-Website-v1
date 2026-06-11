@@ -287,12 +287,15 @@ export default function AUHomePage() {
                 <div className="arch">
                   {/* Decorative composite — hero TEXT stays LCP, so alt="" + eager (no lazy pop-in) */}
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/images/au/au-hero-owner-720.webp"
-                    srcSet="/images/au/au-hero-owner-720.webp 720w, /images/au/au-hero-owner.webp 1024w"
-                    sizes="(max-width: 640px) 264px, 360px"
-                    alt="" width={720} height={1080} loading="eager" fetchPriority="high"
-                  />
+                  <picture>
+                    <source type="image/avif" srcSet="/images/au/au-hero-owner-720.avif" />
+                    <img
+                      src="/images/au/au-hero-owner-720.webp"
+                      srcSet="/images/au/au-hero-owner-720.webp 720w, /images/au/au-hero-owner.webp 1024w"
+                      sizes="(max-width: 640px) 264px, 360px"
+                      alt="" width={720} height={1080} loading="eager" fetchPriority="high"
+                    />
+                  </picture>
                 </div>
                 <div className="ribbon">
                   <b className="on">SYD</b><b>MEL</b><b>BNE</b><b>PER</b><b>ADL</b><b>OOL</b>
@@ -477,8 +480,16 @@ export default function AUHomePage() {
                 {CASES.map((c) => (
                   <div className="case" key={c.name}>
                     <div className="cimg">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={c.img} alt={`${c.name} — website by FactoryJet`} width={400} height={250} loading="lazy" />
+                      <picture>
+                        <source type="image/avif" srcSet={c.img.replace('.webp', '.avif')} />
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={c.img.replace('.webp', '-480.webp')}
+                          srcSet={`${c.img.replace('.webp', '-480.webp')} 480w, ${c.img} 800w`}
+                          sizes="(max-width: 880px) 92vw, 360px"
+                          alt={`${c.name} — website by FactoryJet`} width={480} height={270} loading="lazy"
+                        />
+                      </picture>
                     </div>
                     <div className="cbody">
                       <span className="ctag">{c.tag}</span>

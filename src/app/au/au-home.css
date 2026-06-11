@@ -82,15 +82,19 @@
 .auh .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:30px;align-items:center;padding:64px 0 96px}
 @media(max-width:980px){.auh .hero-grid{grid-template-columns:1fr;gap:54px;padding:52px 0 64px}}
 .auh .loc{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.7);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:999px;padding:7px 14px 7px 11px;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--orange-d);box-shadow:0 6px 18px -10px rgba(26,23,18,.3)}
-.auh .loc b{width:7px;height:7px;border-radius:50%;background:var(--orange)}
-@keyframes au-blip{0%{box-shadow:0 0 0 0 rgba(240,90,40,.5)}70%{box-shadow:0 0 0 7px rgba(240,90,40,0)}100%{box-shadow:0 0 0 0 rgba(240,90,40,0)}}
-@media(prefers-reduced-motion:no-preference){.auh .loc b{animation:au-blip 2.4s var(--e-out) infinite}}
+.auh .loc b{width:7px;height:7px;border-radius:50%;background:var(--orange);position:relative}
+/* Composited pulse — transform/opacity only (box-shadow keyframes were flagged
+   as non-composited by Lighthouse, PSI fix 2026-06-11) */
+.auh .loc b::after{content:"";position:absolute;inset:-2px;border-radius:50%;border:2px solid rgba(240,90,40,.5);opacity:0}
+@keyframes au-blip{0%{transform:scale(.6);opacity:.9}70%{transform:scale(2.2);opacity:0}100%{transform:scale(2.2);opacity:0}}
+@media(prefers-reduced-motion:no-preference){.auh .loc b::after{animation:au-blip 2.4s var(--e-out) infinite}}
 .auh .hero h1{font-size:clamp(40px,5.3vw,70px);letter-spacing:-.03em;line-height:1.04;margin:18px 0 22px}
 .auh .hero h1 .ring{position:relative;white-space:nowrap}
 .auh .hero h1 .ring svg{position:absolute;left:-4%;top:-18%;width:108%;height:140%;overflow:visible}
-.auh .hero h1 .ring path{fill:none;stroke:var(--orange);stroke-width:3.2;stroke-linecap:round;opacity:.9;stroke-dasharray:1000;stroke-dashoffset:1000}
-@media(prefers-reduced-motion:no-preference){.auh .hero h1 .ring path{animation:au-draw 1s var(--e-out) .9s forwards}}
-@media(prefers-reduced-motion:reduce){.auh .hero h1 .ring path{stroke-dashoffset:0}}
+/* Ring draws on desktop only — stroke-dashoffset isn't compositable; mobile
+   shows the ring fully drawn (PSI fix 2026-06-11) */
+.auh .hero h1 .ring path{fill:none;stroke:var(--orange);stroke-width:3.2;stroke-linecap:round;opacity:.9;stroke-dasharray:1000;stroke-dashoffset:0}
+@media(prefers-reduced-motion:no-preference) and (min-width:768px){.auh .hero h1 .ring path{stroke-dashoffset:1000;animation:au-draw 1s var(--e-out) .9s forwards}}
 @keyframes au-draw{to{stroke-dashoffset:0}}
 .auh .hero .lead{font-size:19px;max-width:530px}
 .auh .hero .lead b{color:var(--ink)}
