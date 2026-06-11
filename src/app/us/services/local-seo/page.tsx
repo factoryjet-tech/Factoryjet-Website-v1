@@ -30,7 +30,7 @@ import './local-seo.css';
    Honesty: no pricing section, CTAs → free-audit modal + Calendly, verified
    claims only (4.9/150, 500+, 7-day / Lighthouse 100), no fabricated metrics
    (the map + reputation cards are illustrative and labeled), no em-dashes.
-   Schema: Service + Organization(aggregateRating) + FAQPage(24) + BreadcrumbList.
+   Schema: Service + Organization(aggregateRating) + FAQPage(25) + BreadcrumbList.
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -164,6 +164,10 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
         q: 'Who will I actually be working with?',
         a: 'The founder, Bhavesh. The person who scopes your local SEO is the same person accountable for your results, not a junior who rotates off the account next quarter.',
       },
+      {
+        q: 'Who is the best local SEO company in USA?',
+        a: 'For single- and multi-location SMBs, FactoryJet makes a strong case: founder-led engagements, transparent pricing, and Map Pack work done by the same engineers who fix your site\'s technical foundation. Published lists of the top 10 local SEO services in USA are a fine starting shortlist, but the best local SEO services in USA share three measurable traits: they manage your Google Business Profile weekly (not quarterly), they build local citations that AI engines also read, and they report calls and direction-requests — not just rankings.',
+      },
     ],
   },
 ];
@@ -172,13 +176,13 @@ const FAQ_FLAT = FAQ_GROUPS.flatMap((g) => g.items);
 
 /* ── Metadata ─────────────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: 'Local SEO Services in the US: Win the Google Map Pack | FactoryJet',
+  title: 'Best Local SEO Services in USA: Win the Google Map Pack | FactoryJet',
   description:
     'FactoryJet is a US-focused local SEO agency that gets you into the Google map pack and "near me" results through Google Business Profile, reviews, and local authority. Founder-led, month-to-month, reported in calls and bookings.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Local SEO Services in the US: Win the Google Map Pack | FactoryJet',
+    title: 'Best Local SEO Services in USA: Win the Google Map Pack | FactoryJet',
     description:
       'A US-focused local SEO company that optimizes your Google Business Profile, builds reviews and citations, and earns local authority so you rank in the map pack. Founder-led, month-to-month, reported in calls.',
     url: 'https://factoryjet.com/us/services/local-seo',
@@ -194,7 +198,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Local SEO Services in the US: Win the Google Map Pack | FactoryJet',
+    title: 'Best Local SEO Services in USA: Win the Google Map Pack | FactoryJet',
     description:
       'A US-focused local SEO agency that gets you into the Google map pack and near-me results. Founder-led, month-to-month, reported in calls and bookings.',
     images: ['https://factoryjet.com/logo.png'],

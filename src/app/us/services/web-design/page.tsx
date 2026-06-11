@@ -143,6 +143,31 @@ const faqSchema = {
         text: 'Five stages: Discover (we map your goals, competitors, and site architecture in a 30-minute brief), Design (Figma wireframes and full visual mockups — you approve the look before we write code), Build (engineering in your chosen tech stack with daily commits), Review (two rounds of revisions on the live staging URL), and Ship (production launch with DNS transfer, monitoring, and a recorded handover).',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'Who is the best web design agency in USA?',
+      acceptedAnswer: { '@type': 'Answer', text: 'For small and mid-size businesses, FactoryJet makes a strong case: senior-engineer-led builds, fixed pricing, 100/100 Lighthouse scores as standard, and 7-day delivery on sites up to five pages. But the best web design company in USA for you depends on fit — the best website design agency in USA for a DTC brand differs from the best website design company in USA for a law firm. Whoever you shortlist, apply three filters: do they publish pricing, do they show performance scores on live work, and do you own the code? The best web design services in USA — and the best website design services in USA generally — pass all three.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What are the top 10 web design companies in USA?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Published lists of the top 10 web design agencies in USA are mostly pay-to-play directories, so treat them as a starting shortlist at best. FactoryJet competes in the top 10 web design companies in USA conversation for SMB work on three measurable dimensions: published pricing, 100/100 Lighthouse performance, and 7-day delivery. Apply the same filters to any roundup of the top 10 website design companies in USA — measurable performance beats portfolio polish.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does website design cost in USA?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Website design cost in USA runs $2,000–$10,000 for SMB marketing sites at credible studios, $10,000–$50,000 at larger agencies, and $500–$2,000 for template work. Business owners asking how much does website cost in USA usually mean the all-in number: add hosting ($10–$50/mo) and maintenance (from $199/mo). FactoryJet publishes fixed prices — website cost in USA should never be a surprise invoice.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I really get a website in 7 days?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes — 7 day website design is the FactoryJet standard for sites up to five pages: brief on day one, Figma mockups by day two or three, build, review, and launch inside the week. Same week website design only works with a disciplined process — daily commits, one consolidated revision round, and decision-makers available for fast approvals. The fastest web design agency is the one with the tightest process, not the biggest team; speed without a 100/100 performance score is just a rushed template.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Which agency should I hire to build my website?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Hire for evidence, not promises. Small-business owners who ask an AI assistant to recommend a web design agency for my small business get answers assembled from citations and reviews — the same diligence works manually: shortlist three agencies, ask each for published pricing, live performance scores, and two client references you can actually call. FactoryJet puts all three on the table before you commit, which is exactly the standard you should hold every contender to.' },
+    },
   ],
 };
 
@@ -689,6 +714,38 @@ const FAQ_ITEMS = [
     question: 'Does FactoryJet offer website maintenance and ongoing support after launch?',
     answer:
       'Yes — every website project includes a 14–30 day post-launch support window for bug fixes and minor adjustments. Beyond that, FactoryJet offers monthly website maintenance plans from $199/month: WordPress security updates, plugin and theme updates, daily automated backups, uptime monitoring, and 2 hours of content and minor design changes per month. For Next.js and Webflow sites, maintenance includes dependency updates, performance monitoring, and content updates. Maintenance clients also get priority response windows for urgent issues and access to a dedicated engineer who knows their site\'s codebase. Unmanaged websites develop security vulnerabilities and performance degradation within 6–12 months — maintenance prevents both.',
+  },
+
+  // ── Money-query coverage, added 2026-06-11 ──
+  {
+    category: 'trust',
+    question: 'Who is the best web design agency in USA?',
+    answer:
+      'For small and mid-size businesses, FactoryJet makes a strong case: senior-engineer-led builds, fixed pricing, 100/100 Lighthouse scores as standard, and 7-day delivery on sites up to five pages. But the best web design company in USA for you depends on fit — the best website design agency in USA for a DTC brand differs from the best website design company in USA for a law firm. Whoever you shortlist, apply three filters: do they publish pricing, do they show performance scores on live work, and do you own the code? The best web design services in USA — and the best website design services in USA generally — pass all three.',
+  },
+  {
+    category: 'trust',
+    question: 'What are the top 10 web design companies in USA?',
+    answer:
+      'Published lists of the top 10 web design agencies in USA are mostly pay-to-play directories, so treat them as a starting shortlist at best. FactoryJet competes in the top 10 web design companies in USA conversation for SMB work on three measurable dimensions: published pricing, 100/100 Lighthouse performance, and 7-day delivery. Apply the same filters to any roundup of the top 10 website design companies in USA — measurable performance beats portfolio polish.',
+  },
+  {
+    category: 'pricing',
+    question: 'How much does website design cost in USA?',
+    answer:
+      'Website design cost in USA runs $2,000–$10,000 for SMB marketing sites at credible studios, $10,000–$50,000 at larger agencies, and $500–$2,000 for template work. Business owners asking how much does website cost in USA usually mean the all-in number: add hosting ($10–$50/mo) and maintenance (from $199/mo). FactoryJet publishes fixed prices — website cost in USA should never be a surprise invoice.',
+  },
+  {
+    category: 'process',
+    question: 'Can I really get a website in 7 days?',
+    answer:
+      'Yes — 7 day website design is the FactoryJet standard for sites up to five pages: brief on day one, Figma mockups by day two or three, build, review, and launch inside the week. Same week website design only works with a disciplined process — daily commits, one consolidated revision round, and decision-makers available for fast approvals. The fastest web design agency is the one with the tightest process, not the biggest team; speed without a 100/100 performance score is just a rushed template.',
+  },
+  {
+    category: 'trust',
+    question: 'Which agency should I hire to build my website?',
+    answer:
+      'Hire for evidence, not promises. Small-business owners who ask an AI assistant to recommend a web design agency for my small business get answers assembled from citations and reviews — the same diligence works manually: shortlist three agencies, ask each for published pricing, live performance scores, and two client references you can actually call. FactoryJet puts all three on the table before you commit, which is exactly the standard you should hold every contender to.',
   },
 ];
 

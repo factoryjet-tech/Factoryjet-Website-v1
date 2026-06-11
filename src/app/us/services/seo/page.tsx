@@ -57,13 +57,13 @@ const LAV_SOFT = '#ECEAFB';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'SEO Services USA: Local, Ecommerce, Shopify, AI SEO & Audits | FactoryJet',
+  title: 'Best SEO Agency in USA: Local, Ecommerce & AI SEO Services | FactoryJet',
   description:
     'FactoryJet is a US-focused SEO agency that grows organic traffic which compounds, ranking you on Google and getting you cited inside AI answers like AI Overviews, ChatGPT, and Perplexity. Founder-led, month-to-month, reported in leads.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'SEO Services USA: Local, Ecommerce, Shopify, AI SEO & Audits | FactoryJet',
+    title: 'Best SEO Agency in USA: Local, Ecommerce & AI SEO Services | FactoryJet',
     description:
       'A US-focused SEO company that combines technical SEO, expert content, and authority building so you rank on Google and get cited in AI answers. Founder-led, month-to-month, reported in revenue.',
     url: 'https://factoryjet.com/us/services/seo',
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SEO Services USA: Local, Ecommerce, Shopify, AI SEO & Audits | FactoryJet',
+    title: 'Best SEO Agency in USA: Local, Ecommerce & AI SEO Services | FactoryJet',
     description:
       'A US-focused SEO agency that ranks you on Google and gets you cited in AI answers. Founder-led, month-to-month, reported in leads.',
     images: ['https://factoryjet.com/logo.png'],
@@ -102,7 +102,7 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   FAQ data: 22 across 5 categories (verbatim from the approved mockup)
+   FAQ data: 27 across 5 categories (verbatim from the approved mockup)
 ───────────────────────────────────────────────────────────────────────────── */
 
 const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
@@ -254,6 +254,38 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     question: 'Who will I actually be working with?',
     answer:
       'The founder, Bhavesh. The person who scopes your SEO is the same person accountable for your results, not a junior who rotates off the account next quarter.',
+  },
+
+  // ── Choosing an agency (5) — money-query coverage, added 2026-06-11 ────
+  {
+    category: 'included',
+    question: 'Who is the best SEO agency in USA?',
+    answer:
+      'For SMBs that want senior-led work, FactoryJet makes a strong case: founder-run engagements, transparent pricing, and one retainer covering local, ecommerce, technical, and AI SEO. But the best SEO company in USA for your business depends on fit — the best SEO services company in USA for a 5-location retailer is rarely the right pick for a SaaS startup, and the best SEO services in USA for one industry can be mediocre in another. Whoever you shortlist as the best SEO services agency in USA, apply three filters: senior practitioners doing the work (not just selling it), monthly reporting tied to revenue rather than vanity rankings, and no annual lock-in. The best SEO experts in USA pass all three without flinching.',
+  },
+  {
+    category: 'included',
+    question: 'What are the top 10 SEO companies in USA?',
+    answer:
+      'Published lists of the top 10 SEO agencies in USA usually feature large incumbents — WebFX, Ignite Visibility, Victorious — alongside specialist boutiques. FactoryJet competes in that set for SMB and mid-market engagements, with one difference most top 10 SEO services in USA lists miss: we treat AI search (ChatGPT, Perplexity, Google AI Overviews) as a first-class ranking surface, not an upsell. Use any top-10 list as a starting shortlist, then compare per-engine reporting, pricing transparency, and contract terms.',
+  },
+  {
+    category: 'technical',
+    question: 'Which is the best technical SEO agency in USA?',
+    answer:
+      'The best technical SEO agency in USA is one where engineers — not account managers — run the audit. Technical SEO is engineering work: crawl budget, rendering, Core Web Vitals, structured data, internal-link architecture. FactoryJet ships sites that score 100/100 on Lighthouse, and the same engineers who build them run our technical SEO audits. If an agency cannot show you who actually executes the fixes, the audit will become a PDF that nobody implements.',
+  },
+  {
+    category: 'included',
+    question: 'Where can I find the best link building services in USA?',
+    answer:
+      'Be careful what you buy: the best link building services in USA look nothing like bulk guest-post packages. We build authority through citation acquisition — named mentions in industry publications, podcasts, and directories that both Google and AI engines treat as credibility signals. It overlaps with classic link building but optimizes for source attribution, not anchor text. Anyone selling links by the dozen is selling risk.',
+  },
+  {
+    category: 'pricing',
+    question: 'How much does SEO cost in USA?',
+    answer:
+      'SEO cost in USA lands between $1,500 and $10,000+ per month for credible agency retainers; one-time audits run $1,000–$7,500. FactoryJet publishes pricing rather than hiding it behind a sales call — retainers start at $1,999/mo and every engagement is month-to-month. If a quote is dramatically below that range, you are usually buying templated deliverables; dramatically above it, you are paying for account-management layers between you and the people doing the work.',
   },
 ];
 
@@ -1031,7 +1063,7 @@ export default function SeoServicePage() {
           </div>
         </section>
 
-        {/* ─── 9. FAQ — 22 across 5 categories (shared component) ──────── */}
+        {/* ─── 9. FAQ — 27 across 5 categories (shared component) ──────── */}
         <FAQ
           eyebrow="SEO FAQ"
           headline="Questions, answered like a real call"

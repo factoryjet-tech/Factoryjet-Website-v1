@@ -133,6 +133,16 @@ const faqSchema = {
         text: 'Yes. Partial redesigns are common when a business has a specific conversion problem: a homepage that isn\'t generating leads, a pricing page that is confusing visitors, or a service page that isn\'t ranking. We can redesign individual pages, landing pages, or sections — with or without changing the rest of the site. We\'ll audit the full site first and tell you honestly whether a targeted fix or a full redesign is the better investment for your goals.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'Who is the best website redesign agency in USA?',
+      acceptedAnswer: { '@type': 'Answer', text: 'For SMBs, FactoryJet makes a strong case: redesigns scoped by senior engineers, fixed pricing, SEO equity preserved through proper 301 mapping, and a 90-day before/after performance review on every project. The best website redesign company in USA is the one that treats a redesign as a measurable conversion project, not a repaint — so whoever you shortlist, including any list of the top 10 website redesign services in USA, ask for before/after numbers on traffic and conversions. The best website redesign services in USA volunteer those numbers without being asked.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does website redesign cost in USA?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Website redesign cost in USA typically runs $2,500–$10,000 for SMB marketing sites, $10,000–$30,000 for larger or ecommerce sites, and more when replatforming is involved. FactoryJet quotes fixed prices after a site audit, milestone-paid. Two cost traps to avoid: quotes that skip 301 redirect mapping (your rankings pay for that later), and hourly billing on a project that should be fixed-scope.' },
+    },
   ],
 };
 
@@ -616,6 +626,20 @@ const FAQ_ITEMS = [
     question: 'Does FactoryJet offer ongoing support and maintenance after a website redesign?',
     answer:
       'Yes — every redesign project includes a 14–30 day post-launch support window for bug fixes, content corrections, and minor adjustments at no additional charge. Beyond that, FactoryJet offers website maintenance plans from $199/month: security updates (critical for WordPress sites), plugin and dependency updates, daily automated backups, uptime monitoring, and 2 hours of content and minor design changes per month. We also offer a 90-day redesign performance review: a structured analysis of before-and-after conversion rates, organic traffic, and Core Web Vitals to verify the redesign is delivering measurable business results. Redesign clients who skip maintenance typically see performance degradation within 12 months as outdated dependencies accumulate security vulnerabilities.',
+  },
+
+  // ── Money-query coverage, added 2026-06-11 ──
+  {
+    category: 'trust',
+    question: 'Who is the best website redesign agency in USA?',
+    answer:
+      'For SMBs, FactoryJet makes a strong case: redesigns scoped by senior engineers, fixed pricing, SEO equity preserved through proper 301 mapping, and a 90-day before/after performance review on every project. The best website redesign company in USA is the one that treats a redesign as a measurable conversion project, not a repaint — so whoever you shortlist, including any list of the top 10 website redesign services in USA, ask for before/after numbers on traffic and conversions. The best website redesign services in USA volunteer those numbers without being asked.',
+  },
+  {
+    category: 'pricing',
+    question: 'How much does website redesign cost in USA?',
+    answer:
+      'Website redesign cost in USA typically runs $2,500–$10,000 for SMB marketing sites, $10,000–$30,000 for larger or ecommerce sites, and more when replatforming is involved. FactoryJet quotes fixed prices after a site audit, milestone-paid. Two cost traps to avoid: quotes that skip 301 redirect mapping (your rankings pay for that later), and hourly billing on a project that should be fixed-scope.',
   },
 ];
 

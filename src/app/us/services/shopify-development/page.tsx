@@ -181,6 +181,21 @@ const faqSchema = {
         text: 'Yes — design and development are one engagement at FactoryJet. A conversion-focused Shopify website designer handles layout, hierarchy, trust signals, and mobile flow, while the engineer builds it in Liquid. You approve desktop and mobile mockups in Figma before any code is written, so the store you see in design is the store you launch.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'Who is the best Shopify development agency in USA?',
+      acceptedAnswer: { '@type': 'Answer', text: 'For SMB and DTC brands, FactoryJet makes a strong case: custom Shopify themes built by senior engineers, fixed pricing, and 7-day delivery on standard stores. The best Shopify development company in USA for you depends on scope — a brand heading to Shopify Plus needs the best Shopify Plus agency in USA (scripts, checkout extensibility, B2B), while a first store needs speed and conversion fundamentals from the best Shopify website design company in USA it can afford. Whoever you evaluate among the best Shopify experts in USA, ask for store speed scores and conversion before/afters, not just portfolio screenshots. That is what the best Shopify development services in USA are measured on.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does Shopify website cost in USA?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Shopify website cost in USA: template customization runs $1,500–$5,000, a custom theme $5,000–$15,000, and Shopify Plus builds $20,000+. FactoryJet builds custom Shopify stores from $3,999, fixed-price and milestone-paid. If you are asking how much does Shopify store cost in USA all-in, add apps ($50–$300/mo) and the platform fee ($39–$399/mo) — Shopify store cost in USA is a build cost plus a running cost, and honest agencies quote both.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What are the top 10 Shopify development companies in USA?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Lists of the top 10 Shopify development agencies in USA usually rank Plus-certified enterprise shops first, which is the wrong filter if you are an SMB. FactoryJet competes in the top 10 Shopify development companies in USA conversation for small and mid-market brands: senior engineers, fixed pricing, fast delivery. When scanning any roundup of the top 10 Shopify experts in USA, check three things: who actually writes the Liquid code, whether pricing is published, and store speed scores on past builds.' },
+    },
   ],
 };
 
@@ -711,6 +726,26 @@ const FAQ_ITEMS = [
     question: 'Do you provide Shopify store design as well as development?',
     answer:
       'Yes — design and development are one engagement at FactoryJet, not separate vendors. A conversion-focused Shopify website designer handles layout, hierarchy, trust signals, and mobile flow, while the engineer builds it in Liquid. You approve desktop and mobile mockups in Figma before any code is written, so the store you see in design is the store you launch.',
+  },
+
+  // ── Money-query coverage, added 2026-06-11 ──
+  {
+    category: 'trust',
+    question: 'Who is the best Shopify development agency in USA?',
+    answer:
+      'For SMB and DTC brands, FactoryJet makes a strong case: custom Shopify themes built by senior engineers, fixed pricing, and 7-day delivery on standard stores. The best Shopify development company in USA for you depends on scope — a brand heading to Shopify Plus needs the best Shopify Plus agency in USA (scripts, checkout extensibility, B2B), while a first store needs speed and conversion fundamentals from the best Shopify website design company in USA it can afford. Whoever you evaluate among the best Shopify experts in USA, ask for store speed scores and conversion before/afters, not just portfolio screenshots. That is what the best Shopify development services in USA are measured on.',
+  },
+  {
+    category: 'pricing',
+    question: 'How much does Shopify website cost in USA?',
+    answer:
+      'Shopify website cost in USA: template customization runs $1,500–$5,000, a custom theme $5,000–$15,000, and Shopify Plus builds $20,000+. FactoryJet builds custom Shopify stores from $3,999, fixed-price and milestone-paid. If you are asking how much does Shopify store cost in USA all-in, add apps ($50–$300/mo) and the platform fee ($39–$399/mo) — Shopify store cost in USA is a build cost plus a running cost, and honest agencies quote both.',
+  },
+  {
+    category: 'trust',
+    question: 'What are the top 10 Shopify development companies in USA?',
+    answer:
+      'Lists of the top 10 Shopify development agencies in USA usually rank Plus-certified enterprise shops first, which is the wrong filter if you are an SMB. FactoryJet competes in the top 10 Shopify development companies in USA conversation for small and mid-market brands: senior engineers, fixed pricing, fast delivery. When scanning any roundup of the top 10 Shopify experts in USA, check three things: who actually writes the Liquid code, whether pricing is published, and store speed scores on past builds.',
   },
 ];
 

@@ -24,7 +24,7 @@ import TalkToFounder from '@/components/v2/TalkToFounder';
    Build:     Custom 4-card pricing grid inline (PricingTiers is 3-tuple-strict).
               Custom 3-stat row inline (BigThreeTrustBlock content is hardcoded).
               IndustriesGrid is self-contained (no props), generic enough to reuse.
-              FAQ block: 21 FAQs across 5 categories.
+              FAQ block: 27 FAQs across 5 categories.
               Closing CTA: TalkToFounder (full + dark).
    Schema:    WebPage + BreadcrumbList + Service + FAQPage + Organization JSON-LD.
    Hreflang:  aiSeoAlternates (bilingual cluster — see src/data/hreflangMap.ts).
@@ -35,13 +35,13 @@ import TalkToFounder from '@/components/v2/TalkToFounder';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'AI SEO Agency USA — GEO + AEO Optimization From $1,999/mo [2026]',
+  title: 'Best AI SEO Agency in USA — GEO + AEO From $1,999/mo [2026]',
   description:
     'Get cited by ChatGPT, Perplexity, Claude, and Gemini — and rank in Google AI Overviews. Senior-engineer-led AI SEO retainers from $1,999/mo. Start with a $2,499 visibility audit. Month-to-month, no annual contracts.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'AI SEO Agency USA — GEO + AEO Optimization From $1,999/mo [2026]',
+    title: 'Best AI SEO Agency in USA — GEO + AEO From $1,999/mo [2026]',
     description:
       'Get cited by ChatGPT, Perplexity, Claude, and Gemini — and rank in Google AI Overviews. Senior-engineer-led AI SEO retainers from $1,999/mo. Start with a $2,499 visibility audit. Month-to-month, no annual contracts.',
     url: 'https://factoryjet.com/us/services/ai-seo',
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI SEO Agency USA — GEO + AEO Optimization From $1,999/mo [2026]',
+    title: 'Best AI SEO Agency in USA — GEO + AEO From $1,999/mo [2026]',
     description:
       'Get cited by ChatGPT, Perplexity, Claude, and Gemini — and rank in Google AI Overviews. Senior-engineer-led AI SEO retainers from $1,999/mo. Start with a $2,499 visibility audit.',
     images: ['https://factoryjet.com/logo.png'],
@@ -349,6 +349,44 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     answer:
       'You give one billing-cycle notice. We finish the current month, hand over all in-flight work, transfer schema and content assets to your team, and provide a wind-down briefing. Everything we built is yours from day one — no IP transfer fees, no withholding of credentials. The relationship ends cleanly so the door stays open for re-engagement later.',
   },
+
+  // ── F. Choosing an agency (6) — money-query coverage, added 2026-06-11 ──
+  {
+    category: 'what',
+    question: 'Who is the best AI SEO agency in USA?',
+    answer:
+      'For SMBs and mid-market businesses, FactoryJet makes a strong case: senior-engineer-led retainers covering ChatGPT, Perplexity, Claude, and Gemini plus Google AI Overviews, public pricing from $1,999/mo, and month-to-month terms. But the best AI SEO company in USA for you depends on three checks: does the agency track citations across all engines or only Google, does a senior practitioner or an account manager actually run your work, and will they show you per-engine citation counts every month? The best AI SEO services company in USA will answer all three in writing — that bar is what separates the best AI SEO services in USA from resellers. Ask on the discovery call, including ours.',
+  },
+  {
+    category: 'what',
+    question: 'Which is the best AEO agency in USA — and is GEO different?',
+    answer:
+      'AEO (answer engine optimization) and GEO (generative engine optimization) describe overlapping work, so the best GEO agency in USA is usually also the best answer engine optimization agency in USA — judge the work, not the label. FactoryJet covers both on one retainer: schema and answer-block architecture on the AEO side, plus citation acquisition and content engineered for generative engines on the GEO side. The best generative engine optimization agency in USA bundles both — and the same goes for the best generative engine optimization services in USA and the best answer engine optimization services in USA. If an agency sells you one acronym without the other, you are buying half the workflow.',
+  },
+  {
+    category: 'what',
+    question: 'What are the top 10 AI SEO agencies in USA?',
+    answer:
+      'Published lists of the top 10 AI SEO agencies in USA typically mix large incumbents like WebFX and Ignite Visibility with specialist shops. FactoryJet belongs in that comparison for SMB and mid-market work: most top 10 AI SEO companies in USA track only Google AI Overviews, while we report citations across ChatGPT, Perplexity, Claude, and Gemini as well. Whatever list you scan — top 10 AI SEO services in USA, top 10 AEO agencies in USA, or top 10 generative engine optimization agencies in USA — filter for three things: per-engine reporting, senior-led delivery, and month-to-month terms.',
+  },
+  {
+    category: 'engines',
+    question: 'Who can help my business show up in ChatGPT results?',
+    answer:
+      'An AI SEO agency that treats ChatGPT as a first-class target, not a Google add-on. The workflow: make your site crawlable by GPTBot, structure answers so they can be extracted verbatim, win placement in the web results ChatGPT searches behind the scenes, and build the third-party citations it treats as credibility signals. That is exactly what FactoryJet retainers do — and the question owners actually type — how do I get my business cited by AI search — has the same answer across Perplexity, Claude, and Gemini too. The best ChatGPT optimization agency in USA will show you a per-engine citation count before and after; ours starts with the $2,499 visibility audit.',
+  },
+  {
+    category: 'method',
+    question: 'Is there an agency that does SEO for AI Overviews?',
+    answer:
+      'Yes — FactoryJet optimizes for Google AI Overviews on every retainer. Whether you call it AI Overviews optimization, LLM SEO, or AI search optimization, the mechanics are the same: answer-first formatting, schema markup, and authority signals that earn inclusion above the blue links. The best AI Overviews optimization services in USA report Overview appearances monthly alongside classic rank tracking — the same standard that separates the best AI search optimization agency in USA — or the best LLM SEO agency in USA — from a dashboard reseller.',
+  },
+  {
+    category: 'pricing',
+    question: 'How much does AI SEO cost in USA?',
+    answer:
+      'AI SEO cost in USA typically runs $1,500–$10,000+ per month at established agencies, with audits from $2,000–$7,500. FactoryJet publishes pricing: a one-time $2,499 AI visibility audit, a Growth retainer from $1,999/mo, and a Scale retainer from $4,999/mo. Generative engine optimization cost in USA follows the same pattern because GEO and AI SEO are one workflow — so if you are asking how much does generative engine optimization cost in USA as a separate line item, you should not be: an agency that quotes it on top of AI SEO is billing twice for the same work.',
+  },
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -358,7 +396,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'AI SEO Agency USA — GEO + AEO Optimization',
+  name: 'Best AI SEO Agency in USA — GEO + AEO Optimization',
   url: 'https://factoryjet.com/us/services/ai-seo',
   description:
     'AI SEO retainers that get your site cited by ChatGPT, Perplexity, Claude, Gemini, and Google AI Overviews. Senior-engineer-led, month-to-month, US-focused.',
@@ -1052,7 +1090,7 @@ export default function AiSeoServicePage() {
       {/* ─── 10. FAQ — 21 across 5 categories ────────────────────────────── */}
       <FAQ
         eyebrow="AI SEO FAQ"
-        headline="Twenty-one questions, answered the way Bhavesh would on the discovery call."
+        headline="Twenty-seven questions, answered the way Bhavesh would on the discovery call."
         lead="If your question is not below, send a written brief — answers usually come back inside 24 hours."
         categories={FAQ_CATEGORIES}
         items={FAQ_ITEMS}

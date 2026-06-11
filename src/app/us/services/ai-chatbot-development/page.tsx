@@ -22,13 +22,13 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'AI Chatbot Development USA | Custom Chatbots | FactoryJet',
+  title: 'Best AI Chatbot Development Company in USA | FactoryJet',
   description:
     'Custom AI chatbots for US businesses — customer support, lead gen, e-commerce & booking. Deflect 60–70% of support tickets. Delivered in 2–3 weeks. From $3,000.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'AI Chatbot Development Services USA | FactoryJet',
+    title: 'Best AI Chatbot Development Company in USA | FactoryJet',
     description:
       'Custom AI chatbots for customer support, lead gen, and e-commerce. Built on GPT-4o and Claude. fixed-price, milestone-paid. Fast delivery.',
     url: 'https://factoryjet.com/us/services/ai-chatbot-development',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Chatbot Development Services USA | FactoryJet',
+    title: 'Best AI Chatbot Development Company in USA | FactoryJet',
     description:
       'Custom AI chatbots for US small businesses. fixed-price. 2–3 week delivery. Get a quote.',
     images: ['https://factoryjet.com/images/us/services/hero-ai-chatbot.webp'],
@@ -241,6 +241,16 @@ const faqSchema = {
         '@type': 'Answer',
         text: 'Three differences: price (specialized engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 10-person company, not just enterprise theory).',
       },
+    },
+    {
+      '@type': 'Question',
+      name: 'Who is the best AI chatbot development company in USA?',
+      acceptedAnswer: { '@type': 'Answer', text: 'For small and mid-size businesses, FactoryJet makes a strong case: custom chatbots trained on your actual catalog, policies, and tone — not template bots — built fixed-price by senior engineers, with full code ownership from day one. Whoever you shortlist as the best AI chatbot development company in USA, apply three filters: will the bot be trained on your business data specifically, does it hand off to humans gracefully, and do you own it outright or rent it monthly?' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does an AI chatbot cost in USA?',
+      acceptedAnswer: { '@type': 'Answer', text: 'AI chatbot cost in USA ranges from $99/mo for off-the-shelf SaaS tools to $5,000–$25,000 for a custom-built chatbot you own. If you are asking how much does AI chatbot cost in USA for a real business workflow — trained on your products, integrated with your CRM, escalating to your team — budget from $5,000 at FactoryJet, fixed-price and milestone-paid. SaaS bots are cheaper to start and more expensive forever; custom bots invert that curve.' },
     },
   ],
 };
@@ -750,6 +760,20 @@ const FAQ_ITEMS = [
     question: 'How is FactoryJet different from a US AI development agency?',
     answer:
       'Three differences: pricing model (fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices, backed by 25+ years serving US businesses), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 10-person company, not just enterprise AI theory).',
+  },
+
+  // ── Choosing an agency — money-query coverage, added 2026-06-11 ──
+  {
+    category: 'what-is',
+    question: 'Who is the best AI chatbot development company in USA?',
+    answer:
+      'For small and mid-size businesses, FactoryJet makes a strong case: custom chatbots trained on your actual catalog, policies, and tone — not template bots — built fixed-price by senior engineers, with full code ownership from day one. Whoever you shortlist as the best AI chatbot development company in USA, apply three filters: will the bot be trained on your business data specifically, does it hand off to humans gracefully, and do you own it outright or rent it monthly?',
+  },
+  {
+    category: 'pricing',
+    question: 'How much does an AI chatbot cost in USA?',
+    answer:
+      'AI chatbot cost in USA ranges from $99/mo for off-the-shelf SaaS tools to $5,000–$25,000 for a custom-built chatbot you own. If you are asking how much does AI chatbot cost in USA for a real business workflow — trained on your products, integrated with your CRM, escalating to your team — budget from $5,000 at FactoryJet, fixed-price and milestone-paid. SaaS bots are cheaper to start and more expensive forever; custom bots invert that curve.',
   },
 ];
 

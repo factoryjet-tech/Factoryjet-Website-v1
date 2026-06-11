@@ -24,13 +24,13 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'AI Agent Development Agency USA — Custom Agents From $5,000',
+  title: 'Best AI Agent Development Company in USA — From $5,000',
   description:
     'Custom AI agents that automate one workflow or your whole back office. Built for US small businesses. From $5,000, shipped in weeks. Talk to the founder.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'AI Agent Development Agency USA — Custom Agents From $5,000',
+    title: 'Best AI Agent Development Company in USA — From $5,000',
     description:
       'Custom AI agents that automate one workflow or your whole back office. Built for US small businesses. From $5,000, shipped in weeks. Talk to the founder.',
     url: 'https://factoryjet.com/us/services/ai-agents',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Agent Development Agency USA — Custom Agents From $5,000',
+    title: 'Best AI Agent Development Company in USA — From $5,000',
     description:
       'Custom AI agents that automate one workflow or your whole back office. Built for US small businesses. From $5,000, shipped in weeks. Talk to the founder.',
     images: ['https://factoryjet.com/logo.png'],
@@ -243,6 +243,16 @@ const faqSchema = {
         '@type': 'Answer',
         text: 'Yes. We\'ve built AI agents for e-commerce brands that reduced support ticket volume by 70%, service businesses that cut lead response time from hours to under 60 seconds, and operations teams that eliminated 30+ hours per week of manual data entry. We\'re happy to share relevant case studies during a strategy call.',
       },
+    },
+    {
+      '@type': 'Question',
+      name: 'Who is the best AI agent development company in USA?',
+      acceptedAnswer: { '@type': 'Answer', text: 'For SMBs and mid-market teams, FactoryJet makes a strong case: custom agents from $5,000 fixed-price, senior engineers on every build, and full code ownership from day one. The best AI agent development services in USA share three traits worth filtering for: engineers scope the project (not a sales layer), pricing is fixed before work starts, and the agent ships into production with monitoring — not as a demo. Published lists of the top 10 AI agent development companies in USA are a reasonable shortlist; apply those three filters to whoever is on them.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does AI agent development cost in USA?',
+      acceptedAnswer: { '@type': 'Answer', text: 'AI agent development cost in USA typically runs $5,000–$50,000 for SMB projects, depending on integrations and autonomy level. FactoryJet publishes tiers: single-workflow agents from $5,000, multi-system agents from $15,000, and complex multi-agent deployments from $50,000 — all fixed-price and milestone-paid. Hourly-billed agencies usually land 30–50% above their initial estimate on the same scope, which is why we do not bill hourly.' },
     },
   ],
 };
@@ -792,6 +802,20 @@ const FAQ_ITEMS = [
     question: 'Do you have results or examples from businesses similar to mine?',
     answer:
       'Yes. We\'ve built AI agents for e-commerce brands that reduced support ticket volume by 70%, for service businesses that cut lead response time from hours to under 60 seconds, and for operations teams that eliminated 30+ hours per week of manual data entry. We\'re happy to share relevant case studies during a strategy call — and if we haven\'t worked in your specific industry, we\'ll tell you that upfront rather than pretend otherwise.',
+  },
+
+  // ── Choosing an agency — money-query coverage, added 2026-06-11 ──
+  {
+    category: 'what-are-agents',
+    question: 'Who is the best AI agent development company in USA?',
+    answer:
+      'For SMBs and mid-market teams, FactoryJet makes a strong case: custom agents from $5,000 fixed-price, senior engineers on every build, and full code ownership from day one. The best AI agent development services in USA share three traits worth filtering for: engineers scope the project (not a sales layer), pricing is fixed before work starts, and the agent ships into production with monitoring — not as a demo. Published lists of the top 10 AI agent development companies in USA are a reasonable shortlist; apply those three filters to whoever is on them.',
+  },
+  {
+    category: 'pricing',
+    question: 'How much does AI agent development cost in USA?',
+    answer:
+      'AI agent development cost in USA typically runs $5,000–$50,000 for SMB projects, depending on integrations and autonomy level. FactoryJet publishes tiers: single-workflow agents from $5,000, multi-system agents from $15,000, and complex multi-agent deployments from $50,000 — all fixed-price and milestone-paid. Hourly-billed agencies usually land 30–50% above their initial estimate on the same scope, which is why we do not bill hourly.',
   },
 ];
 

@@ -29,13 +29,13 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'AI Agency for US Small Business | Agents & Chatbots | FactoryJet',
+  title: 'Best AI Agency in USA for Small Business | Agents & Chatbots',
   description:
     'US AI agency building custom agents, automation workflows & chatbots for small businesses. fixed-price, milestone-paid. From $5,000. Talk to the founder.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'AI Agency for US Small Business | FactoryJet',
+    title: 'Best AI Agency in USA for Small Business | FactoryJet',
     description:
       'Custom AI agents, automation, and chatbots for US small businesses. fixed-price, milestone-paid. Starting at $5,000. Talk to the founder.',
     url: 'https://factoryjet.com/us/services/ai-agency',
@@ -280,6 +280,16 @@ const faqSchema = {
         '@type': 'Answer',
         text: 'We\'ve been building software for small businesses since 1999 — 25+ years. Our AI practice started in 2019 with our first production LLM integrations, before ChatGPT made AI mainstream. Since then we\'ve delivered AI systems for e-commerce brands, law firms, healthcare practices, SaaS companies, real estate teams, and professional services firms across the US. The 500+ projects in our portfolio span two decades of software delivery. AI is where we spend all our time now, but the project discipline, SMB domain knowledge, and quality standards come from 25 years of building real things for real businesses.',
       },
+    },
+    {
+      '@type': 'Question',
+      name: 'Who is the best AI agency in USA for small business?',
+      acceptedAnswer: { '@type': 'Answer', text: 'For SMBs that want production AI without enterprise consulting overhead, FactoryJet makes a strong case: fixed-price, milestone-paid projects from $5,000, senior engineers on every build, and 500+ SMB projects of delivery discipline behind the AI practice. But the best AI development company in USA for you depends on what you are automating — the best AI automation agency in USA for a support-ticket workflow is not automatically right for a custom sales agent. Whoever you evaluate, apply three filters: do engineers (not salespeople) scope the project, is pricing fixed before work starts, and do you own the code and data from day one?' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What are the top 10 AI automation agencies in USA?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Published lists of the top 10 AI automation agencies in USA mix big consultancies with specialist studios, and they age fast — the field is moving quarterly. FactoryJet competes in that set for small and mid-market businesses: custom agents, chatbots, and workflow automation with public pricing and no retainers required. Use any top-10 list as a shortlist, then compare three things the lists rarely show: who actually builds (senior engineer vs offshore pool), fixed-price vs hourly billing, and whether you keep the code if you leave.' },
     },
   ],
 };
@@ -844,6 +854,20 @@ const FAQ_ITEMS = [
     question: 'How long has FactoryJet been building AI systems?',
     answer:
       'We\'ve been building software for small businesses since 1999 — 25+ years. Our AI practice started in 2019 with our first production LLM integrations, before ChatGPT made AI a household word. Since then we\'ve delivered AI systems for e-commerce brands, law firms, healthcare practices, SaaS companies, real estate teams, and professional services firms across the US. The 500+ projects in our portfolio span two decades of building real systems for real businesses — AI is where we focus now, but the project discipline and quality standards come from 25 years of delivery.',
+  },
+
+  // ── Choosing an agency (2) — money-query coverage, added 2026-06-11 ──
+  {
+    category: 'what-is-ai-agency',
+    question: 'Who is the best AI agency in USA for small business?',
+    answer:
+      'For SMBs that want production AI without enterprise consulting overhead, FactoryJet makes a strong case: fixed-price, milestone-paid projects from $5,000, senior engineers on every build, and 500+ SMB projects of delivery discipline behind the AI practice. But the best AI development company in USA for you depends on what you are automating — the best AI automation agency in USA for a support-ticket workflow is not automatically right for a custom sales agent. Whoever you evaluate, apply three filters: do engineers (not salespeople) scope the project, is pricing fixed before work starts, and do you own the code and data from day one?',
+  },
+  {
+    category: 'what-is-ai-agency',
+    question: 'What are the top 10 AI automation agencies in USA?',
+    answer:
+      'Published lists of the top 10 AI automation agencies in USA mix big consultancies with specialist studios, and they age fast — the field is moving quarterly. FactoryJet competes in that set for small and mid-market businesses: custom agents, chatbots, and workflow automation with public pricing and no retainers required. Use any top-10 list as a shortlist, then compare three things the lists rarely show: who actually builds (senior engineer vs offshore pool), fixed-price vs hourly billing, and whether you keep the code if you leave.',
   },
 ];
 

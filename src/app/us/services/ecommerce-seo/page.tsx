@@ -31,7 +31,7 @@ import './ecommerce-seo.css';
    illustrative; no em-dashes. Anti-cannibalization: owns ecommerce/Shopify/Woo/
    Magento + product/collection/technical SEO (distinct from /ecommerce-development
    and /shopify-development which BUILD stores).
-   Schema: Service + Organization(aggregateRating) + FAQPage(21) + BreadcrumbList.
+   Schema: Service + Organization(aggregateRating) + FAQPage(22) + BreadcrumbList.
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -152,6 +152,10 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
         q: 'Who will I actually be working with?',
         a: 'The founder, Bhavesh. The person who scopes your ecommerce SEO is the same person accountable for the revenue it earns, not a junior who rotates off the account next quarter.',
       },
+      {
+        q: 'Who is the best ecommerce SEO agency in USA?',
+        a: 'For product-based SMBs, FactoryJet makes a strong case: engineers who build ecommerce stores run the SEO on them, so technical fixes actually ship instead of dying in an audit PDF. The best ecommerce SEO services in USA share three traits worth filtering for — product and collection page expertise (not just blog content), structured data that wins rich results, and reporting tied to revenue rather than rankings. Whoever you shortlist, ask to see a before/after on a product catalog comparable to yours.',
+      },
     ],
   },
 ];
@@ -159,13 +163,13 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
 const FAQ_FLAT = FAQ_GROUPS.flatMap((g) => g.items);
 
 export const metadata: Metadata = {
-  title: 'Ecommerce SEO Services in the US: Rank Products & Collections | FactoryJet',
+  title: 'Best Ecommerce SEO Agency in USA: Rank Products & Collections | FactoryJet',
   description:
     'FactoryJet is a US-focused ecommerce SEO agency. We optimize your Shopify, WooCommerce, and Magento collection and product pages so your store ranks, wins rich results, and grows revenue. Founder-led, month-to-month.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Ecommerce SEO Services in the US: Rank Products & Collections | FactoryJet',
+    title: 'Best Ecommerce SEO Agency in USA: Rank Products & Collections | FactoryJet',
     description:
       'A US-focused ecommerce SEO company and Shopify SEO agency. Collection and product page SEO, schema and rich results, technical ecommerce SEO. Reported in revenue. Founder-led, month-to-month.',
     url: 'https://factoryjet.com/us/services/ecommerce-seo',
@@ -174,7 +178,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ecommerce SEO Services in the US: Rank Products & Collections | FactoryJet',
+    title: 'Best Ecommerce SEO Agency in USA: Rank Products & Collections | FactoryJet',
     description:
       'A US-focused ecommerce SEO agency for Shopify, WooCommerce, and Magento. Collections, products, schema, technical. Reported in revenue.',
     images: ['https://factoryjet.com/logo.png'],
