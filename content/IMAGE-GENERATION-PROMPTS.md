@@ -516,3 +516,19 @@ service-mobile.webp             → /public/images/us/services/
 2. Batch 4 (general service pool) — needed for Tier 2 city pages
 3. Batch 1 (city images) — needed for the 5 city AI pages next in build order
 4. Batch 3 (platform images) — needed for Tier 3 platform pages (lower urgency)
+
+---
+
+## LISTICLE BLOG IMAGES — added 06/11/2026
+
+### 21. best-ai-seo-agencies-uk-2026.webp (1200×630)
+**MJ Prompt:** editorial hero illustration for a UK AI SEO agency comparison article, flat modern vector style, Union-Jack-subtle color hints over warm cream background with orange (#F05A28) accent, a podium of 10 abstract agency cards with one highlighted, AI chat bubbles citing a website (ChatGPT/Perplexity-style answer cards), magnifying glass over a search-results panel, clean B2B SaaS aesthetic, no text, no logos --ar 1200:630 --v 6.1
+**DALL-E:** Flat vector editorial illustration: ten abstract agency comparison cards in a ranked grid, one highlighted in orange, AI assistant chat bubbles citing a website, subtle UK flag color hints, warm cream background, modern B2B style, no text.
+
+### 22. best-ai-seo-agencies-india-2026.webp (1200×630)
+**MJ Prompt:** editorial hero illustration for an India AI SEO agency comparison article, flat modern vector style, warm cream background, saffron/orange (#F05A28) accents with subtle teal, ranked grid of 10 abstract agency cards with one highlighted, smartphone showing an AI chat answer naming a business, Indian metro skyline silhouette (Mumbai/Bengaluru hints), clean B2B aesthetic, no text, no logos --ar 1200:630 --v 6.1
+**DALL-E:** Flat vector editorial illustration: ranked grid of ten agency cards, one highlighted orange, a smartphone with an AI chat answer recommending a business, subtle Indian metro skyline, warm cream background, no text.
+
+### 23. best-seo-agencies-uk-2026.webp (1200×630)
+**MJ Prompt:** editorial hero illustration for a UK SEO agency comparison article, flat modern vector style, warm cream background, orange (#F05A28) accent, four labeled-by-shape segments (enterprise tower, shopping cart, wrench/crawler, local map pin) connecting to a ranked list of 10 cards, rising organic-growth chart line, British high street silhouette, clean B2B aesthetic, no text, no logos --ar 1200:630 --v 6.1
+**DALL-E:** Flat vector editorial illustration: ten ranked agency cards grouped by four segment icons (tower, cart, wrench, map pin), a rising growth curve, subtle British high street silhouette, warm cream background, orange accents, no text.
