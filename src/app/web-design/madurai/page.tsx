@@ -177,7 +177,17 @@ export default function Page() {
           text: 'We deliver 5-page websites in 7 days. Larger projects with custom features are scoped individually but we maintain rapid delivery for all standard engagements.',
         },
       },
-    ],
+    {
+      '@type': 'Question',
+      name: 'Who is the best web design agency in Madurai?',
+      acceptedAnswer: { '@type': 'Answer', text: 'For small businesses, FactoryJet makes a strong case as the best web design company in Madurai: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Madurai you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Madurai.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Should I hire web designer in Madurai or use an agency?',
+      acceptedAnswer: { '@type': 'Answer', text: 'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Madurai directly, agree the scope and price in writing first.' },
+    },
+],
   }
 
   const heroProps = {
@@ -362,6 +372,20 @@ const MDU_FAQ_ITEMS = [
   { category: 'local', question: 'Can you build a website for a Madurai hospital or medical college?', answer: "Yes. We build comprehensive hospital websites with specialty department pages, doctor profiles, appointment booking, and local SEO optimized for searches across Madurai, Dindigul, and Virudhunagar districts." },
   { category: 'local', question: 'Do you support Tamil-language websites for local customers?', answer: "Yes. We build Tamil + English bilingual websites for businesses targeting local Madurai consumers. Our Enterprise tier includes full bilingual content support with proper Tamil script rendering." },
   { category: 'local', question: 'Can you help a Madurai business attract customers from other Tamil Nadu cities?', answer: "Absolutely. Many Madurai clients — especially hospitals, colleges, and manufacturers — use their websites to attract patients, students, and buyers from Tirunelveli, Dindigul, Ramanathapuram, and beyond. We design and optimize for that reach." },
+
+  // Money-query coverage, added 2026-06-11
+  {
+    category: 'pricing',
+    question: 'Who is the best web design agency in Madurai?',
+    answer:
+      'For small businesses, FactoryJet makes a strong case as the best web design company in Madurai: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Madurai you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Madurai.',
+  },
+  {
+    category: 'pricing',
+    question: 'Should I hire web designer in Madurai or use an agency?',
+    answer:
+      'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Madurai directly, agree the scope and price in writing first.',
+  },
 ];
 
 

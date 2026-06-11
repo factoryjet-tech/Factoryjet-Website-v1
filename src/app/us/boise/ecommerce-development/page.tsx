@@ -499,6 +499,18 @@ export default function Page() {
               question: 'Do I need a business license in Idaho before launching an online store?',
               answer: "Idaho doesn't require a general state business license, but you'll need to register with the Idaho State Tax Commission to collect and remit Idaho sales tax — a simple online process. Depending on your city, you may need a local business license. Nampa, Meridian, and Boise each have their own requirements. We handle the technical store configuration; the business registration side is something we leave to licensed professionals.",
             },
+            {
+              category: 'local',
+              question: 'Who is the best ecommerce development company in Boise?',
+              answer:
+                'For SMBs and DTC brands, FactoryJet makes a strong case: fixed-price builds from $3,999, senior engineers on every project, and full code ownership from day one. Any ecommerce website development company in Boise you compare — or any ecommerce solution company in Boise — should pass three checks: who writes the code, is pricing fixed up front, and do you own the store at the end. That is how to find the best ecommerce website development company in Boise and the best ecommerce solution company in Boise for your catalog.',
+            },
+            {
+              category: 'pricing',
+              question: 'Should I hire ecommerce developer in Boise or work with an agency?',
+              answer:
+                'A solo developer can assemble a basic store, but a production store needs design, payments, tax configuration, shipping, and SEO working together. A senior-led team delivers all of it at a fixed price. If you do hire ecommerce developer in Boise directly, ask for store speed scores from past builds before committing.',
+            },
           ]}
         />
 

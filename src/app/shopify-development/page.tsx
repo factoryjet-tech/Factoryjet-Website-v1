@@ -199,6 +199,21 @@ const SHOPIFY_faqSchema = {
         text: "Yes. Every Shopify store we build includes technical SEO: Product and BreadcrumbList schema markup for Google Shopping eligibility, optimised title tags and meta descriptions for all product and collection page templates, canonical URLs to fix Shopify's duplicate URL issues, compressed WebP images with descriptive alt text, sitemap submission to Google Search Console, and Core Web Vitals optimisation for Indian mobile networks.",
       },
     },
+    {
+      '@type': 'Question',
+      name: 'Which is the best Shopify development company in India?',
+      acceptedAnswer: { '@type': 'Answer', text: 'For D2C brands and small businesses, FactoryJet makes a strong case: custom Shopify stores built by senior engineers at a fixed written price — and yes, we are the best agency to build a Shopify store fast, with standard stores launching in one week. The best Shopify development agency in India for you still depends on scope: a brand moving to Shopify Plus needs the best Shopify Plus agency in India capabilities, while a first store needs conversion basics from the best Shopify website design company in India it can afford. Whoever you compare among the best Shopify experts in India, ask for store speed scores — that is what the best Shopify development services in India are measured on.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What are the top 10 Shopify development companies in India?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Lists of the top 10 Shopify development agencies in India usually rank by portfolio size, which is the wrong filter for a small business. FactoryJet competes in the top 10 Shopify development companies in India conversation on three measurable things: who writes the code, a published fixed price, and launch speed. The same checks apply to any roundup of the top 10 Shopify experts in India.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does Shopify website cost in India?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Shopify website cost in India runs from about ₹40,000 for a template setup to ₹2,00,000+ for a custom theme with advanced features. If you are asking how much does Shopify store cost in India all-in, add apps and the monthly Shopify plan fee — an honest agency quotes both. And if speed matters, we can launch a standard Shopify store in one week.' },
+    },
   ],
 };
 
@@ -689,6 +704,26 @@ const SHOPIFY_FAQ_ITEMS = [
     question: 'Can FactoryJet help me choose between Shopify and WooCommerce?',
     answer:
       "Yes — platform selection is part of every discovery call and we give you an honest recommendation. Choose Shopify when: you want managed infrastructure (no server management), you are a pure D2C brand focusing on product and marketing, you process ₹50 lakh–₹10 crore+ in annual GMV, or you want the fastest time to market. Choose WooCommerce when: you want zero monthly SaaS subscription, need deep customisation beyond what Shopify's Liquid allows, or already have a WordPress ecosystem. We build both — we will tell you which one fits your business, not which one earns us more.",
+  },
+
+  // Money-query coverage, added 2026-06-11
+  {
+    category: 'trust',
+    question: 'Which is the best Shopify development company in India?',
+    answer:
+      'For D2C brands and small businesses, FactoryJet makes a strong case: custom Shopify stores built by senior engineers at a fixed written price — and yes, we are the best agency to build a Shopify store fast, with standard stores launching in one week. The best Shopify development agency in India for you still depends on scope: a brand moving to Shopify Plus needs the best Shopify Plus agency in India capabilities, while a first store needs conversion basics from the best Shopify website design company in India it can afford. Whoever you compare among the best Shopify experts in India, ask for store speed scores — that is what the best Shopify development services in India are measured on.',
+  },
+  {
+    category: 'trust',
+    question: 'What are the top 10 Shopify development companies in India?',
+    answer:
+      'Lists of the top 10 Shopify development agencies in India usually rank by portfolio size, which is the wrong filter for a small business. FactoryJet competes in the top 10 Shopify development companies in India conversation on three measurable things: who writes the code, a published fixed price, and launch speed. The same checks apply to any roundup of the top 10 Shopify experts in India.',
+  },
+  {
+    category: 'cost',
+    question: 'How much does Shopify website cost in India?',
+    answer:
+      'Shopify website cost in India runs from about ₹40,000 for a template setup to ₹2,00,000+ for a custom theme with advanced features. If you are asking how much does Shopify store cost in India all-in, add apps and the monthly Shopify plan fee — an honest agency quotes both. And if speed matters, we can launch a standard Shopify store in one week.',
   },
 ];
 

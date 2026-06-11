@@ -192,7 +192,17 @@ const faqSchema = {
         text: 'Yes — 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No FactoryJet retainer required, no proprietary platform lock-in.',
       },
     },
-  ],
+    {
+      '@type': 'Question',
+      name: 'Who is the best web design agency in Bangalore?',
+      acceptedAnswer: { '@type': 'Answer', text: 'For small businesses, FactoryJet makes a strong case as the best web design company in Bangalore: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Bangalore you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Bangalore.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Should I hire web designer in Bangalore or use an agency?',
+      acceptedAnswer: { '@type': 'Answer', text: 'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Bangalore directly, agree the scope and price in writing first.' },
+    },
+],
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -370,6 +380,20 @@ const BLR_FAQ_ITEMS = [
     question: 'Do you offer ongoing retainer services for Bangalore businesses?',
     answer:
       'Yes. Monthly retainers from ₹4,999/month cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling, a dedicated engineer, and quarterly website health reports.',
+  },
+
+  // Money-query coverage, added 2026-06-11
+  {
+    category: 'pricing',
+    question: 'Who is the best web design agency in Bangalore?',
+    answer:
+      'For small businesses, FactoryJet makes a strong case as the best web design company in Bangalore: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Bangalore you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Bangalore.',
+  },
+  {
+    category: 'pricing',
+    question: 'Should I hire web designer in Bangalore or use an agency?',
+    answer:
+      'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Bangalore directly, agree the scope and price in writing first.',
   },
 ];
 

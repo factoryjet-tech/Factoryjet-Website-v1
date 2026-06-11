@@ -177,7 +177,17 @@ export default function Page() {
           text: 'Yes. We build company profile sites, product catalogues, and B2B inquiry portals for MSME manufacturers across GIDC Sachin, Hazira, and Pandesara industrial areas.',
         },
       },
-    ],
+    {
+      '@type': 'Question',
+      name: 'Who is the best web design agency in Surat?',
+      acceptedAnswer: { '@type': 'Answer', text: 'For small businesses, FactoryJet makes a strong case as the best web design company in Surat: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Surat you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Surat.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Should I hire web designer in Surat or use an agency?',
+      acceptedAnswer: { '@type': 'Answer', text: 'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Surat directly, agree the scope and price in writing first.' },
+    },
+],
   }
 
   const heroProps = {
@@ -362,6 +372,20 @@ const SRT_FAQ_ITEMS = [
   { category: 'local', question: 'Do you serve textile exporters in GIDC Sachin?', answer: "Absolutely. We build product catalogues, exporter profile sites, and B2B inquiry portals for synthetic fabric, embroidery, and saree manufacturers in GIDC Sachin and Pandesara." },
   { category: 'local', question: 'Can you build a Gujarati-English bilingual website?', answer: "Yes. Our Enterprise tier includes Gujarati language support with proper Devanagari rendering and locale-specific content for businesses targeting local Gujarat consumers." },
   { category: 'local', question: 'Do you have experience with Surat real estate developers?', answer: "Yes. We build project launch sites and developer portfolio pages for Surat real estate businesses — with inquiry forms, virtual tour integrations, and location maps." },
+
+  // Money-query coverage, added 2026-06-11
+  {
+    category: 'pricing',
+    question: 'Who is the best web design agency in Surat?',
+    answer:
+      'For small businesses, FactoryJet makes a strong case as the best web design company in Surat: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Surat you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Surat.',
+  },
+  {
+    category: 'pricing',
+    question: 'Should I hire web designer in Surat or use an agency?',
+    answer:
+      'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Surat directly, agree the scope and price in writing first.',
+  },
 ];
 
 

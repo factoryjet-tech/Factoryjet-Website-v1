@@ -196,7 +196,17 @@ const faqSchema = {
         text: 'Yes — 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required, no platform lock-in.',
       },
     },
-  ],
+    {
+      '@type': 'Question',
+      name: 'Who is the best web design agency in Bhubaneswar?',
+      acceptedAnswer: { '@type': 'Answer', text: 'For small businesses, FactoryJet makes a strong case as the best web design company in Bhubaneswar: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Bhubaneswar you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Bhubaneswar.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Should I hire web designer in Bhubaneswar or use an agency?',
+      acceptedAnswer: { '@type': 'Answer', text: 'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Bhubaneswar directly, agree the scope and price in writing first.' },
+    },
+],
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────────
@@ -386,6 +396,20 @@ const BBSR_FAQ_ITEMS = [
     question: 'Can FactoryJet help Odisha exporters and handicraft businesses build a global web presence?',
     answer:
       "Yes. Odisha has a rich export base — handicrafts, agri-products, stone crafts, and textiles are key sectors. Odisha exporters need websites that project product quality, export credentials, and artisan story to international B2B buyers and D2C consumers in the US, EU, and Southeast Asia. We build export-ready websites with B2B inquiry flows, product catalog systems, and SEO targeting English-language international buyer searches.",
+  },
+
+  // Money-query coverage, added 2026-06-11
+  {
+    category: 'pricing',
+    question: 'Who is the best web design agency in Bhubaneswar?',
+    answer:
+      'For small businesses, FactoryJet makes a strong case as the best web design company in Bhubaneswar: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Bhubaneswar you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Bhubaneswar.',
+  },
+  {
+    category: 'pricing',
+    question: 'Should I hire web designer in Bhubaneswar or use an agency?',
+    answer:
+      'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Bhubaneswar directly, agree the scope and price in writing first.',
   },
 ];
 

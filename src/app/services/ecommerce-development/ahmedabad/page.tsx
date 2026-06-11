@@ -133,7 +133,17 @@ const faqSchema = {
         text: 'Every store we build includes technical SEO from day one: Product and BreadcrumbList schema for Google Shopping eligibility, optimised title and meta templates, canonical URLs, GST price display, Core Web Vitals green on mobile (LCP under 2.5s, CLS below 0.1), and sitemap submission to Google Search Console. LocalBusiness schema with Ahmedabad geo-coordinates is included for local search visibility.',
       },
     },
-  ],
+    {
+      '@type': 'Question',
+      name: 'Who is the best ecommerce development company in Ahmedabad?',
+      acceptedAnswer: { '@type': 'Answer', text: 'For D2C brands and small businesses, FactoryJet makes a strong case: fixed written prices, senior engineers, and stores that launch in weeks. Any ecommerce website development company in Ahmedabad — or any ecommerce solution company in Ahmedabad — should pass three checks: who writes the code, is the price fixed, and do you own the store at the end. That is how to find the best ecommerce website development company in Ahmedabad and the best ecommerce solution company in Ahmedabad for your catalog.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Should I hire ecommerce developer in Ahmedabad or use an agency?',
+      acceptedAnswer: { '@type': 'Answer', text: 'One developer can build a basic store, but a real shop needs design, payments, shipping, and SEO together. A small senior team covers all of it at a fixed price. If you do hire ecommerce developer in Ahmedabad directly, check store speed scores from their past work first.' },
+    },
+],
 };
 
 const serviceSchema = {
@@ -396,6 +406,20 @@ const AHMEDABAD_ECOM_FAQ_ITEMS = [
     question: 'Can I manage and update the store myself after launch?',
     answer:
       'Absolutely — self-management is the goal. For Shopify stores, adding products, updating prices, creating discount codes, and reviewing orders requires zero coding knowledge. WooCommerce is slightly more technical but we set up a simplified admin workflow for non-technical founders. We build a short video library covering the 10 most common tasks your team will perform, so you are not dependent on a developer for day-to-day operations.',
+  },
+
+  // Money-query coverage, added 2026-06-11
+  {
+    category: 'pricing',
+    question: 'Who is the best ecommerce development company in Ahmedabad?',
+    answer:
+      'For D2C brands and small businesses, FactoryJet makes a strong case: fixed written prices, senior engineers, and stores that launch in weeks. Any ecommerce website development company in Ahmedabad — or any ecommerce solution company in Ahmedabad — should pass three checks: who writes the code, is the price fixed, and do you own the store at the end. That is how to find the best ecommerce website development company in Ahmedabad and the best ecommerce solution company in Ahmedabad for your catalog.',
+  },
+  {
+    category: 'pricing',
+    question: 'Should I hire ecommerce developer in Ahmedabad or use an agency?',
+    answer:
+      'One developer can build a basic store, but a real shop needs design, payments, shipping, and SEO together. A small senior team covers all of it at a fixed price. If you do hire ecommerce developer in Ahmedabad directly, check store speed scores from their past work first.',
   },
 ];
 

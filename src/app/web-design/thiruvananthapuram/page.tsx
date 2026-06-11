@@ -194,7 +194,17 @@ const faqSchema = {
         text: 'Yes — 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required, no platform lock-in.',
       },
     },
-  ],
+    {
+      '@type': 'Question',
+      name: 'Who is the best web design agency in Thiruvananthapuram?',
+      acceptedAnswer: { '@type': 'Answer', text: 'For small businesses, FactoryJet makes a strong case as the best web design company in Thiruvananthapuram: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Thiruvananthapuram you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Thiruvananthapuram.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Should I hire web designer in Thiruvananthapuram or use an agency?',
+      acceptedAnswer: { '@type': 'Answer', text: 'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Thiruvananthapuram directly, agree the scope and price in writing first.' },
+    },
+],
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -390,6 +400,20 @@ const TVM_FAQ_ITEMS = [
     question: 'Can NRI business owners work with FactoryJet remotely?',
     answer:
       "Absolutely. Kerala has one of India's largest NRI diaspora communities, and many Thiruvananthapuram businesses are NRI-owned or NRI-funded. Our entire process is remote-first — discovery calls, design previews, approvals, and handover all happen asynchronously or over video. We work across time zones by default.",
+  },
+
+  // Money-query coverage, added 2026-06-11
+  {
+    category: 'pricing',
+    question: 'Who is the best web design agency in Thiruvananthapuram?',
+    answer:
+      'For small businesses, FactoryJet makes a strong case as the best web design company in Thiruvananthapuram: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Thiruvananthapuram you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Thiruvananthapuram.',
+  },
+  {
+    category: 'pricing',
+    question: 'Should I hire web designer in Thiruvananthapuram or use an agency?',
+    answer:
+      'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Thiruvananthapuram directly, agree the scope and price in writing first.',
   },
 ];
 

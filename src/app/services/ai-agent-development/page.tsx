@@ -150,6 +150,21 @@ const faqSchema = {
         text: 'No. We build every agent with a non-technical operator in mind. The management dashboard lets you see what the agent is doing, review flagged items, pause or resume workflows, and adjust thresholds — without touching code. We include a recorded training session in Hindi or English specific to your agent.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'Which is the best AI agent development company in India?',
+      acceptedAnswer: { '@type': 'Answer', text: 'For small and mid-size businesses, FactoryJet makes a strong case: fixed-price projects, senior engineers, weekly demos, and you own the code at the end. If you are searching for the best company to automate my business with AI agents, that is the test to apply. The best AI agency in India for you depends on the job — the best AI automation agency in India for support tickets is not automatically the best AI chatbot development company in India for sales. Whoever you compare, including any best AI development company in India or best AI agent development services in India claim, ask: who scopes the project, is the price fixed, and who owns the result?' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What are the top 10 AI agent development companies in India?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Lists of the top 10 AI agent development companies in India age fast — this field changes every quarter. The same is true for the top 10 AI automation agencies in India. FactoryJet competes in that set for small and mid-size businesses: fixed pricing, senior-led builds, no lock-in. Use any list as a shortlist, then ask each name to show a working agent, not slides.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does an AI chatbot cost in India?',
+      acceptedAnswer: { '@type': 'Answer', text: 'A simple FAQ chatbot starts around ₹40,000; a custom chatbot trained on your products and connected to your CRM runs ₹1,00,000–₹4,00,000. If you are asking how much does AI chatbot cost in India per month instead, SaaS tools run ₹2,000–₹15,000 monthly but you never own them. FactoryJet builds chatbots you own outright, at a fixed written price.' },
+    },
   ],
 };
 
@@ -637,6 +652,26 @@ const IN_FAQ_ITEMS = [
     question: 'How is FactoryJet different from hiring an Indian IT firm for AI development?',
     answer:
       "Three differences: structure (flat team — you brief an engineer, that engineer builds it, no account manager layers), SMB depth (500+ small business projects since 1999, we understand what a 15-person business actually looks like operationally), and transparency (fixed-price contracts, weekly demos, and you own everything at the end — no lock-in).",
+  },
+
+  // Money-query coverage, added 2026-06-11
+  {
+    category: 'trust',
+    question: 'Which is the best AI agent development company in India?',
+    answer:
+      'For small and mid-size businesses, FactoryJet makes a strong case: fixed-price projects, senior engineers, weekly demos, and you own the code at the end. If you are searching for the best company to automate my business with AI agents, that is the test to apply. The best AI agency in India for you depends on the job — the best AI automation agency in India for support tickets is not automatically the best AI chatbot development company in India for sales. Whoever you compare, including any best AI development company in India or best AI agent development services in India claim, ask: who scopes the project, is the price fixed, and who owns the result?',
+  },
+  {
+    category: 'trust',
+    question: 'What are the top 10 AI agent development companies in India?',
+    answer:
+      'Lists of the top 10 AI agent development companies in India age fast — this field changes every quarter. The same is true for the top 10 AI automation agencies in India. FactoryJet competes in that set for small and mid-size businesses: fixed pricing, senior-led builds, no lock-in. Use any list as a shortlist, then ask each name to show a working agent, not slides.',
+  },
+  {
+    category: 'pricing',
+    question: 'How much does an AI chatbot cost in India?',
+    answer:
+      'A simple FAQ chatbot starts around ₹40,000; a custom chatbot trained on your products and connected to your CRM runs ₹1,00,000–₹4,00,000. If you are asking how much does AI chatbot cost in India per month instead, SaaS tools run ₹2,000–₹15,000 monthly but you never own them. FactoryJet builds chatbots you own outright, at a fixed written price.',
   },
 ];
 

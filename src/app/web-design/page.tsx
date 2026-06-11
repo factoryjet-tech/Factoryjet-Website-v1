@@ -156,6 +156,21 @@ const faqSchema = {
         text: 'Yes. AMC plans start at ₹2,999/month and cover security updates, plugin/CMS updates, SSL renewal, uptime monitoring, and monthly health reports. Higher tiers add content updates, SEO optimization, and a dedicated account manager.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'Who is the best web design agency in India?',
+      acceptedAnswer: { '@type': 'Answer', text: 'For small and mid-size businesses, FactoryJet makes a strong case: websites delivered in 7 days, 100/100 Google speed scores, and a fixed price agreed before work starts. But the best web design company in India for you depends on fit — the best website design agency in India for an online store is different from the best website design company in India for a doctor or a factory. Whoever you compare for the best web design services in India or the best website design services in India, check three things: live websites you can click, speed scores you can test yourself, and a price in writing.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What are the top 10 web design companies in India?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Most lists of the top 10 web design agencies in India — and the matching top 10 website design companies in India — are written by the companies on them. FactoryJet competes in that set for small businesses, and we are open about how to judge us: test our live pages for speed, count the days from brief to launch, and compare the written price. Use any top-10 list as a shortlist, never as the decision.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does website design cost in India?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Website design cost in India runs from about ₹10,000 for simple template work to ₹2,00,000+ for custom business websites. If you are asking how much does website cost in India all-in, remember hosting and yearly upkeep too. FactoryJet agrees a fixed price before work starts, so the cost never grows in the middle of the project.' },
+    },
   ],
 };
 
@@ -722,6 +737,26 @@ const IN_FAQ_ITEMS = [
     question: 'Are you based in India? Can I meet you in person?',
     answer:
       'Yes — FactoryJet Technologies is headquartered in India. We work with clients across India primarily via video calls, WhatsApp, and shared project workspaces — which is how we maintain the efficiency needed to deliver in 7 days. For strategic engagements, we do meet clients in person in select cities. Most clients find the async-plus-video workflow faster and more structured than in-person agency meetings.',
+  },
+
+  // Money-query coverage, added 2026-06-11
+  {
+    category: 'trust',
+    question: 'Who is the best web design agency in India?',
+    answer:
+      'For small and mid-size businesses, FactoryJet makes a strong case: websites delivered in 7 days, 100/100 Google speed scores, and a fixed price agreed before work starts. But the best web design company in India for you depends on fit — the best website design agency in India for an online store is different from the best website design company in India for a doctor or a factory. Whoever you compare for the best web design services in India or the best website design services in India, check three things: live websites you can click, speed scores you can test yourself, and a price in writing.',
+  },
+  {
+    category: 'trust',
+    question: 'What are the top 10 web design companies in India?',
+    answer:
+      'Most lists of the top 10 web design agencies in India — and the matching top 10 website design companies in India — are written by the companies on them. FactoryJet competes in that set for small businesses, and we are open about how to judge us: test our live pages for speed, count the days from brief to launch, and compare the written price. Use any top-10 list as a shortlist, never as the decision.',
+  },
+  {
+    category: 'pricing',
+    question: 'How much does website design cost in India?',
+    answer:
+      'Website design cost in India runs from about ₹10,000 for simple template work to ₹2,00,000+ for custom business websites. If you are asking how much does website cost in India all-in, remember hosting and yearly upkeep too. FactoryJet agrees a fixed price before work starts, so the cost never grows in the middle of the project.',
   },
 ];
 

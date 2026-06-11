@@ -132,6 +132,20 @@ const VAD_FAQ_ITEMS = [
   { category: 'reporting', question: 'Do I own the content and links you build?', answer: 'Yes, all of it. Every page, plan, and piece lives on your own website and is yours to keep. If you stop working with us, you keep everything. There is no special software you must keep paying for to hold your rankings.' },
   { category: 'reporting', question: 'How do you measure success?', answer: 'By enquiries, quote requests, and sales, not rankings for their own sake. We agree the searches that matter and what counts as a lead up front, set up Google’s free tools properly, and report on the numbers that map to your sales.' },
   { category: 'reporting', question: 'Who works on my Vadodara account?', answer: 'A small, senior team. FactoryJet is founder-led, so you talk to the people doing the strategy and the technical work, not a junior who got your account on day two.' },
+
+  // Money-query coverage, added 2026-06-11
+  {
+    category: 'pricing',
+    question: 'Who is the best SEO agency in Vadodara?',
+    answer:
+      'For small and mid-size businesses, FactoryJet makes a strong case as the best SEO company in Vadodara: the same engineers who build fast websites run the SEO services in Vadodara clients pay for, with a clear monthly report and no long contract. The best SEO services in Vadodara pass three checks: a plan in simple words, results with real numbers, and the price in writing. We also run local SEO services in Vadodara — the best local SEO services in Vadodara manage your Google Business Profile every week, not once a quarter.',
+  },
+  {
+    category: 'pricing',
+    question: 'Should I hire SEO expert in Vadodara or work with an agency?',
+    answer:
+      'Both can work. If you hire SEO expert in Vadodara alone, you get one set of skills — and SEO needs technical work, writing, and links together. A small senior team gives you all three for a similar monthly cost. Whichever way you go, ask for one example with real numbers before you pay.',
+  },
 ];
 
 const faqSchema = {

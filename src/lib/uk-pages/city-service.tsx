@@ -10,6 +10,40 @@ interface CityServicePageProps {
   service: ServiceData
 }
 
+
+const MONEY_FAQS: Record<string, (c: string) => { q: string; a: string }[]> = {
+  'web-design': (c) => [
+    { q: `Who is the best web design agency in ${c}?`, a: `For small businesses, FactoryJet makes a strong case as the best web design company in ${c}: custom websites delivered in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in ${c} you compare should pass three checks: live work you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in ${c}.` },
+    { q: `Should I hire web designer in ${c} or use an agency?`, a: `A freelancer suits a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, build, SEO, and support in one place at a fixed price. If you do hire web designer in ${c} directly, agree scope and price in writing first.` },
+    { q: `How much does website design cost in ${c}?`, a: `Website design cost in ${c} typically runs £500–£5,000 depending on scope. FactoryJet builds are fixed-price — agreed in writing before work starts — with everything owned by you: domain, hosting, and files.` },
+  ],
+  seo: (c) => [
+    { q: `Who is the best SEO agency in ${c}?`, a: `For SMBs, FactoryJet makes a strong case as the best SEO company in ${c}: engineering-led SEO services in ${c} with per-engine AI-citation reporting and no long contracts. The best SEO services in ${c} pass three checks: a clear plan, results with revenue numbers, and the price in writing. We also run local SEO services in ${c} — the best local SEO services in ${c} manage your Google Business Profile weekly, not quarterly.` },
+    { q: `Should I hire SEO expert in ${c} or work with an agency?`, a: `Both can work. If you hire SEO expert in ${c} alone you get one skill set; SEO needs technical work, content, and authority building together. A small senior team covers all three at a similar monthly cost. Either way, ask for one case study with real numbers before you pay.` },
+    { q: `How much does SEO cost in ${c}?`, a: `SEO cost in ${c} typically runs £500–£3,000 per month for local and SME work (UK-wide benchmarks put meaningful retainers from about £1,500). FactoryJet quotes a fixed monthly price in writing, month-to-month.` },
+  ],
+  'ai-seo': (c) => [
+    { q: `Who is the best AI SEO agency in ${c}?`, a: `FactoryJet makes a strong case as the best AI SEO company in ${c}: AI SEO services in ${c} covering ChatGPT, Perplexity, Claude, and Gemini plus Google AI Overviews, with per-engine citation counts reported monthly. The best AI SEO services in ${c} are the ones that show you citations per engine — not just classic rankings.` },
+    { q: `Is there an AEO agency in ${c}?`, a: `Yes — FactoryJet operates as both an AEO agency in ${c} and a generative engine optimization agency in ${c}, because the two overlap almost completely. The best AEO agency in ${c} — and the best generative engine optimization agency in ${c} — engineers answer-first content and schema that AI engines can quote verbatim; if an agency sells you GEO and AEO as separate bills, you are paying twice for one workflow. And if you would rather hire AI SEO expert in ${c} directly, apply the same test: per-engine citation proof, in writing.` },
+    { q: `How much does AI SEO cost in ${c}?`, a: `AI SEO cost in ${c} typically lands inside a normal SEO retainer rather than on top of it — UK published prices run roughly £550–£6,000/month. FactoryJet includes AI search coverage in standard retainers at a fixed written price.` },
+  ],
+  ecommerce: (c) => [
+    { q: `Who is the best ecommerce development company in ${c}?`, a: `For DTC brands and SMBs, FactoryJet makes a strong case: fixed written prices, senior engineers, and stores that launch in weeks. Any ecommerce website development company in ${c} — or ecommerce solution company in ${c} — should pass three checks: who writes the code, is the price fixed, and do you own the store at the end. That is how to find the best ecommerce website development company in ${c} and the best ecommerce solution company in ${c} for your catalog.` },
+    { q: `Should I hire ecommerce developer in ${c} or use an agency?`, a: `A solo developer can assemble a basic store, but a production store needs design, payments, shipping, and SEO working together. A senior-led team delivers all of it at a fixed price. If you do hire ecommerce developer in ${c} directly, check store speed scores from past work first.` },
+    { q: `How much does an ecommerce website cost in ${c}?`, a: `Ecommerce website cost in ${c} typically runs £1,000–£10,000 depending on catalog size and features. FactoryJet stores are fixed-price and milestone-paid, with full ownership from day one.` },
+  ],
+  'ai-agents': (c) => [
+    { q: `Who is the best AI agent development company in ${c}?`, a: `For SMBs, FactoryJet makes a strong case: fixed-price agent builds, senior engineers, weekly demos, and you own the code. The best AI automation agency in ${c} for you depends on the workflow — an ai automation agency in ${c} that excels at support tickets is not automatically right for sales agents. Ask who scopes the project and whether the price is fixed.` },
+    { q: `Should I hire AI agent developer in ${c}?`, a: `If you hire AI agent developer in ${c} as a freelancer, you get build skills but rarely production monitoring, integration depth, and handover documentation. A small senior team covers the full lifecycle at a fixed price — and you keep everything at the end.` },
+    { q: `How much does AI agent development cost in ${c}?`, a: `AI agent development cost in ${c} typically runs £4,000–£40,000 depending on integrations and autonomy. FactoryJet quotes fixed prices per project, milestone-paid, with no retainers required.` },
+  ],
+  'ai-websites': (c) => [
+    { q: `Who is the best web development company in ${c}?`, a: `For SMBs, FactoryJet makes a strong case as the best website development company in ${c}: AI-accelerated builds shipped by senior engineers in 7 days, fixed pricing, and full ownership. Any web development company in ${c} you compare should show you live work, speed scores, and the price in writing.` },
+    { q: `Should I hire web developer in ${c} or use an agency?`, a: `If you hire web developer in ${c} directly you get one skill set; a production website needs design, build, SEO, and support together. A small senior team covers all of it at a fixed price — usually faster than assembling freelancers.` },
+    { q: `How much does website development cost in ${c}?`, a: `Website development cost in ${c} runs £500–£5,000 for business sites and more for web applications. FactoryJet builds are fixed-price with no surprise invoices — the number you sign is the number you pay.` },
+  ],
+}
+
 export default function CityServicePage({ city, service }: CityServicePageProps) {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
 
@@ -36,6 +70,9 @@ export default function CityServicePage({ city, service }: CityServicePageProps)
     }
   ]
 
+  const moneyFaqs = (MONEY_FAQS[service.slug] ?? (() => []))(city.name)
+  const allFaqs = [...faqs, ...moneyFaqs]
+
   const testimonials = [
     {
       text: `FactoryJet delivered our ${service.name} in exactly ${service.deliveryWeeks.standard} days as promised. The result is outstanding — we've seen more enquiries in two weeks than the previous three months.`,
@@ -56,6 +93,16 @@ export default function CityServicePage({ city, service }: CityServicePageProps)
 
   return (
     <main className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: allFaqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+          }),
+        }}
+      />
       {/* HERO SECTION */}
       <section className="relative min-h-screen bg-[#0a0a0a] text-white flex flex-col justify-center items-center px-4 md:px-8 overflow-hidden">
         {/* Decorative top line */}
@@ -247,7 +294,7 @@ export default function CityServicePage({ city, service }: CityServicePageProps)
           </h2>
 
           <div className="space-y-4">
-            {faqs.map((faq, i) => (
+            {allFaqs.map((faq, i) => (
               <div key={i} className="bg-white rounded-lg border border-[#E9ECEF] overflow-hidden">
                 <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}

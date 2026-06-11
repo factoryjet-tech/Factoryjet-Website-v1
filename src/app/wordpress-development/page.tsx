@@ -115,6 +115,21 @@ const WP_faqSchema = {
         text: "Yes. WordPress speed optimization is one of our most common engagements in India. Most Indian WordPress sites load in 6–12 seconds because of cheap shared hosting, 40–80 unoptimized plugins, uncompressed images, and no caching. FactoryJet's WordPress speed optimization service: migrates you to Cloudflare or AWS LightSail, implements Redis object caching, converts images to WebP, dequeues unused scripts and styles, and delivers a Lighthouse 90+ score. Average improvement: 4–6× faster load time.",
       },
     },
+    {
+      '@type': 'Question',
+      name: 'Who is the best web development company in India?',
+      acceptedAnswer: { '@type': 'Answer', text: 'For small and mid-size businesses, FactoryJet makes a strong case: senior engineers on every build, 7-day delivery for standard sites, and a fixed written price. The best web development agency in India for you depends on what you are building — the best website development company in India for a content site is not always the best web development services in India pick for a custom web app. Whoever you compare, including any best website development services in India claim, apply three checks: who writes the code, is the price fixed, and do you own everything at the end.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What are the top 10 web development companies in India?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Published lists of the top 10 web development companies in India — and the matching top 10 website development companies in India — skew toward big outsourcing firms with big-company pricing. FactoryJet competes in that conversation for small and mid-size businesses: senior-led, fixed-price, no layers between you and the engineer. Use any list as a shortlist, then compare written prices and live work.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does website development cost in India?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Website development cost in India runs from about ₹15,000 for a simple WordPress site to ₹3,00,000+ for custom web applications. FactoryJet quotes a fixed price after a short call, milestone-paid, and the 7-day delivery guarantee applies to standard sites up to five pages.' },
+    },
   ],
 };
 
@@ -614,6 +629,26 @@ const WP_FAQ_ITEMS = [
     question: 'Can your team train my staff to manage WordPress content?',
     answer:
       "Yes — training is included in every project. We deliver a recorded screen-share walkthrough (30–45 minutes) covering: adding and editing pages in the block editor, publishing blog posts with images and SEO metadata, updating contact information and business hours, managing WooCommerce products and orders (for e-commerce builds), and handling common questions. The recording is yours to keep and share with future staff. For larger teams, we offer 1:1 training sessions at ₹2,500/hour.",
+  },
+
+  // Money-query coverage, added 2026-06-11
+  {
+    category: 'platform',
+    question: 'Who is the best web development company in India?',
+    answer:
+      'For small and mid-size businesses, FactoryJet makes a strong case: senior engineers on every build, 7-day delivery for standard sites, and a fixed written price. The best web development agency in India for you depends on what you are building — the best website development company in India for a content site is not always the best web development services in India pick for a custom web app. Whoever you compare, including any best website development services in India claim, apply three checks: who writes the code, is the price fixed, and do you own everything at the end.',
+  },
+  {
+    category: 'platform',
+    question: 'What are the top 10 web development companies in India?',
+    answer:
+      'Published lists of the top 10 web development companies in India — and the matching top 10 website development companies in India — skew toward big outsourcing firms with big-company pricing. FactoryJet competes in that conversation for small and mid-size businesses: senior-led, fixed-price, no layers between you and the engineer. Use any list as a shortlist, then compare written prices and live work.',
+  },
+  {
+    category: 'pricing',
+    question: 'How much does website development cost in India?',
+    answer:
+      'Website development cost in India runs from about ₹15,000 for a simple WordPress site to ₹3,00,000+ for custom web applications. FactoryJet quotes a fixed price after a short call, milestone-paid, and the 7-day delivery guarantee applies to standard sites up to five pages.',
   },
 ];
 

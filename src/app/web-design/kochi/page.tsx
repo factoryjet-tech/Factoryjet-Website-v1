@@ -192,7 +192,17 @@ const faqSchema = {
         text: 'Yes — 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required, no platform lock-in.',
       },
     },
-  ],
+    {
+      '@type': 'Question',
+      name: 'Who is the best web design agency in Kochi?',
+      acceptedAnswer: { '@type': 'Answer', text: 'For small businesses, FactoryJet makes a strong case as the best web design company in Kochi: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Kochi you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Kochi.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Should I hire web designer in Kochi or use an agency?',
+      acceptedAnswer: { '@type': 'Answer', text: 'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Kochi directly, agree the scope and price in writing first.' },
+    },
+],
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -382,6 +392,20 @@ const KOCHI_FAQ_ITEMS = [
     question: 'Do you build websites for Kochi seafood and spice exporters?',
     answer:
       'Yes. Kochi is a key hub for Kerala seafood exports (one of India\'s largest seafood export corridors) and spice trade. Export businesses need websites that project certifications, product quality, processing capacity, and cold chain credentials to international buyers. We build B2B export sites with product catalog systems, inquiry forms optimised for global buyer flows, and SEO targeting English-language searches from procurement teams in the US, EU, and Middle East.',
+  },
+
+  // Money-query coverage, added 2026-06-11
+  {
+    category: 'pricing',
+    question: 'Who is the best web design agency in Kochi?',
+    answer:
+      'For small businesses, FactoryJet makes a strong case as the best web design company in Kochi: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Kochi you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Kochi.',
+  },
+  {
+    category: 'pricing',
+    question: 'Should I hire web designer in Kochi or use an agency?',
+    answer:
+      'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Kochi directly, agree the scope and price in writing first.',
   },
 ];
 

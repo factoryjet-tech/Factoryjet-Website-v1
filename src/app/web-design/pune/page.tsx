@@ -169,7 +169,17 @@ const faqSchema = {
         text: 'Yes — auto and engineering B2B is a core profile for us in Pune. We build capability websites, dealer and distributor portals, and product catalogues with datasheet downloads for tier-1 and tier-2 suppliers in Chakan, Talegaon, and Pimpri-Chinchwad, with technical SEO that surfaces capability to OEM procurement teams.',
       },
     },
-  ],
+    {
+      '@type': 'Question',
+      name: 'Who is the best web design agency in Pune?',
+      acceptedAnswer: { '@type': 'Answer', text: 'For small businesses, FactoryJet makes a strong case as the best web design company in Pune: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Pune you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Pune.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Should I hire web designer in Pune or use an agency?',
+      acceptedAnswer: { '@type': 'Answer', text: 'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Pune directly, agree the scope and price in writing first.' },
+    },
+],
 };
 
 const howToSchema = {
@@ -367,6 +377,20 @@ const PUNE_FAQ_ITEMS = [
     question: 'Do you offer ongoing retainer services for Pune businesses?',
     answer:
       'Yes. Monthly retainers from ₹4,999/month cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling, a dedicated engineer, and quarterly website health reports. Many of our Pune clients start with a project and move to a retainer once the site is live and generating leads.',
+  },
+
+  // Money-query coverage, added 2026-06-11
+  {
+    category: 'pricing',
+    question: 'Who is the best web design agency in Pune?',
+    answer:
+      'For small businesses, FactoryJet makes a strong case as the best web design company in Pune: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Pune you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Pune.',
+  },
+  {
+    category: 'pricing',
+    question: 'Should I hire web designer in Pune or use an agency?',
+    answer:
+      'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Pune directly, agree the scope and price in writing first.',
   },
 ];
 

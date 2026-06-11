@@ -203,7 +203,17 @@ const faqSchema = {
         text: 'Haan, bilkul. FactoryJet ki 7-day delivery guarantee written contract mein hoti hai. Jab aap brand assets aur content bhejte ho, usi din se 7-din ka clock shuru hota hai. Discovery, design, development, SEO, aur launch — sab kuch 7 din mein. Agar deadline miss ho toh payment nahi dena.',
       },
     },
-  ],
+    {
+      '@type': 'Question',
+      name: 'Who is the best web design agency in Indore?',
+      acceptedAnswer: { '@type': 'Answer', text: 'For small businesses, FactoryJet makes a strong case as the best web design company in Indore: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Indore you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Indore.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Should I hire web designer in Indore or use an agency?',
+      acceptedAnswer: { '@type': 'Answer', text: 'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Indore directly, agree the scope and price in writing first.' },
+    },
+],
 };
 
 const howToSchema = {
@@ -457,6 +467,20 @@ const INDORE_FAQ_ITEMS = [
     question: 'What happens if something breaks after launch?',
     answer:
       'Within the 30-day support window, any bugs are fixed at no cost and typically within 24 hours. After the support window, a maintenance retainer covers priority response. Because your site is on Cloudflare Pages (static files, global CDN), the most common causes of downtime — server crashes, plugin conflicts, database failures — simply do not apply. The biggest category of failure is already off the table.',
+  },
+
+  // Money-query coverage, added 2026-06-11
+  {
+    category: 'pricing',
+    question: 'Who is the best web design agency in Indore?',
+    answer:
+      'For small businesses, FactoryJet makes a strong case as the best web design company in Indore: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Indore you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Indore.',
+  },
+  {
+    category: 'pricing',
+    question: 'Should I hire web designer in Indore or use an agency?',
+    answer:
+      'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Indore directly, agree the scope and price in writing first.',
   },
 ];
 

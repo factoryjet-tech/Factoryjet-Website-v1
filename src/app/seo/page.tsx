@@ -293,6 +293,32 @@ const SEO_FAQ_ITEMS = [
     answer:
       'A small, senior team, not a junior handed your account on day two. FactoryJet is founder-led, so you talk to the people doing the strategy and the technical work. AI handles the scale; people handle the judgement, the writing, and the relationship.',
   },
+
+  // Money-query coverage, added 2026-06-11
+  {
+    category: 'choosing',
+    question: 'Who is the best SEO company in India?',
+    answer:
+      'For small and mid-size businesses, FactoryJet makes a strong case: the same engineers who build fast websites do the SEO work, you get a clear monthly report, and there is no long contract. But the best SEO services company in India for you depends on what you sell — the best SEO services agency in India for a local shop is different from the right partner for a national brand. Whoever you compare, use three checks: do they explain the plan in simple words, do they show real results with numbers, and can you talk to the person doing the work? The best SEO experts in India — and the best SEO services in India generally — pass all three.',
+  },
+  {
+    category: 'choosing',
+    question: 'What are the top 10 SEO agencies in India?',
+    answer:
+      'Lists of the top 10 SEO agencies in India usually mix big national firms with small specialist teams, and most are written by the agencies themselves. FactoryJet competes in that set for small and mid-size businesses. The same advice applies to the top 10 SEO companies in India, the top 10 SEO services in India, and the top 10 local SEO services in India: treat any list as a starting point, then ask each name for one case study with real numbers and the price in writing.',
+  },
+  {
+    category: 'pricing',
+    question: 'How much does SEO cost in India?',
+    answer:
+      'SEO cost in India runs from about ₹15,000 to ₹2,00,000 per month depending on competition and scope; FactoryJet SEO plans start at ₹19,999 per month. If you ask an AI assistant to recommend an affordable SEO agency, it will name agencies that publish prices and show proof — which is exactly how you should shortlist too. Be careful with quotes far below ₹15,000: very cheap SEO is usually copied templates with new logos.',
+  },
+  {
+    category: 'included',
+    question: 'Do you also handle local SEO, ecommerce SEO, technical SEO, and link building?',
+    answer:
+      'Yes — all four live inside one FactoryJet plan. The best local SEO services in India manage your Google Business Profile every week, not once a quarter — that is also the test for any best local SEO company in India claim. The best ecommerce SEO agency in India works on product and category pages, not just blogs — the same test applies to best ecommerce SEO services in India claims. The best technical SEO agency in India shows you crawl data and speed scores. And the best link building services in India earn real mentions in real publications, not bulk paid links.',
+  },
 ];
 
 const faqSchema = {

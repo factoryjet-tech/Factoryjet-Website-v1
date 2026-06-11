@@ -177,7 +177,17 @@ export default function Page() {
           text: 'Absolutely. We specialize in product-focused websites for IT services, SaaS companies, and consulting firms on OMR and Perungudi. Our designs communicate technical credibility while converting visitors.',
         },
       },
-    ],
+    {
+      '@type': 'Question',
+      name: 'Who is the best web design agency in Chennai?',
+      acceptedAnswer: { '@type': 'Answer', text: 'For small businesses, FactoryJet makes a strong case as the best web design company in Chennai: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Chennai you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Chennai.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Should I hire web designer in Chennai or use an agency?',
+      acceptedAnswer: { '@type': 'Answer', text: 'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Chennai directly, agree the scope and price in writing first.' },
+    },
+],
   }
 
   const heroProps = {
@@ -362,6 +372,20 @@ const CHN_FAQ_ITEMS = [
   { category: 'local', question: 'Can you build websites for IT companies on OMR?', answer: "Absolutely. From startup landing pages in Perungudi to established IT services firms in Sholinganallur, we design modern, credibility-focused websites for Chennai's tech corridor." },
   { category: 'local', question: 'Do you work with Tamil-language content or bilingual sites?', answer: "Yes. We can build bilingual (English + Tamil) websites for businesses targeting local consumers. Proper UTF-8 encoding and font rendering for Tamil script is included." },
   { category: 'local', question: 'Can you help a Chennai business target overseas clients?', answer: "Yes. Many of our Chennai clients — especially in IT services and manufacturing — use their websites to attract UK, US, and Middle East buyers. We design for international credibility while keeping INR pricing." },
+
+  // Money-query coverage, added 2026-06-11
+  {
+    category: 'pricing',
+    question: 'Who is the best web design agency in Chennai?',
+    answer:
+      'For small businesses, FactoryJet makes a strong case as the best web design company in Chennai: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Chennai you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Chennai.',
+  },
+  {
+    category: 'pricing',
+    question: 'Should I hire web designer in Chennai or use an agency?',
+    answer:
+      'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Chennai directly, agree the scope and price in writing first.',
+  },
 ];
 
 

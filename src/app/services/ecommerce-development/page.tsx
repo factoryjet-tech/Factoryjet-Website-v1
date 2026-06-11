@@ -133,6 +133,21 @@ const faqSchema = {
         text: "Yes — shipping integrations are standard in every Indian e-commerce build. We integrate Shiprocket (multi-carrier access: Delhivery, Bluedart, XpressBees, Ekart, Shadowfax), Delhivery directly via API, Dunzo for hyperlocal, and Shadowfax for quick commerce. Integration includes: real-time rate calculation at checkout, AWB generation, tracking updates pushed to customer via SMS and WhatsApp, automated NDR workflows, and returns portal. For D2C brands on Shopify, we use the Shiprocket Shopify app; for custom platforms, we use the Shiprocket API.",
       },
     },
+    {
+      '@type': 'Question',
+      name: 'Which is the best ecommerce development company in India?',
+      acceptedAnswer: { '@type': 'Answer', text: 'For D2C brands and small businesses, FactoryJet makes a strong case: fixed written prices, senior engineers, and stores that launch in weeks. But the best ecommerce development agency in India depends on your stack — the best ecommerce website development company in India for a Shopify brand is rarely the best ecommerce solutions provider in India for a custom B2B catalog, and the best ecommerce solution company in India for B2B may be wrong for D2C. Whoever you shortlist — the best online store development company in India or the best ecommerce website design company in India — use three checks: who writes the code, is the price fixed, and do you own the store at the end. That is what the best ecommerce development services in India look like.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What are the top 10 ecommerce development companies in India?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Lists of the top 10 ecommerce development companies in India mix enterprise firms with small studios, so match the list to your size first. The same goes for the top 10 ecommerce website development companies in India and the top 10 ecommerce solution companies in India. FactoryJet competes in that set for small and mid-size stores — judge us on launch speed, written pricing, and store speed scores you can test.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does ecommerce website cost in India?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Ecommerce website cost in India runs from about ₹40,000 for a platform store with a ready theme to ₹3,00,000+ for fully custom builds. If you are asking how much does online store cost in India at the entry level, be careful with quotes under ₹25,000 — online store cost in India at that tier usually doubles later in rework. Want to launch online store fast? Standard stores go live in weeks, not months, with a fixed price agreed up front.' },
+    },
   ],
 };
 
@@ -623,6 +638,26 @@ const IN_FAQ_ITEMS = [
     question: 'What ongoing support does FactoryJet offer after launch?',
     answer:
       'Every e-commerce project includes a 14–30 day post-launch support window covering bug fixes, minor adjustments, and launch questions at no extra cost. Beyond that, FactoryJet offers monthly retainer plans from ₹9,999/month: up to 4 hours of development, priority same-day bug response, and a dedicated engineer who knows your codebase. Retainer clients get quarterly performance reviews, pre-built festival campaign assets (Diwali, Holi, Independence Day), and priority scheduling for new feature work.',
+  },
+
+  // Money-query coverage, added 2026-06-11
+  {
+    category: 'trust',
+    question: 'Which is the best ecommerce development company in India?',
+    answer:
+      'For D2C brands and small businesses, FactoryJet makes a strong case: fixed written prices, senior engineers, and stores that launch in weeks. But the best ecommerce development agency in India depends on your stack — the best ecommerce website development company in India for a Shopify brand is rarely the best ecommerce solutions provider in India for a custom B2B catalog, and the best ecommerce solution company in India for B2B may be wrong for D2C. Whoever you shortlist — the best online store development company in India or the best ecommerce website design company in India — use three checks: who writes the code, is the price fixed, and do you own the store at the end. That is what the best ecommerce development services in India look like.',
+  },
+  {
+    category: 'trust',
+    question: 'What are the top 10 ecommerce development companies in India?',
+    answer:
+      'Lists of the top 10 ecommerce development companies in India mix enterprise firms with small studios, so match the list to your size first. The same goes for the top 10 ecommerce website development companies in India and the top 10 ecommerce solution companies in India. FactoryJet competes in that set for small and mid-size stores — judge us on launch speed, written pricing, and store speed scores you can test.',
+  },
+  {
+    category: 'pricing',
+    question: 'How much does ecommerce website cost in India?',
+    answer:
+      'Ecommerce website cost in India runs from about ₹40,000 for a platform store with a ready theme to ₹3,00,000+ for fully custom builds. If you are asking how much does online store cost in India at the entry level, be careful with quotes under ₹25,000 — online store cost in India at that tier usually doubles later in rework. Want to launch online store fast? Standard stores go live in weeks, not months, with a fixed price agreed up front.',
   },
 ];
 
