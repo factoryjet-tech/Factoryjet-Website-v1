@@ -2,7 +2,8 @@
 
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-export type ModalRegion = 'in' | 'us' | 'uk';
+/* 'au' (2026-06-11): AU market launch — /au CTAs tag leads with region 'au'. */
+export type ModalRegion = 'in' | 'us' | 'uk' | 'au';
 /* 'seo' (2026-06-06): SEO-page CTAs ("Get your free {City} SEO audit") pre-select
    the SEO service and open on step 2, making the form effectively one step. */
 export type ModalVariant = 'default' | 'ai' | 'seo';

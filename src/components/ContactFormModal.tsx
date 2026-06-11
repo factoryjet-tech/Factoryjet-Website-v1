@@ -406,7 +406,7 @@ const ContactFormModal: React.FC = () => {
           </label>
           <input
             type="tel" name="phone" value={formData.phone} onChange={handleInputChange}
-            placeholder={region === 'us' ? '(555) 000-0000' : '+44 7700 000000'} autoComplete="tel"
+            placeholder={region === 'us' ? '(555) 000-0000' : region === 'au' ? '+61 400 000 000' : '+44 7700 000000'} autoComplete="tel"
             className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#F05A28] focus:ring-2 focus:ring-orange-100 outline-none transition-all text-sm"
           />
         </div>

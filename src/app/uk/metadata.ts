@@ -17,6 +17,7 @@ export const ukMetadata: Metadata = {
       "en-US": "https://factoryjet.com/us",
       "en-IN": "https://factoryjet.com",
       "en-AE": "https://factoryjet.com/uae",
+      "en-AU": "https://factoryjet.com/au",
       "x-default": "https://factoryjet.com",
     },
   },

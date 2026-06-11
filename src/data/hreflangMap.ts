@@ -23,6 +23,7 @@ export const homeAlternates = {
   'en-US': 'https://factoryjet.com/us',
   'en-AE': 'https://factoryjet.com/uae',
   'en-GB': 'https://factoryjet.com/uk',
+  'en-AU': 'https://factoryjet.com/au',
   'x-default': 'https://factoryjet.com',
 } as const
 
@@ -38,6 +39,22 @@ export const usHubAlternates = {
   'en-US': 'https://factoryjet.com/us',
   'en-AE': 'https://factoryjet.com/uae',
   'en-GB': 'https://factoryjet.com/uk',
+  'en-AU': 'https://factoryjet.com/au',
+  'x-default': 'https://factoryjet.com',
+} as const
+
+/**
+ * /au homepage (AU market hub). Full cluster so Google sees consistent
+ * reciprocal hreflang — en-AU added to homeAlternates / usHubAlternates /
+ * /uk metadata.ts in the same change (PR #2 lesson: never emit asymmetric
+ * hreflang). Added 2026-06-11 with the AU market launch.
+ */
+export const auHubAlternates = {
+  'en-IN': 'https://factoryjet.com',
+  'en-US': 'https://factoryjet.com/us',
+  'en-AE': 'https://factoryjet.com/uae',
+  'en-GB': 'https://factoryjet.com/uk',
+  'en-AU': 'https://factoryjet.com/au',
   'x-default': 'https://factoryjet.com',
 } as const
 
