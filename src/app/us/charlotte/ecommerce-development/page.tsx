@@ -24,6 +24,7 @@ import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup'
 import Link from 'next/link'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 export const metadata: Metadata = {
   title: 'Shopify Developer Charlotte NC | From $2,999 | FactoryJet',
@@ -544,7 +545,7 @@ export default function Page() {
           primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
         />
       </main>
-      <SiteFooter />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }

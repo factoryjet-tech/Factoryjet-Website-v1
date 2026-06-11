@@ -7,6 +7,7 @@ import Image from 'next/image';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import RelatedGuides from '@/components/v2/RelatedGuides';
 import Hero from '@/components/v2/Hero';
 import ServiceHeroImageBand from '@/components/v2/ServiceHeroImageBand';
@@ -1389,7 +1390,7 @@ export default function EcommerceDevelopmentPage() {
           { href: '/blog/mobile-only-design-strategy', label: 'Mobile-only vs responsive design: which to pick' },
         ]}
       />
-      <SiteFooter />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }

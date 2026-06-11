@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { ecommerceCityAlternatesUS } from '@/data/hreflangMap'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import Hero from '@/components/v2/Hero'
 import LogoBar from '@/components/v2/LogoBar'
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock'
@@ -513,7 +514,7 @@ export default function Page() {
         />
 
       </main>
-      <SiteFooter />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   )
 }

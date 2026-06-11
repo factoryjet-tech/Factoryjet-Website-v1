@@ -7,6 +7,7 @@
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import HomepageHeroV3 from '@/components/v2/HomepageHeroV3';
 
 export const metadata = {
@@ -22,7 +23,7 @@ export default function HomepageV3() {
         <HomepageHeroV3 />
         {/* Sections 2–8 will be added here one by one */}
       </main>
-      <SiteFooter />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }

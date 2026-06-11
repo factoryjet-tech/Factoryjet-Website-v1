@@ -24,6 +24,7 @@ import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS'
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 export const metadata: Metadata = {
   title: 'Shopify Developer Chattanooga, TN — 7-Day Builds From $2,999',
@@ -548,7 +549,7 @@ export default function Page() {
         />
 
       </main>
-      <SiteFooter />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }

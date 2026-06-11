@@ -5,6 +5,7 @@ import { webDesignAlternates } from '@/data/hreflangMap';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import Hero from '@/components/v2/Hero';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -1287,7 +1288,7 @@ export default function WebDesignPage() {
 
       </main>
 
-      <SiteFooter />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }
