@@ -186,7 +186,8 @@
 .auh .logos .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .auh .logos .ll{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--n400)}
 .auh .logos .lset{display:flex;gap:38px;flex-wrap:wrap;align-items:center}
-.auh .logos .lset b{font-family:var(--disp);font-weight:700;font-size:15px;color:var(--n400);letter-spacing:-.01em;opacity:.85;transition:color .2s,opacity .2s}
+/* n600 at full opacity — n400@85% failed 4.5:1 contrast (PSI a11y fix 2026-06-11) */
+.auh .logos .lset b{font-family:var(--disp);font-weight:700;font-size:15px;color:var(--n600);letter-spacing:-.01em;transition:color .2s}
 .auh .logos .lset b:hover{color:var(--ink);opacity:1}
 
 /* services bento — card caps + icon tiles */
@@ -283,7 +284,8 @@
 .auh .city .crow{display:flex;justify-content:space-between;align-items:center}
 .auh .city .pin{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange-d);display:inline-flex;align-items:center;gap:6px}
 .auh .city .pin .ic{width:12px;height:12px}
-.auh .city .code{font-family:var(--mono);font-size:22px;letter-spacing:.04em;color:var(--line-d);font-weight:500;transition:color .25s}
+/* n600 — watermark ink at 18% opacity failed contrast (PSI a11y fix 2026-06-11) */
+.auh .city .code{font-family:var(--mono);font-size:22px;letter-spacing:.04em;color:var(--n600);font-weight:500;transition:color .25s}
 .auh .city:hover .code{color:var(--orange)}
 .auh .city b{display:block;font-family:var(--disp);font-size:20px;margin:8px 0 4px;letter-spacing:-.02em}
 .auh .city span{font-size:13px;color:var(--n600)}

@@ -288,7 +288,11 @@ export default function AUHomePage() {
                   {/* Decorative composite — hero TEXT stays LCP, so alt="" + eager (no lazy pop-in) */}
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <picture>
-                    <source type="image/avif" srcSet="/images/au/au-hero-owner-720.avif" />
+                    <source
+                      type="image/avif"
+                      srcSet="/images/au/au-hero-owner-528.avif 528w, /images/au/au-hero-owner-720.avif 720w"
+                      sizes="(max-width: 640px) 264px, 360px"
+                    />
                     <img
                       src="/images/au/au-hero-owner-720.webp"
                       srcSet="/images/au/au-hero-owner-720.webp 720w, /images/au/au-hero-owner.webp 1024w"
