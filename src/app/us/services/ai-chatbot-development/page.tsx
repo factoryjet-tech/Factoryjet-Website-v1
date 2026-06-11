@@ -135,7 +135,7 @@ const faqSchema = {
       name: 'How much does AI chatbot development cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s AI chatbots start at $3,000 for a single-purpose Starter bot. The Growth tier at $8,000 covers multi-intent chatbots with CRM integration, live handoff, and a conversation dashboard — the most popular option for US SMBs. Custom enterprise chatbots with fine-tuning and multi-channel deployment start at $15,000. All prices are significantly lower than comparable US chatbot agencies.',
+        text: 'FactoryJet\'s AI chatbots start at $3,000 for a single-purpose Starter bot. The Growth tier at $8,000 covers multi-intent chatbots with CRM integration, live handoff, and a conversation dashboard — the most popular option for US SMBs. Custom enterprise chatbots with fine-tuning and multi-channel deployment start at $15,000. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.',
       },
     },
     {
@@ -673,7 +673,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does AI chatbot development cost?',
     answer:
-      'FactoryJet\'s AI chatbots start at $3,000 for a single-purpose Starter bot. The Growth tier at $8,000 covers multi-intent chatbots with CRM integration, live handoff, and a conversation dashboard — the most popular option for US SMBs. Custom enterprise chatbots with fine-tuning and multi-channel deployment start at $15,000. All prices are significantly lower than US chatbot agencies.',
+      'FactoryJet\'s AI chatbots start at $3,000 for a single-purpose Starter bot. The Growth tier at $8,000 covers multi-intent chatbots with CRM integration, live handoff, and a conversation dashboard — the most popular option for US SMBs. Custom enterprise chatbots with fine-tuning and multi-channel deployment start at $15,000. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.',
   },
   {
     category: 'pricing',

@@ -135,7 +135,7 @@ const faqSchema = {
       name: 'How much does AI workflow automation cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s AI workflow automation starts at $4,000 for a focused single-workflow build (Starter tier). The Growth tier at $10,000 covers a multi-workflow automation platform connecting 3–5 systems with an operations dashboard and 30-day support — the most popular option for US SMBs. Enterprise automation with complex business logic, custom integrations, and compliance requirements starts at $20,000. All prices are significantly lower than US automation agencies.',
+        text: 'FactoryJet\'s AI workflow automation starts at $4,000 for a focused single-workflow build (Starter tier). The Growth tier at $10,000 covers a multi-workflow automation platform connecting 3–5 systems with an operations dashboard and 30-day support — the most popular option for US SMBs. Enterprise automation with complex business logic, custom integrations, and compliance requirements starts at $20,000. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.',
       },
     },
     {
@@ -673,7 +673,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does AI workflow automation cost?',
     answer:
-      'FactoryJet\'s automation starts at $4,000 for a single focused workflow build. The Growth tier at $10,000 covers a multi-workflow platform connecting 3–5 systems with an operations dashboard — the most popular option for US SMBs. Enterprise automation with complex business logic starts at $20,000. All prices are significantly lower than US automation agencies.',
+      'FactoryJet\'s automation starts at $4,000 for a single focused workflow build. The Growth tier at $10,000 covers a multi-workflow platform connecting 3–5 systems with an operations dashboard — the most popular option for US SMBs. Enterprise automation with complex business logic starts at $20,000. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.',
   },
   {
     category: 'pricing',

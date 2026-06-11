@@ -103,7 +103,7 @@ const faqSchema = {
       name: 'How much does AI workflow automation cost for a Miami business?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s AI workflow automation starts at $4,000 for a focused single-workflow build. The Growth tier at $10,000 covers a multi-workflow automation platform connecting 3–5 systems with an operations dashboard and 30-day support — the most popular option for Miami SMBs. Enterprise automation with complex business logic, multi-language workflows, and international integrations starts at $20,000. All prices are significantly lower than comparable Miami or national automation agencies.',
+        text: 'FactoryJet\'s AI workflow automation starts at $4,000 for a focused single-workflow build. The Growth tier at $10,000 covers a multi-workflow automation platform connecting 3–5 systems with an operations dashboard and 30-day support — the most popular option for Miami SMBs. Enterprise automation with complex business logic, multi-language workflows, and international integrations starts at $20,000. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.',
       },
     },
     {
@@ -618,7 +618,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does AI workflow automation cost for a Miami business?',
     answer:
-      'FactoryJet\'s AI workflow automation starts at $4,000 for a focused single-workflow build. The Growth tier at $10,000 covers a multi-workflow platform connecting 3–5 systems with an operations dashboard — the most popular option for Miami SMBs. Enterprise automation with complex logic, multi-language support, and international integrations starts at $20,000. All prices are significantly lower than comparable Miami or national automation agencies.',
+      'FactoryJet\'s AI workflow automation starts at $4,000 for a focused single-workflow build. The Growth tier at $10,000 covers a multi-workflow platform connecting 3–5 systems with an operations dashboard — the most popular option for Miami SMBs. Enterprise automation with complex logic, multi-language support, and international integrations starts at $20,000. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.',
   },
   {
     category: 'pricing',

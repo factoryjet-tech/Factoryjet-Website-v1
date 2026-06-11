@@ -90,7 +90,7 @@ const faqSchema = {
       name: 'How much does e-commerce development cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet's e-commerce development starts at ₹59,999 for a standard Shopify or WooCommerce store — custom-designed, Razorpay and UPI integrated, GST-compliant, and mobile-first. Advanced stores with subscription logic, B2B pricing tiers, or product configurators run ₹99,999. Custom-built D2C platforms, multi-vendor marketplaces, and quick-commerce apps start at ₹1,99,999 and are scoped after a discovery call. All prices are 50–60% lower than comparable Indian digital agencies.",
+        text: "FactoryJet's e-commerce development starts at ₹59,999 for a standard Shopify or WooCommerce store — custom-designed, Razorpay and UPI integrated, GST-compliant, and mobile-first. Advanced stores with subscription logic, B2B pricing tiers, or product configurators run ₹99,999. Custom-built D2C platforms, multi-vendor marketplaces, and quick-commerce apps start at ₹1,99,999 and are scoped after a discovery call. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.",
       },
     },
     {
@@ -518,7 +518,7 @@ const IN_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does e-commerce development cost in India?',
     answer:
-      "FactoryJet's e-commerce development starts at ₹59,999 for a Shopify or WooCommerce store — custom-designed in Figma, Razorpay and UPI integrated, GST-compliant invoicing, Shiprocket shipping, and a full product catalogue import. Advanced stores with subscription logic, B2B pricing, or product configurators run ₹99,999. Custom platforms, multi-vendor marketplaces, and quick-commerce apps start at ₹1,99,999 and are scoped after a discovery call. All prices are 50–60% lower than comparable Indian digital agencies for the same output quality.",
+      "FactoryJet's e-commerce development starts at ₹59,999 for a Shopify or WooCommerce store — custom-designed in Figma, Razorpay and UPI integrated, GST-compliant invoicing, Shiprocket shipping, and a full product catalogue import. Advanced stores with subscription logic, B2B pricing, or product configurators run ₹99,999. Custom platforms, multi-vendor marketplaces, and quick-commerce apps start at ₹1,99,999 and are scoped after a discovery call. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.",
   },
   {
     category: 'pricing',

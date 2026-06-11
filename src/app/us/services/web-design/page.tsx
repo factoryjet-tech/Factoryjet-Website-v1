@@ -91,7 +91,7 @@ const faqSchema = {
       name: 'How much does a custom website cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s web design starts at $1,999 for a 5-page business website. A full business site with up to 15 pages, a blog, and CMS runs $3,999. E-commerce, custom Next.js apps, and larger projects start at $7,500. All prices are significantly lower than comparable US web agencies.',
+        text: 'FactoryJet\'s web design starts at $1,999 for a 5-page business website. A full business site with up to 15 pages, a blog, and CMS runs $3,999. E-commerce, custom Next.js apps, and larger projects start at $7,500. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.',
       },
     },
     {
@@ -590,7 +590,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a custom website cost?',
     answer:
-      'FactoryJet\'s web design starts at $1,999 for a 5-page business website. A full business site with up to 15 pages, a blog, and CMS integration runs $3,999. E-commerce stores, custom Next.js applications, and larger projects start at $7,500 — scoped after a free discovery call. All prices are significantly lower than comparable US web agencies.',
+      'FactoryJet\'s web design starts at $1,999 for a 5-page business website. A full business site with up to 15 pages, a blog, and CMS integration runs $3,999. E-commerce stores, custom Next.js applications, and larger projects start at $7,500 — scoped after a free discovery call. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.',
   },
   {
     category: 'pricing',

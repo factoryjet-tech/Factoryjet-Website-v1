@@ -102,7 +102,7 @@ const N8N_FAQ_SCHEMA = {
       name: 'How much does n8n automation setup cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet's n8n automation starts at ₹29,999 for the Starter plan covering up to 3 automated workflows and 2 integrations with full deployment and documentation. The Growth plan at ₹80,000 covers up to 10 workflows, 5 integrations, WhatsApp Business API setup, and 30-day monitoring. Custom automation infrastructure — unlimited workflows, dedicated n8n instance, full API integrations, and ongoing support — starts at ₹1,50,000. All prices are 60–70% lower than comparable automation agencies in India.",
+        text: "FactoryJet's n8n automation starts at ₹29,999 for the Starter plan covering up to 3 automated workflows and 2 integrations with full deployment and documentation. The Growth plan at ₹80,000 covers up to 10 workflows, 5 integrations, WhatsApp Business API setup, and 30-day monitoring. Custom automation infrastructure — unlimited workflows, dedicated n8n instance, full API integrations, and ongoing support — starts at ₹1,50,000. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.",
       },
     },
     {

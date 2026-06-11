@@ -17,7 +17,7 @@ export const post: BlogPost = {
   },
   keyTakeaways: [
     "London agency pricing ranges £2,000–£50,000+ per project; SMBs typically need £3,000–£12,000 budgets for professional sites with CMS and mobile optimization.",
-    "Remote agencies with UK teams (like FactoryJet) deliver comparable quality at 40–60% lower cost than central London studios while maintaining British business hours and communication standards.",
+    "Remote agencies with UK teams (like FactoryJet) deliver comparable quality at fixed prices published upfront while maintaining British business hours and communication standards.",
     "Technical stack matters: Next.js 15, WordPress with custom themes, and Shopify Plus offer different trade-offs in speed, flexibility, and ongoing maintenance costs.",
     "Delivery timelines vary dramatically—boutique agencies quote 8–16 weeks while lean teams complete similar projects in 2–4 weeks using modern frameworks and component libraries.",
     "Portfolio verification is critical: request live URLs, Lighthouse scores, and client contact details rather than relying on case study PDFs or mockups.",

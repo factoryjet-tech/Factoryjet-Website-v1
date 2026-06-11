@@ -164,7 +164,7 @@ const SHOPIFY_faqSchema = {
       name: 'How much does a custom Shopify store cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet's Shopify development starts at ₹34,999 for a custom theme applied to an existing Shopify store. A full store build — custom theme, products, Razorpay and UPI payment integration, Shiprocket logistics, GST invoicing, and launch — runs ₹89,999. Shopify Plus builds with B2B wholesale portals, multi-storefront management, and Checkout Extensibility start at ₹1,99,999. All prices are 50–60% lower than comparable Indian digital agencies.",
+        text: "FactoryJet's Shopify development starts at ₹34,999 for a custom theme applied to an existing Shopify store. A full store build — custom theme, products, Razorpay and UPI payment integration, Shiprocket logistics, GST invoicing, and launch — runs ₹89,999. Shopify Plus builds with B2B wholesale portals, multi-storefront management, and Checkout Extensibility start at ₹1,99,999. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.",
       },
     },
     {
@@ -558,7 +558,7 @@ const SHOPIFY_FAQ_ITEMS = [
     category: 'cost',
     question: 'How much does a custom Shopify store cost in India?',
     answer:
-      "FactoryJet's Shopify development starts at ₹34,999 for a custom Liquid theme applied to an existing Shopify store. A full store build — custom theme, products, Razorpay + UPI payment integration, Shiprocket logistics, GST invoicing, WhatsApp notifications, and launch — runs ₹89,999. Shopify Plus builds with Checkout Extensibility, B2B wholesale portals, and multi-storefront management start at ₹1,99,999 and are scoped after a discovery call. All prices are 50–60% lower than comparable Indian digital agencies.",
+      "FactoryJet's Shopify development starts at ₹34,999 for a custom Liquid theme applied to an existing Shopify store. A full store build — custom theme, products, Razorpay + UPI payment integration, Shiprocket logistics, GST invoicing, WhatsApp notifications, and launch — runs ₹89,999. Shopify Plus builds with Checkout Extensibility, B2B wholesale portals, and multi-storefront management start at ₹1,99,999 and are scoped after a discovery call. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.",
   },
   {
     category: 'cost',

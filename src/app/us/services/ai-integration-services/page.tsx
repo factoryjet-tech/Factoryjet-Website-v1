@@ -135,7 +135,7 @@ const faqSchema = {
       name: 'How much do AI integration services cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s AI integrations start at $3,500 for a focused single-system integration. The Growth tier at $9,000 covers multi-system AI integration with a unified API layer and monitoring — the most popular option for US SMBs. Enterprise integrations with custom model fine-tuning, legacy system APIs, and compliance requirements start at $18,000. All prices are significantly lower than US AI integration agencies.',
+        text: 'FactoryJet\'s AI integrations start at $3,500 for a focused single-system integration. The Growth tier at $9,000 covers multi-system AI integration with a unified API layer and monitoring — the most popular option for US SMBs. Enterprise integrations with custom model fine-tuning, legacy system APIs, and compliance requirements start at $18,000. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.',
       },
     },
     {
@@ -675,7 +675,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much do AI integration services cost?',
     answer:
-      'FactoryJet\'s AI integrations start at $3,500 for a focused single-system integration. The Growth tier at $9,000 covers multi-system integration with a unified API layer and monitoring. Enterprise integrations with fine-tuning and legacy APIs start at $18,000. All prices are significantly lower than US AI integration agencies.',
+      'FactoryJet\'s AI integrations start at $3,500 for a focused single-system integration. The Growth tier at $9,000 covers multi-system integration with a unified API layer and monitoring. Enterprise integrations with fine-tuning and legacy APIs start at $18,000. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.',
   },
   {
     category: 'pricing',

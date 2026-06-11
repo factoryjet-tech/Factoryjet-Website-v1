@@ -103,7 +103,7 @@ const faqSchema = {
       name: 'How much does an AI agent cost for a Raleigh business?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s AI agents start at $3,000 for a single-purpose Starter agent. The Growth tier at $8,000 covers multi-intent agents with CRM integration, live handoff, and a conversation dashboard. Custom enterprise agents start at $15,000. All prices are significantly lower than comparable Research Triangle or national AI agencies.',
+        text: 'FactoryJet\'s AI agents start at $3,000 for a single-purpose Starter agent. The Growth tier at $8,000 covers multi-intent agents with CRM integration, live handoff, and a conversation dashboard. Custom enterprise agents start at $15,000. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.',
       },
     },
     {
@@ -619,7 +619,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does an AI agent cost for a Raleigh business?',
     answer:
-      'FactoryJet\'s AI agents start at $3,000 for a single-purpose Starter agent. The Growth tier at $8,000 covers multi-intent agents with CRM integration, live handoff, and a conversation dashboard — the most popular option for Raleigh and Research Triangle SMBs. Custom enterprise agents — with compliance architecture for healthcare or regulated industries — start at $15,000. All prices are significantly lower than comparable Triangle or national AI agencies.',
+      'FactoryJet\'s AI agents start at $3,000 for a single-purpose Starter agent. The Growth tier at $8,000 covers multi-intent agents with CRM integration, live handoff, and a conversation dashboard — the most popular option for Raleigh and Research Triangle SMBs. Custom enterprise agents — with compliance architecture for healthcare or regulated industries — start at $15,000. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.',
   },
   {
     category: 'pricing',

@@ -619,7 +619,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does an AI agent cost for an Austin business?',
     answer:
-      'FactoryJet\'s AI agents start at $3,000 for a single-purpose Starter agent. The Growth tier at $8,000 covers multi-intent agents with CRM integration, live handoff, and a conversation dashboard — the most popular option for Austin SMBs. Custom enterprise agents with fine-tuning and multi-channel deployment start at $15,000. All prices are significantly lower than comparable Austin or national AI agencies.',
+      'FactoryJet\'s AI agents start at $3,000 for a single-purpose Starter agent. The Growth tier at $8,000 covers multi-intent agents with CRM integration, live handoff, and a conversation dashboard — the most popular option for Austin SMBs. Custom enterprise agents with fine-tuning and multi-channel deployment start at $15,000. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.',
   },
   {
     category: 'pricing',

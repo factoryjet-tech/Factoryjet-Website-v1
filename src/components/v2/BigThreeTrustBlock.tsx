@@ -10,7 +10,7 @@ import Link from 'next/link';
  *   - Asymmetric split: left 57% hero number panel / right 43% two-stat stack
  *   - Thin orange vertical divider between panels (desktop only)
  *   - Left: 523+ in orange at 4rem+, keyword-rich description, orange CTA pill
- *   - Right: 7-day delivery + 60–70% less, each with orange accent bar
+ *   - Right: 7-day delivery + $1,999 fixed-price stat, each with orange accent bar
  *   - All accent color (#F05A28) applied via inline style — no Tailwind palette entry
  *   - No year references. High-volume keywords embedded in copy.
  *
@@ -218,7 +218,7 @@ export default function BigThreeTrustBlock({
               style={{ height: '1px', background: 'rgba(240,90,40,0.16)', borderRadius: 1 }}
             />
 
-            {/* Stat 2 — 60–70% less */}
+            {/* Stat 2 — $1,999 fixed price */}
             <div>
               {illustrations?.savings && (
                 <div className="mb-3">
@@ -240,19 +240,19 @@ export default function BigThreeTrustBlock({
                 className="fj-display font-bold text-fj-ink"
                 style={{ fontSize: 'clamp(1.875rem, 3vw, 2.75rem)', lineHeight: 1, letterSpacing: '-0.03em' }}
               >
-                60–70%
+                $1,999
               </p>
               <p
                 className="mt-2 font-fj-body font-semibold text-fj-ink"
                 style={{ fontSize: '0.9375rem' }}
               >
-                Less Than US Web Design Agencies
+                Fixed Price, Confirmed Upfront
               </p>
               <p
                 className="mt-1.5 font-fj-body text-fj-neutral-500"
                 style={{ fontSize: '0.8125rem', lineHeight: 1.55, fontWeight: 500 }}
               >
-                Professional website design from $1,999 — fixed price, confirmed upfront
+                Professional website design — no hourly billing, no scope surprises
               </p>
             </div>
 

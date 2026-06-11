@@ -63,7 +63,13 @@ for (const f of walk(PUBLIC, (p) => p.toLowerCase().endsWith('.html'))) {
 }
 
 /* ── source-file scans (2,3,5) ───────────────────────────────────────────── */
-const srcFiles = walk(join(ROOT, 'src'), (p) => /\.(tsx?|jsx?|mdx?)$/.test(p));
+// AI-facing public text files (llms.txt etc.) carry positioning copy too —
+// the 2026-06-11 audit found geo-cheap framing surviving there because only
+// src/ was scanned. Scan them with the same rules.
+const srcFiles = [
+  ...walk(join(ROOT, 'src'), (p) => /\.(tsx?|jsx?|mdx?)$/.test(p)),
+  ...walk(join(ROOT, 'public'), (p) => /llms.*\.txt$/.test(p)),
+];
 
 const BANNED_FATAL = [
   { re: /888-000-0000/, msg: 'placeholder phone number 888-000-0000' },
@@ -76,10 +82,40 @@ const BANNED_POSITIONING = [
   // rates", "below the Mumbai agency benchmark", "60–70% less than UK agencies",
   // "below central London studios". Deliberately does NOT match internal
   // comparisons like "20–30% cheaper than new builds" or "30% less time".
-  { re: /\d{1,2}\s*[–-]?\s*\d{0,2}%\s*(cheaper|less|below)[^.\n]{0,45}(agenc|studio|rates|benchmark|market|local)/i, msg: 'cost-vs-others positioning framing' },
+  // 2026-06-11: added "lower" — "50–60% lower than comparable X agencies"
+  // passed the old (cheaper|less|below) alternation on 30+ lines.
+  // (?!...) carve-out: performance metrics like "40–60% lower bounce rates"
+  // are stats, not positioning.
+  { re: /\d{1,2}\s*[–-]?\s*\d{0,2}%\s*(cheaper|lower|less|below)(?!\s+(bounce|conversion|open|click|cart|churn|abandonment)\b)(?!\s+cost\s+per\s+(lead|click|acquisition|order)\b)[^.\n]{0,45}(agenc|studio|rates|benchmark|market|local)/i, msg: 'cost-vs-others positioning framing' },
+  // No-% phrasings: "(significantly) lower/cheaper than US/UK/Indian/local/
+  // comparable ... agencies". Caught nothing for months because every banned
+  // pattern previously required a digit.
+  { re: /\b(lower|cheaper)\s+than\s+(comparable\s+)?(typical\s+)?(US|UK|American|British|Indian|local)\b[^.\n]{0,45}agenc/i, msg: 'geo/locale-cheap framing without % figure' },
+  // Offshore-cost SELF-positioning is banned (positioning rule 2026-05-31).
+  // Scoped to first-person/brand constructs so editorial blog passages that
+  // discuss the offshore market category don't trip the build; those are an
+  // editorial-policy call, not a brand-positioning violation.
+  { re: /(FactoryJet|we are|we're|our)[^.\n]{0,60}offshore (alternative|advantage|pricing|rates|cost|model)/i, msg: 'offshore-cost self-positioning' },
+];
+// Multi-line JSX check: BigThreeTrustBlock-class misses. JSX splits copy
+// across lines ("60–70%" ... "Less Than US Web Design Agencies"), so the
+// line-based scan above cannot see it. Run a small set of whole-file regexes
+// with the gaps between JSX lines collapsed.
+const BANNED_MULTILINE = [
+  { re: /Less\s+Than\s+(US|UK|American|British|Indian|Local)[\s\S]{0,80}Agenc/i, msg: 'geo-cheap stat copy (multi-line JSX)' },
 ];
 
+// Editorial content (blog posts) may legitimately DISCUSS market pricing
+// ("offshore providers charge 50–60% less") — that's commentary, not brand
+// positioning. In editorial files, only flag a line when FactoryJet (or
+// first-person "we/our") appears in the same line, i.e. self-positioning.
+// Site copy (src/app, components, llms.txt) stays brand-agnostic strict,
+// because there the brand is always implicit.
+const EDITORIAL_RE = /(legacy-pages[\\/]Blog|content[\\/]blog)/;
+const SELF_REF_RE = /factoryjet|\bwe\b|\bwe['’]re\b|\bour\b/i;
+
 for (const f of srcFiles) {
+  const isEditorial = EDITORIAL_RE.test(f);
   const text = readFileSync(f, 'utf8');
   const lines = text.split('\n');
   lines.forEach((line, i) => {
@@ -87,9 +123,15 @@ for (const f of srcFiles) {
       if (b.re.test(line)) fatals.push(`${rel(f)}:${i + 1} — ${b.msg}`);
     }
     for (const b of BANNED_POSITIONING) {
-      if (b.re.test(line)) warns.push(`${rel(f)}:${i + 1} — ${b.msg}`);
+      if (b.re.test(line) && (!isEditorial || SELF_REF_RE.test(line)))
+        warns.push(`${rel(f)}:${i + 1} — ${b.msg}`);
     }
   });
+  // Collapse JSX markup between text nodes, then scan across lines.
+  const flat = text.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ');
+  for (const b of BANNED_MULTILINE) {
+    if (b.re.test(flat)) warns.push(`${rel(f)} — ${b.msg}`);
+  }
 }
 
 /* ── 4. canonical path matches route ─────────────────────────────────────── */

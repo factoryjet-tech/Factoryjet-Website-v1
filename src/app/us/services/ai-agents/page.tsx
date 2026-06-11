@@ -145,7 +145,7 @@ const faqSchema = {
       name: 'How much does it cost to build a custom AI agent?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s AI agents start at $5,000 for a focused single-workflow agent (Starter tier). Most small businesses need the Growth tier at $15,000, which covers multiple interconnected agents, CRM integrations, a management dashboard, and a 30-day support window. Enterprise platforms with multi-agent orchestration start at $25,000. All prices are significantly lower than comparable US AI agencies.',
+        text: 'FactoryJet\'s AI agents start at $5,000 for a focused single-workflow agent (Starter tier). Most small businesses need the Growth tier at $15,000, which covers multiple interconnected agents, CRM integrations, a management dashboard, and a 30-day support window. Enterprise platforms with multi-agent orchestration start at $25,000. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.',
       },
     },
     {
@@ -715,7 +715,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does it cost to build a custom AI agent?',
     answer:
-      'FactoryJet\'s AI agents start at $5,000 for a focused single-workflow agent (Starter tier). Most small businesses need the Growth tier at $15,000, which covers multiple interconnected agents, CRM integrations, a management dashboard, and a 30-day support window. Enterprise platforms with multi-agent orchestration start at $25,000. All prices are significantly lower than comparable US AI agencies.',
+      'FactoryJet\'s AI agents start at $5,000 for a focused single-workflow agent (Starter tier). Most small businesses need the Growth tier at $15,000, which covers multiple interconnected agents, CRM integrations, a management dashboard, and a 30-day support window. Enterprise platforms with multi-agent orchestration start at $25,000. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.',
   },
   {
     category: 'pricing',

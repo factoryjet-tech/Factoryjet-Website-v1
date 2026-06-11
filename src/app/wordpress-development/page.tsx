@@ -80,7 +80,7 @@ const WP_faqSchema = {
       name: 'How much does WordPress development cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet's WordPress development starts at ₹29,999 for a custom theme on an existing WordPress install. A complete business site — custom theme, 5–8 pages, contact forms, SEO setup, speed optimization, and launch — runs ₹80,000. WooCommerce stores with Razorpay, GST invoicing, and Shiprocket integration start at ₹1,50,000. All prices are 60–70% lower than comparable Indian digital agencies.",
+        text: "FactoryJet's WordPress development starts at ₹29,999 for a custom theme on an existing WordPress install. A complete business site — custom theme, 5–8 pages, contact forms, SEO setup, speed optimization, and launch — runs ₹80,000. WooCommerce stores with Razorpay, GST invoicing, and Shiprocket integration start at ₹1,50,000. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.",
       },
     },
     {

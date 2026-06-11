@@ -261,7 +261,7 @@ const RJT_FAQ_ITEMS = [
     category: 'pricing',
     question: 'What makes FactoryJet better value than a Rajkot web agency?',
     answer:
-      "We are a specialised web engineering team — not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost than comparable Rajkot agencies. You pay for the build, not our admin structure.",
+      "We are a specialised web engineering team — not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at a fixed price confirmed upfront. You pay for the build, not our admin structure.",
   },
   {
     category: 'pricing',
