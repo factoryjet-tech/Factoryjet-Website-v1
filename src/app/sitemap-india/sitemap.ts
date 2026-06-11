@@ -121,6 +121,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // ── India service hubs ───────────────────────────────────────────────────────
   const serviceHubs: MetadataRoute.Sitemap = [
     {
+      url: `${SITE_URL}/ai-seo`,
+      lastModified: getFileLastMod('src/app/ai-seo/page.tsx'),
+      changeFrequency: CHANGEFREQ.service as ChangeFreq,
+      priority: PRIORITY.service,
+    },
+    {
       url: `${SITE_URL}/services/ecommerce-development`,
       lastModified: getFileLastMod('src/app/services/ecommerce-development/page.tsx'),
       changeFrequency: CHANGEFREQ.service as ChangeFreq,
