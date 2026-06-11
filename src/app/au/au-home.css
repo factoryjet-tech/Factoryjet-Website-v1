@@ -35,7 +35,7 @@
 .auh .eyebrow::before{content:"";width:22px;height:1.5px;background:linear-gradient(90deg,var(--orange),transparent)}
 .auh .ic{width:1em;height:1em;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
 .auh .btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--body);font-weight:700;font-size:15px;text-decoration:none;cursor:pointer;border:none;border-radius:13px;padding:15px 25px;transition:transform .2s var(--e-out),box-shadow .2s var(--e-out)}
-.auh .btn-orange{background:var(--orange);color:#fff;box-shadow:0 12px 26px -8px rgba(240,90,40,.55)}
+.auh .btn-orange{background:var(--orange-d);color:#fff;box-shadow:0 12px 26px -8px rgba(240,90,40,.55)} /* orange-d for 4.5:1 AA contrast (PSI fix 2026-06-11) */
 .auh .btn-orange:hover{transform:translateY(-2px)}
 .auh .btn-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line-d)}
 .auh .btn-ghost:hover{transform:translateY(-2px);border-color:var(--ink)}
@@ -131,7 +131,15 @@
 .auh .chip-3{bottom:23%;left:-2%}.auh .chip-3 .ico{background:var(--lav-soft);color:var(--lav)}
 .auh .chip-4{bottom:-3%;right:11%}.auh .chip-4 .ico{background:var(--peach);color:var(--orange-d)}
 @keyframes au-floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+/* Infinite float runs on desktop only — continuous repaints inflate mobile
+   Speed Index / battery (PSI fix 2026-06-11). Mobile keeps the finite pop. */
 @media(prefers-reduced-motion:no-preference){
+  .auh .pop.chip-1{animation:au-pop .7s var(--e-spring) .55s both}
+  .auh .pop.chip-2{animation:au-pop .7s var(--e-spring) .68s both}
+  .auh .pop.chip-3{animation:au-pop .7s var(--e-spring) .81s both}
+  .auh .pop.chip-4{animation:au-pop .7s var(--e-spring) .94s both}
+}
+@media(prefers-reduced-motion:no-preference) and (min-width:768px){
   .auh .pop.chip-1{animation:au-pop .7s var(--e-spring) .55s both,au-floaty 5s ease-in-out 1.3s infinite}
   .auh .pop.chip-2{animation:au-pop .7s var(--e-spring) .68s both,au-floaty 6s ease-in-out 1.8s infinite}
   .auh .pop.chip-3{animation:au-pop .7s var(--e-spring) .81s both,au-floaty 5.5s ease-in-out 1.5s infinite}
@@ -165,7 +173,8 @@
 .auh .tape .row{display:flex;gap:46px;white-space:nowrap;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;will-change:transform}
 .auh .tape .row span{display:inline-flex;align-items:center;gap:14px}
 .auh .tape .row i{font-style:normal;color:var(--orange)}
-@media(prefers-reduced-motion:no-preference){.auh .tape .row{animation:au-slide 26s linear infinite}}
+/* Marquee scrolls on desktop only — static tape on mobile (Speed Index fix 2026-06-11) */
+@media(prefers-reduced-motion:no-preference) and (min-width:768px){.auh .tape .row{animation:au-slide 26s linear infinite}}
 @keyframes au-slide{to{transform:translateX(-50%)}}
 
 /* logo bar */
@@ -255,7 +264,7 @@
 .auh .cmp th{font-family:var(--disp);font-size:14.5px;letter-spacing:-.01em;background:var(--cream)}
 .auh .cmp tr:last-child td{border-bottom:none}
 .auh .cmp .fj{background:var(--orange-soft);border-left:2px solid var(--orange)}
-.auh .cmp th.fj{background:var(--orange);color:#fff;border-left:none}
+.auh .cmp th.fj{background:var(--orange-d);color:#fff;border-left:none}
 .auh .cmp td:first-child{font-weight:600;color:var(--n700);width:18%}
 .auh .cmp .ok{color:var(--green);font-weight:700}
 .auh .cmp .no{color:var(--n400)}
@@ -332,7 +341,7 @@
   .auh{padding-bottom:64px}
   .auh .mobbar{display:grid;grid-template-columns:1fr 1fr;gap:1px;position:fixed;left:0;right:0;bottom:0;z-index:95;background:var(--line-d);border-top:1px solid var(--line-d);padding-top:1px}
   .auh .mobbar a,.auh .mobbar button{display:flex;align-items:center;justify-content:center;gap:8px;height:62px;font-family:var(--body);font-weight:700;font-size:15px;text-decoration:none;background:var(--paper);color:var(--ink);border:none;cursor:pointer;border-radius:0;padding:0}
-  .auh .mobbar a.primary,.auh .mobbar button.primary{background:var(--orange);color:#fff}
+  .auh .mobbar a.primary,.auh .mobbar button.primary{background:var(--orange-d);color:#fff}
   .auh .mobbar .ic{width:17px;height:17px}
 }
 
