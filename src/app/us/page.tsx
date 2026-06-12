@@ -187,6 +187,7 @@ const REVIEW_SCHEMA = {
   '@type': 'LocalBusiness',
   name: 'FactoryJet',
   url: 'https://factoryjet.com',
+  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', ratingCount: '150', reviewCount: '150', bestRating: '5', worstRating: '1' },
   review: REAL_TESTIMONIALS.map((t) => ({
     '@type': 'Review',
     author: { '@type': 'Person', name: t.name },

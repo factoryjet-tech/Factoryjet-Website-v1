@@ -272,6 +272,7 @@ const reviewSchema = {
   '@type': 'LocalBusiness',
   name: 'FactoryJet',
   url: 'https://factoryjet.com',
+  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', ratingCount: '150', reviewCount: '150', bestRating: '5', worstRating: '1' },
   review: [
     {
       '@type': 'Review',
