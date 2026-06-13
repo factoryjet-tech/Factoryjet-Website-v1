@@ -30,13 +30,15 @@ export default function robots(): MetadataRoute.Robots {
       // ─── AI retrieval bots — explicit allow ───────────────────
       // These bots fetch live content for AI search results / citations.
       // Allowing them is core to FactoryJet's AIO/GEO strategy.
-      { userAgent: 'GPTBot',          allow: '/' },
-      { userAgent: 'ClaudeBot',       allow: '/' },
-      { userAgent: 'anthropic-ai',    allow: '/' },
-      { userAgent: 'PerplexityBot',   allow: '/' },
-      { userAgent: 'Google-Extended', allow: '/' },
-      { userAgent: 'Applebot-Extended', allow: '/' },
-      { userAgent: 'meta-externalagent', allow: '/' },
+      { userAgent: 'GPTBot',              allow: '/' },
+      { userAgent: 'OAI-SearchBot',       allow: '/' },
+      { userAgent: 'ChatGPT-User',        allow: '/' },
+      { userAgent: 'ClaudeBot',           allow: '/' },
+      { userAgent: 'anthropic-ai',        allow: '/' },
+      { userAgent: 'PerplexityBot',       allow: '/' },
+      { userAgent: 'Google-Extended',     allow: '/' },
+      { userAgent: 'Applebot-Extended',   allow: '/' },
+      { userAgent: 'meta-externalagent',  allow: '/' },
 
       // ─── AI training bots — explicit disallow ─────────────────
       // These bots scrape for model training, NOT for live AI search.

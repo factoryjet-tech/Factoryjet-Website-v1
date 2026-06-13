@@ -161,29 +161,6 @@ const serviceSchema = {
   serviceType: 'AI Agent & Chatbot Development',
   description:
     'Custom AI agents and chatbots for Austin TX small businesses. Specializing in customer support agents, lead generation bots, appointment booking, and e-commerce automation built on GPT-4o and Claude.',
-  offers: [
-    {
-      '@type': 'Offer',
-      name: 'Starter AI Agent',
-      price: '3000',
-      priceCurrency: 'USD',
-      description: 'Single-purpose AI agent for one focused use case — customer support or lead capture.',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Growth Agent Platform',
-      price: '8000',
-      priceCurrency: 'USD',
-      description: 'Multi-intent AI agent with CRM integration, live handoff, and conversation dashboard.',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Enterprise Agent System',
-      price: '15000',
-      priceCurrency: 'USD',
-      description: 'Custom AI agent with fine-tuning, multi-channel deployment, and enterprise integrations.',
-    },
-  ],
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '4.9',
@@ -231,6 +208,18 @@ const howToSchema = {
       name: 'Day 7 — Launch & Training',
       text: 'Your AI solution goes live. We train your team, provide documentation, and offer 30-day post-launch support.',
     },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  '@id': 'https://factoryjet.com/us/austin/ai-agents#breadcrumb',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
+    { '@type': 'ListItem', position: 2, name: 'US AI Services', item: 'https://factoryjet.com/us/services/ai-agents' },
+    { '@type': 'ListItem', position: 3, name: 'Austin', item: 'https://factoryjet.com/us/austin' },
+    { '@type': 'ListItem', position: 4, name: 'AI Agents', item: 'https://factoryjet.com/us/austin/ai-agents' },
   ],
 };
 
@@ -702,6 +691,11 @@ export default function AustinAIAgentsPage() {
         id="austin-ai-agents-howto-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+      <Script
+        id="austin-ai-agents-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <SiteHeader

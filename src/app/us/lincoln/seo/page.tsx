@@ -245,7 +245,7 @@ const webPageSchema = {
     'FactoryJet is a Lincoln SEO company running local SEO services in Lincoln, NE for the Map Pack and national SEO for businesses selling coast to coast from Lincoln: Google Business Profile, reviews, citations, neighborhood pages, technical SEO, authority content, and AI search optimization, with a free audit and month-to-month terms.',
   inLanguage: 'en-US',
   isPartOf: { '@type': 'WebSite', name: 'FactoryJet', url: 'https://factoryjet.com' },
-  author: { '@type': 'Person', name: 'Bhavesh Barot', jobTitle: 'Founder, FactoryJet' },
+  author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhaveshbarot/', jobTitle: 'Founder, FactoryJet' },
 };
 
 const serviceSchema = {

@@ -55,8 +55,6 @@ type CitySchemaInput = {
   metaTitle: string;
   metaDesc: string;
   heroSub: string;
-  lowPrice?: string;   // defaults to '2999' in buildSchema
-  highPrice?: string;  // defaults to '15999' in buildSchema
   faqs: FAQ[];
 };
 
@@ -130,12 +128,6 @@ function buildSchema(c: CitySchemaInput): string {
           'AI Agent Development',
           'Custom Web Development',
         ],
-        offers: {
-          '@type': 'AggregateOffer',
-          lowPrice: c.lowPrice ?? '2999',
-          highPrice: c.highPrice ?? '15999',
-          priceCurrency: 'USD',
-        },
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
           name: 'E-Commerce Services',
@@ -219,8 +211,6 @@ const CITIES: Record<string, CitySchemaInput> = {
     metaTitle: 'Ecommerce Development Austin TX | 7-Day Delivery from $1,500 | FactoryJet',
     metaDesc: 'Austin\'s most affordable ecommerce development agency. Shopify, WooCommerce & custom online stores built in 7 days — at a fixed, published price. 500+ stores delivered. Free audit.',
     heroSub: 'FactoryJet builds Shopify, WooCommerce, and custom ecommerce stores for Austin small businesses — delivered in 7 days, at a fixed, published price. 500+ stores launched, 4.9★ rating.',
-    lowPrice: '1500',
-    highPrice: '5000',
     faqs: [
       // ── Pricing & Budget ──
       { q: 'How much does ecommerce development cost in Austin, TX?', a: 'Austin ecommerce agencies typically charge $6,500–$25,000+ for a Shopify or WooCommerce store, depending on complexity. At FactoryJet, a production-ready ecommerce store starts at $1,500 for Shopify and $4,500 for fully custom builds. The difference comes from our India-based development team and lean operations — not from cutting corners on quality. We guarantee Lighthouse 100/100 on every project regardless of tier.' },

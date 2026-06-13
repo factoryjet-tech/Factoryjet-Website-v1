@@ -180,6 +180,10 @@ const ORG_SCHEMA = {
   name: 'FactoryJet',
   url: 'https://factoryjet.com',
   aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', ratingCount: '150', reviewCount: '150', bestRating: '5', worstRating: '1' },
+  sameAs: [
+    'https://www.linkedin.com/company/factoryjet',
+    'https://www.crunchbase.com/organization/factoryjet',
+  ],
 };
 
 const REVIEW_SCHEMA = {

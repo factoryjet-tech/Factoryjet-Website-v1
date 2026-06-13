@@ -334,6 +334,17 @@ const howToSchema = {
   ],
 };
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  '@id': 'https://factoryjet.com/us/services/ai-workflow-automation#breadcrumb',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
+    { '@type': 'ListItem', position: 2, name: 'US Services', item: 'https://factoryjet.com/us/services' },
+    { '@type': 'ListItem', position: 3, name: 'AI Workflow Automation', item: 'https://factoryjet.com/us/services/ai-workflow-automation' },
+  ],
+};
+
 /* ─────────────────────────────────────────────────────────────────────────────
    Section data
 ───────────────────────────────────────────────────────────────────────────── */
@@ -775,6 +786,11 @@ export default function AIWorkflowAutomationPage() {
         id="ai-workflow-automation-howto-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+      <Script
+        id="ai-workflow-automation-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <SiteHeader

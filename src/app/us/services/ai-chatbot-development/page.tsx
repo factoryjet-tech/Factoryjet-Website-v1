@@ -344,6 +344,17 @@ const howToSchema = {
   ],
 };
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  '@id': 'https://factoryjet.com/us/services/ai-chatbot-development#breadcrumb',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
+    { '@type': 'ListItem', position: 2, name: 'US Services', item: 'https://factoryjet.com/us/services' },
+    { '@type': 'ListItem', position: 3, name: 'AI Chatbot Development', item: 'https://factoryjet.com/us/services/ai-chatbot-development' },
+  ],
+};
+
 /* ─────────────────────────────────────────────────────────────────────────────
    Section data
 ───────────────────────────────────────────────────────────────────────────── */
@@ -799,6 +810,11 @@ export default function AIChatbotDevelopmentPage() {
         id="ai-chatbot-howto-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+      <Script
+        id="ai-chatbot-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <SiteHeader

@@ -72,6 +72,10 @@ const ORG_SCHEMA = {
     bestRating: '5',
     worstRating: '1',
   },
+  sameAs: [
+    'https://www.linkedin.com/company/factoryjet',
+    'https://www.crunchbase.com/organization/factoryjet',
+  ],
 };
 
 const HOW_TO_SCHEMA = {

@@ -112,6 +112,10 @@ const organizationData = {
     bestRating: '5',
     worstRating: '1',
   },
+  sameAs: [
+    'https://www.linkedin.com/company/factoryjet',
+    'https://www.crunchbase.com/organization/factoryjet',
+  ],
 };
 
 const breadcrumbData = {

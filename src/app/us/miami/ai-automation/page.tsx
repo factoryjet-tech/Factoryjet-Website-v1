@@ -234,6 +234,18 @@ const howToSchema = {
   ],
 };
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  '@id': 'https://factoryjet.com/us/miami/ai-automation#breadcrumb',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
+    { '@type': 'ListItem', position: 2, name: 'US AI Services', item: 'https://factoryjet.com/us/services/ai-agents' },
+    { '@type': 'ListItem', position: 3, name: 'Miami', item: 'https://factoryjet.com/us/miami' },
+    { '@type': 'ListItem', position: 4, name: 'AI Automation', item: 'https://factoryjet.com/us/miami/ai-automation' },
+  ],
+};
+
 /* ─────────────────────────────────────────────────────────────────────────────
    Section data
 ───────────────────────────────────────────────────────────────────────────── */
@@ -701,6 +713,11 @@ export default function MiamiAIAutomationPage() {
         id="miami-ai-automation-howto-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+      <Script
+        id="miami-ai-automation-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <SiteHeader

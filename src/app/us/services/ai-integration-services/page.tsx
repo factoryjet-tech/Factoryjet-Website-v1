@@ -342,6 +342,17 @@ const howToSchema = {
   ],
 };
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  '@id': 'https://factoryjet.com/us/services/ai-integration-services#breadcrumb',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
+    { '@type': 'ListItem', position: 2, name: 'US Services', item: 'https://factoryjet.com/us/services' },
+    { '@type': 'ListItem', position: 3, name: 'AI Integration Services', item: 'https://factoryjet.com/us/services/ai-integration-services' },
+  ],
+};
+
 /* ─────────────────────────────────────────────────────────────────────────────
    Section data
 ───────────────────────────────────────────────────────────────────────────── */
@@ -783,6 +794,11 @@ export default function AIIntegrationServicesPage() {
         id="ai-integration-howto-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+      <Script
+        id="ai-integration-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <SiteHeader

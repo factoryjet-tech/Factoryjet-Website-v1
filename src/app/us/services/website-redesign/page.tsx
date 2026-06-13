@@ -683,6 +683,17 @@ const howToSchema = {
   ],
 };
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  '@id': 'https://factoryjet.com/us/services/website-redesign#breadcrumb',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
+    { '@type': 'ListItem', position: 2, name: 'US Services', item: 'https://factoryjet.com/us/services' },
+    { '@type': 'ListItem', position: 3, name: 'Website Redesign', item: 'https://factoryjet.com/us/services/website-redesign' },
+  ],
+};
+
 /* ─────────────────────────────────────────────────────────────────────────────
    Page
 ───────────────────────────────────────────────────────────────────────────── */
@@ -705,6 +716,11 @@ export default function WebsiteRedesignPage() {
         id="website-redesign-howto-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+      <Script
+        id="website-redesign-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <SiteHeader

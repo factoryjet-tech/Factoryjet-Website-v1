@@ -260,7 +260,7 @@ const webPageSchema = {
     'FactoryJet is a Fargo SEO company offering local SEO services across the two-state Fargo-Moorhead metro and its 100 mile trade radius: Google Business Profile, reviews, citations, technical SEO, content, and AI search optimization, with a free audit and month-to-month terms.',
   inLanguage: 'en-US',
   isPartOf: { '@type': 'WebSite', name: 'FactoryJet', url: 'https://factoryjet.com' },
-  author: { '@type': 'Person', name: 'Bhavesh Barot', jobTitle: 'Founder, FactoryJet' },
+  author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhaveshbarot/', jobTitle: 'Founder, FactoryJet' },
 };
 
 const serviceSchema = {

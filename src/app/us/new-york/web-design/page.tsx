@@ -106,9 +106,12 @@ const jsonLd = {
         addressCountry: 'US',
       },
       areaServed: { '@type': 'City', name: 'New York City' },
-      priceRange: '$1,999 – $15,000+',
-      description: 'FactoryJet is a web design agency building high-converting websites for NYC small businesses. 7-day delivery, fixed pricing, full code ownership.',
+      description: 'FactoryJet is a web design agency building high-converting websites for NYC small businesses. 7-day delivery, full code ownership.',
       aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', ratingCount: '150', reviewCount: '150', bestRating: '5', worstRating: '1' },
+      sameAs: [
+        'https://www.linkedin.com/company/factoryjet',
+        'https://www.crunchbase.com/organization/factoryjet',
+      ],
     },
     {
       '@type': 'BreadcrumbList',
@@ -299,6 +302,15 @@ const jsonLd = {
           },
         },
       ],
+    },
+    {
+      '@type': 'Service',
+      '@id': 'https://factoryjet.com/us/new-york/web-design#service',
+      name: 'Web Design Services in New York City',
+      serviceType: 'Web design and development',
+      provider: { '@id': 'https://factoryjet.com/#organization' },
+      areaServed: { '@type': 'City', name: 'New York City', containedInPlace: { '@type': 'State', name: 'New York' } },
+      url: 'https://factoryjet.com/us/new-york/web-design',
     },
   ],
 };

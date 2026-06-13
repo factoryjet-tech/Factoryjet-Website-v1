@@ -346,6 +346,17 @@ const howToSchema = {
   ],
 };
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  '@id': 'https://factoryjet.com/us/services/ai-agents#breadcrumb',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
+    { '@type': 'ListItem', position: 2, name: 'US Services', item: 'https://factoryjet.com/us/services' },
+    { '@type': 'ListItem', position: 3, name: 'AI Agents', item: 'https://factoryjet.com/us/services/ai-agents' },
+  ],
+};
+
 /* ─────────────────────────────────────────────────────────────────────────────
    Section data
 ───────────────────────────────────────────────────────────────────────────── */
@@ -855,6 +866,11 @@ export default function AIAgentsPage() {
             "cssSelector": ["h1", ".faq-answer", "[data-speakable]"]
           }
         }) }}
+      />
+      <Script
+        id="ai-agents-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <SiteHeader

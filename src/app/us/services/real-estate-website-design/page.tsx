@@ -101,10 +101,6 @@ const serviceSchema = {
       worstRating: '1',
     },
   },
-  offers: [
-    { '@type': 'Offer', name: 'Real Estate Agent Website', price: '2499', priceCurrency: 'USD', availability: 'https://schema.org/InStock' },
-    { '@type': 'Offer', name: 'Brokerage Website', price: '4500', priceCurrency: 'USD', availability: 'https://schema.org/InStock' },
-  ],
 };
 
 const breadcrumbSchema = {

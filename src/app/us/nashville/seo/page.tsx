@@ -149,6 +149,14 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
   },
 ];
 
+const faqSchemaItems = FAQ_GROUPS.flatMap((g) =>
+  g.items.map((item) => ({
+    '@type': 'Question' as const,
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer' as const, text: item.a },
+  }))
+);
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -165,19 +173,20 @@ const jsonLd = {
     },
     {
       '@type': 'Service',
+      '@id': `${CANONICAL}#service`,
       name: 'Local SEO Services in Nashville, TN',
       serviceType: 'Search engine optimization',
       provider: { '@id': 'https://factoryjet.com/#organization' },
       areaServed: { '@type': 'City', name: 'Nashville', containedInPlace: { '@type': 'State', name: 'Tennessee' } },
       url: CANONICAL,
-      offers: { '@type': 'Offer', priceCurrency: 'USD', price: '499', description: 'Local SEO, month-to-month, from $499/month' },
     },
     {
       '@type': 'BreadcrumbList',
+      '@id': `${CANONICAL}#breadcrumb`,
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-        { '@type': 'ListItem', position: 2, name: 'US', item: 'https://factoryjet.com/us/services/seo' },
-        { '@type': 'ListItem', position: 3, name: 'Nashville', item: 'https://factoryjet.com/us/nashville/web-design' },
+        { '@type': 'ListItem', position: 2, name: 'US SEO Services', item: 'https://factoryjet.com/us/services/seo' },
+        { '@type': 'ListItem', position: 3, name: 'Nashville', item: 'https://factoryjet.com/us/nashville' },
         { '@type': 'ListItem', position: 4, name: 'SEO', item: CANONICAL },
       ],
     },
@@ -186,8 +195,13 @@ const jsonLd = {
       '@id': CANONICAL,
       url: CANONICAL,
       name: 'Nashville SEO Company | SEO Expert & Services in Nashville, TN',
-      author: { '@type': 'Person', name: 'Bhavesh Barot', jobTitle: 'Founder, FactoryJet' },
+      author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhaveshbarot/', jobTitle: 'Founder, FactoryJet' },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${CANONICAL}#faq`,
+      mainEntity: faqSchemaItems,
     },
   ],
 };

@@ -116,10 +116,6 @@ const serviceSchema = {
       worstRating: '1',
     },
   },
-  offers: [
-    { '@type': 'Offer', name: 'Web App MVP', price: '7500', priceCurrency: 'USD', availability: 'https://schema.org/InStock' },
-    { '@type': 'Offer', name: 'Growth Platform', price: '18000', priceCurrency: 'USD', availability: 'https://schema.org/InStock' },
-  ],
 };
 
 const breadcrumbSchema = {
