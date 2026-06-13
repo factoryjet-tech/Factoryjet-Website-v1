@@ -34,6 +34,10 @@ const schema = {
         "areaServed": "GB",
       },
       "areaServed": ["Birmingham", "West Midlands", "United Kingdom"],
+      "sameAs": [
+        "https://www.linkedin.com/company/factoryjet",
+        "https://www.crunchbase.com/organization/factoryjet",
+      ],
     },
     {
       "@type": "LocalBusiness",
@@ -46,7 +50,6 @@ const schema = {
         "name": "Birmingham",
         "sameAs": "https://en.wikipedia.org/wiki/Birmingham",
       },
-      "priceRange": "££",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "GB",
@@ -66,15 +69,6 @@ const schema = {
       "areaServed": "Birmingham",
       "description":
         "AI-native web design agency in Birmingham. Next.js 15, WordPress, Webflow and Framer websites. Lighthouse SEO 100 guaranteed.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "GBP",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "minPrice": 1995,
-          "maxPrice": 18000,
-        },
-      },
     },
     {
       "@type": "Service",
@@ -83,15 +77,6 @@ const schema = {
       "areaServed": "Birmingham",
       "description":
         "Shopify Plus agency Birmingham. Headless commerce, B2B ecommerce portals, WooCommerce for Birmingham retailers and manufacturers.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "GBP",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "minPrice": 2995,
-          "maxPrice": 35000,
-        },
-      },
     },
     {
       "@type": "Service",
@@ -100,15 +85,6 @@ const schema = {
       "areaServed": "Birmingham",
       "description":
         "Agentic AI and AI automation agency Birmingham. Multi-agent AI systems for legal firms, financial services, manufacturing and professional services.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "GBP",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "minPrice": 3500,
-          "maxPrice": 16000,
-        },
-      },
     },
     {
       "@type": "Service",
@@ -117,15 +93,6 @@ const schema = {
       "areaServed": "Birmingham",
       "description":
         "AI SEO agency Birmingham. Generative engine optimisation (GEO), answer engine optimisation (AEO) and AI SEO for Birmingham businesses.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "GBP",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "minPrice": 650,
-          "maxPrice": 4000,
-        },
-      },
     },
     {
       "@type": "FAQPage",

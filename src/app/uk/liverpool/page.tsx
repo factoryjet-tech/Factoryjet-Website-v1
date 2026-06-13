@@ -22,6 +22,17 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Organization",
+      "@id": "https://factoryjet.com/#organization",
+      "name": "FactoryJet Technologies",
+      "url": "https://factoryjet.com",
+      "logo": "https://factoryjet.com/logo.png",
+      "sameAs": [
+        "https://www.linkedin.com/company/factoryjet",
+        "https://www.crunchbase.com/organization/factoryjet",
+      ],
+    },
+    {
       "@type": "LocalBusiness",
       "name": "FactoryJet Technologies",
       "url": "https://factoryjet.com",
@@ -32,7 +43,6 @@ const schema = {
         "addressRegion": "Merseyside",
         "addressCountry": "GB",
       },
-      "priceRange": "££",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "GB",
@@ -49,15 +59,6 @@ const schema = {
       "areaServed": "Liverpool",
       "description":
         "Custom Next.js 15 web design and Webflow/Framer development for Liverpool businesses.",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "GBP",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "minPrice": 1500,
-          "maxPrice": 22000,
-        },
-      },
     },
     {
       "@type": "FAQPage",

@@ -40,13 +40,15 @@ const localBusinessSchema = {
   url: "https://factoryjet.com/uk/sheffield",
   telephone: "+13391702199",
   email: "connect@factoryjet.com",
-  priceRange: "££",
   serviceArea: {
     "@type": "AdministrativeArea",
     name: "Sheffield, South Yorkshire, UK",
   },
   areaServed: ["Sheffield", "Rotherham", "Barnsley", "Doncaster"],
-  sameAs: ["https://factoryjet.com"],
+  sameAs: [
+    "https://www.linkedin.com/company/factoryjet",
+    "https://www.crunchbase.com/organization/factoryjet",
+  ],
   aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "150", bestRating: "5", worstRating: "1" },
 };
 
@@ -66,29 +68,6 @@ const serviceSchema = {
     "@type": "City",
     name: "Sheffield",
   },
-  offers: [
-    {
-      "@type": "Offer",
-      name: "Starter",
-      price: "799",
-      priceCurrency: "GBP",
-      description: "5-page custom website delivered in 5 days",
-    },
-    {
-      "@type": "Offer",
-      name: "Business",
-      price: "1499",
-      priceCurrency: "GBP",
-      description: "Up to 10 pages with AI chatbot, delivered in 7 days",
-    },
-    {
-      "@type": "Offer",
-      name: "E-Commerce",
-      price: "2499",
-      priceCurrency: "GBP",
-      description: "Shopify or WooCommerce build, delivered in 7 days",
-    },
-  ],
 };
 
 const breadcrumbSchema = {

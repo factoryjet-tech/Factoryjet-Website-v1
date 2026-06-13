@@ -378,6 +378,17 @@ export default function SheffieldPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
+                "@type": "Organization",
+                "@id": "https://factoryjet.com/#organization",
+                name: "FactoryJet Technologies",
+                url: "https://factoryjet.com",
+                logo: "https://factoryjet.com/logo.png",
+                sameAs: [
+                  "https://www.linkedin.com/company/factoryjet",
+                  "https://www.crunchbase.com/organization/factoryjet",
+                ],
+              },
+              {
                 "@type": "LocalBusiness",
                 "@id": "https://factoryjet.com/#business",
                 name: "FactoryJet Technologies",
@@ -391,7 +402,6 @@ export default function SheffieldPage() {
                   addressCountry: "GB",
                 },
                 areaServed: { "@type": "City", name: "Sheffield" },
-                priceRange: "££",
                 openingHours: "Mo-Fr 09:00-18:00",
               },
               {
@@ -400,13 +410,7 @@ export default function SheffieldPage() {
                 name: "Web Design Sheffield",
                 provider: { "@id": "https://factoryjet.com/#business" },
                 areaServed: { "@type": "City", name: "Sheffield" },
-                description: "Custom AI-powered websites for Sheffield businesses. Mobile-first, SEO-optimised, delivered in 7 days from £799.",
-                offers: {
-                  "@type": "AggregateOffer",
-                  lowPrice: "799",
-                  highPrice: "4999",
-                  priceCurrency: "GBP",
-                },
+                description: "Custom AI-powered websites for Sheffield businesses. Mobile-first, SEO-optimised, delivered in 7 days.",
               },
               {
                 "@type": "FAQPage",
@@ -425,7 +429,8 @@ export default function SheffieldPage() {
                 "@type": "BreadcrumbList",
                 itemListElement: [
                   { "@type": "ListItem", position: 1, name: "Home", item: "https://factoryjet.com" },
-                  { "@type": "ListItem", position: 2, name: "Web Design Sheffield", item: "https://factoryjet.com/sheffield" },
+                  { "@type": "ListItem", position: 2, name: "UK", item: "https://factoryjet.com/uk" },
+                  { "@type": "ListItem", position: 3, name: "Sheffield", item: "https://factoryjet.com/uk/sheffield" },
                 ],
               },
               {

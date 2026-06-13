@@ -10,7 +10,6 @@ const localBusinessSchema = {
     "AI-native web design agency building custom websites for Manchester businesses. Next.js 15, GSAP, Tailwind CSS 4. Pricing is fixed and published upfront.",
   url: "https://factoryjet.com/manchester",
   email: "connect@factoryjet.com",
-  priceRange: "££",
   areaServed: {
     "@type": "City",
     name: "Manchester",
@@ -23,7 +22,10 @@ const localBusinessSchema = {
     "@type": "AdministrativeArea",
     name: "Greater Manchester, UK",
   },
-  sameAs: ["https://factoryjet.com"],
+  sameAs: [
+    "https://www.linkedin.com/company/factoryjet",
+    "https://www.crunchbase.com/organization/factoryjet",
+  ],
   aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "150", bestRating: "5", worstRating: "1" },
 };
 
@@ -42,13 +44,6 @@ const serviceSchema = {
   areaServed: {
     "@type": "City",
     name: "Manchester",
-  },
-  offers: {
-    "@type": "AggregateOffer",
-    priceCurrency: "GBP",
-    lowPrice: "1500",
-    highPrice: "8000",
-    offerCount: "6",
   },
 };
 

@@ -28,6 +28,43 @@ export const metadata: Metadata = {
 export default function LondonPage() {
   return (
     <main className="bg-white">
+      {/* JSON-LD: Organization */}
+      <Script
+        id="ld-london-organization"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "@id": "https://factoryjet.com/#organization",
+            name: "FactoryJet Technologies",
+            url: "https://factoryjet.com",
+            logo: "https://factoryjet.com/logo.png",
+            sameAs: [
+              "https://www.linkedin.com/company/factoryjet",
+              "https://www.crunchbase.com/organization/factoryjet",
+            ],
+          }),
+        }}
+      />
+      {/* JSON-LD: BreadcrumbList */}
+      <Script
+        id="ld-london-breadcrumb"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://factoryjet.com" },
+              { "@type": "ListItem", position: 2, name: "UK", item: "https://factoryjet.com/uk" },
+              { "@type": "ListItem", position: 3, name: "London", item: "https://factoryjet.com/uk/london" },
+            ],
+          }),
+        }}
+      />
       {/* JSON-LD: WebPage + Speakable */}
       <Script
         id="ld-london-webpage-speakable"

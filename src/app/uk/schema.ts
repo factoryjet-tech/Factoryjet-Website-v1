@@ -16,7 +16,10 @@ const organization = {
     "@type": "Country",
     name: "United Kingdom",
   },
-  sameAs: ["https://factoryjet.com"],
+  sameAs: [
+    "https://www.linkedin.com/company/factoryjet",
+    "https://www.crunchbase.com/organization/factoryjet",
+  ],
   contactPoint: [
     {
       "@type": "ContactPoint",
@@ -48,14 +51,6 @@ const services = [
     provider,
     areaServed,
     url: "https://factoryjet.com/uk/web-design",
-    offers: {
-      "@type": "AggregateOffer",
-      priceCurrency: "GBP",
-      lowPrice: "1500",
-      highPrice: "8000",
-      offerCount: "2",
-      availability: "https://schema.org/InStock",
-    },
   },
   {
     "@context": "https://schema.org",
@@ -67,14 +62,6 @@ const services = [
     provider,
     areaServed,
     url: "https://factoryjet.com/uk/ecommerce",
-    offers: {
-      "@type": "AggregateOffer",
-      priceCurrency: "GBP",
-      lowPrice: "2000",
-      highPrice: "10000",
-      offerCount: "2",
-      availability: "https://schema.org/InStock",
-    },
   },
   {
     "@context": "https://schema.org",
@@ -86,17 +73,6 @@ const services = [
     provider,
     areaServed,
     url: "https://factoryjet.com/uk/ai-agents",
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "GBP",
-      price: "3000",
-      priceSpecification: {
-        "@type": "PriceSpecification",
-        priceCurrency: "GBP",
-        minPrice: "3000",
-      },
-      availability: "https://schema.org/InStock",
-    },
   },
   {
     "@context": "https://schema.org",
@@ -108,14 +84,6 @@ const services = [
     provider,
     areaServed,
     url: "https://factoryjet.com/uk/ai-seo",
-    offers: {
-      "@type": "AggregateOffer",
-      priceCurrency: "GBP",
-      lowPrice: "500",
-      highPrice: "2000",
-      offerCount: "2",
-      availability: "https://schema.org/InStock",
-    },
   },
 ];
 
