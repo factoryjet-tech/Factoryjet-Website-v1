@@ -16,6 +16,9 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import TalkToFounder from '@/components/v2/TalkToFounder';
 
+import HealthcareSpecialtiesTabs from './HealthcareSpecialtiesTabs';
+import StatsRowAnimated from './StatsRowAnimated';
+
 /* ─────────────────────────────────────────────────────────────────────────────
    /us/services/healthcare-seo — v2 rebuild 2026-06-13
 
@@ -111,6 +114,8 @@ const PILLARS = [
     title: 'YMYL E-E-A-T is not optional — it is the ranking floor for health content',
     body:
       'Health content falls under Google\'s "Your Money or Your Life" category, where weak Experience, Expertise, Authoritativeness, and Trustworthiness signals earn manual quality reviews and ranking suppression. Provider bylines with credentials, About pages with verifiable licensure, peer-reviewed citations, and clear editorial policies are not best practices — they are the minimum requirement before Google will rank your healthcare content. Most generalist SEO agencies run a standard technical checklist and wonder why rankings do not respond. As a healthcare SEO agency, we build E-E-A-T into every page from the first draft, not as a fix when rankings plateau.',
+    image: '/images/services/healthcare-seo-eeat.webp',
+    imageAlt: 'Medical professional reviewing E-E-A-T compliant healthcare content with peer-reviewed citations',
   },
   {
     title: '84% of patients check reviews before choosing a provider — and review signals directly affect rankings',
@@ -121,6 +126,8 @@ const PILLARS = [
     title: 'Default GA4 on a patient-facing site creates HIPAA liability most SEO agencies never mention',
     body:
       'Standard Google Analytics 4 implementation on a healthcare website can expose Protected Health Information through referral URLs, form submission events, and session data — creating HIPAA liability that has nothing to do with SEO performance, but everything to do with whether you can keep running digital marketing. Google\'s GA4 Business Associate Agreement covers limited use cases that most healthcare sites do not satisfy out of the box. A healthcare SEO agency that fires standard GA4 onto a patient-facing site without reviewing this is a compliance risk, not a marketing asset. We audit your GA4 configuration for HIPAA-risk events as part of every engagement baseline, before a single ranking dollar is spent.',
+    image: '/images/services/healthcare-seo-hipaa.webp',
+    imageAlt: 'HIPAA-compliant analytics dashboard configuration for healthcare website',
   },
 ];
 
@@ -1302,13 +1309,19 @@ export default function HealthcareSeoServicePage() {
       {/* ─── 2. Quick Answer block — sourced stats ────────────────────────── */}
       <QuickAnswerBlock />
 
-      {/* ─── 3. Stats row ────────────────────────────────────────────────── */}
-      <StatsRow />
+      {/* ─── 3. Stats row — animated counters (client component) ─────────── */}
+      <StatsRowAnimated />
 
       {/* ─── 4. Reviewed-by byline ───────────────────────────────────────── */}
       <ReviewedBy />
 
       {/* ─── 5. Service explanation — what healthcare SEO covers ─────────── */}
+      {/*
+        DESIGN RULE (2026-06-13): Table extracted to its own full-width section below.
+        Table inside a 2-col left body prop clips its rightmost columns — always
+        put data tables in standalone sections with overflow-x-auto.
+        rightSlot fills dead space with AI map-pack image below Quick Facts.
+      */}
       <ServiceExplanation
         eyebrow="WHAT HEALTHCARE SEO COVERS"
         headline="Standard SEO handles about 60% of the job. The other 40% is healthcare-specific — and it is where rankings stall."
@@ -1335,72 +1348,122 @@ export default function HealthcareSeoServicePage() {
               </Link>{' '}
               applies the same E-E-A-T and AI-citation playbook to non-regulated industries.
             </p>
-            <HealthcareDataTable />
           </>
         }
         rightSlot={
-          <div
-            className="rounded-2xl border p-7"
-            style={{
-              borderColor: 'rgba(15,15,18,0.10)',
-              backgroundColor: '#FFFFFF',
-              boxShadow: '0 1px 3px rgba(15,15,18,0.04)',
-            }}
-          >
-            <p
-              className="font-fj-mono font-bold uppercase"
-              style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#F05A28' }}
+          <div className="flex flex-col gap-5">
+            {/* Quick Facts card */}
+            <div
+              className="rounded-2xl border p-7"
+              style={{
+                borderColor: 'rgba(15,15,18,0.10)',
+                backgroundColor: '#FFFFFF',
+                boxShadow: '0 1px 3px rgba(15,15,18,0.04)',
+              }}
             >
-              Quick facts
-            </p>
-            <ul className="mt-5 space-y-4">
-              {[
-                {
-                  stat: '2023',
-                  detail:
-                    'Online search surpassed physician referrals as the #1 way Americans find new doctors.',
-                },
-                {
-                  stat: '94%',
-                  detail:
-                    'of prospective patients choose their provider based on online reputation.',
-                },
-                {
-                  stat: '50%+',
-                  detail:
-                    'increase in patient calls when a practice ranks in the Google Map Pack.',
-                },
-                {
-                  stat: 'YMYL',
-                  detail:
-                    'Google applies elevated quality review to all healthcare content — bylines + citations are ranking prerequisites.',
-                },
-              ].map((f) => (
-                <li key={f.stat} className="flex items-start gap-3">
-                  <span
-                    className="fj-display font-bold shrink-0"
-                    style={{ color: '#F05A28', fontSize: '1.125rem', lineHeight: 1.2 }}
-                  >
-                    {f.stat}
-                  </span>
-                  <p
-                    className="font-fj-body"
-                    style={{ color: 'rgba(15,15,18,0.68)', fontSize: '0.875rem', lineHeight: 1.5 }}
-                  >
-                    {f.detail}
-                  </p>
-                </li>
-              ))}
-            </ul>
-            <p
-              className="mt-5 font-fj-body"
-              style={{ color: 'rgba(15,15,18,0.40)', fontSize: '0.75rem', fontStyle: 'italic' }}
+              <p
+                className="font-fj-mono font-bold uppercase"
+                style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#F05A28' }}
+              >
+                Quick facts
+              </p>
+              <ul className="mt-5 space-y-4">
+                {[
+                  {
+                    stat: '2023',
+                    detail:
+                      'Online search surpassed physician referrals as the #1 way Americans find new doctors.',
+                  },
+                  {
+                    stat: '94%',
+                    detail:
+                      'of prospective patients choose their provider based on online reputation.',
+                  },
+                  {
+                    stat: '50%+',
+                    detail:
+                      'increase in patient calls when a practice ranks in the Google Map Pack.',
+                  },
+                  {
+                    stat: 'YMYL',
+                    detail:
+                      'Google applies elevated quality review to all healthcare content — bylines + citations are ranking prerequisites.',
+                  },
+                ].map((f) => (
+                  <li key={f.stat} className="flex items-start gap-3">
+                    <span
+                      className="fj-display font-bold shrink-0"
+                      style={{ color: '#F05A28', fontSize: '1.125rem', lineHeight: 1.2 }}
+                    >
+                      {f.stat}
+                    </span>
+                    <p
+                      className="font-fj-body"
+                      style={{ color: 'rgba(15,15,18,0.68)', fontSize: '0.875rem', lineHeight: 1.5 }}
+                    >
+                      {f.detail}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+              <p
+                className="mt-5 font-fj-body"
+                style={{ color: 'rgba(15,15,18,0.40)', fontSize: '0.75rem', fontStyle: 'italic' }}
+              >
+                Sources: netoneclick.com, industry aggregate data, BrightEdge 2025.
+              </p>
+            </div>
+
+            {/* Map pack image — fills dead space, reinforces local SEO angle */}
+            <div
+              className="relative w-full overflow-hidden rounded-2xl"
+              style={{
+                border: '1px solid rgba(15,15,18,0.10)',
+                boxShadow: '0 2px 12px rgba(15,15,18,0.06)',
+              }}
             >
-              Sources: netoneclick.com, industry aggregate data, BrightEdge 2025.
-            </p>
+              <Image
+                src="/images/services/healthcare-seo-map-pack.webp"
+                alt="Google Map Pack showing medical practice ranked #1 for 'dentist near me'"
+                width={1024}
+                height={1344}
+                className="w-full object-cover"
+                style={{ maxHeight: '340px', objectPosition: 'center top' }}
+                loading="lazy"
+              />
+              {/* Caption overlay */}
+              <div
+                className="absolute bottom-0 left-0 right-0 px-4 py-3"
+                style={{ background: 'linear-gradient(to top, rgba(15,15,18,0.75) 0%, transparent 100%)' }}
+              >
+                <p
+                  className="font-fj-mono font-bold uppercase"
+                  style={{ fontSize: '9px', letterSpacing: '0.14em', color: 'rgba(255,255,255,0.75)' }}
+                >
+                  Map Pack position #1
+                </p>
+                <p
+                  className="font-fj-body"
+                  style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.85)', marginTop: '2px' }}
+                >
+                  42% of local search clicks go to the top 3 Map Pack results
+                </p>
+              </div>
+            </div>
           </div>
         }
       />
+
+      {/* ─── 5b. Data table — full-width standalone (extracted from left col) ── */}
+      {/*
+        DESIGN RULE: tables always go in standalone full-width sections.
+        Never nest a multi-column table inside a 2-col layout's body prop.
+      */}
+      <section className="pb-14 md:pb-20" style={{ backgroundColor: '#FFFFFF' }}>
+        <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+          <HealthcareDataTable />
+        </div>
+      </section>
 
       {/* ─── 6. Strategic dark — 3 problems most agencies miss ───────────── */}
       <StrategicDarkSection
@@ -1410,10 +1473,59 @@ export default function HealthcareSeoServicePage() {
         pillars={PILLARS}
       />
 
-      {/* ─── 7. Specialties listicle ─────────────────────────────────────── */}
-      <HealthcareSpecialtiesSection />
+      {/* ─── 7. Specialties — interactive tabs (client component) ───────── */}
+      <HealthcareSpecialtiesTabs />
 
-      {/* ─── 8. Process — 5-step journey ─────────────────────────────────── */}
+      {/* ─── 8. Process — visual intro + 5-step journey ──────────────────── */}
+      {/* Visual break image before the 5-step cards — reduces text density */}
+      <div
+        className="relative w-full overflow-hidden"
+        style={{ maxHeight: '400px', backgroundColor: '#0F0F12' }}
+        aria-hidden="true"
+      >
+        <Image
+          src="/images/services/healthcare-seo-process.webp"
+          alt="Healthcare SEO strategy session with ranking charts showing upward trend"
+          width={1344}
+          height={768}
+          className="w-full object-cover opacity-80"
+          style={{ maxHeight: '400px' }}
+          loading="lazy"
+        />
+        {/* Gradient overlays — top and bottom fade to blend with adjacent sections */}
+        <div
+          className="absolute inset-x-0 top-0 h-24 pointer-events-none"
+          style={{ background: 'linear-gradient(to bottom, rgba(15,15,18,0.85) 0%, transparent 100%)' }}
+        />
+        <div
+          className="absolute inset-x-0 bottom-0 h-32 pointer-events-none"
+          style={{ background: 'linear-gradient(to top, rgba(15,15,18,0.90) 0%, transparent 100%)' }}
+        />
+        {/* Floating caption */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="text-center px-6">
+            <p
+              className="font-fj-mono font-bold uppercase"
+              style={{ fontSize: '11px', letterSpacing: '0.18em', color: '#F05A28' }}
+            >
+              OUR 5-STEP HEALTHCARE SEO PROCESS
+            </p>
+            <p
+              className="mt-2 fj-display font-semibold"
+              style={{
+                color: '#FAFAF7',
+                fontSize: 'clamp(1.25rem, 2.5vw, 1.875rem)',
+                lineHeight: 1.15,
+                letterSpacing: '-0.02em',
+                textShadow: '0 2px 16px rgba(0,0,0,0.60)',
+              }}
+            >
+              Audit → Compliance → Rankings → Content → Report
+            </p>
+          </div>
+        </div>
+      </div>
+
       <ServiceJourneyRow
         eyebrow="OUR 5-STEP HEALTHCARE SEO PROCESS"
         headline="From audit to map pack rankings, AI citations, and a full patient-acquisition report."
