@@ -27,21 +27,21 @@ import SiteFooter from '@/components/v2/SiteFooter'
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 export const metadata: Metadata = {
-  title: 'Shopify Developer Chattanooga, TN — 7-Day Builds From $2,999',
-  description: 'Launch a Shopify store in Chattanooga, TN in 7 days from $2,999. Gig City e-commerce specialists — fixed price, full code ownership, no retainers.',
+  title: 'Shopify Developer Chattanooga TN | Custom Shopify Stores | FactoryJet',
+  description: 'Top-rated Shopify developer in Chattanooga, TN. FactoryJet builds custom Shopify stores for Gig City businesses — 7-day delivery, fixed price, full code ownership. Free audit.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Developer Chattanooga, TN — 7-Day Builds From $2,999',
-    description: 'Launch a Shopify store in Chattanooga, TN in 7 days from $2,999. Gig City e-commerce specialists — fixed price, full code ownership, no retainers.',
+    title: 'Shopify Developer Chattanooga TN | Custom Shopify Stores | FactoryJet',
+    description: 'Top-rated Shopify developer in Chattanooga, TN. FactoryJet builds custom Shopify stores for Gig City businesses — 7-day delivery, fixed price, full code ownership. Free audit.',
     url: 'https://factoryjet.com/us/chattanooga/ecommerce-development',
     images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet - Shopify Developer Chattanooga TN' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify Developer Chattanooga, TN — 7-Day Builds From $2,999',
-    description: 'Launch a Shopify store in Chattanooga, TN in 7 days from $2,999. Gig City e-commerce specialists — fixed price, full code ownership, no retainers.',
+    title: 'Shopify Developer Chattanooga TN | Custom Shopify Stores | FactoryJet',
+    description: 'Top-rated Shopify developer in Chattanooga, TN. FactoryJet builds custom Shopify stores for Gig City businesses — 7-day delivery, fixed price, full code ownership. Free audit.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
@@ -534,6 +534,18 @@ export default function Page() {
               question: 'Can you build a subscription Shopify store for a Chattanooga brand?',
               answer:
                 "Yes — subscription commerce works especially well for Chattanooga's craft beverage, outdoor gear, and wellness brands. We build subscription Shopify stores using Recharge, Skio, or native Shopify subscriptions: monthly craft beer or spirits clubs, outdoor gear subscription boxes, guided experience memberships, and supplement auto-ship programs. Subscription stores typically generate 30–50% higher customer lifetime value than one-time-purchase stores — and Chattanooga's loyal local consumer base and returning tourist visitors are an ideal audience for subscription models.",
+            },
+            {
+              category: 'local',
+              question: 'What Shopify developers are available in Chattanooga, TN?',
+              answer:
+                "Chattanooga's dedicated Shopify developer options are limited — most local agencies like Riverworks Marketing, JLB Works, and Slamdot build primarily on WordPress. National agencies like Growisto appear in 'shopify chattanooga' search results but operate with 7–16 week timelines and zero Gig City market knowledge. FactoryJet is the Shopify-specialist option: custom Shopify development, 7-day delivery, Tennessee sales tax configuration (9.25% Hamilton County), and a team that understands the outdoor, tourism, craft beverage, and manufacturing sectors that define Chattanooga's economy. Book a free audit to see a sample store architecture built for your industry.",
+            },
+            {
+              category: 'technical',
+              question: 'How does a Shopify store help a Chattanooga business compete online?',
+              answer:
+                "A well-built Shopify store gives a Chattanooga business three competitive advantages: it captures intent from the 10.7M annual visitors who research purchases before arriving in the city; it ranks for local queries like 'buy outdoor gear chattanooga' and 'craft beer chattanooga online'; and it automates B2B ordering for Tennessee Valley manufacturers. FactoryJet builds every Chattanooga Shopify store with AEO content structured for ChatGPT and Perplexity citations, JSON-LD schema for Google AI Overviews, and Core Web Vitals scores above 90 — the technical foundation that converts search traffic into revenue.",
             },
             {
               category: 'local',

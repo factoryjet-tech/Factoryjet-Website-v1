@@ -155,6 +155,15 @@ export const post: BlogPost = {
         FactoryJet's Shopify store setup for US small businesses starts at $2,499 and launches in 7 days. Scope includes: custom theme configuration (colors, fonts, layout), up to 50 products loaded with SEO-optimized titles and descriptions, Shopify Payments or Stripe setup, shipping and tax configuration, Google Analytics 4 and Search Console, Product JSON-LD schema, Lighthouse 100/100 optimization, Klaviyo abandoned cart setup, and 30 days post-launch support.
       </p>
       <p className="mb-4">
+        We serve US small businesses coast to coast — from outdoor brands and manufacturers in{' '}
+        <a href="/us/chattanooga/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">
+          Chattanooga, TN
+        </a>{' '}
+        to DTC brands launching their first store. Every build includes Tennessee sales tax
+        configuration, state-specific shipping zones, and compliance setup as standard — no
+        extra charge for getting the details right.
+      </p>
+      <p className="mb-4">
         ➡ <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free Shopify quote with delivery in 24 hours</a> · <a href="/us/services/ecommerce" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our Shopify packages</a>
       </p>
 
