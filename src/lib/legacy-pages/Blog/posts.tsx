@@ -84,6 +84,9 @@ import { post as aiAdoptionUsSmallBusinesses2026Post } from './posts/ai-adoption
 import { post as bestAiSeoAgenciesUkPost } from './posts/best-ai-seo-agencies-uk';
 import { post as bestAiSeoAgenciesIndiaPost } from './posts/best-ai-seo-agencies-india';
 import { post as bestSeoAgenciesUkPost } from './posts/best-seo-agencies-uk';
+import { post as shopifyWebsiteCostPost } from './posts/shopify-website-cost';
+import { post as bestAiAgentDevelopmentCompaniesSmallBusinessPost } from './posts/best-ai-agent-development-companies-small-business';
+import { post as bestGeoAgenciesPost } from './posts/best-geo-agencies';
 
 export const POSTS: BlogPost[] = [
   // --- WEB DESIGN & STRATEGY ---
@@ -4739,4 +4742,7 @@ export const POSTS: BlogPost[] = [
   bestAiSeoAgenciesUkPost,
   bestAiSeoAgenciesIndiaPost,
   bestSeoAgenciesUkPost,
+  shopifyWebsiteCostPost,
+  bestAiAgentDevelopmentCompaniesSmallBusinessPost,
+  bestGeoAgenciesPost,
 ];
