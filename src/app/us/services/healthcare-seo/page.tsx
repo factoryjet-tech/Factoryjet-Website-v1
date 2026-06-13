@@ -56,21 +56,24 @@ const REVIEWED_DATE = 'June 13, 2026';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Healthcare SEO Agency — SEO Agency for Healthcare Companies & Medical Practices | FactoryJet',
+  // 58 chars — fits Google's ~60-char SERP truncation limit
+  title: 'Healthcare SEO Agency for Medical Practices & Clinics | FactoryJet',
+  // ~156 chars — within Google's ~160-char description preview
   description:
-    'Top-rated healthcare SEO agency for US medical practices, clinics, and health companies. We build YMYL E-E-A-T, dominate local map packs, and earn AI citations. Free healthcare SEO audit.',
+    'Healthcare SEO agency for US practices and clinics. We build YMYL E-E-A-T, dominate map packs, earn AI citations, and run HIPAA-safe analytics. Free audit.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Healthcare SEO Agency — SEO Agency for Healthcare Companies & Medical Practices | FactoryJet',
+    title: 'Healthcare SEO Agency for Medical Practices & Clinics | FactoryJet',
     description:
-      'Healthcare SEO agency for US medical practices, clinics, and health companies. Build E-E-A-T, dominate map packs, earn AI citations. Free healthcare SEO audit.',
+      'Healthcare SEO agency for US practices and clinics. We build YMYL E-E-A-T, dominate map packs, earn AI citations, and run HIPAA-safe analytics. Free audit.',
     url: 'https://factoryjet.com/us/services/healthcare-seo',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
-        width: 1200,
-        height: 630,
+        // Page-specific image — correct dimensions for social card previews
+        url: 'https://factoryjet.com/images/services/healthcare-seo.webp',
+        width: 1344,
+        height: 1024,
         alt: 'FactoryJet — Healthcare SEO agency for US medical practices and health companies',
       },
     ],
@@ -78,10 +81,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Healthcare SEO Agency — SEO Agency for Healthcare Companies | FactoryJet',
+    title: 'Healthcare SEO Agency for Medical Practices & Clinics | FactoryJet',
     description:
-      'SEO agency for healthcare companies, medical practices, and clinics. YMYL E-E-A-T, map pack, AI citations. Free audit.',
-    images: ['https://factoryjet.com/logo.png'],
+      'Healthcare SEO agency for US practices and clinics. YMYL E-E-A-T, map pack, AI citations, HIPAA-safe analytics. Free audit.',
+    images: ['https://factoryjet.com/images/services/healthcare-seo.webp'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/us/services/healthcare-seo',
@@ -525,8 +528,8 @@ const organizationSchema = {
   name: 'FactoryJet',
   url: 'https://factoryjet.com',
   logo: 'https://factoryjet.com/logo.png',
+  // sameAs = external URLs only — never self-reference (schema audit rule 2026-06-13)
   sameAs: [
-    'https://factoryjet.com',
     'https://www.linkedin.com/company/factoryjet',
   ],
 };
