@@ -28,14 +28,14 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/us/charlotte/seo';
 
 export const metadata: Metadata = {
-  title: 'Charlotte SEO Company | Local SEO Services Near Me in NC | FactoryJet',
+  title: 'SEO Company Near Me Charlotte, NC | Local SEO Services | FactoryJet',
   description:
-    'Top-rated Charlotte SEO company. FactoryJet gets local businesses into the Google Map Pack and "near me" results. Local SEO, GBP optimization, and technical SEO — free audit, no long-term contracts.',
+    'Looking for an SEO company near me in Charlotte, NC? FactoryJet puts local businesses in the Google Map Pack and "near me" results. Local SEO services, GBP optimization, free audit, no long-term contracts.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Charlotte SEO Company | Local SEO Services Near Me in NC | FactoryJet',
+    title: 'SEO Company Near Me Charlotte, NC | Local SEO Services | FactoryJet',
     description:
-      'Top-rated Charlotte SEO company. Map Pack optimization, local SEO services, and technical SEO for Charlotte, NC businesses. Free audit, no lock-in.',
+      'SEO company near you in Charlotte, NC. Map Pack optimization, local SEO services, and technical SEO. Free audit, no lock-in.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_US',
@@ -140,6 +140,10 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
     label: 'SEO near me & services',
     items: [
       {
+        q: 'What should I look for in an SEO company near me in Charlotte, NC?',
+        a: "When searching 'SEO company near me Charlotte NC', three things matter most: (1) Who actually does the work? Senior engineers vs. account managers is the single biggest quality gap in Charlotte SEO. (2) Does the agency report on calls and leads, not just ranking positions? Rankings are the mechanism; booked jobs are the result. (3) Are terms month-to-month? A 6-12 month lock-in protects the agency, not you. FactoryJet meets all three: public pricing, month-to-month terms, and senior SEO experts you can verify by testing our own Lighthouse scores on factoryjet.com before you sign anything.",
+      },
+      {
         q: 'How do I find a good SEO company near me in Charlotte?',
         a: 'Search "SEO company near me Charlotte" and look at who actually ranks — an agency that cannot rank its own site is a warning sign. Then check six things: written deliverables, pricing shown before you sign, month-to-month terms, you own your data, reports tied to calls and leads, and no ranking guarantees. Proximity matters less than expertise; the right Charlotte SEO company does not need a storefront on Tryon Street to drive Map Pack results in Ballantyne or NoDa.',
       },
@@ -215,7 +219,7 @@ const jsonLd = {
       '@type': 'WebPage',
       '@id': CANONICAL,
       url: CANONICAL,
-      name: 'Charlotte SEO Company | Local SEO Services Near Me in NC | FactoryJet',
+      name: 'SEO Company Near Me Charlotte, NC | Local SEO Services | FactoryJet',
       datePublished: '2026-06-06',
       dateModified: '2026-06-13',
       author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhaveshbarot/', jobTitle: 'Founder, FactoryJet' },
@@ -457,7 +461,7 @@ export default function CharlotteSeoPage() {
               <ModalCTAButton label="Get your free Charlotte SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
               <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
             </div>
-            <p className="fine">Local SEO from $499/month, billed month-to-month, with a free audit and no setup fee. Also in Charlotte: <Link href="/us/charlotte/web-design">web design</Link>, <Link href="/us/charlotte/ecommerce-development">e-commerce</Link>, and <Link href="/us/charlotte/ai-automation">AI automation</Link>. <Link href="/us/services/seo">US SEO services</Link></p>
+            <p className="fine">Local SEO from $499/month, billed month-to-month, with a free audit and no setup fee. Also in Charlotte: <Link href="/us/charlotte/web-design">web design</Link>, <Link href="/us/charlotte/ecommerce-development">e-commerce</Link>, and <Link href="/us/charlotte/ai-automation">AI automation</Link>. <Link href="/us/services/seo">US SEO services</Link>. More US cities: <Link href="/us/cleveland/seo">Cleveland SEO</Link> · <Link href="/us/nashville/seo">Nashville SEO</Link>.</p>
           </div>
         </section>
       </div>

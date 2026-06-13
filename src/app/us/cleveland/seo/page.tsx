@@ -27,14 +27,14 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/us/cleveland/seo';
 
 export const metadata: Metadata = {
-  title: 'Cleveland SEO Company | Local SEO Services Near Me in Ohio | FactoryJet',
+  title: 'SEO Services Cleveland, Ohio | Local SEO Company Near Me | FactoryJet',
   description:
-    'Top-rated SEO company near you in Cleveland, Ohio. FactoryJet delivers local SEO services, technical SEO, and GBP optimization for Cleveland businesses. Free audit, no long-term contracts.',
+    'SEO services and SEO company in Cleveland, Ohio. FactoryJet provides local SEO, technical SEO, HVAC SEO, plumber SEO, and GBP optimization for Cleveland businesses. Free audit, no long-term contracts.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Cleveland SEO Company | Local SEO Services Near Me in Ohio | FactoryJet',
+    title: 'SEO Services Cleveland, Ohio | Local SEO Company Near Me | FactoryJet',
     description:
-      'Top-rated SEO company in Cleveland, Ohio. Local SEO services, technical SEO, and GBP optimization for Cleveland businesses. Free audit, no lock-in.',
+      'SEO services and SEO company in Cleveland, Ohio. Local SEO, technical SEO, HVAC and plumber SEO, GBP optimization for Cleveland businesses. Free audit, no lock-in.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_US',
@@ -150,6 +150,14 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
         a: 'Yes. Plumber SEO in Northeast Ohio is extremely high-intent — someone searching "plumber near me" needs help right now, and the Map Pack wins nearly every emergency call. We optimize your Google Business Profile, build service-area pages for communities across Cuyahoga, Lake, and Lorain counties, run a review-generation system, and fix the technical issues most plumbing websites carry. Book a free audit and we will show you exactly where you rank for Cleveland plumbing terms.',
       },
       {
+        q: 'Do you offer local SEO services for businesses in Lakewood, Ohio?',
+        a: 'Yes. FactoryJet provides local SEO services across the entire Cleveland metro, including Lakewood, Parma, Westlake, Beachwood, and Cleveland Heights. We optimize your Google Business Profile for service-area keywords across Cuyahoga County, build suburb-specific landing pages, and run a review pipeline for your area. Lakewood businesses compete in a high-density near-me market directly adjacent to Cleveland proper, which means profile quality and review velocity matter more than in outer suburbs. Book a free audit to see exactly where your Lakewood listing stands.',
+      },
+      {
+        q: 'What makes FactoryJet one of the top SEO companies in Cleveland?',
+        a: 'Three things set the top SEO companies in Cleveland apart from the rest: senior engineers doing the actual work (not account managers), reporting tied to calls and leads (not ranking screenshots), and a technical foundation that includes Core Web Vitals, schema markup, and AI/GEO optimization — not just content and links. FactoryJet passes all three: every engagement is run by the same senior engineers who build Lighthouse 100/100 sites, with a written deliverables list and month-to-month terms. You can verify our technical work by running PageSpeed on factoryjet.com yourself before you talk to us.',
+      },
+      {
         q: 'What local SEO services do you provide for Cleveland businesses?',
         a: 'Our local SEO services for Cleveland include: Google Business Profile setup and full optimization, citation building and NAP cleanup across 50+ directories, review growth and response management, local keyword research and on-page optimization, neighborhood and suburb landing pages, schema markup (LocalBusiness, FAQPage, BreadcrumbList), and monthly reporting tied to calls and direction requests — not vanity metrics. Everything is in one flat monthly engagement with no setup fee and no long-term contract.',
       },
@@ -212,7 +220,7 @@ const jsonLd = {
       '@type': 'WebPage',
       '@id': CANONICAL,
       url: CANONICAL,
-      name: 'Cleveland SEO Company | Local SEO Services Near Me in Ohio',
+      name: 'SEO Services Cleveland, Ohio | Local SEO Company Near Me | FactoryJet',
       datePublished: '2026-06-06',
       dateModified: '2026-06-13',
       author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhaveshbarot/', jobTitle: 'Founder, FactoryJet' },
@@ -440,7 +448,7 @@ export default function ClevelandSeoPage() {
               <ModalCTAButton label="Get your free Cleveland SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
               <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
             </div>
-            <p className="fine">SEO services in Cleveland, Ohio from $499/month, billed month-to-month, with a free audit and no setup fee. Also in Cleveland: <Link href="/us/cleveland/web-design">web design</Link>. See <Link href="/us/services/seo">US SEO services</Link> and our <Link href="/us/services/seo-audit">free SEO audit</Link>.</p>
+            <p className="fine">SEO services in Cleveland, Ohio from $499/month, billed month-to-month, with a free audit and no setup fee. Also in Cleveland: <Link href="/us/cleveland/web-design">web design</Link>. See <Link href="/us/services/seo">US SEO services</Link> and our <Link href="/us/services/seo-audit">free SEO audit</Link>. More US cities: <Link href="/us/nashville/seo">Nashville SEO</Link> · <Link href="/us/charlotte/seo">Charlotte SEO</Link>.</p>
           </div>
         </section>
       </div>
