@@ -13,8 +13,8 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: '/blog-images/shopify-vs-custom-website-us-small-business-2026-hero.webp',
   meta: {
-    title: "Shopify vs Custom Website 2026: Which Is Right for Your SMB?",
-    description: "Shopify at $39/mo or a custom site at $5K-$20K? This guide maps US small business owners to the right choice based on revenue stage, product type, and growth goals.",
+    title: "Shopify vs Custom Ecommerce for Wholesale & B2B US Businesses: 2026 Guide",
+    description: "Shopify vs custom ecommerce development for US small businesses: wholesale, B2B, DTC, and service business trade-offs mapped by business type, revenue stage, and 3-year cost of ownership.",
   },
   keyTakeaways: [
     'Shopify is right for 80% of US small business e-commerce — it handles PCI compliance, hosting, and scaling automatically at $79–$299/month.',
@@ -61,6 +61,14 @@ export const post: BlogPost = {
     {
       q: 'How long does it take to build a Shopify store vs. a custom website?',
       a: "A Shopify store with a custom theme and 50-product catalog takes 7–21 days with an efficient agency. A comparable custom e-commerce site takes 4–12 weeks. FactoryJet builds Shopify stores in 7 days starting at $2,499. The speed advantage comes from Shopify's established infrastructure — there's no server setup, no payment gateway configuration from scratch, and no security certification work. Custom sites require these layers, adding 3–6 weeks of foundation work before design even begins.",
+    },
+    {
+      q: 'Is Shopify or a custom website better for wholesale ecommerce in the US?',
+      a: "For B2B wholesale ecommerce in the US, the right platform depends on your pricing complexity. Shopify standard plans support wholesale through third-party apps like Wholesale Suite or Wholesale Gorilla ($30–$80/month), handling customer-specific pricing and restricted storefronts for basic wholesale needs. Shopify Plus ($2,500/month) unlocks native B2B features: net payment terms, multi-location, company accounts, and draft orders. Custom websites built on WooCommerce or Next.js are the choice for complex wholesale operations — multi-tier pricing matrices, ERP integration (SAP, NetSuite), or RFQ workflows that Shopify's app ecosystem can't handle cleanly. For US wholesale businesses with straightforward pricing tiers doing under $1M/year, Shopify with a wholesale app is the faster path to market.",
+    },
+    {
+      q: 'What platform should a US wholesale distributor use for ecommerce in 2026?',
+      a: "US wholesale distributors have three viable paths in 2026: (1) Shopify with a wholesale app — best for distributors launching fast with simple tiered pricing; apps like B2B Wholesale Club or Wholesale Gorilla add volume discounts, minimum order quantities, and customer-specific catalogs without custom development. (2) Shopify Plus B2B — best for distributors with $1M+ in wholesale revenue who need native net-30 terms, purchase order workflows, and a fully separate B2B storefront. (3) Custom WooCommerce or Next.js — best for distributors with deep ERP/inventory integration requirements, contract pricing per customer, or RFQ workflows where Shopify's app ceiling creates friction. Most US wholesale distributors we work with fall in category one — Shopify with a carefully chosen wholesale app gets them online faster and with less maintenance than a fully custom build.",
     },
     {
       q: 'Can I use Shopify for B2B sales to other businesses?',
@@ -178,6 +186,10 @@ export const post: BlogPost = {
         </table>
       </div>
       <p className="mb-4">
+        For a broader comparison of website costs across all options — DIY builders, freelancers, and agencies — see our{' '}
+        <a href="/us/website-cost" className="text-blue-600 underline hover:text-blue-800 transition-colors">complete US website cost guide</a>.
+      </p>
+      <p className="mb-4">
         The three-year TCO converges for most businesses in the $100K–$500K/year revenue range. Shopify wins on simplicity and launch speed; custom wins on flexibility and eliminating transaction fees. The decision should be made on business model fit, not total cost — because the costs are comparable when modeled honestly.
       </p>
 
@@ -278,7 +290,7 @@ export const post: BlogPost = {
         Our US-hour project management team will tell you honestly which platform fits your business — and we'll document exactly why in writing before you commit a dollar. India-based development means at a fixed, published price for identical technical output.
       </p>
       <p className="mb-4">
-        ➡ <a href="/us/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify development packages</a> · <a href="/us/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">Custom web design packages</a> · <a href="/blog/best-ecommerce-agency-small-business-australia-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">Best e-commerce agency for small business</a> · <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free recommendation in 24 hours</a>
+        ➡ <a href="/us/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify development packages</a> · <a href="/us/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">Custom web design packages</a> · <a href="/blog/shopify-vs-woocommerce-us-small-business-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify vs WooCommerce: full US comparison</a> · <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free recommendation in 24 hours</a>
       </p>
 
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8">

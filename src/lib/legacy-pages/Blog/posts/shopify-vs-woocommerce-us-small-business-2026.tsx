@@ -13,9 +13,9 @@ export const post: BlogPost = {
   readTime: '11 min read',
   imageUrl: '/blog-images/shopify-vs-woocommerce-us-small-business-2026.webp',
   meta: {
-    title: 'Shopify vs WooCommerce for US Small Businesses in 2026: Honest Comparison',
+    title: 'Compare Shopify vs WooCommerce for US Small Businesses: 2026 Platform Guide',
     description:
-      'Side-by-side Shopify vs WooCommerce comparison for US small businesses in 2026: real costs in USD, Stripe/PayPal/Square fees, sales tax, Black Friday readiness, and which platform fits your store.',
+      'Compare Shopify vs WooCommerce for your US small business: sales tax automation, US payment processors, Black Friday readiness, platform fees, and which platform fits your revenue model in 2026.',
   },
   keyTakeaways: [
     'Shopify is the right default for most US small businesses doing under $1M/year — fast to launch, managed hosting, Shopify Payments handles PCI compliance, and the app ecosystem covers nearly every use case.',
@@ -58,6 +58,14 @@ export const post: BlogPost = {
     {
       q: 'What payment processors work with each platform in the US?',
       a: "Both support every major US processor. Stripe, PayPal, Square, Authorize.net, Amazon Pay, Apple Pay, Google Pay, Shop Pay, and Buy Now Pay Later options (Affirm, Klarna, Afterpay) all work on both platforms. The key difference: Shopify charges a 0.5-2% platform fee on non-Shopify Payments processors; WooCommerce charges nothing on top of standard processor rates. If you already have a Stripe account with saved customers or Square hardware in a physical location, both platforms integrate cleanly.",
+    },
+    {
+      q: 'How do Shopify and WooCommerce compare specifically for US-based small businesses?',
+      a: "When comparing Shopify vs WooCommerce for the US market, three factors stand out. First, sales tax: Shopify Tax is built in and covers all 50 states including economic nexus thresholds; WooCommerce requires a paid plugin like TaxJar or Avalara. Second, payment processing: both support Stripe, PayPal, and Square, but Shopify charges a 0.5–2% platform fee on non-Shopify processors that WooCommerce never charges. Third, hosting and maintenance: Shopify is fully managed (no server configuration); WooCommerce requires choosing and managing a hosting provider. For most US small businesses under $500K/year in revenue, Shopify's managed simplicity wins on net convenience. Above that revenue level, WooCommerce's lower total cost of ownership and full code ownership become the compelling arguments.",
+    },
+    {
+      q: 'Are Shopify and WooCommerce both available and supported in the United States?',
+      a: "Both are fully available and widely used across the United States. Shopify is a Canadian company but the majority of its merchant base is American — US-specific features include Shopify Tax (automatic all-50-states calculation), Shop Pay (the highest-converting one-click checkout in US ecommerce), USPS and UPS discounted shipping via Shopify Shipping, and US-based fraud protection. WooCommerce is open-source software maintained by Automattic (a US company based in San Francisco) — every major US payment processor, shipping carrier, and sales tax tool integrates natively. Both platforms are first-class options for US small businesses; the decision comes down to revenue level, how much operational responsibility you want, and your long-term growth plans.",
     },
     {
       q: 'Which platform does FactoryJet recommend for US small businesses?',
@@ -211,6 +219,10 @@ export const post: BlogPost = {
         <strong>Shopify hidden costs.</strong> Apps are the big one. A typical US Shopify store ends up paying for: Klaviyo ($60-$200/month depending on contact count), a reviews app like Judge.me or Stamped ($15-$59/month), a post-purchase upsell app like ReConvert ($14.99-$74.99/month), a help desk like Gorgias ($10-$160/month), and a landing page builder like Shogun or PageFly ($39-$199/month). That's $150-$700/month in apps on top of your platform fee. The platform transaction fee bites if you use any payment processor other than Shopify Payments — 2% on Basic adds up to $2,000/year on $100K in revenue.
       </p>
       <p className="mb-4">
+        For a full breakdown of what you actually pay across every website option — DIY builders, freelancers, and agencies — see our{' '}
+        <a href="/us/website-cost" className="text-blue-600 underline hover:text-blue-800 transition-colors">US website cost guide</a>.
+      </p>
+      <p className="mb-4">
         <strong>WooCommerce hidden costs.</strong> Hosting is where surprises live. The $5/month shared hosts that work fine for a brochure WordPress site will not run a serious WooCommerce store. Plan for managed WordPress hosting — Cloudways ($14-$50/month), Kinsta ($35-$115/month), or WP Engine ($30-$120/month) at minimum. Premium plugins also add up: Yoast SEO Premium ($99/year), WPForms ($99/year), and a backup tool like UpdraftPlus Premium ($95/year). And you need a maintenance retainer or a developer on call for security updates and plugin conflicts — budget $99-$249/month or accept that something will eventually break at 2 AM.
       </p>
 
@@ -250,7 +262,7 @@ export const post: BlogPost = {
         For both platforms, every build ships with the same technical foundation: Lighthouse 100/100, WCAG 2.2 Level AA accessibility, Product JSON-LD schema for Google Shopping rich results, Core Web Vitals optimization, GA4 and Search Console configured, and full code and data ownership transferred to you at final payment. No vendor lock-in on our side either — you can move to any agency or in-house team afterward.
       </p>
       <p className="mb-4">
-        ➡ See pricing for both platforms: <a href="/us/pricing" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet US pricing</a> · <a href="/us/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">All ecommerce options</a>
+        ➡ See pricing for both platforms: <a href="/us/pricing" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet US pricing</a> · <a href="/us/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">All ecommerce options</a> · <a href="/blog/shopify-vs-custom-website-us-small-business-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify vs custom website: which platform for your business</a>
       </p>
 
       <div className="my-12 rounded-2xl bg-[#0052CC] p-8 sm:p-10 text-center not-prose">

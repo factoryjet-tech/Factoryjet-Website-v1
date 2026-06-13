@@ -30,31 +30,31 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'How Much Does a Website Cost in 2025? | FactoryJet',
+  title: 'How Much Does a Good Website Cost in 2026? | FactoryJet',
   description:
-    'Honest website cost breakdown for US small businesses. Squarespace from $16/mo, custom sites from $1,999. See what you get at each price point.',
+    'Honest website cost breakdown for US small businesses: platform fees, freelancer rates, and agency pricing compared — with an honest look at what you actually get at each price point.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'How Much Does a Website Cost in 2025? | FactoryJet',
+    title: 'How Much Does a Good Website Cost in 2026? | FactoryJet',
     description:
-      'Squarespace pricing, Wix pricing, WordPress costs, freelancer rates, and agency fees — all compared honestly. Custom websites from $1,999 with FactoryJet.',
+      'Squarespace, Wix, WordPress, freelancers, and agencies compared honestly. See what you actually get at each website price point — and the trade-offs no one talks about.',
     url: 'https://factoryjet.com/us/website-cost',
     images: [
       {
         url: 'https://factoryjet.com/images/us/hero-us.webp',
         width: 1200,
         height: 630,
-        alt: 'Website Cost Guide 2025 — FactoryJet',
+        alt: 'Website Cost Guide 2026 — FactoryJet',
       },
     ],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'How Much Does a Website Cost in 2025? | FactoryJet',
+    title: 'How Much Does a Good Website Cost in 2026? | FactoryJet',
     description:
-      'Squarespace, Wix, WordPress, freelancer, and agency pricing — compared honestly. Custom websites from $1,999.',
+      'Squarespace, Wix, WordPress, freelancers, and agencies compared honestly. See what you actually get at each website price point.',
     images: ['https://factoryjet.com/images/us/hero-us.webp'],
   },
   alternates: {
@@ -184,7 +184,7 @@ const faqSchema = {
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'How Much Does a Website Cost in 2025?',
+  name: 'How Much Does a Good Website Cost in 2026?',
   url: 'https://factoryjet.com/us/website-cost',
   description:
     'Honest website cost breakdown: Squarespace pricing, Wix pricing, WordPress costs, freelancer rates, agency fees, and FactoryJet custom website pricing for US small businesses.',
@@ -202,7 +202,7 @@ const webPageSchema = {
       worstRating: '1',
     },
   },
-  dateModified: '2025-05-15',
+  dateModified: '2026-06-13',
 };
 
 const breadcrumbSchema = {
@@ -635,6 +635,16 @@ const FAQ_ITEMS = [
 
   // ── Buying Guide ──────────────────────────────────────────────────────
   {
+    question: 'What does a "good" website actually cost for a US small business?',
+    answer: `A "good" website — one that's professionally designed, loads fast, ranks in Google, and converts visitors into leads or sales — costs $1,500–$8,000 for most US small businesses. Below that, you're typically looking at template work with no custom design, no SEO setup, and minimal accountability after launch. Above $8,000 (traditional agency territory), you're often paying for overhead rather than output quality. The $2,000–$5,000 sweet spot gets you custom design, mobile-first performance, technical SEO from day one, and a 30-day support window — the difference between a website that exists and one that actually works. Book a free call to discuss your requirements and get a fixed quote.`,
+    category: 'buying-guide',
+  },
+  {
+    question: 'How do I know if a website is truly "good" before paying for it?',
+    answer: `Ask for three things before paying any web designer: (1) A Lighthouse performance report on recent client work — a good website scores 90+ on mobile performance, accessibility, and SEO. Below 85 on mobile is a signal the team doesn't optimize for speed. (2) Live examples with similar complexity to your project — click them on your phone. Does the site load in under 2 seconds? Does it look professional on a small screen? (3) A clear breakdown of what's included: custom design, on-page SEO, schema markup, Google Analytics setup, and post-launch support should all come standard. A designer who can't show you Lighthouse scores for recent work is probably building sites that look nice in screenshots but underperform in real usage.`,
+    category: 'buying-guide',
+  },
+  {
     question: 'How do I know if a web design quote is fair?',
     answer: `A fair web design quote should be itemized enough that you know what you're paying for. Red flags: vague "discovery" fees with no defined deliverable, hourly billing with no cap, "design" and "development" billed separately at $150+/hour each, and maintenance retainers required to keep your site working. A fair quote includes a clear scope, a fixed price or hard estimate, defined deliverables, and a payment schedule tied to milestones. FactoryJet quotes are fully fixed — scope, price, and timeline agreed before work starts.`,
     category: 'buying-guide',
@@ -703,7 +713,7 @@ export default function WebsiteCostPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
-          eyebrow="WEBSITE COST GUIDE · 2025"
+          eyebrow="WEBSITE COST GUIDE · 2026"
           headline={<>How Much Does a<br className="hidden lg:block" /> Website Really Cost?<br className="hidden lg:block" /> The Honest Answer.</>}
           lead="Squarespace from $16/mo. Wix from $17/mo. Freelancers from $1,000. Traditional agencies from $8,000. FactoryJet from $1,999. Here's what you actually get at each price point — and the trade-offs no one talks about."
           primaryCta={{ label: 'Get a Free Custom Quote', modal: true, region: 'us' }}
@@ -890,7 +900,7 @@ export default function WebsiteCostPage() {
           }}
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}
-          footer="Prices reflect 2025 US market rates. DIY builder costs exclude time investment. Agency costs vary by market and firm size."
+          footer="Prices reflect 2026 US market rates. DIY builder costs exclude time investment. Agency costs vary by market and firm size."
         />
 
         {/* ── 7. STATS ─────────────────────────────────────────────────────── */}

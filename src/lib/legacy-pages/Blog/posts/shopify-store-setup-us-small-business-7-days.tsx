@@ -148,7 +148,14 @@ export const post: BlogPost = {
       <p className="mb-4">
         A professional setup addresses all of these. A DIY setup typically misses all of them and wonders why Google Shopping impressions are low.
       </p>
-      <p className="mb-4">➡ Learn more: <a href="/us/services/ecommerce" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet Shopify development services</a></p>
+      <p className="mb-4">
+        ➡ Learn more:{' '}
+        <a href="/us/services/ecommerce" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet Shopify development services</a>{' '}
+        · Not sure if Shopify is right for your business? See our{' '}
+        <a href="/blog/shopify-vs-woocommerce-us-small-business-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify vs WooCommerce comparison</a>{' '}
+        and{' '}
+        <a href="/blog/shopify-vs-custom-website-us-small-business-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify vs custom website guide</a>.
+      </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Delivers in 7 Days</h2>
       <p className="mb-4">
