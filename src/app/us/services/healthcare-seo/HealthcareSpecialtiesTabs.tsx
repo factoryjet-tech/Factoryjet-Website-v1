@@ -7,7 +7,6 @@
  */
 
 import { useState, useCallback } from 'react';
-import Link from 'next/link';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 
@@ -185,20 +184,6 @@ export default function HealthcareSpecialtiesTabs() {
                 >
                   {current.why}
                 </p>
-
-                <a
-                  href={CALENDLY}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-7 inline-flex items-center gap-2 rounded-full px-6 py-3 font-fj-body text-sm font-semibold transition-all hover:opacity-90"
-                  style={{
-                    backgroundColor: '#F05A28',
-                    color: '#FFFFFF',
-                    boxShadow: '0 4px 16px rgba(240,90,40,0.28)',
-                  }}
-                >
-                  Book a free {current.shortName.toLowerCase()} SEO audit <span aria-hidden="true">→</span>
-                </a>
               </div>
 
               {/* Right — signal card */}
@@ -259,8 +244,8 @@ export default function HealthcareSpecialtiesTabs() {
           </div>
         </div>
 
-        {/* Bottom CTA */}
-        <div className="mt-8 flex flex-col sm:flex-row gap-4">
+        {/* Bottom CTA — one primary per section */}
+        <div className="mt-8">
           <a
             href={CALENDLY}
             target="_blank"
@@ -274,16 +259,6 @@ export default function HealthcareSpecialtiesTabs() {
           >
             Book a free healthcare SEO audit <span aria-hidden="true">→</span>
           </a>
-          <Link
-            href="/us/services/local-seo"
-            className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-fj-body text-sm font-semibold transition-all hover:opacity-90"
-            style={{
-              color: '#F05A28',
-              border: '1.5px solid #F05A28',
-            }}
-          >
-            See our local SEO service
-          </Link>
         </div>
       </div>
     </section>

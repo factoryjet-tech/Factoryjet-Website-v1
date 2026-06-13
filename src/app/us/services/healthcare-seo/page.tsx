@@ -1351,105 +1351,65 @@ export default function HealthcareSeoServicePage() {
           </>
         }
         rightSlot={
-          <div className="flex flex-col gap-5">
-            {/* Quick Facts card */}
-            <div
-              className="rounded-2xl border p-7"
-              style={{
-                borderColor: 'rgba(15,15,18,0.10)',
-                backgroundColor: '#FFFFFF',
-                boxShadow: '0 1px 3px rgba(15,15,18,0.04)',
-              }}
+          <div
+            className="rounded-2xl border p-7"
+            style={{
+              borderColor: 'rgba(15,15,18,0.10)',
+              backgroundColor: '#FFFFFF',
+              boxShadow: '0 1px 3px rgba(15,15,18,0.04)',
+            }}
+          >
+            <p
+              className="font-fj-mono font-bold uppercase"
+              style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#F05A28' }}
             >
-              <p
-                className="font-fj-mono font-bold uppercase"
-                style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#F05A28' }}
-              >
-                Quick facts
-              </p>
-              <ul className="mt-5 space-y-4">
-                {[
-                  {
-                    stat: '2023',
-                    detail:
-                      'Online search surpassed physician referrals as the #1 way Americans find new doctors.',
-                  },
-                  {
-                    stat: '94%',
-                    detail:
-                      'of prospective patients choose their provider based on online reputation.',
-                  },
-                  {
-                    stat: '50%+',
-                    detail:
-                      'increase in patient calls when a practice ranks in the Google Map Pack.',
-                  },
-                  {
-                    stat: 'YMYL',
-                    detail:
-                      'Google applies elevated quality review to all healthcare content — bylines + citations are ranking prerequisites.',
-                  },
-                ].map((f) => (
-                  <li key={f.stat} className="flex items-start gap-3">
-                    <span
-                      className="fj-display font-bold shrink-0"
-                      style={{ color: '#F05A28', fontSize: '1.125rem', lineHeight: 1.2 }}
-                    >
-                      {f.stat}
-                    </span>
-                    <p
-                      className="font-fj-body"
-                      style={{ color: 'rgba(15,15,18,0.68)', fontSize: '0.875rem', lineHeight: 1.5 }}
-                    >
-                      {f.detail}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-              <p
-                className="mt-5 font-fj-body"
-                style={{ color: 'rgba(15,15,18,0.40)', fontSize: '0.75rem', fontStyle: 'italic' }}
-              >
-                Sources: netoneclick.com, industry aggregate data, BrightEdge 2025.
-              </p>
-            </div>
-
-            {/* Map pack image — fills dead space, reinforces local SEO angle */}
-            <div
-              className="relative w-full overflow-hidden rounded-2xl"
-              style={{
-                border: '1px solid rgba(15,15,18,0.10)',
-                boxShadow: '0 2px 12px rgba(15,15,18,0.06)',
-              }}
+              Quick facts
+            </p>
+            <ul className="mt-5 space-y-4">
+              {[
+                {
+                  stat: '2023',
+                  detail:
+                    'Online search surpassed physician referrals as the #1 way Americans find new doctors.',
+                },
+                {
+                  stat: '94%',
+                  detail:
+                    'of prospective patients choose their provider based on online reputation.',
+                },
+                {
+                  stat: '50%+',
+                  detail:
+                    'increase in patient calls when a practice ranks in the Google Map Pack.',
+                },
+                {
+                  stat: 'YMYL',
+                  detail:
+                    'Google applies elevated quality review to all healthcare content — bylines + citations are ranking prerequisites.',
+                },
+              ].map((f) => (
+                <li key={f.stat} className="flex items-start gap-3">
+                  <span
+                    className="fj-display font-bold shrink-0"
+                    style={{ color: '#F05A28', fontSize: '1.125rem', lineHeight: 1.2 }}
+                  >
+                    {f.stat}
+                  </span>
+                  <p
+                    className="font-fj-body"
+                    style={{ color: 'rgba(15,15,18,0.68)', fontSize: '0.875rem', lineHeight: 1.5 }}
+                  >
+                    {f.detail}
+                  </p>
+                </li>
+              ))}
+            </ul>
+            <p
+              className="mt-5 font-fj-body"
+              style={{ color: 'rgba(15,15,18,0.40)', fontSize: '0.75rem', fontStyle: 'italic' }}
             >
-              <Image
-                src="/images/services/healthcare-seo-map-pack.webp"
-                alt="Google Map Pack showing medical practice ranked #1 for 'dentist near me'"
-                width={1024}
-                height={1344}
-                className="w-full object-cover"
-                style={{ maxHeight: '340px', objectPosition: 'center top' }}
-                loading="lazy"
-              />
-              {/* Caption overlay */}
-              <div
-                className="absolute bottom-0 left-0 right-0 px-4 py-3"
-                style={{ background: 'linear-gradient(to top, rgba(15,15,18,0.75) 0%, transparent 100%)' }}
-              >
-                <p
-                  className="font-fj-mono font-bold uppercase"
-                  style={{ fontSize: '9px', letterSpacing: '0.14em', color: 'rgba(255,255,255,0.75)' }}
-                >
-                  Map Pack position #1
-                </p>
-                <p
-                  className="font-fj-body"
-                  style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.85)', marginTop: '2px' }}
-                >
-                  42% of local search clicks go to the top 3 Map Pack results
-                </p>
-              </div>
-            </div>
+              Sources: netoneclick.com, industry aggregate data, BrightEdge 2025.
+            </p>
           </div>
         }
       />
@@ -1537,7 +1497,7 @@ export default function HealthcareSeoServicePage() {
       {/* ─── 9. Comparison vs generalist / freelancer / in-house ─────────── */}
       <ComparisonTable
         eyebrow="HOW WE COMPARE"
-        headline="FactoryJet vs generalist SEO agencies, freelancers, and in-house teams."
+        headline="FactoryJet vs agencies, freelancers, and in-house teams."
         lead="Four ways healthcare organizations approach SEO — and where a healthcare-specialist, compliance-aware model differs in practice."
         columns={[
           { label: 'FactoryJet', isFactoryJet: true },

@@ -108,36 +108,33 @@ function StatCard({ stat }: { stat: StatItem }) {
 
   return (
     <div ref={ref}>
-      <div className="flex items-baseline gap-2">
-        <p
-          className="fj-display font-bold"
-          style={{
-            color: '#F05A28',
-            fontSize: 'clamp(2.5rem, 4vw, 3.5rem)',
-            lineHeight: 1,
-            letterSpacing: '-0.02em',
-            // Prevent layout shift during count
-            minWidth: stat.countTo !== null ? '4.5ch' : undefined,
-            display: 'inline-block',
-          }}
-          aria-live={stat.countTo !== null ? 'polite' : undefined}
-          aria-atomic="true"
-        >
-          {displayValue}
-        </p>
-        <p
-          className="font-fj-body font-semibold"
-          style={{
-            color: '#0F0F12',
-            fontSize: '1.0625rem',
-            letterSpacing: '0.005em',
-          }}
-        >
-          {stat.suffix}
-        </p>
-      </div>
+      {/* Large number — display font, orange, stacked block layout */}
       <p
-        className="mt-1 font-fj-body"
+        className="fj-display font-bold"
+        style={{
+          color: '#F05A28',
+          fontSize: 'clamp(2.5rem, 4vw, 3.5rem)',
+          lineHeight: 1,
+          letterSpacing: '-0.02em',
+        }}
+        aria-live={stat.countTo !== null ? 'polite' : undefined}
+        aria-atomic="true"
+      >
+        {displayValue}
+      </p>
+      {/* Suffix sits directly below the number — no inline wrapping */}
+      <p
+        className="mt-1 font-fj-body font-semibold"
+        style={{
+          color: '#0F0F12',
+          fontSize: '1.0625rem',
+          letterSpacing: '0.005em',
+        }}
+      >
+        {stat.suffix}
+      </p>
+      <p
+        className="mt-2 font-fj-body"
         style={{
           color: 'rgba(15,15,18,0.55)',
           fontSize: '0.8125rem',
