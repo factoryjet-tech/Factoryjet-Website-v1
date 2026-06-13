@@ -1245,16 +1245,27 @@ export default function HealthcareSeoServicePage() {
       <SiteHeader />
 
       {/* ─── 1. Hero ─────────────────────────────────────────────────────── */}
+      {/*
+        NON-NEGOTIABLES (2026-06-13):
+        - Hero fits single viewport on desktop + mobile — no scroll required
+        - Lead ≤ 2 sentences, ≤ 50 words
+        - rightSlot hidden on mobile (hidden lg:block) — preserves text LCP
+        - Gradient accent on primary noun in headline (CSS only, zero perf cost)
+        - Image max-h capped so it never forces hero taller than viewport
+      */}
       <Hero
         eyebrow="HEALTHCARE SEO AGENCY"
         headline={
           <>
-            The SEO agency for healthcare companies
+            The SEO agency for{' '}
+            <span className="bg-gradient-to-r from-[#F05A28] to-[#FF8C5A] bg-clip-text text-transparent">
+              healthcare companies
+            </span>
             <br className="hidden md:block" />
             that does the compliance work other agencies skip.
           </>
         }
-        lead="77% of patients search online before booking an appointment. When they search 'dentist near me,' 'therapist near me,' or 'seo agency for healthcare companies,' the practices ranking in the Map Pack and earning AI citations win the patient. We build the full healthcare SEO stack: YMYL E-E-A-T baseline, HIPAA-safe analytics, map pack dominance, medical schema, and monthly reporting on patient-facing outcomes — not keyword rankings disconnected from revenue."
+        lead="77% of patients search online before booking — and the practices ranking in Google's Map Pack win the patient. We build the full compliance-aware stack: YMYL E-E-A-T, HIPAA-safe analytics, map pack dominance, and monthly reporting on patient outcomes."
         primaryCta={{
           label: 'Book a free healthcare SEO audit',
           href: CALENDLY,
@@ -1269,13 +1280,14 @@ export default function HealthcareSeoServicePage() {
           'Map pack + AI citations in one monthly report',
         ]}
         rightSlot={
-          <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/10">
+          /* hidden on mobile — image is never the LCP element; desktop-only visual */
+          <div className="hidden lg:block relative w-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/10">
             <Image
               src="/images/services/healthcare-seo.webp"
               alt="Healthcare SEO agency — doctor reviewing patient acquisition analytics on laptop"
               width={1344}
               height={1024}
-              className="w-full h-auto object-cover"
+              className="w-full object-cover max-h-[520px]"
               priority={false}
               loading="lazy"
             />
