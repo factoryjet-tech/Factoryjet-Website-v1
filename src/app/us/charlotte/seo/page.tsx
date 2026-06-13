@@ -28,14 +28,14 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/us/charlotte/seo';
 
 export const metadata: Metadata = {
-  title: 'Charlotte SEO Company | Local SEO Services in Charlotte, NC | FactoryJet',
+  title: 'Charlotte SEO Company | Local SEO Services Near Me in NC | FactoryJet',
   description:
-    'FactoryJet is a Charlotte SEO company that gets local businesses into the Google Map Pack and "near me" results. Local SEO from $499/month, month-to-month, free audit. Built by senior engineers.',
+    'Top-rated Charlotte SEO company. FactoryJet gets local businesses into the Google Map Pack and "near me" results. Local SEO, GBP optimization, and technical SEO — free audit, no long-term contracts.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Charlotte SEO Company | Local SEO Services in Charlotte, NC | FactoryJet',
+    title: 'Charlotte SEO Company | Local SEO Services Near Me in NC | FactoryJet',
     description:
-      'Charlotte SEO company that gets you into the Google Map Pack. Local SEO from $499/mo, month-to-month, free audit. Senior team, founder-led.',
+      'Top-rated Charlotte SEO company. Map Pack optimization, local SEO services, and technical SEO for Charlotte, NC businesses. Free audit, no lock-in.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_US',
@@ -137,6 +137,27 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
     ],
   },
   {
+    label: 'SEO near me & services',
+    items: [
+      {
+        q: 'How do I find a good SEO company near me in Charlotte?',
+        a: 'Search "SEO company near me Charlotte" and look at who actually ranks — an agency that cannot rank its own site is a warning sign. Then check six things: written deliverables, pricing shown before you sign, month-to-month terms, you own your data, reports tied to calls and leads, and no ranking guarantees. Proximity matters less than expertise; the right Charlotte SEO company does not need a storefront on Tryon Street to drive Map Pack results in Ballantyne or NoDa.',
+      },
+      {
+        q: 'What do SEO services include for Charlotte businesses?',
+        a: 'Complete Charlotte SEO services cover four layers. (1) Local SEO — Google Business Profile optimization, citation cleanup, review growth, and Map Pack targeting across Mecklenburg County and the suburbs. (2) Technical SEO — Core Web Vitals, site speed, schema markup, and crawlability. (3) On-page SEO — title tags, meta descriptions, headings, and internal linking. (4) Content — service pages and neighborhood pages that earn rankings. At FactoryJet all four are in one monthly engagement with a written deliverables list.',
+      },
+      {
+        q: 'Do you offer local SEO services near me for Charlotte small businesses?',
+        a: 'Yes. FactoryJet provides local SEO services across the entire Charlotte metro — Uptown, South End, NoDa, Plaza Midwood, University City, Ballantyne, and the broader Mecklenburg, Cabarrus, and Gaston counties, plus Rock Hill, SC. Every engagement starts with a free audit showing your current Map Pack position, GBP health, and citation accuracy across directories.',
+      },
+      {
+        q: 'How does "near me" SEO work for Charlotte businesses?',
+        a: '"Near me" searches in Charlotte are driven almost entirely by Google Business Profile signals — your categories, keywords in your description, review count and recency, and the accuracy of your name, address, and phone. GBP proximity is set when searchers do the search, so you cannot fake it, but you can maximize relevance and prominence with a fully optimized profile and consistent citations. That is the core of local SEO near me results.',
+      },
+    ],
+  },
+  {
     label: 'Fit & getting started',
     items: [
       { q: 'Does local SEO work for contractors and home services?', a: "It's one of the strongest fits there is. HVAC, roofing, plumbing, and remodeling jobs start with a \"near me\" search, and Charlotte's growth keeps demand high. Service-area businesses without a storefront can still dominate the Map Pack." },
@@ -194,7 +215,9 @@ const jsonLd = {
       '@type': 'WebPage',
       '@id': CANONICAL,
       url: CANONICAL,
-      name: 'Charlotte SEO Company | Local SEO Services in Charlotte, NC',
+      name: 'Charlotte SEO Company | Local SEO Services Near Me in NC | FactoryJet',
+      datePublished: '2026-06-06',
+      dateModified: '2026-06-13',
       author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhaveshbarot/', jobTitle: 'Founder, FactoryJet' },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
     },

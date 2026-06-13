@@ -253,8 +253,15 @@ export const post: BlogPost = {
         <a href="/us/tampa/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">
           Tampa
         </a>
-        , a boutique owner in Nashville, or a food distributor in Charlotte doesn't immediately see
-        where ChatGPT fits into their Tuesday.
+        , a boutique owner in{' '}
+        <a href="/us/nashville/seo" className="text-blue-600 underline hover:text-blue-800 transition-colors">
+          Nashville
+        </a>
+        , or a food distributor in{' '}
+        <a href="/us/charlotte/seo" className="text-blue-600 underline hover:text-blue-800 transition-colors">
+          Charlotte
+        </a>{' '}
+        doesn't immediately see where ChatGPT fits into their Tuesday.
       </p>
       <p className="mb-4">
         The businesses that do adopt AI successfully aren't using general-purpose tools in a vacuum.
@@ -356,7 +363,13 @@ export const post: BlogPost = {
         If you run an e-commerce store: AI product recommendations, AI-generated product
         descriptions, and an AI customer service layer are the three highest-ROI applications. If
         you run a service business: AI-assisted lead follow-up, AI-powered appointment scheduling,
-        and AI content creation for your marketing tend to deliver returns fastest.
+        and AI content creation for your marketing tend to deliver returns fastest. For local service
+        businesses in competitive markets — HVAC, plumbing, or home services in{' '}
+        <a href="/us/cleveland/seo" className="text-blue-600 underline hover:text-blue-800 transition-colors">
+          Northeast Ohio
+        </a>{' '}
+        — AI-assisted SEO content helps you rank in the Map Pack faster by publishing neighborhood
+        and service-area pages at a pace no manual team can match.
       </p>
       <p className="mb-4">
         At FactoryJet, we build these capabilities directly into the{' '}

@@ -492,7 +492,11 @@ export const post: BlogPost = {
         <li>
           <strong>No Google Business Profile for local businesses.</strong> Local queries almost
           always trigger Map Pack results above organic listings. Without a claimed, optimized GBP,
-          local SEO timelines extend by months.
+          local SEO timelines extend by months. If you are a Cleveland-area business,{' '}
+          <a href="/us/cleveland/seo">our Cleveland local SEO services</a> cover full GBP
+          optimization as part of every monthly engagement. The same applies in{' '}
+          <a href="/us/nashville/seo">Nashville</a> and{' '}
+          <a href="/us/charlotte/seo">Charlotte</a>.
         </li>
         <li>
           <strong>Targeting head terms too early.</strong> Spending the first six months trying to

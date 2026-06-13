@@ -29,14 +29,14 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/us/nashville/seo';
 
 export const metadata: Metadata = {
-  title: 'Nashville SEO Company | SEO Expert & Services in Nashville, TN | FactoryJet',
+  title: 'Nashville SEO Company | Local SEO Services Near Me in TN | FactoryJet',
   description:
-    'FactoryJet is a Nashville SEO company where you work directly with a senior SEO expert. Local SEO services in Nashville, TN from $499/month, month-to-month, free audit.',
+    'Top-rated Nashville SEO company. FactoryJet delivers local SEO services, Google Business Profile optimization, and technical SEO for Nashville, TN businesses. Free audit, no long-term contracts.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Nashville SEO Company | SEO Expert & Services in Nashville, TN | FactoryJet',
+    title: 'Nashville SEO Company | Local SEO Services Near Me in TN | FactoryJet',
     description:
-      'Nashville SEO company where you work directly with a senior SEO expert. Local SEO from $499/mo, month-to-month, free audit.',
+      'Top-rated Nashville SEO company. Local SEO services, GBP optimization, and technical SEO for Nashville businesses. Free audit, no lock-in.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_US',
@@ -105,6 +105,28 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
       { q: 'How long does SEO take to work in Nashville?', a: 'Expect early movement in 3-6 months and stable local-pack rankings in 6-12 months. If your Google Business Profile is under-optimized, the Map Pack can improve in as little as 2-8 weeks. Anyone promising page one in 30 days is selling risk, not results.' },
       { q: 'How fast can I rank in the Nashville Map Pack?', a: 'If you already have reviews, accurate citations, and a half-optimized profile, the 3-pack can move in 15-60 days. Starting from scratch in a competitive category like Broadway hospitality, plan on 3-6 months. The Map Pack is driven almost entirely by your Google Business Profile.' },
       { q: 'Why is local SEO a monthly fee instead of one-time?', a: 'Rankings are earned and defended continuously: competitors optimize, Google updates its algorithm, and your profile needs ongoing posts, reviews, and citation upkeep. A one-time setup decays; that is why we work month-to-month.' },
+    ],
+  },
+  {
+    id: 'faq-services',
+    label: 'SEO services & near me',
+    items: [
+      {
+        q: 'What do SEO services include for Nashville businesses?',
+        a: 'SEO services for Nashville businesses cover four layers. (1) Local SEO — Google Business Profile optimization, citation cleanup, review growth, and Map Pack targeting for Davidson County and the suburbs. (2) Technical SEO — site speed, Core Web Vitals, crawlability, schema markup. (3) On-page SEO — title tags, meta descriptions, headings, keyword targeting, and internal linking. (4) Content — service pages, neighborhood pages, and FAQ content that earns organic rankings. At FactoryJet all four are included in one monthly engagement. Many Nashville SEO companies charge extra for technical work or skip it entirely.',
+      },
+      {
+        q: 'How do I find a good SEO company near me in Nashville?',
+        a: 'Start with Google: search "SEO company near me Nashville" and look at who actually ranks. An SEO company that cannot rank its own site is a warning sign. Then apply these six checks: written deliverables, transparent pricing, month-to-month terms, you own your data, reports tied to calls and leads, and no ranking guarantees. Physical proximity matters less than expertise — a Nashville-focused SEO company does not need a storefront on Broadway to deliver Map Pack results in Germantown or Franklin.',
+      },
+      {
+        q: 'Do you offer local SEO services near me in Nashville, TN?',
+        a: 'Yes. FactoryJet provides local SEO services across the entire Nashville metro — from Broadway and The Gulch to East Nashville, 12South, Germantown, and the suburbs including Franklin, Brentwood, Murfreesboro, Hendersonville, and Mt. Juliet. Every engagement starts with a free audit showing your current Map Pack position, GBP health, and citation accuracy.',
+      },
+      {
+        q: 'What is the difference between local SEO and general SEO services?',
+        a: 'General SEO targets keywords regardless of location. Local SEO specifically optimizes for "near me" and city-specific searches — ranking in the Google Map Pack, Google Business Profile, and local organic results for people in Nashville right now. For most Nashville small businesses, local SEO drives faster, more qualified leads because the searcher is ready to call or visit, not just browse.',
+      },
     ],
   },
   {
@@ -194,7 +216,9 @@ const jsonLd = {
       '@type': 'WebPage',
       '@id': CANONICAL,
       url: CANONICAL,
-      name: 'Nashville SEO Company | SEO Expert & Services in Nashville, TN',
+      name: 'Nashville SEO Company | Local SEO Services Near Me in TN | FactoryJet',
+      datePublished: '2026-06-06',
+      dateModified: '2026-06-13',
       author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhaveshbarot/', jobTitle: 'Founder, FactoryJet' },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
     },
