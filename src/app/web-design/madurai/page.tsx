@@ -130,7 +130,6 @@ export default function Page() {
       { '@type': 'City', name: 'Dindigul' },
       { '@type': 'City', name: 'Virudhunagar' },
     ],
-    priceRange: '₹₹',
     serviceType: 'Web Design',
     aggregateRating: {
       '@type': 'AggregateRating',

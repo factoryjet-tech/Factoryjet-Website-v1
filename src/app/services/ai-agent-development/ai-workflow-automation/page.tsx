@@ -116,11 +116,6 @@ const serviceSchema = {
   description: 'Custom AI workflow automation for Indian businesses — connect Zoho, Tally, Shopify, WhatsApp, Razorpay, and 20+ tools into automated pipelines with AI decision logic.',
   areaServed: 'IN',
   serviceType: 'AI Workflow Automation',
-  offers: [
-    { '@type': 'Offer', name: 'Workflow Starter', price: '150000', priceCurrency: 'INR', description: 'Focused two-system automation with AI triggers and notifications.' },
-    { '@type': 'Offer', name: 'Multi-System Workflow Platform', price: '350000', priceCurrency: 'INR', description: '5–10 connected tools with AI routing, data transformation, and error handling.' },
-    { '@type': 'Offer', name: 'Full Business Automation Suite', price: '700000', priceCurrency: 'INR', description: 'End-to-end business automation with AI decision logic across sales, ops, finance, and support.' },
-  ],
 };
 
 const speakableSchema = {

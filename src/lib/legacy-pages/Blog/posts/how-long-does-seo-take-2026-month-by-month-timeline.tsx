@@ -13,9 +13,9 @@ export const post: BlogPost = {
   readTime: '11 min read',
   imageUrl: '/blog-images/how-long-does-seo-take-2026-month-by-month-timeline.webp',
   meta: {
-    title: 'How Long Does SEO Take in 2026? Month-by-Month Timeline (Real Data)',
+    title: 'How Long Does SEO Take in 2026? Ahrefs & Semrush Data: 3–6 Month Timeline',
     description:
-      'How long does SEO take in 2026? The honest answer: 3–6 months for initial results, 6–12 for competitive terms. This month-by-month timeline shows exactly what happens when, and why, backed by Ahrefs and Semrush data.',
+      'How long does SEO take? Ahrefs and Semrush data both point to 3–6 months for initial results and 6–12 months for competitive terms. This month-by-month timeline shows exactly what happens when, and why.',
   },
   keyTakeaways: [
     'SEO takes 3–6 months to produce measurable results for most small businesses starting from scratch.',
@@ -111,6 +111,14 @@ export const post: BlogPost = {
       a: 'On-page fixes, title tag optimization, meta descriptions, heading structure, internal linking, can produce ranking movement in 2–6 weeks for pages that are already indexed and ranking in positions 11–30. These are the fastest wins in SEO and should always be prioritized before new content creation.',
     },
     {
+      q: 'What does Ahrefs data say about how long SEO takes?',
+      a: "Ahrefs' research produces two widely cited findings. First, their study of 2 million random pages found that 95% of newly published content never reaches Google's top 10 within the first year — the 5% that do typically have strong backlink profiles or target low-competition queries. Second, their analysis of pages currently ranking in the top 10 found that the average top-10 result is over 2 years old, underscoring that authority compounds over time. For timeline expectations, Ahrefs data consistently supports the 3–6 month window for initial traction and 6–12 months for sustained competitive rankings.",
+    },
+    {
+      q: 'What does Semrush research say about the SEO timeline?',
+      a: "Semrush's State of Search reports consistently find that newly created pages take 3–6 months to generate meaningful impressions and 6–12 months to reach page-one positions for competitive keywords. Their data also shows that content length, structured data, and internal linking all statistically correlate with faster ranking movement — pages with FAQ schema and answer-first headings appear in AI Overviews and featured snippets significantly faster than pages without. The 3–6 month baseline is the most-cited figure from both Semrush and Ahrefs research.",
+    },
+    {
       q: 'Does FactoryJet help with SEO timelines?',
       a: 'Yes. Every FactoryJet website is built with technical SEO foundations in place from launch: correct schema markup, clean URL structure, Core Web Vitals optimization, and proper internal linking. This eliminates the 4–8 week technical audit phase that typically begins most SEO engagements, compressing the overall timeline.',
     },
@@ -143,7 +151,7 @@ export const post: BlogPost = {
                 },
               },
               datePublished: '2026-06-07',
-              dateModified: '2026-06-07',
+              dateModified: '2026-06-13',
               image:
                 'https://factoryjet.com/blog-images/how-long-does-seo-take-2026-month-by-month-timeline.webp',
               mainEntityOfPage: {

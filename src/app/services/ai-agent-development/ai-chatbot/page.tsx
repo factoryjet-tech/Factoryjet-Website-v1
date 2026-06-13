@@ -158,29 +158,6 @@ const serviceSchema = {
   serviceType: 'AI Chatbot Development',
   description:
     'Custom AI chatbots for Indian businesses — WhatsApp chat agents, website chatbots, and multilingual support bots integrated with Zoho, Razorpay, Shopify, and Freshdesk. Fixed price. Deployed in 2–3 weeks.',
-  offers: [
-    {
-      '@type': 'Offer',
-      name: 'Website AI Chatbot',
-      price: '250000',
-      priceCurrency: 'INR',
-      description: 'Focused AI chatbot for your website — lead capture, FAQ answering, appointment booking.',
-    },
-    {
-      '@type': 'Offer',
-      name: 'WhatsApp AI Chatbot',
-      price: '400000',
-      priceCurrency: 'INR',
-      description: 'WhatsApp AI on Interakt/Wati with CRM integration. Handles leads, support, order status.',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Multi-Channel AI Chatbot Platform',
-      price: '800000',
-      priceCurrency: 'INR',
-      description: 'Website + WhatsApp + support portal chatbot with Zoho/Freshdesk/Shopify integration.',
-    },
-  ],
 };
 
 const speakableSchema = {

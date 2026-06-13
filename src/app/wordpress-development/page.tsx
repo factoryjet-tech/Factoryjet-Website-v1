@@ -168,32 +168,6 @@ const WP_serviceSchema = {
   ],
   description:
     'Custom WordPress and WooCommerce development for Indian SMBs. Razorpay, UPI, GST invoicing, Shiprocket integrated. 7-day delivery.',
-  offers: [
-    {
-      '@type': 'Offer',
-      name: 'WordPress Starter Site',
-      price: '29999',
-      priceCurrency: 'INR',
-      description:
-        'Custom WordPress theme with up to 5 pages, contact form, basic SEO, and launch.',
-    },
-    {
-      '@type': 'Offer',
-      name: 'WordPress Growth Site',
-      price: '80000',
-      priceCurrency: 'INR',
-      description:
-        'Complete WordPress business site — custom theme, 8 pages, speed optimization, technical SEO, GA4, and launch.',
-    },
-    {
-      '@type': 'Offer',
-      name: 'WooCommerce Store',
-      price: '150000',
-      priceCurrency: 'INR',
-      description:
-        'Full WooCommerce store with Razorpay, UPI, GST invoicing, Shiprocket, and custom theme.',
-    },
-  ],
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────

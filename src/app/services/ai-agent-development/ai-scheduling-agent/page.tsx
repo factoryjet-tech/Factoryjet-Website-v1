@@ -116,11 +116,6 @@ const serviceSchema = {
   description: 'Custom AI scheduling agents for Indian businesses — automate appointment booking on WhatsApp in Hindi and English with Google Calendar, Zoho Bookings, and Razorpay integration.',
   areaServed: 'IN',
   serviceType: 'AI Appointment Scheduling Automation',
-  offers: [
-    { '@type': 'Offer', name: 'WhatsApp Booking AI', price: '180000', priceCurrency: 'INR', description: 'Single-service WhatsApp appointment booking with calendar sync and confirmation messages.' },
-    { '@type': 'Offer', name: 'Multi-Resource Scheduling Platform', price: '350000', priceCurrency: 'INR', description: 'Multi-staff, multi-service scheduling with Zoho CRM sync, reminders, and rescheduling flows.' },
-    { '@type': 'Offer', name: 'Enterprise Scheduling Suite', price: '700000', priceCurrency: 'INR', description: 'Multi-location, multi-language scheduling with payment collection, analytics, and ERP integration.' },
-  ],
 };
 
 const speakableSchema = {

@@ -109,7 +109,6 @@ const localBusinessSchema = {
     { '@type': 'City', name: 'Cyberabad' },
   ],
   serviceType: 'Web Design and Development',
-  priceRange: '₹₹',
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '4.9',
@@ -124,22 +123,16 @@ const localBusinessSchema = {
       {
         '@type': 'Offer',
         name: 'Starter Website',
-        price: '25000',
-        priceCurrency: 'INR',
         description: '5-page business website, mobile-responsive, basic SEO, contact form.',
       },
       {
         '@type': 'Offer',
         name: 'Growth Website',
-        price: '50000',
-        priceCurrency: 'INR',
         description: '10–15 page website with blog CMS, lead capture, GA4, and advanced SEO.',
       },
       {
         '@type': 'Offer',
         name: 'Custom Website',
-        price: '100000',
-        priceCurrency: 'INR',
         description: 'Custom Next.js build with e-commerce, booking systems, or AI integrations.',
       },
     ],

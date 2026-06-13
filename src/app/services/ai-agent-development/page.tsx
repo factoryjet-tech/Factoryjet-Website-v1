@@ -195,29 +195,6 @@ const serviceSchema = {
   serviceType: 'AI Agent Development',
   description:
     'Custom AI agents, WhatsApp automation, and AI-native workflows for Indian businesses. Specialising in customer support AI, sales automation, GST compliance bots, and operations agents integrated with Zoho, Razorpay, Tally, and WhatsApp Business.',
-  offers: [
-    {
-      '@type': 'Offer',
-      name: 'Starter AI Agent',
-      price: '400000',
-      priceCurrency: 'INR',
-      description: 'Single-workflow AI agent for one focused Indian business problem.',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Growth AI Platform',
-      price: '1200000',
-      priceCurrency: 'INR',
-      description: 'Multi-workflow AI agent suite with CRM/ERP integrations and WhatsApp.',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Enterprise AI System',
-      price: '2000000',
-      priceCurrency: 'INR',
-      description: 'Multi-agent orchestration platform with custom LLM and private deployment.',
-    },
-  ],
 };
 
 const speakableSchema = {

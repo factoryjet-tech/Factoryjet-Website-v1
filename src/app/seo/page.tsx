@@ -97,12 +97,6 @@ const serviceSchema = {
     telephone: '+919699977699',
   },
   areaServed: { '@type': 'Country', name: 'India' },
-  offers: {
-    '@type': 'Offer',
-    price: '19999',
-    priceCurrency: 'INR',
-    description: 'SEO services for Indian businesses start from ₹19,999/month. Month to month, no lock-in.',
-  },
 };
 
 const speakableSchema = {

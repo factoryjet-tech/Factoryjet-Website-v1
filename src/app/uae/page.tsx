@@ -24,8 +24,21 @@ const localBusinessJsonLd = {
   "areaServed": {
     "@type": "Place",
     "name": "Dubai"
-  },
-  "priceRange": "$2,000 - $25,000+"
+  }
+}
+
+// Organization structured data
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://factoryjet.com/#organization",
+  "name": "FactoryJet Technologies",
+  "url": "https://factoryjet.com",
+  "logo": "https://factoryjet.com/logo.png",
+  "sameAs": [
+    "https://www.linkedin.com/company/factoryjet",
+    "https://www.crunchbase.com/organization/factoryjet",
+  ],
 }
 
 // Breadcrumb structured data
@@ -63,12 +76,6 @@ const serviceJsonLd = {
     name: 'United Arab Emirates',
   },
   description: 'Professional web design and development services in Dubai, UAE. Custom websites, e-commerce solutions, and AI-powered web applications.',
-  offers: {
-    '@type': 'Offer',
-    priceCurrency: 'AED',
-    price: '5000',
-    priceValidUntil: '2026-12-31',
-  },
 }
 
 export const metadata: Metadata = {
@@ -117,6 +124,13 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
+      {/* Organization Structured Data */}
+      <Script
+        id="organization-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
+
       {/* Local Business Structured Data */}
       <Script
         id="local-business-jsonld"

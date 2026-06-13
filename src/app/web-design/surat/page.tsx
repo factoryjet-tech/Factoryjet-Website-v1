@@ -130,7 +130,6 @@ export default function Page() {
       { '@type': 'City', name: 'Navsari' },
       { '@type': 'City', name: 'Hazira' },
     ],
-    priceRange: '₹₹',
     serviceType: 'Web Design',
     aggregateRating: {
       '@type': 'AggregateRating',

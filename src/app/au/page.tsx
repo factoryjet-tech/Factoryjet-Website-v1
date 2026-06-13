@@ -160,10 +160,25 @@ const FAQ_SCHEMA = {
 const ORG_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
+  '@id': 'https://factoryjet.com/#organization',
   name: 'FactoryJet',
   url: 'https://factoryjet.com',
+  logo: 'https://factoryjet.com/logo.png',
+  sameAs: [
+    'https://www.linkedin.com/company/factoryjet',
+    'https://www.crunchbase.com/organization/factoryjet',
+  ],
   areaServed: { '@type': 'Country', name: 'Australia' },
   aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', ratingCount: '150', reviewCount: '150', bestRating: '5', worstRating: '1' },
+};
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
+    { '@type': 'ListItem', position: 2, name: 'Australia', item: 'https://factoryjet.com/au' },
+  ],
 };
 
 const HOW_TO_SCHEMA = {
@@ -235,6 +250,7 @@ export default function AUHomePage() {
           export HTML — crawlers don't need JS execution to see the schemas. */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(HOW_TO_SCHEMA) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SPEAKABLE_SCHEMA) }} />
 

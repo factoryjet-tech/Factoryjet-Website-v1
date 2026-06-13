@@ -125,10 +125,6 @@ const serviceSchema = {
   areaServed: { '@type': 'Country', name: 'India' },
   serviceType: 'AI Sales Agent Development',
   description: 'AI sales agents for Indian businesses — WhatsApp lead qualification, automated follow-ups, demo booking, and CRM updates. Fixed price. Live in 2–4 weeks.',
-  offers: [
-    { '@type': 'Offer', name: 'Lead Qualification AI', price: '350000', priceCurrency: 'INR', description: 'WhatsApp lead qualification bot with Zoho CRM integration.' },
-    { '@type': 'Offer', name: 'Full Sales AI Platform', price: '700000', priceCurrency: 'INR', description: 'Multi-source lead capture, qualification, follow-up, and demo booking.' },
-  ],
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────

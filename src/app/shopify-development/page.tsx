@@ -116,7 +116,6 @@ const SHOPIFY_serviceSchema = {
     'Shopify Store Migration',
     'Shopify SEO',
   ],
-  priceRange: '₹₹',
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '4.9',
@@ -131,23 +130,17 @@ const SHOPIFY_serviceSchema = {
       {
         '@type': 'Offer',
         name: 'Shopify Starter Store',
-        price: '34999',
-        priceCurrency: 'INR',
         description: 'Custom Shopify theme applied to an existing store with Razorpay + UPI integration.',
       },
       {
         '@type': 'Offer',
         name: 'Full Shopify Store Build',
-        price: '89999',
-        priceCurrency: 'INR',
         description:
           'Complete Shopify store from scratch — custom theme, products, Razorpay + UPI, GST invoicing, Shiprocket, and launch.',
       },
       {
         '@type': 'Offer',
         name: 'Shopify Plus & Scale',
-        price: '199999',
-        priceCurrency: 'INR',
         description:
           'Shopify Plus with Checkout Extensibility, B2B wholesale portal, multi-storefront, or headless Hydrogen.',
       },

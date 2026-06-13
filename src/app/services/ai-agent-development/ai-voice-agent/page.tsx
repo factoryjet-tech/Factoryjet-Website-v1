@@ -116,11 +116,6 @@ const serviceSchema = {
   description: 'Custom AI voice agents for Indian businesses — Hindi AI callers for lead qualification, appointment booking, collection follow-ups, and inbound IVR with Zoho CRM integration.',
   areaServed: 'IN',
   serviceType: 'AI Voice Agent Development',
-  offers: [
-    { '@type': 'Offer', name: 'Outbound Voice AI', price: '300000', priceCurrency: 'INR', description: 'AI calling agent for lead qualification or appointment booking in Hindi and English.' },
-    { '@type': 'Offer', name: 'Full Voice AI Platform', price: '600000', priceCurrency: 'INR', description: 'Inbound + outbound voice AI with Zoho CRM integration, call recording, and analytics dashboard.' },
-    { '@type': 'Offer', name: 'Enterprise Voice AI', price: '1200000', priceCurrency: 'INR', description: 'Multi-language, multi-campaign voice AI with full telephony infrastructure and TRAI-compliant stack.' },
-  ],
 };
 
 const speakableSchema = {

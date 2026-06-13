@@ -130,7 +130,6 @@ export default function Page() {
       { '@type': 'City', name: 'Tambaram' },
       { '@type': 'City', name: 'Kancheepuram' },
     ],
-    priceRange: '₹₹',
     serviceType: 'Web Design',
     aggregateRating: {
       '@type': 'AggregateRating',

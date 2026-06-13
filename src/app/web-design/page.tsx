@@ -195,29 +195,6 @@ const serviceSchema = {
   serviceType: 'Web Design & Development',
   description:
     'Custom website design and development for Indian businesses — from ₹29,999. Next.js, WordPress, and Shopify. 7-day delivery on Starter tier. Lighthouse 100 performance. Mobile-first, full code ownership.',
-  offers: [
-    {
-      '@type': 'Offer',
-      name: 'Starter Website',
-      price: '29999',
-      priceCurrency: 'INR',
-      description: '5-page business website, mobile-first, Lighthouse 95+ guaranteed.',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Growth Website',
-      price: '80000',
-      priceCurrency: 'INR',
-      description: '10–15 page site with CMS, blog, advanced SEO, and analytics.',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Custom Website or E-Commerce',
-      price: '150000',
-      priceCurrency: 'INR',
-      description: 'E-commerce stores, Next.js web apps, and large custom projects.',
-    },
-  ],
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '4.9',

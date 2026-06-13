@@ -167,32 +167,6 @@ const N8N_SERVICE_SCHEMA = {
   ],
   description:
     'n8n workflow automation for Indian businesses. Connect Razorpay, WhatsApp Business API, Tally, Zoho, Shopify, and 400+ tools. Self-hosted or cloud. 7-day delivery.',
-  offers: [
-    {
-      '@type': 'Offer',
-      name: 'Starter Automation',
-      price: '29999',
-      priceCurrency: 'INR',
-      description:
-        'Up to 3 automated workflows, 2 integrations, n8n deployment, and documentation.',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Growth Automation',
-      price: '80000',
-      priceCurrency: 'INR',
-      description:
-        'Up to 10 workflows, 5 integrations, WhatsApp Business API setup, and 30-day monitoring.',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Custom Automation Infrastructure',
-      price: '150000',
-      priceCurrency: 'INR',
-      description:
-        'Unlimited workflows, full automation infrastructure, dedicated n8n instance, and ongoing support.',
-    },
-  ],
 };
 
 const N8N_SPEAKABLE_SCHEMA = {

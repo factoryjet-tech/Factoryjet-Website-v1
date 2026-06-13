@@ -127,11 +127,6 @@ const serviceSchema = {
   description: 'Custom AI customer support agents for Indian businesses — WhatsApp support, Freshdesk integration, Hindi and English handling, order status, returns, and FAQ automation.',
   areaServed: 'IN',
   serviceType: 'AI Customer Support Automation',
-  offers: [
-    { '@type': 'Offer', name: 'WhatsApp Support AI', price: '250000', priceCurrency: 'INR', description: 'AI customer support on WhatsApp with Shopify/Shiprocket/Razorpay integration.' },
-    { '@type': 'Offer', name: 'Multi-Channel Support Platform', price: '500000', priceCurrency: 'INR', description: 'WhatsApp + website + Freshdesk/Zoho Desk unified AI support with analytics.' },
-    { '@type': 'Offer', name: 'Enterprise Support Automation Suite', price: '1000000', priceCurrency: 'INR', description: 'Full multi-channel support automation with AI routing, ERP integration, and CSAT tracking.' },
-  ],
 };
 
 const speakableSchema = {

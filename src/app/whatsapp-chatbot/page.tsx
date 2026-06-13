@@ -107,13 +107,6 @@ const serviceSchema = {
     'WhatsApp chatbot development and WhatsApp Business API integration for Indian businesses. Automate orders, support, lead capture and payments. Starts ₹15,000.',
   areaServed: { '@type': 'Country', name: 'India' },
   serviceType: 'WhatsApp Chatbot Development',
-  offers: {
-    '@type': 'AggregateOffer',
-    lowPrice: '15000',
-    highPrice: '150000',
-    priceCurrency: 'INR',
-    offerCount: '3',
-  },
 };
 
 const breadcrumbSchema = {

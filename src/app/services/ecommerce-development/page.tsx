@@ -180,32 +180,6 @@ const serviceSchema = {
   serviceType: 'E-Commerce Development',
   description:
     'Custom e-commerce development for Indian businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and quick-commerce apps. Razorpay & UPI integrated. GST-compliant. Mobile-first, Lighthouse 95+. Starting at ₹59,999.',
-  offers: [
-    {
-      '@type': 'Offer',
-      name: 'Shopify / WooCommerce Store',
-      price: '59999',
-      priceCurrency: 'INR',
-      description:
-        'Custom-designed Shopify or WooCommerce store with Razorpay, UPI, GST invoicing, Shiprocket integration, and launch.',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Advanced E-Commerce Store',
-      price: '99999',
-      priceCurrency: 'INR',
-      description:
-        'E-commerce store with subscription logic, B2B pricing tiers, product configurator, or multi-channel inventory sync.',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Custom Platform / Marketplace',
-      price: '199999',
-      priceCurrency: 'INR',
-      description:
-        'Custom D2C platform, multi-vendor marketplace, or quick-commerce app with proprietary logic and full code ownership.',
-    },
-  ],
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────

@@ -72,7 +72,6 @@ const localBusinessSchema = {
   ],
   geo: { '@type': 'GeoCircle', geoMidpoint: { '@type': 'GeoCoordinates', latitude: 22.5726, longitude: 88.3639 }, geoRadius: '50000' },
   serviceType: 'Search Engine Optimisation',
-  priceRange: '₹₹',
 };
 
 const serviceSchema = {
@@ -85,7 +84,6 @@ const serviceSchema = {
   url: 'https://factoryjet.com/seo/kolkata',
   provider: { '@type': 'Organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Kolkata' },
-  offers: { '@type': 'Offer', price: '19999', priceCurrency: 'INR', description: 'SEO services for Indian businesses start from ₹19,999/month. Month to month, no lock-in.' },
 };
 
 const speakableSchema = {

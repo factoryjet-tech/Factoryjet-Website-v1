@@ -156,29 +156,6 @@ const serviceSchema = {
     'Custom AI marketing agents for Indian businesses — automate WhatsApp broadcasts, festival campaigns, social content, and Google/Meta Ads optimisation with vernacular language support.',
   areaServed: 'IN',
   serviceType: 'AI Marketing Automation',
-  offers: [
-    {
-      '@type': 'Offer',
-      name: 'Content AI Starter',
-      price: '250000',
-      priceCurrency: 'INR',
-      description: 'AI social content calendar, email copy generation, brand voice training, festival campaign briefs.',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Full Marketing AI Platform',
-      price: '500000',
-      priceCurrency: 'INR',
-      description: 'WhatsApp broadcast automation, CRM segmentation, ad optimisation signals, Hindi/vernacular content generation, campaign A/B testing.',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Enterprise Marketing AI',
-      price: '1000000',
-      priceCurrency: 'INR',
-      description: 'Multi-brand, multi-language autonomous campaign execution with predictive timing and real-time ad budget reallocation.',
-    },
-  ],
 };
 
 const speakableSchema = {

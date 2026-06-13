@@ -70,7 +70,6 @@ const localBusinessSchema = {
   ],
   geo: { '@type': 'GeoCircle', geoMidpoint: { '@type': 'GeoCoordinates', latitude: 26.9124, longitude: 75.7873 }, geoRadius: '40000' },
   serviceType: 'Search Engine Optimisation',
-  priceRange: '₹₹',
 };
 
 const serviceSchema = {
@@ -83,7 +82,6 @@ const serviceSchema = {
   url: 'https://factoryjet.com/seo/jaipur',
   provider: { '@type': 'Organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Jaipur' },
-  offers: { '@type': 'Offer', price: '19999', priceCurrency: 'INR', description: 'SEO services for Indian businesses start from ₹19,999/month. Month to month, no lock-in.' },
 };
 
 const speakableSchema = {

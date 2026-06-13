@@ -169,29 +169,6 @@ const serviceSchema = {
   },
   description:
     'Custom ecommerce development for Bangalore businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and custom stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+. Starting at ₹59,999.',
-  offers: [
-    {
-      '@type': 'Offer',
-      name: 'Starter Store',
-      price: '59999',
-      priceCurrency: 'INR',
-      description: 'Shopify or WooCommerce store with Razorpay, GST invoicing, Shiprocket, and up to 50 products.',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Growth Store',
-      price: '99999',
-      priceCurrency: 'INR',
-      description: 'Full-featured store with subscriptions, B2B pricing, omnichannel integrations, and advanced WhatsApp automation.',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Custom Platform',
-      price: '199999',
-      priceCurrency: 'INR',
-      description: 'Custom Next.js D2C platform, multi-vendor marketplace, or quick-commerce app.',
-    },
-  ],
 };
 
 const localBusinessSchema = {
@@ -217,7 +194,6 @@ const localBusinessSchema = {
     'Whitefield', 'Koramangala', 'HSR Layout', 'Indiranagar',
     'Electronic City', 'Hebbal', 'Marathahalli', 'Jayanagar',
   ],
-  priceRange: '₹₹',
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '4.9',

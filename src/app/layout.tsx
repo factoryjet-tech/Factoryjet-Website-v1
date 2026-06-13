@@ -155,7 +155,6 @@ export default function RootLayout({
                 "Shopify Development",
                 "Digital Marketing"
               ],
-              "priceRange": "₹₹-₹₹₹",
               "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "4.9",
