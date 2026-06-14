@@ -61,11 +61,8 @@
 .uk-sseo .logo {font-family:var(--fd);font-weight:800;font-size:18px;color:var(--ink)}
 .uk-sseo .logo span {color:var(--orange)}
 
-.uk-sseo nav {display:flex;align-items:center;gap:28px}
 
-.uk-sseo nav a {font-size:14px;font-weight:500;color:var(--n600);transition:color .2s}
 
-.uk-sseo nav a:hover {color:var(--orange)}
 
 
 .uk-sseo .btn {display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:999px;font-family:var(--fd);font-size:15px;font-weight:600;cursor:pointer;transition:all .2s;text-decoration:none}
@@ -381,7 +378,7 @@
 
 .uk-sseo .faq-ans p {font-size:15px;color:var(--n600);line-height:1.75;margin:0}
 
-.uk-sseo .faq-pill-nav {display:none;gap:8px;overflow-x:auto;padding-bottom:4px;margin-top:32px;margin-bottom:0;scrollbar-width:none}
+.uk-sseo .faq-pill-nav {display:none !important;gap:8px;overflow-x:auto;padding-bottom:4px;margin-top:32px;margin-bottom:0;scrollbar-width:none}
 
 .uk-sseo .faq-pill-nav::-webkit-scrollbar {display:none}
 

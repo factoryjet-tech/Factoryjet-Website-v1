@@ -1118,13 +1118,6 @@ export default function ShopifyDevelopmentPage() {
   </div>
 </section>
 
-<footer>
-  <div className="wrap">
-    <p>© 2026 FactoryJet.com · <a href="/uk/shopify-development">Shopify Development UK</a> · <a href="/uk/ecommerce-seo">Ecommerce SEO UK</a> · <a href="/uk/shopify-seo">Shopify SEO UK</a> · Certified Shopify Partner</p>
-    <p style={{ marginTop: '8px' }}>Serving London · Manchester · Birmingham · Leeds · Bristol · Sheffield · Edinburgh · Glasgow</p>
-  </div>
-</footer>
-
 
 </div>
       <Footer />

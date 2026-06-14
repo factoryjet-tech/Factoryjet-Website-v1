@@ -18,10 +18,13 @@ const CITIES = [
 ];
 
 const SERVICES = [
-  { name: "Web Design", slug: "web-design" },
-  { name: "E-Commerce", slug: "ecommerce" },
-  { name: "AI Agents", slug: "ai-agents" },
-  { name: "AI SEO", slug: "ai-seo" },
+  { name: "Web Design",          slug: "web-design" },
+  { name: "Shopify Development", slug: "shopify-development" },
+  { name: "E-Commerce",          slug: "ecommerce" },
+  { name: "Shopify SEO",         slug: "shopify-seo" },
+  { name: "Ecommerce SEO",       slug: "ecommerce-seo" },
+  { name: "AI Agents",           slug: "ai-agents" },
+  { name: "AI SEO",              slug: "ai-seo" },
 ];
 
 export default function Footer() {

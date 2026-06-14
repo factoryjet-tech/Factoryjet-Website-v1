@@ -76,11 +76,8 @@
 
 .uk-sdev .logo span {color:var(--orange)}
 
-.uk-sdev nav {display:flex;align-items:center;gap:28px}
 
-.uk-sdev nav a {font-size:14px;font-weight:500;color:var(--n600);transition:color .2s}
 
-.uk-sdev nav a:hover {color:var(--orange)}
 
 
 /* ─── Buttons ─── */
@@ -413,7 +410,7 @@
 
 .uk-sdev .faq-ans p {font-size:15px;color:var(--n600);line-height:1.75;margin:0}
 
-.uk-sdev .faq-pill-nav {display:none;gap:8px;overflow-x:auto;padding-bottom:4px;margin-top:32px;margin-bottom:0;scrollbar-width:none}
+.uk-sdev .faq-pill-nav {display:none !important;gap:8px;overflow-x:auto;padding-bottom:4px;margin-top:32px;margin-bottom:0;scrollbar-width:none}
 
 .uk-sdev .faq-pill-nav::-webkit-scrollbar {display:none}
 
