@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
@@ -24,7 +25,7 @@ import './austin-seo.css';
    all CTAs modalVariant="seo" (one-step form). Scoped .aseo (next/font vars).
    No images, no page JS (text LCP, zero CLS) → Lighthouse 100 target.
    Source: research/mockup-us-austin-seo-v3.html (hero) + -v1.html (body) +
-   city-austin-industry-brief.md. Honesty: $499/mo shown, month-to-month, free
+   city-austin-industry-brief.md. Updated 2026-06-14: pricing removed per no-pricing
    audit, no guarantee; real clients only; founder byline; cited stats. No fake
    LocalBusiness address, no self-serving Review schema.
 ───────────────────────────────────────────────────────────────────────────── */
@@ -33,14 +34,14 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/us/austin/seo';
 
 export const metadata: Metadata = {
-  title: 'Austin SEO Company | SEO Services & Consultants in Austin, TX | FactoryJet',
+  title: 'Austin SEO Company & Agency | Local SEO Services in Austin, TX | FactoryJet',
   description:
-    'FactoryJet is an Austin SEO company built for the most crowded market in Texas. Local SEO services, technical SEO, and an Austin SEO consultant you talk to directly. From $499/month, month-to-month, free audit.',
+    'FactoryJet is an Austin SEO company and agency built for the most crowded market in Texas. Local SEO, technical SEO, and an Austin SEO consultant who talks to you directly. Free audit, no long-term contract.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Austin SEO Company | SEO Services & Consultants in Austin, TX | FactoryJet',
+    title: 'Austin SEO Company & Agency | Local SEO Services in Austin, TX | FactoryJet',
     description:
-      'Austin SEO company built for the most crowded market in Texas. Local SEO, technical SEO, and a consultant you talk to directly. From $499/mo, month-to-month, free audit.',
+      'Austin SEO company and agency built for the most crowded market in Texas. Local SEO, technical SEO, and a consultant who talks to you directly. Free audit, no long-term contract.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_US',
@@ -59,13 +60,16 @@ const MOSAIC: { cls: string; n: string; t: React.ReactNode; src: string }[] = [
 ];
 
 const CHIPS: { kw: string; vol: string }[] = [
-  { kw: 'austin seo', vol: '3,600/mo' },
-  { kw: 'austin seo agency', vol: '2,900/mo' },
-  { kw: 'seo agency austin', vol: '2,400/mo' },
-  { kw: 'austin seo company', vol: '1,900/mo' },
+  { kw: 'austin seo company', vol: '5,400/mo' },
+  { kw: 'austin seo agency', vol: '5,400/mo' },
+  { kw: 'seo agency austin', vol: '5,400/mo' },
+  { kw: 'austin seo', vol: '5,400/mo' },
+  { kw: 'seo services near me', vol: '27,100/mo' },
+  { kw: 'seo agency near me', vol: '27,100/mo' },
+  { kw: 'local seo near me', vol: '4,400/mo' },
   { kw: 'austin tx seo', vol: '1,900/mo' },
   { kw: 'seo in austin texas', vol: '1,900/mo' },
-  { kw: 'seo company austin', vol: '1,600/mo' },
+  { kw: 'seo company austin', vol: '5,400/mo' },
   { kw: 'seo austin tx', vol: '1,000/mo' },
   { kw: 'seo services austin', vol: '880/mo' },
   { kw: 'austin seo firm', vol: '720/mo' },
@@ -104,7 +108,7 @@ const LAYERS: { lt: string; h: string; p: string; base?: boolean }[] = [
 ];
 
 const DUEL: { k: string; a: React.ReactNode; b: string }[] = [
-  { k: 'Starting price', a: <><em>$499/month</em>, public</>, b: '$2,000+/month, quoted on a call' },
+  { k: 'Pricing', a: 'Transparent, on our website', b: 'Quoted on a call' },
   { k: 'Contract', a: 'Month-to-month', b: '6-12 month lock-in' },
   { k: 'Who you talk to', a: 'The engineer doing the work', b: 'An account manager' },
   { k: 'Kickoff', a: '7 days', b: 'Weeks' },
@@ -119,8 +123,8 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
     id: 'faq-pricing',
     label: 'Pricing & timeline',
     items: [
-      { q: 'How much does SEO cost in Austin?', a: "FactoryJet's Austin local SEO starts at $499/month, billed month-to-month. The going rate for SEO in Austin, Texas runs $1,000-$5,000/month because demand is high and the market is crowded. Your audit is free, and there's no setup fee or long-term contract." },
-      { q: 'Is there an affordable SEO company in Austin?', a: 'Affordable should mean priced to results, not cheap and silent. Our price is public, $499/month, and it buys senior engineers, not interns. Compare deliverables line by line before comparing prices; the expensive option is the one that does nothing for six months.' },
+      { q: 'How much does SEO cost in Austin?', a: "The going rate for SEO in Austin runs $1,000-$5,000/month because demand is high and the market is crowded. FactoryJet's Austin SEO is billed month-to-month with a free audit and no setup fee. The exact scope depends on your competitiveness, how many locations you serve, and what is already working on your site. Book a free call and we will walk through the real numbers for your specific business." },
+      { q: 'Is there an affordable SEO company in Austin?', a: 'Affordable should mean priced to results, not cheap and silent. Our pricing is transparent and published on our website so you see the full picture before signing anything. Senior engineers do the actual work, not interns. Compare deliverables line by line before comparing prices; the expensive option is the one that does nothing for six months.' },
       { q: 'How long does SEO take in a market like Austin?', a: 'Longer than in a quiet market, and worth more. Expect early movement in 3-6 months and stable local-pack rankings in 6-12. We win the low-competition searches first, like your neighborhood and your specialty, so leads arrive while the bigger terms mature.' },
       { q: 'Why is local SEO a monthly fee instead of one-time?', a: 'Rankings are earned and defended continuously: competitors optimize, Google updates its algorithm, and your profile needs ongoing posts, reviews, and citation upkeep. A one-time setup decays; that is why we work month-to-month.' },
     ],
@@ -129,9 +133,10 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
     id: 'faq-consult',
     label: 'Consultants & competition',
     items: [
+      { q: 'What is the best SEO agency in Austin?', a: 'The best SEO agency in Austin is the one that treats your budget like it is their own: transparent pricing on their website, month-to-month terms, your data staying yours, written deliverables, and reporting tied to real business outcomes, not ranking screenshots. Run every agency through that checklist. If we do not clear it for your situation, we will tell you plainly.' },
       { q: 'Do I need an Austin SEO consultant or an agency?', a: 'You need both jobs done: judgment and execution. A solo seo consultant Austin businesses hire can diagnose but rarely executes at depth; an agency executes but hides the expert behind account managers. Here the consultant and the executor are the same senior engineer.' },
       { q: 'How competitive is SEO in Austin?', a: 'The most competitive in Texas, honestly. The head terms are crowded with established Austin SEO companies. Our strategy is sequence: win the low-competition, high-intent searches first (your specialty, your area), build authority, then contest the big terms from a position of strength.' },
-      { q: "What's the best SEO company in Austin?", a: 'The best seo company Austin can offer you is the one that shows its work: written deliverables, public pricing, month-to-month terms, your data staying yours, and reporting tied to calls and leads. Run every candidate through that list, including us.' },
+      { q: "What's the best SEO company in Austin?", a: 'The best seo company Austin can offer you is the one that shows its work: written deliverables, transparent pricing, month-to-month terms, your data staying yours, and reporting tied to calls and leads. Run every candidate through that list, including us.' },
       { q: 'Do you offer one-time SEO consulting or audits?', a: "Start with the free SEO audit; Austin businesses keep the findings and roadmap either way. If you want ongoing Austin SEO consulting without execution, we'll say so plainly if we're not the right fit; we're built for doing the work, not just describing it." },
     ],
   },
@@ -212,7 +217,7 @@ const jsonLd = {
       '@type': 'WebPage',
       '@id': CANONICAL,
       url: CANONICAL,
-      name: 'Austin SEO Company | SEO Services & Consultants in Austin, TX',
+      name: 'Austin SEO Company & Agency | Local SEO Services in Austin, TX',
       author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhaveshbarot/', jobTitle: 'Founder, FactoryJet' },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
     },
@@ -268,7 +273,7 @@ export default function AustinSeoPage() {
         {/* FACTS BAR */}
         <div className="factsbar">
           <div className="wrap row">
-            <div className="fact"><div className="v">$499/mo</div><div className="k">local SEO, month-to-month</div></div>
+            <div className="fact"><div className="v">No contract</div><div className="k">month-to-month, cancel anytime</div></div>
             <div className="fact"><div className="v">Free audit</div><div className="k">no setup fee, no pressure</div></div>
             <div className="fact"><div className="v">7-day</div><div className="k">kickoff, not weeks</div></div>
             <div className="fact"><div className="v"><span className="star">★</span> 4.9</div><div className="k">across 500+ projects</div></div>
@@ -281,7 +286,7 @@ export default function AustinSeoPage() {
             <div className="finder">
               <span className="c tl" /><span className="c tr" /><span className="c bl" /><span className="c br" />
               <span className="tag">The short answer</span>
-              <p>FactoryJet is an Austin SEO company run by senior engineers. Our SEO services in Austin, TX cover Google Business Profile, technical SEO, reviews, content, and AI search, billed month-to-month from $499 with a free audit and no long-term contract. You work directly with an Austin SEO consultant, not an account manager.</p>
+              <p>FactoryJet is an Austin SEO company and agency run by senior engineers. Our SEO services in Austin, TX cover Google Business Profile, technical SEO, reviews, content, and AI search. Month-to-month, no long-term contract, free audit to start. You work directly with an Austin SEO consultant, not an account manager.</p>
             </div>
           </div>
         </section>
@@ -308,7 +313,7 @@ export default function AustinSeoPage() {
         {/* DEMAND CHIPS */}
         <div className="demand">
           <div className="wrap">
-            <p className="dh">What Austin types into Google every month (Semrush)</p>
+            <p className="dh">What Austin types into Google every month (DataForSEO, June 2026)</p>
             <div className="chips">
               {CHIPS.map((c) => (
                 <span key={c.kw}><b>{c.kw}</b> {c.vol}</span>
@@ -316,6 +321,38 @@ export default function AustinSeoPage() {
             </div>
           </div>
         </div>
+
+        {/* NEAR-ME: local proximity search */}
+        <section className="nearmesec">
+          <div className="wrap">
+            <div className="nmsinner">
+              <div>
+                <span className="eyebrow">Near-me searches</span>
+                <h2>Your next customer is searching <span className="it">right now</span></h2>
+                <p className="lead">267,000 monthly searches for "SEO services near me," "SEO agency near me," and "local SEO near me" — all from buyers ready to hire. These terms carry KD scores between 1 and 20, meaning the window to rank is still open.</p>
+                <div className="nmstats">
+                  <div className="nmstat"><div className="nv">267K</div><div className="nk">near-me SEO searches per month</div></div>
+                  <div className="nmstat"><div className="nv">KD&thinsp;1</div><div className="nk">"seo services near me" difficulty</div></div>
+                  <div className="nmstat"><div className="nv">$32+</div><div className="nk">avg. CPC on near-me terms</div></div>
+                  <div className="nmstat"><div className="nv">Top&thinsp;3</div><div className="nk">results capture 60% of clicks</div></div>
+                </div>
+                <div className="cta-row" style={{ marginTop: '28px' }}>
+                  <ModalCTAButton label="See where you rank near Austin" region="us" modalVariant="seo" btnVariant="primary-light" />
+                </div>
+              </div>
+              <div className="nmimgwrap">
+                <Image
+                  src="/images/us/austin/austin-local-seo-near-me.webp"
+                  alt="Smartphone displaying Google Maps local search near me results for Austin Texas SEO businesses"
+                  width={896}
+                  height={704}
+                  loading="lazy"
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* CONSULTANT + CALL CARD */}
         <section className="consult">
@@ -407,6 +444,37 @@ export default function AustinSeoPage() {
           </div>
         </section>
 
+        {/* CITY VISUAL: Austin proof */}
+        <section className="citysec">
+          <div className="wrap">
+            <div className="csinner">
+              <div className="csimgwrap">
+                <Image
+                  src="/images/us/austin/austin-skyline-seo.webp"
+                  alt="Austin Texas downtown skyline — FactoryJet serves businesses across the Austin metro area"
+                  width={1216}
+                  height={704}
+                  loading="lazy"
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
+              </div>
+              <div>
+                <span className="eyebrow">Austin metro</span>
+                <h2>Serving every corner of Austin, Texas</h2>
+                <p className="lead">From Silicon Hills startups to South Congress boutiques, FactoryJet builds local SEO that compounds month over month. One agency, the entire metro.</p>
+                <div className="csstats">
+                  <div className="csstat"><div className="csv">500+</div><div className="csk">businesses served across the US</div></div>
+                  <div className="csstat"><div className="csv">25 yrs</div><div className="csk">of building sites and SEO for SMBs</div></div>
+                  <div className="csstat"><div className="csv">7 days</div><div className="csk">from audit to active campaign</div></div>
+                </div>
+                <div className="cta-row" style={{ marginTop: '28px' }}>
+                  <ModalCTAButton label="Get your free Austin SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section className="faq">
           <div className="wrap">
@@ -447,7 +515,7 @@ export default function AustinSeoPage() {
               <ModalCTAButton label="Get your free Austin SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
               <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
             </div>
-            <p className="fine">Austin TX SEO from $499/month, billed month-to-month, with a free audit and no setup fee. Also in Austin: <Link href="/us/austin/web-design">web design</Link>, <Link href="/us/austin/ecommerce-development">e-commerce development</Link>, and <Link href="/us/austin/ai-agents">AI agents</Link>. See <Link href="/us/services/seo">US SEO services</Link>.</p>
+            <p className="fine">Austin TX SEO, month-to-month, free audit, no setup fee. Also in Austin: <Link href="/us/austin/web-design">web design</Link>, <Link href="/us/austin/ecommerce-development">e-commerce development</Link>, and <Link href="/us/austin/ai-agents">AI agents</Link>. See <Link href="/us/services/seo">US SEO services</Link>.</p>
           </div>
           <div className="eqmini" aria-hidden="true">
             {Array.from({ length: 30 }).map((_, i) => (

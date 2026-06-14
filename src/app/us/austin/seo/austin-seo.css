@@ -250,6 +250,26 @@
 .aseo .eqmini i:nth-child(5n+4){height:42%}
 .aseo .eqmini i.sig{background:var(--orange);height:100%;min-width:9px;flex:0 0 9px;opacity:1}
 
+/* NEAR-ME section */
+.aseo .nearmesec{background:var(--paper);padding:96px 0;border-top:1px solid var(--line)}
+.aseo .nmsinner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.aseo .nearmesec .lead{max-width:540px;margin-top:12px}
+.aseo .nmstats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+.aseo .nmstat{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.aseo .nmstat .nv{font-family:var(--disp);font-weight:800;font-size:clamp(26px,2.8vw,36px);color:var(--orange-d);line-height:1}
+.aseo .nmstat .nk{font-size:12.5px;color:var(--n600);margin-top:6px}
+.aseo .nmimgwrap{border-radius:20px;overflow:hidden;box-shadow:var(--sh-card)}
+
+/* CITY VISUAL section */
+.aseo .citysec{background:var(--lav-soft);padding:96px 0}
+.aseo .csinner{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.aseo .csimgwrap{border-radius:20px;overflow:hidden;box-shadow:var(--sh-card)}
+.aseo .citysec .lead{max-width:480px;margin-top:12px}
+.aseo .csstats{display:flex;flex-direction:column;gap:18px;margin-top:28px}
+.aseo .csstat{display:flex;flex-direction:column;gap:4px;border-left:3px solid var(--orange);padding-left:18px}
+.aseo .csstat .csv{font-family:var(--disp);font-weight:800;font-size:clamp(26px,2.8vw,34px);color:var(--ink);line-height:1}
+.aseo .csstat .csk{font-size:13.5px;color:var(--n600)}
+
 /* Motion: content visible by default; animation only under no-preference. */
 @media(prefers-reduced-motion:no-preference){
   @keyframes aseo-blip{0%{box-shadow:0 0 0 0 rgba(240,90,40,.5)}70%{box-shadow:0 0 0 7px rgba(240,90,40,0)}100%{box-shadow:0 0 0 0 rgba(240,90,40,0)}}
@@ -269,6 +289,8 @@
 }
 @media(max-width:900px){
   .aseo .consult .grid{grid-template-columns:1fr;gap:44px}
+  .aseo .nmsinner{grid-template-columns:1fr;gap:44px}
+  .aseo .csinner{grid-template-columns:1fr;gap:40px}
 }
 @media(max-width:860px){
   .aseo .factsbar .row{grid-template-columns:repeat(2,1fr)}
