@@ -169,7 +169,7 @@ export default function ShopifyDevelopmentPage() {
     <div style={{ position: 'relative', overflow: 'hidden' }}>
       <img width="1200" height="800" fetchPriority="high" loading="eager" src="https://im.runware.ai/image/os/a04d20/ws/3/ii/d50e4e8b-81a0-4b77-8e81-17f9f7924634.webp"
         alt="Custom Shopify storefront design for a UK brand; FactoryJet Shopify development"
-        style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }} onError={(e: React.SyntheticEvent<HTMLImageElement>) => { e.currentTarget.style.display='none'; const sib = e.currentTarget.nextElementSibling as HTMLElement|null; if(sib) sib.style.display='flex'; }} />
+        style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }} />
 <div style={{ display: 'none', width: '100%', height: '100%', minHeight: '320px', borderRadius: 'inherit', overflow: 'hidden' }}><img src="https://im.runware.ai/image/os/a08dlim3/ws/3/ii/2622d95f-5a6d-40d4-936d-0dd36f9742fe.webp" width="1200" height="800" alt="FactoryJet web development UK" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }} /></div>
       <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(to right,transparent 60%,#0F0F12 100%)' }}></div>
     </div>
@@ -495,7 +495,7 @@ export default function ShopifyDevelopmentPage() {
         </div>
       </div>
       <div style={{ borderRadius: '16px', overflow: 'hidden', aspectRatio: '5/3', position: 'relative' }}>
-        <img width="800" height="600" loading="lazy" src="https://im.runware.ai/image/os/a06dlim3/ws/3/ii/0fb9638c-7885-4f21-81c0-7a4e45bf2b7f.webp" alt="FactoryJet team reviewing a newly launched Shopify store" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }} onError={(e: React.SyntheticEvent<HTMLImageElement>) => { e.currentTarget.style.display='none'; const sib = e.currentTarget.nextElementSibling as HTMLElement|null; if(sib) sib.style.display='flex'; }} />
+        <img width="800" height="600" loading="lazy" src="https://im.runware.ai/image/os/a06dlim3/ws/3/ii/0fb9638c-7885-4f21-81c0-7a4e45bf2b7f.webp" alt="FactoryJet team reviewing a newly launched Shopify store" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }} />
 <div style={{ display: 'none', width: '100%', height: '100%', minHeight: '320px', borderRadius: 'inherit', overflow: 'hidden' }}><img src="https://im.runware.ai/image/os/a08dlim3/ws/3/ii/2622d95f-5a6d-40d4-936d-0dd36f9742fe.webp" width="1200" height="800" alt="FactoryJet web development UK" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }} /></div>
       </div>
     </div>

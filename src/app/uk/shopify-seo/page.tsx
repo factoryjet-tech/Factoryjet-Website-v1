@@ -108,7 +108,7 @@ export default function ShopifySeoPage() {
       <div className="bento-span4" style={{ position: 'relative', minHeight: '320px', borderRadius: '16px', overflow: 'hidden' }}>
         <img width="1200" height="800" fetchPriority="high" loading="eager" src="https://im.runware.ai/image/os/a10dlim3/ws/3/ii/068f50f7-9c40-4fa7-8564-9797de4d375e.webp"
           alt="Shopify SEO audit showing organic search improvements for a UK Shopify store; FactoryJet"
-          style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center', display: 'block', minHeight: '320px' }} onError={(e: React.SyntheticEvent<HTMLImageElement>) => { e.currentTarget.style.display='none'; const sib = e.currentTarget.nextElementSibling as HTMLElement|null; if(sib) sib.style.display='flex'; }} />
+          style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center', display: 'block', minHeight: '320px' }} />
 <div style={{ display: 'none', width: '100%', height: '100%', minHeight: '320px', borderRadius: 'inherit', overflow: 'hidden' }}><img src="https://im.runware.ai/image/os/a07dlim3/ws/3/ii/3bf8c844-931e-4ecb-809d-42f6ab6e318a.webp" width="1344" height="600" alt="FactoryJet Shopify SEO UK" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }} /></div>
         <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(to top,rgba(15,15,18,.8) 0%,transparent 50%)' }}></div>
         <div style={{ position: 'absolute', bottom: '24px', left: '24px', right: '24px' }}>
@@ -372,7 +372,7 @@ export default function ShopifySeoPage() {
   <div style={{ maxWidth: '100%', position: 'relative' }}>
     <img width="1200" height="600" loading="lazy" src="https://im.runware.ai/image/os/a07dlim3/ws/3/ii/3bf8c844-931e-4ecb-809d-42f6ab6e318a.webp"
       alt="Shopify organic search performance results for FactoryJet UK client; GSC data showing ranking improvements"
-      style={{ width: '100%', height: '340px', objectFit: 'cover', objectPosition: 'center top', display: 'block' }} onError={(e: React.SyntheticEvent<HTMLImageElement>) => { e.currentTarget.style.display='none'; const sib = e.currentTarget.nextElementSibling as HTMLElement|null; if(sib) sib.style.display='flex'; }} />
+      style={{ width: '100%', height: '340px', objectFit: 'cover', objectPosition: 'center top', display: 'block' }} />
 <div style={{ display: 'none', width: '100%', height: '100%', minHeight: '320px', borderRadius: 'inherit', overflow: 'hidden' }}><img src="https://im.runware.ai/image/os/a10dlim3/ws/3/ii/068f50f7-9c40-4fa7-8564-9797de4d375e.webp" width="1344" height="600" alt="FactoryJet Shopify SEO UK" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }} /></div>
     <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(to bottom,rgba(15,15,18,.7) 0%,rgba(15,15,18,.4) 50%,rgba(15,15,18,.85) 100%)' }}></div>
     <div style={{ position: 'absolute', inset: '0', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

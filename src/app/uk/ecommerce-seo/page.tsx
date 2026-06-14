@@ -164,7 +164,7 @@ export default function EcommerceSeoPage() {
     <div style={{ position: 'relative', overflow: 'hidden' }}>
       <img width="1200" height="800" fetchPriority="high" loading="eager" src="https://im.runware.ai/image/os/a02d21/ws/3/ii/cea4b179-9321-4a20-b849-4cae7995f000.webp"
         alt="Ecommerce SEO dashboard showing organic traffic and revenue growth for a UK online store; FactoryJet"
-        style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }} onError={(e: React.SyntheticEvent<HTMLImageElement>) => { e.currentTarget.style.display='none'; const sib = e.currentTarget.nextElementSibling as HTMLElement|null; if(sib) sib.style.display='flex'; }} />
+        style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }} />
 <div style={{ display: 'none', width: '100%', height: '100%', minHeight: '320px', borderRadius: 'inherit', overflow: 'hidden' }}><img src="https://im.runware.ai/image/os/a01d21/ws/3/ii/b206ae12-daef-4fd8-94a0-ff875d021d90.webp" width="1200" height="800" alt="FactoryJet web development UK" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }} /></div>
       <div style={{ position: 'absolute', inset: '0', background: 'linear-gradient(to right,transparent 60%,#0F0F12 100%)' }}></div>
     </div>
