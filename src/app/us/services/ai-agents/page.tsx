@@ -24,15 +24,15 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Best AI Agent Development Company in USA — From $5,000',
+  title: 'AI Automation Agency & AI Agent Development Company USA | FactoryJet',
   description:
-    'Custom AI agents that automate one workflow or your whole back office. Built for US small businesses. From $5,000, shipped in weeks. Talk to the founder.',
+    'Custom AI agents that automate one workflow or your whole back office. FactoryJet is a US-focused AI automation agency — founder-led, shipped in weeks, built for small and mid-size businesses. Talk to the founder.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best AI Agent Development Company in USA — From $5,000',
+    title: 'AI Automation Agency & AI Agent Development Company USA | FactoryJet',
     description:
-      'Custom AI agents that automate one workflow or your whole back office. Built for US small businesses. From $5,000, shipped in weeks. Talk to the founder.',
+      'Custom AI agents that automate one workflow or your whole back office. FactoryJet is a US-focused AI automation agency — founder-led, shipped in weeks, built for small and mid-size businesses.',
     url: 'https://factoryjet.com/us/services/ai-agents',
     images: [
       {
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best AI Agent Development Company in USA — From $5,000',
+    title: 'AI Automation Agency & AI Agent Development Company USA | FactoryJet',
     description:
-      'Custom AI agents that automate one workflow or your whole back office. Built for US small businesses. From $5,000, shipped in weeks. Talk to the founder.',
+      'Custom AI agents that automate one workflow or your whole back office. FactoryJet is a US-focused AI automation agency — founder-led, shipped in weeks, built for small and mid-size businesses.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {

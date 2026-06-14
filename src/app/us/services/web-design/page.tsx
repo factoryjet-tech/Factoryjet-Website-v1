@@ -27,15 +27,15 @@ import Image from 'next/image';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Agency USA — 7-Day Launches From $1,999 [2026]',
+  title: 'Web Design Agency for Small Business USA — Professional Sites, Live in 7 Days | FactoryJet',
   description:
-    'Web design agency for US small businesses. Custom Next.js, WordPress & Shopify sites, live in 7 days from $1,999. Full code ownership. Get a quote in 24 hours.',
+    'Web design agency for US small businesses. Custom Next.js, WordPress & Shopify sites built for speed, SEO, and conversions — live in 7 days. Full code ownership. Get a quote in 24 hours.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Agency USA — 7-Day Launches From $1,999 [2026]',
+    title: 'Web Design Agency for Small Business USA — Professional Sites, Live in 7 Days | FactoryJet',
     description:
-      'Web design agency for US small businesses. Custom Next.js, WordPress & Shopify sites, live in 7 days from $1,999. Full code ownership. Get a quote in 24 hours.',
+      'Web design services for US small businesses. Custom Next.js, WordPress & Shopify sites — Lighthouse 100, mobile-first, live in 7 days. Full code ownership. Get a quote in 24 hours.',
     url: 'https://factoryjet.com/us/services/web-design',
     images: [
       {
@@ -49,9 +49,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web Design Agency USA — 7-Day Launches From $1,999 [2026]',
+    title: 'Web Design Agency for Small Business USA — Professional Sites, Live in 7 Days | FactoryJet',
     description:
-      'Web design agency for US small businesses. Custom Next.js, WordPress & Shopify sites, live in 7 days from $1,999. Full code ownership. Get a quote in 24 hours.',
+      'Web design services for US small businesses. Custom Next.js, WordPress & Shopify sites — Lighthouse 100, mobile-first, live in 7 days. Full code ownership. Get a quote in 24 hours.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
@@ -92,7 +92,7 @@ const faqSchema = {
       name: 'How much does a custom website cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s web design starts at $1,999 for a 5-page business website. A full business site with up to 15 pages, a blog, and CMS runs $3,999. E-commerce, custom Next.js apps, and larger projects start at $7,500. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.',
+        text: 'Cost depends on scope: a 5-page business website, a 15-page site with CMS, or a full e-commerce build are very different projects. Every FactoryJet engagement is fixed-price with the number confirmed before work starts — no hourly billing, no scope creep. Book a free discovery call to get a quote scoped to your actual project.',
       },
     },
     {
@@ -194,30 +194,7 @@ const serviceSchema = {
   },
   serviceType: 'Web Design & Development',
   description:
-    'Custom website design and development for US small businesses. Next.js, WordPress, and Shopify. 7-day delivery. Lighthouse 100 performance. fixed-price, milestone-paid. Starting at $1,999.',
-  offers: [
-    {
-      '@type': 'Offer',
-      name: 'Starter Website',
-      price: '1999',
-      priceCurrency: 'USD',
-      description: 'Up to 5-page business website, mobile-first, Lighthouse 100 optimized.',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Growth Website',
-      price: '3999',
-      priceCurrency: 'USD',
-      description: 'Up to 15-page site with CMS, blog, and advanced SEO setup.',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Custom Website or E-Commerce',
-      price: '7500',
-      priceCurrency: 'USD',
-      description: 'E-commerce stores, Next.js web apps, and large custom projects.',
-    },
-  ],
+    'Custom website design and development for US small businesses. Next.js, WordPress, and Shopify. 7-day delivery. Lighthouse 100 performance. Fixed-price, milestone-paid. Get a quote on a free discovery call.',
 };
 
 const howToSchema = {
@@ -616,7 +593,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a custom website cost?',
     answer:
-      'FactoryJet\'s web design starts at $1,999 for a 5-page business website. A full business site with up to 15 pages, a blog, and CMS integration runs $3,999. E-commerce stores, custom Next.js applications, and larger projects start at $7,500 — scoped after a free discovery call. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.',
+      'It depends on scope — a 5-page business site, a 15-page site with CMS, and a full e-commerce build are three very different projects. Every FactoryJet engagement is fixed-price with the number confirmed before work starts. Book a free discovery call and you will have a quoted scope within 24 hours — no hourly billing, no scope creep.',
   },
   {
     category: 'pricing',

@@ -57,15 +57,15 @@ const LAV_SOFT = '#ECEAFB';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Best SEO Agency in USA: Local, Ecommerce & AI SEO Services | FactoryJet',
+  title: 'SEO Agency for Small Business USA — Local, Near Me & AI SEO Services | FactoryJet',
   description:
-    'FactoryJet is a US-focused SEO agency that grows organic traffic which compounds, ranking you on Google and getting you cited inside AI answers like AI Overviews, ChatGPT, and Perplexity. Founder-led, month-to-month, reported in leads.',
+    'FactoryJet is an SEO agency for US small businesses. We rank you on Google, put you in "near me" searches, and get you cited in AI Overviews, ChatGPT, and Perplexity. Founder-led, month-to-month, reported in leads.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best SEO Agency in USA: Local, Ecommerce & AI SEO Services | FactoryJet',
+    title: 'SEO Agency for Small Business USA — Local, Near Me & AI SEO Services | FactoryJet',
     description:
-      'A US-focused SEO company that combines technical SEO, expert content, and authority building so you rank on Google and get cited in AI answers. Founder-led, month-to-month, reported in revenue.',
+      'A US-focused SEO company for small businesses. Technical SEO, expert content, and authority building so you rank on Google, appear in "near me" searches, and get cited in AI answers. Founder-led, month-to-month.',
     url: 'https://factoryjet.com/us/services/seo',
     images: [
       {
@@ -79,9 +79,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best SEO Agency in USA: Local, Ecommerce & AI SEO Services | FactoryJet',
+    title: 'SEO Agency for Small Business USA — Local, Near Me & AI SEO Services | FactoryJet',
     description:
-      'A US-focused SEO agency that ranks you on Google and gets you cited in AI answers. Founder-led, month-to-month, reported in leads.',
+      'A US-focused SEO agency for small businesses. Ranks you on Google, gets you in "near me" searches, and cited in AI answers. Founder-led, month-to-month, reported in leads.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
@@ -225,6 +225,12 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   },
 
   // ── Local, ecommerce & industries ──────────────────────────────────────
+  {
+    category: 'local',
+    question: 'How do I find an SEO agency near me?',
+    answer:
+      'Most searches for an "SEO agency near me" return local generalist agencies who handle everything from social media to print. For dedicated SEO that ranks you on Google and inside AI answers, a specialized remote agency like FactoryJet often delivers stronger results. We are US-focused, work with clients in every state, and the founder is directly accountable for your rankings — so you get senior expertise without limiting yourself to whoever happens to be in your zip code.',
+  },
   {
     category: 'local',
     question: 'Do you do local SEO and Google Business Profile optimization?',
