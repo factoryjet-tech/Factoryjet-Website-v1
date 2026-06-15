@@ -72,15 +72,51 @@ const US_SEO_SERVICES = [
 ] as const;
 
 const US_LOCATIONS = [
-  { label: 'Austin',    state: 'TX', href: '/us/austin/web-design' },
-  { label: 'Miami',     state: 'FL', href: '/us/miami/web-design' },
-  { label: 'Denver',    state: 'CO', href: '/us/denver/web-design' },
-  { label: 'Nashville', state: 'TN', href: '/us/nashville/web-design' },
-  { label: 'New York',  state: 'NY', href: '/us/new-york/web-design' },
-  { label: 'Charlotte', state: 'NC', href: '/us/charlotte/web-design' },
-  { label: 'Raleigh',   state: 'NC', href: '/us/raleigh/web-design' },
-  { label: 'Tampa',     state: 'FL', href: '/us/tampa/web-design' },
-  { label: 'Portland',  state: 'OR', href: '/us/portland/web-design' },
+  { label: 'Austin',          state: 'TX', href: '/us/austin/web-design' },
+  { label: 'Miami',           state: 'FL', href: '/us/miami/web-design' },
+  { label: 'Denver',          state: 'CO', href: '/us/denver/web-design' },
+  { label: 'Nashville',       state: 'TN', href: '/us/nashville/web-design' },
+  { label: 'New York',        state: 'NY', href: '/us/new-york/web-design' },
+  { label: 'Charlotte',       state: 'NC', href: '/us/charlotte/web-design' },
+  { label: 'Raleigh',         state: 'NC', href: '/us/raleigh/web-design' },
+  { label: 'Tampa',           state: 'FL', href: '/us/tampa/web-design' },
+  { label: 'Portland',        state: 'OR', href: '/us/portland/web-design' },
+  { label: 'Colorado Springs',state: 'CO', href: '/us/colorado-springs/seo' },
+  { label: 'Cleveland',       state: 'OH', href: '/us/cleveland/web-design' },
+] as const;
+
+// Industry SEO verticals (US) — sub-group in the SEO mega column + mobile drawer
+const US_INDUSTRY_SEO = [
+  { label: 'Healthcare SEO', href: '/us/services/healthcare-seo', desc: 'SEO for medical practices' },
+  { label: 'Dental SEO',     href: '/us/services/dental-seo',     desc: 'Rank for local dentist searches' },
+  { label: 'Law Firm SEO',   href: '/us/services/law-firm-seo',   desc: 'SEO for attorneys & law firms' },
+] as const;
+
+// Who We Serve — by business type (US desktop mega panel)
+const US_WHO_WE_SERVE_TYPES = [
+  { label: 'DTC & E-Commerce Brands',    href: '/us/services/ecommerce-development',        desc: 'Scale your online store' },
+  { label: 'Local Service Businesses',   href: '/us/services/local-seo',                    desc: 'Get found in your city' },
+  { label: 'Law Firms & Legal Practices',href: '/us/services/law-firm-seo',                 desc: 'SEO + sites for attorneys' },
+  { label: 'Healthcare & Dental',        href: '/us/services/healthcare-seo',               desc: 'Rank for local patients' },
+  { label: 'Real Estate Companies',      href: '/us/services/real-estate-website-design',   desc: 'Listings & lead-gen sites' },
+  { label: 'Startups & SaaS',            href: '/us/services/web-application-development',  desc: 'Build fast, own your code' },
+] as const;
+
+// Who We Serve — by what you need (US desktop mega panel)
+const US_WHO_WE_SERVE_NEEDS = [
+  { label: 'I need a new website',       href: '/us/services/web-design',             sub: 'Web Design & Development' },
+  { label: 'I want more search traffic', href: '/us/services/seo',                    sub: 'SEO Services' },
+  { label: "I'm selling online",         href: '/us/services/ecommerce-development',  sub: 'Shopify & E-Commerce' },
+  { label: 'I want AI in my business',   href: '/us/services/ai-agents',              sub: 'AI Agents & Automation' },
+] as const;
+
+// Knowledge Hub links (US) — replaces the shared RESOURCES list in the US nav
+const US_KNOWLEDGE_HUB = [
+  { icon: BookOpen,      label: 'Blog',               href: '/blog',             desc: 'Expert insights & guides' },
+  { icon: FileText,      label: 'Case Studies',        href: '/case-studies',     desc: 'Real results from real clients' },
+  { icon: LayoutTemplate,label: 'Portfolio',           href: '/us/portfolio',     desc: 'Browse our work' },
+  { icon: Search,        label: 'FAQ',                 href: '/us/faq',           desc: 'Common questions answered' },
+  { icon: TrendingUp,    label: 'Website Cost Guide',  href: '/us/website-cost',  desc: 'What does a website cost in 2025?' },
 ] as const;
 
 // ─── India nav data ───────────────────────────────────────────────────────────
@@ -307,7 +343,7 @@ export default function SiteHeader({
   const { openModal } = useContactModal();
   const cfg = LOCALE_CONFIG[locale];
 
-  const [openDropdown, setOpenDropdown] = useState<'services' | 'locations' | 'resources' | null>(null);
+  const [openDropdown, setOpenDropdown] = useState<'services' | 'whoweserve' | 'locations' | 'knowhub' | 'resources' | 'company' | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [mobileLocationsOpen, setMobileLocationsOpen] = useState(false);
@@ -335,7 +371,7 @@ export default function SiteHeader({
     return () => { document.body.style.overflow = ''; };
   }, [mobileOpen]);
 
-  const openDrop = (id: 'services' | 'locations' | 'resources') => {
+  const openDrop = (id: 'services' | 'whoweserve' | 'locations' | 'knowhub' | 'resources' | 'company') => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
     setOpenDropdown(id);
   };
@@ -618,6 +654,27 @@ export default function SiteHeader({
                               ))}
                             </div>
 
+                            {/* Industry SEO verticals */}
+                            <p className="mb-1.5 mt-3 font-fj-mono text-[9px] font-semibold uppercase tracking-[0.16em] text-fj-neutral-400">
+                              Industry SEO
+                            </p>
+                            <div className="space-y-0.5">
+                              {US_INDUSTRY_SEO.map((s) => (
+                                <Link
+                                  key={s.href}
+                                  href={s.href}
+                                  className="group flex flex-col rounded-lg px-2.5 py-1.5 transition-colors hover:bg-[#F05A28]/5"
+                                >
+                                  <span className="font-fj-body text-[13px] font-semibold leading-tight text-[#F05A28] transition-opacity group-hover:opacity-75">
+                                    {s.label}
+                                  </span>
+                                  <span className="font-fj-body text-[11px] leading-tight text-fj-neutral-400">
+                                    {s.desc}
+                                  </span>
+                                </Link>
+                              ))}
+                            </div>
+
                             {/* AI SEO — "get cited" answer box */}
                             <p className="mb-1.5 mt-3 flex items-center gap-1.5 font-fj-mono text-[9px] font-bold uppercase tracking-[0.16em] text-[#5046C8]">
                               <span className="inline-block h-[5px] w-[5px] rounded-full bg-[#5046C8]" /> The future of search
@@ -754,7 +811,107 @@ export default function SiteHeader({
                 )}
               </div>
 
-              {/* Locations trigger + dropdown */}
+              {/* Who We Serve trigger — US only */}
+              {locale === 'us' && (
+                <div
+                  className="relative"
+                  onMouseEnter={() => openDrop('whoweserve')}
+                  onMouseLeave={scheduleClosed}
+                >
+                  <button
+                    type="button"
+                    aria-expanded={openDropdown === 'whoweserve'}
+                    aria-haspopup="menu"
+                    className="flex items-center gap-1 rounded-lg px-3 py-2 font-fj-body text-[14.5px] text-fj-ink transition-colors hover:bg-fj-neutral-100 hover:text-[#F05A28]"
+                  >
+                    Who we serve
+                    <ChevronDown
+                      size={14}
+                      strokeWidth={2}
+                      className={`transition-transform duration-200 ${openDropdown === 'whoweserve' ? 'rotate-180 text-[#F05A28]' : 'text-fj-neutral-400'}`}
+                    />
+                  </button>
+
+                  {openDropdown === 'whoweserve' && (
+                    <div
+                      className="fixed left-1/2 top-[72px] z-50 -translate-x-1/2 px-3 pt-2"
+                      onMouseEnter={keepOpen}
+                      onMouseLeave={scheduleClosed}
+                      role="menu"
+                    >
+                      <div className="w-[820px] max-w-[calc(100vw-1.5rem)] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
+                        <div className="grid grid-cols-[1fr_1fr_220px]">
+
+                          {/* By Business Type */}
+                          <div className="p-5">
+                            <p className="mb-3 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">By business type</p>
+                            <div className="space-y-0.5">
+                              {US_WHO_WE_SERVE_TYPES.map((item) => (
+                                <Link
+                                  key={item.href}
+                                  href={item.href}
+                                  className="group flex flex-col rounded-lg px-2.5 py-2 transition-colors hover:bg-[#F05A28]/5"
+                                >
+                                  <span className="font-fj-body text-[13px] font-semibold leading-tight text-fj-ink transition-colors group-hover:text-[#F05A28]">
+                                    {item.label}
+                                  </span>
+                                  <span className="font-fj-body text-[11px] leading-tight text-fj-neutral-400">
+                                    {item.desc}
+                                  </span>
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+
+                          {/* By What You Need */}
+                          <div className="border-l border-fj-neutral-100 p-5">
+                            <p className="mb-3 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">By what you need</p>
+                            <div className="space-y-1">
+                              {US_WHO_WE_SERVE_NEEDS.map((item) => (
+                                <Link
+                                  key={item.href}
+                                  href={item.href}
+                                  className="group flex flex-col rounded-lg border border-transparent px-2.5 py-2.5 transition-all hover:border-fj-neutral-200 hover:bg-[#F05A28]/5"
+                                >
+                                  <span className="font-fj-body text-[13px] font-semibold leading-tight text-fj-ink transition-colors group-hover:text-[#F05A28]">
+                                    {item.label}
+                                  </span>
+                                  <span className="font-fj-body text-[11px] leading-tight text-fj-neutral-400">
+                                    {item.sub}
+                                  </span>
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+
+                          {/* Featured panel */}
+                          <div className="flex flex-col justify-between rounded-r-2xl p-5" style={{ background: '#0F0F12' }}>
+                            <div>
+                              <p className="mb-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-white/40">Case study</p>
+                              <p className="font-fj-display text-[16px] font-semibold leading-snug text-[#FAFAF7]">
+                                Tampa flooring co: 312% increase in organic leads
+                              </p>
+                              <p className="mt-2 font-fj-body text-[11.5px] leading-relaxed text-white/60">
+                                Map Pack + content strategy for a $2M/yr local business.
+                              </p>
+                            </div>
+                            <Link
+                              href="/case-studies"
+                              className="mt-4 flex items-center gap-1.5 font-fj-body text-[12px] font-semibold text-[#F05A28] transition-opacity hover:opacity-75"
+                            >
+                              View all case studies <ArrowRight size={12} strokeWidth={2} />
+                            </Link>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Locations trigger + dropdown — India / UAE only on desktop */}
+              {locale !== 'us' && (
               <div
                 className="relative"
                 onMouseEnter={() => openDrop('locations')}
@@ -892,67 +1049,154 @@ export default function SiteHeader({
                   </div>
                 )}
               </div>
+              )}
 
-              {/* Resources trigger + dropdown */}
-              <div
-                className="relative"
-                onMouseEnter={() => openDrop('resources')}
-                onMouseLeave={scheduleClosed}
-              >
-                <button
-                  type="button"
-                  aria-expanded={openDropdown === 'resources'}
-                  aria-haspopup="menu"
-                  className="flex items-center gap-1 rounded-lg px-3 py-2 font-fj-body text-[14.5px] text-fj-ink transition-colors hover:bg-fj-neutral-100 hover:text-[#F05A28]"
+              {/* Knowledge Hub (US) / Resources (India + UAE) trigger + dropdown */}
+              {locale === 'us' ? (
+                <div
+                  className="relative"
+                  onMouseEnter={() => openDrop('knowhub')}
+                  onMouseLeave={scheduleClosed}
                 >
-                  Resources
-                  <ChevronDown
-                    size={14}
-                    strokeWidth={2}
-                    className={`transition-transform duration-200 ${openDropdown === 'resources' ? 'rotate-180 text-[#F05A28]' : 'text-fj-neutral-400'}`}
-                  />
-                </button>
-
-                {openDropdown === 'resources' && (
-                  <div
-                    className="absolute left-0 top-full z-50 pt-2.5"
-                    onMouseEnter={keepOpen}
-                    onMouseLeave={scheduleClosed}
-                    role="menu"
+                  <button
+                    type="button"
+                    aria-expanded={openDropdown === 'knowhub'}
+                    aria-haspopup="menu"
+                    className="flex items-center gap-1 rounded-lg px-3 py-2 font-fj-body text-[14.5px] text-fj-ink transition-colors hover:bg-fj-neutral-100 hover:text-[#F05A28]"
                   >
-                    <div className="w-[260px] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white p-3 shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
-                      <p className="mb-2 px-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
-                        Resources
-                      </p>
-                      <div className="space-y-0.5">
-                        {RESOURCES.map((r) => (
-                          <ServiceCard key={r.href} icon={r.icon} label={r.label} href={r.href} desc={r.desc} />
-                        ))}
+                    Knowledge Hub
+                    <ChevronDown
+                      size={14}
+                      strokeWidth={2}
+                      className={`transition-transform duration-200 ${openDropdown === 'knowhub' ? 'rotate-180 text-[#F05A28]' : 'text-fj-neutral-400'}`}
+                    />
+                  </button>
+
+                  {openDropdown === 'knowhub' && (
+                    <div
+                      className="absolute left-0 top-full z-50 pt-2.5"
+                      onMouseEnter={keepOpen}
+                      onMouseLeave={scheduleClosed}
+                      role="menu"
+                    >
+                      <div className="w-[280px] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white p-3 shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
+                        <p className="mb-2 px-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
+                          Knowledge Hub
+                        </p>
+                        <div className="space-y-0.5">
+                          {US_KNOWLEDGE_HUB.map((r) => (
+                            <ServiceCard key={r.href} icon={r.icon} label={r.label} href={r.href} desc={r.desc} />
+                          ))}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                )}
-              </div>
+                  )}
+                </div>
+              ) : (
+                <div
+                  className="relative"
+                  onMouseEnter={() => openDrop('resources')}
+                  onMouseLeave={scheduleClosed}
+                >
+                  <button
+                    type="button"
+                    aria-expanded={openDropdown === 'resources'}
+                    aria-haspopup="menu"
+                    className="flex items-center gap-1 rounded-lg px-3 py-2 font-fj-body text-[14.5px] text-fj-ink transition-colors hover:bg-fj-neutral-100 hover:text-[#F05A28]"
+                  >
+                    Resources
+                    <ChevronDown
+                      size={14}
+                      strokeWidth={2}
+                      className={`transition-transform duration-200 ${openDropdown === 'resources' ? 'rotate-180 text-[#F05A28]' : 'text-fj-neutral-400'}`}
+                    />
+                  </button>
 
-              {/* Flat nav links */}
-              <Link
-                href={cfg.aboutHref}
-                className="rounded-lg px-3 py-2 font-fj-body text-[14.5px] text-fj-ink transition-colors hover:bg-fj-neutral-100 hover:text-[#F05A28]"
-              >
-                About
-              </Link>
-              <Link
-                href={cfg.portfolioHref}
-                className="rounded-lg px-3 py-2 font-fj-body text-[14.5px] text-fj-ink transition-colors hover:bg-fj-neutral-100 hover:text-[#F05A28]"
-              >
-                Portfolio
-              </Link>
-              <Link
-                href={cfg.pricingHref}
-                className="rounded-lg px-3 py-2 font-fj-body text-[14.5px] text-fj-ink transition-colors hover:bg-fj-neutral-100 hover:text-[#F05A28]"
-              >
-                Pricing
-              </Link>
+                  {openDropdown === 'resources' && (
+                    <div
+                      className="absolute left-0 top-full z-50 pt-2.5"
+                      onMouseEnter={keepOpen}
+                      onMouseLeave={scheduleClosed}
+                      role="menu"
+                    >
+                      <div className="w-[260px] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white p-3 shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
+                        <p className="mb-2 px-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
+                          Resources
+                        </p>
+                        <div className="space-y-0.5">
+                          {RESOURCES.map((r) => (
+                            <ServiceCard key={r.href} icon={r.icon} label={r.label} href={r.href} desc={r.desc} />
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Company dropdown (US) / flat nav links (India + UAE) */}
+              {locale === 'us' ? (
+                <div
+                  className="relative"
+                  onMouseEnter={() => openDrop('company')}
+                  onMouseLeave={scheduleClosed}
+                >
+                  <button
+                    type="button"
+                    aria-expanded={openDropdown === 'company'}
+                    aria-haspopup="menu"
+                    className="flex items-center gap-1 rounded-lg px-3 py-2 font-fj-body text-[14.5px] text-fj-ink transition-colors hover:bg-fj-neutral-100 hover:text-[#F05A28]"
+                  >
+                    Company
+                    <ChevronDown
+                      size={14}
+                      strokeWidth={2}
+                      className={`transition-transform duration-200 ${openDropdown === 'company' ? 'rotate-180 text-[#F05A28]' : 'text-fj-neutral-400'}`}
+                    />
+                  </button>
+
+                  {openDropdown === 'company' && (
+                    <div
+                      className="absolute left-0 top-full z-50 pt-2.5"
+                      onMouseEnter={keepOpen}
+                      onMouseLeave={scheduleClosed}
+                      role="menu"
+                    >
+                      <div className="w-[220px] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white p-3 shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
+                        <p className="mb-2 px-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
+                          Company
+                        </p>
+                        <div className="space-y-0.5">
+                          <ServiceCard icon={Globe} label="About FactoryJet" href="/us/about" desc="Our story and team" />
+                          <ServiceCard icon={TrendingUp} label="Pricing" href="/us/pricing" desc="Transparent, fixed-price plans" />
+                          <ServiceCard icon={MessageSquare} label="Contact" href="/contact" desc="Talk to us today" />
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <>
+                  <Link
+                    href={cfg.aboutHref}
+                    className="rounded-lg px-3 py-2 font-fj-body text-[14.5px] text-fj-ink transition-colors hover:bg-fj-neutral-100 hover:text-[#F05A28]"
+                  >
+                    About
+                  </Link>
+                  <Link
+                    href={cfg.portfolioHref}
+                    className="rounded-lg px-3 py-2 font-fj-body text-[14.5px] text-fj-ink transition-colors hover:bg-fj-neutral-100 hover:text-[#F05A28]"
+                  >
+                    Portfolio
+                  </Link>
+                  <Link
+                    href={cfg.pricingHref}
+                    className="rounded-lg px-3 py-2 font-fj-body text-[14.5px] text-fj-ink transition-colors hover:bg-fj-neutral-100 hover:text-[#F05A28]"
+                  >
+                    Pricing
+                  </Link>
+                </>
+              )}
 
             </nav>
 
@@ -1139,6 +1383,17 @@ export default function SiteHeader({
                           AI SEO
                           <span className="ml-auto rounded-full bg-[#ECEAFB] px-2 py-0.5 font-fj-mono text-[8px] font-bold tracking-wider text-[#5046C8]">GEO</span>
                         </Link>
+                        <p className="mb-1 mt-2.5 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">Industry SEO</p>
+                        {US_INDUSTRY_SEO.map((s) => (
+                          <Link
+                            key={s.href}
+                            href={s.href}
+                            onClick={() => setMobileOpen(false)}
+                            className="block rounded-lg px-1 py-2.5 font-fj-body text-[14px] font-semibold text-[#F05A28] transition-colors hover:bg-[#F05A28]/5"
+                          >
+                            {s.label}
+                          </Link>
+                        ))}
                       </>
                     )}
                     <p className="mb-1 mt-3 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">{locale === 'us' ? 'AI Development' : 'AI Services'}</p>
@@ -1187,7 +1442,7 @@ export default function SiteHeader({
             )}
           </div>
 
-          {/* Resources accordion */}
+          {/* Knowledge Hub (US) / Resources (India + UAE) accordion */}
           <div className="border-b border-fj-neutral-100">
             <button
               type="button"
@@ -1195,7 +1450,7 @@ export default function SiteHeader({
               onClick={() => setMobileResourcesOpen((v) => !v)}
               className="flex w-full items-center justify-between py-4 font-fj-body text-[15px] font-semibold text-fj-ink"
             >
-              Resources
+              {locale === 'us' ? 'Knowledge Hub' : 'Resources'}
               <ChevronDown
                 size={16}
                 strokeWidth={2}
@@ -1204,7 +1459,7 @@ export default function SiteHeader({
             </button>
             {mobileResourcesOpen && (
               <div className="pb-3">
-                {RESOURCES.map((r) => (
+                {(locale === 'us' ? US_KNOWLEDGE_HUB : RESOURCES).map((r) => (
                   <Link
                     key={r.href}
                     href={r.href}
@@ -1227,13 +1482,15 @@ export default function SiteHeader({
           >
             About
           </Link>
-          <Link
-            href={cfg.portfolioHref}
-            onClick={() => setMobileOpen(false)}
-            className="block border-b border-fj-neutral-100 py-4 font-fj-body text-[15px] font-semibold text-fj-ink transition-colors hover:text-[#F05A28]"
-          >
-            Portfolio
-          </Link>
+          {locale !== 'us' && (
+            <Link
+              href={cfg.portfolioHref}
+              onClick={() => setMobileOpen(false)}
+              className="block border-b border-fj-neutral-100 py-4 font-fj-body text-[15px] font-semibold text-fj-ink transition-colors hover:text-[#F05A28]"
+            >
+              Portfolio
+            </Link>
+          )}
           <Link
             href={cfg.pricingHref}
             onClick={() => setMobileOpen(false)}
@@ -1241,6 +1498,15 @@ export default function SiteHeader({
           >
             Pricing
           </Link>
+          {locale === 'us' && (
+            <Link
+              href="/contact"
+              onClick={() => setMobileOpen(false)}
+              className="block border-b border-fj-neutral-100 py-4 font-fj-body text-[15px] font-semibold text-fj-ink transition-colors hover:text-[#F05A28]"
+            >
+              Contact
+            </Link>
+          )}
 
         </nav>
 
