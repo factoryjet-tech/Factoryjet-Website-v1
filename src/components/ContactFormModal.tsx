@@ -291,6 +291,25 @@ const ContactFormModal: React.FC = () => {
 
       trackFormSuccess('contact_form');
       trackFormSubmission();
+
+      // Fire-and-forget lead notification email via Cloudflare Pages Function.
+      // Best-effort: never blocks the success state or throws to the user.
+      // Lead is already persisted in Firestore above — this is additive.
+      fetch('/api/notify-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name:    formData.name,
+          email:   formData.email,
+          phone:   formData.phone   || '',
+          company: formData.company || '',
+          service: formData.service || '',
+          message: formData.message || '',
+          region,
+          page: typeof window !== 'undefined' ? window.location.pathname : '',
+        }),
+      }).catch(() => { /* email is best-effort; Firestore write already succeeded */ });
+
       setIsSuccess(true);
     } catch (err) {
       console.error('Error submitting form:', err);
@@ -474,20 +493,53 @@ const ContactFormModal: React.FC = () => {
 
   // ── Success screen ────────────────────────────────────────────────────────
   const renderSuccess = () => (
-    <div className="text-center py-8 animate-fadeIn">
-      <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-        <CheckCircle size={40} className="text-[#10B981]" />
+    <div className="text-center py-6 animate-fadeIn">
+      {/* Checkmark */}
+      <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-5">
+        <CheckCircle size={32} className="text-[#10B981]" />
       </div>
-      <h3 className="text-2xl font-bold text-[#0A0F1C] mb-3">Request Sent!</h3>
-      <p className="text-slate-600 mb-6 max-w-sm mx-auto">
-        We've received your request. Our team will get back to you within 24 hours.
+
+      <h3 className="text-2xl font-bold text-[#0A0F1C] mb-2">You&rsquo;re in!</h3>
+      <p className="text-slate-500 text-sm mb-6 max-w-xs mx-auto">
+        Bhavesh will personally review your request and reply within 24 hours — usually much faster.
       </p>
-      <button
-        type="button" onClick={handleClose}
-        className="bg-[#F05A28] text-white px-8 py-3 rounded-xl font-bold transition-all hover:bg-[#d44d1f]"
-      >
-        Close
-      </button>
+
+      {/* Divider */}
+      <div className="border-t border-slate-100 pt-5 mb-5">
+        <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">
+          Don&rsquo;t want to wait?
+        </p>
+        {/* Calendly CTA — primary action on success */}
+        <a
+          href="https://calendly.com/bhavesh-factoryjet/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => {
+            // Track Calendly click as a high-intent GA4 event
+            if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+              (window as any).gtag('event', 'calendly_click', {
+                send_to: 'G-N40S2Q8E1J',
+                click_location: 'form_success_modal',
+              });
+            }
+          }}
+          className="inline-flex items-center justify-center gap-2 w-full bg-[#F05A28] text-white py-3 rounded-xl font-bold text-sm transition-all hover:bg-[#d44d1f] mb-3"
+        >
+          Book a 30-min call now
+        </a>
+        <button
+          type="button"
+          onClick={handleClose}
+          className="w-full text-slate-400 text-sm py-2 hover:text-slate-600 transition-colors"
+        >
+          I&rsquo;ll wait for the email reply
+        </button>
+      </div>
+
+      {/* Trust line */}
+      <p className="text-xs text-slate-400">
+        500+ businesses served · No spam · No obligation
+      </p>
     </div>
   );
 
