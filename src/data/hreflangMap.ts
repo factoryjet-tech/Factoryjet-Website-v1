@@ -630,6 +630,10 @@ export const seoCityAlternatesIN = {
     'en-IN': 'https://factoryjet.com/seo/hyderabad',
     'x-default': 'https://factoryjet.com/seo/hyderabad',
   },
+  chennai: {
+    'en-IN': 'https://factoryjet.com/seo/chennai',
+    'x-default': 'https://factoryjet.com/seo/chennai',
+  },
 } as const
 
 /** /seo/[discipline]-seo sub-service pages — India only. */
