@@ -21,7 +21,10 @@
  */
 
 const NOTIFY_TO   = 'bhavesh@factoryjet.com';
-const NOTIFY_FROM = 'FactoryJet Leads <leads@factoryjet.com>';
+// Use onboarding@resend.dev until factoryjet.com domain is verified in Resend.
+// Once DNS records are added + verified, switch back to:
+//   'FactoryJet Leads <leads@factoryjet.com>'
+const NOTIFY_FROM = 'FactoryJet Leads <onboarding@resend.dev>';
 
 /** Pretty-print the service slug into a human label */
 function serviceLabel(id) {
@@ -191,9 +194,13 @@ export async function onRequestPost(context) {
   if (!resendRes.ok) {
     const errBody = await resendRes.text();
     console.error('Resend API error:', resendRes.status, errBody);
+    // Return the actual Resend error so we can debug from curl
+    return new Response(JSON.stringify({ ok: false, resend_status: resendRes.status, resend_error: errBody }), {
+      status: 200, headers: { 'Content-Type': 'application/json', ...corsHeaders },
+    });
   }
 
-  return new Response(JSON.stringify({ ok: true }), {
+  return new Response(JSON.stringify({ ok: true, sent: true }), {
     status: 200, headers: { 'Content-Type': 'application/json', ...corsHeaders },
   });
 }
