@@ -21,10 +21,7 @@
  */
 
 const NOTIFY_TO   = 'bhavesh@factoryjet.com';
-// Use onboarding@resend.dev until factoryjet.com domain is verified in Resend.
-// Once DNS records are added + verified, switch back to:
-//   'FactoryJet Leads <leads@factoryjet.com>'
-const NOTIFY_FROM = 'FactoryJet Leads <onboarding@resend.dev>';
+const NOTIFY_FROM = 'FactoryJet Leads <leads@factoryjet.com>';
 
 /** Pretty-print the service slug into a human label */
 function serviceLabel(id) {

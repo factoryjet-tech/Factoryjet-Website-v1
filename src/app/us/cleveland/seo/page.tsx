@@ -27,14 +27,14 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/us/cleveland/seo';
 
 export const metadata: Metadata = {
-  title: 'SEO Services Cleveland, Ohio | Local SEO Company Near Me | FactoryJet',
+  title: 'Cleveland SEO Company | Local SEO Services Near Me | FactoryJet',
   description:
-    'SEO services and SEO company in Cleveland, Ohio. FactoryJet provides local SEO, technical SEO, HVAC SEO, plumber SEO, and GBP optimization for Cleveland businesses. Free audit, no long-term contracts.',
+    'Trusted SEO company in Cleveland, Ohio. Senior SEO experts delivering local search engine optimization, technical SEO & GBP optimization. 500+ businesses served. Free audit — no lock-in contracts.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'SEO Services Cleveland, Ohio | Local SEO Company Near Me | FactoryJet',
+    title: 'Cleveland SEO Company | Local SEO Services Near Me | FactoryJet',
     description:
-      'SEO services and SEO company in Cleveland, Ohio. Local SEO, technical SEO, HVAC and plumber SEO, GBP optimization for Cleveland businesses. Free audit, no lock-in.',
+      'Top-rated SEO company in Cleveland, Ohio. Local SEO, technical SEO & Google Business Profile optimization for Ohio businesses. 500+ clients served. Free audit, no contracts.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_US',
@@ -70,7 +70,7 @@ const ORDER: { no: string; h: string; p: string }[] = [
 
 const CHECKS: { b: string; p: string }[] = [
   { b: 'Written deliverables list', p: 'Exactly what gets done each month. Vagueness is a red flag.' },
-  { b: 'Price before you sign', p: 'Ours is public: from $499/month. Mystery pricing means mystery work.' },
+  { b: 'Scope estimate before you sign', p: 'A detailed deliverables list and written scope before you commit. Ask any agency; most cannot do it.' },
   { b: 'Month-to-month terms', p: '6-12 month lock-ins protect the agency, not you.' },
   { b: 'You own your data and accounts', p: 'Analytics, Search Console, and your Google Business Profile stay yours.' },
   { b: 'Monthly reports tied to calls and leads', p: 'Not ranking screenshots. Revenue first, rankings as the "why".' },
@@ -78,8 +78,7 @@ const CHECKS: { b: string; p: string }[] = [
 ];
 
 const COMPARE: { k: string; fj: string; alt: string; hl?: boolean }[] = [
-  { k: 'Starting price', fj: '$499/month', alt: '$1,500+/month', hl: true },
-  { k: 'Contract', fj: 'Month-to-month', alt: '6-12 month lock-in' },
+  { k: 'Contract', fj: 'Month-to-month', alt: '6-12 month lock-in', hl: true },
   { k: 'Who does the work', fj: 'Senior engineers', alt: 'Junior account managers' },
   { k: 'Kickoff', fj: '7 days', alt: 'Weeks' },
   { k: 'Reporting', fj: 'Calls & leads, monthly', alt: 'Ranking screenshots' },
@@ -93,7 +92,7 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
     id: 'faq-pricing',
     label: 'Pricing & timeline',
     items: [
-      { q: 'How much does SEO cost in Cleveland?', a: "FactoryJet's Cleveland local SEO starts at $499/month, billed month-to-month. Across the US, local SEO typically runs $500-$3,000/month depending on competition and locations. Your audit is free, and there's no setup fee or long-term contract." },
+      { q: 'How much does SEO cost in Cleveland?', a: "Local SEO cost in Cleveland depends on three things: how many locations you're targeting, how competitive your category is, and the current state of your website. A home services business in a crowded suburb needs more work than a niche B2B in a quieter market. We scope every engagement after a free audit so you know exactly what the work is before you commit — no obligation to see the numbers." },
       { q: 'How long does SEO take to work in Cleveland?', a: 'Expect early movement in 3-6 months and stable local-pack rankings in 6-12 months. If your Google Business Profile is under-optimized, the Map Pack can improve in as little as 2-8 weeks. Anyone promising page one in 30 days is selling risk, not results.' },
       { q: 'How fast can I rank in the Cleveland Map Pack?', a: "If you already have reviews, accurate citations, and a half-optimized profile, the 3-pack can move in 15-60 days. Starting from scratch in a competitive category, plan on 3-6 months. The good news: Cleveland's SEO market is softer than most big metros, so well-executed work moves faster here." },
       { q: 'Why is local SEO a monthly fee instead of one-time?', a: 'Rankings are earned and defended continuously: competitors optimize, Google updates its algorithm, and your profile needs ongoing posts, reviews, and citation upkeep. A one-time setup decays; that is why we work month-to-month.' },
@@ -103,7 +102,7 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
     id: 'faq-choosing',
     label: 'Choosing a company',
     items: [
-      { q: 'How do I evaluate an SEO company in Cleveland?', a: 'Use six checks: a written deliverables list, public pricing, month-to-month terms, you owning your data and accounts, monthly reports tied to calls and leads, and no ranking guarantees. The best SEO companies in Cleveland pass all six without flinching.' },
+      { q: 'How do I evaluate an SEO company in Cleveland?', a: 'Use six checks: a written deliverables list, a scope estimate before you commit, month-to-month terms, you owning your data and accounts, monthly reports tied to calls and leads, and no ranking guarantees. The best SEO companies in Cleveland pass all six without flinching.' },
       { q: 'What separates the best Cleveland SEO firms from the rest?', a: "Engineering depth. Most agencies do content and citations; few can fix Core Web Vitals, schema, rendering, and site architecture. Ask to see the agency's own Lighthouse scores. If their site is slow, your site will be too." },
       { q: 'Should I hire a Cleveland SEO expert in-house instead?', a: 'A senior in-house SEO costs roughly $80K-$120K a year plus tools. An agency delivers the full skill set, from technical SEO to content to reviews, for a fraction of that. Most Cleveland SMBs keep one internal point person and outsource execution.' },
       { q: 'What do your monthly SEO reports include?', a: 'Calls, direction requests, form fills, and booked leads first; then Map Pack rankings, profile views, and organic traffic as the explanation. Plain English, no jargon, and you keep full access to Google Analytics and Search Console.' },
@@ -220,9 +219,9 @@ const jsonLd = {
       '@type': 'WebPage',
       '@id': CANONICAL,
       url: CANONICAL,
-      name: 'SEO Services Cleveland, Ohio | Local SEO Company Near Me | FactoryJet',
+      name: 'Cleveland SEO Company | Local SEO Services Near Me | FactoryJet',
       datePublished: '2026-06-06',
-      dateModified: '2026-06-13',
+      dateModified: '2026-06-15',
       author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhaveshbarot/', jobTitle: 'Founder, FactoryJet' },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
     },
@@ -274,7 +273,7 @@ export default function ClevelandSeoPage() {
         <div className="ruler">
           <div className="ticks" aria-hidden="true" />
           <div className="wrap row">
-            <div className="fact"><div className="v">$499/mo</div><div className="k">local SEO, month-to-month</div></div>
+            <div className="fact"><div className="v">No lock-in</div><div className="k">month-to-month, cancel anytime</div></div>
             <div className="fact"><div className="v">Free audit</div><div className="k">no setup fee, no pressure</div></div>
             <div className="fact"><div className="v">100/100</div><div className="k">Lighthouse target on every build</div></div>
             <div className="fact"><div className="v"><span className="star">★</span> 4.9</div><div className="k">across 500+ projects</div></div>
@@ -288,10 +287,10 @@ export default function ClevelandSeoPage() {
               <div className="thead">
                 <div className="tcell"><b>Project</b>Cleveland local + technical SEO</div>
                 <div className="tcell"><b>Drawn by</b>Bhavesh Barot, Founder</div>
-                <div className="tcell"><b>Terms</b>$499/mo · month-to-month</div>
+                <div className="tcell"><b>Terms</b>Month-to-month · no lock-in</div>
               </div>
               <div className="tbody">
-                <p>FactoryJet is a Cleveland SEO company that gets local businesses into Google&apos;s Map Pack and &quot;near me&quot; results. Our SEO services in Cleveland, Ohio cover Google Business Profile, citations, reviews, technical SEO, and content, billed month-to-month from $499 with a free audit, no setup fee, and honest monthly reports. You work directly with senior SEO experts.</p>
+                <p>FactoryJet is a Cleveland SEO company that gets local businesses into Google&apos;s Map Pack and &quot;near me&quot; results. Our SEO services in Cleveland, Ohio cover Google Business Profile, citations, reviews, technical SEO, and content — billed month-to-month with a free audit, no setup fee, and honest monthly reports. You work directly with senior SEO experts.</p>
               </div>
             </div>
           </div>
@@ -401,7 +400,7 @@ export default function ClevelandSeoPage() {
           <div className="wrap grid">
             <span className="mark" aria-hidden="true">&ldquo;</span>
             <div>
-              <blockquote><p>I started FactoryJet to do the opposite of what most agencies do: senior people doing the actual work, a price you see before you sign, and no 12-month handcuffs. If our Cleveland SEO doesn&apos;t earn its keep, you leave the next month.</p></blockquote>
+              <blockquote><p>I started FactoryJet to do the opposite of what most agencies do: senior people doing the actual work, a full scope before you sign, and no 12-month handcuffs. If our Cleveland SEO doesn&apos;t earn its keep, you leave the next month.</p></blockquote>
               <div className="byline"><div className="avatar">BB</div><div><div className="nm">Bhavesh Barot</div><div className="ti">Founder, FactoryJet. 25+ years building for SMBs.</div></div></div>
               <p className="real">No stock screenshots, no invented case studies. Our client builds are live right now: <b>Impulse Branding Solutions, Belle Maison, Shevva Car Driver Hire, and Rukman Transport</b>. Open them and run PageSpeed yourself.</p>
             </div>
@@ -448,7 +447,7 @@ export default function ClevelandSeoPage() {
               <ModalCTAButton label="Get your free Cleveland SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
               <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
             </div>
-            <p className="fine">SEO services in Cleveland, Ohio from $499/month, billed month-to-month, with a free audit and no setup fee. Also in Cleveland: <Link href="/us/cleveland/web-design">web design</Link>. See <Link href="/us/services/seo">US SEO services</Link> and our <Link href="/us/services/seo-audit">free SEO audit</Link>. More US cities: <Link href="/us/nashville/seo">Nashville SEO</Link> · <Link href="/us/charlotte/seo">Charlotte SEO</Link>.</p>
+            <p className="fine">SEO services in Cleveland, Ohio — month-to-month, free audit, no setup fee. Also in Cleveland: <Link href="/us/cleveland/web-design">web design</Link>. See <Link href="/us/services/seo">US SEO services</Link> and our <Link href="/us/services/seo-audit">free SEO audit</Link>. More US cities: <Link href="/us/nashville/seo">Nashville SEO</Link> · <Link href="/us/charlotte/seo">Charlotte SEO</Link>.</p>
           </div>
         </section>
       </div>
