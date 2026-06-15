@@ -15,6 +15,7 @@ import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import TalkToFounder from '@/components/v2/TalkToFounder';
+import FinalCTA from '@/components/v2/FinalCTA';
 
 import HealthcareSpecialtiesTabs from './HealthcareSpecialtiesTabs';
 import StatsRowAnimated from './StatsRowAnimated';
@@ -1277,8 +1278,9 @@ export default function HealthcareSeoServicePage() {
         }
         lead="77% of patients search online before booking — and the practices ranking in Google's Map Pack win the patient. We build the full compliance-aware stack: YMYL E-E-A-T, HIPAA-safe analytics, map pack dominance, and monthly reporting on patient outcomes."
         primaryCta={{
-          label: 'Book a free healthcare SEO audit',
-          href: CALENDLY,
+          label: 'Get a free healthcare SEO audit',
+          modal: true,
+          region: 'us',
         }}
         secondaryCta={{
           label: 'See our approach',
@@ -1492,6 +1494,16 @@ export default function HealthcareSeoServicePage() {
         lead="Every healthcare engagement follows the same five steps. The audit defines the compliance and opportunity baseline. The roadmap drives the retainer. Every step ships a deliverable."
         stages={HEALTHCARE_SEO_JOURNEY}
         closingNote="Every step ships a deliverable. Every month you see map pack positions, organic rankings, and AI citations in one consolidated report."
+      />
+
+      {/* ─── 8b. Mid-page modal CTA — lower-friction path after specialties ── */}
+      <FinalCTA
+        variant="light"
+        eyebrow="FREE HEALTHCARE SEO AUDIT"
+        headline="Not sure where your practice stands? Start with a free audit."
+        sub="We'll review your Google Business Profile, top service pages, and local rankings — and send you a prioritized fix list within 48 hours. No sales call required to get started."
+        primaryCta={{ label: 'Get My Free Audit', modal: true, region: 'us' }}
+        secondaryCta={{ label: 'See our approach', href: '#pricing' }}
       />
 
       {/* ─── 9. Comparison vs generalist / freelancer / in-house ─────────── */}

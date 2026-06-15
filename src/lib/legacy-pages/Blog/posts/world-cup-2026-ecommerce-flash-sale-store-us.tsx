@@ -356,6 +356,27 @@ export const post: BlogPost = {
         claim. It&apos;s a production schedule.
       </p>
 
+      {/* Mid-article CTA — natural conversion point after 7-day store credibility section */}
+      <div className="bg-[#FFF3EE] border-l-4 border-[#F05A28] p-5 rounded-r-xl mb-8">
+        <p className="font-semibold text-gray-900 mb-2">
+          The quarterfinals start July 4. Your store needs to be live before then.
+        </p>
+        <p className="text-gray-700 mb-3">
+          FactoryJet has launched Shopify stores for US small businesses in 7 days flat —
+          product catalog, mobile checkout, email capture, countdown timers, and abandoned cart
+          recovery all wired up before launch. If you start this week, you cover the full
+          knockout round spending surge from quarterfinals (July 4–5) through the Final on July 19.
+        </p>
+        <a
+          href="https://calendly.com/bhavesh-factoryjet/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-[#F05A28] text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-[#C94818] transition-colors"
+        >
+          Book a 30-Minute Call: Build My World Cup Store →
+        </a>
+      </div>
+
       <hr className="my-8 border-gray-200" />
 
       <h2 className="text-2xl font-bold mt-8 mb-4">

@@ -14,7 +14,6 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
-import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader'
@@ -75,7 +74,6 @@ export default function CharlotteWebDesignPage() {
         lead={"Charlotte is the second-largest banking center in the US — home to Bank of America's global HQ and one of the most competitive professional services markets on the East Coast. Buyers here expect digital experiences that match the caliber of the firms they work with. FactoryJet delivers a production-ready website in 7 days, starting at $1,999."}
         primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
         trustItems={["Websites from $1,999", "7-day delivery", "Next.js + GA4 included"]}
-        extraCta={<WhatsAppCTA city="Charlotte" variant="light" />}
         rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Charlotte, NC" badgeLabel="Live in 7 days" />}
       />
       <LogoBar
@@ -215,14 +213,14 @@ export default function CharlotteWebDesignPage() {
             "priceRange":"$1,999",
             "description":"A 5-page brochure site that loads fast on mobile and ranks for your name and core service. Best for sole traders and local Charlotte businesses who need a credible online presence quickly.",
             "features":["5 pages, mobile-responsive","Basic SEO & schema markup","Contact form with email forwarding","2 revision rounds","30-day post-launch support"],
-            "cta":{"label":"Get a quote","href":"/contact"}
+            "cta":{"label":"Start Your Project","modal":true,"region":"us"}
           },
           {
             "name":"Growth",
             "priceRange":"$3,999",
             "description":"A 10–15 page site with a blog CMS, lead-capture flows, and analytics wired in from day one. Best for Charlotte SMBs scaling online who need the site to actively generate qualified inquiries.",
             "features":["10–15 pages with blog CMS","Advanced SEO & GA4 tracking","Lead capture & email automation","3 revision rounds","30-day support + training session"],
-            "cta":{"label":"Get a quote","href":"/contact"},
+            "cta":{"label":"Start Your Project","modal":true,"region":"us"},
             "popular":true
           },
           {
@@ -230,7 +228,7 @@ export default function CharlotteWebDesignPage() {
             "priceRange":"$7,500+",
             "description":"Custom Next.js build with e-commerce, AI features, API integrations, and priority support. Best for established Charlotte businesses with complex requirements and a real digital revenue line.",
             "features":["Custom Next.js architecture","E-commerce or membership features","AI integrations (chat, search, content)","Third-party API connections","Priority support & quarterly reviews"],
-            "cta":{"label":"Get a quote","href":"/contact"}
+            "cta":{"label":"Start Your Project","modal":true,"region":"us"}
           }
         ] as const}
       />
@@ -268,7 +266,6 @@ export default function CharlotteWebDesignPage() {
         headline={"Ready to Build Your Charlotte Website?"}
         sub={"Charlotte's $220B+ economy is built on trust — and your website is the first trust signal every prospect sees. In a city where buyers compare you against firms that bank with Bank of America, a slow or amateur-looking site doesn't just underperform. It disqualifies you. Start today."}
         primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
-        extraCta={<WhatsAppCTA city="Charlotte" variant="dark" />}
       />
       <SchemaScript />
     </main>
