@@ -25,13 +25,13 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in India | | FactoryJet',
+  title: 'Web Design Company in India | FactoryJet',
   description:
-    'Web design company in India. Conversion-focused websites from ₹29,999. Mobile-first, Lighthouse 100, Next.js & WordPress. 7-day delivery. Full code ownership.',
+    'Web design company in India. Conversion-focused websites built by a website design company you can trust — mobile-first, Lighthouse 100, Next.js & WordPress. 7-day delivery. Full code ownership.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in India | | FactoryJet',
+    title: 'Web Design Company in India | FactoryJet',
     description:
       'Custom websites for Indian businesses. Next.js, WordPress & Shopify. 7-day delivery. Mobile-first, Lighthouse 100.',
     url: 'https://factoryjet.com/web-design',
@@ -774,8 +774,8 @@ export default function WebDesignServicePage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────────── */}
         <Hero
-          eyebrow="WEB DESIGN · INDIA"
-          headline="A Website That Converts, Built for India's Mobile-First Market"
+          eyebrow="WEB DESIGN COMPANY · INDIA"
+          headline="Web Design Company in India — Websites That Convert, Built Mobile-First"
           lead="70%+ of Indian web traffic is mobile. Paid ad costs are rising. Competitors are outranking you on Google. FactoryJet builds custom, high-performance websites in Next.js, WordPress, and Shopify — designed in Figma, built to Lighthouse 100, and delivered starting at ₹29,999."
           primaryCta={{ label: 'Book a Free Website Audit', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
@@ -828,7 +828,7 @@ export default function WebDesignServicePage() {
         {/* ── 3. BIG THREE TRUST BLOCK ──────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ websites delivered. 25 years of building. Indian businesses trust the results."
+          headline="India's Trusted Web Design Company — 500+ Websites Delivered, 25 Years of Building"
         />
 
         {/* ── 4. WHAT GREAT WEB DESIGN ACTUALLY DOES ───────────────────────────── */}
@@ -1190,7 +1190,7 @@ export default function WebDesignServicePage() {
         {/* ── 11. INDUSTRIES GRID (DARK) ───────────────────────────────────────── */}
         <IndustriesGrid variant="cards"
           eyebrow="WHAT WE BUILD"
-          headline="Six Types of Websites We Build for Indian Businesses"
+          headline="Six Types of Website Design We Build for Indian Businesses"
           lead="Not every business needs the same thing. We match the right platform and design approach to your specific goals — whether you need a local service site, a D2C store, or a full web application."
           sectors={IN_WEB_DESIGN_TYPES}
         />

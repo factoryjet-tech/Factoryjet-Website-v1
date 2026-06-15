@@ -23,25 +23,29 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'AI Agent Development India | Custom AI Agents | FactoryJet',
+  title: 'AI Agent Development Company India | Custom AI Agents | FactoryJet',
   description:
-    'Custom AI agents for Indian businesses — WhatsApp AI, customer support, sales & workflow bots. Integrated with Zoho & Razorpay. Fixed price. Deployed in weeks.',
+    'AI agent development company in India — WhatsApp AI, customer support, sales & workflow bots. AI automation agency for Indian businesses. Integrated with Zoho & Razorpay. Fixed price. Deployed in weeks.',
   keywords: [
+    'AI agent development company India',
+    'AI agent development companies India',
+    'AI agent development services India',
     'AI agent development India',
-    'AI agent company India',
+    'AI automation agency India',
+    'AI chatbot development company India',
+    'WhatsApp chatbot development India',
     'WhatsApp AI agent India',
+    'conversational AI development India',
+    'AI workflow automation India',
     'custom AI agent development India',
-    'AI automation India',
-    'AI chatbot development India',
     'LangChain development India',
     'Zoho AI integration India',
-    'AI workflow automation India',
-    'AI agent for business India',
+    'AI voice agent development India',
   ],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'AI Agent Development Services India | FactoryJet',
+    title: 'AI Agent Development Company India | Custom AI Agents | FactoryJet',
     description:
       'Custom AI agents, WhatsApp automation, and AI-native workflows for Indian businesses. Fixed price. Deployed in weeks — not months.',
     url: 'https://factoryjet.com/services/ai-agent-development',
@@ -57,7 +61,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Agent Development Services India | FactoryJet',
+    title: 'AI Agent Development Company India | Custom AI Agents | FactoryJet',
     description:
       'WhatsApp AI, customer support automation, sales agents for Indian businesses. Fixed price. Fast delivery.',
     images: ['https://factoryjet.com/images/services/ai-agents.webp'],
@@ -697,8 +701,8 @@ export default function AIAgentDevelopmentINPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
-          eyebrow="AI AGENT DEVELOPMENT · INDIA"
-          headline="AI Agents Built for Indian Business, Deployed in Weeks"
+          eyebrow="AI AGENT DEVELOPMENT COMPANY · INDIA"
+          headline="AI Agent Development Company in India — Custom Agents for Your Business, Deployed in Weeks"
           lead="Your competitors are automating the WhatsApp queues, GST workflows, and manual data entry that cost your team 20+ hours a week. FactoryJet builds custom AI agents that connect your Indian business stack — Zoho, Razorpay, Tally, Shiprocket, WhatsApp — and work around the clock without adding headcount."
           primaryCta={{ label: 'Book a Free AI Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
@@ -748,7 +752,7 @@ export default function AIAgentDevelopmentINPage() {
         {/* ── 3. TRUST STATS ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ businesses. 25 years of building. One goal: your results."
+          headline="India's AI Agent Development Company — 500+ Businesses, 25 Years of Building"
         />
 
         {/* ── 4. AI AGENT SERVICES GRID (WARM BLOOM BENTO) ────────────────── */}
@@ -1419,7 +1423,7 @@ export default function AIAgentDevelopmentINPage() {
         {/* ── 11. INDUSTRIES GRID ───────────────────────────────────────────── */}
         <IndustriesGrid variant="cards"
           eyebrow="WHO WE BUILD FOR"
-          headline="AI agents for every major Indian industry vertical"
+          headline="AI Agent Development Services for Every Major Indian Industry"
           lead="Every sector, built to India-specific workflows — WhatsApp, GST, Razorpay, Zoho, and your actual business stack."
           sectors={IN_INDUSTRIES}
         />

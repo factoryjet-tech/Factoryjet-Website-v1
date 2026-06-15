@@ -25,13 +25,13 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development India | Custom Stores | FactoryJet',
+  title: 'Ecommerce Website Development Company India | FactoryJet',
   description:
-    'High-converting Shopify, WooCommerce & custom stores for Indian businesses. Razorpay & UPI integrated. GST-compliant. 7-day Shopify delivery.',
+    'Ecommerce website development company in India. High-converting Shopify, WooCommerce & custom online stores for Indian businesses. Razorpay & UPI integrated. GST-compliant. 7-day Shopify delivery.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'E-Commerce Development India | Custom Online Stores | FactoryJet',
+    title: 'Ecommerce Website Development Company India | FactoryJet',
     description:
       'Shopify, WooCommerce, D2C, B2B, and quick-commerce for Indian businesses. Razorpay, UPI, GST-compliant. Starting at ₹59,999. 7-day delivery guarantee.',
     url: 'https://factoryjet.com/services/ecommerce-development',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'E-Commerce Development India | Custom Online Stores | FactoryJet',
+    title: 'Ecommerce Website Development Company India | FactoryJet',
     description:
       'Shopify, WooCommerce, D2C and B2B e-commerce for Indian businesses. Razorpay + UPI integrated. GST-compliant.',
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
@@ -681,8 +681,8 @@ export default function EcommerceDevelopmentPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
-          eyebrow="E-COMMERCE DEVELOPMENT · INDIA"
-          headline="An Online Store That Sells — On Any Platform, at Any Scale"
+          eyebrow="ECOMMERCE WEBSITE DEVELOPMENT COMPANY · INDIA"
+          headline="Ecommerce Website Development Company in India — Stores That Sell, on Every Platform"
           lead="Most Indian e-commerce stores are built on generic themes and convert below 1%. FactoryJet builds custom Shopify, WooCommerce, D2C, and B2B stores — Razorpay and UPI integrated, GST-compliant, Lighthouse 95+ — from ₹59,999."
           primaryCta={{ label: 'Book a Store Audit', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
@@ -737,7 +737,7 @@ export default function EcommerceDevelopmentPage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ businesses served. 25 years of e-commerce. Indian brands trust the results."
+          headline="India's Trusted Ecommerce Website Development Company — 500+ Businesses, 25 Years"
         />
 
         {/* ── 4. E-COMMERCE EXPLAINED ──────────────────────────────────────── */}
@@ -1166,7 +1166,7 @@ export default function EcommerceDevelopmentPage() {
         {/* ── 11. WHAT WE BUILD ─────────────────────────────────────────────── */}
         <IndustriesGrid variant="cards"
           eyebrow="WHAT WE BUILD"
-          headline="Six E-Commerce Services for Indian Businesses"
+          headline="Six Ecommerce Website Development Services for Indian Businesses"
           lead="From a Shopify launch to a custom quick-commerce platform — we scope the right engagement for your business model, platform, and growth stage."
           sectors={IN_ECOMM_SERVICES}
         />

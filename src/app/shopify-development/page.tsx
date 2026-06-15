@@ -25,28 +25,29 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Shopify Development India | | FactoryJet',
+  title: 'Shopify Website Development Company India | FactoryJet',
   description:
-    'Custom Shopify & Shopify Plus stores for Indian D2C brands. Razorpay + UPI + GST integrated. Shiprocket connected. 7-day delivery. 500+ businesses served.',
+    'Shopify website development company in India. Custom Shopify & Shopify Plus stores for Indian D2C brands. Razorpay + UPI + GST integrated. Shiprocket connected. 7-day delivery. 500+ businesses served.',
   keywords: [
+    'Shopify website development company India',
+    'Shopify web development company India',
+    'Shopify development company India',
     'Shopify development India',
-    'Shopify store development',
+    'Shopify store development India',
     'Shopify developer India',
-    'Shopify website India',
+    'Shopify app development company India',
+    'Shopify Plus development company India',
     'Shopify store setup India',
-    'Shopify customization India',
-    'Shopify development agency India',
-    'affordable Shopify store India',
+    'Shopify theme customization India',
+    'custom Shopify development India',
     'Shopify with Razorpay integration',
-    'custom Shopify theme India',
-    'Shopify Plus India',
     'Shopify migration India',
     'Shopify SEO India',
   ],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Development India | Custom Shopify Stores | FactoryJet',
+    title: 'Shopify Website Development Company India | FactoryJet',
     description:
       'Custom Shopify stores for Indian D2C brands. Razorpay + UPI integrated. GST-compliant. Shiprocket + Delhivery. 7-day delivery.',
     url: 'https://factoryjet.com/shopify-development',
@@ -62,7 +63,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify Development India | Custom Shopify Stores | FactoryJet',
+    title: 'Shopify Website Development Company India | FactoryJet',
     description:
       'Custom Shopify stores for Indian D2C brands. Razorpay + UPI + GST built in. 7-day delivery.',
     images: ['https://factoryjet.com/images/services/card-shopify.webp'],
@@ -758,8 +759,8 @@ export default function ShopifyDevelopmentPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
-          eyebrow="SHOPIFY DEVELOPMENT · INDIA"
-          headline="A Shopify Store That Sells — Built in 7 Days"
+          eyebrow="SHOPIFY WEBSITE DEVELOPMENT COMPANY · INDIA"
+          headline="Shopify Website Development Company in India — Stores Built to Sell, in 7 Days"
           lead="Generic Shopify themes convert at 0.8% in India. FactoryJet builds custom Shopify stores — designed in Figma, Razorpay and UPI integrated, GST-compliant, Lighthouse 95+ — from ₹34,999. In 7 days."
           primaryCta={{ label: 'Book a Store Audit', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
@@ -814,7 +815,7 @@ export default function ShopifyDevelopmentPage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="120+ Shopify stores launched. 25 years of e-commerce expertise."
+          headline="India's Trusted Shopify Website Development Company — 120+ Stores, 25 Years of E-Commerce"
         />
 
         {/* ── 4. SHOPIFY EXPLAINED ─────────────────────────────────────────── */}
@@ -1280,7 +1281,7 @@ export default function ShopifyDevelopmentPage() {
         {/* ── 12. WHAT WE BUILD ────────────────────────────────────────────── */}
         <IndustriesGrid variant="cards"
           eyebrow="WHAT WE BUILD"
-          headline="Six Shopify Services for Indian D2C Brands"
+          headline="Six Shopify Development Services for Indian D2C Brands"
           lead="From a custom Liquid theme to a headless Shopify Plus enterprise build — we scope the right engagement for your brand, catalogue, and revenue stage."
           sectors={SHOPIFY_SERVICES}
         />

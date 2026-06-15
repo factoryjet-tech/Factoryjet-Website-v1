@@ -156,7 +156,7 @@ export default function TechnicalSeoPage() {
       <main className="bg-fj-cream">
         <Hero
           eyebrow="TECHNICAL SEO SERVICES · INDIA"
-          headline="Make Your Site Fast and Easy for Google to Find, Read, and Trust"
+          headline="Technical SEO Services in India — Make Your Site Fast, Crawlable, and Trusted by Google"
           lead="The technical side of SEO is making your site fast and easy for Google to find, read, and trust. It is the base everything else stands on. A slow site that Google cannot read will not rank, no matter how good your content is. We run a full technical SEO audit, speed your site up, fix the things Google cannot read, add the hidden code that explains your pages, and tidy up your site so the right pages get found. No long contracts, and everything we fix stays yours."
           primaryCta={{ label: 'Book a Free Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
@@ -166,7 +166,7 @@ export default function TechnicalSeoPage() {
 
         <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
 
-        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="500+ sites done. 4.9 average rating. Technical SEO that gets your site found." />
+        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="India's Trusted Technical SEO Agency — 500+ Sites, 4.9 Average Rating" />
 
         <IndustriesGrid variant="cards"
           eyebrow="WHAT'S INCLUDED"

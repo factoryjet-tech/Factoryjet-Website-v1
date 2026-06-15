@@ -30,24 +30,27 @@ import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Best AI SEO Agency in India — GEO + AEO | FactoryJet',
+  title: 'Generative Engine Optimization (GEO) Services in India | FactoryJet',
   description:
-    'When India asks ChatGPT, Perplexity, Gemini, or Google AI who to trust, your business should be the answer. AI SEO (GEO + AEO) with per-engine citation proof every month. No long contracts.',
+    'Generative Engine Optimization (GEO) and Answer Engine Optimization (AEO) services in India. When India asks ChatGPT, Perplexity, Gemini, or Google AI who to trust, your business should be the answer. Per-engine citation proof every month.',
   keywords: [
-    'ai seo agency india',
-    'best ai seo agency in india',
-    'ai seo services india',
-    'geo agency india',
     'generative engine optimization india',
-    'aeo agency india',
+    'generative engine optimization services india',
+    'geo seo services india',
+    'answer engine optimization india',
+    'ai seo services india',
+    'ai seo agency india',
+    'geo agency india',
+    'aeo services india',
+    'llm optimization services india',
     'chatgpt optimization india',
     'ai overviews optimization india',
-    'llm seo india',
+    'ai search optimization india',
   ],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best AI SEO Agency in India — GEO + AEO | FactoryJet',
+    title: 'Generative Engine Optimization (GEO) Services in India | FactoryJet',
     description:
       '10 crore Indians ask ChatGPT every week. AI SEO makes the AI answers say your name — with per-engine citation proof every month. No long contracts.',
     url: 'https://factoryjet.com/ai-seo',
@@ -63,7 +66,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best AI SEO Agency in India — GEO + AEO | FactoryJet',
+    title: 'Generative Engine Optimization (GEO) Services in India | FactoryJet',
     description:
       '10 crore Indians ask ChatGPT every week. AI SEO makes the AI answers say your name — with per-engine proof every month.',
     images: ['https://factoryjet.com/logo.png'],
@@ -425,7 +428,7 @@ export default function AiSeoIndiaPage() {
       <main className="bg-fj-cream">
         {/* ── CH.0 HERO — The Answer Card ─────────────────────────────────── */}
         <Hero
-          eyebrow="AI SEO · GEO · AEO — INDIA"
+          eyebrow="GENERATIVE ENGINE OPTIMIZATION (GEO) · AEO · AI SEO — INDIA"
           headline={
             <>
               When India asks AI, be <em className="italic text-[#F05A28]">the answer.</em>
@@ -654,7 +657,7 @@ export default function AiSeoIndiaPage() {
         {/* ── CH.8 FAQ — 22 conversational, zero JS ───────────────────────── */}
         <FAQ
           eyebrow="QUESTIONS, ANSWERED SIMPLY"
-          headline="AI SEO FAQ — answered the way Bhavesh would on a call."
+          headline="GEO, AEO &amp; AI SEO FAQ — Every Question About Generative Engine Optimization, Answered Simply"
           lead="If your question is not below, message us on WhatsApp and you will usually hear back the same day."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}

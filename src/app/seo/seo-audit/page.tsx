@@ -156,7 +156,7 @@ export default function SeoAuditPage() {
       <main className="bg-fj-cream">
         <Hero
           eyebrow="SEO AUDIT SERVICES · INDIA"
-          headline="A Full Health Check of Your Website That Shows Exactly Why You Are Not Ranking"
+          headline="SEO Audit Services in India — Find Out Exactly Why Your Website Isn't Ranking"
           lead="If your website is not showing up on Google, you need to know why before you spend a rupee fixing it. Our SEO audit is a full health check of your website. We look at everything that decides where you rank, then show you exactly what is wrong and what to fix first. You get a clear, plain-English report with a to-do list, ranked by what matters most. Start with a free first check, with no strings and no obligation. The report is yours to keep, whether you work with us or not."
           primaryCta={{ label: 'Get a Free Check', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
@@ -166,7 +166,7 @@ export default function SeoAuditPage() {
 
         <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
 
-        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="500+ sites done. 4.9 average rating. An SEO audit that tells you the truth." />
+        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="India's Trusted SEO Audit Agency — 500+ Sites, 4.9 Average Rating" />
 
         <IndustriesGrid variant="cards"
           eyebrow="WHAT'S INCLUDED"

@@ -154,7 +154,7 @@ export default function LinkBuildingPage() {
       <main className="bg-fj-cream">
         <Hero
           eyebrow="LINK BUILDING SERVICES · INDIA"
-          headline="Real Links From Trusted Websites, So Google Trusts You More"
+          headline="Link Building Services in India — Real Links From Trusted Sites, So Google Trusts You More"
           lead="When a respected website links to yours, it is like getting a vote of confidence in public. Google counts those votes: the more good ones you have from trusted sites, the more it trusts you, and the higher you can rank. We earn real links the safe way, through digital PR, guest articles, and genuinely helpful content. We never use spammy tricks or bought links that can get you punished. No long contracts, and every link we earn stays yours."
           primaryCta={{ label: 'Book a Free Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
@@ -164,7 +164,7 @@ export default function LinkBuildingPage() {
 
         <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
 
-        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="500+ sites done. 4.9 average rating. Real links that lift you safely." />
+        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="India's Trusted Link Building Agency — 500+ Sites, 4.9 Average Rating" />
 
         <IndustriesGrid variant="cards"
           eyebrow="WHAT'S INCLUDED"

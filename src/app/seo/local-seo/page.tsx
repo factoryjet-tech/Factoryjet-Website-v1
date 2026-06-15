@@ -157,7 +157,7 @@ export default function LocalSeoPage() {
       <main className="bg-fj-cream">
         <Hero
           eyebrow="LOCAL SEO SERVICES · INDIA"
-          headline="Get Found on Google When People Near You Are Ready to Buy"
+          headline="Local SEO Services in India — Get Found on Google When People Near You Are Ready to Buy"
           lead="When someone close by searches Google for what you sell, Google shows three businesses on a small map right at the top. If yours is not one of the three, people just pick someone else. We help small businesses across India show up there. We set up and look after your free Google listing, make sure your business details are the same everywhere online, help you get more reviews, and build pages that bring in nearby customers. No long contracts, and everything we do stays yours."
           primaryCta={{ label: 'Book a Free Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
@@ -167,7 +167,7 @@ export default function LocalSeoPage() {
 
         <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
 
-        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="500+ sites done. 4.9 average rating. Local SEO that gets you found." />
+        <BigThreeTrustBlock variant="statement" eyebrow="BY THE NUMBERS" headline="India's Trusted Local SEO Agency — 500+ Sites, 4.9 Average Rating" />
 
         <IndustriesGrid variant="cards"
           eyebrow="WHAT'S INCLUDED"

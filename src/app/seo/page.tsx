@@ -427,7 +427,7 @@ export default function SeoHubPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
-          eyebrow="SEO SERVICES · INDIA"
+          eyebrow="SEO COMPANY IN INDIA"
           headline="The SEO Company in India That Brings Leads, Not Just Rankings"
           lead="Most SEO companies in India still chase the old Google. But Google now shows an AI answer right at the top, and 'near me' searches own the local map. FactoryJet uses AI plus senior people to help Indian small businesses show up in all three: the map, the normal results, and the AI answers. Then we prove it in a report you can read in five minutes. No long contracts, and you keep every page, link, and ranking we build."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
@@ -447,7 +447,7 @@ export default function SeoHubPage() {
         <BigThreeTrustBlock
           variant="statement"
           eyebrow="BY THE NUMBERS"
-          headline="500+ sites done. 4.9 average rating. One report you'll actually read."
+          headline="India's Trusted SEO Company — 500+ Sites, 4.9 Average Rating"
         />
 
         {/* ── 4. WHAT SEO INCLUDES ─────────────────────────────────────────── */}
@@ -666,7 +666,7 @@ export default function SeoHubPage() {
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
         <IndustriesGrid variant="cards"
           eyebrow="INDUSTRIES WE SERVE"
-          headline="SEO for India's Small Business Sectors"
+          headline="SEO Services for Every Major Indian Business Sector"
           lead="Different industries compete on different searches and different buyer journeys. We have done SEO across all of these."
           sectors={[
             {
