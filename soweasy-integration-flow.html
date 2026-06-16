@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SowEasy — Integration Flow & Proposal | FactoryJet</title>
+<style>
+  :root {
+    --cream: #FAFAF7;
+    --ink: #1A1A18;
+    --mid: #4A4A45;
+    --light: #E8E8E0;
+    --accent: #1A5C2E;
+    --accent-light: #EAF4ED;
+    --orange: #C2440F;
+    --orange-light: #FDF0EB;
+    --blue: #0A3D6B;
+    --blue-light: #EBF2FA;
+    --border: #D4D4CC;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--cream); color: var(--ink); font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; }
+
+  /* NAV */
+  .nav { background: var(--ink); padding: 16px 32px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-brand { color: #fff; font-size: 14px; font-weight: 600; letter-spacing: 0.02em; }
+  .nav-meta { color: #888; font-size: 12px; }
+
+  /* HERO */
+  .hero { background: var(--ink); color: #fff; padding: 64px 32px 48px; max-width: 900px; margin: 0 auto; }
+  .hero-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #888; margin-bottom: 16px; }
+  .hero h1 { font-size: clamp(28px, 4vw, 42px); font-weight: 700; line-height: 1.15; margin-bottom: 16px; }
+  .hero p { color: #aaa; font-size: 15px; max-width: 560px; }
+
+  /* WRAPPER */
+  .wrapper { max-width: 900px; margin: 0 auto; padding: 48px 32px; }
+
+  /* SECTION HEADS */
+  .section-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mid); margin-bottom: 8px; }
+  .section-title { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+  .section-body { font-size: 14px; color: var(--mid); margin-bottom: 32px; max-width: 640px; }
+  hr.divider { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+  /* PROPOSAL BOX */
+  .proposal-box { background: var(--accent); color: #fff; border-radius: 12px; padding: 32px; margin-bottom: 32px; }
+  .proposal-box h2 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+  .proposal-box p { font-size: 14px; color: rgba(255,255,255,0.8); margin-bottom: 24px; }
+  .price-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+  .price-chip { background: rgba(255,255,255,0.12); border-radius: 8px; padding: 16px 20px; flex: 1; min-width: 140px; }
+  .price-chip .amount { font-size: 24px; font-weight: 700; display: block; }
+  .price-chip .label { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 2px; display: block; }
+  .flexibility-note { background: rgba(255,255,255,0.1); border-radius: 8px; padding: 16px; font-size: 13px; color: rgba(255,255,255,0.85); border-left: 3px solid rgba(255,255,255,0.4); }
+
+  /* WHAT STAYS / WHAT CHANGES */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px; }
+  @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; } }
+  .card { border: 1px solid var(--border); border-radius: 10px; padding: 24px; background: #fff; }
+  .card h3 { font-size: 14px; font-weight: 700; margin-bottom: 12px; }
+  .card.stays h3 { color: var(--accent); }
+  .card.changes h3 { color: var(--orange); }
+  .checklist { list-style: none; padding: 0; }
+  .checklist li { font-size: 13px; color: var(--mid); padding: 6px 0; border-bottom: 1px solid var(--light); display: flex; gap: 8px; align-items: flex-start; }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+  .card.changes .checklist li::before { content: '→'; color: var(--orange); }
+
+  /* FLOW DIAGRAM */
+  .flow-section { margin-bottom: 48px; }
+  .flow-track { display: flex; flex-direction: column; gap: 0; }
+  .flow-step { display: flex; gap: 20px; align-items: flex-start; }
+  .flow-step-inner { display: flex; gap: 20px; align-items: flex-start; padding: 20px 0; flex: 1; border-bottom: 1px solid var(--light); }
+  .flow-step:last-child .flow-step-inner { border-bottom: none; }
+  .step-num { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+  .step-num.customer { background: var(--blue-light); color: var(--blue); }
+  .step-num.wordpress { background: #F0EBF8; color: #6B2FA0; }
+  .step-num.odoo { background: var(--accent-light); color: var(--accent); }
+  .step-num.mockup { background: var(--orange-light); color: var(--orange); }
+  .step-content h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+  .step-content p { font-size: 13px; color: var(--mid); }
+  .step-tag { display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; margin-top: 6px; }
+  .tag-customer { background: var(--blue-light); color: var(--blue); }
+  .tag-woo { background: #F0EBF8; color: #6B2FA0; }
+  .tag-odoo { background: var(--accent-light); color: var(--accent); }
+  .tag-dm { background: var(--orange-light); color: var(--orange); }
+  .tag-auto { background: #E8E8E0; color: var(--mid); }
+
+  /* CONNECTOR EXPLAINER */
+  .connector-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px; }
+  @media (max-width: 600px) { .connector-grid { grid-template-columns: 1fr; } }
+  .connector-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 20px; }
+  .connector-card .icon { font-size: 24px; margin-bottom: 12px; display: block; }
+  .connector-card h4 { font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+  .connector-card p { font-size: 12px; color: var(--mid); }
+  .sync-arrow { text-align: center; padding: 24px 0; font-size: 13px; color: var(--mid); }
+  .sync-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 24px; }
+  .sync-table th { background: var(--light); padding: 10px 12px; text-align: left; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--mid); }
+  .sync-table td { padding: 10px 12px; border-bottom: 1px solid var(--light); vertical-align: top; }
+  .sync-table tr:last-child td { border-bottom: none; }
+  .sync-badge { font-size: 10px; font-weight: 700; padding: 2px 6px; border-radius: 4px; text-transform: uppercase; display: inline-block; }
+  .badge-both { background: var(--accent-light); color: var(--accent); }
+  .badge-out { background: var(--blue-light); color: var(--blue); }
+  .badge-in { background: var(--orange-light); color: var(--orange); }
+  .badge-auto { background: #E8E8E0; color: var(--mid); }
+
+  /* DM SECTION */
+  .dm-flow { display: flex; flex-direction: column; gap: 2px; margin-bottom: 24px; }
+  .dm-step { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; display: flex; gap: 16px; align-items: flex-start; }
+  .dm-step .num { background: var(--orange-light); color: var(--orange); font-size: 12px; font-weight: 700; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .dm-step h5 { font-size: 13px; font-weight: 700; margin-bottom: 3px; }
+  .dm-step p { font-size: 12px; color: var(--mid); }
+  .dm-connector { text-align: center; padding: 4px; font-size: 18px; color: var(--border); }
+
+  /* API BOX */
+  .api-box { background: var(--ink); color: #fff; border-radius: 10px; padding: 20px 24px; font-family: 'Menlo', 'Monaco', monospace; font-size: 12px; line-height: 1.8; margin: 16px 0 24px; overflow-x: auto; }
+  .api-box .comment { color: #6B7280; }
+  .api-box .key { color: #93C5FD; }
+  .api-box .val { color: #86EFAC; }
+  .api-box .str { color: #FDE68A; }
+
+  /* USER STORY */
+  .story-card { background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0; padding: 20px 24px; margin-bottom: 12px; }
+  .story-card .as { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); font-weight: 700; margin-bottom: 8px; }
+  .story-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+  .story-card p { font-size: 13px; color: var(--mid); }
+
+  /* LIMITATIONS */
+  .limit-box { background: #FFFBF0; border: 1px solid #F5D77A; border-radius: 10px; padding: 20px 24px; margin-bottom: 24px; }
+  .limit-box h4 { font-size: 13px; font-weight: 700; color: #92600A; margin-bottom: 8px; }
+  .limit-list { list-style: none; padding: 0; }
+  .limit-list li { font-size: 13px; color: #92600A; padding: 4px 0; display: flex; gap: 8px; }
+  .limit-list li::before { content: '⚠'; flex-shrink: 0; }
+
+  /* PHASE TABLE */
+  .phase-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .phase-table th { background: var(--ink); color: #fff; padding: 10px 14px; text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .phase-table td { padding: 12px 14px; border-bottom: 1px solid var(--light); vertical-align: top; }
+  .phase-table tr:last-child td { border-bottom: none; }
+  .phase-table tr:nth-child(even) td { background: #FAFAF7; }
+  .week-badge { font-size: 10px; font-weight: 700; background: var(--accent-light); color: var(--accent); padding: 2px 8px; border-radius: 4px; }
+
+  /* SCREENSHOTS */
+  .screenshot-block { margin: 28px 0; }
+  .screenshot-block img { width: 100%; border-radius: 8px; border: 1px solid var(--border); box-shadow: 0 2px 12px rgba(0,0,0,0.08); display: block; }
+  .screenshot-caption { font-size: 12px; color: var(--mid); margin-top: 8px; padding: 0 4px; }
+  .screenshot-label { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); margin-bottom: 6px; display: block; }
+  .screenshot-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 28px 0; }
+  @media (max-width: 600px) { .screenshot-row { grid-template-columns: 1fr; } }
+  .screenshot-row .screenshot-block { margin: 0; }
+
+  /* FOOTER */
+  .footer { background: var(--ink); color: #666; font-size: 12px; padding: 24px 32px; text-align: center; margin-top: 64px; }
+  .footer a { color: #888; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-brand">FactoryJet — SowEasy Project</div>
+  <div class="nav-meta">Prepared for Jamie Gray, Grayson Group &nbsp;|&nbsp; 15 Jun 2026</div>
+</nav>
+
+<div style="background:var(--ink); padding-bottom: 0;">
+  <div class="hero">
+    <div class="hero-label">SowEasy + BuddyBurst &nbsp;/&nbsp; Technical Proposal</div>
+    <h1>How it all works — the complete picture</h1>
+    <p>Revised proposal, updated pricing, and a step-by-step map of every integration: Odoo, WooCommerce, and the product visualiser.</p>
+  </div>
+</div>
+
+<div class="wrapper">
+
+  <!-- ==================== SECTION 1: REVISED PROPOSAL ==================== -->
+  <div class="section-label">Section 1</div>
+  <div class="section-title">Revised Proposal — Both Sites, £5,000</div>
+  <div class="section-body">We understand the grant timeline is months away. So here's a payment structure that lets you start now without waiting for anything.</div>
+
+  <div class="proposal-box">
+    <h2>£5,000 total. Both sites. Done.</h2>
+    <p>SowEasy stays on WordPress — we optimise, clean up, and properly integrate it. BuddyBurst goes on Commerceflo. Both live. Both working.</p>
+    <div class="price-row">
+      <div class="price-chip">
+        <span class="amount">£3,000</span>
+        <span class="label">On agreement — to kick off</span>
+      </div>
+      <div class="price-chip">
+        <span class="amount">£700</span>
+        <span class="label">Month 1 — mid-build</span>
+      </div>
+      <div class="price-chip">
+        <span class="amount">£700</span>
+        <span class="label">Month 2 — nearing delivery</span>
+      </div>
+      <div class="price-chip">
+        <span class="amount">£600</span>
+        <span class="label">Month 3 — on go-live</span>
+      </div>
+    </div>
+    <div class="flexibility-note">
+      And if the £700/£700/£600 schedule doesn't work right now — simply pay us the remaining £2,000 when your grant lands. No timeline pressure, no interest, no awkwardness. We'd rather you have a working system generating orders than wait months for a grant cycle. We're not going anywhere.
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div class="card stays">
+      <h3>SowEasy — what stays</h3>
+      <ul class="checklist">
+        <li>WordPress + WooCommerce (no migration)</li>
+        <li>All 700–800 existing trade accounts</li>
+        <li>Current product catalogue and content</li>
+        <li>Marketing Hub (file library — extended, not replaced)</li>
+        <li>Odoo as your ERP (finance, inventory, orders)</li>
+        <li>Domain, hosting, DNS — untouched</li>
+        <li>Login-gated trade portal structure</li>
+      </ul>
+    </div>
+    <div class="card changes">
+      <h3>SowEasy — what we add</h3>
+      <ul class="checklist">
+        <li>Odoo ↔ WooCommerce live sync (orders, stock, customers)</li>
+        <li>Customer-specific 3-tier B2B pricing via pricelists</li>
+        <li>Product visualiser — logo-on-product preview</li>
+        <li>Artwork upload at checkout (optional at launch)</li>
+        <li>Online order flow (qty → address → date → submit)</li>
+        <li>Net terms checkout — no online payment required</li>
+        <li>Order confirmation + status visible to trade customer</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ==================== SECTION 2: ODOO INTEGRATION ==================== -->
+  <div class="section-label">Section 2</div>
+  <div class="section-title">Odoo ↔ WooCommerce — How the Integration Actually Works</div>
+  <div class="section-body">We use a proven, production-grade connector (Emipro's WooCommerce Odoo Connector, live since 2013, 10,000+ customers). Here is exactly what it does — nothing fabricated, sourced directly from the connector's documentation.</div>
+
+  <div class="connector-grid">
+    <div class="connector-card">
+      <span class="icon">🛒</span>
+      <h4>WooCommerce (SowEasy front end)</h4>
+      <p>Your trade portal. Customers log in, browse, configure orders, and submit. WooCommerce stores the order and fires a webhook the moment it's placed.</p>
+    </div>
+    <div class="connector-card">
+      <span class="icon">⚙️</span>
+      <h4>Emipro Odoo WooCommerce Connector</h4>
+      <p>Installed in Odoo. Acts as the bridge. Uses WooCommerce REST API credentials + webhook listeners. Syncs in both directions via queue system with error logs.</p>
+    </div>
+    <div class="connector-card">
+      <span class="icon">📦</span>
+      <h4>Odoo (your ERP — stays as-is)</h4>
+      <p>Finance, inventory, sales orders, warehouse — nothing changes in how Jeremy and your team use Odoo day to day. Orders simply appear as Sales Orders automatically.</p>
+    </div>
+    <div class="connector-card">
+      <span class="icon">🔄</span>
+      <h4>Webhook + Cron Jobs</h4>
+      <p>Real-time order import via webhooks. Stock and product updates run on configurable schedules. Queue dashboard shows any failures with root-cause logs.</p>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top: 32px;">What syncs — and in which direction</div>
+
+  <table class="sync-table">
+    <thead>
+      <tr>
+        <th>Data</th>
+        <th>Direction</th>
+        <th>How</th>
+        <th>Notes for SowEasy</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>New Orders</strong></td>
+        <td><span class="sync-badge badge-in">WooCommerce → Odoo</span></td>
+        <td>Webhook (real-time)</td>
+        <td>Creates Sales Order in Odoo. Status: Processing or On Hold imported. Net terms — no payment gateway needed.</td>
+      </tr>
+      <tr>
+        <td><strong>Order Status Updates</strong></td>
+        <td><span class="sync-badge badge-out">Odoo → WooCommerce</span></td>
+        <td>Manual / cron</td>
+        <td>When you mark dispatched in Odoo, status pushes back to WooCommerce so the customer can see it.</td>
+      </tr>
+      <tr>
+        <td><strong>Tracking Numbers</strong></td>
+        <td><span class="sync-badge badge-out">Odoo → WooCommerce</span></td>
+        <td>Automatic</td>
+        <td>Export tracking numbers back to WooCommerce order — customer gets notification.</td>
+      </tr>
+      <tr>
+        <td><strong>Stock Levels</strong></td>
+        <td><span class="sync-badge badge-out">Odoo → WooCommerce</span></td>
+        <td>Cron job (scheduled)</td>
+        <td>Odoo is master of stock. WooCommerce reflects it. Note: SowEasy currently hides stock — this remains optional/off.</td>
+      </tr>
+      <tr>
+        <td><strong>Products + Variants</strong></td>
+        <td><span class="sync-badge badge-both">Both ways</span></td>
+        <td>Manual export / import</td>
+        <td>Matched by Internal Reference (Odoo) = SKU (WooCommerce). One-time setup, then maintained from Odoo.</td>
+      </tr>
+      <tr>
+        <td><strong>Pricing (B2B tiers)</strong></td>
+        <td><span class="sync-badge badge-out">Odoo → WooCommerce</span></td>
+        <td>Pricelists</td>
+        <td>Each trade account gets a pricelist in Odoo. The connector pushes the right price per account to WooCommerce. This is how your 3-tier pricing works online.</td>
+      </tr>
+      <tr>
+        <td><strong>Customer Data</strong></td>
+        <td><span class="sync-badge badge-both">Both ways</span></td>
+        <td>Import / sync</td>
+        <td>Existing 700–800 accounts: we import WooCommerce customers into Odoo and link them. New registrations sync automatically.</td>
+      </tr>
+      <tr>
+        <td><strong>Refunds / Cancellations</strong></td>
+        <td><span class="sync-badge badge-both">Both ways</span></td>
+        <td>Webhook</td>
+        <td>Cancel in Odoo → cancels in WooCommerce (and vice versa). Credit notes generated correctly in Odoo accounting.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="limit-box">
+    <h4>Honest constraints — what the connector does not do out of the box</h4>
+    <ul class="limit-list">
+      <li>Automated PO email reading into Odoo — this is a separate AI agent feature, not part of the connector. Jeremy at Amarot tried this; we'd build it differently using structured parsing, not open-ended AI. Scope for a later phase.</li>
+      <li>Artwork proof approval workflow — the connector handles orders; proof rounds need a separate approval flow (email-based or a simple portal page). We keep this lightweight at launch.</li>
+      <li>Real-time stock display on SowEasy — you've deliberately hidden stock levels. We keep this off. Connector only pushes stock to Odoo when orders land.</li>
+      <li>Odoo Online (cloud) is not supported — connector requires Odoo On-Premise or Odoo.sh. Your current setup with Jeremy should confirm which you're on.</li>
+    </ul>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ==================== SECTION 3: CUSTOMER JOURNEY ==================== -->
+  <div class="section-label">Section 3</div>
+  <div class="section-title">End-to-End Customer Journey — Order Flow</div>
+  <div class="section-body">What your trade customers experience, and what happens in the background at each step.</div>
+
+  <div class="flow-section">
+    <div class="flow-track">
+
+      <div class="flow-step">
+        <div class="flow-step-inner">
+          <div class="step-num customer">1</div>
+          <div class="step-content">
+            <h4>Distributor logs in to SowEasy</h4>
+            <p>Existing WooCommerce B2B login. Their account is already linked to an Odoo customer record and a pricelist. No new credentials needed.</p>
+            <span class="step-tag tag-customer">Customer action</span>
+            <span class="step-tag tag-woo">WooCommerce</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-inner">
+          <div class="step-num customer">2</div>
+          <div class="step-content">
+            <h4>Browses catalogue — sees their specific pricing</h4>
+            <p>WooCommerce displays prices from the Odoo pricelist assigned to their account. A "Wills my wag" small distributor sees distributor pricing. Hotline or Total Merchandise see their volume tier. This is handled by the connector's pricelist mapping — no custom code required.</p>
+            <span class="step-tag tag-customer">Customer action</span>
+            <span class="step-tag tag-odoo">Odoo pricelist</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-inner">
+          <div class="step-num mockup">3</div>
+          <div class="step-content">
+            <h4>Uploads logo — sees it on the product instantly</h4>
+            <p>On the product page, a "Customise this product" panel appears (powered by the DynamicMockups WordPress plugin). Customer uploads their logo or artwork. The plugin calls the DynamicMockups API, renders the logo onto the product mockup template, and shows a preview within seconds. No page reload. This works for Seedsticks, seed packets, branded pots — any product you've set up a mockup template for.</p>
+            <span class="step-tag tag-customer">Customer action</span>
+            <span class="step-tag tag-dm">DynamicMockups</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-inner">
+          <div class="step-num customer">4</div>
+          <div class="step-content">
+            <h4>Selects quantity, adds to cart</h4>
+            <p>Cart stores: product SKU, quantity, artwork file reference, rendered mockup image. No payment details entered — this is a trade order on net terms.</p>
+            <span class="step-tag tag-customer">Customer action</span>
+            <span class="step-tag tag-woo">WooCommerce cart</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-inner">
+          <div class="step-num customer">5</div>
+          <div class="step-content">
+            <h4>Checkout — delivery address + required date</h4>
+            <p>Standard WooCommerce checkout, simplified. Fields: delivery address, required-by date, any notes. Payment method = "Invoice / Net Terms" (no card, no PayPal). Customer clicks Submit Order.</p>
+            <span class="step-tag tag-customer">Customer action</span>
+            <span class="step-tag tag-woo">WooCommerce checkout</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-inner">
+          <div class="step-num wordpress">6</div>
+          <div class="step-content">
+            <h4>WooCommerce fires a webhook — order lands in Odoo</h4>
+            <p>The moment the order is submitted, WooCommerce sends a webhook to Odoo. The connector creates a Sales Order automatically — customer, products, quantities, delivery address, required date, notes, artwork file link. Your team sees it in Odoo within seconds. No email, no manual entry.</p>
+            <span class="step-tag tag-auto">Automatic</span>
+            <span class="step-tag tag-odoo">Odoo Sales Order created</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-inner">
+          <div class="step-num odoo">7</div>
+          <div class="step-content">
+            <h4>Your team processes the order in Odoo (as normal)</h4>
+            <p>Odoo SO → confirm → pick/pack/ship. If artwork approval is needed, you email the proof as you do today — or at a later phase we add a portal page for digital sign-off. Tracking number entered in Odoo delivery.</p>
+            <span class="step-tag tag-odoo">Your team in Odoo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-inner">
+          <div class="step-num odoo">8</div>
+          <div class="step-content">
+            <h4>Tracking number syncs back — customer sees status</h4>
+            <p>When you mark the Odoo delivery as done and enter a tracking number, the connector pushes that back to WooCommerce. The customer's order page on SowEasy shows "Dispatched" with the tracking number. Automatic email notification to the customer.</p>
+            <span class="step-tag tag-auto">Automatic</span>
+            <span class="step-tag tag-woo">WooCommerce order updated</span>
+            <span class="step-tag tag-customer">Customer notified</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ==================== SECTION 4: DYNAMICMOCKUPS ==================== -->
+  <div class="section-label">Section 4</div>
+  <div class="section-title">Product Visualiser — How DynamicMockups Works</div>
+  <div class="section-body">This is the part Jamie asked about most specifically. Here is exactly what the tool does, what its WordPress plugin covers, and what the API does behind the scenes. Nothing invented here — this comes directly from DynamicMockups' own documentation at docs.dynamicmockups.com.</div>
+
+  <div class="connector-grid">
+    <div class="connector-card">
+      <span class="icon">🖼️</span>
+      <h4>What you set up once (admin)</h4>
+      <p>For each product — Seedstick pack, seed packet, branded pot — you create one mockup template in the DynamicMockups web app. Upload a PSD or choose from 1,000+ library templates. Define the "print area" (where logos go). Assign it to the WooCommerce product. Done.</p>
+    </div>
+    <div class="connector-card">
+      <span class="icon">🔌</span>
+      <h4>WordPress Plugin (free, from WordPress repo)</h4>
+      <p>Install "Dynamic Mockups" from the WordPress plugin repository. Connect to your DynamicMockups account. Plugin adds a "Create Mockups" button to each WooCommerce product. Also enables customer-facing personalisation on the product page. Tracks personalised orders in the WooCommerce order panel — "View Mockup" and "Download Print File" links per order line.</p>
+    </div>
+  </div>
+
+  <!-- Screenshot 1: Admin Home -->
+  <div class="screenshot-row">
+    <div class="screenshot-block">
+      <span class="screenshot-label">Screenshot — Plugin admin panel</span>
+      <img src="dm-screenshots/dm-screenshot-1.png" alt="Dynamic Mockups admin home panel inside WordPress showing connection status and account information" loading="lazy">
+      <div class="screenshot-caption">The Dynamic Mockups panel inside WordPress — once connected, shows your account status, remaining render credits, and access to General and Product Personalization settings.</div>
+    </div>
+    <!-- Screenshot 2: Edit Product -->
+    <div class="screenshot-block">
+      <span class="screenshot-label">Screenshot — WooCommerce product editor</span>
+      <img src="dm-screenshots/dm-screenshot-2.png" alt="WooCommerce Edit Product page with Dynamic Mockups tab showing Choose Mockup button" loading="lazy">
+      <div class="screenshot-caption">Inside the WooCommerce product editor — the Dynamic Mockups tab lets you assign a template to the product and enable customer personalisation with one click.</div>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top:32px;">What happens when a customer uploads their logo</div>
+
+  <div class="dm-flow">
+    <div class="dm-step">
+      <div class="num">1</div>
+      <div>
+        <h5>Customer uploads logo on product page</h5>
+        <p>PNG, JPG, or WebP. The DynamicMockups WordPress plugin handles the upload UI directly on the WooCommerce product page. No redirect, no third-party site.</p>
+      </div>
+    </div>
+    <div class="dm-connector">↓</div>
+    <div class="dm-step">
+      <div class="num">2</div>
+      <div>
+        <h5>Plugin calls the DynamicMockups Render API</h5>
+        <p>A POST request to <code>https://app.dynamicmockups.com/api/v1/renders</code> is sent with the mockup template UUID (the product's template) and the customer's uploaded artwork URL. This is the API call — takes under 2 seconds in normal conditions.</p>
+      </div>
+    </div>
+    <div class="dm-connector">↓</div>
+    <div class="dm-step">
+      <div class="num">3</div>
+      <div>
+        <h5>API renders the image and returns a URL</h5>
+        <p>DynamicMockups Photoshop rendering engine places the logo into the print area on the product mockup, applies blending and positioning, and returns a URL of the rendered image. Output: PNG (default), JPG, or WebP. High resolution.</p>
+      </div>
+    </div>
+    <div class="dm-connector">↓</div>
+    <div class="dm-step">
+      <div class="num">4</div>
+      <div>
+        <h5>Customer sees the rendered preview — live on the page</h5>
+        <p>The plugin displays the returned image on the product page. No page reload. Customer sees their logo on the Seedstick pack (or whatever product). They can re-upload a different logo, see the new preview, then proceed to cart.</p>
+      </div>
+    </div>
+    <div class="dm-connector">↓</div>
+    <div class="dm-step">
+      <div class="num">5</div>
+      <div>
+        <h5>Cart stores the personalised product + print file</h5>
+        <p>The customised design is attached to the cart item. When the order is placed, WooCommerce stores both the rendered mockup image and the original print-ready file with the order.</p>
+      </div>
+    </div>
+    <div class="dm-connector">↓</div>
+    <div class="dm-step">
+      <div class="num">6</div>
+      <div>
+        <h5>Your team downloads the print file from the WooCommerce order</h5>
+        <p>In the WooCommerce order panel, each personalised line item shows two links: "View Mockup" (the preview image) and "Download Print File" (the print-ready file, named with the layer/position so your team knows exactly where to print). No more chasing Sandeep for artwork files on sub-£250 orders.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Screenshot 3: Template library -->
+  <div class="screenshot-row">
+    <div class="screenshot-block">
+      <span class="screenshot-label">Screenshot — Mockup template library</span>
+      <img src="dm-screenshots/dm-screenshot-3.png" alt="Dynamic Mockups template library showing 1000+ mockup templates organised by product category" loading="lazy">
+      <div class="screenshot-caption">The template picker — 1,000+ professional templates organised by category (blankets, hoodies, mugs, tote bags, etc.). Admin picks one template per product. Customers see their logo on that template instantly.</div>
+    </div>
+    <!-- Screenshot 4: Personalization settings -->
+    <div class="screenshot-block">
+      <span class="screenshot-label">Screenshot — Personalisation settings</span>
+      <img src="dm-screenshots/dm-screenshot-4.png" alt="Dynamic Mockups Product Personalization configuration settings showing toggle controls and shortcode" loading="lazy">
+      <div class="screenshot-caption">Personalization Configuration — per-product toggles, embedded editor settings (colour options, placement controls), and a shortcode for custom button placement in any page builder.</div>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top:32px;">The API call — what it looks like</div>
+  <div class="api-box">
+    <div><span class="comment">// POST https://app.dynamicmockups.com/api/v1/renders</span></div>
+    <div><span class="comment">// This fires when a customer uploads their logo on SowEasy</span></div>
+    <div>&nbsp;</div>
+    <div>{</div>
+    <div>&nbsp;&nbsp;<span class="key">"mockup_uuid"</span>: <span class="str">"[your-seedstick-template-uuid]"</span>,  <span class="comment">// set up once per product</span></div>
+    <div>&nbsp;&nbsp;<span class="key">"export_options"</span>: {</div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"image_format"</span>: <span class="str">"png"</span>,</div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"image_size"</span>: <span class="val">1200</span>  <span class="comment">// preview size in pixels</span></div>
+    <div>&nbsp;&nbsp;},</div>
+    <div>&nbsp;&nbsp;<span class="key">"smart_objects"</span>: [</div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;{</div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"uuid"</span>: <span class="str">"[print-area-smart-object-uuid]"</span>,  <span class="comment">// the logo zone on the template</span></div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"asset"</span>: {</div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"url"</span>: <span class="str">"https://soweasy.com/uploads/customer-logo.png"</span>,  <span class="comment">// customer's file</span></div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">"fit"</span>: <span class="str">"contain"</span>  <span class="comment">// logo scales to fit print area cleanly</span></div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;}</div>
+    <div>&nbsp;&nbsp;]</div>
+    <div>}</div>
+    <div>&nbsp;</div>
+    <div><span class="comment">// Response returns:</span></div>
+    <div><span class="comment">// { "data": { "export_path": "https://...rendered-image.png" }, "success": true }</span></div>
+  </div>
+
+  <div class="limit-box">
+    <h4>DynamicMockups — what to know before you commit</h4>
+    <ul class="limit-list">
+      <li>Free plan: 50 renders. For a live trade store, you need a PRO plan (~$19/month). Included in our scope — we set this up for you.</li>
+      <li>The plugin produces a lifestyle-style preview (logo on product in a scene). It does not generate a print-ready press file from scratch — that's a different tool (like Zakeke). But for sub-£250 self-service orders, a clean visual preview + the customer's original artwork file downloaded from the order is all your print team needs.</li>
+      <li>Print-ready export: DynamicMockups does have a Render Print Files API (separate endpoint). We can enable this for orders that need a pre-masked print file. Worth discussing in the build phase.</li>
+      <li>Custom PSD templates: you can upload your own product PSDs (Seedstick pack artwork, branded pot artwork etc). Takes about 30 minutes per product template to set up.</li>
+    </ul>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ==================== SECTION 5: USER STORIES ==================== -->
+  <div class="section-label">Section 5</div>
+  <div class="section-title">User Stories</div>
+  <div class="section-body">Plain language — what each type of user gets from this build.</div>
+
+  <div class="story-card">
+    <div class="as">As a small trade distributor (sub-£250 order)</div>
+    <h4>I want to order branded Seedstick packs online without emailing anyone</h4>
+    <p>I log into SowEasy, see my pricing, upload my logo, see it on the product, select quantity and delivery date, and submit. I get a confirmation email. I can track my order status. I don't have to wait for a quote email or chase anyone.</p>
+  </div>
+
+  <div class="story-card">
+    <div class="as">As Emma or your internal team</div>
+    <h4>I want sub-£250 orders to arrive in Odoo automatically so I don't have to type them in</h4>
+    <p>When a trade customer submits an order on SowEasy, it appears as a Sales Order in Odoo within seconds. All the details are there — customer, products, quantities, delivery address, date needed, and a link to the artwork file. I confirm, pick, pack, ship. When I enter the tracking number in Odoo, the customer's SowEasy order updates automatically.</p>
+  </div>
+
+  <div class="story-card">
+    <div class="as">As Jamie (business owner)</div>
+    <h4>I want to know that Odoo stays as our system of record and nothing breaks</h4>
+    <p>Odoo handles finance, inventory, and sales orders exactly as it does today. The WooCommerce connector pushes online orders in — Jeremy doesn't need to change how he works. Pricing lives in Odoo pricelists, stock lives in Odoo, and the connector keeps WooCommerce in sync. SowEasy is the front door; Odoo is still the business brain.</p>
+  </div>
+
+  <div class="story-card">
+    <div class="as">As a large corporate merchandiser (£20K+ orders)</div>
+    <h4>I don't use the online portal — and that's fine</h4>
+    <p>These accounts stay manually serviced, handled offline. The portal is built for the 67 accounts below £250 per order, not for your white-glove top clients. Nothing about this build disrupts how you serve them.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ==================== SECTION 6: DELIVERY PLAN ==================== -->
+  <div class="section-label">Section 6</div>
+  <div class="section-title">Delivery — What Happens When</div>
+
+  <table class="phase-table">
+    <thead>
+      <tr>
+        <th>Phase</th>
+        <th>What we deliver</th>
+        <th>When</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Setup + Connector</strong></td>
+        <td>Install Emipro WooCommerce Odoo Connector. Configure API credentials, map warehouses, map payment methods (net terms). Import existing WooCommerce customers into Odoo and link accounts. Set up pricelist mapping for existing B2B tiers.</td>
+        <td><span class="week-badge">Weeks 1–2</span></td>
+      </tr>
+      <tr>
+        <td><strong>Products + Pricing</strong></td>
+        <td>Match existing WooCommerce products to Odoo by SKU. Export pricing from Odoo pricelists. Test that logged-in distributor accounts see correct pricing on SowEasy. Validate order import via test orders.</td>
+        <td><span class="week-badge">Weeks 2–3</span></td>
+      </tr>
+      <tr>
+        <td><strong>DynamicMockups Visualiser</strong></td>
+        <td>Install WordPress plugin. Build mockup templates for priority products (start with top 5 SKUs by order volume). Configure print areas. Enable logo upload on product pages. Test full loop: upload → preview → add to cart → order stored with print file.</td>
+        <td><span class="week-badge">Weeks 3–4</span></td>
+      </tr>
+      <tr>
+        <td><strong>Checkout + Order Flow</strong></td>
+        <td>Configure net terms checkout. Delivery address + required-by date fields. Order confirmation emails. End-to-end test: order placed on SowEasy → Sales Order in Odoo → tracking pushed back → customer notified.</td>
+        <td><span class="week-badge">Week 4</span></td>
+      </tr>
+      <tr>
+        <td><strong>BuddyBurst on Commerceflo</strong></td>
+        <td>Parallel build: BuddyBurst as a DTC transactional site — samples, artwork upload, order placement, proof approval, order tracking. Built on Commerceflo. Separate to SowEasy.</td>
+        <td><span class="week-badge">Weeks 3–6</span></td>
+      </tr>
+      <tr>
+        <td><strong>Testing + Handover</strong></td>
+        <td>UAT with your team. Fixes. Documentation of how to add new products to the visualiser, how to manage the connector queue, what to do if a sync fails. Go live.</td>
+        <td><span class="week-badge">Week 6–7</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="background:#fff; border:1px solid var(--border); border-radius:10px; padding:24px; margin-top:32px;">
+    <div style="font-size:13px; color:var(--mid); margin-bottom:8px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em;">One thing we need from you to start</div>
+    <p style="font-size:14px;">Confirm which version of Odoo you're on (On-Premise or Odoo.sh) and that Jeremy is okay with us configuring the connector from the Odoo side. That's it. Everything else we handle.</p>
+  </div>
+
+</div>
+
+<div class="footer">
+  Prepared by Bhavesh Barot, FactoryJet &nbsp;|&nbsp; <a href="mailto:bhavesh@factoryjet.com">bhavesh@factoryjet.com</a> &nbsp;|&nbsp; factoryjet.com
+</div>
+
+</body>
+</html>
