@@ -101,20 +101,25 @@ const COMPARE: Row[] = [
 type Tab = { id: string; label: string; h: string; chips: string[]; body: string; img?: { src: string; alt: string } };
 const TABS: Tab[] = [
   { id: 'restaurants', label: 'Restaurants', h: 'Restaurants and hospitality', chips: ['Top-10 US food scene', 'Map Pack decides traffic', 'Review-driven'],
+    img: { src: '/images/us/denver/restaurant-interior.webp', alt: 'Warm Denver restaurant interior at golden hour with full tables' },
     body: 'Denver runs one of the ten best restaurant scenes in the country, and almost all of it gets discovered on Google Maps and "best [cuisine] in Denver" searches. The optimized Google Business Profile, the fresh photos, the menu schema, and a steady stream of reviews are what fill tables on a Friday night. Everything else is secondary.' },
   { id: 'realestate', label: 'Real estate', h: 'Real estate and mortgage', chips: ['Top-5 US housing market', 'High-value leads', 'Hyperlocal'],
+    img: { src: '/images/us/denver/real-estate.webp', alt: 'Sunlit modern Denver home exterior with a manicured front yard' },
     body: 'Denver is one of the most competitive housing markets in the country, and realtors, brokers, and lenders are all fighting for the same neighborhood searches. An agent who ranks for "Wash Park homes for sale" or "Denver realtor" stops renting leads from Zillow and starts owning them. We build the neighborhood pages and local signals that make that happen.' },
   { id: 'contractors', label: 'Contractors', h: 'Contractors and home services', chips: ['Building boom', 'High purchase intent', '"near me" heavy'],
     img: { src: '/images/us/denver/contractor-site.webp', alt: 'Contractor reviewing blueprints on a Denver construction site with the city skyline behind' },
     body: 'Denver\'s building boom sends a steady stream of high-intent searches every day for roofing, HVAC, plumbing, and remodeling. These people are ready to call, not browse. We rank contractors for the "near me" and service-plus-neighborhood terms that turn into booked jobs, and we keep the profile and reviews active so you hold the Map Pack through the season.' },
   { id: 'legal', label: 'Legal', h: 'Law firms', chips: ['Highest CPCs in Denver', 'Best ROI vertical', 'Trust signals'],
+    img: { src: '/images/us/denver/law-firm.webp', alt: 'Modern Denver law office interior with a downtown city view' },
     body: 'Personal injury, criminal defense, and family law carry some of the most expensive clicks in Denver, which is exactly why organic rankings pay off so well. One page-one position for "Denver personal injury lawyer" delivers cases at a fraction of the Google Ads cost. We pair authoritative content with the reviews and local trust signals these high-stakes searches reward.' },
   { id: 'cannabis', label: 'Cannabis', h: 'Cannabis and dispensaries', chips: ['600+ competitors', 'Organic-only channel', 'Maps decide revenue'],
     img: { src: '/images/us/denver/cannabis-dispensary.webp', alt: 'Modern upscale cannabis dispensary exterior in Denver at dusk' },
     body: 'Colorado legalized recreational cannabis first, and the Denver metro now has more than 600 dispensaries chasing the same map spots. Google bans paid cannabis ads outright, so organic search and the Map Pack are the only discovery channels you have. That makes SEO existential here, not optional. We run compliant, factual dispensary SEO that stays inside Google\'s policies and still drives real local rankings.' },
   { id: 'tech', label: 'Tech and SaaS', h: 'Tech and SaaS', chips: ['6,000+ tech companies', 'Silicon Mountain', 'B2B intent'],
+    img: { src: '/images/us/denver/tech-office.webp', alt: 'Airy Denver startup tech office with people working at laptops' },
     body: 'Denver\'s Silicon Mountain holds more than 6,000 tech companies, from seed-stage startups to the local offices of Palantir and Ibotta. B2B SEO here is about a clean technical foundation and bottom-of-funnel content that catches high-intent buyer searches, plus the AI search work that puts your category answers inside ChatGPT, Gemini, and Perplexity, where more software buyers now start.' },
   { id: 'healthcare', label: 'Healthcare', h: 'Healthcare and wellness', chips: ['Dental, med spa, urgent care', 'Patient trust', 'Map Pack'],
+    img: { src: '/images/us/denver/healthcare-clinic.webp', alt: 'Bright modern Denver clinic reception, calm and clean' },
     body: 'Dental, med spa, physical therapy, and urgent care all live on the first page, because patients pick a provider from the Map Pack and rarely scroll. We build what those searches reward: a complete profile, real reviews, condition-specific pages, and the technical health that keeps a medical site fast and crawlable. Being invisible here means handing patients to the practice next door.' },
 ];
 
