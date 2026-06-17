@@ -1,6 +1,6 @@
-import { initializeApp } from "firebase/app";
+import { initializeApp, getApps, getApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, type Firestore } from "firebase/firestore";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -26,10 +26,17 @@ if (process.env.NODE_ENV !== 'production') {
   }
 }
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+// Initialize Firebase (idempotent — avoids duplicate-app errors on re-import).
+const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
 const analytics = typeof window !== 'undefined' ? getAnalytics(app) : null;
-const db = getFirestore(app);
+
+// Firestore is initialised in the browser only. Calling getFirestore() during
+// the static-export server prerender can intermittently throw "Service
+// firestore is not available" under Turbopack chunk ordering, and since every
+// page carries Firebase (via the sitewide contact modal) that error can break
+// the build on any route. Every read/write happens client-side in a form
+// submit handler, so the server-side value is never used.
+const db = (typeof window !== 'undefined' ? getFirestore(app) : undefined) as Firestore;
 
 // Keep the async function for backwards compatibility
 const initFirebase = async () => {
