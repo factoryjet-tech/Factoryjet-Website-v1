@@ -87,6 +87,9 @@ import { post as bestSeoAgenciesUkPost } from './posts/best-seo-agencies-uk';
 import { post as shopifyWebsiteCostPost } from './posts/shopify-website-cost';
 import { post as bestAiAgentDevelopmentCompaniesSmallBusinessPost } from './posts/best-ai-agent-development-companies-small-business';
 import { post as bestGeoAgenciesPost } from './posts/best-geo-agencies';
+import { post as generativeEngineOptimizationGuidePost } from './posts/generative-engine-optimization-guide';
+import { post as bestGeoAiVisibilityTools2026Post } from './posts/best-geo-ai-visibility-tools-2026';
+import { post as bestAiSeoAgenciesUsaPost } from './posts/best-ai-seo-agencies-usa';
 
 export const POSTS: BlogPost[] = [
   // --- WEB DESIGN & STRATEGY ---
@@ -4745,4 +4748,7 @@ export const POSTS: BlogPost[] = [
   shopifyWebsiteCostPost,
   bestAiAgentDevelopmentCompaniesSmallBusinessPost,
   bestGeoAgenciesPost,
+  generativeEngineOptimizationGuidePost,
+  bestGeoAiVisibilityTools2026Post,
+  bestAiSeoAgenciesUsaPost,
 ];
