@@ -1,73 +1,16 @@
 'use client';
 
-import React, { useState } from 'react';
-import { Facebook, Instagram, Twitter, Linkedin, Mail, MapPin, ArrowRight, CheckCircle2, Clock, Calendar, Check } from 'lucide-react';
-import { trackFormSubmission } from '@/utils/gtm';
+import React from 'react';
+import { Facebook, Instagram, Twitter, Linkedin, Mail, MapPin, ArrowRight, CheckCircle2, Clock, Calendar } from 'lucide-react';
 import LeadFormInline from '@/components/LeadFormInline';
 
+/**
+ * UAE footer contact section. The form is the canonical <LeadFormInline>,
+ * which writes the lead and redirects to /thank-you (the single conversion
+ * source of truth). The previous inline handleSubmit + success state were
+ * dead code and have been removed.
+ */
 const Contact: React.FC = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    service: '',
-    budget: '',
-    message: '',
-  });
-
-  const updateField = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setError(null);
-
-    try {
-      // Dynamically import Firebase to reduce bundle size
-      const { doc, setDoc, serverTimestamp } = await import('firebase/firestore');
-      const { db } = await import('@/firebase');
-
-      // Generate readable document ID
-      const now = new Date();
-      const dateStr = now.toISOString().split('T')[0];
-      const timeStr = now.toTimeString().split(' ')[0].replace(/:/g, '-');
-      const namePart = formData.name.replace(/\s+/g, '').slice(0, 15);
-      const docId = `uae_footer_${dateStr}_${timeStr}_${namePart}`;
-
-      await setDoc(doc(db, 'uae_leads', docId), {
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone,
-        service: formData.service,
-        budget: formData.budget,
-        message: formData.message,
-        createdAt: serverTimestamp(),
-        status: 'new',
-        source: 'uae_footer_form',
-        region: 'UAE',
-      });
-
-      setIsSuccess(true);
-      trackFormSubmission();
-      setFormData({ name: '', email: '', phone: '', service: '', budget: '', message: '' });
-
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setIsSuccess(false);
-      }, 5000);
-    } catch (err) {
-      console.error('Error submitting form:', err);
-      setError('Something went wrong. Please try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <footer className="bg-[#0F172A] text-white pt-20 relative overflow-hidden group">
         {/* Background Effects */}
@@ -162,22 +105,12 @@ const Contact: React.FC = () => {
                     <div className="relative z-10">
                         <h3 className="text-2xl font-bold text-white mb-6">Send us a message</h3>
 
-                        {isSuccess ? (
-                          <div className="text-center py-8">
-                            <div className="w-16 h-16 bg-[#10B981]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                              <Check size={32} className="text-[#10B981]" strokeWidth={3} />
-                            </div>
-                            <h4 className="text-xl font-bold text-white mb-2">Message Sent!</h4>
-                            <p className="text-gray-400">We'll get back to you within 2 hours.</p>
-                          </div>
-                        ) : (
-                          <LeadFormInline
-                            region="in"
-                            source="uae_contact"
-                            heading="Get a free consultation"
-                            subheading="Just your name and email to start — we reply within 2 hours."
-                          />
-                        )}
+                        <LeadFormInline
+                          region="in"
+                          source="uae_contact"
+                          heading="Get a free consultation"
+                          subheading="Just your name and email to start. We reply within 2 hours."
+                        />
                     </div>
                 </div>
             </div>

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Calendar, Clock, CheckCircle, Loader2, ChevronLeft, ChevronRight } from 'lucide-react';
-import { trackModalOpen, trackModalClose, trackFormSubmit, trackFormSuccess, trackFormError, trackFormSubmission } from '../utils/gtm';
+import { trackModalOpen, trackModalClose, trackFormSubmit, trackFormSuccess, trackFormError } from '../utils/gtm';
+import { useRouter } from 'next/navigation';
 
 interface ScheduleCallModalProps {
   isOpen: boolean;
@@ -39,6 +40,7 @@ const ScheduleCallModal: React.FC<ScheduleCallModalProps> = ({
   onClose,
   city,
 }) => {
+  const router = useRouter();
   const [step, setStep] = useState<1 | 2>(1);
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -152,8 +154,30 @@ const ScheduleCallModal: React.FC<ScheduleCallModalProps> = ({
       });
 
       trackFormSuccess('schedule_call_form');
-      trackFormSubmission();
-      setIsSuccess(true);
+
+      // Lead notification email (keepalive so it completes through the redirect).
+      fetch('/api/notify-lead', {
+        method: 'POST',
+        keepalive: true,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || '',
+          company: '',
+          service: 'Call booking',
+          message: `Requested call: ${formData.selectedDate} at ${formData.selectedTime} (${city})`,
+          region: 'in',
+          page: typeof window !== 'undefined' ? window.location.pathname : '',
+        }),
+      }).catch(() => {});
+
+      // Conversion fires on /thank-you (single source of truth). No PII in URL.
+      onClose();
+      router.push(
+        `/thank-you?source=schedule_call&service=call_booking&lid=${encodeURIComponent(docId)}`
+      );
+      return;
     } catch (err) {
       console.error('Error submitting form:', err);
       const errorMessage = 'Something went wrong. Please try again.';

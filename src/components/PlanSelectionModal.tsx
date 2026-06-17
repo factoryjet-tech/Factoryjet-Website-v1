@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Send, CheckCircle, Loader2 } from 'lucide-react';
-import { trackModalOpen, trackModalClose, trackFormSubmit, trackFormSuccess, trackFormError, trackFormSubmission } from '../utils/gtm';
+import { trackModalOpen, trackModalClose, trackFormSubmit, trackFormSuccess, trackFormError } from '../utils/gtm';
+import { useRouter } from 'next/navigation';
 
 interface PlanSelectionModalProps {
   isOpen: boolean;
@@ -25,6 +26,7 @@ const PlanSelectionModal: React.FC<PlanSelectionModalProps> = ({
   planPrice,
   city,
 }) => {
+  const router = useRouter();
   const [formData, setFormData] = useState<FormData>({
     name: '',
     phone: '',
@@ -83,8 +85,30 @@ const PlanSelectionModal: React.FC<PlanSelectionModalProps> = ({
       });
 
       trackFormSuccess('plan_selection_form');
-      trackFormSubmission();
-      setIsSuccess(true);
+
+      // Lead notification email (keepalive so it completes through the redirect).
+      fetch('/api/notify-lead', {
+        method: 'POST',
+        keepalive: true,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || '',
+          company: formData.company || '',
+          service: selectedPlan,
+          message: `Plan selected: ${selectedPlan} (${planPrice}), ${city}`,
+          region: 'in',
+          page: typeof window !== 'undefined' ? window.location.pathname : '',
+        }),
+      }).catch(() => {});
+
+      // Conversion fires on /thank-you (single source of truth). No PII in URL.
+      onClose();
+      router.push(
+        `/thank-you?source=plan_selection&service=${encodeURIComponent(selectedPlan)}&lid=${encodeURIComponent(docId)}`
+      );
+      return;
     } catch (err) {
       console.error('Error submitting form:', err);
       const errorMessage = 'Something went wrong. Please try again.';
