@@ -14,12 +14,12 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Send, CheckCircle, Loader2 } from 'lucide-react';
 import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/firebase';
+import { useRouter } from 'next/navigation';
 import {
   trackFormStart,
   trackFormSubmit,
   trackFormSuccess,
   trackFormError,
-  trackFormSubmission,
   trackServiceSelection,
 } from '@/utils/gtm';
 
@@ -53,8 +53,9 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
   source = 'inline_form',
   region = 'in',
   heading = "Tell us about your project",
-  subheading = "Just your name and email to start — we reply within 24 hours.",
+  subheading = "Just your name and email to start. We reply within 24 hours.",
 }) => {
+  const router = useRouter();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -133,8 +134,32 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
         status: 'new',
       });
       trackFormSuccess(source);
-      trackFormSubmission();
-      setIsSuccess(true);
+
+      // Lead notification email via Cloudflare Pages Function. keepalive:true so
+      // the request completes even though we navigate to /thank-you right after.
+      // Best-effort: the Firestore write above already persisted the lead.
+      fetch('/api/notify-lead', {
+        method: 'POST',
+        keepalive: true,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name, email,
+          phone: phone || '',
+          company: company || '',
+          service: service || '',
+          message: message || '',
+          region, source,
+          page: typeof window !== 'undefined' ? window.location.pathname : '',
+        }),
+      }).catch(() => { /* email is best-effort; Firestore write already succeeded */ });
+
+      // Redirect to the dedicated /thank-you page (single source of truth for the
+      // conversion: GA4 + Google Ads fire there on mount). The unique lid lets
+      // that page dedupe so refresh/back never re-counts. No PII in the URL.
+      router.push(
+        `/thank-you?source=${encodeURIComponent(source)}&service=${encodeURIComponent(service || 'unknown')}&lid=${encodeURIComponent(docId)}`
+      );
+      return;
     } catch (err) {
       console.error('Error submitting lead form:', err);
       const msg = 'Something went wrong. Please try again.';

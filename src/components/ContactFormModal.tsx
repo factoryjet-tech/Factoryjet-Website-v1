@@ -29,6 +29,7 @@ import {
   TrendingUp,
   Sparkles,
 } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 import { useContactModal } from '../context/ContactModalContext';
 import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/firebase';
@@ -39,7 +40,6 @@ import {
   trackFormSubmit,
   trackFormSuccess,
   trackFormError,
-  trackFormSubmission,
   trackServiceSelection,
   trackButtonClick,
 } from '../utils/gtm';
@@ -106,6 +106,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const ContactFormModal: React.FC = () => {
   const { isOpen, region, variant, closeModal } = useContactModal();
+  const router = useRouter();
   const services =
     variant === 'ai' ? aiServices : variant === 'seo' ? seoServices : defaultServices;
 
@@ -290,13 +291,14 @@ const ContactFormModal: React.FC = () => {
       });
 
       trackFormSuccess('contact_form');
-      trackFormSubmission();
 
-      // Fire-and-forget lead notification email via Cloudflare Pages Function.
-      // Best-effort: never blocks the success state or throws to the user.
-      // Lead is already persisted in Firestore above — this is additive.
+      // Lead notification email via Cloudflare Pages Function.
+      // keepalive:true so the request completes even though we navigate to
+      // /thank-you immediately after. Lead is already persisted in Firestore
+      // above — this is additive and best-effort.
       fetch('/api/notify-lead', {
         method: 'POST',
+        keepalive: true,
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name:    formData.name,
@@ -310,7 +312,14 @@ const ContactFormModal: React.FC = () => {
         }),
       }).catch(() => { /* email is best-effort; Firestore write already succeeded */ });
 
-      setIsSuccess(true);
+      // Redirect to the dedicated /thank-you page — the single source of truth
+      // for the conversion (GA4 + Google Ads fire there on mount). The unique
+      // lid lets that page dedupe so refresh/back never re-counts. No PII in URL.
+      closeModal();
+      router.push(
+        `/thank-you?source=modal&service=${encodeURIComponent(formData.service || 'unknown')}&lid=${encodeURIComponent(docId)}`
+      );
+      return;
     } catch (err) {
       console.error('Error submitting form:', err);
       const msg = 'Something went wrong. Please try again.';
@@ -366,7 +375,7 @@ const ContactFormModal: React.FC = () => {
     <div className="space-y-6 animate-fadeIn">
       <div className="text-center mb-6">
         <h3 className="text-xl font-bold text-[#0A0F1C] mb-2">What can we help you with?</h3>
-        <p className="text-slate-500 text-sm">Select a service — we'll move to the next step automatically</p>
+        <p className="text-slate-500 text-sm">Pick a service and we&apos;ll move to the next step automatically</p>
       </div>
       <div className="grid grid-cols-2 gap-4">
         {services.map((service) => {
@@ -400,7 +409,7 @@ const ContactFormModal: React.FC = () => {
     <div className="space-y-5 animate-fadeIn">
       <div className="text-center mb-6">
         <h3 className="text-xl font-bold text-[#0A0F1C] mb-2">How can we reach you?</h3>
-        <p className="text-slate-500 text-sm">Just your name and email — the rest is optional.</p>
+        <p className="text-slate-500 text-sm">Just your name and email. The rest is optional.</p>
       </div>
       <div className="grid grid-cols-2 gap-4">
         <div className="col-span-2 sm:col-span-1">
@@ -421,7 +430,7 @@ const ContactFormModal: React.FC = () => {
         </div>
         <div className="col-span-2 sm:col-span-1">
           <label className="block text-sm font-medium text-slate-700 mb-1.5">
-            Phone <span className="text-slate-400 font-normal">(optional — for a faster callback)</span>
+            Phone <span className="text-slate-400 font-normal">(optional, for a faster callback)</span>
           </label>
           <input
             type="tel" name="phone" value={formData.phone} onChange={handleInputChange}
@@ -501,7 +510,7 @@ const ContactFormModal: React.FC = () => {
 
       <h3 className="text-2xl font-bold text-[#0A0F1C] mb-2">You&rsquo;re in!</h3>
       <p className="text-slate-500 text-sm mb-6 max-w-xs mx-auto">
-        Bhavesh will personally review your request and reply within 24 hours — usually much faster.
+        Bhavesh reviews your request himself and replies within 24 hours, often the same day.
       </p>
 
       {/* Divider */}
@@ -573,7 +582,7 @@ const ContactFormModal: React.FC = () => {
         {/* Header */}
         <div className="bg-gradient-to-r from-[#F05A28] to-[#d44d1f] px-6 py-8 text-center rounded-t-2xl">
           <h2 className="text-2xl font-bold text-white mb-1">Let's Build Something Great</h2>
-          <p className="text-white/75 text-sm">No commitment — free consultation</p>
+          <p className="text-white/75 text-sm">No commitment. Free consultation.</p>
         </div>
 
         {/* Body */}

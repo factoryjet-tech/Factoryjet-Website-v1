@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
 import { contactAlternates } from '@/data/hreflangMap'
-import ContactPage from '@/pages/Contact'
+import ContactView from './ContactView'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 
 export const metadata: Metadata = {
-  title: 'Contact Us — Get a Free Web Design Quote | FactoryJet',
-  description: 'Contact FactoryJet for web development, e-commerce & digital services. Call us or email connect@factoryjet.com. Free consultation and quotes available.',
+  title: 'Contact FactoryJet | Get a Free Web Design Quote',
+  description:
+    'Talk to FactoryJet about a website, online store, or SEO. Book a free 30-minute call or send a quick message, and Bhavesh replies within 24 hours.',
   authors: [{ name: 'FactoryJet' }],
   robots: {
     index: true,
@@ -22,23 +23,24 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Contact FactoryJet — Get a Free Web Project Quote Today',
-    description: 'Ready to transform your digital presence? Contact our expert team for web development and e-commerce solutions. Call +91 96999 77699 for a free consultation.',
+    title: 'Contact FactoryJet | Get a Free Web Project Quote',
+    description:
+      'Ready to build? Tell us about your website, store, or SEO project and get a free consultation. We reply within 24 hours.',
     url: 'https://factoryjet.com/contact',
     images: [
       {
         url: 'https://factoryjet.com/logo.png',
         width: 1200,
         height: 630,
-        alt: 'Contact FactoryJet - Web & E-Commerce Development Experts',
+        alt: 'Contact FactoryJet for web and e-commerce development',
       },
     ],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact FactoryJet — Get a Free Web Project Quote Today',
-    description: 'Ready to transform your digital presence? Contact our expert team today.',
+    title: 'Contact FactoryJet | Get a Free Web Project Quote',
+    description: 'Tell us about your website, store, or SEO project and get a free consultation.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
@@ -51,7 +53,7 @@ export default function Page() {
   return (
     <>
       <SiteHeader locale="in" />
-      <ContactPage />
+      <ContactView />
       <SiteFooter locale="in" />
     </>
   )
