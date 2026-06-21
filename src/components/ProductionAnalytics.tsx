@@ -11,32 +11,44 @@ import { useEffect } from 'react';
  *
  * GTM container: GTM-PKWD8SHF. Google Ads: AW-11127037244 + AW-18185532850.
  * (GA4 itself is delivered via the GTM container + the Ads gtag destinations.)
+ *
+ * window.gtag + window.dataLayer are defined by the inline `gtag-stub` script in
+ * the <head> (layout.tsx, strategy="beforeInteractive"), so they always exist
+ * before any conversion call runs — there is no longer a race between this
+ * effect and page effects like /thank-you's trackFormSubmission(). This file is
+ * only responsible for (a) host-gating, (b) the js/config commands, and
+ * (c) loading the heavy gtm.js + gtag/js scripts.
  */
 
 const PROD_HOSTS = ['factoryjet.com', 'www.factoryjet.com'];
+
+// The lead conversion fires here. On this page we must NOT defer tag loading,
+// or a fast bounce (< 5s, no interaction) would drop the conversion.
+const CONVERSION_PATHS = ['/thank-you'];
 
 export default function ProductionAnalytics() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
     if (!PROD_HOSTS.includes(window.location.hostname)) return; // skip previews/staging
 
-    const w = window as unknown as { dataLayer?: unknown[] };
+    const w = window as unknown as {
+      dataLayer?: unknown[];
+      gtag?: (...a: unknown[]) => void;
+    };
 
-    // Initialise dataLayer + gtag stub IMMEDIATELY so any conversion events
-    // pushed before the tags finish loading are queued and processed once they
-    // do. The heavy GTM + Ads scripts (~590KB + third-party cookies) are then
-    // DEFERRED off the critical path — loaded on the first user interaction, or
-    // after a 5s fallback — which lifts Lighthouse Performance + Best Practices
-    // while keeping measurement intact (real conversions require interaction,
-    // which itself triggers the load).
+    // dataLayer + gtag are guaranteed by the inline <head> stub; fall back
+    // defensively just in case the stub was stripped.
     w.dataLayer = w.dataLayer || [];
-    function gtag() {
-      // eslint-disable-next-line prefer-rest-params
-      (w.dataLayer as unknown[]).push(arguments);
-    }
-    (gtag as (...a: unknown[]) => void)('js', new Date());
-    (gtag as (...a: unknown[]) => void)('config', 'AW-11127037244');
-    (gtag as (...a: unknown[]) => void)('config', 'AW-18185532850');
+    const gtag =
+      w.gtag ||
+      function gtag() {
+        // eslint-disable-next-line prefer-rest-params
+        (w.dataLayer as unknown[]).push(arguments);
+      };
+
+    gtag('js', new Date());
+    gtag('config', 'AW-11127037244');
+    gtag('config', 'AW-18185532850');
 
     let loaded = false;
     let timer: ReturnType<typeof setTimeout>;
@@ -60,6 +72,15 @@ export default function ProductionAnalytics() {
       gads.async = true;
       gads.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18185532850';
       document.head.appendChild(gads);
+    }
+
+    // On the conversion destination page, load the tags IMMEDIATELY so the lead
+    // conversion is never lost. Everywhere else, defer to first interaction (or a
+    // 5s fallback) to protect Lighthouse Performance + Best Practices.
+    const path = window.location.pathname.replace(/\/+$/, '') || '/';
+    if (CONVERSION_PATHS.includes(path)) {
+      load();
+      return cleanup;
     }
 
     events.forEach((e) => window.addEventListener(e, load, { once: true, passive: true }));

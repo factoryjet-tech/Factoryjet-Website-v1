@@ -116,6 +116,23 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
+        {/* gtag stub — defines window.gtag + dataLayer BEFORE hydration so any
+            conversion call (e.g. trackFormSubmission on /thank-you) can never run
+            before window.gtag exists. This is the standard Google snippet's first
+            half; it only DEFINES the function and queues commands to dataLayer —
+            it does NOT load gtag.js or send any pings, so it is harmless on
+            *.pages.dev previews. The actual tag LOADING + host-gating lives in
+            <ProductionAnalytics />. Fixes the silent no-op where window.gtag was
+            undefined and every gtag('event','conversion') was guarded out. */}
+        <Script
+          id="gtag-stub"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html:
+              'window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=window.gtag||gtag;',
+          }}
+        />
+
         {/* Structured Data - Organization Schema */}
         <Script
           id="organization-schema"
