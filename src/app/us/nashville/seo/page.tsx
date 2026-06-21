@@ -20,7 +20,7 @@ import './nashville-seo.css';
    (pre-selected one-step form). Styles scoped under .nseo (next/font vars).
    No images, no page JS (text LCP, zero CLS) → Lighthouse 100 target.
    Source: research/mockup-us-nashville-seo-v1.html + city-nashville-industry-brief.md.
-   Honesty: $499/mo shown, month-to-month, free audit, no guarantee; real clients
+   Honesty: no pricing shown (no-pricing rule), month-to-month, free audit, no guarantee; real clients
    only; founder byline; Census/Visit-Music-City-cited stats. No fake
    LocalBusiness address, no self-serving Review schema.
 ───────────────────────────────────────────────────────────────────────────── */
@@ -29,14 +29,14 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/us/nashville/seo';
 
 export const metadata: Metadata = {
-  title: 'SEO Services Nashville, TN | Local SEO Company Near Me | FactoryJet',
+  title: 'Nashville SEO Company | Local SEO Services Near Me, TN | FactoryJet',
   description:
-    'SEO services in Nashville, TN — FactoryJet is a local SEO company near you that ranks businesses in the Google Map Pack and "near me" results. GBP optimization, technical SEO, free audit, no contracts.',
+    'FactoryJet is a Nashville SEO company that ranks local businesses in the Google Map Pack and "near me" results. Local SEO, GBP optimization, and technical SEO. Free audit, no contracts.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'SEO Services Nashville, TN | Local SEO Company Near Me | FactoryJet',
+    title: 'Nashville SEO Company | Local SEO Services Near Me, TN | FactoryJet',
     description:
-      'SEO services in Nashville, TN. Local SEO company near you for Map Pack rankings, GBP optimization, and technical SEO. Free audit, no lock-in.',
+      'Nashville SEO company. Local SEO, Map Pack rankings, GBP optimization, and technical SEO for Nashville, TN businesses. Free audit, no lock-in.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_US',
@@ -86,7 +86,7 @@ const ENCORE: { ew: string; et: string }[] = [
 ];
 
 const COMPARE: { k: string; fj: string; alt: string; hl?: boolean }[] = [
-  { k: 'Starting price', fj: '$499/month', alt: '$1,500+/month', hl: true },
+  { k: 'Pricing', fj: 'Scoped & shown upfront', alt: 'Quoted after a sales call', hl: true },
   { k: 'Contract', fj: 'Month-to-month', alt: '6-12 month lock-in' },
   { k: 'Who you talk to', fj: 'The expert doing the work', alt: 'An account manager' },
   { k: 'Kickoff', fj: '7 days', alt: 'Weeks' },
@@ -101,7 +101,7 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
     id: 'faq-pricing',
     label: 'Pricing & timeline',
     items: [
-      { q: 'How much does SEO cost in Nashville?', a: "FactoryJet's Nashville local SEO starts at $499/month, billed month-to-month. Across the US, local SEO typically runs $500-$3,000/month depending on competition and locations. Your audit is free, and there's no setup fee or long-term contract." },
+      { q: 'How much does SEO cost in Nashville?', a: "It depends on your competition, how many locations you run, and the current state of your Google Business Profile and citations: a single-location service business needs far less work than a multi-location brand. Rather than a one-size package, we scope it to your market and show you the number before you sign. Your audit is free, with no setup fee and no long-term contract, so book a free call and we'll give you a straight quote." },
       { q: 'How long does SEO take to work in Nashville?', a: 'Expect early movement in 3-6 months and stable local-pack rankings in 6-12 months. If your Google Business Profile is under-optimized, the Map Pack can improve in as little as 2-8 weeks. Anyone promising page one in 30 days is selling risk, not results.' },
       { q: 'How fast can I rank in the Nashville Map Pack?', a: 'If you already have reviews, accurate citations, and a half-optimized profile, the 3-pack can move in 15-60 days. Starting from scratch in a competitive category like Broadway hospitality, plan on 3-6 months. The Map Pack is driven almost entirely by your Google Business Profile.' },
       { q: 'Why is local SEO a monthly fee instead of one-time?', a: 'Rankings are earned and defended continuously: competitors optimize, Google updates its algorithm, and your profile needs ongoing posts, reviews, and citation upkeep. A one-time setup decays; that is why we work month-to-month.' },
@@ -220,7 +220,7 @@ const jsonLd = {
       '@type': 'WebPage',
       '@id': CANONICAL,
       url: CANONICAL,
-      name: 'SEO Services Nashville, TN | Local SEO Company Near Me | FactoryJet',
+      name: 'Nashville SEO Company | Local SEO Services Near Me, TN | FactoryJet',
       datePublished: '2026-06-06',
       dateModified: '2026-06-13',
       author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhaveshbarot/', jobTitle: 'Founder, FactoryJet' },
@@ -246,7 +246,7 @@ export default function NashvilleSeoPage() {
           <div className="wrap hero-grid">
             <div>
               <span className="loc"><b />Nashville, TN</span>
-              <h1>Nashville SEO that puts your business <span className="it">top of the bill</span></h1>
+              <h1>The Nashville SEO company that puts your business <span className="it">top of the bill</span></h1>
               <p className="lead">Work directly with a senior <b>Nashville SEO expert</b>, not an account manager. Local SEO services that turn the Map Pack into calls.</p>
               <div className="cta-row">
                 <ModalCTAButton label="Get your free Nashville SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
@@ -274,7 +274,7 @@ export default function NashvilleSeoPage() {
         {/* NOW PLAYING FACTS */}
         <div className="nowbar">
           <div className="wrap row">
-            <div className="fact"><div className="v">$499/mo</div><div className="k">local SEO, month-to-month</div></div>
+            <div className="fact"><div className="v">Month-to-month</div><div className="k">local SEO, no lock-in</div></div>
             <div className="fact"><div className="v">Free audit</div><div className="k">no setup fee, no pressure</div></div>
             <div className="fact"><div className="v">7-day</div><div className="k">kickoff, not weeks</div></div>
             <div className="fact"><div className="v"><span className="star">★</span> 4.9</div><div className="k">across 500+ projects</div></div>
@@ -287,12 +287,12 @@ export default function NashvilleSeoPage() {
             <div className="ticket">
               <div className="main">
                 <span className="tag">The short answer</span>
-                <p>FactoryJet is a Nashville SEO company where you work directly with a senior SEO expert. Our SEO services in Nashville, TN cover Google Business Profile, citations, reviews, technical SEO, and content, billed month-to-month from $499 with a free audit and no long-term contract.</p>
+                <p>FactoryJet is a Nashville SEO company where you work directly with a senior SEO expert. Our SEO services in Nashville, TN cover Google Business Profile, citations, reviews, technical SEO, and content, billed month-to-month with a free audit and no long-term contract.</p>
               </div>
               <div className="stub">
                 <span className="adm">Admit your business</span>
-                <span className="price">$499</span>
-                <span className="per">per month, month-to-month, free audit, no setup fee</span>
+                <span className="price">Free audit</span>
+                <span className="per">then month-to-month, no setup fee, no lock-in</span>
               </div>
             </div>
           </div>
@@ -458,7 +458,7 @@ export default function NashvilleSeoPage() {
               <ModalCTAButton label="Get your free Nashville SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
               <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
             </div>
-            <p className="fine">SEO services in Nashville, TN from $499/month, billed month-to-month, with a free audit and no setup fee. Also in Nashville: <Link href="/us/nashville/web-design">web design</Link> and <Link href="/us/nashville/ecommerce-development">e-commerce development</Link>. See <Link href="/us/services/seo">US SEO services</Link>. More US cities: <Link href="/us/cleveland/seo">Cleveland SEO</Link> · <Link href="/us/charlotte/seo">Charlotte SEO</Link>.</p>
+            <p className="fine">SEO services in Nashville, TN, billed month-to-month, with a free audit and no setup fee. Also in Nashville: <Link href="/us/nashville/web-design">web design</Link> and <Link href="/us/nashville/ecommerce-development">e-commerce development</Link>. See <Link href="/us/services/seo">US SEO services</Link>. More US cities: <Link href="/us/cleveland/seo">Cleveland SEO</Link> · <Link href="/us/charlotte/seo">Charlotte SEO</Link> · <Link href="/us/austin/seo">Austin SEO</Link>.</p>
           </div>
         </section>
       </div>

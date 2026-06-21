@@ -18,7 +18,7 @@ import './charlotte-seo.css';
    (./charlotte-seo.css, next/font vars, no webfont request). No images
    (text LCP, zero CLS) → Lighthouse 100 target.
    Source: research/mockup-us-charlotte-seo-v3.html + research/city-charlotte-industry-brief.md.
-   Honesty: $499/mo shown, month-to-month, free audit, no guarantee; real clients
+   Honesty: no pricing shown (no-pricing rule), month-to-month, free audit, no guarantee; real clients
    only; founder byline. Growth stat = Census-derived 148/day (54,100/yr, vintage
    2025), deliberately NOT the CLT Alliance 157/day (older migration data).
    No fake LocalBusiness address, no self-serving Review schema.
@@ -28,14 +28,14 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/us/charlotte/seo';
 
 export const metadata: Metadata = {
-  title: 'SEO Company Near Me Charlotte, NC | Local SEO Services | FactoryJet',
+  title: 'Charlotte SEO Company | Local SEO Services Near Me, NC | FactoryJet',
   description:
-    'Looking for an SEO company near me in Charlotte, NC? FactoryJet puts local businesses in the Google Map Pack and "near me" results. Local SEO services, GBP optimization, free audit, no long-term contracts.',
+    'FactoryJet is a Charlotte SEO company that gets local businesses into the Google Map Pack and "near me" results. Local SEO, GBP optimization, and technical SEO. Free audit, no long-term contracts.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'SEO Company Near Me Charlotte, NC | Local SEO Services | FactoryJet',
+    title: 'Charlotte SEO Company | Local SEO Services Near Me, NC | FactoryJet',
     description:
-      'SEO company near you in Charlotte, NC. Map Pack optimization, local SEO services, and technical SEO. Free audit, no lock-in.',
+      'Charlotte SEO company. Map Pack optimization, local SEO services, and technical SEO for Charlotte, NC businesses. Free audit, no lock-in.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_US',
@@ -89,7 +89,7 @@ const STEPS: { when: string; h: string; p: string }[] = [
 ];
 
 const COMPARE: { k: string; fj: string; alt: string; hl?: boolean }[] = [
-  { k: 'Starting price', fj: '$499/month', alt: '$1,500+/month', hl: true },
+  { k: 'Pricing', fj: 'Scoped & shown upfront', alt: 'Quoted after a sales call', hl: true },
   { k: 'Contract', fj: 'Month-to-month', alt: '6-12 month lock-in' },
   { k: 'Who does the work', fj: 'Senior engineers', alt: 'Junior account managers' },
   { k: 'Kickoff', fj: '7 days', alt: 'Weeks' },
@@ -103,7 +103,7 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
   {
     label: 'Pricing & timeline',
     items: [
-      { q: 'How much does local SEO cost in Charlotte?', a: "FactoryJet's Charlotte local SEO starts at $499/month, billed month-to-month. Across the US, local SEO typically runs $500-$3,000/month depending on competition and number of locations. Your audit is free, and there's no setup fee or long-term contract." },
+      { q: 'How much does local SEO cost in Charlotte?', a: "It depends on your competition, how many locations you run, and the current state of your Google Business Profile and citations: a single-location service business needs far less work than a multi-location brand. Rather than a one-size package, we scope it to your market and show you the number before you sign. Your audit is free, with no setup fee and no long-term contract, so book a free call and we'll give you a straight quote." },
       { q: 'How long does SEO take to work in Charlotte?', a: 'Expect early movement in 3-6 months and stable local-pack rankings in 6-12 months. If your Google Business Profile is under-optimized, the Map Pack can improve in as little as 2-8 weeks. Anyone promising page one in 30 days is selling risk, not results.' },
       { q: 'How fast can I rank in the Charlotte Map Pack?', a: 'If you already have reviews, accurate citations, and a half-optimized profile, the 3-pack can move in 15-60 days. Starting from scratch in a competitive category, plan on 3-6 months. The Map Pack is driven almost entirely by your Google Business Profile.' },
       { q: 'Why is local SEO a monthly fee instead of one-time?', a: 'Rankings are earned and defended continuously: competitors optimize, Google updates its algorithm, and your profile needs ongoing posts, reviews, and citation upkeep. A one-time setup decays; that is why we work month-to-month.' },
@@ -219,7 +219,7 @@ const jsonLd = {
       '@type': 'WebPage',
       '@id': CANONICAL,
       url: CANONICAL,
-      name: 'SEO Company Near Me Charlotte, NC | Local SEO Services | FactoryJet',
+      name: 'Charlotte SEO Company | Local SEO Services Near Me, NC | FactoryJet',
       datePublished: '2026-06-06',
       dateModified: '2026-06-13',
       author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhaveshbarot/', jobTitle: 'Founder, FactoryJet' },
@@ -244,7 +244,7 @@ export default function CharlotteSeoPage() {
         <section className="hero">
           <div className="wrap hero-copy">
             <span className="loc"><b />Charlotte, NC</span>
-            <h1>Charlotte SEO for the city everyone keeps <span className="it">moving&nbsp;to</span></h1>
+            <h1>The Charlotte SEO company for the city everyone keeps <span className="it">moving&nbsp;to</span></h1>
             <p className="lead">About 148 people arrive daily and search Google for businesses like yours. We make sure they find <b>you</b> first.</p>
             <div className="cta-row">
               <ModalCTAButton label="Get your free Charlotte SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
@@ -268,7 +268,7 @@ export default function CharlotteSeoPage() {
         {/* FACTS BAR */}
         <div className="factsbar">
           <div className="wrap row">
-            <div className="fact"><div className="v">$499/mo</div><div className="k">local SEO, month-to-month</div></div>
+            <div className="fact"><div className="v">Month-to-month</div><div className="k">local SEO, no lock-in</div></div>
             <div className="fact"><div className="v">Free audit</div><div className="k">no setup fee, no pressure</div></div>
             <div className="fact"><div className="v">7-day</div><div className="k">kickoff, not weeks</div></div>
             <div className="fact"><div className="v"><span className="star">★</span> 4.9</div><div className="k">across 500+ projects</div></div>
@@ -295,7 +295,7 @@ export default function CharlotteSeoPage() {
           <div className="wrap">
             <div className="bluf">
               <span className="tag">The short answer</span>
-              <p>FactoryJet is a Charlotte SEO company that helps local businesses rank in Google&apos;s Map Pack and &quot;near me&quot; results. We handle Google Business Profile, citations, reviews, technical SEO, and content, billed month-to-month from $499 with a free audit and no long-term contract. Our Charlotte SEO services cover the whole metro, from Uptown to Rock Hill, and you work directly with senior SEO experts.</p>
+              <p>FactoryJet is a Charlotte SEO company that helps local businesses rank in Google&apos;s Map Pack and &quot;near me&quot; results. We handle Google Business Profile, citations, reviews, technical SEO, and content, billed month-to-month with a free audit and no long-term contract. Our Charlotte SEO services cover the whole metro, from Uptown to Rock Hill, and you work directly with senior SEO experts.</p>
             </div>
           </div>
         </section>
@@ -461,7 +461,7 @@ export default function CharlotteSeoPage() {
               <ModalCTAButton label="Get your free Charlotte SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
               <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
             </div>
-            <p className="fine">Local SEO from $499/month, billed month-to-month, with a free audit and no setup fee. Also in Charlotte: <Link href="/us/charlotte/web-design">web design</Link>, <Link href="/us/charlotte/ecommerce-development">e-commerce</Link>, and <Link href="/us/charlotte/ai-automation">AI automation</Link>. <Link href="/us/services/seo">US SEO services</Link>. More US cities: <Link href="/us/cleveland/seo">Cleveland SEO</Link> · <Link href="/us/nashville/seo">Nashville SEO</Link>.</p>
+            <p className="fine">Local SEO billed month-to-month, with a free audit and no setup fee. Also in Charlotte: <Link href="/us/charlotte/web-design">web design</Link>, <Link href="/us/charlotte/ecommerce-development">e-commerce</Link>, and <Link href="/us/charlotte/ai-automation">AI automation</Link>. <Link href="/us/services/seo">US SEO services</Link>. More US cities: <Link href="/us/cleveland/seo">Cleveland SEO</Link> · <Link href="/us/nashville/seo">Nashville SEO</Link> · <Link href="/us/austin/seo">Austin SEO</Link>.</p>
           </div>
         </section>
       </div>
