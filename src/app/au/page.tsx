@@ -134,7 +134,6 @@ const CITIES = [
 
 const CASES = [
   { tag: 'E-commerce · Home décor', name: 'Belle Maison', p: 'Custom storefront with curated collections and a checkout that converts.', stat: 'Conversion-focused rebuild', img: '/images/portfolio/belle-maison.webp' },
-  { tag: 'B2B · Wholesale', name: 'Bombay Petals', p: 'B2B catalogue and quote flow for an artificial plants & décor wholesaler.', stat: 'Quote requests via site', img: '/images/portfolio/bombay-petals.webp' },
   { tag: 'Services · Engineering', name: 'Formative Concepts', p: 'Authority site for an MEP/BIM consultancy winning larger contracts.', stat: 'Enterprise enquiries', img: '/images/portfolio/formative-concepts.webp' },
 ];
 
@@ -342,7 +341,7 @@ export default function AUHomePage() {
           <div className="logos">
             <div className="wrap">
               <span className="ll">Trusted by growing businesses</span>
-              <div className="lset"><b>Belle Maison</b><b>Bombay Petals</b><b>Formative Concepts</b><b>Impulse Branding</b><b>RDB Travel</b><b>Shevvaa</b></div>
+              <div className="lset"><b>Belle Maison</b><b>Formative Concepts</b><b>Impulse Branding</b><b>RDB Travel</b><b>Shevvaa</b></div>
             </div>
           </div>
 

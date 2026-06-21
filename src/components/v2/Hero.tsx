@@ -32,6 +32,10 @@ export interface HeroProps {
   extraCta?: ReactNode;
   trustItems?: string[];
   rightSlot?: ReactNode;
+  /** Accent tone for the eyebrow + trust ticks. Defaults to 'orange' (unchanged). */
+  accent?: 'orange' | 'navy';
+  /** Optional form rendered just after the lead — used when CTAs are omitted. */
+  formSlot?: ReactNode;
 }
 
 export default function Hero({
@@ -44,6 +48,8 @@ export default function Hero({
   extraCta,
   trustItems,
   rightSlot,
+  accent = 'orange',
+  formSlot,
 }: HeroProps) {
   const hasRightSlot = rightSlot !== undefined && rightSlot !== null;
 
@@ -91,6 +97,8 @@ export default function Hero({
                 secondaryCta={secondaryCta}
                 extraCta={extraCta}
                 trustItems={trustItems}
+                accent={accent}
+                formSlot={formSlot}
                 hasSlot={true}
               />
             </div>
@@ -107,6 +115,8 @@ export default function Hero({
               secondaryCta={secondaryCta}
               extraCta={extraCta}
               trustItems={trustItems}
+              accent={accent}
+              formSlot={formSlot}
             />
           </div>
         )}
@@ -124,8 +134,11 @@ function HeroContent({
   secondaryCta,
   extraCta,
   trustItems,
+  accent = 'orange',
+  formSlot,
   hasSlot = false,
 }: Omit<HeroProps, 'rightSlot'> & { hasSlot?: boolean }) {
+  const isNavy = accent === 'navy';
   return (
     <>
       {/* ── Announcement pill ─────────────────────────────────────────── */}
@@ -182,9 +195,9 @@ function HeroContent({
         </div>
       )}
 
-      {/* Eyebrow — orange to match brand accent */}
+      {/* Eyebrow — orange by default; navy when accent='navy' */}
       {eyebrow && (
-        <p className="fj-eyebrow mb-3">
+        <p className="fj-eyebrow mb-3" style={isNavy ? { color: '#103A5E' } : undefined}>
           {eyebrow}
         </p>
       )}
@@ -206,6 +219,9 @@ function HeroContent({
           {lead}
         </p>
       )}
+
+      {/* Inline form slot — rendered when provided (the form becomes the CTA) */}
+      {formSlot}
 
       {/* ── CTAs ──────────────────────────────────────────────────────── */}
       {(primaryCta || secondaryCta || extraCta) && (
@@ -276,10 +292,10 @@ function HeroContent({
                 <span className="h-[3px] w-[3px] rounded-full bg-fj-neutral-300" aria-hidden="true" />
               )}
               <span className="flex items-center gap-1.5">
-                {/* Orange checkmark circle — matches brand accent */}
+                {/* Checkmark circle — orange by default, navy when accent='navy' */}
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                  <circle cx="7" cy="7" r="6.5" fill="rgba(240,90,40,0.08)" stroke="rgba(240,90,40,0.28)" strokeWidth="0.75"/>
-                  <path d="M4.5 7l2 2L9.5 4.5" stroke="#F05A28" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
+                  <circle cx="7" cy="7" r="6.5" fill={isNavy ? 'rgba(16,58,94,0.08)' : 'rgba(240,90,40,0.08)'} stroke={isNavy ? 'rgba(16,58,94,0.28)' : 'rgba(240,90,40,0.28)'} strokeWidth="0.75"/>
+                  <path d="M4.5 7l2 2L9.5 4.5" stroke={isNavy ? '#103A5E' : '#F05A28'} strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
                 <span className="font-fj-body font-medium text-fj-neutral-500">{item}</span>
               </span>

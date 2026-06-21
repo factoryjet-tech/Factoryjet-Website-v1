@@ -683,7 +683,7 @@ export default function ProvidenceSEO() {
               />
             </div>
             <div className="clients">
-              {['Impulse Branding', 'Bombay Petals', 'Belle Maison', 'Formative Concepts', '500+ businesses served'].map(
+              {['Impulse Branding', 'Belle Maison', 'Formative Concepts', '500+ businesses served'].map(
                 (c) => <span key={c}>{c}</span>
               )}
             </div>

@@ -568,7 +568,7 @@ export default function SeoServicePage() {
               Trusted by US founders &amp; teams
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-x-11 gap-y-4 opacity-70">
-              {['Belle Maison', 'Bombay Petals', 'Formative', 'Impulse', 'Shevvaa', 'RDB Travel'].map((name) => (
+              {['Belle Maison', 'Formative', 'Impulse', 'Shevvaa', 'RDB Travel'].map((name) => (
                 <span key={name} className="fj-display whitespace-nowrap text-[1.4rem] font-bold text-fj-neutral-600">
                   {name}
                 </span>

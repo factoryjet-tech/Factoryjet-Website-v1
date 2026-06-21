@@ -737,15 +737,6 @@ export default function DelhiEcommercePage() {
               stat2: 'Shopify · Razorpay',
             },
             {
-              industry: 'B2B Wholesale · WooCommerce',
-              title: 'Bombay Petals — Delhi',
-              description:
-                'Bombay Petals is a B2B artificial plants and décor supplier. FactoryJet built a WooCommerce wholesale portal with volume pricing tiers, GST B2B invoicing, bulk order flows, and a D2C consumer-facing storefront — both running from one backend.',
-              imageSrc: '/images/portfolio/bombay-petals.webp',
-              stat1: '₹1.5 Cr in Y1',
-              stat2: 'WooCommerce · B2B',
-            },
-            {
               industry: 'Fashion · Shopify Plus',
               title: 'Impulse Branding — Delhi',
               description:

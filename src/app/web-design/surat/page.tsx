@@ -521,14 +521,6 @@ const SRT_FAQ_ITEMS = [
               stat2: 'Next.js · WhatsApp',
             },
             {
-              industry: 'B2B · Commerceflo',
-              title: 'Bombay Petals — Mumbai',
-              description: 'B2B artificial plants and décor supplier. Dual-storefront solution — B2B wholesale portal with volume pricing and a D2C consumer store — on Commerceflo — an AI-native unified commerce platform.',
-              imageSrc: '/images/portfolio/bombay-petals.webp',
-              stat1: '7-day delivery',
-              stat2: 'Razorpay integrated',
-            },
-            {
               industry: 'MEP / BIM Consulting · SEO',
               title: 'Formative Concepts — Pune',
               description: 'Authority-building website for an MEP drafting and BIM consulting firm — credentials display, project portfolio, and technical SEO for B2B project enquiries.',

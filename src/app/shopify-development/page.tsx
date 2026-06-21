@@ -1232,15 +1232,6 @@ export default function ShopifyDevelopmentPage() {
           headline="What Indian D2C brands look like after FactoryJet builds their Shopify store."
           cards={[
             {
-              industry: 'B2B · Shopify + Commerceflo',
-              title: 'Bombay Petals — Mumbai',
-              description:
-                'Bombay Petals is a B2B artificial plants and décor supplier. FactoryJet built a dual-storefront solution — B2B wholesale portal and a D2C consumer store — on Shopify, with Razorpay + Shiprocket integrated. ₹1.5 crore in Year 1 GMV.',
-              imageSrc: '/images/portfolio/bombay-petals.webp',
-              stat1: '₹1.5 Cr in Y1',
-              stat2: '7-day delivery',
-            },
-            {
               industry: 'Interior Décor · Shopify',
               title: 'Belle Maison — Mumbai',
               description:

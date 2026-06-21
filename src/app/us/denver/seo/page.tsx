@@ -395,7 +395,7 @@ export default function DenverSeoPage() {
                 <span className="founder-tag">Talk to the founder</span>
                 <h2 className="founder-headline">30 minutes on your Denver rankings. No sales script.</h2>
                 <p className="founder-bio">I started FactoryJet to do the opposite of what most agencies do. Senior people do the actual work, you talk to me on every call, and there is no 12-month contract. We will look at your current Denver rankings, find your three fastest keyword wins, and show you what is blocking page 1. You leave with a plan whether or not you hire us.</p>
-                <div className="clients"><span>Belle Maison</span><span>Bombay Petals</span><span>Formative Concepts</span><span>Impulse Branding Solutions</span></div>
+                <div className="clients"><span>Belle Maison</span><span>Formative Concepts</span><span>Impulse Branding Solutions</span></div>
                 <p className="real">No stock screenshots and no invented case studies. These are live client builds you can open and test yourself.</p>
                 <div className="trust-chips">
                   <div className="trust-chip"><b>500+</b> businesses served</div>

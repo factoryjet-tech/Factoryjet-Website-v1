@@ -346,7 +346,7 @@ export default function SmallBusinessSeoServicePage() {
           <div className="wrap">
             <div className="lbl">Trusted by US small business owners</div>
             <div className="logos">
-              {['Belle Maison', 'Bombay Petals', 'Formative', 'Impulse', 'Shevvaa', 'RDB Travel'].map((n) => (
+              {['Belle Maison', 'Formative', 'Impulse', 'Shevvaa', 'RDB Travel'].map((n) => (
                 <span key={n} style={{ whiteSpace: 'nowrap' }}>{n}</span>
               ))}
             </div>

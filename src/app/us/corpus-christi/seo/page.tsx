@@ -646,13 +646,13 @@ export default function CorpusChristiSEO() {
             <div className="quote">
               <p>
                 "We went from page three to the local 3-pack in under 90 days. The team is senior, the communication
-                is clear, and the results track to actual calls and bookings — not just ranking screenshots."
+                is clear, and the results track to actual calls and bookings, not just ranking screenshots."
               </p>
               <div className="byline">
                 <div className="avatar">V</div>
                 <div>
-                  <div className="nm">Vishal — Bombay Petals</div>
-                  <div className="ti">B2B wholesale floral and decor, US market</div>
+                  <div className="nm">Vishal, Impulse Branding</div>
+                  <div className="ti">MEP and print branding solutions</div>
                 </div>
               </div>
             </div>
@@ -666,7 +666,7 @@ export default function CorpusChristiSEO() {
               />
             </div>
             <div className="clients">
-              {['Bombay Petals', 'Belle Maison', 'Formative Concepts', 'Impulse Branding', '500+ businesses served'].map(
+              {['Belle Maison', 'Formative Concepts', 'Impulse Branding', '500+ businesses served'].map(
                 (c) => <span key={c}>{c}</span>
               )}
             </div>

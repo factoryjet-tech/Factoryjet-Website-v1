@@ -775,15 +775,6 @@ export default function MumbaiWebDesignPage() {
               stat2: 'Next.js · WhatsApp',
             },
             {
-              industry: 'B2B · Commerceflo',
-              title: 'Bombay Petals — Mumbai',
-              description:
-                'Bombay Petals is a B2B artificial plants and décor supplier in Mumbai. FactoryJet built a dual-storefront solution — B2B wholesale portal with volume pricing and a D2C consumer store — on Commerceflo — an AI-native unified commerce platform. Razorpay + Shiprocket integrated. ₹1.5 Cr in sales within 12 months of launch.',
-              imageSrc: '/images/portfolio/bombay-petals.webp',
-              stat1: '₹1.5 Cr in Y1',
-              stat2: '7-day delivery',
-            },
-            {
               industry: 'MEP / BIM Consulting · SEO',
               title: 'Formative Concepts — Pune',
               description:

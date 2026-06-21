@@ -36,7 +36,6 @@ export interface LogoBarProps {
  */
 const LOGOS = [
   'Belle Maison',
-  'Bombay Petals',
   'Formative Concepts',
   'Impulse Branding',
   'Shevvaa',

@@ -170,15 +170,6 @@ const PORTFOLIO_CARDS = [
     stat2: '7-day delivery',
   },
   {
-    industry: 'Home Décor — B2B Wholesale Ecommerce',
-    title: 'Bombay Petals — B2B Wholesale Platform',
-    description:
-      'Shopify B2B ecommerce platform for a wholesale artificial plants and home décor supplier. Dealer and distributor accounts with tiered pricing, bulk ordering, GST-automated invoicing, and trade-only product visibility. Built for scale.',
-    imageSrc: '/images/ecommerce/mumbai/portfolio-bombay-petals.webp',
-    stat1: 'B2B tiered pricing',
-    stat2: 'GST auto-invoicing',
-  },
-  {
     industry: 'Professional Services — Web Design',
     title: 'Formative Concepts — MEP & BIM Consulting',
     description:

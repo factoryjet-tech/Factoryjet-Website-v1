@@ -419,7 +419,7 @@ export default function LocalSeoServicePage() {
           <div className="wrap">
             <div className="lbl">Trusted by US founders &amp; teams</div>
             <div className="logos">
-              {['Belle Maison', 'Bombay Petals', 'Formative', 'Impulse', 'Shevvaa', 'RDB Travel'].map((n) => (
+              {['Belle Maison', 'Formative', 'Impulse', 'Shevvaa', 'RDB Travel'].map((n) => (
                 <span key={n} style={{ whiteSpace: 'nowrap' }}>{n}</span>
               ))}
             </div>

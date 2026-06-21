@@ -666,7 +666,7 @@ export default function HuntingtonBeachSEO() {
               />
             </div>
             <div className="clients">
-              {['Belle Maison', 'Bombay Petals', 'Formative Concepts', 'Impulse Branding', '500+ businesses served'].map(
+              {['Belle Maison', 'Formative Concepts', 'Impulse Branding', '500+ businesses served'].map(
                 (c) => <span key={c}>{c}</span>
               )}
             </div>

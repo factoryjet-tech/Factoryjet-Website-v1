@@ -838,15 +838,6 @@ export default function IndoreWebDesignPage() {
               stat2: 'Next.js · WhatsApp',
             },
             {
-              industry: 'B2B · Commerceflo',
-              title: 'Bombay Petals — Mumbai',
-              description:
-                'Bombay Petals is a B2B artificial plants and décor supplier. FactoryJet built a dual-storefront solution — B2B wholesale portal with volume pricing and a D2C consumer store — with Razorpay + Shiprocket integrated. ₹1.5 Cr in sales within 12 months of launch. The same dual-channel architecture is available for Indore textile and FMCG businesses.',
-              imageSrc: '/images/portfolio/bombay-petals.webp',
-              stat1: '₹1.5 Cr in Y1',
-              stat2: '7-day delivery',
-            },
-            {
               industry: 'MEP / BIM Consulting · SEO',
               title: 'Formative Concepts — Pune',
               description:

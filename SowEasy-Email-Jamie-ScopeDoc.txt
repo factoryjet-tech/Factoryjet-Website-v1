@@ -1,0 +1,22 @@
+TO: Jamie Gray
+FROM: Bhavesh | FactoryJet
+SUBJECT: SowEasy — Project Scope
+
+---
+
+Hi Jamie,
+
+I've put together a scope document covering everything we've discussed so far. I've kept it as clear and straightforward as possible — no jargon, just a plain list of what we'll build.
+
+[Attach: SowEasy-Project-Scope.docx]
+
+One thing I'd like you to check before we confirm the visualiser: have a look at https://dynamicmockups.com and let me know if the kind of product mockups you see there match what you have in mind. If yes, we'll use that. If it doesn't quite hit the mark for the 3D interactive experience you're after, the alternative is Zakeke — which you may already know from your conversation with Brendan at IPIA.
+
+On the Odoo connector — if your team has already purchased one, we'll use that. If not, we'll select the best available option and let you know before we proceed.
+
+Once you've had a look at the scope document and the visualiser demo, let us know if anything needs adjusting. Happy to get started as soon as you're ready.
+
+We work on 50% to kick things off and 50% on delivery.
+
+Bhavesh
+bhavesh@factoryjet.com

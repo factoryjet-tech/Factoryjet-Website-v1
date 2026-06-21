@@ -62,21 +62,21 @@ const TESTIMONIALS: Testimonial[] = [
     role: 'Founder, Belle Maison',
     city: 'Mumbai, MH',
     quote:
-      'We were live in 6 days — I genuinely did not believe that was possible. The design is stunning, the WhatsApp integration brings in enquiries every day, and the Lighthouse score has not moved from 100.',
+      'We were live in 6 days, I genuinely did not believe that was possible. The design is stunning, the WhatsApp integration brings in inquiries every day, and the site has stayed lightning fast.',
     industry: 'Interior Décor · Web Design',
     warmAvatar: true,
-    avatarUrl: '/images/testimonials/ricky-b.webp',
+    avatarUrl: '/images/testimonials/ricky-belle-maison-160.webp',
   },
   {
     initials: 'VK',
     name: 'Vishal K.',
-    role: 'Director, Bombay Petals',
+    role: 'Director, Impulse Branding',
     city: 'Mumbai, MH',
     quote:
-      'Our B2B catalogue was a nightmare to manage. FactoryJet built us a clean Shopify store with GST invoicing and a wholesale pricing module — our distributor onboarding time dropped from days to hours.',
-    industry: 'B2B · Shopify E-Commerce',
+      'In our business, clients size you up before they ever call. FactoryJet built us a website that finally looks as solid as the work we deliver, and we are getting real project inquiries through it.',
+    industry: 'Print branding · Web',
     warmAvatar: false,
-    avatarUrl: '/images/testimonials/vishal-k.webp',
+    avatarUrl: '/images/testimonials/vishal-impulse-branding-160.webp',
   },
   {
     initials: 'AK',

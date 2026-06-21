@@ -679,7 +679,7 @@ export default function LakewoodRanchSEO() {
               />
             </div>
             <div className="clients">
-              {['Formative Concepts', 'Belle Maison', 'Bombay Petals', 'Impulse Branding', '500+ businesses served'].map(
+              {['Formative Concepts', 'Belle Maison', 'Impulse Branding', '500+ businesses served'].map(
                 (c) => <span key={c}>{c}</span>
               )}
             </div>

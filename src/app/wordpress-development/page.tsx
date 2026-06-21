@@ -1213,7 +1213,6 @@ export default function WordPressDevelopmentPage() {
               <div className="divide-y divide-fj-neutral-100 px-7">
                 {[
                   { client: 'Belle Maison', type: 'WooCommerce Store', industry: 'Home Décor', result: 'Razorpay + Shiprocket, 2.1s load' },
-                  { client: 'Bombay Petals', type: 'B2B WordPress Site', industry: 'Artificial Plants / Decor', result: 'Custom WP theme, WhatsApp inquiry flow' },
                   { client: 'Formative Concepts', type: 'Portfolio + Blog', industry: 'MEP / BIM Consulting', result: 'Service CPTs, case study templates, Lighthouse 91' },
                 ].map((item) => (
                   <div key={item.client} className="py-4">
