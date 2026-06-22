@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useContactModal } from "@/context/ContactModalContext";
 import AuthorByline from "@/components/AuthorByline";
+import { submitLead } from "@/utils/submitLead";
 
 /* ═══════════════════════════════════════════════════════════
    GLOBAL CSS — Mobile-First Responsive, Lighthouse 100 Optimized
@@ -680,7 +681,7 @@ function FormModal({ isOpen, onClose, cityName }) {
           </div>}
           <div style={{display:"flex",gap:12,marginTop:8}}>
             {step>1&&<button onClick={()=>{setErrors({});setStep(step-1);}} className="fj-btn" style={{flex:"0 0 auto",padding:"12px 22px",border:"1.5px solid var(--border)",background:"#fff",color:"var(--gray)",fontSize:14,boxShadow:"none"}}>← Back</button>}
-            <button onClick={()=>{if(validate(step)){step<3?setStep(step+1):(()=>{console.log("Submit:",{...form,city:cityName});setDone(true);if(typeof window!=="undefined"&&typeof window.gtag==="function"){window.gtag("event","conversion",{send_to:"AW-11127037244/aqsvCJCk8ZQcELy65Lkp"})}})();}}} className={`fj-btn ${step<3?"fj-btn-blue":"fj-btn-primary"}`} style={{flex:1,fontSize:15}}>{step<3?<>Continue <Arr s={14}/></>:<>Submit Request <Arr s={14}/></>}</button>
+            <button onClick={()=>{if(validate(step)){step<3?setStep(step+1):(async()=>{try{await submitLead({name:form.fullName,email:form.email,phone:form.phone,company:form.companyName,service:form.service,message:form.message,region:"us",source:"legacy_city_"+cityName,collection:"contactus"});}catch(e){/* server-first capture; ignore */}setDone(true);})();}}} className={`fj-btn ${step<3?"fj-btn-blue":"fj-btn-primary"}`} style={{flex:1,fontSize:15}}>{step<3?<>Continue <Arr s={14}/></>:<>Submit Request <Arr s={14}/></>}</button>
           </div>
           <p style={{fontSize:11,color:"var(--gray-light)",textAlign:"center",margin:"14px 0 0"}}>🔒 Secure & encrypted. We respond within 24 hours.</p>
         </div>

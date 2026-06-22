@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Calendar, Clock, CheckCircle, Loader2, ChevronLeft, ChevronRight } from 'lucide-react';
 import { trackModalOpen, trackModalClose, trackFormSubmit, trackFormSuccess, trackFormError } from '../utils/gtm';
 import { useRouter } from 'next/navigation';
+import { submitLead } from '../utils/submitLead';
 
 interface ScheduleCallModalProps {
   isOpen: boolean;
@@ -132,47 +133,19 @@ const ScheduleCallModal: React.FC<ScheduleCallModalProps> = ({
     });
 
     try {
-      const { doc, setDoc, serverTimestamp } = await import('firebase/firestore');
-      const { initFirebase } = await import('../firebase');
-      const { db } = await initFirebase();
-
-      if (!db) {
-        throw new Error('Firebase not initialized');
-      }
-
-      const now = new Date();
-      const dateStr = now.toISOString().split('T')[0];
-      const timeStr = now.toTimeString().split(' ')[0].replace(/:/g, '-');
-      const namePart = formData.name.replace(/\s+/g, '').slice(0, 15);
-      const docId = `${city}_call_${dateStr}_${timeStr}_${namePart}`;
-
-      await setDoc(doc(db, 'location_leads', docId), {
-        ...formData,
-        city,
-        createdAt: serverTimestamp(),
-        status: 'scheduled',
+      // Durable, server-first capture — never blocks on the browser Firestore SDK.
+      const { docId } = await submitLead({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone || '',
+        service: 'Call booking',
+        message: `Requested call: ${formData.selectedDate} at ${formData.selectedTime} (${city})`,
+        region: 'in',
         source: 'schedule_call_modal',
-        type: 'call_booking',
+        collection: 'location_leads',
       });
 
       trackFormSuccess('schedule_call_form');
-
-      // Lead notification email (keepalive so it completes through the redirect).
-      fetch('/api/notify-lead', {
-        method: 'POST',
-        keepalive: true,
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone || '',
-          company: '',
-          service: 'Call booking',
-          message: `Requested call: ${formData.selectedDate} at ${formData.selectedTime} (${city})`,
-          region: 'in',
-          page: typeof window !== 'undefined' ? window.location.pathname : '',
-        }),
-      }).catch(() => {});
 
       // Conversion fires on /thank-you (single source of truth). No PII in URL.
       onClose();

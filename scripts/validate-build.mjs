@@ -204,6 +204,49 @@ try {
   }
 } catch { /* no _redirects */ }
 
+/* ── 6. lead-capture forms must use the durable submitLead path ──────────── */
+// Root cause of the 2026-06-22 lead outage: forms wrote leads with an AWAITED
+// `setDoc(...)` against the browser Firestore SDK (which can hang forever with
+// no error), or just `console.log`'d the data, or rendered inputs that were
+// never captured at all (the Sheffield decorative form). Every lead form must
+// route through src/utils/submitLead.ts (server-first, non-blocking). These
+// checks make that impossible to regress. To intentionally exempt a file, add
+// it to LEAD_FORM_ALLOW with a comment explaining why.
+const LEAD_FORM_SELF = /utils[\\/]submitLead\.(ts|js)$/;       // the helper itself
+const LEAD_FORM_ALLOW = new Set([
+  // Dead legacy blog template (NOT rendered — live blog is src/app/blog). Its
+  // newsletter input is off-brand template cruft, not a sales-lead form; should
+  // be deleted rather than wired into the lead pipeline. Allowlisted 2026-06-22.
+  'src/lib/legacy-pages/Blog/App.tsx',
+]);
+for (const f of srcFiles) {
+  if (LEAD_FORM_SELF.test(f) || LEAD_FORM_ALLOW.has(rel(f))) continue;
+  const text = readFileSync(f, 'utf8');
+
+  // (a) Fake submit — console.log("Submit"...) with no real capture.
+  if (/console\.log\(\s*["'`]\s*submit/i.test(text)) {
+    fatals.push(`${rel(f)} — fake form submit (console.log("Submit"...)); route it through submitLead() so the lead is saved + emailed.`);
+  }
+
+  // (b) Blocking client Firestore write. submitLead uses a NON-awaited best-effort
+  //     write; an AWAITED setDoc/addDoc hangs the form if the SDK stalls.
+  const mWrite = text.match(/await\s+(setDoc|addDoc)\s*\(/);
+  if (mWrite) {
+    fatals.push(`${rel(f)} — awaited ${mWrite[1]}() blocks the form on the browser Firestore SDK (can hang forever); use submitLead() instead.`);
+  }
+
+  // (c) Decorative lead form — a raw email input in a file that never reaches
+  //     submitLead (directly or via a known durable form component).
+  if (/type=["']email["']/.test(text)) {
+    const usesDurable =
+      /submitLead/.test(text) ||
+      /<(LeadFormInline|ContactFormModal|HeroInlineForm)\b/.test(text);
+    if (!usesDurable) {
+      fatals.push(`${rel(f)} — raw email input not wired to submitLead (decorative form discards the lead); wire it through submitLead() or render <LeadFormInline/>.`);
+    }
+  }
+}
+
 /* ── report ──────────────────────────────────────────────────────────────── */
 const promotePositioning = STRICT || POSITIONING_FATAL;
 const hardFails = [...fatals, ...(promotePositioning ? warns : [])];

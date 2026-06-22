@@ -3,10 +3,12 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { CheckCircle2, Menu, X, Monitor, Bot, ShoppingCart, RefreshCw, TrendingUp } from "lucide-react";
 import { useContactModal } from "@/context/ContactModalContext";
+import { submitLead } from "@/utils/submitLead";
 
 const PricingSection = dynamic(
   () => import("@/components/sections/PricingSection"),
@@ -223,6 +225,45 @@ export default function SheffieldPage() {
   const [menuOpen,      setMenuOpen]      = useState(false);
   const [statsVisible,  setStatsVisible]  = useState(false);
   const { openModal } = useContactModal();
+  const router = useRouter();
+
+  // ── Inline lead form (Sheffield) — captures the fields the visitor actually
+  //    typed and routes them through the durable submitLead path. Previously the
+  //    button just opened a blank modal and DISCARDED everything typed here.
+  const [lead, setLead] = useState({ name: "", business: "", email: "", pkg: "", message: "" });
+  const [leadSending, setLeadSending] = useState(false);
+  const [leadErr, setLeadErr] = useState<string | null>(null);
+  const leadEmailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(lead.email);
+  const setLeadField = (k: keyof typeof lead) => (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => setLead((p) => ({ ...p, [k]: e.target.value }));
+
+  const handleLeadSubmit = async () => {
+    if (leadSending) return;
+    if (!lead.name.trim() || !leadEmailOk) {
+      setLeadErr("Please enter your name and a valid email.");
+      return;
+    }
+    setLeadSending(true);
+    setLeadErr(null);
+    try {
+      const { docId } = await submitLead({
+        name: lead.name,
+        email: lead.email,
+        company: lead.business,
+        service: lead.pkg,
+        message: lead.message,
+        region: "uk",
+        source: "sheffield_inline",
+      });
+      router.push(
+        `/thank-you?source=sheffield_inline&service=${encodeURIComponent(lead.pkg || "unknown")}&lid=${encodeURIComponent(docId)}`
+      );
+    } catch {
+      setLeadSending(false);
+      setLeadErr("Something went wrong. Please try again.");
+    }
+  };
 
   // Section refs
   const headingRef  = useRef<HTMLHeadingElement>(null);
@@ -1457,6 +1498,8 @@ export default function SheffieldPage() {
                       id="name"
                       type="text"
                       placeholder="Your full name"
+                      value={lead.name}
+                      onChange={setLeadField("name")}
                       className="bg-[#0a0a0a] border border-white/[0.1] rounded-lg px-4 py-3 text-[14px] text-white placeholder-white/20 focus:outline-none focus:border-[#F05A28]/60 transition-colors duration-200"
                     />
                   </div>
@@ -1468,6 +1511,8 @@ export default function SheffieldPage() {
                       id="business"
                       type="text"
                       placeholder="Business name"
+                      value={lead.business}
+                      onChange={setLeadField("business")}
                       className="bg-[#0a0a0a] border border-white/[0.1] rounded-lg px-4 py-3 text-[14px] text-white placeholder-white/20 focus:outline-none focus:border-[#F05A28]/60 transition-colors duration-200"
                     />
                   </div>
@@ -1480,6 +1525,8 @@ export default function SheffieldPage() {
                     id="email"
                     type="email"
                     placeholder="your@email.com"
+                    value={lead.email}
+                    onChange={setLeadField("email")}
                     className="bg-[#0a0a0a] border border-white/[0.1] rounded-lg px-4 py-3 text-[14px] text-white placeholder-white/20 focus:outline-none focus:border-[#F05A28]/60 transition-colors duration-200"
                   />
                 </div>
@@ -1489,7 +1536,8 @@ export default function SheffieldPage() {
                   </label>
                   <select
                     id="package"
-                    defaultValue=""
+                    value={lead.pkg}
+                    onChange={setLeadField("pkg")}
                     className="bg-[#0a0a0a] border border-white/[0.1] rounded-lg px-4 py-3 text-[14px] text-white/60 focus:outline-none focus:border-[#F05A28]/60 transition-colors duration-200"
                   >
                     <option value="" disabled>Select a package</option>
@@ -1507,17 +1555,25 @@ export default function SheffieldPage() {
                     id="message"
                     rows={4}
                     placeholder="What does your business do? What are you looking to achieve with your website?"
+                    value={lead.message}
+                    onChange={setLeadField("message")}
                     className="bg-[#0a0a0a] border border-white/[0.1] rounded-lg px-4 py-3 text-[14px] text-white placeholder-white/20 focus:outline-none focus:border-[#F05A28]/60 transition-colors duration-200 resize-none"
                   />
                 </div>
                 <button
                   type="button"
-                  onClick={() => openModal('uk')}
-                  className="group w-full bg-[#FF6B35] hover:bg-[#ff8255] text-white text-[15px] font-semibold px-6 py-4 rounded-lg transition-all duration-200 hover:-translate-y-[1px] flex items-center justify-center gap-2"
+                  onClick={handleLeadSubmit}
+                  disabled={leadSending}
+                  className="group w-full bg-[#FF6B35] hover:bg-[#ff8255] disabled:opacity-70 text-white text-[15px] font-semibold px-6 py-4 rounded-lg transition-all duration-200 hover:-translate-y-[1px] flex items-center justify-center gap-2"
                 >
-                  Get My Free Proposal
-                  <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
+                  {leadSending ? "Sending…" : "Get My Free Proposal"}
+                  {!leadSending && (
+                    <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
+                  )}
                 </button>
+                {leadErr && (
+                  <p className="text-[12px] text-[#ff8255] text-center">{leadErr}</p>
+                )}
                 <p className="text-[12px] text-white/25 text-center">
                   We respond within 24 hours. No spam, ever.
                 </p>

@@ -41,7 +41,7 @@ async function writeLeadToFirestore(env, lead) {
   const docId   = (lead.docId && String(lead.docId).replace(/[^A-Za-z0-9_-]/g, '')) ||
                   `${new Date().toISOString().replace(/[:.]/g, '-')}_${(lead.name || 'lead').replace(/\s+/g, '').slice(0, 15)}`;
   // Collection allow-list — never let the client write to an arbitrary path.
-  const ALLOWED = ['contactus', 'contactpage'];
+  const ALLOWED = ['contactus', 'contactpage', 'location_leads'];
   const collection = ALLOWED.includes(lead.collection) ? lead.collection : 'contactus';
 
   const url = `https://firestore.googleapis.com/v1/projects/${project}/databases/(default)/documents/${collection}/${encodeURIComponent(docId)}?key=${apiKey}`;
