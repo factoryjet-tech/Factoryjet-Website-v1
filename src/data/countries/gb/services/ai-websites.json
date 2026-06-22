@@ -1,0 +1,40 @@
+{
+  "slug": "ai-websites",
+  "name": "AI Websites",
+  "tagline": "AI-Powered Websites That Learn From Your Visitors",
+  "shortDescription": "Websites with intelligent automation, personalization, and AI-driven conversion optimization.",
+  "primaryKeyword": "ai website [city]",
+  "secondaryKeywords": [
+    "ai-powered website [city]",
+    "intelligent website design [city]",
+    "automated website [city]",
+    "ai business website [city]",
+    "smart website builder [city]"
+  ],
+  "heroHeadline": "AI-Powered Websites in {cityName} That Drive Exponential Growth",
+  "pricingRange": {
+    "min": 2500,
+    "max": 12000,
+    "currency": "GBP"
+  },
+  "localAvgMultiplier": 3.5,
+  "deliveryWeeks": {
+    "standard": 6,
+    "express": 3
+  },
+  "techStack": [
+    "Next.js 15",
+    "OpenAI API",
+    "Vercel AI SDK",
+    "Tailwind CSS"
+  ],
+  "relatedServices": [
+    "web-design",
+    "ai-agents"
+  ],
+  "platforms": [
+    "nextjs",
+    "webflow",
+    "custom"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "newcastle",
+  "name": "Newcastle",
+  "region": "Tyne & Wear",
+  "country": "England",
+  "population": 300000,
+  "businesses": 16000,
+  "gdpBn": 11.8,
+  "primaryIndustries": [
+    "Technology & Digital",
+    "Healthcare",
+    "Professional Services",
+    "Energy"
+  ],
+  "keyEmployers": [
+    "Sage",
+    "Newcastle University",
+    "Northern Rock",
+    "NHS North East",
+    "British Energy"
+  ],
+  "avgAgencyPricing": {
+    "webDesign": 3600,
+    "ecommerce": 7000,
+    "seo": 950,
+    "aiAgents": 0
+  },
+  "localAgencies": {
+    "web-design": [
+      "Newcastle Digital",
+      "North East Web Design",
+      "Creative Newcastle"
+    ],
+    "seo": [
+      "Newcastle SEO",
+      "North East Marketing",
+      "Digital Boost"
+    ]
+  },
+  "keyStats": {
+    "digitalBusinessGrowth": "21% YoY",
+    "smeCount": 14000,
+    "techJobs": 6000,
+    "avgSalary": 30000
+  },
+  "cityAreas": [
+    "Newcastle City Centre",
+    "Quayside",
+    "Gateshead Quays",
+    "Baltic",
+    "Ouseburn"
+  ],
+  "newsHook": "Sage headquarters expansion creates 1,000 tech and data jobs in Newcastle",
+  "heroImage": "/images/uk/newcastle/hero-newcastle.webp",
+  "coordinates": {
+    "lat": 54.9783,
+    "lng": -1.6178
+  }
+}

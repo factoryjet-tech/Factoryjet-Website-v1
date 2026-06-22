@@ -1,0 +1,59 @@
+{
+  "slug": "bristol",
+  "name": "Bristol",
+  "region": "South West",
+  "country": "England",
+  "population": 470000,
+  "businesses": 25000,
+  "gdpBn": 28.5,
+  "primaryIndustries": [
+    "Aerospace & Defence",
+    "Technology",
+    "Creative Industries",
+    "Media"
+  ],
+  "keyEmployers": [
+    "Airbus UK",
+    "Rolls-Royce",
+    "HP Inc",
+    "GE Aviation",
+    "BBC Natural History Unit"
+  ],
+  "avgAgencyPricing": {
+    "webDesign": 4800,
+    "ecommerce": 8500,
+    "seo": 1300,
+    "aiAgents": 0
+  },
+  "localAgencies": {
+    "web-design": [
+      "Ferocious",
+      "Outlandish",
+      "Bristol Web Design"
+    ],
+    "seo": [
+      "SEO West",
+      "Rise.co.uk",
+      "Bristol SEO Services"
+    ]
+  },
+  "keyStats": {
+    "digitalBusinessGrowth": "20% YoY",
+    "smeCount": 22000,
+    "techJobs": 9500,
+    "avgSalary": 33000
+  },
+  "cityAreas": [
+    "Bristol City Centre",
+    "Harbourside",
+    "St Paul's",
+    "Bedminster",
+    "Southville"
+  ],
+  "newsHook": "Airbus UK invests £100M in Bristol aerospace campus expansion",
+  "heroImage": "/images/uk/bristol/hero-bristol.webp",
+  "coordinates": {
+    "lat": 51.4545,
+    "lng": -2.5879
+  }
+}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Calendar, Clock, CheckCircle, Loader2, ChevronLeft, ChevronRight } from 'lucide-react';
-import { trackModalOpen, trackModalClose, trackFormSubmit, trackFormSuccess, trackFormError } from '../utils/gtm';
+import { trackModalOpen, trackModalClose, trackFormSubmit, trackFormSuccess, trackFormError, trackFormSubmission } from '../utils/gtm';
 
 interface ScheduleCallModalProps {
   isOpen: boolean;
@@ -28,6 +28,12 @@ const TIME_SLOTS = [
   '6:00 PM',
 ];
 
+// Helper to get initial month - returns null on server, Date on client
+const getInitialMonth = () => {
+  if (typeof window === 'undefined') return null;
+  return new Date();
+};
+
 const ScheduleCallModal: React.FC<ScheduleCallModalProps> = ({
   isOpen,
   onClose,
@@ -44,7 +50,14 @@ const ScheduleCallModal: React.FC<ScheduleCallModalProps> = ({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [currentMonth, setCurrentMonth] = useState(new Date());
+  const [currentMonth, setCurrentMonth] = useState<Date | null>(null);
+  const [isClient, setIsClient] = useState(false);
+
+  // Initialize date on client side only to prevent hydration mismatch
+  React.useEffect(() => {
+    setCurrentMonth(new Date());
+    setIsClient(true);
+  }, []);
 
   React.useEffect(() => {
     if (isOpen) {
@@ -57,7 +70,8 @@ const ScheduleCallModal: React.FC<ScheduleCallModalProps> = ({
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const getDaysInMonth = (date: Date) => {
+  const getDaysInMonth = (date: Date | null) => {
+    if (!date) return { daysInMonth: 0, firstDayOfMonth: 0 };
     const year = date.getFullYear();
     const month = date.getMonth();
     const daysInMonth = new Date(year, month + 1, 0).getDate();
@@ -68,6 +82,7 @@ const ScheduleCallModal: React.FC<ScheduleCallModalProps> = ({
   const { daysInMonth, firstDayOfMonth } = getDaysInMonth(currentMonth);
 
   const isDateSelectable = (day: number) => {
+    if (!currentMonth) return false;
     const date = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), day);
     const today = new Date();
     today.setHours(0, 0, 0, 0);
@@ -76,6 +91,7 @@ const ScheduleCallModal: React.FC<ScheduleCallModalProps> = ({
   };
 
   const formatDate = (day: number) => {
+    if (!currentMonth) return '';
     const date = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), day);
     return date.toISOString().split('T')[0];
   };
@@ -136,6 +152,7 @@ const ScheduleCallModal: React.FC<ScheduleCallModalProps> = ({
       });
 
       trackFormSuccess('schedule_call_form');
+      trackFormSubmission();
       setIsSuccess(true);
     } catch (err) {
       console.error('Error submitting form:', err);
@@ -247,6 +264,7 @@ const ScheduleCallModal: React.FC<ScheduleCallModalProps> = ({
                 <div className="space-y-6">
                   {/* Calendar */}
                   <div>
+                    {currentMonth && (
                     <div className="flex items-center justify-between mb-4">
                       <button
                         onClick={() => setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() - 1))}
@@ -265,6 +283,7 @@ const ScheduleCallModal: React.FC<ScheduleCallModalProps> = ({
                         <ChevronRight className="w-5 h-5" />
                       </button>
                     </div>
+                    )}
 
                     <div className="grid grid-cols-7 gap-1 mb-2">
                       {dayNames.map((day) => (

@@ -1,0 +1,66 @@
+{
+  "slug": "birmingham",
+  "name": "Birmingham",
+  "region": "West Midlands",
+  "country": "England",
+  "canonical": "https://factoryjet.com/uk/birmingham",
+  "meta": {
+    "title": "AI Web Design Agency Birmingham | FactoryJet — UK's AI-Native Agency",
+    "description": "AI-native web design, Shopify development, AI agents and AI SEO for Birmingham's 60,000 businesses. 50–60% below Jewellery Quarter agency rates. From Paradise Quarter to Brindleyplace — built for the second city.",
+    "ogImage": "/images/uk/birmingham/hero-birmingham.webp"
+  },
+  "stats": {
+    "gdp": "£31.9bn",
+    "businesses": "60,000",
+    "metroPopulation": "2.6M+",
+    "regenerationInvestment": "£2.9bn+",
+    "medianAge": 34.4
+  },
+  "districts": [
+    "Digbeth",
+    "Jewellery Quarter",
+    "Brindleyplace",
+    "Grand Central",
+    "Colmore Business District",
+    "Smithfield",
+    "Paradise Quarter",
+    "Erdington",
+    "Tyseley"
+  ],
+  "keyEmployers": [
+    "HSBC UK HQ",
+    "Goldman Sachs",
+    "Deutsche Bank",
+    "JLR",
+    "Gowling WLG",
+    "Pinsent Masons"
+  ],
+  "competitors": [
+    "KIJO",
+    "ALT Agency",
+    "Republic Marketing",
+    "Eastside Co",
+    "Opace",
+    "magic42",
+    "Accentuate Agency",
+    "M3.agency",
+    "Chameleon Web Services"
+  ],
+  "industries": [
+    "Manufacturing",
+    "Retail",
+    "Finance",
+    "Professional Services",
+    "Legal",
+    "Property"
+  ],
+  "geo": {
+    "latitude": 52.4862,
+    "longitude": -1.8904
+  },
+  "codeTicker": "const birmingham = { stack: 'next15', ai: 'claude-api', deploy: 'vercel', seo: 'lighthouse-100', city: 'birmingham', region: 'west-midlands', hs2: true }",
+  "watermark": "BHM",
+  "heroImage": "/images/uk/birmingham/hero-birmingham.webp",
+  "cityImage": "/images/uk/city-birmingham.jpg",
+  "hs2": true
+}

@@ -6,14 +6,40 @@ declare global {
   }
 }
 
-// Ensure dataLayer exists
-if (typeof window !== 'undefined') {
-  window.dataLayer = window.dataLayer || [];
-}
+// Google Ads Conversion Labels
+export const CONVERSIONS = {
+  WHATSAPP_CLICK:  "AW-11127037244/N5PhCPWusNQbELy65Lkp", // already live
+  FORM_SUBMISSION: "AW-11127037244/aqsvCJCk8ZQcELy65Lkp", // form submit conversion
+};
 
-// Push event to dataLayer
+// Fire a Google Ads form submission conversion event via gtag
+export const trackFormSubmission = () => {
+  if (
+    typeof window !== "undefined" &&
+    typeof (window as any).gtag === "function"
+  ) {
+    (window as any).gtag("event", "conversion", {
+      send_to: CONVERSIONS.FORM_SUBMISSION,
+    });
+  }
+};
+
+// Fire a Google Ads WhatsApp/Call click conversion event via gtag
+export const trackWhatsAppConversion = () => {
+  if (
+    typeof window !== "undefined" &&
+    typeof (window as any).gtag === "function"
+  ) {
+    (window as any).gtag("event", "conversion", {
+      send_to: CONVERSIONS.WHATSAPP_CLICK,
+    });
+  }
+};
+
+// Push event to dataLayer - lazily initialize dataLayer
 export const pushToDataLayer = (data: Record<string, unknown>) => {
-  if (typeof window !== 'undefined' && window.dataLayer) {
+  if (typeof window !== 'undefined') {
+    window.dataLayer = window.dataLayer || [];
     window.dataLayer.push(data);
   }
 };
@@ -150,9 +176,9 @@ export const trackSocialClick = (platform: string, location: string) => {
   });
 };
 
-// Track phone/email clicks
+// Track phone/email/whatsapp clicks
 export const trackContactClick = (
-  contactType: 'phone' | 'email',
+  contactType: 'phone' | 'email' | 'whatsapp',
   contactValue: string,
   location: string
 ) => {

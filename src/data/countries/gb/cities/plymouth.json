@@ -1,0 +1,59 @@
+{
+  "slug": "plymouth",
+  "name": "Plymouth",
+  "region": "Devon",
+  "country": "England",
+  "population": 260000,
+  "businesses": 11000,
+  "gdpBn": 8.8,
+  "primaryIndustries": [
+    "Maritime & Defence",
+    "Tourism & Hospitality",
+    "Professional Services",
+    "Technology"
+  ],
+  "keyEmployers": [
+    "MOD Naval Base",
+    "University of Plymouth",
+    "Babcock International",
+    "Dstl",
+    "Devon & Cornwall Police"
+  ],
+  "avgAgencyPricing": {
+    "webDesign": 3600,
+    "ecommerce": 7000,
+    "seo": 950,
+    "aiAgents": 0
+  },
+  "localAgencies": {
+    "web-design": [
+      "Plymouth Web Design",
+      "Southwest Digital",
+      "Creative Plymouth"
+    ],
+    "seo": [
+      "Plymouth SEO Agency",
+      "Southwest Marketing",
+      "Local Search Plymouth"
+    ]
+  },
+  "keyStats": {
+    "digitalBusinessGrowth": "15% YoY",
+    "smeCount": 10000,
+    "techJobs": 3500,
+    "avgSalary": 28500
+  },
+  "cityAreas": [
+    "Plymouth City Centre",
+    "The Hoe",
+    "Barbican",
+    "Sutton Harbour",
+    "Devonport"
+  ],
+  "newsHook": "£300M Plymouth Waterfront development creates 800 new maritime sector jobs",
+  "heroImage": "/images/uk/plymouth/hero-plymouth.webp",
+  "coordinates": {
+    "lat": 50.3755,
+    "lng": -4.1427
+  }
+}

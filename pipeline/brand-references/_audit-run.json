@@ -1,0 +1,252 @@
+{
+  "audit_started_at": "2026-04-29T04:57:35Z",
+  "audit_completed_at": "2026-04-29T05:16:19Z",
+  "total_sites": 20,
+  "sites_with_all_5_captures": 5,
+  "sites_with_partial_captures": 15,
+  "sites_failed_entirely": 0,
+  "total_captures": 70,
+  "missing_by_category": {
+    "service": 7,
+    "feature": 6,
+    "blog": 6,
+    "pricing": 11
+  },
+  "per_site": [
+    {
+      "slug": "qvery-ai",
+      "captured": [
+        "homepage",
+        "pricing"
+      ],
+      "missing": [
+        "service",
+        "feature",
+        "blog"
+      ]
+    },
+    {
+      "slug": "tillerdigital-com",
+      "captured": [
+        "homepage",
+        "service",
+        "feature",
+        "blog"
+      ],
+      "missing": [
+        "pricing"
+      ]
+    },
+    {
+      "slug": "voxr-ai",
+      "captured": [
+        "homepage",
+        "service",
+        "pricing"
+      ],
+      "missing": [
+        "feature",
+        "blog"
+      ]
+    },
+    {
+      "slug": "mygomseo-com",
+      "captured": [
+        "homepage",
+        "service",
+        "pricing",
+        "feature",
+        "blog"
+      ],
+      "missing": []
+    },
+    {
+      "slug": "spade-com",
+      "captured": [
+        "homepage",
+        "service",
+        "feature",
+        "blog"
+      ],
+      "missing": [
+        "pricing"
+      ]
+    },
+    {
+      "slug": "nextsense-io",
+      "captured": [
+        "homepage",
+        "service",
+        "blog"
+      ],
+      "missing": [
+        "pricing",
+        "feature"
+      ]
+    },
+    {
+      "slug": "ausdata-ai",
+      "captured": [
+        "homepage",
+        "service",
+        "blog"
+      ],
+      "missing": [
+        "pricing",
+        "feature"
+      ]
+    },
+    {
+      "slug": "jenamdvacetpet-cz",
+      "captured": [
+        "homepage"
+      ],
+      "missing": [
+        "service",
+        "pricing",
+        "feature",
+        "blog"
+      ]
+    },
+    {
+      "slug": "theboathouse-agency",
+      "captured": [
+        "homepage",
+        "feature"
+      ],
+      "missing": [
+        "service",
+        "pricing",
+        "blog"
+      ]
+    },
+    {
+      "slug": "digitalflagship-com",
+      "captured": [
+        "homepage",
+        "service",
+        "feature",
+        "blog"
+      ],
+      "missing": [
+        "pricing"
+      ]
+    },
+    {
+      "slug": "galvanite-io",
+      "captured": [
+        "homepage",
+        "feature",
+        "blog"
+      ],
+      "missing": [
+        "service",
+        "pricing"
+      ]
+    },
+    {
+      "slug": "madeinevolve-com",
+      "captured": [
+        "homepage",
+        "service",
+        "feature"
+      ],
+      "missing": [
+        "pricing",
+        "blog"
+      ]
+    },
+    {
+      "slug": "olyablack-com",
+      "captured": [
+        "homepage",
+        "feature",
+        "blog"
+      ],
+      "missing": [
+        "service",
+        "pricing"
+      ]
+    },
+    {
+      "slug": "natboos-com",
+      "captured": [
+        "homepage",
+        "pricing"
+      ],
+      "missing": [
+        "service",
+        "feature",
+        "blog"
+      ]
+    },
+    {
+      "slug": "onething-design",
+      "captured": [
+        "homepage",
+        "service",
+        "feature",
+        "blog"
+      ],
+      "missing": [
+        "pricing"
+      ]
+    },
+    {
+      "slug": "stripe-com",
+      "captured": [
+        "homepage",
+        "service",
+        "pricing",
+        "feature",
+        "blog"
+      ],
+      "missing": []
+    },
+    {
+      "slug": "linear-app",
+      "captured": [
+        "homepage",
+        "pricing",
+        "feature",
+        "blog"
+      ],
+      "missing": [
+        "service"
+      ]
+    },
+    {
+      "slug": "vercel-com",
+      "captured": [
+        "homepage",
+        "service",
+        "pricing",
+        "feature",
+        "blog"
+      ],
+      "missing": []
+    },
+    {
+      "slug": "resend-com",
+      "captured": [
+        "homepage",
+        "service",
+        "pricing",
+        "feature",
+        "blog"
+      ],
+      "missing": []
+    },
+    {
+      "slug": "mintlify-com",
+      "captured": [
+        "homepage",
+        "service",
+        "pricing",
+        "feature",
+        "blog"
+      ],
+      "missing": []
+    }
+  ]
+}

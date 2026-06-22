@@ -1,0 +1,852 @@
+{
+  "slug": "onething-design",
+  "category": "taste",
+  "homepage": "https://onething.design",
+  "captured_at": "2026-04-29T05:12:24Z",
+  "pages": {
+    "homepage": {
+      "url": "https://www.onething.design/",
+      "screenshot": "screenshots/homepage.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#1A1A1A",
+              "count": 22
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 8
+            },
+            {
+              "hex": "#000000",
+              "count": 7
+            },
+            {
+              "hex": "#F2F2F2",
+              "count": 7
+            },
+            {
+              "hex": "#0A0A0A",
+              "count": 4
+            },
+            {
+              "hex": "#E91010",
+              "count": 3
+            },
+            {
+              "hex": "#121212",
+              "count": 3
+            },
+            {
+              "hex": "#FDFDFD",
+              "count": 2
+            }
+          ],
+          "text": [
+            {
+              "hex": "#000000",
+              "count": 897
+            },
+            {
+              "hex": "#E2E2E2",
+              "count": 465
+            },
+            {
+              "hex": "#F2F2F2",
+              "count": 439
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 300
+            },
+            {
+              "hex": "#E91010",
+              "count": 153
+            },
+            {
+              "hex": "#121212",
+              "count": 68
+            },
+            {
+              "hex": "#808080",
+              "count": 53
+            },
+            {
+              "hex": "#1A1A1A",
+              "count": 47
+            }
+          ],
+          "border": [
+            {
+              "hex": "#E2E2E2",
+              "count": 20
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 9
+            },
+            {
+              "hex": "#767676",
+              "count": 1
+            }
+          ]
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "\"Plusjakartasans Var\", sans-serif",
+              "count": 2243
+            },
+            {
+              "value": "\"Times Ce (3)\", sans-serif",
+              "count": 126
+            },
+            {
+              "value": "sans-serif",
+              "count": 57
+            },
+            {
+              "value": "webflow-icons",
+              "count": 4
+            },
+            {
+              "value": "\"Plusjakartasans Italic Var\", sans-serif",
+              "count": 4
+            },
+            {
+              "value": "\"Times New Roman\"",
+              "count": 2
+            }
+          ],
+          "font_sizes_px": [
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            40,
+            56,
+            84,
+            88,
+            96,
+            110
+          ],
+          "font_weights": [
+            {
+              "value": "300",
+              "count": 2121
+            },
+            {
+              "value": "500",
+              "count": 196
+            },
+            {
+              "value": "400",
+              "count": 103
+            },
+            {
+              "value": "200",
+              "count": 8
+            },
+            {
+              "value": "600",
+              "count": 6
+            },
+            {
+              "value": "700",
+              "count": 3
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "24px",
+              "count": 1464
+            },
+            {
+              "value": "36px",
+              "count": 156
+            },
+            {
+              "value": "21px",
+              "count": 127
+            },
+            {
+              "value": "30px",
+              "count": 114
+            },
+            {
+              "value": "96px",
+              "count": 85
+            },
+            {
+              "value": "38.4px",
+              "count": 55
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "0.64px",
+              "count": 25
+            },
+            {
+              "value": "0.28px",
+              "count": 12
+            },
+            {
+              "value": "1px",
+              "count": 11
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            1,
+            4,
+            8,
+            12,
+            15,
+            18,
+            24,
+            30,
+            36,
+            40,
+            45,
+            48
+          ],
+          "margin_px": [
+            1,
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            30,
+            40,
+            48,
+            64,
+            76
+          ],
+          "gap_px": [
+            6,
+            12,
+            15,
+            20,
+            24,
+            28,
+            32,
+            40,
+            44,
+            48,
+            56,
+            60
+          ]
+        },
+        "radii": [
+          {
+            "value": "110px",
+            "count": 18
+          },
+          {
+            "value": "100%",
+            "count": 11
+          },
+          {
+            "value": "50%",
+            "count": 10
+          },
+          {
+            "value": "200px",
+            "count": 7
+          },
+          {
+            "value": "40px",
+            "count": 6
+          },
+          {
+            "value": "50px",
+            "count": 5
+          },
+          {
+            "value": "4px",
+            "count": 2
+          },
+          {
+            "value": "14px",
+            "count": 1
+          }
+        ],
+        "shadows": [],
+        "gradients_used": true,
+        "gradient_count": 20,
+        "css_variables": {
+          "--background-color--background-alternate": "black",
+          "--base-color-system--error-red-light": "#fef3f2",
+          "--base-color-brand--white<deleted|relume-variable-color-primary-2>": "white",
+          "--dark-red": "#cf0c0c",
+          "--black-archive<deleted|variable-dccb7db6>": "black",
+          "--border-color--border-primary": "black",
+          "--dark--text-light": "gray",
+          "--red--number-text": "white",
+          "--red--nav-btn-bg": "#cf0c0c",
+          "--white": "white",
+          "--base-color-system--error-red": "#b42318",
+          "--white--background": "white",
+          "--background-color--background-tertiary<deleted|relume-variable-background-color-3>": "#aaa",
+          "--text-color--text-success": "#027a48",
+          "--dark--number-text": "#e91010",
+          "--white--nav-btn-bg": "#cf0c0c",
+          "--text-color--text-secondary": "black",
+          "--base-color-system--success-green-light": "#ecfdf3",
+          "--text-color--text-error": "#b42318",
+          "--background-color--background-success": "#ecfdf3",
+          "--color--project-bg": "#1a1a1a",
+          "--color--text": "#121212",
+          "--link-color--link-primary<deleted|relume-variable-link-color-1>": "black",
+          "--dark--background": "#0a0a0a",
+          "--base-color-neutral--neutral-light<deleted|relume-variable-color-neutral-5>": "#aaa",
+          "--fs-list-renderindex": "0",
+          "--color--background": "white",
+          "--background-color--background-error": "#fef3f2",
+          "--dark--cta-form-bg": "white",
+          "--background-color--background-primary": "white",
+          "--text-color--text-primary": "black",
+          "--color--number-text": "#e91010",
+          "--link-color--link-alternate<deleted|relume-variable-link-color-3>": "white",
+          "--base-color-neutral--black": "black",
+          "--dark--nav-btn-bg": "#e91010",
+          "--grey-header": "#f2f2f2",
+          "--grey-background": "#121212",
+          "--white--cta-form-bg": "#1a1a1a",
+          "--color--cta-form-bg": "#1a1a1a",
+          "--red--text-light": "white",
+          "--black": "#1a1a1a",
+          "--border-color--border-alternate": "white",
+          "--base-color-brand--black": "#121212",
+          "--red--project-bg": "#1a1a1a",
+          "--base-color-neutral--neutral-lightest<deleted|relume-variable-color-neutral-3>": "#eee",
+          "--dark--heading-color": "white",
+          "--color--text-light": "gray",
+          "--red--heading-color": "white",
+          "--white--heading-color": "white",
+          "--red--cta-form-bg": "white",
+          "--dark-grey-text": "gray",
+          "--text-color-grey": "#424242",
+          "--one-thing-red": "#e91010",
+          "--dark--project-bg": "#e2e2e20d",
+          "--text-color--text-alternate": "white",
+          "--color--heading-color": "white",
+          "--base-color-neutral--white": "white",
+          "--transparent": "#fff0",
+          "--dark--text": "white",
+          "--red--text": "#f2f2f2",
+          "--white--number-text": "#e91010",
+          "--white--text-light": "gray",
+          "--background-color--background-secondary<deleted|relume-variable-background-color-2>": "#eee",
+          "--red--background": "#e91010",
+          "--color--nav-btn-bg": "#e91010",
+          "--white--text": "black",
+          "--white--project-bg": "#1a1a1a",
+          "--base-color-system--success-green": "#027a48"
+        }
+      }
+    },
+    "service": {
+      "url": "https://www.onething.design/services/digital-products-and-websites",
+      "screenshot": "screenshots/service.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#FFFFFF",
+              "count": 1
+            },
+            {
+              "hex": "#000000",
+              "count": 1
+            }
+          ],
+          "text": [
+            {
+              "hex": "#000000",
+              "count": 43
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 27
+            }
+          ],
+          "border": [
+            {
+              "hex": "#000000",
+              "count": 1
+            }
+          ]
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "sans-serif",
+              "count": 43
+            },
+            {
+              "value": "\"Plusjakartasans Var\", sans-serif",
+              "count": 27
+            }
+          ],
+          "font_sizes_px": [
+            16,
+            32
+          ],
+          "font_weights": [
+            {
+              "value": "400",
+              "count": 43
+            },
+            {
+              "value": "300",
+              "count": 27
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "24px",
+              "count": 26
+            },
+            {
+              "value": "38.4px",
+              "count": 1
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "0.64px",
+              "count": 1
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            8,
+            12,
+            20,
+            24
+          ],
+          "margin_px": [
+            8,
+            15,
+            136
+          ],
+          "gap_px": []
+        },
+        "radii": [],
+        "shadows": [],
+        "gradients_used": false,
+        "gradient_count": 0,
+        "css_variables": {
+          "--background-color--background-alternate": "black",
+          "--base-color-system--error-red-light": "#fef3f2",
+          "--base-color-brand--white<deleted|relume-variable-color-primary-2>": "white",
+          "--dark-red": "#cf0c0c",
+          "--black-archive<deleted|variable-dccb7db6>": "black",
+          "--border-color--border-primary": "black",
+          "--dark--text-light": "gray",
+          "--red--nav-btn-bg": "#cf0c0c",
+          "--red--number-text": "white",
+          "--white": "white",
+          "--base-color-system--error-red": "#b42318",
+          "--white--background": "white",
+          "--background-color--background-tertiary<deleted|relume-variable-background-color-3>": "#aaa",
+          "--text-color--text-success": "#027a48",
+          "--dark--number-text": "#e91010",
+          "--white--nav-btn-bg": "#cf0c0c",
+          "--text-color--text-secondary": "black",
+          "--base-color-system--success-green-light": "#ecfdf3",
+          "--base-color-neutral--neutral-light<deleted|relume-variable-color-neutral-5>": "#aaa",
+          "--color--project-bg": "#1a1a1a",
+          "--background-color--background-success": "#ecfdf3",
+          "--color--text": "#121212",
+          "--link-color--link-primary<deleted|relume-variable-link-color-1>": "black",
+          "--dark--background": "#0a0a0a",
+          "--text-color--text-error": "#b42318",
+          "--fs-list-renderindex": "0",
+          "--color--background": "white",
+          "--background-color--background-error": "#fef3f2",
+          "--dark--cta-form-bg": "white",
+          "--background-color--background-primary": "white",
+          "--text-color--text-primary": "black",
+          "--color--number-text": "#e91010",
+          "--link-color--link-alternate<deleted|relume-variable-link-color-3>": "white",
+          "--base-color-neutral--black": "black",
+          "--dark--nav-btn-bg": "#e91010",
+          "--grey-header": "#f2f2f2",
+          "--grey-background": "#121212",
+          "--white--cta-form-bg": "#1a1a1a",
+          "--color--cta-form-bg": "#1a1a1a",
+          "--red--text-light": "white",
+          "--border-color--border-alternate": "white",
+          "--black": "#1a1a1a",
+          "--base-color-brand--black": "#121212",
+          "--red--project-bg": "#1a1a1a",
+          "--base-color-neutral--neutral-lightest<deleted|relume-variable-color-neutral-3>": "#eee",
+          "--dark--heading-color": "white",
+          "--color--text-light": "gray",
+          "--red--heading-color": "white",
+          "--white--heading-color": "white",
+          "--red--cta-form-bg": "white",
+          "--dark-grey-text": "gray",
+          "--text-color-grey": "#424242",
+          "--one-thing-red": "#e91010",
+          "--dark--project-bg": "#e2e2e20d",
+          "--text-color--text-alternate": "white",
+          "--color--heading-color": "white",
+          "--base-color-neutral--white": "white",
+          "--transparent": "#fff0",
+          "--dark--text": "white",
+          "--red--text": "#f2f2f2",
+          "--white--number-text": "#e91010",
+          "--white--text-light": "gray",
+          "--background-color--background-secondary<deleted|relume-variable-background-color-2>": "#eee",
+          "--red--background": "#e91010",
+          "--color--nav-btn-bg": "#e91010",
+          "--white--text": "black",
+          "--white--project-bg": "#1a1a1a",
+          "--base-color-system--success-green": "#027a48"
+        }
+      }
+    },
+    "feature": {
+      "url": "https://www.onething.design/services/immersive-experiences",
+      "screenshot": "screenshots/feature.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#FFFFFF",
+              "count": 1
+            },
+            {
+              "hex": "#000000",
+              "count": 1
+            }
+          ],
+          "text": [
+            {
+              "hex": "#000000",
+              "count": 43
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 27
+            }
+          ],
+          "border": [
+            {
+              "hex": "#000000",
+              "count": 1
+            }
+          ]
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "sans-serif",
+              "count": 43
+            },
+            {
+              "value": "\"Plusjakartasans Var\", sans-serif",
+              "count": 27
+            }
+          ],
+          "font_sizes_px": [
+            16,
+            32
+          ],
+          "font_weights": [
+            {
+              "value": "400",
+              "count": 43
+            },
+            {
+              "value": "300",
+              "count": 27
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "24px",
+              "count": 26
+            },
+            {
+              "value": "38.4px",
+              "count": 1
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "0.64px",
+              "count": 1
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            8,
+            12,
+            20,
+            24
+          ],
+          "margin_px": [
+            8,
+            15,
+            136
+          ],
+          "gap_px": []
+        },
+        "radii": [],
+        "shadows": [],
+        "gradients_used": false,
+        "gradient_count": 0,
+        "css_variables": {
+          "--background-color--background-alternate": "black",
+          "--base-color-system--error-red-light": "#fef3f2",
+          "--base-color-brand--white<deleted|relume-variable-color-primary-2>": "white",
+          "--dark-red": "#cf0c0c",
+          "--black-archive<deleted|variable-dccb7db6>": "black",
+          "--border-color--border-primary": "black",
+          "--dark--text-light": "gray",
+          "--red--nav-btn-bg": "#cf0c0c",
+          "--red--number-text": "white",
+          "--white": "white",
+          "--base-color-system--error-red": "#b42318",
+          "--white--background": "white",
+          "--background-color--background-tertiary<deleted|relume-variable-background-color-3>": "#aaa",
+          "--text-color--text-success": "#027a48",
+          "--dark--number-text": "#e91010",
+          "--white--nav-btn-bg": "#cf0c0c",
+          "--text-color--text-secondary": "black",
+          "--base-color-system--success-green-light": "#ecfdf3",
+          "--base-color-neutral--neutral-light<deleted|relume-variable-color-neutral-5>": "#aaa",
+          "--color--project-bg": "#1a1a1a",
+          "--background-color--background-success": "#ecfdf3",
+          "--color--text": "#121212",
+          "--link-color--link-primary<deleted|relume-variable-link-color-1>": "black",
+          "--dark--background": "#0a0a0a",
+          "--text-color--text-error": "#b42318",
+          "--fs-list-renderindex": "0",
+          "--color--background": "white",
+          "--background-color--background-error": "#fef3f2",
+          "--dark--cta-form-bg": "white",
+          "--background-color--background-primary": "white",
+          "--text-color--text-primary": "black",
+          "--link-color--link-alternate<deleted|relume-variable-link-color-3>": "white",
+          "--color--number-text": "#e91010",
+          "--base-color-neutral--black": "black",
+          "--dark--nav-btn-bg": "#e91010",
+          "--grey-header": "#f2f2f2",
+          "--grey-background": "#121212",
+          "--white--cta-form-bg": "#1a1a1a",
+          "--color--cta-form-bg": "#1a1a1a",
+          "--red--text-light": "white",
+          "--border-color--border-alternate": "white",
+          "--black": "#1a1a1a",
+          "--base-color-brand--black": "#121212",
+          "--red--project-bg": "#1a1a1a",
+          "--base-color-neutral--neutral-lightest<deleted|relume-variable-color-neutral-3>": "#eee",
+          "--dark--heading-color": "white",
+          "--color--text-light": "gray",
+          "--red--heading-color": "white",
+          "--white--heading-color": "white",
+          "--red--cta-form-bg": "white",
+          "--dark-grey-text": "gray",
+          "--text-color-grey": "#424242",
+          "--one-thing-red": "#e91010",
+          "--dark--project-bg": "#e2e2e20d",
+          "--text-color--text-alternate": "white",
+          "--color--heading-color": "white",
+          "--base-color-neutral--white": "white",
+          "--transparent": "#fff0",
+          "--dark--text": "white",
+          "--red--text": "#f2f2f2",
+          "--white--number-text": "#e91010",
+          "--white--text-light": "gray",
+          "--background-color--background-secondary<deleted|relume-variable-background-color-2>": "#eee",
+          "--red--background": "#e91010",
+          "--color--nav-btn-bg": "#e91010",
+          "--white--text": "black",
+          "--white--project-bg": "#1a1a1a",
+          "--base-color-system--success-green": "#027a48"
+        }
+      }
+    },
+    "blog": {
+      "url": "https://www.onething.design/services/research-strategy",
+      "screenshot": "screenshots/blog.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#FFFFFF",
+              "count": 1
+            },
+            {
+              "hex": "#000000",
+              "count": 1
+            }
+          ],
+          "text": [
+            {
+              "hex": "#000000",
+              "count": 43
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 27
+            }
+          ],
+          "border": [
+            {
+              "hex": "#000000",
+              "count": 1
+            }
+          ]
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "sans-serif",
+              "count": 43
+            },
+            {
+              "value": "\"Plusjakartasans Var\", sans-serif",
+              "count": 27
+            }
+          ],
+          "font_sizes_px": [
+            16,
+            32
+          ],
+          "font_weights": [
+            {
+              "value": "400",
+              "count": 43
+            },
+            {
+              "value": "300",
+              "count": 27
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "24px",
+              "count": 26
+            },
+            {
+              "value": "38.4px",
+              "count": 1
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "0.64px",
+              "count": 1
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            8,
+            12,
+            20,
+            24
+          ],
+          "margin_px": [
+            8,
+            15,
+            136
+          ],
+          "gap_px": []
+        },
+        "radii": [],
+        "shadows": [],
+        "gradients_used": false,
+        "gradient_count": 0,
+        "css_variables": {
+          "--background-color--background-alternate": "black",
+          "--base-color-system--error-red-light": "#fef3f2",
+          "--base-color-brand--white<deleted|relume-variable-color-primary-2>": "white",
+          "--dark-red": "#cf0c0c",
+          "--black-archive<deleted|variable-dccb7db6>": "black",
+          "--border-color--border-primary": "black",
+          "--dark--text-light": "gray",
+          "--red--nav-btn-bg": "#cf0c0c",
+          "--red--number-text": "white",
+          "--white": "white",
+          "--base-color-system--error-red": "#b42318",
+          "--white--background": "white",
+          "--background-color--background-tertiary<deleted|relume-variable-background-color-3>": "#aaa",
+          "--text-color--text-success": "#027a48",
+          "--dark--number-text": "#e91010",
+          "--white--nav-btn-bg": "#cf0c0c",
+          "--text-color--text-secondary": "black",
+          "--base-color-system--success-green-light": "#ecfdf3",
+          "--base-color-neutral--neutral-light<deleted|relume-variable-color-neutral-5>": "#aaa",
+          "--color--project-bg": "#1a1a1a",
+          "--background-color--background-success": "#ecfdf3",
+          "--color--text": "#121212",
+          "--link-color--link-primary<deleted|relume-variable-link-color-1>": "black",
+          "--dark--background": "#0a0a0a",
+          "--text-color--text-error": "#b42318",
+          "--fs-list-renderindex": "0",
+          "--color--background": "white",
+          "--background-color--background-error": "#fef3f2",
+          "--dark--cta-form-bg": "white",
+          "--background-color--background-primary": "white",
+          "--text-color--text-primary": "black",
+          "--link-color--link-alternate<deleted|relume-variable-link-color-3>": "white",
+          "--color--number-text": "#e91010",
+          "--base-color-neutral--black": "black",
+          "--dark--nav-btn-bg": "#e91010",
+          "--grey-header": "#f2f2f2",
+          "--grey-background": "#121212",
+          "--white--cta-form-bg": "#1a1a1a",
+          "--color--cta-form-bg": "#1a1a1a",
+          "--red--text-light": "white",
+          "--border-color--border-alternate": "white",
+          "--black": "#1a1a1a",
+          "--base-color-brand--black": "#121212",
+          "--red--project-bg": "#1a1a1a",
+          "--base-color-neutral--neutral-lightest<deleted|relume-variable-color-neutral-3>": "#eee",
+          "--dark--heading-color": "white",
+          "--color--text-light": "gray",
+          "--red--heading-color": "white",
+          "--white--heading-color": "white",
+          "--red--cta-form-bg": "white",
+          "--dark-grey-text": "gray",
+          "--text-color-grey": "#424242",
+          "--one-thing-red": "#e91010",
+          "--dark--project-bg": "#e2e2e20d",
+          "--text-color--text-alternate": "white",
+          "--color--heading-color": "white",
+          "--base-color-neutral--white": "white",
+          "--transparent": "#fff0",
+          "--dark--text": "white",
+          "--red--text": "#f2f2f2",
+          "--white--number-text": "#e91010",
+          "--white--text-light": "gray",
+          "--background-color--background-secondary<deleted|relume-variable-background-color-2>": "#eee",
+          "--red--background": "#e91010",
+          "--color--nav-btn-bg": "#e91010",
+          "--white--text": "black",
+          "--white--project-bg": "#1a1a1a",
+          "--base-color-system--success-green": "#027a48"
+        }
+      }
+    }
+  },
+  "missing_categories": [
+    "pricing"
+  ]
+}

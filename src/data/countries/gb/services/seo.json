@@ -1,0 +1,41 @@
+{
+  "slug": "seo",
+  "name": "SEO",
+  "tagline": "Organic Traffic Growth & Long-Term Search Visibility",
+  "shortDescription": "Technical SEO, on-page optimization, and content strategy that ranks your website.",
+  "primaryKeyword": "seo agency [city]",
+  "secondaryKeywords": [
+    "seo services [city]",
+    "search engine optimization [city]",
+    "local seo [city]",
+    "seo expert [city]",
+    "ranking boost [city]"
+  ],
+  "heroHeadline": "SEO Services in {cityName} That Drive Organic Growth",
+  "pricingRange": {
+    "min": 500,
+    "max": 3000,
+    "currency": "GBP/month"
+  },
+  "localAvgMultiplier": 2.5,
+  "deliveryWeeks": {
+    "standard": 12,
+    "express": 6
+  },
+  "techStack": [
+    "SEMrush",
+    "Ahrefs",
+    "Google Search Console",
+    "Screaming Frog"
+  ],
+  "relatedServices": [
+    "web-design",
+    "ai-seo"
+  ],
+  "platforms": [
+    "wordpress",
+    "shopify",
+    "nextjs",
+    "custom"
+  ]
+}

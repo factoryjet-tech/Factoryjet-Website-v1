@@ -3,6 +3,8 @@ node_modules/
 
 # Build output
 dist/
+.next/
+out/
 
 # Environment files
 .env
@@ -23,3 +25,14 @@ npm-debug.log*
 
 # Firebase
 .firebase/
+
+# Next.js
+next-env.d.ts
+.vercel
+
+# Brand audit pipeline (Patch #5)
+pipeline/scripts/.venv/
+pipeline/scripts/__pycache__/
+pipeline/scripts/*.pyc
+pipeline/brand-references/*/screenshots/
+pipeline/brand-references/_run.log

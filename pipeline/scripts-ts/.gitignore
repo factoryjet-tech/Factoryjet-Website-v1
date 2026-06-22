@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.env
+.env.local
+*.log
+.DS_Store
+
+# Enrichment failure dumps — kept local, not committed.
+data/staging/*.failed.json
+
+# Local-only forensics archive — staged failure files for runs that
+# already informed shipped patches. Keep on disk, do not commit.
+data/staging/archive/

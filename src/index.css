@@ -23,6 +23,15 @@ html {
   scroll-behavior: smooth;
 }
 
+/* M1.d.1 aesthetic-pivot foundation: default body font is Inter, wired
+ * via next/font in src/app/layout.tsx (the Inter import declares its
+ * own fallback: ['system-ui', 'arial'], so --font-inter already expands
+ * to a full Inter→fallback chain). We add only sans-serif as the final
+ * generic fallback, avoiding the duplicate-system-ui mistake on live /uk. */
+body {
+  font-family: var(--font-inter), sans-serif;
+}
+
 ::selection {
   background: #0052cc;
   color: white;
@@ -34,6 +43,79 @@ html {
   }
   100% {
     transform: translateX(100%);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes cursorMove {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10px, -10px);
+  }
+  50% {
+    transform: translate(20px, 10px);
+  }
+  75% {
+    transform: translate(-10px, 20px);
+  }
+}
+
+@keyframes floatUp {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes floatDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
 
@@ -63,4 +145,129 @@ html {
 .accordion-content.open {
   max-height: 1000px;
   transition: max-height 0.5s ease-in;
+}
+
+/* UAE Page Specific Styles */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-card-dark {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bg-dubai-gradient {
+  background: linear-gradient(135deg, #0052CC 0%, #003D99 50%, #0052CC 100%);
+}
+
+.bg-offwhite {
+  background-color: #F9FAFB;
+}
+
+.btn-primary {
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   Clash Display — font fallback metrics + utility class.
+   Hoisted from src/app/uk/layout.tsx (Issue #24) so non-UK pages can
+   use Clash per the design system. The Fontshare @font-face itself is
+   loaded via stylesheet <link> in src/app/layout.tsx <head>.
+   Fallback metrics prevent CLS during font swap.
+   ────────────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: 'Clash Display Fallback';
+  src: local('Arial Black'), local('Helvetica Neue Bold'), local('Arial Bold');
+  size-adjust: 108%;
+  ascent-override: 92%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
+:root {
+  --font-clash: 'Clash Display', 'Clash Display Fallback', 'Arial Black', system-ui, sans-serif;
+}
+
+.font-clash {
+  font-family: var(--font-clash);
+}
+
+/* ============================================ */
+/* FactoryJet Design System v2.0 — base tokens  */
+/* M1.d.1 aesthetic-pivot foundation reset.     */
+/* Visual canon now: live factoryjet.com/uk.    */
+/* See factoryjet.DESIGN.md (rewritten May 5).  */
+/* ============================================ */
+
+:root {
+  /* Colour tokens — also available as Tailwind utilities (fj-*).
+   * fj-cream is now an ACCENT only (not the dominant page BG). */
+  --fj-cream: #FAFAF7;
+  --fj-ink: #1A1A1A;
+  --fj-jet-blue: #0052CC;
+  --fj-jet-blue-bright: #3B82F6;
+  --fj-jet-blue-tint: #E6F0FF;
+  --fj-jet-orange: #FF6B35;
+  --fj-jet-orange-tint: #FEF3E8;
+  --fj-jet-green: #10B981;
+  --fj-jet-green-tint: #E8FAF1;
+
+  /* Dark hero / dark-section palette per the pivot — navy is the new
+   * dominant dark surface; charcoal kept for backward compat. */
+  --fj-navy: #0A0F1C;
+  --fj-navy-deep: #070B14;
+  --fj-charcoal: #0F0F12;
+  --fj-charcoal-text: #F5F5F2;
+  --fj-charcoal-muted: #8A8A8F;
+
+  --fj-neutral-50: #F8F8F5;
+  --fj-neutral-100: #EFEFEA;
+  --fj-neutral-200: #D9D9D2;
+  --fj-neutral-400: #8A8A82;
+  --fj-neutral-600: #4A4A45;
+
+  /* Contrast-safe Jet Blue for use over the navy/charcoal surfaces. */
+  --fj-jet-blue-on-dark: #4A8FFF;
+}
+
+/* Display utility class — now Clash Display 700 per the M1.d.1 pivot.
+ * --font-clash is defined above (line ~187) from the Fontshare load
+ * wired in src/app/layout.tsx. */
+.fj-display {
+  font-family: var(--font-clash);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Eyebrow utility — Geist Mono tracked-caps, fj-jet-blue default;
+ * shifts to the contrast-safe variant inside .fj-on-dark containers. */
+.fj-eyebrow {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fj-jet-blue);
+}
+.fj-on-dark .fj-eyebrow {
+  color: var(--fj-jet-blue-on-dark);
+}
+
+/* Reduced-motion respect (per factoryjet.DESIGN.md §10) */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

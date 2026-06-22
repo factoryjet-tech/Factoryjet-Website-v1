@@ -1,0 +1,59 @@
+{
+  "slug": "brighton",
+  "name": "Brighton",
+  "region": "East Sussex",
+  "country": "England",
+  "population": 230000,
+  "businesses": 16000,
+  "gdpBn": 11.2,
+  "primaryIndustries": [
+    "Creative Industries",
+    "Technology & Digital",
+    "Tourism & Hospitality",
+    "Professional Services"
+  ],
+  "keyEmployers": [
+    "Universal Music",
+    "Dentsu",
+    "Boohoo",
+    "University of Brighton",
+    "Sussex Partnership NHS"
+  ],
+  "avgAgencyPricing": {
+    "webDesign": 5000,
+    "ecommerce": 8800,
+    "seo": 1350,
+    "aiAgents": 0
+  },
+  "localAgencies": {
+    "web-design": [
+      "Clearleft",
+      "Ketchup",
+      "Machine Tend"
+    ],
+    "seo": [
+      "Brighton SEO Agency",
+      "South Coast Digital",
+      "Local Search Brighton"
+    ]
+  },
+  "keyStats": {
+    "digitalBusinessGrowth": "24% YoY",
+    "smeCount": 14000,
+    "techJobs": 5000,
+    "avgSalary": 32000
+  },
+  "cityAreas": [
+    "Brighton City Centre",
+    "The Lanes",
+    "Hove",
+    "Seafront",
+    "Palmeira Square"
+  ],
+  "newsHook": "Brighton creative tech sector sees 24% growth with new digital media hub opening",
+  "heroImage": "/images/uk/brighton/hero-brighton.webp",
+  "coordinates": {
+    "lat": 50.8626,
+    "lng": -0.0862
+  }
+}

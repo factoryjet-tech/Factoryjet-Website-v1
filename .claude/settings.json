@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(magick --version)",
+      "Bash(pkill -f \"npm run dev\")",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(pkill -9 -f \"next dev\")",
+      "Bash(pkill -9 -f \"node\")",
+      "Bash(xargs kill:*)",
+      "Bash(awk '{print $2}')",
+      "Bash(awk '{print $NF}')",
+      "Bash(cat)",
+      "Bash(xargs -I {} bash -c 'grep -L \"FAQPage\" {} && echo \" \\(NO SCHEMA\\)\"')",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(git checkout *)",
+      "Bash(npm list:*)",
+      "Read(//tmp/**)"
+    ]
+  }
+}

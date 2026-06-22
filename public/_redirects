@@ -1,0 +1,17 @@
+# Netlify/Cloudflare Pages redirect: www to non-www
+https://www.factoryjet.com/* https://factoryjet.com/:splat 301!
+
+# Issue #19: Legacy Shopify route → canonical URL
+/ecommerce-development/shopify-development /services/shopify-development 301!
+
+# Foundation Patch #3: old /uk/sitemap-*.xml URLs → native sitemap-index
+/uk/sitemap-index.xml      /sitemap.xml                  301
+/uk/sitemap-cities.xml     /sitemap-uk/sitemap.xml       301
+/uk/sitemap-services.xml   /sitemap-uk/sitemap.xml       301
+
+# Conventional sitemap path redirects (emission lives at /sitemap-{section}/sitemap.xml)
+/sitemap-pages.xml   /sitemap-pages/sitemap.xml   301
+/sitemap-uk.xml      /sitemap-uk/sitemap.xml      301
+/sitemap-us.xml      /sitemap-us/sitemap.xml      301
+/sitemap-uae.xml     /sitemap-uae/sitemap.xml     301
+/sitemap-blog.xml    /sitemap-blog/sitemap.xml    301

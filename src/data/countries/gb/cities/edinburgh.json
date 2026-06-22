@@ -1,0 +1,59 @@
+{
+  "slug": "edinburgh",
+  "name": "Edinburgh",
+  "region": "Scotland",
+  "country": "Scotland",
+  "population": 540000,
+  "businesses": 30000,
+  "gdpBn": 34.5,
+  "primaryIndustries": [
+    "Financial Services",
+    "Professional Services",
+    "Tourism",
+    "Technology"
+  ],
+  "keyEmployers": [
+    "Bank of Scotland",
+    "Standard Life",
+    "Edinburgh Reit",
+    "Scottish Power",
+    "NHS Scotland"
+  ],
+  "avgAgencyPricing": {
+    "webDesign": 4600,
+    "ecommerce": 8200,
+    "seo": 1250,
+    "aiAgents": 0
+  },
+  "localAgencies": {
+    "web-design": [
+      "Inktrap",
+      "Storm Consultancy",
+      "Edinburgh Web Design"
+    ],
+    "seo": [
+      "SEO Experts Edinburgh",
+      "Digital Blend",
+      "Pixel Leap"
+    ]
+  },
+  "keyStats": {
+    "digitalBusinessGrowth": "19% YoY",
+    "smeCount": 26000,
+    "techJobs": 8000,
+    "avgSalary": 35000
+  },
+  "cityAreas": [
+    "Edinburgh City Centre",
+    "Leith",
+    "Fountain Bridge",
+    "Waterfront",
+    "New Town"
+  ],
+  "newsHook": "Edinburgh tech sector grows 19% with major fintech and AI startup investments",
+  "heroImage": "/images/uk/edinburgh/hero-edinburgh.webp",
+  "coordinates": {
+    "lat": 55.9533,
+    "lng": -3.1883
+  }
+}

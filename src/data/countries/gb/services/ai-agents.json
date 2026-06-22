@@ -1,0 +1,40 @@
+{
+  "slug": "ai-agents",
+  "name": "AI Agents",
+  "tagline": "Autonomous AI Workers That Handle Your Business Tasks 24/7",
+  "shortDescription": "Custom AI agents that automate customer service, lead generation, and business workflows.",
+  "primaryKeyword": "ai agents [city]",
+  "secondaryKeywords": [
+    "ai automation [city]",
+    "intelligent chatbot [city]",
+    "ai business tools [city]",
+    "autonomous agents [city]",
+    "ai workflow automation [city]"
+  ],
+  "heroHeadline": "AI Agents in {cityName} That Automate Your Business",
+  "pricingRange": {
+    "min": 5000,
+    "max": 25000,
+    "currency": "GBP"
+  },
+  "localAvgMultiplier": 4.0,
+  "deliveryWeeks": {
+    "standard": 6,
+    "express": 3
+  },
+  "techStack": [
+    "Claude API",
+    "OpenAI API",
+    "Langchain",
+    "Node.js"
+  ],
+  "relatedServices": [
+    "ai-websites",
+    "ai-seo"
+  ],
+  "platforms": [
+    "custom",
+    "zapier",
+    "make"
+  ]
+}

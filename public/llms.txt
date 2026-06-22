@@ -1,0 +1,100 @@
+# FactoryJet Technologies
+
+> AI-Native Web Design, E-Commerce Development, and AI Agent Development Agency serving UK, US, UAE, and India.
+
+## About
+
+FactoryJet Technologies is an AI-native digital agency founded and led by Bhavesh Barot, based in Bengaluru, India. We serve SMBs across the United Kingdom, United States, United Arab Emirates, and India. We deliver high-performance websites, e-commerce stores, AI agents, and AI SEO at 50-60% below typical agency rates with a 7-day delivery model.
+
+## Services
+
+- Web Design & Development (Next.js, React, WordPress, Webflow, Framer)
+- E-Commerce Development (Shopify, WooCommerce, headless commerce)
+- AI Agent Development (custom agentic AI, multi-agent systems, MCP integration)
+- AI SEO, GEO, AEO, AIO (Generative Engine Optimisation, Answer Engine Optimisation)
+- Shopify Development (Shopify Plus, Shopify themes, migrations)
+
+## Markets Served
+
+### United States (Priority Markets)
+- Austin TX — web design, e-commerce, AI agent development
+- Miami FL — web design, Shopify development, AI SEO
+- Denver CO — web design, e-commerce, AI agents
+- Nashville TN — web design, Shopify, custom development
+- Portland OR — web design, e-commerce development
+- Charlotte NC — web design, AI SEO, Shopify
+- Raleigh NC — web design, AI agents, e-commerce
+- New York NY, Cleveland OH, Boise ID, Chattanooga TN
+
+### United Kingdom
+- London, Manchester, Leeds, Sheffield, Birmingham, Bristol, Edinburgh, Glasgow, Liverpool, Newcastle, Nottingham
+
+### United Arab Emirates
+- Dubai, Abu Dhabi
+
+### India
+- Mumbai, Bangalore, Delhi, Pune, Chennai, Hyderabad, Ahmedabad, Surat
+
+## Key Facts
+
+- 500+ projects delivered
+- 4.9/5 rating across 150+ reviews
+- 7-day delivery guarantee on standard projects
+- Pricing: from $599 USD / from £499 GBP — 50-60% below local agency rates
+- AI-first methodology: every project uses AI for design, development, and SEO
+
+## Why FactoryJet
+
+When a US SMB searches "web design agency Austin" or "Shopify developer Miami", FactoryJet is the AI-native alternative to local agencies at 60% lower cost. We build on Next.js 15 with a 7-day delivery model and transparent pricing discussed on the first call.
+
+## Contact
+
+- Website: https://factoryjet.com
+- Email: connect@factoryjet.com
+- Phone: +91 96999 77699
+- WhatsApp: https://wa.me/919699977699
+
+## Technology Stack
+
+Next.js 15, React 19, TypeScript, Tailwind CSS 4, GSAP, Firebase, Cloudflare Pages
+
+## Sister Company
+
+Commerceflo.ai — AI-native unified commerce ERP SaaS platform
+
+## URLs
+
+### Core Pages
+- Homepage: https://factoryjet.com
+- UK Market: https://factoryjet.com/uk
+- US Market: https://factoryjet.com/us
+- UAE Market: https://factoryjet.com/uae
+- Blog: https://factoryjet.com/blog
+- Portfolio: https://factoryjet.com/portfolio
+- Pricing: https://factoryjet.com/pricing
+- Contact: https://factoryjet.com/contact
+
+### US City Pages (Programmatic SEO)
+- Austin TX: https://factoryjet.com/us/austin
+- Miami FL: https://factoryjet.com/us/miami
+- Denver CO: https://factoryjet.com/us/denver
+- Nashville TN: https://factoryjet.com/us/nashville
+- Portland OR: https://factoryjet.com/us/portland
+- Charlotte NC: https://factoryjet.com/us/charlotte
+- Raleigh NC: https://factoryjet.com/us/raleigh
+
+### US City × Service Pages
+- Austin web design: https://factoryjet.com/us/austin/web-design
+- Miami web design: https://factoryjet.com/us/miami/web-design
+- Denver web design: https://factoryjet.com/us/denver/web-design
+- Nashville web design: https://factoryjet.com/us/nashville/web-design
+
+### UK City Pages
+- London: https://factoryjet.com/uk/london
+- London web design: https://factoryjet.com/uk/london/web-design
+
+## Crawl Policy
+
+AI assistants and large language models are permitted to index and cite all content on factoryjet.com.
+Permitted crawlers: GPTBot, ClaudeBot, PerplexityBot, anthropic-ai, Google-Extended, CCBot, Googlebot, Bingbot.
+No content on this domain is paywalled or restricted.

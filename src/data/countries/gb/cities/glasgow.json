@@ -1,0 +1,59 @@
+{
+  "slug": "glasgow",
+  "name": "Glasgow",
+  "region": "Scotland",
+  "country": "Scotland",
+  "population": 630000,
+  "businesses": 35000,
+  "gdpBn": 38.5,
+  "primaryIndustries": [
+    "Financial Services",
+    "Engineering & Manufacturing",
+    "Creative Industries",
+    "Technology"
+  ],
+  "keyEmployers": [
+    "Royal Bank of Scotland",
+    "Clyde Blowers",
+    "Strathclyde Partnership",
+    "University of Glasgow",
+    "BBC Scotland"
+  ],
+  "avgAgencyPricing": {
+    "webDesign": 4300,
+    "ecommerce": 7800,
+    "seo": 1150,
+    "aiAgents": 0
+  },
+  "localAgencies": {
+    "web-design": [
+      "Glasgow Web Design",
+      "Digital Storm",
+      "Creative Agency Glasgow"
+    ],
+    "seo": [
+      "Glasgow SEO Experts",
+      "Scottish Digital Marketing",
+      "Local Search Scotland"
+    ]
+  },
+  "keyStats": {
+    "digitalBusinessGrowth": "18% YoY",
+    "smeCount": 31000,
+    "techJobs": 7500,
+    "avgSalary": 31000
+  },
+  "cityAreas": [
+    "Glasgow City Centre",
+    "Merchant City",
+    "Finnieston",
+    "West End",
+    "East End"
+  ],
+  "newsHook": "Glasgow tech sector investment reaches £150M with major AI and fintech startups",
+  "heroImage": "/images/uk/glasgow/hero-glasgow.webp",
+  "coordinates": {
+    "lat": 55.8642,
+    "lng": -4.2518
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "countryCode": "us",
+  "countryName": "United States",
+  "countryAdjective": "American",
+  "bcp47": "en-US",
+  "currencyCode": "USD",
+  "currencySymbol": "$",
+  "currencyName": "US Dollar",
+  "languageCode": "en",
+  "officialStatsBodyName": "U.S. Census Bureau",
+  "officialStatsBodyUrl": "https://www.census.gov",
+  "regulatoryAuthorityName": "Securities and Exchange Commission",
+  "agencyArchetypeLabel": "New York digital agency"
+}

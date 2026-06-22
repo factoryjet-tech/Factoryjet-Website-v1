@@ -1,0 +1,59 @@
+{
+  "slug": "leeds",
+  "name": "Leeds",
+  "region": "West Yorkshire",
+  "country": "England",
+  "population": 800000,
+  "businesses": 42000,
+  "gdpBn": 23.4,
+  "primaryIndustries": [
+    "Financial Services",
+    "Fashion & Retail",
+    "Legal Services",
+    "Digital & Tech"
+  ],
+  "keyEmployers": [
+    "HSBC UK",
+    "Channel 4",
+    "Asda",
+    "Eversheds Sutherland",
+    "Sky Betting & Gaming"
+  ],
+  "avgAgencyPricing": {
+    "webDesign": 4500,
+    "ecommerce": 8000,
+    "seo": 1200,
+    "aiAgents": 0
+  },
+  "localAgencies": {
+    "web-design": [
+      "Parallax",
+      "Electric House",
+      "Substrakt"
+    ],
+    "seo": [
+      "Wildcat Digital",
+      "Blur Digital",
+      "Nettl Leeds"
+    ]
+  },
+  "keyStats": {
+    "digitalBusinessGrowth": "18% YoY",
+    "smeCount": 38000,
+    "techJobs": 12000,
+    "avgSalary": 32000
+  },
+  "cityAreas": [
+    "Leeds City Centre",
+    "Headingley",
+    "Chapel Allerton",
+    "Horsforth",
+    "Roundhay"
+  ],
+  "newsHook": "HSBC UK HQ relocation brings 2,500 financial services jobs to Leeds city centre",
+  "heroImage": "/images/uk/leeds/hero-leeds.webp",
+  "coordinates": {
+    "lat": 53.8008,
+    "lng": -1.5491
+  }
+}

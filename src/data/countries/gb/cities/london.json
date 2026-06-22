@@ -1,0 +1,60 @@
+{
+  "slug": "london",
+  "name": "London",
+  "region": "Greater London",
+  "country": "England",
+  "population": 9100000,
+  "businesses": 1000000,
+  "gdpBn": 569,
+  "primaryIndustries": [
+    "Financial & Insurance Services",
+    "Professional, Scientific & Technical Services",
+    "Information Technology & Communications",
+    "Real Estate & Construction",
+    "Creative Industries, Media & Tourism"
+  ],
+  "keyEmployers": [
+    "Lloyd's of London",
+    "BBC",
+    "Crossrail / Elizabeth Line",
+    "London Stock Exchange",
+    "Canary Wharf Group"
+  ],
+  "avgAgencyPricing": {
+    "webDesign": 5000,
+    "ecommerce": 8000,
+    "seo": 2000,
+    "aiAgents": 12000
+  },
+  "localAgencies": {
+    "web-design": [
+      "Brainlabs",
+      "Passion Digital",
+      "CEEK",
+      "The Charles",
+      "Rise at Seven",
+      "Burst Digital"
+    ]
+  },
+  "keyStats": {
+    "digitalBusinessGrowth": "22% YoY",
+    "smeCount": 420000,
+    "techJobs": 300000,
+    "avgSalary": 42000
+  },
+  "cityAreas": [
+    "Canary Wharf",
+    "The City",
+    "Shoreditch",
+    "Soho",
+    "East London Tech City",
+    "Westminster",
+    "South Bank"
+  ],
+  "newsHook": "London named Europe's leading tech hub with 100+ unicorn companies",
+  "heroImage": "/images/uk/london/london-hero.jpg",
+  "coordinates": {
+    "lat": 51.5074,
+    "lng": -0.1278
+  }
+}

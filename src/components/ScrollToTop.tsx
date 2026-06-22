@@ -1,11 +1,16 @@
+'use client';
+
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { usePathname } from 'next/navigation';
 import { trackPageView } from '../utils/gtm';
 
 const ScrollToTop: React.FC = () => {
-  const { pathname, hash } = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
+    // Get hash from window.location if needed
+    const hash = window.location.hash;
+
     // If there's a hash, scroll to that element
     if (hash) {
       // Retry function to handle lazy-loaded components
@@ -18,7 +23,7 @@ const ScrollToTop: React.FC = () => {
           setTimeout(() => scrollToHash(retries + 1), 100);
         }
       };
-      
+
       // Initial delay to let page render
       setTimeout(() => scrollToHash(), 300);
     } else {
@@ -29,8 +34,10 @@ const ScrollToTop: React.FC = () => {
     }
 
     // Track page view in GTM
-    trackPageView(pathname);
-  }, [pathname, hash]);
+    if (pathname) {
+      trackPageView(pathname);
+    }
+  }, [pathname]);
 
   return null;
 };

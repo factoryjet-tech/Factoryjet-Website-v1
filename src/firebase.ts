@@ -4,14 +4,27 @@ import { getFirestore } from "firebase/firestore";
 
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC1EBwPNqicJfuygSKfpy4te8CajzSFvL4",
-  authDomain: "factoryjet-c5f8a.firebaseapp.com",
-  projectId: "factoryjet-c5f8a",
-  storageBucket: "factoryjet-c5f8a.firebasestorage.app",
-  messagingSenderId: "687943384982",
-  appId: "1:687943384982:web:2bf9fb0e4c2c977e8b27b7",
-  measurementId: "G-ZZ03T8W2VR",
+  apiKey:            process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain:        process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId:         process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket:     process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId:             process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId:     process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
+
+// Fail fast in dev if env vars are missing — caught at module load
+if (process.env.NODE_ENV !== 'production') {
+  const missing = Object.entries(firebaseConfig)
+    .filter(([, v]) => !v)
+    .map(([k]) => k);
+  if (missing.length) {
+    console.warn(
+      `[firebase] missing env vars: ${missing.join(', ')}. ` +
+      `Set them in .env.local — see .env.example.`
+    );
+  }
+}
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

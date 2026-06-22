@@ -8,9 +8,12 @@ import {
   Monitor,
   ShoppingBag,
   Wrench,
+  Bot,
   Rocket,
 } from "lucide-react";
 import { useContactModal } from "../context/ContactModalContext";
+import { doc, setDoc, serverTimestamp } from "firebase/firestore";
+import { db } from "@/firebase";
 import {
   trackModalOpen,
   trackModalClose,
@@ -18,6 +21,7 @@ import {
   trackFormSubmit,
   trackFormSuccess,
   trackFormError,
+  trackFormSubmission,
   trackServiceSelection,
   trackBudgetSelection,
   trackButtonClick,
@@ -36,7 +40,7 @@ interface FormData {
   message: string;
 }
 
-const services: {
+const defaultServices: {
   id: ServiceType;
   label: string;
   icon: React.ElementType;
@@ -58,7 +62,7 @@ const services: {
     id: "maintenance",
     label: "AMC / Maintenance",
     icon: Wrench,
-    description: "Ongoing support & updates",
+    description: "Ongoing support & maintenance",
   },
   {
     id: "other",
@@ -68,19 +72,82 @@ const services: {
   },
 ];
 
-const budgets: { id: BudgetRange; label: string; range: string }[] = [
+const aiServices: typeof defaultServices = [
+  {
+    id: "website",
+    label: "Website Design",
+    icon: Monitor,
+    description: "Custom high-performance websites",
+  },
+  {
+    id: "ecommerce",
+    label: "E-Commerce",
+    icon: ShoppingBag,
+    description: "Shopify & WooCommerce stores",
+  },
+  {
+    id: "maintenance",
+    label: "AI Agent Development",
+    icon: Bot,
+    description: "Custom AI agents for business",
+  },
+  {
+    id: "other",
+    label: "Other / Custom",
+    icon: Rocket,
+    description: "Custom development needs",
+  },
+];
+
+const budgetsIN: { id: BudgetRange; label: string; range: string }[] = [
   { id: "starter", label: "Starter", range: "₹25K - ₹50K" },
   { id: "business", label: "Business", range: "₹50K - ₹1.2L" },
   { id: "enterprise", label: "Enterprise", range: "₹1.2L+" },
   { id: "not-sure", label: "Not Sure", range: "Need guidance" },
 ];
 
+const budgetsUS: { id: BudgetRange; label: string; range: string }[] = [
+  { id: "starter", label: "Launch", range: "$1,999 - $3,499" },
+  { id: "business", label: "Growth", range: "$3,999 - $6,999" },
+  { id: "enterprise", label: "Scale", range: "$7,999 - $14,999" },
+  { id: "not-sure", label: "Not Sure", range: "Need guidance" },
+];
+
+const budgetsUK: { id: BudgetRange; label: string; range: string }[] = [
+  { id: "starter", label: "Starter", range: "£799 - £1,499" },
+  { id: "business", label: "Business", range: "£1,499 - £2,499" },
+  { id: "enterprise", label: "Enterprise", range: "£4,999+" },
+  { id: "not-sure", label: "Not Sure", range: "Need guidance" },
+];
+
 const ContactFormModal: React.FC = () => {
-  const { isOpen, closeModal } = useContactModal();
+  const { isOpen, region, variant, closeModal } = useContactModal();
+  const budgets = region === 'us' ? budgetsUS : region === 'uk' ? budgetsUK : budgetsIN;
+  const services = variant === 'ai' ? aiServices : defaultServices;
   const [step, setStep] = useState<1 | 2 | 3>(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // Lock body scroll when modal is open so closing never jumps the page
+  useEffect(() => {
+    if (isOpen) {
+      const scrollY = window.scrollY;
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.left = '0';
+      document.body.style.right = '0';
+      document.body.style.overflowY = 'scroll';
+      return () => {
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.left = '';
+        document.body.style.right = '';
+        document.body.style.overflowY = '';
+        window.scrollTo({ top: scrollY, behavior: 'instant' as ScrollBehavior });
+      };
+    }
+  }, [isOpen]);
 
   // Pre-load Firebase when modal opens (non-blocking) and track modal open
   useEffect(() => {
@@ -112,6 +179,19 @@ const ContactFormModal: React.FC = () => {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
+    if (name === 'phone' && region === 'us') {
+      const cleaned = value.replace(/\D/g, '');
+      if (cleaned.length <= 10) {
+        let formatted = cleaned;
+        if (cleaned.length > 3 && cleaned.length <= 6) {
+          formatted = `(${cleaned.slice(0, 3)}) ${cleaned.slice(3)}`;
+        } else if (cleaned.length > 6) {
+          formatted = `(${cleaned.slice(0, 3)}) ${cleaned.slice(3, 6)}-${cleaned.slice(6)}`;
+        }
+        setFormData((prev) => ({ ...prev, phone: formatted }));
+      }
+      return;
+    }
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
@@ -168,22 +248,13 @@ const ContactFormModal: React.FC = () => {
     });
 
     try {
-      // Dynamically import Firebase functions only when submitting
-      const { doc, setDoc, serverTimestamp } = await import(
-        "firebase/firestore"
-      );
+      // db, doc, setDoc, serverTimestamp now imported statically at top of file.
+      // Static import order ensures firebase/firestore registers Firestore
+      // service before @/firebase calls getFirestore(app).
 
-      // Ensure Firebase is initialized and get db instance
-      const { initFirebase } = await import("../firebase");
-      const { db } = await initFirebase();
-
-      if (!db) {
-        throw new Error("Firebase not initialized");
-      }
-
-      // Generate readable document ID: 2025-12-18_13-30-45_BhaveshB
+      // Generate readable document ID: 2026-12-18_13-30-45_BhaveshB
       const now = new Date();
-      const dateStr = now.toISOString().split("T")[0]; // 2025-12-18
+      const dateStr = now.toISOString().split("T")[0]; // 2026-12-18
       const timeStr = now.toTimeString().split(" ")[0].replace(/:/g, "-"); // 13-30-45
       const namePart = formData.name.replace(/\s+/g, "").slice(0, 15); // BhaveshB (no spaces, max 15 chars)
       const docId = `${dateStr}_${timeStr}_${namePart}`;
@@ -196,6 +267,7 @@ const ContactFormModal: React.FC = () => {
 
       // Track successful form submission
       trackFormSuccess("contact_form");
+      trackFormSubmission();
       setIsSuccess(true);
     } catch (err) {
       console.error("Error submitting form:", err);
@@ -370,7 +442,7 @@ const ContactFormModal: React.FC = () => {
             name="phone"
             value={formData.phone}
             onChange={handleInputChange}
-            placeholder="+91 98765 43210"
+            placeholder="Enter your contact number"
             className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-jet-blue focus:ring-2 focus:ring-blue-100 outline-none transition-all text-sm"
           />
         </div>

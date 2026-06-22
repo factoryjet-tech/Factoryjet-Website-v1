@@ -1,0 +1,59 @@
+{
+  "slug": "derby",
+  "name": "Derby",
+  "region": "Derbyshire",
+  "country": "England",
+  "population": 260000,
+  "businesses": 12000,
+  "gdpBn": 9.2,
+  "primaryIndustries": [
+    "Manufacturing & Engineering",
+    "Aerospace & Defence",
+    "Rail & Transport",
+    "Professional Services"
+  ],
+  "keyEmployers": [
+    "Rolls-Royce",
+    "Toyota",
+    "Bombardier",
+    "Network Rail",
+    "University of Derby"
+  ],
+  "avgAgencyPricing": {
+    "webDesign": 3400,
+    "ecommerce": 6800,
+    "seo": 900,
+    "aiAgents": 0
+  },
+  "localAgencies": {
+    "web-design": [
+      "Derby Web Design",
+      "East Midlands Digital",
+      "Creative Derby"
+    ],
+    "seo": [
+      "Derby SEO Services",
+      "Midlands Marketing",
+      "Local Search Derby"
+    ]
+  },
+  "keyStats": {
+    "digitalBusinessGrowth": "14% YoY",
+    "smeCount": 10500,
+    "techJobs": 3500,
+    "avgSalary": 28500
+  },
+  "cityAreas": [
+    "Derby City Centre",
+    "Arboretum",
+    "Cathedral Quarter",
+    "Osmaston",
+    "Alvaston"
+  ],
+  "newsHook": "Rolls-Royce invests £200M in Derby advanced engineering research facility",
+  "heroImage": "/images/uk/derby/hero-derby.webp",
+  "coordinates": {
+    "lat": 52.9225,
+    "lng": -1.4746
+  }
+}

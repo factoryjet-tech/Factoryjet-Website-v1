@@ -1,0 +1,14 @@
+{
+  "countryCode": "gb",
+  "countryName": "United Kingdom",
+  "countryAdjective": "British",
+  "bcp47": "en-GB",
+  "currencyCode": "GBP",
+  "currencySymbol": "£",
+  "currencyName": "Pound Sterling",
+  "languageCode": "en",
+  "officialStatsBodyName": "Office for National Statistics",
+  "officialStatsBodyUrl": "https://www.ons.gov.uk",
+  "regulatoryAuthorityName": "Companies House",
+  "agencyArchetypeLabel": "London digital agency"
+}

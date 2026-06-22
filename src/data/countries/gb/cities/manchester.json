@@ -1,0 +1,59 @@
+{
+  "slug": "manchester",
+  "name": "Manchester",
+  "region": "Greater Manchester",
+  "country": "England",
+  "population": 560000,
+  "businesses": 55000,
+  "gdpBn": 32.1,
+  "primaryIndustries": [
+    "Technology",
+    "Media",
+    "Financial Services",
+    "Creative Industries"
+  ],
+  "keyEmployers": [
+    "BBC",
+    "ITV",
+    "AstraZeneca",
+    "Co-op",
+    "Autotrader"
+  ],
+  "avgAgencyPricing": {
+    "webDesign": 4200,
+    "ecommerce": 7500,
+    "seo": 1100,
+    "aiAgents": 0
+  },
+  "localAgencies": {
+    "web-design": [
+      "Wearable",
+      "MediaMonks",
+      "Rebel"
+    ],
+    "seo": [
+      "SEO Mantra",
+      "iBusiness Worldwide",
+      "Zazzle Media"
+    ]
+  },
+  "keyStats": {
+    "digitalBusinessGrowth": "22% YoY",
+    "smeCount": 48000,
+    "techJobs": 15000,
+    "avgSalary": 34000
+  },
+  "cityAreas": [
+    "Manchester City Centre",
+    "Salford Quays",
+    "MediaCityUK",
+    "Northern Quarter",
+    "Spinningfields"
+  ],
+  "newsHook": "MediaCityUK expansion brings 3,000 media and tech jobs to Salford Quays",
+  "heroImage": "/images/uk/manchester/hero-manchester.webp",
+  "coordinates": {
+    "lat": 53.4808,
+    "lng": -2.2426
+  }
+}

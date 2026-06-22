@@ -1,0 +1,17 @@
+{
+  "name": "FactoryJet",
+  "short_name": "FactoryJet",
+  "description": "AI-Native Web Design & E-Commerce Development Agency",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0f1c",
+  "theme_color": "#0052CC",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

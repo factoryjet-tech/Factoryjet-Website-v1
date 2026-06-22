@@ -1,0 +1,739 @@
+{
+  "slug": "madeinevolve-com",
+  "category": "taste",
+  "homepage": "https://madeinevolve.com",
+  "captured_at": "2026-04-29T05:07:57Z",
+  "pages": {
+    "homepage": {
+      "url": "https://madeinevolve.com/",
+      "screenshot": "screenshots/homepage.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#FFFFFF",
+              "count": 92
+            },
+            {
+              "hex": "#131313",
+              "count": 71
+            },
+            {
+              "hex": "#111111",
+              "count": 11
+            },
+            {
+              "hex": "#EFEEEC",
+              "count": 6
+            },
+            {
+              "hex": "#D4CEE5",
+              "count": 6
+            },
+            {
+              "hex": "#000000",
+              "count": 2
+            },
+            {
+              "hex": "#F4F4F4",
+              "count": 1
+            },
+            {
+              "hex": "#C3FF00",
+              "count": 1
+            }
+          ],
+          "text": [
+            {
+              "hex": "#FFFFFF",
+              "count": 1287
+            },
+            {
+              "hex": "#333333",
+              "count": 253
+            },
+            {
+              "hex": "#E7E7E7",
+              "count": 214
+            },
+            {
+              "hex": "#000000",
+              "count": 124
+            },
+            {
+              "hex": "#131313",
+              "count": 15
+            },
+            {
+              "hex": "#111111",
+              "count": 15
+            },
+            {
+              "hex": "#201D1D",
+              "count": 4
+            },
+            {
+              "hex": "#C3FF00",
+              "count": 2
+            }
+          ],
+          "border": [
+            {
+              "hex": "#333333",
+              "count": 2
+            }
+          ]
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "Arial, \"Helvetica Neue\", Helvetica, sans-serif",
+              "count": 1208
+            },
+            {
+              "value": "\"Bull 5 Typewriter\", Georgia, sans-serif",
+              "count": 360
+            },
+            {
+              "value": "neue-haas-grotesk-text, sans-serif",
+              "count": 304
+            },
+            {
+              "value": "sans-serif",
+              "count": 42
+            },
+            {
+              "value": "\"Times New Roman\"",
+              "count": 1
+            }
+          ],
+          "font_sizes_px": [
+            12,
+            16,
+            28,
+            42,
+            70,
+            187
+          ],
+          "font_weights": [
+            {
+              "value": "400",
+              "count": 1615
+            },
+            {
+              "value": "500",
+              "count": 297
+            },
+            {
+              "value": "700",
+              "count": 3
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "20px",
+              "count": 1207
+            },
+            {
+              "value": "11.9px",
+              "count": 250
+            },
+            {
+              "value": "13.09px",
+              "count": 164
+            },
+            {
+              "value": "12.74px",
+              "count": 111
+            },
+            {
+              "value": "16.8px",
+              "count": 40
+            },
+            {
+              "value": "14.7px",
+              "count": 33
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "-0.476px",
+              "count": 165
+            },
+            {
+              "value": "-0.56px",
+              "count": 61
+            },
+            {
+              "value": "-0.49px",
+              "count": 33
+            },
+            {
+              "value": "-1.12px",
+              "count": 9
+            },
+            {
+              "value": "-7.488px",
+              "count": 7
+            },
+            {
+              "value": "-1.68px",
+              "count": 6
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            1,
+            4,
+            7,
+            10,
+            14,
+            20,
+            27,
+            30,
+            35,
+            86,
+            115
+          ],
+          "margin_px": [
+            2,
+            7,
+            14,
+            20,
+            194
+          ],
+          "gap_px": [
+            2,
+            7,
+            10,
+            14,
+            18,
+            21,
+            24,
+            28,
+            42,
+            84
+          ]
+        },
+        "radii": [
+          {
+            "value": "7px",
+            "count": 33
+          },
+          {
+            "value": "50%",
+            "count": 6
+          },
+          {
+            "value": "14px",
+            "count": 5
+          },
+          {
+            "value": "0%",
+            "count": 1
+          }
+        ],
+        "shadows": [
+          {
+            "value": "rgba(255, 255, 255, 0.1) 0px 0px 0px 1px",
+            "count": 1
+          }
+        ],
+        "gradients_used": true,
+        "gradient_count": 7,
+        "css_variables": {
+          "--_spacing---padding-bottom-base": "clamp(.75rem,1.5vw,1.25rem)",
+          "--_svg-lines---line-5-offset": "0px",
+          "--_colors---white": "#fff",
+          "--_spacing---padding-right-medium": "clamp(1.2em,2em,2.5em)",
+          "--_spacing---padding-top-huge": "clamp(6rem,10vw,10rem)",
+          "--_svg-lines---line-6-offset": "0px",
+          "--_spacing---padding-bottom-huge": "clamp(6rem,10vw,10rem)",
+          "--dark-grey": "#131313",
+          "--_spacing---padding-top-base": "clamp(.75rem,1.5vw,1.25rem)",
+          "--_spacing---nav__trigger-radius": ".7em",
+          "--_spacing---padding-left-base": "clamp(1em,1.5em,2em)",
+          "--_spacing---padding-left-medium": "clamp(1.2em,2em,2.5em)",
+          "--_colors---neon-purple": "#9747ff",
+          "--soft-grey": "#535353",
+          "--_spacing---padding-bottom-large": "clamp(4rem,8vw,8rem)",
+          "--_colors---tech-blue": "#003bb0",
+          "--mie-black": "#111",
+          "--_svg-lines---line-1-offset": "0px",
+          "--_spacing---padding-top-large": "clamp(4rem,8vw,8rem)",
+          "--_svg-lines---line-4-offset": "0px",
+          "--_colors---mie-red": "#da4a4a",
+          "--_svg-lines---line-3-offset": "0px",
+          "--_spacing---padding-top-medium": "clamp(3rem,6vw,6rem)",
+          "--_spacing---padding-right-base": "clamp(1em,1.5em,2em)",
+          "--_spacing---padding-left-large": "clamp(1.5em,2.5em,3em)",
+          "--_spacing---padding-bottom-medium": "clamp(3rem,6vw,6rem)",
+          "--_svg-lines---line-2-offset": "0px",
+          "--_colors---electric-green": "#c3ff00",
+          "--_spacing---padding-right-large": "clamp(1.5em,2.5em,3em)"
+        }
+      }
+    },
+    "service": {
+      "url": "https://madeinevolve.com/services",
+      "screenshot": "screenshots/service.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#131313",
+              "count": 71
+            },
+            {
+              "hex": "#111111",
+              "count": 7
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 6
+            },
+            {
+              "hex": "#C3FF00",
+              "count": 1
+            },
+            {
+              "hex": "#535353",
+              "count": 1
+            },
+            {
+              "hex": "#DA4A4A",
+              "count": 1
+            }
+          ],
+          "text": [
+            {
+              "hex": "#FFFFFF",
+              "count": 518
+            },
+            {
+              "hex": "#333333",
+              "count": 320
+            },
+            {
+              "hex": "#000000",
+              "count": 43
+            },
+            {
+              "hex": "#111111",
+              "count": 15
+            },
+            {
+              "hex": "#131313",
+              "count": 3
+            },
+            {
+              "hex": "#C3FF00",
+              "count": 2
+            }
+          ],
+          "border": [
+            {
+              "hex": "#333333",
+              "count": 2
+            }
+          ]
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "Arial, \"Helvetica Neue\", Helvetica, sans-serif",
+              "count": 596
+            },
+            {
+              "value": "\"Bull 5 Typewriter\", Georgia, sans-serif",
+              "count": 159
+            },
+            {
+              "value": "neue-haas-grotesk-text, sans-serif",
+              "count": 106
+            },
+            {
+              "value": "sans-serif",
+              "count": 39
+            },
+            {
+              "value": "\"Times New Roman\"",
+              "count": 1
+            }
+          ],
+          "font_sizes_px": [
+            12,
+            16,
+            21,
+            24,
+            28,
+            42,
+            70
+          ],
+          "font_weights": [
+            {
+              "value": "400",
+              "count": 795
+            },
+            {
+              "value": "500",
+              "count": 106
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "20px",
+              "count": 588
+            },
+            {
+              "value": "13.09px",
+              "count": 109
+            },
+            {
+              "value": "11.9px",
+              "count": 57
+            },
+            {
+              "value": "12.74px",
+              "count": 33
+            },
+            {
+              "value": "15.4px",
+              "count": 16
+            },
+            {
+              "value": "21.42px",
+              "count": 14
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "-0.476px",
+              "count": 110
+            },
+            {
+              "value": "-0.952px",
+              "count": 14
+            },
+            {
+              "value": "-0.84px",
+              "count": 14
+            },
+            {
+              "value": "-1.68px",
+              "count": 7
+            },
+            {
+              "value": "-0.49px",
+              "count": 6
+            },
+            {
+              "value": "-1.12px",
+              "count": 4
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            3,
+            6,
+            14,
+            18,
+            36,
+            86,
+            115,
+            144,
+            180
+          ],
+          "margin_px": [
+            2,
+            10,
+            14,
+            20,
+            86,
+            115,
+            144,
+            194
+          ],
+          "gap_px": [
+            2,
+            7,
+            10,
+            14,
+            20,
+            24,
+            28
+          ]
+        },
+        "radii": [
+          {
+            "value": "7px",
+            "count": 1
+          }
+        ],
+        "shadows": [],
+        "gradients_used": true,
+        "gradient_count": 4,
+        "css_variables": {
+          "--_spacing---padding-bottom-base": "clamp(.75rem,1.5vw,1.25rem)",
+          "--_svg-lines---line-5-offset": "0px",
+          "--_colors---white": "#fff",
+          "--_spacing---padding-bottom-huge": "clamp(6rem,10vw,10rem)",
+          "--_spacing---padding-right-medium": "clamp(1.2em,2em,2.5em)",
+          "--_svg-lines---line-6-offset": "0px",
+          "--_spacing---padding-top-huge": "clamp(6rem,10vw,10rem)",
+          "--dark-grey": "#131313",
+          "--_spacing---padding-top-base": "clamp(.75rem,1.5vw,1.25rem)",
+          "--_spacing---nav__trigger-radius": ".7em",
+          "--_spacing---padding-left-base": "clamp(1em,1.5em,2em)",
+          "--_spacing---padding-left-medium": "clamp(1.2em,2em,2.5em)",
+          "--_colors---neon-purple": "#9747ff",
+          "--soft-grey": "#535353",
+          "--_spacing---padding-bottom-large": "clamp(4rem,8vw,8rem)",
+          "--_colors---tech-blue": "#003bb0",
+          "--mie-black": "#111",
+          "--_svg-lines---line-1-offset": "0px",
+          "--_spacing---padding-top-large": "clamp(4rem,8vw,8rem)",
+          "--_svg-lines---line-4-offset": "0px",
+          "--_colors---mie-red": "#da4a4a",
+          "--_svg-lines---line-3-offset": "0px",
+          "--_spacing---padding-top-medium": "clamp(3rem,6vw,6rem)",
+          "--_spacing---padding-right-base": "clamp(1em,1.5em,2em)",
+          "--_spacing---padding-left-large": "clamp(1.5em,2.5em,3em)",
+          "--_spacing---padding-bottom-medium": "clamp(3rem,6vw,6rem)",
+          "--_svg-lines---line-2-offset": "0px",
+          "--_colors---electric-green": "#c3ff00",
+          "--_spacing---padding-right-large": "clamp(1.5em,2.5em,3em)"
+        }
+      }
+    },
+    "feature": {
+      "url": "https://madeinevolve.com/projects/champion",
+      "screenshot": "screenshots/feature.png",
+      "tokens": {
+        "colors": {
+          "background": [
+            {
+              "hex": "#131313",
+              "count": 71
+            },
+            {
+              "hex": "#111111",
+              "count": 10
+            },
+            {
+              "hex": "#FFFFFF",
+              "count": 7
+            },
+            {
+              "hex": "#C3FF00",
+              "count": 2
+            }
+          ],
+          "text": [
+            {
+              "hex": "#FFFFFF",
+              "count": 1015
+            },
+            {
+              "hex": "#333333",
+              "count": 151
+            },
+            {
+              "hex": "#2C2C2C",
+              "count": 103
+            },
+            {
+              "hex": "#000000",
+              "count": 43
+            },
+            {
+              "hex": "#111111",
+              "count": 15
+            },
+            {
+              "hex": "#131313",
+              "count": 4
+            },
+            {
+              "hex": "#C3FF00",
+              "count": 2
+            }
+          ],
+          "border": [
+            {
+              "hex": "#2C2C2C",
+              "count": 2
+            },
+            {
+              "hex": "#333333",
+              "count": 2
+            }
+          ]
+        },
+        "typography": {
+          "font_families": [
+            {
+              "value": "\"Bull 5 Typewriter\", Georgia, sans-serif",
+              "count": 581
+            },
+            {
+              "value": "Arial, \"Helvetica Neue\", Helvetica, sans-serif",
+              "count": 574
+            },
+            {
+              "value": "neue-haas-grotesk-text, sans-serif",
+              "count": 142
+            },
+            {
+              "value": "sans-serif",
+              "count": 40
+            }
+          ],
+          "font_sizes_px": [
+            8,
+            12,
+            16,
+            42,
+            56,
+            84
+          ],
+          "font_weights": [
+            {
+              "value": "400",
+              "count": 1195
+            },
+            {
+              "value": "500",
+              "count": 128
+            },
+            {
+              "value": "700",
+              "count": 14
+            }
+          ],
+          "line_heights": [
+            {
+              "value": "20px",
+              "count": 477
+            },
+            {
+              "value": "11.9px",
+              "count": 423
+            },
+            {
+              "value": "15.4px",
+              "count": 121
+            },
+            {
+              "value": "8.208px",
+              "count": 103
+            },
+            {
+              "value": "16.8px",
+              "count": 64
+            },
+            {
+              "value": "13.09px",
+              "count": 38
+            }
+          ],
+          "letter_spacings": [
+            {
+              "value": "-0.56px",
+              "count": 88
+            },
+            {
+              "value": "-0.476px",
+              "count": 41
+            },
+            {
+              "value": "-2.24px",
+              "count": 9
+            },
+            {
+              "value": "-3.36px",
+              "count": 3
+            },
+            {
+              "value": "-1.68px",
+              "count": 1
+            }
+          ]
+        },
+        "spacing": {
+          "padding_px": [
+            3,
+            6,
+            14,
+            20,
+            86
+          ],
+          "margin_px": [
+            2,
+            14,
+            180
+          ],
+          "gap_px": [
+            2,
+            7,
+            12,
+            16,
+            21,
+            26,
+            29,
+            42,
+            86,
+            129,
+            180
+          ]
+        },
+        "radii": [
+          {
+            "value": "1600px",
+            "count": 2
+          }
+        ],
+        "shadows": [],
+        "gradients_used": true,
+        "gradient_count": 5,
+        "css_variables": {
+          "--_spacing---padding-bottom-base": "clamp(.75rem,1.5vw,1.25rem)",
+          "--_svg-lines---line-5-offset": "0px",
+          "--_colors---white": "#fff",
+          "--_spacing---padding-bottom-huge": "clamp(6rem,10vw,10rem)",
+          "--_spacing---padding-right-medium": "clamp(1.2em,2em,2.5em)",
+          "--_svg-lines---line-6-offset": "0px",
+          "--_spacing---padding-top-huge": "clamp(6rem,10vw,10rem)",
+          "--dark-grey": "#131313",
+          "--_spacing---padding-top-base": "clamp(.75rem,1.5vw,1.25rem)",
+          "--_spacing---nav__trigger-radius": ".7em",
+          "--_spacing---padding-left-base": "clamp(1em,1.5em,2em)",
+          "--_spacing---padding-left-medium": "clamp(1.2em,2em,2.5em)",
+          "--_colors---neon-purple": "#9747ff",
+          "--soft-grey": "#535353",
+          "--_spacing---padding-bottom-large": "clamp(4rem,8vw,8rem)",
+          "--_colors---tech-blue": "#003bb0",
+          "--mie-black": "#111",
+          "--_svg-lines---line-1-offset": "0px",
+          "--_spacing---padding-top-large": "clamp(4rem,8vw,8rem)",
+          "--_spacing---padding-top-medium": "clamp(3rem,6vw,6rem)",
+          "--_colors---mie-red": "#da4a4a",
+          "--_svg-lines---line-3-offset": "0px",
+          "--_svg-lines---line-4-offset": "0px",
+          "--_spacing---padding-right-base": "clamp(1em,1.5em,2em)",
+          "--_spacing---padding-left-large": "clamp(1.5em,2.5em,3em)",
+          "--_spacing---padding-bottom-medium": "clamp(3rem,6vw,6rem)",
+          "--_svg-lines---line-2-offset": "0px",
+          "--_colors---electric-green": "#c3ff00",
+          "--_spacing---padding-right-large": "clamp(1.5em,2.5em,3em)"
+        }
+      }
+    }
+  },
+  "missing_categories": [
+    "pricing",
+    "blog"
+  ]
+}

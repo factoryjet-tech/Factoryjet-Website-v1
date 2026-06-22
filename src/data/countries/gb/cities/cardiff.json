@@ -1,0 +1,59 @@
+{
+  "slug": "cardiff",
+  "name": "Cardiff",
+  "region": "Wales",
+  "country": "Wales",
+  "population": 370000,
+  "businesses": 17000,
+  "gdpBn": 16.2,
+  "primaryIndustries": [
+    "Public Sector",
+    "Media & Broadcasting",
+    "Professional Services",
+    "Technology"
+  ],
+  "keyEmployers": [
+    "Welsh Government",
+    "BBC Cymru Wales",
+    "ITV Wales",
+    "Cardiff University",
+    "Principality Stadium"
+  ],
+  "avgAgencyPricing": {
+    "webDesign": 3700,
+    "ecommerce": 7100,
+    "seo": 980,
+    "aiAgents": 0
+  },
+  "localAgencies": {
+    "web-design": [
+      "Cardiff Web Design",
+      "Digital Wales",
+      "Creative Web Solutions"
+    ],
+    "seo": [
+      "Cardiff SEO Services",
+      "Wales Digital Marketing",
+      "Local Search Cardiff"
+    ]
+  },
+  "keyStats": {
+    "digitalBusinessGrowth": "13% YoY",
+    "smeCount": 15000,
+    "techJobs": 4500,
+    "avgSalary": 27500
+  },
+  "cityAreas": [
+    "Cardiff City Centre",
+    "Bay Area",
+    "Canton",
+    "Cathays",
+    "Roath"
+  ],
+  "newsHook": "BBC Cymru Wales invests £20M in new production centre creating 300 media jobs",
+  "heroImage": "/images/uk/cardiff/hero-cardiff.webp",
+  "coordinates": {
+    "lat": 51.4816,
+    "lng": -3.1791
+  }
+}
