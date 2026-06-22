@@ -23,6 +23,63 @@
 const NOTIFY_TO   = 'bhavesh@factoryjet.com';
 const NOTIFY_FROM = 'FactoryJet Leads <leads@factoryjet.com>';
 
+// Firestore project + public web API key. The key is the same one shipped in the
+// client bundle (NEXT_PUBLIC_FIREBASE_API_KEY), so this exposes nothing new.
+// Env vars override the fallbacks if ever set in Cloudflare Pages settings.
+const FB_PROJECT = 'factoryjet-c5f8a';
+const FB_API_KEY = 'AIzaSyC1EBwPNqicJfuygSKfpy4te8CajzSFvL4';
+
+/**
+ * Authoritative server-side lead write to Firestore via the REST API.
+ * This is the reliable capture path — it does NOT depend on the browser
+ * Firestore SDK, which hangs in production. PATCH to an explicit document id
+ * is an upsert, so it shares the client's docId without creating duplicates.
+ */
+async function writeLeadToFirestore(env, lead) {
+  const project = (env && env.FIREBASE_PROJECT_ID) || FB_PROJECT;
+  const apiKey  = (env && (env.FIREBASE_API_KEY || env.NEXT_PUBLIC_FIREBASE_API_KEY)) || FB_API_KEY;
+  const docId   = (lead.docId && String(lead.docId).replace(/[^A-Za-z0-9_-]/g, '')) ||
+                  `${new Date().toISOString().replace(/[:.]/g, '-')}_${(lead.name || 'lead').replace(/\s+/g, '').slice(0, 15)}`;
+  // Collection allow-list — never let the client write to an arbitrary path.
+  const ALLOWED = ['contactus', 'contactpage'];
+  const collection = ALLOWED.includes(lead.collection) ? lead.collection : 'contactus';
+
+  const url = `https://firestore.googleapis.com/v1/projects/${project}/databases/(default)/documents/${collection}/${encodeURIComponent(docId)}?key=${apiKey}`;
+  const s = (v) => ({ stringValue: v == null ? '' : String(v) });
+  const body = {
+    fields: {
+      name:       s(lead.name),
+      email:      s(lead.email),
+      phone:      s(lead.phone),
+      company:    s(lead.company),
+      service:    s(lead.service),
+      message:    s(lead.message),
+      region:     s(lead.region),
+      source:     s(lead.source),
+      page:       s(lead.page),
+      turnstileToken: s(lead.turnstileToken),
+      status:     s('new'),
+      capturedBy: s('server'),
+      createdAt:  { timestampValue: new Date().toISOString() },
+    },
+  };
+
+  try {
+    const res = await fetch(url, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+    if (res.ok) return { saved: true, docId };
+    const errText = await res.text();
+    console.error('Firestore REST write failed:', res.status, errText);
+    return { saved: false, status: res.status };
+  } catch (err) {
+    console.error('Firestore REST write error:', err);
+    return { saved: false, error: String(err) };
+  }
+}
+
 /** Pretty-print the service slug into a human label */
 function serviceLabel(id) {
   const map = {
@@ -141,7 +198,7 @@ export async function onRequestPost(context) {
     });
   }
 
-  const { name, email, phone, company, service, message, region, page } = body;
+  const { docId, collection, name, email, phone, company, service, message, region, source, page } = body;
 
   // Guard: need at minimum a name + email
   if (!name || !email) {
@@ -150,56 +207,52 @@ export async function onRequestPost(context) {
     });
   }
 
-  // Require RESEND_API_KEY env var (set in Cloudflare Pages → Settings → Env Vars)
+  // ── (1) AUTHORITATIVE: persist the lead to Firestore server-side ───────────
+  // This is the reliable capture path; it runs regardless of email status.
+  const fsResult = await writeLeadToFirestore(env, {
+    docId, collection, name, email, phone, company, service, message, region, source, page,
+    turnstileToken: body.turnstileToken,
+  });
+
+  // ── (2) Notify by email via Resend (best-effort) ───────────────────────────
+  let emailed = false;
   const apiKey = env.RESEND_API_KEY;
   if (!apiKey) {
-    console.error('RESEND_API_KEY not set in Cloudflare Pages environment variables');
-    // Return 200 so the modal doesn't show an error to the user — lead is already in Firestore
-    return new Response(JSON.stringify({ ok: true, warn: 'email skipped — no API key' }), {
-      status: 200, headers: { 'Content-Type': 'application/json', ...corsHeaders },
-    });
+    console.error('RESEND_API_KEY not set — lead saved, email skipped');
+  } else {
+    const serviceStr = serviceLabel(service);
+    const subject = `🔥 New lead: ${name} — ${serviceStr}${region ? ` (${region.toUpperCase()})` : ''}`;
+    try {
+      const resendRes = await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          from: NOTIFY_FROM,
+          to: [NOTIFY_TO],
+          subject,
+          html: buildHtml({ name, email, phone, company, service, message, region, page }),
+          reply_to: email,
+        }),
+      });
+      emailed = resendRes.ok;
+      if (!resendRes.ok) {
+        console.error('Resend API error:', resendRes.status, await resendRes.text());
+      }
+    } catch (err) {
+      console.error('Resend fetch error:', err);
+    }
   }
 
-  // Send email via Resend
-  const serviceStr = serviceLabel(service);
-  const subject = `🔥 New lead: ${name} — ${serviceStr}${region ? ` (${region.toUpperCase()})` : ''}`;
-
-  let resendRes;
-  try {
-    resendRes = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        from:    NOTIFY_FROM,
-        to:      [NOTIFY_TO],
-        subject,
-        html:    buildHtml({ name, email, phone, company, service, message, region, page }),
-        reply_to: email,
-      }),
-    });
-  } catch (err) {
-    console.error('Resend fetch error:', err);
-    // Still 200 — lead is in Firestore, email is best-effort
-    return new Response(JSON.stringify({ ok: true, warn: 'email delivery error' }), {
-      status: 200, headers: { 'Content-Type': 'application/json', ...corsHeaders },
-    });
-  }
-
-  if (!resendRes.ok) {
-    const errBody = await resendRes.text();
-    console.error('Resend API error:', resendRes.status, errBody);
-    // Return the actual Resend error so we can debug from curl
-    return new Response(JSON.stringify({ ok: false, resend_status: resendRes.status, resend_error: errBody }), {
-      status: 200, headers: { 'Content-Type': 'application/json', ...corsHeaders },
-    });
-  }
-
-  return new Response(JSON.stringify({ ok: true, sent: true }), {
-    status: 200, headers: { 'Content-Type': 'application/json', ...corsHeaders },
-  });
+  // Capture is successful if the lead was saved OR an alert email was sent.
+  const ok = fsResult.saved || emailed;
+  return new Response(
+    JSON.stringify({ ok, saved: fsResult.saved, emailed, docId: fsResult.docId || docId }),
+    {
+      // 502 only when BOTH paths failed, so the client retries.
+      status: ok ? 200 : 502,
+      headers: { 'Content-Type': 'application/json', ...corsHeaders },
+    },
+  );
 }
 
 /** Handle CORS preflight */

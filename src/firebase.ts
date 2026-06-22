@@ -1,6 +1,6 @@
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getFirestore, type Firestore } from "firebase/firestore";
+import { getFirestore, initializeFirestore, type Firestore } from "firebase/firestore";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -36,7 +36,21 @@ const analytics = typeof window !== 'undefined' ? getAnalytics(app) : null;
 // page carries Firebase (via the sitewide contact modal) that error can break
 // the build on any route. Every read/write happens client-side in a form
 // submit handler, so the server-side value is never used.
-const db = (typeof window !== 'undefined' ? getFirestore(app) : undefined) as Firestore;
+//
+// Transport: use initializeFirestore with experimentalAutoDetectLongPolling so
+// the SDK falls back to long-polling when the streaming WebChannel can't open.
+// The default transport was hanging `setDoc` forever in production (no error,
+// no network) and silently dropping every lead (incident 2026-06-22). Wrapped
+// in try/catch because initializeFirestore must run at most once per app —
+// a re-import (HMR / chunk re-eval) falls back to the already-created instance.
+function createDb(): Firestore {
+  try {
+    return initializeFirestore(app, { experimentalAutoDetectLongPolling: true });
+  } catch {
+    return getFirestore(app);
+  }
+}
+const db = (typeof window !== 'undefined' ? createDb() : undefined) as Firestore;
 
 // Keep the async function for backwards compatibility
 const initFirebase = async () => {

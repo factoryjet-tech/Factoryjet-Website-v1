@@ -12,8 +12,7 @@
 
 import React, { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
-import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
-import { db } from '@/firebase';
+import { submitLead } from '@/utils/submitLead';
 import {
   trackFormStart,
   trackFormSubmit,
@@ -46,35 +45,17 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({ source = 'us_hero_inlin
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (honeypot.trim() !== '') { router.push('/thank-you'); return; } // silent bot drop
+    // Silent bot drop — honeypot filled. Do NOT navigate to /thank-you (that
+    // would fire a phantom conversion). Just stop.
+    if (honeypot.trim() !== '') { return; }
     if (!canSubmit) { setError('Please enter your name and a valid email.'); return; }
     setIsSubmitting(true);
     setError(null);
     trackFormSubmit(source, { service: '' });
     try {
-      const now = new Date();
-      const dateStr = now.toISOString().split('T')[0];
-      const timeStr = now.toTimeString().split(' ')[0].replace(/:/g, '-');
-      const namePart = name.replace(/\s+/g, '').slice(0, 15);
-      const docId = `${dateStr}_${timeStr}_${namePart}`;
-      await setDoc(doc(db, 'contactus', docId), {
-        name, email, phone: '', company: '', service: '', message: '',
-        region: 'us', source,
-        turnstileToken: '',
-        createdAt: serverTimestamp(),
-        status: 'new',
-      });
+      // Durable, server-first capture — never hangs on the browser Firestore SDK.
+      const { docId } = await submitLead({ name, email, region: 'us', source });
       trackFormSuccess(source);
-      fetch('/api/notify-lead', {
-        method: 'POST',
-        keepalive: true,
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name, email, phone: '', company: '', service: '', message: '',
-          region: 'us', source,
-          page: typeof window !== 'undefined' ? window.location.pathname : '',
-        }),
-      }).catch(() => { /* best-effort; Firestore write already succeeded */ });
       router.push(
         `/thank-you?source=${encodeURIComponent(source)}&service=unknown&lid=${encodeURIComponent(docId)}`
       );

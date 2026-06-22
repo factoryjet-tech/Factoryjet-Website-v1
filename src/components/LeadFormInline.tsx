@@ -12,9 +12,8 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { Send, CheckCircle, Loader2 } from 'lucide-react';
-import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
-import { db } from '@/firebase';
 import { useRouter } from 'next/navigation';
+import { submitLead } from '@/utils/submitLead';
 import {
   trackFormStart,
   trackFormSubmit,
@@ -121,37 +120,13 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
     setError(null);
     trackFormSubmit(source, { service });
     try {
-      const now = new Date();
-      const dateStr = now.toISOString().split('T')[0];
-      const timeStr = now.toTimeString().split(' ')[0].replace(/:/g, '-');
-      const namePart = name.replace(/\s+/g, '').slice(0, 15);
-      const docId = `${dateStr}_${timeStr}_${namePart}`;
-      await setDoc(doc(db, collectionName, docId), {
+      // Durable, server-first capture (writes via the edge function + emails),
+      // with a best-effort client Firestore write. Never hangs on the SDK.
+      const { docId } = await submitLead({
         name, email, phone, company, service, message,
-        region, source,
-        turnstileToken: token,
-        createdAt: serverTimestamp(),
-        status: 'new',
+        region, source, collection: collectionName, turnstileToken: token,
       });
       trackFormSuccess(source);
-
-      // Lead notification email via Cloudflare Pages Function. keepalive:true so
-      // the request completes even though we navigate to /thank-you right after.
-      // Best-effort: the Firestore write above already persisted the lead.
-      fetch('/api/notify-lead', {
-        method: 'POST',
-        keepalive: true,
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name, email,
-          phone: phone || '',
-          company: company || '',
-          service: service || '',
-          message: message || '',
-          region, source,
-          page: typeof window !== 'undefined' ? window.location.pathname : '',
-        }),
-      }).catch(() => { /* email is best-effort; Firestore write already succeeded */ });
 
       // Redirect to the dedicated /thank-you page (single source of truth for the
       // conversion: GA4 + Google Ads fire there on mount). The unique lid lets

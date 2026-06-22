@@ -31,8 +31,7 @@ import {
 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { useContactModal } from '../context/ContactModalContext';
-import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
-import { db } from '@/firebase';
+import { submitLead } from '../utils/submitLead';
 import {
   trackModalOpen,
   trackModalClose,
@@ -271,46 +270,21 @@ const ContactFormModal: React.FC = () => {
     trackFormSubmit('contact_form', { service: formData.service });
 
     try {
-      const now = new Date();
-      const dateStr = now.toISOString().split('T')[0];
-      const timeStr = now.toTimeString().split(' ')[0].replace(/:/g, '-');
-      const namePart = formData.name.replace(/\s+/g, '').slice(0, 15);
-      const docId = `${dateStr}_${timeStr}_${namePart}`;
-
-      await setDoc(doc(db, 'contactus', docId), {
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone,
+      // Durable, server-first capture (edge function write + email) with a
+      // best-effort client Firestore write. Never hangs on the browser SDK.
+      const { docId } = await submitLead({
+        name:    formData.name,
+        email:   formData.email,
+        phone:   formData.phone,
         company: formData.company,
         service: formData.service,
         message: formData.message,
         region,
+        source: 'contact_form',
         turnstileToken: formData.turnstileToken,
-        createdAt: serverTimestamp(),
-        status: 'new',
       });
 
       trackFormSuccess('contact_form');
-
-      // Lead notification email via Cloudflare Pages Function.
-      // keepalive:true so the request completes even though we navigate to
-      // /thank-you immediately after. Lead is already persisted in Firestore
-      // above — this is additive and best-effort.
-      fetch('/api/notify-lead', {
-        method: 'POST',
-        keepalive: true,
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name:    formData.name,
-          email:   formData.email,
-          phone:   formData.phone   || '',
-          company: formData.company || '',
-          service: formData.service || '',
-          message: formData.message || '',
-          region,
-          page: typeof window !== 'undefined' ? window.location.pathname : '',
-        }),
-      }).catch(() => { /* email is best-effort; Firestore write already succeeded */ });
 
       // Redirect to the dedicated /thank-you page — the single source of truth
       // for the conversion (GA4 + Google Ads fire there on mount). The unique

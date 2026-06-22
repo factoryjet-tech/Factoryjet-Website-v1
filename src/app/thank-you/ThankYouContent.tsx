@@ -39,9 +39,14 @@ export default function ThankYouContent() {
       /* no-op */
     }
 
-    const key = lid ? `fj_conv_${lid}` : '';
+    // Only count a conversion for a REAL submission — it must carry a lead id
+    // (lid). Direct visits and bots that reach /thank-you without a lid render
+    // the page but never fire the conversion, so the count stays clean.
+    if (!lid) return;
+
+    const key = `fj_conv_${lid}`;
     try {
-      if (key && sessionStorage.getItem(key)) return; // already counted this submission
+      if (sessionStorage.getItem(key)) return; // already counted this submission
       trackFormSubmission();
       // Funnel-completion signal for GA4 (scoped to the GA4 stream only).
       if (typeof window !== 'undefined' && typeof (window as { gtag?: unknown }).gtag === 'function') {
@@ -50,7 +55,7 @@ export default function ThankYouContent() {
           lead_source: source || 'unknown',
         });
       }
-      if (key) sessionStorage.setItem(key, '1');
+      sessionStorage.setItem(key, '1');
     } catch {
       // sessionStorage blocked (private mode etc.) — still count the conversion.
       trackFormSubmission();
