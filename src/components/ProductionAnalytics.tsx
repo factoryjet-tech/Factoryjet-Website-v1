@@ -17,7 +17,10 @@ import { useEffect } from 'react';
  * before any conversion call runs — there is no longer a race between this
  * effect and page effects like /thank-you's trackFormSubmission(). This file is
  * only responsible for (a) host-gating, (b) the js/config commands, and
- * (c) loading the heavy gtm.js + gtag/js scripts.
+ * (c) loading the GTM container (gtm.js), which in turn loads the Google Ads
+ *     tags for both AW-11127037244 and AW-18185532850. We must NOT also inject
+ *     gtag/js for those IDs here — double-loading the same tag corrupts gtag's
+ *     shared runtime ("is_legacy_loaded" errors) and breaks conversions.
  */
 
 const PROD_HOSTS = ['factoryjet.com', 'www.factoryjet.com'];
@@ -68,10 +71,14 @@ export default function ProductionAnalytics() {
       gtm.async = true;
       gtm.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-PKWD8SHF';
       document.head.appendChild(gtm);
-      const gads = document.createElement('script');
-      gads.async = true;
-      gads.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18185532850';
-      document.head.appendChild(gads);
+      // NOTE: we deliberately do NOT inject gtag/js?id=AW-18185532850 here.
+      // The GTM container (GTM-PKWD8SHF) already loads the Google Ads tags for
+      // BOTH AW-11127037244 and AW-18185532850. Injecting AW-18185532850 a second
+      // time loaded the same gtag.js twice, which corrupts gtag's shared runtime
+      // and throws "Cannot read properties of undefined (reading 'is_legacy_loaded')"
+      // on every config call (GA4 + Ads), breaking conversion measurement.
+      // AW-11127037244 already fires its conversion via GTM-only loading, so
+      // AW-18185532850 works the same way. (Fixed 2026-06-22.)
     }
 
     // On the conversion destination page, load the tags IMMEDIATELY so the lead
