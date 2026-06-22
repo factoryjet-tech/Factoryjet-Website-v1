@@ -17,6 +17,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
+import ExitIntentLeadForm from '@/components/ExitIntentLeadForm'
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -267,6 +268,13 @@ export default function CharlotteWebDesignPage() {
       />
       <SchemaScript />
     </main>
+      <ExitIntentLeadForm
+        region="us"
+        source="exit_intent_charlotte_web_design"
+        heading="Claim your free website audit"
+        subheading="Expert analysis of your SEO, speed & UX — just name and email."
+        promo="Free website audit — no cost, no obligation"
+      />
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );

@@ -7,6 +7,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import ExitIntentLeadForm from '@/components/ExitIntentLeadForm';
 import RelatedGuides from '@/components/v2/RelatedGuides';
 import Hero from '@/components/v2/Hero';
 import HeroInlineForm from '@/components/HeroInlineForm';
@@ -904,6 +905,13 @@ export default function USHomePage() {
           { href: '/blog/mobile-only-design-strategy', label: 'Mobile-only vs responsive design: which to pick' },
           { href: '/blog/website-cost-small-business-usa-2026', label: 'How much a small business website costs in 2026' },
         ]}
+      />
+      <ExitIntentLeadForm
+        region="us"
+        source="exit_intent_us_home"
+        heading="Claim your free website audit"
+        subheading="Expert analysis of your SEO, speed & UX — just name and email."
+        promo="Free website audit — no cost, no obligation"
       />
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>

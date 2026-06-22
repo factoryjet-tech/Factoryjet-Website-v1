@@ -5,6 +5,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import ExitIntentLeadForm from '@/components/ExitIntentLeadForm';
 import RelatedGuides from '@/components/v2/RelatedGuides';
 import Hero from '@/components/v2/Hero';
 import LogoBar from '@/components/v2/LogoBar';
@@ -602,6 +603,13 @@ export default function PricingPage() {
           { href: '/blog/website-cost-small-business-usa-2026', label: 'How much a small business website costs in 2026' },
           { href: '/blog/shopify-vs-custom-website-us-small-business-2026', label: 'Shopify vs a custom website for US small business' },
         ]}
+      />
+      <ExitIntentLeadForm
+        region="us"
+        source="exit_intent_us_pricing"
+        heading="Get a free, fixed-price quote"
+        subheading="Tell us what you need — just name and email."
+        promo="Free quote within 24 hours"
       />
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>

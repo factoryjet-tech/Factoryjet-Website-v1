@@ -5,6 +5,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import ExitIntentLeadForm from '@/components/ExitIntentLeadForm';
 
 import './charlotte-seo.css';
 
@@ -466,6 +467,13 @@ export default function CharlotteSeoPage() {
         </section>
       </div>
 
+      <ExitIntentLeadForm
+        region="us"
+        source="exit_intent_charlotte_seo"
+        heading="Claim your free SEO audit"
+        subheading="Map Pack, local & technical SEO — just name and email."
+        promo="Free Charlotte SEO audit — no obligation"
+      />
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
