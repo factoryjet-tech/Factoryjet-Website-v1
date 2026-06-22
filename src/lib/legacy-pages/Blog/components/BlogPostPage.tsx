@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { BlogPost, FAQItem } from '../data.types';
 import { ReadingProgress } from './ReadingProgress';
 import { StickyCallToAction } from './StickyCallToAction';
+import BlogLeadCapture from '@/components/BlogLeadCapture';
 import { getAuthorByName } from '@/data/authors';
 import {
   ArrowLeft,
@@ -216,6 +217,11 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
                 {post.content}
               </div>
 
+              {/* Inline lead capture — end of article, before FAQ. Reuses the
+                  proven submitLead pipeline; redirect to /thank-you fires the
+                  single Google Ads + GA4 lead conversion. source = blog_<slug>. */}
+              <BlogLeadCapture slug={post.slug} />
+
               {/* AEO: FAQ Module */}
               {post.faqs && <FAQAccordion faqs={post.faqs} />}
 
@@ -294,17 +300,17 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
                     <Rocket className="w-5 h-5 md:w-6 md:h-6" />
                   </div>
                   <h3 className="font-display font-bold text-lg md:text-xl text-gray-900 mb-2">
-                    Transform Your Factory's Web Presence
+                    Want this done for you?
                   </h3>
                   <p className="text-xs md:text-sm text-gray-600 mb-5 md:mb-6 leading-relaxed">
-                    Don't just read about growth. Get a high-performance, lead-generating website in just 7 days.
+                    Get a free, no-pitch plan for your site. The founder replies within 24 hours, and most sites ship in about 7 days.
                   </p>
 
                   <Link href="/contact" className="w-full bg-[#F05A28] hover:bg-[#C94818] text-white font-semibold py-3 md:py-3.5 rounded-lg md:rounded-xl transition-all duration-300 shadow-lg shadow-[#F05A28]/20 flex items-center justify-center gap-2 group/btn text-sm md:text-base">
-                    Book a Consultation
+                    Get my free plan
                     <ArrowLeft className="w-3.5 h-3.5 md:w-4 md:h-4 rotate-180 group-hover/btn:translate-x-1 transition-transform" />
                   </Link>
-                  <p className="text-center text-xs text-gray-400 mt-3">No commitment required. Limited slots.</p>
+                  <p className="text-center text-xs text-gray-400 mt-3">No commitment. Founder replies in 24h.</p>
                 </div>
               </div>
 
