@@ -7,6 +7,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
 import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
@@ -888,10 +889,10 @@ export default function AIAgentsPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_services_ai_agents_hero" />}
           eyebrow="AI AGENT DEVELOPMENT · USA"
           headline="AI Agents That Run Your Business While You Sleep"
           lead="Your competitors are automating the work that costs you 20 hours a week. FactoryJet builds custom AI agents — for customer support, sales, operations, and more — that work around the clock, integrate with your existing tools, and cost fixed-price vs a US AI agency."
-          primaryCta={{ label: 'Talk to the Founder', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',

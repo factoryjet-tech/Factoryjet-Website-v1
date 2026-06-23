@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { seoCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import CityContextSection from '@/components/v2/CityContextSection';
@@ -192,10 +193,10 @@ export default function VadodaraSeoPage() {
 
       <main className="bg-fj-cream">
         <Hero
+        formSlot={<HeroInlineForm region="in" source="seo_vadodara_hero" />}
           eyebrow="SEO · VADODARA"
           headline="The SEO Agency in Vadodara Built for Engineering, Industry, and Export"
           lead="Vadodara is one of India's big factory cities. About a third of the country's power equipment is built here, the IOCL refinery at Koyali sits at the heart of a huge petrochemical cluster, and firms like L&T, ABB, Alstom, and Alembic sell to power companies, big project contractors, and buyers around the world. These are slow, careful business deals, not quick buys. FactoryJet does SEO for those buyers and exporters, with monthly reports you can actually read."
-          primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           trustItems={['Picked up by Google AI answers', 'No long contracts', '500+ sites done']}
           rightSlot={<HeroBrowserMockup badgeLabel="B2B + export" badgeCity="Vadodara" />}

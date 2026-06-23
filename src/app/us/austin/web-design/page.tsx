@@ -5,6 +5,7 @@
 import type { Metadata } from 'next';
 import { webDesignPriorityCityAlternatesUS } from '@/data/hreflangMap';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import CityContextSection from '@/components/v2/CityContextSection';
@@ -74,10 +75,10 @@ export default function AustinWebDesignPage() {
       <SiteHeader />
     <main className="bg-fj-cream">
       <Hero
+        formSlot={<HeroInlineForm region="us" source="us_austin_web_design_hero" />}
         eyebrow={"WEB DESIGN · AUSTIN"}
         headline={"Web Design in Austin That Converts Visitors Into Clients"}
         lead={"Austin businesses don't have time for slow sites, vague agencies, or six-month timelines. FactoryJet delivers a production-ready website in 7 days — starting at $1,500. You own the code, the design files, and the results."}
-        primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
         trustItems={["Websites from $1,500","7-day delivery","Next.js + GA4 included"]}
         extraCta={<WhatsAppCTA city="Austin" variant="light" />}
         rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Austin, TX" badgeLabel="Live in 7 days" />}

@@ -5,6 +5,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -701,10 +702,10 @@ export default function AIAgentDevelopmentINPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="services_ai_agent_development_hero" />}
           eyebrow="AI AGENT DEVELOPMENT COMPANY · INDIA"
           headline="AI Agent Development Company in India — Custom Agents for Your Business, Deployed in Weeks"
           lead="Your competitors are automating the WhatsApp queues, GST workflows, and manual data entry that cost your team 20+ hours a week. FactoryJet builds custom AI agents that connect your Indian business stack — Zoho, Razorpay, Tally, Shiprocket, WhatsApp — and work around the clock without adding headcount."
-          primaryCta={{ label: 'Book a Free AI Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ businesses served',

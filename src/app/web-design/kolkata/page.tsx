@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import CityContextSection from '@/components/v2/CityContextSection';
@@ -572,10 +573,10 @@ export default function KolkataWebDesignPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="web_design_kolkata_hero" />}
           eyebrow="WEB DESIGN · KOLKATA"
           headline="Website Design in Kolkata for Jute & Tea Traders, IT Firms, and East India's Growing Businesses"
           lead="Kolkata is East India's commercial capital — home to India's oldest port, the country's largest jute industry, Salt Lake's thriving IT hub, and one of India's most resilient MSME ecosystems. From Dalhousie's heritage commercial core and Burrabazar's wholesale trading to Salt Lake Sector V's IT corridor and Rajarhat New Town's emerging business district, Kolkata businesses compete nationally and internationally. FactoryJet builds from ₹29,999 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
-          primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',

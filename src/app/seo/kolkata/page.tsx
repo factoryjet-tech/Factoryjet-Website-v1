@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { seoCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import CityContextSection from '@/components/v2/CityContextSection';
@@ -193,10 +194,10 @@ export default function KolkataSeoPage() {
 
       <main className="bg-fj-cream">
         <Hero
+        formSlot={<HeroInlineForm region="in" source="seo_kolkata_hero" />}
           eyebrow="SEO · KOLKATA"
           headline="The SEO Company in Kolkata That Brings Orders, Not Just Rankings"
           lead="Kolkata sells in three directions at once. Leather, jute, and tea houses ship to buyers in the US, Europe, and Japan. Engineering and pharma units supply the whole of India. Coaching centres, clinics, and shops serve the city. One copy-paste SEO plan fits none of them. FactoryJet matches your SEO to the market you actually sell to, with monthly reports you can read in five minutes."
-          primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           trustItems={['Picked up by Google AI answers', 'No long contracts', '500+ sites done']}
           rightSlot={<HeroBrowserMockup badgeLabel="Top 3 on the map" badgeCity="Kolkata" />}

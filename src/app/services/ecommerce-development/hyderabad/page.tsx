@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -451,10 +452,10 @@ export default function HyderabadEcommercePage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_hyderabad_hero" />}
           eyebrow="ECOMMERCE DEVELOPMENT · HYDERABAD"
           headline="Hyderabad's Most Trusted Ecommerce Agency — Store Live in 7 Days"
           lead="FactoryJet builds Shopify, WooCommerce, and custom D2C stores for Hyderabad brands — Razorpay and UPI integrated, GST-compliant, Shiprocket connected, and Lighthouse 90+ before we hand you the keys. 7-day delivery guarantee."
-          primaryCta={{ label: 'Book a Free Store Audit', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',

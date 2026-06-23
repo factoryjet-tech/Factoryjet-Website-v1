@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import CityContextSection from '@/components/v2/CityContextSection';
@@ -572,10 +573,10 @@ export default function GurgaonWebDesignPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="web_design_gurgaon_hero" />}
           eyebrow="WEB DESIGN · GURGAON"
           headline="Website Design in Gurgaon for GCCs, BFSI Firms, Startups, and High-Value B2B Businesses"
           lead="Gurgaon is India's corporate capital — home to 250+ Fortune 500 Global Capability Centres, India's largest BFSI corridor, and the fastest-growing startup ecosystem in North India. From Cyber City's GCC cluster to Golf Course Road's premium commercial stretch and Sohna Road's emerging startup belt, Gurgaon businesses demand quality and know how to evaluate it. FactoryJet builds from ₹29,999 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
-          primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',

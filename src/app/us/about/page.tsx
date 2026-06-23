@@ -4,6 +4,7 @@ import { aboutAlternates } from '@/data/hreflangMap'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 import Hero from '@/components/v2/Hero'
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar'
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock'
 import StrategicDarkSection from '@/components/v2/StrategicDarkSection'
@@ -401,10 +402,10 @@ export default function AboutPage() {
 
       {/* ── 1. HERO — light cream, no dark hero ─────────────────────────── */}
       <Hero
+        formSlot={<HeroInlineForm region="us" source="us_about_hero" />}
         eyebrow="ABOUT FACTORYJET"
         headline="The Web Agency Built for US Small Businesses"
         lead="Enterprise-quality websites engineered for measurable outcomes. Fixed price. 7-day delivery. 500+ US businesses launched."
-        primaryCta={{ label: 'Start Your Project', modal: true, region: 'us' }}
         secondaryCta={{ label: 'See Our Work', href: '/us/portfolio' }}
         trustItems={[
           '500+ businesses launched',

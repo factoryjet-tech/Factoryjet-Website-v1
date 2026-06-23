@@ -24,9 +24,11 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export interface HeroInlineFormProps {
   source?: string;
+  /** Region the lead is recorded under (also drives downstream routing). Default 'us'. */
+  region?: 'us' | 'uk' | 'in';
 }
 
-const HeroInlineForm: React.FC<HeroInlineFormProps> = ({ source = 'us_hero_inline' }) => {
+const HeroInlineForm: React.FC<HeroInlineFormProps> = ({ source = 'us_hero_inline', region = 'us' }) => {
   const router = useRouter();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -54,7 +56,7 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({ source = 'us_hero_inlin
     trackFormSubmit(source, { service: '' });
     try {
       // Durable, server-first capture — never hangs on the browser Firestore SDK.
-      const { docId } = await submitLead({ name, email, region: 'us', source });
+      const { docId } = await submitLead({ name, email, region, source });
       trackFormSuccess(source);
       router.push(
         `/thank-you?source=${encodeURIComponent(source)}&service=unknown&lid=${encodeURIComponent(docId)}`

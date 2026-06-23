@@ -6,6 +6,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
 import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
@@ -816,10 +817,10 @@ export default function AIIntegrationServicesPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_services_ai_integration_services_hero" />}
           eyebrow="AI INTEGRATION SERVICES · USA"
           headline="Add AI to the Tools You Already Use — Without Replacing Them"
           lead="Your CRM, e-commerce platform, support desk, and internal apps can all be smarter — right now, without a wholesale software replacement. FactoryJet integrates GPT-4o and Claude into your existing stack so your team gets AI capabilities inside the tools they already know."
-          primaryCta={{ label: 'Book an AI Integration Call', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',

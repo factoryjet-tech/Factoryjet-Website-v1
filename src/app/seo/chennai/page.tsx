@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { seoCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -364,10 +365,10 @@ export default function SeoChennai() {
       <main className="bg-fj-cream">
 
         <Hero
+        formSlot={<HeroInlineForm region="in" source="seo_chennai_hero" />}
           eyebrow="SEO COMPANY IN CHENNAI, INDIA"
           headline="The SEO Company in Chennai That Understands Manufacturing, Auto, and IT B2B Buyers"
           lead="Chennai is India's manufacturing and auto capital — with procurement teams that research suppliers on Google for weeks before issuing an RFQ. FactoryJet delivers SEO services in Chennai matched to the B2B buyer journeys that define this city's economy. No long contracts."
-          primaryCta={{ label: 'Book a Free SEO Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           trustItems={['Manufacturing + IT + Local SEO', 'No lock-in contracts', '500+ businesses served']}
           rightSlot={<ChennaiKeywordCard />}

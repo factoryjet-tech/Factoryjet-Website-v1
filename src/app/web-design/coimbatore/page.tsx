@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { webDesignCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import CityContextSection from '@/components/v2/CityContextSection';
@@ -588,10 +589,10 @@ export default function CoimbatoreWebDesignPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="web_design_coimbatore_hero" />}
           eyebrow="WEB DESIGN · COIMBATORE"
           headline="Website Design in Coimbatore for Pump Manufacturers, Textile Firms, and Fast-Growing IT Companies"
           lead="Coimbatore is Tamil Nadu's industrial powerhouse — the world's largest pump manufacturing cluster, a major textile and garments hub, and a rising IT corridor along Avinashi Road. With 262+ startups and over 25,000 MSMEs, it is one of India's most under-served major cities for quality web design. FactoryJet builds from ₹29,999 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
-          primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',

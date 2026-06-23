@@ -6,6 +6,7 @@ import type { Metadata } from 'next'
 import { ecommerceCityAlternatesUS } from '@/data/hreflangMap'
 import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
 import Hero from '@/components/v2/Hero'
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar'
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock'
 import CityContextSection from '@/components/v2/CityContextSection'
@@ -68,10 +69,10 @@ export default function Page() {
 
         {/* ── 1. HERO ────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_denver_ecommerce_development_hero" />}
           eyebrow="E-COMMERCE DEVELOPMENT · DENVER"
           headline="Shopify Developer Denver for Colorado Businesses"
           lead="The only Denver e-commerce agency that launches in 7 days at a fixed, published price. Shopify, WooCommerce & AI-powered stores for Colorado's outdoor brands, craft breweries, cannabis-adjacent businesses, and tech-first DTC founders. 500+ projects, 4.9★ rating."
-          primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
           trustItems={['Shopify stores from $2,999', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Denver, CO" badgeLabel="Live in 7 days" />}
         />

@@ -6,6 +6,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -671,10 +672,10 @@ export default function WordPressDevelopmentPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="wordpress_development_hero" />}
           eyebrow="WORDPRESS DEVELOPMENT · INDIA"
           headline="WordPress Built Right — Fast, Secure, and Ranked"
           lead="43% of the internet runs on WordPress. Most Indian WordPress sites load in 8 seconds, run on GoDaddy shared hosting, and were built by someone who discovered Elementor last month. FactoryJet builds clean, fast, custom WordPress sites — from ₹29,999. In 7 days."
-          primaryCta={{ label: 'Book a Free Site Audit', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ websites built',

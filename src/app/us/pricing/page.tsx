@@ -8,6 +8,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import ExitIntentLeadForm from '@/components/ExitIntentLeadForm';
 import RelatedGuides from '@/components/v2/RelatedGuides';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -515,10 +516,10 @@ export default function PricingPage() {
 
       {/* ── 1. HERO ── */}
       <Hero
+        formSlot={<HeroInlineForm region="us" source="us_pricing_hero" />}
         eyebrow="WEBSITE DESIGN COST — 2026"
         headline="How Much Does a Website Cost? Here's the Actual Number."
         lead="Most agencies take 8–12 weeks, bill by the hour, and route you through account managers. FactoryJet ships your site in 7 days at a fixed price — senior engineers, no middle layers, no surprise invoices. Plans from $1,499–$7,500. Here's the breakdown."
-        primaryCta={{ label: 'Get a Free Quote', modal: true, region: 'us' }}
         secondaryCta={{ label: 'See All Packages', href: '#pricing' }}
         trustItems={['500+ businesses served', '7-day delivery guarantee', 'Senior engineers, fixed price']}
         rightSlot={

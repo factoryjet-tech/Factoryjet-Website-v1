@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { seoSubServiceAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -155,10 +156,10 @@ export default function EcommerceSeoPage() {
 
       <main className="bg-fj-cream">
         <Hero
+        formSlot={<HeroInlineForm region="in" source="seo_ecommerce_seo_hero" />}
           eyebrow="ECOMMERCE SEO SERVICES · INDIA"
           headline="Ecommerce SEO Services in India — Get Your Online Store Found on Google and Sell More"
           lead="An online store can have hundreds of pages, but only a few make you money: your category pages and your product pages. Those are the pages people land on when they are ready to buy. We help online stores across India get those pages found on Google. We work on the pages that sell, tidy big stores so Google does not get lost, show your reviews and star ratings in Google results, and make your store fast on phones. Works with Shopify, WooCommerce, and custom stores. No long contracts, and everything we do stays yours."
-          primaryCta={{ label: 'Book a Free Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           trustItems={['Shopify, Woo & custom', 'Pages that sell', 'No long contracts']}
           rightSlot={<HeroBrowserMockup badgeLabel="Store found" badgeCity="India" />}

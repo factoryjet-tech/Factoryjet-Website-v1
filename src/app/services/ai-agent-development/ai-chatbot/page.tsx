@@ -5,6 +5,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -630,10 +631,10 @@ export default function AIChatbotINPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="services_ai_agent_development_ai_chatbot_hero" />}
           eyebrow="AI CHATBOT DEVELOPMENT · INDIA"
           headline="AI Chatbots Built for Indian Customers, Live in 2–3 Weeks"
           lead="Your customers are asking the same WhatsApp questions 200 times a day. Your team is drowning in queries that an AI chatbot can handle instantly — in Hindi, English, or any regional language — while pushing data directly into Zoho, Shopify, and Razorpay. Fixed price. No ongoing SaaS fee."
-          primaryCta={{ label: 'Book a Free Chatbot Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ businesses served',

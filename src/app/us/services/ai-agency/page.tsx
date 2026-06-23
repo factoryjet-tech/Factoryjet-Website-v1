@@ -7,6 +7,7 @@ import { aiAgencyAlternates } from '@/data/hreflangMap';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -914,10 +915,10 @@ export default function AIAgencyPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_services_ai_agency_hero" />}
           eyebrow="AI AGENCY · UNITED STATES"
           headline={<>The AI Agency That<br className="hidden lg:block" /> Actually Delivers —<br className="hidden lg:block" /> Not Just Decks</>}
           lead="FactoryJet is a US AI agency building custom AI agents, automation workflows, and chatbots for small businesses since 2019. 500+ production systems delivered. fixed-price, milestone-paid. Fixed price. Talk to the founder."
-          primaryCta={{ label: 'Talk to the Founder', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={['500+ businesses served', 'Starting at $5,000', 'fixed-price', '25 years building']}
           rightSlot={

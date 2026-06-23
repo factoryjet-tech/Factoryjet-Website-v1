@@ -6,6 +6,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
 import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
@@ -713,10 +714,10 @@ export default function RaleighAIAgentsPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_raleigh_ai_agents_hero" />}
           eyebrow="AI AGENTS · RALEIGH, NC"
           headline="Research Triangle Businesses Are Automating the Work That Doesn't Require a PhD"
           lead="Raleigh's economy runs on specialized talent. FactoryJet builds custom AI agents for Raleigh businesses — customer support, lead qualification, appointment booking, and knowledge management — that handle the routine inbound so your team focuses on the high-value work that drove you to the Triangle."
-          primaryCta={{ label: 'Get a Quote', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',

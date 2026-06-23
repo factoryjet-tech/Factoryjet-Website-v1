@@ -7,6 +7,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/ServiceJourneyRow';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
@@ -428,6 +429,7 @@ export default function AiSeoIndiaPage() {
       <main className="bg-fj-cream">
         {/* ── CH.0 HERO — The Answer Card ─────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="ai_seo_hero" />}
           eyebrow="GENERATIVE ENGINE OPTIMIZATION (GEO) · AEO · AI SEO — INDIA"
           headline={
             <>
@@ -435,7 +437,6 @@ export default function AiSeoIndiaPage() {
             </>
           }
           lead="10 crore Indians use ChatGPT every week — and they ask it which company to trust. AI SEO makes ChatGPT, Perplexity, Gemini, and Google AI answers say your name. With proof, every month."
-          primaryCta={{ label: 'Check what AI says about you — free', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See how it works', href: '#how-it-works' }}
           extraCta={<WhatsAppCTA city="India" service="AI SEO" />}
           trustItems={['4 AI engines tracked monthly', 'Month to month — no lock-in', '5-minute reports, plain language']}

@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { seoCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -369,10 +370,10 @@ export default function SeoHyderabad() {
       <main className="bg-fj-cream">
 
         <Hero
+        formSlot={<HeroInlineForm region="in" source="seo_hyderabad_hero" />}
           eyebrow="SEO COMPANY IN HYDERABAD, INDIA"
           headline="The SEO Company in Hyderabad With the Lowest Competition Window in Any Major Indian City"
           lead="'Seo services in hyderabad' — 1,300 searches a month at a keyword difficulty of just 6 out of 100. That is extraordinary for a city of Hyderabad's economic size. FactoryJet delivers SEO services in Hyderabad for pharma, IT, real estate, and local businesses — before the window closes. No long contracts."
-          primaryCta={{ label: 'Book a Free SEO Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           trustItems={['Pharma + IT + Local SEO', 'No lock-in contracts', '500+ businesses served']}
           rightSlot={<HydKeywordCard />}

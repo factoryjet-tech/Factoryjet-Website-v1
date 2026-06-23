@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { webDesignCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import CityContextSection from '@/components/v2/CityContextSection';
@@ -462,10 +463,10 @@ export default function PuneWebDesignPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="web_design_pune_hero" />}
           eyebrow="WEB DESIGN · PUNE"
           headline="Website Design in Pune That Wins B2B Tenders — Not Just Page Views"
           lead="Pune is India's #2 IT export hub, the auto OEM and tier-1 supplier capital, and the Oxford of the East with 200+ engineering and management colleges. IT firms in Hinjewadi compete with Bangalore for global tenders, auto suppliers in Chakan compete on capability, and D2C brands in Koregaon Park compete with Mumbai. FactoryJet builds from ₹25,000 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
-          primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={['Websites from ₹25,000', '7-day delivery guarantee', '500+ businesses built']}
           rightSlot={<HeroBrowserMockup badgeCity="Pune" />}

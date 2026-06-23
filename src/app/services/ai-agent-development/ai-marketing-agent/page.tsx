@@ -5,6 +5,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -631,10 +632,10 @@ export default function AIMarketingAgentINPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="services_ai_agent_development_ai_marketing_agent_hero" />}
           eyebrow="AI MARKETING AGENT · INDIA"
           headline="AI That Plans, Writes & Sends Your Diwali Campaign — While You Run Your Business"
           lead="WhatsApp broadcasts, festival campaigns, social content, and ad optimisation — automated with India-first AI that writes in Hindi, understands your festival calendar, and learns which messages drive revenue. Fixed price. No agency retainer."
-          primaryCta={{ label: 'Book a Free Marketing AI Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ businesses served',

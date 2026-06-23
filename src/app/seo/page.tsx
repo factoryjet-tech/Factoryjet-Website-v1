@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { seoHubAlternates } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -427,10 +428,10 @@ export default function SeoHubPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="seo_hero" />}
           eyebrow="SEO COMPANY IN INDIA"
           headline="The SEO Company in India That Brings Leads, Not Just Rankings"
           lead="Most SEO companies in India still chase the old Google. But Google now shows an AI answer right at the top, and 'near me' searches own the local map. FactoryJet uses AI plus senior people to help Indian small businesses show up in all three: the map, the normal results, and the AI answers. Then we prove it in a report you can read in five minutes. No long contracts, and you keep every page, link, and ranking we build."
-          primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           trustItems={[
             "Picked up by Google AI answers",

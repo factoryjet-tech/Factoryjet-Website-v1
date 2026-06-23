@@ -7,6 +7,7 @@ import type { Metadata } from 'next'
 import { ecommerceCityAlternatesUS } from '@/data/hreflangMap'
 import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
 import Hero from '@/components/v2/Hero'
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar'
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock'
 import CityContextSection from '@/components/v2/CityContextSection'
@@ -68,10 +69,10 @@ export default function Page() {
 
         {/* ── 1. HERO ─────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_chattanooga_ecommerce_development_hero" />}
           eyebrow="E-COMMERCE DEVELOPMENT · CHATTANOOGA"
           headline="Shopify Developer Chattanooga for Tennessee Businesses"
           lead="Gig City runs on 10 Gbps fiber and forward-thinking ambition. FactoryJet builds the Shopify stores to match — live in 7 days from $2,999, at a fixed, published price. Shopify, WooCommerce & AI-powered stores for Chattanooga's outdoor brands, manufacturers, craft beverage companies, and CO.LAB-era innovators. 500+ projects, 4.9★."
-          primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
           trustItems={['Shopify stores from $2,999', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Chattanooga, TN" badgeLabel="Live in 7 days" />}
         />

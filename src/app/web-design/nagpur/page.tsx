@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import CityContextSection from '@/components/v2/CityContextSection';
@@ -589,10 +590,10 @@ export default function NagpurWebDesignPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="web_design_nagpur_hero" />}
           eyebrow="WEB DESIGN · NAGPUR"
           headline="Website Design in Nagpur for Logistics Companies, MIHAN SEZ Businesses, and Central India's Growing Enterprises"
           lead="Nagpur sits at the geographic dead-centre of India — the Zero Mile marker — making it the country's most strategically located logistics and trade hub. MIHAN, India's largest SEZ with ₹35,000 Cr investment, is transforming the city into a national aviation and IT hub. From Butibori MIDC's industrial belt and Hingna's manufacturing corridor to the city's growing agri-export community and 500+ logistics firms, Nagpur businesses have never had more to compete for. FactoryJet builds from ₹29,999 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
-          primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',

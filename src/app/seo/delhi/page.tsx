@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { seoCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import CityContextSection from '@/components/v2/CityContextSection';
@@ -467,10 +468,10 @@ export default function SeoDelhi() {
 
         {/* ─── 1. Hero ─────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="seo_delhi_hero" />}
           eyebrow="SEO COMPANY IN DELHI, INDIA"
           headline="The SEO Company in Delhi NCR That Matches Your Plan to Your Market"
           lead="Delhi has three distinct buyer markets — exporters selling to the US and Europe, traders supplying all of India, and businesses serving Delhi locals. One copy-paste SEO plan suits none of them. FactoryJet delivers SEO services in Delhi matched to the market you actually sell into. No long contracts."
-          primaryCta={{ label: 'Book a Free SEO Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           trustItems={['Export + Wholesale + Local SEO', 'No lock-in contracts', '500+ businesses served']}
           rightSlot={<DelhiKeywordCard />}

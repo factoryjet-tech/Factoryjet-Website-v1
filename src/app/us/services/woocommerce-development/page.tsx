@@ -7,6 +7,7 @@ import { woocommerceDevelopmentAlternates } from '@/data/hreflangMap';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -639,10 +640,10 @@ export default function WoocommerceDevelopmentPage() {
       <main>
         {/* -- 1. HERO -------------------------------------------------------- */}
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_services_woocommerce_development_hero" />}
           eyebrow="WOOCOMMERCE DEVELOPMENT SERVICES"
           headline="Senior WooCommerce developers. Custom stores and plugins. fixed-price, milestone-paid."
           lead="Custom WooCommerce store builds, plugin development, B2B functionality, ERP integrations, and performance optimization — fixed-price projects delivered by senior developers with 25+ years of WordPress experience."
-          primaryCta={{ label: 'Get a Free Quote', modal: true, region: 'us' }}
           secondaryCta={{ label: 'View Our Work', href: '/us/portfolio' }}
           rightSlot={
             <div className="w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">

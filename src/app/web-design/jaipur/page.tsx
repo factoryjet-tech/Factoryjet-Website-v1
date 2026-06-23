@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { webDesignCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import CityContextSection from '@/components/v2/CityContextSection';
@@ -588,10 +589,10 @@ export default function JaipurWebDesignPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="web_design_jaipur_hero" />}
           eyebrow="WEB DESIGN · JAIPUR"
           headline="Website Design in Jaipur for Jewellery Exporters, Handicraft Businesses, and the Pink City's Growing Startups"
           lead="Jaipur is India's jewellery capital, Rajasthan's largest city, and a tourism powerhouse drawing 5M+ visitors a year. From Sitapura's jewellery export units and Sanganer's block-printing clusters to Malviya Nagar's IT hub and C-Scheme's corporate corridor, Jaipur businesses compete globally. FactoryJet builds from ₹29,999 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
-          primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',

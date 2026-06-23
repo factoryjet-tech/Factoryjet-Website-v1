@@ -5,6 +5,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -675,10 +676,10 @@ export default function WhatsAppChatbotINPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="whatsapp_chatbot_hero" />}
           eyebrow="WHATSAPP CHATBOT DEVELOPMENT · INDIA"
           headline="WhatsApp Chatbot Development India"
           lead="India has 535 million WhatsApp users. 98% of your WhatsApp messages get opened. And 78% of Indian SMBs already use WhatsApp for business — yet most are still typing every reply by hand. Automate your orders, support, lead capture, and payments with a WhatsApp Business API chatbot. Starting ₹15,000. Live in 7 days."
-          primaryCta={{ label: 'Get a Free WhatsApp Demo', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-Day Delivery',

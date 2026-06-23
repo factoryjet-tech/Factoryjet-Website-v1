@@ -4,6 +4,7 @@ import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import Hero from '@/components/v2/Hero'
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar'
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock'
 import CityContextSection from '@/components/v2/CityContextSection'
@@ -88,10 +89,10 @@ export default function Page() {
 
         {/* HERO */}
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_boise_ecommerce_development_hero" />}
           eyebrow="E-COMMERCE DEVELOPMENT · BOISE, ID"
           headline="Shopify Developer Boise for Treasure Valley Businesses"
           lead="Boise is one of the fastest-growing cities in America — and the businesses winning online aren't waiting months for a local agency. They're launching professional Shopify stores in 7 days at fixed-price vs local benchmarks."
-          primaryCta={{ label: 'Get Your Free Store Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={['500+ Stores Launched', '7-Day Delivery', '4.9★ Rated', 'From $2,999']}
         />

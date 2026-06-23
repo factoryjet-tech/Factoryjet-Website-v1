@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { seoCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -489,10 +490,10 @@ export default function SeoMumbaiPage() {
 
         {/* ─── 1. Hero — fits single viewport ──────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="seo_mumbai_hero" />}
           eyebrow="SEO COMPANY IN MUMBAI, INDIA"
           headline="The SEO Company in Mumbai That Gets You to Page One and Keeps You There"
           lead="Mumbai is India's most competitive search market — 14,900+ monthly searches just for SEO help here. We deliver local SEO, technical SEO, ecommerce SEO, and link building for Mumbai businesses that want leads from Google. No long contracts."
-          primaryCta={{ label: 'Book a Free SEO Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           trustItems={['Local + Technical + Ecommerce SEO', 'No lock-in contracts', '500+ businesses served']}
           rightSlot={<MumbaiKeywordCard />}

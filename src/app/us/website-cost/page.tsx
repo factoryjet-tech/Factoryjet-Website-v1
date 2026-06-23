@@ -7,6 +7,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import RelatedGuides from '@/components/v2/RelatedGuides';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -713,10 +714,10 @@ export default function WebsiteCostPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_website_cost_hero" />}
           eyebrow="WEBSITE COST GUIDE · 2026"
           headline={<>How Much Does a<br className="hidden lg:block" /> Website Really Cost?<br className="hidden lg:block" /> The Honest Answer.</>}
           lead="Squarespace from $16/mo. Wix from $17/mo. Freelancers from $1,000. Traditional agencies from $8,000. FactoryJet from $1,999. Here's what you actually get at each price point — and the trade-offs no one talks about."
-          primaryCta={{ label: 'Get a Free Custom Quote', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Our Pricing', href: '#pricing' }}
           trustItems={['Fixed price, always', '7-day delivery', 'fixed-price, milestone-paid', '500+ websites built']}
           rightSlot={

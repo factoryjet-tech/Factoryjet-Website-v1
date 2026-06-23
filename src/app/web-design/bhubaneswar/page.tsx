@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import CityContextSection from '@/components/v2/CityContextSection';
@@ -592,10 +593,10 @@ export default function BhubaneswarWebDesignPage() {
 
         {/* ── 1. HERO ───────────────────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="web_design_bhubaneswar_hero" />}
           eyebrow="WEB DESIGN · BHUBANESWAR"
           headline="Website Design in Bhubaneswar for IT Companies, Odisha Startups, and Growing Businesses"
           lead="Bhubaneswar is Eastern India's fastest-growing IT hub — India's first planned Smart City, home to Infocity IT Park (Infosys, TCS, Wipro, Mindtree), STPI Bhubaneswar, 1,500+ registered startups, and one of India's most tech-forward state governments. From the Infocity tech corridor and KIIT University zone to the Temple City heritage district and Odisha's export businesses, FactoryJet builds from ₹29,999 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
-          primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',

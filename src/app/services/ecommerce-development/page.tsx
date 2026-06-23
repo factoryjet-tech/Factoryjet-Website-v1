@@ -7,6 +7,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -681,10 +682,10 @@ export default function EcommerceDevelopmentPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_hero" />}
           eyebrow="ECOMMERCE WEBSITE DEVELOPMENT COMPANY · INDIA"
           headline="Ecommerce Website Development Company in India — Stores That Sell, on Every Platform"
           lead="Most Indian e-commerce stores are built on generic themes and convert below 1%. FactoryJet builds custom Shopify, WooCommerce, D2C, and B2B stores — Razorpay and UPI integrated, GST-compliant, Lighthouse 95+ — from ₹59,999."
-          primaryCta={{ label: 'Book a Store Audit', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ businesses served',

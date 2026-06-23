@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { seoCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import CityContextSection from '@/components/v2/CityContextSection';
@@ -193,10 +194,10 @@ export default function NoidaSeoPage() {
 
       <main className="bg-fj-cream">
         <Hero
+        formSlot={<HeroInlineForm region="in" source="seo_noida_hero" />}
           eyebrow="SEO · NOIDA"
           headline="The SEO Company in Noida That Brings Leads, Not Just Vanity Numbers"
           lead="Noida is North India's tech and media hub. IT firms and big global teams in the Sector 62 and 63 corridor serve clients all over the world, software and online brands along the Expressway sell across India, and electronics giants and Film City studios fill in the rest. Your rivals here often have big budgets and their own teams. FactoryJet builds SEO that wins by being sharper, not by spending more, with monthly reports your boss will actually read."
-          primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           trustItems={['Picked up by Google AI answers', 'No long contracts', '500+ sites done']}
           rightSlot={<HeroBrowserMockup badgeLabel="Ranks vs funded" badgeCity="Noida" />}

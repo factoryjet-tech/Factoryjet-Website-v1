@@ -6,6 +6,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
 import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
@@ -735,10 +736,10 @@ export default function CharlotteAIAutomationPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_charlotte_ai_automation_hero" />}
           eyebrow="AI WORKFLOW AUTOMATION · CHARLOTTE, NC"
           headline="Charlotte's Financial District, Health Systems, and Logistics Companies Are Automating the Workflows That Don't Need a Human"
           lead="Charlotte's economy runs on high-volume, compliance-sensitive workflows — financial document processing, logistics coordination, healthcare intake, and client onboarding. FactoryJet builds custom AI workflow automation for Charlotte businesses that eliminates manual task time at fixed-price vs a local agency."
-          primaryCta={{ label: 'Get a Quote', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',

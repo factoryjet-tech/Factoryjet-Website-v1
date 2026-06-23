@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import CityContextSection from '@/components/v2/CityContextSection';
@@ -576,10 +577,10 @@ export default function VadodaraWebDesignPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="web_design_vadodara_hero" />}
           eyebrow="WEB DESIGN · VADODARA"
           headline="Website Design in Vadodara for Chemical Exporters, Engineering Manufacturers, and B2B Businesses"
           lead="Vadodara (Baroda) is Gujarat's industrial and cultural capital — home to India's Chemical Valley, GIDC Makarpura's 10,000+ engineering and auto ancillary units, and heavy engineering giants like Alstom, ABB, and L&T. From the Vadodara-Ankleshwar petrochemical corridor to Savli Industrial Estate's MSME belt, Vadodara businesses compete for international B2B buyers every day. FactoryJet builds from ₹29,999 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
-          primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',

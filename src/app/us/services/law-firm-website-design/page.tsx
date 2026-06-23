@@ -6,6 +6,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import ServiceHeroImageBand from '@/components/v2/ServiceHeroImageBand';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
@@ -721,10 +722,10 @@ export default function LawFirmWebsiteDesignPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_services_law_firm_website_design_hero" />}
           eyebrow="LAW FIRM WEBSITE DESIGN · USA"
           headline="Law Firm Websites That Rank Locally and Convert Visitors Into Consultations"
           lead="62% of people searching for an attorney start on Google — and 70% contact the first firm whose site earns their trust. FactoryJet designs law firm websites for US attorneys with individual practice area pages, attorney profiles that build credibility, and consultation intake flows that convert. Starting at $2,499. fixed-price, milestone-paid."
-          primaryCta={{ label: 'Book a Legal SEO Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ professional service sites delivered',

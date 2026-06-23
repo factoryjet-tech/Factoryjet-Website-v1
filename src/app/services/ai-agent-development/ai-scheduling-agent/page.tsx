@@ -5,6 +5,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -529,10 +530,10 @@ export default function AISchedulingAgentINPage() {
       <main className="bg-fj-cream">
 
         <Hero
+        formSlot={<HeroInlineForm region="in" source="services_ai_agent_development_ai_scheduling_agent_hero" />}
           eyebrow="AI SCHEDULING AGENT · INDIA"
           headline="AI That Books Site Visits, Demos, and Clinic Appointments on WhatsApp — 24/7 in Hindi"
           lead="AI scheduling agents that check availability, book slots to Google Calendar, collect Razorpay deposits, and send WhatsApp reminders — all from a single customer message on WhatsApp, in Hindi or English. No coordinator needed. Fixed price."
-          primaryCta={{ label: 'Book a Free Scheduling AI Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ businesses served',

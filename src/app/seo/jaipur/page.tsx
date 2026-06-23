@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { seoCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import CityContextSection from '@/components/v2/CityContextSection';
@@ -191,10 +192,10 @@ export default function JaipurSeoPage() {
 
       <main className="bg-fj-cream">
         <Hero
+        formSlot={<HeroInlineForm region="in" source="seo_jaipur_hero" />}
           eyebrow="SEO · JAIPUR"
           headline="The SEO Company in Jaipur That Brings Leads, Not Just Vanity Numbers"
           lead="Jaipur is an export city wrapped in a tourist city. It is the world's largest place for cutting coloured gemstones, the home of Sanganeri and Bagru block-print, and a Pink City that drew over six lakh visitors from abroad last year. Gem and handicraft exporters in Sitapura and Sanganer sell to the US and Europe, hotels serve travellers from everywhere, and IT firms at Mahindra World City work for clients all over the world. One generic SEO plan suits none of them. We match your SEO to the market you actually sell to, with monthly reports you can read in five minutes."
-          primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           trustItems={['Picked up by Google AI answers', 'No long contracts', '500+ sites done']}
           rightSlot={<HeroBrowserMockup badgeLabel="Wins abroad" badgeCity="Jaipur" />}

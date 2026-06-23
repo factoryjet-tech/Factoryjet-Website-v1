@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { seoCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -465,10 +466,10 @@ export default function SeoBangalore() {
 
         {/* ─── 1. Hero ─────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="seo_bangalore_hero" />}
           eyebrow="SEO COMPANY IN BANGALORE, INDIA"
           headline="The SEO Company in Bangalore That Gets You Found by the Buyers Who Research Before They Buy"
           lead="Bangalore is India's tech capital — and tech buyers spend weeks researching on Google before they contact anyone. FactoryJet delivers SEO services in Bangalore built for the long B2B research cycle: technical SEO, content that reaches buyers mid-research, and link building that builds real authority. No long contracts."
-          primaryCta={{ label: 'Book a Free SEO Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           trustItems={['B2B + Local + Ecommerce SEO', 'No lock-in contracts', '500+ businesses served']}
           rightSlot={<BangaloreKeywordCard />}

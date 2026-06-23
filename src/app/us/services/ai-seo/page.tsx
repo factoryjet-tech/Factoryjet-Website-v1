@@ -8,6 +8,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
 import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
 import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/ServiceJourneyRow';
@@ -903,6 +904,7 @@ export default function AiSeoServicePage() {
 
       {/* ─── 1. Hero ─────────────────────────────────────────────────────── */}
       <Hero
+        formSlot={<HeroInlineForm region="us" source="us_services_ai_seo_hero" />}
         eyebrow="AI SEO SERVICES"
         headline={
           <>
@@ -911,10 +913,6 @@ export default function AiSeoServicePage() {
           </>
         }
         lead="We optimize your site to rank in Google AND get cited by ChatGPT, Perplexity, Claude, and Gemini. One retainer. Both signals. Monthly progress reports you can read in five minutes."
-        primaryCta={{
-          label: 'Book a 30-min call',
-          href: 'https://calendly.com/bhavesh-factoryjet/30min',
-        }}
         secondaryCta={{
           label: 'See pricing',
           href: '#pricing',

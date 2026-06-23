@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import { webDesignPriorityCityAlternatesUS } from '@/data/hreflangMap';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import CityContextSection from '@/components/v2/CityContextSection';
@@ -78,10 +79,10 @@ export default function TampaWebDesignPage() {
       <SiteHeader />
     <main className="bg-fj-cream">
       <Hero
+        formSlot={<HeroInlineForm region="us" source="us_tampa_web_design_hero" />}
         eyebrow={"WEB DESIGN · TAMPA"}
         headline={"Web Design in Tampa That Converts Visitors Into Clients"}
         lead={"Tampa Bay is one of Florida's fastest-growing business markets — healthcare, finance, defense contracting, and a booming tech scene all converging on the Gulf Coast. FactoryJet delivers a production-ready website in 7 days, starting at $1,999. You own the code, the design files, and the results."}
-        primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
         trustItems={["Websites from $1,999", "7-day delivery", "Next.js + GA4 included"]}
         extraCta={<WhatsAppCTA city="Tampa" variant="light" />}
         rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Tampa, FL" badgeLabel="Live in 7 days" />}

@@ -6,6 +6,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import ServiceHeroImageBand from '@/components/v2/ServiceHeroImageBand';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
@@ -582,10 +583,10 @@ export default function WebApplicationDevelopmentPage() {
 
       {/* ── 1. HERO ── */}
       <Hero
+        formSlot={<HeroInlineForm region="us" source="us_services_web_application_development_hero" />}
         eyebrow="WEB APPLICATION DEVELOPMENT"
         headline="Custom Web Applications Built for US Businesses, Starting at $7,500"
         lead="Booking systems, customer portals, SaaS MVPs, internal dashboards. FactoryJet builds production-ready web apps at below US development agency benchmarks — fixed price, phased delivery, 60-day bug warranty."
-        primaryCta={{ label: 'Get a Free Estimate', modal: true, region: 'us' }}
         secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
         trustItems={['500+ US businesses served', '25+ years engineering experience', 'below traditional agency rates']}
         rightSlot={

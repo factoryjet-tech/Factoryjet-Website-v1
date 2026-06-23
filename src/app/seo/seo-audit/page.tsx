@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { seoSubServiceAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -155,10 +156,10 @@ export default function SeoAuditPage() {
 
       <main className="bg-fj-cream">
         <Hero
+        formSlot={<HeroInlineForm region="in" source="seo_seo_audit_hero" />}
           eyebrow="SEO AUDIT SERVICES · INDIA"
           headline="SEO Audit Services in India — Find Out Exactly Why Your Website Isn't Ranking"
           lead="If your website is not showing up on Google, you need to know why before you spend a rupee fixing it. Our SEO audit is a full health check of your website. We look at everything that decides where you rank, then show you exactly what is wrong and what to fix first. You get a clear, plain-English report with a to-do list, ranked by what matters most. Start with a free first check, with no strings and no obligation. The report is yours to keep, whether you work with us or not."
-          primaryCta={{ label: 'Get a Free Check', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           trustItems={['Free first check', 'Plain-English report', 'Ranked to-do list']}
           rightSlot={<HeroBrowserMockup badgeLabel="Free SEO check" badgeCity="India" />}

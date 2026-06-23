@@ -7,6 +7,7 @@ import type { Metadata } from 'next'
 import { ecommerceCityAlternatesUS } from '@/data/hreflangMap'
 import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
 import Hero from '@/components/v2/Hero'
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar'
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock'
 import CityContextSection from '@/components/v2/CityContextSection'
@@ -86,10 +87,10 @@ export default function Page() {
 
         {/* ── 1. HERO (light) ─────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_tampa_ecommerce_development_hero" />}
           eyebrow="E-COMMERCE DEVELOPMENT · TAMPA"
           headline="Shopify Developer Tampa for Gulf Coast Businesses"
           lead="Tampa is one of the fastest-growing economies in Florida — $200B GDP, zero state income tax, and a booming DTC market across healthcare, marine, food, and tourism. FactoryJet builds the Shopify stores to capture it — live in 7 days from $2,999, at a fixed, published price. 500+ projects, 4.9★."
-          primaryCta={{ label: 'Get a Free Shopify Audit', modal: true, region: 'us' }}
           trustItems={['Shopify stores from $2,999', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Tampa, FL" badgeLabel="Live in 7 days" />}
         />

@@ -6,6 +6,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
 import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
@@ -713,10 +714,10 @@ export default function AustinAIAgentsPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_austin_ai_agents_hero" />}
           eyebrow="AI AGENTS · AUSTIN, TX"
           headline="Austin Businesses Win More Customers When an AI Agent Responds First"
           lead="Austin's market is fast, competitive, and always on. FactoryJet builds custom AI agents for Austin businesses — customer support, lead generation, appointment booking, and e-commerce automation — that respond in seconds, connect to your existing tools, and cost fixed-price vs a local Austin agency."
-          primaryCta={{ label: 'Get a Quote', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',

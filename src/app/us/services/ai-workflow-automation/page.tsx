@@ -6,6 +6,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
 import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
@@ -808,10 +809,10 @@ export default function AIWorkflowAutomationPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_services_ai_workflow_automation_hero" />}
           eyebrow="AI WORKFLOW AUTOMATION · USA"
           headline="Automate the Work That's Eating Your Team's Day"
           lead="Manual data entry, repetitive follow-ups, document processing, cross-system updates — your team is doing the same tasks over and over. FactoryJet builds AI workflow automation that handles these processes 24/7, connects your existing tools, and costs fixed-price vs a US automation agency."
-          primaryCta={{ label: 'Book an Automation Strategy Call', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',

@@ -7,6 +7,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
 import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
 import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/ServiceJourneyRow';
@@ -763,6 +764,7 @@ export default function ShopifySeoServicePage() {
 
       {/* ─── 1. Hero ─────────────────────────────────────────────────────── */}
       <Hero
+        formSlot={<HeroInlineForm region="us" source="us_services_shopify_seo_hero" />}
         eyebrow="SHOPIFY SEO SERVICES"
         headline={
           <>
@@ -771,10 +773,6 @@ export default function ShopifySeoServicePage() {
           </>
         }
         lead="We fix the Shopify-specific issues that quietly cap your rankings — duplicate URLs, thin collections, app bloat — then rank your products and collections in Google and get your store cited by AI engines. One retainer. Monthly reports you can read in five minutes."
-        primaryCta={{
-          label: 'Book a free Shopify SEO audit',
-          href: 'https://calendly.com/bhavesh-factoryjet/30min',
-        }}
         secondaryCta={{
           label: 'See pricing',
           href: '#pricing',

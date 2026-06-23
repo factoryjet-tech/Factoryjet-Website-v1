@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { webDesignPriorityCityAlternatesUS } from '@/data/hreflangMap';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import CityContextSection from '@/components/v2/CityContextSection';
@@ -70,10 +71,10 @@ export default function MiamiWebDesignPage() {
       <SiteHeader />
     <main className="bg-fj-cream">
       <Hero
+        formSlot={<HeroInlineForm region="us" source="us_miami_web_design_hero" />}
         eyebrow={"WEB DESIGN · MIAMI"}
         headline={"Web Design in Miami That Converts Visitors Into Clients"}
         lead={"Miami businesses compete in one of the fastest-moving markets in the US — Latin American trade, global finance, and a booming tech scene all converging in one city. FactoryJet delivers a production-ready website in 7 days, starting at $1,999. You own the code, the design files, and the results."}
-        primaryCta={{ label: "Start Your Project", modal: true, region: 'us' }}
         trustItems={["Websites from $1,999","7-day delivery","Next.js + GA4 included"]}
         extraCta={<WhatsAppCTA city="Miami" variant="light" />}
         rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Miami, FL" badgeLabel="Live in 7 days" />}

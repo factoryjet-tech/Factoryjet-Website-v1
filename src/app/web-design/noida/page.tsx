@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import CityContextSection from '@/components/v2/CityContextSection';
@@ -572,10 +573,10 @@ export default function NoidaWebDesignPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="web_design_noida_hero" />}
           eyebrow="WEB DESIGN · NOIDA"
           headline="Website Design in Noida for IT Firms, Media Companies, and Delhi-NCR's Fastest-Growing Startups"
           lead="Noida is Delhi-NCR's IT capital — home to India's largest software and BPO corridor, Film City's media cluster, NSEZ's export zone, and an emerging D2C and EdTech startup ecosystem. From Sector 62's IT corridor to the Noida Expressway's tech parks, Noida businesses compete nationally and globally. FactoryJet builds from ₹29,999 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
-          primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',

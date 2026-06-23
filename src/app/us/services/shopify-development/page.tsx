@@ -9,6 +9,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import ServiceHeroImageBand from '@/components/v2/ServiceHeroImageBand';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -842,10 +843,10 @@ export default function ShopifyPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_services_shopify_development_hero" />}
           eyebrow="SHOPIFY DEVELOPMENT · USA"
           headline="Custom Shopify Stores That Sell, Not Just Look Good"
           lead="Generic Shopify themes convert below 1%. FactoryJet builds custom Shopify and Shopify Plus stores — designed in Figma, built in Liquid — that are fast, on-brand, and optimized for your specific customer journey. engineered for measurable outcomes."
-          primaryCta={{ label: 'Book a Store Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '120+ Shopify stores launched',

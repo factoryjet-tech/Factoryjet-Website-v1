@@ -6,6 +6,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import ServiceHeroImageBand from '@/components/v2/ServiceHeroImageBand';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
@@ -512,10 +513,10 @@ export default function RealEstateWebsiteDesignPage() {
 
       {/* ── 1. HERO ── */}
       <Hero
+        formSlot={<HeroInlineForm region="us" source="us_services_real_estate_website_design_hero" />}
         eyebrow="REAL ESTATE WEBSITE DESIGN"
         headline="Real Estate Websites That Rank Locally and Convert Visitors Into Leads"
         lead="Custom agent, team, and brokerage websites with IDX integration and neighborhood pages — built to outrank generic templates on local search. Starting at $2,499. 7-day delivery. No ongoing platform fees."
-        primaryCta={{ label: 'Get a Free Quote', modal: true, region: 'us' }}
         secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
         trustItems={['IDX integration included', '7-day delivery guarantee', 'No ongoing platform fees']}
         rightSlot={

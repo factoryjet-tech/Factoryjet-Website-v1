@@ -7,6 +7,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import RelatedGuides from '@/components/v2/RelatedGuides';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -592,10 +593,10 @@ export default function SmallBusinessWebDesignPage() {
       <main>
         {/* -- 1. HERO -------------------------------------------------------- */}
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_services_small_business_website_design_hero" />}
           eyebrow="SMALL BUSINESS WEBSITE DESIGN"
           headline="A website your customers trust. Built in 7 days. Starting at $1,999."
           lead="Custom-designed (not a template), mobile-first, Lighthouse 100 performance, full SEO setup — and delivered to your domain in 7 days. 500+ US small businesses served since 1999."
-          primaryCta={{ label: 'Get a Free Quote', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Our Work', href: '/us/portfolio' }}
           rightSlot={
             <div className="w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">

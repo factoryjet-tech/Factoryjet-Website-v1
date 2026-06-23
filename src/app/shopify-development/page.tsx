@@ -6,6 +6,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -759,10 +760,10 @@ export default function ShopifyDevelopmentPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="shopify_development_hero" />}
           eyebrow="SHOPIFY WEBSITE DEVELOPMENT COMPANY · INDIA"
           headline="Shopify Website Development Company in India — Stores Built to Sell, in 7 Days"
           lead="Generic Shopify themes convert at 0.8% in India. FactoryJet builds custom Shopify stores — designed in Figma, Razorpay and UPI integrated, GST-compliant, Lighthouse 95+ — from ₹34,999. In 7 days."
-          primaryCta={{ label: 'Book a Store Audit', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '120+ Shopify stores launched',

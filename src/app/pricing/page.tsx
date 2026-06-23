@@ -3,6 +3,7 @@ import { pricingAlternates } from '@/data/hreflangMap'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 import Hero from '@/components/v2/Hero'
+import HeroInlineForm from '@/components/HeroInlineForm';
 import FinalCTA from '@/components/v2/FinalCTA'
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns'
 
@@ -156,10 +157,10 @@ export default function Page() {
       <SiteHeader />
       <main className="bg-fj-cream">
         <Hero
+        formSlot={<HeroInlineForm region="in" source="pricing_hero" />}
           eyebrow="TRANSPARENT PRICING"
           headline="Your project is specific. Your quote should be too."
           lead="We scope every project individually and give you a fixed price on the first call — no discovery fees, no estimates that triple in the final invoice. A 30-minute conversation gets you a clear number for exactly what you need."
-          primaryCta={{ label: 'Get My Custom Quote', modal: true, region: 'us' }}
           trustItems={[
             'Fixed price agreed upfront',
             '7-day delivery guarantee',

@@ -5,6 +5,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -525,10 +526,10 @@ export default function AIWorkflowAutomationINPage() {
       <main className="bg-fj-cream">
 
         <Hero
+        formSlot={<HeroInlineForm region="in" source="services_ai_agent_development_ai_workflow_automation_hero" />}
           eyebrow="AI WORKFLOW AUTOMATION · INDIA"
           headline="Stop Re-Entering Data Between Zoho, Tally, and WhatsApp — Automate It Once"
           lead="Connect your Indian business tools into automated pipelines with AI. When a Razorpay payment clears, the Tally entry writes itself, the GST invoice sends itself, and the WhatsApp notification reaches your customer — all before you finish your chai. Fixed price. Live in 1–4 weeks."
-          primaryCta={{ label: 'Book a Free Automation Discovery Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ businesses served',

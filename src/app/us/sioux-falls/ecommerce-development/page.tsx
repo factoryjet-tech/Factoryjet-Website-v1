@@ -4,6 +4,7 @@ import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import Hero from '@/components/v2/Hero'
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar'
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock'
 import CityContextSection from '@/components/v2/CityContextSection'
@@ -88,10 +89,10 @@ export default function Page() {
 
         {/* HERO */}
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_sioux_falls_ecommerce_development_hero" />}
           eyebrow="E-COMMERCE DEVELOPMENT · SIOUX FALLS, SD"
           headline="Shopify Developer Sioux Falls for South Dakota Businesses"
           lead="South Dakota has zero state income tax — the best business climate in the Midwest. Smart Sioux Falls businesses are pairing that advantage with a high-converting Shopify store that launches in 7 days at fixed-price tiers charge."
-          primaryCta={{ label: 'Get Your Free Store Audit', href: '/contact' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={['500+ Stores Launched', '7-Day Delivery', '4.9★ Rated', 'From $2,999']}
         />

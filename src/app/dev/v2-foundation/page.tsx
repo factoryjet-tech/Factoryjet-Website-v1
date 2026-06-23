@@ -4,6 +4,7 @@ import BoringStatsRow from '@/components/v2/BoringStatsRow';
 import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import FinalCTA from '@/components/v2/FinalCTA';
 import CityContextSection from '@/components/v2/CityContextSection';
 import FAQ from '@/components/v2/FAQ';
@@ -116,6 +117,7 @@ export default function V2FoundationPage() {
       {/* === Hero (with rightSlot) === */}
       <SectionLabel slug="M1.b — Hero (with rightSlot)" />
       <Hero
+        formSlot={<HeroInlineForm region="in" source="dev_v2_foundation_hero" />}
         eyebrow="AI SERVICES · UK"
         headline={
           <>
@@ -123,7 +125,6 @@ export default function V2FoundationPage() {
           </>
         }
         lead="We build the agents your team will actually use, in your stack, with your data, in 60 days. Not pilots that quietly die."
-        primaryCta={{ label: 'Book a 30-min call', href: '/contact' }}
         secondaryCta={{ label: 'See case studies', href: '/case' }}
         trustItems={[
           '500+ projects shipped',

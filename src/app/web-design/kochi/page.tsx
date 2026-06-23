@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { webDesignCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import CityContextSection from '@/components/v2/CityContextSection';
@@ -588,10 +589,10 @@ export default function KochiWebDesignPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="web_design_kochi_hero" />}
           eyebrow="WEB DESIGN · KOCHI"
           headline="Website Design in Kochi for IT Firms, Tourism Businesses, Exporters, and Kerala's Growing Startups"
           lead="Kochi is Kerala's Smart City, the engine of India's most internet-literate state, and a city where Infopark's 450+ IT companies, Fort Kochi's tourism economy, a thriving seafood and spice export sector, and a fast-growing startup community all compete for the same digital attention. Kerala has India's highest internet penetration and highest literacy rate — your audience is online, informed, and comparing you against your competitors right now. FactoryJet builds from ₹29,999 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
-          primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',

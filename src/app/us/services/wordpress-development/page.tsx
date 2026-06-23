@@ -6,6 +6,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import ServiceHeroImageBand from '@/components/v2/ServiceHeroImageBand';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
@@ -714,10 +715,10 @@ export default function WordPressDevelopmentPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_services_wordpress_development_hero" />}
           eyebrow="WORDPRESS WEB DESIGN AGENCY · USA"
           headline="Custom WordPress Websites That Load Fast, Rank, and Convert"
           lead="Most WordPress agencies build on Elementor or Divi — page builders that produce bloated code, fail Core Web Vitals, and hurt your Google rankings. FactoryJet builds custom WordPress themes from scratch: clean code, fast load times, and mobile-first design. Starting at $1,999. Fixed-price and milestone-paid."
-          primaryCta={{ label: 'Book a WordPress Consultation', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ WordPress projects delivered',

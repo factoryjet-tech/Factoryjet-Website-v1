@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import CityContextSection from '@/components/v2/CityContextSection';
@@ -578,10 +579,10 @@ export default function RajkotWebDesignPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="web_design_rajkot_hero" />}
           eyebrow="WEB DESIGN · RAJKOT"
           headline="Website Design in Rajkot for Auto Component Exporters, Engineering Manufacturers, and MSME Businesses"
           lead="Rajkot is Gujarat's engineering powerhouse — home to 250,000+ MSMEs, India's #1 auto parts cluster, and GIDC Shapar-Veraval, one of Asia's largest industrial estates. From machine tool makers in GIDC Metoda to gold jewellers in the city centre, Rajkot businesses compete for international buyers and domestic contracts every day. FactoryJet builds from ₹29,999 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
-          primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',

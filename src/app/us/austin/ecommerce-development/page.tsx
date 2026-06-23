@@ -7,6 +7,7 @@ import type { Metadata } from 'next'
 import { ecommerceCityAlternatesUS } from '@/data/hreflangMap'
 import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
 import Hero from '@/components/v2/Hero'
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar'
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock'
 import CityContextSection from '@/components/v2/CityContextSection'
@@ -95,10 +96,10 @@ export default function AustinEcommerceDevelopmentPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_austin_ecommerce_development_hero" />}
           eyebrow="ECOMMERCE DEVELOPMENT · AUSTIN TX"
           headline="Your Austin Business Deserves an Online Store That Actually Sells"
           lead="FactoryJet builds Shopify, WooCommerce, and custom ecommerce stores for Austin small businesses — delivered in 7 days, at fixed-price, milestone-paid. No discovery calls that go nowhere. No six-week timelines. Just a store that's open for business."
-          primaryCta={{ label: 'Get My Free Ecommerce Audit', modal: true, region: 'us' }}
           trustItems={[
             'Stores from $1,500',
             '7-day delivery guarantee',

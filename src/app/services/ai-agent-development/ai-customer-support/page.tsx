@@ -5,6 +5,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -540,10 +541,10 @@ export default function AICustomerSupportINPage() {
       <main className="bg-fj-cream">
 
         <Hero
+        formSlot={<HeroInlineForm region="in" source="services_ai_agent_development_ai_customer_support_hero" />}
           eyebrow="AI CUSTOMER SUPPORT · INDIA"
           headline="70% of Your WhatsApp Support Queries Resolved Automatically — in Hindi and English"
           lead="AI customer support agents that check Shopify orders, send Shiprocket tracking links, retrieve GST invoices from Tally, and process returns — 24/7 on WhatsApp, in Hindi and English, with Freshdesk escalation when needed. Fixed price. Live in 2–3 weeks."
-          primaryCta={{ label: 'Book a Free Support AI Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ businesses served',

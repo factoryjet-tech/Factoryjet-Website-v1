@@ -5,6 +5,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 import Hero from '@/components/v2/Hero'
+import HeroInlineForm from '@/components/HeroInlineForm';
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup'
 import LogoBar from '@/components/v2/LogoBar'
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock'
@@ -480,7 +481,8 @@ const SRT_FAQ_ITEMS = [
           { name: 'Surat', url: 'https://factoryjet.com/web-design/surat' },
         ]}
       />
-      <Hero {...heroProps} />
+      <Hero
+        formSlot={<HeroInlineForm region="in" source="web_design_surat_hero" />} {...heroProps} />
       <HeroBrowserMockup />
       <LogoBar />
       <BigThreeTrustBlock />

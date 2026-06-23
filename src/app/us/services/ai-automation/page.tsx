@@ -7,6 +7,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -755,10 +756,10 @@ export default function AIAutomationPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_services_ai_automation_hero" />}
           eyebrow="AI AUTOMATION AGENCY · USA"
           headline="The AI Automation Agency Built for US Small Businesses"
           lead="Your team is spending 20+ hours a week on work that should run itself — copying data between tools, chasing invoices, following up on leads, writing the same reports. FactoryJet connects your stack, automates the manual steps, and builds in AI decision-making where routing alone isn't enough. Starting at $2,500. Fixed-price and milestone-paid."
-          primaryCta={{ label: 'Book an Automation Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses automated',

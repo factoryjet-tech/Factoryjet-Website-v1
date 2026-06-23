@@ -6,6 +6,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
 import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
@@ -832,10 +833,10 @@ export default function AIChatbotDevelopmentPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_services_ai_chatbot_development_hero" />}
           eyebrow="AI CHATBOT DEVELOPMENT · USA"
           headline="A Chatbot That Answers, Qualifies, and Books — While You're Asleep"
           lead="Your best customers expect an answer in seconds, not hours. FactoryJet builds custom AI chatbots — for customer support, lead generation, e-commerce, and appointment booking — that respond instantly, connect to your existing tools, and cost fixed-price vs a US chatbot agency."
-          primaryCta={{ label: 'Book a Chatbot Strategy Call', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',

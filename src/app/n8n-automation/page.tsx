@@ -6,6 +6,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -660,10 +661,10 @@ export default function N8nAutomationPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="n8n_automation_hero" />}
           eyebrow="n8n AUTOMATION · INDIA"
           headline="Stop Paying Zapier ₹30,000/Month. Switch to n8n."
           lead="Indian businesses on Zapier pay ₹25,000–₹40,000/month for 100K automations. n8n self-hosted runs the same workflows for ₹3,000/month — server only, no per-task fees. FactoryJet builds, deploys, and maintains your n8n automation for Indian tools: Razorpay, Tally, WhatsApp, Zoho, Shiprocket, and 400+ more."
-          primaryCta={{ label: 'Book a Free Automation Audit', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',

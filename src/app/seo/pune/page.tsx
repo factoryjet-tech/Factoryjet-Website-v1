@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { seoCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -372,10 +373,10 @@ export default function SeoPune() {
       <main className="bg-fj-cream">
 
         <Hero
+        formSlot={<HeroInlineForm region="in" source="seo_pune_hero" />}
           eyebrow="SEO COMPANY IN PUNE, INDIA"
           headline="The SEO Company in Pune Built for Hinjewadi IT, Pimpri Auto, and Every Pune Business in Between"
           lead="Pune's buyer mix is unlike any Indian city — IT procurement teams in Hinjewadi, Tata-Bajaj supply chain in Pimpri-Chinchwad, student searches across a massive education market, and fast-growing residential consumer zones in Baner and Kharadi. FactoryJet delivers SEO in Pune matched to each market. No long contracts."
-          primaryCta={{ label: 'Book a Free SEO Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           trustItems={['IT + Auto + Local SEO', 'No lock-in contracts', '500+ businesses served']}
           rightSlot={<PuneKeywordCard />}

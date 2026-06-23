@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { seoSubServiceAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -153,10 +154,10 @@ export default function LinkBuildingPage() {
 
       <main className="bg-fj-cream">
         <Hero
+        formSlot={<HeroInlineForm region="in" source="seo_link_building_hero" />}
           eyebrow="LINK BUILDING SERVICES · INDIA"
           headline="Link Building Services in India — Real Links From Trusted Sites, So Google Trusts You More"
           lead="When a respected website links to yours, it is like getting a vote of confidence in public. Google counts those votes: the more good ones you have from trusted sites, the more it trusts you, and the higher you can rank. We earn real links the safe way, through digital PR, guest articles, and genuinely helpful content. We never use spammy tricks or bought links that can get you punished. No long contracts, and every link we earn stays yours."
-          primaryCta={{ label: 'Book a Free Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           trustItems={['Real links only', 'No spammy tricks', 'No long contracts']}
           rightSlot={<HeroBrowserMockup badgeLabel="Real links earned" badgeCity="India" />}

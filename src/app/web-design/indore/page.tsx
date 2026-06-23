@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { webDesignCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import CityContextSection from '@/components/v2/CityContextSection';
@@ -611,10 +612,10 @@ export default function IndoreWebDesignPage() {
           H1 exact-match: "Web Design Company in Indore"
         */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="web_design_indore_hero" />}
           eyebrow="WEB DESIGN · INDORE"
           headline="Web Design Company in Indore"
           lead="Indore is Madhya Pradesh's commercial capital — home to 65,000+ SMEs, 500+ startups, a booming D2C ecosystem, and IT parks at Scheme 78 and Bengali Square that are attracting serious tech investment. From coaching institutes in Vijay Nagar to FMCG exporters on AB Road to manufacturers in Pithampur, Indore's businesses are competing for customers online every day. FactoryJet builds high-performance websites from ₹29,999 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
-          primaryCta={{ label: 'Get Free Indore Website Quote', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Pricing', href: '#pricing' }}
           trustItems={[
             '7-Day Delivery',

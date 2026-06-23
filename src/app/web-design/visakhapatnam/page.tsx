@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { webDesignCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import CityContextSection from '@/components/v2/CityContextSection';
@@ -582,10 +583,10 @@ export default function VisakhapatnamWebDesignPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="web_design_visakhapatnam_hero" />}
           eyebrow="WEB DESIGN · VISAKHAPATNAM"
           headline="Website Design in Visakhapatnam for Businesses at the Edge of India's AI City Boom"
           lead="Visakhapatnam is India's next major tech hub — Google's ₹85,000 Cr AI City investment, 50%+ IT hiring growth, and Andhra Pradesh's industrial powerhouse. From Rushikonda IT SEZ and Madhurawada to Gajuwaka's petrochemical belt and Beach Road's tourism strip, Vizag businesses are competing in a market that is about to accelerate dramatically. FactoryJet builds from ₹29,999 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
-          primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',

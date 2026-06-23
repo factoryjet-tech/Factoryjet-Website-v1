@@ -7,6 +7,7 @@ import { magentoDevelopmentAlternates } from '@/data/hreflangMap';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -650,10 +651,10 @@ export default function MagentoDevelopmentPage() {
       <main>
         {/* -- 1. HERO -------------------------------------------------------- */}
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_services_magento_development_hero" />}
           eyebrow="MAGENTO DEVELOPMENT SERVICES"
           headline="Senior Magento developers. Fixed-price projects. fixed-price, milestone-paid."
           lead="Custom module development, Magento 1 to 2 migrations, Adobe Commerce builds, ERP integrations, and performance optimization — delivered by Magento-certified engineers since 1999."
-          primaryCta={{ label: 'Get a Free Technical Consultation', modal: true, region: 'us' }}
           secondaryCta={{ label: 'View Our Work', href: '/us/portfolio' }}
           rightSlot={
             <div className="w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">

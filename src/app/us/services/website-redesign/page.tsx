@@ -6,6 +6,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import ServiceHeroImageBand from '@/components/v2/ServiceHeroImageBand';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
@@ -738,10 +739,10 @@ export default function WebsiteRedesignPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_services_website_redesign_hero" />}
           eyebrow="WEBSITE REDESIGN SERVICES · USA"
           headline="Website Redesign Services That Actually Generate Leads"
           lead="Your current website is costing you customers every day — slow load times, poor mobile experience, and a homepage that doesn't convert visitors into leads. FactoryJet redesigns your site with modern design, mobile-first builds, and conversion-focused structure. Up to 5 pages in 7 days. Starting at $1,499. Fixed-price and milestone-paid."
-          primaryCta={{ label: 'Book a Redesign Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ redesigns delivered',

@@ -4,6 +4,7 @@ import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import Hero from '@/components/v2/Hero'
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar'
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock'
 import CityContextSection from '@/components/v2/CityContextSection'
@@ -88,10 +89,10 @@ export default function Page() {
 
         {/* HERO */}
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_lincoln_ecommerce_development_hero" />}
           eyebrow="E-COMMERCE DEVELOPMENT · LINCOLN, NE"
           headline="Shopify Agency Lincoln NE for Nebraska Businesses"
           lead="Lincoln is the Silicon Prairie's university town, ag-tech hub, and fastest-growing mid-market city — and the businesses winning online here aren't waiting 3 months for a local agency. They launch in 7 days at fixed-price tiers."
-          primaryCta={{ label: 'Get Your Free Store Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={['500+ Stores Launched', '7-Day Delivery', '4.9★ Rated', 'From $2,999']}
         />

@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { seoCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import CityContextSection from '@/components/v2/CityContextSection';
@@ -192,10 +193,10 @@ export default function AhmedabadSeoPage() {
 
       <main className="bg-fj-cream">
         <Hero
+        formSlot={<HeroInlineForm region="in" source="seo_ahmedabad_hero" />}
           eyebrow="SEO · AHMEDABAD"
           headline="The SEO Company in Ahmedabad That Brings Leads, Not Just Vanity Numbers"
           lead="Ahmedabad runs on exports and factories, not shops. Pharma firms in Changodar and denim mills in Naroda ship to the US, Europe, and more than 100 countries. Chemical and dye makers in Vatva supply factories across India. Car-part and engineering suppliers around Sanand sell to big makers nationwide. One standard SEO plan suits none of them. FactoryJet matches your SEO to the market you actually sell to, with monthly reports you can read in five minutes."
-          primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           trustItems={['Picked up by Google AI answers', 'No long contracts', '500+ sites done']}
           rightSlot={<HeroBrowserMockup badgeLabel="Global rankings" badgeCity="Ahmedabad" />}

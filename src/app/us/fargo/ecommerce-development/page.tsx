@@ -4,6 +4,7 @@ import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import Hero from '@/components/v2/Hero'
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar'
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock'
 import CityContextSection from '@/components/v2/CityContextSection'
@@ -88,10 +89,10 @@ export default function Page() {
 
         {/* HERO */}
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_fargo_ecommerce_development_hero" />}
           eyebrow="E-COMMERCE DEVELOPMENT · FARGO, ND"
           headline="Shopify Developer Fargo for Silicon Prairie Businesses"
           lead="Fargo's fastest-growing brands are ditching slow local agencies and launching high-converting Shopify stores in 7 days — at fixed-price vs local benchmarks."
-          primaryCta={{ label: 'Get Your Free Store Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={['500+ Stores Launched', '7-Day Delivery', '4.9★ Rated', 'From $2,999']}
         />

@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { webDesignCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import CityContextSection from '@/components/v2/CityContextSection';
@@ -576,10 +577,10 @@ export default function BangaloreWebDesignPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="web_design_bangalore_hero" />}
           eyebrow="WEB DESIGN · BANGALORE"
           headline="Website Design in Bangalore Built for Startups, IT Companies, and D2C Brands"
           lead="Bangalore drives $20B+ in annual IT exports, hosts 15,000+ registered startups, and is India's fastest-growing D2C city. Koramangala, Whitefield, HSR Layout, and Electronic City are home to businesses that compete globally — and your website is the first impression every buyer gets. FactoryJet builds from ₹25,000 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
-          primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',

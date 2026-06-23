@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { webDesignCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import CityContextSection from '@/components/v2/CityContextSection';
@@ -574,10 +575,10 @@ export default function AhmedabadWebDesignPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="web_design_ahmedabad_hero" />}
           eyebrow="WEB DESIGN · AHMEDABAD"
           headline="Website Design in Ahmedabad for Textile Exporters, Trading Firms, and Growing Businesses"
           lead="Ahmedabad is India's textile capital, Gujarat's commercial hub, and home to GIFT City — India's first International Financial Services Centre. From the Textile Market and GIDC Vatva to SG Highway's corporate corridor and GIFT City's IFSC zone, Ahmedabad businesses compete globally. FactoryJet builds from ₹25,000 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
-          primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',

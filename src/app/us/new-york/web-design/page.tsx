@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { webDesignPriorityCityAlternatesUS } from '@/data/hreflangMap';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import CityContextSection from '@/components/v2/CityContextSection';
@@ -355,10 +356,10 @@ export default function NewYorkWebDesignPage() {
       <main className="bg-fj-cream">
 
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_new_york_web_design_hero" />}
           eyebrow="WEB DESIGN · NEW YORK CITY"
           headline="Web Design for New York City Businesses That Actually Converts"
           lead="NYC businesses can't afford a slow website, a vague agency, or a six-month timeline. FactoryJet builds production-ready websites in 7 days — from $1,999. You get the Figma files, the Next.js code, and results you can measure from week one."
-          primaryCta={{ label: 'Start Your NYC Project', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Our Work', href: '/us/portfolio' }}
           trustItems={['From $1,999 fixed price', '7-day delivery', 'Next.js + GA4 included', '500+ projects']}
           extraCta={<WhatsAppCTA city="New York" variant="light" />}

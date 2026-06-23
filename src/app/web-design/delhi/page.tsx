@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { webDesignCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import CityContextSection from '@/components/v2/CityContextSection';
@@ -574,10 +575,10 @@ export default function DelhiWebDesignPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="in" source="web_design_delhi_hero" />}
           eyebrow="WEB DESIGN · DELHI NCR"
           headline="Website Design in Delhi NCR for Corporates, Government Vendors, Fashion Brands, and Growing Businesses"
           lead="Delhi NCR is India's largest consumer market, national capital, and home to India's densest concentration of government contractors, corporate headquarters, and D2C brands. Connaught Place, Gurgaon Cyber City, Noida Sector 18, and South Delhi's premium retail all compete for the same digital real estate. FactoryJet builds from ₹25,000 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
-          primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',

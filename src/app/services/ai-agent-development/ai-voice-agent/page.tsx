@@ -5,6 +5,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -529,10 +530,10 @@ export default function AIVoiceAgentINPage() {
       <main className="bg-fj-cream">
 
         <Hero
+        formSlot={<HeroInlineForm region="in" source="services_ai_agent_development_ai_voice_agent_hero" />}
           eyebrow="AI VOICE AGENT · INDIA"
           headline="A Hindi-Speaking AI Caller That Qualifies 200 Leads a Day — Without Adding Telecallers"
           lead="AI voice agents that call your leads within 5 minutes of form submission, speak in Hindi and English, update Zoho CRM automatically, and book appointments to your calendar — 24/7, at a fraction of telecaller cost. Fixed price. TRAI-compliant."
-          primaryCta={{ label: 'Book a Free Voice AI Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ businesses served',

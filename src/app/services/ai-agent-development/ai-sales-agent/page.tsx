@@ -5,6 +5,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -292,10 +293,10 @@ export default function AISalesAgentINPage() {
       <main className="bg-fj-cream">
 
         <Hero
+        formSlot={<HeroInlineForm region="in" source="services_ai_agent_development_ai_sales_agent_hero" />}
           eyebrow="AI SALES AGENT · INDIA"
           headline="AI That Qualifies Your WhatsApp Leads in 60 Seconds — While You Sleep"
           lead="Your sales team is responding hours after leads enquire and losing deals to competitors who reply faster. FactoryJet AI sales agents qualify every lead immediately — in Hindi or English — book demos automatically, and push ready-to-close prospects to Zoho CRM around the clock."
-          primaryCta={{ label: 'Book a Free Sales AI Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={['500+ businesses served', 'Zoho CRM + LeadSquared ready', '60-second lead response']}
           rightSlot={

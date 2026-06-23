@@ -6,6 +6,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
 import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
@@ -735,10 +736,10 @@ export default function MiamiAIAutomationPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
+        formSlot={<HeroInlineForm region="us" source="us_miami_ai_automation_hero" />}
           eyebrow="AI WORKFLOW AUTOMATION · MIAMI, FL"
           headline="Miami Businesses Are Automating the Workflows That Were Eating Their Team Alive"
           lead="Miami's hospitality, real estate, and international trade economy runs on high-volume, repeating workflows. FactoryJet builds custom AI workflow automation for Miami businesses — lead nurturing, invoice processing, bilingual routing, booking coordination, and data sync — at fixed-price vs a local agency."
-          primaryCta={{ label: 'Get a Quote', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',

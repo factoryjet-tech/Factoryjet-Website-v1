@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { seoSubServiceAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -155,10 +156,10 @@ export default function TechnicalSeoPage() {
 
       <main className="bg-fj-cream">
         <Hero
+        formSlot={<HeroInlineForm region="in" source="seo_technical_seo_hero" />}
           eyebrow="TECHNICAL SEO SERVICES · INDIA"
           headline="Technical SEO Services in India — Make Your Site Fast, Crawlable, and Trusted by Google"
           lead="The technical side of SEO is making your site fast and easy for Google to find, read, and trust. It is the base everything else stands on. A slow site that Google cannot read will not rank, no matter how good your content is. We run a full technical SEO audit, speed your site up, fix the things Google cannot read, add the hidden code that explains your pages, and tidy up your site so the right pages get found. No long contracts, and everything we fix stays yours."
-          primaryCta={{ label: 'Book a Free Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           trustItems={['Faster on phones', 'Google can read every page', 'No long contracts']}
           rightSlot={<HeroBrowserMockup badgeLabel="Fast & search-ready" badgeCity="India" />}

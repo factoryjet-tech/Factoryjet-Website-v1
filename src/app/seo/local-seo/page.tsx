@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { seoSubServiceAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -156,10 +157,10 @@ export default function LocalSeoPage() {
 
       <main className="bg-fj-cream">
         <Hero
+        formSlot={<HeroInlineForm region="in" source="seo_local_seo_hero" />}
           eyebrow="LOCAL SEO SERVICES · INDIA"
           headline="Local SEO Services in India — Get Found on Google When People Near You Are Ready to Buy"
           lead="When someone close by searches Google for what you sell, Google shows three businesses on a small map right at the top. If yours is not one of the three, people just pick someone else. We help small businesses across India show up there. We set up and look after your free Google listing, make sure your business details are the same everywhere online, help you get more reviews, and build pages that bring in nearby customers. No long contracts, and everything we do stays yours."
-          primaryCta={{ label: 'Book a Free Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           trustItems={['Google listing looked after', '"Near me" searches', 'No long contracts']}
           rightSlot={<HeroBrowserMockup badgeLabel="Top 3 on map" badgeCity="India" />}

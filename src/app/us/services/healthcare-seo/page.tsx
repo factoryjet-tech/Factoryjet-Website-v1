@@ -8,6 +8,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
 import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
 import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/ServiceJourneyRow';
@@ -1265,6 +1266,7 @@ export default function HealthcareSeoServicePage() {
         - Image max-h capped so it never forces hero taller than viewport
       */}
       <Hero
+        formSlot={<HeroInlineForm region="us" source="us_services_healthcare_seo_hero" />}
         eyebrow="HEALTHCARE SEO AGENCY"
         headline={
           <>
@@ -1277,11 +1279,6 @@ export default function HealthcareSeoServicePage() {
           </>
         }
         lead="77% of patients search online before booking — and the practices ranking in Google's Map Pack win the patient. We build the full compliance-aware stack: YMYL E-E-A-T, HIPAA-safe analytics, map pack dominance, and monthly reporting on patient outcomes."
-        primaryCta={{
-          label: 'Get a free healthcare SEO audit',
-          modal: true,
-          region: 'us',
-        }}
         secondaryCta={{
           label: 'See our approach',
           href: '#pricing',

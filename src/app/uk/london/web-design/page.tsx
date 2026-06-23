@@ -4,6 +4,7 @@
 
 import type { Metadata } from 'next';
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import CityContextSection from '@/components/v2/CityContextSection';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
 import ComparisonTable from '@/components/v2/ComparisonTable';
@@ -28,10 +29,10 @@ export default function LondonWebDesignPage() {
   return (
     <main className="bg-fj-cream">
       <Hero
+        formSlot={<HeroInlineForm region="uk" source="uk_london_web_design_hero" />}
         eyebrow={"WEB DESIGN · LONDON"}
         headline={"Web Design in London That Converts Visitors Into Clients"}
         lead={"London businesses don't get second chances online. When a prospect lands on your site, you have seconds to prove you're the right choice. FactoryJet builds fast, conversion-focused websites in 7 days — with transparent pricing, a codebase you own, and SEO baked in from day one. No retainer traps. No inflated agency fees."}
-        primaryCta={{ label: "Start Your Project", href: '/contact' }}
         trustItems={["7-day build from kickoff to launch","Pricing from £1,200 — at a fixed, published price","Next.js architecture for sub-second load times"]}
       />
       <CityContextSection
