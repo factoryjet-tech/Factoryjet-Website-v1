@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -472,11 +473,7 @@ export default function USServicesHubPage() {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <ModalCTAButton
-                label="Get a Quote"
-                region="us"
-                btnVariant="primary-dark"
-              />
+              <HeroInlineForm region="us" source="us_services_hero" />
               <Link
                 href="#services"
                 className="inline-flex items-center justify-center rounded-full border border-white/25 px-7 py-3.5 font-fj-body text-base font-semibold text-white transition-colors hover:border-white/40 hover:bg-white/10"

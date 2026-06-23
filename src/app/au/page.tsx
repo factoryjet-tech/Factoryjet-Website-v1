@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import Link from 'next/link';
 
 import { auHubAlternates } from '@/data/hreflangMap';
@@ -282,9 +283,7 @@ export default function AUHomePage() {
                   {' No agency runaround, no six-week discovery phase.'}
                 </p>
                 <div className="cta-row rise r5">
-                  <AuModalButton className="btn btn-orange" ctaId="au_hero_free_concept">
-                    Get a free homepage concept <Ic id="i-arrow" />
-                  </AuModalButton>
+                  <HeroInlineForm region="au" source="au_home_hero" />
                   <a className="btn btn-ghost" href={CALENDLY} target="_blank" rel="noopener noreferrer">
                     Talk to the Founder
                   </a>

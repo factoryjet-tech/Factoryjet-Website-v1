@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import Script from 'next/script';
 import Footer from '../sections/Footer';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
@@ -97,7 +98,7 @@ export default function EcommerceSeoPage() {
         <h1>Ecommerce SEO Agency <span className="grad-text">UK</span>: Organic Revenue, Not Just Rankings</h1>
         <p className="lead mt-4" style={{ maxWidth: '580px' }}>Most ecommerce SEO agencies in the UK show you rankings. FactoryJet shows you revenue. We build organic traffic that compounds month over month for Shopify, WooCommerce, and Magento stores; category page architecture, product page optimisation, and technical SEO that Google can actually crawl.</p>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '28px' }}>
-          <ModalCTAButton label="Get a Free Ecommerce SEO Audit" region="uk" modalVariant="default" btnVariant="primary-light" />
+          <HeroInlineForm region="uk" source="uk_ecommerce_seo_hero" submitLabel="Get my free SEO audit" />
           <a href="#services" className="btn btn-outline">See Our SEO Services</a>
         </div>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', marginTop: '24px' }}>

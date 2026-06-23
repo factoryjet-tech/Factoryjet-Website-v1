@@ -25,7 +25,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 export interface HeroInlineFormProps {
   source?: string;
   /** Region the lead is recorded under (also drives downstream routing). Default 'us'. */
-  region?: 'us' | 'uk' | 'in';
+  region?: 'us' | 'uk' | 'in' | 'au' | 'ae';
   /** Submit button label. Default 'Get my free quote'. */
   submitLabel?: string;
 }

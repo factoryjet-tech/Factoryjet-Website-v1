@@ -1,4 +1,5 @@
 import Hero from '@/components/v2/Hero';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
@@ -239,6 +240,7 @@ export default function HomePageV2() {
     <>
       {/* 1 — Hero (cream, light — India v2) */}
       <Hero
+        formSlot={<HeroInlineForm region="in" source="home_root_hero" />}
         announcementPill={{
           text: 'New: AI SEO now includes Google AI Overviews',
           href: '#aiseo',
@@ -252,7 +254,6 @@ export default function HomePageV2() {
           </>
         }
         lead="7-day delivery on Starter sites. Lighthouse 100/100. AI SEO built in from day one. 500+ businesses launched across India, the US, and the UK."
-        primaryCta={{ label: 'Start Your Project', modal: true, region: 'in' }}
         secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919699977699' }}
         trustItems={['500+ businesses', '7-day delivery', 'Lighthouse 100/100', '60–70% vs agencies']}
         rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="New York, NY" badgeLabel="Live in 7 days" />}

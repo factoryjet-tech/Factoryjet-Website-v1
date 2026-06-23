@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import Script from 'next/script';
 import Footer from '../sections/Footer';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
@@ -101,7 +102,7 @@ export default function ShopifyDevelopmentPage() {
           FactoryJet is a Certified Shopify Development Partner for UK brands; custom Liquid themes, Shopify Plus, store migrations, and headless Hydrogen builds. Fixed price. 7-day delivery guarantee.
         </p>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '28px' }}>
-          <ModalCTAButton label="Book a Free Store Audit" region="uk" modalVariant="default" btnVariant="primary-light" />
+          <HeroInlineForm region="uk" source="uk_shopify_development_hero" />
           <a href="#services" className="btn btn-outline">See What We Build</a>
         </div>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', marginTop: '24px' }}>
