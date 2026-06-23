@@ -6,6 +6,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
@@ -320,8 +321,8 @@ export default function FargoSeoPage() {
               <span className="eb rise d1">SEO COMPANY · FARGO, NORTH DAKOTA</span>
               <h1 className="rise d2">Your customers drive <em>100 miles</em> to buy from Fargo.</h1>
               <p className="sub rise d3">Fargo serves a trade area the size of a small country: West Fargo next door, Moorhead across the river in Minnesota, and farm towns two hours out in every direction. Most Fargo SEO companies optimize one pin on one map. We rank you across the whole radius, in two states, and in the AI answers that buyers now check before they call anyone.</p>
+              <HeroInlineForm region="us" source="fargo_seo_hero" submitLabel="Get my free SEO audit" />
               <div className="cta-row rise d4">
-                <ModalCTAButton label="Get a free SEO audit of your Fargo rankings" region="us" modalVariant="seo" btnVariant="primary-light" />
                 <a className="btn btn-ghost" href="#rings">See the radius strategy</a>
                 <WhatsAppCTA city="Fargo" service="SEO" />
               </div>

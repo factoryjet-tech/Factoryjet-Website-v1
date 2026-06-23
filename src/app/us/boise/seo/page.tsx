@@ -6,6 +6,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
@@ -299,8 +300,8 @@ export default function BoiseSeoPage() {
               <span className="eb rise d1">SEO COMPANY · BOISE, IDAHO</span>
               <h1 className="rise d2">Boise grew by 150,000 people. <em>None of them</em> know your name yet.</h1>
               <p className="sub rise d3">Every week, new families in Boise, Meridian, and Eagle search for a dentist, a plumber, a lawyer, an HVAC crew. They have zero loyalty to anyone here. The Boise SEO company that puts you in front of them first wins the next decade of customers, and that window is open right now.</p>
+              <HeroInlineForm region="us" source="boise_seo_hero" submitLabel="Get my free SEO audit" />
               <div className="cta-row rise d4">
-                <ModalCTAButton label="Get a free SEO audit of your Boise rankings" region="us" modalVariant="seo" btnVariant="primary-light" />
                 <a className="btn btn-ghost" href="#plan">See the 90 day plan</a>
                 <WhatsAppCTA city="Boise" service="SEO" />
               </div>

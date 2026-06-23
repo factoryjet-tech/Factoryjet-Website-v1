@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import Image from 'next/image';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -195,14 +196,9 @@ export default function ColoradoSpringsSEOPage() {
                 From defense contractors in Briargate to restaurants in Old Colorado City, this market rewards businesses that show up exactly when buyers search. We make sure that is you.
               </p>
 
+              <HeroInlineForm region="us" source="colorado_springs_seo_hero" submitLabel="Get my free SEO audit" />
               <div className="hero-ctas reveal d3">
-                <a href={CALENDLY} className="btn-primary">
-                  <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                    <polyline points="22 4 12 14.01 9 11.01" />
-                  </svg>
-                  Get a Free SEO Audit
-                </a>
+                <a href={CALENDLY} className="btn-ghost">Talk to the founder</a>
                 <a href="#process" className="btn-ghost">
                   See Local Results
                   <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">

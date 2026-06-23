@@ -26,9 +26,11 @@ export interface HeroInlineFormProps {
   source?: string;
   /** Region the lead is recorded under (also drives downstream routing). Default 'us'. */
   region?: 'us' | 'uk' | 'in';
+  /** Submit button label. Default 'Get my free quote'. */
+  submitLabel?: string;
 }
 
-const HeroInlineForm: React.FC<HeroInlineFormProps> = ({ source = 'us_hero_inline', region = 'us' }) => {
+const HeroInlineForm: React.FC<HeroInlineFormProps> = ({ source = 'us_hero_inline', region = 'us', submitLabel = 'Get my free quote' }) => {
   const router = useRouter();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -97,7 +99,7 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({ source = 'us_hero_inlin
             className="inline-flex items-center justify-center gap-2 rounded-xl px-5 font-fj-display text-[15px] font-semibold text-white"
             style={{ height: 46, background: '#F05A28', boxShadow: '0 4px 16px rgba(240,90,40,0.32)', whiteSpace: 'nowrap', opacity: isSubmitting ? 0.7 : 1 }}
           >
-            {isSubmitting ? 'Sending…' : 'Get my free quote'}
+            {isSubmitting ? 'Sending…' : submitLabel}
             {!isSubmitting && (
               <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
                 <path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />

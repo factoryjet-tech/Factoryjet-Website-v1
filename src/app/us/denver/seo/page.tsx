@@ -6,6 +6,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 
+import HeroInlineForm from '@/components/HeroInlineForm';
 import './denver-seo.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -205,8 +206,8 @@ export default function DenverSeoPage() {
               <div className="hero-eyebrow rise d1"><span className="dot-pulse" aria-hidden="true" />47,470 monthly Denver SEO searches, live demand data</div>
               <h1 className="rise d2">Denver SEO that climbs to <span className="grad">page&nbsp;1</span> in the Mile High City.</h1>
               <p className="hero-sub rise d3">Denver&apos;s search demand has outrun its agency supply for three years. The businesses on page 1 today locked in their SEO before their competitors did. Your campaign goes live in 7 days, not after a 90-day onboarding.</p>
+              <HeroInlineForm region="us" source="denver_seo_hero" submitLabel="Get my free SEO audit" />
               <div className="cta-row rise d4">
-                <ModalCTAButton label="Get a free SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
                 <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
               </div>
             </div>

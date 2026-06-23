@@ -6,6 +6,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 
+import HeroInlineForm from '@/components/HeroInlineForm';
 import './nashville-seo.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -248,8 +249,8 @@ export default function NashvilleSeoPage() {
               <span className="loc"><b />Nashville, TN</span>
               <h1>The Nashville SEO company that puts your business <span className="it">top of the bill</span></h1>
               <p className="lead">Work directly with a senior <b>Nashville SEO expert</b>, not an account manager. Local SEO services that turn the Map Pack into calls.</p>
+              <HeroInlineForm region="us" source="nashville_seo_hero" submitLabel="Get my free SEO audit" />
               <div className="cta-row">
-                <ModalCTAButton label="Get your free Nashville SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
                 <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
               </div>
             </div>

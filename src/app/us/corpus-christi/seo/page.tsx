@@ -4,6 +4,7 @@ import Image from 'next/image';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import './corpus-christi-seo.css';
 
@@ -291,13 +292,8 @@ export default function CorpusChristiSEO() {
                 <div className="sep" />
                 <div className="n">0<span className="l">&nbsp;setup fee</span></div>
               </div>
+              <HeroInlineForm region="us" source="corpus_christi_seo_hero" submitLabel="Get my free SEO audit" />
               <div className="cta-row rise d4">
-                <ModalCTAButton
-                  label="Get your free SEO audit"
-                  region="us"
-                  modalVariant="seo"
-                  btnVariant="primary-light"
-                />
                 <a className="btn btn-ghost" href={CALENDLY} target="_blank" rel="noopener noreferrer">
                   Talk to the founder
                 </a>

@@ -10,6 +10,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 
+import HeroInlineForm from '@/components/HeroInlineForm';
 import EcomFx from './EcomFx';
 import './ecommerce-seo.css';
 
@@ -286,8 +287,8 @@ export default function EcommerceSeoServicePage() {
                 technical foundation so you rank for what buyers search, win the rich result with stars and price, and
                 we report it in revenue and transactions, not screenshots. <b>That is the whole job.</b>
               </p>
+              <HeroInlineForm region="us" source="services_ecommerce_seo_hero" submitLabel="Get my free SEO audit" />
               <div className="cta-row rise d4">
-                <ModalCTAButton label="Get a free ecommerce SEO audit" region="us" btnVariant="primary-light" />
                 <Link href={CALENDLY} target="_blank" rel="noopener noreferrer" className="btn-link">
                   Talk to the founder
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" /></svg>

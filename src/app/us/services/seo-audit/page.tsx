@@ -10,6 +10,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 
+import HeroInlineForm from '@/components/HeroInlineForm';
 import AuditFx from './AuditFx';
 import './seo-audit.css';
 
@@ -282,8 +283,8 @@ export default function SeoAuditServicePage() {
                 prioritized fix list. Not an automated checker spitting out 200 meaningless errors. A real technical SEO
                 agency reading your site the way Google does. <b>Then we can fix it.</b>
               </p>
+              <HeroInlineForm region="us" source="services_seo_audit_hero" submitLabel="Get my free SEO audit" />
               <div className="cta-row rise d4">
-                <ModalCTAButton label="Get your free SEO audit" region="us" btnVariant="primary-light" />
                 <Link href={CALENDLY} target="_blank" rel="noopener noreferrer" className="btn-link">
                   Talk to the founder
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" /></svg>

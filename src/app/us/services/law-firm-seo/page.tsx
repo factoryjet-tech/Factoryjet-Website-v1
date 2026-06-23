@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import Image from 'next/image';
 import Script from 'next/script';
 
@@ -237,8 +238,9 @@ export default function LawFirmSEOPage() {
               Rankings.io charges $8,000/mo to rank one practice area. We build authority across your full book of business, personal injury to criminal defense, for a fraction of that.
             </p>
 
+            <HeroInlineForm region="us" source="services_law_firm_seo_hero" submitLabel="Get my free SEO audit" />
             <div className="hero-ctas reveal reveal-delay-4">
-              <a href={CALENDLY} className="btn btn-primary">Get a Free SEO Audit</a>
+              <a href={CALENDLY} className="btn btn-ghost">Talk to the founder</a>
               <a href="#process" className="btn btn-ghost">See How It Works</a>
             </div>
           </div>

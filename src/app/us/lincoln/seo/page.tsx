@@ -6,6 +6,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
@@ -299,8 +300,8 @@ export default function LincolnSeoPage() {
             <span className="eb rise d1">SEO COMPANY · LINCOLN, NEBRASKA</span>
             <h1 className="rise d2">Lincoln sells two ways. <em>Your SEO should too.</em></h1>
             <p className="sub rise d3">Half of Lincoln wins customers in the Map Pack: the Haymarket restaurant, the family law office, the dental clinic on 84th Street. The other half sells to the whole country: insurance carriers, ag-tech startups, software built a few blocks from campus. Most agencies pick one lane and quietly ignore the other. As a Lincoln NE SEO company built by engineers, we run both lanes in one plan, and report on both in one page.</p>
+            <HeroInlineForm region="us" source="lincoln_seo_hero" submitLabel="Get my free SEO audit" />
             <div className="cta-row rise d4">
-              <ModalCTAButton label="Get a free SEO audit of your Lincoln rankings" region="us" modalVariant="seo" btnVariant="primary-light" />
               <a className="btn btn-ghost" href="#lanes">See both lanes</a>
               <WhatsAppCTA city="Lincoln" service="SEO" />
             </div>

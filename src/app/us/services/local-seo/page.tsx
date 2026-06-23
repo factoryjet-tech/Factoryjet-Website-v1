@@ -10,6 +10,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 
+import HeroInlineForm from '@/components/HeroInlineForm';
 import './local-seo.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -361,8 +362,8 @@ export default function LocalSeoServicePage() {
                 reviews, and local authority, then measure it in calls and bookings instead of ranking screenshots.{' '}
                 <b>That is the whole job.</b>
               </p>
+              <HeroInlineForm region="us" source="services_local_seo_hero" submitLabel="Get my free SEO audit" />
               <div className="cta-row rise d4">
-                <ModalCTAButton label="Get a free local SEO audit" region="us" btnVariant="primary-light" />
                 <Link href={CALENDLY} target="_blank" rel="noopener noreferrer" className="btn-link">
                   Talk to the founder
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" /></svg>

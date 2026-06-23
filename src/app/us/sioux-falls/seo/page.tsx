@@ -6,6 +6,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
@@ -301,8 +302,8 @@ export default function SiouxFallsSeoPage() {
               <span className="eb rise d1">SEO COMPANY · SIOUX FALLS, SOUTH DAKOTA</span>
               <h1 className="rise d2">In the city of trust companies, <em>rankings compound</em> like interest.</h1>
               <p className="sub rise d3">Sioux Falls runs on compounding. The trust cluster grows balances, the banks grow card portfolios, and the city itself added 5,088 residents in a single year. SEO works the same way here: every deposit of content, citations, reviews, and engineering earns more than the month before. Most agencies in town never open the account. We are the Sioux Falls SEO company that does.</p>
+              <HeroInlineForm region="us" source="sioux_falls_seo_hero" submitLabel="Get my free SEO audit" />
               <div className="cta-row rise d4">
-                <ModalCTAButton label="Get a free SEO audit of your Sioux Falls rankings" region="us" modalVariant="seo" btnVariant="primary-light" />
                 <a className="btn btn-ghost" href="#dividend">See what compounds</a>
                 <WhatsAppCTA city="Sioux Falls" service="SEO" />
               </div>

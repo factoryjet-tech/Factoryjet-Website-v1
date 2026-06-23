@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import Script from 'next/script';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -445,8 +446,8 @@ export default function SeoServicePage() {
                 Perplexity, then we measure it in leads and revenue instead of ranking screenshots.{' '}
                 <b className="font-bold text-fj-ink">That is the whole job.</b>
               </p>
+              <HeroInlineForm region="us" source="services_seo_hero" submitLabel="Get my free SEO audit" />
               <div className="mt-8 flex flex-wrap items-center gap-4">
-                <ModalCTAButton label="Get a free SEO audit" region="us" btnVariant="primary-light" />
                 <Link
                   href={CALENDLY}
                   target="_blank"

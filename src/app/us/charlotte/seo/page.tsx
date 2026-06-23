@@ -5,6 +5,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import ExitIntentLeadForm from '@/components/ExitIntentLeadForm';
 
 import './charlotte-seo.css';
@@ -247,8 +248,8 @@ export default function CharlotteSeoPage() {
             <span className="loc"><b />Charlotte, NC</span>
             <h1>The Charlotte SEO company for the city everyone keeps <span className="it">moving&nbsp;to</span></h1>
             <p className="lead">About 148 people arrive daily and search Google for businesses like yours. We make sure they find <b>you</b> first.</p>
+            <HeroInlineForm region="us" source="charlotte_seo_hero" submitLabel="Get my free SEO audit" />
             <div className="cta-row">
-              <ModalCTAButton label="Get your free Charlotte SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
               <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
             </div>
           </div>

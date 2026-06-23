@@ -7,6 +7,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 
+import HeroInlineForm from '@/components/HeroInlineForm';
 import './arlington-seo.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -264,8 +265,8 @@ export default function ArlingtonSeoPage() {
               <span className="loc rise d1"><b />Arlington, TX · DFW Metro · Local SEO</span>
               <h1 className="rise d2">The Arlington TX SEO company that wins the <span className="it">DFW search map</span></h1>
               <p className="lead rise d3">We get Arlington businesses into Google&apos;s local 3-pack for the searches that send customers to your door. Month-to-month, built by senior engineers, with a free audit and no lock-in. Serving the full DFW Metroplex.</p>
+              <HeroInlineForm region="us" source="arlington_seo_hero" submitLabel="Get my free SEO audit" />
               <div className="cta-row rise d4">
-                <ModalCTAButton label="Get your free Arlington SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
                 <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
               </div>
               <div className="hstat rise">

@@ -6,6 +6,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
@@ -313,8 +314,8 @@ export default function ChattanoogaSeoPage() {
               <span className="eb rise d1">SEO COMPANY · CHATTANOOGA, TN</span>
               <h1 className="rise d2">11 million visitors plan their trip <em>before they arrive.</em></h1>
               <p className="sub rise d3">Tourists google Chattanooga restaurants from Atlanta. Freight buyers research suppliers from anywhere on the I-75 corridor. Homeowners in East Brainerd type &quot;near me&quot; the day the AC dies. Every one of those journeys starts in a search box, and more of them now end in an AI answer. A Chattanooga SEO company should be able to win you all three, and prove it with calls, not charts.</p>
+              <HeroInlineForm region="us" source="chattanooga_seo_hero" submitLabel="Get my free SEO audit" />
               <div className="cta-row rise d4">
-                <ModalCTAButton label="Get a free SEO audit of your Chattanooga rankings" region="us" modalVariant="seo" btnVariant="primary-light" />
                 <a className="btn btn-ghost" href="#plan">See the 90 day plan</a>
                 <WhatsAppCTA city="Chattanooga" service="SEO" />
               </div>

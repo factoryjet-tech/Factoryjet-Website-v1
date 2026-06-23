@@ -7,6 +7,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 
+import HeroInlineForm from '@/components/HeroInlineForm';
 import './austin-seo.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -243,8 +244,8 @@ export default function AustinSeoPage() {
               <span className="loc"><b />Austin, TX</span>
               <h1>Austin SEO for the most <span className="it">crowded</span> market in Texas</h1>
               <p className="lead">42,000 small businesses. 5,500 tech companies. Everyone here is good. The ones that grow are the ones <b>Google finds first</b>.</p>
+              <HeroInlineForm region="us" source="austin_seo_hero" submitLabel="Get my free SEO audit" />
               <div className="cta-row">
-                <ModalCTAButton label="Get your free Austin SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
                 <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
               </div>
             </div>

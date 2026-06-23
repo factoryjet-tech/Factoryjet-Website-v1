@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import Image from 'next/image';
 import Script from 'next/script';
 
@@ -260,13 +261,9 @@ export default function DentalSEOPage() {
               Every dentist in your zip code is fighting for those three spots. We put you in them and keep you there when new practices open nearby.
             </p>
 
+            <HeroInlineForm region="us" source="services_dental_seo_hero" submitLabel="Get my free SEO audit" />
             <div className="cta-row" data-reveal data-reveal-delay="4">
-              <a href="https://calendly.com/bhavesh-factoryjet/30min" className="btn-primary">
-                Get a Free Practice Audit
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                  <path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </a>
+              <a href="https://calendly.com/bhavesh-factoryjet/30min" className="btn-ghost">Talk to the founder</a>
               <a href="#how-it-works" className="btn-ghost">
                 How Map Pack Works
               </a>

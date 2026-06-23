@@ -6,6 +6,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 
+import HeroInlineForm from '@/components/HeroInlineForm';
 import './cleveland-seo.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -247,8 +248,8 @@ export default function ClevelandSeoPage() {
               <span className="loc"><b />Cleveland, OH</span>
               <h1>The Cleveland SEO company that works like an <span className="it">engineering&nbsp;shop</span></h1>
               <p className="lead">Senior engineers run your local and technical SEO. Honest monthly reports show <b>calls and leads</b>, not screenshots.</p>
+              <HeroInlineForm region="us" source="cleveland_seo_hero" submitLabel="Get my free SEO audit" />
               <div className="cta-row">
-                <ModalCTAButton label="Get your free Cleveland SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
                 <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
               </div>
             </div>
