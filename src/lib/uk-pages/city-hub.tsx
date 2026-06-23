@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { CheckCircle, ArrowRight } from 'lucide-react'
 import { CityData, services } from '@/data/uk'
+import HeroInlineForm from '@/components/HeroInlineForm'
 
 interface CityHubPageProps {
   city: CityData
@@ -110,13 +111,13 @@ export default function CityHubPage({ city }: CityHubPageProps) {
             AI-powered custom websites for {city.name} small businesses. Enterprise quality without the agency price tag.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <button className="bg-[#0052CC] hover:bg-[#1a6fff] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2">
-              Get My Free Quote <ArrowRight size={20} />
-            </button>
-            <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-              See Our Work
-            </button>
+          <div className="mx-auto mb-12 max-w-[540px]">
+            <HeroInlineForm region="uk" source={`uk_${city.slug}_hub_hero`} />
+            <div className="mt-4 text-center">
+              <Link href="/portfolio" className="text-sm font-semibold text-white/80 underline-offset-4 hover:text-white hover:underline">
+                See our work <ArrowRight size={16} className="inline" />
+              </Link>
+            </div>
           </div>
 
           {/* Trust indicators */}
