@@ -1,68 +1,42 @@
-import type { Metadata } from 'next'
-import { aboutAlternates } from '@/data/hreflangMap'
+import type { Metadata } from 'next';
+import Script from 'next/script';
+import Link from 'next/link';
+import { aboutAlternates } from '@/data/hreflangMap';
+import SiteHeader from '@/components/v2/SiteHeader';
+import SiteFooter from '@/components/v2/SiteFooter';
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
-import SiteHeader from '@/components/v2/SiteHeader'
-import SiteFooter from '@/components/v2/SiteFooter'
-import Hero from '@/components/v2/Hero'
-import HeroInlineForm from '@/components/HeroInlineForm';
-import LogoBar from '@/components/v2/LogoBar'
-import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock'
-import StrategicDarkSection from '@/components/v2/StrategicDarkSection'
-import ServiceExplanation from '@/components/v2/ServiceExplanation'
-import ServiceJourneyRow from '@/components/v2/ServiceJourneyRow'
-import TestimonialsSection from '@/components/v2/TestimonialsSection'
-import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable'
-import FinalCTA from '@/components/v2/FinalCTA'
-import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns'
-
-// ─── Metadata ─────────────────────────────────────────────────────────────────
+const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 
 export const metadata: Metadata = {
-  title: 'About FactoryJet | Web Design Agency for US SMBs',
+  title: 'About FactoryJet | E-Commerce Development Agency for DTC & B2B',
   description:
-    'FactoryJet builds custom websites, Shopify stores & AI apps for US small businesses — delivered in 7 days, engineered for measurable outcomes. 500+ businesses launched.',
+    'FactoryJet is an e-commerce development agency for DTC and B2B brands. We consult, design, build, and implement omnichannel commerce on Shopify, Magento, WooCommerce, and Commerceflo. A decade-plus building commerce, most clients US-based.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'About FactoryJet | Web Design Agency for US SMBs',
+    title: 'About FactoryJet | E-Commerce Development Agency for DTC & B2B',
     description:
-      'Custom website design, Shopify development, and AI-native web apps. Fixed price. 7-day delivery. 500+ US businesses launched.',
+      'An e-commerce development agency that consults, designs, builds, and implements omnichannel commerce for DTC and B2B brands. Platform-agnostic. A decade-plus building commerce.',
     url: 'https://factoryjet.com/us/about',
-    images: [
-      {
-        url: 'https://factoryjet.com/og/about.png',
-        width: 1200,
-        height: 630,
-        alt: 'FactoryJet — Web Design Agency for US Small Businesses',
-      },
-    ],
+    images: [{ url: 'https://factoryjet.com/og/about.png', width: 1200, height: 630, alt: 'FactoryJet, e-commerce development agency for DTC and B2B brands' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About FactoryJet | Web Design Agency for US SMBs',
+    title: 'About FactoryJet | E-Commerce Development Agency for DTC & B2B',
     description:
-      'Fixed-price custom web design. 7-day delivery. Engineered for measurable outcomes.',
+      'An e-commerce development agency for DTC and B2B brands. We build omnichannel commerce on Shopify, Magento, WooCommerce, or Commerceflo.',
     images: ['https://factoryjet.com/og/about.png'],
   },
-  alternates: {
-    canonical: 'https://factoryjet.com/us/about',
-    languages: aboutAlternates,
-  },
+  alternates: { canonical: 'https://factoryjet.com/us/about', languages: aboutAlternates },
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
+    googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
-}
-
-// ─── JSON-LD Structured Data ───────────────────────────────────────────────────
+};
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -72,510 +46,167 @@ const jsonLd = {
       '@id': 'https://factoryjet.com/#organization',
       name: 'FactoryJet',
       url: 'https://factoryjet.com',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://factoryjet.com/logo.png',
-        width: 400,
-        height: 120,
-      },
+      logo: { '@type': 'ImageObject', url: 'https://factoryjet.com/logo.png', width: 400, height: 120 },
       description:
-        'FactoryJet is a web design agency for US small businesses. We deliver custom websites, Shopify stores, and AI-powered web applications in 7 days — engineered for measurable outcomes, fixed-price, milestone-paid.',
-      foundingDate: '2000',
-      numberOfEmployees: {
-        '@type': 'QuantitativeValue',
-        value: 25,
-      },
-      areaServed: {
-        '@type': 'Country',
-        name: 'United States',
-      },
-      serviceArea: [
-        'Austin, TX', 'Miami, FL', 'Denver, CO', 'Nashville, TN',
-        'Portland, OR', 'Charlotte, NC', 'Raleigh, NC', 'Tampa, FL',
-      ],
+        'FactoryJet is an e-commerce development agency for DTC and B2B brands. We consult, design, develop, and implement omnichannel commerce across the store, marketplaces, and B2B portals on Shopify, Shopify Plus, Adobe Commerce (Magento), BigCommerce, WooCommerce, headless, and Commerceflo. Clients own and operate what we build.',
+      foundingDate: '2014',
+      areaServed: { '@type': 'Country', name: 'United States' },
       knowsAbout: [
-        'Web Design',
-        'Custom Website Development',
-        'Shopify Development',
-        'Ecommerce Website Design',
-        'Next.js Development',
-        'AI Web Design',
-        'Small Business Website Design',
-        'Fixed-Price Web Design USA',
+        'E-commerce development',
+        'Omnichannel commerce',
+        'Unified commerce',
+        'B2B e-commerce',
+        'Shopify development',
+        'Adobe Commerce (Magento) development',
+        'WooCommerce development',
+        'Marketplace integration',
+        'Commerce AI agents',
       ],
-      contactPoint: {
-        '@type': 'ContactPoint',
-        contactType: 'customer service',
-        email: 'connect@factoryjet.com',
-        availableLanguage: 'English',
-        areaServed: 'US',
-      },
-      sameAs: [
-        'https://www.linkedin.com/company/factoryjet',
-      ],
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        ratingCount: '150',
-        reviewCount: '150',
-        bestRating: '5',
-        worstRating: '1',
-      },
+      contactPoint: { '@type': 'ContactPoint', contactType: 'customer service', email: 'connect@factoryjet.com', availableLanguage: 'English', areaServed: 'US' },
+      sameAs: ['https://www.linkedin.com/company/factoryjet'],
+      aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', ratingCount: '150', reviewCount: '150', bestRating: '5', worstRating: '1' },
     },
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Home',
-          item: 'https://factoryjet.com/us',
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: 'About',
-          item: 'https://factoryjet.com/us/about',
-        },
-      ],
-    },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'How much does a custom website cost with FactoryJet?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'FactoryJet offers fixed-price custom website design with milestone-based payments. There are no hourly billing surprises. Every project is scoped and priced upfront — engineered for measurable outcomes.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How long does it take to build a website with FactoryJet?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'FactoryJet guarantees delivery of up to 5-page websites within 7 business days of design sign-off. Larger projects like Shopify stores and custom web apps have defined timelines agreed at scope.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What technologies does FactoryJet use?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'FactoryJet builds on Next.js, React, TypeScript, Shopify, and open-standards stacks. We do not use proprietary CMSes that lock you in. All code is yours.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Does FactoryJet build Shopify stores?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. FactoryJet specializes in Shopify development for US DTC brands and retail businesses — including custom themes, app integrations, and full ecommerce builds.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Which US cities does FactoryJet serve?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'FactoryJet serves businesses across the United States, with a focus on Austin TX, Miami FL, Denver CO, Nashville TN, Portland OR, Charlotte NC, Raleigh NC, and Tampa FL — plus all major metros.',
-          },
-        },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/us' },
+        { '@type': 'ListItem', position: 2, name: 'About', item: 'https://factoryjet.com/us/about' },
       ],
     },
   ],
-}
+};
 
-// ─── Stat card for ServiceExplanation rightSlot ───────────────────────────────
+const WHAT_WE_DO = [
+  { k: 'Consult', d: 'We map your channels, catalog, and B2B rules, then recommend the platform and architecture that fit, not the one we happen to prefer.' },
+  { k: 'Design & build', d: 'We design and develop the storefront, the B2B portal, and the unified layer underneath, so every channel reads the same products, inventory, and orders.' },
+  { k: 'Implement', d: 'We integrate your ERP, POS, 3PL, and marketplaces, migrate your data, and ship the agents that list, price, and sync across channels.' },
+  { k: 'Scale', d: 'We stay through launch and beyond, tuning performance, adding channels, and handing your team a system they own and run.' },
+];
 
-function AgencyStatCard() {
-  return (
-    <div className="w-full max-w-sm mx-auto lg:mx-0">
-      {/* Main stat card */}
-      <div
-        className="rounded-2xl p-8 md:p-10"
-        style={{
-          background: 'linear-gradient(135deg, #FFFFFF 0%, #FDF6F3 100%)',
-          border: '1px solid rgba(240,90,40,0.10)',
-          borderTopWidth: '3px',
-          borderTopColor: '#F05A28',
-          boxShadow: '0 4px 24px rgba(240,90,40,0.08), 0 1px 4px rgba(0,0,0,0.04)',
-        }}
-      >
-        <div
-          className="mb-2 h-[3px] w-8 rounded-full"
-          style={{ background: '#F05A28' }}
-          aria-hidden="true"
-        />
-        <p
-          className="fj-display font-bold leading-none tracking-tight"
-          style={{
-            fontSize: 'clamp(3.5rem, 8vw, 5.5rem)',
-            color: '#F05A28',
-            letterSpacing: '-0.03em',
-          }}
-        >
-          7
-        </p>
-        <p
-          className="mt-2 font-fj-mono font-semibold uppercase"
-          style={{ fontSize: '10px', letterSpacing: '0.14em', color: '#F05A28', opacity: 0.65 }}
-        >
-          DAYS
-        </p>
-        <p className="mt-3 font-fj-body text-[0.9375rem] leading-[1.6] text-fj-neutral-600">
-          From kick-off to a live, production-ready website. Not a template — a custom build.
-        </p>
-      </div>
+const PLATFORMS = ['Shopify', 'Shopify Plus', 'Adobe Commerce (Magento)', 'BigCommerce', 'WooCommerce', 'Headless', 'Commerceflo'];
 
-      {/* Supporting mini-stats */}
-      <div className="mt-4 grid grid-cols-2 gap-4">
-        <div
-          className="rounded-xl p-5 text-center"
-          style={{
-            background: '#FFFFFF',
-            border: '1px solid rgba(0,0,0,0.06)',
-            boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
-          }}
-        >
-          <p
-            className="fj-display font-bold"
-            style={{ fontSize: '1.75rem', color: '#F05A28', letterSpacing: '-0.02em' }}
-          >
-            500+
-          </p>
-          <p className="mt-1 font-fj-body text-[0.8125rem] text-fj-neutral-500">Sites launched</p>
-        </div>
-        <div
-          className="rounded-xl p-5 text-center"
-          style={{
-            background: '#FFFFFF',
-            border: '1px solid rgba(0,0,0,0.06)',
-            boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
-          }}
-        >
-          <p
-            className="fj-display font-bold"
-            style={{ fontSize: '1.75rem', color: '#F05A28', letterSpacing: '-0.02em' }}
-          >
-            500+
-          </p>
-          <p className="mt-1 font-fj-body text-[0.8125rem] text-fj-neutral-500">Businesses launched</p>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-const reviewSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'FactoryJet',
-  url: 'https://factoryjet.com',
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', ratingCount: '150', reviewCount: '150', bestRating: '5', worstRating: '1' },
-  review: [
-    {
-      '@type': 'Review',
-      author: { '@type': 'Person', name: 'Ricky B.' },
-      reviewBody:
-        'We were live in 6 days — I genuinely did not believe that was possible. The design is stunning, the WhatsApp integration brings in enquiries every day, and the Lighthouse score has not moved from 100.',
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      datePublished: '2026-01-15',
-    },
-    {
-      '@type': 'Review',
-      author: { '@type': 'Person', name: 'Vishal K.' },
-      reviewBody:
-        'Our B2B catalogue was a nightmare to manage. FactoryJet built us a clean Shopify store with GST invoicing and a wholesale pricing module — our distributor onboarding time dropped from days to hours.',
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      datePublished: '2025-11-08',
-    },
-    {
-      '@type': 'Review',
-      author: { '@type': 'Person', name: 'Arif Saif Khan' },
-      reviewBody:
-        'As an MEP and BIM consultancy, credibility is everything. FactoryJet gave us a site that looks like a Tier-1 firm — structured data, fast load, and project showcase pages that actually rank on Google.',
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      datePublished: '2025-09-22',
-    },
-    {
-      '@type': 'Review',
-      author: { '@type': 'Person', name: 'Sarah M.' },
-      reviewBody:
-        'We went live in 7 days — completely on schedule. The site looks better than anything I had seen from local Austin agencies, and at a fraction of the price. Inquiry form submissions doubled in the first month.',
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      datePublished: '2025-10-14',
-    },
-    {
-      '@type': 'Review',
-      author: { '@type': 'Person', name: 'James T.' },
-      reviewBody:
-        'FactoryJet rebuilt our Shopify store from scratch in under two weeks. Mobile checkout conversion went from 1.8% to 4.1% — that is a real number on a real revenue line. Delivered ahead of schedule.',
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      datePublished: '2025-12-03',
-    },
-    {
-      '@type': 'Review',
-      author: { '@type': 'Person', name: 'Marcus R.' },
-      reviewBody:
-        'We needed a site that wins enterprise clients. FactoryJet delivered structured data, sub-2-second load times, and a design that looks like a Tier-1 firm. Lighthouse 100/100 on launch day — I checked myself.',
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      datePublished: '2026-02-19',
-    },
-  ],
-}
-
-const howToSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'HowTo',
-  name: 'How FactoryJet builds your website in 7 days',
-  description: 'Our proven 7-day process for delivering professional, SEO-optimized websites for US businesses.',
-  totalTime: 'P7D',
-  step: [
-    {
-      '@type': 'HowToStep',
-      position: 1,
-      name: 'Day 1 — Discovery Call',
-      text: 'We learn your business, goals, and target audience. We define the sitemap, content strategy, and technical requirements.',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 2,
-      name: 'Day 2 — Strategy & Structure',
-      text: 'We finalize your site architecture, wireframes, and content outline. You approve the plan before any design begins.',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 3,
-      name: 'Days 3–4 — Design',
-      text: 'We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs.',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 4,
-      name: 'Days 5–6 — Development & SEO',
-      text: 'We build your site in Next.js or WordPress, optimize Core Web Vitals, add structured data, and connect all integrations.',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 5,
-      name: 'Day 7 — Launch',
-      text: 'Your website goes live. We handle DNS, SSL, final QA, and provide training plus 30-day post-launch support.',
-    },
-  ],
-}
-
-// ─── Page ─────────────────────────────────────────────────────────────────────
+const DIFFERENT = [
+  { t: 'A services partner, not a tool', b: 'You hire us to build and implement commerce, then you own and operate it. There is no FactoryJet subscription and no lock-in.' },
+  { t: 'Platform-agnostic by design', b: 'We build on Shopify, Magento, WooCommerce, headless, or Commerceflo, and recommend the fit for your catalog, B2B rules, and budget.' },
+  { t: 'DTC and B2B on one system', b: 'We build retail and trade on one catalog and inventory, with tiered pricing, net terms, and reordering for your wholesale buyers.' },
+  { t: 'Agents we build and implement', b: 'We build and deploy commerce agents into your stack that list, reprice, sync stock, and reconcile feeds, working on your live data.' },
+];
 
 export default function AboutPage() {
   return (
     <>
-      {/* JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          "name": "About FactoryJet | Web Design Agency for US SMBs",
-          "url": "https://factoryjet.com/us/about/",
-          "speakable": {
-            "@type": "SpeakableSpecification",
-            "cssSelector": ["h1", ".faq-answer", "[data-speakable]"]
-          }
-        }) }}
-      />
+      <Script id="about-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <SiteHeader />
-
-      {/* ── 1. HERO — light cream, no dark hero ─────────────────────────── */}
-      <Hero
-        formSlot={<HeroInlineForm region="us" source="us_about_hero" />}
-        eyebrow="ABOUT FACTORYJET"
-        headline="The Web Agency Built for US Small Businesses"
-        lead="Enterprise-quality websites engineered for measurable outcomes. Fixed price. 7-day delivery. 500+ US businesses launched."
-        secondaryCta={{ label: 'See Our Work', href: '/us/portfolio' }}
-        trustItems={[
-          '500+ businesses launched',
-          '7-day delivery guarantee',
-          'Fixed-price, milestone-paid',
-          'Fixed-price — no surprises',
+      <SiteHeader
+        navLinks={[
+          { label: 'E-Commerce', href: '/us/services/ecommerce-development' },
+          { label: 'Shopify', href: '/us/services/shopify-development' },
+          { label: 'Magento', href: '/us/services/magento-development' },
+          { label: 'Services', href: '/us/services' },
+          { label: 'Work', href: '/case-studies' },
+          { label: 'FAQ', href: '/us/faq' },
         ]}
+        cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }}
       />
 
-      {/* ── 2. LOGO BAR ─────────────────────────────────────────────────── */}
-      <LogoBar tagline="Trusted by growing businesses across Austin, Miami, Denver, Nashville, and beyond" />
+      <main className="bg-white font-fj-body text-[#14110F]">
+        {/* Hero */}
+        <section className="mx-auto max-w-[1180px] px-5 py-16 md:py-24">
+          <p className="font-fj-mono text-xs font-semibold uppercase tracking-[0.12em] text-[#F05A28]">About FactoryJet</p>
+          <h1 className="mt-3 max-w-[22ch] font-fj-display text-4xl font-extrabold leading-[1.07] tracking-tight md:text-5xl">
+            An e-commerce development agency for DTC and B2B brands.
+          </h1>
+          <p className="mt-5 max-w-[640px] text-[17px] leading-relaxed text-[#46403B]">
+            FactoryJet consults, designs, develops, and implements omnichannel commerce. We build the storefront, the
+            B2B portal, and the unified layer underneath, so products, inventory, and orders stay in sync across every
+            channel you sell through. You own and operate what we build.
+          </p>
+          <p className="mt-4 max-w-[640px] text-[17px] leading-relaxed text-[#46403B]">
+            A decade-plus building commerce. Most of the brands we work with are US-based, across DTC and B2B.
+          </p>
+        </section>
 
-      {/* ── 3. BIG THREE TRUST BLOCK ────────────────────────────────────── */}
-      <BigThreeTrustBlock
-        eyebrow="BY THE NUMBERS"
-        headline="A track record built on delivery, not promises"
-      />
-
-      {/* ── 4. STRATEGIC DARK — The Problem (DARK) ──────────────────────── */}
-      <StrategicDarkSection
-        eyebrow="WHY WE EXIST"
-        headline="Most web agencies make website delivery slow, expensive, and risky."
-        lead="We built FactoryJet to fix all three — without compromising on quality, performance, or your launch date."
-        pillars={[
-          {
-            icon: '⚡',
-            title: 'Speed Shouldn\'t Cost Extra',
-            body: 'Most agencies bill by the hour and drag timelines across months. We deliver complete, production-ready custom websites in 7 business days — fixed price, no scope creep, no surprise invoices.',
-          },
-          {
-            icon: '🏆',
-            title: 'Enterprise Quality, SMB Budget',
-            body: 'Lighthouse 100/100. Core Web Vitals green. Structured data for AI search engines. Standards that Fortune 500 teams demand — at a price point built for businesses with 2–50 employees.',
-          },
-          {
-            icon: '🔓',
-            title: 'You Own Everything',
-            body: 'No proprietary CMS lock-in. No monthly "hosting" that holds your site hostage. We build on Next.js, Shopify, and open standards. Your code, your domain, your data — yours forever.',
-          },
-        ]}
-      />
-
-      {/* ── 5. SERVICE EXPLANATION — How It Works (LIGHT/CREAM) ─────────── */}
-      <ServiceExplanation
-        eyebrow="HOW IT WORKS"
-        headline="AI-native workflow. Human expertise. Zero guesswork."
-        lead="FactoryJet combines senior engineering talent with AI tooling to compress timelines without cutting corners. You get a dedicated project lead, daily progress updates, and a fixed scope — not an open-ended retainer."
-        body={
-          <>
-            <p>
-              We specialize in custom website design for US small businesses — from DTC ecommerce brands on Shopify to service companies, law firms, real estate agencies, and SaaS startups needing Next.js development.
+        {/* What we do */}
+        <section className="border-t border-[#E7DED6] bg-white">
+          <div className="mx-auto max-w-[1180px] px-5 py-16 md:py-20">
+            <h2 className="font-fj-display text-3xl font-extrabold tracking-tight md:text-4xl">What we do</h2>
+            <p className="mt-3 max-w-[60ch] text-[16px] leading-relaxed text-[#46403B]">
+              We are the team you hire to build unified commerce, end to end.
             </p>
-            <p>
-              Every site we ship is mobile-first, loads in under 2 seconds, and includes structured data for AEO and AI search engines like ChatGPT, Perplexity, and Google AI Overviews. We don&apos;t build throwaway websites — we build assets your business grows on.
+            <div className="mt-10 grid gap-5 sm:grid-cols-2">
+              {WHAT_WE_DO.map((s) => (
+                <article key={s.k} className="rounded-2xl border border-[#E7DED6] p-6">
+                  <h3 className="font-fj-display text-xl font-bold">{s.k}</h3>
+                  <p className="mt-2 text-[15px] leading-relaxed text-[#46403B]">{s.d}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Platforms */}
+        <section className="border-t border-[#E7DED6] bg-[#FFF8F5]">
+          <div className="mx-auto max-w-[1180px] px-5 py-14 md:py-16">
+            <h2 className="font-fj-display text-2xl font-extrabold tracking-tight md:text-3xl">Platform-agnostic by design</h2>
+            <p className="mt-3 max-w-[62ch] text-[16px] leading-relaxed text-[#46403B]">
+              We build on the platform that fits your catalog, your B2B rules, and your budget, and we recommend the fit
+              rather than pushing one.
             </p>
-            <p>
-              Serving Austin TX, Miami FL, Denver CO, Nashville TN, Portland OR, Charlotte NC, Raleigh NC, Tampa FL, and all US markets.
+            <div className="mt-6 flex flex-wrap gap-2.5">
+              {PLATFORMS.map((p) => (
+                <span key={p} className="rounded-full border border-[#E7DED6] bg-white px-4 py-2 font-fj-mono text-[12.5px] text-[#4A443F]">{p}</span>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* How we're different */}
+        <section className="border-t border-[#E7DED6] bg-white">
+          <div className="mx-auto max-w-[1180px] px-5 py-16 md:py-20">
+            <h2 className="font-fj-display text-3xl font-extrabold tracking-tight md:text-4xl">How we work</h2>
+            <div className="mt-10 grid gap-5 sm:grid-cols-2">
+              {DIFFERENT.map((d) => (
+                <article key={d.t} className="rounded-2xl border border-[#E7DED6] p-6">
+                  <h3 className="font-fj-display text-lg font-bold text-[#C94A1A]">{d.t}</h3>
+                  <p className="mt-2 text-[15px] leading-relaxed text-[#46403B]">{d.b}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Founder + CTA */}
+        <section className="border-t border-[#E7DED6] bg-[#FFF8F5]">
+          <div className="mx-auto max-w-[1180px] px-5 py-16 md:py-20">
+            <h2 className="max-w-[20ch] font-fj-display text-3xl font-extrabold leading-tight tracking-tight md:text-4xl">
+              Founder-led, from the first call.
+            </h2>
+            <p className="mt-4 max-w-[60ch] text-[16px] leading-relaxed text-[#46403B]">
+              Bhavesh Barot leads FactoryJet and takes the discovery call himself. Tell us what you sell and where, and
+              we will map your channels, catalog, and B2B into one system you own.
             </p>
-          </>
-        }
-        rightSlot={<AgencyStatCard />}
-      />
-
-      {/* ── 6. SERVICE JOURNEY ROW — Our Process (WHITE) ────────────────── */}
-      <ServiceJourneyRow
-        eyebrow="OUR PROCESS"
-        headline="Five stages from strategy to live site."
-        lead="No black-box development. No surprise scope changes. Every engagement follows the same proven delivery process — so you always know exactly where your project stands."
-        closingNote="MOST PROJECTS GO LIVE WITHIN 7 BUSINESS DAYS"
-      />
-
-      {/* ── 7. TESTIMONIALS (DARK — self-contained bg) ──────────────────── */}
-      <TestimonialsSection
-        region="us"
-        eyebrow="CLIENT RESULTS"
-        headline="Real outcomes for real US businesses"
-        sub="From DTC ecommerce brands to law firms to SaaS startups — here's what our clients say about working with FactoryJet."
-      />
-
-      {/* ── 8. COMPARISON TABLE (LIGHT) — separates two dark sections ───── */}
-      <ComparisonTable
-        eyebrow="HOW WE COMPARE"
-        headline="FactoryJet vs. traditional web agencies"
-        lead="Most businesses waste months and tens of thousands of dollars before they find an agency that actually delivers. See exactly how we stack up."
-        pullQuote={{
-          stat: '7 days',
-          caption: 'fixed-price delivery for up to 5-page sites — with faster turnaround and better performance scores than typical agencies.',
-        }}
-        columns={[
-          { label: 'FactoryJet', isFactoryJet: true },
-          { label: 'Traditional Agency' },
-          { label: 'DIY Platforms' },
-        ]}
-        rows={[
-          {
-            feature: 'Delivery timeline',
-            values: ['7 business days', '4–12 weeks', 'Ongoing (you build it)'],
-          },
-          {
-            feature: 'Pricing model',
-            values: ['Fixed price, scoped upfront', 'Hourly billing + overages', 'Monthly subscription'],
-          },
-          {
-            feature: 'Tech stack',
-            values: ['Next.js / Shopify / Custom', 'WordPress / Webflow', 'Wix / Squarespace'],
-          },
-          {
-            feature: 'Performance (Lighthouse)',
-            values: [
-              <CompareIcon key="fj-perf" kind="yes" label="100/100 guaranteed" />,
-              <CompareIcon key="ag-perf" kind="partial" label="Varies by agency" />,
-              <CompareIcon key="diy-perf" kind="no" label="Rarely optimized" />,
-            ],
-          },
-          {
-            feature: 'Mobile-first design',
-            values: [
-              <CompareIcon key="fj-mob" kind="yes" />,
-              <CompareIcon key="ag-mob" kind="partial" />,
-              <CompareIcon key="diy-mob" kind="partial" label="Template-limited" />,
-            ],
-          },
-          {
-            feature: 'SEO-ready on launch',
-            values: [
-              <CompareIcon key="fj-seo" kind="yes" />,
-              <CompareIcon key="ag-seo" kind="partial" />,
-              <CompareIcon key="diy-seo" kind="no" />,
-            ],
-          },
-          {
-            feature: 'Structured data / AEO',
-            values: [
-              <CompareIcon key="fj-aeo" kind="yes" label="Schema + FAQ + Entity markup" />,
-              <CompareIcon key="ag-aeo" kind="no" />,
-              <CompareIcon key="diy-aeo" kind="no" />,
-            ],
-          },
-          {
-            feature: 'You own the code',
-            values: [
-              <CompareIcon key="fj-own" kind="yes" label="Full ownership, no lock-in" />,
-              <CompareIcon key="ag-own" kind="partial" label="Depends on CMS" />,
-              <CompareIcon key="diy-own" kind="no" label="Platform-locked" />,
-            ],
-          },
-          {
-            feature: 'Post-launch support',
-            values: [
-              <CompareIcon key="fj-sup" kind="yes" />,
-              <CompareIcon key="ag-sup" kind="partial" label="Retainer required" />,
-              <CompareIcon key="diy-sup" kind="no" label="Self-serve only" />,
-            ],
-          },
-        ]}
-        footer="Pricing and timelines compared against published rates of US web design agencies serving SMBs as of 2026."
-      />
-
-      {/* ── 9. FINAL CTA (DARK) ─────────────────────────────────────────── */}
-      <FinalCTA
-        variant="dark"
-        eyebrow="START YOUR PROJECT"
-        headline="Your website should work as hard as you do."
-        sub="Tell us what you need. We'll scope it, price it, and deliver it — guaranteed. No agency markup, no scope creep, no surprises. Just a fast, beautiful website that converts."
-        primaryCta={{ label: 'Get a Free Quote', modal: true, region: 'us' }}
-        secondaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'us' }}
-        objectionHandler="Fixed price. 7-day delivery. 500+ businesses launched."
-      />
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href={CALENDLY}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-xl bg-[#F05A28] px-6 py-3.5 font-fj-body text-[15px] font-semibold text-white transition-transform hover:-translate-y-0.5"
+              >
+                Talk to the Founder
+              </a>
+              <ModalCTAButton label="Get a commerce audit" region="us" btnVariant="secondary-light" />
+            </div>
+            <p className="mt-8 text-[14px] text-[#6E635A]">
+              Explore our{' '}
+              <Link href="/us/services/ecommerce-development" className="font-semibold text-[#C94A1A] underline">e-commerce development services</Link>,{' '}
+              <Link href="/us/services/shopify-development" className="font-semibold text-[#C94A1A] underline">Shopify development</Link>, or{' '}
+              <Link href="/case-studies" className="font-semibold text-[#C94A1A] underline">client work</Link>.
+            </p>
+          </div>
+        </section>
+      </main>
 
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
-  )
+  );
 }

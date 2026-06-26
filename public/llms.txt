@@ -1,12 +1,12 @@
 # FactoryJet Technologies
 
-> AI-Native Web Design, E-Commerce Development, AI Agent Development, and Omnichannel Commerce Agency serving businesses across the United States, United Kingdom, European Union, Australia, Gulf Cooperation Council, Southeast Asia, East Asia, Africa, Latin America, Canada, and New Zealand.
+> Ecommerce development agency for DTC and B2B brands. FactoryJet consults, designs, develops, and implements omnichannel commerce across your own store, marketplaces, and B2B portals on Shopify, Shopify Plus, Adobe Commerce (Magento), BigCommerce, WooCommerce, headless, and Commerceflo. Most of the brands we work with are US-based.
 
 ## About
 
-FactoryJet Technologies is an AI-native digital agency founded and led by Bhavesh Barot, headquartered in Bengaluru, India. We serve SMBs, DTC brands, professional service firms, startups, and enterprise teams across every major English-speaking and high-growth market worldwide. We deliver high-performance websites, e-commerce stores, AI agents, omnichannel commerce platforms, and AI-powered SEO with a 7-day delivery model and transparent fixed pricing — an AI-augmented workflow that eliminates the overhead that inflates traditional agency quotes.
+FactoryJet is an ecommerce development agency that consults, designs, develops, and implements omnichannel commerce for DTC and B2B brands. Led by founder Bhavesh Barot, the team builds unified commerce across your own store, marketplaces, and B2B portals, so products, inventory, orders, and customers stay in sync in real time. We are platform-agnostic, building on Shopify and Shopify Plus, Adobe Commerce (Magento), BigCommerce, WooCommerce, headless, and Commerceflo, and we recommend the fit rather than pushing one platform. You own and operate what we build; there is no FactoryJet subscription.
 
-500+ projects delivered. 4.9/5 rating across 150+ reviews. Trusted by businesses from Austin to Auckland, London to Lagos, Dubai to Delhi.
+A decade-plus building commerce for DTC and B2B brands. Most of the brands we work with are US-based.
 
 ## Services
 

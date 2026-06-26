@@ -10,6 +10,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import ExitIntentLeadForm from '@/components/ExitIntentLeadForm';
 import RelatedGuides from '@/components/v2/RelatedGuides';
 import Hero from '@/components/v2/Hero';
+import HeroOmnichannel from '@/components/v2/HeroOmnichannel';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import TrustBarUS from '@/components/v2/TrustBarUS';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
@@ -17,60 +18,56 @@ import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
 import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/ServiceJourneyRow';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTAUS from '@/components/v2/FinalCTAUS';
+import { ProblemSection, SolutionSection, PillarsSection, ComparisonSection, ProofSection } from '@/components/v2/UsHomeSections';
+import { AgentConsole, GrowthSurfaces, FinalCtaSection } from '@/components/v2/UsHomeInteractive';
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   /us homepage, PR #2 Framework B+ premium visual rebuild (2026-05-25)
+   /us homepage — omnichannel / B2B e-commerce repositioning (2026-06-26)
 
-   This is the visually-upgraded homepage applying the 2025 design patterns
-   synthesized from the 20-competitor scan (Spiral Scout, WebFX, Scandiweb
-   references). Reuses existing image assets from /public/images/, no new
-   image generation required for v1.
+   Entity (title/meta/Service schema): "Ecommerce Development Agency".
+   Omnichannel commerce is the wrapper concept/story, not the SEO entity
+   (keyword evidence: research/us-keyword-map-2026-06-26.md).
 
-   17-section structure:
+   Section order (ported from research/mockup-us-problem-v1.html):
      1.  SiteHeader (CTA: Talk to the Founder)
-     2.  Hero, V1 "Engineered Outcomes" + gradient text + AI hero image + floating stat badges
-     3.  Live counter strip, 523 · 4.9★ · 25yr maxi typography
-     4.  LogoBar, refined tagline + text marks (no fake logos)
-     5.  TalkToFounder (full + light), founder block with aurora orbs
-     6.  Bento Services Grid, 6 tiles using existing card-*.webp images
-     7.  Pain-Pattern section (DARK), Fragile MVP / Vendor Trap / Cheap-Build Tax
-     8.  IndustriesGrid (DARK), unchanged
-     9.  NumbersBlock, maxi typography upgrade + OutcomeBoard™ branding
-     10. MethodologyBar (DARK), Discover → Architect → Ship → Own with gradient text
-     11. StrategicDarkSection (DARK), Framework B+ pillars
-     12. ServiceJourneyRow, 5-stage process, unchanged
-     13. Real Testimonials, 3 real client cards (Ricky B / Vishal K / Arif Saif Khan)
-     14. FAQ, 13 items, unchanged
-     15. TalkToFounder (full + dark), closing CTA with dramatic aurora
-     16. SiteFooter
+     2.  HeroOmnichannel — locked copy + channel->engine constellation
+     3.  ProblemSection — the fragmented-commerce tax (3 sourced stat tiles)
+     4.  SolutionSection — one catalog / inventory / order engine / AI workforce
+     5.  PillarsSection — five ways we build and scale commerce (zig-zag)
+     6.  AgentConsole — animated live AI agent console (client)
+     7.  GrowthSurfaces — get found and chosen (SEO / AI visibility / marketplace)
+     8.  ComparisonSection — a pile of tools vs a partner
+     9.  ProofSection — Bombay Petals (B2B) + Belle Maison (DTC), qualitative
+     10. FAQ — 20 commerce FAQs (reuses v2 FAQ.tsx + FAQPage schema)
+     11. FinalCtaSection — Talk to the Founder + Get a commerce audit
+     12. RelatedGuides · ExitIntentLeadForm · SiteFooter
 
-   Asset reuse:
-     - Hero right slot: /images/us/services/hero-ai-agent-us.webp
-     - Service tiles: /images/services/card-*.webp + ai-*.webp
-     - Testimonial headshots: /images/testimonials/{ricky-b,vishal-k,arif-k}.webp
-     - Portfolio thumbnails: /images/portfolio/{belle-maison,bombay-petals,formative-concepts}.webp
-     - Pain section accent: /images/us/services/ai-agency/dark-section-accent.webp
+   NOTE: this file still contains legacy section components + data (BentoServicesGrid,
+   PainPatternSection, NumbersBlock, MethodologyBar, RealTestimonialsSection,
+   LiveCounterStrip, HeroVisualSlot, SERVICE_TILES, PAIN_PATTERNS, REAL_TESTIMONIALS,
+   JOURNEY_STAGES, HOW_TO_SCHEMA, REVIEW_SCHEMA) that are no longer rendered.
+   They are dead code pending a cleanup pass; safe to delete as a block.
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Engineered Outcomes for US Businesses: Web, E-Commerce & AI | FactoryJet',
+  title: 'E-Commerce Development Agency for DTC & B2B Brands | FactoryJet',
   description:
-    'AI-native US digital partner. Websites and AI agents engineered to pay for themselves in 90 days. Fixed-price, milestone-paid, code you own from day one. Talk to the founder.',
+    'FactoryJet is an e-commerce development agency for DTC and B2B brands. We design, build, and implement omnichannel commerce across your store, marketplaces, and B2B portals on Shopify, Magento, WooCommerce, or Commerceflo. Get a commerce audit.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Engineered Outcomes for US Businesses: Web, E-Commerce & AI | FactoryJet',
+    title: 'E-Commerce Development Agency for DTC & B2B Brands | FactoryJet',
     description:
-      'AI-native US digital partner. Websites and AI agents engineered to deliver measurable outcomes. Fixed-price, milestone-paid, code you own from day one. 500+ businesses served. Talk to the founder.',
+      'An e-commerce development agency for DTC and B2B brands. We design, build, and implement omnichannel commerce across your store, marketplaces, and B2B portals on Shopify, Magento, WooCommerce, or Commerceflo. One catalog, one inventory, one order engine.',
     url: 'https://factoryjet.com/us',
-    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet, Engineered Outcomes for US Businesses' }],
+    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet, e-commerce development agency for DTC and B2B brands' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Engineered Outcomes for US Businesses | FactoryJet',
+    title: 'E-Commerce Development Agency for DTC & B2B Brands | FactoryJet',
     description:
-      'AI-native US digital partner. Websites and AI agents that pay for themselves in 90 days. Fixed-price, milestone-paid. Talk to the founder.',
+      'An e-commerce development agency for DTC and B2B. We build omnichannel commerce across your store, marketplaces, and B2B on Shopify, Magento, WooCommerce, or Commerceflo.',
     images: ['https://factoryjet.com/logo.png'],
   },
   alternates: {
@@ -97,27 +94,34 @@ const JOURNEY_STAGES: ServiceJourneyStage[] = [
 ];
 
 const FAQ_CATEGORIES = [
-  { key: 'about',           label: 'About FactoryJet' },
-  { key: 'pricing',         label: 'Pricing & Delivery' },
-  { key: 'process',         label: 'Our Process' },
-  { key: 'platform',        label: 'Platform & Ownership' },
-  { key: 'getting-started', label: 'Getting Started' },
+  { key: 'what-we-do', label: 'What we do' },
+  { key: 'platforms', label: 'Platforms & build' },
+  { key: 'dtc-b2b', label: 'DTC & B2B' },
+  { key: 'ai-agents', label: 'AI agents' },
+  { key: 'working-together', label: 'Working together' },
 ];
 
 const FAQ_ITEMS = [
-  { category: 'about',           question: 'What is a B2B web design agency?', answer: 'A B2B web design agency builds websites specifically designed to generate qualified leads, establish buyer trust, and support long sales cycles for business-focused companies. Unlike general web studios, B2B agencies structure every design decision around business outcomes, not aesthetics alone.' },
-  { category: 'about',           question: 'What industries do you specialise in?', answer: 'FactoryJet focuses on B2B industries where technical credibility and buyer trust drive conversions: cybersecurity, healthcare and MedTech, IT and managed services, SaaS, professional services, and manufacturing. See our case studies for sector-specific results.' },
-  { category: 'about',           question: 'How are you so much faster than other agencies?', answer: 'FactoryJet was built AI-native from day one. Senior engineers run parallel workstreams (concept generation, wireframing, and development scaffolding) that traditional agencies run one after another. The structural advantage is operational, not magical: you get a senior engineer on every call instead of an SDR-to-strategist-to-developer handoff, and the work compounds week to week instead of restarting at every handover. The result is 7-day delivery on standard scope with no compromise on engineering quality.' },
-  { category: 'pricing',         question: 'How much does a professional B2B website cost in the USA?', answer: "B2B website design in the USA typically ranges from $1,999 for a focused business website to $15,000+ for enterprise builds with custom integrations. FactoryJet's fixed-price model means your full investment is confirmed before work begins, no discovery-phase billing, no surprise invoices." },
-  { category: 'pricing',         question: 'How long does it take to build a B2B website?', answer: 'FactoryJet delivers most standard B2B websites in 7 days. A typical 5–10 page project includes strategy on day one, design sprint within the first 3 days, development and QA by days 5–6, and live launch on day 7. Complex e-commerce or custom integration projects may extend to 7–14 days.' },
-  { category: 'pricing',         question: 'Is hosting included, and do you mark it up?', answer: 'Hosting and deployment are always configured in your own account, never ours. There is no hosting markup, no proprietary infrastructure, and no exit fee. You maintain full control of your hosting environment from day one.' },
-  { category: 'process',         question: 'Do you use templates?', answer: 'No. Every FactoryJet website is built from a custom design brief. We do not resell or modify off-the-shelf templates. Custom builds allow us to structure every page for your specific buyers and conversion goals.' },
-  { category: 'process',         question: 'What if the design does not work for our brand?', answer: 'Every stage of the engagement ships a deliverable you review and approve before we move forward, wireframes, design system, then code. If the design output does not match your brand or business goals at the design-system gate, we revise until it does. The relationship structure (fixed price + milestone-paid + code ownership from day one) means you can step out between any two milestones with everything we produced. No contract teeth holding you in.' },
-  { category: 'process',         question: 'Can you redesign my website without losing Google rankings?', answer: "Yes. FactoryJet's redesign process preserves existing URL structures, redirects, and SEO equity. We conduct a technical audit before migration and monitor search performance post-launch to protect rankings built over time." },
-  { category: 'platform',        question: 'Which platform is best for a B2B business website?', answer: 'The right platform depends on your business requirements. WordPress offers maximum SEO flexibility and content control. Webflow provides design precision with manageable maintenance. Shopify is optimized for e-commerce conversion. Next.js and custom React stacks suit high-performance or application-like builds. FactoryJet recommends based on your goals, not internal capability constraints.' },
-  { category: 'platform',        question: 'Do I own the code after the project?', answer: 'Yes, 100%. Every FactoryJet project includes a full GitHub repository transfer upon completion. Your code, design assets, and all project files are yours outright. No retainer required. No ongoing dependency.' },
-  { category: 'platform',        question: 'Will I be able to update the site myself?', answer: 'Yes. All builds include a CMS, WordPress or Webflow depending on your platform, that allows your team to update content, images, blog posts, and pages without developer involvement.' },
-  { category: 'getting-started', question: 'How do I get started?', answer: 'Talk to the founder. Bhavesh takes every discovery call himself, book a 30-minute call and by minute 10 we already know whether what you need pays for itself, and how fast. You leave the call with a clear roadmap and a fixed quote within 24 hours. No discovery-phase billing, no obligation.' },
+  { category: 'what-we-do', question: 'What does an omnichannel commerce agency actually do?', answer: 'We design, build, and implement the systems that let you sell across your store, marketplaces, and B2B from one catalog, one inventory, and one order engine. In plain terms, we are the team you hire to build unified commerce, not a tool you subscribe to.' },
+  { category: 'what-we-do', question: 'What is the difference between omnichannel and unified commerce?', answer: 'Omnichannel is about the customer experience across channels. Unified commerce is the architecture underneath it that keeps products, inventory, orders, and customers in sync in real time. We build that unified layer so your channels stop drifting apart.' },
+  { category: 'what-we-do', question: 'Is FactoryJet a software product or an agency?', answer: 'An agency. We are a services partner that consults, designs, develops, and implements commerce for you. You own and operate what we build, and there is no FactoryJet subscription.' },
+  { category: 'what-we-do', question: 'Can you fix our existing store, or only build from scratch?', answer: 'Both. Most of our work is improving or replatforming what you already run, then adding the unified layer. We audit what you have, fix what is broken, and build what is missing.' },
+  { category: 'platforms', question: 'Which ecommerce platform is best for B2B and DTC?', answer: 'There is no single best one; it depends on your catalog size, B2B rules, and budget. We build on Shopify and Shopify Plus, Adobe Commerce (Magento), BigCommerce, WooCommerce, headless, and Commerceflo, and recommend the fit rather than pushing one platform.' },
+  { category: 'platforms', question: 'Shopify Plus vs Adobe Commerce vs BigCommerce, which should we choose?', answer: 'Shopify Plus for speed and a clean DTC-plus-B2B model on one store, Adobe Commerce for deep native B2B and very large catalogs, BigCommerce for strong mid-market B2B value. We match it to your SKUs, pricing rules, and integrations on a scoping call.' },
+  { category: 'platforms', question: 'Can you migrate us off Magento (or another platform) without losing SEO?', answer: 'Yes. We handle replatforming and data migration, products, customers, orders, and B2B pricing, with 301 redirects and a cutover plan that protects your rankings and uptime.' },
+  { category: 'platforms', question: 'Do you connect our store to our ERP, POS, and marketplaces?', answer: 'Yes. We integrate ERPs, POS, 3PLs, and marketplaces into one order and inventory layer so every system reads the same live data instead of its own copy.' },
+  { category: 'dtc-b2b', question: 'How do we sell on Amazon, Walmart, and our own store at the same time?', answer: 'You put every channel on one catalog and one live inventory, so a sale anywhere updates everywhere. We build that connection plus the listing, pricing, and order flows each marketplace expects.' },
+  { category: 'dtc-b2b', question: 'How do we stop overselling across channels?', answer: 'Overselling happens when each tool keeps its own stock count. We build a single live inventory that every channel reads from, so when the last unit sells on one channel it goes unavailable on the rest within moments.' },
+  { category: 'dtc-b2b', question: 'Can DTC and B2B run on one site with different pricing?', answer: 'Yes. We build one storefront that serves retail shoppers and gives trade buyers their own login with tiered or contract pricing, net terms, and fast reordering, on one catalog and inventory.' },
+  { category: 'dtc-b2b', question: 'What B2B ecommerce features can you build?', answer: 'Tiered and contract pricing, quote and approval workflows, account hierarchies, net terms, gated catalogs, and reordering, all integrated with your ERP.' },
+  { category: 'ai-agents', question: 'Can AI manage my inventory and pricing across channels?', answer: 'Yes, and the technology is mature now. We build and implement agents that sync inventory, reprice to hold the Buy Box, and keep listings consistent across channels, all acting on your live data.' },
+  { category: 'ai-agents', question: 'What can AI agents actually do for an ecommerce business?', answer: 'The repetitive channel work: listing new products in each marketplace\'s format, fixing suppressed listings, repricing, reconciling feeds, and answering order questions. They take the busywork off your team, not the strategy.' },
+  { category: 'ai-agents', question: 'Is this just an AI chatbot?', answer: 'No. These are task agents that take action across your channels, listing, pricing, and inventory, not a question-and-answer widget on your site.' },
+  { category: 'ai-agents', question: 'Do you run the AI agents, or do we?', answer: 'We build and implement them into your stack; they run inside your system and hand the exceptions to your team. You stay in control of the business.' },
+  { category: 'working-together', question: 'What should we ask before hiring an ecommerce development agency?', answer: 'Ask about their B2B experience specifically, their discovery and scoping process, how they handle integrations, who owns the relationship after launch, and to see comparable builds. We are happy to answer all of those on a call.' },
+  { category: 'working-together', question: 'How much does it cost to build an ecommerce site?', answer: 'It depends on scope, platform, catalog size, and integrations, so we scope it on a short call and send a fixed proposal before any work starts, rather than putting a number on a page.' },
+  { category: 'working-together', question: 'How long does an ecommerce build or migration take?', answer: 'Most mid-market builds and migrations run from a few weeks to a few months, depending on custom integrations and catalog complexity. You get a phased timeline with milestones after scoping.' },
+  { category: 'working-together', question: 'Do you work with US brands?', answer: 'Yes, most of the brands we work with are US-based, across DTC and B2B, and we bring a decade-plus of commerce builds to every engagement.' },
 ];
 
 const SERVICE_TILES = [
@@ -182,11 +186,25 @@ const ORG_SCHEMA = {
   '@type': 'Organization',
   name: 'FactoryJet',
   url: 'https://factoryjet.com',
+  description:
+    'FactoryJet is an e-commerce development agency that consults, designs, develops, and implements omnichannel commerce for DTC and B2B brands across Shopify, Shopify Plus, Adobe Commerce (Magento), BigCommerce, WooCommerce, headless, and Commerceflo.',
   aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', ratingCount: '150', reviewCount: '150', bestRating: '5', worstRating: '1' },
   sameAs: [
     'https://www.linkedin.com/company/factoryjet',
     'https://www.crunchbase.com/organization/factoryjet',
   ],
+};
+
+const SERVICE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'E-commerce development',
+  name: 'E-commerce development and omnichannel commerce implementation',
+  description:
+    'E-commerce development agency for DTC and B2B brands. We design, build, and implement omnichannel commerce across your own store, marketplaces, and B2B portals on Shopify, Shopify Plus, Adobe Commerce (Magento), BigCommerce, WooCommerce, headless, and Commerceflo, with one catalog, one inventory, and one order engine.',
+  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  areaServed: { '@type': 'Country', name: 'United States' },
+  audience: { '@type': 'BusinessAudience', name: 'DTC and B2B brands' },
 };
 
 const REVIEW_SCHEMA = {
@@ -787,131 +805,81 @@ export default function USHomePage() {
     <>
       <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
       <Script id="org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
-      <Script id="howto-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(HOW_TO_SCHEMA) }} />
-      <Script id="review-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(REVIEW_SCHEMA) }} />
+      <Script id="service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <Script id="speakable-schema-us-hub" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        'name': 'Engineered Outcomes for US Businesses: Web, E-Commerce & AI | FactoryJet',
+        'name': 'E-Commerce Development Agency for DTC & B2B Brands | FactoryJet',
         'url': 'https://factoryjet.com/us/',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['h1', '.faq-answer', '[data-speakable]'] },
       }) }} />
 
       <SiteHeader
         navLinks={[
-          { label: 'Services',  href: '/us/services/web-design' },
-          { label: 'AI Agents', href: '/us/services/ai-agents' },
-          { label: 'AI SEO',    href: '/us/services/ai-seo' },
-          { label: 'Pricing',   href: '/us/pricing' },
-          { label: 'Portfolio', href: '/us/portfolio' },
-          { label: 'FAQ',       href: '/us/faq' },
+          { label: 'E-Commerce',  href: '/us/services/ecommerce-development' },
+          { label: 'Shopify',     href: '/us/services/shopify-development' },
+          { label: 'Magento',     href: '/us/services/magento-development' },
+          { label: 'Services',    href: '/us/services' },
+          { label: 'Work',        href: '/case-studies' },
+          { label: 'FAQ',         href: '/us/faq' },
         ]}
-        cta={{ label: 'Get a Quote', modal: true, region: 'us' }}
+        cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }}
       />
 
       <main className="bg-fj-cream">
 
-        {/* ── 1. HERO, V1 Engineered Outcomes with gradient text + floating stat badges ── */}
-        <Hero
-          announcementPill={{ text: 'Now booking, 7-day delivery on standard scope' }}
-          eyebrow="WEBSITES · E-COMMERCE · AI SEO · AI AGENTS"
-          headline={
-            <>
-              Websites &amp; AI agents, engineered for{' '}
-              <span style={{
-                background: 'linear-gradient(135deg, #FF8C5A 0%, #F05A28 50%, #C94A1A 100%)',
-                WebkitBackgroundClip: 'text',
-                backgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                color: 'transparent',
-              }}>
-                measurable outcomes
-              </span>
-              .
-            </>
-          }
-          lead="FactoryJet is an AI-native US digital partner. We engineer websites, e-commerce stores, and AI agents that pay for themselves in 90 days, fixed-price, milestone-paid, with code you own from day one. Talk to the founder before you commit."
-          accent="navy"
-          formSlot={<HeroInlineForm source="us_hero_inline" />}
-          trustItems={['Senior engineers, not SDRs', 'Fixed price, milestone-paid', 'Code & data ownership Day 1']}
-          rightSlot={<HeroVisualSlot />}
-        />
+        {/* ── 1. HERO, omnichannel/B2B commerce, ported from approved mockup ── */}
+        <HeroOmnichannel />
 
-        {/* ── 2. LIVE COUNTER STRIP ── */}
-        <LiveCounterStrip />
+        {/* ── 3. The fragmented-commerce tax ── */}
+        <ProblemSection />
 
-        {/* ── 3. TRUST BAR, real client builds + Clutch (replaces LogoBar marquee) ── */}
-        <TrustBarUS />
+        {/* ── 4. The unified shape ── */}
+        <SolutionSection />
 
-        {/* ── 4. BENTO SERVICES GRID (light) ── */}
-        {/* Note: above-the-fold TalkToFounder section removed 2026-05-26 per Bhavesh
-            request to dial down founder-CTA repetition. Sole dedicated founder
-            section is now the dark closing banner above the footer (section 14). */}
-        <BentoServicesGrid />
+        {/* ── 5. Five ways we build and scale commerce ── */}
+        <PillarsSection />
 
-        {/* ── 6. PAIN PATTERNS (DARK), Here is what is broken ── */}
-        <PainPatternSection />
+        {/* ── 6. AI agent workforce, live console ── */}
+        <AgentConsole />
 
-        {/* ── 7. NUMBERS BLOCK (light buffer), Here is our track record ── */}
-        <NumbersBlock />
+        {/* ── 7. Commerce growth / visibility surfaces ── */}
+        <GrowthSurfaces />
 
-        {/* ── 8. INDUSTRIES (DARK), Here is who we serve ── */}
-        <IndustriesGrid />
+        {/* ── 8. A pile of tools vs a partner (comparison) ── */}
+        <ComparisonSection />
 
-        {/* ── 9. HOW IT WORKS (light buffer), Here is how we work ── */}
-        <ServiceJourneyRow
-          eyebrow="YOUR PATH TO LAUNCH"
-          headline="5 stages, zero surprises: from discovery call to live website in 7 days."
-          lead="We do not start designing until we understand your goals. Every stage ends with a deliverable you review and approve, so no design, no development, and no launch happens without your sign-off."
-          stages={JOURNEY_STAGES}
-          closingNote="5 STAGES · 7 DAYS (UP TO 5 PAGES) · FIXED PRICE PER SCOPE"
-        />
+        {/* ── 9. Proof, select client work ── */}
+        <ProofSection />
 
-        {/* ── 10. METHODOLOGY BAR (DARK), Here is our branded approach ── */}
-        <MethodologyBar />
-
-        {/* ── 11. REAL TESTIMONIALS (light buffer), Here is what real clients say ── */}
-        <RealTestimonialsSection />
-
-        {/* ── 12. WHY FACTORYJET (DARK), Here is why we are different ── */}
-        <StrategicDarkSection
-          eyebrow="WHY FACTORYJET"
-          headline="Three structural reasons buyers with budget pick us over US-incumbent agencies."
-          lead="We compete on engineering quality and engagement structure, not on headcount rates. Senior people answer the discovery call, write the code, and stay through launch. Pricing is fixed in writing before any work begins, and every milestone ends with a deliverable you own outright."
-          pillars={[
-            { title: 'Senior engineers ship the work',           body: 'No SDR-to-strategist-to-developer handoff chain. You brief a senior engineer on the first call, and that engineer stays on the project through launch. Faster decisions, fewer dropped balls, no telephone game between brief and implementation.' },
-            { title: 'Fixed price, milestone-paid',              body: 'Pricing is locked in writing before any work begins. No discovery-phase billing, no "it depends" quotes that arrive three weeks later. You pay per shipped milestone, not per hour or per change order. The engagement structure carries the same risk profile as a SaaS subscription you can cancel.' },
-            { title: 'Code and data ownership from day one',     body: 'Every line of code, every design asset, every database, every dashboard, yours from the first deliverable. GitHub repository transfer is part of every project, not an upsell. Hosting runs in your accounts. No proprietary lock-in, no exit fees, no asset hoarding.' },
-          ]}
-        />
-
-        {/* ── 13. FAQ (light buffer) ── */}
+        {/* ── 10. FAQ ── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Thirteen questions, answered the way Bhavesh would on the discovery call."
-          lead="If your question is not below, send a written brief and answers usually come back inside 24 hours."
+          headline="Questions buyers ask before hiring an ecommerce development agency."
+          lead="If your question is not below, send a short brief and answers usually come back inside 24 hours."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
 
-        {/* ── 14. FINAL CTA (dark, founder-led, proof beside the ask) ── */}
-        <FinalCTAUS />
+        {/* ── 11. Final CTA ── */}
+        <FinalCtaSection />
+
 
       </main>
 
       <RelatedGuides
         links={[
-          { href: '/blog/best-web-design-agencies-small-business-2026', label: 'Best web design agencies for small business (2026)' },
-          { href: '/blog/mobile-only-design-strategy', label: 'Mobile-only vs responsive design: which to pick' },
-          { href: '/blog/website-cost-small-business-usa-2026', label: 'How much a small business website costs in 2026' },
+          { href: '/us/services/ecommerce-development', label: 'E-commerce development services' },
+          { href: '/us/services/shopify-development', label: 'Shopify development' },
+          { href: '/us/services/ecommerce-seo', label: 'E-commerce SEO' },
         ]}
       />
       <ExitIntentLeadForm
         region="us"
         source="exit_intent_us_home"
-        heading="Claim your free website audit"
-        subheading="Expert analysis of your SEO, speed & UX — just name and email."
-        promo="Free website audit — no cost, no obligation"
+        heading="Get a free commerce audit"
+        subheading="We will map your channels, catalog, and B2B into one system — just name and email."
+        promo="Free commerce audit, no cost, no obligation"
       />
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>

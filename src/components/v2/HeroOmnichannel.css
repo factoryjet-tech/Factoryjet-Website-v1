@@ -1,0 +1,216 @@
+/* HeroOmnichannel — co-located styles, ported from the approved mockup
+   (research/mockup-us-problem-v1.html). All rules scoped under .hero-omni.
+   Brand tokens only: orange #F05A28 on white, Plus Jakarta / Inter / Geist Mono. */
+
+.hero-omni {
+  --ho-orange: #F05A28;
+  --ho-orange-dark: #D8441A;
+  --ho-ink: #14110F;
+  --ho-muted: #5C564F;
+  --ho-line: #E7DED6;
+  --ho-display: var(--font-plus-jakarta), system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --ho-body: var(--font-inter), system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --ho-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: calc(100svh - 84px);
+  padding: clamp(22px, 4vh, 46px) 0 clamp(28px, 5vh, 52px);
+  background-color: #fff;
+  background-image: radial-gradient(var(--ho-line) 1px, transparent 1px);
+  background-size: 26px 26px;
+  font-family: var(--ho-body);
+  color: var(--ho-ink);
+}
+
+.hero-omni .ho-wrap {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 clamp(18px, 4vw, 40px);
+}
+
+.hero-omni .ho-grid {
+  display: grid;
+  grid-template-columns: 1.04fr 0.96fr;
+  gap: clamp(34px, 5vw, 52px);
+  align-items: center;
+  width: 100%;
+}
+
+.hero-omni .ho-eyebrow {
+  font-family: var(--ho-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ho-orange);
+}
+
+.hero-omni h1 {
+  font-family: var(--ho-display);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  font-size: clamp(30px, 4.6vw, 52px);
+  line-height: 1.07;
+  text-wrap: balance;
+  margin: 14px 0 10px;
+  max-width: 20ch;
+}
+
+.hero-omni .ho-kin {
+  font-family: var(--ho-mono);
+  font-size: 13.5px;
+  color: var(--ho-muted);
+  margin-bottom: 16px;
+}
+.hero-omni .ho-kin .ho-swap {
+  color: var(--ho-orange);
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.hero-omni .ho-sub {
+  font-size: clamp(15.5px, 1.8vw, 18.5px);
+  color: #46403B;
+  max-width: 580px;
+  margin-bottom: 22px;
+  line-height: 1.6;
+}
+
+.hero-omni .ho-stats {
+  display: flex;
+  gap: clamp(18px, 4vw, 30px);
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+.hero-omni .ho-stats b {
+  font-family: var(--ho-display);
+  font-size: clamp(23px, 3.6vw, 29px);
+  font-weight: 800;
+  display: block;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.hero-omni .ho-stats small {
+  display: block;
+  margin-top: 4px;
+  color: var(--ho-muted);
+  font-size: 12px;
+  font-family: var(--ho-mono);
+  max-width: 18ch;
+}
+
+/* ── Right: channel → engine constellation ── */
+.hero-omni .ho-stage {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  aspect-ratio: 1 / 1;
+}
+.hero-omni .ho-links-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.hero-omni .ho-flow {
+  fill: none;
+  stroke: var(--ho-orange);
+  stroke-width: 1.6;
+  stroke-dasharray: 5 9;
+  opacity: 0.5;
+  animation: ho-dash 1.5s linear infinite;
+}
+.hero-omni .ho-node {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: #fff;
+  border: 1px solid var(--ho-line);
+  border-radius: 13px;
+  padding: 7px clamp(9px, 2.2vw, 12px);
+  box-shadow: 0 12px 22px -16px rgba(20, 17, 15, 0.45);
+  font-family: var(--ho-display);
+  font-weight: 700;
+  font-size: clamp(11px, 2.5vw, 13px);
+  white-space: nowrap;
+  animation: ho-float 6s ease-in-out infinite;
+}
+.hero-omni .ho-node .g {
+  width: 19px; height: 19px; flex: none;
+  border-radius: 6px;
+  background: var(--ho-ink);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px;
+}
+.hero-omni .ho-n1 { top: 8%;  left: 2%; }
+.hero-omni .ho-n2 { top: 44%; left: -4%; }
+.hero-omni .ho-n3 { top: 80%; left: 2%; }
+.hero-omni .ho-n4 { top: 8%;  right: 2%; }
+.hero-omni .ho-n5 { top: 44%; right: -4%; }
+.hero-omni .ho-n6 { top: 80%; right: 2%; }
+
+.hero-omni .ho-glow {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: clamp(150px, 31vw, 214px); aspect-ratio: 1; z-index: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(240,90,40,0.5), rgba(240,90,40,0) 62%);
+  animation: ho-glow 4s ease-in-out infinite;
+  will-change: opacity;
+}
+.hero-omni .ho-core {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: clamp(118px, 25vw, 170px); aspect-ratio: 1; z-index: 2;
+  border-radius: 50%;
+  background: radial-gradient(circle at 38% 32%, #3a2a24 0, #191512 60%);
+  box-shadow: 0 26px 60px -26px rgba(216,68,26,0.55), 0 0 0 1px rgba(20,17,15,0.55) inset;
+  display: flex; align-items: center; justify-content: center;
+}
+.hero-omni .ho-ember {
+  position: absolute; width: 42%; aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle, #FFD9A0, #FF8A2B 35%, #F05A28 60%, rgba(216,68,26,0) 74%);
+}
+.hero-omni .ho-ring {
+  position: absolute; inset: -12px; border-radius: 50%;
+  border: 1px dashed rgba(240,90,40,0.4);
+  animation: ho-spin 28s linear infinite;
+  will-change: transform;
+}
+.hero-omni .ho-core .ho-tag {
+  position: relative; z-index: 2;
+  font-family: var(--ho-mono);
+  font-size: 9px; letter-spacing: 0.05em; text-transform: uppercase;
+  color: #fff; text-align: center; line-height: 1.45;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.65);
+}
+.hero-omni .ho-core .ho-tag b { color: #FFB07C; font-weight: 600; }
+.hero-omni .ho-out {
+  position: absolute; left: 50%; bottom: -10px; transform: translateX(-50%); z-index: 4;
+  background: var(--ho-ink); color: #fff;
+  border-radius: 11px; padding: 7px 12px;
+  font-family: var(--ho-mono); font-size: clamp(9.5px, 2.2vw, 10.5px);
+  letter-spacing: 0.02em; text-align: center; max-width: 96%;
+  box-shadow: 0 12px 24px -16px rgba(20,17,15,0.6);
+}
+.hero-omni .ho-out .e { color: #FFB07C; }
+.hero-omni .ho-out .pwr { display: block; margin-top: 3px; font-size: 9px; color: #C9C1BA; }
+
+@keyframes ho-dash { to { stroke-dashoffset: -28; } }
+@keyframes ho-float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -6px; } }
+@keyframes ho-glow { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
+@keyframes ho-spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 900px) {
+  .hero-omni { min-height: 0; }
+  .hero-omni .ho-grid { grid-template-columns: 1fr; }
+  .hero-omni .ho-stage { margin-top: 30px; max-width: 420px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-omni .ho-flow,
+  .hero-omni .ho-node,
+  .hero-omni .ho-glow,
+  .hero-omni .ho-ring { animation: none !important; }
+  .hero-omni .ho-kin .ho-swap { transition: none !important; }
+}
