@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>SEO &amp; AI-Search Growth Proposal — Argos Watches × FactoryJet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700&family=Inter:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<style>
+  :root{
+    --ink:#0c0c0e;--ink-2:#121217;--panel:#16161c;--panel-2:#1c1c24;
+    --line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.14);
+    --fog:#9b9ba6;--fog-2:#c8c8d2;--paper:#f4f1ea;--white:#fff;
+    --orange:#F05A28;--orange-soft:#ff7a4d;--gold:#C9A86A;--gold-soft:#e6cf9c;--green:#3ecf8e;
+    --maxw:1180px;--r:18px;
+    --display:'Plus Jakarta Sans',-apple-system,sans-serif;
+    --body:'Inter',-apple-system,sans-serif;
+    --mono:'Geist Mono','JetBrains Mono',monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--fog-2);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  ::selection{background:var(--orange);color:#fff}
+  h1,h2,h3,h4{font-family:var(--display);color:var(--white);font-weight:700;line-height:1.08;letter-spacing:-.02em}
+  .serif-it{font-style:italic;font-weight:600;color:var(--orange)}
+  .mono{font-family:var(--mono);font-size:.72em;letter-spacing:.12em;text-transform:uppercase}
+  a{color:inherit}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .accent{color:var(--orange)}.gold{color:var(--gold-soft)}
+  #prog{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--orange),var(--gold));z-index:200;box-shadow:0 0 16px rgba(240,90,40,.6)}
+  nav{position:fixed;top:0;left:0;right:0;z-index:150;display:flex;justify-content:space-between;align-items:center;padding:16px 28px;backdrop-filter:blur(12px);background:rgba(12,12,14,.55);border-bottom:1px solid transparent;transition:border-color .4s}
+  nav.scrolled{border-bottom:1px solid var(--line)}
+  nav .brand{font-family:var(--display);font-size:18px;color:#fff;font-weight:800;letter-spacing:-.01em}
+  nav .brand small{color:var(--fog);font-weight:400}
+  nav .cta{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--line-2);padding:9px 16px;border-radius:100px;color:#fff;text-decoration:none;transition:.3s}
+  nav .cta:hover{background:var(--orange);border-color:var(--orange)}
+  section{position:relative}
+  .pad{padding:120px 0}.pad-sm{padding:80px 0}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:26px}
+  .eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
+  #hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(900px 600px at 78% 18%,rgba(240,90,40,.16),transparent 60%),radial-gradient(700px 500px at 12% 88%,rgba(201,168,106,.10),transparent 60%),var(--ink)}
+  .grain{position:absolute;inset:0;opacity:.045;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");mix-blend-mode:overlay}
+  .ring{position:absolute;border:1px solid var(--line);border-radius:50%;pointer-events:none}
+  .ring.r1{width:520px;height:520px;top:-120px;right:-120px;border-color:rgba(201,168,106,.18)}
+  .ring.r2{width:760px;height:760px;top:-240px;right:-240px;border-color:rgba(255,255,255,.05)}
+  .hero-grid{display:grid;grid-template-columns:1.4fr .9fr;gap:50px;align-items:center;position:relative;z-index:2}
+  .hero h1{font-size:clamp(34px,6.2vw,82px);font-weight:800;color:#fff}.hero h1 b{font-weight:800}
+  .hero .lede{font-size:19px;color:var(--fog-2);max-width:530px;margin-top:26px}
+  .hero .meta{margin-top:40px;display:flex;flex-wrap:wrap;gap:14px}
+  .chip{border:1px solid var(--line-2);border-radius:100px;padding:8px 16px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--fog-2);background:rgba(255,255,255,.02)}
+  .chip b{color:#fff}
+  .product{position:relative;border-radius:26px;padding:32px;background:linear-gradient(160deg,#fbfaf7,#e7e1d6);border:1px solid rgba(255,255,255,.55);box-shadow:0 50px 120px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.85);transform-style:preserve-3d;will-change:transform}
+  .product .prglow{position:absolute;inset:0;border-radius:26px;background:radial-gradient(58% 48% at 50% 40%,rgba(240,90,40,.12),transparent 70%);pointer-events:none}
+  .product img{position:relative;z-index:2;display:block;width:100%;height:auto;border-radius:14px;filter:drop-shadow(0 26px 36px rgba(0,0,0,.28))}
+  .pchip{position:absolute;z-index:3;background:rgba(16,16,20,.86);color:#fff;backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.14);font-family:var(--mono);font-size:11px;letter-spacing:.03em;padding:9px 14px;border-radius:100px;box-shadow:0 12px 30px rgba(0,0,0,.35);white-space:nowrap}
+  .pchip b{color:var(--gold-soft);font-weight:600}
+  .pchip.c1{top:7%;left:-7%}
+  .pchip.c2{top:45%;right:-8%}
+  .pchip.c3{bottom:7%;left:5%}
+  .product .plabel{position:absolute;z-index:3;bottom:16px;right:20px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#8a8378}
+  [data-reveal]{opacity:0;transform:translateY(34px)}
+  .band{background:linear-gradient(180deg,var(--ink-2),var(--ink));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  .stat{padding:46px 26px;border-right:1px solid var(--line)}.stat:last-child{border-right:none}
+  .stat .num{font-family:var(--display);font-size:clamp(34px,4vw,52px);color:#fff;line-height:1;font-weight:800}
+  .stat .num .accent{color:var(--orange)}
+  .stat .cap{font-size:13.5px;color:var(--fog);margin-top:12px;line-height:1.5}
+  .sh{max-width:800px;margin-bottom:60px}
+  .sh h2{font-size:clamp(32px,4.4vw,52px);font-weight:800}
+  .sh p{margin-top:22px;color:var(--fog-2);font-size:18px}
+  .finds{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .find{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:30px;position:relative;overflow:hidden;transition:.4s}
+  .find:hover{transform:translateY(-6px);border-color:var(--line-2);background:var(--panel-2)}
+  .find .fno{font-family:var(--mono);font-size:12px;color:var(--gold-soft);letter-spacing:.14em}
+  .find h3{font-size:21px;margin:16px 0 12px;font-weight:700}
+  .find p{font-size:14.5px;color:var(--fog);line-height:1.6}
+  .find .tag{margin-top:18px;display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);border:1px solid rgba(240,90,40,.4);padding:5px 11px;border-radius:100px}
+  .secmark{display:flex;align-items:baseline;gap:22px;border-top:1px solid var(--line-2);padding-top:30px;margin-bottom:50px}
+  .secmark .no{font-family:var(--display);font-size:clamp(60px,9vw,120px);color:rgba(255,255,255,.08);line-height:.8;font-weight:800}
+  .secmark .tt h2{font-size:clamp(30px,4.2vw,50px);font-weight:800}
+  .secmark .tt .mono{color:var(--gold-soft);display:block;margin-bottom:10px}
+  .scope{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .item{display:flex;gap:16px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 22px;transition:.35s}
+  .item:hover{border-color:rgba(240,90,40,.35);background:var(--panel-2)}
+  .item .ic{flex:0 0 34px;height:34px;border-radius:9px;background:rgba(240,90,40,.12);border:1px solid rgba(240,90,40,.3);display:flex;align-items:center;justify-content:center;color:var(--orange-soft);font-family:var(--mono);font-size:13px;font-weight:600}
+  .item h4{font-size:16px;color:#fff;font-weight:700;letter-spacing:0}
+  .item p{font-size:13.5px;color:var(--fog);margin-top:5px;line-height:1.55}
+  .item p .j{color:var(--gold-soft);font-family:var(--mono);font-size:11px}
+  .layer{display:grid;grid-template-columns:280px 1fr;gap:34px;padding:34px 0;border-bottom:1px solid var(--line)}
+  .layer:last-child{border-bottom:none}
+  .layer .lhead .mono{color:var(--gold-soft)}
+  .layer .lhead h3{font-size:25px;font-weight:700;margin-top:10px}
+  .layer .lhead p{font-size:14px;color:var(--fog);margin-top:12px}
+  .layer ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px 26px}
+  .layer ul li{position:relative;padding-left:24px;font-size:14.5px;color:var(--fog-2);line-height:1.5}
+  .layer ul li::before{content:"→";position:absolute;left:0;color:var(--orange);font-family:var(--mono)}
+  .layer ul li b{color:#fff;font-weight:600}.layer ul li span{color:var(--fog);font-size:13px}
+  .road{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .ph{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:26px;position:relative}
+  .ph .q{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--orange);text-transform:uppercase}
+  .ph h4{font-size:19px;font-weight:700;margin:10px 0 14px;color:#fff}
+  .ph ul{list-style:none}
+  .ph ul li{font-size:13px;color:var(--fog);padding:6px 0 6px 16px;position:relative;border-top:1px solid var(--line)}
+  .ph ul li:first-child{border-top:none}
+  .ph ul li::before{content:"";position:absolute;left:0;top:13px;width:5px;height:5px;border-radius:50%;background:var(--gold)}
+
+  /* ===== Commercial / quotation tables ===== */
+  #pricing{background:linear-gradient(180deg,var(--ink),#0a0a0c)}
+  .qmark{display:inline-flex;align-items:center;gap:14px;background:rgba(240,90,40,.08);border:1px solid rgba(240,90,40,.3);color:var(--orange-soft);font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:10px 20px;border-radius:100px;margin-bottom:22px}
+  .qmark b{color:#fff}
+  .qlead{color:var(--fog-2);max-width:780px;margin-bottom:30px}
+  /* plan header banner */
+  .planhdr{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;background:linear-gradient(110deg,#1d1812,#16130f);border:1px solid rgba(201,168,106,.35);border-radius:16px 16px 0 0;padding:24px 28px}
+  .planhdr.feat{border-color:rgba(240,90,40,.5);background:linear-gradient(110deg,#241a14,#17110d)}
+  .planhdr .pn{font-family:var(--display);font-size:23px;font-weight:800;color:#fff}
+  .planhdr .pn small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:6px;font-weight:500}
+  .planhdr .pp{text-align:right}
+  .planhdr .pp .amt{font-family:var(--display);font-size:34px;font-weight:800;color:var(--orange-soft);line-height:1}
+  .planhdr .pp .amt small{font-family:var(--mono);font-size:12px;color:var(--fog);font-weight:400}
+  /* tables */
+  .ctbl{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);font-size:15px;margin-bottom:0}
+  .ctbl.top0{border-radius:0}
+  .ctbl th,.ctbl td{text-align:left;padding:14px 18px;border:1px solid var(--line)}
+  .ctbl thead th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--orange);border-color:var(--orange)}
+  .ctbl thead th.gold{background:var(--gold);border-color:var(--gold)}
+  .ctbl td.k{color:var(--fog-2);font-weight:500;background:rgba(255,255,255,.02)}
+  .ctbl td b{color:#fff}
+  .ctbl td .em{color:#fff;font-weight:700}
+  .ctbl .ok{color:var(--green);font-weight:700}
+  .ctbl .no{color:var(--fog)}
+  .ctbl tr.zebra td{background:rgba(255,255,255,.015)}
+  .ctbl td.center,.ctbl th.center{text-align:center}
+  .ctbl td.right,.ctbl th.right{text-align:right}
+  .ctbl .pricecell{font-family:var(--display);font-weight:800;color:#fff;font-size:16px;white-space:nowrap}
+  .ctbl .pricecell .mo{font-family:var(--mono);font-size:11px;color:var(--fog);font-weight:400}
+  .ctbl .pricecell .tot{display:block;font-family:var(--mono);font-size:11px;color:var(--gold-soft);font-weight:400;margin-top:3px}
+  .ctbl tr.best td{background:rgba(240,90,40,.08)}
+  .terms{background:var(--panel-2);border:1px solid var(--line);border-top:none;border-radius:0 0 16px 16px;padding:18px 22px;font-size:13.5px;color:var(--fog);line-height:1.65}
+  .terms b{color:var(--fog-2)}
+  .terms .pill{display:inline-block;font-family:var(--mono);font-size:11px;color:var(--orange-soft);border:1px solid rgba(240,90,40,.35);border-radius:100px;padding:3px 10px;margin:0 4px 4px 0}
+  .grp{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-soft);margin:34px 0 10px;display:block}
+
+  .roi{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+  .roi-card{background:linear-gradient(180deg,var(--panel),var(--ink-2));border:1px solid var(--line);border-radius:var(--r);padding:34px}
+  .roi-row{display:flex;justify-content:space-between;padding:15px 0;border-bottom:1px solid var(--line);font-size:15px;gap:18px}
+  .roi-row:last-child{border-bottom:none}
+  .roi-row span{color:var(--fog)}.roi-row b{color:#fff;font-family:var(--mono);font-size:15px;text-align:right}
+  .roi-row.hi b{color:var(--green);font-size:18px}
+  .why{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .wc{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px}
+  .wc .n{font-family:var(--display);font-size:40px;color:var(--orange);font-weight:800;line-height:1}
+  .wc h4{font-size:16px;color:#fff;margin:12px 0 8px;font-weight:700}
+  .wc p{font-size:13.5px;color:var(--fog)}
+  .note{background:rgba(240,90,40,.06);border:1px solid rgba(240,90,40,.25);border-radius:14px;padding:18px 22px;font-size:14px;color:var(--fog-2);margin-top:30px}
+  .note b{color:var(--orange-soft)}
+  #cta{background:radial-gradient(800px 500px at 50% 0%,rgba(240,90,40,.18),transparent 60%),#0a0a0c;text-align:center}
+  #cta h2{font-size:clamp(38px,6vw,70px);font-weight:800}
+  #cta .lede{max-width:580px;margin:24px auto 38px;color:var(--fog-2);font-size:18px}
+  .btn{display:inline-block;background:linear-gradient(90deg,var(--orange),var(--orange-soft));color:#fff;text-decoration:none;font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:18px 38px;border-radius:100px;transition:.3s;box-shadow:0 20px 50px rgba(240,90,40,.3)}
+  .btn:hover{transform:translateY(-3px);box-shadow:0 26px 60px rgba(240,90,40,.45)}
+  .contact{margin-top:40px;display:flex;gap:30px;justify-content:center;flex-wrap:wrap;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--fog)}
+  .contact a{color:var(--gold-soft);text-decoration:none}
+  footer{border-top:1px solid var(--line);padding:36px 0;text-align:center;color:var(--fog);font-size:12.5px;font-family:var(--mono);letter-spacing:.05em}
+  @media(max-width:920px){
+    .hero-grid{grid-template-columns:1fr}.product{max-width:360px;margin:10px auto 0}
+    .pchip.c1{left:0}.pchip.c2{right:0}.pchip.c3{left:0}
+    .stats{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:none}.stat{border-bottom:1px solid var(--line)}
+    .finds,.why,.road{grid-template-columns:1fr}
+    .scope{grid-template-columns:1fr}.layer{grid-template-columns:1fr;gap:18px}.layer ul{grid-template-columns:1fr}
+    .roi{grid-template-columns:1fr}.pad{padding:80px 0}
+    .ctbl{font-size:13.5px}.ctbl th,.ctbl td{padding:10px 12px}
+    .planhdr{flex-direction:column;align-items:flex-start}.planhdr .pp{text-align:left}
+  }
+  @media(max-width:520px){.stats{grid-template-columns:1fr}.stat{border-right:none}}
+
+  /* buttons + whatsapp + mobile polish */
+  .btnrow{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;align-items:center}
+  .btn-wa{background:#25D366;box-shadow:0 20px 50px rgba(37,211,102,.3);display:inline-flex;align-items:center;gap:9px}
+  .btn-wa:hover{box-shadow:0 26px 60px rgba(37,211,102,.45)}
+  .btn-ghost{background:transparent;border:1px solid var(--line-2);color:#fff;box-shadow:none}
+  .btn-ghost:hover{background:#fff;color:#111;box-shadow:none}
+  .wafab{position:fixed;right:18px;bottom:18px;z-index:300;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 12px 34px rgba(0,0,0,.45);transition:transform .25s;animation:wapulse 2.6s ease-out infinite}
+  .wafab:hover{transform:scale(1.08)}
+  @keyframes wapulse{0%{box-shadow:0 12px 34px rgba(0,0,0,.45),0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 12px 34px rgba(0,0,0,.45),0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 12px 34px rgba(0,0,0,.45),0 0 0 0 rgba(37,211,102,0)}}
+  @media(max-width:680px){
+    .ctbl{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+    .ctbl th,.ctbl td{white-space:nowrap}
+    .btn{display:block;width:100%;text-align:center}
+    .btnrow{flex-direction:column;gap:12px}
+    .btn-wa{justify-content:center}
+    nav{padding:13px 18px}nav .brand{font-size:15px}nav .cta{padding:8px 12px;font-size:10px}
+    .wrap{padding:0 18px}
+    .pad{padding:64px 0}.pad-sm{padding:56px 0}
+    .stat{padding:32px 22px}.find{padding:24px}.secmark{gap:14px}.terms{padding:16px 18px}
+    .planhdr .pp .amt{font-size:28px}
+    .wafab{width:54px;height:54px;right:14px;bottom:14px}
+  }
+  @media(max-width:380px){.hero .lede{font-size:16px}.chip{font-size:10px;padding:7px 11px}.sh p{font-size:16px}}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+
+<nav id="nav">
+  <div class="brand">FactoryJet <small>× Argos Watches</small></div>
+  <a class="cta" href="https://calendly.com/bhavesh-factoryjet/30min" target="_blank" rel="noopener">Book the Kickoff →</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="grain"></div>
+  <div class="ring r1"></div><div class="ring r2"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero">
+        <div class="eyebrow" data-h>Growth Proposal · Prepared for Omkar · Argos Watches</div>
+        <h1 data-h>Turn paid spend<br>into <b>owned</b> <span class="serif-it">growth.</span></h1>
+        <p class="lede" data-h>Today 80% of your sales come from paid &amp; influencer marketing. This plan flips that — building the organic and AI-search engine that takes you toward 80–90% organic, and toward ₹150 Cr. Two quotations inside: start with Technical SEO, or go all-in.</p>
+        <div class="meta" data-h>
+          <span class="chip"><b>SEO</b> · Search</span>
+          <span class="chip"><b>GEO</b> · Generative</span>
+          <span class="chip"><b>AEO</b> · Answer</span>
+          <span class="chip"><b>AIO</b> · AI Optimization</span>
+        </div>
+      </div>
+      <div class="product" id="product">
+        <div class="prglow"></div>
+        <img src="https://www.argoswatch.in/cdn/shop/files/cbs-l.jpg?v=1771495561&width=1000" alt="Argos Apollo III Constellation Blue automatic watch" loading="eager" />
+        <div class="pchip c1">Miyota <b>Automatic</b></div>
+        <div class="pchip c2">Sapphire <b>Crystal</b></div>
+        <div class="pchip c3"><b>Lifetime</b> Warranty</div>
+        <div class="plabel">Apollo III · Argos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAT BAND -->
+<section class="band">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><div class="num"><span data-count="20">0</span><span style="font-size:.5em">%</span></div><div class="cap">Of revenue is organic today. The other 80% is paid &amp; influencer — expensive and rented.</div></div>
+      <div class="stat"><div class="num accent"><span data-count="90">0</span><span style="font-size:.5em">%</span></div><div class="cap">Your stated goal: organic contribution of 80–90% as paid spend comes down.</div></div>
+      <div class="stat"><div class="num"><span data-count="40">0</span><span style="font-size:.5em">%</span></div><div class="cap">Of revenue spent on influencers/celebrities — demand you create, then must capture in search.</div></div>
+      <div class="stat"><div class="num"><span data-count="0">0</span><span style="font-size:.5em">/10</span></div><div class="cap">Times Argos is named when AI tools are asked for India's best automatic watch, today.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- OPPORTUNITY -->
+<section class="pad">
+  <div class="wrap">
+    <div class="sh">
+      <div class="eyebrow" data-reveal>Where Argos stands</div>
+      <h2 data-reveal>You rent 80% of your growth.<br>It's time to <span class="serif-it">own</span> it.</h2>
+      <p data-reveal>Argos has scaled from ₹5 Cr to ₹50 Cr+ on the strength of paid ads and celebrity/influencer marketing — Neil Nitin Mukesh, Maniesh Paul — spending 20–40% of revenue on that alone. It works, but it's rented growth: the moment you stop paying, the demand stops. Organic search and AI visibility are the opposite — you build them once and they keep paying you back. With a ~40% repeat rate and ₹12–13k AOV, every organic customer you add compounds. This is how you hit 80–90% organic and ₹150 Cr without simply spending more.</p>
+    </div>
+    <div class="finds">
+      <div class="find" data-reveal>
+        <div class="fno">FINDING 01</div>
+        <h3>Your paid demand is leaking</h3>
+        <p>People who see your ambassadors then search "Argos Watches" or category terms like "automatic," "self-winding" and "mechanical watches." You confirmed these are your converting keywords. If you don't fully own those results, you pay to create demand and risk losing the click.</p>
+        <span class="tag">High-intent · capture it</span>
+      </div>
+      <div class="find" data-reveal>
+        <div class="fno">FINDING 02</div>
+        <h3>Invisible in AI answers</h3>
+        <p>You haven't checked AI visibility yet — and right now Argos isn't named when ChatGPT, Gemini, Perplexity or Google's AI Overview are asked for the best Indian automatic watch. This is the next search battlefield, and almost no Indian watch brand has claimed it.</p>
+        <span class="tag">First-mover window</span>
+      </div>
+      <div class="find" data-reveal>
+        <div class="fno">FINDING 03</div>
+        <h3>The system was missing, not the effort</h3>
+        <p>Organic is stuck at 20%. Blogging was tried with no results — because it lacked keyword strategy, technical foundation, internal linking and distribution. Your Product &amp; Review schema sits on a stock Shopify theme and needs verifying. We fix the system, not just the symptoms.</p>
+        <span class="tag">Foundation-first</span>
+      </div>
+    </div>
+    <div class="note" data-reveal><b>Built from your numbers.</b> Markets: Mumbai, Bangalore, Delhi · AOV ₹12–13k · repeat rate ~40% · 80% paid / 20% organic · no marketplace presence yet · GSC + GA4 + Google Ads live, no heatmap/session tools. Every target below is shaped around these.</div>
+  </div>
+</section>
+
+<!-- SECTION 1: TECHNICAL SEO -->
+<section class="pad" style="background:linear-gradient(180deg,#0a0a0c,var(--ink))">
+  <div class="wrap">
+    <div class="secmark" data-reveal>
+      <div class="no">01</div>
+      <div class="tt"><span class="mono">Section One · Start here</span><h2>Technical SEO</h2></div>
+    </div>
+    <div class="sh" style="margin-bottom:46px">
+      <p data-reveal><b style="color:#fff">In plain words:</b> Technical SEO is the plumbing of your website. Before Google can rank you, it has to crawl your pages, understand them, and trust they load fast and clean. If the plumbing leaks, even great products stay invisible — and blogging will never work. You asked to start here, and you're right to. <span class="j gold mono" style="font-size:12px">Scope: crawlability · indexation · Core Web Vitals · schema verification · site health.</span></p>
+    </div>
+    <div class="scope">
+      <div class="item" data-reveal><div class="ic">01</div><div><h4>Full Technical Audit &amp; Crawl</h4><p>We scan every page with pro crawlers <span class="j">(Screaming Frog, Sitebulb)</span> plus a full read of your GSC &amp; GA4 — a complete health report of your store.</p></div></div>
+      <div class="item" data-reveal><div class="ic">02</div><div><h4>Core Web Vitals &amp; Speed</h4><p>We fix how fast your site loads and responds <span class="j">(LCP, INP, CLS)</span>. Faster pages mean higher rankings and fewer dropped sales — especially on mobile.</p></div></div>
+      <div class="item" data-reveal><div class="ic">03</div><div><h4>Crawlability &amp; Indexation</h4><p>We make sure Google can reach and list your important pages <span class="j">(robots.txt, XML sitemaps, crawl budget)</span> and stop wasting effort on junk URLs.</p></div></div>
+      <div class="item" data-reveal><div class="ic">04</div><div><h4>Duplicate Content Cleanup</h4><p>Shopify creates many copies of the same page through filters and tags. We point Google to the right one <span class="j">(canonical tags)</span> so your ranking power is not split.</p></div></div>
+      <div class="item" data-reveal><div class="ic">05</div><div><h4>Schema Audit &amp; Completion</h4><p>You have Product &amp; Review schema on a stock theme — we verify it's valid and error-free, then add what's missing <span class="j">(Offer, Breadcrumb, FAQ, Organization)</span> for stars, price &amp; stock in results.</p></div></div>
+      <div class="item" data-reveal><div class="ic">06</div><div><h4>Site Architecture &amp; URLs</h4><p>We organise collections and products in a clean, logical structure with tidy web addresses so shoppers and Google find their way easily.</p></div></div>
+      <div class="item" data-reveal><div class="ic">07</div><div><h4>Internal Linking</h4><p>We connect your pages smartly so ranking strength flows to your best-selling collections <span class="j">(link equity distribution)</span>.</p></div></div>
+      <div class="item" data-reveal><div class="ic">08</div><div><h4>Shopify Theme / Code Optimisation</h4><p>We trim heavy code, lazy-load images and remove render-blocking scripts <span class="j">(Liquid, deferred JS/CSS)</span> without breaking your design.</p></div></div>
+      <div class="item" data-reveal><div class="ic">09</div><div><h4>Image Optimisation</h4><p>We compress and convert images <span class="j">(WebP, alt text)</span> so pages load faster and also show up in Google Images.</p></div></div>
+      <div class="item" data-reveal><div class="ic">10</div><div><h4>Redirects &amp; Error Fixes</h4><p>We repair dead links and set proper redirects <span class="j">(301s, 404 cleanup)</span> so no shopper — or Google — hits a wall.</p></div></div>
+      <div class="item" data-reveal><div class="ic">11</div><div><h4>Mobile &amp; JavaScript SEO</h4><p>We confirm your site works perfectly on phones and that Google can read JavaScript-loaded content <span class="j">(mobile-first indexing, render checks)</span>.</p></div></div>
+      <div class="item" data-reveal><div class="ic">12</div><div><h4>Monitoring &amp; Reporting</h4><p>Ongoing Search Console monitoring and a clear monthly report of every fix and its impact — so you're never in the dark.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: OVERALL SEO -->
+<section class="pad">
+  <div class="wrap">
+    <div class="secmark" data-reveal>
+      <div class="no">02</div>
+      <div class="tt"><span class="mono">Section Two · The full growth program</span><h2>Overall SEO <span class="serif-it gold">+ GEO / AEO / AIO</span></h2></div>
+    </div>
+    <div class="sh" style="margin-bottom:30px">
+      <p data-reveal><b style="color:#fff">In plain words:</b> Technical SEO gets the house in order. <em>Overall SEO</em> is the full growth engine — it includes everything in Section 1, then adds the words, content, AI visibility, links and brand defence that actually pull customers in. This is what moves you from 20% organic toward 80–90% — and toward ₹150 Cr.</p>
+    </div>
+
+    <div class="layer" data-reveal>
+      <div class="lhead"><span class="mono">Layer A</span><h3>Technical Foundation</h3><p>Everything in Section 1 — the full plumbing fix and ongoing health monitoring — is included as the base of the program.</p></div>
+      <ul>
+        <li><b>All 12 technical items</b> <span>— crawl, speed, schema, indexation, site health</span></li>
+        <li><b>Continuous monitoring</b> <span>— monthly error &amp; coverage fixes</span></li>
+      </ul>
+    </div>
+
+    <div class="layer" data-reveal>
+      <div class="lhead"><span class="mono">Layer B</span><h3>Keyword &amp; On-Page SEO</h3><p>We build on your converting terms — brand, plus "automatic," "self-winding" and "mechanical watches" — and find the next layer of buyer-intent keywords.</p></div>
+      <ul>
+        <li><b>Commercial keyword research</b> <span>— category + city intent (Mumbai/Blr/Delhi)</span></li>
+        <li><b>Keyword-to-page mapping</b> <span>— one clear target per page</span></li>
+        <li><b>Title &amp; meta optimisation</b> <span>— higher click-through</span></li>
+        <li><b>Collection &amp; product copy</b> <span>— persuasive, keyword-rich, human</span></li>
+        <li><b>Header &amp; content structure</b> <span>— answer-first, easy to scan</span></li>
+        <li><b>Competitor gap analysis</b> <span>— terms rivals own that you should</span></li>
+      </ul>
+    </div>
+
+    <div class="layer" data-reveal>
+      <div class="lhead"><span class="mono">Layer C</span><h3>Content Engine</h3><p>Blogging failed before because it had no system. This time: keyword-led, technically sound, internally linked and distributed — the content buyers read before purchase, and AI quotes.</p></div>
+      <ul>
+        <li><b>Buying guides &amp; blogs</b> <span>— "best automatic watches under ₹15k" etc.</span></li>
+        <li><b>Comparison pages</b> <span>— Argos vs. category rivals</span></li>
+        <li><b>E-E-A-T signals</b> <span>— author bylines, expertise, trust</span></li>
+        <li><b>Editorial calendar</b> <span>— planned, consistent publishing</span></li>
+        <li><b>Original data &amp; tables</b> <span>— the stuff AI loves to cite</span></li>
+        <li><b>Distribution built-in</b> <span>— content that's actually seen</span></li>
+      </ul>
+    </div>
+
+    <div class="layer" data-reveal>
+      <div class="lhead"><span class="mono">Layer D · The differentiator</span><h3>GEO / AEO / AIO — AI Search Visibility</h3><p>Getting Argos named and recommended inside ChatGPT, Gemini, Perplexity and Google's AI Overviews. You haven't checked this yet — which means it's a wide-open, first-mover opportunity.</p></div>
+      <ul>
+        <li><b>AI Overview optimisation</b> <span>— show in Google's AI answers</span></li>
+        <li><b>Answer-engine formatting</b> <span>— content AI can lift &amp; quote</span></li>
+        <li><b>Entity optimisation</b> <span>— teach AI what "Argos Watches" is</span></li>
+        <li><b>Citation building</b> <span>— get named on sources AI trusts</span></li>
+        <li><b>llms.txt &amp; AI crawl access</b> <span>— let AI read you correctly</span></li>
+        <li><b>AI-visibility tracking</b> <span>— monthly report of where you appear</span></li>
+      </ul>
+    </div>
+
+    <div class="layer" data-reveal>
+      <div class="lhead"><span class="mono">Layer E</span><h3>Branded Search Defence</h3><p>Lock down every search tied to your name and your celebrities, so the demand you paid 20–40% of revenue to create lands on <em>your</em> store.</p></div>
+      <ul>
+        <li><b>Own your brand SERP</b> <span>— #1 for "Argos Watches" &amp; variants</span></li>
+        <li><b>Ambassador-term capture</b> <span>— celebrity → Argos searches</span></li>
+        <li><b>Sitelinks &amp; rich results</b> <span>— a bigger, richer listing</span></li>
+        <li><b>Google Knowledge Panel</b> <span>— the brand box on the right</span></li>
+        <li><b>Reputation in results</b> <span>— reviews &amp; positive pages up top</span></li>
+        <li><b>Reseller / dupe monitoring</b> <span>— stop leaks to others</span></li>
+      </ul>
+    </div>
+
+    <div class="layer" data-reveal>
+      <div class="lhead"><span class="mono">Layer F</span><h3>Authority &amp; Digital PR</h3><p>Backlinks are votes of trust. We earn them from watch, lifestyle and business media — the same outlets that already cover you.</p></div>
+      <ul>
+        <li><b>Quality link building</b> <span>— relevant, authoritative sites</span></li>
+        <li><b>Digital PR campaigns</b> <span>— story angles media want</span></li>
+        <li><b>Journalist outreach</b> <span>— expert quotes &amp; features</span></li>
+        <li><b>Watch-community placement</b> <span>— WatchCrunch, forums, reviewers</span></li>
+        <li><b>Backlink clean-up</b> <span>— disavow toxic links</span></li>
+        <li><b>Unlinked-mention reclaim</b> <span>— turn name-drops into links</span></li>
+      </ul>
+    </div>
+
+    <div class="layer" data-reveal>
+      <div class="lhead"><span class="mono">Layer G</span><h3>Reporting &amp; Strategy</h3><p>You always know what we did, what it earned, and what's next — in numbers tied to revenue and your organic-share goal, not vanity.</p></div>
+      <ul>
+        <li><b>Live dashboard</b> <span>— traffic, rankings, AI visibility</span></li>
+        <li><b>Monthly strategy call</b> <span>— review &amp; next-month plan</span></li>
+        <li><b>Organic-share tracking</b> <span>— progress from 20% → 80–90%</span></li>
+        <li><b>Dedicated point of contact</b> <span>— one team, always reachable</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING : TWO QUOTATIONS -->
+<section class="pad" id="pricing">
+  <div class="wrap">
+    <div class="sh" style="margin-bottom:50px">
+      <div class="eyebrow" data-reveal>Commercials · Clear &amp; simple</div>
+      <h2 data-reveal>Monthly retainers. <span class="serif-it">No</span> surprises.</h2>
+      <p data-reveal>Your SEO work is a clean <b style="color:#fff">monthly retainer with no setup fee</b>. Separately, we recommend a one-time <b style="color:#fff">Measurement &amp; Tracking Foundation</b> so we can actually prove the results we promise. Pick <b style="color:#fff">Quotation 1 (Technical SEO)</b> or <b style="color:#fff">Quotation 2 (Full SEO + GEO/AEO/AIO)</b>. Pay retainers in advance and save: 2% quarterly, 5% half-yearly, 10% annually.</p>
+    </div>
+
+    <!-- ONE-TIME FOUNDATION -->
+    <div class="qmark" data-reveal>Recommended one-time · <b>Measurement &amp; Tracking Foundation</b></div>
+    <p class="qlead" data-reveal>You can't grow what you can't measure. Today you have GA4 and Google Ads, but no heatmaps or session recording, and tracking on a stock Shopify theme. This one-time setup gives us — and you — clean, trustworthy data, so every rupee of organic growth and saved ad spend is proven, not guessed. <b style="color:#fff">The tools below are all free; you're paying for the expert setup.</b></p>
+    <div class="planhdr" data-reveal style="border-radius:16px;margin-bottom:18px">
+      <div class="pn"><small>One-time setup</small>Measurement &amp; Tracking Foundation</div>
+      <div class="pp"><div class="amt">₹1,50,000 <small>one-time + GST</small></div></div>
+    </div>
+    <div class="scope" data-reveal style="gap:14px">
+      <div class="item"><div class="ic">01</div><div><h4>Microsoft Clarity</h4><p>Heatmaps &amp; session recording installed and configured — see exactly how shoppers use your store.</p></div></div>
+      <div class="item"><div class="ic">02</div><div><h4>GA4 Audit &amp; Enhancement</h4><p>We verify your GA4, fix gaps and complete proper ecommerce events &amp; conversions <span class="j">(purchase, value)</span>.</p></div></div>
+      <div class="item"><div class="ic">03</div><div><h4>Google Tag Manager</h4><p>A clean GTM container so every tag is managed in one place, fast and tidy.</p></div></div>
+      <div class="item"><div class="ic">04</div><div><h4>Meta Pixel + Conversions API</h4><p>Accurate Facebook/Instagram ad tracking, server-side <span class="j">(CAPI)</span> — sharper data for your paid spend.</p></div></div>
+      <div class="item"><div class="ic">05</div><div><h4>Pinterest Pixel</h4><p>Track Pinterest-driven visits and sales so that channel is measurable too.</p></div></div>
+      <div class="item"><div class="ic">06</div><div><h4>Ecommerce Event Tracking</h4><p>Full funnel captured <span class="j">(view item, add to cart, begin checkout, purchase)</span> across the store.</p></div></div>
+      <div class="item"><div class="ic">07</div><div><h4>Looker Studio Dashboard</h4><p>One live dashboard for traffic, sales and channels — no more guessing what's working.</p></div></div>
+      <div class="item"><div class="ic">08</div><div><h4>QA, Validation &amp; Handover</h4><p>Everything tested and documented, with a short training call so your team is confident.</p></div></div>
+    </div>
+    <div class="terms" data-reveal style="border-radius:14px;border-top:1px solid var(--line);margin-top:16px">
+      <b>Why this comes first.</b> Your whole plan is about growing organic and cutting paid waste — without clean tracking you can't prove either. Recommended before or alongside Quotation 2, since attribution depends on it. Optional with Quotation 1. One-time fee, invoiced at project start and payable within 7 business days before work begins. All listed tools are free; the fee is expert setup. GST extra.
+    </div>
+
+    <!-- QUOTATION 1 -->
+    <div class="qmark" data-reveal>Quotation 1 · <b>Technical SEO Only</b></div>
+    <p class="qlead" data-reveal>A focused monthly retainer covering all 12 technical items plus ongoing monitoring. The lowest-risk way to begin — fix the foundation first, exactly as you asked.</p>
+
+    <div class="planhdr" data-reveal>
+      <div class="pn"><small>The Plan</small>Technical SEO Retainer</div>
+      <div class="pp"><div class="amt">₹75,000 <small>/ month + GST</small></div></div>
+    </div>
+    <table class="ctbl top0" data-reveal>
+      <thead><tr>
+        <th style="width:34%">Billing option</th>
+        <th class="center" style="width:14%">Discount</th>
+        <th class="right" style="width:26%">Effective monthly</th>
+        <th class="right" style="width:26%">Paid upfront</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="k">Monthly (standard)</td><td class="center no">—</td><td class="right"><span class="pricecell">₹75,000<span class="mo"> /mo</span></span></td><td class="right">Billed each month</td></tr>
+        <tr class="zebra"><td class="k">Quarterly — 3 months upfront</td><td class="center ok">2%</td><td class="right"><span class="pricecell">₹73,500<span class="mo"> /mo</span></span></td><td class="right">₹2,20,500 <span style="color:var(--fog);font-size:12px">/ quarter</span></td></tr>
+        <tr><td class="k">Half-yearly — 6 months upfront</td><td class="center ok">5%</td><td class="right"><span class="pricecell">₹71,250<span class="mo"> /mo</span></span></td><td class="right">₹4,27,500 <span style="color:var(--fog);font-size:12px">/ 6 mo</span></td></tr>
+        <tr class="best zebra"><td class="k"><b>Annual — 12 months upfront</b> <span style="color:var(--orange-soft);font-size:12px">· best value</span></td><td class="center ok">10%</td><td class="right"><span class="pricecell">₹67,500<span class="mo"> /mo</span></span></td><td class="right">₹8,10,000 <span style="color:var(--fog);font-size:12px">/ year</span></td></tr>
+      </tbody>
+    </table>
+    <div class="terms" data-reveal>
+      <b>Payment terms.</b> We invoice on the 1st of each month; invoices are payable within <b>7 business days</b> — services are delivered against paid invoices (you're billed ahead of delivery). All fees exclusive of GST. Minimum term 3 months.
+      <div style="margin-top:10px"><span class="pill">Quarterly −2%</span><span class="pill">Half-yearly −5%</span><span class="pill">Annual −10%</span></div>
+    </div>
+
+    <span class="grp" data-reveal>Technical SEO · 8-week work plan</span>
+    <div class="road">
+      <div class="ph" data-reveal><div class="q">Weeks 1–2</div><h4>Audit &amp; Diagnose</h4><ul><li>Full crawl + GSC/GA4 review</li><li>Schema validation</li><li>Speed &amp; mobile baseline</li><li>Prioritised fix list</li></ul></div>
+      <div class="ph" data-reveal><div class="q">Weeks 3–4</div><h4>Speed &amp; Clean</h4><ul><li>Core Web Vitals fixes</li><li>Shopify code/image optimisation</li><li>Canonical &amp; duplicate cleanup</li></ul></div>
+      <div class="ph" data-reveal><div class="q">Weeks 5–6</div><h4>Structure &amp; Schema</h4><ul><li>Schema completion</li><li>Architecture &amp; internal linking</li><li>Indexation &amp; sitemap fixes</li></ul></div>
+      <div class="ph" data-reveal><div class="q">Weeks 7–8</div><h4>Finish &amp; Monitor</h4><ul><li>Redirects &amp; 404 cleanup</li><li>JS/render checks</li><li>Monitoring setup</li><li>First impact report</li></ul></div>
+    </div>
+
+    <!-- QUOTATION 2 -->
+    <div class="qmark" data-reveal style="margin-top:90px">Quotation 2 · <b>Full SEO + GEO / AEO / AIO</b></div>
+    <p class="qlead" data-reveal>The complete growth engine as a monthly retainer. Technical foundation is <b style="color:#fff">included</b>. Choose the level that matches how fast you want to move toward 80–90% organic.</p>
+
+    <!-- scope comparison -->
+    <span class="grp" data-reveal style="margin-top:0">What's included — at a glance</span>
+    <table class="ctbl" data-reveal>
+      <thead><tr>
+        <th style="width:50%">Capability</th>
+        <th class="center" style="width:25%">Growth Engine</th>
+        <th class="center gold" style="width:25%">Market Domination</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="k">All 12 technical items + monitoring</td><td class="center ok">✓</td><td class="center ok">✓</td></tr>
+        <tr class="zebra"><td class="k">Keyword research, mapping &amp; on-page SEO</td><td class="center ok">✓</td><td class="center ok">✓</td></tr>
+        <tr><td class="k">Content engine (guides, blogs, comparisons)</td><td class="center ok">✓</td><td class="center ok">2–3× volume</td></tr>
+        <tr class="zebra"><td class="k">GEO / AEO / AIO — AI search visibility</td><td class="center ok">✓</td><td class="center ok">✓</td></tr>
+        <tr><td class="k">Entity optimisation &amp; citation building</td><td class="center ok">✓</td><td class="center ok">✓</td></tr>
+        <tr class="zebra"><td class="k">Monthly AI-visibility tracking</td><td class="center ok">✓</td><td class="center ok">✓</td></tr>
+        <tr><td class="k">Branded-search defence + ambassador terms</td><td class="center ok">✓</td><td class="center ok">✓</td></tr>
+        <tr class="zebra"><td class="k">Knowledge Panel &amp; rich-result work</td><td class="center ok">✓</td><td class="center ok">✓</td></tr>
+        <tr><td class="k">Authority link building</td><td class="center ok">Steady</td><td class="center ok">Aggressive</td></tr>
+        <tr class="zebra"><td class="k">Digital PR campaigns &amp; media features</td><td class="center no">—</td><td class="center ok">✓</td></tr>
+        <tr><td class="k">Marketplace launch — Amazon, Flipkart &amp; Myntra</td><td class="center no">—</td><td class="center ok">✓</td></tr>
+        <tr class="zebra"><td class="k">CRO + heatmaps &amp; session recording</td><td class="center no">—</td><td class="center ok">✓</td></tr>
+        <tr><td class="k">Reviews / UGC growth strategy</td><td class="center no">—</td><td class="center ok">✓</td></tr>
+        <tr class="zebra"><td class="k">Strategy calls &amp; reporting</td><td class="center ok">Monthly</td><td class="center ok">Bi-weekly + QBR</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Growth Engine commercials -->
+    <div class="planhdr" data-reveal style="margin-top:34px">
+      <div class="pn"><small>Option A</small>Growth Engine</div>
+      <div class="pp"><div class="amt">₹1,75,000 <small>/ month + GST</small></div></div>
+    </div>
+    <table class="ctbl top0" data-reveal>
+      <thead><tr>
+        <th style="width:34%">Billing option</th>
+        <th class="center" style="width:14%">Discount</th>
+        <th class="right" style="width:26%">Effective monthly</th>
+        <th class="right" style="width:26%">Paid upfront</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="k">Monthly (standard)</td><td class="center no">—</td><td class="right"><span class="pricecell">₹1,75,000<span class="mo"> /mo</span></span></td><td class="right">Billed each month</td></tr>
+        <tr class="zebra"><td class="k">Quarterly — 3 months upfront</td><td class="center ok">2%</td><td class="right"><span class="pricecell">₹1,71,500<span class="mo"> /mo</span></span></td><td class="right">₹5,14,500 <span style="color:var(--fog);font-size:12px">/ quarter</span></td></tr>
+        <tr><td class="k">Half-yearly — 6 months upfront</td><td class="center ok">5%</td><td class="right"><span class="pricecell">₹1,66,250<span class="mo"> /mo</span></span></td><td class="right">₹9,97,500 <span style="color:var(--fog);font-size:12px">/ 6 mo</span></td></tr>
+        <tr class="best zebra"><td class="k"><b>Annual — 12 months upfront</b> <span style="color:var(--orange-soft);font-size:12px">· best value</span></td><td class="center ok">10%</td><td class="right"><span class="pricecell">₹1,57,500<span class="mo"> /mo</span></span></td><td class="right">₹18,90,000 <span style="color:var(--fog);font-size:12px">/ year</span></td></tr>
+      </tbody>
+    </table>
+    <div class="terms" data-reveal>
+      <b>Payment terms.</b> Invoiced on the 1st of each month; payable within <b>7 business days</b> (billed ahead of delivery). 12-month engagement, all fees exclusive of GST.
+      <div style="margin-top:10px"><span class="pill">Quarterly −2%</span><span class="pill">Half-yearly −5%</span><span class="pill">Annual −10%</span></div>
+    </div>
+
+    <!-- Market Domination commercials -->
+    <div class="planhdr feat" data-reveal style="margin-top:30px">
+      <div class="pn"><small>Option B · Most Recommended</small>Market Domination</div>
+      <div class="pp"><div class="amt">₹3,00,000 <small>/ month + GST</small></div></div>
+    </div>
+    <table class="ctbl top0" data-reveal>
+      <thead><tr>
+        <th style="width:34%">Billing option</th>
+        <th class="center" style="width:14%">Discount</th>
+        <th class="right" style="width:26%">Effective monthly</th>
+        <th class="right" style="width:26%">Paid upfront</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="k">Monthly (standard)</td><td class="center no">—</td><td class="right"><span class="pricecell">₹3,00,000<span class="mo"> /mo</span></span></td><td class="right">Billed each month</td></tr>
+        <tr class="zebra"><td class="k">Quarterly — 3 months upfront</td><td class="center ok">2%</td><td class="right"><span class="pricecell">₹2,94,000<span class="mo"> /mo</span></span></td><td class="right">₹8,82,000 <span style="color:var(--fog);font-size:12px">/ quarter</span></td></tr>
+        <tr><td class="k">Half-yearly — 6 months upfront</td><td class="center ok">5%</td><td class="right"><span class="pricecell">₹2,85,000<span class="mo"> /mo</span></span></td><td class="right">₹17,10,000 <span style="color:var(--fog);font-size:12px">/ 6 mo</span></td></tr>
+        <tr class="best zebra"><td class="k"><b>Annual — 12 months upfront</b> <span style="color:var(--orange-soft);font-size:12px">· best value</span></td><td class="center ok">10%</td><td class="right"><span class="pricecell">₹2,70,000<span class="mo"> /mo</span></span></td><td class="right">₹32,40,000 <span style="color:var(--fog);font-size:12px">/ year</span></td></tr>
+      </tbody>
+    </table>
+    <div class="terms" data-reveal>
+      <b>Payment terms.</b> Invoiced on the 1st of each month; payable within <b>7 business days</b> (billed ahead of delivery). 12-month engagement, all fees exclusive of GST.
+      <div style="margin-top:10px"><span class="pill">Quarterly −2%</span><span class="pill">Half-yearly −5%</span><span class="pill">Annual −10%</span></div>
+    </div>
+
+    <div class="note" data-reveal><b>Good to know.</b> Technical foundation is included in both Quotation 2 options — no separate fee. Content/PR volumes and exact KPIs are confirmed in the onboarding workshop using your real GA4 numbers. Advance-payment discounts apply to whichever plan you choose.</div>
+  </div>
+</section>
+
+<!-- ROI -->
+<section class="pad">
+  <div class="wrap">
+    <div class="roi">
+      <div>
+        <div class="eyebrow" data-reveal>Why this pays for itself</div>
+        <h2 data-reveal style="font-size:clamp(30px,4vw,46px)">Move spend from <span class="serif-it">rented</span> to owned.</h2>
+        <p data-reveal style="margin-top:22px;color:var(--fog-2)">Today 80% of sales are paid — you re-pay for every customer. Organic customers cost a fraction and keep coming back (your repeat rate is ~40%), so each one is worth far more over time. As organic grows, your <b style="color:#fff">blended CAC</b> falls and margin rises. Here's the simple math on the Growth Engine retainer at your real AOV.</p>
+      </div>
+      <div class="roi-card" data-reveal>
+        <div class="roi-row"><span>Growth Engine retainer</span><b>₹1.75L / month</b></div>
+        <div class="roi-row"><span>Your AOV (confirmed)</span><b>₹12,500</b></div>
+        <div class="roi-row"><span>Orders/month to break even</span><b>~14 orders</b></div>
+        <div class="roi-row"><span>Repeat rate compounding LTV</span><b>~40%</b></div>
+        <div class="roi-row hi"><span>Cost per organic customer over time</span><b>↓ falling</b></div>
+        <p style="font-size:12px;color:var(--fog);margin-top:16px;font-family:var(--mono)">Illustrative. We confirm exact targets against your GA4 in onboarding.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="pad-sm band">
+  <div class="wrap">
+    <div class="sh" style="margin-bottom:40px"><div class="eyebrow" data-reveal>Why FactoryJet</div><h2 data-reveal>A partner who knows <span class="serif-it">commerce</span> &amp; AI search.</h2></div>
+    <div class="why">
+      <div class="wc" data-reveal><div class="n">500+</div><h4>Businesses served</h4><p>A decade-plus building and growing online stores across India and abroad.</p></div>
+      <div class="wc" data-reveal><div class="n">D2C</div><h4>E-commerce native</h4><p>We think in AOV, CAC and repeat rate — not just rankings. Your goals are revenue goals.</p></div>
+      <div class="wc" data-reveal><div class="n">AI</div><h4>GEO/AEO specialists</h4><p>We optimise for ChatGPT, Gemini &amp; AI Overviews — the edge most agencies can't deliver yet.</p></div>
+      <div class="wc" data-reveal><div class="n">7d</div><h4>Fast execution</h4><p>Senior, in-house team. Quick turnarounds, clear reporting, no junior hand-offs.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="pad" id="cta">
+  <div class="wrap">
+    <div class="eyebrow" data-reveal style="justify-content:center">Next step · decision target ~2 weeks</div>
+    <h2 data-reveal>Let's make Argos<br>the <span class="serif-it">first</span> name in search.</h2>
+    <p class="lede" data-reveal>Pick Quotation 1 to start with technical, or Quotation 2 for the full engine. We'll run an onboarding workshop, plug in your real GA4 numbers, and lock the roadmap and KPIs together.</p>
+    <div class="btnrow" data-reveal>
+      <a class="btn" href="https://calendly.com/bhavesh-factoryjet/30min" target="_blank" rel="noopener">Book the Kickoff Call →</a>
+      <a class="btn btn-wa" href="https://wa.me/919699977699?text=Hi%20FactoryJet%2C%20I%27d%20like%20to%20discuss%20the%20Argos%20Watches%20proposal" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c1.9 1 4 1.6 6.1 1.6 6.9 0 12.5-5.6 12.5-12.5S22.9 3 16 3zm0 22.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4a10.3 10.3 0 01-1.6-5.6c0-5.7 4.7-10.3 10.4-10.3 5.7 0 10.3 4.6 10.3 10.3S21.7 25.8 16 25.8zm5.7-7.7c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.4-.6.1-.2 0-.4 0-.6l-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.9 5.1.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 2.1-.8 2.4-1.7.3-.8.3-1.5.2-1.7-.1-.1-.3-.2-.6-.3z"/></svg> WhatsApp Us</a>
+      <a class="btn btn-ghost" href="mailto:bhavesh@factoryjet.com?subject=Argos%20Watches%20SEO%20Proposal">Email Us</a>
+    </div>
+    <div class="contact" data-reveal>
+      <span>Bhavesh · FactoryJet</span>
+      <a href="https://www.factoryjet.com" target="_blank" rel="noopener">factoryjet.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Prepared by FactoryJet for Omkar · Argos Watches · SEO · GEO · AEO · AIO Growth Proposal · June 26, 2026 · Confidential · Valid 30 days
+</footer>
+
+<a class="wafab" href="https://wa.me/919699977699?text=Hi%20FactoryJet%2C%20I%27d%20like%20to%20discuss%20the%20Argos%20Watches%20proposal" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 32 32" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c1.9 1 4 1.6 6.1 1.6 6.9 0 12.5-5.6 12.5-12.5S22.9 3 16 3zm0 22.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4a10.3 10.3 0 01-1.6-5.6c0-5.7 4.7-10.3 10.4-10.3 5.7 0 10.3 4.6 10.3 10.3S21.7 25.8 16 25.8zm5.7-7.7c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.4-.6.1-.2 0-.4 0-.6l-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.9 5.1.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 2.1-.8 2.4-1.7.3-.8.3-1.5.2-1.7-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+<noscript><style>[data-reveal],[data-h]{opacity:1!important;transform:none!important}</style></noscript>
+<script>
+  function revealAll(){document.querySelectorAll('[data-reveal],[data-h]').forEach(el=>{el.style.opacity='1';el.style.transform='none';});}
+  window.addEventListener('load',function(){setTimeout(function(){if(!window.gsap)revealAll();},400);});
+
+  const prog=document.getElementById('prog'), nav=document.getElementById('nav');
+  function onScroll(){const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;prog.style.width=p+'%';nav.classList.toggle('scrolled',h.scrollTop>40);}
+  document.addEventListener('scroll',onScroll); onScroll();
+
+  if(window.gsap){
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.set('[data-h]',{opacity:0,y:30});
+    gsap.timeline({defaults:{ease:'power3.out'}})
+      .to('[data-h]',{opacity:1,y:0,duration:1,stagger:.12,delay:.2})
+      .from('#product',{opacity:0,scale:.9,y:36,duration:1.2,ease:'power4.out'},'-=.9')
+      .from('.pchip',{opacity:0,scale:.8,duration:.6,stagger:.12,ease:'back.out(1.7)'},'-=.5');
+    gsap.to('#product img',{y:-12,duration:3.2,ease:'sine.inOut',yoyo:true,repeat:-1});
+    gsap.to('.pchip',{y:'+=7',duration:2.6,ease:'sine.inOut',yoyo:true,repeat:-1,stagger:.4});
+    const hero=document.getElementById('hero'),prod=document.getElementById('product');
+    if(hero&&prod&&matchMedia('(pointer:fine)').matches){
+      hero.addEventListener('mousemove',e=>{const r=hero.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5;const y=(e.clientY-r.top)/r.height-.5;gsap.to(prod,{rotateY:x*10,rotateX:-y*10,duration:.6,ease:'power2.out',transformPerspective:900});});
+      hero.addEventListener('mouseleave',()=>gsap.to(prod,{rotateY:0,rotateX:0,duration:.8,ease:'power3.out'}));
+    }
+    gsap.utils.toArray('[data-reveal]').forEach(el=>{gsap.to(el,{opacity:1,y:0,duration:.9,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}});});
+    gsap.utils.toArray('[data-count]').forEach(el=>{const end=+el.getAttribute('data-count');const o={v:0};ScrollTrigger.create({trigger:el,start:'top 90%',once:true,onEnter:()=>{gsap.to(o,{v:end,duration:1.6,ease:'power2.out',onUpdate:()=>{el.textContent=Math.round(o.v);}});}});});
+  } else { revealAll(); }
+</script>
+</body>
+</html>

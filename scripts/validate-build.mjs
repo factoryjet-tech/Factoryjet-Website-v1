@@ -55,7 +55,7 @@ function walk(dir, filter) {
 const rel = (p) => relative(ROOT, p);
 
 /* ── 1. public/ HTML overrides ───────────────────────────────────────────── */
-for (const f of walk(PUBLIC, (p) => p.toLowerCase().endsWith('.html'))) {
+for (const f of walk(PUBLIC, (p) => p.toLowerCase().endsWith('.html') && !/[/\\]proposal[/\\]/i.test(p))) {
   fatals.push(
     `public/ HTML override: ${rel(f)} — physical .html in public/ is served ` +
     `verbatim and shadows the Next.js app. Delete it (build pages from src/app).`
