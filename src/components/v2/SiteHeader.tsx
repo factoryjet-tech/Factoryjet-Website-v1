@@ -75,9 +75,9 @@ const US_PLATFORMS = [
   { icon: ShoppingBag,  label: 'Shopify & Shopify Plus',   href: '/us/services/shopify-development',     desc: 'DTC + B2B on one store' },
   { icon: Store,        label: 'Adobe Commerce (Magento)', href: '/us/services/magento-development',     desc: 'Deep B2B, large catalogs' },
   { icon: FileCode,     label: 'WooCommerce',              href: '/us/services/woocommerce-development', desc: 'WordPress commerce' },
-  { icon: Layers,       label: 'BigCommerce',              href: '/us/services/ecommerce-development',   desc: 'Mid-market B2B value' },
-  { icon: Code,         label: 'Headless / composable',    href: '/us/services/ecommerce-development',   desc: 'Custom front end, any backend' },
-  { icon: Zap,          label: 'Commerceflo',              href: '/us/omnichannel-commerce',            desc: 'Unified commerce engine' },
+  { icon: Layers,       label: 'BigCommerce',              href: '/us/bigcommerce-development',          desc: 'Mid-market B2B value' },
+  { icon: Code,         label: 'Headless / composable',    href: '/us/headless-commerce',               desc: 'Custom front end, any backend' },
+  { icon: Zap,          label: 'Commerceflo',              href: '/us/commerceflo',                     desc: 'Unified commerce engine' },
 ] as const;
 
 // Services (US) — supporting / demoted services that link up to the commerce pillar
