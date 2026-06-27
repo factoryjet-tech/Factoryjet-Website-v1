@@ -1,243 +1,409 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import Link from 'next/link';
+import Image from 'next/image';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import '@/components/v2/PlatformPage.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
+const IMG = '/images/us/omnichannel';
 
 export const metadata: Metadata = {
-  title: 'Omnichannel Commerce: What It Is & How to Build It | FactoryJet',
+  title: 'Omnichannel Commerce Agency | Omnichannel Ecommerce Solutions | FactoryJet',
   description:
-    'A clear guide to omnichannel commerce: what it is, how it differs from unified and multichannel commerce, the benefits, and how an agency builds one catalog, one inventory, and one order engine across your store, marketplaces, and B2B.',
+    'Omnichannel commerce agency for DTC and B2B brands. We build omnichannel ecommerce solutions that connect your web store, retail POS, marketplaces, and B2B portal to one catalog, one inventory, and one customer view, on Shopify, BigCommerce, Adobe Commerce, headless, or Commerceflo.',
   openGraph: {
-    type: 'website',
-    siteName: 'FactoryJet',
-    title: 'Omnichannel Commerce: What It Is & How to Build It | FactoryJet',
-    description:
-      'Omnichannel commerce explained and built: one catalog, one inventory, one order engine across your store, marketplaces, and B2B, with AI agents keeping it in sync.',
+    type: 'website', siteName: 'FactoryJet',
+    title: 'Omnichannel Commerce Agency | Omnichannel Ecommerce Solutions | FactoryJet',
+    description: 'We build omnichannel ecommerce solutions that connect web, retail POS, marketplaces, and B2B to one catalog and one inventory.',
     url: 'https://factoryjet.com/us/omnichannel-commerce',
-    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'Omnichannel commerce, explained and built by FactoryJet' }],
+    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet, omnichannel commerce agency' }],
     locale: 'en_US',
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Omnichannel Commerce: What It Is & How to Build It | FactoryJet',
-    description: 'Omnichannel commerce explained: one catalog, one inventory, one order engine across store, marketplaces, and B2B.',
-    images: ['https://factoryjet.com/logo.png'],
-  },
+  twitter: { card: 'summary_large_image', title: 'Omnichannel Commerce Agency | FactoryJet', description: 'Omnichannel ecommerce solutions: one catalog, one inventory, every channel.', images: ['https://factoryjet.com/logo.png'] },
   alternates: { canonical: 'https://factoryjet.com/us/omnichannel-commerce' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
 const FAQ_CATEGORIES = [
-  { key: 'concepts', label: 'Concepts' },
-  { key: 'benefits', label: 'Benefits' },
-  { key: 'building', label: 'Building it' },
+  { key: 'basics', label: 'Omnichannel basics' },
+  { key: 'connecting', label: 'Connecting channels' },
+  { key: 'platforms', label: 'Platforms' },
+  { key: 'working', label: 'Working together' },
 ];
-
 const FAQ_ITEMS = [
-  { category: 'concepts', question: 'What is omnichannel commerce?', answer: 'Omnichannel commerce is selling across every channel your customers use, your store, marketplaces, social, retail, and B2B, as one connected experience. The products, prices, inventory, and orders stay consistent no matter where the customer buys.' },
-  { category: 'concepts', question: 'What is the difference between omnichannel and unified commerce?', answer: 'Omnichannel describes the customer experience across channels. Unified commerce is the architecture underneath it that keeps products, inventory, orders, and customers in sync in real time, usually on one platform. Unified commerce is how you actually deliver omnichannel.' },
-  { category: 'concepts', question: 'What is the difference between multichannel and omnichannel commerce?', answer: 'Multichannel means you sell on several channels, but each runs on its own data and they drift apart. Omnichannel connects them so a sale or stock change on one channel updates everywhere. Multichannel is what you are stuck with until you build the unified layer.' },
-  { category: 'concepts', question: 'What is an omnichannel commerce platform?', answer: 'An omnichannel commerce platform is the system that runs your storefront and connects it to marketplaces, social, retail, and B2B on one catalog and one live inventory. We build that on Shopify, Adobe Commerce, BigCommerce, WooCommerce, headless, or Commerceflo, depending on your needs.' },
-  { category: 'concepts', question: 'Is omnichannel commerce only for large retailers?', answer: 'No. Any DTC or B2B brand selling on more than one channel benefits from one catalog and one live inventory. The build scales to your size and catalog.' },
-  { category: 'benefits', question: 'What are the benefits of omnichannel commerce?', answer: 'You stop overselling, you stop re-keying listings and prices channel by channel, your team gets hours back, and customers get a consistent experience that converts better. One source of truth removes the errors that fragmented selling creates.' },
-  { category: 'benefits', question: 'How does omnichannel commerce stop overselling?', answer: 'Overselling happens when each channel keeps its own stock count. We put every channel on one live inventory, so when the last unit sells on one channel it goes unavailable on the rest within moments.' },
-  { category: 'building', question: 'How do you build omnichannel commerce?', answer: 'We build one catalog, one live inventory, and one order engine under every channel you sell through, integrate your ERP, POS, and marketplaces, and deploy AI agents that list, reprice, and sync across channels.' },
-  { category: 'building', question: 'Which platform do you build omnichannel commerce on?', answer: 'Shopify and Shopify Plus, Adobe Commerce (Magento), BigCommerce, WooCommerce, headless, or Commerceflo. We recommend the fit for your catalog, B2B rules, and integrations.' },
-  { category: 'building', question: 'Can omnichannel commerce serve both DTC and B2B?', answer: 'Yes. We build retail and trade on one catalog and inventory, with separate logins, tiered or contract pricing, net terms, and reordering for your B2B buyers.' },
-  { category: 'building', question: 'Do you work with US brands?', answer: 'Yes, most of the brands we work with are US-based, across DTC and B2B, and we bring a decade-plus of commerce builds to every engagement.' },
+  { category: 'basics', question: 'What is omnichannel commerce?', answer: 'Omnichannel commerce means selling across every channel your customers use, web, mobile, retail, marketplaces, and social, with one connected system behind it. An omnichannel ecommerce platform reads from one catalog and one inventory, so a customer can buy anywhere and you still see one order history and one source of truth.' },
+  { category: 'basics', question: 'What is the difference between multichannel and omnichannel ecommerce?', answer: 'Multichannel means you sell in many places that each run on their own stock and pricing. Omnichannel connects those channels to one catalog, one inventory, and one customer record, so they act as a single system. We build the connected, omnichannel version, not a pile of disconnected tools.' },
+  { category: 'basics', question: 'What is an omnichannel commerce platform?', answer: 'It is the system that keeps your storefront, POS, marketplaces, and B2B portal reading from one catalog and one inventory, with one view of every customer and order. We build it on the platform that fits and connect it to the rest of your stack.' },
+  { category: 'basics', question: 'What are the benefits of omnichannel commerce?', answer: 'One source of truth for stock and pricing, no oversells, the ability to buy and fulfill anywhere, one customer profile, and the ability to add a channel without building a new silo. Research from Harvard Business Review found omnichannel customers make more repeat trips and spend more than single-channel shoppers.' },
+  { category: 'connecting', question: 'Can you connect my online store and retail POS?', answer: 'Yes. We connect your store and POS so stock, pricing, and customers are shared, and we enable ship-from-store and buy-online-pickup-in-store (BOPIS) on one live inventory.' },
+  { category: 'connecting', question: 'Can you sync inventory across marketplaces like Amazon and Walmart?', answer: 'Yes. We sync listings, pricing, and orders across Amazon, Walmart, eBay, and your own store from one inventory, so you never oversell and never reconcile stock by hand.' },
+  { category: 'connecting', question: 'Do you build ship-from-store, BOPIS, and endless aisle?', answer: 'Yes. Ship-from-store, buy-online-pickup-in-store, curbside, and endless aisle all run on the single connected inventory we set up, with fulfillment routing across your locations.' },
+  { category: 'connecting', question: 'Can you integrate our ERP, OMS, PIM, and 3PL?', answer: 'Yes. We connect your ERP, order management system, PIM, POS, and 3PL into one order and inventory layer so every channel reads the same data instead of holding its own copy.' },
+  { category: 'platforms', question: 'Which platforms do you build omnichannel on?', answer: 'Shopify and Shopify Plus, BigCommerce, Adobe Commerce (Magento), headless and composable builds, and Commerceflo. We are platform-agnostic and recommend the fit for your catalog, channels, and budget.' },
+  { category: 'platforms', question: 'What is the best omnichannel commerce platform?', answer: 'There is no single best one; it depends on your catalog size, the channels you sell on, your B2B needs, and your budget. We compare the options against your situation on a scoping call and recommend the fit rather than the most expensive tool.' },
+  { category: 'platforms', question: 'Is Shopify good for omnichannel commerce?', answer: 'Shopify and Shopify Plus handle online plus retail POS well and connect to marketplaces, which suits many DTC and DTC-plus-B2B brands. For very large catalogs or deep B2B, we may recommend Adobe Commerce or a headless build instead.' },
+  { category: 'platforms', question: 'Do you build headless or composable omnichannel commerce?', answer: 'Yes. When you need custom front ends across many channels or top-tier performance, we build headless and composable commerce with your storefront decoupled from the commerce engine and connected through APIs.' },
+  { category: 'working', question: 'Can DTC and B2B run on one omnichannel system?', answer: 'Yes. We run a consumer storefront and a gated B2B portal on the same catalog and inventory, with tiered pricing, net terms, and reordering for trade accounts.' },
+  { category: 'working', question: 'Can you migrate our channels without losing SEO?', answer: 'Yes. We handle replatforming and data migration, including products, customers, orders, and pricing, with 301 redirects and a cutover plan that protects your rankings and uptime.' },
+  { category: 'working', question: 'How long does an omnichannel commerce build take?', answer: 'It depends on how many channels and systems we connect and how complex your catalog and pricing are. After a short scoping call you get a phased timeline with milestones, and a fixed proposal before any work starts.' },
+  { category: 'working', question: 'Do we own the omnichannel system you build?', answer: 'Yes. You own and operate everything we build. We design, build, implement, and then hand it over, and we stay on call to support and scale it. We never run your store for you.' },
 ];
-
-const FAQ_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: FAQ_ITEMS.map((i) => ({ '@type': 'Question', name: i.question, acceptedAnswer: { '@type': 'Answer', text: i.answer } })),
-};
-
+const FAQ_SCHEMA = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: FAQ_ITEMS.map((i) => ({ '@type': 'Question', name: i.question, acceptedAnswer: { '@type': 'Answer', text: i.answer } })) };
 const SERVICE_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  serviceType: 'Omnichannel commerce development',
-  name: 'Omnichannel and unified commerce development',
-  description:
-    'Omnichannel commerce development agency. We design, build, and implement unified commerce, one catalog, one inventory, and one order engine, across the store, marketplaces, social, retail, and B2B, on Shopify, Adobe Commerce (Magento), BigCommerce, WooCommerce, headless, or Commerceflo.',
+  '@context': 'https://schema.org', '@type': 'Service', serviceType: 'Omnichannel commerce development and implementation',
+  name: 'Omnichannel commerce solutions',
+  description: 'Omnichannel commerce agency. We design, build, and implement omnichannel ecommerce solutions that connect web, retail POS, marketplaces, social, and B2B to one catalog, one inventory, and one customer view, on Shopify, BigCommerce, Adobe Commerce, headless, or Commerceflo.',
   provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-  areaServed: { '@type': 'Country', name: 'United States' },
-  audience: { '@type': 'BusinessAudience', name: 'DTC and B2B brands' },
+  areaServed: { '@type': 'Country', name: 'United States' }, audience: { '@type': 'BusinessAudience', name: 'DTC and B2B retail and commerce brands' },
 };
-
-const BREADCRUMB_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/us' },
-    { '@type': 'ListItem', position: 2, name: 'Omnichannel Commerce', item: 'https://factoryjet.com/us/omnichannel-commerce' },
+const HOWTO_SCHEMA = {
+  '@context': 'https://schema.org', '@type': 'HowTo', name: 'How FactoryJet builds an omnichannel commerce system',
+  description: 'Our process for designing, building, and implementing a unified omnichannel commerce system for US DTC and B2B brands.',
+  step: [
+    { '@type': 'HowToStep', position: 1, name: 'Map', text: 'We map your channels, catalog, inventory, and systems, then recommend the platform and write a fixed proposal.' },
+    { '@type': 'HowToStep', position: 2, name: 'Unify', text: 'We connect storefront, POS, marketplaces, and B2B to one catalog and one inventory.' },
+    { '@type': 'HowToStep', position: 3, name: 'Integrate', text: 'We wire your ERP, OMS, PIM, POS, and 3PL into one order and inventory layer.' },
+    { '@type': 'HowToStep', position: 4, name: 'Launch', text: 'We migrate data with 301 redirects, test on staging, and run a clean cutover that protects SEO.' },
+    { '@type': 'HowToStep', position: 5, name: 'Own and scale', text: 'You own and run the system; we support and add channels as you grow.' },
   ],
 };
+const ORG_SCHEMA = {
+  '@context': 'https://schema.org', '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com',
+  description: 'FactoryJet is an e-commerce development agency that builds omnichannel and B2B commerce for DTC and B2B brands.',
+  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', ratingCount: '150', reviewCount: '150', bestRating: '5', worstRating: '1' },
+  sameAs: ['https://www.linkedin.com/company/factoryjet'],
+};
+const BREADCRUMB_SCHEMA = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/us' },
+  { '@type': 'ListItem', position: 2, name: 'Omnichannel Commerce', item: 'https://factoryjet.com/us/omnichannel-commerce' },
+] };
 
-const COMPARE = [
-  { term: 'Multichannel commerce', what: 'You sell on several channels, each on its own data.', problem: 'Stock and pricing drift apart; you oversell and re-key everything.' },
-  { term: 'Omnichannel commerce', what: 'Those channels are connected into one experience.', problem: 'A sale or stock change on one channel updates everywhere.' },
-  { term: 'Unified commerce', what: 'The architecture that delivers omnichannel.', problem: 'One catalog, one live inventory, one order engine every channel reads in real time.' },
+const STATS = [
+  { b: 'One catalog', s: 'across every channel' },
+  { b: 'DTC + B2B', s: 'on one system' },
+  { b: 'Any platform', s: 'Shopify, BigCommerce, Adobe' },
+  { b: '10+ yrs', s: 'building commerce' },
 ];
-
+const SOURCED = [
+  { v: '73%', d: 'of shoppers use multiple channels during a single buying journey, not just one.', src: 'Harvard Business Review, 46,000-shopper study', href: 'https://hbr.org/2017/01/a-study-of-46000-shoppers-shows-that-omnichannel-retailing-works' },
+  { v: '23%', d: 'more repeat shopping trips from omnichannel customers within six months, who also spend 10% more online.', src: 'Harvard Business Review', href: 'https://hbr.org/2017/01/a-study-of-46000-shoppers-shows-that-omnichannel-retailing-works' },
+  { v: '$129B', d: 'in US buy-online-pickup-in-store (BOPIS) sales in 2024, on track for roughly $509B by 2033.', src: 'ResearchAndMarkets, 2025', href: 'https://www.businesswire.com/news/home/20250313984021/en/' },
+];
 const BENEFITS = [
-  { k: 'No more overselling', d: 'One live inventory every channel reads, so the last unit sold anywhere goes unavailable everywhere within moments.' },
-  { k: 'Hours back for your team', d: 'No re-keying listings, prices, and stock channel by channel. Build once, publish everywhere.' },
-  { k: 'A consistent buying experience', d: 'Customers see the same products, prices, and availability wherever they shop, which converts better.' },
-  { k: 'One set of numbers', d: 'Orders, inventory, and reporting read from one record, not four exports your team reconciles by hand.' },
-  { k: 'DTC and B2B together', d: 'Retail and trade on one system, with separate pricing and logins for your wholesale buyers.' },
-  { k: 'Ready for AI agents', d: 'A unified data layer is what lets agents list, reprice, and sync reliably across channels.' },
+  { i: '◎', t: 'One source of truth', d: 'Pricing, stock, and orders read from one record, so channels never fight over inventory.' },
+  { i: '⇄', t: 'Buy and fulfill anywhere', d: 'Ship-from-store, buy-online-pickup-in-store, curbside, and endless aisle on one inventory.' },
+  { i: '◷', t: 'No oversells', d: 'Live inventory sync across web, POS, and marketplaces ends manual reconciliation.' },
+  { i: '↻', t: 'One customer view', d: 'One profile and order history across every channel powers better service and marketing.' },
+  { i: '⤢', t: 'Add channels fast', d: 'A new marketplace or retail door plugs into the same engine, not a new silo.' },
+  { i: '✓', t: 'DTC and B2B together', d: 'Retail and trade pricing on one catalog, with gated B2B logins where you need them.' },
+];
+const CAPABILITIES = [
+  { t: 'Storefront + POS unification', d: 'Your online store and retail point of sale sharing one catalog, inventory, and customer record.' },
+  { t: 'Inventory & order management', d: 'A single OMS view with live stock, fulfillment routing, and order orchestration across locations.' },
+  { t: 'Marketplace integration', d: 'Amazon, Walmart, and eBay listings, pricing, and orders synced to one inventory.' },
+  { t: 'B2B portal on the same catalog', d: 'Gated trade ordering with tiered pricing and net terms alongside your DTC store.' },
+  { t: 'Customer data & loyalty', d: 'One customer profile and loyalty program that follows the shopper across channels.' },
+  { t: 'ERP, PIM & 3PL integration', d: 'Your back-office systems wired into one order and inventory layer.' },
+];
+const USECASES = [
+  { t: 'Retail + DTC brands', img: 'retail-dtc.webp', alt: 'Store associate at a point-of-sale tablet handing a wrapped order to a customer in a boutique', d: 'Connect your online store and retail POS so stock, pricing, and customers are shared. Ship-from-store, buy-online-pickup-in-store, and a single loyalty profile across web and counter mean shoppers get one experience and you get one set of numbers.' },
+  { t: 'Multi-location & franchise', img: 'multi-location.webp', alt: 'Operations manager reviewing multi-store inventory dashboards on a wall of screens', d: 'One catalog and inventory across many stores, with per-location stock, fulfillment routing, and reporting that rolls up to one view. Open a new door without spinning up a new system, and route every order to the location that fulfills it best.' },
+  { t: 'Wholesale + DTC hybrid', img: 'wholesale-dtc.webp', alt: 'Warehouse team packing trade and retail orders side by side on a fulfillment floor', d: 'Run a consumer storefront and a gated B2B portal on the same products and stock, with tiered pricing, net terms, and reordering for trade accounts. Your wholesale and retail demand draw from one inventory instead of competing spreadsheets.' },
+  { t: 'Marketplace sellers', img: 'marketplace.webp', alt: 'Hands on a laptop showing a clean multi-marketplace orders dashboard', d: 'Sell on Amazon, Walmart, and your own store from one inventory, with listings, pricing, and orders synced so you never oversell. Add a channel when it makes sense, and keep one clean view of stock and revenue across all of them.' },
+];
+const COMPARE = [
+  { cap: 'Inventory', single: 'One store', multi: 'Separate per channel', omni: 'One live inventory', me: false },
+  { cap: 'Pricing & catalog', single: 'One list', multi: 'Re-keyed per tool', omni: 'One catalog, channel rules', me: false },
+  { cap: 'Customer view', single: 'Partial', multi: 'Fragmented', omni: 'One profile + history', me: false },
+  { cap: 'Fulfillment', single: 'Basic', multi: 'Manual routing', omni: 'Ship-from-store, BOPIS, endless aisle', me: true },
+  { cap: 'Add a channel', single: 'Hard', multi: 'New silo', omni: 'Plugs into one engine', me: false },
+];
+const STEPS = [
+  { n: '01', t: 'Map', d: 'We map your channels, catalog, inventory, and systems, then recommend the platform and write a fixed proposal.' },
+  { n: '02', t: 'Unify', d: 'Storefront, POS, marketplaces, and B2B connected to one catalog and one inventory.' },
+  { n: '03', t: 'Integrate', d: 'ERP, OMS, PIM, POS, and 3PL wired into one order and inventory layer.' },
+  { n: '04', t: 'Launch & own', d: 'Data migration with 301 redirects, staging QA, a clean cutover, then you own and run it.' },
 ];
 
-const PIECES = [
-  { k: 'B2B commerce', d: 'Trade portals with account pricing, net terms, and reordering on the same system as your DTC store.', href: '/us/b2b-ecommerce', cta: 'B2B e-commerce' },
-  { k: 'E-commerce development', d: 'The storefront and the unified layer under it, built on the platform that fits.', href: '/us/services/ecommerce-development', cta: 'E-commerce development' },
-  { k: 'Shopify development', d: 'Shopify and Shopify Plus builds for DTC and B2B on one store.', href: '/us/services/shopify-development', cta: 'Shopify development' },
-  { k: 'Adobe Commerce / Magento', d: 'Deep native B2B and very large catalogs on Adobe Commerce.', href: '/us/services/magento-development', cta: 'Magento development' },
-  { k: 'Commerce SEO & visibility', d: 'Get found and chosen in Google, AI answers, and on the marketplaces.', href: '/us/services/ecommerce-seo', cta: 'E-commerce SEO' },
-  { k: 'E-commerce consulting', d: 'Platform selection, migration planning, and a scoped build plan.', href: '/us/ecommerce-consulting', cta: 'E-commerce consulting' },
-];
+const imgStyle = { width: '100%', height: 'auto', objectFit: 'cover' as const, borderRadius: '18px', border: '1px solid var(--pp-line)', display: 'block' };
 
 export default function OmnichannelCommercePage() {
   return (
     <>
       <Script id="omni-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
       <Script id="omni-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
+      <Script id="omni-howto-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(HOWTO_SCHEMA) }} />
+      <Script id="omni-org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
       <Script id="omni-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
       <SiteHeader navLinks={[]} cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
-      <main className="bg-white font-fj-body text-[#14110F]">
+      <main className="platpage">
         {/* Hero */}
-        <section className="mx-auto max-w-[1180px] px-5 py-16 md:py-24">
-          <p className="font-fj-mono text-xs font-semibold uppercase tracking-[0.12em] text-[#F05A28]">Omnichannel commerce</p>
-          <h1 className="mt-3 max-w-[20ch] font-fj-display text-4xl font-extrabold leading-[1.07] tracking-tight md:text-5xl">
-            Omnichannel commerce, explained and built.
-          </h1>
-          <p className="mt-5 max-w-[680px] text-[17px] leading-relaxed text-[#46403B]">
-            Omnichannel commerce means selling everywhere your customers are, your store, marketplaces, social, retail,
-            and B2B, as one connected experience. Below is what it is, how it differs from unified and multichannel
-            commerce, the benefits, and how we build it: one catalog, one inventory, one order engine.
-          </p>
-          <HeroInlineForm source="us_omnichannel_hero" region="us" submitLabel="Get a commerce audit" />
+        <section className="pp-dotgrid">
+          <div className="pp-wrap" style={{ paddingTop: 'clamp(44px,6vh,84px)', paddingBottom: 'clamp(44px,6vh,84px)' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
+              <div>
+                <p className="pp-eyebrow">Omnichannel commerce</p>
+                <h1 style={{ margin: '14px 0 12px', maxWidth: '16ch' }}>
+                  One catalog. <span className="pp-grad">Every channel.</span> One system that sells.
+                </h1>
+                <p className="pp-lead" style={{ maxWidth: '48ch' }}>
+                  We design, build, and run the engine behind omnichannel commerce, so your web store, retail POS,
+                  marketplaces, and social shops read from one catalog, one inventory, and one source of truth. DTC and
+                  B2B, on the platforms you already use.
+                </p>
+                <HeroInlineForm source="us_omnichannel_hero" region="us" submitLabel="Get an omnichannel audit" />
+              </div>
+              <div className="pp-stage" role="img" aria-label="A unified omnichannel engine connecting web store, retail POS, marketplaces, social shops, and a B2B portal to one core.">
+                <span aria-hidden="true" style={{ position: 'absolute', width: '78%', height: '78%', border: '1px dashed var(--pp-line)', borderRadius: '50%', animation: 'pp-spin 40s linear infinite' }} />
+                <div className="pp-core" aria-hidden="true" style={{ width: '120px', height: '120px' }}>
+                  <b>Unified<br />engine</b><span>one source of truth</span>
+                </div>
+                <span className="pp-node" style={{ top: '6%', left: '6%' }} aria-hidden="true"><span className="d" />Web store</span>
+                <span className="pp-node" style={{ top: '16%', right: '4%' }} aria-hidden="true"><span className="d" />Retail POS</span>
+                <span className="pp-node" style={{ bottom: '14%', left: '3%' }} aria-hidden="true"><span className="d" />Marketplaces</span>
+                <span className="pp-node" style={{ bottom: '8%', right: '8%' }} aria-hidden="true"><span className="d" />Social shops</span>
+                <span className="pp-node" style={{ top: '47%', right: '-3%' }} aria-hidden="true"><span className="d" />B2B portal</span>
+              </div>
+            </div>
+          </div>
         </section>
 
-        {/* Concept explainer (answer-first for AI citation) */}
-        <section className="border-t border-[#E7DED6] bg-[#FFF8F5]">
-          <div className="mx-auto max-w-[820px] px-5 py-16 md:py-20">
-            <h2 className="font-fj-display text-3xl font-extrabold tracking-tight md:text-4xl">What is omnichannel commerce?</h2>
-            <div className="mt-6 space-y-5 text-[16px] leading-relaxed text-[#46403B]">
+        {/* Stat band */}
+        <section className="pp-sec tint" style={{ paddingTop: 'clamp(32px,4vh,52px)', paddingBottom: 'clamp(32px,4vh,52px)' }}>
+          <div className="pp-wrap"><div className="pp-stats">{STATS.map((s) => (<div className="pp-stat" key={s.b}><b>{s.b}</b><span>{s.s}</span></div>))}</div></div>
+        </section>
+
+        {/* What is */}
+        <section className="pp-sec">
+          <div className="pp-wrap pp-narrow">
+            <p className="pp-mlabel">// the basics</p>
+            <h2 style={{ marginTop: '10px' }}>What is omnichannel commerce?</h2>
+            <div style={{ marginTop: '18px', display: 'grid', gap: '16px' }} className="pp-lead">
               <p>
-                Omnichannel commerce is an approach to selling where every channel a customer can buy through, your
-                online store, Amazon, Walmart, TikTok Shop, social shops, physical retail, and B2B portals, works as one
-                connected experience. The same products, prices, inventory, and order history follow the customer across
-                channels instead of living in separate, drifting systems.
+                Omnichannel commerce means selling across every channel your customers use, web, mobile, retail,
+                marketplaces, and social, with one connected system behind it. Unlike a multichannel setup where a
+                separate store, POS, and marketplace tool each hold their own stock and pricing, an omnichannel ecommerce
+                platform reads from one catalog and one inventory, so a customer can buy anywhere and you still see one
+                order history and one source of truth.
               </p>
               <p>
-                The goal is simple to state and hard to fake: a customer (or a buyer) should see the same brand, the same
-                availability, and the same prices wherever they shop, and your team should manage it all from one place.
-                That only works when there is a single source of truth underneath, which is where unified commerce comes in.
+                For retail and DTC brands, that is the difference between channels that compete for stock and channels
+                that cooperate. A shopper can buy online and pick up in store, return in one place what they bought in
+                another, and earn loyalty that follows them everywhere. Your team works from one view of inventory,
+                orders, and customers instead of reconciling spreadsheets between systems.
+              </p>
+              <p>
+                We are the agency that designs and builds that connected system, then hands it over for you to own and
+                run. Multichannel means you sell in many places; omnichannel means those places act as one. That is the
+                difference we engineer, on Shopify, BigCommerce, Adobe Commerce, a headless build, or Commerceflo,
+                whichever fits your catalog and channels best.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Omni vs unified vs multichannel, table */}
-        <section className="border-t border-[#E7DED6] bg-white">
-          <div className="mx-auto max-w-[1180px] px-5 py-16 md:py-20">
-            <h2 className="font-fj-display text-3xl font-extrabold tracking-tight md:text-4xl">Omnichannel vs unified vs multichannel commerce</h2>
-            <p className="mt-3 max-w-[62ch] text-[16px] leading-relaxed text-[#46403B]">
-              These terms get used interchangeably, but they describe different things. Here is the plain version.
-            </p>
-            <div className="mt-8 overflow-x-auto">
-              <table className="w-full min-w-[680px] border-collapse text-left text-[14.5px]">
-                <thead>
-                  <tr className="border-b border-[#E7DED6] font-fj-mono text-[11px] uppercase tracking-wide text-[#6E635A]">
-                    <th className="py-3 pr-4">Term</th>
-                    <th className="py-3 pr-4">What it means</th>
-                    <th className="py-3">What it gives you</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {COMPARE.map((r) => (
-                    <tr key={r.term} className="border-b border-[#F0EAE4] align-top">
-                      <td className="py-4 pr-4 font-fj-display font-bold text-[#14110F]">{r.term}</td>
-                      <td className="py-4 pr-4 text-[#46403B]">{r.what}</td>
-                      <td className="py-4 text-[#46403B]">{r.problem}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+        {/* Sourced stats */}
+        <section className="pp-sec tint">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">// why it matters</p>
+            <h2 style={{ marginTop: '10px' }}>Shoppers already buy across channels</h2>
+            <div className="pp-bento" style={{ marginTop: '36px' }}>
+              {SOURCED.map((s) => (
+                <article className="pp-card" key={s.v}>
+                  <div style={{ fontFamily: 'var(--pp-display)', fontWeight: 800, fontSize: '32px', lineHeight: 1, color: 'var(--pp-orange-dark)', letterSpacing: '-0.03em' }}>{s.v}</div>
+                  <p style={{ marginTop: '10px' }}>{s.d}</p>
+                  <a href={s.href} target="_blank" rel="noopener noreferrer" style={{ marginTop: '12px', display: 'inline-block', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-muted)', textDecoration: 'underline' }}>Source: {s.src}</a>
+                </article>
+              ))}
             </div>
-            <p className="mt-6 max-w-[62ch] text-[15px] leading-relaxed text-[#46403B]">
-              In short: omnichannel is the goal, unified commerce is how you build it, and multichannel is what you are
-              stuck with until you do.
-            </p>
           </div>
         </section>
 
         {/* Benefits */}
-        <section className="border-t border-[#E7DED6] bg-[#FFF8F5]">
-          <div className="mx-auto max-w-[1180px] px-5 py-16 md:py-20">
-            <h2 className="font-fj-display text-3xl font-extrabold tracking-tight md:text-4xl">The benefits of omnichannel commerce</h2>
-            <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">// why it pays off</p>
+            <h2 style={{ marginTop: '10px' }}>The benefits of going omnichannel</h2>
+            <div className="pp-bento" style={{ marginTop: '36px' }}>
               {BENEFITS.map((b) => (
-                <article key={b.k} className="rounded-2xl border border-[#E7DED6] bg-white p-6">
-                  <h3 className="font-fj-display text-lg font-bold">{b.k}</h3>
-                  <p className="mt-2 text-[15px] leading-relaxed text-[#46403B]">{b.d}</p>
+                <article className="pp-card" key={b.t}>
+                  <span className="ic" aria-hidden="true" style={{ fontFamily: 'var(--pp-mono)', fontSize: '17px' }}>{b.i}</span>
+                  <h3>{b.t}</h3><p>{b.d}</p>
                 </article>
               ))}
             </div>
           </div>
         </section>
 
-        {/* The pieces (links down to lead pages) */}
-        <section className="border-t border-[#E7DED6] bg-white">
-          <div className="mx-auto max-w-[1180px] px-5 py-16 md:py-20">
-            <h2 className="font-fj-display text-3xl font-extrabold tracking-tight md:text-4xl">How we build omnichannel commerce</h2>
-            <p className="mt-3 max-w-[62ch] text-[16px] leading-relaxed text-[#46403B]">
-              Omnichannel commerce is several pieces working as one system. Here is how each fits, and where to go deeper.
-            </p>
-            <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {PIECES.map((p) => (
-                <article key={p.k} className="flex flex-col rounded-2xl border border-[#E7DED6] p-6">
-                  <h3 className="font-fj-display text-lg font-bold">{p.k}</h3>
-                  <p className="mt-2 flex-1 text-[15px] leading-relaxed text-[#46403B]">{p.d}</p>
-                  <Link href={p.href} className="mt-4 font-fj-body text-[14px] font-semibold text-[#C94A1A] underline">{p.cta} →</Link>
+        {/* Capabilities */}
+        <section className="pp-sec tint">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">// what we build</p>
+            <h2 style={{ marginTop: '10px' }}>An omnichannel commerce system, end to end</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '62ch' }}>The pieces that turn separate tools into one connected commerce system your team and customers can trust.</p>
+            <div className="pp-bento" style={{ marginTop: '36px' }}>
+              {CAPABILITIES.map((c) => (
+                <article className="pp-card" key={c.t}>
+                  <h3 style={{ color: 'var(--pp-orange-dark)' }}>{c.t}</h3><p>{c.d}</p>
                 </article>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Use cases with imagery */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">// who we build for</p>
+            <h2 style={{ marginTop: '10px' }}>Omnichannel, by business type</h2>
+            <div style={{ marginTop: '34px', display: 'grid', gap: 'clamp(28px,4vw,44px)' }}>
+              {USECASES.map((u, i) => (
+                <div key={u.t} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(24px,4vw,44px)', alignItems: 'center' }} className="pp-herogrid">
+                  <div style={{ order: i % 2 === 1 ? 2 : 1 }}>
+                    <h3 style={{ fontSize: '21px' }}>{u.t}</h3>
+                    <p className="pp-lead" style={{ marginTop: '10px', fontSize: '16px' }}>{u.d}</p>
+                  </div>
+                  <div style={{ order: i % 2 === 1 ? 1 : 2 }}>
+                    <Image src={`${IMG}/${u.img}`} alt={u.alt} width={1448} height={1086} sizes="(max-width:760px) 100vw, 50vw" style={imgStyle} />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Comparison */}
+        <section className="pp-sec tint">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">// the difference</p>
+            <h2 style={{ marginTop: '10px' }}>Multichannel vs unified omnichannel</h2>
+            <div style={{ marginTop: '28px', overflowX: 'auto' }}>
+              <table className="pp-table">
+                <thead><tr><th>Capability</th><th>Single channel</th><th>Multichannel (disconnected)</th><th>Unified omnichannel</th></tr></thead>
+                <tbody>{COMPARE.map((r) => (<tr key={r.cap} className={r.me ? 'me' : ''}><td className="name">{r.cap}</td><td>{r.single}</td><td>{r.multi}</td><td>{r.omni}</td></tr>))}</tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        {/* Process */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">// how we work</p>
+            <h2 style={{ marginTop: '10px' }}>From many tools to one system you own</h2>
+            <div className="pp-bento" style={{ marginTop: '36px', gridTemplateColumns: 'repeat(4,1fr)' }}>
+              {STEPS.map((s) => (
+                <article className="pp-card" key={s.n}>
+                  <div style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', fontWeight: 700, color: 'var(--pp-orange-dark)' }}>{s.n}</div>
+                  <h3 style={{ marginTop: '8px' }}>{s.t}</h3><p>{s.d}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Founder band */}
+        <section className="pp-sec tint">
+          <div className="pp-wrap" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(24px,4vw,44px)', alignItems: 'center' }}>
+            <div>
+              <p className="pp-mlabel">// founder-led</p>
+              <h2 style={{ marginTop: '10px', fontSize: 'clamp(24px,2.6vw,32px)' }}>Built with you, owned by you</h2>
+              <p className="pp-lead" style={{ marginTop: '12px' }}>
+                You work directly with the founder and a small senior team. We design and build your omnichannel commerce
+                system, then hand it over. You own and run it, with us on call to support and scale.
+              </p>
+            </div>
+            <Image src={`${IMG}/founder-advisory.webp`} alt="A small team reviewing an online storefront together around a laptop" width={1448} height={1086} sizes="(max-width:760px) 100vw, 50vw" style={imgStyle} />
+          </div>
+        </section>
+
+        {/* Testimonials */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">// what clients say</p>
+            <h2 style={{ marginTop: '10px' }}>Real founders, real builds</h2>
+            <div style={{ marginTop: '34px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }} className="pp-bento">
+              <figure style={{ border: '1px solid var(--pp-line)', borderRadius: '18px', background: '#fff', padding: '26px', display: 'flex', flexDirection: 'column', margin: 0 }}>
+                <div style={{ color: 'var(--pp-orange)', fontSize: '13px', letterSpacing: '2px' }} aria-hidden="true">★★★★★</div>
+                <blockquote style={{ fontFamily: 'var(--pp-display)', fontWeight: 600, fontSize: '18px', lineHeight: 1.5, color: 'var(--pp-ink)', margin: '14px 0 20px', letterSpacing: '-0.01em' }}>
+                  “We were live in 6 days, I genuinely did not believe that was possible. The design is stunning, the WhatsApp integration brings in inquiries every day, and the site has stayed lightning fast.”
+                </blockquote>
+                <figcaption style={{ display: 'flex', alignItems: 'center', gap: '12px', marginTop: 'auto' }}>
+                  <Image src="/images/testimonials/ricky-belle-maison-160.webp" alt="Ricky B., Founder of Belle Maison" width={48} height={48} style={{ borderRadius: '50%', objectFit: 'cover', border: '1px solid var(--pp-line)' }} />
+                  <span><b style={{ fontFamily: 'var(--pp-display)', fontSize: '15px', color: 'var(--pp-ink)', display: 'block' }}>Ricky B.</b><span style={{ fontSize: '13px', color: 'var(--pp-muted)' }}>Founder, Belle Maison</span></span>
+                </figcaption>
+              </figure>
+              <figure style={{ border: '1px solid var(--pp-line)', borderRadius: '18px', background: '#fff', padding: '26px', display: 'flex', flexDirection: 'column', margin: 0 }}>
+                <div style={{ color: 'var(--pp-orange)', fontSize: '13px', letterSpacing: '2px' }} aria-hidden="true">★★★★★</div>
+                <blockquote style={{ fontFamily: 'var(--pp-display)', fontWeight: 600, fontSize: '18px', lineHeight: 1.5, color: 'var(--pp-ink)', margin: '14px 0 20px', letterSpacing: '-0.01em' }}>
+                  “In our business, clients size you up before they ever call. FactoryJet built us a website that finally looks as solid as the work we deliver, and we are getting real project inquiries through it.”
+                </blockquote>
+                <figcaption style={{ display: 'flex', alignItems: 'center', gap: '12px', marginTop: 'auto' }}>
+                  <Image src="/images/testimonials/vishal-impulse-branding-160.webp" alt="Vishal K., Director of Impulse Branding" width={48} height={48} style={{ borderRadius: '50%', objectFit: 'cover', border: '1px solid var(--pp-line)' }} />
+                  <span><b style={{ fontFamily: 'var(--pp-display)', fontSize: '15px', color: 'var(--pp-ink)', display: 'block' }}>Vishal K.</b><span style={{ fontSize: '13px', color: 'var(--pp-muted)' }}>Director, Impulse Branding</span></span>
+                </figcaption>
+              </figure>
             </div>
           </div>
         </section>
 
         <FAQ
           eyebrow="OMNICHANNEL COMMERCE FAQ"
-          headline="The questions people ask about omnichannel commerce."
+          headline="Questions before you build."
           lead="If your question is not below, send a short brief and answers usually come back inside 24 hours."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
 
-        <section className="border-t border-[#E7DED6] bg-[#FFF8F5]">
-          <div className="mx-auto max-w-[1180px] px-5 py-16 md:py-20">
-            <h2 className="max-w-[22ch] font-fj-display text-3xl font-extrabold leading-tight tracking-tight md:text-4xl">
-              Sell everywhere, from one system.
-            </h2>
-            <p className="mt-4 max-w-[60ch] text-[16px] leading-relaxed text-[#46403B]">
-              Tell us where you sell today. We will map your channels, catalog, and B2B into one unified system and send
-              a fixed proposal before any work starts.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-xl bg-[#F05A28] px-6 py-3.5 font-fj-body text-[15px] font-semibold text-white transition-transform hover:-translate-y-0.5">Talk to the Founder</a>
-              <ModalCTAButton label="Get a commerce audit" region="us" btnVariant="secondary-light" />
+        {/* CTA two-column */}
+        <section className="pp-sec tint" id="final-cta">
+          <div className="pp-wrap" style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: 'clamp(28px,4vw,44px)', alignItems: 'center' }}>
+            <div>
+              <p className="pp-mlabel" style={{ color: 'var(--pp-orange-dark)' }}>// before you commit</p>
+              <h2 style={{ marginTop: '12px', maxWidth: '18ch' }}>Make every channel act as one.</h2>
+              <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '52ch' }}>
+                Tell us where you sell today. We will map your channels, catalog, and inventory into one system and send a
+                fixed proposal before any work starts.
+              </p>
+              <div style={{ marginTop: '26px', display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+                <a href={CALENDLY} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderRadius: '13px', background: 'var(--pp-orange)', padding: '14px 24px', fontSize: '15px', fontWeight: 600, color: '#fff', textDecoration: 'none' }}>Talk to the Founder</a>
+                <ModalCTAButton label="Get an omnichannel audit" region="us" btnVariant="secondary-light" />
+              </div>
+              <div style={{ marginTop: '26px', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <span aria-hidden="true" style={{ width: '46px', height: '46px', borderRadius: '50%', background: 'linear-gradient(135deg,#F05A28,#C8431A)', color: '#fff', fontFamily: 'var(--pp-display)', fontWeight: 800, fontSize: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>B</span>
+                <span><b style={{ fontFamily: 'var(--pp-display)', fontSize: '14px', color: 'var(--pp-ink)', display: 'block' }}>Bhavesh, Founder of FactoryJet</b><span style={{ fontSize: '12px', color: 'var(--pp-muted)' }}>You work with me directly. No handoffs.</span></span>
+              </div>
             </div>
+            <div style={{ background: '#fff', border: '1px solid var(--pp-line)', borderRadius: '18px', padding: '22px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '14px' }}>
+                <Image src="/images/testimonials/ricky-belle-maison-160.webp" alt="Ricky B., Belle Maison" width={46} height={46} style={{ borderRadius: '50%', objectFit: 'cover', border: '1px solid var(--pp-line)' }} />
+                <span><b style={{ fontFamily: 'var(--pp-display)', fontSize: '14px', color: 'var(--pp-ink)', display: 'block' }}>Ricky B.</b><span style={{ fontSize: '12px', color: 'var(--pp-muted)' }}>Belle Maison</span></span>
+              </div>
+              <blockquote style={{ fontStyle: 'italic', fontSize: '14px', lineHeight: 1.55, color: 'var(--pp-body)', borderLeft: '2px solid var(--pp-orange)', paddingLeft: '12px', margin: '0 0 16px' }}>
+                “We were live in just 6 days. New inquiries come in every day, and the site is still really fast.”
+              </blockquote>
+              <div style={{ borderTop: '1px solid var(--pp-line)', paddingTop: '14px', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', color: 'var(--pp-muted)' }}>
+                <span aria-hidden="true" style={{ color: 'var(--pp-orange)', letterSpacing: '1px' }}>★★★★★</span>
+                <span><strong style={{ color: 'var(--pp-ink)' }}>4.9 on Clutch</strong> · 150+ verified reviews</span>
+              </div>
+            </div>
+          </div>
+          <div className="pp-wrap" style={{ marginTop: '28px' }}>
+            <p style={{ fontSize: '14px', color: 'var(--pp-muted)' }}>
+              Related:{' '}
+              <Link href="/us/b2b-ecommerce" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>B2B e-commerce</Link>,{' '}
+              <Link href="/us/headless-commerce" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>headless commerce</Link>,{' '}
+              <Link href="/us/commerceflo" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>Commerceflo</Link>, and{' '}
+              <Link href="/us/services/ecommerce-development" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>e-commerce development</Link>.
+            </p>
           </div>
         </section>
       </main>
