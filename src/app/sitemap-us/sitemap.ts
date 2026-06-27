@@ -22,6 +22,9 @@ type ChangeFreq = MetadataRoute.Sitemap[number]['changeFrequency']
 // mirroring sitemap-uk.
 const US_ROUTES: { path: string; source: string }[] = [
   { path: '/us',                                              source: 'src/app/us/page.tsx' },
+  { path: '/us/b2b-ecommerce',                                source: 'src/app/us/b2b-ecommerce/page.tsx' },
+  { path: '/us/omnichannel-commerce',                         source: 'src/app/us/omnichannel-commerce/page.tsx' },
+  { path: '/us/ecommerce-consulting',                         source: 'src/app/us/ecommerce-consulting/page.tsx' },
   { path: '/us/about',                                        source: 'src/app/us/about/page.tsx' },
   { path: '/us/faq',                                          source: 'src/app/us/faq/page.tsx' },
   { path: '/us/portfolio',                                    source: 'src/app/us/portfolio/page.tsx' },
