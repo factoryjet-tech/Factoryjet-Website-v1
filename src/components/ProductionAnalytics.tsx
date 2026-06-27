@@ -54,12 +54,16 @@ export default function ProductionAnalytics() {
     gtag('config', 'AW-18185532850');
 
     let loaded = false;
-    let timer: ReturnType<typeof setTimeout>;
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    let idleHandle: number | undefined;
     const events = ['scroll', 'pointerdown', 'keydown', 'touchstart', 'mousemove'] as const;
+    const ric = (window as unknown as { requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number }).requestIdleCallback;
+    const cic = (window as unknown as { cancelIdleCallback?: (h: number) => void }).cancelIdleCallback;
 
     const cleanup = () => {
       events.forEach((e) => window.removeEventListener(e, load));
-      clearTimeout(timer);
+      if (timer) clearTimeout(timer);
+      if (idleHandle !== undefined && cic) cic(idleHandle);
     };
 
     function load() {
@@ -91,7 +95,15 @@ export default function ProductionAnalytics() {
     }
 
     events.forEach((e) => window.addEventListener(e, load, { once: true, passive: true }));
-    timer = setTimeout(load, 5000);
+    // No interaction (e.g. a Lighthouse run): wait for the browser to go idle,
+    // AFTER first paint / LCP, so the GTM container never executes inside the LCP
+    // window on throttled mobile. requestIdleCallback's timeout is a hard cap so
+    // bounced real users are still measured; Safari (no rIC) uses a timer.
+    if (ric) {
+      idleHandle = ric(load, { timeout: 8000 });
+    } else {
+      timer = setTimeout(load, 6000);
+    }
 
     return cleanup;
   }, []);
