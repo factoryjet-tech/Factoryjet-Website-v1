@@ -60,6 +60,38 @@ const US_AI_SERVICES = [
   { icon: Link2,         label: 'AI Integration', href: '/us/services/ai-integration-services', desc: 'Connect AI to your stack' },
 ] as const;
 
+// Solutions (US) — the commerce pillar + flagship pages, the primary menu
+const US_SOLUTIONS = [
+  { icon: Layers,        label: 'Omnichannel Commerce',     href: '/us/omnichannel-commerce',           desc: 'One catalog, inventory & order engine' },
+  { icon: Store,         label: 'B2B E-Commerce',           href: '/us/b2b-ecommerce',                  desc: 'Portals, tiered pricing, net terms' },
+  { icon: ShoppingCart,  label: 'E-Commerce Development',   href: '/us/services/ecommerce-development',  desc: 'End-to-end online stores' },
+  { icon: Bot,           label: 'Commerce AI Agents',       href: '/us/services/ai-agents',             desc: 'Agents that list, price & sync' },
+  { icon: TrendingUp,    label: 'Commerce SEO & Visibility',href: '/us/services/ecommerce-seo',         desc: 'Google, AI answers & marketplaces' },
+  { icon: Search,        label: 'E-Commerce Consulting',    href: '/us/ecommerce-consulting',           desc: 'Platform, migration & scope' },
+] as const;
+
+// Platforms (US) — what we build on; items without a dedicated page point to the closest one
+const US_PLATFORMS = [
+  { icon: ShoppingBag,  label: 'Shopify & Shopify Plus',   href: '/us/services/shopify-development',     desc: 'DTC + B2B on one store' },
+  { icon: Store,        label: 'Adobe Commerce (Magento)', href: '/us/services/magento-development',     desc: 'Deep B2B, large catalogs' },
+  { icon: FileCode,     label: 'WooCommerce',              href: '/us/services/woocommerce-development', desc: 'WordPress commerce' },
+  { icon: Layers,       label: 'BigCommerce',              href: '/us/services/ecommerce-development',   desc: 'Mid-market B2B value' },
+  { icon: Code,         label: 'Headless / composable',    href: '/us/services/ecommerce-development',   desc: 'Custom front end, any backend' },
+  { icon: Zap,          label: 'Commerceflo',              href: '/us/omnichannel-commerce',            desc: 'Unified commerce engine' },
+] as const;
+
+// Services (US) — supporting / demoted services that link up to the commerce pillar
+const US_SUPPORT_SERVICES = [
+  { icon: Globe,      label: 'Web Design',          href: '/us/services/web-design',                  desc: 'Conversion-focused sites' },
+  { icon: RefreshCw,  label: 'Website Redesign',    href: '/us/services/website-redesign',            desc: 'Modernize your existing site' },
+  { icon: FileCode,   label: 'WordPress',           href: '/us/services/wordpress-development',        desc: 'Custom WP sites & plugins' },
+  { icon: Code,       label: 'Web App Development',  href: '/us/services/web-application-development',  desc: 'Complex web apps' },
+  { icon: TrendingUp, label: 'SEO Services',        href: '/us/services/seo',                         desc: 'Rank on Google' },
+  { icon: MapPin,     label: 'Local SEO',           href: '/us/services/local-seo',                   desc: 'Map pack & near-me' },
+  { icon: Sparkles,   label: 'AI SEO',              href: '/us/services/ai-seo',                      desc: 'Get cited in AI answers' },
+  { icon: Zap,        label: 'AI Automation',       href: '/us/services/ai-automation',               desc: 'Eliminate repetitive work' },
+] as const;
+
 // SEO hub + sub-services (US) — new "SEO & AI Search" column in the Services mega.
 // AI SEO is highlighted separately (the "get cited" answer box), not listed here.
 const US_SEO_HUB_HREF = '/us/services/seo';
@@ -94,29 +126,26 @@ const US_INDUSTRY_SEO = [
 
 // Who We Serve — by business type (US desktop mega panel)
 const US_WHO_WE_SERVE_TYPES = [
-  { label: 'DTC & E-Commerce Brands',    href: '/us/services/ecommerce-development',        desc: 'Scale your online store' },
-  { label: 'Local Service Businesses',   href: '/us/services/local-seo',                    desc: 'Get found in your city' },
-  { label: 'Law Firms & Legal Practices',href: '/us/services/law-firm-seo',                 desc: 'SEO + sites for attorneys' },
-  { label: 'Healthcare & Dental',        href: '/us/services/healthcare-seo',               desc: 'Rank for local patients' },
-  { label: 'Real Estate Companies',      href: '/us/services/real-estate-website-design',   desc: 'Listings & lead-gen sites' },
-  { label: 'Startups & SaaS',            href: '/us/services/web-application-development',  desc: 'Build fast, own your code' },
+  { label: 'DTC & E-Commerce Brands',        href: '/us',                       desc: 'Sell across every channel' },
+  { label: 'B2B, Wholesale & Distributors',  href: '/us/b2b-ecommerce',         desc: 'Trade portals & account pricing' },
+  { label: 'Marketplace Sellers',            href: '/us/services/ecommerce-seo',desc: 'Amazon, Walmart, TikTok Shop' },
+  { label: 'Brands Replatforming',           href: '/us/ecommerce-consulting',  desc: 'Migrate without losing SEO' },
 ] as const;
 
 // Who We Serve — by what you need (US desktop mega panel)
 const US_WHO_WE_SERVE_NEEDS = [
-  { label: 'I need a new website',       href: '/us/services/web-design',             sub: 'Web Design & Development' },
-  { label: 'I want more search traffic', href: '/us/services/seo',                    sub: 'SEO Services' },
-  { label: "I'm selling online",         href: '/us/services/ecommerce-development',  sub: 'Shopify & E-Commerce' },
-  { label: 'I want AI in my business',   href: '/us/services/ai-agents',              sub: 'AI Agents & Automation' },
+  { label: 'I sell on multiple channels', href: '/us/omnichannel-commerce',          sub: 'Omnichannel commerce' },
+  { label: 'I need a B2B store',          href: '/us/b2b-ecommerce',                 sub: 'B2B e-commerce' },
+  { label: 'I want to migrate platforms', href: '/us/ecommerce-consulting',          sub: 'Replatforming' },
+  { label: 'I want AI in my commerce',    href: '/us/services/ai-agents',            sub: 'Commerce AI agents' },
 ] as const;
 
-// Knowledge Hub links (US) — replaces the shared RESOURCES list in the US nav
+// Resources links (US) — the "Resources" mega in the US nav
 const US_KNOWLEDGE_HUB = [
   { icon: BookOpen,      label: 'Blog',               href: '/blog',             desc: 'Expert insights & guides' },
   { icon: FileText,      label: 'Case Studies',        href: '/case-studies',     desc: 'Real results from real clients' },
   { icon: LayoutTemplate,label: 'Portfolio',           href: '/us/portfolio',     desc: 'Browse our work' },
   { icon: Search,        label: 'FAQ',                 href: '/us/faq',           desc: 'Common questions answered' },
-  { icon: TrendingUp,    label: 'Website Cost Guide',  href: '/us/website-cost',  desc: 'What does a website cost in 2025?' },
 ] as const;
 
 // ─── India nav data ───────────────────────────────────────────────────────────
@@ -233,13 +262,13 @@ const LOCALE_CONFIG = {
     portfolioHref:   '/us/portfolio',
     pricingHref:     '/us/pricing',
     aboutHref:       '/us/about',
-    featuredHeadline:'7-Day Delivery Guarantee',
-    featuredBody:    'Up to 5-page sites shipped in 7 days. Fixed-price, milestone-paid, with code you own from day one.',
-    featuredStats:   ['500+ US businesses served', '25+ years of expertise', 'Fixed-price, milestone-paid'],
-    featuredCtaLabel:'See pricing',
-    featuredCtaHref: '/us/pricing',
+    featuredHeadline:'One system, every channel',
+    featuredBody:    'One catalog, one inventory, and one order engine across your store, marketplaces, and B2B.',
+    featuredStats:   ['DTC + B2B on one system', 'A decade-plus building commerce', 'You own what we build'],
+    featuredCtaLabel:'Explore commerce solutions',
+    featuredCtaHref: '/us/omnichannel-commerce',
     modalRegion:     'us' as ModalRegion,
-    defaultCtaLabel: 'Get a Quote',
+    defaultCtaLabel: 'Talk to the Founder',
   },
   in: {
     webServices:     IN_WEB_SERVICES,
@@ -343,7 +372,7 @@ export default function SiteHeader({
   const { openModal } = useContactModal();
   const cfg = LOCALE_CONFIG[locale];
 
-  const [openDropdown, setOpenDropdown] = useState<'services' | 'whoweserve' | 'locations' | 'knowhub' | 'resources' | 'company' | null>(null);
+  const [openDropdown, setOpenDropdown] = useState<'solutions' | 'platforms' | 'services' | 'whoweserve' | 'locations' | 'knowhub' | 'resources' | 'company' | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [mobileLocationsOpen, setMobileLocationsOpen] = useState(false);
@@ -371,7 +400,7 @@ export default function SiteHeader({
     return () => { document.body.style.overflow = ''; };
   }, [mobileOpen]);
 
-  const openDrop = (id: 'services' | 'whoweserve' | 'locations' | 'knowhub' | 'resources' | 'company') => {
+  const openDrop = (id: 'solutions' | 'platforms' | 'services' | 'whoweserve' | 'locations' | 'knowhub' | 'resources' | 'company') => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
     setOpenDropdown(id);
   };
@@ -414,7 +443,8 @@ export default function SiteHeader({
             {/* Desktop nav */}
             <nav aria-label="Primary" className="hidden items-center gap-0.5 md:flex">
 
-              {/* Services trigger + mega-dropdown */}
+              {/* Services trigger + mega-dropdown (India / UAE only — US uses commerce menus below) */}
+              {locale !== 'us' && (
               <div
                 className="relative"
                 onMouseEnter={() => openDrop('services')}
@@ -810,6 +840,105 @@ export default function SiteHeader({
                   </div>
                 )}
               </div>
+              )}
+
+              {/* ── US commerce menus: Solutions · Platforms · Services ── */}
+              {locale === 'us' && (
+                <>
+                  {/* Solutions */}
+                  <div className="relative" onMouseEnter={() => openDrop('solutions')} onMouseLeave={scheduleClosed}>
+                    <button type="button" aria-expanded={openDropdown === 'solutions'} aria-haspopup="menu" className="flex items-center gap-1 rounded-lg px-3 py-2 font-fj-body text-[14.5px] text-fj-ink transition-colors hover:bg-fj-neutral-100 hover:text-[#F05A28]">
+                      Solutions
+                      <ChevronDown size={14} strokeWidth={2} className={`transition-transform duration-200 ${openDropdown === 'solutions' ? 'rotate-180 text-[#F05A28]' : 'text-fj-neutral-400'}`} />
+                    </button>
+                    {openDropdown === 'solutions' && (
+                      <div className="fixed left-1/2 top-[72px] z-50 -translate-x-1/2 px-3 pt-2" onMouseEnter={keepOpen} onMouseLeave={scheduleClosed} role="menu">
+                        <div className="w-[760px] max-w-[calc(100vw-1.5rem)] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
+                          <div className="grid grid-cols-[1fr_1fr_220px]">
+                            <div className="p-4">
+                              <p className="mb-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">Commerce solutions</p>
+                              {US_SOLUTIONS.slice(0, 3).map((s) => (
+                                <ServiceCard key={s.href} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
+                              ))}
+                            </div>
+                            <div className="border-l border-fj-neutral-100 p-4">
+                              <p className="mb-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">&nbsp;</p>
+                              {US_SOLUTIONS.slice(3).map((s) => (
+                                <ServiceCard key={s.href} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
+                              ))}
+                            </div>
+                            <div className="flex flex-col justify-between rounded-r-2xl p-5" style={{ background: 'linear-gradient(145deg, #F05A28 0%, #c44820 100%)' }}>
+                              <div>
+                                <p className="mb-2.5 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-white/60">Why FactoryJet</p>
+                                <p className="font-fj-display text-[19px] font-semibold leading-tight text-white">{cfg.featuredHeadline}</p>
+                                <p className="mt-2 font-fj-body text-[12px] leading-relaxed text-white/75">{cfg.featuredBody}</p>
+                                <ul className="mt-4 space-y-2">
+                                  {cfg.featuredStats.map((item) => (
+                                    <li key={item} className="flex items-center gap-2">
+                                      <span className="flex h-[18px] w-[18px] flex-shrink-0 items-center justify-center rounded-full bg-white/20">
+                                        <svg width="8" height="6" viewBox="0 0 8 6" fill="none" aria-hidden="true"><path d="M1 3L3 5L7 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                                      </span>
+                                      <span className="font-fj-body text-[11.5px] text-white/85">{item}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                              <Link href={cfg.featuredCtaHref} className="mt-5 flex items-center gap-1.5 font-fj-body text-[12.5px] font-semibold text-white/80 transition-colors hover:text-white">
+                                {cfg.featuredCtaLabel}
+                                <ArrowRight size={13} strokeWidth={2} />
+                              </Link>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Platforms */}
+                  <div className="relative" onMouseEnter={() => openDrop('platforms')} onMouseLeave={scheduleClosed}>
+                    <button type="button" aria-expanded={openDropdown === 'platforms'} aria-haspopup="menu" className="flex items-center gap-1 rounded-lg px-3 py-2 font-fj-body text-[14.5px] text-fj-ink transition-colors hover:bg-fj-neutral-100 hover:text-[#F05A28]">
+                      Platforms
+                      <ChevronDown size={14} strokeWidth={2} className={`transition-transform duration-200 ${openDropdown === 'platforms' ? 'rotate-180 text-[#F05A28]' : 'text-fj-neutral-400'}`} />
+                    </button>
+                    {openDropdown === 'platforms' && (
+                      <div className="fixed left-1/2 top-[72px] z-50 -translate-x-1/2 px-3 pt-2" onMouseEnter={keepOpen} onMouseLeave={scheduleClosed} role="menu">
+                        <div className="w-[600px] max-w-[calc(100vw-1.5rem)] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
+                          <div className="p-4">
+                            <p className="mb-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">Platforms we build on</p>
+                            <div className="grid grid-cols-2 gap-x-2">
+                              {US_PLATFORMS.map((s) => (
+                                <ServiceCard key={s.label} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Services (supporting) */}
+                  <div className="relative" onMouseEnter={() => openDrop('services')} onMouseLeave={scheduleClosed}>
+                    <button type="button" aria-expanded={openDropdown === 'services'} aria-haspopup="menu" className="flex items-center gap-1 rounded-lg px-3 py-2 font-fj-body text-[14.5px] text-fj-ink transition-colors hover:bg-fj-neutral-100 hover:text-[#F05A28]">
+                      Services
+                      <ChevronDown size={14} strokeWidth={2} className={`transition-transform duration-200 ${openDropdown === 'services' ? 'rotate-180 text-[#F05A28]' : 'text-fj-neutral-400'}`} />
+                    </button>
+                    {openDropdown === 'services' && (
+                      <div className="fixed left-1/2 top-[72px] z-50 -translate-x-1/2 px-3 pt-2" onMouseEnter={keepOpen} onMouseLeave={scheduleClosed} role="menu">
+                        <div className="w-[620px] max-w-[calc(100vw-1.5rem)] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
+                          <div className="p-4">
+                            <p className="mb-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">Supporting services</p>
+                            <div className="grid grid-cols-2 gap-x-2">
+                              {US_SUPPORT_SERVICES.map((s) => (
+                                <ServiceCard key={s.label} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </>
+              )}
 
               {/* Who We Serve trigger — US only */}
               {locale === 'us' && (
@@ -889,10 +1018,10 @@ export default function SiteHeader({
                             <div>
                               <p className="mb-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-white/40">Case study</p>
                               <p className="font-fj-display text-[16px] font-semibold leading-snug text-[#FAFAF7]">
-                                Tampa flooring co: 312% increase in organic leads
+                                Bombay Petals: wholesale ordering, online
                               </p>
                               <p className="mt-2 font-fj-body text-[11.5px] leading-relaxed text-white/60">
-                                Map Pack + content strategy for a $2M/yr local business.
+                                A B2B commerce build so trade buyers order online with tiered pricing, not by email and phone.
                               </p>
                             </div>
                             <Link
@@ -1064,7 +1193,7 @@ export default function SiteHeader({
                     aria-haspopup="menu"
                     className="flex items-center gap-1 rounded-lg px-3 py-2 font-fj-body text-[14.5px] text-fj-ink transition-colors hover:bg-fj-neutral-100 hover:text-[#F05A28]"
                   >
-                    Knowledge Hub
+                    Resources
                     <ChevronDown
                       size={14}
                       strokeWidth={2}
@@ -1081,7 +1210,7 @@ export default function SiteHeader({
                     >
                       <div className="w-[280px] overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white p-3 shadow-2xl shadow-fj-ink/10 ring-1 ring-fj-ink/5">
                         <p className="mb-2 px-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">
-                          Knowledge Hub
+                          Resources
                         </p>
                         <div className="space-y-0.5">
                           {US_KNOWLEDGE_HUB.map((r) => (
@@ -1168,7 +1297,7 @@ export default function SiteHeader({
                         </p>
                         <div className="space-y-0.5">
                           <ServiceCard icon={Globe} label="About FactoryJet" href="/us/about" desc="Our story and team" />
-                          <ServiceCard icon={TrendingUp} label="Pricing" href="/us/pricing" desc="Transparent, fixed-price plans" />
+                          <ServiceCard icon={FileText} label="Case Studies" href="/case-studies" desc="Real client results" />
                           <ServiceCard icon={MessageSquare} label="Contact" href="/contact" desc="Talk to us today" />
                         </div>
                       </div>
@@ -1356,10 +1485,10 @@ export default function SiteHeader({
                     })}
                   </>
                 ) : (
-                  /* US / UAE mobile services */
+                  /* US mobile services — commerce first */
                   <>
-                    <p className="mb-1 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">Web Services</p>
-                    {cfg.webServices.map((s) => (
+                    <p className="mb-1 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">{locale === 'us' ? 'Commerce solutions' : 'Web Services'}</p>
+                    {(locale === 'us' ? US_SOLUTIONS : cfg.webServices).map((s) => (
                       <Link key={s.href} href={s.href} onClick={() => setMobileOpen(false)} className="flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]">
                         <s.icon size={14} strokeWidth={1.8} className="flex-shrink-0 text-[#F05A28]" />
                         {s.label}
@@ -1367,42 +1496,33 @@ export default function SiteHeader({
                     ))}
                     {locale === 'us' && (
                       <>
-                        <p className="mb-1 mt-3 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">SEO &amp; AI Search</p>
-                        <Link href={US_SEO_HUB_HREF} onClick={() => setMobileOpen(false)} className="flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]">
-                          <TrendingUp size={14} strokeWidth={1.8} className="flex-shrink-0 text-[#F05A28]" />
-                          SEO Services
-                        </Link>
-                        {US_SEO_SERVICES.map((s) => (
-                          <Link key={s.href} href={s.href} onClick={() => setMobileOpen(false)} className="flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]">
+                        <p className="mb-1 mt-3 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">Platforms</p>
+                        {US_PLATFORMS.map((s) => (
+                          <Link key={s.label} href={s.href} onClick={() => setMobileOpen(false)} className="flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]">
                             <s.icon size={14} strokeWidth={1.8} className="flex-shrink-0 text-[#F05A28]" />
                             {s.label}
                           </Link>
                         ))}
-                        <Link href="/us/services/ai-seo" onClick={() => setMobileOpen(false)} className="flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#5046C8]/5 hover:text-[#5046C8]">
-                          <Sparkles size={14} strokeWidth={1.8} className="flex-shrink-0 text-[#5046C8]" />
-                          AI SEO
-                          <span className="ml-auto rounded-full bg-[#ECEAFB] px-2 py-0.5 font-fj-mono text-[8px] font-bold tracking-wider text-[#5046C8]">GEO</span>
-                        </Link>
-                        <p className="mb-1 mt-2.5 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">Industry SEO</p>
-                        {US_INDUSTRY_SEO.map((s) => (
-                          <Link
-                            key={s.href}
-                            href={s.href}
-                            onClick={() => setMobileOpen(false)}
-                            className="block rounded-lg px-1 py-2.5 font-fj-body text-[14px] font-semibold text-[#F05A28] transition-colors hover:bg-[#F05A28]/5"
-                          >
+                        <p className="mb-1 mt-3 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">Services</p>
+                        {US_SUPPORT_SERVICES.map((s) => (
+                          <Link key={s.label} href={s.href} onClick={() => setMobileOpen(false)} className="flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]">
+                            <s.icon size={14} strokeWidth={1.8} className="flex-shrink-0 text-[#F05A28]" />
                             {s.label}
                           </Link>
                         ))}
                       </>
                     )}
-                    <p className="mb-1 mt-3 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">{locale === 'us' ? 'AI Development' : 'AI Services'}</p>
-                    {cfg.aiServices.map((s) => (
-                      <Link key={s.href} href={s.href} onClick={() => setMobileOpen(false)} className="flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]">
-                        <s.icon size={14} strokeWidth={1.8} className="flex-shrink-0 text-[#F05A28]" />
-                        {s.label}
-                      </Link>
-                    ))}
+                    {locale !== 'us' && (
+                      <>
+                        <p className="mb-1 mt-3 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">AI Services</p>
+                        {cfg.aiServices.map((s) => (
+                          <Link key={s.href} href={s.href} onClick={() => setMobileOpen(false)} className="flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]">
+                            <s.icon size={14} strokeWidth={1.8} className="flex-shrink-0 text-[#F05A28]" />
+                            {s.label}
+                          </Link>
+                        ))}
+                      </>
+                    )}
                   </>
                 )}
               </div>
@@ -1450,7 +1570,7 @@ export default function SiteHeader({
               onClick={() => setMobileResourcesOpen((v) => !v)}
               className="flex w-full items-center justify-between py-4 font-fj-body text-[15px] font-semibold text-fj-ink"
             >
-              {locale === 'us' ? 'Knowledge Hub' : 'Resources'}
+              Resources
               <ChevronDown
                 size={16}
                 strokeWidth={2}
