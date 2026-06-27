@@ -149,7 +149,7 @@ export default function OmnichannelCommercePage() {
           </div>
         </section>
 
-        {/* Omni vs unified vs multichannel — table */}
+        {/* Omni vs unified vs multichannel, table */}
         <section className="border-t border-[#E7DED6] bg-white">
           <div className="mx-auto max-w-[1180px] px-5 py-16 md:py-20">
             <h2 className="font-fj-display text-3xl font-extrabold tracking-tight md:text-4xl">Omnichannel vs unified vs multichannel commerce</h2>
