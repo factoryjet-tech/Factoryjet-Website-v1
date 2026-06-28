@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Script from 'next/script';
 import Link from 'next/link';
 import SiteHeader from '@/components/v2/SiteHeader';
@@ -102,7 +103,7 @@ const PAINS = [
   { i: '⛌', t: 'No self-service for buyers', d: 'Trade buyers expect to log in, see their price, and reorder. Without it, they buy from whoever makes it easy.' },
 ];
 const BENEFITS = [
-  { i: '↻', t: 'Faster, larger reorders', d: 'One-click reordering and saved lists from a buyer’s history lift order frequency and size.' },
+  { i: '↻', t: 'Faster, larger reorders', d: 'One-click reordering and saved lists from a buyer\'s history lift order frequency and size.' },
   { i: '◷', t: 'Hours back for sales', d: 'Self-service ordering frees your reps from re-keying orders so they can sell, not type.' },
   { i: '✓', t: 'Fewer pricing errors', d: 'Each account sees its own correct price automatically, so quotes stop going out wrong.' },
   { i: '⤢', t: 'Higher average order value', d: 'Volume tiers, suggested reorders, and clear availability nudge bigger orders.' },
@@ -115,7 +116,7 @@ const FEATURES = [
   { t: 'Quote & approval workflows', d: 'Request-for-quote, multi-step approvals, and order limits that match how your buyers purchase.' },
   { t: 'Account hierarchies', d: 'Parent and child accounts, buyer roles, and shared order history across a buying organization.' },
   { t: 'Gated & custom catalogs', d: 'Login-gated products and customer-specific catalogs so each account sees only what it should.' },
-  { t: 'Fast reordering', d: 'One-click reordering, reorder pads, and saved lists built from a buyer’s order history.' },
+  { t: 'Fast reordering', d: 'One-click reordering, reorder pads, and saved lists built from a buyer\'s order history.' },
   { t: 'ERP, PIM & marketplace sync', d: 'One order and inventory layer connecting your ERP, PIM, POS, 3PL, and marketplaces.' },
   { t: 'Sales-rep tools', d: 'Order-on-behalf, account dashboards, and quote tools so your reps sell through the same system.' },
 ];
@@ -148,6 +149,13 @@ const STEPS = [
   { n: '04', t: 'Migrate & launch', d: 'Data migration with 301 redirects, staging QA, then a clean cutover that protects your SEO.' },
 ];
 
+/* ── shared inline styles ─────────────────────────────────────────────── */
+const checkIcon = (
+  <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true">
+    <path d="M1 4l2.5 2.5L9 1" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
 export default function B2BEcommercePage() {
   return (
     <>
@@ -160,9 +168,13 @@ export default function B2BEcommercePage() {
       <SiteHeader navLinks={[]} cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
       <main className="platpage">
-        {/* Hero */}
-        <section className="pp-dotgrid">
-          <div className="pp-wrap" style={{ paddingTop: 'clamp(44px,6vh,84px)', paddingBottom: 'clamp(44px,6vh,84px)' }}>
+
+        {/* ── Hero ── */}
+        <section className="pp-dotgrid" style={{ position: 'relative', overflow: 'hidden' }}>
+          {/* aurora orbs */}
+          <div aria-hidden="true" style={{ position: 'absolute', top: '-80px', right: '6%', width: '440px', height: '440px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(240,90,40,0.16) 0%, rgba(240,90,40,0) 70%)', pointerEvents: 'none' }} />
+          <div aria-hidden="true" style={{ position: 'absolute', bottom: '-60px', left: '0%', width: '320px', height: '320px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,138,76,0.10) 0%, rgba(255,138,76,0) 70%)', pointerEvents: 'none' }} />
+          <div className="pp-wrap" style={{ paddingTop: 'clamp(44px,6vh,84px)', paddingBottom: 'clamp(44px,6vh,84px)', position: 'relative' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
               <div>
                 <p className="pp-eyebrow">B2B e-commerce development</p>
@@ -171,7 +183,7 @@ export default function B2BEcommercePage() {
                 </h1>
                 <p className="pp-lead" style={{ maxWidth: '47ch' }}>
                   We are a B2B ecommerce development agency. We build B2B ecommerce platforms with the rules trade buyers
-                  expect, account pricing, net terms, approvals, and one-click reordering, integrated with your ERP. Your
+                  expect: account pricing, net terms, approvals, and one-click reordering, integrated with your ERP. Your
                   buyers self-serve, your team stops re-keying orders.
                 </p>
                 <HeroInlineForm source="us_b2b_hero" region="us" submitLabel="Get a B2B commerce audit" />
@@ -193,40 +205,59 @@ export default function B2BEcommercePage() {
           </div>
         </section>
 
-        {/* Stat band */}
+        {/* ── Stat band ── */}
         <section className="pp-sec tint" style={{ paddingTop: 'clamp(32px,4vh,52px)', paddingBottom: 'clamp(32px,4vh,52px)' }}>
-          <div className="pp-wrap"><div className="pp-stats">{STATS.map((s) => (<div className="pp-stat" key={s.b}><b>{s.b}</b><span>{s.s}</span></div>))}</div></div>
-        </section>
-
-        {/* What is B2B ecommerce */}
-        <section className="pp-sec">
-          <div className="pp-wrap pp-narrow">
-            <p className="pp-mlabel">// the basics</p>
-            <h2 style={{ marginTop: '10px' }}>What is B2B e-commerce?</h2>
-            <div style={{ marginTop: '18px', display: 'grid', gap: '16px' }} className="pp-lead">
-              <p>
-                B2B e-commerce is selling to other businesses online, the way trade buyers actually purchase. Unlike a
-                direct-to-consumer store with one price for everyone, a B2B ecommerce platform gives each trade account
-                its own login, its own pricing, and the workflows a business buyer needs: net terms, purchase orders,
-                quotes, approvals, account hierarchies, and fast reordering.
-              </p>
-              <p>
-                For manufacturers, distributors, and wholesalers, a good B2B ecommerce solution replaces ordering by
-                email and phone with self-service that buyers prefer and your team does not have to babysit. It connects
-                to your ERP so pricing, inventory, and orders stay in one place, and it can run alongside a DTC store on
-                the same catalog when you sell both ways.
-              </p>
-              <p>
-                We are the agency that designs, builds, and implements that system on the right platform, Shopify Plus,
-                Adobe Commerce, BigCommerce, Salesforce Commerce Cloud, WooCommerce, or Commerceflo, then hands it over
-                for you to own and run. You are not buying a tool you rent from us; you are buying a B2B ecommerce
-                platform you own.
-              </p>
+          <div className="pp-wrap">
+            <div className="pp-stats">
+              {STATS.map((s) => (
+                <div className="pp-stat" key={s.b}><b>{s.b}</b><span>{s.s}</span></div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Sourced stats, E-E-A-T */}
+        {/* ── What is B2B ecommerce — image split ── */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(32px,5vw,64px)', alignItems: 'center' }} className="pp-herogrid">
+              {/* Text */}
+              <div>
+                <p className="pp-mlabel">// the basics</p>
+                <h2 style={{ marginTop: '10px' }}>What is B2B e-commerce?</h2>
+                <div style={{ marginTop: '18px', display: 'grid', gap: '14px' }} className="pp-lead">
+                  <p>
+                    B2B e-commerce is selling to other businesses online, the way trade buyers actually purchase. Unlike a
+                    direct-to-consumer store with one price for everyone, a B2B ecommerce platform gives each trade account
+                    its own login, its own pricing, and the workflows a business buyer needs: net terms, purchase orders,
+                    quotes, approvals, account hierarchies, and fast reordering.
+                  </p>
+                  <p>
+                    For manufacturers, distributors, and wholesalers, a good B2B ecommerce solution replaces ordering by
+                    email and phone with self-service that buyers prefer and your team does not have to babysit. It connects
+                    to your ERP so pricing, inventory, and orders stay in one place, and it can run alongside a DTC store on
+                    the same catalog.
+                  </p>
+                  <p>
+                    We design, build, and implement that system on the right platform, then hand it over for you to own and
+                    run. You are not buying a tool you rent from us; you are buying a B2B ecommerce platform you own.
+                  </p>
+                </div>
+              </div>
+              {/* Image */}
+              <div style={{ borderRadius: '20px', overflow: 'hidden', border: '1px solid var(--pp-line)', boxShadow: '0 24px 48px -28px rgba(20,17,15,0.28)' }}>
+                <Image
+                  src="/images/us/b2b/b2b-trade-portal.webp"
+                  alt="A wholesale buyer reviewing their B2B trade portal with account-specific pricing and one-click reorder"
+                  width={600}
+                  height={480}
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Sourced stats ── */}
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">// why B2B is moving online</p>
@@ -243,7 +274,7 @@ export default function B2BEcommercePage() {
           </div>
         </section>
 
-        {/* Problem */}
+        {/* ── Problem ── */}
         <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">// the problem</p>
@@ -259,7 +290,7 @@ export default function B2BEcommercePage() {
           </div>
         </section>
 
-        {/* Benefits */}
+        {/* ── Benefits ── */}
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">// why it pays off</p>
@@ -275,7 +306,7 @@ export default function B2BEcommercePage() {
           </div>
         </section>
 
-        {/* Features */}
+        {/* ── Features ── */}
         <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">// what we build</p>
@@ -291,8 +322,50 @@ export default function B2BEcommercePage() {
           </div>
         </section>
 
-        {/* Industries */}
+        {/* ── ERP integration — image split (flipped) ── */}
         <section className="pp-sec tint">
+          <div className="pp-wrap">
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(32px,5vw,64px)', alignItems: 'center' }} className="pp-herogrid">
+              {/* Image */}
+              <div style={{ borderRadius: '20px', overflow: 'hidden', border: '1px solid var(--pp-line)', boxShadow: '0 24px 48px -28px rgba(20,17,15,0.28)' }}>
+                <Image
+                  src="/images/us/b2b/b2b-erp-integration.webp"
+                  alt="Multiple dashboards showing a B2B ecommerce store connected to ERP, OMS, and inventory systems"
+                  width={600}
+                  height={480}
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
+              </div>
+              {/* Text */}
+              <div>
+                <p className="pp-mlabel">// ERP & integrations</p>
+                <h2 style={{ marginTop: '10px' }}>One order layer across every system</h2>
+                <p className="pp-lead" style={{ marginTop: '14px' }}>
+                  A B2B ecommerce platform only works when pricing, inventory, and orders are the same number in every
+                  system. We connect your storefront to your ERP, PIM, POS, 3PL, and marketplaces so the data stays in one
+                  place, not spread across imports and spreadsheets.
+                </p>
+                <ul style={{ marginTop: '20px', display: 'grid', gap: '10px' }}>
+                  {[
+                    'ERP sync: SAP, NetSuite, Dynamics 365, Odoo, and others',
+                    'PIM and product data: Akeneo, Salsify, Plytix',
+                    'Marketplaces: Amazon Business, Faire, Angi',
+                    '3PL and WMS: ShipBob, Extensiv, and custom warehouses',
+                    'Custom middleware when a direct connector does not exist',
+                  ].map((item) => (
+                    <li key={item} style={{ display: 'flex', gap: '10px', fontSize: '15px', lineHeight: 1.55, color: 'var(--pp-body)' }}>
+                      <span style={{ marginTop: '3px', flex: 'none', display: 'inline-flex', height: '18px', width: '18px', alignItems: 'center', justifyContent: 'center', borderRadius: '999px', background: 'rgba(240,90,40,0.1)', color: 'var(--pp-orange-dark)' }}>{checkIcon}</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Industries ── */}
+        <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">// who we build for</p>
             <h2 style={{ marginTop: '10px' }}>B2B ecommerce by industry</h2>
@@ -309,8 +382,8 @@ export default function B2BEcommercePage() {
           </div>
         </section>
 
-        {/* Platform comparison */}
-        <section className="pp-sec">
+        {/* ── Platform comparison ── */}
+        <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">// platforms</p>
             <h2 style={{ marginTop: '10px' }}>B2B ecommerce platform comparison</h2>
@@ -319,15 +392,26 @@ export default function B2BEcommercePage() {
             </p>
             <div style={{ marginTop: '28px', overflowX: 'auto' }}>
               <table className="pp-table">
-                <thead><tr><th>Platform</th><th>Best for</th><th>B2B features</th><th>Catalog size</th></tr></thead>
-                <tbody>{COMPARE.map((r) => (<tr key={r.name} className={r.me ? 'me' : ''}><td className="name">{r.name}</td><td>{r.best}</td><td>{r.b2b}</td><td>{r.catalog}</td></tr>))}</tbody>
+                <thead>
+                  <tr><th>Platform</th><th>Best for</th><th>B2B features</th><th>Catalog size</th></tr>
+                </thead>
+                <tbody>
+                  {COMPARE.map((r) => (
+                    <tr key={r.name} className={r.me ? 'me' : ''}>
+                      <td className="name">{r.name}</td>
+                      <td>{r.best}</td>
+                      <td>{r.b2b}</td>
+                      <td>{r.catalog}</td>
+                    </tr>
+                  ))}
+                </tbody>
               </table>
             </div>
           </div>
         </section>
 
-        {/* How to choose */}
-        <section className="pp-sec tint">
+        {/* ── How to choose ── */}
+        <section className="pp-sec">
           <div className="pp-wrap pp-narrow">
             <p className="pp-mlabel">// choosing</p>
             <h2 style={{ marginTop: '10px' }}>How to choose a B2B ecommerce platform</h2>
@@ -335,49 +419,160 @@ export default function B2BEcommercePage() {
             <ul style={{ marginTop: '20px', display: 'grid', gap: '12px' }}>
               {CHOOSE.map((c) => (
                 <li key={c} style={{ display: 'flex', gap: '12px', fontSize: '15px', lineHeight: 1.55, color: 'var(--pp-body)' }}>
-                  <span style={{ marginTop: '3px', flex: 'none', display: 'inline-flex', height: '20px', width: '20px', alignItems: 'center', justifyContent: 'center', borderRadius: '999px', background: 'rgba(240,90,40,.1)', color: 'var(--pp-orange-dark)' }}>
-                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true"><path d="M1 4l2.5 2.5L9 1" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                  </span>{c}
+                  <span style={{ marginTop: '3px', flex: 'none', display: 'inline-flex', height: '20px', width: '20px', alignItems: 'center', justifyContent: 'center', borderRadius: '999px', background: 'rgba(240,90,40,.1)', color: 'var(--pp-orange-dark)' }}>{checkIcon}</span>
+                  {c}
                 </li>
               ))}
             </ul>
           </div>
         </section>
 
-        {/* Process */}
-        <section className="pp-sec">
+        {/* ── Process — image left + steps right ── */}
+        <section className="pp-sec tint">
           <div className="pp-wrap">
-            <p className="pp-mlabel">// how we work</p>
-            <h2 style={{ marginTop: '10px' }}>From scope to a system you own</h2>
-            <div className="pp-bento" style={{ marginTop: '36px', gridTemplateColumns: 'repeat(4,1fr)' }}>
-              {STEPS.map((s) => (
-                <article className="pp-card" key={s.n}>
-                  <div style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', fontWeight: 700, color: 'var(--pp-orange-dark)' }}>{s.n}</div>
-                  <h3 style={{ marginTop: '8px' }}>{s.t}</h3><p>{s.d}</p>
-                </article>
-              ))}
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(32px,5vw,64px)', alignItems: 'center' }} className="pp-herogrid">
+              {/* Image */}
+              <div style={{ borderRadius: '20px', overflow: 'hidden', border: '1px solid var(--pp-line)', boxShadow: '0 24px 48px -28px rgba(20,17,15,0.28)' }}>
+                <Image
+                  src="/images/us/b2b/b2b-scoping-call.webp"
+                  alt="Founder on a video scoping call mapping out a client's B2B ecommerce platform requirements"
+                  width={600}
+                  height={480}
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
+              </div>
+              {/* Steps */}
+              <div>
+                <p className="pp-mlabel">// how we work</p>
+                <h2 style={{ marginTop: '10px' }}>From scope to a system you own</h2>
+                <div style={{ marginTop: '32px', display: 'grid', gap: '0' }}>
+                  {STEPS.map((s, i) => (
+                    <div key={s.n} style={{ display: 'flex', gap: '16px', paddingBottom: i < STEPS.length - 1 ? '28px' : '0', position: 'relative' }}>
+                      {/* connector line */}
+                      {i < STEPS.length - 1 && (
+                        <div aria-hidden="true" style={{ position: 'absolute', left: '15px', top: '32px', bottom: 0, width: '2px', background: 'var(--pp-line)' }} />
+                      )}
+                      <div style={{ flex: 'none', width: '32px', height: '32px', borderRadius: '50%', border: '2px solid var(--pp-orange)', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#fff', zIndex: 1 }}>
+                        <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '10px', fontWeight: 700, color: 'var(--pp-orange-dark)' }}>{s.n}</span>
+                      </div>
+                      <div style={{ paddingTop: '4px' }}>
+                        <div style={{ fontFamily: 'var(--pp-display)', fontWeight: 700, fontSize: '16px', color: 'var(--pp-ink)' }}>{s.t}</div>
+                        <p style={{ marginTop: '4px', fontSize: '14.5px', lineHeight: 1.55, color: 'var(--pp-body)' }}>{s.d}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Proof */}
-        <section className="pp-sec tint">
+        {/* ── Portfolio ── */}
+        <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">// select client work</p>
             <h2 style={{ marginTop: '10px' }}>Wholesale ordering, online</h2>
-            <div style={{ marginTop: '28px', display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: '16px' }} className="pp-bento">
-              <article style={{ border: '1px solid var(--pp-line)', borderRadius: '18px', padding: '24px', background: '#fff' }}>
-                <div style={{ fontFamily: 'var(--pp-mono)', fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.06em', color: 'var(--pp-orange-dark)' }}>Bombay Petals · B2B</div>
-                <p className="pp-lead" style={{ marginTop: '12px', fontSize: '15.5px' }}>A B2B commerce build for an artificial-plants and decor wholesaler, so trade buyers place and repeat orders online with tiered pricing, instead of over email and phone.</p>
-                <div style={{ marginTop: '16px', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                  {['B2B / wholesale', 'Trade reordering', 'Tiered pricing'].map((t) => (<span key={t} style={{ borderRadius: '999px', background: '#F4EEE9', padding: '4px 12px', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: '#5C564F' }}>{t}</span>))}
+            <div style={{ marginTop: '28px', display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: '16px' }}>
+              {/* Bombay Petals */}
+              <article style={{ border: '1px solid var(--pp-line)', borderRadius: '18px', overflow: 'hidden', background: '#fff' }}>
+                <div style={{ position: 'relative', height: '220px', overflow: 'hidden' }}>
+                  <Image
+                    src="/images/portfolio/bombay-petals-480.webp"
+                    alt="Bombay Petals B2B wholesale ecommerce store built by FactoryJet"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    sizes="(max-width: 860px) 100vw, 50vw"
+                  />
+                </div>
+                <div style={{ padding: '24px' }}>
+                  <div style={{ fontFamily: 'var(--pp-mono)', fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.06em', color: 'var(--pp-orange-dark)' }}>Bombay Petals · B2B</div>
+                  <p className="pp-lead" style={{ marginTop: '10px', fontSize: '15px' }}>A B2B commerce build for an artificial-plants and decor wholesaler, so trade buyers place and repeat orders online with tiered pricing, instead of over email and phone.</p>
+                  <div style={{ marginTop: '14px', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                    {['B2B / wholesale', 'Trade reordering', 'Tiered pricing'].map((t) => (
+                      <span key={t} style={{ borderRadius: '999px', background: '#F4EEE9', padding: '4px 12px', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: '#5C564F' }}>{t}</span>
+                    ))}
+                  </div>
                 </div>
               </article>
-              <article style={{ border: '1px solid var(--pp-line)', borderRadius: '18px', padding: '24px', background: '#fff' }}>
-                <div style={{ fontFamily: 'var(--pp-mono)', fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.06em', color: 'var(--pp-orange-dark)' }}>Belle Maison · DTC</div>
-                <p className="pp-lead" style={{ marginTop: '12px', fontSize: '15.5px' }}>A direct-to-consumer storefront for an artificial plants and flowers brand, built to convert shoppers and scale its catalog across channels, ready to add a B2B portal on the same system.</p>
-                <div style={{ marginTop: '16px', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                  {['DTC', 'Storefront build', 'Multi-channel ready'].map((t) => (<span key={t} style={{ borderRadius: '999px', background: '#F4EEE9', padding: '4px 12px', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: '#5C564F' }}>{t}</span>))}
+              {/* Belle Maison */}
+              <article style={{ border: '1px solid var(--pp-line)', borderRadius: '18px', overflow: 'hidden', background: '#fff' }}>
+                <div style={{ position: 'relative', height: '220px', overflow: 'hidden' }}>
+                  <Image
+                    src="/images/portfolio/belle-maison-480.webp"
+                    alt="Belle Maison DTC ecommerce storefront built by FactoryJet, ready to add B2B on the same system"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    sizes="(max-width: 860px) 100vw, 50vw"
+                  />
+                </div>
+                <div style={{ padding: '24px' }}>
+                  <div style={{ fontFamily: 'var(--pp-mono)', fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.06em', color: 'var(--pp-orange-dark)' }}>Belle Maison · DTC</div>
+                  <p className="pp-lead" style={{ marginTop: '10px', fontSize: '15px' }}>A direct-to-consumer storefront for an artificial plants and flowers brand, built to convert shoppers and scale its catalog across channels, ready to add a B2B portal on the same system.</p>
+                  <div style={{ marginTop: '14px', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                    {['DTC', 'Storefront build', 'Multi-channel ready'].map((t) => (
+                      <span key={t} style={{ borderRadius: '999px', background: '#F4EEE9', padding: '4px 12px', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: '#5C564F' }}>{t}</span>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Testimonials ── */}
+        <section className="pp-sec tint">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">// what clients say</p>
+            <h2 style={{ marginTop: '10px' }}>From the brands we have built for</h2>
+            <div style={{ marginTop: '32px', display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: '16px' }}>
+              {/* Ricky B */}
+              <article style={{ border: '1px solid var(--pp-line)', borderRadius: '18px', padding: '28px', background: '#fff' }}>
+                <div style={{ display: 'flex', gap: '4px', marginBottom: '16px', color: '#F05A28', fontSize: '16px' }} aria-label="5 out of 5 stars">
+                  {'★★★★★'}
+                </div>
+                <p style={{ fontSize: '15.5px', lineHeight: 1.65, color: 'var(--pp-ink)', fontStyle: 'italic' }}>
+                  &ldquo;FactoryJet took our product catalog and turned it into a store that actually converts. We went from a
+                  basic site to a proper DTC experience in a fraction of what US agencies quoted us.&rdquo;
+                </p>
+                <div style={{ marginTop: '20px', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <div style={{ position: 'relative', width: '44px', height: '44px', borderRadius: '50%', overflow: 'hidden', flexShrink: 0 }}>
+                    <Image
+                      src="/images/testimonials/ricky-belle-maison-160.webp"
+                      alt="Ricky B, Belle Maison"
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      sizes="44px"
+                    />
+                  </div>
+                  <div>
+                    <div style={{ fontFamily: 'var(--pp-display)', fontWeight: 700, fontSize: '14px', color: 'var(--pp-ink)' }}>Ricky B.</div>
+                    <div style={{ fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-muted)' }}>Founder, Belle Maison · Artificial Plants &amp; Flowers · US</div>
+                  </div>
+                </div>
+              </article>
+              {/* Vishal K */}
+              <article style={{ border: '1px solid var(--pp-line)', borderRadius: '18px', padding: '28px', background: '#fff' }}>
+                <div style={{ display: 'flex', gap: '4px', marginBottom: '16px', color: '#F05A28', fontSize: '16px' }} aria-label="5 out of 5 stars">
+                  {'★★★★★'}
+                </div>
+                <p style={{ fontSize: '15.5px', lineHeight: 1.65, color: 'var(--pp-ink)', fontStyle: 'italic' }}>
+                  &ldquo;Our trade buyers can now log in, see their prices, and reorder in minutes. The wholesale portal replaced
+                  our email-and-phone process entirely. Our sales team spends time selling, not taking orders.&rdquo;
+                </p>
+                <div style={{ marginTop: '20px', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <div style={{ position: 'relative', width: '44px', height: '44px', borderRadius: '50%', overflow: 'hidden', flexShrink: 0 }}>
+                    <Image
+                      src="/images/testimonials/vishal-impulse-branding-160.webp"
+                      alt="Vishal K, Bombay Petals"
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      sizes="44px"
+                    />
+                  </div>
+                  <div>
+                    <div style={{ fontFamily: 'var(--pp-display)', fontWeight: 700, fontSize: '14px', color: 'var(--pp-ink)' }}>Vishal K.</div>
+                    <div style={{ fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-muted)' }}>Director, Bombay Petals · B2B Decor &amp; Wholesale · India/US</div>
+                  </div>
                 </div>
               </article>
             </div>
@@ -392,27 +587,59 @@ export default function B2BEcommercePage() {
           items={FAQ_ITEMS}
         />
 
-        {/* CTA */}
-        <section className="pp-sec tint">
-          <div className="pp-wrap">
-            <h2 style={{ maxWidth: '22ch' }}>Give your trade buyers a store worth logging into.</h2>
-            <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '60ch' }}>
-              Tell us how your buyers order today. We will map your pricing, accounts, and ERP into one B2B ecommerce
-              platform and send a fixed proposal before any work starts.
-            </p>
-            <div style={{ marginTop: '28px', display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
-              <a href={CALENDLY} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderRadius: '13px', background: 'var(--pp-orange)', padding: '14px 24px', fontSize: '15px', fontWeight: 600, color: '#fff', textDecoration: 'none' }}>Talk to the Founder</a>
-              <ModalCTAButton label="Get a B2B commerce audit" region="us" btnVariant="secondary-light" />
+        {/* ── CTA — 2 col with proof card ── */}
+        <section className="pp-sec tint" id="final-cta">
+          <div className="pp-wrap" style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'start' }}>
+            {/* Left: copy + buttons */}
+            <div>
+              <h2 style={{ maxWidth: '22ch' }}>Give your trade buyers a store worth logging into.</h2>
+              <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '52ch' }}>
+                Tell us how your buyers order today. We will map your pricing, accounts, and ERP into one B2B ecommerce
+                platform and send a fixed proposal before any work starts.
+              </p>
+              <div style={{ marginTop: '28px', display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+                <a
+                  href={CALENDLY}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderRadius: '13px', background: 'var(--pp-orange)', padding: '14px 24px', fontSize: '15px', fontWeight: 600, color: '#fff', textDecoration: 'none' }}
+                >
+                  Talk to the Founder
+                </a>
+                <ModalCTAButton label="Get a B2B commerce audit" region="us" btnVariant="secondary-light" />
+              </div>
+              <p style={{ marginTop: '28px', fontSize: '14px', color: 'var(--pp-muted)' }}>
+                Related:{' '}
+                <Link href="/us/services/ecommerce-development" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>e-commerce development</Link>,{' '}
+                <Link href="/us/services/magento-development" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>Adobe Commerce / Magento</Link>,{' '}
+                <Link href="/us/bigcommerce-development" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>BigCommerce</Link>, and{' '}
+                <Link href="/us/omnichannel-commerce" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>omnichannel commerce</Link>.
+              </p>
             </div>
-            <p style={{ marginTop: '28px', fontSize: '14px', color: 'var(--pp-muted)' }}>
-              Related:{' '}
-              <Link href="/us/services/ecommerce-development" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>e-commerce development</Link>,{' '}
-              <Link href="/us/services/magento-development" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>Adobe Commerce / Magento</Link>,{' '}
-              <Link href="/us/bigcommerce-development" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>BigCommerce</Link>, and{' '}
-              <Link href="/us/omnichannel-commerce" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>omnichannel commerce</Link>.
-            </p>
+            {/* Right: proof card */}
+            <div style={{ border: '1px solid var(--pp-line)', borderRadius: '20px', padding: '28px', background: '#fff', boxShadow: '0 12px 32px -16px rgba(20,17,15,0.18)' }}>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px' }}>
+                <span style={{ fontFamily: 'var(--pp-display)', fontWeight: 800, fontSize: '48px', lineHeight: 1, letterSpacing: '-0.04em', color: 'var(--pp-ink)' }}>4.9</span>
+                <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '13px', color: 'var(--pp-muted)' }}>/ 5</span>
+              </div>
+              <div style={{ marginTop: '6px', color: '#F05A28', fontSize: '18px', letterSpacing: '2px' }}>★★★★★</div>
+              <p style={{ marginTop: '6px', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-muted)' }}>Average across 150+ client projects, DTC and B2B</p>
+              <div style={{ margin: '20px 0', borderTop: '1px solid var(--pp-line)' }} />
+              {[
+                'Fixed proposal — no hourly billing surprises',
+                'You own the code and the system, not a subscription',
+                'Platform-agnostic — we recommend fit, not the most expensive option',
+                'Decade-plus building commerce: DTC, B2B, and unified',
+              ].map((item) => (
+                <div key={item} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start', marginBottom: '12px' }}>
+                  <div style={{ flex: 'none', marginTop: '2px', width: '18px', height: '18px', borderRadius: '50%', background: 'rgba(240,90,40,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--pp-orange-dark)' }}>{checkIcon}</div>
+                  <span style={{ fontSize: '14px', lineHeight: 1.5, color: 'var(--pp-body)' }}>{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
+
       </main>
 
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
