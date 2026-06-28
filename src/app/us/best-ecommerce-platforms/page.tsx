@@ -751,7 +751,7 @@ export default function BestEcommercePlatformsPage() {
                   ecommerce platform and send a fixed proposal before any work starts.
                 </p>
                 <div style={{ marginTop: '26px', display: 'flex', flexWrap: 'wrap', gap: '10px', alignItems: 'center' }}>
-                  <ModalCTAButton region="us" btnVariant="secondary-light">Talk to the Founder</ModalCTAButton>
+                  <ModalCTAButton region="us" btnVariant="secondary-light" label="Talk to the Founder" />
                   <a
                     href={CALENDLY}
                     target="_blank"
