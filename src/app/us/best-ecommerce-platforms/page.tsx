@@ -815,7 +815,7 @@ export default function BestEcommercePlatformsPage() {
 
       </main>
 
-      <SiteFooter columns={US_FOOTER_COLUMNS} />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }
