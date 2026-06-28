@@ -729,12 +729,13 @@ export default function BestEcommercePlatformsPage() {
         {/* ── FAQ ── */}
         <section className="pp-sec tint" style={{ background: 'var(--pp-cream)', borderTop: '1px solid var(--pp-line)', borderBottom: '1px solid var(--pp-line)' }}>
           <div className="pp-wrap">
-            <p className="pp-mlabel" style={{ color: 'var(--pp-orange-dark)' }}>// ecommerce platforms FAQ</p>
-            <h2 style={{ marginTop: '14px', maxWidth: '640px' }}>Questions before you choose</h2>
-            <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '560px' }}>
-              If your question is not here, send a short brief and we usually come back within 24 hours.
-            </p>
-            <FAQ categories={FAQ_CATEGORIES} items={FAQ_ITEMS} />
+            <FAQ
+              eyebrow="ECOMMERCE PLATFORMS FAQ"
+              headline="Questions before you choose."
+              lead="If your question is not below, send a short brief and we usually come back within 24 hours."
+              categories={FAQ_CATEGORIES}
+              items={FAQ_ITEMS}
+            />
           </div>
         </section>
 
