@@ -784,7 +784,7 @@ export default function BestEcommercePlatformsPage() {
                     <span style={{ fontSize: '12px', color: 'var(--pp-muted)' }}>Belle Maison</span>
                   </div>
                 </div>
-                <blockquote style={{ fontStyle: 'italic', fontSize: '14px', lineHeight: 1.6, color: 'var(--pp-body)', borderLeft: '2px solid var(--pp-orange)', paddingLeft: '12px', marginBottom: '16px', border: 'none', borderLeft: '2px solid var(--pp-orange)' }}>
+                <blockquote style={{ fontStyle: 'italic', fontSize: '14px', lineHeight: 1.6, color: 'var(--pp-body)', border: 'none', borderLeft: '2px solid var(--pp-orange)', paddingLeft: '12px', marginBottom: '16px' }}>
                   "We were live in just 6 days. New inquiries come in every day, and the site is still really fast."
                 </blockquote>
                 <div style={{ borderTop: '1px solid var(--pp-line)', paddingTop: '14px', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', color: 'var(--pp-muted)' }}>
