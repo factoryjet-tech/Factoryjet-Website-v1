@@ -472,8 +472,8 @@ export default function CharlotteSeoPage() {
         region="us"
         source="exit_intent_charlotte_seo"
         heading="Claim your free SEO audit"
-        subheading="Map Pack, local & technical SEO — just name and email."
-        promo="Free Charlotte SEO audit — no obligation"
+        subheading="Map Pack, local and technical SEO. Just your name and email."
+        promo="Free Charlotte SEO audit, no obligation"
       />
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>

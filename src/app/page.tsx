@@ -199,7 +199,7 @@ export default function USHomePage() {
         region="us"
         source="exit_intent_us_home"
         heading="Get a free commerce audit"
-        subheading="We will map your channels, catalog, and B2B into one system — just name and email."
+        subheading="We will map your channels, catalog, and B2B into one system. Just your name and email."
         promo="Free commerce audit, no cost, no obligation"
       />
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />

@@ -272,8 +272,8 @@ export default function CharlotteWebDesignPage() {
         region="us"
         source="exit_intent_charlotte_web_design"
         heading="Claim your free website audit"
-        subheading="Expert analysis of your SEO, speed & UX — just name and email."
-        promo="Free website audit — no cost, no obligation"
+        subheading="Expert analysis of your SEO, speed and UX. Just your name and email."
+        promo="Free website audit, no cost, no obligation"
       />
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
