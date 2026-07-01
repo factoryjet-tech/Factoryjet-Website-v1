@@ -208,6 +208,8 @@ const schema = {
 export default function Page() {
   return (
     <>
+      {/* JetBrains Mono — used by the TechStack section on this page */}
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" />
       <Script
         id="liverpool-schema"
         type="application/ld+json"

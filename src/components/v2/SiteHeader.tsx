@@ -39,7 +39,7 @@ import type { ModalRegion } from '../../context/ContactModalContext';
 
 // ─── Locale type ──────────────────────────────────────────────────────────────
 
-export type SiteHeaderLocale = 'us' | 'in' | 'uae';
+export type SiteHeaderLocale = 'us' | 'gb' | 'in' | 'uae';
 
 // ─── US nav data ──────────────────────────────────────────────────────────────
 
@@ -146,6 +146,77 @@ const US_KNOWLEDGE_HUB = [
   { icon: FileText,      label: 'Case Studies',        href: '/case-studies',     desc: 'Real results from real clients' },
   { icon: LayoutTemplate,label: 'Portfolio',           href: '/portfolio',     desc: 'Browse our work' },
   { icon: Search,        label: 'FAQ',                 href: '/faq',           desc: 'Common questions answered' },
+] as const;
+
+// ─── UK (GB) nav data ─────────────────────────────────────────────────────────
+// FactoryJet UK is positioned as an e-commerce-development company first: every
+// commerce platform (Shopify/Plus, WooCommerce, Magento/Adobe Commerce,
+// BigCommerce, headless, Commerceflo) + AI Agent Development, AI SEO, Web Design.
+// Mirrors the US commerce menu. Links point to UK pages where they exist today
+// (/uk/shopify-development, /uk/shopify-seo, /uk/ecommerce-seo, /uk/{city}); the
+// rest use the global commerce/service pages until UK versions ship.
+
+const GB_SOLUTIONS = [
+  { icon: Layers,        label: 'Omnichannel Commerce',      href: '/omnichannel-commerce',           desc: 'One catalog, inventory & order engine' },
+  { icon: Store,         label: 'B2B E-Commerce',            href: '/b2b-ecommerce',                  desc: 'Portals, tiered pricing, net terms' },
+  { icon: ShoppingCart,  label: 'E-Commerce Development',    href: '/services/ecommerce-development',  desc: 'End-to-end online stores' },
+  { icon: Bot,           label: 'Commerce AI Agents',        href: '/services/ai-agents',             desc: 'Agents that list, price & sync' },
+  { icon: TrendingUp,    label: 'Commerce SEO & Visibility', href: '/uk/ecommerce-seo',               desc: 'Google, AI answers & marketplaces' },
+  { icon: Search,        label: 'E-Commerce Consulting',     href: '/ecommerce-consulting',           desc: 'Platform, migration & scope' },
+] as const;
+
+const GB_PLATFORMS = [
+  { icon: ShoppingBag,  label: 'Shopify & Shopify Plus',   href: '/uk/shopify-development',           desc: 'DTC + B2B on one store' },
+  { icon: Store,        label: 'Adobe Commerce (Magento)', href: '/services/magento-development',     desc: 'Deep B2B, large catalogs' },
+  { icon: FileCode,     label: 'WooCommerce',              href: '/services/woocommerce-development', desc: 'WordPress commerce' },
+  { icon: Layers,       label: 'BigCommerce',              href: '/bigcommerce-development',          desc: 'Mid-market B2B value' },
+  { icon: Code,         label: 'Headless / composable',    href: '/headless-commerce',               desc: 'Custom front end, any backend' },
+  { icon: Zap,          label: 'Commerceflo',              href: '/commerceflo',                     desc: 'Unified commerce engine' },
+] as const;
+
+const GB_SUPPORT_SERVICES = [
+  { icon: Globe,      label: 'Web Design',          href: '/uk/web-design',                       desc: 'Conversion-focused sites' },
+  { icon: RefreshCw,  label: 'Website Redesign',    href: '/services/website-redesign',           desc: 'Modernize your existing site' },
+  { icon: FileCode,   label: 'WordPress',           href: '/services/wordpress-development',       desc: 'Custom WP sites & plugins' },
+  { icon: Code,       label: 'Web App Development',  href: '/services/web-application-development', desc: 'Complex web apps' },
+  { icon: TrendingUp, label: 'Shopify SEO',         href: '/uk/shopify-seo',                       desc: 'Rank your Shopify store' },
+  { icon: ShoppingCart,label: 'Ecommerce SEO',      href: '/uk/ecommerce-seo',                     desc: 'Product & collection SEO' },
+  { icon: Sparkles,   label: 'AI SEO',              href: '/services/ai-seo',                      desc: 'Get cited in AI answers' },
+  { icon: Zap,        label: 'AI Automation',       href: '/services/ai-automation',               desc: 'Eliminate repetitive work' },
+] as const;
+
+const GB_WHO_WE_SERVE_TYPES = [
+  { label: 'DTC & E-Commerce Brands',       href: '/uk',                  desc: 'Sell across every channel' },
+  { label: 'B2B, Wholesale & Distributors', href: '/b2b-ecommerce',       desc: 'Trade portals & account pricing' },
+  { label: 'Marketplace Sellers',           href: '/uk/ecommerce-seo',    desc: 'Amazon, eBay, TikTok Shop' },
+  { label: 'Brands Replatforming',          href: '/ecommerce-consulting',desc: 'Migrate without losing SEO' },
+] as const;
+
+const GB_WHO_WE_SERVE_NEEDS = [
+  { label: 'I sell on multiple channels', href: '/omnichannel-commerce', sub: 'Omnichannel commerce' },
+  { label: 'I need a B2B store',          href: '/b2b-ecommerce',        sub: 'B2B e-commerce' },
+  { label: 'I want to migrate platforms', href: '/ecommerce-consulting', sub: 'Replatforming' },
+  { label: 'I want AI in my commerce',    href: '/services/ai-agents',   sub: 'Commerce AI agents' },
+] as const;
+
+const GB_KNOWLEDGE_HUB = [
+  { icon: BookOpen,      label: 'Blog',        href: '/blog',         desc: 'Expert insights & guides' },
+  { icon: FileText,      label: 'Case Studies', href: '/case-studies', desc: 'Real results from real clients' },
+  { icon: LayoutTemplate,label: 'Portfolio',    href: '/portfolio',    desc: 'Browse our work' },
+  { icon: Search,        label: 'FAQ',          href: '/faq',          desc: 'Common questions answered' },
+] as const;
+
+const GB_LOCATIONS = [
+  { label: 'London',     state: 'ENG', href: '/uk/london' },
+  { label: 'Manchester', state: 'ENG', href: '/uk/manchester' },
+  { label: 'Birmingham', state: 'ENG', href: '/uk/birmingham' },
+  { label: 'Leeds',      state: 'ENG', href: '/uk/leeds' },
+  { label: 'Liverpool',  state: 'ENG', href: '/uk/liverpool' },
+  { label: 'Sheffield',  state: 'ENG', href: '/uk/sheffield' },
+  { label: 'Bristol',    state: 'ENG', href: '/uk/bristol' },
+  { label: 'Edinburgh',  state: 'SCO', href: '/uk/edinburgh' },
+  { label: 'Glasgow',    state: 'SCO', href: '/uk/glasgow' },
+  { label: 'Cardiff',    state: 'WAL', href: '/uk/cardiff' },
 ] as const;
 
 // ─── India nav data ───────────────────────────────────────────────────────────
@@ -270,6 +341,22 @@ const LOCALE_CONFIG = {
     modalRegion:     'us' as ModalRegion,
     defaultCtaLabel: 'Talk to the Founder',
   },
+  gb: {
+    webServices:     GB_SUPPORT_SERVICES,
+    aiServices:      US_AI_SERVICES,
+    locations:       GB_LOCATIONS,
+    locationsLabel:  'UK Cities We Serve',
+    portfolioHref:   '/portfolio',
+    pricingHref:     '/pricing',
+    aboutHref:       '/about',
+    featuredHeadline:'One system, every channel',
+    featuredBody:    'One catalog, one inventory, and one order engine across your store, marketplaces, and B2B.',
+    featuredStats:   ['DTC + B2B on one system', 'A decade-plus building commerce', 'You own what we build'],
+    featuredCtaLabel:'Explore commerce solutions',
+    featuredCtaHref: '/omnichannel-commerce',
+    modalRegion:     'uk' as ModalRegion,
+    defaultCtaLabel: 'Talk to the Founder',
+  },
   in: {
     webServices:     IN_WEB_SERVICES,
     aiServices:      IN_AI_AGENTS,
@@ -372,6 +459,17 @@ export default function SiteHeader({
   const { openModal } = useContactModal();
   const cfg = LOCALE_CONFIG[locale];
 
+  // Commerce-first locales (US + UK) share the Solutions/Platforms/Services/
+  // Who-we-serve/Company mega structure. Non-commerce locales (India/UAE) keep
+  // the simpler Services + Locations layout.
+  const isCommerce = locale === 'us' || locale === 'gb';
+  const SOLUTIONS   = locale === 'gb' ? GB_SOLUTIONS          : US_SOLUTIONS;
+  const PLATFORMS   = locale === 'gb' ? GB_PLATFORMS          : US_PLATFORMS;
+  const SUPPORT     = locale === 'gb' ? GB_SUPPORT_SERVICES   : US_SUPPORT_SERVICES;
+  const WHO_TYPES   = locale === 'gb' ? GB_WHO_WE_SERVE_TYPES : US_WHO_WE_SERVE_TYPES;
+  const WHO_NEEDS   = locale === 'gb' ? GB_WHO_WE_SERVE_NEEDS : US_WHO_WE_SERVE_NEEDS;
+  const KNOW_HUB    = locale === 'gb' ? GB_KNOWLEDGE_HUB      : US_KNOWLEDGE_HUB;
+
   const [openDropdown, setOpenDropdown] = useState<'solutions' | 'platforms' | 'services' | 'whoweserve' | 'locations' | 'knowhub' | 'resources' | 'company' | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
@@ -444,7 +542,7 @@ export default function SiteHeader({
             <nav aria-label="Primary" className="hidden items-center gap-0.5 md:flex">
 
               {/* Services trigger + mega-dropdown (India / UAE only — US uses commerce menus below) */}
-              {locale !== 'us' && (
+              {!isCommerce && (
               <div
                 className="relative"
                 onMouseEnter={() => openDrop('services')}
@@ -721,7 +819,7 @@ export default function SiteHeader({
               )}
 
               {/* ── US commerce menus: Solutions · Platforms · Services ── */}
-              {locale === 'us' && (
+              {isCommerce && (
                 <>
                   {/* Solutions */}
                   <div className="relative" onMouseEnter={() => openDrop('solutions')} onMouseLeave={scheduleClosed}>
@@ -735,13 +833,13 @@ export default function SiteHeader({
                           <div className="grid grid-cols-[1fr_1fr_220px]">
                             <div className="p-4">
                               <p className="mb-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">Commerce solutions</p>
-                              {US_SOLUTIONS.slice(0, 3).map((s) => (
+                              {SOLUTIONS.slice(0, 3).map((s) => (
                                 <ServiceCard key={s.href} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
                               ))}
                             </div>
                             <div className="border-l border-fj-neutral-100 p-4">
                               <p className="mb-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">&nbsp;</p>
-                              {US_SOLUTIONS.slice(3).map((s) => (
+                              {SOLUTIONS.slice(3).map((s) => (
                                 <ServiceCard key={s.href} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
                               ))}
                             </div>
@@ -784,7 +882,7 @@ export default function SiteHeader({
                           <div className="p-4">
                             <p className="mb-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">Platforms we build on</p>
                             <div className="grid grid-cols-2 gap-x-2">
-                              {US_PLATFORMS.map((s) => (
+                              {PLATFORMS.map((s) => (
                                 <ServiceCard key={s.label} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
                               ))}
                             </div>
@@ -806,7 +904,7 @@ export default function SiteHeader({
                           <div className="p-4">
                             <p className="mb-2 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">Supporting services</p>
                             <div className="grid grid-cols-2 gap-x-2">
-                              {US_SUPPORT_SERVICES.map((s) => (
+                              {SUPPORT.map((s) => (
                                 <ServiceCard key={s.label} icon={s.icon} label={s.label} href={s.href} desc={s.desc} />
                               ))}
                             </div>
@@ -819,7 +917,7 @@ export default function SiteHeader({
               )}
 
               {/* Who We Serve trigger — US only */}
-              {locale === 'us' && (
+              {isCommerce && (
                 <div
                   className="relative"
                   onMouseEnter={() => openDrop('whoweserve')}
@@ -853,7 +951,7 @@ export default function SiteHeader({
                           <div className="p-5">
                             <p className="mb-3 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">By business type</p>
                             <div className="space-y-0.5">
-                              {US_WHO_WE_SERVE_TYPES.map((item) => (
+                              {WHO_TYPES.map((item) => (
                                 <Link
                                   key={item.href}
                                   href={item.href}
@@ -874,7 +972,7 @@ export default function SiteHeader({
                           <div className="border-l border-fj-neutral-100 p-5">
                             <p className="mb-3 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-fj-neutral-400">By what you need</p>
                             <div className="space-y-1">
-                              {US_WHO_WE_SERVE_NEEDS.map((item) => (
+                              {WHO_NEEDS.map((item) => (
                                 <Link
                                   key={item.href}
                                   href={item.href}
@@ -918,7 +1016,7 @@ export default function SiteHeader({
               )}
 
               {/* Locations trigger + dropdown — India / UAE only on desktop */}
-              {locale !== 'us' && (
+              {!isCommerce && (
               <div
                 className="relative"
                 onMouseEnter={() => openDrop('locations')}
@@ -1059,7 +1157,7 @@ export default function SiteHeader({
               )}
 
               {/* Knowledge Hub (US) / Resources (India + UAE) trigger + dropdown */}
-              {locale === 'us' ? (
+              {isCommerce ? (
                 <div
                   className="relative"
                   onMouseEnter={() => openDrop('knowhub')}
@@ -1091,7 +1189,7 @@ export default function SiteHeader({
                           Resources
                         </p>
                         <div className="space-y-0.5">
-                          {US_KNOWLEDGE_HUB.map((r) => (
+                          {KNOW_HUB.map((r) => (
                             <ServiceCard key={r.href} icon={r.icon} label={r.label} href={r.href} desc={r.desc} />
                           ))}
                         </div>
@@ -1142,7 +1240,7 @@ export default function SiteHeader({
               )}
 
               {/* Company dropdown (US) / flat nav links (India + UAE) */}
-              {locale === 'us' ? (
+              {isCommerce ? (
                 <div
                   className="relative"
                   onMouseEnter={() => openDrop('company')}
@@ -1365,24 +1463,24 @@ export default function SiteHeader({
                 ) : (
                   /* US mobile services — commerce first */
                   <>
-                    <p className="mb-1 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">{locale === 'us' ? 'Commerce solutions' : 'Web Services'}</p>
-                    {(locale === 'us' ? US_SOLUTIONS : cfg.webServices).map((s) => (
+                    <p className="mb-1 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">{isCommerce ? 'Commerce solutions' : 'Web Services'}</p>
+                    {(isCommerce ? SOLUTIONS : cfg.webServices).map((s) => (
                       <Link key={s.href} href={s.href} onClick={() => setMobileOpen(false)} className="flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]">
                         <s.icon size={14} strokeWidth={1.8} className="flex-shrink-0 text-[#F05A28]" />
                         {s.label}
                       </Link>
                     ))}
-                    {locale === 'us' && (
+                    {isCommerce && (
                       <>
                         <p className="mb-1 mt-3 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">Platforms</p>
-                        {US_PLATFORMS.map((s) => (
+                        {PLATFORMS.map((s) => (
                           <Link key={s.label} href={s.href} onClick={() => setMobileOpen(false)} className="flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]">
                             <s.icon size={14} strokeWidth={1.8} className="flex-shrink-0 text-[#F05A28]" />
                             {s.label}
                           </Link>
                         ))}
                         <p className="mb-1 mt-3 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">Services</p>
-                        {US_SUPPORT_SERVICES.map((s) => (
+                        {SUPPORT.map((s) => (
                           <Link key={s.label} href={s.href} onClick={() => setMobileOpen(false)} className="flex items-center gap-3 rounded-lg px-1 py-2.5 font-fj-body text-[14px] text-fj-ink transition-colors hover:bg-[#F05A28]/5 hover:text-[#F05A28]">
                             <s.icon size={14} strokeWidth={1.8} className="flex-shrink-0 text-[#F05A28]" />
                             {s.label}
@@ -1390,7 +1488,7 @@ export default function SiteHeader({
                         ))}
                       </>
                     )}
-                    {locale !== 'us' && (
+                    {!isCommerce && (
                       <>
                         <p className="mb-1 mt-3 px-1 font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">AI Services</p>
                         {cfg.aiServices.map((s) => (
@@ -1457,7 +1555,7 @@ export default function SiteHeader({
             </button>
             {mobileResourcesOpen && (
               <div className="pb-3">
-                {(locale === 'us' ? US_KNOWLEDGE_HUB : RESOURCES).map((r) => (
+                {(isCommerce ? KNOW_HUB : RESOURCES).map((r) => (
                   <Link
                     key={r.href}
                     href={r.href}
@@ -1480,7 +1578,7 @@ export default function SiteHeader({
           >
             About
           </Link>
-          {locale !== 'us' && (
+          {!isCommerce && (
             <Link
               href={cfg.portfolioHref}
               onClick={() => setMobileOpen(false)}
@@ -1496,7 +1594,7 @@ export default function SiteHeader({
           >
             Pricing
           </Link>
-          {locale === 'us' && (
+          {isCommerce && (
             <Link
               href="/contact"
               onClick={() => setMobileOpen(false)}

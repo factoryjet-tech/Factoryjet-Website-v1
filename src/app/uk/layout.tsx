@@ -1,6 +1,6 @@
 import type { Viewport } from "next";
 import { ukMetadata, ukViewport } from "./metadata";
-import Header from "./components/Header";
+import SiteHeader from "@/components/v2/SiteHeader";
 
 export const metadata = ukMetadata;
 export const viewport: Viewport = ukViewport;
@@ -12,24 +12,14 @@ export default function UKLayout({
 }) {
   return (
     <>
-      {/* ── Header ─────────────────────────────────────────────────────── */}
-      <Header />
+      {/* ── Header (US-style commerce mega-nav, UK locale) ─────────────── */}
+      <SiteHeader locale="gb" logoHref="/uk" />
 
-      {/* ── LCP image preload ──────────────────────────────────────────── */}
-      <link
-        rel="preload"
-        as="image"
-        type="image/webp"
-        href="/images/uk/hero-uk.webp"
-        fetchPriority="high"
-      />
-
-      {/* ── JetBrains Mono (TechStack component) ───────────────────────── */}
-      {/* Fontshare + Inter are already loaded by the root layout <head>.  */}
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
-      />
+      {/* Performance: the hero-image preload and JetBrains Mono webfont are
+          NOT loaded here. They are only needed by the UK homepage hero and the
+          TechStack section, so they are loaded on those pages/components alone.
+          Keeping the shared layout lean lets the service and city pages (which
+          use neither) hit 100/100 without loading unused bytes. */}
 
       {/* Skip-link style only — Clash fallback metrics are in src/index.css */}
       <style>{`
