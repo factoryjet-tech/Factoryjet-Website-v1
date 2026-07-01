@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Web Design Sheffield | AI Websites in 7 Days | FactoryJet",
   description:
-    "Professional web design Sheffield. Custom AI-powered websites for Sheffield SMBs built in 7 days. From £799. No lock-ins. Serving Kelham Island to the city centre.",
+    "Professional web design Sheffield. Custom AI-powered websites for Sheffield SMBs built in 7 days. Fixed pricing, quoted up front. No lock-ins. Serving Kelham Island to the city centre.",
   keywords: [
     "web design sheffield",
     "website design sheffield",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Web Design Sheffield | AI Websites in 7 Days | FactoryJet",
     description:
-      "Professional web design Sheffield. Custom AI-powered websites for Sheffield SMBs built in 7 days. From £799. No lock-ins.",
+      "Professional web design Sheffield. Custom AI-powered websites for Sheffield SMBs built in 7 days. Fixed pricing, quoted up front. No lock-ins.",
     url: "https://factoryjet.com/uk/sheffield",
     siteName: "FactoryJet",
     locale: "en_GB",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Web Design Sheffield | AI Websites in 7 Days | FactoryJet",
     description:
-      "Professional web design Sheffield. Custom AI-powered websites for Sheffield SMBs built in 7 days. From £799. No lock-ins.",
+      "Professional web design Sheffield. Custom AI-powered websites for Sheffield SMBs built in 7 days. Fixed pricing, quoted up front. No lock-ins.",
   },
   robots: { index: true, follow: true },
 };
@@ -184,7 +184,7 @@ const faqSchema = {
       name: "Can you add an AI chatbot to an existing Sheffield website?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We can integrate our AI chatbot into any existing website — not just ones we've built. A chatbot integration typically takes 1–2 days and starts from £299.",
+        text: "Yes. We can integrate our AI chatbot into any existing website — not just ones we've built. A chatbot integration typically takes 1–2 days and is quoted up front after a quick scoping call.",
       },
     },
   ],

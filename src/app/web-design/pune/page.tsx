@@ -28,7 +28,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'Web Design Company in Pune | | FactoryJet',
   description:
-    'Web design company in Pune for IT, auto-tier suppliers, education & D2C brands. Fast websites from ₹25,000. 7-day delivery. Serving Hinjewadi, Koregaon Park & Baner.',
+    'Web design company in Pune for IT, auto-tier suppliers, education & D2C brands. Fast, custom websites with a 7-day delivery guarantee. Serving Hinjewadi, Koregaon Park & Baner.',
   keywords: [
     'web design company in pune',
     'website development company in pune',
@@ -134,7 +134,7 @@ const faqSchema = {
       name: 'How much does a website cost for a small business in Pune?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet's web design for Pune businesses starts at ₹25,000 for a 5-page Starter site. The Growth tier (₹50,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds with e-commerce, dealer portals, or AI integrations start at ₹1,00,000. Pune agency rates for comparable scope typically run ₹75,000–₹3,00,000 — often without a published timeline or a codebase you own outright.",
+        text: "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
       },
     },
     {
@@ -188,7 +188,6 @@ const howToSchema = {
   '@id': 'https://factoryjet.com/web-design/pune#howto',
   name: 'How FactoryJet builds your Pune website in 7 days',
   description: 'Our 7-day process for delivering a professional, AI-powered website for Pune businesses.',
-  estimatedCost: { '@type': 'MonetaryAmount', currency: 'INR', minValue: '25000' },
   totalTime: 'P7D',
   step: [
     { '@type': 'HowToStep', position: 1, name: 'Day 1 — Discovery Call', text: 'We learn your business, your Pune market, your goals, and what you need the website to do.' },
@@ -258,7 +257,7 @@ const PUNE_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a website cost for a small business in Pune?',
     answer:
-      "FactoryJet's web design for Pune businesses starts at ₹25,000 for a 5-page Starter site. The Growth tier (₹50,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds with e-commerce, dealer portals, or AI integrations start at ₹1,00,000. Pune agency rates for comparable scope typically run ₹75,000–₹3,00,000 — often without a published timeline or a codebase you own outright.",
+      "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
   },
   {
     category: 'pricing',
@@ -364,7 +363,7 @@ const PUNE_FAQ_ITEMS = [
     category: 'support',
     question: 'What support do you provide after launch?',
     answer:
-      'Every project includes a 30-day post-launch support window covering bug fixes, minor adjustments, and launch questions at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans from ₹4,999/month: up to 3 hours of development changes, priority same-day bug response, and a dedicated engineer who knows your codebase. Maintenance clients also get quarterly performance audits and Core Web Vitals checks.',
+      'Every project includes a 30-day post-launch support window covering bug fixes, minor adjustments, and launch questions at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans covering development changes, priority same-day bug response, and a dedicated engineer who knows your codebase. Maintenance clients also get quarterly performance audits and Core Web Vitals checks.',
   },
   {
     category: 'support',
@@ -376,7 +375,7 @@ const PUNE_FAQ_ITEMS = [
     category: 'support',
     question: 'Do you offer ongoing retainer services for Pune businesses?',
     answer:
-      'Yes. Monthly retainers from ₹4,999/month cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling, a dedicated engineer, and quarterly website health reports. Many of our Pune clients start with a project and move to a retainer once the site is live and generating leads.',
+      'Yes. Monthly retainers cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling, a dedicated engineer, and quarterly website health reports. Many of our Pune clients start with a project and move to a retainer once the site is live and generating leads.',
   },
 
   // Money-query coverage, added 2026-06-11
@@ -402,7 +401,6 @@ const PUNE_COMPARISON_COLUMNS = [
 ] as const;
 
 const PUNE_COMPARISON_ROWS = [
-  { feature: 'Starting price', values: ['Get a Quote', '₹75,000–₹3,00,000', '₹15,000–₹40,000', '₹0–₹15,000 (you build it)'] },
   { feature: 'Delivery timeline', values: ['7 days', '6–16 weeks', '3–8 weeks (unreliable)', '1–2 weeks (you build it)'] },
   {
     feature: 'Custom Figma design',
@@ -466,9 +464,9 @@ export default function PuneWebDesignPage() {
         formSlot={<HeroInlineForm region="in" source="web_design_pune_hero" />}
           eyebrow="WEB DESIGN · PUNE"
           headline="Website Design in Pune That Wins B2B Tenders — Not Just Page Views"
-          lead="Pune is India's #2 IT export hub, the auto OEM and tier-1 supplier capital, and the Oxford of the East with 200+ engineering and management colleges. IT firms in Hinjewadi compete with Bangalore for global tenders, auto suppliers in Chakan compete on capability, and D2C brands in Koregaon Park compete with Mumbai. FactoryJet builds from ₹25,000 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
+          lead="Pune is India's #2 IT export hub, the auto OEM and tier-1 supplier capital, and the Oxford of the East with 200+ engineering and management colleges. IT firms in Hinjewadi compete with Bangalore for global tenders, auto suppliers in Chakan compete on capability, and D2C brands in Koregaon Park compete with Mumbai. FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
-          trustItems={['Websites from ₹25,000', '7-day delivery guarantee', '500+ businesses built']}
+          trustItems={['Figma-designed websites', '7-day delivery guarantee', '500+ businesses built']}
           rightSlot={<HeroBrowserMockup badgeCity="Pune" />}
         />
 
@@ -577,7 +575,7 @@ export default function PuneWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Pune Businesses Choose FactoryJet Over Local Agencies"
-          lead="Pune web agencies typically charge ₹75,000–₹3,00,000 for a comparable project and take 6–16 weeks to deliver — without publishing their rates or timeline upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright."
+          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright."
           pillars={[
             {
               icon: '⚡',
@@ -640,12 +638,12 @@ export default function PuneWebDesignPage() {
           headline="FactoryJet vs. Pune Agency vs. Freelancer vs. Template Builder"
           lead="Not all web design options in Pune deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
           pullQuote={{
-            stat: '₹25,000',
-            caption: 'starting price — the same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a ₹1,50,000+ Pune agency project.',
+            stat: '7 days',
+            caption: 'from kickoff to launch — the same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
           }}
           columns={PUNE_COMPARISON_COLUMNS}
           rows={PUNE_COMPARISON_ROWS}
-          footer="Prices reflect typical Pune market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
+          footer="FactoryJet fixed-price contracts available for every scope. You get a clear quote up front after a free consultation."
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}

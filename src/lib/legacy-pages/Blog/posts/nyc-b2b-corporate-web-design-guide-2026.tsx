@@ -112,7 +112,7 @@ export const post: BlogPost = {
       <p className="mb-4">
         <strong>Real timeline transparency.</strong> A serious corporate site is built in phases with named deliverables and named dates. &quot;We&apos;ll start design when we&apos;re ready&quot; is not a project plan. Discovery, sitemap approval, design system delivery, development, QA, accessibility audit, launch — each phase needs an owner, a deliverable, and a date.{' '}
         <a
-          href="/us/services/web-design"
+          href="/services/web-design"
           className="text-blue-600 underline hover:text-blue-800 transition-colors"
         >
           FactoryJet&apos;s web design service
@@ -140,7 +140,7 @@ export const post: BlogPost = {
       <p className="mb-4">
         Beyond the rules, NYC law firms compete in one of the densest legal SERPs in the world — Big Law, mid-market firms, and solo practitioners all chasing the same practice-area + borough keywords. Strong E-E-A-T signals (detailed attorney bios with bar admissions, court admissions, and verifiable credentials; case results presented within disclaimer constraints; LegalService and Attorney schema markup) materially affect organic visibility. A dedicated{' '}
         <a
-          href="/us/services/law-firm-website-design"
+          href="/services/law-firm-website-design"
           className="text-blue-600 underline hover:text-blue-800 transition-colors"
         >
           law firm website design
@@ -163,7 +163,7 @@ export const post: BlogPost = {
       <p className="mb-4">
         The site itself is often a Next.js or similar React-based application, not a traditional CMS-driven site. That puts it closer to{' '}
         <a
-          href="/us/services/web-application-development"
+          href="/services/web-application-development"
           className="text-blue-600 underline hover:text-blue-800 transition-colors"
         >
           web application development
@@ -258,7 +258,7 @@ export const post: BlogPost = {
       <p className="mb-4">
         For the full breakdown of how FactoryJet structures fixed-price tiers — Starter, Growth, and Scale — see the{' '}
         <a
-          href="/us/pricing"
+          href="/pricing"
           className="text-blue-600 underline hover:text-blue-800 transition-colors"
         >
           FactoryJet pricing page
@@ -304,7 +304,7 @@ export const post: BlogPost = {
         </a>
         . See the full{' '}
         <a
-          href="/us/new-york/web-design"
+          href="/new-york/web-design"
           className="text-blue-600 underline hover:text-blue-800 transition-colors"
         >
           NYC web design service page
@@ -327,7 +327,7 @@ export const post: BlogPost = {
         <p className="text-blue-800 mt-3">
           Seven checks, one afternoon of work. Prevents most of the expensive mistakes NYC corporate buyers make selecting a web design agency. For a fixed-price proposal aligned to this checklist, visit the{' '}
           <a
-            href="/us/new-york/web-design"
+            href="/new-york/web-design"
             className="text-blue-700 underline hover:text-blue-900 transition-colors"
           >
             FactoryJet NYC web design page

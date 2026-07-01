@@ -152,14 +152,14 @@ export const post: BlogPost = {
       <p className="mb-4">
         Before any redesign, create a complete URL map of your current site (Google Search Console exports this). Every URL that changes needs a 301 redirect from old to new. Every URL that stays the same is safe. Submit the new sitemap to Google Search Console on launch day. Monitor rankings weekly for 60 days post-launch.
       </p>
-      <p className="mb-4">➡ Learn more: <a href="/us/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet US web design and redesign services</a></p>
+      <p className="mb-4">➡ Learn more: <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet US web design and redesign services</a></p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Offers for US Small Business Redesigns</h2>
       <p className="mb-4">
         FactoryJet redesigns US small business websites starting at $1,999 — 5-page rebuild, 7-day delivery, Lighthouse 100/100, content migration for up to 10 pages, 301 redirect mapping, full technical SEO, and 30-day post-launch support. E-commerce redesigns start at $3,999. Pricing is fixed and published upfront. Fixed-price contracts with itemized scope — no surprise invoices.
       </p>
       <p className="mb-4">
-        ➡ <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free redesign quote with PageSpeed proof in 24 hours</a> · <a href="/us/portfolio" className="text-blue-600 underline hover:text-blue-800 transition-colors">View our portfolio</a>
+        ➡ <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free redesign quote with PageSpeed proof in 24 hours</a> · <a href="/portfolio" className="text-blue-600 underline hover:text-blue-800 transition-colors">View our portfolio</a>
       </p>
 
       <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mt-8">

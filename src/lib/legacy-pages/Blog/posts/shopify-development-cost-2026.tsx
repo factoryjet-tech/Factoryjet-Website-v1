@@ -644,7 +644,7 @@ export const post: BlogPost = {
         </a>{' '}
         covers how the two compare on price and flexibility. FactoryJet has delivered Shopify builds
         for US small businesses across markets like{' '}
-        <a href="/us/nashville" className="text-[#F05A28] hover:underline">
+        <a href="/nashville" className="text-[#F05A28] hover:underline">
           Nashville
         </a>{' '}
         and beyond, all with a 7-day delivery guarantee.
@@ -652,7 +652,7 @@ export const post: BlogPost = {
       <p className="mb-6">
         If you&apos;re trying to figure out where your specific build lands, the fastest path is a
         30-minute scoping call. FactoryJet has built{' '}
-        <a href="/us/services/ecommerce-development" className="text-[#F05A28] hover:underline">
+        <a href="/services/ecommerce-development" className="text-[#F05A28] hover:underline">
           500+ stores for US small businesses
         </a>{' '}
         and can give you a fixed-price quote within 24 hours.

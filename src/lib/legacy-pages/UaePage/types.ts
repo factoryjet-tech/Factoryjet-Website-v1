@@ -5,7 +5,7 @@ export interface NavItem {
 
 export interface ServiceItem {
   title: string;
-  priceRange: string;
+  priceNote: string;
   description: string;
   bestFor: string;
   features: string[];

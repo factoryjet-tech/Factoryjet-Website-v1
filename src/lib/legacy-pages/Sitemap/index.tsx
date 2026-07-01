@@ -31,7 +31,7 @@ const sitemapData: SitemapSection[] = [
     title: 'Pricing & Packages',
     icon: DollarSign,
     links: [
-      { name: 'Pricing', path: '/pricing', description: 'View our transparent pricing packages' },
+      { name: 'Pricing', path: '/pricing', description: 'See how our transparent, fixed-price quoting works'},
     ],
   },
   {

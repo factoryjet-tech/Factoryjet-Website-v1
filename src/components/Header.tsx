@@ -56,7 +56,7 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '',
   const dropdownTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const aiPanelTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const { openModal: openContactModal } = useContactModal();
-  const isUS = basePath.startsWith('/us');
+  const isUS = basePath.startsWith('/');
   const openModal = () => openContactModal(isUS ? 'us' : 'in', hideLocations ? 'ai' : 'default');
 
   const showSolidStyle = variant === 'solid' || isScrolled;
@@ -72,7 +72,7 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '',
   const prefixRoute = (route: string) => basePath ? `${basePath}${route}` : route;
 
   // For service links, always use the top-level US or root base, not deep city/location paths
-  const serviceBase = isUS ? '/us' : (basePath && !basePath.startsWith('/us') ? basePath : '');
+  const serviceBase = isUS ? '/' : (basePath && !basePath.startsWith('/') ? basePath : '');
   const prefixServiceRoute = (route: string) => serviceBase ? `${serviceBase}${route}` : route;
 
   const ecommerceServices: SubMenuItem[] = ECOMMERCE_SERVICES_BASE.map(s => ({
@@ -92,15 +92,15 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '',
     { label: 'Process', href: '#process', hasDropdown: false, isRoute: false },
     { label: 'Portfolio', href: '#portfolio', hasDropdown: false, isRoute: false },
     { label: 'Pricing', href: '#pricing', hasDropdown: false, isRoute: false },
-  ] : basePath?.startsWith('/us/services/web-design/') ? [
+  ] : basePath?.startsWith('/services/web-design/') ? [
     { label: 'Services & Pricing', href: `${basePath}/services`, hasDropdown: false, isRoute: true },
     { label: 'Why Us', href: '#why-nyc', hasDropdown: false, isRoute: false },
     { label: 'FAQ', href: `${basePath}/faq`, hasDropdown: false, isRoute: true },
     { label: 'Contact', href: '#contact', hasDropdown: false, isRoute: false },
-  ] : basePath === '/us' ? [
+  ] : basePath === '/' ? [
     { label: 'Services', href: '#services', hasDropdown: true, hasMegaMenu: true, isRoute: false, submenu: servicesSubmenu },
-    { label: 'Portfolio', href: '/us/portfolio', hasDropdown: false, isRoute: true },
-    { label: 'About Us', href: '/us/about', hasDropdown: false, isRoute: true },
+    { label: 'Portfolio', href: '/portfolio', hasDropdown: false, isRoute: true },
+    { label: 'About Us', href: '/about', hasDropdown: false, isRoute: true },
     { label: 'Pricing', href: prefixRoute('/pricing'), hasDropdown: false, isRoute: true },
     { label: 'FAQ', href: prefixRoute('/faq'), hasDropdown: false, isRoute: true },
     {
@@ -112,9 +112,9 @@ const Header: React.FC<HeaderProps> = ({ variant = 'transparent', basePath = '',
     },
   ] : basePath ? [
     { label: 'Services', href: '#services', hasDropdown: true, hasMegaMenu: true, isRoute: false, submenu: servicesSubmenu },
-    { label: 'About Us', href: isUS ? '/us/about' : '/about', hasDropdown: false, isRoute: true },
-    { label: 'Pricing', href: isUS ? '/us/pricing' : '/pricing', hasDropdown: false, isRoute: true },
-    ...(isUS ? [{ label: 'FAQ', href: '/us/faq', hasDropdown: false, isRoute: true }] : []),
+    { label: 'About Us', href: isUS ? '/about' : '/about', hasDropdown: false, isRoute: true },
+    { label: 'Pricing', href: isUS ? '/pricing' : '/pricing', hasDropdown: false, isRoute: true },
+    ...(isUS ? [{ label: 'FAQ', href: '/faq', hasDropdown: false, isRoute: true }] : []),
   ] : [
     { label: 'Services', href: '#services', hasDropdown: true, hasMegaMenu: true, isRoute: false, submenu: servicesSubmenu },
     { label: 'Portfolio', href: '/portfolio', hasDropdown: false, isRoute: true },

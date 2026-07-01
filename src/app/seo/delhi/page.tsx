@@ -79,7 +79,6 @@ const localBusinessSchema = {
     addressRegion: 'Delhi',
     addressCountry: 'IN',
   },
-  priceRange: '₹₹',
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
@@ -247,7 +246,7 @@ const DELHI_FAQ_ITEMS = [
     category: 'cost',
     question: 'How much do SEO services cost in Delhi?',
     answer:
-      'We do not sell fixed packages because a Nehru Place trader needs very different work from a South Delhi clinic. Our SEO plans for Indian businesses start at ₹19,999 a month, and we only charge for work that actually moves your rankings. You get a free audit first, and we tell you exactly what your site needs before you commit to anything.',
+      'We do not sell fixed packages because a Nehru Place trader needs very different work from a South Delhi clinic. We scope a monthly plan to what your site needs and only charge for work that actually moves your rankings. You get a free audit first, and we tell you exactly what your site needs before you commit to anything.',
   },
   {
     category: 'cost',
@@ -259,7 +258,7 @@ const DELHI_FAQ_ITEMS = [
     category: 'cost',
     question: 'Is it worth paying for affordable SEO services in Delhi or should I spend more?',
     answer:
-      'The honest answer: there is a floor below which SEO does not work. Very cheap packages — under ₹5,000/month — are almost always a waste of money in a market as competitive as Delhi. What matters is the quality of the work, not whether it is expensive or affordable. We charge a fair price and do real work — no link farms, no filler content, no duplicate plans across clients.',
+      'The honest answer: there is a floor below which SEO does not work. Very cheap packages are almost always a waste of money in a market as competitive as Delhi. What matters is the quality of the work, not whether it is expensive or affordable. We charge a fair price and do real work — no link farms, no filler content, no duplicate plans across clients.',
   },
   {
     category: 'cost',

@@ -20,7 +20,7 @@
 /** Full 3-locale cluster for home pages: / ↔ /us ↔ /uae */
 export const homeAlternates = {
   'en-IN': 'https://factoryjet.com',
-  'en-US': 'https://factoryjet.com/us',
+  'en-US': 'https://factoryjet.com',
   'en-AE': 'https://factoryjet.com/uae',
   'en-GB': 'https://factoryjet.com/uk',
   'en-AU': 'https://factoryjet.com/au',
@@ -36,7 +36,7 @@ export const homeAlternates = {
  */
 export const usHubAlternates = {
   'en-IN': 'https://factoryjet.com',
-  'en-US': 'https://factoryjet.com/us',
+  'en-US': 'https://factoryjet.com',
   'en-AE': 'https://factoryjet.com/uae',
   'en-GB': 'https://factoryjet.com/uk',
   'en-AU': 'https://factoryjet.com/au',
@@ -51,7 +51,7 @@ export const usHubAlternates = {
  */
 export const auHubAlternates = {
   'en-IN': 'https://factoryjet.com',
-  'en-US': 'https://factoryjet.com/us',
+  'en-US': 'https://factoryjet.com',
   'en-AE': 'https://factoryjet.com/uae',
   'en-GB': 'https://factoryjet.com/uk',
   'en-AU': 'https://factoryjet.com/au',
@@ -65,7 +65,7 @@ export const auHubAlternates = {
 /** Full 3-locale cluster for /services/web-design ↔ /us/services/web-design */
 export const webDesignAlternates = {
   'en-IN': 'https://factoryjet.com/web-design',
-  'en-US': 'https://factoryjet.com/us/services/web-design',
+  'en-US': 'https://factoryjet.com/services/web-design',
   'en-AE': 'https://factoryjet.com/uae',
   'en-GB': 'https://factoryjet.com/uk',
   'x-default': 'https://factoryjet.com/web-design',
@@ -74,7 +74,7 @@ export const webDesignAlternates = {
 /** Full 3-locale cluster for /services/ecommerce-development ↔ /us/services/ecommerce-development */
 export const ecommerceAlternates = {
   'en-IN': 'https://factoryjet.com/services/ecommerce-development',
-  'en-US': 'https://factoryjet.com/us/services/ecommerce-development',
+  'en-US': 'https://factoryjet.com/services/ecommerce-development',
   'en-AE': 'https://factoryjet.com/uae',
   'en-GB': 'https://factoryjet.com/uk',
   'x-default': 'https://factoryjet.com/services/ecommerce-development',
@@ -87,7 +87,7 @@ export const ecommerceAlternates = {
 /** Pricing pages: /pricing ↔ /us/pricing */
 export const pricingAlternates = {
   'en-IN': 'https://factoryjet.com/pricing',
-  'en-US': 'https://factoryjet.com/us/pricing',
+  'en-US': 'https://factoryjet.com/pricing',
   'en-AE': 'https://factoryjet.com/uae',
   'en-GB': 'https://factoryjet.com/uk',
   'x-default': 'https://factoryjet.com/pricing',
@@ -96,7 +96,7 @@ export const pricingAlternates = {
 /** About pages: /about ↔ /us/about */
 export const aboutAlternates = {
   'en-IN': 'https://factoryjet.com/about',
-  'en-US': 'https://factoryjet.com/us/about',
+  'en-US': 'https://factoryjet.com/about',
   'en-AE': 'https://factoryjet.com/uae',
   'en-GB': 'https://factoryjet.com/uk',
   'x-default': 'https://factoryjet.com/about',
@@ -114,38 +114,38 @@ export const contactAlternates = {
 
 /** FAQ page (US only) */
 export const faqAlternates = {
-  'en-US': 'https://factoryjet.com/us/faq',
-  'x-default': 'https://factoryjet.com/us/faq',
+  'en-US': 'https://factoryjet.com/faq',
+  'x-default': 'https://factoryjet.com/faq',
 } as const
 
 /** Website Cost guide page (US only — no India equivalent) */
 export const websiteCostAlternates = {
-  'en-US': 'https://factoryjet.com/us/website-cost',
-  'x-default': 'https://factoryjet.com/us/website-cost',
+  'en-US': 'https://factoryjet.com/website-cost',
+  'x-default': 'https://factoryjet.com/website-cost',
 } as const
 
 /** AI Agency service page (US only — no India equivalent) */
 export const aiAgencyAlternates = {
-  'en-US': 'https://factoryjet.com/us/services/ai-agency',
-  'x-default': 'https://factoryjet.com/us/services/ai-agency',
+  'en-US': 'https://factoryjet.com/services/ai-agency',
+  'x-default': 'https://factoryjet.com/services/ai-agency',
 } as const
 
 /** Small Business Website Design service page (US only — no India equivalent) */
 export const smallBusinessWebDesignAlternates = {
-  'en-US': 'https://factoryjet.com/us/services/small-business-website-design',
-  'x-default': 'https://factoryjet.com/us/services/small-business-website-design',
+  'en-US': 'https://factoryjet.com/services/small-business-website-design',
+  'x-default': 'https://factoryjet.com/services/small-business-website-design',
 } as const
 
 /** Magento Development service page (US only — no India equivalent) */
 export const magentoDevelopmentAlternates = {
-  'en-US': 'https://factoryjet.com/us/services/magento-development',
-  'x-default': 'https://factoryjet.com/us/services/magento-development',
+  'en-US': 'https://factoryjet.com/services/magento-development',
+  'x-default': 'https://factoryjet.com/services/magento-development',
 } as const
 
 /** WooCommerce Development service page (US only — no India equivalent) */
 export const woocommerceDevelopmentAlternates = {
-  'en-US': 'https://factoryjet.com/us/services/woocommerce-development',
-  'x-default': 'https://factoryjet.com/us/services/woocommerce-development',
+  'en-US': 'https://factoryjet.com/services/woocommerce-development',
+  'x-default': 'https://factoryjet.com/services/woocommerce-development',
 } as const
 
 /**
@@ -156,8 +156,8 @@ export const woocommerceDevelopmentAlternates = {
  * en-US + x-default per the single-country page rule. Added 2026-06-01.
  */
 export const seoServicesAlternatesUS = {
-  'en-US': 'https://factoryjet.com/us/services/seo',
-  'x-default': 'https://factoryjet.com/us/services/seo',
+  'en-US': 'https://factoryjet.com/services/seo',
+  'x-default': 'https://factoryjet.com/services/seo',
 } as const
 
 /**
@@ -167,8 +167,8 @@ export const seoServicesAlternatesUS = {
  * US: /us/services/local-seo. Added 2026-06-02.
  */
 export const localSeoServicesAlternatesUS = {
-  'en-US': 'https://factoryjet.com/us/services/local-seo',
-  'x-default': 'https://factoryjet.com/us/services/local-seo',
+  'en-US': 'https://factoryjet.com/services/local-seo',
+  'x-default': 'https://factoryjet.com/services/local-seo',
 } as const
 
 /**
@@ -176,8 +176,8 @@ export const localSeoServicesAlternatesUS = {
  * page rule. US: /us/services/ecommerce-seo. Added 2026-06-02.
  */
 export const ecommerceSeoServicesAlternatesUS = {
-  'en-US': 'https://factoryjet.com/us/services/ecommerce-seo',
-  'x-default': 'https://factoryjet.com/us/services/ecommerce-seo',
+  'en-US': 'https://factoryjet.com/services/ecommerce-seo',
+  'x-default': 'https://factoryjet.com/services/ecommerce-seo',
 } as const
 
 /**
@@ -185,8 +185,8 @@ export const ecommerceSeoServicesAlternatesUS = {
  * page rule. US: /us/services/small-business-seo. Added 2026-06-03.
  */
 export const smallBusinessSeoServicesAlternatesUS = {
-  'en-US': 'https://factoryjet.com/us/services/small-business-seo',
-  'x-default': 'https://factoryjet.com/us/services/small-business-seo',
+  'en-US': 'https://factoryjet.com/services/small-business-seo',
+  'x-default': 'https://factoryjet.com/services/small-business-seo',
 } as const
 
 /**
@@ -194,8 +194,8 @@ export const smallBusinessSeoServicesAlternatesUS = {
  * single-country page rule. US: /us/services/seo-audit. Added 2026-06-03.
  */
 export const seoAuditServicesAlternatesUS = {
-  'en-US': 'https://factoryjet.com/us/services/seo-audit',
-  'x-default': 'https://factoryjet.com/us/services/seo-audit',
+  'en-US': 'https://factoryjet.com/services/seo-audit',
+  'x-default': 'https://factoryjet.com/services/seo-audit',
 } as const
 
 /**
@@ -207,7 +207,7 @@ export const seoAuditServicesAlternatesUS = {
  */
 export const aiSeoAlternates = {
   'en-IN': 'https://factoryjet.com/ai-seo',
-  'en-US': 'https://factoryjet.com/us/services/ai-seo',
+  'en-US': 'https://factoryjet.com/services/ai-seo',
   'en-AE': 'https://factoryjet.com/uae',
   'en-GB': 'https://factoryjet.com/uk',
   'x-default': 'https://factoryjet.com/ai-seo',
@@ -326,44 +326,44 @@ export const webDesignCityAlternatesIN = {
 
 export const webDesignPriorityCityAlternatesUS = {
   austin: {
-    'en-US': 'https://factoryjet.com/us/austin/web-design',
-    'x-default': 'https://factoryjet.com/us/austin/web-design',
+    'en-US': 'https://factoryjet.com/austin/web-design',
+    'x-default': 'https://factoryjet.com/austin/web-design',
   },
   charlotte: {
-    'en-US': 'https://factoryjet.com/us/charlotte/web-design',
-    'x-default': 'https://factoryjet.com/us/charlotte/web-design',
+    'en-US': 'https://factoryjet.com/charlotte/web-design',
+    'x-default': 'https://factoryjet.com/charlotte/web-design',
   },
   denver: {
-    'en-US': 'https://factoryjet.com/us/denver/web-design',
-    'x-default': 'https://factoryjet.com/us/denver/web-design',
+    'en-US': 'https://factoryjet.com/denver/web-design',
+    'x-default': 'https://factoryjet.com/denver/web-design',
   },
   miami: {
-    'en-US': 'https://factoryjet.com/us/miami/web-design',
-    'x-default': 'https://factoryjet.com/us/miami/web-design',
+    'en-US': 'https://factoryjet.com/miami/web-design',
+    'x-default': 'https://factoryjet.com/miami/web-design',
   },
   nashville: {
-    'en-US': 'https://factoryjet.com/us/nashville/web-design',
-    'x-default': 'https://factoryjet.com/us/nashville/web-design',
+    'en-US': 'https://factoryjet.com/nashville/web-design',
+    'x-default': 'https://factoryjet.com/nashville/web-design',
   },
   portland: {
-    'en-US': 'https://factoryjet.com/us/portland/web-design',
-    'x-default': 'https://factoryjet.com/us/portland/web-design',
+    'en-US': 'https://factoryjet.com/portland/web-design',
+    'x-default': 'https://factoryjet.com/portland/web-design',
   },
   raleigh: {
-    'en-US': 'https://factoryjet.com/us/raleigh/web-design',
-    'x-default': 'https://factoryjet.com/us/raleigh/web-design',
+    'en-US': 'https://factoryjet.com/raleigh/web-design',
+    'x-default': 'https://factoryjet.com/raleigh/web-design',
   },
   tampa: {
-    'en-US': 'https://factoryjet.com/us/tampa/web-design',
-    'x-default': 'https://factoryjet.com/us/tampa/web-design',
+    'en-US': 'https://factoryjet.com/tampa/web-design',
+    'x-default': 'https://factoryjet.com/tampa/web-design',
   },
   'new-york': {
-    'en-US': 'https://factoryjet.com/us/new-york/web-design',
-    'x-default': 'https://factoryjet.com/us/new-york/web-design',
+    'en-US': 'https://factoryjet.com/new-york/web-design',
+    'x-default': 'https://factoryjet.com/new-york/web-design',
   },
   cleveland: {
-    'en-US': 'https://factoryjet.com/us/cleveland/web-design',
-    'x-default': 'https://factoryjet.com/us/cleveland/web-design',
+    'en-US': 'https://factoryjet.com/cleveland/web-design',
+    'x-default': 'https://factoryjet.com/cleveland/web-design',
   },
 } as const
 
@@ -374,56 +374,56 @@ export const webDesignPriorityCityAlternatesUS = {
 
 export const ecommerceCityAlternatesUS: Record<string, { 'en-US': string; 'x-default': string }> = {
   'austin': {
-    'en-US': 'https://factoryjet.com/us/austin/ecommerce-development',
-    'x-default': 'https://factoryjet.com/us/austin/ecommerce-development',
+    'en-US': 'https://factoryjet.com/austin/ecommerce-development',
+    'x-default': 'https://factoryjet.com/austin/ecommerce-development',
   },
   'boise': {
-    'en-US': 'https://factoryjet.com/us/boise/ecommerce-development',
-    'x-default': 'https://factoryjet.com/us/boise/ecommerce-development',
+    'en-US': 'https://factoryjet.com/boise/ecommerce-development',
+    'x-default': 'https://factoryjet.com/boise/ecommerce-development',
   },
   'charlotte': {
-    'en-US': 'https://factoryjet.com/us/charlotte/ecommerce-development',
-    'x-default': 'https://factoryjet.com/us/charlotte/ecommerce-development',
+    'en-US': 'https://factoryjet.com/charlotte/ecommerce-development',
+    'x-default': 'https://factoryjet.com/charlotte/ecommerce-development',
   },
   'chattanooga': {
-    'en-US': 'https://factoryjet.com/us/chattanooga/ecommerce-development',
-    'x-default': 'https://factoryjet.com/us/chattanooga/ecommerce-development',
+    'en-US': 'https://factoryjet.com/chattanooga/ecommerce-development',
+    'x-default': 'https://factoryjet.com/chattanooga/ecommerce-development',
   },
   'denver': {
-    'en-US': 'https://factoryjet.com/us/denver/ecommerce-development',
-    'x-default': 'https://factoryjet.com/us/denver/ecommerce-development',
+    'en-US': 'https://factoryjet.com/denver/ecommerce-development',
+    'x-default': 'https://factoryjet.com/denver/ecommerce-development',
   },
   'fargo': {
-    'en-US': 'https://factoryjet.com/us/fargo/ecommerce-development',
-    'x-default': 'https://factoryjet.com/us/fargo/ecommerce-development',
+    'en-US': 'https://factoryjet.com/fargo/ecommerce-development',
+    'x-default': 'https://factoryjet.com/fargo/ecommerce-development',
   },
   'lincoln': {
-    'en-US': 'https://factoryjet.com/us/lincoln/ecommerce-development',
-    'x-default': 'https://factoryjet.com/us/lincoln/ecommerce-development',
+    'en-US': 'https://factoryjet.com/lincoln/ecommerce-development',
+    'x-default': 'https://factoryjet.com/lincoln/ecommerce-development',
   },
   'miami': {
-    'en-US': 'https://factoryjet.com/us/miami/ecommerce-development',
-    'x-default': 'https://factoryjet.com/us/miami/ecommerce-development',
+    'en-US': 'https://factoryjet.com/miami/ecommerce-development',
+    'x-default': 'https://factoryjet.com/miami/ecommerce-development',
   },
   'nashville': {
-    'en-US': 'https://factoryjet.com/us/nashville/ecommerce-development',
-    'x-default': 'https://factoryjet.com/us/nashville/ecommerce-development',
+    'en-US': 'https://factoryjet.com/nashville/ecommerce-development',
+    'x-default': 'https://factoryjet.com/nashville/ecommerce-development',
   },
   'portland': {
-    'en-US': 'https://factoryjet.com/us/portland/ecommerce-development',
-    'x-default': 'https://factoryjet.com/us/portland/ecommerce-development',
+    'en-US': 'https://factoryjet.com/portland/ecommerce-development',
+    'x-default': 'https://factoryjet.com/portland/ecommerce-development',
   },
   'raleigh': {
-    'en-US': 'https://factoryjet.com/us/raleigh/ecommerce-development',
-    'x-default': 'https://factoryjet.com/us/raleigh/ecommerce-development',
+    'en-US': 'https://factoryjet.com/raleigh/ecommerce-development',
+    'x-default': 'https://factoryjet.com/raleigh/ecommerce-development',
   },
   'sioux-falls': {
-    'en-US': 'https://factoryjet.com/us/sioux-falls/ecommerce-development',
-    'x-default': 'https://factoryjet.com/us/sioux-falls/ecommerce-development',
+    'en-US': 'https://factoryjet.com/sioux-falls/ecommerce-development',
+    'x-default': 'https://factoryjet.com/sioux-falls/ecommerce-development',
   },
   'tampa': {
-    'en-US': 'https://factoryjet.com/us/tampa/ecommerce-development',
-    'x-default': 'https://factoryjet.com/us/tampa/ecommerce-development',
+    'en-US': 'https://factoryjet.com/tampa/ecommerce-development',
+    'x-default': 'https://factoryjet.com/tampa/ecommerce-development',
   },
 }
 
@@ -433,8 +433,8 @@ export const ecommerceCityAlternatesUS: Record<string, { 'en-US': string; 'x-def
 
 /** Portfolio (US only — no India/UAE equivalent) */
 export const portfolioAlternatesUS = {
-  'en-US': 'https://factoryjet.com/us/portfolio',
-  'x-default': 'https://factoryjet.com/us/portfolio',
+  'en-US': 'https://factoryjet.com/portfolio',
+  'x-default': 'https://factoryjet.com/portfolio',
 } as const
 
 // ===========================================================================
@@ -444,44 +444,44 @@ export const portfolioAlternatesUS = {
 
 export const usServiceAlternates = {
   'ai-agents': {
-    'en-US': 'https://factoryjet.com/us/services/ai-agents',
-    'x-default': 'https://factoryjet.com/us/services/ai-agents',
+    'en-US': 'https://factoryjet.com/services/ai-agents',
+    'x-default': 'https://factoryjet.com/services/ai-agents',
   },
   'ai-automation': {
-    'en-US': 'https://factoryjet.com/us/services/ai-automation',
-    'x-default': 'https://factoryjet.com/us/services/ai-automation',
+    'en-US': 'https://factoryjet.com/services/ai-automation',
+    'x-default': 'https://factoryjet.com/services/ai-automation',
   },
   'law-firm-website-design': {
-    'en-US': 'https://factoryjet.com/us/services/law-firm-website-design',
-    'x-default': 'https://factoryjet.com/us/services/law-firm-website-design',
+    'en-US': 'https://factoryjet.com/services/law-firm-website-design',
+    'x-default': 'https://factoryjet.com/services/law-firm-website-design',
   },
   'real-estate-website-design': {
-    'en-US': 'https://factoryjet.com/us/services/real-estate-website-design',
-    'x-default': 'https://factoryjet.com/us/services/real-estate-website-design',
+    'en-US': 'https://factoryjet.com/services/real-estate-website-design',
+    'x-default': 'https://factoryjet.com/services/real-estate-website-design',
   },
   'web-application-development': {
-    'en-US': 'https://factoryjet.com/us/services/web-application-development',
-    'x-default': 'https://factoryjet.com/us/services/web-application-development',
+    'en-US': 'https://factoryjet.com/services/web-application-development',
+    'x-default': 'https://factoryjet.com/services/web-application-development',
   },
   'website-redesign': {
-    'en-US': 'https://factoryjet.com/us/services/website-redesign',
-    'x-default': 'https://factoryjet.com/us/services/website-redesign',
+    'en-US': 'https://factoryjet.com/services/website-redesign',
+    'x-default': 'https://factoryjet.com/services/website-redesign',
   },
   'wordpress-development': {
-    'en-US': 'https://factoryjet.com/us/services/wordpress-development',
-    'x-default': 'https://factoryjet.com/us/services/wordpress-development',
+    'en-US': 'https://factoryjet.com/services/wordpress-development',
+    'x-default': 'https://factoryjet.com/services/wordpress-development',
   },
   'ai-chatbot-development': {
-    'en-US': 'https://factoryjet.com/us/services/ai-chatbot-development',
-    'x-default': 'https://factoryjet.com/us/services/ai-chatbot-development',
+    'en-US': 'https://factoryjet.com/services/ai-chatbot-development',
+    'x-default': 'https://factoryjet.com/services/ai-chatbot-development',
   },
   'ai-integration-services': {
-    'en-US': 'https://factoryjet.com/us/services/ai-integration-services',
-    'x-default': 'https://factoryjet.com/us/services/ai-integration-services',
+    'en-US': 'https://factoryjet.com/services/ai-integration-services',
+    'x-default': 'https://factoryjet.com/services/ai-integration-services',
   },
   'ai-workflow-automation': {
-    'en-US': 'https://factoryjet.com/us/services/ai-workflow-automation',
-    'x-default': 'https://factoryjet.com/us/services/ai-workflow-automation',
+    'en-US': 'https://factoryjet.com/services/ai-workflow-automation',
+    'x-default': 'https://factoryjet.com/services/ai-workflow-automation',
   },
 } as const
 
@@ -493,24 +493,24 @@ export const usServiceAlternates = {
 
 export const usCityAIAlternates = {
   'austin-ai-agents': {
-    'en-US': 'https://factoryjet.com/us/austin/ai-agents',
-    'x-default': 'https://factoryjet.com/us/austin/ai-agents',
+    'en-US': 'https://factoryjet.com/austin/ai-agents',
+    'x-default': 'https://factoryjet.com/austin/ai-agents',
   },
   'denver-ai-agents': {
-    'en-US': 'https://factoryjet.com/us/denver/ai-agents',
-    'x-default': 'https://factoryjet.com/us/denver/ai-agents',
+    'en-US': 'https://factoryjet.com/denver/ai-agents',
+    'x-default': 'https://factoryjet.com/denver/ai-agents',
   },
   'raleigh-ai-agents': {
-    'en-US': 'https://factoryjet.com/us/raleigh/ai-agents',
-    'x-default': 'https://factoryjet.com/us/raleigh/ai-agents',
+    'en-US': 'https://factoryjet.com/raleigh/ai-agents',
+    'x-default': 'https://factoryjet.com/raleigh/ai-agents',
   },
   'miami-ai-automation': {
-    'en-US': 'https://factoryjet.com/us/miami/ai-automation',
-    'x-default': 'https://factoryjet.com/us/miami/ai-automation',
+    'en-US': 'https://factoryjet.com/miami/ai-automation',
+    'x-default': 'https://factoryjet.com/miami/ai-automation',
   },
   'charlotte-ai-automation': {
-    'en-US': 'https://factoryjet.com/us/charlotte/ai-automation',
-    'x-default': 'https://factoryjet.com/us/charlotte/ai-automation',
+    'en-US': 'https://factoryjet.com/charlotte/ai-automation',
+    'x-default': 'https://factoryjet.com/charlotte/ai-automation',
   },
 } as const
 

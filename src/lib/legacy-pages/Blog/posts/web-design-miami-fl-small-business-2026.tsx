@@ -138,14 +138,14 @@ export const post: BlogPost = {
       <p className="mb-4">
         Priority neighborhoods for service area pages depend on your business type: retail and hospitality should target Miami Beach, Brickell, Wynwood, and Coconut Grove. Professional services (law, accounting, consulting) should target Brickell, Coral Gables, and downtown Miami. Spanish-first businesses should target Hialeah, Doral, and Little Havana specifically.
       </p>
-      <p className="mb-4">➡ Learn more: <a href="/us/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet US web design services</a></p>
+      <p className="mb-4">➡ Learn more: <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet US web design services</a></p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Offers Miami FL Businesses</h2>
       <p className="mb-4">
         FactoryJet builds English and bilingual websites for Miami small businesses starting at $1,999 (English) and $2,999 (English + Spanish). Every project delivers Lighthouse 100/100 scores, full technical SEO, neighborhood-level local schema, hreflang implementation for bilingual builds, and US business-hour project management. 7-day delivery on 5-page builds.
       </p>
       <p className="mb-4">
-        ➡ <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free quote with PageSpeed proof in 24 hours</a> · <a href="/us/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our web design packages</a>
+        ➡ <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free quote with PageSpeed proof in 24 hours</a> · <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our web design packages</a>
       </p>
 
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8">

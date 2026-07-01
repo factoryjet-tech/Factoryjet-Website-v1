@@ -77,7 +77,6 @@ const localBusinessSchema = {
     addressRegion: 'Telangana',
     addressCountry: 'IN',
   },
-  priceRange: '₹₹',
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
@@ -236,7 +235,7 @@ const HYD_FAQ_ITEMS = [
     category: 'cost',
     question: 'How much do SEO services cost in Hyderabad?',
     answer:
-      'We do not sell fixed packages — a pharma exporter in Genome Valley needs different work from a clinic in Banjara Hills. Our SEO plans for Indian businesses start at ₹19,999 a month, scoped to what your site actually needs. We give you a free audit first so you know exactly what you are paying for before committing.',
+      'We do not sell fixed packages — a pharma exporter in Genome Valley needs different work from a clinic in Banjara Hills. We scope a monthly plan to what your site actually needs. We give you a free audit first so you know exactly what you are paying for before committing.',
   },
   {
     category: 'cost',
@@ -248,7 +247,7 @@ const HYD_FAQ_ITEMS = [
     category: 'cost',
     question: 'Is cheap SEO in Hyderabad worth it?',
     answer:
-      'Very cheap SEO (under ₹5,000/month) is almost always a waste of money because it relies on low-quality links that either do nothing or create a penalty risk. Good SEO in Hyderabad is still affordable compared to major metro agencies — but it costs enough to do real work. We charge a fair price and show you exactly what we do every month.',
+      'Very cheap SEO is almost always a waste of money because it relies on low-quality links that either do nothing or create a penalty risk. Good SEO in Hyderabad is still affordable compared to major metro agencies, but it costs enough to do real work. We charge a fair price and show you exactly what we do every month.',
   },
   {
     category: 'cost',

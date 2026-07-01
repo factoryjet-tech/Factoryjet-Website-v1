@@ -81,7 +81,7 @@ export const post: BlogPost = {
       </p>
 
       <p className="mb-6">
-        This guide is a 2026 Shopify development breakdown specifically for Boise and Treasure Valley small businesses — the brands we see most often on our <a href="/us/boise/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Boise ecommerce development</a> intake calls. The goal is to help you decide between off-the-shelf and custom Shopify, set realistic timelines and budgets, and avoid the configuration mistakes that catch Idaho stores 18 months in.
+        This guide is a 2026 Shopify development breakdown specifically for Boise and Treasure Valley small businesses — the brands we see most often on our <a href="/boise/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Boise ecommerce development</a> intake calls. The goal is to help you decide between off-the-shelf and custom Shopify, set realistic timelines and budgets, and avoid the configuration mistakes that catch Idaho stores 18 months in.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Why Boise Is Having Its Ecommerce Moment</h2>
@@ -120,7 +120,7 @@ export const post: BlogPost = {
         WooCommerce makes sense for a narrower set of Boise brands than people assume. The cases where it actually wins: you already run a content-heavy WordPress site you do not want to migrate, you have 500+ SKUs with deeply custom attributes, you need fully bespoke checkout logic, or you have a developer relationship you trust and a clear plan for ongoing PCI compliance, plugin compatibility, and security updates. For a typical North End apparel boutique, a Garden City craft food brand, or a Boise outdoor gear DTC operator selling 20–200 SKUs, WooCommerce is usually more platform than the business needs.
       </p>
       <p className="mb-4">
-        Squarespace and Wix Commerce are fine for a Boise side-project shop with 5–20 SKUs and modest ambition. They become the wrong tool quickly — Lighthouse mobile performance caps below where Shopify sits, app ecosystems are narrower, bulk catalog editing is painful, and migration off either platform 18 months in is harder than starting on Shopify. If your Boise brand is ambitious — and most of the ones we talk to are — start on Shopify and skip the rebuild. Our <a href="/us/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify development service</a> page covers what is included in a base Boise build.
+        Squarespace and Wix Commerce are fine for a Boise side-project shop with 5–20 SKUs and modest ambition. They become the wrong tool quickly — Lighthouse mobile performance caps below where Shopify sits, app ecosystems are narrower, bulk catalog editing is painful, and migration off either platform 18 months in is harder than starting on Shopify. If your Boise brand is ambitious — and most of the ones we talk to are — start on Shopify and skip the rebuild. Our <a href="/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify development service</a> page covers what is included in a base Boise build.
       </p>
       <p className="mb-4">
         Still comparing platforms? Read our <a href="/blog/shopify-vs-woocommerce-us-small-business-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify vs WooCommerce decision guide</a> for the full side-by-side before you commit.
@@ -143,7 +143,7 @@ export const post: BlogPost = {
         <strong>Multi-location local pickup with different operational rules.</strong> If you run a Downtown Boise storefront plus a Meridian warehouse with different hours, different eligible zip-code radii, and different notification messaging, the configuration goes beyond what the theme defaults handle gracefully.
       </p>
       <p className="mb-4">
-        <strong>B2B wholesale layers on the same store.</strong> Custom pricing rules, tax-exempt customer groups, and net-30 invoicing on the same Shopify store as the retail front. Shopify Plus solves a lot of this natively, but a custom layer is sometimes the better path for a sub-Plus-tier Boise brand. Our <a href="/us/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">custom ecommerce development service</a> covers both Shopify and broader custom builds, with the platform recommendation made during discovery rather than assumed.
+        <strong>B2B wholesale layers on the same store.</strong> Custom pricing rules, tax-exempt customer groups, and net-30 invoicing on the same Shopify store as the retail front. Shopify Plus solves a lot of this natively, but a custom layer is sometimes the better path for a sub-Plus-tier Boise brand. Our <a href="/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">custom ecommerce development service</a> covers both Shopify and broader custom builds, with the platform recommendation made during discovery rather than assumed.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What a Real Boise Shopify Build Includes</h2>
@@ -165,7 +165,7 @@ export const post: BlogPost = {
         Larger or more custom projects run 2–4 weeks and are scoped during discovery. The common drivers: 500+ SKU catalogs with complex variants, custom subscription flows beyond what Recharge handles out of the box, bundle and build-your-own-box configurators, multi-location local pickup with different operational rules, B2B wholesale layers, or full custom ecommerce builds outside of Shopify entirely.
       </p>
       <p className="mb-4">
-        For transparent pricing across both timelines, our <a href="/us/pricing" className="text-blue-600 underline hover:text-blue-800 transition-colors">US pricing page</a> covers every tier with no hidden line items.
+        For transparent pricing across both timelines, our <a href="/pricing" className="text-blue-600 underline hover:text-blue-800 transition-colors">US pricing page</a> covers every tier with no hidden line items.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Boise-Specific Seasonality and Tax Considerations</h2>
@@ -196,7 +196,7 @@ export const post: BlogPost = {
         Talk to the founder directly — Bhavesh runs every Boise discovery call himself. Book a 30-minute slot at <a href="https://calendly.com/bhavesh-factoryjet/30min" className="text-blue-600 underline hover:text-blue-800 transition-colors">calendly.com/bhavesh-factoryjet</a> or email <a href="mailto:bhavesh@factoryjet.com" className="text-blue-600 underline hover:text-blue-800 transition-colors">bhavesh@factoryjet.com</a>.
       </p>
       <p className="mb-4">
-        ➡ <a href="/us/boise/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">See Boise Shopify development packages</a>
+        ➡ <a href="/boise/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">See Boise Shopify development packages</a>
       </p>
 
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8">

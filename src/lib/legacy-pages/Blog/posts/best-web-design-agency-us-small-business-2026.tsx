@@ -219,7 +219,7 @@ export const post: BlogPost = {
       <p className="mb-4">
         For most US SMBs spending $3,000–$12,000 on a website, the offshore premium delivers $5,000–$15,000 in savings with no measurable quality reduction when the agency is properly vetted. The money saved is better invested in SEO content, paid advertising, or the next phase of site development.
       </p>
-      <p className="mb-4">➡ Learn more: <a href="/us/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet US web design services</a></p>
+      <p className="mb-4">➡ Learn more: <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet US web design services</a></p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Contract Terms That Protect SMB Interests</h2>
       <p className="mb-4">
@@ -277,7 +277,7 @@ export const post: BlogPost = {
         Pricing: 5-page professional website starts at $1,999. Shopify stores start at $2,499. Monthly maintenance plans from $149/month. 97% of projects delivered on time. Pricing is fixed and published upfront.
       </p>
       <p className="mb-4">
-        ➡ <a href="/us/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our web design packages</a> · <a href="/us/portfolio" className="text-blue-600 underline hover:text-blue-800 transition-colors">View our portfolio</a> · <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free quote with PageSpeed proof in 24 hours</a>
+        ➡ <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our web design packages</a> · <a href="/portfolio" className="text-blue-600 underline hover:text-blue-800 transition-colors">View our portfolio</a> · <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free quote with PageSpeed proof in 24 hours</a>
       </p>
 
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8">

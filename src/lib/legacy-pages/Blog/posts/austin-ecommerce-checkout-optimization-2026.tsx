@@ -81,7 +81,7 @@ export const post: BlogPost = {
       </p>
 
       <p className="mb-6">
-        The post is deliberately tactical. Eight checkout-optimization wins. A conversion-tracking stack that survives iOS privacy changes and festival spikes. AI-assisted cart recovery when it earns its keep. Boutique-specific UX patterns we see lift mobile conversion across our <a href="/us/austin/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Austin ecommerce development</a> engagements. Real numbers where they are defensible, and explicit ranges instead of single-point claims everywhere else.
+        The post is deliberately tactical. Eight checkout-optimization wins. A conversion-tracking stack that survives iOS privacy changes and festival spikes. AI-assisted cart recovery when it earns its keep. Boutique-specific UX patterns we see lift mobile conversion across our <a href="/austin/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Austin ecommerce development</a> engagements. Real numbers where they are defensible, and explicit ranges instead of single-point claims everywhere else.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Why Austin Ecommerce Under-Converts (and What to Do About It)</h2>
@@ -157,7 +157,7 @@ export const post: BlogPost = {
         Free shipping is one of the most-cited reasons US shoppers complete a checkout. The threshold matters more than the offer. Set it at roughly 1.3–1.5x your average order value (AOV), then test. If your AOV is $58, try $75. If your AOV is $120, try $150. The goal is to lift AOV 10–25% without giving away margin on orders that would have shipped under threshold anyway. Recheck every quarter — especially after major catalog or pricing changes.
       </p>
       <p className="mb-4">
-        For a deeper look at how we configure these across Shopify and WooCommerce, see our <a href="/us/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify development service</a> and the broader <a href="/us/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">ecommerce development service</a> pages.
+        For a deeper look at how we configure these across Shopify and WooCommerce, see our <a href="/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify development service</a> and the broader <a href="/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">ecommerce development service</a> pages.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Conversion Tracking That Actually Catches Austin Festival Traffic</h2>
@@ -182,7 +182,7 @@ export const post: BlogPost = {
         AI chatbots are oversold for most small Austin stores and genuinely useful for a specific subset. The honest test: does your store have at least 5,000 monthly sessions, a non-trivial product-page or cart abandonment problem, and abandonment that is driven by answerable questions — sizing, materials, fit, shipping windows, return policy — rather than by price or intent? If yes, a well-trained AI agent on the product and cart page typically lifts conversion 5–12%. If no, a clear FAQ page and a fast-responding human team will beat any bot.
       </p>
       <p className="mb-4">
-        The deployment that earns its keep on an Austin DTC store: an AI agent that answers product and policy questions in plain English, surfaces alternative sizes or products when something is out of stock, and gently nudges abandoned carts back to checkout when a customer returns to the site. For Austin boutiques with complex catalogs — multi-size apparel, fit-sensitive footwear, made-to-order furniture — the lift is larger. Our <a href="/us/services/ai-chatbot-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI chatbot development service</a> covers what a production-grade conversational layer looks like, including the guardrails that keep it from saying things you do not want next to your brand.
+        The deployment that earns its keep on an Austin DTC store: an AI agent that answers product and policy questions in plain English, surfaces alternative sizes or products when something is out of stock, and gently nudges abandoned carts back to checkout when a customer returns to the site. For Austin boutiques with complex catalogs — multi-size apparel, fit-sensitive footwear, made-to-order furniture — the lift is larger. Our <a href="/services/ai-chatbot-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI chatbot development service</a> covers what a production-grade conversational layer looks like, including the guardrails that keep it from saying things you do not want next to your brand.
       </p>
       <p className="mb-4">
         Belle Maison, a 200+ SKU Shopify DTC brand we work with, is a useful illustration: catalog complexity plus a recurring sizing question pattern in the cart added up to a real abandonment problem that a focused AI assistant moved the needle on. The same setup on a 25-SKU East Austin boutique would not have justified the build.
@@ -202,7 +202,7 @@ export const post: BlogPost = {
         <strong>Size-guide UX.</strong> For Austin apparel, footwear, and jewelry boutiques, the size-guide modal is one of the highest-traffic non-checkout elements on the site. A size guide that opens as a clean overlay (not a new tab), shows measurements in both inches and centimeters, and includes a short fit note per category typically reduces sizing-driven returns by 10–20% and lifts conversion meaningfully on first-time visitors.
       </p>
       <p className="mb-4">
-        For Austin DTC brands and boutiques that want the full Austin storefront stack — marketing site, ecommerce build, and conversion tuning — our <a href="/us/austin/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">Austin web design service</a> covers the marketing-site half of that build path.
+        For Austin DTC brands and boutiques that want the full Austin storefront stack — marketing site, ecommerce build, and conversion tuning — our <a href="/austin/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">Austin web design service</a> covers the marketing-site half of that build path.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Builds for Austin Ecommerce</h2>
@@ -216,7 +216,7 @@ export const post: BlogPost = {
         Talk to the founder directly — Bhavesh runs every Austin discovery call himself. Book a 30-minute slot at <a href="https://calendly.com/bhavesh-factoryjet/30min" className="text-blue-600 underline hover:text-blue-800 transition-colors">calendly.com/bhavesh-factoryjet</a> or email <a href="mailto:bhavesh@factoryjet.com" className="text-blue-600 underline hover:text-blue-800 transition-colors">bhavesh@factoryjet.com</a>.
       </p>
       <p className="mb-4">
-        ➡ <a href="/us/austin/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">See Austin ecommerce development packages</a>
+        ➡ <a href="/austin/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">See Austin ecommerce development packages</a>
       </p>
 
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8">

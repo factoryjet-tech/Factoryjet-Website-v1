@@ -27,7 +27,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'Web Design Company in Nagpur | | FactoryJet',
   description:
-    'Web design company in Nagpur for logistics firms, MIHAN SEZ businesses, agri-exporters & MSME manufacturers. Fast websites from ₹29,999. 7-day delivery. Serving Butibori MIDC, Hingna & MIHAN.',
+    'Web design company in Nagpur for logistics firms, MIHAN SEZ businesses, agri-exporters & MSME manufacturers. Fast, custom websites with a 7-day delivery guarantee. Serving Butibori MIDC, Hingna & MIHAN.',
   keywords: [
     'web design company in Nagpur',
     'website design Nagpur',
@@ -152,7 +152,7 @@ const faqSchema = {
       name: 'How much does a website cost for a business in Nagpur?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet's web design for Nagpur businesses starts at ₹29,999 for a 5-page Starter site. The Growth tier (₹80,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds start at ₹1,50,000. Nagpur agency rates for comparable scope typically run ₹70,000–₹2,00,000.",
+        text: "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
       },
     },
     {
@@ -252,7 +252,7 @@ const NAG_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a website cost for a business in Nagpur?',
     answer:
-      "FactoryJet's web design for Nagpur businesses starts at ₹29,999 for a 5-page Starter site. The Growth tier (₹80,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds start at ₹1,50,000. Nagpur agency rates for comparable scope typically run ₹70,000–₹2,00,000.",
+      "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
   },
   {
     category: 'pricing',
@@ -362,7 +362,7 @@ const NAG_FAQ_ITEMS = [
     category: 'support',
     question: 'What support do you provide after launch?',
     answer:
-      'Every project includes a 30-day post-launch support window covering bug fixes and minor adjustments at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans from ₹4,999/month.',
+      'Every project includes a 30-day post-launch support window covering bug fixes and minor adjustments at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans covering development changes, priority same-day bug response, and a dedicated engineer who knows your codebase.',
   },
   {
     category: 'support',
@@ -374,19 +374,19 @@ const NAG_FAQ_ITEMS = [
     category: 'support',
     question: 'Do you offer ongoing retainer services for Nagpur businesses?',
     answer:
-      'Yes. Monthly retainers from ₹4,999/month cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling and a dedicated engineer.',
+      'Yes. Monthly retainers cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling and a dedicated engineer.',
   },
   {
     category: 'local',
     question: 'How does FactoryJet compare to Nagpur web agencies?',
     answer:
-      "Nagpur web agencies typically charge ₹70,000–₹2,00,000 for a comparable project and deliver in 6–16 weeks. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at a fixed, published price.",
+      "Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright.",
   },
   {
     category: 'pricing',
     question: 'Do you offer a discount for Butibori MIDC or Hingna MIDC manufacturers?',
     answer:
-      "We don't offer location-based discounts — but our ₹29,999 Starter tier is built precisely for MSME manufacturers in Butibori and Hingna who need a credible, fast, mobile-first web presence quickly. It covers 5 pages, LocalBusiness schema, contact form, WhatsApp integration, and GA4 — everything a manufacturer needs to start generating online enquiries.",
+      "We don't offer location-based discounts — but our Starter tier is built precisely for MSME manufacturers in Butibori and Hingna who need a credible, fast, mobile-first web presence quickly. It covers 5 pages, LocalBusiness schema, contact form, WhatsApp integration, and GA4 — everything a manufacturer needs to start generating online enquiries.",
   },
 
   // Money-query coverage, added 2026-06-11
@@ -412,10 +412,6 @@ const NAG_COMPARISON_COLUMNS = [
 ] as const;
 
 const NAG_COMPARISON_ROWS = [
-  {
-    feature: 'Starting price',
-    values: ['Get a Quote', '₹70,000–₹2,00,000', '₹10,000–₹60,000', '₹0–₹15,000 (you build it)'],
-  },
   {
     feature: 'Delivery timeline',
     values: ['7 days', '6–16 weeks', '3–12 weeks (unreliable)', '1–2 weeks (you build it)'],
@@ -500,11 +496,6 @@ const howToSchema = {
   '@id': `https://factoryjet.com/web-design/nagpur#howto`,
   name: `How FactoryJet builds your Nagpur website in 7 days`,
   description: `Our 7-day process for delivering a professional, AI-powered website for Nagpur businesses.`,
-  estimatedCost: {
-    '@type': 'MonetaryAmount',
-    currency: 'INR',
-    minValue: '29999',
-  },
   totalTime: 'P7D',
   step: [
     {
@@ -593,7 +584,7 @@ export default function NagpurWebDesignPage() {
         formSlot={<HeroInlineForm region="in" source="web_design_nagpur_hero" />}
           eyebrow="WEB DESIGN · NAGPUR"
           headline="Website Design in Nagpur for Logistics Companies, MIHAN SEZ Businesses, and Central India's Growing Enterprises"
-          lead="Nagpur sits at the geographic dead-centre of India — the Zero Mile marker — making it the country's most strategically located logistics and trade hub. MIHAN, India's largest SEZ with ₹35,000 Cr investment, is transforming the city into a national aviation and IT hub. From Butibori MIDC's industrial belt and Hingna's manufacturing corridor to the city's growing agri-export community and 500+ logistics firms, Nagpur businesses have never had more to compete for. FactoryJet builds from ₹29,999 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
+          lead="Nagpur sits at the geographic dead-centre of India — the Zero Mile marker — making it the country's most strategically located logistics and trade hub. MIHAN, India's largest SEZ with ₹35,000 Cr investment, is transforming the city into a national aviation and IT hub. From Butibori MIDC's industrial belt and Hingna's manufacturing corridor to the city's growing agri-export community and 500+ logistics firms, Nagpur businesses have never had more to compete for. FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',
@@ -745,7 +736,7 @@ export default function NagpurWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Nagpur Businesses Choose FactoryJet Over Local Agencies"
-          lead="Nagpur web agencies typically charge ₹70,000–₹2,00,000 for a comparable project and take 6–16 weeks to deliver. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
+          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
           pillars={[
             {
               icon: '⚡',
@@ -808,13 +799,13 @@ export default function NagpurWebDesignPage() {
           headline="FactoryJet vs. Nagpur Agency vs. Freelancer vs. Template Builder"
           lead="Not all web design options in Nagpur deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
           pullQuote={{
-            stat: '₹29,999',
+            stat: '7 days',
             caption:
-              'starting price — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a ₹1,50,000 Nagpur agency project.',
+              'from kickoff to launch — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
           }}
           columns={NAG_COMPARISON_COLUMNS}
           rows={NAG_COMPARISON_ROWS}
-          footer="Prices reflect typical Nagpur market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
+          footer="FactoryJet fixed-price contracts available for every scope. You get a clear quote up front after a free consultation."
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}

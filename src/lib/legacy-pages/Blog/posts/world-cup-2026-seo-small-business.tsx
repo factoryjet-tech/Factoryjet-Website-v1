@@ -438,7 +438,7 @@ export const post: BlogPost = {
         </a>{' '}
         covers the store-launch angle for businesses selling merchandise. For SEO implementation
         built specifically for your market,{' '}
-        <a href="/us/services/seo" className="text-[#F05A28] hover:underline">
+        <a href="/services/seo" className="text-[#F05A28] hover:underline">
           the US SEO service page
         </a>{' '}
         shows what a full engagement covers.
@@ -457,11 +457,11 @@ export const post: BlogPost = {
       <p className="mb-4">
         FactoryJet implements SEO pages, Event schema, GBP optimization, and local landing pages for
         US, UK, and Australian clients. The{' '}
-        <a href="/us/services/seo" className="text-[#F05A28] hover:underline">
+        <a href="/services/seo" className="text-[#F05A28] hover:underline">
           US SEO service page
         </a>{' '}
         covers what a full engagement looks like. Businesses in host cities like{' '}
-        <a href="/us/tampa" className="text-[#F05A28] hover:underline">
+        <a href="/tampa" className="text-[#F05A28] hover:underline">
           Tampa
         </a>{' '}
         have a particularly strong local search angle during the tournament. If you want to discuss

@@ -9,7 +9,7 @@ import { gsap, ScrollTrigger } from "@/lib/gsap";
 const BODY_PARAGRAPHS = [
   "Walk through the Northern Quarter, Spinningfields, or MediaCityUK and you'll find businesses investing heavily in physical spaces — fit-outs, branding, location. Then visit their websites. Slow-loading WordPress themes last updated in 2021. Mobile experiences that feel like desktop afterthoughts. No conversion architecture. No schema markup. Zero visibility in AI search results.",
   "This is the reality across Manchester's SME landscape. While the city's digital infrastructure is world-class, most local business websites are not. They sit below the fold of Google's local pack, invisible to ChatGPT, Perplexity, and Claude when potential customers ask \"who builds websites in Manchester?\" or \"best web agency near Deansgate.\"",
-  "The Manchester web design market is crowded — there are over 1,000 agencies operating in the city region. But crowded doesn't mean good. Most are template shops: WordPress installs with premium themes, basic contact forms, and no performance engineering. They charge £5,000–£20,000 for websites that score 40–60 on Google Lighthouse, take 4–6 seconds to load on mobile, and have zero AI search visibility.",
+  "The Manchester web design market is crowded — there are over 1,000 agencies operating in the city region. But crowded doesn't mean good. Most are template shops: WordPress installs with premium themes, basic contact forms, and no performance engineering. They charge premium agency fees for websites that score 40–60 on Google Lighthouse, take 4–6 seconds to load on mobile, and have zero AI search visibility.",
 ];
 
 export default function ProblemStatement() {

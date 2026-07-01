@@ -199,7 +199,7 @@ export const post: BlogPost = {
         <strong>6. You want a fast, low-risk launch with a 7-day window.</strong> For a polished design-led brand site of 5-15 pages, Webflow and WordPress are both realistic in a 7-day timeline. Webflow tends to be slightly faster because there&apos;s no hosting setup or plugin selection — you go straight from design to launch.
       </p>
       <p className="mb-4">
-        See our <a href="/us/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">US web design service overview</a> for how we scope Webflow and WordPress builds against each other.
+        See our <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">US web design service overview</a> for how we scope Webflow and WordPress builds against each other.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">When WordPress Wins for US Small Businesses</h2>
@@ -225,7 +225,7 @@ export const post: BlogPost = {
         <strong>6. You already run WordPress somewhere else.</strong> If your blog is on WordPress, your nonprofit chapter is on WordPress, or a sister brand uses it, staying on WordPress means one set of editor training, one maintenance retainer, and one set of plugins to reason about. Mixing platforms across the same business is usually more friction than it&apos;s worth.
       </p>
       <p className="mb-4">
-        See our <a href="/us/services/wordpress-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">US WordPress development packages</a> for scope and 7-day delivery details.
+        See our <a href="/services/wordpress-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">US WordPress development packages</a> for scope and 7-day delivery details.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Real US Pricing in 2026: All-In Math</h2>
@@ -242,7 +242,7 @@ export const post: BlogPost = {
         Webflow looks more expensive on the monthly platform fee and ends up cheaper or comparable once you bake in WordPress&apos;s real maintenance cost. Beyond 50,000 monthly visitors or on multilingual builds, WordPress wins on cost again. Below that, the platforms are closer than the sticker prices suggest.
       </p>
       <p className="mb-4">
-        See our <a href="/us/pricing" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet US pricing</a> for what we charge to build on either platform.
+        See our <a href="/pricing" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet US pricing</a> for what we charge to build on either platform.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">The Headless Option on Both Sides</h2>
@@ -256,7 +256,7 @@ export const post: BlogPost = {
         <strong>WordPress headless with REST API or WPGraphQL.</strong> WordPress runs the back end (familiar editor, custom post types, taxonomies, user management), and a Next.js front end fetches content via the REST API or WPGraphQL. Lighthouse 100/100 is achievable, the editor team stays in WordPress, and you have full design control. This stack is now production-mature with WP Engine&apos;s Atlas, Vercel integrations, and WPGraphQL. Typical SMB build: $15,000-$45,000.
       </p>
       <p className="mb-4">
-        Both headless paths are real, both are overkill for a 10-page brochure site, and both make sense when content team comfort matters and performance is non-negotiable. For a deeper dive on the WordPress headless side, see our companion comparison: <a href="/blog/custom-web-development-vs-wordpress-us-small-business-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">Custom Web Development vs WordPress for US Small Businesses</a>. For custom application work that goes beyond either CMS, see our <a href="/us/services/web-application-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">US web application development service</a>.
+        Both headless paths are real, both are overkill for a 10-page brochure site, and both make sense when content team comfort matters and performance is non-negotiable. For a deeper dive on the WordPress headless side, see our companion comparison: <a href="/blog/custom-web-development-vs-wordpress-us-small-business-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">Custom Web Development vs WordPress for US Small Businesses</a>. For custom application work that goes beyond either CMS, see our <a href="/services/web-application-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">US web application development service</a>.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Migration Paths Between the Two</h2>
@@ -281,7 +281,7 @@ export const post: BlogPost = {
         <strong>Webflow builds:</strong> Custom design (no purchased templates), Webflow CMS collections structured for your content, Lighthouse 90+ mobile scores, WCAG 2.2 Level AA accessibility, full on-page SEO (meta, schema, OG, canonical control), Webflow Editor training for your team, and Site plan setup on the right tier for your scale. 7-day delivery on standard 5-page builds when content is provided at kickoff. Starting at $2,499.
       </p>
       <p className="mb-4">
-        <strong>WordPress builds:</strong> Custom theme development (no themeforest), Lighthouse 90+ mobile scores, WCAG 2.2 Level AA accessibility, full SEO configuration (Yoast or Rank Math + schema markup), managed hosting setup on WP Engine, Kinsta, or Pressable, and editor training for your team. 7-day delivery on standard 5-page builds. Starting at $1,999. See <a href="/us/services/wordpress-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">WordPress development packages</a> for full scope.
+        <strong>WordPress builds:</strong> Custom theme development (no themeforest), Lighthouse 90+ mobile scores, WCAG 2.2 Level AA accessibility, full SEO configuration (Yoast or Rank Math + schema markup), managed hosting setup on WP Engine, Kinsta, or Pressable, and editor training for your team. 7-day delivery on standard 5-page builds. Starting at $1,999. See <a href="/services/wordpress-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">WordPress development packages</a> for full scope.
       </p>
       <p className="mb-4">
         <strong>Headless builds:</strong> Webflow + Next.js or WordPress + Next.js with WPGraphQL. The editor experience your team already knows, paired with the performance and design freedom of a custom front end. Typically $12,000-$45,000 for an SMB build.

@@ -16,7 +16,7 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ onOpenModal }) => {
       solution: "Custom Next.js site with virtual tours, bilingual support, CRM integration",
       results: ["340% lead increase", "8.5% conversion rate", "12,000+ monthly visitors"],
       timeline: "10 Weeks",
-      investment: "AED 45,000"
+      investment: "Fixed-price"
     },
     {
       industry: "E-Commerce",
@@ -27,7 +27,7 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ onOpenModal }) => {
       solution: "Shopify store with 500+ products, Tabby/Tamara integration, mobile optimization",
       results: ["AED 500k monthly sales", "6.2% conversion rate", "40% mobile revenue"],
       timeline: "8 Weeks",
-      investment: "AED 40,000"
+      investment: "Fixed-price"
     },
     {
       industry: "Hospitality",
@@ -38,7 +38,7 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ onOpenModal }) => {
       solution: "WordPress booking engine, payment integration, review system",
       results: ["55% direct bookings", "AED 150k monthly savings", "4.8★ rating"],
       timeline: "6 Weeks",
-      investment: "AED 25,000"
+      investment: "Fixed-price"
     }
   ];
 

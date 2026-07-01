@@ -159,7 +159,7 @@ const SHOPIFY_faqSchema = {
       name: 'How much does a custom Shopify store cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet's Shopify development starts at ₹34,999 for a custom theme applied to an existing Shopify store. A full store build — custom theme, products, Razorpay and UPI payment integration, Shiprocket logistics, GST invoicing, and launch — runs ₹89,999. Shopify Plus builds with B2B wholesale portals, multi-storefront management, and Checkout Extensibility start at ₹1,99,999. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.",
+        text: "FactoryJet's Shopify pricing is fixed-price and scoped to your build. The main drivers are whether you need a custom theme on an existing store, a full store build (custom theme, products, Razorpay and UPI payment integration, Shiprocket logistics, GST invoicing, and launch), or a Shopify Plus build with B2B wholesale portals, multi-storefront management, and Checkout Extensibility. Every project is quoted up front after a free discovery call, with no hourly billing and no scope creep.",
       },
     },
     {
@@ -202,12 +202,12 @@ const SHOPIFY_faqSchema = {
     {
       '@type': 'Question',
       name: 'What are the top 10 Shopify development companies in India?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Lists of the top 10 Shopify development agencies in India usually rank by portfolio size, which is the wrong filter for a small business. FactoryJet competes in the top 10 Shopify development companies in India conversation on three measurable things: who writes the code, a published fixed price, and launch speed. The same checks apply to any roundup of the top 10 Shopify experts in India.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Lists of the top 10 Shopify development agencies in India usually rank by portfolio size, which is the wrong filter for a small business. FactoryJet competes in the top 10 Shopify development companies in India conversation on three measurable things: who writes the code, a fixed quote confirmed up front, and launch speed. The same checks apply to any roundup of the top 10 Shopify experts in India.' },
     },
     {
       '@type': 'Question',
       name: 'How much does Shopify website cost in India?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Shopify website cost in India runs from about ₹40,000 for a template setup to ₹2,00,000+ for a custom theme with advanced features. If you are asking how much does Shopify store cost in India all-in, add apps and the monthly Shopify plan fee — an honest agency quotes both. And if speed matters, we can launch a standard Shopify store in one week.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Shopify website cost in India ranges widely — a basic template setup sits at the low end, while a custom theme with advanced features costs more. If you are asking how much does Shopify store cost in India all-in, factor in apps and your monthly Shopify plan fee too — an honest agency quotes both. Our pricing is fixed-price and scoped to your build after a free discovery call. And if speed matters, we can launch a standard Shopify store in one week.' },
     },
   ],
 };
@@ -408,12 +408,12 @@ const SHOPIFY_COMPARISON_COLUMNS = [
 
 const SHOPIFY_COMPARISON_ROWS = [
   {
-    feature: 'Starting price',
+    feature: 'Pricing model',
     values: [
-      '₹34,999',
-      '₹2,00,000–₹8,00,000',
-      '₹40,000–₹1,50,000',
-      '₹0–₹25,000 (then you configure it)',
+      'Fixed-price, scoped up front',
+      'High agency retainers',
+      'Variable, often re-quoted',
+      'Cheap theme, you configure it',
     ],
   },
   {
@@ -497,7 +497,7 @@ const SHOPIFY_COMPARISON_ROWS = [
 const SHOPIFY_PRICING_TIERS = [
   {
     name: 'Starter',
-    priceRange: '₹34,999',
+    priceRange: 'Fixed-price',
     description:
       'A custom Shopify theme designed in Figma and built in Liquid for your existing store. Best for brands that already have Shopify set up but need a storefront that actually converts.',
     features: [
@@ -515,7 +515,7 @@ const SHOPIFY_PRICING_TIERS = [
   },
   {
     name: 'Growth',
-    priceRange: '₹89,999',
+    priceRange: 'Fixed-price',
     description:
       'A complete Shopify store from scratch — custom theme, full product catalogue, Razorpay + UPI payments, Shiprocket logistics, GST invoicing, WhatsApp notifications, and a live launch.',
     features: [
@@ -534,7 +534,7 @@ const SHOPIFY_PRICING_TIERS = [
   },
   {
     name: 'Scale',
-    priceRange: '₹1,99,999',
+    priceRange: 'Custom quote',
     description:
       'Shopify Plus with custom checkout UI, B2B wholesale portal, or headless Hydrogen storefront — for brands where standard Shopify has hit its ceiling.',
     features: [
@@ -568,7 +568,7 @@ const SHOPIFY_FAQ_ITEMS = [
     category: 'cost',
     question: 'How much does a custom Shopify store cost in India?',
     answer:
-      "FactoryJet's Shopify development starts at ₹34,999 for a custom Liquid theme applied to an existing Shopify store. A full store build — custom theme, products, Razorpay + UPI payment integration, Shiprocket logistics, GST invoicing, WhatsApp notifications, and launch — runs ₹89,999. Shopify Plus builds with Checkout Extensibility, B2B wholesale portals, and multi-storefront management start at ₹1,99,999 and are scoped after a discovery call. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.",
+      "FactoryJet's Shopify pricing is fixed-price and scoped to your build. The main drivers are whether you need a custom Liquid theme on an existing store, a full store build (custom theme, products, Razorpay + UPI payment integration, Shiprocket logistics, GST invoicing, WhatsApp notifications, and launch), or a Shopify Plus build with Checkout Extensibility, B2B wholesale portals, and multi-storefront management. Every project is quoted up front after a free discovery call, with no hourly billing and no scope creep.",
   },
   {
     category: 'cost',
@@ -620,7 +620,7 @@ const SHOPIFY_FAQ_ITEMS = [
     category: 'platform',
     question: 'Do I need Shopify Plus, or will standard Shopify work?',
     answer:
-      "Standard Shopify (Basic, Grow, or Advanced at $29–$299/month) works well for most Indian D2C brands doing under ₹5 crore/year online. Shopify Plus (starting at $2,500/month) is worth the investment when you need: fully custom checkout UI via Checkout Extensibility, a B2B wholesale portal with company accounts and net-30 credit terms, management of 10+ storefronts from one admin, or advanced Shopify Flow automation for complex order routing. We assess this during discovery — we will not push you to Plus if your revenue does not justify the subscription cost.",
+      "Standard Shopify (Basic, Grow, or Advanced plans) works well for most Indian D2C brands doing under ₹5 crore/year online. Shopify Plus is worth the investment when you need: fully custom checkout UI via Checkout Extensibility, a B2B wholesale portal with company accounts and net-30 credit terms, management of 10+ storefronts from one admin, or advanced Shopify Flow automation for complex order routing. We assess this during discovery — we will not push you to Plus if your revenue does not justify the subscription cost.",
   },
   {
     category: 'platform',
@@ -686,7 +686,7 @@ const SHOPIFY_FAQ_ITEMS = [
     category: 'trust',
     question: 'What ongoing support does FactoryJet offer after Shopify launch?',
     answer:
-      'Every Shopify project includes a 14-day post-launch support window covering bug fixes, minor adjustments, and launch questions at no extra cost. Beyond that, FactoryJet offers monthly retainer plans from ₹9,999/month: up to 4 hours of Shopify development, priority same-day bug response, and a dedicated engineer who knows your theme codebase. Retainer clients get pre-built festival campaign assets (Diwali sale banners, Holi offers, Independence Day promotions) and quarterly performance reviews.',
+      'Every Shopify project includes a 14-day post-launch support window covering bug fixes, minor adjustments, and launch questions at no extra cost. Beyond that, FactoryJet offers monthly retainer plans scoped to the hours you need: Shopify development time, priority same-day bug response, and a dedicated engineer who knows your theme codebase. Retainer pricing is fixed and quoted up front. Retainer clients get pre-built festival campaign assets (Diwali sale banners, Holi offers, Independence Day promotions) and quarterly performance reviews.',
   },
   {
     category: 'trust',
@@ -712,13 +712,13 @@ const SHOPIFY_FAQ_ITEMS = [
     category: 'trust',
     question: 'What are the top 10 Shopify development companies in India?',
     answer:
-      'Lists of the top 10 Shopify development agencies in India usually rank by portfolio size, which is the wrong filter for a small business. FactoryJet competes in the top 10 Shopify development companies in India conversation on three measurable things: who writes the code, a published fixed price, and launch speed. The same checks apply to any roundup of the top 10 Shopify experts in India.',
+      'Lists of the top 10 Shopify development agencies in India usually rank by portfolio size, which is the wrong filter for a small business. FactoryJet competes in the top 10 Shopify development companies in India conversation on three measurable things: who writes the code, a fixed quote confirmed up front, and launch speed. The same checks apply to any roundup of the top 10 Shopify experts in India.',
   },
   {
     category: 'cost',
     question: 'How much does Shopify website cost in India?',
     answer:
-      'Shopify website cost in India runs from about ₹40,000 for a template setup to ₹2,00,000+ for a custom theme with advanced features. If you are asking how much does Shopify store cost in India all-in, add apps and the monthly Shopify plan fee — an honest agency quotes both. And if speed matters, we can launch a standard Shopify store in one week.',
+      'Shopify website cost in India ranges widely — a basic template setup sits at the low end, while a custom theme with advanced features costs more. If you are asking how much does Shopify store cost in India all-in, factor in apps and your monthly Shopify plan fee too — an honest agency quotes both. Our pricing is fixed-price and scoped to your build after a free discovery call. And if speed matters, we can launch a standard Shopify store in one week.',
   },
 ];
 
@@ -763,7 +763,7 @@ export default function ShopifyDevelopmentPage() {
         formSlot={<HeroInlineForm region="in" source="shopify_development_hero" />}
           eyebrow="SHOPIFY WEBSITE DEVELOPMENT COMPANY · INDIA"
           headline="Shopify Website Development Company in India — Stores Built to Sell, in 7 Days"
-          lead="Generic Shopify themes convert at 0.8% in India. FactoryJet builds custom Shopify stores — designed in Figma, Razorpay and UPI integrated, GST-compliant, Lighthouse 95+ — from ₹34,999. In 7 days."
+          lead="Generic Shopify themes convert at 0.8% in India. FactoryJet builds custom Shopify stores — designed in Figma, Razorpay and UPI integrated, GST-compliant, Lighthouse 95+ — at a fixed price scoped to your build. In 7 days."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '120+ Shopify stores launched',
@@ -914,10 +914,10 @@ export default function ShopifyDevelopmentPage() {
               </div>
               <div className="divide-y divide-fj-neutral-100 px-7">
                 {[
-                  { plan: 'Shopify Basic', best: 'New stores, testing the market', price: '$29/mo' },
-                  { plan: 'Shopify Grow', best: 'Growing D2C brands, 2+ staff', price: '$79/mo' },
-                  { plan: 'Shopify Advanced', best: 'Scale, advanced reports, lower MDR', price: '$299/mo' },
-                  { plan: 'Shopify Plus', best: 'B2B, multi-store, custom checkout', price: '$2,500/mo' },
+                  { plan: 'Shopify Basic', best: 'New stores, testing the market', price: 'Entry plan' },
+                  { plan: 'Shopify Grow', best: 'Growing D2C brands, 2+ staff', price: 'Mid plan' },
+                  { plan: 'Shopify Advanced', best: 'Scale, advanced reports, lower MDR', price: 'Advanced plan' },
+                  { plan: 'Shopify Plus', best: 'B2B, multi-store, custom checkout', price: 'Enterprise plan' },
                   { plan: 'Headless Hydrogen', best: 'Sub-1s loads, full design control', price: 'Custom' },
                 ].map((item) => (
                   <div key={item.plan} className="py-3.5">
@@ -958,7 +958,7 @@ export default function ShopifyDevelopmentPage() {
         <StrategicDarkSection
           eyebrow="THE PROBLEM"
           headline="Your Shopify store is live. The conversion rate is where revenue disappears."
-          lead="Most Indian Shopify stores run on a ₹5,000 theme with the logo swapped. They convert at 0.8% on mobile. A properly designed custom build converts at 2.4%. That 1.6-point gap represents the majority of your potential revenue — not from more traffic, but from your existing visitors."
+          lead="Most Indian Shopify stores run on a cheap off-the-shelf theme with the logo swapped. They convert at 0.8% on mobile. A properly designed custom build converts at 2.4%. That 1.6-point gap represents the majority of your potential revenue — not from more traffic, but from your existing visitors."
           pillars={[
             {
               icon: '📱',
@@ -972,8 +972,8 @@ export default function ShopifyDevelopmentPage() {
             },
             {
               icon: '💸',
-              title: 'Indian Shopify agencies charge ₹2–8 lakhs and deliver a theme installation.',
-              body: 'A mid-tier Indian digital agency charges ₹2,00,000–₹8,00,000 for Shopify development — and typically delivers a Shopify theme with the logo and colours customised. FactoryJet builds a genuinely custom Figma-designed Liquid theme, properly wired to Razorpay, Shiprocket, GST invoicing, and WhatsApp — at a fixed, published price. Because our team is specialised and lean, not overhead-heavy.',
+              title: 'Indian Shopify agencies charge premium fees and deliver a theme installation.',
+              body: 'A mid-tier Indian digital agency charges a steep fee for Shopify development — and typically delivers a Shopify theme with the logo and colours customised. FactoryJet builds a genuinely custom Figma-designed Liquid theme, properly wired to Razorpay, Shiprocket, GST invoicing, and WhatsApp — at a fixed price scoped up front. Because our team is specialised and lean, not overhead-heavy.',
             },
           ]}
         />
@@ -1183,7 +1183,7 @@ export default function ShopifyDevelopmentPage() {
           leadParagraphs={[
             "Shopify powers over 2.85 million stores globally — and India is one of its fastest-growing markets. Indian D2C brands on Shopify collectively process billions of rupees in monthly GMV across fashion, beauty, food, electronics, and home categories. The brands capturing the highest share of that growth are not the largest ones. They are the brands with fast, properly optimised Shopify stores that convert mobile traffic efficiently, use Razorpay Turbo for frictionless UPI checkout, and recover abandoned carts via WhatsApp.",
             "FactoryJet has built Shopify stores for brands in Mumbai, Delhi, Bangalore, Hyderabad, Chennai, Pune, Ahmedabad, Surat, Jaipur, and Kolkata — across D2C fashion, D2C health and wellness, B2B wholesale portals, food and gifting stores, and quick-commerce Shopify frontends. We understand what an Indian D2C brand at ₹10 lakh to ₹10 crore monthly GMV needs from a Shopify store.",
-            "The brands we build for have usually done the math. At 0.8% conversion (generic theme) on 5,000 monthly visitors with a ₹1,800 AOV: ₹72,000/month. At 2.4% (custom FactoryJet theme): ₹2,16,000/month. The ₹1,44,000 monthly difference pays for the ₹89,999 full store build in under 21 days. That is the ROI case for a custom Shopify build over a generic theme — and it is the same calculation every time.",
+            "The brands we build for have usually done the math. At 0.8% conversion (generic theme) on 5,000 monthly visitors with a ₹1,800 AOV: ₹72,000/month. At 2.4% (custom FactoryJet theme): ₹2,16,000/month. The ₹1,44,000 monthly difference pays back a full custom store build in well under a month. That is the ROI case for a custom Shopify build over a generic theme — and it is the same calculation every time.",
           ]}
           bodySlot={
             <>
@@ -1261,13 +1261,13 @@ export default function ShopifyDevelopmentPage() {
           headline="FactoryJet vs. Indian Shopify Agency vs. Freelancer vs. Theme Store"
           lead="Not all Shopify development options deliver the same output. Here is the honest comparison."
           pullQuote={{
-            stat: '₹34,999',
+            stat: 'Fixed-price',
             caption:
-              'starting price — same Figma-first design, Liquid engineering, Razorpay + UPI integration, and Lighthouse audit as a ₹3,00,000 Indian agency project.',
+              'scoped up front — same Figma-first design, Liquid engineering, Razorpay + UPI integration, and Lighthouse audit you would expect from a premium Indian agency project, without the agency overhead.',
           }}
           columns={SHOPIFY_COMPARISON_COLUMNS}
           rows={SHOPIFY_COMPARISON_ROWS}
-          footer="Prices reflect typical Indian market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
+          footer="FactoryJet fixed-price contracts available for all tiers, quoted up front after a free discovery call."
         />
 
         {/* ── 12. WHAT WE BUILD ────────────────────────────────────────────── */}

@@ -11,11 +11,11 @@ import { gsap, ScrollTrigger } from "@/lib/gsap";
 const FAQS = [
   {
     q: "How much does web design cost in Liverpool?",
-    a: "Web design in Liverpool typically costs £3,500–£8,000 for a brochure website with an established local agency. E-commerce projects range from £6,000–£20,000 depending on complexity. FactoryJet builds comparable-quality sites at a fixed, published price — typically £1,500–£3,200 for brochure sites and £2,800–£9,000 for e-commerce — because we operate AI-natively without Liverpool office overhead.",
+    a: "Web design costs in Liverpool vary widely with established local agencies, and e-commerce builds sit higher again depending on complexity. FactoryJet works on a fixed-price basis, scoped to your project — the main drivers are page count, custom design, e-commerce functionality, and integrations. Because we operate AI-natively without Liverpool office overhead, every project is quoted up front after a free discovery call, so you know the full cost before any work starts.",
   },
   {
     q: "What is the best web design agency in Liverpool?",
-    a: "Liverpool has several strong web agencies: Pixus (15+ years, Shopify Partner), Webrevolve (1,000+ projects), and Velstar (Shopify Platinum Partner) are the most established. For AI-native web design, AI SEO, and AI agent development, FactoryJet is currently the only Liverpool-focused agency operating at this capability level, at prices at a fixed, published price.",
+    a: "Liverpool has several strong web agencies: Pixus (15+ years, Shopify Partner), Webrevolve (1,000+ projects), and Velstar (Shopify Platinum Partner) are the most established. For AI-native web design, AI SEO, and AI agent development, FactoryJet is currently the only Liverpool-focused agency operating at this capability level, with transparent fixed-price quotes after a free discovery call.",
   },
   {
     q: "Is there an AI web design agency in Liverpool?",
@@ -31,7 +31,7 @@ const FAQS = [
   },
   {
     q: "Does FactoryJet build Shopify Plus stores for Liverpool businesses?",
-    a: "Yes. We build Shopify Plus stores at a fixed, published price. Velstar is Liverpool's best-known Shopify Platinum Partner and an excellent agency — their pricing reflects their premium positioning. FactoryJet delivers equivalent technical capability — headless Shopify, custom checkout, Shopify Flow automation, third-party integrations — at a significantly lower price point for Liverpool brands.",
+    a: "Yes. We build Shopify Plus stores on a fixed-price basis. Velstar is Liverpool's best-known Shopify Platinum Partner and an excellent agency. FactoryJet delivers equivalent technical capability — headless Shopify, custom checkout, Shopify Flow automation, third-party integrations — for Liverpool brands, scoped to your build and quoted up front after a free discovery call.",
   },
   {
     q: "How long does a website project take with FactoryJet?",

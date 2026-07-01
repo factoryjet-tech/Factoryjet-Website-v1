@@ -28,7 +28,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'Web Design Company in Ahmedabad | | FactoryJet',
   description:
-    'Web design company in Ahmedabad for textile exporters & trading firms. Fast websites from ₹25,000. 7-day delivery. Serving SG Highway, Vastrapur & GIFT City.',
+    'Web design company in Ahmedabad for textile exporters & trading firms. Fast, custom websites with a 7-day delivery guarantee. Serving SG Highway, Vastrapur & GIFT City.',
   keywords: [
     'web design company in Ahmedabad',
     'website design Ahmedabad',
@@ -149,7 +149,7 @@ const faqSchema = {
       name: 'How much does a website cost for a business in Ahmedabad?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet's web design for Ahmedabad businesses starts at ₹25,000 for a 5-page Starter site. The Growth tier (₹50,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds start at ₹1,00,000. Ahmedabad agency rates for comparable scope typically run ₹1,00,000–₹3,00,000.",
+        text: "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
       },
     },
     {
@@ -249,7 +249,7 @@ const AMD_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a website cost for a business in Ahmedabad?',
     answer:
-      "FactoryJet's web design for Ahmedabad businesses starts at ₹25,000 for a 5-page Starter site. The Growth tier (₹50,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds start at ₹1,00,000. Ahmedabad agency rates for comparable scope typically run ₹1,00,000–₹3,00,000.",
+      "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
   },
   {
     category: 'pricing',
@@ -345,7 +345,7 @@ const AMD_FAQ_ITEMS = [
     category: 'local',
     question: 'How does FactoryJet compare to Ahmedabad web agencies?',
     answer:
-      "Ahmedabad web agencies typically charge ₹1,00,000–₹3,00,000 for a comparable project and deliver in 6–16 weeks. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at a fixed, published price.",
+      "Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright.",
   },
 
   /* ── Support & Ownership ── */
@@ -359,7 +359,7 @@ const AMD_FAQ_ITEMS = [
     category: 'support',
     question: 'What support do you provide after launch?',
     answer:
-      'Every project includes a 30-day post-launch support window covering bug fixes and minor adjustments at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans from ₹4,999/month.',
+      'Every project includes a 30-day post-launch support window covering bug fixes and minor adjustments at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans covering development changes, priority same-day bug response, and a dedicated engineer who knows your codebase.',
   },
   {
     category: 'support',
@@ -371,7 +371,7 @@ const AMD_FAQ_ITEMS = [
     category: 'support',
     question: 'Do you offer ongoing retainer services for Ahmedabad businesses?',
     answer:
-      'Yes. Monthly retainers from ₹4,999/month cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling and a dedicated engineer.',
+      'Yes. Monthly retainers cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling and a dedicated engineer.',
   },
 
   // Money-query coverage, added 2026-06-11
@@ -397,10 +397,6 @@ const AMD_COMPARISON_COLUMNS = [
 ] as const;
 
 const AMD_COMPARISON_ROWS = [
-  {
-    feature: 'Starting price',
-    values: ['Get a Quote', '₹1,00,000–₹3,00,000', '₹10,000–₹60,000', '₹0–₹15,000 (you build it)'],
-  },
   {
     feature: 'Delivery timeline',
     values: ['7 days', '6–16 weeks', '3–12 weeks (unreliable)', '1–2 weeks (you build it)'],
@@ -485,11 +481,6 @@ const howToSchema = {
   '@id': `https://factoryjet.com/web-design/ahmedabad#howto`,
   name: `How FactoryJet builds your Ahmedabad website in 7 days`,
   description: `Our 7-day process for delivering a professional, AI-powered website for Ahmedabad businesses.`,
-  estimatedCost: {
-    '@type': 'MonetaryAmount',
-    currency: 'INR',
-    minValue: '25000',
-  },
   totalTime: 'P7D',
   step: [
     {
@@ -578,7 +569,7 @@ export default function AhmedabadWebDesignPage() {
         formSlot={<HeroInlineForm region="in" source="web_design_ahmedabad_hero" />}
           eyebrow="WEB DESIGN · AHMEDABAD"
           headline="Website Design in Ahmedabad for Textile Exporters, Trading Firms, and Growing Businesses"
-          lead="Ahmedabad is India's textile capital, Gujarat's commercial hub, and home to GIFT City — India's first International Financial Services Centre. From the Textile Market and GIDC Vatva to SG Highway's corporate corridor and GIFT City's IFSC zone, Ahmedabad businesses compete globally. FactoryJet builds from ₹25,000 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
+          lead="Ahmedabad is India's textile capital, Gujarat's commercial hub, and home to GIFT City — India's first International Financial Services Centre. From the Textile Market and GIDC Vatva to SG Highway's corporate corridor and GIFT City's IFSC zone, Ahmedabad businesses compete globally. FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',
@@ -729,7 +720,7 @@ export default function AhmedabadWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Ahmedabad Businesses Choose FactoryJet Over Local Agencies"
-          lead="Ahmedabad web agencies typically charge ₹1,00,000–₹3,00,000 for a comparable project and take 6–16 weeks to deliver. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
+          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
           pillars={[
             {
               icon: '⚡',
@@ -792,13 +783,13 @@ export default function AhmedabadWebDesignPage() {
           headline="FactoryJet vs. Ahmedabad Agency vs. Freelancer vs. Template Builder"
           lead="Not all web design options in Ahmedabad deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
           pullQuote={{
-            stat: '₹25,000',
+            stat: '7 days',
             caption:
-              'starting price — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a ₹2,00,000 Ahmedabad agency project.',
+              'from kickoff to launch — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
           }}
           columns={AMD_COMPARISON_COLUMNS}
           rows={AMD_COMPARISON_ROWS}
-          footer="Prices reflect typical Ahmedabad market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
+          footer="FactoryJet fixed-price contracts available for every scope. You get a clear quote up front after a free consultation."
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}

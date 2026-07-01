@@ -41,7 +41,7 @@ export default function CityHubPage({ city }: CityHubPageProps) {
       role: 'Professional Services'
     },
     {
-      text: 'As a small shop owner, I couldn\'t justify the quotes from local agencies asking £4,000+. FactoryJet gave me a better website for £799 in 5 days.',
+      text: 'As a small shop owner, I couldn\'t justify the quotes from local agencies. FactoryJet gave me a better website at a fixed, agreed price in 5 days.',
       author: 'Independent Retailer',
       role: `${city.region} area`
     },
@@ -55,7 +55,6 @@ export default function CityHubPage({ city }: CityHubPageProps) {
   const pricing = [
     {
       name: 'Starter',
-      price: '£799',
       duration: '5 days',
       description: 'Perfect for sole traders',
       features: ['5-page custom website', 'Mobile-first design', 'SEO setup', 'Contact form + Google Maps', '1× revision round'],
@@ -63,7 +62,6 @@ export default function CityHubPage({ city }: CityHubPageProps) {
     },
     {
       name: 'Business',
-      price: '£1,499',
       duration: '7 days',
       description: 'For established SMBs',
       features: ['Up to 10 pages', 'Custom design + animations', 'Full on-page SEO', 'Blog/news section', 'AI chatbot (basic)', 'Google Analytics + Search Console', '2× revision rounds'],
@@ -71,7 +69,6 @@ export default function CityHubPage({ city }: CityHubPageProps) {
     },
     {
       name: 'E-Commerce',
-      price: '£2,499',
       duration: '7 days',
       description: 'For online retailers',
       features: ['Shopify or WooCommerce build', 'Up to 50 products', 'Payment gateway integration', 'Delivery options setup', 'SEO-optimised product pages', 'AI chatbot for sales'],
@@ -79,7 +76,6 @@ export default function CityHubPage({ city }: CityHubPageProps) {
     },
     {
       name: 'Enterprise',
-      price: 'From £4,999',
       duration: '10-14 days',
       description: 'For complex projects',
       features: ['Complex multi-page builds', 'Custom functionality', 'AI agent integration', 'CRM/ERP connection', 'Dedicated project manager'],
@@ -149,8 +145,8 @@ export default function CityHubPage({ city }: CityHubPageProps) {
       {/* MARQUEE BAND */}
       <section className="bg-[#111118] text-white py-6 overflow-hidden">
         <div className="flex whitespace-nowrap animate-marquee">
-          <span className="text-lg font-medium px-4">WEB DESIGN {city.name.toUpperCase()} · BUILT IN 7 DAYS · AI-POWERED · NO LOCK-INS · FROM £799 · </span>
-          <span className="text-lg font-medium px-4">WEB DESIGN {city.name.toUpperCase()} · BUILT IN 7 DAYS · AI-POWERED · NO LOCK-INS · FROM £799 · </span>
+          <span className="text-lg font-medium px-4">WEB DESIGN {city.name.toUpperCase()} · BUILT IN 7 DAYS · AI-POWERED · NO LOCK-INS · FIXED-PRICE QUOTE ·</span>
+          <span className="text-lg font-medium px-4">WEB DESIGN {city.name.toUpperCase()} · BUILT IN 7 DAYS · AI-POWERED · NO LOCK-INS · FIXED-PRICE QUOTE ·</span>
         </div>
       </section>
 
@@ -176,7 +172,7 @@ export default function CityHubPage({ city }: CityHubPageProps) {
               },
               {
                 title: 'Truly Affordable',
-                description: `We don't believe ${city.name} small businesses should pay London agency rates. Our pricing starts at £799 for a professional 5-page website.`
+                description: `We don't believe ${city.name} small businesses should pay London agency rates. Our pricing is fixed and agreed in writing before work starts on your professional 5-page website.`
               }
             ].map((card, i) => (
               <div key={i} className="bg-[#F8F9FA] p-8 rounded-xl border border-[#E9ECEF]">
@@ -264,9 +260,14 @@ export default function CityHubPage({ city }: CityHubPageProps) {
       {/* PRICING SECTION */}
       <section className="bg-[#F8F9FA] py-20 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-bold mb-12 text-[#0a0a0a]" style={{ fontFamily: 'Clash Display, sans-serif' }}>
+          <h2 className="text-5xl font-bold mb-4 text-[#0a0a0a]" style={{ fontFamily: 'Clash Display, sans-serif' }}>
             Transparent pricing for {city.name} businesses
           </h2>
+          <p className="text-lg text-gray-600 mb-12 max-w-2xl">
+            Every package is fixed-price and scoped to your build. We quote the
+            full written price up front after a free discovery call, so you know
+            the complete cost before any work starts.
+          </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {pricing.map((pkg, i) => (
@@ -285,7 +286,7 @@ export default function CityHubPage({ city }: CityHubPageProps) {
                 )}
                 <h3 className="text-2xl font-bold mb-2">{pkg.name}</h3>
                 <div className="mb-1">
-                  <span className="text-4xl font-bold">{pkg.price}</span>
+                  <span className="text-2xl font-bold">Fixed-price</span>
                   <span className="text-gray-600 ml-2">{pkg.duration}</span>
                 </div>
                 <p className="text-sm text-gray-500 mb-6">{pkg.description}</p>

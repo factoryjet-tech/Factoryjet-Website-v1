@@ -146,7 +146,7 @@ export const post: BlogPost = {
       <p className="mb-4">➡ Learn more: <a href="/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Ecommerce Development</a></p>
 
 
-      <p className="mb-6">➡ Ready to launch your online store? <a href="/us/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet e-commerce development for US businesses</a> — custom builds, Lighthouse 100/100, delivered in 7 days from $2,999. Or see our <a href="/us/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify store packages</a>.</p>
+      <p className="mb-6">➡ Ready to launch your online store? <a href="/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet e-commerce development for US businesses</a> — custom builds, Lighthouse 100/100, delivered in 7 days from $2,999. Or see our <a href="/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify store packages</a>.</p>
 
       <div className="my-12 rounded-2xl bg-[#0052CC] p-8 sm:p-10 text-center not-prose">
         <h3 className="text-white text-2xl font-bold mb-3">Ready to transform your business?</h3>

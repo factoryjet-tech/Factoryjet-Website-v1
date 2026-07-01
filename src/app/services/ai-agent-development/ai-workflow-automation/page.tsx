@@ -79,7 +79,7 @@ const faqSchema = {
       name: 'How much does AI workflow automation cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet workflow automation projects start from ₹1,50,000 for a focused two-system automation (e.g., Zoho CRM + WhatsApp follow-up). Multi-system workflow platforms with 5–10 connected tools start from ₹3,50,000. Full business automation suites with AI decision logic start from ₹7,00,000. All are fixed-price — no hourly billing surprises.',
+        text: 'Every FactoryJet workflow automation is fixed-price and scoped to your build. We offer focused two-system automations (e.g., Zoho CRM + WhatsApp follow-up), multi-system workflow platforms connecting 5–10 tools, and full business automation suites with AI decision logic. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. No hourly billing, no surprises.',
       },
     },
     {
@@ -211,7 +211,7 @@ const WORKFLOW_COMPARISON_ROWS = [
   {
     feature: 'Starting price',
     values: [
-      '₹1,50,000 one-time',
+      'Fixed one-time price',
       '₹3,000–₹10,000/month (you build it)',
       '₹5,00,000+ (project-based, slow)',
       '₹0 now, ₹15,000–₹40,000/month in salary',
@@ -475,7 +475,7 @@ const WORKFLOW_FAQ_ITEMS = [
   {
     category: 'pricing',
     question: 'How is the ROI calculated for a workflow automation project?',
-    answer: "The simplest calculation: count the hours your team spends weekly on the manual task being automated, multiply by the hourly cost of that employee, and project across 12 months. Most Indian SMB automations eliminate 5–15 hours per week of admin work, saving ₹12,000–₹40,000/month in salary cost. At a ₹1,50,000 build cost, payback is typically 4–6 months — and the automation runs indefinitely after that.",
+    answer: "The simplest calculation: count the hours your team spends weekly on the manual task being automated, multiply by the hourly cost of that employee, and project across 12 months. Most Indian SMB automations eliminate 5–15 hours per week of admin work, saving ₹12,000–₹40,000/month in salary cost. At our fixed build price, payback is typically 4–6 months — and the automation runs indefinitely after that.",
   },
   {
     category: 'pricing',
@@ -490,7 +490,7 @@ const WORKFLOW_FAQ_ITEMS = [
   {
     category: 'pricing',
     question: 'Do you offer a maintenance retainer after delivery?',
-    answer: "Yes — an optional monthly maintenance retainer covers workflow monitoring, error resolution, minor logic updates, and new integration connectors as your tools change. Most clients on the Full Business Automation Suite take a retainer at ₹15,000–₹35,000/month. Starter and multi-system clients often manage independently after the 30-day post-launch window.",
+    answer: "Yes — an optional monthly maintenance retainer covers workflow monitoring, error resolution, minor logic updates, and new integration connectors as your tools change. Most clients on the Full Business Automation Suite take the retainer for the first few months. Starter and multi-system clients often manage independently after the 30-day post-launch window.",
   },
 ];
 
@@ -780,7 +780,7 @@ export default function AIWorkflowAutomationINPage() {
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. No-Code Tool vs. IT Outsourcing vs. Manual Process"
           lead="Fixed price, full code ownership, Indian tool stack built-in — the honest comparison."
-          pullQuote={{ stat: '₹1,50,000', caption: 'one-time — AI workflow automation connecting your two highest-impact systems, with error handling, audit log, and full code ownership. No ongoing fee to FactoryJet.' }}
+          pullQuote={{ stat: 'Fixed price', caption: 'AI workflow automation connecting your two highest-impact systems, with error handling, audit log, and full code ownership. No ongoing fee to FactoryJet.' }}
           columns={WORKFLOW_COMPARISON_COLUMNS}
           rows={WORKFLOW_COMPARISON_ROWS}
           footer="Prices reflect typical Indian market rates as of 2025. FactoryJet fixed-price contracts available for all tiers."

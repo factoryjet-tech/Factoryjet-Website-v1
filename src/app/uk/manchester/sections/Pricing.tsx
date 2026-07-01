@@ -11,39 +11,27 @@ import { trackButtonClick, trackCTAClick } from "@/utils/gtm";
 const PRICING_ROWS = [
   {
     service: "Custom Website (5–8 pages)",
-    factoryjet: "£1,500–£4,000",
-    average: "£5,000–£12,000",
-    saving: "Up to 70%",
+    included: "Custom design, build, on-page SEO, launch & training",
   },
   {
     service: "Premium Website (10–20 pages)",
-    factoryjet: "£4,000–£8,000",
-    average: "£10,000–£25,000",
-    saving: "Up to 68%",
+    included: "Deeper content, advanced design, integrations",
   },
   {
     service: "E-Commerce (Shopify / WooCommerce)",
-    factoryjet: "£3,000–£12,000",
-    average: "£8,000–£35,000",
-    saving: "Up to 66%",
+    included: "Store build, payments, shipping, product config, SEO",
   },
   {
     service: "Landing Page (single page)",
-    factoryjet: "£500–£1,500",
-    average: "£2,000–£5,000",
-    saving: "Up to 70%",
+    included: "Conversion-focused design, copy support, fast build",
   },
   {
     service: "Monthly SEO Retainer",
-    factoryjet: "From £500/month",
-    average: "£1,200–£3,000/month",
-    saving: "Up to 58%",
+    included: "Technical SEO, content, authority building, reporting",
   },
   {
     service: "AI Agent Development",
-    factoryjet: "From £2,000",
-    average: "£5,000–£15,000",
-    saving: "Up to 60%",
+    included: "Scoping, build, tool integration, testing, handover docs",
   },
 ];
 
@@ -136,8 +124,11 @@ export default function Pricing() {
               marginBottom: "48px",
             }}
           >
-            Manchester agencies typically charge £5,000–£25,000 for a custom
-            website. FactoryJet delivers the same quality — often better — at a fixed, published price.
+            Every project is fixed-price and scoped to your build. The main
+            drivers are page count, design depth, and integrations. Here is what
+            each service includes. We quote the full written price up front after
+            a free discovery call, so you know the complete cost before any work
+            starts.
           </p>
         </div>
 
@@ -152,23 +143,7 @@ export default function Pricing() {
           >
             <thead>
               <tr>
-                {/* Service */}
-                <th
-                  className="text-left uppercase"
-                  style={{
-                    background: "#F8FAFC",
-                    padding: "14px 20px",
-                    fontSize: "12px",
-                    letterSpacing: "0.1em",
-                    color: "#4B5563",
-                    fontWeight: 600,
-                    width: "34%",
-                    borderBottom: "1px solid #E5E7EB",
-                  }}
-                >
-                  Service
-                </th>
-                {/* FactoryJet — highlighted */}
+                {/* Service — highlighted */}
                 <th
                   className="text-left uppercase"
                   style={{
@@ -178,13 +153,13 @@ export default function Pricing() {
                     letterSpacing: "0.08em",
                     color: "white",
                     fontWeight: 700,
-                    width: "22%",
+                    width: "38%",
                     borderBottom: "1px solid #0047b3",
                   }}
                 >
-                  FactoryJet
+                  Service
                 </th>
-                {/* Manchester Avg */}
+                {/* What's Included */}
                 <th
                   className="text-left uppercase"
                   style={{
@@ -194,50 +169,22 @@ export default function Pricing() {
                     letterSpacing: "0.1em",
                     color: "#4B5563",
                     fontWeight: 600,
-                    width: "27%",
+                    width: "62%",
                     borderBottom: "1px solid #E5E7EB",
                   }}
                 >
-                  Manchester Avg
-                </th>
-                {/* Saving */}
-                <th
-                  className="text-left uppercase"
-                  style={{
-                    background: "#F8FAFC",
-                    padding: "14px 20px",
-                    fontSize: "12px",
-                    letterSpacing: "0.1em",
-                    color: "#047857",
-                    fontWeight: 700,
-                    width: "17%",
-                    borderBottom: "1px solid #E5E7EB",
-                  }}
-                >
-                  Your Saving
+                  What&rsquo;s Included
                 </th>
               </tr>
             </thead>
 
             <tbody ref={tableRef}>
-              {PRICING_ROWS.map(({ service, factoryjet, average, saving }, i) => (
+              {PRICING_ROWS.map(({ service, included }, i) => (
                 <tr
                   key={service}
                   style={{ background: i % 2 === 0 ? "white" : "#FAFBFC" }}
                 >
-                  {/* Service */}
-                  <td
-                    style={{
-                      padding: "14px 20px",
-                      fontSize: "14px",
-                      color: "#374151",
-                      fontWeight: 500,
-                      borderBottom: "1px solid #F3F4F6",
-                    }}
-                  >
-                    {service}
-                  </td>
-                  {/* FactoryJet value */}
+                  {/* Service — highlighted */}
                   <td
                     style={{
                       padding: "14px 20px",
@@ -252,33 +199,19 @@ export default function Pricing() {
                         fontWeight: 600,
                       }}
                     >
-                      {factoryjet}
+                      {service}
                     </span>
                   </td>
-                  {/* Manchester Avg */}
+                  {/* What's Included */}
                   <td
                     style={{
                       padding: "14px 20px",
                       fontSize: "14px",
-                      color: "#6B7280",
+                      color: "#374151",
                       borderBottom: "1px solid #F3F4F6",
                     }}
                   >
-                    {average}
-                  </td>
-                  {/* Saving */}
-                  <td
-                    style={{
-                      padding: "14px 20px",
-                      borderBottom: "1px solid #F3F4F6",
-                    }}
-                  >
-                    <span
-                      className="font-clash font-bold"
-                      style={{ fontSize: "15px", color: "#10B981" }}
-                    >
-                      {saving}
-                    </span>
+                    {included}
                   </td>
                 </tr>
               ))}

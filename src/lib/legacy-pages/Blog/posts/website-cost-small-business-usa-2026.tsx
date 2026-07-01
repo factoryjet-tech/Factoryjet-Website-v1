@@ -189,7 +189,7 @@ export const post: BlogPost = {
       <p className="mb-4">
         FactoryJet operates on this model: India-based development team, US business-hour communication, US-governed project agreements, and US client references. Five-page websites start at $1,999 with 7-day delivery and Lighthouse 100/100 scores. The cost savings versus comparable US agencies typically run $6,000–$18,000 per project.
       </p>
-      <p className="mb-4">➡ See our work: <a href="/us/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">US Web Design Services</a></p>
+      <p className="mb-4">➡ See our work: <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">US Web Design Services</a></p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">E-Commerce Website Costs: Shopify vs. WooCommerce vs. Custom</h2>
       <p className="mb-4">
@@ -230,7 +230,7 @@ export const post: BlogPost = {
       <p className="mb-4">
         Shopify is the correct choice for most US SMB e-commerce in 2026. It handles PCI compliance automatically, scales to any traffic volume without developer intervention, and its app ecosystem solves 90% of common business requirements without custom code. WooCommerce makes sense when your site needs to be deeply integrated with content marketing, or when you already have a WordPress site and want to add a store. Custom headless builds are justified only above $500K/year in e-commerce revenue.
       </p>
-      <p className="mb-4">➡ Learn more: <a href="/us/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify Development Services</a> · <a href="/us/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">E-Commerce Development</a></p>
+      <p className="mb-4">➡ Learn more: <a href="/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify Development Services</a> · <a href="/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">E-Commerce Development</a></p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Hidden Costs That Blow Budgets</h2>
       <p className="mb-4">
@@ -343,7 +343,7 @@ export const post: BlogPost = {
         Starting price: $1,999 for a 5-page professional website. E-commerce Shopify stores start at $2,499. Projects delivered in 7 days or we extend until it's right at no additional cost.
       </p>
       <p className="mb-4">
-        ➡ <a href="/us/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our web design packages</a> · <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free quote in 24 hours</a>
+        ➡ <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our web design packages</a> · <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free quote in 24 hours</a>
       </p>
 
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8">

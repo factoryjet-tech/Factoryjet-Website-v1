@@ -177,7 +177,7 @@ export const post: BlogPost = {
         </table>
       </div>
 
-      <p className="mb-6">➡ Want a website built for search visibility? <a href="/us/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet web design for US businesses</a> — Lighthouse 100/100, full technical SEO included, delivered in 7 days from $1,999. See our <a href="/us/" className="text-blue-600 underline hover:text-blue-800 transition-colors">US services hub</a>.</p>
+      <p className="mb-6">➡ Want a website built for search visibility? <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet web design for US businesses</a> — Lighthouse 100/100, full technical SEO included, delivered in 7 days from $1,999. See our <a href="/" className="text-blue-600 underline hover:text-blue-800 transition-colors">US services hub</a>.</p>
 
       <div className="my-12 rounded-2xl bg-[#0052CC] p-8 sm:p-10 text-center not-prose">
         <h3 className="text-white text-2xl font-bold mb-3">Ready to transform your business?</h3>

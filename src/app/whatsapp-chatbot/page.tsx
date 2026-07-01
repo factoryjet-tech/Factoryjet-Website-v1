@@ -25,7 +25,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'WhatsApp Chatbot Development India | WhatsApp Business API Integration | FactoryJet',
   description:
-    'Build WhatsApp chatbots for your India business. Automate orders, support, lead capture with WhatsApp Business API. Starting ₹15,000. 7-day delivery. 500+ businesses served.',
+    'Build WhatsApp chatbots for your India business. Automate orders, support, lead capture with WhatsApp Business API. Fixed-price, scoped after a free call. 7-day delivery. 500+ businesses served.',
   keywords: [
     'WhatsApp chatbot development India',
     'WhatsApp Business API India',
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'WhatsApp Chatbot Development India | FactoryJet',
     description:
-      'WhatsApp chatbots built for Indian businesses — automate support, orders, lead capture & payments. Starts ₹15,000. 7-day delivery. Hindi, Tamil, Telugu & more.',
+      'WhatsApp chatbots built for Indian businesses — automate support, orders, lead capture & payments. Fixed-price, scoped after a free call. 7-day delivery. Hindi, Tamil, Telugu & more.',
     url: 'https://factoryjet.com/whatsapp-chatbot/',
     images: [
       {
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'WhatsApp Chatbot Development India | FactoryJet',
     description:
-      'WhatsApp chatbots for Indian businesses. Automate orders, support & lead capture. Starts ₹15,000. 7-day delivery.',
+      'WhatsApp chatbots for Indian businesses. Automate orders, support & lead capture. Fixed-price, scoped after a free call. 7-day delivery.',
     images: ['https://factoryjet.com/images/services/whatsapp-chatbot.webp'],
   },
   alternates: {
@@ -105,7 +105,7 @@ const serviceSchema = {
     },
   },
   description:
-    'WhatsApp chatbot development and WhatsApp Business API integration for Indian businesses. Automate orders, support, lead capture and payments. Starts ₹15,000.',
+    'WhatsApp chatbot development and WhatsApp Business API integration for Indian businesses. Automate orders, support, lead capture and payments. Fixed-price, scoped after a free call.',
   areaServed: { '@type': 'Country', name: 'India' },
   serviceType: 'WhatsApp Chatbot Development',
 };
@@ -144,7 +144,7 @@ const faqSchema = {
       name: 'How much does WhatsApp chatbot development cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'WhatsApp chatbot development in India starts from ₹15,000 for a basic FAQ and lead-capture bot, ₹35,000–₹60,000 for a multi-flow business bot with Razorpay and order tracking, and ₹80,000–₹1,50,000 for an AI-powered NLP enterprise bot with multi-language support and n8n automation. All prices are fixed — no hourly billing.',
+        text: 'WhatsApp chatbot pricing in India is fixed-price and scoped to your build. The main drivers are flow complexity and integrations: a basic FAQ and lead-capture bot sits at the lower end, a multi-flow business bot with Razorpay and order tracking is a mid scope, and an AI-powered NLP enterprise bot with multi-language support and n8n automation is the top scope. Every project is quoted up front after a free discovery call — no hourly billing.',
       },
     },
     {
@@ -152,7 +152,7 @@ const faqSchema = {
       name: 'WhatsApp chatbot banana ka kharcha kitna hota hai?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'WhatsApp chatbot development India mein ₹15,000 se shuru hota hai basic FAQ bot ke liye. Multi-flow business bot ₹35,000–₹60,000 mein milta hai jisme order tracking aur Razorpay payment integration hota hai. Enterprise AI chatbot ₹80,000–₹1,50,000 mein banta hai jisme Hindi, Tamil, Telugu support aur n8n automation hoti hai.',
+        text: 'WhatsApp chatbot development India mein fixed-price hota hai aur aapke build ke hisaab se scope kiya jata hai. Basic FAQ bot sabse simple scope hai, multi-flow business bot (order tracking aur Razorpay payment integration ke saath) mid scope hai, aur enterprise AI chatbot (Hindi, Tamil, Telugu support aur n8n automation ke saath) top scope hai. Har project free discovery call ke baad pehle hi quote kiya jata hai — koi hourly billing nahi.',
       },
     },
     {
@@ -248,7 +248,7 @@ const faqSchema = {
       name: 'What ongoing costs are there after the chatbot is built?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Two costs: your BSP subscription (Interakt/Wati/AiSensy charge ₹2,499–₹8,000/month based on plan and message volume) and Meta\'s per-conversation charges (marketing ₹0.86/conversation, utility ₹0.11/conversation, service conversations free). FactoryJet charges nothing ongoing unless you choose an optional monthly retainer.',
+        text: 'Two ongoing costs go to third parties, not to us: your BSP subscription (Interakt, Wati, or AiSensy charge a monthly fee based on plan and message volume) and Meta\'s per-conversation charges (marketing and utility conversations carry a small per-conversation fee, while customer-initiated service conversations are free). FactoryJet charges nothing ongoing unless you choose an optional monthly retainer.',
       },
     },
     {
@@ -367,8 +367,8 @@ const WHATSAPP_STATS = [
 
 const WHATSAPP_MARKET_STATS = [
   {
-    value: '₹15,000',
-    label: 'Starting price for a FactoryJet WhatsApp chatbot — India\'s most affordable production-grade bot',
+    value: '7 days',
+    label: 'Standard delivery for a FactoryJet WhatsApp chatbot — fixed-price, scoped up front',
     sourceUrl: 'https://factoryjet.com/india/pricing/',
     sourceLabel: 'FactoryJet Pricing',
   },
@@ -442,7 +442,7 @@ const WHATSAPP_INDUSTRIES = [
 const WHATSAPP_PRICING_TIERS = [
   {
     name: 'Starter',
-    priceRange: '₹15,000–₹25,000',
+    priceRange: 'Fixed-price',
     description:
       'A production-grade FAQ and lead-capture bot on WhatsApp Business API. The fastest way to automate your most repeated conversations and start capturing leads 24/7.',
     features: [
@@ -458,7 +458,7 @@ const WHATSAPP_PRICING_TIERS = [
   },
   {
     name: 'Business',
-    priceRange: '₹35,000–₹60,000',
+    priceRange: 'Fixed-price',
     description:
       'Multi-flow WhatsApp chatbot with order tracking, Razorpay payment integration, catalog browsing, and CRM sync. Our most popular India deployment for D2C brands and growing businesses.',
     features: [
@@ -476,7 +476,7 @@ const WHATSAPP_PRICING_TIERS = [
   },
   {
     name: 'Enterprise',
-    priceRange: '₹80,000–₹1,50,000',
+    priceRange: 'Custom quote',
     description:
       'AI-powered NLP chatbot with multi-language support, n8n automation workflows, and custom integrations. Built for large retail, B2B distributors, and businesses processing high conversation volumes.',
     features: [
@@ -605,13 +605,13 @@ const WHATSAPP_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does WhatsApp chatbot development cost in India?',
     answer:
-      'FactoryJet WhatsApp chatbots start at ₹15,000–₹25,000 for a Starter FAQ and lead-capture bot. The Business tier (multi-flow, order tracking, Razorpay, CRM sync) is ₹35,000–₹60,000. Enterprise (AI NLP, multi-language, n8n automation, custom integrations) is ₹80,000–₹1,50,000. All prices are fixed — no hourly billing, no scope creep surprises.',
+      'FactoryJet WhatsApp chatbot pricing is fixed-price and scoped to your build. The main drivers are flow complexity and integrations: the Starter tier is a FAQ and lead-capture bot; the Business tier adds multi-flow logic, order tracking, Razorpay, and CRM sync; and the Enterprise tier adds AI NLP, multi-language support, n8n automation, and custom integrations. Every project is quoted up front after a free discovery call — no hourly billing, no scope creep surprises.',
   },
   {
     category: 'pricing',
     question: 'What are the ongoing costs after a WhatsApp chatbot is built?',
     answer:
-      'Two recurring costs: your BSP subscription (Interakt/Wati/AiSensy charge approximately ₹2,499–₹8,000/month depending on plan and message volume) and Meta\'s per-conversation charges (marketing messages ₹0.86/conversation, utility messages ₹0.11/conversation, customer-initiated service conversations are free). FactoryJet charges nothing ongoing unless you choose an optional retainer.',
+      'Two recurring costs go to third parties, not to us: your BSP subscription (Interakt, Wati, or AiSensy charge a monthly fee depending on plan and message volume) and Meta\'s per-conversation charges (marketing and utility messages carry a small per-conversation fee, while customer-initiated service conversations are free). FactoryJet charges nothing ongoing unless you choose an optional retainer.',
   },
   {
     category: 'pricing',
@@ -679,12 +679,12 @@ export default function WhatsAppChatbotINPage() {
         formSlot={<HeroInlineForm region="in" source="whatsapp_chatbot_hero" />}
           eyebrow="WHATSAPP CHATBOT DEVELOPMENT · INDIA"
           headline="WhatsApp Chatbot Development India"
-          lead="India has 535 million WhatsApp users. 98% of your WhatsApp messages get opened. And 78% of Indian SMBs already use WhatsApp for business — yet most are still typing every reply by hand. Automate your orders, support, lead capture, and payments with a WhatsApp Business API chatbot. Starting ₹15,000. Live in 7 days."
+          lead="India has 535 million WhatsApp users. 98% of your WhatsApp messages get opened. And 78% of Indian SMBs already use WhatsApp for business — yet most are still typing every reply by hand. Automate your orders, support, lead capture, and payments with a WhatsApp Business API chatbot. Fixed-price, scoped to your build. Live in 7 days."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-Day Delivery',
             '500+ Businesses Served',
-            'Starting ₹15,000',
+            'Fixed-Price Quotes',
           ]}
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
@@ -755,7 +755,7 @@ export default function WhatsAppChatbotINPage() {
                 { stat: '98%', label: 'Message open rate', sub: 'vs. 22% for email' },
                 { stat: '78%', label: 'Indian SMBs on WhatsApp', sub: 'Already using it for business' },
                 { stat: '15M', label: 'WhatsApp Business accounts', sub: 'Globally on the platform' },
-                { stat: '₹15,000', label: 'Starting price', sub: 'FactoryJet WhatsApp chatbot' },
+                { stat: 'Fixed', label: 'Fixed-price quotes', sub: 'Scoped up front, no hourly billing' },
                 { stat: '7 Days', label: 'Average build time', sub: 'Fastest delivery in India' },
               ].map((item) => (
                 <div

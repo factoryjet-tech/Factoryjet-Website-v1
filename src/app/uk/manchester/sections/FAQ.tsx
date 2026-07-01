@@ -16,7 +16,7 @@ const CATEGORIES = [
 const GENERAL_FAQS = [
   {
     q: "How much does web design cost in Manchester?",
-    a: "Manchester web design costs vary enormously depending on the agency and scope. Boutique agencies charge £1,000–£5,000 for template-based sites. Established agencies like MadeByShape or Supremo charge £5,000–£25,000 for bespoke work. FactoryJet delivers AI-native, Next.js-powered websites from £1,500–£8,000 — at a fixed, published price — with Lighthouse 90+ performance and full schema stack included.",
+    a: "Manchester web design costs vary enormously depending on the agency and scope, from budget template shops to premium bespoke studios. FactoryJet's pricing is fixed-price and scoped to your build — the main drivers are the number of pages, e-commerce or custom functionality, and content needs. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. Lighthouse 90+ performance and a full schema stack are included as standard.",
   },
   {
     q: "What is the best web design agency in Manchester?",
@@ -73,7 +73,7 @@ const SERVICES_FAQS = [
 const COMPARISONS_FAQS = [
   {
     q: "How does FactoryJet compare to a Manchester website design company that uses WordPress?",
-    a: "Most Manchester website design companies build on WordPress with premium themes and no performance engineering. They charge £5,000–£20,000 for websites that score 40–60 on Lighthouse. FactoryJet builds on Next.js 15 — every site ships with Lighthouse 90+ performance, full schema markup, server-side rendering, and AI search visibility at 50–60% less cost.",
+    a: "Most Manchester website design companies build on WordPress with premium themes and no performance engineering, charging premium fees for websites that score 40–60 on Lighthouse. FactoryJet builds on Next.js 15 — every site ships with Lighthouse 90+ performance, full schema markup, server-side rendering, and AI search visibility, typically at a meaningfully lower cost. Our pricing is fixed-price and scoped to your build, quoted up front after a free discovery call.",
   },
   {
     q: "What makes a digital agency different from a traditional web development company?",

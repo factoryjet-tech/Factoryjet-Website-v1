@@ -26,36 +26,36 @@ const SERVICES: { key: string; label: string; tiers: [Tier, Tier, Tier] }[] = [
     key: 'web',
     label: 'Website Design',
     tiers: [
-      { name: 'Starter', price: '$1,499', priceNote: 'one-time', blurb: '5-page business site, live in 7 days.', features: ['Mobile-first, Lighthouse 90+', 'SEO + JSON-LD schema', 'Contact form + CRM hookup', 'You own the code'], cta: 'Get a quote' },
-      { name: 'Growth', price: '$3,500', priceNote: 'one-time', blurb: '15-page site with blog & lead capture.', features: ['Everything in Starter', 'Blog + CMS', 'GA4 + conversion tracking', 'Advanced on-page SEO'], cta: 'Get a quote', highlighted: true },
-      { name: 'Web App', price: '$7,500', priceNote: 'from', blurb: 'Custom web application / MVP.', features: ['Everything in Growth', 'Custom features & auth', 'API & third-party integrations', 'Scoped, fixed-price build'], cta: 'Talk to the founder' },
+      { name: 'Starter', price: 'Fixed-price', blurb: '5-page business site, live in 7 days.', features: ['Mobile-first, Lighthouse 90+', 'SEO + JSON-LD schema', 'Contact form + CRM hookup', 'You own the code'], cta: 'Get a quote' },
+      { name: 'Growth', price: 'Fixed-price', blurb: '15-page site with blog & lead capture.', features: ['Everything in Starter', 'Blog + CMS', 'GA4 + conversion tracking', 'Advanced on-page SEO'], cta: 'Get a quote', highlighted: true },
+      { name: 'Web App', price: 'Custom quote', blurb: 'Custom web application / MVP.', features: ['Everything in Growth', 'Custom features & auth', 'API & third-party integrations', 'Scoped, fixed-price build'], cta: 'Talk to the founder' },
     ],
   },
   {
     key: 'ecom',
     label: 'E-Commerce',
     tiers: [
-      { name: 'Store', price: '$3,999', priceNote: 'one-time', blurb: 'Shopify or WooCommerce store, custom theme.', features: ['Up to 50 products', 'Payments + shipping setup', 'Mobile-first, Lighthouse 95+', 'Basic SEO + schema'], cta: 'Get a quote' },
-      { name: 'Advanced', price: '$9,500', priceNote: 'from', blurb: 'Configurators, subscriptions, B2B pricing.', features: ['Everything in Store', 'Product configurator / subscriptions', 'B2B / wholesale pricing', 'Custom integrations'], cta: 'Get a quote', highlighted: true },
-      { name: 'Custom', price: '$20,000', priceNote: 'from', blurb: 'Headless or marketplace builds.', features: ['Headless (Next.js) storefront', 'Multi-vendor / marketplace', 'ERP / complex integrations', 'Scoped after discovery'], cta: 'Talk to the founder' },
+      { name: 'Store', price: 'Fixed-price', blurb: 'Shopify or WooCommerce store, custom theme.', features: ['Up to 50 products', 'Payments + shipping setup', 'Mobile-first, Lighthouse 95+', 'Basic SEO + schema'], cta: 'Get a quote' },
+      { name: 'Advanced', price: 'Custom quote', blurb: 'Configurators, subscriptions, B2B pricing.', features: ['Everything in Store', 'Product configurator / subscriptions', 'B2B / wholesale pricing', 'Custom integrations'], cta: 'Get a quote', highlighted: true },
+      { name: 'Custom', price: 'Custom quote', blurb: 'Headless or marketplace builds.', features: ['Headless (Next.js) storefront', 'Multi-vendor / marketplace', 'ERP / complex integrations', 'Scoped after discovery'], cta: 'Talk to the founder' },
     ],
   },
   {
     key: 'aiseo',
     label: 'AI SEO',
     tiers: [
-      { name: 'Visibility Audit', price: '$2,499', priceNote: 'one-time', blurb: 'GEO/AEO audit + 90-day roadmap.', features: ['AI crawler access audit', 'Structured data + local setup', 'Competitor visibility report', '90-day action plan'], cta: 'Start with an audit' },
-      { name: 'Growth', price: '$1,999', priceNote: '/mo', blurb: 'Full AI SEO engine, month-to-month.', features: ['Content strategy + production', 'Google AI Overview optimization', 'Link acquisition', 'Conversion tracking'], cta: 'Get started', highlighted: true },
-      { name: 'Scale', price: '$4,999', priceNote: '/mo', blurb: 'Dedicated team + digital PR.', features: ['Everything in Growth', 'Dedicated SEO strategist', 'Digital PR + competitor intel', 'Weekly strategy sessions'], cta: 'Talk to the founder' },
+      { name: 'Visibility Audit', price: 'Fixed-price', blurb: 'GEO/AEO audit + 90-day roadmap.', features: ['AI crawler access audit', 'Structured data + local setup', 'Competitor visibility report', '90-day action plan'], cta: 'Start with an audit' },
+      { name: 'Growth', price: 'Monthly retainer', blurb: 'Full AI SEO engine, month-to-month.', features: ['Content strategy + production', 'Google AI Overview optimization', 'Link acquisition', 'Conversion tracking'], cta: 'Get started', highlighted: true },
+      { name: 'Scale', price: 'Monthly retainer', blurb: 'Dedicated team + digital PR.', features: ['Everything in Growth', 'Dedicated SEO strategist', 'Digital PR + competitor intel', 'Weekly strategy sessions'], cta: 'Talk to the founder' },
     ],
   },
   {
     key: 'aiagent',
     label: 'AI Agent',
     tiers: [
-      { name: 'Starter', price: '$5,000', priceNote: 'from', blurb: 'One focused single-workflow agent.', features: ['Single workflow automation', '1 integration', 'Testing + deployment', '14-day support'], cta: 'Get a quote' },
-      { name: 'Growth', price: '$15,000', priceNote: 'from', blurb: 'Multiple agents + CRM + dashboard.', features: ['Multiple interconnected agents', 'CRM + tool integrations', 'Management dashboard', '30-day support window'], cta: 'Get a quote', highlighted: true },
-      { name: 'Enterprise', price: '$25,000', priceNote: 'from', blurb: 'Multi-agent orchestration platform.', features: ['Everything in Growth', 'Multi-agent orchestration', 'Custom model / RAG pipelines', 'SLA + ongoing support'], cta: 'Talk to the founder' },
+      { name: 'Starter', price: 'Custom quote', blurb: 'One focused single-workflow agent.', features: ['Single workflow automation', '1 integration', 'Testing + deployment', '14-day support'], cta: 'Get a quote' },
+      { name: 'Growth', price: 'Custom quote', blurb: 'Multiple agents + CRM + dashboard.', features: ['Multiple interconnected agents', 'CRM + tool integrations', 'Management dashboard', '30-day support window'], cta: 'Get a quote', highlighted: true },
+      { name: 'Enterprise', price: 'Custom quote', blurb: 'Multi-agent orchestration platform.', features: ['Everything in Growth', 'Multi-agent orchestration', 'Custom model / RAG pipelines', 'SLA + ongoing support'], cta: 'Talk to the founder' },
     ],
   },
 ];
@@ -71,7 +71,7 @@ const UsPricingTabs: React.FC = () => {
         <div className="text-center mb-8">
           <p className="text-xs font-fj-mono uppercase tracking-widest text-[#F05A28] mb-3">Pricing plans</p>
           <h2 className="text-3xl md:text-4xl font-fj-display font-bold text-fj-ink">Fixed-price plans for every service</h2>
-          <p className="mt-3 text-fj-ink/60 font-fj-body max-w-2xl mx-auto">Pick a service to see its tiers. Every plan is fixed-price in USD — no hourly billing, no surprise invoices, code and data you own from day one.</p>
+          <p className="mt-3 text-fj-ink/60 font-fj-body max-w-2xl mx-auto">Pick a service to see its tiers. Every plan is fixed-price and scoped to your build — no hourly billing, no surprise invoices, code and data you own from day one. You get a clear quote up front after a free discovery call.</p>
         </div>
 
         {/* Tabs */}
@@ -108,7 +108,7 @@ const UsPricingTabs: React.FC = () => {
               )}
               <h3 className="text-lg font-fj-display font-bold text-fj-ink">{tier.name}</h3>
               <div className="mt-2 flex items-baseline gap-1.5">
-                <span className="text-3xl md:text-4xl font-fj-display font-bold text-fj-ink">{tier.price}</span>
+                <span className="text-xl md:text-2xl font-fj-display font-bold text-[#F05A28]">{tier.price}</span>
                 {tier.priceNote && <span className="text-sm text-fj-ink/50 font-fj-body">{tier.priceNote}</span>}
               </div>
               <p className="mt-2 text-sm text-fj-ink/60 font-fj-body">{tier.blurb}</p>
@@ -136,7 +136,7 @@ const UsPricingTabs: React.FC = () => {
         </div>
 
         <p className="mt-8 text-center text-xs text-fj-ink/45 font-fj-body">
-          All prices in USD. Fixed-price, milestone-paid. Copywriting, premium licenses, and custom photography are itemized before you sign. AI SEO retainers are month-to-month — no annual contracts.
+          Fixed-price, milestone-paid, quoted up front after a free discovery call. Copywriting, premium licenses, and custom photography are itemized before you sign. AI SEO retainers are month-to-month — no annual contracts.
         </p>
       </div>
     </section>

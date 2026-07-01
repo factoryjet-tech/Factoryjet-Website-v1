@@ -77,7 +77,6 @@ const localBusinessSchema = {
     addressRegion: 'Tamil Nadu',
     addressCountry: 'IN',
   },
-  priceRange: '₹₹',
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
@@ -236,7 +235,7 @@ const CHN_FAQ_ITEMS = [
     category: 'cost',
     question: 'How much do SEO services cost in Chennai?',
     answer:
-      "We do not sell fixed packages because a Guindy auto parts manufacturer needs different work from a T. Nagar retail chain. Our SEO plans for Indian businesses start at ₹19,999 a month, scoped to what your site actually needs. We give you a free audit first — see exactly what we'd do and why before you commit.",
+      "We do not sell fixed packages because a Guindy auto parts manufacturer needs different work from a T. Nagar retail chain. We scope a monthly plan to what your site actually needs. We give you a free audit first — see exactly what we'd do and why before you commit.",
   },
   {
     category: 'cost',
@@ -248,7 +247,7 @@ const CHN_FAQ_ITEMS = [
     category: 'cost',
     question: 'Is cheap SEO in Chennai worth it?',
     answer:
-      'Very cheap SEO — typically under ₹5,000/month — relies on link farms and template content that either does nothing or creates a penalty risk. Chennai\'s B2B markets (manufacturing, auto, IT) are demanding — procurement buyers are sceptical, and a penalised site is more damaging than no SEO at all. We charge a fair price for real work. You see every rupee in the monthly report.',
+      'Very cheap SEO relies on link farms and template content that either does nothing or creates a penalty risk. Chennai\'s B2B markets (manufacturing, auto, IT) are demanding — procurement buyers are sceptical, and a penalised site is more damaging than no SEO at all. We charge a fair price for real work. You see every rupee in the monthly report.',
   },
   {
     category: 'cost',

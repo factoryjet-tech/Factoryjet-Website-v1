@@ -187,7 +187,7 @@ export const post: BlogPost = {
       </div>
       <p className="mb-4">
         For a broader comparison of website costs across all options — DIY builders, freelancers, and agencies — see our{' '}
-        <a href="/us/website-cost" className="text-blue-600 underline hover:text-blue-800 transition-colors">complete US website cost guide</a>.
+        <a href="/website-cost" className="text-blue-600 underline hover:text-blue-800 transition-colors">complete US website cost guide</a>.
       </p>
       <p className="mb-4">
         The three-year TCO converges for most businesses in the $100K–$500K/year revenue range. Shopify wins on simplicity and launch speed; custom wins on flexibility and eliminating transaction fees. The decision should be made on business model fit, not total cost — because the costs are comparable when modeled honestly.
@@ -290,7 +290,7 @@ export const post: BlogPost = {
         Our US-hour project management team will tell you honestly which platform fits your business — and we'll document exactly why in writing before you commit a dollar. India-based development means at a fixed, published price for identical technical output.
       </p>
       <p className="mb-4">
-        ➡ <a href="/us/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify development packages</a> · <a href="/us/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">Custom web design packages</a> · <a href="/blog/shopify-vs-woocommerce-us-small-business-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify vs WooCommerce: full US comparison</a> · <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free recommendation in 24 hours</a>
+        ➡ <a href="/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify development packages</a> · <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">Custom web design packages</a> · <a href="/blog/shopify-vs-woocommerce-us-small-business-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify vs WooCommerce: full US comparison</a> · <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free recommendation in 24 hours</a>
       </p>
 
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8">

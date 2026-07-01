@@ -82,7 +82,7 @@ const faqSchema = {
       name: 'How much does a website cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s web design starts at ₹29,999 for a 5-page business website. A full business site with up to 15 pages, a blog, and CMS runs ₹80,000. E-commerce stores and custom builds start at ₹1,50,000. Indian agency rates for equivalent scope typically run ₹2,50,000–₹15,00,000.',
+        text: "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
       },
     },
     {
@@ -154,7 +154,7 @@ const faqSchema = {
       name: 'Do you offer website maintenance contracts (AMC)?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. AMC plans start at ₹2,999/month and cover security updates, plugin/CMS updates, SSL renewal, uptime monitoring, and monthly health reports. Higher tiers add content updates, SEO optimization, and a dedicated account manager.',
+        text: 'Yes. AMC plans cover security updates, plugin/CMS updates, SSL renewal, uptime monitoring, and monthly health reports. Higher tiers add content updates, SEO optimization, and a dedicated account manager. AMC is optional and quoted up front — your website keeps running without it.',
       },
     },
     {
@@ -170,7 +170,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How much does website design cost in India?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Website design cost in India runs from about ₹10,000 for simple template work to ₹2,00,000+ for custom business websites. If you are asking how much does website cost in India all-in, remember hosting and yearly upkeep too. FactoryJet agrees a fixed price before work starts, so the cost never grows in the middle of the project.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Website design cost in India depends on scope — a simple template site costs far less than a custom business website with e-commerce or web app features. If you are asking how much a website costs all-in, remember hosting and yearly upkeep too. FactoryJet agrees a fixed price before work starts, so the cost never grows in the middle of the project.' },
     },
   ],
 };
@@ -195,7 +195,7 @@ const serviceSchema = {
   },
   serviceType: 'Web Design & Development',
   description:
-    'Custom website design and development for Indian businesses — from ₹29,999. Next.js, WordPress, and Shopify. 7-day delivery on Starter tier. Lighthouse 100 performance. Mobile-first, full code ownership.',
+    'Custom website design and development for Indian businesses. Next.js, WordPress, and Shopify. 7-day delivery on Starter tier. Lighthouse 100 performance. Mobile-first, full code ownership.',
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '4.9',
@@ -318,10 +318,10 @@ const IN_WEB_STATS = [
     categoryLabel: 'PERFORMANCE',
   },
   {
-    value: '₹29,999',
-    label: 'starting price for a 5-page website — full code ownership, no lock-in',
-    microcopy: 'compare to ₹2,50,000+ from Indian agencies for equivalent scope',
-    categoryLabel: 'INDIA PRICING',
+    value: 'You own it',
+    label: 'full code ownership on launch day — no lock-in, no mandatory monthly fees',
+    microcopy: 'every file, Figma asset, and credential transferred to you',
+    categoryLabel: 'CODE OWNERSHIP',
   },
 ];
 
@@ -393,14 +393,6 @@ const IN_COMPARISON_COLUMNS = [
 ] as const;
 
 const IN_COMPARISON_ROWS = [
-  {
-    feature: 'Starting price',
-    values: [
-      '₹2,50,000–₹15,00,000',
-      '₹60,000–₹2,50,000',
-      '₹1,000–₹4,000/month (forever)',
-    ],
-  },
   {
     feature: 'Delivery timeline',
     values: ['7 days (Starter tier)', '6–12 weeks', '4–8 weeks', '~1 day (you build it)'],
@@ -574,7 +566,7 @@ const IN_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a website cost in India?',
     answer:
-      'FactoryJet\'s web design starts at ₹29,999 for a 5-page business website. A full business site with up to 15 pages, blog, and CMS runs ₹80,000. E-commerce stores and custom Next.js apps start at ₹1,50,000 — scoped after a free discovery call. Indian agency rates for equivalent scope typically run ₹2,50,000–₹15,00,000.',
+      "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
   },
   {
     category: 'pricing',
@@ -586,13 +578,13 @@ const IN_FAQ_ITEMS = [
     category: 'pricing',
     question: 'What are the ongoing costs after launch?',
     answer:
-      'Domain registration (₹700–₹2,000/year, paid directly to your registrar) and hosting (₹700–₹3,000/month depending on traffic and platform — paid directly to the hosting provider, not to FactoryJet). WordPress and Next.js sites can be hosted on Cloudflare Pages, Vercel, or any standard provider. Ongoing FactoryJet support is optional, not mandatory.',
+      'Domain registration (paid directly to your registrar) and hosting (paid directly to the hosting provider, not to FactoryJet — the amount depends on traffic and platform). WordPress and Next.js sites can be hosted on Cloudflare Pages, Vercel, or any standard provider. Ongoing FactoryJet support is optional, not mandatory.',
   },
   {
     category: 'pricing',
     question: 'Do you offer website maintenance contracts (AMC)?',
     answer:
-      'Yes. AMC plans start at ₹2,999/month (Basic: security updates, SSL renewal, uptime monitoring, monthly health report), ₹4,999/month (Standard: adds 5 content updates/mo, SEO optimization, performance monitoring), and ₹10,000/month (Premium: content updates as per agreed SLA, active SEO strategy, design refresh, dedicated account manager). AMC is optional — your website continues to run without it.',
+      'Yes. AMC plans come in three tiers — Basic (security updates, SSL renewal, uptime monitoring, monthly health report), Standard (adds content updates, SEO optimization, performance monitoring), and Premium (content updates as per agreed SLA, active SEO strategy, design refresh, dedicated account manager). Each plan is quoted up front, and AMC is optional — your website continues to run without it.',
   },
 
   /* ── Technical & Performance ── */
@@ -670,7 +662,7 @@ const IN_FAQ_ITEMS = [
     category: 'trust',
     question: 'Do you offer post-launch support?',
     answer:
-      'Every project includes a 30-day post-launch support window for bug fixes and minor adjustments. After that, our AMC plans provide ongoing maintenance, security updates, content updates, and performance monitoring starting at ₹2,999/month. There is no obligation to continue with FactoryJet after launch — you own the code and can take it anywhere.',
+      'Every project includes a 30-day post-launch support window for bug fixes and minor adjustments. After that, our AMC plans provide ongoing maintenance, security updates, content updates, and performance monitoring, quoted up front. There is no obligation to continue with FactoryJet after launch — you own the code and can take it anywhere.',
   },
   {
     category: 'trust',
@@ -734,7 +726,7 @@ const IN_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does website design cost in India?',
     answer:
-      'Website design cost in India runs from about ₹10,000 for simple template work to ₹2,00,000+ for custom business websites. If you are asking how much does website cost in India all-in, remember hosting and yearly upkeep too. FactoryJet agrees a fixed price before work starts, so the cost never grows in the middle of the project.',
+      'Website design cost in India depends on scope — a simple template site costs far less than a custom business website with e-commerce or web app features. If you are asking how much a website costs all-in, remember hosting and yearly upkeep too. FactoryJet agrees a fixed price before work starts, so the cost never grows in the middle of the project.',
   },
 ];
 
@@ -778,11 +770,11 @@ export default function WebDesignServicePage() {
         formSlot={<HeroInlineForm region="in" source="web_design_hero" />}
           eyebrow="WEB DESIGN COMPANY · INDIA"
           headline="Web Design Company in India — Websites That Convert, Built Mobile-First"
-          lead="70%+ of Indian web traffic is mobile. Paid ad costs are rising. Competitors are outranking you on Google. FactoryJet builds custom, high-performance websites in Next.js, WordPress, and Shopify — designed in Figma, built to Lighthouse 100, and delivered starting at ₹29,999."
+          lead="70%+ of Indian web traffic is mobile. Paid ad costs are rising. Competitors are outranking you on Google. FactoryJet builds custom, high-performance websites in Next.js, WordPress, and Shopify — designed in Figma, built to Lighthouse 100, with a fixed quote agreed before work starts."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ websites delivered',
-            'Starting at ₹29,999',
+            'Full code ownership',
             '7-day delivery guarantee',
           ]}
           rightSlot={
@@ -966,8 +958,8 @@ export default function WebDesignServicePage() {
             },
             {
               icon: '💸',
-              title: 'Indian agencies charge ₹2,50,000+ for the same scope',
-              body: 'A mid-size Indian web agency typically charges ₹2,50,000–₹10,00,000 for a business website — without a published timeline, without guaranteed Lighthouse performance, and without a codebase you own. FactoryJet delivers the same Figma-first design, Next.js engineering, and Lighthouse 100 quality starting at ₹29,999 — with a 7-day delivery guarantee in writing.',
+              title: 'Most agencies hide their rates and timelines',
+              body: 'A typical web agency quotes a business website without a published timeline, without guaranteed Lighthouse performance, and without a codebase you own. FactoryJet gives you a fixed-price quote before you commit, delivers the same Figma-first design, Next.js engineering, and Lighthouse 100 quality, and backs it with a 7-day delivery guarantee in writing.',
             },
           ]}
         />
@@ -1180,12 +1172,12 @@ export default function WebDesignServicePage() {
           headline="FactoryJet vs. Indian Agency vs. Freelancer vs. Templates"
           lead="Not all web design options are the same. Here's what the decision looks like when you compare the real trade-offs side by side — price, delivery, quality, and ownership."
           pullQuote={{
-            stat: '₹29,999',
-            caption: 'starting price. Same Figma design, Next.js engineering, and Lighthouse 100 quality as a ₹3,00,000+ Indian agency project — at a fraction of the cost.',
+            stat: '7 days',
+            caption: 'from kickoff to launch. Same Figma design, Next.js engineering, and Lighthouse 100 quality as a big-agency project — with a fixed quote agreed before work starts.',
           }}
           columns={IN_COMPARISON_COLUMNS}
           rows={IN_COMPARISON_ROWS}
-          footer="Prices and timelines reflect typical Indian market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
+          footer="FactoryJet fixed-price contracts available for every scope. You get a clear quote up front after a free consultation."
         />
 
         {/* ── 11. INDUSTRIES GRID (DARK) ───────────────────────────────────────── */}

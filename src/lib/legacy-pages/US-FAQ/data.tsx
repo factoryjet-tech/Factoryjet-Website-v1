@@ -65,8 +65,8 @@ export const faqData: FAQCategory[] = [
                 <tbody className="divide-y">
                   <tr className="bg-white">
                     <td className="p-3 font-medium">Pricing</td>
-                    <td className="p-3 text-red-600">$10k - $60k+</td>
-                    <td className="p-3 text-jet-green font-bold bg-blue-50">$1,999 - $9,999</td>
+                    <td className="p-3 text-red-600">Variable, scope creep common</td>
+                    <td className="p-3 text-jet-green font-bold bg-blue-50">Fixed-price, quoted up front</td>
                   </tr>
                   <tr className="bg-slate-50">
                     <td className="p-3 font-medium">Timeline</td>
@@ -183,7 +183,7 @@ export const faqData: FAQCategory[] = [
               <div className="p-3 bg-white border border-slate-200 rounded shadow-sm hover:border-jet-blue transition-colors">
                 <div className="flex justify-between items-center mb-1">
                   <span className="font-bold text-jet-navy">Package 1: Launch</span>
-                  <span className="text-jet-blue font-bold text-lg">$1,999</span>
+                  <span className="text-jet-blue font-bold text-sm">Fixed-price, quoted up front</span>
                 </div>
                 <p className="text-xs font-bold text-jet-green mb-1">Delivery: 10-14 Business Days</p>
                 <p className="text-sm text-slate-600">Professional website (5-7 pages), mobile responsive, basic SEO foundation, 10 stock images, contact form.</p>
@@ -191,7 +191,7 @@ export const faqData: FAQCategory[] = [
               <div className="p-3 bg-white border border-slate-200 rounded shadow-sm hover:border-jet-blue transition-colors">
                 <div className="flex justify-between items-center mb-1">
                   <span className="font-bold text-jet-navy">Package 2: Growth</span>
-                  <span className="text-jet-blue font-bold text-lg">$3,999</span>
+                  <span className="text-jet-blue font-bold text-sm">Fixed-price, quoted up front</span>
                 </div>
                 <p className="text-xs font-bold text-jet-green mb-1">Delivery: 14-21 Business Days</p>
                 <p className="text-sm text-slate-600">Comprehensive business site (12 pages), blog, advanced SEO (30 keywords), CMS training, CRM integration.</p>
@@ -199,7 +199,7 @@ export const faqData: FAQCategory[] = [
               <div className="p-3 bg-white border border-slate-200 rounded shadow-sm hover:border-jet-blue transition-colors">
                 <div className="flex justify-between items-center mb-1">
                   <span className="font-bold text-jet-navy">Package 3: Scale</span>
-                  <span className="text-jet-blue font-bold text-lg">$7,999</span>
+                  <span className="text-jet-blue font-bold text-sm">Fixed-price, quoted up front</span>
                 </div>
                 <p className="text-xs font-bold text-jet-green mb-1">Delivery: 21-35 Business Days</p>
                 <p className="text-sm text-slate-600">Enterprise-grade (25+ pages), custom design, multi-language, advanced integrations, premium security hardening.</p>
@@ -301,7 +301,7 @@ export const faqData: FAQCategory[] = [
              <div className="p-3 bg-slate-50 rounded border border-transparent hover:border-jet-blue transition-colors">
                 <div className="flex justify-between items-center">
                     <div className="font-bold text-jet-navy">Store Launch</div>
-                    <div className="font-bold text-jet-blue text-lg">$2,999</div>
+                    <div className="font-bold text-jet-blue text-sm">Fixed-price, quoted up front</div>
                 </div>
                 <div className="text-xs text-jet-green font-bold mb-1">14-21 Business Days</div>
                 <div className="text-sm text-slate-600">Up to 50 products, Shopify/WooCommerce, AI product content, payment setup, shipping config.</div>
@@ -309,7 +309,7 @@ export const faqData: FAQCategory[] = [
              <div className="p-3 bg-slate-50 rounded border border-transparent hover:border-jet-blue transition-colors">
                 <div className="flex justify-between items-center">
                     <div className="font-bold text-jet-navy">Store Growth</div>
-                    <div className="font-bold text-jet-blue text-lg">$5,999</div>
+                    <div className="font-bold text-jet-blue text-sm">Fixed-price, quoted up front</div>
                 </div>
                 <div className="text-xs text-jet-green font-bold mb-1">21-28 Business Days</div>
                 <div className="text-sm text-slate-600">Up to 150 products, advanced features (upsells, bundles), email marketing flows (Klaviyo), advanced analytics.</div>
@@ -317,7 +317,7 @@ export const faqData: FAQCategory[] = [
              <div className="p-3 bg-slate-50 rounded border border-transparent hover:border-jet-blue transition-colors">
                 <div className="flex justify-between items-center">
                     <div className="font-bold text-jet-navy">Store Scale</div>
-                    <div className="font-bold text-jet-blue text-lg">$9,999</div>
+                    <div className="font-bold text-jet-blue text-sm">Fixed-price, quoted up front</div>
                 </div>
                 <div className="text-xs text-jet-green font-bold mb-1">28-42 Business Days</div>
                 <div className="text-sm text-slate-600">Up to 500 products, enterprise features, multi-currency, ERP integration, 90-day support.</div>
@@ -398,8 +398,8 @@ export const faqData: FAQCategory[] = [
           <div className="space-y-2">
             <p>Yes! We use <strong>AI-Enhanced Product Photography</strong> to save you money:</p>
             <ul className="list-disc pl-5 text-sm space-y-1">
-              <li><strong>AI Product Photography:</strong> $49 per product (Regular $150). Includes lifestyle backgrounds.</li>
-              <li><strong>AI Product Videos:</strong> $99 per product (Regular $299).</li>
+              <li><strong>AI Product Photography:</strong> Flat per-product rate, quoted up front. Includes lifestyle backgrounds.</li>
+              <li><strong>AI Product Videos:</strong> Flat per-product rate, quoted up front.</li>
             </ul>
             <p className="text-sm font-bold text-jet-green mt-2">Cost Savings: 60-70% less expensive than traditional photoshoots.</p>
           </div>
@@ -420,17 +420,17 @@ export const faqData: FAQCategory[] = [
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             <div className="border p-3 rounded hover:border-jet-blue transition-colors">
               <div className="font-bold text-jet-blue">AI Search Foundation</div>
-              <div className="text-lg font-bold">$399/mo</div>
+              <div className="text-sm font-bold">Fixed monthly retainer</div>
               <p className="text-xs text-slate-500 mt-1">SEO + GEO + AEO. 20 keywords, 4 blogs/mo, monthly reporting.</p>
             </div>
             <div className="border p-3 rounded hover:border-jet-blue transition-colors bg-blue-50/50">
               <div className="font-bold text-jet-orange">AI Search Growth</div>
-              <div className="text-lg font-bold">$799/mo</div>
+              <div className="text-sm font-bold">Fixed monthly retainer</div>
               <p className="text-xs text-slate-500 mt-1">50 keywords, 8 long-form articles, 15 backlinks, bi-weekly calls.</p>
             </div>
             <div className="border p-3 rounded hover:border-jet-blue transition-colors">
               <div className="font-bold text-purple-600">AI Search Domination</div>
-              <div className="text-lg font-bold">$1,499/mo</div>
+              <div className="text-sm font-bold">Fixed monthly retainer</div>
               <p className="text-xs text-slate-500 mt-1">100+ keywords, 16 premium articles, PR outreach, weekly strategy.</p>
             </div>
           </div>
@@ -443,9 +443,9 @@ export const faqData: FAQCategory[] = [
           <div className="space-y-2">
              <p>With our AI-powered packages, results are faster than traditional SEO:</p>
              <ul className="list-disc pl-5 space-y-1 text-sm">
-               <li><strong>Foundation ($399/mo):</strong> 30-50% traffic increase in 3-6 months.</li>
-               <li><strong>Growth ($799/mo):</strong> 80-150% traffic increase in 3-6 months.</li>
-               <li><strong>Domination ($1,499/mo):</strong> 200-400% traffic increase in 3-6 months.</li>
+               <li><strong>Foundation tier:</strong> 30-50% traffic increase in 3-6 months.</li>
+               <li><strong>Growth tier:</strong> 80-150% traffic increase in 3-6 months.</li>
+               <li><strong>Domination tier:</strong> 200-400% traffic increase in 3-6 months.</li>
              </ul>
           </div>
         )
@@ -463,9 +463,9 @@ export const faqData: FAQCategory[] = [
         question: "Do you implement CRM systems?",
         answer: (
           <p>
-            Yes, we specialize in CRM implementation (HubSpot, Salesforce, Zoho, Pipedrive). 
+            Yes, we specialize in CRM implementation (HubSpot, Salesforce, Zoho, Pipedrive).
             Services include needs assessment, configuration, data migration, and team training.
-            Projects typically range from <strong>$8,000 - $50,000</strong> depending on complexity.
+            Every CRM project is <strong>fixed-price and quoted up front</strong>, scoped to your number of users, integrations, and workflows, so you know the full cost before we start.
           </p>
         )
       },
@@ -474,9 +474,9 @@ export const faqData: FAQCategory[] = [
         question: "What about ERP systems?",
         answer: (
           <p>
-             We focus on implementing <strong>ERPNext</strong> for growing businesses. It is open-source (no licensing fees), 
-             highly customizable, and includes modules for Finance, Inventory, Manufacturing, and HR. 
-             Typical investment is $30k - $150k+, which is a fraction of SAP/Oracle costs.
+             We focus on implementing <strong>ERPNext</strong> for growing businesses. It is open-source (no licensing fees),
+             highly customizable, and includes modules for Finance, Inventory, Manufacturing, and HR.
+             Each implementation is fixed-price and scoped to the modules and integrations you need, and it lands at a fraction of SAP/Oracle costs.
           </p>
         )
       }
@@ -504,7 +504,7 @@ export const faqData: FAQCategory[] = [
               <strong className="block text-jet-navy">Options:</strong>
               <ul className="list-disc pl-5 text-sm">
                 <li><strong>Prepay Discount:</strong> 100% upfront for 5% discount.</li>
-                <li><strong>Payment Plan:</strong> 3-Month Payment Plan available for Scale packages ($7,999+).</li>
+                <li><strong>Payment Plan:</strong> 3-Month Payment Plan available for larger Scale projects.</li>
                 <li><strong>SEO/AMC:</strong> Monthly billing or Annual prepay (2 months free).</li>
               </ul>
             </div>
@@ -516,7 +516,7 @@ export const faqData: FAQCategory[] = [
         question: "Do you offer financing?",
         answer: (
           <p>
-            Yes. For projects over $10,000 (like Scale packages), we can split costs into monthly payments over 3-6 month terms (subject to approval). 
+            Yes. For larger projects (like Scale packages), we can split costs into monthly payments over 3-6 month terms (subject to approval).
             We also work with third-party business financing partners for equipment or line-of-credit needs.
           </p>
         )
@@ -541,21 +541,21 @@ export const faqData: FAQCategory[] = [
             <div className="grid grid-cols-1 md:grid-cols-3 gap-2 text-sm">
                 <div className="p-2 border rounded bg-slate-50">
                     <div className="font-bold">Essential</div>
-                    <div className="text-jet-blue font-bold">$99/mo</div>
+                    <div className="text-jet-blue font-bold text-sm">Fixed monthly rate</div>
                     <div className="text-xs">Security, backups, updates.</div>
                 </div>
                 <div className="p-2 border rounded bg-slate-50">
                     <div className="font-bold">Business</div>
-                    <div className="text-jet-blue font-bold">$199/mo</div>
+                    <div className="text-jet-blue font-bold text-sm">Fixed monthly rate</div>
                     <div className="text-xs">1hr dev time, priority support.</div>
                 </div>
                 <div className="p-2 border rounded bg-slate-50">
                     <div className="font-bold">Enterprise</div>
-                    <div className="text-jet-blue font-bold">$399/mo</div>
+                    <div className="text-jet-blue font-bold text-sm">Fixed monthly rate</div>
                     <div className="text-xs">5hrs dev time, 24/7 support.</div>
                 </div>
             </div>
-            <p className="text-xs text-slate-500 mt-1">E-Commerce AMC packages start at $299/mo.</p>
+            <p className="text-xs text-slate-500 mt-1">E-Commerce AMC packages are available at a fixed monthly rate, quoted up front.</p>
           </div>
         )
       }

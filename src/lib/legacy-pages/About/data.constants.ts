@@ -94,7 +94,7 @@ export const REASONS: ReasonItem[] = [
     description: ["We understand your budget constraints", "We know you need quick ROI", "Solutions that scale with you"],
     comparison: {
       label: "The Difference:",
-      items: ["Large agency: ₹50 lakh ERP, 24-month timeline", "FactoryJet: ₹15 lakh ERPNext, 6-month timeline"]
+      items: ["Large agency: heavy ERP licensing, 24-month timeline", "FactoryJet: lean ERPNext build, 6-month timeline"]
     }
   },
   {
@@ -209,7 +209,7 @@ export const FAQS: FAQItem[] = [
   },
   {
     question: "Do I need a tech team in-house to manage what you build?",
-    answer: "Nope. We build systems that are easy for non-techies to manage. Plus, we provide training and 60-90 days of support after launch. If you need long-term help, our maintenance plans start at just ₹2,999/month."
+    answer: "Nope. We build systems that are easy for non-techies to manage. Plus, we provide training and 60-90 days of support after launch. If you need long-term help, we offer affordable monthly maintenance plans."
   },
   {
     question: "What happens if my website goes down at 2 AM on a Sunday?",

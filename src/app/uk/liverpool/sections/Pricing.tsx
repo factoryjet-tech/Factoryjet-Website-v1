@@ -9,59 +9,41 @@ import { trackButtonClick, trackCTAClick } from "@/utils/gtm";
 // ── Pricing table data ────────────────────────────────────────────────────────
 type Row = {
   service: string;
-  liverpoolAvg: string;
-  factoryjet: string;
-  saving: string;
+  included: string;
 };
 
 const ROWS: Row[] = [
   {
     service: "Brochure Website (5–7 pages)",
-    liverpoolAvg: "£3,500–£5,500",
-    factoryjet: "£1,500–£2,200",
-    saving: "~55%",
+    included: "Custom design, build, on-page SEO, launch & training",
   },
   {
     service: "E-Commerce Store (Shopify)",
-    liverpoolAvg: "£6,000–£12,000",
-    factoryjet: "£2,800–£4,500",
-    saving: "~55%",
+    included: "Store build, payments, shipping, product config, SEO",
   },
   {
     service: "Shopify Plus Build",
-    liverpoolAvg: "£15,000–£40,000",
-    factoryjet: "£7,000–£14,000",
-    saving: "~55%",
+    included: "Advanced store, custom checkout, integrations",
   },
   {
     service: "Headless Commerce (Next.js)",
-    liverpoolAvg: "£20,000–£60,000",
-    factoryjet: "£9,000–£22,000",
-    saving: "~55%",
+    included: "Headless storefront, commerce backend, custom build",
   },
   {
     service: "AI Agent / Chatbot",
-    liverpoolAvg: "£8,000–£25,000",
-    factoryjet: "£3,500–£9,000",
-    saving: "~60%",
+    included: "Scoping, build, tool integration, testing, handover",
   },
   {
     service: "AI SEO (GEO/AEO)",
-    liverpoolAvg: "£1,800–£3,500/mo",
-    factoryjet: "£750–£1,400/mo",
-    saving: "~58%",
+    included: "Answer-first content, schema, per-engine citation tracking",
   },
   {
     service: "Local SEO (monthly)",
-    liverpoolAvg: "£1,200–£2,800/mo",
-    factoryjet: "£550–£1,100/mo",
-    saving: "~55%",
+    included: "Google Business Profile, local content, citations, reporting",
   },
   {
     service: "Webflow / Framer Build",
-    liverpoolAvg: "£4,000–£8,000",
-    factoryjet: "£1,800–£3,200",
-    saving: "~56%",
+    included: "Design, build, on-page SEO, launch & training",
   },
 ];
 
@@ -195,12 +177,12 @@ export default function Pricing() {
               maxWidth: 760,
             }}
           >
-            Liverpool has strong agencies — Pixus, Velstar, Quirky Digital are
-            all excellent. They&rsquo;re also priced for agency overhead, office
-            rent in the Commercial District, and account manager commissions.
-            FactoryJet is AI-native and remote-first. No Baltic Triangle rent.
-            No account manager markup. All of that saving goes directly to your
-            quote.
+            Liverpool has strong agencies, and most of them carry the overhead
+            of city-centre office rent and account manager commissions.
+            FactoryJet is AI-native and remote-first, so that overhead never
+            lands on your quote. Every project is fixed-price and scoped to your
+            build. Here is what each service includes, with your written quote
+            confirmed before any work starts.
           </p>
         </div>
 
@@ -220,18 +202,13 @@ export default function Pricing() {
             >
               {/* Header row */}
               <div
-                className="grid grid-cols-[1.5fr_1fr_1fr_0.7fr]"
+                className="grid grid-cols-[1fr_1.6fr]"
                 style={{
                   backgroundColor: "#0A0F1C",
                   color: "#FFFFFF",
                 }}
               >
-                {[
-                  "Service",
-                  "Liverpool Agency Avg",
-                  "FactoryJet",
-                  "You Save",
-                ].map((h, i) => (
+                {["Service", "What's Included"].map((h, i) => (
                   <div
                     key={h}
                     className="px-6 py-5"
@@ -241,8 +218,7 @@ export default function Pricing() {
                       fontSize: 12.5,
                       letterSpacing: "0.14em",
                       textTransform: "uppercase",
-                      color:
-                        i === 2 ? "#FFFFFF" : "rgba(255,255,255,0.78)",
+                      color: i === 0 ? "#FFFFFF" : "rgba(255,255,255,0.78)",
                       borderLeft:
                         i === 0 ? "none" : "1px solid rgba(255,255,255,0.08)",
                     }}
@@ -259,67 +235,39 @@ export default function Pricing() {
                   <div
                     key={row.service}
                     data-pricing-row
-                    className="grid grid-cols-[1.5fr_1fr_1fr_0.7fr] items-center"
+                    className="grid grid-cols-[1fr_1.6fr] items-center"
                     style={{
                       backgroundColor: zebra,
                       borderTop: "1px solid #E2E8F0",
                     }}
                   >
-                    {/* Service */}
+                    {/* Service — highlighted column (Jet Green) */}
                     <div
                       className="px-6 py-6"
                       style={{
                         color: "#0A0F1C",
                         fontFamily: "var(--font-sans)",
-                        fontWeight: 600,
+                        fontWeight: 700,
                         fontSize: 15.5,
-                        lineHeight: 1.45,
+                        lineHeight: 1.4,
+                        backgroundColor: "rgba(16,185,129,0.04)",
+                        borderLeft: "3px solid #10B981",
                       }}
                     >
                       {row.service}
                     </div>
-                    {/* Liverpool average */}
+                    {/* What's included */}
                     <div
                       className="px-6 py-6"
                       style={{
-                        color: "#6b7280",
+                        color: "#374151",
                         fontFamily: "var(--font-sans)",
                         fontSize: 15,
-                        lineHeight: 1.45,
-                        textDecoration: "line-through",
-                        textDecorationColor: "rgba(107,114,128,0.4)",
+                        lineHeight: 1.5,
+                        borderLeft: "1px solid #E2E8F0",
                       }}
                     >
-                      {row.liverpoolAvg}
-                    </div>
-                    {/* FactoryJet — highlighted column (Jet Green) */}
-                    <div
-                      className="px-6 py-6"
-                      style={{
-                        color: "#10B981",
-                        fontFamily: "var(--font-sans)",
-                        fontWeight: 700,
-                        fontSize: 16,
-                        lineHeight: 1.4,
-                        backgroundColor: "rgba(16,185,129,0.04)",
-                        borderLeft: "3px solid #10B981",
-                        borderRight: "1px solid #E2E8F0",
-                      }}
-                    >
-                      {row.factoryjet}
-                    </div>
-                    {/* Saving — Jet Orange */}
-                    <div
-                      className="px-6 py-6"
-                      style={{
-                        color: "#FF6B35",
-                        fontFamily: "var(--font-sans)",
-                        fontWeight: 700,
-                        fontSize: 15,
-                        lineHeight: 1.4,
-                      }}
-                    >
-                      {row.saving}
+                      {row.included}
                     </div>
                   </div>
                 );
@@ -339,9 +287,8 @@ export default function Pricing() {
               lineHeight: 1.7,
             }}
           >
-            All prices are indicative ranges based on publicly available
-            Liverpool agency pricing. Final quotes depend on scope. FactoryJet
-            pricing updated Q1 2026.
+            Every quote is fixed-price and depends on your project scope,
+            confirmed in writing before work starts. Free quote, no commitment.
           </p>
         </div>
 

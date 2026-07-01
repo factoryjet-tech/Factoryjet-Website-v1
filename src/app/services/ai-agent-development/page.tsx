@@ -104,7 +104,7 @@ const faqSchema = {
       name: 'How much does AI agent development cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet AI agents start from ₹4,00,000 for a focused single-workflow agent (WhatsApp support bot, lead qualifier, invoice processor). Most Indian businesses need the Growth tier from ₹12,00,000, which covers multiple interconnected agents, CRM/ERP integration, and a management dashboard. Enterprise multi-agent platforms start from ₹20,00,000. All prices are fixed — no hourly billing surprises.',
+        text: 'AI agent development cost depends on scope. A focused single-workflow agent (WhatsApp support bot, lead qualifier, invoice processor) is the entry point. Most Indian businesses need a Growth-tier build covering multiple interconnected agents, CRM/ERP integration, and a management dashboard. Enterprise multi-agent platforms are larger still. Every project is fixed-price and quoted up front after a free discovery call, so you know the full cost before work starts — no hourly billing surprises.',
       },
     },
     {
@@ -168,7 +168,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How much does an AI chatbot cost in India?',
-      acceptedAnswer: { '@type': 'Answer', text: 'A simple FAQ chatbot starts around ₹40,000; a custom chatbot trained on your products and connected to your CRM runs ₹1,00,000–₹4,00,000. If you are asking how much does AI chatbot cost in India per month instead, SaaS tools run ₹2,000–₹15,000 monthly but you never own them. FactoryJet builds chatbots you own outright, at a fixed written price.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'A simple FAQ chatbot is the most affordable option; a custom chatbot trained on your products and connected to your CRM costs more because it does more. If you are asking how much does AI chatbot cost in India per month instead, SaaS tools charge a recurring monthly fee but you never own them. FactoryJet builds chatbots you own outright, at a fixed written price quoted up front after a free discovery call.' },
     },
   ],
 };
@@ -301,12 +301,12 @@ const IN_COMPARISON_COLUMNS = [
 
 const IN_COMPARISON_ROWS = [
   {
-    feature: 'Starting price',
+    feature: 'Pricing model',
     values: [
-      '₹4,00,000',
-      '₹8,00,000–₹20,00,000',
-      '₹2,00,000–₹5,00,000 (unreliable)',
-      '₹50,000–₹2,00,000/yr (you build it)',
+      'Fixed price, quoted up front',
+      'High, often open-ended',
+      'Lower, but unreliable',
+      'Annual subscription (you build it)',
     ],
   },
   {
@@ -575,7 +575,7 @@ const IN_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does AI agent development cost in India?',
     answer:
-      "FactoryJet AI agents start from ₹4,00,000 for a focused single-workflow agent. Most Indian businesses need the Growth tier from ₹12,00,000, covering multiple interconnected agents, CRM/WhatsApp integrations, and a management dashboard. Enterprise multi-agent platforms start from ₹20,00,000. All prices are fixed — no hourly billing surprises.",
+      "AI agent development cost depends on scope. A focused single-workflow agent is the entry point. Most Indian businesses need a Growth-tier build covering multiple interconnected agents, CRM/WhatsApp integrations, and a management dashboard, while enterprise multi-agent platforms are larger. Every project is fixed-price and quoted up front after a free discovery call, so you know the full cost before work starts — no hourly billing surprises.",
   },
   {
     category: 'pricing',
@@ -653,7 +653,7 @@ const IN_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does an AI chatbot cost in India?',
     answer:
-      'A simple FAQ chatbot starts around ₹40,000; a custom chatbot trained on your products and connected to your CRM runs ₹1,00,000–₹4,00,000. If you are asking how much does AI chatbot cost in India per month instead, SaaS tools run ₹2,000–₹15,000 monthly but you never own them. FactoryJet builds chatbots you own outright, at a fixed written price.',
+      'A simple FAQ chatbot is the most affordable option; a custom chatbot trained on your products and connected to your CRM costs more because it does more. If you are asking how much does AI chatbot cost in India per month instead, SaaS tools charge a recurring monthly fee but you never own them. FactoryJet builds chatbots you own outright, at a fixed written price quoted up front after a free discovery call.',
   },
 ];
 
@@ -1412,13 +1412,13 @@ export default function AIAgentDevelopmentINPage() {
           headline="FactoryJet vs. Indian IT Firm vs. Freelancer vs. No-Code Tools"
           lead="Fixed price, full ownership, Indian business stack out of the box — here is the honest comparison."
           pullQuote={{
-            stat: '₹4,00,000',
+            stat: 'Fixed price',
             caption:
-              'starting price — same engineering quality, WhatsApp integration, Zoho/Razorpay connectors, and code ownership as a ₹15,00,000 Indian IT firm project.',
+              'the same engineering quality, WhatsApp integration, Zoho/Razorpay connectors, and code ownership as a far more expensive Indian IT firm project.',
           }}
           columns={IN_COMPARISON_COLUMNS}
           rows={IN_COMPARISON_ROWS}
-          footer="Prices reflect typical Indian market rates as of 2025. FactoryJet fixed-price contracts available for all tiers."
+          footer="FactoryJet fixed-price contracts available for all tiers, quoted up front after a free discovery call."
         />
 
         {/* ── 11. INDUSTRIES GRID ───────────────────────────────────────────── */}

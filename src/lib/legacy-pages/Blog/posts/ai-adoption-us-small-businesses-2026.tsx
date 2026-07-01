@@ -250,15 +250,15 @@ export const post: BlogPost = {
         The AI tools that get the most press — large language models, image generators, code
         assistants — are oriented toward knowledge workers, content creators, and software
         developers. A plumber in{' '}
-        <a href="/us/tampa/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">
+        <a href="/tampa/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">
           Tampa
         </a>
         , a boutique owner in{' '}
-        <a href="/us/nashville/seo" className="text-blue-600 underline hover:text-blue-800 transition-colors">
+        <a href="/nashville/seo" className="text-blue-600 underline hover:text-blue-800 transition-colors">
           Nashville
         </a>
         , or a food distributor in{' '}
-        <a href="/us/charlotte/seo" className="text-blue-600 underline hover:text-blue-800 transition-colors">
+        <a href="/charlotte/seo" className="text-blue-600 underline hover:text-blue-800 transition-colors">
           Charlotte
         </a>{' '}
         doesn't immediately see where ChatGPT fits into their Tuesday.
@@ -268,7 +268,7 @@ export const post: BlogPost = {
         They're using purpose-built applications: AI that handles their customer service queue, AI
         that writes their product descriptions, AI that follows up with leads at 2am. At FactoryJet,
         we build these integrations directly into the websites and{' '}
-        <a href="/us/services/ecommerce" className="text-blue-600 underline hover:text-blue-800 transition-colors">
+        <a href="/services/ecommerce" className="text-blue-600 underline hover:text-blue-800 transition-colors">
           Shopify stores
         </a>{' '}
         we deliver — so the AI layer comes ready to use on day one.
@@ -365,7 +365,7 @@ export const post: BlogPost = {
         you run a service business: AI-assisted lead follow-up, AI-powered appointment scheduling,
         and AI content creation for your marketing tend to deliver returns fastest. For local service
         businesses in competitive markets — HVAC, plumbing, or home services in{' '}
-        <a href="/us/cleveland/seo" className="text-blue-600 underline hover:text-blue-800 transition-colors">
+        <a href="/cleveland/seo" className="text-blue-600 underline hover:text-blue-800 transition-colors">
           Northeast Ohio
         </a>{' '}
         — AI-assisted SEO content helps you rank in the Map Pack faster by publishing neighborhood
@@ -373,7 +373,7 @@ export const post: BlogPost = {
       </p>
       <p className="mb-4">
         At FactoryJet, we build these capabilities directly into the{' '}
-        <a href="/us/services/ecommerce" className="text-blue-600 underline hover:text-blue-800 transition-colors">
+        <a href="/services/ecommerce" className="text-blue-600 underline hover:text-blue-800 transition-colors">
           websites and e-commerce stores
         </a>{' '}
         we deliver — so you're not starting from scratch. The 17.7% who are already there aren't

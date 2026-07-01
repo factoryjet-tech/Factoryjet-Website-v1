@@ -39,7 +39,7 @@ const MARQUEE_ITEMS = [
   "WEB DESIGN SHEFFIELD",
   "BUILT IN 7 DAYS",
   "AI-POWERED WEBSITES",
-  "FROM £799",
+  "FIXED-PRICE, QUOTED UP FRONT",
   "NO LOCK-IN CONTRACTS",
 ];
 
@@ -59,7 +59,7 @@ const WHY_BENEFITS = [
   {
     num: "03",
     title: "Truly Affordable",
-    desc: "Starting at £799 for a professional 5-page website. Everything included. No surprises, no add-ons, no lock-in contracts.",
+    desc: "Fixed-price, quoted up front for your professional 5-page website. Everything included. No surprises, no add-ons, no lock-in contracts.",
   },
 ];
 
@@ -146,7 +146,7 @@ const FAQ_ITEMS = [
   },
   {
     q: "Are there any contracts or monthly fees?",
-    a: "No mandatory contracts. You pay once for the build. Hosting typically costs \u00a315\u201325/month (we\u2019ll set it up but you pay the provider directly). We offer optional monthly maintenance retainers, but they\u2019re never required.",
+    a: "No mandatory contracts. You pay once for the build. Hosting is a small monthly cost you pay the provider directly (we\u2019ll set it up for you). We offer optional monthly maintenance retainers, but they\u2019re never required.",
   },
   {
     q: "Can you add an AI chatbot to my website?",
@@ -208,12 +208,12 @@ const STATS = [
     label: "Days to go from brief to live website — guaranteed",
   },
   {
-    id: "price",
-    target: 799,
-    prefix: "£",
-    suffix: "",
-    display: "799",
-    label: "Starting price for a full custom 5-page Sheffield website",
+    id: "lighthouse",
+    target: 90,
+    prefix: "",
+    suffix: "+",
+    display: "90",
+    label: "Google Lighthouse performance score on every Sheffield build",
   },
 ];
 
@@ -433,7 +433,7 @@ export default function SheffieldPage() {
                 "@type": "LocalBusiness",
                 "@id": "https://factoryjet.com/#business",
                 name: "FactoryJet Technologies",
-                description: "AI-powered custom websites for Sheffield businesses built in 7 days. From £799.",
+                description: "AI-powered custom websites for Sheffield businesses built in 7 days. Fixed pricing, quoted up front.",
                 url: "https://factoryjet.com/sheffield",
                 email: "connect@factoryjet.com",
                 address: {
@@ -461,7 +461,7 @@ export default function SheffieldPage() {
                   { "@type": "Question", name: "Do I need any technical knowledge?", acceptedAnswer: { "@type": "Answer", text: "None at all. We handle everything: domain setup, hosting, SSL, Google Analytics, Search Console, and even write the copy if you need it." } },
                   { "@type": "Question", name: "Will my website rank in Sheffield searches?", acceptedAnswer: { "@type": "Answer", text: "We build Sheffield-specific SEO into every page from the start: local schema markup, Google Business Profile integration, Sheffield landmarks and area mentions." } },
                   { "@type": "Question", name: "What\u2019s the difference between Business and E-Commerce?", acceptedAnswer: { "@type": "Answer", text: "Business is for service companies and trades who need to generate enquiries and leads. E-Commerce adds a full online shop (Shopify or WooCommerce), product pages, payment gateway, and delivery options." } },
-                  { "@type": "Question", name: "Are there any contracts or monthly fees?", acceptedAnswer: { "@type": "Answer", text: "No mandatory contracts. You pay once for the build. Hosting typically costs \u00a315\u201325/month. We offer optional monthly maintenance retainers, but they\u2019re never required." } },
+                  { "@type": "Question", name: "Are there any contracts or monthly fees?", acceptedAnswer: { "@type": "Answer", text: "No mandatory contracts. You pay once for the build. Hosting is a small monthly cost you pay the provider directly. We offer optional monthly maintenance retainers, but they\u2019re never required." } },
                   { "@type": "Question", name: "Can you add an AI chatbot to my website?", acceptedAnswer: { "@type": "Answer", text: "Yes. Our Business, E-Commerce, and Enterprise plans include an AI chatbot that qualifies leads and handles FAQs 24/7." } },
                   { "@type": "Question", name: "What happens if I need changes after launch?", acceptedAnswer: { "@type": "Answer", text: "Every plan includes 30 days of post-launch support at no extra cost. One-off updates are billed at a flat hourly rate with no hidden markups." } },
                 ],
@@ -651,7 +651,7 @@ export default function SheffieldPage() {
                   {[
                     { icon: "⚡", text: "7-day delivery" },
                     { icon: "🔒", text: "No lock-in contracts" },
-                    { icon: "💷", text: "From £799" },
+                    { icon: "💷", text: "Fixed-price, quoted up front" },
                   ].map((s) => (
                     <span key={s.text} className="flex items-center gap-2 text-[14px] font-medium text-[#64748B]">
                       <span>{s.icon}</span> {s.text}
@@ -816,36 +816,20 @@ export default function SheffieldPage() {
                   </p>
                 </div>
 
-                {/* Price comparison */}
+                {/* How we price */}
                 <div className="bg-white rounded-2xl border border-[#E9ECEF] p-6 flex flex-col gap-3">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-[#6B7280]">
-                    Price comparison
+                    How we price
                   </p>
-                  <div className="flex items-end gap-5">
-                    {/* FactoryJet price */}
-                    <div className="flex flex-col gap-1">
-                      <span
-                        className="font-clash font-bold leading-none text-[#F05A28]"
-                        style={{ fontSize: "48px" }}
-                      >
-                        £799
-                      </span>
-                      <span className="text-[12px] font-semibold text-[#0a0a0a]">FactoryJet</span>
-                    </div>
-
-                    <span className="text-[16px] text-[#D1D5DB] mb-3">vs</span>
-
-                    {/* Agency price — crossed out */}
-                    <div className="flex flex-col gap-1">
-                      <span
-                        className="font-clash font-bold leading-none text-[#D1D5DB] line-through"
-                        style={{ fontSize: "24px" }}
-                      >
-                        £4,000–£8,000
-                      </span>
-                      <span className="text-[12px] text-[#6B7280]">Typical Sheffield agency</span>
-                    </div>
-                  </div>
+                  <p
+                    className="font-clash font-bold leading-[1.1] text-[#F05A28]"
+                    style={{ fontSize: "28px" }}
+                  >
+                    Fixed-price, quoted up front
+                  </p>
+                  <p className="text-[13px] text-[#343A40] leading-[1.6]">
+                    Every Sheffield project is fixed-price and scoped to your build. The main drivers are page count, design depth, and any integrations you need. You get one quote up front after a free discovery call, so you know the full cost before work starts — and it typically lands well below what a traditional Sheffield agency charges.
+                  </p>
                   <p className="text-[12px] text-[#6B7280] pt-3 border-t border-[#E9ECEF]">
                     No hidden extras. No lock-in contracts. Everything included.
                   </p>
@@ -1541,10 +1525,10 @@ export default function SheffieldPage() {
                     className="bg-[#0a0a0a] border border-white/[0.1] rounded-lg px-4 py-3 text-[14px] text-white/60 focus:outline-none focus:border-[#F05A28]/60 transition-colors duration-200"
                   >
                     <option value="" disabled>Select a package</option>
-                    <option value="starter">Starter — £799</option>
-                    <option value="business">Business — £1,499</option>
-                    <option value="ecom">E-Commerce — £2,499</option>
-                    <option value="enterprise">Enterprise — £4,999+</option>
+                    <option value="starter">Starter</option>
+                    <option value="business">Business</option>
+                    <option value="ecom">E-Commerce</option>
+                    <option value="enterprise">Enterprise</option>
                   </select>
                 </div>
                 <div className="flex flex-col gap-2">
@@ -1604,7 +1588,7 @@ export default function SheffieldPage() {
                 </span>
               </Link>
               <p className="text-[14px] text-white/40 leading-[1.7]">
-                AI-powered custom websites for Sheffield businesses. Built in 7 days. From £799.
+                AI-powered custom websites for Sheffield businesses. Built in 7 days. Fixed pricing, quoted up front.
               </p>
               <div className="flex gap-3">
                 <a href="mailto:connect@factoryjet.com" rel="noopener noreferrer" className="text-[13px] text-white/40 hover:text-white transition-colors duration-200">Email</a>
@@ -1737,7 +1721,7 @@ function BrowserMockup({ onCtaClick }: { onCtaClick: () => void }) {
         <div className="flex gap-3">
           {[
             { label: "7 Days", sub: "Delivery" },
-            { label: "£799",   sub: "From" },
+            { label: "90+",    sub: "Lighthouse" },
             { label: "5★",     sub: "Rated" },
           ].map((stat) => (
             <div
@@ -1897,7 +1881,7 @@ function AIChatMockup() {
           <div className="bg-[#F05A28] rounded-2xl rounded-tl-sm px-4 py-3">
             <p className="text-[13px] text-white leading-[1.6]" suppressHydrationWarning>
               Great question! Our{" "}
-              <span className="font-semibold">Starter package is £799</span>
+              <span className="font-semibold">Starter package is fixed-price and quoted up front</span>
               {" "}— that{"\u2019"}s a full 5-page custom site, Sheffield local SEO,
               and delivered in 5 days. Want me to book a free 30-min call?
             </p>

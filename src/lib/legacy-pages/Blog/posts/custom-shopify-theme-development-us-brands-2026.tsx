@@ -81,7 +81,7 @@ export const post: BlogPost = {
       </div>
 
       <p className="text-lg leading-relaxed mb-6">
-        Every US brand on Shopify starts the same way: a free theme like Dawn or Refresh, a Theme Store template for $180-$380, or a premium theme from Out of the Sandbox. That setup works — sometimes for years. The question this guide answers is the one most brand operators put off until it's overdue: <em>when does a custom Shopify theme stop being a vanity spend and start being the highest-ROI investment your store can make</em>? We'll walk through the four theme tiers, the six honest signals that tell a brand it's time, the real build process, what to budget in USD, and the maintenance reality nobody warns you about. If you want the productized version, our full <a href="/us/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify development service for US brands</a> sits at the end.
+        Every US brand on Shopify starts the same way: a free theme like Dawn or Refresh, a Theme Store template for $180-$380, or a premium theme from Out of the Sandbox. That setup works — sometimes for years. The question this guide answers is the one most brand operators put off until it's overdue: <em>when does a custom Shopify theme stop being a vanity spend and start being the highest-ROI investment your store can make</em>? We'll walk through the four theme tiers, the six honest signals that tell a brand it's time, the real build process, what to budget in USD, and the maintenance reality nobody warns you about. If you want the productized version, our full <a href="/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify development service for US brands</a> sits at the end.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Why Off-the-Shelf Themes Hit a Ceiling at $500K+</h2>
@@ -164,7 +164,7 @@ export const post: BlogPost = {
         <strong>6. Non-standard merchandising.</strong> Subscription bundles, build-a-box flows, B2B wholesale portals, RFQ workflows, custom pricing per customer segment, member-only product access — these all live on top of Shopify's data model but need theme-level UX to work cleanly. If your business model is anything other than "single SKUs sold one at a time," custom theming usually pays for itself in the first quarter.
       </p>
       <p className="mb-4">
-        For the broader ecommerce decision (Shopify vs WooCommerce vs custom platform), our <a href="/us/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">US ecommerce development overview</a> walks through every option with US-specific cost numbers.
+        For the broader ecommerce decision (Shopify vs WooCommerce vs custom platform), our <a href="/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">US ecommerce development overview</a> walks through every option with US-specific cost numbers.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Liquid (Online Store 2.0) vs Hydrogen — Which Stack to Choose</h2>
@@ -286,10 +286,10 @@ export const post: BlogPost = {
         <strong>$15,000-$30,000 — Full custom theme.</strong> Everything in the focused tier plus extensive PDP variants (configurators, bundles), custom cart drawer with upsells, full set of 15-20 reusable sections for any landing page, deep metafield architecture, Klaviyo integration with custom email templates matching the theme. Best fit: US DTC brand at $1M-$5M/year wanting full design freedom and a marketing-team-editable storefront.
       </p>
       <p className="mb-4">
-        <strong>$35,000-$75,000+ — Hydrogen + Shopify Plus build.</strong> Headless storefront in Hydrogen (React/Remix), connected to Shopify Plus backend, with Checkout Extensibility for custom post-purchase pages, multi-region routing via Shopify Markets, custom CMS layer if marketing-team editability matters. Best fit: US DTC or B2B brand at $5M+/year where the conversion lift and performance gains justify the build cost. See pricing across all our ecommerce tiers on our <a href="/us/pricing" className="text-blue-600 underline hover:text-blue-800 transition-colors">US pricing page</a>.
+        <strong>$35,000-$75,000+ — Hydrogen + Shopify Plus build.</strong> Headless storefront in Hydrogen (React/Remix), connected to Shopify Plus backend, with Checkout Extensibility for custom post-purchase pages, multi-region routing via Shopify Markets, custom CMS layer if marketing-team editability matters. Best fit: US DTC or B2B brand at $5M+/year where the conversion lift and performance gains justify the build cost. See pricing across all our ecommerce tiers on our <a href="/pricing" className="text-blue-600 underline hover:text-blue-800 transition-colors">US pricing page</a>.
       </p>
       <p className="mb-4">
-        For comparison: US Shopify agencies typically quote 2-4x these numbers for the same scope, with project timelines of 3-6 months instead of 6 weeks. For US brands evaluating other platforms in parallel, our <a href="/us/services/woocommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">WooCommerce development service</a> covers the WooCommerce alternative with real US cost numbers.
+        For comparison: US Shopify agencies typically quote 2-4x these numbers for the same scope, with project timelines of 3-6 months instead of 6 weeks. For US brands evaluating other platforms in parallel, our <a href="/services/woocommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">WooCommerce development service</a> covers the WooCommerce alternative with real US cost numbers.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">The Maintenance Reality Nobody Warns You About</h2>
@@ -314,7 +314,7 @@ export const post: BlogPost = {
         Every custom theme build ships with the same technical foundation: Online Store 2.0 architecture with JSON templates and sections-everywhere, custom sections editable from the Shopify theme editor, metafields-driven extended product data, Lighthouse Performance 95+ and 100 on SEO/Accessibility/Best Practices, Product schema and Core Web Vitals optimization, integration with your existing Klaviyo / Stripe / TaxJar / ShipStation stack, and full code ownership delivered to your GitHub repository on launch day. No vendor lock-in — you can move to any Shopify developer or in-house team afterward.
       </p>
       <p className="mb-4">
-        Custom Shopify theme builds start at $3,999. Full store builds with theme + product setup + payment + apps + launch start at $7,500. Shopify Plus and headless Hydrogen builds start at $15,000. See the full scope and timeline on our <a href="/us/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">US Shopify development service page</a>.
+        Custom Shopify theme builds start at $3,999. Full store builds with theme + product setup + payment + apps + launch start at $7,500. Shopify Plus and headless Hydrogen builds start at $15,000. See the full scope and timeline on our <a href="/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">US Shopify development service page</a>.
       </p>
 
       <div className="my-12 rounded-2xl bg-[#0052CC] p-8 sm:p-10 text-center not-prose">

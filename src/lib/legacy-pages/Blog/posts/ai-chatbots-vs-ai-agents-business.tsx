@@ -120,7 +120,7 @@ export const post: BlogPost = {
         <strong>4. Local service business FAQ.</strong> A dental practice in Tampa runs a chatbot on their site that handles "do you accept my insurance?", "what are your hours?", and "how do I become a new patient?" — questions that used to interrupt the front-desk staff dozens of times a day.
       </p>
       <p className="mb-4">
-        Notice the pattern: each chatbot answers questions. None of them <em>do</em> things. If you want to learn more about the chatbot category specifically, see our <a href="/us/services/ai-chatbot-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI chatbot development service</a>.
+        Notice the pattern: each chatbot answers questions. None of them <em>do</em> things. If you want to learn more about the chatbot category specifically, see our <a href="/services/ai-chatbot-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI chatbot development service</a>.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What an AI Agent Actually Is</h2>
@@ -143,7 +143,7 @@ export const post: BlogPost = {
         <strong>4. Multi-step quote agent.</strong> A commercial cleaning business in Portland runs an agent that handles RFQ intake: it collects square footage, service frequency, and special requirements, pulls pricing from a custom rate card, generates a quote PDF, emails it to the prospect, and creates a deal in their CRM with the right owner.
       </p>
       <p className="mb-4">
-        Pattern: each agent <em>completes work</em>. The customer's intent gets resolved end-to-end, not just answered. For the agent category in depth, see our <a href="/us/services/ai-agents" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI agents service</a> and our deeper guide on <a href="/blog/ai-agents-small-business-usa-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI agents for US small businesses</a>.
+        Pattern: each agent <em>completes work</em>. The customer's intent gets resolved end-to-end, not just answered. For the agent category in depth, see our <a href="/services/ai-agents" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI agents service</a> and our deeper guide on <a href="/blog/ai-agents-small-business-usa-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI agents for US small businesses</a>.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Side-by-Side: Capability Comparison</h2>
@@ -243,7 +243,7 @@ export const post: BlogPost = {
         <strong>The task has clear success criteria.</strong> "Meeting booked." "Refund processed." "Ticket resolved." Agents work best when the goal is unambiguous. If success is fuzzy, you're better off with human review.
       </p>
       <p className="mb-4">
-        Common US SMB agent use cases: lead qualification and routing for SaaS and B2B services, multi-step refund and return workflows for ecommerce, appointment scheduling for service businesses, quote generation for trades and B2B, post-purchase follow-up sequences, internal workflow automation across CRM and helpdesk. For workflow automation across multiple business tools, see our <a href="/us/services/ai-workflow-automation" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI workflow automation service</a>.
+        Common US SMB agent use cases: lead qualification and routing for SaaS and B2B services, multi-step refund and return workflows for ecommerce, appointment scheduling for service businesses, quote generation for trades and B2B, post-purchase follow-up sequences, internal workflow automation across CRM and helpdesk. For workflow automation across multiple business tools, see our <a href="/services/ai-workflow-automation" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI workflow automation service</a>.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">When You Need Both: The Hybrid Setup</h2>
@@ -254,7 +254,7 @@ export const post: BlogPost = {
         A typical hybrid flow: a chatbot lives on the website handling the top-of-funnel volume — pricing questions, hours, services, policy lookups. When a visitor crosses a qualification threshold (asks about a demo, requests a quote, mentions a specific use case), the chatbot hands the conversation to an AI agent. The agent then takes over the multi-step work: pulling the company data, scoring the lead, booking a meeting, drafting the follow-up email, logging everything in the CRM.
       </p>
       <p className="mb-4">
-        You get the cost efficiency of a chatbot for the 80% of conversations that are simple, and the deeper capability of an agent for the 20% that are actually worth the spend. This is also why building these systems separately and stitching them together rarely works as well as designing the hand-off from day one — which is why most SMB hybrid builds end up custom rather than purely SaaS. Our <a href="/us/services/ai-agents" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI agent builds</a> and chatbot integrations are typically architected together for exactly this reason.
+        You get the cost efficiency of a chatbot for the 80% of conversations that are simple, and the deeper capability of an agent for the 20% that are actually worth the spend. This is also why building these systems separately and stitching them together rarely works as well as designing the hand-off from day one — which is why most SMB hybrid builds end up custom rather than purely SaaS. Our <a href="/services/ai-agents" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI agent builds</a> and chatbot integrations are typically architected together for exactly this reason.
       </p>
       <p className="mb-4">
         For a concrete ecommerce application of these patterns, see <a href="/blog/austin-ecommerce-checkout-optimization-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">how small US ecommerce teams are deploying these AI patterns — Austin checkout optimization case in point</a>.
@@ -291,7 +291,7 @@ export const post: BlogPost = {
         <strong>Build</strong> when your workflow is specific, your data is proprietary, your integrations are unusual, or you need to own the logic. Most AI agent use cases land here because real business workflows rarely fit a SaaS template — every SMB qualifies leads slightly differently, books appointments through a different system, follows a different refund policy. Off-the-shelf agent platforms exist (Voiceflow, Botpress, OpenAI's Assistants API), but the gap between "platform demo" and "production-ready for your business" is real, and that gap is where agencies earn their keep.
       </p>
       <p className="mb-4">
-        For broader AI implementation across tools and data sources, our <a href="/us/services/ai-integration-services" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI integration services</a> handle the connective tissue between your systems — which is usually where build projects either succeed or stall.
+        For broader AI implementation across tools and data sources, our <a href="/services/ai-integration-services" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI integration services</a> handle the connective tissue between your systems — which is usually where build projects either succeed or stall.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Compliance and Data Residency for US Businesses</h2>
@@ -336,7 +336,7 @@ export const post: BlogPost = {
       </div>
 
       <p className="mb-6">
-        Ready to scope this out? <a href="/us/services/ai-agents" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our AI agent service</a>, browse our <a href="/us/services/ai-chatbot-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">chatbot development packages</a>, or talk to the founder directly — <a href="https://calendly.com/bhavesh-factoryjet/30min" className="text-blue-600 underline hover:text-blue-800 transition-colors">book a 30-minute call</a> and we'll tell you which one (or both) you actually need.
+        Ready to scope this out? <a href="/services/ai-agents" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our AI agent service</a>, browse our <a href="/services/ai-chatbot-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">chatbot development packages</a>, or talk to the founder directly — <a href="https://calendly.com/bhavesh-factoryjet/30min" className="text-blue-600 underline hover:text-blue-800 transition-colors">book a 30-minute call</a> and we'll tell you which one (or both) you actually need.
       </p>
     </>
   ),

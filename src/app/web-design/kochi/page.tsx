@@ -28,7 +28,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'Web Design Company in Kochi | | FactoryJet',
   description:
-    'Web design company in Kochi for IT firms, tourism businesses, exporters & startups. Fast websites from ₹29,999. 7-day delivery. Serving Infopark, Kakkanad, MG Road & Fort Kochi.',
+    'Web design company in Kochi for IT firms, tourism businesses, exporters & startups. Fast, custom websites with a 7-day delivery guarantee. Serving Infopark, Kakkanad, MG Road & Fort Kochi.',
   keywords: [
     'web design company in Kochi',
     'website design Kochi',
@@ -151,7 +151,7 @@ const faqSchema = {
       name: 'How much does a website cost for a business in Kochi?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet's web design for Kochi businesses starts at ₹29,999 for a 5-page Starter site. The Growth tier (₹80,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds start at ₹1,50,000. Kochi and Trivandrum agency rates for comparable scope typically run ₹1,20,000–₹3,50,000.",
+        text: "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
       },
     },
     {
@@ -251,7 +251,7 @@ const KOCHI_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a website cost for a business in Kochi?',
     answer:
-      "FactoryJet's web design for Kochi businesses starts at ₹29,999 for a 5-page Starter site. The Growth tier (₹80,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds start at ₹1,50,000. Kochi and Trivandrum agency rates for comparable scope typically run ₹1,20,000–₹3,50,000.",
+      "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
   },
   {
     category: 'pricing',
@@ -347,7 +347,7 @@ const KOCHI_FAQ_ITEMS = [
     category: 'local',
     question: 'How does FactoryJet compare to Kochi and Trivandrum web agencies?',
     answer:
-      "Kochi and Trivandrum web agencies typically charge ₹1,20,000–₹3,50,000 for a comparable project and deliver in 6–16 weeks. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at a fixed, published price.",
+      "Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright.",
   },
 
   /* ── Support & Ownership ── */
@@ -361,7 +361,7 @@ const KOCHI_FAQ_ITEMS = [
     category: 'support',
     question: 'What support do you provide after launch?',
     answer:
-      'Every project includes a 30-day post-launch support window covering bug fixes and minor adjustments at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans from ₹4,999/month.',
+      'Every project includes a 30-day post-launch support window covering bug fixes and minor adjustments at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans covering development changes, priority same-day bug response, and a dedicated engineer who knows your codebase.',
   },
   {
     category: 'support',
@@ -373,7 +373,7 @@ const KOCHI_FAQ_ITEMS = [
     category: 'support',
     question: 'Do you offer ongoing retainer services for Kochi businesses?',
     answer:
-      'Yes. Monthly retainers from ₹4,999/month cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling and a dedicated engineer.',
+      'Yes. Monthly retainers cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling and a dedicated engineer.',
   },
   {
     category: 'support',
@@ -411,10 +411,6 @@ const KOCHI_COMPARISON_COLUMNS = [
 ] as const;
 
 const KOCHI_COMPARISON_ROWS = [
-  {
-    feature: 'Starting price',
-    values: ['Get a Quote', '₹1,20,000–₹3,50,000', '₹10,000–₹60,000', '₹0–₹15,000 (you build it)'],
-  },
   {
     feature: 'Delivery timeline',
     values: ['7 days', '6–16 weeks', '3–12 weeks (unreliable)', '1–2 weeks (you build it)'],
@@ -499,11 +495,6 @@ const howToSchema = {
   '@id': `https://factoryjet.com/web-design/kochi#howto`,
   name: `How FactoryJet builds your Kochi website in 7 days`,
   description: `Our 7-day process for delivering a professional, AI-powered website for Kochi businesses.`,
-  estimatedCost: {
-    '@type': 'MonetaryAmount',
-    currency: 'INR',
-    minValue: '29999',
-  },
   totalTime: 'P7D',
   step: [
     {
@@ -592,7 +583,7 @@ export default function KochiWebDesignPage() {
         formSlot={<HeroInlineForm region="in" source="web_design_kochi_hero" />}
           eyebrow="WEB DESIGN · KOCHI"
           headline="Website Design in Kochi for IT Firms, Tourism Businesses, Exporters, and Kerala's Growing Startups"
-          lead="Kochi is Kerala's Smart City, the engine of India's most internet-literate state, and a city where Infopark's 450+ IT companies, Fort Kochi's tourism economy, a thriving seafood and spice export sector, and a fast-growing startup community all compete for the same digital attention. Kerala has India's highest internet penetration and highest literacy rate — your audience is online, informed, and comparing you against your competitors right now. FactoryJet builds from ₹29,999 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
+          lead="Kochi is Kerala's Smart City, the engine of India's most internet-literate state, and a city where Infopark's 450+ IT companies, Fort Kochi's tourism economy, a thriving seafood and spice export sector, and a fast-growing startup community all compete for the same digital attention. Kerala has India's highest internet penetration and highest literacy rate — your audience is online, informed, and comparing you against your competitors right now. FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',
@@ -759,7 +750,7 @@ export default function KochiWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Kochi Businesses Choose FactoryJet Over Local Agencies"
-          lead="Kochi and Trivandrum web agencies typically charge ₹1,20,000–₹3,50,000 for a comparable project and take 6–16 weeks to deliver. Kerala's business community is one of India's most digitally sophisticated — and that means the quality bar is higher, not lower. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Pricing is fixed and agreed upfront — no surprises."
+          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
           pillars={[
             {
               icon: '⚡',
@@ -822,13 +813,13 @@ export default function KochiWebDesignPage() {
           headline="FactoryJet vs. Kochi/Trivandrum Agency vs. Freelancer vs. Template Builder"
           lead="Not all web design options in Kerala deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
           pullQuote={{
-            stat: '₹29,999',
+            stat: '7 days',
             caption:
-              'starting price — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a ₹2,50,000 Kochi agency project.',
+              'from kickoff to launch — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
           }}
           columns={KOCHI_COMPARISON_COLUMNS}
           rows={KOCHI_COMPARISON_ROWS}
-          footer="Prices reflect typical Kerala market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
+          footer="FactoryJet fixed-price contracts available for every scope. You get a clear quote up front after a free consultation."
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}

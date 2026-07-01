@@ -28,7 +28,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'Web Design Company in Indore | Website Development Indore | FactoryJet',
   description:
-    'Best web design company in Indore. Professional websites from ₹29,999. 7-day delivery, 500+ businesses served. Serving Vijay Nagar, AB Road, Palasia, Scheme 54, Rau & all of Indore.',
+    'Best web design company in Indore. Professional, custom websites with a 7-day delivery guarantee, 500+ businesses served. Serving Vijay Nagar, AB Road, Palasia, Scheme 54, Rau & all of Indore.',
   keywords: [
     'web design company in Indore',
     'website design Indore',
@@ -154,7 +154,7 @@ const faqSchema = {
       name: 'How much does web design cost in Indore in 2026?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet's web design for Indore businesses starts at ₹29,999 for a 5-page Starter site. The Growth tier (₹80,000) covers up to 15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds with e-commerce, booking systems, or AI integrations start at ₹1,50,000. Local Indore agencies typically quote ₹40,000–₹2,00,000 for comparable scope — often without a published timeline or a codebase you own outright.",
+        text: "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
       },
     },
     {
@@ -186,7 +186,7 @@ const faqSchema = {
       name: 'Indore mein website banane ka kharcha kitna hai?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet mein website ₹29,999 se shuru hoti hai — 5-page business site ke liye. Growth plan ₹80,000 mein 15 pages tak, blog CMS, aur GA4 analytics deta hai. Custom ecommerce ya web app ₹1,50,000 se shuru hota hai. Indore ke local agencies usually ₹40,000–₹2,00,000 charge karte hain same kaam ke liye — aur delivery 4–12 hafte mein hoti hai.',
+        text: 'Hum fixed packages nahi bechte. Price is baat par depend karta hai ki aapko kitne pages chahiye, aapka market kitna competitive hai, aur aapko e-commerce, booking system ya AI features jaise extras chahiye ya nahi. Free consultation ke baad aapko ek clear, fixed quote milta hai, aur poora codebase aapka hota hai.',
       },
     },
     {
@@ -217,11 +217,6 @@ const howToSchema = {
   name: 'How FactoryJet builds your Indore website in 7 days',
   description:
     'Our 7-day process for delivering a professional, high-performance website for Indore businesses.',
-  estimatedCost: {
-    '@type': 'MonetaryAmount',
-    currency: 'INR',
-    minValue: '29999',
-  },
   totalTime: 'P7D',
   step: [
     {
@@ -320,13 +315,13 @@ const INDORE_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does web design cost in Indore in 2026?',
     answer:
-      "FactoryJet's web design for Indore businesses starts at ₹29,999 for a 5-page Starter site. The Growth tier (₹80,000) covers up to 15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds with e-commerce, booking systems, or AI integrations start at ₹1,50,000. Local Indore agencies typically quote ₹40,000–₹2,00,000 for comparable scope — often without a published timeline or a codebase you own outright.",
+      "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
   },
   {
     category: 'pricing',
     question: 'Indore mein website banane ka kharcha kitna hai?',
     answer:
-      'FactoryJet mein website ₹29,999 se shuru hoti hai — 5 pages ki basic business site ke liye. Growth plan ₹80,000 mein 15 pages tak, blog CMS, aur GA4 analytics deta hai. Custom ecommerce ya web app ₹1,50,000 se shuru hota hai. Indore ke local agencies ₹40,000–₹2,00,000 tak charge karte hain. Hamari prices fixed hain — koi hidden charges nahi.',
+      'Hum fixed packages nahi bechte. Price is baat par depend karta hai ki aapko kitne pages chahiye, aapka market kitna competitive hai, aur aapko e-commerce, booking system ya AI features jaise extras chahiye ya nahi. Free consultation ke baad aapko ek clear, fixed quote milta hai, aur poora codebase aapka hota hai. Koi hidden charges nahi.',
   },
   {
     category: 'pricing',
@@ -404,7 +399,7 @@ const INDORE_FAQ_ITEMS = [
     category: 'local',
     question: 'Which is the best web design company in Indore?',
     answer:
-      "FactoryJet brings 25+ years of web engineering experience and 500+ businesses served — far exceeding the typical Indore agency's 2–5 years and 50–200 client portfolio. We build in Next.js (not WordPress), publish fixed prices from ₹29,999 before the first call, and guarantee 7-day delivery in writing. Our clients across Madhya Pradesh consistently report Lighthouse 100/100 scores and first-page Google rankings within 3–6 months. We let the work and the numbers make the case.",
+      "FactoryJet brings 25+ years of web engineering experience and 500+ businesses served — far exceeding the typical Indore agency's 2–5 years and 50–200 client portfolio. We build in Next.js (not WordPress), give you a fixed-price quote before the first call, and guarantee 7-day delivery in writing. Our clients across Madhya Pradesh consistently report Lighthouse 100/100 scores and first-page Google rankings within 3–6 months. We let the work and the numbers make the case.",
   },
   {
     category: 'local',
@@ -434,7 +429,7 @@ const INDORE_FAQ_ITEMS = [
     category: 'local',
     question: 'How does FactoryJet compare to Indore web design agencies?',
     answer:
-      "Indore agencies typically charge ₹40,000–₹2,00,000 for a comparable project and take 4–12 weeks to deliver — often without publishing rates upfront. FactoryJet publishes all three pricing tiers (from ₹29,999) before you call, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster site, a shorter timeline, and a codebase you own outright — at a fixed, published price.",
+      "Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright.",
   },
   {
     category: 'local',
@@ -454,7 +449,7 @@ const INDORE_FAQ_ITEMS = [
     category: 'support',
     question: 'What support do you provide after launch?',
     answer:
-      'Every project includes a 30-day post-launch support window covering bug fixes, minor adjustments, and launch questions at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans from ₹4,999/month: up to 3 hours of development changes, priority same-day bug response, and a dedicated engineer who already knows your codebase. Maintenance clients also receive quarterly performance audits and Core Web Vitals checks.',
+      'Every project includes a 30-day post-launch support window covering bug fixes, minor adjustments, and launch questions at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans covering development changes, priority same-day bug response, and a dedicated engineer who already knows your codebase. Maintenance clients also receive quarterly performance audits and Core Web Vitals checks.',
   },
   {
     category: 'support',
@@ -486,10 +481,6 @@ const INDORE_COMPARISON_COLUMNS = [
 ] as const;
 
 const INDORE_COMPARISON_ROWS = [
-  {
-    feature: 'Starting price',
-    values: ['Get a Quote', '₹40,000–₹2,00,000', '₹10,000–₹60,000', '₹0–₹10,000 (you build it)'],
-  },
   {
     feature: 'Delivery timeline',
     values: ['7 days', '4–12 weeks', '3–10 weeks (unreliable)', '1–2 weeks (you build it)'],
@@ -615,8 +606,8 @@ export default function IndoreWebDesignPage() {
         formSlot={<HeroInlineForm region="in" source="web_design_indore_hero" />}
           eyebrow="WEB DESIGN · INDORE"
           headline="Web Design Company in Indore"
-          lead="Indore is Madhya Pradesh's commercial capital — home to 65,000+ SMEs, 500+ startups, a booming D2C ecosystem, and IT parks at Scheme 78 and Bengali Square that are attracting serious tech investment. From coaching institutes in Vijay Nagar to FMCG exporters on AB Road to manufacturers in Pithampur, Indore's businesses are competing for customers online every day. FactoryJet builds high-performance websites from ₹29,999 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
-          secondaryCta={{ label: 'View Pricing', href: '#pricing' }}
+          lead="Indore is Madhya Pradesh's commercial capital — home to 65,000+ SMEs, 500+ startups, a booming D2C ecosystem, and IT parks at Scheme 78 and Bengali Square that are attracting serious tech investment. From coaching institutes in Vijay Nagar to FMCG exporters on AB Road to manufacturers in Pithampur, Indore's businesses are competing for customers online every day. FactoryJet builds high-performance, Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
+          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-Day Delivery',
             '500+ Businesses Served',
@@ -791,7 +782,7 @@ export default function IndoreWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Indore Businesses Choose FactoryJet Over Local Agencies"
-          lead="Indore web agencies typically charge ₹40,000–₹2,00,000 for a comparable project and take 4–12 weeks to deliver — without publishing their rates or timeline upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. All at a fixed, published price for the same scope."
+          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
           pillars={[
             {
               icon: '⚡',
@@ -858,9 +849,9 @@ export default function IndoreWebDesignPage() {
           headline="FactoryJet vs. Indore Agency vs. Freelancer vs. Template Builder"
           lead="Not all web design options in Indore deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
           pullQuote={{
-            stat: '₹29,999',
+            stat: '7 days',
             caption:
-              'starting price — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a ₹2,00,000 Indore agency project.',
+              'from kickoff to launch — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
           }}
           columns={INDORE_COMPARISON_COLUMNS}
           rows={INDORE_COMPARISON_ROWS}
@@ -1249,11 +1240,11 @@ export default function IndoreWebDesignPage() {
                 on the discovery call — even if the answer is "stick with what you have."
               </p>
               <a
-                href="#pricing"
+                href="#faq"
                 className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-fj-body font-semibold text-white flex-shrink-0"
                 style={{ backgroundColor: '#F05A28', fontSize: '0.9375rem' }}
               >
-                See Pricing
+                See How It Works
                 <span aria-hidden="true">↓</span>
               </a>
             </div>

@@ -27,7 +27,7 @@ const countries: Country[] = [
     color: "#3B82F6",
     bg: "linear-gradient(135deg, #1D4ED8 0%, #3B82F6 100%)",
     badge: "US",
-    href: "/us",
+    href: "/",
   },
   {
     name: "UAE",

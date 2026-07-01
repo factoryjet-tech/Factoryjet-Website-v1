@@ -71,10 +71,6 @@ const CHN_COMPARISON_COLUMNS = [
 
 const CHN_COMPARISON_ROWS = [
   {
-    feature: 'Starting price',
-    values: ['₹25,000', '₹80,000+', '₹15,000–₹40,000'],
-  },
-  {
     feature: 'Delivery timeline',
     values: ['7 days', '6–12 weeks', '3–8 weeks'],
   },
@@ -150,7 +146,7 @@ export default function Page() {
         name: 'How much does a website cost in Chennai?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Website projects in Chennai start from ₹25,000 for a professional 5-page site. E-commerce and custom web apps are priced higher depending on scope. We offer transparent, fixed pricing with no hidden costs.',
+          text: 'Website projects in Chennai are scoped to your needs. The price depends on how many pages you need, how competitive your market is, and whether you want e-commerce or custom web-app features. You get a clear, fixed quote up front after a free consultation — transparent quoting with no hidden costs.',
         },
       },
       {
@@ -200,7 +196,7 @@ export default function Page() {
     stats: [
       { value: '7-Day', label: 'Delivery Guarantee' },
       { value: '500+', label: 'Businesses Served' },
-      { value: '₹25K', label: 'Starting Price' },
+      { value: '100', label: 'Lighthouse Score' },
     ],
   }
 
@@ -230,7 +226,7 @@ export default function Page() {
       },
       {
         title: 'INR Pricing, No Surprises',
-        body: 'Fixed-price projects from ₹25,000. No hidden costs, no scope creep invoices.',
+        body: 'Fixed-price projects scoped to you. No hidden costs, no scope creep invoices.',
       },
       {
         title: 'B2B & Industrial Expertise',
@@ -302,7 +298,6 @@ export default function Page() {
   const pricingTiers = [
     {
       name: 'Starter',
-      priceRange: '₹25,000',
       description: 'For small businesses and solo operators needing a credible online presence fast.',
       features: [
         '5 pages',
@@ -316,7 +311,6 @@ export default function Page() {
     },
     {
       name: 'Growth',
-      priceRange: '₹50,000',
       description: 'For growing businesses that need more content, better design, and stronger lead generation.',
       features: [
         'Up to 12 pages',
@@ -331,7 +325,6 @@ export default function Page() {
     },
     {
       name: 'Enterprise',
-      priceRange: '₹1,00,000+',
       description: 'For established businesses needing custom portals, integrations, or complex web applications.',
       features: [
         'Pages scoped per project',
@@ -352,7 +345,7 @@ const CHN_FAQ_CATEGORIES = [  { key: 'process', label: 'Process' },
 ] as const;
 
 const CHN_FAQ_ITEMS = [
-  { category: 'pricing', question: 'What does a website cost in Chennai?', answer: 'Our Chennai projects start at ₹25,000 for a 5-page site. Growth packages run ₹50,000 and enterprise custom work starts at ₹1,00,000. All prices are fixed — no surprise invoices.' },
+  { category: 'pricing', question: 'What does a website cost in Chennai?', answer: "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce or custom web-app features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep." },
   { category: 'pricing', question: 'Do you offer EMI or staged payment plans?', answer: 'Yes. We typically split payments 50% at project start and 50% on delivery. For larger projects we can structure 3-stage payments.' },
   { category: 'pricing', question: 'Are there any ongoing monthly fees?', answer: 'The website itself has no mandatory monthly fee. Hosting, domain, and optional maintenance plans are separate and clearly itemized before you sign.' },
   { category: 'pricing', question: 'Can I start with a small package and upgrade later?', answer: 'Absolutely. Many clients start with the Starter package and expand their site as revenue grows. We design with scalability in mind from day one.' },
@@ -364,7 +357,7 @@ const CHN_FAQ_ITEMS = [
   { category: 'technical', question: 'Is the site mobile-friendly?', answer: 'Every site is built mobile-first. We test across iOS and Android at multiple screen sizes before delivery.' },
   { category: 'technical', question: 'What technology do you use?', answer: 'Most sites are built on Next.js for performance or WordPress for client-editable content. We recommend the right stack for your needs and budget.' },
   { category: 'technical', question: 'Can I edit the site myself after launch?', answer: 'Yes. WordPress builds include a CMS training session. For Next.js builds, we provide a simple content editing workflow or can integrate a headless CMS.' },
-  { category: 'ecommerce', question: 'Can you build an online store for my Chennai business?', answer: 'Yes. We build Shopify stores and custom e-commerce sites for retail, D2C, and B2B ordering. Prices start at ₹50,000.' },
+  { category: 'ecommerce', question: 'Can you build an online store for my Chennai business?', answer: 'Yes. We build Shopify stores and custom e-commerce sites for retail, D2C, and B2B ordering. You get a fixed quote up front after a free consultation.' },
   { category: 'ecommerce', question: 'Do you support Indian payment gateways?', answer: 'Yes — Razorpay, PayU, and CCAvenue integrations are standard. UPI and net banking are supported out of the box.' },
   { category: 'ecommerce', question: 'Can you build a B2B ordering portal for my manufacturing business?', answer: 'Yes. We build custom dealer/distributor portals with login-protected pricing, order tracking, and catalogue management.' },
   { category: 'ecommerce', question: 'Do you handle product photography or catalogue content?', answer: "We don't do in-house photography but can coordinate with Chennai-based product photographers. We handle layout, upload, and optimization of all product images." },
@@ -395,11 +388,6 @@ const CHN_FAQ_ITEMS = [
     '@id': `https://factoryjet.com/web-design/chennai#howto`,
     name: `How FactoryJet builds your Chennai website in 7 days`,
     description: `Our 7-day process for delivering a professional, AI-powered website for Chennai businesses.`,
-    estimatedCost: {
-      '@type': 'MonetaryAmount',
-      currency: 'INR',
-      minValue: '25000',
-    },
     totalTime: 'P7D',
     step: [
       {
@@ -539,12 +527,12 @@ const CHN_FAQ_ITEMS = [
           headline="FactoryJet vs. Chennai Agency vs. Freelancer"
           lead="Not all web design options in Chennai deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
           pullQuote={{
-            stat: '₹25,000',
-            caption: 'starting price — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a ₹80,000+ Chennai agency project.',
+            stat: '7 days',
+            caption: 'from kickoff to launch — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
           }}
           columns={CHN_COMPARISON_COLUMNS}
           rows={CHN_COMPARISON_ROWS}
-          footer="Prices reflect typical Chennai market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
+          footer="Comparison reflects typical Chennai market norms as of 2025. FactoryJet fixed-price contracts are available for every project."
         />
       <IndustriesGrid />
         <GetFreeQuoteCTA />

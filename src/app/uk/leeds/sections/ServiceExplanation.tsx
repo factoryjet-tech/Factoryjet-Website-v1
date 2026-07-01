@@ -13,7 +13,7 @@ const SCHEMA_ITEMS = [
   "Tailwind CSS 4",
   "Mobile-first responsive",
   "Lighthouse 90+ guaranteed",
-  "From £1,500",
+  "Fixed-price, quoted up front",
 ];
 
 interface StandardCard {
@@ -252,7 +252,7 @@ export default function ServiceExplanation() {
                 </p>
 
                 <p style={{ fontSize: "16px", color: "#374151", lineHeight: 1.65 }}>
-                  Whether you are a financial services firm near Leeds Trinity, a fashion brand in the Victoria Quarter, or a legal practice in the city centre — we build websites that convert visitors into clients. Next.js 15, Tailwind CSS 4, WordPress, and headless CMS builds. Mobile-first responsive, Lighthouse 90+ guaranteed. Starting from £1,500.
+                  Whether you are a financial services firm near Leeds Trinity, a fashion brand in the Victoria Quarter, or a legal practice in the city centre — we build websites that convert visitors into clients. Next.js 15, Tailwind CSS 4, WordPress, and headless CMS builds. Mobile-first responsive, Lighthouse 90+ guaranteed. Every build is fixed-price and quoted up front after a free discovery call, so you know the full cost before work starts.
                 </p>
               </div>
 

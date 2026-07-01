@@ -65,7 +65,7 @@ const INDUSTRIES = [
     stat: '+38%',
     statLabel: 'avg. conversion lift on custom Shopify vs. off-the-shelf template builds',
     chips: ['Shopify', 'Headless', 'DTC', 'Klaviyo'],
-    linkHref: '/us/services/ecommerce-development',
+    linkHref: '/services/ecommerce-development',
     linkLabel: 'See e-commerce builds',
   },
   {
@@ -120,7 +120,7 @@ const INDUSTRIES = [
     stat: '4.7×',
     statLabel: 'more lead form submissions on custom vs. template real estate sites',
     chips: ['IDX Integration', 'Lead Capture', 'Agent Portals'],
-    linkHref: '/us/services/real-estate-website-design',
+    linkHref: '/services/real-estate-website-design',
     linkLabel: 'See real estate builds',
   },
 ];
@@ -674,7 +674,7 @@ export default function IndustriesGrid(props: IndustriesGridProps = {}) {
             Get a Free Quote
           </Link>
           <Link
-            href="/us/portfolio"
+            href="/portfolio"
             style={{
               display: 'inline-flex',
               alignItems: 'center',

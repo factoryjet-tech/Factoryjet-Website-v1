@@ -71,7 +71,7 @@ const faqSchema = {
       name: 'How much does an AI scheduling agent cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet AI scheduling agents start from ₹1,80,000 for a focused WhatsApp appointment booking flow (one service type, one calendar, confirmation messages). Multi-resource scheduling platforms with Zoho CRM integration start from ₹3,50,000. Enterprise scheduling suites with multi-location, multi-service, and payment collection start from ₹7,00,000.',
+        text: 'FactoryJet AI scheduling agents are fixed-price and scoped to your build — from a focused WhatsApp appointment booking flow (one service type, one calendar, confirmation messages) to multi-resource scheduling platforms with Zoho CRM integration and enterprise suites with multi-location, multi-service, and payment collection. Every project is quoted up front after a free discovery call, so you know the full cost before any work starts.',
       },
     },
     {
@@ -211,7 +211,7 @@ const SCHEDULING_COMPARISON_ROWS = [
   {
     feature: 'Starting cost',
     values: [
-      '₹1,80,000 one-time',
+      'Fixed one-time price',
       '₹0 (but ₹15,000–₹25,000/month in staff time)',
       '₹800–₹3,000/month (no WhatsApp, no AI)',
       '₹15,000–₹30,000/month salary',
@@ -479,7 +479,7 @@ const SCHEDULING_FAQ_ITEMS = [
   {
     category: 'pricing',
     question: 'How do I calculate the ROI of an AI scheduling agent?',
-    answer: "The simplest ROI calculation: count the staff hours spent per week on appointment coordination (calls, WhatsApp replies, reminder messages, reschedule management), multiply by hourly cost, and project monthly savings. For most Indian businesses with 20–50 appointments per day, the AI saves 2–4 hours of coordination time daily — ₹10,000–₹25,000/month in staff time. At a ₹1,80,000 build cost, payback is 7–18 weeks. Secondary ROI: 24/7 availability books appointments that were previously missed outside business hours.",
+    answer: "The simplest ROI calculation: count the staff hours spent per week on appointment coordination (calls, WhatsApp replies, reminder messages, reschedule management), multiply by hourly cost, and project monthly savings. For most Indian businesses with 20–50 appointments per day, the AI saves 2–4 hours of coordination time daily — ₹10,000–₹25,000/month in staff time. At our fixed build price, payback typically lands within a few months. Secondary ROI: 24/7 availability books appointments that were previously missed outside business hours.",
   },
   {
     category: 'pricing',
@@ -494,7 +494,7 @@ const SCHEDULING_FAQ_ITEMS = [
   {
     category: 'pricing',
     question: 'Can we pilot the scheduling AI before committing to the full build?',
-    answer: "Yes. For businesses wanting validation before committing, we offer a 2-week pilot: a WhatsApp booking flow for one service type deployed to your live WhatsApp number. The pilot costs ₹45,000 and is credited against the full project. Seeing real customer booking conversations and the calendar entries they generate is typically the fastest way to build internal confidence in the ROI.",
+    answer: "Yes. For businesses wanting validation before committing, we offer a 2-week pilot: a WhatsApp booking flow for one service type deployed to your live WhatsApp number. The pilot is offered at a fixed price, credited against the full project. Seeing real customer booking conversations and the calendar entries they generate is typically the fastest way to build internal confidence in the ROI.",
   },
 ];
 
@@ -782,7 +782,7 @@ export default function AISchedulingAgentINPage() {
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Manual WhatsApp vs. Calendly vs. Receptionist"
           lead="Fixed price, WhatsApp-native, Hindi-speaking scheduling AI — the honest comparison."
-          pullQuote={{ stat: '₹1,80,000', caption: 'one-time — AI scheduling agent that books appointments on WhatsApp in Hindi and English, syncs to Google Calendar, sends WhatsApp confirmations and reminders, and reduces no-shows by 40%. No monthly fee to FactoryJet.' }}
+          pullQuote={{ stat: 'Fixed price', caption: 'AI scheduling agent that books appointments on WhatsApp in Hindi and English, syncs to Google Calendar, sends WhatsApp confirmations and reminders, and reduces no-shows by 40%. No monthly fee to FactoryJet.' }}
           columns={SCHEDULING_COMPARISON_COLUMNS}
           rows={SCHEDULING_COMPARISON_ROWS}
           footer="Prices reflect typical Indian market rates as of 2025. FactoryJet fixed-price contracts available for all tiers."

@@ -15,7 +15,7 @@
  *         stat1: "+40% conversions", stat2: "< 1.5s load time" },
  *       ...
  *     ]}
- *     ctaHref="/us/portfolio"
+ *     ctaHref="/portfolio"
  *     ctaLabel="View full portfolio"
  *   />
  *

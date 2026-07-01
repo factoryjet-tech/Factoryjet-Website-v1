@@ -624,11 +624,11 @@ export default function V2FoundationUSPage() {
               {
                 heading: 'Locations',
                 links: [
-                  { label: 'New York City', href: '/us/new-york-city' },
-                  { label: 'Los Angeles', href: '/us/los-angeles' },
-                  { label: 'Chicago', href: '/us/chicago' },
-                  { label: 'San Francisco', href: '/us/san-francisco' },
-                  { label: 'Boston', href: '/us/boston' },
+                  { label: 'New York City', href: '/new-york-city' },
+                  { label: 'Los Angeles', href: '/los-angeles' },
+                  { label: 'Chicago', href: '/chicago' },
+                  { label: 'San Francisco', href: '/san-francisco' },
+                  { label: 'Boston', href: '/boston' },
                 ],
               },
             ]}

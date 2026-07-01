@@ -1,12 +1,15 @@
-import type { Metadata } from 'next'
-import PortfolioPage from '@/pages/Portfolio/App'
-import SiteHeader from '@/components/v2/SiteHeader'
-import SiteFooter from '@/components/v2/SiteFooter'
-import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
+import type { Metadata } from 'next';
+import Script from 'next/script';
+import SiteHeader from '@/components/v2/SiteHeader';
+import SiteFooter from '@/components/v2/SiteFooter';
+import PortfolioGrid from './PortfolioGrid';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import { portfolioAlternatesUS } from '@/data/hreflangMap';
 
 export const metadata: Metadata = {
-  title: 'Our Portfolio — 500+ Websites Built | FactoryJet',
-  description: 'Browse FactoryJet\'s portfolio — e-commerce stores to SaaS platforms. 500+ projects delivered for businesses in India, the US & UK.',
+  title: "Portfolio - Websites We've Built for Ambitious Brands | FactoryJet USA",
+  description:
+    "Browse FactoryJet's US portfolio — e-commerce stores, SaaS platforms & business websites. 500+ projects delivered. Find inspiration for your next project.",
   authors: [{ name: 'FactoryJet' }],
   robots: {
     index: true,
@@ -33,7 +36,7 @@ export const metadata: Metadata = {
         alt: 'FactoryJet Portfolio',
       },
     ],
-    locale: 'en_IN',
+    locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
@@ -43,19 +46,114 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/portfolio',
+    languages: portfolioAlternatesUS,
   },
-}
+};
 
-export default function Page() {
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
+    { '@type': 'ListItem', position: 2, name: 'Portfolio', item: 'https://factoryjet.com/portfolio' },
+  ],
+};
+
+const ORG_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'FactoryJet',
+  url: 'https://factoryjet.com',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    ratingCount: '150',
+    reviewCount: '150',
+    bestRating: '5',
+    worstRating: '1',
+  },
+  sameAs: [
+    'https://www.linkedin.com/company/factoryjet',
+    'https://www.crunchbase.com/organization/factoryjet',
+  ],
+};
+
+const HOW_TO_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How FactoryJet builds your website in 7 days',
+  description: 'Our proven 7-day process for delivering professional, SEO-optimized websites for US businesses.',
+  totalTime: 'P7D',
+  step: [
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'Day 1 — Discovery Call',
+      text: 'We learn your business, goals, and target audience. We define the sitemap, content strategy, and technical requirements.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Day 2 — Strategy & Structure',
+      text: 'We finalize your site architecture, wireframes, and content outline. You approve the plan before any design begins.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'Days 3–4 — Design',
+      text: 'We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'Days 5–6 — Development & SEO',
+      text: 'We build your site in Next.js or WordPress, optimize Core Web Vitals, add structured data, and connect all integrations.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 5,
+      name: 'Day 7 — Launch',
+      text: 'Your website goes live. We handle DNS, SSL, final QA, and provide training plus 30-day post-launch support.',
+    },
+  ],
+};
+
+export default function USPortfolioPage() {
   return (
     <>
-      <SiteHeader locale="in" />
-      <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://factoryjet.com' },
-        { name: 'Portfolio', url: 'https://factoryjet.com/portfolio' },
-      ]} />
-      <PortfolioPage />
-      <SiteFooter locale="in" />
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }}
+      />
+      <Script
+        id="org-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }}
+      />
+      <Script
+        id="howto-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(HOW_TO_SCHEMA) }}
+      />
+
+      <SiteHeader
+        navLinks={[
+          { label: 'Services', href: '/services/web-design' },
+          { label: 'Shopify', href: '/services/shopify-development' },
+          { label: 'AI Agents', href: '/services/ai-agents' },
+          { label: 'Pricing', href: '/pricing' },
+          { label: 'Portfolio', href: '/portfolio' },
+          { label: 'FAQ', href: '/faq' },
+        ]}
+        cta={{ label: 'Get a Quote', href: '/contact' }}
+      />
+
+      <main className="bg-fj-cream min-h-screen">
+        <PortfolioGrid />
+      </main>
+
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
-  )
+  );
 }

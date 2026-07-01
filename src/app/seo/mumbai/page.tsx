@@ -76,7 +76,6 @@ const localBusinessSchema = {
     addressRegion: 'Maharashtra',
     addressCountry: 'IN',
   },
-  priceRange: '₹₹',
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
@@ -244,7 +243,7 @@ const MUMBAI_FAQ_ITEMS = [
     category: 'cost',
     question: 'How much do SEO services cost in Mumbai?',
     answer:
-      'We do not sell fixed packages because a local café in Bandra needs very different work from a D2C brand in Lower Parel. Our SEO plans for Indian businesses start at ₹19,999 a month, and we only charge for work that actually moves your rankings. You get a free audit first, and we will tell you exactly what your site needs before you commit to anything.',
+      'We do not sell fixed packages because a local café in Bandra needs very different work from a D2C brand in Lower Parel. We scope a monthly plan to what your site needs and only charge for work that actually moves your rankings. You get a free audit first, and we will tell you exactly what your site needs before you commit to anything.',
   },
   {
     category: 'cost',

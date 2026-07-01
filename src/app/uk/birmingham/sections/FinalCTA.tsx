@@ -33,7 +33,7 @@ const WATERMARKS: Array<{
   { label: "£31.9bn", top: "8%", left: "4%", rotate: -6 },
   { label: "60,000", top: "14%", left: "78%", rotate: 5 },
   { label: "2.6M", top: "62%", left: "6%", rotate: 4 },
-  { label: "50%", top: "68%", left: "72%", rotate: -5 },
+  { label: "7-day", top: "68%", left: "72%", rotate: -5 },
 ];
 
 export default function FinalCTA() {
@@ -146,8 +146,8 @@ export default function FinalCTA() {
             inflated agency rates. Free quote in 24 hours. No discovery fee. No
             commitment. Whether you&rsquo;re in Digbeth, the Jewellery Quarter,
             Brindleyplace, or Grand Central — we build digital systems that
-            match your ambition and beat your existing agency&rsquo;s price by
-            50–60%.
+            match your ambition without the studio overhead baked into a
+            traditional agency&rsquo;s quote.
           </p>
 
           {/* CTAs */}

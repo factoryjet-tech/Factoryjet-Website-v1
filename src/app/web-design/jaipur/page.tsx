@@ -151,7 +151,7 @@ const faqSchema = {
       name: 'How much does a website cost for a business in Jaipur?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet's web design for Jaipur businesses starts at ₹29,999 for a 5-page Starter site. The Growth tier (₹80,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds start at ₹1,50,000. Jaipur agency rates for comparable scope typically run ₹80,000–₹2,50,000.",
+        text: "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
       },
     },
     {
@@ -251,7 +251,7 @@ const JPR_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a website cost for a business in Jaipur?',
     answer:
-      "FactoryJet's web design for Jaipur businesses starts at ₹29,999 for a 5-page Starter site. The Growth tier (₹80,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds start at ₹1,50,000. Jaipur agency rates for comparable scope typically run ₹80,000–₹2,50,000.",
+      "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
   },
   {
     category: 'pricing',
@@ -347,7 +347,7 @@ const JPR_FAQ_ITEMS = [
     category: 'local',
     question: 'How does FactoryJet compare to Jaipur web agencies?',
     answer:
-      "Jaipur web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and deliver in 4–12 weeks. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at a fixed, published price.",
+      "Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright.",
   },
 
   /* ── Support & Ownership ── */
@@ -361,7 +361,7 @@ const JPR_FAQ_ITEMS = [
     category: 'support',
     question: 'What support do you provide after launch?',
     answer:
-      'Every project includes a 30-day post-launch support window covering bug fixes and minor adjustments at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans from ₹4,999/month.',
+      'Every project includes a 30-day post-launch support window covering bug fixes and minor adjustments at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans covering development changes, priority same-day bug response, and a dedicated engineer who knows your codebase. Maintenance clients also get quarterly performance audits and Core Web Vitals checks.',
   },
   {
     category: 'support',
@@ -373,7 +373,7 @@ const JPR_FAQ_ITEMS = [
     category: 'support',
     question: 'Do you offer ongoing retainer services for Jaipur businesses?',
     answer:
-      'Yes. Monthly retainers from ₹4,999/month cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling and a dedicated engineer.',
+      'Yes. Monthly retainers cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling and a dedicated engineer.',
   },
   {
     category: 'support',
@@ -385,7 +385,7 @@ const JPR_FAQ_ITEMS = [
     category: 'pricing',
     question: 'Do you offer payment plans for Jaipur businesses?',
     answer:
-      'Yes. We offer 50% upfront and 50% on launch for all tiers. For Custom builds above ₹1,50,000, milestone-based payment in three parts is available. We do not require full payment before starting work.',
+      'Yes. We offer 50% upfront and 50% on launch. For larger custom builds, milestone-based payment in three parts is available. We do not require full payment before starting work.',
   },
 
   // Money-query coverage, added 2026-06-11
@@ -411,10 +411,6 @@ const JPR_COMPARISON_COLUMNS = [
 ] as const;
 
 const JPR_COMPARISON_ROWS = [
-  {
-    feature: 'Starting price',
-    values: ['Get a Quote', '₹80,000–₹2,50,000', '₹10,000–₹50,000', '₹0–₹15,000 (you build it)'],
-  },
   {
     feature: 'Delivery timeline',
     values: ['7 days', '4–12 weeks', '3–10 weeks (unreliable)', '1–2 weeks (you build it)'],
@@ -499,11 +495,6 @@ const howToSchema = {
   '@id': `https://factoryjet.com/web-design/jaipur#howto`,
   name: `How FactoryJet builds your Jaipur website in 7 days`,
   description: `Our 7-day process for delivering a professional, AI-powered website for Jaipur businesses.`,
-  estimatedCost: {
-    '@type': 'MonetaryAmount',
-    currency: 'INR',
-    minValue: '29999',
-  },
   totalTime: 'P7D',
   step: [
     {
@@ -592,7 +583,7 @@ export default function JaipurWebDesignPage() {
         formSlot={<HeroInlineForm region="in" source="web_design_jaipur_hero" />}
           eyebrow="WEB DESIGN · JAIPUR"
           headline="Website Design in Jaipur for Jewellery Exporters, Handicraft Businesses, and the Pink City's Growing Startups"
-          lead="Jaipur is India's jewellery capital, Rajasthan's largest city, and a tourism powerhouse drawing 5M+ visitors a year. From Sitapura's jewellery export units and Sanganer's block-printing clusters to Malviya Nagar's IT hub and C-Scheme's corporate corridor, Jaipur businesses compete globally. FactoryJet builds from ₹29,999 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
+          lead="Jaipur is India's jewellery capital, Rajasthan's largest city, and a tourism powerhouse drawing 5M+ visitors a year. From Sitapura's jewellery export units and Sanganer's block-printing clusters to Malviya Nagar's IT hub and C-Scheme's corporate corridor, Jaipur businesses compete globally. FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',
@@ -753,7 +744,7 @@ export default function JaipurWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Jaipur Businesses Choose FactoryJet Over Local Agencies"
-          lead="Jaipur web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and take 4–12 weeks to deliver. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
+          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
           pillars={[
             {
               icon: '⚡',
@@ -816,13 +807,13 @@ export default function JaipurWebDesignPage() {
           headline="FactoryJet vs. Jaipur Agency vs. Freelancer vs. Template Builder"
           lead="Not all web design options in Jaipur deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
           pullQuote={{
-            stat: '₹29,999',
+            stat: '7 days',
             caption:
-              'starting price — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a ₹1,50,000 Jaipur agency project.',
+              'from kickoff to launch — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
           }}
           columns={JPR_COMPARISON_COLUMNS}
           rows={JPR_COMPARISON_ROWS}
-          footer="Prices reflect typical Jaipur market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
+          footer="FactoryJet fixed-price contracts available for every scope. You get a clear quote up front after a free consultation."
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}

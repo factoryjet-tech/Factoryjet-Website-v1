@@ -11,45 +11,31 @@ import { trackButtonClick, trackCTAClick } from "@/utils/gtm";
 const PRICING_ROWS = [
   {
     service: "Business Website (Next.js 15)",
-    factoryjet: "£1,500–£5,000",
-    average: "£4,500–£8,000",
-    saving: "Up to 67%",
+    included: "Custom design, build, on-page SEO, launch & training",
   },
   {
     service: "E-Commerce Store (Shopify/WooCommerce)",
-    factoryjet: "£2,000–£8,000",
-    average: "£8,000–£15,000",
-    saving: "Up to 75%",
+    included: "Store build, payments, shipping, product config, SEO",
   },
   {
     service: "Monthly SEO Retainer",
-    factoryjet: "£500–£1,500/mo",
-    average: "£1,000–£2,000/mo",
-    saving: "Up to 50%",
+    included: "Technical SEO, content, authority building, reporting",
   },
   {
     service: "AI Agent Development",
-    factoryjet: "From £3,000",
-    average: "Not available locally",
-    saving: "New capability",
+    included: "Scoping, build, tool integration, testing, handover docs",
   },
   {
     service: "AI SEO (GEO / AEO / AIO)",
-    factoryjet: "Included in SEO plans",
-    average: "Not available locally",
-    saving: "New capability",
+    included: "Answer-first content, schema, per-engine citation tracking",
   },
   {
     service: "Annual Website Maintenance",
-    factoryjet: "From £99/mo",
-    average: "£200–£400/mo",
-    saving: "Up to 75%",
+    included: "Updates, backups, security, performance monitoring",
   },
   {
     service: "Pay Monthly Website",
-    factoryjet: "Custom quote available",
-    average: "£49–£85/mo",
-    saving: "Flexible",
+    included: "Spread the cost of your build over flexible monthly payments",
   },
 ];
 
@@ -166,7 +152,11 @@ export default function Pricing() {
               marginBottom: "48px",
             }}
           >
-            Local agencies typically charge £4,500–£8,000 for a standard business website, £8,000–£15,000 for an e-commerce store, and £1,000–£2,000 per month for SEO. FactoryJet delivers superior technology at significantly lower price points because our AI-augmented workflow and global delivery model eliminate the overhead that inflates traditional agency pricing.
+            Every project is fixed-price and scoped to your build. The main
+            drivers are page count, design depth, integrations, and catalogue
+            size for stores. Here is what each service includes. We quote the
+            full written price up front after a free discovery call, so you know
+            the complete cost before any work starts.
           </p>
         </div>
 
@@ -181,23 +171,7 @@ export default function Pricing() {
           >
             <thead>
               <tr>
-                {/* Service */}
-                <th
-                  className="text-left uppercase"
-                  style={{
-                    background: "#F8FAFC",
-                    padding: "14px 20px",
-                    fontSize: "12px",
-                    letterSpacing: "0.1em",
-                    color: "#4B5563",
-                    fontWeight: 600,
-                    width: "34%",
-                    borderBottom: "1px solid #E5E7EB",
-                  }}
-                >
-                  Service
-                </th>
-                {/* FactoryJet — highlighted */}
+                {/* Service — highlighted */}
                 <th
                   className="text-left uppercase"
                   style={{
@@ -207,13 +181,13 @@ export default function Pricing() {
                     letterSpacing: "0.08em",
                     color: "white",
                     fontWeight: 700,
-                    width: "22%",
+                    width: "38%",
                     borderBottom: "1px solid #0047b3",
                   }}
                 >
-                  FactoryJet
+                  Service
                 </th>
-                {/* Leeds Avg */}
+                {/* What's Included */}
                 <th
                   className="text-left uppercase"
                   style={{
@@ -223,50 +197,22 @@ export default function Pricing() {
                     letterSpacing: "0.1em",
                     color: "#4B5563",
                     fontWeight: 600,
-                    width: "27%",
+                    width: "62%",
                     borderBottom: "1px solid #E5E7EB",
                   }}
                 >
-                  Leeds Avg
-                </th>
-                {/* Saving */}
-                <th
-                  className="text-left uppercase"
-                  style={{
-                    background: "#F8FAFC",
-                    padding: "14px 20px",
-                    fontSize: "12px",
-                    letterSpacing: "0.1em",
-                    color: "#047857",
-                    fontWeight: 700,
-                    width: "17%",
-                    borderBottom: "1px solid #E5E7EB",
-                  }}
-                >
-                  Your Saving
+                  What&rsquo;s Included
                 </th>
               </tr>
             </thead>
 
             <tbody ref={tableRef}>
-              {PRICING_ROWS.map(({ service, factoryjet, average, saving }, i) => (
+              {PRICING_ROWS.map(({ service, included }, i) => (
                 <tr
                   key={service}
                   style={{ background: i % 2 === 0 ? "white" : "#FAFBFC" }}
                 >
-                  {/* Service */}
-                  <td
-                    style={{
-                      padding: "14px 20px",
-                      fontSize: "14px",
-                      color: "#374151",
-                      fontWeight: 500,
-                      borderBottom: "1px solid #F3F4F6",
-                    }}
-                  >
-                    {service}
-                  </td>
-                  {/* FactoryJet value */}
+                  {/* Service — highlighted */}
                   <td
                     style={{
                       padding: "14px 20px",
@@ -281,33 +227,19 @@ export default function Pricing() {
                         fontWeight: 600,
                       }}
                     >
-                      {factoryjet}
+                      {service}
                     </span>
                   </td>
-                  {/* Leeds Avg */}
+                  {/* What's Included */}
                   <td
                     style={{
                       padding: "14px 20px",
                       fontSize: "14px",
-                      color: "#6B7280",
+                      color: "#374151",
                       borderBottom: "1px solid #F3F4F6",
                     }}
                   >
-                    {average}
-                  </td>
-                  {/* Saving */}
-                  <td
-                    style={{
-                      padding: "14px 20px",
-                      borderBottom: "1px solid #F3F4F6",
-                    }}
-                  >
-                    <span
-                      className="font-clash font-bold"
-                      style={{ fontSize: "15px", color: "#10B981" }}
-                    >
-                      {saving}
-                    </span>
+                    {included}
                   </td>
                 </tr>
               ))}

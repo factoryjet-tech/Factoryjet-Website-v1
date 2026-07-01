@@ -138,14 +138,14 @@ export const post: BlogPost = {
       <p className="mb-4">
         Economic nexus threshold for out-of-state sellers: $100,000 in Colorado sales or 200 transactions. If you're a Denver-based business selling nationally, you'll face nexus obligations in multiple states — ensure your platform handles multi-state tax collection from launch day.
       </p>
-      <p className="mb-4">➡ Learn more: <a href="/us/services/ecommerce" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet ecommerce development services</a></p>
+      <p className="mb-4">➡ Learn more: <a href="/services/ecommerce" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet ecommerce development services</a></p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Offers Denver Businesses</h2>
       <p className="mb-4">
         FactoryJet builds Shopify and custom ecommerce stores for Denver small businesses starting at $2,499 — 7-day delivery, Lighthouse 100/100, up to 50 products loaded, Colorado sales tax configured, Google Shopping feed setup, and 30-day post-launch support. Pricing is fixed and published upfront with identical technical quality. US business-hour project management throughout.
       </p>
       <p className="mb-4">
-        ➡ <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free ecommerce quote with PageSpeed proof in 24 hours</a> · <a href="/us/services/ecommerce" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our ecommerce packages</a>
+        ➡ <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free ecommerce quote with PageSpeed proof in 24 hours</a> · <a href="/services/ecommerce" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our ecommerce packages</a>
       </p>
 
       <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-6 mt-8">

@@ -77,7 +77,6 @@ const localBusinessSchema = {
     addressRegion: 'Maharashtra',
     addressCountry: 'IN',
   },
-  priceRange: '₹₹',
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
@@ -242,7 +241,7 @@ const PUNE_FAQ_ITEMS = [
     category: 'cost',
     question: 'How much do SEO services cost in Pune?',
     answer:
-      "We do not sell fixed packages — a Hinjewadi IT services company needs different work from a Pimpri auto supplier or a Koregaon Park restaurant. Our SEO plans for Indian businesses start at ₹19,999 a month, scoped to what your Pune site actually needs. We give you a free audit first so you know exactly what you are paying for.",
+      "We do not sell fixed packages — a Hinjewadi IT services company needs different work from a Pimpri auto supplier or a Koregaon Park restaurant. We scope a monthly plan to what your Pune site actually needs. We give you a free audit first so you know exactly what you are paying for.",
   },
   {
     category: 'cost',
@@ -254,7 +253,7 @@ const PUNE_FAQ_ITEMS = [
     category: 'cost',
     question: 'Is cheap SEO in Pune worth it?',
     answer:
-      'Very cheap SEO (under ₹5,000/month) almost always uses link farms and template content — both harmful. In Pune\'s B2B IT and auto sectors especially, a penalised site or a site with thin placeholder content is worse than no SEO at all. Real SEO in Pune requires budget for real work. We charge a fair rate and show you exactly what we do every month.',
+      'Very cheap SEO almost always uses link farms and template content — both harmful. In Pune\'s B2B IT and auto sectors especially, a penalised site or a site with thin placeholder content is worse than no SEO at all. Real SEO in Pune requires budget for real work. We charge a fair rate and show you exactly what we do every month.',
   },
   {
     category: 'cost',

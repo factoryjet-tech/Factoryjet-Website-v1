@@ -169,7 +169,7 @@ export function PillarsSection() {
                 <div className="pk">B2B Commerce</div>
                 <h3>Portals your buyers expect</h3>
                 <p>Dealer and wholesale portals with tiered pricing, net terms, and fast reordering.</p>
-                <Link className="more" href="/us/b2b-ecommerce">Explore B2B commerce →</Link>
+                <Link className="more" href="/b2b-ecommerce">Explore B2B commerce →</Link>
               </div>
               <div className="zvis viz-b2b" aria-hidden="true">
                 <div className="table">

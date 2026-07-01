@@ -28,7 +28,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'Web Design Company in Mumbai | | FactoryJet',
   description:
-    'Web design company in Mumbai for B2B exporters, D2C brands & service businesses. Fast websites from ₹25,000. 7-day delivery. Serving BKC, Andheri East & Lower Parel.',
+    'Web design company in Mumbai for B2B exporters, D2C brands & service businesses. Fast, custom websites with a 7-day delivery guarantee. Serving BKC, Andheri East & Lower Parel.',
   keywords: [
     'web design company in Mumbai',
     'website design Mumbai',
@@ -151,7 +151,7 @@ const faqSchema = {
       name: 'How much does a website cost for a small business in Mumbai?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet's web design for Mumbai small businesses starts at ₹25,000 for a 5-page Starter site. The Growth tier (₹50,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds with e-commerce, booking systems, or AI integrations start at ₹1,00,000. Mumbai agency rates for equivalent scope typically run ₹1,50,000–₹5,00,000 — often without a published timeline or a codebase you own outright.",
+        text: "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
       },
     },
     {
@@ -251,7 +251,7 @@ const MUMBAI_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a website cost for a small business in Mumbai?',
     answer:
-      "FactoryJet's web design for Mumbai businesses starts at ₹25,000 for a 5-page Starter site. The Growth tier (₹50,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds with e-commerce, booking systems, or AI integrations start at ₹1,00,000. Mumbai agency rates for comparable scope typically run ₹1,50,000–₹5,00,000 — often without a published timeline or a codebase you own outright.",
+      "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
   },
   {
     category: 'pricing',
@@ -347,7 +347,7 @@ const MUMBAI_FAQ_ITEMS = [
     category: 'local',
     question: 'How does FactoryJet compare to Mumbai web agencies?',
     answer:
-      "Mumbai web agencies typically charge ₹1,50,000–₹5,00,000 for a comparable project and deliver in 8–20 weeks — without publishing their rates or timeline upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright — at a fixed, published price.",
+      "Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright.",
   },
 
   /* ── Support & Ownership ── */
@@ -361,7 +361,7 @@ const MUMBAI_FAQ_ITEMS = [
     category: 'support',
     question: 'What support do you provide after launch?',
     answer:
-      'Every project includes a 30-day post-launch support window covering bug fixes, minor adjustments, and launch questions at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans from ₹4,999/month: up to 3 hours of development changes, priority same-day bug response, and a dedicated engineer who knows your codebase. Maintenance clients also get quarterly performance audits and Core Web Vitals checks.',
+      'Every project includes a 30-day post-launch support window covering bug fixes, minor adjustments, and launch questions at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans covering development changes, priority same-day bug response, and a dedicated engineer who knows your codebase. Maintenance clients also get quarterly performance audits and Core Web Vitals checks.',
   },
   {
     category: 'support',
@@ -373,7 +373,7 @@ const MUMBAI_FAQ_ITEMS = [
     category: 'support',
     question: 'Do you offer ongoing retainer services for Mumbai businesses?',
     answer:
-      'Yes. Monthly retainers from ₹4,999/month cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling, a dedicated engineer, and quarterly website health reports. Many of our Mumbai clients start with a project and move to a retainer once the site is live and generating leads.',
+      'Yes. Monthly retainers cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling, a dedicated engineer, and quarterly website health reports. Many of our Mumbai clients start with a project and move to a retainer once the site is live and generating leads.',
   },
 
   // Money-query coverage, added 2026-06-11
@@ -399,10 +399,6 @@ const MUMBAI_COMPARISON_COLUMNS = [
 ] as const;
 
 const MUMBAI_COMPARISON_ROWS = [
-  {
-    feature: 'Starting price',
-    values: ['Get a Quote', '₹1,50,000–₹5,00,000', '₹15,000–₹80,000', '₹0–₹15,000 (you build it)'],
-  },
   {
     feature: 'Delivery timeline',
     values: ['7 days', '8–20 weeks', '4–16 weeks (unreliable)', '1–2 weeks (you build it)'],
@@ -487,11 +483,6 @@ const howToSchema = {
   '@id': `https://factoryjet.com/web-design/mumbai#howto`,
   name: `How FactoryJet builds your Mumbai website in 7 days`,
   description: `Our 7-day process for delivering a professional, AI-powered website for Mumbai businesses.`,
-  estimatedCost: {
-    '@type': 'MonetaryAmount',
-    currency: 'INR',
-    minValue: '25000',
-  },
   totalTime: 'P7D',
   step: [
     {
@@ -580,7 +571,7 @@ export default function MumbaiWebDesignPage() {
         formSlot={<HeroInlineForm region="in" source="web_design_mumbai_hero" />}
           eyebrow="WEB DESIGN · MUMBAI"
           headline="Website Design in Mumbai That Converts Buyers — Not Just Looks Good"
-          lead="Mumbai powers 40% of India's corporate tax revenue, houses the NSE, BSE, and RBI, and is home to over 2.5 lakh registered businesses. B2B exporters in SEEPZ, D2C startups in Andheri, and BFSI firms in BKC all compete for the same Google real estate. FactoryJet builds from ₹25,000 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
+          lead="Mumbai powers 40% of India's corporate tax revenue, houses the NSE, BSE, and RBI, and is home to over 2.5 lakh registered businesses. B2B exporters in SEEPZ, D2C startups in Andheri, and BFSI firms in BKC all compete for the same Google real estate. FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',
@@ -732,7 +723,7 @@ export default function MumbaiWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Mumbai Businesses Choose FactoryJet Over Local Agencies"
-          lead="Mumbai web agencies typically charge ₹1,50,000–₹5,00,000 for a comparable project and take 8–20 weeks to deliver — without publishing their rates or timeline upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
+          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
           pillars={[
             {
               icon: '⚡',
@@ -795,13 +786,13 @@ export default function MumbaiWebDesignPage() {
           headline="FactoryJet vs. Mumbai Agency vs. Freelancer vs. Template Builder"
           lead="Not all web design options in Mumbai deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
           pullQuote={{
-            stat: '₹25,000',
+            stat: '7 days',
             caption:
-              'starting price — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a ₹3,00,000 Mumbai agency project.',
+              'from kickoff to launch — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
           }}
           columns={MUMBAI_COMPARISON_COLUMNS}
           rows={MUMBAI_COMPARISON_ROWS}
-          footer="Prices reflect typical Mumbai market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
+          footer="FactoryJet fixed-price contracts available for every scope. You get a clear quote up front after a free consultation."
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}

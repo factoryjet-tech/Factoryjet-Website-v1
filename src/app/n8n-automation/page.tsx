@@ -25,9 +25,9 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'n8n Automation India | Workflow Automation from ₹29,999 | FactoryJet',
+  title: 'n8n Automation India | Workflow Automation Company | FactoryJet',
   description:
-    'n8n workflow automation for Indian businesses from ₹29,999. Connect Razorpay, WhatsApp, Zoho, Tally, Shopify & 400+ tools. Self-hosted or cloud. 7-day delivery.',
+    'n8n workflow automation for Indian businesses. Connect Razorpay, WhatsApp, Zoho, Tally, Shopify & 400+ tools. Self-hosted or cloud. Fixed-price, scoped after a free call. 7-day delivery.',
   keywords: [
     'n8n India',
     'workflow automation India',
@@ -45,9 +45,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'n8n Automation India | Workflow Automation from ₹29,999 | FactoryJet',
+    title: 'n8n Automation India | Workflow Automation Company | FactoryJet',
     description:
-      'n8n workflow automation for Indian businesses from ₹29,999. Connect Razorpay, WhatsApp, Zoho, Tally, Shopify & 400+ tools. Self-hosted or cloud. 7-day delivery.',
+      'n8n workflow automation for Indian businesses. Connect Razorpay, WhatsApp, Zoho, Tally, Shopify & 400+ tools. Self-hosted or cloud. Fixed-price, scoped after a free call. 7-day delivery.',
     url: 'https://factoryjet.com/n8n-automation',
     images: [
       {
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'n8n Automation India | Workflow Automation from ₹29,999 | FactoryJet',
+    title: 'n8n Automation India | Workflow Automation Company | FactoryJet',
     description:
       'n8n workflow automation for Indian businesses. Connect Razorpay, WhatsApp, Zoho, Tally & 400+ tools. Self-hosted. 7-day delivery.',
     images: ['https://factoryjet.com/images/services/card-automation.webp'],
@@ -103,7 +103,7 @@ const N8N_FAQ_SCHEMA = {
       name: 'How much does n8n automation setup cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet's n8n automation starts at ₹29,999 for the Starter plan covering up to 3 automated workflows and 2 integrations with full deployment and documentation. The Growth plan at ₹80,000 covers up to 10 workflows, 5 integrations, WhatsApp Business API setup, and 30-day monitoring. Custom automation infrastructure — unlimited workflows, dedicated n8n instance, full API integrations, and ongoing support — starts at ₹1,50,000. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.",
+        text: "FactoryJet's n8n automation pricing is fixed-price and scoped to your build. The main drivers are the number of workflows and integrations: a Starter scope covers a handful of automated workflows and integrations with full deployment and documentation; a Growth scope covers more workflows and integrations plus WhatsApp Business API setup and 30-day monitoring; and custom automation infrastructure covers unlimited workflows, a dedicated n8n instance, full API integrations, and ongoing support. Every project is quoted up front after a free discovery call — no hourly billing, no scope creep.",
       },
     },
     {
@@ -127,7 +127,7 @@ const N8N_FAQ_SCHEMA = {
       name: 'What happens when a workflow breaks — who fixes it?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Every automation we build includes error handling workflows — if a step fails, you receive an alert via WhatsApp or email with the exact node, error message, and retry instructions. For clients on a maintenance retainer (from ₹9,999/month), FactoryJet monitors your n8n instance, receives error alerts directly, and fixes breaking changes within 24 hours. APIs change, webhooks expire, and third-party platforms release updates — an unmaintained automation is an automation that will eventually break silently. Our retainer prevents that.",
+        text: "Every automation we build includes error handling workflows — if a step fails, you receive an alert via WhatsApp or email with the exact node, error message, and retry instructions. For clients on a maintenance retainer (a fixed monthly fee scoped to your needs), FactoryJet monitors your n8n instance, receives error alerts directly, and fixes breaking changes within 24 hours. APIs change, webhooks expire, and third-party platforms release updates — an unmaintained automation is an automation that will eventually break silently. Our retainer prevents that.",
       },
     },
   ],
@@ -340,10 +340,10 @@ const N8N_COMPARISON_ROWS = [
   {
     feature: 'Monthly cost (100K tasks/month)',
     values: [
-      '₹2,000–₹5,000/mo (server only)',
-      '~₹25,000–₹40,000/mo ($299–$499 USD)',
-      '~₹12,000–₹20,000/mo ($149–$249 USD)',
-      '0 (but 40+ staff hours)',
+      'Server cost only — no per-task fees',
+      'High recurring SaaS fee (USD)',
+      'Mid recurring SaaS fee (USD)',
+      'No fee, but 40+ staff hours',
     ],
   },
   {
@@ -489,7 +489,7 @@ const N8N_FAQ_ITEMS = [
     category: 'n8n',
     question: 'What is n8n and why should Indian businesses use it?',
     answer:
-      "n8n (pronounced 'n-eight-n') is an open-source workflow automation platform that connects your business tools and automates repetitive tasks. Unlike Zapier and Make.com which are SaaS platforms billed in USD with per-task pricing, n8n can be self-hosted on your own server — meaning you pay only for the server (typically ₹2,000–₹5,000/month on DigitalOcean or AWS Lightsail) instead of ₹25,000–₹40,000/month to Zapier for the same volume. For Indian businesses, this means automation that scales with your business without your costs scaling proportionally — and workflow data that stays in India.",
+      "n8n (pronounced 'n-eight-n') is an open-source workflow automation platform that connects your business tools and automates repetitive tasks. Unlike Zapier and Make.com which are SaaS platforms billed in USD with per-task pricing, n8n can be self-hosted on your own server — meaning you pay only for an affordable monthly server bill (on DigitalOcean or AWS Lightsail) instead of a steep recurring Zapier subscription for the same volume. For Indian businesses, this means automation that scales with your business without your costs scaling proportionally — and workflow data that stays in India.",
   },
   {
     category: 'n8n',
@@ -507,13 +507,13 @@ const N8N_FAQ_ITEMS = [
     category: 'n8n',
     question: 'What does n8n automation actually cost Indian businesses per month?',
     answer:
-      "Self-hosted n8n runs on a ₹2,000–₹5,000/month VPS (DigitalOcean Droplet, AWS Lightsail, or Hetzner). That server cost is your only ongoing fee — no per-task billing, no operation limits. Zapier for 100,000 tasks/month costs ~₹30,000–₹40,000/month (Business plan at $299 USD). n8n for the same volume costs ₹2,000–₹5,000/month. The FactoryJet build fee (₹29,999–₹1,50,000) is a one-time cost — after that, your automation runs at server cost only. Most clients recover the build cost within 60 days from the Zapier subscription they cancel.",
+      "Self-hosted n8n runs on an affordable monthly VPS (DigitalOcean Droplet, AWS Lightsail, or Hetzner). That server cost is your only ongoing fee — no per-task billing, no operation limits. Zapier for the same volume costs many times more on its Business plan. The FactoryJet build is a one-time fixed-price cost scoped up front — after that, your automation runs at server cost only. Most clients recover the build cost within 60 days from the Zapier subscription they cancel.",
   },
   {
     category: 'n8n',
     question: 'Does n8n have a free version? Can I use n8n.cloud?',
     answer:
-      "n8n Community Edition is free and open-source — you self-host it on any server. n8n.cloud is their hosted SaaS plan starting at $20/month (around ₹1,700) for 2,500 workflow executions/month — much more affordable than Zapier, but still with execution limits. For most Indian businesses doing serious automation volumes (10,000+ executions/month), FactoryJet recommends and deploys the self-hosted Community Edition on your VPS. We handle the entire setup, security hardening, SSL, backups, and updates — you just use the workflows.",
+      "n8n Community Edition is free and open-source — you self-host it on any server. n8n.cloud is their hosted SaaS plan with an affordable entry tier for a few thousand workflow executions a month — much more affordable than Zapier, but still with execution limits. For most Indian businesses doing serious automation volumes (10,000+ executions/month), FactoryJet recommends and deploys the self-hosted Community Edition on your VPS. We handle the entire setup, security hardening, SSL, backups, and updates — you just use the workflows.",
   },
 
   /* ── India-Specific Integrations ── */
@@ -579,7 +579,7 @@ const N8N_FAQ_ITEMS = [
     category: 'technical',
     question: 'Can n8n handle high-volume automation — thousands of triggers per day?',
     answer:
-      "Yes — n8n is built for production-grade automation at scale. A DigitalOcean 4GB Droplet (₹3,500/month) handles 50,000–100,000 workflow executions per day reliably. For higher volumes, n8n supports queue mode with Redis and multiple worker instances — this is a horizontally scalable architecture. We have deployed n8n instances handling 500,000+ daily executions for e-commerce and fintech clients. The architecture is designed during the audit phase based on your expected automation volume.",
+      "Yes — n8n is built for production-grade automation at scale. A modest DigitalOcean 4GB Droplet handles 50,000–100,000 workflow executions per day reliably. For higher volumes, n8n supports queue mode with Redis and multiple worker instances — this is a horizontally scalable architecture. We have deployed n8n instances handling 500,000+ daily executions for e-commerce and fintech clients. The architecture is designed during the audit phase based on your expected automation volume.",
   },
   {
     category: 'technical',
@@ -599,7 +599,7 @@ const N8N_FAQ_ITEMS = [
     category: 'support',
     question: 'What ongoing support is included after the automation project?',
     answer:
-      "Every automation project includes a 14-day post-launch support window: bug fixes, credential refresh issues, minor workflow logic adjustments, and launch questions covered at no additional cost. After 14 days, FactoryJet offers automation maintenance retainers from ₹9,999/month covering up to 4 hours of workflow adjustments per month, priority error response (24-hour fix SLA), n8n version update management, and monthly automation performance reviews.",
+      "Every automation project includes a 14-day post-launch support window: bug fixes, credential refresh issues, minor workflow logic adjustments, and launch questions covered at no additional cost. After 14 days, FactoryJet offers automation maintenance retainers — a fixed monthly fee scoped to your needs — covering a set block of workflow adjustment hours per month, priority error response (24-hour fix SLA), n8n version update management, and monthly automation performance reviews.",
   },
   {
     category: 'support',
@@ -611,7 +611,7 @@ const N8N_FAQ_ITEMS = [
     category: 'support',
     question: 'Can I expand the automation setup after the initial project?',
     answer:
-      "Yes — n8n is designed to grow incrementally. Adding new workflows to an existing n8n instance is faster and cheaper than the initial build (no server setup, no credential configuration for already-connected tools). Retainer clients get 4 hours of monthly workflow work included. One-off workflow additions are scoped per the complexity — simple 3-step workflows typically take a day and cost ₹5,000–₹15,000. We maintain a versioned backup of every workflow so additions never break existing automations.",
+      "Yes — n8n is designed to grow incrementally. Adding new workflows to an existing n8n instance is faster and cheaper than the initial build (no server setup, no credential configuration for already-connected tools). Retainer clients get a block of monthly workflow work included. One-off workflow additions are scoped per the complexity — simple 3-step workflows typically take a day and are quoted at a fixed price up front. We maintain a versioned backup of every workflow so additions never break existing automations.",
   },
   {
     category: 'support',
@@ -623,7 +623,7 @@ const N8N_FAQ_ITEMS = [
     category: 'support',
     question: 'Do you offer a retainer for ongoing automation development?',
     answer:
-      "Yes — FactoryJet's automation retainer plans start at ₹9,999/month and cover: up to 4 hours of workflow development and adjustments, priority 24-hour error response, n8n version update management, monthly automation audit to identify new automation opportunities, and ongoing access to your dedicated automation engineer who knows your n8n instance. Retainer clients building automation over 6+ months consistently find it faster and more cost-effective than project-by-project engagements because there is no onboarding overhead on every new workflow.",
+      "Yes — FactoryJet's automation retainer plans are a fixed monthly fee scoped to your needs and cover: a set block of workflow development and adjustment hours, priority 24-hour error response, n8n version update management, monthly automation audit to identify new automation opportunities, and ongoing access to your dedicated automation engineer who knows your n8n instance. Retainer clients building automation over 6+ months consistently find it faster and more cost-effective than project-by-project engagements because there is no onboarding overhead on every new workflow.",
   },
 ];
 
@@ -663,8 +663,8 @@ export default function N8nAutomationPage() {
         <Hero
         formSlot={<HeroInlineForm region="in" source="n8n_automation_hero" />}
           eyebrow="n8n AUTOMATION · INDIA"
-          headline="Stop Paying Zapier ₹30,000/Month. Switch to n8n."
-          lead="Indian businesses on Zapier pay ₹25,000–₹40,000/month for 100K automations. n8n self-hosted runs the same workflows for ₹3,000/month — server only, no per-task fees. FactoryJet builds, deploys, and maintains your n8n automation for Indian tools: Razorpay, Tally, WhatsApp, Zoho, Shiprocket, and 400+ more."
+          headline="Stop Paying Zapier Every Month. Switch to n8n."
+          lead="Indian businesses on Zapier pay a steep recurring fee for high automation volumes. n8n self-hosted runs the same workflows for an affordable monthly server cost only — no per-task fees. FactoryJet builds, deploys, and maintains your n8n automation for Indian tools: Razorpay, Tally, WhatsApp, Zoho, Shiprocket, and 400+ more."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',
@@ -684,9 +684,9 @@ export default function N8nAutomationPage() {
               <div className="mt-6 space-y-4">
                 {[
                   { label: 'Monthly automations', value: '100,000' },
-                  { label: 'Zapier Business plan', value: '~₹35,000/mo' },
-                  { label: 'Make.com Team plan', value: '~₹17,000/mo' },
-                  { label: 'n8n self-hosted (server only)', value: '₹3,000–₹5,000/mo' },
+                  { label: 'Zapier Business plan', value: 'High SaaS fee' },
+                  { label: 'Make.com Team plan', value: 'Mid SaaS fee' },
+                  { label: 'n8n self-hosted (server only)', value: 'Low server cost' },
                 ].map((row) => (
                   <div
                     key={row.label}
@@ -703,7 +703,7 @@ export default function N8nAutomationPage() {
                 ))}
                 <div className="rounded-xl bg-[rgba(240,90,40,0.08)] px-4 py-3">
                   <p className="font-fj-body text-[0.875rem] font-semibold text-[#F05A28]">
-                    Save ₹3,60,000/year vs. Zapier. The FactoryJet build pays for itself in under 30 days.
+                    Save a large recurring SaaS bill every year vs. Zapier. The FactoryJet build pays for itself in under 30 days.
                   </p>
                 </div>
               </div>
@@ -863,12 +863,12 @@ export default function N8nAutomationPage() {
         <StrategicDarkSection
           eyebrow="THE PROBLEM"
           headline="Your team is spending 40% of their week on tasks a computer could do in 30 seconds."
-          lead="Manual data entry, copy-pasting between tools, chasing approvals on WhatsApp, building the same weekly report from five spreadsheets — these tasks cost Indian SMBs 15–25 staff hours per week. At ₹500/hour fully loaded cost, that is ₹30,000–₹50,000/month of salary spent on work that n8n can automate in a weekend."
+          lead="Manual data entry, copy-pasting between tools, chasing approvals on WhatsApp, building the same weekly report from five spreadsheets — these tasks cost Indian SMBs 15–25 staff hours per week. That is several days of salaried time every month spent on work that n8n can automate in a weekend."
           pillars={[
             {
               icon: '💸',
               title: 'Zapier is designed for the US market — Indian businesses pay a USD premium for half the functionality.',
-              body: "Zapier charges in USD with per-task pricing that scales aggressively. 100,000 tasks/month on Zapier Business costs ~₹35,000/month. Zapier does not natively support Razorpay, Tally, or WhatsApp Business API — the tools Indian businesses actually use. n8n self-hosted runs the same automation volume for ₹3,000–₹5,000/month (server cost only). FactoryJet builds all the Indian-specific integrations that Zapier's marketplace does not have.",
+              body: "Zapier charges in USD with per-task pricing that scales aggressively, so high task volumes run up a steep monthly bill on its Business plan. Zapier does not natively support Razorpay, Tally, or WhatsApp Business API — the tools Indian businesses actually use. n8n self-hosted runs the same automation volume for an affordable monthly server cost only. FactoryJet builds all the Indian-specific integrations that Zapier's marketplace does not have.",
             },
             {
               icon: '🔗',
@@ -1134,13 +1134,13 @@ export default function N8nAutomationPage() {
           headline="FactoryJet (n8n) vs. Zapier vs. Make.com vs. Manual Process"
           lead="The honest cost and capability comparison — relevant to Indian businesses running real automation at scale."
           pullQuote={{
-            stat: '₹29,999',
+            stat: 'Fixed-price',
             caption:
-              'one-time build cost — then your automation runs at ₹3,000–₹5,000/month server cost only. No per-task fees. No USD exposure. No Zapier invoice.',
+              'one-time build cost scoped up front — then your automation runs at an affordable monthly server cost only. No per-task fees. No USD exposure. No Zapier invoice.',
           }}
           columns={N8N_COMPARISON_COLUMNS}
           rows={N8N_COMPARISON_ROWS}
-          footer="Zapier and Make.com pricing based on USD plans converted at ₹84/USD, May 2025. n8n server cost based on DigitalOcean 4GB Droplet Mumbai region."
+          footer="n8n removes the per-task SaaS billing model: you pay only for your own server, with no USD exposure and no execution caps."
         />
 
         {/* ── 11. USE CASES ─────────────────────────────────────────────────── */}

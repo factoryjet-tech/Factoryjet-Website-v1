@@ -71,7 +71,7 @@ const faqSchema = {
       name: 'How much does AI customer support development cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet AI customer support agents start from ₹2,50,000 for a focused WhatsApp or website support bot. Full multi-channel support platforms with Freshdesk or Zoho Desk integration start from ₹5,00,000. Enterprise support automation suites with deep ERP and multi-channel inbox start from ₹10,00,000. All are fixed-price with no hourly billing.',
+        text: 'FactoryJet AI customer support agents are fixed-price and scoped to your build. Whether you need a focused WhatsApp or website support bot, a multi-channel platform with Freshdesk or Zoho Desk integration, or an enterprise support automation suite with deep ERP and multi-channel inbox, every project is quoted up front after a free discovery call. You know the full cost before work starts, with no hourly billing.',
       },
     },
     {
@@ -222,7 +222,7 @@ const SUPPORT_COMPARISON_ROWS = [
   {
     feature: 'Starting cost',
     values: [
-      '₹2,50,000 one-time',
+      'Fixed one-time price',
       '₹18,000–₹30,000/month per agent',
       '₹5,000–₹20,000/month SaaS',
       '₹8,000–₹25,000/month SaaS',
@@ -505,7 +505,7 @@ const SUPPORT_FAQ_ITEMS = [
   {
     category: 'pricing',
     question: 'Do you offer a trial or pilot before the full build?',
-    answer: "Yes. For clients who want to validate before committing, we offer a 2-week pilot: a WhatsApp support bot deployed to a specific product category or customer segment, with real order lookups and FAQ handling. The pilot costs ₹60,000 and is credited against the full project. Seeing the first 100 real conversation transcripts is usually more convincing than any proposal.",
+    answer: "Yes. For clients who want to validate before committing, we offer a 2-week pilot: a WhatsApp support bot deployed to a specific product category or customer segment, with real order lookups and FAQ handling. The pilot is offered at a fixed pilot price, credited against the full project. Seeing the first 100 real conversation transcripts is usually more convincing than any proposal.",
   },
 ];
 
@@ -793,7 +793,7 @@ export default function AICustomerSupportINPage() {
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. In-House Support Team vs. Scripted Chatbot vs. Generic SaaS"
           lead="Fixed price, full ownership, Indian support stack out of the box — the honest comparison."
-          pullQuote={{ stat: '₹2,50,000', caption: 'one-time — AI customer support agent handling WhatsApp queries in Hindi and English, with live Shopify and Shiprocket integration, Freshdesk escalation, and full code ownership. No monthly SaaS fee.' }}
+          pullQuote={{ stat: 'Fixed price', caption: 'AI customer support agent handling WhatsApp queries in Hindi and English, with live Shopify and Shiprocket integration, Freshdesk escalation, and full code ownership. No monthly SaaS fee.' }}
           columns={SUPPORT_COMPARISON_COLUMNS}
           rows={SUPPORT_COMPARISON_ROWS}
           footer="Prices reflect typical Indian market rates as of 2025. FactoryJet fixed-price contracts available for all tiers."

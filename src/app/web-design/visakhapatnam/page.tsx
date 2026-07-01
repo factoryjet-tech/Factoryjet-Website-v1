@@ -28,7 +28,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'Web Design Company in Visakhapatnam | | FactoryJet',
   description:
-    'Web design company in Visakhapatnam for IT firms, petrochemical companies & businesses. Fast websites from ₹29,999. 7-day delivery. Serving Rushikonda IT SEZ, Madhurawada & MVP Colony.',
+    'Web design company in Visakhapatnam for IT firms, petrochemical companies & businesses. Fast, custom websites with a 7-day delivery guarantee. Serving Rushikonda IT SEZ, Madhurawada & MVP Colony.',
   keywords: [
     'web design company in Visakhapatnam',
     'website design Visakhapatnam',
@@ -151,7 +151,7 @@ const faqSchema = {
       name: 'How much does a website cost for a business in Visakhapatnam?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet's web design for Visakhapatnam businesses starts at ₹29,999 for a 5-page Starter site. The Growth tier (₹80,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds start at ₹1,50,000. Vizag agency rates for comparable scope typically run ₹80,000–₹2,50,000.",
+        text: "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
       },
     },
     {
@@ -251,7 +251,7 @@ const VIZAG_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a website cost for a business in Visakhapatnam?',
     answer:
-      "FactoryJet's web design for Visakhapatnam businesses starts at ₹29,999 for a 5-page Starter site. The Growth tier (₹80,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds start at ₹1,50,000. Vizag agency rates for comparable scope typically run ₹80,000–₹2,50,000.",
+      "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
   },
   {
     category: 'pricing',
@@ -347,7 +347,7 @@ const VIZAG_FAQ_ITEMS = [
     category: 'local',
     question: 'How does FactoryJet compare to Vizag web agencies?',
     answer:
-      "Visakhapatnam web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and deliver in 6–14 weeks. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at a fixed, published price.",
+      "Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright.",
   },
 
   /* ── Support & Ownership ── */
@@ -361,7 +361,7 @@ const VIZAG_FAQ_ITEMS = [
     category: 'support',
     question: 'What support do you provide after launch?',
     answer:
-      'Every project includes a 30-day post-launch support window covering bug fixes and minor adjustments at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans from ₹4,999/month.',
+      'Every project includes a 30-day post-launch support window covering bug fixes and minor adjustments at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans covering development changes, priority same-day bug response, and a dedicated engineer who knows your codebase.',
   },
   {
     category: 'support',
@@ -373,7 +373,7 @@ const VIZAG_FAQ_ITEMS = [
     category: 'support',
     question: 'Do you offer ongoing retainer services for Visakhapatnam businesses?',
     answer:
-      'Yes. Monthly retainers from ₹4,999/month cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling and a dedicated engineer.',
+      'Yes. Monthly retainers cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling and a dedicated engineer.',
   },
   {
     category: 'support',
@@ -405,10 +405,6 @@ const VIZAG_COMPARISON_COLUMNS = [
 ] as const;
 
 const VIZAG_COMPARISON_ROWS = [
-  {
-    feature: 'Starting price',
-    values: ['Get a Quote', '₹80,000–₹2,50,000', '₹10,000–₹60,000', '₹0–₹15,000 (you build it)'],
-  },
   {
     feature: 'Delivery timeline',
     values: ['7 days', '6–14 weeks', '3–12 weeks (unreliable)', '1–2 weeks (you build it)'],
@@ -493,11 +489,6 @@ const howToSchema = {
   '@id': `https://factoryjet.com/web-design/visakhapatnam#howto`,
   name: `How FactoryJet builds your Visakhapatnam website in 7 days`,
   description: `Our 7-day process for delivering a professional, AI-powered website for Visakhapatnam businesses.`,
-  estimatedCost: {
-    '@type': 'MonetaryAmount',
-    currency: 'INR',
-    minValue: '29999',
-  },
   totalTime: 'P7D',
   step: [
     {
@@ -586,7 +577,7 @@ export default function VisakhapatnamWebDesignPage() {
         formSlot={<HeroInlineForm region="in" source="web_design_visakhapatnam_hero" />}
           eyebrow="WEB DESIGN · VISAKHAPATNAM"
           headline="Website Design in Visakhapatnam for Businesses at the Edge of India's AI City Boom"
-          lead="Visakhapatnam is India's next major tech hub — Google's ₹85,000 Cr AI City investment, 50%+ IT hiring growth, and Andhra Pradesh's industrial powerhouse. From Rushikonda IT SEZ and Madhurawada to Gajuwaka's petrochemical belt and Beach Road's tourism strip, Vizag businesses are competing in a market that is about to accelerate dramatically. FactoryJet builds from ₹29,999 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
+          lead="Visakhapatnam is India's next major tech hub — Google's ₹85,000 Cr AI City investment, 50%+ IT hiring growth, and Andhra Pradesh's industrial powerhouse. From Rushikonda IT SEZ and Madhurawada to Gajuwaka's petrochemical belt and Beach Road's tourism strip, Vizag businesses are competing in a market that is about to accelerate dramatically. FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',
@@ -744,7 +735,7 @@ export default function VisakhapatnamWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Visakhapatnam Businesses Choose FactoryJet Over Local Agencies"
-          lead="Visakhapatnam and Hyderabad web agencies typically charge ₹80,000–₹2,50,000 for a comparable project and take 6–14 weeks to deliver. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
+          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
           pillars={[
             {
               icon: '⚡',
@@ -807,13 +798,13 @@ export default function VisakhapatnamWebDesignPage() {
           headline="FactoryJet vs. Hyderabad/Vizag Agency vs. Freelancer vs. Template Builder"
           lead="Not all web design options in Visakhapatnam deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
           pullQuote={{
-            stat: '₹29,999',
+            stat: '7 days',
             caption:
-              'starting price — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a ₹2,00,000 Andhra Pradesh agency project.',
+              'from kickoff to launch — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
           }}
           columns={VIZAG_COMPARISON_COLUMNS}
           rows={VIZAG_COMPARISON_ROWS}
-          footer="Prices reflect typical Visakhapatnam and Hyderabad market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
+          footer="FactoryJet fixed-price contracts available for every scope. You get a clear quote up front after a free consultation."
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}

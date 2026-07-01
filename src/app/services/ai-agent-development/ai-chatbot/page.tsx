@@ -100,7 +100,7 @@ const faqSchema = {
       name: 'How much does AI chatbot development cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet AI chatbots start from ₹2,50,000 for a focused website or WhatsApp chatbot. WhatsApp AI chat with CRM integration starts from ₹4,00,000. Multi-channel chatbots (website + WhatsApp + support portal) with Zoho/Freshdesk/Shopify integration start from ₹8,00,000. All prices are fixed — no hourly billing.',
+        text: 'FactoryJet builds AI chatbots on a fixed-price basis, scoped to your project. Whether you need a focused website or WhatsApp chatbot, WhatsApp AI chat with CRM integration, or a multi-channel chatbot (website + WhatsApp + support portal) with Zoho/Freshdesk/Shopify integration, every project is quoted up front after a free discovery call, so you know the full cost before work starts. No hourly billing.',
       },
     },
     {
@@ -262,7 +262,7 @@ const CHATBOT_COMPARISON_ROWS = [
   {
     feature: 'Starting price',
     values: [
-      '₹2,50,000',
+      'Fixed one-time price',
       '₹3,000–₹15,000/month SaaS',
       '₹1,00,000–₹3,00,000 (unreliable)',
       '₹5,000–₹20,000/month (you build it)',
@@ -564,7 +564,7 @@ const CHATBOT_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does an AI chatbot cost in India?',
     answer:
-      "FactoryJet AI chatbots start from ₹2,50,000 for a focused website chatbot. WhatsApp AI chatbots with CRM integration start from ₹4,00,000. Multi-channel platforms (website + WhatsApp + support portal) start from ₹8,00,000. All are fixed-price — no hourly billing surprises. LLM API costs (typically ₹3,000–₹15,000/month for most Indian SMB volumes) are billed directly by model providers.",
+      "FactoryJet AI chatbots are fixed-price and scoped to your build — a focused website chatbot, a WhatsApp AI chatbot with CRM integration, or a multi-channel platform (website + WhatsApp + support portal). Every project is quoted up front after a free discovery call, so you know the full cost before work starts. No hourly billing surprises. Separately, LLM API costs (typically ₹3,000–₹15,000/month for most Indian SMB volumes) are billed directly by model providers.",
   },
   {
     category: 'pricing',
@@ -1024,9 +1024,9 @@ export default function AIChatbotINPage() {
           headline="FactoryJet vs. Scripted Chatbot Tool vs. Freelancer vs. No-Code Builder"
           lead="Fixed price, full ownership, Indian business stack out of the box — here is the honest comparison."
           pullQuote={{
-            stat: '₹2,50,000',
+            stat: 'Fixed price',
             caption:
-              'starting price — AI chatbot with natural language understanding, Hindi support, Zoho CRM integration, and full code ownership. No SaaS subscription. No decision tree to maintain.',
+              'scoped to your build — AI chatbot with natural language understanding, Hindi support, Zoho CRM integration, and full code ownership. No SaaS subscription. No decision tree to maintain. Quoted up front after a free discovery call, so you know the full cost before work starts.',
           }}
           columns={CHATBOT_COMPARISON_COLUMNS}
           rows={CHATBOT_COMPARISON_ROWS}

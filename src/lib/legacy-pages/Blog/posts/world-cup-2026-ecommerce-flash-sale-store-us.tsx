@@ -347,7 +347,7 @@ export const post: BlogPost = {
       </p>
       <p className="mb-8">
         <a
-          href="/us/services/ecommerce-development"
+          href="/services/ecommerce-development"
           className="text-[#F05A28] hover:underline"
         >
           FactoryJet&apos;s e-commerce development service
@@ -480,7 +480,7 @@ export const post: BlogPost = {
       </p>
       <p className="mb-8">
         For FactoryJet clients in key US markets, including{' '}
-        <a href="/us/nashville" className="text-[#F05A28] hover:underline">
+        <a href="/nashville" className="text-[#F05A28] hover:underline">
           Nashville
         </a>
         , Miami, Dallas, Houston, and Atlanta, we specifically build location-aware content into

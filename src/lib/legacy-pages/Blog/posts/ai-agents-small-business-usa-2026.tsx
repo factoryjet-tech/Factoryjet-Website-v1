@@ -185,7 +185,7 @@ export const post: BlogPost = {
         </ul>
       </div>
 
-      <p className="mb-6">➡ Ready to deploy AI agents for your US business? <a href="/us/services/ai-agents/" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet AI Agents for US businesses</a> — built and integrated into your website in 7 days from $2,999. Explore our <a href="/us/services/ai-automation/" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI automation services</a> or see city-specific deployments in <a href="/us/austin/ai-agents/" className="text-blue-600 underline hover:text-blue-800 transition-colors">Austin</a>, <a href="/us/denver/ai-agents/" className="text-blue-600 underline hover:text-blue-800 transition-colors">Denver</a>, and <a href="/us/raleigh/ai-agents/" className="text-blue-600 underline hover:text-blue-800 transition-colors">Raleigh</a>.</p>
+      <p className="mb-6">➡ Ready to deploy AI agents for your US business? <a href="/services/ai-agents/" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet AI Agents for US businesses</a> — built and integrated into your website in 7 days from $2,999. Explore our <a href="/services/ai-automation/" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI automation services</a> or see city-specific deployments in <a href="/austin/ai-agents/" className="text-blue-600 underline hover:text-blue-800 transition-colors">Austin</a>, <a href="/denver/ai-agents/" className="text-blue-600 underline hover:text-blue-800 transition-colors">Denver</a>, and <a href="/raleigh/ai-agents/" className="text-blue-600 underline hover:text-blue-800 transition-colors">Raleigh</a>.</p>
     </>
   ),
 };

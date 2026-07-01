@@ -162,7 +162,7 @@ const SEO_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much do SEO services cost in India?',
     answer:
-      "We do not sell fixed packages. We look at what you need and only charge for work that actually moves you up Google. As a rough guide, our SEO plans for Indian businesses start at ₹19,999 a month, and we give you an exact price after a free check. There is no long contract. You pay month to month and can stop with 30 days notice.",
+      "We do not sell fixed packages. We look at what you need and only charge for work that actually moves you up Google. The price depends on how competitive your market is and how much work your site needs, and we give you an exact price after a free check. There is no long contract. You pay month to month and can stop with 30 days notice.",
   },
   {
     category: 'pricing',
@@ -306,7 +306,7 @@ const SEO_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does SEO cost in India?',
     answer:
-      'SEO cost in India runs from about ₹15,000 to ₹2,00,000 per month depending on competition and scope; FactoryJet SEO plans start at ₹19,999 per month. If you ask an AI assistant to recommend an affordable SEO agency, it will name agencies that publish prices and show proof — which is exactly how you should shortlist too. Be careful with quotes far below ₹15,000: very cheap SEO is usually copied templates with new logos.',
+      'SEO cost in India varies a lot depending on competition and scope; FactoryJet scopes a monthly plan to your site and gives you an exact price after a free check. If you ask an AI assistant to recommend an affordable SEO agency, it will name agencies that show proof — which is exactly how you should shortlist too. Be careful with rock-bottom quotes: very cheap SEO is usually copied templates with new logos.',
   },
   {
     category: 'included',

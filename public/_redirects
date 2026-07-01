@@ -35,14 +35,24 @@
 # ── US CITY HUB REDIRECTS ────────────────────────────────────────────────────
 # /us/{city} has no page.tsx — redirect to the city web-design landing page.
 # These fire when users type the hub URL directly or follow an old external link.
-/us/austin     /us/austin/web-design     301
-/us/miami      /us/miami/web-design      301
-/us/denver     /us/denver/web-design     301
-/us/nashville  /us/nashville/web-design  301
-/us/portland   /us/portland/web-design   301
-/us/charlotte  /us/charlotte/web-design  301
-/us/raleigh    /us/raleigh/web-design    301
-/us/tampa      /us/tampa/web-design      301
+# Root city hubs (no page.tsx at /{city}) — send to the city web-design landing.
+/austin        /austin/web-design        301
+/miami         /miami/web-design         301
+/denver        /denver/web-design        301
+/nashville     /nashville/web-design     301
+/portland      /portland/web-design      301
+/charlotte     /charlotte/web-design     301
+/raleigh       /raleigh/web-design       301
+/tampa         /tampa/web-design         301
+# Legacy /us city hubs → new root city web-design (single hop)
+/us/austin     /austin/web-design        301
+/us/miami      /miami/web-design         301
+/us/denver     /denver/web-design        301
+/us/nashville  /nashville/web-design     301
+/us/portland   /portland/web-design      301
+/us/charlotte  /charlotte/web-design     301
+/us/raleigh    /raleigh/web-design       301
+/us/tampa      /tampa/web-design         301
 
 # NOTE: Tier-3 e-commerce city pages (boise, chattanooga, fargo, lincoln, sioux-falls)
 # were previously redirected here while on the legacy theme.
@@ -50,21 +60,26 @@
 
 # ── NEW YORK & CLEVELAND URL MIGRATION (2026-05-14) ───────────────────────────
 # Old /services/web-design/{city} → new /us/{city}/web-design (SEO canonical migration)
-/us/services/web-design/new-york   /us/new-york/web-design   301
-/us/services/web-design/cleveland  /us/cleveland/web-design  301
+/us/services/web-design/new-york   /new-york/web-design   301
+/us/services/web-design/cleveland  /cleveland/web-design  301
+/services/web-design/new-york      /new-york/web-design   301
+/services/web-design/cleveland     /cleveland/web-design  301
 
 # Sub-pages of old NYC URL → new canonical
-/us/services/web-design/new-york/faq       /us/new-york/web-design  301
-/us/services/web-design/new-york/services  /us/new-york/web-design  301
+/us/services/web-design/new-york/faq       /new-york/web-design  301
+/us/services/web-design/new-york/services  /new-york/web-design  301
 
 # City hub redirects (no page.tsx at hub level)
-/us/new-york   /us/new-york/web-design   301
-/us/cleveland  /us/cleveland/web-design  301
+/new-york      /new-york/web-design   301
+/cleveland     /cleveland/web-design  301
+/us/new-york   /new-york/web-design   301
+/us/cleveland  /cleveland/web-design  301
 
 # ── INDIA SERVICE URL MIGRATION (2026-05-16) ────────────────────────────────
 # Dropping /services/ prefix from India web-design city pages
 # Old: /services/web-design/[city]  →  New: /web-design/[city]
-/services/web-design                     /web-design                     301
+# NOTE (2026-07-01): bare /services/web-design redirect removed — US web-design
+# service page now lives at /services/web-design (US-as-root migration).
 /services/web-design/ahmedabad           /web-design/ahmedabad           301
 /services/web-design/bangalore           /web-design/bangalore           301
 /services/web-design/chennai             /web-design/chennai             301
@@ -88,7 +103,8 @@
 
 # ── SHOPIFY INDIA URL MIGRATION (2026-05-24) ─────────────────────────────────
 # /services/shopify-development → /shopify-development (drop /services/ prefix)
-/services/shopify-development    /shopify-development/    301
+# NOTE (2026-07-01): redirect removed — US shopify-development service page now
+# lives at /services/shopify-development (US-as-root migration).
 
 # ── NEW INDIA SERVICE PAGES (2026-05-24) ─────────────────────────────────────
 # WordPress Development and n8n Automation pages at clean root-level URLs
@@ -172,3 +188,8 @@
 /us/services/ecommerce-development/raleigh         /us/raleigh/ecommerce-development       301
 /us/services/ecommerce-development/sioux-falls     /us/sioux-falls/ecommerce-development   301
 /us/services/ecommerce-development/tampa           /us/tampa/ecommerce-development         301
+
+# ── /us → root migration: US is now the primary domain (2026-07-01) ──────────
+# Every former /us/* path now lives at root. Keep permanently.
+/us/*   /:splat   301
+/us     /         301

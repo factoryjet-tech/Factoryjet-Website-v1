@@ -180,7 +180,7 @@ export const post: BlogPost = {
       <p className="mb-4">
         For most US small businesses, this means a $1,999 offshore agency quote and a $12,000 US agency quote are buying the same technical output — with the US agency offering in-person meetings, US-time-zone availability, and local accountability as the premium.
       </p>
-      <p className="mb-4">➡ Learn more: <a href="/us/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet US web design services</a></p>
+      <p className="mb-4">➡ Learn more: <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet US web design services</a></p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What $1,999 Gets You from FactoryJet</h2>
       <p className="mb-4">
@@ -190,7 +190,7 @@ export const post: BlogPost = {
         Delivery: 7 days from kickoff when content is provided at project start. 97% of projects delivered on time. 500+ businesses served since 1999.
       </p>
       <p className="mb-4">
-        ➡ <a href="/us/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">See all web design packages</a> · <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free quote with PageSpeed proof in 24 hours</a>
+        ➡ <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">See all web design packages</a> · <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free quote with PageSpeed proof in 24 hours</a>
       </p>
 
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8">

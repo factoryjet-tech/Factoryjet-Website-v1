@@ -187,7 +187,7 @@ export const post: BlogPost = {
         <strong>6. Local SMB sites with a 7-day launch window.</strong> If you need to be live next week — a new location opening, a seasonal business launching, a pivot — WordPress&apos;s mature theme ecosystem and editor make 7-day delivery realistic. Custom builds at that pace are theoretically possible but rarely sensible.
       </p>
       <p className="mb-4">
-        ➡ See our <a href="/us/services/wordpress-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">US WordPress development packages</a> and <a href="/us/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">web design service overview</a>.
+        ➡ See our <a href="/services/wordpress-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">US WordPress development packages</a> and <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">web design service overview</a>.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">When Custom Web Development Wins</h2>
@@ -213,7 +213,7 @@ export const post: BlogPost = {
         <strong>6. Compliance frameworks like SOC 2 or HIPAA.</strong> Audit firms can certify a WordPress site, but the documentation burden of mapping every active plugin to a control is enormous. A custom build on a SOC 2-ready cloud platform (Vercel, AWS, Fly.io) and a documented engineering process makes the audit dramatically simpler. If you&apos;re selling B2B and customers will eventually ask for SOC 2, plan for custom from day one.
       </p>
       <p className="mb-4">
-        ➡ See our <a href="/us/services/web-application-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">US custom web application development</a> service for technical scope and pricing.
+        ➡ See our <a href="/services/web-application-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">US custom web application development</a> service for technical scope and pricing.
       </p>
       <p className="mb-4">
         For the B2B angle on this same decision, read our <a href="/blog/nyc-b2b-corporate-web-design-guide-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">corporate B2B context: NYC custom web design buyer guide</a>.
@@ -281,7 +281,7 @@ export const post: BlogPost = {
         The cost gap is real and it&apos;s permanent. A custom application is structurally a 5–10x investment over WordPress for an SMB. That math is fine when the application drives proportional revenue — a $200K custom SaaS that generates $1M ARR is obviously worth it. The math is brutal when the site is a brochure with a contact form and an owner who saw a Next.js demo and got excited.
       </p>
       <p className="mb-4">
-        ➡ Full pricing breakdown: <a href="/us/pricing" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet US pricing</a>.
+        ➡ Full pricing breakdown: <a href="/pricing" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet US pricing</a>.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">The Maintenance Reality No One Tells You</h2>
@@ -315,10 +315,10 @@ export const post: BlogPost = {
         <strong>Headless WordPress hybrid:</strong> WordPress back end with a Next.js front end on Vercel, connected via WPGraphQL. The editor experience your team knows, the performance and design freedom you actually want. Typically $15,000–$45,000 for an SMB build.
       </p>
       <p className="mb-4">
-        Already on WordPress and outgrowing it? See our <a href="/us/services/website-redesign" className="text-blue-600 underline hover:text-blue-800 transition-colors">website redesign service</a> — we audit your existing site, recommend the right next step (better WordPress, headless, or full custom), and only quote the path that actually fits.
+        Already on WordPress and outgrowing it? See our <a href="/services/website-redesign" className="text-blue-600 underline hover:text-blue-800 transition-colors">website redesign service</a> — we audit your existing site, recommend the right next step (better WordPress, headless, or full custom), and only quote the path that actually fits.
       </p>
       <p className="mb-4">
-        ➡ <a href="/us/services/wordpress-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">WordPress development</a> · <a href="/us/services/web-application-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Custom web application development</a> · <a href="https://calendly.com/bhavesh-factoryjet/30min" className="text-blue-600 underline hover:text-blue-800 transition-colors">Talk to the founder (30 min, free)</a>
+        ➡ <a href="/services/wordpress-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">WordPress development</a> · <a href="/services/web-application-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Custom web application development</a> · <a href="https://calendly.com/bhavesh-factoryjet/30min" className="text-blue-600 underline hover:text-blue-800 transition-colors">Talk to the founder (30 min, free)</a>
       </p>
 
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8">

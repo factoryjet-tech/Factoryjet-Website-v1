@@ -20,8 +20,8 @@ const pricingData: Record<PricingCategory, PricingTier[]> = {
   website: [
     {
       name: "Essential",
-      price: "AED 1,999",
-      subtitle: "Starting at (~$545 USD)",
+      price: "Scoped to project",
+      subtitle: "Quoted up front after a free call",
       features: [
         "Up to 7 Custom Pages",
         "Mobile-First Responsive Design",
@@ -37,8 +37,8 @@ const pricingData: Record<PricingCategory, PricingTier[]> = {
     },
     {
       name: "Professional",
-      price: "AED 5,999",
-      subtitle: "Starting at (~$1,635 USD)",
+      price: "Scoped to project",
+      subtitle: "Quoted up front after a free call",
       isPopular: true,
       features: [
         "Up to 15 Custom Pages",
@@ -56,8 +56,8 @@ const pricingData: Record<PricingCategory, PricingTier[]> = {
     },
     {
       name: "Premium",
-      price: "AED 15,999",
-      subtitle: "Starting at (~$4,360 USD)",
+      price: "Scoped to project",
+      subtitle: "Quoted up front after a free call",
       features: [
         "Up to 25 Custom Pages",
         "Fully Custom Brand-Unique Design",
@@ -93,8 +93,8 @@ const pricingData: Record<PricingCategory, PricingTier[]> = {
   ecommerce: [
     {
       name: "Starter",
-      price: "AED 4,999",
-      subtitle: "~$1,360 USD",
+      price: "Scoped to project",
+      subtitle: "Quoted up front after a free call",
       features: [
         "Up to 50 Products",
         "10 Custom Pages",
@@ -110,8 +110,8 @@ const pricingData: Record<PricingCategory, PricingTier[]> = {
     },
     {
       name: "Professional",
-      price: "AED 14,999",
-      subtitle: "~$4,085 USD",
+      price: "Scoped to project",
+      subtitle: "Quoted up front after a free call",
       isPopular: true,
       features: [
         "Up to 500 Products",
@@ -128,8 +128,8 @@ const pricingData: Record<PricingCategory, PricingTier[]> = {
     },
     {
       name: "Premium",
-      price: "AED 49,999",
-      subtitle: "~$13,600 USD",
+      price: "Scoped to project",
+      subtitle: "Quoted up front after a free call",
       features: [
         "Up to 5,000 Products",
         "Pages scoped per project",
@@ -164,8 +164,8 @@ const pricingData: Record<PricingCategory, PricingTier[]> = {
   amc: [
     {
       name: "Essential",
-      price: "AED 999",
-      subtitle: "Per Month (Billed Annually)",
+      price: "Scoped to project",
+      subtitle: "Monthly plan, billed annually",
       features: [
         "2 Development Hours/Month",
         "Daily Backups",
@@ -177,8 +177,8 @@ const pricingData: Record<PricingCategory, PricingTier[]> = {
     },
     {
       name: "Professional",
-      price: "AED 2,499",
-      subtitle: "Per Month (Billed Annually)",
+      price: "Scoped to project",
+      subtitle: "Monthly plan, billed annually",
       isPopular: true,
       features: [
         "6 Development Hours/Month",
@@ -195,8 +195,8 @@ const pricingData: Record<PricingCategory, PricingTier[]> = {
     },
     {
       name: "Premium",
-      price: "AED 5,999",
-      subtitle: "Per Month (Billed Annually)",
+      price: "Scoped to project",
+      subtitle: "Monthly plan, billed annually",
       features: [
         "12 Development Hours/Month",
         "Real-Time Backups",
@@ -257,7 +257,7 @@ const Pricing: React.FC<PricingProps> = ({ onOpenModal }) => {
             Transparent Pricing for <span className="text-[#FF6B35]">Dubai Businesses</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Aggressive pricing with AI-powered efficiency. Save 50-70% compared to traditional UAE agencies without compromising quality.
+            Fixed-price, scoped to your build, with AI-powered efficiency. Every project is quoted up front after a free discovery call, so you know the full cost before work starts.
           </p>
         </div>
 

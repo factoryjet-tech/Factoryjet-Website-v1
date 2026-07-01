@@ -448,7 +448,7 @@ export const post: BlogPost = {
         platforms charge the same base prices. The fee-free payment provider list still favors
         BigCommerce if you plan to use Stripe or PayPal. FactoryJet has built stores for small
         businesses across the US, including markets like{' '}
-        <a href="/us/nashville" className="text-[#F05A28] hover:underline">
+        <a href="/nashville" className="text-[#F05A28] hover:underline">
           Nashville
         </a>
         , and can help you run the real cost comparison for your specific setup.
@@ -487,7 +487,7 @@ export const post: BlogPost = {
       </p>
       <p className="mb-8">
         If you are choosing between platforms, or thinking about migrating, FactoryJet handles{' '}
-        <a href="/us/services/ecommerce-development" className="text-[#F05A28] hover:underline">
+        <a href="/services/ecommerce-development" className="text-[#F05A28] hover:underline">
           Shopify and custom ecommerce builds for US businesses
         </a>{' '}
         with a fixed-price quote within 24 hours. We are happy to do a free platform audit and lay

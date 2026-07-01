@@ -79,7 +79,7 @@ const faqSchema = {
       name: 'How much does an AI voice agent cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet AI voice agents start from ₹3,00,000 for a focused outbound calling use case (lead qualification or appointment booking). Full inbound + outbound platforms with Zoho CRM integration start from ₹6,00,000. Enterprise deployments with multi-language support and telephony infrastructure start from ₹12,00,000. All are fixed-price — no hourly billing surprises.',
+        text: 'Every FactoryJet AI voice agent is fixed-price and scoped to your build. Pricing depends on whether you need outbound-only calling, a full inbound and outbound platform with Zoho CRM integration, or an enterprise deployment with multi-language support and telephony infrastructure. You get a complete quote up front after a free discovery call, so you know the full cost before any work starts. No hourly billing surprises.',
       },
     },
     {
@@ -211,7 +211,7 @@ const VOICE_COMPARISON_ROWS = [
   {
     feature: 'Starting cost',
     values: [
-      '₹3,00,000 one-time',
+      'Fixed one-time price',
       '₹18,000–₹30,000/month per telecaller',
       '₹25,000–₹60,000/month (variable quality)',
       '₹50,000–₹2,00,000 (scripted only)',
@@ -489,12 +489,12 @@ const VOICE_FAQ_ITEMS = [
   {
     category: 'pricing',
     question: 'Can we run a pilot before committing to the full build?',
-    answer: "Yes. We offer a 2-week pilot covering one outbound calling campaign — 500–1,000 calls to a real lead segment. The pilot costs ₹80,000 and is credited against the full project if you proceed. You get full call recordings, transcripts, and a performance report showing qualification rate, answer rate, and CRM update accuracy. Most clients convert immediately after seeing the first 100 call transcripts.",
+    answer: "Yes. We offer a 2-week pilot covering one outbound calling campaign — 500–1,000 calls to a real lead segment. The pilot is offered at a fixed pilot price, credited against the full project if you proceed. You get full call recordings, transcripts, and a performance report showing qualification rate, answer rate, and CRM update accuracy. Most clients convert immediately after seeing the first 100 call transcripts.",
   },
   {
     category: 'pricing',
     question: 'Do you offer a maintenance retainer after delivery?',
-    answer: "Yes — an optional monthly maintenance retainer covers conversation flow tuning, new use case addition, telephony infrastructure management, and model updates. Most Full Voice AI Platform clients take a retainer at ₹20,000–₹45,000/month during the first 6 months. After that, most businesses manage independently through the admin dashboard.",
+    answer: "Yes — an optional monthly maintenance retainer covers conversation flow tuning, new use case addition, telephony infrastructure management, and model updates. The retainer is fixed-price and scoped to your build, quoted up front after a free discovery call so you know the full cost before you commit. Many Full Voice AI Platform clients take a retainer during the first 6 months, then manage independently through the admin dashboard.",
   },
 ];
 
@@ -783,7 +783,7 @@ export default function AIVoiceAgentINPage() {
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Telecaller Team vs. Call Centre vs. Basic IVR"
           lead="Fixed price, full code ownership, Hindi AI out of the box — the honest comparison."
-          pullQuote={{ stat: '₹3,00,000', caption: 'one-time — AI voice agent that calls 200 leads per day in Hindi and English, books appointments to your calendar, and updates Zoho CRM. No monthly salary, no sick leave, no turnover.' }}
+          pullQuote={{ stat: 'Fixed price', caption: 'An AI voice agent that calls 200 leads per day in Hindi and English, books appointments to your calendar, and updates Zoho CRM. No monthly salary, no sick leave, no turnover.' }}
           columns={VOICE_COMPARISON_COLUMNS}
           rows={VOICE_COMPARISON_ROWS}
           footer="Prices reflect typical Indian market rates as of 2025. Telephony costs (₹0.50–₹1.50/call) are additional and billed by Exotel/Plivo."

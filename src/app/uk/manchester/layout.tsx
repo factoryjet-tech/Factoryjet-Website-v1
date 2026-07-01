@@ -135,7 +135,7 @@ const faqSchema = {
       name: "How much does web design cost in Manchester?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Manchester web design costs vary enormously. Boutique agencies charge £1,000–£5,000 for template-based sites. Established agencies like MadeByShape or Supremo charge £5,000–£25,000 for bespoke work. FactoryJet delivers AI-native, Next.js-powered websites from £1,500–£8,000 — at a fixed, published price — with Lighthouse 90+ performance and full schema stack included.",
+        text: "Manchester web design costs vary enormously, from budget template shops to premium bespoke agencies, depending on scope and quality. FactoryJet's pricing is fixed-price and scoped to your build — the main drivers are the number of pages, e-commerce or custom functionality, and content needs. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. Lighthouse 90+ performance and a full schema stack are included as standard.",
       },
     },
     {
@@ -191,7 +191,7 @@ const faqSchema = {
       name: "Do you provide web design for startups in Manchester?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Absolutely. Manchester's startup ecosystem — from Northern Quarter tech startups to MediaCityUK media ventures — is a core market for FactoryJet. We offer startup-friendly pricing from £1,500 for a high-performance landing page, with the option to scale into a full multi-page site as your business grows.",
+        text: "Absolutely. Manchester's startup ecosystem — from Northern Quarter tech startups to MediaCityUK media ventures — is a core market for FactoryJet. We offer startup-friendly, fixed-price packages scoped to your build, often starting with a single high-performance landing page and scaling into a full multi-page site as your business grows. Every project is quoted up front after a free discovery call, so you know the full cost before work starts.",
       },
     },
     {
@@ -223,7 +223,7 @@ const faqSchema = {
       name: "How do Manchester web design prices compare to London?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "London web design agencies typically charge 30–50% more than Manchester equivalents, with custom projects ranging £10,000–£50,000+. Manchester agencies cluster at £5,000–£25,000. FactoryJet delivers at £1,500–£8,000 — below both markets — because our India-based engineering team operates at senior UK quality standards without London or Manchester overheads.",
+        text: "London web design agencies typically charge a clear premium over Manchester equivalents, and bespoke custom projects sit at the top of both markets. FactoryJet delivers below both because our India-based engineering team operates at senior UK quality standards without London or Manchester overheads. Our pricing is fixed-price and scoped to your build — quoted up front after a free discovery call, so you know the full cost before work starts.",
       },
     },
   ],

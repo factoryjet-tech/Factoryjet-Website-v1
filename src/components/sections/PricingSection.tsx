@@ -6,7 +6,7 @@ import { useContactModal } from "@/context/ContactModalContext";
 const PRICING_TIERS = [
   {
     name: "Starter",
-    price: "£799",
+    price: "Fixed-price",
     days: "5",
     desc: "Perfect for sole traders",
     features: [
@@ -20,7 +20,7 @@ const PRICING_TIERS = [
   },
   {
     name: "Business",
-    price: "£1,499",
+    price: "Fixed-price",
     days: "7",
     desc: "For established SMBs",
     features: [
@@ -36,7 +36,7 @@ const PRICING_TIERS = [
   },
   {
     name: "E-Commerce",
-    price: "£2,499",
+    price: "Fixed-price",
     days: "7",
     desc: "For online retailers",
     features: [
@@ -51,7 +51,7 @@ const PRICING_TIERS = [
   },
   {
     name: "Enterprise",
-    price: "From £4,999",
+    price: "Custom quote",
     days: "10-14",
     desc: "For complex projects",
     features: [
@@ -72,10 +72,10 @@ export default function PricingSection() {
     <section id="pricing" className="py-20 md:py-32 px-4 md:px-8 bg-[#F8F9FA]">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-[#0a0a0a] mb-4" style={{ fontFamily: "Clash Display, sans-serif" }}>
-          Transparent pricing for Sheffield businesses
+          Fixed-price plans for Sheffield businesses
         </h2>
         <p className="text-lg text-gray-600 mb-12 max-w-2xl">
-          No hidden costs. No lock-in contracts. Everything is built in.
+          No hidden costs. No lock-in contracts. Every project is scoped to your build and quoted up front after a free consultation.
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -96,7 +96,7 @@ export default function PricingSection() {
 
               <h3 className="text-2xl font-bold text-[#0a0a0a] mb-2">{tier.name}</h3>
               <div className="mb-2">
-                <span className="text-5xl font-bold text-[#0a0a0a]">{tier.price}</span>
+                <span className="text-2xl font-bold text-[#F05A28]">{tier.price}</span>
                 <span className="text-gray-500 ml-3">{tier.days} days</span>
               </div>
               <p className="text-sm text-gray-500 mb-6">{tier.desc}</p>

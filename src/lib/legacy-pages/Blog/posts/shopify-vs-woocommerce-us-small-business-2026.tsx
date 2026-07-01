@@ -168,7 +168,7 @@ export const post: BlogPost = {
         </table>
       </div>
       <p className="mb-4">
-        ➡ See pricing on both: <a href="/us/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify development</a> · <a href="/us/services/woocommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">WooCommerce development</a>
+        ➡ See pricing on both: <a href="/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify development</a> · <a href="/services/woocommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">WooCommerce development</a>
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">When Shopify Wins for US Small Businesses</h2>
@@ -208,7 +208,7 @@ export const post: BlogPost = {
         Fifth, you want full code and data ownership. WooCommerce is open-source software running on your own hosting account. If your hosting provider raises prices, you move. If you want to migrate to a different theme, you do it without paying anyone. If you stop paying for any service, you still own every customer record, product image, and line of code. Shopify is a rental — convenient, but you don't own the storefront.
       </p>
       <p className="mb-4">
-        ➡ Compare across all our ecommerce options: <a href="/us/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet ecommerce development</a>
+        ➡ Compare across all our ecommerce options: <a href="/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet ecommerce development</a>
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">The Hidden Costs Nobody Talks About</h2>
@@ -220,7 +220,7 @@ export const post: BlogPost = {
       </p>
       <p className="mb-4">
         For a full breakdown of what you actually pay across every website option — DIY builders, freelancers, and agencies — see our{' '}
-        <a href="/us/website-cost" className="text-blue-600 underline hover:text-blue-800 transition-colors">US website cost guide</a>.
+        <a href="/website-cost" className="text-blue-600 underline hover:text-blue-800 transition-colors">US website cost guide</a>.
       </p>
       <p className="mb-4">
         <strong>WooCommerce hidden costs.</strong> Hosting is where surprises live. The $5/month shared hosts that work fine for a brochure WordPress site will not run a serious WooCommerce store. Plan for managed WordPress hosting — Cloudways ($14-$50/month), Kinsta ($35-$115/month), or WP Engine ($30-$120/month) at minimum. Premium plugins also add up: Yoast SEO Premium ($99/year), WPForms ($99/year), and a backup tool like UpdraftPlus Premium ($95/year). And you need a maintenance retainer or a developer on call for security updates and plugin conflicts — budget $99-$249/month or accept that something will eventually break at 2 AM.
@@ -262,7 +262,7 @@ export const post: BlogPost = {
         For both platforms, every build ships with the same technical foundation: Lighthouse 100/100, WCAG 2.2 Level AA accessibility, Product JSON-LD schema for Google Shopping rich results, Core Web Vitals optimization, GA4 and Search Console configured, and full code and data ownership transferred to you at final payment. No vendor lock-in on our side either — you can move to any agency or in-house team afterward.
       </p>
       <p className="mb-4">
-        ➡ See pricing for both platforms: <a href="/us/pricing" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet US pricing</a> · <a href="/us/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">All ecommerce options</a> · <a href="/blog/shopify-vs-custom-website-us-small-business-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify vs custom website: which platform for your business</a>
+        ➡ See pricing for both platforms: <a href="/pricing" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet US pricing</a> · <a href="/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">All ecommerce options</a> · <a href="/blog/shopify-vs-custom-website-us-small-business-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify vs custom website: which platform for your business</a>
       </p>
 
       <div className="my-12 rounded-2xl bg-[#0052CC] p-8 sm:p-10 text-center not-prose">

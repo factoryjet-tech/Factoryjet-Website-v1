@@ -99,7 +99,7 @@ const faqSchema = {
       name: 'How long does it take to launch a Hyderabad ecommerce store?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet delivers standard Shopify and WooCommerce stores in 7 business days for Starter and Growth builds. Day 1 is a discovery call to finalise your catalogue, payment preferences, and logistics setup. Days 2–3 are Figma design and mockup approval. Days 3–5 are development and integration. Day 6 is QA and Lighthouse testing. Day 7 is launch. Custom platform and marketplace builds (₹1,99,999+) take 8–16 weeks depending on scope.',
+        text: 'FactoryJet delivers standard Shopify and WooCommerce stores in 7 business days for Starter and Growth builds. Day 1 is a discovery call to finalise your catalogue, payment preferences, and logistics setup. Days 2–3 are Figma design and mockup approval. Days 3–5 are development and integration. Day 6 is QA and Lighthouse testing. Day 7 is launch. Custom platform and marketplace builds take longer, usually 8 to 16 weeks depending on scope.',
       },
     },
     {
@@ -107,7 +107,7 @@ const faqSchema = {
       name: 'How much does ecommerce development cost in Hyderabad?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet's ecommerce development starts at ₹59,999 for a Shopify or WooCommerce store — custom-designed in Figma, Razorpay and UPI integrated, GST-compliant invoicing, Shiprocket shipping, and full product catalogue import. Growth stores with subscription logic, B2B pricing, or omnichannel integrations start at ₹99,999. Custom platforms, multi-vendor marketplaces, and quick-commerce apps start at ₹1,99,999. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.",
+        text: "FactoryJet ecommerce projects are fixed-price and scoped to your build. The main cost drivers are your platform (Shopify or WooCommerce vs a custom build), number of products, the payment and shipping integrations you need, and any custom features like subscriptions or B2B pricing. Every project is quoted up front after a free discovery call, so you know the full cost before any work starts. The price is fixed and confirmed in writing — no hourly billing and no scope creep.",
       },
     },
     {
@@ -169,7 +169,7 @@ const serviceSchema = {
     '@id': 'https://www.wikidata.org/wiki/Q1361',
   },
   description:
-    'Custom ecommerce development for Hyderabad businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and custom stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+. Starting at ₹59,999.',
+    'Custom ecommerce development for Hyderabad businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and custom stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+.',
 };
 
 const localBusinessSchema = {
@@ -260,13 +260,13 @@ const HYDERABAD_ECOM_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How long does it take to launch a Hyderabad ecommerce store?',
     answer:
-      'FactoryJet delivers standard Shopify and WooCommerce stores in 7 business days for Starter and Growth builds. Day 1 is a discovery call to finalise your catalogue, payment preferences, and logistics setup. Days 2–3 are Figma design and mockup approval. Days 3–5 are development and integration. Day 6 is QA and Lighthouse testing. Day 7 is launch. Custom platform and marketplace builds (₹1,99,999+) take 8–16 weeks depending on scope.',
+      'FactoryJet delivers standard Shopify and WooCommerce stores in 7 business days for Starter and Growth builds. Day 1 is a discovery call to finalise your catalogue, payment preferences, and logistics setup. Days 2–3 are Figma design and mockup approval. Days 3–5 are development and integration. Day 6 is QA and Lighthouse testing. Day 7 is launch. Custom platform and marketplace builds take longer, usually 8 to 16 weeks depending on scope.',
   },
   {
     category: 'pricing',
     question: 'How much does ecommerce development cost in Hyderabad?',
     answer:
-      "FactoryJet's ecommerce development starts at ₹59,999 for a Shopify or WooCommerce store — custom-designed in Figma, Razorpay and UPI integrated, GST-compliant invoicing, Shiprocket shipping, and full product catalogue import. Growth stores with subscription logic, B2B pricing, or omnichannel integrations start at ₹99,999. Custom platforms, multi-vendor marketplaces, and quick-commerce apps start at ₹1,99,999. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.",
+      "FactoryJet ecommerce projects are fixed-price and scoped to your build. The main cost drivers are your platform (Shopify or WooCommerce vs a custom build), number of products, the payment and shipping integrations you need, and any custom features like subscriptions or B2B pricing. Every project is quoted up front after a free discovery call, so you know the full cost before any work starts. The price is fixed and confirmed in writing — no hourly billing and no scope creep.",
   },
   {
     category: 'pricing',
@@ -356,7 +356,7 @@ const HYDERABAD_ECOM_FAQ_ITEMS = [
     category: 'seo',
     question: 'Can you optimise an existing Hyderabad store that is already slow?',
     answer:
-      'Yes — we offer a standalone Speed & SEO Audit + Fix package starting at ₹12,999. We diagnose all Lighthouse failures, compress and convert your image library to WebP, remove render-blocking resources, fix CLS issues from unloaded fonts or images, and migrate your hosting to Cloudflare if needed. Most stores see a 30–60 point Lighthouse improvement within one sprint. We issue a written commitment: if we do not reach Lighthouse 90+ overall, we continue working at no additional charge.',
+      'Yes — we offer a standalone Speed & SEO Audit + Fix package. We diagnose all Lighthouse failures, compress and convert your image library to WebP, remove render-blocking resources, fix CLS issues from unloaded fonts or images, and migrate your hosting to Cloudflare if needed. Most stores see a 30–60 point Lighthouse improvement within one sprint. We issue a written commitment: if we do not reach Lighthouse 90+ overall, we continue working at no additional charge.',
   },
 
   /* ── Process & Ownership ── */
@@ -376,7 +376,7 @@ const HYDERABAD_ECOM_FAQ_ITEMS = [
     category: 'trust',
     question: 'Do you offer post-launch maintenance for Hyderabad stores?',
     answer:
-      'Yes. Our Care Plan (₹9,999/month) covers plugin and platform updates, monthly Lighthouse audit and performance fixes, uptime monitoring, 4 hours of content or feature changes per month, and priority support with a 4-hour response SLA. Our Growth Retainer (₹19,999/month) adds monthly A/B tests, conversion optimisation, and new campaign landing pages. Both are month-to-month with no lock-in.',
+      'Yes. Our Care Plan covers plugin and platform updates, a monthly Lighthouse audit and performance fixes, uptime monitoring, a few hours of content or feature changes each month, and priority support with a 4-hour response SLA. Our Growth Retainer adds monthly A/B tests, conversion optimization, and new campaign landing pages. Both are month-to-month with no lock-in, and we share the exact monthly price on your free call.',
   },
   {
     category: 'trust',
@@ -567,12 +567,12 @@ export default function HyderabadEcommercePage() {
               </div>
               <div className="divide-y divide-fj-neutral-100 px-7">
                 {[
-                  { platform: 'Shopify', best: 'DTC brands, fashion, beauty, fast launch', starting: '₹59,999' },
-                  { platform: 'WooCommerce', best: 'WordPress-first, content-commerce', starting: '₹59,999' },
-                  { platform: 'Shopify Plus', best: 'Scale, B2B wholesale, custom checkout', starting: '₹1,99,999' },
-                  { platform: 'Headless Next.js', best: 'Performance-critical, custom UX', starting: '₹1,99,999' },
-                  { platform: 'Multi-Vendor Marketplace', best: 'Aggregator model, multi-seller', starting: '₹5,00,000' },
-                  { platform: 'Quick Commerce App', best: 'Sub-30-min delivery, dark stores', starting: '₹3,00,000' },
+                  { platform: 'Shopify', best: 'DTC brands, fashion, beauty, fast launch', starting: 'Fast launch' },
+                  { platform: 'WooCommerce', best: 'WordPress-first, content-commerce', starting: 'WordPress-first' },
+                  { platform: 'Shopify Plus', best: 'Scale, B2B wholesale, custom checkout', starting: 'Scale & B2B' },
+                  { platform: 'Headless Next.js', best: 'Performance-critical, custom UX', starting: 'Max performance' },
+                  { platform: 'Multi-Vendor Marketplace', best: 'Aggregator model, multi-seller', starting: 'Multi-seller' },
+                  { platform: 'Quick Commerce App', best: 'Sub-30-min delivery, dark stores', starting: 'Dark-store ready' },
                 ].map((item) => (
                   <div key={item.platform} className="py-3.5">
                     <div className="flex items-center justify-between gap-4">
@@ -612,7 +612,7 @@ export default function HyderabadEcommercePage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Hyderabad Brands Choose FactoryJet Over Local Agencies"
-          lead="Hyderabad ecommerce agencies typically charge ₹2,00,000–₹10,00,000 for a comparable project and take 10–20 weeks to deliver — without publishing their pricing upfront. FactoryJet publishes all three tiers before you speak to us, guarantees 7-day delivery in writing, and builds to Lighthouse 90+ on mobile. All at a fixed, published price — with the codebase yours to keep."
+          lead="Hyderabad ecommerce agencies often charge several times more for a comparable project and take 10 to 20 weeks to deliver, usually without telling you the price upfront. FactoryJet gives you a fixed quote before you speak to us, guarantees 7-day delivery in writing, and builds to Lighthouse 90+ on mobile. The price is fixed and confirmed in writing, and the codebase is yours to keep."
           pillars={[
             {
               icon: '⚡',

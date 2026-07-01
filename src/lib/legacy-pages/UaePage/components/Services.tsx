@@ -4,7 +4,7 @@ import { Smartphone, BarChart, ShoppingCart, Settings, Globe, Layers, Code, Chec
 const services = [
   {
     title: "WordPress Development",
-    priceRange: "AED 9,999 - AED 25,000",
+    priceNote: "Fixed-price, scoped to your build",
     description: "As a leading WordPress design agency, we build sites that power 43% of the web. Perfect for businesses needing a robust CMS. We are the wordpress website design company of choice for content-rich sites.",
     bestFor: "SMBs, content-heavy sites, blogging businesses",
     features: ["Custom themes", "Plugin integration", "SEO optimization", "Blog management", "E-commerce (WooCommerce)"],
@@ -15,7 +15,7 @@ const services = [
   },
   {
     title: "Shopify Website Design",
-    priceRange: "AED 15,000 - AED 35,000",
+    priceNote: "Fixed-price, scoped to your build",
     description: "Our shopify web design agency services create high-converting stores. Whether you need a shopify web designer or a full shopify website development team, we deliver sales-focused results.",
     bestFor: "E-commerce brands, Retailers, Dropshipping",
     features: ["Custom Store Design", "App Integration", "Payment Gateway Setup", "Conversion Optimization"],
@@ -26,7 +26,7 @@ const services = [
   },
   {
     title: "Framer & Webflow",
-    priceRange: "AED 15,000 - AED 40,000",
+    priceNote: "Fixed-price, scoped to your build",
     description: "Looking for a creative website design? We are experts in Framer and Webflow. Ideal for startups wanting unique, interactive, and award-winning visuals without the bloat.",
     bestFor: "Tech startups, interactive experiences, modern brands",
     features: ["Component-based", "AI tools", "Real-time collaboration", "React foundation"],
@@ -37,7 +37,7 @@ const services = [
   },
   {
     title: "Custom Development",
-    priceRange: "AED 50,000+",
+    priceNote: "Fixed-price, scoped to your build",
     description: "For enterprise needs, our custom web development services utilize React, Next.js, and Python. We are the custom web development company for scalable, secure applications.",
     bestFor: "Complex applications, unique requirements, high-traffic sites",
     features: ["Complete customization", "Proprietary features", "Built to scale with your business"],
@@ -84,8 +84,11 @@ const Services: React.FC = () => {
               <div className="p-8 flex-grow flex flex-col relative z-10">
                 <div className="mb-6">
                   <h3 className="text-2xl font-bold text-navy mb-3">{service.title}</h3>
-                  <p className="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary mb-5">
-                    {service.priceRange}
+                  <p className="text-base font-bold text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary mb-2">
+                    {service.priceNote}
+                  </p>
+                  <p className="text-sm text-gray-500 mb-5">
+                    Every project is quoted up front after a free discovery call, so you know the full cost before work begins.
                   </p>
                   
                   {/* Best For Pill */}

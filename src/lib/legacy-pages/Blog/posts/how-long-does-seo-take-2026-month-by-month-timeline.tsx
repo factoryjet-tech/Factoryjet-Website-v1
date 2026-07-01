@@ -501,17 +501,17 @@ export const post: BlogPost = {
           <strong>No Google Business Profile for local businesses.</strong> Local queries almost
           always trigger Map Pack results above organic listings. Without a claimed, optimized GBP,
           local SEO timelines extend by months. If you are a Cleveland-area business,{' '}
-          <a href="/us/cleveland/seo">our Cleveland local SEO services</a> cover full GBP
+          <a href="/cleveland/seo">our Cleveland local SEO services</a> cover full GBP
           optimization as part of every monthly engagement. The same applies in{' '}
-          <a href="/us/nashville/seo">Nashville</a> and{' '}
-          <a href="/us/charlotte/seo">Charlotte</a>.
+          <a href="/nashville/seo">Nashville</a> and{' '}
+          <a href="/charlotte/seo">Charlotte</a>.
         </li>
         <li>
           <strong>Skipping technical foundations on e-commerce stores.</strong> Shopify and
           WooCommerce stores without JSON-LD schema, with duplicate product descriptions, or
           missing canonical tags consistently take 3–4 extra months to rank. E-commerce
           businesses in competitive markets — including outdoor brands and manufacturers in{' '}
-          <a href="/us/chattanooga/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">
+          <a href="/chattanooga/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">
             Chattanooga
           </a>{' '}
           — get the fastest SEO traction when structured data, clean URL architecture, and

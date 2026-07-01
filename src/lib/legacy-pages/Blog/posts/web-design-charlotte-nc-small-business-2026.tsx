@@ -160,7 +160,7 @@ export const post: BlogPost = {
         FactoryJet delivers custom-built Charlotte NC small business websites in 7 days starting at $1,999. Every project includes: Next.js or WordPress custom build (no purchased templates), Lighthouse 100/100 across all four metrics, WCAG 2.2 Level AA accessibility compliance, full technical SEO (schema markup, XML sitemap, meta tags, Core Web Vitals optimization), US business-hour project management, US-governed contracts, and full code ownership transferred at final payment.
       </p>
       <p className="mb-4">
-        ➡ <a href="/us/web-design/charlotte-nc" className="text-blue-600 underline hover:text-blue-800 transition-colors">See Charlotte web design packages</a> · <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free quote in 24 hours</a>
+        ➡ <a href="/web-design/charlotte-nc" className="text-blue-600 underline hover:text-blue-800 transition-colors">See Charlotte web design packages</a> · <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free quote in 24 hours</a>
       </p>
 
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8">

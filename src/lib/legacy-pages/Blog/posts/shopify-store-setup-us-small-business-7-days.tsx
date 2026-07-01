@@ -150,7 +150,7 @@ export const post: BlogPost = {
       </p>
       <p className="mb-4">
         ➡ Learn more:{' '}
-        <a href="/us/services/ecommerce" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet Shopify development services</a>{' '}
+        <a href="/services/ecommerce" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet Shopify development services</a>{' '}
         · Not sure if Shopify is right for your business? See our{' '}
         <a href="/blog/shopify-vs-woocommerce-us-small-business-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify vs WooCommerce comparison</a>{' '}
         and{' '}
@@ -163,7 +163,7 @@ export const post: BlogPost = {
       </p>
       <p className="mb-4">
         We serve US small businesses coast to coast — from outdoor brands and manufacturers in{' '}
-        <a href="/us/chattanooga/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">
+        <a href="/chattanooga/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">
           Chattanooga, TN
         </a>{' '}
         to DTC brands launching their first store. Every build includes Tennessee sales tax
@@ -171,7 +171,7 @@ export const post: BlogPost = {
         extra charge for getting the details right.
       </p>
       <p className="mb-4">
-        ➡ <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free Shopify quote with delivery in 24 hours</a> · <a href="/us/services/ecommerce" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our Shopify packages</a>
+        ➡ <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free Shopify quote with delivery in 24 hours</a> · <a href="/services/ecommerce" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our Shopify packages</a>
       </p>
 
       <div className="bg-green-50 border border-green-200 rounded-lg p-6 mt-8">

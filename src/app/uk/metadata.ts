@@ -14,7 +14,7 @@ export const ukMetadata: Metadata = {
     canonical: "https://factoryjet.com/uk",
     languages: {
       "en-GB": "https://factoryjet.com/uk",
-      "en-US": "https://factoryjet.com/us",
+      "en-US": "https://factoryjet.com",
       "en-IN": "https://factoryjet.com",
       "en-AE": "https://factoryjet.com/uae",
       "en-AU": "https://factoryjet.com/au",

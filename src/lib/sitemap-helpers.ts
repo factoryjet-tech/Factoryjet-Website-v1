@@ -30,7 +30,10 @@ export function getFileLastMod(relativePath: string): Date {
     return lastModCache.get(relativePath)!
   }
 
-  const absPath = path.join(REPO_ROOT, relativePath)
+  // turbopackIgnore prevents Turbopack from statically tracing this dynamic
+  // path.join and over-bundling the whole project into the sitemap route
+  // (build-time-only fs/git read; static-export safe).
+  const absPath = path.join(/* turbopackIgnore: true */ REPO_ROOT, relativePath)
 
   if (!existsSync(absPath)) {
     lastModCache.set(relativePath, FALLBACK_DATE)

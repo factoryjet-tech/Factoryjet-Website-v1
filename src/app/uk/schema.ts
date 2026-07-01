@@ -91,11 +91,11 @@ const services = [
 const faqPairs: Array<{ q: string; a: string }> = [
   {
     q: "How much does a website cost in the UK in 2026?",
-    a: "UK website costs vary significantly. Basic template websites cost £500–£2,500. Standard business websites from agencies run £3,000–£12,000. Custom-built sites on modern frameworks range from £10,000–£50,000, and enterprise projects can exceed £100,000. FactoryJet delivers professional, custom-built websites on Next.js 15 starting from £1,500, with most projects falling in the £2,000–£8,000 range — at a fixed, published price for comparable or superior quality. For UK business owners, remember that website design and development is a legitimate business expense for HMRC purposes, which can reduce the effective cost by 19–25% depending on your tax bracket.",
+    a: "UK website costs vary significantly with scope, from basic template sites to enterprise builds. FactoryJet pricing is fixed-price and scoped to your build — the main drivers are page count, custom design depth, and integrations. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. For UK business owners, remember that website design and development is a legitimate business expense for HMRC purposes, which can reduce the effective cost by 19–25% depending on your tax bracket.",
   },
   {
     q: "What is the best website design company in the UK?",
-    a: "The best website design company depends on your specific needs and budget. Large agencies like Pentagram and Moving Brands serve enterprise clients at premium rates. Mid-market agencies charge £8,000–£25,000 per project. FactoryJet occupies a unique position as the UK’s AI-native web design agency — delivering enterprise-grade quality on the same technology stack as Stripe and Vercel (Next.js 15, Tailwind CSS 4) at a fixed, published price. Every site we build scores 90+ on Google Lighthouse and is optimised for both Google and AI search engines from day one.",
+    a: "The best website design company depends on your specific needs and budget. Large agencies serve enterprise clients at premium rates, and mid-market agencies sit somewhere below that. FactoryJet occupies a unique position as the UK’s AI-native web design agency — delivering enterprise-grade quality on the same technology stack as Stripe and Vercel (Next.js 15, Tailwind CSS 4) at a fixed, scoped price quoted up front. Every site we build scores 90+ on Google Lighthouse and is optimised for both Google and AI search engines from day one.",
   },
   {
     q: "How long does it take to build a website in the UK?",
@@ -111,7 +111,7 @@ const faqPairs: Array<{ q: string; a: string }> = [
   },
   {
     q: "Can I claim web design as a business expense in the UK?",
-    a: "Yes. Website design, development, hosting, domain registration, SEO, AI agent development, and ongoing digital marketing are all legitimate business expenses in the UK. For limited companies, these reduce your corporation tax liability at the current rate of 19–25%. For sole traders, they reduce your income tax. This means the effective cost of a £5,000 website project could be as low as £3,750–£4,050 after tax relief. AI agent development and ongoing SaaS-style costs are also fully deductible. Consult your accountant for advice specific to your situation.",
+    a: "Yes. Website design, development, hosting, domain registration, SEO, AI agent development, and ongoing digital marketing are all legitimate business expenses in the UK. For limited companies, these reduce your corporation tax liability at the current rate of 19–25%. For sole traders, they reduce your income tax. In practice this means tax relief lowers the effective cost of a project by 19–25% after the deduction. AI agent development and ongoing SaaS-style costs are also fully deductible. Consult your accountant for advice specific to your situation.",
   },
   {
     q: "What is Next.js and why should my UK business use it?",
@@ -119,11 +119,11 @@ const faqPairs: Array<{ q: string; a: string }> = [
   },
   {
     q: "Shopify vs WooCommerce — which is better for UK businesses in 2026?",
-    a: "Both are excellent platforms serving different needs. Shopify (5.8 million live sites globally) is better for businesses that want simplicity, reliability, and managed infrastructure — hosting, security, and payments work out of the box. UK Shopify plans start from £5–£344 per month with card processing at 1.5–2.2% plus 25p. WooCommerce (4.5 million live sites) is better for businesses needing deep customisation who are comfortable managing their own hosting. For most UK SMBs launching their first online store, we typically recommend Shopify for lower maintenance overhead. For businesses with complex product configurations, multiple integrations, or existing WordPress sites, WooCommerce offers more flexibility. We build on both and recommend based on your actual business needs, not our preferred platform.",
+    a: "Both are excellent platforms serving different needs. Shopify (5.8 million live sites globally) is better for businesses that want simplicity, reliability, and managed infrastructure — hosting, security, and payments work out of the box, on a tiered monthly subscription plus standard card-processing fees. WooCommerce (4.5 million live sites) is better for businesses needing deep customisation who are comfortable managing their own hosting. For most UK SMBs launching their first online store, we typically recommend Shopify for lower maintenance overhead. For businesses with complex product configurations, multiple integrations, or existing WordPress sites, WooCommerce offers more flexibility. We build on both and recommend based on your actual business needs, not our preferred platform.",
   },
   {
     q: "How much does an e-commerce website cost in the UK?",
-    a: "UK e-commerce website costs range from £2,000 for a basic Shopify store to £50,000+ for enterprise custom builds. The average UK Shopify agency charges £8,000–£15,000 for a professional store. FactoryJet delivers Shopify and WooCommerce stores starting from £2,000, with most projects in the £3,000–£10,000 range — at a fixed, published price. Every build includes UK payment gateway integration (Stripe, PayPal, Klarna, Apple Pay), Royal Mail and DPD shipping configuration, and e-commerce SEO.",
+    a: "UK e-commerce website costs vary widely, from a basic Shopify store to a large enterprise custom build. FactoryJet delivers Shopify and WooCommerce stores at a fixed price scoped to your build — the main drivers are catalogue size, theme customisation, and the integrations you need. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. Every build includes UK payment gateway integration (Stripe, PayPal, Klarna, Apple Pay), Royal Mail and DPD shipping configuration, and e-commerce SEO.",
   },
   {
     q: "How do I start an online store in the UK?",
@@ -143,7 +143,7 @@ const faqPairs: Array<{ q: string; a: string }> = [
   },
   {
     q: "How much does it cost to build an AI agent in the UK?",
-    a: "Costs vary significantly based on complexity. Simple FAQ chatbots using template platforms cost £0–£2,000 per month. Custom AI agents with natural language understanding, CRM integration, and autonomous decision-making typically cost £5,000–£60,000+ for development. Enterprise-grade multi-agent systems with complex integrations can exceed £100,000. FactoryJet’s custom AI agent development starts from £3,000 for a focused single-function agent, making professional AI accessible to UK SMBs. Most clients see ROI within three to six months through reduced staffing costs, 24/7 availability, and automated handling of routine interactions.",
+    a: "Costs vary significantly based on complexity, from simple template FAQ chatbots through to enterprise-grade multi-agent systems with complex integrations. FactoryJet’s custom AI agent development is fixed-price and scoped to your build — the main drivers are the number of integrations, the level of autonomy, and workflow complexity. A focused single-function agent is an accessible entry point for UK SMBs, and every project is quoted up front after a free discovery call. Most clients see ROI within three to six months through reduced staffing costs, 24/7 availability, and automated handling of routine interactions.",
   },
   {
     q: "What is agentic AI and why is everyone talking about it?",
@@ -175,7 +175,7 @@ const faqPairs: Array<{ q: string; a: string }> = [
   },
   {
     q: "How much does SEO cost in the UK?",
-    a: "UK SEO pricing varies widely. Freelance SEO consultants charge £300–£800 per month. Mid-range agencies charge £1,500–£3,000 per month. Enterprise SEO from large agencies runs £5,000–£15,000+ per month. FactoryJet’s monthly SEO retainer starts from £500 per month for traditional SEO combined with AI SEO (GEO/AEO/AIO). Our AI SEO-only service — covering generative engine optimisation, answer engine optimisation, and AI visibility — starts from £500 per month, a service that almost no other traditional agency offers at any price.",
+    a: "UK SEO pricing varies widely, from freelance consultants through to enterprise retainers from large agencies. FactoryJet’s monthly SEO retainer is a fixed price scoped to your goals — combining traditional SEO with AI SEO (GEO/AEO/AIO). The main drivers are your competition, target keywords, and content volume, and every retainer is quoted up front and runs month-to-month. We also offer an AI SEO-only service covering generative engine optimisation, answer engine optimisation, and AI visibility — a service that almost no other traditional agency offers at any price.",
   },
   {
     q: "What is llms.txt and do I need it?",
@@ -199,7 +199,7 @@ const faqPairs: Array<{ q: string; a: string }> = [
   },
   {
     q: "How do I get started with FactoryJet?",
-    a: "Start with a free digital audit. We analyse your current website, search visibility across Google and AI platforms, competitor positioning, and growth opportunities. The audit takes 48 hours to complete and includes specific, actionable recommendations. From there, we provide a custom proposal with transparent pricing, clear deliverables, and a realistic timeline. No obligation, no high-pressure sales. Contact us via WhatsApp at +44 (0) 9699 977 699 or email connect@factoryjet.com to begin.",
+    a: "Start with a free digital audit. We analyse your current website, search visibility across Google and AI platforms, competitor positioning, and growth opportunities. The audit takes 48 hours to complete and includes specific, actionable recommendations. From there, we provide a custom proposal with transparent, fixed-price quoting, clear deliverables, and a realistic timeline. No obligation, no high-pressure sales. Contact us via WhatsApp at +44 (0) 9699 977 699 or email connect@factoryjet.com to begin.",
   },
 ];
 

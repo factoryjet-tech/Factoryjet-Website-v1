@@ -11,7 +11,7 @@ import { gsap, ScrollTrigger } from "@/lib/gsap";
 const FAQS = [
   {
     q: "How much does web design cost in Birmingham?",
-    a: "Most Birmingham web agencies charge between £4,800 and £18,000 for a professional business website, with e-commerce projects running from £6,500 to £35,000. Factors that push prices up include bespoke functionality, complex integrations, and the agency's studio overhead — agencies in the Jewellery Quarter, Brindleyplace, or the Mailbox area typically carry higher costs than remote-first agencies. FactoryJet builds professional Next.js and WordPress websites from £1,995 (5-page business site) to £7,500+ (full custom builds), with Shopify stores from £2,995. We provide itemised quotes within 24 hours, free of charge, with no discovery phase required.",
+    a: "Most Birmingham agencies price by studio overhead and project complexity, so quotes vary widely from one studio to the next. Factors that push prices up include bespoke functionality, complex integrations, and the agency's studio overhead — agencies in the Jewellery Quarter, Brindleyplace, or the Mailbox area typically carry higher costs than remote-first agencies. At FactoryJet, pricing is fixed and scoped to your build — the main drivers are page count, design depth, integrations, and catalogue size for e-commerce. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. We provide itemised quotes within 24 hours, free of charge, with no discovery phase required.",
   },
   {
     q: "What's the best web design agency in Birmingham for manufacturers and industrial businesses?",
@@ -31,7 +31,7 @@ const FAQS = [
   },
   {
     q: "What's the difference between FactoryJet and agencies like KIJO, Opace, or ALT Agency in Birmingham?",
-    a: "KIJO, Opace, ALT Agency, and Republic Marketing are all established Birmingham agencies with strong track records in their niches. The key differences with FactoryJet are: (1) Technology stack — we build in Next.js 15, the same framework used by global SaaS companies, while most Birmingham agencies default to WordPress or Squarespace. (2) AI capability — we build multi-agent AI systems and AI SEO architectures; no Birmingham agency currently offers this at production grade. (3) Pricing — our remote-first model means 50–60% lower overhead, directly reflected in client pricing. (4) Speed — our builds take 3–6 weeks versus the 8–16 weeks standard for Birmingham studio agencies.",
+    a: "KIJO, Opace, ALT Agency, and Republic Marketing are all established Birmingham agencies with strong track records in their niches. The key differences with FactoryJet are: (1) Technology stack — we build in Next.js 15, the same framework used by global SaaS companies, while most Birmingham agencies default to WordPress or Squarespace. (2) AI capability — we build multi-agent AI systems and AI SEO architectures; no Birmingham agency currently offers this at production grade. (3) Pricing — our remote-first model means lower overhead, directly reflected in fixed quotes scoped to your build. (4) Speed — our builds take 3–6 weeks versus the 8–16 weeks standard for Birmingham studio agencies.",
   },
   {
     q: "Do you build Shopify Plus stores for Birmingham businesses?",
@@ -51,11 +51,11 @@ const FAQS = [
   },
   {
     q: "What is headless commerce and is it right for my Birmingham B2B business?",
-    a: "Headless commerce separates the front-end (what your customers see) from the back-end commerce platform (Shopify, WooCommerce, or custom). The front end is built in Next.js for speed, full design control, and seamless API integrations — while the back end handles orders, inventory, and payments. For Birmingham B2B businesses — particularly in manufacturing, wholesale, and professional supplies — headless commerce enables trade portals with customer-specific pricing, account-based checkout flows, integration with ERP systems like SAP or Sage, and Lighthouse Performance scores above 90. It costs more upfront than a standard Shopify theme (£7,500–£14,000 vs £2,995–£4,995) but pays back in conversion rate and operational efficiency within 12–18 months.",
+    a: "Headless commerce separates the front-end (what your customers see) from the back-end commerce platform (Shopify, WooCommerce, or custom). The front end is built in Next.js for speed, full design control, and seamless API integrations — while the back end handles orders, inventory, and payments. For Birmingham B2B businesses — particularly in manufacturing, wholesale, and professional supplies — headless commerce enables trade portals with customer-specific pricing, account-based checkout flows, integration with ERP systems like SAP or Sage, and Lighthouse Performance scores above 90. It costs more upfront than a standard Shopify theme, but pays back in conversion rate and operational efficiency within 12–18 months.",
   },
   {
     q: "How quickly can you build a website for my Birmingham business?",
-    a: "A standard 5-page business website takes 3–4 weeks from brief to launch. A Shopify e-commerce store takes 4–6 weeks. A custom Next.js build with bespoke functionality takes 6–10 weeks. AI agent deployments take 4–8 weeks depending on integration complexity. These timelines assume you have your brand assets (logo, colours, photography) ready. We offer express 2-week delivery for simple business sites (additional £500 surcharge). For context, Birmingham studio agencies typically quote 8–14 weeks for equivalent projects. Every site ships with a Lighthouse SEO score of 100 guaranteed.",
+    a: "A standard 5-page business website takes 3–4 weeks from brief to launch. A Shopify e-commerce store takes 4–6 weeks. A custom Next.js build with bespoke functionality takes 6–10 weeks. AI agent deployments take 4–8 weeks depending on integration complexity. These timelines assume you have your brand assets (logo, colours, photography) ready. We offer express 2-week delivery for simple business sites for a small surcharge. For context, Birmingham studio agencies typically quote 8–14 weeks for equivalent projects. Every site ships with a Lighthouse SEO score of 100 guaranteed.",
   },
 ];
 

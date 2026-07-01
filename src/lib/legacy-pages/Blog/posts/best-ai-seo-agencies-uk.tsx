@@ -265,7 +265,7 @@ export const post: BlogPost = {
         terms, and engineers — not account managers — running the work. Where competitors beat us:
         if you&apos;re a FTSE-250 consumer brand wanting a London boardroom presence, Found or
         Brainlabs-scale agencies are a better cultural fit. We&apos;re honest about that.{' '}
-        <a href="/us/services/ai-seo" className="text-orange-600 underline">See our AI SEO service →</a>
+        <a href="/services/ai-seo" className="text-orange-600 underline">See our AI SEO service →</a>
       </p>
 
       <h3 className="text-xl font-bold mt-6 mb-3">2. Found — best for enterprise consumer brands</h3>

@@ -27,7 +27,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'Web Design Company in Bhubaneswar | | FactoryJet',
   description:
-    'Web design company in Bhubaneswar for IT firms, government contractors & Odisha businesses. Fast websites from ₹29,999. 7-day delivery. Serving Infocity IT Park, STPI & Startup Odisha ecosystem.',
+    'Web design company in Bhubaneswar for IT firms, government contractors & Odisha businesses. Fast, custom websites with a 7-day delivery guarantee. Serving Infocity IT Park, STPI & Startup Odisha ecosystem.',
   keywords: [
     'web design company in Bhubaneswar',
     'website design Bhubaneswar',
@@ -155,7 +155,7 @@ const faqSchema = {
       name: 'How much does a website cost for a business in Bhubaneswar?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet's web design for Bhubaneswar businesses starts at ₹29,999 for a 5-page Starter site. The Growth tier (₹80,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds start at ₹1,50,000. Bhubaneswar agency rates for comparable scope typically run ₹70,000–₹2,00,000.",
+        text: "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
       },
     },
     {
@@ -255,7 +255,7 @@ const BBSR_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a website cost for a business in Bhubaneswar?',
     answer:
-      "FactoryJet's web design for Bhubaneswar businesses starts at ₹29,999 for a 5-page Starter site. The Growth tier (₹80,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds start at ₹1,50,000. Bhubaneswar agency rates for comparable scope typically run ₹70,000–₹2,00,000.",
+      "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
   },
   {
     category: 'pricing',
@@ -351,7 +351,7 @@ const BBSR_FAQ_ITEMS = [
     category: 'local',
     question: 'How does FactoryJet compare to Bhubaneswar web agencies?',
     answer:
-      "Bhubaneswar web agencies typically charge ₹70,000–₹2,00,000 for a comparable project and deliver in 6–14 weeks. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at a fixed, published price.",
+      "Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright.",
   },
   {
     category: 'local',
@@ -371,7 +371,7 @@ const BBSR_FAQ_ITEMS = [
     category: 'support',
     question: 'What support do you provide after launch?',
     answer:
-      'Every project includes a 30-day post-launch support window covering bug fixes and minor adjustments at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans from ₹4,999/month.',
+      'Every project includes a 30-day post-launch support window covering bug fixes and minor adjustments at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans covering development changes, priority same-day bug response, and a dedicated engineer who knows your codebase.',
   },
   {
     category: 'support',
@@ -383,7 +383,7 @@ const BBSR_FAQ_ITEMS = [
     category: 'support',
     question: 'Do you offer ongoing retainer services for Bhubaneswar businesses?',
     answer:
-      'Yes. Monthly retainers from ₹4,999/month cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling and a dedicated engineer.',
+      'Yes. Monthly retainers cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling and a dedicated engineer.',
   },
   {
     category: 'support',
@@ -415,10 +415,6 @@ const BBSR_COMPARISON_COLUMNS = [
 ] as const;
 
 const BBSR_COMPARISON_ROWS = [
-  {
-    feature: 'Starting price',
-    values: ['Get a Quote', '₹70,000–₹2,00,000', '₹10,000–₹60,000', '₹0–₹15,000 (you build it)'],
-  },
   {
     feature: 'Delivery timeline',
     values: ['7 days', '6–14 weeks', '3–12 weeks (unreliable)', '1–2 weeks (you build it)'],
@@ -503,11 +499,6 @@ const howToSchema = {
   '@id': `https://factoryjet.com/web-design/bhubaneswar#howto`,
   name: `How FactoryJet builds your Bhubaneswar website in 7 days`,
   description: `Our 7-day process for delivering a professional, AI-powered website for Bhubaneswar businesses.`,
-  estimatedCost: {
-    '@type': 'MonetaryAmount',
-    currency: 'INR',
-    minValue: '29999',
-  },
   totalTime: 'P7D',
   step: [
     {
@@ -596,7 +587,7 @@ export default function BhubaneswarWebDesignPage() {
         formSlot={<HeroInlineForm region="in" source="web_design_bhubaneswar_hero" />}
           eyebrow="WEB DESIGN · BHUBANESWAR"
           headline="Website Design in Bhubaneswar for IT Companies, Odisha Startups, and Growing Businesses"
-          lead="Bhubaneswar is Eastern India's fastest-growing IT hub — India's first planned Smart City, home to Infocity IT Park (Infosys, TCS, Wipro, Mindtree), STPI Bhubaneswar, 1,500+ registered startups, and one of India's most tech-forward state governments. From the Infocity tech corridor and KIIT University zone to the Temple City heritage district and Odisha's export businesses, FactoryJet builds from ₹29,999 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
+          lead="Bhubaneswar is Eastern India's fastest-growing IT hub — India's first planned Smart City, home to Infocity IT Park (Infosys, TCS, Wipro, Mindtree), STPI Bhubaneswar, 1,500+ registered startups, and one of India's most tech-forward state governments. From the Infocity tech corridor and KIIT University zone to the Temple City heritage district and Odisha's export businesses, FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',
@@ -760,7 +751,7 @@ export default function BhubaneswarWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Bhubaneswar Businesses Choose FactoryJet Over Local Agencies"
-          lead="Bhubaneswar web agencies typically charge ₹70,000–₹2,00,000 for a comparable project and take 6–14 weeks to deliver. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
+          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
           pillars={[
             {
               icon: '⚡',
@@ -823,13 +814,13 @@ export default function BhubaneswarWebDesignPage() {
           headline="FactoryJet vs. Bhubaneswar Agency vs. Freelancer vs. Template Builder"
           lead="Not all web design options in Bhubaneswar deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
           pullQuote={{
-            stat: '₹29,999',
+            stat: '7 days',
             caption:
-              'starting price — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a ₹1,50,000 Bhubaneswar agency project.',
+              'from kickoff to launch — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
           }}
           columns={BBSR_COMPARISON_COLUMNS}
           rows={BBSR_COMPARISON_ROWS}
-          footer="Prices reflect typical Bhubaneswar market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
+          footer="FactoryJet fixed-price contracts available for every scope. You get a clear quote up front after a free consultation."
         />
 
         {/* ── 10. INDUSTRIES ──────────────────────────────────────────────────────────────────── */}

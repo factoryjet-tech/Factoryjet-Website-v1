@@ -44,108 +44,108 @@ export type SiteHeaderLocale = 'us' | 'in' | 'uae';
 // ─── US nav data ──────────────────────────────────────────────────────────────
 
 const US_WEB_SERVICES = [
-  { icon: Globe,        label: 'Web Design',          href: '/us/services/web-design',                      desc: 'Conversion-focused sites' },
-  { icon: ShoppingBag,  label: 'Shopify Development', href: '/us/services/shopify-development',             desc: 'Custom storefronts & themes' },
-  { icon: ShoppingCart, label: 'E-commerce',          href: '/us/services/ecommerce-development',           desc: 'End-to-end online stores' },
-  { icon: Code,         label: 'Web App Development', href: '/us/services/web-application-development',     desc: 'Complex web apps' },
-  { icon: FileCode,     label: 'WordPress',           href: '/us/services/wordpress-development',           desc: 'Custom WP sites & plugins' },
-  { icon: RefreshCw,    label: 'Website Redesign',    href: '/us/services/website-redesign',                desc: 'Modernize your existing site' },
+  { icon: Globe,        label: 'Web Design',          href: '/services/web-design',                      desc: 'Conversion-focused sites' },
+  { icon: ShoppingBag,  label: 'Shopify Development', href: '/services/shopify-development',             desc: 'Custom storefronts & themes' },
+  { icon: ShoppingCart, label: 'E-commerce',          href: '/services/ecommerce-development',           desc: 'End-to-end online stores' },
+  { icon: Code,         label: 'Web App Development', href: '/services/web-application-development',     desc: 'Complex web apps' },
+  { icon: FileCode,     label: 'WordPress',           href: '/services/wordpress-development',           desc: 'Custom WP sites & plugins' },
+  { icon: RefreshCw,    label: 'Website Redesign',    href: '/services/website-redesign',                desc: 'Modernize your existing site' },
 ] as const;
 
 const US_AI_SERVICES = [
-  { icon: Bot,           label: 'AI Agents',      href: '/us/services/ai-agents',               desc: 'Autonomous task automation' },
-  { icon: Zap,           label: 'AI Automation',  href: '/us/services/ai-automation',           desc: 'Eliminate repetitive work' },
-  { icon: MessageSquare, label: 'AI Chatbot',     href: '/us/services/ai-chatbot-development',  desc: 'Smart customer support' },
-  { icon: Layers,        label: 'AI Workflow',    href: '/us/services/ai-workflow-automation',  desc: 'End-to-end process flows' },
-  { icon: Link2,         label: 'AI Integration', href: '/us/services/ai-integration-services', desc: 'Connect AI to your stack' },
+  { icon: Bot,           label: 'AI Agents',      href: '/services/ai-agents',               desc: 'Autonomous task automation' },
+  { icon: Zap,           label: 'AI Automation',  href: '/services/ai-automation',           desc: 'Eliminate repetitive work' },
+  { icon: MessageSquare, label: 'AI Chatbot',     href: '/services/ai-chatbot-development',  desc: 'Smart customer support' },
+  { icon: Layers,        label: 'AI Workflow',    href: '/services/ai-workflow-automation',  desc: 'End-to-end process flows' },
+  { icon: Link2,         label: 'AI Integration', href: '/services/ai-integration-services', desc: 'Connect AI to your stack' },
 ] as const;
 
 // Solutions (US) — the commerce pillar + flagship pages, the primary menu
 const US_SOLUTIONS = [
-  { icon: Layers,        label: 'Omnichannel Commerce',     href: '/us/omnichannel-commerce',           desc: 'One catalog, inventory & order engine' },
-  { icon: Store,         label: 'B2B E-Commerce',           href: '/us/b2b-ecommerce',                  desc: 'Portals, tiered pricing, net terms' },
-  { icon: ShoppingCart,  label: 'E-Commerce Development',   href: '/us/services/ecommerce-development',  desc: 'End-to-end online stores' },
-  { icon: Bot,           label: 'Commerce AI Agents',       href: '/us/services/ai-agents',             desc: 'Agents that list, price & sync' },
-  { icon: TrendingUp,    label: 'Commerce SEO & Visibility',href: '/us/services/ecommerce-seo',         desc: 'Google, AI answers & marketplaces' },
-  { icon: Search,        label: 'E-Commerce Consulting',    href: '/us/ecommerce-consulting',           desc: 'Platform, migration & scope' },
+  { icon: Layers,        label: 'Omnichannel Commerce',     href: '/omnichannel-commerce',           desc: 'One catalog, inventory & order engine' },
+  { icon: Store,         label: 'B2B E-Commerce',           href: '/b2b-ecommerce',                  desc: 'Portals, tiered pricing, net terms' },
+  { icon: ShoppingCart,  label: 'E-Commerce Development',   href: '/services/ecommerce-development',  desc: 'End-to-end online stores' },
+  { icon: Bot,           label: 'Commerce AI Agents',       href: '/services/ai-agents',             desc: 'Agents that list, price & sync' },
+  { icon: TrendingUp,    label: 'Commerce SEO & Visibility',href: '/services/ecommerce-seo',         desc: 'Google, AI answers & marketplaces' },
+  { icon: Search,        label: 'E-Commerce Consulting',    href: '/ecommerce-consulting',           desc: 'Platform, migration & scope' },
 ] as const;
 
 // Platforms (US) — what we build on; items without a dedicated page point to the closest one
 const US_PLATFORMS = [
-  { icon: ShoppingBag,  label: 'Shopify & Shopify Plus',   href: '/us/services/shopify-development',     desc: 'DTC + B2B on one store' },
-  { icon: Store,        label: 'Adobe Commerce (Magento)', href: '/us/services/magento-development',     desc: 'Deep B2B, large catalogs' },
-  { icon: FileCode,     label: 'WooCommerce',              href: '/us/services/woocommerce-development', desc: 'WordPress commerce' },
-  { icon: Layers,       label: 'BigCommerce',              href: '/us/bigcommerce-development',          desc: 'Mid-market B2B value' },
-  { icon: Code,         label: 'Headless / composable',    href: '/us/headless-commerce',               desc: 'Custom front end, any backend' },
-  { icon: Zap,          label: 'Commerceflo',              href: '/us/commerceflo',                     desc: 'Unified commerce engine' },
+  { icon: ShoppingBag,  label: 'Shopify & Shopify Plus',   href: '/services/shopify-development',     desc: 'DTC + B2B on one store' },
+  { icon: Store,        label: 'Adobe Commerce (Magento)', href: '/services/magento-development',     desc: 'Deep B2B, large catalogs' },
+  { icon: FileCode,     label: 'WooCommerce',              href: '/services/woocommerce-development', desc: 'WordPress commerce' },
+  { icon: Layers,       label: 'BigCommerce',              href: '/bigcommerce-development',          desc: 'Mid-market B2B value' },
+  { icon: Code,         label: 'Headless / composable',    href: '/headless-commerce',               desc: 'Custom front end, any backend' },
+  { icon: Zap,          label: 'Commerceflo',              href: '/commerceflo',                     desc: 'Unified commerce engine' },
 ] as const;
 
 // Services (US) — supporting / demoted services that link up to the commerce pillar
 const US_SUPPORT_SERVICES = [
-  { icon: Globe,      label: 'Web Design',          href: '/us/services/web-design',                  desc: 'Conversion-focused sites' },
-  { icon: RefreshCw,  label: 'Website Redesign',    href: '/us/services/website-redesign',            desc: 'Modernize your existing site' },
-  { icon: FileCode,   label: 'WordPress',           href: '/us/services/wordpress-development',        desc: 'Custom WP sites & plugins' },
-  { icon: Code,       label: 'Web App Development',  href: '/us/services/web-application-development',  desc: 'Complex web apps' },
-  { icon: TrendingUp, label: 'SEO Services',        href: '/us/services/seo',                         desc: 'Rank on Google' },
-  { icon: MapPin,     label: 'Local SEO',           href: '/us/services/local-seo',                   desc: 'Map pack & near-me' },
-  { icon: Sparkles,   label: 'AI SEO',              href: '/us/services/ai-seo',                      desc: 'Get cited in AI answers' },
-  { icon: Zap,        label: 'AI Automation',       href: '/us/services/ai-automation',               desc: 'Eliminate repetitive work' },
+  { icon: Globe,      label: 'Web Design',          href: '/services/web-design',                  desc: 'Conversion-focused sites' },
+  { icon: RefreshCw,  label: 'Website Redesign',    href: '/services/website-redesign',            desc: 'Modernize your existing site' },
+  { icon: FileCode,   label: 'WordPress',           href: '/services/wordpress-development',        desc: 'Custom WP sites & plugins' },
+  { icon: Code,       label: 'Web App Development',  href: '/services/web-application-development',  desc: 'Complex web apps' },
+  { icon: TrendingUp, label: 'SEO Services',        href: '/services/seo',                         desc: 'Rank on Google' },
+  { icon: MapPin,     label: 'Local SEO',           href: '/services/local-seo',                   desc: 'Map pack & near-me' },
+  { icon: Sparkles,   label: 'AI SEO',              href: '/services/ai-seo',                      desc: 'Get cited in AI answers' },
+  { icon: Zap,        label: 'AI Automation',       href: '/services/ai-automation',               desc: 'Eliminate repetitive work' },
 ] as const;
 
 // SEO hub + sub-services (US) — new "SEO & AI Search" column in the Services mega.
 // AI SEO is highlighted separately (the "get cited" answer box), not listed here.
-const US_SEO_HUB_HREF = '/us/services/seo';
+const US_SEO_HUB_HREF = '/services/seo';
 const US_SEO_SERVICES = [
-  { icon: MapPin,        label: 'Local SEO',          href: '/us/services/local-seo',          desc: 'Map pack & near-me' },
-  { icon: ShoppingCart,  label: 'E-commerce SEO',     href: '/us/services/ecommerce-seo',      desc: 'Product & collection SEO' },
-  { icon: TrendingUp,    label: 'Shopify SEO',        href: '/us/services/shopify-seo',        desc: 'Rank your Shopify store' },
-  { icon: Search,        label: 'SEO Audit',          href: '/us/services/seo-audit',          desc: 'Free technical site check' },
-  { icon: Store,         label: 'Small Business SEO', href: '/us/services/small-business-seo', desc: 'Affordable managed SEO' },
+  { icon: MapPin,        label: 'Local SEO',          href: '/services/local-seo',          desc: 'Map pack & near-me' },
+  { icon: ShoppingCart,  label: 'E-commerce SEO',     href: '/services/ecommerce-seo',      desc: 'Product & collection SEO' },
+  { icon: TrendingUp,    label: 'Shopify SEO',        href: '/services/shopify-seo',        desc: 'Rank your Shopify store' },
+  { icon: Search,        label: 'SEO Audit',          href: '/services/seo-audit',          desc: 'Free technical site check' },
+  { icon: Store,         label: 'Small Business SEO', href: '/services/small-business-seo', desc: 'Affordable managed SEO' },
 ] as const;
 
 const US_LOCATIONS = [
-  { label: 'Austin',          state: 'TX', href: '/us/austin/web-design' },
-  { label: 'Miami',           state: 'FL', href: '/us/miami/web-design' },
-  { label: 'Denver',          state: 'CO', href: '/us/denver/web-design' },
-  { label: 'Nashville',       state: 'TN', href: '/us/nashville/web-design' },
-  { label: 'New York',        state: 'NY', href: '/us/new-york/web-design' },
-  { label: 'Charlotte',       state: 'NC', href: '/us/charlotte/web-design' },
-  { label: 'Raleigh',         state: 'NC', href: '/us/raleigh/web-design' },
-  { label: 'Tampa',           state: 'FL', href: '/us/tampa/web-design' },
-  { label: 'Portland',        state: 'OR', href: '/us/portland/web-design' },
-  { label: 'Colorado Springs',state: 'CO', href: '/us/colorado-springs/seo' },
-  { label: 'Cleveland',       state: 'OH', href: '/us/cleveland/web-design' },
+  { label: 'Austin',          state: 'TX', href: '/austin/web-design' },
+  { label: 'Miami',           state: 'FL', href: '/miami/web-design' },
+  { label: 'Denver',          state: 'CO', href: '/denver/web-design' },
+  { label: 'Nashville',       state: 'TN', href: '/nashville/web-design' },
+  { label: 'New York',        state: 'NY', href: '/new-york/web-design' },
+  { label: 'Charlotte',       state: 'NC', href: '/charlotte/web-design' },
+  { label: 'Raleigh',         state: 'NC', href: '/raleigh/web-design' },
+  { label: 'Tampa',           state: 'FL', href: '/tampa/web-design' },
+  { label: 'Portland',        state: 'OR', href: '/portland/web-design' },
+  { label: 'Colorado Springs',state: 'CO', href: '/colorado-springs/seo' },
+  { label: 'Cleveland',       state: 'OH', href: '/cleveland/web-design' },
 ] as const;
 
 // Industry SEO verticals (US) — sub-group in the SEO mega column + mobile drawer
 const US_INDUSTRY_SEO = [
-  { label: 'Healthcare SEO', href: '/us/services/healthcare-seo', desc: 'SEO for medical practices' },
-  { label: 'Dental SEO',     href: '/us/services/dental-seo',     desc: 'Rank for local dentist searches' },
-  { label: 'Law Firm SEO',   href: '/us/services/law-firm-seo',   desc: 'SEO for attorneys & law firms' },
+  { label: 'Healthcare SEO', href: '/services/healthcare-seo', desc: 'SEO for medical practices' },
+  { label: 'Dental SEO',     href: '/services/dental-seo',     desc: 'Rank for local dentist searches' },
+  { label: 'Law Firm SEO',   href: '/services/law-firm-seo',   desc: 'SEO for attorneys & law firms' },
 ] as const;
 
 // Who We Serve — by business type (US desktop mega panel)
 const US_WHO_WE_SERVE_TYPES = [
-  { label: 'DTC & E-Commerce Brands',        href: '/us',                       desc: 'Sell across every channel' },
-  { label: 'B2B, Wholesale & Distributors',  href: '/us/b2b-ecommerce',         desc: 'Trade portals & account pricing' },
-  { label: 'Marketplace Sellers',            href: '/us/services/ecommerce-seo',desc: 'Amazon, Walmart, TikTok Shop' },
-  { label: 'Brands Replatforming',           href: '/us/ecommerce-consulting',  desc: 'Migrate without losing SEO' },
+  { label: 'DTC & E-Commerce Brands',        href: '/',                       desc: 'Sell across every channel' },
+  { label: 'B2B, Wholesale & Distributors',  href: '/b2b-ecommerce',         desc: 'Trade portals & account pricing' },
+  { label: 'Marketplace Sellers',            href: '/services/ecommerce-seo',desc: 'Amazon, Walmart, TikTok Shop' },
+  { label: 'Brands Replatforming',           href: '/ecommerce-consulting',  desc: 'Migrate without losing SEO' },
 ] as const;
 
 // Who We Serve — by what you need (US desktop mega panel)
 const US_WHO_WE_SERVE_NEEDS = [
-  { label: 'I sell on multiple channels', href: '/us/omnichannel-commerce',          sub: 'Omnichannel commerce' },
-  { label: 'I need a B2B store',          href: '/us/b2b-ecommerce',                 sub: 'B2B e-commerce' },
-  { label: 'I want to migrate platforms', href: '/us/ecommerce-consulting',          sub: 'Replatforming' },
-  { label: 'I want AI in my commerce',    href: '/us/services/ai-agents',            sub: 'Commerce AI agents' },
+  { label: 'I sell on multiple channels', href: '/omnichannel-commerce',          sub: 'Omnichannel commerce' },
+  { label: 'I need a B2B store',          href: '/b2b-ecommerce',                 sub: 'B2B e-commerce' },
+  { label: 'I want to migrate platforms', href: '/ecommerce-consulting',          sub: 'Replatforming' },
+  { label: 'I want AI in my commerce',    href: '/services/ai-agents',            sub: 'Commerce AI agents' },
 ] as const;
 
 // Resources links (US) — the "Resources" mega in the US nav
 const US_KNOWLEDGE_HUB = [
   { icon: BookOpen,      label: 'Blog',               href: '/blog',             desc: 'Expert insights & guides' },
   { icon: FileText,      label: 'Case Studies',        href: '/case-studies',     desc: 'Real results from real clients' },
-  { icon: LayoutTemplate,label: 'Portfolio',           href: '/us/portfolio',     desc: 'Browse our work' },
-  { icon: Search,        label: 'FAQ',                 href: '/us/faq',           desc: 'Common questions answered' },
+  { icon: LayoutTemplate,label: 'Portfolio',           href: '/portfolio',     desc: 'Browse our work' },
+  { icon: Search,        label: 'FAQ',                 href: '/faq',           desc: 'Common questions answered' },
 ] as const;
 
 // ─── India nav data ───────────────────────────────────────────────────────────
@@ -259,14 +259,14 @@ const LOCALE_CONFIG = {
     aiServices:      US_AI_SERVICES,
     locations:       US_LOCATIONS,
     locationsLabel:  'US Cities We Serve',
-    portfolioHref:   '/us/portfolio',
-    pricingHref:     '/us/pricing',
-    aboutHref:       '/us/about',
+    portfolioHref:   '/portfolio',
+    pricingHref:     '/pricing',
+    aboutHref:       '/about',
     featuredHeadline:'One system, every channel',
     featuredBody:    'One catalog, one inventory, and one order engine across your store, marketplaces, and B2B.',
     featuredStats:   ['DTC + B2B on one system', 'A decade-plus building commerce', 'You own what we build'],
     featuredCtaLabel:'Explore commerce solutions',
-    featuredCtaHref: '/us/omnichannel-commerce',
+    featuredCtaHref: '/omnichannel-commerce',
     modalRegion:     'us' as ModalRegion,
     defaultCtaLabel: 'Talk to the Founder',
   },
@@ -1174,7 +1174,7 @@ export default function SiteHeader({
                           Company
                         </p>
                         <div className="space-y-0.5">
-                          <ServiceCard icon={Globe} label="About FactoryJet" href="/us/about" desc="Our story and team" />
+                          <ServiceCard icon={Globe} label="About FactoryJet" href="/about" desc="Our story and team" />
                           <ServiceCard icon={FileText} label="Case Studies" href="/case-studies" desc="Real client results" />
                           <ServiceCard icon={MessageSquare} label="Contact" href="/contact" desc="Talk to us today" />
                         </div>

@@ -248,8 +248,8 @@ export const post: BlogPost = {
       </div>
       <p className="mb-3">
         <strong>URL:</strong>{' '}
-        <Link href="/us/services/ai-agents" className="text-blue-600 underline">
-          factoryjet.com/us/services/ai-agents
+        <Link href="/services/ai-agents" className="text-blue-600 underline">
+          factoryjet.com/services/ai-agents
         </Link>
       </p>
       <p className="mb-3">
@@ -460,7 +460,7 @@ export const post: BlogPost = {
           FactoryJet builds AI agents for US small businesses starting at $5,000. Lead qualification, appointment booking, customer support, and document extraction — live in 2–4 weeks, with US-hour account management.
         </p>
         <Link
-          href="/us/services/ai-agents"
+          href="/services/ai-agents"
           className="inline-block bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors"
         >
           See AI agent services →

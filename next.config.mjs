@@ -70,12 +70,12 @@ const nextConfig = {
   // Enable gzip compression
   compress: true,
 
-  // 301 redirects from old /uk/sitemap-*.xml URLs to the new native
-  // sitemap-index. NOTE: redirects() is a no-op under output: 'export'
-  // (production). The production-effective layer is /public/_redirects,
-  // which Cloudflare Pages applies. These entries cover dev/preview only.
-  async redirects() {
-    return [
+  // 301 redirects. NOTE: redirects() is a no-op under output: 'export'
+  // (production) and emits a build warning if present, so it is gated to
+  // dev/preview only. The production-effective layer is /public/_redirects,
+  // which Cloudflare Pages applies.
+  ...(process.env.NODE_ENV !== 'production' && {
+    redirects: async () => [
       // UK sitemap legacy URLs
       { source: '/uk/sitemap-index.xml',    destination: '/sitemap.xml',            permanent: true },
       { source: '/uk/sitemap-cities.xml',   destination: '/sitemap-uk/sitemap.xml', permanent: true },
@@ -108,14 +108,18 @@ const nextConfig = {
       // (matches sitemap-india + page source). The reverse migration in
       // public/_redirects (/ecommerce-development → /services/ecommerce-development)
       // is the single source of truth. Do not re-add the inverse here.
-    ]
-  },
+    ],
+  }),
 
   // Optimize power consumption (better performance)
   poweredByHeader: false,
 
   // Turbopack configuration (Next.js 16+)
-  turbopack: {},
+  // Pin the workspace root to this directory (website/) so Next does not infer
+  // it from the stray ../package-lock.json at the repo root. The real lockfile
+  // is website/pnpm-lock.yaml. Silences the "inferred workspace root" +
+  // "additional lockfiles" warnings.
+  turbopack: { root: __dirname },
 
   // Legacy webpack config (for non-Turbopack builds)
   webpack: (config, { dev }) => {

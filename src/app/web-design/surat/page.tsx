@@ -71,10 +71,6 @@ const SRT_COMPARISON_COLUMNS = [
 
 const SRT_COMPARISON_ROWS = [
   {
-    feature: 'Starting price',
-    values: ['₹25,000', '₹60,000+', '₹10,000–₹35,000'],
-  },
-  {
     feature: 'Delivery timeline',
     values: ['7 days', '6–10 weeks', '3–8 weeks'],
   },
@@ -150,7 +146,7 @@ export default function Page() {
         name: 'How much does a website cost in Surat?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Website projects in Surat start from ₹25,000 for a professional 5-page site. E-commerce catalogues for diamond or textile exporters are priced based on scope. Fixed pricing, no hidden costs.',
+          text: 'Website projects in Surat are scoped to your needs. E-commerce catalogues for diamond or textile exporters are priced based on scope. You get a clear, fixed quote up front after a free consultation — fixed pricing, no hidden costs.',
         },
       },
       {
@@ -200,7 +196,7 @@ export default function Page() {
     stats: [
       { value: '7-Day', label: 'Delivery Guarantee' },
       { value: '500+', label: 'Businesses Served' },
-      { value: '₹25K', label: 'Starting Price' },
+      { value: '100', label: 'Lighthouse Score' },
     ],
   }
 
@@ -234,7 +230,7 @@ export default function Page() {
       },
       {
         title: 'INR Pricing, No Surprises',
-        body: 'Projects start at ₹25,000. Fixed scope, fixed price — every rupee accounted for before you sign.',
+        body: 'Projects are scoped to you. Fixed scope, fixed price — every rupee accounted for before you sign.',
       },
       {
         title: 'Lighthouse 100 Performance',
@@ -302,7 +298,6 @@ export default function Page() {
   const pricingTiers = [
     {
       name: 'Starter',
-      priceRange: '₹25,000',
       description: 'For small businesses and traders needing a credible online presence quickly.',
       features: [
         '5 pages',
@@ -316,7 +311,6 @@ export default function Page() {
     },
     {
       name: 'Growth',
-      priceRange: '₹50,000',
       description: 'For exporters and growing businesses that need product catalogues and stronger lead generation.',
       features: [
         'Up to 12 pages',
@@ -331,7 +325,6 @@ export default function Page() {
     },
     {
       name: 'Enterprise',
-      priceRange: '₹1,00,000+',
       description: 'For large exporters or manufacturers needing custom portals, B2B ordering, or multi-language sites.',
       features: [
         'Pages scoped per project',
@@ -352,7 +345,7 @@ const SRT_FAQ_CATEGORIES = [  { key: 'process', label: 'Process' },
 ] as const;
 
 const SRT_FAQ_ITEMS = [
-  { category: 'pricing', question: 'What does a website cost in Surat?', answer: 'Our Surat projects start at ₹25,000 for a 5-page site. Growth packages including product catalogues run ₹50,000. Enterprise custom builds start at ₹1,00,000. All fixed pricing.' },
+  { category: 'pricing', question: 'What does a website cost in Surat?', answer: "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce or product catalogues. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep." },
   { category: 'pricing', question: 'Do you offer payment in installments?', answer: 'Yes. Standard split is 50% at kickoff and 50% on delivery. For larger export portal builds we offer 3-stage payment plans.' },
   { category: 'pricing', question: 'Are there ongoing monthly fees?', answer: 'No mandatory monthly fees. Hosting and domain are separate and clearly quoted before you sign. Optional maintenance plans are available.' },
   { category: 'pricing', question: 'Do you charge extra for Gujarati language support?', answer: 'Multi-language Gujarati/English websites are available in our Enterprise tier. The additional cost depends on the amount of content to be translated.' },
@@ -395,11 +388,6 @@ const SRT_FAQ_ITEMS = [
     '@id': `https://factoryjet.com/web-design/surat#howto`,
     name: `How FactoryJet builds your Surat website in 7 days`,
     description: `Our 7-day process for delivering a professional, AI-powered website for Surat businesses.`,
-    estimatedCost: {
-      '@type': 'MonetaryAmount',
-      currency: 'INR',
-      minValue: '25000',
-    },
     totalTime: 'P7D',
     step: [
       {
@@ -539,12 +527,12 @@ const SRT_FAQ_ITEMS = [
           headline="FactoryJet vs. Surat Agency vs. Freelancer"
           lead="Not all web design options in Surat deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
           pullQuote={{
-            stat: '₹25,000',
-            caption: 'starting price — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a ₹60,000+ Surat agency project.',
+            stat: '7 days',
+            caption: 'from kickoff to launch — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
           }}
           columns={SRT_COMPARISON_COLUMNS}
           rows={SRT_COMPARISON_ROWS}
-          footer="Prices reflect typical Surat market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
+          footer="Comparison reflects typical Surat market norms as of 2025. FactoryJet fixed-price contracts are available for every project."
         />
       <IndustriesGrid />
         <GetFreeQuoteCTA />

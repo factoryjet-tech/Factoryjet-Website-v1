@@ -34,7 +34,7 @@ const STEPS = [
     days: "STEP 05",
     title: "Ongoing Growth",
     description:
-      "Ongoing access to our team for support, updates, and strategic advice. Maintenance from £99/month. SEO and AI SEO retainers available so your Leeds digital presence keeps growing month after month.",
+      "Ongoing access to our team for support, updates, and strategic advice. Maintenance plans and SEO and AI SEO retainers are available — scoped and quoted to fit your needs — so your Leeds digital presence keeps growing month after month.",
   },
 ];
 

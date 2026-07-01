@@ -240,19 +240,19 @@ export default function BigThreeTrustBlock({
                 className="fj-display font-bold text-fj-ink"
                 style={{ fontSize: 'clamp(1.875rem, 3vw, 2.75rem)', lineHeight: 1, letterSpacing: '-0.03em' }}
               >
-                $1,999
+                Fixed Price
               </p>
               <p
                 className="mt-2 font-fj-body font-semibold text-fj-ink"
                 style={{ fontSize: '0.9375rem' }}
               >
-                Fixed Price, Confirmed Upfront
+                Confirmed Upfront
               </p>
               <p
                 className="mt-1.5 font-fj-body text-fj-neutral-500"
                 style={{ fontSize: '0.8125rem', lineHeight: 1.55, fontWeight: 500 }}
               >
-                Professional website design — no hourly billing, no scope surprises
+                One quote before we start — no hourly billing, no scope surprises
               </p>
             </div>
 

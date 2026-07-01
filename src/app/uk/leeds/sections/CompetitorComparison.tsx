@@ -39,8 +39,8 @@ const TABLE_ROWS = [
   },
   {
     feature: "Web Design Cost",
-    factoryjet: "£1,500–£8,000",
-    competitor: "£5,000–£25,000",
+    factoryjet: "Fixed, quoted up front",
+    competitor: "Priced by overhead",
   },
   {
     feature: "Post-Launch Support",

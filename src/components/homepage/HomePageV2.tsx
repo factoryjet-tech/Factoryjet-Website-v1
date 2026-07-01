@@ -34,13 +34,13 @@ const FAQ_ITEMS = [
   {
     question: 'How is FactoryJet different from a typical web agency?',
     answer:
-      'Three things: published pricing (no discovery call required to get a number), a 7-day delivery guarantee on Starter sites, and a Next.js tech stack that outperforms WordPress on speed and SEO. We also ship every project with JSON-LD schema configured for AI search crawlers — something most agencies charge extra for, or skip entirely.',
+      'Three things: fixed-price quotes confirmed up front (no surprise invoices), a 7-day delivery guarantee on Starter sites, and a Next.js tech stack that outperforms WordPress on speed and SEO. We also ship every project with JSON-LD schema configured for AI search crawlers — something most agencies charge extra for, or skip entirely.',
     category: 'general',
   },
   {
     question: 'Do you work with small businesses or only large companies?',
     answer:
-      'Primarily small and medium businesses — sole traders, D2C brands, B2B service firms, retail chains, and professional practices. Our pricing starts at ₹29,999 for a 5-page website, so we are accessible to early-stage businesses while also having the capacity for complex multi-platform builds.',
+      'Primarily small and medium businesses — sole traders, D2C brands, B2B service firms, retail chains, and professional practices. Our pricing is fixed-price and scoped to your project, so we are accessible to early-stage businesses while also having the capacity for complex multi-platform builds.',
     category: 'general',
   },
   {
@@ -52,7 +52,7 @@ const FAQ_ITEMS = [
   {
     question: 'How much does a website cost?',
     answer:
-      'Web design starts at ₹29,999 for a 5-page Starter site and goes up to ₹1,19,999 for a fully custom Next.js build. E-commerce stores start at ₹59,999 for a D2C Shopify store. All pricing is published on this page — you do not need to book a call to see a number. The final quote may vary slightly based on scope once we review your brief.',
+      'Every project is fixed-price and scoped to your build. The main drivers are the number of pages, custom design and functionality, and any integrations — a simple 5-page business site is at the lighter end, while a fully custom Next.js build or a D2C store with advanced features sits higher. You get a clear, all-in quote up front after a free consultation, so there are no surprises once we review your brief.',
     category: 'web',
   },
   {

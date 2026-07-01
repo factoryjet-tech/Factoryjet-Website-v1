@@ -6,92 +6,45 @@ import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { useContactModal } from "@/context/ContactModalContext";
 import { trackButtonClick, trackCTAClick } from "@/utils/gtm";
 
-// ── Pricing table data (verbatim from content.md) ────────────────────────────
-type SavingTone = "green" | "orange";
-
+// ── Pricing scope data (numberless — what's included / how we scope) ──────────
 type Row = {
   service: string;
-  ukAverage: string;
-  factoryjet: string;
-  saving: string;
-  tone: SavingTone;
+  included: string;
+  drivers: string;
 };
 
 const ROWS: Row[] = [
   {
     service: "Business Website (Next.js 15)",
-    ukAverage: "£5,000–£12,000",
-    factoryjet: "£1,500–£8,000",
-    saving: "50–70%",
-    tone: "green",
+    included: "Design, build, copy support, on-page SEO, launch & training",
+    drivers: "Page count, custom design depth, integrations",
   },
   {
     service: "E-Commerce Store (Shopify/WC)",
-    ukAverage: "£10,000–£25,000",
-    factoryjet: "£2,000–£10,000",
-    saving: "50–80%",
-    tone: "green",
+    included: "Store build, payment & shipping setup, product config, e-commerce SEO",
+    drivers: "Catalogue size, theme customisation, integrations",
   },
   {
     service: "Custom AI Agent",
-    ukAverage: "Rarely available in UK",
-    factoryjet: "From £3,000",
-    saving: "Exclusive",
-    tone: "orange",
+    included: "Scoping, build, CRM/tool integration, testing, handover docs",
+    drivers: "Number of integrations, autonomy, workflow complexity",
   },
   {
     service: "Monthly SEO + AI SEO",
-    ukAverage: "£1,500–£3,000/mo",
-    factoryjet: "£500–£2,000/mo",
-    saving: "30–65%",
-    tone: "green",
+    included: "Technical SEO, content, authority building, AI-citation reporting",
+    drivers: "Competition, target keywords, content volume",
   },
   {
     service: "AI SEO Only (GEO/AEO/AIO)",
-    ukAverage: "Almost never offered",
-    factoryjet: "From £500/mo",
-    saving: "First-mover",
-    tone: "orange",
+    included: "Answer-first content, schema, llms.txt, share-of-AI-voice tracking",
+    drivers: "Number of target engines and queries, content scope",
   },
   {
     service: "Website Maintenance",
-    ukAverage: "£200–£500/mo",
-    factoryjet: "From £99/mo",
-    saving: "50–80%",
-    tone: "green",
+    included: "Updates, backups, security, performance & uptime monitoring",
+    drivers: "Support hours, response SLA, site complexity",
   },
 ];
-
-// ── Saving pill ──────────────────────────────────────────────────────────────
-function SavingPill({ label, tone }: { label: string; tone: SavingTone }) {
-  const styles =
-    tone === "green"
-      ? {
-          backgroundColor: "rgba(16,185,129,0.1)",
-          color: "#047857",
-          border: "1px solid rgba(16,185,129,0.28)",
-        }
-      : {
-          backgroundColor: "rgba(255,107,53,0.1)",
-          color: "#C2410C",
-          border: "1px solid rgba(255,107,53,0.32)",
-        };
-
-  return (
-    <span
-      className="inline-flex items-center whitespace-nowrap rounded-full px-3 py-1"
-      style={{
-        ...styles,
-        fontFamily: "var(--font-sans)",
-        fontWeight: 600,
-        fontSize: 12.5,
-        letterSpacing: "0.02em",
-      }}
-    >
-      {label}
-    </span>
-  );
-}
 
 // ── Section ──────────────────────────────────────────────────────────────────
 export default function Pricing() {
@@ -233,11 +186,12 @@ export default function Pricing() {
               maxWidth: 760,
             }}
           >
-            Pricing transparency is a core principle. One of the most common
-            searches we see is how much does a website cost UK — and the honest
-            answer is that most UK businesses are overpaying dramatically. Here
-            is how FactoryJet’s pricing compares to the traditional agency market across
-            all four of our services.
+            Every project is fixed-price and scoped to your build. There are no
+            hourly rates and no surprise invoices. The table below shows what is
+            included in each service and the main factors that shape the scope,
+            so you know exactly what you are paying for. We quote the full,
+            written price up front after a free discovery call — before any work
+            starts.
           </p>
         </div>
 
@@ -257,13 +211,13 @@ export default function Pricing() {
             >
               {/* Header row */}
               <div
-                className="grid grid-cols-[1.5fr_1fr_1fr_0.9fr]"
+                className="grid grid-cols-[1.3fr_1.6fr_1.4fr]"
                 style={{
                   backgroundColor: "#0A0F1C",
                   color: "#FFFFFF",
                 }}
               >
-                {["Service", "Traditional Agency Average", "FactoryJet Price", "Your Saving"].map(
+                {["Service", "What's Included", "What Shapes the Scope"].map(
                   (h, i) => (
                     <div
                       key={h}
@@ -274,7 +228,7 @@ export default function Pricing() {
                         fontSize: 12.5,
                         letterSpacing: "0.14em",
                         textTransform: "uppercase",
-                        color: i === 2 ? "#FFFFFF" : "rgba(255,255,255,0.78)",
+                        color: i === 0 ? "#FFFFFF" : "rgba(255,255,255,0.78)",
                         borderLeft:
                           i === 0 ? "none" : "1px solid rgba(255,255,255,0.08)",
                       }}
@@ -292,58 +246,52 @@ export default function Pricing() {
                   <div
                     key={row.service}
                     data-pricing-row
-                    className="grid grid-cols-[1.5fr_1fr_1fr_0.9fr] items-center"
+                    className="grid grid-cols-[1.3fr_1.6fr_1.4fr] items-center"
                     style={{
                       backgroundColor: zebra,
                       borderTop: "1px solid #E2E8F0",
                     }}
                   >
-                    {/* Service */}
+                    {/* Service — highlighted column */}
                     <div
                       className="px-6 py-6"
                       style={{
                         color: "#0A0F1C",
                         fontFamily: "var(--font-sans)",
-                        fontWeight: 600,
+                        fontWeight: 700,
                         fontSize: 15.5,
-                        lineHeight: 1.45,
+                        lineHeight: 1.4,
+                        backgroundColor: "rgba(0,82,204,0.04)",
+                        borderLeft: "3px solid #F05A28",
                       }}
                     >
                       {row.service}
                     </div>
-                    {/* UK average */}
+                    {/* What's included */}
+                    <div
+                      className="px-6 py-6"
+                      style={{
+                        color: "#374151",
+                        fontFamily: "var(--font-sans)",
+                        fontSize: 15,
+                        lineHeight: 1.5,
+                        borderLeft: "1px solid #E2E8F0",
+                      }}
+                    >
+                      {row.included}
+                    </div>
+                    {/* Scope drivers */}
                     <div
                       className="px-6 py-6"
                       style={{
                         color: "#6b7280",
                         fontFamily: "var(--font-sans)",
                         fontSize: 15,
-                        lineHeight: 1.45,
-                        textDecoration: "line-through",
-                        textDecorationColor: "rgba(107,114,128,0.4)",
+                        lineHeight: 1.5,
+                        borderLeft: "1px solid #E2E8F0",
                       }}
                     >
-                      {row.ukAverage}
-                    </div>
-                    {/* FactoryJet — highlighted column */}
-                    <div
-                      className="px-6 py-6"
-                      style={{
-                        color: "#F05A28",
-                        fontFamily: "var(--font-sans)",
-                        fontWeight: 700,
-                        fontSize: 16,
-                        lineHeight: 1.4,
-                        backgroundColor: "rgba(0,82,204,0.04)",
-                        borderLeft: "3px solid #F05A28",
-                        borderRight: "1px solid #E2E8F0",
-                      }}
-                    >
-                      {row.factoryjet}
-                    </div>
-                    {/* Saving pill */}
-                    <div className="px-6 py-6">
-                      <SavingPill label={row.saving} tone={row.tone} />
+                      {row.drivers}
                     </div>
                   </div>
                 );
@@ -363,13 +311,13 @@ export default function Pricing() {
               lineHeight: 1.8,
             }}
           >
-            All pricing includes VAT where applicable. Web design, e-commerce
+            Quotes include VAT where applicable. Web design, e-commerce
             development, AI agents, and digital marketing services are all
             legitimate business expenses that can be deducted from your UK
-            taxable profits — reducing the effective cost by 19–25% depending
+            taxable profits, reducing the effective cost by 19–25% depending
             on whether you pay corporation tax (limited company) or income tax
             (sole trader). Every engagement starts with a free digital audit
-            and custom proposal. No obligation. No high-pressure sales.
+            and a custom written proposal. No obligation. No high-pressure sales.
           </p>
         </div>
 

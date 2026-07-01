@@ -77,7 +77,6 @@ const localBusinessSchema = {
     addressRegion: 'Karnataka',
     addressCountry: 'IN',
   },
-  priceRange: '₹₹',
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
@@ -245,7 +244,7 @@ const BANGALORE_FAQ_ITEMS = [
     category: 'cost',
     question: 'How much do SEO services cost in Bangalore?',
     answer:
-      'We do not sell fixed packages because a Koramangala SaaS startup needs different work from an Indiranagar clinic. Our SEO plans for Indian businesses start at ₹19,999 a month, scoped to what your specific Bangalore site needs. We give you a free audit first — no payment, no obligation — so you know exactly what we would do and why before you decide.',
+      'We do not sell fixed packages because a Koramangala SaaS startup needs different work from an Indiranagar clinic. We scope a monthly plan to what your specific Bangalore site needs. We give you a free audit first — no payment, no obligation — so you know exactly what we would do and why before you decide.',
   },
   {
     category: 'cost',
@@ -257,7 +256,7 @@ const BANGALORE_FAQ_ITEMS = [
     category: 'cost',
     question: 'Are affordable SEO services in Bangalore worth paying for?',
     answer:
-      'Bangalore has a lot of cheap SEO providers — link farms dressed as agencies. Below a certain floor (roughly ₹8,000–10,000/month), you are paying for work that will either do nothing or actively hurt your site with bad links. Good SEO in Bangalore costs more because the competition is higher and the work required is more intensive. We charge a fair price for real work.',
+      'Bangalore has a lot of cheap SEO providers — link farms dressed as agencies. Below a certain budget, you are paying for work that will either do nothing or actively hurt your site with bad links. Good SEO in Bangalore costs more because the competition is higher and the work required is more intensive. We charge a fair price for real work.',
   },
   {
     category: 'cost',

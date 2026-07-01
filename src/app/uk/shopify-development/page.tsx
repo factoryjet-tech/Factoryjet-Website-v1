@@ -369,8 +369,8 @@ export default function ShopifyDevelopmentPage() {
       </div>
       <div className="dark-card">
         <span className="dark-pillar-icon">💸</span>
-        <h3 style={{ color: '#fff', marginBottom: '12px' }}>Traditional UK agencies charge £15,000–£50,000</h3>
-        <p>A mid-tier UK Shopify agency charges £15,000–£50,000 for a custom theme build; before retainers, app configuration, or migration fees. FactoryJet delivers the same Figma-first design, Liquid engineering, and Lighthouse audit at fixed price. Our specialised team has been building ecommerce since 2005.</p>
+        <h3 style={{ color: '#fff', marginBottom: '12px' }}>Traditional agencies cost a small fortune</h3>
+        <p>A mid-tier Shopify agency typically charges a hefty five-figure sum for a custom theme build; before retainers, app configuration, or migration fees. FactoryJet delivers the same Figma-first design, Liquid engineering, and Lighthouse audit at a fixed price. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. Our specialised team has been building ecommerce since 2005.</p>
       </div>
     </div>
   </div>
@@ -682,7 +682,7 @@ export default function ShopifyDevelopmentPage() {
     <div style={{ background: 'var(--white)', border: '1px solid var(--n200)', borderRadius: '16px', padding: '28px', marginBottom: '40px', display: 'flex', alignItems: 'center', gap: '32px' }}>
       <div>
         <div style={{ fontFamily: 'var(--fd)', fontSize: 'clamp(2rem,4vw,3rem)', fontWeight: '700', color: 'var(--orange)', letterSpacing: '-.04em' }}>Fixed Price</div>
-        <p style={{ fontSize: '14px', color: 'var(--n600)', marginTop: '4px', maxWidth: '520px' }}>Same Figma design, Liquid engineering, and Lighthouse audits as a £20,000 UK Shopify agency project; without the six-month timeline or retainer lock-in.</p>
+        <p style={{ fontSize: '14px', color: 'var(--n600)', marginTop: '4px', maxWidth: '520px' }}>Same Figma design, Liquid engineering, and Lighthouse audits as a high-end UK Shopify agency project; without the six-month timeline or retainer lock-in. Every build is quoted up front after a free discovery call, so you know the full cost before work starts.</p>
       </div>
     </div>
     <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
@@ -737,7 +737,7 @@ export default function ShopifyDevelopmentPage() {
         <div style={{ height: '40px', background: 'var(--n100)', borderRadius: '8px', marginBottom: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <span style={{ fontFamily: 'var(--fd)', fontSize: '13px', fontWeight: '700', color: 'var(--ink)' }}>Bombay Petals</span>
         </div>
-        <p style={{ fontSize: '15px', color: 'var(--ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"Migrating from Magento was something every UK agency quoted us £30K for. FactoryJet did it properly; zero data loss, all our SEO URLs preserved; at a fraction of the cost."</p>
+        <p style={{ fontSize: '15px', color: 'var(--ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"Migrating from Magento was something every agency we spoke to quoted as a major project. FactoryJet did it properly; zero data loss, all our SEO URLs preserved; at a fair, fixed price we agreed before any work started."</p>
         <div style={{ borderTop: '1px solid var(--n200)', paddingTop: '16px' }}>
           <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)' }}>Vishal; Director, Bombay Petals</p>
           <p style={{ fontSize: '13px', color: 'var(--n400)' }}>B2B artificial plants &amp; décor</p>

@@ -421,7 +421,7 @@ const FooterLocal = React.memo(() => (
   <footer className="bg-slate-900 text-slate-300 py-12 px-4 border-t border-slate-800">
     <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
       <div className="col-span-1 md:col-span-1">
-        <Link href="/us" className="flex items-center gap-2 mb-4 text-white">
+        <Link href="/" className="flex items-center gap-2 mb-4 text-white">
           <img src="/FinalLogo.svg" alt="FactoryJet" className="h-8 w-auto" />
         </Link>
         <p className="text-sm text-slate-400 mb-4">
@@ -435,8 +435,8 @@ const FooterLocal = React.memo(() => (
       <div>
         <h4 className="font-bold text-white mb-4">Services</h4>
         <ul className="space-y-2 text-sm">
-          <li className="hover:text-white"><Link href="/us/services/web-design">Website Design</Link></li>
-          <li className="hover:text-white"><Link href="/us/services/ecommerce-development">E-Commerce</Link></li>
+          <li className="hover:text-white"><Link href="/services/web-design">Website Design</Link></li>
+          <li className="hover:text-white"><Link href="/services/ecommerce-development">E-Commerce</Link></li>
           <li className="hover:text-white"><Link href="/us#services">SEO/GEO/AIO</Link></li>
           <li className="hover:text-white"><Link href="/us#services">CRM Implementation</Link></li>
         </ul>
@@ -444,10 +444,10 @@ const FooterLocal = React.memo(() => (
       <div>
         <h4 className="font-bold text-white mb-4">Company</h4>
         <ul className="space-y-2 text-sm">
-          <li className="hover:text-white"><Link href="/us/about">About Us</Link></li>
+          <li className="hover:text-white"><Link href="/about">About Us</Link></li>
           <li className="hover:text-white"><Link href="/us#process">Process</Link></li>
           <li className="hover:text-white"><Link href="/contact">Contact</Link></li>
-          <li className="hover:text-white"><Link href="/us/faq">FAQ</Link></li>
+          <li className="hover:text-white"><Link href="/faq">FAQ</Link></li>
         </ul>
       </div>
       <div>
@@ -564,7 +564,7 @@ const App = () => {
 
   return (
     <div className="min-h-screen flex flex-col font-sans">
-      <Header basePath="/us" variant="solid" />
+      <Header basePath="/" variant="solid" />
 
       <main className="flex-grow pt-16">
         <Hero searchValue={searchQuery} onSearchChange={setSearchQuery} />

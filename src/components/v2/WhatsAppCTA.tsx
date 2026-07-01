@@ -4,7 +4,7 @@
  * WhatsAppCTA — reusable secondary CTA that opens wa.me with a city-specific
  * pre-filled message and fires the Google Ads WhatsApp-click conversion.
  *
- * Why this exists: the city landing pages (/us/{city}/web-design) are the
+ * Why this exists: the city landing pages (/{city}/web-design) are the
  * destination for Google Ads spend, but until 2026-06-09 they had no WhatsApp
  * click target — meaning the WhatsApp conversion action (AW-11127037244/
  * N5PhCPWusNQbELy65Lkp) could never fire from paid traffic. This component

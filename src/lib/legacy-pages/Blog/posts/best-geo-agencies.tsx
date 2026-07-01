@@ -229,8 +229,8 @@ export const post: BlogPost = {
       </div>
       <p className="mb-3">
         <strong>URL:</strong>{' '}
-        <Link href="/us/services/ai-seo" className="text-blue-600 underline">
-          factoryjet.com/us/services/ai-seo
+        <Link href="/services/ai-seo" className="text-blue-600 underline">
+          factoryjet.com/services/ai-seo
         </Link>
       </p>
       <p className="mb-3">
@@ -440,7 +440,7 @@ export const post: BlogPost = {
           FactoryJet tracks AI citations in ChatGPT, Perplexity, Claude, and Gemini monthly for ecommerce brands and US SMBs. AI SEO retainers start at $1,999/month — includes GEO strategy, citation tracking, and original content production.
         </p>
         <Link
-          href="/us/services/ai-seo"
+          href="/services/ai-seo"
           className="inline-block bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors"
         >
           See AI SEO services →

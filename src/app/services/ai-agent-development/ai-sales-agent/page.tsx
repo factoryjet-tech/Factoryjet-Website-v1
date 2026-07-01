@@ -80,7 +80,7 @@ const faqSchema = {
       name: 'How much does an AI sales agent cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet AI sales agents start from ₹3,50,000 for a WhatsApp lead qualification bot with Zoho CRM integration. A full sales AI with multi-source lead capture, follow-up sequences, and demo booking starts from ₹7,00,000. All prices are fixed.',
+        text: 'FactoryJet AI sales agents are fixed-price and scoped to your build. Every project is quoted up front after a free discovery call, so you know the full cost before any work starts. Scope drives the price — the number of lead sources, qualification logic, CRM integrations, and whether you need demo booking and follow-up sequences. Book a discovery call for your exact quote.',
       },
     },
     {
@@ -171,7 +171,7 @@ const SALES_COMPARISON_COLUMNS = [
 ] as const;
 
 const SALES_COMPARISON_ROWS = [
-  { feature: 'Starting price', values: ['₹3,50,000 (one-time)', '₹40,000–₹80,000/month per SDR', '₹1,50,000–₹4,00,000', '₹5,000–₹25,000/month SaaS'] },
+  { feature: 'Pricing model', values: ['Fixed price, quoted up front', '₹40,000–₹80,000/month per SDR', '₹1,50,000–₹4,00,000', '₹5,000–₹25,000/month SaaS'] },
   { feature: 'Responds within 60 seconds, 24/7', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="sdr" kind="no" />, <CompareIcon key="fl" kind="no" />, <CompareIcon key="saas" kind="partial" />] },
   { feature: 'Hindi + regional language support', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="sdr" kind="partial" />, <CompareIcon key="fl" kind="partial" />, <CompareIcon key="saas" kind="no" />] },
   { feature: 'Zoho CRM / LeadSquared integration', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="sdr" kind="partial" />, <CompareIcon key="fl" kind="partial" />, <CompareIcon key="saas" kind="partial" />] },
@@ -266,7 +266,7 @@ const SALES_FAQ_ITEMS = [
   { category: 'process', question: 'What do I need to provide to get started?', answer: "Your qualification criteria (what makes a lead 'good'), access to your CRM, your WhatsApp Business API account (or we set one up), ad account access for Facebook/Instagram integration, and your product/service content for the knowledge base. We send a structured onboarding form — most clients complete it in under an hour." },
   { category: 'process', question: 'Can I update the qualification questions after the agent is live?', answer: "Yes. The qualification flow is managed through an admin panel — no technical skills required to adjust questions, scoring criteria, or CRM field mappings. Minor changes (question wording, scoring weights) take minutes. Major changes (new lead sources, new qualification logic) take a few days." },
   { category: 'process', question: 'How do you measure whether the sales agent is working?', answer: "We build a reporting dashboard tracking: lead volume by source, qualification rate, demo booking rate, response time (AI vs. human baseline), and re-engagement conversion rate. You see these metrics in real time and can identify which lead source or conversation step is underperforming." },
-  { category: 'pricing', question: 'How much does an AI sales agent cost in India?', answer: "FactoryJet AI sales agents start from ₹3,50,000 for a focused WhatsApp lead qualification bot with CRM integration. A full sales AI platform with multi-source capture, demo booking, and follow-up sequences starts from ₹7,00,000. All prices are fixed — no hourly billing, no ongoing FactoryJet subscription." },
+  { category: 'pricing', question: 'How much does an AI sales agent cost in India?', answer: "Pricing is fixed-price and scoped to your build. Every project is quoted up front after a free discovery call, so you know the full cost before any work starts. The price depends on scope — how many lead sources you need, your qualification logic, CRM integrations, and whether you add demo booking and follow-up sequences. There is no hourly billing and no ongoing FactoryJet subscription. Book a free discovery call for your exact quote." },
   { category: 'pricing', question: 'What is the typical ROI for an Indian business using an AI sales agent?', answer: "Two primary ROI drivers: speed (responding within 60 seconds vs. 4–6 hours increases qualification rates by 21×) and coverage (the agent handles every lead at peak capacity, whereas an SDR team misses leads during lunch, evenings, and Sundays). Most clients see 25–40% more demo bookings within 30 days." },
   { category: 'pricing', question: 'Are there ongoing costs after the sales agent is built?', answer: "LLM API costs (typically ₹5,000–₹20,000/month for Indian SMB lead volumes — paid directly to model providers) and your WhatsApp BSP subscription (Interakt/Wati based on message volume). FactoryJet charges nothing ongoing unless you choose a monthly retainer." },
   { category: 'pricing', question: 'Is my lead data safe with an AI sales agent?', answer: "Yes. Lead data is processed via API-level integrations and stored in your Zoho CRM — not on FactoryJet servers. We enforce least-privilege access, implement full audit trails, and document all data flows at delivery. For BFSI and regulated sectors, we deploy with private LLM infrastructure." },
@@ -502,7 +502,7 @@ export default function AISalesAgentINPage() {
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. In-House SDR Team vs. Freelancer vs. SaaS CRM Add-On"
           lead="Fixed price, full ownership, Indian lead source integration out of the box — the honest comparison."
-          pullQuote={{ stat: '₹3,50,000', caption: 'one-time — AI that qualifies every inbound lead in 60 seconds, books demos automatically, and pushes to Zoho CRM. No monthly salary, no sick leave, no coverage gaps.' }}
+          pullQuote={{ stat: 'Fixed price', caption: 'AI that qualifies every inbound lead in 60 seconds, books demos automatically, and pushes to Zoho CRM. No monthly salary, no sick leave, no coverage gaps. Quoted up front after a free discovery call.' }}
           columns={SALES_COMPARISON_COLUMNS}
           rows={SALES_COMPARISON_ROWS}
           footer="Prices reflect typical Indian market rates as of 2025. FactoryJet fixed-price contracts available for all tiers."

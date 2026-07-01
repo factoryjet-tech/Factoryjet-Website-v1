@@ -99,7 +99,7 @@ const faqSchema = {
       name: 'How much does an AI marketing agent cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet AI marketing agents start from ₹2,50,000 for a Content AI Starter (social and email campaign generation). The Full Marketing AI Platform with WhatsApp broadcast automation and CRM segmentation starts from ₹5,00,000. Enterprise packages with multi-language autonomous campaign execution start from ₹10,00,000. All are fixed-price — no hourly billing surprises.',
+        text: 'FactoryJet AI marketing agents are fixed-price and scoped to your build. The Content AI Starter covers social and email campaign generation. The Full Marketing AI Platform adds WhatsApp broadcast automation and CRM segmentation. Enterprise covers multi-language autonomous campaign execution. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. No hourly billing surprises.',
       },
     },
     {
@@ -260,7 +260,7 @@ const MARKETING_COMPARISON_ROWS = [
   {
     feature: 'Starting price',
     values: [
-      '₹2,50,000 one-time',
+      'Fixed one-time price',
       '₹30,000–₹1,00,000/month retainer',
       '₹15,000–₹50,000/month (inconsistent)',
       '₹8,000–₹25,000/month subscription',
@@ -565,13 +565,13 @@ const MARKETING_FAQ_ITEMS = [
     category: 'pricing',
     question: 'What does an AI marketing agent cost to build?',
     answer:
-      "Our AI marketing agent packages start at ₹2,50,000 for a Content AI Starter (AI-generated social and email content, monthly campaign calendar). The Full Marketing AI Platform is ₹5,00,000 and adds WhatsApp broadcast automation, ad optimisation signals, and CRM segmentation. Enterprise packages (₹10,00,000+) include multi-brand, multi-language, and full autonomous campaign execution. All are one-time build fees.",
+      "Pricing is fixed-price and scoped to your build. The Content AI Starter covers AI-generated social and email content with a monthly campaign calendar. The Full Marketing AI Platform adds WhatsApp broadcast automation, ad optimisation signals, and CRM segmentation. Enterprise adds multi-brand, multi-language, and full autonomous campaign execution. All are one-time build fees, quoted up front after a free discovery call.",
   },
   {
     category: 'pricing',
     question: 'Are there ongoing costs after the build?',
     answer:
-      "The build fee covers the custom AI agent. After delivery, you pay directly for underlying services: WhatsApp Business API message costs (charged per message by Meta), LLM API usage (typically ₹8,000–₹25,000/month depending on volume), and any third-party integration licences. FactoryJet offers an optional monthly support retainer (₹15,000–₹40,000/month) for ongoing optimisation, new campaign templates, and model updates.",
+      "The build fee covers the custom AI agent. After delivery, you pay directly for underlying services: WhatsApp Business API message costs (charged per message by Meta), LLM API usage (typically ₹8,000–₹25,000/month depending on volume), and any third-party integration licences. FactoryJet offers an optional monthly support retainer for ongoing optimisation, new campaign templates, and model updates.",
   },
   {
     category: 'pricing',
@@ -583,7 +583,7 @@ const MARKETING_FAQ_ITEMS = [
     category: 'pricing',
     question: 'Do you offer a pilot before the full build?',
     answer:
-      "Yes. For clients wanting validation before committing to the full build, we offer a 4-week pilot: one live WhatsApp campaign and one email campaign, fully AI-generated and sent to a real audience segment. The pilot fee is ₹75,000 and is credited against the full project cost if you proceed. Most clients find one successful live campaign more convincing than any proposal document.",
+      "Yes. For clients wanting validation before committing to the full build, we offer a 4-week pilot: one live WhatsApp campaign and one email campaign, fully AI-generated and sent to a real audience segment. The pilot is offered at a fixed fee, credited against the full project cost if you proceed. Most clients find one successful live campaign more convincing than any proposal document.",
   },
 ];
 
@@ -1009,9 +1009,9 @@ export default function AIMarketingAgentINPage() {
           headline="FactoryJet vs. Marketing Agency vs. Freelancer vs. SaaS Tool"
           lead="Fixed price, full ownership, Indian festival and WhatsApp automation out of the box — the honest comparison."
           pullQuote={{
-            stat: '₹2,50,000',
+            stat: 'Fixed price',
             caption:
-              'starting price — AI marketing agent with festival campaign automation, WhatsApp broadcast capability, Hindi content generation, and full code ownership. No monthly retainer to FactoryJet.',
+              'one AI marketing agent with festival campaign automation, WhatsApp broadcast capability, Hindi content generation, and full code ownership. Quoted up front after a free discovery call. No monthly retainer to FactoryJet.',
           }}
           columns={MARKETING_COMPARISON_COLUMNS}
           rows={MARKETING_COMPARISON_ROWS}

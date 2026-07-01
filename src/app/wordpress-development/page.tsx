@@ -27,7 +27,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'WordPress Development India | | FactoryJet',
   description:
-    'Professional WordPress development in India from ₹29,999. Custom themes, WooCommerce, speed optimization & SEO. 7-day delivery. 500+ websites built.',
+    'Professional WordPress development in India. Custom themes, WooCommerce, speed optimization & SEO. Fixed-price, scoped after a free call. 7-day delivery. 500+ websites built.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
@@ -81,7 +81,7 @@ const WP_faqSchema = {
       name: 'How much does WordPress development cost in India?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet's WordPress development starts at ₹29,999 for a custom theme on an existing WordPress install. A complete business site — custom theme, 5–8 pages, contact forms, SEO setup, speed optimization, and launch — runs ₹80,000. WooCommerce stores with Razorpay, GST invoicing, and Shiprocket integration start at ₹1,50,000. All prices are fixed and confirmed upfront — no hourly billing, no scope creep.",
+        text: "FactoryJet's WordPress pricing is fixed-price and scoped to your build. The main drivers are whether you need a custom theme on an existing WordPress install, a complete business site (custom theme, 5–8 pages, contact forms, SEO setup, speed optimization, and launch), or a WooCommerce store with Razorpay, GST invoicing, and Shiprocket integration. Every project is quoted up front after a free discovery call — no hourly billing, no scope creep.",
       },
     },
     {
@@ -97,7 +97,7 @@ const WP_faqSchema = {
       name: 'When should I choose WordPress over Next.js or Shopify?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Choose WordPress when: you need a CMS your team can update without a developer, you want a blog or content-heavy site, you need a WooCommerce store with full flexibility, or your budget is ₹30,000–₹1,50,000. Choose Next.js when: you need sub-1-second performance, custom web application features, or a headless CMS setup. Choose Shopify when: you are building a pure D2C e-commerce brand and want managed infrastructure. We help you choose the right platform during discovery — we won't recommend WordPress just because it's popular.",
+        text: "Choose WordPress when: you need a CMS your team can update without a developer, you want a blog or content-heavy site, you need a WooCommerce store with full flexibility, or you want the most cost-effective managed CMS for a content site. Choose Next.js when: you need sub-1-second performance, custom web application features, or a headless CMS setup. Choose Shopify when: you are building a pure D2C e-commerce brand and want managed infrastructure. We help you choose the right platform during discovery — we won't recommend WordPress just because it's popular.",
       },
     },
     {
@@ -129,7 +129,7 @@ const WP_faqSchema = {
     {
       '@type': 'Question',
       name: 'How much does website development cost in India?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Website development cost in India runs from about ₹15,000 for a simple WordPress site to ₹3,00,000+ for custom web applications. FactoryJet quotes a fixed price after a short call, milestone-paid, and the 7-day delivery guarantee applies to standard sites up to five pages.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Website development cost in India varies widely — a simple WordPress site sits at the low end, while custom web applications cost considerably more. FactoryJet quotes a fixed price after a short call, milestone-paid, and the 7-day delivery guarantee applies to standard sites up to five pages.' },
     },
   ],
 };
@@ -219,7 +219,7 @@ const WP_SERVICES = [
   {
     name: 'WordPress Maintenance & Support',
     description:
-      'Monthly WordPress maintenance for Indian businesses: core, theme, and plugin updates, daily automated backups to S3, uptime monitoring, security scanning (Wordfence), malware removal, and a dedicated engineer who knows your site./month.',
+      'Monthly WordPress maintenance for Indian businesses: core, theme, and plugin updates, daily automated backups to S3, uptime monitoring, security scanning (Wordfence), malware removal, and a dedicated engineer who knows your site.',
     example: 'Unmanaged WordPress sites in India are hacked within 12 months. Maintenance prevents it.',
     linkLabel: 'Get Maintenance Plan',
     linkHref: '/contact',
@@ -294,10 +294,10 @@ const WP_MARKET_STATS = [
     sourceLabel: 'BuiltWith Technology Trends',
   },
   {
-    value: '₹29,999',
-    label: 'starting price for a custom WordPress site from FactoryJet — at a fixed, published price',
+    value: '7 days',
+    label: 'standard delivery for a custom WordPress site from FactoryJet — at a fixed price scoped up front',
     sourceUrl: 'https://factoryjet.com/wordpress-development',
-    sourceLabel: 'FactoryJet Pricing',
+    sourceLabel: 'FactoryJet',
   },
 ];
 
@@ -310,12 +310,12 @@ const WP_COMPARISON_COLUMNS = [
 
 const WP_COMPARISON_ROWS = [
   {
-    feature: 'Starting price',
+    feature: 'Pricing model',
     values: [
-      '₹29,999',
-      '₹80,000–₹4,00,000',
-      '₹20,000–₹80,000',
-      '₹0 + ₹5,000–₹15,000/yr hosting',
+      'Fixed-price, scoped up front',
+      'High agency retainers',
+      'Variable, often re-quoted',
+      'DIY plus annual hosting cost',
     ],
   },
   {
@@ -469,7 +469,7 @@ const WP_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does WordPress development cost in India in 2025?',
     answer:
-      "FactoryJet's WordPress development starts at ₹29,999 for a custom theme on an existing install. A complete business site with 5–8 pages, custom design, SEO, speed optimization, and launch runs ₹80,000. WooCommerce stores with Razorpay, GST invoicing, and Shiprocket start at ₹1,50,000. Every tier is published upfront with fixed scope — no discovery fees, no 'it depends' quotes. Because you work directly with a specialised team rather than a full-service agency with account managers and overhead, you get production-grade work, faster, with full code ownership.",
+      "FactoryJet's WordPress pricing is fixed-price and scoped to your build. The main drivers are whether you need a custom theme on an existing install, a complete business site (5–8 pages, custom design, SEO, speed optimization, and launch), or a WooCommerce store with Razorpay, GST invoicing, and Shiprocket. Every tier is quoted up front after a free discovery call with fixed scope — no discovery fees, no 'it depends' surprises. Because you work directly with a specialised team rather than a full-service agency with account managers and overhead, you get production-grade work, faster, with full code ownership.",
   },
   {
     category: 'pricing',
@@ -481,13 +481,13 @@ const WP_FAQ_ITEMS = [
     category: 'pricing',
     question: "What's included in FactoryJet's WordPress pricing — any hidden costs?",
     answer:
-      'No hidden costs. Every quote is fixed-price and itemised. What is NOT included in our development fee and billed separately: WordPress hosting (we recommend Cloudflare Pages + AWS LightSail from ~₹700–₹2,000/month, or WP Engine India from ~₹1,500/month), premium plugins if required (most builds use only free or custom-built plugins), domain renewal (typically ₹800–₹1,200/year), and ongoing maintenance if you want it (from ₹4,999/month). We tell you the full cost of ownership before you sign off.',
+      'No hidden costs. Every quote is fixed-price and itemised. What is NOT included in our development fee and billed separately: WordPress hosting (we recommend Cloudflare Pages + AWS LightSail, or WP Engine India — both affordable monthly plans paid to the host directly), premium plugins if required (most builds use only free or custom-built plugins), domain renewal (a small annual fee paid to your registrar), and ongoing maintenance if you want it (a fixed monthly retainer scoped to your needs). We tell you the full cost of ownership before you sign off.',
   },
   {
     category: 'pricing',
     question: 'Why is FactoryJet cheaper than other WordPress agencies in India?',
     answer:
-      "We are a specialised engineering team, not a full-service digital agency. No account management layers, no generalist designers who also do social media, no large office in an expensive city, and no inflated project manager markups. The same Figma-to-code process, the same Lighthouse audit before handover, the same technical SEO setup — at a fixed, published price. We have been building websites since 1999. That experience is priced into the quality, not the overhead.",
+      "We are a specialised engineering team, not a full-service digital agency. No account management layers, no generalist designers who also do social media, no large office in an expensive city, and no inflated project manager markups. The same Figma-to-code process, the same Lighthouse audit before handover, the same technical SEO setup — at a fixed price scoped up front. We have been building websites since 1999. That experience is priced into the quality, not the overhead.",
   },
 
   /* ── WordPress vs. Alternatives ── */
@@ -495,13 +495,13 @@ const WP_FAQ_ITEMS = [
     category: 'platform',
     question: 'When should I choose WordPress over Next.js for my Indian business?',
     answer:
-      "Choose WordPress when: you need your team to update content without a developer (WordPress admin is learnable in one session), you want a CMS-driven blog or content hub for SEO, your budget is under ₹1,50,000, or you want WooCommerce for flexible e-commerce. Choose Next.js when: you need sub-500ms performance, you are building a web application with custom logic, you need a JAMstack architecture for global CDN delivery, or your business requires features impossible in WordPress without heavy plugin overhead. We assess this during discovery and give you an honest recommendation.",
+      "Choose WordPress when: you need your team to update content without a developer (WordPress admin is learnable in one session), you want a CMS-driven blog or content hub for SEO, you want the most cost-effective managed CMS, or you want WooCommerce for flexible e-commerce. Choose Next.js when: you need sub-500ms performance, you are building a web application with custom logic, you need a JAMstack architecture for global CDN delivery, or your business requires features impossible in WordPress without heavy plugin overhead. We assess this during discovery and give you an honest recommendation.",
   },
   {
     category: 'platform',
     question: 'WooCommerce vs. Shopify for Indian businesses — which is better?',
     answer:
-      "WooCommerce: No platform subscription fee, full code ownership, unlimited customization, and works on any Indian hosting. Best for: businesses that want zero monthly SaaS cost, need deep WooCommerce customization (wholesale portals, custom checkout flows), or already have a WordPress site. Shopify: Managed infrastructure, faster to launch for pure D2C, better for brands processing ₹5 crore+/month who want zero server management. Costlier monthly (₹2,500–₹25,000/month subscription). Both support Razorpay, UPI, GST, and Shiprocket natively. We build both — we will recommend the one that actually fits your business.",
+      "WooCommerce: No platform subscription fee, full code ownership, unlimited customization, and works on any Indian hosting. Best for: businesses that want zero monthly SaaS cost, need deep WooCommerce customization (wholesale portals, custom checkout flows), or already have a WordPress site. Shopify: Managed infrastructure, faster to launch for pure D2C, better for brands processing ₹5 crore+/month who want zero server management. It carries a higher recurring platform subscription. Both support Razorpay, UPI, GST, and Shiprocket natively. We build both — we will recommend the one that actually fits your business.",
   },
   {
     category: 'platform',
@@ -521,7 +521,7 @@ const WP_FAQ_ITEMS = [
     category: 'technical',
     question: 'What WordPress hosting do you recommend for Indian businesses?',
     answer:
-      "Our recommendations for Indian WordPress sites: (1) Cloudflare Pages + AWS LightSail (₹700–₹2,000/month) — best performance-to-cost ratio, Indian CDN edge nodes, Cloudflare caching and DDoS protection. (2) WP Engine India (₹1,500–₹4,000/month) — fully managed WordPress hosting, automated updates, daily backups, and built-in Redis. (3) Kinsta India (₹2,000–₹5,000/month) — premium managed hosting on Google Cloud. We do NOT recommend GoDaddy shared hosting or Hostgator for production WordPress sites — they are the primary reason Indian WordPress sites load in 8+ seconds.",
+      "Our recommendations for Indian WordPress sites: (1) Cloudflare Pages + AWS LightSail — best performance-to-cost ratio, Indian CDN edge nodes, Cloudflare caching and DDoS protection. (2) WP Engine India — fully managed WordPress hosting, automated updates, daily backups, and built-in Redis. (3) Kinsta India — premium managed hosting on Google Cloud. Hosting is paid directly to the host on an affordable monthly plan. We do NOT recommend GoDaddy shared hosting or Hostgator for production WordPress sites — they are the primary reason Indian WordPress sites load in 8+ seconds.",
   },
   {
     category: 'technical',
@@ -579,7 +579,7 @@ const WP_FAQ_ITEMS = [
     category: 'support',
     question: 'What does WordPress maintenance cost in India?',
     answer:
-      "FactoryJet's WordPress maintenance starts at ₹4,999/month and includes: core, theme, and plugin updates (applied to staging first, then production), daily automated backups to S3 with 30-day retention, uptime monitoring with 5-minute check intervals, monthly security scan via Wordfence, and up to 1 hour of minor content or layout changes. The ₹9,999/month plan adds up to 3 hours of development work, priority same-day response for critical issues, quarterly performance review with Lighthouse report, and a dedicated engineer who knows your codebase.",
+      "FactoryJet's WordPress maintenance is a fixed monthly retainer scoped to the support you need. The base plan includes: core, theme, and plugin updates (applied to staging first, then production), daily automated backups to S3 with 30-day retention, uptime monitoring with 5-minute check intervals, monthly security scan via Wordfence, and an hour of minor content or layout changes. A higher tier adds more development hours, priority same-day response for critical issues, a quarterly performance review with Lighthouse report, and a dedicated engineer who knows your codebase. Retainer pricing is fixed and quoted up front.",
   },
   {
     category: 'support',
@@ -591,7 +591,7 @@ const WP_FAQ_ITEMS = [
     category: 'support',
     question: 'What happens if my WordPress site gets hacked?',
     answer:
-      "For sites on our maintenance plan: we respond within 4 hours, restore from the most recent clean backup, audit and remove the malware, patch the vulnerability that was exploited, and harden the security configuration. For sites not on a maintenance plan, we offer emergency malware removal at ₹9,999 flat — with a post-cleanup report detailing what was compromised and how. We recommend moving to a maintenance plan immediately after any compromise, as rehacked sites are common without systematic hardening.",
+      "For sites on our maintenance plan: we respond within 4 hours, restore from the most recent clean backup, audit and remove the malware, patch the vulnerability that was exploited, and harden the security configuration. For sites not on a maintenance plan, we offer emergency malware removal at a fixed flat fee — with a post-cleanup report detailing what was compromised and how. We recommend moving to a maintenance plan immediately after any compromise, as rehacked sites are common without systematic hardening.",
   },
   {
     category: 'support',
@@ -603,7 +603,7 @@ const WP_FAQ_ITEMS = [
     category: 'support',
     question: 'Can your team train my staff to manage WordPress content?',
     answer:
-      "Yes — training is included in every project. We deliver a recorded screen-share walkthrough (30–45 minutes) covering: adding and editing pages in the block editor, publishing blog posts with images and SEO metadata, updating contact information and business hours, managing WooCommerce products and orders (for e-commerce builds), and handling common questions. The recording is yours to keep and share with future staff. For larger teams, we offer 1:1 training sessions at ₹2,500/hour.",
+      "Yes — training is included in every project. We deliver a recorded screen-share walkthrough (30–45 minutes) covering: adding and editing pages in the block editor, publishing blog posts with images and SEO metadata, updating contact information and business hours, managing WooCommerce products and orders (for e-commerce builds), and handling common questions. The recording is yours to keep and share with future staff. For larger teams, we offer 1:1 training sessions at a fixed hourly rate quoted up front.",
   },
 
   // Money-query coverage, added 2026-06-11
@@ -623,7 +623,7 @@ const WP_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does website development cost in India?',
     answer:
-      'Website development cost in India runs from about ₹15,000 for a simple WordPress site to ₹3,00,000+ for custom web applications. FactoryJet quotes a fixed price after a short call, milestone-paid, and the 7-day delivery guarantee applies to standard sites up to five pages.',
+      'Website development cost in India varies widely — a simple WordPress site sits at the low end, while custom web applications cost considerably more. FactoryJet quotes a fixed price after a short call, milestone-paid, and the 7-day delivery guarantee applies to standard sites up to five pages.',
   },
 ];
 
@@ -675,7 +675,7 @@ export default function WordPressDevelopmentPage() {
         formSlot={<HeroInlineForm region="in" source="wordpress_development_hero" />}
           eyebrow="WORDPRESS DEVELOPMENT · INDIA"
           headline="WordPress Built Right — Fast, Secure, and Ranked"
-          lead="43% of the internet runs on WordPress. Most Indian WordPress sites load in 8 seconds, run on GoDaddy shared hosting, and were built by someone who discovered Elementor last month. FactoryJet builds clean, fast, custom WordPress sites — from ₹29,999. In 7 days."
+          lead="43% of the internet runs on WordPress. Most Indian WordPress sites load in 8 seconds, run on GoDaddy shared hosting, and were built by someone who discovered Elementor last month. FactoryJet builds clean, fast, custom WordPress sites — at a fixed price scoped to your build. In 7 days."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ websites built',
@@ -824,10 +824,10 @@ export default function WordPressDevelopmentPage() {
               </div>
               <div className="divide-y divide-fj-neutral-100 px-7">
                 {[
-                  { platform: 'WordPress', best: 'Content sites, SMB web presence, WooCommerce', price: 'From ₹29,999' },
-                  { platform: 'WooCommerce', best: 'Flexible India e-commerce, zero SaaS fee', price: 'From ₹1,50,000' },
-                  { platform: 'Next.js', best: 'Performance apps, headless CMS, web apps', price: 'From ₹80,000' },
-                  { platform: 'Shopify', best: 'Pure D2C, managed infra, ₹5 cr+ GMV', price: 'From ₹50,000' },
+                  { platform: 'WordPress', best: 'Content sites, SMB web presence, WooCommerce', price: 'Fixed-price' },
+                  { platform: 'WooCommerce', best: 'Flexible India e-commerce, zero SaaS fee', price: 'Fixed-price' },
+                  { platform: 'Next.js', best: 'Performance apps, headless CMS, web apps', price: 'Fixed-price' },
+                  { platform: 'Shopify', best: 'Pure D2C, managed infra, ₹5 cr+ GMV', price: 'Fixed-price' },
                 ].map((item) => (
                   <div key={item.platform} className="py-3.5">
                     <div className="flex items-center justify-between gap-4">
@@ -1095,7 +1095,7 @@ export default function WordPressDevelopmentPage() {
           leadParagraphs={[
             "WordPress is by far the most popular CMS in India — powering over 5.6 million websites across SMBs, news and media, education, healthcare, real estate, NGOs, and professional services. It is the default choice for Indian business owners who need a web presence without a large development budget. The problem is not the platform — it is the ecosystem of cheap themes, bloated page builders, and shared hosting that most Indian WordPress sites are built on.",
             "FactoryJet has been building WordPress sites for Indian businesses since 1999. We have built for startups in Bangalore, clinics in Chennai, NGOs in Delhi, real estate portals in Mumbai, and news sites in Hyderabad. We understand what an Indian SMB at ₹50 lakh to ₹5 crore revenue actually needs from a website: it needs to load fast on a ₹12,000 Redmi phone on Jio 4G, rank for the right keywords on Google India, and be updatable by a non-technical team without breaking.",
-            "The WooCommerce opportunity in India is significant. India's D2C e-commerce market crossed ₹35,000 crore in 2024 and is growing at 38% annually. Many of these brands start on Shopify — and eventually migrate to WooCommerce when the Shopify subscription fee ($299–$2,500/month) stops making sense at their scale. WooCommerce with Razorpay is the lowest total-cost-of-ownership e-commerce stack in India for brands at ₹50 lakh to ₹5 crore annual GMV.",
+            "The WooCommerce opportunity in India is significant. India's D2C e-commerce market crossed ₹35,000 crore in 2024 and is growing at 38% annually. Many of these brands start on Shopify — and eventually migrate to WooCommerce when the recurring Shopify subscription fee stops making sense at their scale. WooCommerce with Razorpay is the lowest total-cost-of-ownership e-commerce stack in India for brands at ₹50 lakh to ₹5 crore annual GMV.",
           ]}
           bodySlot={
             <>
@@ -1144,9 +1144,9 @@ export default function WordPressDevelopmentPage() {
           headline="FactoryJet vs. Indian WP Agency vs. Freelancer vs. DIY Elementor"
           lead="Not all WordPress development in India delivers the same output. Here is the honest comparison."
           pullQuote={{
-            stat: '₹29,999',
+            stat: 'Fixed-price',
             caption:
-              'starting price — same Figma-first design, clean PHP theme, Lighthouse audit, and technical SEO as a ₹2,00,000 Indian agency project.',
+              'scoped up front — same Figma-first design, clean PHP theme, Lighthouse audit, and technical SEO you would expect from a premium Indian agency project, without the agency overhead.',
           }}
           columns={WP_COMPARISON_COLUMNS}
           rows={WP_COMPARISON_ROWS}

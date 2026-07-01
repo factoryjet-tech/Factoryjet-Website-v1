@@ -81,7 +81,7 @@ export const post: BlogPost = {
       </p>
 
       <p className="mb-6">
-        This 2026 playbook is built specifically for Raleigh and Triangle SMBs evaluating Shopify training, ongoing support, or both. It assumes you have read the Shopify marketing pages and want the real operator view — what training actually covers, when ongoing support is worth the retainer, how NC sales tax should be configured, and what an 8-week Triangle Shopify support engagement looks like end to end. The brands we see most often on our <a href="/us/raleigh/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Raleigh ecommerce development</a> intake calls land somewhere on that hybrid model — and that is the one this guide focuses on.
+        This 2026 playbook is built specifically for Raleigh and Triangle SMBs evaluating Shopify training, ongoing support, or both. It assumes you have read the Shopify marketing pages and want the real operator view — what training actually covers, when ongoing support is worth the retainer, how NC sales tax should be configured, and what an 8-week Triangle Shopify support engagement looks like end to end. The brands we see most often on our <a href="/raleigh/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Raleigh ecommerce development</a> intake calls land somewhere on that hybrid model — and that is the one this guide focuses on.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Why Raleigh and the Triangle Are Built for Shopify</h2>
@@ -174,7 +174,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">When Custom Shopify Development Beats Off-the-Shelf</h2>
       <p className="mb-4">
-        A properly configured Online Store 2.0 theme covers more ground than most Raleigh founders assume, and the mistake we see most often is paying $200 for a premium theme and then spending $5,000 on customization to make it do something the theme was never built to do. A free or $180 theme with custom CSS and a few section-level extensions delivers the same outcome at a fraction of the cost. Custom <a href="/us/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify development</a> earns its keep at four specific thresholds and not really before.
+        A properly configured Online Store 2.0 theme covers more ground than most Raleigh founders assume, and the mistake we see most often is paying $200 for a premium theme and then spending $5,000 on customization to make it do something the theme was never built to do. A free or $180 theme with custom CSS and a few section-level extensions delivers the same outcome at a fraction of the cost. Custom <a href="/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify development</a> earns its keep at four specific thresholds and not really before.
       </p>
       <p className="mb-4">
         <strong>Subscription products with non-trivial styling.</strong> A Triangle coffee roaster running a monthly subscription, a Durham wellness brand on a quarterly drop, a Raleigh apparel brand running a member program — Recharge or Bold can power the billing, but the subscription selection, pause, swap, and skip UI is where off-the-shelf themes break down. Custom development here is the difference between a 12% subscription opt-in rate and a 28% one.
@@ -186,7 +186,7 @@ export const post: BlogPost = {
         <strong>Multi-location local pickup with different operational rules.</strong> A Downtown Raleigh storefront plus a Durham warehouse, with different hours, different eligible zip-code radii, and different notification messaging — the configuration goes beyond what theme defaults handle gracefully.
       </p>
       <p className="mb-4">
-        <strong>B2B wholesale layers on the same store.</strong> Custom pricing rules, tax-exempt customer groups, and net-30 invoicing on the same Shopify store as the retail front. Shopify Plus solves a lot of this natively, but a custom layer is sometimes the better path for a sub-Plus-tier Triangle brand. Our broader <a href="/us/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">custom ecommerce development service</a> covers both Shopify and platform-agnostic builds, with the platform recommendation made during discovery rather than assumed.
+        <strong>B2B wholesale layers on the same store.</strong> Custom pricing rules, tax-exempt customer groups, and net-30 invoicing on the same Shopify store as the retail front. Shopify Plus solves a lot of this natively, but a custom layer is sometimes the better path for a sub-Plus-tier Triangle brand. Our broader <a href="/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">custom ecommerce development service</a> covers both Shopify and platform-agnostic builds, with the platform recommendation made during discovery rather than assumed.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What Training and Support Actually Cost in the Triangle</h2>
@@ -200,7 +200,7 @@ export const post: BlogPost = {
         <strong>The $3,500/month tier</strong> covers active optimization — A/B tests, conversion-rate work, Klaviyo flow improvements, new section development, schema updates, and quarterly strategic reviews. It is the right fit for Triangle brands past roughly $1M in revenue where the founder's time is better spent on product, sales, or partnerships than on Shopify admin.
       </p>
       <p className="mb-4">
-        Triangle local agencies typically quote $10,000–$25,000 for an equivalent setup engagement with timelines running 8–16 weeks, and $4,000–$8,000/month for ongoing support. The technical work is the same — the pricing difference is structural, not a quality difference. For Raleigh brands evaluating a broader web presence alongside the Shopify build, our <a href="/us/raleigh/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">Raleigh web design service</a> covers the marketing-site side with the same delivery pace.
+        Triangle local agencies typically quote $10,000–$25,000 for an equivalent setup engagement with timelines running 8–16 weeks, and $4,000–$8,000/month for ongoing support. The technical work is the same — the pricing difference is structural, not a quality difference. For Raleigh brands evaluating a broader web presence alongside the Shopify build, our <a href="/raleigh/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">Raleigh web design service</a> covers the marketing-site side with the same delivery pace.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Builds for Raleigh</h2>
@@ -217,7 +217,7 @@ export const post: BlogPost = {
         Talk to the founder directly — Bhavesh runs every Raleigh discovery call himself. Book a 30-minute slot at <a href="https://calendly.com/bhavesh-factoryjet/30min" className="text-blue-600 underline hover:text-blue-800 transition-colors">calendly.com/bhavesh-factoryjet</a> or email <a href="mailto:bhavesh@factoryjet.com" className="text-blue-600 underline hover:text-blue-800 transition-colors">bhavesh@factoryjet.com</a>.
       </p>
       <p className="mb-4">
-        ➡ <a href="/us/raleigh/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">See Raleigh Shopify development and support packages</a>
+        ➡ <a href="/raleigh/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">See Raleigh Shopify development and support packages</a>
       </p>
 
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8">

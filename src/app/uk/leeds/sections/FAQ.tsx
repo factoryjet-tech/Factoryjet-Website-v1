@@ -16,7 +16,7 @@ const CATEGORIES = [
 const GENERAL_FAQS = [
   {
     q: "How much does web design cost in Leeds?",
-    a: "The average cost for a professionally built business website in Leeds ranges from £1,200 to £8,000 depending on complexity. Local agencies like Ascensor, Bolser, and Parallax typically charge £4,500–£8,000 for a standard build. Budget-focused agencies like HungryWolf and Pixelish offer pay-monthly models from £49–£85 per month. FactoryJet delivers enterprise-grade websites on Next.js 15 starting from £1,500 — that is at a fixed, published price — because our AI-augmented development process dramatically reduces production time without sacrificing quality. Our websites consistently score 90+ on Google Lighthouse Performance, which most Leeds agencies cannot match.",
+    a: "Website costs in Leeds vary widely depending on complexity. Established local agencies price by overhead and project scope, while budget-focused shops run pay-monthly models that often lock you in. FactoryJet delivers enterprise-grade websites on Next.js 15 at a fixed, scoped price because our AI-augmented development process dramatically reduces production time without sacrificing quality. The main drivers are page count, custom design, e-commerce or AI features, and integrations. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. Our websites consistently score 90+ on Google Lighthouse Performance, which most Leeds agencies cannot match.",
   },
   {
     q: "Do you have a physical office in Leeds?",

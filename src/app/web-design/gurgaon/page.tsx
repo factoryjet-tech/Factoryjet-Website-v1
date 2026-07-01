@@ -27,7 +27,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'Web Design Company in Gurgaon | | FactoryJet',
   description:
-    'Web design company in Gurgaon for Fortune 500 GCCs, BFSI firms, and startups. Fast websites from ₹29,999. 7-day delivery. Serving Cyber City, Golf Course Road, MG Road & DLF areas.',
+    'Web design company in Gurgaon for Fortune 500 GCCs, BFSI firms, and startups. Fast, custom websites with a 7-day delivery guarantee. Serving Cyber City, Golf Course Road, MG Road & DLF areas.',
   keywords: [
     'web design company in Gurgaon',
     'website design Gurgaon',
@@ -147,7 +147,7 @@ const faqSchema = {
       name: 'How much does a website cost for a business in Gurgaon?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "FactoryJet's web design for Gurgaon businesses starts at ₹29,999 for a 5-page Starter site. The Growth tier (₹80,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds start at ₹1,50,000. Premium Gurgaon agency rates for comparable scope typically run ₹1,50,000–₹5,00,000.",
+        text: "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
       },
     },
     {
@@ -247,7 +247,7 @@ const GGN_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a website cost for a business in Gurgaon?',
     answer:
-      "FactoryJet's web design for Gurgaon businesses starts at ₹29,999 for a 5-page Starter site. The Growth tier (₹80,000) covers 10–15 pages, a blog CMS, lead-capture forms, and GA4 analytics. Custom builds start at ₹1,50,000. Premium Gurgaon agency rates for comparable scope typically run ₹1,50,000–₹5,00,000.",
+      "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
   },
   {
     category: 'pricing',
@@ -343,7 +343,7 @@ const GGN_FAQ_ITEMS = [
     category: 'local',
     question: 'How does FactoryJet compare to Gurgaon web agencies?',
     answer:
-      "Premium Gurgaon web agencies typically charge ₹1,50,000–₹5,00,000 for a comparable project and deliver in 8–20 weeks. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. Faster website, shorter timeline, codebase you own — at a fixed, published price.",
+      "Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright.",
   },
 
   /* ── Support & Ownership ── */
@@ -357,7 +357,7 @@ const GGN_FAQ_ITEMS = [
     category: 'support',
     question: 'What support do you provide after launch?',
     answer:
-      'Every project includes a 30-day post-launch support window covering bug fixes and minor adjustments at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans from ₹4,999/month.',
+      'Every project includes a 30-day post-launch support window covering bug fixes and minor adjustments at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans covering development changes, priority same-day bug response, and a dedicated engineer who knows your codebase. Maintenance clients also get quarterly performance audits and Core Web Vitals checks.',
   },
   {
     category: 'support',
@@ -369,7 +369,7 @@ const GGN_FAQ_ITEMS = [
     category: 'support',
     question: 'Do you offer ongoing retainer services for Gurgaon businesses?',
     answer:
-      'Yes. Monthly retainers from ₹4,999/month cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling and a dedicated engineer — important for Gurgaon corporate teams who need rapid turnaround.',
+      'Yes. Monthly retainers cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling and a dedicated engineer — important for Gurgaon corporate teams who need rapid turnaround.',
   },
 
   // Money-query coverage, added 2026-06-11
@@ -395,10 +395,6 @@ const GGN_COMPARISON_COLUMNS = [
 ] as const;
 
 const GGN_COMPARISON_ROWS = [
-  {
-    feature: 'Starting price',
-    values: ['Get a Quote', '₹1,50,000–₹5,00,000', '₹10,000–₹75,000', '₹0–₹15,000 (you build it)'],
-  },
   {
     feature: 'Delivery timeline',
     values: ['7 days', '8–20 weeks', '4–16 weeks (unreliable)', '1–2 weeks (you build it)'],
@@ -483,11 +479,6 @@ const howToSchema = {
   '@id': `https://factoryjet.com/web-design/gurgaon#howto`,
   name: `How FactoryJet builds your Gurgaon website in 7 days`,
   description: `Our 7-day process for delivering a professional, high-performance website for Gurgaon businesses.`,
-  estimatedCost: {
-    '@type': 'MonetaryAmount',
-    currency: 'INR',
-    minValue: '29999',
-  },
   totalTime: 'P7D',
   step: [
     {
@@ -576,7 +567,7 @@ export default function GurgaonWebDesignPage() {
         formSlot={<HeroInlineForm region="in" source="web_design_gurgaon_hero" />}
           eyebrow="WEB DESIGN · GURGAON"
           headline="Website Design in Gurgaon for GCCs, BFSI Firms, Startups, and High-Value B2B Businesses"
-          lead="Gurgaon is India's corporate capital — home to 250+ Fortune 500 Global Capability Centres, India's largest BFSI corridor, and the fastest-growing startup ecosystem in North India. From Cyber City's GCC cluster to Golf Course Road's premium commercial stretch and Sohna Road's emerging startup belt, Gurgaon businesses demand quality and know how to evaluate it. FactoryJet builds from ₹29,999 — Figma-designed, Next.js-built, 7-day delivery guarantee, your codebase delivered in full."
+          lead="Gurgaon is India's corporate capital — home to 250+ Fortune 500 Global Capability Centres, India's largest BFSI corridor, and the fastest-growing startup ecosystem in North India. From Cyber City's GCC cluster to Golf Course Road's premium commercial stretch and Sohna Road's emerging startup belt, Gurgaon businesses demand quality and know how to evaluate it. FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery guarantee',
@@ -736,7 +727,7 @@ export default function GurgaonWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Gurgaon Businesses Choose FactoryJet Over Local Premium Agencies"
-          lead="Premium Gurgaon web agencies typically charge ₹1,50,000–₹5,00,000 for a comparable project and take 8–20 weeks to deliver. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
+          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront — no surprises."
           pillars={[
             {
               icon: '⚡',
@@ -799,13 +790,13 @@ export default function GurgaonWebDesignPage() {
           headline="FactoryJet vs. Gurgaon Premium Agency vs. Freelancer vs. Template Builder"
           lead="Not all web design options in Gurgaon deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
           pullQuote={{
-            stat: '₹29,999',
+            stat: '7 days',
             caption:
-              'starting price — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a ₹3,00,000 Gurgaon premium agency project.',
+              'from kickoff to launch — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
           }}
           columns={GGN_COMPARISON_COLUMNS}
           rows={GGN_COMPARISON_ROWS}
-          footer="Prices reflect typical Gurgaon premium market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
+          footer="FactoryJet fixed-price contracts available for every scope. You get a clear quote up front after a free consultation."
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}

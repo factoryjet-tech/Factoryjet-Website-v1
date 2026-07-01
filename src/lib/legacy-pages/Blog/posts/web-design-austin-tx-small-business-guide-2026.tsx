@@ -147,7 +147,7 @@ export const post: BlogPost = {
       <p className="mb-4">
         <strong>Citation consistency</strong> across Yelp, BBB, Austin Chamber of Commerce, and local directories. NAP (Name, Address, Phone) inconsistencies across citations dilute local ranking signals.
       </p>
-      <p className="mb-4">➡ Learn more: <a href="/us/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet US web design services</a></p>
+      <p className="mb-4">➡ Learn more: <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet US web design services</a></p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Offers Austin TX Small Businesses</h2>
       <p className="mb-4">
@@ -157,7 +157,7 @@ export const post: BlogPost = {
         Our Austin clients get: custom Next.js builds (no templates), WCAG 2.2 accessibility compliance, Core Web Vitals green scores, full code ownership, 30-day post-launch support, and a fixed-price contract with itemized scope. Pricing is fixed and published upfront.
       </p>
       <p className="mb-4">
-        ➡ <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free quote with PageSpeed proof in 24 hours</a> · <a href="/us/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our web design packages</a>
+        ➡ <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free quote with PageSpeed proof in 24 hours</a> · <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our web design packages</a>
       </p>
 
       <div className="bg-orange-50 border border-orange-200 rounded-lg p-6 mt-8">

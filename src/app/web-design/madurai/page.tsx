@@ -71,10 +71,6 @@ const MDU_COMPARISON_COLUMNS = [
 
 const MDU_COMPARISON_ROWS = [
   {
-    feature: 'Starting price',
-    values: ['₹25,000', '₹50,000+', '₹8,000–₹25,000'],
-  },
-  {
     feature: 'Delivery timeline',
     values: ['7 days', '6–10 weeks', '3–8 weeks'],
   },
@@ -150,7 +146,7 @@ export default function Page() {
         name: 'How much does a website cost in Madurai?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Website projects in Madurai start from ₹25,000 for a professional 5-page site. We offer transparent, fixed pricing with no hidden costs — ideal for Madurai SMEs and MSMEs.',
+          text: "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
         },
       },
       {
@@ -200,7 +196,7 @@ export default function Page() {
     stats: [
       { value: '7-Day', label: 'Delivery Guarantee' },
       { value: '500+', label: 'Businesses Served' },
-      { value: '₹25K', label: 'Starting Price' },
+      { value: '25+ yrs', label: 'Web Engineering' },
     ],
   }
 
@@ -229,8 +225,8 @@ export default function Page() {
         body: 'Production-ready 5-page websites in 7 days. No waiting months for a local agency to deliver.',
       },
       {
-        title: 'SME-Friendly INR Pricing',
-        body: 'Projects start at ₹25,000 — affordable for Madurai MSMEs without compromising on quality or performance.',
+        title: 'SME-Friendly Fixed Pricing',
+        body: 'You get a clear, fixed quote after a free consultation — affordable for Madurai MSMEs without compromising on quality or performance.',
       },
       {
         title: 'Tamil Nadu Market Expertise',
@@ -302,7 +298,7 @@ export default function Page() {
   const pricingTiers = [
     {
       name: 'Starter',
-      priceRange: '₹25,000',
+      priceRange: 'Get a Quote',
       description: 'For small Madurai businesses and solo operators needing a credible web presence quickly.',
       features: [
         '5 pages',
@@ -316,7 +312,7 @@ export default function Page() {
     },
     {
       name: 'Growth',
-      priceRange: '₹50,000',
+      priceRange: 'Get a Quote',
       description: 'For growing Madurai businesses needing more pages, stronger design, and better lead generation.',
       features: [
         'Up to 12 pages',
@@ -331,7 +327,7 @@ export default function Page() {
     },
     {
       name: 'Enterprise',
-      priceRange: '₹1,00,000+',
+      priceRange: 'Talk to the Founder',
       description: 'For hospitals, colleges, or manufacturers needing custom portals or multi-location websites.',
       features: [
         'Pages scoped per project',
@@ -352,10 +348,10 @@ const MDU_FAQ_CATEGORIES = [  { key: 'process', label: 'Process' },
 ] as const;
 
 const MDU_FAQ_ITEMS = [
-  { category: 'pricing', question: 'What does a website cost for a Madurai business?', answer: 'Our Madurai projects start at ₹25,000 for a 5-page site. Growth packages run ₹50,000 and enterprise custom builds start at ₹1,00,000. All pricing is fixed — no surprise additions.' },
+  { category: 'pricing', question: 'What does a website cost for a Madurai business?', answer: "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep." },
   { category: 'pricing', question: 'Do you offer installment payment options?', answer: 'Yes. Standard split is 50% at kickoff and 50% on delivery. For larger hospital or educational institution websites we can structure 3-stage payments.' },
   { category: 'pricing', question: 'Are there monthly fees after the website is built?', answer: 'No mandatory monthly fees. Hosting, domain, and optional maintenance are separate and clearly quoted before you sign.' },
-  { category: 'pricing', question: 'Is the pricing affordable for small Madurai businesses?', answer: "Yes. Our Starter package at ₹25,000 is specifically designed for SMEs and MSMEs. We don't compromise on quality — we've built efficient processes that let us deliver premium websites at accessible prices." },
+  { category: 'pricing', question: 'Is the pricing affordable for small Madurai businesses?', answer: "Yes. Our Starter scope is specifically designed for SMEs and MSMEs. We don't compromise on quality — we've built efficient processes that let us deliver premium websites at accessible prices." },
   { category: 'process', question: 'How does the 7-day website delivery work?', answer: 'After kickoff call and content submission, design and development happen in parallel. You receive a review link on day 5, we finalize revisions by day 6, and the site goes live on day 7.' },
   { category: 'process', question: 'What information do I need to provide to get started?', answer: 'Your business logo, basic information about your services, and any existing photos or content. We guide you through a structured brief that takes under 30 minutes.' },
   { category: 'process', question: 'How many revisions can I request?', answer: 'Two rounds of revisions are included in all packages. Additional revisions are billed at a flat rate communicated upfront.' },
@@ -364,7 +360,7 @@ const MDU_FAQ_ITEMS = [
   { category: 'technical', question: 'Will the website work on mobile phones?', answer: 'All our builds are mobile-first. Given that most Madurai users browse on smartphones, this is non-negotiable. We test across iOS and Android at multiple screen sizes.' },
   { category: 'technical', question: 'Can the website support Tamil language content?', answer: 'Yes. We can build bilingual Tamil + English websites for businesses targeting local consumers. Proper Unicode rendering and font support for Tamil script is included.' },
   { category: 'technical', question: 'Can I update the website content myself?', answer: 'Yes. WordPress builds include a CMS training session so you can manage your own content. For Next.js builds we provide a simple editing workflow.' },
-  { category: 'ecommerce', question: 'Can you build an online store for my Madurai retail business?', answer: 'Yes. We build Shopify and custom e-commerce sites for retail, D2C, and wholesale businesses. Prices start at ₹50,000 for a fully functional online store.' },
+  { category: 'ecommerce', question: 'Can you build an online store for my Madurai retail business?', answer: 'Yes. We build Shopify and custom e-commerce sites for retail, D2C, and wholesale businesses. You get a clear, fixed quote up front after a free consultation.' },
   { category: 'ecommerce', question: 'Do you support Indian payment gateways?', answer: 'Yes — Razorpay, PayU, and CCAvenue are standard. UPI and net banking supported out of the box.' },
   { category: 'ecommerce', question: 'Can you build an online booking system for my hotel or tour operator?', answer: 'Yes. We integrate booking forms, availability calendars, and WhatsApp booking flows for Madurai hospitality and tourism businesses.' },
   { category: 'ecommerce', question: 'Can you build a patient appointment booking system for a hospital?', answer: 'Yes. We build hospital websites with online appointment booking, department pages, doctor profiles, and patient enquiry forms — all optimized for local Madurai search.' },
@@ -395,11 +391,6 @@ const MDU_FAQ_ITEMS = [
     '@id': `https://factoryjet.com/web-design/madurai#howto`,
     name: `How FactoryJet builds your Madurai website in 7 days`,
     description: `Our 7-day process for delivering a professional, AI-powered website for Madurai businesses.`,
-    estimatedCost: {
-      '@type': 'MonetaryAmount',
-      currency: 'INR',
-      minValue: '25000',
-    },
     totalTime: 'P7D',
     step: [
       {
@@ -539,12 +530,12 @@ const MDU_FAQ_ITEMS = [
           headline="FactoryJet vs. Madurai Agency vs. Freelancer"
           lead="Not all web design options in Madurai deliver the same output. Here is the honest comparison — scope, price, timeline, and what you own after launch."
           pullQuote={{
-            stat: '₹25,000',
-            caption: 'starting price — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a ₹50,000+ Madurai agency project.',
+            stat: '7 days',
+            caption: 'from kickoff to launch — same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
           }}
           columns={MDU_COMPARISON_COLUMNS}
           rows={MDU_COMPARISON_ROWS}
-          footer="Prices reflect typical Madurai market ranges as of 2025. FactoryJet fixed-price contracts available for all tiers."
+          footer="FactoryJet fixed-price contracts available for every scope. You get a clear quote up front after a free consultation."
         />
       <IndustriesGrid />
         <GetFreeQuoteCTA />

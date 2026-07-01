@@ -141,7 +141,7 @@ const PortfolioCard: React.FC<{ item: PortfolioItem }> = ({ item }) => {
 const PortfolioPage: React.FC<PortfolioPageProps> = ({ basePath = '' }) => {
   const [selectedCategory, setSelectedCategory] = useState<PortfolioCategoryFilter>('All');
   const { openModal } = useContactModal();
-  const isUS = basePath === '/us';
+  const isUS = basePath === '/';
 
   const filteredItems = useMemo(() => {
     if (selectedCategory === 'All') return PORTFOLIO_ITEMS;
@@ -248,7 +248,7 @@ const PortfolioPage: React.FC<PortfolioPageProps> = ({ basePath = '' }) => {
                   Start a Project <ArrowRight size={18} className="md:w-5 md:h-5" />
                 </button>
                 <Link
-                  href={isUS ? '/us/pricing' : '/pricing'}
+                  href={isUS ? '/pricing' : '/pricing'}
                   className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-bold transition-all backdrop-blur-sm border border-white/10 text-center text-sm md:text-base"
                 >
                   View Pricing

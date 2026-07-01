@@ -76,7 +76,7 @@ export const post: BlogPost = {
       </p>
 
       <p className="mb-6">
-        This guide is a 2026 platform breakdown specifically for Tampa-area boutiques and small-batch DTC brands — the businesses we see most often on our <a href="/us/tampa/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Tampa ecommerce development</a> intake calls. The goal is to help you pick the right platform once, configure it for Tampa-specific operational realities, and not have to rebuild it 18 months later.
+        This guide is a 2026 platform breakdown specifically for Tampa-area boutiques and small-batch DTC brands — the businesses we see most often on our <a href="/tampa/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Tampa ecommerce development</a> intake calls. The goal is to help you pick the right platform once, configure it for Tampa-specific operational realities, and not have to rebuild it 18 months later.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Why Tampa Boutiques Need a Different Ecommerce Playbook</h2>
@@ -131,7 +131,7 @@ export const post: BlogPost = {
         Where Shopify gets weaker: very large catalogs (1,000+ SKUs with complex variants), heavily customized checkout flows on the standard plan, and B2B wholesale flows that need bespoke pricing rules. Shopify Plus solves most of those but kicks the price tier up significantly.
       </p>
       <p className="mb-4">
-        For platform-specific guidance, our <a href="/us/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify development service page</a> covers what is included in a base Tampa boutique build.
+        For platform-specific guidance, our <a href="/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify development service page</a> covers what is included in a base Tampa boutique build.
       </p>
 
       <h3 className="text-xl font-semibold mt-6 mb-3">Shopify + Local Pickup — A Tampa-Specific Configuration</h3>
@@ -144,7 +144,7 @@ export const post: BlogPost = {
         WooCommerce is the right choice for a narrower set of Tampa boutiques than people assume. The cases where it wins: you already run a content-heavy WordPress site you do not want to migrate, you have 500+ SKUs with complex attributes, you need deeply custom checkout logic, or you have a developer relationship you trust and a clear plan for ongoing maintenance. WooCommerce gives you more control and lower transaction fees, but you own the hosting, PCI compliance posture, security updates, and plugin compatibility forever.
       </p>
       <p className="mb-4">
-        For a typical Hyde Park apparel boutique or a Tampa Heights small-batch DTC operator, WooCommerce is usually more platform than the business needs — and the ongoing maintenance load eats the cost savings within 12–18 months. For a content-first brand with a strong editorial layer, it can be the better answer. The broader <a href="/us/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet ecommerce development service</a> covers both Shopify and WooCommerce builds, with the platform recommendation made during discovery rather than assumed upfront.
+        For a typical Hyde Park apparel boutique or a Tampa Heights small-batch DTC operator, WooCommerce is usually more platform than the business needs — and the ongoing maintenance load eats the cost savings within 12–18 months. For a content-first brand with a strong editorial layer, it can be the better answer. The broader <a href="/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet ecommerce development service</a> covers both Shopify and WooCommerce builds, with the platform recommendation made during discovery rather than assumed upfront.
       </p>
 
       <h3 className="text-xl font-semibold mt-6 mb-3">Squarespace and Wix Commerce — The Ceiling Is Closer Than It Looks</h3>
@@ -194,13 +194,13 @@ export const post: BlogPost = {
         Bigger projects — 500+ SKU catalogs, custom subscription flows, B2B wholesale layers, or WooCommerce migrations — run 2–4 weeks and are scoped during discovery. The pricing stays transparent. The 7-day delivery guarantee applies to standard Shopify builds with client assets ready at kickoff.
       </p>
       <p className="mb-4">
-        If you also need the marketing site separated from the storefront — for example a content-heavy editorial layer with the store running on a subdomain — our <a href="/us/tampa/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">Tampa web design service</a> covers that build path.
+        If you also need the marketing site separated from the storefront — for example a content-heavy editorial layer with the store running on a subdomain — our <a href="/tampa/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">Tampa web design service</a> covers that build path.
       </p>
       <p className="mb-4">
         Talk to the founder directly — Bhavesh runs every Tampa boutique discovery call himself. Book a 30-minute slot at <a href="https://calendly.com/bhavesh-factoryjet/30min" className="text-blue-600 underline hover:text-blue-800 transition-colors">calendly.com/bhavesh-factoryjet</a> or email <a href="mailto:bhavesh@factoryjet.com" className="text-blue-600 underline hover:text-blue-800 transition-colors">bhavesh@factoryjet.com</a>.
       </p>
       <p className="mb-4">
-        ➡ <a href="/us/tampa/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">See Tampa ecommerce development packages</a>
+        ➡ <a href="/tampa/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">See Tampa ecommerce development packages</a>
       </p>
 
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8">

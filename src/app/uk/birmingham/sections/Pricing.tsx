@@ -8,71 +8,49 @@ import { trackButtonClick, trackCTAClick } from "@/utils/gtm";
 
 type Row = {
   service: string;
-  birminghamAvg: string;
-  factoryjet: string;
-  saving: string;
+  included: string;
 };
 
 const ROWS: Row[] = [
   {
     service: "Business website (5 pages)",
-    birminghamAvg: "£4,800–£8,500",
-    factoryjet: "£1,995–£3,200",
-    saving: "~55%",
+    included: "Custom design, build, on-page SEO, launch & training",
   },
   {
     service: "Business website (10+ pages)",
-    birminghamAvg: "£8,500–£18,000",
-    factoryjet: "£3,500–£7,500",
-    saving: "~55%",
+    included: "Everything above plus deeper content and integrations",
   },
   {
     service: "E-commerce (Shopify starter)",
-    birminghamAvg: "£6,500–£12,000",
-    factoryjet: "£2,995–£4,995",
-    saving: "~55%",
+    included: "Store build, payments, shipping, product config, SEO",
   },
   {
     service: "Shopify Plus / headless commerce",
-    birminghamAvg: "£18,000–£35,000",
-    factoryjet: "£7,500–£14,000",
-    saving: "~57%",
+    included: "Advanced store, headless frontend, custom checkout",
   },
   {
     service: "B2B ecommerce portal",
-    birminghamAvg: "£15,000–£28,000",
-    factoryjet: "£6,500–£11,500",
-    saving: "~57%",
+    included: "Account pricing, quote flows, bulk ordering, integrations",
   },
   {
     service: "AI agent (single workflow)",
-    birminghamAvg: "Not offered / £15,000+",
-    factoryjet: "£3,500–£6,500",
-    saving: "60%+",
+    included: "Scoping, build, tool integration, testing, handover docs",
   },
   {
     service: "Multi-agent AI system",
-    birminghamAvg: "Not offered / £25,000+",
-    factoryjet: "£7,500–£16,000",
-    saving: "60%+",
+    included: "Orchestrated agents, multiple integrations, monitoring",
   },
   {
     service: "SEO (monthly retainer)",
-    birminghamAvg: "£800–£2,200/mo",
-    factoryjet: "£350–£950/mo",
-    saving: "~57%",
+    included: "Technical SEO, content, authority building, reporting",
   },
   {
     service: "AI SEO / GEO (monthly)",
-    birminghamAvg: "£1,500–£4,000/mo",
-    factoryjet: "£650–£1,400/mo",
-    saving: "~58%",
+    included: "Answer-first content, schema, per-engine citation tracking",
   },
   {
     service: "WordPress / Framer build",
-    birminghamAvg: "£3,500–£7,000",
-    factoryjet: "£1,500–£3,000",
-    saving: "~57%",
+    included: "Design, build, on-page SEO, launch & training",
   },
 ];
 
@@ -205,9 +183,10 @@ export default function Pricing() {
             }}
           >
             Birmingham agencies are notorious for requiring discovery workshops
-            before providing a quote. At FactoryJet, prices are public because
-            transparency is how trust is built. These are ballpark ranges — your
-            specific project quote comes in 24 hours, free, no commitment.
+            before providing a quote. At FactoryJet, every project is fixed-price
+            and scoped to your build, so you know the full cost before work
+            starts. Here is what each service includes. Your specific written
+            quote comes within 24 hours, free, no commitment.
           </p>
         </div>
 
@@ -227,18 +206,13 @@ export default function Pricing() {
             >
               {/* Header row */}
               <div
-                className="grid grid-cols-[1.5fr_1fr_1fr_0.7fr]"
+                className="grid grid-cols-[1fr_1.6fr]"
                 style={{
                   backgroundColor: "#0A0F1C",
                   color: "#FFFFFF",
                 }}
               >
-                {[
-                  "Service",
-                  "Birmingham Agency Avg",
-                  "FactoryJet",
-                  "You Save",
-                ].map((h, i) => (
+                {["Service", "What's Included"].map((h, i) => (
                   <div
                     key={h}
                     className="px-6 py-5"
@@ -248,8 +222,7 @@ export default function Pricing() {
                       fontSize: 12.5,
                       letterSpacing: "0.14em",
                       textTransform: "uppercase",
-                      color:
-                        i === 2 ? "#FFFFFF" : "rgba(255,255,255,0.78)",
+                      color: i === 0 ? "#FFFFFF" : "rgba(255,255,255,0.78)",
                       borderLeft:
                         i === 0 ? "none" : "1px solid rgba(255,255,255,0.08)",
                     }}
@@ -266,67 +239,39 @@ export default function Pricing() {
                   <div
                     key={row.service}
                     data-pricing-row
-                    className="grid grid-cols-[1.5fr_1fr_1fr_0.7fr] items-center"
+                    className="grid grid-cols-[1fr_1.6fr] items-center"
                     style={{
                       backgroundColor: zebra,
                       borderTop: "1px solid #E2E8F0",
                     }}
                   >
-                    {/* Service */}
+                    {/* Service — highlighted column (Jet Green) */}
                     <div
                       className="px-6 py-6"
                       style={{
                         color: "#0A0F1C",
                         fontFamily: "var(--font-sans)",
-                        fontWeight: 600,
+                        fontWeight: 700,
                         fontSize: 15.5,
-                        lineHeight: 1.45,
+                        lineHeight: 1.4,
+                        backgroundColor: "rgba(16,185,129,0.04)",
+                        borderLeft: "3px solid #10B981",
                       }}
                     >
                       {row.service}
                     </div>
-                    {/* Birmingham average */}
+                    {/* What's included */}
                     <div
                       className="px-6 py-6"
                       style={{
-                        color: "#6b7280",
+                        color: "#374151",
                         fontFamily: "var(--font-sans)",
                         fontSize: 15,
-                        lineHeight: 1.45,
-                        textDecoration: "line-through",
-                        textDecorationColor: "rgba(107,114,128,0.4)",
+                        lineHeight: 1.5,
+                        borderLeft: "1px solid #E2E8F0",
                       }}
                     >
-                      {row.birminghamAvg}
-                    </div>
-                    {/* FactoryJet — Jet Green column */}
-                    <div
-                      className="px-6 py-6"
-                      style={{
-                        color: "#10B981",
-                        fontFamily: "var(--font-sans)",
-                        fontWeight: 700,
-                        fontSize: 16,
-                        lineHeight: 1.4,
-                        backgroundColor: "rgba(16,185,129,0.04)",
-                        borderLeft: "3px solid #10B981",
-                        borderRight: "1px solid #E2E8F0",
-                      }}
-                    >
-                      {row.factoryjet}
-                    </div>
-                    {/* Saving — Jet Orange */}
-                    <div
-                      className="px-6 py-6"
-                      style={{
-                        color: "#FF6B35",
-                        fontFamily: "var(--font-sans)",
-                        fontWeight: 700,
-                        fontSize: 15,
-                        lineHeight: 1.4,
-                      }}
-                    >
-                      {row.saving}
+                      {row.included}
                     </div>
                   </div>
                 );
@@ -347,9 +292,8 @@ export default function Pricing() {
               fontStyle: "italic",
             }}
           >
-            Birmingham agency averages sourced from public proposals and rate cards
-            (KIJO, ALT Agency, Opace, Eastside Co, magic42, Republic Marketing).
-            FactoryJet prices are indicative — free quote within 24 hours.
+            Every engagement is scoped to your project and quoted in writing
+            before work starts. Free quote within 24 hours, no commitment.
           </p>
         </div>
 

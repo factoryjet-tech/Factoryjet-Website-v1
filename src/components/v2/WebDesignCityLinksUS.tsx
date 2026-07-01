@@ -39,7 +39,7 @@ export default function WebDesignCityLinksUS({ currentCity }: Props) {
           {otherCities.map((city) => (
             <Link
               key={city.slug}
-              href={`/us/${city.slug}/web-design/`}
+              href={`/${city.slug}/web-design/`}
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-gray-200 bg-white text-sm font-medium text-[#0F0F12] hover:border-[#F05A28] hover:text-[#F05A28] transition-colors duration-150"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-[#F05A28] opacity-60" />
@@ -50,7 +50,7 @@ export default function WebDesignCityLinksUS({ currentCity }: Props) {
 
         <div className="text-center">
           <Link
-            href="/us/services/web-design/"
+            href="/services/web-design/"
             className="text-sm font-semibold text-[#F05A28] hover:underline underline-offset-4"
           >
             See all US web design cities →

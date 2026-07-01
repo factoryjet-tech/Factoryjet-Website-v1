@@ -68,7 +68,7 @@ const SERVICES: Service[] = [
     ],
     stackLabel: 'Built on',
     stack: ['WordPress', 'Next.js', 'Webflow', 'Framer', 'Custom Stack'],
-    primaryCta: { label: 'See web design services', href: '/us/services/web-design' },
+    primaryCta: { label: 'See web design services', href: '/services/web-design' },
     secondaryCta: { label: 'Book a call', href: '/contact' },
     icon: <Globe size={ICON_SIZE} />,
     imageSrc: '/images/services/web-design.webp',
@@ -90,7 +90,7 @@ const SERVICES: Service[] = [
     ],
     stackLabel: 'We migrate from',
     stack: ['WordPress', 'Wix', 'Squarespace', 'Webflow', 'Legacy HTML'],
-    primaryCta: { label: 'See redesign services', href: '/us/services/website-redesign' },
+    primaryCta: { label: 'See redesign services', href: '/services/website-redesign' },
     secondaryCta: { label: 'Book a call', href: '/contact' },
     icon: <RefreshCw size={ICON_SIZE} />,
     imageSrc: '/images/services/website-redesign.webp',
@@ -112,7 +112,7 @@ const SERVICES: Service[] = [
     ],
     stackLabel: 'Platform',
     stack: ['Shopify', 'Shopify Plus'],
-    primaryCta: { label: 'See Shopify services', href: '/us/services/shopify-development' },
+    primaryCta: { label: 'See Shopify services', href: '/services/shopify-development' },
     secondaryCta: { label: 'Book a call', href: '/contact' },
     icon: <ShoppingCart size={ICON_SIZE} />,
     imageSrc: '/images/services/shopify.webp',
@@ -134,7 +134,7 @@ const SERVICES: Service[] = [
     ],
     stackLabel: 'Platforms',
     stack: ['WooCommerce', 'Magento', 'Commerceflow', 'Headless / Custom'],
-    primaryCta: { label: 'See e-commerce services', href: '/us/services/ecommerce-development' },
+    primaryCta: { label: 'See e-commerce services', href: '/services/ecommerce-development' },
     secondaryCta: { label: 'Book a call', href: '/contact' },
     icon: <CreditCard size={ICON_SIZE} />,
     imageSrc: '/images/services/custom-ecommerce.webp',
@@ -156,7 +156,7 @@ const SERVICES: Service[] = [
     ],
     stackLabel: 'Built with',
     stack: ['Google Gemini', 'Anthropic Claude', 'OpenAI ChatGPT', 'KIMI', 'n8n'],
-    primaryCta: { label: 'See AI agent services', href: '/us/services/ai-agents' },
+    primaryCta: { label: 'See AI agent services', href: '/services/ai-agents' },
     secondaryCta: { label: 'Book a call', href: '/contact' },
     icon: <Bot size={ICON_SIZE} />,
     imageSrc: '/images/services/ai-agents.webp',
@@ -307,7 +307,7 @@ export default function ServicesGrid() {
             </h2>
             <p className="text-base sm:text-lg leading-relaxed" style={{ color: '#666' }}>
               From web design and Shopify development to AI agents and AI-powered SEO —
-              transparent pricing, 7-day delivery, every deliverable fully yours on handover.
+              transparent, fixed-price quotes, 7-day delivery, every deliverable fully yours on handover.
             </p>
           </div>
 
