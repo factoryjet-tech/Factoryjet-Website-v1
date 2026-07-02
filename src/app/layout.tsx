@@ -117,14 +117,13 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
-        {/* gtag stub — defines window.gtag + dataLayer BEFORE hydration so any
-            conversion call (e.g. trackFormSubmission on /thank-you) can never run
-            before window.gtag exists. This is the standard Google snippet's first
-            half; it only DEFINES the function and queues commands to dataLayer —
-            it does NOT load gtag.js or send any pings, so it is harmless on
-            *.pages.dev previews. The actual tag LOADING + host-gating lives in
-            <ProductionAnalytics />. Fixes the silent no-op where window.gtag was
-            undefined and every gtag('event','conversion') was guarded out. */}
+        {/* dataLayer stub — defines window.dataLayer + window.gtag BEFORE hydration
+            so any dataLayer push (e.g. /thank-you's `lead_converted` event) queues
+            safely before the GTM container finishes loading. It only DEFINES the
+            queue; it does NOT load gtm.js/gtag.js or send any pings, so it is
+            harmless on *.pages.dev previews. The actual container LOADING +
+            host-gating lives in <ProductionAnalytics />. GTM (GTM-PKWD8SHF) is the
+            single source of truth for every conversion + GA4 event. */}
         <Script
           id="gtag-stub"
           strategy="beforeInteractive"

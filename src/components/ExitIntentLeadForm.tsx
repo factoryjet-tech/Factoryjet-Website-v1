@@ -15,7 +15,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { X, Gift, ArrowRight, ShieldCheck, Loader2, CheckCircle } from 'lucide-react';
-import { useRouter } from 'next/navigation';
 import { submitLead } from '@/utils/submitLead';
 import {
   trackFormStart,
@@ -46,7 +45,6 @@ const ExitIntentLeadForm: React.FC<ExitIntentLeadFormProps> = ({
   promo = 'Free audit',
   collectionName = 'contactus',
 }) => {
-  const router = useRouter();
   const [isVisible, setIsVisible] = useState(false);
 
   const [name, setName] = useState('');
@@ -111,8 +109,9 @@ const ExitIntentLeadForm: React.FC<ExitIntentLeadFormProps> = ({
         region, source, collection: collectionName,
       });
       trackFormSuccess(source);
-      router.push(
-        `/thank-you?source=${encodeURIComponent(source)}&service=unknown&lid=${encodeURIComponent(docId)}`
+      // Hard navigation so /thank-you always loads fresh (conversion lives there).
+      window.location.assign(
+        `/thank-you?source=${encodeURIComponent(source)}&service=unknown&region=${encodeURIComponent(region || 'us')}&lid=${encodeURIComponent(docId)}`
       );
       return;
     } catch (err) {

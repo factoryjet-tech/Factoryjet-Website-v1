@@ -12,7 +12,6 @@
 
 import { useEffect, useState } from 'react';
 import { useContactModal } from '@/context/ContactModalContext';
-import { trackWhatsAppConversion } from '@/utils/gtm';
 
 const WHATSAPP_NUMBER = '919699977699';
 const WA_MESSAGE = encodeURIComponent("Hi FactoryJet, I'd like a free quote for my project.");
@@ -47,7 +46,7 @@ export default function MobileStickyCTA() {
           href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WA_MESSAGE}`}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => { try { trackWhatsAppConversion(); } catch { /* non-fatal */ } }}
+          /* Plain wa.me anchor — GTM auto-fires the WhatsApp Ads conversion + GA4 whatsapp_click. */
           aria-label="Chat with us on WhatsApp"
           className="flex shrink-0 items-center justify-center"
           style={{ width: 42, height: 42, borderRadius: '50%', background: '#25D366' }}

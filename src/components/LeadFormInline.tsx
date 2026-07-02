@@ -12,7 +12,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { Send, CheckCircle, Loader2 } from 'lucide-react';
-import { useRouter } from 'next/navigation';
 import { submitLead } from '@/utils/submitLead';
 import {
   trackFormStart,
@@ -54,7 +53,6 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
   heading = "Tell us about your project",
   subheading = "Just your name and email to start. We reply within 24 hours.",
 }) => {
-  const router = useRouter();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -128,11 +126,11 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
       });
       trackFormSuccess(source);
 
-      // Redirect to the dedicated /thank-you page (single source of truth for the
-      // conversion: GA4 + Google Ads fire there on mount). The unique lid lets
-      // that page dedupe so refresh/back never re-counts. No PII in the URL.
-      router.push(
-        `/thank-you?source=${encodeURIComponent(source)}&service=${encodeURIComponent(service || 'unknown')}&lid=${encodeURIComponent(docId)}`
+      // Hard navigation (not router.push) so /thank-you always loads fresh — the
+      // conversion lives there and the client transition intermittently crashed.
+      // region routes the Ads conversion in GTM (uk -> London, us -> US, else GA4-only).
+      window.location.assign(
+        `/thank-you?source=${encodeURIComponent(source)}&service=${encodeURIComponent(service || 'unknown')}&region=${encodeURIComponent(region || 'us')}&lid=${encodeURIComponent(docId)}`
       );
       return;
     } catch (err) {

@@ -17,7 +17,6 @@
  */
 
 import React, { useState, useRef } from 'react';
-import { useRouter } from 'next/navigation';
 import { submitLead } from '@/utils/submitLead';
 import {
   trackFormStart,
@@ -34,7 +33,6 @@ export interface BlogLeadCaptureProps {
 }
 
 const BlogLeadCapture: React.FC<BlogLeadCaptureProps> = ({ slug }) => {
-  const router = useRouter();
   const source = `blog_${slug}`;
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -62,8 +60,9 @@ const BlogLeadCapture: React.FC<BlogLeadCaptureProps> = ({ slug }) => {
     try {
       const { docId } = await submitLead({ name, email, region: 'us', source });
       trackFormSuccess(source);
-      router.push(
-        `/thank-you?source=${encodeURIComponent(source)}&service=unknown&lid=${encodeURIComponent(docId)}`
+      // Hard navigation so /thank-you always loads fresh (conversion lives there).
+      window.location.assign(
+        `/thank-you?source=${encodeURIComponent(source)}&service=unknown&region=us&lid=${encodeURIComponent(docId)}`
       );
       return;
     } catch (err) {

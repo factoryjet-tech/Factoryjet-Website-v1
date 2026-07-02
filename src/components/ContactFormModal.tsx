@@ -29,7 +29,6 @@ import {
   TrendingUp,
   Sparkles,
 } from 'lucide-react';
-import { useRouter } from 'next/navigation';
 import { useContactModal } from '../context/ContactModalContext';
 import { submitLead } from '../utils/submitLead';
 import {
@@ -105,7 +104,6 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const ContactFormModal: React.FC = () => {
   const { isOpen, region, variant, closeModal } = useContactModal();
-  const router = useRouter();
   const services =
     variant === 'ai' ? aiServices : variant === 'seo' ? seoServices : defaultServices;
 
@@ -286,12 +284,13 @@ const ContactFormModal: React.FC = () => {
 
       trackFormSuccess('contact_form');
 
-      // Redirect to the dedicated /thank-you page — the single source of truth
-      // for the conversion (GA4 + Google Ads fire there on mount). The unique
-      // lid lets that page dedupe so refresh/back never re-counts. No PII in URL.
+      // Hard navigation (not router.push): the client-side transition intermittently
+      // threw a chunk-load error ("This page couldn't load"), and the conversion
+      // lives on /thank-you. A full browser load always renders it. region routes
+      // the Ads conversion in GTM (uk -> London acct, us -> US acct, else GA4-only).
       closeModal();
-      router.push(
-        `/thank-you?source=modal&service=${encodeURIComponent(formData.service || 'unknown')}&lid=${encodeURIComponent(docId)}`
+      window.location.assign(
+        `/thank-you?source=modal&service=${encodeURIComponent(formData.service || 'unknown')}&region=${encodeURIComponent(region || 'us')}&lid=${encodeURIComponent(docId)}`
       );
       return;
     } catch (err) {
@@ -497,15 +496,7 @@ const ContactFormModal: React.FC = () => {
           href="https://calendly.com/bhavesh-factoryjet/30min"
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => {
-            // Track Calendly click as a high-intent GA4 event
-            if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
-              (window as any).gtag('event', 'calendly_click', {
-                send_to: 'G-N40S2Q8E1J',
-                click_location: 'form_success_modal',
-              });
-            }
-          }}
+          /* GTM auto-fires book_call_click (GA4) + the Book-Call Ads conversion on any calendly.com click. */
           className="inline-flex items-center justify-center gap-2 w-full bg-[#F05A28] text-white py-3 rounded-xl font-bold text-sm transition-all hover:bg-[#d44d1f] mb-3"
         >
           Book a 30-min call now

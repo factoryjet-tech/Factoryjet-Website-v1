@@ -3,28 +3,18 @@
 /**
  * ContactMethods — the "reach us another way" band on /contact.
  *
- * Client component so the WhatsApp click can fire the Google Ads WhatsApp
- * conversion (trackWhatsAppConversion) and the call click can fire the GA4
- * calendly_click event, keeping every contact path measurable.
+ * All three actions are plain anchors (calendly.com, wa.me, mailto:). GTM
+ * (single source of truth) auto-detects those link clicks and fires the matching
+ * GA4 events + Ads conversions — no inline gtag calls needed here. (GTM-only 2026-07-02.)
  */
 
 import { CalendarClock, Mail } from 'lucide-react';
-import { trackWhatsAppConversion } from '@/utils/gtm';
 
 const CALENDLY_URL = 'https://calendly.com/bhavesh-factoryjet/30min';
 const WHATSAPP_HREF =
   'https://wa.me/919699977699?text=' +
   encodeURIComponent("Hi FactoryJet, I'd like to talk about a project.");
 const EMAIL = 'connect@factoryjet.com';
-
-function fireCalendly() {
-  if (typeof window !== 'undefined' && typeof (window as { gtag?: unknown }).gtag === 'function') {
-    (window as unknown as { gtag: (...a: unknown[]) => void }).gtag('event', 'calendly_click', {
-      send_to: 'G-N40S2Q8E1J',
-      click_location: 'contact_methods',
-    });
-  }
-}
 
 export default function ContactMethods() {
   return (
@@ -54,7 +44,6 @@ export default function ContactMethods() {
               href={CALENDLY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={fireCalendly}
               className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[#F05A28]"
             >
               Pick a time
@@ -78,7 +67,6 @@ export default function ContactMethods() {
               href={WHATSAPP_HREF}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={trackWhatsAppConversion}
               data-cta="whatsapp"
               className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[#1FA855]"
             >

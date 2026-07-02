@@ -3,24 +3,30 @@
 import { useEffect } from 'react';
 
 /**
- * ProductionAnalytics — loads GTM + Google Ads gtag ONLY on the production
+ * ProductionAnalytics — loads the GTM container ONLY, and ONLY on the production
  * hostname. Cloudflare Pages serves every deploy at a *.pages.dev preview URL;
  * firing the tag there pollutes GA4 + Google Ads with staging traffic and
  * triggers the "monitored domains" / tag-quality warnings in Ads. Gating to the
  * real domain keeps measurement clean.
  *
- * GTM container: GTM-PKWD8SHF. Google Ads: AW-11127037244 + AW-18185532850.
- * (GA4 itself is delivered via the GTM container + the Ads gtag destinations.)
+ * SINGLE SOURCE OF TRUTH = the GTM container GTM-PKWD8SHF. Every tag lives there:
+ *   - GA4 (property G-N40S2Q8E1J): generate_lead, whatsapp_click, book_call_click,
+ *     email_click, phone_click.
+ *   - Google Ads conversions: form lead (region-routed to AW-11127037244 London /
+ *     AW-18185532850 US), WhatsApp click, Book-Call click.
+ *   - Conversion Linker + Microsoft Clarity.
  *
- * window.gtag + window.dataLayer are defined by the inline `gtag-stub` script in
- * the <head> (layout.tsx, strategy="beforeInteractive"), so they always exist
- * before any conversion call runs — there is no longer a race between this
- * effect and page effects like /thank-you's trackFormSubmission(). This file is
- * only responsible for (a) host-gating, (b) the js/config commands, and
- * (c) loading the GTM container (gtm.js), which in turn loads the Google Ads
- *     tags for both AW-11127037244 and AW-18185532850. We must NOT also inject
- *     gtag/js for those IDs here — double-loading the same tag corrupts gtag's
- *     shared runtime ("is_legacy_loaded" errors) and breaks conversions.
+ * This component therefore does NOTHING except (a) host-gate and (b) load gtm.js.
+ * It intentionally issues NO gtag('config', 'AW-…') commands. Configuring the Ads
+ * tags here did two harmful things: (1) it double-loaded the same tag the GTM
+ * container already loads, corrupting gtag's shared runtime ("is_legacy_loaded"),
+ * and (2) it auto-pulled the linked GA4 destination G-ZZ03T8W2VR attached to the
+ * Ads "Google tag" settings — a foreign property that broke GA4 measurement.
+ * GTM loads and links the Ads tags itself, so nothing is lost by removing them.
+ *
+ * window.dataLayer + window.gtag are still defined by the inline stub in <head>
+ * (layout.tsx) so any dataLayer push (e.g. /thank-you's lead_converted event)
+ * queues safely before gtm.js finishes loading.
  */
 
 const PROD_HOSTS = ['factoryjet.com', 'www.factoryjet.com'];
@@ -39,19 +45,10 @@ export default function ProductionAnalytics() {
       gtag?: (...a: unknown[]) => void;
     };
 
-    // dataLayer + gtag are guaranteed by the inline <head> stub; fall back
-    // defensively just in case the stub was stripped.
+    // dataLayer is guaranteed by the inline <head> stub; fall back defensively
+    // just in case the stub was stripped. We deliberately issue NO gtag config
+    // commands here — GTM (loaded below) owns every tag. See file header.
     w.dataLayer = w.dataLayer || [];
-    const gtag =
-      w.gtag ||
-      function gtag() {
-        // eslint-disable-next-line prefer-rest-params
-        (w.dataLayer as unknown[]).push(arguments);
-      };
-
-    gtag('js', new Date());
-    gtag('config', 'AW-11127037244');
-    gtag('config', 'AW-18185532850');
 
     let loaded = false;
     let timer: ReturnType<typeof setTimeout> | undefined;
@@ -75,14 +72,11 @@ export default function ProductionAnalytics() {
       gtm.async = true;
       gtm.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-PKWD8SHF';
       document.head.appendChild(gtm);
-      // NOTE: we deliberately do NOT inject gtag/js?id=AW-18185532850 here.
-      // The GTM container (GTM-PKWD8SHF) already loads the Google Ads tags for
-      // BOTH AW-11127037244 and AW-18185532850. Injecting AW-18185532850 a second
-      // time loaded the same gtag.js twice, which corrupts gtag's shared runtime
-      // and throws "Cannot read properties of undefined (reading 'is_legacy_loaded')"
-      // on every config call (GA4 + Ads), breaking conversion measurement.
-      // AW-11127037244 already fires its conversion via GTM-only loading, so
-      // AW-18185532850 works the same way. (Fixed 2026-06-22.)
+      // GTM-PKWD8SHF is the ONLY tag we load. It carries the Google Ads tags for
+      // both AW-11127037244 and AW-18185532850, the GA4 property G-N40S2Q8E1J,
+      // Conversion Linker and Microsoft Clarity. We never inject gtag/js for the
+      // Ads IDs here — doing so double-loads the same runtime ("is_legacy_loaded"
+      // errors) and pulls the foreign linked GA4 destination. (GTM-only 2026-07-02.)
     }
 
     // On the conversion destination page, load the tags IMMEDIATELY so the lead

@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Send, CheckCircle, Loader2 } from 'lucide-react';
 import { trackModalOpen, trackModalClose, trackFormSubmit, trackFormSuccess, trackFormError } from '../utils/gtm';
-import { useRouter } from 'next/navigation';
 import { submitLead } from '../utils/submitLead';
 
 interface PlanSelectionModalProps {
@@ -29,7 +28,6 @@ const PlanSelectionModal: React.FC<PlanSelectionModalProps> = ({
   planPrice,
   city,
 }) => {
-  const router = useRouter();
   const [formData, setFormData] = useState<FormData>({
     name: '',
     phone: '',
@@ -79,9 +77,10 @@ const PlanSelectionModal: React.FC<PlanSelectionModalProps> = ({
       trackFormSuccess('plan_selection_form');
 
       // Conversion fires on /thank-you (single source of truth). No PII in URL.
+      // Hard navigation so the page always loads fresh.
       onClose();
-      router.push(
-        `/thank-you?source=plan_selection&service=${encodeURIComponent(selectedPlan)}&lid=${encodeURIComponent(docId)}`
+      window.location.assign(
+        `/thank-you?source=plan_selection&service=${encodeURIComponent(selectedPlan)}&region=in&lid=${encodeURIComponent(docId)}`
       );
       return;
     } catch (err) {

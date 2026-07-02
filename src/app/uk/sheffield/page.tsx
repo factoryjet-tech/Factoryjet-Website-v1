@@ -3,7 +3,6 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
 import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { CheckCircle2, Menu, X, Monitor, Bot, ShoppingCart, RefreshCw, TrendingUp } from "lucide-react";
@@ -225,7 +224,6 @@ export default function SheffieldPage() {
   const [menuOpen,      setMenuOpen]      = useState(false);
   const [statsVisible,  setStatsVisible]  = useState(false);
   const { openModal } = useContactModal();
-  const router = useRouter();
 
   // ── Inline lead form (Sheffield) — captures the fields the visitor actually
   //    typed and routes them through the durable submitLead path. Previously the
@@ -256,8 +254,10 @@ export default function SheffieldPage() {
         region: "uk",
         source: "sheffield_inline",
       });
-      router.push(
-        `/thank-you?source=sheffield_inline&service=${encodeURIComponent(lead.pkg || "unknown")}&lid=${encodeURIComponent(docId)}`
+      // Hard navigation so /thank-you always loads fresh (conversion lives there).
+      // region=uk -> GTM credits the London Ads account.
+      window.location.assign(
+        `/thank-you?source=sheffield_inline&service=${encodeURIComponent(lead.pkg || "unknown")}&region=uk&lid=${encodeURIComponent(docId)}`
       );
     } catch {
       setLeadSending(false);

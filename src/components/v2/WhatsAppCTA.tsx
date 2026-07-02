@@ -11,15 +11,13 @@
  * gives every city Hero + FinalCTA a WhatsApp button so the conversion can
  * actually record.
  *
- * Tracking note: trackWhatsAppConversion currently fires the OLD account only.
- * AW-18185532850 (new US account, created 2026-05-27) does not yet have a
- * WhatsApp conversion label registered — once Bhavesh creates one in Google
- * Ads, add it to CONVERSIONS in src/utils/gtm.ts and trackWhatsAppConversion
- * will pick it up automatically.
+ * Tracking note: this is a plain wa.me anchor. GTM (single source of truth)
+ * auto-detects the wa.me link click and fires BOTH the WhatsApp Ads conversion
+ * and the GA4 whatsapp_click event — no inline gtag call needed. (Firing it in
+ * code too would double-count into two different Ads accounts. GTM-only 2026-07-02.)
  */
 
 import type { CSSProperties } from 'react';
-import { trackWhatsAppConversion } from '@/utils/gtm';
 
 const WHATSAPP_NUMBER = '919699977699';
 
@@ -62,7 +60,6 @@ export default function WhatsAppCTA({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      onClick={trackWhatsAppConversion}
       aria-label={ariaLabel}
       data-cta="whatsapp"
       className={className}

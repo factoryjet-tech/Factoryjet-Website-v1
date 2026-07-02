@@ -14,27 +14,34 @@
  *   - The page is noindex + excluded from every sitemap, so organic/direct
  *     hits can't reach it and inflate the count.
  *
- * Double-count guard: trackFormSubmission() fires exactly once per submission.
- * The form passes a unique ?lid=<docId>; we record it in sessionStorage so a
- * refresh or back-button on /thank-you does NOT re-count the conversion.
- * No PII (name/email) is ever placed in the URL — only source/service/lid.
+ * Double-count guard: the lead_converted event is pushed exactly once per
+ * submission. The form passes a unique ?lid=<docId>; we record it in
+ * sessionStorage so a refresh or back-button on /thank-you does NOT re-count the
+ * conversion. No PII (name/email) is ever placed in the URL — only
+ * source/service/region/lid.
+ *
+ * GTM (single source of truth) listens for the `lead_converted` custom event and
+ * fires: GA4 generate_lead + the region-routed Google Ads conversion (UK ->
+ * AW-11127037244 London, US -> AW-18185532850). This page issues NO gtag() calls.
  */
 
 import { useEffect } from 'react';
 import { CheckCircle, CalendarClock, ArrowRight } from 'lucide-react';
-import { trackFormSubmission } from '@/utils/gtm';
+import { pushToDataLayer } from '@/utils/gtm';
 
 const CALENDLY_URL = 'https://calendly.com/bhavesh-factoryjet/30min';
 
 export default function ThankYouContent() {
-  // ── Fire the conversion exactly once, on the destination URL ──────────────
+  // ── Emit the conversion exactly once, on the destination URL ──────────────
   useEffect(() => {
     let lid = '';
     let source = '';
+    let region = 'us';
     try {
       const sp = new URLSearchParams(window.location.search);
       lid = sp.get('lid') ?? '';
       source = sp.get('source') ?? '';
+      region = (sp.get('region') || 'us').toLowerCase();
     } catch {
       /* no-op */
     }
@@ -44,21 +51,24 @@ export default function ThankYouContent() {
     // the page but never fire the conversion, so the count stays clean.
     if (!lid) return;
 
+    // One dataLayer push -> GTM fires GA4 generate_lead + the region-routed Ads
+    // conversion. region tells GTM which Ads account to credit (uk|us|…).
+    const fire = () =>
+      pushToDataLayer({
+        event: 'lead_converted',
+        region,
+        lead_source: source || 'unknown',
+        lead_id: lid,
+      });
+
     const key = `fj_conv_${lid}`;
     try {
       if (sessionStorage.getItem(key)) return; // already counted this submission
-      trackFormSubmission();
-      // Funnel-completion signal for GA4 (scoped to the GA4 stream only).
-      if (typeof window !== 'undefined' && typeof (window as { gtag?: unknown }).gtag === 'function') {
-        (window as unknown as { gtag: (...a: unknown[]) => void }).gtag('event', 'thank_you_view', {
-          send_to: 'G-N40S2Q8E1J',
-          lead_source: source || 'unknown',
-        });
-      }
+      fire();
       sessionStorage.setItem(key, '1');
     } catch {
       // sessionStorage blocked (private mode etc.) — still count the conversion.
-      trackFormSubmission();
+      fire();
     }
   }, []);
 
@@ -98,14 +108,8 @@ export default function ThankYouContent() {
           href={CALENDLY_URL}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => {
-            if (typeof window !== 'undefined' && typeof (window as { gtag?: unknown }).gtag === 'function') {
-              (window as unknown as { gtag: (...a: unknown[]) => void }).gtag('event', 'calendly_click', {
-                send_to: 'G-N40S2Q8E1J',
-                click_location: 'thank_you_page',
-              });
-            }
-          }}
+          /* GTM auto-fires book_call_click (GA4) + the Book-Call Ads conversion on
+             any calendly.com click — no inline gtag needed. */
           className="inline-flex items-center justify-center gap-2.5 rounded-2xl bg-[#F05A28] px-7 py-3.5 text-base font-bold text-white shadow-[0_10px_26px_-10px_rgba(240,90,40,0.7)] transition-all hover:-translate-y-0.5 hover:bg-[#d44d1f]"
         >
           <CalendarClock size={18} />

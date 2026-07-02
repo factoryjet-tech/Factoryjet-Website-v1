@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Calendar, Clock, CheckCircle, Loader2, ChevronLeft, ChevronRight } from 'lucide-react';
 import { trackModalOpen, trackModalClose, trackFormSubmit, trackFormSuccess, trackFormError } from '../utils/gtm';
-import { useRouter } from 'next/navigation';
 import { submitLead } from '../utils/submitLead';
 
 interface ScheduleCallModalProps {
@@ -43,7 +42,6 @@ const ScheduleCallModal: React.FC<ScheduleCallModalProps> = ({
   onClose,
   city,
 }) => {
-  const router = useRouter();
   const [step, setStep] = useState<1 | 2>(1);
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -148,9 +146,10 @@ const ScheduleCallModal: React.FC<ScheduleCallModalProps> = ({
       trackFormSuccess('schedule_call_form');
 
       // Conversion fires on /thank-you (single source of truth). No PII in URL.
+      // Hard navigation so the page always loads fresh.
       onClose();
-      router.push(
-        `/thank-you?source=schedule_call&service=call_booking&lid=${encodeURIComponent(docId)}`
+      window.location.assign(
+        `/thank-you?source=schedule_call&service=call_booking&region=in&lid=${encodeURIComponent(docId)}`
       );
       return;
     } catch (err) {

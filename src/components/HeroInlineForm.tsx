@@ -11,7 +11,6 @@
  */
 
 import React, { useState, useRef } from 'react';
-import { useRouter } from 'next/navigation';
 import { submitLead } from '@/utils/submitLead';
 import {
   trackFormStart,
@@ -31,7 +30,6 @@ export interface HeroInlineFormProps {
 }
 
 const HeroInlineForm: React.FC<HeroInlineFormProps> = ({ source = 'us_hero_inline', region = 'us', submitLabel = 'Get my free quote' }) => {
-  const router = useRouter();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [honeypot, setHoneypot] = useState('');
@@ -60,8 +58,9 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({ source = 'us_hero_inlin
       // Durable, server-first capture — never hangs on the browser Firestore SDK.
       const { docId } = await submitLead({ name, email, region, source });
       trackFormSuccess(source);
-      router.push(
-        `/thank-you?source=${encodeURIComponent(source)}&service=unknown&lid=${encodeURIComponent(docId)}`
+      // Hard navigation so /thank-you always loads fresh (conversion lives there).
+      window.location.assign(
+        `/thank-you?source=${encodeURIComponent(source)}&service=unknown&region=${encodeURIComponent(region || 'us')}&lid=${encodeURIComponent(docId)}`
       );
       return;
     } catch (err) {

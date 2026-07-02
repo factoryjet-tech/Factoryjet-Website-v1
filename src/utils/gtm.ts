@@ -6,49 +6,23 @@ declare global {
   }
 }
 
-// Google Ads Conversion Labels
-export const CONVERSIONS = {
-  WHATSAPP_CLICK:       "AW-11127037244/N5PhCPWusNQbELy65Lkp", // already live
-  FORM_SUBMISSION:      "AW-11127037244/aqsvCJCk8ZQcELy65Lkp", // old account — keep firing in parallel
-  FORM_SUBMISSION_US:   "AW-18185532850/rZxjCNuivbQcELLrxN9D", // new US account (created 2026-05-27)
-};
-
-// Fire a Google Ads form submission conversion event via gtag.
-// Fires both accounts in parallel: old (₹50) stays live, new US ($1,999 USD) added alongside.
-export const trackFormSubmission = () => {
-  if (
-    typeof window !== "undefined" &&
-    typeof (window as any).gtag === "function"
-  ) {
-    (window as any).gtag("event", "conversion", {
-      send_to: CONVERSIONS.FORM_SUBMISSION,
-    });
-    (window as any).gtag("event", "conversion", {
-      send_to: CONVERSIONS.FORM_SUBMISSION_US,
-      value: 1999,
-      currency: "USD",
-    });
-    // GA4 lead conversion — single source of truth, fired here on form success.
-    // send_to scopes it to the GA4 stream only (no double-count with the Ads conversions above).
-    (window as any).gtag("event", "Lead_Form_FactoryJet", {
-      send_to: "G-N40S2Q8E1J",
-      value: 1999,
-      currency: "USD",
-    });
-  }
-};
-
-// Fire a Google Ads WhatsApp/Call click conversion event via gtag
-export const trackWhatsAppConversion = () => {
-  if (
-    typeof window !== "undefined" &&
-    typeof (window as any).gtag === "function"
-  ) {
-    (window as any).gtag("event", "conversion", {
-      send_to: CONVERSIONS.WHATSAPP_CLICK,
-    });
-  }
-};
+// ─────────────────────────────────────────────────────────────────────────────
+// CONVERSIONS ARE FIRED BY GTM, NOT BY CODE (single source of truth).
+//
+// The GTM container GTM-PKWD8SHF owns every conversion + GA4 event:
+//   - Form lead:    on the `lead_converted` dataLayer event pushed by /thank-you,
+//                   region-routed to AW-11127037244 (London, region=uk) or
+//                   AW-18185532850 (US, region=us); other regions -> GA4 only.
+//   - WhatsApp:     auto-detected wa.me link click (Ads conversion + GA4).
+//   - Book a call:  auto-detected calendly.com link click (Ads conversion + GA4).
+//   - email/phone:  auto-detected mailto:/tel: link clicks (GA4).
+//   - GA4 property G-N40S2Q8E1J, Conversion Linker + Microsoft Clarity.
+//
+// Do NOT re-introduce gtag('event','conversion') calls here or in components —
+// firing in both code and GTM double-counts (historically into two different Ads
+// accounts) and is exactly what kept breaking. Fire a dataLayer event instead and
+// wire a GTM trigger to it. (Consolidated to GTM-only 2026-07-02.)
+// ─────────────────────────────────────────────────────────────────────────────
 
 // Push event to dataLayer - lazily initialize dataLayer
 export const pushToDataLayer = (data: Record<string, unknown>) => {
