@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import Link from 'next/link';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
@@ -143,6 +144,7 @@ export default function GenerativeEngineOptimizationPage() {
           <>
             <p>Search split into two channels. People still type keywords into Google, and they also ask full questions to an AI assistant and read one synthesized answer. Those answers are built from a handful of sources the model trusts. GEO is the work of becoming one of them.</p>
             <p>It overlaps with SEO but is a different job. SEO earns a ranking position. Answer engine optimization earns the featured answer. GEO earns a citation or a named mention inside a generated response, which is increasingly where a buyer forms a shortlist before they ever click.</p>
+            <p>New to the topic? Our <Link href="/blog/generative-engine-optimization-guide" className="text-orange-600 underline">2026 GEO guide</Link> walks through how AI engines choose who to cite, and <Link href="/blog/best-geo-agencies" className="text-orange-600 underline">the best GEO agencies compared</Link> shows how the market is priced.</p>
           </>
         }
       />
@@ -186,6 +188,17 @@ export default function GenerativeEngineOptimizationPage() {
         headline="GEO, answered plainly"
         items={FAQ_ITEMS}
       />
+
+      <section className="bg-fj-cream">
+        <div className="mx-auto max-w-3xl px-6 py-16">
+          <p className="font-fj-mono text-xs uppercase tracking-[0.16em] text-orange-600">Keep reading</p>
+          <ul className="mt-4 space-y-3 font-fj-body text-lg text-fj-ink">
+            <li><Link className="text-orange-600 underline" href="/blog/generative-engine-optimization-guide">The 2026 GEO guide: how AI engines decide who to cite</Link></li>
+            <li><Link className="text-orange-600 underline" href="/blog/best-geo-agencies">The best GEO agencies for ecommerce and SMBs, compared</Link></li>
+            <li><Link className="text-orange-600 underline" href="/services/ai-seo">Our full AI SEO service</Link></li>
+          </ul>
+        </div>
+      </section>
 
       <section className="bg-fj-navy text-white">
         <div className="mx-auto max-w-3xl px-6 py-20 text-center md:py-28">
