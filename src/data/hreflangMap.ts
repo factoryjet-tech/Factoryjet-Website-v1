@@ -68,7 +68,9 @@ export const webDesignAlternates = {
   'en-US': 'https://factoryjet.com/services/web-design',
   'en-AE': 'https://factoryjet.com/uae',
   'en-GB': 'https://factoryjet.com/uk',
-  'x-default': 'https://factoryjet.com/web-design',
+  // x-default → US hub (not the India hub) so NA/generic searchers land on the US
+  // web-design page, not the India one. Matches the aiSeoAlternates fix. (geo-seg 2026-07-06)
+  'x-default': 'https://factoryjet.com/services/web-design',
 } as const
 
 /**
@@ -244,91 +246,69 @@ export const aiSeoAlternates = {
 export const webDesignCityAlternatesIN = {
   delhi: {
     'en-IN': 'https://factoryjet.com/web-design/delhi',
-    'x-default': 'https://factoryjet.com/web-design/delhi',
   },
   mumbai: {
     'en-IN': 'https://factoryjet.com/web-design/mumbai',
-    'x-default': 'https://factoryjet.com/web-design/mumbai',
   },
   bangalore: {
     'en-IN': 'https://factoryjet.com/web-design/bangalore',
-    'x-default': 'https://factoryjet.com/web-design/bangalore',
   },
   chennai: {
     'en-IN': 'https://factoryjet.com/web-design/chennai',
-    'x-default': 'https://factoryjet.com/web-design/chennai',
   },
   hyderabad: {
     'en-IN': 'https://factoryjet.com/web-design/hyderabad',
-    'x-default': 'https://factoryjet.com/web-design/hyderabad',
   },
   pune: {
     'en-IN': 'https://factoryjet.com/web-design/pune',
-    'x-default': 'https://factoryjet.com/web-design/pune',
   },
   ahmedabad: {
     'en-IN': 'https://factoryjet.com/web-design/ahmedabad',
-    'x-default': 'https://factoryjet.com/web-design/ahmedabad',
   },
   madurai: {
     'en-IN': 'https://factoryjet.com/web-design/madurai',
-    'x-default': 'https://factoryjet.com/web-design/madurai',
   },
   surat: {
     'en-IN': 'https://factoryjet.com/web-design/surat',
-    'x-default': 'https://factoryjet.com/web-design/surat',
   },
   indore: {
     'en-IN': 'https://factoryjet.com/web-design/indore',
-    'x-default': 'https://factoryjet.com/web-design/indore',
   },
   visakhapatnam: {
     'en-IN': 'https://factoryjet.com/web-design/visakhapatnam',
-    'x-default': 'https://factoryjet.com/web-design/visakhapatnam',
   },
   coimbatore: {
     'en-IN': 'https://factoryjet.com/web-design/coimbatore',
-    'x-default': 'https://factoryjet.com/web-design/coimbatore',
   },
   jaipur: {
     'en-IN': 'https://factoryjet.com/web-design/jaipur',
-    'x-default': 'https://factoryjet.com/web-design/jaipur',
   },
   kochi: {
     'en-IN': 'https://factoryjet.com/web-design/kochi',
-    'x-default': 'https://factoryjet.com/web-design/kochi',
   },
   kolkata: {
     'en-IN': 'https://factoryjet.com/web-design/kolkata',
-    'x-default': 'https://factoryjet.com/web-design/kolkata',
   },
   noida: {
     'en-IN': 'https://factoryjet.com/web-design/noida',
-    'x-default': 'https://factoryjet.com/web-design/noida',
   },
   gurgaon: {
     'en-IN': 'https://factoryjet.com/web-design/gurgaon',
-    'x-default': 'https://factoryjet.com/web-design/gurgaon',
   },
   nagpur: {
     'en-IN': 'https://factoryjet.com/web-design/nagpur',
-    'x-default': 'https://factoryjet.com/web-design/nagpur',
   },
   vadodara: {
     'en-IN': 'https://factoryjet.com/web-design/vadodara',
-    'x-default': 'https://factoryjet.com/web-design/vadodara',
   },
   bhubaneswar: {
     'en-IN': 'https://factoryjet.com/web-design/bhubaneswar',
-    'x-default': 'https://factoryjet.com/web-design/bhubaneswar',
   },
   thiruvananthapuram: {
     'en-IN': 'https://factoryjet.com/web-design/thiruvananthapuram',
-    'x-default': 'https://factoryjet.com/web-design/thiruvananthapuram',
   },
   rajkot: {
     'en-IN': 'https://factoryjet.com/web-design/rajkot',
-    'x-default': 'https://factoryjet.com/web-design/rajkot',
   },
 } as const
 
@@ -541,58 +521,45 @@ export const usCityAIAlternates = {
 // INDIA ECOMMERCE CITY PAGES (en-IN)
 // ===========================================================================
 
-export const ecommerceCityAlternatesIN: Record<string, { 'en-IN': string; 'x-default': string }> = {
+export const ecommerceCityAlternatesIN: Record<string, { 'en-IN': string }> = {
   'mumbai': {
     'en-IN': 'https://factoryjet.com/services/ecommerce-development/mumbai',
-    'x-default': 'https://factoryjet.com/services/ecommerce-development/mumbai',
   },
   'bangalore': {
     'en-IN': 'https://factoryjet.com/services/ecommerce-development/bangalore',
-    'x-default': 'https://factoryjet.com/services/ecommerce-development/bangalore',
   },
   'delhi': {
     'en-IN': 'https://factoryjet.com/services/ecommerce-development/delhi',
-    'x-default': 'https://factoryjet.com/services/ecommerce-development/delhi',
   },
   'hyderabad': {
     'en-IN': 'https://factoryjet.com/services/ecommerce-development/hyderabad',
-    'x-default': 'https://factoryjet.com/services/ecommerce-development/hyderabad',
   },
   'chennai': {
     'en-IN': 'https://factoryjet.com/services/ecommerce-development/chennai',
-    'x-default': 'https://factoryjet.com/services/ecommerce-development/chennai',
   },
   'pune': {
     'en-IN': 'https://factoryjet.com/services/ecommerce-development/pune',
-    'x-default': 'https://factoryjet.com/services/ecommerce-development/pune',
   },
   'ahmedabad': {
     'en-IN': 'https://factoryjet.com/services/ecommerce-development/ahmedabad',
-    'x-default': 'https://factoryjet.com/services/ecommerce-development/ahmedabad',
   },
   'kolkata': {
     'en-IN': 'https://factoryjet.com/services/ecommerce-development/kolkata',
-    'x-default': 'https://factoryjet.com/services/ecommerce-development/kolkata',
   },
   'surat': {
     'en-IN': 'https://factoryjet.com/services/ecommerce-development/surat',
-    'x-default': 'https://factoryjet.com/services/ecommerce-development/surat',
   },
   'jaipur': {
     'en-IN': 'https://factoryjet.com/services/ecommerce-development/jaipur',
-    'x-default': 'https://factoryjet.com/services/ecommerce-development/jaipur',
   },
   'kochi': {
     'en-IN': 'https://factoryjet.com/services/ecommerce-development/kochi',
-    'x-default': 'https://factoryjet.com/services/ecommerce-development/kochi',
   },
   'lucknow': {
     'en-IN': 'https://factoryjet.com/services/ecommerce-development/lucknow',
-    'x-default': 'https://factoryjet.com/services/ecommerce-development/lucknow',
   },
   'chandigarh': {
     'en-IN': 'https://factoryjet.com/services/ecommerce-development/chandigarh',
-    'x-default': 'https://factoryjet.com/services/ecommerce-development/chandigarh',
   },
 } as const
 
@@ -604,54 +571,42 @@ export const ecommerceCityAlternatesIN: Record<string, { 'en-IN': string; 'x-def
 /** /seo hub — India only. */
 export const seoHubAlternates = {
   'en-IN': 'https://factoryjet.com/seo',
-  'x-default': 'https://factoryjet.com/seo',
 } as const
 
 /** /seo/[city] pages — India only. */
 export const seoCityAlternatesIN = {
   mumbai: {
     'en-IN': 'https://factoryjet.com/seo/mumbai',
-    'x-default': 'https://factoryjet.com/seo/mumbai',
   },
   bangalore: {
     'en-IN': 'https://factoryjet.com/seo/bangalore',
-    'x-default': 'https://factoryjet.com/seo/bangalore',
   },
   pune: {
     'en-IN': 'https://factoryjet.com/seo/pune',
-    'x-default': 'https://factoryjet.com/seo/pune',
   },
   delhi: {
     'en-IN': 'https://factoryjet.com/seo/delhi',
-    'x-default': 'https://factoryjet.com/seo/delhi',
   },
   ahmedabad: {
     'en-IN': 'https://factoryjet.com/seo/ahmedabad',
-    'x-default': 'https://factoryjet.com/seo/ahmedabad',
   },
   noida: {
     'en-IN': 'https://factoryjet.com/seo/noida',
-    'x-default': 'https://factoryjet.com/seo/noida',
   },
   jaipur: {
     'en-IN': 'https://factoryjet.com/seo/jaipur',
-    'x-default': 'https://factoryjet.com/seo/jaipur',
   },
   vadodara: {
     'en-IN': 'https://factoryjet.com/seo/vadodara',
-    'x-default': 'https://factoryjet.com/seo/vadodara',
   },
   kolkata: {
     'en-IN': 'https://factoryjet.com/seo/kolkata',
-    'x-default': 'https://factoryjet.com/seo/kolkata',
   },
   hyderabad: {
     'en-IN': 'https://factoryjet.com/seo/hyderabad',
-    'x-default': 'https://factoryjet.com/seo/hyderabad',
   },
   chennai: {
     'en-IN': 'https://factoryjet.com/seo/chennai',
-    'x-default': 'https://factoryjet.com/seo/chennai',
   },
 } as const
 
@@ -659,23 +614,18 @@ export const seoCityAlternatesIN = {
 export const seoSubServiceAlternatesIN = {
   'local-seo': {
     'en-IN': 'https://factoryjet.com/seo/local-seo',
-    'x-default': 'https://factoryjet.com/seo/local-seo',
   },
   'technical-seo': {
     'en-IN': 'https://factoryjet.com/seo/technical-seo',
-    'x-default': 'https://factoryjet.com/seo/technical-seo',
   },
   'ecommerce-seo': {
     'en-IN': 'https://factoryjet.com/seo/ecommerce-seo',
-    'x-default': 'https://factoryjet.com/seo/ecommerce-seo',
   },
   'link-building': {
     'en-IN': 'https://factoryjet.com/seo/link-building',
-    'x-default': 'https://factoryjet.com/seo/link-building',
   },
   'seo-audit': {
     'en-IN': 'https://factoryjet.com/seo/seo-audit',
-    'x-default': 'https://factoryjet.com/seo/seo-audit',
   },
 } as const
 
