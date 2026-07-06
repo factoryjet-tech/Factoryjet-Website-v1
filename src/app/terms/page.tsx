@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <SiteHeader locale="in" />
+      <SiteHeader locale="us" />
       <h1 className="sr-only">Terms and Conditions</h1>
       <TermsAndConditions />
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />

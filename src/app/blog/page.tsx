@@ -68,7 +68,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <SiteHeader locale="in" />
+      <SiteHeader locale="us" />
       {/* Breadcrumb Structured Data */}
       <BreadcrumbSchema items={[
         { name: 'Home', url: 'https://factoryjet.com' },

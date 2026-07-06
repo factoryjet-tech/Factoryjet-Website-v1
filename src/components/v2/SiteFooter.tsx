@@ -136,8 +136,10 @@ const LOCALE_COLUMNS: Record<SiteFooterLocale, ReadonlyArray<SiteFooterColumn>> 
   us:  US_FOOTER_COLUMNS, // US is the primary domain — its footer must never fall back to India routes
 };
 
-/** @deprecated kept for backwards-compat — callers should pass locale prop instead */
-const DEFAULT_COLUMNS = IN_COLUMNS;
+/** @deprecated kept for backwards-compat — callers should pass locale prop instead.
+ *  Defaults to the US (primary-domain) columns so a forgotten locale/linkColumns
+ *  prop can NEVER leak India city links to a North-America visitor. (geo-segmentation 2026-07-06) */
+const DEFAULT_COLUMNS = US_FOOTER_COLUMNS;
 
 const DEFAULT_BOTTOM_ROW = {
   copyright: '© 2026 FactoryJet Technologies',

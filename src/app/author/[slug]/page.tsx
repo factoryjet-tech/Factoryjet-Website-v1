@@ -119,7 +119,7 @@ export default async function Page({ params }: Props) {
         />
       )}
 
-      <SiteHeader locale="in" />
+      <SiteHeader locale="us" />
       <AuthorPage author={author} posts={authorPosts} />
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>

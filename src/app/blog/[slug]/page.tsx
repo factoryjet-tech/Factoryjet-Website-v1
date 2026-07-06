@@ -172,7 +172,7 @@ export default async function Page({ params }: Props) {
         />
       )}
 
-      <SiteHeader locale="in" />
+      <SiteHeader locale="us" />
       <BlogPostPage post={post} />
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>

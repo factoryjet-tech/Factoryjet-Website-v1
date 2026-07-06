@@ -116,9 +116,10 @@ export const aboutAlternates = {
 // SINGLE-COUNTRY PAGES (no alternates in other countries)
 // ===========================================================================
 
-/** Contact page (India only) */
+/** Contact page — GLOBAL/primary-domain page (renders the US header). Signalled
+ *  as en-US so Google does not treat /contact as India-only. (geo-segmentation 2026-07-06) */
 export const contactAlternates = {
-  'en-IN': 'https://factoryjet.com/contact',
+  'en-US': 'https://factoryjet.com/contact',
   'x-default': 'https://factoryjet.com/contact',
 } as const
 
