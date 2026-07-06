@@ -63,7 +63,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const url = `https://factoryjet.com/case-studies/${slug}`
   const ogImage = cs.ogImageUrl?.startsWith('http')
     ? cs.ogImageUrl
-    : `https://factoryjet.com${cs.ogImageUrl || '/logo.png'}`
+    : `https://factoryjet.com${cs.ogImageUrl || '/og-default.png'}`
 
   return {
     title,
@@ -102,7 +102,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 function articleJsonLd(cs: CaseStudy, slug: string) {
   const image = cs.ogImageUrl?.startsWith('http')
     ? cs.ogImageUrl
-    : `https://factoryjet.com${cs.ogImageUrl || '/logo.png'}`
+    : `https://factoryjet.com${cs.ogImageUrl || '/og-default.png'}`
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',

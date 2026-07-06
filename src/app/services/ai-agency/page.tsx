@@ -315,14 +315,7 @@ const serviceSchema = {
     { '@type': 'Offer', name: 'Growth AI Platform', description: 'Multi-workflow AI platform with CRM integrations and management dashboard.' },
     { '@type': 'Offer', name: 'Enterprise AI System', description: 'Full multi-agent AI system with custom LLM fine-tuning and private deployment.' },
   ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    ratingCount: '150',
-    reviewCount: '150',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
 };
 
 const howToSchema = {

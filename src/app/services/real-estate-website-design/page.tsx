@@ -32,14 +32,14 @@ export const metadata: Metadata = {
     description:
       'IDX-integrated real estate websites that rank locally. Agent, team, and brokerage sites. Live in 7 days, fixed-price, code ownership at handoff.',
     url: 'https://factoryjet.com/services/real-estate-website-design',
-    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet — Real Estate Website Design USA' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet — Real Estate Website Design USA' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Real Estate Website Design — IDX Sites in 7 Days | FactoryJet',
     description: 'IDX-integrated real estate websites that rank locally. Agent, team, and brokerage sites. Live in 7 days, fixed-price, code ownership at handoff.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/real-estate-website-design',
@@ -93,14 +93,7 @@ const serviceSchema = {
     url: 'https://factoryjet.com',
     logo: 'https://factoryjet.com/logo.png',
     areaServed: { '@type': 'Country', name: 'United States' },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      ratingCount: '150',
-      reviewCount: '150',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    
   },
 };
 

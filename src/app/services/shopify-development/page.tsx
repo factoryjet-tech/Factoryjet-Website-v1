@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/services/shopify-development',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
         alt: 'FactoryJet Shopify Development Services USA',
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: 'Shopify Development Agency USA | Custom Stores & Shopify Plus | FactoryJet',
     description:
       'Hire senior Shopify developers for custom theme development, store design and customization, Shopify Plus, B2B, and migrations. A platform-agnostic e-commerce development agency. Get a free commerce audit.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/shopify-development',
@@ -208,14 +208,7 @@ const serviceSchema = {
     '@type': 'Organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      ratingCount: '150',
-      reviewCount: '150',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    
   },
   areaServed: {
     '@type': 'Country',

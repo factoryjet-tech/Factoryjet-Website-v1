@@ -193,7 +193,7 @@ export const post: BlogPost = {
         Bigger projects — 500+ SKU catalogs, custom subscription flows, bundle configurators, B2B wholesale layers, or WooCommerce migrations — run 2–4 weeks and are scoped during discovery. The pricing stays transparent. The 7-day delivery guarantee applies to standard Shopify builds with client assets ready at kickoff.
       </p>
       <p className="mb-4">
-        Talk to the founder directly — Bhavesh runs every Boise discovery call himself. Book a 30-minute slot at <a href="https://calendly.com/bhavesh-factoryjet/30min" className="text-blue-600 underline hover:text-blue-800 transition-colors">calendly.com/bhavesh-factoryjet</a> or email <a href="mailto:bhavesh@factoryjet.com" className="text-blue-600 underline hover:text-blue-800 transition-colors">bhavesh@factoryjet.com</a>.
+        Talk to the founder directly — Bhavesh runs every Boise discovery call himself. Book a 30-minute slot at <a href="https://calendly.com/bhavesh-factoryjet/30min" className="text-blue-600 underline hover:text-blue-800 transition-colors">calendly.com/bhavesh-factoryjet</a> or email <a href="mailto:bhavesh@factoryjet.com" className="text-blue-600 underline hover:text-blue-800 transition-colors">me</a>.
       </p>
       <p className="mb-4">
         ➡ <a href="/boise/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">See Boise Shopify development packages</a>

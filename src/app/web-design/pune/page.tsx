@@ -26,7 +26,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Pune | | FactoryJet',
+  title: 'Web Design Company in Pune | FactoryJet',
   description:
     'Web design company in Pune for IT, auto-tier suppliers, education & D2C brands. Fast, custom websites with a 7-day delivery guarantee. Serving Hinjewadi, Koregaon Park & Baner.',
   keywords: [
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Pune | | FactoryJet',
+    title: 'Web Design Company in Pune | FactoryJet',
     description:
       'Professional website design company in Pune — Next.js, SEO, and GA4 included. 7-day delivery. Serving Hinjewadi, Koregaon Park, Baner & PCMC.',
     url: 'https://factoryjet.com/web-design/pune',
@@ -107,13 +107,7 @@ const localBusinessSchema = {
     { '@type': 'City', name: 'Hinjewadi' },
   ],
   serviceType: 'Web Design and Development',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Web Design Services Pune',

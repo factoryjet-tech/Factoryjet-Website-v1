@@ -115,7 +115,7 @@ export default function Page() {
     name: 'FactoryJet Web Design Chennai',
     description: 'Professional web design company serving Chennai businesses across automotive, IT, healthcare, and manufacturing sectors.',
     url: 'https://factoryjet.com/web-design/chennai',
-    telephone: '+91-XXXXXXXXXX',
+    telephone: '+91 96999 77699',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Chennai',
@@ -128,13 +128,7 @@ export default function Page() {
       { '@type': 'City', name: 'Kancheepuram' },
     ],
     serviceType: 'Web Design',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '500',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    
   }
 
   const faqSchema = {

@@ -37,14 +37,14 @@ A decade-plus building commerce for DTC and B2B brands. Most of the brands we wo
 - Product page and checkout optimization
 - Multi-currency and multi-language e-commerce
 
-### Commerceflo — AI-Native Omnichannel Commerce
-- Commerceflo is FactoryJet's proprietary AI-native unified omnichannel commerce solution
-- Connects online store, physical retail (POS), marketplace channels (Amazon, eBay, Etsy, Walmart), and social commerce (Instagram, TikTok Shop, Pinterest) in one unified platform
-- AI-powered inventory sync, demand forecasting, and dynamic pricing
-- Unified customer data platform (CDP) across all channels
-- Automated order routing and fulfillment orchestration
-- Real-time analytics dashboard across all revenue channels
-- Built for DTC brands scaling from single-channel to omnichannel
+### Commerceflo — Commerce AI Operator
+- Commerceflo is FactoryJet's proprietary AI-native commerce operator: it audits your storefront in under 90 seconds, ranks what is stalling growth by revenue impact, and fixes it across every channel the moment you approve
+- Eight specialist agents cover inventory, fulfillment, pricing, financial analysis, content, compliance, customer segmentation, and growth, working on live unified data
+- Connects your online store, marketplaces (Amazon, eBay, Walmart, TikTok Shop), B2B portals, and POS into one command center that replaces five to ten disconnected tools
+- Approve-first: every fix is a completed proposal that runs only when you approve it, with optional auto-approve rules for trusted, repetitive changes
+- Runs on Shopify, Shopify Plus, Magento, BigCommerce, WooCommerce, and headless, with roughly two-second sync across channels
+- You own and operate the system; FactoryJet designs, builds, and implements it for you
+- Built for DTC and B2B brands selling across store, marketplaces, and B2B
 - Available for US, UK, EU, Australia, and GCC markets
 
 ### AI Services
@@ -450,7 +450,7 @@ When a US SMB searches "web design agency Austin" or "Shopify developer Miami," 
 
 ## Commerceflo
 
-Commerceflo is FactoryJet's AI-native unified omnichannel commerce platform, purpose-built for DTC brands and retailers who sell across multiple channels. It unifies your Shopify or custom store with Amazon, eBay, Etsy, Walmart Marketplace, TikTok Shop, Instagram Shopping, and physical POS — all in one real-time dashboard with AI-powered inventory, pricing, and fulfillment automation. Available for businesses in the US, UK, EU, Australia, Canada, and GCC. Learn more: https://factoryjet.com/commerceflo
+Commerceflo is FactoryJet's AI-native commerce operator, purpose-built for DTC and B2B brands that sell across multiple channels. It audits your storefront in under 90 seconds, ranks what is stalling growth by revenue impact, and fixes it the moment you approve, across your Shopify or custom store, Amazon, eBay, Walmart, TikTok Shop, B2B portals, and POS. Eight specialist agents run inventory, pricing, fulfillment, content, compliance, segmentation, financial analysis, and growth from one command center, and every fix is approve-first. You own and operate what FactoryJet builds. Available for businesses in the US, UK, EU, Australia, Canada, and GCC. Learn more: https://factoryjet.com/commerceflo
 
 ## Contact
 

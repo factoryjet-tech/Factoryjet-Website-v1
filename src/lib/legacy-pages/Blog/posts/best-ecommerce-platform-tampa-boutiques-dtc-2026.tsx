@@ -197,7 +197,7 @@ export const post: BlogPost = {
         If you also need the marketing site separated from the storefront — for example a content-heavy editorial layer with the store running on a subdomain — our <a href="/tampa/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">Tampa web design service</a> covers that build path.
       </p>
       <p className="mb-4">
-        Talk to the founder directly — Bhavesh runs every Tampa boutique discovery call himself. Book a 30-minute slot at <a href="https://calendly.com/bhavesh-factoryjet/30min" className="text-blue-600 underline hover:text-blue-800 transition-colors">calendly.com/bhavesh-factoryjet</a> or email <a href="mailto:bhavesh@factoryjet.com" className="text-blue-600 underline hover:text-blue-800 transition-colors">bhavesh@factoryjet.com</a>.
+        Talk to the founder directly — Bhavesh runs every Tampa boutique discovery call himself. Book a 30-minute slot at <a href="https://calendly.com/bhavesh-factoryjet/30min" className="text-blue-600 underline hover:text-blue-800 transition-colors">calendly.com/bhavesh-factoryjet</a> or email <a href="mailto:bhavesh@factoryjet.com" className="text-blue-600 underline hover:text-blue-800 transition-colors">me</a>.
       </p>
       <p className="mb-4">
         ➡ <a href="/tampa/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">See Tampa ecommerce development packages</a>

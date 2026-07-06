@@ -113,7 +113,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'AI Scheduling Agent Development India',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com', aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '150', bestRating: '5', worstRating: '1' } },
+  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   description: 'Custom AI scheduling agents for Indian businesses — automate appointment booking on WhatsApp in Hindi and English with Google Calendar, Zoho Bookings, and Razorpay integration.',
   areaServed: 'IN',
   serviceType: 'AI Appointment Scheduling Automation',
@@ -817,7 +817,7 @@ export default function AISchedulingAgentINPage() {
             headline="Book a Free AI Scheduling Strategy Call"
             sub="Tell us your appointment volume, how customers currently book, and your biggest scheduling friction. We will map out exactly how an AI scheduling agent reduces that friction and give you a fixed-price estimate before writing a single line of code."
             primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
-            secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919876543210' }}
+            secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919699977699' }}
             objectionHandler="Fixed price. Full code ownership. WhatsApp + Google Calendar + Zoho + Razorpay ready. 500+ businesses served."
           />
         </div>

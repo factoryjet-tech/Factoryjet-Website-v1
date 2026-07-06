@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/services/shopify-seo',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
         alt: 'FactoryJet — Shopify SEO services for US stores',
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: 'Shopify SEO Agency USA — Rank Your Store & Win AI Citations | FactoryJet',
     description:
       'Shopify SEO services & agency for US stores. Fix duplicate URLs, rank products and collections, earn AI citations. Free Shopify SEO audit.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/shopify-seo',
@@ -407,14 +407,7 @@ const serviceSchema = {
       description: 'Custom scope for Shopify Plus, multi-store, or international stores. Pricing on application.',
     },
   ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    ratingCount: '150',
-    reviewCount: '150',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
 };
 
 const faqSchema = {

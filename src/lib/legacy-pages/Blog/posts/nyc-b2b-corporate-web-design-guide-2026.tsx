@@ -297,10 +297,10 @@ export const post: BlogPost = {
         </a>
         . Or email{' '}
         <a
-          href="mailto:bhavesh@factoryjet.com"
+          href="mailto:connect@factoryjet.com"
           className="text-blue-600 underline hover:text-blue-800 transition-colors"
         >
-          bhavesh@factoryjet.com
+          connect@factoryjet.com
         </a>
         . See the full{' '}
         <a

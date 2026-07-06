@@ -213,7 +213,7 @@ export const post: BlogPost = {
         Larger engagements — full conversion-rate-optimization programs, WooCommerce migrations, AI cart-recovery agents, Shopify Plus checkout extensibility builds — run 2–4 weeks and are scoped during discovery. The 7-day delivery guarantee applies to standard checkout-optimization engagements with payment provider access and tracking pixel access ready at kickoff.
       </p>
       <p className="mb-4">
-        Talk to the founder directly — Bhavesh runs every Austin discovery call himself. Book a 30-minute slot at <a href="https://calendly.com/bhavesh-factoryjet/30min" className="text-blue-600 underline hover:text-blue-800 transition-colors">calendly.com/bhavesh-factoryjet</a> or email <a href="mailto:bhavesh@factoryjet.com" className="text-blue-600 underline hover:text-blue-800 transition-colors">bhavesh@factoryjet.com</a>.
+        Talk to the founder directly — Bhavesh runs every Austin discovery call himself. Book a 30-minute slot at <a href="https://calendly.com/bhavesh-factoryjet/30min" className="text-blue-600 underline hover:text-blue-800 transition-colors">calendly.com/bhavesh-factoryjet</a> or email <a href="mailto:bhavesh@factoryjet.com" className="text-blue-600 underline hover:text-blue-800 transition-colors">me</a>.
       </p>
       <p className="mb-4">
         ➡ <a href="/austin/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">See Austin ecommerce development packages</a>

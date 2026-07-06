@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/case-studies',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
         alt: 'FactoryJet Case Studies',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: 'Case Studies | FactoryJet',
     description:
       'Real FactoryJet client wins — measurable revenue, traffic, and efficiency gains from web design, Shopify, and custom development projects.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
 }
 

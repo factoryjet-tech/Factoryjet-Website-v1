@@ -25,7 +25,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development in Mumbai | | FactoryJet',
+  title: 'Ecommerce Development in Mumbai | FactoryJet',
   description:
     'Shopify, WooCommerce & AI-native stores for Mumbai brands. Razorpay, UPI & COD. GST-compliant. Shiprocket integrated. 7-day delivery.',
   keywords: [
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Ecommerce Development Company in Mumbai | | FactoryJet',
+    title: 'Ecommerce Development Company in Mumbai | FactoryJet',
     description:
       'Shopify, WooCommerce, D2C, and AI-native ecommerce stores for Mumbai businesses. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
     url: 'https://factoryjet.com/services/ecommerce-development/mumbai',
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ecommerce Development Mumbai | | FactoryJet',
+    title: 'Ecommerce Development Mumbai | FactoryJet',
     description:
       'Shopify, WooCommerce & AI ecommerce for Mumbai brands. Razorpay + GST + Shiprocket.',
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
@@ -195,13 +195,7 @@ const localBusinessSchema = {
     'Andheri', 'Bandra', 'BKC', 'Lower Parel', 'Navi Mumbai',
     'Thane', 'Powai', 'Malad', 'Goregaon', 'Kurla',
   ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '150',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────

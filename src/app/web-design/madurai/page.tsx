@@ -115,7 +115,7 @@ export default function Page() {
     name: 'FactoryJet Web Design Madurai',
     description: 'Professional web design company serving Madurai businesses across textile, engineering, healthcare, education, and tourism sectors.',
     url: 'https://factoryjet.com/web-design/madurai',
-    telephone: '+91-XXXXXXXXXX',
+    telephone: '+91 96999 77699',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Madurai',
@@ -128,13 +128,7 @@ export default function Page() {
       { '@type': 'City', name: 'Virudhunagar' },
     ],
     serviceType: 'Web Design',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '500',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    
   }
 
   const faqSchema = {

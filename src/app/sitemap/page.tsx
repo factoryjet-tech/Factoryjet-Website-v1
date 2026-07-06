@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import SitemapPage from '@/pages/Sitemap'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 export const metadata: Metadata = {
   title: 'Sitemap — All Pages | FactoryJet',
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/sitemap',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
         alt: 'FactoryJet Sitemap',
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Sitemap — All Pages | FactoryJet',
     description: 'Navigate FactoryJet\'s website with ease.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/sitemap',
@@ -49,7 +50,7 @@ export default function Page() {
     <>
       <SiteHeader locale="in" />
       <SitemapPage />
-      <SiteFooter locale="in" />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   )
 }

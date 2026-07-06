@@ -22,10 +22,10 @@ export const metadata: Metadata = {
     title: 'BigCommerce Development Agency | BigCommerce Developers | FactoryJet',
     description: 'We design, build, and migrate BigCommerce stores: custom themes, B2B Edition, headless, and API integrations.',
     url: 'https://factoryjet.com/bigcommerce-development',
-    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet, BigCommerce development agency' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet, BigCommerce development agency' }],
     locale: 'en_US',
   },
-  twitter: { card: 'summary_large_image', title: 'BigCommerce Development Agency | FactoryJet', description: 'BigCommerce development: custom themes, B2B Edition, headless, API integrations.', images: ['https://factoryjet.com/logo.png'] },
+  twitter: { card: 'summary_large_image', title: 'BigCommerce Development Agency | FactoryJet', description: 'BigCommerce development: custom themes, B2B Edition, headless, API integrations.', images: ['https://factoryjet.com/og-default.png'] },
   alternates: { canonical: 'https://factoryjet.com/bigcommerce-development' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
@@ -77,7 +77,7 @@ const HOWTO_SCHEMA = {
 const ORG_SCHEMA = {
   '@context': 'https://schema.org', '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com',
   description: 'FactoryJet is an e-commerce development agency that builds BigCommerce, omnichannel, and B2B commerce for DTC and B2B brands.',
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', ratingCount: '150', reviewCount: '150', bestRating: '5', worstRating: '1' },
+  
   sameAs: ['https://www.linkedin.com/company/factoryjet'],
 };
 const BREADCRUMB_SCHEMA = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [

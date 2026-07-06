@@ -21,10 +21,10 @@ export const metadata: Metadata = {
     title: 'Best Ecommerce Platform for Your Business | FactoryJet',
     description: 'Honest comparison of the top ecommerce platforms. We help US DTC and B2B brands choose and build on the right one.',
     url: 'https://factoryjet.com/best-ecommerce-platforms',
-    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet ecommerce platform comparison' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet ecommerce platform comparison' }],
     locale: 'en_US',
   },
-  twitter: { card: 'summary_large_image', title: 'Best Ecommerce Platform Comparison | FactoryJet', description: 'Shopify vs BigCommerce vs Adobe Commerce vs WooCommerce vs Salesforce, an honest comparison for DTC and B2B brands.', images: ['https://factoryjet.com/logo.png'] },
+  twitter: { card: 'summary_large_image', title: 'Best Ecommerce Platform Comparison | FactoryJet', description: 'Shopify vs BigCommerce vs Adobe Commerce vs WooCommerce vs Salesforce, an honest comparison for DTC and B2B brands.', images: ['https://factoryjet.com/og-default.png'] },
   alternates: { canonical: 'https://factoryjet.com/best-ecommerce-platforms' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
@@ -182,7 +182,7 @@ const ORG_SCHEMA = {
   name: 'FactoryJet',
   url: 'https://factoryjet.com',
   description: 'FactoryJet is a platform-agnostic ecommerce development agency that builds, migrates, and integrates stores on Shopify, BigCommerce, Adobe Commerce, WooCommerce, and Salesforce Commerce Cloud for US DTC and B2B brands.',
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', ratingCount: '150', reviewCount: '150', bestRating: '5', worstRating: '1' },
+  
   sameAs: ['https://www.linkedin.com/company/factoryjet'],
 };
 const BREADCRUMB_SCHEMA = {

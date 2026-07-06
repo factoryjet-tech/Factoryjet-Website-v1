@@ -26,7 +26,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Ahmedabad | | FactoryJet',
+  title: 'Web Design Company in Ahmedabad | FactoryJet',
   description:
     'Web design company in Ahmedabad for textile exporters & trading firms. Fast, custom websites with a 7-day delivery guarantee. Serving SG Highway, Vastrapur & GIFT City.',
   keywords: [
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Ahmedabad | | FactoryJet',
+    title: 'Web Design Company in Ahmedabad | FactoryJet',
     description:
       'Professional website design company in Ahmedabad — Next.js, SEO, and GA4 included. 7-day delivery. Serving SG Highway, Vastrapur, Bodakdev, GIFT City.',
     url: 'https://factoryjet.com/web-design/ahmedabad',
@@ -110,13 +110,7 @@ const localBusinessSchema = {
     { '@type': 'City', name: 'GIFT City' },
   ],
   serviceType: 'Web Design and Development',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Web Design Services Ahmedabad',

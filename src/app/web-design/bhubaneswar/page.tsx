@@ -25,7 +25,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ──────────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Bhubaneswar | | FactoryJet',
+  title: 'Web Design Company in Bhubaneswar | FactoryJet',
   description:
     'Web design company in Bhubaneswar for IT firms, government contractors & Odisha businesses. Fast, custom websites with a 7-day delivery guarantee. Serving Infocity IT Park, STPI & Startup Odisha ecosystem.',
   keywords: [
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Bhubaneswar | | FactoryJet',
+    title: 'Web Design Company in Bhubaneswar | FactoryJet',
     description:
       'Professional website design company in Bhubaneswar — Next.js, SEO, and GA4 included. 7-day delivery. Serving Infocity IT Park, STPI Bhubaneswar, KIIT University zone, and Startup Odisha ecosystem.',
     url: 'https://factoryjet.com/web-design/bhubaneswar',
@@ -116,13 +116,7 @@ const localBusinessSchema = {
     { '@type': 'State', name: 'Odisha' },
   ],
   serviceType: 'Web Design and Development',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Web Design Services Bhubaneswar',

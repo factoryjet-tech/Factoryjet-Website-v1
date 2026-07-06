@@ -25,7 +25,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Rajkot | | FactoryJet',
+  title: 'Web Design Company in Rajkot | FactoryJet',
   description:
     'Web design company in Rajkot for auto component exporters, engineering manufacturers & MSME businesses. Fast, custom websites with a 7-day delivery guarantee. Serving GIDC Metoda, Shapar-Veraval & Aji.',
   keywords: [
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Rajkot | | FactoryJet',
+    title: 'Web Design Company in Rajkot | FactoryJet',
     description:
       "Professional website design company in Rajkot — Next.js, SEO, and GA4 included. 7-day delivery. Serving GIDC Metoda, Shapar-Veraval, Aji, and Rajkot's auto component & engineering clusters.",
     url: 'https://factoryjet.com/web-design/rajkot',
@@ -114,13 +114,7 @@ const localBusinessSchema = {
     { '@type': 'City', name: 'Morbi' },
   ],
   serviceType: 'Web Design and Development',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Web Design Services Rajkot',

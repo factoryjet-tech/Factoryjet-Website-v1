@@ -30,7 +30,7 @@ import './small-business-seo.css';
    labeled illustrative; no em-dashes. Anti-cannibalization: owns "small business
    SEO services / company / agency / affordable SEO"; local/near-me intent stays
    on /us/services/local-seo (linked, not duplicated).
-   Schema: Service + Organization(aggregateRating) + FAQPage(22) + BreadcrumbList.
+   Schema: Service + Organization + FAQPage(22) + BreadcrumbList.
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -168,7 +168,7 @@ export const metadata: Metadata = {
     description:
       'A US small business SEO agency offering affordable SEO services for small businesses. Website, local, and content SEO scoped to your budget. Founder-led, month-to-month, reported in calls and leads.',
     url: 'https://factoryjet.com/services/small-business-seo',
-    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet small business SEO services for US businesses' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet small business SEO services for US businesses' }],
     locale: 'en_US',
   },
   twitter: {
@@ -176,7 +176,7 @@ export const metadata: Metadata = {
     title: 'Small Business SEO Services in the US: More Customers from Google | FactoryJet',
     description:
       'Affordable small business SEO services that bring calls and customers from Google. Founder-led, month-to-month, reported in leads.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/small-business-seo',
@@ -205,7 +205,7 @@ const organizationSchema = {
   url: 'https://factoryjet.com',
   logo: 'https://factoryjet.com/logo.png',
   sameAs: ['https://factoryjet.com'],
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', ratingCount: '150', reviewCount: '150', bestRating: '5', worstRating: '1' },
+  
 };
 
 const faqSchema = {

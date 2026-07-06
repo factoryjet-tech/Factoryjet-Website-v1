@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     description:
       'An e-commerce development agency for DTC and B2B brands. We design, build, and implement omnichannel commerce across your store, marketplaces, and B2B portals on Shopify, Magento, WooCommerce, or Commerceflo. One catalog, one inventory, one order engine.',
     url: 'https://factoryjet.com',
-    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet, e-commerce development agency for DTC and B2B brands' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet, e-commerce development agency for DTC and B2B brands' }],
     locale: 'en_US',
   },
   twitter: {
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     title: 'E-Commerce Development Agency for DTC & B2B Brands | FactoryJet',
     description:
       'An e-commerce development agency for DTC and B2B. We build omnichannel commerce across your store, marketplaces, and B2B on Shopify, Magento, WooCommerce, or Commerceflo.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com',
@@ -114,7 +114,7 @@ const ORG_SCHEMA = {
   url: 'https://factoryjet.com',
   description:
     'FactoryJet is an e-commerce development agency that consults, designs, develops, and implements omnichannel commerce for DTC and B2B brands across Shopify, Shopify Plus, Adobe Commerce (Magento), BigCommerce, WooCommerce, headless, and Commerceflo.',
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', ratingCount: '150', reviewCount: '150', bestRating: '5', worstRating: '1' },
+  
   sameAs: [
     'https://www.linkedin.com/company/factoryjet',
     'https://www.crunchbase.com/organization/factoryjet',

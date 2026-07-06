@@ -508,14 +508,7 @@ const serviceSchema = {
         'Custom scope for hospital systems, health tech companies, or multi-location practices. Pricing on application.',
     },
   ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    ratingCount: '150',
-    reviewCount: '150',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
 };
 
 const faqSchema = {

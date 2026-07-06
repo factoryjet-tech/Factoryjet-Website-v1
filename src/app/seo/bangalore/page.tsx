@@ -64,7 +64,7 @@ const localBusinessSchema = {
     'FactoryJet provides SEO services in Bangalore for tech companies, SaaS startups, D2C brands, IT services firms, and local businesses across Koramangala, Indiranagar, Whitefield, Electronic City, HSR Layout, and Marathahalli.',
   url: 'https://factoryjet.com/seo/bangalore',
   telephone: '+919699977699',
-  email: 'bhavesh@factoryjet.com',
+  email: 'connect@factoryjet.com',
   areaServed: [
     { '@type': 'City', name: 'Bangalore' },
     { '@type': 'City', name: 'Bengaluru' },
@@ -83,12 +83,7 @@ const localBusinessSchema = {
     opens: '09:00',
     closes: '18:00',
   },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-  },
+  
   sameAs: ['https://factoryjet.com'],
 };
 

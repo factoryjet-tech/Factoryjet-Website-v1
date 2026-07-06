@@ -76,14 +76,7 @@ const jsonLd = {
         'https://www.linkedin.com/company/factoryjet',
         'https://www.crunchbase.com/organization/factoryjet',
       ],
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        ratingCount: '150',
-        reviewCount: '150',
-        bestRating: '5',
-        worstRating: '1',
-      },
+      
     },
     {
       '@type': 'FAQPage',

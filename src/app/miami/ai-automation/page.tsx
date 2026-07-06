@@ -162,14 +162,7 @@ const serviceSchema = {
   serviceType: 'AI Workflow Automation',
   description:
     'Custom AI workflow automation for Miami FL small businesses. Specializing in bilingual lead automation, hospitality booking flows, invoice processing, CRM sync, and multi-system data automation built on n8n, Make.com, and LangChain.',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    ratingCount: '150',
-    reviewCount: '150',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
 };
 
 const howToSchema = {

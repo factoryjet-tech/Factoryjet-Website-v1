@@ -55,8 +55,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://factoryjet.com'),
-  title: 'World-Class Web & E-Commerce Development Company | FactoryJet',
-  description: 'FactoryJet builds websites, Shopify stores & AI agents for India, US & UK businesses. 7-day delivery, Lighthouse 100, 500+ projects. Free consultation.',
+  title: 'E-Commerce Development Agency for DTC & B2B | FactoryJet',
+  description: 'FactoryJet builds & scales omnichannel commerce for DTC & B2B brands on Shopify Plus, Magento & headless. Plus web design, AI agents & AI SEO. 500+ projects.',
   authors: [{ name: 'FactoryJet' }],
   robots: {
     index: true,
@@ -72,24 +72,24 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'World-Class Web & E-Commerce Development Company | FactoryJet',
-    description: 'FactoryJet delivers scalable web and eCommerce solutions for global businesses. Fast delivery, affordable pricing, 150+ successful projects.',
+    title: 'E-Commerce Development Agency for DTC & B2B | FactoryJet',
+    description: 'FactoryJet builds & scales omnichannel commerce for DTC & B2B brands on Shopify Plus, Magento & headless. Plus web design, AI agents & AI SEO. 500+ projects.',
     url: 'https://factoryjet.com',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet - Web & E-Commerce Development Company',
+        alt: 'FactoryJet - Omnichannel commerce for DTC & B2B brands, plus web design, AI agents & AI SEO',
       },
     ],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'World-Class Web & E-Commerce Development Company | FactoryJet',
-    description: 'High-performance web and eCommerce solutions built for growth. Fast delivery, affordable pricing, 150+ successful projects.',
-    images: ['https://factoryjet.com/logo.png'],
+    title: 'E-Commerce Development Agency for DTC & B2B | FactoryJet',
+    description: 'FactoryJet builds & scales omnichannel commerce for DTC & B2B brands on Shopify Plus, Magento & headless. Plus web design, AI agents & AI SEO. 500+ projects.',
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com',
@@ -171,14 +171,7 @@ export default function RootLayout({
                 "AI SEO & GEO Optimization",
                 "Shopify Development",
                 "Digital Marketing"
-              ],
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "reviewCount": "150",
-                "bestRating": "5",
-                "worstRating": "1"
-              }
+              ]
             })
           }}
         />

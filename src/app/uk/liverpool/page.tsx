@@ -50,7 +50,7 @@ const schema = {
       },
       "description":
         "AI-native web design, e-commerce, AI agent development, and AI SEO agency serving Liverpool businesses. Pricing is fixed and published upfront.",
-      "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "150", "bestRating": "5", "worstRating": "1"},
+      
     },
     {
       "@type": "Service",

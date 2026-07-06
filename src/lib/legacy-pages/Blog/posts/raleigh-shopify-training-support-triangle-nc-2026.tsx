@@ -214,7 +214,7 @@ export const post: BlogPost = {
         Bigger projects — 500+ SKU catalogs, custom subscription flows, bundle configurators, B2B wholesale layers, or migrations from WooCommerce or BigCommerce — run two to four weeks and are scoped during discovery. The pricing stays transparent. The 7-day delivery guarantee applies to standard Shopify builds with client assets ready at kickoff.
       </p>
       <p className="mb-4">
-        Talk to the founder directly — Bhavesh runs every Raleigh discovery call himself. Book a 30-minute slot at <a href="https://calendly.com/bhavesh-factoryjet/30min" className="text-blue-600 underline hover:text-blue-800 transition-colors">calendly.com/bhavesh-factoryjet</a> or email <a href="mailto:bhavesh@factoryjet.com" className="text-blue-600 underline hover:text-blue-800 transition-colors">bhavesh@factoryjet.com</a>.
+        Talk to the founder directly — Bhavesh runs every Raleigh discovery call himself. Book a 30-minute slot at <a href="https://calendly.com/bhavesh-factoryjet/30min" className="text-blue-600 underline hover:text-blue-800 transition-colors">calendly.com/bhavesh-factoryjet</a> or email <a href="mailto:bhavesh@factoryjet.com" className="text-blue-600 underline hover:text-blue-800 transition-colors">me</a>.
       </p>
       <p className="mb-4">
         ➡ <a href="/raleigh/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">See Raleigh Shopify development and support packages</a>

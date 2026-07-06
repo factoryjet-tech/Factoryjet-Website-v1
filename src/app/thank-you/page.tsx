@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import ThankYouContent from './ThankYouContent'
 
 /**
@@ -33,7 +34,7 @@ export default function Page() {
     <>
       <SiteHeader locale="in" />
       <ThankYouContent />
-      <SiteFooter locale="in" />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   )
 }

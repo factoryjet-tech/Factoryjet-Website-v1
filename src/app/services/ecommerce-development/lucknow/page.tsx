@@ -25,7 +25,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development in Lucknow | | FactoryJet',
+  title: 'Ecommerce Development in Lucknow | FactoryJet',
   description:
     'Shopify & WooCommerce stores for Lucknow brands. Razorpay, UPI & COD. GST-compliant. Shiprocket integrated. 7-day delivery guarantee.',
   keywords: [
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Ecommerce Development Company in Lucknow | | FactoryJet',
+    title: 'Ecommerce Development Company in Lucknow | FactoryJet',
     description:
       'Shopify, WooCommerce, D2C, and custom ecommerce stores for Lucknow businesses. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
     url: 'https://factoryjet.com/services/ecommerce-development/lucknow',
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ecommerce Development Lucknow | | FactoryJet',
+    title: 'Ecommerce Development Lucknow | FactoryJet',
     description:
       'Shopify, WooCommerce & custom ecommerce for Lucknow brands. Razorpay + GST + Shiprocket.',
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
@@ -195,13 +195,7 @@ const localBusinessSchema = {
     'Hazratganj', 'Gomti Nagar', 'Indira Nagar', 'Aliganj', 'Mahanagar',
     'Chinhat', 'Alambagh', 'Vikas Nagar',
   ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '150',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────

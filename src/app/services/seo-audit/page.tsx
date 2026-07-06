@@ -32,7 +32,7 @@ import './seo-audit.css';
    only (4.9/150, 500+, 7-day/Lighthouse 100); report card + fix list labeled
    illustrative; no em-dashes. Anti-cannibalization: owns "seo audit services /
    site audit / technical seo agency / audit report"; general SEO stays on the hub.
-   Schema: Service + Organization(aggregateRating) + FAQPage(21) + BreadcrumbList.
+   Schema: Service + Organization + FAQPage(21) + BreadcrumbList.
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -170,7 +170,7 @@ export const metadata: Metadata = {
     description:
       'A US technical SEO agency offering a free, expert SEO audit. Technical, on-page, Core Web Vitals, and backlink review with a prioritized 90-day roadmap. Founder-led, month-to-month if you want the fixes.',
     url: 'https://factoryjet.com/services/seo-audit',
-    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet SEO audit services and technical SEO for US businesses' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet SEO audit services and technical SEO for US businesses' }],
     locale: 'en_US',
   },
   twitter: {
@@ -178,7 +178,7 @@ export const metadata: Metadata = {
     title: 'SEO Audit Services in the US: Free Site Audit & Technical SEO | FactoryJet',
     description:
       'Expert SEO audit services and technical SEO. A free site audit with a prioritized roadmap, read by a human. Founder-led.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/seo-audit',
@@ -207,7 +207,7 @@ const organizationSchema = {
   url: 'https://factoryjet.com',
   logo: 'https://factoryjet.com/logo.png',
   sameAs: ['https://factoryjet.com'],
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', ratingCount: '150', reviewCount: '150', bestRating: '5', worstRating: '1' },
+  
 };
 
 const faqSchema = {

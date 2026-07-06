@@ -36,14 +36,14 @@ export const metadata: Metadata = {
     title: 'Shopify Developer Raleigh NC | 7-Day Delivery, Fixed-Price | FactoryJet',
     description: 'Top-rated Shopify developer in Raleigh, North Carolina: stores live in 7 days, fixed-price. Research Triangle e-commerce specialists — Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
     url: 'https://factoryjet.com/raleigh/ecommerce-development',
-    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet - Shopify Developer Raleigh' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet - Shopify Developer Raleigh' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Shopify Developer Raleigh NC | 7-Day Delivery, Fixed-Price | FactoryJet',
     description: 'Top-rated Shopify developer in Raleigh, NC: stores live in 7 days, fixed-price. Research Triangle e-commerce specialists.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/raleigh/ecommerce-development',

@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/lincoln/ecommerce-development',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
         alt: 'FactoryJet - Shopify Agency Lincoln NE',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Shopify Agency Lincoln NE | 7-Day Delivery, Fixed-Price | FactoryJet',
     description: 'Top-rated Shopify agency in Lincoln NE: stores live in 7 days, fixed-price. Silicon Prairie e-commerce specialists. Free audit.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/lincoln/ecommerce-development',

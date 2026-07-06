@@ -36,14 +36,14 @@ export const metadata: Metadata = {
     title: 'Shopify Developer Chattanooga TN | Custom Shopify Stores | FactoryJet',
     description: 'Top-rated Shopify developer in Chattanooga, TN. FactoryJet builds custom Shopify stores for Gig City businesses — 7-day delivery, fixed price, full code ownership. Free audit.',
     url: 'https://factoryjet.com/chattanooga/ecommerce-development',
-    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet - Shopify Developer Chattanooga TN' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet - Shopify Developer Chattanooga TN' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Shopify Developer Chattanooga TN | Custom Shopify Stores | FactoryJet',
     description: 'Top-rated Shopify developer in Chattanooga, TN. FactoryJet builds custom Shopify stores for Gig City businesses — 7-day delivery, fixed price, full code ownership. Free audit.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/chattanooga/ecommerce-development',

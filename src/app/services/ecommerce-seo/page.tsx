@@ -32,7 +32,7 @@ import './ecommerce-seo.css';
    illustrative; no em-dashes. Anti-cannibalization: owns ecommerce/Shopify/Woo/
    Magento + product/collection/technical SEO (distinct from /ecommerce-development
    and /shopify-development which BUILD stores).
-   Schema: Service + Organization(aggregateRating) + FAQPage(22) + BreadcrumbList.
+   Schema: Service + Organization + FAQPage(22) + BreadcrumbList.
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -174,7 +174,7 @@ export const metadata: Metadata = {
     description:
       'A US-focused ecommerce SEO company and Shopify SEO agency. Collection and product page SEO, schema and rich results, technical ecommerce SEO. Reported in revenue. Founder-led, month-to-month.',
     url: 'https://factoryjet.com/services/ecommerce-seo',
-    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet ecommerce SEO services for US stores' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet ecommerce SEO services for US stores' }],
     locale: 'en_US',
   },
   twitter: {
@@ -182,7 +182,7 @@ export const metadata: Metadata = {
     title: 'Best Ecommerce SEO Agency in USA: Rank Products & Collections | FactoryJet',
     description:
       'A US-focused ecommerce SEO agency for Shopify, WooCommerce, and Magento. Collections, products, schema, technical. Reported in revenue.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/ecommerce-seo',
@@ -211,7 +211,7 @@ const organizationSchema = {
   url: 'https://factoryjet.com',
   logo: 'https://factoryjet.com/logo.png',
   sameAs: ['https://factoryjet.com'],
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', ratingCount: '150', reviewCount: '150', bestRating: '5', worstRating: '1' },
+  
 };
 
 const faqSchema = {

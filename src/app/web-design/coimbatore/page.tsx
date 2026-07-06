@@ -26,7 +26,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Coimbatore | | FactoryJet',
+  title: 'Web Design Company in Coimbatore | FactoryJet',
   description:
     'Web design company in Coimbatore for textile manufacturers, pump & engineering firms, and IT businesses. 7-day delivery. Serving Avinashi Road, Peelamedu & RS Puram.',
   keywords: [
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Coimbatore | | FactoryJet',
+    title: 'Web Design Company in Coimbatore | FactoryJet',
     description:
       'Professional website design company in Coimbatore — Next.js, SEO, and GA4 included. 7-day delivery. Serving Avinashi Road, Peelamedu, RS Puram, Gandhipuram.',
     url: 'https://factoryjet.com/web-design/coimbatore',
@@ -112,13 +112,7 @@ const localBusinessSchema = {
     { '@type': 'City', name: 'Erode' },
   ],
   serviceType: 'Web Design and Development',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Web Design Services Coimbatore',

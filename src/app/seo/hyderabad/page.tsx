@@ -64,7 +64,7 @@ const localBusinessSchema = {
     'FactoryJet provides SEO services in Hyderabad for pharma companies, IT services, real estate developers, healthcare providers, and local businesses across Banjara Hills, Jubilee Hills, Madhapur, Gachibowli, HITEC City, and Secunderabad.',
   url: 'https://factoryjet.com/seo/hyderabad',
   telephone: '+919699977699',
-  email: 'bhavesh@factoryjet.com',
+  email: 'connect@factoryjet.com',
   areaServed: [
     { '@type': 'City', name: 'Hyderabad' },
     { '@type': 'City', name: 'Secunderabad' },
@@ -83,12 +83,7 @@ const localBusinessSchema = {
     opens: '09:00',
     closes: '18:00',
   },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-  },
+  
   sameAs: ['https://factoryjet.com'],
 };
 

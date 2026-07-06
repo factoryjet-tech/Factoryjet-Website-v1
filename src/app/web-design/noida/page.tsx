@@ -25,7 +25,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Noida | | FactoryJet',
+  title: 'Web Design Company in Noida | FactoryJet',
   description:
     'Web design company in Noida for IT firms, media companies & D2C startups. Fast, custom websites with a 7-day delivery guarantee. Serving Sector 62, Sector 18, Film City & Noida Expressway.',
   keywords: [
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Noida | | FactoryJet',
+    title: 'Web Design Company in Noida | FactoryJet',
     description:
       'Professional website design company in Noida — Next.js, SEO, and GA4 included. 7-day delivery. Serving Sector 62, Sector 18, Film City, NSEZ, and Greater Noida.',
     url: 'https://factoryjet.com/web-design/noida',
@@ -108,13 +108,7 @@ const localBusinessSchema = {
     { '@type': 'City', name: 'Ghaziabad' },
   ],
   serviceType: 'Web Design and Development',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Web Design Services Noida',

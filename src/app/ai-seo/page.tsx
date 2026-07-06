@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/ai-seo',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
         alt: 'FactoryJet — AI SEO services (GEO + AEO) for Indian businesses',
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     title: 'Generative Engine Optimization (GEO) Services in India | FactoryJet',
     description:
       '10 crore Indians ask ChatGPT every week. AI SEO makes the AI answers say your name — with per-engine proof every month.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/ai-seo',

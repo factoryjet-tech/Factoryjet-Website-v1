@@ -26,7 +26,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Mumbai | | FactoryJet',
+  title: 'Web Design Company in Mumbai | FactoryJet',
   description:
     'Web design company in Mumbai for B2B exporters, D2C brands & service businesses. Fast, custom websites with a 7-day delivery guarantee. Serving BKC, Andheri East & Lower Parel.',
   keywords: [
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Mumbai | | FactoryJet',
+    title: 'Web Design Company in Mumbai | FactoryJet',
     description:
       'Professional website design company in Mumbai — Next.js, SEO, and GA4 included. 7-day delivery. Serving BKC, Andheri, Lower Parel, Navi Mumbai.',
     url: 'https://factoryjet.com/web-design/mumbai',
@@ -110,13 +110,7 @@ const localBusinessSchema = {
     { '@type': 'City', 'name': 'Thane' },
   ],
   serviceType: 'Web Design and Development',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Web Design Services Mumbai',

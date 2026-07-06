@@ -113,7 +113,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'AI Voice Agent Development India',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com', aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '150', bestRating: '5', worstRating: '1' } },
+  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   description: 'Custom AI voice agents for Indian businesses — Hindi AI callers for lead qualification, appointment booking, collection follow-ups, and inbound IVR with Zoho CRM integration.',
   areaServed: 'IN',
   serviceType: 'AI Voice Agent Development',
@@ -818,7 +818,7 @@ export default function AIVoiceAgentINPage() {
             headline="Book a Free AI Voice Agent Strategy Call"
             sub="Tell us your current lead response time and daily call volume. We will map out exactly how an AI voice agent fits your use case, languages, and CRM — and give you a fixed-price estimate before writing a single line of code."
             primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
-            secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919876543210' }}
+            secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919699977699' }}
             objectionHandler="Fixed price. Full code ownership. Hindi + Zoho + TRAI-compliant. 500+ businesses served."
           />
         </div>

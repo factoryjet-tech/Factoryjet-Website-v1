@@ -26,7 +26,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Kochi | | FactoryJet',
+  title: 'Web Design Company in Kochi | FactoryJet',
   description:
     'Web design company in Kochi for IT firms, tourism businesses, exporters & startups. Fast, custom websites with a 7-day delivery guarantee. Serving Infopark, Kakkanad, MG Road & Fort Kochi.',
   keywords: [
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Kochi | | FactoryJet',
+    title: 'Web Design Company in Kochi | FactoryJet',
     description:
       'Professional website design company in Kochi — Next.js, SEO, and GA4 included. 7-day delivery. Serving Infopark, Kakkanad, MG Road Ernakulam, Fort Kochi & Edapally.',
     url: 'https://factoryjet.com/web-design/kochi',
@@ -112,13 +112,7 @@ const localBusinessSchema = {
     { '@type': 'City', name: 'Kakkanad' },
   ],
   serviceType: 'Web Design and Development',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Web Design Services Kochi',

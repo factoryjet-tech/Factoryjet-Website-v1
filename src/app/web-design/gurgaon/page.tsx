@@ -25,7 +25,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Gurgaon | | FactoryJet',
+  title: 'Web Design Company in Gurgaon | FactoryJet',
   description:
     'Web design company in Gurgaon for Fortune 500 GCCs, BFSI firms, and startups. Fast, custom websites with a 7-day delivery guarantee. Serving Cyber City, Golf Course Road, MG Road & DLF areas.',
   keywords: [
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Gurgaon | | FactoryJet',
+    title: 'Web Design Company in Gurgaon | FactoryJet',
     description:
       'Professional website design company in Gurgaon — Next.js, SEO, and GA4 included. 7-day delivery. Serving Cyber City, Cyber Hub, Golf Course Road, MG Road, DLF areas, and Sohna Road.',
     url: 'https://factoryjet.com/web-design/gurgaon',
@@ -108,13 +108,7 @@ const localBusinessSchema = {
     { '@type': 'City', name: 'Cyber City' },
   ],
   serviceType: 'Web Design and Development',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Web Design Services Gurgaon',

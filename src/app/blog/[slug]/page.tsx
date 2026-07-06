@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Script from 'next/script'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 import { BlogPostPage } from '@/pages/Blog/components/BlogPostPage'
 import { POSTS } from '@/pages/Blog/posts'
@@ -51,7 +52,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `https://factoryjet.com/blog/${resolvedParams.slug}`,
       images: [
         {
-          url: post.imageUrl?.startsWith('http') ? post.imageUrl : `https://factoryjet.com${post.imageUrl || '/logo.png'}`,
+          url: post.imageUrl?.startsWith('http') ? post.imageUrl : `https://factoryjet.com${post.imageUrl || '/og-default.png'}`,
           width: 1200,
           height: 630,
           alt: post.title,
@@ -63,7 +64,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title: post.meta?.title || post.title,
       description: post.meta?.description || post.excerpt,
-      images: [post.imageUrl?.startsWith('http') ? post.imageUrl : `https://factoryjet.com${post.imageUrl || '/logo.png'}`],
+      images: [post.imageUrl?.startsWith('http') ? post.imageUrl : `https://factoryjet.com${post.imageUrl || '/og-default.png'}`],
     },
     alternates: {
       canonical: `https://factoryjet.com/blog/${resolvedParams.slug}`,
@@ -100,7 +101,7 @@ function generateArticleJsonLd(post: typeof POSTS[0], slug: string) {
     '@type': 'Article',
     headline: post.title,
     description: post.excerpt,
-    image: post.imageUrl?.startsWith('http') ? post.imageUrl : `https://factoryjet.com${post.imageUrl || '/logo.png'}`,
+    image: post.imageUrl?.startsWith('http') ? post.imageUrl : `https://factoryjet.com${post.imageUrl || '/og-default.png'}`,
     datePublished: new Date(post.date).toISOString(),
     dateModified: new Date(post.date).toISOString(),
     author: authorSchema,
@@ -173,7 +174,7 @@ export default async function Page({ params }: Props) {
 
       <SiteHeader locale="in" />
       <BlogPostPage post={post} />
-      <SiteFooter locale="in" />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   )
 }

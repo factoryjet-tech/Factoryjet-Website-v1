@@ -4,6 +4,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 import BlogPage from '@/pages/Blog'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 // Blog listing page structured data
 const blogListJsonLd = {
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/blog',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
         alt: 'FactoryJet Blog - Web Development & E-Commerce Insights',
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'FactoryJet Blog - Web Development & E-Commerce Insights',
     description: 'Expert insights on web development, e-commerce, and digital marketing.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/blog',
@@ -82,7 +83,7 @@ export default function Page() {
       />
 
       <BlogPage />
-      <SiteFooter locale="in" />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   )
 }

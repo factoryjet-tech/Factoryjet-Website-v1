@@ -183,7 +183,7 @@ const serviceSchema = {
     '@type': 'Organization',
     name: 'FactoryJet Technologies',
     url: 'https://factoryjet.com',
-    telephone: '+919103398557',
+    telephone: '+919699977699',
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'IN',
@@ -196,13 +196,7 @@ const serviceSchema = {
   serviceType: 'Web Design & Development',
   description:
     'Custom website design and development for Indian businesses. Next.js, WordPress, and Shopify. 7-day delivery on Starter tier. Lighthouse 100 performance. Mobile-first, full code ownership.',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
 };
 
 const speakableSchema = {

@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     description:
       'Web design, website development, ecommerce and SEO services for Australian businesses — built by senior engineers, live in 7 days. Sydney, Melbourne, Brisbane, Perth, Adelaide & Gold Coast.',
     url: CANONICAL,
-    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet — Web Design Agency Australia' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet — Web Design Agency Australia' }],
     locale: 'en_AU',
   },
   twitter: {
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: 'Web Design Agency Australia | Websites Live in 7 Days | FactoryJet',
     description:
       'Web design, ecommerce and SEO for Australian businesses — built by senior engineers, live in 7 days.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   robots: {
     index: true,
@@ -169,7 +169,7 @@ const ORG_SCHEMA = {
     'https://www.crunchbase.com/organization/factoryjet',
   ],
   areaServed: { '@type': 'Country', name: 'Australia' },
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', ratingCount: '150', reviewCount: '150', bestRating: '5', worstRating: '1' },
+  
 };
 
 const BREADCRUMB_SCHEMA = {

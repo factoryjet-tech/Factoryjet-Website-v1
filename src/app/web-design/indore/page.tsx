@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Indore | | FactoryJet',
+    title: 'Web Design Company in Indore | FactoryJet',
     description:
       'Professional web design company in Indore — Next.js, SEO, and GA4 included. 7-day delivery. Serving Vijay Nagar, AB Road, Palasia, Scheme 54, Scheme 78.',
     url: 'https://factoryjet.com/web-design/indore',
@@ -113,13 +113,7 @@ const localBusinessSchema = {
     { '@type': 'AdministrativeArea', name: 'Madhya Pradesh' },
   ],
   serviceType: 'Web Design and Development',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Web Design Services Indore',

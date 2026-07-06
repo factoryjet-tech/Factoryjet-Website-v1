@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description:
       'Get named by AI when your buyers ask. GEO services that structure content, schema, and off-site mentions so ChatGPT, Perplexity, and Google AI Overviews cite you.',
     url: CANONICAL,
-    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet GEO services' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet GEO services' }],
     locale: 'en_US',
   },
   twitter: {
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: 'Generative Engine Optimization Services | Get Cited by AI',
     description:
       'GEO services that get your business cited in ChatGPT, Google AI Overviews, and Perplexity. Built for small teams.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: { canonical: CANONICAL, languages: geoAlternates },
   robots: {

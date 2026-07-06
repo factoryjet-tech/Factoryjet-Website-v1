@@ -96,13 +96,7 @@ const serviceSchema = {
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
     address: { '@type': 'PostalAddress', addressCountry: 'IN' },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '500',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    
   },
   description:
     'WhatsApp chatbot development and WhatsApp Business API integration for Indian businesses. Automate orders, support, lead capture and payments. Fixed-price, scoped after a free call.',
@@ -1187,7 +1181,7 @@ export default function WhatsAppChatbotINPage() {
             headline="535 Million People Are On WhatsApp. Is Your Business Ready?"
             sub="Get a free WhatsApp chatbot demo built for your business. No commitment, no fluff — just a working prototype in 48 hours showing exactly how automation would work for your specific use case. Fixed price, 7-day delivery, 30-day support included."
             primaryCta={{ label: 'Book My Free Demo', modal: true, region: 'in' }}
-            secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919876543210' }}
+            secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919699977699' }}
             objectionHandler="Fixed price. 7-day delivery. India-specific stack. 30-day post-launch support included."
           />
         </div>

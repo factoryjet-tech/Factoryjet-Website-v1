@@ -25,7 +25,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Kolkata | | FactoryJet',
+  title: 'Web Design Company in Kolkata | FactoryJet',
   description:
     'Web design company in Kolkata for jute & tea traders, IT firms, and port logistics businesses. Fast, custom websites with a 7-day delivery guarantee. Serving Salt Lake, Rajarhat, Park Street & Dalhousie.',
   keywords: [
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Kolkata | | FactoryJet',
+    title: 'Web Design Company in Kolkata | FactoryJet',
     description:
       'Professional website design company in Kolkata — Next.js, SEO, and GA4 included. 7-day delivery. Serving Salt Lake Sector V, Rajarhat, Park Street, Dalhousie, and Burrabazar.',
     url: 'https://factoryjet.com/web-design/kolkata',
@@ -108,13 +108,7 @@ const localBusinessSchema = {
     { '@type': 'City', name: 'Salt Lake' },
   ],
   serviceType: 'Web Design and Development',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Web Design Services Kolkata',

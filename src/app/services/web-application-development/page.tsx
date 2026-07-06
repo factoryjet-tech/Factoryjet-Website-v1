@@ -32,14 +32,14 @@ export const metadata: Metadata = {
     description:
       'Fixed-price web app development, MVP to full SaaS platform. below traditional agency rates. 60-day bug warranty. Full source code on handoff.',
     url: 'https://factoryjet.com/services/web-application-development',
-    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet — Web Application Development USA' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet — Web Application Development USA' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Web Application Development for US Businesses | FactoryJet',
     description: 'Custom web apps, fixed price. 60-day bug warranty. below traditional agency rates.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/web-application-development',
@@ -108,14 +108,7 @@ const serviceSchema = {
     url: 'https://factoryjet.com',
     logo: 'https://factoryjet.com/logo.png',
     areaServed: { '@type': 'Country', name: 'United States' },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      ratingCount: '150',
-      reviewCount: '150',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    
   },
 };
 

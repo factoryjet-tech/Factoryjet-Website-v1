@@ -25,7 +25,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'WordPress Development India | | FactoryJet',
+  title: 'WordPress Development India | FactoryJet',
   description:
     'Professional WordPress development in India. Custom themes, WooCommerce, speed optimization & SEO. Fixed-price, scoped after a free call. 7-day delivery. 500+ websites built.',
   openGraph: {
@@ -148,13 +148,7 @@ const WP_serviceSchema = {
     },
     telephone: '+919699977699',
     email: 'connect@factoryjet.com',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '150',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    
   },
   areaServed: {
     '@type': 'Country',

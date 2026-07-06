@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     description:
       'How ecommerce development pricing works: scoped on a call, quoted as a fixed proposal before any work starts. See what drives the cost of a commerce build.',
     url: 'https://factoryjet.com/pricing',
-    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet, e-commerce development pricing' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet, e-commerce development pricing' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'E-Commerce Development Pricing | How We Scope & Quote | FactoryJet',
     description: 'Ecommerce development pricing, scoped on a call and quoted as a fixed proposal before any work starts.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: { canonical: 'https://factoryjet.com/pricing', languages: pricingAlternates },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },

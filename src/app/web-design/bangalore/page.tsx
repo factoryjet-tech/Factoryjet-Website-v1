@@ -26,7 +26,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Bangalore | | FactoryJet',
+  title: 'Web Design Company in Bangalore | FactoryJet',
   description:
     'Web design company in Bangalore for startups, IT firms & D2C brands. Fast, SEO-optimized websites with a 7-day delivery guarantee. Serving Koramangala & Whitefield.',
   keywords: [
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Bangalore | | FactoryJet',
+    title: 'Web Design Company in Bangalore | FactoryJet',
     description:
       'Professional website design company in Bangalore — Next.js, SEO, and GA4 included. 7-day delivery. Serving Koramangala, Whitefield, HSR Layout, Electronic City.',
     url: 'https://factoryjet.com/web-design/bangalore',
@@ -110,13 +110,7 @@ const localBusinessSchema = {
     { '@type': 'City', name: 'Electronic City' },
   ],
   serviceType: 'Web Design and Development',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Web Design Services Bangalore',

@@ -60,7 +60,7 @@ const schema = {
         "latitude": 52.4862,
         "longitude": -1.8904,
       },
-      "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "150", "bestRating": "5", "worstRating": "1"},
+      
     },
     {
       "@type": "Service",

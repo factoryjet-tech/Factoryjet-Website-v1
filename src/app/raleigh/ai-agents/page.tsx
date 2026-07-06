@@ -162,14 +162,7 @@ const serviceSchema = {
   serviceType: 'AI Agent & Chatbot Development',
   description:
     'Custom AI agents and chatbots for Raleigh NC and Research Triangle businesses. Specializing in customer support agents, lead qualification, knowledge management, and e-commerce automation built on GPT-4o and Claude.',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    ratingCount: '150',
-    reviewCount: '150',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
 };
 
 const howToSchema = {

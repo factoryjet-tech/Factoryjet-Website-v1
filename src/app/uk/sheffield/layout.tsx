@@ -38,7 +38,7 @@ const localBusinessSchema = {
   description:
     "AI-powered web design agency building custom websites for Sheffield SMBs in 7 days.",
   url: "https://factoryjet.com/uk/sheffield",
-  telephone: "+13391702199",
+  telephone: "+919699977699",
   email: "connect@factoryjet.com",
   serviceArea: {
     "@type": "AdministrativeArea",
@@ -49,7 +49,7 @@ const localBusinessSchema = {
     "https://www.linkedin.com/company/factoryjet",
     "https://www.crunchbase.com/organization/factoryjet",
   ],
-  aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "150", bestRating: "5", worstRating: "1" },
+  
 };
 
 const serviceSchema = {

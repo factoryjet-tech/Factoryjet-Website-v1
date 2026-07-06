@@ -179,14 +179,7 @@ const serviceSchema = {
     url: 'https://factoryjet.com',
     foundingDate: '1999',
     areaServed: 'US',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      ratingCount: '150',
-      reviewCount: '150',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    
   },
   serviceType: 'WooCommerce Development',
 };

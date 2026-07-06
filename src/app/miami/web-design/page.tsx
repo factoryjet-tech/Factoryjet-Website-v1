@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/miami/web-design/',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
         alt: 'FactoryJet Web Design — Miami, FL',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Web Design Miami FL | 7-Day Delivery, Fixed-Price | FactoryJet',
     description: 'FactoryJet builds fast, conversion-focused websites for Miami businesses. 7-day delivery, fixed-price and milestone-paid. Next.js, SEO & GA4.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
 };
 
@@ -215,9 +215,8 @@ function SchemaScript() {
         "@id": "https://factoryjet.com/miami/web-design#business",
         "name": "FactoryJet Technologies",
         "url": "https://factoryjet.com",
-        "telephone": "+919103398557",
-        "areaServed": "Miami",
-        "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "150", "reviewCount": "150", "bestRating": "5", "worstRating": "1"}
+        "telephone": "+919699977699",
+        "areaServed": "Miami"
       },
       {
         "@type": "Service",

@@ -3,6 +3,7 @@ import { contactAlternates } from '@/data/hreflangMap'
 import ContactView from './ContactView'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 export const metadata: Metadata = {
   title: 'Contact FactoryJet | Get a Free Web Design Quote',
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/contact',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
         alt: 'Contact FactoryJet for web and e-commerce development',
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Contact FactoryJet | Get a Free Web Project Quote',
     description: 'Tell us about your website, store, or SEO project and get a free consultation.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/contact',
@@ -54,7 +55,7 @@ export default function Page() {
     <>
       <SiteHeader locale="in" />
       <ContactView />
-      <SiteFooter locale="in" />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   )
 }

@@ -64,7 +64,7 @@ const jsonLd = {
       ],
       contactPoint: { '@type': 'ContactPoint', contactType: 'customer service', email: 'connect@factoryjet.com', availableLanguage: 'English', areaServed: 'US' },
       sameAs: ['https://www.linkedin.com/company/factoryjet'],
-      aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', ratingCount: '150', reviewCount: '150', bestRating: '5', worstRating: '1' },
+      
     },
     {
       '@type': 'BreadcrumbList',

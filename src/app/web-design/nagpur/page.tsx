@@ -25,7 +25,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Nagpur | | FactoryJet',
+  title: 'Web Design Company in Nagpur | FactoryJet',
   description:
     'Web design company in Nagpur for logistics firms, MIHAN SEZ businesses, agri-exporters & MSME manufacturers. Fast, custom websites with a 7-day delivery guarantee. Serving Butibori MIDC, Hingna & MIHAN.',
   keywords: [
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Nagpur | | FactoryJet',
+    title: 'Web Design Company in Nagpur | FactoryJet',
     description:
       'Professional website design company in Nagpur — Next.js, SEO, and GA4 included. 7-day delivery. Serving MIHAN SEZ, Butibori MIDC, Hingna Industrial Estate, and Nagpur city businesses.',
     url: 'https://factoryjet.com/web-design/nagpur',
@@ -113,13 +113,7 @@ const localBusinessSchema = {
     { '@type': 'City', name: 'Wardha' },
   ],
   serviceType: 'Web Design and Development',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Web Design Services Nagpur',

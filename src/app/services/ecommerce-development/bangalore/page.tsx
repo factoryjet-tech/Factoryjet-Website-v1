@@ -25,7 +25,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development in Bangalore | | FactoryJet',
+  title: 'Ecommerce Development in Bangalore | FactoryJet',
   description:
     'Shopify & WooCommerce stores for Bangalore brands. Razorpay, UPI & COD. GST-compliant. Shiprocket integrated. 7-day delivery guarantee.',
   keywords: [
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Ecommerce Development Company in Bangalore | | FactoryJet',
+    title: 'Ecommerce Development Company in Bangalore | FactoryJet',
     description:
       'Shopify, WooCommerce, D2C, and custom ecommerce stores for Bangalore businesses. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
     url: 'https://factoryjet.com/services/ecommerce-development/bangalore',
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ecommerce Development Bangalore | | FactoryJet',
+    title: 'Ecommerce Development Bangalore | FactoryJet',
     description:
       'Shopify, WooCommerce & custom ecommerce for Bangalore brands. Razorpay + GST + Shiprocket.',
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
@@ -195,13 +195,7 @@ const localBusinessSchema = {
     'Whitefield', 'Koramangala', 'HSR Layout', 'Indiranagar',
     'Electronic City', 'Hebbal', 'Marathahalli', 'Jayanagar',
   ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '150',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────

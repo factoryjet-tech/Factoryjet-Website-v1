@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/tampa/ecommerce-development',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
         alt: 'FactoryJet - Shopify Developer Tampa',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Shopify Developer Tampa FL | 7-Day Delivery, Fixed-Price | FactoryJet',
     description: 'Top-rated Shopify developer in Tampa, Florida: stores live in 7 days, fixed-price. Gulf Coast e-commerce specialists — Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/tampa/ecommerce-development',

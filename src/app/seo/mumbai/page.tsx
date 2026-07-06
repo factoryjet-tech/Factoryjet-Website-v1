@@ -64,7 +64,7 @@ const localBusinessSchema = {
     'FactoryJet provides SEO services in Mumbai for local businesses, D2C brands, ecommerce stores, and enterprises across BKC, Andheri, Bandra, Worli, Thane, and Navi Mumbai.',
   url: 'https://factoryjet.com/seo/mumbai',
   telephone: '+919699977699',
-  email: 'bhavesh@factoryjet.com',
+  email: 'connect@factoryjet.com',
   areaServed: [
     { '@type': 'City', name: 'Mumbai' },
     { '@type': 'City', name: 'Thane' },
@@ -82,12 +82,7 @@ const localBusinessSchema = {
     opens: '09:00',
     closes: '18:00',
   },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-  },
+  
   sameAs: ['https://factoryjet.com'],
 };
 

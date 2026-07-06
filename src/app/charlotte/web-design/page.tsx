@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/charlotte/web-design/',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
         alt: 'FactoryJet Web Design — Charlotte, NC',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Web Design Charlotte NC | 7-Day Delivery | FactoryJet',
     description: 'FactoryJet builds fast, conversion-focused websites for Charlotte businesses in 7 days — Next.js, SEO, and GA4 included, with a codebase you own.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
 };
 
@@ -289,9 +289,8 @@ function SchemaScript() {
         "@id": "https://factoryjet.com/charlotte/web-design#business",
         "name": "FactoryJet Technologies",
         "url": "https://factoryjet.com",
-        "telephone": "+919103398557",
-        "areaServed": "Charlotte",
-        "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "150", "reviewCount": "150", "bestRating": "5", "worstRating": "1"}
+        "telephone": "+919699977699",
+        "areaServed": "Charlotte"
       },
       {
         "@type": "Service",

@@ -25,7 +25,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development in Kochi | | FactoryJet',
+  title: 'Ecommerce Development in Kochi | FactoryJet',
   description:
     'Shopify & WooCommerce stores for Kochi brands. Razorpay, UPI & COD. GST-compliant. Shiprocket integrated. 7-day delivery guarantee.',
   keywords: [
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Ecommerce Development Company in Kochi | | FactoryJet',
+    title: 'Ecommerce Development Company in Kochi | FactoryJet',
     description:
       'Shopify, WooCommerce, D2C, and custom ecommerce stores for Kochi businesses. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
     url: 'https://factoryjet.com/services/ecommerce-development/kochi',
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ecommerce Development Kochi | | FactoryJet',
+    title: 'Ecommerce Development Kochi | FactoryJet',
     description:
       'Shopify, WooCommerce & custom ecommerce for Kochi brands. Razorpay + GST + Shiprocket.',
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
@@ -195,13 +195,7 @@ const localBusinessSchema = {
     'Kakkanad', 'Infopark', 'Edappally', 'MG Road', 'Fort Kochi',
     'Aluva', 'Thrippunithura', 'Kalamassery',
   ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '150',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────

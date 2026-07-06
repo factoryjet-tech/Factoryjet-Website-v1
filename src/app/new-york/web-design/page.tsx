@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/new-york/web-design/',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
         alt: 'FactoryJet Web Design — New York, NY',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'NYC Web Design Agency — Custom Sites in 7 Days, Fixed-Price',
     description: 'Custom websites for New York City businesses, live in 7 days, fixed-price. Next.js performance, full code ownership, US-hour project management.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   robots: {
     index: true,
@@ -96,7 +96,7 @@ const jsonLd = {
       '@id': 'https://factoryjet.com/#organization',
       name: 'FactoryJet',
       url: 'https://factoryjet.com',
-      telephone: '+1-332-867-0003',
+      telephone: '+91 96999 77699',
       email: 'connect@factoryjet.com',
       address: {
         '@type': 'PostalAddress',
@@ -108,7 +108,7 @@ const jsonLd = {
       },
       areaServed: { '@type': 'City', name: 'New York City' },
       description: 'FactoryJet is a web design agency building high-converting websites for NYC small businesses. 7-day delivery, full code ownership.',
-      aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', ratingCount: '150', reviewCount: '150', bestRating: '5', worstRating: '1' },
+      
       sameAs: [
         'https://www.linkedin.com/company/factoryjet',
         'https://www.crunchbase.com/organization/factoryjet',

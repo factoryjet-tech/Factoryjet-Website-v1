@@ -115,7 +115,7 @@ export default function Page() {
     name: 'FactoryJet Web Design Surat',
     description: 'Professional web design company serving Surat businesses across diamond, textile, MSME manufacturing, and trading sectors.',
     url: 'https://factoryjet.com/web-design/surat',
-    telephone: '+91-XXXXXXXXXX',
+    telephone: '+91 96999 77699',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Surat',
@@ -128,13 +128,7 @@ export default function Page() {
       { '@type': 'City', name: 'Hazira' },
     ],
     serviceType: 'Web Design',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '500',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    
   }
 
   const faqSchema = {

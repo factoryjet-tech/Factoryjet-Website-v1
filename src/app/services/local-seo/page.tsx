@@ -31,7 +31,7 @@ import './local-seo.css';
    Honesty: no pricing section, CTAs → free-audit modal + Calendly, verified
    claims only (4.9/150, 500+, 7-day / Lighthouse 100), no fabricated metrics
    (the map + reputation cards are illustrative and labeled), no em-dashes.
-   Schema: Service + Organization(aggregateRating) + FAQPage(25) + BreadcrumbList.
+   Schema: Service + Organization + FAQPage(25) + BreadcrumbList.
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -189,7 +189,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/services/local-seo',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
         alt: 'FactoryJet local SEO services for US businesses: Google map pack and near-me rankings',
@@ -202,7 +202,7 @@ export const metadata: Metadata = {
     title: 'Best Local SEO Services in USA: Win the Google Map Pack | FactoryJet',
     description:
       'A US-focused local SEO agency that gets you into the Google map pack and near-me results. Founder-led, month-to-month, reported in calls and bookings.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/local-seo',
@@ -236,14 +236,7 @@ const organizationSchema = {
   url: 'https://factoryjet.com',
   logo: 'https://factoryjet.com/logo.png',
   sameAs: ['https://factoryjet.com'],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    ratingCount: '150',
-    reviewCount: '150',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
 };
 
 const faqSchema = {

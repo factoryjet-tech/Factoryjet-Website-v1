@@ -25,7 +25,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Thiruvananthapuram | | FactoryJet',
+  title: 'Web Design Company in Thiruvananthapuram | FactoryJet',
   description:
     'Web design company in Thiruvananthapuram (Trivandrum) for IT startups, government contractors, ISRO ecosystem firms & tourism businesses. Fast, custom websites with a 7-day delivery guarantee. Serving Technopark, Kazhakuttam & Pattom.',
   keywords: [
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Thiruvananthapuram | | FactoryJet',
+    title: 'Web Design Company in Thiruvananthapuram | FactoryJet',
     description:
       "Professional website design company in Thiruvananthapuram (Trivandrum) — Next.js, SEO, and GA4 included. 7-day delivery. Serving Technopark, Kazhakuttam, Pattom & Kerala's capital business district.",
     url: 'https://factoryjet.com/web-design/thiruvananthapuram',
@@ -114,13 +114,7 @@ const localBusinessSchema = {
     { '@type': 'City', name: 'Kazhakuttam' },
   ],
   serviceType: 'Web Design and Development',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Web Design Services Thiruvananthapuram',

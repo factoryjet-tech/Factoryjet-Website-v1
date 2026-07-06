@@ -133,7 +133,7 @@ const SERVICES: Service[] = [
       'Performance-first product pages',
     ],
     stackLabel: 'Platforms',
-    stack: ['WooCommerce', 'Magento', 'Commerceflow', 'Headless / Custom'],
+    stack: ['WooCommerce', 'Magento', 'Commerceflo', 'Headless / Custom'],
     primaryCta: { label: 'See e-commerce services', href: '/services/ecommerce-development' },
     secondaryCta: { label: 'Book a call', href: '/contact' },
     icon: <CreditCard size={ICON_SIZE} />,

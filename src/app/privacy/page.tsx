@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import PrivacyPolicy from '@/components/PrivacyPolicy'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | FactoryJet',
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/privacy',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
         alt: 'FactoryJet Privacy Policy',
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Privacy Policy | FactoryJet',
     description: 'Read FactoryJet\'s Privacy Policy. Learn how we protect your personal information.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/privacy',
@@ -50,7 +51,7 @@ export default function Page() {
       <SiteHeader locale="in" />
       <h1 className="sr-only">Privacy Policy</h1>
       <PrivacyPolicy />
-      <SiteFooter locale="in" />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   )
 }

@@ -128,12 +128,12 @@ export default function FinalCTA() {
                 </span>
               </a>
               <a
-                href="tel:+13391702199"
+                href="tel:+919699977699"
                 className="flex items-center gap-3 transition-opacity duration-200 hover:opacity-80"
               >
                 <Phone size={17} style={{ color: "#FF6B35", flexShrink: 0 }} aria-hidden="true" />
                 <span style={{ fontSize: "14px", color: "rgba(255,255,255,0.6)" }}>
-                  +1-339-170-2199 (US)
+                  +91 96999 77699 (US)
                 </span>
               </a>
             </div>

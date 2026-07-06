@@ -185,13 +185,7 @@ const serviceSchema = {
       '@type': 'PostalAddress',
       addressCountry: 'IN',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '150',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    
   },
   areaServed: {
     '@type': 'Country',
@@ -1453,7 +1447,7 @@ export default function AIAgentDevelopmentINPage() {
             headline="Book a Free AI Strategy Call"
             sub="Tell us your biggest operational bottleneck. We will map out exactly which workflows are ready for AI and give you a fixed-price estimate before we write a single line of code. No pitch, no pressure — an honest assessment from engineers who have been building for Indian businesses for 25 years."
             primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
-            secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919876543210' }}
+            secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919699977699' }}
             objectionHandler="Fixed price. Full code ownership. WhatsApp + Zoho + Razorpay ready. 500+ businesses served."
           />
         </div>

@@ -122,7 +122,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'AI Sales Agent Development India',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com', address: { '@type': 'PostalAddress', addressCountry: 'IN' }, aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '150', bestRating: '5', worstRating: '1' } },
+  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com', address: { '@type': 'PostalAddress', addressCountry: 'IN' } },
   areaServed: { '@type': 'Country', name: 'India' },
   serviceType: 'AI Sales Agent Development',
   description: 'AI sales agents for Indian businesses — WhatsApp lead qualification, automated follow-ups, demo booking, and CRM updates. Fixed price. Live in 2–4 weeks.',
@@ -523,7 +523,7 @@ export default function AISalesAgentINPage() {
             headline="Book a Free AI Sales Strategy Call"
             sub="Tell us your biggest lead-response challenge. We will map out exactly how an AI sales agent fits your lead sources and CRM — and give you a fixed-price estimate before writing a single line of code."
             primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
-            secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919876543210' }}
+            secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919699977699' }}
             objectionHandler="Fixed price. Full code ownership. Zoho + LeadSquared + Facebook Ads ready. 500+ businesses served."
           />
         </div>

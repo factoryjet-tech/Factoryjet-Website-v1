@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/fargo/ecommerce-development',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
         alt: 'FactoryJet - Shopify Developer Fargo ND',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Shopify Developer Fargo ND — Live in 7 Days, Fixed-Price',
     description: 'Shopify stores live in Fargo, ND in 7 days. Fixed-price. Silicon Prairie e-commerce experts. 500+ launched, code ownership Day 1.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/fargo/ecommerce-development',

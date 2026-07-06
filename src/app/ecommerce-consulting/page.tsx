@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     description:
       'Ecommerce consulting for DTC and B2B brands: platform selection, migration planning, conversion and operations audits, ecommerce strategy, and a scoped build plan you can act on.',
     url: 'https://factoryjet.com/ecommerce-consulting',
-    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet, e-commerce consulting services for DTC and B2B brands' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet, e-commerce consulting services for DTC and B2B brands' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'E-Commerce Consulting Services for DTC & B2B | FactoryJet',
     description: 'Ecommerce consulting for DTC and B2B: platform selection, migration, conversion, operations, strategy, and a scoped build plan.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: { canonical: 'https://factoryjet.com/ecommerce-consulting' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
@@ -80,7 +80,7 @@ const SERVICE_SCHEMA = {
   provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'Country', name: 'United States' },
   audience: { '@type': 'BusinessAudience', name: 'DTC and B2B brands' },
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '150' },
+  
 };
 
 const BREADCRUMB_SCHEMA = {

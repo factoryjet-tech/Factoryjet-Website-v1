@@ -101,7 +101,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/uae',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
         alt: 'FactoryJet - Web Design Agency Dubai',
@@ -113,7 +113,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Web Design Agency Dubai | FactoryJet',
     description: 'Dubai\'s #1 AI-native web design agency. Premium websites & e-commerce solutions.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/uae',

@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/austin/ecommerce-development',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
         alt: 'FactoryJet — Ecommerce Development Austin TX',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     title: 'Ecommerce Development Austin TX | 7-Day Delivery, Fixed-Price | FactoryJet',
     description:
       'Custom Shopify & WooCommerce stores built in 7 days — fixed-price vs local agency benchmarks. 500+ stores delivered.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/austin/ecommerce-development',

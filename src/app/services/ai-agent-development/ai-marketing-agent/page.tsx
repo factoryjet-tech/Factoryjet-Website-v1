@@ -145,13 +145,7 @@ const serviceSchema = {
     '@type': 'Organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '150',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    
   },
   description:
     'Custom AI marketing agents for Indian businesses — automate WhatsApp broadcasts, festival campaigns, social content, and Google/Meta Ads optimisation with vernacular language support.',
@@ -1052,7 +1046,7 @@ export default function AIMarketingAgentINPage() {
             headline="Book a Free AI Marketing Strategy Call"
             sub="Tell us your biggest marketing bottleneck — usually festival preparation, WhatsApp broadcast management, or content volume. We will map out exactly how an AI marketing agent fits your channels and give you a fixed-price estimate before writing a single line of code. No pitch, no pressure."
             primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
-            secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919876543210' }}
+            secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919699977699' }}
             objectionHandler="Fixed price. Full code ownership. WhatsApp + Zoho + Meta Ads ready. No agency lock-in."
           />
         </div>

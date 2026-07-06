@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Script from 'next/script'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 import { AuthorPage } from '@/pages/Blog/components/AuthorPage'
 import { getAllAuthors, getAuthorBySlug } from '@/data/authors'
@@ -120,7 +121,7 @@ export default async function Page({ params }: Props) {
 
       <SiteHeader locale="in" />
       <AuthorPage author={author} posts={authorPosts} />
-      <SiteFooter locale="in" />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   )
 }

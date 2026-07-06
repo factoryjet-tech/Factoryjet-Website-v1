@@ -117,13 +117,7 @@ const serviceSchema = {
     '@type': 'Organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '150',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    
   },
   description: 'Custom AI customer support agents for Indian businesses — WhatsApp support, Freshdesk integration, Hindi and English handling, order status, returns, and FAQ automation.',
   areaServed: 'IN',
@@ -828,7 +822,7 @@ export default function AICustomerSupportINPage() {
             headline="Book a Free AI Customer Support Strategy Call"
             sub="Tell us your WhatsApp query volume and your biggest support bottleneck. We will map out exactly which queries the AI can automate and give you a fixed-price estimate before writing a single line of code."
             primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
-            secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919876543210' }}
+            secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919699977699' }}
             objectionHandler="Fixed price. Full code ownership. WhatsApp + Freshdesk + Shopify + Tally ready. 500+ businesses served."
           />
         </div>

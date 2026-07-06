@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 /**
  * SiteFooter — v2.0 bottom-of-page chrome.
@@ -28,7 +29,7 @@ export type SiteFooterLocale = 'us' | 'in' | 'uae';
 
 export interface SiteFooterProps {
   /** Controls which locale's default link columns are used when no explicit
-   *  `linkColumns` prop is passed. Default: 'in' (India/global routes). */
+   *  `linkColumns` prop is passed. Default: 'us' (primary domain). */
   locale?: SiteFooterLocale;
   logoText?: string;
   tagline?: string;
@@ -132,7 +133,7 @@ const UAE_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
 const LOCALE_COLUMNS: Record<SiteFooterLocale, ReadonlyArray<SiteFooterColumn>> = {
   in:  IN_COLUMNS,
   uae: UAE_COLUMNS,
-  us:  IN_COLUMNS, // US pages always pass explicit linkColumns; this is a safe fallback
+  us:  US_FOOTER_COLUMNS, // US is the primary domain — its footer must never fall back to India routes
 };
 
 /** @deprecated kept for backwards-compat — callers should pass locale prop instead */
@@ -147,7 +148,7 @@ const DEFAULT_BOTTOM_ROW = {
 };
 
 export default function SiteFooter({
-  locale = 'in',
+  locale = 'us',
   logoText = 'FactoryJet',
   tagline = 'AI-native digital agency for SMBs.',
   linkColumns,

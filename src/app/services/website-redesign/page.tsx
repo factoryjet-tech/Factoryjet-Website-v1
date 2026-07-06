@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/services/website-redesign',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
         alt: 'FactoryJet — Website Redesign Services USA',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: 'Website Redesign Services USA — 7-Day Refresh | FactoryJet',
     description:
       'Modern website redesign for US small businesses. Faster loads, better conversions, live in 7 days. Fixed-price. Free site audit + Lighthouse benchmark included.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/website-redesign',
@@ -155,14 +155,7 @@ const serviceSchema = {
     '@type': 'Organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      ratingCount: '150',
-      reviewCount: '150',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    
   },
   areaServed: {
     '@type': 'Country',

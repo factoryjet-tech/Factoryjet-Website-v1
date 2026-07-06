@@ -26,7 +26,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Jaipur | | FactoryJet',
+  title: 'Web Design Company in Jaipur | FactoryJet',
   description:
     'Web design company in Jaipur for jewellery exporters, handicraft businesses & tourism brands. 7-day delivery. Serving Malviya Nagar, C-Scheme & Sitapura.',
   keywords: [
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Jaipur | | FactoryJet',
+    title: 'Web Design Company in Jaipur | FactoryJet',
     description:
       'Professional website design company in Jaipur — Next.js, SEO, and GA4 included. 7-day delivery. Serving Malviya Nagar, C-Scheme, Sitapura & Sanganer.',
     url: 'https://factoryjet.com/web-design/jaipur',
@@ -112,13 +112,7 @@ const localBusinessSchema = {
     { '@type': 'City', name: 'Jodhpur' },
   ],
   serviceType: 'Web Design and Development',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Web Design Services Jaipur',

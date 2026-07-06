@@ -289,14 +289,7 @@ const serviceSchema = {
       description: 'Custom AI chatbot with fine-tuning, multi-channel deployment, and enterprise integrations.',
     },
   ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    ratingCount: '150',
-    reviewCount: '150',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
 };
 
 const howToSchema = {

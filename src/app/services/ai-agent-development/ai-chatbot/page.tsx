@@ -147,13 +147,7 @@ const serviceSchema = {
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
     address: { '@type': 'PostalAddress', addressCountry: 'IN' },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '150',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    
   },
   areaServed: { '@type': 'Country', name: 'India' },
   serviceType: 'AI Chatbot Development',
@@ -1067,7 +1061,7 @@ export default function AIChatbotINPage() {
             headline="Book a Free AI Chatbot Strategy Call"
             sub="Tell us your biggest support or lead-response bottleneck. We will map out exactly which chatbot type fits your business and give you a fixed-price estimate before writing a single line of code. No pitch, no pressure — an honest assessment from engineers who have been building for Indian businesses for 25 years."
             primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
-            secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919876543210' }}
+            secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919699977699' }}
             objectionHandler="Fixed price. Full code ownership. WhatsApp + Zoho + Razorpay ready. No SaaS lock-in."
           />
         </div>

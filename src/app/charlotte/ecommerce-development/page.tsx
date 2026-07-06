@@ -36,14 +36,14 @@ export const metadata: Metadata = {
     title: 'Shopify Developer Charlotte NC | 7-Day Delivery, Fixed-Price | FactoryJet',
     description: "Top-rated Shopify developer in Charlotte, North Carolina: stores live in 7 days, fixed-price. Banking capital e-commerce specialists — Shopify, WooCommerce & AI. 500+ projects, 4.9★. Free audit.",
     url: 'https://factoryjet.com/charlotte/ecommerce-development',
-    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet - Shopify Developer Charlotte' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet - Shopify Developer Charlotte' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Shopify Developer Charlotte NC | 7-Day Delivery, Fixed-Price | FactoryJet',
     description: "Top-rated Shopify developer in Charlotte, NC: stores live in 7 days, fixed-price. Banking capital e-commerce specialists — Shopify, WooCommerce & AI.",
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/charlotte/ecommerce-development',

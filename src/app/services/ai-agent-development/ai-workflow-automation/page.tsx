@@ -113,7 +113,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'AI Workflow Automation Development India',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com', aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '150', bestRating: '5', worstRating: '1' } },
+  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   description: 'Custom AI workflow automation for Indian businesses — connect Zoho, Tally, Shopify, WhatsApp, Razorpay, and 20+ tools into automated pipelines with AI decision logic.',
   areaServed: 'IN',
   serviceType: 'AI Workflow Automation',
@@ -815,7 +815,7 @@ export default function AIWorkflowAutomationINPage() {
             headline="Book a Free Automation Discovery Call"
             sub="Tell us your most painful manual process — usually Tally data entry, lead-to-CRM copying, or order fulfilment notifications. We will map out exactly how to automate it and give you a fixed-price estimate before writing a single line of code."
             primaryCta={{ label: 'Book a Free Discovery Call', modal: true, region: 'in' }}
-            secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919876543210' }}
+            secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919699977699' }}
             objectionHandler="Fixed price. Full code ownership. Zoho + Tally + Razorpay + WhatsApp ready. 500+ businesses served."
           />
         </div>

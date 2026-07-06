@@ -65,7 +65,7 @@ const localBusinessSchema = {
     'FactoryJet provides SEO services in Delhi NCR for exporters, traders, wholesalers, clinics, coaching institutes, and local businesses across Connaught Place, Nehru Place, Rohini, Dwarka, South Delhi, Noida, and Gurugram.',
   url: 'https://factoryjet.com/seo/delhi',
   telephone: '+919699977699',
-  email: 'bhavesh@factoryjet.com',
+  email: 'connect@factoryjet.com',
   areaServed: [
     { '@type': 'City', name: 'Delhi' },
     { '@type': 'City', name: 'New Delhi' },
@@ -85,12 +85,7 @@ const localBusinessSchema = {
     opens: '09:00',
     closes: '18:00',
   },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-  },
+  
   sameAs: ['https://factoryjet.com'],
 };
 

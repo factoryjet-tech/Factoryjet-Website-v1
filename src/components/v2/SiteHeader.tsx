@@ -77,7 +77,7 @@ const US_PLATFORMS = [
   { icon: FileCode,     label: 'WooCommerce',              href: '/services/woocommerce-development', desc: 'WordPress commerce' },
   { icon: Layers,       label: 'BigCommerce',              href: '/bigcommerce-development',          desc: 'Mid-market B2B value' },
   { icon: Code,         label: 'Headless / composable',    href: '/headless-commerce',               desc: 'Custom front end, any backend' },
-  { icon: Zap,          label: 'Commerceflo',              href: '/commerceflo',                     desc: 'Unified commerce engine' },
+  { icon: Zap,          label: 'Commerceflo',              href: '/commerceflo',                     desc: 'AI operator: audits & fixes your store' },
 ] as const;
 
 // Services (US) — supporting / demoted services that link up to the commerce pillar
@@ -171,7 +171,7 @@ const GB_PLATFORMS = [
   { icon: FileCode,     label: 'WooCommerce',              href: '/services/woocommerce-development', desc: 'WordPress commerce' },
   { icon: Layers,       label: 'BigCommerce',              href: '/bigcommerce-development',          desc: 'Mid-market B2B value' },
   { icon: Code,         label: 'Headless / composable',    href: '/headless-commerce',               desc: 'Custom front end, any backend' },
-  { icon: Zap,          label: 'Commerceflo',              href: '/commerceflo',                     desc: 'Unified commerce engine' },
+  { icon: Zap,          label: 'Commerceflo',              href: '/commerceflo',                     desc: 'AI operator: audits & fixes your store' },
 ] as const;
 
 const GB_SUPPORT_SERVICES = [

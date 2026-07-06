@@ -26,7 +26,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Visakhapatnam | | FactoryJet',
+  title: 'Web Design Company in Visakhapatnam | FactoryJet',
   description:
     'Web design company in Visakhapatnam for IT firms, petrochemical companies & businesses. Fast, custom websites with a 7-day delivery guarantee. Serving Rushikonda IT SEZ, Madhurawada & MVP Colony.',
   keywords: [
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Visakhapatnam | | FactoryJet',
+    title: 'Web Design Company in Visakhapatnam | FactoryJet',
     description:
       'Professional website design company in Visakhapatnam — Next.js, SEO, and GA4 included. 7-day delivery. Serving Rushikonda IT SEZ, MVP Colony, Madhurawada, Beach Road.',
     url: 'https://factoryjet.com/web-design/visakhapatnam',
@@ -112,13 +112,7 @@ const localBusinessSchema = {
     { '@type': 'State', name: 'Andhra Pradesh' },
   ],
   serviceType: 'Web Design and Development',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Web Design Services Visakhapatnam',

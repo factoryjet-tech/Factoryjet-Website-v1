@@ -287,14 +287,7 @@ const serviceSchema = {
       description: 'Custom AI integration with fine-tuning, legacy system APIs, and compliance requirements.',
     },
   ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    ratingCount: '150',
-    reviewCount: '150',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
 };
 
 const howToSchema = {

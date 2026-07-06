@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/services/ai-automation',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
         alt: 'FactoryJet — AI Automation Agency USA',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: 'AI Automation Agency for US Small Businesses | FactoryJet',
     description:
       'Save 20+ hours/week. FactoryJet automates your business workflows with AI — n8n, Make, Zapier, HubSpot. Free audit. Fixed-price, milestone-paid.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/ai-automation',
@@ -202,14 +202,7 @@ const serviceSchema = {
       description: 'Multi-department automation platform with custom AI logic and compliance controls.',
     },
   ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    ratingCount: '150',
-    reviewCount: '150',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
 };
 
 const howToSchema = {

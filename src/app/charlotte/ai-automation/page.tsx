@@ -179,14 +179,7 @@ const serviceSchema = {
       description: 'Complex business logic automation with compliance-aware design, financial or healthcare system integrations, and multi-department workflow coverage.',
     },
   ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    ratingCount: '150',
-    reviewCount: '150',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
 };
 
 const howToSchema = {

@@ -64,7 +64,7 @@ const localBusinessSchema = {
     'FactoryJet provides SEO services in Chennai for manufacturing companies, automotive suppliers, IT services, healthcare providers, and local businesses across Anna Nagar, T. Nagar, Velachery, OMR, Ambattur, and Guindy.',
   url: 'https://factoryjet.com/seo/chennai',
   telephone: '+919699977699',
-  email: 'bhavesh@factoryjet.com',
+  email: 'connect@factoryjet.com',
   areaServed: [
     { '@type': 'City', name: 'Chennai' },
     { '@type': 'City', name: 'Madras' },
@@ -83,12 +83,7 @@ const localBusinessSchema = {
     opens: '09:00',
     closes: '18:00',
   },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-  },
+  
   sameAs: ['https://factoryjet.com'],
 };
 

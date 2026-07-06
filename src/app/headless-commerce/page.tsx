@@ -20,10 +20,10 @@ export const metadata: Metadata = {
     title: 'Headless & Composable Commerce Development Agency | FactoryJet',
     description: 'Fast headless and composable commerce storefronts on Shopify, BigCommerce, and Commerceflo. Sub-second loads, full design freedom, backend intact.',
     url: 'https://factoryjet.com/headless-commerce',
-    images: [{ url: 'https://factoryjet.com/logo.png', width: 1200, height: 630, alt: 'FactoryJet, headless commerce development' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet, headless commerce development' }],
     locale: 'en_US',
   },
-  twitter: { card: 'summary_large_image', title: 'Headless & Composable Commerce Development | FactoryJet', description: 'Fast headless and composable commerce storefronts with sub-second loads and full design freedom.', images: ['https://factoryjet.com/logo.png'] },
+  twitter: { card: 'summary_large_image', title: 'Headless & Composable Commerce Development | FactoryJet', description: 'Fast headless and composable commerce storefronts with sub-second loads and full design freedom.', images: ['https://factoryjet.com/og-default.png'] },
   alternates: { canonical: 'https://factoryjet.com/headless-commerce' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };

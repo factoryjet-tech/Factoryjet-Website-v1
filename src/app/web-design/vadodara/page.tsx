@@ -25,7 +25,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in Vadodara | | FactoryJet',
+  title: 'Web Design Company in Vadodara | FactoryJet',
   description:
     'Web design company in Vadodara for chemical exporters, engineering firms, and B2B manufacturers. Fast, custom websites with a 7-day delivery guarantee. Serving GIDC Makarpura, Waghodia & Savli.',
   keywords: [
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Vadodara | | FactoryJet',
+    title: 'Web Design Company in Vadodara | FactoryJet',
     description:
       'Professional website design company in Vadodara — Next.js, SEO, and GA4 included. 7-day delivery. Serving GIDC Makarpura, Waghodia, Savli, and Vadodara city businesses.',
     url: 'https://factoryjet.com/web-design/vadodara',
@@ -112,13 +112,7 @@ const localBusinessSchema = {
     { '@type': 'City', name: 'Anand' },
   ],
   serviceType: 'Web Design and Development',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Web Design Services Vadodara',

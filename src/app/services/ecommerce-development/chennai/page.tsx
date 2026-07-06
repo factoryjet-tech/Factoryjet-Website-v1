@@ -25,7 +25,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development in Chennai | | FactoryJet',
+  title: 'Ecommerce Development in Chennai | FactoryJet',
   description:
     'Shopify & WooCommerce stores for Chennai brands. Razorpay, UPI & COD. GST-compliant. Shiprocket integrated. 7-day delivery guarantee.',
   keywords: [
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Ecommerce Development Company in Chennai | | FactoryJet',
+    title: 'Ecommerce Development Company in Chennai | FactoryJet',
     description:
       'Shopify, WooCommerce, D2C, and custom ecommerce stores for Chennai businesses. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
     url: 'https://factoryjet.com/services/ecommerce-development/chennai',
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ecommerce Development Chennai | | FactoryJet',
+    title: 'Ecommerce Development Chennai | FactoryJet',
     description:
       'Shopify, WooCommerce & custom ecommerce for Chennai brands. Razorpay + GST + Shiprocket.',
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
@@ -195,13 +195,7 @@ const localBusinessSchema = {
     'Anna Nagar', 'T. Nagar', 'Velachery', 'Sholinganallur',
     'Nungambakkam', 'Adyar', 'OMR', 'Ambattur',
   ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '150',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────

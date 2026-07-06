@@ -26,7 +26,7 @@ const localBusinessSchema = {
     "https://www.linkedin.com/company/factoryjet",
     "https://www.crunchbase.com/organization/factoryjet",
   ],
-  aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "150", bestRating: "5", worstRating: "1" },
+  
 };
 
 const serviceSchema = {

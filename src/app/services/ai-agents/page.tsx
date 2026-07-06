@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/services/ai-agents',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
         alt: 'FactoryJet - AI Agent Development Services USA',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: 'AI Automation Agency & AI Agent Development Company USA | FactoryJet',
     description:
       'Custom AI agents that automate one workflow or your whole back office. FactoryJet is a US-focused AI automation agency — founder-led, shipped in weeks, built for small and mid-size businesses.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/ai-agents',
@@ -291,14 +291,7 @@ const serviceSchema = {
       description: 'Multi-agent orchestration platform with custom LLM fine-tuning.',
     },
   ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    ratingCount: '150',
-    reviewCount: '150',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
 };
 
 const howToSchema = {

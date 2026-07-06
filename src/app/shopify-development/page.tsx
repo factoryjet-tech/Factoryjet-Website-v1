@@ -118,13 +118,7 @@ const SHOPIFY_serviceSchema = {
     'Shopify Store Migration',
     'Shopify SEO',
   ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '500',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Shopify Development Services India',

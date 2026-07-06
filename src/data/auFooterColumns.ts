@@ -44,7 +44,7 @@ export const AU_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'Blog',                     href: '/blog' },
       { label: 'FAQ',                      href: '/au#faq' },
       { label: 'WhatsApp Us',              href: 'https://wa.me/919699977699?text=Hi%20FactoryJet%2C%20I%27m%20interested%20in%20a%20website%20for%20my%20Australian%20business.' },
-      { label: 'bhavesh@factoryjet.com',   href: 'mailto:bhavesh@factoryjet.com' },
+      { label: 'connect@factoryjet.com',   href: 'mailto:connect@factoryjet.com' },
     ],
   },
 ];

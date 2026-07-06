@@ -25,7 +25,7 @@ export const manchesterMetadata: Metadata = {
     title: "Web Design Manchester | AI-Native Agency — FactoryJet",
     description:
       "Award-winning web design agency in Manchester. Custom websites built with Next.js, GSAP & AI. Pricing is fixed and published upfront. Free quote.",
-    url: "https://factoryjet.com/manchester",
+    url: "https://factoryjet.com/uk/manchester",
     siteName: "FactoryJet",
     locale: "en_GB",
     type: "website",

@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/services/law-firm-website-design',
     images: [
       {
-        url: 'https://factoryjet.com/logo.png',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
         alt: 'FactoryJet — Law Firm Website Design USA',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: 'Law Firm Website Design for US Attorneys | FactoryJet',
     description:
       'Law firm websites that rank locally, build trust, and convert visitors into consultations. FactoryJet Free consultation.',
-    images: ['https://factoryjet.com/logo.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/law-firm-website-design',
@@ -145,14 +145,7 @@ const serviceSchema = {
     '@type': 'Organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      ratingCount: '150',
-      reviewCount: '150',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    
   },
   areaServed: {
     '@type': 'Country',
