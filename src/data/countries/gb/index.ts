@@ -106,4 +106,5 @@ export const dynamicCities: CityData[] = cities.filter(
  */
 export const BESPOKE_CITY_SERVICE_PAGES = [
   { city: 'london', service: 'web-design' },
+  { city: 'london', service: 'seo' },
 ] as const

@@ -73,6 +73,11 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'Portland, OR',        href: '/portland/web-design' },
       { label: 'Colorado Springs, CO', href: '/colorado-springs/seo' },
       { label: 'Cleveland, OH',       href: '/cleveland/web-design' },
+      { label: 'Austin SEO',          href: '/austin/seo' },
+      { label: 'Charlotte SEO',       href: '/charlotte/seo' },
+      { label: 'Cleveland SEO',       href: '/cleveland/seo' },
+      { label: 'Nashville SEO',       href: '/nashville/seo' },
+      { label: 'Boise SEO',           href: '/boise/seo' },
     ],
   },
   {
