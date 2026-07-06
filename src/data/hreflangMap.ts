@@ -71,12 +71,22 @@ export const webDesignAlternates = {
   'x-default': 'https://factoryjet.com/web-design',
 } as const
 
-/** Full 3-locale cluster for /services/ecommerce-development ↔ /us/services/ecommerce-development */
+/**
+ * Ecommerce development service hub — US-owned.
+ *
+ * US owns /services/ecommerce-development (US is the primary domain). Previously
+ * this emitted BOTH en-IN and en-US pointing at the SAME URL — a self-referential
+ * duplicate that told Google two locales share one page, which is invalid and let
+ * India intent bleed onto the US hub. Fixed 2026-07-05: en-US + x-default only,
+ * per the single-country page rule.
+ *
+ * NOTE: India ecommerce has no dedicated hub page yet. When the India ecommerce
+ * hub is built (its own URL, e.g. /ecommerce-development), convert this back to a
+ * bilingual cluster: add 'en-IN' → the new India URL and repoint x-default to it.
+ * The India ecommerce *city* pages (ecommerceCityAlternatesIN) are unaffected.
+ */
 export const ecommerceAlternates = {
-  'en-IN': 'https://factoryjet.com/services/ecommerce-development',
   'en-US': 'https://factoryjet.com/services/ecommerce-development',
-  'en-AE': 'https://factoryjet.com/uae',
-  'en-GB': 'https://factoryjet.com/uk',
   'x-default': 'https://factoryjet.com/services/ecommerce-development',
 } as const
 
@@ -200,17 +210,25 @@ export const seoAuditServicesAlternatesUS = {
 
 /**
  * AI SEO / GEO / AEO service page — bilingual cluster.
- * US:    /us/services/ai-seo
- * India: /ai-seo  (root path, matches India URL pattern for services)
+ * US:    /services/ai-seo   (targets the "AI SEO agency/services/company" head term)
+ * India: /ai-seo            (root path, matches India URL pattern for services; GEO-scoped)
  * UAE / UK: generic regional landings.
  * Added 2026-05-25 in PR #2 for the new Framework B+ AI SEO service.
+ *
+ * x-default DEVIATION (2026-07-06): this page intentionally breaks the file-wide
+ * "x-default → India" convention. The commercial head term "ai seo agency" is
+ * US-intent and lives only in /services/ai-seo's title/H1, but x-default previously
+ * pointed to the India GEO page (/ai-seo), so Google served the India-scoped page to
+ * generic searchers — splitting authority and pinning the correct US page to ~pos 50.
+ * x-default now points to the US page. Do NOT "restore" it to /ai-seo. Keep
+ * en-IN → /ai-seo so India intent still resolves to the India page.
  */
 export const aiSeoAlternates = {
   'en-IN': 'https://factoryjet.com/ai-seo',
   'en-US': 'https://factoryjet.com/services/ai-seo',
   'en-AE': 'https://factoryjet.com/uae',
   'en-GB': 'https://factoryjet.com/uk',
-  'x-default': 'https://factoryjet.com/ai-seo',
+  'x-default': 'https://factoryjet.com/services/ai-seo',
 } as const
 
 // ===========================================================================

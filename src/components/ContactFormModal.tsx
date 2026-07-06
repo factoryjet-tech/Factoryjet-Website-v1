@@ -34,6 +34,7 @@ import { submitLead } from '../utils/submitLead';
 import {
   trackModalOpen,
   trackModalClose,
+  trackFormStart,
   trackFormStep,
   trackFormSubmit,
   trackFormSuccess,
@@ -149,6 +150,13 @@ const ContactFormModal: React.FC = () => {
   useEffect(() => {
     if (!isOpen) return;
     trackModalOpen('contact_form', 'cta_button');
+    // form_start MUST fire here. This modal is the highest-volume lead form on the
+    // site, but pre-2026-07-06 it emitted only trackFormStep on open — so the GA4
+    // form_start denominator excluded every modal open, producing the impossible
+    // "25 form_start -> 36 conversions" funnel that read as "96% abandonment". It was
+    // a measurement gap, not a UX failure. Firing form_start here restores a
+    // consistent denominator across all five lead forms. (funnel-instrumentation fix.)
+    trackFormStart('contact_form');
     if (isSeoFlow) {
       trackServiceSelection('seo', 'SEO / Local SEO');
       trackFormStep('contact_form', 2, 'contact_details');

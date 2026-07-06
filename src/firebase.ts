@@ -1,8 +1,18 @@
 import { initializeApp, getApps, getApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import { getFirestore, initializeFirestore, type Firestore } from "firebase/firestore";
 
-// Firebase configuration
+// Firebase is used ONLY for Firestore (lead capture). Firebase Analytics is
+// intentionally NOT initialized here.
+//
+// Why (2026-07-06): getAnalytics(app) auto-initializes a SECOND GA4 stream and
+// sends page_view/session_start/etc. to the Firebase-linked measurement ID
+// (G-ZZ03T8W2VR) — a different property from the site's real analytics
+// (G-N40S2Q8E1J, owned by the GTM container GTM-PKWD8SHF). This split every
+// pageview/session across two properties and polluted attribution. Verified live
+// via a /g/collect beacon: `tid=G-ZZ03T8W2VR ... en=page_view ep.origin=firebase`.
+// measurementId is omitted from the config so getAnalytics can never silently
+// resurrect the foreign stream. Do NOT re-add firebase/analytics here — all site
+// analytics belong to GTM/G-N40S2Q8E1J.
 const firebaseConfig = {
   apiKey:            process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain:        process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
@@ -10,7 +20,6 @@ const firebaseConfig = {
   storageBucket:     process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
   messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
   appId:             process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-  measurementId:     process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
 // Fail fast in dev if env vars are missing — caught at module load
@@ -28,7 +37,6 @@ if (process.env.NODE_ENV !== 'production') {
 
 // Initialize Firebase (idempotent — avoids duplicate-app errors on re-import).
 const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
-const analytics = typeof window !== 'undefined' ? getAnalytics(app) : null;
 
 // Firestore is initialised in the browser only. Calling getFirestore() during
 // the static-export server prerender can intermittently throw "Service
@@ -54,7 +62,7 @@ const db = (typeof window !== 'undefined' ? createDb() : undefined) as Firestore
 
 // Keep the async function for backwards compatibility
 const initFirebase = async () => {
-  return { app, analytics, db };
+  return { app, db };
 };
 
-export { app, analytics, db, initFirebase };
+export { app, db, initFirebase };
