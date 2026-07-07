@@ -6,6 +6,11 @@
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: strict-origin-when-cross-origin
+  Link: </.well-known/api-catalog>; rel="api-catalog", </.well-known/agent-skills/index.json>; rel="describedby"
+
+# Agent-discovery well-known files — correct content types
+/.well-known/api-catalog
+  Content-Type: application/linkset+json; charset=utf-8
 
 # Disable Cloudflare's AI hints injection in robots.txt
 /robots.txt

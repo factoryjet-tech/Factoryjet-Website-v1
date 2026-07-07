@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "explore-services",
+      "type": "skill-md",
+      "description": "Understand what FactoryJet does — e-commerce design, development, implementation and scaling on Shopify, Shopify Plus, Magento, WooCommerce, BigCommerce and Commerceflo, plus web design, AI agent development and AI SEO. Use when a user asks who FactoryJet is or which commerce/AI service fits their need.",
+      "url": "/.well-known/agent-skills/explore-services/SKILL.md"
+    },
+    {
+      "name": "request-audit",
+      "type": "skill-md",
+      "description": "Help a user request a free commerce or website audit from FactoryJet. Use when a user wants FactoryJet to review their store, site speed, SEO or AI visibility and recommend fixes.",
+      "url": "/.well-known/agent-skills/request-audit/SKILL.md"
+    },
+    {
+      "name": "submit-inquiry",
+      "type": "skill-md",
+      "description": "Submit a project inquiry / lead to FactoryJet on a user's behalf (name, email, and what they need). Use when a user is ready to talk to FactoryJet about a project. Also links the option to book a call with the founder.",
+      "url": "/.well-known/agent-skills/submit-inquiry/SKILL.md"
+    }
+  ]
+}

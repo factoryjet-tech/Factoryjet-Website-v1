@@ -1,0 +1,44 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "FactoryJet Lead Intake API",
+    "version": "1.0.0",
+    "description": "Submit a project inquiry / lead to FactoryJet. Delivers the inquiry to the FactoryJet team (founder replies within 24 hours). Intended for agents acting on a consenting user's behalf. See also the agent skills at /.well-known/agent-skills/index.json.",
+    "contact": { "name": "FactoryJet", "url": "https://factoryjet.com" }
+  },
+  "servers": [{ "url": "https://factoryjet.com" }],
+  "paths": {
+    "/api/notify-lead": {
+      "post": {
+        "operationId": "submitLead",
+        "summary": "Submit a project inquiry / lead",
+        "description": "Records the inquiry and notifies the FactoryJet team. Only submit with the user's real, consented contact details.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["name", "email"],
+                "properties": {
+                  "name": { "type": "string", "description": "The user's full name." },
+                  "email": { "type": "string", "format": "email", "description": "The user's work email." },
+                  "phone": { "type": "string", "description": "Optional phone number." },
+                  "company": { "type": "string", "description": "Optional company name." },
+                  "service": { "type": "string", "description": "Interest area, e.g. ecommerce | web-design | ai-seo | ai-agent | audit." },
+                  "message": { "type": "string", "description": "What the user needs, in their words." },
+                  "region": { "type": "string", "enum": ["us", "uk", "ae", "in"], "description": "Optional region." },
+                  "source": { "type": "string", "description": "Identifier for the submitting agent, e.g. \"ai-agent\"." }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Inquiry received." },
+          "400": { "description": "Invalid request (missing name or email)." }
+        }
+      }
+    }
+  }
+}

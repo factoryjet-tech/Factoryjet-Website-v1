@@ -1,0 +1,23 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://factoryjet.com/api/notify-lead",
+      "service-desc": [
+        { "href": "https://factoryjet.com/.well-known/openapi.json", "type": "application/json" }
+      ],
+      "service-doc": [
+        { "href": "https://factoryjet.com/llms-full.txt", "type": "text/plain" }
+      ]
+    },
+    {
+      "anchor": "https://factoryjet.com/",
+      "service-doc": [
+        { "href": "https://factoryjet.com/llms.txt", "type": "text/plain" },
+        { "href": "https://factoryjet.com/llms-full.txt", "type": "text/plain" }
+      ],
+      "describedby": [
+        { "href": "https://factoryjet.com/.well-known/agent-skills/index.json", "type": "application/json" }
+      ]
+    }
+  ]
+}
