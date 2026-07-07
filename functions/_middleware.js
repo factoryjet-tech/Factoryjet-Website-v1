@@ -97,6 +97,12 @@ export function indiaTarget(pathname) {
   return null
 }
 
+/** True when the path belongs to an India-only cluster (so its response is
+ *  country/UA-dependent and must not be stored in the shared edge cache). */
+export function isIndiaPath(pathname) {
+  return indiaTarget(pathname) !== null
+}
+
 /**
  * The single pure decision. Returns a US target path to redirect to, or null to
  * serve the request unchanged.
@@ -115,11 +121,16 @@ export async function onRequest(context) {
   const { request, next } = context
   try {
     const url = new URL(request.url)
-    const target = decideNaRedirect({
-      path: url.pathname,
-      country: request.headers.get('cf-ipcountry') || '',
-      userAgent: request.headers.get('user-agent') || '',
-    })
+    const path = url.pathname
+
+    // Only India-cluster paths are country/UA-dependent. Everything else passes
+    // straight through untouched (keeps its normal edge caching + the /api function).
+    if (!isIndiaPath(path)) return next()
+
+    const country = request.headers.get('cf-ipcountry') || ''
+    const userAgent = request.headers.get('user-agent') || ''
+    const target = decideNaRedirect({ path, country, userAgent })
+
     if (target) {
       return new Response(null, {
         status: 302, // temporary — transfers no ranking signal; India URL stays canonical
@@ -130,6 +141,16 @@ export async function onRequest(context) {
         },
       })
     }
+
+    // Serving the India page (crawler or non-NA visitor). CRITICAL: strip shared-edge
+    // caching so a cached 200 can't later be served to an NA human without this
+    // Function running. Without this, an exempt crawler's 200 would populate the edge
+    // cache and defeat the redirect. Cost is negligible (Pages still serves from edge).
+    const res = await next()
+    const headers = new Headers(res.headers)
+    headers.set('Cache-Control', 'private, no-store')
+    headers.set('X-FJ-Geo-Redirect', 'india-served') // deploy marker — visible from any country
+    return new Response(res.body, { status: res.status, statusText: res.statusText, headers })
   } catch {
     // Fail open: any error → serve the page normally. Geo logic must never 500 a page.
   }

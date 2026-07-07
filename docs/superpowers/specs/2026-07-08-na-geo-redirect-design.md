@@ -35,6 +35,12 @@ For each request the Function reads `cf-ipcountry` + `user-agent` and decides (p
 
 Any thrown error also fails open — geo logic must never 500 a page.
 
+**Caching (critical):** India-cluster responses are country/UA-dependent, so the Function marks
+them `Cache-Control: private, no-store` (adds `x-fj-geo-redirect: india-served`). Without this, an
+exempt crawler's 200 from a US IP would populate the US edge cache and be served to the next US
+human *without the Function running* — silently defeating the redirect. Non-India paths are
+untouched and keep normal edge caching. Free-plan-compatible (no custom cache-key needed).
+
 ## India → US redirect map
 
 | India path (source) | US target |
@@ -58,13 +64,21 @@ add it here + to `INDIA_TO_US_RULES` in `functions/_middleware.js` + a case in t
   no-loop (US twins/hub not matched) and `/api` passthrough. Also wired into `prebuild` and
   `pages:build`, so a broken map fails the build.
 - **Post-deploy** (Cloudflare sets `cf-ipcountry`, which can't be spoofed via curl header):
-  - From **India** (proves deploy + no false positives):
-    `curl -sI "https://factoryjet.com/web-design/mumbai?cb=$RANDOM"` → **200** (not NA).
-  - From a **US VPN** (proves the redirect):
+  - From **anywhere incl. India — proves the Function is deployed + running**:
+    `curl -sI "https://factoryjet.com/web-design/mumbai?cb=$RANDOM"` → **200** with headers
+    `x-fj-geo-redirect: india-served` and `cache-control: private, no-store` (and
+    `cf-cache-status: DYNAMIC/BYPASS`, not HIT). If those headers are ABSENT, the Function is
+    not live (not pushed/not deployed) — do not trust any other result.
+  - From a **genuine US exit node** (confirm the VPN is US first: the `cf-ray` suffix should be a
+    US airport code like `SJC`/`IAD`/`DFW`/`LAX`, NOT `BLR`) — proves the redirect:
     `curl -sI "https://factoryjet.com/web-design/mumbai"` → **302**, `Location: …/services/web-design`,
-    header `X-FJ-Geo-Redirect: na-to-us`.
-  - From a **US VPN as a crawler** (proves the exemption — the critical check):
-    `curl -sI -A "Googlebot" "https://factoryjet.com/web-design/mumbai"` → **200** (not redirected).
+    `x-fj-geo-redirect: na-to-us`.
+  - From a **US exit node as a crawler** (proves the exemption — the critical check):
+    `curl -sI -A "Googlebot" "https://factoryjet.com/web-design/mumbai"` → **200**, header
+    `x-fj-geo-redirect: india-served` (served, not redirected).
+
+  Note: an unspoofable `cf-ipcountry` means the redirect path can only be exercised from a real
+  US/CA IP. The decision logic itself is fully covered by `npm run test:geo`.
 
 ## Rollback
 

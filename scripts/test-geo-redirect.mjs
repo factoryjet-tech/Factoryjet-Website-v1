@@ -6,7 +6,7 @@
  * decision function across the geo × crawler × path matrix without needing the
  * Cloudflare runtime (which cannot be run locally — see the OOM hazard note in repo memory).
  */
-import { decideNaRedirect, isExemptCrawler, indiaTarget } from '../functions/_middleware.js'
+import { decideNaRedirect, isExemptCrawler, indiaTarget, isIndiaPath } from '../functions/_middleware.js'
 
 const CHROME = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36'
 const GOOGLEBOT = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
@@ -93,6 +93,15 @@ expect('isExemptCrawler(Chrome) = false', isExemptCrawler(CHROME), false)
 expect('isExemptCrawler(empty) = false', isExemptCrawler(''), false)
 expect('indiaTarget(/services/ecommerce-development) = null (hub not matched)',
   indiaTarget('/services/ecommerce-development'), null)
+
+// --- isIndiaPath: drives the cache-stripping branch (must be true for every India cluster) ---
+expect('isIndiaPath(/web-design/mumbai) = true', isIndiaPath('/web-design/mumbai'), true)
+expect('isIndiaPath(/seo) = true', isIndiaPath('/seo'), true)
+expect('isIndiaPath(/services/ecommerce-development/delhi) = true', isIndiaPath('/services/ecommerce-development/delhi'), true)
+expect('isIndiaPath(/ai-seo) = true', isIndiaPath('/ai-seo'), true)
+expect('isIndiaPath(/services/web-design) = false (US twin, keeps caching)', isIndiaPath('/services/web-design'), false)
+expect('isIndiaPath(/) = false (root passes through)', isIndiaPath('/'), false)
+expect('isIndiaPath(/api/notify-lead) = false (function passthrough)', isIndiaPath('/api/notify-lead'), false)
 
 console.log('')
 if (failures) { console.error(`❌ ${failures} test(s) failed`); process.exit(1) }
