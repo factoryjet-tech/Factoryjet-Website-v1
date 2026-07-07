@@ -51,14 +51,31 @@ const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
 // no network) and silently dropping every lead (incident 2026-06-22). Wrapped
 // in try/catch because initializeFirestore must run at most once per app —
 // a re-import (HMR / chunk re-eval) falls back to the already-created instance.
-function createDb(): Firestore {
+function createDb(): Firestore | undefined {
   try {
     return initializeFirestore(app, { experimentalAutoDetectLongPolling: true });
   } catch {
-    return getFirestore(app);
+    // initializeFirestore has already run once (HMR / chunk re-eval): reuse it.
+    try {
+      return getFirestore(app);
+    } catch {
+      // "Service firestore is not available": the firebase/firestore chunk had
+      // not registered its service component yet when this module evaluated — a
+      // Turbopack chunk-ordering race (non-deterministic across production
+      // rebuilds under Next 16). This MUST NOT throw: an uncaught throw here
+      // propagates through every form's static `import '@/firebase'` and crashes
+      // React hydration for the WHOLE page. Observed symptom (2026-07-07 outage):
+      // a blank page in some browsers, a renderer out-of-memory crash ("This page
+      // couldn't load") in others. Degrade gracefully instead — leads still
+      // capture via the authoritative server path (submitLead -> /api/notify-lead);
+      // only the best-effort client Firestore mirror is skipped. The root-cause
+      // trigger (barrel-optimizing firebase, which fragments this side-effectful
+      // registration) was also removed from next.config.mjs optimizePackageImports.
+      return undefined;
+    }
   }
 }
-const db = (typeof window !== 'undefined' ? createDb() : undefined) as Firestore;
+const db = (typeof window !== 'undefined' ? createDb() : undefined) as Firestore | undefined;
 
 // Keep the async function for backwards compatibility
 const initFirebase = async () => {

@@ -53,7 +53,17 @@ const nextConfig = {
 
   // Experimental optimizations
   experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion', 'firebase', 'firebase/firestore', 'firebase/app'],
+    // NOTE (2026-07-07): 'firebase', 'firebase/firestore', 'firebase/app' were
+    // REMOVED from this list. optimizePackageImports rewrites barrel imports and
+    // fragments firebase's side-effectful service registration; under Next 16's
+    // Turbopack the resulting chunk order is non-deterministic across rebuilds, so
+    // a rebuild can emit a bundle where `getFirestore()`/`initializeFirestore()`
+    // run BEFORE the firestore service registers -> "Service firestore is not
+    // available" thrown at module eval -> React hydration crashes the whole page
+    // (blank page / renderer OOM). This caused the 2026-07-07 homepage outage.
+    // Firebase is small and modular; it does not need this optimization. Do NOT
+    // re-add firebase here. (See src/firebase.ts createDb for the defensive guard.)
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
     // CSS delivery: external cached <link rel="stylesheet"> (Next default).
     //   2026-06-02: inlineCss:true was REVERTED. It inlined the entire ~278KB
     //   sitewide Tailwind utility bundle into every page's HTML. On desktop this
