@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import Link from 'next/link';
 import { websiteCostAlternates } from '@/data/hreflangMap';
 import SiteHeader from '@/components/v2/SiteHeader';
@@ -73,7 +72,7 @@ const APPROACHES = [
 export default function WebsiteCostPage() {
   return (
     <>
-      <Script id="cost-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="cost-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
 
       <SiteHeader
         navLinks={[

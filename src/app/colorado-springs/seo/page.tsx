@@ -735,10 +735,9 @@ export default function ColoradoSpringsSEOPage() {
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
 
       {/* ===== JSON-LD SCHEMA ===== */}
-      <Script
+      <script
         id="schema-cos-seo"
         type="application/ld+json"
-        strategy="afterInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 

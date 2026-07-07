@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import Link from 'next/link';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import { woocommerceDevelopmentAlternates } from '@/data/hreflangMap';
@@ -600,18 +599,10 @@ export default function WoocommerceDevelopmentPage() {
   return (
     <>
       {/* JSON-LD */}
-      <Script id="faq-schema" type="application/ld+json" strategy="afterInteractive">
-        {JSON.stringify(faqSchema)}
-      </Script>
-      <Script id="service-schema" type="application/ld+json" strategy="afterInteractive">
-        {JSON.stringify(serviceSchema)}
-      </Script>
-      <Script id="breadcrumb-schema" type="application/ld+json" strategy="afterInteractive">
-        {JSON.stringify(breadcrumbSchema)}
-      </Script>
-      <Script id="howto-schema" type="application/ld+json" strategy="afterInteractive">
-        {JSON.stringify(howToSchema)}
-      </Script>
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script id="service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="howto-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
       <SiteHeader
         navLinks={[

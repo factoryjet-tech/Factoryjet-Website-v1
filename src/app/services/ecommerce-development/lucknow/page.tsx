@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
 import HeroInlineForm from '@/components/HeroInlineForm';
@@ -412,17 +411,17 @@ const speakableSchema = {
 export default function LucknowEcommercePage() {
   return (
     <>
-      <Script
+      <script
         id="lucknow-ecom-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Script
+      <script
         id="lucknow-ecom-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
-      <Script
+      <script
         id="lucknow-ecom-local-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}

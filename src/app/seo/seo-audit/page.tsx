@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import { seoSubServiceAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
@@ -141,8 +140,8 @@ const AUDIT_COMPARISON_ROWS = [
 export default function SeoAuditPage() {
   return (
     <>
-      <Script id="audit-seo-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <Script id="audit-seo-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script id="audit-seo-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script id="audit-seo-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
 
       <SiteHeader locale="in" />

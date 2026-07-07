@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import LiverpoolPage from "./LiverpoolPage";
 
 export const metadata: Metadata = {
@@ -210,7 +209,7 @@ export default function Page() {
     <>
       {/* JetBrains Mono — used by the TechStack section on this page */}
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" />
-      <Script
+      <script
         id="liverpool-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

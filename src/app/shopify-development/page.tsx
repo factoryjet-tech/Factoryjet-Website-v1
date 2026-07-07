@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import Image from 'next/image';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
@@ -723,12 +722,12 @@ const SHOPIFY_FAQ_ITEMS = [
 export default function ShopifyDevelopmentPage() {
   return (
     <>
-      <Script
+      <script
         id="shopify-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(SHOPIFY_serviceSchema) }}
       />
-      <Script
+      <script
         id="shopify-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(SHOPIFY_faqSchema) }}

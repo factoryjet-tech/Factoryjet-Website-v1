@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import Image from 'next/image';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import { aiAgencyAlternates } from '@/data/hreflangMap';
@@ -872,22 +871,22 @@ const FAQ_ITEMS = [
 export default function AIAgencyPage() {
   return (
     <>
-      <Script
+      <script
         id="ai-agency-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Script
+      <script
         id="ai-agency-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
-      <Script
+      <script
         id="ai-agency-breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <Script
+      <script
         id="ai-agency-howto-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}

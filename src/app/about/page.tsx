@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import Link from 'next/link';
 import { aboutAlternates } from '@/data/hreflangMap';
 import SiteHeader from '@/components/v2/SiteHeader';
@@ -95,7 +94,7 @@ const DIFFERENT = [
 export default function AboutPage() {
   return (
     <>
-      <Script id="about-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script id="about-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader
         navLinks={[

@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import { seoSubServiceAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
@@ -139,8 +138,8 @@ const LINK_COMPARISON_ROWS = [
 export default function LinkBuildingPage() {
   return (
     <>
-      <Script id="link-seo-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <Script id="link-seo-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script id="link-seo-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script id="link-seo-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
 
       <SiteHeader locale="in" />

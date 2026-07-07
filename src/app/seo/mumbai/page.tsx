@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import { seoCityAlternatesIN } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
@@ -451,17 +450,17 @@ function MumbaiKeywordCard() {
 export default function SeoMumbaiPage() {
   return (
     <>
-      <Script
+      <script
         id="mumbai-seo-localbusiness"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
-      <Script
+      <script
         id="mumbai-seo-service"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
-      <Script
+      <script
         id="mumbai-seo-faq"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

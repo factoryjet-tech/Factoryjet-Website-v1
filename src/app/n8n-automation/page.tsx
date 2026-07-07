@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import Image from 'next/image';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
@@ -628,12 +627,12 @@ const N8N_FAQ_ITEMS = [
 export default function N8nAutomationPage() {
   return (
     <>
-      <Script
+      <script
         id="n8n-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(N8N_FAQ_SCHEMA) }}
       />
-      <Script
+      <script
         id="n8n-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(N8N_SERVICE_SCHEMA) }}

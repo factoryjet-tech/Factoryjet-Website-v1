@@ -134,7 +134,7 @@ export default function RootLayout({
         />
 
         {/* Structured Data - Organization Schema */}
-        <Script
+        <script
           id="organization-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -189,7 +189,7 @@ export default function RootLayout({
         />
 
         {/* Structured Data - Website Schema */}
-        <Script
+        <script
           id="website-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{

@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import Link from 'next/link';
 
 import { aiSeoAlternates } from '@/data/hreflangMap';
@@ -411,11 +410,11 @@ function AnswerCardStack() {
 export default function AiSeoIndiaPage() {
   return (
     <>
-      <Script id="ai-seo-webpage-schema" type="application/ld+json" strategy="beforeInteractive"
+      <script id="ai-seo-webpage-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
-      <Script id="ai-seo-service-schema" type="application/ld+json" strategy="beforeInteractive"
+      <script id="ai-seo-service-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <Script id="ai-seo-faq-schema" type="application/ld+json" strategy="beforeInteractive"
+      <script id="ai-seo-faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <SiteHeader locale="in" />

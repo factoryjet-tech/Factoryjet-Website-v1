@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import HeroInlineForm from '@/components/HeroInlineForm';
-import Script from 'next/script';
 import Footer from '../../sections/Footer';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import './london-web-design.css';
@@ -155,7 +154,7 @@ export const metadata: Metadata = {
 export default function LondonWebDesignPage() {
   return (
     <>
-      <Script id="ld-london-web-design" type="application/ld+json"
+      <script id="ld-london-web-design" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <div className="uk-londonwd">

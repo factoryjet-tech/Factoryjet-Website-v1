@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
 import HeroInlineForm from '@/components/HeroInlineForm';
@@ -532,12 +531,12 @@ const speakableSchema = {
 export default function RajkotWebDesignPage() {
   return (
     <>
-      <Script
+      <script
         id="rjt-local-business-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
-      <Script
+      <script
         id="rjt-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import PortfolioGrid from './PortfolioGrid';
@@ -114,17 +113,17 @@ const HOW_TO_SCHEMA = {
 export default function USPortfolioPage() {
   return (
     <>
-      <Script
+      <script
         id="breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }}
       />
-      <Script
+      <script
         id="org-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }}
       />
-      <Script
+      <script
         id="howto-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(HOW_TO_SCHEMA) }}

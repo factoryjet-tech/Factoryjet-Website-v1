@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import HeroInlineForm from '@/components/HeroInlineForm';
-import Script from 'next/script';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -393,22 +392,22 @@ export default function SeoServicePage() {
   return (
     <>
       {/* JSON-LD schemas */}
-      <Script
+      <script
         id="seo-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
-      <Script
+      <script
         id="seo-organization-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
-      <Script
+      <script
         id="seo-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Script
+      <script
         id="seo-breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

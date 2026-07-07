@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import Link from 'next/link';
 
 import Image from 'next/image';
@@ -767,22 +766,22 @@ export default function ShopifyPage() {
   return (
     <>
       {/* JSON-LD structured data */}
-      <Script
+      <script
         id="shopify-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Script
+      <script
         id="shopify-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
-      <Script
+      <script
         id="shopify-howto-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
-      <Script
+      <script
         id="speakable-schema-shopify-development"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

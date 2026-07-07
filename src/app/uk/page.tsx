@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 
 import Hero from "./sections/Hero";
 import DigitalLandscape from "./sections/DigitalLandscape";
@@ -33,20 +32,18 @@ export default function UKPage() {
 
       {/* JSON-LD: Organization, Service ×4, FAQPage, BreadcrumbList */}
       {ukSchemas.map((s) => (
-        <Script
+        <script
           key={s.id}
           id={s.id}
           type="application/ld+json"
-          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(s.data) }}
         />
       ))}
 
       {/* JSON-LD: WebPage + Speakable */}
-      <Script
+      <script
         id="ld-webpage-speakable"
         type="application/ld+json"
-        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",

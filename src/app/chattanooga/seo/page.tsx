@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import Script from 'next/script';
 
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
@@ -290,11 +289,11 @@ const faqSchema = {
 export default function ChattanoogaSeoPage() {
   return (
     <>
-      <Script id="chattanooga-seo-webpage-schema" type="application/ld+json" strategy="beforeInteractive"
+      <script id="chattanooga-seo-webpage-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
-      <Script id="chattanooga-seo-service-schema" type="application/ld+json" strategy="beforeInteractive"
+      <script id="chattanooga-seo-service-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <Script id="chattanooga-seo-faq-schema" type="application/ld+json" strategy="beforeInteractive"
+      <script id="chattanooga-seo-faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <SiteHeader />

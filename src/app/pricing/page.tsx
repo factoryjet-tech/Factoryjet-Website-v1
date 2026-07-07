@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import Link from 'next/link';
 import { pricingAlternates } from '@/data/hreflangMap';
 import SiteHeader from '@/components/v2/SiteHeader';
@@ -74,7 +73,7 @@ const STEPS = [
 export default function PricingPage() {
   return (
     <>
-      <Script id="pricing-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
+      <script id="pricing-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
 
       <SiteHeader
         navLinks={[

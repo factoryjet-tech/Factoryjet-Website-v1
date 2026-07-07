@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import Link from 'next/link';
 import { ecommerceAlternates } from '@/data/hreflangMap';
 
@@ -748,22 +747,22 @@ export default function EcommerceDevelopmentPage() {
   return (
     <>
       {/* JSON-LD structured data */}
-      <Script
+      <script
         id="ecommerce-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Script
+      <script
         id="ecommerce-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
-      <Script
+      <script
         id="ecommerce-howto-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
-      <Script
+      <script
         id="speakable-schema-ecommerce-development"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({

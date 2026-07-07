@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 import BlogPage from '@/pages/Blog'
 import SiteHeader from '@/components/v2/SiteHeader'
@@ -76,7 +75,7 @@ export default function Page() {
       ]} />
 
       {/* Blog Listing Structured Data */}
-      <Script
+      <script
         id="blog-jsonld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogListJsonLd) }}

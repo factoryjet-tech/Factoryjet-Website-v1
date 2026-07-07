@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
 import { webDesignCityAlternatesIN } from '@/data/hreflangMap'
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 import SiteHeader from '@/components/v2/SiteHeader'
@@ -437,12 +436,12 @@ const CHN_FAQ_ITEMS = [
 
   return (
     <>
-      <Script
+      <script
         id="chn-local-business-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
-      <Script
+      <script
         id="chn-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

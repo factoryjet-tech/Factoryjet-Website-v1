@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import Script from 'next/script'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
@@ -112,7 +111,7 @@ export default async function Page({ params }: Props) {
       ]} />
 
       {authorJsonLd && (
-        <Script
+        <script
           id="author-jsonld"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(authorJsonLd) }}

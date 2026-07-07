@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import Image from 'next/image';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
@@ -639,12 +638,12 @@ const WP_speakableSchema = {
 export default function WordPressDevelopmentPage() {
   return (
     <>
-      <Script
+      <script
         id="in-wp-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(WP_faqSchema) }}
       />
-      <Script
+      <script
         id="in-wp-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(WP_serviceSchema) }}

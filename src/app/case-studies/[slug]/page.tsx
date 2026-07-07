@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import Script from 'next/script'
 import Link from 'next/link'
 
 import SiteHeader from '@/components/v2/SiteHeader'
@@ -932,20 +931,20 @@ export default async function CaseStudyPage({ params }: Props) {
           { name: cs.headline, url: `https://factoryjet.com/case-studies/${slug}` },
         ]}
       />
-      <Script
+      <script
         id="case-study-article-jsonld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       {faqSchema && (
-        <Script
+        <script
           id="case-study-faq-jsonld"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       )}
       {localBizSchema && (
-        <Script
+        <script
           id="case-study-localbiz-jsonld"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizSchema) }}

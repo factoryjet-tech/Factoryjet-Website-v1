@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
 import { webDesignCityAlternatesIN } from '@/data/hreflangMap'
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 import SiteHeader from '@/components/v2/SiteHeader'
@@ -437,12 +436,12 @@ const SRT_FAQ_ITEMS = [
 
   return (
     <>
-      <Script
+      <script
         id="srt-local-business-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
-      <Script
+      <script
         id="srt-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import Script from 'next/script'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
@@ -157,7 +156,7 @@ export default async function Page({ params }: Props) {
       ]} />
 
       {/* Article Structured Data */}
-      <Script
+      <script
         id="article-jsonld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
@@ -165,7 +164,7 @@ export default async function Page({ params }: Props) {
 
       {/* FAQ Structured Data (if FAQs exist) */}
       {faqJsonLd && (
-        <Script
+        <script
           id="faq-jsonld"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}

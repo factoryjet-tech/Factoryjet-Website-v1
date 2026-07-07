@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import BirminghamPage from "./BirminghamPage";
 
 export const metadata: Metadata = {
@@ -199,7 +198,7 @@ export default function Page() {
     <>
       {/* JetBrains Mono — used by the TechStack section on this page */}
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" />
-      <Script
+      <script
         id="birmingham-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
 import { homeAlternates } from '@/data/hreflangMap'
 import UaePage from '@/pages/UaePage'
 import SiteHeader from '@/components/v2/SiteHeader'
@@ -125,28 +124,28 @@ export default function Page() {
   return (
     <>
       {/* Organization Structured Data */}
-      <Script
+      <script
         id="organization-jsonld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
       />
 
       {/* Local Business Structured Data */}
-      <Script
+      <script
         id="local-business-jsonld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
       />
 
       {/* Breadcrumb Structured Data */}
-      <Script
+      <script
         id="breadcrumb-jsonld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       {/* Service Structured Data */}
-      <Script
+      <script
         id="service-jsonld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}

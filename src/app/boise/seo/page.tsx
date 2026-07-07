@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import Script from 'next/script';
 
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import SiteHeader from '@/components/v2/SiteHeader';
@@ -276,11 +275,11 @@ const faqSchema = {
 export default function BoiseSeoPage() {
   return (
     <>
-      <Script id="boise-seo-webpage-schema" type="application/ld+json" strategy="beforeInteractive"
+      <script id="boise-seo-webpage-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
-      <Script id="boise-seo-service-schema" type="application/ld+json" strategy="beforeInteractive"
+      <script id="boise-seo-service-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <Script id="boise-seo-faq-schema" type="application/ld+json" strategy="beforeInteractive"
+      <script id="boise-seo-faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <SiteHeader />
