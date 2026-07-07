@@ -1,4 +1,4 @@
-import Script from 'next/script'
+import JsonLd from './JsonLd'
 
 interface BreadcrumbItem {
   name: string
@@ -21,11 +21,5 @@ export function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
     })),
   }
 
-  return (
-    <Script
-      id="breadcrumb-jsonld"
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-    />
-  )
+  return <JsonLd id="breadcrumb-jsonld" data={breadcrumbJsonLd} />
 }

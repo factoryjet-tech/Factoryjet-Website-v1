@@ -247,6 +247,34 @@ for (const f of srcFiles) {
   }
 }
 
+/* ── 7. JSON-LD must be server-rendered (native <script>), never next/script ── */
+// next/script's <Script> injects inline scripts CLIENT-SIDE (into the React
+// hydration payload), so JSON-LD emitted that way is ABSENT from the
+// server-rendered HTML that non-JS AI crawlers (GPTBot, PerplexityBot,
+// ClaudeBot) read — silently killing entity/schema visibility in AI search.
+// Emit JSON-LD with <JsonLd> (src/components/JsonLd.tsx) or a native
+// <script type="application/ld+json"> tag. Fixed site-wide 2026-07-07
+// (commit 6e61d4d); this check blocks any regression. Multiline-aware.
+for (const f of walk(join(ROOT, 'src'), (p) => /\.(tsx|jsx)$/.test(p))) {
+  const text = readFileSync(f, 'utf8');
+  let idx = 0;
+  while ((idx = text.indexOf('<Script', idx)) !== -1) {
+    const after = text[idx + 7]; // char right after "<Script"
+    if (after && /[A-Za-z0-9_]/.test(after)) { idx += 7; continue; } // e.g. <Scriptable
+    const gt = text.indexOf('>', idx);              // end of the opening tag (covers "/>")
+    const tag = gt === -1 ? text.slice(idx) : text.slice(idx, gt + 1);
+    if (tag.includes('application/ld+json')) {
+      const line = text.slice(0, idx).split('\n').length;
+      fatals.push(
+        `${rel(f)}:${line} — JSON-LD emitted via next/script <Script> (injects ` +
+        `client-side, invisible to non-JS AI crawlers). Use <JsonLd> ` +
+        `(src/components/JsonLd.tsx) or a native <script type="application/ld+json"> tag.`
+      );
+    }
+    idx = gt === -1 ? text.length : gt + 1;
+  }
+}
+
 /* ── report ──────────────────────────────────────────────────────────────── */
 const promotePositioning = STRICT || POSITIONING_FATAL;
 const hardFails = [...fatals, ...(promotePositioning ? warns : [])];
