@@ -1,4 +1,5 @@
 import Link from "next/link";
+import RecognitionStrip from "@/components/RecognitionStrip";
 
 const SERVICE_LINKS = [
   { label: "Web Design Manchester", href: "/manchester" },
@@ -135,6 +136,8 @@ export default function Footer() {
         </div>
 
         {/* ── Bottom bar ────────────────────────────────────────────────── */}
+        <RecognitionStrip />
+
         <div
           className="flex flex-col sm:flex-row items-center justify-between gap-4"
           style={{

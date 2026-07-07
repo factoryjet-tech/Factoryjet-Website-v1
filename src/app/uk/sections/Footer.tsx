@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useContactModal } from "@/context/ContactModalContext";
 import { trackButtonClick, trackCTAClick } from "@/utils/gtm";
+import RecognitionStrip from "@/components/RecognitionStrip";
 
 const CITIES = [
   "leeds",
@@ -243,6 +244,8 @@ export default function Footer() {
             </ul>
           </div>
         </div>
+
+        <RecognitionStrip />
 
         {/* Copyright */}
         <div

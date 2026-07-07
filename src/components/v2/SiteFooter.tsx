@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import { RECOGNITION_PROFILES } from '@/data/recognitionProfiles';
 
 /**
  * SiteFooter — v2.0 bottom-of-page chrome.
@@ -44,19 +45,6 @@ export interface SiteFooterProps {
   showRecognition?: boolean;
   className?: string;
 }
-
-/** Independent third-party directory profiles — trust signals, not review claims. */
-interface RecognitionProfile {
-  label: string;
-  href: string;
-}
-const RECOGNITION_PROFILES: ReadonlyArray<RecognitionProfile> = [
-  { label: 'Clutch',          href: 'https://clutch.co/profile/factoryjet-private' },
-  { label: 'GoodFirms',       href: 'https://www.goodfirms.co/company/factoryjet-private-limited' },
-  { label: 'DesignRush',      href: 'https://www.designrush.com/agency/profile/factoryjet' },
-  { label: 'SoftwareSuggest', href: 'https://www.softwaresuggest.com/factoryjet' },
-  { label: 'Crunchbase',      href: 'https://www.crunchbase.com/organization/factoryjet' },
-];
 
 // ─── India / global default columns ──────────────────────────────────────────
 const IN_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
