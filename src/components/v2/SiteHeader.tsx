@@ -146,6 +146,7 @@ const US_KNOWLEDGE_HUB = [
   { icon: FileText,      label: 'Case Studies',        href: '/case-studies',     desc: 'Real results from real clients' },
   { icon: LayoutTemplate,label: 'Portfolio',           href: '/portfolio',     desc: 'Browse our work' },
   { icon: Search,        label: 'FAQ',                 href: '/faq',           desc: 'Common questions answered' },
+  { icon: Layers,        label: 'Glossary',            href: '/glossary',      desc: 'Commerce & AI terms defined' },
 ] as const;
 
 // ─── UK (GB) nav data ─────────────────────────────────────────────────────────
@@ -204,6 +205,7 @@ const GB_KNOWLEDGE_HUB = [
   { icon: FileText,      label: 'Case Studies', href: '/case-studies', desc: 'Real results from real clients' },
   { icon: LayoutTemplate,label: 'Portfolio',    href: '/portfolio',    desc: 'Browse our work' },
   { icon: Search,        label: 'FAQ',          href: '/faq',          desc: 'Common questions answered' },
+  { icon: Layers,        label: 'Glossary',     href: '/glossary',     desc: 'Commerce & AI terms defined' },
 ] as const;
 
 const GB_LOCATIONS = [

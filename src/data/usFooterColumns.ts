@@ -87,6 +87,7 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'Case Studies',       href: '/case-studies' },
       { label: 'Portfolio',          href: '/portfolio' },
       { label: 'FAQ',                href: '/faq' },
+      { label: 'Glossary',           href: '/glossary' },
       { label: 'Website Cost Guide', href: '/website-cost' },
       { label: 'About FactoryJet',  href: '/about' },
       { label: 'Pricing',            href: '/pricing' },
