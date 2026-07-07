@@ -206,7 +206,7 @@ const organizationSchema = {
   name: 'FactoryJet',
   url: 'https://factoryjet.com',
   logo: 'https://factoryjet.com/logo.png',
-  sameAs: ['https://factoryjet.com'],
+  sameAs: ['https://www.linkedin.com/company/factoryjet', 'https://clutch.co/profile/factoryjet-private', 'https://www.goodfirms.co/company/factoryjet-private-limited', 'https://www.designrush.com/agency/profile/factoryjet', 'https://www.softwaresuggest.com/factoryjet', 'https://www.crunchbase.com/organization/factoryjet'],
   
 };
 

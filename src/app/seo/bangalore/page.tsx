@@ -84,7 +84,7 @@ const localBusinessSchema = {
     closes: '18:00',
   },
   
-  sameAs: ['https://factoryjet.com'],
+  sameAs: ['https://www.linkedin.com/company/factoryjet', 'https://clutch.co/profile/factoryjet-private', 'https://www.goodfirms.co/company/factoryjet-private-limited', 'https://www.designrush.com/agency/profile/factoryjet', 'https://www.softwaresuggest.com/factoryjet', 'https://www.crunchbase.com/organization/factoryjet'],
 };
 
 const serviceSchema = {

@@ -141,11 +141,18 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
+              "@id": "https://factoryjet.com/#organization",
               "name": "FactoryJet",
               "alternateName": "FactoryJet Digital Solutions",
               "url": "https://factoryjet.com",
               "logo": "https://factoryjet.com/FinalLogo.svg",
               "description": "FactoryJet is a leading web & eCommerce development company delivering scalable, secure, and high-performance digital solutions.",
+              "foundingDate": "2014",
+              "founder": {
+                "@type": "Person",
+                "name": "Bhavesh Barot",
+                "jobTitle": "Founder & CEO"
+              },
               "email": "connect@factoryjet.com",
               "telephone": "+919699977699",
               "address": {
@@ -156,7 +163,12 @@ export default function RootLayout({
                 "https://www.linkedin.com/company/factoryjet",
                 "https://www.instagram.com/factoryjet",
                 "https://www.facebook.com/factoryjet",
-                "https://twitter.com/factoryjet"
+                "https://twitter.com/factoryjet",
+                "https://clutch.co/profile/factoryjet-private",
+                "https://www.goodfirms.co/company/factoryjet-private-limited",
+                "https://www.designrush.com/agency/profile/factoryjet",
+                "https://www.softwaresuggest.com/factoryjet",
+                "https://www.crunchbase.com/organization/factoryjet"
               ],
               "areaServed": [
                 { "@type": "Country", "name": "United Kingdom" },
