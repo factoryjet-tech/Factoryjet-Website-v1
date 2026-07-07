@@ -83,7 +83,7 @@ const IN_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
     ],
   },
   {
-    heading: 'Locations',
+    heading: 'Web Design Cities',
     links: [
       { label: 'Mumbai',       href: '/web-design/mumbai' },
       { label: 'Delhi',        href: '/web-design/delhi' },
@@ -97,6 +97,28 @@ const IN_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'Surat',        href: '/web-design/surat' },
       { label: 'Indore',       href: '/web-design/indore' },
       { label: 'Kochi',        href: '/web-design/kochi' },
+    ],
+  },
+  // E-Commerce city pages (en-IN). These live at /services/ecommerce-development/[city]
+  // and were previously ORPHANED — in the India sitemap but with zero inbound internal
+  // links. Surfaced here (India/global footer only — never rendered for US visitors, see
+  // LOCALE_COLUMNS below) to give all 13 pages internal link equity + crawl paths.
+  {
+    heading: 'E-Commerce Cities',
+    links: [
+      { label: 'Mumbai',       href: '/services/ecommerce-development/mumbai' },
+      { label: 'Delhi',        href: '/services/ecommerce-development/delhi' },
+      { label: 'Bangalore',    href: '/services/ecommerce-development/bangalore' },
+      { label: 'Hyderabad',    href: '/services/ecommerce-development/hyderabad' },
+      { label: 'Chennai',      href: '/services/ecommerce-development/chennai' },
+      { label: 'Pune',         href: '/services/ecommerce-development/pune' },
+      { label: 'Ahmedabad',    href: '/services/ecommerce-development/ahmedabad' },
+      { label: 'Kolkata',      href: '/services/ecommerce-development/kolkata' },
+      { label: 'Surat',        href: '/services/ecommerce-development/surat' },
+      { label: 'Jaipur',       href: '/services/ecommerce-development/jaipur' },
+      { label: 'Kochi',        href: '/services/ecommerce-development/kochi' },
+      { label: 'Lucknow',      href: '/services/ecommerce-development/lucknow' },
+      { label: 'Chandigarh',   href: '/services/ecommerce-development/chandigarh' },
     ],
   },
 ];
@@ -166,6 +188,10 @@ export default function SiteFooter({
   const resolvedColumns = linkColumns ?? LOCALE_COLUMNS[locale] ?? DEFAULT_COLUMNS;
   const isDark = variant === 'dark';
 
+  // Desktop column count. Only the 5-column India footer needs its own track count;
+  // US (6 cols → 4+2 wrap) and UAE (3 cols) keep the default 4-track grid unchanged.
+  const lgColsClass = resolvedColumns.length === 5 ? 'lg:grid-cols-5' : 'lg:grid-cols-4';
+
   /* Variant-conditional Tailwind class lookups — kept in named consts for
    * legibility rather than nested ternaries inline. */
   const sectionClass = isDark
@@ -205,7 +231,7 @@ export default function SiteFooter({
           </div>
 
           {/* Link columns (8 of 12, 3 cols inside) */}
-          <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:col-span-8 lg:grid-cols-4 lg:gap-8">
+          <div className={`grid grid-cols-1 gap-12 sm:grid-cols-2 lg:col-span-8 ${lgColsClass} lg:gap-8`}>
             {resolvedColumns.map((col) => (
               <div key={col.heading}>
                 <p
