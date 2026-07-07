@@ -40,8 +40,23 @@ export interface SiteFooterProps {
     links?: ReadonlyArray<SiteFooterLink>;
   };
   variant?: 'light' | 'dark';
+  /** Show the third-party recognition / verified-profiles strip. Default: true. */
+  showRecognition?: boolean;
   className?: string;
 }
+
+/** Independent third-party directory profiles — trust signals, not review claims. */
+interface RecognitionProfile {
+  label: string;
+  href: string;
+}
+const RECOGNITION_PROFILES: ReadonlyArray<RecognitionProfile> = [
+  { label: 'Clutch',          href: 'https://clutch.co/profile/factoryjet-private' },
+  { label: 'GoodFirms',       href: 'https://www.goodfirms.co/company/factoryjet-private-limited' },
+  { label: 'DesignRush',      href: 'https://www.designrush.com/agency/profile/factoryjet' },
+  { label: 'SoftwareSuggest', href: 'https://www.softwaresuggest.com/factoryjet' },
+  { label: 'Crunchbase',      href: 'https://www.crunchbase.com/organization/factoryjet' },
+];
 
 // ─── India / global default columns ──────────────────────────────────────────
 const IN_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
@@ -156,6 +171,7 @@ export default function SiteFooter({
   linkColumns,
   bottomRow = DEFAULT_BOTTOM_ROW,
   variant = 'light',
+  showRecognition = true,
   className = '',
 }: SiteFooterProps) {
   // Explicit linkColumns prop takes precedence; fall back to locale-based defaults
@@ -226,27 +242,58 @@ export default function SiteFooter({
           </div>
         </div>
 
-        {/* Bottom row */}
-        <div
-          className={`mt-16 flex flex-col gap-3 pt-8 sm:flex-row sm:items-center sm:justify-between ${dividerClass}`}
-        >
-          <p className={`font-fj-body text-[13px] ${copyClass}`}>
-            {copyright}
-          </p>
-          {bottomLinks && bottomLinks.length > 0 && (
-            <ul className="flex flex-wrap gap-x-6 gap-y-2">
-              {bottomLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className={`font-fj-body text-[13px] ${bottomLinkClass}`}
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+        {/* Bottom zone: third-party recognition strip + legal row, one divider */}
+        <div className={`mt-16 pt-8 ${dividerClass}`}>
+          {/* Recognition — verified directory profiles + award. Trust signals, not review claims. */}
+          {showRecognition && (
+            <div className="mb-10">
+              <p
+                className={`font-fj-mono text-[11px] font-medium uppercase tracking-[0.16em] ${headingClass}`}
+              >
+                Recognized on
+              </p>
+              <ul className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-3">
+                {RECOGNITION_PROFILES.map((p) => (
+                  <li key={p.href}>
+                    <a
+                      href={p.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`font-fj-body text-[15px] ${linkClass}`}
+                    >
+                      {p.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <p className={`mt-4 font-fj-body text-[13px] ${taglineClass}`}>
+                Awarded{' '}
+                <span className="font-semibold">&ldquo;Highly Recommended&rdquo;</span>{' '}
+                by SoftwareSuggest, Winter 2025.
+              </p>
+            </div>
           )}
+
+          {/* Legal row */}
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <p className={`font-fj-body text-[13px] ${copyClass}`}>
+              {copyright}
+            </p>
+            {bottomLinks && bottomLinks.length > 0 && (
+              <ul className="flex flex-wrap gap-x-6 gap-y-2">
+                {bottomLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className={`font-fj-body text-[13px] ${bottomLinkClass}`}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
         </div>
       </div>
     </footer>
