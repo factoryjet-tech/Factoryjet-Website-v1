@@ -144,7 +144,7 @@ const faqSchema = {
       name: 'Why is FactoryJet fixed-price, milestone-paid?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Our engineering team brings 25+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery without the overhead that inflates traditional agency invoices. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated agency rates.',
+        text: 'Our engineering team brings 12+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery without the overhead that inflates traditional agency invoices. We\'ve served US businesses for 12 years. You brief an engineer; that engineer builds it. No account management layers, no inflated agency rates.',
       },
     },
     {
@@ -240,7 +240,7 @@ const faqSchema = {
       name: 'How is FactoryJet different from a US AI development agency?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Three differences: price (specialized engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 10-person company, not just enterprise theory).',
+        text: 'Three differences: price (specialized engineers serving US businesses for 12+ years), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects — we understand what operations look like inside a 10-person company, not just enterprise theory).',
       },
     },
     {
@@ -549,7 +549,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '25+ years of SMB domain experience',
+    feature: '12+ years of SMB domain experience',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="no" />,
@@ -688,7 +688,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'Why is FactoryJet fixed-price, milestone-paid?',
     answer:
-      'Our engineering team brings 25+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery without the overhead that inflates traditional agency invoices. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated agency rates.',
+      'Our engineering team brings 12+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery without the overhead that inflates traditional agency invoices. We\'ve served US businesses for 12 years. You brief an engineer; that engineer builds it. No account management layers, no inflated agency rates.',
   },
   {
     category: 'pricing',
@@ -758,7 +758,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US AI development agency?',
     answer:
-      'Three differences: pricing model (fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices, backed by 25+ years serving US businesses), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 10-person company, not just enterprise AI theory).',
+      'Three differences: pricing model (fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices, backed by 12+ years serving US businesses), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects — we understand what operations look like inside a 10-person company, not just enterprise AI theory).',
   },
 
   // ── Choosing an agency — money-query coverage, added 2026-06-11 ──
@@ -869,7 +869,7 @@ export default function AIChatbotDevelopmentPage() {
         {/* ── 2. TRUST STATS ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ businesses. 25 years of building. One goal: your results."
+          headline="500+ businesses. 12 years of building. One goal: your results."
         />
 
         {/* ── 3. WHAT IS AN AI CHATBOT ─────────────────────────────────────── */}
@@ -1120,7 +1120,7 @@ export default function AIChatbotDevelopmentPage() {
             {
               icon: '💡',
               title: 'SMB domain depth, not startup theory',
-              body: 'We\'ve built for e-commerce brands, law firms, healthcare practices, real estate teams, and SaaS companies since 1999. We know where the actual complexity lives in a 15-person business — the edge cases, the messy data, the workflows that don\'t match the textbook. We build for that reality.',
+              body: 'We\'ve built for e-commerce brands, law firms, healthcare practices, real estate teams, and SaaS companies. We know where the actual complexity lives in a 15-person business — the edge cases, the messy data, the workflows that don\'t match the textbook. We build for that reality.',
             },
             {
               icon: '🔒',

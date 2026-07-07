@@ -464,7 +464,7 @@ export default function AhmedabadEcommercePage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ stores launched. 25 years of ecommerce engineering. One 7-day guarantee."
+          headline="500+ stores launched. 12 years of ecommerce engineering. One 7-day guarantee."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
@@ -611,7 +611,7 @@ export default function AhmedabadEcommercePage() {
             {
               icon: '⚡',
               title: '7-day delivery. In writing. Or you do not pay the balance.',
-              body: "Ahmedabad's market moves fast. Waiting 16 weeks for an agency to deliver a store you briefed in April is not a plan — it is a liability. FactoryJet delivers Shopify and WooCommerce stores in 7 days, with the guarantee written into the project agreement. We have delivered on time for 97% of all builds since 2005.",
+              body: "Ahmedabad's market moves fast. Waiting 16 weeks for an agency to deliver a store you briefed in April is not a plan — it is a liability. FactoryJet delivers Shopify and WooCommerce stores in 7 days, with the guarantee written into the project agreement. We have delivered on time for 97% of all builds.",
             },
             {
               icon: '📱',
@@ -620,7 +620,7 @@ export default function AhmedabadEcommercePage() {
             },
             {
               icon: '📋',
-              title: 'Fixed price. Published before the first call.',
+              title: 'Fixed price. Agreed before we start.',
               body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your store running.",
             },
           ]}
@@ -642,7 +642,7 @@ export default function AhmedabadEcommercePage() {
           leadParagraphs={[
             "Ahmedabad's ecommerce market is anchored by the city's extraordinary manufacturing depth — textiles, diamonds, pharmaceuticals, food processing, and industrial chemicals. Gujarat's entrepreneurial culture, combined with the state's dominant position in India's export economy, creates a unique ecommerce market where wholesale-to-D2C transitions, B2B procurement portals, and international export stores all represent major opportunities.",
             "Ahmedabad's ecommerce transitions are accelerating. SG Highway textile traders are launching Shopify stores with NRI-targeted international shipping and COD-heavy domestic checkout. GIDC pharma manufacturers are building B2B procurement portals with CDSCO-compliant product pages. Prahlad Nagar food brands are building D2C subscription operations with FSSAI compliance. And Kutch artisan cooperatives are reaching global buyers through Shopify international with automatic currency conversion and GST export invoicing.",
-            "Gujarat's entrepreneurial culture means Ahmedabad business owners are fast decision-makers who demand transparency in pricing and delivery timelines. FactoryJet's published pricing, fixed project scope, and 7-day delivery guarantee are precisely the signals that resonate with Ahmedabad founders who have dealt with agencies that charge discovery fees and deliver after 20 weeks.",
+            "Gujarat's entrepreneurial culture means Ahmedabad business owners are fast decision-makers who demand transparency in pricing and delivery timelines. FactoryJet's transparent pricing, fixed project scope, and 7-day delivery guarantee are precisely the signals that resonate with Ahmedabad founders who have dealt with agencies that charge discovery fees and deliver after 20 weeks.",
           ]}
           stats={[
             {

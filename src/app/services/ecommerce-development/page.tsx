@@ -290,8 +290,8 @@ const ECOMM_JOURNEY_STAGES: ServiceJourneyStage[] = [
 const ECOMM_STATS = [
   {
     value: '500+',
-    label: 'businesses served across web design, e-commerce, and custom software since 1999',
-    microcopy: 'FactoryJet has been building for US clients for 25+ years',
+    label: 'businesses served across web design, e-commerce, and custom software',
+    microcopy: 'FactoryJet has been building for US clients for 12+ years',
     categoryLabel: 'TRACK RECORD',
   },
   {
@@ -561,7 +561,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How does FactoryJet keep e-commerce pricing fixed and predictable?',
     answer:
-      'We work fixed-price and milestone-paid — every store is scoped upfront with no hourly billing and no scope-creep invoices. Building e-commerce for US businesses since 2005 means we estimate accurately on the first call, so the quote you sign is what you pay. You get the same Figma-first design process, the same platform engineering quality, the same Lighthouse audit before handover — and full code ownership at handoff.',
+      'We work fixed-price and milestone-paid — every store is scoped upfront with no hourly billing and no scope-creep invoices. Building e-commerce for US businesses means we estimate accurately on the first call, so the quote you sign is what you pay. You get the same Figma-first design process, the same platform engineering quality, the same Lighthouse audit before handover — and full code ownership at handoff.',
   },
 
   /* ── Migrations ── */
@@ -603,7 +603,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US e-commerce agency?',
     answer:
-      'Three things: price (fixed-price — specialized team serving US businesses since 1999), ownership (full codebase delivered to your GitHub on launch day, zero lock-in), and honesty (we\'ll tell you when a simpler solution fits better than a more expensive one). We\'ve delivered 500+ projects for US businesses. We know what actually drives e-commerce revenue versus what looks good in a proposal.',
+      'Three things: price (fixed-price — specialized team serving US businesses), ownership (full codebase delivered to your GitHub on launch day, zero lock-in), and honesty (we\'ll tell you when a simpler solution fits better than a more expensive one). We\'ve delivered 500+ projects for US businesses. We know what actually drives e-commerce revenue versus what looks good in a proposal.',
   },
   {
     category: 'trust',
@@ -851,7 +851,7 @@ export default function EcommerceDevelopmentPage() {
         {/* ── 2. TRUST STATS ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ businesses served. 25 years of e-commerce. US brands trust the results."
+          headline="500+ businesses served. 12 years of e-commerce. US brands trust the results."
         />
 
         {/* ── 3. WHAT GREAT E-COMMERCE LOOKS LIKE ─────────────────────────── */}
@@ -985,7 +985,7 @@ export default function EcommerceDevelopmentPage() {
             {
               icon: '💸',
               title: 'US e-commerce agencies charge several times more for this',
-              body: 'A mid-tier US e-commerce agency bills a multiple of what we charge for a custom store build, before retainers, migration fees, or app configuration. FactoryJet delivers the same Figma-first design, the same platform engineering quality, and the same Lighthouse audit — fixed-price, milestone-paid, with full code ownership at handoff. We have been building e-commerce for US clients since 1999.',
+              body: 'A mid-tier US e-commerce agency bills a multiple of what we charge for a custom store build, before retainers, migration fees, or app configuration. FactoryJet delivers the same Figma-first design, the same platform engineering quality, and the same Lighthouse audit — fixed-price, milestone-paid, with full code ownership at handoff. We have been building e-commerce for US clients.',
             },
           ]}
         />
@@ -1175,7 +1175,7 @@ export default function EcommerceDevelopmentPage() {
           headline="US E-Commerce Is a $1.19 Trillion Market. Most Small Businesses Capture Almost None of It."
           leadParagraphs={[
             "US e-commerce sales are projected to reach $1.19 trillion in 2025 — 21% of all US retail. The businesses capturing the majority of that growth are not the largest brands. They're the mid-size DTC companies with fast, well-built stores that convert mobile traffic efficiently, run automated post-purchase email flows, and don't lose half their ad spend to slow load times.",
-            "FactoryJet has served e-commerce businesses in Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, Tampa, and across the US since 1999. We understand what a 10–50 person brand needs from an e-commerce store: not enterprise complexity, but professional design, sub-2-second mobile performance, and a checkout flow that doesn't leak customers.",
+            "FactoryJet has served e-commerce businesses in Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, Tampa, and across the US. We understand what a 10–50 person brand needs from an e-commerce store: not enterprise complexity, but professional design, sub-2-second mobile performance, and a checkout flow that doesn't leak customers.",
             "The businesses we build for aren't buying a new store because their current one looks bad. They're buying it because they calculated the cost of staying on a template: 1% conversion rate × 5,000 monthly visitors × $80 AOV = $4,000/month. 2.3% × 5,000 × $80 = $9,200/month. That $5,200 monthly difference pays for the build in under 60 days.",
           ]}
           bodySlot={
@@ -1251,7 +1251,7 @@ export default function EcommerceDevelopmentPage() {
         {/* ── 13. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="We've built e-commerce since 2005. We know what actually moves revenue."
+          headline="We've built e-commerce. We know what actually moves revenue."
           lead="FactoryJet has delivered 500+ projects for US businesses across every e-commerce platform. We know which design decisions move the needle on conversion — and which ones just look good in an agency proposal."
           pillars={[
             {
@@ -1282,7 +1282,7 @@ export default function EcommerceDevelopmentPage() {
                 <p>
                   When you <strong>hire ecommerce developers</strong> through FactoryJet, you get a full team — designer,
                   developer, and QA — not a single freelancer juggling five other projects. As a custom ecommerce
-                  development company, we&apos;ve shipped 500+ stores for US businesses since 1999, from first-store DTC
+                  development company, we&apos;ve shipped 500+ stores for US businesses, from first-store DTC
                   brands to multi-vendor marketplaces and ERP-integrated B2B platforms.
                 </p>
                 <p>

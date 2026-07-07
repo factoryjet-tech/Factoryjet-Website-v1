@@ -320,7 +320,7 @@ const ROI_STATS = [
   },
   {
     value: 'Fixed Price',
-    label: 'milestone-paid with full code ownership — 25+ years experience, US-caliber output',
+    label: 'milestone-paid with full code ownership — 12+ years experience, US-caliber output',
     microcopy: 'predictable from quote to launch — no scope-creep invoices',
     categoryLabel: 'PRICING MODEL',
   },
@@ -423,7 +423,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '25+ years of SMB domain experience',
+    feature: '12+ years of SMB domain experience',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="no" />,
@@ -608,7 +608,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'Why is FactoryJet fixed-price, milestone-paid?',
     answer:
-      'Our engineering team brings 25+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery — without the overhead that inflates traditional agency invoices. We\'ve served US businesses for 25 years. When you brief us, an engineer reads it, not an account manager. No Research Triangle Park office overhead built into the quote.',
+      'Our engineering team brings 12+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery — without the overhead that inflates traditional agency invoices. We\'ve served US businesses for 12 years. When you brief us, an engineer reads it, not an account manager. No Research Triangle Park office overhead built into the quote.',
   },
   {
     category: 'pricing',
@@ -653,7 +653,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a local Raleigh AI development agency?',
     answer:
-      'Three differences: price (specialized engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it — weeks, not months), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 15-person Raleigh company, not just enterprise AI theory). Research Triangle agencies charge enterprise rates. We don\'t.',
+      'Three differences: price (specialized engineers serving US businesses for 12+ years), speed (no layers between your brief and the engineer building it — weeks, not months), and SMB depth (500+ small business projects — we understand what operations look like inside a 15-person Raleigh company, not just enterprise AI theory). Research Triangle agencies charge enterprise rates. We don\'t.',
   },
   {
     category: 'trust',
@@ -756,7 +756,7 @@ export default function RaleighAIAgentsPage() {
         {/* ── 2. TRUST STATS ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ businesses served. 25 years of building. One goal: your results."
+          headline="500+ businesses served. 12 years of building. One goal: your results."
         />
 
         {/* ── 3. WHAT IS AN AI AGENT ───────────────────────────────────────── */}
@@ -941,7 +941,7 @@ export default function RaleighAIAgentsPage() {
             {
               icon: '💸',
               title: 'Triangle agency rates reflect Triangle costs',
-              body: 'Research Triangle AI agencies have Research Triangle overhead — office space, tech wages, account management teams. The same chatbot they build at enterprise-level rates costs a fraction of that with FactoryJet, fixed-price. Specialized engineers serving US businesses for 25 years, without the RTP premium baked into every invoice.',
+              body: 'Research Triangle AI agencies have Research Triangle overhead — office space, tech wages, account management teams. The same chatbot they build at enterprise-level rates costs a fraction of that with FactoryJet, fixed-price. Specialized engineers serving US businesses for 12 years, without the RTP premium baked into every invoice.',
             },
           ]}
         />
@@ -1007,7 +1007,7 @@ export default function RaleighAIAgentsPage() {
             {
               icon: '💡',
               title: 'SMB depth across technical industries',
-              body: 'We\'ve built for SaaS companies, professional services firms, healthcare practices, and research-adjacent businesses since 1999. We know where complexity lives inside a 20-person Raleigh company — the compliance edge cases, the technical knowledge base, the workflows that don\'t match the textbook. We build for that reality.',
+              body: 'We\'ve built for SaaS companies, professional services firms, healthcare practices, and research-adjacent businesses. We know where complexity lives inside a 20-person Raleigh company — the compliance edge cases, the technical knowledge base, the workflows that don\'t match the textbook. We build for that reality.',
             },
             {
               icon: '🔒',

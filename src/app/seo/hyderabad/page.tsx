@@ -522,7 +522,7 @@ export default function SeoHyderabad() {
 
         <TestimonialsSection eyebrow="CLIENT RESULTS" headline="What business owners say about working with FactoryJet" region="in" />
 
-        <FAQ eyebrow="HYDERABAD SEO QUESTIONS" headline="Every Question Hyderabad Business Owners Ask About SEO, Answered Simply" lead="25 years of answering these questions. Here are the ones Hyderabad businesses ask most." categories={HYD_FAQ_CATEGORIES} items={HYD_FAQ_ITEMS} />
+        <FAQ eyebrow="HYDERABAD SEO QUESTIONS" headline="Every Question Hyderabad Business Owners Ask About SEO, Answered Simply" lead="12 years of answering these questions. Here are the ones Hyderabad businesses ask most." categories={HYD_FAQ_CATEGORIES} items={HYD_FAQ_ITEMS} />
 
         <FinalCTA
           variant="dark"

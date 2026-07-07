@@ -83,7 +83,7 @@ const faqSchema = {
       name: 'How much does a website redesign cost for a small business?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s website redesign services are fixed-price and scoped to your build. The main cost drivers are page count, whether it\'s a marketing site or an e-commerce store, custom design scope, and CMS integration. We quote the full price up front after a free site audit, so you know the cost before work starts. Fixed-price and milestone-paid — our engineering team has served US businesses for 25+ years with US-hour project management.',
+        text: 'FactoryJet\'s website redesign services are fixed-price and scoped to your build. The main cost drivers are page count, whether it\'s a marketing site or an e-commerce store, custom design scope, and CMS integration. We quote the full price up front after a free site audit, so you know the cost before work starts. Fixed-price and milestone-paid — our engineering team has served US businesses for 12+ years with US-hour project management.',
       },
     },
     {
@@ -525,7 +525,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a website redesign cost for a small business?',
     answer:
-      'FactoryJet\'s website redesign services are fixed-price and scoped to your build. The main drivers are page count, whether it\'s a marketing site or an e-commerce store, custom design scope, and CMS integration. We quote the full price up front after a free site audit, so you know the cost before work starts. Fixed-price and milestone-paid — our engineering team has served US businesses for 25+ years with lean operations and US-hour project management.',
+      'FactoryJet\'s website redesign services are fixed-price and scoped to your build. The main drivers are page count, whether it\'s a marketing site or an e-commerce store, custom design scope, and CMS integration. We quote the full price up front after a free site audit, so you know the cost before work starts. Fixed-price and milestone-paid — our engineering team has served US businesses for 12+ years with lean operations and US-hour project management.',
   },
   {
     category: 'pricing',
@@ -565,7 +565,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US website redesign agency?',
     answer:
-      'Three differences: pricing model (fixed-price and milestone-paid, with specialized engineers serving US businesses since 1999 — no layers of account managers and PMs inflating your bill), speed (we deliver 5-page redesigns in 7 days — traditional agencies average 8–16 weeks for the same scope), and SMB focus (500+ small business projects means we understand the operational reality of your size — you don\'t need enterprise features, you need a site that generates leads and loads fast on a phone). We also own your outcome, not your timeline: fixed prices mean you know the cost before you commit, not after.',
+      'Three differences: pricing model (fixed-price and milestone-paid, with specialized engineers serving US businesses — no layers of account managers and PMs inflating your bill), speed (we deliver 5-page redesigns in 7 days — traditional agencies average 8–16 weeks for the same scope), and SMB focus (500+ small business projects means we understand the operational reality of your size — you don\'t need enterprise features, you need a site that generates leads and loads fast on a phone). We also own your outcome, not your timeline: fixed prices mean you know the cost before you commit, not after.',
   },
   {
     category: 'trust',
@@ -775,7 +775,7 @@ export default function WebsiteRedesignPage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ redesigns. 25 years of building. Modern sites that convert."
+          headline="500+ redesigns. 12 years of building. Modern sites that convert."
         />
 
         {/* ── 4. WHAT IS A WEBSITE REDESIGN ────────────────────────────────── */}
@@ -883,7 +883,7 @@ export default function WebsiteRedesignPage() {
             },
             {
               title: 'Traditional agencies charge enterprise prices for SMB problems',
-              body: 'The average US web design agency charges several times more for a business website redesign, with 8–16 week timelines and hourly billing that makes the final cost unpredictable. That pricing was built for companies with design directors, multiple stakeholder reviews, and RFP processes. FactoryJet delivers the same quality of engineering — fixed-price and milestone-paid — because our experienced team has served US businesses for 25+ years with lean operations. Fixed-price contracts mean you know the cost before we start, not after.',
+              body: 'The average US web design agency charges several times more for a business website redesign, with 8–16 week timelines and hourly billing that makes the final cost unpredictable. That pricing was built for companies with design directors, multiple stakeholder reviews, and RFP processes. FactoryJet delivers the same quality of engineering — fixed-price and milestone-paid — because our experienced team has served US businesses for 12+ years with lean operations. Fixed-price contracts mean you know the cost before we start, not after.',
             },
           ]}
         />

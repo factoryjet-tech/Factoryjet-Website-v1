@@ -389,7 +389,7 @@ export default function Hero() {
             }}
           >
             Web design, e-commerce, AI agents and AI SEO for Birmingham&rsquo;s
-            60,000 businesses — at a fixed, published price you&rsquo;ve been
+            60,000 businesses — at a fixed, transparent quote you&rsquo;ve been
             quoted from Jewellery Quarter and Brindleyplace agencies.
           </p>
           <p

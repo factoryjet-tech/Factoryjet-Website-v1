@@ -113,7 +113,7 @@ export default function Hero() {
           className="text-sm md:text-base text-white/70 max-w-xl mx-auto mb-6 leading-relaxed"
         >
           AI-native websites built on Next.js 15, engineered to convert.
-          Enterprise-grade performance at a fixed, published price.
+          Enterprise-grade performance at a fixed, transparent quote.
         </p>
 
         {/* 4. CTA buttons */}

@@ -132,7 +132,7 @@ export default function GenerativeEngineOptimizationPage() {
         eyebrow="Generative Engine Optimization · GEO"
         headline={<>Get named by AI when your buyers ask.</>}
         lead="We structure your content, schema, and off-site presence so ChatGPT, Google AI Overviews, Perplexity, and Gemini cite your business. Built for small teams, not enterprises."
-        trustItems={['500+ sites shipped', '25+ years expertise', 'Founder-led']}
+        trustItems={['500+ sites shipped', '12+ years expertise', 'Founder-led']}
         formSlot={<HeroInlineForm region="us" source="us_services_generative_engine_optimization_hero" submitLabel="Get my free AI visibility check" />}
       />
 

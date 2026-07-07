@@ -36,7 +36,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Why are some web design agencies so much cheaper than others?',
-      a: "Price differences come from four factors: location (India/Philippines-based teams cost at a fixed, published price with repeatable systems are faster and cheaper than custom boutiques), technology stack (Next.js/React sites take less time to build than bespoke CMSes), and scope (template-based builds are faster but limit SEO and design flexibility). A $2,000 quote can be legitimate if the agency has efficient workflows and offshore cost structure — or it can mean a $79 ThemeForest template with minimal customization.",
+      a: "Price differences come from four factors: location (India/Philippines-based teams cost at a fixed, transparent price with repeatable systems are faster and cheaper than custom boutiques), technology stack (Next.js/React sites take less time to build than bespoke CMSes), and scope (template-based builds are faster but limit SEO and design flexibility). A $2,000 quote can be legitimate if the agency has efficient workflows and offshore cost structure — or it can mean a $79 ThemeForest template with minimal customization.",
     },
     {
       q: 'Do I need to pay monthly fees after my website is built?',

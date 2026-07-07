@@ -273,7 +273,7 @@ export default function LondonHubPage() {
                   <a className="b2" href="#services">Explore London services</a>
                 </div>
                 <div className="hstats">
-                  <div className="hstat"><div className="n"><CountUp value={500} suffix="+" /></div><div className="l">sites delivered since 2005</div></div>
+                  <div className="hstat"><div className="n"><CountUp value={500} suffix="+" /></div><div className="l">sites delivered</div></div>
                   <div className="hstat"><div className="n"><CountUp value={7} suffix="-day" /></div><div className="l">express delivery available</div></div>
                   <div className="hstat"><div className="n">100%</div><div className="l">you own the code</div></div>
                 </div>

@@ -581,7 +581,7 @@ export default function WebApplicationDevelopmentPage() {
         headline="Custom Web Applications Built for US Businesses, Fixed Price"
         lead="Booking systems, customer portals, SaaS MVPs, internal dashboards. FactoryJet builds production-ready web apps at below US development agency benchmarks — fixed price, phased delivery, 60-day bug warranty."
         secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
-        trustItems={['500+ US businesses served', '25+ years engineering experience', 'below traditional agency rates']}
+        trustItems={['500+ US businesses served', '12+ years engineering experience', 'below traditional agency rates']}
         rightSlot={
           <div className="rounded-2xl border border-fj-neutral-200 bg-white p-6 space-y-4">
             <p className="text-xs font-fj-mono uppercase tracking-widest text-fj-neutral-400">Build vs. Buy Decision Framework</p>

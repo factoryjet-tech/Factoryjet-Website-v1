@@ -798,8 +798,8 @@ export default function EcommerceSeoPage() {
       </div>
       <div className="dark-card">
         <span style={{ fontSize: '28px', marginBottom: '16px', display: 'block' }}>🏆</span>
-        <h3 style={{ color: '#fff', marginBottom: '12px' }}>20+ years of ecommerce, every algorithm shift navigated</h3>
-        <p>FactoryJet has been building and optimising ecommerce stores since 2005; over 20 years of UK ecommerce context. That covers every major Google algorithm update from Florida through to the Helpful Content system, every platform migration from static HTML to Shopify Liquid, and the shift from keyword density to entity-based SEO and AI search citations. That institutional knowledge is a genuine competitive advantage when you're making long-term SEO investments.</p>
+        <h3 style={{ color: '#fff', marginBottom: '12px' }}>12+ years of ecommerce, every algorithm shift navigated</h3>
+        <p>FactoryJet has been building and optimising ecommerce stores; over a decade of UK ecommerce context. That covers every major Google algorithm update from Florida through to the Helpful Content system, every platform migration from static HTML to Shopify Liquid, and the shift from keyword density to entity-based SEO and AI search citations. That institutional knowledge is a genuine competitive advantage when you're making long-term SEO investments.</p>
       </div>
     </div>
   </div>

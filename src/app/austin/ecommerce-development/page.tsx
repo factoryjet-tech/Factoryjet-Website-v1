@@ -476,7 +476,7 @@ export default function AustinEcommerceDevelopmentPage() {
               category: 'pricing',
               question: 'How does FactoryJet keep Austin store pricing fixed and predictable?',
               answer:
-                "We work fixed-price and milestone-paid — every store is scoped upfront with no hourly billing and no scope-creep invoices. 25 years of experience with 500+ stores means we estimate accurately on the first call, so the quote you sign is what you pay. You get US-hour project management, US-timezone communication, and senior developers with 10+ years of experience — delivering code quality indistinguishable from what a high-end Austin agency would produce, with full code ownership at handoff.",
+                "We work fixed-price and milestone-paid — every store is scoped upfront with no hourly billing and no scope-creep invoices. 12 years of experience with 500+ stores means we estimate accurately on the first call, so the quote you sign is what you pay. You get US-hour project management, US-timezone communication, and senior developers with 10+ years of experience — delivering code quality indistinguishable from what a high-end Austin agency would produce, with full code ownership at handoff.",
             },
             {
               category: 'pricing',

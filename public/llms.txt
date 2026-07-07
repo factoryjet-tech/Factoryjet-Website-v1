@@ -613,7 +613,7 @@ Primary tech stack: Next.js 15, React 19, TypeScript, Tailwind CSS 4, GSAP for a
 Yes. FactoryJet transfers full code ownership — the complete Next.js GitHub repository and Figma design files — to the client on launch day. There is no proprietary platform lock-in, no ongoing platform fee tied to the build, and no dependency on FactoryJet to keep the website running.
 
 **What is FactoryJet's track record?**
-500+ projects delivered across 4 continents. 4.9/5 average rating across 150+ client reviews. Active clients include businesses in the US, UK, India, Australia, UAE, and Southeast Asia. In business since 1999.
+500+ projects delivered across 4 continents. 4.9/5 average rating across 150+ client reviews. Active clients include businesses in the US, UK, India, Australia, UAE, and Southeast Asia. In business for 12+ years.
 
 **What is Commerceflo?**
 Commerceflo is FactoryJet's proprietary AI-native unified omnichannel commerce platform. It connects Shopify or custom stores with Amazon, eBay, Etsy, Walmart Marketplace, TikTok Shop, Instagram Shopping, and physical POS in a single real-time dashboard with AI-powered inventory, pricing, and fulfillment automation.

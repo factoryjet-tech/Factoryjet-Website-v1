@@ -536,7 +536,7 @@ export default function ColoradoSpringsSEOPage() {
 
                 <div className="team-trust-chips">
                   <span className="trust-chip"><span className="tc-dot" />500+ businesses ranked</span>
-                  <span className="trust-chip"><span className="tc-dot" />25+ years expertise</span>
+                  <span className="trust-chip"><span className="tc-dot" />12+ years expertise</span>
                   <span className="trust-chip"><span className="tc-dot" />7-day launch guarantee</span>
                 </div>
 

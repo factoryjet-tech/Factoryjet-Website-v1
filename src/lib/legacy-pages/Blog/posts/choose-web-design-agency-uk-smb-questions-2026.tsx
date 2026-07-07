@@ -24,7 +24,7 @@ export const post: BlogPost = {
     "Verify post-launch support terms: response times, bug-fix windows, and monthly maintenance costs to avoid surprise bills after go-live.",
   ],
   faqs: [
-    { q: "What should I expect to pay for a business website in the UK in 2026?", a: "UK web design agencies typically charge £3,000–£15,000 for SMB websites, depending on complexity and features. Offshore agencies with UK-focused teams deliver comparable quality at £1,500–£8,000, often at a fixed, published price. E-commerce sites range £2,000–£8,000 offshore vs £5,000–£25,000 locally. Always request itemised quotes covering design, development, content migration, and first-year hosting." },
+    { q: "What should I expect to pay for a business website in the UK in 2026?", a: "UK web design agencies typically charge £3,000–£15,000 for SMB websites, depending on complexity and features. Offshore agencies with UK-focused teams deliver comparable quality at £1,500–£8,000, often at a fixed, transparent price. E-commerce sites range £2,000–£8,000 offshore vs £5,000–£25,000 locally. Always request itemised quotes covering design, development, content migration, and first-year hosting." },
     { q: "How long does it take to build a professional business website?", a: "Most SMB websites take 4–12 weeks from kickoff to launch. Agencies using modern frameworks like Next.js or headless WordPress can deliver in 2–4 weeks. Delays usually stem from client content approval, not technical work. Ask for a project timeline with milestone dates and clarify what happens if you miss a content deadline." },
     { q: "What is a Lighthouse score and why does it matter?", a: "Lighthouse is Google's open-source tool measuring website performance, accessibility, SEO, and best practices on a 0–100 scale. Scores below 90 indicate slow load times, poor mobile experience, or SEO issues that hurt rankings. Request Lighthouse reports for the agency's recent projects — confident agencies will show 92+ scores across all categories." },
     { q: "Should I choose a local UK agency or an offshore team?", a: "Both can deliver quality work. Local agencies offer face-to-face meetings and same-timezone communication but charge premium rates. Offshore agencies with UK clients (like those serving Sheffield, Staines, or London SMBs) provide comparable quality at 50–60% lower cost, often with faster delivery. Evaluate based on portfolio, client references, and communication responsiveness, not location alone." },
@@ -184,7 +184,7 @@ export const post: BlogPost = {
         <a href="https://factoryjet.com/contact" className="inline-block bg-white text-[#0052CC] font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition-colors text-lg">
           Book a Free 30-Min Consultation →
         </a>
-        <p className="text-blue-200 text-sm mt-6">500+ businesses · 98% satisfaction · ISO certified · 25+ years combined experience</p>
+        <p className="text-blue-200 text-sm mt-6">500+ businesses · 98% satisfaction · ISO certified · 12+ years combined experience</p>
       </div>
     </>
   ),

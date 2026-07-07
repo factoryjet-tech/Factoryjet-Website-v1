@@ -186,7 +186,7 @@ const faqPairs: Array<{ q: string; a: string }> = [
     a: "Share of AI voice measures how frequently AI systems like ChatGPT, Claude, Perplexity, and Google AI Overviews reference and recommend your brand compared to competitors. It is the AI equivalent of share of voice in traditional marketing. FactoryJet tracks share of AI voice by systematically querying AI platforms with your target keywords and measuring how often your brand appears versus competitors. This gives you visibility into a channel that most UK businesses are completely blind to — and one that is growing at 527% year-over-year in referral traffic.",
   },
   {
-    q: "Why is FactoryJet at a fixed, published price?",
+    q: "Why is FactoryJet at a fixed, transparent price?",
     a: "Three reasons. First, we are based in Bengaluru, India, which gives us access to world-class engineering talent at a fraction of UK salary costs. Second, our AI-augmented development workflow eliminates the inefficiencies that inflate traditional agency billing — we use AI throughout design generation, code review, testing, and quality assurance. Third, we build on a component-based architecture that allows us to assemble high-quality sites faster than agencies building from scratch every time. The savings are structural, not quality-driven. Every site we deliver scores 90+ on Google Lighthouse — matching or exceeding the quality of agencies charging three times more.",
   },
   {

@@ -102,7 +102,7 @@ const jsonLd = {
           name: 'How does FactoryJet keep pricing fixed and predictable?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'We work fixed-price and milestone-paid — 25+ years of delivery experience serving the US market lets us scope accurately on the first call. You get senior Figma design, Next.js engineering, and responsive US-hour project management without hourly billing surprises.',
+            text: 'We work fixed-price and milestone-paid — 12+ years of delivery experience serving the US market lets us scope accurately on the first call. You get senior Figma design, Next.js engineering, and responsive US-hour project management without hourly billing surprises.',
           },
         },
         {
@@ -298,7 +298,7 @@ const FAQS = [
   },
   {
     q: 'How do you keep pricing lower than typical agency quotes?',
-    a: 'We work fixed-price and milestone-paid, with 25+ years of experience specifically serving the US market and US-hour project management. Our lean operations let us scope accurately on the first call. The design quality, code quality, and communication are exactly what you\'d get from a traditional agency that charges several times more.',
+    a: 'We work fixed-price and milestone-paid, with 12+ years of experience specifically serving the US market and US-hour project management. Our lean operations let us scope accurately on the first call. The design quality, code quality, and communication are exactly what you\'d get from a traditional agency that charges several times more.',
   },
   {
     q: 'What\'s included in the fixed price?',

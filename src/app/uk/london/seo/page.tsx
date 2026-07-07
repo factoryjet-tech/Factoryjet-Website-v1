@@ -249,7 +249,7 @@ export default function LondonSeoPage() {
 
                 <div className="byline">
                   <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ sites and SEO projects since 2005</span></div>
+                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ sites and SEO projects</span></div>
                   <div className="upd">Last updated<br />1 Jul 2026</div>
                 </div>
 

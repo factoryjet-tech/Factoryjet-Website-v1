@@ -5,7 +5,7 @@ export const post: BlogPost = {
   id: '142',
   slug: "sell-ai-automation-services-uk-agency-playbook-2026",
   title: "How to Sell AI Automation Services in 2026: The UK Agency Playbook (25+ Years Refined)",
-  excerpt: "Selling AI automation services in 2026 requires positioning as a business-outcome partner, not a tech vendor—focusing on measurable ROI, vertical-specific use cases, and transparent pricing that UK SMBs trust. This playbook distills 25+ years of agency experience into a repeatable sales framework.",
+  excerpt: "Selling AI automation services in 2026 requires positioning as a business-outcome partner, not a tech vendor—focusing on measurable ROI, vertical-specific use cases, and transparent pricing that UK SMBs trust. This playbook distills 12+ years of agency experience into a repeatable sales framework.",
   category: "Emerging Tech",
   author: 'Bhavesh Barot',
   date: "May 07, 2026",
@@ -13,7 +13,7 @@ export const post: BlogPost = {
   imageUrl: "/blog-images/sell-ai-automation-services-uk-agency-playbook-2026-hero.webp",
   meta: {
     title: "How to Sell AI Automation Services in 2026: UK Agency Playbook",
-    description: "25+ years of agency experience in one playbook. Learn ROI-first positioning, vertical use cases, and pricing strategies that UK SMBs trust when buying AI automation.",
+    description: "12+ years of agency experience in one playbook. Learn ROI-first positioning, vertical use cases, and pricing strategies that UK SMBs trust when buying AI automation.",
   },
   keyTakeaways: [
     "Position AI automation as a business-outcome investment, not a technology purchase—lead with cost savings, time recovery, and revenue impact in the first 90 days.",
@@ -202,7 +202,7 @@ export const post: BlogPost = {
         <a href="https://factoryjet.com/contact" className="inline-block bg-white text-[#0052CC] font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition-colors text-lg">
           Book a Free 30-Min Consultation →
         </a>
-        <p className="text-blue-200 text-sm mt-6">500+ businesses · 98% satisfaction · ISO certified · 25+ years combined experience</p>
+        <p className="text-blue-200 text-sm mt-6">500+ businesses · 98% satisfaction · ISO certified · 12+ years combined experience</p>
       </div>
     </>
   ),

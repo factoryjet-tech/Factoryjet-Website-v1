@@ -631,7 +631,7 @@ export const post: BlogPost = {
             Bhavesh Barot
           </p>
           <p style={{ color: '#6b7280', fontSize: '14px', lineHeight: 1.6, margin: 0 }}>
-            Founder of FactoryJet. Returns on your time, 500+ websites delivered, 25+ years in
+            Founder of FactoryJet. Returns on your time, 500+ websites delivered, 12+ years in
             web development and e-commerce. Obsessed with measurable results, not vanity metrics.
           </p>
         </div>

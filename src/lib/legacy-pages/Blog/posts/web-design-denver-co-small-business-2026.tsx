@@ -57,7 +57,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Why should a Denver small business choose FactoryJet over a local Denver agency?',
-      a: "Choose FactoryJet if you want: Lighthouse 100/100 scores (guaranteed, with PageSpeed proof on delivery), 7-day delivery, WCAG 2.2 compliance, full technical SEO, and a starting price of $1,999 — roughly at a fixed, published price. We've served 500+ businesses since 1999 and provide named US client references. Local Denver agencies make sense if you need in-person discovery sessions or weekly face-to-face meetings. For everything else, the technical quality is equivalent and the savings are real. Start with a free quote at factoryjet.com/contact.",
+      a: "Choose FactoryJet if you want: Lighthouse 100/100 scores (guaranteed, with PageSpeed proof on delivery), 7-day delivery, WCAG 2.2 compliance, full technical SEO, and a starting price of $1,999 — roughly at a fixed, transparent price. We've served 500+ businesses and provide named US client references. Local Denver agencies make sense if you need in-person discovery sessions or weekly face-to-face meetings. For everything else, the technical quality is equivalent and the savings are real. Start with a free quote at factoryjet.com/contact.",
     },
   ],
   content: (

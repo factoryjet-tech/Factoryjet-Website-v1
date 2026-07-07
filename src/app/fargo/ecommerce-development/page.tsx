@@ -164,7 +164,7 @@ export default function Page() {
         <StrategicDarkSection
           eyebrow="THE FACTORYJET DIFFERENCE"
           headline="Three Reasons Silicon Prairie Businesses Choose Us Over Local Agencies"
-          lead="Onsharp and Bluestem are capable agencies — but built for enterprise clients and WordPress. FactoryJet launches full Shopify stores in 7 days at a fixed, published price, with AI-powered features no local agency offers at SMB pricing."
+          lead="Onsharp and Bluestem are capable agencies — but built for enterprise clients and WordPress. FactoryJet launches full Shopify stores in 7 days at a fixed, transparent quote, with AI-powered features no local agency offers at SMB pricing."
           pillars={[
             {
               title: 'AI-Native Stores',
@@ -290,7 +290,7 @@ export default function Page() {
         <PricingTiers
           eyebrow="TRANSPARENT PRICING"
           headline="Fixed-Price Shopify Packages for Fargo Businesses"
-          lead="Fargo agency rates for a comparable Shopify build typically run enterprise-level with 4–12 week timelines. FactoryJet delivers a full custom Shopify store in 7 days — at a fixed, published price. Pricing is scoped to your build, and every project is quoted up front after a free discovery call so you know the full cost before work starts."
+          lead="Fargo agency rates for a comparable Shopify build typically run enterprise-level with 4–12 week timelines. FactoryJet delivers a full custom Shopify store in 7 days — at a fixed, transparent quote. Pricing is scoped to your build, and every project is quoted up front after a free discovery call so you know the full cost before work starts."
           tiers={[
             {
               priceRange: 'Fixed-price',

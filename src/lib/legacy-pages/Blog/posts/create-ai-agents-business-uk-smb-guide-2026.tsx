@@ -26,7 +26,7 @@ export const post: BlogPost = {
   ],
   faqs: [
     { q: "What is an AI agent and how does it differ from a chatbot?", a: "An AI agent autonomously completes tasks like booking appointments, processing refunds, or qualifying sales leads by accessing your business systems and making decisions based on context. Traditional chatbots follow scripted decision trees and can only answer pre-programmed questions. AI agents use large language models to understand intent, retrieve information from databases, and execute multi-step workflows without human intervention." },
-    { q: "How much does it cost to build an AI agent for a UK small business in 2026?", a: "Custom AI agent development for UK SMBs ranges from £3,000 for basic customer support chatbots to £8,000+ for voice agents with CRM integration and payment processing. Monthly platform fees add £50-£200 depending on conversation volume. FactoryJet builds AI agents from £3,000 with 2-4 week delivery, at a fixed, published price." },
+    { q: "How much does it cost to build an AI agent for a UK small business in 2026?", a: "Custom AI agent development for UK SMBs ranges from £3,000 for basic customer support chatbots to £8,000+ for voice agents with CRM integration and payment processing. Monthly platform fees add £50-£200 depending on conversation volume. FactoryJet builds AI agents from £3,000 with 2-4 week delivery, at a fixed, transparent price." },
     { q: "Do I need technical knowledge to create an AI agent?", a: "No-code platforms like Voiceflow and Botpress let non-technical users build basic AI agents through visual interfaces. However, integrating with your CRM, payment gateway, or booking system requires API configuration and webhook setup. Most UK SMBs work with developers for initial build and integration, then manage conversation training and content updates internally." },
     { q: "What business processes can AI agents automate?", a: "AI agents excel at high-volume, repetitive tasks: answering product questions, booking appointments, qualifying sales leads, processing returns, providing order status updates, collecting customer feedback, scheduling service calls, and handling tier-1 support queries. They integrate with calendars, CRMs, payment processors, and inventory systems to complete transactions end-to-end." },
     { q: "How do I ensure my AI agent complies with UK GDPR regulations?", a: "GDPR-compliant AI agents require explicit consent collection before processing personal data, clear privacy notices explaining data use, 30-day data retention policies with automatic deletion, and right-to-erasure workflows allowing customers to request data removal. Store conversation logs in UK or EU data centres, implement role-based access controls, and conduct Data Protection Impact Assessments for high-risk processing." },
@@ -217,7 +217,7 @@ export const post: BlogPost = {
         <a href="https://factoryjet.com/contact" className="inline-block bg-white text-[#0052CC] font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition-colors text-lg">
           Book a Free 30-Min Consultation →
         </a>
-        <p className="text-blue-200 text-sm mt-6">500+ businesses · 98% satisfaction · ISO certified · 25+ years combined experience</p>
+        <p className="text-blue-200 text-sm mt-6">500+ businesses · 98% satisfaction · ISO certified · 12+ years combined experience</p>
       </div>
     </>
   ),

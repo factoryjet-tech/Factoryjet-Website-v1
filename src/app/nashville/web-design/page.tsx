@@ -106,7 +106,7 @@ export default function NashvilleWebDesignPage() {
       <StrategicDarkSection
         eyebrow="WHY FACTORYJET"
         headline={"Why Nashville Businesses Choose FactoryJet Over Local Agencies"}
-        lead={"Local Nashville agencies include Bullhorn Creative (branding + web, Nashville-based), Southern Web Group (digital + web), and Crackerbox (web design studio). None publish a 7-day delivery commitment. FactoryJet's Growth tier covers 10–15 pages, a blog CMS, lead capture, GA4, and a training session — at a fixed, published price for comparable scope. We build in Next.js, not WordPress, which means faster load times and no monthly plugin maintenance overhead for your team.\n\nWe don't win on price alone. Every project ships with JSON-LD schema for AI search crawlers, performance budgets enforced from the first commit, and a recorded handover so your team can self-manage from day one. No lock-in. No proprietary platform. No surprise invoices after launch. And unlike most local agencies, we publish all three pricing tiers before you ever book a call."}
+        lead={"Local Nashville agencies include Bullhorn Creative (branding + web, Nashville-based), Southern Web Group (digital + web), and Crackerbox (web design studio). None publish a 7-day delivery commitment. FactoryJet's Growth tier covers 10–15 pages, a blog CMS, lead capture, GA4, and a training session — at a fixed, transparent quote for comparable scope. We build in Next.js, not WordPress, which means faster load times and no monthly plugin maintenance overhead for your team.\n\nWe don't win on price alone. Every project ships with JSON-LD schema for AI search crawlers, performance budgets enforced from the first commit, and a recorded handover so your team can self-manage from day one. No lock-in. No proprietary platform. No surprise invoices after launch. And unlike most local agencies, we publish all three pricing tiers before you ever book a call."}
         pillars={[
           { title: 'AI-native',    body: 'Every site is built with an AI-assisted workflow that compresses build time without compressing quality. We have delivered 500+ projects through this system.' },
           { title: 'Transparent',  body: 'Pricing on the first call. No discovery fees, no "it depends" quotes that take three weeks to arrive. Fixed price, agreed up front.' },
@@ -179,7 +179,7 @@ export default function NashvilleWebDesignPage() {
       <ComparisonTable
         eyebrow={"WHY FACTORYJET"}
         headline={"FactoryJet vs. Nashville Web Agencies"}
-        lead={"Nashville's local agency market includes credible names like Bullhorn Creative, Southern Web Group, and Crackerbox. None publish a 7-day delivery commitment or a public price list. FactoryJet Growth delivers 10–15 pages, blog CMS, lead capture, GA4, and Next.js — at a fixed, published price for the same scope, with a guaranteed timeline and a codebase you own outright."}
+        lead={"Nashville's local agency market includes credible names like Bullhorn Creative, Southern Web Group, and Crackerbox. None publish a 7-day delivery commitment or a public price list. FactoryJet Growth delivers 10–15 pages, blog CMS, lead capture, GA4, and Next.js — at a fixed, transparent quote for the same scope, with a guaranteed timeline and a codebase you own outright."}
         columns={[{"label":"Their approach"},{"label":"FactoryJet","isFactoryJet":true},{"label":"Why we win"}]}
         rows={[
           {

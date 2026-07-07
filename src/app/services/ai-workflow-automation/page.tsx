@@ -144,7 +144,7 @@ const faqSchema = {
       name: 'Why is FactoryJet fixed-price, milestone-paid?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We work fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices. Our engineering team brings 25+ years of focused expertise serving US businesses. You get production-grade workflow architecture, integration engineering, and delivery. You brief an engineer; that engineer builds it. No account management layers between your brief and the build. Full code ownership at handoff.',
+        text: 'We work fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices. Our engineering team brings 12+ years of focused expertise serving US businesses. You get production-grade workflow architecture, integration engineering, and delivery. You brief an engineer; that engineer builds it. No account management layers between your brief and the build. Full code ownership at handoff.',
       },
     },
     {
@@ -224,7 +224,7 @@ const faqSchema = {
       name: 'How is FactoryJet different from hiring a US automation consultant?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Three differences: price (specialized engineers serving US businesses for 25+ years), speed (no sales layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we know the operational reality of businesses your size, not just enterprise theory). We also won\'t propose AI automation for a workflow where a simple Zap would do the job.',
+        text: 'Three differences: price (specialized engineers serving US businesses for 12+ years), speed (no sales layers between your brief and the engineer building it), and SMB depth (500+ small business projects — we know the operational reality of businesses your size, not just enterprise theory). We also won\'t propose AI automation for a workflow where a simple Zap would do the job.',
       },
     },
     {
@@ -539,7 +539,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '25+ years of SMB domain experience',
+    feature: '12+ years of SMB domain experience',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="no" />,
@@ -678,7 +678,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'Why is FactoryJet fixed-price, milestone-paid?',
     answer:
-      'We work fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices. Our engineering team brings 25+ years of focused expertise serving US businesses. You get production-grade workflow architecture, integration engineering, and delivery. You brief an engineer; that engineer builds it. No account management layers between your brief and the build. Full code ownership at handoff.',
+      'We work fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices. Our engineering team brings 12+ years of focused expertise serving US businesses. You get production-grade workflow architecture, integration engineering, and delivery. You brief an engineer; that engineer builds it. No account management layers between your brief and the build. Full code ownership at handoff.',
   },
   {
     category: 'pricing',
@@ -748,7 +748,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US automation consultant?',
     answer:
-      'Three differences: pricing model (fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices, backed by 25+ years serving US businesses), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand operations inside a 15-person company, not just enterprise theory). We also won\'t propose AI automation when a simpler solution would do the job.',
+      'Three differences: pricing model (fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices, backed by 12+ years serving US businesses), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects — we understand operations inside a 15-person company, not just enterprise theory). We also won\'t propose AI automation when a simpler solution would do the job.',
   },
 ];
 
@@ -845,7 +845,7 @@ export default function AIWorkflowAutomationPage() {
         {/* ── 2. TRUST STATS ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ businesses. 25 years of building. One goal: your results."
+          headline="500+ businesses. 12 years of building. One goal: your results."
         />
 
         {/* ── 3. WHAT IS AI WORKFLOW AUTOMATION ───────────────────────────── */}
@@ -912,7 +912,7 @@ export default function AIWorkflowAutomationPage() {
                 </p>
               </div>
               <p>
-                FactoryJet builds AI workflow automation on n8n, Make.com, and LangChain — connected to your CRM, e-commerce platform, accounting software, and communication tools. We handle the engineering; you handle the work that actually needs a human. We&apos;ve been building for US small and mid-sized businesses since 1999 and understand the operational reality inside a 10–50 person company. The messy data, the exception cases, the Friday afternoon task that someone always forgets — that&apos;s exactly what we build for.
+                FactoryJet builds AI workflow automation on n8n, Make.com, and LangChain — connected to your CRM, e-commerce platform, accounting software, and communication tools. We handle the engineering; you handle the work that actually needs a human. We&apos;ve been building for US small and mid-sized businesses and understand the operational reality inside a 10–50 person company. The messy data, the exception cases, the Friday afternoon task that someone always forgets — that&apos;s exactly what we build for.
               </p>
 
               <div className="grid grid-cols-2 gap-2" aria-hidden>
@@ -1096,7 +1096,7 @@ export default function AIWorkflowAutomationPage() {
             {
               icon: '💡',
               title: 'We understand SMB operations, not just enterprise theory',
-              body: 'We\'ve built for e-commerce brands, accounting firms, healthcare practices, and SaaS companies since 1999. We know what a 15-person company\'s data actually looks like — the messy CRM, the inconsistent CSV exports, the Frankenstein spreadsheet someone built five years ago. We build automation that works with your real data, not a clean demo dataset.',
+              body: 'We\'ve built for e-commerce brands, accounting firms, healthcare practices, and SaaS companies. We know what a 15-person company\'s data actually looks like — the messy CRM, the inconsistent CSV exports, the Frankenstein spreadsheet someone built five years ago. We build automation that works with your real data, not a clean demo dataset.',
             },
             {
               icon: '🔒',

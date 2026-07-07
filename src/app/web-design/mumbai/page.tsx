@@ -257,7 +257,7 @@ const MUMBAI_FAQ_ITEMS = [
     category: 'pricing',
     question: 'What makes FactoryJet better value than a Mumbai web agency?',
     answer:
-      "We are a specialised web engineering team — not a full-service agency with account managers, strategy teams, and large office overheads in BKC. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. We have been building websites since 1999. You pay for the build, not our admin structure.",
+      "We are a specialised web engineering team — not a full-service agency with account managers, strategy teams, and large office overheads in BKC. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at 60–70% lower cost. We have been building websites. You pay for the build, not our admin structure.",
   },
   {
     category: 'pricing',
@@ -580,7 +580,7 @@ export default function MumbaiWebDesignPage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ websites built. 25 years of web engineering. One 7-day guarantee."
+          headline="500+ websites built. 12 years of web engineering. One 7-day guarantee."
         />
 
         {/* ── 4. CITY CONTEXT ──────────────────────────────────────────────── */}
@@ -722,7 +722,7 @@ export default function MumbaiWebDesignPage() {
             {
               icon: '⚡',
               title: '7-day delivery. In writing. Or you do not pay.',
-              body: "Mumbai's market moves fast. Waiting 16 weeks for an agency to deliver a website you briefed in April is not a plan — it's a liability. FactoryJet delivers in 7 days, with the guarantee written into the project agreement. We have delivered on time on 97% of all projects since 2005.",
+              body: "Mumbai's market moves fast. Waiting 16 weeks for an agency to deliver a website you briefed in April is not a plan — it's a liability. FactoryJet delivers in 7 days, with the guarantee written into the project agreement. We have delivered on time on 97% of all projects.",
             },
             {
               icon: '🏗️',
@@ -731,7 +731,7 @@ export default function MumbaiWebDesignPage() {
             },
             {
               icon: '📋',
-              title: 'Fixed price. Published before the first call.',
+              title: 'Fixed price. Agreed before we start.',
               body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your site running.",
             },
           ]}

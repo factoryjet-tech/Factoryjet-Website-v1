@@ -464,7 +464,7 @@ export default function KolkataEcommercePage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ stores launched. 25 years of ecommerce engineering. One 7-day guarantee."
+          headline="500+ stores launched. 12 years of ecommerce engineering. One 7-day guarantee."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
@@ -611,7 +611,7 @@ export default function KolkataEcommercePage() {
             {
               icon: '⚡',
               title: '7-day delivery. In writing. Or you do not pay the balance.',
-              body: "Kolkata's market moves fast. Waiting 16 weeks for an agency to deliver a store you briefed in April is not a plan — it is a liability. FactoryJet delivers Shopify and WooCommerce stores in 7 days, with the guarantee written into the project agreement. We have delivered on time for 97% of all builds since 2005.",
+              body: "Kolkata's market moves fast. Waiting 16 weeks for an agency to deliver a store you briefed in April is not a plan — it is a liability. FactoryJet delivers Shopify and WooCommerce stores in 7 days, with the guarantee written into the project agreement. We have delivered on time for 97% of all builds.",
             },
             {
               icon: '📱',
@@ -620,7 +620,7 @@ export default function KolkataEcommercePage() {
             },
             {
               icon: '📋',
-              title: 'Fixed price. Published before the first call.',
+              title: 'Fixed price. Agreed before we start.',
               body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your store running.",
             },
           ]}

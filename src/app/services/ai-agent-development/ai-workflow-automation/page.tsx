@@ -194,7 +194,7 @@ const WORKFLOW_MARKET_STATS = [
   },
   {
     value: '500+',
-    label: 'businesses served by FactoryJet since 1999 — across India, US, UK, and UAE',
+    label: 'businesses served by FactoryJet — across India, US, UK, and UAE',
     sourceUrl: 'https://factoryjet.com/about',
     sourceLabel: 'FactoryJet Track Record',
   },
@@ -290,7 +290,7 @@ const WORKFLOW_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '500+ India SMB projects since 1999',
+    feature: '500+ India SMB projects',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="nc" kind="no" />,
@@ -420,7 +420,7 @@ const WORKFLOW_FAQ_ITEMS = [
   {
     category: 'tools',
     question: 'Can you connect tools that do not have native integrations?',
-    answer: "Yes. For tools without APIs — like older Tally versions — we use the TallyPrime XML bridge, screen-level automation, or scheduled data exports. For tools with APIs that lack native connectors, we write custom API adapters. For tools that only support email or PDF output, we use AI document parsing to extract structured data. We have connected nearly every tool in the Indian SMB ecosystem over 25 years.",
+    answer: "Yes. For tools without APIs — like older Tally versions — we use the TallyPrime XML bridge, screen-level automation, or scheduled data exports. For tools with APIs that lack native connectors, we write custom API adapters. For tools that only support email or PDF output, we use AI document parsing to extract structured data. We have connected nearly every tool in the Indian SMB ecosystem over 12 years.",
   },
   {
     category: 'tools',
@@ -570,7 +570,7 @@ export default function AIWorkflowAutomationINPage() {
 
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ businesses. 25 years of building. One goal: your results."
+          headline="500+ businesses. 12 years of building. One goal: your results."
         />
 
         <ServiceExplanation
@@ -757,7 +757,7 @@ export default function AIWorkflowAutomationINPage() {
           headline="60% of Indian SMB working hours are spent on tasks that should not require a human."
           leadParagraphs={[
             "The Indian business stack is uniquely fragmented: Zoho for CRM, Tally for accounting, Shopify or WooCommerce for e-commerce, Razorpay for payments, Shiprocket for logistics, WhatsApp for communication — none of these talk to each other by default. The gap between each system is filled by a human copying and pasting data, every hour of every working day.",
-            "FactoryJet has been building integrations for Indian businesses since 1999. We know the Tally ERP XML structure, the Zoho webhook payloads, the Razorpay signature verification quirks, and the Shiprocket rate-card API edge cases. We build automations that work with the real Indian tool stack — not the clean US SaaS stack that documentation assumes.",
+            "FactoryJet has been building integrations for Indian businesses. We know the Tally ERP XML structure, the Zoho webhook payloads, the Razorpay signature verification quirks, and the Shiprocket rate-card API edge cases. We build automations that work with the real Indian tool stack — not the clean US SaaS stack that documentation assumes.",
           ]}
           bodySlot={
             <>

@@ -527,7 +527,7 @@ export default function SeoPune() {
 
         <TestimonialsSection eyebrow="CLIENT RESULTS" headline="What business owners say about working with FactoryJet" region="in" />
 
-        <FAQ eyebrow="PUNE SEO QUESTIONS" headline="Every Question Pune Business Owners Ask About SEO, Answered Simply" lead="25 years of answering these questions. Here are the ones Pune businesses ask most." categories={PUNE_FAQ_CATEGORIES} items={PUNE_FAQ_ITEMS} />
+        <FAQ eyebrow="PUNE SEO QUESTIONS" headline="Every Question Pune Business Owners Ask About SEO, Answered Simply" lead="12 years of answering these questions. Here are the ones Pune businesses ask most." categories={PUNE_FAQ_CATEGORIES} items={PUNE_FAQ_ITEMS} />
 
         <FinalCTA
           variant="dark"

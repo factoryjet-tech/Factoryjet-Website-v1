@@ -165,7 +165,7 @@ export const FAQS: FAQItem[] = [
   },
   {
     question: "How long has FactoryJet actually been around?",
-    answer: "Our leadership team has been in the trenches for 25+ years. FactoryJet itself has been serving SMBs specifically for over a decade. We aren't a fly-by-night startup; we're a stable partner built for the long haul."
+    answer: "Our leadership team has been in the trenches for 12+ years. FactoryJet itself has been serving SMBs specifically for over a decade. We aren't a fly-by-night startup; we're a stable partner built for the long haul."
   },
   {
     question: "Do you outsource your work or is it all done in-house?",

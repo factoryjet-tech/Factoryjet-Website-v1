@@ -150,7 +150,7 @@ export default function ThankYouContent() {
       <div className="mt-9 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[13px] font-semibold text-slate-600">
         <span>500+ businesses served</span>
         <span className="text-[#F05A28]">•</span>
-        <span>25+ years expertise</span>
+        <span>12+ years expertise</span>
         <span className="text-[#F05A28]">•</span>
         <span>7-day delivery guarantee</span>
       </div>

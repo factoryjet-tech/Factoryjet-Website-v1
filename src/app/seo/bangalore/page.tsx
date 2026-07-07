@@ -545,7 +545,7 @@ export default function SeoBangalore() {
               <p>
                 We are also considerably cheaper than most Bangalore SEO agencies because we run lean — and we do not lock you in. Month to month. Everything we build stays yours. And unlike most{' '}
                 <a href="/seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">SEO companies in India</a>,{' '}
-                we have 25 years of experience behind the work, not just a team of recent graduates running templates.
+                we have 12 years of experience behind the work, not just a team of recent graduates running templates.
               </p>
             </>
           }
@@ -780,7 +780,7 @@ export default function SeoBangalore() {
         <FAQ
           eyebrow="BANGALORE SEO QUESTIONS"
           headline="Every Question Bangalore Business Owners Ask About SEO, Answered Simply"
-          lead="We have answered every SEO question a Bangalore business owner has asked us over 25 years. Here are the ones that come up most."
+          lead="We have answered every SEO question a Bangalore business owner has asked us over 12 years. Here are the ones that come up most."
           categories={BANGALORE_FAQ_CATEGORIES}
           items={BANGALORE_FAQ_ITEMS}
         />

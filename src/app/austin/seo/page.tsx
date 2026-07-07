@@ -370,7 +370,7 @@ export default function AustinSeoPage() {
             <div className="callcard">
               <div className="avatar">BB</div>
               <div className="nm">Bhavesh Barot</div>
-              <div className="ti">Founder, FactoryJet. 25+ years building for SMBs.</div>
+              <div className="ti">Founder, FactoryJet. 12+ years building for SMBs.</div>
               <p className="quotebit">&quot;Thirty minutes, no pitch deck. Bring your site and your toughest question.&quot;</p>
               <a className="btn" href={CALENDLY}>Book a call with the founder</a>
               <p className="micro">Calendly, 30 minutes, no commitment</p>
@@ -436,7 +436,7 @@ export default function AustinSeoPage() {
             <div className="proofcard">
               <span className="mark" aria-hidden="true">&ldquo;</span>
               <blockquote><p>I started FactoryJet to do the opposite of what most agencies do: senior people doing the actual work, a price you see before you sign, and no 12-month handcuffs. If our Austin SEO doesn&apos;t earn its keep, you leave the next month.</p></blockquote>
-              <div className="byline"><div className="avatar">BB</div><div><div className="nm">Bhavesh Barot</div><div className="ti">Founder, FactoryJet. 25+ years building for SMBs.</div></div></div>
+              <div className="byline"><div className="avatar">BB</div><div><div className="nm">Bhavesh Barot</div><div className="ti">Founder, FactoryJet. 12+ years building for SMBs.</div></div></div>
               <div className="clients">
                 <span>Impulse Branding Solutions</span><span>Belle Maison</span><span>Shevva Car Driver Hire</span><span>Rukman Transport</span>
               </div>

@@ -25,7 +25,7 @@ export const post: BlogPost = {
   ],
   faqs: [
     { q: "What is AI-native SEO for recruitment agencies?", a: "AI-native SEO optimises your content to rank in generative AI tools (ChatGPT, Perplexity, Google AI Overviews) as well as traditional search. It uses structured data, natural-language answers, and programmatic pages so AI engines cite your agency when candidates or clients ask 'best IT recruiters Manchester' or 'how to hire software engineers UK'." },
-    { q: "How much does SEO cost for a UK recruitment agency in 2026?", a: "UK recruitment SEO typically costs £500–£1,500/month depending on competition and scope. FactoryJet's AI-native SEO packages start at £500/month and include programmatic landing pages, schema markup, AI Overview optimisation, and monthly reporting—at a fixed, published price." },
+    { q: "How much does SEO cost for a UK recruitment agency in 2026?", a: "UK recruitment SEO typically costs £500–£1,500/month depending on competition and scope. FactoryJet's AI-native SEO packages start at £500/month and include programmatic landing pages, schema markup, AI Overview optimisation, and monthly reporting—at a fixed, transparent price." },
     { q: "Which keywords should recruitment agencies target?", a: "Target high-intent, location-specific phrases: '[sector] recruiters [city]', 'hire [job title] [region]', '[industry] recruitment agency near me'. Also optimise for question queries AI tools surface: 'how to find construction workers in Birmingham', 'best way to recruit nurses UK'. Use Google Search Console and Perplexity's related questions to find real queries." },
     { q: "Do recruitment websites need schema markup?", a: "Yes. JobPosting schema tells Google and AI engines about your open roles (title, salary, location, date posted). Organization and LocalBusiness schema establish your agency's identity, address, and service areas. Agencies with full schema see 47% higher inclusion in AI Overviews and 22% more clicks from Google Jobs integration." },
     { q: "How does programmatic SEO work for recruitment agencies?", a: "Programmatic SEO auto-generates landing pages for every location and sector you serve—e.g. 'Accountancy Recruiters in Leeds', 'Engineering Recruiters in Bristol'. Each page has unique, AI-written content, local schema, and internal links. This lets small agencies rank for hundreds of long-tail queries without manual page creation." },
@@ -185,7 +185,7 @@ export const post: BlogPost = {
         <a href="https://factoryjet.com/contact" className="inline-block bg-white text-[#0052CC] font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition-colors text-lg">
           Book a Free 30-Min Consultation →
         </a>
-        <p className="text-blue-200 text-sm mt-6">500+ businesses · 98% satisfaction · ISO certified · 25+ years combined experience</p>
+        <p className="text-blue-200 text-sm mt-6">500+ businesses · 98% satisfaction · ISO certified · 12+ years combined experience</p>
       </div>
     </>
   ),

@@ -160,7 +160,7 @@ export default function DigitalLandscape() {
                 Shopify and WooCommerce e-commerce stores, custom AI agents,
                 and next-generation search optimisation — including generative
                 engine optimisation (GEO), answer engine optimisation (AEO),
-                and AI optimisation (AIO) — at a fixed, published price,
+                and AI optimisation (AIO) — at a fixed, transparent quote,
                 with senior engineers and no agency overhead.
               </p>
               <p>

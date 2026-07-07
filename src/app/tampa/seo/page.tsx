@@ -332,7 +332,7 @@ export default function TampaSeoPage() {
             </div>
             <div className="quote">
               <p>&quot;I started FactoryJet to do the opposite of what most agencies do: senior people doing the actual work, a price you see before you sign, and no 12-month handcuffs. If our Tampa SEO doesn&apos;t earn its keep, you leave the next month.&quot;</p>
-              <div className="byline"><div className="avatar">BB</div><div><div className="nm">Bhavesh Barot</div><div className="ti">Founder, FactoryJet · 25+ years building for SMBs</div></div></div>
+              <div className="byline"><div className="avatar">BB</div><div><div className="nm">Bhavesh Barot</div><div className="ti">Founder, FactoryJet · 12+ years building for SMBs</div></div></div>
             </div>
           </div>
         </section>

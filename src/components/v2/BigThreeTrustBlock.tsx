@@ -10,7 +10,7 @@ import Link from 'next/link';
  *   - Asymmetric split: left 57% hero number panel / right 43% two-stat stack
  *   - Thin orange vertical divider between panels (desktop only)
  *   - Left: 523+ in orange at 4rem+, keyword-rich description, orange CTA pill
- *   - Right: 7-day delivery + $1,999 fixed-price stat, each with orange accent bar
+ *   - Right: 7-day delivery + "Fixed Price" stat, each with orange accent bar
  *   - All accent color (#F05A28) applied via inline style — no Tailwind palette entry
  *   - No year references. High-volume keywords embedded in copy.
  *
@@ -23,7 +23,7 @@ export interface BigThreeTrustBlockProps {
   /**
    * Render mode.
    *  - undefined / 'showcase' (default): the hardcoded US stat block
-   *    (523+, $1,999, 7-day guarantee). Used by ~105 pages — unchanged.
+   *    (523+, Fixed Price, 7-day guarantee). Used by ~105 pages — unchanged.
    *  - 'statement': a clean cream band rendering only the eyebrow + headline
    *    you pass. Used by the India SEO pages (no US price, no /contact CTA).
    */
@@ -136,7 +136,7 @@ export default function BigThreeTrustBlock({
             >
               Websites designed and built for US small businesses, Shopify stores,
               B2B companies, and DTC brands. Affordable web design services —
-              at a fixed, published price, your codebase delivered in full,
+              at a fixed, transparent price, your codebase delivered in full,
               and a 7-day delivery guarantee.
             </p>
 
@@ -218,7 +218,7 @@ export default function BigThreeTrustBlock({
               style={{ height: '1px', background: 'rgba(240,90,40,0.16)', borderRadius: 1 }}
             />
 
-            {/* Stat 2 — $1,999 fixed price */}
+            {/* Stat 2 — Fixed Price fixed price */}
             <div>
               {illustrations?.savings && (
                 <div className="mb-3">

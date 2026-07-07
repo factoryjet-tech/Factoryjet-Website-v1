@@ -83,7 +83,7 @@ const faqSchema = {
       name: 'How much does a law firm website design cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s law firm website design is fixed-price and scoped to your build. The main cost drivers are the number of practice area pages, attorney profiles, page count, blog and local SEO scope, and any custom intake workflows. Every project is quoted up front after a free discovery call, so you know the full cost before work starts — and it comes in significantly below comparable US legal web design agency benchmarks. Our specialized engineering team has served US law firms for 25+ years.',
+        text: 'FactoryJet\'s law firm website design is fixed-price and scoped to your build. The main cost drivers are the number of practice area pages, attorney profiles, page count, blog and local SEO scope, and any custom intake workflows. Every project is quoted up front after a free discovery call, so you know the full cost before work starts — and it comes in significantly below comparable US legal web design agency benchmarks. Our specialized engineering team has served US law firms for 12+ years.',
       },
     },
     {
@@ -533,7 +533,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a law firm website design cost?',
     answer:
-      'FactoryJet\'s law firm website design is fixed-price and scoped to your build. The main drivers are the number of practice area pages, attorney profiles, total page count, blog and local SEO scope, and any multi-location or custom intake architecture. We quote the full price up front after a free discovery call, and it comes in significantly below comparable US legal web design agency benchmarks. Our specialized engineering team has built legal websites for US firms for 25+ years.',
+      'FactoryJet\'s law firm website design is fixed-price and scoped to your build. The main drivers are the number of practice area pages, attorney profiles, total page count, blog and local SEO scope, and any multi-location or custom intake architecture. We quote the full price up front after a free discovery call, and it comes in significantly below comparable US legal web design agency benchmarks. Our specialized engineering team has built legal websites for US firms for 12+ years.',
   },
   {
     category: 'pricing',
@@ -579,7 +579,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US legal web design agency?',
     answer:
-      'Three differences: pricing model (fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices, while US legal web design agencies charge several times more with hourly retainers for the same scope), legal website expertise (we\'ve built legal websites for US firms for 25+ years — we know the schema types, the bar advertising disclosure requirements, the conversion patterns specific to legal, and the local SEO architecture that works for attorney websites specifically), and ownership (you own everything we build — source code, design files, CMS credentials — unlike FindLaw and Martindale subscription products where you pay monthly for a site that was never yours).',
+      'Three differences: pricing model (fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices, while US legal web design agencies charge several times more with hourly retainers for the same scope), legal website expertise (we\'ve built legal websites for US firms for 12+ years — we know the schema types, the bar advertising disclosure requirements, the conversion patterns specific to legal, and the local SEO architecture that works for attorney websites specifically), and ownership (you own everything we build — source code, design files, CMS credentials — unlike FindLaw and Martindale subscription products where you pay monthly for a site that was never yours).',
   },
   {
     category: 'trust',
@@ -758,7 +758,7 @@ export default function LawFirmWebsiteDesignPage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ professional service sites. 25 years serving US law firms and attorneys."
+          headline="500+ professional service sites. 12 years serving US law firms and attorneys."
         />
 
         {/* ── 4. WHAT MAKES LEGAL DIFFERENT ────────────────────────────────── */}
@@ -895,7 +895,7 @@ export default function LawFirmWebsiteDesignPage() {
           leadParagraphs={[
             "At an average CPC of $7,559, legal keywords are the most expensive in Google Ads — which means the organic ranking that replaces a paid click is worth more in legal than in any other professional services category. Law firms that invest in proper website architecture for local SEO are systematically replacing heavy monthly ad spend with organic rankings that compound in value over time.",
             "The search data tells the same story: 'law firm website design' searches have grown +190% in the last 3 months, driven by attorneys who recognize that their current site — whether a FindLaw template, an outdated custom site, or a page builder build — is not competitive in their local market. The firms making this transition now are capturing organic positions before their competitors do the same.",
-            "FactoryJet has delivered professional service websites for US firms across Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, Tampa, and nationwide since 1999. We understand the local SEO dynamics specific to legal, the bar advertising rules that vary by state, and the trust-building requirements that make legal website design fundamentally different from other verticals. A law firm consultation is free. Come in and see what your current site is leaving on the table.",
+            "FactoryJet has delivered professional service websites for US firms across Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, Tampa, and nationwide. We understand the local SEO dynamics specific to legal, the bar advertising rules that vary by state, and the trust-building requirements that make legal website design fundamentally different from other verticals. A law firm consultation is free. Come in and see what your current site is leaving on the table.",
           ]}
           stats={LEGAL_STATS}
         />
@@ -959,7 +959,7 @@ export default function LawFirmWebsiteDesignPage() {
           variant="dark"
           eyebrow="START WITH A FREE LEGAL SEO AUDIT"
           headline="Book a Legal SEO Audit and Walk Away With a Clear Picture of Where You Stand"
-          sub="In 30 minutes, we'll audit your current site's local search performance, analyze the top-ranking competing firms in your market, identify the practice area pages and schema gaps that are costing you organic traffic, and tell you exactly what it costs to fix. No agency pitch. No retainer required to get started. Just a straight assessment from a team that's built law firm websites for US attorneys for 25 years."
+          sub="In 30 minutes, we'll audit your current site's local search performance, analyze the top-ranking competing firms in your market, identify the practice area pages and schema gaps that are costing you organic traffic, and tell you exactly what it costs to fix. No agency pitch. No retainer required to get started. Just a straight assessment from a team that's built law firm websites for US attorneys for 12 years."
           primaryCta={{ label: 'Book Your Free Legal SEO Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See All Website Redesign Services', href: '/services/website-redesign' }}
           objectionHandler="Fixed price, scoped to your build. You own everything at handoff. Free audit first. No commitment until you\'ve seen the plan."

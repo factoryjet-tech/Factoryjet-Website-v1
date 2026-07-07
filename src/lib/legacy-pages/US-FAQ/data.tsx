@@ -40,7 +40,7 @@ export const faqData: FAQCategory[] = [
               </ul>
             </div>
             <p>
-              With 25+ years of combined expertise and 500+ successful projects, we serve SMBs delivering enterprise-quality solutions without enterprise pricing.
+              With 12+ years of combined expertise and 500+ successful projects, we serve SMBs delivering enterprise-quality solutions without enterprise pricing.
             </p>
           </div>
         )

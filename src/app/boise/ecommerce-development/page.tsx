@@ -166,7 +166,7 @@ export default function Page() {
         <StrategicDarkSection
           eyebrow="THE FACTORYJET DIFFERENCE"
           headline="Three Reasons Boise Businesses Choose Us Over Local Agencies"
-          lead="Mode Effect, Crush, and Collide are capable Boise agencies — but they're built for larger budgets and longer timelines. FactoryJet launches full Shopify stores in 7 days at a fixed, published price, with AI-powered features no local agency offers at SMB pricing."
+          lead="Mode Effect, Crush, and Collide are capable Boise agencies — but they're built for larger budgets and longer timelines. FactoryJet launches full Shopify stores in 7 days at a fixed, transparent quote, with AI-powered features no local agency offers at SMB pricing."
           pillars={[
             {
               title: 'Speed Without Compromise',
@@ -254,7 +254,7 @@ export default function Page() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Boise's Leading Shopify Agencies"
-          lead="Mode Effect, Crush, and Collide are capable Boise agencies built for larger budgets and longer timelines. FactoryJet delivers a full Shopify store in 7 days — at a fixed, published price — with AI-powered features none of them offer at SMB pricing."
+          lead="Mode Effect, Crush, and Collide are capable Boise agencies built for larger budgets and longer timelines. FactoryJet delivers a full Shopify store in 7 days — at a fixed, transparent quote — with AI-powered features none of them offer at SMB pricing."
           columns={[
             { label: 'Their pricing' },
             { label: 'FactoryJet', isFactoryJet: true },
@@ -292,7 +292,7 @@ export default function Page() {
         <PricingTiers
           eyebrow="TRANSPARENT PRICING"
           headline="Fixed-Price Shopify Packages for Boise Businesses"
-          lead="Boise agency rates for a comparable Shopify build typically run enterprise-level with 6–14 week timelines. FactoryJet delivers a full custom Shopify store in 7 days — at a fixed, published price — with a codebase you own outright. Pricing is scoped to your build, and every project is quoted up front after a free discovery call so you know the full cost before work starts."
+          lead="Boise agency rates for a comparable Shopify build typically run enterprise-level with 6–14 week timelines. FactoryJet delivers a full custom Shopify store in 7 days — at a fixed, transparent quote — with a codebase you own outright. Pricing is scoped to your build, and every project is quoted up front after a free discovery call so you know the full cost before work starts."
           tiers={[
             {
               priceRange: 'Fixed-price',

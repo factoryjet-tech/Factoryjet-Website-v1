@@ -275,7 +275,7 @@ const jsonLd = {
           name: 'How do I know FactoryJet is legitimate?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'We have 150+ verified reviews averaging 4.9/5, a public portfolio at factoryjet.com/portfolio, and 500+ completed projects. We publish our pricing, process, and delivery guarantees publicly — because transparency is the only way to build trust with clients who have never met us in person.',
+            text: 'We have 150+ verified reviews averaging 4.9/5, a public portfolio at factoryjet.com/portfolio, and 500+ completed projects. We publish our process and delivery guarantees publicly — because transparency is the only way to build trust with clients who have never met us in person.',
           },
         },
         {
@@ -673,7 +673,7 @@ export default function NewYorkWebDesignPage() {
             {
               category: 'local',
               question: 'How do I know FactoryJet is legitimate?',
-              answer: 'We have 150+ verified reviews averaging 4.9/5, a public portfolio at factoryjet.com/portfolio, and 500+ completed projects. We publish our pricing, process, and delivery guarantees publicly — because transparency is the only way to build trust with clients who have never met us in person.',
+              answer: 'We have 150+ verified reviews averaging 4.9/5, a public portfolio at factoryjet.com/portfolio, and 500+ completed projects. We publish our process and delivery guarantees publicly — because transparency is the only way to build trust with clients who have never met us in person.',
             },
             {
               category: 'local',

@@ -268,7 +268,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Offers US Small Businesses</h2>
       <p className="mb-4">
-        FactoryJet is an India-based agency built to serve US small businesses with enterprise-level technical standards at offshore-level pricing. We've served 500+ businesses since 1999 across the US, UK, and UAE.
+        FactoryJet is an India-based agency built to serve US small businesses with enterprise-level technical standards at offshore-level pricing. We've served 500+ businesses across the US, UK, and UAE.
       </p>
       <p className="mb-4">
         What we deliver for US SMBs: custom Next.js or WordPress builds (never purchased templates), Lighthouse 100/100 scores on every project, WCAG 2.2 Level AA compliance, full technical SEO included in base scope, 7-day delivery on 5-page sites, US business-hour project management, US-governed contracts, named US client references, and full code ownership transferred at final payment.

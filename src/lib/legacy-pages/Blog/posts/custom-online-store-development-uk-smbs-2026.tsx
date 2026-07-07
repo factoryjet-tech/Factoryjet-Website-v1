@@ -5,7 +5,7 @@ export const post: BlogPost = {
   id: '111',
   slug: "custom-online-store-development-uk-smbs-2026",
   title: "Custom Online Store Development for UK SMBs: Enterprise Features Without Enterprise Costs (2026 Guide)",
-  excerpt: "UK SMBs can now access enterprise-grade e-commerce features—multi-currency, B2B workflows, AI personalisation—at a fixed, published price through AI-native development platforms. This guide shows how custom online stores deliver advanced capabilities without the £50k+ price tags.",
+  excerpt: "UK SMBs can now access enterprise-grade e-commerce features—multi-currency, B2B workflows, AI personalisation—at a fixed, transparent price through AI-native development platforms. This guide shows how custom online stores deliver advanced capabilities without the £50k+ price tags.",
   category: "E-Commerce Development",
   author: 'Bhavesh Barot',
   date: "Apr 28, 2026",
@@ -176,7 +176,7 @@ export const post: BlogPost = {
         <a href="https://factoryjet.com/contact" className="inline-block bg-white text-[#0052CC] font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition-colors text-lg">
           Book a Free 30-Min Consultation →
         </a>
-        <p className="text-blue-200 text-sm mt-6">500+ businesses · 98% satisfaction · ISO certified · 25+ years combined experience</p>
+        <p className="text-blue-200 text-sm mt-6">500+ businesses · 98% satisfaction · ISO certified · 12+ years combined experience</p>
       </div>
     </>
   ),

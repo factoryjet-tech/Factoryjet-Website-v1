@@ -343,7 +343,7 @@ export default function CompetitorComparison() {
             FactoryJet operates from Bengaluru, India with a senior engineering
             team that builds at the same technical level as London and Manchester
             agencies — but at India delivery economics. You get enterprise-grade
-            Next.js development, GSAP animation, and conversion engineering at a fixed, published price. No offshore compromises: direct
+            Next.js development, GSAP animation, and conversion engineering at a fixed, transparent quote. No offshore compromises: direct
             communication with senior engineers, UK business hours availability,
             and the same quality benchmarks as any Spinningfields agency.
           </p>

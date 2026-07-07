@@ -72,7 +72,7 @@ export default function Page() {
         formSlot={<HeroInlineForm region="us" source="us_charlotte_ecommerce_development_hero" />}
           eyebrow="E-COMMERCE DEVELOPMENT · CHARLOTTE"
           headline="Shopify Developer Charlotte for North Carolina Businesses"
-          lead="The only Charlotte e-commerce agency that launches in 7 days at a fixed, published price. Shopify, WooCommerce & AI-powered stores for Queen City's DTC brands, NASCAR ecosystem, financial services adjacent brands, and fast-growing Charlotte tech scene. 500+ projects, 4.9★ rating."
+          lead="The only Charlotte e-commerce agency that launches in 7 days at a fixed, transparent quote. Shopify, WooCommerce & AI-powered stores for Queen City's DTC brands, NASCAR ecosystem, financial services adjacent brands, and fast-growing Charlotte tech scene. 500+ projects, 4.9★ rating."
           trustItems={['Fixed-price Shopify stores', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Charlotte, NC" badgeLabel="Live in 7 days" />}
         />

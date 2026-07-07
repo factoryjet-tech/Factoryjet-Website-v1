@@ -176,7 +176,7 @@ const CHN_FAQ_ITEMS = [
     category: 'getting-started',
     question: 'Do I need a Chennai-based SEO agency?',
     answer:
-      "You need someone who understands Chennai's buyer mix — manufacturing procurement teams, auto OEM suppliers, IT services buyers, and local Tamil Nadu consumers. We are not based in Chennai, but we understand the city's industrial economy, the OMR IT corridor, and what B2B content needs to do in Tamil Nadu's market. Our advantage: 25 years of experience, senior team, and month-to-month billing.",
+      "You need someone who understands Chennai's buyer mix — manufacturing procurement teams, auto OEM suppliers, IT services buyers, and local Tamil Nadu consumers. We are not based in Chennai, but we understand the city's industrial economy, the OMR IT corridor, and what B2B content needs to do in Tamil Nadu's market. Our advantage: 12 years of experience, senior team, and month-to-month billing.",
   },
   {
     category: 'services',
@@ -514,7 +514,7 @@ export default function SeoChennai() {
 
         <TestimonialsSection eyebrow="CLIENT RESULTS" headline="What business owners say about working with FactoryJet" region="in" />
 
-        <FAQ eyebrow="CHENNAI SEO QUESTIONS" headline="Every Question Chennai Business Owners Ask About SEO, Answered Simply" lead="25 years answering these questions. Here are the ones Chennai businesses ask most." categories={CHN_FAQ_CATEGORIES} items={CHN_FAQ_ITEMS} />
+        <FAQ eyebrow="CHENNAI SEO QUESTIONS" headline="Every Question Chennai Business Owners Ask About SEO, Answered Simply" lead="12 years answering these questions. Here are the ones Chennai businesses ask most." categories={CHN_FAQ_CATEGORIES} items={CHN_FAQ_ITEMS} />
 
         <FinalCTA
           variant="dark"

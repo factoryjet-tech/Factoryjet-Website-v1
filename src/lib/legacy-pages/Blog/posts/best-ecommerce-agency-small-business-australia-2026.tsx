@@ -5,7 +5,7 @@ export const post: BlogPost = {
   id: '117',
   slug: "best-ecommerce-agency-small-business-australia-2026",
   title: "Best E-Commerce Agency for Small Business Australia 2026: AI-Native Solutions Under £5K",
-  excerpt: "Australian small businesses need e-commerce agencies that deliver AI-native platforms, conversion-optimised design, and full payment integration for under £5,000. FactoryJet builds Next.js and custom B2B e-commerce stores with 92+ Lighthouse scores, B2B/B2C workflows, and 2-4 week delivery at a fixed, published price.",
+  excerpt: "Australian small businesses need e-commerce agencies that deliver AI-native platforms, conversion-optimised design, and full payment integration for under £5,000. FactoryJet builds Next.js and custom B2B e-commerce stores with 92+ Lighthouse scores, B2B/B2C workflows, and 2-4 week delivery at a fixed, transparent price.",
   category: "E-Commerce Development",
   author: 'Bhavesh Barot',
   date: "Apr 30, 2026",
@@ -54,7 +54,7 @@ export const post: BlogPost = {
       </div>
 
       <p className="text-lg leading-relaxed mb-6">
-        The best e-commerce agency for Australian small businesses in 2026 delivers AI-native platforms built on Next.js 15 or a custom AI-native platform, achieving 92+ Lighthouse Performance scores with full payment integration and ACL compliance for under £5,000. FactoryJet builds conversion-optimized stores featuring B2B/B2C workflows, GST calculation, and Australia Post shipping integration in 2–4 weeks at a fixed, published price.
+        The best e-commerce agency for Australian small businesses in 2026 delivers AI-native platforms built on Next.js 15 or a custom AI-native platform, achieving 92+ Lighthouse Performance scores with full payment integration and ACL compliance for under £5,000. FactoryJet builds conversion-optimized stores featuring B2B/B2C workflows, GST calculation, and Australia Post shipping integration in 2–4 weeks at a fixed, transparent price.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Why Australian Small Businesses Need AI-Native E-Commerce in 2026</h2>
@@ -140,7 +140,7 @@ export const post: BlogPost = {
         <a href="https://factoryjet.com/contact" className="inline-block bg-white text-[#0052CC] font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition-colors text-lg">
           Book a Free 30-Min Consultation →
         </a>
-        <p className="text-blue-200 text-sm mt-6">500+ businesses · 98% satisfaction · ISO certified · 25+ years combined experience</p>
+        <p className="text-blue-200 text-sm mt-6">500+ businesses · 98% satisfaction · ISO certified · 12+ years combined experience</p>
       </div>
     </>
   ),

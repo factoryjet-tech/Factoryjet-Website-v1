@@ -170,7 +170,7 @@ export default function WebDesignUKPage() {
 
                 <div className="byline mt-6" style={{ maxWidth: 540 }}>
                   <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ sites delivered since 2005</span></div>
+                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ sites delivered</span></div>
                   <div className="upd">Last updated<br />1 July 2026</div>
                 </div>
 
@@ -195,7 +195,7 @@ export default function WebDesignUKPage() {
                   <div className="scorecard-val">4 wks</div>
                 </div>
                 <div className="scorecard-row">
-                  <div><div className="scorecard-metric">Sites Delivered</div><div className="scorecard-note">UK and global, since 2005</div></div>
+                  <div><div className="scorecard-metric">Sites Delivered</div><div className="scorecard-note">UK and global,</div></div>
                   <div className="scorecard-val">500+</div>
                 </div>
                 <div className="scorecard-row">

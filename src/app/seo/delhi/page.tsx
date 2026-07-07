@@ -184,7 +184,7 @@ const DELHI_FAQ_ITEMS = [
     category: 'getting-started',
     question: 'Do I need a Delhi-based SEO agency or can I work with someone remote?',
     answer:
-      'You need someone who understands how Delhi buyers search and what the NCR competitive landscape looks like — not someone physically in Connaught Place. We are not based in Delhi, but we understand Delhi\'s three distinct buyer markets (export, wholesale/pan-India, and local), and we have done SEO across these verticals. Our advantage: 25 years of experience, a small senior team, and no junior on your account.',
+      'You need someone who understands how Delhi buyers search and what the NCR competitive landscape looks like — not someone physically in Connaught Place. We are not based in Delhi, but we understand Delhi\'s three distinct buyer markets (export, wholesale/pan-India, and local), and we have done SEO across these verticals. Our advantage: 12 years of experience, a small senior team, and no junior on your account.',
   },
   /* ── Our SEO Services ─────────────────────────────────────────── */
   {
@@ -816,7 +816,7 @@ export default function SeoDelhi() {
         <FAQ
           eyebrow="DELHI SEO QUESTIONS"
           headline="Every Question Delhi Business Owners Ask About SEO, Answered Simply"
-          lead="We have answered every SEO question a Delhi business owner has asked us over 25 years. Here are the ones that come up most."
+          lead="We have answered every SEO question a Delhi business owner has asked us over 12 years. Here are the ones that come up most."
           categories={DELHI_FAQ_CATEGORIES}
           items={DELHI_FAQ_ITEMS}
         />

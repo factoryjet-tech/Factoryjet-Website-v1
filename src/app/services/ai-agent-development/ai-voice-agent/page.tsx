@@ -573,7 +573,7 @@ export default function AIVoiceAgentINPage() {
 
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ businesses. 25 years of building. One goal: your results."
+          headline="500+ businesses. 12 years of building. One goal: your results."
         />
 
         <ServiceExplanation

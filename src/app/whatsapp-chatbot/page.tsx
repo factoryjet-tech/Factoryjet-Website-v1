@@ -722,7 +722,7 @@ export default function WhatsAppChatbotINPage() {
         {/* ── 3. TRUST STATS ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ businesses. 25 years of building. One goal: your results."
+          headline="500+ businesses. 12 years of building. One goal: your results."
         />
 
         {/* ── 4. STATS BENTO (DARK) ─────────────────────────────────────────── */}
@@ -1006,7 +1006,7 @@ export default function WhatsAppChatbotINPage() {
                 {[
                   {
                     title: '500+ businesses served across India',
-                    desc: '25+ years building for Indian businesses. We know Razorpay, Zoho, Shiprocket, and the Indian payments stack inside out.',
+                    desc: '12+ years building for Indian businesses. We know Razorpay, Zoho, Shiprocket, and the Indian payments stack inside out.',
                   },
                   {
                     title: '7-day delivery — fastest in India',

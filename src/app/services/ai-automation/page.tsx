@@ -99,7 +99,7 @@ const faqSchema = {
       name: 'How much does AI automation cost for a small business?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s AI automation is fixed-price and scoped to your build — the main drivers are how many workflows you automate, the tool connections involved, and any AI decision layer. Most small businesses choose our Growth tier, covering several interconnected workflows with an AI decision layer, full tool integrations, and a 30-day support window. Enterprise automation platforms with multi-department scope are scoped separately. Fixed-price and milestone-paid, with 25+ years serving US businesses and US-hour project management. You get a full quote up front after a free audit.',
+        text: 'FactoryJet\'s AI automation is fixed-price and scoped to your build — the main drivers are how many workflows you automate, the tool connections involved, and any AI decision layer. Most small businesses choose our Growth tier, covering several interconnected workflows with an AI decision layer, full tool integrations, and a 30-day support window. Enterprise automation platforms with multi-department scope are scoped separately. Fixed-price and milestone-paid, with 12+ years serving US businesses and US-hour project management. You get a full quote up front after a free audit.',
       },
     },
     {
@@ -436,7 +436,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '25+ years of SMB workflow expertise',
+    feature: '12+ years of SMB workflow expertise',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="no" />,
@@ -604,7 +604,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does AI automation cost for a small business?',
     answer:
-      'FactoryJet\'s AI automation is fixed-price and scoped to your build — the main drivers are how many workflows you automate, the tool connections involved, and any AI decision layer. Most small businesses choose our Growth tier, covering several interconnected workflows with an AI decision layer, full CRM integration, a monitoring dashboard, and a 30-day support window. Enterprise platforms with multi-department scope are scoped separately. Fixed-price and milestone-paid — our engineering team has served US businesses for 25+ years with US-hour project management. You get a full quote up front after a free audit.',
+      'FactoryJet\'s AI automation is fixed-price and scoped to your build — the main drivers are how many workflows you automate, the tool connections involved, and any AI decision layer. Most small businesses choose our Growth tier, covering several interconnected workflows with an AI decision layer, full CRM integration, a monitoring dashboard, and a 30-day support window. Enterprise platforms with multi-department scope are scoped separately. Fixed-price and milestone-paid — our engineering team has served US businesses for 12+ years with US-hour project management. You get a full quote up front after a free audit.',
   },
   {
     category: 'pricing',
@@ -797,7 +797,7 @@ export default function AIAutomationPage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ businesses. 25 years of building. Real automation that ships."
+          headline="500+ businesses. 12 years of building. Real automation that ships."
         />
 
         {/* ── 4. WHAT IS AN AI AUTOMATION AGENCY ───────────────────────────── */}
@@ -836,7 +836,7 @@ export default function AIAutomationPage() {
                 Basic automation breaks on edge cases. An invoice that arrives as a photo instead of a PDF. A support ticket written in Spanish. A lead form that has two email addresses. AI automation handles these because it can read and reason — not just match patterns. That&apos;s the layer we add, and it&apos;s why our automations work on real-world data, not just the clean examples you tested in staging.
               </p>
               <p>
-                FactoryJet has been building software for US small businesses since 1999. We know what operational complexity looks like inside a 15-person company — the spreadsheet that five people update manually, the inbox that routes to whoever is least busy, the report that takes three hours to build every Friday. Those are exactly the workflows AI automation is designed to eliminate. We build for that reality, not for a startup pitch deck.
+                FactoryJet has been building software for US small businesses. We know what operational complexity looks like inside a 15-person company — the spreadsheet that five people update manually, the inbox that routes to whoever is least busy, the report that takes three hours to build every Friday. Those are exactly the workflows AI automation is designed to eliminate. We build for that reality, not for a startup pitch deck.
               </p>
             </>
           }
@@ -934,7 +934,7 @@ export default function AIAutomationPage() {
           leadParagraphs={[
             "The automation-as-a-service market is projected to grow from $10.15 billion in 2025 to $33.12 billion by 2030 — driven almost entirely by small and medium businesses adopting AI workflow tools for the first time. This isn't enterprise technology trickling down. It's SMB-native adoption of tools that didn't exist five years ago.",
             "McKinsey estimates that 40% of US small business work hours are spent on tasks that could be automated with current technology. For a 10-person team at fully-loaded cost, that's over $700,000 per year in recoverable productivity. The businesses capturing that advantage right now aren't bigger — they're faster to act.",
-            "FactoryJet has served small and medium businesses across Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, Tampa, and across the US since 1999. We understand the operational reality of a business your size — and we know exactly where automation delivers the fastest payback: lead response speed, invoice processing, and support ticket volume.",
+            "FactoryJet has served small and medium businesses across Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, Tampa, and across the US. We understand the operational reality of a business your size — and we know exactly where automation delivers the fastest payback: lead response speed, invoice processing, and support ticket volume.",
           ]}
           stats={US_AUTOMATION_STATS}
         />

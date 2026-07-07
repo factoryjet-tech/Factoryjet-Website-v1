@@ -177,7 +177,7 @@ const serviceSchema = {
     '@type': 'Organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
-    foundingDate: '1999',
+    foundingDate: '2014',
     areaServed: 'US',
     
   },
@@ -641,7 +641,7 @@ export default function MagentoDevelopmentPage() {
         formSlot={<HeroInlineForm region="us" source="us_services_magento_development_hero" />}
           eyebrow="MAGENTO DEVELOPMENT SERVICES"
           headline="Senior Magento developers. Fixed-price projects. fixed-price, milestone-paid."
-          lead="Custom module development, Magento 1 to 2 migrations, Adobe Commerce builds, ERP integrations, and performance optimization — delivered by Magento-certified engineers since 1999."
+          lead="Custom module development, Magento 1 to 2 migrations, Adobe Commerce builds, ERP integrations, and performance optimization — delivered by Magento-certified engineers."
           secondaryCta={{ label: 'View Our Work', href: '/portfolio' }}
           rightSlot={
             <div className="w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">

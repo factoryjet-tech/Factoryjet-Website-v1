@@ -27,7 +27,7 @@ export const post: BlogPost = {
   faqs: [
     { q: "What's the difference between a web designer and a web design agency?", a: "A solo web designer typically handles visual layouts and front-end code. An agency provides full-stack capability: strategy, UX research, development, hosting infrastructure, security, SEO, integrations, compliance, and ongoing support. Agencies carry insurance, maintain vendor partnerships, and deliver faster through specialized teams." },
     { q: "Do web design agencies only build new websites or do they maintain existing ones?", a: "Most agencies offer both. New builds generate project revenue; maintenance contracts (security updates, performance monitoring, content changes, plugin updates) provide recurring income. UK agencies typically charge £99-£500/month for maintenance depending on site complexity and SLA response times." },
-    { q: "How much does a web design agency cost in the UK in 2026?", a: "UK agency rates vary widely. London agencies charge £5,000-£25,000 for SMB sites. Regional UK agencies run £3,000-£12,000. Offshore agencies with UK account management (like FactoryJet) deliver comparable quality at £1,500-£8,000, typically at a fixed, published price while maintaining Lighthouse scores above 92." },
+    { q: "How much does a web design agency cost in the UK in 2026?", a: "UK agency rates vary widely. London agencies charge £5,000-£25,000 for SMB sites. Regional UK agencies run £3,000-£12,000. Offshore agencies with UK account management (like FactoryJet) deliver comparable quality at £1,500-£8,000, typically at a fixed, transparent price while maintaining Lighthouse scores above 92." },
     { q: "What platforms do web design agencies build on?", a: "Most agencies specialize in 2-4 platforms. Common stacks: WordPress (40% of web), Shopify (e-commerce), Webflow (design-focused), and modern frameworks like Next.js or Astro for performance-critical builds. The platform choice depends on your budget, technical requirements, and content update frequency." },
     { q: "Do I need a web design agency if I can use Wix or Squarespace?", a: "DIY builders work for simple brochure sites with minimal traffic. Agencies become necessary when you need: custom functionality, third-party integrations, performance optimization (sub-2-second load times), advanced SEO, accessibility compliance, or conversion architecture. If your site generates revenue, professional build ROI typically pays back within 6-12 months." },
     { q: "What does 'performance optimization' actually mean?", a: "Performance optimization targets Core Web Vitals: Largest Contentful Paint under 2.5s, First Input Delay under 100ms, Cumulative Layout Shift under 0.1. Agencies achieve this through image compression, lazy loading, code splitting, CDN configuration, and server-side rendering. Google uses these metrics for ranking; slow sites lose 7% conversions per 100ms delay." },
@@ -202,7 +202,7 @@ export const post: BlogPost = {
         <a href="https://factoryjet.com/contact" className="inline-block bg-white text-[#0052CC] font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition-colors text-lg">
           Book a Free 30-Min Consultation →
         </a>
-        <p className="text-blue-200 text-sm mt-6">500+ businesses · 98% satisfaction · ISO certified · 25+ years combined experience</p>
+        <p className="text-blue-200 text-sm mt-6">500+ businesses · 98% satisfaction · ISO certified · 12+ years combined experience</p>
       </div>
     </>
   ),

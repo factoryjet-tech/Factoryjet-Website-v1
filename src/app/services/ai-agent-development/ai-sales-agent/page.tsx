@@ -180,7 +180,7 @@ const SALES_COMPARISON_ROWS = [
   { feature: 'Fixed one-time cost (no monthly fee to FactoryJet)', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="sdr" kind="no" />, <CompareIcon key="fl" kind="partial" />, <CompareIcon key="saas" kind="no" />] },
   { feature: 'Full code ownership', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="sdr" kind="no" />, <CompareIcon key="fl" kind="yes" />, <CompareIcon key="saas" kind="no" />] },
   { feature: '30-day post-launch support', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="sdr" kind="no" />, <CompareIcon key="fl" kind="no" />, <CompareIcon key="saas" kind="no" />] },
-  { feature: '500+ SMB projects since 1999', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="sdr" kind="no" />, <CompareIcon key="fl" kind="no" />, <CompareIcon key="saas" kind="no" />] },
+  { feature: '500+ SMB projects', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="sdr" kind="no" />, <CompareIcon key="fl" kind="no" />, <CompareIcon key="saas" kind="no" />] },
 ];
 
 const SALES_INDUSTRIES = [
@@ -323,7 +323,7 @@ export default function AISalesAgentINPage() {
         />
 
         <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
-        <BigThreeTrustBlock eyebrow="BY THE NUMBERS" headline="500+ businesses. 25 years of building. One goal: your results." />
+        <BigThreeTrustBlock eyebrow="BY THE NUMBERS" headline="500+ businesses. 12 years of building. One goal: your results." />
 
         <ServiceExplanation
           eyebrow="AI SALES AGENT EXPLAINED"

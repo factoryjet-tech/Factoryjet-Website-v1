@@ -105,7 +105,7 @@ const FAQ_GROUPS = [
     items: [
       {
         q: 'Who actually does the SEO work at FactoryJet?',
-        a: 'Senior engineers and content strategists with 25+ years of combined web and search experience. You work directly with the people building your campaign. There are no junior account managers acting as go-betweens, and there are no outsourced black-box vendors in the workflow. Bhavesh Barot, the founder, is personally involved in strategy for every account.',
+        a: 'Senior engineers and content strategists with 12+ years of combined web and search experience. You work directly with the people building your campaign. There are no junior account managers acting as go-betweens, and there are no outsourced black-box vendors in the workflow. Bhavesh Barot, the founder, is personally involved in strategy for every account.',
       },
       {
         q: 'What happens to my Google accounts and data if I leave?',

@@ -320,7 +320,7 @@ const ROI_STATS = [
   },
   {
     value: 'Fixed Price',
-    label: 'milestone-paid with full code ownership — 25+ years experience, US-caliber output',
+    label: 'milestone-paid with full code ownership — 12+ years experience, US-caliber output',
     microcopy: 'predictable from quote to launch — no scope-creep invoices',
     categoryLabel: 'PRICING MODEL',
   },
@@ -423,7 +423,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '25+ years of SMB domain experience',
+    feature: '12+ years of SMB domain experience',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="no" />,
@@ -608,7 +608,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'Why is FactoryJet fixed-price, milestone-paid?',
     answer:
-      'Our engineering team brings 25+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery — without the overhead that inflates traditional agency invoices. We\'ve served US businesses for 25 years. When you brief us, an engineer reads it, not an account manager. No Cherry Creek or LoDo office rates built into the quote.',
+      'Our engineering team brings 12+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery — without the overhead that inflates traditional agency invoices. We\'ve served US businesses for 12 years. When you brief us, an engineer reads it, not an account manager. No Cherry Creek or LoDo office rates built into the quote.',
   },
   {
     category: 'pricing',
@@ -653,7 +653,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a local Denver AI development agency?',
     answer:
-      'Three differences: price (specialized engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it — weeks, not months), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 12-person Denver company, not just enterprise AI theory).',
+      'Three differences: price (specialized engineers serving US businesses for 12+ years), speed (no layers between your brief and the engineer building it — weeks, not months), and SMB depth (500+ small business projects — we understand what operations look like inside a 12-person Denver company, not just enterprise AI theory).',
   },
   {
     category: 'trust',
@@ -756,7 +756,7 @@ export default function DenverAIAgentsPage() {
         {/* ── 2. TRUST STATS ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ businesses served. 25 years of building. One goal: your results."
+          headline="500+ businesses served. 12 years of building. One goal: your results."
         />
 
         {/* ── 3. WHAT IS AN AI AGENT ───────────────────────────────────────── */}
@@ -941,7 +941,7 @@ export default function DenverAIAgentsPage() {
             {
               icon: '💸',
               title: 'Local Denver agency rates reflect local Denver costs',
-              body: 'A Denver AI agency building at LoDo rates will quote enterprise-level prices for the same chatbot FactoryJet delivers at a fraction of the cost, fixed-price. The difference is our engineering team is specialized — serving US businesses for 25 years, at dramatically lower overhead, without compromising the quality of the AI architecture or the conversation design.',
+              body: 'A Denver AI agency building at LoDo rates will quote enterprise-level prices for the same chatbot FactoryJet delivers at a fraction of the cost, fixed-price. The difference is our engineering team is specialized — serving US businesses for 12 years, at dramatically lower overhead, without compromising the quality of the AI architecture or the conversation design.',
             },
           ]}
         />
@@ -1007,7 +1007,7 @@ export default function DenverAIAgentsPage() {
             {
               icon: '💡',
               title: 'SMB depth, not startup theory',
-              body: 'We\'ve built for outdoor brands, real estate teams, healthcare practices, restaurants, and SaaS companies since 1999. We know where complexity actually lives inside a 15-person business — the edge cases, the messy data, the workflows that don\'t match the textbook. We build for that reality.',
+              body: 'We\'ve built for outdoor brands, real estate teams, healthcare practices, restaurants, and SaaS companies. We know where complexity actually lives inside a 15-person business — the edge cases, the messy data, the workflows that don\'t match the textbook. We build for that reality.',
             },
             {
               icon: '🔒',

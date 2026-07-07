@@ -83,7 +83,7 @@ const faqSchema = {
       name: 'How much does a custom WordPress website cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'FactoryJet\'s custom WordPress website design is fixed-price and scoped to your build. The main cost drivers are page count (a focused business site vs. a 15–30 page site with custom post types and advanced functionality) and whether you need WordPress e-commerce on WooCommerce. Fixed-price and milestone-paid, with the full number confirmed on a free consultation before work starts — our experienced team has built WordPress sites for US businesses for 25+ years with the same engineering quality.',
+        text: 'FactoryJet\'s custom WordPress website design is fixed-price and scoped to your build. The main cost drivers are page count (a focused business site vs. a 15–30 page site with custom post types and advanced functionality) and whether you need WordPress e-commerce on WooCommerce. Fixed-price and milestone-paid, with the full number confirmed on a free consultation before work starts — our experienced team has built WordPress sites for US businesses for 12+ years with the same engineering quality.',
       },
     },
     {
@@ -515,7 +515,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a custom WordPress website cost?',
     answer:
-      'FactoryJet\'s custom WordPress websites are fixed-price and scoped to your build. The main cost drivers are page count (a focused site with a custom theme, no page builders, mobile-first build, and full SEO setup vs. a 15–30 page site with custom post types) and whether you need a WooCommerce store. Fixed-price and milestone-paid, with the full number confirmed on a free consultation before work starts — our engineering team has built WordPress sites for US businesses for 25+ years with the same engineering standards, leaner operations.',
+      'FactoryJet\'s custom WordPress websites are fixed-price and scoped to your build. The main cost drivers are page count (a focused site with a custom theme, no page builders, mobile-first build, and full SEO setup vs. a 15–30 page site with custom post types) and whether you need a WooCommerce store. Fixed-price and milestone-paid, with the full number confirmed on a free consultation before work starts — our engineering team has built WordPress sites for US businesses for 12+ years with the same engineering standards, leaner operations.',
   },
   {
     category: 'pricing',
@@ -555,7 +555,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US WordPress agency?',
     answer:
-      'Three differences: pricing model (fixed-price and milestone-paid — specialized engineers serving US businesses since 1999, leaner operations), engineering standards (we build to the same spec a good traditional agency would — custom theme, no page builders, Core Web Vitals target, documented code — without the inflated timeline), and SMB-specific experience (500+ small business projects means we know what a 10-person company actually needs from WordPress and what it doesn\'t — you won\'t get oversold on features that a $50M company uses but you\'ll never touch). We also don\'t use proprietary tools: everything we build runs on standard WordPress and can be maintained by any competent developer after handover.',
+      'Three differences: pricing model (fixed-price and milestone-paid — specialized engineers serving US businesses, leaner operations), engineering standards (we build to the same spec a good traditional agency would — custom theme, no page builders, Core Web Vitals target, documented code — without the inflated timeline), and SMB-specific experience (500+ small business projects means we know what a 10-person company actually needs from WordPress and what it doesn\'t — you won\'t get oversold on features that a $50M company uses but you\'ll never touch). We also don\'t use proprietary tools: everything we build runs on standard WordPress and can be maintained by any competent developer after handover.',
   },
   {
     category: 'trust',
@@ -751,7 +751,7 @@ export default function WordPressDevelopmentPage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ WordPress projects. 25 years of custom theme development."
+          headline="500+ WordPress projects. 12 years of custom theme development."
         />
 
         {/* ── 4. WHAT WE BUILD ─────────────────────────────────────────────── */}
@@ -888,7 +888,7 @@ export default function WordPressDevelopmentPage() {
           leadParagraphs={[
             "WordPress powers 43% of the internet and continues to grow market share. The demand for WordPress web design agencies has increased 50% year-over-year as small businesses recognize the flexibility and SEO advantages of a properly built WordPress site over closed SaaS platforms. But the majority of that demand is still being met by agencies using page builders — which means most WordPress websites being built in 2025 are starting with a performance deficit they\'ll carry for the life of the site.",
             "In competitive markets — Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, and Tampa — the performance gap between page builder sites and custom theme sites translates directly into search ranking differences. Two businesses in the same city with the same content quality will rank differently if one has a custom WordPress theme passing Core Web Vitals and one has an Elementor build failing them. That\'s a mechanical advantage that compounding over time.",
-            "FactoryJet has built custom WordPress sites for US businesses across every major market since 1999. Our recommendation on every project: build it right the first time, even if it takes 2–3 more weeks than a page builder alternative. The performance and SEO returns are realized over years — not quarters.",
+            "FactoryJet has built custom WordPress sites for US businesses across every major market. Our recommendation on every project: build it right the first time, even if it takes 2–3 more weeks than a page builder alternative. The performance and SEO returns are realized over years — not quarters.",
           ]}
           stats={WP_STATS}
         />

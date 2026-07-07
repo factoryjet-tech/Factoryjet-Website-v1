@@ -72,7 +72,7 @@ export default function Page() {
         formSlot={<HeroInlineForm region="us" source="us_raleigh_ecommerce_development_hero" />}
           eyebrow="E-COMMERCE DEVELOPMENT · RALEIGH"
           headline="Shopify Developer Raleigh for the Research Triangle"
-          lead="The only Raleigh e-commerce agency that launches in 7 days at a fixed, published price. Shopify, WooCommerce & AI-powered stores for the Research Triangle's tech brands, life sciences companies, NC State entrepreneurs, and Durham-Chapel Hill DTC founders. 500+ projects, 4.9★ rating."
+          lead="The only Raleigh e-commerce agency that launches in 7 days at a fixed, transparent quote. Shopify, WooCommerce & AI-powered stores for the Research Triangle's tech brands, life sciences companies, NC State entrepreneurs, and Durham-Chapel Hill DTC founders. 500+ projects, 4.9★ rating."
           trustItems={['Fixed-price Shopify stores', '7-day delivery guarantee', '500+ stores launched']}
           rightSlot={<HeroBrowserMockup mockupUrl="yourbusiness.com" badgeCity="Raleigh, NC" badgeLabel="Live in 7 days" />}
         />

@@ -360,7 +360,7 @@ const SHOPIFY_STATS = [
   },
   {
     value: '120+',
-    label: 'Shopify stores built and launched for Indian and global D2C brands since 2005',
+    label: 'Shopify stores built and launched for Indian and global D2C brands',
     microcopy: 'across fashion, health, food, electronics, and lifestyle categories',
     categoryLabel: 'STORES LAUNCHED',
   },
@@ -574,13 +574,13 @@ const SHOPIFY_FAQ_ITEMS = [
     category: 'cost',
     question: 'Why is FactoryJet cheaper than other Indian Shopify agencies?',
     answer:
-      "We are a specialised Shopify engineering team — not a full-service agency. No account management layers, no generalist developers, no large office overhead. The same Figma-first design process, the same Liquid engineering quality, the same Lighthouse audit before handover — at 50–60% lower cost. We have been building Shopify stores since 2005. You pay for the build, not our admin structure.",
+      "We are a specialised Shopify engineering team — not a full-service agency. No account management layers, no generalist developers, no large office overhead. The same Figma-first design process, the same Liquid engineering quality, the same Lighthouse audit before handover — at 50–60% lower cost. We have been building Shopify stores. You pay for the build, not our admin structure.",
   },
   {
     category: 'cost',
     question: 'What is the 7-day delivery guarantee?',
     answer:
-      "The 7-day guarantee covers standard Shopify theme builds and full store builds. The clock starts from design sign-off, not from the first call. If we miss the agreed delivery date, you do not pay for that phase. We have delivered on time on 97% of all projects since 2005. Shopify Plus and headless Hydrogen builds have longer, separately agreed timelines — but we still put them in writing.",
+      "The 7-day guarantee covers standard Shopify theme builds and full store builds. The clock starts from design sign-off, not from the first call. If we miss the agreed delivery date, you do not pay for that phase. We have delivered on time on 97% of all projects. Shopify Plus and headless Hydrogen builds have longer, separately agreed timelines — but we still put them in writing.",
   },
 
   /* ── India-Specific ── */
@@ -686,7 +686,7 @@ const SHOPIFY_FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a Shopify Partner agency in India?',
     answer:
-      "Three things: specialisation (we build Shopify stores and web projects exclusively — no social media campaigns, no print design, no SEO retainers disconnected from the build), speed (7-day delivery guarantee for standard builds — the fastest in India), and ownership (full Liquid codebase to your GitHub on launch day, zero lock-in). We have delivered 120+ Shopify stores for Indian and global brands since 2005. We know what actually converts on Shopify — and we build around those data points, not around what looks impressive in a mock-up.",
+      "Three things: specialisation (we build Shopify stores and web projects exclusively — no social media campaigns, no print design, no SEO retainers disconnected from the build), speed (7-day delivery guarantee for standard builds — the fastest in India), and ownership (full Liquid codebase to your GitHub on launch day, zero lock-in). We have delivered 120+ Shopify stores for Indian and global brands. We know what actually converts on Shopify — and we build around those data points, not around what looks impressive in a mock-up.",
   },
   {
     category: 'trust',
@@ -1292,7 +1292,7 @@ export default function ShopifyDevelopmentPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="120+ Shopify stores built. We know what actually converts in India."
-          lead="FactoryJet has delivered Shopify stores for Indian and global brands since 2005. We know which design decisions move the needle on Indian conversion rates — and which ones only look good in an agency proposal."
+          lead="FactoryJet has delivered Shopify stores for Indian and global brands. We know which design decisions move the needle on Indian conversion rates — and which ones only look good in an agency proposal."
           pillars={[
             {
               icon: '🇮🇳',

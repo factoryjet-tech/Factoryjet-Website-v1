@@ -678,7 +678,7 @@ export default function AIMarketingAgentINPage() {
         {/* ── 3. TRUST STATS ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ businesses. 25 years of building. One goal: your results."
+          headline="500+ businesses. 12 years of building. One goal: your results."
         />
 
         {/* ── 4. WHAT IS AN AI MARKETING AGENT ─────────────────────────────── */}

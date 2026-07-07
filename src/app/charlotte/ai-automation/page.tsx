@@ -337,7 +337,7 @@ const ROI_STATS = [
   },
   {
     value: 'Fixed Price',
-    label: 'milestone-paid with full code ownership — 25+ years experience, US-caliber output',
+    label: 'milestone-paid with full code ownership — 12+ years experience, US-caliber output',
     microcopy: 'predictable from quote to launch — no scope-creep invoices',
     categoryLabel: 'PRICING MODEL',
   },
@@ -440,7 +440,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '25+ years of SMB domain experience',
+    feature: '12+ years of SMB domain experience',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="no" />,
@@ -624,7 +624,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'Why is FactoryJet fixed-price, milestone-paid?',
     answer:
-      'Our engineering team brings 25+ years of focused expertise. Same quality of workflow architecture, compliance design, and delivery — without the overhead that inflates traditional agency invoices. We\'ve served US businesses for 25 years. When you brief us, an engineer reads it, not an account manager. No South End or Uptown Charlotte office rates built into the quote — and no bloated project team staffed to justify a larger invoice.',
+      'Our engineering team brings 12+ years of focused expertise. Same quality of workflow architecture, compliance design, and delivery — without the overhead that inflates traditional agency invoices. We\'ve served US businesses for 12 years. When you brief us, an engineer reads it, not an account manager. No South End or Uptown Charlotte office rates built into the quote — and no bloated project team staffed to justify a larger invoice.',
   },
   {
     category: 'pricing',
@@ -675,7 +675,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a local Charlotte automation agency?',
     answer:
-      'Three differences: price (specialized engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it — weeks, not quarters), and SMB depth (500+ small business projects since 1999 — we understand what operations look like inside a 20-person Charlotte financial services firm or a regional logistics company, including the compliance and audit requirements those industries carry).',
+      'Three differences: price (specialized engineers serving US businesses for 12+ years), speed (no layers between your brief and the engineer building it — weeks, not quarters), and SMB depth (500+ small business projects — we understand what operations look like inside a 20-person Charlotte financial services firm or a regional logistics company, including the compliance and audit requirements those industries carry).',
   },
 ];
 
@@ -772,7 +772,7 @@ export default function CharlotteAIAutomationPage() {
         {/* ── 2. TRUST STATS ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ businesses served. 25 years of building. One goal: your results."
+          headline="500+ businesses served. 12 years of building. One goal: your results."
         />
 
         {/* ── 3. WHAT IS AI AUTOMATION ─────────────────────────────────────── */}
@@ -957,7 +957,7 @@ export default function CharlotteAIAutomationPage() {
             {
               icon: '💸',
               title: 'Charlotte agency rates reflect Uptown overhead, not output',
-              body: 'A Charlotte automation agency building in Uptown or South End will quote enterprise-level rates for the same workflow FactoryJet delivers at a fraction of the cost. The difference is our engineering team is specialized — serving US businesses for 25 years, without the Charlotte overhead, without compromising the quality of the compliance design or the integration architecture.',
+              body: 'A Charlotte automation agency building in Uptown or South End will quote enterprise-level rates for the same workflow FactoryJet delivers at a fraction of the cost. The difference is our engineering team is specialized — serving US businesses for 12 years, without the Charlotte overhead, without compromising the quality of the compliance design or the integration architecture.',
             },
           ]}
         />

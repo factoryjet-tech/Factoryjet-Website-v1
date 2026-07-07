@@ -80,7 +80,7 @@ const serviceJsonLd = {
 
 export const metadata: Metadata = {
   title: 'Web Design Agency Dubai | UAE Website Development | FactoryJet',
-  description: 'FactoryJet is Dubai\'s #1 AI-native web design agency. Premium website development, e-commerce solutions & digital transformation for UAE businesses. 25+ years expertise, 500+ projects, 98% satisfaction rate. Get a free consultation!',
+  description: 'FactoryJet is Dubai\'s #1 AI-native web design agency. Premium website development, e-commerce solutions & digital transformation for UAE businesses. 12+ years expertise, 500+ projects, 98% satisfaction rate. Get a free consultation!',
   authors: [{ name: 'FactoryJet' }],
   robots: {
     index: true,
@@ -97,7 +97,7 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Web Design Agency Dubai | Top Website Development Company UAE',
-    description: 'Dubai\'s #1 AI-native web design agency. Premium websites, e-commerce solutions & digital transformation. 25+ years expertise, 500+ projects.',
+    description: 'Dubai\'s #1 AI-native web design agency. Premium websites, e-commerce solutions & digital transformation. 12+ years expertise, 500+ projects.',
     url: 'https://factoryjet.com/uae',
     images: [
       {

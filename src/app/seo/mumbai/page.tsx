@@ -181,7 +181,7 @@ const MUMBAI_FAQ_ITEMS = [
     category: 'getting-started',
     question: 'Do I need a Mumbai-based agency or can I work with someone remote?',
     answer:
-      'You need someone who understands how Mumbai buyers search and which neighbourhoods matter to your business — not someone physically in Andheri. We are not based in Mumbai, but we have delivered SEO across BFSI, real estate, fashion, F&B, and healthcare clients. Our advantage: 25 years of experience, a small senior team, and no junior on your account. We also cost less than a mid-size Mumbai agency, without the lock-in.',
+      'You need someone who understands how Mumbai buyers search and which neighbourhoods matter to your business — not someone physically in Andheri. We are not based in Mumbai, but we have delivered SEO across BFSI, real estate, fashion, F&B, and healthcare clients. Our advantage: 12 years of experience, a small senior team, and no junior on your account. We also cost less than a mid-size Mumbai agency, without the lock-in.',
   },
   /* ── Our SEO Services ─────────────────────────────────────────── */
   {
@@ -885,7 +885,7 @@ export default function SeoMumbaiPage() {
         <FAQ
           eyebrow="MUMBAI SEO QUESTIONS"
           headline="Every Question Mumbai Business Owners Ask About SEO, Answered Simply"
-          lead="We have answered every SEO question a Mumbai business owner has asked us over 25 years. Here are the ones that come up most."
+          lead="We have answered every SEO question a Mumbai business owner has asked us over 12 years. Here are the ones that come up most."
           categories={MUMBAI_FAQ_CATEGORIES}
           items={MUMBAI_FAQ_ITEMS}
         />

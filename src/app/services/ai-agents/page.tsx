@@ -234,7 +234,7 @@ const faqSchema = {
       name: 'How is FactoryJet different from hiring a US AI development agency?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Three differences: price (fixed-price, specialized engineers serving US businesses for 25+ years), speed (no account management layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand the operational reality of businesses your size, not just enterprise AI theory).',
+        text: 'Three differences: price (fixed-price, specialized engineers serving US businesses for 12+ years), speed (no account management layers between your brief and the engineer building it), and SMB depth (500+ small business projects — we understand the operational reality of businesses your size, not just enterprise AI theory).',
       },
     },
     {
@@ -592,7 +592,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '25+ years of SMB domain experience',
+    feature: '12+ years of SMB domain experience',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="no" />,
@@ -794,7 +794,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from hiring a US AI development agency?',
     answer:
-      'Three differences that matter: pricing model (fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices, backed by 25+ years serving US businesses), speed (no layers of account management between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand the operational reality of businesses your size, not just enterprise AI theory). We also won\'t pitch you an AI agent when a simpler automation would do the job.',
+      'Three differences that matter: pricing model (fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices, backed by 12+ years serving US businesses), speed (no layers of account management between your brief and the engineer building it), and SMB depth (500+ small business projects — we understand the operational reality of businesses your size, not just enterprise AI theory). We also won\'t pitch you an AI agent when a simpler automation would do the job.',
   },
   {
     category: 'trust',
@@ -924,7 +924,7 @@ export default function AIAgentsPage() {
         {/* ── 2. TRUST STATS ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ businesses. 25 years of building. One goal: your results."
+          headline="500+ businesses. 12 years of building. One goal: your results."
         />
 
         {/* ── 3. WHAT IS AN AI AGENT ───────────────────────────────────────── */}
@@ -1006,7 +1006,7 @@ export default function AIAgentsPage() {
 
               {/* ── Para 3: full paragraph + industry grid (aria-hidden) ── */}
               <p>
-                FactoryJet has been building software for small and mid-sized businesses since 1999. We understand what operations look like inside a 10-person company — the manual data entry, the repetitive emails, the spreadsheet that someone has to update every Friday. Those are exactly the workflows AI agents are designed to eliminate. We&apos;ve delivered AI systems for e-commerce brands, real estate teams, SaaS companies, professional services firms, and healthcare practices across the US.
+                FactoryJet has been building software for small and mid-sized businesses. We understand what operations look like inside a 10-person company — the manual data entry, the repetitive emails, the spreadsheet that someone has to update every Friday. Those are exactly the workflows AI agents are designed to eliminate. We&apos;ve delivered AI systems for e-commerce brands, real estate teams, SaaS companies, professional services firms, and healthcare practices across the US.
               </p>
               <div className="grid grid-cols-2 gap-2" aria-hidden>
                 {[
@@ -1270,7 +1270,7 @@ export default function AIAgentsPage() {
           headline="AI Agents Are No Longer Optional for US Small Businesses"
           leadParagraphs={[
             "The conversation has shifted from 'should we explore AI?' to 'how fast can we deploy it?' According to McKinsey's 2025 State of AI report, 96% of enterprises plan to expand AI agent adoption in the next 12 months. The businesses moving fastest aren't the Fortune 500 — they're the agile SMBs who can adopt new tools without a six-month procurement process.",
-            "FactoryJet has served small and medium businesses in Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, Tampa, and across the US since 1999. We understand what the inside of a 10-person business looks like — and we know exactly where AI creates the most leverage: customer response speed, back-office automation, and reducing the manual labor that burns out your best people.",
+            "FactoryJet has served small and medium businesses in Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, Tampa, and across the US. We understand what the inside of a 10-person business looks like — and we know exactly where AI creates the most leverage: customer response speed, back-office automation, and reducing the manual labor that burns out your best people.",
             "The businesses we build for aren't buying AI because it's trendy. They're buying it because they ran the math: a Growth AI platform that saves 25 staff hours per week pays for itself in weeks — and keeps paying forever.",
           ]}
           bodySlot={
@@ -1343,7 +1343,7 @@ export default function AIAgentsPage() {
             {
               icon: '💡',
               title: 'SMB domain depth, not startup theory',
-              body: 'We\'ve built for e-commerce brands, law firms, healthcare practices, real estate teams, and SaaS companies since 1999. We know where the actual complexity lives in a 15-person business. We build for that reality — not for a Y Combinator pitch.',
+              body: 'We\'ve built for e-commerce brands, law firms, healthcare practices, real estate teams, and SaaS companies. We know where the actual complexity lives in a 15-person business. We build for that reality — not for a Y Combinator pitch.',
             },
             {
               icon: '🔒',

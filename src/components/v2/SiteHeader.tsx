@@ -367,7 +367,7 @@ const LOCALE_CONFIG = {
     aboutHref:       '/about',
     featuredHeadline:'7-Day Delivery Guarantee',
     featuredBody:    'Custom websites delivered in 7 days — built by senior engineers, fixed-price, with full code ownership.',
-    featuredStats:   ['500+ businesses served', '25+ years of expertise', 'Fixed-price projects'],
+    featuredStats:   ['500+ businesses served', '12+ years of expertise', 'Fixed-price projects'],
     featuredCtaLabel:'See our work',
     featuredCtaHref: '/portfolio',
     modalRegion:     'in' as ModalRegion,
@@ -383,7 +383,7 @@ const LOCALE_CONFIG = {
     aboutHref:       '/about',
     featuredHeadline:'7-Day Delivery Guarantee',
     featuredBody:    'Custom websites for Dubai & UAE businesses — delivered in 7 days, fixed-price, with full code ownership.',
-    featuredStats:   ['500+ businesses served', '25+ years of expertise', 'No hidden fees'],
+    featuredStats:   ['500+ businesses served', '12+ years of expertise', 'No hidden fees'],
     featuredCtaLabel:'See our work',
     featuredCtaHref: '/portfolio',
     modalRegion:     'in' as ModalRegion, // UAE served by India team; 'uae' not in ModalRegion

@@ -464,7 +464,7 @@ export default function SuratEcommercePage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ stores launched. 25 years of ecommerce engineering. One 7-day guarantee."
+          headline="500+ stores launched. 12 years of ecommerce engineering. One 7-day guarantee."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
@@ -611,7 +611,7 @@ export default function SuratEcommercePage() {
             {
               icon: '⚡',
               title: '7-day delivery. In writing. Or you do not pay the balance.',
-              body: "Surat's business community moves at Gujarat speed — decisions are made fast and execution is expected to match. FactoryJet delivers Shopify and WooCommerce stores in 7 days, with the guarantee written into the project agreement. We have delivered on time for 97% of all builds since 2005.",
+              body: "Surat's business community moves at Gujarat speed — decisions are made fast and execution is expected to match. FactoryJet delivers Shopify and WooCommerce stores in 7 days, with the guarantee written into the project agreement. We have delivered on time for 97% of all builds.",
             },
             {
               icon: '📱',
@@ -620,7 +620,7 @@ export default function SuratEcommercePage() {
             },
             {
               icon: '📋',
-              title: 'Fixed price. Published before the first call.',
+              title: 'Fixed price. Agreed before we start.',
               body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your store running.",
             },
           ]}
@@ -642,7 +642,7 @@ export default function SuratEcommercePage() {
           leadParagraphs={[
             "Surat is one of the world's fastest-growing cities and India's diamond city — handling 90% of global diamond polishing and supplying 40% of India's synthetic textile market. This manufacturing supremacy is creating one of India's most concentrated B2B ecommerce opportunities, with diamond traders, textile wholesalers, and fabric manufacturers all building digital-first procurement portals for the first time.",
             "Surat's ecommerce opportunity is defined by the B2B-to-B2C transition at scale. Ring Road fabric traders are building Shopify stores with international shipping and dollar-denominated pricing for export buyers. Katargam embroidery manufacturers are launching D2C bridal fabric stores with WhatsApp-native product catalogues. Diamond polishing businesses are creating private B2B portals with RTGS payment flows. And GIDC food manufacturers are building D2C subscription operations with FSSAI compliance and pan-India logistics.",
-            "Surat's business community is characterised by Gujarat's entrepreneurial speed — decisions are made fast and execution is expected to match. FactoryJet's 7-day delivery guarantee, published pricing, and fixed-scope builds are the exact signals Surat founders respond to. We have built for the Surat textile and diamond ecosystem and understand the specific B2B and D2C requirements that each vertical demands.",
+            "Surat's business community is characterised by Gujarat's entrepreneurial speed — decisions are made fast and execution is expected to match. FactoryJet's 7-day delivery guarantee, transparent pricing, and fixed-scope builds are the exact signals Surat founders respond to. We have built for the Surat textile and diamond ecosystem and understand the specific B2B and D2C requirements that each vertical demands.",
           ]}
           stats={[
             {

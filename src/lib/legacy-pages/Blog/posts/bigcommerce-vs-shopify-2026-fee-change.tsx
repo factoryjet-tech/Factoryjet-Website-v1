@@ -538,7 +538,7 @@ export const post: BlogPost = {
       </p>
 
       <p className="text-sm text-gray-500 italic">
-        Bhavesh Barot is the founder of FactoryJet. He has spent 25+ years building ecommerce
+        Bhavesh Barot is the founder of FactoryJet. He has spent 12+ years building ecommerce
         stores for hundreds of US businesses. FactoryJet delivers in 7 days, not 7 weeks.{' '}
         <a
           href="https://calendly.com/bhavesh-factoryjet/30min"

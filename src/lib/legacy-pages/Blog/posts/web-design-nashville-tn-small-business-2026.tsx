@@ -57,7 +57,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Why should a Nashville small business choose FactoryJet over a local Nashville agency?',
-      a: "The honest answer: if in-person meetings and a local account manager matter more than budget, a local Nashville agency makes sense. If you want Lighthouse 100/100 performance, 7-day delivery, full technical SEO, WCAG 2.2 compliance, and a fixed price starting at $1,999 — FactoryJet delivers equivalent or better technical outcomes at 60–70% lower cost. We've served 500+ US small businesses since 1999 and provide named US client references you can call. Get a free quote at factoryjet.com/contact.",
+      a: "The honest answer: if in-person meetings and a local account manager matter more than budget, a local Nashville agency makes sense. If you want Lighthouse 100/100 performance, 7-day delivery, full technical SEO, WCAG 2.2 compliance, and a fixed price starting at $1,999 — FactoryJet delivers equivalent or better technical outcomes at 60–70% lower cost. We've served 500+ US small businesses and provide named US client references you can call. Get a free quote at factoryjet.com/contact.",
     },
   ],
   content: (
@@ -165,7 +165,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Delivers for Nashville SMBs</h2>
       <p className="mb-4">
-        FactoryJet has served 500+ businesses since 1999 including US small businesses across hospitality, healthcare, retail, and professional services. For Nashville SMBs, we deliver: custom Next.js builds (never templates), Lighthouse 100/100 on every project, WCAG 2.2 Level AA compliance, full technical SEO including schema markup and XML sitemaps, 7-day delivery on 5-page sites, US business-hour project management, and full code ownership at project completion.
+        FactoryJet has served 500+ businesses including US small businesses across hospitality, healthcare, retail, and professional services. For Nashville SMBs, we deliver: custom Next.js builds (never templates), Lighthouse 100/100 on every project, WCAG 2.2 Level AA compliance, full technical SEO including schema markup and XML sitemaps, 7-day delivery on 5-page sites, US business-hour project management, and full code ownership at project completion.
       </p>
       <p className="mb-4">
         Starting price: $1,999 for a 5-page professional website. Shopify stores from $2,499. Monthly maintenance from $149/month.

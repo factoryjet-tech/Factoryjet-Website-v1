@@ -141,7 +141,7 @@ export default function ShopifyDevelopmentPage() {
           <div className="scorecard-row">
             <div>
               <div className="scorecard-metric">Stores Delivered UK+Global</div>
-              <div className="scorecard-note">since 2005; ecommerce since day one</div>
+              <div className="scorecard-note">ecommerce since day one</div>
             </div>
             <div className="scorecard-val">500+</div>
           </div>
@@ -370,7 +370,7 @@ export default function ShopifyDevelopmentPage() {
       <div className="dark-card">
         <span className="dark-pillar-icon">💸</span>
         <h3 style={{ color: '#fff', marginBottom: '12px' }}>Traditional agencies cost a small fortune</h3>
-        <p>A mid-tier Shopify agency typically charges a hefty five-figure sum for a custom theme build; before retainers, app configuration, or migration fees. FactoryJet delivers the same Figma-first design, Liquid engineering, and Lighthouse audit at a fixed price. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. Our specialised team has been building ecommerce since 2005.</p>
+        <p>A mid-tier Shopify agency typically charges a hefty five-figure sum for a custom theme build; before retainers, app configuration, or migration fees. FactoryJet delivers the same Figma-first design, Liquid engineering, and Lighthouse audit at a fixed price. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. Our specialised team has been building ecommerce.</p>
       </div>
     </div>
   </div>
@@ -828,7 +828,7 @@ export default function ShopifyDevelopmentPage() {
     <div style={{ maxWidth: '700px', margin: '0 auto 56px', textAlign: 'center' }}>
       <span className="eyebrow">WHY FACTORYJET</span>
       <h2 style={{ marginTop: '12px' }}>We've built 500+ Shopify stores. Not slide decks about them.</h2>
-      <p className="lead" style={{ marginTop: '16px', color: 'rgba(255,255,255,.6)' }}>FactoryJet has been building ecommerce since 2005. We know what moves the needle on a Shopify product page; and what looks impressive in a proposal but doesn't affect your conversion rate.</p>
+      <p className="lead" style={{ marginTop: '16px', color: 'rgba(255,255,255,.6)' }}>FactoryJet has been building ecommerce. We know what moves the needle on a Shopify product page; and what looks impressive in a proposal but doesn't affect your conversion rate.</p>
     </div>
     <div className="col-3">
       <div className="dark-card">

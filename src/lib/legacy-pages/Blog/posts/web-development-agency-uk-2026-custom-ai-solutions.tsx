@@ -5,7 +5,7 @@ export const post: BlogPost = {
   id: '127',
   slug: "web-development-agency-uk-2026-custom-ai-solutions",
   title: "Web Development Agency UK 2026: Custom Solutions + AI Agents for Growing SMBs",
-  excerpt: "UK web development agencies in 2026 combine custom Next.js builds with AI agents to deliver faster, smarter sites at a fixed, published price. Growing SMBs get Lighthouse 92+ performance, AI chatbots, and 2-4 week delivery without enterprise budgets.",
+  excerpt: "UK web development agencies in 2026 combine custom Next.js builds with AI agents to deliver faster, smarter sites at a fixed, transparent price. Growing SMBs get Lighthouse 92+ performance, AI chatbots, and 2-4 week delivery without enterprise budgets.",
   category: "Web Design & Strategy",
   author: 'Bhavesh Barot',
   date: "May 03, 2026",
@@ -13,11 +13,11 @@ export const post: BlogPost = {
   imageUrl: "/blog-images/web-development-agency-uk-2026-custom-ai-solutions-hero.webp",
   meta: {
     title: "UK Web Development Agency 2026: Custom Sites + AI Agents for SMBs",
-    description: "Get Lighthouse 92+ performance, AI agents, and 2-4 week delivery at a fixed, published price. See what modern web development looks like for growing SMBs in 2026.",
+    description: "Get Lighthouse 92+ performance, AI agents, and 2-4 week delivery at a fixed, transparent price. See what modern web development looks like for growing SMBs in 2026.",
   },
   keyTakeaways: [
     "UK web agencies in 2026 combine Next.js 15, WordPress, and Shopify with AI agents for chatbots, sales automation, and customer support—delivering complete digital systems, not just websites.",
-    "Expect Lighthouse Performance 92+ on every build, 2-4 week delivery timelines, and pricing £1,500-£8,000 for web, £2,000-£8,000 for e-commerce—at a fixed, published price.",
+    "Expect Lighthouse Performance 92+ on every build, 2-4 week delivery timelines, and pricing £1,500-£8,000 for web, £2,000-£8,000 for e-commerce—at a fixed, transparent price.",
     "AI-native agencies serve 500+ businesses across 50+ industries with 98% client satisfaction, proving offshore-onshore hybrid models work for UK SMBs seeking enterprise-grade outcomes.",
     "Real UK clients like GPSUK in Staines use custom B2B e-commerce platforms with AI-powered quote workflows, artwork visualisation, and trade account management on unified commerce systems.",
     "Choose agencies offering named UK client references, public pricing, verifiable Lighthouse scores, and direct WhatsApp/email contact—transparency signals quality in 2026's crowded market.",
@@ -26,7 +26,7 @@ export const post: BlogPost = {
   ],
   faqs: [
     { q: "What does a web development agency in the UK actually do in 2026?", a: "A UK web development agency in 2026 builds custom websites, e-commerce platforms, and AI agents using Next.js 15, WordPress, Shopify, and unified commerce systems. Beyond design and code, agencies handle CRM/ERP integration, SEO optimisation for Google and AI Overviews, ongoing maintenance, and AI automation like chatbots and sales agents. The best agencies serve as long-term digital partners, not one-off contractors." },
-    { q: "How much does a custom website cost from a UK web development agency in 2026?", a: "UK web development agencies charge £1,500-£8,000 for custom websites and £2,000-£8,000 for e-commerce platforms in 2026. AI-native agencies like FactoryJet price at a fixed, published price by using offshore-onshore hybrid teams in Bengaluru while maintaining UK client service. AI agent development starts from £3,000, SEO retainers run £500-£1,500/month, and maintenance packages begin at £99/month." },
+    { q: "How much does a custom website cost from a UK web development agency in 2026?", a: "UK web development agencies charge £1,500-£8,000 for custom websites and £2,000-£8,000 for e-commerce platforms in 2026. AI-native agencies like FactoryJet price at a fixed, transparent price by using offshore-onshore hybrid teams in Bengaluru while maintaining UK client service. AI agent development starts from £3,000, SEO retainers run £500-£1,500/month, and maintenance packages begin at £99/month." },
     { q: "What's the typical timeline for a custom website build in 2026?", a: "Most UK web development agencies deliver custom websites in 2-4 weeks for standard SMB projects in 2026. Complex e-commerce builds with custom workflows, AI agents, or ERP integration may take 6-8 weeks. Agencies using Next.js 15 and modern frameworks ship faster than WordPress-only shops. Always ask for a written timeline with milestone dates before signing contracts." },
     { q: "Should I choose a local UK agency or an AI-native offshore-onshore hybrid in 2026?", a: "Hybrid agencies with UK client service and offshore development teams deliver 50-60% cost savings without sacrificing quality in 2026. Check for named UK client references, public portfolios, verifiable Lighthouse scores (92+), and direct contact channels. Local agencies offer face-to-face meetings but charge £5,000-£15,000 for projects hybrid teams complete at £1,500-£8,000. Your budget and preference for in-person collaboration determine the best fit." },
     { q: "What is Lighthouse Performance and why does it matter for my business website?", a: "Lighthouse is Google's open-source tool measuring website performance, accessibility, SEO, and best practices on a 0-100 scale. Scores of 92+ signal fast load times, mobile optimisation, and strong SEO foundations—directly impacting Google rankings and user experience. In 2026, agencies guaranteeing Lighthouse 92+ deliver measurably better sites than those without public performance commitments. Ask to see Lighthouse reports for agency portfolio sites before hiring." },
@@ -54,7 +54,7 @@ export const post: BlogPost = {
       </div>
 
       <p className="text-lg leading-relaxed mb-6">
-        A web development agency in the UK builds custom websites, e-commerce platforms, and AI agents for growing SMBs using Next.js 15, WordPress, Shopify, and unified commerce systems. The best agencies deliver Lighthouse 92+ performance, 2–4 week timelines, and pricing of £1,500–£8,000—at a fixed, published price—while maintaining 98% client satisfaction across multiple industries.
+        A web development agency in the UK builds custom websites, e-commerce platforms, and AI agents for growing SMBs using Next.js 15, WordPress, Shopify, and unified commerce systems. The best agencies deliver Lighthouse 92+ performance, 2–4 week timelines, and pricing of £1,500–£8,000—at a fixed, transparent price—while maintaining 98% client satisfaction across multiple industries.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What UK Web Development Agencies Deliver in 2026</h2>
@@ -193,7 +193,7 @@ export const post: BlogPost = {
         <a href="https://factoryjet.com/contact" className="inline-block bg-white text-[#0052CC] font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition-colors text-lg">
           Book a Free 30-Min Consultation →
         </a>
-        <p className="text-blue-200 text-sm mt-6">500+ businesses · 98% satisfaction · ISO certified · 25+ years combined experience</p>
+        <p className="text-blue-200 text-sm mt-6">500+ businesses · 98% satisfaction · ISO certified · 12+ years combined experience</p>
       </div>
     </>
   ),

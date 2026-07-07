@@ -144,7 +144,7 @@ const faqSchema = {
       name: 'Why is FactoryJet fixed-price, milestone-paid?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We work fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices. Our engineering team brings 25+ years of focused expertise serving US businesses. You get production-grade API architecture, prompt engineering, and integration delivery. You brief an engineer; that engineer builds it. No account management layers between your brief and the build. Full code ownership at handoff.',
+        text: 'We work fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices. Our engineering team brings 12+ years of focused expertise serving US businesses. You get production-grade API architecture, prompt engineering, and integration delivery. You brief an engineer; that engineer builds it. No account management layers between your brief and the build. Full code ownership at handoff.',
       },
     },
     {
@@ -248,7 +248,7 @@ const faqSchema = {
       name: 'How is FactoryJet different from a US AI development agency?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Three differences: price (specialized engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it — no account managers, project coordinators, or solution architects adding cost and latency), and SMB depth (500+ small business projects since 1999). We understand what AI integration actually looks like in a 15-person business, not just in an enterprise with a dedicated IT department.',
+        text: 'Three differences: price (specialized engineers serving US businesses for 12+ years), speed (no layers between your brief and the engineer building it — no account managers, project coordinators, or solution architects adding cost and latency), and SMB depth (500+ small business projects). We understand what AI integration actually looks like in a 15-person business, not just in an enterprise with a dedicated IT department.',
       },
     },
   ],
@@ -541,7 +541,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '25+ years of SMB domain experience',
+    feature: '12+ years of SMB domain experience',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="no" />,
@@ -680,7 +680,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'Why is FactoryJet fixed-price, milestone-paid?',
     answer:
-      'Our engineering team brings 25+ years of focused expertise. Same quality of API architecture, prompt engineering, and delivery without the overhead that inflates traditional agency invoices. We\'ve served US businesses for 25 years. You brief an engineer; that engineer builds it. No account management layers, no inflated overhead.',
+      'Our engineering team brings 12+ years of focused expertise. Same quality of API architecture, prompt engineering, and delivery without the overhead that inflates traditional agency invoices. We\'ve served US businesses for 12 years. You brief an engineer; that engineer builds it. No account management layers, no inflated overhead.',
   },
   {
     category: 'pricing',
@@ -756,7 +756,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US AI development agency?',
     answer:
-      'Three differences: price (specialized engineers serving US businesses for 25+ years), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects since 1999 — we understand AI integration inside a 15-person company, not just enterprises with dedicated IT departments).',
+      'Three differences: price (specialized engineers serving US businesses for 12+ years), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects — we understand AI integration inside a 15-person company, not just enterprises with dedicated IT departments).',
   },
 ];
 
@@ -853,7 +853,7 @@ export default function AIIntegrationServicesPage() {
         {/* ── 2. TRUST STATS ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ businesses. 25 years of building. One goal: your results."
+          headline="500+ businesses. 12 years of building. One goal: your results."
         />
 
         {/* ── 3. WHAT IS AI INTEGRATION ────────────────────────────────────── */}
@@ -1094,7 +1094,7 @@ export default function AIIntegrationServicesPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="We connect AI to your real tools. Not to a polished demo."
-          lead="25 years building production software for US businesses means we understand the messy reality of actual tech stacks — legacy APIs, undocumented fields, inconsistent data — and we build integrations that work in that reality."
+          lead="12 years building production software for US businesses means we understand the messy reality of actual tech stacks — legacy APIs, undocumented fields, inconsistent data — and we build integrations that work in that reality."
           pillars={[
             {
               icon: '⚡',

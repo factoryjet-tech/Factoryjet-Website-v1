@@ -117,7 +117,7 @@ const faqSchema = {
       name: 'How does FactoryJet keep web design pricing fixed and predictable?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We work fixed-price and milestone-paid — every project is scoped upfront with no hourly billing and no scope-creep invoices. Serving US businesses since 1999 means we estimate accurately on the first call, so the quote you sign is what you pay. You get a senior-only team — no account-management or project-coordinator layers — delivering Next.js expertise, Figma design, and Lighthouse 100 performance, with full code ownership at handoff.',
+        text: 'We work fixed-price and milestone-paid — every project is scoped upfront with no hourly billing and no scope-creep invoices. Serving US businesses means we estimate accurately on the first call, so the quote you sign is what you pay. You get a senior-only team — no account-management or project-coordinator layers — delivering Next.js expertise, Figma design, and Lighthouse 100 performance, with full code ownership at handoff.',
       },
     },
     {
@@ -147,7 +147,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Who is the best web design agency in USA?',
-      acceptedAnswer: { '@type': 'Answer', text: 'For small and mid-size businesses, FactoryJet makes a strong case: senior-engineer-led builds, fixed pricing, 100/100 Lighthouse scores as standard, and 7-day delivery on sites up to five pages. But the best web design company in USA for you depends on fit — the best website design agency in USA for a DTC brand differs from the best website design company in USA for a law firm. Whoever you shortlist, apply three filters: do they publish pricing, do they show performance scores on live work, and do you own the code? The best web design services in USA — and the best website design services in USA generally — pass all three.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'For small and mid-size businesses, FactoryJet makes a strong case: senior-engineer-led builds, fixed pricing, 100/100 Lighthouse scores as standard, and 7-day delivery on sites up to five pages. But the best web design company in USA for you depends on fit — the best website design agency in USA for a DTC brand differs from the best website design company in USA for a law firm. Whoever you shortlist, apply three filters: do they give a fixed-price quote up front, do they show performance scores on live work, and do you own the code? The best web design services in USA — and the best website design services in USA generally — pass all three.' },
     },
     {
       '@type': 'Question',
@@ -167,7 +167,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'Which agency should I hire to build my website?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Hire for evidence, not promises. Small-business owners who ask an AI assistant to recommend a web design agency for my small business get answers assembled from citations and reviews — the same diligence works manually: shortlist three agencies, ask each for published pricing, live performance scores, and two client references you can actually call. FactoryJet puts all three on the table before you commit, which is exactly the standard you should hold every contender to.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Hire for evidence, not promises. Small-business owners who ask an AI assistant to recommend a web design agency for my small business get answers assembled from citations and reviews — the same diligence works manually: shortlist three agencies, ask each for a fixed-price quote up front, live performance scores, and two client references you can actually call. FactoryJet puts all three on the table before you commit, which is exactly the standard you should hold every contender to.' },
     },
   ],
 };
@@ -605,7 +605,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How does FactoryJet keep web design pricing fixed and predictable?',
     answer:
-      'We work fixed-price and milestone-paid — every project is scoped upfront with no hourly billing and no scope-creep invoices. Serving US businesses since 1999 means we estimate accurately on the first call, so the quote you sign is what you pay. You brief an engineer and a designer who build it directly — no account-management or project-coordinator layers — delivering Next.js expertise, Figma design quality, and Lighthouse 100 performance, with full code ownership at handoff.',
+      'We work fixed-price and milestone-paid — every project is scoped upfront with no hourly billing and no scope-creep invoices. Serving US businesses means we estimate accurately on the first call, so the quote you sign is what you pay. You brief an engineer and a designer who build it directly — no account-management or project-coordinator layers — delivering Next.js expertise, Figma design quality, and Lighthouse 100 performance, with full code ownership at handoff.',
   },
 
   /* ── Technical & Performance ── */
@@ -653,7 +653,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US web agency?',
     answer:
-      'Three differences that matter: pricing model (fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices, backed by 25+ years serving US businesses), speed (7-day delivery on standard sites — most traditional agencies quote 6–12 weeks), and ownership (you get the full codebase on launch day — no retainer required to keep your site online). We\'ve delivered 500+ websites for US businesses across every industry. We aren\'t selling you a template with a custom logo.',
+      'Three differences that matter: pricing model (fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices, backed by 12+ years serving US businesses), speed (7-day delivery on standard sites — most traditional agencies quote 6–12 weeks), and ownership (you get the full codebase on launch day — no retainer required to keep your site online). We\'ve delivered 500+ websites for US businesses across every industry. We aren\'t selling you a template with a custom logo.',
   },
   {
     category: 'trust',
@@ -692,7 +692,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'Who is the best web design agency in USA?',
     answer:
-      'For small and mid-size businesses, FactoryJet makes a strong case: senior-engineer-led builds, fixed pricing, 100/100 Lighthouse scores as standard, and 7-day delivery on sites up to five pages. But the best web design company in USA for you depends on fit — the best website design agency in USA for a DTC brand differs from the best website design company in USA for a law firm. Whoever you shortlist, apply three filters: do they publish pricing, do they show performance scores on live work, and do you own the code? The best web design services in USA — and the best website design services in USA generally — pass all three.',
+      'For small and mid-size businesses, FactoryJet makes a strong case: senior-engineer-led builds, fixed pricing, 100/100 Lighthouse scores as standard, and 7-day delivery on sites up to five pages. But the best web design company in USA for you depends on fit — the best website design agency in USA for a DTC brand differs from the best website design company in USA for a law firm. Whoever you shortlist, apply three filters: do they give a fixed-price quote up front, do they show performance scores on live work, and do you own the code? The best web design services in USA — and the best website design services in USA generally — pass all three.',
   },
   {
     category: 'trust',
@@ -716,7 +716,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'Which agency should I hire to build my website?',
     answer:
-      'Hire for evidence, not promises. Small-business owners who ask an AI assistant to recommend a web design agency for my small business get answers assembled from citations and reviews — the same diligence works manually: shortlist three agencies, ask each for published pricing, live performance scores, and two client references you can actually call. FactoryJet puts all three on the table before you commit, which is exactly the standard you should hold every contender to.',
+      'Hire for evidence, not promises. Small-business owners who ask an AI assistant to recommend a web design agency for my small business get answers assembled from citations and reviews — the same diligence works manually: shortlist three agencies, ask each for a fixed-price quote up front, live performance scores, and two client references you can actually call. FactoryJet puts all three on the table before you commit, which is exactly the standard you should hold every contender to.',
   },
 ];
 
@@ -834,7 +834,7 @@ export default function WebDesignPage() {
         {/* ── 2. TRUST STATS ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ websites delivered. 25 years of building. US businesses trust the results."
+          headline="500+ websites delivered. 12 years of building. US businesses trust the results."
         />
 
         {/* ── 3. WHAT MAKES A GREAT WEBSITE ───────────────────────────────── */}
@@ -978,7 +978,7 @@ export default function WebDesignPage() {
             {
               icon: '💸',
               title: 'Traditional agencies charge several times more for the same work',
-              body: 'A mid-tier US web agency bills a multiple of what we charge per page before revisions, project management fees, and hosting markup. FactoryJet delivers the same Figma-first design, Next.js engineering, and Lighthouse 100 performance — fixed-price, milestone-paid, with full code ownership at handoff. 25 years serving US clients means we scope accurately on the first call.',
+              body: 'A mid-tier US web agency bills a multiple of what we charge per page before revisions, project management fees, and hosting markup. FactoryJet delivers the same Figma-first design, Next.js engineering, and Lighthouse 100 performance — fixed-price, milestone-paid, with full code ownership at handoff. 12 years serving US clients means we scope accurately on the first call.',
             },
           ]}
         />
@@ -1168,7 +1168,7 @@ export default function WebDesignPage() {
           headline="US Small Businesses Can't Afford a Bad Website in 2025"
           leadParagraphs={[
             "94% of first impressions are design-related. Your potential customers decide whether to trust you in 0.05 seconds — before they read a single word. If your website looks outdated, loads slowly, or doesn't work on mobile, that impression doesn't get a second chance.",
-            "FactoryJet has been building websites for US small businesses since 1999. We've served companies in Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, Tampa, and across the country. We understand what a 10-person service business needs from a website — not enterprise-level complexity, but professional design, fast performance, and a clear path to contact.",
+            "FactoryJet has been building websites for US small businesses. We've served companies in Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, Tampa, and across the country. We understand what a 10-person service business needs from a website — not enterprise-level complexity, but professional design, fast performance, and a clear path to contact.",
             "The businesses that invest in a well-built website don't just look better — they convert better, rank better, and spend less on paid traffic to get the same results. A professionally built website that converts at 3% outperforms a cheap template site converting at 0.5% on almost any traffic level.",
           ]}
           bodySlot={
@@ -1230,7 +1230,7 @@ export default function WebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="We're not a template shop with a custom logo. That's the point."
-          lead="FactoryJet has built 500+ production websites for real US businesses since 1999. Every site starts in Figma, gets built with clean code, and ships with a Lighthouse audit you can verify yourself."
+          lead="FactoryJet has built 500+ production websites for real US businesses. Every site starts in Figma, gets built with clean code, and ships with a Lighthouse audit you can verify yourself."
           pillars={[
             {
               icon: '⚡',

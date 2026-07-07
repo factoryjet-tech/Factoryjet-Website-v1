@@ -688,7 +688,7 @@ export default function ShopifySeoPage() {
       </div>
       <div className="dark-card">
         <span style={{ fontSize: '28px', marginBottom: '16px', display: 'block' }}>🏆</span>
-        <h3 style={{ color: '#fff', marginBottom: '12px' }}>10+ years of Shopify SEO; 25 years of web expertise</h3>
+        <h3 style={{ color: '#fff', marginBottom: '12px' }}>10+ years of Shopify SEO; 12 years of web expertise</h3>
         <p>FactoryJet has been a dedicated Shopify agency for over a decade, tracking every SEO-relevant platform change from classic themes through Online Store 2.0 to Hydrogen and Headless. That depth of Shopify-specific experience matters when you need advice on what actually survives the next core algorithm update.</p>
       </div>
     </div>

@@ -600,7 +600,7 @@ export default function ThiruvananthapuramWebDesignPage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ websites built. 25 years of web engineering. One 7-day guarantee."
+          headline="500+ websites built. 12 years of web engineering. One 7-day guarantee."
         />
 
         {/* ── 4. CITY CONTEXT ──────────────────────────────────────────────── */}
@@ -758,7 +758,7 @@ export default function ThiruvananthapuramWebDesignPage() {
             {
               icon: '⚡',
               title: '7-day delivery. In writing. Or you do not pay.',
-              body: "Thiruvananthapuram's Technopark companies, government contractors, and startup founders move fast. Waiting 14 weeks for a website that should have been live in April is not acceptable when KSUM's demo day is in three weeks. FactoryJet delivers in 7 days, with the guarantee written into the project agreement. We have delivered on time on 97% of all projects since 2005.",
+              body: "Thiruvananthapuram's Technopark companies, government contractors, and startup founders move fast. Waiting 14 weeks for a website that should have been live in April is not acceptable when KSUM's demo day is in three weeks. FactoryJet delivers in 7 days, with the guarantee written into the project agreement. We have delivered on time on 97% of all projects.",
             },
             {
               icon: '🏗️',
@@ -767,7 +767,7 @@ export default function ThiruvananthapuramWebDesignPage() {
             },
             {
               icon: '📋',
-              title: 'Fixed price. Published before the first call.',
+              title: 'Fixed price. Agreed before we start.',
               body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch.",
             },
           ]}

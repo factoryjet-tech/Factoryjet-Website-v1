@@ -405,7 +405,7 @@ export default function Services() {
             }}
           >
             Web design, e-commerce, AI agents and AI SEO — delivered by one
-            AI-native team, priced at a fixed, published price, and
+            AI-native team, priced at a fixed, transparent quote, and
             built on the same stack as Stripe, Vercel and Linear.
           </p>
         </div>

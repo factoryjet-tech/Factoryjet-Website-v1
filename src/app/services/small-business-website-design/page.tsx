@@ -146,7 +146,7 @@ const serviceSchema = {
     '@type': 'Organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
-    foundingDate: '1999',
+    foundingDate: '2014',
     areaServed: 'US',
     
   },
@@ -220,8 +220,8 @@ const STATS = [
   },
   {
     value: '500+',
-    label: 'US small businesses served since 1999',
-    microcopy: '25+ years of professional web design',
+    label: 'US small businesses served',
+    microcopy: '12+ years of professional web design',
     categoryLabel: 'TRACK RECORD',
   },
 ];
@@ -501,7 +501,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'What makes FactoryJet different from other small business web designers?',
-    answer: `Three things separate FactoryJet: speed (7-day delivery guarantee on 5-page sites), value (fixed-price, milestone-paid), and track record (500+ websites built since 1999). Most web designers are solo freelancers or small agencies juggling 10–15 clients — which means slow turnarounds, inconsistent quality, and limited accountability. FactoryJet is a structured engineering team that has refined a repeatable process over 25 years. Senior engineers on every project, fixed pricing, and a support window after launch.`,
+    answer: `Three things separate FactoryJet: speed (7-day delivery guarantee on 5-page sites), value (fixed-price, milestone-paid), and track record (500+ websites built). Most web designers are solo freelancers or small agencies juggling 10–15 clients — which means slow turnarounds, inconsistent quality, and limited accountability. FactoryJet is a structured engineering team that has refined a repeatable process over 12 years. Senior engineers on every project, fixed pricing, and a support window after launch.`,
     category: 'factoryjet',
   },
 ];
@@ -583,7 +583,7 @@ export default function SmallBusinessWebDesignPage() {
         formSlot={<HeroInlineForm region="us" source="us_services_small_business_website_design_hero" />}
           eyebrow="SMALL BUSINESS WEBSITE DESIGN"
           headline="A website your customers trust. Built in 7 days. Fixed price, scoped to your build."
-          lead="Custom-designed (not a template), mobile-first, Lighthouse 100 performance, full SEO setup — and delivered to your domain in 7 days. 500+ US small businesses served since 1999."
+          lead="Custom-designed (not a template), mobile-first, Lighthouse 100 performance, full SEO setup — and delivered to your domain in 7 days. 500+ US small businesses served."
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
           rightSlot={
             <div className="w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">
@@ -780,7 +780,7 @@ export default function SmallBusinessWebDesignPage() {
           body={
             <>
               <p>
-                FactoryJet has been building websites since 1999. That's 25 years of small business web design — enough time to know what works, what doesn't, and how to price projects accurately enough to offer fixed prices with no scope creep games.
+                FactoryJet has been building websites. That's 12 years of small business web design — enough time to know what works, what doesn't, and how to price projects accurately enough to offer fixed prices with no scope creep games.
               </p>
 
               <p>
@@ -818,7 +818,7 @@ export default function SmallBusinessWebDesignPage() {
                   { reason: 'Fixed pricing', detail: 'No hourly billing, no scope creep' },
                   { reason: 'Senior team only', detail: 'No juniors billing at senior rates' },
                   { reason: 'Custom design', detail: 'Not templates — built for your brand' },
-                  { reason: '500+ delivered', detail: '25+ years, hundreds of small businesses' },
+                  { reason: '500+ delivered', detail: '12+ years, hundreds of small businesses' },
                   { reason: 'Full ownership', detail: 'Your code, your hosting, no lock-in' },
                   { reason: '30-day support', detail: 'Post-launch fixes included' },
                 ].map(({ reason, detail }) => (

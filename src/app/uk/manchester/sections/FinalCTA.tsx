@@ -85,7 +85,7 @@ export default function FinalCTA() {
               Manchester&apos;s digital economy is worth £5 billion and growing.
               Your website should reflect the ambition of the city you operate
               in — fast, intelligent, visible, and engineered to convert.
-              FactoryJet builds AI-native websites on Next.js 15 at a fixed, published price, with guaranteed Lighthouse scores
+              FactoryJet builds AI-native websites on Next.js 15 at a fixed, transparent quote, with guaranteed Lighthouse scores
               and AI search visibility baked into every page.
             </p>
 

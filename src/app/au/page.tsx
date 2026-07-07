@@ -78,7 +78,7 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
     label: 'Process & timeline',
     items: [
       { q: 'What does the 7-day process actually look like, day by day?', a: 'Day 1 is your brief and strategy call. Day 2 you get the homepage design concept to approve. Day 3 we design every page. Days 4–5 senior engineers build it and wire in content, SEO and analytics. Day 6 is your feedback round and performance tuning. Day 7 we launch on your domain and hand over with training.' },
-      { q: 'Who actually builds my website?', a: 'Senior engineers and designers with 25+ years of combined product experience — the same team that has shipped 500+ business websites and stores. No work is passed to juniors or subcontractors, and you can talk to the founder directly at any point.' },
+      { q: 'Who actually builds my website?', a: 'Senior engineers and designers with 12+ years of combined product experience — the same team that has shipped 500+ business websites and stores. No work is passed to juniors or subcontractors, and you can talk to the founder directly at any point.' },
       { q: 'How many revisions do I get?', a: "The process has two formal approval points — design concept on day 2 and the full review on day 6 — and we keep iterating within those until you're happy. What we don't do is open-ended scope changes mid-build; new pages or features after kickoff get quoted separately so your timeline holds." },
       { q: "What if I'm slow to respond — does the 7 days still count?", a: "The 7 days are working days where we have what we need from you. If you go quiet for a week mid-project, the clock pauses and resumes when you're back. No penalties, no drama — we just pick up where we left off." },
     ],
@@ -290,7 +290,7 @@ export default function AUHomePage() {
                 </div>
                 <div className="hero-trust rise r5">
                   <span><Ic id="i-check" />500+ businesses shipped</span>
-                  <span><Ic id="i-check" />25+ years engineering</span>
+                  <span><Ic id="i-check" />12+ years engineering</span>
                   <span><Ic id="i-check" />Month-to-month, no lock-in</span>
                 </div>
               </div>

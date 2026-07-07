@@ -335,7 +335,7 @@ const CHATBOT_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '500+ SMB projects since 1999',
+    feature: '500+ SMB projects',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="sc" kind="no" />,
@@ -677,7 +677,7 @@ export default function AIChatbotINPage() {
         {/* ── 3. TRUST STATS ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ businesses. 25 years of building. One goal: your results."
+          headline="500+ businesses. 12 years of building. One goal: your results."
         />
 
         {/* ── 4. WHAT IS AN AI CHATBOT ─────────────────────────────────────── */}
@@ -1059,7 +1059,7 @@ export default function AIChatbotINPage() {
             variant="dark"
             eyebrow="GET STARTED"
             headline="Book a Free AI Chatbot Strategy Call"
-            sub="Tell us your biggest support or lead-response bottleneck. We will map out exactly which chatbot type fits your business and give you a fixed-price estimate before writing a single line of code. No pitch, no pressure — an honest assessment from engineers who have been building for Indian businesses for 25 years."
+            sub="Tell us your biggest support or lead-response bottleneck. We will map out exactly which chatbot type fits your business and give you a fixed-price estimate before writing a single line of code. No pitch, no pressure — an honest assessment from engineers who have been building for Indian businesses for 12 years."
             primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
             secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919699977699' }}
             objectionHandler="Fixed price. Full code ownership. WhatsApp + Zoho + Razorpay ready. No SaaS lock-in."

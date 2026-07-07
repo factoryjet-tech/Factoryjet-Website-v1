@@ -263,7 +263,7 @@ const PUNE_FAQ_ITEMS = [
     category: 'pricing',
     question: 'What makes FactoryJet better value than a Pune web agency?',
     answer:
-      'We are a specialised web engineering team — not a full-service agency with account managers, strategy teams, and office overheads in Baner or Koregaon Park. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at a fraction of the cost. We have been building websites since 1999. You pay for the build, not our admin structure.',
+      'We are a specialised web engineering team — not a full-service agency with account managers, strategy teams, and office overheads in Baner or Koregaon Park. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch — at a fraction of the cost. We have been building websites. You pay for the build, not our admin structure.',
   },
   {
     category: 'pricing',
@@ -470,7 +470,7 @@ export default function PuneWebDesignPage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ websites built. 25 years of web engineering. One 7-day guarantee."
+          headline="500+ websites built. 12 years of web engineering. One 7-day guarantee."
         />
 
         {/* ── 4. CITY CONTEXT ──────────────────────────────────────────────── */}
@@ -583,7 +583,7 @@ export default function PuneWebDesignPage() {
             },
             {
               icon: '📋',
-              title: 'Fixed price. Published before the first call.',
+              title: 'Fixed price. Agreed before we start.',
               body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your site running.",
             },
           ]}

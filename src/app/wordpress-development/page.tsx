@@ -262,7 +262,7 @@ const WP_STATS = [
   },
   {
     value: '500+',
-    label: 'websites built and launched for businesses across India, US, UK, and UAE since 1999',
+    label: 'websites built and launched for businesses across India, US, UK, and UAE',
     microcopy: 'across SMBs, D2C brands, clinics, NGOs, and enterprise teams',
     categoryLabel: 'SITES LAUNCHED',
   },
@@ -481,7 +481,7 @@ const WP_FAQ_ITEMS = [
     category: 'pricing',
     question: 'Why is FactoryJet cheaper than other WordPress agencies in India?',
     answer:
-      "We are a specialised engineering team, not a full-service digital agency. No account management layers, no generalist designers who also do social media, no large office in an expensive city, and no inflated project manager markups. The same Figma-to-code process, the same Lighthouse audit before handover, the same technical SEO setup — at a fixed price scoped up front. We have been building websites since 1999. That experience is priced into the quality, not the overhead.",
+      "We are a specialised engineering team, not a full-service digital agency. No account management layers, no generalist designers who also do social media, no large office in an expensive city, and no inflated project manager markups. The same Figma-to-code process, the same Lighthouse audit before handover, the same technical SEO setup — at a fixed price scoped up front. We have been building websites. That experience is priced into the quality, not the overhead.",
   },
 
   /* ── WordPress vs. Alternatives ── */
@@ -722,7 +722,7 @@ export default function WordPressDevelopmentPage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ websites built. 25 years of web development expertise."
+          headline="500+ websites built. 12 years of web development expertise."
         />
 
         {/* ── 4. WORDPRESS EXPLAINED ───────────────────────────────────────── */}
@@ -799,7 +799,7 @@ export default function WordPressDevelopmentPage() {
               </div>
 
               <p>
-                FactoryJet has built WordPress sites for Indian businesses since 1999. We know the
+                FactoryJet has built WordPress sites for Indian businesses. We know the
                 difference between a WordPress site that embarrasses you in a client meeting and one that
                 wins business. We build the latter — with or without WooCommerce, at a price that makes
                 the investment rational.
@@ -1088,7 +1088,7 @@ export default function WordPressDevelopmentPage() {
           headline="5.6 Million WordPress Sites in India. Most of Them Are Slow, Insecure, and Invisible on Google."
           leadParagraphs={[
             "WordPress is by far the most popular CMS in India — powering over 5.6 million websites across SMBs, news and media, education, healthcare, real estate, NGOs, and professional services. It is the default choice for Indian business owners who need a web presence without a large development budget. The problem is not the platform — it is the ecosystem of cheap themes, bloated page builders, and shared hosting that most Indian WordPress sites are built on.",
-            "FactoryJet has been building WordPress sites for Indian businesses since 1999. We have built for startups in Bangalore, clinics in Chennai, NGOs in Delhi, real estate portals in Mumbai, and news sites in Hyderabad. We understand what an Indian SMB at ₹50 lakh to ₹5 crore revenue actually needs from a website: it needs to load fast on a ₹12,000 Redmi phone on Jio 4G, rank for the right keywords on Google India, and be updatable by a non-technical team without breaking.",
+            "FactoryJet has been building WordPress sites for Indian businesses. We have built for startups in Bangalore, clinics in Chennai, NGOs in Delhi, real estate portals in Mumbai, and news sites in Hyderabad. We understand what an Indian SMB at ₹50 lakh to ₹5 crore revenue actually needs from a website: it needs to load fast on a ₹12,000 Redmi phone on Jio 4G, rank for the right keywords on Google India, and be updatable by a non-technical team without breaking.",
             "The WooCommerce opportunity in India is significant. India's D2C e-commerce market crossed ₹35,000 crore in 2024 and is growing at 38% annually. Many of these brands start on Shopify — and eventually migrate to WooCommerce when the recurring Shopify subscription fee stops making sense at their scale. WooCommerce with Razorpay is the lowest total-cost-of-ownership e-commerce stack in India for brands at ₹50 lakh to ₹5 crore annual GMV.",
           ]}
           bodySlot={
@@ -1260,8 +1260,8 @@ export default function WordPressDevelopmentPage() {
         {/* ── 16. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="500+ sites built. 25 years of WordPress. We know what actually ranks and converts in India."
-          lead="FactoryJet has been building WordPress sites for Indian businesses since 1999 — long before Elementor existed, long before GoDaddy became the default Indian hosting choice. We know the difference between a WordPress site built to look impressive in a proposal and one built to rank, load fast, and convert visitors into leads."
+          headline="500+ sites built. 12 years of WordPress. We know what actually ranks and converts in India."
+          lead="FactoryJet has been building WordPress sites for Indian businesses — long before Elementor existed, long before GoDaddy became the default Indian hosting choice. We know the difference between a WordPress site built to look impressive in a proposal and one built to rank, load fast, and convert visitors into leads."
           pillars={[
             {
               icon: '🇮🇳',

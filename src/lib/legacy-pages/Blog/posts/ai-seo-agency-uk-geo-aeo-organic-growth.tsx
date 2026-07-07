@@ -22,12 +22,12 @@ export const post: BlogPost = {
     "UK SMBs using AI SEO saw 3x organic traffic growth in 2026 compared to traditional SEO-only strategies, with 40-60% lower cost per acquisition.",
     "FactoryJet's AI SEO service costs £500-£1,500/month, delivering measurable results in 8-12 weeks through GEO, AEO, and AIO (AI Overview Optimisation).",
     "Real case: Impulse Branding Solutions in India saw organic traffic increase 280% in 6 months using FactoryJet's AI SEO (GEO/AEO/AIO) on their WordPress site.",
-    "Verified trust markers: 500+ businesses served, 98% client satisfaction, 25+ years combined team expertise, 50+ industries served across UK, US, UAE, and India.",
+    "Verified trust markers: 500+ businesses served, 98% client satisfaction, 12+ years combined team expertise, 50+ industries served across UK, US, UAE, and India.",
   ],
   faqs: [
     { q: "What is an AI SEO agency and how is it different from traditional SEO?", a: "An AI SEO agency optimises your content for AI engines like ChatGPT, Perplexity, and Google AI Overviews, not just traditional search rankings. Traditional SEO focuses on ranking in the top 10 blue links. AI SEO (GEO, AEO, AIO) ensures AI engines cite your business as the authoritative source in conversational answers, capturing the 60% of searches that never reach a website in 2026." },
     { q: "What are GEO, AEO, and AIO in AI SEO?", a: "GEO (Generative Engine Optimisation) structures content so AI models cite you in generated answers. AEO (Answer Engine Optimisation) targets featured snippets and direct answers with 50-60 word responses. AIO (AI Overview Optimisation) specifically optimises for Google's AI-generated summaries at the top of search results. All three work together to dominate AI-driven search in 2026." },
-    { q: "How much does AI SEO cost for UK SMBs in 2026?", a: "FactoryJet's AI SEO service costs £500-£1,500 per month for UK SMBs, which is at a fixed, published price. This includes GEO, AEO, and AIO optimisation, monthly reporting, and ongoing content updates. Most clients see measurable traffic increases within 8-12 weeks. No long-term contracts required." },
+    { q: "How much does AI SEO cost for UK SMBs in 2026?", a: "FactoryJet's AI SEO service costs £500-£1,500 per month for UK SMBs, which is at a fixed, transparent price. This includes GEO, AEO, and AIO optimisation, monthly reporting, and ongoing content updates. Most clients see measurable traffic increases within 8-12 weeks. No long-term contracts required." },
     { q: "Can you show real examples of UK businesses using AI SEO?", a: "Yes. GPSUK in Staines, Surrey (Director: Gareth Sampson) uses FactoryJet's AI SEO on their custom B2B e-commerce platform. Impulse Branding Solutions in India (Director: Kiran Mahadik) saw 280% organic traffic growth in 6 months using AI SEO on their WordPress site. Formative Concepts (Director: Arif Khan) drives global traffic with AI SEO on their 30+ page WordPress site for MEP drafting services." },
     { q: "Why did 500+ SMBs achieve 3x organic growth with AI SEO in 2026?", a: "Because 60% of searches in 2026 are answered by AI engines before users click any website. Traditional SEO only optimises for the remaining 40%. AI SEO (GEO/AEO/AIO) captures both: you rank in traditional results AND get cited by ChatGPT, Perplexity, and Google AI Overviews. This doubles or triples your total organic reach." },
     { q: "How long does it take to see results from AI SEO?", a: "Most UK SMBs see measurable traffic increases within 8-12 weeks of starting AI SEO. Full 3x growth typically takes 6-9 months of consistent optimisation. Speed depends on your existing content quality, domain authority, and competition. FactoryJet provides monthly reports showing AI citation rates, featured snippet wins, and organic traffic growth." },
@@ -142,7 +142,7 @@ export const post: BlogPost = {
         <a href="https://factoryjet.com/contact" className="inline-block bg-white text-[#0052CC] font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition-colors text-lg">
           Book a Free 30-Min Consultation →
         </a>
-        <p className="text-blue-200 text-sm mt-6">500+ businesses · 98% satisfaction · ISO certified · 25+ years combined experience</p>
+        <p className="text-blue-200 text-sm mt-6">500+ businesses · 98% satisfaction · ISO certified · 12+ years combined experience</p>
       </div>
     </>
   ),

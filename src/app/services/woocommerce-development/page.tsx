@@ -177,7 +177,7 @@ const serviceSchema = {
     '@type': 'Organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
-    foundingDate: '1999',
+    foundingDate: '2014',
     areaServed: 'US',
     
   },
@@ -821,7 +821,7 @@ export default function WoocommerceDevelopmentPage() {
           body={
             <>
               <p>
-                FactoryJet has been building on WordPress and WooCommerce since before WooCommerce was called WooCommerce (it started as WooThemes Cart). That's 15+ years of WooCommerce experience — enough depth to know which approaches cause problems 2 years later and which ones hold up. We build for maintainability, not just for launch day.
+                FactoryJet has been building on WordPress and WooCommerce since before WooCommerce was called WooCommerce (it started as WooThemes Cart). That's 12+ years of WooCommerce experience — enough depth to know which approaches cause problems 2 years later and which ones hold up. We build for maintainability, not just for launch day.
               </p>
 
               <p>

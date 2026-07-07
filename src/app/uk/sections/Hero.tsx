@@ -339,7 +339,7 @@ export default function Hero() {
             }}
           >
             Enterprise-grade web design, e-commerce, AI agents &amp; AI SEO —
-            at a fixed, published price.
+            at a fixed, transparent quote.
           </p>
         </div>
 

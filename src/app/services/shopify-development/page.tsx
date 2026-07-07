@@ -635,7 +635,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from hiring a US Shopify agency?',
     answer:
-      'Three differences: price (fixed-price, specialized team serving US brands since 1999), speed (3–5 weeks vs. 3–6 months at most traditional agencies), and ownership (full code delivery on launch day, not held behind a retainer). We\'ve built 120+ Shopify stores across DTC, B2B, and enterprise brands. We understand what actually drives conversion on a product page — not just what looks good in a proposal.',
+      'Three differences: price (fixed-price, specialized team serving US brands), speed (3–5 weeks vs. 3–6 months at most traditional agencies), and ownership (full code delivery on launch day, not held behind a retainer). We\'ve built 120+ Shopify stores across DTC, B2B, and enterprise brands. We understand what actually drives conversion on a product page — not just what looks good in a proposal.',
   },
   {
     category: 'trust',
@@ -1007,7 +1007,7 @@ export default function ShopifyPage() {
             {
               icon: '💸',
               title: 'US Shopify agencies charge several times more for this',
-              body: 'A mid-tier US Shopify agency bills a multiple of what we charge for a custom theme build — before retainers, app configuration, or migration fees. FactoryJet delivers the same Figma-first design, the same Liquid engineering, and the same Lighthouse performance audit at a fixed price. Our specialized team has been building e-commerce since 2005.',
+              body: 'A mid-tier US Shopify agency bills a multiple of what we charge for a custom theme build — before retainers, app configuration, or migration fees. FactoryJet delivers the same Figma-first design, the same Liquid engineering, and the same Lighthouse performance audit at a fixed price. Our specialized team has been building e-commerce.',
             },
           ]}
         />
@@ -1259,7 +1259,7 @@ export default function ShopifyPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="We've built 120+ Shopify stores. Not slide decks about them."
-          lead="FactoryJet has been building e-commerce since 2005. We know what moves the needle on a Shopify product page — and what looks impressive in a proposal but doesn't affect your conversion rate."
+          lead="FactoryJet has been building e-commerce. We know what moves the needle on a Shopify product page — and what looks impressive in a proposal but doesn't affect your conversion rate."
           pillars={[
             {
               icon: '🎯',

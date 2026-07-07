@@ -279,7 +279,7 @@ const faqSchema = {
       name: 'How long has FactoryJet been building AI systems?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We\'ve been building software for small businesses since 1999 — 25+ years. Our AI practice started in 2019 with our first production LLM integrations, before ChatGPT made AI mainstream. Since then we\'ve delivered AI systems for e-commerce brands, law firms, healthcare practices, SaaS companies, real estate teams, and professional services firms across the US. The 500+ projects in our portfolio span two decades of software delivery. AI is where we spend all our time now, but the project discipline, SMB domain knowledge, and quality standards come from 25 years of building real things for real businesses.',
+        text: 'We\'ve been building software for small businesses — 12+ years. Our AI practice started in 2019 with our first production LLM integrations, before ChatGPT made AI mainstream. Since then we\'ve delivered AI systems for e-commerce brands, law firms, healthcare practices, SaaS companies, real estate teams, and professional services firms across the US. The 500+ projects in our portfolio span over a decade of software delivery. AI is where we spend all our time now, but the project discipline, SMB domain knowledge, and quality standards come from 12 years of building real things for real businesses.',
       },
     },
     {
@@ -303,7 +303,7 @@ const serviceSchema = {
     '@type': 'Organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
-    foundingDate: '1999',
+    foundingDate: '2014',
     numberOfEmployees: { '@type': 'QuantitativeValue', value: 25 },
   },
   areaServed: { '@type': 'Country', name: 'United States' },
@@ -614,7 +614,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '25+ years SMB domain experience',
+    feature: '12+ years SMB domain experience',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="no" />,
@@ -797,7 +797,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How does FactoryJet keep AI development pricing fixed and predictable?',
     answer:
-      'We work fixed-price and milestone-paid — every AI project is scoped upfront with no hourly billing and no scope-creep invoices. 25 years serving US businesses means we estimate accurately on the first call, so the quote you sign is what you pay. You get experienced engineers in a lean structure — no account-management or sales layers — delivering production-grade architecture, code review, and handover, with full code ownership at handoff.',
+      'We work fixed-price and milestone-paid — every AI project is scoped upfront with no hourly billing and no scope-creep invoices. 12 years serving US businesses means we estimate accurately on the first call, so the quote you sign is what you pay. You get experienced engineers in a lean structure — no account-management or sales layers — delivering production-grade architecture, code review, and handover, with full code ownership at handoff.',
   },
   {
     category: 'pricing',
@@ -847,7 +847,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How long has FactoryJet been building AI systems?',
     answer:
-      'We\'ve been building software for small businesses since 1999 — 25+ years. Our AI practice started in 2019 with our first production LLM integrations, before ChatGPT made AI a household word. Since then we\'ve delivered AI systems for e-commerce brands, law firms, healthcare practices, SaaS companies, real estate teams, and professional services firms across the US. The 500+ projects in our portfolio span two decades of building real systems for real businesses — AI is where we focus now, but the project discipline and quality standards come from 25 years of delivery.',
+      'We\'ve been building software for small businesses — 12+ years. Our AI practice started in 2019 with our first production LLM integrations, before ChatGPT made AI a household word. Since then we\'ve delivered AI systems for e-commerce brands, law firms, healthcare practices, SaaS companies, real estate teams, and professional services firms across the US. The 500+ projects in our portfolio span over a decade of building real systems for real businesses — AI is where we focus now, but the project discipline and quality standards come from 12 years of delivery.',
   },
 
   // ── Choosing an agency (2) — money-query coverage, added 2026-06-11 ──
@@ -913,7 +913,7 @@ export default function AIAgencyPage() {
           headline={<>The AI Agency That<br className="hidden lg:block" /> Actually Delivers —<br className="hidden lg:block" /> Not Just Decks</>}
           lead="FactoryJet is a US AI agency building custom AI agents, automation workflows, and chatbots for small businesses since 2019. 500+ production systems delivered. fixed-price, milestone-paid. Fixed price. Talk to the founder."
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
-          trustItems={['500+ businesses served', 'fixed-price', '25 years building']}
+          trustItems={['500+ businesses served', 'fixed-price', '12 years building']}
           rightSlot={
             <div className="w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">
               {/* Card header */}
@@ -965,7 +965,7 @@ export default function AIAgencyPage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ production AI systems. 25 years building. One fixed price."
+          headline="500+ production AI systems. 12 years building. One fixed price."
         />
 
         {/* ── 4. WHAT DOES AN AI AGENCY DO ─────────────────────────────────── */}
@@ -1010,7 +1010,7 @@ export default function AIAgencyPage() {
               </div>
 
               <p>
-                FactoryJet has been building production software for US small businesses since 1999. Our AI practice started in 2019 — before most agencies knew what an LLM was. The systems we ship run in production, handling real customer interactions, processing real invoices, qualifying real leads. Not prototypes. Not proofs of concept. Production systems with monitoring, audit trails, and support windows.
+                FactoryJet has been building production software for US small businesses. Our AI practice started in 2019 — before most agencies knew what an LLM was. The systems we ship run in production, handling real customer interactions, processing real invoices, qualifying real leads. Not prototypes. Not proofs of concept. Production systems with monitoring, audit trails, and support windows.
               </p>
 
               {/* 3-col stat cards — decorative */}
@@ -1103,7 +1103,7 @@ export default function AIAgencyPage() {
           pillars={[
             {
               title: 'They sell the dream, not the delivery',
-              body: 'Many AI agencies pitch AI transformation and deliver proofs of concept. A proof of concept is not a production system. Production means real data, real volume, real users who don\'t follow the happy path, and real edge cases that a demo never surfaces. We\'ve built 500+ production systems since 1999. We know the difference — and we don\'t call a demo a delivery.',
+              body: 'Many AI agencies pitch AI transformation and deliver proofs of concept. A proof of concept is not a production system. Production means real data, real volume, real users who don\'t follow the happy path, and real edge cases that a demo never surfaces. We\'ve built 500+ production systems. We know the difference — and we don\'t call a demo a delivery.',
             },
             {
               title: 'They\'re priced for enterprise budgets',
@@ -1144,7 +1144,7 @@ export default function AIAgencyPage() {
           headline="The Businesses That Are Winning Right Now Aren't Bigger. They're Faster."
           leadParagraphs={[
             "The conversation has shifted from 'should we explore AI?' to 'how fast can we deploy it?' According to McKinsey's 2025 State of AI report, 96% of enterprises plan to expand AI agent adoption in the next 12 months. The businesses moving fastest aren't the Fortune 500 — they're agile SMBs who can adopt new tools without a six-month procurement process and a committee of seventeen people.",
-            "FactoryJet has served small and medium businesses in Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, Tampa, New York, and across the US since 1999. We understand what a 10-person business looks like from the inside — the manual data entry, the repetitive emails, the spreadsheet that someone has to update every Friday. Those are exactly the workflows AI eliminates first.",
+            "FactoryJet has served small and medium businesses in Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, Tampa, New York, and across the US. We understand what a 10-person business looks like from the inside — the manual data entry, the repetitive emails, the spreadsheet that someone has to update every Friday. Those are exactly the workflows AI eliminates first.",
             "The most common question we get after the first demo is: 'Why didn't we do this two years ago?' The answer is usually that the price was too high, the timelines were too long, or the last agency didn't build anything that actually ran. We exist to fix all three of those problems.",
           ]}
           bodySlot={
@@ -1268,7 +1268,7 @@ export default function AIAgencyPage() {
             },
             {
               title: 'SMB depth, not enterprise theory',
-              body: 'We\'ve built for 10-person law firms, 30-person e-commerce brands, and solo real estate agents since 1999. We know what operations actually look like inside a small business — the manual data entry, the spreadsheet hell, the repetitive emails. We build AI for that reality, not for a Y Combinator pitch deck.',
+              body: 'We\'ve built for 10-person law firms, 30-person e-commerce brands, and solo real estate agents. We know what operations actually look like inside a small business — the manual data entry, the spreadsheet hell, the repetitive emails. We build AI for that reality, not for a Y Combinator pitch deck.',
             },
             {
               title: 'You own everything. From day one.',

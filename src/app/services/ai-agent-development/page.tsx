@@ -371,7 +371,7 @@ const IN_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '500+ SMB projects since 1999',
+    feature: '500+ SMB projects',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="it" kind="no" />,
@@ -627,7 +627,7 @@ const IN_FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from hiring an Indian IT firm for AI development?',
     answer:
-      "Three differences: structure (flat team — you brief an engineer, that engineer builds it, no account manager layers), SMB depth (500+ small business projects since 1999, we understand what a 15-person business actually looks like operationally), and transparency (fixed-price contracts, weekly demos, and you own everything at the end — no lock-in).",
+      "Three differences: structure (flat team — you brief an engineer, that engineer builds it, no account manager layers), SMB depth (500+ small business projects, we understand what a 15-person business actually looks like operationally), and transparency (fixed-price contracts, weekly demos, and you own everything at the end — no lock-in).",
   },
 
   // Money-query coverage, added 2026-06-11
@@ -1074,7 +1074,7 @@ export default function AIAgentDevelopmentINPage() {
               </div>
 
               <p>
-                The result is software that works more like a capable employee than a rules engine. It handles peak volumes that overwhelm your human staff, works at 2 AM when your customer places an order, and never calls in sick. Unlike hiring, it costs a fixed amount to build and runs at near-zero marginal cost afterward. FactoryJet has been building software for businesses like yours since 1999 — we know exactly which workflows are ready for AI and which still need a human touch.
+                The result is software that works more like a capable employee than a rules engine. It handles peak volumes that overwhelm your human staff, works at 2 AM when your customer places an order, and never calls in sick. Unlike hiring, it costs a fixed amount to build and runs at near-zero marginal cost afterward. FactoryJet has been building software for businesses like yours — we know exactly which workflows are ready for AI and which still need a human touch.
               </p>
 
               {/* Industry grid */}
@@ -1445,7 +1445,7 @@ export default function AIAgentDevelopmentINPage() {
             variant="dark"
             eyebrow="GET STARTED"
             headline="Book a Free AI Strategy Call"
-            sub="Tell us your biggest operational bottleneck. We will map out exactly which workflows are ready for AI and give you a fixed-price estimate before we write a single line of code. No pitch, no pressure — an honest assessment from engineers who have been building for Indian businesses for 25 years."
+            sub="Tell us your biggest operational bottleneck. We will map out exactly which workflows are ready for AI and give you a fixed-price estimate before we write a single line of code. No pitch, no pressure — an honest assessment from engineers who have been building for Indian businesses for 12 years."
             primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
             secondaryCta={{ label: 'WhatsApp Us', href: 'https://wa.me/919699977699' }}
             objectionHandler="Fixed price. Full code ownership. WhatsApp + Zoho + Razorpay ready. 500+ businesses served."
