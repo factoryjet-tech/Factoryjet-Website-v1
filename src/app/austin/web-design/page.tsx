@@ -151,7 +151,7 @@ export default function AustinWebDesignPage() {
       <TestimonialsSection
         region="us"
         eyebrow="WHAT CLIENTS SAY"
-        headline={"4.9/5 across 150+ reviews from Austin and beyond."}
+        headline={"Rated 4.9/5 by clients from Austin and beyond."}
       />
       <FAQ
         eyebrow="COMMON QUESTIONS"

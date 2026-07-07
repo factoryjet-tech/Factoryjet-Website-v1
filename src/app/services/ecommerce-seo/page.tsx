@@ -28,7 +28,7 @@ import './ecommerce-seo.css';
    the external cached route bundle. See reference_animation_stack + perf playbook.
 
    Honesty: no pricing; CTAs → free ecommerce SEO audit modal + Calendly; verified
-   claims only (4.9/150, 500+, 7-day/Lighthouse 100); SERP + funnel labeled
+   claims only (4.9/5, 500+, 7-day/Lighthouse 100); SERP + funnel labeled
    illustrative; no em-dashes. Anti-cannibalization: owns ecommerce/Shopify/Woo/
    Magento + product/collection/technical SEO (distinct from /ecommerce-development
    and /shopify-development which BUILD stores).
@@ -295,7 +295,7 @@ export default function EcommerceSeoServicePage() {
                 </Link>
               </div>
               <div className="hstat rise d5">
-                <div className="s"><span className="n"><span className="star">&#9733;</span> 4.9</span><span className="l">150 reviews</span></div>
+                <div className="s"><span className="n"><span className="star">&#9733;</span> 4.9</span><span className="l">client rating</span></div>
                 <span className="sep" />
                 <div className="s"><span className="n">500+</span><span className="l">businesses served</span></div>
                 <span className="sep" />
@@ -506,7 +506,7 @@ export default function EcommerceSeoServicePage() {
                 <Image src="/images/us/services/seo/team-cutout.webp" alt="The FactoryJet ecommerce SEO team" fill loading="lazy" sizes="(max-width: 880px) 90vw, 460px" style={{ objectFit: 'cover' }} />
               </div>
               <div className="ec e1">A senior team</div>
-              <div className="ec e2"><span className="star">&#9733;</span> 4.9 &middot; 150 reviews</div>
+              <div className="ec e2"><span className="star">&#9733;</span> 4.9/5 &middot; average rating</div>
             </div>
             <div>
               <h2 data-reveal>Specialists who <span className="it">build and rank</span> stores</h2>
@@ -565,7 +565,7 @@ export default function EcommerceSeoServicePage() {
                 <ul className="cta-trust">
                   <li><Check fill="#F05A28" /> A real audit, not a sales pitch</li>
                   <li><Check fill="#F05A28" /> Covers collections, products, and technical</li>
-                  <li><Check fill="#F05A28" /> 4.9 / 5 from 150 reviews</li>
+                  <li><Check fill="#F05A28" /> 4.9 / 5 average client rating</li>
                 </ul>
               </div>
               <div className="formcard">

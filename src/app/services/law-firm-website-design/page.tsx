@@ -929,7 +929,7 @@ export default function LawFirmWebsiteDesignPage() {
         <TestimonialsSection
           region="us"
           eyebrow="WHAT CLIENTS SAY"
-          headline="4.9/5 across 150+ reviews from US businesses and professional practices."
+          headline="Rated 4.9/5 by clients from US businesses and professional practices."
         />
 
         {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}

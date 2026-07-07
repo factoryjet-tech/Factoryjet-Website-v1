@@ -29,7 +29,7 @@ import './local-seo.css';
    blocking webfont or inlineCss. See reference_nextjs_performance_playbook.
 
    Honesty: no pricing section, CTAs → free-audit modal + Calendly, verified
-   claims only (4.9/150, 500+, 7-day / Lighthouse 100), no fabricated metrics
+   claims only (4.9/5, 500+, 7-day / Lighthouse 100), no fabricated metrics
    (the map + reputation cards are illustrative and labeled), no em-dashes.
    Schema: Service + Organization + FAQPage(25) + BreadcrumbList.
 ───────────────────────────────────────────────────────────────────────────── */
@@ -363,7 +363,7 @@ export default function LocalSeoServicePage() {
                 </Link>
               </div>
               <div className="hstat rise d5">
-                <div className="s"><span className="n"><span className="star">&#9733;</span> 4.9</span><span className="l">150 reviews</span></div>
+                <div className="s"><span className="n"><span className="star">&#9733;</span> 4.9</span><span className="l">client rating</span></div>
                 <span className="sep" />
                 <div className="s"><span className="n">500+</span><span className="l">businesses served</span></div>
                 <span className="sep" />
@@ -389,7 +389,7 @@ export default function LocalSeoServicePage() {
                   <div className="pr comp"><div className="nm">Another competitor</div><div className="mt">&#9733; 4.1 &middot; 38 reviews</div></div>
                 </div>
               </div>
-              <div className="fchip f1 float" style={{ animationDelay: '.3s' }}><div className="k">Reviews</div><div className="v">150</div></div>
+              <div className="fchip f1 float" style={{ animationDelay: '.3s' }}><div className="k">Client Rating</div><div className="v">4.9/5</div></div>
               <div className="fchip f2 float" style={{ animationDelay: '1s' }}><span className="dot" /><span className="t">Ranks in the map pack</span></div>
             </div>
           </div>
@@ -596,7 +596,7 @@ export default function LocalSeoServicePage() {
                 />
               </div>
               <div className="ec e1">A senior team</div>
-              <div className="ec e2"><span className="star">&#9733;</span> 4.9 &middot; 150 reviews</div>
+              <div className="ec e2"><span className="star">&#9733;</span> 4.9/5 &middot; average rating</div>
             </div>
             <div>
               <h2>Real specialists, <span className="it">not a listings mill</span></h2>
@@ -664,7 +664,7 @@ export default function LocalSeoServicePage() {
                 <ul className="cta-trust">
                   <li><Check fill="#F05A28" /> A real audit, not a sales pitch</li>
                   <li><Check fill="#F05A28" /> Covers your profile, reviews, and citations</li>
-                  <li><Check fill="#F05A28" /> 4.9 / 5 from 150 reviews</li>
+                  <li><Check fill="#F05A28" /> 4.9 / 5 average client rating</li>
                 </ul>
               </div>
               <div className="formcard">

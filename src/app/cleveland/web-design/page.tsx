@@ -293,7 +293,7 @@ export default function ClevelandWebDesignPage() {
         <TestimonialsSection
           region="us"
           eyebrow="WHAT CLIENTS SAY"
-          headline={"4.9/5 across 150+ reviews from Cleveland and beyond."}
+          headline={"Rated 4.9/5 by clients from Cleveland and beyond."}
         />
         <FAQ
           eyebrow="COMMON QUESTIONS"

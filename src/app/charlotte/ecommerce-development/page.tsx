@@ -394,7 +394,7 @@ export default function Page() {
         <TestimonialsSection
           region="us"
           eyebrow="WHAT CLIENTS SAY"
-          headline="4.9/5 across 150+ reviews from Charlotte and beyond."
+          headline="Rated 4.9/5 by clients from Charlotte and beyond."
         />
 
         {/* ── 13. FAQ ─────────────────────────────────────────────────── */}

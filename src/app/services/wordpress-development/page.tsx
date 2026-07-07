@@ -922,7 +922,7 @@ export default function WordPressDevelopmentPage() {
         <TestimonialsSection
           region="us"
           eyebrow="WHAT CLIENTS SAY"
-          headline="4.9/5 across 150+ reviews from US businesses we've built on WordPress."
+          headline="Rated 4.9/5 by clients from US businesses we've built on WordPress."
         />
 
         {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}

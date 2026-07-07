@@ -170,7 +170,7 @@ export default function DenverWebDesignPage() {
       <TestimonialsSection
         region="us"
         eyebrow="WHAT CLIENTS SAY"
-        headline={"4.9/5 across 150+ reviews from Denver and beyond."}
+        headline={"Rated 4.9/5 by clients from Denver and beyond."}
       />
       <FAQ
         eyebrow="COMMON QUESTIONS"

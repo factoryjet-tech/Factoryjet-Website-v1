@@ -319,7 +319,7 @@ export default function AUHomePage() {
                   <b className="on">SYD</b><b>MEL</b><b>BNE</b><b>PER</b><b>ADL</b><b>OOL</b>
                 </div>
                 <div className="chip pop chip-1"><span className="ico"><Ic id="i-bolt" /></span><div><span className="ck">7 days</span><span className="cl">brief to launch</span></div></div>
-                <div className="chip pop chip-2"><span className="ico"><Ic id="i-star" /></span><div><span className="ck">4.9/5</span><span className="cl">150+ client reviews</span></div></div>
+                <div className="chip pop chip-2"><span className="ico"><Ic id="i-star" /></span><div><span className="ck">4.9/5</span><span className="cl">average client rating</span></div></div>
                 <div className="chip pop chip-3"><span className="ico"><Ic id="i-gauge" /></span><div><span className="ck">100/100</span><span className="cl">Lighthouse performance</span></div></div>
                 <div className="chip pop chip-4"><span className="ico"><Ic id="i-check" /></span><div><span className="ck">500+</span><span className="cl">sites &amp; stores shipped</span></div></div>
               </div>

@@ -789,7 +789,7 @@ export default function BestEcommercePlatformsPage() {
                 </blockquote>
                 <div style={{ borderTop: '1px solid var(--pp-line)', paddingTop: '14px', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', color: 'var(--pp-muted)' }}>
                   <span style={{ color: 'var(--pp-orange)', letterSpacing: '1px' }}>★★★★★</span>
-                  <span><strong style={{ color: 'var(--pp-ink)' }}>4.9 on Clutch</strong> · 150+ verified reviews</span>
+                  <span><strong style={{ color: 'var(--pp-ink)' }}>4.9/5</strong> · average client rating</span>
                 </div>
               </div>
             </div>

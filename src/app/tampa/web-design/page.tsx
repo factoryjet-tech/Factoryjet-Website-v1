@@ -178,7 +178,7 @@ export default function TampaWebDesignPage() {
       <TestimonialsSection
         region="us"
         eyebrow="WHAT CLIENTS SAY"
-        headline={"4.9/5 across 150+ reviews from Tampa and beyond."}
+        headline={"Rated 4.9/5 by clients from Tampa and beyond."}
       />
       <FAQ
         eyebrow="COMMON QUESTIONS"

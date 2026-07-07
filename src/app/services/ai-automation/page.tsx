@@ -968,7 +968,7 @@ export default function AIAutomationPage() {
         <TestimonialsSection
           region="us"
           eyebrow="WHAT CLIENTS SAY"
-          headline="4.9/5 across 150+ reviews from US businesses we've automated."
+          headline="Rated 4.9/5 by clients from US businesses we've automated."
         />
 
         {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}

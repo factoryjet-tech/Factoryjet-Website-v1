@@ -386,7 +386,7 @@ export default function Page() {
         <TestimonialsSection
           region="us"
           eyebrow="WHAT CLIENTS SAY"
-          headline="4.9/5 across 150+ reviews from Boise and beyond."
+          headline="Rated 4.9/5 by clients from Boise and beyond."
         />
 
         {/* FAQ */}

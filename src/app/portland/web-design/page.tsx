@@ -170,7 +170,7 @@ export default function PortlandWebDesignPage() {
       <TestimonialsSection
         region="us"
         eyebrow="WHAT CLIENTS SAY"
-        headline={"4.9/5 across 150+ reviews from Portland and beyond."}
+        headline={"Rated 4.9/5 by clients from Portland and beyond."}
       />
       <FAQ
         eyebrow="COMMON QUESTIONS"
