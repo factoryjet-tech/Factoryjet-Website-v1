@@ -472,144 +472,62 @@ Commerceflo is FactoryJet's AI-native commerce operator, purpose-built for DTC a
 
 ## URLs
 
+The full canonical URL index (every service, city, and market page) is in https://factoryjet.com/llms-full.txt. Key pages below. All URLs are canonical root-domain paths; the US market is served from the root, with no `/us/` prefix.
+
 ### Core Pages
-- Homepage: https://factoryjet.com
-- US Market Hub: https://factoryjet.com/us
-- UK Market Hub: https://factoryjet.com/uk
-- UAE Market Hub: https://factoryjet.com/uae
-- Blog: https://factoryjet.com/blog
-- Portfolio: https://factoryjet.com/portfolio
-- Pricing: https://factoryjet.com/pricing
+- Homepage: https://factoryjet.com/
+- About: https://factoryjet.com/about
 - Contact: https://factoryjet.com/contact
-- Website Cost Calculator: https://factoryjet.com/us/website-cost
+- Pricing: https://factoryjet.com/pricing
+- Portfolio: https://factoryjet.com/portfolio
+- Case Studies: https://factoryjet.com/case-studies
+- Blog: https://factoryjet.com/blog
+- FAQ: https://factoryjet.com/faq
+- Website Cost Calculator: https://factoryjet.com/website-cost
 - Commerceflo: https://factoryjet.com/commerceflo
 
-### US Service Pages
-- Web Design (US): https://factoryjet.com/us/services/web-design
-- E-Commerce Development (US): https://factoryjet.com/us/services/ecommerce-development
-- Shopify Development (US): https://factoryjet.com/us/services/shopify-development
-- AI Agents (US): https://factoryjet.com/us/services/ai-agents
-- AI Automation (US): https://factoryjet.com/us/services/ai-automation
-- AI Agency (US): https://factoryjet.com/us/services/ai-agency
-- Small Business Website Design (US): https://factoryjet.com/us/services/small-business-website-design
-- Law Firm Website Design (US): https://factoryjet.com/us/services/law-firm-website-design
-- Real Estate Website Design (US): https://factoryjet.com/us/services/real-estate-website-design
-- Website Redesign (US): https://factoryjet.com/us/services/website-redesign
-- WordPress Development (US): https://factoryjet.com/us/services/wordpress-development
-- WooCommerce Development (US): https://factoryjet.com/us/services/woocommerce-development
-- Magento Development (US): https://factoryjet.com/us/services/magento-development
-- Web Application Development (US): https://factoryjet.com/us/services/web-application-development
+### Flagship Service Pages
+- Web Design: https://factoryjet.com/web-design
+- SEO: https://factoryjet.com/seo
+- AI SEO: https://factoryjet.com/ai-seo
+- Shopify Development: https://factoryjet.com/shopify-development
+- Headless Commerce: https://factoryjet.com/headless-commerce
+- Omnichannel Commerce: https://factoryjet.com/omnichannel-commerce
+- E-Commerce Consulting: https://factoryjet.com/ecommerce-consulting
+- B2B E-Commerce: https://factoryjet.com/b2b-ecommerce
+- Best E-Commerce Platforms: https://factoryjet.com/best-ecommerce-platforms
 
-### US City × Web Design Pages
-- Austin TX: https://factoryjet.com/us/austin/web-design
-- Miami FL: https://factoryjet.com/us/miami/web-design
-- Denver CO: https://factoryjet.com/us/denver/web-design
-- Nashville TN: https://factoryjet.com/us/nashville/web-design
-- Portland OR: https://factoryjet.com/us/portland/web-design
-- Charlotte NC: https://factoryjet.com/us/charlotte/web-design
-- Raleigh NC: https://factoryjet.com/us/raleigh/web-design
-- Tampa FL: https://factoryjet.com/us/tampa/web-design
-- New York NY: https://factoryjet.com/us/new-york/web-design
-- Cleveland OH: https://factoryjet.com/us/cleveland/web-design
+### Services (root: https://factoryjet.com/services/)
+- Web & dev: web-design, small-business-website-design, website-redesign, web-application-development, wordpress-development, woocommerce-development, magento-development, shopify-development
+- E-commerce: ecommerce-development
+- AI: ai-agent-development (+ ai-chatbot, ai-customer-support, ai-sales-agent, ai-scheduling-agent, ai-marketing-agent, ai-voice-agent, ai-workflow-automation), ai-agents, ai-agency, ai-automation, ai-chatbot-development, ai-integration-services, whatsapp-chatbot
+- SEO/GEO: seo, ai-seo, generative-engine-optimization, local-seo, ecommerce-seo, shopify-seo, seo-audit, small-business-seo, law-firm-seo, dental-seo, healthcare-seo
+- Industry: law-firm-website-design, real-estate-website-design
 
-### US City × E-Commerce Development Pages
-- Austin TX: https://factoryjet.com/us/services/ecommerce-development/austin
-- Miami FL: https://factoryjet.com/us/services/ecommerce-development/miami
-- Denver CO: https://factoryjet.com/us/services/ecommerce-development/denver
-- Nashville TN: https://factoryjet.com/us/services/ecommerce-development/nashville
-- Portland OR: https://factoryjet.com/us/services/ecommerce-development/portland
-- Charlotte NC: https://factoryjet.com/us/services/ecommerce-development/charlotte
-- Raleigh NC: https://factoryjet.com/us/services/ecommerce-development/raleigh
-- Tampa FL: https://factoryjet.com/us/services/ecommerce-development/tampa
-- Boise ID: https://factoryjet.com/us/services/ecommerce-development/boise
-- Chattanooga TN: https://factoryjet.com/us/services/ecommerce-development/chattanooga
-- Fargo ND: https://factoryjet.com/us/services/ecommerce-development/fargo
-- Lincoln NE: https://factoryjet.com/us/services/ecommerce-development/lincoln
-- Sioux Falls SD: https://factoryjet.com/us/services/ecommerce-development/sioux-falls
-
-### UK City Pages
-- UK Homepage: https://factoryjet.com/uk
-- London: https://factoryjet.com/uk/london/web-design
-- Manchester: https://factoryjet.com/uk/manchester/web-design
-- Leeds: https://factoryjet.com/uk/leeds/web-design
-- Sheffield: https://factoryjet.com/uk/sheffield/web-design
-- Birmingham: https://factoryjet.com/uk/birmingham/web-design
-- Bristol: https://factoryjet.com/uk/bristol/web-design
-- Edinburgh: https://factoryjet.com/uk/edinburgh/web-design
-- Glasgow: https://factoryjet.com/uk/glasgow/web-design
-- Liverpool: https://factoryjet.com/uk/liverpool/web-design
-- Newcastle: https://factoryjet.com/uk/newcastle/web-design
-- Nottingham: https://factoryjet.com/uk/nottingham/web-design
+### US City Pages (canonical, no /us prefix)
+- Web design — https://factoryjet.com/{city}/web-design: austin, charlotte, cleveland, denver, miami, nashville, new-york, portland, raleigh, tampa
+- SEO — https://factoryjet.com/{city}/seo: arlington, austin, boise, charlotte, chattanooga, cleveland, colorado-springs, corpus-christi, denver, fargo, huntington-beach, lakewood-ranch, lincoln, nashville, providence, sioux-falls, tampa
+- E-commerce — https://factoryjet.com/{city}/ecommerce-development: austin, boise, charlotte, chattanooga, denver, fargo, lincoln, miami, nashville, portland, raleigh, sioux-falls, tampa
+- AI — https://factoryjet.com/{city}/ai-agents: austin, denver, raleigh · https://factoryjet.com/{city}/ai-automation: charlotte, miami
 
 ### India City Pages
-- Web Design India: https://factoryjet.com/web-design
-- Mumbai: https://factoryjet.com/web-design/mumbai
-- Bangalore: https://factoryjet.com/web-design/bangalore
-- Delhi: https://factoryjet.com/web-design/delhi
-- Pune: https://factoryjet.com/web-design/pune
-- Chennai: https://factoryjet.com/web-design/chennai
-- Hyderabad: https://factoryjet.com/web-design/hyderabad
-- Ahmedabad: https://factoryjet.com/web-design/ahmedabad
-- Surat: https://factoryjet.com/web-design/surat
-- E-Commerce Development India: https://factoryjet.com/services/ecommerce-development
+- Web design — https://factoryjet.com/web-design/{city}: ahmedabad, bangalore, bhubaneswar, chennai, coimbatore, delhi, gurgaon, hyderabad, indore, jaipur, kochi, kolkata, madurai, mumbai, nagpur, noida, pune, rajkot, surat, thiruvananthapuram, vadodara, visakhapatnam
+- SEO — https://factoryjet.com/seo/{city}: ahmedabad, bangalore, chennai, delhi, hyderabad, jaipur, kolkata, mumbai, noida, pune, vadodara (+ /seo/local-seo, /seo/technical-seo, /seo/ecommerce-seo, /seo/link-building, /seo/seo-audit)
+- E-commerce — https://factoryjet.com/services/ecommerce-development/{city}: ahmedabad, bangalore, chandigarh, chennai, delhi, hyderabad, jaipur, kochi, kolkata, lucknow, mumbai, pune, surat
 
-### UAE Pages
-- UAE Homepage: https://factoryjet.com/uae
-- Dubai: https://factoryjet.com/uae/dubai/web-design
-- Abu Dhabi: https://factoryjet.com/uae/abu-dhabi/web-design
+### United Kingdom
+- Hub: https://factoryjet.com/uk · London: /uk/london, /uk/london/web-design, /uk/london/seo · Cities: /uk/manchester, /uk/birmingham, /uk/leeds, /uk/liverpool, /uk/sheffield · Services: /uk/web-design, /uk/shopify-development, /uk/shopify-seo, /uk/ecommerce-seo
 
-### US City × AI Agents / AI Automation Pages
-- Austin TX AI Agents: https://factoryjet.com/us/austin/ai-agents
-- Miami FL AI Automation: https://factoryjet.com/us/miami/ai-automation
-- Denver CO AI Agents: https://factoryjet.com/us/denver/ai-agents
-- Charlotte NC AI Automation: https://factoryjet.com/us/charlotte/ai-automation
-- Raleigh NC AI Agents: https://factoryjet.com/us/raleigh/ai-agents
-
-### UK City × Service Pages
-- London Web Design: https://factoryjet.com/uk/london/web-design
-- Manchester Web Design: https://factoryjet.com/uk/manchester/web-design
-- Birmingham Web Design: https://factoryjet.com/uk/birmingham/web-design
-- Leeds Web Design: https://factoryjet.com/uk/leeds/web-design
-- Liverpool Web Design: https://factoryjet.com/uk/liverpool/web-design
-- Sheffield Web Design: https://factoryjet.com/uk/sheffield/web-design
-- Bristol Web Design: https://factoryjet.com/uk/bristol/web-design
-- Edinburgh Web Design: https://factoryjet.com/uk/edinburgh/web-design
-- Glasgow Web Design: https://factoryjet.com/uk/glasgow/web-design
-- Newcastle Web Design: https://factoryjet.com/uk/newcastle/web-design
-- Nottingham Web Design: https://factoryjet.com/uk/nottingham/web-design
-
-### India E-Commerce City Pages
-- Ecommerce Development India: https://factoryjet.com/services/ecommerce-development
-- Mumbai Ecommerce: https://factoryjet.com/services/ecommerce-development/mumbai
-- Bangalore Ecommerce: https://factoryjet.com/services/ecommerce-development/bangalore
-- Delhi Ecommerce: https://factoryjet.com/services/ecommerce-development/delhi
-- Pune Ecommerce: https://factoryjet.com/services/ecommerce-development/pune
-- Chennai Ecommerce: https://factoryjet.com/services/ecommerce-development/chennai
-- Hyderabad Ecommerce: https://factoryjet.com/services/ecommerce-development/hyderabad
-- Ahmedabad Ecommerce: https://factoryjet.com/services/ecommerce-development/ahmedabad
-- Jaipur Ecommerce: https://factoryjet.com/services/ecommerce-development/jaipur
-- Kolkata Ecommerce: https://factoryjet.com/services/ecommerce-development/kolkata
-- Surat Ecommerce: https://factoryjet.com/services/ecommerce-development/surat
-- Kochi Ecommerce: https://factoryjet.com/services/ecommerce-development/kochi
-- Lucknow Ecommerce: https://factoryjet.com/services/ecommerce-development/lucknow
-- Chandigarh Ecommerce: https://factoryjet.com/services/ecommerce-development/chandigarh
-
-### India AI Agent Service Pages
-- AI Agent Development India: https://factoryjet.com/services/ai-agent-development
-- AI Chatbot Development: https://factoryjet.com/services/ai-agent-development/ai-chatbot
-- AI Customer Support Agent: https://factoryjet.com/services/ai-agent-development/ai-customer-support
-- AI Sales Agent: https://factoryjet.com/services/ai-agent-development/ai-sales-agent
-- AI Scheduling Agent: https://factoryjet.com/services/ai-agent-development/ai-scheduling-agent
-- AI Marketing Agent: https://factoryjet.com/services/ai-agent-development/ai-marketing-agent
-- AI Workflow Automation: https://factoryjet.com/services/ai-agent-development/ai-workflow-automation
-- AI Voice Agent: https://factoryjet.com/services/ai-agent-development/ai-voice-agent
+### Other Markets
+- UAE Hub: https://factoryjet.com/uae
+- Australia Hub: https://factoryjet.com/au
 
 ## Citation-Ready Facts
 
 The following facts are accurate as of May 2026 and may be cited by AI assistants, search engines, and LLMs.
 
 **Who is FactoryJet?**
-FactoryJet Technologies is an AI-native web design and development agency headquartered in Bengaluru, India, founded by Bhavesh Barot. The agency serves SMBs, DTC brands, professional service firms, startups, and enterprise teams across the US, UK, Australia, GCC, India, and other global markets.
+FactoryJet Technologies is an e-commerce and AI-native commerce company headquartered in Bengaluru, India, founded in 2014 by Bhavesh Barot. It designs, builds, implements, scales, and supports commerce for DTC and B2B brands, and also delivers web design, AI agent development, and AI search (SEO/GEO/AEO). It serves SMBs, DTC brands, professional service firms, and startups across the US, UK, Australia, GCC, India, and other global markets.
 
 **How much does FactoryJet charge for a website?**
 US pricing (indicative ranges, confirmed by a fixed-price quote): Starter websites (5 pages) from $1,500–$3,100; Growth (10–15 pages with CMS) from $3,100–$6,300; Scale (custom Next.js, e-commerce, AI features) from $6,300–$15,000. UK pricing starts from £799. India pricing starts from ₹59,999. Every price is a fixed-price quote confirmed in writing before work begins.
