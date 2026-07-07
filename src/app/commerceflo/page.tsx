@@ -59,6 +59,31 @@ const BREADCRUMB_SCHEMA = { '@context': 'https://schema.org', '@type': 'Breadcru
   { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
   { '@type': 'ListItem', position: 2, name: 'Commerceflo', item: 'https://factoryjet.com/commerceflo' },
 ] };
+// SoftwareApplication: types Commerceflo as a product for AI/product queries and links it to the
+// canonical Organization entity (#organization). No offers block — pricing is a custom quote, so
+// asserting a price (incl. "0") would be false; the free audit is a lead entry point, not the price.
+const SOFTWAREAPP_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  '@id': 'https://factoryjet.com/commerceflo#software',
+  name: 'Commerceflo',
+  alternateName: 'Commerceflo Commerce AI Operator',
+  applicationCategory: 'BusinessApplication',
+  applicationSubCategory: 'Unified Commerce / AI Commerce Operator',
+  operatingSystem: 'Web',
+  url: 'https://factoryjet.com/commerceflo',
+  description: 'Commerceflo is FactoryJet\'s AI-native commerce operator. It audits a storefront in under 90 seconds, ranks what is stalling growth by revenue impact, and applies the fixes on approval across the store, marketplaces, and B2B portals, run by eight specialist agents on live unified data.',
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  audience: { '@type': 'BusinessAudience', name: 'DTC and B2B brands' },
+  featureList: [
+    '90-second storefront audit across catalog, pricing, inventory, content, SEO, and checkout',
+    'Growth-blocking issues ranked by revenue impact',
+    'Approve-first fixes applied across store, marketplaces, and B2B portals',
+    'Eight specialist agents: inventory, pricing, fulfillment, content, compliance, customer segmentation, financial analysis, and growth',
+    'Real-time sync (about two seconds) across every connected channel',
+    'One command center replacing five to ten disconnected tools',
+  ],
+};
 
 const STATS = [
   { b: '90s', s: 'to audit your whole storefront' },
@@ -95,6 +120,7 @@ export default function CommercefloPage() {
       <Script id="cf-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
       <Script id="cf-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <Script id="cf-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
+      <Script id="cf-software-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SOFTWAREAPP_SCHEMA) }} />
 
       <SiteHeader navLinks={[]} cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
