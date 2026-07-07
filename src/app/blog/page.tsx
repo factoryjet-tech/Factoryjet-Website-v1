@@ -13,7 +13,7 @@ const blogListJsonLd = {
   description: 'Expert insights on web development, e-commerce, and digital marketing for growing businesses.',
   url: 'https://factoryjet.com/blog',
   publisher: {
-    '@type': 'Organization',
+    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     logo: {
       '@type': 'ImageObject',

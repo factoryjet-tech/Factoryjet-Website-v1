@@ -95,7 +95,7 @@ const serviceSchema = {
   description:
     'SEO services in Pune for IT companies, auto suppliers, manufacturing firms, real estate developers, education institutions, and local businesses. Serving Hinjewadi, Kharadi, Baner, Koregaon Park, Viman Nagar, Wakad, Pimple Saudagar, and Pimpri-Chinchwad.',
   url: 'https://factoryjet.com/seo/pune',
-  provider: { '@type': 'Organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com', telephone: '+919699977699' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com', telephone: '+919699977699' },
   areaServed: { '@type': 'City', name: 'Pune' },
 };
 

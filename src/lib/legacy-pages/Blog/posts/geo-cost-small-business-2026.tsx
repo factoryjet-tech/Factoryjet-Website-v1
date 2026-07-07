@@ -126,7 +126,7 @@ export const post: BlogPost = {
               '@type': 'Article',
               headline: 'How Much Does GEO Cost in 2026? Real AI SEO Pricing, Decoded',
               author: { '@type': 'Person', name: 'Bhavesh Barot' },
-              publisher: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+              publisher: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
               datePublished: '2026-06-07',
               dateModified: '2026-06-07',
               description: 'GEO is the newest line item on agency proposals and most small businesses have no idea what is reasonable to pay. Here is an honest breakdown backed by real market data: what GEO actually costs, what each budget tier delivers, and the red flags to watch before you sign.',

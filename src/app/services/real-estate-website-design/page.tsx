@@ -87,7 +87,7 @@ const serviceSchema = {
   '@type': 'Service',
   serviceType: 'Real Estate Website Design',
   provider: {
-    '@type': 'Organization',
+    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
     logo: 'https://factoryjet.com/logo.png',

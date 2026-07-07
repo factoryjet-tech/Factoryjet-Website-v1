@@ -112,7 +112,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'AI Voice Agent Development India',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   description: 'Custom AI voice agents for Indian businesses — Hindi AI callers for lead qualification, appointment booking, collection follow-ups, and inbound IVR with Zoho CRM integration.',
   areaServed: 'IN',
   serviceType: 'AI Voice Agent Development',

@@ -95,7 +95,7 @@ const serviceSchema = {
     'SEO services in Mumbai covering local SEO, technical SEO, ecommerce SEO, link building, and SEO audits. Serving BKC, Andheri, Bandra, Worli, Thane, Navi Mumbai and all of Greater Mumbai.',
   url: 'https://factoryjet.com/seo/mumbai',
   provider: {
-    '@type': 'Organization',
+    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet Technologies',
     url: 'https://factoryjet.com',
     telephone: '+919699977699',

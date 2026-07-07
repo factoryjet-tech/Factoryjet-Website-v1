@@ -59,7 +59,7 @@ const serviceSchema = {
   name: 'Local SEO Services by FactoryJet',
   description: 'Local SEO services in India: Google Business Profile setup and management, matching business details across the web, top-three map and "near me" rankings, reviews, local pages, and local links. No lock-in.',
   url: 'https://factoryjet.com/seo/local-seo',
-  provider: { '@type': 'Organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com', telephone: '+919699977699' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com', telephone: '+919699977699' },
   areaServed: { '@type': 'Country', name: 'India' },
 };
 

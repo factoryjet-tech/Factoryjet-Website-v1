@@ -210,7 +210,7 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'Organization',
-      '@id': 'https://factoryjet.com/#org',
+      '@id': 'https://factoryjet.com/#organization',
       name: 'FactoryJet',
       url: 'https://factoryjet.com',
       logo: 'https://factoryjet.com/images/factoryjet-logo.png',
@@ -224,7 +224,7 @@ const jsonLd = {
       '@type': 'Service',
       '@id': `${CANONICAL}#service`,
       name: 'Corpus Christi TX Local SEO Services',
-      provider: { '@id': 'https://factoryjet.com/#org' },
+      provider: { '@id': 'https://factoryjet.com/#organization' },
       areaServed: {
         '@type': 'City',
         name: 'Corpus Christi',

@@ -82,7 +82,7 @@ const serviceSchema = {
   name: 'SEO Company in Kolkata by FactoryJet',
   description: 'SEO company in Kolkata for exporters, B2B suppliers, IT firms, and local businesses. Win abroad, all over India, and in Google AI answers. No long contracts.',
   url: 'https://factoryjet.com/seo/kolkata',
-  provider: { '@type': 'Organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Kolkata' },
 };
 

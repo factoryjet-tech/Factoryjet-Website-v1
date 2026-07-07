@@ -219,7 +219,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Local SEO Services',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'Country', name: 'United States' },
   serviceType:
     'Local SEO / Google Business Profile Optimization / Map Pack SEO / Local Citation Building / Review & Reputation Management',
@@ -230,7 +230,7 @@ const serviceSchema = {
 
 const organizationSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
+  '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
   name: 'FactoryJet',
   url: 'https://factoryjet.com',
   logo: 'https://factoryjet.com/logo.png',

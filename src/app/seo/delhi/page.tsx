@@ -98,7 +98,7 @@ const serviceSchema = {
     'SEO services in Delhi covering local SEO, technical SEO, ecommerce SEO, export SEO, link building, and SEO audits. Serving Connaught Place, Nehru Place, Rohini, Dwarka, South Delhi, Noida, and Gurugram.',
   url: 'https://factoryjet.com/seo/delhi',
   provider: {
-    '@type': 'Organization',
+    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet Technologies',
     url: 'https://factoryjet.com',
     telephone: '+919699977699',

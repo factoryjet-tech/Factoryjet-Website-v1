@@ -76,7 +76,7 @@ const SERVICE_SCHEMA = {
   name: 'E-commerce consulting services',
   description:
     'E-commerce consulting for DTC and B2B brands: platform selection, migration and replatforming planning, conversion and operations audits, B2B and DTC modeling, integrations, ecommerce strategy, and a scoped build plan.',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'Country', name: 'United States' },
   audience: { '@type': 'BusinessAudience', name: 'DTC and B2B brands' },
   

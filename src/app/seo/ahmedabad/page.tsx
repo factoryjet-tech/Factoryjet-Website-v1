@@ -81,7 +81,7 @@ const serviceSchema = {
   name: 'SEO Company in Ahmedabad by FactoryJet',
   description: 'SEO company in Ahmedabad for pharma and denim exporters, chemical makers, and engineering firms. Win orders from abroad, win across India, and get named in Google AI answers. No long contracts.',
   url: 'https://factoryjet.com/seo/ahmedabad',
-  provider: { '@type': 'Organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Ahmedabad' },
 };
 

@@ -122,7 +122,7 @@ export const post: BlogPost = {
               '@type': 'Article',
               headline: 'How to Get ChatGPT to Recommend Your Small Business (2026 Playbook)',
               author: { '@type': 'Person', name: 'Bhavesh Barot' },
-              publisher: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+              publisher: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
               datePublished: '2026-06-07',
               dateModified: '2026-06-07',
               description: 'ChatGPT is now a referral source that sends real buyers to businesses it trusts. Here is exactly how to make your business one of them, covering the specific signals, content moves, and technical fixes that determine whether AI recommends you or your competitor.',

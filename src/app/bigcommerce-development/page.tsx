@@ -59,7 +59,7 @@ const SERVICE_SCHEMA = {
   '@context': 'https://schema.org', '@type': 'Service', serviceType: 'BigCommerce development',
   name: 'BigCommerce development and migration',
   description: 'BigCommerce development agency. We design, build, customize, and migrate BigCommerce stores: custom themes, B2B Edition, headless BigCommerce, multi-storefront, and API integrations, for US DTC and B2B brands.',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'Country', name: 'United States' }, audience: { '@type': 'BusinessAudience', name: 'DTC and B2B brands on BigCommerce' },
 };
 const HOWTO_SCHEMA = {
@@ -74,7 +74,7 @@ const HOWTO_SCHEMA = {
   ],
 };
 const ORG_SCHEMA = {
-  '@context': 'https://schema.org', '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com',
+  '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com',
   description: 'FactoryJet is an e-commerce development agency that builds BigCommerce, omnichannel, and B2B commerce for DTC and B2B brands.',
   
   sameAs: ['https://www.linkedin.com/company/factoryjet'],

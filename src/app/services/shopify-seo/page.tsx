@@ -373,7 +373,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Shopify SEO Services',
   provider: {
-    '@type': 'Organization',
+    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },
@@ -424,7 +424,7 @@ const faqSchema = {
 
 const organizationSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
+  '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
   name: 'FactoryJet',
   url: 'https://factoryjet.com',
   logo: 'https://factoryjet.com/logo.png',

@@ -52,7 +52,7 @@ const ContactPage: React.FC = () => {
     "@context": "https://schema.org",
     "@type": "ContactPage",
     "mainEntity": {
-      "@type": "Organization",
+      "@type": "Organization", "@id": "https://factoryjet.com/#organization",
       "name": "FactoryJet",
       "url": "https://factoryjet.com",
       "logo": "https://factoryjet.com/logo.png",

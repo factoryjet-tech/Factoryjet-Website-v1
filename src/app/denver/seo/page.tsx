@@ -170,12 +170,12 @@ const jsonLd = [
     { '@type': 'ListItem', position: 3, name: 'Denver', item: 'https://factoryjet.com/denver/' },
     { '@type': 'ListItem', position: 4, name: 'Denver SEO', item: CANONICAL },
   ]},
-  { '@context': 'https://schema.org', '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com', sameAs: ['https://www.linkedin.com/company/factoryjet'] },
+  { '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com', sameAs: ['https://www.linkedin.com/company/factoryjet'] },
   { '@context': 'https://schema.org', '@type': 'Service', name: 'Denver SEO Services', serviceType: 'Search Engine Optimization',
-    provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+    provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
     areaServed: { '@type': 'City', name: 'Denver', addressRegion: 'CO', addressCountry: 'US' } },
   { '@context': 'https://schema.org', '@type': 'WebPage', name: 'Denver SEO Company and Agency in the Mile High City', url: CANONICAL,
-    dateModified: '2026-06-16', author: { '@type': 'Person', name: 'Bhavesh Barot' }, publisher: { '@type': 'Organization', name: 'FactoryJet' } },
+    dateModified: '2026-06-16', author: { '@type': 'Person', name: 'Bhavesh Barot' }, publisher: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet' } },
   { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqSchemaItems },
 ];
 

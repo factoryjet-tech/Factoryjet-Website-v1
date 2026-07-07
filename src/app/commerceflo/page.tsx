@@ -51,7 +51,7 @@ const SERVICE_SCHEMA = {
   '@context': 'https://schema.org', '@type': 'Service', serviceType: 'Commerce AI operator',
   name: 'Commerceflo, the commerce AI operator',
   description: 'Commerceflo is FactoryJet\'s AI-native commerce operator. It audits a storefront in under 90 seconds, ranks what is stalling growth by revenue impact, and applies the fixes on approval across the store, marketplaces, and B2B, run by eight specialist agents.',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'Country', name: 'United States' }, audience: { '@type': 'BusinessAudience', name: 'DTC and B2B brands' },
 };
 const BREADCRUMB_SCHEMA = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [

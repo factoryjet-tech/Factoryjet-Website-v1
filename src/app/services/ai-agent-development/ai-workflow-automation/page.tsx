@@ -112,7 +112,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'AI Workflow Automation Development India',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   description: 'Custom AI workflow automation for Indian businesses — connect Zoho, Tally, Shopify, WhatsApp, Razorpay, and 20+ tools into automated pipelines with AI decision logic.',
   areaServed: 'IN',
   serviceType: 'AI Workflow Automation',

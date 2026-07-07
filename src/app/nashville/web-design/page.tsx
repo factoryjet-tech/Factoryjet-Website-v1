@@ -339,7 +339,7 @@ function SchemaScript() {
         "@id": "https://factoryjet.com/nashville/web-design#service",
         "name": "Web Design Nashville",
         "provider": {
-          "@type": "Organization",
+          "@type": "Organization", "@id": "https://factoryjet.com/#organization",
           "name": "FactoryJet Technologies"
         },
         "areaServed": "Nashville",

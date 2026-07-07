@@ -108,7 +108,7 @@ const FAQ_SCHEMA = {
 
 const ORG_SCHEMA = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
+  '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
   name: 'FactoryJet',
   url: 'https://factoryjet.com',
   description:
@@ -127,7 +127,7 @@ const SERVICE_SCHEMA = {
   name: 'E-commerce development and omnichannel commerce implementation',
   description:
     'E-commerce development agency for DTC and B2B brands. We design, build, and implement omnichannel commerce across your own store, marketplaces, and B2B portals on Shopify, Shopify Plus, Adobe Commerce (Magento), BigCommerce, WooCommerce, headless, and Commerceflo, with one catalog, one inventory, and one order engine.',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'Country', name: 'United States' },
   audience: { '@type': 'BusinessAudience', name: 'DTC and B2B brands' },
 };

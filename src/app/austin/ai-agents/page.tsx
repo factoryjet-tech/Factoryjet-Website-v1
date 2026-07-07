@@ -146,7 +146,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'AI Agents & Chatbot Development — Austin, TX',
   provider: {
-    '@type': 'Organization',
+    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },

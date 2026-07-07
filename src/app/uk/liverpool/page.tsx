@@ -54,7 +54,7 @@ const schema = {
     {
       "@type": "Service",
       "name": "AI-Native Web Design Liverpool",
-      "provider": { "@type": "Organization", "name": "FactoryJet Technologies" },
+      "provider": { "@type": "Organization", "@id": "https://factoryjet.com/#organization", "name": "FactoryJet Technologies" },
       "areaServed": "Liverpool",
       "description":
         "Custom Next.js 15 web design and Webflow/Framer development for Liverpool businesses.",

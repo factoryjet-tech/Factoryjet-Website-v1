@@ -151,7 +151,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Ecommerce Development Delhi',
   provider: {
-    '@type': 'Organization',
+    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
     address: {

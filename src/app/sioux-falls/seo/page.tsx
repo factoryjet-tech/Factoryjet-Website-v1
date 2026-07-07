@@ -252,7 +252,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Local SEO Services in Sioux Falls, SD',
   serviceType: 'Search engine optimization',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: [
     { '@type': 'City', name: 'Sioux Falls', containedInPlace: { '@type': 'State', name: 'South Dakota' } },
     { '@type': 'City', name: 'Brandon', containedInPlace: { '@type': 'State', name: 'South Dakota' } },

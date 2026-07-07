@@ -297,7 +297,7 @@ function SchemaScript() {
         "@id": "https://factoryjet.com/charlotte/web-design#service",
         "name": "Web Design Charlotte",
         "provider": {
-          "@type": "Organization",
+          "@type": "Organization", "@id": "https://factoryjet.com/#organization",
           "name": "FactoryJet Technologies"
         },
         "areaServed": "Charlotte",

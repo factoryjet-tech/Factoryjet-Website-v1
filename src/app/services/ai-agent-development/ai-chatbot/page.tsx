@@ -142,7 +142,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'AI Chatbot Development India',
   provider: {
-    '@type': 'Organization',
+    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
     address: { '@type': 'PostalAddress', addressCountry: 'IN' },

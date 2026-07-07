@@ -263,7 +263,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Local SEO Services in Chattanooga, TN',
   serviceType: 'Search engine optimization',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: [
     { '@type': 'City', name: 'Chattanooga', containedInPlace: { '@type': 'State', name: 'Tennessee' } },
     { '@type': 'City', name: 'Cleveland', containedInPlace: { '@type': 'State', name: 'Tennessee' } },

@@ -82,7 +82,7 @@ const serviceSchema = {
   name: 'SEO Company in Noida by FactoryJet',
   description: 'SEO company in Noida for IT, software, startups, and online brands. Get into the top three businesses on the map, into Google results, and into Google AI answers. No lock-in.',
   url: 'https://factoryjet.com/seo/noida',
-  provider: { '@type': 'Organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Noida' },
 };
 

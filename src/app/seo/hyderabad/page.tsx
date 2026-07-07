@@ -95,7 +95,7 @@ const serviceSchema = {
   description:
     'SEO services in Hyderabad for pharma, IT, real estate, healthcare, and local businesses. Serving Banjara Hills, Jubilee Hills, Madhapur, Gachibowli, HITEC City, Ameerpet, and Secunderabad.',
   url: 'https://factoryjet.com/seo/hyderabad',
-  provider: { '@type': 'Organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com', telephone: '+919699977699' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com', telephone: '+919699977699' },
   areaServed: { '@type': 'City', name: 'Hyderabad' },
 };
 

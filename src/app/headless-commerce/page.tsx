@@ -49,7 +49,7 @@ const SERVICE_SCHEMA = {
   '@context': 'https://schema.org', '@type': 'Service', serviceType: 'Headless commerce development',
   name: 'Headless and composable commerce development',
   description: 'Headless commerce development agency. We build fast headless and composable commerce storefronts on Shopify (Hydrogen), BigCommerce (Catalyst), and Commerceflo, connecting a custom front end to your commerce backend through APIs.',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'Country', name: 'United States' }, audience: { '@type': 'BusinessAudience', name: 'DTC and B2B brands' },
 };
 const BREADCRUMB_SCHEMA = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [

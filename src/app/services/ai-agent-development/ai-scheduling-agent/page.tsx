@@ -112,7 +112,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'AI Scheduling Agent Development India',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   description: 'Custom AI scheduling agents for Indian businesses — automate appointment booking on WhatsApp in Hindi and English with Google Calendar, Zoho Bookings, and Razorpay integration.',
   areaServed: 'IN',
   serviceType: 'AI Appointment Scheduling Automation',

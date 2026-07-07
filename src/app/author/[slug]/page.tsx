@@ -84,7 +84,7 @@ function generateAuthorJsonLd(author: ReturnType<typeof getAuthorBySlug>) {
     sameAs: [author.linkedin, author.twitter].filter(Boolean),
     knowsAbout: author.knowsAbout,
     worksFor: {
-      '@type': 'Organization',
+      '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
       name: 'FactoryJet',
       url: 'https://factoryjet.com',
     },

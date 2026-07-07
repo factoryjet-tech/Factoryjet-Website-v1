@@ -179,7 +179,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Web Design Services India',
   provider: {
-    '@type': 'Organization',
+    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet Technologies',
     url: 'https://factoryjet.com',
     telephone: '+919699977699',

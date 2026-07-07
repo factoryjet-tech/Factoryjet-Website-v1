@@ -6,7 +6,7 @@ const URL = "https://factoryjet.com/uk";
 
 const organization = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "Organization", "@id": "https://factoryjet.com/#organization",
   name: "FactoryJet Technologies",
   url: "https://factoryjet.com",
   logo: "https://factoryjet.com/logo.png",
@@ -33,7 +33,7 @@ const organization = {
 };
 
 const provider = {
-  "@type": "Organization",
+  "@type": "Organization", "@id": "https://factoryjet.com/#organization",
   name: "FactoryJet Technologies",
   url: "https://factoryjet.com",
 };

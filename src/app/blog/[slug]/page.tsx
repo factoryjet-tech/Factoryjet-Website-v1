@@ -85,7 +85,7 @@ function generateArticleJsonLd(post: typeof POSTS[0], slug: string) {
         sameAs: [authorProfile.linkedin, authorProfile.twitter].filter(Boolean),
         knowsAbout: authorProfile.knowsAbout,
         worksFor: {
-          '@type': 'Organization' as const,
+          '@type': 'Organization' as const, '@id': 'https://factoryjet.com/#organization',
           name: 'FactoryJet',
           url: 'https://factoryjet.com',
         },
@@ -105,7 +105,7 @@ function generateArticleJsonLd(post: typeof POSTS[0], slug: string) {
     dateModified: new Date(post.date).toISOString(),
     author: authorSchema,
     publisher: {
-      '@type': 'Organization',
+      '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
       name: 'FactoryJet',
       logo: {
         '@type': 'ImageObject',

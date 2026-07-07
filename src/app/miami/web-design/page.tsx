@@ -223,7 +223,7 @@ function SchemaScript() {
         "@id": "https://factoryjet.com/miami/web-design#service",
         "name": "Web Design Miami",
         "provider": {
-          "@type": "Organization",
+          "@type": "Organization", "@id": "https://factoryjet.com/#organization",
           "name": "FactoryJet Technologies"
         },
         "areaServed": "Miami",

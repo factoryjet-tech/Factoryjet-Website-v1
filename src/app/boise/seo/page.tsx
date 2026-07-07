@@ -249,7 +249,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Local SEO Services in Boise, ID',
   serviceType: 'Search engine optimization',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: [
     { '@type': 'City', name: 'Boise', containedInPlace: { '@type': 'State', name: 'Idaho' } },
     { '@type': 'City', name: 'Meridian', containedInPlace: { '@type': 'State', name: 'Idaho' } },

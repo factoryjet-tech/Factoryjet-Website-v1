@@ -59,7 +59,7 @@ const serviceSchema = {
   name: 'SEO Audit Services by FactoryJet',
   description: 'SEO audit services in India: a full health check of your website that shows why you are not ranking and what to fix first. We check speed, content, links, your Google listing, and your rivals, then write a plain-English report with a ranked to-do list. Start with a free first check, no strings.',
   url: 'https://factoryjet.com/seo/seo-audit',
-  provider: { '@type': 'Organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com', telephone: '+919699977699' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com', telephone: '+919699977699' },
   areaServed: { '@type': 'Country', name: 'India' },
 };
 

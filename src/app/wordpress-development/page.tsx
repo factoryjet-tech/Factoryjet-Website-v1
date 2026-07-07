@@ -138,7 +138,7 @@ const WP_serviceSchema = {
   '@type': 'ProfessionalService',
   name: 'WordPress Development Services India',
   provider: {
-    '@type': 'Organization',
+    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
     address: {

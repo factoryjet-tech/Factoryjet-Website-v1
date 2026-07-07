@@ -227,7 +227,7 @@ function SchemaScript() {
         "@id": "https://factoryjet.com/portland/web-design#service",
         "name": "Web Design Portland",
         "provider": {
-          "@type": "Organization",
+          "@type": "Organization", "@id": "https://factoryjet.com/#organization",
           "name": "FactoryJet Technologies"
         },
         "areaServed": "Portland",

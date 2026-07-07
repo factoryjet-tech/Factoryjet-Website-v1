@@ -58,7 +58,7 @@ const SERVICE_SCHEMA = {
   '@context': 'https://schema.org', '@type': 'Service', serviceType: 'Omnichannel commerce development and implementation',
   name: 'Omnichannel commerce solutions',
   description: 'Omnichannel commerce agency. We design, build, and implement omnichannel ecommerce solutions that connect web, retail POS, marketplaces, social, and B2B to one catalog, one inventory, and one customer view, on Shopify, BigCommerce, Adobe Commerce, headless, or Commerceflo.',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'Country', name: 'United States' }, audience: { '@type': 'BusinessAudience', name: 'DTC and B2B retail and commerce brands' },
 };
 const HOWTO_SCHEMA = {
@@ -73,7 +73,7 @@ const HOWTO_SCHEMA = {
   ],
 };
 const ORG_SCHEMA = {
-  '@context': 'https://schema.org', '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com',
+  '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com',
   description: 'FactoryJet is an e-commerce development agency that builds omnichannel and B2B commerce for DTC and B2B brands.',
   
   sameAs: ['https://www.linkedin.com/company/factoryjet'],

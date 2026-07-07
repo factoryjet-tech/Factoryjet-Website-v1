@@ -268,7 +268,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Local SEO Services in Fargo, ND',
   serviceType: 'Search engine optimization',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: [
     { '@type': 'City', name: 'Fargo', containedInPlace: { '@type': 'State', name: 'North Dakota' } },
     { '@type': 'City', name: 'West Fargo', containedInPlace: { '@type': 'State', name: 'North Dakota' } },

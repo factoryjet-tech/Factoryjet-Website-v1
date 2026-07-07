@@ -334,7 +334,7 @@ function SchemaScript() {
         "@id": "https://factoryjet.com/cleveland/web-design#service",
         "name": "Web Design Cleveland",
         "provider": {
-          "@type": "Organization",
+          "@type": "Organization", "@id": "https://factoryjet.com/#organization",
           "name": "FactoryJet Technologies"
         },
         "areaServed": "Cleveland",

@@ -126,7 +126,7 @@ export const post: BlogPost = {
               '@type': 'Article',
               headline: 'How Much Does SEO Cost for a Small Business in 2026? ($500–$3,500/Mo, Itemized)',
               author: { '@type': 'Person', name: 'Bhavesh Barot' },
-              publisher: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+              publisher: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
               datePublished: '2026-06-07',
               dateModified: '2026-06-07',
               description: 'SEO pricing ranges from $300 to $30,000 per month depending on who you hire. Here is the honest, itemized breakdown of what US small businesses actually pay, and what each budget tier buys you.',

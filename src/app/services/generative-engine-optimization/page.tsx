@@ -98,7 +98,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Generative Engine Optimization',
   serviceType: 'Generative Engine Optimization (GEO)',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: ['US', 'GB', 'AU', 'IN'],
   description:
     'GEO services that structure content, schema, and off-site mentions so AI answer engines such as ChatGPT, Google AI Overviews, Perplexity, and Gemini cite and recommend your business.',

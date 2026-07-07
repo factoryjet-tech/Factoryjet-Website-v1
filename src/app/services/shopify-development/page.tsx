@@ -204,7 +204,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Shopify Development Services USA',
   provider: {
-    '@type': 'Organization',
+    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
     

@@ -121,7 +121,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'AI Sales Agent Development India',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com', address: { '@type': 'PostalAddress', addressCountry: 'IN' } },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com', address: { '@type': 'PostalAddress', addressCountry: 'IN' } },
   areaServed: { '@type': 'Country', name: 'India' },
   serviceType: 'AI Sales Agent Development',
   description: 'AI sales agents for Indian businesses — WhatsApp lead qualification, automated follow-ups, demo booking, and CRM updates. Fixed price. Live in 2–4 weeks.',

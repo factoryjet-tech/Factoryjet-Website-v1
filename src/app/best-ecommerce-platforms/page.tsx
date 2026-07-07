@@ -158,7 +158,7 @@ const SERVICE_SCHEMA = {
   name: 'Ecommerce platform development and migration',
   description:
     'Platform-agnostic ecommerce development. We help US DTC and B2B brands choose, build, and migrate on the best ecommerce platform: Shopify, BigCommerce, Adobe Commerce, WooCommerce, or Salesforce Commerce Cloud, and hand them a store they own and run.',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'Country', name: 'United States' },
   audience: { '@type': 'BusinessAudience', name: 'DTC and B2B ecommerce brands' },
 };
@@ -177,7 +177,7 @@ const HOWTO_SCHEMA = {
 };
 const ORG_SCHEMA = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
+  '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
   name: 'FactoryJet',
   url: 'https://factoryjet.com',
   description: 'FactoryJet is a platform-agnostic ecommerce development agency that builds, migrates, and integrates stores on Shopify, BigCommerce, Adobe Commerce, WooCommerce, and Salesforce Commerce Cloud for US DTC and B2B brands.',

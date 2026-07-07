@@ -57,7 +57,7 @@ const serviceSchema = {
   name: 'Link Building Services by FactoryJet',
   description: 'Link building and off page SEO services in India: earning real links from trusted websites through digital PR, guest articles, genuine directories, and helpful content, plus cleaning up risky old links. No spam, no lock-in.',
   url: 'https://factoryjet.com/seo/link-building',
-  provider: { '@type': 'Organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com', telephone: '+919699977699' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com', telephone: '+919699977699' },
   areaServed: { '@type': 'Country', name: 'India' },
 };
 

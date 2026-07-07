@@ -130,7 +130,7 @@ export const post: BlogPost = {
                 url: 'https://factoryjet.com/about',
               },
               publisher: {
-                '@type': 'Organization',
+                '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
                 name: 'FactoryJet',
                 url: 'https://factoryjet.com',
                 logo: {

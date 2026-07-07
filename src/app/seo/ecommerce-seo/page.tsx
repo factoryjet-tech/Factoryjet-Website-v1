@@ -59,7 +59,7 @@ const serviceSchema = {
   name: 'Ecommerce SEO Services by FactoryJet',
   description: 'Ecommerce SEO services in India: category and product pages that rank, tidy big menus and filters, the hidden product details Google reads, star ratings in Google results, helpful buying guides, and a fast store on phones. Works with Shopify, WooCommerce, and custom stores. No lock-in.',
   url: 'https://factoryjet.com/seo/ecommerce-seo',
-  provider: { '@type': 'Organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com', telephone: '+919699977699' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com', telephone: '+919699977699' },
   areaServed: { '@type': 'Country', name: 'India' },
 };
 

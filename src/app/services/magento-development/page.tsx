@@ -173,7 +173,7 @@ const serviceSchema = {
   description:
     'Custom Magento and Adobe Commerce development for US e-commerce businesses — full store builds, module development, Magento 1 to 2 migrations, and performance optimization.',
   provider: {
-    '@type': 'Organization',
+    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
     foundingDate: '2014',

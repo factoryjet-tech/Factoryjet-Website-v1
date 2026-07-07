@@ -137,7 +137,7 @@ const N8N_SERVICE_SCHEMA = {
   '@type': 'ProfessionalService',
   name: 'n8n Automation Services India',
   provider: {
-    '@type': 'Organization',
+    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
     address: {

@@ -81,7 +81,7 @@ const serviceSchema = {
   name: 'SEO Agency in Vadodara by FactoryJet',
   description: 'SEO agency in Vadodara for engineering, petrochemical, pharma, and manufacturing firms. Win business across India, win export orders, and get named in Google AI answers. No lock-in.',
   url: 'https://factoryjet.com/seo/vadodara',
-  provider: { '@type': 'Organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Vadodara' },
 };
 

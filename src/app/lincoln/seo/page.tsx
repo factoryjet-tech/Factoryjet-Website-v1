@@ -253,7 +253,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Local SEO Services in Lincoln, NE',
   serviceType: 'Search engine optimization',
-  provider: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: [
     { '@type': 'City', name: 'Lincoln', containedInPlace: { '@type': 'State', name: 'Nebraska' } },
     { '@type': 'State', name: 'Nebraska' },

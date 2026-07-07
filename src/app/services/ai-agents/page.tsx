@@ -262,7 +262,7 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'AI Agent Development Services',
   provider: {
-    '@type': 'Organization',
+    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },

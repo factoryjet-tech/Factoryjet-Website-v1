@@ -258,7 +258,7 @@ function SchemaScript() {
         "@id": "https://factoryjet.com/tampa/web-design#service",
         "name": "Web Design Tampa",
         "provider": {
-          "@type": "Organization",
+          "@type": "Organization", "@id": "https://factoryjet.com/#organization",
           "name": "FactoryJet Technologies"
         },
         "areaServed": "Tampa",

@@ -64,7 +64,7 @@ const schema = {
     {
       "@type": "Service",
       "name": "Web Design Birmingham",
-      "provider": { "@type": "Organization", "name": "FactoryJet Technologies" },
+      "provider": { "@type": "Organization", "@id": "https://factoryjet.com/#organization", "name": "FactoryJet Technologies" },
       "areaServed": "Birmingham",
       "description":
         "AI-native web design agency in Birmingham. Next.js 15, WordPress, Webflow and Framer websites. Lighthouse SEO 100 guaranteed.",
@@ -72,7 +72,7 @@ const schema = {
     {
       "@type": "Service",
       "name": "E-Commerce Development Birmingham",
-      "provider": { "@type": "Organization", "name": "FactoryJet Technologies" },
+      "provider": { "@type": "Organization", "@id": "https://factoryjet.com/#organization", "name": "FactoryJet Technologies" },
       "areaServed": "Birmingham",
       "description":
         "Shopify Plus agency Birmingham. Headless commerce, B2B ecommerce portals, WooCommerce for Birmingham retailers and manufacturers.",
@@ -80,7 +80,7 @@ const schema = {
     {
       "@type": "Service",
       "name": "AI Agent Development Birmingham",
-      "provider": { "@type": "Organization", "name": "FactoryJet Technologies" },
+      "provider": { "@type": "Organization", "@id": "https://factoryjet.com/#organization", "name": "FactoryJet Technologies" },
       "areaServed": "Birmingham",
       "description":
         "Agentic AI and AI automation agency Birmingham. Multi-agent AI systems for legal firms, financial services, manufacturing and professional services.",
@@ -88,7 +88,7 @@ const schema = {
     {
       "@type": "Service",
       "name": "AI SEO Birmingham",
-      "provider": { "@type": "Organization", "name": "FactoryJet Technologies" },
+      "provider": { "@type": "Organization", "@id": "https://factoryjet.com/#organization", "name": "FactoryJet Technologies" },
       "areaServed": "Birmingham",
       "description":
         "AI SEO agency Birmingham. Generative engine optimisation (GEO), answer engine optimisation (AEO) and AI SEO for Birmingham businesses.",

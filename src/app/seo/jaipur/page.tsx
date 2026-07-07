@@ -80,7 +80,7 @@ const serviceSchema = {
   name: 'SEO Company in Jaipur by FactoryJet',
   description: 'SEO company in Jaipur for gem and jewellery exporters, handicraft brands, hotels, and IT firms. Win abroad, win the top three businesses on the map, and get named in Google AI answers. No lock-in.',
   url: 'https://factoryjet.com/seo/jaipur',
-  provider: { '@type': 'Organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Jaipur' },
 };
 

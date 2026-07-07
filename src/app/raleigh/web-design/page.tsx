@@ -227,7 +227,7 @@ function SchemaScript() {
         "@id": "https://factoryjet.com/raleigh/web-design#service",
         "name": "Web Design Raleigh",
         "provider": {
-          "@type": "Organization",
+          "@type": "Organization", "@id": "https://factoryjet.com/#organization",
           "name": "FactoryJet Technologies"
         },
         "areaServed": "Raleigh",

@@ -91,7 +91,7 @@ const serviceSchema = {
     'SEO company in India for small businesses in Mumbai, Bangalore, Pune and 19 cities. We fix your site, write helpful content, get real links, look after your Google listing, and help you show up in the new AI answers. No long contracts.',
   url: 'https://factoryjet.com/seo',
   provider: {
-    '@type': 'Organization',
+    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet Technologies',
     url: 'https://factoryjet.com',
     telephone: '+919699977699',
