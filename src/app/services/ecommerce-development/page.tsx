@@ -841,9 +841,9 @@ export default function EcommerceDevelopmentPage() {
           imageAlt="Custom e-commerce checkout flow on dual screens — FactoryJet e-commerce development"
           stats={[
             { value: '500+', label: 'Businesses Served' },
-            { value: '7 Days', label: 'Delivery Guarantee' },
+            { value: 'Full Code', label: 'Yours at Launch — Zero Lock-In' },
             { value: 'Fixed Price', label: 'Confirmed Upfront, No Surprises' },
-            { value: '25 Yrs', label: 'E-Commerce Expertise' },
+            { value: '12+ Yrs', label: 'E-Commerce Expertise' },
           ]}
         />
 
