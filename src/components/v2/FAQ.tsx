@@ -49,6 +49,9 @@ export interface FAQProps {
   lead?: string;
   categories?: ReadonlyArray<FAQCategory>;
   items: ReadonlyArray<FAQItem>;
+  /** Section background utility class. Defaults to the cream brand background;
+   *  pass e.g. "bg-white" for white-background pages. */
+  bgClassName?: string;
 }
 
 /* ─── Chevron icon ──────────────────────────────────────────────────────── */
@@ -120,6 +123,7 @@ export default function FAQ({
   lead,
   categories,
   items,
+  bgClassName = 'bg-fj-cream',
 }: FAQProps) {
   const hasCats = !!categories?.length;
 
@@ -138,7 +142,7 @@ export default function FAQ({
   /* ── Fallback: no categories → plain 2-col open grid ─────────────────── */
   if (!hasCats) {
     return (
-      <section className="bg-fj-cream py-14 md:py-20">
+      <section className={`${bgClassName} py-14 md:py-20`}>
         <div className="mx-auto max-w-[1120px] px-6 md:px-8">
           <MotionFadeUp className="mx-auto max-w-[760px] text-center">
             {eyebrow && <p className="fj-eyebrow">{eyebrow}</p>}
@@ -175,7 +179,7 @@ export default function FAQ({
 
   /* ── Categorised accordion layout — Linear Minimal ────────────────────── */
   return (
-    <section className="bg-fj-cream py-14 md:py-20">
+    <section className={`${bgClassName} py-14 md:py-20`}>
       <div className="mx-auto max-w-[1120px] px-6 md:px-8">
 
         {/* ── Section header (full-width) ──────────────────────────────── */}

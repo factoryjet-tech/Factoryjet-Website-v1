@@ -65,6 +65,7 @@ const US_SOLUTIONS = [
   { icon: Layers,        label: 'Omnichannel Commerce',     href: '/omnichannel-commerce',           desc: 'One catalog, inventory & order engine' },
   { icon: Store,         label: 'B2B E-Commerce',           href: '/b2b-ecommerce',                  desc: 'Portals, tiered pricing, net terms' },
   { icon: ShoppingCart,  label: 'E-Commerce Development',   href: '/services/ecommerce-development',  desc: 'End-to-end online stores' },
+  { icon: TrendingUp,    label: 'Ecommerce Growth Agency',  href: '/services/ecommerce-growth-agency', desc: 'Full-funnel ecommerce marketing' },
   { icon: Bot,           label: 'Commerce AI Agents',       href: '/services/ai-agents',             desc: 'Agents that list, price & sync' },
   { icon: TrendingUp,    label: 'Commerce SEO & Visibility',href: '/services/ecommerce-seo',         desc: 'Google, AI answers & marketplaces' },
   { icon: Search,        label: 'E-Commerce Consulting',    href: '/ecommerce-consulting',           desc: 'Platform, migration & scope' },

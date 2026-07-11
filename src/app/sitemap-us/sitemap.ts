@@ -84,6 +84,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/charlotte/ai-automation',                       source: 'src/app/charlotte/ai-automation/page.tsx' },
   { path: '/miami/ai-automation',                           source: 'src/app/miami/ai-automation/page.tsx' },
   { path: '/services/ecommerce-development',               source: 'src/app/services/ecommerce-development/page.tsx' },
+  { path: '/services/ecommerce-growth-agency',             source: 'src/app/services/ecommerce-growth-agency/page.tsx' },
   { path: '/austin/ecommerce-development',        source: 'src/app/austin/ecommerce-development/page.tsx' },
   { path: '/boise/ecommerce-development',         source: 'src/app/boise/ecommerce-development/page.tsx' },
   { path: '/charlotte/ecommerce-development',     source: 'src/app/charlotte/ecommerce-development/page.tsx' },

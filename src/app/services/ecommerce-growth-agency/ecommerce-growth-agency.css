@@ -1,0 +1,190 @@
+/* Ecommerce Growth Agency: page-scoped styles.
+   All selectors are namespaced with .ega / .ega- to avoid clashing with the
+   global Tailwind layer. Custom properties are declared on .ega and inherit
+   into every descendant. White background, high-contrast dark text, plus the
+   2026 bento + crystal + glass treatments. */
+
+.ega {
+  --ink: #141414;
+  --ink2: #3a3a38;
+  --muted: #5e5e57;
+  --line: #eaeae3;
+  --line2: #e0e0d8;
+  --orange: #f05a28;
+  --oink: #c94a1a;
+  --oeb: #b23e13;
+  --navy: #0a0f1c;
+  --navy2: #070b14;
+  --ctext: #f5f5f2;
+  --cmuted: #9a9aa2;
+  --disp: var(--font-plus-jakarta), "Segoe UI", system-ui, sans-serif;
+  --body: var(--font-inter), system-ui, sans-serif;
+  --mono: var(--font-geist-mono), ui-monospace, monospace;
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--body);
+}
+.ega .ega-wrap { max-width: 1120px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 32px); }
+.ega .ega-sec { padding: clamp(56px, 8vw, 88px) 0; }
+.ega .ega-sec.pt0 { padding-top: 0; }
+.ega .disp { font-family: var(--disp); font-weight: 800; letter-spacing: -0.025em; line-height: 1.06; }
+.ega .ega-eyebrow { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.13em; font-size: 12px; font-weight: 600; color: var(--oeb); }
+
+/* crystal card */
+.ega .ega-crystal {
+  position: relative;
+  background: linear-gradient(180deg, #fff, #fcfcfa);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 1px 0 rgba(255,255,255,.9) inset, 0 22px 44px -30px rgba(20,20,35,.34), 0 3px 8px -3px rgba(20,20,35,.08);
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.ega .ega-crystal::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255,255,255,.6), transparent 42%); pointer-events: none;
+}
+.ega a.ega-crystal:hover { transform: translateY(-4px); box-shadow: 0 1px 0 rgba(255,255,255,.9) inset, 0 30px 54px -30px rgba(20,20,35,.42), 0 4px 10px -3px rgba(20,20,35,.1); }
+
+/* section header */
+.ega .ega-sh { max-width: 62ch; margin-bottom: clamp(30px, 4vw, 46px); }
+.ega .ega-sh h2 { font-size: clamp(27px, 3.4vw, 40px); margin-top: 12px; color: var(--ink); letter-spacing: -0.02em; }
+.ega .ega-sh p { color: var(--muted); font-size: 16.5px; margin-top: 14px; line-height: 1.55; }
+
+/* HERO: one viewport */
+.ega .ega-hero {
+  position: relative; min-height: calc(100svh - 70px); display: flex; align-items: center;
+  overflow: hidden; padding: 28px 0; background-color: #fff;
+  background-image:
+    radial-gradient(circle 420px at -40px -60px, rgba(240,90,40,.13) 0%, rgba(240,90,40,.045) 55%, transparent 72%),
+    radial-gradient(circle, rgba(15,15,18,.055) 1px, transparent 1px);
+  background-size: 100%, 22px 22px;
+}
+.ega .ega-hero::after { content: ""; position: absolute; inset-inline: 0; bottom: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(240,90,40,.22) 30%, rgba(240,90,40,.22) 70%, transparent); }
+.ega .ega-hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(26px, 4vw, 52px); align-items: center; width: 100%; }
+.ega .ega-pill { display: inline-flex; align-items: center; gap: 9px; border-radius: 999px; padding: 6px 14px 6px 12px; font-size: 13px; font-weight: 600; color: var(--oink); border: 1px solid rgba(240,90,40,.25); background: rgba(240,90,40,.08); margin-bottom: 18px; }
+.ega .ega-pill .d { width: 7px; height: 7px; border-radius: 50%; background: var(--orange); position: relative; }
+.ega .ega-pill .d::after { content: ""; position: absolute; inset: -4px; border-radius: 50%; border: 2px solid rgba(240,90,40,.4); animation: ega-ping 1.8s cubic-bezier(0,0,.2,1) infinite; }
+@keyframes ega-ping { 75%, 100% { transform: scale(2); opacity: 0; } }
+.ega .ega-h1 { font-size: clamp(1.85rem, 3.4vw, 2.55rem); max-width: 19ch; color: var(--ink); }
+.ega .ega-h1 .u { color: var(--orange); }
+.ega .ega-lead { font-size: clamp(15.5px, 1.5vw, 17.5px); color: var(--ink2); margin-top: 16px; max-width: 44ch; line-height: 1.6; }
+.ega .ega-trust { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 20px; font-size: 13px; color: var(--muted); align-items: center; }
+.ega .ega-trust .tk { display: inline-flex; align-items: center; gap: 6px; }
+.ega .ega-trust svg { color: var(--orange); flex: 0 0 auto; }
+
+/* hero photo + metric chip */
+.ega .ega-hero-visual { position: relative; }
+.ega .ega-hero-photo { position: relative; border-radius: 20px; overflow: hidden; aspect-ratio: 5 / 4; box-shadow: 0 30px 60px -34px rgba(20,20,30,.5); border: 1px solid var(--line); }
+.ega .ega-hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+.ega .ega-metric { position: absolute; left: 14px; bottom: 14px; display: flex; align-items: center; gap: 11px; background: rgba(255,255,255,.85); backdrop-filter: blur(12px) saturate(1.4); border: 1px solid rgba(255,255,255,.7); border-radius: 14px; padding: 10px 14px; box-shadow: 0 10px 26px -12px rgba(20,20,30,.42); }
+.ega .ega-metric .hm-lab { font-size: 10.5px; color: var(--muted); font-family: var(--mono); letter-spacing: .04em; text-transform: uppercase; display: block; margin-bottom: 2px; }
+.ega .ega-metric .hm-val { font-size: 16px; font-family: var(--disp); font-weight: 800; color: var(--ink); display: inline-flex; align-items: center; gap: 4px; letter-spacing: -.01em; }
+.ega .ega-metric svg { display: block; }
+
+/* answer-first */
+.ega .ega-answer { background: #f8f8f6; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.ega .ega-answer .in { display: grid; grid-template-columns: auto 1fr; gap: 26px; align-items: start; padding: clamp(28px, 4vw, 40px) 0; }
+.ega .ega-answer .q { font-family: var(--disp); font-weight: 800; font-size: clamp(20px, 2.3vw, 25px); letter-spacing: -.02em; max-width: 15ch; color: var(--ink); }
+.ega .ega-answer .ql { font-family: var(--mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--oink); display: block; margin-bottom: 9px; }
+.ega .ega-answer .a { font-size: clamp(16px, 1.6vw, 18px); color: var(--ink2); max-width: 62ch; }
+.ega .ega-answer .a b { color: var(--ink); }
+
+/* logo bar */
+.ega .ega-logobar { padding: 30px 0; border-bottom: 1px solid var(--line); }
+.ega .ega-logobar .t { font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #9a9a92; text-align: center; margin-bottom: 16px; }
+.ega .ega-logos { display: flex; gap: clamp(20px, 5vw, 50px); justify-content: center; flex-wrap: wrap; align-items: center; opacity: .7; }
+.ega .ega-logos span { font-family: var(--disp); font-weight: 800; font-size: 18px; color: #6b6b62; letter-spacing: -.02em; }
+
+/* bento */
+.ega .ega-bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+.ega .ega-bento .cell { grid-column: span 2; }
+.ega .ega-bento .w3 { grid-column: span 3; }
+.ega .ega-bento .w6 { grid-column: span 6; }
+.ega .ega-bcard { display: block; padding: 24px; }
+.ega .ega-bcard .ic { width: 44px; height: 44px; border-radius: 12px; background: rgba(240,90,40,.09); display: grid; place-items: center; margin-bottom: 15px; color: var(--orange); }
+.ega .ega-bcard h3 { font-family: var(--disp); font-weight: 800; font-size: 18px; letter-spacing: -.01em; color: var(--ink); }
+.ega .ega-bcard p { color: var(--muted); font-size: 14px; margin-top: 8px; line-height: 1.55; }
+.ega .ega-bcard .lk { display: inline-flex; align-items: center; gap: 6px; margin-top: 13px; font-weight: 600; font-size: 13.5px; color: var(--oink); }
+.ega .ega-bcard.w6 { display: grid; grid-template-columns: 1.2fr .8fr; gap: 20px; align-items: center; }
+.ega .ega-bcard.w6 .mini { display: flex; gap: 10px; flex-wrap: wrap; }
+.ega .ega-bcard.w6 .mini span { font-size: 12px; font-weight: 600; color: var(--oink); background: rgba(240,90,40,.08); border: 1px solid rgba(240,90,40,.2); border-radius: 999px; padding: 6px 12px; font-family: var(--mono); }
+.ega .ega-bcard .ic svg { display: block; }
+
+/* listicles */
+.ega .ega-list { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; counter-reset: egali; }
+.ega .ega-li { display: flex; gap: 15px; padding: 20px 22px; }
+.ega .ega-li .num { counter-increment: egali; font-family: var(--disp); font-weight: 800; font-size: 14px; color: var(--orange); min-width: 34px; height: 34px; border-radius: 9px; background: rgba(240,90,40,.09); display: grid; place-items: center; }
+.ega .ega-li .num::before { content: counter(egali, decimal-leading-zero); }
+.ega .ega-li b { font-family: var(--disp); font-weight: 700; font-size: 16px; color: var(--ink); }
+.ega .ega-li p { color: var(--muted); font-size: 14px; margin-top: 4px; }
+
+/* dark section */
+.ega .ega-dark { background: var(--navy); color: var(--ctext); }
+.ega .ega-dark .ega-sh h2 { color: #fff; }
+.ega .ega-dark .ega-sh p { color: var(--cmuted); }
+.ega .ega-dark .ega-eyebrow { color: var(--orange); }
+.ega .ega-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.ega .ega-pillar { background: rgba(255,255,255,.035); border: 1px solid rgba(255,255,255,.09); border-radius: 16px; padding: 26px; position: relative; overflow: hidden; }
+.ega .ega-pillar::after { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,.06), transparent 40%); pointer-events: none; }
+.ega .ega-pillar .k { font-family: var(--mono); font-size: 12px; color: #ff6b35; }
+.ega .ega-pillar h3 { font-family: var(--disp); font-weight: 800; font-size: 19px; margin: 13px 0 9px; color: #fff; }
+.ega .ega-pillar p { color: var(--cmuted); font-size: 14.5px; }
+
+/* process */
+.ega .ega-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.ega .ega-step { border-top: 2px solid var(--ink); padding-top: 15px; }
+.ega .ega-step .n { font-family: var(--mono); font-size: 12px; color: var(--oink); }
+.ega .ega-step h3 { font-family: var(--disp); font-weight: 800; font-size: 18px; margin: 7px 0; color: var(--ink); }
+.ega .ega-step p { color: var(--muted); font-size: 14px; }
+
+/* e-e-a-t */
+.ega .ega-eeat-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 22px; align-items: stretch; }
+.ega .ega-eeat { display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center; padding: 26px; }
+.ega .ega-avatar { width: 76px; height: 76px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; box-shadow: 0 8px 20px -8px rgba(0,0,0,.4); }
+.ega .ega-eeat .role { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--oink); }
+.ega .ega-eeat h3 { font-family: var(--disp); font-size: 19px; margin: 6px 0; color: var(--ink); }
+.ega .ega-eeat p { color: var(--muted); font-size: 14px; }
+.ega .ega-reco { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); color: #8a8a82; font-size: 13px; }
+.ega .ega-reco b { color: var(--ink); font-family: var(--disp); font-weight: 700; }
+.ega .ega-teamframe { border-radius: 18px; overflow: hidden; min-height: 250px; box-shadow: 0 26px 54px -40px rgba(20,20,30,.5); border: 1px solid var(--line); }
+.ega .ega-teamframe img { width: 100%; height: 100%; object-fit: cover; min-height: 250px; }
+
+/* final CTA (custom dark crystal panel) */
+.ega .ega-finalcta { text-align: center; padding: clamp(40px, 6vw, 64px); color: var(--ctext); background: var(--navy); position: relative; overflow: hidden; border-radius: 22px; border: 1px solid var(--navy2); }
+.ega .ega-finalcta::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle 500px at 50% -30%, rgba(240,90,40,.22), transparent 70%); pointer-events: none; }
+.ega .ega-finalcta .ega-eyebrow { color: var(--orange); position: relative; }
+.ega .ega-finalcta h2 { font-size: clamp(27px, 4vw, 44px); color: #fff; position: relative; margin-top: 12px; }
+.ega .ega-finalcta p { color: var(--cmuted); font-size: 17px; margin: 15px auto 26px; max-width: 52ch; position: relative; }
+.ega .ega-finalcta .obj { font-size: 13px; color: #7f8592; margin-top: 15px; position: relative; }
+
+/* responsive */
+@media (max-width: 920px) {
+  .ega .ega-hero { min-height: 0; padding: 40px 0 52px; }
+  .ega .ega-hero-grid { grid-template-columns: 1fr; gap: 34px; }
+}
+@media (max-width: 900px) {
+  .ega .ega-bento { grid-template-columns: repeat(2, 1fr); }
+  .ega .ega-bento .cell, .ega .ega-bento .w3, .ega .ega-bento .w6 { grid-column: span 1; }
+  .ega .ega-bento .w6 { grid-column: span 2; }
+  .ega .ega-pillars { grid-template-columns: 1fr; }
+  .ega .ega-eeat-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 820px) {
+  .ega .ega-steps { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 760px) {
+  .ega .ega-list { grid-template-columns: 1fr; }
+  .ega .ega-answer .in { grid-template-columns: 1fr; gap: 14px; }
+  .ega .ega-bcard.w6 { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) { .ega .ega-eeat { grid-template-columns: 1fr; } }
+@media (max-width: 560px) {
+  .ega .ega-bento { grid-template-columns: 1fr; }
+  .ega .ega-bento .cell, .ega .ega-bento .w3, .ega .ega-bento .w6 { grid-column: span 1; }
+}
+@media (max-width: 480px) { .ega .ega-steps { grid-template-columns: 1fr; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .ega .ega-pill .d::after { animation: none; }
+  .ega .ega-crystal { transition: none; }
+}

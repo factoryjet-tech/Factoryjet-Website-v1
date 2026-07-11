@@ -450,6 +450,10 @@ export const usServiceAlternates = {
     'en-US': 'https://factoryjet.com/services/ai-automation',
     'x-default': 'https://factoryjet.com/services/ai-automation',
   },
+  'ecommerce-growth-agency': {
+    'en-US': 'https://factoryjet.com/services/ecommerce-growth-agency',
+    'x-default': 'https://factoryjet.com/services/ecommerce-growth-agency',
+  },
   'law-firm-website-design': {
     'en-US': 'https://factoryjet.com/services/law-firm-website-design',
     'x-default': 'https://factoryjet.com/services/law-firm-website-design',
