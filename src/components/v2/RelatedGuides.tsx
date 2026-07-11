@@ -21,7 +21,7 @@ export default function RelatedGuides({
   return (
     <section className="bg-white py-14 md:py-20 border-t border-fj-charcoal/10">
       <div className="mx-auto max-w-[1200px] px-6 md:px-8">
-        <p className="text-xs font-fj-mono uppercase tracking-widest text-[#F05A28] mb-5">{heading}</p>
+        <p className="text-xs font-fj-mono uppercase tracking-widest text-[#B23E13] mb-5">{heading}</p>
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {links.map((l) => (
             <li key={l.href}>

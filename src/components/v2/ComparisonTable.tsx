@@ -163,7 +163,7 @@ export default function ComparisonTable({
                     scope="col"
                     className={`${HEADER_TYPE} ${
                       col.isFactoryJet
-                        ? 'bg-[#F05A28]-tint text-[#F05A28]'
+                        ? 'bg-[#F05A28]-tint text-[#B23E13]'
                         : 'text-fj-neutral-600'
                     }`}
                     style={col.isFactoryJet ? { borderTopWidth: '3px', borderTopStyle: 'solid', borderTopColor: '#F05A28' } : undefined}

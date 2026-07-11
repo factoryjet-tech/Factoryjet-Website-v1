@@ -270,7 +270,7 @@ export default function FAQ({
                 <a
                   href="#final-cta"
                   className="mt-2 inline-flex items-center gap-1.5 font-fj-body text-[0.8125rem] font-semibold hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F05A28]"
-                  style={{ color: '#C94A1A' }}
+                  style={{ color: '#B23E13' }}
                 >
                   Talk to the founder
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">

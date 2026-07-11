@@ -133,8 +133,8 @@ const BlogLeadCapture: React.FC<BlogLeadCaptureProps> = ({ slug }) => {
               type="submit" disabled={isSubmitting}
               className="inline-flex items-center justify-center gap-2 rounded-xl px-5 font-fj-display text-[15px] font-semibold text-white"
               style={{
-                height: 46, background: '#F05A28',
-                boxShadow: '0 4px 16px rgba(240,90,40,0.4)',
+                height: 46, background: '#B23E13',
+                boxShadow: '0 4px 16px rgba(178,62,19,0.4)',
                 whiteSpace: 'nowrap', opacity: isSubmitting ? 0.7 : 1,
               }}
             >

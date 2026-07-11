@@ -50,10 +50,10 @@ const FAQAccordion = ({ faqs }: { faqs: FAQItem[] }) => (
       {faqs.map((faq, idx) => (
         <details key={idx} className="bg-white rounded-lg md:rounded-xl border border-gray-200 overflow-hidden group" open={idx === 0}>
           <summary className="w-full flex items-center justify-between p-4 md:p-5 text-left cursor-pointer hover:bg-gray-50 transition-colors list-none">
-            <span className="font-semibold text-sm md:text-base text-gray-900 group-open:text-[#F05A28]">
+            <span className="font-semibold text-sm md:text-base text-gray-900 group-open:text-[#B23E13]">
               {faq.q}
             </span>
-            <ChevronDown className="w-4 h-4 md:w-5 md:h-5 text-gray-400 group-open:text-[#F05A28] group-open:rotate-180 transition-transform flex-shrink-0 ml-2" />
+            <ChevronDown className="w-4 h-4 md:w-5 md:h-5 text-gray-400 group-open:text-[#B23E13] group-open:rotate-180 transition-transform flex-shrink-0 ml-2" />
           </summary>
           <div className="p-4 md:p-5 pt-0 text-gray-600 leading-relaxed border-t border-gray-100/50 text-sm md:text-base">
             {faq.a}
@@ -99,7 +99,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
       <header className="bg-white border-b border-gray-100 pt-8 pb-10 md:pt-16 md:pb-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
           <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-4 md:mb-6">
-            <span className="px-2.5 md:px-3 py-0.5 md:py-1 rounded-full text-xs font-bold tracking-wide uppercase bg-[#FFF3EE] text-[#F05A28]">
+            <span className="px-2.5 md:px-3 py-0.5 md:py-1 rounded-full text-xs font-bold tracking-wide uppercase bg-[#FFF3EE] text-[#B23E13]">
               {post.category}
             </span>
             <span className="flex items-center text-xs md:text-sm text-gray-500">
@@ -213,7 +213,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
                       </Link>
                       <div className="flex-1 min-w-0">
                         <div className="flex flex-wrap items-center gap-2 mb-1">
-                          <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">Written by</span>
+                          <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">Written by</span>
                         </div>
                         <Link href={`/author/${authorProfile.slug}`} className="group/name">
                           <h3 className="font-display font-bold text-lg md:text-xl text-gray-900 group-hover/name:text-[#F05A28] transition-colors">
@@ -229,7 +229,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
                         <div className="flex flex-wrap items-center gap-2">
                           <Link
                             href={`/author/${authorProfile.slug}`}
-                            className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-[#F05A28] text-white text-xs font-semibold hover:bg-[#C94818] transition-colors"
+                            className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-[#B23E13] text-white text-xs font-semibold hover:bg-[#9A3510] transition-colors"
                           >
                             View Profile <ArrowUpRight className="w-3 h-3" />
                           </Link>
@@ -243,7 +243,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
                               <Linkedin className="w-3 h-3" /> LinkedIn
                             </a>
                           )}
-                          <span className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-orange-50 text-jetOrange text-xs font-semibold border border-orange-100">
+                          <span className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-orange-50 text-[#B23E13] text-xs font-semibold border border-orange-100">
                             <Award className="w-3 h-3" /> {authorProfile.yearsExperience} yrs exp.
                           </span>
                         </div>
@@ -276,11 +276,11 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
                     Get a free, no-pitch plan for your site. The founder replies within 24 hours, and most sites ship in about 7 days.
                   </p>
 
-                  <Link href="/contact" className="w-full bg-[#F05A28] hover:bg-[#C94818] text-white font-semibold py-3 md:py-3.5 rounded-lg md:rounded-xl transition-all duration-300 shadow-lg shadow-[#F05A28]/20 flex items-center justify-center gap-2 group/btn text-sm md:text-base">
+                  <Link href="/contact" className="w-full bg-[#B23E13] hover:bg-[#9A3510] text-white font-semibold py-3 md:py-3.5 rounded-lg md:rounded-xl transition-all duration-300 shadow-lg shadow-[#B23E13]/20 flex items-center justify-center gap-2 group/btn text-sm md:text-base">
                     Get my free plan
                     <ArrowLeft className="w-3.5 h-3.5 md:w-4 md:h-4 rotate-180 group-hover/btn:translate-x-1 transition-transform" />
                   </Link>
-                  <p className="text-center text-xs text-gray-400 mt-3">No commitment. Founder replies in 24h.</p>
+                  <p className="text-center text-xs text-gray-500 mt-3">No commitment. Founder replies in 24h.</p>
                 </div>
               </div>
 

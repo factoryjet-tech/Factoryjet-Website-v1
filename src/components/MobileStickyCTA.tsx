@@ -64,7 +64,7 @@ export default function MobileStickyCTA() {
           type="button"
           onClick={() => openModal('us')}
           className="font-fj-display inline-flex shrink-0 items-center gap-1.5 text-white"
-          style={{ background: '#F05A28', fontWeight: 700, fontSize: '14px', padding: '11px 16px', borderRadius: '999px', whiteSpace: 'nowrap' }}
+          style={{ background: '#B23E13', fontWeight: 700, fontSize: '14px', padding: '11px 16px', borderRadius: '999px', whiteSpace: 'nowrap' }}
         >
           Get my quote
           <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">

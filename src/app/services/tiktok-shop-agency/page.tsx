@@ -175,8 +175,8 @@ const PILLARS = [
 const PROGRAMS = ['Seller Center', 'Spark Ads', 'GMV Max', 'Affiliate Center', 'LIVE Shopping', 'Fulfilled by TikTok'];
 
 const yes = <span style={{ color: '#177a48', fontWeight: 700 }}>Yes</span>;
-const no = (t: string) => <span style={{ color: '#b23e13', opacity: 0.6 }}>{t}</span>;
-const partial = (t: string) => <span style={{ color: '#9a6b07' }}>{t}</span>;
+const no = (t: string) => <span style={{ color: '#b23e13' }}>{t}</span>;
+const partial = (t: string) => <span style={{ color: '#8a5e00' }}>{t}</span>;
 
 /* ── Page ────────────────────────────────────────────────────────────────── */
 export default function TikTokShopAgencyPage() {

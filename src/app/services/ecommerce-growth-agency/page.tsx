@@ -163,8 +163,8 @@ const STEPS = [
 ];
 
 const yes = <span style={{ color: '#177a48', fontWeight: 700 }}>Yes</span>;
-const no = (t: string) => <span style={{ color: '#b23e13', opacity: 0.6 }}>{t}</span>;
-const partial = (t: string) => <span style={{ color: '#9a6b07' }}>{t}</span>;
+const no = (t: string) => <span style={{ color: '#b23e13' }}>{t}</span>;
+const partial = (t: string) => <span style={{ color: '#8a5e00' }}>{t}</span>;
 
 /* ── Page ────────────────────────────────────────────────────────────────── */
 export default function EcommerceGrowthAgencyPage() {
@@ -363,7 +363,7 @@ export default function EcommerceGrowthAgencyPage() {
               <span className="ega-eyebrow">Get started</span>
               <h2 className="disp">See where your store is leaving revenue on the table</h2>
               <p>Send us your store URL and get a free, no-obligation growth audit from FactoryJet&rsquo;s senior team.</p>
-              <Link href="/contact" className="ega-cta-btn" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#F05A28', color: '#fff', fontWeight: 600, fontSize: 16, padding: '15px 30px', borderRadius: 999, boxShadow: '0 4px 20px rgba(240,90,40,.34)' }}>Get my free growth audit</Link>
+              <Link href="/contact" className="ega-cta-btn" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#B23E13', color: '#fff', fontWeight: 600, fontSize: 16, padding: '15px 30px', borderRadius: 999, boxShadow: '0 4px 20px rgba(178,62,19,.34)' }}>Get my free growth audit</Link>
               <div className="obj">No long contracts. Keep the audit either way.</div>
             </div>
           </div>
