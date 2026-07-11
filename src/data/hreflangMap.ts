@@ -458,6 +458,10 @@ export const usServiceAlternates = {
     'en-US': 'https://factoryjet.com/services/amazon-agency',
     'x-default': 'https://factoryjet.com/services/amazon-agency',
   },
+  'tiktok-shop-agency': {
+    'en-US': 'https://factoryjet.com/services/tiktok-shop-agency',
+    'x-default': 'https://factoryjet.com/services/tiktok-shop-agency',
+  },
   'law-firm-website-design': {
     'en-US': 'https://factoryjet.com/services/law-firm-website-design',
     'x-default': 'https://factoryjet.com/services/law-firm-website-design',

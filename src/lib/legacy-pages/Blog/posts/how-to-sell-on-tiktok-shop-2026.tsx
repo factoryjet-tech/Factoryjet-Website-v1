@@ -222,7 +222,7 @@ export const post: BlogPost = {
         The sellers who do best do not treat TikTok Shop as a replacement for everything else. They treat it as the demand-creation channel in a wider mix. TikTok Shop is where you catch impulse and trend-driven buyers with content. <a href="/services/amazon-agency" className="text-[#B23E13] underline hover:text-[#F05A28]">Amazon</a> is where you capture the high-intent shoppers who are already searching to buy, with the logistics muscle of FBA behind you. Your own store, on <a href="/services/ecommerce-development" className="text-[#B23E13] underline hover:text-[#F05A28]">Shopify or a custom build</a>, is where you own the customer relationship, the margin, and the data that neither marketplace hands back to you.
       </p>
       <p className="mb-4">
-        Run together, they compound: a TikTok video creates the demand, and some of those buyers convert on TikTok Shop while others search you out on Amazon or your site later. The mistake is running them as three disconnected islands with different pricing, inventory, and branding. Coordinated, they are one flywheel. That coordination, across marketplaces and your store, is exactly the kind of work our team handles for US brands every day.
+        Run together, they compound: a TikTok video creates the demand, and some of those buyers convert on TikTok Shop while others search you out on Amazon or your site later. The mistake is running them as three disconnected islands with different pricing, inventory, and branding. Coordinated, they are one flywheel. That coordination, across marketplaces and your store, is exactly the kind of work our <a href="/services/tiktok-shop-agency">TikTok Shop agency team</a> handles for US brands every day.
       </p>
     </>
   ),

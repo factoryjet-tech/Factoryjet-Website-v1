@@ -67,6 +67,7 @@ const US_SOLUTIONS = [
   { icon: ShoppingCart,  label: 'E-Commerce Development',   href: '/services/ecommerce-development',  desc: 'End-to-end online stores' },
   { icon: TrendingUp,    label: 'Ecommerce Growth Agency',  href: '/services/ecommerce-growth-agency', desc: 'Full-funnel ecommerce marketing' },
   { icon: ShoppingBag,   label: 'Amazon Agency',            href: '/services/amazon-agency',         desc: 'Ads, SEO & account management' },
+  { icon: Mic,           label: 'TikTok Shop Agency',       href: '/services/tiktok-shop-agency',    desc: 'Ads, affiliates & LIVE selling' },
   { icon: Bot,           label: 'Commerce AI Agents',       href: '/services/ai-agents',             desc: 'Agents that list, price & sync' },
   { icon: TrendingUp,    label: 'Commerce SEO & Visibility',href: '/services/ecommerce-seo',         desc: 'Google, AI answers & marketplaces' },
   { icon: Search,        label: 'E-Commerce Consulting',    href: '/ecommerce-consulting',           desc: 'Platform, migration & scope' },
