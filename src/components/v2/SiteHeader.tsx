@@ -62,6 +62,7 @@ const US_AI_SERVICES = [
 
 // Solutions (US) — the commerce pillar + flagship pages, the primary menu
 const US_SOLUTIONS = [
+  { icon: Sparkles,      label: 'Agentic Commerce',         href: '/agentic-commerce',               desc: 'How AI agents buy & sell' },
   { icon: Layers,        label: 'Omnichannel Commerce',     href: '/omnichannel-commerce',           desc: 'One catalog, inventory & order engine' },
   { icon: Store,         label: 'B2B E-Commerce',           href: '/b2b-ecommerce',                  desc: 'Portals, tiered pricing, net terms' },
   { icon: ShoppingCart,  label: 'E-Commerce Development',   href: '/services/ecommerce-development',  desc: 'End-to-end online stores' },

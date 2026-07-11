@@ -28,6 +28,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/bigcommerce-development',                       source: 'src/app/bigcommerce-development/page.tsx' },
   { path: '/headless-commerce',                            source: 'src/app/headless-commerce/page.tsx' },
   { path: '/commerceflo',                                  source: 'src/app/commerceflo/page.tsx' },
+  { path: '/agentic-commerce',                             source: 'src/app/agentic-commerce/page.tsx' },
   { path: '/about',                                        source: 'src/app/about/page.tsx' },
   { path: '/faq',                                          source: 'src/app/faq/page.tsx' },
   { path: '/portfolio',                                    source: 'src/app/portfolio/page.tsx' },
