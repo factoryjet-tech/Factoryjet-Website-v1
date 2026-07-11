@@ -85,15 +85,15 @@
 .ega .ega-answer { background: #f8f8f6; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .ega .ega-answer .in { display: grid; grid-template-columns: auto 1fr; gap: 26px; align-items: start; padding: clamp(28px, 4vw, 40px) 0; }
 .ega .ega-answer .q { font-family: var(--disp); font-weight: 800; font-size: clamp(20px, 2.3vw, 25px); letter-spacing: -.02em; max-width: 15ch; color: var(--ink); }
-.ega .ega-answer .ql { font-family: var(--mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--oink); display: block; margin-bottom: 9px; }
+.ega .ega-answer .ql { font-family: var(--mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #b23e13; display: block; margin-bottom: 9px; }
 .ega .ega-answer .a { font-size: clamp(16px, 1.6vw, 18px); color: var(--ink2); max-width: 62ch; }
 .ega .ega-answer .a b { color: var(--ink); }
 
 /* logo bar */
 .ega .ega-logobar { padding: 30px 0; border-bottom: 1px solid var(--line); }
-.ega .ega-logobar .t { font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #9a9a92; text-align: center; margin-bottom: 16px; }
-.ega .ega-logos { display: flex; gap: clamp(20px, 5vw, 50px); justify-content: center; flex-wrap: wrap; align-items: center; opacity: .7; }
-.ega .ega-logos span { font-family: var(--disp); font-weight: 800; font-size: 18px; color: #6b6b62; letter-spacing: -.02em; }
+.ega .ega-logobar .t { font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #5b5b54; text-align: center; margin-bottom: 16px; }
+.ega .ega-logos { display: flex; gap: clamp(20px, 5vw, 50px); justify-content: center; flex-wrap: wrap; align-items: center; }
+.ega .ega-logos span { font-family: var(--disp); font-weight: 800; font-size: 18px; color: #57574f; letter-spacing: -.02em; }
 
 /* bento */
 .ega .ega-bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }

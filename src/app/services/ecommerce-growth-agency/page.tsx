@@ -199,7 +199,7 @@ export default function EcommerceGrowthAgencyPage() {
             </div>
             <div className="ega-hero-visual">
               <div className="ega-hero-photo">
-                <img src="/images/us/services/ecommerce-growth-agency/hero-fulfillment.jpg" alt="Ecommerce business owner preparing an online order for shipping" width={506} height={760} loading="eager" fetchPriority="high" decoding="async" />
+                <img src="/images/us/services/ecommerce-growth-agency/hero-fulfillment.webp" alt="Ecommerce business owner preparing an online order for shipping" width={506} height={760} loading="eager" fetchPriority="high" decoding="async" />
               </div>
               {/* Illustrative outcome metric, qualitative visual only (not a specific client claim) */}
               <div className="ega-metric">
