@@ -165,6 +165,19 @@ export const post: BlogPost = {
         Two honest caveats. First, TikTok has raised the referral fee more than once since launch, so treat any published number as a snapshot and confirm your live rate inside Seller Center. Second, TikTok frequently runs reduced-fee windows for brand-new shops, which is a real reason to start sooner rather than later. Even at 8%, the commission is meaningfully lower than the all-in cut most sellers pay on a search-driven marketplace, which is part of the appeal.
       </p>
 
+      <div className="bg-orange-50 border border-orange-200 p-5 rounded-lg my-8 not-prose">
+        <p className="font-semibold text-orange-900 mb-2">Not sure TikTok Shop is the right channel to start with?</p>
+        <p className="text-orange-800 mb-3">
+          Get a free, no-pitch teardown of your marketplace mix. FactoryJet has helped 500+ US brands sell across TikTok Shop, Amazon, and their own stores, and the founder replies within 24 hours.
+        </p>
+        <a
+          href="/contact"
+          className="inline-block bg-orange-600 text-white px-5 py-2 rounded font-semibold hover:bg-orange-700 transition-colors"
+        >
+          Get my free channel audit &rarr;
+        </a>
+      </div>
+
       <h2 className="text-2xl font-bold mt-8 mb-4">How to sell on TikTok Shop without inventory</h2>
       <p className="mb-4">
         You do not have to buy stock up front. There are two proven ways to sell on TikTok Shop without holding inventory.
