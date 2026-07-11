@@ -92,6 +92,8 @@ import { post as bestGeoAiVisibilityTools2026Post } from './posts/best-geo-ai-vi
 import { post as bestAiSeoAgenciesUsaPost } from './posts/best-ai-seo-agencies-usa';
 import { post as howToSellOnTiktokShop2026Post } from './posts/how-to-sell-on-tiktok-shop-2026';
 import { post as agenticAiVsGenerativeAiPost } from './posts/agentic-ai-vs-generative-ai';
+import { post as agenticAiVsAiAgentsPost } from './posts/agentic-ai-vs-ai-agents';
+import { post as whatIsAgenticAiPost } from './posts/what-is-agentic-ai';
 
 export const POSTS: BlogPost[] = [
   // --- WEB DESIGN & STRATEGY ---
@@ -4755,4 +4757,6 @@ export const POSTS: BlogPost[] = [
   bestAiSeoAgenciesUsaPost,
   howToSellOnTiktokShop2026Post,
   agenticAiVsGenerativeAiPost,
+  agenticAiVsAiAgentsPost,
+  whatIsAgenticAiPost,
 ];

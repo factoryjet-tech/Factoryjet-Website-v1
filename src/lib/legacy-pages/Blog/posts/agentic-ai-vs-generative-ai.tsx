@@ -102,7 +102,7 @@ export const post: BlogPost = {
         The way it works is a loop rather than a single reply: understand the goal, make a plan, take a step, look at the result, adjust, and repeat until the task is done. Along the way it can call a calendar, search the web, run code, query a database, or complete a checkout. The generative model is the brain that reasons about what to do next, and the agentic scaffolding, memory, tools, and that plan-act-check loop, is what gives the brain hands.
       </p>
       <p className="mb-4">
-        So where generative AI drafts the email, agentic AI reads the thread, decides who to reply to, writes the response, books the meeting it mentions, and adds it to your calendar. It is the difference between an assistant that suggests and a worker that does.
+        So where generative AI drafts the email, agentic AI reads the thread, decides who to reply to, writes the response, books the meeting it mentions, and adds it to your calendar. It is the difference between an assistant that suggests and a worker that does. For a fuller definition with examples, see <a href="/blog/what-is-agentic-ai" className="text-[#B23E13] underline hover:text-[#F05A28]">what is agentic AI</a>.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Agentic AI vs generative AI: the key differences</h2>
@@ -171,7 +171,7 @@ export const post: BlogPost = {
         Close, but not the same, and the two terms get mixed up constantly. An <strong>AI agent</strong> is a single system that perceives its situation, decides what to do, and acts toward a goal. <strong>Agentic AI</strong> is the broader capability, the whole approach of getting real work done autonomously, often with several agents and tools working together.
       </p>
       <p className="mb-4">
-        The clean way to hold it: an AI agent is one worker, and agentic AI is the way of working. A customer-support agent that resolves a ticket is an AI agent. A system where a planner agent coordinates a research agent and a checkout agent to complete a purchase is agentic AI at work. If you want the deeper dive on where all of this is heading in commerce, we cover it in our{' '}
+        The clean way to hold it: an AI agent is one worker, and agentic AI is the way of working, a distinction we break down in <a href="/blog/agentic-ai-vs-ai-agents" className="text-[#B23E13] underline hover:text-[#F05A28]">agentic AI vs AI agents</a>. A customer-support agent that resolves a ticket is an AI agent. A system where a planner agent coordinates a research agent and a checkout agent to complete a purchase is agentic AI at work. If you want the deeper dive on where all of this is heading in commerce, we cover it in our{' '}
         <a href="/agentic-commerce" className="text-[#B23E13] underline hover:text-[#F05A28]">agentic commerce guide</a>, and we build these systems as part of our{' '}
         <a href="/services/ai-agents" className="text-[#B23E13] underline hover:text-[#F05A28]">AI agent development</a> work.
       </p>
