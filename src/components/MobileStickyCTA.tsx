@@ -31,7 +31,11 @@ export default function MobileStickyCTA() {
     <div
       className="fixed inset-x-0 bottom-0 z-50 md:hidden"
       style={{ transform: show ? 'translateY(0)' : 'translateY(115%)', transition: 'transform 220ms ease', willChange: 'transform' }}
-      aria-hidden={!show}
+      /* When the bar is parked off-screen it must not be focusable or exposed to
+         assistive tech. `inert` (React 19) removes the WhatsApp link + button
+         from the tab order and the a11y tree, fixing the aria-hidden-focus
+         audit; it becomes interactive again the moment the bar slides in. */
+      inert={!show}
     >
       <div
         className="flex items-center gap-2.5 px-3.5 pt-3"

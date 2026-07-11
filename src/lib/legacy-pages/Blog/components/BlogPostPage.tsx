@@ -1,20 +1,18 @@
-'use client';
-
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { BlogPost, FAQItem } from '../data.types';
 import { ReadingProgress } from './ReadingProgress';
 import { StickyCallToAction } from './StickyCallToAction';
+import { ShareButton } from './ShareButton';
+import { BlogHeroImage } from './BlogHeroImage';
 import BlogLeadCapture from '@/components/BlogLeadCapture';
 import { getAuthorByName } from '@/data/authors';
 import {
   ArrowLeft,
   Calendar,
   Clock,
-  Share2,
   Twitter,
   Linkedin,
-  Facebook,
   Rocket,
   Lightbulb,
   ChevronDown,
@@ -24,14 +22,13 @@ import {
 
 interface BlogPostPageProps {
   post: BlogPost;
-  onBack?: () => void;
 }
 
 const KeyTakeaways = ({ items }: { items: string[] }) => (
   <div className="bg-[#FFF3EE]/50 border-l-4 border-[#F05A28] p-4 md:p-6 my-6 md:my-8 rounded-r-xl">
     <div className="flex items-center gap-2 mb-3 md:mb-4">
       <Lightbulb className="w-4 h-4 md:w-5 md:h-5 text-[#F05A28] fill-current" />
-      <h3 className="font-display font-bold text-base md:text-lg text-gray-900">Key Takeaways</h3>
+      <h2 className="font-display font-bold text-base md:text-lg text-gray-900">Key Takeaways</h2>
     </div>
     <ul className="space-y-2 md:space-y-3">
       {items.map((item, idx) => (
@@ -48,7 +45,7 @@ const KeyTakeaways = ({ items }: { items: string[] }) => (
 
 const FAQAccordion = ({ faqs }: { faqs: FAQItem[] }) => (
   <div className="mt-12 md:mt-16 bg-slate-50 rounded-xl md:rounded-2xl p-5 md:p-8 border border-gray-100" id="faqs">
-    <h3 className="font-display font-bold text-xl md:text-2xl mb-4 md:mb-6 text-gray-900">Frequently Asked Questions</h3>
+    <h2 className="font-display font-bold text-xl md:text-2xl mb-4 md:mb-6 text-gray-900">Frequently Asked Questions</h2>
     <div className="space-y-3 md:space-y-4">
       {faqs.map((faq, idx) => (
         <details key={idx} className="bg-white rounded-lg md:rounded-xl border border-gray-200 overflow-hidden group" open={idx === 0}>
@@ -67,28 +64,7 @@ const FAQAccordion = ({ faqs }: { faqs: FAQItem[] }) => (
   </div>
 );
 
-export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
-  const [imageError, setImageError] = useState(false);
-
-  const handleShare = async () => {
-    const url = `https://factoryjet.com/blog/${post.slug}`;
-    if (navigator.share) {
-      await navigator.share({ title: post.title, url });
-    } else {
-      await navigator.clipboard.writeText(url);
-    }
-  };
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  const handleImageError = () => {
-    setImageError(true);
-  };
-
-  const imageUrl = imageError ? '/blog_placeholder.webp' : post.imageUrl;
-
+export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
   return (
     <div className="min-h-screen bg-[#FAFAF7] relative">
       <ReadingProgress />
@@ -176,16 +152,10 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
         <div
           className="rounded-xl md:rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-900/5 aspect-[16/9] md:aspect-[21/9] bg-gray-100"
         >
-          <img
-            src={imageUrl}
+          <BlogHeroImage
+            src={post.imageUrl}
             alt={post.imageAlt || post.title}
-            onError={handleImageError}
-            width={1200}
-            height={514}
-            loading="eager"
-            decoding="async"
-            fetchPriority="high"
-            className={`w-full h-full ${post.imageFit === 'contain' ? 'object-contain' : 'object-cover'}`}
+            fit={post.imageFit}
           />
         </div>
       </div>
@@ -246,9 +216,9 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
                           <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">Written by</span>
                         </div>
                         <Link href={`/author/${authorProfile.slug}`} className="group/name">
-                          <h4 className="font-display font-bold text-lg md:text-xl text-gray-900 group-hover/name:text-[#F05A28] transition-colors">
+                          <h3 className="font-display font-bold text-lg md:text-xl text-gray-900 group-hover/name:text-[#F05A28] transition-colors">
                             {authorProfile.name}
-                          </h4>
+                          </h3>
                         </Link>
                         <p className="text-[#F05A28] text-xs md:text-sm font-semibold mb-2">
                           {authorProfile.jobTitle}
@@ -325,13 +295,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, onBack }) => {
       <footer className="bg-white border-t border-gray-200 py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 text-center">
             <div className="flex items-center justify-center gap-4 md:gap-6 mb-5 md:mb-6">
-                <button
-                  aria-label="Share this article"
-                  onClick={handleShare}
-                  className="p-2 md:p-3 bg-gray-50 rounded-full hover:bg-[#FFF3EE] hover:text-[#F05A28] transition-colors cursor-pointer"
-                >
-                  <Share2 className="w-4 h-4 md:w-5 md:h-5" aria-hidden="true" />
-                </button>
+                <ShareButton title={post.title} slug={post.slug} />
                 <div className="h-6 md:h-8 w-px bg-gray-200" aria-hidden="true"></div>
                 <a
                   href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://factoryjet.com/blog/${post.slug}`)}`}
