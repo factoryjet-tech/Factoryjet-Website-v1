@@ -30,6 +30,7 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'Shopify Development',     href: '/services/shopify-development' },
       { label: 'Custom E-Commerce',       href: '/services/ecommerce-development' },
       { label: 'Ecommerce Growth Agency', href: '/services/ecommerce-growth-agency' },
+      { label: 'Amazon Agency',           href: '/services/amazon-agency' },
       { label: 'WooCommerce Development', href: '/services/woocommerce-development' },
       { label: 'Magento Development',     href: '/services/magento-development' },
       { label: 'E-Commerce SEO',          href: '/services/ecommerce-seo' },

@@ -66,6 +66,7 @@ const US_SOLUTIONS = [
   { icon: Store,         label: 'B2B E-Commerce',           href: '/b2b-ecommerce',                  desc: 'Portals, tiered pricing, net terms' },
   { icon: ShoppingCart,  label: 'E-Commerce Development',   href: '/services/ecommerce-development',  desc: 'End-to-end online stores' },
   { icon: TrendingUp,    label: 'Ecommerce Growth Agency',  href: '/services/ecommerce-growth-agency', desc: 'Full-funnel ecommerce marketing' },
+  { icon: ShoppingBag,   label: 'Amazon Agency',            href: '/services/amazon-agency',         desc: 'Ads, SEO & account management' },
   { icon: Bot,           label: 'Commerce AI Agents',       href: '/services/ai-agents',             desc: 'Agents that list, price & sync' },
   { icon: TrendingUp,    label: 'Commerce SEO & Visibility',href: '/services/ecommerce-seo',         desc: 'Google, AI answers & marketplaces' },
   { icon: Search,        label: 'E-Commerce Consulting',    href: '/ecommerce-consulting',           desc: 'Platform, migration & scope' },
@@ -129,7 +130,7 @@ const US_INDUSTRY_SEO = [
 const US_WHO_WE_SERVE_TYPES = [
   { label: 'DTC & E-Commerce Brands',        href: '/',                       desc: 'Sell across every channel' },
   { label: 'B2B, Wholesale & Distributors',  href: '/b2b-ecommerce',         desc: 'Trade portals & account pricing' },
-  { label: 'Marketplace Sellers',            href: '/services/ecommerce-seo',desc: 'Amazon, Walmart, TikTok Shop' },
+  { label: 'Marketplace Sellers',            href: '/services/amazon-agency', desc: 'Amazon, Walmart, TikTok Shop' },
   { label: 'Brands Replatforming',           href: '/ecommerce-consulting',  desc: 'Migrate without losing SEO' },
 ] as const;
 
