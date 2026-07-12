@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
           transition={{ delay: 0.3, duration: 0.5 }}
           className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center"
         >
-          <a href="#contact-form" className="w-full sm:w-auto px-6 py-3.5 sm:px-8 sm:py-4 bg-jetOrange hover:bg-orange-600 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 group">
+          <a href="#contact-form" className="w-full sm:w-auto px-6 py-3.5 sm:px-8 sm:py-4 bg-[#B23E13] hover:bg-[#9A3510] text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 group">
             Schedule Free Consultation
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>

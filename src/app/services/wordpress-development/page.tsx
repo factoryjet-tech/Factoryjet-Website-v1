@@ -697,7 +697,7 @@ export default function WordPressDevelopmentPage() {
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
               <p
-                className="font-fj-mono font-medium uppercase text-[#F05A28]"
+                className="font-fj-mono font-medium uppercase text-[#B23E13]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
                 PAGE BUILDER VS. CUSTOM THEME
@@ -723,7 +723,7 @@ export default function WordPressDevelopmentPage() {
                   <div key={i} className="rounded-xl border border-fj-neutral-100 bg-fj-neutral-50 p-4">
                     <p className="font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-red-400">Page Builder</p>
                     <p className="mt-1 font-fj-body text-[0.8125rem] leading-[1.5] text-fj-neutral-600">{row.before}</p>
-                    <p className="mt-2 font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-[#F05A28]">Custom Theme</p>
+                    <p className="mt-2 font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-[#B23E13]">Custom Theme</p>
                     <p className="mt-1 font-fj-body text-[0.8125rem] leading-[1.5] text-fj-neutral-600">{row.after}</p>
                   </div>
                 ))}
@@ -764,7 +764,7 @@ export default function WordPressDevelopmentPage() {
                 {['WordPress', 'WooCommerce', 'PHP', 'Gutenberg', 'Yoast SEO', 'WP Rocket', 'Figma', 'Custom Themes'].map((tool) => (
                   <span
                     key={tool}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {tool}
@@ -789,7 +789,7 @@ export default function WordPressDevelopmentPage() {
                 FactoryJet builds WordPress themes in PHP with Gutenberg custom blocks — the native WordPress block editor, extended with components designed to your brand system. No page builder framework. No inherited CSS from a parent theme. No plugin dependency for layout control. Your site loads what it needs and nothing else, which is why our WordPress builds consistently pass Core Web Vitals on the same shared hosting that makes page builder sites fail.
               </p>
               <p>
-                For businesses needing e-commerce, we build on WooCommerce with custom product and checkout templates — not the default WooCommerce theme or a storefront theme. Our WooCommerce builds target 2–3% conversion rates vs. the 0.5–1% typical of default theme implementations. If you need a <a href="/services/website-redesign" className="text-[#F05A28] underline underline-offset-2">website redesign</a> from an existing page builder, we handle that migration as well — preserving your content and Google history while rebuilding the performance and design from the ground up.
+                For businesses needing e-commerce, we build on WooCommerce with custom product and checkout templates — not the default WooCommerce theme or a storefront theme. Our WooCommerce builds target 2–3% conversion rates vs. the 0.5–1% typical of default theme implementations. If you need a <a href="/services/website-redesign" className="text-[#B23E13] underline underline-offset-2">website redesign</a> from an existing page builder, we handle that migration as well — preserving your content and Google history while rebuilding the performance and design from the ground up.
               </p>
             </>
           }
@@ -936,7 +936,7 @@ export default function WordPressDevelopmentPage() {
         {/* Related Reading — internal linking to blog posts */}
         <section className="py-10 bg-[#FAFAF7]">
           <div className="max-w-6xl mx-auto px-6">
-            <p className="text-sm font-semibold text-[#F05A28] uppercase tracking-widest mb-3">Related Reading</p>
+            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">Related Reading</p>
             <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">Keep learning before you commit</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <a href="/blog/custom-web-development-vs-wordpress-us-small-business-2026" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">

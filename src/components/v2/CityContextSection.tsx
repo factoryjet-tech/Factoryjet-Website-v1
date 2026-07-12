@@ -136,7 +136,7 @@ export default function CityContextSection({
 
                     {/* Data-point label */}
                     <p
-                      className="mb-3 font-fj-mono font-bold uppercase text-[#F05A28]"
+                      className="mb-3 font-fj-mono font-bold uppercase text-[#B23E13]"
                       style={{ fontSize: '9px', letterSpacing: '0.14em', opacity: 0.65 }}
                       aria-hidden="true"
                     >

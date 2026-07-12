@@ -179,7 +179,7 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
                   onClick={() => { setService(s); trackServiceSelection(s.toLowerCase(), s); }}
                   className={`px-4 py-2 rounded-full text-sm font-medium border transition-all ${
                     selected
-                      ? 'bg-[#F05A28] text-white border-[#F05A28]'
+                      ? 'bg-[#B23E13] text-white border-[#F05A28]'
                       : 'bg-white text-slate-600 border-slate-200 hover:border-[#F05A28]/50'
                   }`}
                 >
@@ -243,7 +243,7 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
         )}
 
         <button type="submit" disabled={isSubmitting || !canSubmit}
-          className="w-full bg-[#F05A28] hover:bg-[#d44d1f] text-white font-bold text-base py-3.5 rounded-xl shadow-lg transition-all disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2">
+          className="w-full bg-[#B23E13] hover:bg-[#d44d1f] text-white font-bold text-base py-3.5 rounded-xl shadow-lg transition-all disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2">
           {isSubmitting ? (<><Loader2 className="w-5 h-5 animate-spin" />Sending…</>) : (<>Send request <Send className="w-5 h-5" /></>)}
         </button>
         <p className="text-center text-xs text-slate-400">We reply within 24 hours. No spam, no obligation.</p>

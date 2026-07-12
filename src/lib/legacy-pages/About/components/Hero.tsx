@@ -60,7 +60,7 @@ const Hero = () => {
               trackCTAClick('get_started', 'about_hero', 'primary');
               openModal();
             }}
-            className="w-full sm:w-auto group relative px-6 md:px-8 py-3 md:py-4 bg-jetOrange text-white font-semibold text-sm md:text-base rounded-lg overflow-hidden shadow-lg shadow-jetOrange/25 hover:shadow-xl hover:shadow-jetOrange/40 transition-all"
+            className="w-full sm:w-auto group relative px-6 md:px-8 py-3 md:py-4 bg-[#B23E13] text-white font-semibold text-sm md:text-base rounded-lg overflow-hidden shadow-lg shadow-jetOrange/25 hover:shadow-xl hover:shadow-jetOrange/40 transition-all"
           >
             <span className="relative z-10 flex items-center justify-center gap-2">
               Get Started <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

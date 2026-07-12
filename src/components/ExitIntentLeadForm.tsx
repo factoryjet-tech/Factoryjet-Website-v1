@@ -200,7 +200,7 @@ const ExitIntentLeadForm: React.FC<ExitIntentLeadFormProps> = ({
 
               <button
                 type="submit" disabled={isSubmitting || !canSubmit}
-                className="w-full bg-[#F05A28] hover:bg-[#d44d1f] text-white font-bold text-[15px] py-3 rounded-xl shadow-lg transition-all disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full bg-[#B23E13] hover:bg-[#d44d1f] text-white font-bold text-[15px] py-3 rounded-xl shadow-lg transition-all disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {isSubmitting
                   ? (<><Loader2 className="w-5 h-5 animate-spin" />Sending…</>)

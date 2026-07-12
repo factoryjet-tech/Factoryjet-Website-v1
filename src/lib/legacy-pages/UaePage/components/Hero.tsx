@@ -74,7 +74,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
                     <div className={`flex flex-wrap gap-4 mb-6 transition-all duration-700 delay-300 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
                         <button 
                             onClick={onOpenModal}
-                            className="bg-[#FF6B35] hover:bg-[#e55a28] text-white px-7 py-3 rounded-lg font-semibold text-[15px] shadow-[0_4px_12px_rgba(255,107,53,0.25)] hover:shadow-[0_6px_16px_rgba(255,107,53,0.35)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 group h-[48px]"
+                            className="bg-[#B23E13] hover:bg-[#9A3510] text-white px-7 py-3 rounded-lg font-semibold text-[15px] shadow-[0_4px_12px_rgba(255,107,53,0.25)] hover:shadow-[0_6px_16px_rgba(255,107,53,0.35)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 group h-[48px]"
                         >
                             Get Free Consultation <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                         </button>

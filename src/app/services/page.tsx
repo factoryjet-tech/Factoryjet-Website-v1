@@ -506,7 +506,7 @@ export default function USServicesHubPage() {
             <div className="mb-12">
               <p
                 className="font-fj-mono font-bold uppercase"
-                style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#F05A28' }}
+                style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#B23E13' }}
               >
                 WHAT WE BUILD
               </p>
@@ -559,7 +559,7 @@ export default function USServicesHubPage() {
                   <div className="flex flex-1 flex-col p-6">
                     <p
                       className="font-fj-mono font-bold uppercase"
-                      style={{ fontSize: '9px', letterSpacing: '0.13em', color: '#F05A28' }}
+                      style={{ fontSize: '9px', letterSpacing: '0.13em', color: '#B23E13' }}
                     >
                       {service.eyebrow}
                       {service.featured && (
@@ -590,7 +590,7 @@ export default function USServicesHubPage() {
                     <div className="mt-auto pt-5">
                       <span
                         className="inline-flex items-center gap-1.5 font-fj-body font-semibold transition-colors group-hover:opacity-80"
-                        style={{ fontSize: '0.875rem', color: '#F05A28' }}
+                        style={{ fontSize: '0.875rem', color: '#B23E13' }}
                       >
                         {service.cta}
                         <span className="inline-flex h-4 w-4 items-center justify-center rounded-full" style={{ background: 'rgba(240,90,40,0.12)' }}>
@@ -636,7 +636,7 @@ export default function USServicesHubPage() {
           <div className="mx-auto max-w-[1120px] px-6 md:px-8">
             <p
               className="font-fj-mono font-bold uppercase"
-              style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#F05A28' }}
+              style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#B23E13' }}
             >
               WHERE WE WORK
             </p>
@@ -698,7 +698,7 @@ export default function USServicesHubPage() {
           <div className="mx-auto max-w-[1120px] px-6 md:px-8">
             <p
               className="font-fj-mono font-bold uppercase"
-              style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#F05A28' }}
+              style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#B23E13' }}
             >
               COMMON QUESTIONS
             </p>

@@ -24,7 +24,7 @@ export default function WebDesignCityLinksUS({ currentCity }: Props) {
     <section className="bg-[#FAFAF7] py-14 md:py-20 border-t border-gray-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#F05A28] mb-3">
+          <p className="text-xs font-semibold uppercase tracking-widest text-[#B23E13] mb-3">
             Web Design Across the US
           </p>
           <h2 className="text-2xl md:text-3xl font-bold text-[#0F0F12] font-space">
@@ -51,7 +51,7 @@ export default function WebDesignCityLinksUS({ currentCity }: Props) {
         <div className="text-center">
           <Link
             href="/services/web-design/"
-            className="text-sm font-semibold text-[#F05A28] hover:underline underline-offset-4"
+            className="text-sm font-semibold text-[#B23E13] hover:underline underline-offset-4"
           >
             See all US web design cities →
           </Link>

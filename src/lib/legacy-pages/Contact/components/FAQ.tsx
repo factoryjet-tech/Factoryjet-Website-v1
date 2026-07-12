@@ -97,7 +97,7 @@ const FAQ: React.FC = () => {
     <section className="py-16 md:py-20 bg-slate-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10 md:mb-16 max-w-3xl mx-auto">
-          <h2 className="text-sm font-bold text-jetOrange uppercase tracking-widest mb-2">Got Questions?</h2>
+          <h2 className="text-sm font-bold text-[#B23E13] uppercase tracking-widest mb-2">Got Questions?</h2>
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-slate-900 mb-4">Everything You Need to Know</h3>
           <p className="text-slate-600 text-base sm:text-lg">
             We believe in radical transparency. Here are honest answers to the most common questions we get from clients like you.

@@ -71,7 +71,7 @@ export default function PortfolioShowcase({
           <div className="max-w-[600px]">
             {eyebrow && (
               <p
-                className="font-fj-mono font-medium uppercase text-[#F05A28]"
+                className="font-fj-mono font-medium uppercase text-[#B23E13]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
                 {eyebrow}
@@ -127,7 +127,7 @@ export default function PortfolioShowcase({
               <div className="flex flex-1 flex-col gap-4 p-5 lg:p-6">
                 {/* Industry pill */}
                 <span
-                  className="self-start rounded-full font-fj-mono font-medium uppercase text-[#F05A28]"
+                  className="self-start rounded-full font-fj-mono font-medium uppercase text-[#B23E13]"
                   style={{
                     fontSize: '10px',
                     letterSpacing: '0.12em',

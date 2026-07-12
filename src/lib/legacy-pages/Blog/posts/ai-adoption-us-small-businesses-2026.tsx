@@ -231,7 +231,7 @@ export const post: BlogPost = {
         </p>
         <a
           href="https://calendly.com/bhavesh-factoryjet/30min"
-          className="inline-block bg-orange-600 text-white px-5 py-2 rounded font-semibold hover:bg-orange-700 transition-colors"
+          className="inline-block bg-[#B23E13] text-white px-5 py-2 rounded font-semibold hover:bg-[#9A3510] transition-colors"
         >
           Talk to Bhavesh — free 30 minutes →
         </a>
@@ -390,7 +390,7 @@ export const post: BlogPost = {
         </p>
         <a
           href="https://calendly.com/bhavesh-factoryjet/30min"
-          className="inline-block bg-orange-500 text-white px-5 py-2 rounded font-semibold hover:bg-orange-600 transition-colors"
+          className="inline-block bg-[#B23E13] text-white px-5 py-2 rounded font-semibold hover:bg-[#9A3510] transition-colors"
         >
           Talk to Bhavesh →
         </a>

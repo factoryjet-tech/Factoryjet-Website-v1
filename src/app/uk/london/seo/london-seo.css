@@ -199,7 +199,7 @@
 .uk-londonseo .faq-sidebar-cta a {color:#C94A1A;font-size:14px;font-weight:500;text-decoration:none}
 .uk-londonseo .faq-sidebar-cta p {font-size:11px;color:var(--n400);margin-top:6px}
 .uk-londonseo .faq-cat-header {display:flex;align-items:center;gap:12px;margin-bottom:20px}
-.uk-londonseo .faq-cat-bar {height:2px;width:24px;background:#F05A28;flex-shrink:0}
+.uk-londonseo .faq-cat-bar {height:2px;width:24px;background: #B23E13;flex-shrink:0}
 .uk-londonseo .faq-cat-label {color:#C94A1A;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin:0}
 .uk-londonseo .faq-item {border-top:1px solid var(--n200)}
 .uk-londonseo .faq-item summary {display:flex;justify-content:space-between;align-items:flex-start;padding:20px 0;cursor:pointer;list-style:none;gap:16px}

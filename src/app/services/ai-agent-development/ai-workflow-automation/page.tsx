@@ -537,7 +537,7 @@ export default function AIWorkflowAutomationINPage() {
           ]}
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
-              <p className="font-fj-mono font-medium uppercase text-[#F05A28]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>
+              <p className="font-fj-mono font-medium uppercase text-[#B23E13]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>
                 WORKFLOW IN ACTION — EVERY ORDER
               </p>
               <p className="mt-4 font-fj-display text-[1.875rem] font-medium leading-[1.1] tracking-[-0.025em] text-fj-ink">
@@ -551,7 +551,7 @@ export default function AIWorkflowAutomationINPage() {
                   'Tally ERP → Sales entry created, no manual input needed',
                 ].map((step, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#F05A28]">
+                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#B23E13]">
                       {i + 1}
                     </span>
                     <p className="font-fj-body text-[0.875rem] leading-[1.5] text-fj-neutral-600">{step}</p>
@@ -580,7 +580,7 @@ export default function AIWorkflowAutomationINPage() {
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
                 {['Zoho CRM', 'Tally ERP', 'Razorpay', 'Shopify', 'WhatsApp API', 'GST invoices', 'Shiprocket', 'Freshdesk'].map((cap) => (
-                  <span key={cap} className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]" style={{ fontSize: '10px', letterSpacing: '0.10em' }}>{cap}</span>
+                  <span key={cap} className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]" style={{ fontSize: '10px', letterSpacing: '0.10em' }}>{cap}</span>
                 ))}
               </div>
               <p>
@@ -628,7 +628,7 @@ export default function AIWorkflowAutomationINPage() {
                         <p className="mt-1 font-fj-body text-fj-neutral-500" style={{ fontSize: '0.8125rem' }}>{row.manual}</p>
                       </div>
                       <div className="rounded-lg border border-[rgba(240,90,40,0.2)] bg-[rgba(240,90,40,0.05)] px-3 py-2">
-                        <p className="font-fj-mono uppercase text-[#F05A28]" style={{ fontSize: '0.625rem', letterSpacing: '0.08em' }}>AI Automated</p>
+                        <p className="font-fj-mono uppercase text-[#B23E13]" style={{ fontSize: '0.625rem', letterSpacing: '0.08em' }}>AI Automated</p>
                         <p className="mt-1 font-fj-body text-fj-ink" style={{ fontSize: '0.8125rem' }}>{row.ai}</p>
                       </div>
                     </div>
@@ -737,7 +737,7 @@ export default function AIWorkflowAutomationINPage() {
               {WORKFLOW_STATS.map((stat) => (
                 <div key={stat.value}>
                   {stat.categoryLabel && (
-                    <div className="mb-3 inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-fj-mono font-bold uppercase" style={{ fontSize: '9px', letterSpacing: '0.13em', color: '#F05A28', background: 'rgba(240,90,40,0.06)', border: '1px solid rgba(240,90,40,0.22)' }}>
+                    <div className="mb-3 inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-fj-mono font-bold uppercase" style={{ fontSize: '9px', letterSpacing: '0.13em', color: '#B23E13', background: 'rgba(240,90,40,0.06)', border: '1px solid rgba(240,90,40,0.22)' }}>
                       <span className="inline-block h-1 w-1 rounded-full" style={{ backgroundColor: '#F05A28' }} aria-hidden="true" />
                       {stat.categoryLabel}
                     </div>
@@ -767,7 +767,7 @@ export default function AIWorkflowAutomationINPage() {
               </div>
               <div className="mt-5 flex flex-wrap gap-2">
                 {['D2C E-Commerce', 'Real Estate', 'Manufacturing', 'NBFC / Finance', 'Healthcare', 'Professional Services'].map((ind) => (
-                  <span key={ind} className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#F05A28]" style={{ fontSize: '10px', letterSpacing: '0.08em' }}>{ind}</span>
+                  <span key={ind} className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#B23E13]" style={{ fontSize: '10px', letterSpacing: '0.08em' }}>{ind}</span>
                 ))}
               </div>
             </>

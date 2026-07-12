@@ -665,7 +665,7 @@ export default function SmallBusinessWebDesignPage() {
                     <div key={problem} className="grid grid-cols-3 gap-2 px-6 py-2.5">
                       <p className="font-fj-body text-[0.8125rem] font-medium text-fj-ink">{problem}</p>
                       <p className="font-fj-body text-[0.8125rem] text-fj-neutral-400">{impact}</p>
-                      <p className="font-fj-body text-[0.8125rem] font-semibold text-[#F05A28]">{fix}</p>
+                      <p className="font-fj-body text-[0.8125rem] font-semibold text-[#B23E13]">{fix}</p>
                     </div>
                   ))}
                 </div>
@@ -860,7 +860,7 @@ export default function SmallBusinessWebDesignPage() {
         {/* Related Reading — internal linking to blog posts */}
         <section className="py-10 bg-[#FAFAF7]">
           <div className="max-w-6xl mx-auto px-6">
-            <p className="text-sm font-semibold text-[#F05A28] uppercase tracking-widest mb-3">Related Reading</p>
+            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">Related Reading</p>
             <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">Keep learning before you commit</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <a href="/blog/nyc-b2b-corporate-web-design-guide-2026" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">

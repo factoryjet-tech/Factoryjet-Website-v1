@@ -841,7 +841,7 @@ function HealthcareDataTable() {
             >
               <td style={tdBold}>{row.type}</td>
               <td style={tdStyle}>{row.primaryQuery}</td>
-              <td style={{ ...tdStyle, color: '#F05A28', fontWeight: 600 }}>{row.focus}</td>
+              <td style={{ ...tdStyle, color: '#B23E13', fontWeight: 600 }}>{row.focus}</td>
               <td style={{ ...tdStyle, fontFamily: 'var(--font-geist-mono, monospace)', fontSize: '0.8rem' }}>
                 {row.schema}
               </td>
@@ -961,7 +961,7 @@ function HealthcareSpecialtiesSection() {
               >
                 <p
                   className="font-fj-mono font-bold uppercase"
-                  style={{ fontSize: '10px', letterSpacing: '0.12em', color: '#F05A28' }}
+                  style={{ fontSize: '10px', letterSpacing: '0.12em', color: '#B23E13' }}
                 >
                   Primary signal
                 </p>
@@ -983,9 +983,9 @@ function HealthcareSpecialtiesSection() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-fj-body text-sm font-semibold transition-all hover:opacity-90"
             style={{
-              backgroundColor: '#F05A28',
+              backgroundColor: '#B23E13',
               color: '#FFFFFF',
-              boxShadow: '0 4px 16px rgba(240,90,40,0.28)',
+              boxShadow: '0 4px 16px rgba(178,62,19,0.28)',
             }}
           >
             Book a free healthcare SEO audit <span aria-hidden="true">→</span>
@@ -994,8 +994,8 @@ function HealthcareSpecialtiesSection() {
             href="/services/local-seo"
             className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-fj-body text-sm font-semibold transition-all hover:opacity-90"
             style={{
-              color: '#F05A28',
-              border: '1.5px solid #F05A28',
+              color: '#B23E13',
+              border: '1.5px solid #B23E13',
             }}
           >
             See our local SEO service
@@ -1067,7 +1067,7 @@ function HealthcareSEOPricingGrid() {
                     style={{
                       top: '0.75rem',
                       right: '0.75rem',
-                      backgroundColor: '#F05A28',
+                      backgroundColor: '#B23E13',
                       color: '#FFFFFF',
                       fontSize: '10px',
                       fontWeight: 600,
@@ -1163,11 +1163,11 @@ function HealthcareSEOPricingGrid() {
                       rel="noopener noreferrer"
                       className="inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3 font-fj-body text-sm font-semibold transition-all hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                       style={{
-                        background: isPopular ? '#F05A28' : 'transparent',
-                        color: isPopular ? '#FFFFFF' : '#F05A28',
-                        border: isPopular ? 'none' : '1.5px solid #F05A28',
+                        background: isPopular ? '#B23E13' : 'transparent',
+                        color: isPopular ? '#FFFFFF' : '#B23E13',
+                        border: isPopular ? 'none' : '1.5px solid #B23E13',
                         outlineColor: '#F05A28',
-                        boxShadow: isPopular ? '0 4px 16px rgba(240,90,40,0.30)' : 'none',
+                        boxShadow: isPopular ? '0 4px 16px rgba(178,62,19,0.30)' : 'none',
                       }}
                     >
                       {tier.ctaLabel}
@@ -1330,11 +1330,11 @@ export default function HealthcareSeoServicePage() {
               style={{ fontSize: '1.0625rem', lineHeight: 1.7 }}
             >
               Need SEO for a non-healthcare business? Our{' '}
-              <Link href="/services/local-seo" className="text-[#F05A28] font-medium underline underline-offset-2">
+              <Link href="/services/local-seo" className="text-[#B23E13] font-medium underline underline-offset-2">
                 local SEO service
               </Link>{' '}
               covers any category, and our{' '}
-              <Link href="/services/seo" className="text-[#F05A28] font-medium underline underline-offset-2">
+              <Link href="/services/seo" className="text-[#B23E13] font-medium underline underline-offset-2">
                 core SEO service
               </Link>{' '}
               applies the same E-E-A-T and AI-citation playbook to non-regulated industries.
@@ -1352,7 +1352,7 @@ export default function HealthcareSeoServicePage() {
           >
             <p
               className="font-fj-mono font-bold uppercase"
-              style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#F05A28' }}
+              style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#B23E13' }}
             >
               Quick facts
             </p>

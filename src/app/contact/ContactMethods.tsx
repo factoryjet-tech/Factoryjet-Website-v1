@@ -33,7 +33,7 @@ export default function ContactMethods() {
             <div className="mb-3.5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFF0EA]">
               <CalendarClock className="h-6 w-6 text-[#F05A28]" />
             </div>
-            <span className="mb-2.5 inline-block rounded-md bg-[#FFF0EA] px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#F05A28]">
+            <span className="mb-2.5 inline-block rounded-md bg-[#FFF0EA] px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#B23E13]">
               Recommended
             </span>
             <h3 className="text-[17px] font-bold text-[#0A0F1C]">Book a 30-minute call</h3>
@@ -44,7 +44,7 @@ export default function ContactMethods() {
               href={CALENDLY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[#F05A28]"
+              className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[#B23E13]"
             >
               Pick a time
               <span aria-hidden="true">&rarr;</span>
@@ -86,7 +86,7 @@ export default function ContactMethods() {
             </p>
             <a
               href={`mailto:${EMAIL}`}
-              className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[#F05A28]"
+              className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[#B23E13]"
             >
               {EMAIL}
               <span aria-hidden="true">&rarr;</span>

@@ -153,8 +153,8 @@ export default function ServiceJourneyRow({
                   <div
                     className="relative z-10 flex h-11 w-11 items-center justify-center rounded-full font-fj-mono text-[0.875rem] font-bold text-white"
                     style={{
-                      background: '#F05A28',
-                      boxShadow: '0 0 0 5px rgba(240,90,40,0.12), 0 0 22px rgba(240,90,40,0.32)',
+                      background: '#B23E13',
+                      boxShadow: '0 0 0 5px rgba(178,62,19,0.12), 0 0 22px rgba(178,62,19,0.32)',
                     }}
                     aria-hidden="true"
                   >
@@ -164,7 +164,7 @@ export default function ServiceJourneyRow({
                   {/* ── Stage label ──────────────────────────────────── */}
                   <p
                     className="mt-4 font-fj-mono font-semibold uppercase"
-                    style={{ color: '#F05A28', fontSize: '10px', letterSpacing: '0.14em', opacity: 0.65 }}
+                    style={{ color: '#B23E13', fontSize: '10px', letterSpacing: '0.14em', opacity: 0.65 }}
                     aria-hidden="true"
                   >
                     STAGE {stage.number}

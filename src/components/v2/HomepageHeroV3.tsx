@@ -218,7 +218,7 @@ export default function HomepageHeroV3() {
                 style={{
                   fontSize: '14.5px',
                   padding: '14px 28px',
-                  background: '#F05A28',
+                  background: '#B23E13',
                   boxShadow: '0 1px 2px rgba(0,82,204,0.25), 0 4px 16px rgba(0,82,204,0.18)',
                 }}
               >
@@ -487,7 +487,7 @@ export default function HomepageHeroV3() {
                   <span className="font-fj-body text-[10px] text-[#64748B]">Day 1</span>
                   <span className="font-fj-body text-[10px] text-[#64748B]">Day 7</span>
                 </div>
-                <p className="font-fj-body font-semibold" style={{ fontSize: '12px', color: '#F05A28' }}>
+                <p className="font-fj-body font-semibold" style={{ fontSize: '12px', color: '#B23E13' }}>
                   Day 3 · On track →
                 </p>
               </div>

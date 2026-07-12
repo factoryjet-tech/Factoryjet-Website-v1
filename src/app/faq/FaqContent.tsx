@@ -174,7 +174,7 @@ const QuickLinks = React.memo(({ onSelectQuestion }: { onSelectQuestion: (id: st
             aria-label={`View popular question: ${item.question}`}
           >
             <div className="flex items-start justify-between mb-2">
-              <span className="bg-[rgba(240,90,40,0.08)] text-[#F05A28] p-2 rounded-lg group-hover:bg-[#F05A28] group-hover:text-white transition-colors">
+              <span className="bg-[rgba(240,90,40,0.08)] text-[#F05A28] p-2 rounded-lg group-hover:bg-[#B23E13] group-hover:text-white transition-colors">
                 <Zap size={18} aria-hidden="true" />
               </span>
               <ChevronRight size={16} className="text-fj-neutral-200 group-hover:text-[#F05A28] transition-colors" aria-hidden="true" />
@@ -204,7 +204,7 @@ const AccordionItem = React.memo(({ item, isOpen, onToggle }: { item: FAQItem; i
           onClick={onToggle}
           className="w-full flex items-center justify-between p-5 text-left focus:outline-none"
         >
-          <span className={`text-base md:text-lg font-semibold pr-8 transition-colors font-fj-display ${isOpen ? 'text-[#F05A28]' : 'text-fj-ink'}`}>
+          <span className={`text-base md:text-lg font-semibold pr-8 transition-colors font-fj-display ${isOpen ? 'text-[#B23E13]' : 'text-fj-ink'}`}>
             {item.question}
           </span>
           <span className={`flex-shrink-0 ml-4 p-2 rounded-full transition-transform duration-300 ${isOpen ? 'rotate-180 bg-[rgba(240,90,40,0.08)] text-[#F05A28]' : 'bg-fj-neutral-50 text-fj-neutral-400'}`}>
@@ -248,7 +248,7 @@ const Sidebar = React.memo(({ activeCategory, onCategorySelect }: { activeCatego
           aria-current={isActive ? 'page' : undefined}
           className={`group flex items-center px-4 py-3 text-sm font-medium font-fj-body rounded-lg transition-all duration-200 ${
             isActive
-              ? 'bg-[#F05A28] text-white shadow-md shadow-fj-jet-blue/20'
+              ? 'bg-[#B23E13] text-white shadow-md shadow-fj-jet-blue/20'
               : 'text-fj-neutral-600 hover:bg-fj-neutral-50 hover:text-fj-ink'
           }`}
         >
@@ -294,7 +294,7 @@ const SearchResults = ({ results, onSelect }: { results: SearchResult[]; onSelec
               {result.categoryTitle}
             </Badge>
             {result.matchType === 'answer' && (
-              <Badge className="bg-[rgba(240,90,40,0.08)] text-[#F05A28] border border-[#F05A28]/10">Found in answer</Badge>
+              <Badge className="bg-[rgba(240,90,40,0.08)] text-[#B23E13] border border-[#F05A28]/10">Found in answer</Badge>
             )}
           </div>
           <h3 className="text-lg font-bold text-fj-ink group-hover:text-[#F05A28] transition-colors mb-2 font-fj-display">

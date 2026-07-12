@@ -58,7 +58,7 @@ export default function BigThreeTrustBlock({
           {eyebrow && (
             <p
               className="font-fj-mono font-semibold uppercase"
-              style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#F05A28' }}
+              style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#B23E13' }}
             >
               {eyebrow}
             </p>
@@ -96,7 +96,7 @@ export default function BigThreeTrustBlock({
             {eyebrow && (
               <p
                 className="font-fj-mono font-semibold uppercase mb-4"
-                style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#F05A28' }}
+                style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#B23E13' }}
               >
                 {eyebrow}
               </p>
@@ -145,10 +145,10 @@ export default function BigThreeTrustBlock({
               href="/contact"
               className="mt-6 inline-flex items-center gap-2 rounded-full font-fj-body font-semibold text-white transition-opacity hover:opacity-90"
               style={{
-                background: '#F05A28',
+                background: '#B23E13',
                 padding: '10px 22px',
                 fontSize: '0.9rem',
-                boxShadow: '0 4px 18px rgba(240,90,40,0.30)',
+                boxShadow: '0 4px 18px rgba(178,62,19,0.30)',
               }}
             >
               Book a strategy call

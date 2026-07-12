@@ -466,7 +466,7 @@ export default function AiSeoIndiaPage() {
         <section className="py-14 md:py-20" aria-label="What is AI SEO">
           <div className="mx-auto grid max-w-[1180px] grid-cols-1 items-center gap-12 px-6 md:grid-cols-2 md:px-8">
             <div>
-              <p className="font-fj-mono text-[11.5px] font-semibold uppercase tracking-[0.16em] text-[#F05A28]">In simple words</p>
+              <p className="font-fj-mono text-[11.5px] font-semibold uppercase tracking-[0.16em] text-[#B23E13]">In simple words</p>
               <h2 className="mt-3 font-fj-display text-3xl font-extrabold tracking-tight md:text-[2.6rem] md:leading-[1.12]">
                 What is <em className="italic">AI SEO?</em>
               </h2>
@@ -489,7 +489,7 @@ export default function AiSeoIndiaPage() {
                 ))}
               </div>
               <div className="rotate-1 rounded-2xl border border-[#F05A28]/45 bg-white p-5 shadow-[0_18px_40px_-20px_rgba(240,90,40,0.35)]">
-                <p className="mb-3 font-fj-mono text-[11px] uppercase tracking-[0.12em] text-[#F05A28]">AI SEO — the answer</p>
+                <p className="mb-3 font-fj-mono text-[11px] uppercase tracking-[0.12em] text-[#B23E13]">AI SEO — the answer</p>
                 <div className="rounded-xl border-[1.5px] border-[#F05A28] bg-[#FDE8DF] p-3 text-[12.5px]">
                   &ldquo;…the most recommended option is <b className="text-[#D6491C]">your business</b>, because…&rdquo;
                 </div>
@@ -628,7 +628,7 @@ export default function AiSeoIndiaPage() {
         {/* ── CH.7 CITY PINS ──────────────────────────────────────────────── */}
         <section className="py-14 md:py-20" aria-label="Cities we cover">
           <div className="mx-auto max-w-[1180px] px-6 md:px-8">
-            <p className="font-fj-mono text-[11.5px] font-semibold uppercase tracking-[0.16em] text-[#F05A28]">Where we work</p>
+            <p className="font-fj-mono text-[11.5px] font-semibold uppercase tracking-[0.16em] text-[#B23E13]">Where we work</p>
             <h2 className="mt-3 font-fj-display text-3xl font-extrabold tracking-tight md:text-[2.6rem]">
               AI SEO for <em className="italic text-[#F05A28]">every metro.</em>
             </h2>

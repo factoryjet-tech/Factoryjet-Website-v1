@@ -156,7 +156,7 @@ const PlanSelectionModal: React.FC<PlanSelectionModalProps> = ({
                   </p>
                   <button
                     onClick={handleClose}
-                    className="px-6 py-2 bg-[#F05A28] text-white rounded-lg font-medium hover:bg-[#d44d1f] transition-colors"
+                    className="px-6 py-2 bg-[#B23E13] text-white rounded-lg font-medium hover:bg-[#d44d1f] transition-colors"
                   >
                     Close
                   </button>
@@ -237,7 +237,7 @@ const PlanSelectionModal: React.FC<PlanSelectionModalProps> = ({
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-jet-orange hover:bg-orange-600 text-white font-bold py-3 rounded-lg shadow-lg hover:shadow-xl transition-all disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full bg-[#B23E13] hover:bg-[#9A3510] text-white font-bold py-3 rounded-lg shadow-lg hover:shadow-xl transition-all disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
                       <>

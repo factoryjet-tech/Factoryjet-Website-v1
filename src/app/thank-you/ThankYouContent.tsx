@@ -89,7 +89,7 @@ export default function ThankYouContent() {
         <CheckCircle size={44} className="text-[#10B981]" strokeWidth={2.4} />
       </div>
 
-      <p className="mb-3 text-[13px] font-bold uppercase tracking-[0.14em] text-[#F05A28]">
+      <p className="mb-3 text-[13px] font-bold uppercase tracking-[0.14em] text-[#B23E13]">
         Request received
       </p>
 
@@ -110,7 +110,7 @@ export default function ThankYouContent() {
           rel="noopener noreferrer"
           /* GTM auto-fires book_call_click (GA4) + the Book-Call Ads conversion on
              any calendly.com click — no inline gtag needed. */
-          className="inline-flex items-center justify-center gap-2.5 rounded-2xl bg-[#F05A28] px-7 py-3.5 text-base font-bold text-white shadow-[0_10px_26px_-10px_rgba(240,90,40,0.7)] transition-all hover:-translate-y-0.5 hover:bg-[#d44d1f]"
+          className="inline-flex items-center justify-center gap-2.5 rounded-2xl bg-[#B23E13] px-7 py-3.5 text-base font-bold text-white shadow-[0_10px_26px_-10px_rgba(240,90,40,0.7)] transition-all hover:-translate-y-0.5 hover:bg-[#d44d1f]"
         >
           <CalendarClock size={18} />
           Book a 30-min call now
@@ -137,7 +137,7 @@ export default function ThankYouContent() {
           { n: 3, h: 'We scope and quote', p: 'A clear plan and timeline. Most sites ship in about 7 days.' },
         ].map((s) => (
           <div key={s.n} className="rounded-2xl border border-slate-100 bg-white p-6">
-            <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-[9px] bg-[#FFF0EA] text-sm font-extrabold text-[#F05A28]">
+            <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-[9px] bg-[#FFF0EA] text-sm font-extrabold text-[#B23E13]">
               {s.n}
             </div>
             <h2 className="mb-1.5 text-[15px] font-bold text-[#0A0F1C]">{s.h}</h2>

@@ -83,7 +83,7 @@ export default function BoringStatsRow({
                   style={{
                     fontSize: '9px',
                     letterSpacing: '0.13em',
-                    color: '#F05A28',
+                    color: '#B23E13',
                     background: 'rgba(240,90,40,0.06)',
                     border: '1px solid rgba(240,90,40,0.22)',
                   }}

@@ -93,7 +93,7 @@ export const AuthorPage: React.FC<AuthorPageProps> = ({ author, posts }) => {
                   <Briefcase className="w-3.5 h-3.5" />
                   {author.yearsExperience} Years Experience
                 </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-orange-50 text-jetOrange text-xs md:text-sm font-semibold border border-orange-100">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-orange-50 text-[#B23E13] text-xs md:text-sm font-semibold border border-orange-100">
                   <BookOpen className="w-3.5 h-3.5" />
                   {posts.length} Articles Published
                 </span>

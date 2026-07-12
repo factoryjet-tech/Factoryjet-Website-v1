@@ -725,7 +725,7 @@ const PricingCard: React.FC<{
       }`}
     >
       {tier.isHero && (
-        <div className="bg-[#F05A28] text-white text-xs font-bold text-center py-1.5 uppercase tracking-wide">
+        <div className="bg-[#B23E13] text-white text-xs font-bold text-center py-1.5 uppercase tracking-wide">
           Most Popular Choice
         </div>
       )}
@@ -744,8 +744,8 @@ const PricingCard: React.FC<{
           onClick={onSelectPlan}
           className={`w-full py-2.5 md:py-3 px-4 md:px-6 rounded-lg font-bold text-xs md:text-sm transition-all duration-200 transform active:scale-95 ${
             tier.isHero
-              ? "bg-[#F05A28] text-white hover:bg-[#d44d1f] shadow-md hover:shadow-lg"
-              : "bg-white border-2 border-[#F05A28] text-[#F05A28] hover:bg-[#F05A28] hover:text-white"
+              ? "bg-[#B23E13] text-white hover:bg-[#d44d1f] shadow-md hover:shadow-lg"
+              : "bg-white border-2 border-[#B23E13] text-[#B23E13] hover:bg-[#B23E13] hover:text-white"
           }`}
         >
           {tier.isHero ? "Get Started Now" : "Select Plan"}
@@ -845,7 +845,7 @@ const FactoryJetPricing = () => {
         <div className="max-w-4xl mx-auto">
           <p
             className="inline-flex items-center gap-2 mb-4 font-mono text-xs font-bold uppercase tracking-widest"
-            style={{ color: '#F05A28', letterSpacing: '0.14em' }}
+            style={{ color: '#B23E13', letterSpacing: '0.14em' }}
           >
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#F05A28]" />
             TRANSPARENT PRICING
@@ -880,7 +880,7 @@ const FactoryJetPricing = () => {
               {activeTab === tab.id && (
                 <motion.div
                   layoutId="activeTab"
-                  className="absolute inset-0 bg-[#F05A28] rounded-full shadow-md"
+                  className="absolute inset-0 bg-[#B23E13] rounded-full shadow-md"
                   transition={{ type: "spring", stiffness: 500, damping: 30 }}
                 />
               )}
@@ -941,7 +941,7 @@ const FactoryJetPricing = () => {
                       }}
                       className={`flex items-center w-full p-3 md:p-4 rounded-xl text-left transition-all duration-300 relative group flex-shrink-0 lg:flex-shrink ${
                         isActive
-                          ? "bg-[#F05A28] text-white shadow-md"
+                          ? "bg-[#B23E13] text-white shadow-md"
                           : "text-slate-600 hover:bg-slate-50"
                       }`}
                     >
@@ -1007,7 +1007,7 @@ const FactoryJetPricing = () => {
                         <span
                           className={`font-heading font-semibold text-sm md:text-base lg:text-lg pr-4 md:pr-8 transition-colors ${
                             isOpen
-                              ? "text-[#F05A28]"
+                              ? "text-[#B23E13]"
                               : "text-[#0F0F12] group-hover:text-[#F05A28]"
                           }`}
                         >
@@ -1016,7 +1016,7 @@ const FactoryJetPricing = () => {
                         <div
                           className={`flex-shrink-0 w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
                             isOpen
-                              ? "bg-[#F05A28] text-white rotate-180"
+                              ? "bg-[#B23E13] text-white rotate-180"
                               : "bg-slate-100 text-slate-500 group-hover:bg-orange-50"
                           }`}
                         >
@@ -1079,7 +1079,7 @@ const FactoryJetPricing = () => {
                 trackCTAClick('book_free_consultation', 'pricing_cta', 'primary');
                 openModal();
               }}
-              className="bg-[#F05A28] text-white hover:bg-[#d44d1f] font-bold py-3 md:py-4 px-6 md:px-8 rounded-lg shadow-lg hover:shadow-[#F05A28]/30 transition-all transform hover:-translate-y-1 flex items-center mx-auto text-sm md:text-base"
+              className="bg-[#B23E13] text-white hover:bg-[#d44d1f] font-bold py-3 md:py-4 px-6 md:px-8 rounded-lg shadow-lg hover:shadow-[#F05A28]/30 transition-all transform hover:-translate-y-1 flex items-center mx-auto text-sm md:text-base"
             >
               Book a Free Consultation
               <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />

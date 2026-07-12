@@ -662,7 +662,7 @@ function AiSeoPricingGrid() {
                     style={{
                       top: '0.75rem',
                       right: '0.75rem',
-                      backgroundColor: '#F05A28',
+                      backgroundColor: '#B23E13',
                       color: '#FFFFFF',
                       fontSize: '10px',
                       fontWeight: 600,
@@ -762,12 +762,12 @@ function AiSeoPricingGrid() {
                       rel="noopener noreferrer"
                       className="inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3 font-fj-body text-sm font-semibold transition-all hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                       style={{
-                        background: isPopular ? '#F05A28' : 'transparent',
-                        color: isPopular ? '#FFFFFF' : '#F05A28',
-                        border: isPopular ? 'none' : '1.5px solid #F05A28',
+                        background: isPopular ? '#B23E13' : 'transparent',
+                        color: isPopular ? '#FFFFFF' : '#B23E13',
+                        border: isPopular ? 'none' : '1.5px solid #B23E13',
                         outlineColor: '#F05A28',
                         boxShadow: isPopular
-                          ? '0 4px 16px rgba(240,90,40,0.30)'
+                          ? '0 4px 16px rgba(178,62,19,0.30)'
                           : 'none',
                       }}
                     >
@@ -838,8 +838,8 @@ function CaseStudyPlaceholder() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full px-7 py-3 font-fj-body text-sm font-semibold text-white transition-all hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
             style={{
-              background: '#F05A28',
-              boxShadow: '0 4px 16px rgba(240,90,40,0.25)',
+              background: '#B23E13',
+              boxShadow: '0 4px 16px rgba(178,62,19,0.25)',
               outlineColor: '#F05A28',
             }}
           >
@@ -945,7 +945,7 @@ export default function AiSeoServicePage() {
           >
             <p
               className="font-fj-mono font-bold uppercase"
-              style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#F05A28' }}
+              style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#B23E13' }}
             >
               Our approach
             </p>

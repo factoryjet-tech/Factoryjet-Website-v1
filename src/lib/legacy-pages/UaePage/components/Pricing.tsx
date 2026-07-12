@@ -294,7 +294,7 @@ const Pricing: React.FC<PricingProps> = ({ onOpenModal }) => {
               {/* Popular Badge */}
               {tier.isPopular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-full flex justify-center">
-                  <span className="bg-[#FF6B35] text-white text-[11px] font-extrabold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg flex items-center gap-1 animate-pulse">
+                  <span className="bg-[#B23E13] text-white text-[11px] font-extrabold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg flex items-center gap-1 animate-pulse">
                     <Star size={12} fill="currentColor" /> Most Popular
                   </span>
                 </div>
@@ -341,7 +341,7 @@ const Pricing: React.FC<PricingProps> = ({ onOpenModal }) => {
                 {tier.features.map((feat, fIdx) => (
                   <div key={fIdx} className="flex items-start gap-3">
                     <div className={`mt-0.5 w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 ${
-                        tier.isPopular ? 'bg-[#FF6B35]/20 text-[#FF6B35]' : 'bg-white/10 text-white'
+                        tier.isPopular ? 'bg-[#B23E13]/20 text-[#FF6B35]' : 'bg-white/10 text-white'
                     }`}>
                       <Check size={12} strokeWidth={3} />
                     </div>
@@ -387,7 +387,7 @@ const Pricing: React.FC<PricingProps> = ({ onOpenModal }) => {
                   onClick={onOpenModal}
                   className={`w-full py-4 rounded-xl font-bold text-sm tracking-wide transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-2 ${
                   tier.isPopular 
-                    ? 'bg-[#FF6B35] hover:bg-[#e55a28] text-white shadow-[0_4px_20px_rgba(255,107,53,0.3)]' 
+                    ? 'bg-[#B23E13] hover:bg-[#9A3510] text-white shadow-[0_4px_20px_rgba(255,107,53,0.3)]' 
                     : 'bg-white text-[#0052CC] hover:bg-gray-100'
                 }`}>
                   <Zap size={16} fill={tier.isPopular ? "white" : "#0052CC"} /> 

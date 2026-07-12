@@ -163,7 +163,7 @@ export default function ComparisonTable({
                     scope="col"
                     className={`${HEADER_TYPE} ${
                       col.isFactoryJet
-                        ? 'bg-[#F05A28]-tint text-[#B23E13]'
+                        ? 'bg-[#FFF3EE] text-[#B23E13]'
                         : 'text-fj-neutral-600'
                     }`}
                     style={col.isFactoryJet ? { borderTopWidth: '3px', borderTopStyle: 'solid', borderTopColor: '#F05A28' } : undefined}
@@ -185,7 +185,7 @@ export default function ComparisonTable({
                   {row.values.map((value, ci) => {
                     const col = columns[ci];
                     const cellClass = col?.isFactoryJet
-                      ? `${CELL_BASE} bg-[#F05A28]-tint font-semibold`
+                      ? `${CELL_BASE} bg-[#FFF3EE] font-semibold`
                       : CELL_BASE;
                     return (
                       <td key={ci} className={cellClass}>

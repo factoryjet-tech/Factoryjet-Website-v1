@@ -413,7 +413,7 @@ function PropCardsGrid({
       <div className="mx-auto max-w-[1120px] px-6 md:px-8">
         {eyebrow && (
           <p
-            className="font-fj-mono font-medium uppercase text-[#F05A28]"
+            className="font-fj-mono font-medium uppercase text-[#B23E13]"
             style={{ fontSize: '11px', letterSpacing: '0.14em' }}
           >
             {eyebrow}
@@ -462,7 +462,7 @@ function PropCardsGrid({
                 )}
                 {s.linkHref && (
                   <span
-                    className="mt-4 inline-flex items-center gap-1 font-fj-body font-semibold text-[#F05A28]"
+                    className="mt-4 inline-flex items-center gap-1 font-fj-body font-semibold text-[#B23E13]"
                     style={{ fontSize: '0.875rem' }}
                   >
                     {s.linkLabel || s.example || 'Learn more'}
@@ -661,7 +661,7 @@ export default function IndustriesGrid(props: IndustriesGridProps = {}) {
             href="/contact"
             style={{
               display: 'inline-block',
-              background: ORANGE,
+              background: '#B23E13',
               color: '#fff',
               padding: '12px 28px',
               borderRadius: 8,

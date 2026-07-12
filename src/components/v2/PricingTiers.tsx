@@ -244,13 +244,13 @@ function TierCard({ tier }: { tier: PricingTier }) {
                 region={tier.cta.region ?? 'us'}
                 btnVariant="primary-light"
                 className="block w-full rounded-xl px-6 py-3.5 text-center font-fj-body font-semibold text-white transition-all focus-visible:outline-white"
-                style={{ fontSize: '0.9375rem', background: '#F05A28', borderRadius: '0.75rem', border: 'none' }}
+                style={{ fontSize: '0.9375rem', background: '#B23E13', borderRadius: '0.75rem', border: 'none' }}
               />
             ) : (
               <Link
                 href={tier.cta.href ?? '/contact'}
                 className="block w-full rounded-xl px-6 py-3.5 text-center font-fj-body font-semibold text-white transition-all hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F05A28]"
-                style={{ fontSize: '0.9375rem', background: '#F05A28', boxShadow: '0 4px 16px rgba(240,90,40,0.38)' }}
+                style={{ fontSize: '0.9375rem', background: '#B23E13', boxShadow: '0 4px 16px rgba(178,62,19,0.38)' }}
               >
                 {tier.cta.label}
               </Link>
@@ -352,13 +352,13 @@ function TierCard({ tier }: { tier: PricingTier }) {
               label={tier.cta.label}
               region={tier.cta.region ?? 'us'}
               btnVariant="secondary-light"
-              className="block w-full rounded-xl border border-[#F05A28] bg-transparent px-6 py-3.5 text-center font-fj-body font-semibold text-[#C94A1A] transition-all hover:bg-[#F05A28] hover:text-white focus-visible:outline-[#F05A28]"
+              className="block w-full rounded-xl border border-[#F05A28] bg-transparent px-6 py-3.5 text-center font-fj-body font-semibold text-[#C94A1A] transition-all hover:bg-[#B23E13] hover:text-white focus-visible:outline-[#F05A28]"
               style={{ fontSize: '0.9375rem' }}
             />
           ) : (
             <Link
               href={tier.cta.href ?? '/contact'}
-              className="block w-full rounded-xl border border-[#F05A28] bg-transparent px-6 py-3.5 text-center font-fj-body font-semibold text-[#C94A1A] transition-all hover:bg-[#F05A28] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F05A28]"
+              className="block w-full rounded-xl border border-[#F05A28] bg-transparent px-6 py-3.5 text-center font-fj-body font-semibold text-[#C94A1A] transition-all hover:bg-[#B23E13] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F05A28]"
               style={{ fontSize: '0.9375rem' }}
             >
               {tier.cta.label}

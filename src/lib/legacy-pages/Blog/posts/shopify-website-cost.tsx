@@ -138,7 +138,7 @@ export const post: BlogPost = {
           href="https://www.shopify.com/blog/ecommerce-website-cost"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           Shopify&apos;s official cost guide
         </a>
@@ -147,7 +147,7 @@ export const post: BlogPost = {
           href="https://cartcoders.com/blog/shopify-development/shopify-developer-cost-hourly-rate-project-pricing/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           CartCoders&apos; March 2026 developer rate breakdown
         </a>
@@ -156,7 +156,7 @@ export const post: BlogPost = {
           href="https://ogresto.com/blogs/shopify-development-cost-2026"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           Ogresto&apos;s 2026 Shopify cost analysis
         </a>
@@ -258,7 +258,7 @@ export const post: BlogPost = {
             href="https://www.shopify.com/pricing"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#F05A28] hover:underline"
+            className="text-[#B23E13] hover:underline"
           >
             shopify.com/pricing
           </a>{' '}
@@ -485,7 +485,7 @@ export const post: BlogPost = {
           href="https://themes.shopify.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           Shopify Theme Store
         </a>{' '}
@@ -569,7 +569,7 @@ export const post: BlogPost = {
       <p className="mb-8">
         All tiers include Shopify setup, product upload (up to 50 items), payment configuration, and
         mobile-first build. We deliver most builds in 7 days with a delivery guarantee. See our{' '}
-        <Link href="/services/shopify-development" className="text-[#F05A28] hover:underline">
+        <Link href="/services/shopify-development" className="text-[#B23E13] hover:underline">
           Shopify development service page
         </Link>{' '}
         for full scope details.
@@ -667,7 +667,7 @@ export const post: BlogPost = {
           href="https://www.shopify.com/pricing"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           shopify.com/pricing
         </a>{' '}
@@ -759,7 +759,7 @@ export const post: BlogPost = {
         rates. If you&apos;re still deciding between Shopify and another platform, the{' '}
         <Link
           href="/blog/shopify-vs-woocommerce-us-small-business-2026"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           Shopify vs WooCommerce breakdown
         </Link>{' '}
@@ -767,7 +767,7 @@ export const post: BlogPost = {
         by project type, see our{' '}
         <Link
           href="/blog/shopify-development-cost-2026"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           Shopify development cost guide
         </Link>
@@ -775,19 +775,19 @@ export const post: BlogPost = {
       </p>
       <p className="mb-4">
         FactoryJet has built Shopify stores for US small businesses across{' '}
-        <Link href="/austin" className="text-[#F05A28] hover:underline">
+        <Link href="/austin" className="text-[#B23E13] hover:underline">
           Austin
         </Link>
         ,{' '}
-        <Link href="/miami" className="text-[#F05A28] hover:underline">
+        <Link href="/miami" className="text-[#B23E13] hover:underline">
           Miami
         </Link>
         ,{' '}
-        <Link href="/nashville" className="text-[#F05A28] hover:underline">
+        <Link href="/nashville" className="text-[#B23E13] hover:underline">
           Nashville
         </Link>
         , and{' '}
-        <Link href="/services/ecommerce-development" className="text-[#F05A28] hover:underline">
+        <Link href="/services/ecommerce-development" className="text-[#B23E13] hover:underline">
           across the US
         </Link>{' '}
         — all with a 7-day delivery guarantee and fixed-price quotes. If you want a scope estimate
@@ -798,7 +798,7 @@ export const post: BlogPost = {
           href="https://calendly.com/bhavesh-factoryjet/30min"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-[#F05A28] text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-[#C94818] transition-colors"
+          className="inline-block bg-[#B23E13] text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-[#C94818] transition-colors"
         >
           Get a Free Shopify Store Quote — 30 Minutes, Fixed Price
         </a>
@@ -810,7 +810,7 @@ export const post: BlogPost = {
           href="https://www.shopify.com/pricing"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           shopify.com/pricing
         </a>
@@ -819,7 +819,7 @@ export const post: BlogPost = {
           href="https://cartcoders.com/blog/shopify-development/shopify-developer-cost-hourly-rate-project-pricing/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           CartCoders
         </a>{' '}
@@ -828,7 +828,7 @@ export const post: BlogPost = {
           href="https://ogresto.com/blogs/shopify-development-cost-2026"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           Ogresto
         </a>{' '}

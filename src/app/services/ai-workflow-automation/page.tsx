@@ -808,7 +808,7 @@ export default function AIWorkflowAutomationPage() {
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
               <p
-                className="font-fj-mono font-medium uppercase text-[#F05A28]"
+                className="font-fj-mono font-medium uppercase text-[#B23E13]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
                 AUTOMATION IN ACTION
@@ -823,7 +823,7 @@ export default function AIWorkflowAutomationPage() {
                   'Monday 7 a.m. → automation pulls 5 data sources → report delivered to Slack',
                 ].map((step, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#F05A28]">
+                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#B23E13]">
                       {i + 1}
                     </span>
                     <p className="font-fj-body text-[0.875rem] leading-[1.5] text-fj-neutral-600">
@@ -865,7 +865,7 @@ export default function AIWorkflowAutomationPage() {
                 ].map((cap) => (
                   <span
                     key={cap}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {cap}
@@ -974,7 +974,7 @@ export default function AIWorkflowAutomationPage() {
                 ] as const).map((item, i, arr) => (
                   <div key={item.step} className="flex gap-4">
                     <div className="flex shrink-0 flex-col items-center">
-                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#F05A28] font-fj-mono text-[11px] font-bold text-white">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#B23E13] font-fj-mono text-[11px] font-bold text-white">
                         {item.step}
                       </div>
                       {i < arr.length - 1 && (

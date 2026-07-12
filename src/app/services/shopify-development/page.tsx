@@ -824,7 +824,7 @@ export default function ShopifyPage() {
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
               <p
-                className="font-fj-mono font-medium uppercase text-[#F05A28]"
+                className="font-fj-mono font-medium uppercase text-[#B23E13]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
                 WHAT A CUSTOM SHOPIFY STORE CHANGES
@@ -839,7 +839,7 @@ export default function ShopifyPage() {
                   'Confusing navigation and buried CTAs → cart abandonment rate 70%+',
                 ].map((point, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#F05A28]">
+                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#B23E13]">
                       {i + 1}
                     </span>
                     <p className="font-fj-body text-[0.875rem] leading-[1.5] text-fj-neutral-600">
@@ -893,7 +893,7 @@ export default function ShopifyPage() {
                 ].map((cap) => (
                   <span
                     key={cap}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {cap}
@@ -1050,7 +1050,7 @@ export default function ShopifyPage() {
                         style={{
                           fontSize: '9px',
                           letterSpacing: '0.13em',
-                          color: '#F05A28',
+                          color: '#B23E13',
                           background: 'rgba(240,90,40,0.06)',
                           border: '1px solid rgba(240,90,40,0.22)',
                         }}
@@ -1121,7 +1121,7 @@ export default function ShopifyPage() {
                 {['Shopify Liquid', 'Hydrogen', 'Remix', 'Figma', 'Klaviyo', 'ReCharge', 'Yotpo', 'Shopify Flow'].map((tech) => (
                   <span
                     key={tech}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {tech}
@@ -1210,7 +1210,7 @@ export default function ShopifyPage() {
                 {['Austin TX', 'Miami FL', 'Denver CO', 'Nashville TN', 'Portland OR', 'Charlotte NC', 'Raleigh NC', 'Tampa FL'].map((city) => (
                   <span
                     key={city}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.08em' }}
                   >
                     {city}
@@ -1281,7 +1281,7 @@ export default function ShopifyPage() {
         {/* ── 13b. HIRE A SHOPIFY DEVELOPER ─────────────────────────────────── */}
         <section className="py-14 md:py-20 bg-[#FAFAF7]">
           <div className="max-w-6xl mx-auto px-6">
-            <p className="text-sm font-semibold text-[#F05A28] uppercase tracking-widest mb-3">HIRE SHOPIFY DEVELOPERS</p>
+            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">HIRE SHOPIFY DEVELOPERS</p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0F0F12] mb-5 max-w-3xl">Hire a Shopify developer or a dedicated Shopify expert</h2>
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div className="text-[#3A3A40] leading-relaxed space-y-4">
@@ -1296,9 +1296,9 @@ export default function ShopifyPage() {
                   monthly retainer for theme work, app integrations, conversion experiments, and seasonal landing
                   pages — the same engineer who built your store, not a rotating pool. Prefer a broader scope? See our
                   full{' '}
-                  <Link href="/services/ecommerce-development" className="text-[#F05A28] font-medium underline underline-offset-2">ecommerce development services</Link>. Already
+                  <Link href="/services/ecommerce-development" className="text-[#B23E13] font-medium underline underline-offset-2">ecommerce development services</Link>. Already
                   selling and need traffic? See our{' '}
-                  <Link href="/services/shopify-seo" className="text-[#F05A28] font-medium underline underline-offset-2">Shopify SEO services</Link>.
+                  <Link href="/services/shopify-seo" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify SEO services</Link>.
                 </p>
               </div>
               <div className="rounded-2xl border border-[#E5E5E0] bg-white p-7">
@@ -1311,7 +1311,7 @@ export default function ShopifyPage() {
                 </ul>
                 <Link
                   href="https://calendly.com/bhavesh-factoryjet/30min"
-                  className="mt-6 inline-flex items-center justify-center rounded-full bg-[#F05A28] px-6 py-3 text-white font-semibold hover:bg-[#d94d20] transition-colors"
+                  className="mt-6 inline-flex items-center justify-center rounded-full bg-[#B23E13] px-6 py-3 text-white font-semibold hover:bg-[#d94d20] transition-colors"
                 >
                   Talk to the Founder →
                 </Link>
@@ -1323,7 +1323,7 @@ export default function ShopifyPage() {
         {/* ── 13c. THEME DEVELOPMENT, CUSTOMIZATION & STORE DESIGN ───────────── */}
         <section className="py-14 md:py-20 bg-white">
           <div className="max-w-6xl mx-auto px-6">
-            <p className="text-sm font-semibold text-[#F05A28] uppercase tracking-widest mb-3">DESIGN &amp; CUSTOMIZATION</p>
+            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">DESIGN &amp; CUSTOMIZATION</p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0F0F12] mb-5 max-w-3xl">Shopify theme development, customization &amp; store design</h2>
             <p className="text-[#3A3A40] leading-relaxed max-w-3xl mb-8">
               Development and design aren&apos;t separate purchases at FactoryJet — every build pairs a Shopify website
@@ -1360,7 +1360,7 @@ export default function ShopifyPage() {
         {/* Cities We Serve — internal linking for SEO */}
         <section className="py-10 bg-[#FAFAF7]">
           <div className="max-w-6xl mx-auto px-6">
-            <p className="text-sm font-semibold text-[#F05A28] uppercase tracking-widest mb-3">Serving the US</p>
+            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">Serving the US</p>
             <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">Shopify Development Services by City</h2>
             <div className="flex flex-wrap gap-3">
               {[
@@ -1373,7 +1373,7 @@ export default function ShopifyPage() {
                 { city: 'Raleigh, NC', href: '/raleigh/ecommerce-development/' },
                 { city: 'Tampa, FL', href: '/tampa/ecommerce-development/' },
               ].map(({ city, href }) => (
-                <Link key={href} href={href} className="px-4 py-2 rounded-full border border-[#F05A28] text-[#F05A28] text-sm font-medium hover:bg-[#F05A28] hover:text-white transition-colors">
+                <Link key={href} href={href} className="px-4 py-2 rounded-full border border-[#B23E13] text-[#B23E13] text-sm font-medium hover:bg-[#B23E13] hover:text-white transition-colors">
                   {city}
                 </Link>
               ))}
@@ -1384,7 +1384,7 @@ export default function ShopifyPage() {
         {/* Related Reading — internal linking to blog posts */}
         <section className="py-10 bg-[#FAFAF7]">
           <div className="max-w-6xl mx-auto px-6">
-            <p className="text-sm font-semibold text-[#F05A28] uppercase tracking-widest mb-3">Related Reading</p>
+            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">Related Reading</p>
             <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">Keep learning before you commit</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <Link href="/blog/shopify-vs-woocommerce-us-small-business-2026" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">

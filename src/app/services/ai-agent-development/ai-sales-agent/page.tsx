@@ -300,7 +300,7 @@ export default function AISalesAgentINPage() {
           trustItems={['500+ businesses served', 'Zoho CRM + LeadSquared ready', '60-second lead response']}
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
-              <p className="font-fj-mono font-medium uppercase text-[#F05A28]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>AI SALES AGENT IN ACTION</p>
+              <p className="font-fj-mono font-medium uppercase text-[#B23E13]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>AI SALES AGENT IN ACTION</p>
               <p className="mt-4 font-fj-display text-[1.875rem] font-medium leading-[1.1] tracking-[-0.025em] text-fj-ink">42 qualified leads. 18 demos booked. All before 9 AM — zero SDR involvement.</p>
               <div className="mt-6 space-y-3">
                 {[
@@ -309,7 +309,7 @@ export default function AISalesAgentINPage() {
                   '7-day cold lead re-engagement → AI sends follow-up → 23% of cold leads re-engage and book consultation',
                 ].map((step, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#F05A28]">{i + 1}</span>
+                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#B23E13]">{i + 1}</span>
                     <p className="font-fj-body text-[0.875rem] leading-[1.5] text-fj-neutral-600">{step}</p>
                   </div>
                 ))}
@@ -332,7 +332,7 @@ export default function AISalesAgentINPage() {
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
                 {['Lead qualification', 'WhatsApp follow-up', 'Demo booking', 'CRM updates', 'Cold re-engagement', 'Payment links', 'Hindi + English', 'Facebook ads'].map((cap) => (
-                  <span key={cap} className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]" style={{ fontSize: '10px', letterSpacing: '0.10em' }}>{cap}</span>
+                  <span key={cap} className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]" style={{ fontSize: '10px', letterSpacing: '0.10em' }}>{cap}</span>
                 ))}
               </div>
               <p>Research shows responding to an inbound lead within 5 minutes increases qualification rates by 21× compared to a 30-minute response. Most Indian businesses respond in 4–6 hours. Competitors with AI sales agents respond in under 60 seconds — at midnight, on Sundays, during Diwali. That gap compounds into a significant pipeline advantage within weeks.</p>
@@ -365,7 +365,7 @@ export default function AISalesAgentINPage() {
                 ] as const).map((item, i, arr) => (
                   <div key={item.step} className="flex gap-4">
                     <div className="flex flex-col items-center">
-                      <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]">
+                      <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-[#B23E13]">
                         <span className="font-fj-mono text-[10px] font-bold text-white">{item.step}</span>
                       </div>
                       {i < arr.length - 1 && <div className="mt-1 h-full w-px bg-fj-neutral-200" style={{ minHeight: '2rem' }} />}
@@ -461,7 +461,7 @@ export default function AISalesAgentINPage() {
               {SALES_STATS.map((stat) => (
                 <div key={stat.value}>
                   {stat.categoryLabel && (
-                    <div className="mb-3 inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-fj-mono font-bold uppercase" style={{ fontSize: '9px', letterSpacing: '0.13em', color: '#F05A28', background: 'rgba(240,90,40,0.06)', border: '1px solid rgba(240,90,40,0.22)' }}>
+                    <div className="mb-3 inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-fj-mono font-bold uppercase" style={{ fontSize: '9px', letterSpacing: '0.13em', color: '#B23E13', background: 'rgba(240,90,40,0.06)', border: '1px solid rgba(240,90,40,0.22)' }}>
                       <span className="inline-block h-1 w-1 rounded-full" style={{ backgroundColor: '#F05A28' }} aria-hidden="true" />
                       {stat.categoryLabel}
                     </div>
@@ -489,7 +489,7 @@ export default function AISalesAgentINPage() {
               </div>
               <div className="mt-5 flex flex-wrap gap-2">
                 {['Real Estate', 'EdTech', 'Financial Services', 'D2C', 'B2B Manufacturing', 'Healthcare'].map((ind) => (
-                  <span key={ind} className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#F05A28]" style={{ fontSize: '10px', letterSpacing: '0.08em' }}>{ind}</span>
+                  <span key={ind} className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#B23E13]" style={{ fontSize: '10px', letterSpacing: '0.08em' }}>{ind}</span>
                 ))}
               </div>
             </>

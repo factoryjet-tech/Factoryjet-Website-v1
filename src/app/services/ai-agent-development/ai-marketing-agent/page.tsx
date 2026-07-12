@@ -638,7 +638,7 @@ export default function AIMarketingAgentINPage() {
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
               <p
-                className="font-fj-mono font-medium uppercase text-[#F05A28]"
+                className="font-fj-mono font-medium uppercase text-[#B23E13]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
                 AI CAMPAIGN ENGINE IN ACTION
@@ -653,7 +653,7 @@ export default function AIMarketingAgentINPage() {
                   'Instagram: 12 posts queued for next 30 days — AI-written captions, festival-themed creative',
                 ].map((step, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#F05A28]">
+                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#B23E13]">
                       {i + 1}
                     </span>
                     <p className="font-fj-body text-[0.875rem] leading-[1.5] text-fj-neutral-600">
@@ -700,7 +700,7 @@ export default function AIMarketingAgentINPage() {
                 ].map((cap) => (
                   <span
                     key={cap}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {cap}
@@ -794,7 +794,7 @@ export default function AIMarketingAgentINPage() {
                         <p className="mt-1 font-fj-body text-fj-neutral-500" style={{ fontSize: '0.8125rem' }}>{row.manual}</p>
                       </div>
                       <div className="rounded-lg border border-[rgba(240,90,40,0.2)] bg-[rgba(240,90,40,0.05)] px-3 py-2">
-                        <p className="font-fj-mono uppercase text-[#F05A28]" style={{ fontSize: '0.625rem', letterSpacing: '0.08em' }}>AI Agent</p>
+                        <p className="font-fj-mono uppercase text-[#B23E13]" style={{ fontSize: '0.625rem', letterSpacing: '0.08em' }}>AI Agent</p>
                         <p className="mt-1 font-fj-body text-fj-ink" style={{ fontSize: '0.8125rem' }}>{row.ai}</p>
                       </div>
                     </div>
@@ -926,7 +926,7 @@ export default function AIMarketingAgentINPage() {
                       style={{
                         fontSize: '9px',
                         letterSpacing: '0.13em',
-                        color: '#F05A28',
+                        color: '#B23E13',
                         background: 'rgba(240,90,40,0.06)',
                         border: '1px solid rgba(240,90,40,0.22)',
                       }}
@@ -984,7 +984,7 @@ export default function AIMarketingAgentINPage() {
                 ].map((ind) => (
                   <span
                     key={ind}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.08em' }}
                   >
                     {ind}

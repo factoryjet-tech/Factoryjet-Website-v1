@@ -23,12 +23,12 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAFAF7] font-sans selection:bg-[#F05A28] selection:text-white">
+    <div className="min-h-screen bg-[#FAFAF7] font-sans selection:bg-[#B23E13] selection:text-white">
 
       {/* Header Section */}
       <header className="pt-8 pb-6 md:pt-16 md:pb-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="max-w-3xl">
-          <p className="text-jetOrange font-semibold tracking-wide uppercase text-xs md:text-sm mb-2">
+          <p className="text-[#B23E13] font-semibold tracking-wide uppercase text-xs md:text-sm mb-2">
             The FactoryJet Journal
           </p>
           <h1 className="font-display font-bold text-3xl md:text-5xl lg:text-6xl text-gray-900 mb-4 md:mb-6 leading-tight">
@@ -55,7 +55,7 @@ const App: React.FC = () => {
               <p className="text-gray-500 text-lg">No articles found in this category.</p>
               <button 
                 onClick={() => setActiveCategory('All')}
-                className="mt-4 text-[#F05A28] font-medium hover:underline"
+                className="mt-4 text-[#B23E13] font-medium hover:underline"
               >
                 View all articles
               </button>
@@ -96,7 +96,7 @@ const App: React.FC = () => {
                     placeholder="Enter your work email"
                     className="px-4 md:px-6 py-3 md:py-3.5 rounded-xl text-gray-900 bg-white border-0 focus:ring-2 focus:ring-jetOrange outline-none w-full sm:w-80 text-sm md:text-base"
                   />
-                  <button className="bg-[#FF6B35] text-white px-6 md:px-8 py-3 md:py-3.5 rounded-xl font-semibold hover:bg-orange-600 transition-colors shadow-lg shadow-orange-900/20 whitespace-nowrap text-sm md:text-base">
+                  <button className="bg-[#B23E13] text-white px-6 md:px-8 py-3 md:py-3.5 rounded-xl font-semibold hover:bg-[#9A3510] transition-colors shadow-lg shadow-orange-900/20 whitespace-nowrap text-sm md:text-base">
                     Subscribe
                   </button>
                 </div>

@@ -146,8 +146,8 @@ export default function FinalCTA({
                 href={primaryCta.href ?? '/contact'}
                 className="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3.5 font-fj-body text-base font-semibold text-white transition-all hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F05A28]"
                 style={{
-                  background: '#F05A28',
-                  boxShadow: '0 0 0 1px rgba(240,90,40,0.50), 0 8px 48px rgba(240,90,40,0.40), 0 2px 12px rgba(240,90,40,0.30)',
+                  background: '#B23E13',
+                  boxShadow: '0 0 0 1px rgba(178,62,19,0.50), 0 8px 48px rgba(178,62,19,0.40), 0 2px 12px rgba(178,62,19,0.30)',
                 }}
               >
                 {primaryCta.label}
@@ -250,8 +250,8 @@ export default function FinalCTA({
               href={primaryCta.href ?? '/contact'}
               className="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3.5 font-fj-body text-base font-semibold text-white transition-all hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F05A28]"
               style={{
-                background: '#F05A28',
-                boxShadow: '0 4px 24px rgba(240,90,40,0.30), 0 1px 4px rgba(240,90,40,0.15)',
+                background: '#B23E13',
+                boxShadow: '0 4px 24px rgba(178,62,19,0.30), 0 1px 4px rgba(178,62,19,0.15)',
               }}
             >
               {primaryCta.label}

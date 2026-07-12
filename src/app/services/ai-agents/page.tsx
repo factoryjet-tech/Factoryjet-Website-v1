@@ -887,7 +887,7 @@ export default function AIAgentsPage() {
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
               <p
-                className="font-fj-mono font-medium uppercase text-[#F05A28]"
+                className="font-fj-mono font-medium uppercase text-[#B23E13]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
                 AI AGENT IN ACTION
@@ -902,7 +902,7 @@ export default function AIAgentsPage() {
                   'Invoice arrives by email → agent extracts data → logs to QuickBooks → notifies AP',
                 ].map((step, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#F05A28]">
+                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#B23E13]">
                       {i + 1}
                     </span>
                     <p className="font-fj-body text-[0.875rem] leading-[1.5] text-fj-neutral-600">
@@ -949,7 +949,7 @@ export default function AIAgentsPage() {
                 ].map((cap) => (
                   <span
                     key={cap}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {cap}
@@ -1071,7 +1071,7 @@ export default function AIAgentsPage() {
                   <div key={item.step} className="flex gap-4">
                     {/* Left column: numbered circle + connector line */}
                     <div className="flex shrink-0 flex-col items-center">
-                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#F05A28] font-fj-mono text-[11px] font-bold text-white">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#B23E13] font-fj-mono text-[11px] font-bold text-white">
                         {item.step}
                       </div>
                       {i < arr.length - 1 && (
@@ -1176,7 +1176,7 @@ export default function AIAgentsPage() {
                 {['AI Agents', 'AI Automation', 'AI-Native Software', 'AI Apps', 'AI SEO', 'AI Video'].map((svc) => (
                   <span
                     key={svc}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {svc}
@@ -1291,7 +1291,7 @@ export default function AIAgentsPage() {
                 {['Austin TX', 'Miami FL', 'Denver CO', 'Nashville TN', 'Portland OR', 'Charlotte NC', 'Raleigh NC', 'Tampa FL'].map((city) => (
                   <span
                     key={city}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.08em' }}
                   >
                     {city}
@@ -1364,7 +1364,7 @@ export default function AIAgentsPage() {
         {/* Cities We Serve — internal linking for SEO */}
         <section className="py-10 bg-[#FAFAF7]">
           <div className="max-w-6xl mx-auto px-6">
-            <p className="text-sm font-semibold text-[#F05A28] uppercase tracking-widest mb-3">Serving the US</p>
+            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">Serving the US</p>
             <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">AI Agent Development Services by City</h2>
             <div className="flex flex-wrap gap-3">
               {[
@@ -1372,7 +1372,7 @@ export default function AIAgentsPage() {
                 { city: 'Denver, CO', href: '/denver/ai-agents/' },
                 { city: 'Raleigh, NC', href: '/raleigh/ai-agents/' },
               ].map(({ city, href }) => (
-                <Link key={href} href={href} className="px-4 py-2 rounded-full border border-[#F05A28] text-[#F05A28] text-sm font-medium hover:bg-[#F05A28] hover:text-white transition-colors">
+                <Link key={href} href={href} className="px-4 py-2 rounded-full border border-[#B23E13] text-[#B23E13] text-sm font-medium hover:bg-[#B23E13] hover:text-white transition-colors">
                   {city}
                 </Link>
               ))}

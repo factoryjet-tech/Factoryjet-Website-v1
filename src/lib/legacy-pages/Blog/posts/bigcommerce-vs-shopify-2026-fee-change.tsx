@@ -154,7 +154,7 @@ export const post: BlogPost = {
           href="https://www.bigcommerce.com/blog/bigcommerce-self-serve-pricing-changes/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           BigCommerce&apos;s own blog post
         </a>{' '}
@@ -255,7 +255,7 @@ export const post: BlogPost = {
           href="https://www.bigcommerce.com/essentials/pricing/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           BigCommerce&apos;s official pricing page
         </a>{' '}
@@ -264,7 +264,7 @@ export const post: BlogPost = {
           href="https://www.shopify.com/pricing"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           Shopify&apos;s pricing page
         </a>
@@ -448,7 +448,7 @@ export const post: BlogPost = {
         platforms charge the same base prices. The fee-free payment provider list still favors
         BigCommerce if you plan to use Stripe or PayPal. FactoryJet has built stores for small
         businesses across the US, including markets like{' '}
-        <a href="/nashville" className="text-[#F05A28] hover:underline">
+        <a href="/nashville" className="text-[#B23E13] hover:underline">
           Nashville
         </a>
         , and can help you run the real cost comparison for your specific setup.
@@ -479,7 +479,7 @@ export const post: BlogPost = {
         a broader comparison before deciding,{' '}
         <a
           href="/blog/shopify-vs-woocommerce-us-small-business-2026"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           the Shopify vs WooCommerce breakdown
         </a>{' '}
@@ -487,7 +487,7 @@ export const post: BlogPost = {
       </p>
       <p className="mb-8">
         If you are choosing between platforms, or thinking about migrating, FactoryJet handles{' '}
-        <a href="/services/ecommerce-development" className="text-[#F05A28] hover:underline">
+        <a href="/services/ecommerce-development" className="text-[#B23E13] hover:underline">
           Shopify and custom ecommerce builds for US businesses
         </a>{' '}
         with a fixed-price quote within 24 hours. We are happy to do a free platform audit and lay
@@ -496,7 +496,7 @@ export const post: BlogPost = {
           href="https://calendly.com/bhavesh-factoryjet/30min"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           Book a 30-minute call with our team
         </a>{' '}
@@ -512,7 +512,7 @@ export const post: BlogPost = {
             href="https://www.bigcommerce.com/blog/bigcommerce-self-serve-pricing-changes/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#F05A28] hover:underline"
+            className="text-[#B23E13] hover:underline"
           >
             BigCommerce official pricing announcement, May 2026
           </a>{' '}
@@ -521,7 +521,7 @@ export const post: BlogPost = {
             href="https://www.bigcommerce.com/essentials/pricing/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#F05A28] hover:underline"
+            className="text-[#B23E13] hover:underline"
           >
             BigCommerce pricing page
           </a>{' '}
@@ -530,7 +530,7 @@ export const post: BlogPost = {
             href="https://www.shopify.com/pricing"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#F05A28] hover:underline"
+            className="text-[#B23E13] hover:underline"
           >
             Shopify pricing page
           </a>
@@ -544,7 +544,7 @@ export const post: BlogPost = {
           href="https://calendly.com/bhavesh-factoryjet/30min"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           Talk to Bhavesh directly.
         </a>

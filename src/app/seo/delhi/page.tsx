@@ -397,7 +397,7 @@ function DelhiKeywordCard() {
         </p>
         <span
           className="inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 font-fj-mono text-[10px] font-bold"
-          style={{ background: '#F05A28', color: '#fff' }}
+          style={{ background: '#B23E13', color: '#fff' }}
         >
           16,600+ / mo
         </span>
@@ -554,12 +554,12 @@ export default function SeoDelhi() {
               </p>
               <p>
                 FactoryJet is a small, senior team where the same people who scope your work do the actual work. No marble office in Connaught Place. No account-management overhead. Every rupee you pay goes into{' '}
-                <a href="/seo/technical-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">technical fixes</a>,{' '}
-                <a href="/seo/link-building" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">real links</a>, and content that ranks for the Delhi and NCR searches your buyers actually use.
+                <a href="/seo/technical-seo" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">technical fixes</a>,{' '}
+                <a href="/seo/link-building" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">real links</a>, and content that ranks for the Delhi and NCR searches your buyers actually use.
               </p>
               <p>
                 And unlike most{' '}
-                <a href="/seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">SEO companies in India</a>, we do not lock you in. Month to month. Cancel with 30 days notice. Everything we build — content pages, Google Business Profile, structured data — stays yours if you ever leave.
+                <a href="/seo" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">SEO companies in India</a>, we do not lock you in. Month to month. Cancel with 30 days notice. Everything we build — content pages, Google Business Profile, structured data — stays yours if you ever leave.
               </p>
             </>
           }
@@ -721,7 +721,7 @@ export default function SeoDelhi() {
             style={{ backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px)', backgroundSize: '28px 28px' }}
           />
           <div className="relative mx-auto max-w-3xl px-6 text-center">
-            <p className="font-fj-mono font-medium uppercase text-[#F05A28]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>
+            <p className="font-fj-mono font-medium uppercase text-[#B23E13]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>
               RESULTS
             </p>
             <h2

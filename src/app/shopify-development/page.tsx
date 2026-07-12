@@ -765,7 +765,7 @@ export default function ShopifyDevelopmentPage() {
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
               <p
-                className="font-fj-mono font-medium uppercase text-[#F05A28]"
+                className="font-fj-mono font-medium uppercase text-[#B23E13]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
                 CUSTOM THEME vs. GENERIC THEME
@@ -794,7 +794,7 @@ export default function ShopifyDevelopmentPage() {
                   </div>
                 ))}
                 <div className="rounded-xl bg-[rgba(240,90,40,0.08)] px-4 py-3">
-                  <p className="font-fj-body text-[0.875rem] font-semibold text-[#F05A28]">
+                  <p className="font-fj-body text-[0.875rem] font-semibold text-[#B23E13]">
                     +₹1,44,000/month from the same traffic. A custom store pays for itself in under 21 days.
                   </p>
                 </div>
@@ -831,7 +831,7 @@ export default function ShopifyDevelopmentPage() {
                 ].map((cap) => (
                   <span
                     key={cap}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {cap}
@@ -919,7 +919,7 @@ export default function ShopifyDevelopmentPage() {
                         {item.plan}
                       </p>
                       <p
-                        className="fj-display flex-shrink-0 font-bold text-[#F05A28]"
+                        className="fj-display flex-shrink-0 font-bold text-[#B23E13]"
                         style={{ fontSize: '0.9375rem', letterSpacing: '-0.02em' }}
                       >
                         {item.price}
@@ -993,7 +993,7 @@ export default function ShopifyDevelopmentPage() {
                   (tech) => (
                     <span
                       key={tech}
-                      className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
+                      className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
                       style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                     >
                       {tech}
@@ -1112,7 +1112,7 @@ export default function ShopifyDevelopmentPage() {
                         style={{
                           fontSize: '9px',
                           letterSpacing: '0.13em',
-                          color: '#F05A28',
+                          color: '#B23E13',
                           background: 'rgba(240,90,40,0.06)',
                           border: '1px solid rgba(240,90,40,0.22)',
                         }}
@@ -1208,7 +1208,7 @@ export default function ShopifyDevelopmentPage() {
                   <a
                     key={slug}
                     href={`/shopify-development/${slug}`}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#F05A28] hover:bg-[rgba(240,90,40,0.15)] transition-colors"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#B23E13] hover:bg-[rgba(240,90,40,0.15)] transition-colors"
                     style={{ fontSize: '10px', letterSpacing: '0.08em' }}
                   >
                     {label}

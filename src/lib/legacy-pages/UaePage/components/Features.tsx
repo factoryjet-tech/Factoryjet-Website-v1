@@ -73,7 +73,7 @@ const Features: React.FC<FeaturesProps> = ({ onOpenModal }) => {
                 <p className="text-white/90 text-lg mb-8 font-light">Get a free consultation and custom quote in 24 hours.</p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button onClick={onOpenModal} className="bg-[#FF6B35] hover:bg-[#e55a28] text-white px-8 py-3.5 rounded-lg font-bold shadow-lg transition-all flex items-center justify-center gap-2">
+                    <button onClick={onOpenModal} className="bg-[#B23E13] hover:bg-[#9A3510] text-white px-8 py-3.5 rounded-lg font-bold shadow-lg transition-all flex items-center justify-center gap-2">
                         Get Free Consultation <ArrowRight size={18} />
                     </button>
                      <a href="#portfolio" className="bg-white/10 hover:bg-white text-white hover:text-[#0052CC] border border-white/20 px-8 py-3.5 rounded-lg font-bold backdrop-blur-sm transition-all flex items-center justify-center gap-2">

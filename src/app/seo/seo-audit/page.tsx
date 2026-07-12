@@ -195,15 +195,15 @@ export default function SeoAuditPage() {
               </p>
               <p>
                 We look at everything that decides where you rank, the{' '}
-                <a href="/seo/technical-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">speed</a>, the pages, the words, the{' '}
-                <a href="/seo/link-building" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">links</a>, and your{' '}
-                <a href="/seo/local-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">Google listing</a>, then we write a plain-English report with a clear, ranked to-do list. So you know
+                <a href="/seo/technical-seo" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">speed</a>, the pages, the words, the{' '}
+                <a href="/seo/link-building" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">links</a>, and your{' '}
+                <a href="/seo/local-seo" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">Google listing</a>, then we write a plain-English report with a clear, ranked to-do list. So you know
                 exactly what to fix first, and you do not have to be an SEO expert to follow it.
               </p>
               <p>
                 The first check is free, with no strings. You can take what we find and hand it to your own team, or
                 ask us to do the full{' '}
-                <a href="/seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">SEO work</a>. Either way, you walk away knowing exactly what is wrong and what matters most.
+                <a href="/seo" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">SEO work</a>. Either way, you walk away knowing exactly what is wrong and what matters most.
               </p>
             </>
           }
@@ -253,7 +253,7 @@ export default function SeoAuditPage() {
         <section className="relative overflow-hidden bg-fj-cream py-14 md:py-20">
           <div className="pointer-events-none absolute inset-0 opacity-[0.5]" aria-hidden="true" style={{ backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px)', backgroundSize: '28px 28px' }} />
           <div className="relative mx-auto max-w-3xl px-6 text-center">
-            <p className="font-fj-mono font-medium uppercase text-[#F05A28]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>RECENT WORK</p>
+            <p className="font-fj-mono font-medium uppercase text-[#B23E13]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>RECENT WORK</p>
             <h2 className="fj-display mt-3 font-semibold text-fj-ink" style={{ fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', lineHeight: 1.15, letterSpacing: '-0.02em' }}>SEO audit results are on the way</h2>
             <p className="mx-auto mt-4 max-w-2xl font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>We are putting together real audit stories: sites we checked, the few fixes that mattered most, and the rankings that followed. It all sits on the same work behind 500+ websites we have built, at a 4.9 average rating from our clients.</p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

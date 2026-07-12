@@ -338,7 +338,7 @@ export const post: BlogPost = {
         time-sensitive build, the{' '}
         <a
           href="/blog/shopify-vs-woocommerce-us-small-business-2026"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           Shopify vs. WooCommerce comparison for US small businesses
         </a>{' '}
@@ -348,7 +348,7 @@ export const post: BlogPost = {
       <p className="mb-8">
         <a
           href="/services/ecommerce-development"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           FactoryJet&apos;s e-commerce development service
         </a>{' '}
@@ -371,7 +371,7 @@ export const post: BlogPost = {
           href="https://calendly.com/bhavesh-factoryjet/30min"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-[#F05A28] text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-[#C94818] transition-colors"
+          className="inline-block bg-[#B23E13] text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-[#C94818] transition-colors"
         >
           Book a 30-Minute Call: Build My World Cup Store →
         </a>
@@ -438,7 +438,7 @@ export const post: BlogPost = {
           href="https://calendly.com/bhavesh-factoryjet/30min"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-[#F05A28] text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-[#C94818] transition-colors"
+          className="inline-block bg-[#B23E13] text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-[#C94818] transition-colors"
         >
           Book a 30-Minute Call: No Pitch, Just a Plan
         </a>
@@ -480,7 +480,7 @@ export const post: BlogPost = {
       </p>
       <p className="mb-8">
         For FactoryJet clients in key US markets, including{' '}
-        <a href="/nashville" className="text-[#F05A28] hover:underline">
+        <a href="/nashville" className="text-[#B23E13] hover:underline">
           Nashville
         </a>
         , Miami, Dallas, Houston, and Atlanta, we specifically build location-aware content into
@@ -510,7 +510,7 @@ export const post: BlogPost = {
           href="https://calendly.com/bhavesh-factoryjet/30min"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-[#F05A28] text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-[#C94818] transition-colors"
+          className="inline-block bg-[#B23E13] text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-[#C94818] transition-colors"
         >
           Book a 30-Minute Call With Bhavesh
         </a>
@@ -529,7 +529,7 @@ export const post: BlogPost = {
           href="https://calendly.com/bhavesh-factoryjet/30min"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           Book a strategy call here.
         </a>

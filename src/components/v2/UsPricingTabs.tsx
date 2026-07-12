@@ -69,7 +69,7 @@ const UsPricingTabs: React.FC = () => {
     <section id="pricing" className="bg-fj-cream py-14 md:py-20">
       <div className="mx-auto max-w-[1200px] px-6 md:px-8">
         <div className="text-center mb-8">
-          <p className="text-xs font-fj-mono uppercase tracking-widest text-[#F05A28] mb-3">Pricing plans</p>
+          <p className="text-xs font-fj-mono uppercase tracking-widest text-[#B23E13] mb-3">Pricing plans</p>
           <h2 className="text-3xl md:text-4xl font-fj-display font-bold text-fj-ink">Fixed-price plans for every service</h2>
           <p className="mt-3 text-fj-ink/60 font-fj-body max-w-2xl mx-auto">Pick a service to see its tiers. Every plan is fixed-price and scoped to your build — no hourly billing, no surprise invoices, code and data you own from day one. You get a clear quote up front after a free discovery call.</p>
         </div>
@@ -83,7 +83,7 @@ const UsPricingTabs: React.FC = () => {
               onClick={() => setActive(i)}
               className={`px-4 md:px-5 py-2.5 rounded-full text-sm font-semibold font-fj-body transition-all ${
                 i === active
-                  ? 'bg-[#F05A28] text-white shadow-md'
+                  ? 'bg-[#B23E13] text-white shadow-md'
                   : 'bg-white text-fj-ink/70 border border-fj-charcoal/15 hover:border-[#F05A28]/40'
               }`}
             >
@@ -104,7 +104,7 @@ const UsPricingTabs: React.FC = () => {
               }`}
             >
               {tier.highlighted && (
-                <span className="self-start mb-3 bg-[#F05A28]/10 text-[#F05A28] text-xs font-bold px-3 py-1 rounded-full">Most popular</span>
+                <span className="self-start mb-3 bg-[#F05A28]/10 text-[#B23E13] text-xs font-bold px-3 py-1 rounded-full">Most popular</span>
               )}
               <h3 className="text-lg font-fj-display font-bold text-fj-ink">{tier.name}</h3>
               <div className="mt-2 flex items-baseline gap-1.5">
@@ -125,7 +125,7 @@ const UsPricingTabs: React.FC = () => {
                 onClick={() => openModal('us')}
                 className={`mt-6 w-full rounded-xl py-3 font-bold font-fj-body text-sm transition-all ${
                   tier.highlighted
-                    ? 'bg-[#F05A28] text-white hover:bg-[#d44d1f]'
+                    ? 'bg-[#B23E13] text-white hover:bg-[#9A3510]'
                     : 'bg-fj-cream text-fj-ink border border-fj-charcoal/15 hover:border-[#F05A28]/40'
                 }`}
               >

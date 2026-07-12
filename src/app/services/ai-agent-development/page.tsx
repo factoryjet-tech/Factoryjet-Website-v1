@@ -707,7 +707,7 @@ export default function AIAgentDevelopmentINPage() {
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
               <p
-                className="font-fj-mono font-medium uppercase text-[#F05A28]"
+                className="font-fj-mono font-medium uppercase text-[#B23E13]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
                 WHATSAPP AI IN ACTION
@@ -722,7 +722,7 @@ export default function AIAgentDevelopmentINPage() {
                   'Razorpay payment received → agent extracts GST data → logs to Tally → notifies accounts',
                 ].map((step, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#F05A28]">
+                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#B23E13]">
                       {i + 1}
                     </span>
                     <p className="font-fj-body text-[0.875rem] leading-[1.5] text-fj-neutral-600">
@@ -764,7 +764,7 @@ export default function AIAgentDevelopmentINPage() {
             {/* Section header */}
             <p
               className="font-fj-mono font-medium uppercase"
-              style={{ fontSize: '10px', letterSpacing: '0.13em', color: '#F05A28' }}
+              style={{ fontSize: '10px', letterSpacing: '0.13em', color: '#B23E13' }}
             >
               Our AI Agent Services
             </p>
@@ -835,7 +835,7 @@ export default function AIAgentDevelopmentINPage() {
                     <a
                       href="/services/ai-agent-development/ai-workflow-automation"
                       className="mt-4 font-fj-body font-semibold hover:underline"
-                      style={{ fontSize: '0.8125rem', color: '#F05A28' }}
+                      style={{ fontSize: '0.8125rem', color: '#B23E13' }}
                     >
                       Explore Workflow Automation →
                     </a>
@@ -862,7 +862,7 @@ export default function AIAgentDevelopmentINPage() {
                     {/* Step 2 — highlighted */}
                     <div
                       className="w-full rounded-lg px-2 py-1.5 text-center"
-                      style={{ background: '#F05A28', border: '0.5px solid #D04820' }}
+                      style={{ background: '#B23E13', border: '0.5px solid #D04820' }}
                     >
                       <p className="font-fj-body font-bold text-white" style={{ fontSize: '9px' }}>⚡ AI Agent</p>
                     </div>
@@ -993,7 +993,7 @@ export default function AIAgentDevelopmentINPage() {
                   <a
                     href={href}
                     className="mt-3 font-fj-body font-semibold hover:underline"
-                    style={{ fontSize: '0.8125rem', color: '#F05A28' }}
+                    style={{ fontSize: '0.8125rem', color: '#B23E13' }}
                   >
                     Explore →
                   </a>
@@ -1024,7 +1024,7 @@ export default function AIAgentDevelopmentINPage() {
                 ].map((cap) => (
                   <span
                     key={cap}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {cap}
@@ -1137,7 +1137,7 @@ export default function AIAgentDevelopmentINPage() {
                 ] as const).map((item, i, arr) => (
                   <div key={item.step} className="flex gap-4">
                     <div className="flex flex-col items-center">
-                      <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]">
+                      <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-[#B23E13]">
                         <span className="font-fj-mono text-[10px] font-bold text-white">{item.step}</span>
                       </div>
                       {i < arr.length - 1 && (
@@ -1321,7 +1321,7 @@ export default function AIAgentDevelopmentINPage() {
                       style={{
                         fontSize: '9px',
                         letterSpacing: '0.13em',
-                        color: '#F05A28',
+                        color: '#B23E13',
                         background: 'rgba(240,90,40,0.06)',
                         border: '1px solid rgba(240,90,40,0.22)',
                       }}
@@ -1387,7 +1387,7 @@ export default function AIAgentDevelopmentINPage() {
                 {['Mumbai', 'Delhi', 'Bangalore', 'Hyderabad', 'Chennai', 'Pune', 'Ahmedabad', 'Kolkata'].map((city) => (
                   <span
                     key={city}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.08em' }}
                   >
                     {city}

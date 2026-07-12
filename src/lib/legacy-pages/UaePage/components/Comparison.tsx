@@ -78,7 +78,7 @@ const Comparison: React.FC<ComparisonProps> = ({ onOpenModal }) => {
                 {/* Spotlight effect inside card */}
                 <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-[#FF6B35]/10 to-transparent"></div>
                 {/* Badge */}
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#FF6B35] text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg tracking-wider border border-white/20">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#B23E13] text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg tracking-wider border border-white/20">
                     BEST VALUE
                 </div>
             </div>
@@ -152,7 +152,7 @@ const Comparison: React.FC<ComparisonProps> = ({ onOpenModal }) => {
             {/* FactoryJet Card */}
             <div className="bg-[#1a2332] rounded-2xl border-[3px] border-[#FF6B35] p-6 relative overflow-hidden shadow-2xl">
                 <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#FF6B35]/10 to-transparent"></div>
-                 <div className="absolute top-4 right-4 bg-[#FF6B35] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">
+                 <div className="absolute top-4 right-4 bg-[#B23E13] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">
                     Best Value
                 </div>
                 <div className="relative z-10 mb-8 text-center">

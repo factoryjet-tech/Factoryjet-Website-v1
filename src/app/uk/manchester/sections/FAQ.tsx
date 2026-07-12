@@ -129,7 +129,7 @@ export default function FAQ() {
                     className={[
                       "block py-3 border-b border-gray-200 text-base transition-colors hover:text-[#F05A28]",
                       i === 0
-                        ? "border-l-2 border-[#F05A28] pl-3 text-[#F05A28] font-semibold"
+                        ? "border-l-2 border-[#F05A28] pl-3 text-[#B23E13] font-semibold"
                         : "pl-3 text-gray-600",
                     ].join(" ")}
                   >
@@ -142,7 +142,7 @@ export default function FAQ() {
                 Don&apos;t see your question?{" "}
                 <a
                   href="mailto:connect@factoryjet.com"
-                  className="text-[#F05A28] underline underline-offset-2"
+                  className="text-[#B23E13] underline underline-offset-2"
                 >
                   Reach out
                 </a>{" "}

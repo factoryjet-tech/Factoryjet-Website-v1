@@ -89,7 +89,7 @@ export default function PricingSection() {
               }`}
             >
               {tier.highlighted && (
-                <div className="inline-block bg-[#F05A28] text-white px-4 py-1 rounded-full text-xs font-bold mb-4">
+                <div className="inline-block bg-[#B23E13] text-white px-4 py-1 rounded-full text-xs font-bold mb-4">
                   Most Popular
                 </div>
               )}
@@ -114,7 +114,7 @@ export default function PricingSection() {
                 onClick={() => openModal('uk')}
                 className={`w-full py-3 rounded-lg font-bold transition-all duration-300 ${
                   tier.highlighted
-                    ? "bg-[#FF6B35] hover:bg-[#ff8255] text-white"
+                    ? "bg-[#B23E13] hover:bg-[#ff8255] text-white"
                     : "bg-[#F8F9FA] text-[#0a0a0a] hover:bg-gray-200"
                 }`}
               >

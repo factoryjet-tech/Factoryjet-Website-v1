@@ -243,7 +243,7 @@ export default function CityServicePage({ city, service }: CityServicePageProps)
                   discovery call, so you know the full cost before any work
                   starts. {service.tagline}
                 </p>
-                <button className="bg-[#FF6B35] hover:bg-[#ff8255] text-white px-8 py-3 rounded-lg font-bold transition-all duration-300 flex items-center gap-2">
+                <button className="bg-[#B23E13] hover:bg-[#9A3510] text-white px-8 py-3 rounded-lg font-bold transition-all duration-300 flex items-center gap-2">
                   Get a Custom Quote <ArrowRight size={18} />
                 </button>
               </div>
@@ -363,7 +363,7 @@ export default function CityServicePage({ city, service }: CityServicePageProps)
             Get a free 30-minute consultation and transparent quote. No obligations.
           </p>
 
-          <button className="bg-[#FF6B35] hover:bg-[#ff8255] text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 flex items-center justify-center gap-2 mx-auto">
+          <button className="bg-[#B23E13] hover:bg-[#9A3510] text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 flex items-center justify-center gap-2 mx-auto">
             Get My Free Quote <ArrowRight size={20} />
           </button>
 

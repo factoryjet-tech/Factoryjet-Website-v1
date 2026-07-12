@@ -486,7 +486,7 @@ export default function PuneEcommercePage() {
                 ].map((cap) => (
                   <span
                     key={cap}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {cap}
@@ -573,7 +573,7 @@ export default function PuneEcommercePage() {
                         {item.platform}
                       </p>
                       <p
-                        className="fj-display flex-shrink-0 font-bold text-[#F05A28]"
+                        className="fj-display flex-shrink-0 font-bold text-[#B23E13]"
                         style={{ fontSize: '0.9375rem', letterSpacing: '-0.02em' }}
                       >
                         {item.starting}

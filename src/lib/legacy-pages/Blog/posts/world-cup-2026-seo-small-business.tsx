@@ -399,7 +399,7 @@ export const post: BlogPost = {
           href="https://calendly.com/bhavesh-factoryjet/30min"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-[#F05A28] text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-[#C94818] transition-colors"
+          className="inline-block bg-[#B23E13] text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-[#C94818] transition-colors"
         >
           Book a 30-Minute Call With Bhavesh
         </a>
@@ -432,13 +432,13 @@ export const post: BlogPost = {
         team to execute rather than a list to follow. The{' '}
         <a
           href="/blog/world-cup-2026-ecommerce-flash-sale-store-us"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           World Cup ecommerce playbook
         </a>{' '}
         covers the store-launch angle for businesses selling merchandise. For SEO implementation
         built specifically for your market,{' '}
-        <a href="/services/seo" className="text-[#F05A28] hover:underline">
+        <a href="/services/seo" className="text-[#B23E13] hover:underline">
           the US SEO service page
         </a>{' '}
         shows what a full engagement covers.
@@ -457,11 +457,11 @@ export const post: BlogPost = {
       <p className="mb-4">
         FactoryJet implements SEO pages, Event schema, GBP optimization, and local landing pages for
         US, UK, and Australian clients. The{' '}
-        <a href="/services/seo" className="text-[#F05A28] hover:underline">
+        <a href="/services/seo" className="text-[#B23E13] hover:underline">
           US SEO service page
         </a>{' '}
         covers what a full engagement looks like. Businesses in host cities like{' '}
-        <a href="/tampa" className="text-[#F05A28] hover:underline">
+        <a href="/tampa" className="text-[#B23E13] hover:underline">
           Tampa
         </a>{' '}
         have a particularly strong local search angle during the tournament. If you want to discuss
@@ -470,7 +470,7 @@ export const post: BlogPost = {
           href="https://calendly.com/bhavesh-factoryjet/30min"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           book a 30-minute strategy call with Bhavesh
         </a>{' '}
@@ -485,7 +485,7 @@ export const post: BlogPost = {
           href="https://calendly.com/bhavesh-factoryjet/30min"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           Book a strategy call here.
         </a>

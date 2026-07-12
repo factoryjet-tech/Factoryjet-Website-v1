@@ -117,7 +117,7 @@ const Industries: React.FC<IndustriesProps> = ({ onOpenModal }) => {
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
                 {/* GDP Pill */}
-                <div className="absolute top-4 right-4 bg-[#FF6B35] text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow-lg z-20">
+                <div className="absolute top-4 right-4 bg-[#B23E13] text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow-lg z-20">
                     {item.stat}
                 </div>
 

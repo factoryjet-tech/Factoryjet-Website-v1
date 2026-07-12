@@ -704,7 +704,7 @@ export default function LawFirmWebsiteDesignPage() {
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
               <p
-                className="font-fj-mono font-medium uppercase text-[#F05A28]"
+                className="font-fj-mono font-medium uppercase text-[#B23E13]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
                 WHAT YOUR CURRENT SITE IS COSTING YOUR FIRM
@@ -730,7 +730,7 @@ export default function LawFirmWebsiteDesignPage() {
                   <div key={i} className="rounded-xl border border-fj-neutral-100 bg-fj-neutral-50 p-4">
                     <p className="font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-red-400">Current Reality</p>
                     <p className="mt-1 font-fj-body text-[0.8125rem] leading-[1.5] text-fj-neutral-600">{row.before}</p>
-                    <p className="mt-2 font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-[#F05A28]">After FactoryJet</p>
+                    <p className="mt-2 font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-[#B23E13]">After FactoryJet</p>
                     <p className="mt-1 font-fj-body text-[0.8125rem] leading-[1.5] text-fj-neutral-600">{row.after}</p>
                   </div>
                 ))}
@@ -771,7 +771,7 @@ export default function LawFirmWebsiteDesignPage() {
                 {['LegalService Schema', 'Attorney Schema', 'Practice Area SEO', 'GBP Optimization', 'Intake Forms', 'Bar Compliance', 'Mobile-First', 'Core Web Vitals'].map((tool) => (
                   <span
                     key={tool}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {tool}
@@ -796,7 +796,7 @@ export default function LawFirmWebsiteDesignPage() {
                 FactoryJet builds law firm websites with three primary goals: rank in local search for your specific practice areas and geography, establish credibility the moment a visitor arrives, and convert that visitor into a consultation request with as little friction as possible. The specific technical requirements for each: individual practice area pages with LegalService schema (ranking), authority-first design with professional photography and credentials (credibility), and multi-step intake forms with clear process expectations (conversion).
               </p>
               <p>
-                For firms currently on FindLaw, Martindale, or Avvo subscription sites: you are paying a monthly fee for a template you don't own, designed identically to your competitors, that performs poorly on Core Web Vitals. We regularly help firms migrate off these platforms to custom sites — preserving their review history through Google Business Profile and rebuilding their search presence on a foundation they actually own. For firms needing a <a href="/services/website-redesign" className="text-[#F05A28] underline underline-offset-2">full website redesign</a> from an existing template, we handle that migration as well.
+                For firms currently on FindLaw, Martindale, or Avvo subscription sites: you are paying a monthly fee for a template you don't own, designed identically to your competitors, that performs poorly on Core Web Vitals. We regularly help firms migrate off these platforms to custom sites — preserving their review history through Google Business Profile and rebuilding their search presence on a foundation they actually own. For firms needing a <a href="/services/website-redesign" className="text-[#B23E13] underline underline-offset-2">full website redesign</a> from an existing template, we handle that migration as well.
               </p>
             </>
           }
@@ -943,7 +943,7 @@ export default function LawFirmWebsiteDesignPage() {
         {/* Related Reading — internal linking to blog posts */}
         <section className="py-10 bg-[#FAFAF7]">
           <div className="max-w-6xl mx-auto px-6">
-            <p className="text-sm font-semibold text-[#F05A28] uppercase tracking-widest mb-3">Related Reading</p>
+            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">Related Reading</p>
             <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">Keep learning before you commit</h2>
             <div className="grid grid-cols-1">
               <a href="/blog/nyc-b2b-corporate-web-design-guide-2026" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">

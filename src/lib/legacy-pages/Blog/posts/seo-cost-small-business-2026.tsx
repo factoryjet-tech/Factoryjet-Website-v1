@@ -398,7 +398,7 @@ export const post: BlogPost = {
           href="https://calendly.com/bhavesh-factoryjet/30min"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+          className="inline-block bg-[#B23E13] hover:bg-[#9A3510] text-white font-semibold px-6 py-3 rounded-lg transition-colors"
         >
           Talk to the Founder. Free 30-Min Call
         </a>

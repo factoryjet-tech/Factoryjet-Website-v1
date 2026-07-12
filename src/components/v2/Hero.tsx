@@ -238,8 +238,8 @@ function HeroContent({
                 href={primaryCta.href ?? '/contact'}
                 className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-fj-body text-[0.9375rem] font-semibold text-white transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                 style={{
-                  background: '#F05A28',
-                  boxShadow: '0 4px 20px rgba(240,90,40,0.38), 0 1px 4px rgba(240,90,40,0.22)',
+                  background: '#B23E13',
+                  boxShadow: '0 4px 20px rgba(178,62,19,0.38), 0 1px 4px rgba(178,62,19,0.22)',
                   outlineColor: '#F05A28',
                 }}
               >

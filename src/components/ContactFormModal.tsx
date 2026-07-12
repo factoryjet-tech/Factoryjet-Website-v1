@@ -332,7 +332,7 @@ const ContactFormModal: React.FC = () => {
         <div key={s} className="flex items-center">
           <div
             className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 ${
-              s === step ? 'bg-[#F05A28] text-white scale-110'
+              s === step ? 'bg-[#B23E13] text-white scale-110'
               : s < step ? 'bg-[#10B981] text-white'
               : 'bg-slate-200 text-slate-500'
             }`}
@@ -373,7 +373,7 @@ const ContactFormModal: React.FC = () => {
                   : 'border-slate-200 hover:border-[#F05A28]/50 hover:bg-slate-50'
               }`}
             >
-              <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${isSelected ? 'bg-[#F05A28] text-white' : 'bg-slate-100 text-[#F05A28]'}`}>
+              <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${isSelected ? 'bg-[#B23E13] text-white' : 'bg-slate-100 text-[#F05A28]'}`}>
                 <Icon size={20} />
               </div>
               <h4 className="font-bold text-[#0A0F1C] text-sm mb-1">{service.label}</h4>
@@ -468,7 +468,7 @@ const ContactFormModal: React.FC = () => {
         </button>
         <button
           type="submit" disabled={isSubmitting || !canSubmit()}
-          className="flex-1 bg-[#F05A28] text-white py-3 rounded-xl font-bold transition-all hover:bg-[#d44d1f] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+          className="flex-1 bg-[#B23E13] text-white py-3 rounded-xl font-bold transition-all hover:bg-[#d44d1f] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
         >
           {isSubmitting ? (
             <><Loader2 size={18} className="animate-spin" />Sending…</>
@@ -505,7 +505,7 @@ const ContactFormModal: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
           /* GTM auto-fires book_call_click (GA4) + the Book-Call Ads conversion on any calendly.com click. */
-          className="inline-flex items-center justify-center gap-2 w-full bg-[#F05A28] text-white py-3 rounded-xl font-bold text-sm transition-all hover:bg-[#d44d1f] mb-3"
+          className="inline-flex items-center justify-center gap-2 w-full bg-[#B23E13] text-white py-3 rounded-xl font-bold text-sm transition-all hover:bg-[#d44d1f] mb-3"
         >
           Book a 30-min call now
         </a>

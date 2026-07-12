@@ -318,7 +318,7 @@ function HydKeywordCard() {
     <div className="w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">
       <div className="flex items-center justify-between border-b border-fj-neutral-100 px-5 py-3.5">
         <p className="font-fj-mono font-bold uppercase text-fj-neutral-400" style={{ fontSize: '10px', letterSpacing: '0.14em' }}>Hyderabad · Monthly Search Demand</p>
-        <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 font-fj-mono text-[10px] font-bold" style={{ background: '#F05A28', color: '#fff' }}>4,290+ / mo</span>
+        <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 font-fj-mono text-[10px] font-bold" style={{ background: '#B23E13', color: '#fff' }}>4,290+ / mo</span>
       </div>
       <div className="divide-y divide-fj-neutral-100">
         {kws.map((kw) => {
@@ -402,11 +402,11 @@ export default function SeoHyderabad() {
               </p>
               <p>
                 We match the strategy to the market. For pharma and IT companies we build{' '}
-                <a href="/seo/technical-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">technical SEO</a>{' '}
+                <a href="/seo/technical-seo" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">technical SEO</a>{' '}
                 foundations and{' '}
-                <a href="/seo/link-building" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">B2B content</a>{' '}
+                <a href="/seo/link-building" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">B2B content</a>{' '}
                 that reaches decision-makers early. For local Hyderabad businesses we do the map rankings and neighbourhood pages. And unlike most{' '}
-                <a href="/seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">SEO companies in India</a>,{' '}
+                <a href="/seo" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">SEO companies in India</a>,{' '}
                 we run lean and do not lock you in.
               </p>
               <p>
@@ -482,7 +482,7 @@ export default function SeoHyderabad() {
         <section className="relative overflow-hidden bg-fj-cream py-14 md:py-20">
           <div className="pointer-events-none absolute inset-0 opacity-[0.5]" aria-hidden="true" style={{ backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px)', backgroundSize: '28px 28px' }} />
           <div className="relative mx-auto max-w-3xl px-6 text-center">
-            <p className="font-fj-mono font-medium uppercase text-[#F05A28]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>RESULTS</p>
+            <p className="font-fj-mono font-medium uppercase text-[#B23E13]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>RESULTS</p>
             <h2 className="fj-display mt-3 font-semibold text-fj-ink" style={{ fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', lineHeight: 1.15, letterSpacing: '-0.02em' }}>Real SEO results for Hyderabad businesses — case studies on the way</h2>
             <p className="mx-auto mt-4 max-w-2xl font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>
               We are building Hyderabad-specific case studies. Our broader track record — 500+ businesses, 4.9-star average — uses the same fundamentals we bring to every Hyderabad engagement. Pharma, IT, local services: the process is the same, the results are documented.

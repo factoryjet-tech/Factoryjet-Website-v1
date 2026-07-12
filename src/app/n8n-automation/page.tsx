@@ -666,7 +666,7 @@ export default function N8nAutomationPage() {
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
               <p
-                className="font-fj-mono font-medium uppercase text-[#F05A28]"
+                className="font-fj-mono font-medium uppercase text-[#B23E13]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
                 ZAPIER vs. n8n SELF-HOSTED · INDIA
@@ -695,7 +695,7 @@ export default function N8nAutomationPage() {
                   </div>
                 ))}
                 <div className="rounded-xl bg-[rgba(240,90,40,0.08)] px-4 py-3">
-                  <p className="font-fj-body text-[0.875rem] font-semibold text-[#F05A28]">
+                  <p className="font-fj-body text-[0.875rem] font-semibold text-[#B23E13]">
                     Save a large recurring SaaS bill every year vs. Zapier. The FactoryJet build pays for itself in under 30 days.
                   </p>
                 </div>
@@ -735,7 +735,7 @@ export default function N8nAutomationPage() {
                 ].map((cap) => (
                   <span
                     key={cap}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {cap}
@@ -898,7 +898,7 @@ export default function N8nAutomationPage() {
                   (tech) => (
                     <span
                       key={tech}
-                      className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
+                      className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
                       style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                     >
                       {tech}
@@ -1017,7 +1017,7 @@ export default function N8nAutomationPage() {
                         style={{
                           fontSize: '9px',
                           letterSpacing: '0.13em',
-                          color: '#F05A28',
+                          color: '#B23E13',
                           background: 'rgba(240,90,40,0.06)',
                           border: '1px solid rgba(240,90,40,0.22)',
                         }}
@@ -1109,7 +1109,7 @@ export default function N8nAutomationPage() {
                 ].map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.08em' }}
                   >
                     {tag}

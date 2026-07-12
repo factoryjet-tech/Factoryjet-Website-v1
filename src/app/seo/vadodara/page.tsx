@@ -231,7 +231,7 @@ export default function VadodaraSeoPage() {
                 Koyali, SEO is about winning business across India. Buying teams, power companies, and big project
                 contractors check out suppliers for weeks against a spec sheet. You win by showing up for searches about
                 what you can make,{' '}
-                <a href="/seo/ecommerce-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">your products, grades, and how they are used</a>, by publishing clear pages and spec
+                <a href="/seo/ecommerce-seo" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">your products, grades, and how they are used</a>, by publishing clear pages and spec
                 sheets, and by earning the trust signals that get you on a buyer’s shortlist.
               </p>
               <p>
@@ -239,14 +239,14 @@ export default function VadodaraSeoPage() {
                 on trust. Overseas buyers and regulators need content about your certificates, what you can make, and
                 how you follow the rules, all in clear simple English, plus a place in Google AI answers. For local
                 services and the city&apos;s growing IT base in Alkapuri, it is the{' '}
-                <a href="/seo/local-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">local map</a> plus searches from across
+                <a href="/seo/local-seo" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">local map</a> plus searches from across
                 India.
               </p>
               <p>
                 Every FactoryJet Vadodara plan covers{' '}
-                <a href="/seo/technical-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">a fast site Google can read</a>, the right search plan for your
+                <a href="/seo/technical-seo" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">a fast site Google can read</a>, the right search plan for your
                 market, and Google AI answers as standard, then adds content and{' '}
-                <a href="/seo/link-building" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">links</a> over time. You keep every page,
+                <a href="/seo/link-building" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">links</a> over time. You keep every page,
                 plan, and link we build.
               </p>
             </>
@@ -292,7 +292,7 @@ export default function VadodaraSeoPage() {
         <section className="relative overflow-hidden bg-fj-cream py-14 md:py-20">
           <div className="pointer-events-none absolute inset-0 opacity-[0.5]" aria-hidden="true" style={{ backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px)', backgroundSize: '28px 28px' }} />
           <div className="relative mx-auto max-w-3xl px-6 text-center">
-            <p className="font-fj-mono font-medium uppercase text-[#F05A28]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>RECENT WORK</p>
+            <p className="font-fj-mono font-medium uppercase text-[#B23E13]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>RECENT WORK</p>
             <h2 className="fj-display mt-3 font-semibold text-fj-ink" style={{ fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', lineHeight: 1.15, letterSpacing: '-0.02em' }}>Vadodara SEO results are on the way</h2>
             <p className="mx-auto mt-4 max-w-2xl font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>We are putting together real SEO results, with rankings, visits, and enquiries, from live FactoryJet work in Gujarat and across India. It all sits on the same work behind 500+ websites we have built, at a 4.9 average rating, including business engineering and consulting clients.</p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

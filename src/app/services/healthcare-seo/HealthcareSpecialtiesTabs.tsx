@@ -127,10 +127,10 @@ export default function HealthcareSpecialtiesTabs() {
                 onClick={() => handleTab(idx)}
                 className="rounded-full px-5 py-2 font-fj-body text-sm font-semibold transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                 style={{
-                  backgroundColor: isActive ? '#F05A28' : 'rgba(15,15,18,0.06)',
+                  backgroundColor: isActive ? '#B23E13' : 'rgba(15,15,18,0.06)',
                   color: isActive ? '#FFFFFF' : 'rgba(15,15,18,0.65)',
                   border: isActive ? 'none' : '1px solid rgba(15,15,18,0.12)',
-                  boxShadow: isActive ? '0 4px 14px rgba(240,90,40,0.28)' : 'none',
+                  boxShadow: isActive ? '0 4px 14px rgba(178,62,19,0.28)' : 'none',
                   outlineColor: '#F05A28',
                   transform: isActive ? 'scale(1.02)' : 'scale(1)',
                 }}
@@ -222,7 +222,7 @@ export default function HealthcareSpecialtiesTabs() {
                 >
                   <p
                     className="font-fj-mono font-bold uppercase"
-                    style={{ fontSize: '10px', letterSpacing: '0.12em', color: '#F05A28' }}
+                    style={{ fontSize: '10px', letterSpacing: '0.12em', color: '#B23E13' }}
                   >
                     Primary signal
                   </p>
@@ -252,9 +252,9 @@ export default function HealthcareSpecialtiesTabs() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-fj-body text-sm font-semibold transition-all hover:opacity-90"
             style={{
-              backgroundColor: '#F05A28',
+              backgroundColor: '#B23E13',
               color: '#FFFFFF',
-              boxShadow: '0 4px 16px rgba(240,90,40,0.28)',
+              boxShadow: '0 4px 16px rgba(178,62,19,0.28)',
             }}
           >
             Book a free healthcare SEO audit <span aria-hidden="true">→</span>

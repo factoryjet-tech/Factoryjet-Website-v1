@@ -940,7 +940,7 @@ export default function AIAgencyPage() {
                       <p className="font-fj-body text-[0.8125rem] text-fj-neutral-500">{desc}</p>
                     </div>
                     <p
-                      className="shrink-0 font-fj-mono font-medium text-[#F05A28]"
+                      className="shrink-0 font-fj-mono font-medium text-[#B23E13]"
                       style={{ fontSize: '11px', letterSpacing: '0.06em' }}
                     >
                       {from}
@@ -986,7 +986,7 @@ export default function AIAgencyPage() {
                 ].map((cap) => (
                   <span
                     key={cap}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {cap}
@@ -1075,7 +1075,7 @@ export default function AIAgencyPage() {
                     <div className="mt-1.5 flex items-center gap-3">
                       <p className="font-fj-body text-[0.8125rem] text-fj-neutral-400 line-through">{before}</p>
                       <span className="text-fj-neutral-300">→</span>
-                      <p className="font-fj-body text-[0.875rem] font-semibold text-[#F05A28]">{after}</p>
+                      <p className="font-fj-body text-[0.875rem] font-semibold text-[#B23E13]">{after}</p>
                     </div>
                   </div>
                 ))}
@@ -1160,7 +1160,7 @@ export default function AIAgencyPage() {
                 {['Austin TX', 'Miami FL', 'Denver CO', 'Nashville TN', 'New York NY', 'Charlotte NC', 'Portland OR', 'Tampa FL'].map((city) => (
                   <span
                     key={city}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.08em' }}
                   >
                     {city}
@@ -1206,7 +1206,7 @@ export default function AIAgencyPage() {
                 {['Claude', 'GPT-4o', 'Gemini', 'Llama', 'LangChain', 'n8n', 'Make.com', 'Twilio', 'Pinecone'].map((tool) => (
                   <span
                     key={tool}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {tool}

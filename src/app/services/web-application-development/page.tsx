@@ -586,9 +586,9 @@ export default function WebApplicationDevelopmentPage() {
             <p className="text-xs font-fj-mono uppercase tracking-widest text-fj-neutral-400">Build vs. Buy Decision Framework</p>
             <div className="space-y-3">
               {[
-                { trigger: 'Users log in and take actions', verdict: 'Custom web app', color: 'text-[#F05A28]' },
-                { trigger: "Off-the-shelf tools don't quite fit", verdict: 'Custom web app', color: 'text-[#F05A28]' },
-                { trigger: "You're paying for features you don't use", verdict: 'Custom web app', color: 'text-[#F05A28]' },
+                { trigger: 'Users log in and take actions', verdict: 'Custom web app', color: 'text-[#B23E13]' },
+                { trigger: "Off-the-shelf tools don't quite fit", verdict: 'Custom web app', color: 'text-[#B23E13]' },
+                { trigger: "You're paying for features you don't use", verdict: 'Custom web app', color: 'text-[#B23E13]' },
                 { trigger: 'Mostly static content + contact form', verdict: 'Website is fine', color: 'text-amber-600' },
                 { trigger: 'Standard e-commerce, no custom logic', verdict: 'Shopify works', color: 'text-amber-600' },
               ].map(({ trigger, verdict, color }) => (
@@ -762,7 +762,7 @@ export default function WebApplicationDevelopmentPage() {
       {/* Related Reading — internal linking to blog posts */}
       <section className="py-10 bg-[#FAFAF7]">
         <div className="max-w-6xl mx-auto px-6">
-          <p className="text-sm font-semibold text-[#F05A28] uppercase tracking-widest mb-3">Related Reading</p>
+          <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">Related Reading</p>
           <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">Keep learning before you commit</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <a href="/blog/custom-web-development-vs-wordpress-us-small-business-2026" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">

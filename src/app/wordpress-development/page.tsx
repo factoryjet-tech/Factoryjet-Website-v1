@@ -677,7 +677,7 @@ export default function WordPressDevelopmentPage() {
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
               <p
-                className="font-fj-mono font-medium uppercase text-[#F05A28]"
+                className="font-fj-mono font-medium uppercase text-[#B23E13]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
                 TYPICAL INDIAN WP SITE vs. FACTORYJET BUILD
@@ -706,7 +706,7 @@ export default function WordPressDevelopmentPage() {
                   </div>
                 ))}
                 <div className="rounded-xl bg-[rgba(240,90,40,0.08)] px-4 py-3">
-                  <p className="font-fj-body text-[0.875rem] font-semibold text-[#F05A28]">
+                  <p className="font-fj-body text-[0.875rem] font-semibold text-[#B23E13]">
                     A 1.6-second site ranks better, converts better, and does not embarrass you in client meetings.
                   </p>
                 </div>
@@ -744,7 +744,7 @@ export default function WordPressDevelopmentPage() {
                 ].map((cap) => (
                   <span
                     key={cap}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {cap}
@@ -828,7 +828,7 @@ export default function WordPressDevelopmentPage() {
                         {item.platform}
                       </p>
                       <p
-                        className="fj-display flex-shrink-0 font-bold text-[#F05A28]"
+                        className="fj-display flex-shrink-0 font-bold text-[#B23E13]"
                         style={{ fontSize: '0.9375rem', letterSpacing: '-0.02em' }}
                       >
                         {item.price}
@@ -902,7 +902,7 @@ export default function WordPressDevelopmentPage() {
                   (tech) => (
                     <span
                       key={tech}
-                      className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
+                      className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
                       style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                     >
                       {tech}
@@ -1024,7 +1024,7 @@ export default function WordPressDevelopmentPage() {
                         style={{
                           fontSize: '9px',
                           letterSpacing: '0.13em',
-                          color: '#F05A28',
+                          color: '#B23E13',
                           background: 'rgba(240,90,40,0.06)',
                           border: '1px solid rgba(240,90,40,0.22)',
                         }}
@@ -1119,7 +1119,7 @@ export default function WordPressDevelopmentPage() {
                   <a
                     key={slug}
                     href={`/wordpress-development/${slug}`}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#F05A28] hover:bg-[rgba(240,90,40,0.15)] transition-colors"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#B23E13] hover:bg-[rgba(240,90,40,0.15)] transition-colors"
                     style={{ fontSize: '10px', letterSpacing: '0.08em' }}
                   >
                     {label}
@@ -1218,7 +1218,7 @@ export default function WordPressDevelopmentPage() {
                         </p>
                       </div>
                       <span
-                        className="flex-shrink-0 rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-2.5 py-0.5 font-fj-mono font-medium text-[#F05A28]"
+                        className="flex-shrink-0 rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-2.5 py-0.5 font-fj-mono font-medium text-[#B23E13]"
                         style={{ fontSize: '9px', letterSpacing: '0.08em' }}
                       >
                         {item.type}
@@ -1231,7 +1231,7 @@ export default function WordPressDevelopmentPage() {
               <div className="border-t border-fj-neutral-100 bg-fj-neutral-50 px-7 py-5">
                 <a
                   href="/portfolio"
-                  className="font-fj-body text-[0.875rem] font-semibold text-[#F05A28] hover:underline"
+                  className="font-fj-body text-[0.875rem] font-semibold text-[#B23E13] hover:underline"
                 >
                   View full portfolio →
                 </a>

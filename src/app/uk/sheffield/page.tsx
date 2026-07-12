@@ -530,7 +530,7 @@ export default function SheffieldPage() {
           <div className="flex items-center gap-3 flex-shrink-0">
             <button
               onClick={() => openModal('uk')}
-              className="group inline-flex items-center gap-[6px] bg-[#FF6B35] hover:bg-[#ff8255] text-white font-semibold rounded-lg transition-all duration-200 hover:-translate-y-[1px] text-[13px] px-4 py-2 md:text-[14px] md:px-6 md:py-3"
+              className="group inline-flex items-center gap-[6px] bg-[#B23E13] hover:bg-[#9A3510] text-white font-semibold rounded-lg transition-all duration-200 hover:-translate-y-[1px] text-[13px] px-4 py-2 md:text-[14px] md:px-6 md:py-3"
             >
               Get Free Quote
               <span className="hidden sm:inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
@@ -566,7 +566,7 @@ export default function SheffieldPage() {
           <div className="mt-8">
             <button
               onClick={() => { setMenuOpen(false); openModal('uk'); }}
-              className="inline-flex w-full items-center justify-center gap-2 bg-[#FF6B35] text-white text-[16px] font-semibold px-6 py-4 rounded-lg"
+              className="inline-flex w-full items-center justify-center gap-2 bg-[#B23E13] text-white text-[16px] font-semibold px-6 py-4 rounded-lg"
             >
               Get My Free Quote →
             </button>
@@ -625,7 +625,7 @@ export default function SheffieldPage() {
                 </span>
 
                 {/* Label */}
-                <p className="relative z-10 text-[12px] font-semibold uppercase tracking-[0.1em] text-[#F05A28] mb-3">
+                <p className="relative z-10 text-[12px] font-semibold uppercase tracking-[0.1em] text-[#B23E13] mb-3">
                   WEB DESIGN SHEFFIELD · SOUTH YORKSHIRE
                 </p>
 
@@ -663,7 +663,7 @@ export default function SheffieldPage() {
                 <div className="relative z-10 flex flex-col sm:flex-row gap-3 mb-6">
                   <button
                     onClick={() => openModal('uk')}
-                    className="group inline-flex items-center justify-center gap-2 bg-[#F05A28] hover:bg-[#1a6fff] text-white text-[16px] font-semibold px-8 py-[13px] rounded-lg transition-all duration-200 hover:-translate-y-[1px] w-full sm:w-auto"
+                    className="group inline-flex items-center justify-center gap-2 bg-[#B23E13] hover:bg-[#1a6fff] text-white text-[16px] font-semibold px-8 py-[13px] rounded-lg transition-all duration-200 hover:-translate-y-[1px] w-full sm:w-auto"
                   >
                     Get My Free Quote
                     <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
@@ -734,7 +734,7 @@ export default function SheffieldPage() {
 
               {/* ── Left column ──────────────────────────────────────── */}
               <div ref={whyLeftRef} data-gsap="true" className="flex flex-col">
-                <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#F05A28] mb-4">
+                <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#B23E13] mb-4">
                   Why FactoryJet
                 </p>
                 <h2
@@ -802,7 +802,7 @@ export default function SheffieldPage() {
                   <div className="flex flex-col gap-[6px]">
                     <div className="flex items-center justify-between">
                       <span className="text-[13px] font-semibold text-[#0a0a0a]">FactoryJet</span>
-                      <span className="text-[12px] font-bold text-[#F05A28]">7 days</span>
+                      <span className="text-[12px] font-bold text-[#B23E13]">7 days</span>
                     </div>
                     <div className="h-[8px] w-full rounded-full bg-[#F1F3F5]">
                       <div className="h-full w-[12%] rounded-full bg-[#F05A28]" />
@@ -811,7 +811,7 @@ export default function SheffieldPage() {
 
                   <p className="text-[12px] text-[#6B7280] pt-2 border-t border-[#E9ECEF]">
                     Our AI-assisted process is{" "}
-                    <span className="font-bold text-[#F05A28]">up to 8× faster</span>{" "}
+                    <span className="font-bold text-[#B23E13]">up to 8× faster</span>{" "}
                     than traditional Sheffield agencies — zero compromise on quality.
                   </p>
                 </div>
@@ -853,7 +853,7 @@ export default function SheffieldPage() {
 
             {/* Section header */}
             <div className="max-w-[680px] mb-14">
-              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#F05A28] mb-4">
+              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#B23E13] mb-4">
                 Our Services
               </p>
               <h2
@@ -1074,7 +1074,7 @@ export default function SheffieldPage() {
 
             {/* Header */}
             <div className="max-w-[640px] mx-auto text-center mb-16">
-              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#F05A28] mb-4">
+              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#B23E13] mb-4">
                 Our Process
               </p>
               <h2
@@ -1105,15 +1105,15 @@ export default function SheffieldPage() {
                         className={[
                           "w-10 h-10 md:w-12 md:h-12 rounded-full flex-shrink-0 flex items-center justify-center border-2 font-clash font-bold text-[13px] md:text-[14px]",
                           i === PROCESS_STEPS.length - 1
-                            ? "bg-[#F05A28] border-[#F05A28] text-white"
-                            : "bg-white border-[#E9ECEF] text-[#F05A28]",
+                            ? "bg-[#B23E13] border-[#F05A28] text-white"
+                            : "bg-white border-[#E9ECEF] text-[#B23E13]",
                         ].join(" ")}
                       >
                         {step.label}
                       </div>
                       {/* Text */}
                       <div className="lg:text-center">
-                        <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#F05A28] mb-1">
+                        <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-[#B23E13] mb-1">
                           {step.day}
                         </p>
                         <h3 className="text-[16px] font-semibold text-[#0a0a0a] mb-1">
@@ -1133,7 +1133,7 @@ export default function SheffieldPage() {
             <div className="flex justify-center mt-14">
               <button
                 onClick={() => openModal('uk')}
-                className="group inline-flex items-center gap-2 bg-[#FF6B35] hover:bg-[#ff8255] text-white text-[16px] font-semibold px-8 py-4 rounded-lg transition-all duration-200 hover:-translate-y-[1px]"
+                className="group inline-flex items-center gap-2 bg-[#B23E13] hover:bg-[#9A3510] text-white text-[16px] font-semibold px-8 py-4 rounded-lg transition-all duration-200 hover:-translate-y-[1px]"
               >
                 Start your 7-day build
                 <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
@@ -1230,7 +1230,7 @@ export default function SheffieldPage() {
           <div className="w-full max-w-[1400px] mx-auto px-6 md:px-10 lg:px-20 py-24">
             {/* Header */}
             <div className="max-w-[560px] mb-16">
-              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#F05A28] mb-4">
+              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#B23E13] mb-4">
                 Client Stories
               </p>
               <h2
@@ -1285,7 +1285,7 @@ export default function SheffieldPage() {
             <div className="max-w-[680px] mx-auto">
               {/* Header */}
               <div className="text-center mb-14">
-                <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#F05A28] mb-4">
+                <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#B23E13] mb-4">
                   Common Questions
                 </p>
                 <h2
@@ -1308,7 +1308,7 @@ export default function SheffieldPage() {
                         className={[
                           "text-[16px] font-semibold leading-snug transition-colors duration-200",
                           openFaq === i
-                            ? "text-[#F05A28]"
+                            ? "text-[#B23E13]"
                             : "text-[#0a0a0a] group-hover:text-[#F05A28]",
                         ].join(" ")}
                       >
@@ -1548,7 +1548,7 @@ export default function SheffieldPage() {
                   type="button"
                   onClick={handleLeadSubmit}
                   disabled={leadSending}
-                  className="group w-full bg-[#FF6B35] hover:bg-[#ff8255] disabled:opacity-70 text-white text-[15px] font-semibold px-6 py-4 rounded-lg transition-all duration-200 hover:-translate-y-[1px] flex items-center justify-center gap-2"
+                  className="group w-full bg-[#B23E13] hover:bg-[#9A3510] disabled:opacity-70 text-white text-[15px] font-semibold px-6 py-4 rounded-lg transition-all duration-200 hover:-translate-y-[1px] flex items-center justify-center gap-2"
                 >
                   {leadSending ? "Sending…" : "Get My Free Proposal"}
                   {!leadSending && (
@@ -1633,7 +1633,7 @@ export default function SheffieldPage() {
               <div className="mt-2">
                 <button
                   onClick={() => openModal('uk')}
-                  className="inline-flex items-center gap-2 bg-[#FF6B35] hover:bg-[#ff8255] text-white text-[13px] font-semibold px-4 py-2 rounded-lg transition-all duration-200"
+                  className="inline-flex items-center gap-2 bg-[#B23E13] hover:bg-[#9A3510] text-white text-[13px] font-semibold px-4 py-2 rounded-lg transition-all duration-200"
                 >
                   Get Free Quote →
                 </button>

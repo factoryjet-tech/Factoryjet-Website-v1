@@ -88,7 +88,7 @@ export default function WebsiteCostPage() {
 
       <main className="bg-white font-fj-body text-[#14110F]">
         <section className="mx-auto max-w-[1180px] px-5 py-16 md:py-24">
-          <p className="font-fj-mono text-xs font-semibold uppercase tracking-[0.12em] text-[#F05A28]">Cost guide</p>
+          <p className="font-fj-mono text-xs font-semibold uppercase tracking-[0.12em] text-[#B23E13]">Cost guide</p>
           <h1 className="mt-3 max-w-[22ch] font-fj-display text-4xl font-extrabold leading-[1.07] tracking-tight md:text-5xl">
             What an e-commerce build costs, and what drives the price.
           </h1>
@@ -97,7 +97,7 @@ export default function WebsiteCostPage() {
             depends on your scope. Here is an honest look at what moves the number, and how we quote yours.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-xl bg-[#F05A28] px-6 py-3.5 font-fj-body text-[15px] font-semibold text-white transition-transform hover:-translate-y-0.5">Talk to the Founder</a>
+            <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-xl bg-[#B23E13] px-6 py-3.5 font-fj-body text-[15px] font-semibold text-white transition-transform hover:-translate-y-0.5">Talk to the Founder</a>
             <ModalCTAButton label="Get a commerce audit" region="us" btnVariant="secondary-light" />
           </div>
         </section>
@@ -141,7 +141,7 @@ export default function WebsiteCostPage() {
               the investment up front with no surprise invoices.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-xl bg-[#F05A28] px-6 py-3.5 font-fj-body text-[15px] font-semibold text-white transition-transform hover:-translate-y-0.5">Talk to the Founder</a>
+              <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-xl bg-[#B23E13] px-6 py-3.5 font-fj-body text-[15px] font-semibold text-white transition-transform hover:-translate-y-0.5">Talk to the Founder</a>
               <ModalCTAButton label="Get a commerce audit" region="us" btnVariant="secondary-light" />
             </div>
             <p className="mt-8 text-[14px] text-[#6E635A]">

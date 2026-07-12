@@ -609,7 +609,7 @@ export default function SiteHeader({
                               className="group mb-2.5 flex items-center gap-3 rounded-xl border border-[#F3C9B6] p-3 transition-all hover:border-[#F05A28] hover:shadow-sm"
                               style={{ background: 'linear-gradient(135deg,#FCEEE8,#FFF6F1)' }}
                             >
-                              <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-[#F05A28] text-white">
+                              <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-[#B23E13] text-white">
                                 <TrendingUp size={17} strokeWidth={1.8} />
                               </span>
                               <span className="flex flex-1 flex-col">
@@ -632,7 +632,7 @@ export default function SiteHeader({
                             {/* SEO by city */}
                             <Link
                               href={IN_SEO_HUB_HREF}
-                              className="mt-2 flex items-center gap-1 px-2.5 font-fj-body text-[11.5px] font-semibold text-[#F05A28] transition-opacity hover:opacity-75"
+                              className="mt-2 flex items-center gap-1 px-2.5 font-fj-body text-[11.5px] font-semibold text-[#B23E13] transition-opacity hover:opacity-75"
                             >
                               SEO by city <ArrowRight size={11} strokeWidth={2.5} />
                             </Link>
@@ -656,7 +656,7 @@ export default function SiteHeader({
                               href={IN_AI_HUB_HREF}
                               className="group mb-3 flex items-center gap-3 rounded-xl border border-fj-neutral-200 bg-white p-3 transition-all hover:border-[#F05A28] hover:shadow-sm"
                             >
-                              <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-[#F05A28] text-white">
+                              <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-[#B23E13] text-white">
                                 <Cpu size={17} strokeWidth={1.8} />
                               </span>
                               <span className="flex flex-1 flex-col">
@@ -668,10 +668,10 @@ export default function SiteHeader({
                                 </span>
                               </span>
                               <span className="flex flex-col items-end gap-1.5">
-                                <span className="rounded-full bg-[#FEF0EB] px-2 py-0.5 font-fj-mono text-[10px] font-bold text-[#F05A28]">
+                                <span className="rounded-full bg-[#FEF0EB] px-2 py-0.5 font-fj-mono text-[10px] font-bold text-[#B23E13]">
                                   7 agents
                                 </span>
-                                <span className="flex items-center gap-1 font-fj-body text-[11px] font-semibold text-[#F05A28]">
+                                <span className="flex items-center gap-1 font-fj-body text-[11px] font-semibold text-[#B23E13]">
                                   Explore all <ArrowRight size={10} strokeWidth={2.5} />
                                 </span>
                               </span>
@@ -697,7 +697,7 @@ export default function SiteHeader({
                             </div>
                             <Link
                               href={IN_AI_HUB_HREF}
-                              className="mt-2.5 inline-flex items-center gap-1 font-fj-body text-[11px] font-semibold text-[#F05A28] transition-opacity hover:opacity-75"
+                              className="mt-2.5 inline-flex items-center gap-1 font-fj-body text-[11px] font-semibold text-[#B23E13] transition-opacity hover:opacity-75"
                             >
                               Explore all 7 agents <ArrowRight size={11} strokeWidth={2.5} />
                             </Link>
@@ -1060,7 +1060,7 @@ export default function SiteHeader({
                           </p>
                           <Link
                             href="/web-design"
-                            className="flex items-center gap-1 font-fj-body text-[11.5px] font-semibold text-[#F05A28] transition-opacity hover:opacity-75"
+                            className="flex items-center gap-1 font-fj-body text-[11.5px] font-semibold text-[#B23E13] transition-opacity hover:opacity-75"
                           >
                             View all 22 cities <ArrowRight size={11} strokeWidth={2.5} />
                           </Link>
@@ -1440,7 +1440,7 @@ export default function SiteHeader({
                     {/* AI Agents */}
                     <div className="mb-1 mt-3 flex items-center justify-between px-1">
                       <p className="font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">AI Agent Development</p>
-                      <Link href={IN_AI_HUB_HREF} onClick={() => setMobileOpen(false)} className="font-fj-body text-[11px] font-semibold text-[#F05A28]">View all →</Link>
+                      <Link href={IN_AI_HUB_HREF} onClick={() => setMobileOpen(false)} className="font-fj-body text-[11px] font-semibold text-[#B23E13]">View all →</Link>
                     </div>
                     {cfg.aiServices.map((s) => {
                       const Icon = s.icon;
@@ -1454,7 +1454,7 @@ export default function SiteHeader({
                     {/* SEO & AI Search */}
                     <div className="mb-1 mt-3 flex items-center justify-between px-1">
                       <p className="font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400">SEO &amp; AI Search</p>
-                      <Link href={IN_SEO_HUB_HREF} onClick={() => setMobileOpen(false)} className="font-fj-body text-[11px] font-semibold text-[#F05A28]">SEO hub →</Link>
+                      <Link href={IN_SEO_HUB_HREF} onClick={() => setMobileOpen(false)} className="font-fj-body text-[11px] font-semibold text-[#B23E13]">SEO hub →</Link>
                     </div>
                     {IN_SEO_SERVICES.map((s) => {
                       const Icon = s.icon;

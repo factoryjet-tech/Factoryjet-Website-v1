@@ -499,7 +499,7 @@ export const post: BlogPost = {
           { day: 'Day 7', action: 'Client review + feedback round. Launch. Sites deployed on Cloudflare Pages for sub-1.5s load speeds from anywhere in India.' },
         ].map((step, i) => (
           <div key={i} className="flex gap-4 mb-4 last:mb-0">
-            <div className="flex-shrink-0 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded h-fit">
+            <div className="flex-shrink-0 bg-[#B23E13] text-white text-xs font-bold px-2 py-1 rounded h-fit">
               {step.day}
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">{step.action}</p>
@@ -582,7 +582,7 @@ export const post: BlogPost = {
         <div className="flex flex-wrap gap-3">
           <a
             href="/contact"
-            className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+            className="inline-block bg-[#B23E13] hover:bg-[#9A3510] text-white font-semibold px-6 py-3 rounded-lg transition-colors"
           >
             Get a Free Quote →
           </a>

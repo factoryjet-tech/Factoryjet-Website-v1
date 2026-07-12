@@ -145,7 +145,7 @@ export const post: BlogPost = {
           href="https://www.shopify.com/blog/ecommerce-website-cost"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           Shopify&apos;s own cost guide
         </a>
@@ -187,7 +187,7 @@ export const post: BlogPost = {
           href="https://www.shopify.com/pricing"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           Shopify&apos;s pricing page
         </a>
@@ -397,7 +397,7 @@ export const post: BlogPost = {
             href="https://ogresto.com/blogs/shopify-development-cost-2026"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#F05A28] hover:underline"
+            className="text-[#B23E13] hover:underline"
           >
             Ogresto
           </a>
@@ -406,7 +406,7 @@ export const post: BlogPost = {
             href="https://cartcoders.com/blog/shopify-development/shopify-developer-cost-hourly-rate-project-pricing/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#F05A28] hover:underline"
+            className="text-[#B23E13] hover:underline"
           >
             CartCoders
           </a>
@@ -415,7 +415,7 @@ export const post: BlogPost = {
             href="https://www.shopify.com/blog/ecommerce-website-cost"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#F05A28] hover:underline"
+            className="text-[#B23E13] hover:underline"
           >
             Shopify
           </a>
@@ -433,7 +433,7 @@ export const post: BlogPost = {
           href="https://cartcoders.com/blog/shopify-development/shopify-developer-cost-hourly-rate-project-pricing/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           CartCoders&apos; March 2026 breakdown
         </a>
@@ -557,7 +557,7 @@ export const post: BlogPost = {
           href="https://calendly.com/bhavesh-factoryjet/30min"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           talk to us directly
         </a>
@@ -603,7 +603,7 @@ export const post: BlogPost = {
           href="https://web.dev/articles/vitals-business-impact"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           Google Core Web Vitals research
         </a>{' '}
@@ -638,13 +638,13 @@ export const post: BlogPost = {
         platforms, the{' '}
         <a
           href="/blog/shopify-vs-woocommerce-us-small-business-2026"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           Shopify vs WooCommerce cost breakdown
         </a>{' '}
         covers how the two compare on price and flexibility. FactoryJet has delivered Shopify builds
         for US small businesses across markets like{' '}
-        <a href="/nashville" className="text-[#F05A28] hover:underline">
+        <a href="/nashville" className="text-[#B23E13] hover:underline">
           Nashville
         </a>{' '}
         and beyond, all with a 7-day delivery guarantee.
@@ -652,7 +652,7 @@ export const post: BlogPost = {
       <p className="mb-6">
         If you&apos;re trying to figure out where your specific build lands, the fastest path is a
         30-minute scoping call. FactoryJet has built{' '}
-        <a href="/services/ecommerce-development" className="text-[#F05A28] hover:underline">
+        <a href="/services/ecommerce-development" className="text-[#B23E13] hover:underline">
           500+ stores for US small businesses
         </a>{' '}
         and can give you a fixed-price quote within 24 hours.
@@ -662,7 +662,7 @@ export const post: BlogPost = {
           href="https://calendly.com/bhavesh-factoryjet/30min"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-[#F05A28] text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-[#C94818] transition-colors"
+          className="inline-block bg-[#B23E13] text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-[#C94818] transition-colors"
         >
           Talk to the Founder: 30 Minutes, No Sales Pitch
         </a>
@@ -675,7 +675,7 @@ export const post: BlogPost = {
           href="https://www.shopify.com/pricing"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           shopify.com/pricing
         </a>
@@ -684,7 +684,7 @@ export const post: BlogPost = {
           href="https://ogresto.com/blogs/shopify-development-cost-2026"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           Ogresto
         </a>{' '}
@@ -693,7 +693,7 @@ export const post: BlogPost = {
           href="https://cartcoders.com/blog/shopify-development/shopify-developer-cost-hourly-rate-project-pricing/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#F05A28] hover:underline"
+          className="text-[#B23E13] hover:underline"
         >
           CartCoders
         </a>{' '}

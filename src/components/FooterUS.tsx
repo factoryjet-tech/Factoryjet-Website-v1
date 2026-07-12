@@ -35,7 +35,7 @@ const FooterUS: React.FC<FooterUSProps> = ({ onCtaClick, hideLocations = false }
                   href={href}
                   aria-label={`Connect with us on ${label}`}
                   onClick={() => trackSocialClick(label.toLowerCase(), 'footer')}
-                  className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#FF6B35] transition-colors text-slate-400 hover:text-white"
+                  className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#B23E13] transition-colors text-slate-400 hover:text-white"
                 >
                   <Icon size={20} aria-hidden="true" />
                 </a>

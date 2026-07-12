@@ -31,7 +31,7 @@ export function HomepageHero() {
           <div className="flex flex-col items-start gap-6">
 
             {/* Eyebrow chip */}
-            <span className="bg-fj-jet-orange text-white px-4 py-1.5 rounded-full font-fj-mono text-xs uppercase tracking-wider">
+            <span className="bg-[#B23E13] text-white px-4 py-1.5 rounded-full font-fj-mono text-xs uppercase tracking-wider">
               WEB DESIGN AGENCY
             </span>
 
@@ -49,13 +49,13 @@ export function HomepageHero() {
             <div className="flex flex-wrap gap-4 mt-2">
               <a
                 href="/get-started"
-                className="bg-[#F05A28] text-white px-8 py-3.5 rounded-lg text-sm font-semibold font-inter hover:bg-[#0F0F12] transition-colors shadow-sm"
+                className="bg-[#B23E13] text-white px-8 py-3.5 rounded-lg text-sm font-semibold font-inter hover:bg-[#0F0F12] transition-colors shadow-sm"
               >
                 Get Started Free
               </a>
               <a
                 href="/portfolio"
-                className="bg-transparent border border-[#F05A28] text-[#F05A28] px-8 py-3.5 rounded-lg text-sm font-semibold font-inter hover:bg-[#F05A28]-tint transition-colors"
+                className="bg-transparent border border-[#B23E13] text-[#B23E13] px-8 py-3.5 rounded-lg text-sm font-semibold font-inter hover:bg-[#FFF3EE] transition-colors"
               >
                 See Our Work
               </a>

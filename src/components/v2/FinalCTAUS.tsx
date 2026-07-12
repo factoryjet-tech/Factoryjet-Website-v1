@@ -39,7 +39,7 @@ export default function FinalCTAUS() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full font-fj-body font-semibold text-white"
-                style={{ backgroundColor: '#F05A28', fontSize: '0.9375rem', padding: '14px 24px', boxShadow: '0 8px 26px rgba(240,90,40,0.36)' }}
+                style={{ backgroundColor: '#B23E13', fontSize: '0.9375rem', padding: '14px 24px', boxShadow: '0 8px 26px rgba(178,62,19,0.36)' }}
               >
                 Book a 30-minute call
               </a>

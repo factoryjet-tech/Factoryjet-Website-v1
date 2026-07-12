@@ -16,7 +16,7 @@ const ContactMethods: React.FC = () => {
     <section id="connect" className="py-12 md:py-24 bg-slate-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="text-sm font-bold text-jetOrange uppercase tracking-widest mb-2">Connect With Us</h2>
+          <h2 className="text-sm font-bold text-[#B23E13] uppercase tracking-widest mb-2">Connect With Us</h2>
           <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900">Choose Your Preferred Contact Method</h3>
           <p className="mt-4 text-slate-600">Need immediate assistance? We're here for you.</p>
         </div>
@@ -59,7 +59,7 @@ const ContactMethods: React.FC = () => {
               <Phone className="w-7 h-7" />
             </div>
             <h4 className="text-xl font-bold text-slate-900 mb-2">Call Us Directly</h4>
-            <span className="inline-block px-3 py-1 bg-orange-50 text-jetOrange text-xs font-bold rounded-full w-fit mb-4">Urgent Needs</span>
+            <span className="inline-block px-3 py-1 bg-orange-50 text-[#B23E13] text-xs font-bold rounded-full w-fit mb-4">Urgent Needs</span>
             <p className="text-slate-600 mb-6 flex-grow">Speak directly with a knowledgeable team member (not a receptionist). Get immediate answers.</p>
             
             <div className="space-y-3 mb-6 md:mb-8 text-sm text-slate-500">

@@ -774,7 +774,7 @@ export default function WebDesignServicePage() {
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
               <p
                 className="font-fj-mono font-medium uppercase"
-                style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#F05A28' }}
+                style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#B23E13' }}
               >
                 WHAT YOUR WEBSITE SHOULD DO
               </p>
@@ -788,7 +788,7 @@ export default function WebDesignServicePage() {
                   'Convert at 2–4% or better — most Indian business sites built on templates convert below 1%',
                 ].map((point, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#F05A28]">
+                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#B23E13]">
                       {i + 1}
                     </span>
                     <p className="font-fj-body text-[0.875rem] leading-[1.5] text-fj-neutral-600">
@@ -836,7 +836,7 @@ export default function WebDesignServicePage() {
                 ].map((cap) => (
                   <span
                     key={cap}
-                    className="inline-flex items-center rounded-full border border-[#F05A28]/25 bg-[#F05A28]/8 px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[#F05A28]/25 bg-[#F05A28]/8 px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {cap}
@@ -978,7 +978,7 @@ export default function WebDesignServicePage() {
                 {['Next.js', 'React', 'TypeScript', 'WordPress', 'Shopify', 'Tailwind CSS', 'Figma', 'Sanity CMS', 'Razorpay', 'WhatsApp API'].map((tech) => (
                   <span
                     key={tech}
-                    className="inline-flex items-center rounded-full border border-[#F05A28]/25 bg-[#F05A28]/8 px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[#F05A28]/25 bg-[#F05A28]/8 px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {tech}
@@ -1069,7 +1069,7 @@ export default function WebDesignServicePage() {
                         style={{
                           fontSize: '9px',
                           letterSpacing: '0.13em',
-                          color: '#F05A28',
+                          color: '#B23E13',
                           background: 'rgba(240,90,40,0.06)',
                           border: '1px solid rgba(240,90,40,0.22)',
                         }}
@@ -1147,7 +1147,7 @@ export default function WebDesignServicePage() {
                 {['Mumbai', 'Delhi', 'Bangalore', 'Chennai', 'Hyderabad', 'Pune', 'Ahmedabad', 'Surat'].map((city) => (
                   <span
                     key={city}
-                    className="inline-flex items-center rounded-full border border-[#F05A28]/25 bg-[#F05A28]/8 px-3 py-1 font-fj-mono font-medium text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[#F05A28]/25 bg-[#F05A28]/8 px-3 py-1 font-fj-mono font-medium text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.08em' }}
                   >
                     {city}

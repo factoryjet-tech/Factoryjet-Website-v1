@@ -35,7 +35,7 @@ export const CategoryFilter: React.FC<CategoryFilterProps> = ({ activeCategory, 
                 className={`
                   px-3 md:px-4 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-medium transition-all duration-300 whitespace-nowrap
                   ${activeCategory === cat
-                    ? 'bg-[#F05A28] text-white shadow-lg shadow-orange-500/20'
+                    ? 'bg-[#B23E13] text-white shadow-lg shadow-orange-500/20'
                     : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'}
                 `}
               >

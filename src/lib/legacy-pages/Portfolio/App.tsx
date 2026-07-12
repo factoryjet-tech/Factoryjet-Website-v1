@@ -243,7 +243,7 @@ const PortfolioPage: React.FC<PortfolioPageProps> = ({ basePath = '' }) => {
                     trackCTAClick('start_a_project', 'portfolio_cta', 'primary');
                     openModal();
                   }}
-                  className="w-full sm:w-auto bg-secondary hover:bg-orange-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-bold transition-all shadow-lg hover:shadow-orange-500/30 flex items-center justify-center gap-2 text-sm md:text-base"
+                  className="w-full sm:w-auto bg-[#B23E13] hover:bg-[#9A3510] text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-bold transition-all shadow-lg hover:shadow-orange-500/30 flex items-center justify-center gap-2 text-sm md:text-base"
                 >
                   Start a Project <ArrowRight size={18} className="md:w-5 md:h-5" />
                 </button>

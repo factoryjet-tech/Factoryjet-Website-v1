@@ -72,7 +72,7 @@ export default function CaseStudyCard({
       )}
 
       {industry && (
-        <p className="font-fj-mono text-[12px] font-medium uppercase tracking-[0.14em] text-[#F05A28]">
+        <p className="font-fj-mono text-[12px] font-medium uppercase tracking-[0.14em] text-[#B23E13]">
           {industry}
         </p>
       )}

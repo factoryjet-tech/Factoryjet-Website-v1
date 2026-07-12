@@ -613,13 +613,13 @@ export default function AustinEcommerceDevelopmentPage() {
         {/* Cross-link: Related Services in Austin */}
         <section className="py-10 bg-[#FAFAF7]">
           <div className="max-w-5xl mx-auto px-6 text-center">
-            <p className="text-sm font-mono text-[#F05A28] uppercase tracking-widest mb-4">
+            <p className="text-sm font-mono text-[#B23E13] uppercase tracking-widest mb-4">
               Also in Austin
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link
                 href="/austin/web-design/"
-                className="px-5 py-2 rounded-full border border-[#F05A28] text-[#F05A28] text-sm font-medium hover:bg-[#F05A28] hover:text-white transition-colors"
+                className="px-5 py-2 rounded-full border border-[#B23E13] text-[#B23E13] text-sm font-medium hover:bg-[#B23E13] hover:text-white transition-colors"
               >
                 Web Design →
               </Link>

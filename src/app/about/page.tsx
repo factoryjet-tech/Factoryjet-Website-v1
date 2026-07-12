@@ -111,7 +111,7 @@ export default function AboutPage() {
       <main className="bg-white font-fj-body text-[#14110F]">
         {/* Hero */}
         <section className="mx-auto max-w-[1180px] px-5 py-16 md:py-24">
-          <p className="font-fj-mono text-xs font-semibold uppercase tracking-[0.12em] text-[#F05A28]">About FactoryJet</p>
+          <p className="font-fj-mono text-xs font-semibold uppercase tracking-[0.12em] text-[#B23E13]">About FactoryJet</p>
           <h1 className="mt-3 max-w-[22ch] font-fj-display text-4xl font-extrabold leading-[1.07] tracking-tight md:text-5xl">
             An e-commerce development agency for DTC and B2B brands.
           </h1>
@@ -189,7 +189,7 @@ export default function AboutPage() {
                 href={CALENDLY}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-xl bg-[#F05A28] px-6 py-3.5 font-fj-body text-[15px] font-semibold text-white transition-transform hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center rounded-xl bg-[#B23E13] px-6 py-3.5 font-fj-body text-[15px] font-semibold text-white transition-transform hover:-translate-y-0.5"
               >
                 Talk to the Founder
               </a>

@@ -585,7 +585,7 @@ function ShopifySeoPricingGrid() {
                     style={{
                       top: '0.75rem',
                       right: '0.75rem',
-                      backgroundColor: '#F05A28',
+                      backgroundColor: '#B23E13',
                       color: '#FFFFFF',
                       fontSize: '10px',
                       fontWeight: 600,
@@ -685,11 +685,11 @@ function ShopifySeoPricingGrid() {
                       rel="noopener noreferrer"
                       className="inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3 font-fj-body text-sm font-semibold transition-all hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                       style={{
-                        background: isPopular ? '#F05A28' : 'transparent',
-                        color: isPopular ? '#FFFFFF' : '#F05A28',
-                        border: isPopular ? 'none' : '1.5px solid #F05A28',
+                        background: isPopular ? '#B23E13' : 'transparent',
+                        color: isPopular ? '#FFFFFF' : '#B23E13',
+                        border: isPopular ? 'none' : '1.5px solid #B23E13',
                         outlineColor: '#F05A28',
-                        boxShadow: isPopular ? '0 4px 16px rgba(240,90,40,0.30)' : 'none',
+                        boxShadow: isPopular ? '0 4px 16px rgba(178,62,19,0.30)' : 'none',
                       }}
                     >
                       {tier.ctaLabel}
@@ -791,14 +791,14 @@ export default function ShopifySeoServicePage() {
               style={{ fontSize: '1.0625rem', lineHeight: 1.7 }}
             >
               We work the full stack of Shopify SEO: the technical plumbing (canonicals, duplicate URLs, collection architecture, schema), real content on the collection and product pages that ship nearly empty, Core Web Vitals recovery, and the authority and structure that get your store cited by Google AI Overviews, ChatGPT, and Perplexity. Because we also{' '}
-              <Link href="/services/shopify-development" className="text-[#F05A28] font-medium underline underline-offset-2">build Shopify stores</Link>, we fix performance and theme issues at the code level, not with another plugin.
+              <Link href="/services/shopify-development" className="text-[#B23E13] font-medium underline underline-offset-2">build Shopify stores</Link>, we fix performance and theme issues at the code level, not with another plugin.
             </p>
             <p
               className="mt-4 font-fj-body text-fj-neutral-600"
               style={{ fontSize: '1.0625rem', lineHeight: 1.7 }}
             >
               On a different platform? Our broader{' '}
-              <Link href="/services/ecommerce-seo" className="text-[#F05A28] font-medium underline underline-offset-2">ecommerce SEO service</Link>{' '}
+              <Link href="/services/ecommerce-seo" className="text-[#B23E13] font-medium underline underline-offset-2">ecommerce SEO service</Link>{' '}
               covers WooCommerce, Magento, and custom stores with the same playbook.
             </p>
           </>
@@ -814,7 +814,7 @@ export default function ShopifySeoServicePage() {
           >
             <p
               className="font-fj-mono font-bold uppercase"
-              style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#F05A28' }}
+              style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#B23E13' }}
             >
               Our approach
             </p>

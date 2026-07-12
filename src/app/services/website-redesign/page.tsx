@@ -721,7 +721,7 @@ export default function WebsiteRedesignPage() {
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
               <p
-                className="font-fj-mono font-medium uppercase text-[#F05A28]"
+                className="font-fj-mono font-medium uppercase text-[#B23E13]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
                 WHAT YOUR CURRENT SITE IS COSTING YOU
@@ -747,7 +747,7 @@ export default function WebsiteRedesignPage() {
                   <div key={i} className="rounded-xl border border-fj-neutral-100 bg-fj-neutral-50 p-4">
                     <p className="font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-red-400">Before</p>
                     <p className="mt-1 font-fj-body text-[0.8125rem] leading-[1.5] text-fj-neutral-600">{row.before}</p>
-                    <p className="mt-2 font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-[#F05A28]">After</p>
+                    <p className="mt-2 font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-[#B23E13]">After</p>
                     <p className="mt-1 font-fj-body text-[0.8125rem] leading-[1.5] text-fj-neutral-600">{row.after}</p>
                   </div>
                 ))}
@@ -788,7 +788,7 @@ export default function WebsiteRedesignPage() {
                 {['Next.js', 'React', 'WordPress', 'Shopify', 'WooCommerce', 'Tailwind CSS', 'Figma', 'Core Web Vitals'].map((tool) => (
                   <span
                     key={tool}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {tool}
@@ -813,7 +813,7 @@ export default function WebsiteRedesignPage() {
                 FactoryJet starts every redesign with a performance and conversion audit of your current site — not because we want to add scope, but because the specific problems driving your lost leads are always unique. A restaurant site and a law firm site have completely different conversion bottlenecks. A site built on Elementor has different performance problems than one built on a static generator. We diagnose first, then design.
               </p>
               <p>
-                Our redesigns are built without page builders — using clean Next.js or custom WordPress themes that load fast, pass Core Web Vitals, and give Google exactly the mobile experience signals it needs to rank your site. For <a href="/services/wordpress-development" className="text-[#F05A28] underline underline-offset-2">WordPress projects</a>, we build custom themes from scratch. For businesses needing maximum performance, we build on Next.js with static generation. The tech stack follows your requirements — not our preferences.
+                Our redesigns are built without page builders — using clean Next.js or custom WordPress themes that load fast, pass Core Web Vitals, and give Google exactly the mobile experience signals it needs to rank your site. For <a href="/services/wordpress-development" className="text-[#B23E13] underline underline-offset-2">WordPress projects</a>, we build custom themes from scratch. For businesses needing maximum performance, we build on Next.js with static generation. The tech stack follows your requirements — not our preferences.
               </p>
             </>
           }
@@ -962,7 +962,7 @@ export default function WebsiteRedesignPage() {
         {/* Related Reading — internal linking to blog posts */}
         <section className="py-10 bg-[#FAFAF7]">
           <div className="max-w-6xl mx-auto px-6">
-            <p className="text-sm font-semibold text-[#F05A28] uppercase tracking-widest mb-3">Related Reading</p>
+            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">Related Reading</p>
             <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">Keep learning before you commit</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <a href="/blog/shopify-vs-woocommerce-us-small-business-2026" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">

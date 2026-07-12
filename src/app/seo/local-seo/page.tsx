@@ -197,13 +197,13 @@ export default function LocalSeoPage() {
               <p>
                 We also keep your details the same everywhere on the web. When your name, address, and phone number
                 match across Google, directories, and{' '}
-                <a href="/seo/technical-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">your own site</a>, Google trusts you more, and that trust is part of
+                <a href="/seo/technical-seo" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">your own site</a>, Google trusts you more, and that trust is part of
                 what decides the top three on the map.
               </p>
               <p>
                 Local SEO works best as one part of your wider{' '}
-                <a href="/seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">SEO plan</a>, sitting alongside content and{' '}
-                <a href="/seo/link-building" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">trusted local links</a>. Everything we build is yours. Your Google listing, your pages, and your reviews stay with your
+                <a href="/seo" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">SEO plan</a>, sitting alongside content and{' '}
+                <a href="/seo/link-building" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">trusted local links</a>. Everything we build is yours. Your Google listing, your pages, and your reviews stay with your
                 business. There is no lock-in and no special software to keep paying for.
               </p>
             </>
@@ -254,7 +254,7 @@ export default function LocalSeoPage() {
         <section className="relative overflow-hidden bg-fj-cream py-14 md:py-20">
           <div className="pointer-events-none absolute inset-0 opacity-[0.5]" aria-hidden="true" style={{ backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px)', backgroundSize: '28px 28px' }} />
           <div className="relative mx-auto max-w-3xl px-6 text-center">
-            <p className="font-fj-mono font-medium uppercase text-[#F05A28]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>RECENT WORK</p>
+            <p className="font-fj-mono font-medium uppercase text-[#B23E13]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>RECENT WORK</p>
             <h2 className="fj-display mt-3 font-semibold text-fj-ink" style={{ fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', lineHeight: 1.15, letterSpacing: '-0.02em' }}>Local SEO results are on the way</h2>
             <p className="mx-auto mt-4 max-w-2xl font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>We are putting together real local results: businesses we moved into the top three, more calls, and more people asking for directions. It all sits on the same work behind 500+ websites we have built, at a 4.9 average rating from our clients.</p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

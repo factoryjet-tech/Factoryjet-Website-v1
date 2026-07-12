@@ -231,22 +231,22 @@ export default function KolkataSeoPage() {
                 For Kolkata&apos;s Bantala leather, Darjeeling tea, and jute eco-packaging exporters, SEO is about
                 reach and trust. Overseas buyers and their agents research for weeks before an order. You win by
                 showing up for the simple English searches they use, by publishing clear{' '}
-                <a href="/seo/ecommerce-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">category and product pages</a> and
+                <a href="/seo/ecommerce-seo" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">category and product pages</a> and
                 trust content, and by being named in Google AI answers, not by chasing &quot;near me&quot;.
               </p>
               <p>
                 For Kolkata&apos;s engineering, pharma, and food-processing units, the game is selling to businesses
                 all over India. You win with supplier, dealer, and wholesale searches across the whole country, B2B
                 pages, and{' '}
-                <a href="/seo/technical-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">a fast site</a> that
+                <a href="/seo/technical-seo" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">a fast site</a> that
                 Google and buyers can read. For coaching centres, clinics, and shops, it is the{' '}
-                <a href="/seo/local-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">top three
+                <a href="/seo/local-seo" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">top three
                 businesses on the map</a> and your free Google Business Profile.
               </p>
               <p>
                 Every FactoryJet Kolkata plan covers the technical side, the right search plan for your market, and
                 Google AI answers as standard, then adds content and real{' '}
-                <a href="/seo/link-building" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">links</a> over time. You keep every page, plan, and
+                <a href="/seo/link-building" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">links</a> over time. You keep every page, plan, and
                 link we build.
               </p>
             </>
@@ -292,7 +292,7 @@ export default function KolkataSeoPage() {
         <section className="relative overflow-hidden bg-fj-cream py-14 md:py-20">
           <div className="pointer-events-none absolute inset-0 opacity-[0.5]" aria-hidden="true" style={{ backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px)', backgroundSize: '28px 28px' }} />
           <div className="relative mx-auto max-w-3xl px-6 text-center">
-            <p className="font-fj-mono font-medium uppercase text-[#F05A28]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>RECENT WORK</p>
+            <p className="font-fj-mono font-medium uppercase text-[#B23E13]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>RECENT WORK</p>
             <h2 className="fj-display mt-3 font-semibold text-fj-ink" style={{ fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', lineHeight: 1.15, letterSpacing: '-0.02em' }}>Kolkata SEO results are on the way</h2>
             <p className="mx-auto mt-4 max-w-2xl font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>We are putting together real SEO results, with rankings, visits, and leads, from live FactoryJet work in Kolkata and across India. It all sits on the same work behind 500+ websites we have built, at a 4.9 average rating.</p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

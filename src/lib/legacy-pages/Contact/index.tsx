@@ -106,7 +106,7 @@ const ContactPage: React.FC = () => {
           <a
             href="tel:+919699977699"
             onClick={() => trackContactClick('phone', '+919699977699', 'contact_page_mobile_bar')}
-            className="flex-1 bg-white border border-jetOrange text-jetOrange font-bold py-3 rounded-lg text-center shadow-sm"
+            className="flex-1 bg-white border border-[#B23E13] text-[#B23E13] font-bold py-3 rounded-lg text-center shadow-sm"
           >
             Call Now
           </a>

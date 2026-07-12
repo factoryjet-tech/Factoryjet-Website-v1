@@ -1235,7 +1235,7 @@ export default function IndoreWebDesignPage() {
               <a
                 href="#faq"
                 className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-fj-body font-semibold text-white flex-shrink-0"
-                style={{ backgroundColor: '#F05A28', fontSize: '0.9375rem' }}
+                style={{ backgroundColor: '#B23E13', fontSize: '0.9375rem' }}
               >
                 See How It Works
                 <span aria-hidden="true">↓</span>

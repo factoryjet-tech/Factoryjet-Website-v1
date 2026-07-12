@@ -96,7 +96,7 @@ export default function CharlotteWebDesignPage() {
                 priority
               />
             </div>
-            <div className="absolute -top-3 right-3 rounded-full bg-[#F05A28] px-3 py-1.5 text-[11.5px] font-bold text-white shadow-[0_6px_18px_rgba(240,90,40,0.4)]">
+            <div className="absolute -top-3 right-3 rounded-full bg-[#B23E13] px-3 py-1.5 text-[11.5px] font-bold text-white shadow-[0_6px_18px_rgba(240,90,40,0.4)]">
               Live in 7 days · Charlotte, NC
             </div>
           </div>
@@ -245,13 +245,13 @@ export default function CharlotteWebDesignPage() {
       {/* Cross-link: Related Services in Charlotte */}
       <section className="py-10 bg-[#FAFAF7]">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <p className="text-sm font-mono text-[#F05A28] uppercase tracking-widest mb-4">
+          <p className="text-sm font-mono text-[#B23E13] uppercase tracking-widest mb-4">
             Also in Charlotte
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link
               href="/charlotte/ecommerce-development/"
-              className="px-5 py-2 rounded-full border border-[#F05A28] text-[#F05A28] text-sm font-medium hover:bg-[#F05A28] hover:text-white transition-colors"
+              className="px-5 py-2 rounded-full border border-[#B23E13] text-[#B23E13] text-sm font-medium hover:bg-[#B23E13] hover:text-white transition-colors"
             >
               Ecommerce Development →
             </Link>

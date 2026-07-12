@@ -549,7 +549,7 @@ export default function SeoHubPage() {
           />
           <div className="relative mx-auto max-w-3xl px-6 text-center">
             <p
-              className="font-fj-mono font-medium uppercase text-[#F05A28]"
+              className="font-fj-mono font-medium uppercase text-[#B23E13]"
               style={{ fontSize: '11px', letterSpacing: '0.14em' }}
             >
               RECENT WORK

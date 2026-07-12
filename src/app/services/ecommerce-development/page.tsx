@@ -805,7 +805,7 @@ export default function EcommerceDevelopmentPage() {
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
               <p
-                className="font-fj-mono font-medium uppercase text-[#F05A28]"
+                className="font-fj-mono font-medium uppercase text-[#B23E13]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
                 THE COST OF A 1% CONVERSION RATE
@@ -826,7 +826,7 @@ export default function EcommerceDevelopmentPage() {
                   </div>
                 ))}
                 <div className="rounded-xl bg-[rgba(240,90,40,0.08)] px-4 py-3">
-                  <p className="font-fj-body text-[0.875rem] font-semibold text-[#F05A28]">
+                  <p className="font-fj-body text-[0.875rem] font-semibold text-[#B23E13]">
                     +$5,200/month from the same traffic. A custom store pays for itself in under 60 days.
                   </p>
                 </div>
@@ -872,7 +872,7 @@ export default function EcommerceDevelopmentPage() {
                 ].map((cap) => (
                   <span
                     key={cap}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {cap}
@@ -945,7 +945,7 @@ export default function EcommerceDevelopmentPage() {
                   <div key={item.platform} className="py-3.5">
                     <div className="flex items-center justify-between gap-4">
                       <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">{item.platform}</p>
-                      <p className="fj-display flex-shrink-0 font-bold text-[#F05A28]" style={{ fontSize: '0.9375rem', letterSpacing: '-0.02em' }}>
+                      <p className="fj-display flex-shrink-0 font-bold text-[#B23E13]" style={{ fontSize: '0.9375rem', letterSpacing: '-0.02em' }}>
                         {item.tier}
                       </p>
                     </div>
@@ -1028,7 +1028,7 @@ export default function EcommerceDevelopmentPage() {
                         style={{
                           fontSize: '9px',
                           letterSpacing: '0.13em',
-                          color: '#F05A28',
+                          color: '#B23E13',
                           background: 'rgba(240,90,40,0.06)',
                           border: '1px solid rgba(240,90,40,0.22)',
                         }}
@@ -1099,7 +1099,7 @@ export default function EcommerceDevelopmentPage() {
                 {['Next.js', 'Shopify Liquid', 'WooCommerce', 'BigCommerce Stencil', 'Figma', 'Stripe', 'Klaviyo', 'ReCharge'].map((tech) => (
                   <span
                     key={tech}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#F05A28]"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
                     style={{ fontSize: '10px', letterSpacing: '0.10em' }}
                   >
                     {tech}
@@ -1203,7 +1203,7 @@ export default function EcommerceDevelopmentPage() {
                   <a
                     key={slug}
                     href={`/services/ecommerce-development/${slug}`}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#F05A28] hover:bg-[rgba(240,90,40,0.15)] transition-colors"
+                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#B23E13] hover:bg-[rgba(240,90,40,0.15)] transition-colors"
                     style={{ fontSize: '10px', letterSpacing: '0.08em' }}
                   >
                     {label}
@@ -1274,7 +1274,7 @@ export default function EcommerceDevelopmentPage() {
         {/* ── 13b. HIRE ECOMMERCE DEVELOPERS ────────────────────────────────── */}
         <section className="py-14 md:py-20 bg-[#FAFAF7]">
           <div className="max-w-6xl mx-auto px-6">
-            <p className="text-sm font-semibold text-[#F05A28] uppercase tracking-widest mb-3">HIRE ECOMMERCE DEVELOPERS</p>
+            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">HIRE ECOMMERCE DEVELOPERS</p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0F0F12] mb-5 max-w-3xl">Hire ecommerce developers from a custom ecommerce development company</h2>
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div className="text-[#3A3A40] leading-relaxed space-y-4">
@@ -1291,9 +1291,9 @@ export default function EcommerceDevelopmentPage() {
                 </p>
                 <p>
                   Know your platform already? Go straight to{' '}
-                  <Link href="/services/shopify-development" className="text-[#F05A28] font-medium underline underline-offset-2">Shopify development</Link>,{' '}
-                  <Link href="/services/woocommerce-development" className="text-[#F05A28] font-medium underline underline-offset-2">WooCommerce development</Link>, or{' '}
-                  <Link href="/services/magento-development" className="text-[#F05A28] font-medium underline underline-offset-2">Magento development</Link>.
+                  <Link href="/services/shopify-development" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify development</Link>,{' '}
+                  <Link href="/services/woocommerce-development" className="text-[#B23E13] font-medium underline underline-offset-2">WooCommerce development</Link>, or{' '}
+                  <Link href="/services/magento-development" className="text-[#B23E13] font-medium underline underline-offset-2">Magento development</Link>.
                 </p>
               </div>
               <div className="rounded-2xl border border-[#E5E5E0] bg-white p-7">
@@ -1306,7 +1306,7 @@ export default function EcommerceDevelopmentPage() {
                 </ul>
                 <Link
                   href="https://calendly.com/bhavesh-factoryjet/30min"
-                  className="mt-6 inline-flex items-center justify-center rounded-full bg-[#F05A28] px-6 py-3 text-white font-semibold hover:bg-[#d94d20] transition-colors"
+                  className="mt-6 inline-flex items-center justify-center rounded-full bg-[#B23E13] px-6 py-3 text-white font-semibold hover:bg-[#d94d20] transition-colors"
                 >
                   Talk to the Founder →
                 </Link>
@@ -1327,7 +1327,7 @@ export default function EcommerceDevelopmentPage() {
         {/* Cities We Serve — internal linking for SEO */}
         <section className="py-10 bg-[#FAFAF7]">
           <div className="max-w-6xl mx-auto px-6">
-            <p className="text-sm font-semibold text-[#F05A28] uppercase tracking-widest mb-3">Serving the US</p>
+            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">Serving the US</p>
             <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">E-Commerce Development Services by City</h2>
             <div className="flex flex-wrap gap-3">
               {[
@@ -1347,7 +1347,7 @@ export default function EcommerceDevelopmentPage() {
                 { city: 'Chattanooga, TN', href: '/chattanooga/ecommerce-development/' },
                 { city: 'Fargo, ND', href: '/fargo/ecommerce-development/' },
               ].map(({ city, href }) => (
-                <Link key={href} href={href} className="px-4 py-2 rounded-full border border-[#F05A28] text-[#F05A28] text-sm font-medium hover:bg-[#F05A28] hover:text-white transition-colors">
+                <Link key={href} href={href} className="px-4 py-2 rounded-full border border-[#B23E13] text-[#B23E13] text-sm font-medium hover:bg-[#B23E13] hover:text-white transition-colors">
                   {city}
                 </Link>
               ))}
@@ -1358,7 +1358,7 @@ export default function EcommerceDevelopmentPage() {
         {/* Related Reading — internal linking to blog posts */}
         <section className="py-10 bg-[#FAFAF7]">
           <div className="max-w-6xl mx-auto px-6">
-            <p className="text-sm font-semibold text-[#F05A28] uppercase tracking-widest mb-3">Related Reading</p>
+            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">Related Reading</p>
             <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">Keep learning before you commit</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <Link href="/blog/shopify-vs-woocommerce-us-small-business-2026" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">

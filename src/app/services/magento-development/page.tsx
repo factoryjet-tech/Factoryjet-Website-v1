@@ -904,7 +904,7 @@ export default function MagentoDevelopmentPage() {
         {/* -- 12b. HIRE MAGENTO DEVELOPERS ----------------------------------- */}
         <section className="py-14 md:py-20 bg-[#FAFAF7]">
           <div className="max-w-6xl mx-auto px-6">
-            <p className="text-sm font-semibold text-[#F05A28] uppercase tracking-widest mb-3">HIRE MAGENTO DEVELOPERS</p>
+            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">HIRE MAGENTO DEVELOPERS</p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0F0F12] mb-5 max-w-3xl">Hire certified Magento developers (Magento 2 &amp; Adobe Commerce)</h2>
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div className="text-[#3A3A40] leading-relaxed space-y-4">
@@ -918,7 +918,7 @@ export default function MagentoDevelopmentPage() {
                 <p>
                   Need ongoing capacity? Hire a dedicated Magento expert on a monthly retainer for module development,
                   upgrades, and performance work. For a broader scope, see our{' '}
-                  <Link href="/services/ecommerce-development" className="text-[#F05A28] font-medium underline underline-offset-2">ecommerce development services</Link>.
+                  <Link href="/services/ecommerce-development" className="text-[#B23E13] font-medium underline underline-offset-2">ecommerce development services</Link>.
                 </p>
               </div>
               <div className="rounded-2xl border border-[#E5E5E0] bg-white p-7">
@@ -931,7 +931,7 @@ export default function MagentoDevelopmentPage() {
                 </ul>
                 <Link
                   href="https://calendly.com/bhavesh-factoryjet/30min"
-                  className="mt-6 inline-flex items-center justify-center rounded-full bg-[#F05A28] px-6 py-3 text-white font-semibold hover:bg-[#d94d20] transition-colors"
+                  className="mt-6 inline-flex items-center justify-center rounded-full bg-[#B23E13] px-6 py-3 text-white font-semibold hover:bg-[#d94d20] transition-colors"
                 >
                   Talk to the Founder →
                 </Link>
@@ -951,7 +951,7 @@ export default function MagentoDevelopmentPage() {
         {/* Related Reading — internal linking to blog posts */}
         <section className="py-10 bg-[#FAFAF7]">
           <div className="max-w-6xl mx-auto px-6">
-            <p className="text-sm font-semibold text-[#F05A28] uppercase tracking-widest mb-3">Related Reading</p>
+            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">Related Reading</p>
             <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">Keep learning before you commit</h2>
             <div className="grid grid-cols-1">
               <a href="/blog/shopify-vs-woocommerce-us-small-business-2026" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">

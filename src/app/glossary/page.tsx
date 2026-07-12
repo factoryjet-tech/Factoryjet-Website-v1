@@ -18,7 +18,7 @@ import JsonLd from '@/components/JsonLd';
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CANONICAL = 'https://factoryjet.com/glossary';
-const ORANGE = '#F05A28';
+const ORANGE = '#B23E13';
 
 export const metadata: Metadata = {
   title: 'Commerce & AI Glossary: GEO, Headless, AI Agents & More | FactoryJet',

@@ -53,7 +53,7 @@ export default function ContactView() {
       >
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-4 py-12 sm:px-6 md:min-h-[calc(100vh-72px)] md:grid-cols-2 md:py-16 lg:px-8">
           <div>
-            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.14em] text-[#F05A28]">
+            <p className="mb-4 text-[13px] font-bold uppercase tracking-[0.14em] text-[#B23E13]">
               Let&rsquo;s talk
             </p>
             <h1 className="mb-4 text-4xl font-extrabold leading-[1.04] tracking-[-0.03em] text-[#0A0F1C] sm:text-5xl">
@@ -100,7 +100,7 @@ export default function ContactView() {
       <section className="py-16 md:py-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div className="mb-9 text-center">
-            <p className="mb-3 text-[13px] font-bold uppercase tracking-[0.14em] text-[#F05A28]">
+            <p className="mb-3 text-[13px] font-bold uppercase tracking-[0.14em] text-[#B23E13]">
               Got questions?
             </p>
             <h2 className="text-2xl font-extrabold tracking-[-0.02em] text-[#0A0F1C] sm:text-3xl">
@@ -128,7 +128,7 @@ export default function ContactView() {
 
           <p className="mt-8 text-center text-sm text-slate-500">
             Still have a question?{' '}
-            <a href="#contact-form" className="font-semibold text-[#F05A28]">
+            <a href="#contact-form" className="font-semibold text-[#B23E13]">
               Ask us in the form above
             </a>
           </p>

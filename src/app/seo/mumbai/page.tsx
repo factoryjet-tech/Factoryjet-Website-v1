@@ -395,7 +395,7 @@ function MumbaiKeywordCard() {
         </p>
         <span
           className="inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 font-fj-mono text-[10px] font-bold"
-          style={{ background: '#F05A28', color: '#fff' }}
+          style={{ background: '#B23E13', color: '#fff' }}
         >
           14,900+ / mo
         </span>
@@ -560,18 +560,18 @@ export default function SeoMumbaiPage() {
               </p>
               <p>
                 We also cost significantly less than a mid-size Mumbai agency, not because we do less, but because we run lean. No marble lobbies in BKC. No account management overhead. Every rupee you pay goes into{' '}
-                <a href="/seo/technical-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">
+                <a href="/seo/technical-seo" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">
                   technical fixes
                 </a>
                 ,{' '}
-                <a href="/seo/link-building" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">
+                <a href="/seo/link-building" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">
                   real links
                 </a>
                 , and content that ranks.
               </p>
               <p>
                 And unlike most{' '}
-                <a href="/seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">
+                <a href="/seo" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">
                   SEO companies in India
                 </a>
                 , we do not lock you in. Month to month. Cancel with 30 days notice. Everything we build — your content pages, your Google Business Profile, your structured data — stays yours if you ever leave.
@@ -605,7 +605,7 @@ export default function SeoMumbaiPage() {
                     <div className="flex gap-3">
                       <div
                         className="flex-1 rounded-lg px-3 py-2.5"
-                        style={{ background: '#F05A28', color: '#fff' }}
+                        style={{ background: '#B23E13', color: '#fff' }}
                       >
                         <p className="font-fj-body text-[0.8125rem] font-semibold leading-snug">
                           {row.fj}
@@ -760,7 +760,7 @@ export default function SeoMumbaiPage() {
           />
           <div className="relative mx-auto max-w-3xl px-6 text-center">
             <p
-              className="font-fj-mono font-medium uppercase text-[#F05A28]"
+              className="font-fj-mono font-medium uppercase text-[#B23E13]"
               style={{ fontSize: '11px', letterSpacing: '0.14em' }}
             >
               RESULTS

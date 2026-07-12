@@ -329,7 +329,7 @@ export const POSTS: BlogPost[] = [
         <h2 className="font-display font-bold text-gray-900 mt-10 mb-6">The FactoryJet Palette</h2>
         <div className="flex gap-4 my-6">
             <div className="w-24 h-24 bg-[#0052CC] rounded-lg flex items-center justify-center text-white text-xs font-bold">Trust (Blue)</div>
-            <div className="w-24 h-24 bg-[#FF6B35] rounded-lg flex items-center justify-center text-white text-xs font-bold">Action (Orange)</div>
+            <div className="w-24 h-24 bg-[#B23E13] rounded-lg flex items-center justify-center text-white text-xs font-bold">Action (Orange)</div>
             <div className="w-24 h-24 bg-[#10B981] rounded-lg flex items-center justify-center text-white text-xs font-bold">Success (Green)</div>
         </div>
 

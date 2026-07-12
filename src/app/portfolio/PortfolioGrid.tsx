@@ -112,7 +112,7 @@ const PortfolioCard: React.FC<{ item: PortfolioItem }> = ({ item }) => {
                   </span>
                 </div>
                 <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-[-10px] group-hover:translate-x-0 hidden md:block">
-                  <div className="text-[#F05A28] font-medium text-sm flex items-center gap-1">
+                  <div className="text-[#B23E13] font-medium text-sm flex items-center gap-1">
                     Visit <ExternalLink size={14} />
                   </div>
                 </div>
@@ -148,7 +148,7 @@ export default function PortfolioGrid() {
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
       <section className="py-14 md:py-20 text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-xs font-semibold tracking-[0.15em] uppercase text-[#F05A28] font-fj-body mb-4">
+          <p className="text-xs font-semibold tracking-[0.15em] uppercase text-[#B23E13] font-fj-body mb-4">
             Our Portfolio
           </p>
           <h1 className="font-fj-display text-4xl md:text-5xl lg:text-6xl font-bold text-fj-ink mb-6 tracking-tight">
@@ -166,7 +166,7 @@ export default function PortfolioGrid() {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 md:px-5 py-2 md:py-2.5 rounded-full text-xs md:text-sm font-medium font-fj-body transition-all duration-200 ${
                   selectedCategory === cat
-                    ? 'bg-[#F05A28] text-white shadow-lg shadow-fj-jet-blue/25'
+                    ? 'bg-[#B23E13] text-white shadow-lg shadow-fj-jet-blue/25'
                     : 'bg-white text-fj-neutral-600 border border-fj-neutral-200 hover:border-[#F05A28]/30 hover:text-[#F05A28]'
                 }`}
               >
@@ -202,7 +202,7 @@ export default function PortfolioGrid() {
               <p className="text-fj-neutral-400 font-fj-body text-lg">No projects found for this category.</p>
               <button
                 onClick={() => setSelectedCategory('All')}
-                className="mt-4 text-[#F05A28] font-medium font-fj-body hover:underline"
+                className="mt-4 text-[#B23E13] font-medium font-fj-body hover:underline"
               >
                 View all projects
               </button>
@@ -231,7 +231,7 @@ export default function PortfolioGrid() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4">
                 <Link
                   href="/contact"
-                  className="w-full sm:w-auto bg-fj-jet-orange hover:bg-orange-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-bold font-fj-body transition-all shadow-lg hover:shadow-orange-500/30 text-center text-sm md:text-base"
+                  className="w-full sm:w-auto bg-[#B23E13] hover:bg-[#9A3510] text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-bold font-fj-body transition-all shadow-lg hover:shadow-orange-500/30 text-center text-sm md:text-base"
                 >
                   Get a Quote
                 </Link>

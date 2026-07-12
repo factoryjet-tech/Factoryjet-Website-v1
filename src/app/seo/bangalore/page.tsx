@@ -395,7 +395,7 @@ function BangaloreKeywordCard() {
         </p>
         <span
           className="inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 font-fj-mono text-[10px] font-bold"
-          style={{ background: '#F05A28', color: '#fff' }}
+          style={{ background: '#B23E13', color: '#fff' }}
         >
           10,820+ / mo
         </span>
@@ -536,14 +536,14 @@ export default function SeoBangalore() {
               </p>
               <p>
                 We work differently. For tech and SaaS companies, we build{' '}
-                <a href="/seo/technical-seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">technical SEO</a>{' '}
+                <a href="/seo/technical-seo" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">technical SEO</a>{' '}
                 that handles modern JavaScript frameworks, and{' '}
-                <a href="/seo/link-building" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">content that reaches B2B buyers</a>{' '}
+                <a href="/seo/link-building" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">content that reaches B2B buyers</a>{' '}
                 at every stage of their research, not just at the point where they are ready to call. For local Bangalore businesses, we do the map rankings and neighbourhood pages that drive real foot traffic.
               </p>
               <p>
                 We are also considerably cheaper than most Bangalore SEO agencies because we run lean — and we do not lock you in. Month to month. Everything we build stays yours. And unlike most{' '}
-                <a href="/seo" className="font-medium text-[#F05A28] underline decoration-1 underline-offset-2 hover:no-underline">SEO companies in India</a>,{' '}
+                <a href="/seo" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">SEO companies in India</a>,{' '}
                 we have 12 years of experience behind the work, not just a team of recent graduates running templates.
               </p>
             </>
@@ -567,7 +567,7 @@ export default function SeoBangalore() {
                       {row.label}
                     </p>
                     <div className="flex gap-3">
-                      <div className="flex-1 rounded-lg px-3 py-2.5" style={{ background: '#F05A28', color: '#fff' }}>
+                      <div className="flex-1 rounded-lg px-3 py-2.5" style={{ background: '#B23E13', color: '#fff' }}>
                         <p className="font-fj-body text-[0.8125rem] font-semibold leading-snug">{row.fj}</p>
                       </div>
                       <div className="flex-1 rounded-lg bg-fj-neutral-50 px-3 py-2.5">
@@ -698,7 +698,7 @@ export default function SeoBangalore() {
         <section className="relative overflow-hidden bg-fj-cream py-14 md:py-20">
           <div className="pointer-events-none absolute inset-0 opacity-[0.5]" aria-hidden="true" style={{ backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px)', backgroundSize: '28px 28px' }} />
           <div className="relative mx-auto max-w-3xl px-6 text-center">
-            <p className="font-fj-mono font-medium uppercase text-[#F05A28]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>RESULTS</p>
+            <p className="font-fj-mono font-medium uppercase text-[#B23E13]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>RESULTS</p>
             <h2 className="fj-display mt-3 font-semibold text-fj-ink" style={{ fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', lineHeight: 1.15, letterSpacing: '-0.02em' }}>
               Real SEO results for Bangalore businesses — case studies on the way
             </h2>

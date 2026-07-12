@@ -303,7 +303,7 @@ export default function CityHubPage({ city }: CityHubPageProps) {
                 <button
                   className={`w-full py-3 rounded-lg font-bold transition-all duration-300 ${
                     pkg.featured
-                      ? 'bg-[#FF6B35] text-white hover:bg-[#ff8255]'
+                      ? 'bg-[#B23E13] text-white hover:bg-[#9A3510]'
                       : 'bg-[#F8F9FA] text-[#0a0a0a] hover:bg-gray-200'
                   }`}
                 >
@@ -410,7 +410,7 @@ export default function CityHubPage({ city }: CityHubPageProps) {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-[#FF6B35] hover:bg-[#ff8255] text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 flex items-center justify-center gap-2">
+            <button className="bg-[#B23E13] hover:bg-[#9A3510] text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 flex items-center justify-center gap-2">
               Get My Free {city.name} Web Design Quote <ArrowRight size={20} />
             </button>
             <button className="border border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white/10 transition-all duration-300">
