@@ -553,9 +553,9 @@ const ContactFormModal: React.FC = () => {
         </button>
 
         {/* Header */}
-        <div className="bg-gradient-to-r from-[#F05A28] to-[#d44d1f] px-6 py-8 text-center rounded-t-2xl">
+        <div className="bg-gradient-to-r from-[#B23E13] to-[#9A3510] px-6 py-8 text-center rounded-t-2xl">
           <h2 className="text-2xl font-bold text-white mb-1">Let's Build Something Great</h2>
-          <p className="text-white/75 text-sm">No commitment. Free consultation.</p>
+          <p className="text-white/90 text-sm">No commitment. Free consultation.</p>
         </div>
 
         {/* Body */}

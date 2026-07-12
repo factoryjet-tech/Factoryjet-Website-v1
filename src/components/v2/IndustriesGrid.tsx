@@ -315,7 +315,7 @@ function OrangeStatCard({
   return (
     <div
       style={{
-        background: ORANGE,
+        background: '#B23E13',
         padding: '36px 28px',
         display: 'flex',
         flexDirection: 'column',
@@ -369,7 +369,7 @@ function OrangeStatCard({
         style={{
           marginTop: 12,
           fontSize: 14,
-          color: 'rgba(255,255,255,0.80)',
+          color: 'rgba(255,255,255,0.92)',
           lineHeight: 1.5,
           maxWidth: 220,
         }}
@@ -383,7 +383,7 @@ function OrangeStatCard({
             fontSize: 10,
             fontWeight: 700,
             letterSpacing: '0.12em',
-            color: 'rgba(255,255,255,0.55)',
+            color: 'rgba(255,255,255,0.90)',
             textTransform: 'uppercase',
             fontFamily: 'var(--font-fj-mono, monospace)',
           }}
