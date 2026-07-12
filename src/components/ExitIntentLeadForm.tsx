@@ -208,7 +208,7 @@ const ExitIntentLeadForm: React.FC<ExitIntentLeadFormProps> = ({
               </button>
             </form>
 
-            <p className="flex items-center justify-center gap-1.5 text-center text-xs text-slate-400 mt-3.5">
+            <p className="flex items-center justify-center gap-1.5 text-center text-xs text-slate-500 mt-3.5">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />
               No cost, no obligation. Founder replies within 24 hours.
             </p>
@@ -216,7 +216,7 @@ const ExitIntentLeadForm: React.FC<ExitIntentLeadFormProps> = ({
             <div className="text-center mt-2.5">
               <button
                 onClick={() => setIsVisible(false)}
-                className="text-xs text-slate-400 hover:text-slate-600 underline"
+                className="text-xs text-slate-500 hover:text-slate-600 underline"
               >
                 No thanks, I&apos;ll pass
               </button>

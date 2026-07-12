@@ -87,7 +87,7 @@ function AccordionItem({ item }: { item: FAQItem }) {
         data-faq-question
         className="flex cursor-pointer list-none items-start justify-between gap-5 py-5 [&::-webkit-details-marker]:hidden"
       >
-        <span className="font-fj-body text-[0.9375rem] font-semibold leading-[1.55] text-fj-ink transition-colors group-open:text-[#C94A1A]">
+        <span className="font-fj-body text-[0.9375rem] font-semibold leading-[1.55] text-fj-ink transition-colors group-open:text-[#B23E13]">
           {item.question}
         </span>
         {/* Chevron */}
@@ -309,7 +309,7 @@ export default function FAQ({
                           style={{ background: '#F05A28' }}
                           aria-hidden="true"
                         />
-                        <p className="font-fj-mono text-[0.6875rem] font-bold tracking-[0.12em] uppercase" style={{ color: '#C94A1A' }}>
+                        <p className="font-fj-mono text-[0.6875rem] font-bold tracking-[0.12em] uppercase" style={{ color: '#B23E13' }}>
                           {cat.label}
                         </p>
                       </div>

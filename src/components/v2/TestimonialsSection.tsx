@@ -357,7 +357,7 @@ export default function TestimonialsSection({
                       style={{
                         fontSize: '10px',
                         letterSpacing: '0.06em',
-                        color: 'rgba(245,245,242,0.38)',
+                        color: 'rgba(245,245,242,0.72)',
                       }}
                     >
                       {t.role} · {t.city}
@@ -444,7 +444,7 @@ export default function TestimonialsSection({
                 style={{
                   fontSize: '10px',
                   letterSpacing: '0.10em',
-                  color: 'rgba(245,245,242,0.35)',
+                  color: 'rgba(245,245,242,0.72)',
                 }}
               >
                 Average across 500+ projects
@@ -476,7 +476,7 @@ export default function TestimonialsSection({
                       style={{
                         fontSize: '0.75rem',
                         lineHeight: 1.45,
-                        color: 'rgba(245,245,242,0.40)',
+                        color: 'rgba(245,245,242,0.72)',
                         maxWidth: '110px',
                       }}
                     >
@@ -527,7 +527,7 @@ export default function TestimonialsSection({
                 </div>
                 <p
                   className="font-fj-body"
-                  style={{ fontSize: '0.75rem', color: 'rgba(245,245,242,0.30)' }}
+                  style={{ fontSize: '0.75rem', color: 'rgba(245,245,242,0.72)' }}
                 >
                   500+ businesses trust FactoryJet
                 </p>
@@ -546,7 +546,7 @@ export default function TestimonialsSection({
                   style={{
                     fontSize: '9px',
                     letterSpacing: '0.10em',
-                    color: 'rgba(245,245,242,0.30)',
+                    color: 'rgba(245,245,242,0.72)',
                   }}
                 >
                   {liveProjectsLabel}
@@ -575,7 +575,7 @@ export default function TestimonialsSection({
                         style={{
                           fontSize: '10px',
                           letterSpacing: '0.04em',
-                          color: 'rgba(245,245,242,0.28)',
+                          color: 'rgba(245,245,242,0.72)',
                         }}
                       >
                         {p.url}
@@ -618,7 +618,7 @@ export default function TestimonialsSection({
                   style={{
                     fontSize: '0.8125rem',
                     lineHeight: 1.55,
-                    color: 'rgba(245,245,242,0.35)',
+                    color: 'rgba(245,245,242,0.72)',
                   }}
                 >
                   Want to speak with a past client?
@@ -646,7 +646,7 @@ export default function TestimonialsSection({
         {/* ── Bottom bar ───────────────────────────────────────────────────── */}
         <div
           className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3"
-          style={{ color: 'rgba(245,245,242,0.28)' }}
+          style={{ color: 'rgba(245,245,242,0.72)' }}
         >
           <span
             className="font-fj-mono"

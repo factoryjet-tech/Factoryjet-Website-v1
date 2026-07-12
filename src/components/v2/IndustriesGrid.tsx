@@ -263,7 +263,7 @@ function IndustryCard({ industry, titleSize = 24 }: { industry: Industry; titleS
         <span
           style={{
             fontSize: 12,
-            color: 'rgba(255,255,255,0.38)',
+            color: 'rgba(255,255,255,0.75)',
             lineHeight: 1.4,
             maxWidth: 260,
           }}
@@ -454,7 +454,7 @@ function PropCardsGrid({
                 </p>
                 {s.example && !s.linkHref && (
                   <p
-                    className="mt-3 font-fj-mono uppercase text-fj-neutral-400"
+                    className="mt-3 font-fj-mono uppercase text-slate-500"
                     style={{ fontSize: '11px', letterSpacing: '0.06em' }}
                   >
                     {s.example}
@@ -603,7 +603,7 @@ export default function IndustriesGrid(props: IndustriesGridProps = {}) {
               marginTop: 14,
               fontSize: 15,
               lineHeight: 1.7,
-              color: 'rgba(255,255,255,0.42)',
+              color: 'rgba(255,255,255,0.75)',
               maxWidth: 560,
             }}
           >

@@ -167,7 +167,7 @@ export default function CityContextSection({
                       href={s.sourceUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-4 inline-flex items-center gap-1.5 rounded-full font-fj-mono font-medium text-fj-neutral-400 transition-colors hover:text-[#F05A28]"
+                      className="mt-4 inline-flex items-center gap-1.5 rounded-full font-fj-mono font-medium text-slate-600 transition-colors hover:text-[#F05A28]"
                       style={{
                         fontSize: '10px',
                         letterSpacing: '0.07em',

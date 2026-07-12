@@ -224,7 +224,7 @@ export default function ServiceJourneyRow({
               }}
             />
             <p
-              className="flex-shrink-0 font-fj-mono font-medium uppercase text-fj-neutral-400"
+              className="flex-shrink-0 font-fj-mono font-medium uppercase text-slate-500"
               style={{ fontSize: '11px', letterSpacing: '0.10em' }}
             >
               {closingNote}

@@ -219,7 +219,7 @@ export default function PortfolioGrid() {
             <div className="absolute bottom-0 right-0 w-64 h-64 bg-fj-jet-orange/20 rounded-full blur-[100px] translate-x-1/2 translate-y-1/2" />
 
             <div className="relative z-10">
-              <p className="text-xs font-semibold tracking-[0.15em] uppercase text-[#F05A28]-on-dark font-fj-body mb-4">
+              <p className="text-xs font-semibold tracking-[0.15em] uppercase text-[#F05A28] font-fj-body mb-4">
                 Start Your Project
               </p>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-fj-charcoal-text mb-4 md:mb-6 font-fj-display">

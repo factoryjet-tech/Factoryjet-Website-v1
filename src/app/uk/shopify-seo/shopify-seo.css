@@ -10,9 +10,9 @@
   --orange-bd: rgba(255,92,0,.25);
   --n100: #F0F0EE;
   --n200: #E5E5E0;
-  --n400: #9A9A95;
+  --n400: #6E6E68;
   --n600: #5A5A55;
-  --green: #059669;
+  --green: #047857;
   --green-bg: rgba(5,150,105,.08);
   --green-bd: rgba(5,150,105,.25);
   --dark: #0F0F12;
@@ -41,7 +41,7 @@
 .uk-sseo a {text-decoration:none;color:inherit}
 
 
-.uk-sseo .eyebrow {font-family:var(--fm);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);display:block;margin-bottom:12px}
+.uk-sseo .eyebrow {font-family:var(--fm);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#B23E13;display:block;margin-bottom:12px}
 
 .uk-sseo .lead {font-size:17px;line-height:1.7;color:var(--n600)}
 
@@ -59,7 +59,7 @@
 .uk-sseo .hdr-in {max-width:1120px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between}
 
 .uk-sseo .logo {font-family:var(--fd);font-weight:800;font-size:18px;color:var(--ink)}
-.uk-sseo .logo span {color:var(--orange)}
+.uk-sseo .logo span {color:#B23E13}
 
 
 
@@ -74,7 +74,7 @@
 .uk-sseo .btn-outline:hover {border-color:var(--orange);color:var(--orange)}
 
 
-.uk-sseo .chip {display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:999px;border:1px solid var(--orange-bd);background:var(--orange-bg);font-family:var(--fm);font-size:10px;font-weight:600;letter-spacing:.10em;text-transform:uppercase;color:var(--orange)}
+.uk-sseo .chip {display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:999px;border:1px solid var(--orange-bd);background:var(--orange-bg);font-family:var(--fm);font-size:10px;font-weight:600;letter-spacing:.10em;text-transform:uppercase;color:#B23E13}
 
 .uk-sseo .dot {width:8px;height:8px;border-radius:50%;display:inline-block;flex-shrink:0}
 
@@ -243,7 +243,7 @@
 
 .uk-sseo .cmp-table th {font-family:var(--fm);font-size:11px;letter-spacing:.10em;text-transform:uppercase;padding:12px 16px;text-align:left;border-bottom:2px solid var(--n200);color:var(--n400)}
 
-.uk-sseo .cmp-table th.fj {background:var(--orange-bg);color:var(--orange)}
+.uk-sseo .cmp-table th.fj {background:var(--orange-bg);color:#B23E13}
 
 .uk-sseo .cmp-table td {padding:13px 16px;font-size:14px;color:var(--n600);border-bottom:1px solid var(--n100)}
 
@@ -254,8 +254,8 @@
 .uk-sseo .cmp-table td.feat {font-weight:500;color:var(--ink)}
 
 .uk-sseo .yes {color:var(--green);font-weight:600}
-.uk-sseo .no {color:#ef4444}
-.uk-sseo .partial {color:#f59e0b}
+.uk-sseo .no {color:#b91c1c}
+.uk-sseo .partial {color:#b45309}
 
 
 .uk-sseo details {border-bottom:1px solid var(--n200)}
@@ -271,7 +271,7 @@
 .uk-sseo details[open] summary::after {content:'−'}
 
 
-.uk-sseo .city-pill {display:inline-flex;padding:8px 16px;border-radius:999px;border:1px solid var(--orange-bd);font-size:13px;font-weight:500;color:var(--orange);transition:all .2s}
+.uk-sseo .city-pill {display:inline-flex;padding:8px 16px;border-radius:999px;border:1px solid var(--orange-bd);font-size:13px;font-weight:500;color:#B23E13;transition:all .2s}
 
 .uk-sseo .city-pill:hover {background:var(--orange);color:#fff;border-color:var(--orange)}
 

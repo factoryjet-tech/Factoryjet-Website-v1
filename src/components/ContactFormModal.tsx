@@ -411,7 +411,7 @@ const ContactFormModal: React.FC = () => {
         </div>
         <div className="col-span-2 sm:col-span-1">
           <label className="block text-sm font-medium text-slate-700 mb-1.5">
-            Phone <span className="text-slate-400 font-normal">(optional, for a faster callback)</span>
+            Phone <span className="text-slate-500 font-normal">(optional, for a faster callback)</span>
           </label>
           <input
             type="tel" name="phone" value={formData.phone} onChange={handleInputChange}
@@ -421,7 +421,7 @@ const ContactFormModal: React.FC = () => {
         </div>
         <div className="col-span-2 sm:col-span-1">
           <label className="block text-sm font-medium text-slate-700 mb-1.5">
-            Company <span className="text-slate-400 font-normal">(optional)</span>
+            Company <span className="text-slate-500 font-normal">(optional)</span>
           </label>
           <input
             type="text" name="company" value={formData.company} onChange={handleInputChange}
@@ -431,7 +431,7 @@ const ContactFormModal: React.FC = () => {
         </div>
         <div className="col-span-2">
           <label className="block text-sm font-medium text-slate-700 mb-1.5">
-            Anything we should know? <span className="text-slate-400 font-normal">(optional)</span>
+            Anything we should know? <span className="text-slate-500 font-normal">(optional)</span>
           </label>
           <textarea
             name="message" value={formData.message} onChange={handleInputChange}
@@ -477,7 +477,7 @@ const ContactFormModal: React.FC = () => {
           )}
         </button>
       </div>
-      <p className="text-center text-xs text-slate-400">We reply within 24 hours. No spam, no obligation.</p>
+      <p className="text-center text-xs text-slate-500">We reply within 24 hours. No spam, no obligation.</p>
     </div>
   );
 
@@ -496,7 +496,7 @@ const ContactFormModal: React.FC = () => {
 
       {/* Divider */}
       <div className="border-t border-slate-100 pt-5 mb-5">
-        <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">
+        <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-4">
           Don&rsquo;t want to wait?
         </p>
         {/* Calendly CTA — primary action on success */}
@@ -512,14 +512,14 @@ const ContactFormModal: React.FC = () => {
         <button
           type="button"
           onClick={handleClose}
-          className="w-full text-slate-400 text-sm py-2 hover:text-slate-600 transition-colors"
+          className="w-full text-slate-500 text-sm py-2 hover:text-slate-600 transition-colors"
         >
           I&rsquo;ll wait for the email reply
         </button>
       </div>
 
       {/* Trust line */}
-      <p className="text-xs text-slate-400">
+      <p className="text-xs text-slate-500">
         500+ businesses served · No spam · No obligation
       </p>
     </div>

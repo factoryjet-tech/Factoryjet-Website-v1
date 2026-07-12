@@ -112,13 +112,13 @@ const Hero = React.memo(({ searchValue, onSearchChange }: { searchValue: string;
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-fj-jet-orange/15 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative max-w-4xl mx-auto px-4 pt-24 pb-28 text-center">
-        <Badge className="bg-[#F05A28]/20 text-[#F05A28]-on-dark border border-[#F05A28]/30 mb-6 backdrop-blur-sm">
+        <Badge className="bg-[#F05A28]/20 text-[#F05A28] border border-[#F05A28]/30 mb-6 backdrop-blur-sm">
           <Sparkles size={12} className="mr-1" aria-hidden="true" /> AI-Native Agency Help Center
         </Badge>
 
         <h1 className="font-fj-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight">
           How can we help you{' '}
-          <span className="text-[#F05A28]-on-dark">scale?</span>
+          <span className="text-[#F05A28]">scale?</span>
         </h1>
 
         <p className="text-lg md:text-xl text-fj-charcoal-muted font-fj-body mb-10 max-w-2xl mx-auto leading-relaxed">

@@ -135,7 +135,7 @@ const UsPricingTabs: React.FC = () => {
           ))}
         </div>
 
-        <p className="mt-8 text-center text-xs text-fj-ink/45 font-fj-body">
+        <p className="mt-8 text-center text-xs text-fj-ink/60 font-fj-body">
           Fixed-price, milestone-paid, quoted up front after a free discovery call. Copywriting, premium licenses, and custom photography are itemized before you sign. AI SEO retainers are month-to-month — no annual contracts.
         </p>
       </div>

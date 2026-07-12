@@ -197,9 +197,9 @@ export default function AboutPage() {
             </div>
             <p className="mt-8 text-[14px] text-[#6E635A]">
               Explore our{' '}
-              <Link href="/services/ecommerce-development" className="font-semibold text-[#C94A1A] underline">e-commerce development services</Link>,{' '}
-              <Link href="/services/shopify-development" className="font-semibold text-[#C94A1A] underline">Shopify development</Link>, or{' '}
-              <Link href="/case-studies" className="font-semibold text-[#C94A1A] underline">client work</Link>.
+              <Link href="/services/ecommerce-development" className="font-semibold text-[#B23E13] underline">e-commerce development services</Link>,{' '}
+              <Link href="/services/shopify-development" className="font-semibold text-[#B23E13] underline">Shopify development</Link>, or{' '}
+              <Link href="/case-studies" className="font-semibold text-[#B23E13] underline">client work</Link>.
             </p>
           </div>
         </section>

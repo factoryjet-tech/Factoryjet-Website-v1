@@ -124,15 +124,15 @@ export default function PricingPage() {
             <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {STEPS.map((s) => (
                 <article key={s.n} className="rounded-2xl border border-[#E7DED6] p-6">
-                  <div className="font-fj-mono text-xs font-bold text-[#C94A1A]">{s.n}</div>
+                  <div className="font-fj-mono text-xs font-bold text-[#B23E13]">{s.n}</div>
                   <h3 className="mt-2 font-fj-display text-lg font-bold">{s.t}</h3>
                   <p className="mt-2 text-[15px] leading-relaxed text-[#46403B]">{s.d}</p>
                 </article>
               ))}
             </div>
             <p className="mt-8 text-[14px] text-[#6E635A]">
-              See our <Link href="/services/ecommerce-development" className="font-semibold text-[#C94A1A] underline">e-commerce development services</Link> or read how we think about{' '}
-              <Link href="/website-cost" className="font-semibold text-[#C94A1A] underline">what an ecommerce build costs</Link>.
+              See our <Link href="/services/ecommerce-development" className="font-semibold text-[#B23E13] underline">e-commerce development services</Link> or read how we think about{' '}
+              <Link href="/website-cost" className="font-semibold text-[#B23E13] underline">what an ecommerce build costs</Link>.
             </p>
           </div>
         </section>

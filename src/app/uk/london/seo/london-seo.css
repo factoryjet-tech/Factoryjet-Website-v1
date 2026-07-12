@@ -5,7 +5,7 @@
   --orange:#F05A28; --orange-deep:#C2440F; --orange-tint:#FEEDE6;
   --blue:#0052CC; --ink:#1A1A1A; --navy:#0F0F12; --cream:#FAFAF7; --white:#fff;
   --n100:#F5F5F2; --n200:#EFEFEA; --n300:#D9D9D2; --n400:#6B6B62; --n500:#57574f;
-  --green:#10B981;
+  --green:#047857;
   --body:'Inter',sans-serif; --display:'Plus Jakarta Sans',sans-serif; --mono:'Geist Mono',monospace;
   --ease:cubic-bezier(.22,1,.36,1);
 }
@@ -25,7 +25,7 @@
 .uk-londonseo p {color:var(--n500);font-size:15px}
 .uk-londonseo a {text-decoration:none;color:inherit}
 
-.uk-londonseo .eyebrow {font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);display:block}
+.uk-londonseo .eyebrow {font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#B23E13;display:block}
 
 /* ─── layout ─── */
 .uk-londonseo .wrap {max-width:1120px;margin:0 auto;padding:0 24px;position:relative}
@@ -71,7 +71,7 @@
 
 /* ─── tilt proof card ─── */
 .uk-londonseo .proof {background:#fff;border:1px solid var(--n200);border-top:2px solid var(--orange);border-radius:18px;padding:22px;box-shadow:0 30px 60px -36px rgba(2,8,23,.3)}
-.uk-londonseo .proof .ph {font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:12px}
+.uk-londonseo .proof .ph {font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#B23E13;margin-bottom:12px}
 .uk-londonseo .prow {display:flex;justify-content:space-between;align-items:flex-start;padding:12px 0;border-top:1px solid var(--n100)}
 .uk-londonseo .prow:first-of-type {border-top:none}
 .uk-londonseo .pl {font-family:var(--display);font-weight:700;font-size:14px}
@@ -85,7 +85,7 @@
 .uk-londonseo .grid4 {display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .uk-londonseo .def {background:#fff;border:1px solid var(--n200);border-left:3px solid var(--orange);border-radius:14px;padding:22px 24px;transition:transform .3s var(--ease),box-shadow .3s}
 .uk-londonseo .def:hover {transform:translateY(-3px);box-shadow:0 20px 40px -30px rgba(2,8,23,.3)}
-.uk-londonseo .def .lab {font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange)}
+.uk-londonseo .def .lab {font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#B23E13}
 .uk-londonseo .def p {font-size:16px;color:var(--ink);margin-top:8px}
 .uk-londonseo .lead {font-size:16px;color:var(--n500);margin-top:14px}
 
@@ -99,12 +99,12 @@
 .uk-londonseo .card {background:#fff;border:1px solid var(--n200);border-radius:16px;padding:22px;transition:transform .3s var(--ease),border-color .3s,box-shadow .3s}
 .uk-londonseo .card:hover {transform:translateY(-4px);border-color:var(--orange);box-shadow:0 22px 44px -30px rgba(240,90,40,.35)}
 .uk-londonseo .svc h3 {font-size:15px;display:flex;align-items:center;gap:8px}
-.uk-londonseo .svc h3 .n {font-family:var(--mono);font-size:11px;color:var(--orange)}
+.uk-londonseo .svc h3 .n {font-family:var(--mono);font-size:11px;color:#B23E13}
 .uk-londonseo .card p {font-size:12.5px;color:var(--n500);margin-top:8px}
 
 /* ─── process steps ─── */
 .uk-londonseo .steps {display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:30px}
-.uk-londonseo .step .k {font-family:var(--mono);font-size:12px;color:var(--orange)}
+.uk-londonseo .step .k {font-family:var(--mono);font-size:12px;color:#B23E13}
 .uk-londonseo .step h3 {font-size:15px;margin:10px 0 7px}
 .uk-londonseo .step p {font-size:12px;color:var(--n500)}
 
@@ -134,10 +134,10 @@
 .uk-londonseo .explorer {display:grid;grid-template-columns:230px 1fr;gap:24px;margin-top:28px}
 .uk-londonseo .exnav {display:flex;flex-direction:column;gap:4px}
 .uk-londonseo .exnav button {text-align:left;font-family:var(--body);font-size:13.5px;font-weight:600;color:var(--n500);background:transparent;border:none;border-left:2px solid var(--n200);padding:11px 14px;cursor:pointer;transition:.2s}
-.uk-londonseo .exnav button.on {color:var(--orange);border-left-color:var(--orange);background:#fff}
+.uk-londonseo .exnav button.on {color:#B23E13;border-left-color:var(--orange);background:#fff}
 .uk-londonseo .expanel {background:#fff;border:1px solid var(--n200);border-radius:18px;padding:28px;min-height:220px;position:relative;overflow:hidden}
 .uk-londonseo .expanel-item[hidden] {display:none}
-.uk-londonseo .expanel .tag {font-family:var(--mono);font-size:11px;color:var(--orange);letter-spacing:.1em;text-transform:uppercase}
+.uk-londonseo .expanel .tag {font-family:var(--mono);font-size:11px;color:#B23E13;letter-spacing:.1em;text-transform:uppercase}
 .uk-londonseo .expanel h3 {font-size:22px;margin:8px 0 6px}
 .uk-londonseo .expanel .sect {font-size:13px;color:var(--n400);font-family:var(--mono);margin-bottom:12px}
 .uk-londonseo .expanel p {font-size:15px;color:var(--n500)}
@@ -148,7 +148,7 @@
 .uk-londonseo .cmp-table {width:100%;border-collapse:collapse;margin-top:26px;background:#fff;border:1px solid var(--n200);border-radius:16px;overflow:hidden}
 .uk-londonseo .cmp-table th, .uk-londonseo .cmp-table td {padding:13px 15px;text-align:left;font-size:13.5px;border-bottom:1px solid var(--n100)}
 .uk-londonseo .cmp-table thead th {font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--n400);background:var(--n100)}
-.uk-londonseo .cmp-table thead th.fj {color:var(--orange)}
+.uk-londonseo .cmp-table thead th.fj {color:#B23E13}
 .uk-londonseo .cmp-table td:first-child {font-weight:600;color:var(--ink)}
 .uk-londonseo .cmp-table tr:last-child td {border-bottom:none}
 .uk-londonseo .cmp-table td.fj {background:#FFF8F5;font-weight:600;color:var(--ink)}
@@ -176,7 +176,7 @@
 .uk-londonseo .drow-kd {font-family:var(--mono);font-size:9px;color:var(--n400);margin-top:5px}
 .uk-londonseo .dsrc {text-align:center;padding:9px;font-family:var(--mono);font-size:9.5px;color:var(--n400)}
 .uk-londonseo .pills {display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
-.uk-londonseo .pills a {font-size:12px;color:var(--orange);border:1px solid #f3c9b6;border-radius:999px;padding:6px 12px;transition:.2s}
+.uk-londonseo .pills a {font-size:12px;color:#B23E13;border:1px solid #f3c9b6;border-radius:999px;padding:6px 12px;transition:.2s}
 .uk-londonseo .pills a:hover {background:var(--orange);color:#fff}
 
 /* ─── final CTA ─── */

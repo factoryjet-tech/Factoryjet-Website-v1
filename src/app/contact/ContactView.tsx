@@ -76,7 +76,7 @@ export default function ContactView() {
               ))}
             </ul>
 
-            <p className="text-[13px] text-slate-400">
+            <p className="text-[13px] text-slate-500">
               No commitment. Free consultation. No spam.
             </p>
           </div>

@@ -151,7 +151,7 @@ function HeroContent({
               style={{
                 border: '1px solid rgba(240,90,40,0.25)',
                 background: 'rgba(240,90,40,0.08)',
-                color: '#C94A1A',
+                color: '#B23E13',
               }}
             >
               {/* Pulsing orange live-indicator dot */}
@@ -176,7 +176,7 @@ function HeroContent({
               style={{
                 border: '1px solid rgba(240,90,40,0.25)',
                 background: 'rgba(240,90,40,0.08)',
-                color: '#C94A1A',
+                color: '#B23E13',
               }}
             >
               <span className="relative flex h-2 w-2 flex-shrink-0" aria-hidden="true">
