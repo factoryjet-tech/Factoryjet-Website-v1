@@ -252,6 +252,7 @@ export default function LondonHubPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <div className="uk-londonhub">
+        <main>
 
         {/* ═══ 1. HERO ═══ */}
         <section className="hero dotbg">
@@ -489,6 +490,7 @@ export default function LondonHubPage() {
           </div>
         </section>
 
+        </main>
         <Footer />
       </div>
     </>

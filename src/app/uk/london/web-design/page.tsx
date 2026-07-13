@@ -158,6 +158,7 @@ export default function LondonWebDesignPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <div className="uk-londonwd">
+        <main>
 
         {/* ═══ 1. HERO ═══ */}
         <section className="sec-lg dot-grid" style={{ position: 'relative' }}>
@@ -720,6 +721,7 @@ export default function LondonWebDesignPage() {
           </div>
         </section>
 
+        </main>
         <Footer />
       </div>
     </>

@@ -76,6 +76,7 @@ export default function ShopifyDevelopmentPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="uk-sdev">
+      <main>
 
 
 {/* ════════════════════════════════════════════════
@@ -1120,6 +1121,7 @@ export default function ShopifyDevelopmentPage() {
 </section>
 
 
+</main>
 </div>
       <Footer />
     </>

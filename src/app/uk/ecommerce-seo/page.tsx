@@ -76,6 +76,7 @@ export default function EcommerceSeoPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="uk-eseo">
+<main>
 
 
 {/* ════════════════════════════════════════════════
@@ -1074,6 +1075,7 @@ export default function EcommerceSeoPage() {
 </section>
 
 
+</main>
 </div>
       <Footer />
     </>

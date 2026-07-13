@@ -94,9 +94,9 @@ const PortfolioCard: React.FC<{ item: PortfolioItem }> = ({ item }) => {
           <div className="p-4 md:p-6 flex flex-col flex-grow font-fj-body">
             <div className="flex justify-between items-start mb-2">
               <div className="flex-1">
-                <h3 className="text-lg md:text-xl font-bold text-fj-ink mb-1 font-fj-display group-hover:text-[#F05A28] transition-colors">
+                <h2 className="text-lg md:text-xl font-bold text-fj-ink mb-1 font-fj-display group-hover:text-[#F05A28] transition-colors">
                   {item.name}
-                </h3>
+                </h2>
                 <p className="text-fj-neutral-400 text-xs md:text-sm line-clamp-2 leading-relaxed">
                   {item.description}
                 </p>

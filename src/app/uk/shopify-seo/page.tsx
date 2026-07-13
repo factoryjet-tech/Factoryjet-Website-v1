@@ -76,6 +76,7 @@ export default function ShopifySeoPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="uk-sseo">
+        <main>
 
 
 {/* ════════════════════════════════════════════════
@@ -964,6 +965,7 @@ export default function ShopifySeoPage() {
 </section>
 
 
+        </main>
 </div>
       <Footer />
     </>

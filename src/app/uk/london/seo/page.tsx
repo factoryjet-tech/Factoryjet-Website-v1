@@ -225,6 +225,7 @@ export default function LondonSeoPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <div className="uk-londonseo">
+        <main>
 
         {/* ═══ 1. HERO ═══ */}
         <section className="hero dotbg">
@@ -596,6 +597,7 @@ export default function LondonSeoPage() {
           </div>
         </section>
 
+        </main>
         <Footer />
       </div>
     </>

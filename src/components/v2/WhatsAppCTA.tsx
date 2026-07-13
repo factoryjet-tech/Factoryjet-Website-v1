@@ -37,7 +37,9 @@ export default function WhatsAppCTA({
 }: WhatsAppCTAProps) {
   const message = `Hi FactoryJet, I'm interested in ${service} in ${city}.`;
   const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-  const ariaLabel = `Message FactoryJet on WhatsApp about ${service} in ${city}`;
+  // Accessible name must contain the visible label ("Message on WhatsApp") to
+  // pass the label-content-name-mismatch audit.
+  const ariaLabel = `Message on WhatsApp about ${service} in ${city}`;
 
   const isDark = variant === 'dark';
 
