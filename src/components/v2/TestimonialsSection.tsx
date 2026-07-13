@@ -337,7 +337,7 @@ export default function TestimonialsSection({
                           ? 'rgba(240,90,40,0.20)'
                           : 'rgba(255,255,255,0.08)',
                         color: t.warmAvatar
-                          ? '#F05A28'
+                          ? '#FF8A5C'
                           : 'rgba(245,245,242,0.60)',
                         fontSize: '13px',
                       }}
@@ -392,7 +392,7 @@ export default function TestimonialsSection({
                     textTransform: 'uppercase',
                     background: 'rgba(240,90,40,0.12)',
                     border: '1px solid rgba(240,90,40,0.28)',
-                    color: '#F05A28',
+                    color: '#FF8A5C',
                     padding: '3px 8px',
                     borderRadius: '4px',
                   }}
@@ -498,7 +498,7 @@ export default function TestimonialsSection({
                           ? 'rgba(240,90,40,0.25)'
                           : 'rgba(255,255,255,0.08)',
                         color: t.warmAvatar
-                          ? '#F05A28'
+                          ? '#FF8A5C'
                           : 'rgba(245,245,242,0.55)',
                         fontSize: '9px',
                         border: '2px solid #0F0F12',
@@ -588,7 +588,7 @@ export default function TestimonialsSection({
                           fontSize: '9px',
                           letterSpacing: '0.08em',
                           background: 'rgba(240,90,40,0.18)',
-                          color: '#F05A28',
+                          color: '#FF8A5C',
                           padding: '2px 7px',
                           borderRadius: '4px',
                           border: '1px solid rgba(240,90,40,0.30)',
