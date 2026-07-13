@@ -67,7 +67,7 @@
 
 .uk-eseo .btn {display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:999px;font-family:var(--fd);font-size:15px;font-weight:600;cursor:pointer;transition:all .2s;text-decoration:none}
 
-.uk-eseo .btn-primary {background:var(--orange);color:#fff;border:none}
+.uk-eseo .btn-primary {background:#B23E13;color:#fff;border:none}
 .uk-eseo .btn-primary:hover {background:var(--orange-h)}
 
 .uk-eseo .btn-outline {background:transparent;color:var(--ink);border:1.5px solid var(--n200)}

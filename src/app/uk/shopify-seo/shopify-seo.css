@@ -67,7 +67,7 @@
 
 .uk-sseo .btn {display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:999px;font-family:var(--fd);font-size:15px;font-weight:600;cursor:pointer;transition:all .2s;text-decoration:none}
 
-.uk-sseo .btn-primary {background:var(--orange);color:#fff;border:none}
+.uk-sseo .btn-primary {background:#B23E13;color:#fff;border:none}
 .uk-sseo .btn-primary:hover {background:var(--orange-h)}
 
 .uk-sseo .btn-outline {background:transparent;color:var(--ink);border:1.5px solid var(--n200)}
@@ -111,7 +111,7 @@
 
 .uk-sseo .scorecard-note {font-family:var(--fm);font-size:11px;color:var(--n400);margin-top:2px}
 
-.uk-sseo .scorecard-val {font-family:var(--fd);font-size:18px;font-weight:700;color:var(--orange);letter-spacing:-.02em;flex-shrink:0}
+.uk-sseo .scorecard-val {font-family:var(--fd);font-size:18px;font-weight:700;color:#B23E13;letter-spacing:-.02em;flex-shrink:0}
 
 
 /* Problem–Fix pairs — unique layout for this page */

@@ -68,7 +68,7 @@ export default function ContactMethods() {
               target="_blank"
               rel="noopener noreferrer"
               data-cta="whatsapp"
-              className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[#1FA855]"
+              className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[#0E7A3A]"
             >
               Chat on WhatsApp
               <span aria-hidden="true">&rarr;</span>

@@ -88,7 +88,7 @@
   cursor:pointer;transition:all .2s;text-decoration:none;
 }
 
-.uk-sdev .btn-primary {background:var(--orange);color:#fff;border:none}
+.uk-sdev .btn-primary {background:#B23E13;color:#fff;border:none}
 
 .uk-sdev .btn-primary:hover {background:var(--orange-h)}
 
@@ -196,7 +196,7 @@
 
 .uk-sdev .scorecard-val {
   font-family:var(--fd);font-size:18px;font-weight:700;
-  color:var(--orange);letter-spacing:-.02em;flex-shrink:0;
+  color:#B23E13;letter-spacing:-.02em;flex-shrink:0;
 }
 
 
