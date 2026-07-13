@@ -203,7 +203,7 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
           </div>
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1.5">
-              Phone <span className="text-slate-400 font-normal">(optional)</span>
+              Phone <span className="text-slate-500 font-normal">(optional)</span>
             </label>
             <input type="tel" name="phone" value={phone} onChange={(e) => setPhone(e.target.value)}
               placeholder={region === 'us' ? '(555) 000-0000' : region === 'uk' ? '+44 7700 000000' : '+91 96999 77699'}
@@ -211,7 +211,7 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
           </div>
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1.5">
-              Company <span className="text-slate-400 font-normal">(optional)</span>
+              Company <span className="text-slate-500 font-normal">(optional)</span>
             </label>
             <input type="text" name="company" value={company} onChange={(e) => setCompany(e.target.value)}
               placeholder="Acme Inc." autoComplete="organization" className={inputCls} />
@@ -220,7 +220,7 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
 
         <div>
           <label className="block text-sm font-medium text-slate-700 mb-1.5">
-            Anything we should know? <span className="text-slate-400 font-normal">(optional)</span>
+            Anything we should know? <span className="text-slate-500 font-normal">(optional)</span>
           </label>
           <textarea name="message" value={message} onChange={(e) => setMessage(e.target.value)} rows={4}
             placeholder="A sentence about your project, timeline, or goals…"
@@ -246,7 +246,7 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
           className="w-full bg-[#B23E13] hover:bg-[#d44d1f] text-white font-bold text-base py-3.5 rounded-xl shadow-lg transition-all disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2">
           {isSubmitting ? (<><Loader2 className="w-5 h-5 animate-spin" />Sending…</>) : (<>Send request <Send className="w-5 h-5" /></>)}
         </button>
-        <p className="text-center text-xs text-slate-400">We reply within 24 hours. No spam, no obligation.</p>
+        <p className="text-center text-xs text-slate-500">We reply within 24 hours. No spam, no obligation.</p>
       </form>
     </div>
   );

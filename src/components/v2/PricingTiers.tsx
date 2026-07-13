@@ -109,7 +109,7 @@ export default function PricingTiers({
         {/* Footnote */}
         {footnote && (
           <p
-            className="mt-8 text-center font-fj-body text-fj-neutral-400"
+            className="mt-8 text-center font-fj-body text-slate-500"
             style={{ fontSize: '0.8125rem' }}
           >
             {footnote}

@@ -92,7 +92,7 @@ export default function Pricing() {
           <p
             className="font-semibold uppercase"
             style={{
-              color: "#F05A28",
+              color: "#B23E13",
               fontSize: "13px",
               letterSpacing: "0.15em",
               marginBottom: "16px",
@@ -147,7 +147,7 @@ export default function Pricing() {
                 <th
                   className="text-left uppercase"
                   style={{
-                    background: "#F05A28",
+                    background: "#B23E13",
                     padding: "14px 20px",
                     fontSize: "13px",
                     letterSpacing: "0.08em",
@@ -195,7 +195,7 @@ export default function Pricing() {
                     <span
                       style={{
                         fontSize: "14px",
-                        color: "#F05A28",
+                        color: "#B23E13",
                         fontWeight: 600,
                       }}
                     >
@@ -236,7 +236,7 @@ export default function Pricing() {
             <p
               className="font-semibold uppercase"
               style={{
-                color: "#F05A28",
+                color: "#B23E13",
                 fontSize: "12px",
                 letterSpacing: "0.12em",
                 marginBottom: "16px",
@@ -284,7 +284,7 @@ export default function Pricing() {
                 openModal();
               }}
               className="px-8 py-4 rounded-lg text-white font-semibold text-center transition-all duration-200 hover:brightness-110"
-              style={{ background: "#FF6B35", fontSize: "15px" }}
+              style={{ background: "#B23E13", fontSize: "15px" }}
             >
               Get Your Free Quote →
             </button>

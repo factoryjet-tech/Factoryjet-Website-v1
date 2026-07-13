@@ -362,7 +362,7 @@ export default function Services() {
         >
           <p
             style={{
-              color: "#F05A28",
+              color: "#B23E13",
               fontFamily: "var(--font-sans)",
               fontWeight: 600,
               fontSize: 13,

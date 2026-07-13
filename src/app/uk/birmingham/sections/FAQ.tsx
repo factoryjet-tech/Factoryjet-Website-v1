@@ -150,7 +150,7 @@ export default function FAQ() {
               <p
                 data-faq-head
                 style={{
-                  color: "#FF6B35",
+                  color: "#B23E13",
                   fontFamily: "var(--font-sans)",
                   fontWeight: 600,
                   fontSize: 12,
@@ -217,7 +217,7 @@ export default function FAQ() {
                       minWidth: 40,
                       backgroundColor: "rgba(0,82,204,0.08)",
                       border: "1px solid rgba(0,82,204,0.2)",
-                      color: "#F05A28",
+                      color: "#B23E13",
                       fontFamily: "var(--font-sans)",
                       fontSize: 13,
                       fontVariantNumeric: "tabular-nums",

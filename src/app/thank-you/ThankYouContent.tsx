@@ -122,7 +122,7 @@ export default function ThankYouContent() {
           See our work
         </a>
       </div>
-      <p className="mt-1.5 text-[13px] text-slate-400">
+      <p className="mt-1.5 text-[13px] text-slate-500">
         No commitment · We reply within 24 hours · No spam
       </p>
 
@@ -157,7 +157,7 @@ export default function ThankYouContent() {
 
       <a
         href="/"
-        className="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-slate-400 transition-colors hover:text-[#F05A28]"
+        className="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-slate-500 transition-colors hover:text-[#F05A28]"
       >
         Back to home <ArrowRight size={15} />
       </a>

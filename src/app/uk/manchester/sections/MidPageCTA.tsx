@@ -36,7 +36,7 @@ export default function MidPageCTA() {
           }}
           className="w-full lg:w-auto text-center font-semibold text-white rounded-lg transition-all duration-200 hover:brightness-110 flex-shrink-0"
           style={{
-            background: "#FF6B35",
+            background: "#B23E13",
             padding: "16px 32px",
             fontSize: "15px",
           }}

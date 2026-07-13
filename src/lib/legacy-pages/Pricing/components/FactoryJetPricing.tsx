@@ -757,7 +757,7 @@ const PricingCard: React.FC<{
           <div key={idx} className="border-b border-slate-100 last:border-0">
             {section.category && (
               <div className="bg-slate-50/80 px-4 md:px-6 py-1.5 md:py-2">
-                <h4 className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">
+                <h4 className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-widest">
                   {section.category}
                 </h4>
               </div>
@@ -958,7 +958,7 @@ const FactoryJetPricing = () => {
                         </span>
                         <span
                           className={`text-[10px] md:text-xs ${
-                            isActive ? "text-orange-200" : "text-slate-400"
+                            isActive ? "text-orange-200" : "text-slate-500"
                           }`}
                         >
                           5 Questions

@@ -166,7 +166,7 @@ export default function FinalCTA() {
               className="inline-flex items-center justify-center gap-2"
               style={{
                 backgroundColor: "#FFFFFF",
-                color: "#F05A28",
+                color: "#B23E13",
                 padding: "17px 32px",
                 borderRadius: 8,
                 fontFamily: "var(--font-sans)",

@@ -110,7 +110,7 @@ const PortfolioCard: React.FC<{ item: PortfolioItem }> = ({ item }) => {
 
             <div className="mt-auto pt-4 md:pt-5 border-t border-slate-100">
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2 text-xs md:text-sm text-slate-400">
+                <div className="flex items-center gap-2 text-xs md:text-sm text-slate-500">
                   <Globe size={14} className="text-primary" />
                   <span className="truncate max-w-[180px]">
                     {item.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')}

@@ -41,7 +41,7 @@ interface Service {
 /* ─────────────────────────────────────────────────────────────────────────────
    Constants
 ───────────────────────────────────────────────────────────────────────────── */
-const ORANGE = '#F05A28';
+const ORANGE = '#B23E13';
 const AUTO_INTERVAL = 5000;
 const PROGRESS_TICK = 50;
 const RESUME_DELAY = 3000;

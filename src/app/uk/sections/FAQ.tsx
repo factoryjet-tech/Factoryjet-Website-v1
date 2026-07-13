@@ -383,7 +383,7 @@ export default function FAQ() {
               <p
                 data-faq-head
                 style={{
-                  color: "#F05A28",
+                  color: "#B23E13",
                   fontFamily: "var(--font-sans)",
                   fontWeight: 600,
                   fontSize: 12,
@@ -441,7 +441,7 @@ export default function FAQ() {
                             fontFamily: "var(--font-sans)",
                             fontWeight: isActive ? 600 : 500,
                             fontSize: 14,
-                            color: isActive ? "#F05A28" : "#6b7280",
+                            color: isActive ? "#B23E13" : "#6b7280",
                             backgroundColor: isActive ? "#F0F7FF" : "transparent",
                             borderLeft: isActive
                               ? "3px solid #F05A28"
@@ -459,7 +459,7 @@ export default function FAQ() {
                           {cat.count != null && (
                             <span
                               style={{
-                                color: isActive ? "#F05A28" : "#9CA3AF",
+                                color: isActive ? "#B23E13" : "#9CA3AF",
                                 fontSize: 12,
                                 fontWeight: 500,
                                 fontVariantNumeric: "tabular-nums",
@@ -498,9 +498,9 @@ export default function FAQ() {
                         padding: "10px 16px",
                         minHeight: 44,
                         color: isActive ? "#FFFFFF" : "#374151",
-                        backgroundColor: isActive ? "#F05A28" : "#F1F5F9",
+                        backgroundColor: isActive ? "#B23E13" : "#F1F5F9",
                         border: isActive
-                          ? "1px solid #F05A28"
+                          ? "1px solid #B23E13"
                           : "1px solid #E2E8F0",
                       }}
                     >

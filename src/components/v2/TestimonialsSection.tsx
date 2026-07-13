@@ -293,7 +293,7 @@ export default function TestimonialsSection({
               style={{
                 fontSize: '1.0625rem',
                 lineHeight: 1.65,
-                color: 'rgba(245,245,242,0.50)',
+                color: 'rgba(245,245,242,0.72)',
                 maxWidth: '560px',
               }}
             >

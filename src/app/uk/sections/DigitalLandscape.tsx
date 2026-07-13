@@ -96,7 +96,7 @@ export default function DigitalLandscape() {
         <div className="flex flex-col items-center text-center">
           <p
             style={{
-              color: "#F05A28",
+              color: "#B23E13",
               fontFamily: "var(--font-sans)",
               fontWeight: 600,
               fontSize: 13,

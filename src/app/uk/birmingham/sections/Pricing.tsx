@@ -141,7 +141,7 @@ export default function Pricing() {
         <div className="flex flex-col items-center text-center">
           <p
             style={{
-              color: "#F05A28",
+              color: "#B23E13",
               fontFamily: "var(--font-sans)",
               fontWeight: 600,
               fontSize: 13,
@@ -308,7 +308,7 @@ export default function Pricing() {
             }}
             className="inline-flex items-center justify-center"
             style={{
-              backgroundColor: "#F05A28",
+              backgroundColor: "#B23E13",
               color: "#FFFFFF",
               padding: "16px 28px",
               borderRadius: 8,

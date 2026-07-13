@@ -291,7 +291,7 @@ export default function CaseStudy() {
           <p
             className="font-semibold uppercase"
             style={{
-              color: "#F05A28",
+              color: "#B23E13",
               fontSize: "13px",
               letterSpacing: "0.15em",
               marginBottom: "16px",

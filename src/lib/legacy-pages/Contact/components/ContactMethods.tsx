@@ -110,19 +110,19 @@ const ContactMethods: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
               <div>
-                <span className="block text-slate-400 text-xs uppercase font-semibold">General Inquiries</span>
+                <span className="block text-slate-500 text-xs uppercase font-semibold">General Inquiries</span>
                 <a href="mailto:connect@factoryjet.com" className="text-jetBlue hover:underline font-medium">connect@factoryjet.com</a>
               </div>
               <div>
-                <span className="block text-slate-400 text-xs uppercase font-semibold">Sales</span>
+                <span className="block text-slate-500 text-xs uppercase font-semibold">Sales</span>
                 <a href="mailto:connect@factoryjet.com" className="text-jetBlue hover:underline font-medium">connect@factoryjet.com</a>
               </div>
               <div>
-                <span className="block text-slate-400 text-xs uppercase font-semibold">Support</span>
+                <span className="block text-slate-500 text-xs uppercase font-semibold">Support</span>
                 <a href="mailto:connect@factoryjet.com" className="text-jetBlue hover:underline font-medium">connect@factoryjet.com</a>
               </div>
               <div>
-                <span className="block text-slate-400 text-xs uppercase font-semibold">Careers</span>
+                <span className="block text-slate-500 text-xs uppercase font-semibold">Careers</span>
                 <a href="mailto:connect@factoryjet.com" className="text-jetBlue hover:underline font-medium">connect@factoryjet.com</a>
               </div>
             </div>

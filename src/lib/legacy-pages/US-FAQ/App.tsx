@@ -278,7 +278,7 @@ const AccordionItem = React.memo(({
               {item.answer}
             </div>
             <div className="mt-6 flex items-center gap-2">
-               <button className="text-xs font-medium text-slate-400 hover:text-jet-blue flex items-center gap-1 transition-colors">
+               <button className="text-xs font-medium text-slate-500 hover:text-jet-blue flex items-center gap-1 transition-colors">
                   <span className="w-4 h-4 rounded-full border border-slate-300 flex items-center justify-center" aria-hidden="true">🔗</span> Copy Link
                </button>
             </div>
@@ -577,7 +577,7 @@ const App = () => {
             {!isSearching && (
               <aside className="hidden md:block w-64 flex-shrink-0">
                 <div className="sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto custom-scrollbar pb-8">
-                  <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4 px-4">Categories</h3>
+                  <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4 px-4">Categories</h3>
                   <Sidebar activeCategory={activeCategory} onCategorySelect={handleCategorySelect} />
                 </div>
               </aside>

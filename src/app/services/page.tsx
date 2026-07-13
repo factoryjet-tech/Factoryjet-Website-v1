@@ -483,7 +483,7 @@ export default function USServicesHubPage() {
                   style={{
                     fontSize: '10px',
                     letterSpacing: '0.08em',
-                    color: 'rgba(245,245,242,0.55)',
+                    color: 'rgba(245,245,242,0.72)',
                     background: 'rgba(255,255,255,0.07)',
                     border: '1px solid rgba(255,255,255,0.12)',
                     padding: '5px 12px',

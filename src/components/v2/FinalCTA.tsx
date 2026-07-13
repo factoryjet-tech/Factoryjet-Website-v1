@@ -284,7 +284,7 @@ export default function FinalCTA({
 
         {objectionHandler && (
           <p
-            className="mt-6 mx-auto max-w-[500px] font-fj-body text-fj-neutral-400"
+            className="mt-6 mx-auto max-w-[500px] font-fj-body text-slate-500"
             style={{ fontSize: '0.8125rem', lineHeight: 1.5, letterSpacing: '0.005em', fontWeight: 500 }}
           >
             {objectionHandler}

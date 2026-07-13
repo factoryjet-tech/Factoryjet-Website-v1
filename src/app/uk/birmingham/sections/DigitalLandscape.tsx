@@ -116,7 +116,7 @@ export default function DigitalLandscape() {
         <div className="flex flex-col items-center text-center">
           <p
             style={{
-              color: "#FF6B35",
+              color: "#B23E13",
               fontFamily: "var(--font-sans)",
               fontWeight: 600,
               fontSize: 13,
@@ -195,7 +195,7 @@ export default function DigitalLandscape() {
               <blockquote
                 className="font-clash"
                 style={{
-                  color: "#F05A28",
+                  color: "#B23E13",
                   fontWeight: 600,
                   fontSize: "clamp(18px, 1.8vw, 22px)",
                   lineHeight: 1.4,
