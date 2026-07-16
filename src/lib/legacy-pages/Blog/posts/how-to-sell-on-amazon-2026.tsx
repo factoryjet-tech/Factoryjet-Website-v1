@@ -20,9 +20,9 @@ export const post: BlogPost = {
   },
   keyTakeaways: [
     'You register through Amazon Seller Central with a US bank account, a government ID, and either an SSN (Individual plan) or an EIN and business details (Professional plan). Approval is usually same-day to a few business days.',
-    'The Individual plan charges a small per-item fee and no monthly cost, which fits under about 40 sales a month. The Professional plan charges a flat monthly subscription with no per-item fee and adds ads, bulk tools, and top placement, which pays for itself past that volume.',
+    'The Individual plan costs $0.99 per item with no monthly fee, which fits under about 40 sales a month. The Professional plan costs a flat $39.99 a month with no per-item fee and adds ads, bulk tools, and top placement, which costs less than Individual past that volume.',
     'FBA (Fulfillment by Amazon) means Amazon stores, picks, packs, ships, and handles returns for you, and your listing becomes Prime-eligible. FBM (Fulfillment by Merchant) means you ship it yourself and keep more of each sale, but you carry the labor.',
-    'Every sale carries a referral fee that Amazon takes as a percentage of the price, and it varies by category rather than being one flat number across the board. FBA sellers also pay fulfillment and storage fees, which is why margin math has to happen before you list, not after.',
+    'Every sale carries a referral fee, typically 8% to 15% of the price depending on category, with a handful of categories running higher. FBA sellers also pay fulfillment and storage fees on top of that, which is why margin math has to happen before you list, not after.',
     'You can sell on Amazon without owning a warehouse: retail arbitrage, wholesale, print-on-demand, and private label run through a 3PL or a supplier are all real, active paths. What Amazon does not allow is drop shipping from another retailer and having that retailer\'s packing slip show up in your customer\'s box.',
     'New sellers get their first sales from a tight product listing, a small Sponsored Products PPC budget, and the first handful of honest reviews, in roughly that order.',
     'Amazon still wins the buyers who are already searching to purchase. Treat it as one channel in a mix with your own store and, increasingly, TikTok Shop, rather than a single bet.',
@@ -34,7 +34,7 @@ export const post: BlogPost = {
     },
     {
       q: 'What is the difference between the Individual and Professional selling plan?',
-      a: 'Individual costs a small fee per item sold and no monthly charge, which works if you expect to sell under roughly 40 units a month. Professional charges one flat monthly subscription with no per-item fee, and it also adds Sponsored Products ads, bulk listing tools, eligibility for the Buy Box, and access to more categories. Most sellers who are serious about volume switch to Professional almost immediately, since the subscription pays for itself past a few dozen sales.',
+      a: 'Individual costs $0.99 per item sold and no monthly charge, which works if you expect to sell under roughly 40 units a month. Professional costs a flat $39.99 a month with no per-item fee, and it also adds Sponsored Products ads, bulk listing tools, eligibility for the Buy Box, and access to more categories. Most sellers who are serious about volume switch to Professional almost immediately, since $39.99 flat beats paying $0.99 on every one of 40-plus sales.',
     },
     {
       q: 'What is Amazon FBA and how is it different from FBM?',
@@ -42,11 +42,11 @@ export const post: BlogPost = {
     },
     {
       q: 'How much does it cost to sell on Amazon?',
-      a: 'There are three cost layers: the plan fee (Individual per-item or Professional monthly), a referral fee taken as a percentage of each sale that varies by category, and, if you use FBA, fulfillment and storage fees based on the size and weight of your product. There is no single number that applies to every seller, which is exactly why Amazon publishes a fee schedule and a revenue calculator inside Seller Central. Run your specific product through it before you commit to a price.',
+      a: 'There are three cost layers: the plan fee ($0.99 per item on Individual, or $39.99 a month flat on Professional), a referral fee of roughly 8% to 15% of the sale price depending on category, and, if you use FBA, fulfillment and storage fees based on the size and weight of your product. There is no single all-in number that applies to every seller, which is exactly why Amazon publishes a fee schedule and a revenue calculator inside Seller Central. Run your specific product through it before you commit to a price.',
     },
     {
       q: "What is Amazon's referral fee?",
-      a: "The referral fee is the cut Amazon takes on every sale, charged as a percentage of the item price. It is not one flat rate: it is set per category, and categories with thinner margins or higher review overhead tend to sit at different rates than commodity goods. Check the current rate for your specific category inside Seller Central's fee schedule before you price a product, since it is the single biggest lever in your margin math.",
+      a: "The referral fee is the cut Amazon takes on every sale, charged as a percentage of the item price. Most categories, from home goods to electronics accessories, land between 8% and 15%, while a smaller set of categories run higher. It is set per category rather than one flat rate across the board, so check the current rate for your specific category inside Seller Central's fee schedule before you price a product, since it is the single biggest lever in your margin math.",
     },
     {
       q: 'What are Amazon FBA fulfillment fees?',
@@ -147,10 +147,10 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Individual vs Professional: which selling plan do you need?</h2>
       <p className="mb-4">
-        Amazon offers two selling plans, and the choice is mostly a volume question. The <strong>Individual plan</strong> charges a small fee on every item you sell and no monthly subscription, which suits someone testing a handful of products or selling occasionally. The <strong>Professional plan</strong> charges one flat monthly fee with no per-item charge, and it adds things the Individual plan does not have: Sponsored Products advertising, bulk listing and inventory tools, eligibility for the Buy Box, access to more restricted categories, and detailed sales reporting.
+        Amazon offers two selling plans, and the choice is mostly a volume question. The <strong>Individual plan</strong> costs $0.99 per item sold and no monthly subscription, which suits someone testing a handful of products or selling occasionally. The <strong>Professional plan</strong> costs a flat $39.99 a month with no per-item charge, and it adds things the Individual plan does not have: Sponsored Products advertising, bulk listing and inventory tools, eligibility for the Buy Box, access to more restricted categories, and detailed sales reporting.
       </p>
       <p className="mb-4">
-        The rough math most sellers use: if you expect to move more than about 40 units a month, the Professional subscription pays for itself against the per-item fee you would otherwise pay on the Individual plan, and that is before counting the ads and tools that come with it. If you are just validating whether a product sells at all, Individual is the lower-risk way to find out.
+        The break-even math is simple: $39.99 divided by $0.99 is roughly 40 units. Sell more than about 40 items a month and the Professional subscription costs less than the per-item fee you would otherwise pay on Individual, and that is before counting the ads and tools that come with it. If you are just validating whether a product sells at all, Individual is the lower-risk way to find out.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">FBA vs FBM: who ships the order?</h2>
@@ -191,13 +191,13 @@ export const post: BlogPost = {
           <tbody>
             <tr className="bg-white">
               <td className="border p-3 font-semibold">Plan fee</td>
-              <td className="border p-3">Individual: per item. Professional: flat monthly.</td>
+              <td className="border p-3">Individual: $0.99 per item. Professional: $39.99/month flat.</td>
               <td className="border p-3">Per sale or per month, no category variance</td>
             </tr>
             <tr className="bg-gray-50">
               <td className="border p-3 font-semibold">Referral fee</td>
               <td className="border p-3">Amazon's cut of each sale</td>
-              <td className="border p-3">Percentage of item price, varies by category</td>
+              <td className="border p-3">Typically 8% to 15% of item price for most categories</td>
             </tr>
             <tr className="bg-white">
               <td className="border p-3 font-semibold">FBA fulfillment fee</td>
@@ -213,7 +213,7 @@ export const post: BlogPost = {
         </table>
       </div>
       <p className="mb-4">
-        Two things trip up new sellers here. First, the referral fee is set per category, so a number you saw quoted for one product line will not necessarily apply to yours; check the current rate for your exact category. Second, FBA fulfillment and storage fees are driven by the physical size and weight of the product, not its price, which is why a compact, lightweight item is almost always the more forgiving one to launch with.
+        Two things trip up new sellers here. First, most categories land between 8% and 15%, but a handful (like Amazon Device Accessories) run higher, so check the current rate for your exact category before you set a price. Second, FBA fulfillment and storage fees are driven by the physical size and weight of the product, not its price, which is why a compact, lightweight item is almost always the more forgiving one to launch with.
       </p>
 
       <div className="bg-orange-50 border border-orange-200 p-5 rounded-lg my-8 not-prose">
