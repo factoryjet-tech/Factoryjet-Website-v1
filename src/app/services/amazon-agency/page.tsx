@@ -264,7 +264,7 @@ export default function AmazonAgencyPage() {
                 <div>
                   <div className="ic"><Workflow size={22} strokeWidth={2} /></div>
                   <h3 className="disp">Amazon + your store + AI</h3>
-                  <p>We connect Amazon with your Shopify or DTC store and use AI for listing content, ad creative, and reporting, so the whole funnel compounds instead of competing.</p>
+                  <p>We connect Amazon with your Shopify or DTC store and use AI for listing content, ad creative, and reporting, so the whole funnel compounds instead of competing. Many brands run <Link href="/services/walmart-marketplace-agency" className="amz-inline-link">Walmart Marketplace</Link> and TikTok Shop alongside it.</p>
                 </div>
                 <div className="mini"><span>Cross-channel</span><span>AI listing content</span><span>AI reporting</span><span>Walmart · TikTok Shop</span></div>
               </div>

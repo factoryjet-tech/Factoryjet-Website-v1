@@ -1,0 +1,19 @@
+FactoryJet — /services/walmart-marketplace-agency image credits (local record only, no on-page credit)
+========================================================================================================
+
+hero-walmart-warehouse.webp
+  Source:   Unsplash
+  Photo ID: bXgiCqLqZaA  ("Woman with tablet checks inventory on shelves")
+  Author:   Cova Software (https://unsplash.com/@covasoftware)
+  URL:      https://unsplash.com/photos/woman-with-tablet-checks-inventory-on-shelves-bXgiCqLqZaA
+  License:  Unsplash License (free for commercial use, no attribution required)
+  Process:  downloaded via Unsplash imgix (w=1012, h=676, fit=crop, crop=entropy, q=82, fm=jpg) -> cwebp -q 80
+  Dims:     1012x676  |  Size: ~59 KB
+
+Reused (not stored in this folder):
+  /bhavesh_image.jpg                         -> founder avatar (E-E-A-T)
+  /images/us/services/service-team.webp      -> team frame (E-E-A-T)
+
+Note: chosen deliberately distinct from the Amazon (fulfillment boxes) and TikTok Shop
+(LIVE selling) hero photos so the three marketplace-agency pages read as siblings, not
+repeats, in the nav.

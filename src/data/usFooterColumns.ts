@@ -33,6 +33,7 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'Ecommerce Growth Agency', href: '/services/ecommerce-growth-agency' },
       { label: 'Amazon Agency',           href: '/services/amazon-agency' },
       { label: 'TikTok Shop Agency',      href: '/services/tiktok-shop-agency' },
+      { label: 'Walmart Marketplace Agency', href: '/services/walmart-marketplace-agency' },
       { label: 'WooCommerce Development', href: '/services/woocommerce-development' },
       { label: 'Magento Development',     href: '/services/magento-development' },
       { label: 'E-Commerce SEO',          href: '/services/ecommerce-seo' },

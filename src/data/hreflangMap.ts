@@ -462,6 +462,10 @@ export const usServiceAlternates = {
     'en-US': 'https://factoryjet.com/services/tiktok-shop-agency',
     'x-default': 'https://factoryjet.com/services/tiktok-shop-agency',
   },
+  'walmart-marketplace-agency': {
+    'en-US': 'https://factoryjet.com/services/walmart-marketplace-agency',
+    'x-default': 'https://factoryjet.com/services/walmart-marketplace-agency',
+  },
   'law-firm-website-design': {
     'en-US': 'https://factoryjet.com/services/law-firm-website-design',
     'x-default': 'https://factoryjet.com/services/law-firm-website-design',

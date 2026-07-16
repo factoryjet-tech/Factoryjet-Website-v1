@@ -123,6 +123,8 @@
 .amz .amz-bcard.w6 { display: grid; grid-template-columns: 1.2fr .8fr; gap: 20px; align-items: center; }
 .amz .amz-bcard.w6 .mini { display: flex; gap: 10px; flex-wrap: wrap; }
 .amz .amz-bcard.w6 .mini span { font-size: 12px; font-weight: 600; color: var(--oink); background: rgba(240,90,40,.08); border: 1px solid rgba(240,90,40,.2); border-radius: 999px; padding: 6px 12px; font-family: var(--mono); }
+.amz a.amz-inline-link { color: var(--oink); text-decoration: underline; text-underline-offset: 2px; }
+.amz a.amz-inline-link:hover { color: var(--orange); }
 .amz .amz-bcard .ic svg { display: block; }
 
 /* listicles */

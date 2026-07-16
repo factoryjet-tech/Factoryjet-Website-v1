@@ -260,7 +260,7 @@ export default function TikTokShopAgencyPage() {
                 <div>
                   <div className="ic"><Workflow size={22} strokeWidth={2} /></div>
                   <h3 className="disp">TikTok Shop + your store + AI</h3>
-                  <p>We connect TikTok Shop with Amazon and your Shopify or DTC store, and use AI for content, ad creative, and reporting, so the whole funnel compounds instead of competing.</p>
+                  <p>We connect TikTok Shop with Amazon and your Shopify or DTC store, and use AI for content, ad creative, and reporting, so the whole funnel compounds instead of competing. Many brands add <Link href="/services/walmart-marketplace-agency" className="tts-inline-link">Walmart Marketplace</Link> as a third channel.</p>
                 </div>
                 <div className="mini"><span>Cross-channel</span><span>AI content</span><span>AI reporting</span><span>Amazon · Shopify</span></div>
               </div>

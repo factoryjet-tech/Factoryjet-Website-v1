@@ -94,6 +94,7 @@ import { post as howToSellOnTiktokShop2026Post } from './posts/how-to-sell-on-ti
 import { post as agenticAiVsGenerativeAiPost } from './posts/agentic-ai-vs-generative-ai';
 import { post as agenticAiVsAiAgentsPost } from './posts/agentic-ai-vs-ai-agents';
 import { post as howToSellOnAmazon2026Post } from './posts/how-to-sell-on-amazon-2026';
+import { post as howToSellOnWalmartMarketplace2026Post } from './posts/how-to-sell-on-walmart-marketplace-2026';
 import { post as whatIsAgenticAiPost } from './posts/what-is-agentic-ai';
 
 export const POSTS: BlogPost[] = [
@@ -4761,4 +4762,5 @@ export const POSTS: BlogPost[] = [
   agenticAiVsAiAgentsPost,
   whatIsAgenticAiPost,
   howToSellOnAmazon2026Post,
+  howToSellOnWalmartMarketplace2026Post,
 ];
