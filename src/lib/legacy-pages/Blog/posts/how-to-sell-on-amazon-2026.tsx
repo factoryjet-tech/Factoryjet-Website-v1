@@ -118,7 +118,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Is Amazon or TikTok Shop better for a new seller?',
-      a: 'They serve different buyer intent. Amazon wins high-intent shoppers who are already searching to buy and gives you FBA logistics; TikTok Shop wins impulse and trend-driven buyers through short video and typically charges a lower commission. Sellers who do best usually run both: TikTok Shop content creates demand and discovery, and Amazon captures the buyers who then go searching with purchase intent. Read our <a href="/blog/how-to-sell-on-tiktok-shop-2026" class="text-[#B23E13] underline hover:text-[#F05A28]">TikTok Shop guide</a> for the setup steps on that side.',
+      a: 'They serve different buyer intent. Amazon wins high-intent shoppers who are already searching to buy and gives you FBA logistics; TikTok Shop wins impulse and trend-driven buyers through short video and typically charges a lower commission. Sellers who do best usually run both: TikTok Shop content creates demand and discovery, and Amazon captures the buyers who then go searching with purchase intent. Our guide to selling on TikTok Shop covers the setup steps on that side.',
     },
     {
       q: 'How do Amazon seller payouts work?',
