@@ -93,6 +93,7 @@ import { post as bestAiSeoAgenciesUsaPost } from './posts/best-ai-seo-agencies-u
 import { post as howToSellOnTiktokShop2026Post } from './posts/how-to-sell-on-tiktok-shop-2026';
 import { post as agenticAiVsGenerativeAiPost } from './posts/agentic-ai-vs-generative-ai';
 import { post as agenticAiVsAiAgentsPost } from './posts/agentic-ai-vs-ai-agents';
+import { post as howToSellOnAmazon2026Post } from './posts/how-to-sell-on-amazon-2026';
 import { post as whatIsAgenticAiPost } from './posts/what-is-agentic-ai';
 
 export const POSTS: BlogPost[] = [
@@ -4759,4 +4760,5 @@ export const POSTS: BlogPost[] = [
   agenticAiVsGenerativeAiPost,
   agenticAiVsAiAgentsPost,
   whatIsAgenticAiPost,
+  howToSellOnAmazon2026Post,
 ];
