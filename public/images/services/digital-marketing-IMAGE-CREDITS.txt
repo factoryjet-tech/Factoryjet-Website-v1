@@ -1,0 +1,5 @@
+FactoryJet /digital-marketing image credits (repo-local; no on-page credit required).
+Source: Unsplash (free license). Download endpoints triggered server-side per API guidelines.
+
+digital-marketing-hero.webp | Unsplash | photo id LTDE3UZCzAM | by Hasibullah Sahil | https://unsplash.com/photos/LTDE3UZCzAM
+digital-marketing-what.webp | Unsplash | photo id 9VT1sfVK6_w | by Dollar Gill | https://unsplash.com/photos/9VT1sfVK6_w

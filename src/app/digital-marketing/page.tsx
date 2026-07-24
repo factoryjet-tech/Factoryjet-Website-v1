@@ -5,7 +5,6 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
-import BoringStatsRow, { type BoringStat } from '@/components/v2/BoringStatsRow';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
 import IndustriesGrid, { type IndustryCard } from '@/components/v2/IndustriesGrid';
 import StrategicDarkSection, { type Pillar } from '@/components/v2/StrategicDarkSection';
@@ -77,11 +76,11 @@ const HERO_TRUST = [
   'Found on Google and AI search',
 ];
 
-const STATS: BoringStat[] = [
-  { value: '500+', label: 'Businesses helped', microcopy: 'Across India, US, UK and UAE' },
-  { value: '12 yrs', label: 'Doing this work', microcopy: 'Not a new agency practising on you' },
-  { value: 'In-house', label: 'Senior team', microcopy: 'No work handed to freshers' },
-  { value: '4', label: 'Countries served', microcopy: 'India, US, UK and UAE' },
+const STATS = [
+  { value: '500+', label: 'Businesses helped', note: 'Across India, US, UK and UAE' },
+  { value: '12 yrs', label: 'Years doing this', note: 'Not a new agency practising on you' },
+  { value: 'In-house', label: 'Senior team', note: 'No work handed to freshers' },
+  { value: '4', label: 'Countries served', note: 'India, US, UK and UAE' },
 ];
 
 // Channel grid = the internal-link authority hub. Each card links into an
@@ -538,6 +537,29 @@ export default function DigitalMarketingPage() {
           secondaryCta={{ label: 'Get a Free Growth Plan', modal: true as const, region: 'in' as const }}
           trustItems={HERO_TRUST}
           accent="orange"
+          rightSlot={
+            <div className="relative mx-auto max-w-sm lg:max-w-none">
+              <div aria-hidden className="absolute -right-3 -top-3 h-24 w-24 rounded-2xl bg-[#F05A28]/10" />
+              <div aria-hidden className="absolute -bottom-4 -left-4 h-28 w-28 rounded-2xl bg-fj-ink/[0.04]" />
+              <div className="relative overflow-hidden rounded-2xl border border-fj-neutral-200 shadow-sm">
+                <img
+                  src="/images/services/digital-marketing-hero.webp"
+                  alt="A business professional in India working on a laptop"
+                  width={900}
+                  height={1314}
+                  className="aspect-[3/4] w-full object-cover"
+                />
+                <div className="absolute bottom-3 left-3 rounded-xl bg-white/95 px-4 py-2.5 shadow-sm">
+                  <p className="font-fj-mono text-[10px] font-medium uppercase tracking-[0.14em] text-[#B23E13]">
+                    Trusted across 4 markets
+                  </p>
+                  <p className="mt-0.5 font-fj-display text-sm font-semibold text-fj-ink">
+                    500+ businesses, 12 years
+                  </p>
+                </div>
+              </div>
+            </div>
+          }
         />
 
         {/* Answer-first block (BLUF) — the direct answer, written to be quoted by
@@ -559,7 +581,22 @@ export default function DigitalMarketingPage() {
 
         <LogoBar tagline="Trusted by 500+ businesses across India, the US, the UK and the UAE" />
 
-        <BoringStatsRow stats={STATS} align="center" />
+        {/* Proof band — 4 across on desktop, 2x2 on mobile, hairline dividers */}
+        <section className="bg-white px-6 py-12 md:px-8 md:py-16">
+          <div className="mx-auto max-w-6xl">
+            <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-fj-ink/10 bg-fj-ink/10 md:grid-cols-4">
+              {STATS.map((s) => (
+                <div key={s.label} className="bg-white px-4 py-8 text-center md:px-6 md:py-12">
+                  <div className="font-fj-display text-2xl font-semibold leading-none tracking-tight text-[#F05A28] md:text-[2.75rem]">
+                    {s.value}
+                  </div>
+                  <div className="mt-3 font-fj-body text-sm font-semibold text-fj-ink">{s.label}</div>
+                  <div className="mt-1.5 font-fj-body text-xs leading-relaxed text-fj-neutral-600">{s.note}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         <ServiceExplanation
           eyebrow="WHAT WE DO, IN PLAIN WORDS"
@@ -580,6 +617,19 @@ export default function DigitalMarketingPage() {
                 the most enquiries, and we tell you honestly which ones will not.
               </p>
             </>
+          }
+          rightSlot={
+            <div className="relative">
+              <div aria-hidden className="absolute -bottom-4 -right-4 h-28 w-28 rounded-2xl bg-[#F05A28]/10" />
+              <img
+                src="/images/services/digital-marketing-what.webp"
+                alt="A small-business owner in India focused on work at a laptop"
+                width={900}
+                height={900}
+                loading="lazy"
+                className="relative aspect-square w-full rounded-2xl border border-fj-neutral-200 object-cover shadow-sm"
+              />
+            </div>
           }
         />
 
