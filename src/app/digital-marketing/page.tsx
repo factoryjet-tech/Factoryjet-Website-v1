@@ -544,9 +544,9 @@ export default function DigitalMarketingPage() {
               <div className="relative overflow-hidden rounded-2xl border border-fj-neutral-200 shadow-sm">
                 <img
                   src="/images/services/digital-marketing-hero.webp"
-                  alt="A business professional in India working on a laptop"
+                  alt="A digital marketing professional in India working at her desk"
                   width={900}
-                  height={1314}
+                  height={1316}
                   className="aspect-[3/4] w-full object-cover"
                 />
                 <div className="absolute bottom-3 left-3 rounded-xl bg-white/95 px-4 py-2.5 shadow-sm">
@@ -623,11 +623,11 @@ export default function DigitalMarketingPage() {
               <div aria-hidden className="absolute -bottom-4 -right-4 h-28 w-28 rounded-2xl bg-[#F05A28]/10" />
               <img
                 src="/images/services/digital-marketing-what.webp"
-                alt="A small-business owner in India focused on work at a laptop"
-                width={900}
-                height={900}
+                alt="A digital marketing team in India collaborating around a laptop"
+                width={1200}
+                height={822}
                 loading="lazy"
-                className="relative aspect-square w-full rounded-2xl border border-fj-neutral-200 object-cover shadow-sm"
+                className="relative aspect-[4/3] w-full rounded-2xl border border-fj-neutral-200 object-cover shadow-sm"
               />
             </div>
           }

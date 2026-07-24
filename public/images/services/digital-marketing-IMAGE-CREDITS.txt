@@ -1,5 +1,15 @@
-FactoryJet /digital-marketing image credits (repo-local; no on-page credit required).
-Source: Unsplash (free license). Download endpoints triggered server-side per API guidelines.
+FactoryJet /digital-marketing image credits (repo-local).
 
-digital-marketing-hero.webp | Unsplash | photo id LTDE3UZCzAM | by Hasibullah Sahil | https://unsplash.com/photos/LTDE3UZCzAM
-digital-marketing-what.webp | Unsplash | photo id 9VT1sfVK6_w | by Dollar Gill | https://unsplash.com/photos/9VT1sfVK6_w
+Both images are AI-generated via Runware (runware.ai) on 2026-07-25, explicitly
+authorized by Bhavesh as a deliberate override of the standing "no AI-generated
+people" visual-asset policy for this page.
+
+digital-marketing-hero.webp
+  Model: Seedream 5.0 Pro (Runware AIR bytedance:seedream@5.0-pro)
+  Prompt intent: confident professional Indian woman entrepreneur at a bright
+  minimal office desk with a laptop, warm natural light, editorial corporate portrait.
+
+digital-marketing-what.webp
+  Model: FLUX.2 max (Runware AIR bfl:7@1)
+  Prompt intent: diverse team of four Indian marketing professionals collaborating
+  around a laptop in a modern creative agency office, candid, engaged.
