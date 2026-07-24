@@ -51,6 +51,7 @@ const IN_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
   {
     heading: 'Services',
     links: [
+      { label: 'Digital Marketing',    href: '/digital-marketing' },
       { label: 'Web Design',           href: '/web-design' },
       { label: 'E-Commerce',           href: '/services/ecommerce-development' },
       { label: 'Shopify Development',  href: '/shopify-development' },

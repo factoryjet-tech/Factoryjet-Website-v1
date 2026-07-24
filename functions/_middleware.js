@@ -70,6 +70,8 @@ export const INDIA_TO_US_RULES = [
   { match: (p) => p === '/wordpress-development', target: '/services/wordpress-development' },
   { match: (p) => p === '/n8n-automation', target: '/services/ai-workflow-automation' },
   { match: (p) => p === '/whatsapp-chatbot', target: '/services/ai-chatbot-development' },
+  // India digital-marketing hub → US services hub (no dedicated US DM page yet)
+  { match: (p) => p === '/digital-marketing', target: '/services' },
 ]
 
 /** Drop a trailing slash (except root) so `/web-design/` and a target with no slash

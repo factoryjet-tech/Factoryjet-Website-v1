@@ -42,6 +42,12 @@ expect('US human /n8n-automation → US ai-workflow-automation',
   decideNaRedirect({ path: '/n8n-automation', country: 'US', userAgent: CHROME }), '/services/ai-workflow-automation')
 expect('US human /whatsapp-chatbot → US ai-chatbot-development',
   decideNaRedirect({ path: '/whatsapp-chatbot', country: 'US', userAgent: CHROME }), '/services/ai-chatbot-development')
+expect('US human /digital-marketing → US services hub',
+  decideNaRedirect({ path: '/digital-marketing', country: 'US', userAgent: CHROME }), '/services')
+expect('US GPTBot /digital-marketing → NOT redirected (protect indexing)',
+  decideNaRedirect({ path: '/digital-marketing', country: 'US', userAgent: GPTBOT }), null)
+expect('India human /digital-marketing → NOT redirected',
+  decideNaRedirect({ path: '/digital-marketing', country: 'IN', userAgent: CHROME }), null)
 expect('trailing slash normalized: US human /web-design/mumbai/ → US web-design',
   decideNaRedirect({ path: '/web-design/mumbai/', country: 'US', userAgent: CHROME }), '/services/web-design')
 expect('lowercase country code handled: us human /ai-seo → US ai-seo',

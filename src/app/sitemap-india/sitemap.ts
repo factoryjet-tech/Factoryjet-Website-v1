@@ -168,6 +168,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: CHANGEFREQ.service as ChangeFreq,
       priority: PRIORITY.service,
     },
+    {
+      url: `${SITE_URL}/digital-marketing`,
+      lastModified: getFileLastMod('src/app/digital-marketing/page.tsx'),
+      changeFrequency: CHANGEFREQ.service as ChangeFreq,
+      priority: PRIORITY.service,
+    },
   ]
 
   // ── India SEO city pages ─────────────────────────────────────────────────────

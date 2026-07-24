@@ -234,6 +234,19 @@ export const aiSeoAlternates = {
   'x-default': 'https://factoryjet.com/services/ai-seo',
 } as const
 
+/**
+ * Digital Marketing hub — India-positioned (/digital-marketing). No dedicated US
+ * digital-marketing page exists, so en-US + x-default point at the US /services hub
+ * (keeps generic/NA searchers off the India-scoped page, matching the geo-seg fix).
+ */
+export const digitalMarketingAlternates = {
+  'en-IN': 'https://factoryjet.com/digital-marketing',
+  'en-US': 'https://factoryjet.com/services',
+  'en-AE': 'https://factoryjet.com/uae',
+  'en-GB': 'https://factoryjet.com/uk',
+  'x-default': 'https://factoryjet.com/services',
+} as const
+
 // ===========================================================================
 // CITY-SPECIFIC SERVICE PAGES
 // ===========================================================================
