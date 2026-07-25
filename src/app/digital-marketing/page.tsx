@@ -547,6 +547,7 @@ export default function DigitalMarketingPage() {
                   alt="A digital marketing professional in India working at her desk"
                   width={900}
                   height={1316}
+                  fetchPriority="high"
                   className="aspect-[3/4] w-full object-cover"
                 />
                 <div className="absolute bottom-3 left-3 rounded-xl bg-white/95 px-4 py-2.5 shadow-sm">
@@ -692,7 +693,7 @@ export default function DigitalMarketingPage() {
                     <h3 className="text-lg font-bold text-fj-ink">
                       {a.name}
                       {a.isUs && (
-                        <span className="ml-2 rounded-full bg-[#F05A28] px-2 py-0.5 text-xs font-semibold text-white">
+                        <span className="ml-2 rounded-full bg-[#B23E13] px-2 py-0.5 text-xs font-semibold text-white">
                           That is us
                         </span>
                       )}
@@ -706,7 +707,7 @@ export default function DigitalMarketingPage() {
               ))}
             </ol>
 
-            <p className="mt-6 text-sm leading-relaxed text-fj-ink/60">
+            <p className="mt-6 text-sm leading-relaxed text-fj-ink/70">
               A quick note on fairness: every agency here is a genuine, capable team. The "best for"
               lines are our honest read of who each one suits, based on their public work and what
               they rank for. The right pick is the one that matches your business, not the one that
