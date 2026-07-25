@@ -191,7 +191,6 @@ All URLs are canonical (root domain; the site serves the US market from the root
 - https://factoryjet.com/services/ai-agent-development/ai-voice-agent
 - https://factoryjet.com/services/ai-agent-development/ai-workflow-automation
 - https://factoryjet.com/services/ai-agents
-- https://factoryjet.com/services/ai-agency
 - https://factoryjet.com/services/ai-automation
 - https://factoryjet.com/services/ai-chatbot-development
 - https://factoryjet.com/services/ai-integration-services
@@ -200,7 +199,6 @@ All URLs are canonical (root domain; the site serves the US market from the root
 ### Services — SEO / GEO
 - https://factoryjet.com/services/seo
 - https://factoryjet.com/services/ai-seo
-- https://factoryjet.com/services/generative-engine-optimization
 - https://factoryjet.com/services/local-seo
 - https://factoryjet.com/services/ecommerce-seo
 - https://factoryjet.com/services/shopify-seo

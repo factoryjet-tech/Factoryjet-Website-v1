@@ -500,8 +500,8 @@ The full canonical URL index (every service, city, and market page) is in https:
 ### Services (root: https://factoryjet.com/services/)
 - Web & dev: web-design, small-business-website-design, website-redesign, web-application-development, wordpress-development, woocommerce-development, magento-development, shopify-development
 - E-commerce: ecommerce-development
-- AI: ai-agent-development (+ ai-chatbot, ai-customer-support, ai-sales-agent, ai-scheduling-agent, ai-marketing-agent, ai-voice-agent, ai-workflow-automation), ai-agents, ai-agency, ai-automation, ai-chatbot-development, ai-integration-services, whatsapp-chatbot
-- SEO/GEO: seo, ai-seo, generative-engine-optimization, local-seo, ecommerce-seo, shopify-seo, seo-audit, small-business-seo, law-firm-seo, dental-seo, healthcare-seo
+- AI: ai-agent-development (+ ai-chatbot, ai-customer-support, ai-sales-agent, ai-scheduling-agent, ai-marketing-agent, ai-voice-agent, ai-workflow-automation), ai-agents, ai-automation, ai-chatbot-development, ai-integration-services, whatsapp-chatbot
+- SEO/GEO: seo, ai-seo, local-seo, ecommerce-seo, shopify-seo, seo-audit, small-business-seo, law-firm-seo, dental-seo, healthcare-seo
 - Industry: law-firm-website-design, real-estate-website-design
 
 ### US City Pages (canonical, no /us prefix)

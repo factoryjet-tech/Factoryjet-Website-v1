@@ -41,7 +41,6 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/services/web-application-development',         source: 'src/app/services/web-application-development/page.tsx' },
   { path: '/services/ai-agents',                           source: 'src/app/services/ai-agents/page.tsx' },
   { path: '/services/ai-automation',                       source: 'src/app/services/ai-automation/page.tsx' },
-  { path: '/services/ai-agency',                           source: 'src/app/services/ai-agency/page.tsx' },
   { path: '/services/seo',                                 source: 'src/app/services/seo/page.tsx' },
   { path: '/services/local-seo',                           source: 'src/app/services/local-seo/page.tsx' },
   { path: '/services/ecommerce-seo',                       source: 'src/app/services/ecommerce-seo/page.tsx' },

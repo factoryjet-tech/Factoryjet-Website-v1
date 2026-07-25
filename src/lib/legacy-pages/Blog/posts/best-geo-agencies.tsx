@@ -437,7 +437,7 @@ export const post: BlogPost = {
       <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg mb-8">
         <h3 className="text-lg font-bold mb-3">GEO for your ecommerce brand or small business</h3>
         <p className="mb-4">
-          FactoryJet tracks AI citations in ChatGPT, Perplexity, Claude, and Gemini monthly for ecommerce brands and US SMBs. AI SEO retainers start at $1,999/month — includes GEO strategy, citation tracking, and original content production. See our dedicated <Link href="/services/generative-engine-optimization" className="text-orange-600 underline">generative engine optimization service</Link> for the full scope.
+          FactoryJet tracks AI citations in ChatGPT, Perplexity, Claude, and Gemini monthly for ecommerce brands and US SMBs. Our AI SEO engagements are scoped per brand and cover GEO strategy, citation tracking, and original content production. See our dedicated <Link href="/services/ai-seo" className="text-orange-600 underline">generative engine optimization service</Link> for the full scope.
         </p>
         <Link
           href="/services/ai-seo"

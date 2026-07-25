@@ -137,12 +137,6 @@ export const websiteCostAlternates = {
   'x-default': 'https://factoryjet.com/website-cost',
 } as const
 
-/** AI Agency service page (US only — no India equivalent) */
-export const aiAgencyAlternates = {
-  'en-US': 'https://factoryjet.com/services/ai-agency',
-  'x-default': 'https://factoryjet.com/services/ai-agency',
-} as const
-
 /** Small Business Website Design service page (US only — no India equivalent) */
 export const smallBusinessWebDesignAlternates = {
   'en-US': 'https://factoryjet.com/services/small-business-website-design',

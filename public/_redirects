@@ -28,6 +28,14 @@
 /sitemap-uae.xml     /sitemap-uae/sitemap.xml     301
 /sitemap-blog.xml    /sitemap-blog/sitemap.xml    301
 
+# ── CANNIBALIZATION CONSOLIDATION (2026-07-25) ──────────────────────────────
+# Overlapping US service pages retired into their canonical twin (301, keep
+# permanently). Preserves link equity + avoids 404s on already-indexed URLs.
+#   generative-engine-optimization → ai-seo    (thin/orphaned; ai-seo owns GEO+AEO)
+#   ai-agency                      → ai-agents  (ai-agents is the canonical AI hub)
+/services/generative-engine-optimization   /services/ai-seo      301
+/services/ai-agency                         /services/ai-agents   301
+
 # ── LEGACY PAGE RETIREMENT (Task C, 2026-05-14) ──────────────────────────────
 # NOTE: NYC /services rule moved to canonical block below (line ~58) to avoid
 # the redirect chain Cloudflare flagged on 2026-05-29 deploy.
