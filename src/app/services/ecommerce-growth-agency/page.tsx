@@ -162,6 +162,21 @@ const STEPS = [
   { n: 'Step 04', h: 'Scale', p: 'Weekly iteration and profit-based reporting. We double down on what works, cut what does not.' },
 ];
 
+/* Cited market stats. Every figure links to a real, opened source. */
+const STATS = [
+  { v: '$1.19T', l: 'in US ecommerce sales in 2024, a record high and still climbing every year.', src: 'Digital Commerce 360, 2025', href: 'https://www.digitalcommerce360.com/2025/03/03/us-ecommerce-sales-2024/' },
+  { v: '7.5%', l: 'how fast US ecommerce grew in 2024, nearly triple the 2.6% growth of total retail.', src: 'Digital Commerce 360, 2025', href: 'https://www.digitalcommerce360.com/2025/03/03/us-ecommerce-sales-2024/' },
+  { v: '2x', l: 'US ecommerce more than doubled in five years, up from $571 billion in 2019.', src: 'Digital Commerce 360, 2025', href: 'https://www.digitalcommerce360.com/2025/03/03/us-ecommerce-sales-2024/' },
+];
+
+/* Real, named ecommerce growth agencies brands weigh us against, framed honestly. */
+const RIVALS = [
+  { b: 'Common Thread Collective', p: 'A respected DTC growth shop with a strong paid-media and forecasting framework in the Shopify world. Excellent at paid acquisition, narrower on the full stack.' },
+  { b: 'Power Digital', p: 'A broad cross-channel growth partner for brands that want wide coverage. A bigger-agency structure, which can mean more layers between you and the work.' },
+  { b: 'Disruptive Advertising', p: 'A recognized PPC and conversion-optimization agency managing serious ad spend. Strong on ads and CRO, lighter on store builds and marketplaces.' },
+  { b: 'Where FactoryJet fits', p: 'One senior in-house team running ads, email, SEO, CRO, the store build itself, marketplaces, and AI, sized for SMBs rather than enterprise retainers.' },
+];
+
 const yes = <span style={{ color: '#177a48', fontWeight: 700 }}>Yes</span>;
 const no = (t: string) => <span style={{ color: '#b23e13' }}>{t}</span>;
 const partial = (t: string) => <span style={{ color: '#8a5e00' }}>{t}</span>;
@@ -228,6 +243,22 @@ export default function EcommerceGrowthAgencyPage() {
           <div className="ega-wrap">
             <div className="t">Building and growing stores on the platforms you already use</div>
             <div className="ega-logos"><span>Shopify</span><span>Shopify Plus</span><span>Magento</span><span>BigCommerce</span><span>WooCommerce</span></div>
+          </div>
+        </section>
+
+        {/* MARKET STATS (cited) */}
+        <section className="ega-sec pt0">
+          <div className="ega-wrap">
+            <div className="ega-sh"><span className="ega-eyebrow">Why it matters</span><h2 className="disp">Why ecommerce growth is worth investing in</h2><p>Online shopping is still climbing, and the brands that compound the small levers pull away. Three numbers that frame it.</p></div>
+            <div className="ega-stats" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: 14 }}>
+              {STATS.map((s) => (
+                <div key={s.v} className="ega-crystal" style={{ padding: '24px 24px 22px' }}>
+                  <div className="disp" style={{ fontSize: 34, color: '#F05A28', lineHeight: 1.04 }}>{s.v}</div>
+                  <p style={{ color: '#3a3a38', fontSize: 15, lineHeight: 1.5, marginTop: 8 }}>{s.l}</p>
+                  <a href={s.href} target="_blank" rel="noopener noreferrer nofollow" style={{ display: 'inline-block', marginTop: 12, fontSize: 12.5, color: '#B23E13', textDecoration: 'underline', textUnderlineOffset: 2 }}>Source: {s.src}</a>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -325,6 +356,18 @@ export default function EcommerceGrowthAgencyPage() {
                 { feature: 'Profit-based reporting', values: [yes, partial('Channel metrics'), no('Limited'), yes] },
               ]}
             />
+          </div>
+        </section>
+
+        {/* NAMED COMPETITORS */}
+        <section className="ega-sec pt0">
+          <div className="ega-wrap">
+            <div className="ega-sh"><span className="ega-eyebrow">The landscape</span><h2 className="disp">Named ecommerce agencies brands compare us with</h2><p>Plenty of good growth agencies exist. Here is where the known names fit, and where we fit.</p></div>
+            <div className="ega-list">
+              {RIVALS.map((r) => (
+                <div key={r.b} className="ega-crystal ega-li"><span className="num" /><div><b>{r.b}</b><p>{r.p}</p></div></div>
+              ))}
+            </div>
           </div>
         </section>
 

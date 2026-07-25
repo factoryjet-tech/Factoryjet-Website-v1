@@ -759,8 +759,12 @@ export default function DigitalMarketingPage() {
               <a href="/digital-marketing/mumbai" className="font-semibold text-[#B23E13] underline underline-offset-2">Mumbai</a>,{' '}
               <a href="/digital-marketing/bangalore" className="font-semibold text-[#B23E13] underline underline-offset-2">Bangalore</a>,{' '}
               <a href="/digital-marketing/delhi" className="font-semibold text-[#B23E13] underline underline-offset-2">Delhi</a>,{' '}
-              <a href="/digital-marketing/pune" className="font-semibold text-[#B23E13] underline underline-offset-2">Pune</a>, and{' '}
-              <a href="/digital-marketing/hyderabad" className="font-semibold text-[#B23E13] underline underline-offset-2">Hyderabad</a>.
+              <a href="/digital-marketing/pune" className="font-semibold text-[#B23E13] underline underline-offset-2">Pune</a>,{' '}
+              <a href="/digital-marketing/hyderabad" className="font-semibold text-[#B23E13] underline underline-offset-2">Hyderabad</a>,{' '}
+              <a href="/digital-marketing/noida" className="font-semibold text-[#B23E13] underline underline-offset-2">Noida</a>,{' '}
+              <a href="/digital-marketing/ahmedabad" className="font-semibold text-[#B23E13] underline underline-offset-2">Ahmedabad</a>,{' '}
+              <a href="/digital-marketing/chennai" className="font-semibold text-[#B23E13] underline underline-offset-2">Chennai</a>, and{' '}
+              <a href="/digital-marketing/kolkata" className="font-semibold text-[#B23E13] underline underline-offset-2">Kolkata</a>.
             </p>
           </div>
         </section>

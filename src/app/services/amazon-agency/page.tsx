@@ -178,6 +178,21 @@ const PILLARS = [
 
 const PROGRAMS = ['Seller Central', 'Vendor Central', 'FBA', 'Sponsored Ads', 'Amazon DSP', 'Brand Registry'];
 
+/* Cited market stats. Every figure links to a real, opened source. */
+const STATS = [
+  { v: '40.4%', l: 'of all US retail ecommerce sales run through Amazon, the default place Americans start a product search.', src: 'eMarketer, 2024', href: 'https://www.emarketer.com/content/amazon-will-surpass-40-of-us-ecommerce-sales-this-year' },
+  { v: '60%+', l: 'of everything sold in Amazon’s store comes from independent sellers, most of them small and mid-size brands.', src: 'Amazon Small Business Report, 2025', href: 'https://www.aboutamazon.com/news/small-business/amazon-2025-small-business-empowerment-report' },
+  { v: '$375K+', l: 'average yearly sales for a US independent seller on Amazon, up nearly 30% in a single year.', src: 'Amazon Small Business Report, 2025', href: 'https://www.aboutamazon.com/news/small-business/amazon-2025-small-business-empowerment-report' },
+];
+
+/* Real, named Amazon agencies brands weigh us against, framed honestly. */
+const RIVALS = [
+  { b: 'Tinuiti', p: 'The largest independent performance agency, with an Amazon practice built for enterprise brands spending six or seven figures a month on ads. Real depth, and enterprise budgets to match.' },
+  { b: 'My Amazon Guy and Canopy Management', p: 'Amazon-only specialist shops with strong Seller Central and PPC chops. A good fit if Amazon is your whole world and you do not also need Walmart, TikTok Shop, or your own store handled.' },
+  { b: 'Nuanced Media', p: 'A boutique that pairs Amazon PPC with branding and creative for mid-size brands. A similar full-service spirit to ours, focused mostly on Amazon alone.' },
+  { b: 'Where FactoryJet fits', p: 'One senior in-house team running Amazon alongside Walmart, TikTok Shop, and your own store, sized for SMBs rather than enterprise retainers.' },
+];
+
 const yes = <span style={{ color: '#177a48', fontWeight: 700 }}>Yes</span>;
 const no = (t: string) => <span style={{ color: '#b23e13' }}>{t}</span>;
 const partial = (t: string) => <span style={{ color: '#8a5e00' }}>{t}</span>;
@@ -244,6 +259,22 @@ export default function AmazonAgencyPage() {
           <div className="amz-wrap">
             <div className="t">Managing brands across the Amazon programs that matter</div>
             <div className="amz-logos">{PROGRAMS.map((p) => <span key={p}>{p}</span>)}</div>
+          </div>
+        </section>
+
+        {/* MARKET STATS (cited) */}
+        <section className="amz-sec pt0">
+          <div className="amz-wrap">
+            <div className="amz-sh"><span className="amz-eyebrow">Why Amazon</span><h2 className="disp">Why Amazon is worth getting right</h2><p>The scale is why a well-run account pays for itself. Three numbers that frame the opportunity.</p></div>
+            <div className="amz-stats" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: 14 }}>
+              {STATS.map((s) => (
+                <div key={s.v} className="amz-crystal" style={{ padding: '24px 24px 22px' }}>
+                  <div className="disp" style={{ fontSize: 34, color: '#F05A28', lineHeight: 1.04 }}>{s.v}</div>
+                  <p style={{ color: '#3a3a38', fontSize: 15, lineHeight: 1.5, marginTop: 8 }}>{s.l}</p>
+                  <a href={s.href} target="_blank" rel="noopener noreferrer nofollow" style={{ display: 'inline-block', marginTop: 12, fontSize: 12.5, color: '#B23E13', textDecoration: 'underline', textUnderlineOffset: 2 }}>Source: {s.src}</a>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -341,6 +372,18 @@ export default function AmazonAgencyPage() {
                 { feature: 'Profit-based reporting', values: [yes, partial('Ad metrics'), no('Limited'), yes] },
               ]}
             />
+          </div>
+        </section>
+
+        {/* NAMED COMPETITORS */}
+        <section className="amz-sec pt0">
+          <div className="amz-wrap">
+            <div className="amz-sh"><span className="amz-eyebrow">The landscape</span><h2 className="disp">Named Amazon agencies brands compare us with</h2><p>We would rather you choose with eyes open. Here is where the well-known Amazon agencies fit, and where we fit.</p></div>
+            <div className="amz-list">
+              {RIVALS.map((r) => (
+                <div key={r.b} className="amz-crystal amz-li"><span className="num" /><div><b>{r.b}</b><p>{r.p}</p></div></div>
+              ))}
+            </div>
           </div>
         </section>
 

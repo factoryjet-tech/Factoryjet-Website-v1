@@ -178,6 +178,21 @@ const PILLARS = [
 
 const PROGRAMS = ['Seller Center', 'WFS', 'Walmart Connect', 'Item Spec & Catalog', 'Returns Center', 'Featured Offer'];
 
+/* Cited market stats. Every figure links to a real, opened source. */
+const STATS = [
+  { v: '200K+', l: 'active third-party sellers are now on Walmart Marketplace, still a fraction of the crowd on Amazon.', src: 'Marketplace Pulse, 2025', href: 'https://www.marketplacepulse.com/articles/walmart-marketplace-growth-reaches-fastest-pace-in-years' },
+  { v: '~50%', l: 'year-over-year growth in Walmart’s US third-party marketplace in early 2026, its fastest pace in years.', src: 'Marketplace Pulse, 2026', href: 'https://www.marketplacepulse.com/articles/walmart-marketplace-growth-reaches-fastest-pace-in-years' },
+  { v: '50K+', l: 'new sellers joined Walmart Marketplace in a single twelve-month stretch as more brands moved in.', src: 'Marketplace Pulse', href: 'https://www.marketplacepulse.com/articles/walmart-marketplace-grows-50-in-one-year' },
+];
+
+/* Real, named Walmart and marketplace agencies brands weigh us against, framed honestly. */
+const RIVALS = [
+  { b: 'Tinuiti', p: 'The largest independent performance agency, strong on Walmart Connect ads. Built for brands already approved and spending heavily on ads each month.' },
+  { b: 'Blue Wheel', p: 'A full-funnel marketplace agency with real Amazon and Walmart strength. A solid option that skews toward larger, established sellers.' },
+  { b: 'Podean', p: 'Marketplace managed services with proprietary tech, Amazon-first and Walmart-capable. A good fit for established brands scaling ad spend.' },
+  { b: 'Where FactoryJet fits', p: 'We start before approval, prep the application, set up WFS, then run Connect ads and listings, sized for SMBs applying to Walmart or adding it as a second channel.' },
+];
+
 const yes = <span style={{ color: '#177a48', fontWeight: 700 }}>Yes</span>;
 const no = (t: string) => <span style={{ color: '#b23e13' }}>{t}</span>;
 const partial = (t: string) => <span style={{ color: '#8a5e00' }}>{t}</span>;
@@ -244,6 +259,22 @@ export default function WalmartMarketplaceAgencyPage() {
           <div className="wmp-wrap">
             <div className="t">Working across the Walmart Marketplace programs that matter</div>
             <div className="wmp-logos">{PROGRAMS.map((p) => <span key={p}>{p}</span>)}</div>
+          </div>
+        </section>
+
+        {/* MARKET STATS (cited) */}
+        <section className="wmp-sec pt0">
+          <div className="wmp-wrap">
+            <div className="wmp-sh"><span className="wmp-eyebrow">Why Walmart Marketplace</span><h2 className="disp">Why Walmart Marketplace is worth applying for</h2><p>Walmart’s third-party marketplace is smaller than Amazon and growing faster, which is exactly why getting in early matters.</p></div>
+            <div className="wmp-stats" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: 14 }}>
+              {STATS.map((s) => (
+                <div key={s.v} className="wmp-crystal" style={{ padding: '24px 24px 22px' }}>
+                  <div className="disp" style={{ fontSize: 34, color: '#F05A28', lineHeight: 1.04 }}>{s.v}</div>
+                  <p style={{ color: '#3a3a38', fontSize: 15, lineHeight: 1.5, marginTop: 8 }}>{s.l}</p>
+                  <a href={s.href} target="_blank" rel="noopener noreferrer nofollow" style={{ display: 'inline-block', marginTop: 12, fontSize: 12.5, color: '#B23E13', textDecoration: 'underline', textUnderlineOffset: 2 }}>Source: {s.src}</a>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -341,6 +372,18 @@ export default function WalmartMarketplaceAgencyPage() {
                 { feature: 'Profit-based reporting', values: [yes, partial('Ad metrics'), no('Limited'), yes] },
               ]}
             />
+          </div>
+        </section>
+
+        {/* NAMED COMPETITORS */}
+        <section className="wmp-sec pt0">
+          <div className="wmp-wrap">
+            <div className="wmp-sh"><span className="wmp-eyebrow">The landscape</span><h2 className="disp">Named Walmart agencies brands compare us with</h2><p>Most marketplace agencies start after you are approved. Here is where the known names fit, and where we fit.</p></div>
+            <div className="wmp-list">
+              {RIVALS.map((r) => (
+                <div key={r.b} className="wmp-crystal wmp-li"><span className="num" /><div><b>{r.b}</b><p>{r.p}</p></div></div>
+              ))}
+            </div>
           </div>
         </section>
 

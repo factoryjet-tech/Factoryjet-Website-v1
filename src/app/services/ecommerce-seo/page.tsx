@@ -260,6 +260,95 @@ const SCORE_FJ = ['The founder, Bhavesh', 'Core focus', 'Built in', '100/100 + s
 const SCORE_AG = [['A rotating junior', 'p'], ['Products only', 'p'], ['Sometimes', 'p'], ['Limited', 'p'], ['Reads docs', 'p'], ['Generic content', 'p'], ['Rankings & traffic', 'p'], ['6 to 12 month lock-in', 'x']] as const;
 const SCORE_DIY = [['No strategist', 'x'], ['Manual', 'x'], ['App-dependent', 'p'], ['Not covered', 'x'], ['One platform', 'p'], ['You write it', 'x'], ['Data only', 'p'], ['Cancel anytime', 'c']] as const;
 
+/* ─────────────────────────────────────────────────────────────────────────────
+   Additive GEO pass (2026-07-25): cited stats, ranked ranking-factor listicle,
+   and honestly-worded named-competitor references. ADD-ONLY. Every stat links to
+   a real, resolving source that was opened and verified.
+───────────────────────────────────────────────────────────────────────────── */
+const ECOM_SEO_STATS = [
+  {
+    value: '53%',
+    label:
+      'Share of all website traffic that comes from organic search, more than any other channel. For retail stores specifically it runs around 41%.',
+    sourceUrl:
+      'https://searchengineland.com/organic-search-responsible-for-53-of-all-site-traffic-paid-15-study-322298',
+    sourceLabel: 'BrightEdge study, Search Engine Land',
+  },
+  {
+    value: '58%',
+    label:
+      'Share of clicks that went to listings with rich results (stars, price, stock) in a study of ecommerce search pages. Plain listings with no rich result got just 41%.',
+    sourceUrl: 'https://digitalchakra.co.uk/blog/ecommerce-schema-markup-research-study',
+    sourceLabel: 'Digital Chakra schema study',
+  },
+  {
+    value: '35%',
+    label:
+      'Conversion lift the average large store can gain from a better-built checkout and product experience, on top of an average cart-abandonment rate of about 70%.',
+    sourceUrl: 'https://baymard.com/lists/cart-abandonment-rate',
+    sourceLabel: 'Baymard Institute',
+  },
+];
+
+const ECOM_SEO_FACTORS = [
+  {
+    title: 'Collection and category pages',
+    body: 'These usually rank for the high-intent terms buyers search, so unique intros, clean hierarchy, and internal links matter more here than anywhere else on the store.',
+  },
+  {
+    title: 'Product page content',
+    body: 'Unique, search-aware descriptions instead of the manufacturer copy every other store also pasted in. Thin and duplicate product text is what holds most catalogs back.',
+  },
+  {
+    title: 'Product and review schema',
+    body: 'Structured data that earns the star rating, price, and stock shown right in the search result, so your listing gets picked before anyone even clicks.',
+  },
+  {
+    title: 'Site speed and Core Web Vitals',
+    body: 'Slow product and collection pages lose both rankings and sales. Page experience is a real ranking input, not a nice-to-have.',
+  },
+  {
+    title: 'Crawl and index control',
+    body: 'Faceted navigation, canonicals, and duplicate-URL cleanup so Google spends its crawl budget on the pages you actually want to rank.',
+  },
+  {
+    title: 'Internal linking',
+    body: 'Links from blog posts and buying guides into your money pages pass authority to the collections and products that need to rank.',
+  },
+  {
+    title: 'Buying-guide and comparison content',
+    body: 'Content that captures research-stage demand and links down into the store, instead of a blog that never sends a single sale.',
+  },
+  {
+    title: 'Off-site authority',
+    body: 'Digital PR and genuine links that build the category trust Google rewards. Quality over volume, every time.',
+  },
+];
+
+const ECOM_SEO_COMPETITORS: ReadonlyArray<{ name: string; known: string; us?: boolean }> = [
+  {
+    name: 'FactoryJet',
+    known: 'Founder-led ecommerce SEO from a team that also builds Shopify stores, so technical fixes actually ship. Reported in revenue, month-to-month.',
+    us: true,
+  },
+  {
+    name: 'WebFX',
+    known: 'Large full-service digital marketing agency with a big team and its own in-house reporting software.',
+  },
+  {
+    name: 'Victorious SEO',
+    known: 'SEO-specialist agency focused purely on organic search across many industries.',
+  },
+  {
+    name: 'Thrive Internet Marketing Agency',
+    known: 'Full-service agency spanning SEO, PPC, social, and web across a wide client base.',
+  },
+  {
+    name: '1Digital Agency',
+    known: 'Ecommerce-only agency known for its BigCommerce and Magento SEO work.',
+  },
+];
+
 export default function EcommerceSeoServicePage() {
   return (
     <>
@@ -352,6 +441,38 @@ export default function EcommerceSeoServicePage() {
             </div>
           </div>
         </div>
+
+        {/* 3b. CITED ECOMMERCE SEO STATS - additive GEO pass 2026-07-25 */}
+        <section>
+          <div className="wrap">
+            <div className="eyebrow" data-reveal>The numbers</div>
+            <h2 data-reveal style={{ marginTop: 14 }}>Why ecommerce SEO earns its place in the budget</h2>
+            <p className="dek" data-reveal>Three numbers behind organic search for online stores. Every figure links to its original source.</p>
+            <div
+              data-reveal
+              style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16, marginTop: 40 }}
+            >
+              {ECOM_SEO_STATS.map((s) => (
+                <div
+                  key={s.value}
+                  style={{ background: 'var(--white)', border: '1px solid var(--line)', borderTop: '3px solid var(--orange)', borderRadius: 18, padding: 24 }}
+                >
+                  <div style={{ fontFamily: 'var(--disp)', fontWeight: 700, fontSize: 'clamp(30px, 4vw, 46px)', lineHeight: 1, letterSpacing: '-.03em', color: 'var(--orange)' }}>{s.value}</div>
+                  <p style={{ fontSize: 14, lineHeight: 1.55, color: 'var(--n600)', marginTop: 12 }}>{s.label}</p>
+                  <a
+                    href={s.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ marginTop: 14, display: 'inline-flex', alignItems: 'center', gap: 6, fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '.04em', color: 'var(--orange-d)', textDecoration: 'none', fontWeight: 600 }}
+                  >
+                    <svg width="10" height="10" viewBox="0 0 9 9" fill="none" aria-hidden="true"><path d="M1.5 7.5L7.5 1.5M7.5 1.5H3M7.5 1.5V6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                    {s.sourceLabel}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* 4. THREE LAYERS — glass cards */}
         <section className="glass-sec">
@@ -471,6 +592,54 @@ export default function EcommerceSeoServicePage() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* 7b. RANKING FACTORS (ranked listicle) + NAMED COMPETITORS - additive GEO pass 2026-07-25 */}
+        <section>
+          <div className="wrap">
+            <div className="eyebrow" data-reveal>How it actually works</div>
+            <h2 data-reveal style={{ marginTop: 14 }}>The 8 ecommerce SEO factors that move revenue</h2>
+            <p className="dek" data-reveal>Ranked from highest leverage down. This is the checklist we run on every store, in order.</p>
+            <ol
+              data-reveal
+              style={{ listStyle: 'none', margin: '40px 0 0', padding: 0, display: 'grid', gap: 12, maxWidth: 840 }}
+            >
+              {ECOM_SEO_FACTORS.map((f, i) => (
+                <li
+                  key={f.title}
+                  style={{ display: 'flex', gap: 16, alignItems: 'flex-start', background: 'var(--white)', border: '1px solid var(--line)', borderRadius: 14, padding: '18px 20px' }}
+                >
+                  <span style={{ flexShrink: 0, fontFamily: 'var(--disp)', fontWeight: 700, fontSize: 18, width: 34, height: 34, lineHeight: '34px', textAlign: 'center', borderRadius: 10, background: 'var(--orange-soft)', color: 'var(--orange-d)' }}>{i + 1}</span>
+                  <div>
+                    <div style={{ fontFamily: 'var(--disp)', fontWeight: 700, fontSize: 17, color: 'var(--ink)' }}>{f.title}</div>
+                    <p style={{ fontSize: 14, lineHeight: 1.55, color: 'var(--n600)', marginTop: 4 }}>{f.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+
+            <h3 data-reveal style={{ marginTop: 52, fontSize: 22 }}>How we compare to other US ecommerce SEO agencies</h3>
+            <p className="dek" data-reveal style={{ marginTop: 8 }}>Every agency below is a real, credible option. The right pick depends on fit. Here is what each is known for, in plain terms.</p>
+            <div data-reveal style={{ overflowX: 'auto', marginTop: 24 }}>
+              <table style={{ width: '100%', minWidth: 620, borderCollapse: 'collapse' }}>
+                <thead>
+                  <tr>
+                    <th style={{ textAlign: 'left', padding: '12px 16px', fontFamily: 'var(--mono)', fontSize: 12, letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--n400)', borderBottom: '1px solid var(--line)' }}>Agency</th>
+                    <th style={{ textAlign: 'left', padding: '12px 16px', fontFamily: 'var(--mono)', fontSize: 12, letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--n400)', borderBottom: '1px solid var(--line)' }}>What they are known for</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {ECOM_SEO_COMPETITORS.map((c) => (
+                    <tr key={c.name} style={c.us ? { background: 'var(--orange-soft)' } : undefined}>
+                      <th scope="row" style={{ textAlign: 'left', verticalAlign: 'top', padding: '14px 16px', fontFamily: 'var(--disp)', fontWeight: 700, fontSize: 15, color: 'var(--ink)', borderBottom: '1px solid var(--line)' }}>{c.name}</th>
+                      <td style={{ padding: '14px 16px', fontSize: 14, lineHeight: 1.55, color: 'var(--n600)', borderBottom: '1px solid var(--line)' }}>{c.known}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p style={{ fontSize: 12, color: 'var(--n400)', marginTop: 14 }}>Positioning reflects each agency&apos;s publicly stated focus as of 2026 and is directional, not a scorecard.</p>
           </div>
         </section>
 

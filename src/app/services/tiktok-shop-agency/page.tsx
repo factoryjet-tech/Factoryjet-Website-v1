@@ -174,6 +174,21 @@ const PILLARS = [
 
 const PROGRAMS = ['Seller Center', 'Spark Ads', 'GMV Max', 'Affiliate Center', 'LIVE Shopping', 'Fulfilled by TikTok'];
 
+/* Cited market stats. Every figure links to a real, opened source. */
+const STATS = [
+  { v: '$15.82B', l: 'in US sales ran through TikTok Shop in 2025, up from almost nothing when it launched stateside in late 2023.', src: 'EMARKETER, 2025', href: 'https://www.emarketer.com/press-releases/tiktok-shop-makes-up-nearly-20-of-social-commerce-in-2025/' },
+  { v: '18.2%', l: 'of all US social commerce now happens on TikTok Shop, and that share is projected to reach 24% by 2027.', src: 'EMARKETER, 2025', href: 'https://www.emarketer.com/press-releases/tiktok-shop-makes-up-nearly-20-of-social-commerce-in-2025/' },
+  { v: '407%', l: 'how fast TikTok Shop grew its US sales in a single year, then added another 108% on top the next.', src: 'EMARKETER, 2025', href: 'https://www.emarketer.com/press-releases/tiktok-shop-makes-up-nearly-20-of-social-commerce-in-2025/' },
+];
+
+/* Real, named TikTok Shop agencies brands weigh us against, framed honestly. */
+const RIVALS = [
+  { b: 'Movers+Shakers', p: 'A creative-first agency born from TikTok culture, behind viral work for brands like e.l.f. The right call when a big-swing creative campaign is the one thing you need.' },
+  { b: 'Fanbytes by Brainlabs', p: 'Gen Z influencer specialists with deep youth-culture reach. Strong for awareness pushes, lighter on running the shop, ads, and listings day to day.' },
+  { b: 'The Influencer Marketing Factory', p: 'A more process-driven social commerce agency built around creators and GMV. Similar goals to ours, weighted toward the influencer side.' },
+  { b: 'Where FactoryJet fits', p: 'One team running the shop, ads, affiliate program, LIVE selling, and listings together, and connecting TikTok Shop to Amazon and your own store.' },
+];
+
 const yes = <span style={{ color: '#177a48', fontWeight: 700 }}>Yes</span>;
 const no = (t: string) => <span style={{ color: '#b23e13' }}>{t}</span>;
 const partial = (t: string) => <span style={{ color: '#8a5e00' }}>{t}</span>;
@@ -240,6 +255,22 @@ export default function TikTokShopAgencyPage() {
           <div className="tts-wrap">
             <div className="t">Working across the TikTok Shop programs that drive sales</div>
             <div className="tts-logos">{PROGRAMS.map((p) => <span key={p}>{p}</span>)}</div>
+          </div>
+        </section>
+
+        {/* MARKET STATS (cited) */}
+        <section className="tts-sec pt0">
+          <div className="tts-wrap">
+            <div className="tts-sh"><span className="tts-eyebrow">Why TikTok Shop</span><h2 className="disp">Why TikTok Shop is worth the effort</h2><p>TikTok Shop went from brand new to a real revenue channel in about two years. The numbers show why brands are moving fast.</p></div>
+            <div className="tts-stats" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: 14 }}>
+              {STATS.map((s) => (
+                <div key={s.v} className="tts-crystal" style={{ padding: '24px 24px 22px' }}>
+                  <div className="disp" style={{ fontSize: 34, color: '#F05A28', lineHeight: 1.04 }}>{s.v}</div>
+                  <p style={{ color: '#3a3a38', fontSize: 15, lineHeight: 1.5, marginTop: 8 }}>{s.l}</p>
+                  <a href={s.href} target="_blank" rel="noopener noreferrer nofollow" style={{ display: 'inline-block', marginTop: 12, fontSize: 12.5, color: '#B23E13', textDecoration: 'underline', textUnderlineOffset: 2 }}>Source: {s.src}</a>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -337,6 +368,18 @@ export default function TikTokShopAgencyPage() {
                 { feature: 'Profit-based reporting', values: [yes, partial('Ad metrics'), no('Limited'), yes] },
               ]}
             />
+          </div>
+        </section>
+
+        {/* NAMED COMPETITORS */}
+        <section className="tts-sec pt0">
+          <div className="tts-wrap">
+            <div className="tts-sh"><span className="tts-eyebrow">The landscape</span><h2 className="disp">Named TikTok Shop agencies brands compare us with</h2><p>Most TikTok Shop help is creative or influencer only. Here is where the known names fit, and where we fit.</p></div>
+            <div className="tts-list">
+              {RIVALS.map((r) => (
+                <div key={r.b} className="tts-crystal tts-li"><span className="num" /><div><b>{r.b}</b><p>{r.p}</p></div></div>
+              ))}
+            </div>
           </div>
         </section>
 
