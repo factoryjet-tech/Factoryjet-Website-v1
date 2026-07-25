@@ -754,6 +754,14 @@ export default function DigitalMarketingPage() {
               </a>
               , the same senior team handles it.
             </p>
+            <p className="mt-4 text-lg leading-relaxed text-fj-ink/80">
+              Dedicated city pages:{' '}
+              <a href="/digital-marketing/mumbai" className="font-semibold text-[#B23E13] underline underline-offset-2">Mumbai</a>,{' '}
+              <a href="/digital-marketing/bangalore" className="font-semibold text-[#B23E13] underline underline-offset-2">Bangalore</a>,{' '}
+              <a href="/digital-marketing/delhi" className="font-semibold text-[#B23E13] underline underline-offset-2">Delhi</a>,{' '}
+              <a href="/digital-marketing/pune" className="font-semibold text-[#B23E13] underline underline-offset-2">Pune</a>, and{' '}
+              <a href="/digital-marketing/hyderabad" className="font-semibold text-[#B23E13] underline underline-offset-2">Hyderabad</a>.
+            </p>
           </div>
         </section>
 

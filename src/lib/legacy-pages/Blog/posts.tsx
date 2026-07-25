@@ -96,8 +96,13 @@ import { post as agenticAiVsAiAgentsPost } from './posts/agentic-ai-vs-ai-agents
 import { post as howToSellOnAmazon2026Post } from './posts/how-to-sell-on-amazon-2026';
 import { post as howToSellOnWalmartMarketplace2026Post } from './posts/how-to-sell-on-walmart-marketplace-2026';
 import { post as whatIsAgenticAiPost } from './posts/what-is-agentic-ai';
+import { post as howToChooseDigitalMarketingAgencyIndia2026Post } from './posts/how-to-choose-digital-marketing-agency-india-2026';
+import { post as digitalMarketingForSmallBusinessIndiaPost } from './posts/digital-marketing-for-small-business-india';
 
 export const POSTS: BlogPost[] = [
+  // --- INDIA DIGITAL MARKETING (2026) ---
+  howToChooseDigitalMarketingAgencyIndia2026Post,
+  digitalMarketingForSmallBusinessIndiaPost,
   // --- WEB DESIGN & STRATEGY ---
 { 
   id: '1',

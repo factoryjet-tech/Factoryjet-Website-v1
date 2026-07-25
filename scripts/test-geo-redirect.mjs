@@ -44,6 +44,8 @@ expect('US human /whatsapp-chatbot → US ai-chatbot-development',
   decideNaRedirect({ path: '/whatsapp-chatbot', country: 'US', userAgent: CHROME }), '/services/ai-chatbot-development')
 expect('US human /digital-marketing → US services hub',
   decideNaRedirect({ path: '/digital-marketing', country: 'US', userAgent: CHROME }), '/services')
+expect('US human /digital-marketing/mumbai → US services hub',
+  decideNaRedirect({ path: '/digital-marketing/mumbai', country: 'US', userAgent: CHROME }), '/services')
 expect('US GPTBot /digital-marketing → NOT redirected (protect indexing)',
   decideNaRedirect({ path: '/digital-marketing', country: 'US', userAgent: GPTBOT }), null)
 expect('India human /digital-marketing → NOT redirected',

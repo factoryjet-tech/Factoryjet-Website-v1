@@ -211,6 +211,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: PRIORITY.subpage,
   }))
 
+  // ── India digital-marketing city pages ───────────────────────────────────────
+  const dmCities: MetadataRoute.Sitemap = ['mumbai', 'bangalore', 'delhi', 'pune', 'hyderabad'].map((city) => ({
+    url: `${SITE_URL}/digital-marketing/${city}`,
+    lastModified: getFileLastMod(`src/app/digital-marketing/${city}/page.tsx`),
+    changeFrequency: CHANGEFREQ.city as ChangeFreq,
+    priority: PRIORITY.city,
+  }))
+
   return [
     webDesignHub,
     ...webDesignCities,
@@ -219,5 +227,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...seoSubServices,
     ...ecommerceCities,
     ...aiSubPages,
+    ...dmCities,
   ]
 }
