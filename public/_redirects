@@ -35,6 +35,8 @@
 #   ai-agency                      → ai-agents  (ai-agents is the canonical AI hub)
 /services/generative-engine-optimization   /services/ai-seo      301
 /services/ai-agency                         /services/ai-agents   301
+# whatsapp-chatbot US namespace was a noindex double-hop stub → point straight at the US twin
+/services/whatsapp-chatbot                  /services/ai-chatbot-development   301
 
 # ── LEGACY PAGE RETIREMENT (Task C, 2026-05-14) ──────────────────────────────
 # NOTE: NYC /services rule moved to canonical block below (line ~58) to avoid

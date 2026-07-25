@@ -218,8 +218,9 @@ export default function HeadlessCommercePage() {
             <p style={{ marginTop: '28px', fontSize: '14px', color: 'var(--pp-muted)' }}>
               Related:{' '}
               <Link href="/services/shopify-development" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>Shopify development</Link>,{' '}
-              <Link href="/bigcommerce-development" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>BigCommerce development</Link>, and{' '}
-              <Link href="/omnichannel-commerce" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>omnichannel commerce</Link>.
+              <Link href="/bigcommerce-development" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>BigCommerce development</Link>,{' '}
+              <Link href="/omnichannel-commerce" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>omnichannel commerce</Link>, and our{' '}
+              <Link href="/best-ecommerce-platforms" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>ecommerce platform comparison</Link>.
             </p>
           </div>
         </section>

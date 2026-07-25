@@ -89,6 +89,7 @@ const nextConfig = {
       // Cannibalization consolidation (2026-07-25) — prod layer is /public/_redirects
       { source: '/services/generative-engine-optimization', destination: '/services/ai-seo',    permanent: true },
       { source: '/services/ai-agency',                       destination: '/services/ai-agents', permanent: true },
+      { source: '/services/whatsapp-chatbot',                destination: '/services/ai-chatbot-development', permanent: true },
       // UK sitemap legacy URLs
       { source: '/uk/sitemap-index.xml',    destination: '/sitemap.xml',            permanent: true },
       { source: '/uk/sitemap-cities.xml',   destination: '/sitemap-uk/sitemap.xml', permanent: true },

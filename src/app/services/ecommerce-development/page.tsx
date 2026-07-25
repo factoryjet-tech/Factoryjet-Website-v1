@@ -1292,8 +1292,9 @@ export default function EcommerceDevelopmentPage() {
                 <p>
                   Know your platform already? Go straight to{' '}
                   <Link href="/services/shopify-development" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify development</Link>,{' '}
-                  <Link href="/services/woocommerce-development" className="text-[#B23E13] font-medium underline underline-offset-2">WooCommerce development</Link>, or{' '}
-                  <Link href="/services/magento-development" className="text-[#B23E13] font-medium underline underline-offset-2">Magento development</Link>.
+                  <Link href="/services/woocommerce-development" className="text-[#B23E13] font-medium underline underline-offset-2">WooCommerce development</Link>,{' '}
+                  <Link href="/services/magento-development" className="text-[#B23E13] font-medium underline underline-offset-2">Magento development</Link>, or compare options in our{' '}
+                  <Link href="/best-ecommerce-platforms" className="text-[#B23E13] font-medium underline underline-offset-2">best ecommerce platforms guide</Link>.
                 </p>
               </div>
               <div className="rounded-2xl border border-[#E5E5E0] bg-white p-7">
