@@ -36,6 +36,40 @@ import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
+
+/* Internal-linking data (added 2026-07-26 to fix orphaned SEO pages). */
+const SEO_SERVICE_LINKS: ReadonlyArray<{ href: string; label: string; blurb: string }> = [
+  { href: '/services/local-seo', label: 'Local SEO', blurb: 'Map pack, Google Business Profile, and searches near you.' },
+  { href: '/services/small-business-seo', label: 'Small Business SEO', blurb: 'Search growth scoped to a small team and a real budget.' },
+  { href: '/services/seo-audit', label: 'SEO Audit', blurb: 'Find what is holding the site back before spending more.' },
+  { href: '/services/seo-consulting', label: 'SEO Consulting', blurb: 'Strategy and roadmaps for teams with in-house resource.' },
+  { href: '/services/ecommerce-seo', label: 'Ecommerce SEO', blurb: 'Category pages, product schema, and organic revenue.' },
+  { href: '/services/shopify-seo', label: 'Shopify SEO', blurb: 'Built around how Shopify actually handles content and URLs.' },
+  { href: '/services/ai-seo', label: 'AI SEO', blurb: 'Get cited by ChatGPT, Perplexity, and AI Overviews.' },
+  { href: '/services/dental-seo', label: 'Dental SEO', blurb: 'Patient acquisition for practices competing locally.' },
+  { href: '/services/healthcare-seo', label: 'Healthcare SEO', blurb: 'Search for clinics and providers, built for trust signals.' },
+  { href: '/services/law-firm-seo', label: 'Law Firm SEO', blurb: 'High-intent case enquiries in a crowded local market.' },
+];
+
+const US_SEO_CITIES: ReadonlyArray<{ slug: string; name: string }> = [
+  { slug: 'austin', name: 'Austin' },
+  { slug: 'charlotte', name: 'Charlotte' },
+  { slug: 'cleveland', name: 'Cleveland' },
+  { slug: 'nashville', name: 'Nashville' },
+  { slug: 'denver', name: 'Denver' },
+  { slug: 'tampa', name: 'Tampa' },
+  { slug: 'boise', name: 'Boise' },
+  { slug: 'arlington', name: 'Arlington' },
+  { slug: 'chattanooga', name: 'Chattanooga' },
+  { slug: 'colorado-springs', name: 'Colorado Springs' },
+  { slug: 'corpus-christi', name: 'Corpus Christi' },
+  { slug: 'fargo', name: 'Fargo' },
+  { slug: 'huntington-beach', name: 'Huntington Beach' },
+  { slug: 'lakewood-ranch', name: 'Lakewood Ranch' },
+  { slug: 'lincoln', name: 'Lincoln' },
+  { slug: 'providence', name: 'Providence' },
+  { slug: 'sioux-falls', name: 'Sioux Falls' },
+];
 const REVIEWED_DATE = 'June 1, 2026';
 
 /* Expanded "room" palette: accents drawn from the approved mockup, anchored on
@@ -1149,6 +1183,72 @@ export default function SeoServicePage() {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Internal linking hub. Added 2026-07-26: a link audit found this page had
+            zero outbound in-content links, and 13 US city SEO pages plus the three
+            industry SEO pages had zero inbound links from anywhere on the site. */}
+        <section className="py-14 md:py-20" style={{ backgroundColor: CREAM }}>
+          <div className="mx-auto w-full max-w-[1120px] px-5 sm:px-6 md:px-8">
+            <p
+              className="font-fj-mono text-[12px] font-semibold uppercase tracking-[0.13em]"
+              style={{ color: ORANGE_DARK }}
+            >
+              EXPLORE SEO
+            </p>
+            <h2
+              className="fj-display mt-3 font-semibold text-fj-ink"
+              style={{ fontSize: 'clamp(1.5rem, 2.6vw, 2.125rem)', lineHeight: 1.15, letterSpacing: '-0.025em' }}
+            >
+              Find the right SEO service
+            </h2>
+            <p className="mt-4 max-w-[62ch] font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.7 }}>
+              Search is not one job. Pick the page that matches what you actually need, whether that is
+              a one-off diagnosis, ongoing work, or getting found by AI answer engines.
+            </p>
+
+            <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {SEO_SERVICE_LINKS.map((s) => (
+                <Link
+                  key={s.href}
+                  href={s.href}
+                  className="group/svc block rounded-2xl border bg-white p-5 transition-all hover:shadow-md"
+                  style={{ borderColor: 'rgba(26,23,18,0.12)' }}
+                >
+                  <span className="fj-display block font-semibold text-fj-ink transition-colors group-hover/svc:text-[#B23E13]" style={{ fontSize: '1.0625rem' }}>
+                    {s.label}
+                  </span>
+                  <span className="mt-1.5 block font-fj-body text-[0.9rem] leading-relaxed text-fj-neutral-600">
+                    {s.blurb}
+                  </span>
+                </Link>
+              ))}
+            </div>
+
+            <h3
+              className="fj-display mt-12 font-semibold text-fj-ink"
+              style={{ fontSize: 'clamp(1.25rem, 2vw, 1.625rem)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
+            >
+              SEO in your city
+            </h3>
+            <p className="mt-3 max-w-[62ch] font-fj-body text-fj-neutral-600" style={{ fontSize: '1rem', lineHeight: 1.7 }}>
+              Local search works differently in every market. These pages cover the competitors, the
+              map pack, and what ranking actually takes where you are.
+            </p>
+            <ul className="mt-6 flex flex-wrap gap-2.5">
+              {US_SEO_CITIES.map((c) => (
+                <li key={c.slug}>
+                  <Link
+                    href={`/${c.slug}/seo`}
+                    className="inline-flex items-center rounded-full border bg-white px-4 py-2 font-fj-body text-[0.9rem] font-medium text-fj-ink transition-colors hover:border-[#F05A28]/50 hover:text-[#B23E13]"
+                    style={{ borderColor: 'rgba(26,23,18,0.15)' }}
+                  >
+                    {c.name} SEO
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
       </main>

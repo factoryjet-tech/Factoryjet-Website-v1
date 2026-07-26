@@ -268,7 +268,7 @@ export const post: BlogPost = {
         They're using purpose-built applications: AI that handles their customer service queue, AI
         that writes their product descriptions, AI that follows up with leads at 2am. At FactoryJet,
         we build these integrations directly into the websites and{' '}
-        <a href="/services/ecommerce" className="text-blue-600 underline hover:text-blue-800 transition-colors">
+        <a href="/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">
           Shopify stores
         </a>{' '}
         we deliver — so the AI layer comes ready to use on day one.
@@ -373,7 +373,7 @@ export const post: BlogPost = {
       </p>
       <p className="mb-4">
         At FactoryJet, we build these capabilities directly into the{' '}
-        <a href="/services/ecommerce" className="text-blue-600 underline hover:text-blue-800 transition-colors">
+        <a href="/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">
           websites and e-commerce stores
         </a>{' '}
         we deliver — so you're not starting from scratch. The 17.7% who are already there aren't

@@ -155,7 +155,7 @@ export const post: BlogPost = {
         FactoryJet delivers custom-built Denver small business websites in 7 days starting at $1,999. Every project: custom Next.js or WordPress build (no templates purchased), Lighthouse 100/100 on all four metrics, WCAG 2.2 Level AA compliance, full technical SEO, US business-hour project management, US-governed contracts, full code ownership at final payment, and 30 days post-launch support.
       </p>
       <p className="mb-4">
-        ➡ <a href="/web-design/denver-co" className="text-blue-600 underline hover:text-blue-800 transition-colors">See Denver web design packages</a> · <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free quote in 24 hours</a>
+        ➡ <a href="/denver/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">See Denver web design packages</a> · <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free quote in 24 hours</a>
       </p>
 
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8">

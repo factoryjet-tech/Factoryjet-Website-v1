@@ -6,6 +6,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 import { BlogPostPage } from '@/pages/Blog/components/BlogPostPage'
 import { POSTS } from '@/pages/Blog/posts'
+import { getRelatedPosts, getRelatedServices } from '@/pages/Blog/relatedLinks'
 import { getAuthorByName } from '@/data/authors'
 
 type Props = {
@@ -172,7 +173,11 @@ export default async function Page({ params }: Props) {
       )}
 
       <SiteHeader locale="us" />
-      <BlogPostPage post={post} />
+      <BlogPostPage
+        post={post}
+        relatedPosts={getRelatedPosts(post, POSTS)}
+        relatedServices={getRelatedServices(post)}
+      />
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   )

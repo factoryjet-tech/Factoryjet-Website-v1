@@ -1202,7 +1202,7 @@ export default function EcommerceDevelopmentPage() {
                 ].map(({ label, slug }) => (
                   <a
                     key={slug}
-                    href={`/services/ecommerce-development/${slug}`}
+                    href={`/${slug}/ecommerce-development`}
                     className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#B23E13] hover:bg-[rgba(240,90,40,0.15)] transition-colors"
                     style={{ fontSize: '10px', letterSpacing: '0.08em' }}
                   >
@@ -1340,8 +1340,6 @@ export default function EcommerceDevelopmentPage() {
                 { city: 'Charlotte, NC', href: '/charlotte/ecommerce-development/' },
                 { city: 'Raleigh, NC', href: '/raleigh/ecommerce-development/' },
                 { city: 'Tampa, FL', href: '/tampa/ecommerce-development/' },
-                { city: 'New York, NY', href: '/new-york/ecommerce-development/' },
-                { city: 'Cleveland, OH', href: '/cleveland/ecommerce-development/' },
                 { city: 'Boise, ID', href: '/boise/ecommerce-development/' },
                 { city: 'Sioux Falls, SD', href: '/sioux-falls/ecommerce-development/' },
                 { city: 'Lincoln, NE', href: '/lincoln/ecommerce-development/' },
@@ -1349,6 +1347,37 @@ export default function EcommerceDevelopmentPage() {
                 { city: 'Fargo, ND', href: '/fargo/ecommerce-development/' },
               ].map(({ city, href }) => (
                 <Link key={href} href={href} className="px-4 py-2 rounded-full border border-[#B23E13] text-[#B23E13] text-sm font-medium hover:bg-[#B23E13] hover:text-white transition-colors">
+                  {city}
+                </Link>
+              ))}
+            </div>
+
+            {/* India city pages. This page is the canonical parent for
+                /services/ecommerce-development/[city], which are India markets and are
+                listed in sitemap-india. Added 2026-07-26: all 13 had zero inbound links. */}
+            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mt-12 mb-3">Serving India</p>
+            <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">E-Commerce Development Services in India</h2>
+            <div className="flex flex-wrap gap-3">
+              {[
+                { city: 'Mumbai', slug: 'mumbai' },
+                { city: 'Delhi', slug: 'delhi' },
+                { city: 'Bangalore', slug: 'bangalore' },
+                { city: 'Hyderabad', slug: 'hyderabad' },
+                { city: 'Chennai', slug: 'chennai' },
+                { city: 'Pune', slug: 'pune' },
+                { city: 'Ahmedabad', slug: 'ahmedabad' },
+                { city: 'Kolkata', slug: 'kolkata' },
+                { city: 'Jaipur', slug: 'jaipur' },
+                { city: 'Surat', slug: 'surat' },
+                { city: 'Kochi', slug: 'kochi' },
+                { city: 'Lucknow', slug: 'lucknow' },
+                { city: 'Chandigarh', slug: 'chandigarh' },
+              ].map(({ city, slug }) => (
+                <Link
+                  key={slug}
+                  href={`/services/ecommerce-development/${slug}`}
+                  className="px-4 py-2 rounded-full border border-[#B23E13] text-[#B23E13] text-sm font-medium hover:bg-[#B23E13] hover:text-white transition-colors"
+                >
                   {city}
                 </Link>
               ))}

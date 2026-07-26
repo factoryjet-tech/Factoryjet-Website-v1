@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { BlogPost, FAQItem } from '../data.types';
+import type { RelatedService } from '../relatedLinks';
 import { ReadingProgress } from './ReadingProgress';
 import { StickyCallToAction } from './StickyCallToAction';
 import { ShareButton } from './ShareButton';
@@ -22,6 +23,10 @@ import {
 
 interface BlogPostPageProps {
   post: BlogPost;
+  /** Sibling posts to link to. Computed in the route so this stays presentational. */
+  relatedPosts?: BlogPost[];
+  /** Money pages this topic should feed. Computed in the route. */
+  relatedServices?: RelatedService[];
 }
 
 const KeyTakeaways = ({ items }: { items: string[] }) => (
@@ -64,7 +69,11 @@ const FAQAccordion = ({ faqs }: { faqs: FAQItem[] }) => (
   </div>
 );
 
-export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
+export const BlogPostPage: React.FC<BlogPostPageProps> = ({
+  post,
+  relatedPosts = [],
+  relatedServices = [],
+}) => {
   return (
     <div className="min-h-screen bg-[#FAFAF7] relative">
       <ReadingProgress />
@@ -252,6 +261,76 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
                   </div>
                 );
               })()}
+
+              {/* Internal linking: sibling posts + the money pages this topic feeds.
+                  Added 2026-07-26 after a link audit found 72 of 102 posts had zero
+                  inbound in-content links and the template emitted none outbound. */}
+              {relatedServices.length > 0 && (
+                <section className="mt-12 md:mt-16" id="related-services" aria-labelledby="related-services-heading">
+                  <h2
+                    id="related-services-heading"
+                    className="font-display font-bold text-xl md:text-2xl text-gray-900 mb-4 md:mb-5"
+                  >
+                    How we help with this
+                  </h2>
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    {relatedServices.map((svc) => (
+                      <Link
+                        key={svc.href}
+                        href={svc.href}
+                        className="group/svc block rounded-xl md:rounded-2xl border border-gray-200 bg-white p-4 md:p-5 hover:border-[#F05A28]/40 hover:shadow-md transition-all"
+                      >
+                        <span className="flex items-center gap-1.5 font-display font-bold text-base md:text-lg text-gray-900 group-hover/svc:text-[#B23E13] transition-colors">
+                          {svc.label}
+                          <ArrowUpRight className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
+                        </span>
+                        <span className="mt-1.5 block text-gray-700 text-xs md:text-sm leading-relaxed">
+                          {svc.blurb}
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {relatedPosts.length > 0 && (
+                <section className="mt-10 md:mt-14" id="related-reading" aria-labelledby="related-reading-heading">
+                  <h2
+                    id="related-reading-heading"
+                    className="font-display font-bold text-xl md:text-2xl text-gray-900 mb-4 md:mb-5"
+                  >
+                    Related reading
+                  </h2>
+                  <ul className="space-y-3">
+                    {relatedPosts.map((rp) => (
+                      <li key={rp.slug}>
+                        <Link
+                          href={`/blog/${rp.slug}`}
+                          className="group/rp flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:border-[#F05A28]/40 hover:shadow-md transition-all"
+                        >
+                          <img
+                            src={rp.imageUrl}
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                            width={72}
+                            height={72}
+                            className="hidden sm:block w-[72px] h-[72px] rounded-lg object-cover flex-shrink-0"
+                          />
+                          <span className="min-w-0">
+                            <span className="block font-display font-bold text-sm md:text-base text-gray-900 group-hover/rp:text-[#B23E13] transition-colors">
+                              {rp.title}
+                            </span>
+                            <span className="mt-1 block text-gray-700 text-xs md:text-sm leading-relaxed line-clamp-2">
+                              {rp.excerpt}
+                            </span>
+                          </span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              )}
 
             </div>
           </article>

@@ -660,6 +660,22 @@ export default function SeoHubPage() {
               linkLabel: 'Explore SEO in Vadodara',
               linkHref: '/seo/vadodara',
             },
+            {
+              name: 'SEO Agency in Chennai',
+              description:
+                'A making-and-exporting city with a large IT belt. Car and parts makers in Sriperumbudur, IT along OMR, and hospitals that draw patients from across South India and abroad.',
+              example: 'Explore SEO in Chennai',
+              linkLabel: 'Explore SEO in Chennai',
+              linkHref: '/seo/chennai',
+            },
+            {
+              name: 'SEO Agency in Kolkata',
+              description:
+                'The trading centre of East India. Tea and jute exporters, engineering suppliers in Howrah, IT in Salt Lake Sector V, and a large education market that searches year round.',
+              example: 'Explore SEO in Kolkata',
+              linkLabel: 'Explore SEO in Kolkata',
+              linkHref: '/seo/kolkata',
+            },
           ]}
         />
 

@@ -171,7 +171,7 @@ export const post: BlogPost = {
         Starting price: $1,999 for a 5-page professional website. Shopify stores from $2,499. Monthly maintenance from $149/month.
       </p>
       <p className="mb-4">
-        ➡ <a href="/web-design/nashville-tn" className="text-blue-600 underline hover:text-blue-800 transition-colors">See Nashville web design packages</a> · <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free quote in 24 hours</a>
+        ➡ <a href="/nashville/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">See Nashville web design packages</a> · <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free quote in 24 hours</a>
       </p>
 
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8">

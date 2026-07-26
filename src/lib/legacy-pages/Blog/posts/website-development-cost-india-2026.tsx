@@ -587,7 +587,7 @@ export const post: BlogPost = {
             Get a Free Quote →
           </a>
           <a
-            href="/india/pricing/"
+            href="/pricing"
             className="inline-block border border-gray-600 hover:border-gray-400 text-gray-300 font-semibold px-6 py-3 rounded-lg transition-colors"
           >
             View INR Pricing

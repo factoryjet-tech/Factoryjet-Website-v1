@@ -362,7 +362,7 @@ const WHATSAPP_MARKET_STATS = [
   {
     value: '7 days',
     label: 'Standard delivery for a FactoryJet WhatsApp chatbot — fixed-price, scoped up front',
-    sourceUrl: 'https://factoryjet.com/india/pricing/',
+    sourceUrl: 'https://factoryjet.com/pricing',
     sourceLabel: 'FactoryJet Pricing',
   },
   {

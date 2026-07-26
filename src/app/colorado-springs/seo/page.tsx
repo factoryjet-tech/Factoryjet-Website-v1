@@ -723,7 +723,7 @@ export default function ColoradoSpringsSEOPage() {
             </a>
             <p style={{ marginTop: '28px', fontSize: '13px', color: 'rgba(255,255,255,0.6)' }}>
               Also in Colorado Springs:{' '}
-              <Link href="/colorado-springs/web-design" style={{ color: 'rgba(255,255,255,0.8)' }}>web design</Link>
+              <Link href="/services/web-design" style={{ color: 'rgba(255,255,255,0.8)' }}>web design</Link>
               {' '}and{' '}
               <Link href="/services/seo" style={{ color: 'rgba(255,255,255,0.8)' }}>US SEO services</Link>.
             </p>

@@ -165,7 +165,7 @@ export const post: BlogPost = {
         <strong>Agency-built custom AI agents:</strong> $2,500–$8,000 to build, $100–$300/month to maintain. Pros: trained on your business, integrated with your website and CRM, handles complex multi-step workflows, maintained and improved over time. Cons: higher upfront cost. ROI threshold for service businesses: typically 60–90 days.
       </p>
       <p className="mb-4">
-        FactoryJet builds custom AI agents for US small businesses starting at $2,999 — deployed and integrated into your website in 7 days. ➡ <a href="/ai-agents" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our AI agent services</a>
+        FactoryJet builds custom AI agents for US small businesses starting at $2,999 — deployed and integrated into your website in 7 days. ➡ <a href="/services/ai-agents" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our AI agent services</a>
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What to Avoid When Buying AI Agent Tools</h2>

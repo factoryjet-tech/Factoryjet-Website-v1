@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import { webDesignAlternates } from '@/data/hreflangMap';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
@@ -19,6 +20,32 @@ import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
+
+/* Internal-linking data (added 2026-07-26 to fix orphaned city pages). */
+const IN_WEB_DESIGN_CITIES: ReadonlyArray<{ slug: string; name: string }> = [
+  { slug: 'ahmedabad', name: 'Ahmedabad' },
+  { slug: 'bangalore', name: 'Bangalore' },
+  { slug: 'bhubaneswar', name: 'Bhubaneswar' },
+  { slug: 'chennai', name: 'Chennai' },
+  { slug: 'coimbatore', name: 'Coimbatore' },
+  { slug: 'delhi', name: 'Delhi' },
+  { slug: 'gurgaon', name: 'Gurgaon' },
+  { slug: 'hyderabad', name: 'Hyderabad' },
+  { slug: 'indore', name: 'Indore' },
+  { slug: 'jaipur', name: 'Jaipur' },
+  { slug: 'kochi', name: 'Kochi' },
+  { slug: 'kolkata', name: 'Kolkata' },
+  { slug: 'madurai', name: 'Madurai' },
+  { slug: 'mumbai', name: 'Mumbai' },
+  { slug: 'nagpur', name: 'Nagpur' },
+  { slug: 'noida', name: 'Noida' },
+  { slug: 'pune', name: 'Pune' },
+  { slug: 'rajkot', name: 'Rajkot' },
+  { slug: 'surat', name: 'Surat' },
+  { slug: 'thiruvananthapuram', name: 'Thiruvananthapuram' },
+  { slug: 'vadodara', name: 'Vadodara' },
+  { slug: 'visakhapatnam', name: 'Visakhapatnam' },
+];
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -1196,6 +1223,39 @@ export default function WebDesignServicePage() {
           categories={IN_FAQ_CATEGORIES}
           items={IN_FAQ_ITEMS}
         />
+
+        {/* ── 14b. CITIES WE SERVE ─────────────────────────────────────────────
+            Added 2026-07-26: a link audit found all 22 web-design city pages had
+            zero inbound in-content links from anywhere on the site. */}
+        <section className="bg-fj-cream py-14 md:py-20">
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <p className="font-fj-mono text-[12px] font-semibold uppercase tracking-[0.13em] text-[#B23E13]">
+              CITIES WE SERVE
+            </p>
+            <h2
+              className="font-fj-display mt-3 font-semibold text-fj-ink"
+              style={{ fontSize: 'clamp(1.5rem, 2.6vw, 2.125rem)', lineHeight: 1.15, letterSpacing: '-0.025em' }}
+            >
+              Web design, city by city
+            </h2>
+            <p className="mt-4 max-w-[62ch] font-fj-body text-[1.0625rem] leading-relaxed text-fj-neutral-600">
+              What a website has to do changes with the market it sells into. These pages cover the
+              buyers, the competition, and the search demand in each city we work in.
+            </p>
+            <ul className="mt-8 flex flex-wrap gap-2.5">
+              {IN_WEB_DESIGN_CITIES.map((c) => (
+                <li key={c.slug}>
+                  <Link
+                    href={`/web-design/${c.slug}`}
+                    className="inline-flex items-center rounded-full border border-fj-neutral-200 bg-white px-4 py-2 font-fj-body text-[0.9rem] font-medium text-fj-ink transition-colors hover:border-[#F05A28]/50 hover:text-[#B23E13]"
+                  >
+                    Web Design in {c.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
 
         {/* ── 15. FINAL CTA (DARK) ─────────────────────────────────────────────── */}
         <FinalCTA
