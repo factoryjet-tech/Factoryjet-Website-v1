@@ -91,13 +91,13 @@ const LAV_SOFT = '#ECEAFB';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'SEO Agency for Small Business USA — Local, Near Me & AI SEO Services | FactoryJet',
+  title: 'SEO Agency for Small Business USA: Local, Near Me & AI SEO Services | FactoryJet',
   description:
     'FactoryJet is an SEO agency for US small businesses. We rank you on Google, put you in "near me" searches, and get you cited in AI Overviews, ChatGPT, and Perplexity. Founder-led, month-to-month, reported in leads.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'SEO Agency for Small Business USA — Local, Near Me & AI SEO Services | FactoryJet',
+    title: 'SEO Agency for Small Business USA: Local, Near Me & AI SEO Services | FactoryJet',
     description:
       'A US-focused SEO company for small businesses. Technical SEO, expert content, and authority building so you rank on Google, appear in "near me" searches, and get cited in AI answers. Founder-led, month-to-month.',
     url: 'https://factoryjet.com/services/seo',
@@ -113,7 +113,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SEO Agency for Small Business USA — Local, Near Me & AI SEO Services | FactoryJet',
+    title: 'SEO Agency for Small Business USA: Local, Near Me & AI SEO Services | FactoryJet',
     description:
       'A US-focused SEO agency for small businesses. Ranks you on Google, gets you in "near me" searches, and cited in AI answers. Founder-led, month-to-month, reported in leads.',
     images: ['https://factoryjet.com/og-default.png'],
@@ -263,7 +263,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'local',
     question: 'How do I find an SEO agency near me?',
     answer:
-      'Most searches for an "SEO agency near me" return local generalist agencies who handle everything from social media to print. For dedicated SEO that ranks you on Google and inside AI answers, a specialized remote agency like FactoryJet often delivers stronger results. We are US-focused, work with clients in every state, and the founder is directly accountable for your rankings — so you get senior expertise without limiting yourself to whoever happens to be in your zip code.',
+      'Most searches for an "SEO agency near me" return local generalist agencies who handle everything from social media to print. For dedicated SEO that ranks you on Google and inside AI answers, a specialized remote agency like FactoryJet often delivers stronger results. We are US-focused, work with clients in every state, and the founder is directly accountable for your rankings, so you get senior expertise without limiting yourself to whoever happens to be in your zip code.',
   },
   {
     category: 'local',
@@ -296,30 +296,30 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
       'The founder, Bhavesh. The person who scopes your SEO is the same person accountable for your results, not a junior who rotates off the account next quarter.',
   },
 
-  // ── Choosing an agency (5) — money-query coverage, added 2026-06-11 ────
+  // ── Choosing an agency (5): money-query coverage, added 2026-06-11 ────
   {
     category: 'included',
     question: 'Who is the best SEO agency in USA?',
     answer:
-      'For SMBs that want senior-led work, FactoryJet makes a strong case: founder-run engagements, transparent, fixed-price quotes, and one retainer covering local, ecommerce, technical, and AI SEO. But the best SEO company in USA for your business depends on fit — the best SEO services company in USA for a 5-location retailer is rarely the right pick for a SaaS startup, and the best SEO services in USA for one industry can be mediocre in another. Whoever you shortlist as the best SEO services agency in USA, apply three filters: senior practitioners doing the work (not just selling it), monthly reporting tied to revenue rather than vanity rankings, and no annual lock-in. The best SEO experts in USA pass all three without flinching.',
+      'For SMBs that want senior-led work, FactoryJet makes a strong case: founder-run engagements, transparent, fixed-price quotes, and one retainer covering local, ecommerce, technical, and AI SEO. But the best SEO company in USA for your business depends on fit. The best SEO services company in USA for a 5-location retailer is rarely the right pick for a SaaS startup, and the best SEO services in USA for one industry can be mediocre in another. Whoever you shortlist as the best SEO services agency in USA, apply three filters: senior practitioners doing the work (not just selling it), monthly reporting tied to revenue rather than vanity rankings, and no annual lock-in. The best SEO experts in USA pass all three without flinching.',
   },
   {
     category: 'included',
     question: 'What are the top 10 SEO companies in USA?',
     answer:
-      'Published lists of the top 10 SEO agencies in USA usually feature large incumbents — WebFX, Ignite Visibility, Victorious — alongside specialist boutiques. FactoryJet competes in that set for SMB and mid-market engagements, with one difference most top 10 SEO services in USA lists miss: we treat AI search (ChatGPT, Perplexity, Google AI Overviews) as a first-class ranking surface, not an upsell. Use any top-10 list as a starting shortlist, then compare per-engine reporting, pricing transparency, and contract terms.',
+      'Published lists of the top 10 SEO agencies in USA usually feature large incumbents such as WebFX, Ignite Visibility and Victorious, alongside specialist boutiques. FactoryJet competes in that set for SMB and mid-market engagements, with one difference most top 10 SEO services in USA lists miss: we treat AI search (ChatGPT, Perplexity, Google AI Overviews) as a first-class ranking surface, not an upsell. Use any top-10 list as a starting shortlist, then compare per-engine reporting, pricing transparency, and contract terms.',
   },
   {
     category: 'technical',
     question: 'Which is the best technical SEO agency in USA?',
     answer:
-      'The best technical SEO agency in USA is one where engineers — not account managers — run the audit. Technical SEO is engineering work: crawl budget, rendering, Core Web Vitals, structured data, internal-link architecture. FactoryJet ships sites that score 100/100 on Lighthouse, and the same engineers who build them run our technical SEO audits. If an agency cannot show you who actually executes the fixes, the audit will become a PDF that nobody implements.',
+      'The best technical SEO agency in USA is one where engineers, not account managers, run the audit. Technical SEO is engineering work: crawl budget, rendering, Core Web Vitals, structured data, internal-link architecture. FactoryJet ships sites that score 100/100 on Lighthouse, and the same engineers who build them run our technical SEO audits. If an agency cannot show you who actually executes the fixes, the audit will become a PDF that nobody implements.',
   },
   {
     category: 'included',
     question: 'Where can I find the best link building services in USA?',
     answer:
-      'Be careful what you buy: the best link building services in USA look nothing like bulk guest-post packages. We build authority through citation acquisition — named mentions in industry publications, podcasts, and directories that both Google and AI engines treat as credibility signals. It overlaps with classic link building but optimizes for source attribution, not anchor text. Anyone selling links by the dozen is selling risk.',
+      'Be careful what you buy: the best link building services in USA look nothing like bulk guest-post packages. We build authority through citation acquisition: named mentions in industry publications, podcasts, and directories that both Google and AI engines treat as credibility signals. It overlaps with classic link building but optimizes for source attribution, not anchor text. Anyone selling links by the dozen is selling risk.',
   },
   {
     category: 'pricing',
@@ -677,7 +677,7 @@ export default function SeoServicePage() {
           </div>
         </section>
 
-        {/* ─── 4b. SEO SERVICES INDEX (cream) — pillar → cluster links ──── */}
+        {/* ─── 4b. SEO SERVICES INDEX (cream): pillar to cluster links ──── */}
         <section className="py-14 md:py-20" style={{ background: CREAM }}>
           <div className="mx-auto max-w-[1180px] px-6 md:px-8">
             <p className="font-fj-mono text-[12px] font-medium uppercase tracking-[0.13em]" style={{ color: ORANGE_DARK }}>
@@ -690,7 +690,7 @@ export default function SeoServicePage() {
               One team, every <span className="italic" style={{ color: ORANGE }}>SEO surface</span> your store needs
             </h2>
             <p className="mt-4 max-w-[560px] font-fj-body font-medium text-fj-neutral-600" style={{ fontSize: '1.125rem', lineHeight: 1.6 }}>
-              Pick the focus that fits where you are — or talk to the founder and we&apos;ll map the right mix.
+              Pick the focus that fits where you are, or talk to the founder and we&apos;ll map the right mix.
             </p>
 
             <div className="mt-10 grid grid-cols-1 gap-[18px] sm:grid-cols-2 md:grid-cols-3">
@@ -733,7 +733,7 @@ export default function SeoServicePage() {
           </div>
         </section>
 
-        {/* ─── 5. BENTO — the engagement (peach) ───────────────────────── */}
+        {/* ─── 5. BENTO: the engagement (peach) ───────────────────────── */}
         <section className="py-14 md:py-20">
           <div className="mx-auto max-w-[1180px] px-6 md:px-8">
             <p className="font-fj-mono text-[12px] font-medium uppercase tracking-[0.13em]" style={{ color: ORANGE_DARK }}>
@@ -834,7 +834,7 @@ export default function SeoServicePage() {
               className="grid grid-cols-2 overflow-hidden rounded-3xl border md:grid-cols-[1.1fr_1fr_1fr_1fr]"
               style={{ borderColor: 'rgba(26,23,18,0.09)' }}
             >
-              {/* Feature labels col — hidden on mobile (mockup behaviour) */}
+              {/* Feature labels col: hidden on mobile (mockup behaviour) */}
               <div className="hidden p-7 md:block">
                 <div className="fj-display mb-5 text-[1.0625rem] font-bold text-fj-ink">What you get</div>
                 {[
@@ -1030,7 +1030,7 @@ export default function SeoServicePage() {
               </div>
             </div>
 
-            {/* Illustrative AI-Overview answer card — qualitative, no invented stats */}
+            {/* Illustrative AI-Overview answer card: qualitative, no invented stats */}
             <div
               className="rounded-3xl border p-6 sm:p-7"
               style={{
@@ -1096,7 +1096,7 @@ export default function SeoServicePage() {
           </div>
         </section>
 
-        {/* ─── 9. FAQ — 27 across 5 categories (shared component) ──────── */}
+        {/* ─── 9. FAQ: 27 across 5 categories (shared component) ──────── */}
         <FAQ
           eyebrow="SEO FAQ"
           headline="Questions, answered like a real call"

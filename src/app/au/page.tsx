@@ -124,13 +124,16 @@ const DAYS = [
   { dn: 'Day 7', t: 'Launch', d: 'Live on your domain, training handover included.' },
 ];
 
+/* Coverage cards. These were <Link>s to /au/{city} pages that were never built,
+   so all six were hard 404s (fixed 2026-07-26). They now render as static cards.
+   Add the href back when the AU city pages ship. */
 const CITIES = [
-  { state: 'NSW', code: 'SYD', name: 'Sydney', blurb: "Web design Sydney & SEO for Australia's biggest market", href: '/au/sydney' },
-  { state: 'VIC', code: 'MEL', name: 'Melbourne', blurb: 'Web design Melbourne for retail, hospitality & services', href: '/au/melbourne' },
-  { state: 'QLD', code: 'BNE', name: 'Brisbane', blurb: 'Web design Brisbane & SEO for the growth corridor', href: '/au/brisbane' },
-  { state: 'WA', code: 'PER', name: 'Perth', blurb: 'Web design Perth for trades, mining services & retail', href: '/au/perth' },
-  { state: 'SA', code: 'ADL', name: 'Adelaide', blurb: 'Web design & website development Adelaide for growing SMBs', href: '/au/adelaide' },
-  { state: 'QLD', code: 'OOL', name: 'Gold Coast', blurb: 'Web design Gold Coast for tourism, fitness & lifestyle brands', href: '/au/gold-coast' },
+  { state: 'NSW', code: 'SYD', name: 'Sydney', blurb: "Web design Sydney & SEO for Australia's biggest market" },
+  { state: 'VIC', code: 'MEL', name: 'Melbourne', blurb: 'Web design Melbourne for retail, hospitality & services' },
+  { state: 'QLD', code: 'BNE', name: 'Brisbane', blurb: 'Web design Brisbane & SEO for the growth corridor' },
+  { state: 'WA', code: 'PER', name: 'Perth', blurb: 'Web design Perth for trades, mining services & retail' },
+  { state: 'SA', code: 'ADL', name: 'Adelaide', blurb: 'Web design & website development Adelaide for growing SMBs' },
+  { state: 'QLD', code: 'OOL', name: 'Gold Coast', blurb: 'Web design Gold Coast for tourism, fitness & lifestyle brands' },
 ];
 
 const CASES = [
@@ -362,31 +365,31 @@ export default function AUHomePage() {
                     <div><b>100/100</b><span>Lighthouse target</span></div>
                     <div><b>0</b><span>templates recycled</span></div>
                   </div>
-                  <Link className="blink" href="/au/services/web-design">Web design in Australia <Ic id="i-arrow" /></Link>
+                  <Link className="blink" href="/services/web-design">Web design in Australia <Ic id="i-arrow" /></Link>
                 </div>
                 <div className="bcard b-sm room-green">
                   <span className="bico" style={{ color: 'var(--green)' }}><Ic id="i-cart" /></span>
                   <h3>E-commerce Web Design &amp; Shopify Stores</h3>
                   <p>Ecommerce website development and Shopify builds by certified Shopify website developers — AUD payments, GST-ready checkout, Afterpay/Zip integration and shipping zones configured for Australian carriers from day one.</p>
-                  <Link className="blink" href="/au/services/ecommerce">Ecommerce web design <Ic id="i-arrow" /></Link>
+                  <Link className="blink" href="/services/ecommerce-development">Ecommerce web design <Ic id="i-arrow" /></Link>
                 </div>
                 <div className="bcard b-3 room-lav">
                   <span className="bico" style={{ color: 'var(--lav)' }}><Ic id="i-cog" /></span>
                   <h3>Web App Development</h3>
                   <p>Customer portals, booking systems, dashboards and internal tools — scoped tightly, shipped in weeks.</p>
-                  <Link className="blink" href="/au/services/website-development">Web apps <Ic id="i-arrow" /></Link>
+                  <Link className="blink" href="/services/web-application-development">Web apps <Ic id="i-arrow" /></Link>
                 </div>
                 <div className="bcard b-3">
                   <span className="bico" style={{ color: 'var(--orange-d)' }}><Ic id="i-chart" /></span>
                   <h3>SEO Services — Local SEO to AI SEO</h3>
                   <p>{"An SEO agency inside your web team: local SEO for your city, technical SEO, content, Google Business Profile — and AI SEO audits so you show up in ChatGPT and Google's AI results."}</p>
-                  <Link className="blink" href="/au/services/seo">SEO services Australia <Ic id="i-arrow" /></Link>
+                  <Link className="blink" href="/services/seo">SEO services Australia <Ic id="i-arrow" /></Link>
                 </div>
                 <div className="bcard b-3">
                   <span className="bico" style={{ color: 'var(--green)' }}><Ic id="i-bot" /></span>
                   <h3>AI Agents &amp; Automation</h3>
                   <p>Chat agents that answer like your best staff member — quoting, booking and qualifying leads while you sleep.</p>
-                  <Link className="blink" href="/au/services/ai">AI development <Ic id="i-arrow" /></Link>
+                  <Link className="blink" href="/services/ai-agent-development">AI development <Ic id="i-arrow" /></Link>
                 </div>
               </div>
             </div>
@@ -476,14 +479,14 @@ export default function AUHomePage() {
               <p className="lead" style={{ maxWidth: 600 }}>Web design, e-commerce and SEO services for businesses across Australia — fully remote, in your hours. Local market pages for our priority cities:</p>
               <div className="cities">
                 {CITIES.map((c) => (
-                  <Link className="city" href={c.href} key={c.code}>
+                  <div className="city" key={c.code}>
                     <span className="crow">
                       <span className="pin"><Ic id="i-pin" />{c.state}</span>
                       <span className="code">{c.code}</span>
                     </span>
                     <b>{c.name}</b>
                     <span>{c.blurb}</span>
-                  </Link>
+                  </div>
                 ))}
               </div>
             </div>
