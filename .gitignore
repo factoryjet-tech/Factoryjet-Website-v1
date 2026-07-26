@@ -11,6 +11,9 @@ out/
 .env.local
 .env.*.local
 
+# Research API dumps (regenerable via pipeline/research/dfs_*.py; ~34MB)
+pipeline/research/data/raw/
+
 # IDE
 .vscode/
 .idea/

@@ -98,8 +98,19 @@ import { post as howToSellOnWalmartMarketplace2026Post } from './posts/how-to-se
 import { post as whatIsAgenticAiPost } from './posts/what-is-agentic-ai';
 import { post as howToChooseDigitalMarketingAgencyIndia2026Post } from './posts/how-to-choose-digital-marketing-agency-india-2026';
 import { post as digitalMarketingForSmallBusinessIndiaPost } from './posts/digital-marketing-for-small-business-india';
+import { post as whatIsAgenticCommercePost } from './posts/what-is-agentic-commerce';
+import { post as agenticCommerceVsTraditionalEcommercePost } from './posts/agentic-commerce-vs-traditional-ecommerce';
+import { post as bestAiForEcommerce2026Post } from './posts/best-ai-for-ecommerce-2026';
+import { post as whatDoesAnAiAutomationAgencyDoPost } from './posts/what-does-an-ai-automation-agency-do';
+import { post as willAiReplaceWebDesignersPost } from './posts/will-ai-replace-web-designers';
 
 export const POSTS: BlogPost[] = [
+  // --- US AI / AGENTIC COMMERCE (2026) ---
+  whatIsAgenticCommercePost,
+  agenticCommerceVsTraditionalEcommercePost,
+  bestAiForEcommerce2026Post,
+  whatDoesAnAiAutomationAgencyDoPost,
+  willAiReplaceWebDesignersPost,
   // --- INDIA DIGITAL MARKETING (2026) ---
   howToChooseDigitalMarketingAgencyIndia2026Post,
   digitalMarketingForSmallBusinessIndiaPost,

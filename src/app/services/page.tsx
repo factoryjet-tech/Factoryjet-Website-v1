@@ -205,6 +205,28 @@ const SERVICES = [
     featured: false,
   },
   {
+    image: '/images/services/digital-marketing-what.webp',
+    imageAlt: 'Marketing team reviewing paid campaign performance on a shared screen',
+    eyebrow: 'E-COMMERCE',
+    title: 'Ecommerce Marketing',
+    description:
+      'Paid acquisition for online stores: Google Ads, paid social, shopping feeds, marketplaces, and retention.',
+    href: '/services/ecommerce-marketing-agency',
+    cta: 'See Ecommerce Marketing',
+    featured: false,
+  },
+  {
+    image: '/images/services/ai-seo.webp',
+    imageAlt: 'Strategist mapping a search roadmap on a whiteboard',
+    eyebrow: 'SEO',
+    title: 'SEO Consulting',
+    description:
+      'Advisory and strategy for teams with in-house resource: audits, roadmaps, and the thinking transferred to your people.',
+    href: '/services/seo-consulting',
+    cta: 'See SEO Consulting',
+    featured: false,
+  },
+  {
     image: '/images/services/card-webapp.webp',
     imageAlt: 'SaaS analytics dashboard on an ultrawide monitor',
     eyebrow: 'WEB APPS',
