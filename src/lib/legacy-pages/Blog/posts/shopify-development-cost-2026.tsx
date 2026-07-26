@@ -17,7 +17,7 @@ export const post: BlogPost = {
   meta: {
     title: 'Shopify Development Cost 2026: Real Numbers | FactoryJet',
     description:
-      'Exact Shopify development costs for 2026 by project type: DIY at $39/month to $120K+ enterprise. Real verified ranges from 500+ store builds, updated June 2026.',
+      'Shopify development costs for 2026: $39/month DIY setups to $120K+ enterprise builds. Verified ranges from 500+ stores FactoryJet has built.',
   },
   keyTakeaways: [
     'A DIY store with a free theme costs $468–$1,068 in Year 1. A professionally built custom store for a US small business typically costs $2,000–$6,000 one-time plus $39–$105/month.',
@@ -118,6 +118,16 @@ export const post: BlogPost = {
       <p className="text-sm text-gray-500 mb-6">
         By Bhavesh Barot | Returns on your time | June 7, 2026 | 9 min read
       </p>
+
+      <div className="bg-[#FFF3EE] border-l-4 border-[#F05A28] p-5 rounded-r-xl mb-8">
+        <p className="font-semibold text-gray-900 mb-2">Quick Answer</p>
+        <p className="text-gray-700">
+          Shopify development costs $0 to $200,000+ depending on scope. A DIY store with a free
+          theme runs $468 to $1,068 in Year 1. A professionally built custom store for a small US
+          business typically costs $2,000 to $6,000 one-time plus $39 to $105 a month. Enterprise
+          and headless builds start at $40,000 and climb past $200,000.
+        </p>
+      </div>
 
       <p className="text-lg leading-relaxed mb-6">
         Most Shopify cost guides give you a range so wide it&apos;s useless. &ldquo;$1,000 to
@@ -542,13 +552,21 @@ export const post: BlogPost = {
       </p>
       <p className="mb-4">
         A standard Shopify store for a small US business with 50 to 500 SKUs, a custom homepage,
-        product page optimizations, and core app integrations typically lands in the $2,000 to
-        $5,000 range for development. We deliver these in 7 days or less for up to 5-page builds.
+        product page optimizations, and core app integrations fits the standard custom store
+        bucket described earlier in this guide. We deliver these in 7 days or less for up to
+        5-page builds.
       </p>
       <p className="mb-4">
         For stores needing custom functionality, integrations with existing business systems, or
         conversion-optimized builds based on real data from similar stores in your industry, the
-        investment typically runs $5,000 to $15,000 and takes 3 to 6 weeks.
+        project moves into the advanced custom build range and typically takes 3 to 6 weeks.
+      </p>
+      <p className="mb-4">
+        UK businesses planning a Shopify build go through the same scoping conversation. Visit{' '}
+        <a href="/uk/ecommerce-development" className="text-[#B23E13] hover:underline">
+          our UK ecommerce development service
+        </a>{' '}
+        to see how we structure builds and timelines for that market.
       </p>
       <p className="mb-8">
         If you&apos;re evaluating Shopify for your business or want a scope estimate for your

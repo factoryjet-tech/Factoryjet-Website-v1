@@ -42,6 +42,25 @@ const BESPOKE_UK_CITY_SLUGS: ReadonlySet<string> = new Set([
 const DYNAMIC_CITY_PAGE = 'src/app/uk/[city]/page.tsx'
 const DYNAMIC_CITY_SERVICE_PAGE = 'src/app/uk/[city]/[service]/page.tsx'
 
+// National UK service hub pages — standalone static segments at
+// src/app/uk/{slug}/page.tsx (not part of the city × service matrix).
+// These were missing from every sitemap prior to 2026-07-26: 4 pre-existing
+// pages (web-design, shopify-development, shopify-seo, ecommerce-seo) were
+// orphaned since launch, and the 6 pages added 2026-07-26 (the UK lead-gen
+// build) shipped without sitemap registration. Fixed here in one pass.
+const NATIONAL_SERVICE_PAGE_SLUGS = [
+  'web-design',
+  'shopify-development',
+  'shopify-seo',
+  'ecommerce-seo',
+  'ai-seo',
+  'seo',
+  'ecommerce-development',
+  'ai-agents',
+  'local-seo',
+  'seo-audit',
+] as const
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const ukIndex: MetadataRoute.Sitemap[number] = {
     url: `${SITE_URL}/uk`,
@@ -112,8 +131,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   )
 
+  // National service hubs — highest commercial priority in /uk, same tier
+  // as the bespoke city pages since these are the primary lead-gen targets.
+  const nationalServicePages: MetadataRoute.Sitemap = NATIONAL_SERVICE_PAGE_SLUGS.map(
+    (slug) => ({
+      url: `${SITE_URL}/uk/${slug}`,
+      lastModified: getFileLastMod(`src/app/uk/${slug}/page.tsx`),
+      changeFrequency: CHANGEFREQ.bespoke as ChangeFreq,
+      priority: PRIORITY.bespoke,
+    }),
+  )
+
   return [
     ukIndex,
+    ...nationalServicePages,
     ...cityHubs,
     ...cityService,
     ...bespokeCityService,

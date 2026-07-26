@@ -18,7 +18,7 @@ const FAQ_CATEGORIES = [
 
 const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'getting-started', question: 'How much does web design cost in the UK?',
-    answer: 'It depends on scope: the number of pages, ecommerce website design versus a marketing site, and any integrations. We do not sell fixed packages, because a five-page brochure site and a 200-product store are different jobs. You get a fixed quote after a short call, plus affordable website design options for startups on a tight budget. There are no surprise invoices later.' },
+    answer: 'It depends on scope: the number of pages, ecommerce website design versus a marketing site, and any integrations. We do not sell fixed packages, because a five-page brochure site and a 200-product store are different jobs. We scope it after a short call, so a startup on a tight budget gets a plan that fits rather than a template built for someone else. There are no surprise invoices later.' },
   { category: 'getting-started', question: 'How long does it take to design and build a website?',
     answer: 'A standard custom web design project runs about four weeks from brief to launch. We also offer express delivery of up to a five-page site in seven days. Larger ecommerce and web-app builds are scoped individually, so the timeline is honest rather than optimistic.' },
   { category: 'getting-started', question: 'Do I own the website and the code when it is finished?',
@@ -60,7 +60,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'working', question: 'What happens if I need changes after the site goes live?',
     answer: 'We stay on for support after launch. Small changes are quick, and because you own the code, you are never locked in if you decide to take the site elsewhere. Support terms are agreed up front so there are no surprises.' },
   { category: 'working', question: 'How do we get started, and what do you need from you?',
-    answer: 'Send your name and email through the form on this page. The founder replies within 24 hours to book a short call, where we scope the project and give you a fixed quote. To begin, that is all we need.' },
+    answer: 'Send your name and email through the form on this page. The founder replies within 24 hours to book a short call, where we scope your project and outline next steps. To begin, that is all we need.' },
 ];
 
 const jsonLd = {
@@ -161,7 +161,7 @@ export default function WebDesignUKPage() {
                   <span className="chip">Next.js · Webflow · Shopify</span>
                   <span className="chip">Fixed Scope</span>
                 </div>
-                <h1>Web Design in the UK That Turns Visitors Into <span className="grad-text">Buyers</span></h1>
+                <h1>Web Design in the UK That Turns Visitors Into Buyers</h1>
                 <p className="lead mt-6" style={{ maxWidth: 540 }}>
                   FactoryJet is a web design agency for UK brands and ecommerce businesses. We design fast,
                   conversion-focused website design on the right platform for your goals, launch it in weeks,
@@ -316,11 +316,11 @@ export default function WebDesignUKPage() {
             <div className="col-2 mt-12" style={{ gap: 24 }}>
               <div className="card">
                 <h3>Conversion-first structure</h3>
-                <p className="mt-4">Layout, hierarchy, and calls to action arranged around the one decision your visitor is trying to make. Clear next step on every page, trust signals placed where doubt appears, and no dead ends.</p>
+                <p className="mt-4">Layout, hierarchy, and calls to action arranged around the one decision your visitor is trying to make. Clear next step on every page, trust signals placed where doubt appears, and no dead ends. It is the same discipline a dedicated ux agency brings to a build, applied from the first wireframe instead of bolted on after launch.</p>
               </div>
               <div className="card">
                 <h3>Responsive, mobile-first design</h3>
-                <p className="mt-4">Most UK web traffic is on a phone, so we design for the small screen first. Responsive web design means the site reflows cleanly from mobile to desktop, with tap targets, type, and images sized for real thumbs.</p>
+                <p className="mt-4">Most UK web traffic is on a phone, so we design for the small screen first. Responsive web design means the site reflows cleanly from mobile to desktop, with tap targets, type, and images sized for real thumbs. It is the first thing to check when you compare a responsive web design agency against a template seller: whether the layout genuinely adapts, or just shrinks.</p>
               </div>
               <div className="card">
                 <h3>Speed and Core Web Vitals</h3>
@@ -448,7 +448,7 @@ export default function WebDesignUKPage() {
               <h2>Six kinds of web design for UK businesses</h2>
             </div>
             <div className="svc-grid mt-12">
-              <div className="svc-card"><h3>Small Business Web Design</h3><p className="mt-4">Affordable, conversion-focused sites for UK SMBs and startups that need to look credible and load fast.</p></div>
+              <div className="svc-card"><h3>Small Business Web Design</h3><p className="mt-4">Conversion-focused web design for a small business that needs to look credible and load fast. This is website design for small companies and startups, scoped to fit rather than padded with extras you will not use.</p></div>
               <div className="svc-card"><h3>Ecommerce Website Design</h3><p className="mt-4">Ecommerce web design and Shopify stores built to convert, from product pages to checkout.</p></div>
               <div className="svc-card"><h3>Landing Page Design</h3><p className="mt-4">Campaign and paid-traffic pages engineered for a single, measurable conversion.</p></div>
               <div className="svc-card"><h3>Web App Development</h3><p className="mt-4">Dashboards, portals, and custom tools built by a web development company that ships production code.</p></div>
@@ -476,11 +476,11 @@ export default function WebDesignUKPage() {
               </div>
               <div className="svc-card">
                 <h3>Small businesses and startups</h3>
-                <p className="mt-4">Founders who need small business web design that looks credible, loads fast, and ranks locally, without paying for scope they will not use. Affordable website design routes are available.</p>
+                <p className="mt-4">Founders who need small business web design that looks credible, loads fast, and ranks locally, without paying for scope they will not use. This is website design small business owners can rely on, with routes that fit a startup on a tight budget.</p>
               </div>
               <div className="svc-card">
                 <h3>Professional services and B2B</h3>
-                <p className="mt-4">Firms that win work through trust: clear business website design, case studies, and a fast site that reassures a buyer before they ever pick up the phone.</p>
+                <p className="mt-4">Firms that win work through trust: clear business website design, case studies, and a fast site that reassures a buyer before they ever pick up the phone. This is what a b2b web design agency is for, since a longer sales cycle needs a site built to be read closely, not skimmed.</p>
               </div>
             </div>
           </div>
@@ -502,8 +502,9 @@ export default function WebDesignUKPage() {
                   </p>
                   <p>
                     Demand is strong across the country, so we serve web design london clients alongside Bristol,
-                    Birmingham, Leeds, and Manchester. The work is handled remotely with regular video reviews, which
-                    means a business anywhere in the UK gets the same senior team.
+                    Birmingham, Leeds, and Manchester, including founders searching for a ux agency london team that
+                    treats conversion design as core scope rather than an add-on. The work is handled remotely with
+                    regular video reviews, which means a business anywhere in the UK gets the same senior team.
                   </p>
                   <p>
                     Search behaviour is also shifting. A growing share of buyers now ask an AI assistant like ChatGPT,
@@ -567,14 +568,14 @@ export default function WebDesignUKPage() {
                     move the number as well, because bespoke work is not a theme you switch on.
                   </p>
                   <p>
-                    We do not publish a fixed price, because a fixed price for &quot;a website&quot; is either padded to cover the
-                    worst case or too thin to deliver the real one. Instead you get a fixed quote after a short call,
-                    once we know the scope. We also offer affordable website design routes for startups, and we agree
-                    the scope up front so there are no change-order surprises halfway through.
+                    We do not publish one flat number for &quot;a website,&quot; because a single figure is either padded to cover the
+                    worst case or too thin to deliver the real one. Instead we scope your project on a short call,
+                    once we know what you actually need. We also offer routes that fit a startup on a tight budget,
+                    and we agree the scope up front so there are no change-order surprises halfway through.
                   </p>
                 </div>
                 <div className="mt-8">
-                  <ModalCTAButton label="Get a fixed quote for your project" region="uk" modalVariant="default" btnVariant="primary-light" />
+                  <ModalCTAButton label="Talk to us about your project" region="uk" modalVariant="default" btnVariant="primary-light" />
                 </div>
               </div>
               <div className="card card-top-orange">
@@ -583,7 +584,7 @@ export default function WebDesignUKPage() {
                 <div className="scorecard-row"><div className="scorecard-metric">Marketing site vs. ecommerce</div><div className="scorecard-val" style={{ fontSize: 14 }}>Type</div></div>
                 <div className="scorecard-row"><div className="scorecard-metric">Integrations (CRM, payments, stock)</div><div className="scorecard-val" style={{ fontSize: 14 }}>Systems</div></div>
                 <div className="scorecard-row"><div className="scorecard-metric">Custom design and copywriting</div><div className="scorecard-val" style={{ fontSize: 14 }}>Craft</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">Fixed quote before you commit</div><div className="scorecard-val" style={{ color: 'var(--green)', fontSize: 14 }}>Always</div></div>
+                <div className="scorecard-row"><div className="scorecard-metric">Clear scope before you commit</div><div className="scorecard-val" style={{ color: 'var(--green)', fontSize: 14 }}>Always</div></div>
               </div>
             </div>
           </div>

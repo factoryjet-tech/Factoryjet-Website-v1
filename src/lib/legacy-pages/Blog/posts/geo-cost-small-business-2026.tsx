@@ -13,9 +13,9 @@ export const post: BlogPost = {
   readTime: '11 min read',
   imageUrl: '/blog-images/geo-cost-small-business-2026.webp',
   meta: {
-    title: 'How Much Does GEO Cost in 2026? Real AI SEO Pricing for Small Businesses',
+    title: 'GEO Cost 2026: What $1,500–$5,000/Month Actually Buys',
     description:
-      'What does GEO cost for a small business in 2026? Sourced pricing breakdown of generative engine optimization, monthly retainers, project fees, and what each budget actually buys.',
+      'Real 2026 GEO pricing: $1,500–$5,000 a month for most small businesses, per WebFX data. What each tier delivers, plus DIY options and red flags.',
   },
   keyTakeaways: [
     'According to WebFX\'s May 2026 pricing guide, GEO agency services range from $1,500 to $50,000+ per month, with basic small business programs starting at $1,500–$5,000/month.',
@@ -347,7 +347,8 @@ export const post: BlogPost = {
         to understand what traditional SEO retainers include before comparing to GEO pricing. The channels reinforce each other: the same third-party mention that improves AI visibility also builds domain authority for Google ranking. The same answer-first content that gets cited by ChatGPT also tends to rank higher in Google because it is genuinely more useful.
       </p>
       <p>
-        The practical question is not &ldquo;GEO or SEO?&rdquo;, it is &ldquo;which provider understands both channels well enough to run an integrated program without double-billing you for the overlap?&rdquo;
+        The practical question is not &ldquo;GEO or SEO?&rdquo;, it is &ldquo;which provider understands both channels well enough to run an integrated program without double-billing you for the overlap?&rdquo; That is the exact integration we run for UK businesses through{' '}
+        <a href="/uk/ai-seo" className="text-orange-600 hover:underline font-medium">our UK AI SEO service</a>.
       </p>
 
       {/* CTA */}

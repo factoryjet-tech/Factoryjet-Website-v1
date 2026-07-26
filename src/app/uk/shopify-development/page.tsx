@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     locale: 'en_GB',
     type: 'website',
-    images: [{ url: '/images/uk/shopify-development-og.webp', width: 1200, height: 630, alt: 'Shopify Development Services UK — FactoryJet' }],
+    images: [{ url: '/images/uk/shopify-development-og.webp', width: 1200, height: 630, alt: 'Shopify Development Services UK: FactoryJet' }],
   },
   robots: { index: true, follow: true },
 };
@@ -97,10 +97,10 @@ export default function ShopifyDevelopmentPage() {
           <span className="chip-green"><span className="dot dot-green"></span>Shopify Certified Partner</span>
           <span className="chip">UK · Shopify Development</span>
         </div>
-        <h1>Shopify Development <span className="grad-text">Partner UK</span>: Certified, Not Just Capable</h1>
+        <h1>Shopify Development Partner UK: Certified, Not Just Capable</h1>
         <p className="lead mt-4" style={{ maxWidth: '560px' }}>
           Generic Shopify developers build stores. Shopify Certified Partners build stores that sell.
-          FactoryJet is a Certified Shopify Development Partner for UK brands; custom Liquid themes, Shopify Plus, store migrations, and headless Hydrogen builds. Fixed price. 7-day delivery guarantee.
+          FactoryJet is a Certified Shopify Development Partner for UK brands; custom Liquid themes, Shopify Plus, store migrations, and headless Hydrogen builds. Scoped after a short call. 7-day delivery guarantee.
         </p>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '28px' }}>
           <HeroInlineForm region="uk" source="uk_shopify_development_hero" />
@@ -109,7 +109,7 @@ export default function ShopifyDevelopmentPage() {
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', marginTop: '24px' }}>
           <span className="trust-pill"><span className="dot dot-green"></span> 500+ stores delivered</span>
           <span className="trust-pill"><span className="dot dot-green"></span> 7-day delivery guarantee</span>
-          <span className="trust-pill"><span className="dot dot-green"></span> Fixed price, no surprises</span>
+          <span className="trust-pill"><span className="dot dot-green"></span> Quoted before work starts</span>
         </div>
       </div>
 
@@ -250,7 +250,7 @@ export default function ShopifyDevelopmentPage() {
         <div className="stack">
           <p>Shopify is the UK's most widely used ecommerce platform; powering over 1 million UK-based businesses. The infrastructure is excellent. The average Shopify store's conversion rate is not: most UK stores run on generic themes from Dawn or Refresh, the same template used by 200,000 other stores, and wonder why their mobile add-to-cart rate is under 1%.</p>
           <div className="pull-quote">The theme is your top sales rep. A generic one works against you.</div>
-          <p>FactoryJet designs in Figma first; every page mockup approved before we write a line of Liquid; then builds in Shopify's native languages so your theme loads fast, passes Core Web Vitals, and your team can edit content without touching code. We've built Shopify stores for UK brands in London, Manchester, Birmingham, Leeds, Edinburgh, and Glasgow since Shopify launched its UK operation.</p>
+          <p>As a Shopify web design company, FactoryJet designs in Figma first; every page mockup approved before we write a line of Liquid; then builds in Shopify's native languages so your theme loads fast, passes Core Web Vitals, and your team can edit content without touching code. We've built Shopify stores for UK brands in London, Manchester, Birmingham, Leeds, Edinburgh, and Glasgow since Shopify launched its UK operation.</p>
           {/* Visual: Service options row */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginTop: '4px' }}>
             <div style={{ display: 'flex', gap: '8px', alignItems: 'flex-start', padding: '10px 12px', background: 'var(--cream)', border: '1px solid var(--n200)', borderRadius: '10px' }}>
@@ -371,7 +371,7 @@ export default function ShopifyDevelopmentPage() {
       <div className="dark-card">
         <span className="dark-pillar-icon">💸</span>
         <h3 style={{ color: '#fff', marginBottom: '12px' }}>Traditional agencies cost a small fortune</h3>
-        <p>A mid-tier Shopify agency typically charges a hefty five-figure sum for a custom theme build; before retainers, app configuration, or migration fees. FactoryJet delivers the same Figma-first design, Liquid engineering, and Lighthouse audit at a fixed price. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. Our specialised team has been building ecommerce.</p>
+        <p>A mid-tier Shopify agency typically charges a hefty five-figure sum for a custom theme build; before retainers, app configuration, or migration fees. FactoryJet delivers the same Figma-first design, Liquid engineering, and Lighthouse audit, scoped and quoted up front after a free discovery call, so you know the full cost before work starts. Our specialised team has been building ecommerce since 2005.</p>
       </div>
     </div>
   </div>
@@ -490,8 +490,8 @@ export default function ShopifyDevelopmentPage() {
           <p style={{ fontSize: '13px', color: 'var(--n400)', marginTop: '6px' }}>since FactoryJet began building e-commerce in 2005</p>
         </div>
         <div>
-          <div className="chip" style={{ marginBottom: '12px' }}><span className="dot dot-orange"></span>Pricing Model</div>
-          <div className="stat-num" style={{ fontSize: 'clamp(1.5rem,3vw,2rem)' }}>Fixed Price</div>
+          <div className="chip" style={{ marginBottom: '12px' }}><span className="dot dot-orange"></span>Engagement Model</div>
+          <div className="stat-num" style={{ fontSize: 'clamp(1.5rem,3vw,2rem)' }}>Scoped, Not Templated</div>
           <p style={{ marginTop: '12px', fontSize: '15px', fontWeight: '600', color: 'var(--ink)' }}>milestone-paid Shopify builds with full code ownership from day one</p>
           <p style={{ fontSize: '13px', color: 'var(--n400)', marginTop: '6px' }}>senior Figma design, Liquid engineering, and Lighthouse performance; predictable from quote to launch</p>
         </div>
@@ -682,7 +682,7 @@ export default function ShopifyDevelopmentPage() {
     {/* Pull quote stat */}
     <div style={{ background: 'var(--white)', border: '1px solid var(--n200)', borderRadius: '16px', padding: '28px', marginBottom: '40px', display: 'flex', alignItems: 'center', gap: '32px' }}>
       <div>
-        <div style={{ fontFamily: 'var(--fd)', fontSize: 'clamp(2rem,4vw,3rem)', fontWeight: '700', color: 'var(--orange)', letterSpacing: '-.04em' }}>Fixed Price</div>
+        <div style={{ fontFamily: 'var(--fd)', fontSize: 'clamp(2rem,4vw,3rem)', fontWeight: '700', color: 'var(--orange)', letterSpacing: '-.04em' }}>Quoted Up Front</div>
         <p style={{ fontSize: '14px', color: 'var(--n600)', marginTop: '4px', maxWidth: '520px' }}>Same Figma design, Liquid engineering, and Lighthouse audits as a high-end UK Shopify agency project; without the six-month timeline or retainer lock-in. Every build is quoted up front after a free discovery call, so you know the full cost before work starts.</p>
       </div>
     </div>
@@ -706,11 +706,11 @@ export default function ShopifyDevelopmentPage() {
           <tr><td className="feat">Lighthouse 95+ performance on delivery</td><td className="fj yes">✓ Guaranteed</td><td className="partial">Varies</td><td className="partial">Varies</td><td className="no">✗ No</td></tr>
           <tr><td className="feat">Technical SEO built in</td><td className="fj yes">✓ Yes</td><td className="partial">Add-on</td><td className="no">✗ Rarely</td><td className="no">✗ No</td></tr>
           <tr><td className="feat">Code ownership (your GitHub repo)</td><td className="fj yes">✓ Day One</td><td className="partial">After contract</td><td className="yes">✓ Yes</td><td className="yes">✓ Yes</td></tr>
-          <tr><td className="feat">Fixed-price contract (no hourly billing)</td><td className="fj yes">✓ Always</td><td className="no">✗ Hourly</td><td className="partial">Partial</td><td className="yes">✓ Fixed</td></tr>
+          <tr><td className="feat">Quoted upfront (no hourly billing)</td><td className="fj yes">✓ Always</td><td className="no">✗ Hourly</td><td className="partial">Partial</td><td className="yes">✓ One-time</td></tr>
         </tbody>
       </table>
     </div>
-    <p style={{ textAlign: 'center', fontSize: '13px', color: 'var(--n400)', marginTop: '16px' }}>Prices and timelines reflect typical UK market ranges as of 2026. FactoryJet fixed-price contracts available for all Shopify tiers.</p>
+    <p style={{ textAlign: 'center', fontSize: '13px', color: 'var(--n400)', marginTop: '16px' }}>Timelines reflect typical UK market ranges as of 2026. FactoryJet scopes and quotes every Shopify tier after a discovery call.</p>
   </div>
 </section>
 
@@ -738,7 +738,7 @@ export default function ShopifyDevelopmentPage() {
         <div style={{ height: '40px', background: 'var(--n100)', borderRadius: '8px', marginBottom: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <span style={{ fontFamily: 'var(--fd)', fontSize: '13px', fontWeight: '700', color: 'var(--ink)' }}>Bombay Petals</span>
         </div>
-        <p style={{ fontSize: '15px', color: 'var(--ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"Migrating from Magento was something every agency we spoke to quoted as a major project. FactoryJet did it properly; zero data loss, all our SEO URLs preserved; at a fair, fixed price we agreed before any work started."</p>
+        <p style={{ fontSize: '15px', color: 'var(--ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"Migrating from Magento was something every agency we spoke to quoted as a major project. FactoryJet did it properly; zero data loss, all our SEO URLs preserved; at a fair price we agreed before any work started."</p>
         <div style={{ borderTop: '1px solid var(--n200)', paddingTop: '16px' }}>
           <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)' }}>Vishal; Director, Bombay Petals</p>
           <p style={{ fontSize: '13px', color: 'var(--n400)' }}>B2B artificial plants &amp; décor</p>
@@ -900,7 +900,7 @@ export default function ShopifyDevelopmentPage() {
               <span className="q-text">How much does a custom Shopify store cost in the UK?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
-            <div className="faq-ans"><p>FactoryJet builds custom Shopify stores for UK brands on a fixed-price, milestone-paid basis. A custom Liquid theme on an existing store starts from a confirmed quote after our 30-minute discovery call; we price after we understand scope, not before. UK Shopify agencies typically charge &#163;10,000&#8211;&#163;50,000 for the same work. What you pay us includes: Figma design (homepage, PDP, collection, cart), Liquid build, app configuration, technical SEO, Lighthouse performance audit, and code delivery to your GitHub on launch day. No hourly billing, no scope-creep invoices.</p></div>
+            <div className="faq-ans"><p>FactoryJet builds custom Shopify stores for UK brands on a scoped, milestone-paid basis. A custom Liquid theme on an existing store starts from a confirmed quote after our 30-minute discovery call; we price after we understand scope, not before. UK Shopify agencies typically charge &#163;10,000&#8211;&#163;50,000 for the same work. What you pay us includes: Figma design (homepage, PDP, collection, cart), Liquid build, app configuration, technical SEO, Lighthouse performance audit, and code delivery to your GitHub on launch day. No hourly billing, no scope-creep invoices.</p></div>
           </details>
           <details className="faq-item">
             <summary>
@@ -918,10 +918,10 @@ export default function ShopifyDevelopmentPage() {
           </details>
           <details className="faq-item">
             <summary>
-              <span className="q-text">How does FactoryJet keep Shopify development pricing fixed?</span>
+              <span className="q-text">How does FactoryJet quote Shopify development work?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
-            <div className="faq-ans"><p>We work fixed-price and milestone-paid. Every Shopify build is scoped upfront with no hourly billing and no scope-creep invoices. Building Shopify stores for brands since Shopify launched in 2006 means we estimate accurately on the first call, so the quote you sign is what you pay. Payment is split into milestones: typically a deposit before design, a second payment at development kick-off, and a final payment at launch; so you are never paying for work that has not been delivered.</p></div>
+            <div className="faq-ans"><p>We scope every Shopify build upfront, then quote it: no hourly billing, no scope-creep invoices. Building Shopify stores for brands since Shopify launched in 2006 means we estimate accurately on the first call, so the quote you sign is what you pay. Payment is split into milestones: typically a deposit before design, a second payment at development kick-off, and a final payment at launch; so you are never paying for work that has not been delivered.</p></div>
           </details>
         </div>
 
@@ -935,7 +935,7 @@ export default function ShopifyDevelopmentPage() {
               <span className="q-text">Do I need Shopify Plus, or will standard Shopify work?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
-            <div className="faq-ans"><p>Standard Shopify works well for most UK DTC brands doing under &#163;500K&#8211;&#163;1M per year in revenue. Shopify Plus is worth the investment when you need: custom checkout UI via Checkout Extensibility, a B2B wholesale portal with company accounts and net terms, multi-storefront management, advanced Shopify Flow automation, or dedicated Shopify support. We make this assessment during discovery and will not push you to Plus if you do not need it.</p></div>
+            <div className="faq-ans"><p>Standard Shopify works well for most UK DTC brands doing under &#163;500K&#8211;&#163;1M per year in revenue. Shopify Plus is worth the investment when you need: custom checkout UI via Checkout Extensibility, a B2B wholesale portal with company accounts and net terms, multi-storefront management, advanced Shopify Flow automation, or dedicated Shopify support. As a Shopify Plus agency, we make this assessment during discovery, and we would rather point you to a standard Shopify agency UK build than sell you Plus you do not need.</p></div>
           </details>
           <details className="faq-item">
             <summary>
@@ -1047,21 +1047,21 @@ export default function ShopifyDevelopmentPage() {
               <span className="q-text">How is FactoryJet different from hiring a UK Shopify agency?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
-            <div className="faq-ans"><p>Three differences matter: price (fixed-price, no hourly billing, confirmed upfront), speed (3&#8211;5 weeks vs. 3&#8211;6 months at most UK agencies), and ownership (full code delivery on launch day, not held behind a retainer). We have built 500-plus Shopify stores across DTC, B2B, and enterprise brands. We understand what actually drives conversion on a product page, not just what looks good in a proposal. And as a Certified Shopify Partner, we have passed Shopify&#8217;s own technical assessment.</p></div>
+            <div className="faq-ans"><p>Three differences matter: price (scoped and quoted upfront, no hourly billing), speed (3&#8211;5 weeks vs. 3&#8211;6 months at most UK agencies), and ownership (full code delivery on launch day, not held behind a retainer). We have built 500-plus Shopify stores across DTC, B2B, and enterprise brands. We understand what actually drives conversion on a product page, not just what looks good in a proposal. And as a Certified Shopify Partner, we have passed Shopify&#8217;s own technical assessment.</p></div>
           </details>
           <details className="faq-item">
             <summary>
               <span className="q-text">Who is the best Shopify development agency in the UK?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
-            <div className="faq-ans"><p>For SMB and DTC brands in the UK, FactoryJet makes a strong case: Certified Shopify Partner status, custom themes built by senior engineers, fixed pricing, and 7-day delivery on standard store builds. The best Shopify development agency UK for your specific situation depends on scope. A brand heading to Shopify Plus needs a certified Shopify Plus agency UK, while a first store needs speed and conversion fundamentals. Whoever you evaluate among UK Shopify development companies, ask for store speed scores, Lighthouse audits, and conversion before/afters; not just portfolio screenshots.</p></div>
+            <div className="faq-ans"><p>For SMB and DTC brands in the UK, FactoryJet makes a strong case: Certified Shopify Development Partner status, custom themes built by senior engineers, upfront quotes, and 7-day delivery on standard store builds. The best Shopify development agency UK for your specific situation depends on scope. A brand heading to Shopify Plus needs a certified Shopify Plus agency UK, while a first store needs speed and conversion fundamentals. Whoever you evaluate among UK Shopify development companies, ask for store speed scores, Lighthouse audits, and conversion before/afters; not just portfolio screenshots.</p></div>
           </details>
           <details className="faq-item">
             <summary>
               <span className="q-text">Does FactoryJet offer ongoing Shopify support after launch?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
-            <div className="faq-ans"><p>Yes. Every Shopify project includes a 30-day post-launch support window for bug fixes, minor adjustments, and launch questions. Beyond that, FactoryJet offers monthly retainer plans: dedicated Shopify development hours, same-day priority bug response, and access to the engineer who built your store. Common retainer work includes new collection page builds, app integrations, Klaviyo flow updates, seasonal landing pages for peak trading periods (Christmas, Black Friday, January sales), and performance optimisation reviews.</p></div>
+            <div className="faq-ans"><p>Yes. Every Shopify project includes a 30-day post-launch support window for bug fixes, minor adjustments, and launch questions. Beyond that, FactoryJet offers ongoing monthly support: dedicated Shopify development hours, same-day priority bug response, and access to the engineer who built your store. Common retainer work includes new collection page builds, app integrations, Klaviyo flow updates, seasonal landing pages for peak trading periods (Christmas, Black Friday, January sales), and performance optimisation reviews.</p></div>
           </details>
         </div>
       </div>
@@ -1111,12 +1111,12 @@ export default function ShopifyDevelopmentPage() {
   <div className="wrap" style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto' }}>
     <span className="eyebrow" style={{ color: 'rgba(255,92,0,.9)' }}>READY TO START</span>
     <h2 style={{ color: '#fff', marginTop: '12px', fontSize: 'clamp(1.75rem,4vw,2.75rem)' }}>Book a Shopify Store Audit; No Obligation</h2>
-    <p style={{ marginTop: '16px', color: 'rgba(255,255,255,.65)', fontSize: '16px', lineHeight: '1.7' }}>In 30 minutes, we'll audit your current store or platform, identify the specific pages losing you the most revenue, and give you a fixed price to fix it. No pitch. No pressure. An honest assessment from engineers who've built 500+ stores.</p>
+    <p style={{ marginTop: '16px', color: 'rgba(255,255,255,.65)', fontSize: '16px', lineHeight: '1.7' }}>In 30 minutes, we'll audit your current store or platform, identify the specific pages losing you the most revenue, and give you a clear quote to fix it. No pitch. No pressure. An honest assessment from engineers who've built 500+ stores.</p>
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'center', marginTop: '32px' }}>
       <ModalCTAButton label="Book Your Free Store Audit" region="uk" modalVariant="default" btnVariant="primary-light" />
       <a href="/portfolio" className="btn btn-outline" style={{ color: 'rgba(255,255,255,.7)', borderColor: 'rgba(255,255,255,.2)' }}>See Our Portfolio</a>
     </div>
-    <p style={{ fontSize: '13px', color: 'rgba(255,255,255,.35)', marginTop: '20px' }}>Fixed price. Full code ownership. Certified Shopify Partner. 500+ stores delivered.</p>
+    <p style={{ fontSize: '13px', color: 'rgba(255,255,255,.35)', marginTop: '20px' }}>Quoted upfront. Full code ownership. Certified Shopify Partner. 500+ stores delivered.</p>
   </div>
 </section>
 

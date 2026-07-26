@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     locale: 'en_GB',
     type: 'website',
-    images: [{ url: '/images/uk/ecommerce-seo-og.webp', width: 1200, height: 630, alt: 'Ecommerce SEO Services UK — FactoryJet' }],
+    images: [{ url: '/images/uk/ecommerce-seo-og.webp', width: 1200, height: 630, alt: 'Ecommerce SEO Services UK: FactoryJet' }],
   },
   robots: { index: true, follow: true },
 };
@@ -96,7 +96,7 @@ export default function EcommerceSeoPage() {
           <span className="chip-green"><span className="dot dot-green"></span>UK Ecommerce SEO Agency</span>
           <span className="chip">Revenue-Focused SEO</span>
         </div>
-        <h1>Ecommerce SEO Agency <span className="grad-text">UK</span>: Organic Revenue, Not Just Rankings</h1>
+        <h1>Ecommerce SEO Agency UK: Organic Revenue, Not Just Rankings</h1>
         <p className="lead mt-4" style={{ maxWidth: '580px' }}>Most ecommerce SEO agencies in the UK show you rankings. FactoryJet shows you revenue. We build organic traffic that compounds month over month for Shopify, WooCommerce, and Magento stores; category page architecture, product page optimisation, and technical SEO that Google can actually crawl.</p>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '28px' }}>
           <HeroInlineForm region="uk" source="uk_ecommerce_seo_hero" submitLabel="Get my free SEO audit" />
@@ -379,7 +379,7 @@ export default function EcommerceSeoPage() {
       <div className="dark-card">
         <span style={{ fontSize: '28px', marginBottom: '16px', display: 'block' }}>🕷️</span>
         <h3 style={{ color: '#fff', marginBottom: '12px' }}>Crawl budget wasted on duplicate pages</h3>
-        <p>Shopify and WooCommerce generate hundreds of duplicate and near-duplicate URLs by default; filtered collection pages, pagination, sort-order variants, ?ref= parameters, and faceted search pages. Google wastes its crawl budget on these and deprioritises your actual money pages. Fixing crawl architecture is the single highest-leverage technical SEO intervention for UK ecommerce stores.</p>
+        <p>Shopify and WooCommerce generate hundreds of duplicate and near-duplicate URLs by default; filtered collection pages, pagination, sort-order variants, ?ref= parameters, and faceted search pages. Google wastes its crawl budget on these and deprioritises your actual money pages. Fixing crawl architecture is the single highest-impact technical SEO intervention for UK ecommerce stores.</p>
       </div>
       <div className="dark-card">
         <span style={{ fontSize: '28px', marginBottom: '16px', display: 'block' }}>🏗️</span>
@@ -790,7 +790,7 @@ export default function EcommerceSeoPage() {
       <div className="dark-card">
         <span style={{ fontSize: '28px', marginBottom: '16px', display: 'block' }}>🔧</span>
         <h3 style={{ color: '#fff', marginBottom: '12px' }}>In-house Shopify dev team</h3>
-        <p>Ecommerce SEO often surfaces Liquid code issues; theme rendering bugs that prevent GoogleBot from indexing, JavaScript-loaded content that Googlebot can't crawl, incorrect canonical tags baked into Shopify theme logic. We fix these ourselves, in the same engagement, without creating a separate development project. This is rare.</p>
+        <p>Ecommerce SEO often surfaces Liquid code issues; theme rendering bugs that prevent GoogleBot from indexing, JavaScript-loaded content that Googlebot can't crawl, incorrect canonical tags baked into Shopify theme logic. Most Shopify SEO agencies send you back to your own developer for fixes like these. We fix them ourselves, in the same engagement, without creating a separate development project. This is rare.</p>
       </div>
       <div className="dark-card">
         <span style={{ fontSize: '28px', marginBottom: '16px', display: 'block' }}>📈</span>
@@ -876,7 +876,7 @@ export default function EcommerceSeoPage() {
               <span className="q-text">Which ecommerce platforms does FactoryJet support for SEO?</span>
               <span className="chevron"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L7 9L11.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </summary>
-            <div className="faq-ans"><p>Shopify (all plans including Shopify Plus), WooCommerce, Magento (1.x and 2.x), and BigCommerce. For Shopify clients, we have an in-house Shopify development team who can fix Liquid-level issues; incorrect canonical tag implementations, JavaScript-rendered content that Googlebot cannot crawl, theme-generated duplicate pages; within the same engagement. For WooCommerce, we work directly with the site&#8217;s WordPress installation, Yoast/RankMath configuration, and custom post type SEO. Magento SEO includes faceted navigation handling, enterprise crawl budget management, and category tree optimisation.</p></div>
+            <div className="faq-ans"><p>Shopify (all plans including Shopify Plus), WooCommerce, Magento (1.x and 2.x), and BigCommerce. As a Shopify SEO agency with an in-house development team, we go past the audit stage: for Shopify clients we fix Liquid-level issues directly; incorrect canonical tag implementations, JavaScript-rendered content that Googlebot cannot crawl, theme-generated duplicate pages; within the same engagement. For WooCommerce, we work directly with the site&#8217;s WordPress installation, Yoast/RankMath configuration, and custom post type SEO. Magento SEO includes faceted navigation handling, enterprise crawl budget management, and category tree optimisation.</p></div>
           </details>
         </div>
 

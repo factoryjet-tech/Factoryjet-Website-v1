@@ -103,6 +103,9 @@ import { post as agenticCommerceVsTraditionalEcommercePost } from './posts/agent
 import { post as bestAiForEcommerce2026Post } from './posts/best-ai-for-ecommerce-2026';
 import { post as whatDoesAnAiAutomationAgencyDoPost } from './posts/what-does-an-ai-automation-agency-do';
 import { post as willAiReplaceWebDesignersPost } from './posts/will-ai-replace-web-designers';
+import { post as isGeoReplacingSeo2026Post } from './posts/is-geo-replacing-seo-2026';
+import { post as whatDoesAnAiAutomationAgencyDoUkPost } from './posts/what-does-an-ai-automation-agency-do-uk';
+import { post as localSeoUkSmallBusinessesMapPackPost } from './posts/local-seo-uk-small-businesses-map-pack';
 
 export const POSTS: BlogPost[] = [
   // --- US AI / AGENTIC COMMERCE (2026) ---
@@ -111,6 +114,10 @@ export const POSTS: BlogPost[] = [
   bestAiForEcommerce2026Post,
   whatDoesAnAiAutomationAgencyDoPost,
   willAiReplaceWebDesignersPost,
+  // --- UK GEO / AI SEARCH & LOCAL SEO (2026) ---
+  isGeoReplacingSeo2026Post,
+  whatDoesAnAiAutomationAgencyDoUkPost,
+  localSeoUkSmallBusinessesMapPackPost,
   // --- INDIA DIGITAL MARKETING (2026) ---
   howToChooseDigitalMarketingAgencyIndia2026Post,
   digitalMarketingForSmallBusinessIndiaPost,

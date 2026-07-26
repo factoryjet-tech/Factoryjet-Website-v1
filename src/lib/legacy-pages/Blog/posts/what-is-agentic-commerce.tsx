@@ -619,7 +619,9 @@ export const post: BlogPost = {
         <a href="/services/ecommerce-development" className="text-[#B23E13] underline hover:text-[#F05A28]">ecommerce development</a>{' '}
         work increasingly starts with a data audit for exactly this reason, and{' '}
         <a href="/commerceflo" className="text-[#B23E13] underline hover:text-[#F05A28]">Commerceflo</a>{' '}
-        is the AI operator we built to keep catalogue, feed and content accuracy from drifting once it is fixed.
+        is the AI operator we built to keep catalogue, feed and content accuracy from drifting once it is fixed. UK
+        merchants get the same audit and build process through our{' '}
+        <a href="/uk/ecommerce-development" className="text-[#B23E13] underline hover:text-[#F05A28]">UK ecommerce development service</a>.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">The one-paragraph version</h2>

@@ -1,0 +1,533 @@
+
+/* font-display override */ @font-face{font-family:'font-display-override';src:local('x');font-display:swap}
+/* ─────────────────── Design Tokens ─────────────────── */
+.uk-ecomdev {
+  --cream:   #FAFAF7;
+  --white:   #FFFFFF;
+  --ink:     #0F0F12;
+  --orange:  #FF5C00;
+  --orange2: #F05A28;
+  --orange-h:#d94d20;
+  --orange-bg: rgba(255,92,0,.08);
+  --orange-bd: rgba(255,92,0,.25);
+  --n100:#F0F0EE; --n200:#E5E5E0; --n400:#6E6E68; --n600:#5A5A55;
+  --green:#047857;  --dark:#0F0F12;
+  --fd:'Plus Jakarta Sans',sans-serif;
+  --fb:'Inter',sans-serif;
+  --fm:'Geist Mono',monospace;
+}
+
+.uk-ecomdev, .uk-ecomdev *::before, .uk-ecomdev *::after {box-sizing:border-box;margin:0;padding:0}
+
+.uk-ecomdev {scroll-behavior:smooth}
+
+.uk-ecomdev {font-family:var(--fb);background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+
+
+/* ─── Typography ─── */
+.uk-ecomdev h1, .uk-ecomdev h2, .uk-ecomdev h3, .uk-ecomdev h4 {font-family:var(--fd);color:var(--ink);line-height:1.15;letter-spacing:-0.025em}
+
+.uk-ecomdev h1 {font-size:clamp(2.25rem,5vw,3.5rem);font-weight:800}
+
+.uk-ecomdev h2 {font-size:clamp(1.75rem,3.5vw,2.625rem);font-weight:700}
+
+.uk-ecomdev h3 {font-size:clamp(1.1rem,2vw,1.375rem);font-weight:700}
+
+.uk-ecomdev p {font-size:15px;line-height:1.75;color:var(--n600)}
+
+.uk-ecomdev a {text-decoration:none;color:inherit}
+
+
+.uk-ecomdev .eyebrow {
+  font-family:var(--fm);font-size:11px;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;color:#B23E13;
+  display:block;margin-bottom:12px;
+}
+
+.uk-ecomdev .lead {font-size:17px;line-height:1.7;color:var(--n600)}
+
+
+/* ─── Layout ─── */
+.uk-ecomdev .wrap {max-width:1120px;margin:0 auto;padding:0 24px}
+
+.uk-ecomdev .sec {padding:56px 0}
+
+.uk-ecomdev .sec-lg {padding:80px 0}
+
+.uk-ecomdev .dot-grid {
+  background-image:radial-gradient(circle,rgba(0,0,0,.068) 1px,transparent 1px);
+  background-size:28px 28px;background-color:var(--cream);
+}
+
+
+/* ─── Header ─── */
+.uk-ecomdev .hdr {
+  position:sticky;top:0;z-index:99;
+  background:rgba(250,250,247,.9);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--n200);
+}
+
+.uk-ecomdev .hdr-in {
+  max-width:1120px;margin:0 auto;padding:0 24px;
+  height:60px;display:flex;align-items:center;justify-content:space-between;
+}
+
+.uk-ecomdev .logo {font-family:var(--fd);font-weight:800;font-size:18px;color:var(--ink)}
+
+.uk-ecomdev .logo span {color:#B23E13}
+
+
+
+
+
+/* ─── Buttons ─── */
+.uk-ecomdev .btn {
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 26px;border-radius:999px;
+  font-family:var(--fd);font-size:15px;font-weight:600;
+  cursor:pointer;transition:all .2s;text-decoration:none;
+}
+
+.uk-ecomdev .btn-primary {background:#B23E13;color:#fff;border:none}
+
+.uk-ecomdev .btn-primary:hover {background:var(--orange-h)}
+
+.uk-ecomdev .btn-outline {background:transparent;color:var(--ink);border:1.5px solid var(--n200)}
+
+.uk-ecomdev .btn-outline:hover {border-color:var(--orange);color:var(--orange)}
+
+
+/* ─── Chip / Tag ─── */
+.uk-ecomdev .chip {
+  display:inline-flex;align-items:center;gap:6px;
+  padding:4px 12px;border-radius:999px;
+  border:1px solid var(--orange-bd);background:var(--orange-bg);
+  font-family:var(--fm);font-size:10px;font-weight:600;
+  letter-spacing:.10em;text-transform:uppercase;color:#B23E13;
+}
+
+.uk-ecomdev .chip-green {
+  display:inline-flex;align-items:center;gap:8px;
+  padding:8px 18px;border-radius:999px;
+  border:1.5px solid rgba(5,150,105,.3);background:rgba(5,150,105,.08);
+  font-family:var(--fm);font-size:11px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--green);
+}
+
+.uk-ecomdev .dot {width:8px;height:8px;border-radius:50%;display:inline-block;flex-shrink:0}
+
+.uk-ecomdev .dot-green {background:var(--green)}
+
+.uk-ecomdev .dot-orange {background:var(--orange)}
+
+
+/* ─── Cards ─── */
+.uk-ecomdev .card {
+  background:var(--white);border:1px solid var(--n200);
+  border-radius:16px;padding:28px;
+  box-shadow:0 1px 3px rgba(0,0,0,.06);
+}
+
+.uk-ecomdev .card-top-orange {border-top:2px solid var(--orange)}
+
+.uk-ecomdev .dark-card {
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  border-radius:16px;padding:28px;
+}
+
+
+/* ─── Stats ─── */
+.uk-ecomdev .stat-num {
+  font-family:var(--fd);
+  font-size:clamp(2.25rem,4vw,3.25rem);
+  font-weight:700;line-height:1;letter-spacing:-.04em;color:var(--orange);
+}
+
+
+/* ─── Pull quote ─── */
+.uk-ecomdev .pull-quote {
+  border-left:2px solid var(--orange);padding:4px 0 4px 20px;
+  font-family:var(--fd);font-size:19px;font-weight:600;
+  line-height:1.35;letter-spacing:-.02em;color:var(--ink);
+}
+
+
+/* ─── Stats band ─── */
+.uk-ecomdev .stats-band {
+  background:var(--cream);
+  border-top:1.5px solid rgba(255,92,0,.18);
+  border-bottom:1.5px solid rgba(255,92,0,.18);
+  padding:56px 0;
+}
+
+
+/* ─── Dark section ─── */
+.uk-ecomdev .dark-sec {background:var(--dark);color:#fff;padding:80px 0}
+
+.uk-ecomdev .dark-sec h2 {color:#fff}
+
+.uk-ecomdev .dark-sec .eyebrow {color:rgba(255,92,0,.9)}
+
+.uk-ecomdev .dark-sec p {color:rgba(255,255,255,.65)}
+
+.uk-ecomdev .dark-pillar-icon {
+  font-size:28px;margin-bottom:16px;display:block;
+}
+
+
+/* ─── Shimmer separator ─── */
+.uk-ecomdev .shimmer {
+  height:1px;
+  background:linear-gradient(90deg,transparent 0%,rgba(0,82,204,.15) 30%,rgba(0,82,204,.15) 70%,transparent 100%);
+}
+
+
+/* ─── Scorecard ─── */
+.uk-ecomdev .scorecard-row {
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:14px 0;border-bottom:1px solid var(--n100);
+}
+
+.uk-ecomdev .scorecard-row:last-child {border-bottom:none}
+
+.uk-ecomdev .scorecard-metric {font-size:14px;font-weight:600;color:var(--ink)}
+
+.uk-ecomdev .scorecard-note {font-family:var(--fm);font-size:11px;color:var(--n400);margin-top:2px}
+
+.uk-ecomdev .scorecard-val {
+  font-family:var(--fd);font-size:18px;font-weight:700;
+  color:#B23E13;letter-spacing:-.02em;flex-shrink:0;
+}
+
+
+/* ─── Process grid ─── */
+.uk-ecomdev .process-grid {display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+
+@media(max-width:900px) {
+.uk-ecomdev .process-grid {grid-template-columns:repeat(3,1fr)}
+
+}
+@media(max-width:560px) {
+.uk-ecomdev .process-grid {grid-template-columns:1fr 1fr}
+
+}
+.uk-ecomdev .stage-num {
+  font-family:var(--fm);font-size:11px;font-weight:600;
+  letter-spacing:.08em;color:#B23E13;display:block;margin-bottom:10px;
+}
+
+
+/* ─── Services grid ─── */
+.uk-ecomdev .svc-grid {display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+
+@media(max-width:900px) {
+.uk-ecomdev .svc-grid {grid-template-columns:1fr 1fr}
+
+}
+@media(max-width:560px) {
+.uk-ecomdev .svc-grid {grid-template-columns:1fr}
+
+}
+.uk-ecomdev .svc-card {
+  background:var(--white);border:1px solid var(--n200);border-radius:16px;padding:28px;
+  transition:border-color .2s,box-shadow .2s;
+}
+
+.uk-ecomdev .svc-card:hover {border-color:var(--orange);box-shadow:0 4px 20px rgba(255,92,0,.1)}
+
+
+/* ─── Comparison table ─── */
+.uk-ecomdev .cmp-table {width:100%;border-collapse:collapse}
+
+.uk-ecomdev .cmp-table th {
+  font-family:var(--fm);font-size:11px;letter-spacing:.10em;text-transform:uppercase;
+  padding:12px 16px;text-align:left;border-bottom:2px solid var(--n200);color:var(--n400);
+}
+
+.uk-ecomdev .cmp-table th.fj {background:rgba(255,92,0,.06);color:#B23E13}
+
+.uk-ecomdev .cmp-table td {padding:13px 16px;font-size:14px;color:var(--n600);border-bottom:1px solid var(--n100)}
+
+.uk-ecomdev .cmp-table tr:last-child td {border-bottom:none}
+
+.uk-ecomdev .cmp-table td.fj {background:rgba(255,92,0,.03);font-weight:600;color:var(--ink)}
+
+.uk-ecomdev .cmp-table td.feat {font-weight:500;color:var(--ink)}
+
+.uk-ecomdev .yes {color:var(--green);font-weight:600}
+.uk-ecomdev .no {color:#b91c1c}
+.uk-ecomdev .partial {color:#b45309}
+
+
+/* ─── FAQ ─── */
+.uk-ecomdev details {border-bottom:1px solid var(--n200)}
+
+.uk-ecomdev details:last-child {border-bottom:none}
+
+.uk-ecomdev summary {
+  list-style:none;cursor:pointer;padding:18px 0;
+  display:flex;justify-content:space-between;align-items:center;
+  font-family:var(--fd);font-size:15px;font-weight:600;color:var(--ink);
+}
+
+.uk-ecomdev summary::-webkit-details-marker {display:none}
+
+.uk-ecomdev summary::after {content:'+';font-size:22px;font-weight:300;color:var(--orange);flex-shrink:0}
+
+.uk-ecomdev details[open] summary::after {content:'−'}
+
+
+/* ─── City pills ─── */
+.uk-ecomdev .city-pill {
+  display:inline-flex;padding:8px 16px;border-radius:999px;
+  border:1px solid var(--orange-bd);font-size:13px;font-weight:500;
+  color:#B23E13;transition:all .2s;
+}
+
+.uk-ecomdev .city-pill:hover {background:var(--orange);color:#fff;border-color:var(--orange)}
+
+
+/* ─── Blog card ─── */
+.uk-ecomdev .blog-card {
+  display:block;padding:20px;border-radius:12px;
+  border:1px solid var(--n200);background:var(--white);transition:border-color .2s;
+}
+
+.uk-ecomdev .blog-card:hover {border-color:var(--orange)}
+
+.uk-ecomdev .blog-card p {font-size:14px;font-weight:600;color:var(--ink);line-height:1.5}
+
+
+/* ─── Result card ─── */
+.uk-ecomdev .result-card {
+  background:var(--white);border:1px solid var(--n200);border-radius:16px;padding:28px;
+  position:relative;
+}
+
+
+/* ─── Trust pill ─── */
+.uk-ecomdev .trust-pill {display:flex;align-items:center;gap:8px;font-size:13px;color:var(--n600)}
+
+
+/* ─── Gradient text ─── */
+.uk-ecomdev .grad-text {
+  background:linear-gradient(135deg,#FF5C00 0%,#FF8C00 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+
+
+/* ─── 2-col layout ─── */
+.uk-ecomdev .col-6040 {display:grid;grid-template-columns:7fr 5fr;gap:64px;align-items:start}
+
+.uk-ecomdev .col-4060 {display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:start}
+
+.uk-ecomdev .col-2 {display:grid;grid-template-columns:1fr 1fr;gap:24px}
+
+.uk-ecomdev .col-3 {display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+
+.uk-ecomdev .col-4 {display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+
+@media(max-width:960px) {
+.uk-ecomdev .col-6040, .uk-ecomdev .col-4060 {grid-template-columns:1fr}
+
+}
+@media(max-width:720px) {
+.uk-ecomdev .col-2 {grid-template-columns:1fr}
+.uk-ecomdev .col-3 {grid-template-columns:1fr 1fr}
+.uk-ecomdev .col-4 {grid-template-columns:1fr 1fr}
+
+}
+@media(max-width:480px) {
+.uk-ecomdev .col-3, .uk-ecomdev .col-4 {grid-template-columns:1fr}
+
+}
+
+.uk-ecomdev .stack>*+* {margin-top:1em}
+
+.uk-ecomdev .stack-sm>*+* {margin-top:.5em}
+
+.uk-ecomdev .flex-wrap {display:flex;flex-wrap:wrap;gap:8px}
+
+.uk-ecomdev .mt-2 {margin-top:8px}
+.uk-ecomdev .mt-4 {margin-top:16px}
+.uk-ecomdev .mt-6 {margin-top:24px}
+.uk-ecomdev .mt-8 {margin-top:32px}
+.uk-ecomdev .mt-10 {margin-top:40px}
+.uk-ecomdev .mt-12 {margin-top:48px}
+
+.uk-ecomdev .mb-2 {margin-bottom:8px}
+.uk-ecomdev .mb-3 {margin-bottom:12px}
+.uk-ecomdev .mb-6 {margin-bottom:24px}
+
+
+.uk-ecomdev footer {background:var(--dark);color:rgba(255,255,255,.4);padding:40px 0;text-align:center;font-size:13px}
+
+.uk-ecomdev footer a {color:rgba(255,92,0,.8)}
+
+
+/* ─── FAQ v2 Linear Minimal ─────────────────────────── */
+.uk-ecomdev .faq-grid {display:grid;grid-template-columns:3fr 9fr;gap:56px;margin-top:48px;align-items:start}
+
+.uk-ecomdev .faq-sidebar {position:sticky;top:96px;height:fit-content}
+
+.uk-ecomdev .faq-sidebar-topics {font-family:var(--fm);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--n400);margin-bottom:12px;display:block}
+
+.uk-ecomdev .faq-sidebar-nav a {display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-left:2px solid transparent;border-radius:0 6px 6px 0;font-size:14px;font-weight:500;color:var(--n600);text-decoration:none;transition:all .2s;margin-bottom:2px}
+
+.uk-ecomdev .faq-sidebar-nav a:hover {border-left-color:var(--orange2);background:rgba(240,90,40,.05);color:var(--ink)}
+
+.uk-ecomdev .faq-sidebar-nav .faq-nav-count {font-family:var(--fm);font-size:10px;color:var(--n400);background:var(--n100);padding:2px 6px;border-radius:99px;flex-shrink:0}
+
+.uk-ecomdev .faq-sidebar-cta {margin-top:24px;padding-top:20px;border-top:1px solid var(--n200)}
+
+.uk-ecomdev .faq-sidebar-cta a {color:#C94A1A;font-size:14px;font-weight:500;text-decoration:none}
+
+.uk-ecomdev .faq-sidebar-cta p {font-size:11px;color:var(--n400);margin-top:6px}
+
+.uk-ecomdev .faq-cat-header {display:flex;align-items:center;gap:12px;margin-bottom:20px}
+
+.uk-ecomdev .faq-cat-bar {height:2px;width:24px;background: #B23E13;flex-shrink:0}
+
+.uk-ecomdev .faq-cat-label {color:#C94A1A;font-family:var(--fm);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin:0}
+
+.uk-ecomdev .faq-item {border-top:1px solid var(--n200)}
+
+.uk-ecomdev .faq-item summary {display:flex;justify-content:space-between;align-items:flex-start;padding:20px 0;cursor:pointer;list-style:none;gap:16px}
+
+.uk-ecomdev .faq-item summary::-webkit-details-marker {display:none}
+
+.uk-ecomdev .q-text {font-size:15px;font-weight:600;color:var(--ink);line-height:1.45;flex:1;transition:color .2s}
+
+.uk-ecomdev .chevron {width:24px;height:24px;border-radius:50%;border:1px solid var(--n200);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s;color:var(--n400)}
+
+.uk-ecomdev .chevron svg {width:14px;height:14px;transition:transform .2s}
+
+.uk-ecomdev .faq-item[open] summary .chevron {border-color:rgba(240,90,40,.3);background:rgba(240,90,40,.05);color:#C94A1A}
+
+.uk-ecomdev .faq-item[open] summary .chevron svg {transform:rotate(180deg)}
+
+.uk-ecomdev .faq-item[open] summary .q-text {color:#C94A1A}
+
+.uk-ecomdev .faq-ans {padding:0 0 24px;padding-left:16px;border-left:2px solid #F05A28;margin-top:4px}
+
+.uk-ecomdev .faq-ans p {font-size:15px;color:var(--n600);line-height:1.75;margin:0}
+
+.uk-ecomdev .faq-pill-nav {display:none !important;gap:8px;overflow-x:auto;padding-bottom:4px;margin-top:32px;margin-bottom:0;scrollbar-width:none}
+
+.uk-ecomdev .faq-pill-nav::-webkit-scrollbar {display:none}
+
+.uk-ecomdev .faq-pill-nav a {display:inline-flex;align-items:center;gap:6px;white-space:nowrap;padding:8px 14px;border-radius:999px;border:1.5px solid var(--n200);font-size:13px;font-weight:500;color:var(--n600);text-decoration:none;transition:all .2s;flex-shrink:0}
+
+.uk-ecomdev .faq-pill-nav a .pill-count {font-family:var(--fm);font-size:10px;background:var(--n100);padding:1px 6px;border-radius:99px;color:var(--n400)}
+
+.uk-ecomdev .faq-pill-nav a:hover {border-color:var(--orange);color:var(--orange)}
+
+@media(max-width:768px) {
+
+  .uk-ecomdev .faq-grid {grid-template-columns:1fr!important;gap:0!important}
+
+  .uk-ecomdev .faq-sidebar {display:none!important}
+
+  .uk-ecomdev .faq-pill-nav {display:flex!important}
+
+
+}
+
+
+/* ─── Mobile Responsive Overrides ───────────────────── */
+@media(max-width:768px) {
+
+  .uk-ecomdev .wrap {padding:0 16px}
+
+  .uk-ecomdev h1 {font-size:clamp(1.75rem,6vw,2.5rem)!important}
+
+  .uk-ecomdev .col-6040, .uk-ecomdev .col-4060 {grid-template-columns:1fr!important}
+
+  .uk-ecomdev .col-3 {grid-template-columns:1fr!important}
+
+  .uk-ecomdev nav {display:none}
+
+  .uk-ecomdev .hdr-in {padding:0 16px}
+
+  .uk-ecomdev [style*="grid-template-columns:3fr 2fr"] {grid-template-columns:1fr!important}
+
+  .uk-ecomdev [style*="grid-template-columns:2fr 3fr"] {grid-template-columns:1fr!important}
+
+  .uk-ecomdev [style*="grid-template-columns:3fr 9fr"] {grid-template-columns:1fr!important}
+
+  .uk-ecomdev [style*="min-height:340px"] {min-height:220px!important}
+
+  .uk-ecomdev .bento-grid {grid-template-columns:1fr!important}
+
+  .uk-ecomdev .bento-span2, .uk-ecomdev .bento-span3, .uk-ecomdev .bento-span4 {grid-column:span 1!important}
+
+  .uk-ecomdev [class*="bento"] {grid-column:span 1!important;border-radius:12px!important}
+
+  .uk-ecomdev .sec-lg {padding:56px 0!important}
+
+  .uk-ecomdev [style*="display:grid;grid-template-columns"] {grid-template-columns:1fr!important}
+
+  .uk-ecomdev [style*="padding:48px 24px 48px 48px"] {padding:32px 20px!important}
+
+  .uk-ecomdev [style*="padding:48px 40px"] {padding:32px 20px!important}
+
+  .uk-ecomdev [style*="gap:56px"] {gap:24px!important}
+
+  .uk-ecomdev .stat-num {font-size:clamp(2.5rem,10vw,3.5rem)!important}
+
+
+}
+@media(max-width:480px) {
+
+  .uk-ecomdev h1 {font-size:1.65rem!important}
+
+  .uk-ecomdev h2 {font-size:1.4rem!important}
+
+  .uk-ecomdev .btn {padding:12px 20px!important;font-size:14px!important}
+
+  .uk-ecomdev [style*="grid-template-columns"] {grid-template-columns:1fr!important}
+
+
+}
+
+
+/* ── FAQ: suppress all browser ::marker / disclosure icons ───── */
+.uk-ecomdev details > summary { list-style: none; }
+
+.uk-ecomdev details > summary::marker { content: ''; font-size: 0; }
+
+.uk-ecomdev details > summary::-webkit-details-marker { display: none; }
+
+/* ── FAQ: fixed sidebar width - prevents category label wrap ─── */
+.uk-ecomdev .faq-grid { grid-template-columns: 260px 1fr !important; }
+
+@media (max-width: 768px) {
+ .uk-ecomdev .faq-grid { grid-template-columns: 1fr !important; }
+ 
+}
+
+/* ─── Web Design page extras ─────────────────────────── */
+.uk-ecomdev .byline {display:flex;align-items:center;gap:11px;padding:12px 14px;background:var(--white);border:1px solid var(--n200);border-radius:14px}
+.uk-ecomdev .byline .av {width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#FF5C00,#FF8C00);color:#fff;display:grid;place-items:center;font-family:var(--fd);font-weight:800;font-size:15px;flex-shrink:0}
+.uk-ecomdev .byline .who {font-size:12.5px;line-height:1.4}
+.uk-ecomdev .byline .who b {color:var(--ink)}
+.uk-ecomdev .byline .who span {color:var(--n400)}
+.uk-ecomdev .byline .upd {margin-left:auto;font-family:var(--fm);font-size:10px;color:var(--n400);text-align:right;line-height:1.5}
+.uk-ecomdev .def {background:var(--white);border:1px solid var(--n200);border-left:3px solid var(--orange);border-radius:14px;padding:24px 26px}
+.uk-ecomdev .def .lab {font-family:var(--fm);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#B23E13;display:block;margin-bottom:8px}
+.uk-ecomdev .def p {font-size:17px;color:var(--ink);line-height:1.7}
+.uk-ecomdev .plat-card {background:var(--white);border:1px solid var(--n200);border-radius:16px;padding:22px;transition:border-color .2s}
+.uk-ecomdev .plat-card:hover {border-color:var(--orange)}
+.uk-ecomdev .plat-top {display:flex;align-items:center;gap:9px;margin-bottom:8px}
+.uk-ecomdev .plat-name {font-family:var(--fd);font-weight:800;font-size:16px;color:var(--ink)}
+.uk-ecomdev .plat-pill {margin-left:auto;font-family:var(--fm);font-size:9.5px;letter-spacing:.06em;color:#B23E13;background:var(--orange-bg);border:1px solid var(--orange-bd);border-radius:999px;padding:3px 8px}
+.uk-ecomdev .plat-best {font-size:13px;color:var(--ink);margin-top:8px}
+.uk-ecomdev .plat-best b {color:#B23E13}
+.uk-ecomdev .demand-row {padding:12px 0;border-bottom:1px solid var(--n100)}
+.uk-ecomdev .demand-row:last-child {border-bottom:none}
+.uk-ecomdev .demand-top {display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.uk-ecomdev .demand-kw {font-size:13.5px;font-weight:500;color:var(--ink)}
+.uk-ecomdev .demand-v {font-family:var(--fm);font-size:13.5px;font-weight:600;color:var(--ink)}
+.uk-ecomdev .demand-bar {height:4px;background:var(--n100);border-radius:99px;margin-top:8px;overflow:hidden}
+.uk-ecomdev .demand-bar i {display:block;height:100%;border-radius:99px;background:var(--orange)}
+.uk-ecomdev .demand-kd {font-family:var(--fm);font-size:10px;color:var(--n400);margin-top:5px}
