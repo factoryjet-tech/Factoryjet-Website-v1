@@ -15,6 +15,7 @@ import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import TalkToFounder from '@/components/v2/TalkToFounder';
+import AiVisibilityCtaBand from '@/components/ai-visibility/AiVisibilityCtaBand';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /us/services/ai-seo — PR #2 Framework B+ launch (2026-05-25)
@@ -35,13 +36,13 @@ import TalkToFounder from '@/components/v2/TalkToFounder';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Best AI SEO Agency in USA — GEO + AEO Optimization [2026]',
+  title: 'Best AI SEO Agency in USA: GEO + AEO Optimization [2026]',
   description:
     'Get cited by ChatGPT, Perplexity, Claude, and Gemini — and rank in Google AI Overviews. Senior-engineer-led AI SEO retainers. Start with an AI visibility audit. Month-to-month, no annual contracts.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best AI SEO Agency in USA — GEO + AEO Optimization [2026]',
+    title: 'Best AI SEO Agency in USA: GEO + AEO Optimization [2026]',
     description:
       'Get cited by ChatGPT, Perplexity, Claude, and Gemini — and rank in Google AI Overviews. Senior-engineer-led AI SEO retainers. Start with an AI visibility audit. Month-to-month, no annual contracts.',
     url: 'https://factoryjet.com/services/ai-seo',
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best AI SEO Agency in USA — GEO + AEO Optimization [2026]',
+    title: 'Best AI SEO Agency in USA: GEO + AEO Optimization [2026]',
     description:
       'Get cited by ChatGPT, Perplexity, Claude, and Gemini — and rank in Google AI Overviews. Senior-engineer-led AI SEO retainers. Start with an AI visibility audit.',
     images: ['https://factoryjet.com/og-default.png'],
@@ -396,7 +397,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Best AI SEO Agency in USA — GEO + AEO Optimization',
+  name: 'Best AI SEO Agency in USA: GEO + AEO Optimization',
   url: 'https://factoryjet.com/services/ai-seo',
   description:
     'AI SEO retainers that get your site cited by ChatGPT, Perplexity, Claude, Gemini, and Google AI Overviews. Senior-engineer-led, month-to-month, US-focused.',
@@ -852,6 +853,175 @@ function CaseStudyPlaceholder() {
   );
 }
 
+/**
+ * AiSeoExplained - answer-first definitional block (added 2026-07-25, additive GEO pass).
+ * Sits directly after the hero so AI engines can lift a clean, plain-language definition
+ * of AI SEO. Mirrors the sibling service pages' "EXPLAINED" answer-first pattern.
+ */
+function AiSeoExplained() {
+  return (
+    <section className="py-14 md:py-20" style={{ backgroundColor: '#FAFAF7' }}>
+      <div className="mx-auto max-w-[860px] px-6 md:px-8">
+        <p className="fj-eyebrow">AI SEO EXPLAINED</p>
+        <h2
+          className="fj-display font-semibold text-fj-ink mt-3"
+          style={{
+            fontSize: 'clamp(1.625rem, 3vw, 2.5rem)',
+            lineHeight: 1.1,
+            letterSpacing: '-0.025em',
+          }}
+        >
+          What is AI SEO?
+        </h2>
+        <p
+          className="mt-5 font-fj-body text-fj-neutral-600"
+          style={{ fontSize: '1.125rem', lineHeight: 1.7 }}
+          data-speakable
+        >
+          AI SEO is the work of getting your website named and quoted by AI answer tools like
+          ChatGPT, Perplexity, Claude, Gemini, and Google&apos;s AI Overviews. When someone asks one
+          of these tools a question, it writes back a short answer and points to a few sources. AI SEO
+          makes sure your site is one of those sources. It runs on the same foundation as regular SEO,
+          clean site structure and real authority, then adds new pieces on top: clear
+          question-and-answer formatting, schema code that machines can read, and trusted mentions of
+          your brand on other sites.
+        </p>
+        <div className="mt-6 border-l-2 pl-5 py-1" style={{ borderLeftColor: '#F05A28' }}>
+          <p
+            className="fj-display font-semibold text-fj-ink"
+            style={{ fontSize: '1.1875rem', lineHeight: 1.4, letterSpacing: '-0.02em' }}
+          >
+            In one line: regular SEO helps you rank in a list of blue links. AI SEO helps you get
+            picked as the answer.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/**
+ * AI_SEARCH_STATS - cited AI-search data points (added 2026-07-25, additive GEO pass).
+ * Every figure links to a real, resolving source that was opened and verified.
+ */
+const AI_SEARCH_STATS = [
+  {
+    value: '8%',
+    label:
+      'Share of Google searches where people click through to a website when an AI summary appears, against 15% when there is no AI summary. Links inside the summary itself get clicked just 1% of the time.',
+    sourceUrl:
+      'https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/',
+    sourceLabel: 'Pew Research Center, 2025',
+  },
+  {
+    value: '2 billion',
+    label:
+      'People a month now use Google AI Overviews, the AI answer box that sits above the blue links, up from 1.5 billion earlier in 2025.',
+    sourceUrl:
+      'https://techcrunch.com/2025/07/23/googles-ai-overviews-have-2b-monthly-users-ai-mode-100m-in-the-us-and-india/',
+    sourceLabel: 'Google via TechCrunch, 2025',
+  },
+  {
+    value: '~800M',
+    label:
+      'People use OpenAI ChatGPT, with the company saying close to 10% of the world now uses its tools. More buyers start their research inside an AI assistant every quarter.',
+    sourceUrl:
+      'https://fortune.com/2025/04/14/sam-altman-openai-user-base-doubled-few-weeks-10-of-world-uses-system/',
+    sourceLabel: 'Fortune / OpenAI, 2025',
+  },
+];
+
+/**
+ * AiSearchStats - cited-stats band (added 2026-07-25, additive GEO pass).
+ * Backs the "growing share of US search happens inside AI" claim with resolving sources.
+ * Large orange numerals; small #B23E13 source links (contrast >= 4.5:1 on white).
+ */
+function AiSearchStats() {
+  return (
+    <section
+      className="py-14 md:py-20"
+      style={{
+        backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.028) 1px, transparent 1px)',
+        backgroundSize: '28px 28px',
+        backgroundColor: '#FAFAF7',
+      }}
+    >
+      <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+        <div className="max-w-[760px]">
+          <p className="fj-eyebrow">THE NUMBERS</p>
+          <h2
+            className="fj-display font-semibold text-fj-ink mt-3"
+            style={{
+              fontSize: 'clamp(1.625rem, 3vw, 2.5rem)',
+              lineHeight: 1.1,
+              letterSpacing: '-0.025em',
+            }}
+          >
+            The AI answer layer is already too big to ignore.
+          </h2>
+          <p
+            className="mt-4 max-w-[600px] font-fj-body text-fj-neutral-600"
+            style={{ fontSize: '1rem', lineHeight: 1.65 }}
+          >
+            Three data points on where US search is heading. Every figure links to the original source.
+          </p>
+        </div>
+
+        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+          {AI_SEARCH_STATS.map((s) => (
+            <div
+              key={s.value}
+              className="rounded-2xl border p-7"
+              style={{
+                borderColor: 'rgba(15,15,18,0.10)',
+                backgroundColor: '#FFFFFF',
+                boxShadow: '0 1px 3px rgba(15,15,18,0.04)',
+                borderTop: '3px solid #F05A28',
+              }}
+            >
+              <p
+                className="fj-display font-bold"
+                style={{
+                  color: '#F05A28',
+                  fontSize: 'clamp(2.25rem, 4vw, 3rem)',
+                  lineHeight: 1,
+                  letterSpacing: '-0.03em',
+                }}
+              >
+                {s.value}
+              </p>
+              <p
+                className="mt-4 font-fj-body"
+                style={{ color: 'rgba(15,15,18,0.72)', fontSize: '0.9375rem', lineHeight: 1.55 }}
+              >
+                {s.label}
+              </p>
+              <a
+                href={s.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-1.5 font-fj-mono font-semibold"
+                style={{ fontSize: '11px', letterSpacing: '0.04em', color: '#B23E13' }}
+              >
+                <svg width="10" height="10" viewBox="0 0 9 9" fill="none" aria-hidden="true">
+                  <path
+                    d="M1.5 7.5L7.5 1.5M7.5 1.5H3M7.5 1.5V6"
+                    stroke="currentColor"
+                    strokeWidth="1.2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                {s.sourceLabel}
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ─────────────────────────────────────────────────────────────────────────────
    Page render
 ───────────────────────────────────────────────────────────────────────────── */
@@ -909,6 +1079,9 @@ export default function AiSeoServicePage() {
           'Code & data ownership from day one',
         ]}
       />
+
+      {/* ─── 1b. AI SEO explained — answer-first definitional block (additive GEO pass) ─── */}
+      <AiSeoExplained />
 
       {/* ─── 2. Stats row (custom, replaces BigThreeTrustBlock) ──────────── */}
       <StatsRow />
@@ -979,6 +1152,9 @@ export default function AiSeoServicePage() {
           </div>
         }
       />
+
+      {/* ─── 3b. Cited AI-search stats (additive GEO pass) ───────────────── */}
+      <AiSearchStats />
 
       {/* ─── 4. Strategic dark — why old SEO misses AI ───────────────────── */}
       <StrategicDarkSection
@@ -1070,6 +1246,9 @@ export default function AiSeoServicePage() {
 
       {/* ─── 9. Case study placeholder (light buffer between dark sections) */}
       <CaseStudyPlaceholder />
+
+      {/* ─── 9b. Free AI Visibility Checker — lead magnet funnel ──────────── */}
+      <AiVisibilityCtaBand />
 
       {/* ─── 10. FAQ — 21 across 5 categories ────────────────────────────── */}
       <FAQ

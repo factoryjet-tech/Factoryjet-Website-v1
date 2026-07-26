@@ -5,12 +5,12 @@ import SiteFooter from '@/components/v2/SiteFooter'
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 export const metadata: Metadata = {
-  title: 'Sitemap — All Pages | FactoryJet',
+  title: 'Sitemap: All Pages | FactoryJet',
   description: 'Navigate FactoryJet\'s website with ease. Find all our web development, e-commerce, and digital services across major Indian cities.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Sitemap — All Pages | FactoryJet',
+    title: 'Sitemap: All Pages | FactoryJet',
     description: 'Navigate FactoryJet\'s website with ease. Find all our services and pages.',
     url: 'https://factoryjet.com/sitemap',
     images: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sitemap — All Pages | FactoryJet',
+    title: 'Sitemap: All Pages | FactoryJet',
     description: 'Navigate FactoryJet\'s website with ease.',
     images: ['https://factoryjet.com/og-default.png'],
   },

@@ -14,7 +14,7 @@ export const post: BlogPost = {
   readTime: '11 min read',
   imageUrl: '/blog-images/nyc-b2b-corporate-web-design-guide-2026.webp',
   meta: {
-    title: 'NYC B2B & Corporate Web Design Agency Guide 2026 — What to Demand',
+    title: 'NYC B2B & Corporate Web Design Agency Guide 2026: What to Demand',
     description:
       'NYC B2B and corporate web design in 2026: performance specs, ADA/NY Shield Act compliance, 5 buyer archetypes (FinTech, law, DTC, SaaS, PropTech), pricing reality ($20K–$200K+), and 7 questions to ask before signing.',
   },

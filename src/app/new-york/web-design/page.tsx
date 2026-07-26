@@ -28,7 +28,7 @@ import Image from 'next/image';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'NYC Web Design Agency — Custom Sites in 7 Days, Fixed-Price',
+  title: 'NYC Web Design Agency: Custom Sites in 7 Days, Fixed-Price',
   description:
     'Custom websites for New York City businesses, live in 7 days, fixed-price. Next.js performance, full code ownership, US-hour project management.',
   alternates: {
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'NYC Web Design Agency — Custom Sites in 7 Days, Fixed-Price',
+    title: 'NYC Web Design Agency: Custom Sites in 7 Days, Fixed-Price',
     description:
       'Custom websites for New York City businesses, live in 7 days, fixed-price. Next.js performance, full code ownership, US-hour project management.',
     url: 'https://factoryjet.com/new-york/web-design/',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NYC Web Design Agency — Custom Sites in 7 Days, Fixed-Price',
+    title: 'NYC Web Design Agency: Custom Sites in 7 Days, Fixed-Price',
     description: 'Custom websites for New York City businesses, live in 7 days, fixed-price. Next.js performance, full code ownership, US-hour project management.',
     images: ['https://factoryjet.com/og-default.png'],
   },

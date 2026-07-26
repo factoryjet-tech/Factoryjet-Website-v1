@@ -22,12 +22,12 @@ import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS'
 import { getEcommerceCitySchema } from '@/data/ecommerceCitySchemas'
 
 export const metadata: Metadata = {
-  title: 'Shopify Developer Fargo ND — Live in 7 Days, Fixed-Price',
+  title: 'Shopify Developer Fargo ND: Live in 7 Days, Fixed-Price',
   description: 'Shopify stores live in Fargo, ND in 7 days. Fixed-price. Silicon Prairie e-commerce experts. 500+ launched, code ownership Day 1.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Developer Fargo ND — Live in 7 Days, Fixed-Price',
+    title: 'Shopify Developer Fargo ND: Live in 7 Days, Fixed-Price',
     description: 'Shopify stores live in Fargo, ND in 7 days. Fixed-price. Silicon Prairie e-commerce experts. 500+ launched, code ownership Day 1.',
     url: 'https://factoryjet.com/fargo/ecommerce-development',
     images: [
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify Developer Fargo ND — Live in 7 Days, Fixed-Price',
+    title: 'Shopify Developer Fargo ND: Live in 7 Days, Fixed-Price',
     description: 'Shopify stores live in Fargo, ND in 7 days. Fixed-price. Silicon Prairie e-commerce experts. 500+ launched, code ownership Day 1.',
     images: ['https://factoryjet.com/og-default.png'],
   },

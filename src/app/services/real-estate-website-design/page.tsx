@@ -21,13 +21,13 @@ import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 
 export const metadata: Metadata = {
-  title: 'Real Estate Website Design — IDX Sites in 7 Days | FactoryJet',
+  title: 'Real Estate Website Design: IDX Sites in 7 Days | FactoryJet',
   description:
     'IDX-integrated real estate websites that rank locally. Agent, team, and brokerage sites. Live in 7 days, fixed-price, code ownership at handoff.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Real Estate Website Design — IDX Sites in 7 Days | FactoryJet',
+    title: 'Real Estate Website Design: IDX Sites in 7 Days | FactoryJet',
     description:
       'IDX-integrated real estate websites that rank locally. Agent, team, and brokerage sites. Live in 7 days, fixed-price, code ownership at handoff.',
     url: 'https://factoryjet.com/services/real-estate-website-design',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Real Estate Website Design — IDX Sites in 7 Days | FactoryJet',
+    title: 'Real Estate Website Design: IDX Sites in 7 Days | FactoryJet',
     description: 'IDX-integrated real estate websites that rank locally. Agent, team, and brokerage sites. Live in 7 days, fixed-price, code ownership at handoff.',
     images: ['https://factoryjet.com/og-default.png'],
   },

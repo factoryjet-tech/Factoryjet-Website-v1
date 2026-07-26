@@ -27,13 +27,13 @@ import Image from 'next/image';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Agency for Small Business USA — Professional Sites, Live in 7 Days | FactoryJet',
+  title: 'Web Design Agency for Small Business USA: Professional Sites, Live in 7 Days | FactoryJet',
   description:
     'Web design agency for US small businesses. Custom Next.js, WordPress & Shopify sites built for speed, SEO, and conversions — live in 7 days. Full code ownership. Get a quote in 24 hours.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Agency for Small Business USA — Professional Sites, Live in 7 Days | FactoryJet',
+    title: 'Web Design Agency for Small Business USA: Professional Sites, Live in 7 Days | FactoryJet',
     description:
       'Web design services for US small businesses. Custom Next.js, WordPress & Shopify sites — Lighthouse 100, mobile-first, live in 7 days. Full code ownership. Get a quote in 24 hours.',
     url: 'https://factoryjet.com/services/web-design',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web Design Agency for Small Business USA — Professional Sites, Live in 7 Days | FactoryJet',
+    title: 'Web Design Agency for Small Business USA: Professional Sites, Live in 7 Days | FactoryJet',
     description:
       'Web design services for US small businesses. Custom Next.js, WordPress & Shopify sites — Lighthouse 100, mobile-first, live in 7 days. Full code ownership. Get a quote in 24 hours.',
     images: ['https://factoryjet.com/og-default.png'],

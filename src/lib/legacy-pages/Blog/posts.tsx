@@ -131,7 +131,7 @@ export const POSTS: BlogPost[] = [
   author: 'Bhavesh Barot',
   date: 'Mar 7, 2026',
   meta: {
-    title: "The Real Cost of a Cheap Website in India — 2026 SME Guide",
+    title: "The Real Cost of a Cheap Website in India: 2026 SME Guide",
     description: "A ₹10,000 website looks affordable until it costs you leads and rankings. Learn what Indian businesses actually lose — and what a proper site costs to build in 2026."
   },
   readTime: '12 min read',
@@ -1861,7 +1861,7 @@ export const POSTS: BlogPost[] = [
   readTime: '11 min read',
   imageUrl: '/blog-images/wordpress-security-audit-guide.webp',
   meta: {
-    title: "How WordPress Sites Get Hacked — And How to Stop It Before It Happens",
+    title: "How WordPress Sites Get Hacked, and How to Stop It Before It Happens",
     description: "The exact vulnerabilities hackers exploit in WordPress sites — outdated plugins, weak credentials, shared hosting — and the fixes that prevent 90% of successful attacks.",
   },
   keyTakeaways: [

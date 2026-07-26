@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Small Business Website Design — 7-Day Delivery | FactoryJet',
+    title: 'Small Business Website Design: 7-Day Delivery | FactoryJet',
     description:
       'Custom-designed websites for US small businesses. Not templates. Not cookie-cutter. Mobile-first, SEO-ready, and delivered in 7 days. Fixed price, scoped to your build.',
     url: 'https://factoryjet.com/services/small-business-website-design',
@@ -47,14 +47,14 @@ export const metadata: Metadata = {
         url: 'https://factoryjet.com/images/us/hero-us.webp',
         width: 1200,
         height: 630,
-        alt: 'Small Business Website Design Services — FactoryJet',
+        alt: 'Small Business Website Design Services, FactoryJet',
       },
     ],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Small Business Website Design — 7-Day Delivery | FactoryJet',
+    title: 'Small Business Website Design: 7-Day Delivery | FactoryJet',
     description:
       'Custom websites for US small businesses. Mobile-first, SEO-ready, full code ownership. Fixed price, delivered in 7 days.',
     images: ['https://factoryjet.com/images/us/hero-us.webp'],

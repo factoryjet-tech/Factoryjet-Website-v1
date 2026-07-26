@@ -25,13 +25,13 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Website Redesign Services USA — 7-Day Refresh | FactoryJet',
+  title: 'Website Redesign Services USA: 7-Day Refresh | FactoryJet',
   description:
     'Modern website redesign for US small businesses. Faster loads, better conversions, live in 7 days. Fixed-price. Free site audit + Lighthouse benchmark included.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Website Redesign Services USA — 7-Day Refresh | FactoryJet',
+    title: 'Website Redesign Services USA: 7-Day Refresh | FactoryJet',
     description:
       'Modern website redesign for US small businesses. Faster loads, better conversions, live in 7 days. Fixed-price. Free site audit + Lighthouse benchmark included.',
     url: 'https://factoryjet.com/services/website-redesign',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Website Redesign Services USA — 7-Day Refresh | FactoryJet',
+    title: 'Website Redesign Services USA: 7-Day Refresh | FactoryJet',
     description:
       'Modern website redesign for US small businesses. Faster loads, better conversions, live in 7 days. Fixed-price. Free site audit + Lighthouse benchmark included.',
     images: ['https://factoryjet.com/og-default.png'],

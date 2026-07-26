@@ -32,13 +32,13 @@ import TalkToFounder from '@/components/v2/TalkToFounder';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Shopify SEO Agency USA — Rank Your Store & Win AI Citations | FactoryJet',
+  title: 'Shopify SEO Agency USA: Rank Your Store & Win AI Citations | FactoryJet',
   description:
     'Shopify SEO services & agency for US stores. We fix duplicate URLs, thin collection pages, and app bloat, then rank your products and earn AI citations. Free Shopify SEO audit.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify SEO Agency USA — Rank Your Store & Win AI Citations | FactoryJet',
+    title: 'Shopify SEO Agency USA: Rank Your Store & Win AI Citations | FactoryJet',
     description:
       'Shopify SEO services & agency for US stores. We fix duplicate URLs, thin collections, and app bloat, then rank products and earn AI citations. Free Shopify SEO audit.',
     url: 'https://factoryjet.com/services/shopify-seo',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify SEO Agency USA — Rank Your Store & Win AI Citations | FactoryJet',
+    title: 'Shopify SEO Agency USA: Rank Your Store & Win AI Citations | FactoryJet',
     description:
       'Shopify SEO services & agency for US stores. Fix duplicate URLs, rank products and collections, earn AI citations. Free Shopify SEO audit.',
     images: ['https://factoryjet.com/og-default.png'],
@@ -331,7 +331,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Shopify SEO Agency USA — Rank Your Store & Win AI Citations',
+  name: 'Shopify SEO Agency USA: Rank Your Store & Win AI Citations',
   url: 'https://factoryjet.com/services/shopify-seo',
   description:
     'Shopify SEO services for US stores: fix duplicate URLs and canonicals, rank collection and product pages, recover Core Web Vitals, and earn AI citations. Senior-engineer-led, month-to-month.',
