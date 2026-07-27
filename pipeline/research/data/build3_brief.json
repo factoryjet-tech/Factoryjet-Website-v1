@@ -1,0 +1,2598 @@
+{
+ "ai-seo": {
+  "keywords": [
+   {
+    "keyword": "generative engine optimization",
+    "cluster": "ai-seo",
+    "seed": "generative engine optimization",
+    "search_volume": 4400,
+    "cpc": 28.56,
+    "competition": "MEDIUM",
+    "kd": 57,
+    "intent": "informational"
+   },
+   {
+    "keyword": "answer engine optimization",
+    "cluster": "ai-seo",
+    "seed": "answer engine optimization",
+    "search_volume": 2400,
+    "cpc": 30.77,
+    "competition": "MEDIUM",
+    "kd": 36,
+    "intent": "informational"
+   },
+   {
+    "keyword": "generative engine optimization geo",
+    "cluster": "ai-seo",
+    "seed": "generative engine optimization",
+    "search_volume": 1600,
+    "cpc": 29.66,
+    "competition": "LOW",
+    "kd": 57,
+    "intent": "informational"
+   },
+   {
+    "keyword": "ai seo agency",
+    "cluster": "ai-seo",
+    "seed": "ai seo agency",
+    "search_volume": 1000,
+    "cpc": 82.43,
+    "competition": "LOW",
+    "kd": 10,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "ai seo services",
+    "cluster": "ai-seo",
+    "seed": "ai seo services",
+    "search_volume": 1000,
+    "cpc": 78.77,
+    "competition": "LOW",
+    "kd": 1,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "what is generative engine optimization",
+    "cluster": "ai-seo",
+    "seed": "generative engine optimization",
+    "search_volume": 880,
+    "cpc": 13.42,
+    "competition": "LOW",
+    "kd": 57,
+    "intent": "informational"
+   },
+   {
+    "keyword": "geo generative engine optimization",
+    "cluster": "ai-seo",
+    "seed": "generative engine optimization",
+    "search_volume": 720,
+    "cpc": 25.22,
+    "competition": "MEDIUM",
+    "kd": 71,
+    "intent": "informational"
+   },
+   {
+    "keyword": "generative engine optimization geo services",
+    "cluster": "ai-seo",
+    "seed": "generative engine optimization",
+    "search_volume": 720,
+    "cpc": 0,
+    "competition": "LOW",
+    "kd": 13,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "geo: generative engine optimization",
+    "cluster": "ai-seo",
+    "seed": "generative engine optimization",
+    "search_volume": 720,
+    "cpc": 25.22,
+    "competition": "MEDIUM",
+    "kd": 61,
+    "intent": "informational"
+   },
+   {
+    "keyword": "generative engine optimization tools",
+    "cluster": "ai-seo",
+    "seed": "generative engine optimization",
+    "search_volume": 590,
+    "cpc": 37.42,
+    "competition": "LOW",
+    "kd": 20,
+    "intent": "informational"
+   },
+   {
+    "keyword": "generative engine optimization services",
+    "cluster": "ai-seo",
+    "seed": "generative engine optimization",
+    "search_volume": 590,
+    "cpc": 39.88,
+    "competition": "LOW",
+    "kd": 6,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "generative engine optimization service",
+    "cluster": "ai-seo",
+    "seed": "generative engine optimization",
+    "search_volume": 590,
+    "cpc": 39.88,
+    "competition": "LOW",
+    "kd": 2,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "generative engine optimization tool",
+    "cluster": "ai-seo",
+    "seed": "generative engine optimization",
+    "search_volume": 590,
+    "cpc": 37.42,
+    "competition": "LOW",
+    "kd": 24,
+    "intent": "informational"
+   },
+   {
+    "keyword": "what is answer engine optimization",
+    "cluster": "ai-seo",
+    "seed": "answer engine optimization",
+    "search_volume": 480,
+    "cpc": 11.44,
+    "competition": "LOW",
+    "kd": 32,
+    "intent": "informational"
+   },
+   {
+    "keyword": "answer engine optimization services",
+    "cluster": "ai-seo",
+    "seed": "answer engine optimization",
+    "search_volume": 480,
+    "cpc": 36.37,
+    "competition": "LOW",
+    "kd": 9,
+    "intent": "informational"
+   },
+   {
+    "keyword": "answer engine optimization aeo",
+    "cluster": "ai-seo",
+    "seed": "answer engine optimization",
+    "search_volume": 480,
+    "cpc": 45.28,
+    "competition": "LOW",
+    "kd": 38,
+    "intent": "informational"
+   },
+   {
+    "keyword": "chatgpt seo tools",
+    "cluster": "ai-seo",
+    "seed": "chatgpt seo",
+    "search_volume": 480,
+    "cpc": 0,
+    "competition": "LOW",
+    "kd": 0,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "chatgpt seo tool",
+    "cluster": "ai-seo",
+    "seed": "chatgpt seo",
+    "search_volume": 480,
+    "cpc": 0,
+    "competition": "LOW",
+    "kd": 5,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "chatgpt for seo",
+    "cluster": "ai-seo",
+    "seed": "chatgpt seo",
+    "search_volume": 480,
+    "cpc": 0,
+    "competition": "LOW",
+    "kd": 19,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "profound generative engine optimization",
+    "cluster": "ai-seo",
+    "seed": "generative engine optimization",
+    "search_volume": 390,
+    "cpc": 14.34,
+    "competition": "LOW",
+    "kd": 22,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "answer engine optimization tool",
+    "cluster": "ai-seo",
+    "seed": "answer engine optimization",
+    "search_volume": 390,
+    "cpc": 17.61,
+    "competition": "LOW",
+    "kd": 14,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "answer engine optimization tools",
+    "cluster": "ai-seo",
+    "seed": "answer engine optimization",
+    "search_volume": 390,
+    "cpc": 17.61,
+    "competition": "LOW",
+    "kd": 17,
+    "intent": "informational"
+   },
+   {
+    "keyword": "chatgpt seo",
+    "cluster": "ai-seo",
+    "seed": "chatgpt seo",
+    "search_volume": 390,
+    "cpc": 24.85,
+    "competition": "LOW",
+    "kd": 21,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo ai agency",
+    "cluster": "ai-seo",
+    "seed": "ai seo agency",
+    "search_volume": 320,
+    "cpc": 32.02,
+    "competition": "MEDIUM",
+    "kd": 40,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "leading software for ai visibility and generative engine optimization",
+    "cluster": "ai-seo",
+    "seed": "generative engine optimization",
+    "search_volume": 320,
+    "cpc": 0,
+    "competition": "LOW",
+    "kd": 3,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "generative engine optimization agency",
+    "cluster": "ai-seo",
+    "seed": "generative engine optimization",
+    "search_volume": 320,
+    "cpc": 45.3,
+    "competition": "LOW",
+    "kd": 0,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo for chatgpt",
+    "cluster": "ai-seo",
+    "seed": "chatgpt seo",
+    "search_volume": 320,
+    "cpc": 28.92,
+    "competition": "LOW",
+    "kd": 39,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "generative engine optimization geo tools",
+    "cluster": "ai-seo",
+    "seed": "generative engine optimization",
+    "search_volume": 260,
+    "cpc": 0,
+    "competition": "LOW",
+    "kd": 19,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "ai tools with best generative engine optimization features",
+    "cluster": "ai-seo",
+    "seed": "generative engine optimization",
+    "search_volume": 260,
+    "cpc": 0,
+    "competition": "LOW",
+    "kd": 21,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "aeo answer engine optimization",
+    "cluster": "ai-seo",
+    "seed": "answer engine optimization",
+    "search_volume": 260,
+    "cpc": 34.69,
+    "competition": "MEDIUM",
+    "kd": 35,
+    "intent": "informational"
+   },
+   {
+    "keyword": "generative engine optimization statistics",
+    "cluster": "ai-seo",
+    "seed": "generative engine optimization",
+    "search_volume": 210,
+    "cpc": 0,
+    "competition": "LOW",
+    "kd": 40,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "best rated answer engine optimization tools",
+    "cluster": "ai-seo",
+    "seed": "answer engine optimization",
+    "search_volume": 210,
+    "cpc": 0,
+    "competition": "LOW",
+    "kd": 4,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "answer engine optimization agency",
+    "cluster": "ai-seo",
+    "seed": "answer engine optimization",
+    "search_volume": 210,
+    "cpc": 50.9,
+    "competition": "LOW",
+    "kd": 7,
+    "intent": "navigational"
+   },
+   {
+    "keyword": "best ai seo agency",
+    "cluster": "ai-seo",
+    "seed": "ai seo agency",
+    "search_volume": 170,
+    "cpc": 33.15,
+    "competition": "LOW",
+    "kd": 0,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "what is generative engine optimization geo",
+    "cluster": "ai-seo",
+    "seed": "generative engine optimization",
+    "search_volume": 170,
+    "cpc": 17.96,
+    "competition": "LOW",
+    "kd": 44,
+    "intent": "informational"
+   },
+   {
+    "keyword": "ai driven seo services",
+    "cluster": "ai-seo",
+    "seed": "ai seo services",
+    "search_volume": 140,
+    "cpc": 0,
+    "competition": "LOW",
+    "kd": 17,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "ai visibility solutions with best generative engine optimization",
+    "cluster": "ai-seo",
+    "seed": "generative engine optimization",
+    "search_volume": 140,
+    "cpc": 0,
+    "competition": "LOW",
+    "kd": 12,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "top solutions for ai visibility and generative engine optimization",
+    "cluster": "ai-seo",
+    "seed": "generative engine optimization",
+    "search_volume": 140,
+    "cpc": 0,
+    "competition": "LOW",
+    "kd": 0,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "best answer engine optimization tools",
+    "cluster": "ai-seo",
+    "seed": "answer engine optimization",
+    "search_volume": 140,
+    "cpc": 0,
+    "competition": "LOW",
+    "kd": 11,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "answer engine optimization aeo services",
+    "cluster": "ai-seo",
+    "seed": "answer engine optimization",
+    "search_volume": 140,
+    "cpc": 0,
+    "competition": "LOW",
+    "kd": 35,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "profound answer engine optimization",
+    "cluster": "ai-seo",
+    "seed": "answer engine optimization",
+    "search_volume": 140,
+    "cpc": 3.54,
+    "competition": "MEDIUM",
+    "kd": 13,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "generative engine optimization course",
+    "cluster": "ai-seo",
+    "seed": "generative engine optimization",
+    "search_volume": 110,
+    "cpc": 12.98,
+    "competition": "HIGH",
+    "kd": 6,
+    "intent": "informational"
+   },
+   {
+    "keyword": "recommended generative engine optimization software",
+    "cluster": "ai-seo",
+    "seed": "generative engine optimization",
+    "search_volume": 110,
+    "cpc": 0,
+    "competition": "LOW",
+    "kd": 4,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "generative engine optimization strategy",
+    "cluster": "ai-seo",
+    "seed": "generative engine optimization",
+    "search_volume": 110,
+    "cpc": 19.98,
+    "competition": "LOW",
+    "kd": 54,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "generative engine optimization courses",
+    "cluster": "ai-seo",
+    "seed": "generative engine optimization",
+    "search_volume": 110,
+    "cpc": 12.98,
+    "competition": "HIGH",
+    "kd": 0,
+    "intent": "commercial"
+   }
+  ],
+  "paa": [
+   {
+    "cluster": "ai-seo",
+    "seed_term": "answer engine optimization services",
+    "question": "What does answer engine optimization do?",
+    "serp_answer": ""
+   },
+   {
+    "cluster": "ai-seo",
+    "seed_term": "answer engine optimization services",
+    "question": "What is the best software for answer engine optimization?",
+    "serp_answer": ""
+   },
+   {
+    "cluster": "ai-seo",
+    "seed_term": "answer engine optimization services",
+    "question": "How much should I pay for search engine optimization?",
+    "serp_answer": ""
+   },
+   {
+    "cluster": "ai-seo",
+    "seed_term": "answer engine optimization services",
+    "question": "Is SEO dying out?",
+    "serp_answer": ""
+   }
+  ],
+  "competitors": [
+   {
+    "domain": "thriveagency.com",
+    "appearances": 11,
+    "avg_pos": 3.8,
+    "clusters": "ai-seo|city-austin|city-charlotte|city-fargo|city-sioux-falls|roofing",
+    "sample_title": "AI SEO Services | AI-Driven Search Engine Optimization ..."
+   },
+   {
+    "domain": "www.reddit.com",
+    "appearances": 10,
+    "avg_pos": 5.8,
+    "clusters": "ai-seo|city-austin",
+    "sample_title": "The 7 Leading AI SEO Agencies for Modern Search"
+   },
+   {
+    "domain": "www.youtube.com",
+    "appearances": 8,
+    "avg_pos": 11.2,
+    "clusters": "ai-seo|city-austin|roofing",
+    "sample_title": "How I Automated an SEO Agency with 15 AI Agents (No-Code)"
+   },
+   {
+    "domain": "www.searchbloom.com",
+    "appearances": 6,
+    "avg_pos": 7.7,
+    "clusters": "ai-seo",
+    "sample_title": "Best AI SEO Companies + Services in the US 2026 (AEO ..."
+   },
+   {
+    "domain": "www.webfx.com",
+    "appearances": 5,
+    "avg_pos": 11.4,
+    "clusters": "ai-seo|roofing",
+    "sample_title": "SEO Services Made Smarter with AI, Guided by Experts"
+   },
+   {
+    "domain": "www.spicymargarita.co",
+    "appearances": 4,
+    "avg_pos": 7.5,
+    "clusters": "ai-seo",
+    "sample_title": "9 Top AI SEO Agencies in 2026"
+   },
+   {
+    "domain": "www.onely.com",
+    "appearances": 4,
+    "avg_pos": 10.2,
+    "clusters": "ai-seo",
+    "sample_title": "Top 10 AI SEO Agencies in 2026: What They Actually ..."
+   },
+   {
+    "domain": "seo.co",
+    "appearances": 4,
+    "avg_pos": 12.2,
+    "clusters": "ai-seo",
+    "sample_title": "AI SEO / GEO \u2014 Generative Engine Optimization"
+   },
+   {
+    "domain": "www.yesoptimist.com",
+    "appearances": 4,
+    "avg_pos": 13.8,
+    "clusters": "ai-seo",
+    "sample_title": "The 7 Best AI SEO Agencies Helping Clients Win AI Search in ..."
+   },
+   {
+    "domain": "www.level.agency",
+    "appearances": 3,
+    "avg_pos": 5.0,
+    "clusters": "ai-seo",
+    "sample_title": "AI SEO\u200b Performance Digital Marketing"
+   },
+   {
+    "domain": "coalitiontechnologies.com",
+    "appearances": 3,
+    "avg_pos": 5.7,
+    "clusters": "ai-seo",
+    "sample_title": "Rank in ChatGPT and AI Overviews with AI SEO"
+   },
+   {
+    "domain": "elit-web.com",
+    "appearances": 3,
+    "avg_pos": 7.0,
+    "clusters": "ai-seo|city-huntington-beach|city-sioux-falls",
+    "sample_title": "10 Best AI SEO Agencies"
+   },
+   {
+    "domain": "ziptie.dev",
+    "appearances": 2,
+    "avg_pos": 6.0,
+    "clusters": "ai-seo",
+    "sample_title": "Best AI SEO Agency | How to choose an AI SEO agency?"
+   },
+   {
+    "domain": "www.theadfirm.net",
+    "appearances": 2,
+    "avg_pos": 7.0,
+    "clusters": "ai-seo",
+    "sample_title": "AI SEO Services: Rank in AI-Generated Search Results"
+   },
+   {
+    "domain": "www.semrush.com",
+    "appearances": 2,
+    "avg_pos": 7.5,
+    "clusters": "ai-seo",
+    "sample_title": "Generative Engine Optimization (GEO): A Practical Guide"
+   },
+   {
+    "domain": "www.outerboxdesign.com",
+    "appearances": 2,
+    "avg_pos": 8.0,
+    "clusters": "ai-seo",
+    "sample_title": "AI SEO Services | AEO & GEO Optimization AI SEO Agency"
+   },
+   {
+    "domain": "firstpagesage.com",
+    "appearances": 2,
+    "avg_pos": 8.0,
+    "clusters": "ai-seo",
+    "sample_title": "The Top GEO Agencies of 2026"
+   },
+   {
+    "domain": "www.fiverr.com",
+    "appearances": 2,
+    "avg_pos": 10.0,
+    "clusters": "ai-seo",
+    "sample_title": "Generative Engine Optimization Services: Top GEO & AEO ..."
+   },
+   {
+    "domain": "www.epicslope.partners",
+    "appearances": 2,
+    "avg_pos": 11.5,
+    "clusters": "ai-seo",
+    "sample_title": "Top Generative Engine Optimization Agencies in 2026 ..."
+   },
+   {
+    "domain": "thedigitalelevator.com",
+    "appearances": 2,
+    "avg_pos": 13.0,
+    "clusters": "ai-seo",
+    "sample_title": "The 10 Best AI SEO Agencies in 2026"
+   }
+  ]
+ },
+ "roofing": {
+  "keywords": [
+   {
+    "keyword": "seo roofing",
+    "cluster": "roofing",
+    "seed": "roofing seo",
+    "search_volume": 2400,
+    "cpc": 40.4,
+    "competition": "LOW",
+    "kd": 8,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo for roofing",
+    "cluster": "roofing",
+    "seed": "roofing seo",
+    "search_volume": 2400,
+    "cpc": 40.4,
+    "competition": "LOW",
+    "kd": 6,
+    "intent": "informational"
+   },
+   {
+    "keyword": "roofing seo",
+    "cluster": "roofing",
+    "seed": "roofing seo",
+    "search_volume": 2400,
+    "cpc": 40.4,
+    "competition": "LOW",
+    "kd": 7,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo for roofers",
+    "cluster": "roofing",
+    "seed": "seo for roofers",
+    "search_volume": 2400,
+    "cpc": 40.4,
+    "competition": "LOW",
+    "kd": 12,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "leads roofing",
+    "cluster": "roofing",
+    "seed": "roofing leads",
+    "search_volume": 1300,
+    "cpc": 32.06,
+    "competition": "MEDIUM",
+    "kd": 4,
+    "intent": "informational"
+   },
+   {
+    "keyword": "roofing leads",
+    "cluster": "roofing",
+    "seed": "roofing leads",
+    "search_volume": 1300,
+    "cpc": 41.4,
+    "competition": "MEDIUM",
+    "kd": 0,
+    "intent": "transactional"
+   },
+   {
+    "keyword": "leads for roofing",
+    "cluster": "roofing",
+    "seed": "roofing leads",
+    "search_volume": 1300,
+    "cpc": 32.06,
+    "competition": "MEDIUM",
+    "kd": 0,
+    "intent": "transactional"
+   },
+   {
+    "keyword": "roofing leads generator",
+    "cluster": "roofing",
+    "seed": "roofing leads",
+    "search_volume": 1300,
+    "cpc": 41.4,
+    "competition": "MEDIUM",
+    "kd": 0,
+    "intent": "transactional"
+   },
+   {
+    "keyword": "seo for roofing companies",
+    "cluster": "roofing",
+    "seed": "roofing seo",
+    "search_volume": 1000,
+    "cpc": 32.32,
+    "competition": "LOW",
+    "kd": 15,
+    "intent": "informational"
+   },
+   {
+    "keyword": "roofing company seo",
+    "cluster": "roofing",
+    "seed": "roofing seo",
+    "search_volume": 1000,
+    "cpc": 32.32,
+    "competition": "LOW",
+    "kd": 8,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "roofing seo companies",
+    "cluster": "roofing",
+    "seed": "roofing seo",
+    "search_volume": 1000,
+    "cpc": 32.32,
+    "competition": "LOW",
+    "kd": 4,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "roofing seo company",
+    "cluster": "roofing",
+    "seed": "roofing seo",
+    "search_volume": 1000,
+    "cpc": 32.32,
+    "competition": "LOW",
+    "kd": 16,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "roofing seo service",
+    "cluster": "roofing",
+    "seed": "roofing seo",
+    "search_volume": 720,
+    "cpc": 0,
+    "competition": "LOW",
+    "kd": 13,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "roofing seo services",
+    "cluster": "roofing",
+    "seed": "roofing seo",
+    "search_volume": 720,
+    "cpc": 0,
+    "competition": "LOW",
+    "kd": 11,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "marketing roofing",
+    "cluster": "roofing",
+    "seed": "roofing marketing",
+    "search_volume": 720,
+    "cpc": 47.65,
+    "competition": "LOW",
+    "kd": 19,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "marketing for roofing",
+    "cluster": "roofing",
+    "seed": "roofing marketing",
+    "search_volume": 720,
+    "cpc": 47.65,
+    "competition": "LOW",
+    "kd": 7,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "roofing marketing",
+    "cluster": "roofing",
+    "seed": "roofing marketing",
+    "search_volume": 720,
+    "cpc": 47.65,
+    "competition": "LOW",
+    "kd": 28,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "roofing marketing agency",
+    "cluster": "roofing",
+    "seed": "roofing marketing",
+    "search_volume": 480,
+    "cpc": 56.81,
+    "competition": "MEDIUM",
+    "kd": 18,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "website design for roofing",
+    "cluster": "roofing",
+    "seed": "roofing website design",
+    "search_volume": 320,
+    "cpc": 29.84,
+    "competition": "LOW",
+    "kd": 3,
+    "intent": "informational"
+   },
+   {
+    "keyword": "website design roofing",
+    "cluster": "roofing",
+    "seed": "roofing website design",
+    "search_volume": 320,
+    "cpc": 29.84,
+    "competition": "LOW",
+    "kd": 3,
+    "intent": "informational"
+   },
+   {
+    "keyword": "roofing website design",
+    "cluster": "roofing",
+    "seed": "roofing website design",
+    "search_volume": 320,
+    "cpc": 29.84,
+    "competition": "LOW",
+    "kd": 3,
+    "intent": "informational"
+   },
+   {
+    "keyword": "roofing contractor seo",
+    "cluster": "roofing",
+    "seed": "roofing seo",
+    "search_volume": 260,
+    "cpc": 0,
+    "competition": "LOW",
+    "kd": 9,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "roofing seo agency",
+    "cluster": "roofing",
+    "seed": "roofing seo",
+    "search_volume": 260,
+    "cpc": 23.81,
+    "competition": "LOW",
+    "kd": 1,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo for roofing contractors",
+    "cluster": "roofing",
+    "seed": "roofing seo",
+    "search_volume": 260,
+    "cpc": 0,
+    "competition": "LOW",
+    "kd": 20,
+    "intent": "informational"
+   },
+   {
+    "keyword": "local seo for roofing companies",
+    "cluster": "roofing",
+    "seed": "roofing seo",
+    "search_volume": 260,
+    "cpc": 0,
+    "competition": "LOW",
+    "kd": 6,
+    "intent": "informational"
+   },
+   {
+    "keyword": "roofing marketing companies",
+    "cluster": "roofing",
+    "seed": "roofing marketing",
+    "search_volume": 260,
+    "cpc": 52.22,
+    "competition": "MEDIUM",
+    "kd": 25,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "marketing roofing company",
+    "cluster": "roofing",
+    "seed": "roofing marketing",
+    "search_volume": 260,
+    "cpc": 52.22,
+    "competition": "MEDIUM",
+    "kd": 3,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "marketing roofing companies",
+    "cluster": "roofing",
+    "seed": "roofing marketing",
+    "search_volume": 260,
+    "cpc": 52.22,
+    "competition": "MEDIUM",
+    "kd": 26,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "marketing a roofing company",
+    "cluster": "roofing",
+    "seed": "roofing marketing",
+    "search_volume": 260,
+    "cpc": 52.22,
+    "competition": "MEDIUM",
+    "kd": 3,
+    "intent": "informational"
+   },
+   {
+    "keyword": "roofing marketing company",
+    "cluster": "roofing",
+    "seed": "roofing marketing",
+    "search_volume": 260,
+    "cpc": 52.22,
+    "competition": "MEDIUM",
+    "kd": 25,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "roofing business marketing",
+    "cluster": "roofing",
+    "seed": "roofing marketing",
+    "search_volume": 260,
+    "cpc": 52.22,
+    "competition": "MEDIUM",
+    "kd": 29,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "marketing for roofing companies",
+    "cluster": "roofing",
+    "seed": "roofing marketing",
+    "search_volume": 260,
+    "cpc": 52.22,
+    "competition": "MEDIUM",
+    "kd": 3,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "marketing for roofing contractors",
+    "cluster": "roofing",
+    "seed": "roofing marketing",
+    "search_volume": 260,
+    "cpc": 52.22,
+    "competition": "MEDIUM",
+    "kd": 16,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "contractor roofing leads",
+    "cluster": "roofing",
+    "seed": "roofing leads",
+    "search_volume": 210,
+    "cpc": 39.49,
+    "competition": "MEDIUM",
+    "kd": 0,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "roofing leads company",
+    "cluster": "roofing",
+    "seed": "roofing leads",
+    "search_volume": 210,
+    "cpc": 64.61,
+    "competition": "MEDIUM",
+    "kd": 6,
+    "intent": "navigational"
+   },
+   {
+    "keyword": "roofing leads for contractors",
+    "cluster": "roofing",
+    "seed": "roofing leads",
+    "search_volume": 210,
+    "cpc": 39.49,
+    "competition": "MEDIUM",
+    "kd": 0,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "roofing company leads",
+    "cluster": "roofing",
+    "seed": "roofing leads",
+    "search_volume": 210,
+    "cpc": 39.49,
+    "competition": "MEDIUM",
+    "kd": 0,
+    "intent": "navigational"
+   },
+   {
+    "keyword": "best roofing leads llc",
+    "cluster": "roofing",
+    "seed": "roofing leads",
+    "search_volume": 210,
+    "cpc": 0,
+    "competition": "LOW",
+    "kd": 0,
+    "intent": "informational"
+   },
+   {
+    "keyword": "leads for roofing contractors",
+    "cluster": "roofing",
+    "seed": "roofing leads",
+    "search_volume": 210,
+    "cpc": 39.49,
+    "competition": "MEDIUM",
+    "kd": 4,
+    "intent": "informational"
+   },
+   {
+    "keyword": "roofing contractor leads",
+    "cluster": "roofing",
+    "seed": "roofing leads",
+    "search_volume": 210,
+    "cpc": 39.49,
+    "competition": "MEDIUM",
+    "kd": 0,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "leads for roofing companies",
+    "cluster": "roofing",
+    "seed": "roofing leads",
+    "search_volume": 210,
+    "cpc": 39.49,
+    "competition": "MEDIUM",
+    "kd": 0,
+    "intent": "informational"
+   },
+   {
+    "keyword": "roofing marketing services",
+    "cluster": "roofing",
+    "seed": "roofing marketing",
+    "search_volume": 140,
+    "cpc": 15.07,
+    "competition": "LOW",
+    "kd": 25,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "roofing marketing pros",
+    "cluster": "roofing",
+    "seed": "roofing marketing",
+    "search_volume": 140,
+    "cpc": 37.32,
+    "competition": "MEDIUM",
+    "kd": 0,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "buy roofing leads",
+    "cluster": "roofing",
+    "seed": "roofing leads",
+    "search_volume": 140,
+    "cpc": 37.21,
+    "competition": "HIGH",
+    "kd": 0,
+    "intent": "transactional"
+   },
+   {
+    "keyword": "how to generate roofing leads",
+    "cluster": "roofing",
+    "seed": "roofing leads",
+    "search_volume": 140,
+    "cpc": 41.8,
+    "competition": "MEDIUM",
+    "kd": 3,
+    "intent": "informational"
+   }
+  ],
+  "paa": [
+   {
+    "cluster": "roofing",
+    "seed_term": "roofing seo",
+    "question": "What is SEO in construction?",
+    "serp_answer": "A typical construction SEO audit includes:\n Keyword research to identify the best keywords for construction. Competitor analysis. Analysis and evaluation of your website code, structure, and content. Analysis and evaluation of your company's presence online\u2014linkscape, social media, and more."
+   },
+   {
+    "cluster": "roofing",
+    "seed_term": "roofing seo",
+    "question": "What is the 25% rule for roofing?",
+    "serp_answer": ""
+   },
+   {
+    "cluster": "roofing",
+    "seed_term": "roofing seo",
+    "question": "Is SEO being phased out?",
+    "serp_answer": "Technical SEO is still very much alive. Site speed, crawlability, structured data and mobile performance. None of that has gone away. If anything, a technically sound website is a stronger differentiator now that content quality has become so competitive."
+   },
+   {
+    "cluster": "roofing",
+    "seed_term": "roofing seo",
+    "question": "What are the 4 types of SEO?",
+    "serp_answer": ""
+   },
+   {
+    "cluster": "roofing",
+    "seed_term": "seo for roofers",
+    "question": "What is the best way to advertise for roofing?",
+    "serp_answer": ""
+   },
+   {
+    "cluster": "roofing",
+    "seed_term": "seo for roofers",
+    "question": "How much does it cost to hire someone to do SEO?",
+    "serp_answer": ""
+   },
+   {
+    "cluster": "roofing",
+    "seed_term": "roofing marketing agency",
+    "question": "How do I market my roofing company?",
+    "serp_answer": "Start a referral program.\nCreate a short sales pitch to use when canvassing neighborhoods.\nAttend industry and non-industry events.\nBuild a company website.\nEstablish a strong social media presence."
+   },
+   {
+    "cluster": "roofing",
+    "seed_term": "roofing marketing agency",
+    "question": "What is the average cost of a marketing agency?",
+    "serp_answer": ""
+   },
+   {
+    "cluster": "roofing",
+    "seed_term": "roofing marketing agency",
+    "question": "How to get leads for roofing sales?",
+    "serp_answer": ""
+   },
+   {
+    "cluster": "roofing",
+    "seed_term": "roofing marketing agency",
+    "question": "Can roofers make 100k a year?",
+    "serp_answer": ""
+   }
+  ],
+  "competitors": [
+   {
+    "domain": "thriveagency.com",
+    "appearances": 11,
+    "avg_pos": 3.8,
+    "clusters": "ai-seo|city-austin|city-charlotte|city-fargo|city-sioux-falls|roofing",
+    "sample_title": "AI SEO Services | AI-Driven Search Engine Optimization ..."
+   },
+   {
+    "domain": "www.youtube.com",
+    "appearances": 8,
+    "avg_pos": 11.2,
+    "clusters": "ai-seo|city-austin|roofing",
+    "sample_title": "How I Automated an SEO Agency with 15 AI Agents (No-Code)"
+   },
+   {
+    "domain": "www.webfx.com",
+    "appearances": 5,
+    "avg_pos": 11.4,
+    "clusters": "ai-seo|roofing",
+    "sample_title": "SEO Services Made Smarter with AI, Guided by Experts"
+   },
+   {
+    "domain": "roofingseo.services",
+    "appearances": 4,
+    "avg_pos": 7.5,
+    "clusters": "roofing",
+    "sample_title": "Roofing SEO Services | Roofer SEO for Roofing Companies ..."
+   },
+   {
+    "domain": "www.roofingwebmasters.com",
+    "appearances": 3,
+    "avg_pos": 3.7,
+    "clusters": "roofing",
+    "sample_title": "Roofing Webmasters: Roofing SEO Services | Google + AI"
+   },
+   {
+    "domain": "www.roofing-seo.com",
+    "appearances": 3,
+    "avg_pos": 7.7,
+    "clusters": "roofing",
+    "sample_title": "Roofing SEO Services in The United States | Roofing SEO"
+   },
+   {
+    "domain": "www.bluecorona.com",
+    "appearances": 3,
+    "avg_pos": 10.7,
+    "clusters": "roofing",
+    "sample_title": "SEO For Roofing Companies | Roofer Marketing"
+   },
+   {
+    "domain": "www.servicetitan.com",
+    "appearances": 2,
+    "avg_pos": 2.5,
+    "clusters": "roofing",
+    "sample_title": "Roofing SEO: Benefits, Strategy, Tools, Optimizing for AI & ..."
+   },
+   {
+    "domain": "profitroofingsystems.com",
+    "appearances": 2,
+    "avg_pos": 2.5,
+    "clusters": "roofing",
+    "sample_title": "SEO for Roofing Contractors | #1 Roofing SEO"
+   },
+   {
+    "domain": "www.1digitalagency.com",
+    "appearances": 2,
+    "avg_pos": 8.0,
+    "clusters": "roofing",
+    "sample_title": "Roofing SEO Company | SEO Services for Roofers"
+   },
+   {
+    "domain": "www.sequoiageo.com",
+    "appearances": 2,
+    "avg_pos": 8.5,
+    "clusters": "roofing",
+    "sample_title": "Roofing SEO That Books Jobs, Run by an Operator"
+   },
+   {
+    "domain": "www.connecticallc.com",
+    "appearances": 2,
+    "avg_pos": 8.5,
+    "clusters": "roofing",
+    "sample_title": "Roofing SEO Services | 20+ Years, No Contracts"
+   },
+   {
+    "domain": "www.localroofingseo.agency",
+    "appearances": 2,
+    "avg_pos": 9.0,
+    "clusters": "roofing",
+    "sample_title": "Roofing SEO Company - Rank on Google & AI | Roofex SEO"
+   },
+   {
+    "domain": "www.seo.com",
+    "appearances": 2,
+    "avg_pos": 9.5,
+    "clusters": "roofing",
+    "sample_title": "How to Do Roofing SEO (Everything You Need to Know)"
+   },
+   {
+    "domain": "builtrightdigital.com",
+    "appearances": 2,
+    "avg_pos": 9.5,
+    "clusters": "roofing",
+    "sample_title": "8 Best Roofing SEO Agencies for Contractors in 2026"
+   },
+   {
+    "domain": "www.cinchlocal.com",
+    "appearances": 2,
+    "avg_pos": 9.5,
+    "clusters": "roofing",
+    "sample_title": "Optimizing SEO for Roofing Businesses: A Comprehensive ..."
+   },
+   {
+    "domain": "comradeweb.com",
+    "appearances": 2,
+    "avg_pos": 12.0,
+    "clusters": "roofing",
+    "sample_title": "Roofing SEO Guide \ud83c\udfe0 Top 10 Strategies"
+   },
+   {
+    "domain": "roofingroi.net",
+    "appearances": 2,
+    "avg_pos": 18.0,
+    "clusters": "roofing",
+    "sample_title": "The Best SEO Marketing Agency for Your Roofing Company"
+   },
+   {
+    "domain": "roofermarketingsolutions.com",
+    "appearances": 1,
+    "avg_pos": 1.0,
+    "clusters": "roofing",
+    "sample_title": "Roofer Marketing Solutions"
+   },
+   {
+    "domain": "hookagency.com",
+    "appearances": 1,
+    "avg_pos": 3.0,
+    "clusters": "roofing",
+    "sample_title": "Best Roofing Marketing Agencies 2026"
+   }
+  ]
+ },
+ "city": {
+  "keywords": [
+   {
+    "keyword": "seo company near me",
+    "cluster": "city",
+    "seed": "seo company near me",
+    "search_volume": 14800,
+    "cpc": 81.17,
+    "competition": "LOW",
+    "kd": 24,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo companies austin",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 4400,
+    "cpc": 28.12,
+    "competition": "LOW",
+    "kd": 12,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo agency austin",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 4400,
+    "cpc": 28.12,
+    "competition": "LOW",
+    "kd": 12,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo agency in austin",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 4400,
+    "cpc": 28.12,
+    "competition": "LOW",
+    "kd": 14,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo company austin texas",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 4400,
+    "cpc": 28.12,
+    "competition": "LOW",
+    "kd": 17,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo agencies austin",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 4400,
+    "cpc": 28.12,
+    "competition": "LOW",
+    "kd": 12,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo company in austin",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 4400,
+    "cpc": 28.12,
+    "competition": "LOW",
+    "kd": 17,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "austin seo agency",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 4400,
+    "cpc": 28.12,
+    "competition": "LOW",
+    "kd": 4,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "austin seo companies",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 4400,
+    "cpc": 28.12,
+    "competition": "LOW",
+    "kd": 10,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo agencies in austin",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 4400,
+    "cpc": 28.12,
+    "competition": "LOW",
+    "kd": 17,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo company austin tx",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 4400,
+    "cpc": 28.12,
+    "competition": "LOW",
+    "kd": 24,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "austin seo company",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 4400,
+    "cpc": 28.12,
+    "competition": "LOW",
+    "kd": 14,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo companies austin tx",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 4400,
+    "cpc": 28.12,
+    "competition": "LOW",
+    "kd": 14,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo companies austin texas",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 4400,
+    "cpc": 28.12,
+    "competition": "LOW",
+    "kd": 15,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo companies in austin",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 4400,
+    "cpc": 28.12,
+    "competition": "LOW",
+    "kd": 9,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo company austin",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 4400,
+    "cpc": 28.12,
+    "competition": "LOW",
+    "kd": 18,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "austin seo",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 3600,
+    "cpc": 8.32,
+    "competition": "LOW",
+    "kd": 14,
+    "intent": "navigational"
+   },
+   {
+    "keyword": "austin texas seo",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 3600,
+    "cpc": 8.32,
+    "competition": "LOW",
+    "kd": 8,
+    "intent": "informational"
+   },
+   {
+    "keyword": "seo austin",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 3600,
+    "cpc": 8.32,
+    "competition": "LOW",
+    "kd": 23,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo in austin texas",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 3600,
+    "cpc": 8.32,
+    "competition": "LOW",
+    "kd": 23,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo marketing austin tx",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 3600,
+    "cpc": 8.32,
+    "competition": "LOW",
+    "kd": 20,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo austin texas",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 3600,
+    "cpc": 8.32,
+    "competition": "LOW",
+    "kd": 15,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo austin tx",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 3600,
+    "cpc": 8.32,
+    "competition": "LOW",
+    "kd": 14,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "austin seo optimization",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 3600,
+    "cpc": 8.32,
+    "competition": "LOW",
+    "kd": 14,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo in austin",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 3600,
+    "cpc": 8.32,
+    "competition": "LOW",
+    "kd": 17,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "austin tx seo",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 3600,
+    "cpc": 8.32,
+    "competition": "LOW",
+    "kd": 10,
+    "intent": "informational"
+   },
+   {
+    "keyword": "austin seo marketing",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 3600,
+    "cpc": 8.32,
+    "competition": "LOW",
+    "kd": 14,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "local seo company near me",
+    "cluster": "city",
+    "seed": "seo company near me",
+    "search_volume": 1900,
+    "cpc": 60.23,
+    "competition": "LOW",
+    "kd": 34,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "best seo company near me",
+    "cluster": "city",
+    "seed": "seo company near me",
+    "search_volume": 1000,
+    "cpc": 35.59,
+    "competition": "LOW",
+    "kd": 41,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "charlotte seo company",
+    "cluster": "city",
+    "seed": "charlotte seo",
+    "search_volume": 880,
+    "cpc": 16.47,
+    "competition": "LOW",
+    "kd": 16,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo company charlotte",
+    "cluster": "city",
+    "seed": "charlotte seo",
+    "search_volume": 880,
+    "cpc": 16.47,
+    "competition": "LOW",
+    "kd": 12,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo agency charlotte",
+    "cluster": "city",
+    "seed": "charlotte seo",
+    "search_volume": 880,
+    "cpc": 16.47,
+    "competition": "LOW",
+    "kd": 12,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo agencies charlotte nc",
+    "cluster": "city",
+    "seed": "charlotte seo",
+    "search_volume": 880,
+    "cpc": 16.47,
+    "competition": "LOW",
+    "kd": 21,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo companies charlotte nc",
+    "cluster": "city",
+    "seed": "charlotte seo",
+    "search_volume": 880,
+    "cpc": 16.47,
+    "competition": "LOW",
+    "kd": 32,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo agency charlotte nc",
+    "cluster": "city",
+    "seed": "charlotte seo",
+    "search_volume": 880,
+    "cpc": 16.47,
+    "competition": "LOW",
+    "kd": 15,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo company charlotte nc",
+    "cluster": "city",
+    "seed": "charlotte seo",
+    "search_volume": 880,
+    "cpc": 16.47,
+    "competition": "LOW",
+    "kd": 16,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo company in charlotte",
+    "cluster": "city",
+    "seed": "charlotte seo",
+    "search_volume": 880,
+    "cpc": 16.47,
+    "competition": "LOW",
+    "kd": 19,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo agencies charlotte",
+    "cluster": "city",
+    "seed": "charlotte seo",
+    "search_volume": 880,
+    "cpc": 16.47,
+    "competition": "LOW",
+    "kd": 12,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo companies charlotte",
+    "cluster": "city",
+    "seed": "charlotte seo",
+    "search_volume": 880,
+    "cpc": 16.47,
+    "competition": "LOW",
+    "kd": 21,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo companies in charlotte nc",
+    "cluster": "city",
+    "seed": "charlotte seo",
+    "search_volume": 880,
+    "cpc": 16.47,
+    "competition": "LOW",
+    "kd": 13,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "charlotte seo companies",
+    "cluster": "city",
+    "seed": "charlotte seo",
+    "search_volume": 880,
+    "cpc": 16.47,
+    "competition": "LOW",
+    "kd": 17,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo service austin",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 590,
+    "cpc": 0,
+    "competition": "LOW",
+    "kd": 11,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "austin seo services",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 590,
+    "cpc": 0,
+    "competition": "LOW",
+    "kd": 14,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "austin seo service",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 590,
+    "cpc": 0,
+    "competition": "LOW",
+    "kd": 4,
+    "intent": "commercial"
+   },
+   {
+    "keyword": "seo services austin",
+    "cluster": "city",
+    "seed": "austin seo",
+    "search_volume": 590,
+    "cpc": 0,
+    "competition": "LOW",
+    "kd": 9,
+    "intent": "commercial"
+   }
+  ],
+  "paa": [
+   {
+    "cluster": "city-charlotte",
+    "seed_term": "charlotte seo company",
+    "question": "What does an SEO company do?",
+    "serp_answer": ""
+   },
+   {
+    "cluster": "city-charlotte",
+    "seed_term": "charlotte seo company",
+    "question": "How much should I expect to pay for SEO?",
+    "serp_answer": ""
+   },
+   {
+    "cluster": "city-charlotte",
+    "seed_term": "charlotte seo company",
+    "question": "What big companies are headquartered in Charlotte?",
+    "serp_answer": ""
+   },
+   {
+    "cluster": "city-charlotte",
+    "seed_term": "charlotte seo company",
+    "question": "Who is the best SEO company in the USA?",
+    "serp_answer": ""
+   },
+   {
+    "cluster": "city-charlotte",
+    "seed_term": "seo charlotte nc",
+    "question": "Is SEO being phased out?",
+    "serp_answer": "Technical SEO is still very much alive. Site speed, crawlability, structured data and mobile performance. None of that has gone away. If anything, a technically sound website is a stronger differentiator now that content quality has become so competitive."
+   },
+   {
+    "cluster": "city-charlotte",
+    "seed_term": "seo charlotte nc",
+    "question": "Is it worth paying for SEO services?",
+    "serp_answer": ""
+   },
+   {
+    "cluster": "city-lakewood-ranch",
+    "seed_term": "lakewood ranch seo company",
+    "question": "Why are people leaving Lakewood Ranch?",
+    "serp_answer": ""
+   },
+   {
+    "cluster": "city-lakewood-ranch",
+    "seed_term": "lakewood ranch seo company",
+    "question": "What is the best SEO company in Florida?",
+    "serp_answer": ""
+   },
+   {
+    "cluster": "city-lakewood-ranch",
+    "seed_term": "lakewood ranch seo company",
+    "question": "Is SEO being phased out?",
+    "serp_answer": "Technical SEO is still very much alive. Site speed, crawlability, structured data and mobile performance. None of that has gone away. If anything, a technically sound website is a stronger differentiator now that content quality has become so competitive."
+   },
+   {
+    "cluster": "city-lakewood-ranch",
+    "seed_term": "lakewood ranch seo company",
+    "question": "Is SEO dead or evolving in 2026?",
+    "serp_answer": "The discipline is evolving ; the demand for trusted, authoritative content is not going away. The more accurate framing is this: SEO in 2026 is still relevant, still growing as an industry, and still essential for visibility."
+   },
+   {
+    "cluster": "city-fargo",
+    "seed_term": "fargo seo",
+    "question": "What the heck is SEO?",
+    "serp_answer": "One of those users is a search engine, which helps people discover your content. SEO\u2014short for search engine optimization \u2014is about helping search engines understand your content, and helping users find your site and make a decision about whether they should visit your site through a search engine."
+   },
+   {
+    "cluster": "city-fargo",
+    "seed_term": "fargo seo",
+    "question": "Why is Fargo booming?",
+    "serp_answer": "There are plenty of reasons, but we'll share a few of the top ones. With a fast growing population of more than 271,000 people in the region, Fargo Moorhead boasts a young population, great schools, safe cities and plenty of things to do year-round. The region offers a great job market with a lot of company diversity."
+   },
+   {
+    "cluster": "city-fargo",
+    "seed_term": "fargo seo",
+    "question": "Who is the best SEO agency?",
+    "serp_answer": ""
+   },
+   {
+    "cluster": "city-fargo",
+    "seed_term": "fargo seo",
+    "question": "Does SEO still exist?",
+    "serp_answer": "So, while the search engine optimization landscape is evolving, and the focus is shifting more towards user experience, the foundational principles remain."
+   }
+  ],
+  "competitors": [
+   {
+    "domain": "thriveagency.com",
+    "appearances": 11,
+    "avg_pos": 3.8,
+    "clusters": "ai-seo|city-austin|city-charlotte|city-fargo|city-sioux-falls|roofing",
+    "sample_title": "AI SEO Services | AI-Driven Search Engine Optimization ..."
+   },
+   {
+    "domain": "www.reddit.com",
+    "appearances": 10,
+    "avg_pos": 5.8,
+    "clusters": "ai-seo|city-austin",
+    "sample_title": "The 7 Leading AI SEO Agencies for Modern Search"
+   },
+   {
+    "domain": "www.youtube.com",
+    "appearances": 8,
+    "avg_pos": 11.2,
+    "clusters": "ai-seo|city-austin|roofing",
+    "sample_title": "How I Automated an SEO Agency with 15 AI Agents (No-Code)"
+   },
+   {
+    "domain": "www.charlotteseofirm.com",
+    "appearances": 5,
+    "avg_pos": 9.0,
+    "clusters": "city-charlotte",
+    "sample_title": "Charlotte SEO Company | Search Engine Optimization Expert ..."
+   },
+   {
+    "domain": "factoryjet.com",
+    "appearances": 5,
+    "avg_pos": 9.8,
+    "clusters": "city-austin|city-fargo|city-lakewood-ranch|city-sioux-falls",
+    "sample_title": "Austin SEO for the most crowded market in Texas"
+   },
+   {
+    "domain": "clutch.co",
+    "appearances": 4,
+    "avg_pos": 6.0,
+    "clusters": "city-austin|city-charlotte|city-sioux-falls",
+    "sample_title": "Top SEO Companies in Austin - Jul 2026 Rankings"
+   },
+   {
+    "domain": "lessermedia.com",
+    "appearances": 4,
+    "avg_pos": 11.8,
+    "clusters": "city-fargo|city-huntington-beach|city-sioux-falls",
+    "sample_title": "Huntington Beach SEO Optimization Strategy Agency"
+   },
+   {
+    "domain": "agencies.semrush.com",
+    "appearances": 3,
+    "avg_pos": 2.3,
+    "clusters": "city-austin|city-charlotte",
+    "sample_title": "Best SEO Companies in Austin 2026"
+   },
+   {
+    "domain": "elit-web.com",
+    "appearances": 3,
+    "avg_pos": 7.0,
+    "clusters": "ai-seo|city-huntington-beach|city-sioux-falls",
+    "sample_title": "10 Best AI SEO Agencies"
+   },
+   {
+    "domain": "www.straightnorth.com",
+    "appearances": 3,
+    "avg_pos": 9.0,
+    "clusters": "city-austin|city-charlotte",
+    "sample_title": "Austin SEO Services | Drive Growth with a Trusted ..."
+   },
+   {
+    "domain": "helium-seo.com",
+    "appearances": 3,
+    "avg_pos": 11.7,
+    "clusters": "city-austin|city-charlotte",
+    "sample_title": "Austin SEO Agency: Top Rated Marketing Performance"
+   },
+   {
+    "domain": "tastyplacement.com",
+    "appearances": 2,
+    "avg_pos": 2.0,
+    "clusters": "city-austin",
+    "sample_title": "TastyPlacement: Austin SEO Company"
+   },
+   {
+    "domain": "www.builtinaustin.com",
+    "appearances": 2,
+    "avg_pos": 5.0,
+    "clusters": "city-austin",
+    "sample_title": "11 Austin SEO Agencies With Expertise in Organic Growth"
+   },
+   {
+    "domain": "www.linkedin.com",
+    "appearances": 2,
+    "avg_pos": 5.0,
+    "clusters": "city-austin|city-charlotte",
+    "sample_title": "Austin SEO Company"
+   },
+   {
+    "domain": "www.tiger29.com",
+    "appearances": 2,
+    "avg_pos": 6.5,
+    "clusters": "city-sioux-falls",
+    "sample_title": "Sioux Falls, SD Internet Marketing Service - Tiger29 - Sioux ..."
+   },
+   {
+    "domain": "synchronicitydesigns.com",
+    "appearances": 2,
+    "avg_pos": 7.0,
+    "clusters": "city-charlotte",
+    "sample_title": "Charlotte SEO Company | SEO Services That Drive Leads"
+   },
+   {
+    "domain": "www.10bestseo.com",
+    "appearances": 2,
+    "avg_pos": 8.0,
+    "clusters": "city-charlotte",
+    "sample_title": "Best SEO Agencies Charlotte"
+   },
+   {
+    "domain": "www.lakewoodranchseo.com",
+    "appearances": 2,
+    "avg_pos": 9.0,
+    "clusters": "city-lakewood-ranch",
+    "sample_title": "Lakewood Ranch SEO Company | Free Local SEO Audit"
+   },
+   {
+    "domain": "anytimedigitalmarketing.com",
+    "appearances": 2,
+    "avg_pos": 9.0,
+    "clusters": "city-fargo",
+    "sample_title": "Fargo SEO Company"
+   },
+   {
+    "domain": "www.ocseo.com",
+    "appearances": 2,
+    "avg_pos": 9.5,
+    "clusters": "city-huntington-beach",
+    "sample_title": "ORANGE COUNTY SEO: Services & Consulting | OC SEO ..."
+   }
+  ]
+ },
+ "_competitor_profiles": [
+  {
+   "domain": "thriveagency.com",
+   "top_keywords": "[{\"keyword\": \"agentur marketing\", \"pos\": 1, \"volume\": 720}, {\"keyword\": \"agences marketing digital\", \"pos\": 1, \"volume\": 590}, {\"keyword\": \"5 star google rated\", \"pos\": 1, \"volume\": 320}, {\"keyword\": \"affordable local seo services\", \"pos\": 1, \"volume\": 260}, {\"keyword\": \"advertising agency internet\", \"pos\": 1, \"volume\": 90}, {\"keyword\": \"affordable denver seo company\", \"pos\": 1, \"volume\": 90}, {\"keyword\": \"advertising company internet\", \"pos\": 1, \"volume\": 50}, {\"keyword\": \"agency seo services\", \"pos\": 1, \"volume\": 50}]"
+  },
+  {
+   "domain": "www.searchbloom.com",
+   "top_keywords": "[{\"keyword\": \"search marketing agency\", \"pos\": 1, \"volume\": 1000}, {\"keyword\": \"search engine marketing firm\", \"pos\": 1, \"volume\": 210}, {\"keyword\": \"search engine marketing firms\", \"pos\": 1, \"volume\": 210}, {\"keyword\": \"search marketing companies\", \"pos\": 1, \"volume\": 140}, {\"keyword\": \"keyword combination tools\", \"pos\": 1, \"volume\": 90}, {\"keyword\": \"national search engine optimization\", \"pos\": 1, \"volume\": 90}, {\"keyword\": \"ceo websites\", \"pos\": 1, \"volume\": 70}, {\"keyword\": \"organic search engine marketing agency\", \"pos\": 1, \"volume\": 70}]"
+  },
+  {
+   "domain": "www.charlotteseofirm.com",
+   "top_keywords": "[{\"keyword\": \"charlotte seo companies\", \"pos\": 1, \"volume\": 880}, {\"keyword\": \"charlotte seo company\", \"pos\": 1, \"volume\": 880}, {\"keyword\": \"charlotte nc seo\", \"pos\": 1, \"volume\": 320}, {\"keyword\": \"charlotte search engine optimization\", \"pos\": 1, \"volume\": 320}, {\"keyword\": \"search engine optimization charlotte\", \"pos\": 1, \"volume\": 320}, {\"keyword\": \"search engine optimization charlotte nc\", \"pos\": 1, \"volume\": 320}, {\"keyword\": \"charlotte seo\", \"pos\": 1, \"volume\": 210}, {\"keyword\": \"charlotte seo agency\", \"pos\": 1, \"volume\": 170}]"
+  },
+  {
+   "domain": "factoryjet.com",
+   "top_keywords": "[{\"keyword\": \"local seo nashville\", \"pos\": 10, \"volume\": 90}, {\"keyword\": \"seo agency austin texas\", \"pos\": 8, \"volume\": 70}]"
+  },
+  {
+   "domain": "www.spicymargarita.co",
+   "top_keywords": "[{\"keyword\": \"ai seo agency\", \"pos\": 3, \"volume\": 1000}, {\"keyword\": \"seo briefs\", \"pos\": 2, \"volume\": 70}, {\"keyword\": \"ai powered seo services\", \"pos\": 3, \"volume\": 70}, {\"keyword\": \"ai-powered seo services\", \"pos\": 3, \"volume\": 70}, {\"keyword\": \"niche sites examples\", \"pos\": 3, \"volume\": 70}, {\"keyword\": \"niche website example\", \"pos\": 4, \"volume\": 70}, {\"keyword\": \"saas seo case studies\", \"pos\": 1, \"volume\": 40}, {\"keyword\": \"seo brief template\", \"pos\": 2, \"volume\": 40}]"
+  },
+  {
+   "domain": "roofingseo.services",
+   "top_keywords": "[{\"keyword\": \"seo for roofing companies\", \"pos\": 4, \"volume\": 1000}, {\"keyword\": \"roofing seo services\", \"pos\": 1, \"volume\": 720}, {\"keyword\": \"roofing seo service\", \"pos\": 2, \"volume\": 720}, {\"keyword\": \"seo for roofing contractors\", \"pos\": 1, \"volume\": 260}, {\"keyword\": \"roofing seo expert\", \"pos\": 2, \"volume\": 110}, {\"keyword\": \"roofing seo experts\", \"pos\": 3, \"volume\": 110}, {\"keyword\": \"best roofing seo company\", \"pos\": 2, \"volume\": 90}, {\"keyword\": \"seo services for roofing company\", \"pos\": 3, \"volume\": 70}]"
+  },
+  {
+   "domain": "www.onely.com",
+   "top_keywords": "[{\"keyword\": \"technical seo service\", \"pos\": 1, \"volume\": 1900}, {\"keyword\": \"technical seo agency\", \"pos\": 1, \"volume\": 720}, {\"keyword\": \"onely\", \"pos\": 1, \"volume\": 480}, {\"keyword\": \"tech seo agency\", \"pos\": 1, \"volume\": 140}, {\"keyword\": \"franchise seo agency\", \"pos\": 2, \"volume\": 140}, {\"keyword\": \"fashion seo agency\", \"pos\": 2, \"volume\": 90}, {\"keyword\": \"page is not indexed page with redirect\", \"pos\": 2, \"volume\": 50}, {\"keyword\": \"page is not indexed: page with redirect\", \"pos\": 2, \"volume\": 50}]"
+  },
+  {
+   "domain": "lessermedia.com",
+   "top_keywords": "[{\"keyword\": \"seo springfield\", \"pos\": 4, \"volume\": 110}, {\"keyword\": \"seo stamford\", \"pos\": 4, \"volume\": 110}, {\"keyword\": \"ppc san antonio\", \"pos\": 3, \"volume\": 90}, {\"keyword\": \"sugar land seo\", \"pos\": 2, \"volume\": 70}, {\"keyword\": \"seo tempe\", \"pos\": 3, \"volume\": 70}, {\"keyword\": \"google ads tampa\", \"pos\": 4, \"volume\": 70}, {\"keyword\": \"seo stockton\", \"pos\": 4, \"volume\": 70}, {\"keyword\": \"lesser media\", \"pos\": 1, \"volume\": 50}]"
+  },
+  {
+   "domain": "seo.co",
+   "top_keywords": "[{\"keyword\": \"durham seo\", \"pos\": 1, \"volume\": 260}, {\"keyword\": \"arkansas seo companies\", \"pos\": 1, \"volume\": 210}, {\"keyword\": \"earned links\", \"pos\": 1, \"volume\": 110}, {\"keyword\": \"el paso seo\", \"pos\": 1, \"volume\": 110}, {\"keyword\": \"google search engine competitor\", \"pos\": 1, \"volume\": 90}, {\"keyword\": \"fully managed seo\", \"pos\": 1, \"volume\": 70}, {\"keyword\": \"fully managed seo service\", \"pos\": 1, \"volume\": 70}, {\"keyword\": \"fully-managed seo\", \"pos\": 1, \"volume\": 70}]"
+  },
+  {
+   "domain": "www.yesoptimist.com",
+   "top_keywords": "[{\"keyword\": \"seo saas\", \"pos\": 3, \"volume\": 590}, {\"keyword\": \"yes optimist\", \"pos\": 1, \"volume\": 140}, {\"keyword\": \"seo agency for b2b\", \"pos\": 3, \"volume\": 90}, {\"keyword\": \"seo monthly retainer\", \"pos\": 1, \"volume\": 70}, {\"keyword\": \"b2b seo experts\", \"pos\": 3, \"volume\": 70}, {\"keyword\": \"seo retainer services\", \"pos\": 3, \"volume\": 70}, {\"keyword\": \"what is saas seo\", \"pos\": 3, \"volume\": 70}, {\"keyword\": \"b2b tech seo agency\", \"pos\": 2, \"volume\": 50}]"
+  }
+ ],
+ "_all_paa": [
+  {
+   "cluster": "ai-seo",
+   "seed_term": "answer engine optimization services",
+   "question": "What does answer engine optimization do?",
+   "serp_answer": ""
+  },
+  {
+   "cluster": "ai-seo",
+   "seed_term": "answer engine optimization services",
+   "question": "What is the best software for answer engine optimization?",
+   "serp_answer": ""
+  },
+  {
+   "cluster": "ai-seo",
+   "seed_term": "answer engine optimization services",
+   "question": "How much should I pay for search engine optimization?",
+   "serp_answer": ""
+  },
+  {
+   "cluster": "ai-seo",
+   "seed_term": "answer engine optimization services",
+   "question": "Is SEO dying out?",
+   "serp_answer": ""
+  },
+  {
+   "cluster": "roofing",
+   "seed_term": "roofing seo",
+   "question": "What is SEO in construction?",
+   "serp_answer": "A typical construction SEO audit includes:\n Keyword research to identify the best keywords for construction. Competitor analysis. Analysis and evaluation of your website code, structure, and content. Analysis and evaluation of your company's presence online\u2014linkscape, social media, and more."
+  },
+  {
+   "cluster": "roofing",
+   "seed_term": "roofing seo",
+   "question": "What is the 25% rule for roofing?",
+   "serp_answer": ""
+  },
+  {
+   "cluster": "roofing",
+   "seed_term": "roofing seo",
+   "question": "Is SEO being phased out?",
+   "serp_answer": "Technical SEO is still very much alive. Site speed, crawlability, structured data and mobile performance. None of that has gone away. If anything, a technically sound website is a stronger differentiator now that content quality has become so competitive."
+  },
+  {
+   "cluster": "roofing",
+   "seed_term": "roofing seo",
+   "question": "What are the 4 types of SEO?",
+   "serp_answer": ""
+  },
+  {
+   "cluster": "roofing",
+   "seed_term": "seo for roofers",
+   "question": "What is the best way to advertise for roofing?",
+   "serp_answer": ""
+  },
+  {
+   "cluster": "roofing",
+   "seed_term": "seo for roofers",
+   "question": "How much does it cost to hire someone to do SEO?",
+   "serp_answer": ""
+  },
+  {
+   "cluster": "roofing",
+   "seed_term": "roofing marketing agency",
+   "question": "How do I market my roofing company?",
+   "serp_answer": "Start a referral program.\nCreate a short sales pitch to use when canvassing neighborhoods.\nAttend industry and non-industry events.\nBuild a company website.\nEstablish a strong social media presence."
+  },
+  {
+   "cluster": "roofing",
+   "seed_term": "roofing marketing agency",
+   "question": "What is the average cost of a marketing agency?",
+   "serp_answer": ""
+  },
+  {
+   "cluster": "roofing",
+   "seed_term": "roofing marketing agency",
+   "question": "How to get leads for roofing sales?",
+   "serp_answer": ""
+  },
+  {
+   "cluster": "roofing",
+   "seed_term": "roofing marketing agency",
+   "question": "Can roofers make 100k a year?",
+   "serp_answer": ""
+  },
+  {
+   "cluster": "city-charlotte",
+   "seed_term": "charlotte seo company",
+   "question": "What does an SEO company do?",
+   "serp_answer": ""
+  },
+  {
+   "cluster": "city-charlotte",
+   "seed_term": "charlotte seo company",
+   "question": "How much should I expect to pay for SEO?",
+   "serp_answer": ""
+  },
+  {
+   "cluster": "city-charlotte",
+   "seed_term": "charlotte seo company",
+   "question": "What big companies are headquartered in Charlotte?",
+   "serp_answer": ""
+  },
+  {
+   "cluster": "city-charlotte",
+   "seed_term": "charlotte seo company",
+   "question": "Who is the best SEO company in the USA?",
+   "serp_answer": ""
+  },
+  {
+   "cluster": "city-charlotte",
+   "seed_term": "seo charlotte nc",
+   "question": "Is SEO being phased out?",
+   "serp_answer": "Technical SEO is still very much alive. Site speed, crawlability, structured data and mobile performance. None of that has gone away. If anything, a technically sound website is a stronger differentiator now that content quality has become so competitive."
+  },
+  {
+   "cluster": "city-charlotte",
+   "seed_term": "seo charlotte nc",
+   "question": "Is it worth paying for SEO services?",
+   "serp_answer": ""
+  },
+  {
+   "cluster": "city-lakewood-ranch",
+   "seed_term": "lakewood ranch seo company",
+   "question": "Why are people leaving Lakewood Ranch?",
+   "serp_answer": ""
+  },
+  {
+   "cluster": "city-lakewood-ranch",
+   "seed_term": "lakewood ranch seo company",
+   "question": "What is the best SEO company in Florida?",
+   "serp_answer": ""
+  },
+  {
+   "cluster": "city-lakewood-ranch",
+   "seed_term": "lakewood ranch seo company",
+   "question": "Is SEO being phased out?",
+   "serp_answer": "Technical SEO is still very much alive. Site speed, crawlability, structured data and mobile performance. None of that has gone away. If anything, a technically sound website is a stronger differentiator now that content quality has become so competitive."
+  },
+  {
+   "cluster": "city-lakewood-ranch",
+   "seed_term": "lakewood ranch seo company",
+   "question": "Is SEO dead or evolving in 2026?",
+   "serp_answer": "The discipline is evolving ; the demand for trusted, authoritative content is not going away. The more accurate framing is this: SEO in 2026 is still relevant, still growing as an industry, and still essential for visibility."
+  },
+  {
+   "cluster": "city-fargo",
+   "seed_term": "fargo seo",
+   "question": "What the heck is SEO?",
+   "serp_answer": "One of those users is a search engine, which helps people discover your content. SEO\u2014short for search engine optimization \u2014is about helping search engines understand your content, and helping users find your site and make a decision about whether they should visit your site through a search engine."
+  },
+  {
+   "cluster": "city-fargo",
+   "seed_term": "fargo seo",
+   "question": "Why is Fargo booming?",
+   "serp_answer": "There are plenty of reasons, but we'll share a few of the top ones. With a fast growing population of more than 271,000 people in the region, Fargo Moorhead boasts a young population, great schools, safe cities and plenty of things to do year-round. The region offers a great job market with a lot of company diversity."
+  },
+  {
+   "cluster": "city-fargo",
+   "seed_term": "fargo seo",
+   "question": "Who is the best SEO agency?",
+   "serp_answer": ""
+  },
+  {
+   "cluster": "city-fargo",
+   "seed_term": "fargo seo",
+   "question": "Does SEO still exist?",
+   "serp_answer": "So, while the search engine optimization landscape is evolving, and the focus is shifting more towards user experience, the foundational principles remain."
+  }
+ ],
+ "_all_competitors": [
+  {
+   "domain": "thriveagency.com",
+   "appearances": 11,
+   "avg_pos": 3.8,
+   "clusters": "ai-seo|city-austin|city-charlotte|city-fargo|city-sioux-falls|roofing",
+   "sample_title": "AI SEO Services | AI-Driven Search Engine Optimization ..."
+  },
+  {
+   "domain": "www.reddit.com",
+   "appearances": 10,
+   "avg_pos": 5.8,
+   "clusters": "ai-seo|city-austin",
+   "sample_title": "The 7 Leading AI SEO Agencies for Modern Search"
+  },
+  {
+   "domain": "www.youtube.com",
+   "appearances": 8,
+   "avg_pos": 11.2,
+   "clusters": "ai-seo|city-austin|roofing",
+   "sample_title": "How I Automated an SEO Agency with 15 AI Agents (No-Code)"
+  },
+  {
+   "domain": "www.searchbloom.com",
+   "appearances": 6,
+   "avg_pos": 7.7,
+   "clusters": "ai-seo",
+   "sample_title": "Best AI SEO Companies + Services in the US 2026 (AEO ..."
+  },
+  {
+   "domain": "www.charlotteseofirm.com",
+   "appearances": 5,
+   "avg_pos": 9.0,
+   "clusters": "city-charlotte",
+   "sample_title": "Charlotte SEO Company | Search Engine Optimization Expert ..."
+  },
+  {
+   "domain": "factoryjet.com",
+   "appearances": 5,
+   "avg_pos": 9.8,
+   "clusters": "city-austin|city-fargo|city-lakewood-ranch|city-sioux-falls",
+   "sample_title": "Austin SEO for the most crowded market in Texas"
+  },
+  {
+   "domain": "www.webfx.com",
+   "appearances": 5,
+   "avg_pos": 11.4,
+   "clusters": "ai-seo|roofing",
+   "sample_title": "SEO Services Made Smarter with AI, Guided by Experts"
+  },
+  {
+   "domain": "clutch.co",
+   "appearances": 4,
+   "avg_pos": 6.0,
+   "clusters": "city-austin|city-charlotte|city-sioux-falls",
+   "sample_title": "Top SEO Companies in Austin - Jul 2026 Rankings"
+  },
+  {
+   "domain": "www.spicymargarita.co",
+   "appearances": 4,
+   "avg_pos": 7.5,
+   "clusters": "ai-seo",
+   "sample_title": "9 Top AI SEO Agencies in 2026"
+  },
+  {
+   "domain": "roofingseo.services",
+   "appearances": 4,
+   "avg_pos": 7.5,
+   "clusters": "roofing",
+   "sample_title": "Roofing SEO Services | Roofer SEO for Roofing Companies ..."
+  },
+  {
+   "domain": "www.onely.com",
+   "appearances": 4,
+   "avg_pos": 10.2,
+   "clusters": "ai-seo",
+   "sample_title": "Top 10 AI SEO Agencies in 2026: What They Actually ..."
+  },
+  {
+   "domain": "lessermedia.com",
+   "appearances": 4,
+   "avg_pos": 11.8,
+   "clusters": "city-fargo|city-huntington-beach|city-sioux-falls",
+   "sample_title": "Huntington Beach SEO Optimization Strategy Agency"
+  },
+  {
+   "domain": "seo.co",
+   "appearances": 4,
+   "avg_pos": 12.2,
+   "clusters": "ai-seo",
+   "sample_title": "AI SEO / GEO \u2014 Generative Engine Optimization"
+  },
+  {
+   "domain": "www.yesoptimist.com",
+   "appearances": 4,
+   "avg_pos": 13.8,
+   "clusters": "ai-seo",
+   "sample_title": "The 7 Best AI SEO Agencies Helping Clients Win AI Search in ..."
+  },
+  {
+   "domain": "agencies.semrush.com",
+   "appearances": 3,
+   "avg_pos": 2.3,
+   "clusters": "city-austin|city-charlotte",
+   "sample_title": "Best SEO Companies in Austin 2026"
+  },
+  {
+   "domain": "www.roofingwebmasters.com",
+   "appearances": 3,
+   "avg_pos": 3.7,
+   "clusters": "roofing",
+   "sample_title": "Roofing Webmasters: Roofing SEO Services | Google + AI"
+  },
+  {
+   "domain": "www.level.agency",
+   "appearances": 3,
+   "avg_pos": 5.0,
+   "clusters": "ai-seo",
+   "sample_title": "AI SEO\u200b Performance Digital Marketing"
+  },
+  {
+   "domain": "coalitiontechnologies.com",
+   "appearances": 3,
+   "avg_pos": 5.7,
+   "clusters": "ai-seo",
+   "sample_title": "Rank in ChatGPT and AI Overviews with AI SEO"
+  },
+  {
+   "domain": "elit-web.com",
+   "appearances": 3,
+   "avg_pos": 7.0,
+   "clusters": "ai-seo|city-huntington-beach|city-sioux-falls",
+   "sample_title": "10 Best AI SEO Agencies"
+  },
+  {
+   "domain": "www.roofing-seo.com",
+   "appearances": 3,
+   "avg_pos": 7.7,
+   "clusters": "roofing",
+   "sample_title": "Roofing SEO Services in The United States | Roofing SEO"
+  },
+  {
+   "domain": "www.straightnorth.com",
+   "appearances": 3,
+   "avg_pos": 9.0,
+   "clusters": "city-austin|city-charlotte",
+   "sample_title": "Austin SEO Services | Drive Growth with a Trusted ..."
+  },
+  {
+   "domain": "www.bluecorona.com",
+   "appearances": 3,
+   "avg_pos": 10.7,
+   "clusters": "roofing",
+   "sample_title": "SEO For Roofing Companies | Roofer Marketing"
+  },
+  {
+   "domain": "helium-seo.com",
+   "appearances": 3,
+   "avg_pos": 11.7,
+   "clusters": "city-austin|city-charlotte",
+   "sample_title": "Austin SEO Agency: Top Rated Marketing Performance"
+  },
+  {
+   "domain": "tastyplacement.com",
+   "appearances": 2,
+   "avg_pos": 2.0,
+   "clusters": "city-austin",
+   "sample_title": "TastyPlacement: Austin SEO Company"
+  },
+  {
+   "domain": "www.servicetitan.com",
+   "appearances": 2,
+   "avg_pos": 2.5,
+   "clusters": "roofing",
+   "sample_title": "Roofing SEO: Benefits, Strategy, Tools, Optimizing for AI & ..."
+  },
+  {
+   "domain": "profitroofingsystems.com",
+   "appearances": 2,
+   "avg_pos": 2.5,
+   "clusters": "roofing",
+   "sample_title": "SEO for Roofing Contractors | #1 Roofing SEO"
+  },
+  {
+   "domain": "www.builtinaustin.com",
+   "appearances": 2,
+   "avg_pos": 5.0,
+   "clusters": "city-austin",
+   "sample_title": "11 Austin SEO Agencies With Expertise in Organic Growth"
+  },
+  {
+   "domain": "www.linkedin.com",
+   "appearances": 2,
+   "avg_pos": 5.0,
+   "clusters": "city-austin|city-charlotte",
+   "sample_title": "Austin SEO Company"
+  },
+  {
+   "domain": "ziptie.dev",
+   "appearances": 2,
+   "avg_pos": 6.0,
+   "clusters": "ai-seo",
+   "sample_title": "Best AI SEO Agency | How to choose an AI SEO agency?"
+  },
+  {
+   "domain": "www.tiger29.com",
+   "appearances": 2,
+   "avg_pos": 6.5,
+   "clusters": "city-sioux-falls",
+   "sample_title": "Sioux Falls, SD Internet Marketing Service - Tiger29 - Sioux ..."
+  },
+  {
+   "domain": "www.theadfirm.net",
+   "appearances": 2,
+   "avg_pos": 7.0,
+   "clusters": "ai-seo",
+   "sample_title": "AI SEO Services: Rank in AI-Generated Search Results"
+  },
+  {
+   "domain": "synchronicitydesigns.com",
+   "appearances": 2,
+   "avg_pos": 7.0,
+   "clusters": "city-charlotte",
+   "sample_title": "Charlotte SEO Company | SEO Services That Drive Leads"
+  },
+  {
+   "domain": "www.semrush.com",
+   "appearances": 2,
+   "avg_pos": 7.5,
+   "clusters": "ai-seo",
+   "sample_title": "Generative Engine Optimization (GEO): A Practical Guide"
+  },
+  {
+   "domain": "www.outerboxdesign.com",
+   "appearances": 2,
+   "avg_pos": 8.0,
+   "clusters": "ai-seo",
+   "sample_title": "AI SEO Services | AEO & GEO Optimization AI SEO Agency"
+  },
+  {
+   "domain": "firstpagesage.com",
+   "appearances": 2,
+   "avg_pos": 8.0,
+   "clusters": "ai-seo",
+   "sample_title": "The Top GEO Agencies of 2026"
+  },
+  {
+   "domain": "www.1digitalagency.com",
+   "appearances": 2,
+   "avg_pos": 8.0,
+   "clusters": "roofing",
+   "sample_title": "Roofing SEO Company | SEO Services for Roofers"
+  },
+  {
+   "domain": "www.10bestseo.com",
+   "appearances": 2,
+   "avg_pos": 8.0,
+   "clusters": "city-charlotte",
+   "sample_title": "Best SEO Agencies Charlotte"
+  },
+  {
+   "domain": "www.sequoiageo.com",
+   "appearances": 2,
+   "avg_pos": 8.5,
+   "clusters": "roofing",
+   "sample_title": "Roofing SEO That Books Jobs, Run by an Operator"
+  },
+  {
+   "domain": "www.connecticallc.com",
+   "appearances": 2,
+   "avg_pos": 8.5,
+   "clusters": "roofing",
+   "sample_title": "Roofing SEO Services | 20+ Years, No Contracts"
+  },
+  {
+   "domain": "www.localroofingseo.agency",
+   "appearances": 2,
+   "avg_pos": 9.0,
+   "clusters": "roofing",
+   "sample_title": "Roofing SEO Company - Rank on Google & AI | Roofex SEO"
+  },
+  {
+   "domain": "www.lakewoodranchseo.com",
+   "appearances": 2,
+   "avg_pos": 9.0,
+   "clusters": "city-lakewood-ranch",
+   "sample_title": "Lakewood Ranch SEO Company | Free Local SEO Audit"
+  },
+  {
+   "domain": "anytimedigitalmarketing.com",
+   "appearances": 2,
+   "avg_pos": 9.0,
+   "clusters": "city-fargo",
+   "sample_title": "Fargo SEO Company"
+  },
+  {
+   "domain": "www.seo.com",
+   "appearances": 2,
+   "avg_pos": 9.5,
+   "clusters": "roofing",
+   "sample_title": "How to Do Roofing SEO (Everything You Need to Know)"
+  },
+  {
+   "domain": "builtrightdigital.com",
+   "appearances": 2,
+   "avg_pos": 9.5,
+   "clusters": "roofing",
+   "sample_title": "8 Best Roofing SEO Agencies for Contractors in 2026"
+  },
+  {
+   "domain": "www.cinchlocal.com",
+   "appearances": 2,
+   "avg_pos": 9.5,
+   "clusters": "roofing",
+   "sample_title": "Optimizing SEO for Roofing Businesses: A Comprehensive ..."
+  },
+  {
+   "domain": "www.ocseo.com",
+   "appearances": 2,
+   "avg_pos": 9.5,
+   "clusters": "city-huntington-beach",
+   "sample_title": "ORANGE COUNTY SEO: Services & Consulting | OC SEO ..."
+  },
+  {
+   "domain": "www.fiverr.com",
+   "appearances": 2,
+   "avg_pos": 10.0,
+   "clusters": "ai-seo",
+   "sample_title": "Generative Engine Optimization Services: Top GEO & AEO ..."
+  },
+  {
+   "domain": "returnonnow.com",
+   "appearances": 2,
+   "avg_pos": 11.0,
+   "clusters": "city-austin",
+   "sample_title": "Austin SEO Services - Strategic Growth & National Reach"
+  },
+  {
+   "domain": "www.seolium.com",
+   "appearances": 2,
+   "avg_pos": 11.0,
+   "clusters": "city-fargo|city-sioux-falls",
+   "sample_title": "5 Fargo SEO agencies & experts in an 'SEO Fargo' contest"
+  },
+  {
+   "domain": "www.epicslope.partners",
+   "appearances": 2,
+   "avg_pos": 11.5,
+   "clusters": "ai-seo",
+   "sample_title": "Top Generative Engine Optimization Agencies in 2026 ..."
+  },
+  {
+   "domain": "comradeweb.com",
+   "appearances": 2,
+   "avg_pos": 12.0,
+   "clusters": "roofing",
+   "sample_title": "Roofing SEO Guide \ud83c\udfe0 Top 10 Strategies"
+  },
+  {
+   "domain": "thedigitalelevator.com",
+   "appearances": 2,
+   "avg_pos": 13.0,
+   "clusters": "ai-seo",
+   "sample_title": "The 10 Best AI SEO Agencies in 2026"
+  },
+  {
+   "domain": "www.interodigital.com",
+   "appearances": 2,
+   "avg_pos": 13.0,
+   "clusters": "ai-seo|city-austin",
+   "sample_title": "Generative Engine Optimization Services - GEO Agency"
+  },
+  {
+   "domain": "www.topaustinseo.company",
+   "appearances": 2,
+   "avg_pos": 13.0,
+   "clusters": "city-austin",
+   "sample_title": "Austin SEO: Local SEO Experts for Sustainable Growth"
+  },
+  {
+   "domain": "www.facebook.com",
+   "appearances": 2,
+   "avg_pos": 14.0,
+   "clusters": "city-austin",
+   "sample_title": "Austin SEO | Austin TX"
+  },
+  {
+   "domain": "www.bradentondigitalmarketing.com",
+   "appearances": 2,
+   "avg_pos": 14.0,
+   "clusters": "city-lakewood-ranch",
+   "sample_title": "Lakewood Ranch Digital Marketing Agency"
+  },
+  {
+   "domain": "blueprintdigital.com",
+   "appearances": 2,
+   "avg_pos": 14.5,
+   "clusters": "ai-seo",
+   "sample_title": "AI SEO Services for ChatGPT & LLM Visibility"
+  },
+  {
+   "domain": "respona.com",
+   "appearances": 2,
+   "avg_pos": 15.0,
+   "clusters": "ai-seo",
+   "sample_title": "26 AI SEO Services that Help Agencies Scale"
+  },
+  {
+   "domain": "notionmind.com",
+   "appearances": 2,
+   "avg_pos": 16.0,
+   "clusters": "ai-seo",
+   "sample_title": "AI SEO Services | Smarter Rankings with AI"
+  },
+  {
+   "domain": "www.growandconvert.com",
+   "appearances": 2,
+   "avg_pos": 16.5,
+   "clusters": "ai-seo",
+   "sample_title": "11 Best AI SEO Agencies in 2026 (& How to Evaluate Them)"
+  }
+ ]
+}

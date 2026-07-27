@@ -1,5 +1,5 @@
 /* ─────────────────────────────────────────────────────────────────────────────
-   /us/huntington-beach/seo — "Surf Report" Huntington Beach CA SEO styles.
+   /huntington-beach/seo: "Surf Report" Huntington Beach CA SEO styles.
    Built 2026-06-13. Scoped under .hbseo. Hero: CSS surf-report forecast card
    (text = LCP, zero CLS). Concept: a real-time search-visibility forecast board
    styled like a surf condition report. Brand fonts from next/font vars.
@@ -182,16 +182,15 @@
 .hbseo .cmp td.fj{color:var(--ink);font-weight:700;background:var(--orange-soft)}
 .hbseo .cmp td.fj .hl{color:var(--orange-d)}
 .hbseo .cmp td.alt{color:var(--n600)}
-/* ─ PROOF ─ */
-.hbseo .green{background:var(--green);color:#fff}
-.hbseo .green h2{color:#fff}.hbseo .green .lead{color:rgba(244,241,234,.92)}.hbseo .green .eyebrow{color:#8FE0C2}
-.hbseo .quote{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:28px;max-width:860px;margin-top:24px}
-.hbseo .quote p{font-family:var(--disp);font-size:22px;font-style:italic;line-height:1.4;color:#fff}
+/* ─ PROOF (light; the charcoal stats band is the page's only dark section) ─ */
+.hbseo .proof{background:var(--foam)}
+.hbseo .quote{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:28px;max-width:860px;margin-top:24px;box-shadow:var(--sh-card)}
+.hbseo .quote p{font-family:var(--disp);font-size:22px;font-style:italic;line-height:1.4;color:var(--ink)}
 .hbseo .byline{display:flex;align-items:center;gap:14px;margin-top:20px}
 .hbseo .avatar{width:46px;height:46px;border-radius:50%;background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-weight:800}
-.hbseo .byline .nm{font-weight:700}.hbseo .byline .ti{font-size:13px;color:rgba(244,241,234,.7)}
+.hbseo .byline .nm{font-weight:700;color:var(--ink)}.hbseo .byline .ti{font-size:13px;color:var(--n600)}
 .hbseo .clients{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
-.hbseo .clients span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:9px 16px;font-size:14px;font-weight:600;color:#fff}
+.hbseo .clients span{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:14px;font-weight:600;color:var(--n700)}
 /* ─ FAQ ─ */
 .hbseo details{background:var(--paper);border:1px solid var(--line);border-radius:13px;margin-bottom:10px;padding:2px 20px;transition:border-color .2s}
 .hbseo details[open]{border-color:var(--line-d);box-shadow:var(--sh-card)}
@@ -217,3 +216,31 @@
 .hbseo .final .lead{max-width:660px;margin:0 auto}
 .hbseo .final .cta-row{justify-content:center}
 .hbseo .fine{font-size:13.5px;color:var(--n400);margin-top:18px}
+/* ─ Long-form prose ─ */
+.hbseo .body{font-size:16.5px;color:var(--n700);max-width:860px;margin-top:18px;text-wrap:pretty}
+.hbseo .body + .body{margin-top:14px}
+.hbseo .body b,.hbseo .body strong{color:var(--ink);font-weight:700}
+.hbseo .room-blue{background:var(--foam)}
+.hbseo .note{font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;color:var(--n400);margin-top:12px}
+/* ─ Inline link treatment ─ */
+.hbseo .body a,.hbseo .districts a,.hbseo .faqhelp a,.hbseo details p a,.hbseo .li-p a,.hbseo .ucard p a{
+  color:var(--orange-d);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1.5px;font-weight:600;
+}
+.hbseo .body a:hover,.hbseo .districts a:hover,.hbseo .faqhelp a:hover,.hbseo details p a:hover,.hbseo .li-p a:hover,.hbseo .ucard p a:hover{color:var(--ink)}
+/* ─ Data table (real DataForSEO / SERP numbers) ─ */
+.hbseo .data{width:100%;border-collapse:separate;border-spacing:0;background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-top:26px;box-shadow:var(--sh-card)}
+.hbseo .data th,.hbseo .data td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--line);font-size:15px;color:var(--n700)}
+.hbseo .data tr:last-child td{border-bottom:none}
+.hbseo .data thead th{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:#fff}
+.hbseo .data td.kw{font-family:var(--mono);font-size:13.5px;color:var(--ink)}
+.hbseo .data td.num{font-variant-numeric:tabular-nums;font-weight:700;color:var(--ink)}
+.hbseo .data td.mut{color:var(--n600);font-size:14px}
+/* ─ Internal link cards ─ */
+.hbseo .linkgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+@media(max-width:860px){.hbseo .linkgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.hbseo .linkgrid{grid-template-columns:1fr}}
+.hbseo .linkcard{display:block;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px;text-decoration:none;transition:transform .2s var(--e-out),box-shadow .2s var(--e-out),border-color .2s}
+.hbseo .linkcard:hover{transform:translateY(-3px);box-shadow:var(--sh-card);border-color:var(--line-d)}
+.hbseo .linkcard .lh{font-family:var(--disp);font-weight:700;font-size:17px;color:var(--ink);margin-bottom:6px}
+.hbseo .linkcard .lp{font-size:14px;color:var(--n600)}
+.hbseo .linkcard .go{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange-d);margin-top:12px;display:block}

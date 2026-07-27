@@ -227,6 +227,17 @@ const SERVICES = [
     featured: false,
   },
   {
+    image: '/images/us/services/roofing-seo/hero.webp',
+    imageAlt: 'Aerial view of a suburban neighbourhood of shingle rooftops at golden hour',
+    eyebrow: 'SEO',
+    title: 'Roofing SEO',
+    description:
+      'Search for roofing contractors: storm-driven demand, service-area ranking, and a steady flow of roofing leads.',
+    href: '/services/roofing-seo',
+    cta: 'See Roofing SEO',
+    featured: false,
+  },
+  {
     image: '/images/services/card-webapp.webp',
     imageAlt: 'SaaS analytics dashboard on an ultrawide monitor',
     eyebrow: 'WEB APPS',

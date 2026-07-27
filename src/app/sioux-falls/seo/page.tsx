@@ -21,6 +21,15 @@ import './sioux-falls-seo.css';
    month-to-month; "0 agencies leading with AI search" claim softened to "almost
    no agency structures sites for AI citation today" (Tiger29 now markets GEO).
    No fake LocalBusiness address, no self-serving Review schema.
+
+   DEEPENING PASS 2026-07-26 (GSC push: 533 impressions, avg position 20.9, 1 click).
+   Added: answer-first block after the hero, a seven-district Sioux Falls geography
+   section with real DataForSEO volumes (city-name terms at KD 0 vs "near me" at
+   14,800/mo KD 24), a named-competitor section built from live SERP data
+   (Thrive 11 appearances avg 3.8, Charlotte SEO Firm 5 at 9.0, Lesser Media 4 at
+   11.8, plus the national field), 17 real People Also Ask questions appended to
+   the FAQ (39 total), an internal-link hub (5 services + 4 city pages), ItemList
+   schema and WebPage speakable. Currency symbols stripped page-wide. No prices.
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -51,7 +60,8 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-/* ── FAQ (22) - 10 from the approved v4 mockup verbatim + 12 keyword/trust/process adds ── */
+/* ── FAQ (39) - 22 Sioux Falls specific + 17 real People Also Ask questions pulled
+      from live US SERPs (DataForSEO, 2026-07-26). Answers written fresh. No prices. ── */
 
 const FAQ_ITEMS: ReadonlyArray<{ q: string; a: string }> = [
   {
@@ -142,6 +152,76 @@ const FAQ_ITEMS: ReadonlyArray<{ q: string; a: string }> = [
     q: 'Is there a contract, setup fee, or cancellation penalty?',
     a: 'No long-term contract, no setup fee, no penalty. Everything is month to month with 30 days notice, and you keep everything we build: your profile, your content, your citations, your data. We think an SEO partner should re-earn the engagement every month, so that is how we bill.',
   },
+
+  /* ── Real People Also Ask questions from live US SERPs ── */
+  {
+    q: 'How much does the average local SEO cost?',
+    a: 'There is no honest average, and anyone who quotes you one is really quoting their own rate card. What moves the number is scope. How many towns do you need to rank in, one or the whole Sioux Empire? Does the site need technical repair before content will stick? How many service pages have to be written from scratch? Do you want AI answer coverage tracked as well, or just the Map Pack? A one-chair dental practice in Harrisburg and a home services company covering both Minnehaha and Lincoln counties are genuinely different jobs. We scope yours on the call and put it in writing before you commit to anything.',
+  },
+  {
+    q: 'Is local SEO worth it?',
+    a: 'In this city, usually yes, and the reason is specific to Sioux Falls. Roughly five thousand people move here every year with no dentist, no plumber, no accountant and nobody local to ask. Google and, increasingly, an AI assistant are their referral network. If you are not in the Map Pack when they search, you are invisible to a slice of demand that arrives every single year. Where it is not worth it: if you sell to a handful of named accounts and every deal comes from a relationship, spend the money elsewhere. We will say so on the call rather than sell you something you do not need.',
+  },
+  {
+    q: 'Is SEO dead or evolving in 2026?',
+    a: 'Evolving, loudly. What died is the keyword-stuffing, link-buying version. What replaced it is harder and more durable: be genuinely useful, be fast, be verifiable, and be structured so that both Google and the AI assistants can quote you. Demand for trustworthy answers went up, not down. The surface those answers appear on is what changed.',
+  },
+  {
+    q: 'Can I do local SEO myself?',
+    a: 'A good chunk of it, yes, and honestly you should. Claim your Google Business Profile and fill in every field. Make your name, address and phone identical everywhere they appear. Post real photos. Ask every happy customer for a review and reply to all of them. That is not busywork, it moves rankings. Where owners hit the wall is the technical half: page speed, schema, crawl errors, and a page structure that covers Brandon, Harrisburg and Tea without three near-identical pages competing with each other. That part is engineering, and it is usually where things are stuck.',
+  },
+  {
+    q: 'Do small businesses need SEO?',
+    a: 'If your customers search before they buy, yes. That is nearly every service business in this metro: dentists, HVAC crews, roofers, law firms, clinics, restaurants, auto shops, vets. If you sell to three industrial buyers who already have your number, no. The test takes 30 seconds. Open an incognito window, search the way a customer would, and see whether you are on the first screen. If you are not, someone else is taking that call today.',
+  },
+  {
+    q: 'How much should SEO cost for a small business?',
+    a: 'Work backwards from one closed job instead of forwards from a price list. If a new patient, roof, or retainer is worth a lot to you, the bar for SEO paying for itself is low and you can afford to do it properly. If your average job is small, you need volume, and that changes what we build. The other scope drivers are the state of your website, how many towns you need to show up in, and how much writing has to happen. We put all of that in a written scope before you spend anything.',
+  },
+  {
+    q: 'Why is SEO no longer relevant?',
+    a: 'It still is, and the people saying otherwise usually mean something narrower. Social ads got better, paid search got bigger, and AI answers started intercepting clicks, so it feels like organic shrank. What actually happened is that the front door moved. Google AI Overviews and ChatGPT still have to pull their answers from somewhere, and they pull from sites that are fast, structured, and cited by other people. That is SEO with a new scoreboard, not the end of it.',
+  },
+  {
+    q: 'Is doing a local SEO worth it?',
+    a: 'Judge it on phone calls and direction requests, not on ranking screenshots. The arithmetic is friendlier here than in a coastal metro because the local competition is genuinely thin: the Sioux Falls city-name search terms sit at a keyword difficulty of zero, meaning almost nobody has built the authority to defend them. In Austin or Charlotte you are fighting agencies with thousands of referring domains. Here you are mostly fighting inertia.',
+  },
+  {
+    q: 'What is the 80/20 rule in SEO?',
+    a: 'Roughly a fifth of the work produces most of the result. For a local business here that fifth is almost always the same four things: a properly built Google Business Profile, steady real reviews, a site fast and clean enough that Google can crawl it without complaint, and one genuinely good page per service and per town you serve. Everything else is refinement. Agencies sell the other four fifths because it fills a monthly report.',
+  },
+  {
+    q: 'What is a SEO salary?',
+    a: 'It swings enormously by market and seniority, which is why the in-house versus agency decision is not really a salary decision. With unemployment around 1.8 percent in Sioux Falls, the harder question is whether you can hire a good one at all. Then there is the second problem: one person is rarely strong at technical work, writing, and local listings all at once. Most in-house hires end up strong at one of the three and the other two quietly stop happening.',
+  },
+  {
+    q: 'Is SEO a hard job?',
+    a: 'The concepts are not hard. Doing it consistently for months while the results lag is hard, and the technical half is genuinely engineering work. Most stalled SEO efforts we look at did not fail on strategy. They failed on follow-through: the profile stopped getting updated in March, the review asks fizzled out, and nobody ever fixed the render-blocking script that was costing two seconds on every page load.',
+  },
+  {
+    q: 'Is it worth paying an SEO company?',
+    a: 'It is worth paying one that can show you its work. The failure mode is not the money, it is paying for activity: reports stuffed with traffic charts while the phone rings the same as last year. Ask any shortlisted agency three things. Show me last month deliverables for a real client with the name removed. Who writes the code when the audit finds a site problem? Can you show me my citations by AI engine? Three questions, and most shortlists get short quickly.',
+  },
+  {
+    q: 'How much does an SEO agency typically cost?',
+    a: 'The ranges you see quoted online are close to meaningless because they hide what is included. One shop counts a monthly blog post as the service. Another includes technical engineering, review systems, and answer-engine tracking. Same label, completely different job. The three things that move a real number most are how many locations and towns you need, what condition the website is in, and how much writing has to be produced. Ours arrives in writing, with no setup fee and no contract behind it.',
+  },
+  {
+    q: 'How does Google Maps ranking work?',
+    a: 'Google has said publicly that it weighs three things: relevance, distance, and prominence. Relevance is how well your profile and site match what was typed. Distance is how close you are to the searcher or to the area they named. Prominence is how well known and well regarded you are, measured through reviews, mentions, and links. You cannot move your building, but you can widen the area Google associates you with by publishing real pages for the towns you actually serve, and you can absolutely work on the other two.',
+  },
+  {
+    q: 'How do I get my listing at the top of Google Maps higher?',
+    a: 'Claim the profile. Pick the most specific primary category you can, not the vaguest. Itemize every service. Make name, address and phone identical across every directory. Add real photos regularly, not once. Write your own Q and A entries. Post. Then build steady review velocity from actual customers, because a trickle every week beats a burst every year. The step owners skip is the last one: make sure the website that profile points at is fast and clearly says which towns you cover. That is often what unsticks a listing.',
+  },
+  {
+    q: 'Why is my Google ranking so low?',
+    a: 'Usually one of five things. The site is slow or has crawl problems. The profile is thin or sitting in the wrong category. Reviews dried up. A competitor got busier. Or Google shipped an update. Rankings also just wobble, and a two-position swing week to week is noise, not a crisis. What is not noise is a steady slide across a quarter. We start with the audit because guessing at this is the expensive option.',
+  },
+  {
+    q: 'Can I pay Google to rank higher?',
+    a: 'You can pay for ads, and Google labels them as ads. You cannot buy an organic position or a Map Pack pin. There is no fee that does it, and anyone offering one is selling you something else. A Google Business Profile is free to create and free to maintain. Ads and organic do work together though: plenty of businesses run ads early for cash flow, then watch the paid share shrink as the organic side compounds.',
+  },
 ];
 
 /* ── Section data ── */
@@ -155,16 +235,16 @@ const VAULT_ROWS: { item: string; when: string; kind: string; amt: string }[] = 
 ];
 
 const STATS: { n: string; unit: string; t: string; s: string }[] = [
-  { n: '$600', unit: 'B+', t: 'in assets held by the 100+ trust companies chartered in South Dakota, most of them headquartered right here in Sioux Falls', s: 'KELOLAND · Minneapolis Fed' },
+  { n: '600', unit: 'B+', t: 'in trust assets held by the 100+ trust companies chartered in South Dakota, most of them headquartered right here in Sioux Falls', s: 'KELOLAND · Minneapolis Fed' },
   { n: '5,088', unit: '', t: 'new residents in 2025 alone. Every one of them is a searcher with no dentist, no builder, and no provider loyalty yet', s: 'City of Sioux Falls' },
-  { n: '1.8', unit: '%', t: 'unemployment. Hiring is the hardest it has ever been, which makes inbound leads the cheapest growth lever left', s: 'BLS' },
+  { n: '1.8', unit: '%', t: 'unemployment. Hiring is the hardest it has ever been, which makes inbound leads the most durable growth lever left', s: 'BLS' },
 ];
 
 const FACTS: { k: string; v: string }[] = [
   { k: 'City population, 2025', v: '224,676' },
   { k: 'Added in one year', v: '+5,088' },
   { k: 'Metro growth since 2020', v: '+7.6%' },
-  { k: 'Largest SD sector', v: 'Finance, $8.03B' },
+  { k: 'Largest SD sector', v: 'Finance, 13.8% GDP' },
   { k: 'Trust companies', v: '100+' },
   { k: 'Anchor employers', v: 'Sanford · Avera · Citi' },
   { k: 'Regional trade area', v: '~1M people' },
@@ -172,10 +252,10 @@ const FACTS: { k: string; v: string }[] = [
 ];
 
 const MARKET: { badge: string; h: string; p: string }[] = [
-  { badge: '🏦', h: 'Banking and back-office finance', p: "Finance and insurance is South Dakota's largest sector at $8.03 billion, 13.8% of state GDP, and it started with the 1980 usury-law change that brought Citibank's card operation from New York. Citi alone employs around 3,200 people here, with Wells Fargo close behind. The SEO opportunity is the ecosystem around them: compliance consultants, fintech vendors, staffing firms, and B2B services selling into these institutions. Those buyers research like analysts, comparing three providers before one phone call, so the winning play is authority content that holds up to scrutiny, not just a tuned Google profile." },
-  { badge: '🛡️', h: 'Trust companies and wealth management', p: 'More than 100 trust companies are chartered in South Dakota, holding over $600 billion in assets, and most keep their headquarters in Sioux Falls. These firms compete nationally for high-net-worth families who search discreetly and verify everything. For them, SEO means owning branded search, publishing plainly written authority pages, and being the name AI engines cite when someone asks about South Dakota trust administration. Map Pack tactics matter less here; credibility at every search surface matters more.' },
+  { badge: '🏦', h: 'Banking and back-office finance', p: "Finance and insurance is South Dakota's largest sector at 13.8% of state GDP, and it started with the 1980 usury-law change that brought Citibank's card operation from New York. Citi alone employs around 3,200 people here, with Wells Fargo close behind. The SEO opportunity is the ecosystem around them: compliance consultants, fintech vendors, staffing firms, and B2B services selling into these institutions. Those buyers research like analysts, comparing three providers before one phone call, so the winning play is authority content that holds up to scrutiny, not just a tuned Google profile." },
+  { badge: '🛡️', h: 'Trust companies and wealth management', p: 'More than 100 trust companies are chartered in South Dakota, holding over 600 billion in assets, and most keep their headquarters in Sioux Falls. These firms compete nationally for high-net-worth families who search discreetly and verify everything. For them, SEO means owning branded search, publishing plainly written authority pages, and being the name AI engines cite when someone asks about South Dakota trust administration. Map Pack tactics matter less here; credibility at every search surface matters more.' },
   { badge: '🏥', h: 'Healthcare, twice over', p: 'Sioux Falls is the rare 220,000-person city with two competing health systems headquartered in it. Sanford Health employs roughly 10,900 people and Avera around 8,000, and together they pull patients from South Dakota, northwest Iowa, southwest Minnesota, and northeast Nebraska. Every referral that crosses those state lines is also a search: for a dentist near the hospital, a physical therapist, home health, a med spa. Independent practices that rank in the Map Pack catch a four-state stream of patients the big systems cannot see.' },
-  { badge: '🥩', h: 'Agriculture and food processing', p: 'Smithfield Foods employs about 3,200 people at its plant, and around it sits a web of ag input suppliers, equipment dealers, and processors selling across the Dakotas and beyond. These are B2B searches with long memories: a dealer who ranks for the parts and service queries farmers actually type becomes the default for a decade. Most ag suppliers here have never had a real SEO plan, which makes the organic ground cheap to take.' },
+  { badge: '🥩', h: 'Agriculture and food processing', p: 'Smithfield Foods employs about 3,200 people at its plant, and around it sits a web of ag input suppliers, equipment dealers, and processors selling across the Dakotas and beyond. These are B2B searches with long memories: a dealer who ranks for the parts and service queries farmers actually type becomes the default for a decade. Most ag suppliers here have never had a real SEO plan, which makes the organic ground unusually easy to take.' },
   { badge: '🛍️', h: 'Regional retail and franchises', p: 'Sioux Falls is the shopping hub for a trade area of roughly one million people spanning four states. Multi-location retailers, franchises, and home-services chains need local SEO services at scale: one properly built location page per store, consistent listings, and review systems that run themselves. Done right, every location earns its own Map Pack spot instead of the brand fighting for a single pin.' },
   { badge: '🏗️', h: 'Construction and home services', p: 'Sustained growth above 2% a year keeps homebuilders, remodelers, HVAC crews, roofers, and landscapers in permanent demand, especially across Harrisburg, Tea, and Brandon where the new rooftops actually go up. This is the highest-intent "near me" battleground in the market, decided by review velocity and service-area pages. If your crew works Lincoln County but your website only says Sioux Falls, Google hands those calls to someone else.' },
 ];
@@ -233,6 +313,55 @@ const REPORT_ROWS: { lab: string; width: string; val: string }[] = [
   { lab: 'AI citations', width: '44%', val: '12' },
 ];
 
+/* ── Answer-first: the four surfaces SEO in Sioux Falls actually covers ── */
+
+const SURFACES: { mm: string; h: string; p: string }[] = [
+  { mm: 'Surface 01', h: 'The Google Map Pack', p: 'The three businesses pinned above the results. Won with a properly built Google Business Profile, consistent listings, review velocity, and pages naming the towns you serve.' },
+  { mm: 'Surface 02', h: 'The organic results', p: 'The blue links underneath. Won with one real page per service and per town, written to answer the question that was typed rather than to hit a word count.' },
+  { mm: 'Surface 03', h: 'The site underneath', p: 'Speed, clean markup, schema, and a crawlable structure. This is the half most local shops cannot touch, and it is usually why rankings sit still.' },
+  { mm: 'Surface 04', h: 'The AI answers', p: 'ChatGPT, Gemini, Claude, and Google AI Overviews now name specific businesses. Getting quoted takes structure and verifiable mentions, and it can be measured monthly.' },
+];
+
+/* ── Real Sioux Falls geography. Where the searches physically come from. ── */
+
+const DISTRICTS: { badge: string; h: string; p: string }[] = [
+  { badge: '🌉', h: 'Downtown and Phillips Avenue', p: 'The stretch from Falls Park down Phillips past the Sculpture Walk, the Levitt, and the Steel District build-out on the east bank of the Big Sioux. Searches here are discovery searches: somewhere to eat before a show at the PREMIER Center, a boutique, a law office above a storefront. Photos, hours, and Map Pack position decide these. Long-form content barely matters. What matters is that your profile looks alive at 6pm on a Friday.' },
+  { badge: '🛒', h: 'The 41st Street corridor', p: 'Empire Mall and the big-box spine either side of it. This is the most search-contested ground in the metro, because national chains with real SEO budgets have locations here and their corporate pages rank by default. An independent on 41st Street does not out-content a national brand. It out-specifics them: exact services, real photos, review velocity, and a page that says what happens when you walk in.' },
+  { badge: '🏘️', h: 'South and the Lincoln County corridor', p: 'Everything past 57th and 85th, out through Harrisburg and Tea, plus the Bridges area and the newer development off Louise. This is where the rooftops go up and where "near me" home-services searches physically originate. The single most common technical mistake we find in this market lives here: a contractor whose crews work Lincoln County every day, on a website that only ever says Sioux Falls. Google reads that literally and hands the call to whoever named the town.' },
+  { badge: '🛣️', h: 'East side, Brandon, and the Highway 100 corridor', p: 'Dawley Farm Village, the growth pushing toward Veterans Parkway, and Brandon just over the county line. Newer households, fewer established loyalties, and a stretch of buyers who genuinely do choose their dentist and their garage from a phone screen. Service-area pages earn their keep out here faster than anywhere else in the metro.' },
+  { badge: '🏥', h: 'The hospital corridors', p: 'The Avera campus on Cliff Avenue and the Sanford campuses on West 18th and out at 69th pull patients in from South Dakota, northwest Iowa, southwest Minnesota, and northeast Nebraska. Every one of those referrals is followed by a search: a dentist near the hospital, physio, home health, a med spa, somewhere to stay. Independent practices in these corridors are catching a four-state stream the big systems never see, and most of them are not even trying to rank for it.' },
+  { badge: '🚚', h: 'North side, I-90, and the industrial belt', p: 'The interchange where I-29 and I-90 cross, the ag and logistics ground around it, and the USD Discovery District. Nobody here types "near me". They type part numbers, specifications, and product categories, and they compare three suppliers before a single phone call. This is the quietest, least contested organic ground in the whole market, and almost nobody local is competing for it.' },
+  { badge: '🧭', h: 'West side and Lake Lorraine', p: 'The newer mixed-use retail and office ground off 26th and I-29, plus the older Western Avenue and Minnesota Avenue trade. A useful reminder that Sioux Falls is not one search market. A business on Western competing for the whole metro will lose to a business that admits it serves the west side and says so clearly.' },
+];
+
+/* ── Who else actually shows up on these SERPs (DataForSEO, US, 2026-07-26) ── */
+
+const RIVALS: { badge: string; h: string; p: string }[] = [
+  { badge: '01', h: 'Thrive Agency (thriveagency.com)', p: 'The most persistent name in this data set: 11 appearances across the SERPs we tracked, at an average position of 3.8. Their page-one wins tell you what kind of operation it is. They hold number one for "agentur marketing" at 720 searches a month and "agences marketing digital" at 590, which are German and French queries. That is a global content machine with a very large publishing budget behind it. If you want an agency that has done your industry somewhere in the world already, they probably have. What they are not is a firm that knows the difference between a Harrisburg lead and a Brandon one.' },
+  { badge: '02', h: 'Charlotte SEO Firm (charlotteseofirm.com)', p: 'Five appearances at an average position of 9.0, and genuinely the best argument on this list for hiring local. They hold position one for "charlotte seo companies" and "charlotte seo company", both at 880 searches a month, plus "charlotte nc seo" at 320. One city, owned outright. We rate that highly and it is close to the model we are running here, because "sioux falls seo" and "seo sioux falls" both sit at 30 searches a month with a keyword difficulty of zero. Nobody has claimed this city the way they claimed theirs.' },
+  { badge: '03', h: 'Lesser Media (lessermedia.com)', p: 'Four appearances at an average position of 11.8, running the multi-city page model: position four for "seo springfield" and "seo stamford", both 110 a month, and position three for "ppc san antonio" at 90. Proof the city-page play works when the pages are real rather than a find-and-replace job. The risk in that model is obvious, and it is the same risk we hold ourselves to: a page about Sioux Falls that could have any other city name pasted into it will eventually be treated as what it is.' },
+  { badge: '04', h: 'The national field', p: 'Straight North (3 appearances, average position 9.0), Helium SEO (3 at 11.7), Elit-Web (3 at 7.0), TastyPlacement (2 at 2.0), Tiger29 (2 at 6.5), and Synchronicity Designs (2 at 7.0). Competent firms, and several of them now market generative engine optimization properly, so the AI-search gap in this market is closing rather than sitting open forever. What none of them have is anyone in the Sioux Empire. When a Tea homeowner searches at 9pm in February, the difference between an agency that knows what that search means and one that has your account in a queue is the whole engagement.' },
+];
+
+/* ── Internal linking: services + other city SEO pages that exist ── */
+
+const SERVICE_LINKS: { href: string; h: string; p: string }[] = [
+  { href: '/services/seo', h: 'US SEO services', p: 'The full national picture: how we run technical, content, and authority work across markets.' },
+  { href: '/services/local-seo', h: 'Local SEO services', p: 'Map Pack, Google Business Profile, citations, and review systems as a standalone service.' },
+  { href: '/services/small-business-seo', h: 'Small business SEO', p: 'The same stack, sized to one location and one owner making the decision.' },
+  { href: '/services/seo-audit', h: 'SEO audit', p: 'What we look at, in what order, and what you get to keep afterwards.' },
+  { href: '/services/ai-seo', h: 'AI SEO services', p: 'Getting quoted by ChatGPT, Gemini, Claude, and Google AI Overviews, and measuring it.' },
+];
+
+const CITY_LINKS: { href: string; h: string; p: string }[] = [
+  { href: '/fargo/seo', h: 'Fargo SEO', p: 'The other upper-Midwest market we work: same thin competition, same growth-driven demand.' },
+  { href: '/lincoln/seo', h: 'Lincoln SEO', p: 'Nebraska, and a market with a comparable mix of healthcare, insurance, and university spend.' },
+  { href: '/nashville/seo', h: 'Nashville SEO', p: 'A harder market. We sit at position 10 for "local seo nashville", and we say so rather than imply otherwise.' },
+  { href: '/austin/seo', h: 'Austin SEO', p: 'Harder still. Position 8 for "seo agency austin texas" against firms with far more authority than us.' },
+];
+
+const LINK_STYLE = { color: '#B23E13', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '3px' } as const;
+
 /* ── JSON-LD: WebPage + Service (NO offers/pricing) + FAQPage (derived) ── */
 
 const webPageSchema = {
@@ -245,6 +374,28 @@ const webPageSchema = {
   inLanguage: 'en-US',
   isPartOf: { '@type': 'WebSite', name: 'FactoryJet', url: 'https://factoryjet.com' },
   author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhaveshbarot/', jobTitle: 'Founder, FactoryJet' },
+  about: { '@type': 'Thing', name: 'Local search engine optimization in Sioux Falls, South Dakota' },
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', '.answer-first .lead', '.answer-first p.body'],
+  },
+};
+
+const cityListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'FactoryJet SEO services by US city',
+  itemListOrder: 'https://schema.org/ItemListUnordered',
+  numberOfItems: CITY_LINKS.length + 1,
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Sioux Falls SEO', url: CANONICAL },
+    ...CITY_LINKS.map((c, i) => ({
+      '@type': 'ListItem',
+      position: i + 2,
+      name: c.h,
+      url: `https://factoryjet.com${c.href}`,
+    })),
+  ],
 };
 
 const serviceSchema = {
@@ -283,6 +434,8 @@ export default function SiouxFallsSeoPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script id="sioux-falls-seo-faq-schema" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script id="sioux-falls-seo-citylist-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(cityListSchema) }} />
 
       <SiteHeader />
       <BreadcrumbSchema
@@ -322,6 +475,30 @@ export default function SiouxFallsSeoPage() {
                 </div>
               ))}
               <div className="vfoot"><b>Balance after 12 months</b><span className="tot">page one + AI answers</span></div>
+            </div>
+          </div>
+        </section>
+
+        {/* 1b ANSWER-FIRST - who does SEO in Sioux Falls and what the work is */}
+        <section className="answer-first">
+          <div className="wrap">
+            <span className="eb">Answer first</span>
+            <h2>Who does SEO in Sioux Falls, and what does the work <em>actually involve?</em></h2>
+            <p className="lead">Three kinds of firm compete for this work, and the job itself comes down to four surfaces. Here is the whole thing in about a minute.</p>
+            <p className="body" style={{ marginTop: 18 }}><b>Who does it.</b> Three groups. First, local generalist web and marketing shops that build sites and add SEO as a line item. Second, national agencies that market into South Dakota without anyone living here, which is most of the names you will find if you search right now. Third, specialists like FactoryJet, where senior engineers do the work and the founder runs every first call. Nobody in that list is automatically right for you. The useful question is which one can open your website code, and which one can prove what happened last month.</p>
+            <p className="body"><b>What the work is.</b> Local SEO means making your business appear when someone in the Sioux Empire searches for what you sell. In practice that is a Google Business Profile maintained weekly rather than set up once, consistent business listings across the directories Google checks, a steady flow of real reviews, one honest page for each service and each town you serve from Brandon to Tea, a website fast and cleanly built enough for Google to crawl without complaint, and now a structure that lets AI assistants quote you. It is unglamorous, it compounds, and it takes months rather than weeks. Anyone promising it takes weeks is describing an ad budget.</p>
+            <p className="body"><b>Whether it is worth it here.</b> Probably more than you think. The city-name searches look tiny on paper: &quot;seo sioux falls&quot; and &quot;sioux falls seo&quot; each draw about 30 searches a month, and &quot;sioux falls seo company&quot; about 20. But almost nobody types a city name any more. They type &quot;seo company near me&quot;, which draws 14,800 a month nationally, and Google localizes it to wherever their phone is standing. Your real market is the localised version of every &quot;near me&quot; search in the metro, and the city-name volume badly understates the prize.</p>
+            <div className="del" style={{ marginTop: 28 }}>
+              {SURFACES.map((s) => (
+                <div className="dc" key={s.h}>
+                  <span className="mm">{s.mm}</span>
+                  <h3>{s.h}</h3>
+                  <p>{s.p}</p>
+                </div>
+              ))}
+            </div>
+            <div className="vquote" style={{ marginTop: 24, borderRadius: '0 14px 14px 0' }}>
+              <b>Where we stand, honestly.</b> FactoryJet has 44 referring domains. Coalition Technologies, one of the firms we compete against, has roughly 2,800. We rank position 10 for &quot;local seo nashville&quot; and position 8 for &quot;seo agency austin texas&quot;. We are the challenger, not the incumbent, and we would rather you knew that before the call than after it. What we compete on is engineering and AI-answer coverage, not link volume. See the full breakdown in <Link href="/services/seo" style={LINK_STYLE}>our US SEO services</Link> or start with a <Link href="/services/seo-audit" style={LINK_STYLE}>free SEO audit</Link>.
             </div>
           </div>
         </section>
@@ -399,6 +576,43 @@ export default function SiouxFallsSeoPage() {
                     decoding="async"
                   />
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 4b THE MAP - real Sioux Falls geography and what it means for search */}
+        <section className="groom">
+          <div className="wrap">
+            <span className="eb">Where the searches come from</span>
+            <h2>Sioux Falls is not one search market. <em>It is seven.</em></h2>
+            <p className="lead">A search from a house off 85th Street behaves nothing like a search from a table on Phillips Avenue. If your SEO plan does not know the difference, it is a template with your name on it.</p>
+            <div style={{ marginTop: 26 }}>
+              {DISTRICTS.map((d) => (
+                <div className="mrow" key={d.h}>
+                  <div className="badge" aria-hidden="true">{d.badge}</div>
+                  <div><h3>{d.h}</h3><p>{d.p}</p></div>
+                </div>
+              ))}
+            </div>
+            <div className="edit" style={{ marginTop: 34 }}>
+              <div>
+                <h3 style={{ fontSize: 21, marginBottom: 10 }}>How competitive is the Sioux Falls SERP, really?</h3>
+                <p className="body">Thinner than almost anyone here assumes. Every Sioux Falls city-name search term we pulled comes back at a keyword difficulty of zero, which in plain terms means no site has built enough authority around those phrases to defend them. Compare that with the national &quot;near me&quot; terms in the same data: &quot;best seo company near me&quot; sits at a difficulty of 41, &quot;local seo company near me&quot; at 34. Those are fights. The Sioux Falls terms are not fights, they are a vacancy.</p>
+                <p className="body">The catch is that low difficulty does not mean low effort, it means low competition for the ground you have to hold anyway. Your customers still mostly type &quot;near me&quot;, and winning those localized results needs the same Map Pack work, the same reviews, and the same fast site as anywhere else. The difference is that in Austin you are up against agencies with thousands of referring domains, and here you are up against businesses that have not updated their Google profile since 2023. Same work, far less resistance, and the businesses that start now get to compound before anyone else notices the gap.</p>
+                <p className="body">One more thing worth knowing before you spend anything. Most of the firms that rank when a Sioux Falls owner searches for SEO help are not from South Dakota. That is not a scandal, plenty of them are good, but it does mean the local signals Google rewards most are sitting there unclaimed. <Link href="/services/local-seo" style={LINK_STYLE}>Local SEO</Link> is the most underused lever in this market and it is the one nobody is pulling.</p>
+              </div>
+              <div className="factbox">
+                <h3>Real search volume, Sioux Falls and near me</h3>
+                <div className="fr"><span>seo sioux falls</span><span className="fv">30/mo · KD 0</span></div>
+                <div className="fr"><span>sioux falls seo</span><span className="fv">30/mo · KD 0</span></div>
+                <div className="fr"><span>sioux falls seo company</span><span className="fv">20/mo · KD 0</span></div>
+                <div className="fr"><span>seo company near me</span><span className="fv">14,800/mo · KD 24</span></div>
+                <div className="fr"><span>local seo company near me</span><span className="fv">1,900/mo · KD 34</span></div>
+                <div className="fr"><span>best seo company near me</span><span className="fv">1,000/mo · KD 41</span></div>
+                <div className="fr"><span>seo marketing company near me</span><span className="fv">390/mo · KD 30</span></div>
+                <div className="fr"><span>top seo company near me</span><span className="fv">90/mo · KD 29</span></div>
+                <p style={{ fontFamily: 'var(--mono)', fontSize: 10.5, color: '#50505a', marginTop: 12, lineHeight: 1.6 }}>US volumes, DataForSEO, July 2026. KD is keyword difficulty on a 0 to 100 scale.</p>
               </div>
             </div>
           </div>
@@ -490,6 +704,30 @@ export default function SiouxFallsSeoPage() {
           </div>
         </section>
 
+        {/* 8b WHO ELSE RANKS - named competitors, treated fairly */}
+        <section className="room-alt">
+          <div className="wrap">
+            <span className="eb">The firms you will actually find</span>
+            <h2>Who else shows up when you search for SEO help, <em>and what they are good at.</em></h2>
+            <p className="lead">We pulled the live US results for these searches in July 2026. These are the domains that kept appearing, with their real positions and their real page-one keywords. Judge for yourself.</p>
+            <div style={{ marginTop: 26 }}>
+              {RIVALS.map((r) => (
+                <div className="mrow" key={r.h}>
+                  <div className="badge" aria-hidden="true" style={{ fontFamily: 'var(--mono)', fontSize: 16, fontWeight: 700, color: '#B23E13' }}>{r.badge}</div>
+                  <div><h3>{r.h}</h3><p>{r.p}</p></div>
+                </div>
+              ))}
+            </div>
+            <div className="vquote" style={{ marginTop: 26 }}>
+              <b>So why us.</b> Not because those firms are bad. Several are better resourced than we are and we are not going to pretend otherwise. We win a specific kind of engagement: a Sioux Falls business whose rankings are stuck behind an engineering problem, or who wants to be quoted by AI assistants before their competitors work out that is a thing. If your problem is neither of those, one of the firms above may genuinely serve you better, and we will say so on the call rather than take the retainer.
+            </div>
+            <div className="midcta">
+              <ModalCTAButton label="Get a straight second opinion" region="us" modalVariant="seo" btnVariant="primary-light" />
+              <span>bring any proposal you have already received</span>
+            </div>
+          </div>
+        </section>
+
         {/* 9 INDUSTRIES (lavender room) */}
         <section className="lroom">
           <div className="wrap">
@@ -541,7 +779,7 @@ export default function SiouxFallsSeoPage() {
             <div className="aiwrap">
               <div>
                 <p className="body">Ask ChatGPT for the best roofing company in Sioux Falls and it names names. Ask Gemini which firm handles South Dakota trust administration and it answers with specific companies, pulled from the websites and mentions it trusts. Google now shows AI Overviews above the regular results for a growing share of local questions, and pages ranked first lose more than half their clicks when that happens. The search results your customers see in 2026 are not the ones your last agency optimized for.</p>
-                <p className="body">This is the quietest land grab in local search, and almost nobody here has noticed. If you went looking for an AI SEO agency in Sioux Falls today, or an AEO agency that can show answer-engine citations on a report, you would find almost no one who delivers that. We make your pages quotable: clear questions, direct answers, schema underneath, and real mentions AI engines can verify. Then we track your citations in ChatGPT, Gemini, Claude, and Google AI Overviews every month, so AI visibility becomes a number on your statement instead of a mystery. Pair it with our <Link href="/services/ai-seo">US AI SEO service</Link> for the deepest coverage. In the city that turned a 1980 banking law into a $600 billion industry, being early to a new set of rules is a local tradition.</p>
+                <p className="body">This is the quietest land grab in local search, and almost nobody here has noticed. If you went looking for an AI SEO agency in Sioux Falls today, or an AEO agency that can show answer-engine citations on a report, you would find almost no one who delivers that. We make your pages quotable: clear questions, direct answers, schema underneath, and real mentions AI engines can verify. Then we track your citations in ChatGPT, Gemini, Claude, and Google AI Overviews every month, so AI visibility becomes a number on your statement instead of a mystery. Pair it with our <Link href="/services/ai-seo">US AI SEO service</Link> for the deepest coverage. In the city that turned a 1980 banking law into its largest industry, being early to a new set of rules is a local tradition.</p>
                 <ul className="pills" aria-label="AI engines we track">
                   <li>ChatGPT ✓ tracked</li>
                   <li>Gemini ✓ tracked</li>
@@ -581,7 +819,7 @@ export default function SiouxFallsSeoPage() {
           <div className="wrap">
             <span className="eb">Questions, answered straight</span>
             <h2>Sioux Falls SEO <em>FAQ.</em></h2>
-            <p className="lead">22 questions, answered the way we would on a call: answer first, no hedging, no fine print.</p>
+            <p className="lead">39 questions, answered the way we would on a call: answer first, no hedging, no fine print. The second half are the questions people actually ask Google about SEO, pulled from live results rather than invented.</p>
             <div className="fwrap">
               {FAQ_ITEMS.map((f) => (
                 <div className="fi" key={f.q}>
@@ -590,7 +828,7 @@ export default function SiouxFallsSeoPage() {
                 </div>
               ))}
             </div>
-            <p className="fnote">Still deciding? Compare our <Link href="/services/seo">US SEO services</Link> and <Link href="/services/ai-seo">AI SEO services</Link>, or just <a href={CALENDLY}>ask the founder directly</a>.</p>
+            <p className="fnote">Still deciding? Compare our <Link href="/services/seo">US SEO services</Link>, <Link href="/services/local-seo">local SEO services</Link>, <Link href="/services/small-business-seo">small business SEO</Link> and <Link href="/services/ai-seo">AI SEO services</Link>, or just <a href={CALENDLY}>ask the founder directly</a>.</p>
           </div>
         </section>
 
@@ -620,6 +858,35 @@ export default function SiouxFallsSeoPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* 13b KEEP READING - services + other city SEO pages */}
+        <section>
+          <div className="wrap">
+            <span className="eb">Keep reading</span>
+            <h2>The rest of the work, <em>and the rest of the map.</em></h2>
+            <p className="lead">If you want the detail behind any part of this page, start here. Every service below is the same team doing the same work, described properly.</p>
+            <div className="del" style={{ marginTop: 28 }}>
+              {SERVICE_LINKS.map((s) => (
+                <div className="dc" key={s.href}>
+                  <span className="mm">Service</span>
+                  <h3><Link href={s.href} style={LINK_STYLE}>{s.h}</Link></h3>
+                  <p>{s.p}</p>
+                </div>
+              ))}
+            </div>
+            <p className="body" style={{ marginTop: 34 }}><b>Other cities we run this play in.</b> The method travels, the content does not. Every city page we publish is researched separately, because a page about Sioux Falls that would read identically with another city name pasted in has no business ranking for either.</p>
+            <div className="del" style={{ marginTop: 16 }}>
+              {CITY_LINKS.map((c) => (
+                <div className="dc" key={c.href}>
+                  <span className="mm">City</span>
+                  <h3><Link href={c.href} style={LINK_STYLE}>{c.h}</Link></h3>
+                  <p>{c.p}</p>
+                </div>
+              ))}
+            </div>
+            <p className="body" style={{ marginTop: 20 }}>Building something rather than ranking something? Our <Link href="/sioux-falls/ecommerce-development" style={LINK_STYLE}>Sioux Falls ecommerce development</Link> page covers the store side, and a <Link href="/services/seo-audit" style={LINK_STYLE}>free SEO audit</Link> is the sensible first step either way.</p>
           </div>
         </section>
 

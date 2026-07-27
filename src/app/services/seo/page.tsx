@@ -49,6 +49,7 @@ const SEO_SERVICE_LINKS: ReadonlyArray<{ href: string; label: string; blurb: str
   { href: '/services/dental-seo', label: 'Dental SEO', blurb: 'Patient acquisition for practices competing locally.' },
   { href: '/services/healthcare-seo', label: 'Healthcare SEO', blurb: 'Search for clinics and providers, built for trust signals.' },
   { href: '/services/law-firm-seo', label: 'Law Firm SEO', blurb: 'High-intent case enquiries in a crowded local market.' },
+  { href: '/services/roofing-seo', label: 'Roofing SEO', blurb: 'Storm-driven demand, service-area ranking, and steady roofing leads.' },
 ];
 
 const US_SEO_CITIES: ReadonlyArray<{ slug: string; name: string }> = [

@@ -5,7 +5,7 @@ export const post: BlogPost = {
   id: '236',
   slug: 'best-ai-seo-agencies-usa',
   title: "The 10 Best AI SEO Agencies in the USA (2026)",
-  excerpt: "34% of US adults now use ChatGPT, and they ask it which businesses to trust. We compared the 10 best AI SEO agencies in the USA on specialty, proprietary tools, and proof. Yes, we are on the list, with full disclosure and no pricing games.",
+  excerpt: "34% of US adults now use ChatGPT, and they ask it which businesses to trust. We compared the 10 best AI SEO agencies in the USA on specialty, proprietary tools, real page-one keywords and proof. Yes, we are on the list, with full disclosure and no pricing games.",
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Jun 17, 2026',
@@ -13,8 +13,8 @@ export const post: BlogPost = {
   imageUrl: '/blog-images/best-ai-seo-agencies-usa.webp',
   imageAlt: "Comparison chart of the 10 best AI SEO agencies in the USA for 2026, showing specialty, proprietary tool, and AI engines covered",
   meta: {
-    title: "The 10 Best AI SEO Agencies in the USA (2026)",
-    description: "The 10 best AI SEO agencies in the USA compared on specialty, proprietary tools, and proof. Yes, we are on the list, with full disclosure and no pricing games.",
+    title: "The 10 Best AI SEO Agencies in the USA (2026), Compared",
+    description: "Which is the best AI SEO agency in the USA? We compared 10 US AI SEO agencies on specialty, proprietary tools, real page-one keywords and proof. Full disclosure: we are on the list.",
   },
   keyTakeaways: [
     "Our researched 2026 top 10: FactoryJet (disclosed self-inclusion), First Page Sage, iPullRank, Onely, WebFX, Siege Media, Thrive Agency, Searchbloom, 20North Marketing, and Go Fish Digital.",
@@ -22,6 +22,8 @@ export const post: BlogPost = {
     "Almost no US AI SEO agency publishes pricing. Judge them on per-engine reporting, who actually does the work, and contract terms instead.",
     "GEO, AEO, and LLM SEO are overlapping labels for one workflow. An agency quoting GEO separately from AI SEO is billing twice.",
     "FactoryJet covers GEO and AEO in one retainer with month-to-month terms, per-engine citation tracking, and a free AI visibility audit.",
+    "Honest position: FactoryJet has 44 referring domains against thousands for the established shops on this list, so we compete on delivery model and per-engine reporting, not on domain strength.",
+    "This page is a shortlist of US AI SEO agencies. If you have already decided to hire, the scope and terms live on our US AI SEO services page instead.",
   ],
   faqs: [
     { q: "Who is the best AI SEO agency in the USA?", a: "It depends on your size and goals. FactoryJet leads for SMBs and ecommerce brands that want a transparent pricing model and multi-engine citation tracking; iPullRank leads for technical and engineering depth; First Page Sage leads for B2B SaaS thought-leadership content." },
@@ -45,13 +47,16 @@ export const post: BlogPost = {
     { q: "Is there a good AI SEO agency near me in the US?", a: "Most of this list works remotely across the US, so fit matters more than location. WebFX is in Harrisburg PA, Siege Media in San Diego, Thrive in Arlington TX, Searchbloom in Utah, 20North in Atlanta, and iPullRank in New York. FactoryJet serves US businesses remotely with dedicated coverage for Austin, Miami, Denver, Nashville, Tampa, Charlotte, and more." },
     { q: "Do US AI SEO agencies require long contracts?", a: "Mixed. FactoryJet is month-to-month, Searchbloom and Thrive Agency promote no-contract or month-to-month terms, while larger agencies often quote 6 to 12 months. Given how fast AI search changes, shorter terms keep the agency accountable." },
     { q: "How long does AI SEO take to show results?", a: "Faster than classic SEO when the foundation is sound. Schema and answer-block changes can earn citations within 4 to 8 weeks, because AI engines re-crawl and re-synthesize faster than Google re-ranks. Realistic benchmark: meaningful citation growth inside 90 days." },
+    { q: "Which AI SEO agencies actually rank on page one for AI search terms themselves?", a: "Worth checking, because an agency that cannot rank itself is a strange choice. From US SERP data pulled on 26 July 2026: Spicy Margarita sits around position 3 for ai seo agency, the exact head term, which makes it the most AI-native shop on this page. Onely holds position 1 for technical seo service (1,900 searches a month) and technical seo agency (720 a month). Searchbloom holds position 1 for search marketing agency (1,000 a month). Thrive Agency appears on more of these results pages than anyone, averaging position 3.8. FactoryJet does not rank on page one for the head terms yet, and we would rather say that than dress it up." },
+    { q: "Should I read this list or go straight to your AI SEO service page?", a: "Depends where you are. If you are still working out who to approach, stay here: this is a shortlist of ten US AI SEO agencies with what each one is actually good at. If you have decided you want to hire and you just want scope, engine coverage and terms, go to our US AI SEO services page. We keep the two separate on purpose so neither one pretends to be the other." },
     { q: "How is this list different from the UK and India versions?", a: "The same independent format, localized for each market. If you operate across borders, see our companion roundups of the best AI SEO agencies in the UK and the best AI SEO agencies in India." },
   ],
   content: (
     <>
       <p className="mb-4"><strong>The short answer:</strong> the best AI SEO agency in the USA for SMBs and ecommerce brands is FactoryJet (yes, this is our list, and we explain exactly why we put ourselves first below). For deep technical and engineering work it&apos;s iPullRank; for B2B SaaS thought-leadership content it&apos;s First Page Sage; for enterprise scale with a proprietary tracking platform it&apos;s WebFX.</p>
       <p className="mb-4">Here&apos;s why this question suddenly matters: <strong>34% of US adults have now used ChatGPT, about double the share in 2023, climbing to 58% of adults under 30</strong>, and 28% of employed adults use it for work (Pew Research, 2025). When those users ask &quot;who should I hire?&quot;, AI engines answer with citations, and a business that isn&apos;t cited doesn&apos;t exist in the answer.</p>
-      <p className="mb-4">We researched every agency below on its own website and in the live US search results on 06/17/2026. No pay-to-play, no invented review scores.</p>
+      <p className="mb-4"><strong>Which page do you actually need?</strong> This one is a shortlist: ten US AI SEO agencies compared so you can work out who to approach. If you have already decided to hire and you want scope, engine coverage and terms, go to our <a href="/services/ai-seo" className="text-orange-600 underline">US AI SEO services page</a> instead. We keep the two separate on purpose. This page is for comparing AI SEO agencies. That page is for hiring one.</p>
+      <p className="mb-4">We researched every agency below on its own website and in the live US search results on 06/17/2026, and refreshed the ranking data on 26/07/2026. No pay-to-play, no invented review scores.</p>
       <p className="mb-4"><strong>Disclosure, up front:</strong> FactoryJet appears at #1 on its own list. Almost every agency that currently wins this search query does the same, and we verified it. What we add is honesty about it, a methodology you can check, and nine real competitors with their actual strengths, including where they beat us.</p>
       <h2 className="text-2xl font-bold mt-8 mb-4">Top 10 AI SEO agencies in the USA, comparison table</h2>
       <div className="overflow-x-auto mb-6">
@@ -150,18 +155,58 @@ export const post: BlogPost = {
       <p className="mb-4">New York based, founded by Mike King, one of the most cited voices in technical SEO and AI search. iPullRank&apos;s &quot;Relevance Engineering&quot; framework and its widely shared AI Search Manual go deep on embeddings, information retrieval, and how language models actually select sources. Work has spanned brands such as SAP, American Express, HSBC, and Nordstrom. If you want the team that helped write the playbook, start here.</p>
       <h3 className="text-xl font-bold mt-6 mb-3">4. Onely, best technical SEO at global scale</h3>
       <p className="mb-4">A technical-SEO specialist serving US and European clients, with engineering-grade audits and a focus on crawlability, rendering, and the technical foundations AI engines depend on. Note for transparency: Onely is headquartered in Warsaw, Poland, not the US, though it serves US clients and ranks in US listicles. We include it because the technical depth is real, and we flag the location so you can decide.</p>
+      <p className="mb-4"><strong>What the data shows:</strong> Onely holds position 1 for technical seo service (1,900 searches a month), technical seo agency (720 a month), and its own brand term (480 a month). Nobody else on this page is close on the technical side. If your blocker is that AI crawlers cannot render your pages, this is the call to make.</p>
       <h3 className="text-xl font-bold mt-6 mb-3">5. WebFX, best enterprise scale with proprietary tracking</h3>
       <p className="mb-4">Harrisburg, Pennsylvania based and one of the largest performance-marketing agencies in the US. Its OmniSEO offering brings AI-visibility tracking and optimization into an enterprise package, backed by a large in-house team and proprietary reporting technology. If you need GEO delivered at scale alongside paid media and CRO under one roof, WebFX is built for that.</p>
+      <p className="mb-4"><strong>What the data shows:</strong> WebFX turned up on five of the US AI SEO results pages we pulled on 26/07/2026, averaging position 11.4. Its keyword footprint is far too broad to summarise in one line, which is more or less the argument for hiring them.</p>
       <h3 className="text-xl font-bold mt-6 mb-3">6. Siege Media, best content-driven GEO</h3>
       <p className="mb-4">San Diego based and content-led, Siege Media pairs editorial quality with proprietary tools (DataFlywheel and BlueprintIQ) to plan and measure content that earns links and AI citations. Its client work has included Asana, Intuit, Casper, and Zapier. If your AI-search strategy is fundamentally a content strategy, this is one of the strongest teams in the country.</p>
       <h3 className="text-xl font-bold mt-6 mb-3">7. Thrive Agency, best full-service with no lock-in</h3>
       <p className="mb-4">Arlington, Texas based, full-service, and increasingly AI-search focused through its ThriveAI work, including passage-level optimization, technical SEO, and digital PR. Thrive promotes no long-term contracts, which is rare for an agency of its size. A good pick if you want GEO bundled with broader digital marketing and the freedom to leave.</p>
+      <p className="mb-4"><strong>What the data shows:</strong> Thrive appeared on more of the US AI SEO results pages we tracked than any other agency here, at an average position of 3.8. Its own page-one wins run wider than search: position 1 for agentur marketing (720 searches a month) and agences marketing digital (590 a month), both German and French queries, plus 5 star google rated (320 a month). That is a multi-language marketing group, not an AI-search boutique, and it explains the breadth of what they sell.</p>
       <h3 className="text-xl font-bold mt-6 mb-3">8. Searchbloom, best ROI-first reporting</h3>
       <p className="mb-4">South Jordan, Utah based, organized around its MERIT Framework spanning AEO and GEO, with reporting framed around revenue and ROI rather than vanity rankings. Month-to-month terms and recognition from Forbes and Search Engine Land. If you want an agency that talks in pipeline and revenue from day one, Searchbloom speaks that language.</p>
+      <p className="mb-4"><strong>What the data shows:</strong> the rankings back the positioning. Searchbloom holds position 1 for search marketing agency (1,000 searches a month) and for both search engine marketing firm and search engine marketing firms (210 a month each). It owns the generic head terms in its own category outright, which is harder than it sounds.</p>
       <h3 className="text-xl font-bold mt-6 mb-3">9. 20North Marketing, best for local plus ecommerce</h3>
       <p className="mb-4">Atlanta based, with AI-visibility tracking built into its SEO work and a strong ecommerce profile as a Shopify Premier and Klaviyo partner. For local service businesses and DTC brands that want AI search handled alongside store and email growth, 20North covers the full stack in one place.</p>
       <h3 className="text-xl font-bold mt-6 mb-3">10. Go Fish Digital, best patent-driven technical analysis</h3>
       <p className="mb-4">A multi-office US agency known for unusually technical, research-led SEO. Go Fish built a Semantic Content Audit, an AI Overview Analyzer, and Barracuda, a tool that scores content against factors drawn from Google patents. If you want analysis grounded in how the algorithms are actually documented to work, few teams go deeper.</p>
+      <h2 className="text-2xl font-bold mt-8 mb-4">Three more AI SEO agencies that keep showing up in these results</h2>
+      <p className="mb-4">The ten above are the shops we would actually shortlist. But if you run the searches yourself, three more names appear often enough on US results pages that leaving them out would be dishonest. Ranking data below is from a DataForSEO pull on 26/07/2026.</p>
+      <div className="overflow-x-auto mb-6">
+        <table className="min-w-full border-collapse border border-gray-300">
+          <thead className="bg-gray-800 text-white">
+            <tr>
+              <th className="p-3 border text-left">Agency</th>
+              <th className="p-3 border text-left">Page-one keywords they actually hold</th>
+              <th className="p-3 border text-left">What that tells you</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="bg-white">
+              <td className="p-3 border"><strong>Spicy Margarita</strong><br /><span className="text-sm">spicymargarita.co</span></td>
+              <td className="p-3 border">Position 3 for ai seo agency (1,000/mo); position 3 for ai powered seo services (70/mo); position 2 for seo briefs (70/mo)</td>
+              <td className="p-3 border">The most AI-native shop in this whole comparison. It ranks for the exact head term, which almost nobody on the main list does. If you want a specialist rather than a generalist, look here.</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border"><strong>SEO.co</strong><br /><span className="text-sm">seo.co</span></td>
+              <td className="p-3 border">Position 1 for durham seo (260/mo); position 1 for arkansas seo companies (210/mo); position 1 for earned links (110/mo)</td>
+              <td className="p-3 border">City and state level SEO at volume, plus a real link-earning practice. Strong if your growth is geographic rather than category-wide.</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border"><strong>Yes Optimist</strong><br /><span className="text-sm">yesoptimist.com</span></td>
+              <td className="p-3 border">Position 3 for seo saas (590/mo); position 3 for seo agency for b2b (90/mo); position 1 for its own brand (140/mo)</td>
+              <td className="p-3 border">Focused B2B SaaS content shop. Narrow service list, which is usually a good sign. Worth a call if content is your growth engine.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 className="text-2xl font-bold mt-8 mb-4">Where FactoryJet actually stands, in numbers</h2>
+      <p className="mb-4">Putting yourself first on your own list is cheap unless you show the weak spots too, so here they are. FactoryJet has 44 referring domains. Coalition Technologies, which also appears on these results pages, is somewhere near 2,800. Authority is our binding constraint and it is why we compete on low-competition long-tail terms and on how the work is delivered, rather than on brute domain strength.</p>
+      <p className="mb-4">Our strongest US positions today are tenth for local seo nashville and eighth for seo agency austin texas. That is it. We have no case-study numbers to wave at you yet, and we are not going to invent any. What we do have is a delivery model most of this list cannot match at this size: the founder runs your account, you get citation counts per AI engine rather than a rankings PDF, and terms are month to month.</p>
+      <p className="mb-4">If that trade appeals, the details live on our <a href="/services/ai-seo" className="text-orange-600 underline">US AI SEO services page</a>, which covers generative engine optimization and answer engine optimization on one retainer. If it does not, hire the incumbent, and go in knowing exactly what you bought.</p>
+
       <h2 className="text-2xl font-bold mt-8 mb-4">How much do AI SEO agencies cost in the US?</h2>
       <p className="mb-4">We are not going to invent numbers, because almost none of these agencies publish them, and a made-up range helps no one. Instead, here is how US AI SEO pricing actually works, and the three models you will encounter:</p>
       <div className="overflow-x-auto mb-6">
@@ -203,8 +248,8 @@ export const post: BlogPost = {
         <li><a href="https://www.pewresearch.org/short-reads/2025/06/25/34-of-us-adults-have-used-chatgpt-about-double-the-share-in-2023/" className="text-orange-600 underline" target="_blank" rel="noopener noreferrer">Pew Research Center, &quot;34% of US adults have used ChatGPT, about double the share in 2023&quot; (June 25, 2025)</a>: US ChatGPT adoption (34% of adults; 58% of under-30s; 28% of employed adults for work)</li>
         <li>Agency websites verified 06/17/2026: <a href="https://firstpagesage.com/" className="text-orange-600 underline" target="_blank" rel="noopener noreferrer">First Page Sage</a>, <a href="https://ipullrank.com/" className="text-orange-600 underline" target="_blank" rel="noopener noreferrer">iPullRank</a>, <a href="https://www.onely.com/" className="text-orange-600 underline" target="_blank" rel="noopener noreferrer">Onely</a>, <a href="https://www.webfx.com/" className="text-orange-600 underline" target="_blank" rel="noopener noreferrer">WebFX</a>, <a href="https://www.siegemedia.com/" className="text-orange-600 underline" target="_blank" rel="noopener noreferrer">Siege Media</a>, <a href="https://thriveagency.com/" className="text-orange-600 underline" target="_blank" rel="noopener noreferrer">Thrive Agency</a>, <a href="https://www.searchbloom.com/" className="text-orange-600 underline" target="_blank" rel="noopener noreferrer">Searchbloom</a>, <a href="https://20north.com/" className="text-orange-600 underline" target="_blank" rel="noopener noreferrer">20North Marketing</a>, <a href="https://gofishdigital.com/" className="text-orange-600 underline" target="_blank" rel="noopener noreferrer">Go Fish Digital</a></li>
       </ul>
-      <p className="mb-4">---</p>
-      <p className="mb-4"><em>Bhavesh Barot is the founder of FactoryJet. He runs every discovery call himself. If you want to know where your business stands in AI search today, <a href="https://calendly.com/bhavesh-factoryjet/30min" className="text-orange-600 underline" target="_blank" rel="noopener noreferrer">book a 30-minute call</a> or start with a <a href="/services/ai-seo" className="text-orange-600 underline">free AI visibility audit</a>.</em></p>
+      <hr className="my-8 border-gray-200" />
+      <p className="mb-4"><em>Bhavesh Barot is the founder of FactoryJet. He runs every discovery call himself. If you want to know where your business stands in AI search today, <a href="https://calendly.com/bhavesh-factoryjet/30min" className="text-orange-600 underline" target="_blank" rel="noopener noreferrer">book a 30-minute call</a> or start with a <a href="/services/ai-seo" className="text-orange-600 underline">free AI visibility audit on our US AI SEO services page</a>.</em></p>
     </>
   ),
 };

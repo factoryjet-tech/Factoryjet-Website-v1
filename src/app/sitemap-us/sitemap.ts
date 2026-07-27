@@ -51,6 +51,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/services/small-business-seo',                  source: 'src/app/services/small-business-seo/page.tsx' },
   { path: '/services/seo-audit',                           source: 'src/app/services/seo-audit/page.tsx' },
   { path: '/services/seo-consulting',                      source: 'src/app/services/seo-consulting/page.tsx' },
+  { path: '/services/roofing-seo',                         source: 'src/app/services/roofing-seo/page.tsx' },
   { path: '/services/dental-seo',                           source: 'src/app/services/dental-seo/page.tsx' },
   { path: '/services/healthcare-seo',                       source: 'src/app/services/healthcare-seo/page.tsx' },
   { path: '/services/law-firm-seo',                         source: 'src/app/services/law-firm-seo/page.tsx' },
