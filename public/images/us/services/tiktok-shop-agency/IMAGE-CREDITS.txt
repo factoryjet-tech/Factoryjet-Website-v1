@@ -1,0 +1,14 @@
+FactoryJet — /services/tiktok-shop-agency image credits (local record only, no on-page credit)
+==============================================================================================
+
+hero-tiktok-shop-live.webp
+  Source:   Unsplash
+  Photo ID: 5MRJkV_la-w  (livestream selling / behind-the-scenes)
+  Author:   Detail .co (https://unsplash.com/@detail)
+  URL:      https://unsplash.com/photos/5MRJkV_la-w
+  License:  Unsplash License (free for commercial use, no attribution required)
+  Process:  Unsplash imgix (w=1012, h=760, fit=crop, q=82) -> cwebp -q 80
+  Dims:     1012x760  |  Size: ~36 KB
+
+Reused: /bhavesh_image.jpg (founder), /images/us/services/service-team.webp (team).
+Pexels API key still 403 as of 2026-07-11; standardized on Unsplash.

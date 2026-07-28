@@ -425,7 +425,7 @@ export const POSTS: BlogPost[] = [
       </p>
 
       <div className="my-10 text-center">
-        <img src="/architecture-diagram.jpg" alt="WordPress architecture diagram showing React Next.js frontend connected to WordPress CMS backend via API" className="rounded-lg mx-auto shadow-md" />
+        <img src="/architecture-diagram.svg" alt="Headless WordPress architecture: a visitor's browser loads a React and Next.js frontend, which requests content from WordPress over a REST or GraphQL API, while the editorial team writes in WordPress and content is stored in a MySQL database" className="rounded-lg mx-auto shadow-md" width="960" height="420" loading="lazy" />
       </div>
 
       <h2 className="text-2xl font-bold mt-12 mb-6 text-slate-900">Technical Comparison</h2>

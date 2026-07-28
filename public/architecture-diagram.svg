@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img"
+     aria-labelledby="hw-title hw-desc" font-family="Inter, ui-sans-serif, system-ui, sans-serif">
+  <title id="hw-title">Headless WordPress architecture</title>
+  <desc id="hw-desc">A visitor's browser loads a React and Next.js frontend. The frontend requests content from
+    WordPress over a REST or GraphQL API. WordPress stores that content in a MySQL database and is where the
+    editorial team writes. The frontend and the CMS are separate systems joined only by the API.</desc>
+
+  <rect width="960" height="420" fill="#FAFAF7"/>
+
+  <!-- ── column headings ─────────────────────────────────────────────── -->
+  <text x="150" y="40" text-anchor="middle" font-size="12" font-weight="700"
+        letter-spacing="1.6" fill="#B23E13">WHAT VISITORS TOUCH</text>
+  <text x="722" y="40" text-anchor="middle" font-size="12" font-weight="700"
+        letter-spacing="1.6" fill="#B23E13">WHAT YOUR TEAM TOUCHES</text>
+
+  <!-- divider between the two halves -->
+  <line x1="480" y1="58" x2="480" y2="392" stroke="#1A1A1A" stroke-opacity="0.12"
+        stroke-width="1" stroke-dasharray="4 6"/>
+
+  <!-- ── browser ─────────────────────────────────────────────────────── -->
+  <rect x="40" y="150" width="220" height="120" rx="16" fill="#FFFFFF"
+        stroke="#1A1A1A" stroke-opacity="0.16" stroke-width="1.5"/>
+  <rect x="40" y="150" width="220" height="34" rx="16" fill="#1A1A1A" fill-opacity="0.045"/>
+  <rect x="40" y="167" width="220" height="17" fill="#1A1A1A" fill-opacity="0.045"/>
+  <circle cx="60" cy="167" r="4.5" fill="#1A1A1A" fill-opacity="0.22"/>
+  <circle cx="76" cy="167" r="4.5" fill="#1A1A1A" fill-opacity="0.22"/>
+  <circle cx="92" cy="167" r="4.5" fill="#1A1A1A" fill-opacity="0.22"/>
+  <text x="150" y="222" text-anchor="middle" font-size="19" font-weight="700" fill="#1A1A1A">Visitor's browser</text>
+  <text x="150" y="246" text-anchor="middle" font-size="14" fill="#1A1A1A" fill-opacity="0.72">Sees a fast static page</text>
+
+  <!-- browser -> frontend -->
+  <line x1="264" y1="210" x2="330" y2="210" stroke="#1A1A1A" stroke-opacity="0.45" stroke-width="2"/>
+  <polygon points="342,210 330,204 330,216" fill="#1A1A1A" fill-opacity="0.45"/>
+
+  <!-- ── frontend ────────────────────────────────────────────────────── -->
+  <rect x="348" y="140" width="132" height="140" rx="16" fill="#F05A28"/>
+  <text x="414" y="196" text-anchor="middle" font-size="19" font-weight="700" fill="#FFFFFF">React</text>
+  <text x="414" y="222" text-anchor="middle" font-size="19" font-weight="700" fill="#FFFFFF">+ Next.js</text>
+  <text x="414" y="248" text-anchor="middle" font-size="14" fill="#FFFFFF" fill-opacity="0.92">Frontend</text>
+
+  <!-- ── the API link ────────────────────────────────────────────────── -->
+  <line x1="480" y1="188" x2="612" y2="188" stroke="#1A1A1A" stroke-opacity="0.45" stroke-width="2"/>
+  <polygon points="624,188 612,182 612,194" fill="#1A1A1A" fill-opacity="0.45"/>
+  <text x="552" y="176" text-anchor="middle" font-size="13" font-weight="600" fill="#B23E13">asks for content</text>
+
+  <line x1="612" y1="232" x2="480" y2="232" stroke="#1A1A1A" stroke-opacity="0.45" stroke-width="2"/>
+  <polygon points="468,232 480,226 480,238" fill="#1A1A1A" fill-opacity="0.45"/>
+  <text x="552" y="252" text-anchor="middle" font-size="13" font-weight="600" fill="#B23E13">sends back JSON</text>
+
+  <text x="552" y="292" text-anchor="middle" font-size="12" font-weight="700"
+        letter-spacing="1.2" fill="#1A1A1A" fill-opacity="0.55">REST OR GRAPHQL API</text>
+
+  <!-- ── WordPress CMS ───────────────────────────────────────────────── -->
+  <rect x="630" y="140" width="184" height="140" rx="16" fill="#FFFFFF"
+        stroke="#1A1A1A" stroke-opacity="0.16" stroke-width="1.5"/>
+  <text x="722" y="192" text-anchor="middle" font-size="19" font-weight="700" fill="#1A1A1A">WordPress</text>
+  <text x="722" y="216" text-anchor="middle" font-size="14" fill="#1A1A1A" fill-opacity="0.72">Admin and editor</text>
+  <text x="722" y="244" text-anchor="middle" font-size="14" fill="#1A1A1A" fill-opacity="0.72">Content lives here</text>
+
+  <!-- CMS -> database -->
+  <line x1="722" y1="284" x2="722" y2="318" stroke="#1A1A1A" stroke-opacity="0.45" stroke-width="2"/>
+  <polygon points="722,330 716,318 728,318" fill="#1A1A1A" fill-opacity="0.45"/>
+
+  <!-- ── database ────────────────────────────────────────────────────── -->
+  <ellipse cx="722" cy="344" rx="62" ry="12" fill="#FFFFFF" stroke="#1A1A1A"
+           stroke-opacity="0.16" stroke-width="1.5"/>
+  <path d="M660 344 v26 a62 12 0 0 0 124 0 v-26" fill="#FFFFFF" stroke="#1A1A1A"
+        stroke-opacity="0.16" stroke-width="1.5"/>
+  <text x="722" y="396" text-anchor="middle" font-size="14" fill="#1A1A1A" fill-opacity="0.72">MySQL database</text>
+
+  <!-- ── editor ──────────────────────────────────────────────────────── -->
+  <text x="880" y="196" text-anchor="middle" font-size="14" font-weight="600" fill="#1A1A1A">Your team</text>
+  <text x="880" y="218" text-anchor="middle" font-size="13" fill="#1A1A1A" fill-opacity="0.72">writes here</text>
+  <line x1="838" y1="210" x2="818" y2="210" stroke="#1A1A1A" stroke-opacity="0.45" stroke-width="2"/>
+  <polygon points="806,210 818,204 818,216" fill="#1A1A1A" fill-opacity="0.45"/>
+</svg>

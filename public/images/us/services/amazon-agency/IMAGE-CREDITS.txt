@@ -1,0 +1,20 @@
+FactoryJet — /services/amazon-agency image credits (local record only, no on-page credit)
+=========================================================================================
+
+hero-amazon-fulfillment.webp
+  Source:   Unsplash
+  Photo ID: MGaFENpDCsw  ("Ships out today")
+  Author:   Bench Accounting (https://unsplash.com/@benchaccounting)
+  URL:      https://unsplash.com/photos/MGaFENpDCsw
+  License:  Unsplash License (free for commercial use, no attribution required)
+  Process:  downloaded via Unsplash imgix (w=1012, fit=crop, q=82, fm=jpg) -> cwebp -q 80
+  Dims:     1012x676  |  Size: ~47 KB
+
+Reused (not stored in this folder):
+  /bhavesh_image.jpg                         -> founder avatar (E-E-A-T)
+  /images/us/services/service-team.webp      -> team frame (E-E-A-T)
+
+Fallback candidate (not downloaded): Unsplash BNBA1h-NgdY (CHUTTERSNAP), clean fulfillment
+shelves, no people. Fetch if a people-free hero is preferred.
+
+Note: Pexels API key returned HTTP 403 during this build; standardized on Unsplash.
