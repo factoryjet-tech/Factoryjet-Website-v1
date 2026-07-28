@@ -220,6 +220,12 @@ export const post: BlogPost = {
         The practical implication: a GEO agency that leads with "we will add schema markup to your site" is behind the research. The right GEO program looks like original research, expert content, and citation building — not just on-page technical tweaks.
       </p>
 
+      <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg mb-8">
+        <h3 className="text-lg font-bold mb-3">Want to know if AI engines already mention you?</h3>
+        <p className="mb-4">Before hiring anyone for GEO, it helps to see where you currently stand across ChatGPT, Perplexity and Google AI Overviews. FactoryJet covers GEO and AEO inside one AI SEO engagement, reported per engine.</p>
+        <a href="/services/ai-seo" className="inline-block bg-[#B23E13] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#9A3510] transition-colors">See AI SEO services &rarr;</a>
+      </div>
+
       <h2 className="text-2xl font-bold mt-10 mb-6">The 10 Best GEO Agencies (2026)</h2>
 
       {/* Entry 1 */}

@@ -519,6 +519,12 @@ export const post: BlogPost = {
 
       <hr className="my-8 border-gray-200" />
 
+      <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg mb-8">
+        <h3 className="text-lg font-bold mb-3">Want a real number for your build?</h3>
+        <p className="mb-4">Every quote above is a range because scope is what moves the price. FactoryJet scopes Shopify builds on a short call and puts the figure in writing before any work starts, so you are comparing like for like rather than guessing.</p>
+        <a href="/services/shopify-development" className="inline-block bg-[#B23E13] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#9A3510] transition-colors">See Shopify development &rarr;</a>
+      </div>
+
       <h2 className="text-2xl font-bold mt-8 mb-4">What Drives Cost Down</h2>
       <p className="mb-4">
         <strong>Having your content ready at kickoff:</strong> Product photography, copy, and brand

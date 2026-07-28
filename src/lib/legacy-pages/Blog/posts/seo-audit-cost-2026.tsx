@@ -449,6 +449,12 @@ export const post: BlogPost = {
       </ul>
 
       {/* ── RED FLAGS ───────────────────────────────────────────────────── */}
+      <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg mb-8">
+        <h3 className="text-lg font-bold mb-3">Want to know what an audit would find on your site?</h3>
+        <p className="mb-4">An audit is only worth paying for if it ends with a prioritised list you can act on. FactoryJet runs the technical, content and authority checks in one pass and walks you through the findings directly.</p>
+        <a href="/services/seo-audit" className="inline-block bg-[#B23E13] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#9A3510] transition-colors">See SEO audit &rarr;</a>
+      </div>
+
       <h2>Red Flags in Any SEO Audit Proposal</h2>
       <p>
         Before paying for an SEO audit, these signals indicate you will receive a data dump rather

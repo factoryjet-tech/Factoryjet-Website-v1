@@ -202,6 +202,12 @@ export const post: BlogPost = {
         See our <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">US web design service overview</a> for how we scope Webflow and WordPress builds against each other.
       </p>
 
+      <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg mb-8">
+        <h3 className="text-lg font-bold mb-3">Still deciding which platform to build on?</h3>
+        <p className="mb-4">The platform matters less than whether the build is fast, accessible and easy for your team to run. FactoryJet builds on Webflow, WordPress and custom Next.js, and recommends the fit rather than pushing one option.</p>
+        <a href="/services/web-design" className="inline-block bg-[#B23E13] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#9A3510] transition-colors">See web design services &rarr;</a>
+      </div>
+
       <h2 className="text-2xl font-bold mt-8 mb-4">When WordPress Wins for US Small Businesses</h2>
       <p className="mb-4">
         WordPress is the right call in a different set of scenarios — most of them tied to content depth, ecosystem needs, or budget reality.

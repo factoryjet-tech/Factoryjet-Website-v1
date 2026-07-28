@@ -29,7 +29,7 @@ export const post: BlogPost = {
   faqs: [
     {
       q: 'What is the best AI agent development company for small business?',
-      a: "There is no single best — the right company depends on your use case, budget, and how custom your workflows are. FactoryJet is purpose-built for US SMBs with a $5,000 entry point and short delivery windows. Lindy.ai is the best self-serve platform for founders who want to avoid agency fees entirely. Master of Code Global and Intellectyx are stronger choices if you are in a regulated vertical (healthcare, finance) and need enterprise-grade compliance. Match the company to your use case rather than chasing a generic 'best' label.",
+      a: "There is no single best — the right company depends on your use case, budget, and how custom your workflows are. FactoryJet is purpose-built for US SMBs, with scoped fixed-price builds and short delivery windows. Lindy.ai is the best self-serve platform for founders who want to avoid agency fees entirely. Master of Code Global and Intellectyx are stronger choices if you are in a regulated vertical (healthcare, finance) and need enterprise-grade compliance. Match the company to your use case rather than chasing a generic 'best' label.",
     },
     {
       q: 'What is AI agent development?',
@@ -97,7 +97,7 @@ export const post: BlogPost = {
     },
     {
       q: 'What is the best AI automation company for small business?',
-      a: "Best depends on the type of automation. For full-custom AI agent builds, FactoryJet is specifically scoped for SMBs with a $5,000 minimum. For no-code automation with AI capabilities, Lindy.ai and Make.com are the most SMB-accessible. For businesses needing voice agent or conversational AI layers, Master of Code Global has strong case studies in those areas. For data-heavy operations like invoice processing or compliance workflows, Intellectyx brings domain expertise that generalist agencies cannot replicate.",
+      a: "Best depends on the type of automation. For full-custom AI agent builds, FactoryJet is specifically scoped for SMBs, quoted per project before work starts. For no-code automation with AI capabilities, Lindy.ai and Make.com are the most SMB-accessible. For businesses needing voice agent or conversational AI layers, Master of Code Global has strong case studies in those areas. For data-heavy operations like invoice processing or compliance workflows, Intellectyx brings domain expertise that generalist agencies cannot replicate.",
     },
     {
       q: 'What is the AI agent development timeline for a typical SMB project?',
@@ -167,7 +167,7 @@ export const post: BlogPost = {
           <tbody>
             <tr>
               <td style={{padding: '8px 12px', border: '1px solid #e2e8f0'}}>FactoryJet</td>
-              <td style={{padding: '8px 12px', border: '1px solid #e2e8f0'}}>From $5,000</td>
+              <td style={{padding: '8px 12px', border: '1px solid #e2e8f0'}}>Scoped per project</td>
               <td style={{padding: '8px 12px', border: '1px solid #e2e8f0'}}>Lead qual, booking, support, doc extraction</td>
               <td style={{padding: '8px 12px', border: '1px solid #e2e8f0'}}>7 days–4 weeks</td>
               <td style={{padding: '8px 12px', border: '1px solid #e2e8f0'}}>US SMBs wanting fast delivery + US account mgmt</td>
@@ -253,7 +253,7 @@ export const post: BlogPost = {
         </Link>
       </p>
       <p className="mb-3">
-        FactoryJet builds AI agents for US small businesses starting at $5,000. The core use cases we cover are lead qualification agents (qualify inbound leads from contact forms, route to calendar or nurture sequence), appointment booking agents (connect to Google Calendar or Calendly, handle rescheduling and reminders), customer support agents (tier-1 ticket deflection, order status, FAQ responses), and document extraction agents (pull structured data from invoices, intake forms, and PDFs into your CRM).
+        FactoryJet builds AI agents for US small businesses, scoped and quoted per project. The core use cases we cover are lead qualification agents (qualify inbound leads from contact forms, route to calendar or nurture sequence), appointment booking agents (connect to Google Calendar or Calendly, handle rescheduling and reminders), customer support agents (tier-1 ticket deflection, order status, FAQ responses), and document extraction agents (pull structured data from invoices, intake forms, and PDFs into your CRM).
       </p>
       <p className="mb-3">
         Simple single-function automations go live in 7 days. Full multi-integration agent builds take 2–4 weeks. Contracts are month-to-month with no lock-in, and account management is handled during US business hours.
@@ -457,7 +457,7 @@ export const post: BlogPost = {
       <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg mb-8">
         <h3 className="text-lg font-bold mb-3">Build an AI agent for your small business</h3>
         <p className="mb-4">
-          FactoryJet builds AI agents for US small businesses starting at $5,000. Lead qualification, appointment booking, customer support, and document extraction — live in 2–4 weeks, with US-hour account management.
+          FactoryJet builds AI agents for US small businesses, scoped and quoted per project. Lead qualification, appointment booking, customer support, and document extraction — live in 2–4 weeks, with US-hour account management.
         </p>
         <Link
           href="/services/ai-agents"

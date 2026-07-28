@@ -303,6 +303,12 @@ export const post: BlogPost = {
       </p>
 
       {/* Section 4 */}
+      <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg mb-8">
+        <h3 className="text-lg font-bold mb-3">Not sure which model fits your business?</h3>
+        <p className="mb-4">The right answer depends on how competitive your market is and how much you can execute in house. FactoryJet scopes SEO engagements to the work that will actually move rankings and leads, quoted before anything begins.</p>
+        <a href="/services/seo" className="inline-block bg-[#B23E13] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#9A3510] transition-colors">See SEO services &rarr;</a>
+      </div>
+
       <h2 id="freelancer-vs-agency" className="text-2xl font-bold mt-10 mb-4">Freelancer vs. Agency vs. In-House: The Real Cost Comparison</h2>
 
       <div className="overflow-x-auto my-6">
