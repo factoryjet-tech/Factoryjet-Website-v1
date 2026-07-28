@@ -15,8 +15,7 @@ import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import TalkToFounder from '@/components/v2/TalkToFounder';
-// import AiVisibilityCtaBand from '@/components/ai-visibility/AiVisibilityCtaBand';
-// ^ restore together with the usage below when src/components/ai-visibility/ is committed.
+import AiVisibilityCtaBand from '@/components/ai-visibility/AiVisibilityCtaBand';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /us/services/ai-seo - PR #2 Framework B+ launch (2026-05-25)
@@ -1809,14 +1808,8 @@ export default function AiSeoServicePage() {
       {/* ─── 9. Case study placeholder (light buffer between dark sections) */}
       <CaseStudyPlaceholder />
 
-      {/* ─── 9b. Free AI Visibility Checker - lead magnet funnel ────────────
-          TEMPORARILY REMOVED 2026-07-27. <AiVisibilityCtaBand /> lives in
-          src/components/ai-visibility/, which is not committed yet because the
-          checker is waiting on the Seen-in-Search backend deploy. Importing an
-          untracked module built fine locally but broke the Cloudflare build
-          ("Module not found"). Restore this line and the import on line 18 in the
-          same commit that ships src/components/ai-visibility/ and
-          src/app/ai-visibility-checker/. */}
+      {/* ─── 9b. Free AI Visibility Checker - lead magnet funnel ───────── */}
+      <AiVisibilityCtaBand />
 
       {/* ─── 10. FAQ - 21 across 5 categories ────────────────────────────── */}
       <FAQ

@@ -43,6 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/pricing',   source: 'src/app/pricing/page.tsx' },
     { path: '/glossary',  source: 'src/app/glossary/page.tsx' },
     { path: '/sitemap',   source: 'src/app/sitemap/page.tsx' },
+    { path: '/ai-visibility-checker', source: 'src/app/ai-visibility-checker/page.tsx' },
   ]
 
   const legal: { path: string; source: string }[] = [

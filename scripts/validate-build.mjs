@@ -218,6 +218,12 @@ const LEAD_FORM_ALLOW = new Set([
   // newsletter input is off-brand template cruft, not a sales-lead form; should
   // be deleted rather than wired into the lead pipeline. Allowlisted 2026-06-22.
   'src/lib/legacy-pages/Blog/App.tsx',
+  // AI Visibility Checker gate. NOT decorative — it captures the lead durably via
+  // POST /api/ai-scan, which forwards to the SAME proven /api/notify-lead pipeline
+  // (server-side Firestore REST write + Resend email) that submitLead() uses, then
+  // triggers the Seen-in-Search scan. It just does the capture server-side rather
+  // than through the submitLead() client helper. Allowlisted 2026-07-23.
+  'src/components/ai-visibility/CheckerTool.tsx',
 ]);
 for (const f of srcFiles) {
   if (LEAD_FORM_SELF.test(f) || LEAD_FORM_ALLOW.has(rel(f))) continue;

@@ -10,6 +10,7 @@ import ComparisonTable from '@/components/v2/ComparisonTable';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import JsonLd from '@/components/JsonLd';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import AiVisibilityCtaBand from '@/components/ai-visibility/AiVisibilityCtaBand';
 
 import './agentic-commerce.css';
 
@@ -383,6 +384,9 @@ export default function AgenticCommercePage() {
             </div>
           </div>
         </section>
+
+        {/* Free AI Visibility Checker — lead magnet funnel */}
+        <AiVisibilityCtaBand />
 
         {/* FAQ */}
         <FAQ

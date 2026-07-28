@@ -8,11 +8,11 @@
     "dev": "next dev",
     "validate": "node scripts/validate-build.mjs",
     "test:geo": "node scripts/test-geo-redirect.mjs",
-    "prebuild": "node scripts/validate-build.mjs && node scripts/test-geo-redirect.mjs",
+    "prebuild": "node scripts/check-tracked-imports.mjs && node scripts/validate-build.mjs && node scripts/test-geo-redirect.mjs",
     "build": "next build",
     "start": "next start",
     "preview": "next start",
-    "pages:build": "node scripts/validate-build.mjs && node scripts/test-geo-redirect.mjs && npx @cloudflare/next-on-pages",
+    "pages:build": "node scripts/check-tracked-imports.mjs && node scripts/validate-build.mjs && node scripts/test-geo-redirect.mjs && npx @cloudflare/next-on-pages",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

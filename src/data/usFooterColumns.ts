@@ -56,12 +56,13 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
   {
     heading: 'AI Services',
     links: [
+      { label: 'AI Visibility Checker',  href: '/ai-visibility-checker' },
+      { label: 'AI SEO',                 href: '/services/ai-seo' },
       { label: 'AI Agents',              href: '/services/ai-agents' },
       { label: 'AI Chatbot Development', href: '/services/ai-chatbot-development' },
       { label: 'AI Automation',          href: '/services/ai-automation' },
       { label: 'AI Integration',         href: '/services/ai-integration-services' },
       { label: 'AI Workflow Automation', href: '/services/ai-workflow-automation' },
-      { label: 'AI Agency',              href: '/services/ai-agency' },
     ],
   },
   {

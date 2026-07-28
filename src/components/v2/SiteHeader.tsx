@@ -95,6 +95,7 @@ const US_SUPPORT_SERVICES = [
   { icon: TrendingUp, label: 'SEO Services',        href: '/services/seo',                         desc: 'Rank on Google' },
   { icon: MapPin,     label: 'Local SEO',           href: '/services/local-seo',                   desc: 'Map pack & near-me' },
   { icon: Sparkles,   label: 'AI SEO',              href: '/services/ai-seo',                      desc: 'Get cited in AI answers' },
+  { icon: Search,     label: 'AI Visibility Checker', href: '/ai-visibility-checker',              desc: 'Does AI recommend you? Free' },
   { icon: Zap,        label: 'AI Automation',       href: '/services/ai-automation',               desc: 'Eliminate repetitive work' },
 ] as const;
 
@@ -261,6 +262,7 @@ const IN_SEO_SERVICES = [
   { icon: Link2,        label: 'Link Building', href: '/seo/link-building', desc: 'Real off-page links' },
   { icon: Search,       label: 'SEO Audit',     href: '/seo/seo-audit',     desc: 'Free site check' },
   { icon: Cpu,          label: 'AI SEO',        href: '/ai-seo',            desc: 'Get cited by AI' },
+  { icon: Megaphone,    label: 'Digital Marketing', href: '/digital-marketing', desc: 'SEO, ads, social & AI' },
 ] as const;
 
 // Regional groupings for the 3-column mega Locations panel (India)

@@ -10,6 +10,8 @@ import HeroOmnichannel from '@/components/v2/HeroOmnichannel';
 import FAQ from '@/components/v2/FAQ';
 import { ProblemSection, SolutionSection, PillarsSection, ComparisonSection, ProofSection } from '@/components/v2/UsHomeSections';
 import { AgentConsole, GrowthSurfaces, FinalCtaSection } from '@/components/v2/UsHomeInteractive';
+import AiVisibilityCtaBand from '@/components/ai-visibility/AiVisibilityCtaBand';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /us homepage — omnichannel / B2B e-commerce repositioning (2026-06-26)
@@ -145,6 +147,7 @@ export default function USHomePage() {
         'url': 'https://factoryjet.com/',
         'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['h1', '.faq-answer', '[data-speakable]'] },
       }) }} />
+      <BreadcrumbSchema items={[{ name: 'Home', url: 'https://factoryjet.com' }]} />
 
       <SiteHeader
         navLinks={[
@@ -161,6 +164,93 @@ export default function USHomePage() {
       <main className="bg-fj-cream">
         {/* 2. Hero */}
         <HeroOmnichannel />
+        {/* 2b. Answer-first definitional block + cited stats (GEO / AI-citation) */}
+        <section
+          aria-labelledby="answer-first-h"
+          className="py-14 md:py-20"
+          style={{ backgroundColor: '#FAFAF7', borderBottom: '1.5px solid rgba(240,90,40,0.18)' }}
+        >
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <div className="max-w-3xl">
+              <p
+                className="font-fj-mono font-semibold uppercase"
+                style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#B23E13' }}
+              >
+                In plain terms
+              </p>
+              <h2
+                id="answer-first-h"
+                className="mt-4 font-fj-display font-bold text-fj-ink"
+                style={{ fontSize: 'clamp(1.75rem, 3.2vw, 2.5rem)', lineHeight: 1.1, letterSpacing: '-0.03em' }}
+              >
+                What FactoryJet is, in one paragraph.
+              </h2>
+              <p
+                data-speakable="true"
+                className="mt-5 font-fj-body text-fj-neutral-600"
+                style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}
+              >
+                FactoryJet is an e-commerce development agency that builds omnichannel commerce for
+                DTC and B2B brands in the United States. We design, build, and run one system that
+                ties your online store, marketplaces like Amazon, Walmart, and TikTok Shop, and your
+                B2B portals together, so every channel works from one catalog, one live inventory,
+                and one order queue. The payoff is simple: you stop overselling, you stop typing the
+                same product into every channel by hand, and your team gets back the hours it used to
+                spend reconciling numbers. We build on Shopify, Shopify Plus, Adobe Commerce
+                (Magento), BigCommerce, WooCommerce, headless, or Commerceflo, and hand you a system
+                your own team owns and runs.
+              </p>
+            </div>
+
+            {/* Cited stats, each carrying a real, resolving outbound source */}
+            <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3">
+              {[
+                {
+                  value: '70%',
+                  label:
+                    'of online shopping carts are abandoned before checkout, so the store you sell from has to load fast and be easy to buy from.',
+                  href: 'https://baymard.com/lists/cart-abandonment-rate',
+                  source: 'Baymard Institute, average of 50 studies',
+                },
+                {
+                  value: '16.9%',
+                  label:
+                    'of all US retail sales now happen online, and that share climbs almost every quarter.',
+                  href: 'https://www.census.gov/retail/ecommerce.html',
+                  source: 'US Census Bureau, Q1 2026',
+                },
+                {
+                  value: '1,200%',
+                  label:
+                    'rise in visits to US retail sites from AI tools like ChatGPT, between July 2024 and February 2025.',
+                  href: 'https://blog.adobe.com/en/publish/2025/03/17/adobe-analytics-traffic-to-us-retail-websites-from-generative-ai-sources-jumps-1200-percent',
+                  source: 'Adobe Analytics',
+                },
+              ].map((stat) => (
+                <div key={stat.value}>
+                  <p
+                    className="font-fj-display font-bold"
+                    style={{ fontSize: 'clamp(2.25rem, 4vw, 3rem)', lineHeight: 1, letterSpacing: '-0.04em', color: '#F05A28' }}
+                  >
+                    {stat.value}
+                  </p>
+                  <p className="mt-3 font-fj-body text-[0.9375rem] leading-[1.5] text-fj-neutral-600">
+                    {stat.label}
+                  </p>
+                  <a
+                    href={stat.href}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className="mt-3 inline-block font-fj-mono underline underline-offset-2 hover:no-underline"
+                    style={{ fontSize: '0.75rem', letterSpacing: '0.02em', color: '#B23E13' }}
+                  >
+                    Source: {stat.source} ↗
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
         {/* 3. The fragmented-commerce tax */}
         <ProblemSection />
         {/* 4. The unified shape */}
@@ -171,6 +261,8 @@ export default function USHomePage() {
         <AgentConsole />
         {/* 7. Commerce growth / visibility surfaces */}
         <GrowthSurfaces />
+        {/* 7b. Free AI Visibility Checker — lead magnet funnel */}
+        <AiVisibilityCtaBand />
         {/* 8. A pile of tools vs a partner */}
         <ComparisonSection />
         {/* 9. Proof, select client work */}
