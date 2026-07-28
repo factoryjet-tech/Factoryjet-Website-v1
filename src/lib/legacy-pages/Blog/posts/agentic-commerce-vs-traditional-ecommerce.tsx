@@ -13,7 +13,7 @@ export const post: BlogPost = {
   readTime: '13 min read',
   imageUrl: '/blog-images/agentic-commerce-vs-traditional-ecommerce.webp',
   imageAlt:
-    'Side-by-side comparison of traditional ecommerce, where a shopper browses a product page on a phone, and agentic commerce, where an AI agent reads structured product data and completes checkout',
+    'A smartphone showing a product page beside a small voice assistant device, representing the shift from a shopper browsing a store themselves to an AI agent buying on their behalf',
   meta: {
     title: 'Agentic Commerce vs Traditional Ecommerce: What Actually Changes',
     description:

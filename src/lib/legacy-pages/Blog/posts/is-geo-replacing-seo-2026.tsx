@@ -13,7 +13,7 @@ export const post: BlogPost = {
   readTime: '12 min read',
   imageUrl: '/blog-images/is-geo-replacing-seo-2026.webp',
   imageAlt:
-    'A single road splitting into two signposts marked SEO and GEO that merge back into one path, representing generative engine optimisation building on search engine optimisation rather than replacing it',
+    'A country road that forks into two lanes and rejoins further ahead, representing generative engine optimisation building on search engine optimisation rather than replacing it',
   meta: {
     title: 'Is GEO Replacing SEO in 2026? The Real Answer (UK)',
     description:

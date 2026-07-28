@@ -144,7 +144,7 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: '/blog-images/best-ai-for-ecommerce-2026.webp',
   imageAlt:
-    'Chart mapping six ecommerce jobs to be done against the AI tool categories that work for each in 2026',
+    'An ecommerce studio desk with a laptop surrounded by unbranded product packaging, representing AI tools used in the day to day running of a real online store',
   meta: {
     title: 'The Best AI for Ecommerce in 2026: What Actually Works',
     description:

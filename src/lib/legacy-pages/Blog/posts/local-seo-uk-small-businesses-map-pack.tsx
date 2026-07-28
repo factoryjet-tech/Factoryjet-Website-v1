@@ -13,7 +13,7 @@ export const post: BlogPost = {
   readTime: '12 min read',
   imageUrl: '/blog-images/local-seo-uk-small-businesses-map-pack.webp',
   imageAlt:
-    'A UK high street storefront highlighted on a phone map with a small cluster of star ratings above it, representing a local small business appearing in the Google Map Pack',
+    'A UK high street shopfront lit up on a quiet early morning, representing a local small business competing for visibility in the Google Map Pack',
   meta: {
     title: 'Local SEO for UK Small Businesses: What Moves the Map Pack',
     description:

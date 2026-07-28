@@ -12,7 +12,7 @@ export const post: BlogPost = {
   date: 'Jul 16, 2026',
   readTime: '11 min read',
   imageUrl: '/blog-images/how-to-sell-on-walmart-marketplace-2026.webp',
-  imageAlt: 'Warehouse worker scanning boxed inventory for Walmart Marketplace fulfillment',
+  imageAlt: 'Hands scanning a plain cardboard box at a warehouse packing bench, representing the inventory and fulfilment work behind selling on a large online marketplace',
   meta: {
     title: 'How to Sell on Walmart Marketplace in 2026: Step-by-Step Guide',
     description:

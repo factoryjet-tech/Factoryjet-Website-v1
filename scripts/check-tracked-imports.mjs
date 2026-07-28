@@ -130,7 +130,81 @@ for (const file of sources) {
   }
 }
 
+/* ───────────────────────────────────────────────────────────────────────────
+   Static asset references.
+
+   Added 2026-07-28 after an audit found 13 live blog posts serving a 404 hero
+   image (and a 404 og:image with it). Same failure class as the imports above:
+   the reference looks fine in the editor, but the file is either absent or was
+   never `git add`ed, so production 404s. The import scanner could not catch it
+   because an image is referenced by string path, not by `import`.
+
+   Deliberately conservative: only paths that start with "/" AND end in a known
+   asset extension are checked, so route strings like href="/services/seo" and
+   API paths like "/api/notify-lead" are never mistaken for files.
+   ─────────────────────────────────────────────────────────────────────────── */
+const ASSET_EXT = /\.(webp|jpe?g|png|svg|avif|gif|ico|mp4|webm|pdf|txt|xml|json)$/i
+const ASSET_REF_RE = /['"](\/[A-Za-z0-9._\-/@]+)['"]/g
+
+/**
+ * Routes Next.js GENERATES at build time. These are served fine in production
+ * despite having no file in public/, so flagging them is a false positive.
+ * Verified: /sitemap.xml returns 200 live while absent from public/.
+ */
+const GENERATED_ROUTE = /^\/(sitemap[\w-]*\.xml|[\w-]+\/sitemap\.xml|robots\.txt|manifest\.(json|webmanifest)|favicon\.ico|opengraph-image.*|twitter-image.*)$/i
+
+const assetMissing = [] // referenced, not on disk at all
+const assetUntracked = [] // on disk, but not committed
+
+for (const file of sources) {
+  const src = readFileSync(join(ROOT, file), 'utf8')
+  // Strip BOTH line and block comments. Block comments matter: JSDoc examples
+  // like `image: '/images/services/foo.webp'` are documentation, not references.
+  const cleaned = src.replace(/\/\*[\s\S]*?\*\//g, '').replace(/^\s*\/\/.*$/gm, '')
+  ASSET_REF_RE.lastIndex = 0
+  let m
+  const seen = new Set()
+  while ((m = ASSET_REF_RE.exec(cleaned))) {
+    const ref = m[1]
+    if (!ASSET_EXT.test(ref) || seen.has(ref) || GENERATED_ROUTE.test(ref)) continue
+    seen.add(ref)
+    const onDisk = join(ROOT, 'public', ref)
+    const repoRel = `public${ref}`
+    if (!existsSync(onDisk)) assetMissing.push({ file, ref })
+    else if (!tracked.has(repoRel)) assetUntracked.push({ file, ref, target: repoRel })
+  }
+}
+
 let bad = false
+
+/*
+ * NON-FATAL on purpose. A missing asset still BUILDS fine, it just 404s at
+ * runtime, and there is a known pre-existing backlog (27 as of 2026-07-28:
+ * the UK og:image set, the case-study images, and two strays). Failing the
+ * build on those would block every deploy until all of them are authored.
+ * Warn loudly, do not gate. Contrast with untracked assets below, which are
+ * always a fresh mistake and are gated.
+ */
+if (assetMissing.length) {
+  console.warn(`\n⚠ ${assetMissing.length} asset reference(s) point at a file that does not exist (these 404 in production):\n`)
+  for (const a of assetMissing) console.warn(`   ${a.file}\n      references ${a.ref}\n`)
+  console.warn('  Not blocking the build. Fix by creating the asset or correcting the path.\n')
+}
+
+/*
+ * FATAL. The asset is sitting on disk looking correct locally, but was never
+ * `git add`ed, so production 404s it. This is the trap that shipped 13 blog
+ * posts with a broken hero and og:image. Always a fresh, one-command fix.
+ */
+if (assetUntracked.length) {
+  bad = true
+  console.error(
+    `\n✖ ${assetUntracked.length} asset(s) exist on your machine but are NOT committed.` +
+      `\n  They will 404 in production:\n`
+  )
+  for (const a of assetUntracked) console.error(`   ${a.file}\n      references ${a.ref}\n      resolves   ${a.target}   <-- not in git\n`)
+  console.error('  Fix: `git add` the asset.\n')
+}
 
 if (untracked.length) {
   bad = true
@@ -155,7 +229,9 @@ if (unresolved.length) {
 }
 
 if (!bad) {
-  console.log(`✅ check-tracked-imports: passed (${sources.length} tracked source files scanned).`)
+  console.log(
+    `✅ check-tracked-imports: passed (${sources.length} tracked source files scanned, imports + static assets).`
+  )
 } else {
   process.exit(1)
 }

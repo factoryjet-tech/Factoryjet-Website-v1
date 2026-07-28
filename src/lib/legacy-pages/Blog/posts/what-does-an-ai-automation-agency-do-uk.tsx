@@ -13,7 +13,7 @@ export const post: BlogPost = {
   readTime: '13 min read',
   imageUrl: '/blog-images/what-does-an-ai-automation-agency-do-uk.webp',
   imageAlt:
-    'A UK small business owner watching a simple automated workflow run quietly in the background between an inbox, a CRM and a helpdesk tool, illustrating what a genuine AI automation agency actually builds',
+    'A quiet UK office desk at dusk with a workflow still running on an open laptop, illustrating the routine work a genuine AI automation agency takes off your hands',
   meta: {
     title: 'What Does an AI Automation Agency Actually Do? (UK Guide)',
     description:
