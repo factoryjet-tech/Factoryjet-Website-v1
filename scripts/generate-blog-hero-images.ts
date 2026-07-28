@@ -52,6 +52,15 @@ type Spec = { file: string; prompt: string; alt: string }
 
 const SPECS: Spec[] = [
   {
+    file: 'best-seo-agencies-usa',
+    prompt:
+      'A bright US agency boardroom prepared for a client review, a long walnut table with several empty ' +
+      'chairs, one chair at the head turned slightly out as if someone just stood up, printed documents ' +
+      'and a water glass at each place, tall windows with soft daylight, warm neutral cream and ' +
+      'charcoal palette, no people',
+    alt: 'A meeting room set up for an agency review with an empty chair at the head of the table, representing the process of shortlisting an SEO agency in the USA',
+  },
+  {
     file: 'best-seo-agencies-uk-2026',
     prompt:
       'A calm modern London office meeting room at mid morning, an empty glass conference table with ' +

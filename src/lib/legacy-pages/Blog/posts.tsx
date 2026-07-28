@@ -103,6 +103,7 @@ import { post as agenticCommerceVsTraditionalEcommercePost } from './posts/agent
 import { post as bestAiForEcommerce2026Post } from './posts/best-ai-for-ecommerce-2026';
 import { post as whatDoesAnAiAutomationAgencyDoPost } from './posts/what-does-an-ai-automation-agency-do';
 import { post as willAiReplaceWebDesignersPost } from './posts/will-ai-replace-web-designers';
+import { post as bestSeoAgenciesUsaPost } from './posts/best-seo-agencies-usa';
 import { post as isGeoReplacingSeo2026Post } from './posts/is-geo-replacing-seo-2026';
 import { post as whatDoesAnAiAutomationAgencyDoUkPost } from './posts/what-does-an-ai-automation-agency-do-uk';
 import { post as localSeoUkSmallBusinessesMapPackPost } from './posts/local-seo-uk-small-businesses-map-pack';
@@ -4780,6 +4781,7 @@ export const POSTS: BlogPost[] = [
   generativeEngineOptimizationGuidePost,
   bestGeoAiVisibilityTools2026Post,
   bestAiSeoAgenciesUsaPost,
+  bestSeoAgenciesUsaPost,
   howToSellOnTiktokShop2026Post,
   agenticAiVsGenerativeAiPost,
   agenticAiVsAiAgentsPost,

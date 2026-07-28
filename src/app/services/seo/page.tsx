@@ -1097,6 +1097,28 @@ export default function SeoServicePage() {
           </div>
         </section>
 
+        {/* ─── 8b. Shortlisting, not hiring: link to the agency roundup ── */}
+        <section className="bg-fj-cream py-14 md:py-16">
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <div className="max-w-3xl">
+              <p
+                className="font-fj-mono font-semibold uppercase"
+                style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#B23E13' }}
+              >
+                Still comparing
+              </p>
+              <p className="mt-4 font-fj-body text-fj-ink" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>
+                Not ready to hire yet? Our{' '}
+                <Link href="/blog/best-seo-agencies-usa" className="font-semibold underline" style={{ color: '#B23E13' }}>
+                  roundup of the best SEO agencies in the USA
+                </Link>{' '}
+                compares ten US agencies on real page-one rankings and on what each one actually publishes about
+                pricing, which most of them do not. That page is for shortlisting. This one is for hiring.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* ─── 9. FAQ: 27 across 5 categories (shared component) ──────── */}
         <FAQ
           eyebrow="SEO FAQ"
