@@ -44,7 +44,7 @@ export const post: BlogPost = {
       a: "Less easily, and that gap matters for US SMBs serving Spanish-speaking customers or expanding into Canada and Mexico. Webflow Localization (released in late 2024) supports multilingual sites natively, but it's a paid add-on starting at $9/month per locale on top of your Site plan, with limits on the number of CMS items per locale on lower tiers. WordPress has had mature multilingual options for over a decade: WPML ($39-$199/year), Polylang (free + $99/year pro), and TranslatePress ($89-$249/year) all handle 10+ languages cleanly with translated URL structures, hreflang tags, and SEO-friendly setups. If you genuinely need 3+ languages, WordPress is still the simpler and cheaper path.",
     },
     {
-      q: 'Which is better for ecommerce in the US — Webflow or WordPress?',
+      q: 'Which is better for ecommerce in the US, Webflow or WordPress?',
       a: "Neither is the default US SMB ecommerce platform — Shopify and WooCommerce are. Webflow Ecommerce works for small catalogs (under 500 products) and design-led DTC brands where the storefront aesthetic matters more than advanced merchandising. It supports Stripe and PayPal, US sales tax via integration, and shipping rate calculations, but its checkout customization, app ecosystem, and inventory features are thinner than Shopify's. WordPress paired with WooCommerce is one of the most mature ecommerce stacks in the world — unlimited products, every US payment processor, every tax tool, and 13,000+ plugins. If ecommerce is the business, use Shopify or WooCommerce. Webflow Ecommerce is fine for a small line of products attached to a brand site, not a serious storefront.",
     },
     {
@@ -62,6 +62,50 @@ export const post: BlogPost = {
     {
       q: 'What does FactoryJet recommend for a US SMB choosing between the two?',
       a: "Our framework: if the site is a brand-led marketing presence under 50 pages, the owner has no developer, and budget is $5,000-$15,000 — Webflow. If the site is content-heavy (active blog, 50+ pages, multilingual, or membership/learning), or budget is under $5,000, or you already run WordPress for another part of the business — WordPress. Webflow's clean editor and zero maintenance are genuinely worth the higher monthly cost for some teams; WordPress's ecosystem and lower long-term cost are worth the maintenance burden for others. We build both with 7-day delivery on standard 5-page sites. Book a 30-minute conversation at https://calendly.com/bhavesh-factoryjet/30min and we'll recommend the right platform for your specific business.",
+    },
+    {
+      q: 'Should I switch from WordPress to Webflow?',
+      a: "Only if the reason is design control or maintenance fatigue, not novelty. Switching means rebuilding, not migrating: there is no one-click path, and you will re-do templates, redirects and any plugin-driven features. If your WordPress site works and your team can run it, staying is usually the cheaper decision. Switch when you are already facing a rebuild anyway.",
+    },
+    {
+      q: 'Why are people moving away from WordPress?',
+      a: "Usually maintenance rather than capability. A WordPress install is yours to patch, and every plugin is a moving part that can break or introduce a vulnerability. Owners who move are typically tired of update cycles, not unhappy with what the platform can do. Note it has not lost the market: W3Techs put WordPress at 41.2% of all websites in July 2026.",
+    },
+    {
+      q: 'Is WordPress outdated in 2026, and what is replacing it?',
+      a: "No, and nothing has replaced it. W3Techs measured WordPress at 59.1% of sites whose CMS is known as of July 2026, which is not a platform in collapse. What has changed is that hosted builders like Webflow, Squarespace and Wix now handle the small brochure-site end of the market that WordPress used to win by default.",
+    },
+    {
+      q: 'What are the downsides and limitations of Webflow?',
+      a: "Three real ones. Content depth: it is built for design-led sites, and large content libraries get awkward. Extensibility: there is no plugin marketplace, so anything unusual is custom code against their APIs. And portability: you can export static code, but not the CMS and hosting setup, so leaving means rebuilding elsewhere.",
+    },
+    {
+      q: 'Do professionals use Webflow?',
+      a: "Yes, widely, particularly design studios and marketing teams that want visual control without a build pipeline. Webflow runs a full developer platform with CMS and site-management APIs, custom code, webhooks and component tooling, which is what agencies use for client work. It is a professional tool, not a hobbyist builder.",
+    },
+    {
+      q: "What is WordPress's biggest competitor?",
+      a: "It depends which end of the market. For small design-led marketing sites, Webflow, Squarespace and Wix compete hardest. For ecommerce, Shopify takes most of what WooCommerce might have. For large publishers, headless setups on Next.js. No single competitor threatens WordPress overall, which is why it still holds the largest share by a wide margin.",
+    },
+    {
+      q: 'Is there a cheaper alternative to WordPress?',
+      a: "Cheaper than WordPress is hard, because the software itself is free and open source under GPLv2. The cost is hosting plus your time. What people usually mean is cheaper than their current WordPress setup, and that is normally solved by cutting premium plugins and moving host, not by changing platform.",
+    },
+    {
+      q: 'Which is better, Wix or Webflow?',
+      a: "Wix is easier and cheaper, and fine for a simple site you will rarely change. Webflow gives real control over layout, semantics and responsive behaviour, which matters if design quality or performance is part of how you compete. If you would hire a designer for the site anyway, Webflow is the better home for that work.",
+    },
+    {
+      q: 'Is Webflow worth it in 2026?',
+      a: "Worth it when design quality is a competitive asset and nobody on your team wants to run a server. Not worth it when you publish heavily, need niche integrations, or want the option to move hosts later. The monthly cost buys you no maintenance and no plugin conflicts. Decide whether that trade fits how you actually work.",
+    },
+    {
+      q: 'Will AI replace Webflow?',
+      a: "Not the platform. AI is already good at generating a first draft of a layout, and both platforms are adding it. What AI does not do is decide what the page must achieve, own accessibility and performance, or take responsibility when something breaks. The build gets faster. The judgement about what to build does not go away.",
+    },
+    {
+      q: 'What does WordPress actually require to run?',
+      a: "More than most owners expect. The official requirements are PHP 8.3 or greater, MariaDB 10.11+ or MySQL 8.0+, and HTTPS on every install. That is the part the word free hides: the software costs nothing, the hosting, updates and security patching are a real ongoing commitment. Budget for managed hosting unless someone on your team enjoys this.",
     },
   ],
   content: (

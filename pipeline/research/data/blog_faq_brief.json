@@ -1,0 +1,4116 @@
+{
+ "generated": "2026-07-29 00:46:53",
+ "language_code": "en",
+ "location_codes": {
+  "US": 2840,
+  "AU": 2036
+ },
+ "endpoints_used": {
+  "serp": "/serp/google/organic/live/advanced",
+  "kw_overview": "/dataforseo_labs/google/keyword_overview/live",
+  "ads_volume": "/keywords_data/google_ads/search_volume/live",
+  "bulk_kd": "/dataforseo_labs/google/bulk_keyword_difficulty/live"
+ },
+ "posts": {
+  "shopify-development-cost-2026": {
+   "market": "US",
+   "location_code": 2840,
+   "gsc_impressions_supplied_not_api": 6244,
+   "seeds": [
+    "shopify development cost",
+    "how much does shopify development cost",
+    "shopify developer cost"
+   ],
+   "paa_only_extra_queries": [
+    "how much does it cost to build a shopify store",
+    "shopify store setup cost",
+    "how much do shopify developers charge per hour",
+    "is shopify expensive to run",
+    "shopify plus cost"
+   ],
+   "seed_report": [
+    {
+     "query": "shopify development cost",
+     "kind": "seed",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 5,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "discussions_and_forums",
+      "people_also_search",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "how much does shopify development cost",
+     "kind": "seed",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 3,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "people_also_search",
+      "discussions_and_forums",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "shopify developer cost",
+     "kind": "seed",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 4,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "discussions_and_forums",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "how much does it cost to build a shopify store",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 3,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "shopify store setup cost",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 2,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "discussions_and_forums",
+      "video",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "how much do shopify developers charge per hour",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 4,
+     "item_types": [
+      "ai_overview",
+      "people_also_ask",
+      "organic",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "is shopify expensive to run",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 2,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "discussions_and_forums",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "shopify plus cost",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 3,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "related_searches"
+     ]
+    }
+   ],
+   "paa_kept": [
+    {
+     "post_slug": "shopify-development-cost-2026",
+     "market": "US",
+     "seed_term": "shopify development cost",
+     "seed_kind": "seed",
+     "question": "How much does a Shopify developer cost?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-development-cost-2026",
+     "market": "US",
+     "seed_term": "shopify development cost",
+     "seed_kind": "seed",
+     "question": "How much does Shopify take from a $100 sale?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-development-cost-2026",
+     "market": "US",
+     "seed_term": "shopify development cost",
+     "seed_kind": "seed",
+     "question": "How much does it cost to build a Shopify?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-development-cost-2026",
+     "market": "US",
+     "seed_term": "shopify development cost",
+     "seed_kind": "seed",
+     "question": "Who is Shopify's biggest competitor?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-development-cost-2026",
+     "market": "US",
+     "seed_term": "shopify development cost",
+     "seed_kind": "seed",
+     "question": "Is Shopify still worth it in 2026?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-development-cost-2026",
+     "market": "US",
+     "seed_term": "how much does shopify development cost",
+     "seed_kind": "seed",
+     "question": "How much did it cost to develop Shopify?",
+     "serp_answer": "A basic Shopify store in India costs between INR 20,000 and 60,000 for development. Add INR 1,994 per month for the Basic Shopify plan and INR 3,000 to 8,000 per month for essential apps. Total Year 1 all-in cost for a basic store is approximately INR 56,000 to 2,40,000.",
+     "answer_source": "https://www.webshark.in/blogs/shopify-development-cost-in-india/"
+    },
+    {
+     "post_slug": "shopify-development-cost-2026",
+     "market": "US",
+     "seed_term": "how much does shopify development cost",
+     "seed_kind": "seed",
+     "question": "Do you need a developer for Shopify?",
+     "serp_answer": "A Shopify web developer makes your online store future-proof and secure. You can ensure a smooth customer experience and robust online presence with the help of a Shopify web developer. A Shopify website developer improves your website performance, elevates user experience, and fixes bugs.",
+     "answer_source": "https://futuresoftindia.com/blogs/hire-shopify-developer-e-commerce.html"
+    },
+    {
+     "post_slug": "shopify-development-cost-2026",
+     "market": "US",
+     "seed_term": "how much does shopify development cost",
+     "seed_kind": "seed",
+     "question": "Is owning a Shopify store profitable?",
+     "serp_answer": "A Shopify store owner can achieve profitability depending on factors such as product selection, marketing strategies, and operational costs. Success often requires skills in e-commerce, digital marketing, and inventory management, with profitability varying widely among individual stores.",
+     "answer_source": "https://www.ziprecruiter.com/e/Shopify-Store-Owner-Is-owning-a-Shopify-store-profitable"
+    },
+    {
+     "post_slug": "shopify-development-cost-2026",
+     "market": "US",
+     "seed_term": "shopify developer cost",
+     "seed_kind": "seed",
+     "question": "How much does it cost to develop a Shopify store?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-development-cost-2026",
+     "market": "US",
+     "seed_term": "shopify developer cost",
+     "seed_kind": "seed",
+     "question": "How much do Shopify developers charge per hour?",
+     "serp_answer": "Cost to Hire Shopify Developers Based on Experience\n Beginner-Shopify Developers: $15 per hour. Intermediate-Level Shopify Developers: $35 per hour. Expert Shopify Developers: $90 per hour.",
+     "answer_source": "https://www.itpathsolutions.com/hire-shopify-developer-cost"
+    },
+    {
+     "post_slug": "shopify-development-cost-2026",
+     "market": "US",
+     "seed_term": "shopify developer cost",
+     "seed_kind": "seed",
+     "question": "Is selling on Shopify still worth it?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-development-cost-2026",
+     "market": "US",
+     "seed_term": "shopify developer cost",
+     "seed_kind": "seed",
+     "question": "Can you make 10k a month on Shopify?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-development-cost-2026",
+     "market": "US",
+     "seed_term": "how much does it cost to build a shopify store",
+     "seed_kind": "extra",
+     "question": "Is a Shopify store profitable?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-development-cost-2026",
+     "market": "US",
+     "seed_term": "how much does it cost to build a shopify store",
+     "seed_kind": "extra",
+     "question": "Do I need an LLC to run a Shopify store?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-development-cost-2026",
+     "market": "US",
+     "seed_term": "how much does it cost to build a shopify store",
+     "seed_kind": "extra",
+     "question": "Is it cheaper to sell on Etsy or Shopify?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-development-cost-2026",
+     "market": "US",
+     "seed_term": "shopify store setup cost",
+     "seed_kind": "extra",
+     "question": "How much does it cost to have someone set up a Shopify store?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-development-cost-2026",
+     "market": "US",
+     "seed_term": "shopify store setup cost",
+     "seed_kind": "extra",
+     "question": "How much does a Shopify store cost to set up?",
+     "serp_answer": "Shopify Plans: Standard monthly rates are Basic ($25/month), Grow ($65/month), and Advanced ($399/month). Annual billing offers 25% savings. Initial Setup: Expect $10-$20/year for a domain, $0-$180 for a theme, and $0-$500+ for branding.",
+     "answer_source": "https://txtcart.ai/blog/cost-to-start-shopify-store/"
+    },
+    {
+     "post_slug": "shopify-development-cost-2026",
+     "market": "US",
+     "seed_term": "how much do shopify developers charge per hour",
+     "seed_kind": "extra",
+     "question": "How much do Shopify developers charge?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-development-cost-2026",
+     "market": "US",
+     "seed_term": "how much do shopify developers charge per hour",
+     "seed_kind": "extra",
+     "question": "How much should I pay someone to build a Shopify website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-development-cost-2026",
+     "market": "US",
+     "seed_term": "how much do shopify developers charge per hour",
+     "seed_kind": "extra",
+     "question": "What is the hourly rate for Shopify?",
+     "serp_answer": "As of Jul 7, 2026, the average annual pay for a Shopify in the United States is $62,275 a year. Just in case you need a simple salary calculator, that works out to be approximately $29.94 an hour.",
+     "answer_source": "https://www.ziprecruiter.com/Salaries/Shopify-Salary"
+    },
+    {
+     "post_slug": "shopify-development-cost-2026",
+     "market": "US",
+     "seed_term": "how much do shopify developers charge per hour",
+     "seed_kind": "extra",
+     "question": "Is it worth it to hire a Shopify expert?",
+     "serp_answer": "Hiring a Shopify expert is one of the smartest decisions you can make for your online store. They bring professional design skills, technical know-how, and marketing Knowledge that can help ensure its success. Start or expand your business, Shopify experts are there to save time, reduce stress and boost profits.",
+     "answer_source": "https://www.codeyard.app/blog/who-are-shopify-experts"
+    },
+    {
+     "post_slug": "shopify-development-cost-2026",
+     "market": "US",
+     "seed_term": "is shopify expensive to run",
+     "seed_kind": "extra",
+     "question": "What is the downside of using Shopify?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-development-cost-2026",
+     "market": "US",
+     "seed_term": "is shopify expensive to run",
+     "seed_kind": "extra",
+     "question": "What are the disadvantages of Shopify?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-development-cost-2026",
+     "market": "US",
+     "seed_term": "shopify plus cost",
+     "seed_kind": "extra",
+     "question": "What does Shopify Plus include?",
+     "serp_answer": "While Shopify B2B is available on all plans, the Shopify Plus plan includes additional B2B capabilities such as unlimited catalogs, direct catalog assignment to companies and locations, deposit requirements, partial payments, and payment requests per fulfillment.",
+     "answer_source": "https://help.shopify.com/en/manual/intro-to-shopify/pricing-plans/plans-features/shopify-plus-plan"
+    },
+    {
+     "post_slug": "shopify-development-cost-2026",
+     "market": "US",
+     "seed_term": "shopify plus cost",
+     "seed_kind": "extra",
+     "question": "What's the difference between Shopify and Shopify Plus?",
+     "serp_answer": "Shopify and Shopify Plus are both global ecommerce platforms that offer access to international markets for retail businesses. They both provide dedicated storefronts for various nations and regions. Shopify Plus is different because it provides up to ten additional clone stores on top of your original brand store.",
+     "answer_source": "https://www.thooja.com/blog/shopify-vs-shopify-plus"
+    },
+    {
+     "post_slug": "shopify-development-cost-2026",
+     "market": "US",
+     "seed_term": "shopify plus cost",
+     "seed_kind": "extra",
+     "question": "Is Shopify Premium worth it?",
+     "serp_answer": "Shopify Plus is worth it when: Transaction fee savings pay back the platform cost. Infrastructure and maintenance costs are reduced. B2B, checkout customization, or automation directly drives revenue.",
+     "answer_source": "https://codup.co/blog/is-shopify-plus-worth-it/"
+    }
+   ],
+   "paa_dropped": [],
+   "citations_verified_by_fetch": [
+    {
+     "url": "https://www.shopify.com/pricing",
+     "supports": "Shopify's own plan ladder and the third-party payment provider transaction fee tiers (2% Basic, 1% Grow, 0.6% Advanced, 0.2% Plus) - the recurring platform cost that sits underneath any dev quote.",
+     "verified": "2026-07-29 200; note the page localises currency by visitor geo"
+    },
+    {
+     "url": "https://shopify.dev/docs/storefronts/themes/architecture",
+     "supports": "What custom Shopify work actually consists of: the required theme directory structure (assets, blocks, config, layout, locales, sections, snippets, templates) and that only layout/theme.liquid is mandatory.",
+     "verified": "2026-07-29 200"
+    },
+    {
+     "url": "https://help.shopify.com/en/manual/intro-to-shopify/pricing-plans/plans-features",
+     "supports": "Shopify's official current plan list (Starter, Lite, Retail, Basic, Grow, Advanced, Plus, enterprise, Agentic) - stops the post naming stale plans.",
+     "verified": "2026-07-29 200"
+    }
+   ],
+   "keyword_metrics": [
+    {
+     "keyword": "shopify development cost",
+     "market": "US",
+     "location_code": 2840,
+     "search_volume": 20,
+     "cpc": null,
+     "competition": 0.21,
+     "competition_level": "LOW",
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "keyword_difficulty": 0,
+     "search_intent": "commercial",
+     "monthly_searches_last": {
+      "year": 2026,
+      "month": 6,
+      "search_volume": 10
+     }
+    },
+    {
+     "keyword": "how much does shopify development cost",
+     "market": "US",
+     "location_code": 2840,
+     "search_volume": null,
+     "cpc": null,
+     "competition": null,
+     "competition_level": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "keyword_difficulty": null,
+     "search_intent": null,
+     "monthly_searches_last": {},
+     "_source": "google_ads/search_volume + labs/bulk_keyword_difficulty"
+    },
+    {
+     "keyword": "shopify developer cost",
+     "market": "US",
+     "location_code": 2840,
+     "search_volume": 10,
+     "cpc": null,
+     "competition": 0.43,
+     "competition_level": "MEDIUM",
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "keyword_difficulty": 0,
+     "search_intent": "commercial",
+     "monthly_searches_last": {
+      "year": 2026,
+      "month": 6,
+      "search_volume": 10
+     }
+    }
+   ]
+  },
+  "website-cost-small-business-usa-2026": {
+   "market": "US",
+   "location_code": 2840,
+   "gsc_impressions_supplied_not_api": 4710,
+   "seeds": [
+    "small business website cost",
+    "how much does a website cost for a small business",
+    "website cost"
+   ],
+   "paa_only_extra_queries": [
+    "how much does it cost to build a website",
+    "how much does a website cost per month",
+    "how much should i pay for a website",
+    "website maintenance cost",
+    "how much does a website cost to maintain"
+   ],
+   "seed_report": [
+    {
+     "query": "small business website cost",
+     "kind": "seed",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 6,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "discussions_and_forums",
+      "perspectives",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "how much does a website cost for a small business",
+     "kind": "seed",
+     "status": "ok",
+     "paa_returned": 5,
+     "paa_new_kept": 2,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "website cost",
+     "kind": "seed",
+     "status": "ok",
+     "paa_returned": 14,
+     "paa_new_kept": 4,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "discussions_and_forums",
+      "perspectives",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "how much does it cost to build a website",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 5,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "discussions_and_forums",
+      "perspectives",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "how much does a website cost per month",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 3,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "discussions_and_forums",
+      "perspectives",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "how much should i pay for a website",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 3,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "discussions_and_forums",
+      "perspectives",
+      "short_videos",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "website maintenance cost",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 6,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "discussions_and_forums",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "how much does a website cost to maintain",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 5,
+     "item_types": [
+      "ai_overview",
+      "people_also_ask",
+      "organic",
+      "discussions_and_forums",
+      "related_searches"
+     ]
+    }
+   ],
+   "paa_kept": [
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "small business website cost",
+     "seed_kind": "seed",
+     "question": "Do I need an LLC to run a website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "small business website cost",
+     "seed_kind": "seed",
+     "question": "Is $1500 a good price for a website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "small business website cost",
+     "seed_kind": "seed",
+     "question": "Is a website worth it for a small business?",
+     "serp_answer": "The Pros of Having a Website for Your Small Business\n A website can also help you build trust and credibility with potential customers. When someone sees that you have a professional-looking website, they're more likely to believe that you're a legitimate business.",
+     "answer_source": "https://www.thebusinesstoolkit.com/website-for-small-businesses-is-it-worth-it/"
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "small business website cost",
+     "seed_kind": "seed",
+     "question": "How much does it cost to set up a small website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "small business website cost",
+     "seed_kind": "seed",
+     "question": "What can I use instead of a website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "small business website cost",
+     "seed_kind": "seed",
+     "question": "What happens if you create an LLC but don't use it?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "how much does a website cost for a small business",
+     "seed_kind": "seed",
+     "question": "Is it worth making a website for a small business?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "how much does a website cost for a small business",
+     "seed_kind": "seed",
+     "question": "What are the five golden rules of a website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "website cost",
+     "seed_kind": "seed",
+     "question": "What is the average cost of a website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "website cost",
+     "seed_kind": "seed",
+     "question": "Can I run a website free of cost?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "website cost",
+     "seed_kind": "seed",
+     "question": "Why is owning a website so expensive?",
+     "serp_answer": "Maintenance and marketing are both vital to the life of your website, and you need to make room for them in your website budget. \u2026 And those are just a few of the factors that funnel into that final price tag. Basically, the more functionality and larger the site, the more expensive you'll go.",
+     "answer_source": "https://www.figmints.com/why-are-websites-so-expensive/"
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "website cost",
+     "seed_kind": "seed",
+     "question": "How much should I pay to have a website built?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "how much does it cost to build a website",
+     "seed_kind": "extra",
+     "question": "Can ChatGPT actually create a website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "how much does it cost to build a website",
+     "seed_kind": "extra",
+     "question": "Can I make my own website for free?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "how much does it cost to build a website",
+     "seed_kind": "extra",
+     "question": "How much does it cost to redesign a website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "how much does it cost to build a website",
+     "seed_kind": "extra",
+     "question": "What are the 5 things you shouldn't tell ChatGPT?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "how much does it cost to build a website",
+     "seed_kind": "extra",
+     "question": "What's the best AI to build a website with?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "how much does a website cost per month",
+     "seed_kind": "extra",
+     "question": "Do I have to pay a monthly fee to have a website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "how much does a website cost per month",
+     "seed_kind": "extra",
+     "question": "How much does Google website cost per month?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "how much does a website cost per month",
+     "seed_kind": "extra",
+     "question": "Can I host my own website for free?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "how much should i pay for a website",
+     "seed_kind": "extra",
+     "question": "What is a fair price to pay for a website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "how much should i pay for a website",
+     "seed_kind": "extra",
+     "question": "How much do I pay for my website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "how much should i pay for a website",
+     "seed_kind": "extra",
+     "question": "How much should I pay for a website per month?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "website maintenance cost",
+     "seed_kind": "extra",
+     "question": "How much should I pay someone to manage my website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "website maintenance cost",
+     "seed_kind": "extra",
+     "question": "What is the cost of website maintenance?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "website maintenance cost",
+     "seed_kind": "extra",
+     "question": "Do I have to pay to maintain my website?",
+     "serp_answer": "Your website maintenance costs depend on factors such as hosting and domain renewals, security, and updates. Your domain name is where everything starts, and one of the first recurring costs you'll pay for. From there, your website maintenance cost grows with hosting, security, and ongoing updates.",
+     "answer_source": "https://www.networksolutions.com/blog/website-maintenance-cost/"
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "website maintenance cost",
+     "seed_kind": "extra",
+     "question": "Is website maintenance a fixed cost?",
+     "serp_answer": "Website maintenance cost is usually a mix of fixed bills (domain, hosting, email) and variable costs (support time, security incidents, performance work).",
+     "answer_source": "https://middlehost.com/blog/website-maintenance-cost/"
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "website maintenance cost",
+     "seed_kind": "extra",
+     "question": "How much do people charge to maintain a website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "website maintenance cost",
+     "seed_kind": "extra",
+     "question": "Can I hire someone to manage my website?",
+     "serp_answer": "Yes. Many clients hire a website manager for one-time tasks such as a security cleanup, speed optimization audit, CMS migration, or content overhaul. If the engagement goes well, it is common to convert it into an ongoing monthly retainer.",
+     "answer_source": "https://www.freelancer.com/hire/website-management"
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "how much does a website cost to maintain",
+     "seed_kind": "extra",
+     "question": "How much does it cost to hire someone to maintain a website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "how much does a website cost to maintain",
+     "seed_kind": "extra",
+     "question": "How much does it cost to host a website for 1 year?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "how much does a website cost to maintain",
+     "seed_kind": "extra",
+     "question": "How much should I pay someone to host my website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "how much does a website cost to maintain",
+     "seed_kind": "extra",
+     "question": "How much should you pay monthly for a website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "website-cost-small-business-usa-2026",
+     "market": "US",
+     "seed_term": "how much does a website cost to maintain",
+     "seed_kind": "extra",
+     "question": "Is it expensive to maintain a website?",
+     "serp_answer": "",
+     "answer_source": ""
+    }
+   ],
+   "paa_dropped": [],
+   "citations_verified_by_fetch": [
+    {
+     "url": "https://www.census.gov/retail/ecommerce.html",
+     "supports": "US Census Bureau: Q1 2026 e-commerce retail sales were $326.7 billion, 16.9% of total retail sales - the demand-side case for the spend.",
+     "verified": "2026-07-29 200"
+    },
+    {
+     "url": "https://web.dev/articles/vitals",
+     "supports": "Google's own Core Web Vitals 'good' thresholds (LCP within 2.5s, INP 200ms or less, CLS 0.1 or less, at the 75th percentile) - the objective bar a cheap build usually fails.",
+     "verified": "2026-07-29 200"
+    },
+    {
+     "url": "https://www.sba.gov/business-guide/manage-your-business/marketing-sales",
+     "supports": "US Small Business Administration on budgeting marketing spend and on paying fees to accept payments online - a neutral government anchor for the 'what am I really paying for' section.",
+     "verified": "2026-07-29 200"
+    }
+   ],
+   "keyword_metrics": [
+    {
+     "keyword": "small business website cost",
+     "market": "US",
+     "location_code": 2840,
+     "search_volume": 210,
+     "cpc": 16.99,
+     "competition": 0.34,
+     "competition_level": "MEDIUM",
+     "low_top_of_page_bid": 3.17,
+     "high_top_of_page_bid": 18.54,
+     "keyword_difficulty": 25,
+     "search_intent": "commercial",
+     "monthly_searches_last": {
+      "year": 2026,
+      "month": 6,
+      "search_volume": 260
+     }
+    },
+    {
+     "keyword": "how much does a website cost for a small business",
+     "market": "US",
+     "location_code": 2840,
+     "search_volume": 140,
+     "cpc": 16.46,
+     "competition": 0.51,
+     "competition_level": "MEDIUM",
+     "low_top_of_page_bid": 3.22,
+     "high_top_of_page_bid": 15.05,
+     "keyword_difficulty": 18,
+     "search_intent": "commercial",
+     "monthly_searches_last": {
+      "year": 2026,
+      "month": 6,
+      "search_volume": 170
+     }
+    },
+    {
+     "keyword": "website cost",
+     "market": "US",
+     "location_code": 2840,
+     "search_volume": 1000,
+     "cpc": 12.11,
+     "competition": 0.58,
+     "competition_level": "MEDIUM",
+     "low_top_of_page_bid": 2.24,
+     "high_top_of_page_bid": 11.59,
+     "keyword_difficulty": 42,
+     "search_intent": "commercial",
+     "monthly_searches_last": {
+      "year": 2026,
+      "month": 6,
+      "search_volume": 720
+     }
+    }
+   ]
+  },
+  "best-web-design-companies-small-business-australia": {
+   "market": "AU",
+   "location_code": 2036,
+   "gsc_impressions_supplied_not_api": 4052,
+   "seeds": [
+    "web design companies australia",
+    "best web design company australia",
+    "web design cost australia"
+   ],
+   "paa_only_extra_queries": [
+    "how much does a website cost in australia",
+    "how much do web designers charge in australia",
+    "how to choose a web design company",
+    "web designer australia",
+    "small business website australia"
+   ],
+   "seed_report": [
+    {
+     "query": "web design companies australia",
+     "kind": "seed",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 6,
+     "item_types": [
+      "local_pack",
+      "organic",
+      "people_also_ask",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "best web design company australia",
+     "kind": "seed",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 2,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "local_pack",
+      "people_also_ask",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "web design cost australia",
+     "kind": "seed",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 4,
+     "item_types": [
+      "ai_overview",
+      "people_also_ask",
+      "organic",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "how much does a website cost in australia",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 6,
+     "item_types": [
+      "ai_overview",
+      "people_also_ask",
+      "discussions_and_forums",
+      "organic",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "how much do web designers charge in australia",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 1,
+     "item_types": [
+      "featured_snippet",
+      "people_also_ask",
+      "organic",
+      "discussions_and_forums",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "how to choose a web design company",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 5,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "video",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "web designer australia",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 0,
+     "item_types": [
+      "local_pack",
+      "organic",
+      "people_also_ask",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "small business website australia",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 5,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "discussions_and_forums",
+      "related_searches"
+     ]
+    }
+   ],
+   "paa_kept": [
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "web design companies australia",
+     "seed_kind": "seed",
+     "question": "How much does it cost to design a website in Australia?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "web design companies australia",
+     "seed_kind": "seed",
+     "question": "Are web designers in demand in Australia?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "web design companies australia",
+     "seed_kind": "seed",
+     "question": "Is web design still in demand in 2026?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "web design companies australia",
+     "seed_kind": "seed",
+     "question": "How much do web designers charge per hour in Australia?",
+     "serp_answer": "Designer experience & location\n Sydney web designer rates average $120/hour, while Brisbane professionals charge $90/hour. Regional variations reflect cost-of-living differences: Melbourne agencies command premium rates ($150\u2013$200/hour). Perth and Adelaide sit mid-range ($100\u2013$150/hour).",
+     "answer_source": "https://www.sparkinteract.com.au/web/website-designers-cost/"
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "web design companies australia",
+     "seed_kind": "seed",
+     "question": "How much should I pay someone to design my website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "web design companies australia",
+     "seed_kind": "seed",
+     "question": "Is web development in demand in Australia?",
+     "serp_answer": "Web development is a high-demand career in Australia, driven by the booming tech industry and growing reliance on digital solutions.",
+     "answer_source": "https://au.prosple.com/entry-level-web-developer-jobs-programs-in-australia"
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "best web design company australia",
+     "seed_kind": "seed",
+     "question": "What is the best website design company?",
+     "serp_answer": "DD. NYC\u00ae 5.0 103 reviews. ...\nUPQODE. 4.9 104 reviews. $5,000+ ...\nClay. 4.8 32 reviews. $50,000+ ...\nAdchitects. 4.9 54 reviews. $25,000+ ...\nBop Design. 5.0 126 reviews. $25,000+ ...\nVALMAX. 5.0 97 reviews. $1,000+ ...\nThe Creative Momentum. 5.0 10 reviews. $25,000+ ...\nPhenomenon Studio. 5.0 51 reviews. $10,000+ 50 - 249.",
+     "answer_source": "https://clutch.co/web-designers"
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "best web design company australia",
+     "seed_kind": "seed",
+     "question": "What is the average cost for a website designer?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "web design cost australia",
+     "seed_kind": "seed",
+     "question": "How much should a full website design cost?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "web design cost australia",
+     "seed_kind": "seed",
+     "question": "What is the average cost of a web designer?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "web design cost australia",
+     "seed_kind": "seed",
+     "question": "How much should I pay someone to build my website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "web design cost australia",
+     "seed_kind": "seed",
+     "question": "Can ChatGPT actually create a website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "how much does a website cost in australia",
+     "seed_kind": "extra",
+     "question": "What is a reasonable price for a website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "how much does a website cost in australia",
+     "seed_kind": "extra",
+     "question": "Is there a monthly fee to have a website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "how much does a website cost in australia",
+     "seed_kind": "extra",
+     "question": "What is the average cost of a 5 page website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "how much does a website cost in australia",
+     "seed_kind": "extra",
+     "question": "What is the average cost of owning a website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "how much does a website cost in australia",
+     "seed_kind": "extra",
+     "question": "Is a website worth the money?",
+     "serp_answer": "First and foremost, a website can help you reach a wider audience. Anyone in the world can find and purchase your products or services online without even leaving their house. A website can also help you build trust and credibility with potential customers.",
+     "answer_source": "https://www.thebusinesstoolkit.com/website-for-small-businesses-is-it-worth-it/"
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "how much does a website cost in australia",
+     "seed_kind": "extra",
+     "question": "What are the five golden rules of a website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "how much do web designers charge in australia",
+     "seed_kind": "extra",
+     "question": "How much do web designers usually charge?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "how to choose a web design company",
+     "seed_kind": "extra",
+     "question": "How to pick a web design company?",
+     "serp_answer": "Evaluate agencies on these key criteria: Portfolio quality and relevance (work in your industry or similar challenges), client testimonials and case studies with measurable results, technical capabilities matching your needs (platforms, integrations, custom development), strategic approach beyond visual design, team ...",
+     "answer_source": "https://cliquestudios.com/faq/how-to-choose-a-web-design-agency"
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "how to choose a web design company",
+     "seed_kind": "extra",
+     "question": "Is AI replacing web design?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "how to choose a web design company",
+     "seed_kind": "extra",
+     "question": "What are the 7 C's of web design?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "how to choose a web design company",
+     "seed_kind": "extra",
+     "question": "What are the 5 golden rules of web design?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "how to choose a web design company",
+     "seed_kind": "extra",
+     "question": "Is web design still worth it in 2026?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "small business website australia",
+     "seed_kind": "extra",
+     "question": "How much does it cost to build a website for a small business in Australia?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "small business website australia",
+     "seed_kind": "extra",
+     "question": "What is the best website builder for small business in Australia?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "small business website australia",
+     "seed_kind": "extra",
+     "question": "Can ChatGPT build me a website?",
+     "serp_answer": "ChatGPT Sites lets you create, preview, publish, and share interactive websites and lightweight apps. You can create Sites in Work on ChatGPT web, and in Work or Codex in the ChatGPT desktop app. To use Sites, simply ask ChatGPT to build you a website with a description of what you want the website to do.",
+     "answer_source": "https://help.openai.com/en/articles/20001339-creating-and-managing-chatgpt-sites"
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "small business website australia",
+     "seed_kind": "extra",
+     "question": "What is the best website for a small business?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "small business website australia",
+     "seed_kind": "extra",
+     "question": "Can Google host a website for free?",
+     "serp_answer": "",
+     "answer_source": ""
+    }
+   ],
+   "paa_dropped": [
+    {
+     "post_slug": "best-web-design-companies-small-business-australia",
+     "market": "AU",
+     "seed_term": "web designer australia",
+     "question": "How much do web designers make in Australia?",
+     "reason": "salary"
+    }
+   ],
+   "citations_verified_by_fetch": [
+    {
+     "url": "https://business.gov.au/online-and-digital/business-website",
+     "supports": "Official Australian government guidance on setting up, designing and maintaining a business website, incl. registering a domain and SEO.",
+     "verified": "2026-07-29 200"
+    },
+    {
+     "url": "https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release",
+     "supports": "ABS: 2,729,648 actively trading businesses in Australia at 30 June 2025, of which 1,735,313 are non-employing - sizes the small-business market the post is written for.",
+     "verified": "2026-07-29 200"
+    },
+    {
+     "url": "https://www.auda.org.au/policy/au-domain-administration-rules-licensing",
+     "supports": "auDA licensing rules: a .com.au domain requires an Australian Presence (an ABN qualifies), Commercial Entity status, and a name that matches the applicant - a real constraint on an AU web project.",
+     "verified": "2026-07-29 200"
+    }
+   ],
+   "keyword_metrics": [
+    {
+     "keyword": "web design companies australia",
+     "market": "AU",
+     "location_code": 2036,
+     "search_volume": 390,
+     "cpc": 6.3,
+     "competition": 0.05,
+     "competition_level": "LOW",
+     "low_top_of_page_bid": 3.41,
+     "high_top_of_page_bid": 8.15,
+     "keyword_difficulty": 80,
+     "search_intent": "commercial",
+     "monthly_searches_last": {
+      "year": 2026,
+      "month": 6,
+      "search_volume": 110
+     }
+    },
+    {
+     "keyword": "best web design company australia",
+     "market": "AU",
+     "location_code": 2036,
+     "search_volume": 50,
+     "cpc": 37.13,
+     "competition": 0.52,
+     "competition_level": "MEDIUM",
+     "low_top_of_page_bid": 4.2,
+     "high_top_of_page_bid": 28.23,
+     "keyword_difficulty": 32,
+     "search_intent": "commercial",
+     "monthly_searches_last": {
+      "year": 2026,
+      "month": 6,
+      "search_volume": 10
+     }
+    },
+    {
+     "keyword": "web design cost australia",
+     "market": "AU",
+     "location_code": 2036,
+     "search_volume": 90,
+     "cpc": 8.93,
+     "competition": 0.47,
+     "competition_level": "MEDIUM",
+     "low_top_of_page_bid": 3.57,
+     "high_top_of_page_bid": 14.72,
+     "keyword_difficulty": 1,
+     "search_intent": "commercial",
+     "monthly_searches_last": {
+      "year": 2026,
+      "month": 6,
+      "search_volume": 20
+     }
+    }
+   ]
+  },
+  "best-ecommerce-agency-small-business-australia-2026": {
+   "market": "AU",
+   "location_code": 2036,
+   "gsc_impressions_supplied_not_api": 941,
+   "seeds": [
+    "ecommerce agency australia",
+    "best ecommerce agency australia"
+   ],
+   "paa_only_extra_queries": [
+    "how much does an ecommerce website cost australia",
+    "ecommerce website design australia",
+    "how to start an online store in australia",
+    "best ecommerce platform australia",
+    "shopify agency australia",
+    "how to choose an ecommerce agency",
+    "how much does it cost to build an online store australia",
+    "is shopify worth it in australia",
+    "how much does shopify cost australia",
+    "do i need an ecommerce agency"
+   ],
+   "seed_report": [
+    {
+     "query": "ecommerce agency australia",
+     "kind": "seed",
+     "status": "NO_PAA_ON_SERP",
+     "paa_returned": 0,
+     "paa_new_kept": 0,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "best ecommerce agency australia",
+     "kind": "seed",
+     "status": "NO_PAA_ON_SERP",
+     "paa_returned": 0,
+     "paa_new_kept": 0,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "how much does an ecommerce website cost australia",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 6,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "discussions_and_forums",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "ecommerce website design australia",
+     "kind": "extra",
+     "status": "NO_PAA_ON_SERP",
+     "paa_returned": 0,
+     "paa_new_kept": 0,
+     "item_types": [
+      "organic",
+      "local_pack",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "how to start an online store in australia",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 6,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "video",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "best ecommerce platform australia",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 6,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "shopify agency australia",
+     "kind": "extra",
+     "status": "NO_PAA_ON_SERP",
+     "paa_returned": 0,
+     "paa_new_kept": 0,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "how to choose an ecommerce agency",
+     "kind": "extra",
+     "status": "NO_PAA_ON_SERP",
+     "paa_returned": 0,
+     "paa_new_kept": 0,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "discussions_and_forums",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "how much does it cost to build an online store australia",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 3,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "discussions_and_forums",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "is shopify worth it in australia",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 6,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "discussions_and_forums",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "how much does shopify cost australia",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 2,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "people_also_search",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "do i need an ecommerce agency",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 4,
+     "item_types": [
+      "ai_overview",
+      "video",
+      "discussions_and_forums",
+      "people_also_ask",
+      "organic",
+      "related_searches"
+     ]
+    }
+   ],
+   "paa_kept": [
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "how much does an ecommerce website cost australia",
+     "seed_kind": "extra",
+     "question": "How much should I pay for an eCommerce website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "how much does an ecommerce website cost australia",
+     "seed_kind": "extra",
+     "question": "How much does a small website cost in Australia?",
+     "serp_answer": "Agency costs in Australia can vary substantially: Small-scale projects: Begin around AUD $5,000\u2013$10,000. Mid-range business websites: Fall between AUD $10,000\u2013$30,000. Large-scale or enterprise websites: Often exceed AUD $30,000, potentially going into six figures depending on scope.",
+     "answer_source": "https://loopwebdesign.com.au/what-does-a-website-cost-in-australia-a-comprehensive-guide/"
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "how much does an ecommerce website cost australia",
+     "seed_kind": "extra",
+     "question": "Which eCommerce is best in Australia?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "how much does an ecommerce website cost australia",
+     "seed_kind": "extra",
+     "question": "How much should I pay to have a website built?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "how much does an ecommerce website cost australia",
+     "seed_kind": "extra",
+     "question": "What are 5 disadvantages of e-commerce?",
+     "serp_answer": "Security and Privacy Risks. Online transactions always carry some level of risk. ...\nBuilding Trust Takes Time. ...\nHigh Market Competition. ...\nCustomer Service Delays. ...\nNo Product Touch or Feel. ...\nUpfront Setup and Maintenance Costs. ...\nLegal and Compliance Requirements. ...\nDependence on Technology.",
+     "answer_source": "https://zopping.com/blog/advantages-and-disadvantages-of-ecommerce/"
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "how much does an ecommerce website cost australia",
+     "seed_kind": "extra",
+     "question": "Will AI replace e-commerce?",
+     "serp_answer": "By 2026, Artificial Intelligence (AI) is becoming the core engine behind how e-commerce brands attract customers, optimize operations, and scale profitably. From smart recommendations to autonomous operations, AI is redefining the future of digital commerce.",
+     "answer_source": "https://www.linkedin.com/pulse/how-ai-changing-e-commerce-2026-jashma-info-soft-6y2wf"
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "how to start an online store in australia",
+     "seed_kind": "extra",
+     "question": "How much does it cost to start an online business in Australia?",
+     "serp_answer": "Common Start-Up Costs in Australia\n Registration fees: Registering an ABN is free, but company registration with ASIC currently costs $611. A business name registration through ASIC costs $45 for one year or $104 for three years (note that these prices may increase in the future).",
+     "answer_source": "https://ventraip.com.au/blog/how-much-does-it-cost-to-start-a-business-in-australia/"
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "how to start an online store in australia",
+     "seed_kind": "extra",
+     "question": "How do I open a small online store?",
+     "serp_answer": "Choose a niche and determine your target audience.\nCreate a strong branding strategy.\nDecide on your business structure and register your business.\nPick an eCommerce platform.\nName your store and get a domain.\nDesign your online store for sales.\nConnect a payment provider.",
+     "answer_source": "https://www.wix.com/blog/how-to-start-an-online-store"
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "how to start an online store in australia",
+     "seed_kind": "extra",
+     "question": "What sells well online in Australia?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "how to start an online store in australia",
+     "seed_kind": "extra",
+     "question": "Do I need an ABN to start an online store?",
+     "serp_answer": "Selling as a Business\n In simple terms, if you're operating a business and your primary goal when selling goods/services is to make a profit, then you must have an ABN. You'll need to display your ABN on invoices and receipts you issue to your customers.",
+     "answer_source": "https://lawpath.com.au/blog/do-you-need-an-abn-to-sell-online"
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "how to start an online store in australia",
+     "seed_kind": "extra",
+     "question": "What is the easiest online business to start?",
+     "serp_answer": "Print-on-demand and dropshipping are among the easiest online businesses to launch. You focus on designing products or curating a selection, and your supplier handles printing, storage, and shipping.",
+     "answer_source": "https://sell.amazon.com/learn/online-business-ideas"
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "how to start an online store in australia",
+     "seed_kind": "extra",
+     "question": "Do I need an ABN if I earn less than $75,000?",
+     "serp_answer": "Yes, if your turnover is under $75,000 or if your activity is a hobby, you can operate without an ABN.",
+     "answer_source": "https://payroller.com.au/business-management/sole-trader-abn/"
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "best ecommerce platform australia",
+     "seed_kind": "extra",
+     "question": "Which e-commerce is best in Australia?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "best ecommerce platform australia",
+     "seed_kind": "extra",
+     "question": "Which is the best online selling platform in Australia?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "best ecommerce platform australia",
+     "seed_kind": "extra",
+     "question": "What are the top 5 ecommerce platforms?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "best ecommerce platform australia",
+     "seed_kind": "extra",
+     "question": "What is the largest ecommerce platform in Australia?",
+     "serp_answer": "top ecommerce sites in australia.\n Australia's ecommerce market is dominated by Amazon and established retailers adapting to online channels. Kmart and Woolworths lead grocery and general merchandise, while JB Hi-Fi specializes in electronics. Bunnings and Big W serve home and variety segments respectively.",
+     "answer_source": "https://ecommerceguide.com/top/australia/"
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "best ecommerce platform australia",
+     "seed_kind": "extra",
+     "question": "What do Australians use instead of Amazon?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "best ecommerce platform australia",
+     "seed_kind": "extra",
+     "question": "Is Shopify worth it in Australia?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "how much does it cost to build an online store australia",
+     "seed_kind": "extra",
+     "question": "How much does it cost to create an online store?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "how much does it cost to build an online store australia",
+     "seed_kind": "extra",
+     "question": "Which online business is most profitable in Australia?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "how much does it cost to build an online store australia",
+     "seed_kind": "extra",
+     "question": "Is it profitable to have an online store?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "is shopify worth it in australia",
+     "seed_kind": "extra",
+     "question": "How much does Shopify take from a $100 sale?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "is shopify worth it in australia",
+     "seed_kind": "extra",
+     "question": "Do people use Shopify in Australia?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "is shopify worth it in australia",
+     "seed_kind": "extra",
+     "question": "What is the downside of using Shopify?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "is shopify worth it in australia",
+     "seed_kind": "extra",
+     "question": "Is Shopify still worth it in 2026?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "is shopify worth it in australia",
+     "seed_kind": "extra",
+     "question": "What are the disadvantages of Shopify?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "is shopify worth it in australia",
+     "seed_kind": "extra",
+     "question": "Can you make 10k a month on Shopify?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "how much does shopify cost australia",
+     "seed_kind": "extra",
+     "question": "What is the downside of Shopify?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "how much does shopify cost australia",
+     "seed_kind": "extra",
+     "question": "Is selling on Shopify still worth it?",
+     "serp_answer": "Yes, Shopify is profitable for beginners, but it may take about 1 to 3 months to make sales. The profit you can receive from selling on Shopify will vary depending on your products and marketing efforts. Sometimes, you may have really trending products, and the sales spike up, and sometimes, it's the opposite case.",
+     "answer_source": "https://foxecom.com/blogs/all/shopify-review"
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "do i need an ecommerce agency",
+     "seed_kind": "extra",
+     "question": "What is the 80 20 rule in ecommerce?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "do i need an ecommerce agency",
+     "seed_kind": "extra",
+     "question": "Is ecommerce still worth it in 2026?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "do i need an ecommerce agency",
+     "seed_kind": "extra",
+     "question": "What are the 7 major types of e-commerce?",
+     "serp_answer": "What are the main types of eCommerce business models? The seven main types are B2C (business-to-consumer), B2B (business-to-business), C2C (consumer-to-consumer), C2B (consumer-to-business), B2G (business-to-government), C2G (consumer-to-government), and D2C (direct-to-consumer).",
+     "answer_source": "https://www.sellerscommerce.com/blog/types-of-ecommerce-business-models/"
+    },
+    {
+     "post_slug": "best-ecommerce-agency-small-business-australia-2026",
+     "market": "AU",
+     "seed_term": "do i need an ecommerce agency",
+     "seed_kind": "extra",
+     "question": "What is the 3-3-3 rule in sales?",
+     "serp_answer": "",
+     "answer_source": ""
+    }
+   ],
+   "paa_dropped": [],
+   "citations_verified_by_fetch": [
+    {
+     "url": "https://www.abs.gov.au/statistics/industry/retail-and-wholesale-trade/retail-trade-australia/latest-release",
+     "supports": "ABS Retail Trade, June 2025: online sales as a proportion of total retailing rose from 11.9% to 12.7%; turnover $37,906.6m seasonally adjusted - the real size of the AU online channel.",
+     "verified": "2026-07-29 200"
+    },
+    {
+     "url": "https://business.gov.au/online-and-digital/ecommerce",
+     "supports": "Official AU government guidance on selling online: platform options (own site, marketplaces, social), secure payment methods, and the duty to tell customers about applicable consumer guarantees.",
+     "verified": "2026-07-29 200"
+    },
+    {
+     "url": "https://www.auda.org.au/policy/au-domain-administration-rules-licensing",
+     "supports": "The .com.au Australian Presence / Commercial Entity eligibility rules an AU store has to satisfy before launch.",
+     "verified": "2026-07-29 200"
+    }
+   ],
+   "keyword_metrics": [
+    {
+     "keyword": "ecommerce agency australia",
+     "market": "AU",
+     "location_code": 2036,
+     "search_volume": 40,
+     "cpc": null,
+     "competition": 0.23,
+     "competition_level": "LOW",
+     "low_top_of_page_bid": 6.38,
+     "high_top_of_page_bid": 17.74,
+     "keyword_difficulty": 10,
+     "search_intent": "commercial",
+     "monthly_searches_last": {
+      "year": 2026,
+      "month": 6,
+      "search_volume": 10
+     }
+    },
+    {
+     "keyword": "best ecommerce agency australia",
+     "market": "AU",
+     "location_code": 2036,
+     "search_volume": null,
+     "cpc": null,
+     "competition": null,
+     "competition_level": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "keyword_difficulty": null,
+     "search_intent": null,
+     "monthly_searches_last": {},
+     "_source": "google_ads/search_volume + labs/bulk_keyword_difficulty"
+    }
+   ]
+  },
+  "best-web-design-agency-us-small-business-2026": {
+   "market": "US",
+   "location_code": 2840,
+   "gsc_impressions_supplied_not_api": 865,
+   "seeds": [
+    "best web design agency for small business",
+    "web design agency small business"
+   ],
+   "paa_only_extra_queries": [
+    "how to choose a web design agency",
+    "how much does a web design agency cost",
+    "what does a web design agency do",
+    "is it worth hiring a web designer",
+    "how much do web designers charge"
+   ],
+   "seed_report": [
+    {
+     "query": "best web design agency for small business",
+     "kind": "seed",
+     "status": "NO_PAA_ON_SERP",
+     "paa_returned": 0,
+     "paa_new_kept": 0,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "discussions_and_forums",
+      "perspectives",
+      "local_pack",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "web design agency small business",
+     "kind": "seed",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 5,
+     "item_types": [
+      "organic",
+      "local_pack",
+      "people_also_ask",
+      "perspectives",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "how to choose a web design agency",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 4,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "video",
+      "discussions_and_forums",
+      "people_also_ask",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "how much does a web design agency cost",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 4,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "discussions_and_forums",
+      "people_also_ask",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "what does a web design agency do",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 2,
+     "item_types": [
+      "ai_overview",
+      "people_also_ask",
+      "organic",
+      "discussions_and_forums",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "is it worth hiring a web designer",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 3,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "how much do web designers charge",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 3,
+     "item_types": [
+      "featured_snippet",
+      "people_also_ask",
+      "organic",
+      "related_searches"
+     ]
+    }
+   ],
+   "paa_kept": [
+    {
+     "post_slug": "best-web-design-agency-us-small-business-2026",
+     "market": "US",
+     "seed_term": "web design agency small business",
+     "seed_kind": "seed",
+     "question": "How much does a website designer cost for a small business?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agency-us-small-business-2026",
+     "market": "US",
+     "seed_term": "web design agency small business",
+     "seed_kind": "seed",
+     "question": "How much do agencies charge for website design?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agency-us-small-business-2026",
+     "market": "US",
+     "seed_term": "web design agency small business",
+     "seed_kind": "seed",
+     "question": "Is web design still in demand in 2026?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agency-us-small-business-2026",
+     "market": "US",
+     "seed_term": "web design agency small business",
+     "seed_kind": "seed",
+     "question": "What is the 3 second rule in web design?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agency-us-small-business-2026",
+     "market": "US",
+     "seed_term": "web design agency small business",
+     "seed_kind": "seed",
+     "question": "Can ChatGPT actually create a website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agency-us-small-business-2026",
+     "market": "US",
+     "seed_term": "how to choose a web design agency",
+     "seed_kind": "extra",
+     "question": "How to choose the right web design agency?",
+     "serp_answer": "Define Your Goals and Requirements. ...\nEvaluate Their Portfolio. ...\nCheck Reviews and Client Testimonials. ...\nUnderstand Their Process. ...\nAsk About Their Team and Expertise. ...\nLook for Industry Experience. ...\nEnsure Transparency in Pricing.",
+     "answer_source": "https://reloadux.com/blog/tips-for-choosing-a-web-design-agency/"
+    },
+    {
+     "post_slug": "best-web-design-agency-us-small-business-2026",
+     "market": "US",
+     "seed_term": "how to choose a web design agency",
+     "seed_kind": "extra",
+     "question": "What are the 7 C's of web design?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agency-us-small-business-2026",
+     "market": "US",
+     "seed_term": "how to choose a web design agency",
+     "seed_kind": "extra",
+     "question": "What is the average cost to hire a web designer?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agency-us-small-business-2026",
+     "market": "US",
+     "seed_term": "how to choose a web design agency",
+     "seed_kind": "extra",
+     "question": "What are the 5 golden rules of web design?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agency-us-small-business-2026",
+     "market": "US",
+     "seed_term": "how much does a web design agency cost",
+     "seed_kind": "extra",
+     "question": "Is web design still worth it in 2026?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agency-us-small-business-2026",
+     "market": "US",
+     "seed_term": "how much does a web design agency cost",
+     "seed_kind": "extra",
+     "question": "How much should I pay someone to design a website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agency-us-small-business-2026",
+     "market": "US",
+     "seed_term": "how much does a web design agency cost",
+     "seed_kind": "extra",
+     "question": "What is the average cost for a website design?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agency-us-small-business-2026",
+     "market": "US",
+     "seed_term": "how much does a web design agency cost",
+     "seed_kind": "extra",
+     "question": "How much should I pay someone to design my website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agency-us-small-business-2026",
+     "market": "US",
+     "seed_term": "what does a web design agency do",
+     "seed_kind": "extra",
+     "question": "Is AI replacing web design?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agency-us-small-business-2026",
+     "market": "US",
+     "seed_term": "what does a web design agency do",
+     "seed_kind": "extra",
+     "question": "How much do web design agencies charge?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agency-us-small-business-2026",
+     "market": "US",
+     "seed_term": "is it worth hiring a web designer",
+     "seed_kind": "extra",
+     "question": "Are web designers in high demand?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agency-us-small-business-2026",
+     "market": "US",
+     "seed_term": "is it worth hiring a web designer",
+     "seed_kind": "extra",
+     "question": "Will AI replace web designers?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agency-us-small-business-2026",
+     "market": "US",
+     "seed_term": "is it worth hiring a web designer",
+     "seed_kind": "extra",
+     "question": "What are red flags when hiring a designer?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agency-us-small-business-2026",
+     "market": "US",
+     "seed_term": "how much do web designers charge",
+     "seed_kind": "extra",
+     "question": "Are web designers worth it?",
+     "serp_answer": "Web design is one of the most lucrative careers with a great outlooks for career path into UI and UX world. While you can look into full time positions, there is also a big demand for web design work even on the freelance side.",
+     "answer_source": "https://tomthedesigner.com/is-web-design-a-good-career/"
+    },
+    {
+     "post_slug": "best-web-design-agency-us-small-business-2026",
+     "market": "US",
+     "seed_term": "how much do web designers charge",
+     "seed_kind": "extra",
+     "question": "How much should a full website design cost?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agency-us-small-business-2026",
+     "market": "US",
+     "seed_term": "how much do web designers charge",
+     "seed_kind": "extra",
+     "question": "Can I build a website for free?",
+     "serp_answer": "For building websites, Google Sites is like a free alternative to Wix, Squarespace and GoDaddy. Compared to easy site builders like Notion Sites, Github Sites or Carrd, Google Sites is free from limitations to design and development of a professional website.",
+     "answer_source": "https://sites.google.com/site/horstwebdesign/about-google-sites"
+    }
+   ],
+   "paa_dropped": [
+    {
+     "post_slug": "best-web-design-agency-us-small-business-2026",
+     "market": "US",
+     "seed_term": "what does a web design agency do",
+     "question": "How much does a web design agency make?",
+     "reason": "salary"
+    },
+    {
+     "post_slug": "best-web-design-agency-us-small-business-2026",
+     "market": "US",
+     "seed_term": "what does a web design agency do",
+     "question": "Is web design a high paying job?",
+     "reason": "jobs/careers"
+    },
+    {
+     "post_slug": "best-web-design-agency-us-small-business-2026",
+     "market": "US",
+     "seed_term": "what does a web design agency do",
+     "question": "Is web design a stressful job?",
+     "reason": "jobs/careers"
+    }
+   ],
+   "citations_verified_by_fetch": [
+    {
+     "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+     "supports": "Google's own words on timelines and on whether you need to hire anyone: 'Some changes might take effect in a few hours, others could take several months' and 'Short on time or not feeling adventurous? You might consider hiring a professional.'",
+     "verified": "2026-07-29 200"
+    },
+    {
+     "url": "https://web.dev/articles/vitals",
+     "supports": "Core Web Vitals 'good' thresholds (LCP 2.5s, INP 200ms, CLS 0.1) as the measurable standard to hold an agency to.",
+     "verified": "2026-07-29 200"
+    },
+    {
+     "url": "https://www.census.gov/retail/ecommerce.html",
+     "supports": "US Census Bureau Q1 2026: e-commerce was 16.9% of total US retail sales ($326.7bn) - the commercial stake in getting the site right.",
+     "verified": "2026-07-29 200"
+    }
+   ],
+   "keyword_metrics": [
+    {
+     "keyword": "best web design agency for small business",
+     "market": "US",
+     "location_code": 2840,
+     "search_volume": null,
+     "cpc": null,
+     "competition": null,
+     "competition_level": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "keyword_difficulty": null,
+     "search_intent": null,
+     "monthly_searches_last": {},
+     "_source": "google_ads/search_volume + labs/bulk_keyword_difficulty"
+    },
+    {
+     "keyword": "web design agency small business",
+     "market": "US",
+     "location_code": 2840,
+     "search_volume": 10,
+     "cpc": null,
+     "competition": null,
+     "competition_level": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "keyword_difficulty": 13,
+     "search_intent": "commercial",
+     "monthly_searches_last": {
+      "year": 2026,
+      "month": 6,
+      "search_volume": 0
+     }
+    }
+   ]
+  },
+  "shopify-vs-custom-website-us-small-business-2026": {
+   "market": "US",
+   "location_code": 2840,
+   "gsc_impressions_supplied_not_api": 754,
+   "seeds": [
+    "shopify vs custom website",
+    "shopify or custom website"
+   ],
+   "paa_only_extra_queries": [
+    "is shopify better than a custom website",
+    "should i use shopify or build my own website",
+    "custom ecommerce website cost",
+    "shopify limitations",
+    "when to move off shopify"
+   ],
+   "seed_report": [
+    {
+     "query": "shopify vs custom website",
+     "kind": "seed",
+     "status": "ok",
+     "paa_returned": 5,
+     "paa_new_kept": 5,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "shopify or custom website",
+     "kind": "seed",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 2,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "is shopify better than a custom website",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 2,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "should i use shopify or build my own website",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 1,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "custom ecommerce website cost",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 6,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "discussions_and_forums",
+      "people_also_ask",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "shopify limitations",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 4,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "discussions_and_forums",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "when to move off shopify",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 4,
+     "item_types": [
+      "ai_overview",
+      "video",
+      "people_also_ask",
+      "discussions_and_forums",
+      "organic",
+      "related_searches"
+     ]
+    }
+   ],
+   "paa_kept": [
+    {
+     "post_slug": "shopify-vs-custom-website-us-small-business-2026",
+     "market": "US",
+     "seed_term": "shopify vs custom website",
+     "seed_kind": "seed",
+     "question": "How much does Shopify take from a $20 sale?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-vs-custom-website-us-small-business-2026",
+     "market": "US",
+     "seed_term": "shopify vs custom website",
+     "seed_kind": "seed",
+     "question": "What is the downside of using Shopify?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-vs-custom-website-us-small-business-2026",
+     "market": "US",
+     "seed_term": "shopify vs custom website",
+     "seed_kind": "seed",
+     "question": "Does Taylor Swift use Shopify?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-vs-custom-website-us-small-business-2026",
+     "market": "US",
+     "seed_term": "shopify vs custom website",
+     "seed_kind": "seed",
+     "question": "Do I need LLC to sell on Shopify?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-vs-custom-website-us-small-business-2026",
+     "market": "US",
+     "seed_term": "shopify vs custom website",
+     "seed_kind": "seed",
+     "question": "Is Shopify still profitable in 2026?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-vs-custom-website-us-small-business-2026",
+     "market": "US",
+     "seed_term": "shopify or custom website",
+     "seed_kind": "seed",
+     "question": "Is it better to have your own website or use Shopify?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-vs-custom-website-us-small-business-2026",
+     "market": "US",
+     "seed_term": "shopify or custom website",
+     "seed_kind": "seed",
+     "question": "Is Shopify still worth it in 2026?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-vs-custom-website-us-small-business-2026",
+     "market": "US",
+     "seed_term": "is shopify better than a custom website",
+     "seed_kind": "extra",
+     "question": "What is the downside of Shopify?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-vs-custom-website-us-small-business-2026",
+     "market": "US",
+     "seed_term": "is shopify better than a custom website",
+     "seed_kind": "extra",
+     "question": "Will I lose my domain if I cancel Shopify?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-vs-custom-website-us-small-business-2026",
+     "market": "US",
+     "seed_term": "should i use shopify or build my own website",
+     "seed_kind": "extra",
+     "question": "Do I need an LLC to run a Shopify?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-vs-custom-website-us-small-business-2026",
+     "market": "US",
+     "seed_term": "custom ecommerce website cost",
+     "seed_kind": "extra",
+     "question": "What is the cost of custom ecommerce website?",
+     "serp_answer": "From ready-made platforms to fully customised solutions, the ecommerce website cost in India spectrum ranges from as low as \u20b91,20,000 for basic setups to over \u20b935,00,000 for enterprise-grade platforms with Smart AI tools integrations.",
+     "answer_source": "https://www.webshark.in/blogs/ecommerce-website-development-cost-in-india/"
+    },
+    {
+     "post_slug": "shopify-vs-custom-website-us-small-business-2026",
+     "market": "US",
+     "seed_term": "custom ecommerce website cost",
+     "seed_kind": "extra",
+     "question": "What is the 80 20 rule in ecommerce?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-vs-custom-website-us-small-business-2026",
+     "market": "US",
+     "seed_term": "custom ecommerce website cost",
+     "seed_kind": "extra",
+     "question": "How much should I charge to build an ecommerce website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-vs-custom-website-us-small-business-2026",
+     "market": "US",
+     "seed_term": "custom ecommerce website cost",
+     "seed_kind": "extra",
+     "question": "Is $800 enough to build an ecommerce business?",
+     "serp_answer": "The answer depends on several factors your business model, product sourcing strategy, marketing approach, and operational structure. Some entrepreneurs launch with a few hundred dollars, while others invest several thousand to accelerate growth.",
+     "answer_source": "https://www.trendtrack.io/blog-post/how-much-money-do-i-need-to-start-an-ecommerce"
+    },
+    {
+     "post_slug": "shopify-vs-custom-website-us-small-business-2026",
+     "market": "US",
+     "seed_term": "custom ecommerce website cost",
+     "seed_kind": "extra",
+     "question": "What are the 4 types of e-commerce?",
+     "serp_answer": "The video explains four main categories of e-commerce: business-to-consumer (B2C), business-to-business (B2B), consumer-to-consumer (C2C), and e-government. B2C involves companies selling directly to customers through electronic storefronts. B2B occurs when businesses sell products or services to other businesses.",
+     "answer_source": "https://study.com/academy/lesson/video/e-commerce-m-commerce-buying-selling-on-the-web-mobile-devices.html"
+    },
+    {
+     "post_slug": "shopify-vs-custom-website-us-small-business-2026",
+     "market": "US",
+     "seed_term": "custom ecommerce website cost",
+     "seed_kind": "extra",
+     "question": "Will AI replace e-commerce?",
+     "serp_answer": "By 2026, Artificial Intelligence (AI) is becoming the core engine behind how e-commerce brands attract customers, optimize operations, and scale profitably. From smart recommendations to autonomous operations, AI is redefining the future of digital commerce.",
+     "answer_source": "https://www.linkedin.com/pulse/how-ai-changing-e-commerce-2026-jashma-info-soft-6y2wf"
+    },
+    {
+     "post_slug": "shopify-vs-custom-website-us-small-business-2026",
+     "market": "US",
+     "seed_term": "shopify limitations",
+     "seed_kind": "extra",
+     "question": "What limitations does Shopify have?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-vs-custom-website-us-small-business-2026",
+     "market": "US",
+     "seed_term": "shopify limitations",
+     "seed_kind": "extra",
+     "question": "How much does Shopify take from a $100 sale?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-vs-custom-website-us-small-business-2026",
+     "market": "US",
+     "seed_term": "shopify limitations",
+     "seed_kind": "extra",
+     "question": "What are the disadvantages of Shopify?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-vs-custom-website-us-small-business-2026",
+     "market": "US",
+     "seed_term": "shopify limitations",
+     "seed_kind": "extra",
+     "question": "What is the biggest problem with Shopify?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-vs-custom-website-us-small-business-2026",
+     "market": "US",
+     "seed_term": "when to move off shopify",
+     "seed_kind": "extra",
+     "question": "How do I get away from Shopify?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-vs-custom-website-us-small-business-2026",
+     "market": "US",
+     "seed_term": "when to move off shopify",
+     "seed_kind": "extra",
+     "question": "Does Kim Kardashian use Shopify?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-vs-custom-website-us-small-business-2026",
+     "market": "US",
+     "seed_term": "when to move off shopify",
+     "seed_kind": "extra",
+     "question": "Who is Shopify's biggest competitor?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "shopify-vs-custom-website-us-small-business-2026",
+     "market": "US",
+     "seed_term": "when to move off shopify",
+     "seed_kind": "extra",
+     "question": "Why do so many Shopify stores fail?",
+     "serp_answer": "",
+     "answer_source": ""
+    }
+   ],
+   "paa_dropped": [],
+   "citations_verified_by_fetch": [
+    {
+     "url": "https://shopify.dev/docs/storefronts/headless",
+     "supports": "Shopify's official position that 'custom' on Shopify means headless - Hydrogen framework plus Oxygen hosting, or bring-your-own-stack against the composable APIs. Reframes the vs-question accurately.",
+     "verified": "2026-07-29 200"
+    },
+    {
+     "url": "https://shopify.dev/docs/storefronts/themes/architecture",
+     "supports": "The Liquid theme architecture a stock Shopify build is constrained by, which is the actual boundary the 'custom' question is about.",
+     "verified": "2026-07-29 200"
+    },
+    {
+     "url": "https://www.shopify.com/pricing",
+     "supports": "The third-party payment provider fee tiers (2% / 1% / 0.6% / 0.2%) that make up the ongoing cost side of the comparison.",
+     "verified": "2026-07-29 200; page localises currency by visitor geo"
+    }
+   ],
+   "keyword_metrics": [
+    {
+     "keyword": "shopify vs custom website",
+     "market": "US",
+     "location_code": 2840,
+     "search_volume": 10,
+     "cpc": null,
+     "competition": 0.07,
+     "competition_level": "LOW",
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "keyword_difficulty": 0,
+     "search_intent": "commercial",
+     "monthly_searches_last": {
+      "year": 2026,
+      "month": 6,
+      "search_volume": 20
+     }
+    },
+    {
+     "keyword": "shopify or custom website",
+     "market": "US",
+     "location_code": 2840,
+     "search_volume": 10,
+     "cpc": null,
+     "competition": null,
+     "competition_level": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "keyword_difficulty": null,
+     "search_intent": "commercial",
+     "monthly_searches_last": {
+      "year": 2026,
+      "month": 6,
+      "search_volume": 0
+     }
+    }
+   ]
+  },
+  "best-web-design-agencies-small-business-2026": {
+   "market": "US",
+   "location_code": 2840,
+   "gsc_impressions_supplied_not_api": 711,
+   "seeds": [
+    "best web design agencies small business"
+   ],
+   "paa_only_extra_queries": [
+    "how to find a good web designer",
+    "what to look for in a web design company",
+    "do i need a web designer for my small business",
+    "web design company vs freelancer",
+    "how long does it take to build a website"
+   ],
+   "seed_report": [
+    {
+     "query": "best web design agencies small business",
+     "kind": "seed",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 6,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "local_pack",
+      "people_also_ask",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "how to find a good web designer",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 5,
+     "paa_new_kept": 4,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "discussions_and_forums",
+      "video",
+      "perspectives",
+      "people_also_ask",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "what to look for in a web design company",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 5,
+     "item_types": [
+      "ai_overview",
+      "people_also_ask",
+      "organic",
+      "perspectives",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "do i need a web designer for my small business",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 3,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "discussions_and_forums",
+      "people_also_ask",
+      "perspectives",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "web design company vs freelancer",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 5,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "video",
+      "people_also_ask",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "how long does it take to build a website",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 3,
+     "item_types": [
+      "ai_overview",
+      "people_also_ask",
+      "organic",
+      "perspectives",
+      "video",
+      "related_searches"
+     ]
+    }
+   ],
+   "paa_kept": [
+    {
+     "post_slug": "best-web-design-agencies-small-business-2026",
+     "market": "US",
+     "seed_term": "best web design agencies small business",
+     "seed_kind": "seed",
+     "question": "How much does a website designer cost for a small business?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agencies-small-business-2026",
+     "market": "US",
+     "seed_term": "best web design agencies small business",
+     "seed_kind": "seed",
+     "question": "What is the 3 second rule in web design?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agencies-small-business-2026",
+     "market": "US",
+     "seed_term": "best web design agencies small business",
+     "seed_kind": "seed",
+     "question": "Which website builder is the best for small business?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agencies-small-business-2026",
+     "market": "US",
+     "seed_term": "best web design agencies small business",
+     "seed_kind": "seed",
+     "question": "What are the 7 C's of website design?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agencies-small-business-2026",
+     "market": "US",
+     "seed_term": "best web design agencies small business",
+     "seed_kind": "seed",
+     "question": "Is web design still in demand in 2026?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agencies-small-business-2026",
+     "market": "US",
+     "seed_term": "best web design agencies small business",
+     "seed_kind": "seed",
+     "question": "Can ChatGPT actually create a website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agencies-small-business-2026",
+     "market": "US",
+     "seed_term": "how to find a good web designer",
+     "seed_kind": "extra",
+     "question": "How much should I pay a web designer?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agencies-small-business-2026",
+     "market": "US",
+     "seed_term": "how to find a good web designer",
+     "seed_kind": "extra",
+     "question": "What are the 7 C's of web design?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agencies-small-business-2026",
+     "market": "US",
+     "seed_term": "how to find a good web designer",
+     "seed_kind": "extra",
+     "question": "What are red flags when hiring a designer?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agencies-small-business-2026",
+     "market": "US",
+     "seed_term": "how to find a good web designer",
+     "seed_kind": "extra",
+     "question": "How much should a full website design cost?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agencies-small-business-2026",
+     "market": "US",
+     "seed_term": "what to look for in a web design company",
+     "seed_kind": "extra",
+     "question": "How to pick a web design company?",
+     "serp_answer": "Evaluate agencies on these key criteria: Portfolio quality and relevance (work in your industry or similar challenges), client testimonials and case studies with measurable results, technical capabilities matching your needs (platforms, integrations, custom development), strategic approach beyond visual design, team ...",
+     "answer_source": "https://cliquestudios.com/faq/how-to-choose-a-web-design-agency"
+    },
+    {
+     "post_slug": "best-web-design-agencies-small-business-2026",
+     "market": "US",
+     "seed_term": "what to look for in a web design company",
+     "seed_kind": "extra",
+     "question": "What are the 5 golden rules of web design?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agencies-small-business-2026",
+     "market": "US",
+     "seed_term": "what to look for in a web design company",
+     "seed_kind": "extra",
+     "question": "What are the 5 elements to a good website design?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agencies-small-business-2026",
+     "market": "US",
+     "seed_term": "what to look for in a web design company",
+     "seed_kind": "extra",
+     "question": "What are the five golden rules of web designing?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agencies-small-business-2026",
+     "market": "US",
+     "seed_term": "what to look for in a web design company",
+     "seed_kind": "extra",
+     "question": "What are the three types of web design?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agencies-small-business-2026",
+     "market": "US",
+     "seed_term": "do i need a web designer for my small business",
+     "seed_kind": "extra",
+     "question": "Is web design still worth it in 2026?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agencies-small-business-2026",
+     "market": "US",
+     "seed_term": "do i need a web designer for my small business",
+     "seed_kind": "extra",
+     "question": "Is AI replacing web design?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agencies-small-business-2026",
+     "market": "US",
+     "seed_term": "do i need a web designer for my small business",
+     "seed_kind": "extra",
+     "question": "Is it worth making a website for a small business?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agencies-small-business-2026",
+     "market": "US",
+     "seed_term": "web design company vs freelancer",
+     "seed_kind": "extra",
+     "question": "Is being a web designer only freelance?",
+     "serp_answer": "As a web developer, you're likely to work in a team of development professionals reporting to a project manager. Depending on the size of the project, this could be a small team covering many different roles or a larger team with specialized roles. You can also choose to work on independent and freelance projects.",
+     "answer_source": "https://www.coursera.org/articles/web-designer"
+    },
+    {
+     "post_slug": "best-web-design-agencies-small-business-2026",
+     "market": "US",
+     "seed_term": "web design company vs freelancer",
+     "seed_kind": "extra",
+     "question": "Is AI replacing freelancers?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agencies-small-business-2026",
+     "market": "US",
+     "seed_term": "web design company vs freelancer",
+     "seed_kind": "extra",
+     "question": "Is it better to work for a company or freelance?",
+     "serp_answer": "Freelance work offers freedom and variety, while corporate roles provide security and a steady paycheck ; finding the right fit depends on your priorities around income, work-life balance, and personal fulfillment.",
+     "answer_source": "https://www.linkedin.com/top-content/career/freelance-career-advice/choosing-freelance-work-vs-corporate-advancement/"
+    },
+    {
+     "post_slug": "best-web-design-agencies-small-business-2026",
+     "market": "US",
+     "seed_term": "web design company vs freelancer",
+     "seed_kind": "extra",
+     "question": "Do I need an LLC if I'm a freelancer?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agencies-small-business-2026",
+     "market": "US",
+     "seed_term": "web design company vs freelancer",
+     "seed_kind": "extra",
+     "question": "Do I need an LLC if I am a freelancer?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agencies-small-business-2026",
+     "market": "US",
+     "seed_term": "how long does it take to build a website",
+     "seed_kind": "extra",
+     "question": "How long does it take for a person to build a website?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "best-web-design-agencies-small-business-2026",
+     "market": "US",
+     "seed_term": "how long does it take to build a website",
+     "seed_kind": "extra",
+     "question": "Can I build a website in a day?",
+     "serp_answer": "Building a website in a day might feel impossible at first, but it's all about keeping it simple. Focus on making your content clear and ready, pick the right tools, and avoid common mistakes. You'll be able to launch quickly, whether you're building for an event, a meeting, or just to get your brand online fast.",
+     "answer_source": "https://www.networksolutions.com/blog/how-to-build-website-in-a-day/"
+    },
+    {
+     "post_slug": "best-web-design-agencies-small-business-2026",
+     "market": "US",
+     "seed_term": "how long does it take to build a website",
+     "seed_kind": "extra",
+     "question": "How difficult is making a website?",
+     "serp_answer": "Creating your own website can range from fairly straightforward to quite challenging, depending on several factors: Your Tech Comfort Level: If you're comfortable with technology and willing to learn, it's more manageable. But if tech isn't your thing, it can feel pretty daunting.",
+     "answer_source": "https://www.gosite.com/blog/20-problems-youll-have-if-you-try-to-build-your-own-website"
+    }
+   ],
+   "paa_dropped": [],
+   "citations_verified_by_fetch": [
+    {
+     "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide",
+     "supports": "Google on realistic timelines ('a few hours' to 'several months') and on hiring a professional being optional, not mandatory.",
+     "verified": "2026-07-29 200"
+    },
+    {
+     "url": "https://web.dev/articles/vitals",
+     "supports": "Core Web Vitals thresholds as the objective yardstick for judging an agency's output rather than taking its word.",
+     "verified": "2026-07-29 200"
+    },
+    {
+     "url": "https://www.sba.gov/business-guide/manage-your-business/marketing-sales",
+     "supports": "SBA guidance on costing a marketing plan and tracking ROI - the neutral frame for 'is an agency worth it'.",
+     "verified": "2026-07-29 200"
+    }
+   ],
+   "keyword_metrics": [
+    {
+     "keyword": "best web design agencies small business",
+     "market": "US",
+     "location_code": 2840,
+     "search_volume": null,
+     "cpc": null,
+     "competition": null,
+     "competition_level": null,
+     "low_top_of_page_bid": null,
+     "high_top_of_page_bid": null,
+     "keyword_difficulty": null,
+     "search_intent": null,
+     "monthly_searches_last": {},
+     "_source": "google_ads/search_volume + labs/bulk_keyword_difficulty"
+    }
+   ]
+  },
+  "webflow-vs-wordpress-us-small-business-2026": {
+   "market": "US",
+   "location_code": 2840,
+   "gsc_impressions_supplied_not_api": 531,
+   "seeds": [
+    "webflow vs wordpress",
+    "webflow or wordpress"
+   ],
+   "paa_only_extra_queries": [
+    "is webflow better than wordpress",
+    "webflow vs wordpress for seo",
+    "is webflow cheaper than wordpress",
+    "should i switch from wordpress to webflow",
+    "what are the disadvantages of webflow"
+   ],
+   "seed_report": [
+    {
+     "query": "webflow vs wordpress",
+     "kind": "seed",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 4,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "video",
+      "related_searches",
+      "images"
+     ]
+    },
+    {
+     "query": "webflow or wordpress",
+     "kind": "seed",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 4,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "video",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "is webflow better than wordpress",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 0,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "video",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "webflow vs wordpress for seo",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 4,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "discussions_and_forums",
+      "video",
+      "people_also_ask",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "is webflow cheaper than wordpress",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 1,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "video",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "should i switch from wordpress to webflow",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 1,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "video",
+      "discussions_and_forums",
+      "people_also_ask",
+      "perspectives",
+      "related_searches"
+     ]
+    },
+    {
+     "query": "what are the disadvantages of webflow",
+     "kind": "extra",
+     "status": "ok",
+     "paa_returned": 6,
+     "paa_new_kept": 5,
+     "item_types": [
+      "ai_overview",
+      "organic",
+      "people_also_ask",
+      "video",
+      "related_searches"
+     ]
+    }
+   ],
+   "paa_kept": [
+    {
+     "post_slug": "webflow-vs-wordpress-us-small-business-2026",
+     "market": "US",
+     "seed_term": "webflow vs wordpress",
+     "seed_kind": "seed",
+     "question": "Should I switch from WordPress to Webflow?",
+     "serp_answer": "No dependency on plugins: Webflow eliminates the need for third-party plugins, reducing security risks and simplifying updates.\nIntegrated hosting: Webflow's built-in, high-performance hosting ensures fast and reliable site delivery without needing an external service.",
+     "answer_source": "https://help.webflow.com/hc/en-us/articles/33961193662739-Migrate-your-site-from-WordPress-to-Webflow"
+    },
+    {
+     "post_slug": "webflow-vs-wordpress-us-small-business-2026",
+     "market": "US",
+     "seed_term": "webflow vs wordpress",
+     "seed_kind": "seed",
+     "question": "Why are people moving away from WordPress?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "webflow-vs-wordpress-us-small-business-2026",
+     "market": "US",
+     "seed_term": "webflow vs wordpress",
+     "seed_kind": "seed",
+     "question": "Is WordPress better than Webflow in 2026?",
+     "serp_answer": "Both Webflow and WordPress remain powerful platforms in 2026, but the right choice depends on your business goals and operational needs. WordPress still dominates in flexibility and ecosystem size, while Webflow continues leading in modern design experiences, speed, and simplicity.",
+     "answer_source": "https://www.thesmallsquare.com/post/webflow-vs-wordpress-in-2026"
+    },
+    {
+     "post_slug": "webflow-vs-wordpress-us-small-business-2026",
+     "market": "US",
+     "seed_term": "webflow vs wordpress",
+     "seed_kind": "seed",
+     "question": "What are the pros and cons of Webflow?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "webflow-vs-wordpress-us-small-business-2026",
+     "market": "US",
+     "seed_term": "webflow or wordpress",
+     "seed_kind": "seed",
+     "question": "Do professionals use Webflow?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "webflow-vs-wordpress-us-small-business-2026",
+     "market": "US",
+     "seed_term": "webflow or wordpress",
+     "seed_kind": "seed",
+     "question": "What is WordPress' biggest competitor?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "webflow-vs-wordpress-us-small-business-2026",
+     "market": "US",
+     "seed_term": "webflow or wordpress",
+     "seed_kind": "seed",
+     "question": "Is WordPress outdated in 2026?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "webflow-vs-wordpress-us-small-business-2026",
+     "market": "US",
+     "seed_term": "webflow or wordpress",
+     "seed_kind": "seed",
+     "question": "What is replacing WordPress?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "webflow-vs-wordpress-us-small-business-2026",
+     "market": "US",
+     "seed_term": "webflow vs wordpress for seo",
+     "seed_kind": "extra",
+     "question": "Is Webflow SEO friendly?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "webflow-vs-wordpress-us-small-business-2026",
+     "market": "US",
+     "seed_term": "webflow vs wordpress for seo",
+     "seed_kind": "extra",
+     "question": "Is WordPress still the best for SEO?",
+     "serp_answer": "One of the primary reasons WordPress powers over fifty percent of websites online is its SEO breadth. WordPress is open-source, opposed to many closed platforms. That means developers can fully customize the backend, optimize the structure, and implement advanced SEO strategies without limitations.",
+     "answer_source": "https://xtapps.us/wordpress-vs-other-platforms-which-is-better-for-seo"
+    },
+    {
+     "post_slug": "webflow-vs-wordpress-us-small-business-2026",
+     "market": "US",
+     "seed_term": "webflow vs wordpress for seo",
+     "seed_kind": "extra",
+     "question": "Is WordPress or Webflow better for SEO?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "webflow-vs-wordpress-us-small-business-2026",
+     "market": "US",
+     "seed_term": "webflow vs wordpress for seo",
+     "seed_kind": "extra",
+     "question": "Will AI replace Webflow?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "webflow-vs-wordpress-us-small-business-2026",
+     "market": "US",
+     "seed_term": "is webflow cheaper than wordpress",
+     "seed_kind": "extra",
+     "question": "Is there a cheaper alternative to WordPress?",
+     "serp_answer": "Canva. If you want a truly free alternative to WordPress\u2014and your needs are simple\u2014Canva is one of the easiest ways to get a good-looking website online fast. Unlike WordPress, which requires hosting, setup, and ongoing maintenance, Canva removes almost all technical friction.",
+     "answer_source": "https://zapier.com/blog/wordpress-alternatives/"
+    },
+    {
+     "post_slug": "webflow-vs-wordpress-us-small-business-2026",
+     "market": "US",
+     "seed_term": "should i switch from wordpress to webflow",
+     "seed_kind": "extra",
+     "question": "Is Webflow better than WordPress?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "webflow-vs-wordpress-us-small-business-2026",
+     "market": "US",
+     "seed_term": "what are the disadvantages of webflow",
+     "seed_kind": "extra",
+     "question": "What are the downsides of Webflow?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "webflow-vs-wordpress-us-small-business-2026",
+     "market": "US",
+     "seed_term": "what are the disadvantages of webflow",
+     "seed_kind": "extra",
+     "question": "Which is better, Wix or Webflow?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "webflow-vs-wordpress-us-small-business-2026",
+     "market": "US",
+     "seed_term": "what are the disadvantages of webflow",
+     "seed_kind": "extra",
+     "question": "Is Webflow worth it in 2026?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "webflow-vs-wordpress-us-small-business-2026",
+     "market": "US",
+     "seed_term": "what are the disadvantages of webflow",
+     "seed_kind": "extra",
+     "question": "What are the limitations of Webflow?",
+     "serp_answer": "",
+     "answer_source": ""
+    },
+    {
+     "post_slug": "webflow-vs-wordpress-us-small-business-2026",
+     "market": "US",
+     "seed_term": "what are the disadvantages of webflow",
+     "seed_kind": "extra",
+     "question": "What is better, Wix or Webflow?",
+     "serp_answer": "If you need to build complex, custom websites that can grow with your organization, Webflow gives you unmatched flexibility. Wix is best for businesses looking for speed and simplicity.",
+     "answer_source": "https://zapier.com/blog/webflow-vs-wix/"
+    }
+   ],
+   "paa_dropped": [],
+   "citations_verified_by_fetch": [
+    {
+     "url": "https://w3techs.com/technologies/details/cm-wordpress",
+     "supports": "W3Techs survey dated 28 July 2026: WordPress is used by 59.1% of all sites whose CMS is known, which is 41.2% of all websites. Settles the 'is WordPress dying' question with a dated number.",
+     "verified": "2026-07-29 200"
+    },
+    {
+     "url": "https://wordpress.org/documentation/article/requirements/",
+     "supports": "WordPress.org's own hosting requirements - PHP 8.3+, MariaDB 10.11+ or MySQL 8.0+, HTTPS required on every install. Shows the 'free' CMS still carries an infrastructure bill.",
+     "verified": "2026-07-29 200"
+    },
+    {
+     "url": "https://developers.webflow.com/",
+     "supports": "Webflow's official developer platform: Data/CMS API, Site Management API, custom code, webhooks, DevLink, Code Components and Webflow Cloud - the real answer to 'what can and cannot be extended in Webflow'.",
+     "verified": "2026-07-29 200"
+    },
+    {
+     "url": "https://wordpress.org/about/",
+     "supports": "WordPress is open source, licensed under GPLv2 - the licensing half of the lock-in comparison against Webflow's hosted model.",
+     "verified": "2026-07-29 200"
+    }
+   ],
+   "keyword_metrics": [
+    {
+     "keyword": "webflow vs wordpress",
+     "market": "US",
+     "location_code": 2840,
+     "search_volume": 1000,
+     "cpc": 15.64,
+     "competition": 0.23,
+     "competition_level": "LOW",
+     "low_top_of_page_bid": 0.6,
+     "high_top_of_page_bid": 15.37,
+     "keyword_difficulty": 1,
+     "search_intent": "commercial",
+     "monthly_searches_last": {
+      "year": 2026,
+      "month": 6,
+      "search_volume": 880
+     }
+    },
+    {
+     "keyword": "webflow or wordpress",
+     "market": "US",
+     "location_code": 2840,
+     "search_volume": 30,
+     "cpc": 22.51,
+     "competition": 0.23,
+     "competition_level": "LOW",
+     "low_top_of_page_bid": 1.01,
+     "high_top_of_page_bid": 15.96,
+     "keyword_difficulty": 3,
+     "search_intent": "informational",
+     "monthly_searches_last": {
+      "year": 2026,
+      "month": 6,
+      "search_volume": 30
+     }
+    }
+   ]
+  }
+ },
+ "citation_applies_to_all_posts": {
+  "url": "https://developers.google.com/search/docs/appearance/structured-data/faqpage",
+  "supports": "Google's own docs now state the FAQ rich result 'is no longer shown in Google Search results, as announced in the changelog entry in May 2026'. Expanding these FAQ blocks is therefore an on-page UX and AI-citation play, NOT a rich-snippet play - do not promise FAQ rich results in the copy.",
+  "verified": "2026-07-29 200"
+ },
+ "citation_urls_checked_and_rejected": [
+  {
+   "url": "https://www.bls.gov/oes/current/oes151254.htm",
+   "result": "HTTP 403"
+  },
+  {
+   "url": "https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm",
+   "result": "HTTP 403"
+  },
+  {
+   "url": "https://webflow.com/pricing",
+   "result": "fetch failed: header overflow"
+  },
+  {
+   "url": "https://help.webflow.com/hc/en-us/articles/33961232582419",
+   "result": "HTTP 403"
+  },
+  {
+   "url": "https://www.ato.gov.au/businesses-and-organisations/gst-excise-and-indirect-taxes/gst/registering-for-gst",
+   "result": "HTTP 403"
+  },
+  {
+   "url": "https://business.gov.au/online-and-digital/website-essentials",
+   "result": "HTTP 404"
+  },
+  {
+   "url": "https://auspost.com.au/business/marketing-and-communications/access-data-and-insights/ecommerce-report",
+   "result": "HTTP 404"
+  },
+  {
+   "url": "https://www.accc.gov.au/business/selling-products-and-services/online-selling",
+   "result": "HTTP 404"
+  },
+  {
+   "url": "https://www.abs.gov.au/statistics/industry/technology-and-innovation/business-use-information-technology",
+   "result": "HTTP 200 but latest reference period is 2015-16 - too stale to cite"
+  }
+ ],
+ "serp_failures": [],
+ "seeds_with_no_paa_element": [
+  {
+   "post": "best-ecommerce-agency-small-business-australia-2026",
+   "query": "ecommerce agency australia",
+   "kind": "seed",
+   "item_types": "ai_overview|organic|related_searches"
+  },
+  {
+   "post": "best-ecommerce-agency-small-business-australia-2026",
+   "query": "best ecommerce agency australia",
+   "kind": "seed",
+   "item_types": "ai_overview|organic|related_searches"
+  },
+  {
+   "post": "best-ecommerce-agency-small-business-australia-2026",
+   "query": "ecommerce website design australia",
+   "kind": "extra",
+   "item_types": "organic|local_pack|related_searches"
+  },
+  {
+   "post": "best-ecommerce-agency-small-business-australia-2026",
+   "query": "shopify agency australia",
+   "kind": "extra",
+   "item_types": "ai_overview|organic|related_searches"
+  },
+  {
+   "post": "best-ecommerce-agency-small-business-australia-2026",
+   "query": "how to choose an ecommerce agency",
+   "kind": "extra",
+   "item_types": "ai_overview|organic|discussions_and_forums|related_searches"
+  },
+  {
+   "post": "best-web-design-agency-us-small-business-2026",
+   "query": "best web design agency for small business",
+   "kind": "seed",
+   "item_types": "ai_overview|organic|discussions_and_forums|perspectives|local_pack|related_searches"
+  }
+ ],
+ "keyword_overview_failures": [],
+ "cost_ledger": [
+  {
+   "call": "serp:US:shopify development cost",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:how much does shopify development cost",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:shopify developer cost",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:how much does it cost to build a shopify store",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:shopify store setup cost",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:how much do shopify developers charge per hour",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:is shopify expensive to run",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:shopify plus cost",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:small business website cost",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:how much does a website cost for a small business",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:website cost",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:how much does it cost to build a website",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:how much does a website cost per month",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:how much should i pay for a website",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:website maintenance cost",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:how much does a website cost to maintain",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:AU:web design companies australia",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:AU:best web design company australia",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:AU:web design cost australia",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:AU:how much does a website cost in australia",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:AU:how much do web designers charge in australia",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:AU:how to choose a web design company",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:AU:web designer australia",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:AU:small business website australia",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:AU:ecommerce agency australia",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:AU:best ecommerce agency australia",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:AU:how much does an ecommerce website cost australia",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:AU:ecommerce website design australia",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:AU:how to start an online store in australia",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:AU:best ecommerce platform australia",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:AU:shopify agency australia",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:AU:how to choose an ecommerce agency",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:AU:how much does it cost to build an online store australia",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:AU:is shopify worth it in australia",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:AU:how much does shopify cost australia",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:AU:do i need an ecommerce agency",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:best web design agency for small business",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:web design agency small business",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:how to choose a web design agency",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:how much does a web design agency cost",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:what does a web design agency do",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:is it worth hiring a web designer",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:how much do web designers charge",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:shopify vs custom website",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:shopify or custom website",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:is shopify better than a custom website",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:should i use shopify or build my own website",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:custom ecommerce website cost",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:shopify limitations",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:when to move off shopify",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:best web design agencies small business",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:how to find a good web designer",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:what to look for in a web design company",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:do i need a web designer for my small business",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:web design company vs freelancer",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:how long does it take to build a website",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:webflow vs wordpress",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:webflow or wordpress",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:is webflow better than wordpress",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:webflow vs wordpress for seo",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:is webflow cheaper than wordpress",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:should i switch from wordpress to webflow",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "serp:US:what are the disadvantages of webflow",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "kw_overview:US",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "ads_volume:US",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "bulk_kd:US",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "kw_overview:AU",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "ads_volume:AU",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  },
+  {
+   "call": "bulk_kd:AU",
+   "cost": 0.0,
+   "cached": true,
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "error": ""
+  }
+ ],
+ "total_cost_usd": 0.0
+}

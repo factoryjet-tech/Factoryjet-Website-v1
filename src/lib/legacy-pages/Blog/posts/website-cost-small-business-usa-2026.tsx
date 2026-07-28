@@ -70,6 +70,50 @@ export const post: BlogPost = {
       q: 'What is the difference between a website redesign and a new website build?',
       a: "A new build starts from scratch — new architecture, design system, content strategy, and technical stack. A redesign preserves some existing content and structure while updating design and performance. New builds cost 20–40% more but avoid inheriting technical debt. Redesigns are faster (30–50% less time) but often hit architectural ceilings within 2–3 years. If your current site scores below 60 on Google PageSpeed or was built before 2021, a new build usually delivers better long-term ROI than a redesign patch.",
     },
+    {
+      q: 'What is the average cost of a website?',
+      a: "There is no useful average, because a one-page brochure site and a 40-page site with booking and payments are both websites. The honest framing is by tier: DIY builders are the cheapest and cost you time, freelancers sit in the middle, and agencies cost most and carry the least risk. Pick the tier that matches how much of the work you want to own.",
+    },
+    {
+      q: 'What is a fair price to pay for a website?',
+      a: "Fair is whatever buys the scope you actually need with the risk sitting on the right side. A fair quote names the page count, who writes the copy, who supplies images, how many revision rounds you get, and what happens after launch. A cheap quote that leaves those undefined is not cheaper, it is unfinished, and the gap surfaces as change requests.",
+    },
+    {
+      q: 'Why is owning a website so expensive?',
+      a: "Because the build is only part of it. You are paying for hosting, a domain, an SSL certificate, updates, backups and someone to fix things when they break. The design work is a one-off. The running cost is permanent and small if planned for, and unpleasant if nobody budgeted for it.",
+    },
+    {
+      q: 'Do I have to pay a monthly fee to have a website?',
+      a: "Yes, in practice. Hosting and a domain are unavoidable, and most sites also carry a platform or plugin cost. What varies enormously is the size of that bill. A simple static site can run for very little a month, while a store with several paid apps and a managed host is a real recurring line item. Ask for the monthly figure before you sign.",
+    },
+    {
+      q: 'What is the cost of website maintenance?',
+      a: "It depends on what is being maintained. A static marketing site needs little more than hosting and occasional content edits. A WordPress or WooCommerce site needs regular core, theme and plugin updates plus security patching, which is real recurring work. Ask any agency whether maintenance is included, optional, or assumed to be your problem.",
+    },
+    {
+      q: 'How much should I pay someone to manage my website?',
+      a: "Price it against what the work actually covers rather than a flat rate. A useful management arrangement includes updates and patching, backups with a tested restore, uptime monitoring, and a defined response time when something breaks. If a quote does not say how fast someone responds when the site goes down, it is not a management plan.",
+    },
+    {
+      q: 'How much does it cost to host a website for one year?',
+      a: "Shared hosting is the cheap end and fine for a small brochure site. Managed hosting costs more and takes updates, backups and security off your plate. Static hosting on a modern CDN is often the cheapest and fastest option for a marketing site. The right answer depends on the platform, so decide the platform first and the hosting bill follows.",
+    },
+    {
+      q: 'Is it worth making a website for a small business?',
+      a: "For most, yes, because it is the only channel you own outright. Social accounts and marketplaces can change their rules or close without warning. A site you control is also what search engines and AI assistants read when someone asks who provides your service locally. The question is scope, not whether.",
+    },
+    {
+      q: 'Can ChatGPT actually create a website?',
+      a: "It can produce working code for a simple page, and it is genuinely useful for first drafts and for unblocking a specific problem. What it does not do is make the judgement calls: what the page is for, whether it is accessible, how fast it loads on a mid-range phone, or who fixes it in six months. Treat it as a fast assistant, not a supplier.",
+    },
+    {
+      q: 'Can I make my own website for free?',
+      a: "You can build one at no cash cost on a free tier, and for testing an idea that is a sensible move. The limits usually show up as someone else's branding, a subdomain rather than your own name, and no way to move the site later. Free is fine for validating. It is a weak place to run a business you intend to grow.",
+    },
+    {
+      q: 'How much does it cost to redesign a website?',
+      a: "A redesign is usually cheaper than a first build when the content and structure survive, and roughly the same when they do not. The real driver is whether you are restyling what exists or rethinking what the site should do. Be honest about which one you are buying, because a restyle sold as a rethink disappoints on both counts.",
+    },
   ],
   content: (
     <>
