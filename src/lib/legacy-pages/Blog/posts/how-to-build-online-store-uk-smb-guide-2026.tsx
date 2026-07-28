@@ -5,7 +5,7 @@ export const post: BlogPost = {
   id: '130',
   slug: "how-to-build-online-store-uk-smb-guide-2026",
   title: "How to Build an Online Store in 2026: A UK SMB Founder's Step-by-Step Guide",
-  excerpt: "Building an online store in 2026 means choosing between Shopify, WooCommerce, or custom platforms, then layering AI agents for support, sales, and fulfilment. This guide walks UK SMB founders through platform selection, payment setup, AI integration, and launch—with real costs and timelines.",
+  excerpt: "Building an online store in 2026 means choosing between Shopify, WooCommerce, or custom platforms, then layering AI agents for support, sales, and fulfilment. This guide walks UK SMB founders through platform selection, payment setup, AI integration, and launch, with real costs and timelines.",
   category: "E-Commerce Development",
   author: 'Bhavesh Barot',
   date: "May 04, 2026",

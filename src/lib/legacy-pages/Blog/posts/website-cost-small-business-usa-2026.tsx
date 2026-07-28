@@ -6,7 +6,7 @@ export const post: BlogPost = {
   slug: 'website-cost-small-business-usa-2026',
   title: 'How Much Does a Website Cost for a Small Business in the USA? (2026 Complete Guide)',
   excerpt:
-    'A professional small business website in the USA costs between $1,500 and $15,000 in 2026, depending on the type, features, and agency. This guide breaks down every cost tier—DIY builders, freelancers, domestic agencies, and offshore teams—so you can budget confidently and avoid the overpriced surprises that burn most SMB owners.',
+    'A professional small business website in the USA costs between $1,500 and $15,000 in 2026, depending on the type, features, and agency. This guide breaks down every cost tier (DIY builders, freelancers, domestic agencies, and offshore teams) so you can budget confidently and avoid the overpriced surprises that burn most SMB owners.',
   category: 'Web Design & Strategy',
   author: 'Bhavesh Barot',
   date: 'May 13, 2026',

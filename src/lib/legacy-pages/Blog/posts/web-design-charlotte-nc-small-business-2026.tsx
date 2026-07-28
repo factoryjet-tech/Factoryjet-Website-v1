@@ -6,7 +6,7 @@ export const post: BlogPost = {
   slug: 'web-design-charlotte-nc-small-business-2026',
   title: 'Web Design Charlotte NC: What Small Businesses Need to Know in 2026',
   excerpt:
-    "Web design for Charlotte NC small businesses in 2026 means competing in one of America's fastest-growing metros — where the finance and healthcare sectors drive SMB demand, local agency prices run $8,000–$18,000, and performance standards have never been higher. Here's the complete guide to getting it right.",
+    "Web design for Charlotte NC small businesses in 2026 means competing in one of America's fastest-growing metros, where the finance and healthcare sectors drive SMB demand, local agency prices run $8,000–$18,000, and performance standards have never been higher. Here's the complete guide to getting it right.",
   category: 'Web Design & Strategy',
   author: 'Bhavesh Barot',
   date: 'May 23, 2026',

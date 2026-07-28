@@ -6,7 +6,7 @@ export const post: BlogPost = {
   slug: 'website-development-cost-india-2026',
   title: 'Website Development Cost in India 2026: The Honest Breakdown (With Real Numbers)',
   excerpt:
-    'A professional website in India costs ₹15,000–₹10,00,000+ depending on what you\'re building. This is the most complete, unbiased INR price breakdown available — covering every website type, every cost component, and every hidden fee nobody warns you about.',
+    'A professional website in India costs ₹15,000–₹10,00,000+ depending on what you\'re building. This is the most complete, unbiased INR price breakdown available, covering every website type, every cost component, and every hidden fee nobody warns you about.',
   category: 'Web Design & Strategy',
   author: 'Bhavesh Barot',
   date: 'Jun 2, 2026',

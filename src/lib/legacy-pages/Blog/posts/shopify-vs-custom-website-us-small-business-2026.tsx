@@ -6,7 +6,7 @@ export const post: BlogPost = {
   slug: 'shopify-vs-custom-website-us-small-business-2026',
   title: 'Shopify vs. Custom Website for US Small Business: Which Is Right for You in 2026?',
   excerpt:
-    'Shopify is the right choice for most US small business e-commerce in 2026. Custom websites win when you need content-SEO depth, unique checkout logic, or deep third-party integrations that Shopify\'s app ecosystem can\'t handle. This guide maps your business type to the correct decision — with real costs, trade-offs, and the questions that actually separate the two options.',
+    'Shopify is the right choice for most US small business e-commerce in 2026. Custom websites win when you need content-SEO depth, unique checkout logic, or deep third-party integrations that Shopify\'s app ecosystem can\'t handle. This guide maps your business type to the correct decision, with real costs, trade-offs, and the questions that actually separate the two options.',
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'May 13, 2026',

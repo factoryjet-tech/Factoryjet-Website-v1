@@ -6,7 +6,7 @@ export const post: BlogPost = {
   slug: 'shopify-store-setup-us-small-business-7-days',
   title: 'How to Launch a Shopify Store in 7 Days for US Small Businesses',
   excerpt:
-    'Launching a Shopify store in 7 days is achievable for US small businesses with the right process. This guide breaks down the exact daily timeline, what\'s included in a professional 7-day Shopify setup, what kills timelines, and why FactoryJet delivers fully optimized Shopify stores for $2,499 — complete with Lighthouse 100/100 and full product setup.',
+    'Launching a Shopify store in 7 days is achievable for US small businesses with the right process. This guide breaks down the exact daily timeline, what\'s included in a professional 7-day Shopify setup, what kills timelines, and why a properly run build still ships with Lighthouse 100/100 and full product setup.',
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'May 23, 2026',

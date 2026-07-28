@@ -7,7 +7,7 @@ export const post: BlogPost = {
   slug: 'best-geo-agencies',
   title: 'The 10 Best GEO (Generative Engine Optimization) Agencies for Ecommerce & SMBs (2026)',
   excerpt:
-    'ChatGPT, Perplexity, and Claude now answer buying questions directly — without sending users to Google. GEO is the discipline of getting your brand cited in those answers. Most GEO agencies on the market serve enterprise SaaS. Here is who actually works with ecommerce stores and small businesses.',
+    'ChatGPT, Perplexity, and Claude now answer buying questions directly, without sending users to Google. GEO is the discipline of getting your brand cited in those answers. Most GEO agencies on the market serve enterprise SaaS. Here is who actually works with ecommerce stores and small businesses.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Jun 13, 2026',

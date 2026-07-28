@@ -6,7 +6,7 @@ export const post: BlogPost = {
   slug: 'boise-shopify-development-guide-idaho-small-business-2026',
   title: 'Boise Shopify Development Guide: What Idaho Small Businesses Need to Know in 2026',
   excerpt:
-    "Boise has quietly become one of the most interesting Shopify markets in the Mountain West — an outdoor-recreation economy, a fast-growing downtown, a craft food and beverage scene, and a tech-fluent customer base that buys from local DTC brands on mobile. This guide breaks down what Idaho small businesses actually need from a Shopify build in 2026 — from Treasure Valley pickup logistics to BSU football season traffic spikes to when custom Shopify development beats an off-the-shelf theme.",
+    "Boise has quietly become one of the most interesting Shopify markets in the Mountain West: an outdoor-recreation economy, a fast-growing downtown, a craft food and beverage scene, and a tech-fluent customer base that buys from local DTC brands on mobile. This guide breaks down what Idaho small businesses actually need from a Shopify build in 2026, from Treasure Valley pickup logistics to BSU football season traffic spikes to when custom Shopify development beats an off-the-shelf theme.",
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'May 29, 2026',

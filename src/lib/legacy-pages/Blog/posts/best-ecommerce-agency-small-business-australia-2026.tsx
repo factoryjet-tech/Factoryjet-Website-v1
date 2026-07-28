@@ -5,7 +5,7 @@ export const post: BlogPost = {
   id: '117',
   slug: "best-ecommerce-agency-small-business-australia-2026",
   title: "Best E-Commerce Agency for Small Business Australia 2026: AI-Native Solutions Under £5K",
-  excerpt: "Australian small businesses need e-commerce agencies that deliver AI-native platforms, conversion-optimised design, and full payment integration for under £5,000. FactoryJet builds Next.js and custom B2B e-commerce stores with 92+ Lighthouse scores, B2B/B2C workflows, and 2-4 week delivery at a fixed, transparent price.",
+  excerpt: "Australian small businesses need e-commerce agencies that deliver AI-native platforms, conversion-optimised design, and full payment integration on a clear fixed scope. FactoryJet builds Next.js and custom B2B e-commerce stores with 92+ Lighthouse scores, B2B/B2C workflows, and 2-4 week delivery at a fixed, transparent price.",
   category: "E-Commerce Development",
   author: 'Bhavesh Barot',
   date: "Apr 30, 2026",

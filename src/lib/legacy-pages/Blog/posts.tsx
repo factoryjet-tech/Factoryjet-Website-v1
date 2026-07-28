@@ -4300,7 +4300,7 @@ export const POSTS: BlogPost[] = [
   id: '22',
   slug: 'top-web-design-companies-mumbai',
   title: "Best Web Design & E-Commerce Development Companies in Mumbai (2026 Expert Review)",
-  excerpt: "Compare Mumbai's best web design and e-commerce development agencies by portfolio, pricing, and tech stack. From ₹10,000 websites to full custom builds — make the right choice in 2026.",
+  excerpt: "Compare Mumbai's best web design and e-commerce development agencies by portfolio, pricing, and tech stack. From ₹10,000 websites to full custom builds, make the right choice in 2026.",
   hideExcerptOnPage: true,
   category: 'Web Design & Strategy',
   author: 'Bhavesh Barot',

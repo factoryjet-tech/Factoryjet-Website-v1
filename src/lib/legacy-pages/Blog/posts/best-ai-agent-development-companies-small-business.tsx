@@ -7,7 +7,7 @@ export const post: BlogPost = {
   slug: 'best-ai-agent-development-companies-small-business',
   title: 'The 10 Best AI Agent Development Companies for Small Business (2026)',
   excerpt:
-    'An AI agent handles a job autonomously — qualifying leads, booking appointments, answering support tickets — without someone babysitting every step. This is who builds them well for small businesses, what they charge, and how to pick one without getting burned.',
+    'An AI agent handles a job autonomously (qualifying leads, booking appointments, answering support tickets) without someone babysitting every step. This is who builds them well for small businesses, what they charge, and how to pick one without getting burned.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Jun 13, 2026',

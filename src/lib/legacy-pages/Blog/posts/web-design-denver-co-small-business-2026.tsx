@@ -6,7 +6,7 @@ export const post: BlogPost = {
   slug: 'web-design-denver-co-small-business-2026',
   title: 'Web Design for Denver CO Small Businesses: 2026 Pricing & Agency Guide',
   excerpt:
-    "Web design for Denver CO small businesses in 2026 means competing in a high-growth metro where outdoor, tech startup, and wellness cultures collide — and where local agencies charge $9,000–$22,000 for a basic professional site. This guide covers what Denver SMBs actually need, the real cost breakdown, and how to get a 7-day website at $1,999.",
+    "Web design for Denver CO small businesses in 2026 means competing in a high-growth metro where outdoor, tech startup, and wellness cultures collide, and where local agencies charge $9,000–$22,000 for a basic professional site. This guide covers what Denver SMBs actually need, the real cost breakdown, and how to get a professional site built in 7 days.",
   category: 'Web Design & Strategy',
   author: 'Bhavesh Barot',
   date: 'May 23, 2026',

@@ -5,7 +5,7 @@ export const post: BlogPost = {
   id: '101',
   slug: "evaluate-web-design-agency-us-smbs-2026",
   title: "How US SMBs Should Evaluate a Web Design Agency in 2026",
-  excerpt: "US small businesses should evaluate web design agencies on Core Web Vitals performance, AI-native workflows, transparent pricing, and verifiable client outcomes—not portfolio aesthetics alone. This guide covers the eight technical and commercial criteria that separate competent vendors from partners who deliver measurable ROI.",
+  excerpt: "US small businesses should evaluate web design agencies on Core Web Vitals performance, AI-native workflows, transparent pricing, and verifiable client outcomes, not portfolio aesthetics alone. This guide covers the eight technical and commercial criteria that separate competent vendors from partners who deliver measurable ROI.",
   category: "Web Design & Strategy",
   author: 'Bhavesh Barot',
   date: "Apr 23, 2026",

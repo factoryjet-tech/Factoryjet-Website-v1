@@ -7,7 +7,7 @@ export const post: BlogPost = {
   title:
     'NYC B2B & Corporate Web Design: What Manhattan and Brooklyn Companies Should Demand From Their Agency in 2026',
   excerpt:
-    'NYC has more than 5,000 digital and web design agencies in the metro area. For a B2B or corporate buyer, that abundance is a problem — not a feature. This guide breaks down what serious Manhattan and Brooklyn companies should actually demand from their web design agency in 2026: performance specs, ADA accessibility, NY Shield Act data handling, NY Rules of Professional Conduct for legal sites, and the buyer archetypes (FinTech, law, consumer DTC, enterprise SaaS, PropTech) that change everything about what "good" looks like.',
+    'NYC has more than 5,000 digital and web design agencies in the metro area. For a B2B or corporate buyer, that abundance is a problem, not a feature. This guide breaks down what serious Manhattan and Brooklyn companies should actually demand from their web design agency in 2026: performance specs, ADA accessibility, NY Shield Act data handling, NY Rules of Professional Conduct for legal sites, and the buyer archetypes (FinTech, law, consumer DTC, enterprise SaaS, PropTech) that change everything about what "good" looks like.',
   category: 'Web Design & Strategy',
   author: 'Bhavesh Barot',
   date: 'Jun 2, 2026',

@@ -6,7 +6,7 @@ export const post: BlogPost = {
   slug: 'ai-agents-small-business-usa-2026',
   title: 'AI Agents for US Small Businesses: What They Are and How to Get Started',
   excerpt:
-    'AI agents for US small businesses in 2026 are no longer experimental — they are production-ready tools that automate lead qualification, customer support, appointment scheduling, and sales follow-up. This guide explains what AI agents actually do, real ROI examples for SMBs, what they cost, and how to implement them without a technical team.',
+    'AI agents for US small businesses in 2026 are no longer experimental. They are production-ready tools that automate lead qualification, customer support, appointment scheduling, and sales follow-up. This guide explains what AI agents actually do, real ROI examples for SMBs, what they cost, and how to implement them without a technical team.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'May 23, 2026',

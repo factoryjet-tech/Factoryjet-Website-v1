@@ -5,7 +5,7 @@ export const post: BlogPost = {
   id: '142',
   slug: "sell-ai-automation-services-uk-agency-playbook-2026",
   title: "How to Sell AI Automation Services in 2026: The UK Agency Playbook (25+ Years Refined)",
-  excerpt: "Selling AI automation services in 2026 requires positioning as a business-outcome partner, not a tech vendor—focusing on measurable ROI, vertical-specific use cases, and transparent pricing that UK SMBs trust. This playbook distills 12+ years of agency experience into a repeatable sales framework.",
+  excerpt: "Selling AI automation services in 2026 requires positioning as a business-outcome partner, not a tech vendor, focusing on measurable ROI, vertical-specific use cases, and transparent pricing that UK SMBs trust. This playbook distills 12+ years of agency experience into a repeatable sales framework.",
   category: "Emerging Tech",
   author: 'Bhavesh Barot',
   date: "May 07, 2026",

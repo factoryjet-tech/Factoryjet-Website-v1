@@ -7,7 +7,7 @@ export const post: BlogPost = {
   slug: 'shopify-website-cost',
   title: 'How Much Does a Shopify Website Cost in 2026? (Real Numbers)',
   excerpt:
-    'The shopify website cost ranges from $2,000 to $50,000+ depending on design complexity, custom features, and integrations. Here are the real numbers broken down by project type — verified against 2026 market data and 500+ store builds.',
+    'The shopify website cost ranges from $2,000 to $50,000+ depending on design complexity, custom features, and integrations. Here are the real numbers broken down by project type, verified against 2026 market data and 500+ store builds.',
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Jun 13, 2026',

@@ -5,7 +5,7 @@ export const post: BlogPost = {
   id: '135',
   slug: "ai-agents-business-operations-uk-smbs-2026",
   title: "AI Agents for Business Operations in 2026: How UK SMBs Are Cutting Ops Costs by 35%",
-  excerpt: "UK SMBs are deploying AI agents to automate customer support, sales qualification, appointment booking, and back-office workflows—cutting operational costs by 25-35% while maintaining or improving service quality. This guide shows you which operations to automate first, what ROI to expect, and how to implement AI agents without replacing your team.",
+  excerpt: "UK SMBs are deploying AI agents to automate customer support, sales qualification, appointment booking, and back-office workflows, cutting operational costs by 25-35% while maintaining or improving service quality. This guide shows you which operations to automate first, what ROI to expect, and how to implement AI agents without replacing your team.",
   category: "Emerging Tech",
   author: 'Bhavesh Barot',
   date: "May 05, 2026",

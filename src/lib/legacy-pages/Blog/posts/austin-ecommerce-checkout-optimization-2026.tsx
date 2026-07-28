@@ -7,7 +7,7 @@ export const post: BlogPost = {
   title:
     'Austin Ecommerce: Checkout Optimization and Conversion Tactics for Texas DTC Brands and Boutiques in 2026',
   excerpt:
-    'Austin DTC brands and boutiques get heavy mobile traffic from SXSW, F1, UT, and South Congress weekend crowds — and then watch most of it bounce at checkout. This is the 2026 playbook for Austin Shopify and WooCommerce operators: eight checkout-optimization wins, conversion-tracking hygiene that survives festival spikes, and the boutique-specific UX details that turn browsers into buyers.',
+    'Austin DTC brands and boutiques get heavy mobile traffic from SXSW, F1, UT, and South Congress weekend crowds, and then watch most of it bounce at checkout. This is the 2026 playbook for Austin Shopify and WooCommerce operators: eight checkout-optimization wins, conversion-tracking hygiene that survives festival spikes, and the boutique-specific UX details that turn browsers into buyers.',
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Jun 5, 2026',

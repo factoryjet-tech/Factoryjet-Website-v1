@@ -6,7 +6,7 @@ export const post: BlogPost = {
   slug: 'best-web-design-agency-us-small-business-2026',
   title: 'Best Web Design Agency for US Small Businesses in 2026: What to Look For',
   excerpt:
-    'The best web design agency for a US small business in 2026 scores above 90 on Lighthouse, delivers in under 4 weeks, provides transparent fixed pricing, and supplies verifiable US client references — not just a polished portfolio. This guide gives you the exact criteria, the questions to ask, and the red flags that predict expensive mistakes.',
+    'The best web design agency for a US small business in 2026 scores above 90 on Lighthouse, delivers in under 4 weeks, provides transparent fixed pricing, and supplies verifiable US client references, not just a polished portfolio. This guide gives you the exact criteria, the questions to ask, and the red flags that predict expensive mistakes.',
   category: 'Web Design & Strategy',
   author: 'Bhavesh Barot',
   date: 'May 13, 2026',

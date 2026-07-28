@@ -6,7 +6,7 @@ export const post: BlogPost = {
   slug: 'webflow-vs-wordpress-us-small-business-2026',
   title: 'Webflow vs WordPress for US Small Businesses: The Honest 2026 Comparison',
   excerpt:
-    "Webflow gives a US small business a visually polished site with managed hosting and zero plugin chaos — but it caps out fast on content depth and integrations. WordPress costs less long-term, scales further, and runs on the world's largest plugin ecosystem — but you own the maintenance. This 2026 guide maps each platform to the team, budget, and content rhythm you actually have.",
+    "Webflow gives a US small business a visually polished site with managed hosting and zero plugin chaos, but it caps out fast on content depth and integrations. WordPress costs less long-term, scales further, and runs on the world's largest plugin ecosystem, but you own the maintenance. This 2026 guide maps each platform to the team, budget, and content rhythm you actually have.",
   category: 'Web Design & Strategy',
   author: 'Bhavesh Barot',
   date: 'Jun 5, 2026',

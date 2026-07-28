@@ -6,7 +6,7 @@ export const post: BlogPost = {
   slug: 'best-ecommerce-platform-tampa-boutiques-dtc-2026',
   title: 'Best Ecommerce Platform for Tampa Boutiques and DTC Brands in 2026',
   excerpt:
-    'Tampa boutiques and DTC operators sit at a strange intersection — snowbird shoppers, summer hurricane closures, and a Hyde Park-to-Ybor retail belt that buys differently than Atlanta or Miami. This guide breaks down the right ecommerce platform for Tampa-area boutique and small-batch brands in 2026 — Shopify, WooCommerce, Squarespace, or something custom.',
+    'Tampa boutiques and DTC operators sit at a strange intersection: snowbird shoppers, summer hurricane closures, and a Hyde Park-to-Ybor retail belt that buys differently than Atlanta or Miami. This guide breaks down the right ecommerce platform for Tampa-area boutique and small-batch brands in 2026: Shopify, WooCommerce, Squarespace, or something custom.',
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Jun 7, 2026',

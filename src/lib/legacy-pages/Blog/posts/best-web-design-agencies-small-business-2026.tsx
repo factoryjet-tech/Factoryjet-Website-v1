@@ -5,7 +5,7 @@ export const post: BlogPost = {
   id: '122',
   slug: "best-web-design-agencies-small-business-2026",
   title: "Best Web Design Agencies for Small Businesses in 2026: Enterprise Features Without Enterprise Costs",
-  excerpt: "Small businesses in 2026 can access enterprise-grade web design—AI chatbots, headless CMS, 90+ Lighthouse scores—at a fixed, transparent price. The key is finding agencies that combine offshore efficiency with UK/US market expertise.",
+  excerpt: "Small businesses in 2026 can access enterprise-grade web design (AI chatbots, headless CMS, 90+ Lighthouse scores) at a fixed, transparent price. The key is finding agencies that combine offshore efficiency with UK/US market expertise.",
   category: "Web Design & Strategy",
   author: 'Bhavesh Barot',
   date: "May 01, 2026",

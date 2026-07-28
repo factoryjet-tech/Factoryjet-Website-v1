@@ -5,7 +5,7 @@ export const post: BlogPost = {
   id: '116',
   slug: "best-web-design-companies-small-business-australia",
   title: "15 Best Web Design Companies for Small Business in Australia 2026 (Ranked by SMB Value)",
-  excerpt: "The best web design companies for small businesses in Australia balance affordability, speed, and technical quality—with prices ranging from AUD $2,500 to $12,000 and delivery in 2-6 weeks. This guide ranks 15 agencies by SMB value, comparing pricing, platforms, and real client outcomes.",
+  excerpt: "The best web design companies for small businesses in Australia balance affordability, speed, and technical quality, with prices ranging from AUD $2,500 to $12,000 and delivery in 2-6 weeks. This guide ranks 15 agencies by SMB value, comparing pricing, platforms, and real client outcomes.",
   category: "Web Design & Strategy",
   author: 'Bhavesh Barot',
   date: "Apr 30, 2026",

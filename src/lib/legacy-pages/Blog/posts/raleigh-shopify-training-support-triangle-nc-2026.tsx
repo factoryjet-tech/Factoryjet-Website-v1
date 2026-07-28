@@ -7,7 +7,7 @@ export const post: BlogPost = {
   title:
     'Raleigh Shopify Training and Support: A Practical 2026 Playbook for Triangle Small Businesses',
   excerpt:
-    "Raleigh and the broader Research Triangle have quietly become one of the best US markets for Shopify-led DTC brands — a high-income, tech-fluent customer base, a deep NC State and Duke graduate pipeline, and a downtown commerce scene that has matured fast. This 2026 playbook covers what Shopify training actually means for a Raleigh SMB, when training is enough vs when you need ongoing support, the 8-week support model we run for Triangle brands, and how to handle North Carolina sales tax and NCDOR registration without surprises.",
+    "Raleigh and the broader Research Triangle have quietly become one of the best US markets for Shopify-led DTC brands: a high-income, tech-fluent customer base, a deep NC State and Duke graduate pipeline, and a downtown commerce scene that has matured fast. This 2026 playbook covers what Shopify training actually means for a Raleigh SMB, when training is enough vs when you need ongoing support, the 8-week support model we run for Triangle brands, and how to handle North Carolina sales tax and NCDOR registration without surprises.",
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'May 30, 2026',

@@ -6,7 +6,7 @@ export const post: BlogPost = {
   slug: 'ecommerce-development-denver-co-small-business',
   title: 'Ecommerce Development in Denver CO: Small Business Guide 2026',
   excerpt:
-    'Denver CO small businesses are building online stores to reach Colorado\'s outdoor and active lifestyle market — but local ecommerce agencies charge $12,000–$40,000 for Shopify and custom builds. This guide covers what Denver SMBs actually need, Shopify vs. custom, local agency costs vs. alternatives, and how to launch a fully optimized Denver ecommerce store for $2,499 in 7 days.',
+    'Denver CO small businesses are building online stores to reach Colorado\'s outdoor and active lifestyle market, but local ecommerce agencies charge $12,000–$40,000 for Shopify and custom builds. This guide covers what Denver SMBs actually need, Shopify vs. custom, local agency costs vs. alternatives, and how to launch a fully optimized Denver ecommerce store in 7 days.',
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'May 23, 2026',

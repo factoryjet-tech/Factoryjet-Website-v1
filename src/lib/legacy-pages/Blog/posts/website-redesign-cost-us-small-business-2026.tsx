@@ -6,7 +6,7 @@ export const post: BlogPost = {
   slug: 'website-redesign-cost-us-small-business-2026',
   title: 'Website Redesign Cost for US Small Businesses in 2026',
   excerpt:
-    'US small businesses are spending $3,500–$25,000 on website redesigns in 2026 — but the price range is enormous and the correlation between cost and quality is weak. This guide breaks down exactly what drives redesign costs, when you need a full rebuild vs. a refresh, and how to get a Lighthouse 100/100 redesign starting at $1,999.',
+    'US small businesses are spending $3,500–$25,000 on website redesigns in 2026, but the price range is enormous and the correlation between cost and quality is weak. This guide breaks down exactly what drives redesign costs, when you need a full rebuild vs. a refresh, and how to get a Lighthouse 100/100 redesign without overpaying.',
   category: 'Web Design & Strategy',
   author: 'Bhavesh Barot',
   date: 'May 23, 2026',
