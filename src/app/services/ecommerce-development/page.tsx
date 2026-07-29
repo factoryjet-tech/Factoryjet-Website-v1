@@ -1287,7 +1287,8 @@ export default function EcommerceDevelopmentPage() {
                 <p>
                   You can hire a dedicated ecommerce developer for a fixed-scope build, or keep a team on retainer for
                   ongoing feature work. Either way the codebase is yours on GitHub from launch day — no lock-in, no
-                  platform tax.
+                  platform tax. Once the store is live, that same team can carry on as your{' '}
+                  <Link href="/services/ecommerce-growth-agency" className="text-[#B23E13] font-medium underline underline-offset-2">ecommerce growth partner</Link>.
                 </p>
                 <p>
                   Know your platform already? Go straight to{' '}
@@ -1295,6 +1296,16 @@ export default function EcommerceDevelopmentPage() {
                   <Link href="/services/woocommerce-development" className="text-[#B23E13] font-medium underline underline-offset-2">WooCommerce development</Link>,{' '}
                   <Link href="/services/magento-development" className="text-[#B23E13] font-medium underline underline-offset-2">Magento development</Link>, or compare options in our{' '}
                   <Link href="/best-ecommerce-platforms" className="text-[#B23E13] font-medium underline underline-offset-2">best ecommerce platforms guide</Link>.
+                  If the storefront needs to run separately from the backend, that is a{' '}
+                  <Link href="/headless-commerce" className="text-[#B23E13] font-medium underline underline-offset-2">headless commerce</Link> build.
+                </p>
+                <p>
+                  Most of the stores we build sell in more than one place. If the marketplaces are part of the plan, we
+                  run{' '}
+                  <Link href="/services/amazon-agency" className="text-[#B23E13] font-medium underline underline-offset-2">Amazon</Link>,{' '}
+                  <Link href="/services/walmart-marketplace-agency" className="text-[#B23E13] font-medium underline underline-offset-2">Walmart Marketplace</Link> and{' '}
+                  <Link href="/services/tiktok-shop-agency" className="text-[#B23E13] font-medium underline underline-offset-2">TikTok Shop</Link> alongside the
+                  storefront, so catalogue, pricing and fulfilment stay in one system rather than three.
                 </p>
               </div>
               <div className="rounded-2xl border border-[#E5E5E0] bg-white p-7">
