@@ -294,6 +294,14 @@ export default function ClevelandSeoPage() {
                 <p>FactoryJet is a Cleveland SEO company that gets local businesses into Google&apos;s Map Pack and &quot;near me&quot; results. Our SEO services in Cleveland, Ohio cover Google Business Profile, citations, reviews, technical SEO, and content — billed month-to-month with a free audit, no setup fee, and honest monthly reports. You work directly with senior SEO experts.</p>
               </div>
             </div>
+            <div className="bluf-support" style={{ maxWidth: '920px', margin: '28px 0 0' }}>
+              <p className="districts" style={{ maxWidth: 'none' }}>
+                In practice the job splits four ways. First, your <Link href="/services/local-seo">Google Business Profile and local listings</Link>, which is what actually decides the three-result Map Pack. Second, the technical condition of your site, which is where the free <Link href="/services/seo-audit">SEO audit</Link> starts, because a slow or broken site will not hold a ranking no matter how good the writing is. Third, pages that match what Cleveland genuinely types into Google, not what an agency assumes. Fourth, <Link href="/services/ai-seo">AI SEO and GEO</Link>: the structured data and answer-first writing that lets ChatGPT, Perplexity, and Google AI Overviews quote you instead of a competitor.
+              </p>
+              <p className="districts" style={{ marginTop: '16px', maxWidth: 'none' }}>
+                If you run a smaller operation, our <Link href="/services/small-business-seo">small business SEO</Link> approach is the shorter version of everything below. If you would rather own the plan and run the work in-house, <Link href="/services/seo-consulting">SEO consulting</Link> covers that instead, and <Link href="/services/seo">US SEO services</Link> is the national picture this page sits inside.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -344,7 +352,7 @@ export default function ClevelandSeoPage() {
                 </div>
               ))}
             </div>
-            <p className="districts">Local SEO across the whole metro: <b>Downtown, University Circle, Ohio City, Tremont, Cleveland Heights</b>, plus <b>Lakewood, Parma, Westlake, and Beachwood</b>.</p>
+            <p className="districts">Local SEO across the whole metro: <b>Downtown, University Circle, Ohio City, Tremont, Cleveland Heights</b>, plus <b>Lakewood, Parma, Westlake, and Beachwood</b>. Contractors get category-specific work as well, and in a city with housing stock this old, <Link href="/services/roofing-seo">roofing SEO</Link> is the one we get asked for most.</p>
           </div>
         </section>
 

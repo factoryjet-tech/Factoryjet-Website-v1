@@ -32,6 +32,14 @@ interface ServiceRule {
   keywords: string[];
   /** higher = more specific, wins ties over generic parents */
   weight: number;
+  /**
+   * Geo-scoped target. A rule with a market is only ever offered to posts whose
+   * own market resolves to the same value, and it outranks the market-neutral
+   * (US) equivalent for those posts. Without this every UK post sent its whole
+   * block to US service pages, which is both wrong for the reader and the reason
+   * the /uk/* hubs received no internal links at all.
+   */
+  market?: 'uk';
 }
 
 const SERVICE_RULES: ServiceRule[] = [
@@ -216,14 +224,131 @@ const SERVICE_RULES: ServiceRule[] = [
     keywords: ['ai for business', 'ai adoption', 'artificial intelligence'],
     weight: 2,
   },
+  // --- Commerce pillars ---
+  {
+    href: '/headless-commerce',
+    label: 'Headless Commerce',
+    blurb: 'Decoupled storefronts for teams that have outgrown a theme.',
+    keywords: ['headless', 'headless commerce', 'composable', 'composable commerce', 'decoupled'],
+    weight: 4,
+  },
+  {
+    href: '/best-ecommerce-platforms',
+    label: 'Ecommerce Platform Comparison',
+    blurb: 'Which platform fits which kind of store, without the vendor pitch.',
+    keywords: ['ecommerce platform', 'best platform', 'platform comparison', 'shopify vs', 'woocommerce vs', 'bigcommerce vs', 'magento vs'],
+    weight: 3,
+  },
+  {
+    href: '/commerceflo',
+    label: 'Commerceflo',
+    blurb: 'The AI operator that runs the repetitive work behind a storefront.',
+    keywords: ['commerceflo', 'ai commerce', 'ai for ecommerce', 'ai for e-commerce', 'commerce operator'],
+    weight: 3,
+  },
+  {
+    href: '/services/ecommerce-growth-agency',
+    label: 'Ecommerce Growth',
+    blurb: 'Growth work for stores past launch: retention, AOV and channel mix.',
+    keywords: ['ecommerce growth', 'grow online store', 'scale a store', 'dtc growth', 'ecommerce agency'],
+    weight: 3,
+  },
+  // --- Verticals ---
+  {
+    href: '/services/roofing-seo',
+    label: 'Roofing SEO',
+    blurb: 'Search and lead generation built around how roofing buyers actually search.',
+    keywords: ['roofing', 'roofer', 'contractor seo', 'home services'],
+    weight: 4,
+  },
+  // --- Tools / reference ---
+  {
+    href: '/ai-visibility-checker',
+    label: 'AI Visibility Checker',
+    blurb: 'See whether ChatGPT, Perplexity and Google AI Overviews mention you today.',
+    keywords: ['ai visibility check', 'visibility checker', 'chatgpt recommend', 'get cited', 'cited by ai'],
+    weight: 2,
+  },
+  {
+    href: '/glossary',
+    label: 'Glossary',
+    blurb: 'Plain definitions for the search, AI and commerce terms used here.',
+    keywords: ['glossary', 'terminology', 'jargon', 'definitions'],
+    weight: 1,
+  },
+  // --- UK hubs (market-gated: only offered to UK posts) ---
+  {
+    href: '/uk/ai-seo',
+    label: 'AI SEO (UK)',
+    blurb: 'Get named and quoted by ChatGPT, Perplexity, Gemini and Google AI Overviews.',
+    keywords: ['ai seo', 'geo', 'aeo', 'generative engine', 'answer engine', 'ai search', 'ai overview', 'chatgpt', 'perplexity', 'ai visibility', 'ai citation'],
+    weight: 3,
+    market: 'uk',
+  },
+  {
+    href: '/uk/seo-audit',
+    label: 'SEO Audit (UK)',
+    blurb: 'Find what is holding the site back before spending on content or links.',
+    keywords: ['seo audit', 'technical seo', 'site audit'],
+    weight: 3,
+    market: 'uk',
+  },
+  {
+    href: '/uk/local-seo',
+    label: 'Local SEO (UK)',
+    blurb: 'Show up in the map pack and in searches near you.',
+    keywords: ['local seo', 'map pack', 'google business profile', 'near me'],
+    weight: 3,
+    market: 'uk',
+  },
+  {
+    href: '/uk/ecommerce-development',
+    label: 'Ecommerce Development (UK)',
+    blurb: 'Online stores built for catalogue depth, speed and conversion.',
+    keywords: ['ecommerce', 'online store', 'shopify', 'woocommerce', 'magento', 'bigcommerce', 'dtc'],
+    weight: 3,
+    market: 'uk',
+  },
+  {
+    href: '/uk/ai-agents',
+    label: 'AI Agents (UK)',
+    blurb: 'Custom AI agents wired into the tools a business already runs.',
+    keywords: ['ai agent', 'ai agents', 'agentic ai', 'ai automation', 'workflow automation', 'chatbot', 'automation agency'],
+    weight: 3,
+    market: 'uk',
+  },
+  {
+    href: '/uk/web-design',
+    label: 'Web Design (UK)',
+    blurb: 'Design and build for sites that have to earn their keep.',
+    keywords: ['web design', 'website design', 'webflow', 'web designer', 'website cost', 'landing page'],
+    weight: 2,
+    market: 'uk',
+  },
+  {
+    href: '/uk/seo',
+    label: 'SEO Services (UK)',
+    blurb: 'Search strategy, technical fixes and content that compounds.',
+    keywords: ['seo'],
+    weight: 1,
+    market: 'uk',
+  },
 ];
 
 /** Category fallback when no keyword matches. */
 const CATEGORY_FALLBACK: Record<string, string[]> = {
   'Web Design & Strategy': ['/services/web-design', '/services/small-business-website-design', '/services/website-redesign'],
   'E-Commerce Development': ['/services/ecommerce-development', '/services/shopify-development', '/services/ecommerce-marketing-agency'],
-  'Emerging Tech': ['/services/ai-agents', '/services/ai-seo', '/services/ai-automation'],
+  'Emerging Tech': ['/services/ai-agents', '/services/ai-seo', '/ai-visibility-checker', '/glossary'],
   'Maintenance & Security': ['/services/web-design', '/services/wordpress-development', '/services/seo-audit'],
+};
+
+/** UK posts fall back to the UK hubs before any US page. */
+const UK_CATEGORY_FALLBACK: Record<string, string[]> = {
+  'Web Design & Strategy': ['/uk/web-design', '/uk/seo', '/uk/seo-audit'],
+  'E-Commerce Development': ['/uk/ecommerce-development', '/uk/seo', '/uk/ai-seo'],
+  'Emerging Tech': ['/uk/ai-agents', '/uk/ai-seo', '/uk/seo'],
+  'Maintenance & Security': ['/uk/web-design', '/uk/seo-audit', '/uk/seo'],
 };
 
 const BY_HREF = new Map(SERVICE_RULES.map((r) => [r.href, r]));
@@ -239,14 +364,24 @@ function haystack(post: BlogPost): string {
  */
 export function getRelatedServices(post: BlogPost, limit = 3): RelatedService[] {
   const hay = haystack(post);
+  const postMarket = marketOf(post);
   const scored: Array<{ rule: ServiceRule; score: number }> = [];
 
   for (const rule of SERVICE_RULES) {
+    // A geo-scoped rule is invisible to every post outside its market.
+    if (rule.market && rule.market !== postMarket) continue;
+
     let hits = 0;
     for (const kw of rule.keywords) {
       if (hay.includes(kw)) hits += 1;
     }
-    if (hits > 0) scored.push({ rule, score: hits * 10 + rule.weight });
+    if (hits === 0) continue;
+
+    // Scoring is hit-count dominant (weight only breaks ties), so the home-market
+    // bonus has to clear one whole extra keyword hit for a UK hub to beat the US
+    // page that matched one more term.
+    const marketBonus = rule.market && rule.market === postMarket ? 15 : 0;
+    scored.push({ rule, score: hits * 10 + rule.weight + marketBonus });
   }
 
   scored.sort((a, b) => b.score - a.score || a.rule.href.localeCompare(b.rule.href));
@@ -261,11 +396,17 @@ export function getRelatedServices(post: BlogPost, limit = 3): RelatedService[] 
   }
 
   // Fill from the category fallback so every post gets links, never an empty block.
+  // UK posts exhaust the UK hubs first, then fall through to the US list.
   if (out.length < limit) {
-    for (const href of CATEGORY_FALLBACK[post.category] ?? []) {
+    const chain = postMarket === 'uk'
+      ? [...(UK_CATEGORY_FALLBACK[post.category] ?? []), ...(CATEGORY_FALLBACK[post.category] ?? [])]
+      : (CATEGORY_FALLBACK[post.category] ?? []);
+
+    for (const href of chain) {
       if (seen.has(href)) continue;
       const rule = BY_HREF.get(href);
       if (!rule) continue;
+      if (rule.market && rule.market !== postMarket) continue;
       seen.add(href);
       out.push({ href: rule.href, label: rule.label, blurb: rule.blurb });
       if (out.length >= limit) break;

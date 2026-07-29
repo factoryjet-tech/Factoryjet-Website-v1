@@ -439,8 +439,12 @@ export const post: BlogPost = {
       <p>
         Year two SEO is less about producing new results and more about defending and extending
         what month-12 delivered: refreshing content to maintain rankings, building links to push
-        competitive terms from positions 5–10 to positions 1–3, and expanding into adjacent topic
-        clusters.
+        competitive terms from positions 5–10 to positions 1–3, expanding into adjacent topic
+        clusters, and keeping pace with{' '}
+        <a href="/blog/is-geo-replacing-seo-2026">
+          how AI search is changing what a ranking is worth
+        </a>
+        .
       </p>
 
       {/* ── ACCELERATORS ────────────────────────────────────────────────── */}
@@ -552,7 +556,10 @@ export const post: BlogPost = {
       <p>
         If all four leading indicators are moving in the right direction and you are not yet seeing
         traffic, your SEO is working. The traffic is coming, typically 4–8 weeks behind the
-        leading indicators.
+        leading indicators, and a{' '}
+        <a href="/ai-visibility-checker">free AI visibility check</a>{' '}
+        answers the same question for ChatGPT, Perplexity, and Google AI Overviews, which none of
+        the four Search Console signals above cover.
       </p>
 
       {/* ── HOW MUCH ──────────────────────────────────────────────────── */}
@@ -570,7 +577,10 @@ export const post: BlogPost = {
       <p>
         The key is understanding that months 1–5 are largely investment with minimal return, and
         months 6–24 are where that investment compounds. Businesses that evaluate SEO on a
-        month-three performance review consistently underestimate the channel.
+        month-three performance review consistently underestimate the channel, which is usually
+        the point where an outside read from{' '}
+        <a href="/services/seo-consulting">SEO consulting</a>{' '}
+        is worth more than another rank report.
       </p>
 
       {/* ── CTA ─────────────────────────────────────────────────────────── */}

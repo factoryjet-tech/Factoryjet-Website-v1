@@ -499,7 +499,9 @@ export default function SeoUKPage() {
                   <p>
                     That mix is the plan. We chase the low-difficulty local and ecommerce terms for fast movement,
                     then build toward the harder national terms over time, for businesses in London, Manchester,
-                    Birmingham, Leeds, and across the UK, with the same senior team on every account.
+                    Birmingham, Leeds, and across the UK, with the same senior team on every account. London is the
+                    deepest and most contested of those markets, so it gets its own breakdown of the search demand and
+                    how the work changes borough by borough: read <a href="/uk/london/seo">SEO services in London</a>.
                   </p>
                 </div>
                 <div className="flex-wrap mt-6">

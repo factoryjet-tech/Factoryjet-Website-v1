@@ -143,14 +143,21 @@ export const post: BlogPost = {
         Why this matters in India now: <strong>India has 100 million weekly ChatGPT users, OpenAI&apos;s
         second-largest market in the world</strong> (TechCrunch, February 2026). People don&apos;t
         just ask ChatGPT for recipes. They ask it which web agency to hire, which SEO company to
-        trust, which store to buy from. If AI tools never mention your business, those buyers never
-        find you.
+        trust, and increasingly which store to buy from, the first step toward{' '}
+        <a href="/agentic-commerce" className="text-orange-600 underline">
+          AI agents that complete the purchase on the shopper&apos;s behalf
+        </a>
+        . If AI tools never mention your business, those buyers never find you.
       </p>
       <p className="mb-4">
         One more number worth knowing: when Google shows an AI summary at the top of results, people
         click the normal links only <strong>8% of the time, versus 15% without one</strong> (Pew
-        Research Center, 2025). The answer box is eating the clicks. AI SEO is how you get inside
-        the answer box.
+        Research Center, 2025). The answer box is eating the clicks, which is why so many Indian
+        marketers are now asking{' '}
+        <a href="/blog/is-geo-replacing-seo-2026" className="text-orange-600 underline">
+          whether GEO is replacing SEO or simply building on top of it
+        </a>
+        . AI SEO is how you get inside the answer box.
       </p>
       <p className="mb-4">
         <strong>Full disclosure:</strong> FactoryJet is #1 on its own list. We checked the current
@@ -272,7 +279,11 @@ export const post: BlogPost = {
         We are engineers first. Every AI SEO retainer covers Google <strong>and</strong> the four
         big AI engines (ChatGPT, Perplexity, Claude and Gemini) plus Google AI Overviews. Every
         month you get a report showing citations per engine, in plain language you can read in five
-        minutes.
+        minutes. Before you talk to us or anyone else, you can{' '}
+        <a href="/ai-visibility-checker" className="text-orange-600 underline">
+          check for free whether ChatGPT, Perplexity and Google AI Overviews mention your business
+        </a>{' '}
+        right now.
       </p>
       <p className="mb-4">
         Why we rank ourselves first for Indian small businesses: the same engineers who build 100/100
@@ -398,7 +409,11 @@ export const post: BlogPost = {
         </table>
       </div>
       <p className="mb-4">
-        Two simple rules. First, generative engine optimization cost in India should sit{' '}
+        Two simple rules. First,{' '}
+        <a href="/glossary" className="text-orange-600 underline">
+          generative engine optimization
+        </a>{' '}
+        cost in India should sit{' '}
         <strong>inside</strong> your retainer, not on top of it, because GEO and AI SEO are one workflow,
         and market research pegs the GEO premium at just 15–20% over standard SEO. Second,
         traditional SEO in India runs ₹15,000–₹2,00,000/month, so any AI SEO quote far below ₹15,000

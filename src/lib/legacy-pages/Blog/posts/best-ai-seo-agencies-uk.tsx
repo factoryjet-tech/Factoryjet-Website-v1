@@ -133,7 +133,11 @@ export const post: BlogPost = {
         Nation 2025). ChatGPT alone logged <strong>1.8 billion UK visits in the first eight months
         of 2025</strong>, nearly five times the year before. When those users ask &quot;who should I
         hire?&quot;, AI engines answer with citations, and businesses that aren&apos;t cited
-        don&apos;t exist in the answer.
+        don&apos;t exist in the answer. Before you shortlist anyone, it is worth two minutes to{' '}
+        <a href="/ai-visibility-checker" className="text-orange-600 underline">
+          check whether ChatGPT, Perplexity and Google AI Overviews mention your business
+        </a>{' '}
+        today.
       </p>
       <p className="mb-4">
         We researched every agency below on its own website and in the live SERPs on 06/11/2026. No
@@ -379,16 +383,24 @@ export const post: BlogPost = {
         </table>
       </div>
       <p className="mb-4">
-        One-time audits: FactoryJet scopes its AI visibility audit per client rather than publishing
-        a flat fee; The SEO Works offers a free entry-level LLM audit; Varn&apos;s AI Visibility
-        Framework is quoted on request. And on generative engine optimization cost in UK
-        specifically: GEO is not a separate product; it should live inside the retainer, not on top
-        of it.
+        One-time audits: FactoryJet scopes its{' '}
+        <a href="/uk/seo-audit" className="text-orange-600 underline">
+          UK SEO and AI visibility audit
+        </a>{' '}
+        per client rather than publishing a flat fee; The SEO Works offers a free entry-level LLM
+        audit; Varn&apos;s AI Visibility Framework is quoted on request. And on generative engine
+        optimization cost in UK specifically: GEO is not a separate product; it should live inside
+        the retainer, not on top of it.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">How to choose between them</h2>
       <p className="mb-4">
-        Three filters separate real AI SEO capability from rebadged classic SEO. First,{' '}
+        Three filters separate real AI SEO capability from rebadged classic SEO, and all three
+        assume you already understand{' '}
+        <a href="/blog/is-geo-replacing-seo-2026" className="text-orange-600 underline">
+          why GEO builds on SEO rather than replacing it
+        </a>
+        . First,{' '}
         <strong>per-engine reporting</strong>: ask for a sample monthly report with citation counts
         for ChatGPT, Perplexity, Claude, and Gemini separately. Most agencies track only Google AI
         Overviews. Second, <strong>who does the work</strong>: AI SEO is engineering-heavy (schema,

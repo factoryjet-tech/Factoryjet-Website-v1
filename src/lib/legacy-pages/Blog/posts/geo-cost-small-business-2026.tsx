@@ -179,7 +179,7 @@ export const post: BlogPost = {
       </div>
 
       <p>
-        Six months ago, nobody had a line item called &ldquo;GEO&rdquo; on their marketing invoice. Today, agencies across the US charge anywhere from $299/month to $5,000+/month for something they call Generative Engine Optimization, and most small business owners have no framework to evaluate whether any of it is worth paying for.
+        Six months ago, nobody had a line item called &ldquo;GEO&rdquo; on their marketing invoice. Today, agencies across the US charge anywhere from $299/month to $5,000+/month for something they call <a href="/glossary" className="text-orange-600 hover:underline font-medium">Generative Engine Optimization</a>, and most small business owners have no framework to evaluate whether any of it is worth paying for.
       </p>
       <p>
         This post gives you that framework. Real pricing ranges sourced from published market data, what each tier actually delivers, what to watch out for, and what you can realistically do yourself for free.
@@ -307,7 +307,7 @@ export const post: BlogPost = {
         The highest-impact GEO work is accessible to any organized small business owner. Here is a realistic five-hour monthly program that costs nothing in tools:
       </p>
       <ul className="list-disc pl-6 space-y-2">
-        <li><strong>Hour 1:</strong> Run monthly AI visibility test across ChatGPT (Browse enabled), Gemini, and Perplexity. Log which competitors appear and which queries trigger recommendations. Track this month-over-month in a spreadsheet.</li>
+        <li><strong>Hour 1:</strong> Run monthly AI visibility test across ChatGPT (Browse enabled), Gemini, and Perplexity, or start with our free <a href="/ai-visibility-checker" className="text-orange-600 hover:underline font-medium">AI visibility checker</a> to see whether those assistants mention you at all. Log which competitors appear and which queries trigger recommendations. Track this month-over-month in a spreadsheet.</li>
         <li><strong>Hour 2:</strong> Rewrite the opening paragraph of one service page using answer-first structure, direct answer in sentence one, explanation following. Add or update the FAQ section with 5 new questions drawn from Google&apos;s People Also Ask for your primary keyword.</li>
         <li><strong>Hour 3:</strong> Send 15 review request texts to recent customers. Update your Google Business Profile with a fresh post. Verify Bing Places for Business is claimed and current, this is the most overlooked step because ChatGPT Browse runs on Bing.</li>
         <li><strong>Hour 4:</strong> Browse Connectively (formerly HARO) for journalist requests in your industry. Respond to 2–3 relevant ones. Search for &ldquo;best [your service] in [your city] 2026&rdquo; and email the authors of top-ranking roundup posts asking to be considered for inclusion or for a future update.</li>
@@ -344,10 +344,11 @@ export const post: BlogPost = {
       <p>
         For most small businesses with budgets under $3,000/month, an integrated SEO + GEO program is a more efficient use of budget than two separate retainers. Read our complete{' '}
         <a href="/blog/seo-cost-small-business-2026" className="text-orange-600 hover:underline font-medium">SEO cost guide for small businesses</a>{' '}
-        to understand what traditional SEO retainers include before comparing to GEO pricing. The channels reinforce each other: the same third-party mention that improves AI visibility also builds domain authority for Google ranking. The same answer-first content that gets cited by ChatGPT also tends to rank higher in Google because it is genuinely more useful.
+        to understand what traditional SEO retainers include before comparing to GEO pricing. The channels reinforce each other: the same third-party mention that improves AI visibility also builds domain authority for Google ranking. The same answer-first content that gets cited by ChatGPT also tends to rank higher in Google because it is genuinely more useful, and if you sell products it is the same structured content that <a href="/agentic-commerce" className="text-orange-600 hover:underline font-medium">agentic commerce</a> assistants read when they shop on a customer&apos;s behalf.
       </p>
       <p>
-        The practical question is not &ldquo;GEO or SEO?&rdquo;, it is &ldquo;which provider understands both channels well enough to run an integrated program without double-billing you for the overlap?&rdquo; That is the exact integration we run for UK businesses through{' '}
+        The practical question is not &ldquo;GEO or SEO?&rdquo;, a framing we take apart in{' '}
+        <a href="/blog/is-geo-replacing-seo-2026" className="text-orange-600 hover:underline font-medium">our analysis of whether GEO is replacing SEO</a>, it is &ldquo;which provider understands both channels well enough to run an integrated program without double-billing you for the overlap?&rdquo; That is the exact integration we run for UK businesses through{' '}
         <a href="/uk/ai-seo" className="text-orange-600 hover:underline font-medium">our UK AI SEO service</a>.
       </p>
 

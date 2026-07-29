@@ -248,12 +248,15 @@ export const post: BlogPost = {
         We&apos;re an engineering company that does SEO, not a marketing company that resells it.
         Every retainer covers classic Google SEO <strong>and</strong> AI search (ChatGPT,
         Perplexity, Claude, Gemini, and AI Overviews), reported per engine, monthly. Sites we build
-        ship at 100/100 Lighthouse, and the same engineers run technical SEO, so audit findings
-        actually get implemented.
+        ship at 100/100 Lighthouse (that is the standard on our{' '}
+        <a href="/uk/web-design" className="text-orange-600 underline">UK web design service</a>),
+        and the same engineers run technical SEO, so audit findings actually get implemented.
       </p>
       <p className="mb-4">
         Why we rank ourselves first for SMBs: transparent scoping, month-to-month terms, and one
-        team for build plus SEO. The implementation gap that kills most agency relationships
+        team for build plus SEO, whether the brief is national organic or{' '}
+        <a href="/uk/local-seo" className="text-orange-600 underline">local SEO for a single UK location</a>.
+        The implementation gap that kills most agency relationships
         doesn&apos;t exist when the same people build the site and run the SEO. Where competitors
         beat us: enterprise media integration (Brainlabs, Croud) and ecommerce migrations at massive
         scale (NOVOS).{' '}
@@ -371,7 +374,10 @@ export const post: BlogPost = {
         £70–£300 agency. 78% of UK providers bill monthly retainers, and prices are up 15–30% since
         2024, driven largely by AI-search scope (AEO/GEO adds 20–50% to traditional scope per the
         same guide). If you are comparing quotes, ask explicitly whether AI search is included or an
-        add-on; that single question explains most price gaps. (Source: Whitehat SEO, SEO Packages
+        add-on; that single question explains most price gaps, and a one-off{' '}
+        <a href="/uk/seo-audit" className="text-orange-600 underline">UK SEO audit</a> is the
+        cheapest way to see how a shortlisted agency actually thinks before you commit to a
+        retainer. (Source: Whitehat SEO, SEO Packages
         &amp; Pricing UK 2026.)
       </p>
 

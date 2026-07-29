@@ -456,7 +456,7 @@ export default function AustinSeoPage() {
             </div>
             <div className="bluf-support" style={{ maxWidth: '900px', margin: '30px auto 0' }}>
               <p className="districts" style={{ marginTop: 0, maxWidth: 'none' }}>
-                In practice the job splits into four parts. First, your <Link href="/services/local-seo">Google Business Profile and local listings</Link>, which is what actually decides the three-result Map Pack. Second, the technical condition of your site, which is where a free <Link href="/services/seo-audit">SEO audit</Link> starts, because a slow or broken site will not hold a ranking no matter how good the content is. Third, pages that match what Austin genuinely types into Google, not what an agency guesses. Fourth, and newer, <Link href="/services/ai-seo">AI SEO and GEO</Link>: the structured data and answer-first writing that lets ChatGPT, Perplexity and Google AI Overviews quote you rather than a competitor.
+                In practice the job splits into four parts. First, your <Link href="/services/local-seo">Google Business Profile and local listings</Link>, which is what actually decides the three-result Map Pack. Second, the technical condition of your site, which is where a free <Link href="/services/seo-audit">SEO audit</Link> starts, because a slow or broken site will not hold a ranking no matter how good the content is. Third, pages that match what Austin genuinely types into Google, not what an agency guesses. Fourth, and newer, <Link href="/services/ai-seo">AI SEO and GEO</Link>: the structured data and answer-first writing that lets ChatGPT, Perplexity and Google AI Overviews quote you rather than a competitor. You can see where you stand on that last part in a couple of minutes with our free <Link href="/ai-visibility-checker">AI visibility checker</Link>, which scans whether ChatGPT, Perplexity and Google AI Overviews currently name your business at all.
               </p>
               <p className="districts" style={{ marginTop: '18px', maxWidth: 'none' }}>
                 Who does it here? A mix. Two or three genuine Austin firms, several national agencies servicing Austin from other cities, a long tail of freelancers, and a few directory sites that outrank all of them without doing SEO for anyone. We break that down honestly further down this page, including where we currently sit. If you run a smaller operation, our <Link href="/services/small-business-seo">small business SEO</Link> approach is the shorter version of everything below, and <Link href="/services/seo">US SEO services</Link> covers the national picture.
@@ -586,7 +586,7 @@ export default function AustinSeoPage() {
                 </div>
               ))}
             </div>
-            <p className="districts">One local SEO company in Austin for the whole metro: <b>Downtown, South Congress, East Austin, The Domain, Rainey Street, Mueller, Zilker</b>, plus <b>Round Rock, Cedar Park, Georgetown, Pflugerville, San Marcos, and Taylor</b>.</p>
+            <p className="districts">One local SEO company in Austin for the whole metro: <b>Downtown, South Congress, East Austin, The Domain, Rainey Street, Mueller, Zilker</b>, plus <b>Round Rock, Cedar Park, Georgetown, Pflugerville, San Marcos, and Taylor</b>. Home services run on their own rules out here, where hail season rewrites the demand curve every spring, so <Link href="/services/roofing-seo">roofing SEO</Link> gets its own playbook rather than a shared one.</p>
           </div>
         </section>
 

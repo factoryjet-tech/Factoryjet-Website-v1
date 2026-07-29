@@ -192,7 +192,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Tier 1: DIY Website Builders ($0–$780/year)</h2>
       <p className="mb-4">
-        Wix, Squarespace, and GoDaddy Website Builder charge $23–$65/month for business plans. The upfront cash cost is low — but the real cost is time and opportunity. Building a five-page Wix site takes most non-designers 40–80 hours of learning, building, and editing. At an average US SMB owner hourly value of $75–$150, that's $3,000–$12,000 in opportunity cost before the site is even live.
+        Wix, Squarespace, and GoDaddy Website Builder charge $23–$65/month for business plans. The upfront cash cost is low — but the real cost is time and opportunity. Building a five-page Wix site takes most non-designers 40–80 hours of learning, building, and editing, and AI site generators have not changed that arithmetic as much as their marketing suggests, a point we work through in <a href="/blog/will-ai-replace-web-designers" className="text-blue-600 underline hover:text-blue-800 transition-colors">our piece on whether AI will replace web designers</a>. At an average US SMB owner hourly value of $75–$150, that's $3,000–$12,000 in opportunity cost before the site is even live.
       </p>
       <p className="mb-4">
         The deeper problem is technical SEO architecture. DIY builders render JavaScript-heavy pages that Google's crawler struggles to index efficiently. They use shared hosting infrastructure that throttles load speeds during peak traffic. Their URL structures, heading hierarchies, and schema markup capabilities are limited. Moz's 2024 analysis of 10,000 SMB websites found that Wix and Squarespace sites ranked for 38% fewer commercial keywords than equivalent WordPress or Next.js sites, even with identical content.
@@ -272,7 +272,7 @@ export const post: BlogPost = {
         </table>
       </div>
       <p className="mb-4">
-        Shopify is the correct choice for most US SMB e-commerce in 2026. It handles PCI compliance automatically, scales to any traffic volume without developer intervention, and its app ecosystem solves 90% of common business requirements without custom code. WooCommerce makes sense when your site needs to be deeply integrated with content marketing, or when you already have a WordPress site and want to add a store. Custom headless builds are justified only above $500K/year in e-commerce revenue.
+        Shopify is the correct choice for most US SMB e-commerce in 2026, though it is worth <a href="/best-ecommerce-platforms" className="text-blue-600 underline hover:text-blue-800 transition-colors">comparing the major ecommerce platforms side by side</a> before you commit. It handles PCI compliance automatically, scales to any traffic volume without developer intervention, and its app ecosystem solves 90% of common business requirements without custom code. WooCommerce makes sense when your site needs to be deeply integrated with content marketing, or when you already have a WordPress site and want to add a store. Custom headless builds are justified only above $500K/year in e-commerce revenue.
       </p>
       <p className="mb-4">➡ Learn more: <a href="/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify Development Services</a> · <a href="/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">E-Commerce Development</a></p>
 

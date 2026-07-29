@@ -284,7 +284,13 @@ export const post: BlogPost = {
         B2B pricing rules, ERP or inventory system integration): $6,000 to $20,000.
       </p>
       <p className="mb-8">
-        <strong>Enterprise or headless build</strong> (custom Next.js frontend, Shopify as backend,
+        <strong>
+          Enterprise or{' '}
+          <a href="/headless-commerce" className="text-[#B23E13] hover:underline">
+            headless build
+          </a>
+        </strong>{' '}
+        (custom Next.js frontend, Shopify as backend,
         custom checkout, performance-optimized architecture): $20,000 to $100,000+.
       </p>
 
@@ -636,7 +642,12 @@ export const post: BlogPost = {
       <p className="mb-4">
         <strong>SEO setup:</strong> A proper technical SEO foundation on a new Shopify store
         (structured data, canonical tags, sitemap, image alt optimization) typically adds $500 to
-        $1,500 to a development project. Our team includes this in every build at FactoryJet.
+        $1,500 to a development project. Our team includes this in every build at FactoryJet, and
+        it carries straight into the{' '}
+        <a href="/services/ecommerce-growth-agency" className="text-[#B23E13] hover:underline">
+          ecommerce growth work
+        </a>{' '}
+        that starts once the store is live.
       </p>
       <p className="mb-4">
         <strong>Ongoing maintenance retainer:</strong> Expect $200 to $500/month from most agencies
@@ -666,7 +677,11 @@ export const post: BlogPost = {
         >
           Shopify vs WooCommerce cost breakdown
         </a>{' '}
-        covers how the two compare on price and flexibility. FactoryJet has delivered Shopify builds
+        covers how the two compare on price and flexibility, and our wider guide to the{' '}
+        <a href="/best-ecommerce-platforms" className="text-[#B23E13] hover:underline">
+          best ecommerce platforms
+        </a>{' '}
+        puts both of them next to the rest of the field. FactoryJet has delivered Shopify builds
         for US small businesses across markets like{' '}
         <a href="/nashville" className="text-[#B23E13] hover:underline">
           Nashville
