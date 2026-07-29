@@ -17,18 +17,18 @@ export const post: BlogPost = {
     description: "US small business websites run $1,500-$15,000 in 2026. Compare DIY vs freelancer vs agency pricing and see what's included at each tier to avoid overpaying.",
   },
   keyTakeaways: [
-    'A professional custom website for a US small business costs $1,999–$8,000 in 2026; anything under $1,500 is almost always a template with minimal customization.',
+    'A professional custom website for a US small business costs $1,500–$8,000 in 2026; anything under that is almost always a template with minimal customization.',
     'DIY builders (Wix, Squarespace) cost $23–$65/month but cap your SEO ceiling and require 40–80 hours of your own time to build and maintain.',
     'US domestic agencies typically charge $8,000–$25,000 for the same deliverable that offshore-with-US-support teams deliver for $2,000–$5,000.',
     'Monthly maintenance costs $99–$299 from a professional agency; skipping maintenance leads to security breaches that cost $5,000–$50,000 to remediate.',
-    'A slow website (load time over 3 seconds) loses 53% of mobile visitors before the page even loads — speed is a direct revenue metric.',
+    'A slow website (load time over 3 seconds) loses 53% of mobile visitors before the page even loads. Speed is a direct revenue metric.',
     'Price anchoring matters: get three quotes, compare scope line-by-line, and reject any agency that won\'t provide an itemized statement of work.',
-    'FactoryJet delivers 5-page professional websites in 7 days starting at $1,999 — US SMB benchmark for offshore-quality-at-offshore-price with US communication.',
+    'FactoryJet delivers 5-page professional websites in 7 days: the offshore-quality-at-offshore-price benchmark for US SMBs, with US-hour communication.',
   ],
   faqs: [
     {
       q: 'How much does a website cost for a small business in the USA in 2026?',
-      a: "A professional small business website in the USA costs $1,999–$8,000 in 2026. DIY builders like Wix or Squarespace cost $23–$65/month (plus 40–80 hours of your time). Freelancers charge $1,500–$5,000. US domestic agencies range from $8,000–$25,000. Offshore agencies with US-hour support (like FactoryJet) deliver equivalent quality for $1,999–$5,000. E-commerce sites add $2,000–$10,000 depending on product count and customization.",
+      a: "A professional small business website in the USA costs $1,500–$8,000 in 2026. DIY builders like Wix or Squarespace cost $23–$65/month (plus 40–80 hours of your time). Freelancers charge $1,500–$5,000. US domestic agencies range from $8,000–$25,000. Offshore agencies with US-hour support (like FactoryJet) sit between the freelance and domestic-agency bands, usually on a fixed project scope rather than an hourly rate. E-commerce sites add $2,000–$10,000 depending on product count and customization.",
     },
     {
       q: 'What is included in a $3,000 small business website?',
@@ -36,15 +36,15 @@ export const post: BlogPost = {
     },
     {
       q: 'Why are some web design agencies so much cheaper than others?',
-      a: "Price differences come from four factors: location (India/Philippines-based teams cost at a fixed, transparent price with repeatable systems are faster and cheaper than custom boutiques), technology stack (Next.js/React sites take less time to build than bespoke CMSes), and scope (template-based builds are faster but limit SEO and design flexibility). A $2,000 quote can be legitimate if the agency has efficient workflows and offshore cost structure — or it can mean a $79 ThemeForest template with minimal customization.",
+      a: "Price differences come from four factors: location (India/Philippines-based teams cost at a fixed, transparent price with repeatable systems are faster and cheaper than custom boutiques), technology stack (Next.js/React sites take less time to build than bespoke CMSes), and scope (template-based builds are faster but limit SEO and design flexibility). A $2,000 quote can be legitimate if the agency has efficient workflows and offshore cost structure. Or it can mean a $79 ThemeForest template with minimal customization.",
     },
     {
       q: 'Do I need to pay monthly fees after my website is built?',
-      a: "Yes — plan for $99–$299/month in ongoing costs. This covers hosting ($20–$100/month), security monitoring and SSL renewal ($20–$50/month), plugin/CMS updates ($50–$100/month), and minor content updates ($50–$150/month). Skipping maintenance creates security vulnerabilities — 43% of cyberattacks target small businesses, and the average remediation cost is $25,000. Many agencies bundle these into maintenance plans; compare carefully what's included.",
+      a: "Yes, plan for $99–$299/month in ongoing costs. This covers hosting ($20–$100/month), security monitoring and SSL renewal ($20–$50/month), plugin/CMS updates ($50–$100/month), and minor content updates ($50–$150/month). Skipping maintenance creates security vulnerabilities: 43% of cyberattacks target small businesses, and the average remediation cost is $25,000. Many agencies bundle these into maintenance plans; compare carefully what's included.",
     },
     {
       q: 'How long does it take to build a small business website?',
-      a: "Timeline depends on scope and agency workflow. DIY builders: 2–8 weeks of your own time. Freelancers: 4–12 weeks. US domestic agencies: 6–16 weeks. Offshore agencies with productized workflows: 7–21 days. FactoryJet delivers 5-page sites in 7 days. The biggest delay factor isn't the agency — it's client feedback turnaround and content readiness. Having your copy, logo, and photos ready before kickoff cuts timelines by 30–50%.",
+      a: "Timeline depends on scope and agency workflow. DIY builders: 2–8 weeks of your own time. Freelancers: 4–12 weeks. US domestic agencies: 6–16 weeks. Offshore agencies with productized workflows: 7–21 days. FactoryJet delivers 5-page sites in 7 days. The biggest delay factor isn't the agency. It's client feedback turnaround and content readiness. Having your copy, logo, and photos ready before kickoff cuts timelines by 30–50%.",
     },
     {
       q: 'Should I use Wix or hire a web design agency?',
@@ -56,19 +56,19 @@ export const post: BlogPost = {
     },
     {
       q: 'How much does an e-commerce website cost for a small business in the USA?',
-      a: "E-commerce websites cost $3,000–$20,000 in 2026. Shopify stores built by agencies start at $2,500–$5,000 for a 50-product catalog with custom theme. WooCommerce builds run $3,000–$8,000. Custom e-commerce (headless, Next.js Commerce) starts at $10,000. Monthly costs add $79–$299 for Shopify subscription, plus 0.5–2% transaction fees if not on Shopify Payments. FactoryJet builds Shopify stores for US small businesses starting at $2,499 with 7-day delivery.",
+      a: "E-commerce websites cost $3,000–$20,000 in 2026. Shopify stores built by agencies start at $2,500–$5,000 for a 50-product catalog with custom theme. WooCommerce builds run $3,000–$8,000. Custom e-commerce (headless, Next.js Commerce) starts at $10,000. Monthly costs add $79–$299 for Shopify subscription, plus 0.5–2% transaction fees if not on Shopify Payments. FactoryJet builds Shopify stores for US small businesses on a fixed-scope quote with 7-day delivery.",
     },
     {
-      q: 'Is a $1,999 website too cheap to be good?',
-      a: "Not if the agency has efficient systems. $1,999 is achievable when an agency uses modern tooling (Next.js, component libraries, CI/CD pipelines), an offshore cost structure (India-based teams cost 60–70% less than US), and a productized process (standardized 5-page build rather than fully custom). FactoryJet delivers professional 5-page sites at $1,999 with 7-day delivery, Lighthouse 100 scores, and US business-hour support. Ask for PageSpeed Insights reports on live client sites before assuming low price means low quality.",
+      q: 'Is a $2,000 website too cheap to be good?',
+      a: "Not if the agency has efficient systems. That price point is achievable when an agency uses modern tooling (Next.js, component libraries, CI/CD pipelines), an offshore cost structure (India-based teams cost 60–70% less than US), and a productized process (standardized 5-page build rather than fully custom). FactoryJet builds professional 5-page sites on exactly that model: 7-day delivery, Lighthouse 100 scores, and US business-hour support. Ask for PageSpeed Insights reports on live client sites before assuming low price means low quality.",
     },
     {
       q: 'What ROI should I expect from a new small business website?',
-      a: "Industry benchmarks: a well-optimized SMB website generates 2–5 new leads per month for service businesses in competitive markets, and 5–20 for businesses in lower-competition niches. A $5,000 website that generates one new client per month at a $2,000 average contract value returns $24,000/year — a 380% ROI. The key variables are: industry competition level, Google rankings (top 3 positions capture 68% of clicks), page load speed (1-second improvement = 7% conversion uplift), and quality of calls-to-action.",
+      a: "Industry benchmarks: a well-optimized SMB website generates 2–5 new leads per month for service businesses in competitive markets, and 5–20 for businesses in lower-competition niches. A $5,000 website that generates one new client per month at a $2,000 average contract value returns $24,000/year (a 380% ROI). The key variables are: industry competition level, Google rankings (top 3 positions capture 68% of clicks), page load speed (1-second improvement = 7% conversion uplift), and quality of calls-to-action.",
     },
     {
       q: 'What is the difference between a website redesign and a new website build?',
-      a: "A new build starts from scratch — new architecture, design system, content strategy, and technical stack. A redesign preserves some existing content and structure while updating design and performance. New builds cost 20–40% more but avoid inheriting technical debt. Redesigns are faster (30–50% less time) but often hit architectural ceilings within 2–3 years. If your current site scores below 60 on Google PageSpeed or was built before 2021, a new build usually delivers better long-term ROI than a redesign patch.",
+      a: "A new build starts from scratch: new architecture, design system, content strategy, and technical stack. A redesign preserves some existing content and structure while updating design and performance. New builds cost 20–40% more but avoid inheriting technical debt. Redesigns are faster (30–50% less time) but often hit architectural ceilings within 2–3 years. If your current site scores below 60 on Google PageSpeed or was built before 2021, a new build usually delivers better long-term ROI than a redesign patch.",
     },
     {
       q: 'What is the average cost of a website?',
@@ -124,18 +124,18 @@ export const post: BlogPost = {
           <li>Tier 1: DIY Website Builders ($0–$780/year)</li>
           <li>Tier 2: Freelancers ($1,500–$5,000)</li>
           <li>Tier 3: US Domestic Agencies ($8,000–$25,000)</li>
-          <li>Tier 4: Offshore Agencies with US Support ($1,999–$6,000)</li>
+          <li>Tier 4: Offshore Agencies with US Support ($2,000–$6,000)</li>
           <li>E-Commerce Website Costs: Shopify vs. WooCommerce vs. Custom</li>
           <li>Hidden Costs That Blow Budgets</li>
           <li>Monthly Maintenance: What You Pay After Launch</li>
           <li>ROI Benchmarks: When Does a Website Pay for Itself?</li>
           <li>How to Compare Quotes Line by Line</li>
-          <li>The 7-Day $1,999 Option: What FactoryJet Delivers</li>
+          <li>The 7-Day Build Option: What FactoryJet Delivers</li>
         </ul>
       </div>
 
       <p className="text-lg leading-relaxed mb-6">
-        A professional small business website in the USA costs between $1,999 and $15,000 in 2026. The range exists because "website" covers everything from a five-page service brochure to a 200-SKU e-commerce operation with custom checkout logic. This guide gives you the exact numbers for each tier, what those dollars actually buy, where budgets get destroyed by hidden costs, and how to make the comparison that protects you from overpaying or under-buying.
+        A professional small business website in the USA costs between $1,500 and $15,000 in 2026. The range exists because "website" covers everything from a five-page service brochure to a 200-SKU e-commerce operation with custom checkout logic. This guide gives you the exact numbers for each tier, what those dollars actually buy, where budgets get destroyed by hidden costs, and how to make the comparison that protects you from overpaying or under-buying.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">The 2026 US Small Business Website Cost Overview</h2>
@@ -181,7 +181,7 @@ export const post: BlogPost = {
             </tr>
             <tr className="bg-gray-50">
               <td className="border p-3">Offshore Agency (US Support)</td>
-              <td className="border p-3">$1,999–$6,000</td>
+              <td className="border p-3">$2,000–$6,000</td>
               <td className="border p-3">$99–$250</td>
               <td className="border p-3">7–21 days</td>
               <td className="border p-3">High</td>
@@ -192,7 +192,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Tier 1: DIY Website Builders ($0–$780/year)</h2>
       <p className="mb-4">
-        Wix, Squarespace, and GoDaddy Website Builder charge $23–$65/month for business plans. The upfront cash cost is low — but the real cost is time and opportunity. Building a five-page Wix site takes most non-designers 40–80 hours of learning, building, and editing, and AI site generators have not changed that arithmetic as much as their marketing suggests, a point we work through in <a href="/blog/will-ai-replace-web-designers" className="text-blue-600 underline hover:text-blue-800 transition-colors">our piece on whether AI will replace web designers</a>. At an average US SMB owner hourly value of $75–$150, that's $3,000–$12,000 in opportunity cost before the site is even live.
+        Wix, Squarespace, and GoDaddy Website Builder charge $23–$65/month for business plans. The upfront cash cost is low, but the real cost is time and opportunity. Building a five-page Wix site takes most non-designers 40–80 hours of learning, building, and editing, and AI site generators have not changed that arithmetic as much as their marketing suggests, a point we work through in <a href="/blog/will-ai-replace-web-designers" className="text-blue-600 underline hover:text-blue-800 transition-colors">our piece on whether AI will replace web designers</a>. At an average US SMB owner hourly value of $75–$150, that's $3,000–$12,000 in opportunity cost before the site is even live.
       </p>
       <p className="mb-4">
         The deeper problem is technical SEO architecture. DIY builders render JavaScript-heavy pages that Google's crawler struggles to index efficiently. They use shared hosting infrastructure that throttles load speeds during peak traffic. Their URL structures, heading hierarchies, and schema markup capabilities are limited. Moz's 2024 analysis of 10,000 SMB websites found that Wix and Squarespace sites ranked for 38% fewer commercial keywords than equivalent WordPress or Next.js sites, even with identical content.
@@ -203,10 +203,10 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Tier 2: Freelancers ($1,500–$5,000)</h2>
       <p className="mb-4">
-        Freelancers on Upwork and Fiverr quote $1,500–$5,000 for five-page websites. The range reflects enormous skill variation — a $1,500 WordPress build from a developer with three years' experience is structurally different from a $4,500 Next.js build from someone with ten. Before hiring any freelancer, request Lighthouse Performance reports on three live client sites and verify they score above 85 on mobile.
+        Freelancers on Upwork and Fiverr quote $1,500–$5,000 for five-page websites. The range reflects enormous skill variation: a $1,500 WordPress build from a developer with three years' experience is structurally different from a $4,500 Next.js build from someone with ten. Before hiring any freelancer, request Lighthouse Performance reports on three live client sites and verify they score above 85 on mobile.
       </p>
       <p className="mb-4">
-        The primary risk with freelancers isn't price — it's reliability and handoff. Freelancers disappear, get overloaded with other clients, or lack the systems to provide proper staging environments, documented codebases, and post-launch support. A 2024 survey by the Freelancers Union found that 41% of small business clients reported at least one project where a freelancer went unresponsive before final delivery. Build in a 20% contingency budget for scope overruns, and never pay more than 50% upfront.
+        The primary risk with freelancers is not price but reliability and handoff. Freelancers disappear, get overloaded with other clients, or lack the systems to provide proper staging environments, documented codebases, and post-launch support. A 2024 survey by the Freelancers Union found that 41% of small business clients reported at least one project where a freelancer went unresponsive before final delivery. Build in a 20% contingency budget for scope overruns, and never pay more than 50% upfront.
       </p>
       <p className="mb-4">
         Freelancers work best for: businesses with a technical co-founder who can manage the relationship, simple five-page sites with no complex functionality, and situations where cost is the primary constraint and timeline flexibility exists.
@@ -223,15 +223,15 @@ export const post: BlogPost = {
         US domestic agencies are worth the premium for: regulated industries (healthcare, finance, legal) requiring on-site security reviews, enterprise clients demanding US-only data handling, and complex web applications with $25,000+ scopes where legal accountability justifies higher rates.
       </p>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">Tier 4: Offshore Agencies with US Support ($1,999–$6,000)</h2>
+      <h2 className="text-2xl font-bold mt-8 mb-4">Tier 4: Offshore Agencies with US Support ($2,000–$6,000)</h2>
       <p className="mb-4">
         The most underutilized option for US SMBs is the offshore-with-US-support model: agencies headquartered in India or Eastern Europe with dedicated US-hours project management, US-governed contracts, and US-based references. These agencies deliver the same technical output as US domestic firms at 60–70% lower cost because their development teams operate on India or Eastern European salaries ($18,000–$45,000/year versus $95,000–$160,000 for equivalent US talent).
       </p>
       <p className="mb-4">
-        The skepticism around offshore agencies is largely outdated. In 2026, the same Next.js, React, and Shopify frameworks used by US developers are used globally. Lighthouse scores, WCAG compliance, Core Web Vitals, and schema markup don't have a geography. What matters is technical competence — which you verify by auditing live client sites — and communication reliability — which you verify by checking US business-hour response times and client references.
+        The skepticism around offshore agencies is largely outdated. In 2026, the same Next.js, React, and Shopify frameworks used by US developers are used globally. Lighthouse scores, WCAG compliance, Core Web Vitals, and schema markup don't have a geography. What matters is technical competence and communication reliability. You verify the first by auditing live client sites, and the second by checking US business-hour response times and client references.
       </p>
       <p className="mb-4">
-        FactoryJet operates on this model: India-based development team, US business-hour communication, US-governed project agreements, and US client references. Five-page websites start at $1,999 with 7-day delivery and Lighthouse 100/100 scores. The cost savings versus comparable US agencies typically run $6,000–$18,000 per project.
+        FactoryJet operates on this model: India-based development team, US business-hour communication, US-governed project agreements, and US client references. Five-page websites ship in 7 days with Lighthouse 100/100 scores. The cost savings versus comparable US agencies typically run $6,000–$18,000 per project.
       </p>
       <p className="mb-4">➡ See our work: <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">US Web Design Services</a></p>
 
@@ -252,7 +252,7 @@ export const post: BlogPost = {
           <tbody>
             <tr className="bg-white">
               <td className="border p-3">Shopify (custom theme)</td>
-              <td className="border p-3">$2,499–$6,000</td>
+              <td className="border p-3">$2,500–$6,000</td>
               <td className="border p-3">$79–$299</td>
               <td className="border p-3">DTC brands, product-first businesses</td>
             </tr>
@@ -296,7 +296,7 @@ export const post: BlogPost = {
         <strong>Hosting and domain markup:</strong> Some agencies charge $30–$80/month for hosting that retails for $10–$20. Always ask what hosting platform is used, its retail cost, and whether you can migrate off the agency's hosting if you end the relationship.
       </p>
       <p className="mb-4">
-        <strong>SEO retainers pushed at launch:</strong> It's legitimate for agencies to offer SEO after launch — it's a real service. But some agencies delay SEO-critical work (schema markup, meta descriptions, XML sitemaps) until the retainer is signed. Confirm that technical SEO is included in the base website build before signing.
+        <strong>SEO retainers pushed at launch:</strong> It's legitimate for agencies to offer SEO after launch, since it's a real service. But some agencies delay SEO-critical work (schema markup, meta descriptions, XML sitemaps) until the retainer is signed. Confirm that technical SEO is included in the base website build before signing.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Monthly Maintenance: What You Pay After Launch</h2>
@@ -348,18 +348,18 @@ export const post: BlogPost = {
         </table>
       </div>
       <p className="mb-4">
-        Skipping maintenance is the most expensive false economy in small business web strategy. Unmaintained WordPress and WooCommerce sites are the primary target of automated bot attacks — a single breach can result in customer data exposure, Google blacklisting (which kills your search traffic overnight), and remediation costs of $5,000–$50,000. Agency maintenance plans at $99–$299/month are insurance, not a luxury.
+        Skipping maintenance is the most expensive false economy in small business web strategy. Unmaintained WordPress and WooCommerce sites are the primary target of automated bot attacks: a single breach can result in customer data exposure, Google blacklisting (which kills your search traffic overnight), and remediation costs of $5,000–$50,000. Agency maintenance plans at $99–$299/month are insurance, not a luxury.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">ROI Benchmarks: When Does a Website Pay for Itself?</h2>
       <p className="mb-4">
-        The question isn't "how much does a website cost" — it's "when does it earn back more than it cost?" Here are real ROI benchmarks for US SMBs across three service categories:
+        The question isn't "how much does a website cost." It's "when does it earn back more than it cost?" Here are real ROI benchmarks for US SMBs across three service categories:
       </p>
       <p className="mb-4">
         <strong>Service businesses (plumbers, HVAC, landscaping, law):</strong> A properly optimized site ranking in the top 3 for local keywords generates 3–8 leads per month. At an average contract value of $500–$2,500, that's $1,500–$20,000/month in new revenue. A $4,000 website paying for itself in 2–8 months is typical for service businesses in mid-competition markets.
       </p>
       <p className="mb-4">
-        <strong>E-commerce (DTC, retail, niche products):</strong> Shopify stores with proper SEO and conversion optimization generate $8,000–$40,000/month for businesses with $50–$500K in annual revenue. A $3,500 Shopify build that adds 15% to conversion rate (1.2% to 1.4%) on $30,000/month in traffic is worth $720/month in added revenue — payback in under 5 months.
+        <strong>E-commerce (DTC, retail, niche products):</strong> Shopify stores with proper SEO and conversion optimization generate $8,000–$40,000/month for businesses with $50–$500K in annual revenue. A $3,500 Shopify build that adds 15% to conversion rate (1.2% to 1.4%) on $30,000/month in traffic is worth $720/month in added revenue, which is payback in under 5 months.
       </p>
       <p className="mb-4">
         <strong>B2B professional services (consultants, agencies, SaaS):</strong> A single enterprise inquiry from a well-optimized B2B website is worth $10,000–$100,000+ in annual contract value. Even one additional qualified lead per quarter makes a $5,000 website investment look trivial by any ROI calculation.
@@ -376,7 +376,7 @@ export const post: BlogPost = {
         When two quotes look different in price but identical in scope, the cheaper one is the better deal. When the cheaper quote is missing items the expensive one includes, you can price them individually and make an informed decision. Never sign a contract without a written statement of work that itemizes every deliverable.
       </p>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">The 7-Day $1,999 Option: What FactoryJet Delivers</h2>
+      <h2 className="text-2xl font-bold mt-8 mb-4">The 7-Day Build Option: What FactoryJet Delivers</h2>
       <p className="mb-4">
         FactoryJet was founded to solve a specific problem: US small businesses paying $8,000–$20,000 for websites that an equally competent offshore team could build for $2,000. Our India-based development team, US-hour project management, and productized 5-page build process deliver:
       </p>
@@ -384,7 +384,7 @@ export const post: BlogPost = {
         Custom design (not a template) · Next.js or WordPress build · Lighthouse 100/100 performance score · WCAG AA accessibility compliance · On-page SEO (full technical SEO included) · 5 pages with client-supplied copy · Mobile-first responsive layout · 7-day delivery guarantee · 30 days post-launch support · Full code and hosting ownership transferred at completion
       </p>
       <p className="mb-4">
-        Starting price: $1,999 for a 5-page professional website. E-commerce Shopify stores start at $2,499. Projects delivered in 7 days or we extend until it's right at no additional cost.
+        Both the 5-page website and the Shopify store are quoted as fixed-scope projects, not hourly, so the number you agree to is the number you pay. Projects are delivered in 7 days or we extend until it's right at no additional cost.
       </p>
       <p className="mb-4">
         ➡ <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our web design packages</a> · <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free quote in 24 hours</a>
@@ -393,7 +393,7 @@ export const post: BlogPost = {
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8">
         <h3 className="text-lg font-bold mb-2 text-blue-900">The Bottom Line</h3>
         <p className="text-blue-800">
-          Budget $1,999–$5,000 for a professional US small business website in 2026 if you use an offshore-with-US-support agency. Budget $8,000–$15,000 if you need a US domestic agency for compliance or preference reasons. Add $99–$249/month for ongoing maintenance. Expect 3–8x ROI within 12 months if technical SEO is properly implemented. Never choose based on price alone — verify Lighthouse scores, check client references, and get an itemized scope before signing.
+          Budget $2,000–$5,000 for a professional US small business website in 2026 if you use an offshore-with-US-support agency. Budget $8,000–$15,000 if you need a US domestic agency for compliance or preference reasons. Add $99–$249/month for ongoing maintenance. Expect 3–8x ROI within 12 months if technical SEO is properly implemented. Never choose based on price alone: verify Lighthouse scores, check client references, and get an itemized scope before signing.
         </p>
       </div>
     </>
