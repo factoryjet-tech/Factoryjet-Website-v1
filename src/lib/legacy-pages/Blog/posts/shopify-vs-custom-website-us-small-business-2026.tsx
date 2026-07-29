@@ -74,6 +74,54 @@ export const post: BlogPost = {
       q: 'Can I use Shopify for B2B sales to other businesses?',
       a: "Yes — Shopify's B2B features (available on Shopify Plus at $2,500/month) support net payment terms, custom pricing by account, company profiles, and draft orders. For smaller B2B operations, Shopify's standard plans with wholesale apps ($30–$100/month) handle volume pricing and restricted storefronts. Custom sites with Magento or custom-built B2B portals remain the choice for complex B2B scenarios: multi-warehouse inventory, ERP integration, contract pricing matrices, or RFQ workflows.",
     },
+    {
+      q: 'How much does Shopify take from a $20 sale?',
+      a: "On a $20 sale, Shopify keeps roughly 88 cents if you run Shopify Payments on the Basic plan (2.9% plus 30 cents per online transaction), leaving you about $19.12. Higher plans drop the card rate to around 2.7% or 2.5%. If you process through a third-party gateway like Authorize.net instead, add Shopify's platform fee of up to 2% per order, so the same $20 sale gives up closer to $1.28 total.",
+    },
+    {
+      q: 'What is the downside of using Shopify?',
+      a: "The main downside is that costs stack and your control stops at the platform's edge. Subscription, paid apps, and payment fees all compound as you grow, and a typical store runs six to twelve apps at $10 to $100 each per month. You also cannot rewrite URL structures, and checkout stays locked down unless you are on Plus. For a product seller who would rather sell than maintain software, those trade-offs are usually worth accepting.",
+    },
+    {
+      q: 'What limitations does Shopify have?',
+      a: "The real limits are structural, not cosmetic. URL paths are fixed (/products/, /collections/, /blogs/), the checkout can only be changed inside Shopify's own extension framework unless you are on Plus, you get no server access, and the built-in blog is thin next to WordPress. Catalog-heavy sellers also hit product option and variant ceilings. None of this blocks a normal DTC store; it bites when your model needs custom logic or serious content depth.",
+    },
+    {
+      q: 'What is the biggest problem with Shopify?',
+      a: "You rent the storefront rather than own it, and the rent scales with your success. Plan fees, app subscriptions, and a cut of every order keep climbing as revenue grows, while your ability to change core behavior stays capped by what Shopify and its apps allow. That trade is completely fine at $200K a year. At $2M a year on a third-party gateway, it quietly costs more than a custom build would have.",
+    },
+    {
+      q: 'Is Shopify still worth it in 2026?',
+      a: "For most US small businesses selling physical products, yes. You get PCI compliance, hosting, fraud screening, and a checkout tuned on data from millions of stores for a monthly fee far below what engineering the same stack would cost. Shopify stops being worth it in three situations: you sell services with no catalog, blog content is your main acquisition channel, or you are past roughly $500K a year on a non-Shopify gateway where platform fees run into five figures.",
+    },
+    {
+      q: 'Do I need LLC to sell on Shopify?',
+      a: "No. Shopify lets you open a store as a sole proprietor using your Social Security number for tax reporting, and plenty of US sellers start exactly that way. An LLC separates personal assets from business liability and usually costs $50 to $500 in state filing fees, which is why most owners form one once revenue is real. Check with a CPA or attorney about your state before you decide.",
+    },
+    {
+      q: 'Will I lose my domain if I cancel Shopify?',
+      a: "No. If you bought the domain through Shopify, it is registered in your name and you can transfer it to another registrar such as Cloudflare or Namecheap. Do the transfer while the store is still active, because ICANN blocks transfers for 60 days after a registration or ownership change and you do not want to be locked mid-migration. If you registered the domain elsewhere and only pointed DNS at Shopify, nothing happens to it at all.",
+    },
+    {
+      q: 'How do I get away from Shopify?',
+      a: "Export first, switch second, cancel last. Pull CSV exports of products, customers, and orders while the store is still active, since access narrows the moment you cancel. Rebuild on the new platform, then map 301 redirects for every /products/, /collections/, and /blogs/ URL so rankings carry across. Move DNS to the new host, watch a full week of real orders process correctly, and only then close the Shopify account.",
+    },
+    {
+      q: 'What is the cost of custom ecommerce website?',
+      a: "In the US, a custom ecommerce build typically runs $8,000 to $25,000 with a small agency, $3,000 to $8,000 with an experienced freelancer, and $50,000 or more once you add ERP integration, multi-warehouse inventory, or a headless front end. Hosting adds $30 to $80 per month after launch. The number moves most on integrations and catalog complexity, not page count, so list the systems you need to connect before comparing quotes.",
+    },
+    {
+      q: 'Is $800 enough to build an ecommerce business?',
+      a: "It is enough to launch, not enough to build. $800 covers a year of a Shopify plan, a domain, a paid theme, and a couple of apps, which is a genuinely working store. It will not cover a custom build, and it leaves nothing for inventory or ads, which is where most of the money actually needs to go. At that budget, start hosted and spend the difference on getting traffic.",
+    },
+    {
+      q: "Who is Shopify's biggest competitor?",
+      a: "WooCommerce, by raw store count. It powers more live shops worldwide than any other ecommerce software because it is free WordPress software, though the average WooCommerce store is much smaller than the average Shopify one. In the segment US small businesses actually shop in, the practical alternatives are BigCommerce, Wix, and Squarespace at the low end, Adobe Commerce at the enterprise end, and a custom build. Amazon competes too, just for the sale rather than the software.",
+    },
+    {
+      q: 'Why do so many Shopify stores fail?',
+      a: "Almost never because of Shopify. Stores fail because nobody was searching for the product, ad costs ran past gross margin, or the owner picked a dropship catalog that fifty other stores also sell. Platform choice accounts for a small slice of the outcome; demand, margin, and a repeatable acquisition channel are the rest. Prove people will buy before spending $15,000 on a custom build, because switching platforms will not fix a store nobody visits.",
+    },
   ],
   content: (
     <>

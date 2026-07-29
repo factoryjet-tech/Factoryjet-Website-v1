@@ -66,6 +66,50 @@ export const post: BlogPost = {
       q: 'What is the difference between a web design agency and a web developer?',
       a: "A web design agency provides both design (visual, UX, brand) and development (code, CMS, performance) as a complete service, typically with account management and defined processes. An independent web developer provides coding skills but often lacks design capability, project management, and post-launch support infrastructure. Agencies cost more for good reason: they deliver a complete product, not just code. For US SMBs who can't manage a multi-vendor process, agencies are the lower-risk choice even at higher price.",
     },
+    {
+      q: 'How much do agencies charge for website design?',
+      a: "US web design agencies price in tiers. Small boutique shops charge $3,000 to $10,000 for a small business site. Mid-market agencies charge $10,000 to $50,000. Full-service firms serving national brands start around $50,000. Offshore agencies with US-hours account management sit at $1,500 to $8,000 for comparable technical output. The tier you need is set by scope and integrations, not by the agency's prestige.",
+    },
+    {
+      q: 'What is the average cost to hire a web designer?',
+      a: "An individual web designer in the US charges $50 to $150 an hour, or $2,000 to $6,000 as a flat project fee for a small business site. Senior designers with a specialty, say Shopify or healthcare, quote $100 to $200 an hour. A designer alone does not cover development, hosting setup, or technical SEO, so compare total scope before assuming a solo hire is cheaper than an agency.",
+    },
+    {
+      q: 'What is the average cost for a website design?',
+      a: "National US averages land around $4,000 to $10,000 for a small business site, but the average hides more than it shows. The same five page site quotes at $2,000 from a solo freelancer, $6,000 from a boutique agency, and $18,000 from a mid-market firm in a major metro. Ask what drives the number in your quote: page count, custom design, integrations, and content production are the four real variables.",
+    },
+    {
+      q: 'How much should I pay someone to design a website?',
+      a: "Pay for the outcome, not the hours. For a US small business, $2,000 to $8,000 buys a custom five to ten page site with technical SEO, mobile performance, and accessibility handled properly. Below $1,000 you are getting a template with your logo dropped in. Above $15,000 you should be receiving custom functionality, user research, or a full brand system. A quote with no itemized scope is a meaningless number.",
+    },
+    {
+      q: 'How to choose the right web design agency?',
+      a: "Start with proof, not portfolio. Ask for live client URLs, run each one through PageSpeed Insights yourself, and reject anything scoring below 90 on mobile. Then verify three things: a fixed price with itemized scope, three US client references you can call independently, and written confirmation that you own the code and hosting credentials at handoff. Agencies that answer all three without hedging are already ahead of most of the market.",
+    },
+    {
+      q: 'Is web design still in demand in 2026?',
+      a: "Yes, though demand shifted rather than shrank. AI tools absorbed the low end, so template-and-logo work is close to worthless now. What US businesses pay for in 2026 is Core Web Vitals, WCAG 2.2 compliance, conversion work, and integrations with the tools they already run. That is why quotes for real builds have held steady while cheap template work collapsed in price.",
+    },
+    {
+      q: 'Is web design still worth it in 2026?',
+      a: "It is worth it when your site has a job to do. If you buy traffic, take bookings, sell online, or compete in local search, a properly designed site pays for itself on conversion rate alone. A one point lift on a site doing 2,000 visits a month is real money. If your business runs entirely on referrals and you never send anyone to a URL, a simple profile page is enough.",
+    },
+    {
+      q: 'Are web designers worth it?',
+      a: "A good one is, because the cost of a bad site stays invisible until you measure it. Designers earn their fee on decisions you would not think to make: what goes above the fold, what gets cut, how the form is structured, what happens on a slow phone connection. A weak designer is not worth it at any price. That is why references and live performance scores matter more than the hourly rate.",
+    },
+    {
+      q: 'Are web designers in high demand?',
+      a: "Demand is high at the senior end and thin at the junior end. The practical effect for a US small business is lead time. Strong agencies and senior freelancers are often booked three to six weeks out, so the one who can start Monday is worth a closer look. Plan your launch date backward from that, especially if you are timing around a season or a product drop.",
+    },
+    {
+      q: 'Will AI replace web designers?',
+      a: "Not for business websites, though it has already replaced part of the job. AI writes production code, generates layouts, and drafts copy, which is why build timelines dropped. What it does not do is decide what your business should say, test with real customers, or carry responsibility when a site fails an ADA accessibility review. Hire agencies that use AI to move faster, not ones pretending they do not.",
+    },
+    {
+      q: 'Can I build a website for free?',
+      a: "You can, using free tiers from Google Sites, Wix, WordPress.com, or Carrd. The catch is what free costs you: a builder-branded subdomain, ads on your pages, no custom domain, limited SEO controls, and no clean export path when you outgrow it. For a US business asking customers to hand over money or contact details, a builder subdomain quietly costs you credibility. Budget at least $15 a year for a domain.",
+    },
   ],
   content: (
     <>
