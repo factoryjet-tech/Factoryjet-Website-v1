@@ -291,7 +291,8 @@ export const post: BlogPost = {
         explained clearly before you sign; and there are no annual lock-ins. Where competitors beat
         us: if you&apos;re Myntra-sized, Infidigit&apos;s enterprise muscle fits better. We say so
         honestly.{' '}
-        <a href="/seo" className="text-orange-600 underline">See our India SEO services</a>
+        <a href="/ai-seo" className="text-orange-600 underline">See what our India AI SEO work covers</a>, or
+        our broader <a href="/seo" className="text-orange-600 underline">India SEO services</a>
       </p>
       <p className="mb-4">
         One clarification, because it decides which page you should be on. Our India work and our US

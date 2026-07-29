@@ -207,10 +207,21 @@ export const seoAuditServicesAlternatesUS = {
 
 /**
  * AI SEO / GEO / AEO service page — bilingual cluster.
- * US:    /services/ai-seo   (targets the "AI SEO agency/services/company" head term)
- * India: /ai-seo            (root path, matches India URL pattern for services; GEO-scoped)
+ * US:    /services/ai-seo   (targets "AI SEO agency/services/company", US-qualified)
+ * India: /ai-seo            (root path, matches India URL pattern for services)
  * UAE / UK: generic regional landings.
  * Added 2026-05-25 in PR #2 for the new Framework B+ AI SEO service.
+ *
+ * RETARGETED 2026-07-29: /ai-seo was previously GEO-scoped, i.e. its title and H1
+ * led with "Generative Engine Optimization (GEO) Services in India" so it could not
+ * collide with the US page on the "AI SEO" head term. That scoping cost it the term:
+ * 90-day GSC showed /ai-seo earning 32 impressions and 0 clicks, ranking ~pos 36 for
+ * its own GEO title, while India commercial queries ("ai seo company india" pos 5.0,
+ * "ai seo agency in india" pos 5.8) landed on /blog/best-ai-seo-agencies-india instead.
+ * The collision the scoping guarded against is already prevented by the country
+ * pairing below: en-IN and en-US are exactly how two country-targeted pages share a
+ * concept. So /ai-seo now leads with "AI SEO Company in India" and keeps GEO + AEO as
+ * sections. Do NOT re-scope it back to GEO.
  *
  * x-default DEVIATION (2026-07-06): this page intentionally breaks the file-wide
  * "x-default → India" convention. The commercial head term "ai seo agency" is

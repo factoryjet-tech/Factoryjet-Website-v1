@@ -30,16 +30,20 @@ import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Generative Engine Optimization (GEO) Services in India | FactoryJet',
+  title: 'AI SEO Company in India: AI SEO Agency, GEO + AEO | FactoryJet',
   description:
-    'Generative Engine Optimization (GEO) and Answer Engine Optimization (AEO) services in India. When India asks ChatGPT, Perplexity, Gemini, or Google AI who to trust, your business should be the answer. Per-engine citation proof every month.',
+    'AI SEO company in India. We make ChatGPT, Perplexity, Gemini and Google AI Overviews name your business when buyers ask which company to trust, with per-engine citation proof every month. GEO and AEO included.',
   keywords: [
-    'generative engine optimization india',
-    'generative engine optimization services india',
-    'geo seo services india',
-    'answer engine optimization india',
+    'ai seo company india',
+    'ai seo agency in india',
     'ai seo services india',
-    'ai seo agency india',
+    'ai seo company in india',
+    'best ai seo company in india',
+    'ai seo expert in india',
+    'ai seo agency',
+    'ai seo services',
+    'generative engine optimization india',
+    'answer engine optimization india',
     'geo agency india',
     'aeo services india',
     'llm optimization services india',
@@ -50,9 +54,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Generative Engine Optimization (GEO) Services in India | FactoryJet',
+    title: 'AI SEO Company in India: AI SEO Agency, GEO + AEO | FactoryJet',
     description:
-      '10 crore Indians ask ChatGPT every week. AI SEO makes the AI answers say your name — with per-engine citation proof every month. No long contracts.',
+      '10 crore Indians ask ChatGPT every week. AI SEO makes the AI answers say your name, with per-engine citation proof every month. No long contracts.',
     url: 'https://factoryjet.com/ai-seo',
     images: [
       {
@@ -66,9 +70,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Generative Engine Optimization (GEO) Services in India | FactoryJet',
+    title: 'AI SEO Company in India: AI SEO Agency, GEO + AEO | FactoryJet',
     description:
-      '10 crore Indians ask ChatGPT every week. AI SEO makes the AI answers say your name — with per-engine proof every month.',
+      '10 crore Indians ask ChatGPT every week. AI SEO makes the AI answers say your name, with per-engine proof every month.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
@@ -429,13 +433,13 @@ export default function AiSeoIndiaPage() {
         {/* ── CH.0 HERO — The Answer Card ─────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="ai_seo_hero" />}
-          eyebrow="GENERATIVE ENGINE OPTIMIZATION (GEO) · AEO · AI SEO — INDIA"
+          eyebrow="AI SEO · GEO · AEO · INDIA"
           headline={
             <>
-              When India asks AI, be <em className="italic text-[#F05A28]">the answer.</em>
+              AI SEO in India: when buyers ask AI, be <em className="italic text-[#F05A28]">the answer.</em>
             </>
           }
-          lead="10 crore Indians use ChatGPT every week — and they ask it which company to trust. AI SEO makes ChatGPT, Perplexity, Gemini, and Google AI answers say your name. With proof, every month."
+          lead="10 crore Indians use ChatGPT every week, and they ask it which company to trust. As an AI SEO company in India, we make ChatGPT, Perplexity, Gemini, and Google AI answers say your name. With proof, every month."
           secondaryCta={{ label: 'See how it works', href: '#how-it-works' }}
           extraCta={<WhatsAppCTA city="India" service="AI SEO" />}
           trustItems={['4 AI engines tracked monthly', 'Month to month — no lock-in', '5-minute reports, plain language']}
@@ -657,7 +661,7 @@ export default function AiSeoIndiaPage() {
         {/* ── CH.8 FAQ — 22 conversational, zero JS ───────────────────────── */}
         <FAQ
           eyebrow="QUESTIONS, ANSWERED SIMPLY"
-          headline="GEO, AEO &amp; AI SEO FAQ — Every Question About Generative Engine Optimization, Answered Simply"
+          headline="AI SEO FAQ for India: your questions about AI SEO, GEO and AEO, answered simply"
           lead="If your question is not below, message us on WhatsApp and you will usually hear back the same day."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
