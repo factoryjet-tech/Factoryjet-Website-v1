@@ -1,0 +1,82 @@
+{
+ "surat": {
+  "hero": {
+   "unsplash_id": "rhH7ieI0-9s",
+   "photographer": "Mushvig Niftaliyev",
+   "profile": "https://unsplash.com/@mushvig95",
+   "alt": "Woman working at a computer in a modern office.",
+   "size_kb": 33
+  },
+  "team": {
+   "unsplash_id": "XYuLj_jai0Y",
+   "photographer": "Skytech Aviation",
+   "profile": "https://unsplash.com/@skytechaviation0",
+   "alt": "A group of people in a conference room",
+   "size_kb": 95
+  }
+ },
+ "indore": {
+  "hero": {
+   "unsplash_id": "InWUkRKyNbI",
+   "photographer": "Af Hfmn",
+   "profile": "https://unsplash.com/@alex_hfmn54",
+   "alt": "a man sitting at a desk in front of a computer",
+   "size_kb": 57
+  },
+  "team": {
+   "unsplash_id": "QckxruozjRg",
+   "photographer": "Annie Spratt",
+   "profile": "https://unsplash.com/@anniespratt",
+   "alt": "group of people using laptop computer",
+   "size_kb": 78
+  }
+ },
+ "chandigarh": {
+  "hero": {
+   "unsplash_id": "8Jlz0eFuUG4",
+   "photographer": "Jonathan Borba",
+   "profile": "https://unsplash.com/@jonathanborba",
+   "alt": "A smiling woman stands behind a desk with design samples.",
+   "size_kb": 59
+  },
+  "team": {
+   "unsplash_id": "cW4lLTavU80",
+   "photographer": "Smartworks Coworking",
+   "profile": "https://unsplash.com/@smartworkscoworking",
+   "alt": "men and women having a meeting",
+   "size_kb": 147
+  }
+ },
+ "lucknow": {
+  "hero": {
+   "unsplash_id": "Vp4X3_IVoYQ",
+   "photographer": "Fernanda Neitzel",
+   "profile": "https://unsplash.com/@fernandaneitzel",
+   "alt": "Woman in black shirt working on laptop at desk.",
+   "size_kb": 78
+  },
+  "team": {
+   "unsplash_id": "ZT5v0puBjZI",
+   "photographer": "Mapbox",
+   "profile": "https://unsplash.com/@mapbox",
+   "alt": "four people all on laptops, two men and two women, listen to person talking in a board meeting ",
+   "size_kb": 92
+  }
+ },
+ "jaipur": {
+  "hero": {
+   "unsplash_id": "cub821w6Z0s",
+   "photographer": "Sophie Paterson",
+   "profile": "https://unsplash.com/@patersophie",
+   "alt": "Man working on a laptop with city lights in background",
+   "size_kb": 66
+  },
+  "team": {
+   "unsplash_id": "LCwo5opgr9M",
+   "photographer": "Sanket Mishra",
+   "profile": "https://unsplash.com/@sanketgraphy",
+   "alt": "a group of people sitting around a wooden table",
+   "size_kb": 67
+  }
+ }
+}

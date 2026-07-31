@@ -826,8 +826,9 @@ export default function DigitalMarketingPage() {
               <a href="/digital-marketing/hyderabad" className="font-semibold text-[#B23E13] underline underline-offset-2">Hyderabad</a>,{' '}
               <a href="/digital-marketing/noida" className="font-semibold text-[#B23E13] underline underline-offset-2">Noida</a>,{' '}
               <a href="/digital-marketing/ahmedabad" className="font-semibold text-[#B23E13] underline underline-offset-2">Ahmedabad</a>,{' '}
-              <a href="/digital-marketing/chennai" className="font-semibold text-[#B23E13] underline underline-offset-2">Chennai</a>, and{' '}
-              <a href="/digital-marketing/kolkata" className="font-semibold text-[#B23E13] underline underline-offset-2">Kolkata</a>.
+              <a href="/digital-marketing/chennai" className="font-semibold text-[#B23E13] underline underline-offset-2">Chennai</a>,{' '}
+              <a href="/digital-marketing/kolkata" className="font-semibold text-[#B23E13] underline underline-offset-2">Kolkata</a>, and{' '}
+              <a href="/digital-marketing/surat" className="font-semibold text-[#B23E13] underline underline-offset-2">Surat</a>.
             </p>
           </div>
         </section>
