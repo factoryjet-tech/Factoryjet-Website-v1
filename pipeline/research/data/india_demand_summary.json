@@ -1,0 +1,83 @@
+{
+ "superlative_tally": {
+  "best": {
+   "vol": 256130,
+   "n": 860
+  },
+  "top": {
+   "vol": 69910,
+   "n": 225
+  },
+  "affordable": {
+   "vol": 5050,
+   "n": 43
+  },
+  "top 10": {
+   "vol": 6140,
+   "n": 36
+  },
+  "biggest": {
+   "vol": 8250,
+   "n": 4
+  },
+  "award winning": {
+   "vol": 80,
+   "n": 3
+  },
+  "premier": {
+   "vol": 10,
+   "n": 1
+  },
+  "good": {
+   "vol": 5670,
+   "n": 9
+  },
+  "leading": {
+   "vol": 4130,
+   "n": 9
+  },
+  "no 1": {
+   "vol": 50,
+   "n": 2
+  },
+  "no.1": {
+   "vol": 40,
+   "n": 1
+  },
+  "cheapest": {
+   "vol": 890,
+   "n": 5
+  },
+  "low cost": {
+   "vol": 940,
+   "n": 12
+  },
+  "largest": {
+   "vol": 10,
+   "n": 1
+  },
+  "reliable": {
+   "vol": 30,
+   "n": 3
+  },
+  "top 5": {
+   "vol": 240,
+   "n": 2
+  },
+  "famous": {
+   "vol": 10,
+   "n": 1
+  },
+  "trusted": {
+   "vol": 110,
+   "n": 1
+  },
+  "most popular": {
+   "vol": 10,
+   "n": 1
+  }
+ },
+ "n_total": 8371,
+ "n_superlative": 1219,
+ "n_question": 222
+}

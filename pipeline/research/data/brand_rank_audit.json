@@ -1,0 +1,625 @@
+{
+ "location": "India",
+ "serp": [
+  {
+   "keyword": "best ai seo agency in india",
+   "cost": 0.0155,
+   "organic_pos": 4,
+   "organic_url": "https://factoryjet.com/blog/best-ai-seo-agencies-india",
+   "aio_present": true,
+   "aio_cited": true,
+   "aio_sources": [
+    "factoryjet.com",
+    "qoulomb.com",
+    "sociolabs.in",
+    "zeroado.com",
+    "www.linkedin.com",
+    "www.repindia.com",
+    "snezzi.com"
+   ],
+   "top3": [
+    "1. www.techmagnate.com",
+    "2. www.ninetriangles.com",
+    "3. www.ftaglobal.in"
+   ],
+   "error": null
+  },
+  {
+   "keyword": "best web design agency in india",
+   "cost": 0.0155,
+   "organic_pos": null,
+   "organic_url": null,
+   "aio_present": false,
+   "aio_cited": false,
+   "aio_sources": [],
+   "top3": [
+    "1. www.hmluxuryconsultancy.com",
+    "2. clutch.co",
+    "3. www.mandywebdesign.com"
+   ],
+   "error": null
+  },
+  {
+   "keyword": "best ecommerce agency in india",
+   "cost": 0.014,
+   "organic_pos": null,
+   "organic_url": null,
+   "aio_present": true,
+   "aio_cited": false,
+   "aio_sources": [
+    "sqroot.in",
+    "swcybernetics.in",
+    "www.thedigitalimpressions.com",
+    "trigitalsolutions.com"
+   ],
+   "top3": [
+    "1. sqroot.in",
+    "2. swcybernetics.in",
+    "3. www.thedigitalimpressions.com"
+   ],
+   "error": null
+  },
+  {
+   "keyword": "best seo services company in india",
+   "cost": 0.0155,
+   "organic_pos": null,
+   "organic_url": null,
+   "aio_present": true,
+   "aio_cited": false,
+   "aio_sources": [
+    "agencies.semrush.com",
+    "www.reddit.com",
+    "www.pagetraffic.in",
+    "theinstaserv.com",
+    "www.quora.com",
+    "www.wisemonk.io",
+    "clutch.co",
+    "www.aksoftsol.com",
+    "www.contentasmarketing.com",
+    "respona.com"
+   ],
+   "top3": [
+    "1. www.seodiscovery.com",
+    "2. agencies.semrush.com",
+    "3. www.rankingbyseo.com"
+   ],
+   "error": null
+  },
+  {
+   "keyword": "top ai agency in india",
+   "cost": 0.0155,
+   "organic_pos": null,
+   "organic_url": null,
+   "aio_present": true,
+   "aio_cited": false,
+   "aio_sources": [
+    "www.sutrahr.com",
+    "upbusinessco.com",
+    "www.gleamstudio.design",
+    "www.anvenssa.com",
+    "www.linkedin.com",
+    "fixnhour.com",
+    "www.visualbest.co",
+    "statistician-in-stilettos.medium.com",
+    "webosmotic.com",
+    "buildwithstudio.com"
+   ],
+   "top3": [
+    "1. websenor.com",
+    "2. clutch.co",
+    "3. www.ksolves.com"
+   ],
+   "error": null
+  },
+  {
+   "keyword": "best ai agent development company in india",
+   "cost": 0.0155,
+   "organic_pos": null,
+   "organic_url": null,
+   "aio_present": true,
+   "aio_cited": false,
+   "aio_sources": [
+    "www.linkedin.com",
+    "agenticindia.in",
+    "craxinno.com",
+    "digitalissimple.com",
+    "codestoresolutions.com",
+    "softwareoutsourcing.com",
+    "www.esparkinfo.com",
+    "rejoicehub.com",
+    "dev.to"
+   ],
+   "top3": [
+    "1. webnox.in",
+    "2. www.linkedin.com",
+    "3. nimapinfotech.com"
+   ],
+   "error": null
+  },
+  {
+   "keyword": "top web development company in india",
+   "cost": 0.0175,
+   "organic_pos": null,
+   "organic_url": null,
+   "aio_present": true,
+   "aio_cited": false,
+   "aio_sources": [
+    "clutch.co",
+    "www.goodfirms.co",
+    "www.geeksforgeeks.org",
+    "www.lannettechnology.com",
+    "www.classicinformatics.com",
+    "webandcrafts.com",
+    "learnq.in",
+    "saleshive.com"
+   ],
+   "top3": [
+    "1. invoidea.com",
+    "2. clutch.co",
+    "3. www.orangemantra.com"
+   ],
+   "error": null
+  },
+  {
+   "keyword": "best shopify development agency in india",
+   "cost": 0.0155,
+   "organic_pos": null,
+   "organic_url": null,
+   "aio_present": true,
+   "aio_cited": false,
+   "aio_sources": [
+    "codifyinfotech.com",
+    "clutch.co",
+    "www.linkedin.com",
+    "www.google.com",
+    "www.heybuddy.co.in",
+    "webzplot.com",
+    "amasty.com"
+   ],
+   "top3": [
+    "1. codifyinfotech.com",
+    "2. penninetechnolabs.com",
+    "3. www.icreativetechnologies.com"
+   ],
+   "error": null
+  }
+ ],
+ "llm": [
+  {
+   "keyword": "best ai seo agency in india",
+   "llm": "chat_gpt",
+   "model": "gpt-5.5",
+   "cost": 0.11101,
+   "mentioned": false,
+   "rank": null,
+   "brands": [
+    "1. **Colossus Digital Media** \u2014 best overall AI SEO/GEO positioning.",
+    "2. **Kreativ Street** \u2014 good if you want AI search strategy layered on top of existing SEO",
+    "3. **BeTopSEO** \u2014 worth considering if your priority is entity authority, structured data,"
+   ],
+   "error": null,
+   "text_len": 5258
+  },
+  {
+   "keyword": "best ai seo agency in india",
+   "llm": "claude",
+   "model": "claude-sonnet-4-5",
+   "cost": 0.056038,
+   "mentioned": true,
+   "rank": "- FactoryJet",
+   "brands": [],
+   "error": null,
+   "text_len": 2174
+  },
+  {
+   "keyword": "best ai seo agency in india",
+   "llm": "gemini",
+   "model": "gemini-2.5-pro",
+   "cost": 0.049289,
+   "mentioned": false,
+   "rank": null,
+   "brands": [],
+   "error": null,
+   "text_len": 5131
+  },
+  {
+   "keyword": "best ai seo agency in india",
+   "llm": "perplexity",
+   "model": "sonar-pro",
+   "cost": 0.014478,
+   "mentioned": true,
+   "rank": "4. **FactoryJet** \u2013 AI SEO for SMBs; tracks visibility across ChatGPT, Perplexity, Gemini, etc.[1]",
+   "brands": [
+    "1. **Techmagnate** \u2013 best-known enterprise SEO player adopting AI at scale[2][5]",
+    "2. **Ferventers** \u2013 **AI\u2011first** SEO agency with proprietary LLM share\u2011of\u2011voice tracking[2",
+    "3. **Infidigit** \u2013 enterprise and eCommerce SEO with AI-powered AEO and analytics[1][3]",
+    "4. **FactoryJet** \u2013 AI SEO for SMBs; tracks visibility across ChatGPT, Perplexity, Gemini,",
+    "5. **Qoulomb** \u2013 AI SEO/AEO specialist for funded B2B and SaaS startups[1][18]",
+    "6. **ZeroAdo** \u2013 AI SEO agency for startups and B2B lead generation, strong focus on AI vi",
+    "7. **SEO Discovery** \u2013 large, budget-friendly SEO shop adding AI tooling and automation[2]",
+    "8. **TripleDart Digital** \u2013 B2B/SaaS growth agency with custom AI SEO agents and automatio",
+    "9. **PageTraffic** \u2013 long-standing SEO agency cited in AI SEO rankings and media lists[1][",
+    "10. **Obelisk Infotech** \u2013 Indian SEO company positioning itself around AI SEO & automatio"
+   ],
+   "error": null,
+   "text_len": 1864
+  },
+  {
+   "keyword": "best web design agency in india",
+   "llm": "chat_gpt",
+   "model": "gpt-5.5",
+   "cost": 0.11348,
+   "mentioned": false,
+   "rank": null,
+   "brands": [
+    "1. **3 live websites** similar to your industry",
+    "2. **Before/after metrics** \u2014 conversion rate, traffic, leads, load speed",
+    "3. **Exact team composition** \u2014 designer, frontend dev, backend dev, PM, SEO",
+    "4. **Post-launch support terms**",
+    "5. **Ownership terms** for design files, code, CMS, hosting, and analytics"
+   ],
+   "error": null,
+   "text_len": 4067
+  },
+  {
+   "keyword": "best web design agency in india",
+   "llm": "claude",
+   "model": "claude-sonnet-4-5",
+   "cost": 0.052951,
+   "mentioned": false,
+   "rank": null,
+   "brands": [],
+   "error": null,
+   "text_len": 2182
+  },
+  {
+   "keyword": "best web design agency in india",
+   "llm": "gemini",
+   "model": "gemini-2.5-pro",
+   "cost": 0.0518475,
+   "mentioned": false,
+   "rank": null,
+   "brands": [],
+   "error": null,
+   "text_len": 5849
+  },
+  {
+   "keyword": "best web design agency in india",
+   "llm": "perplexity",
+   "model": "sonar-pro",
+   "cost": 0.020343,
+   "mentioned": false,
+   "rank": null,
+   "brands": [],
+   "error": null,
+   "text_len": 3715
+  },
+  {
+   "keyword": "best ecommerce agency in india",
+   "llm": "chat_gpt",
+   "model": "gpt-5.5",
+   "cost": 0.11219,
+   "mentioned": false,
+   "rank": null,
+   "brands": [],
+   "error": null,
+   "text_len": 5795
+  },
+  {
+   "keyword": "best ecommerce agency in india",
+   "llm": "claude",
+   "model": "claude-sonnet-4-5",
+   "cost": 0.048544,
+   "mentioned": false,
+   "rank": null,
+   "brands": [],
+   "error": null,
+   "text_len": 2014
+  },
+  {
+   "keyword": "best ecommerce agency in india",
+   "llm": "gemini",
+   "model": "gemini-2.5-pro",
+   "cost": 0.05768,
+   "mentioned": false,
+   "rank": null,
+   "brands": [
+    "1.  **Mobikasa**",
+    "2.  **Sparx IT Solutions**",
+    "3.  **ControlF5**",
+    "1.  **WPWeb Infotech**",
+    "2.  **Dolphin Web Solution**",
+    "3.  **Emizen Tech**",
+    "1.  **PageTraffic**",
+    "2.  **EvenDigit**",
+    "3.  **ROI MINDS**",
+    "4.  **AdTribe**"
+   ],
+   "error": null,
+   "text_len": 6617
+  },
+  {
+   "keyword": "best ecommerce agency in india",
+   "llm": "perplexity",
+   "model": "sonar-pro",
+   "cost": 0.024735,
+   "mentioned": false,
+   "rank": null,
+   "brands": [],
+   "error": null,
+   "text_len": 5224
+  },
+  {
+   "keyword": "best seo services company in india",
+   "llm": "chat_gpt",
+   "model": "gpt-5.5",
+   "cost": 0.104495,
+   "mentioned": false,
+   "rank": null,
+   "brands": [
+    "1. **Three SEO case studies in your industry**",
+    "2. **Sample monthly SEO report**",
+    "3. **Technical SEO audit sample**",
+    "4. **Content strategy sample**",
+    "5. **Link-building policy** \u2014 avoid agencies using spammy paid links or private blog netwo",
+    "6. **Expected timeline** \u2014 a good agency will usually say **3\u20136 months** for meaningful tr",
+    "7. **Ownership of content, analytics, dashboards, and backlinks**"
+   ],
+   "error": null,
+   "text_len": 3735
+  },
+  {
+   "keyword": "best seo services company in india",
+   "llm": "claude",
+   "model": "claude-sonnet-4-5",
+   "cost": 0.053452,
+   "mentioned": false,
+   "rank": null,
+   "brands": [],
+   "error": null,
+   "text_len": 1761
+  },
+  {
+   "keyword": "best seo services company in india",
+   "llm": "gemini",
+   "model": "gemini-2.5-pro",
+   "cost": 0.0463,
+   "mentioned": false,
+   "rank": null,
+   "brands": [],
+   "error": null,
+   "text_len": 4070
+  },
+  {
+   "keyword": "best seo services company in india",
+   "llm": "perplexity",
+   "model": "sonar-pro",
+   "cost": 0.028038,
+   "mentioned": false,
+   "rank": null,
+   "brands": [],
+   "error": null,
+   "text_len": 5573
+  },
+  {
+   "keyword": "top ai agency in india",
+   "llm": "chat_gpt",
+   "model": "gpt-5.5",
+   "cost": 0.107855,
+   "mentioned": false,
+   "rank": null,
+   "brands": [],
+   "error": null,
+   "text_len": 3728
+  },
+  {
+   "keyword": "top ai agency in india",
+   "llm": "claude",
+   "model": "claude-sonnet-4-5",
+   "cost": 0.053512,
+   "mentioned": false,
+   "rank": null,
+   "brands": [
+    "1. **Sarvam AI**",
+    "2. **Fractal Analytics**",
+    "3. **Tiger Analytics**",
+    "4. **Quantiphi**",
+    "5. **TechAvidus**",
+    "6. **Openxcell**",
+    "7. **DataToBiz**",
+    "8. **Simform**",
+    "9. **Appinventiv**",
+    "10. **LatentView Analytics**"
+   ],
+   "error": null,
+   "text_len": 2035
+  },
+  {
+   "keyword": "top ai agency in india",
+   "llm": "gemini",
+   "model": "gemini-2.5-pro",
+   "cost": 0.052105,
+   "mentioned": false,
+   "rank": null,
+   "brands": [],
+   "error": null,
+   "text_len": 5512
+  },
+  {
+   "keyword": "top ai agency in india",
+   "llm": "perplexity",
+   "model": "sonar-pro",
+   "cost": 0.01575,
+   "mentioned": false,
+   "rank": null,
+   "brands": [],
+   "error": null,
+   "text_len": 2275
+  },
+  {
+   "keyword": "best ai agent development company in india",
+   "llm": "chat_gpt",
+   "model": "gpt-5.5",
+   "cost": 0.11621,
+   "mentioned": false,
+   "rank": null,
+   "brands": [],
+   "error": null,
+   "text_len": 7524
+  },
+  {
+   "keyword": "best ai agent development company in india",
+   "llm": "claude",
+   "model": "claude-sonnet-4-5",
+   "cost": 0.051589,
+   "mentioned": false,
+   "rank": null,
+   "brands": [],
+   "error": null,
+   "text_len": 2191
+  },
+  {
+   "keyword": "best ai agent development company in india",
+   "llm": "gemini",
+   "model": "gemini-2.5-pro",
+   "cost": 0.05465125,
+   "mentioned": false,
+   "rank": null,
+   "brands": [],
+   "error": null,
+   "text_len": 6117
+  },
+  {
+   "keyword": "best ai agent development company in india",
+   "llm": "perplexity",
+   "model": "sonar-pro",
+   "cost": 0.023661,
+   "mentioned": false,
+   "rank": null,
+   "brands": [
+    "1. **Fordel Studios** \u2013 technically rigorous AI agents for regulated industries (finance, ",
+    "2. **Ampcome** \u2013 large-scale enterprise AI agent deployments, strong production track reco",
+    "3. **Digital is Simple** \u2013 strong focus on *agentic AI* for startups, SaaS, and enterprise",
+    "4. **Agentic India** \u2013 India-focused autonomous AI agents and workflow automation, 8+ year",
+    "5. **OrangeMantra** \u2013 20+ years in enterprise digital transformation and agentic AI, stron",
+    "6. **Softweb Solutions** \u2013 enterprise IoT + AI, data\u2011driven automation and custom AI agent",
+    "7. **CONTUS Tech (CONTUS)** \u2013 multi\u2011agent mesh systems for Fortune 500 clients, 18+ years ",
+    "8. **Daffodil Software** \u2013 digital workforce and structured AI agent delivery for enterpri",
+    "9. **RejoiceHub** \u2013 custom AI agent workflows for SaaS, retail, and healthcare; highlighte",
+    "10. **eSparkBiz** \u2013 AI agents, chatbots, and custom software development; top\u2011ranked in se"
+   ],
+   "error": null,
+   "text_len": 4198
+  },
+  {
+   "keyword": "top web development company in india",
+   "llm": "chat_gpt",
+   "model": "gpt-5.5",
+   "cost": 0.10737,
+   "mentioned": false,
+   "rank": null,
+   "brands": [],
+   "error": null,
+   "text_len": 4616
+  },
+  {
+   "keyword": "top web development company in india",
+   "llm": "claude",
+   "model": "claude-sonnet-4-5",
+   "cost": 0.053017,
+   "mentioned": false,
+   "rank": null,
+   "brands": [],
+   "error": null,
+   "text_len": 1739
+  },
+  {
+   "keyword": "top web development company in india",
+   "llm": "gemini",
+   "model": "gemini-2.5-pro",
+   "cost": 0.048504,
+   "mentioned": false,
+   "rank": null,
+   "brands": [],
+   "error": null,
+   "text_len": 5353
+  },
+  {
+   "keyword": "top web development company in india",
+   "llm": "perplexity",
+   "model": "sonar-pro",
+   "cost": 0.011598,
+   "mentioned": false,
+   "rank": null,
+   "brands": [
+    "1. **Konstant Infosolutions** \u2014 Website: **konstantinfo.com**[4][12]",
+    "2. **Capital Numbers** \u2014 Website: **capitalnumbers.com**[4][12]",
+    "3. **Tata Consultancy Services (TCS)** \u2014 Website: **tcs.com**[3][9]",
+    "4. **Infosys** \u2014 Website: **infosys.com**[3]",
+    "5. **Wipro** \u2014 Website: **wipro.com**[3]",
+    "6. **HCLTech** \u2014 Website: **hcltech.com**[3]",
+    "7. **MindInventory** \u2014 Website: **mindinventory.com**[3][9]",
+    "8. **Unified Infotech** \u2014 Website: **unifiedinfotech.net**[3][4]",
+    "9. **ValueCoders** \u2014 Website: **valuecoders.com**[3]",
+    "10. **Hyperlink InfoSystem** \u2014 Website: **hyperlinkinfosystem.com**[3]"
+   ],
+   "error": null,
+   "text_len": 1135
+  },
+  {
+   "keyword": "best shopify development agency in india",
+   "llm": "chat_gpt",
+   "model": "gpt-5.5",
+   "cost": 0.10464,
+   "mentioned": false,
+   "rank": null,
+   "brands": [],
+   "error": null,
+   "text_len": 3548
+  },
+  {
+   "keyword": "best shopify development agency in india",
+   "llm": "claude",
+   "model": "claude-sonnet-4-5",
+   "cost": 0.049696,
+   "mentioned": false,
+   "rank": null,
+   "brands": [],
+   "error": null,
+   "text_len": 1756
+  },
+  {
+   "keyword": "best shopify development agency in india",
+   "llm": "gemini",
+   "model": "gemini-2.5-pro",
+   "cost": 0.046871,
+   "mentioned": false,
+   "rank": null,
+   "brands": [],
+   "error": null,
+   "text_len": 5059
+  },
+  {
+   "keyword": "best shopify development agency in india",
+   "llm": "perplexity",
+   "model": "sonar-pro",
+   "cost": 0.018081,
+   "mentioned": false,
+   "rank": null,
+   "brands": [
+    "1. **OrangeMantra** \u2013 enterprise & custom Shopify builds[15]",
+    "2. **APPWRK** \u2013 positioned as a leading scalable Shopify agency in India with strong Clutc",
+    "3. **Skyloom Studios** \u2013 specialist Shopify/D2C agency, \u201cbest overall recommendation\u201d in a",
+    "4. **Ranosys** \u2013 Shopify Plus and enterprise ecommerce specialist with strong India footpr",
+    "5. **BrainSpate** \u2013 Shopify\u2011focused D2C/Shopify Plus builds, listed in multiple 2026 \u201ctop ",
+    "6. **WPWeb Infotech / WPWeb Elite** \u2013 India\u2011based Shopify design & development firm highli",
+    "7. **ControlF5** \u2013 Shopify Plus & headless Shopify builds from Indore, ranked in 2026 Indi",
+    "8. **SynapseIndia** \u2013 long\u2011standing India agency, strong Shopify portfolio, ranked #2 in a",
+    "9. **Sparx IT Solutions** \u2013 experienced web dev firm with significant Shopify migration/cu",
+    "10. **Brainvire Infotech** \u2013 200+ Shopify clients, strong in app development and integrati"
+   ],
+   "error": null,
+   "text_len": 2869
+  }
+ ]
+}
