@@ -29,15 +29,15 @@ import { IN_WEB_DESIGN_CITIES } from '@/data/inWebDesignCities';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Company in India | FactoryJet',
+  title: 'Best Web Design Company in India (2026) | FactoryJet',
   description:
-    'Web design company in India. Conversion-focused websites built by a website design company you can trust — mobile-first, Lighthouse 100, Next.js & WordPress. 7-day delivery. Full code ownership.',
+    'Looking for the best web design company in India? Compare the top 10, built from live search data. Mobile-first, Lighthouse 100, full code ownership.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in India | FactoryJet',
+    title: 'Best Web Design Company in India (2026) | FactoryJet',
     description:
-      'Custom websites for Indian businesses. Next.js, WordPress & Shopify. 7-day delivery. Mobile-first, Lighthouse 100.',
+      'Compare the top 10 web design companies in India, built from live search data. Next.js, WordPress and Shopify. Mobile-first, Lighthouse 100.',
     url: 'https://factoryjet.com/web-design',
     images: [
       {
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web Design Company in India | 7-Day Websites | FactoryJet',
+    title: 'Best Web Design Company in India (2026) | FactoryJet',
     description: 'Custom websites for Indian businesses. Mobile-first. 7-day delivery.',
     images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
@@ -76,106 +76,76 @@ export const metadata: Metadata = {
    JSON-LD Schema
 ───────────────────────────────────────────────────────────────────────────── */
 
-const faqSchema = {
+/* Named-competitor comparison. Every company below currently ranks on Google
+   for web design or web development in India (checked 31 July 2026), and each
+   "best for" line is written from that company's OWN description of itself.
+   We do not invent team sizes, client counts or specialisms. */
+const IN_WEB_DESIGN_FIRMS = [
+  {
+    name: 'FactoryJet',
+    bestFor:
+      'Businesses that want a custom, mobile-first site with full code ownership on launch day and a fixed quote agreed before work starts. Strongest fit if the site has to rank as well as look good. (Yes, that is us. We include ourselves openly and let the comparison speak for itself.)',
+    isUs: true,
+  },
+  {
+    name: 'Acodez',
+    bestFor:
+      'Companies wanting an award-winning firm handling web alongside software and mobile apps. They describe themselves as an international award-winning IT company based in India.',
+  },
+  {
+    name: 'Webbitech',
+    bestFor:
+      'Buyers who value a long track record. Their own listing leads with more than fifteen years in website design and web development.',
+  },
+  {
+    name: 'FODUU',
+    bestFor:
+      'Smaller budgets that want a packaged, low-entry-price website. They advertise entry pricing openly and describe fourteen-plus years of work.',
+  },
+  {
+    name: 'Tenet',
+    bestFor:
+      'Brands whose priority is conversion rather than brochure design. They describe building high-performing, conversion-focused websites.',
+  },
+  {
+    name: 'Webandcrafts',
+    bestFor:
+      'Larger builds needing both front-end and back-end depth in one team, which is how they describe their own capability.',
+  },
+  {
+    name: 'OrangeMantra',
+    bestFor:
+      'Enterprises that want technology and marketing under one roof, and that are comparing against the large Indian IT firms.',
+  },
+  {
+    name: 'Invoidea',
+    bestFor:
+      'Businesses wanting website design bundled with app development, UI/UX and digital marketing, which is the mix they list.',
+  },
+  {
+    name: 'Matebiz',
+    bestFor:
+      'Companies wanting web design paired with ongoing search work. They cite Clutch recognition alongside a web and digital marketing offer.',
+  },
+  {
+    name: 'Classic Informatics',
+    bestFor:
+      'Product and engineering-led builds rather than marketing sites, which is where their own positioning sits.',
+  },
+];
+
+
+const firmsSchema = {
   '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How much does a website cost in India?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to build a website in India?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet\'s Starter tier (up to 5 pages) delivers in 7 business days from design sign-off. Growth tier (10–15 pages with CMS) takes 10–14 business days. Custom builds are scoped individually, typically 4–10 weeks.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I own the website and code after the project?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — 100%. We transfer the full codebase to your GitHub repository on launch day. You own every line of code, all Figma design files, and all hosting credentials. No lock-in. No monthly fees owed to FactoryJet.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Will my website rank on Google India?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Every website we deliver includes technical SEO as standard: heading structure, meta tags, canonical URLs, schema markup, XML sitemap, robots.txt, and Core Web Vitals optimization. Branded searches typically rank within 1–2 weeks. Local service queries take 3–6 months for a new domain.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you integrate Razorpay, PhonePe, or UPI payment gateways?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. Razorpay, PhonePe, Paytm Business, PayU, and UPI-native flows are standard integrations for our e-commerce and custom-tier builds. Indian payment gateway integration is included at no extra charge for Custom tier projects.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Will my website be mobile-friendly for Indian users?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Every website is built mobile-first. We specifically test for Indian 4G conditions because 70%+ of your visitors are on phones. We test on physical Android devices — the most common browser in India — not just desktop emulators.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What platform will my website be built on?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We build on Next.js (for performance-critical business sites and web apps), WordPress (for content-driven sites), Shopify (for e-commerce), Webflow, and Framer. We recommend the right platform after understanding your goals — all are configured for Core Web Vitals green, mobile-first, and full code ownership.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you add a WhatsApp Business API button?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. A click-to-WhatsApp button is a standard element on every FactoryJet India project. We also integrate full WhatsApp Business API chatbots for businesses that need lead qualification and FAQ automation.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you build city-specific landing pages for Indian metros?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. For businesses targeting multiple Indian cities, we build location-specific landing pages with locally relevant copy, local schema markup, and city-level SEO targeting — covering Mumbai, Delhi, Bangalore, Chennai, Hyderabad, Pune, Ahmedabad, and beyond.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you offer website maintenance contracts (AMC)?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. AMC plans cover security updates, plugin/CMS updates, SSL renewal, uptime monitoring, and monthly health reports. Higher tiers add content updates, SEO optimization, and a dedicated account manager. AMC is optional and quoted up front — your website keeps running without it.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Who is the best web design agency in India?',
-      acceptedAnswer: { '@type': 'Answer', text: 'For small and mid-size businesses, FactoryJet makes a strong case: websites delivered in 7 days, 100/100 Google speed scores, and a fixed price agreed before work starts. But the best web design company in India for you depends on fit — the best website design agency in India for an online store is different from the best website design company in India for a doctor or a factory. Whoever you compare for the best web design services in India or the best website design services in India, check three things: live websites you can click, speed scores you can test yourself, and a price in writing.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'What are the top 10 web design companies in India?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Most lists of the top 10 web design agencies in India — and the matching top 10 website design companies in India — are written by the companies on them. FactoryJet competes in that set for small businesses, and we are open about how to judge us: test our live pages for speed, count the days from brief to launch, and compare the written price. Use any top-10 list as a shortlist, never as the decision.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does website design cost in India?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Website design cost in India depends on scope — a simple template site costs far less than a custom business website with e-commerce or web app features. If you are asking how much a website costs all-in, remember hosting and yearly upkeep too. FactoryJet agrees a fixed price before work starts, so the cost never grows in the middle of the project.' },
-    },
-  ],
+  '@type': 'ItemList',
+  name: 'Top 10 web design companies in India (2026)',
+  numberOfItems: IN_WEB_DESIGN_FIRMS.length,
+  itemListOrder: 'https://schema.org/ItemListUnordered',
+  itemListElement: IN_WEB_DESIGN_FIRMS.map((a, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: a.name,
+  })),
 };
 
 const serviceSchema = {
@@ -222,31 +192,31 @@ const IN_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '01',
     title: 'Discover',
     description:
-      'A 30-minute brief where we map your business goals, target audience, key competitors, and site architecture. For Indian SMBs, this is where we define your local SEO strategy — city-level targeting for Mumbai, Bangalore, Delhi, or wherever your buyers search.',
+      'A 30-minute brief where we map your business goals, target audience, key competitors, and site architecture. For Indian SMBs, this is where we define your local SEO strategy, city-level targeting for Mumbai, Bangalore, Delhi, or wherever your buyers search.',
   },
   {
     number: '02',
     title: 'Design',
     description:
-      'Full Figma wireframes and visual mockups for every key page — desktop and mobile. You approve the design before we write a line of code. Two revision rounds included. Mobile-first layout is non-negotiable: 70%+ of your visitors are on phones, often on 4G.',
+      'Full Figma wireframes and visual mockups for every key page, desktop and mobile. You approve the design before we write a line of code. Two revision rounds included. Mobile-first layout is non-negotiable: 70%+ of your visitors are on phones, often on 4G.',
   },
   {
     number: '03',
     title: 'Build',
     description:
-      'Engineering in Next.js, WordPress, or Shopify. Daily commits to your GitHub repo. Staging URL available within 48 hours. WhatsApp button, Razorpay, PhonePe, and Indian payment gateway integrations are handled in this phase — not added on later.',
+      'Engineering in Next.js, WordPress, or Shopify. Daily commits to your GitHub repo. Staging URL available within 48 hours. WhatsApp button, Razorpay, PhonePe, and Indian payment gateway integrations are handled in this phase, not added on later.',
   },
   {
     number: '04',
     title: 'Review',
     description:
-      'Live staging review with your team. Two rounds of content and design feedback. We test across Chrome, Safari, and the Android browsers your Indian audience actually uses — including bandwidth-aware testing for 4G conditions.',
+      'Live staging review with your team. Two rounds of content and design feedback. We test across Chrome, Safari, and the Android browsers your Indian audience actually uses, including bandwidth-aware testing for 4G conditions.',
   },
   {
     number: '05',
     title: 'Ship',
     description:
-      'Production launch with DNS transfer, SSL setup, Google Search Console verification, GA4 configuration, and a recorded handover session. Your code, your repo, your hosting — no dependency on FactoryJet to keep the lights on.',
+      'Production launch with DNS transfer, SSL setup, Google Search Console verification, GA4 configuration, and a recorded handover session. Your code, your repo, your hosting, no dependency on FactoryJet to keep the lights on.',
   },
 ];
 
@@ -278,7 +248,7 @@ const IN_WEB_DESIGN_TYPES = [
   {
     name: 'WordPress Sites',
     description:
-      'Custom WordPress websites with headless or traditional CMS setups — for businesses that need editorial control without developer dependency. WooCommerce, ACF, and plugin customization handled in-house. Security-hardened from the first commit.',
+      'Custom WordPress websites with headless or traditional CMS setups, for businesses that need editorial control without developer dependency. WooCommerce, ACF, and plugin customization handled in-house. Security-hardened from the first commit.',
     example: 'Average TTFB under 180ms on shared hosting after our optimization pass.',
     linkLabel: 'Get a quote',
     linkHref: '/contact',
@@ -286,7 +256,7 @@ const IN_WEB_DESIGN_TYPES = [
   {
     name: 'Portfolio & Agency Sites',
     description:
-      'Design-forward portfolio websites for creative studios, architects, CA firms, law practices, and consultancies. Animated transitions, case study layouts, and a CMS your team controls — no developer calls for routine updates.',
+      'Design-forward portfolio websites for creative studios, architects, CA firms, law practices, and consultancies. Animated transitions, case study layouts, and a CMS your team controls, no developer calls for routine updates.',
     example: 'Built for designers, architects, law firms, and professional service consultancies.',
     linkLabel: 'See our portfolio',
     linkHref: '/portfolio',
@@ -294,7 +264,7 @@ const IN_WEB_DESIGN_TYPES = [
   {
     name: 'Website Redesigns',
     description:
-      'We audit your existing site, identify what\'s hurting performance and conversions, preserve your URL structure and SEO equity, and rebuild on a modern tech stack — with zero downtime on launch day.',
+      'We audit your existing site, identify what\'s hurting performance and conversions, preserve your URL structure and SEO equity, and rebuild on a modern tech stack, with zero downtime on launch day.',
     example: 'Clients average 40% improvement in Google PageSpeed score post-redesign.',
     linkLabel: 'Book a free audit',
     linkHref: '/contact',
@@ -304,7 +274,7 @@ const IN_WEB_DESIGN_TYPES = [
 const IN_WEB_STATS = [
   {
     value: '7 days',
-    label: 'average delivery on Starter websites — from design sign-off to live launch',
+    label: 'average delivery on Starter websites, from design sign-off to live launch',
     microcopy: 'for sites up to 5 pages; Growth and Custom scopes quoted post-brief',
     categoryLabel: 'DELIVERY SPEED',
   },
@@ -316,7 +286,7 @@ const IN_WEB_STATS = [
   },
   {
     value: 'You own it',
-    label: 'full code ownership on launch day — no lock-in, no mandatory monthly fees',
+    label: 'full code ownership on launch day, no lock-in, no mandatory monthly fees',
     microcopy: 'every file, Figma asset, and credential transferred to you',
     categoryLabel: 'CODE OWNERSHIP',
   },
@@ -325,19 +295,19 @@ const IN_WEB_STATS = [
 const IN_MARKET_STATS = [
   {
     value: '800M+',
-    label: 'internet users in India — the world\'s single largest internet market',
+    label: 'internet users in India, the world\'s single largest internet market',
     sourceUrl: 'https://www.statista.com/statistics/255146/number-of-internet-users-in-india/',
     sourceLabel: 'Statista / TRAI 2024',
   },
   {
     value: '70%+',
-    label: 'of all Indian web traffic arrives via mobile — Google India uses mobile-first indexing',
+    label: 'of all Indian web traffic arrives via mobile. Google India uses mobile-first indexing',
     sourceUrl: 'https://gs.statcounter.com/platform-market-share/desktop-mobile-tablet/india',
     sourceLabel: 'StatCounter India 2024',
   },
   {
     value: '94%',
-    label: 'of first impressions are design-related — visitors judge your credibility in 0.05 seconds',
+    label: 'of first impressions are design-related, visitors judge your credibility in 0.05 seconds',
     sourceUrl: 'https://www.tandfonline.com/doi/abs/10.1080/01449290500330448',
     sourceLabel: 'University of Surrey Study',
   },
@@ -347,7 +317,7 @@ const IN_INDUSTRIES = [
   {
     name: 'SMBs & Service Businesses',
     description:
-      'India has 63M+ SMBs — from local contractors and clinics to manufacturer-dealers and professional services firms. These businesses need websites that rank in local search, convert mobile visitors from Google Maps, and work reliably on mid-range Android devices on 4G.',
+      'India has 63M+ SMBs, from local contractors and clinics to manufacturer-dealers and professional services firms. These businesses need websites that rank in local search, convert mobile visitors from Google Maps, and work reliably on mid-range Android devices on 4G.',
     example: 'HVAC, plumbing, salon chains, clinics, tutoring centres, and chartered accountants.',
   },
   {
@@ -371,13 +341,13 @@ const IN_INDUSTRIES = [
   {
     name: 'Professional Services',
     description:
-      'Chartered accountants, law firms, consultancies, financial advisors, and B2B service providers. Websites for professional services need to build trust fast — credentials, case studies, and clear inquiry forms that route to the right person without friction.',
+      'Chartered accountants, law firms, consultancies, financial advisors, and B2B service providers. Websites for professional services need to build trust fast, credentials, case studies, and clear inquiry forms that route to the right person without friction.',
     example: 'CA firms, law practices, management consultancies, and B2B service vendors.',
   },
   {
     name: 'Education & EdTech',
     description:
-      'Coaching centres, training institutes, online learning platforms, and school websites. India\'s education market is digital-first for discovery — a well-ranked website is how students and parents find you before they pick up the phone or walk in.',
+      'Coaching centres, training institutes, online learning platforms, and school websites. India\'s education market is digital-first for discovery, a well-ranked website is how students and parents find you before they pick up the phone or walk in.',
     example: 'Coaching institutes, test-prep platforms, skill training providers, and university sites.',
   },
 ];
@@ -467,7 +437,7 @@ const IN_PRICING_TIERS = [
       'A 5-page website that loads fast on mobile, ranks for your business name and core service, and looks professional enough to convert the first-time visitor.',
     features: [
       'Up to 5 pages (Home, About, Services, Contact + 1 more)',
-      'Custom Figma design — not a template',
+      'Custom Figma design, not a template',
       'Next.js or WordPress (your choice)',
       'Mobile-first, Lighthouse 95+ guaranteed',
       'Technical SEO: meta tags, schema, sitemap, robots.txt',
@@ -484,7 +454,7 @@ const IN_PRICING_TIERS = [
       'A full business website with CMS, blog, and advanced SEO. The most popular tier for Indian SMBs scaling their digital presence and generating consistent inbound leads.',
     features: [
       'Up to 15 pages including service and city pages',
-      'CMS integration — update content without touching code',
+      'CMS integration, update content without touching code',
       'Blog setup with category and SEO architecture',
       'Advanced SEO: keyword targeting, internal link map',
       'Google Analytics 4 + Search Console setup',
@@ -525,25 +495,26 @@ const IN_FAQ_CATEGORIES = [
   { key: 'india',     label: 'India-Specific' },
 ];
 
+
 const IN_FAQ_ITEMS = [
   /* ── Process & Timeline ── */
   {
     category: 'process',
     question: 'How long does it take to build a website in India?',
     answer:
-      'FactoryJet\'s Starter tier (up to 5 pages) delivers in 7 business days from design sign-off. Growth tier (10–15 pages with CMS) typically takes 10–14 business days. Custom builds — e-commerce stores, web apps, and enterprise sites — are scoped individually and usually take 4–10 weeks. We give you a firm timeline after the discovery brief, not before, because scope drives everything.',
+      'FactoryJet\'s Starter tier (up to 5 pages) delivers in 7 business days from design sign-off. Growth tier (10–15 pages with CMS) typically takes 10–14 business days. Custom builds, e-commerce stores, web apps, and enterprise sites, are scoped individually and usually take 4–10 weeks. We give you a firm timeline after the discovery brief, not before, because scope drives everything.',
   },
   {
     category: 'process',
     question: 'What does your web design process look like?',
     answer:
-      'Five stages: Discover (30-minute brief where we map your goals, audience, competitors, and site architecture), Design (full Figma wireframes for desktop and mobile — you approve the look before we write code), Build (engineering in Next.js, WordPress, or Shopify with daily commits and a staging URL within 48 hours), Review (two rounds of content and design feedback on the live staging site), and Ship (production launch with DNS transfer, SSL, GA4 setup, and a recorded handover session).',
+      'Five stages: Discover (30-minute brief where we map your goals, audience, competitors, and site architecture), Design (full Figma wireframes for desktop and mobile, you approve the look before we write code), Build (engineering in Next.js, WordPress, or Shopify with daily commits and a staging URL within 48 hours), Review (two rounds of content and design feedback on the live staging site), and Ship (production launch with DNS transfer, SSL, GA4 setup, and a recorded handover session).',
   },
   {
     category: 'process',
     question: 'Do I get to see and approve the design before you start building?',
     answer:
-      'Yes — always. We deliver full Figma mockups for every key page before writing a line of code. Desktop and mobile layouts both. If you don\'t like the direction, we revise before we build — not after. This is how we avoid the expensive rework that blows up timelines and budgets at most agencies.',
+      'Yes, always. We deliver full Figma mockups for every key page before writing a line of code. Desktop and mobile layouts both. If you don\'t like the direction, we revise before we build, not after. This is how we avoid the expensive rework that blows up timelines and budgets at most agencies.',
   },
   {
     category: 'process',
@@ -569,19 +540,19 @@ const IN_FAQ_ITEMS = [
     category: 'pricing',
     question: 'Do I own the website and code after the project?',
     answer:
-      'Yes — 100%. We transfer the full codebase to your GitHub repository on launch day. You own every line of code, all Figma design files, and all hosting credentials. There are no monthly platform fees owed to FactoryJet, no lock-in, and no dependency on us to keep your website running. If you hire a developer later, they can work with the code directly.',
+      'Yes, 100%. We transfer the full codebase to your GitHub repository on launch day. You own every line of code, all Figma design files, and all hosting credentials. There are no monthly platform fees owed to FactoryJet, no lock-in, and no dependency on us to keep your website running. If you hire a developer later, they can work with the code directly.',
   },
   {
     category: 'pricing',
     question: 'What are the ongoing costs after launch?',
     answer:
-      'Domain registration (paid directly to your registrar) and hosting (paid directly to the hosting provider, not to FactoryJet — the amount depends on traffic and platform). WordPress and Next.js sites can be hosted on Cloudflare Pages, Vercel, or any standard provider. Ongoing FactoryJet support is optional, not mandatory.',
+      'Domain registration (paid directly to your registrar) and hosting (paid directly to the hosting provider, not to FactoryJet, the amount depends on traffic and platform). WordPress and Next.js sites can be hosted on Cloudflare Pages, Vercel, or any standard provider. Ongoing FactoryJet support is optional, not mandatory.',
   },
   {
     category: 'pricing',
     question: 'Do you offer website maintenance contracts (AMC)?',
     answer:
-      'Yes. AMC plans come in three tiers — Basic (security updates, SSL renewal, uptime monitoring, monthly health report), Standard (adds content updates, SEO optimization, performance monitoring), and Premium (content updates as per agreed SLA, active SEO strategy, design refresh, dedicated account manager). Each plan is quoted up front, and AMC is optional — your website continues to run without it.',
+      'Yes. AMC plans come in three tiers: Basic (security updates, SSL renewal, uptime monitoring, monthly health report), Standard (adds content updates, SEO optimization, performance monitoring), and Premium (content updates as per agreed SLA, active SEO strategy, design refresh, dedicated account manager). Each plan is quoted up front, and AMC is optional, your website continues to run without it.',
   },
 
   /* ── Technical & Performance ── */
@@ -589,19 +560,19 @@ const IN_FAQ_ITEMS = [
     category: 'technical',
     question: 'What platform will my website be built on?',
     answer:
-      'We build on Next.js (performance-critical business sites and web apps), WordPress (content-driven sites where non-technical teams need full CMS control), Shopify (e-commerce), Webflow and Framer (design-forward brands). We recommend the right platform after understanding your goals — not because we prefer one. All are configured for Core Web Vitals green, mobile-first, and full code ownership.',
+      'We build on Next.js (performance-critical business sites and web apps), WordPress (content-driven sites where non-technical teams need full CMS control), Shopify (e-commerce), Webflow and Framer (design-forward brands). We recommend the right platform after understanding your goals, not because we prefer one. All are configured for Core Web Vitals green, mobile-first, and full code ownership.',
   },
   {
     category: 'technical',
     question: 'What Lighthouse score will my website get?',
     answer:
-      'Starter tier guarantees Lighthouse 95+ across all four categories (Performance, Accessibility, Best Practices, SEO). Growth and Custom tiers target 98–100. We run PageSpeed Insights and Core Web Vitals checks as part of QA before every launch — you see the scores before you sign off. These scores directly affect your Google rankings.',
+      'Starter tier guarantees Lighthouse 95+ across all four categories (Performance, Accessibility, Best Practices, SEO). Growth and Custom tiers target 98–100. We run PageSpeed Insights and Core Web Vitals checks as part of QA before every launch, you see the scores before you sign off. These scores directly affect your Google rankings.',
   },
   {
     category: 'technical',
     question: 'Will my website be mobile-friendly for Indian users?',
     answer:
-      'Every website is built mobile-first — we design for mobile before desktop, not the other way around. We specifically test for Indian 4G conditions (slower networks, higher latency) because 70%+ of your visitors are on phones. We test on physical Android devices — the most common browser environment in India — not just desktop emulators.',
+      'Every website is built mobile-first, we design for mobile before desktop, not the other way around. We specifically test for Indian 4G conditions (slower networks, higher latency) because 70%+ of your visitors are on phones. We test on physical Android devices, the most common browser environment in India, not just desktop emulators.',
   },
   {
     category: 'technical',
@@ -621,13 +592,13 @@ const IN_FAQ_ITEMS = [
     category: 'seo',
     question: 'Will my website rank on Google India?',
     answer:
-      'Every website we deliver includes technical SEO as standard: correct heading structure (H1/H2/H3), optimized meta titles and descriptions, canonical URLs, Open Graph tags, schema markup (Organization, LocalBusiness, FAQPage as appropriate), XML sitemap, robots.txt, and Core Web Vitals optimization. Content-level SEO — keyword research, page-level copy optimization, and content strategy — is available as a Growth-tier add-on or standalone engagement.',
+      'Every website we deliver includes technical SEO as standard: correct heading structure (H1/H2/H3), optimized meta titles and descriptions, canonical URLs, Open Graph tags, schema markup (Organization, LocalBusiness, FAQPage as appropriate), XML sitemap, robots.txt, and Core Web Vitals optimization. Content-level SEO, keyword research, page-level copy optimization, and content strategy, is available as a Growth-tier add-on or standalone engagement.',
   },
   {
     category: 'seo',
     question: 'How long until my website ranks on Google?',
     answer:
-      'Branded searches (your business name) typically rank within 1–2 weeks of launch. Local service queries like "web design company in Mumbai" or "CA firm in Delhi" take 3–6 months for a new domain. The work that compresses this timeline — schema markup, internal linking, content depth, technical performance, Google Search Console submission — is built into every FactoryJet project, not sold as an add-on after launch.',
+      'Branded searches (your business name) typically rank within 1–2 weeks of launch. Local service queries like "web design company in Mumbai" or "CA firm in Delhi" take 3–6 months for a new domain. The work that compresses this timeline, schema markup, internal linking, content depth, technical performance, Google Search Console submission, is built into every FactoryJet project, not sold as an add-on after launch.',
   },
   {
     category: 'seo',
@@ -639,7 +610,7 @@ const IN_FAQ_ITEMS = [
     category: 'seo',
     question: 'Will a redesign hurt my existing Google rankings?',
     answer:
-      'Not if done properly — and we do it properly. We audit your current URL structure before any redesign, identify which pages have ranking equity, and architect the new site to preserve all high-value URLs. Where URL changes are unavoidable, we implement 301 redirects correctly. Most clients see rankings improve post-redesign because Lighthouse scores and Core Web Vitals improve significantly.',
+      'Not if done properly, and we do it properly. We audit your current URL structure before any redesign, identify which pages have ranking equity, and architect the new site to preserve all high-value URLs. Where URL changes are unavoidable, we implement 301 redirects correctly. Most clients see rankings improve post-redesign because Lighthouse scores and Core Web Vitals improve significantly.',
   },
 
   /* ── Trust & Ownership ── */
@@ -647,25 +618,25 @@ const IN_FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a local Indian web agency?',
     answer:
-      'Three differences that matter: speed (7-day delivery on Starter projects — most Indian agencies quote 6–12 weeks), quality (Next.js + Figma + Lighthouse 100 — the same stack used by India\'s top product companies), and ownership (full codebase transferred to your GitHub on launch day — no retainer required to keep the site online). We\'ve delivered 500+ websites across India, the US, and the UK.',
+      'Three differences that matter: speed (7-day delivery on Starter projects, most Indian agencies quote 6–12 weeks), quality (Next.js + Figma + Lighthouse 100, the same stack used by India\'s top product companies), and ownership (full codebase transferred to your GitHub on launch day, no retainer required to keep the site online). We\'ve delivered 500+ websites across India, the US, and the UK.',
   },
   {
     category: 'trust',
     question: 'Do you have portfolio examples of Indian business websites?',
     answer:
-      'Yes — our portfolio at factoryjet.com/portfolio covers business websites, e-commerce stores, landing pages, and web applications across multiple Indian industries. On discovery calls we share sector-specific examples relevant to your business type and city.',
+      'Yes, our portfolio at factoryjet.com/portfolio covers business websites, e-commerce stores, landing pages, and web applications across multiple Indian industries. On discovery calls we share sector-specific examples relevant to your business type and city.',
   },
   {
     category: 'trust',
     question: 'Do you offer post-launch support?',
     answer:
-      'Every project includes a 30-day post-launch support window for bug fixes and minor adjustments. After that, our AMC plans provide ongoing maintenance, security updates, content updates, and performance monitoring, quoted up front. There is no obligation to continue with FactoryJet after launch — you own the code and can take it anywhere.',
+      'Every project includes a 30-day post-launch support window for bug fixes and minor adjustments. After that, our AMC plans provide ongoing maintenance, security updates, content updates, and performance monitoring, quoted up front. There is no obligation to continue with FactoryJet after launch, you own the code and can take it anywhere.',
   },
   {
     category: 'trust',
     question: 'How do you handle revisions? Can I request changes during the project?',
     answer:
-      'Starter tier includes 2 revision rounds during the design phase and 1 post-build content round. Growth and Custom tiers include 3 design revision rounds plus additional content feedback cycles. Revision rounds are structured so you review complete, polished layouts — not half-finished screens. We don\'t charge for fixing bugs or issues caused by our implementation.',
+      'Starter tier includes 2 revision rounds during the design phase and 1 post-build content round. Growth and Custom tiers include 3 design revision rounds plus additional content feedback cycles. Revision rounds are structured so you review complete, polished layouts, not half-finished screens. We don\'t charge for fixing bugs or issues caused by our implementation.',
   },
 
   /* ── India-Specific ── */
@@ -679,7 +650,7 @@ const IN_FAQ_ITEMS = [
     category: 'india',
     question: 'Can you add a WhatsApp Business API button and chat widget?',
     answer:
-      'Yes. A click-to-WhatsApp button is a standard element on every FactoryJet India project. For businesses that need it, we also integrate full WhatsApp Business API chatbots that can qualify leads, answer FAQs, and route inquiries — a significant conversion upgrade for high-inquiry-volume businesses in healthcare, real estate, and education.',
+      'Yes. A click-to-WhatsApp button is a standard element on every FactoryJet India project. For businesses that need it, we also integrate full WhatsApp Business API chatbots that can qualify leads, answer FAQs, and route inquiries, a significant conversion upgrade for high-inquiry-volume businesses in healthcare, real estate, and education.',
   },
   {
     category: 'india',
@@ -691,7 +662,7 @@ const IN_FAQ_ITEMS = [
     category: 'india',
     question: 'Do you build city-specific landing pages for Indian metros?',
     answer:
-      'Yes. For businesses targeting multiple Indian cities, we build location-specific landing pages with locally relevant copy, local schema markup, and city-level SEO targeting. This is how service businesses win organic traffic in competitive metro markets — "CA firm in Bandra", "physiotherapist in Koramangala", or "lawyer in Connaught Place" searches all have real volume that location pages can capture.',
+      'Yes. For businesses targeting multiple Indian cities, we build location-specific landing pages with locally relevant copy, local schema markup, and city-level SEO targeting. This is how service businesses win organic traffic in competitive metro markets, "CA firm in Bandra", "physiotherapist in Koramangala", or "lawyer in Connaught Place" searches all have real volume that location pages can capture.',
   },
   {
     category: 'india',
@@ -703,7 +674,7 @@ const IN_FAQ_ITEMS = [
     category: 'india',
     question: 'Are you based in India? Can I meet you in person?',
     answer:
-      'Yes — FactoryJet Technologies is headquartered in India. We work with clients across India primarily via video calls, WhatsApp, and shared project workspaces — which is how we maintain the efficiency needed to deliver in 7 days. For strategic engagements, we do meet clients in person in select cities. Most clients find the async-plus-video workflow faster and more structured than in-person agency meetings.',
+      'Yes. FactoryJet Technologies is headquartered in India. We work with clients across India primarily via video calls, WhatsApp, and shared project workspaces, which is how we maintain the efficiency needed to deliver in 7 days. For strategic engagements, we do meet clients in person in select cities. Most clients find the async-plus-video workflow faster and more structured than in-person agency meetings.',
   },
 
   // Money-query coverage, added 2026-06-11
@@ -711,21 +682,59 @@ const IN_FAQ_ITEMS = [
     category: 'trust',
     question: 'Who is the best web design agency in India?',
     answer:
-      'For small and mid-size businesses, FactoryJet makes a strong case: websites delivered in 7 days, 100/100 Google speed scores, and a fixed price agreed before work starts. But the best web design company in India for you depends on fit — the best website design agency in India for an online store is different from the best website design company in India for a doctor or a factory. Whoever you compare for the best web design services in India or the best website design services in India, check three things: live websites you can click, speed scores you can test yourself, and a price in writing.',
+      'For small and mid-size businesses, FactoryJet makes a strong case: websites delivered in 7 days, 100/100 Google speed scores, and a fixed price agreed before work starts. But the best web design company in India for you depends on fit, the best website design agency in India for an online store is different from the best website design company in India for a doctor or a factory. Whoever you compare for the best web design services in India or the best website design services in India, check three things: live websites you can click, speed scores you can test yourself, and a price in writing.',
   },
   {
     category: 'trust',
     question: 'What are the top 10 web design companies in India?',
     answer:
-      'Most lists of the top 10 web design agencies in India — and the matching top 10 website design companies in India — are written by the companies on them. FactoryJet competes in that set for small businesses, and we are open about how to judge us: test our live pages for speed, count the days from brief to launch, and compare the written price. Use any top-10 list as a shortlist, never as the decision.',
+      'Most lists of the top 10 web design agencies in India, and the matching top 10 website design companies in India, are written by the companies on them. FactoryJet competes in that set for small businesses, and we are open about how to judge us: test our live pages for speed, count the days from brief to launch, and compare the written price. Use any top-10 list as a shortlist, never as the decision.',
   },
   {
     category: 'pricing',
     question: 'How much does website design cost in India?',
     answer:
-      'Website design cost in India depends on scope — a simple template site costs far less than a custom business website with e-commerce or web app features. If you are asking how much a website costs all-in, remember hosting and yearly upkeep too. FactoryJet agrees a fixed price before work starts, so the cost never grows in the middle of the project.',
+      'Website design cost in India depends on scope, a simple template site costs far less than a custom business website with e-commerce or web app features. If you are asking how much a website costs all-in, remember hosting and yearly upkeep too. FactoryJet agrees a fixed price before work starts, so the cost never grows in the middle of the project.',
+  },
+  /* ── Added from live People-Also-Ask on Google India, 31 July 2026.
+        Source: pipeline/research/data/webdesign_in.json ── */
+  {
+    category: 'technical',
+    question: 'Which is the best website builder in India?',
+    answer:
+      'For a hobby page or a first test, Wix or Squarespace are fine and cheap. The catch is that you are renting, not owning: you cannot move the site, page speed is capped by their platform, and technical SEO is limited to whatever they expose. Once a website is genuinely bringing in business, most companies move to WordPress or a custom build for the control.',
+  },
+  {
+    category: 'technical',
+    question: 'What are the top 3 website builders?',
+    answer:
+      'By usage, WordPress, Wix and Squarespace, with Shopify dominating anything selling products. WordPress powers the largest share of the web because it is flexible and you can host it anywhere. Wix and Squarespace trade that flexibility for a simpler editor. Which is right depends entirely on whether you need to own and move the site later.',
+  },
+  {
+    category: 'technical',
+    question: 'What are the big 3 of web development?',
+    answer:
+      'HTML, CSS and JavaScript. HTML is the structure of a page, CSS is how it looks, and JavaScript is what makes it interactive. Every website, whatever platform it is built on, ends up as those three in the browser. Frameworks like Next.js and React are tools for producing them more reliably at scale.',
+  },
+  {
+    category: 'india',
+    question: 'Is web design still in demand in 2026?',
+    answer:
+      'Yes, though the work has shifted. Nobody needs a static brochure site any more, and AI can produce a passable-looking template in minutes. What businesses now pay for is a site that loads fast on a mobile connection, ranks on Google, gets cited by AI assistants, and converts visitors into enquiries. That is engineering and judgement, not decoration.',
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  // Mirrors IN_FAQ_ITEMS exactly. Previously hand-written with only 13 of the
+  // page's questions, so most on-page FAQs were invisible to search engines.
+  mainEntity: IN_FAQ_ITEMS.map((f) => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: { '@type': 'Answer', text: f.answer },
+  })),
+};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Page
@@ -744,6 +753,11 @@ export default function WebDesignServicePage() {
         id="in-web-design-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        id="in-web-design-firms-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(firmsSchema) }}
       />
       <script
         type="application/ld+json"
@@ -766,8 +780,8 @@ export default function WebDesignServicePage() {
         <Hero
         formSlot={<HeroInlineForm region="in" source="web_design_hero" />}
           eyebrow="WEB DESIGN COMPANY · INDIA"
-          headline="Web Design Company in India — Websites That Convert, Built Mobile-First"
-          lead="70%+ of Indian web traffic is mobile. Paid ad costs are rising. Competitors are outranking you on Google. FactoryJet builds custom, high-performance websites in Next.js, WordPress, and Shopify — designed in Figma, built to Lighthouse 100, with a fixed quote agreed before work starts."
+          headline="Web Design Company in India That Builds Websites Which Actually Convert"
+          lead="70%+ of Indian web traffic is mobile. Paid ad costs are rising. Competitors are outranking you on Google. FactoryJet builds custom, high-performance websites in Next.js, WordPress, and Shopify, designed in Figma, built to Lighthouse 100, with a fixed quote agreed before work starts."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ websites delivered',
@@ -787,9 +801,9 @@ export default function WebDesignServicePage() {
               </p>
               <div className="mt-6 space-y-3">
                 {[
-                  'Load in under 2 seconds on mobile — 70%+ of Indian traffic is mobile; slow sites lose visitors before they see you',
-                  'Score 95+ on Lighthouse — Google India ranks fast, accessible, technically clean sites significantly higher',
-                  'Convert at 2–4% or better — most Indian business sites built on templates convert below 1%',
+                  'Load in under 2 seconds on mobile, 70%+ of Indian traffic is mobile; slow sites lose visitors before they see you',
+                  'Score 95+ on Lighthouse. Google India ranks fast, accessible, technically clean sites significantly higher',
+                  'Convert at 2–4% or better, most Indian business sites built on templates convert below 1%',
                 ].map((point, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#B23E13]">
@@ -810,6 +824,24 @@ export default function WebDesignServicePage() {
           }
         />
 
+        {/* Answer-first block (BLUF): the direct answer, written to be quoted by
+            Google AI Overviews, ChatGPT, Gemini and Perplexity. */}
+        <section className="border-y border-fj-ink/10 bg-white px-6 py-14 md:px-8 md:py-16">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="font-fj-display text-2xl font-bold tracking-[-0.02em] text-fj-ink md:text-3xl">
+              So, which is the best web design company in India?
+            </h2>
+            <p className="mt-4 font-fj-body text-lg leading-relaxed text-fj-ink/80">
+              The honest answer: there is no single best web design company for every Indian
+              business. A B2B manufacturer needing a technical catalogue and a D2C brand needing a
+              fast Shopify store want different things. For businesses that want a custom,
+              mobile-first site with full code ownership and a fixed quote agreed before work
+              starts, FactoryJet is a strong choice. Below we compare the companies that actually
+              rank in India, including ourselves, so you can decide for yourself.
+            </p>
+          </div>
+        </section>
+
         {/* ── 2. LOGO BAR ───────────────────────────────────────────────────────── */}
         <LogoBar
           tagline="Trusted by 500+ businesses across India, US, UK, and UAE"
@@ -818,7 +850,7 @@ export default function WebDesignServicePage() {
         {/* ── 3. BIG THREE TRUST BLOCK ──────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="India's Trusted Web Design Company — 500+ Websites Delivered, 25 Years of Building"
+          headline="India's Trusted Web Design Company, 500+ Websites Delivered, 25 Years of Building"
         />
 
         {/* ── 4. WHAT GREAT WEB DESIGN ACTUALLY DOES ───────────────────────────── */}
@@ -848,7 +880,7 @@ export default function WebDesignServicePage() {
                 ))}
               </div>
               <p>
-                A business website has one job: turn the right visitors into paying customers. That means it needs to load fast enough that people don&apos;t leave before they see it — on mobile, not just your office Wi-Fi — look credible enough that they trust you, and make the next step obvious enough that they take it. Most template-built sites fail on all three.
+                A business website has one job: turn the right visitors into paying customers. That means it needs to load fast enough that people don&apos;t leave before they see it, on mobile, not just your office Wi-Fi, look credible enough that they trust you, and make the next step obvious enough that they take it. Most template-built sites fail on all three.
               </p>
               {/* 3-col mini stats */}
               <div className="grid grid-cols-3 gap-3" aria-hidden>
@@ -886,7 +918,7 @@ export default function WebDesignServicePage() {
                 </p>
               </div>
               <p>
-                FactoryJet approaches web design the way India&apos;s top product companies do: Figma-first design, then engineering in Next.js or WordPress, with Lighthouse 100 as a non-negotiable target. We don&apos;t use page builders, visual editors, or bloated themes. The result is a site that loads fast on mobile, ranks well on Google India, and looks intentional — because it was designed for your specific business, not adapted from someone else&apos;s template.
+                FactoryJet approaches web design the way India&apos;s top product companies do: Figma-first design, then engineering in Next.js or WordPress, with Lighthouse 100 as a non-negotiable target. We don&apos;t use page builders, visual editors, or bloated themes. The result is a site that loads fast on mobile, ranks well on Google India, and looks intentional, because it was designed for your specific business, not adapted from someone else&apos;s template.
               </p>
               <p>
                 We&apos;ve built for SMBs, D2C brands, healthcare providers, real estate developers, CA firms, law practices, coaching institutes, and SaaS companies across Mumbai, Delhi, Bangalore, Chennai, Hyderabad, Pune, Ahmedabad, and beyond. The design language changes with each business; the standard of craft doesn&apos;t. Every project gets the same full Figma design process, the same engineering rigour, and the same Lighthouse audit before launch.
@@ -908,7 +940,7 @@ export default function WebDesignServicePage() {
                   { metric: 'Lighthouse Performance', score: '99', note: 'avg. on delivery' },
                   { metric: 'Lighthouse Accessibility', score: '100', note: 'WCAG AA compliant' },
                   { metric: 'Lighthouse SEO', score: '100', note: 'technical SEO included' },
-                  { metric: 'Largest Contentful Paint', score: '<1.8s', note: 'mobile — India' },
+                  { metric: 'Largest Contentful Paint', score: '<1.8s', note: 'mobile. India' },
                   { metric: 'Cumulative Layout Shift', score: '0.02', note: 'well below 0.1 threshold' },
                   { metric: 'First Input Delay', score: '<50ms', note: 'instant response to taps' },
                 ].map((item) => (
@@ -946,7 +978,7 @@ export default function WebDesignServicePage() {
             {
               icon: '📱',
               title: 'India is mobile-first. Most business websites aren\'t.',
-              body: '70%+ of Indian web traffic is mobile — and most of it is on 4G, not fibre. Template-built WordPress sites routinely load in 5–8 seconds on Indian 4G. That\'s not a minor performance gap. That\'s more than half your traffic gone before they saw your offering. Google India tracks this. Your rankings reflect it.',
+              body: '70%+ of Indian web traffic is mobile, and most of it is on 4G, not fibre. Template-built WordPress sites routinely load in 5–8 seconds on Indian 4G. That\'s not a minor performance gap. That\'s more than half your traffic gone before they saw your offering. Google India tracks this. Your rankings reflect it.',
             },
             {
               icon: '📉',
@@ -961,11 +993,11 @@ export default function WebDesignServicePage() {
           ]}
         />
 
-        {/* ── 6. OUR PROCESS (white — dark rhythm buffer) ───────────────────────── */}
+        {/* ── 6. OUR PROCESS (white, dark rhythm buffer) ───────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
           headline="From Brief to Live Website in 5 Stages"
-          lead="A clear, predictable process where you approve the design before we build — so there are no surprises, no blown timelines, and no budget overruns."
+          lead="A clear, predictable process where you approve the design before we build, so there are no surprises, no blown timelines, and no budget overruns."
           stages={IN_JOURNEY_STAGES}
           closingNote="5 STAGES · 7 BUSINESS DAYS TO LAUNCH · FIGMA APPROVAL BEFORE BUILD BEGINS"
         />
@@ -974,7 +1006,7 @@ export default function WebDesignServicePage() {
         <ServiceExplanation
           eyebrow="OUR TECH STACK"
           headline="Modern Web Technologies: Zero Black-Box Builders"
-          lead="We build with the same tools that power India's top product companies — not page builders, visual editors, or bloated themes. Your site loads fast because the code is clean."
+          lead="We build with the same tools that power India's top product companies, not page builders, visual editors, or bloated themes. Your site loads fast because the code is clean."
           reverseOnDesktop
           body={
             <>
@@ -990,19 +1022,19 @@ export default function WebDesignServicePage() {
                 ))}
               </div>
               <p>
-                <strong className="font-semibold text-fj-ink">Next.js &amp; React</strong> — Our default for performance-critical business sites and web applications. Static generation, edge caching, and server components mean your pages serve in milliseconds from Cloudflare&apos;s global network — including India edge nodes.
+                <strong className="font-semibold text-fj-ink">Next.js &amp; React</strong>: Our default for performance-critical business sites and web applications. Static generation, edge caching, and server components mean your pages serve in milliseconds from Cloudflare&apos;s global network, including India edge nodes.
               </p>
               <p>
-                <strong className="font-semibold text-fj-ink">WordPress (Headless or Traditional)</strong> — When your team needs a full CMS with editorial workflows, we build on WordPress with custom block themes or a headless setup connected to Next.js on the frontend. Security-hardened and maintained.
+                <strong className="font-semibold text-fj-ink">WordPress (Headless or Traditional)</strong>: When your team needs a full CMS with editorial workflows, we build on WordPress with custom block themes or a headless setup connected to Next.js on the frontend. Security-hardened and maintained.
               </p>
               <p>
-                <strong className="font-semibold text-fj-ink">Shopify &amp; WooCommerce</strong> — For e-commerce, we build custom Shopify themes or headless storefronts using the Storefront API. WooCommerce for WordPress-based stores. Both integrate natively with Razorpay, PhonePe, and PayU.
+                <strong className="font-semibold text-fj-ink">Shopify &amp; WooCommerce</strong>: For e-commerce, we build custom Shopify themes or headless storefronts using the Storefront API. WooCommerce for WordPress-based stores. Both integrate natively with Razorpay, PhonePe, and PayU.
               </p>
               <p>
-                <strong className="font-semibold text-fj-ink">Figma</strong> — Every design starts in Figma. You get a shareable design file, a component library, and desktop + mobile mockups for every page before we open a code editor. You approve the look before we build it.
+                <strong className="font-semibold text-fj-ink">Figma</strong>: Every design starts in Figma. You get a shareable design file, a component library, and desktop + mobile mockups for every page before we open a code editor. You approve the look before we build it.
               </p>
               <p>
-                <strong className="font-semibold text-fj-ink">Tailwind CSS + TypeScript</strong> — We write typed, maintainable frontend code. Future engineers — yours or ours — can extend the codebase without archaeology. No mystery CSS, no !important hacks.
+                <strong className="font-semibold text-fj-ink">Tailwind CSS + TypeScript</strong>: We write typed, maintainable frontend code. Future engineers, yours or ours, can extend the codebase without archaeology. No mystery CSS, no !important hacks.
               </p>
             </>
           }
@@ -1136,15 +1168,15 @@ export default function WebDesignServicePage() {
           eyebrow="INDIA'S DIGITAL MARKET"
           headline="Indian Businesses Can't Afford a Bad Website in 2025"
           leadParagraphs={[
-            "94% of first impressions are design-related. Your potential customers decide whether to trust you in 0.05 seconds — before they read a single word. If your website looks outdated, loads slowly, or doesn't work on a mid-range Android phone, that impression doesn't get a second chance.",
-            "India now has 800M+ internet users — the world's single largest internet market — and 70%+ of that traffic arrives via mobile. Google India uses mobile-first indexing, which means your site's mobile performance directly determines where you appear in search results. A site that loads in 5 seconds on mobile isn't just inconvenient; it's invisible.",
-            "FactoryJet has been building websites for businesses across Mumbai, Delhi, Bangalore, Chennai, Hyderabad, Pune, Ahmedabad, and beyond. We understand what an Indian SMB needs from a website — not enterprise-level complexity, but professional design, fast mobile performance, and a clear path to WhatsApp or a form submission. The businesses that invest in this don't just look better — they rank better and convert better from the same traffic.",
+            "94% of first impressions are design-related. Your potential customers decide whether to trust you in 0.05 seconds, before they read a single word. If your website looks outdated, loads slowly, or doesn't work on a mid-range Android phone, that impression doesn't get a second chance.",
+            "India now has 800M+ internet users, the world's single largest internet market, and 70%+ of that traffic arrives via mobile. Google India uses mobile-first indexing, which means your site's mobile performance directly determines where you appear in search results. A site that loads in 5 seconds on mobile isn't just inconvenient; it's invisible.",
+            "FactoryJet has been building websites for businesses across Mumbai, Delhi, Bangalore, Chennai, Hyderabad, Pune, Ahmedabad, and beyond. We understand what an Indian SMB needs from a website, not enterprise-level complexity, but professional design, fast mobile performance, and a clear path to WhatsApp or a form submission. The businesses that invest in this don't just look better, they rank better and convert better from the same traffic.",
           ]}
           bodySlot={
             <>
               <div className="border-l-2 py-1 pl-5" style={{ borderLeftColor: '#F05A28' }}>
                 <p className="fj-display font-semibold text-fj-ink" style={{ fontSize: '1.125rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}>
-                  Your website is your hardest-working salesperson — and it works 24/7.
+                  Your website is your hardest-working salesperson, and it works 24/7.
                 </p>
               </div>
               <div className="mt-5 flex flex-wrap gap-2">
@@ -1163,14 +1195,67 @@ export default function WebDesignServicePage() {
           stats={IN_MARKET_STATS}
         />
 
+        {/* Named-competitor comparison: the honest "who is best for what" listicle.
+            Targets "top 10 web design companies in India". */}
+        <section className="bg-fj-cream px-6 py-16 md:px-8 md:py-20">
+          <div className="mx-auto max-w-4xl">
+            <p className="mb-3 font-fj-mono text-xs uppercase tracking-widest text-[#B23E13]">
+              INDIAN WEB DESIGN COMPANIES, COMPARED HONESTLY
+            </p>
+            <h2 className="font-fj-display text-3xl font-bold tracking-[-0.02em] text-fj-ink md:text-4xl">
+              Top 10 web design companies in India (2026), and who each one suits
+            </h2>
+            <p className="mt-4 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600">
+              Most &ldquo;top 10&rdquo; lists in this category are written by the companies that put
+              themselves at number one. This one is built from live search data checked on 31 July
+              2026: the firms that actually rank in India for web design and web development. Each
+              description is written from how that company describes itself, not from our opinion of
+              them. We include ourselves and say so openly.
+            </p>
+
+            <ol className="mt-10 space-y-4">
+              {IN_WEB_DESIGN_FIRMS.map((a, i) => (
+                <li
+                  key={a.name}
+                  className={`flex gap-4 rounded-2xl border p-5 md:p-6 ${
+                    a.isUs ? 'border-[#F05A28]/40 bg-[#F05A28]/5' : 'border-fj-neutral-200 bg-white'
+                  }`}
+                >
+                  <span
+                    className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full font-fj-mono text-sm font-bold ${
+                      a.isUs ? 'bg-[#F05A28] text-white' : 'bg-fj-ink/5 text-fj-ink'
+                    }`}
+                  >
+                    {i + 1}
+                  </span>
+                  <div>
+                    <h3 className="font-fj-display text-lg font-bold text-fj-ink">
+                      {a.name}
+                      {a.isUs && (
+                        <span className="ml-2 rounded-full bg-[#B23E13] px-2 py-0.5 font-fj-mono text-xs font-semibold text-white">
+                          That is us
+                        </span>
+                      )}
+                    </h3>
+                    <p className="mt-1 font-fj-body leading-relaxed text-fj-neutral-600">
+                      <span className="font-semibold text-fj-ink">Best for: </span>
+                      {a.bestFor}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
         {/* ── 10. COMPARISON TABLE ─────────────────────────────────────────────── */}
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Indian Agency vs. Freelancer vs. Templates"
-          lead="Not all web design options are the same. Here's what the decision looks like when you compare the real trade-offs side by side — price, delivery, quality, and ownership."
+          lead="Not all web design options are the same. Here's what the decision looks like when you compare the real trade-offs side by side, price, delivery, quality, and ownership."
           pullQuote={{
             stat: '7 days',
-            caption: 'from kickoff to launch. Same Figma design, Next.js engineering, and Lighthouse 100 quality as a big-agency project — with a fixed quote agreed before work starts.',
+            caption: 'from kickoff to launch. Same Figma design, Next.js engineering, and Lighthouse 100 quality as a big-agency project, with a fixed quote agreed before work starts.',
           }}
           columns={IN_COMPARISON_COLUMNS}
           rows={IN_COMPARISON_ROWS}
@@ -1181,7 +1266,7 @@ export default function WebDesignServicePage() {
         <IndustriesGrid variant="cards"
           eyebrow="WHAT WE BUILD"
           headline="Six Types of Website Design We Build for Indian Businesses"
-          lead="Not every business needs the same thing. We match the right platform and design approach to your specific goals — whether you need a local service site, a D2C store, or a full web application."
+          lead="Not every business needs the same thing. We match the right platform and design approach to your specific goals, whether you need a local service site, a D2C store, or a full web application."
           sectors={IN_WEB_DESIGN_TYPES}
         />
 
@@ -1192,11 +1277,11 @@ export default function WebDesignServicePage() {
           headline="What Indian founders say after we build their site."
         />
 
-        {/* ── 14. FAQ (light — buffer) ──────────────────────────────────────────── */}
+        {/* ── 14. FAQ (light, buffer) ──────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Everything to Know Before You Start"
-          lead="The questions we answer on every discovery call — answered here, straight."
+          lead="The questions we answer on every discovery call, answered here, straight."
           categories={IN_FAQ_CATEGORIES}
           items={IN_FAQ_ITEMS}
         />
@@ -1238,7 +1323,7 @@ export default function WebDesignServicePage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO START"
-          headline="Book a Free Website Audit — No Obligation"
+          headline="Book a Free Website Audit. No Obligation"
           sub="In 30 minutes, we'll audit your current site, show you exactly what's hurting your performance and Google rankings, and give you a fixed INR price to fix it. No pitch. No pressure. Just an honest assessment from engineers and designers who build for a living."
           primaryCta={{ label: 'Book Your Free Audit', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
