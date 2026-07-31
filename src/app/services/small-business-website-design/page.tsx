@@ -80,61 +80,6 @@ export const metadata: Metadata = {
    JSON-LD Schemas — FAQPage · Service · BreadcrumbList
 --------------------------------------------------------------------------─-- */
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How much does a small business website cost?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet builds custom small business websites at a fixed price scoped to your build. The main cost drivers are page count, the platform you choose, and any custom features or integrations. Every build includes custom design, mobile-first development, on-page SEO, contact forms, Google Analytics setup, and 30 days of post-launch support. We confirm the full price after a free discovery call, and it comes in well below what traditional agencies charge for equivalent work.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What should a small business website include?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A small business website should include a homepage that clearly explains what you do and who you serve, a services or products page, an about page that builds trust, a contact page with a form and location, and ideally a blog or resources section for SEO. Every page needs mobile optimization, fast load speeds, clear calls to action, and on-page SEO. These are non-negotiables for a site that actually brings in business.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to build a small business website?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet delivers 5-page small business websites in 7 days — a hard delivery guarantee. Most traditional agencies take 6–16 weeks for the same scope. Our 7-day timeline is possible because of our senior-only team, proven build process, and streamlined client feedback workflow. The clock starts when you send us your content.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the best website builder for small business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "The best website builder for small business depends on whether you want to build it yourself or have it built professionally. Squarespace and Wix are the most user-friendly DIY options. WordPress is the most flexible but has the steepest learning curve. If you want a professionally built site, the platform matters less than the team building it — FactoryJet builds on WordPress, Webflow, or Next.js depending on your needs.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Why does my small business need a professional website?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: '75% of people judge a business\'s credibility based on its website design. A template-based or outdated site actively costs you customers — people leave in seconds if the site looks unprofessional or loads slowly. A professionally designed site improves trust, keeps visitors longer, converts more of them into leads, and ranks better in Google. For most small businesses, the website is the first impression and the primary sales tool.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does FactoryJet charge for small business web design?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet builds small business websites at a fixed price scoped to your build, with 5-page sites delivered in 7 days. The main drivers are page count, the platform you choose, and any custom features. Every project is fixed-price — no hourly billing, no scope creep. You know the final number before you commit, confirmed after a free discovery call. Compared to traditional agencies, FactoryJet delivers fixed-price builds with significant savings.',
-      },
-    },
-  ],
-};
-
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -504,6 +449,16 @@ const FAQ_ITEMS = [
     category: 'factoryjet',
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 const howToSchema = {
   '@context': 'https://schema.org',
@@ -887,7 +842,7 @@ export default function SmallBusinessWebDesignPage() {
 
       <RelatedGuides
         links={[
-          { href: '/blog/best-web-design-agencies-small-business-2026', label: 'Best web design agencies for small business (2026)' },
+          { href: '/blog/best-web-design-agencies-uk-smbs-2026', label: 'Best web design agencies for small business (2026)' },
           { href: '/blog/website-cost-small-business-usa-2026', label: 'How much a small business website costs in 2026' },
         ]}
       />

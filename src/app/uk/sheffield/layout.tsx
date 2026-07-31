@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { FAQ_ITEMS } from "./page";
 
 export const metadata: Metadata = {
   title: "Web Design Sheffield | AI Websites in 7 Days | FactoryJet",
@@ -146,48 +147,11 @@ const speakableSchema = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How can you build a website in just 7 days?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We've engineered our entire process around speed without compromise. Our AI-assisted design tools and standardised (but fully custom) build process means we work 3–4× faster than traditional agencies.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is my Sheffield website really custom, or is it a template?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "100% custom. We don't use WordPress themes, Wix, Squarespace, or any off-the-shelf templates. Every design starts from a blank canvas.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Will my website rank on Google for Sheffield searches?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We build every site with Sheffield local SEO from the ground up — proper schema markup, optimised meta tags, local business structured data, and Sheffield-specific keyword integration.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do I have to sign a long-term contract?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Never. We don't believe in locking Sheffield businesses into contracts. You pay for the website build upfront, and after that you own everything — your domain, your hosting account, your website files.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can you add an AI chatbot to an existing Sheffield website?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We can integrate our AI chatbot into any existing website — not just ones we've built. A chatbot integration typically takes 1–2 days and is quoted up front after a quick scoping call.",
-      },
-    },
-  ],
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
 };
 
 export default function SheffieldUKLayout({

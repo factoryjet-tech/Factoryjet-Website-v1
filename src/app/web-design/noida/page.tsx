@@ -132,63 +132,6 @@ const localBusinessSchema = {
   },
 };
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How much does a website cost for a business in Noida?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to build a website in Noida?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A standard FactoryJet build delivers in 7 days from kickoff to launch. Discovery and design take the first two days, development runs through days five and six, and content, SEO, and launch happen on day seven.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you build websites for IT companies and startups in Noida?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Yes — IT services firms, SaaS startups, and tech-enabled businesses in Sector 62, the Noida Expressway corridor, and Greater Noida are a core client profile. We build product-led websites designed to generate qualified demo requests and enterprise leads, with authority-first architecture, technical SEO, and performance optimised for fast page loads.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Will my Noida business website rank on Google?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Technical SEO is built into every project: JSON-LD schema markup, optimised title and meta tags, Core Web Vitals green on mobile, internal linking, XML sitemap submitted to Google Search Console, and WebP images. Branded searches rank within 1–2 weeks. Service + location queries take 3–6 months for a new domain.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I own the website after it is built?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required, no platform lock-in.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Who is the best web design agency in Noida?',
-      acceptedAnswer: { '@type': 'Answer', text: 'For small businesses, FactoryJet makes a strong case as the best web design company in Noida: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Noida you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Noida.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Should I hire web designer in Noida or use an agency?',
-      acceptedAnswer: { '@type': 'Answer', text: 'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Noida directly, agree the scope and price in writing first.' },
-    },
-],
-};
-
 /* ─────────────────────────────────────────────────────────────────────────────
    Section data
 ───────────────────────────────────────────────────────────────────────────── */
@@ -380,6 +323,16 @@ const NOIDA_FAQ_ITEMS = [
       'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Noida directly, agree the scope and price in writing first.',
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: NOIDA_FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 const NOIDA_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },

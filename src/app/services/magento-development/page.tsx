@@ -79,93 +79,6 @@ export const metadata: Metadata = {
    JSON-LD Schemas — FAQPage · Service · BreadcrumbList
 --------------------------------------------------------------------------─-- */
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is Magento development?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Magento development refers to building, customizing, and extending e-commerce stores on the Magento platform (now Adobe Commerce). This includes building new Magento 2 stores from scratch, developing custom modules and extensions, migrating stores from Magento 1 to Magento 2, integrating third-party systems (ERP, CRM, shipping), optimizing performance, and maintaining existing Magento installations.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does Magento development cost?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Magento development costs depend heavily on scope. The main drivers are a custom module or extension, a full Magento 2 store build, and a Magento 1 to Magento 2 migration. Traditional agencies bill hourly for Magento development, often at a multiple of our cost. FactoryJet builds and migrates Magento stores fixed-price with senior Magento-certified developers on every project, quoting the full number on a free technical consultation before work starts.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Should I use Magento or Shopify?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Magento (Adobe Commerce) is better for complex, high-volume e-commerce operations with advanced catalog management needs, custom B2B workflows, multi-store/multi-currency requirements, or deep ERP integrations. Shopify is better for straightforward retail operations that want speed to market, lower maintenance overhead, and a simpler tech stack. If you have more than 10,000 SKUs, complex product configurations, or B2B pricing rules, Magento is likely the right choice.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is Magento still relevant in 2025?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — Adobe Commerce (Magento 2) is a dominant enterprise and mid-market e-commerce platform, used by thousands of US businesses and powering billions in GMV. Adobe actively develops it with regular security patches and new features. Magento 1 reached end-of-life in 2020, so stores still running Magento 1 need to migrate. Magento 2 remains a top choice for businesses with complex catalog, B2B, or multi-store requirements that Shopify and WooCommerce cannot handle.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does a Magento migration take?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A Magento 1 to Magento 2 migration typically takes 8–16 weeks depending on store complexity, data volume, and the number of custom extensions that need to be rebuilt. Simple stores with standard functionality migrate faster; stores with heavy custom code, complex catalog structures, or third-party integrations take longer. FactoryJet provides a detailed migration timeline and fixed-price proposal after a technical audit of your existing store.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does FactoryJet charge for Magento development?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet provides fixed-price Magento development proposals based on your specific scope. The main cost drivers are custom module development, full Magento 2 store builds, and Magento 1 to Magento 2 migrations. All projects include senior Magento-certified developers, code documentation, and a 30-day post-launch support window. Request a free technical consultation for a custom quote — you get the full number before work starts.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How do I hire certified Magento developers?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Book a discovery call and we assign a dedicated team of senior, Magento-certified developers matched to your project — Magento 2, Adobe Commerce, B2B, or migration. You can hire Magento developers for a fixed-scope build or on a monthly retainer for ongoing module development, upgrades, and performance work, on fixed-price proposals approved before work starts. US freelance Magento developers typically bill hourly with no ceiling, which is why most businesses prefer our scoped-team model.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you work with Magento 2 and Adobe Commerce?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — both. We build on Magento 2 Open Source for most small and mid-market stores, and on Adobe Commerce when you need advanced B2B, customer segmentation, or merchandising features, typically at $5M+ GMV. Our certified developers handle architecture, custom module development, theme work, and integrations on either edition, and recommend the edition that fits your business rather than the most expensive option.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does Magento development cost?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet works on fixed-price proposals. The main cost drivers are custom Magento module development, full Magento 2 store builds, and Magento 1 to Magento 2 migrations, each scoped after a technical consultation. To hire Magento developers on an ongoing basis, retainers cover module work, upgrades, and performance monitoring. You get the cost up front rather than an open-ended hourly meter.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you migrate my Magento 1 store to Magento 2?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. Magento 1 reached end of life and no longer receives security patches, so migrating protects your store as much as it adds features. We migrate your catalog, customers, orders, and SEO URLs to Magento 2 or Adobe Commerce, rebuild custom functionality that does not carry over, map every changed URL with 301 redirects to protect rankings, and test the full checkout on staging before switching DNS. Migrations are fixed-price and scoped after a technical audit.',
-      },
-    },
-  ],
-};
-
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -562,6 +475,16 @@ const FAQ_ITEMS = [
     category: 'migration',
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 const howToSchema = {
   '@context': 'https://schema.org',

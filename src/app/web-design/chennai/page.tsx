@@ -131,55 +131,6 @@ export default function Page() {
     
   }
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'How much does a website cost in Chennai?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Website projects in Chennai are scoped to your needs. The price depends on how many pages you need, how competitive your market is, and whether you want e-commerce or custom web-app features. You get a clear, fixed quote up front after a free consultation — transparent quoting with no hidden costs.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you serve automotive and manufacturing businesses in Chennai?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes. We build B2B websites, supplier portals, and product catalogues for auto component manufacturers, Tier-1 vendors, and industrial businesses across Ambattur, Guindy, and Sriperumbudur.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How fast can you deliver a website for my Chennai business?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We deliver 5-page websites in 7 days. Larger projects with custom features are scoped individually, but we maintain rapid turnarounds across all engagements.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Can you build websites for IT and software companies on OMR?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Absolutely. We specialize in product-focused websites for IT services, SaaS companies, and consulting firms on OMR and Perungudi. Our designs communicate technical credibility while converting visitors.',
-        },
-      },
-    {
-      '@type': 'Question',
-      name: 'Who is the best web design agency in Chennai?',
-      acceptedAnswer: { '@type': 'Answer', text: 'For small businesses, FactoryJet makes a strong case as the best web design company in Chennai: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Chennai you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Chennai.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Should I hire web designer in Chennai or use an agency?',
-      acceptedAnswer: { '@type': 'Answer', text: 'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Chennai directly, agree the scope and price in writing first.' },
-    },
-],
-  }
-
   const heroProps = {
     eyebrow: 'WEB DESIGN · CHENNAI',
     headline: "Chennai's Auto & IT Corridor Needs a Website That Performs",
@@ -375,6 +326,15 @@ const CHN_FAQ_ITEMS = [
   },
 ];
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: CHN_FAQ_ITEMS.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: { '@type': 'Answer', text: item.answer },
+    })),
+  };
 
   const howToSchema = {
     '@context': 'https://schema.org',

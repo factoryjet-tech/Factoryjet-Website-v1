@@ -71,68 +71,6 @@ export const metadata: Metadata = {
    JSON-LD Schema
 ───────────────────────────────────────────────────────────────────────────── */
 
-const WP_faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How much does WordPress development cost in India?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "FactoryJet's WordPress pricing is fixed-price and scoped to your build. The main drivers are whether you need a custom theme on an existing WordPress install, a complete business site (custom theme, 5–8 pages, contact forms, SEO setup, speed optimization, and launch), or a WooCommerce store with Razorpay, GST invoicing, and Shiprocket integration. Every project is quoted up front after a free discovery call — no hourly billing, no scope creep.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to build a WordPress website in India?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A custom WordPress theme applied to an existing site takes 5–7 days. A complete business site build from scratch — design, development, pages, SEO, and launch — takes 7–14 days. WooCommerce stores with Razorpay, GST invoicing, and Shiprocket integration take 14–21 days. FactoryJet delivers the fastest professional WordPress builds in India for standard projects.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'When should I choose WordPress over Next.js or Shopify?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Choose WordPress when: you need a CMS your team can update without a developer, you want a blog or content-heavy site, you need a WooCommerce store with full flexibility, or you want the most cost-effective managed CMS for a content site. Choose Next.js when: you need sub-1-second performance, custom web application features, or a headless CMS setup. Choose Shopify when: you are building a pure D2C e-commerce brand and want managed infrastructure. We help you choose the right platform during discovery — we won't recommend WordPress just because it's popular.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you integrate Razorpay and GST in a WooCommerce store?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Yes — every WooCommerce store we build includes Razorpay integration covering UPI, cards, net banking, EMI, Paytm, PhonePe, and BNPL. GST-compliant invoices are auto-generated at order placement with GSTIN capture for B2B buyers and HSN code mapping. Shiprocket is integrated for access to 15+ Indian courier partners with real-time rate calculation at checkout. COD (Cash on Delivery) is configured with optional prepaid discount incentives.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'My WordPress site is slow — can you fix it?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Yes. WordPress speed optimization is one of our most common engagements in India. Most Indian WordPress sites load in 6–12 seconds because of cheap shared hosting, 40–80 unoptimized plugins, uncompressed images, and no caching. FactoryJet's WordPress speed optimization service: migrates you to Cloudflare or AWS LightSail, implements Redis object caching, converts images to WebP, dequeues unused scripts and styles, and delivers a Lighthouse 90+ score. Average improvement: 4–6× faster load time.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Who is the best web development company in India?',
-      acceptedAnswer: { '@type': 'Answer', text: 'For small and mid-size businesses, FactoryJet makes a strong case: senior engineers on every build, 7-day delivery for standard sites, and a fixed written price. The best web development agency in India for you depends on what you are building — the best website development company in India for a content site is not always the best web development services in India pick for a custom web app. Whoever you compare, including any best website development services in India claim, apply three checks: who writes the code, is the price fixed, and do you own everything at the end.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'What are the top 10 web development companies in India?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Published lists of the top 10 web development companies in India — and the matching top 10 website development companies in India — skew toward big outsourcing firms with big-company pricing. FactoryJet competes in that conversation for small and mid-size businesses: senior-led, fixed-price, no layers between you and the engineer. Use any list as a shortlist, then compare written prices and live work.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does website development cost in India?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Website development cost in India varies widely — a simple WordPress site sits at the low end, while custom web applications cost considerably more. FactoryJet quotes a fixed price after a short call, milestone-paid, and the 7-day delivery guarantee applies to standard sites up to five pages.' },
-    },
-  ],
-};
-
 const WP_serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
@@ -619,6 +557,16 @@ const WP_FAQ_ITEMS = [
       'Website development cost in India varies widely — a simple WordPress site sits at the low end, while custom web applications cost considerably more. FactoryJet quotes a fixed price after a short call, milestone-paid, and the 7-day delivery guarantee applies to standard sites up to five pages.',
   },
 ];
+
+const WP_faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: WP_FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Page

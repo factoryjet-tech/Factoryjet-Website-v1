@@ -53,61 +53,6 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is an AI voice agent and how does it work for Indian businesses?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'An AI voice agent is software that conducts real phone calls autonomously — speaking naturally, understanding responses, handling objections, and taking actions like booking appointments or updating CRM records. For Indian businesses, this means a Hindi-speaking AI caller that can qualify 200 leads per day, follow up with overdue customers, or handle inbound enquiries 24/7 — without adding telecaller headcount.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can the AI voice agent speak Hindi and other Indian languages?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. We build AI voice agents with text-to-speech and speech-to-text models optimised for Hindi, Hinglish, Marathi, Tamil, Telugu, Gujarati, and Kannada. The agent detects the language the customer uses and responds in kind. For markets like Tier 2 and Tier 3 cities where Hindi is the primary business language, a Hindi-native AI caller significantly outperforms an English-only bot.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does an AI voice agent cost in India?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Every FactoryJet AI voice agent is fixed-price and scoped to your build. Pricing depends on whether you need outbound-only calling, a full inbound and outbound platform with Zoho CRM integration, or an enterprise deployment with multi-language support and telephony infrastructure. You get a complete quote up front after a free discovery call, so you know the full cost before any work starts. No hourly billing surprises.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What call use cases can an AI voice agent handle?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The most common India deployments: outbound lead qualification (calling fresh leads within 5 minutes of form submission), appointment booking for clinics, real estate site visits, and test drives, payment collection follow-ups (EMI reminders and overdue balance calls), inbound IVR handling with natural language understanding, and post-delivery customer satisfaction calls. Any structured call with a consistent objective and conversation flow can be handled by an AI voice agent.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is it legal to use AI voice agents for calling in India?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes, subject to TRAI regulations. For outbound calls, you must use registered commercial headers and call only during permitted hours (9 AM–9 PM). Numbers on the DND registry must be filtered. FactoryJet builds all AI voice agents with TRAI-compliant infrastructure: registered headers, DND scrubbing, call time restrictions, and mandatory opt-out handling. For collection calls in BFSI, we also incorporate RBI fair practice guidelines.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What happens when the AI voice agent cannot handle a call?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Every AI voice agent includes a human handoff trigger. If the customer asks something outside the scope of the script, expresses frustration, or requests a human, the call is transferred to a live agent — with a real-time transcript and context summary so the agent does not ask the customer to repeat themselves. You control the escalation threshold and the handoff destination.',
-      },
-    },
-  ],
-};
-
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -496,6 +441,16 @@ const VOICE_FAQ_ITEMS = [
     answer: "Yes — an optional monthly maintenance retainer covers conversation flow tuning, new use case addition, telephony infrastructure management, and model updates. The retainer is fixed-price and scoped to your build, quoted up front after a free discovery call so you know the full cost before you commit. Many Full Voice AI Platform clients take a retainer during the first 6 months, then manage independently through the admin dashboard.",
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: VOICE_FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 export default function AIVoiceAgentINPage() {
   return (

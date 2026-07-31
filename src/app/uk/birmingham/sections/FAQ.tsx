@@ -8,7 +8,7 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 
-const FAQS = [
+export const FAQS = [
   {
     q: "How much does web design cost in Birmingham?",
     a: "Most Birmingham agencies price by studio overhead and project complexity, so quotes vary widely from one studio to the next. Factors that push prices up include bespoke functionality, complex integrations, and the agency's studio overhead — agencies in the Jewellery Quarter, Brindleyplace, or the Mailbox area typically carry higher costs than remote-first agencies. At FactoryJet, pricing is fixed and scoped to your build — the main drivers are page count, design depth, integrations, and catalogue size for e-commerce. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. We provide itemised quotes within 24 hours, free of charge, with no discovery phase required.",

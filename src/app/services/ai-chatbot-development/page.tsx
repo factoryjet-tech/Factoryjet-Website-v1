@@ -67,193 +67,9 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schema (FAQPage + Service)
+   JSON-LD Schema (Service + HowTo + Breadcrumb) — faqSchema is declared after
+   FAQ_ITEMS below, since it derives mainEntity from that array via .map()
 ───────────────────────────────────────────────────────────────────────────── */
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is AI chatbot development?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'AI chatbot development is the process of building conversational software that handles real-time text interactions — answering customer questions, qualifying leads, booking appointments, or guiding users through a process — using large language models like GPT-4o or Claude. Unlike rule-based bots that follow rigid scripts, AI chatbots understand natural language, handle messy real-world phrasing, and improve over time as you tune their behavior.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How is an AI chatbot different from a basic website chat widget?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A basic chat widget routes you to a human agent or shows pre-written FAQ answers. An AI chatbot understands what the customer is actually asking — even if they phrase it five different ways — pulls live data from your systems (order status, product inventory, calendar availability), and gives a complete, accurate answer without involving your team. It handles the top 60–70% of your support volume automatically.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What kinds of chatbots does FactoryJet build?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet builds five core types: Customer Support Chatbots (24/7 automated answers, ticket routing, escalation to humans), Lead Generation Chatbots (qualify visitors, collect contacts, book demos), E-Commerce Chatbots (order tracking, returns, product recommendations), Appointment Booking Chatbots (check calendar availability, confirm scheduling), and Internal Knowledge Chatbots (instant answers from your SOPs, policies, and docs for your own team).',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Which AI models power FactoryJet chatbots?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We use GPT-4o (OpenAI), Claude 3.5 Sonnet (Anthropic), and Gemini (Google) depending on your use case, data privacy requirements, and budget. For most customer-facing chatbots, GPT-4o or Claude gives the best balance of accuracy and cost. We use Voiceflow, Botpress, and LangChain for orchestration. We pick the model that fits your workflow — not the most expensive one.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What does the AI chatbot development process look like?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Five stages: Discover (map your top questions, data sources, and success metrics), Design (conversation flows, escalation logic, integration architecture), Build (develop and connect to your tools with weekly demos), Test & Tune (run through real customer scenarios, fix errors, tighten behavior), and Deploy (live launch with monitoring, team training, and a 30-day support window). You see it working before launch.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to build and launch an AI chatbot?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A single-purpose chatbot — a support bot for your top 20 questions or a lead capture bot for one landing page — goes from kickoff to live in 2–3 weeks. Multi-intent chatbots with CRM integration take 4–5 weeks. Enterprise deployments across multiple departments or languages run 6–10 weeks. Timeline is confirmed after the discovery session.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What happens after the chatbot launches?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Every engagement includes a 30-day post-launch window. We monitor conversation logs, fix incorrect answers, tune response quality based on real usage, and deliver a recorded training session for your team. After 30 days you can continue on a monthly retainer or manage it yourself — the dashboard is built for non-technical operators.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does AI chatbot development cost?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet\'s AI chatbots are fixed-price and scoped to your build — the main drivers are the number of intents, CRM and tool integrations, and channels you deploy to. Most US SMBs choose our Growth tier, covering multi-intent chatbots with CRM integration, live handoff, and a conversation dashboard. Custom enterprise chatbots with fine-tuning and multi-channel deployment are scoped separately. All pricing is fixed and confirmed upfront after a free quote — no hourly billing, no scope creep.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Why is FactoryJet fixed-price, milestone-paid?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Our engineering team brings 12+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery without the overhead that inflates traditional agency invoices. We\'ve served US businesses for 12 years. You brief an engineer; that engineer builds it. No account management layers, no inflated agency rates.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What return on investment can I expect from an AI chatbot?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A chatbot handling 65% of your tickets typically pays for itself within 2–3 months for a team answering 50+ tickets per day. Chatbots responding within 5 seconds vs. waiting hours for a human see 2–5× higher lead-to-demo conversion rates. Most clients recover the full build cost within 90 days.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Are there ongoing costs after the chatbot is built?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Two types: API usage (paid directly to the model provider at cost, not marked up by us) and optionally a monthly optimization retainer. Many clients self-manage after the 30-day post-launch window.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What systems can an AI chatbot connect to?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We integrate via API with: CRMs (HubSpot, Salesforce, Pipedrive, Zoho), e-commerce (Shopify, WooCommerce, BigCommerce), help desks (Zendesk, Intercom, Freshdesk), calendars (Google Calendar, Calendly, Acuity), databases (Supabase, Firebase, PostgreSQL), and messaging channels (website widget, WhatsApp Business, Facebook Messenger, SMS via Twilio). If your platform has a REST API, we can connect to it.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can the chatbot hand off to a human when needed?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — live handoff is standard. The bot monitors its own confidence and escalates when a question is too sensitive or outside its scope, passing the full conversation transcript to your support channel (Slack, email, Zendesk, or Intercom). You set the thresholds. Nothing falls through the cracks.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I deploy the chatbot on WhatsApp or SMS as well as my website?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. The same chatbot backend deploys to your website (embeddable JS widget), WhatsApp (via WhatsApp Business API), Facebook Messenger, and SMS (via Twilio). Build once, deploy to multiple channels. A unified dashboard shows all channels in one place.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Does the chatbot need to be trained on my specific business data?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes, and we handle that as part of the build. We feed the bot your FAQ documents, product catalog, policies, and knowledge base. The underlying LLM already understands language; we configure it to know your products, tone, escalation rules, and specific answers — so it responds like a knowledgeable member of your team.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I need a developer to manage the chatbot after launch?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No. The admin dashboard lets non-technical team members view conversation logs, update answer content, adjust escalation thresholds, and see performance metrics without touching code. If something breaks because an integrated platform changes its API, you contact us and we fix it.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is customer data safe with an AI chatbot?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We use API-level integrations only, enforce least-privilege data access, and implement full audit trails on every conversation. For regulated industries — healthcare, legal, finance — we can configure the chatbot to avoid storing PII and use private LLM deployments. All conversation logs are owned by you.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can an AI chatbot handle multiple languages?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. GPT-4o and Claude understand and respond in 50+ languages without separate training. For businesses with a significant Spanish-speaking customer base — common in Texas, Florida, California, and the Southwest — we configure the bot to detect language automatically and respond in kind. Multi-language is included on Growth and Enterprise plans.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How is FactoryJet different from a DIY tool like Intercom Fin or Drift?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'DIY tools are fast to set up but limited: they work off existing docs, can\'t pull live data from custom systems, can\'t be tuned for your specific logic, and charge ongoing SaaS fees. FactoryJet builds a custom chatbot integrated into your specific tech stack — your CRM, your Shopify store, your calendar — that you own outright, with no per-seat or per-conversation fees beyond model API costs.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What results have other businesses gotten from FactoryJet chatbots?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'An e-commerce brand reduced support ticket volume by 68% in the first 30 days. A B2B software company\'s lead chatbot increased demo bookings by 40% without adding sales headcount. A healthcare practice\'s booking bot filled 30% more appointment slots per week from after-hours traffic. We share relevant case studies on a strategy call.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How is FactoryJet different from a US AI development agency?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Three differences: price (specialized engineers serving US businesses for 12+ years), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects — we understand what operations look like inside a 10-person company, not just enterprise theory).',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Who is the best AI chatbot development company in USA?',
-      acceptedAnswer: { '@type': 'Answer', text: 'For small and mid-size businesses, FactoryJet makes a strong case: custom chatbots trained on your actual catalog, policies, and tone — not template bots — built fixed-price by senior engineers, with full code ownership from day one. Whoever you shortlist as the best AI chatbot development company in USA, apply three filters: will the bot be trained on your business data specifically, does it hand off to humans gracefully, and do you own it outright or rent it monthly?' },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does an AI chatbot cost in USA?',
-      acceptedAnswer: { '@type': 'Answer', text: 'AI chatbot cost in USA ranges from cheap off-the-shelf SaaS subscriptions to a higher one-time investment for a custom-built chatbot you own. If you are asking how much an AI chatbot costs for a real business workflow — trained on your products, integrated with your CRM, escalating to your team — FactoryJet builds it fixed-price and milestone-paid, scoped to your needs. SaaS bots are cheaper to start and more expensive forever; custom bots invert that curve.' },
-    },
-  ],
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -775,6 +591,16 @@ const FAQ_ITEMS = [
   },
 ];
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
 /* ─────────────────────────────────────────────────────────────────────────────
    Page
 ───────────────────────────────────────────────────────────────────────────── */
@@ -1157,3 +983,4 @@ export default function AIChatbotDevelopmentPage() {
     </>
   );
 }
+

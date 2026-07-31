@@ -1,4 +1,5 @@
 import { leedsMetadata } from "./metadata";
+import { ALL_FAQS } from "./sections/FAQ";
 
 export const metadata = leedsMetadata;
 
@@ -129,72 +130,11 @@ const speakableSchema = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How much does web design cost in Leeds?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Website costs in Leeds vary widely depending on complexity. Established local agencies price by overhead and project scope, while budget-focused shops run pay-monthly models that often lock you in. FactoryJet delivers enterprise-grade websites on Next.js 15 at a fixed, scoped price because our AI-augmented development process dramatically reduces production time without sacrificing quality. The main drivers are page count, custom design, e-commerce or AI features, and integrations. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. Our websites consistently score 90+ on Google Lighthouse Performance, which most Leeds agencies cannot match.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you have a physical office in Leeds?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "FactoryJet operates as a remote-first, AI-native agency serving Leeds businesses from our global delivery network. This is exactly how we keep pricing at a fixed, transparent quote — we do not pass the cost of Leeds city centre office space onto our clients. We are available via video call, WhatsApp, phone, and email throughout UK business hours, and we meet in person for larger engagements.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is generative engine optimisation and why does my Leeds business need it?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Generative engine optimisation (GEO) is the practice of optimising your website and content to appear in AI-generated search results — Google AI Overviews, ChatGPT responses, Perplexity AI answers, and Claude citations. In the UK, 42% of Google searches now show AI-generated summaries, ChatGPT had 1.8 billion UK visits in 2025, and AI search traffic converts at 4.4 times the rate of traditional organic search. No other SEO agency in Leeds currently offers dedicated GEO and AEO services — making this a significant first-mover opportunity for Leeds businesses that act now.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can you build a Shopify store for my Leeds retail business?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. FactoryJet is an experienced Shopify developer and Shopify agency serving Leeds retailers, fashion brands, and direct-to-consumer businesses. We build on Shopify, Shopify Plus, and WooCommerce, and we also offer headless e-commerce architectures. We handle Shopify migrations, build custom themes, and configure UK-specific payment gateways (Stripe, PayPal, Klarna) and shipping providers (Royal Mail, DPD).",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is an AI agent and how can it help my Leeds business?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "An AI agent is an intelligent software system that can autonomously handle tasks your team currently does manually — answering customer enquiries, qualifying sales leads, processing documents, scheduling appointments, and more. For Leeds businesses, AI agents typically deliver ROI within three to six months by reducing staffing costs, improving 24/7 response times, and handling 60–80% of routine interactions.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does FactoryJet take to build a website?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Our typical turnaround is 2–4 weeks for business websites, 3–6 weeks for e-commerce stores, and 4–8 weeks for AI agent deployments. This is significantly faster than most Leeds web design agencies, which typically quote 6–12 weeks. Every project includes a staging link so you can review progress in real time.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is VAT charged on web design in the UK? Can I claim my website as a business expense?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes to both. If the web design agency is VAT registered (annual turnover above £90,000), VAT at 20% is added to the invoice. Web design, hosting, SEO, and digital marketing costs are all legitimate business expenses claimable with HMRC against your corporation tax (19–25%) or income tax for sole traders. This can reduce the effective cost of your website by 19–25%.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do I need a website for my small business in Leeds in 2026?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Absolutely. 87% of UK small businesses already have a website, and 69% of those without one say they need one. For Leeds businesses, a professional website is essential for appearing in local Google searches, being cited by AI search tools like ChatGPT and Perplexity, and competing with the 42,000 other businesses in the city.",
-      },
-    },
-  ],
+  mainEntity: ALL_FAQS.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
 };
 
 export default function LeedsLayout({

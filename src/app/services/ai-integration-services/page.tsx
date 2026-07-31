@@ -67,191 +67,9 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schema (FAQPage + Service)
+   JSON-LD Schema (Service + HowTo + Breadcrumb) — faqSchema is declared after
+   FAQ_ITEMS below, since it derives mainEntity from that array via .map()
 ───────────────────────────────────────────────────────────────────────────── */
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What are AI integration services?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'AI integration services connect AI models — like GPT-4o, Claude, or Gemini — to your existing business software so those tools can think, generate, classify, extract, and summarize using real AI capabilities. Rather than replacing your software, AI integration adds a layer of intelligence to what you already use: your CRM generates follow-up drafts, your e-commerce platform writes product descriptions, your support desk classifies tickets automatically, your ERP flags anomalies in financial data.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the difference between AI integration and building a custom AI app from scratch?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Building from scratch means creating a new application with AI built in — usually for a workflow that doesn\'t exist in your current software. AI integration means adding AI capabilities to software you already have and already use. Most businesses need both at different times: integrations first (faster, lower cost, immediate ROI from existing workflows) and custom builds later when you need something your current tools fundamentally can\'t do.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What kinds of AI integrations does FactoryJet build?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Six core types: CRM AI (email draft generation, lead scoring, follow-up suggestions directly in HubSpot or Salesforce), E-Commerce AI (product description generation, customer review analysis, personalized recommendation APIs for Shopify and WooCommerce), Support Desk AI (automatic ticket classification, AI-drafted reply suggestions, sentiment analysis in Zendesk or Intercom), Document AI (extract, classify, and summarize data from PDFs, contracts, and forms connected to your existing document workflow), Custom App AI (embed GPT-4o or Claude directly into your internal tools via API), and Data Intelligence AI (AI-powered anomaly detection and natural-language queries on your existing databases).',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Which AI models can you integrate — GPT-4o, Claude, or others?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We integrate GPT-4o (OpenAI), Claude 3.5 Sonnet (Anthropic), Gemini (Google), and open-source models like Mistral and LLaMA 3. Model selection depends on your use case, cost sensitivity, and data privacy requirements. For most business integrations, GPT-4o or Claude gives the best accuracy-to-cost ratio. For regulated industries or private data, we can integrate self-hosted models that never send data to third-party providers.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What does the AI integration development process look like?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Four stages: Discover (we audit your current software stack, identify the highest-value AI integration points, and define the data flows), Design (we specify the API architecture, prompt engineering approach, and how AI outputs surface in your existing UI), Build (we develop and test the integration with weekly demos), and Deploy (production launch with monitoring, documentation, and a 30-day support window). Most integrations don\'t require changes to your existing software UI — the AI runs in the background.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to integrate AI into my existing software?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A single focused AI integration — adding AI-generated email drafts to a CRM, or automatic ticket classification to a help desk — typically goes from kickoff to production in 1–3 weeks. A multi-system AI integration connecting 3–5 platforms takes 4–6 weeks. Custom integrations with complex data pipelines, fine-tuned models, or legacy system APIs run 8–12 weeks.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What happens after the AI integration is deployed?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Every engagement includes a 30-day post-launch window: we monitor AI output quality, tune prompts based on real usage, handle API version changes from connected platforms, and deliver team training. After 30 days you can self-manage (documentation covers all integration points) or continue on a monthly retainer for prompt optimization, new integration points, or model upgrades.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much do AI integration services cost?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet\'s AI integrations are fixed-price and scoped to your build — the main drivers are how many systems you connect, the complexity of the API layer, and any model fine-tuning or compliance needs. Most US SMBs choose our Growth tier, covering multi-system AI integration with a unified API layer and monitoring. Enterprise integrations with custom model fine-tuning, legacy system APIs, and compliance requirements are scoped separately. All pricing is fixed and confirmed upfront after a free quote — no hourly billing, no scope creep.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Why is FactoryJet fixed-price, milestone-paid?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We work fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices. Our engineering team brings 12+ years of focused expertise serving US businesses. You get production-grade API architecture, prompt engineering, and integration delivery. You brief an engineer; that engineer builds it. No account management layers between your brief and the build. Full code ownership at handoff.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the ROI from AI integration services?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The ROI on AI integration typically comes from two sources: time saved (a sales rep writing AI-assisted follow-up emails spends 15 minutes per day instead of 90 minutes — and the AI-assisted emails convert better) and quality improvement (AI-generated product descriptions tested by clients show 15–25% higher conversion rates vs. manually written copy). Most AI integrations pay for themselves within 60–90 days.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Are there ongoing costs after the AI integration is built?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'One type: AI model API costs (paid directly to OpenAI, Anthropic, or Google at cost — not marked up by FactoryJet). Optional monthly retainer for prompt optimization or new integration points. There are no FactoryJet platform fees after delivery.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What software platforms can AI be integrated with?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We integrate AI into: CRMs (HubSpot, Salesforce, Pipedrive, Zoho, Close.com), e-commerce platforms (Shopify, WooCommerce, BigCommerce, Magento), support desks (Zendesk, Intercom, Freshdesk, Help Scout), accounting software (QuickBooks, Xero), document management (Google Drive, Box, Dropbox, SharePoint), internal databases (PostgreSQL, MySQL, Supabase, Firebase), and custom web applications (via REST API). If your software has an API or webhook, AI can be connected to it.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How does prompt engineering work and why does it matter?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Prompt engineering is the process of designing the instructions you give an AI model to get consistently accurate, on-brand outputs. A poorly written prompt gives generic, inconsistent results. A well-engineered prompt — with the right context, constraints, examples, and output format specification — gives outputs your team can actually use. We invest significant time in prompt engineering for every integration and include documented prompt libraries in every delivery.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you add AI to a custom-built internal tool or legacy system?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — as long as the system has some form of data access (a database we can read, an API we can call, or files we can process). We\'ve integrated AI into legacy CRMs, custom-built web apps, internal admin panels, and ERP systems with limited modern API support. We document all integration points during delivery so future engineers can maintain them.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Will AI integration require changes to the software my team already uses?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Usually no. Most AI integrations run as a layer between your existing tools — the AI processes data in the background and surfaces the result (a draft email, a classification, a suggested action) in your existing UI through the platform\'s native API. Your team uses the same software, just with AI-powered features added to it. In some cases we build a lightweight side panel or browser extension if the platform doesn\'t support native AI output placement.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is our business data safe when connecting AI to our existing tools?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We use OAuth and API key authentication (not passwords or screen scraping), enforce least-privilege data access so the AI only sees what it needs to complete the task, and implement full request/response logging for audit purposes. For regulated industries, we can configure integrations to use self-hosted or private LLM deployments that process your data locally without sending anything to third-party model providers.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you fine-tune an AI model on our specific business data?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — on Enterprise tier projects. Fine-tuning trains a base model (GPT-4o, Claude, or an open-source model) on your specific content: your product catalog, your tone of voice, your support ticket history, your domain terminology. The result is a model that generates outputs that sound specifically like your business, not a generic AI. Fine-tuning is most valuable for high-volume, customer-facing outputs like product descriptions, support replies, or sales emails.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How do you ensure AI outputs are accurate and on-brand?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Four mechanisms: prompt engineering (precise instructions with examples and constraints), output validation (automated checks for format, length, and required fields before outputs reach your team), human-in-the-loop review flows (AI generates a draft, a person approves before it sends), and usage monitoring (we review real output samples during the 30-day post-launch window and tune prompts based on what\'s not performing well).',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can AI integration work for a small team with limited technical resources?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — that\'s the majority of what we build. Most AI integrations are designed to be completely invisible to end users: the AI runs, the output appears in the tool your team already uses, and nobody has to learn a new platform. Managers can review AI output quality from a monitoring dashboard without engineering help. The AI is the hidden layer; your team\'s workflow stays familiar.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What are the most common first AI integrations US small businesses build?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The four most common first integrations are: (1) CRM email draft generation — sales reps click one button and get a personalized, context-aware follow-up draft based on the contact\'s history; (2) support ticket auto-classification — incoming tickets are tagged by topic, urgency, and required team before a human opens them; (3) product description generation — new SKUs get AI-written, SEO-optimized descriptions without a copywriter; (4) document data extraction — invoices, contracts, and forms are read by AI and key fields populated in your database automatically.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you have examples of AI integrations you\'ve built for businesses like mine?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. A Shopify brand\'s product description generator cut copywriting time by 80% while improving conversion rates 18%. A B2B SaaS company\'s HubSpot AI integration reduced sales rep email writing time from 45 minutes to 8 minutes per day. A legal firm\'s contract review integration flagged key clauses in uploaded PDFs, saving 2–3 hours per contract review. We share relevant case studies during a discovery call.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How is FactoryJet different from a US AI development agency?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Three differences: price (specialized engineers serving US businesses for 12+ years), speed (no layers between your brief and the engineer building it — no account managers, project coordinators, or solution architects adding cost and latency), and SMB depth (500+ small business projects). We understand what AI integration actually looks like in a 15-person business, not just in an enterprise with a dedicated IT department.',
-      },
-    },
-  ],
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -759,6 +577,16 @@ const FAQ_ITEMS = [
   },
 ];
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
 /* ─────────────────────────────────────────────────────────────────────────────
    Page
 ───────────────────────────────────────────────────────────────────────────── */
@@ -1141,3 +969,4 @@ export default function AIIntegrationServicesPage() {
     </>
   );
 }
+

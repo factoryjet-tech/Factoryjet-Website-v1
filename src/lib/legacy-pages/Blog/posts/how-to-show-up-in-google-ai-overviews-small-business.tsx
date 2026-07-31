@@ -1,31 +1,7 @@
 import React from 'react';
 import type { BlogPost } from '../data.types';
 
-export const post: BlogPost = {
-  id: '220',
-  slug: 'how-to-show-up-in-google-ai-overviews-small-business',
-  title: 'How to Show Up in Google AI Overviews: A Small Business Checklist',
-  excerpt:
-    "Google AI Overviews now answer queries before users ever scroll to your site. Here's the exact checklist small businesses need to get cited, no SEO agency required.",
-  category: 'Emerging Tech',
-  author: 'Bhavesh Barot',
-  date: 'Jun 7, 2026',
-  readTime: '10 min read',
-  imageUrl: '/blog-images/how-to-show-up-in-google-ai-overviews-small-business.webp',
-  meta: {
-    title: 'How to Show Up in Google AI Overviews: Small Business Checklist (2026)',
-    description:
-      'Google AI Overviews are changing how customers find businesses. This 12-step checklist shows small business owners exactly what to do to get cited in AIO results, no technical background needed.',
-  },
-  keyTakeaways: [
-    'Google AI Overviews (AIO) appear in roughly 15–20% of US searches and pull from pages ranked in the top 10.',
-    'Numbered lists, how-to formats, and FAQ sections are the content types most frequently extracted into AIO.',
-    'Answer-first H2 headings, phrased as the question, answered in the first sentence, are the single highest-leverage change you can make.',
-    'FAQPage schema does not guarantee AIO placement, but it structures your content in the format AI models prefer to extract from.',
-    'Third-party mentions (local press, directories, industry publications) are the fastest credibility signal Google uses to validate a business for AIO.',
-    'Core Web Vitals must be green, slow pages are consistently under-represented in AI-generated answers.',
-  ],
-  faqs: [
+const faqs = [
     {
       q: 'What are Google AI Overviews?',
       a: 'Google AI Overviews (formerly Search Generative Experience, or SGE) are AI-generated summaries that appear at the top of some Google search results pages. They synthesize information from multiple web pages and answer the query directly, often reducing the need for users to click through to individual sites.',
@@ -114,7 +90,33 @@ export const post: BlogPost = {
       q: "How is GEO different from AIO optimization?",
       a: "GEO (Generative Engine Optimization) is the broader discipline of making your content visible across all AI search surfaces. ChatGPT, Perplexity, Claude, Google AI Overviews, Bing Copilot, and others. AIO optimization is a subset of GEO focused specifically on Google's AI-generated search panels.",
     },
+  ];
+
+export const post: BlogPost = {
+  id: '220',
+  slug: 'how-to-show-up-in-google-ai-overviews-small-business',
+  title: 'How to Show Up in Google AI Overviews: A Small Business Checklist',
+  excerpt:
+    "Google AI Overviews now answer queries before users ever scroll to your site. Here's the exact checklist small businesses need to get cited, no SEO agency required.",
+  category: 'Emerging Tech',
+  author: 'Bhavesh Barot',
+  date: 'Jun 7, 2026',
+  readTime: '10 min read',
+  imageUrl: '/blog-images/how-to-show-up-in-google-ai-overviews-small-business.webp',
+  meta: {
+    title: 'How to Show Up in Google AI Overviews: Small Business Checklist (2026)',
+    description:
+      'Google AI Overviews are changing how customers find businesses. This 12-step checklist shows small business owners exactly what to do to get cited in AIO results, no technical background needed.',
+  },
+  keyTakeaways: [
+    'Google AI Overviews (AIO) appear in roughly 15–20% of US searches and pull from pages ranked in the top 10.',
+    'Numbered lists, how-to formats, and FAQ sections are the content types most frequently extracted into AIO.',
+    'Answer-first H2 headings, phrased as the question, answered in the first sentence, are the single highest-leverage change you can make.',
+    'FAQPage schema does not guarantee AIO placement, but it structures your content in the format AI models prefer to extract from.',
+    'Third-party mentions (local press, directories, industry publications) are the fastest credibility signal Google uses to validate a business for AIO.',
+    'Core Web Vitals must be green, slow pages are consistently under-represented in AI-generated answers.',
   ],
+  faqs,
   content: (
     <article>
       {/* ── SCHEMA ─────────────────────────────────────────────────────── */}
@@ -175,48 +177,7 @@ export const post: BlogPost = {
             {
               '@context': 'https://schema.org',
               '@type': 'FAQPage',
-              mainEntity: [
-                {
-                  '@type': 'Question',
-                  name: 'What are Google AI Overviews?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Google AI Overviews (formerly SGE) are AI-generated summaries that appear at the top of some Google search results, synthesizing information from multiple web pages to answer queries directly.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'How does Google choose which websites appear in AI Overviews?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Google primarily sources AIO content from pages that rank in the top 10 organic results, then evaluates content structure, E-E-A-T signals, freshness, and how directly the content answers the query.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'Can a small business show up in Google AI Overviews?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Yes. Small businesses appear in AIO regularly, especially for local queries and niche industry questions. Well-structured, specific, trustworthy content targeting the right queries is more important than domain authority.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'What content format does Google AI Overviews prefer?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Numbered lists and how-to formats appear in AIO most frequently, followed by definition paragraphs and FAQ sections. Short, direct paragraphs that answer a single question outperform long prose.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'Does schema markup help with Google AI Overviews?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'FAQPage, Article, and BreadcrumbList schema all help Google understand your content structure. While schema alone does not guarantee AIO placement, structured data consistently correlates with higher citation rates.',
-                  },
-                },
-              ],
+              mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
             },
           ]),
         }}

@@ -83,94 +83,8 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schemas
+   JSON-LD Schemas — faqSchema is declared after IN_FAQ_ITEMS below
 ───────────────────────────────────────────────────────────────────────────── */
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is an AI agent and how is it different from a chatbot?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A chatbot answers questions. An AI agent takes action. A chatbot replies when someone types a message. An AI agent connects to your systems — WhatsApp, Zoho CRM, Razorpay, Tally, Freshdesk — reads inputs from multiple sources, makes decisions, and completes multi-step tasks without manual direction. It can check stock, update a CRM record, send a WhatsApp follow-up, process a GST invoice, and report back — automatically, in sequence.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does AI agent development cost in India?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'AI agent development cost depends on scope. A focused single-workflow agent (WhatsApp support bot, lead qualifier, invoice processor) is the entry point. Most Indian businesses need a Growth-tier build covering multiple interconnected agents, CRM/ERP integration, and a management dashboard. Enterprise multi-agent platforms are larger still. Every project is fixed-price and quoted up front after a free discovery call, so you know the full cost before work starts — no hourly billing surprises.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you build AI agents that work over WhatsApp for Indian businesses?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — WhatsApp AI is one of our most common India deployments. We build agents on Interakt, Wati, AiSensy, and Yellow.ai that qualify leads on WhatsApp, answer product questions, send order updates, book appointments, and escalate to human agents when needed. The AI reads your Shopify/WooCommerce order data, Zoho CRM, and Google Sheets in real time and responds in Hindi, English, or any regional language.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Which Indian business tools can your AI agents integrate with?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We integrate with the full Indian business stack: Zoho CRM and Freshdesk for customer management, Razorpay and PayU for payment events, Tally ERP and Busy for accounting, Shiprocket and Delhivery for logistics, Interakt/Wati/AiSensy for WhatsApp, Exotel for IVR and voice, LeadSquared for sales pipelines, and Google Workspace. If your platform has an API or webhook, we can connect to it.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to build and deploy an AI agent in India?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Simple single-workflow agents — a WhatsApp support bot, a lead qualifier, an invoice processor — go from kickoff to live in 2–3 weeks. Multi-workflow platforms with CRM integrations and dashboards take 4–6 weeks. Enterprise multi-agent systems run 8–12 weeks. We give you a firm timeline after the discovery call because scope drives everything.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can an AI agent handle GST and compliance workflows?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. We build agents that extract invoice data, validate GSTINs, calculate correct GST slabs, flag mismatches, and push data to your accounting software — eliminating hours of manual reconciliation every month. The agent creates an audit trail for every transaction it processes.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is my business data safe when using an AI agent?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. We use API-level integrations (no screen scraping), enforce least-privilege data access, and maintain full audit trails on every action. For regulated sectors — BFSI, healthcare, legal — we can deploy private LLM setups that process your data without sending it to third-party model providers. All data flows are documented during delivery.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I need a technical team to manage the AI agent after it launches?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No. We build every agent with a non-technical operator in mind. The management dashboard lets you see what the agent is doing, review flagged items, pause or resume workflows, and adjust thresholds — without touching code. We include a recorded training session in Hindi or English specific to your agent.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Which is the best AI agent development company in India?',
-      acceptedAnswer: { '@type': 'Answer', text: 'For small and mid-size businesses, FactoryJet makes a strong case: fixed-price projects, senior engineers, weekly demos, and you own the code at the end. If you are searching for the best company to automate my business with AI agents, that is the test to apply. The best AI agency in India for you depends on the job — the best AI automation agency in India for support tickets is not automatically the best AI chatbot development company in India for sales. Whoever you compare, including any best AI development company in India or best AI agent development services in India claim, ask: who scopes the project, is the price fixed, and who owns the result?' },
-    },
-    {
-      '@type': 'Question',
-      name: 'What are the top 10 AI agent development companies in India?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Lists of the top 10 AI agent development companies in India age fast — this field changes every quarter. The same is true for the top 10 AI automation agencies in India. FactoryJet competes in that set for small and mid-size businesses: fixed pricing, senior-led builds, no lock-in. Use any list as a shortlist, then ask each name to show a working agent, not slides.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does an AI chatbot cost in India?',
-      acceptedAnswer: { '@type': 'Answer', text: 'A simple FAQ chatbot is the most affordable option; a custom chatbot trained on your products and connected to your CRM costs more because it does more. If you are asking how much does AI chatbot cost in India per month instead, SaaS tools charge a recurring monthly fee but you never own them. FactoryJet builds chatbots you own outright, at a fixed written price quoted up front after a free discovery call.' },
-    },
-  ],
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -649,6 +563,16 @@ const IN_FAQ_ITEMS = [
       'A simple FAQ chatbot is the most affordable option; a custom chatbot trained on your products and connected to your CRM costs more because it does more. If you are asking how much does AI chatbot cost in India per month instead, SaaS tools charge a recurring monthly fee but you never own them. FactoryJet builds chatbots you own outright, at a fixed written price quoted up front after a free discovery call.',
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: IN_FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Page

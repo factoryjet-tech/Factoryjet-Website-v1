@@ -8,7 +8,7 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 
-const FAQS = [
+export const FAQS = [
   {
     q: "How much does web design cost in Liverpool?",
     a: "Web design costs in Liverpool vary widely with established local agencies, and e-commerce builds sit higher again depending on complexity. FactoryJet works on a fixed-price basis, scoped to your project — the main drivers are page count, custom design, e-commerce functionality, and integrations. Because we operate AI-natively without Liverpool office overhead, every project is quoted up front after a free discovery call, so you know the full cost before any work starts.",

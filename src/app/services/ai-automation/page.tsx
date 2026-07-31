@@ -70,103 +70,9 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schema
+   JSON-LD Schema (Service + HowTo + Breadcrumb) — faqSchema is declared after
+   FAQ_ITEMS below, since it derives mainEntity from that array via .map()
 ───────────────────────────────────────────────────────────────────────────── */
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is an AI automation agency?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'An AI automation agency connects your existing business tools — CRM, email, invoicing, support desk, inventory — and builds automated workflows that run without manual input. Unlike a traditional software developer, an AI automation agency uses modern tools like n8n, Make.com, and Zapier, layered with large language model AI, to handle decision-making steps that rule-based automation alone cannot. The result is a system that reads, decides, and acts across your stack — 24/7, without a human in the loop.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How is AI automation different from AI agents?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'AI automation connects and orchestrates your existing tools to eliminate repetitive manual workflows — it is process-focused and built on tools like n8n, Make.com, and Zapier with an AI decision layer. AI agents are autonomous software programs that perceive inputs, reason about them, and take multi-step actions independently — they are typically more custom-built and handle more complex, unstructured tasks. Most businesses start with AI automation (faster, lower cost, immediate ROI) and layer in custom AI agents as their needs grow. FactoryJet builds both.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does AI automation cost for a small business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet\'s AI automation is fixed-price and scoped to your build — the main drivers are how many workflows you automate, the tool connections involved, and any AI decision layer. Most small businesses choose our Growth tier, covering several interconnected workflows with an AI decision layer, full tool integrations, and a 30-day support window. Enterprise automation platforms with multi-department scope are scoped separately. Fixed-price and milestone-paid, with 12+ years serving US businesses and US-hour project management. You get a full quote up front after a free audit.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Which tools does FactoryJet use for AI workflow automation?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Our core automation stack includes n8n (self-hosted, audit-ready workflow automation), Make.com (visual scenario builder for complex multi-step processes), and Zapier (rapid-deployment integrations across 6,000+ apps). We layer AI decision-making using Claude (Anthropic) and GPT-4o (OpenAI) for steps that require reading, classifying, or generating content. For CRM-centric automation we work natively with HubSpot, Salesforce, Pipedrive, and Zoho. The right tool depends on your data privacy requirements, workflow complexity, and existing stack — we recommend after a free audit, not before.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to automate a business workflow?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Simple single-step automations (connect two tools, trigger an action) can go live in 3–5 business days. Multi-step workflows with AI decision layers and CRM integrations typically take 2–3 weeks. Complex multi-department automation platforms with custom logic and compliance requirements run 4–8 weeks. We scope every project after a free 30-minute audit so you get a firm timeline before we start — not after.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What business workflows can you automate?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The highest-ROI workflows we automate for US small businesses: lead nurturing and CRM data entry (new inquiry → enriched contact → HubSpot record → follow-up sequence), invoice and billing (email attachment → extract data → log to QuickBooks → notify AP → send payment reminder), customer support triage (ticket arrives → AI classifies intent → routes to correct team → drafts response suggestion), inventory reorder (stock drops below threshold → AI checks supplier lead time → drafts PO → sends for approval), reporting (pull data from 3+ sources → clean and aggregate → write plain-English summary → send to Slack every Monday), and HR onboarding (new hire confirmed → create accounts → send welcome sequence → assign training tasks → schedule check-ins).',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I need a technical team to manage automated workflows after launch?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No. We build every automation with a non-technical operator in mind. You get a simple dashboard to monitor what\'s running, review flagged items, and pause or restart workflows without touching code. We also deliver a recorded walkthrough specific to your automation setup. If a connected platform changes its API or you need to add a new step, you contact us and we handle it — that\'s what the 30-day support window is for.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the ROI on AI workflow automation for a small business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The most direct return is labor hours recovered. A typical SMB running 3–5 automated workflows saves 15–25 staff hours per week. At a fully-loaded cost of $35/hour, that\'s $27,000–$45,000 per year in recovered productivity — from a Growth automation package. Secondary ROI comes from speed: automated lead follow-up within 60 seconds vs. hours increases close rates by 20–35%. Most clients see full payback within 8–14 weeks of launch.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How is FactoryJet different from a US AI automation agency?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Three differences: pricing model (fixed-price and milestone-paid — no account manager layers inflating your invoice), speed (we start building in days, not weeks — no procurement process, no discovery retainer, no waiting for a kickoff slot months out), and SMB realism (500+ small business projects mean we know where automation actually breaks in a 10-person company and build around it). We also don\'t lock you into proprietary platforms — every automation we build runs on tools you own or can self-manage.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What happens if I switch CRM or change tools after automation is set up?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We build automation with modular integration layers — the workflow logic is separated from the connector code. Swapping HubSpot for Salesforce, or Quickbooks for Xero, typically means updating the connector module, not rebuilding the automation from scratch. We document all integration points at delivery so future changes are fast and predictable. Most tool swaps take 1–3 days of engineering work, not weeks.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you automate workflows that involve AI decision-making — not just routing?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — this is where our approach differs from a standard Zapier consultant. We layer large language model AI (Claude, GPT-4o) into workflow steps that require reading, classifying, summarizing, or generating content. Examples: an AI that reads an inbound email, classifies its intent (support vs. sales vs. complaint), extracts the key request, drafts a response, and routes to the right team — all before a human sees it. Or an AI that reads a vendor invoice PDF, extracts line items, checks them against a purchase order, flags discrepancies, and logs the approved items to your accounting system.',
-      },
-    },
-  ],
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -684,6 +590,16 @@ const FAQ_ITEMS = [
   },
 ];
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
 /* ─────────────────────────────────────────────────────────────────────────────
    Page
 ───────────────────────────────────────────────────────────────────────────── */
@@ -1014,3 +930,4 @@ export default function AIAutomationPage() {
     </>
   );
 }
+

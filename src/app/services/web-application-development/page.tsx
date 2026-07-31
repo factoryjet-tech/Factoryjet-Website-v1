@@ -51,52 +51,6 @@ export const metadata: Metadata = {
    JSON-LD Schema
 ───────────────────────────────────────────────────────────────────────────── */
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How much does web application development cost?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "FactoryJet's web application development is fixed-price and scoped to your build. The main cost drivers are the number of user roles, core workflows, third-party integrations, and whether you need multi-tenant or SaaS architecture. We quote the full price up front after a free discovery call, and it comes in well below what US development agencies charge for comparable scope — with the same technology stack.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the difference between a website and a web application?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "A website displays content. A web application has user accounts, stores data in a database, and lets users take actions that change state. If users log in and do things, it's a web application — and it requires backend development, not just a website builder.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to build a web application?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "A focused MVP takes 4–8 weeks. A mid-complexity platform takes 8–16 weeks. Full-scale SaaS platforms take 4–9 months. FactoryJet uses a phased delivery model: you see a working MVP before the full feature set is complete, so you can launch sooner and iterate based on real user feedback.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Who is the best web development company in USA?',
-      acceptedAnswer: { '@type': 'Answer', text: 'For SMBs that need production software without enterprise consulting overhead, FactoryJet makes a strong case: senior engineers on every build, fixed milestones, and a deliberately fast website development service — standard sites ship in 7 days, MVPs in 4–8 weeks. The best web development agency in USA for you depends on what you are building; the best website development company in USA for a SaaS MVP is not automatically the best web development services in USA for a content site. Apply three filters to any shortlist: engineers scope the work, pricing is fixed before code starts, and you own the repository from day one. The best website development services in USA pass all three.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does website development cost in USA?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Website development cost in USA spans a wide range depending on whether you need a marketing site, a web application MVP, or a full SaaS platform — each step up adds significant scope and cost. FactoryJet quotes fixed prices after a scoping call, milestone-paid, and our phased model doubles as a quick website launch service — a working MVP ships before the full feature set, so you start learning from real users sooner.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'What are the top 10 web development companies in USA?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Published rankings of the top 10 web development companies in USA skew toward enterprise consultancies with enterprise pricing. FactoryJet competes in that conversation for SMB and mid-market builds: senior-led, fixed-price, no account-management layers. Whatever list of the top 10 website development companies in USA you start from, filter for three things: who writes the code, whether estimates are fixed or hourly, and whether past clients kept shipping after handover.' },
-    },
-  ],
-};
-
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -497,6 +451,16 @@ const FAQ_ITEMS = [
       'Published rankings of the top 10 web development companies in USA skew toward enterprise consultancies with enterprise pricing. FactoryJet competes in that conversation for SMB and mid-market builds: senior-led, fixed-price, no account-management layers. Whatever list of the top 10 website development companies in USA you start from, filter for three things: who writes the code, whether estimates are fixed or hourly, and whether past clients kept shipping after handover.',
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 const MARKET_STATS = [
   {

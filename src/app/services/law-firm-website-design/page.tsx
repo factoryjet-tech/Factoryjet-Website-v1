@@ -70,71 +70,9 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schema
+   JSON-LD Schema — faqSchema is declared after FAQ_ITEMS below, since it
+   derives mainEntity from that array via .map()
 ───────────────────────────────────────────────────────────────────────────── */
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How much does a law firm website design cost?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet\'s law firm website design is fixed-price and scoped to your build. The main cost drivers are the number of practice area pages, attorney profiles, page count, blog and local SEO scope, and any custom intake workflows. Every project is quoted up front after a free discovery call, so you know the full cost before work starts — and it comes in significantly below comparable US legal web design agency benchmarks. Our specialized engineering team has served US law firms for 12+ years.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What should a law firm website include?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A high-performing law firm website includes: a homepage with a clear practice area focus and geographic service area, individual practice area pages optimized for each service you offer, attorney profile pages with professional photography, credentials, bar admissions, and personal narrative, a consultation request form with clear intake expectations, client testimonials and case results (where bar rules permit), a blog for thought leadership and local SEO, local schema markup (LegalService, Attorney, LocalBusiness types), and Google Business Profile integration. Each of these elements serves a specific function in either ranking for local search or converting a visitor who has found you.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How do I get my law firm website to rank on Google?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Local law firm SEO has four pillars: (1) Practice area pages — each practice area you serve needs its own dedicated page optimized for "[practice area] attorney [city]" keywords. A single "Services" page with a list of practice areas will not rank for individual services. (2) Local schema markup — LegalService and Attorney schema tell Google exactly what you do and where, supporting local pack ranking. (3) Google Business Profile — kept current with accurate hours, photos, and responding to every review. (4) Page speed and mobile experience — Google\'s mobile-first indexing means a slow mobile site ranks below a fast competitor with equivalent content. FactoryJet builds all four of these into every law firm website.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the best website builder for a law firm?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'For a law firm that wants to rank in Google search and build long-term credibility, WordPress with a custom theme is the strongest choice — it offers the most SEO flexibility, the best plugin ecosystem for legal-specific functionality (intake forms, appointment scheduling, live chat), and the cleanest performance profile when built without page builders. Squarespace and Wix are acceptable for small practices with minimal SEO ambition but limit customization and have inherent performance ceilings. Template-based legal website platforms (FindLaw, Martindale-Avvo, LexBlog) are expensive subscription products that give you a site you don\'t own and can\'t differentiate from competitor sites on the same platform.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to build a law firm website?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A complete law firm website (10–15 pages including practice areas, attorney profiles, and blog) typically takes 4–6 weeks from kickoff to launch. Larger firm sites with 20–40 pages, multiple attorneys, and complex intake workflows run 6–10 weeks. The timeline is driven primarily by the speed of attorney profile content, professional photography availability, and approval turnaround from partners. We build with structured checkpoints and 24-hour feedback windows to keep projects from stalling in review cycles.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do law firm websites need to follow any special rules or disclaimers?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. Attorney advertising rules vary by state bar and cover testimonials, case results, "specialist" claims, and how you describe your services. Common requirements: disclaimer text on testimonials and case result pages (e.g., "past results do not guarantee future outcomes"), avoiding the term "specialist" unless the attorney is certified, accurate geographic claims about where you practice, and contact forms that clearly set expectations about attorney-client privilege (a consultation request form does not typically create an attorney-client relationship until engagement letters are signed). FactoryJet implements standard advertising disclaimers as part of every law firm website build — specific compliance review with your bar association is your responsibility.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I see examples of law firm websites FactoryJet has designed?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — on a strategy call we share case studies relevant to your practice area and firm size. Published examples include: a solo personal injury attorney whose FactoryJet site ranked in the local pack for "[city] personal injury attorney" within 90 days of launch, replacing a FindLaw template site; a 12-attorney family law firm whose redesigned website increased consultation requests by 65% in the first quarter; and a criminal defense practice whose practice area pages captured featured snippet positions for 11 high-intent local search queries within 6 months. Specifics depend on your market, practice area, and existing digital presence.',
-      },
-    },
-  ],
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -607,6 +545,16 @@ const FAQ_ITEMS = [
   },
 ];
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
 const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
@@ -970,3 +918,4 @@ export default function LawFirmWebsiteDesignPage() {
     </>
   );
 }
+

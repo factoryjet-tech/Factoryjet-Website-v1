@@ -69,193 +69,9 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schema (FAQPage + Service)
+   JSON-LD Schema (Service + HowTo + Breadcrumb) — faqSchema is declared after
+   FAQ_ITEMS below, since it derives mainEntity from that array via .map()
 ───────────────────────────────────────────────────────────────────────────── */
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What exactly is an AI agent, and how is it different from a chatbot?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A chatbot answers questions. An AI agent takes action. A chatbot sits in a window and responds to what you type. An AI agent — built on the same large language model technology — connects to your tools, reads inputs from multiple sources, makes decisions, and completes multi-step tasks without you directing every move. It can check your inventory, update a CRM record, send a follow-up email, process a document, and report back on what it did — all in sequence, automatically.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What kinds of tasks can an AI agent handle for my business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'AI agents are best at high-volume, rule-based work that currently eats your team\'s time: answering the same customer questions repeatedly, routing and triaging support tickets, qualifying inbound leads, processing invoices and documents, updating records across systems, scheduling appointments, sending follow-up sequences, and generating reports from raw data. If your team does something more than a few times a day and it follows a pattern, an AI agent can probably handle it.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What types of AI agents does FactoryJet build?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet builds six core types: Customer Service AI (24/7 support bots that handle tickets, answer questions, and escalate to humans), Sales AI (lead qualification, outreach sequencing, follow-up automation), Operations AI (invoice processing, scheduling, internal workflow automation), Data & Analytics AI (reporting agents that pull, clean, and summarize business data on demand), Voice AI (phone-based agents that handle inbound calls and book appointments), and Document Processing AI (agents that read, classify, extract, and route contracts, forms, and PDFs).',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Which AI models power these agents — Claude, GPT-4o, or something else?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We use Claude (Anthropic), GPT-4o (OpenAI), Gemini (Google), and open-source models like Mistral and LLaMA depending on your workflow, cost sensitivity, and data privacy requirements. We don\'t have a preferred vendor — we pick the right model for each use case. For orchestration we use LangChain, LangGraph, CrewAI, n8n, and Make.com.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What does the AI agent development process look like from start to finish?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We follow five stages: Discover (we map your workflows, data sources, and goals), Architect (we design the agent logic, integrations, and guardrails), Build (we develop and connect everything), Train & Test (we run the agent through real scenarios and tune its behavior), and Deploy (we launch, hand off, and train your team). Every stage ends with a demo so you see progress weekly and can course-correct before we build further.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to build and deploy an AI agent?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Simple single-workflow agents — a lead qualifier, a support bot, an invoice processor — typically go from kickoff to launch in 2–3 weeks. Multi-workflow platforms with CRM integrations and dashboards take 4–6 weeks. Enterprise systems with multiple agents and compliance requirements run 8–12 weeks.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Will I see progress during the build, or is it a black box until launch?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Weekly demos throughout — no exceptions. After every stage we show you what\'s been built and how it behaves. You can give feedback, adjust the logic, and reprioritize features before we move to the next stage.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What happens after the AI agent launches?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Every engagement includes a 30-day post-launch support window. During that period we fix bugs, tune the agent\'s behavior based on real usage, and run a training session with your team. After 30 days, you can continue on a monthly retainer or manage it yourself — all code and API keys are yours.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does it cost to build a custom AI agent?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet\'s AI agents are fixed-price and scoped to your build — the main drivers are how many workflows the agent handles, the integrations involved, and model usage. Most small businesses choose our Growth tier, covering multiple interconnected agents, CRM integrations, a management dashboard, and a 30-day support window. Enterprise platforms with multi-agent orchestration are scoped separately. All pricing is fixed and confirmed upfront after a free discovery call — no hourly billing, no scope creep.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Why is FactoryJet fixed-price, milestone-paid?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We work fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices. Our lean senior-only team delivers production-grade architecture, code, and handover. No layers of account management, project managers, or sales reps between your brief and the engineer building it. You brief an engineer; that engineer builds it. Full code ownership at handoff.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the typical ROI on an AI agent investment?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The most common return comes from labor hours recovered. A customer support agent handling 70% of tickets replaces hundreds of hours of manual work per month. A lead qualification agent that responds within 60 seconds typically increases conversion rates by 20–35%. Most clients see payback within 3–6 months of launch.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Are there ongoing costs after the AI agent build is complete?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes, two types: API usage costs (these scale with your usage volume and go directly to model providers, not marked up by FactoryJet) and optionally a FactoryJet retainer for ongoing optimization. The retainer is optional; many clients self-manage after the handoff.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What software and platforms can an AI agent connect to?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We integrate with most business software via API: CRMs (Salesforce, HubSpot, Pipedrive, Zoho), e-commerce (Shopify, WooCommerce, Magento, BigCommerce), communication tools (Slack, Gmail, Outlook, Twilio), project management (Notion, Airtable, Asana, Monday.com), databases (PostgreSQL, MySQL, Supabase, Firebase), and document storage (Google Drive, Dropbox, Box). If your platform has a REST API or webhook support, we can connect to it.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I need a technical team to manage the AI agent after launch?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No. We design every agent with a non-technical operator in mind. The management dashboard lets you see what the agent is doing, review flagged items, adjust thresholds, and pause or resume workflows — all without touching code. We include a recorded training walkthrough specific to your agent.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you build AI agents for niche or highly specialized workflows?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — most of what we build is custom. We\'ve built agents for insurance claim intake, legal document review, HVAC dispatching, wholesale reorder management, clinical scheduling, and SaaS onboarding sequences. The workflow logic, prompts, data connections, and guardrails are built specifically for your process.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What happens if we switch software platforms after the AI agent is built?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We architect agents with modular integration layers, meaning the agent logic is separated from the connector code. Swapping one CRM for another typically means updating the integration module, not rebuilding the agent from scratch — days of work, not months.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Will my business data be safe when using an AI agent?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. We use API-level integrations (not screen scraping), enforce least-privilege data access, and implement full audit trails on every action. For regulated industries — healthcare, legal, finance — we can deploy private LLM setups that process your data without sending it to third-party model providers.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What happens if the AI agent makes a mistake or gives a wrong answer?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Every agent includes confidence thresholds (if the model isn\'t sure, it escalates to a human rather than guessing), guardrails on high-stakes actions (the agent requests human approval before sending emails, processing payments, or updating records), and a full action log for auditing. Responsible design means errors are surfaced and correctable, not silent.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can an AI agent replace my customer support team?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'AI agents work best as the first line of support — handling 60–80% of routine tickets, order status questions, and common queries automatically. They escalate anything nuanced or sensitive to your human team. Most clients don\'t reduce headcount; they redirect their team to higher-value customer relationships instead of repetitive queries.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How is FactoryJet different from hiring a US AI development agency?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Three differences: price (fixed-price, specialized engineers serving US businesses for 12+ years), speed (no account management layers between your brief and the engineer building it), and SMB depth (500+ small business projects — we understand the operational reality of businesses your size, not just enterprise AI theory).',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you have results or examples from businesses similar to mine?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. We\'ve built AI agents for e-commerce brands that reduced support ticket volume by 70%, service businesses that cut lead response time from hours to under 60 seconds, and operations teams that eliminated 30+ hours per week of manual data entry. We\'re happy to share relevant case studies during a strategy call.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Who is the best AI agent development company in USA?',
-      acceptedAnswer: { '@type': 'Answer', text: 'For SMBs and mid-market teams, FactoryJet makes a strong case: custom agents at fixed-price, senior engineers on every build, and full code ownership from day one. The best AI agent development services in USA share three traits worth filtering for: engineers scope the project (not a sales layer), pricing is fixed before work starts, and the agent ships into production with monitoring — not as a demo. Published lists of the top 10 AI agent development companies in USA are a reasonable shortlist; apply those three filters to whoever is on them.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does AI agent development cost in USA?',
-      acceptedAnswer: { '@type': 'Answer', text: 'AI agent development cost in USA varies widely with integrations and autonomy level, and established agencies bill a steep premium. FactoryJet works fixed-price and milestone-paid, scoped to your build: single-workflow agents, multi-system agents, and complex multi-agent deployments are each scoped up front. Hourly-billed agencies usually land well above their initial estimate on the same scope, which is why we do not bill hourly.' },
-    },
-  ],
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -816,6 +632,16 @@ const FAQ_ITEMS = [
       'AI agent development cost in USA varies widely with integrations and autonomy level, and established agencies bill a steep premium. FactoryJet works fixed-price and milestone-paid, scoped to your build: single-workflow agents, multi-system agents, and complex multi-agent deployments are each scoped up front. Hourly-billed agencies usually land well above their initial estimate on the same scope, which is why we do not bill hourly.',
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Page
@@ -1399,3 +1225,4 @@ export default function AIAgentsPage() {
     </>
   );
 }
+

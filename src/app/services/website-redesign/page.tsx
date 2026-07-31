@@ -73,79 +73,6 @@ export const metadata: Metadata = {
    JSON-LD Schema
 ───────────────────────────────────────────────────────────────────────────── */
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How much does a website redesign cost for a small business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet\'s website redesign services are fixed-price and scoped to your build. The main cost drivers are page count, whether it\'s a marketing site or an e-commerce store, custom design scope, and CMS integration. We quote the full price up front after a free site audit, so you know the cost before work starts. Fixed-price and milestone-paid — our engineering team has served US businesses for 12+ years with US-hour project management.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does a website redesign take?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet delivers up to 5-page website redesigns in 7 business days. Larger sites of 10–20 pages typically take 3–4 weeks. E-commerce redesigns run 4–6 weeks depending on product catalog size and custom functionality. The timeline depends on how quickly you can provide content, approve designs, and give feedback — our process is structured around 24-hour feedback loops to keep projects moving without delays.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is included in a website redesign service?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A FactoryJet website redesign includes: custom visual design (not a template), mobile-first responsive build, page speed optimization (Lighthouse 90+ target), on-page SEO setup (meta titles, descriptions, heading structure, schema markup), contact forms and lead capture, CMS integration (you can update content without a developer), Google Analytics and Search Console setup, and 30 days of post-launch support. Every redesign is built from scratch to your brand — not a reskinned WordPress theme.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Why does my small business website need a redesign?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Three reasons drive the decision for most small businesses: (1) Speed — Google research shows 53% of mobile visitors leave a site that takes more than 3 seconds to load. Old sites built on heavy page builders average 6–12 second load times. (2) Mobile — Over 60% of US web traffic is now mobile. Websites designed before 2020 often have serious mobile usability issues that suppress Google rankings. (3) Conversion — Design credibility is the #1 factor in whether a new visitor trusts a business enough to contact them. An outdated site is actively costing you leads every day.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Will a website redesign hurt my Google rankings?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A professionally managed redesign should improve your rankings, not hurt them. The risks come from poorly handled URL structure changes, missing redirects, or content removed during the redesign. FactoryJet\'s process includes a pre-launch SEO audit, 301 redirects for any changed URLs, preservation of all existing meta data, and schema markup additions. Done correctly, a redesign that improves page speed and mobile experience almost always leads to ranking improvements within 60–90 days of launch.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is an AI website redesign?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'An AI website redesign uses AI tools to accelerate design decisions, generate content variations, audit competitor sites, and identify conversion optimization opportunities — while a skilled human designer and developer still own the final design and code. AI tools help us analyze your competitor landscape, generate copy drafts, test color and layout combinations faster, and identify the sections of your current site that are underperforming. The result is a redesign that is both faster to deliver and better informed by data than a traditional agency process.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you redesign just part of my website — not the whole thing?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. Partial redesigns are common when a business has a specific conversion problem: a homepage that isn\'t generating leads, a pricing page that is confusing visitors, or a service page that isn\'t ranking. We can redesign individual pages, landing pages, or sections — with or without changing the rest of the site. We\'ll audit the full site first and tell you honestly whether a targeted fix or a full redesign is the better investment for your goals.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Who is the best website redesign agency in USA?',
-      acceptedAnswer: { '@type': 'Answer', text: 'For SMBs, FactoryJet makes a strong case: redesigns scoped by senior engineers, fixed pricing, SEO equity preserved through proper 301 mapping, and a 90-day before/after performance review on every project. The best website redesign company in USA is the one that treats a redesign as a measurable conversion project, not a repaint — so whoever you shortlist, including any list of the top 10 website redesign services in USA, ask for before/after numbers on traffic and conversions. The best website redesign services in USA volunteer those numbers without being asked.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does website redesign cost in USA?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Website redesign cost in USA spans a wide range — SMB marketing sites are at the lower end, larger or e-commerce sites cost more, and replatforming adds further scope. FactoryJet quotes fixed prices after a site audit, milestone-paid. Two cost traps to avoid: quotes that skip 301 redirect mapping (your rankings pay for that later), and hourly billing on a project that should be fixed-scope.' },
-    },
-  ],
-};
-
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -612,6 +539,16 @@ const FAQ_ITEMS = [
       'Website redesign cost in USA spans a wide range — SMB marketing sites are at the lower end, larger or e-commerce sites cost more, and replatforming adds further scope. FactoryJet quotes fixed prices after a site audit, milestone-paid. Two cost traps to avoid: quotes that skip 301 redirect mapping (your rankings pay for that later), and hourly billing on a project that should be fixed-scope.',
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 const howToSchema = {
   '@context': 'https://schema.org',

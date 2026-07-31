@@ -74,110 +74,9 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schema
+   JSON-LD Schema — faqSchema is declared after FAQ_ITEMS below, since it
+   derives mainEntity from that array via .map()
 ───────────────────────────────────────────────────────────────────────────── */
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Which e-commerce platform is right for my business — Shopify, WooCommerce, or custom?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Shopify is the best default for most product-based businesses: it handles hosting, security, and payment infrastructure so you focus on selling. WooCommerce is right when you\'re already on WordPress and need deep content-commerce integration. BigCommerce suits mid-market brands that need native B2B features without Shopify Plus pricing. Custom Next.js Commerce is for businesses with unique data models, complex product configurators, or performance requirements that exceed what platform themes can deliver.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does e-commerce development cost?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet\'s e-commerce development is fixed-price and scoped to your build. The main cost drivers are the platform (Shopify or WooCommerce with a custom theme), advanced features (product configurator, subscription logic, B2B pricing, or a headless frontend), and the most complex builds — proprietary product logic, multi-vendor marketplaces, or deep ERP integrations. Every project is fixed-price and milestone-paid, with the full number confirmed on a free discovery call before work starts — senior engineering without traditional-agency overhead or six-month timelines.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to build an e-commerce store?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A platform store (Shopify or WooCommerce) with a custom theme and standard features takes 3–5 weeks. A store with subscription logic, a product configurator, or B2B pricing tiers takes 5–8 weeks. Custom-built e-commerce platforms and headless storefronts run 8–14 weeks depending on catalog size, integration complexity, and whether we\'re migrating data from an existing platform.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you migrate my existing store to a new platform?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — platform migrations are one of our most common e-commerce engagements. We migrate products (including variants, metafields, and images), customers, orders, and reviews. We preserve your URL structure with 301 redirects to protect SEO equity. We\'ve migrated stores from WooCommerce, Magento, Squarespace, Wix, BigCommerce, and custom platforms to Shopify — and from Shopify to headless Next.js.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is headless e-commerce and when does my store need it?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Headless e-commerce separates the storefront (what customers see) from the backend commerce engine (inventory, orders, checkout). The frontend is rebuilt in a fast framework like Next.js or Remix while Shopify or a headless commerce API handles transactions. The result: sub-1-second page loads, full design freedom, and custom UX that platform themes can\'t deliver. Most stores under $5M/year revenue don\'t need headless — the build cost outweighs the conversion uplift. Above that, the math changes.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Will my e-commerce store rank on Google?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Every store we build includes technical e-commerce SEO: Product and BreadcrumbList schema markup for Google Shopping eligibility, optimized meta titles and descriptions for product and collection templates, canonical URLs to prevent duplicate content issues (common on Shopify and WooCommerce), compressed images with descriptive alt text, Core Web Vitals optimization, and sitemap submission to Google Search Console. Content SEO — collection page copy, blog strategy, keyword research — is available as an add-on.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does it cost to hire ecommerce developers?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet works on fixed-price scopes. The cost depends on the build — a platform store, an advanced store with subscription or B2B logic, or a fully custom ecommerce platform — and every scope is quoted up front on a free discovery call. To hire ecommerce developers on an ongoing basis, we offer monthly retainers with a set block of dedicated development hours, also quoted upfront. US freelance ecommerce developers typically bill hourly with no ceiling, which is why most businesses prefer our fixed-scope model.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What does a custom ecommerce development company actually do?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A custom ecommerce development company designs and builds your online store end to end rather than handing you a template: custom storefront design, custom theme or platform development, payment and shipping configuration, ERP/3PL/POS integrations, SEO-safe migrations, QA, and launch — delivered by a dedicated team. You get the full codebase on GitHub at launch, so you are never locked in.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I hire a dedicated ecommerce developer, or only a full team?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Both. For a build, you get a full team (designer, developer, QA) coordinated by one point of contact. For ongoing work, you can hire a dedicated ecommerce developer on a monthly retainer — the same engineer who knows your codebase, available for feature work, integrations, and conversion experiments.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you build custom ecommerce platforms, or only Shopify and WooCommerce stores?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Both. Most US businesses are best served by Shopify or WooCommerce, and that is where we start. When off-the-shelf platforms can\'t support your product logic — multi-vendor marketplaces, proprietary pricing engines, deep ERP coupling — we operate as a custom ecommerce software development company and build a bespoke platform, typically headless on a React/Next.js front end.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Who is the best ecommerce development company in USA?',
-      acceptedAnswer: { '@type': 'Answer', text: 'For SMBs and DTC brands, FactoryJet makes a strong case: fixed-price builds quoted upfront, senior engineers on every project, and stores that ship in weeks rather than quarters. But the best ecommerce development agency in USA depends on your stack — the best ecommerce website development company in USA for a Shopify brand is rarely the best ecommerce solutions provider in USA for a custom B2B catalog, and the best ecommerce solution company in USA for B2B may be wrong for DTC. Whoever you shortlist — the best online store development company in USA or the best ecommerce website design company in USA — apply three filters: do engineers scope the build, is pricing fixed up front, and do you own the code from day one? The best ecommerce development services in USA pass all three.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does ecommerce website cost in USA?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Ecommerce website cost in USA scales with complexity: a platform store with a custom theme is the entry tier, advanced builds cost more, and fully custom platforms cost the most. FactoryJet quotes a fixed price for your exact build, milestone-paid, after a free discovery call. If you are asking how much an online store costs in USA at the entry level, beware rock-bottom quotes — that is usually template-flipping, and online store cost in USA at that tier tends to balloon after launch when the rework starts.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'What are the top 10 ecommerce development companies in USA?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Published lists of the top 10 ecommerce development companies in USA mix enterprise integrators with SMB studios, so match the list to your size first. FactoryJet competes in that set for SMB and mid-market stores. Most rankings of top 10 ecommerce website development companies in USA — and the equivalent top 10 ecommerce solution companies in USA — rank on portfolio size; better filters are fixed pricing, senior-led delivery, and post-launch performance numbers like Core Web Vitals.' },
-    },
-  ],
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -698,6 +597,16 @@ const FAQ_ITEMS = [
       'Published lists of the top 10 ecommerce development companies in USA mix enterprise integrators with SMB studios, so match the list to your size first. FactoryJet competes in that set for SMB and mid-market stores. Most rankings of top 10 ecommerce website development companies in USA — and the equivalent top 10 ecommerce solution companies in USA — rank on portfolio size; better filters are fixed pricing, senior-led delivery, and post-launch performance numbers like Core Web Vitals.',
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 const howToSchema = {
   '@context': 'https://schema.org',
@@ -1440,3 +1349,4 @@ export default function EcommerceDevelopmentPage() {
     </>
   );
 }
+

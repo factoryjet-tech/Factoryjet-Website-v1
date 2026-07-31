@@ -122,7 +122,7 @@ const TESTIMONIALS = [
 
 // ─── Section 11 data (FAQ) ────────────────────────────────────────────────────
 
-const FAQ_ITEMS = [
+export const FAQ_ITEMS = [
   {
     q: "How do you deliver a website in 7 days?",
     a: "We\u2019ve built a production system: our AI handles first-draft copywriting and layout. Our designers refine and customise. Your input is structured into a 30-minute brief call on Day 1. By Day 3 you see a working prototype. Days 4\u20136 are for your revisions and final polish. Day 7 is go-live.",
@@ -455,16 +455,11 @@ export default function SheffieldPage() {
               },
               {
                 "@type": "FAQPage",
-                mainEntity: [
-                  { "@type": "Question", name: "How do you deliver a website in 7 days?", acceptedAnswer: { "@type": "Answer", text: "We\u2019ve built a production system: our AI handles first-draft copywriting and layout. Our designers refine and customise. Your input is structured into a 30-minute brief call on Day 1. By Day 3 you see a working prototype. Days 4\u20136 are for your revisions and final polish. Day 7 is go-live." } },
-                  { "@type": "Question", name: "Is this a template or a custom website?", acceptedAnswer: { "@type": "Answer", text: "Every FactoryJet site is custom-built from scratch. We don\u2019t use WordPress themes or Squarespace templates. Your site is coded in Next.js, which means it loads faster, ranks better, and looks unique to your business." } },
-                  { "@type": "Question", name: "Do I need any technical knowledge?", acceptedAnswer: { "@type": "Answer", text: "None at all. We handle everything: domain setup, hosting, SSL, Google Analytics, Search Console, and even write the copy if you need it." } },
-                  { "@type": "Question", name: "Will my website rank in Sheffield searches?", acceptedAnswer: { "@type": "Answer", text: "We build Sheffield-specific SEO into every page from the start: local schema markup, Google Business Profile integration, Sheffield landmarks and area mentions." } },
-                  { "@type": "Question", name: "What\u2019s the difference between Business and E-Commerce?", acceptedAnswer: { "@type": "Answer", text: "Business is for service companies and trades who need to generate enquiries and leads. E-Commerce adds a full online shop (Shopify or WooCommerce), product pages, payment gateway, and delivery options." } },
-                  { "@type": "Question", name: "Are there any contracts or monthly fees?", acceptedAnswer: { "@type": "Answer", text: "No mandatory contracts. You pay once for the build. Hosting is a small monthly cost you pay the provider directly. We offer optional monthly maintenance retainers, but they\u2019re never required." } },
-                  { "@type": "Question", name: "Can you add an AI chatbot to my website?", acceptedAnswer: { "@type": "Answer", text: "Yes. Our Business, E-Commerce, and Enterprise plans include an AI chatbot that qualifies leads and handles FAQs 24/7." } },
-                  { "@type": "Question", name: "What happens if I need changes after launch?", acceptedAnswer: { "@type": "Answer", text: "Every plan includes 30 days of post-launch support at no extra cost. One-off updates are billed at a flat hourly rate with no hidden markups." } },
-                ],
+                mainEntity: FAQ_ITEMS.map((item) => ({
+                  "@type": "Question",
+                  name: item.q,
+                  acceptedAnswer: { "@type": "Answer", text: item.a },
+                })),
               },
               {
                 "@type": "BreadcrumbList",

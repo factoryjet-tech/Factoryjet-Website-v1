@@ -1,31 +1,7 @@
 import React from 'react';
 import type { BlogPost } from '../data.types';
 
-export const post: BlogPost = {
-  id: '222',
-  slug: 'is-seo-dead-2026-ai-search-data',
-  title: 'Is SEO Dead in 2026? What the AI Search Data Actually Says',
-  excerpt:
-    'Every year someone declares SEO dead. In 2026, they have a better argument than ever. AI Overviews, ChatGPT search, and Perplexity are reshaping how people find businesses. Here is what the data actually shows.',
-  category: 'Emerging Tech',
-  author: 'Bhavesh Barot',
-  date: 'Jun 7, 2026',
-  readTime: '10 min read',
-  imageUrl: '/blog-images/is-seo-dead-2026-ai-search-data.webp',
-  meta: {
-    title: 'Is SEO Dead in 2026? What the AI Search Data Actually Says',
-    description:
-      "Is SEO dead in 2026? The short answer: no, but it has changed significantly. Here's what the real traffic data from AI Overviews, ChatGPT, and Perplexity shows about organic search in 2026.",
-  },
-  keyTakeaways: [
-    'SEO is not dead. Google processes over 8.5 billion searches per day in 2026, and organic search drives more traffic than any other digital channel for most small businesses.',
-    'AI Overviews have reduced click-through rates for informational queries by 15–25%, but commercial and local queries are largely unaffected.',
-    'The businesses being hurt most are those that built their SEO strategy around thin, informational content, not those with service pages, local SEO, and conversion-focused content.',
-    'AI search tools (ChatGPT, Perplexity, Claude) pull answers from indexed web content, meaning strong SEO is now the prerequisite for AI visibility, not an alternative to it.',
-    'The shift is not from SEO to AI, it is from keyword-stuffed content to genuinely useful, structured, expert-authored content. That transition rewards good SEO practitioners.',
-    'Local SEO is more alive than ever: AI Overviews rarely replace local pack results, and "near me" searches continue growing year-over-year.',
-  ],
-  faqs: [
+const faqs = [
     {
       q: 'Is SEO dead in 2026?',
       a: 'No. Google processes over 8.5 billion searches per day in 2026. Organic search drives more website traffic than social media, email, and paid advertising combined for most small businesses. SEO has changed, thin content performs worse, AI Overviews intercept some informational queries, but the channel itself is larger than ever.',
@@ -114,7 +90,33 @@ export const post: BlogPost = {
       q: 'What is the biggest SEO mistake small businesses make in 2026?',
       a: "The most common mistake: abandoning SEO because AI search is growing, then watching competitors capture organic traffic that keeps compounding. The second most common: continuing to publish thin, generic content that AI Overviews simply absorb, rather than shifting to expert, conversion-focused content that AI cannot replace.",
     },
+  ];
+
+export const post: BlogPost = {
+  id: '222',
+  slug: 'is-seo-dead-2026-ai-search-data',
+  title: 'Is SEO Dead in 2026? What the AI Search Data Actually Says',
+  excerpt:
+    'Every year someone declares SEO dead. In 2026, they have a better argument than ever. AI Overviews, ChatGPT search, and Perplexity are reshaping how people find businesses. Here is what the data actually shows.',
+  category: 'Emerging Tech',
+  author: 'Bhavesh Barot',
+  date: 'Jun 7, 2026',
+  readTime: '10 min read',
+  imageUrl: '/blog-images/is-seo-dead-2026-ai-search-data.webp',
+  meta: {
+    title: 'Is SEO Dead in 2026? What the AI Search Data Actually Says',
+    description:
+      "Is SEO dead in 2026? The short answer: no, but it has changed significantly. Here's what the real traffic data from AI Overviews, ChatGPT, and Perplexity shows about organic search in 2026.",
+  },
+  keyTakeaways: [
+    'SEO is not dead. Google processes over 8.5 billion searches per day in 2026, and organic search drives more traffic than any other digital channel for most small businesses.',
+    'AI Overviews have reduced click-through rates for informational queries by 15–25%, but commercial and local queries are largely unaffected.',
+    'The businesses being hurt most are those that built their SEO strategy around thin, informational content, not those with service pages, local SEO, and conversion-focused content.',
+    'AI search tools (ChatGPT, Perplexity, Claude) pull answers from indexed web content, meaning strong SEO is now the prerequisite for AI visibility, not an alternative to it.',
+    'The shift is not from SEO to AI, it is from keyword-stuffed content to genuinely useful, structured, expert-authored content. That transition rewards good SEO practitioners.',
+    'Local SEO is more alive than ever: AI Overviews rarely replace local pack results, and "near me" searches continue growing year-over-year.',
   ],
+  faqs,
   content: (
     <article>
       {/* ── SCHEMA ─────────────────────────────────────────────────────── */}
@@ -172,48 +174,7 @@ export const post: BlogPost = {
             {
               '@context': 'https://schema.org',
               '@type': 'FAQPage',
-              mainEntity: [
-                {
-                  '@type': 'Question',
-                  name: 'Is SEO dead in 2026?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'No. Google processes over 8.5 billion searches per day in 2026. SEO has changed, thin content performs worse, AI Overviews intercept some queries, but the channel itself is larger than ever.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'Has AI killed SEO?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'AI has changed how search results are displayed, not whether people search. AI tools like ChatGPT pull answers from indexed web content, strong SEO is the prerequisite for AI visibility.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'Is local SEO still worth it in 2026?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Yes, local SEO is stronger in 2026 than any prior year. AI Overviews rarely appear for local queries, and "near me" searches continue growing year-over-year.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'What SEO strategies work best in 2026?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Topical cluster content, original research, FAQ and Article schema, strong E-E-A-T signals, local SEO with active Google Business Profile management, and Core Web Vitals optimization.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'Should small businesses still invest in SEO in 2026?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Yes. For most small businesses, especially service businesses, local businesses, and e-commerce. SEO remains the highest long-term ROI marketing channel available.',
-                  },
-                },
-              ],
+              mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
             },
           ]),
         }}

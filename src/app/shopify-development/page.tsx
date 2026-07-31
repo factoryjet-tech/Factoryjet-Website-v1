@@ -143,68 +143,6 @@ const SHOPIFY_serviceSchema = {
   },
 };
 
-const SHOPIFY_faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How much does a custom Shopify store cost in India?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "FactoryJet's Shopify pricing is fixed-price and scoped to your build. The main drivers are whether you need a custom theme on an existing store, a full store build (custom theme, products, Razorpay and UPI payment integration, Shiprocket logistics, GST invoicing, and launch), or a Shopify Plus build with B2B wholesale portals, multi-storefront management, and Checkout Extensibility. Every project is quoted up front after a free discovery call, with no hourly billing and no scope creep.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to build a Shopify store in India?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "A custom Shopify theme applied to an existing store takes 5–7 days. A full store build from scratch — theme, product catalog, Razorpay + UPI payment integration, Shiprocket logistics, GST invoicing, and launch — takes 7–14 days. Shopify Plus builds with B2B features, multi-storefronts, or headless Hydrogen setups take 5–10 weeks depending on complexity.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Does Shopify work well for Indian businesses — Razorpay, UPI, and GST?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Yes — Shopify has excellent support for Indian payment methods and compliance. Razorpay's Shopify plugin supports UPI, cards, net banking, EMI, Paytm, PhonePe, and BNPL (LazyPay, Simpl) in a single checkout integration. GST-compliant invoices can be auto-generated at order placement using metafield-based invoice templates or third-party apps. Shiprocket integrates natively with Shopify for access to Delhivery, Bluedart, XpressBees, and 15+ couriers. FactoryJet configures all of this as standard in every Indian Shopify build.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you migrate my WooCommerce or OpenCart store to Shopify?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Yes — Shopify migrations are one of our most common engagements. We migrate products (including variants, images, and metafields), customers, order history, and reviews from WooCommerce, OpenCart, Magento, BigCommerce, Wix, Squarespace, and custom PHP platforms. We preserve your URL structure with 301 redirects to protect SEO rankings, test the full checkout flow on staging before DNS switch, and migrate all existing Razorpay or PayU payment configurations. Zero downtime on launch day.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Will my Shopify store rank on Google India?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Yes. Every Shopify store we build includes technical SEO: Product and BreadcrumbList schema markup for Google Shopping eligibility, optimised title tags and meta descriptions for all product and collection page templates, canonical URLs to fix Shopify's duplicate URL issues, compressed WebP images with descriptive alt text, sitemap submission to Google Search Console, and Core Web Vitals optimisation for Indian mobile networks.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Which is the best Shopify development company in India?',
-      acceptedAnswer: { '@type': 'Answer', text: 'For D2C brands and small businesses, FactoryJet makes a strong case: custom Shopify stores built by senior engineers at a fixed written price — and yes, we are the best agency to build a Shopify store fast, with standard stores launching in one week. The best Shopify development agency in India for you still depends on scope: a brand moving to Shopify Plus needs the best Shopify Plus agency in India capabilities, while a first store needs conversion basics from the best Shopify website design company in India it can afford. Whoever you compare among the best Shopify experts in India, ask for store speed scores — that is what the best Shopify development services in India are measured on.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'What are the top 10 Shopify development companies in India?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Lists of the top 10 Shopify development agencies in India usually rank by portfolio size, which is the wrong filter for a small business. FactoryJet competes in the top 10 Shopify development companies in India conversation on three measurable things: who writes the code, a fixed quote confirmed up front, and launch speed. The same checks apply to any roundup of the top 10 Shopify experts in India.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does Shopify website cost in India?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Shopify website cost in India ranges widely — a basic template setup sits at the low end, while a custom theme with advanced features costs more. If you are asking how much does Shopify store cost in India all-in, factor in apps and your monthly Shopify plan fee too — an honest agency quotes both. Our pricing is fixed-price and scoped to your build after a free discovery call. And if speed matters, we can launch a standard Shopify store in one week.' },
-    },
-  ],
-};
-
 const SHOPIFY_howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
@@ -714,6 +652,16 @@ const SHOPIFY_FAQ_ITEMS = [
       'Shopify website cost in India ranges widely — a basic template setup sits at the low end, while a custom theme with advanced features costs more. If you are asking how much does Shopify store cost in India all-in, factor in apps and your monthly Shopify plan fee too — an honest agency quotes both. Our pricing is fixed-price and scoped to your build after a free discovery call. And if speed matters, we can launch a standard Shopify store in one week.',
   },
 ];
+
+const SHOPIFY_faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: SHOPIFY_FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Page Component

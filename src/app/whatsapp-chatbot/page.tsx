@@ -128,173 +128,6 @@ const breadcrumbSchema = {
   ],
 };
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How much does WhatsApp chatbot development cost in India?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'WhatsApp chatbot pricing in India is fixed-price and scoped to your build. The main drivers are flow complexity and integrations: a basic FAQ and lead-capture bot sits at the lower end, a multi-flow business bot with Razorpay and order tracking is a mid scope, and an AI-powered NLP enterprise bot with multi-language support and n8n automation is the top scope. Every project is quoted up front after a free discovery call — no hourly billing.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'WhatsApp chatbot banana ka kharcha kitna hota hai?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'WhatsApp chatbot development India mein fixed-price hota hai aur aapke build ke hisaab se scope kiya jata hai. Basic FAQ bot sabse simple scope hai, multi-flow business bot (order tracking aur Razorpay payment integration ke saath) mid scope hai, aur enterprise AI chatbot (Hindi, Tamil, Telugu support aur n8n automation ke saath) top scope hai. Har project free discovery call ke baad pehle hi quote kiya jata hai — koi hourly billing nahi.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to build a WhatsApp chatbot in India?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet builds and deploys WhatsApp chatbots in 7 days. Day 1 is the discovery call and architecture. Days 2–3 cover WhatsApp Business API setup. Days 4–6 are build, test, and train. Day 7 is go-live with 30-day support included.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the difference between WhatsApp Business app and WhatsApp Business API?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The WhatsApp Business app is a free app for very small businesses — one device, manual replies, limited automation. The WhatsApp Business API is for businesses that need automation: chatbots, bulk messaging, CRM integration, multiple agents, and 24/7 automated responses. The API requires a Meta-approved BSP (like Interakt, Wati, or AiSensy) and costs extra per message.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Kya mera chatbot Hindi mein baat kar sakta hai?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Haan, bilkul. FactoryJet ke WhatsApp chatbots Hindi, Hinglish, Tamil, Telugu, Marathi, Gujarati, aur baaki Indian languages mein baat kar sakte hain. Language auto-detect hoti hai — customer jis bhi language mein message kare, chatbot usi language mein jawab deta hai. Alag-alag bots nahi chahiye.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Does my business need Meta approval to use the WhatsApp Business API?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes, WhatsApp Business API requires Meta Business verification. FactoryJet handles the entire setup — choosing the right BSP (Interakt, Wati, or AiSensy), completing Meta Business Manager verification, and submitting your account for approval. Most Indian businesses are live within 5–7 business days of document submission.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can a WhatsApp chatbot integrate with Razorpay for payments?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. FactoryJet integrates Razorpay webhooks so your chatbot can generate and send payment links on WhatsApp, confirm payment success automatically, and log the transaction to your CRM or accounting system — replacing manual payment follow-up entirely. UPI and COD workflows are also supported.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Which WhatsApp chatbot platform is best for Indian businesses?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'For most Indian SMBs, Interakt or AiSensy are the best value: India-focused, INR pricing, and strong Razorpay/Shopify integration. Wati is stronger for larger teams needing advanced team inbox features. For enterprise with heavy automation, we recommend n8n as the workflow backbone connected to any of these BSPs.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What can a WhatsApp chatbot do for my ecommerce business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'For D2C and ecommerce businesses, a WhatsApp chatbot can handle order tracking (connected to Shiprocket/Delhivery), return and refund requests, product catalog browsing, Razorpay payment links, COD order confirmations, abandoned cart follow-ups, and post-purchase review requests — all automatically, 24/7.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Kya WhatsApp chatbot mera order tracking kar sakta hai?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Haan. FactoryJet ka WhatsApp chatbot aapke Shiprocket ya Delhivery account se connect hota hai. Customer jab "order kahan hai" ya "track my order" type karta hai, chatbot turant order status check karke tracking link bhejta hai — bina kisi human ke. Ye 24 ghante, 7 din karta rehta hai.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can the WhatsApp chatbot handle lead capture for real estate?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. For real estate businesses, WhatsApp chatbots can qualify inbound leads from 99acres, MagicBricks, and Google Ads by asking budget, location, and timeline questions — then route hot leads to your sales team with full context logged to Zoho CRM or LeadSquared. Builders report 35–50% more site visit bookings without adding telecallers.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is n8n and why does FactoryJet use it for WhatsApp automation?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'n8n is an open-source workflow automation tool — similar to Zapier but self-hosted, far cheaper at scale, and better suited for complex Indian business workflows (Razorpay + Zoho CRM + Shiprocket triggers). FactoryJet uses n8n for enterprise WhatsApp automation because you own the workflows, pay no per-operation fees, and can build logic that SaaS tools simply cannot handle.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is a WhatsApp chatbot useful for restaurants and food businesses?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Very much so. A restaurant WhatsApp chatbot can show the digital menu, take orders, confirm reservations, send order status updates, handle table booking, and collect customer reviews — all without a human. KFC India and many restaurant chains use WhatsApp chatbots to handle peak-hour order volume without adding staff.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What ongoing costs are there after the chatbot is built?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Two ongoing costs go to third parties, not to us: your BSP subscription (Interakt, Wati, or AiSensy charge a monthly fee based on plan and message volume) and Meta\'s per-conversation charges (marketing and utility conversations carry a small per-conversation fee, while customer-initiated service conversations are free). FactoryJet charges nothing ongoing unless you choose an optional monthly retainer.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can the chatbot handle appointment booking for clinics and coaching?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. FactoryJet builds WhatsApp chatbots that check doctor or coach availability in real time, confirm bookings, send reminder messages 24 hours before, and handle rescheduling or cancellations — all on WhatsApp without any app download required. Healthcare clinics report recovering 3–4 hours of front-desk time per day.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How is a WhatsApp chatbot different from just using the WhatsApp Business app?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The WhatsApp Business app requires someone to manually type and send every reply. A chatbot built on the WhatsApp Business API responds instantly and automatically to any message, 24/7 — even while your team is offline or sleeping. It can also integrate with your Shopify store, CRM, and payment gateway to take real actions, not just send text replies.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'WhatsApp Business API approval mein kitna time lagta hai?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Meta Business verification aur WhatsApp API approval mein generally 3–7 business days lagte hain, agar saare documents sahi ho. FactoryJet poora process handle karta hai — BSP selection, Meta Business Manager setup, document submission, aur approval track karna. Aapko khud kuch nahi karna padta.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can the chatbot send broadcast messages and campaigns on WhatsApp?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes, using WhatsApp template messages pre-approved by Meta. Common campaigns: order shipped notifications, payment reminders, promotional offers, re-engagement messages, and appointment reminders. FactoryJet sets up the template approval process and connects broadcast triggers to your Razorpay, Shopify, or CRM workflows so they fire automatically.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is my customer data safe with a WhatsApp chatbot?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. FactoryJet builds on Meta-approved BSPs that are GDPR and India DPDP Act compliant. All data flows use API-level integrations (no screen scraping), least-privilege access, and full audit trails. For healthcare and financial services, we can implement stricter data residency controls on request.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you offer WhatsApp chatbot support and maintenance after launch?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Every FactoryJet WhatsApp chatbot project includes 30 days of post-launch support: conversation log monitoring, response tuning where the bot underperforms, integration bug fixes, and a team training session. After 30 days, you manage the bot through your BSP dashboard or continue on an optional monthly retainer for ongoing optimisation and new conversation flows.',
-      },
-    },
-  ],
-};
-
 const speakableSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -619,6 +452,16 @@ const WHATSAPP_FAQ_ITEMS = [
       'Yes. FactoryJet builds on Meta-approved BSPs that comply with GDPR and India\'s DPDP Act. All data integrations use API-level connections (no screen scraping), least-privilege access controls, and full audit trails on every action. For healthcare and financial services, stricter data residency controls are available on request.',
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: WHATSAPP_FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Page

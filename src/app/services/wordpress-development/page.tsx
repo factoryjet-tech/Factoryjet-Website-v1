@@ -73,69 +73,6 @@ export const metadata: Metadata = {
    JSON-LD Schema
 ───────────────────────────────────────────────────────────────────────────── */
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How much does a custom WordPress website cost?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet\'s custom WordPress website design is fixed-price and scoped to your build. The main cost drivers are page count (a focused business site vs. a 15–30 page site with custom post types and advanced functionality) and whether you need WordPress e-commerce on WooCommerce. Fixed-price and milestone-paid, with the full number confirmed on a free consultation before work starts — our experienced team has built WordPress sites for US businesses for 12+ years with the same engineering quality.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the difference between a custom WordPress theme and a page builder theme?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A custom WordPress theme is built from scratch in code — it loads only what your site needs, produces clean HTML and CSS, and typically achieves Lighthouse scores of 85–100. A page builder theme (Elementor, Divi, WPBakery, Beaver Builder) generates bloated markup, often loads 10–25 unnecessary scripts and stylesheets, and routinely produces Lighthouse performance scores of 30–60. The difference in page load time on mobile is typically 3–8 seconds. Since Google uses Core Web Vitals as a ranking signal and 53% of mobile visitors abandon sites that take more than 3 seconds to load, the choice between a page builder and a custom theme is not a style preference — it is a business performance decision.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to build a custom WordPress website?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A custom WordPress business website (10–15 pages) typically takes 3–5 weeks. Larger sites with 20–40 pages, custom post types, and membership or directory functionality run 6–10 weeks. WooCommerce stores take 4–8 weeks depending on product catalog size and custom functionality. Timelines are driven primarily by the speed of content delivery and feedback from your side — our engineering process is built around 24-hour feedback loops to keep projects from stalling.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is WordPress still a good choice for a small business website in 2025?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — when built correctly. WordPress powers 43% of all websites on the internet and has the largest plugin ecosystem, the most flexibility for content management, and the strongest SEO plugin support (Yoast, RankMath) of any CMS. The problems people associate with WordPress — slow load times, security vulnerabilities, difficult maintenance — are almost always caused by page builders and poorly coded themes, not WordPress itself. A custom-built WordPress site with a clean theme, minimal plugins, and proper hosting can achieve Lighthouse scores of 90–100 and outperform most SaaS website builders on every performance metric.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What does a WordPress web design agency do?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A WordPress web design agency handles the full design and development lifecycle: information architecture (what pages you need and how they\'re structured), visual design (custom design in Figma, not a purchased template), WordPress development (custom theme or plugin development, no page builders), on-page SEO (meta tags, schema markup, site structure), performance optimization (Core Web Vitals, image optimization, caching), and ongoing maintenance. The right agency also does discovery work upfront — understanding your business, customers, and conversion goals — before touching a design tool.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you fix or redesign my existing WordPress site?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. WordPress redesigns are a significant portion of our work. Whether your site is built on Elementor, Divi, a purchased theme, or an older custom theme, we can redesign it — either on a fresh custom WordPress build or migrate your content to a better architecture. We start with an audit of what\'s causing the current problems (usually performance, mobile usability, or conversion structure) and scope the redesign around fixing those specific issues rather than rebuilding everything unnecessarily.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What WordPress plugins does FactoryJet use?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We build with a minimal, maintained plugin stack: Yoast SEO or RankMath for SEO, WooCommerce for e-commerce (where needed), Gravity Forms or WPForms for lead capture, WP Rocket or Perfmatters for caching and performance, Wordfence or Solid Security for security, and UpdraftPlus for backups. We avoid: Elementor, Divi, WPBakery, and any page builders; bloated multipurpose themes; and plugin stacks with known performance overhead. Every plugin we install has a specific function, is actively maintained, and has been tested against your theme for conflicts before launch.',
-      },
-    },
-  ],
-};
-
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -588,6 +525,16 @@ const FAQ_ITEMS = [
       'Yes — WordPress maintenance is essential, not optional. WordPress is the world\'s most targeted CMS for security vulnerabilities — sites running outdated plugins and core versions are actively exploited. FactoryJet\'s WordPress maintenance plans (scoped and quoted up front) include: weekly WordPress core, theme, and plugin updates tested on a staging environment before applying to production; daily UpdraftPlus backups stored off-site; uptime monitoring with immediate alerts; Google Search Console monitoring for crawl errors and indexing issues; malware scanning via Wordfence or Sucuri; and 2 hours of content and minor design updates per month. Maintenance clients have never experienced a WordPress hack while under our care. Unmanaged WordPress sites are typically compromised within 18–24 months of launch as security patches go unapplied.',
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 const howToSchema = {
   '@context': 'https://schema.org',

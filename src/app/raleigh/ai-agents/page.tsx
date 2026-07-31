@@ -67,79 +67,9 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schema (FAQPage + Service)
+   JSON-LD Schema (Service + HowTo + Breadcrumb) — faqSchema is declared after
+   FAQ_ITEMS below, since it derives mainEntity from that array via .map()
 ───────────────────────────────────────────────────────────────────────────── */
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is an AI agent for a Raleigh business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'An AI agent is software that handles multi-step customer interactions autonomously — answering questions, qualifying leads, booking appointments, processing requests, and routing support tickets — using large language models like GPT-4o or Claude. For Raleigh and Research Triangle businesses in biotech, pharma, SaaS, and professional services, an AI agent responds to customers at any hour, connects to your live business systems, and handles the routine workload so your team focuses on the high-value work that drove you to the Triangle in the first place.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How does an AI agent benefit Research Triangle companies?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The Research Triangle\'s economy — biotech, pharma, university spinouts, SaaS, and professional services — shares a common challenge: highly specialized staff spending time on repetitive customer and internal inquiries. An AI agent handles inbound questions, qualifies leads from academic and corporate partners, routes support tickets, and answers policy and service questions 24/7 — so your PhD-level staff, sales engineers, and specialists spend their time on the work that actually requires their expertise.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What kinds of AI agents does FactoryJet build for Raleigh companies?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We build five core types: Customer Support Agents (24/7 automated answers connected to your live systems), Lead Qualification Agents (engage and qualify inbound prospects from web, email, and events), Research & Knowledge Agents (answer policy, compliance, and product questions from internal documentation), Appointment Booking Agents (scheduling for clinics, service businesses, and professional practices), and E-Commerce Agents (order support, product guidance, returns). Raleigh biotech and SaaS companies most commonly start with lead qualification or internal knowledge agents.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does an AI agent cost for a Raleigh business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Pricing is fixed-price and scoped to your build — the main drivers are the number of intents, integrations, and compliance requirements. The Starter tier is a single-purpose agent; Growth covers multi-intent agents with CRM integration, live handoff, and a conversation dashboard; and the Enterprise tier covers custom agents with compliance architecture. Every agent is quoted up front after a free discovery call, so you know the full cost before work starts — no hourly billing, no scope creep.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is the Raleigh-Durham area a good market for AI adoption?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — the Research Triangle is one of the most educated and technology-forward markets in the US. The concentration of PhD researchers, engineers, and technology companies means both business buyers and consumers are comfortable with AI-driven interactions. Biotech and pharma companies in the Triangle are already investing heavily in AI for internal workflows. Businesses that deploy customer-facing AI agents in this market find high acceptance rates and strong performance in lead qualification and support automation.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can a Raleigh AI agent connect to biotech CRMs, Salesforce, or custom research platforms?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — AI agents integrate with the platforms Research Triangle companies run on. Common connections include Salesforce and HubSpot for CRM, Zendesk and Intercom for support, Calendly and Google Calendar for scheduling, Slack for internal routing, and custom APIs for proprietary biotech and SaaS platforms. For Raleigh companies on modern tech stacks, 70–80% of the integration infrastructure is already in place. We build the AI agent layer on top of what you have.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can our Raleigh compliance or legal team review the AI agent before it goes live?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — compliance review before deployment is built into every regulated-industry engagement. We run a staged testing period where your Research Triangle compliance, legal, or risk team interacts with the agent using real scenarios before any production customer conversations begin. For Raleigh biotech and healthcare clients, this includes reviewing how the agent handles sensitive topic escalation, PHI avoidance, and fallback behavior. We document everything in a format designed for internal control review.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do Raleigh biotech or healthcare clients pay extra for HIPAA-aware agent configurations?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No surprise add-ons. HIPAA-aware data handling, PHI avoidance, audit trail logging, and private LLM deployment options are included in our Enterprise tier — not charged as separate line items. For most Raleigh healthcare and life sciences clients, the Growth tier already covers the compliance handling they need. We scope this accurately during the discovery session so your budget commitment is clear before work starts.',
-      },
-    },
-  ],
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -661,6 +591,16 @@ const FAQ_ITEMS = [
       'No. The admin dashboard lets non-technical team members view conversation logs, update answer content, adjust escalation thresholds, and monitor performance metrics without touching code. Your operations or marketing coordinator can run it day-to-day. If something breaks because a connected platform changes its API, you contact us and we fix it.',
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Page

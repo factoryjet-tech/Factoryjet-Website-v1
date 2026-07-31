@@ -67,79 +67,8 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schema (FAQPage + Service)
+   JSON-LD Schema (Service + HowTo + Breadcrumb) — faqSchema is declared after FAQ_ITEMS below
 ───────────────────────────────────────────────────────────────────────────── */
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is an AI agent for a Denver business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'An AI agent is software that handles multi-step customer interactions autonomously — answering questions, qualifying leads, booking appointments, processing orders, and routing support tickets — using large language models like GPT-4o or Claude. For Denver businesses in outdoor retail, SaaS, cannabis, hospitality, and real estate, an AI agent responds to customers at any hour, connects to your live business systems, and handles the routine workload so your team focuses on growth.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How does an AI agent help Denver businesses specifically?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Denver\'s economy has distinct characteristics: a strong outdoor and active lifestyle brand scene, a growing tech and startup corridor along the 16th Street and RiNo areas, a cannabis industry that relies heavily on digital customer education, and a booming population of remote workers and transplants who find vendors online. AI agents help Denver businesses respond immediately to inbound — from gear questions at midnight to SaaS trial inquiries over the weekend — and compete with larger companies without matching their headcount.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What kinds of AI agents does FactoryJet build for Denver companies?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We build five core types: Customer Support Agents (24/7 automated answers connected to your live systems), Lead Qualification Agents (engage and qualify website visitors before they bounce), E-Commerce Agents (order tracking, returns, product recommendations for outdoor gear, DTC brands, and retail), Appointment Booking Agents (scheduling for wellness studios, medical practices, and service businesses), and Internal Knowledge Agents (instant answers from your SOPs for your team). Denver businesses most commonly start with lead generation or e-commerce support agents.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does an AI agent cost for a Denver business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet\'s AI agents are priced fixed-price and scoped to your build — the main drivers are the number of intents, integrations, and channels. The Starter tier covers a single-purpose agent; the Growth tier covers multi-intent agents with CRM integration, live handoff, and a conversation dashboard — the most popular option for Denver SMBs; and the Enterprise tier covers fully custom systems. Every project is quoted up front after a free discovery call — no hourly billing, no scope creep.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is Denver a strong market for AI adoption?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. Denver ranks consistently among the top US metros for startup activity and technology adoption. The city\'s mix of tech-native transplants, outdoor industry digital brands, and a growing SaaS ecosystem means customers are comfortable with AI-powered interactions and expect fast digital responses. Businesses that deploy AI agents in Denver report particularly strong results in after-hours lead capture — a critical advantage given the city\'s active lifestyle culture that has people browsing and buying outside of traditional business hours.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can a Denver AI agent connect to tools like HubSpot, Shopify, and Google Calendar?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — AI agents integrate natively with the platforms Denver businesses already use. Common connections include HubSpot and Salesforce for CRM, Shopify and WooCommerce for e-commerce, Google Calendar and Calendly for scheduling, Zendesk and Freshdesk for support ticketing, Slack for team alerts, and Twilio for SMS. Most Denver businesses are already on standard platforms, which means 70–80% of the integration work is already done. We build the agent layer on top of your existing stack.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can a Denver AI agent run on my website, Instagram, and WhatsApp simultaneously?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — multi-channel deployment is included on Growth and Enterprise plans. A single AI agent handles conversations across your website chat widget, WhatsApp Business, Instagram DMs, Facebook Messenger, and SMS. Denver outdoor and lifestyle brands with strong social audiences see 35–50% of inbound inquiries through Instagram and Facebook, not just the website. One agent, one configuration, consistent answers across all channels.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is there a payment plan for Denver AI agent projects?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet uses milestone-based payments — 50% at kickoff and 50% at delivery for Starter projects. For Growth and Enterprise engagements: 40% at kickoff, 40% at testing approval, 20% at launch. Payments align with working deliverables you can test — not with calendar dates. No large upfront commitment before you\'ve seen the Denver AI agent working on real business scenarios.',
-      },
-    },
-  ],
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -661,6 +590,16 @@ const FAQ_ITEMS = [
       'No. The admin dashboard lets non-technical team members view conversation logs, update answer content, adjust escalation thresholds, and monitor performance metrics without touching code. Your operations or marketing coordinator can run it day-to-day. If something breaks because a connected platform changes its API, you contact us and we fix it.',
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Page

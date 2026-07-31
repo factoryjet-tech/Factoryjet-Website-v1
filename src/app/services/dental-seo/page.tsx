@@ -106,75 +106,142 @@ const serviceSchema = {
     'Dental SEO services for US practices: Google Business Profile optimization, review velocity systems, NAP citation building, clinical entity authority content, and Map Pack ranking.',
 };
 
+/* ─────────────────────────────────────────────────────────────────────────────
+   FAQ_ITEMS mirrors the 20 visible <details> Q&A pairs in the FAQ section below
+   (5 categories × 4 questions) verbatim, so faqSchema's mainEntity can be
+   generated from a single source instead of a separately hand-written list.
+───────────────────────────────────────────────────────────────────────────── */
+const FAQ_ITEMS = [
+  {
+    category: 'Map Pack Basics',
+    question: 'What is the Map Pack and why does it matter for dental practices?',
+    answer:
+      'The Map Pack is the cluster of three local business listings Google shows at the top of results for location-based searches. For "dentist near me" and most other dental queries, it sits above the organic results and captures about 42% of all clicks. If your practice is not in those three spots, most searchers never see you.',
+  },
+  {
+    category: 'Map Pack Basics',
+    question: 'How long does it take to get into the Map Pack?',
+    answer:
+      'Most practices with a complete GBP and healthy citation profile see measurable movement within 8 to 12 weeks of starting a structured SEO program. Highly competitive markets with many established practices take longer. The foundation work we do in the first 30 days is what makes the timeline predictable.',
+  },
+  {
+    category: 'Map Pack Basics',
+    question: 'What if my practice already has a Google Business Profile?',
+    answer:
+      'Great, that is the starting point. The question is whether every attribute on it is set correctly, whether it has consistent categories, whether photos are current, and whether the service list matches what your practice actually offers. We audit it against 40+ ranking factors in the first week and correct anything that is wrong or missing.',
+  },
+  {
+    category: 'Map Pack Basics',
+    question: 'Can my practice rank in multiple cities?',
+    answer:
+      'For the Map Pack, Google uses your verified address as the geographic center. You can appear in searches from people in surrounding areas, but you cannot rank in a Map Pack for a city where your practice is not located. For organic search, geo-specific landing pages can target surrounding communities effectively.',
+  },
+  {
+    category: 'Google Business Profile',
+    question: 'Why does my GBP category matter so much?',
+    answer:
+      'Your primary category tells Google which searches to consider your practice for. A general dentist set to "Dentist" will miss specialty searches like "orthodontist near me" or "cosmetic dentist." Secondary categories let you capture those as well. Getting this wrong means being invisible for entire segments of your potential patients.',
+  },
+  {
+    category: 'Google Business Profile',
+    question: 'How many photos should my GBP have?',
+    answer:
+      'Practices with more than 100 photos get significantly more profile views, but the cadence matters as much as volume. Four or more new photos per month signals to Google that your business is active. Interior shots, exterior shots, team photos, and equipment all contribute. Stock photos do not count and can actually hurt you.',
+  },
+  {
+    category: 'Google Business Profile',
+    question: 'Should I respond to negative reviews?',
+    answer:
+      'Yes, every time, within 48 hours. Negative reviews that go unanswered look worse to potential patients than the review itself. A professional, calm response demonstrates that you take feedback seriously. It is also indexed by Google, so your response language becomes part of your local relevance signal for patient-experience related searches.',
+  },
+  {
+    category: 'Google Business Profile',
+    question: 'What are GBP posts and do they help SEO?',
+    answer:
+      'GBP posts let you publish updates, offers, events, and service highlights directly on your profile. They expire after seven days for most post types. Consistent posting signals activity and gives Google fresh content to associate with your practice. They appear in your knowledge panel and can increase profile engagement metrics that correlate with ranking.',
+  },
+  {
+    category: 'Review Strategy',
+    question: 'How do we get more Google reviews without sounding pushy?',
+    answer:
+      'Timing is everything. The best moment to ask is right after the appointment when the patient expresses satisfaction. A simple verbal ask from the front desk followed by a text with a direct link to your review page converts at far higher rates than email blasts. We design the full workflow including the script, the SMS copy, and the timing so your team can use it without it feeling awkward.',
+  },
+  {
+    category: 'Review Strategy',
+    question: 'Can I offer incentives for reviews?',
+    answer:
+      'No. Google explicitly prohibits incentivized reviews and can remove your entire review count if it detects the pattern. Beyond the Google policy, HIPAA also creates complications around acknowledging that someone was your patient publicly. The right approach is making it easy to leave a review for patients who are already happy, not manufacturing reviews.',
+  },
+  {
+    category: 'Review Strategy',
+    question: 'What review count do I need to be competitive?',
+    answer:
+      'This depends entirely on your local market. In smaller markets, 40 reviews with a 4.8 average can dominate. In competitive urban markets, the top Map Pack positions often have 300 or more. We pull the actual counts for the practices currently in your Map Pack as part of your audit so you know exactly what target you are competing against.',
+  },
+  {
+    category: 'Review Strategy',
+    question: 'How do I handle a fake negative review?',
+    answer:
+      'Report it to Google using the flag feature and document your reasoning. Google does remove reviews that violate policies, but the process takes time. While waiting, respond professionally to the review without admitting any connection to the reviewer, since there may not be one. We handle the reporting and response drafting as part of ongoing GBP management.',
+  },
+  {
+    category: 'Technical and On-Site SEO',
+    question: 'Do I need separate landing pages for each dental service?',
+    answer:
+      'Yes. A single "services" page that lists everything you do cannot rank for individual service searches. Someone searching "dental implants near me" and someone searching "Invisalign dentist near me" have different intent. Separate pages with dedicated content, schema markup, and internal linking perform dramatically better than a combined page for either query.',
+  },
+  {
+    category: 'Technical and On-Site SEO',
+    question: 'What is schema markup and does my dental site need it?',
+    answer:
+      'Schema markup is structured data code you add to your site that tells Google exactly what your content means. For dental practices, this includes Dentist schema, MedicalProcedure schema, and LocalBusiness JSON-LD. Google uses it to show rich results in search, including your opening hours, star rating, and service categories directly in the search results page before anyone clicks.',
+  },
+  {
+    category: 'Technical and On-Site SEO',
+    question: 'How important is site speed for dental SEO?',
+    answer:
+      'Core Web Vitals are an official Google ranking factor. More practically, a slow site loses patients who are searching on a mobile phone and will not wait more than three seconds for a page to load. Mobile speed is especially critical for emergency dental searches where someone is in discomfort and needs to call immediately.',
+  },
+  {
+    category: 'Technical and On-Site SEO',
+    question: 'Should I build location pages for every city near my practice?',
+    answer:
+      'Pages targeting surrounding communities can capture organic traffic from people willing to travel to your location, but only if those pages have genuinely useful local content. Thin pages that swap city names into a template get filtered by Google and do not rank. When we build location pages, each one earns its own page with research specific to that community.',
+  },
+  {
+    category: 'Results and Expectations',
+    question: 'What results should I expect in the first 90 days?',
+    answer:
+      'GBP visibility improvements are typically measurable within 30 to 60 days. You should see profile view increases, more direction requests, and more phone calls attributed to your profile before organic rankings shift. Organic keyword movements take longer but are often visible by month three. We set up tracking before starting so you can see exactly what changed and when.',
+  },
+  {
+    category: 'Results and Expectations',
+    question: 'How do you measure success for a dental SEO campaign?',
+    answer:
+      'New patient inquiries is the only metric that matters for your practice\'s bottom line. We track that along with the upstream signals: GBP calls, direction requests, website visits from local search, keyword rankings by specialty, and review velocity. You get a monthly report connecting all of those to actual business outcomes.',
+  },
+  {
+    category: 'Results and Expectations',
+    question: 'Can SEO replace my current patient referral program?',
+    answer:
+      'They work differently and neither replaces the other. Referrals from existing patients convert at higher rates because there is already trust built in. SEO generates new patient volume from people who have no existing relationship with your practice, which expands your total patient base beyond your existing network. The strongest practices run both.',
+  },
+  {
+    category: 'Results and Expectations',
+    question: 'What happens if Google changes its algorithm while we are running a campaign?',
+    answer:
+      'Google updates its local search algorithm multiple times per year. Our approach focuses on signals that have been consistent across algorithm changes: citation accuracy, review velocity, GBP completeness, and on-site technical health. Practices that chased shortcuts or artificial signals take the hit. Practices built on clean fundamentals tend to hold or improve after updates.',
+  },
+];
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is the Map Pack and why does it matter for dental practices?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The Map Pack is the cluster of three local business listings Google shows at the top of results for location-based searches. For "dentist near me" and most other dental queries, it sits above the organic results and captures about 42% of all clicks. If your practice is not in those three spots, most searchers never see you.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to get into the Map Pack?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Most practices with a complete GBP and healthy citation profile see measurable movement within 8 to 12 weeks of starting a structured SEO program. Highly competitive markets with many established practices take longer. The foundation work we do in the first 30 days is what makes the timeline predictable.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What if my practice already has a Google Business Profile?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Great, that is the starting point. The question is whether every attribute on it is set correctly, whether it has consistent categories, whether photos are current, and whether the service list matches what your practice actually offers. We audit it against 40+ ranking factors in the first week and correct anything that is wrong or missing.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can my practice rank in multiple cities?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'For the Map Pack, Google uses your verified address as the geographic center. You can appear in searches from people in surrounding areas, but you cannot rank in a Map Pack for a city where your practice is not located. For organic search, geo-specific landing pages can target surrounding communities effectively.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Why does my GBP category matter so much?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Your primary category tells Google which searches to consider your practice for. A general dentist set to "Dentist" will miss specialty searches like "orthodontist near me" or "cosmetic dentist." Secondary categories let you capture those as well. Getting this wrong means being invisible for entire segments of your potential patients.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How do we get more Google reviews without sounding pushy?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Timing is everything. The best moment to ask is right after the appointment when the patient expresses satisfaction. A simple verbal ask from the front desk followed by a text with a direct link to your review page converts at far higher rates than email blasts.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I need separate landing pages for each dental service?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. A single "services" page that lists everything you do cannot rank for individual service searches. Separate pages with dedicated content, schema markup, and internal linking perform dramatically better than a combined page for either query.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What results should I expect in the first 90 days?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'GBP visibility improvements are typically measurable within 30 to 60 days. You should see profile view increases, more direction requests, and more phone calls attributed to your profile before organic rankings shift. Organic keyword movements take longer but are often visible by month three.',
-      },
-    },
-  ],
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
 };
 
 const organizationSchema = {

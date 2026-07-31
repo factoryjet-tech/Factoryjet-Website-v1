@@ -55,6 +55,130 @@ export const metadata: Metadata = {
   },
 };
 
+/* FAQ data — FAQPage schema below is generated FROM this array via .flatMap()
+   so the visible FAQ section and the structured data can never drift apart. */
+type FaqGroup = { id: string; label: string; items: { q: string; a: string }[] };
+const FAQ_GROUPS: FaqGroup[] = [
+  {
+    id: 'faq-basics',
+    label: 'COS SEO Basics',
+    items: [
+      {
+        q: 'Is SEO actually worth it in Colorado Springs?',
+        a: 'Yes, and the market makes it more valuable than most mid-size cities. The combination of military, aerospace, healthcare, and a fast-growing population creates sustained local search demand across almost every service category. If buyers are searching for what you sell, SEO is the highest ROI channel you have.',
+      },
+      {
+        q: 'How is Colorado Springs SEO different from Denver SEO?',
+        a: 'Colorado Springs has distinct audience segments that Denver does not. Military-adjacent services, aerospace B2B, and defense contractor procurement searches are COS-specific. Ranking in this market requires understanding the local economy, not just applying a generic local SEO playbook built for a retail-heavy city.',
+      },
+      {
+        q: 'How long does it take to see results?',
+        a: 'Technical fixes and GBP optimization can move rankings within 30 to 60 days. Content-driven ranking improvements for competitive terms typically show meaningful movement at the 90-day mark, with compounding gains through month six. We show you exactly where you stand every month.',
+      },
+      {
+        q: 'Do I need a local Colorado Springs address to rank?',
+        a: 'For Google Business Profile and Map Pack rankings, yes. You need a verifiable local address in the service area. For organic search, your domain authority, content quality, and local link profile matter far more than your registered business address.',
+      },
+    ],
+  },
+  {
+    id: 'faq-rankings',
+    label: 'Local Rankings + Map Pack',
+    items: [
+      {
+        q: 'What is the Map Pack and why does it matter?',
+        a: 'The Map Pack is the block of three local business listings that appears at the top of Google search results for local intent queries. It is usually shown above all organic results and gets a disproportionate share of clicks. For service businesses in Colorado Springs, getting into the Map Pack for your primary service is often worth more than ranking organically.',
+      },
+      {
+        q: "How do you get a business into Google's Map Pack?",
+        a: 'The core factors are: a fully optimized Google Business Profile, citation consistency across major directories, review velocity and sentiment, proximity to the searcher, and on-page relevance signals from your website. We optimize all of these systematically, not just the easy checkbox items.',
+      },
+      {
+        q: 'Can I rank in multiple COS neighborhoods at once?',
+        a: 'Yes. With dedicated neighborhood landing pages, proper internal linking, and location-specific content, you can rank for area-specific searches across Briargate, Powers Corridor, Rockrimmon, and other neighborhoods simultaneously. This is often the highest-leverage work for service businesses.',
+      },
+      {
+        q: 'My competitor is outranking me even though I have better reviews. Why?',
+        a: 'Reviews are one factor. Google also weighs domain authority, backlink profile, GBP completeness, citation volume, content relevance, and website technical health. A competitor with weaker reviews can outrank you if their technical and content signals are stronger. A proper audit usually identifies the specific gap within a few hours.',
+      },
+    ],
+  },
+  {
+    id: 'faq-industries',
+    label: 'Industries',
+    items: [
+      {
+        q: 'Can you do SEO for defense contractors and aerospace companies?',
+        a: 'Yes. We have experience building content strategies for technically complex B2B industries. Defense and aerospace SEO is fundamentally about long-tail informational content that builds authority with procurement teams and facility managers. It requires writers who understand the sector, not generalists who will summarize Wikipedia articles.',
+      },
+      {
+        q: 'We serve military families near Fort Carson. Can you help with that?',
+        a: 'Absolutely. Military community SEO has a specific rhythm. PCS season drives demand spikes in housing, moving, childcare, and services. We build content calendars and landing pages that align with military move cycles, not just general seasonal trends.',
+      },
+      {
+        q: 'Do you work with home service companies (HVAC, plumbing, roofing)?',
+        a: 'Home services is one of our highest-volume categories in Colorado Springs. The neighborhood-level page strategy we use for Briargate, Woodmen Road, and Powers Corridor has produced consistent Map Pack placements for HVAC and plumbing clients.',
+      },
+      {
+        q: 'We are a tourism-related business near Pikes Peak. What should we prioritize?',
+        a: 'For Pikes Peak and Garden of the Gods-adjacent businesses, the priority is seasonal content, voice search optimization, and schema markup for events and attractions. Ranking for "things to do near Pikes Peak" and adjacent queries requires structured content that Google can pull into its AI-generated answers at the top of search results.',
+      },
+    ],
+  },
+  {
+    id: 'faq-content',
+    label: 'Content + Keywords',
+    items: [
+      {
+        q: 'What keywords should a Colorado Springs business be targeting?',
+        a: 'It depends entirely on your service, your margins, and your geographic coverage. The keyword strategy starts with identifying the highest-intent searches in your category, then layering in neighborhood terms, comparison queries, and FAQ content that captures mid-funnel buyers. We do this analysis in week one before writing a single word.',
+      },
+      {
+        q: 'Is AI-generated content OK to use for SEO?',
+        a: "AI-generated content without human expertise layered in is a signal risk. Google's E-E-A-T standards reward first-hand experience and genuine expertise. We use AI tools to accelerate research and drafting, but every piece of content is reviewed, edited, and enriched by humans who understand your industry and your market.",
+      },
+      {
+        q: 'How many blog posts or landing pages do we need?',
+        a: 'Quality over volume, always. A single well-researched, properly optimized neighborhood page outperforms five thin city-level pages. We build a content map based on keyword opportunity and competitive gaps, then prioritize based on potential traffic value, not arbitrary monthly post counts.',
+      },
+      {
+        q: 'Should I build separate pages for each neighborhood?',
+        a: 'For service businesses with a physical service area in Colorado Springs, yes. Neighborhood pages that go beyond just swapping the city name, that include local references, relevant search intent, and neighborhood-specific content, consistently outperform generic city-level pages in local search.',
+      },
+    ],
+  },
+  {
+    id: 'faq-working',
+    label: 'Working with FactoryJet',
+    items: [
+      {
+        q: 'How does engagement work and what does it cost?',
+        a: 'Scope depends on your industry, how many neighborhoods and service areas to target, your current domain authority, and how competitive your specific keywords are. Book a free 30-minute audit call to scope the project together. We will pull your current rankings, show you your actual competitors, and give you a clear picture of what it will take.',
+      },
+      {
+        q: 'What does the first week look like?',
+        a: 'Week one is a full competitive audit. We map your keyword gaps against your top three local competitors, assess your technical health, review your GBP setup, and deliver a prioritized action plan before we write a single page. You know exactly what we are doing and why before we start producing anything.',
+      },
+      {
+        q: 'Do I need to be available for regular calls?',
+        a: 'We keep it light. A monthly strategy call plus async updates via email. You do not need to manage us closely. We document everything and flag you when we need a decision or information only you can provide.',
+      },
+      {
+        q: 'What happens if we are not seeing results in three months?',
+        a: 'We do a full diagnostic. If rankings are not moving within 90 days on the pages we have optimized, we identify exactly why and adjust the strategy. SEO is not always linear, but lack of progress always has a diagnosable cause. We find it and fix it rather than just sending a report and moving on.',
+      },
+      {
+        q: 'Are you based in Colorado Springs?',
+        a: 'We are not based in Colorado Springs, and we are transparent about that. What we bring is a dedicated national team with deep local market research, category expertise, and the production capacity to move faster than any local agency. We have ranked businesses in specialized local markets across the US and we know what it takes in competitive metros.',
+      },
+      {
+        q: 'Can you work alongside our existing marketing team?',
+        a: 'Yes. We integrate well with in-house marketing teams. If you have existing content, brand guidelines, or paid search running alongside SEO, we coordinate so that everything reinforces each other rather than working in silos.',
+      },
+    ],
+  },
+];
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -108,56 +232,13 @@ const jsonLd = {
     {
       '@type': 'FAQPage',
       '@id': `${CANONICAL}#faq`,
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Is SEO actually worth it in Colorado Springs?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes, and the market makes it more valuable than most mid-size cities. The combination of military, aerospace, healthcare, and a fast-growing population creates sustained local search demand across almost every service category. If buyers are searching for what you sell, SEO is the highest ROI channel you have.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How is Colorado Springs SEO different from Denver SEO?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Colorado Springs has distinct audience segments that Denver does not. Military-adjacent services, aerospace B2B, and defense contractor procurement searches are COS-specific. Ranking in this market requires understanding the local economy, not just applying a generic local SEO playbook built for a retail-heavy city.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How long does it take to see results?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Technical fixes and GBP optimization can move rankings within 30 to 60 days. Content-driven ranking improvements for competitive terms typically show meaningful movement at the 90-day mark, with compounding gains through month six. We show you exactly where you stand every month.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is the Map Pack and why does it matter?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'The Map Pack is the block of three local business listings that appears at the top of Google search results for local intent queries. It is usually shown above all organic results and gets a disproportionate share of clicks. For service businesses in Colorado Springs, getting into the Map Pack for your primary service is often worth more than ranking organically.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can you do SEO for defense contractors and aerospace companies?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. We have experience building content strategies for technically complex B2B industries. Defense and aerospace SEO is fundamentally about long-tail informational content that builds authority with procurement teams and facility managers. It requires writers who understand the sector, not generalists who will summarize Wikipedia articles.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How does engagement work and what does it cost?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Scope depends on your industry, how many neighborhoods and service areas to target, your current domain authority, and how competitive your specific keywords are. Book a free 30-minute audit call to scope the project together. We will pull your current rankings, show you your actual competitors, and give you a clear picture of what it will take.',
-          },
-        },
-      ],
+      mainEntity: FAQ_GROUPS.flatMap((g) =>
+        g.items.map((it) => ({
+          '@type': 'Question' as const,
+          name: it.q,
+          acceptedAnswer: { '@type': 'Answer' as const, text: it.a },
+        }))
+      ),
     },
   ],
 };
@@ -557,151 +638,24 @@ export default function ColoradoSpringsSEOPage() {
             <div className="faq-layout">
               {/* Sidebar nav */}
               <nav className="faq-nav">
-                <a href="#faq-basics" className="faq-nav-link active">COS SEO Basics</a>
-                <a href="#faq-rankings" className="faq-nav-link">Local Rankings + Map Pack</a>
-                <a href="#faq-industries" className="faq-nav-link">Industries</a>
-                <a href="#faq-content" className="faq-nav-link">Content + Keywords</a>
-                <a href="#faq-working" className="faq-nav-link">Working with FactoryJet</a>
+                {FAQ_GROUPS.map((g, i) => (
+                  <a key={g.id} href={`#${g.id}`} className={i === 0 ? 'faq-nav-link active' : 'faq-nav-link'}>{g.label}</a>
+                ))}
               </nav>
 
               {/* FAQ content */}
               <div className="faq-content">
-
-                {/* CATEGORY 1 */}
-                <div className="faq-category reveal" id="faq-basics">
-                  <span className="faq-cat-label">COS SEO Basics</span>
-
-                  <details>
-                    <summary>Is SEO actually worth it in Colorado Springs?</summary>
-                    <div className="faq-answer">Yes, and the market makes it more valuable than most mid-size cities. The combination of military, aerospace, healthcare, and a fast-growing population creates sustained local search demand across almost every service category. If buyers are searching for what you sell, SEO is the highest ROI channel you have.</div>
-                  </details>
-
-                  <details>
-                    <summary>How is Colorado Springs SEO different from Denver SEO?</summary>
-                    <div className="faq-answer">Colorado Springs has distinct audience segments that Denver does not. Military-adjacent services, aerospace B2B, and defense contractor procurement searches are COS-specific. Ranking in this market requires understanding the local economy, not just applying a generic local SEO playbook built for a retail-heavy city.</div>
-                  </details>
-
-                  <details>
-                    <summary>How long does it take to see results?</summary>
-                    <div className="faq-answer">Technical fixes and GBP optimization can move rankings within 30 to 60 days. Content-driven ranking improvements for competitive terms typically show meaningful movement at the 90-day mark, with compounding gains through month six. We show you exactly where you stand every month.</div>
-                  </details>
-
-                  <details>
-                    <summary>Do I need a local Colorado Springs address to rank?</summary>
-                    <div className="faq-answer">For Google Business Profile and Map Pack rankings, yes. You need a verifiable local address in the service area. For organic search, your domain authority, content quality, and local link profile matter far more than your registered business address.</div>
-                  </details>
-                </div>
-
-                {/* CATEGORY 2 */}
-                <div className="faq-category reveal" id="faq-rankings">
-                  <span className="faq-cat-label">Local Rankings + Map Pack</span>
-
-                  <details>
-                    <summary>What is the Map Pack and why does it matter?</summary>
-                    <div className="faq-answer">The Map Pack is the block of three local business listings that appears at the top of Google search results for local intent queries. It is usually shown above all organic results and gets a disproportionate share of clicks. For service businesses in Colorado Springs, getting into the Map Pack for your primary service is often worth more than ranking organically.</div>
-                  </details>
-
-                  <details>
-                    <summary>How do you get a business into Google&apos;s Map Pack?</summary>
-                    <div className="faq-answer">The core factors are: a fully optimized Google Business Profile, citation consistency across major directories, review velocity and sentiment, proximity to the searcher, and on-page relevance signals from your website. We optimize all of these systematically, not just the easy checkbox items.</div>
-                  </details>
-
-                  <details>
-                    <summary>Can I rank in multiple COS neighborhoods at once?</summary>
-                    <div className="faq-answer">Yes. With dedicated neighborhood landing pages, proper internal linking, and location-specific content, you can rank for area-specific searches across Briargate, Powers Corridor, Rockrimmon, and other neighborhoods simultaneously. This is often the highest-leverage work for service businesses.</div>
-                  </details>
-
-                  <details>
-                    <summary>My competitor is outranking me even though I have better reviews. Why?</summary>
-                    <div className="faq-answer">Reviews are one factor. Google also weighs domain authority, backlink profile, GBP completeness, citation volume, content relevance, and website technical health. A competitor with weaker reviews can outrank you if their technical and content signals are stronger. A proper audit usually identifies the specific gap within a few hours.</div>
-                  </details>
-                </div>
-
-                {/* CATEGORY 3 */}
-                <div className="faq-category reveal" id="faq-industries">
-                  <span className="faq-cat-label">Industries</span>
-
-                  <details>
-                    <summary>Can you do SEO for defense contractors and aerospace companies?</summary>
-                    <div className="faq-answer">Yes. We have experience building content strategies for technically complex B2B industries. Defense and aerospace SEO is fundamentally about long-tail informational content that builds authority with procurement teams and facility managers. It requires writers who understand the sector, not generalists who will summarize Wikipedia articles.</div>
-                  </details>
-
-                  <details>
-                    <summary>We serve military families near Fort Carson. Can you help with that?</summary>
-                    <div className="faq-answer">Absolutely. Military community SEO has a specific rhythm. PCS season drives demand spikes in housing, moving, childcare, and services. We build content calendars and landing pages that align with military move cycles, not just general seasonal trends.</div>
-                  </details>
-
-                  <details>
-                    <summary>Do you work with home service companies (HVAC, plumbing, roofing)?</summary>
-                    <div className="faq-answer">Home services is one of our highest-volume categories in Colorado Springs. The neighborhood-level page strategy we use for Briargate, Woodmen Road, and Powers Corridor has produced consistent Map Pack placements for HVAC and plumbing clients.</div>
-                  </details>
-
-                  <details>
-                    <summary>We are a tourism-related business near Pikes Peak. What should we prioritize?</summary>
-                    <div className="faq-answer">For Pikes Peak and Garden of the Gods-adjacent businesses, the priority is seasonal content, voice search optimization, and schema markup for events and attractions. Ranking for &quot;things to do near Pikes Peak&quot; and adjacent queries requires structured content that Google can pull into its AI-generated answers at the top of search results.</div>
-                  </details>
-                </div>
-
-                {/* CATEGORY 4 */}
-                <div className="faq-category reveal" id="faq-content">
-                  <span className="faq-cat-label">Content + Keywords</span>
-
-                  <details>
-                    <summary>What keywords should a Colorado Springs business be targeting?</summary>
-                    <div className="faq-answer">It depends entirely on your service, your margins, and your geographic coverage. The keyword strategy starts with identifying the highest-intent searches in your category, then layering in neighborhood terms, comparison queries, and FAQ content that captures mid-funnel buyers. We do this analysis in week one before writing a single word.</div>
-                  </details>
-
-                  <details>
-                    <summary>Is AI-generated content OK to use for SEO?</summary>
-                    <div className="faq-answer">AI-generated content without human expertise layered in is a signal risk. Google&apos;s E-E-A-T standards reward first-hand experience and genuine expertise. We use AI tools to accelerate research and drafting, but every piece of content is reviewed, edited, and enriched by humans who understand your industry and your market.</div>
-                  </details>
-
-                  <details>
-                    <summary>How many blog posts or landing pages do we need?</summary>
-                    <div className="faq-answer">Quality over volume, always. A single well-researched, properly optimized neighborhood page outperforms five thin city-level pages. We build a content map based on keyword opportunity and competitive gaps, then prioritize based on potential traffic value, not arbitrary monthly post counts.</div>
-                  </details>
-
-                  <details>
-                    <summary>Should I build separate pages for each neighborhood?</summary>
-                    <div className="faq-answer">For service businesses with a physical service area in Colorado Springs, yes. Neighborhood pages that go beyond just swapping the city name, that include local references, relevant search intent, and neighborhood-specific content, consistently outperform generic city-level pages in local search.</div>
-                  </details>
-                </div>
-
-                {/* CATEGORY 5 */}
-                <div className="faq-category reveal" id="faq-working">
-                  <span className="faq-cat-label">Working with FactoryJet</span>
-
-                  <details>
-                    <summary>How does engagement work and what does it cost?</summary>
-                    <div className="faq-answer">Scope depends on your industry, how many neighborhoods and service areas to target, your current domain authority, and how competitive your specific keywords are. Book a free 30-minute audit call to scope the project together. We will pull your current rankings, show you your actual competitors, and give you a clear picture of what it will take.</div>
-                  </details>
-
-                  <details>
-                    <summary>What does the first week look like?</summary>
-                    <div className="faq-answer">Week one is a full competitive audit. We map your keyword gaps against your top three local competitors, assess your technical health, review your GBP setup, and deliver a prioritized action plan before we write a single page. You know exactly what we are doing and why before we start producing anything.</div>
-                  </details>
-
-                  <details>
-                    <summary>Do I need to be available for regular calls?</summary>
-                    <div className="faq-answer">We keep it light. A monthly strategy call plus async updates via email. You do not need to manage us closely. We document everything and flag you when we need a decision or information only you can provide.</div>
-                  </details>
-
-                  <details>
-                    <summary>What happens if we are not seeing results in three months?</summary>
-                    <div className="faq-answer">We do a full diagnostic. If rankings are not moving within 90 days on the pages we have optimized, we identify exactly why and adjust the strategy. SEO is not always linear, but lack of progress always has a diagnosable cause. We find it and fix it rather than just sending a report and moving on.</div>
-                  </details>
-
-                  <details>
-                    <summary>Are you based in Colorado Springs?</summary>
-                    <div className="faq-answer">We are not based in Colorado Springs, and we are transparent about that. What we bring is a dedicated national team with deep local market research, category expertise, and the production capacity to move faster than any local agency. We have ranked businesses in specialized local markets across the US and we know what it takes in competitive metros.</div>
-                  </details>
-
-                  <details>
-                    <summary>Can you work alongside our existing marketing team?</summary>
-                    <div className="faq-answer">Yes. We integrate well with in-house marketing teams. If you have existing content, brand guidelines, or paid search running alongside SEO, we coordinate so that everything reinforces each other rather than working in silos.</div>
-                  </details>
-                </div>
-
+                {FAQ_GROUPS.map((g) => (
+                  <div className="faq-category reveal" id={g.id} key={g.id}>
+                    <span className="faq-cat-label">{g.label}</span>
+                    {g.items.map((it) => (
+                      <details key={it.q}>
+                        <summary>{it.q}</summary>
+                        <div className="faq-answer">{it.a}</div>
+                      </details>
+                    ))}
+                  </div>
+                ))}
               </div>{/* /faq-content */}
             </div>{/* /faq-layout */}
           </div>

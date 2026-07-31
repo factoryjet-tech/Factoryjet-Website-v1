@@ -79,93 +79,6 @@ export const metadata: Metadata = {
    JSON-LD Schemas — FAQPage · Service · BreadcrumbList
 --------------------------------------------------------------------------─-- */
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is WooCommerce development?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'WooCommerce development involves building, customizing, and extending e-commerce stores on the WooCommerce platform (a WordPress plugin). This includes building custom WooCommerce stores from scratch, developing custom plugins and extensions, customizing themes for WooCommerce, integrating payment gateways and shipping carriers, building ERP and CRM integrations, and optimizing WooCommerce store performance.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does WooCommerce development cost?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'WooCommerce development costs depend on scope. The main drivers are the store itself (custom theme plus standard plugins), custom plugin development, and complex builds with custom checkout flows, ERP integrations, and B2B pricing. Traditional agencies bill hourly for WooCommerce work, often at a multiple of our cost. FactoryJet works fixed-price with senior developers on every project, quoting the full number on a free discovery call before work starts.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Should I use WooCommerce or Shopify?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'WooCommerce is better if you want full control over your store and hosting, need deep WordPress integration (blog, content marketing, SEO), want to avoid monthly platform fees beyond hosting, or need custom functionality that Shopify apps cannot provide. Shopify is better if you want a simpler setup, don\'t want to manage WordPress hosting, or need a hosted solution with less technical overhead. WooCommerce has a higher ceiling but requires more technical management.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does FactoryJet charge for WooCommerce development?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet builds WooCommerce stores fixed-price and scoped to your build. The main cost drivers are the store itself (a custom theme and your configured product catalog), custom plugin development, and complex stores with custom functionality. All projects are fixed-price and milestone-paid with no hourly billing. Compared to traditional agencies that bill hourly at a multiple of our cost, FactoryJet delivers a predictable price from quote to launch with senior WooCommerce developers on every project and full code ownership at handoff. You get the full number on a free discovery call.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you customize an existing WooCommerce store?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — extending and customizing existing WooCommerce stores is a core part of our work. Common customizations include: custom checkout flows, product configurators, membership and subscription setups, wholesale/B2B pricing rules, shipping rate customizations, payment gateway integrations, and performance optimization. We audit the existing store first and provide a fixed-price proposal for the specific customizations you need.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is WooCommerce good for large product catalogs?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'WooCommerce handles large catalogs well when properly configured — with appropriate hosting (WP Engine or Kinsta), a good caching setup (Redis + full-page cache), and an optimized database. Stores with 10,000–50,000 SKUs run well on WooCommerce with the right infrastructure. For very large catalogs (100,000+ SKUs) with complex attributes, Magento 2 or a headless solution is often more appropriate. FactoryJet can help you choose the right platform for your specific catalog size and complexity.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does it cost to hire a WooCommerce developer?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet works on fixed-price projects. A professional WooCommerce store build is scoped to your custom design, plugins, and integrations, with the full price quoted up front. To hire a WooCommerce developer on an ongoing basis, we offer monthly retainers covering core/plugin updates plus a defined block of development hours, also quoted upfront. US freelance WooCommerce developers typically bill hourly with no fixed ceiling, which is why most store owners prefer a fixed-scope quote approved before work starts.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I hire a dedicated WooCommerce expert or development team?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. Every build assigns you a dedicated WooCommerce expert backed by a full team — designer, developer, and QA — with one point of contact. After launch you can keep that same expert on a monthly retainer for plugin development, store customization, performance work, and new features, with direct access to the person who knows your store\'s code.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you offer WooCommerce store design and theme customization?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Both. We design and build custom WooCommerce themes from scratch, and we customize existing themes when a full rebuild is not needed. A conversion-focused designer handles layout, product-page hierarchy, trust signals, and mobile checkout flow, while our developers implement it in clean, maintainable code. WooCommerce store design and development are one engagement at FactoryJet.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you customize my existing WooCommerce store instead of rebuilding it?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Often, yes. If your store is on a reasonable theme and a current WordPress/WooCommerce/PHP version, we can usually deliver what you need through WooCommerce customization — theme adjustments, custom plugin development, checkout changes, and performance cleanup — without a full rebuild. We assess this in a quick technical audit and recommend a rebuild only when patching would cost more than replacing.',
-      },
-    },
-  ],
-};
-
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -551,6 +464,16 @@ const FAQ_ITEMS = [
     category: 'development',
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 const howToSchema = {
   '@context': 'https://schema.org',

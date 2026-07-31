@@ -63,6 +63,8 @@ const FAQ_CATEGORIES = [
   { key: 'support',   label: 'Support & Ownership' },
 ];
 
+const CHARLOTTE_FAQ_ITEMS = [{"question":"How much does a website cost for a small business in Charlotte?","answer":"Website cost depends on scope — the number of pages, whether you need a blog CMS or lead-capture flows, e-commerce, or custom AI features. We work to a fixed, agreed scope with no hidden discovery fees, and most projects ship in 7 days. The fastest way to get an exact figure for your project is a quick call with the founder.","category":"pricing"},{"question":"How long does it take to build a website?","answer":"A standard FactoryJet build runs 7 days from kickoff to launch. Discovery and strategy take Days 1–2, design and prototyping Days 3–4, development Days 5–6, and content, SEO, and launch happen on Days 6–7. We do not start the clock until your brand assets and content are in our shared workspace.","category":"pricing"},{"question":"What's included in a web design project?","answer":"Every project includes strategy, design, development, content, SEO setup, and a 30-day support window. You get a Figma design system you keep, a Next.js codebase you own, JSON-LD schema for AI search visibility, GA4 wired up from day one, and a recorded handover session. We do not charge separately for staging environments, basic copy edits, or routine bug fixes inside the support window.","category":"included"},{"question":"How long until my new site ranks on Google?","answer":"Branded searches (your business name) usually rank within one to two weeks of launch. Service plus location queries like 'web design Charlotte' typically take three to six months for a new domain. The work that compresses this timeline — schema markup, internal linking, content depth, technical performance — is built into every FactoryJet project, not sold as an add-on after launch.","category":"pricing"},{"question":"I work with financial services or fintech clients in Charlotte. Do you have experience building those sites?","answer":"Yes. Charlotte's financial services ecosystem is one of our most common client profiles. Vendors and suppliers to Bank of America, Truist, and Wells Fargo need sites that project instant professional credibility. We build clear service architecture, compliance-aware form design, and case study sections designed to earn shortlist spots before the first call.","category":"local"},{"question":"Can you build a website for a healthcare vendor serving Atrium Health or Novant Health?","answer":"Yes. We work with healthcare vendors, private practices, and life sciences firms serving Charlotte's large hospital networks. We handle HIPAA-aware contact form design, clear capability pages, and local SEO — important for vendors competing for procurement attention at Atrium (70,000+ employees) and Novant Health.","category":"local"},{"question":"We're a manufacturing or industrial company in the Charlotte corridor. Can your site help us win B2B deals?","answer":"Yes. Charlotte's manufacturing sector — Husqvarna, Daimler Trucks, and their supply chains — relies on supplier websites to pre-qualify vendors before RFQs are issued. We build B2B sites with clear capability documentation, certification display, and RFQ workflows that speak to procurement teams. A professional, fast-loading site with the right information architecture shortlists you before a sales call happens.","category":"platform"},{"question":"How does FactoryJet compare to Charlotte agencies like Idea Kraft or Bowen?","answer":"Idea Kraft and Bowen are established Charlotte agencies. Neither publishes delivery timelines. FactoryJet is upfront about scope and timeline, delivers in 7 days, and builds in Next.js rather than WordPress — which means faster load times and no ongoing plugin maintenance for your team. We deliver at a fixed, agreed scope for equivalent work.","category":"local"},{"question":"Do you handle ongoing website maintenance after launch?","answer":"Every project includes a 30-day post-launch support window covering bug fixes, copy tweaks, and training questions. Beyond that, we offer ongoing maintenance retainers for clients who want monthly performance audits, content updates, and priority turnaround. A lot of Charlotte businesses in SouthPark and Ballantyne use us for quarterly refreshes as their service lines grow.","category":"support"},{"question":"Who owns the code and design files after the project is done?","answer":"You do — 100%. We hand over the full Next.js codebase, the Figma design files, and all content assets on launch day. No licensing fees, no vendor lock-in. You can hand it to any developer you choose and they can pick it up from where we left off.","category":"support"},{"question":"My business serves the Charlotte Douglas airport corridor and logistics sector. Can you build a B2B site for that?","answer":"Yes. The Charlotte Douglas corridor is one of the busiest logistics and distribution hubs in the Southeast. We build B2B sites with capability documentation, fleet or service overviews, RFQ forms, and partner portal integrations designed for the logistics, freight, and distribution clients who operate in that corridor.","category":"platform"},{"question":"We're a restaurant or hospitality business in Uptown Charlotte or NoDa. What does a good site look like for us?","answer":"For restaurants and hospitality businesses, the site needs to load fast on mobile, surface your menu and reservation link immediately, and rank for local Charlotte searches. We build sites with OpenTable or Resy integrations, Google Maps schema, event calendar support, and high-quality food and interior photography sections. Uptown Charlotte and NoDa foot traffic is highly mobile-driven, so we optimize for sub-1.5-second mobile load times as a baseline.","category":"local"},{"question":"Can you add AI features like a chatbot or smart search to our Charlotte business website?","answer":"Yes. Our Custom builds include AI integrations — trained chatbots for lead qualification, AI-powered site search, and content recommendation engines. These are particularly useful for financial services and healthcare vendors in Charlotte who handle a high volume of inbound inquiries and want to triage them before a human picks up the phone.","category":"technical"},{"question":"How do you handle analytics and conversion tracking?","answer":"GA4 and Google Tag Manager are wired up on every project before launch. We configure event tracking for form submissions, CTA clicks, scroll depth, and any custom goals specific to your business. For Charlotte financial services and healthcare clients, we also set up conversion segments so you can separate high-value lead types from general traffic.","category":"technical"},{"question":"Is the site going to work well on mobile? Most of my Charlotte customers are on their phones.","answer":"Mobile-first is non-negotiable on every FactoryJet project. We design and build for mobile before desktop, enforce Core Web Vitals green scores at launch, and test across current iOS and Android browsers. Charlotte's demographic skews heavily toward mobile professionals — we aim for sub-1.5-second load times on a 4G connection as a baseline.","category":"technical"},{"question":"We're a retail business in SouthPark Mall or Ballantyne. Do you build e-commerce sites?","answer":"Yes. Our Custom tier covers Shopify builds, Next.js e-commerce with headless CMS, and hybrid sites that combine content marketing with a product catalog. For Charlotte retail clients, we also build local SEO structures that help you rank for neighborhood-level searches — SouthPark, Ballantyne, Steele Creek — not just city-wide.","category":"technical"},{"question":"Do you have experience with NASCAR, motorsports, or Charlotte Motor Speedway-related businesses?","answer":"Yes. Charlotte's motorsports ecosystem — anchored by Charlotte Motor Speedway and teams based out of Concord and Mooresville — creates demand for event-driven websites, team sponsor pages, merchandise e-commerce, and B2B supplier sites. We've built sites for motorsports-adjacent businesses that handle high-traffic event windows and sponsor visibility requirements.","category":"technical"},{"question":"We're based in Concord, Huntersville, or Lake Norman — not technically Charlotte. Can you still help?","answer":"Absolutely. We work with businesses across the entire Charlotte metro — Concord, Huntersville, Mooresville, Lake Norman, Fort Mill SC, and beyond. We build in local SEO for your specific sub-market so you rank in the neighborhoods and communities your customers are actually searching from, not just Charlotte city-wide.","category":"local"},{"question":"How does the design revision process work?","answer":"Starter tier includes two structured revision rounds; Growth includes three. Each round is a focused review session — we share the Figma prototype, you give consolidated feedback, and we turn it around within 24 hours. We don't do open-ended revision loops. Every change request is scoped and documented so there are no surprises on scope or timeline.","category":"support"},{"question":"Where is the site hosted and how does that affect performance for Charlotte visitors?","answer":"We deploy to Cloudflare Pages by default, which serves your site from edge nodes closest to your visitors. For Charlotte-area users, that means sub-100ms server response times under normal load. Cloudflare's global CDN also handles traffic spikes — useful for Charlotte businesses running event promotions or seasonal campaigns — without requiring you to manage server infrastructure.","category":"technical"},{"question":"Can you help a Fort Mill SC or Research Triangle-adjacent business that serves the Charlotte market?","answer":"Yes. We work with businesses on both sides of the NC/SC border who sell into the Charlotte metro. Fort Mill is one of the fastest-growing suburbs in the region, and Research Triangle proximity means many Charlotte-adjacent B2B firms serve both markets. We build geo-targeted content structures that let a single site rank in multiple metro areas simultaneously.","category":"local"},{"question":"What's the ROI on a professionally built website for a Charlotte business?","answer":"A professionally built FactoryJet site typically pays for itself with two to three additional qualified leads converted per month — often within 60 to 90 days of launch for Charlotte professional services firms. Charlotte's competitive market means the cost of a slow or unprofessional site isn't just missed rankings — it's prospects who bounced to a competitor before they ever called you.","category":"local"}];
+
 export default function CharlotteWebDesignPage() {
   return (
     <>
@@ -240,7 +242,7 @@ export default function CharlotteWebDesignPage() {
         eyebrow="COMMON QUESTIONS"
         headline={"Common Questions from Charlotte Businesses"}
         categories={FAQ_CATEGORIES}
-        items={[{"question":"How much does a website cost for a small business in Charlotte?","answer":"Website cost depends on scope — the number of pages, whether you need a blog CMS or lead-capture flows, e-commerce, or custom AI features. We work to a fixed, agreed scope with no hidden discovery fees, and most projects ship in 7 days. The fastest way to get an exact figure for your project is a quick call with the founder.","category":"pricing"},{"question":"How long does it take to build a website?","answer":"A standard FactoryJet build runs 7 days from kickoff to launch. Discovery and strategy take Days 1–2, design and prototyping Days 3–4, development Days 5–6, and content, SEO, and launch happen on Days 6–7. We do not start the clock until your brand assets and content are in our shared workspace.","category":"pricing"},{"question":"What's included in a web design project?","answer":"Every project includes strategy, design, development, content, SEO setup, and a 30-day support window. You get a Figma design system you keep, a Next.js codebase you own, JSON-LD schema for AI search visibility, GA4 wired up from day one, and a recorded handover session. We do not charge separately for staging environments, basic copy edits, or routine bug fixes inside the support window.","category":"included"},{"question":"How long until my new site ranks on Google?","answer":"Branded searches (your business name) usually rank within one to two weeks of launch. Service plus location queries like 'web design Charlotte' typically take three to six months for a new domain. The work that compresses this timeline — schema markup, internal linking, content depth, technical performance — is built into every FactoryJet project, not sold as an add-on after launch.","category":"pricing"},{"question":"I work with financial services or fintech clients in Charlotte. Do you have experience building those sites?","answer":"Yes. Charlotte's financial services ecosystem is one of our most common client profiles. Vendors and suppliers to Bank of America, Truist, and Wells Fargo need sites that project instant professional credibility. We build clear service architecture, compliance-aware form design, and case study sections designed to earn shortlist spots before the first call.","category":"local"},{"question":"Can you build a website for a healthcare vendor serving Atrium Health or Novant Health?","answer":"Yes. We work with healthcare vendors, private practices, and life sciences firms serving Charlotte's large hospital networks. We handle HIPAA-aware contact form design, clear capability pages, and local SEO — important for vendors competing for procurement attention at Atrium (70,000+ employees) and Novant Health.","category":"local"},{"question":"We're a manufacturing or industrial company in the Charlotte corridor. Can your site help us win B2B deals?","answer":"Yes. Charlotte's manufacturing sector — Husqvarna, Daimler Trucks, and their supply chains — relies on supplier websites to pre-qualify vendors before RFQs are issued. We build B2B sites with clear capability documentation, certification display, and RFQ workflows that speak to procurement teams. A professional, fast-loading site with the right information architecture shortlists you before a sales call happens.","category":"platform"},{"question":"How does FactoryJet compare to Charlotte agencies like Idea Kraft or Bowen?","answer":"Idea Kraft and Bowen are established Charlotte agencies. Neither publishes delivery timelines. FactoryJet is upfront about scope and timeline, delivers in 7 days, and builds in Next.js rather than WordPress — which means faster load times and no ongoing plugin maintenance for your team. We deliver at a fixed, agreed scope for equivalent work.","category":"local"},{"question":"Do you handle ongoing website maintenance after launch?","answer":"Every project includes a 30-day post-launch support window covering bug fixes, copy tweaks, and training questions. Beyond that, we offer ongoing maintenance retainers for clients who want monthly performance audits, content updates, and priority turnaround. A lot of Charlotte businesses in SouthPark and Ballantyne use us for quarterly refreshes as their service lines grow.","category":"support"},{"question":"Who owns the code and design files after the project is done?","answer":"You do — 100%. We hand over the full Next.js codebase, the Figma design files, and all content assets on launch day. No licensing fees, no vendor lock-in. You can hand it to any developer you choose and they can pick it up from where we left off.","category":"support"},{"question":"My business serves the Charlotte Douglas airport corridor and logistics sector. Can you build a B2B site for that?","answer":"Yes. The Charlotte Douglas corridor is one of the busiest logistics and distribution hubs in the Southeast. We build B2B sites with capability documentation, fleet or service overviews, RFQ forms, and partner portal integrations designed for the logistics, freight, and distribution clients who operate in that corridor.","category":"platform"},{"question":"We're a restaurant or hospitality business in Uptown Charlotte or NoDa. What does a good site look like for us?","answer":"For restaurants and hospitality businesses, the site needs to load fast on mobile, surface your menu and reservation link immediately, and rank for local Charlotte searches. We build sites with OpenTable or Resy integrations, Google Maps schema, event calendar support, and high-quality food and interior photography sections. Uptown Charlotte and NoDa foot traffic is highly mobile-driven, so we optimize for sub-1.5-second mobile load times as a baseline.","category":"local"},{"question":"Can you add AI features like a chatbot or smart search to our Charlotte business website?","answer":"Yes. Our Custom builds include AI integrations — trained chatbots for lead qualification, AI-powered site search, and content recommendation engines. These are particularly useful for financial services and healthcare vendors in Charlotte who handle a high volume of inbound inquiries and want to triage them before a human picks up the phone.","category":"technical"},{"question":"How do you handle analytics and conversion tracking?","answer":"GA4 and Google Tag Manager are wired up on every project before launch. We configure event tracking for form submissions, CTA clicks, scroll depth, and any custom goals specific to your business. For Charlotte financial services and healthcare clients, we also set up conversion segments so you can separate high-value lead types from general traffic.","category":"technical"},{"question":"Is the site going to work well on mobile? Most of my Charlotte customers are on their phones.","answer":"Mobile-first is non-negotiable on every FactoryJet project. We design and build for mobile before desktop, enforce Core Web Vitals green scores at launch, and test across current iOS and Android browsers. Charlotte's demographic skews heavily toward mobile professionals — we aim for sub-1.5-second load times on a 4G connection as a baseline.","category":"technical"},{"question":"We're a retail business in SouthPark Mall or Ballantyne. Do you build e-commerce sites?","answer":"Yes. Our Custom tier covers Shopify builds, Next.js e-commerce with headless CMS, and hybrid sites that combine content marketing with a product catalog. For Charlotte retail clients, we also build local SEO structures that help you rank for neighborhood-level searches — SouthPark, Ballantyne, Steele Creek — not just city-wide.","category":"technical"},{"question":"Do you have experience with NASCAR, motorsports, or Charlotte Motor Speedway-related businesses?","answer":"Yes. Charlotte's motorsports ecosystem — anchored by Charlotte Motor Speedway and teams based out of Concord and Mooresville — creates demand for event-driven websites, team sponsor pages, merchandise e-commerce, and B2B supplier sites. We've built sites for motorsports-adjacent businesses that handle high-traffic event windows and sponsor visibility requirements.","category":"technical"},{"question":"We're based in Concord, Huntersville, or Lake Norman — not technically Charlotte. Can you still help?","answer":"Absolutely. We work with businesses across the entire Charlotte metro — Concord, Huntersville, Mooresville, Lake Norman, Fort Mill SC, and beyond. We build in local SEO for your specific sub-market so you rank in the neighborhoods and communities your customers are actually searching from, not just Charlotte city-wide.","category":"local"},{"question":"How does the design revision process work?","answer":"Starter tier includes two structured revision rounds; Growth includes three. Each round is a focused review session — we share the Figma prototype, you give consolidated feedback, and we turn it around within 24 hours. We don't do open-ended revision loops. Every change request is scoped and documented so there are no surprises on scope or timeline.","category":"support"},{"question":"Where is the site hosted and how does that affect performance for Charlotte visitors?","answer":"We deploy to Cloudflare Pages by default, which serves your site from edge nodes closest to your visitors. For Charlotte-area users, that means sub-100ms server response times under normal load. Cloudflare's global CDN also handles traffic spikes — useful for Charlotte businesses running event promotions or seasonal campaigns — without requiring you to manage server infrastructure.","category":"technical"},{"question":"Can you help a Fort Mill SC or Research Triangle-adjacent business that serves the Charlotte market?","answer":"Yes. We work with businesses on both sides of the NC/SC border who sell into the Charlotte metro. Fort Mill is one of the fastest-growing suburbs in the region, and Research Triangle proximity means many Charlotte-adjacent B2B firms serve both markets. We build geo-targeted content structures that let a single site rank in multiple metro areas simultaneously.","category":"local"},{"question":"What's the ROI on a professionally built website for a Charlotte business?","answer":"A professionally built FactoryJet site typically pays for itself with two to three additional qualified leads converted per month — often within 60 to 90 days of launch for Charlotte professional services firms. Charlotte's competitive market means the cost of a slow or unprofessional site isn't just missed rankings — it's prospects who bounced to a competitor before they ever called you.","category":"local"}]}
+        items={CHARLOTTE_FAQ_ITEMS}
       />
       {/* Cross-link: Related Services in Charlotte */}
       <section className="py-10 bg-[#FAFAF7]">
@@ -306,184 +308,7 @@ function SchemaScript() {
       {
         "@type": "FAQPage",
         "@id": "https://factoryjet.com/charlotte/web-design#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How much does a website cost for a small business in Charlotte?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Website cost depends on scope — the number of pages, whether you need a blog CMS or lead-capture flows, e-commerce, or custom AI features. We work to a fixed, agreed scope with no hidden discovery fees, and most projects ship in 7 days. The fastest way to get an exact figure for your project is a quick call with the founder."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long does it take to build a website?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "A standard FactoryJet build runs 7 days from kickoff to launch. Discovery and strategy take Days 1–2, design and prototyping Days 3–4, development Days 5–6, and content, SEO, and launch happen on Days 6–7. We do not start the clock until your brand assets and content are in our shared workspace."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What's included in a web design project?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Every project includes strategy, design, development, content, SEO setup, and a 30-day support window. You get a Figma design system you keep, a Next.js codebase you own, JSON-LD schema for AI search visibility, GA4 wired up from day one, and a recorded handover session."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long until my new site ranks on Google?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Branded searches typically rank within one to two weeks of launch. Service plus location queries like 'web design Charlotte' take three to six months for a new domain. Schema markup, internal linking, content depth, and technical performance — all built into every FactoryJet project — compress that timeline."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "I work with financial services or fintech clients in Charlotte. Do you have experience building those sites?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Vendors and suppliers to Bank of America, Truist, and Wells Fargo need sites that project instant professional credibility. We build clear service architecture, compliance-aware form design, and case study sections designed to earn shortlist spots before the first call."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can you build a website for a healthcare vendor serving Atrium Health or Novant Health?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. We work with healthcare vendors, private practices, and life sciences firms serving Charlotte's large hospital networks. We handle HIPAA-aware contact form design, clear capability pages, and local SEO for vendors competing at Atrium (70,000+ employees) and Novant Health."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "We're a manufacturing or industrial company in the Charlotte corridor. Can your site help us win B2B deals?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. We build B2B sites with clear capability documentation, certification display, and RFQ workflows that speak to procurement teams. A professional, fast-loading site with the right information architecture shortlists you before a sales call happens."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How does FactoryJet compare to Charlotte agencies like Idea Kraft or Bowen?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Neither Idea Kraft nor Bowen publishes delivery timelines. FactoryJet is upfront about scope and timeline, delivers in 7 days, and builds in Next.js rather than WordPress — faster load times and no ongoing plugin maintenance. We deliver at a fixed, agreed scope for equivalent work."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you handle ongoing website maintenance after launch?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Every project includes a 30-day post-launch support window covering bug fixes, copy tweaks, and training questions. Beyond that, we offer ongoing maintenance retainers for clients who want monthly performance audits, content updates, and priority turnaround. Many Charlotte businesses in SouthPark and Ballantyne use us for quarterly refreshes as their service lines grow."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Who owns the code and design files after the project is done?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "You do — 100%. We hand over the full Next.js codebase, the Figma design files, and all content assets on launch day. No licensing fees, no vendor lock-in. You can hand it to any developer you choose and they can pick it up from where we left off."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "My business serves the Charlotte Douglas airport corridor and logistics sector. Can you build a B2B site for that?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. The Charlotte Douglas corridor is one of the busiest logistics and distribution hubs in the Southeast. We build B2B sites with capability documentation, fleet or service overviews, RFQ forms, and partner portal integrations designed for logistics, freight, and distribution clients who operate in that corridor."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "We're a restaurant or hospitality business in Uptown Charlotte or NoDa. What does a good site look like for us?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "For restaurants and hospitality businesses, the site needs to load fast on mobile, surface your menu and reservation link immediately, and rank for local Charlotte searches. We build sites with OpenTable or Resy integrations, Google Maps schema, event calendar support, and high-quality photography sections. Uptown Charlotte and NoDa foot traffic is highly mobile-driven, so we optimize for sub-1.5-second mobile load times as a baseline."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can you add AI features like a chatbot or smart search to our Charlotte business website?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Our Custom builds include AI integrations — trained chatbots for lead qualification, AI-powered site search, and content recommendation engines. These are particularly useful for financial services and healthcare vendors in Charlotte who handle a high volume of inbound inquiries and want to triage them before a human picks up the phone."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How do you handle analytics and conversion tracking?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "GA4 and Google Tag Manager are wired up on every project before launch. We configure event tracking for form submissions, CTA clicks, scroll depth, and any custom goals specific to your business. For Charlotte financial services and healthcare clients, we also set up conversion segments so you can separate high-value lead types from general traffic."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is the site going to work well on mobile? Most of my Charlotte customers are on their phones.",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Mobile-first is non-negotiable on every FactoryJet project. We design and build for mobile before desktop, enforce Core Web Vitals green scores at launch, and test across current iOS and Android browsers. Charlotte's demographic skews heavily toward mobile professionals — we aim for sub-1.5-second load times on a 4G connection as a baseline."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "We're a retail business in SouthPark Mall or Ballantyne. Do you build e-commerce sites?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Our Custom tier covers Shopify builds, Next.js e-commerce with headless CMS, and hybrid sites that combine content marketing with a product catalog. For Charlotte retail clients, we also build local SEO structures that help you rank for neighborhood-level searches — SouthPark, Ballantyne, Steele Creek — not just city-wide."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you have experience with NASCAR, motorsports, or Charlotte Motor Speedway-related businesses?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Charlotte's motorsports ecosystem — anchored by Charlotte Motor Speedway and teams based out of Concord and Mooresville — creates demand for event-driven websites, team sponsor pages, merchandise e-commerce, and B2B supplier sites. We've built sites for motorsports-adjacent businesses that handle high-traffic event windows and sponsor visibility requirements."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "We're based in Concord, Huntersville, or Lake Norman — not technically Charlotte. Can you still help?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Absolutely. We work with businesses across the entire Charlotte metro — Concord, Huntersville, Mooresville, Lake Norman, Fort Mill SC, and beyond. We build in local SEO for your specific sub-market so you rank in the neighborhoods and communities your customers are actually searching from, not just Charlotte city-wide."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How does the design revision process work?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Starter tier includes two structured revision rounds; Growth includes three. Each round is a focused review session — we share the Figma prototype, you give consolidated feedback, and we turn it around within 24 hours. We don't do open-ended revision loops. Every change request is scoped and documented so there are no surprises on scope or timeline."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Where is the site hosted and how does that affect performance for Charlotte visitors?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We deploy to Cloudflare Pages by default, which serves your site from edge nodes closest to your visitors. For Charlotte-area users, that means sub-100ms server response times under normal load. Cloudflare's global CDN also handles traffic spikes — useful for Charlotte businesses running event promotions or seasonal campaigns — without requiring you to manage server infrastructure."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can you help a Fort Mill SC or Research Triangle-adjacent business that serves the Charlotte market?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. We work with businesses on both sides of the NC/SC border who sell into the Charlotte metro. Fort Mill is one of the fastest-growing suburbs in the region, and Research Triangle proximity means many Charlotte-adjacent B2B firms serve both markets. We build geo-targeted content structures that let a single site rank in multiple metro areas simultaneously."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What's the ROI on a professionally built website for a Charlotte business?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "A professionally built FactoryJet site typically pays for itself with two to three additional qualified leads converted per month — often within 60 to 90 days of launch for Charlotte professional services firms. Charlotte's competitive market means the cost of a slow or unprofessional site isn't just missed rankings — it's prospects who bounced to a competitor before they ever called you."
-            }
-          }
-        ]
+        "mainEntity": CHARLOTTE_FAQ_ITEMS.map((item) => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } }))
       },
       {
         "@type": "BreadcrumbList",

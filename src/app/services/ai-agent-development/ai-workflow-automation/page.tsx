@@ -53,61 +53,6 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is AI workflow automation and how does it help Indian businesses?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'AI workflow automation connects your business tools — Zoho CRM, Tally, Shopify, WhatsApp, Razorpay — so data flows automatically between them without manual entry. For example: a new lead from a Facebook ad is automatically added to Zoho CRM, assigned to a sales rep, sent a WhatsApp follow-up, and logged with a Tally entry — all without anyone typing a single thing. This eliminates repetitive admin work and the errors that come with it.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Which Indian business tools can be automated?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We automate the full Indian business stack: Zoho CRM, Zoho Books, Zoho Inventory, Tally ERP, Shopify, WooCommerce, Commerceflo, Razorpay, PayU, Shiprocket, Delhivery, Freshdesk, Google Workspace, WhatsApp Business API, Interakt, Wati, and more. If your tool has an API or webhook, we can automate it.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does AI workflow automation cost in India?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Every FactoryJet workflow automation is fixed-price and scoped to your build. We offer focused two-system automations (e.g., Zoho CRM + WhatsApp follow-up), multi-system workflow platforms connecting 5–10 tools, and full business automation suites with AI decision logic. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. No hourly billing, no surprises.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you automate GST invoicing and Tally entries?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — GST and Tally automation is one of our most common India-specific workflows. We automate GST invoice generation from Shopify or Razorpay order data, push entries directly to Tally ERP, send invoices to customers via WhatsApp or email automatically, and flag mismatches for reconciliation. This eliminates 2–5 hours of daily data entry for most Indian SMBs.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to build a workflow automation?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A focused two-system automation goes live in 1–2 weeks. Multi-system platforms with 5+ connected tools take 3–4 weeks. Full business automation suites take 6–8 weeks. Timeline depends on the number of integrations, complexity of decision logic, and whether we need to handle edge cases like duplicate detection or error recovery.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the difference between n8n automation and a custom AI workflow?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'n8n is a no-code automation tool suitable for straightforward if-this-then-that flows. A custom AI workflow adds intelligence on top — the AI reads the content of a document, classifies an email, extracts structured data from an unstructured WhatsApp message, makes a routing decision based on CRM context, or writes a response draft. We use n8n or Make for the orchestration layer and add AI capabilities where rule-based logic is insufficient.',
-      },
-    },
-  ],
-};
-
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -492,6 +437,16 @@ const WORKFLOW_FAQ_ITEMS = [
     answer: "Yes — an optional monthly maintenance retainer covers workflow monitoring, error resolution, minor logic updates, and new integration connectors as your tools change. Most clients on the Full Business Automation Suite take the retainer for the first few months. Starter and multi-system clients often manage independently after the 30-day post-launch window.",
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: WORKFLOW_FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 export default function AIWorkflowAutomationINPage() {
   return (

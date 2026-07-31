@@ -81,124 +81,6 @@ export const metadata: Metadata = {
    JSON-LD Schema
 ───────────────────────────────────────────────────────────────────────────── */
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How much does a custom Shopify store cost?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet\'s Shopify development is fixed-price and scoped to your build. The main cost drivers are a custom theme on an existing store, a full store build (custom theme, product setup, payment integration, and launch), and Shopify Plus work with advanced checkout customization, B2B features, and multi-store setups. Every project is fixed-price and milestone-paid, with the full number confirmed on a free discovery call before work starts — senior engineering without traditional-agency overhead or six-month timelines.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to build a Shopify store?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A custom Shopify theme applied to an existing store typically takes 2–3 weeks. A full store build from scratch — theme, product catalog setup, payment configuration, shipping, and launch — takes 3–5 weeks. Shopify Plus builds with advanced B2B, multi-storefront, or headless Hydrogen setups take 6–10 weeks depending on complexity.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you migrate my WooCommerce or BigCommerce store to Shopify?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — migrations are one of our most common Shopify engagements. We migrate products, customers, orders, and SEO URLs from WooCommerce, BigCommerce, Magento, Squarespace Commerce, and custom platforms. We preserve your URL structure with 301 redirects, migrate customer account data, and test the full checkout flow before switching DNS.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I need Shopify Plus, or will standard Shopify work?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Standard Shopify (Basic, Grow, Advanced) works well for most DTC brands doing under $1M/year in revenue. Shopify Plus is worth the investment when you need: custom checkout UI (checkout.liquid or Checkout Extensibility), B2B wholesale portal, multi-storefront management (10+ stores), advanced script-based discounting, or dedicated Shopify support. We assess this during discovery — we won\'t push you to Plus if you don\'t need it.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is headless Shopify and does my store need it?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Headless Shopify separates the storefront (what customers see) from the Shopify backend (inventory, orders, checkout) and rebuilds the front end in a faster framework like Hydrogen (React/Remix) or Next.js. You get dramatically better performance (sub-1s page loads) and full design freedom — but it costs more to build and maintain. Most brands under $5M/year revenue don\'t need headless; above that, the conversion rate improvement typically justifies the investment.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Will my Shopify store be optimized for SEO and Google?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. Every Shopify store we build includes technical SEO: optimized title tags and meta descriptions for all product and collection pages, schema markup (Product, BreadcrumbList, Organization), canonical URLs to handle Shopify\'s duplicate URL issues, compressed images with alt tags, sitemap submission to Google Search Console, and Core Web Vitals optimization. Collection page content and blog strategy are available as separate add-ons.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you build custom Shopify apps or integrate third-party apps?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes to both. We integrate any Shopify App Store app into your theme (reviews, loyalty, subscriptions, bundles, upsell widgets, etc.) and build custom private apps and public Shopify apps when standard App Store solutions don\'t fit your workflow. Custom apps are built using Shopify\'s GraphQL Admin API and Polaris design system.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What happens if I want to change my theme or add features after launch?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'All code is delivered to your GitHub repository on launch day. You own it. You can hire any Shopify developer to work on it, or continue with FactoryJet on a project or retainer basis. We document all custom sections, metafields, and app integrations during handover so future work doesn\'t require archaeology.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does it cost to hire a Shopify developer?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A fixed-scope FactoryJet build is priced to your scope — a custom theme on an existing store or a full store build — with a firm quote after discovery. To hire a Shopify developer on an ongoing basis, we offer monthly retainers with a set block of dedicated development hours, also quoted upfront. US freelance Shopify developers typically bill hourly with no ceiling, which is why most brands prefer our fixed-scope or retainer model — you know the number before work starts.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I hire a dedicated Shopify expert for my store?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. Every engagement assigns you a dedicated Shopify expert — the same engineer designs, builds, and supports your store, so there is no handoff between teams. You can keep that expert on after launch through a monthly retainer for theme updates, app integrations, and conversion experiments, with direct access to the person who wrote your store\'s code.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you offer custom Shopify theme development and customization?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Both. We build custom Shopify themes from scratch — designed in Figma and coded in clean, editable Liquid — and we customize existing themes when a full rebuild is not needed. Customization covers theme section development, app styling, metafield-driven content, checkout adjustments on Shopify Plus, and performance cleanup. You own the code in your GitHub repository so any future Shopify developer can maintain it.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you provide Shopify store design as well as development?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — design and development are one engagement at FactoryJet. A conversion-focused Shopify website designer handles layout, hierarchy, trust signals, and mobile flow, while the engineer builds it in Liquid. You approve desktop and mobile mockups in Figma before any code is written, so the store you see in design is the store you launch.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Who is the best Shopify development agency in USA?',
-      acceptedAnswer: { '@type': 'Answer', text: 'For SMB and DTC brands, FactoryJet makes a strong case: custom Shopify themes built by senior engineers, fixed pricing, and a clear, milestone-paid build. The best Shopify development company in USA for you depends on scope — a brand heading to Shopify Plus needs the best Shopify Plus agency in USA (scripts, checkout extensibility, B2B), while a first store needs speed and conversion fundamentals from the best Shopify website design company in USA it can afford. Whoever you evaluate among the best Shopify experts in USA, ask for store speed scores and conversion before/afters, not just portfolio screenshots. That is what the best Shopify development services in USA are measured on.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does Shopify website cost in USA?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Shopify website cost in USA scales with complexity: template customization is the entry tier, a custom theme costs more, and Shopify Plus builds cost the most. FactoryJet builds custom Shopify stores fixed-price, quoted on a free discovery call. If you are asking how much a Shopify store costs in USA all-in, remember the running costs too: a monthly fee for any apps you use plus Shopify\'s own platform fee. Shopify store cost in USA is a build cost plus a running cost, and honest agencies quote both.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'What are the top 10 Shopify development companies in USA?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Lists of the top 10 Shopify development agencies in USA usually rank Plus-certified enterprise shops first, which is the wrong filter if you are an SMB. FactoryJet competes in the top 10 Shopify development companies in USA conversation for small and mid-market brands: senior engineers, fixed pricing, fast delivery. When scanning any roundup of the top 10 Shopify experts in USA, check three things: who actually writes the Liquid code, whether they commit to a fixed-price quote up front, and store speed scores on past builds.' },
-    },
-  ],
-};
-
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -718,6 +600,16 @@ const FAQ_ITEMS = [
       'Lists of the top 10 Shopify development agencies in USA usually rank Plus-certified enterprise shops first, which is the wrong filter if you are an SMB. FactoryJet competes in the top 10 Shopify development companies in USA conversation for small and mid-market brands: senior engineers, fixed pricing, fast delivery. When scanning any roundup of the top 10 Shopify experts in USA, check three things: who actually writes the Liquid code, whether they commit to a fixed-price quote up front, and store speed scores on past builds.',
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 const howToSchema = {
   '@context': 'https://schema.org',

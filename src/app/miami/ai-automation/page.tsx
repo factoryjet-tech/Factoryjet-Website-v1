@@ -67,79 +67,8 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schema (FAQPage + Service)
+   JSON-LD Schema (Service + HowTo + Breadcrumb) — faqSchema is declared after FAQ_ITEMS below
 ───────────────────────────────────────────────────────────────────────────── */
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is AI workflow automation for a Miami business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'AI workflow automation connects your business tools and uses artificial intelligence to execute multi-step processes without manual intervention. For Miami businesses, this means automating lead follow-up sequences in English and Spanish, processing hospitality and event booking requests, syncing data between your CRM and accounting tools, routing customer inquiries by language and department, and generating reports from multiple systems — so your team focuses on the relationships and deals that require human judgment.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How does AI workflow automation help Miami businesses specifically?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Miami\'s business environment has three characteristics that make AI automation especially valuable: First, the bilingual market — a significant portion of Miami\'s customers and business partners communicate in Spanish, and AI automation handles bilingual workflows natively. Second, the hospitality and events economy runs around the clock with high-volume booking, reservation, and logistics workflows that repeat thousands of times per year. Third, Miami\'s international business corridor creates cross-border data and invoicing workflows that are ideal for intelligent automation.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What kinds of workflows does FactoryJet automate for Miami businesses?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Best-fit workflows for Miami businesses: lead follow-up and bilingual nurturing sequences (automated by language and source), hospitality booking and event logistics coordination, invoice and payment processing (extracting data from PDFs, routing for approval), CRM and accounting system sync (QuickBooks, Xero, Salesforce, HubSpot), customer inquiry routing by language and department, report generation from multiple data sources, and restaurant and hotel reservation management. Any workflow your team runs more than five times per week and involves reading something or making a simple decision is a candidate.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does AI workflow automation cost for a Miami business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet\'s AI workflow automation is priced fixed-price and scoped to your build — the main drivers are the number of workflows, systems integrated, and decision complexity. The Starter tier covers a focused single-workflow build; the Growth tier covers a multi-workflow automation platform connecting 3–5 systems with an operations dashboard and 30-day support — the most popular option for Miami SMBs; and the Enterprise tier covers complex business logic, multi-language workflows, and international integrations. Every project is quoted up front after a free discovery call — no hourly billing, no scope creep.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can AI workflow automation handle bilingual workflows in English and Spanish?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. We build bilingual automation workflows that detect the language of an inbound message or document and route accordingly — responding in English or Spanish, classifying content correctly, and triggering the right workflow branch. For Miami businesses with significant Spanish-speaking customer bases, this eliminates the manual sorting and translation overhead that slows down customer response times and creates errors.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can AI automation connect to Miami hospitality PMS systems, QuickBooks, or freight platforms?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — AI workflow automation integrates with the platforms Miami businesses run on. Common connections include Cloudbeds, Mews, and Opera PMS for hospitality, QuickBooks and Xero for accounting, HubSpot and Salesforce for CRM, Shopify for e-commerce, and TMS and ERP platforms for logistics and trade. Most Miami businesses are on platforms we\'ve integrated before, which means faster deployment and fewer surprises. We confirm compatibility during discovery before quoting.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Will bilingual automation work correctly for Miami workflows that mix English and Spanish in the same message?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — GPT-4o and Claude handle code-switching natively, which is common in Miami\'s bilingual business environment. The automation classifies and routes correctly even when messages mix English and Spanish in the same sentence. During staging, we test specifically against Miami-typical language patterns — hospitality, trade, and professional services vocabulary in both languages. Correct bilingual routing is part of our acceptance criteria before any automation goes live.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is there a payment plan for Miami AI automation projects?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet uses milestone-based payments. For the Starter tier: 50% at kickoff and 50% at delivery. For Growth and Enterprise tiers: 40% at kickoff, 40% at staging approval, 20% at launch. Payments align with working automations you\'ve tested — not with calendar dates. No large upfront commitment before you\'ve seen the Miami AI automation running on your real bilingual business data.',
-      },
-    },
-  ],
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -660,6 +589,16 @@ const FAQ_ITEMS = [
       'Three differences: price (specialized engineers serving US businesses for 12+ years), speed (no layers between your brief and the engineer building it — weeks, not months), and SMB depth (500+ small business projects — we understand what operations look like inside a 15-person Miami business, including the bilingual and international complexity that\'s unique to this market).',
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Page

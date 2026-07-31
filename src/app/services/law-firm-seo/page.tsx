@@ -130,115 +130,148 @@ const schemaService = {
     'Law firm SEO services for US attorneys and legal practices. YMYL-certified content, Google Business Profile optimization, Map Pack dominance, Google Local Services Ads setup, and bar-compliance review on every deliverable.',
 };
 
+/* ─────────────────────────────────────────────────────────────────────────────
+   FAQ_ITEMS mirrors the 21 visible <details> Q&A pairs in the FAQ section below
+   (5 categories) verbatim, so schemaFAQ's mainEntity can be generated from a
+   single source instead of a separately hand-written list.
+───────────────────────────────────────────────────────────────────────────── */
+const FAQ_ITEMS = [
+  {
+    category: 'SEO Basics',
+    question: 'What is law firm SEO and why does it matter more than PPC?',
+    answer:
+      'Law firm SEO is the process of earning organic search rankings for legal queries, "personal injury lawyer Dallas," "criminal defense attorney near me," and hundreds of related terms. PPC puts you in front of searchers but paid clicks in most legal markets are among the most expensive in all of Google Ads. A top organic ranking costs nothing per click and compounds value over time. Attorneys who rank organically consistently report the lowest cost per retained client across all channels.',
+  },
+  {
+    category: 'SEO Basics',
+    question: 'How is legal SEO different from SEO for other local businesses?',
+    answer:
+      'Three factors make it harder. First, Google classifies legal content as YMYL (Your Money or Your Life), meaning it applies stricter editorial standards to law pages than to, say, a plumber or a restaurant. Second, state bar rules limit what you can claim in marketing, so content must be reviewed for compliance. Third, the Map Pack ranking signals weigh review recency and volume heavily, meaning review acquisition is a core part of the work, not a side task.',
+  },
+  {
+    category: 'SEO Basics',
+    question: 'Do I need to be on every practice area page or just the main one?',
+    answer:
+      'Dedicated practice area pages consistently outperform homepage mentions. Google wants to see a page that demonstrates depth of expertise on a specific topic. A firm with a 1,200-word dedicated DUI page will outrank a firm whose homepage mentions DUI in a bullet point, assuming comparable authority otherwise. We build one optimized page per practice area you want to rank for.',
+  },
+  {
+    category: 'SEO Basics',
+    question: 'What does domain authority mean for law firms?',
+    answer:
+      'Domain authority is a third-party proxy metric (Moz) that estimates how likely Google is to trust and rank your site based on backlink quality. It ranges from 1 to 100. Most small firm sites sit between 10 and 25. Ranking for competitive PI terms in major metros typically requires a domain in the 30 to 45 range, which comes from quality links earned from legal directories, local news, bar association mentions, and similar sources.',
+  },
+  {
+    category: 'Results & Timeline',
+    question: 'How long before I see ranking improvements?',
+    answer:
+      'Technical fixes and on-page optimization show measurable improvement in 30 to 60 days. Content and link-building results mature between 90 and 180 days for most mid-competition keywords. Highly competitive PI terms in major metros like Los Angeles or New York can take 9 to 12 months of sustained authority building. We give you a keyword-specific timeline during the audit phase, not a one-size estimate.',
+  },
+  {
+    category: 'Results & Timeline',
+    question: 'What metrics do you actually report on?',
+    answer:
+      'We track keyword rankings (position by practice area term), organic sessions by page, Google Business Profile call volume, website form submissions attributed to organic search, and conversion rate by landing page. We do not hide behind vanity metrics like "total impressions." If calls are not going up, we tell you and show you why.',
+  },
+  {
+    category: 'Results & Timeline',
+    question: 'Can you guarantee first-page rankings?',
+    answer:
+      'No ethical SEO agency can guarantee specific rankings because Google\'s algorithm is controlled by Google, not by us. What we can promise is a documented strategy, monthly reporting with full transparency, and a track record of results across legal clients. We share real examples with real data during our intro call.',
+  },
+  {
+    category: 'Results & Timeline',
+    question: 'What happens if my rankings drop?',
+    answer:
+      'Algorithm updates cause ranking volatility in every industry, legal more than most. When a drop happens, we audit the cause within 48 hours, compare against Google\'s published quality guidance, and issue a remediation plan within 5 business days. We have navigated Google core updates for multiple law firm clients and recovered rankings in each case.',
+  },
+  {
+    category: 'Content & Compliance',
+    question: 'Who writes the content for my practice area pages?',
+    answer:
+      'We use a team of writers with legal marketing experience, not general freelancers. Every practice area page goes through a legal compliance review against your state bar\'s advertising rules before publishing. We also have an attorney review step available for firms in states with unusually strict guidelines, like New York or California.',
+  },
+  {
+    category: 'Content & Compliance',
+    question: 'Can you use past case results in the content?',
+    answer:
+      'This depends entirely on your state bar. Many state bars prohibit or restrict claims about past results without a prominent disclaimer that "past results do not guarantee future outcomes." Some states prohibit specific dollar amounts. We review your state\'s rules before writing any content and structure all claims to stay within those boundaries.',
+  },
+  {
+    category: 'Content & Compliance',
+    question: 'What is attorney schema markup and do I need it?',
+    answer:
+      'Schema markup is structured data added to your pages that helps Google understand who you are and what you do. For law firms, Attorney schema and LegalService schema can enhance how your firm appears in AI-generated search summaries and voice results. It is not mandatory but it gives you a measurable edge in AI-powered search features like SGE (Search Generative Experience).',
+  },
+  {
+    category: 'Content & Compliance',
+    question: 'How often does the content need to be updated?',
+    answer:
+      'Practice area pages benefit from a quarterly content refresh that adds new case law references, updates local statistics, and expands FAQ sections based on new search data. Blog content targeting informational queries can be refreshed annually. We schedule these updates proactively as part of the monthly retainer so you never have to track it yourself.',
+  },
+  {
+    category: 'Local & Maps',
+    question: 'How do I get into the Google Map Pack for legal searches?',
+    answer:
+      'The Map Pack ranks based on proximity, relevance, and prominence. Proximity you cannot control. Relevance comes from fully completing your Google Business Profile with the right categories and services. Prominence comes from review volume and recency, local citations across legal directories, and the authority of your website. We optimize all three signals simultaneously.',
+  },
+  {
+    category: 'Local & Maps',
+    question: 'Do I need a separate Google Business Profile for each office location?',
+    answer:
+      'Yes. Each physical location should have its own GBP listing. If you have satellite offices that are staffed at least part-time, those qualify for separate listings and each one can rank in that city\'s Map Pack. We set up and optimize each location independently, including location-specific review generation strategies.',
+  },
+  {
+    category: 'Local & Maps',
+    question: 'What legal directories should my firm be listed on?',
+    answer:
+      'The highest-value directories for law firms are Avvo, Martindale-Hubbell, Justia, FindLaw, Super Lawyers, Lawyers.com, and your state bar\'s attorney directory. Secondary tier includes Yelp, BBB, and local bar association directories. We audit your current citation footprint and identify exactly which directories you are missing or have inconsistent information on.',
+  },
+  {
+    category: 'Local & Maps',
+    question: 'How important are Google reviews for law firm SEO?',
+    answer:
+      'Extremely important. A BrightLocal study found that review signals account for roughly 15 to 17 percent of local pack ranking factors. More critically, review recency matters as much as volume. A firm with 300 reviews where the newest is from 2022 can be outranked by a firm with 40 reviews all posted this year. We build a systematic review request process that fits naturally into your post-consultation workflow.',
+  },
+  {
+    category: 'Working With Us',
+    question: 'What do I need to provide to get started?',
+    answer:
+      'We need access to your Google Search Console, Google Analytics, and Google Business Profile. We also need a 30-minute intake call to understand your practice areas, your current client acquisition priorities, and any past SEO work done. That is it. We handle everything else from that point.',
+  },
+  {
+    category: 'Working With Us',
+    question: 'How much of my time does this require each month?',
+    answer:
+      'Our goal is less than 2 hours per month from you. That covers a 45-minute monthly reporting call, reviewing content before it goes live (usually 1 to 2 pieces), and responding to any questions we flag. The rest is on us. Managing partner time is too valuable to waste on SEO coordination tasks.',
+  },
+  {
+    category: 'Working With Us',
+    question: 'Do you work with law firms that have been burned by SEO agencies before?',
+    answer:
+      'Most of our clients come to us after a bad experience elsewhere. The most common stories are agencies that built spammy links that got the site penalized, produced generic content that was never indexed, or disappeared after the first month. We do a full audit of any prior SEO work before starting so we know exactly what we are inheriting and what needs to be fixed.',
+  },
+  {
+    category: 'Working With Us',
+    question: 'Are there industries or firm types you do not work with?',
+    answer:
+      'We focus on plaintiff-side PI, criminal defense, family law, immigration, and estate planning. We do not currently work with large BigLaw firms where SEO is one of 40 active marketing programs. Our model works best for firms with 1 to 25 attorneys who want SEO to be a primary growth channel, not a checkbox.',
+  },
+  {
+    category: 'Working With Us',
+    question: 'What makes FactoryJet different from Rankings.io or Consultwebs?',
+    answer:
+      'Rankings.io is excellent but commands a premium monthly retainer for a single practice area campaign. Consultwebs locks you into long-term contracts with significant minimums. We offer senior-level legal SEO strategy with full transparency, no lock-in contracts, and the ability to cover multiple practice areas simultaneously because our cost structure is built differently. You get the strategy, not an account manager reading from a dashboard.',
+  },
+];
+
 const schemaFAQ = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Which is the best law firm SEO company?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'There is no single best law firm SEO company for every practice. A personal injury firm competing on some of the most expensive keywords in Google needs different work from a family law practice serving two counties. Judge on whether the agency understands YMYL content standards, does real Map Pack work, and can show results in your practice area specifically.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is SEO in law firms?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Law firm SEO is the work of getting your practice to appear when someone searches for legal help, without paying for each click. In practice it is three things: a technically sound website, content that meets Google YMYL standards for legal advice, and a Google Business Profile strong enough to appear in the Map Pack for your area.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does an SEO consultant cost for a law firm?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'It varies widely, and anyone quoting a number before seeing your market is guessing. The drivers are how competitive your practice area is, how many locations you serve, and how much technical repair the site needs first. Legal is among the most expensive categories in search, so ask any agency to separate their fee from any ad spend in writing.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is SEO being phased out?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No, but it has changed shape. AI Overviews and assistants now answer a share of queries without a click, which reduces traffic on informational searches. High-intent legal searches, someone looking for representation right now, still go to search results and the Map Pack. The work has shifted toward being the source AI cites rather than only ranking blue links.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does law firm SEO take to work?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Expect early movement in three to six months and stable local rankings in six to twelve. Legal is slower than most categories because Google applies stricter quality standards to YMYL topics, which includes anything affecting someone legal or financial wellbeing. Any agency promising fast rankings in legal is either overselling or planning something that will cost you later.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you get my firm cited by ChatGPT and Google AI answers?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'That is a separate discipline from ranking, and we treat it as one. It means self-contained factual answers on your pages, real attorney authorship and credentials, and presence on the third-party sources AI assistants actually cite. Most legal SEO agencies are not doing anything about this yet, which is exactly why it is worth doing now.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is law firm SEO and why does it matter more than PPC?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Law firm SEO is the process of earning organic search rankings for legal queries. Paid clicks in most legal markets are among the most expensive in all of Google Ads. A top organic ranking costs nothing per click and compounds value over time. Attorneys who rank organically consistently report the lowest cost per retained client across all channels.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How is legal SEO different from SEO for other local businesses?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Three factors make it harder. First, Google classifies legal content as YMYL (Your Money or Your Life). Second, state bar rules limit what you can claim in marketing. Third, the Map Pack ranking signals weigh review recency and volume heavily, meaning review acquisition is a core part of the work.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long before I see ranking improvements?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Technical fixes and on-page optimization show measurable improvement in 30 to 60 days. Content and link-building results mature between 90 and 180 days for most mid-competition keywords. We give you a keyword-specific timeline during the audit phase.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you guarantee first-page rankings?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No ethical SEO agency can guarantee specific rankings because Google\'s algorithm is controlled by Google, not by us. What we can promise is a documented strategy, monthly reporting with full transparency, and a track record of results across legal clients.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How do I get into the Google Map Pack for legal searches?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The Map Pack ranks based on proximity, relevance, and prominence. Relevance comes from fully completing your Google Business Profile with the right categories and services. Prominence comes from review volume and recency, local citations across legal directories, and the authority of your website.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What legal directories should my firm be listed on?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The highest-value directories for law firms are Avvo, Martindale-Hubbell, Justia, FindLaw, Super Lawyers, Lawyers.com, and your state bar\'s attorney directory. We audit your current citation footprint and identify which directories you are missing.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What makes FactoryJet different from Rankings.io or Consultwebs?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Legal-only agencies like Rankings.io command a premium monthly retainer for a single practice area campaign, and shops like Consultwebs lock you into long-term contracts. We offer senior-level legal SEO strategy with full transparency, no lock-in contracts, and the ability to cover multiple practice areas simultaneously.',
-      },
-    },
-  ],
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
 };
 
 const schemaOrganization = {

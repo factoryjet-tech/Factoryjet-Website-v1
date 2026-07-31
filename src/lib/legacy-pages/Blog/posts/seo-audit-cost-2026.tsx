@@ -1,31 +1,7 @@
 import React from 'react';
 import type { BlogPost } from '../data.types';
 
-export const post: BlogPost = {
-  id: '223',
-  slug: 'seo-audit-cost-2026',
-  title: 'How Much Does an SEO Audit Cost in 2026? (Real Pricing Breakdown)',
-  excerpt:
-    'SEO audit prices range from $0 to $30,000+ depending on who does it and what they actually check. This breakdown shows what each tier covers, what to ask for, and when a free audit is enough.',
-  category: 'Emerging Tech',
-  author: 'Bhavesh Barot',
-  date: 'Jun 7, 2026',
-  readTime: '10 min read',
-  imageUrl: '/blog-images/seo-audit-cost-2026.webp',
-  meta: {
-    title: 'How Much Does an SEO Audit Cost in 2026? Real Pricing Breakdown',
-    description:
-      'SEO audit costs range from free to $30,000+ in 2026. This guide breaks down what each price tier actually covers, what questions to ask, and what a small business really needs.',
-  },
-  keyTakeaways: [
-    'SEO audit costs in 2026 range from $0 (automated tools) to $30,000+ (enterprise technical audits by specialized agencies).',
-    'For most small businesses with under 500 pages, a professional audit in the $500–$2,500 range covers everything actionable.',
-    'Free automated audits (Semrush, Ahrefs, Screaming Frog free tier) are useful for surface-level technical checks but miss content quality, competitive gaps, and strategic priorities.',
-    'The most important thing to ask for in any paid audit: a prioritized action list, not just a list of issues. A 200-item crawl report with no priority ranking is not an audit, it is a data dump.',
-    'In 2026, a complete SEO audit should cover traditional technical SEO AND AI search readiness, schema markup, content structure for AI Overviews, and GEO signals.',
-    'One-time audits are useful for diagnosis; ongoing SEO monitoring produces more long-term value. Use the audit to establish a baseline, then implement systematically.',
-  ],
-  faqs: [
+const faqs = [
     {
       q: 'How much does an SEO audit cost?',
       a: 'SEO audit costs in 2026 range from $0 for automated tool-based checks to $30,000+ for large enterprise technical audits. For small businesses with under 500 pages, professional audits typically fall in the $500–$2,500 range. Mid-market sites (500–5,000 pages) typically pay $2,500–$8,000. Enterprise audits covering 10,000+ pages run $10,000–$30,000+.',
@@ -110,7 +86,33 @@ export const post: BlogPost = {
       q: 'Does FactoryJet offer SEO audits?',
       a: "Yes. Every FactoryJet website project includes a pre-launch SEO audit covering technical structure, schema, Core Web Vitals, and content architecture. For existing sites, we offer standalone SEO audits with prioritized action lists, not crawl data dumps. Book a free 30-minute call to discuss what your site needs.",
     },
+  ];
+
+export const post: BlogPost = {
+  id: '223',
+  slug: 'seo-audit-cost-2026',
+  title: 'How Much Does an SEO Audit Cost in 2026? (Real Pricing Breakdown)',
+  excerpt:
+    'SEO audit prices range from $0 to $30,000+ depending on who does it and what they actually check. This breakdown shows what each tier covers, what to ask for, and when a free audit is enough.',
+  category: 'Emerging Tech',
+  author: 'Bhavesh Barot',
+  date: 'Jun 7, 2026',
+  readTime: '10 min read',
+  imageUrl: '/blog-images/seo-audit-cost-2026.webp',
+  meta: {
+    title: 'How Much Does an SEO Audit Cost in 2026? Real Pricing Breakdown',
+    description:
+      'SEO audit costs range from free to $30,000+ in 2026. This guide breaks down what each price tier actually covers, what questions to ask, and what a small business really needs.',
+  },
+  keyTakeaways: [
+    'SEO audit costs in 2026 range from $0 (automated tools) to $30,000+ (enterprise technical audits by specialized agencies).',
+    'For most small businesses with under 500 pages, a professional audit in the $500–$2,500 range covers everything actionable.',
+    'Free automated audits (Semrush, Ahrefs, Screaming Frog free tier) are useful for surface-level technical checks but miss content quality, competitive gaps, and strategic priorities.',
+    'The most important thing to ask for in any paid audit: a prioritized action list, not just a list of issues. A 200-item crawl report with no priority ranking is not an audit, it is a data dump.',
+    'In 2026, a complete SEO audit should cover traditional technical SEO AND AI search readiness, schema markup, content structure for AI Overviews, and GEO signals.',
+    'One-time audits are useful for diagnosis; ongoing SEO monitoring produces more long-term value. Use the audit to establish a baseline, then implement systematically.',
   ],
+  faqs,
   content: (
     <article>
       {/* ── SCHEMA ─────────────────────────────────────────────────────── */}
@@ -173,48 +175,7 @@ export const post: BlogPost = {
             {
               '@context': 'https://schema.org',
               '@type': 'FAQPage',
-              mainEntity: [
-                {
-                  '@type': 'Question',
-                  name: 'How much does an SEO audit cost?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'SEO audit costs range from $0 for automated checks to $30,000+ for enterprise audits. Small businesses with under 500 pages typically pay $500–$2,500 for a professional audit.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'What is included in an SEO audit?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'A complete audit covers technical SEO, on-page optimization, content analysis, backlink review, competitive gap analysis, and a prioritized action list with estimated impact per finding.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'Is a free SEO audit worth anything?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Free automated audits are useful for surface-level technical issues. They do not cover content strategy, competitive gaps, or AI search readiness. Use them as a starting point only.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'How often should I get an SEO audit?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'For most small businesses, a comprehensive audit every 12–18 months is sufficient with ongoing monitoring in place. Always audit after a major redesign or after a Google update that caused a traffic drop.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'Should a small business pay for an SEO audit?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Yes, if you plan any SEO activity over the next 12 months. A $500–$1,500 audit prevents wasting budget on the wrong priorities. Only pay if you have capacity to act on the findings.',
-                  },
-                },
-              ],
+              mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
             },
           ]),
         }}

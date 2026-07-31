@@ -79,63 +79,8 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schemas
+   JSON-LD Schemas — faqSchema is declared after CHATBOT_FAQ_ITEMS below
 ───────────────────────────────────────────────────────────────────────────── */
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is the difference between an AI chatbot and a scripted chatbot?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A scripted chatbot follows a fixed decision tree — it breaks the moment someone asks something outside the script. An AI chatbot uses a large language model (Claude, GPT-4o, Gemini) to understand intent in plain language, respond naturally, and handle unexpected questions without breaking. It can also take actions — checking Shopify order status, updating a Zoho CRM record, processing a Razorpay payment — that a scripted bot cannot.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does AI chatbot development cost in India?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet builds AI chatbots on a fixed-price basis, scoped to your project. Whether you need a focused website or WhatsApp chatbot, WhatsApp AI chat with CRM integration, or a multi-channel chatbot (website + WhatsApp + support portal) with Zoho/Freshdesk/Shopify integration, every project is quoted up front after a free discovery call, so you know the full cost before work starts. No hourly billing.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you build a WhatsApp AI chatbot for my Indian business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — WhatsApp chatbots are our most common India deployment. We build on Interakt, Wati, AiSensy, and Yellow.ai and integrate with your Shopify store, Zoho CRM, Freshdesk, or Google Sheets. The chatbot qualifies leads, answers product questions, sends order updates, books appointments, and escalates to a human when needed — in Hindi, English, or any regional language.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to build and deploy an AI chatbot in India?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A focused website or WhatsApp chatbot goes from kickoff to live in 2–3 weeks. Multi-channel chatbots with CRM/ERP integrations take 4–6 weeks. We give you a firm timeline after a discovery call because scope determines everything.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can the chatbot respond in Hindi and regional Indian languages?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. We configure chatbots to detect the language the customer writes in and respond in Hindi, Hinglish, Marathi, Tamil, Telugu, Gujarati, Kannada, and other languages. For WhatsApp, language detection is automatic — no separate bot per language required.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Which platforms can the chatbot be deployed on?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'WhatsApp Business (via Interakt, Wati, AiSensy, Yellow.ai), your website (embedded widget or full-page), Facebook Messenger, Instagram DMs, and support portals like Freshdesk or Zoho Desk. Most Indian businesses start with WhatsApp and website, then expand to other channels.',
-      },
-    },
-  ],
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -578,6 +523,16 @@ const CHATBOT_FAQ_ITEMS = [
       "Yes. We use API-level integrations (no screen scraping), enforce least-privilege access so the chatbot reads only the data it needs, and implement full audit trails on every action. For BFSI, healthcare, and legal sectors, we offer private LLM setups where your data never leaves your infrastructure. All data flows are documented and handed over at delivery.",
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: CHATBOT_FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Page

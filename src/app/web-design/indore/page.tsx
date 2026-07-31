@@ -139,71 +139,6 @@ const localBusinessSchema = {
   },
 };
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How much does web design cost in Indore in 2026?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Which is the best web design company in Indore?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "FactoryJet is one of India's most experienced web design teams with 12+ years of expertise and 500+ businesses served. Unlike Indore-local agencies that may have 2–5 years of experience and 50–200 clients, FactoryJet brings a proven Next.js engineering process, a written 7-day delivery guarantee, and published fixed prices — no surprises after the brief. Lighthouse 100/100 performance is standard on every build.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I get a website made in 7 days in Indore?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — and it is guaranteed in writing. FactoryJet delivers standard websites in 7 days from the moment your brand assets and content are ready. Most Indore agencies quote 4–12 weeks for the same scope. The 7-day clock starts at project kickoff. If we miss the agreed date, you do not pay.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you visit our Indore office for meetings?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We work fully remotely, which is precisely how we keep your costs fixed and predictable. All meetings happen over Google Meet or Zoom in IST-friendly hours — typically 10 AM–7 PM. We support both Hindi and English communication throughout the project. Most clients find remote collaboration faster than waiting for in-person agency slots.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Indore mein website banane ka kharcha kitna hai?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Hum fixed packages nahi bechte. Price is baat par depend karta hai ki aapko kitne pages chahiye, aapka market kitna competitive hai, aur aapko e-commerce, booking system ya AI features jaise extras chahiye ya nahi. Free consultation ke baad aapko ek clear, fixed quote milta hai, aur poora codebase aapka hota hai.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: '7 din mein website ban sakti hai kya?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Haan, bilkul. FactoryJet ki 7-day delivery guarantee written contract mein hoti hai. Jab aap brand assets aur content bhejte ho, usi din se 7-din ka clock shuru hota hai. Discovery, design, development, SEO, aur launch — sab kuch 7 din mein. Agar deadline miss ho toh payment nahi dena.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Who is the best web design agency in Indore?',
-      acceptedAnswer: { '@type': 'Answer', text: 'For small businesses, FactoryJet makes a strong case as the best web design company in Indore: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Indore you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Indore.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Should I hire web designer in Indore or use an agency?',
-      acceptedAnswer: { '@type': 'Answer', text: 'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Indore directly, agree the scope and price in writing first.' },
-    },
-],
-};
-
 const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
@@ -466,6 +401,16 @@ const INDORE_FAQ_ITEMS = [
       'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Indore directly, agree the scope and price in writing first.',
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: INDORE_FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 const INDORE_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },

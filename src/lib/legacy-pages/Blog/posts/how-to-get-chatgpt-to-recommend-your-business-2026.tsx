@@ -1,31 +1,7 @@
 import React from 'react';
 import type { BlogPost } from '../data.types';
 
-export const post: BlogPost = {
-  id: '218',
-  slug: 'how-to-get-chatgpt-to-recommend-your-business-2026',
-  title: 'How to Get ChatGPT to Recommend Your Small Business (2026 Playbook)',
-  excerpt:
-    'ChatGPT is now a referral source that sends real buyers to businesses it trusts. Here is exactly how to make your business one of them, the specific signals, content moves, and technical fixes that determine whether AI recommends you or your competitor.',
-  category: 'Emerging Tech',
-  author: 'Bhavesh Barot',
-  date: 'Jun 7, 2026',
-  readTime: '12 min read',
-  imageUrl: '/blog-images/how-to-get-chatgpt-to-recommend-your-business-2026.webp',
-  meta: {
-    title: 'How to Get ChatGPT to Recommend Your Business in 2026 (Proven Playbook)',
-    description:
-      'ChatGPT recommends businesses based on specific signals, not just SEO. Here is the exact playbook US small businesses use to show up when buyers ask AI for recommendations.',
-  },
-  keyTakeaways: [
-    'ChatGPT, Gemini, and Perplexity recommend businesses based on brand authority signals, third-party mentions, review volume, structured content, and citation frequency, not paid placement.',
-    'The single highest-leverage move: get your business mentioned by name on authoritative third-party sites (industry publications, local news, directories like Yelp and Clutch).',
-    'Answer-first content structure is the format AI pulls from. If your website buries the answer in paragraph four, AI skips you and cites whoever answered in paragraph one.',
-    'Schema markup (LocalBusiness, FAQPage, Review) does not directly trigger AI citations but makes your content easier to parse, treat it as table stakes, not a silver bullet.',
-    'Tracking AI mentions is now a real practice. Tools like Peec.ai, Brandwatch, and manual prompt testing let you measure whether ChatGPT knows your business exists.',
-    'FactoryJet builds GEO-ready websites and content programs that are specifically structured to earn AI recommendations, not just Google rankings.',
-  ],
-  faqs: [
+const faqs = [
     {
       q: 'How does ChatGPT decide which businesses to recommend?',
       a: 'ChatGPT pulls from its training data (a broad snapshot of the internet up to its knowledge cutoff) and, for real-time queries, from web browsing via Bing. Businesses that appear most frequently and most authoritatively across the web, in reviews, news articles, industry directories, and cited content, are the ones ChatGPT surfaces when someone asks for a recommendation. It is essentially measuring the breadth and trustworthiness of your brand\'s footprint across the web, not a single-page factor.',
@@ -110,7 +86,33 @@ export const post: BlogPost = {
       q: 'What industries benefit most from ChatGPT recommendations right now?',
       a: 'Any high-consideration service where buyers research before committing: web design, legal, HVAC, plumbing, dentistry, financial planning, contractors, marketing agencies, e-commerce development, accounting. Also e-commerce product categories where ChatGPT Shopping surfaces product recommendations. The lower the price point and higher the purchase frequency, the less AI recommendations matter. The higher the price and the more the buyer needs to trust the provider, the more AI visibility is worth investing in.',
     },
+  ];
+
+export const post: BlogPost = {
+  id: '218',
+  slug: 'how-to-get-chatgpt-to-recommend-your-business-2026',
+  title: 'How to Get ChatGPT to Recommend Your Small Business (2026 Playbook)',
+  excerpt:
+    'ChatGPT is now a referral source that sends real buyers to businesses it trusts. Here is exactly how to make your business one of them, the specific signals, content moves, and technical fixes that determine whether AI recommends you or your competitor.',
+  category: 'Emerging Tech',
+  author: 'Bhavesh Barot',
+  date: 'Jun 7, 2026',
+  readTime: '12 min read',
+  imageUrl: '/blog-images/how-to-get-chatgpt-to-recommend-your-business-2026.webp',
+  meta: {
+    title: 'How to Get ChatGPT to Recommend Your Business in 2026 (Proven Playbook)',
+    description:
+      'ChatGPT recommends businesses based on specific signals, not just SEO. Here is the exact playbook US small businesses use to show up when buyers ask AI for recommendations.',
+  },
+  keyTakeaways: [
+    'ChatGPT, Gemini, and Perplexity recommend businesses based on brand authority signals, third-party mentions, review volume, structured content, and citation frequency, not paid placement.',
+    'The single highest-leverage move: get your business mentioned by name on authoritative third-party sites (industry publications, local news, directories like Yelp and Clutch).',
+    'Answer-first content structure is the format AI pulls from. If your website buries the answer in paragraph four, AI skips you and cites whoever answered in paragraph one.',
+    'Schema markup (LocalBusiness, FAQPage, Review) does not directly trigger AI citations but makes your content easier to parse, treat it as table stakes, not a silver bullet.',
+    'Tracking AI mentions is now a real practice. Tools like Peec.ai, Brandwatch, and manual prompt testing let you measure whether ChatGPT knows your business exists.',
+    'FactoryJet builds GEO-ready websites and content programs that are specifically structured to earn AI recommendations, not just Google rankings.',
   ],
+  faqs,
   content: (
     <>
       <script
@@ -141,13 +143,7 @@ export const post: BlogPost = {
             {
               '@context': 'https://schema.org',
               '@type': 'FAQPage',
-              mainEntity: [
-                { '@type': 'Question', name: 'How does ChatGPT decide which businesses to recommend?', acceptedAnswer: { '@type': 'Answer', text: 'ChatGPT pulls from its training data and, for real-time queries, from web browsing via Bing. Businesses that appear most frequently and most authoritatively across the web in reviews, news articles, industry directories, and cited content are the ones ChatGPT surfaces for recommendations.' } },
-                { '@type': 'Question', name: 'Can I pay to get my business recommended by ChatGPT?', acceptedAnswer: { '@type': 'Answer', text: 'No. As of June 2026, there is no paid placement mechanism in ChatGPT, Gemini, or Perplexity for organic recommendation responses. Organic reputation is the only lever.' } },
-                { '@type': 'Question', name: 'What is the difference between ChatGPT recommending my business and ranking on Google?', acceptedAnswer: { '@type': 'Answer', text: 'Google ranking measures how well a specific page answers a specific query. ChatGPT recommendations measure how much the AI associates your brand name with a category or location across its training data and browsing results.' } },
-                { '@type': 'Question', name: 'How long does it take to start appearing in ChatGPT recommendations?', acceptedAnswer: { '@type': 'Answer', text: 'For web-browsing-enabled queries, fresh content can start appearing within days. For training-data-based responses, it depends on OpenAI model update cycles, historically every few months to a year.' } },
-                { '@type': 'Question', name: 'Does having a Google Business Profile help me get recommended by ChatGPT?', acceptedAnswer: { '@type': 'Answer', text: 'Indirectly, yes. A complete, high-review-count Google Business Profile feeds into the broader authority signals that AI models associate with legitimate, trusted businesses and also ensures you appear in Bing Maps data that ChatGPT Browse can access.' } },
-              ],
+              mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
             },
           ]),
         }}

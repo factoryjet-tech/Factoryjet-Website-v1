@@ -131,55 +131,6 @@ export default function Page() {
     
   }
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'How much does a website cost in Madurai?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you serve textile and garment businesses in Madurai?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes. We build product catalogue sites, export portals, and brand websites for Madurai\'s textile and garment manufacturers targeting domestic and export markets.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Can you build a website for a Madurai hospital or healthcare provider?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes. We build patient-friendly hospital websites, clinic pages, and specialist practice sites optimized for local search in Madurai and the surrounding districts.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How fast can you deliver a website for my Madurai business?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We deliver 5-page websites in 7 days. Larger projects with custom features are scoped individually but we maintain rapid delivery for all standard engagements.',
-        },
-      },
-    {
-      '@type': 'Question',
-      name: 'Who is the best web design agency in Madurai?',
-      acceptedAnswer: { '@type': 'Answer', text: 'For small businesses, FactoryJet makes a strong case as the best web design company in Madurai: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Madurai you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Madurai.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Should I hire web designer in Madurai or use an agency?',
-      acceptedAnswer: { '@type': 'Answer', text: 'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Madurai directly, agree the scope and price in writing first.' },
-    },
-],
-  }
-
   const heroProps = {
     eyebrow: 'WEB DESIGN · MADURAI',
     headline: "Madurai's Growing Businesses Deserve a Website That Works as Hard as They Do",
@@ -378,6 +329,15 @@ const MDU_FAQ_ITEMS = [
   },
 ];
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: MDU_FAQ_ITEMS.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: { '@type': 'Answer', text: item.answer },
+    })),
+  };
 
   const howToSchema = {
     '@context': 'https://schema.org',

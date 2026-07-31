@@ -1,31 +1,7 @@
 import React from 'react';
 import type { BlogPost } from '../data.types';
 
-export const post: BlogPost = {
-  id: '217',
-  slug: 'seo-cost-small-business-2026',
-  title: 'How Much Does SEO Cost for a Small Business in 2026? ($500–$3,500/Mo, Itemized)',
-  excerpt:
-    'SEO pricing ranges from $300 to $30,000 per month depending on who you hire. Here is the honest, itemized breakdown of what US small businesses actually pay, and what each budget tier buys you.',
-  category: 'Emerging Tech',
-  author: 'Bhavesh Barot',
-  date: 'Jun 7, 2026',
-  readTime: '11 min read',
-  imageUrl: '/blog-images/seo-cost-small-business-2026.webp',
-  meta: {
-    title: 'SEO Cost for Small Business in 2026: Real Monthly Pricing, Itemized',
-    description:
-      'How much does SEO cost for a small business in 2026? Honest breakdown of monthly retainer, project, and hourly rates, with what each budget tier actually delivers.',
-  },
-  keyTakeaways: [
-    'Most US small businesses pay $500–$2,500 per month for SEO. Local-only campaigns land at the low end; regional or competitive industries push toward the high end.',
-    'The three most common pricing models are monthly retainers ($500–$5,000+), project-based fees ($1,000–$15,000 for audits or one-time campaigns), and hourly consulting ($75–$200/hr).',
-    'What you get at $500/month is not the same as what you get at $2,500/month. Budget tiers are not just price, they are fundamentally different scopes of work.',
-    'The biggest SEO cost mistakes small businesses make: paying for a one-time SEO fix, buying cheap link packages, and choosing a vendor based solely on price.',
-    'AI search (ChatGPT, Gemini, Perplexity) now drives meaningful referral traffic for SMBs. In 2026, SEO without GEO (Generative Engine Optimization) is incomplete.',
-    'FactoryJet builds US small business SEO programs starting at $1,499/month, including GEO-readiness work as standard on every engagement.',
-  ],
-  faqs: [
+const faqs = [
     {
       q: 'How much does SEO cost per month for a small business?',
       a: 'Most US small businesses spend between $500 and $2,500 per month on SEO. Local businesses competing in a single city often land at $500–$1,000/month for basic local SEO work. Businesses in competitive industries, legal, healthcare, home services, e-commerce, typically need $1,500–$3,500/month to move the needle. The national average for small business SEO retainers is around $1,497/month according to Ahrefs\' 2024 agency pricing survey.',
@@ -114,7 +90,33 @@ export const post: BlogPost = {
       q: 'Does FactoryJet offer SEO services for US small businesses?',
       a: 'Yes. FactoryJet builds SEO programs for US small businesses starting at $1,499/month. Every engagement includes technical SEO, on-page optimization, content, link building outreach, and GEO-readiness work (structured data, answer-first content structure, brand citation monitoring). We are founder-led, which means you work directly with a senior strategist, not a junior account manager passing your tasks to an offshore team. Book a 30-minute call at calendly.com/bhavesh-factoryjet/30min to discuss your situation.',
     },
+  ];
+
+export const post: BlogPost = {
+  id: '217',
+  slug: 'seo-cost-small-business-2026',
+  title: 'How Much Does SEO Cost for a Small Business in 2026? ($500–$3,500/Mo, Itemized)',
+  excerpt:
+    'SEO pricing ranges from $300 to $30,000 per month depending on who you hire. Here is the honest, itemized breakdown of what US small businesses actually pay, and what each budget tier buys you.',
+  category: 'Emerging Tech',
+  author: 'Bhavesh Barot',
+  date: 'Jun 7, 2026',
+  readTime: '11 min read',
+  imageUrl: '/blog-images/seo-cost-small-business-2026.webp',
+  meta: {
+    title: 'SEO Cost for Small Business in 2026: Real Monthly Pricing, Itemized',
+    description:
+      'How much does SEO cost for a small business in 2026? Honest breakdown of monthly retainer, project, and hourly rates, with what each budget tier actually delivers.',
+  },
+  keyTakeaways: [
+    'Most US small businesses pay $500–$2,500 per month for SEO. Local-only campaigns land at the low end; regional or competitive industries push toward the high end.',
+    'The three most common pricing models are monthly retainers ($500–$5,000+), project-based fees ($1,000–$15,000 for audits or one-time campaigns), and hourly consulting ($75–$200/hr).',
+    'What you get at $500/month is not the same as what you get at $2,500/month. Budget tiers are not just price, they are fundamentally different scopes of work.',
+    'The biggest SEO cost mistakes small businesses make: paying for a one-time SEO fix, buying cheap link packages, and choosing a vendor based solely on price.',
+    'AI search (ChatGPT, Gemini, Perplexity) now drives meaningful referral traffic for SMBs. In 2026, SEO without GEO (Generative Engine Optimization) is incomplete.',
+    'FactoryJet builds US small business SEO programs starting at $1,499/month, including GEO-readiness work as standard on every engagement.',
   ],
+  faqs,
   content: (
     <>
       <script
@@ -145,13 +147,7 @@ export const post: BlogPost = {
             {
               '@context': 'https://schema.org',
               '@type': 'FAQPage',
-              mainEntity: [
-                { '@type': 'Question', name: 'How much does SEO cost per month for a small business?', acceptedAnswer: { '@type': 'Answer', text: 'Most US small businesses spend between $500 and $2,500 per month on SEO. Local businesses competing in a single city often land at $500-$1,000/month. Businesses in competitive industries typically need $1,500-$3,500/month.' } },
-                { '@type': 'Question', name: 'What is included in a typical small business SEO retainer?', acceptedAnswer: { '@type': 'Answer', text: 'A proper monthly retainer covers: keyword research and tracking, on-page optimization, technical SEO monitoring, content creation (2-4 pieces per month), local citation management, link building outreach, and monthly reporting.' } },
-                { '@type': 'Question', name: 'Is $500/month SEO worth it for a small business?', acceptedAnswer: { '@type': 'Answer', text: 'At $500/month you can get real results for a single-city local service business. For regional or high-competition niches, $500/month is unlikely to generate meaningful results.' } },
-                { '@type': 'Question', name: 'What does SEO cost if I hire a freelancer vs. an agency?', acceptedAnswer: { '@type': 'Answer', text: 'Freelancers typically charge $50-$150/hour or $500-$2,000/month. Agencies charge $1,000-$5,000+/month because they provide a full team: strategist, writer, technical SEO specialist, and link builder.' } },
-                { '@type': 'Question', name: 'How much does a one-time SEO audit cost?', acceptedAnswer: { '@type': 'Answer', text: 'SEO audits range from $300 for automated reports to $15,000 for enterprise audits. For small businesses, a legitimate manual audit from a qualified agency typically costs $750-$3,500.' } },
-              ],
+              mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
             },
           ]),
         }}

@@ -59,63 +59,8 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schemas
+   JSON-LD Schemas — faqSchema is declared after SALES_FAQ_ITEMS below
 ───────────────────────────────────────────────────────────────────────────── */
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is an AI sales agent and how does it work for Indian businesses?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'An AI sales agent qualifies inbound leads automatically — asking discovery questions on WhatsApp, collecting contact details and requirements, scoring leads based on your criteria, and pushing qualified prospects to your Zoho CRM with a full conversation summary. It responds within 60 seconds, 24/7, in Hindi or English.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does an AI sales agent cost in India?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet AI sales agents are fixed-price and scoped to your build. Every project is quoted up front after a free discovery call, so you know the full cost before any work starts. Scope drives the price — the number of lead sources, qualification logic, CRM integrations, and whether you need demo booking and follow-up sequences. Book a discovery call for your exact quote.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can an AI sales agent qualify leads from Facebook and Instagram ads?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. We integrate Facebook Lead Ads and Instagram Direct so when a lead submits your ad form, the AI starts a WhatsApp conversation within 60 seconds — asks qualification questions, scores the lead, and pushes qualified prospects to your CRM with full context.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can the AI sales agent book demos and appointments automatically?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. After qualifying a lead, the agent checks your calendar (Google Calendar, Calendly, or Zoho Bookings), proposes available slots, confirms on WhatsApp, sends a calendar invite, and sets a reminder 24 hours before. All confirmed meetings logged to Zoho CRM automatically.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How does the AI agent handle leads in Hindi?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The AI detects the language the lead writes in and responds in Hindi, Hinglish, Marathi, Tamil, Telugu, Gujarati, or any other language your market uses. Language switching is automatic within the same conversation.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What happens to leads the AI cannot qualify or that drop off?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Leads that do not complete the qualification flow are flagged and logged to your CRM with partial conversation history. The agent sends automated re-engagement messages at configurable intervals (24 hours, 3 days, 7 days) before marking the lead cold.',
-      },
-    },
-  ],
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -270,6 +215,16 @@ const SALES_FAQ_ITEMS = [
   { category: 'pricing', question: 'Are there ongoing costs after the sales agent is built?', answer: "LLM API costs (typically ₹5,000–₹20,000/month for Indian SMB lead volumes — paid directly to model providers) and your WhatsApp BSP subscription (Interakt/Wati based on message volume). FactoryJet charges nothing ongoing unless you choose a monthly retainer." },
   { category: 'pricing', question: 'Is my lead data safe with an AI sales agent?', answer: "Yes. Lead data is processed via API-level integrations and stored in your Zoho CRM — not on FactoryJet servers. We enforce least-privilege access, implement full audit trails, and document all data flows at delivery. For BFSI and regulated sectors, we deploy with private LLM infrastructure." },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: SALES_FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Page

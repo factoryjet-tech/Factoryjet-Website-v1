@@ -119,63 +119,6 @@ const localBusinessSchema = {
   },
 };
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How much does a website cost for a small business in Pune?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to build a website in Pune?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A standard FactoryJet build delivers in 7 days from kickoff to launch. Discovery and design take the first two days, development runs through days five and six, and content, SEO, and launch happen on day seven. The 7-day clock starts when your brand assets and content are in our shared workspace.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you serve IT companies in Hinjewadi and Kharadi?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. We build fast, authority-first websites for IT services firms, SaaS products, and tech startups across Hinjewadi (Phases 1–3), Kharadi, and Wakad — designed to win global B2B tenders, not just look good.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I own the website after it is built?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. You can take it to any developer or hosting provider at any time. No FactoryJet retainer required, no proprietary platform lock-in.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you build B2B portals for Pune auto and engineering suppliers?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — auto and engineering B2B is a core profile for us in Pune. We build capability websites, dealer and distributor portals, and product catalogues with datasheet downloads for tier-1 and tier-2 suppliers in Chakan, Talegaon, and Pimpri-Chinchwad, with technical SEO that surfaces capability to OEM procurement teams.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Who is the best web design agency in Pune?',
-      acceptedAnswer: { '@type': 'Answer', text: 'For small businesses, FactoryJet makes a strong case as the best web design company in Pune: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Pune you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Pune.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Should I hire web designer in Pune or use an agency?',
-      acceptedAnswer: { '@type': 'Answer', text: 'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Pune directly, agree the scope and price in writing first.' },
-    },
-],
-};
-
 const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
@@ -386,6 +329,16 @@ const PUNE_FAQ_ITEMS = [
       'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Pune directly, agree the scope and price in writing first.',
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: PUNE_FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 const PUNE_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },

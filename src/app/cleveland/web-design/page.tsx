@@ -63,6 +63,8 @@ const FAQ_CATEGORIES = [
   { key: 'support',   label: 'Support & Ownership' },
 ];
 
+const CLEVELAND_FAQ_ITEMS = [{"question":"How much does a website cost for a small business in Cleveland?","answer":"Pricing is fixed-price and scoped to your build — the main drivers are page count, integrations, and design complexity. Most Cleveland small businesses choose the Starter tier for a clean five-page site, or Growth for a blog CMS and lead capture. Custom builds add e-commerce, booking systems, or AI features. Compared to local Cleveland agencies, FactoryJet delivers the same quality at a fraction of the cost — and you get a published timeline and a codebase you own. Every project is quoted up front after a free discovery call, so you know the full cost before work starts.","category":"pricing"},{"question":"How long does it take to build a website?","answer":"A standard FactoryJet build delivers in 7 days from kickoff to launch. Discovery and design take the first two days, development runs through days five and six, and content, SEO, and launch happen on day seven. We do not start the clock until your brand assets and content are in our shared workspace.","category":"pricing"},{"question":"What's included in a web design project?","answer":"Every project includes strategy, design, development, content, SEO setup, and a 30-day support window. You get a Figma design system you keep, a Next.js codebase you own, JSON-LD schema for AI search visibility, GA4 wired up from day one, and a recorded handover session. We do not charge separately for staging environments, basic copy edits, or routine bug fixes inside the support window.","category":"included"},{"question":"How long until my new site ranks on Google?","answer":"Branded searches (your business name) usually rank within one to two weeks of launch. Service plus location queries like 'web design Cleveland' typically take three to six months for a new domain. The work that compresses this timeline — schema, internal linking, content depth, technical performance — is built into every FactoryJet project, not sold as an add-on after launch.","category":"pricing"},{"question":"We're a vendor or supplier in the Cleveland Clinic ecosystem — can you build HIPAA-aware B2B websites for healthcare?","answer":"Yes. Healthcare is one of our most common client profiles in Cleveland. Cleveland Clinic is the world's #2 hospital, and the vendors, suppliers, and professional services firms in its ecosystem need sites that communicate technical depth, compliance awareness, and verifiable case study evidence to institutional procurement buyers. We build sites structured for those longer B2B due-diligence cycles — with lead-capture flows designed to route inquiries to the right person fast.","category":"platform"},{"question":"We supply Parker Hannifin, Eaton, or other Cleveland manufacturers — what does a manufacturing B2B website need?","answer":"Manufacturing B2B sites need to communicate engineering credibility, production certifications (ISO, AS9100, etc.), capabilities, and case studies to procurement managers who evaluate multiple suppliers simultaneously. We build sites structured around your capabilities and certifications — not generic marketing copy — with downloadable spec sheets, inquiry forms, and content architecture that answers procurement questions before the RFQ stage.","category":"platform"},{"question":"I run a law firm in Cleveland — what do I need from a website?","answer":"Law firm sites in Cleveland need clear practice area pages, attorney bios with credentials, case result summaries (where permitted by Ohio bar rules), and a lead-capture flow that routes inquiries to the right attorney by practice area. We also handle local SEO targeting Cleveland's legal search queries — which are highly competitive and highly valuable. Schema markup for law firms is included in every project.","category":"local"},{"question":"I own a restaurant or bar near West Side Market or East 4th Street — what does a good website need?","answer":"For Cleveland's food and beverage scene, the essentials are: a fast-loading mobile menu, a reservation or waitlist integration (OpenTable, Resy, or custom flow), event calendar support for live entertainment nights, and Google Maps / Apple Maps schema so you show up correctly in local search. We also build private dining or buyout inquiry forms, which drive significant additional revenue for venues that don't surface them properly.","category":"local"},{"question":"I'm in real estate or development in Ohio City, Tremont, or Detroit Shoreway — what do I need from a site?","answer":"Cleveland's real estate boom in Ohio City, Tremont, and Detroit Shoreway has created a highly competitive online market. Real estate and development sites need project portfolio galleries, neighborhood-specific landing pages, lead-capture forms that route inquiries immediately, and local SEO targeting Cleveland's high-demand submarkets. For developers, a project pipeline page with renderings and status updates can significantly reduce inbound inquiry load on your team.","category":"local"},{"question":"We're in financial services — KeyBank or Progressive Insurance ecosystem vendors. What does our website need?","answer":"Financial services and insurance ecosystem firms need sites that project credibility to sophisticated corporate buyers — with clear service pages, team credentials, case study structures, and compliance-aware messaging. We also build lead-capture flows optimized for longer B2B sales cycles, where the goal is a booked call rather than an immediate transaction. GA4 is wired up from day one so you know which pages are converting.","category":"local"},{"question":"We're a tech startup based in University Circle or MidTown Cleveland. What do we need from a launch website?","answer":"Tech startup sites need to communicate product differentiation quickly, build credibility with investors and early customers, and generate either inbound leads or user signups. We build with Next.js for maximum performance, include structured data for AI search crawlers, and design conversion flows around your specific acquisition goal — whether that's a demo request, a waitlist signup, or a direct trial conversion.","category":"local"},{"question":"How does FactoryJet compare to Cleveland agencies like Agency Creative or Tiller Digital?","answer":"Agency Creative and Tiller Digital are established Cleveland shops. Neither commits to fixed pricing or a delivery timeline in writing. FactoryJet gives you a clear, fixed-price quote up front after a free discovery call, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — which means faster load times and no ongoing plugin maintenance costs for your team. You can compare our scope and price against any Cleveland agency before you speak to us.","category":"local"},{"question":"What about Skoda Minotti — they offer web services as part of accounting?","answer":"Skoda Minotti is a respected Cleveland accounting and advisory firm. Web services are a side offering for them. FactoryJet is a dedicated web design and development team — web is our entire focus, not something bolted onto another service line. That focus means faster delivery, deeper technical expertise, and a support structure built specifically for web projects.","category":"local"},{"question":"Do I own the website after it's built, or am I locked into a platform?","answer":"You own everything — the Next.js codebase, the Figma design files, and the hosting configuration. There is no proprietary CMS lock-in, no mandatory retainer, and no monthly platform fee. You can take the code to any developer or hosting provider at any time. Most clients choose to stay with us for ongoing work, but that's always their call.","category":"platform"},{"question":"What tech stack do you build on, and why does it matter for my Cleveland business?","answer":"We build on Next.js deployed to Cloudflare Pages, with a headless CMS for content editing. Next.js produces static pages that load significantly faster than WordPress — typically under 1.5 seconds on mobile — which directly affects Google rankings and visitor bounce rates. For Cleveland businesses competing on local search in high-value sectors like healthcare and manufacturing, that performance gap over a WordPress competitor is a real and measurable advantage.","category":"local"},{"question":"Can you add e-commerce to a Cleveland business website?","answer":"Yes. Whether you need a simple product catalog with Stripe checkout, a full Shopify integration, or a custom e-commerce build, we handle it at the Custom tier. Cleveland retail businesses — particularly in Ohio City, Tremont, and the broader Greater Cleveland area — frequently need both a physical store presence and an online sales channel in one site. We architect that so it doesn't feel bolted on.","category":"technical"},{"question":"Can you build a Shopify store for a Cleveland retail or DTC brand?","answer":"Yes. Shopify builds for Cleveland retail and DTC brands are part of our standard service offering. We handle theme customization, product migration, payment setup, shipping configuration, and local SEO for Shopify stores. For brands that need both a Shopify storefront and a content-heavy marketing site, we build both and connect them cleanly.","category":"platform"},{"question":"What AI features can you add to a Cleveland business website?","answer":"Common AI integrations include site-search powered by vector embeddings, AI chat assistants trained on your services and FAQs, and AI-assisted content tools for blog or product descriptions. These are typically part of Custom tier projects. For Cleveland's healthcare IT vendors and manufacturing B2B firms, AI-assisted knowledge bases and spec-search tools are particularly strong fits for complex technical products.","category":"technical"},{"question":"How does my site perform on mobile? Cleveland visitors search on their phones constantly.","answer":"Mobile-first is the default, not an afterthought. Every FactoryJet build targets Lighthouse 100/100 and green Core Web Vitals on mobile. Whether your customers are searching on their phones outside West Side Market, at a sports venue before a Guardians game, or comparing suppliers on a tablet in a manufacturing facility, mobile performance is non-negotiable and tested before launch.","category":"technical"},{"question":"How does Cleveland local SEO work and what do you include?","answer":"Every FactoryJet project includes on-page SEO foundations: proper heading structure, meta tags, XML sitemap, JSON-LD schema with local business markup, image optimization, and Core Web Vitals performance. For Cleveland-specific local SEO, we target your primary service area — including neighborhood-level landing pages for Ohio City, Tremont, University Circle, Detroit Shoreway, and the broader MSA suburbs if relevant to your business.","category":"included"},{"question":"Can you be flexible on the 7-day timeline if we need more time for approvals?","answer":"The 7-day clock starts when we have everything we need from you — brand assets, copy inputs, and stakeholder approvals. If your internal process requires longer review cycles, we can agree a phased schedule upfront. The guarantee still applies to the development phase we control. We flag this in the kickoff so there are no surprises.","category":"pricing"},{"question":"What does your design process actually look like from the client's side?","answer":"After a kickoff call, you'll receive a Figma prototype for review — typically within 48 hours. You review it, leave comments directly in Figma, and we revise. Most clients go through two rounds of design review before development starts. You always see what you're getting before a line of code is written. Nothing ships that you haven't approved.","category":"local"},{"question":"What is GA4 and do I actually need it?","answer":"GA4 is Google's current analytics platform — it replaced Universal Analytics in 2023 and tracks who visits your site, which pages they read, and whether they fill out your contact form. Every FactoryJet project includes GA4 wired up before launch, with the key conversion events already configured. You get a plain-English walkthrough in the handover session so you know what you're looking at without needing to be a data analyst.","category":"technical"},{"question":"What hosting does FactoryJet use and is it included?","answer":"We deploy to Cloudflare Pages, which provides enterprise-grade CDN performance at no monthly cost for most projects. Cloudflare's global edge network means your Cleveland site loads fast whether your visitor is in Ohio City, Columbus, Chicago, or anywhere else in the US. Hosting setup, DNS configuration, and SSL are included in every project — there is no separate hosting invoice at launch.","category":"technical"}];
+
 export default function ClevelandWebDesignPage() {
   return (
     <>
@@ -299,7 +301,7 @@ export default function ClevelandWebDesignPage() {
           eyebrow="COMMON QUESTIONS"
           headline={"Common Questions from Cleveland Businesses"}
           categories={FAQ_CATEGORIES}
-        items={[{"question":"How much does a website cost for a small business in Cleveland?","answer":"Pricing is fixed-price and scoped to your build — the main drivers are page count, integrations, and design complexity. Most Cleveland small businesses choose the Starter tier for a clean five-page site, or Growth for a blog CMS and lead capture. Custom builds add e-commerce, booking systems, or AI features. Compared to local Cleveland agencies, FactoryJet delivers the same quality at a fraction of the cost — and you get a published timeline and a codebase you own. Every project is quoted up front after a free discovery call, so you know the full cost before work starts.","category":"pricing"},{"question":"How long does it take to build a website?","answer":"A standard FactoryJet build delivers in 7 days from kickoff to launch. Discovery and design take the first two days, development runs through days five and six, and content, SEO, and launch happen on day seven. We do not start the clock until your brand assets and content are in our shared workspace.","category":"pricing"},{"question":"What's included in a web design project?","answer":"Every project includes strategy, design, development, content, SEO setup, and a 30-day support window. You get a Figma design system you keep, a Next.js codebase you own, JSON-LD schema for AI search visibility, GA4 wired up from day one, and a recorded handover session. We do not charge separately for staging environments, basic copy edits, or routine bug fixes inside the support window.","category":"included"},{"question":"How long until my new site ranks on Google?","answer":"Branded searches (your business name) usually rank within one to two weeks of launch. Service plus location queries like 'web design Cleveland' typically take three to six months for a new domain. The work that compresses this timeline — schema, internal linking, content depth, technical performance — is built into every FactoryJet project, not sold as an add-on after launch.","category":"pricing"},{"question":"We're a vendor or supplier in the Cleveland Clinic ecosystem — can you build HIPAA-aware B2B websites for healthcare?","answer":"Yes. Healthcare is one of our most common client profiles in Cleveland. Cleveland Clinic is the world's #2 hospital, and the vendors, suppliers, and professional services firms in its ecosystem need sites that communicate technical depth, compliance awareness, and verifiable case study evidence to institutional procurement buyers. We build sites structured for those longer B2B due-diligence cycles — with lead-capture flows designed to route inquiries to the right person fast.","category":"platform"},{"question":"We supply Parker Hannifin, Eaton, or other Cleveland manufacturers — what does a manufacturing B2B website need?","answer":"Manufacturing B2B sites need to communicate engineering credibility, production certifications (ISO, AS9100, etc.), capabilities, and case studies to procurement managers who evaluate multiple suppliers simultaneously. We build sites structured around your capabilities and certifications — not generic marketing copy — with downloadable spec sheets, inquiry forms, and content architecture that answers procurement questions before the RFQ stage.","category":"platform"},{"question":"I run a law firm in Cleveland — what do I need from a website?","answer":"Law firm sites in Cleveland need clear practice area pages, attorney bios with credentials, case result summaries (where permitted by Ohio bar rules), and a lead-capture flow that routes inquiries to the right attorney by practice area. We also handle local SEO targeting Cleveland's legal search queries — which are highly competitive and highly valuable. Schema markup for law firms is included in every project.","category":"local"},{"question":"I own a restaurant or bar near West Side Market or East 4th Street — what does a good website need?","answer":"For Cleveland's food and beverage scene, the essentials are: a fast-loading mobile menu, a reservation or waitlist integration (OpenTable, Resy, or custom flow), event calendar support for live entertainment nights, and Google Maps / Apple Maps schema so you show up correctly in local search. We also build private dining or buyout inquiry forms, which drive significant additional revenue for venues that don't surface them properly.","category":"local"},{"question":"I'm in real estate or development in Ohio City, Tremont, or Detroit Shoreway — what do I need from a site?","answer":"Cleveland's real estate boom in Ohio City, Tremont, and Detroit Shoreway has created a highly competitive online market. Real estate and development sites need project portfolio galleries, neighborhood-specific landing pages, lead-capture forms that route inquiries immediately, and local SEO targeting Cleveland's high-demand submarkets. For developers, a project pipeline page with renderings and status updates can significantly reduce inbound inquiry load on your team.","category":"local"},{"question":"We're in financial services — KeyBank or Progressive Insurance ecosystem vendors. What does our website need?","answer":"Financial services and insurance ecosystem firms need sites that project credibility to sophisticated corporate buyers — with clear service pages, team credentials, case study structures, and compliance-aware messaging. We also build lead-capture flows optimized for longer B2B sales cycles, where the goal is a booked call rather than an immediate transaction. GA4 is wired up from day one so you know which pages are converting.","category":"local"},{"question":"We're a tech startup based in University Circle or MidTown Cleveland. What do we need from a launch website?","answer":"Tech startup sites need to communicate product differentiation quickly, build credibility with investors and early customers, and generate either inbound leads or user signups. We build with Next.js for maximum performance, include structured data for AI search crawlers, and design conversion flows around your specific acquisition goal — whether that's a demo request, a waitlist signup, or a direct trial conversion.","category":"local"},{"question":"How does FactoryJet compare to Cleveland agencies like Agency Creative or Tiller Digital?","answer":"Agency Creative and Tiller Digital are established Cleveland shops. Neither commits to fixed pricing or a delivery timeline in writing. FactoryJet gives you a clear, fixed-price quote up front after a free discovery call, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — which means faster load times and no ongoing plugin maintenance costs for your team. You can compare our scope and price against any Cleveland agency before you speak to us.","category":"local"},{"question":"What about Skoda Minotti — they offer web services as part of accounting?","answer":"Skoda Minotti is a respected Cleveland accounting and advisory firm. Web services are a side offering for them. FactoryJet is a dedicated web design and development team — web is our entire focus, not something bolted onto another service line. That focus means faster delivery, deeper technical expertise, and a support structure built specifically for web projects.","category":"local"},{"question":"Do I own the website after it's built, or am I locked into a platform?","answer":"You own everything — the Next.js codebase, the Figma design files, and the hosting configuration. There is no proprietary CMS lock-in, no mandatory retainer, and no monthly platform fee. You can take the code to any developer or hosting provider at any time. Most clients choose to stay with us for ongoing work, but that's always their call.","category":"platform"},{"question":"What tech stack do you build on, and why does it matter for my Cleveland business?","answer":"We build on Next.js deployed to Cloudflare Pages, with a headless CMS for content editing. Next.js produces static pages that load significantly faster than WordPress — typically under 1.5 seconds on mobile — which directly affects Google rankings and visitor bounce rates. For Cleveland businesses competing on local search in high-value sectors like healthcare and manufacturing, that performance gap over a WordPress competitor is a real and measurable advantage.","category":"local"},{"question":"Can you add e-commerce to a Cleveland business website?","answer":"Yes. Whether you need a simple product catalog with Stripe checkout, a full Shopify integration, or a custom e-commerce build, we handle it at the Custom tier. Cleveland retail businesses — particularly in Ohio City, Tremont, and the broader Greater Cleveland area — frequently need both a physical store presence and an online sales channel in one site. We architect that so it doesn't feel bolted on.","category":"technical"},{"question":"Can you build a Shopify store for a Cleveland retail or DTC brand?","answer":"Yes. Shopify builds for Cleveland retail and DTC brands are part of our standard service offering. We handle theme customization, product migration, payment setup, shipping configuration, and local SEO for Shopify stores. For brands that need both a Shopify storefront and a content-heavy marketing site, we build both and connect them cleanly.","category":"platform"},{"question":"What AI features can you add to a Cleveland business website?","answer":"Common AI integrations include site-search powered by vector embeddings, AI chat assistants trained on your services and FAQs, and AI-assisted content tools for blog or product descriptions. These are typically part of Custom tier projects. For Cleveland's healthcare IT vendors and manufacturing B2B firms, AI-assisted knowledge bases and spec-search tools are particularly strong fits for complex technical products.","category":"technical"},{"question":"How does my site perform on mobile? Cleveland visitors search on their phones constantly.","answer":"Mobile-first is the default, not an afterthought. Every FactoryJet build targets Lighthouse 100/100 and green Core Web Vitals on mobile. Whether your customers are searching on their phones outside West Side Market, at a sports venue before a Guardians game, or comparing suppliers on a tablet in a manufacturing facility, mobile performance is non-negotiable and tested before launch.","category":"technical"},{"question":"How does Cleveland local SEO work and what do you include?","answer":"Every FactoryJet project includes on-page SEO foundations: proper heading structure, meta tags, XML sitemap, JSON-LD schema with local business markup, image optimization, and Core Web Vitals performance. For Cleveland-specific local SEO, we target your primary service area — including neighborhood-level landing pages for Ohio City, Tremont, University Circle, Detroit Shoreway, and the broader MSA suburbs if relevant to your business.","category":"included"},{"question":"Can you be flexible on the 7-day timeline if we need more time for approvals?","answer":"The 7-day clock starts when we have everything we need from you — brand assets, copy inputs, and stakeholder approvals. If your internal process requires longer review cycles, we can agree a phased schedule upfront. The guarantee still applies to the development phase we control. We flag this in the kickoff so there are no surprises.","category":"pricing"},{"question":"What does your design process actually look like from the client's side?","answer":"After a kickoff call, you'll receive a Figma prototype for review — typically within 48 hours. You review it, leave comments directly in Figma, and we revise. Most clients go through two rounds of design review before development starts. You always see what you're getting before a line of code is written. Nothing ships that you haven't approved.","category":"local"},{"question":"What is GA4 and do I actually need it?","answer":"GA4 is Google's current analytics platform — it replaced Universal Analytics in 2023 and tracks who visits your site, which pages they read, and whether they fill out your contact form. Every FactoryJet project includes GA4 wired up before launch, with the key conversion events already configured. You get a plain-English walkthrough in the handover session so you know what you're looking at without needing to be a data analyst.","category":"technical"},{"question":"What hosting does FactoryJet use and is it included?","answer":"We deploy to Cloudflare Pages, which provides enterprise-grade CDN performance at no monthly cost for most projects. Cloudflare's global edge network means your Cleveland site loads fast whether your visitor is in Ohio City, Columbus, Chicago, or anywhere else in the US. Hosting setup, DNS configuration, and SSL are included in every project — there is no separate hosting invoice at launch.","category":"technical"}]}
+        items={CLEVELAND_FAQ_ITEMS}
         />
         <WebDesignCityLinksUS currentCity="cleveland" />
         <FinalCTA
@@ -343,200 +345,7 @@ function SchemaScript() {
       {
         "@type": "FAQPage",
         "@id": "https://factoryjet.com/cleveland/web-design#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How much does a website cost for a small business in Cleveland?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Pricing is fixed-price and scoped to your build — the main drivers are page count, integrations, and design complexity. Most Cleveland small businesses choose the Starter tier for a clean five-page site, or Growth for a blog CMS and lead capture. Custom builds add e-commerce, booking systems, or AI features. Compared to local Cleveland agencies, FactoryJet delivers the same quality at a fraction of the cost. Every project is quoted up front after a free discovery call, so you know the full cost before work starts."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long does it take to build a website?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "A standard FactoryJet build delivers in 7 days from kickoff to launch. We do not start the clock until your brand assets and content are in our shared workspace."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What's included in a web design project?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Every project includes strategy, design, development, content, SEO setup, and a 30-day support window. You get a Figma design system you keep, a Next.js codebase you own, JSON-LD schema for AI search visibility, GA4 wired up from day one, and a recorded handover session."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long until my new site ranks on Google?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Branded searches usually rank within one to two weeks of launch. Service plus location queries like 'web design Cleveland' typically take three to six months for a new domain. The work that compresses this timeline is built into every FactoryJet project."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "We're a vendor in the Cleveland Clinic ecosystem — can you build HIPAA-aware B2B websites for healthcare?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Healthcare is one of our most common client profiles in Cleveland. We build sites structured for longer B2B due-diligence cycles — with lead-capture flows designed to route inquiries to the right person fast, and content that communicates compliance awareness and technical depth to institutional procurement buyers."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "We supply Parker Hannifin, Eaton, or other Cleveland manufacturers — what does a manufacturing B2B website need?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Manufacturing B2B sites need to communicate engineering credibility, production certifications, capabilities, and case studies to procurement managers. We build sites structured around your capabilities and certifications — with downloadable spec sheets, inquiry forms, and content architecture that answers procurement questions before the RFQ stage."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "I run a law firm in Cleveland — what do I need from a website?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Law firm sites in Cleveland need clear practice area pages, attorney bios with credentials, case result summaries where permitted, and a lead-capture flow that routes inquiries to the right attorney by practice area. We handle local SEO targeting Cleveland's legal search queries and include schema markup for law firms in every project."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "I own a restaurant near West Side Market or East 4th Street — what does a good website need?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "For Cleveland's food and beverage scene, the essentials are: a fast-loading mobile menu, a reservation integration, event calendar support, and Google Maps schema so you show up correctly in local search. We also build private dining inquiry forms, which drive significant additional revenue for venues that don't surface them properly."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "I'm in real estate in Ohio City, Tremont, or Detroit Shoreway — what do I need?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Real estate and development sites need project portfolio galleries, neighborhood-specific landing pages, lead-capture forms that route inquiries immediately, and local SEO targeting Cleveland's high-demand submarkets. For developers, a project pipeline page with renderings and status updates can significantly reduce inbound inquiry load."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "We're in financial services in the KeyBank or Progressive Insurance ecosystem. What does our website need?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Financial services and insurance ecosystem firms need sites that project credibility to sophisticated corporate buyers — with clear service pages, team credentials, case study structures, and compliance-aware messaging. We build lead-capture flows optimized for longer B2B sales cycles, where the goal is a booked call rather than an immediate transaction."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "We're a tech startup in University Circle or MidTown Cleveland. What do we need from a launch website?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Tech startup sites need to communicate product differentiation quickly, build credibility with investors and early customers, and generate inbound leads or user signups. We build with Next.js for maximum performance and design conversion flows around your specific acquisition goal — demo request, waitlist signup, or direct trial conversion."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How does FactoryJet compare to Cleveland agencies like Agency Creative or Tiller Digital?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Agency Creative and Tiller Digital are established Cleveland shops. Neither commits to fixed pricing or a delivery timeline in writing. FactoryJet gives you a clear, fixed-price quote up front after a free discovery call, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress — which means faster load times and no ongoing plugin maintenance costs for your team."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What about Skoda Minotti — they offer web services as part of accounting?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Skoda Minotti is a respected Cleveland accounting firm. Web services are a side offering for them. FactoryJet is a dedicated web design and development team — web is our entire focus, not something bolted onto another service line. That focus means faster delivery and deeper technical expertise."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do I own the website after it's built, or am I locked into a platform?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "You own everything — the Next.js codebase, the Figma design files, and the hosting configuration. There is no proprietary CMS lock-in, no mandatory retainer, and no monthly platform fee. You can take the code to any developer or hosting provider at any time."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What tech stack do you build on, and why does it matter for my Cleveland business?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We build on Next.js deployed to Cloudflare Pages, with a headless CMS for content editing. Next.js produces static pages that load significantly faster than WordPress — typically under 1.5 seconds on mobile — which directly affects Google rankings and visitor bounce rates."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can you add e-commerce to a Cleveland business website?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Whether you need a simple product catalog with Stripe checkout, a full Shopify integration, or a custom e-commerce build, we handle it at the Custom tier. Cleveland retail businesses frequently need both a physical store presence and an online sales channel — we architect that so it doesn't feel bolted on."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can you build a Shopify store for a Cleveland retail or DTC brand?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Shopify builds for Cleveland retail and DTC brands are part of our standard service offering. We handle theme customization, product migration, payment setup, shipping configuration, and local SEO for Shopify stores."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What AI features can you add to a Cleveland business website?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Common AI integrations include site-search powered by vector embeddings, AI chat assistants trained on your services and FAQs, and AI-assisted content tools for blog or product descriptions. For Cleveland's healthcare IT vendors and manufacturing B2B firms, AI-assisted knowledge bases and spec-search tools are particularly strong fits."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How does my site perform on mobile?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Mobile-first is the default, not an afterthought. Every FactoryJet build targets Lighthouse 100/100 and green Core Web Vitals on mobile. Whether your customers are searching outside West Side Market, at a Guardians game, or comparing suppliers on a tablet in a manufacturing facility, mobile performance is non-negotiable and tested before launch."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How does Cleveland local SEO work and what do you include?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Every project includes proper heading structure, meta tags, XML sitemap, JSON-LD schema with local business markup, image optimization, and Core Web Vitals performance. For Cleveland-specific local SEO, we target your primary service area — including neighborhood-level landing pages for Ohio City, Tremont, University Circle, and Detroit Shoreway if relevant."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can you be flexible on the 7-day timeline if we need more time for approvals?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The 7-day clock starts when we have everything we need from you — brand assets, copy inputs, and stakeholder approvals. If your internal process requires longer review cycles, we can agree a phased schedule upfront. The guarantee still applies to the development phase we control."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What does your design process actually look like from the client's side?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "After a kickoff call, you'll receive a Figma prototype for review — typically within 48 hours. You review it, leave comments directly in Figma, and we revise. Most clients go through two rounds of design review before development starts. Nothing ships that you haven't approved."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is GA4 and do I actually need it?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "GA4 is Google's current analytics platform — it tracks who visits your site, which pages they read, and whether they fill out your contact form. Every FactoryJet project includes GA4 wired up before launch, with the key conversion events already configured. You get a plain-English walkthrough in the handover session so you know what you're looking at without needing to be a data analyst."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What hosting does FactoryJet use and is it included?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We deploy to Cloudflare Pages, which provides enterprise-grade CDN performance at no monthly cost for most projects. Cloudflare's global edge network means your Cleveland site loads fast whether your visitor is in Ohio City, Columbus, Chicago, or anywhere else in the US. Hosting setup, DNS configuration, and SSL are included in every project."
-            }
-          }
-        ]
+        "mainEntity": CLEVELAND_FAQ_ITEMS.map((item) => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } }))
       },
       {
         "@type": "BreadcrumbList",

@@ -53,61 +53,6 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is an AI scheduling agent and how does it work for Indian businesses?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'An AI scheduling agent automates appointment booking end-to-end — on WhatsApp, your website, or inbound phone. It checks availability in real time, books slots to Google Calendar or Zoho Bookings, sends confirmation and reminder messages via WhatsApp, handles rescheduling requests, and updates your CRM. For Indian businesses, this means no more manual coordination for site visits, demos, clinic appointments, or test drives.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does an AI scheduling agent cost in India?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet AI scheduling agents are fixed-price and scoped to your build — from a focused WhatsApp appointment booking flow (one service type, one calendar, confirmation messages) to multi-resource scheduling platforms with Zoho CRM integration and enterprise suites with multi-location, multi-service, and payment collection. Every project is quoted up front after a free discovery call, so you know the full cost before any work starts.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can the AI scheduling agent book appointments on WhatsApp in Hindi?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — WhatsApp booking in Hindi and English is our primary India deployment. A customer messages your WhatsApp asking for a clinic appointment, real estate site visit, or product demo. The AI checks availability, offers time slots, confirms the booking to Google Calendar, and sends a WhatsApp confirmation with date, time, and location — all within 60 seconds, in the customer\'s preferred language.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Which calendar and booking tools does the AI integrate with?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We integrate with Google Calendar, Zoho Bookings, Zoho CRM, Calendly, Microsoft Outlook / Teams, and custom practice management or clinic management systems. For payment collection at booking, we integrate Razorpay for appointment deposits and fees. For CRM sync, we connect to Zoho CRM, LeadSquared, or Freshsales to create and update contact records on every booking.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can the AI handle rescheduling and cancellations?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — rescheduling and cancellation flows are standard in all our builds. A customer messages "reschedule my appointment" and the AI checks availability, offers alternatives, updates the calendar, and sends a new confirmation — all automatically. Cancellations trigger slot release, CRM update, and an optional re-engagement message offering a new time. Buffer times, cancellation policies, and refund triggers are all configurable.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How does the AI handle multiple staff members or locations?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Our Multi-Resource Scheduling Platform supports multiple doctors, sales reps, advisors, or locations with individual calendars. The AI checks availability across all resources, routes the booking to the appropriate person based on your rules (round-robin, location preference, specialisation), and updates each resource\'s calendar independently. Ideal for clinics, real estate developer sales teams, and multi-branch service businesses.',
-      },
-    },
-  ],
-};
-
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -496,6 +441,16 @@ const SCHEDULING_FAQ_ITEMS = [
     answer: "Yes. For businesses wanting validation before committing, we offer a 2-week pilot: a WhatsApp booking flow for one service type deployed to your live WhatsApp number. The pilot is offered at a fixed price, credited against the full project. Seeing real customer booking conversations and the calendar entries they generate is typically the fastest way to build internal confidence in the ROI.",
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: SCHEDULING_FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 export default function AISchedulingAgentINPage() {
   return (

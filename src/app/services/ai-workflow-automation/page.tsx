@@ -67,183 +67,9 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schema (FAQPage + Service)
+   JSON-LD Schema (Service + HowTo + Breadcrumb) — faqSchema is declared after
+   FAQ_ITEMS below, since it derives mainEntity from that array via .map()
 ───────────────────────────────────────────────────────────────────────────── */
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is AI workflow automation?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'AI workflow automation connects your business tools and uses artificial intelligence to execute multi-step processes without manual intervention. Unlike basic Zapier-style automation that just moves data between apps, AI workflow automation can read unstructured inputs (emails, documents, forms), make decisions based on content, handle exceptions, and complete tasks that previously required a person to think through them — not just click a button.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How is AI workflow automation different from regular automation tools like Zapier?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Zapier and Make.com move data between apps when specific triggers fire — they\'re excellent for simple, predictable data routing. AI workflow automation adds a layer of intelligence on top: it can read an email and decide what kind of request it is, extract key information from an invoice PDF, classify a support ticket before routing it, write a draft response, or make a branching decision based on the content of a document. It handles the workflows that have too many edge cases for simple if-this-then-that rules.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What kinds of workflows can AI automate for my business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'AI workflow automation is best suited for: lead follow-up and nurturing sequences (triggered by form fills or behavioral signals), invoice and document processing (extracting data from PDFs and routing for approval), employee onboarding task sequences, cross-system data sync when records don\'t match cleanly, customer support ticket classification and routing, report generation from multiple data sources, and sales pipeline updates from email and call notes. If your team does it more than five times per week and it involves reading something or making a simple decision, it can probably be automated.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What tools does FactoryJet use to build AI workflow automation?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We build on n8n and Make.com for workflow orchestration, GPT-4o and Claude for the AI reasoning layer, Python scripts for complex data transformation, and LangChain for multi-step AI decision chains. We choose the stack based on your workflow complexity, data sensitivity, and whether you want to self-manage the automation afterward. n8n gives you a self-hosted option with full audit trails; Make.com is faster to deploy for simpler multi-app workflows.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What does the AI workflow automation development process look like?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Five stages: Discover (we map your highest-value workflows, document the decision logic, and identify integration points), Design (we specify the workflow logic, exception handling, and data transformations), Build (we develop and test in a staging environment with weekly demos), Validate (we run the automation against real business scenarios and tune edge case handling), and Deploy (live launch with monitoring, team training, and a 30-day support window). Every stage ends with a working demo.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to build and launch AI workflow automation?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A single focused workflow — lead follow-up automation, invoice processing, or a specific data sync — goes from kickoff to production in 2–3 weeks. Multi-workflow automation platforms connecting several systems take 4–6 weeks. Enterprise automation with complex business logic, compliance requirements, and multiple departments typically runs 8–12 weeks. Timeline depends on the number of systems involved and how well-documented your existing processes are.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What happens after the automation is deployed?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Every engagement includes a 30-day post-launch window where we monitor workflow execution, fix any failures, handle API changes from connected platforms, and deliver a team training session. After 30 days you can self-manage (the monitoring dashboard shows every workflow run and exception), continue on a monthly retainer for new workflow development, or both.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does AI workflow automation cost?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet\'s AI workflow automation is fixed-price and scoped to your build — the main drivers are how many systems you connect, the workflow complexity, and any custom business logic or compliance needs. Most US SMBs choose our Growth tier, covering a multi-workflow automation platform connecting several systems with an operations dashboard and 30-day support. Enterprise automation with complex business logic, custom integrations, and compliance requirements is scoped separately. All pricing is fixed and confirmed upfront after a free quote — no hourly billing, no scope creep.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Why is FactoryJet fixed-price, milestone-paid?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We work fixed-price and milestone-paid — every project scoped upfront with no scope-creep invoices. Our engineering team brings 12+ years of focused expertise serving US businesses. You get production-grade workflow architecture, integration engineering, and delivery. You brief an engineer; that engineer builds it. No account management layers between your brief and the build. Full code ownership at handoff.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the typical ROI from AI workflow automation?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The most direct return comes from manual hours eliminated. An invoice processing automation that handles 100 invoices per week pays for itself in 2–3 months based on the staff time it replaces. Lead follow-up automation that contacts every new lead within 60 seconds (instead of waiting for a sales rep to get to it) typically increases qualified pipeline by 25–40%. Most clients see payback within 2–4 months of launch.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Are there ongoing costs after the automation is built?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Two types: platform costs (n8n self-hosted is free; Make.com charges monthly based on volume) and AI model API costs (these scale with how much AI reasoning your workflows use — paid directly to OpenAI or Anthropic). Neither is marked up by FactoryJet. Optional monthly retainer for new workflow development or ongoing support.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What software platforms can AI workflow automation connect to?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We integrate with most business software via API or webhook: CRMs (HubSpot, Salesforce, Pipedrive, Zoho, Close.com), e-commerce (Shopify, WooCommerce, BigCommerce), accounting (QuickBooks, Xero, FreshBooks), communication (Gmail, Outlook, Slack, Twilio), project management (Notion, Airtable, Asana, Monday.com, ClickUp), cloud storage (Google Drive, Dropbox, Box, OneDrive), and databases (PostgreSQL, MySQL, Supabase, Firebase). If it has a REST API or webhook, we can build to it.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I need a technical team to manage the automation after launch?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No. The workflow monitoring dashboard shows every run: what triggered it, what it did, whether it succeeded, and what it did when something failed. Your operations team can review the log, rerun failed workflows, and pause or resume automations without writing code. If a connected platform changes its API and breaks a workflow, you contact us and we fix it.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What happens when an automated workflow fails or hits an edge case?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Every workflow we build has explicit error handling: if a step fails, the system logs the error, notifies your designated team member via Slack or email, and either retries automatically or queues the item for manual review — depending on how you configure it. Nothing fails silently. The monitoring dashboard shows exactly where a workflow stopped and why, so you or we can fix it quickly.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can AI workflow automation replace our existing Zapier or Make.com automations?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Often yes — and for workflows with AI decision-making, the result is more reliable than a Zap that just moves data. We audit your existing automations during discovery and either migrate them to the new platform, leave simple ones in place, or rebuild them with added AI capability. We don\'t replace things that are working well just to bill more hours.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is my business data safe in automated workflows?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We use API-level integrations with least-privilege access (the automation only touches the data it needs), full audit trails on every workflow run, and encrypted credential storage. For regulated industries — healthcare, legal, finance — we can build workflows that process sensitive data without sending it to third-party AI model providers, using private or local LLM deployments instead.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you automate workflows that involve reading documents or emails?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — this is a core strength of AI-powered automation vs. basic tools. We build workflows that read incoming emails and classify them (support request, billing question, sales inquiry), extract key fields from invoice or contract PDFs, pull data from scanned forms, and summarize lengthy documents into structured records. The AI reads the content; the workflow routes it correctly.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What are the most common AI workflow automations US small businesses build first?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'The four most common first automations are: (1) Lead follow-up — new form submission triggers a personalized email sequence and a CRM record within 60 seconds; (2) Invoice processing — incoming invoice emails trigger data extraction, GL coding, and approval routing; (3) Support ticket triage — incoming support emails are classified by topic and urgency, then routed to the right team member with an AI-drafted reply suggestion; (4) Weekly reporting — a scheduled workflow that pulls data from 3–5 sources and generates a plain-English summary delivered to Slack every Monday.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How is FactoryJet different from hiring a US automation consultant?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Three differences: price (specialized engineers serving US businesses for 12+ years), speed (no sales layers between your brief and the engineer building it), and SMB depth (500+ small business projects — we know the operational reality of businesses your size, not just enterprise theory). We also won\'t propose AI automation for a workflow where a simple Zap would do the job.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you have case studies showing workflow automation results?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. An e-commerce brand\'s order fulfillment automation eliminated 30 hours per week of manual data entry. A professional services firm\'s lead follow-up automation reduced average response time from 4 hours to under 90 seconds, increasing qualified pipeline by 35%. An accounting firm\'s invoice processing automation cut document handling time by 75%. We share relevant case studies during a discovery call.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I start with one workflow and expand later?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — that\'s the most common approach. We recommend starting with the workflow that costs your team the most time or causes the most errors, proving the value quickly, and then expanding to adjacent processes. We architect the first workflow so it\'s modular and easy to extend — you\'re not paying to rebuild the foundation every time you add a new automation.',
-      },
-    },
-  ],
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -751,6 +577,16 @@ const FAQ_ITEMS = [
   },
 ];
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
 /* ─────────────────────────────────────────────────────────────────────────────
    Page
 ───────────────────────────────────────────────────────────────────────────── */
@@ -1133,3 +969,4 @@ export default function AIWorkflowAutomationPage() {
     </>
   );
 }
+

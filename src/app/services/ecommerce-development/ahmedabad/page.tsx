@@ -86,65 +86,8 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schema
+   JSON-LD Schema (Service + LocalBusiness) — faqSchema is declared after FAQ_ITEMS below
 ───────────────────────────────────────────────────────────────────────────── */
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How long does it take to launch an Ahmedabad ecommerce store?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet delivers standard Shopify and WooCommerce stores in 7 business days for Starter and Growth builds. Day 1 is a discovery call to finalise your catalogue, payment preferences, and logistics setup. Days 2–3 are Figma design and mockup approval. Days 3–5 are development and integration. Day 6 is QA and Lighthouse testing. Day 7 is launch. Custom platform and marketplace builds take longer, usually 8 to 16 weeks depending on scope.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does ecommerce development cost in Ahmedabad?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "FactoryJet ecommerce projects are fixed-price and scoped to your build. The main cost drivers are your platform (Shopify or WooCommerce vs a custom build), number of products, the payment and shipping integrations you need, and any custom features like subscriptions or B2B pricing. Every project is quoted up front after a free discovery call, so you know the full cost before any work starts. The price is fixed and confirmed in writing — no hourly billing and no scope creep.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Which ecommerce platform is right for my Ahmedabad business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Shopify is the best default for most Ahmedabad D2C and B2C brands — fast to launch, easy to manage, and natively supports Razorpay, PayU, and UPI. WooCommerce is the right choice when you are already on WordPress or need deep content-commerce integration. Custom Next.js platforms make sense for high-volume D2C brands, B2B wholesale portals with complex pricing rules, or multi-vendor marketplaces. FactoryJet makes this recommendation during discovery at no charge.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you set up Razorpay, UPI, and Cash on Delivery for Ahmedabad stores?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — all India payment methods are configured in every plan. Razorpay is our primary gateway and covers UPI, net banking, cards, wallets (Paytm, PhonePe, Mobikwik), EMI, and BNPL (LazyPay, Simpl). We also integrate PayU, CCAvenue, or PhonePe Business if preferred. Cash on Delivery is configured with prepaid-to-COD ratios you control.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Will my Ahmedabad ecommerce store rank on Google?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Every store we build includes technical SEO from day one: Product and BreadcrumbList schema for Google Shopping eligibility, optimised title and meta templates, canonical URLs, GST price display, Core Web Vitals green on mobile (LCP under 2.5s, CLS below 0.1), and sitemap submission to Google Search Console. LocalBusiness schema with Ahmedabad geo-coordinates is included for local search visibility.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Who is the best ecommerce development company in Ahmedabad?',
-      acceptedAnswer: { '@type': 'Answer', text: 'For D2C brands and small businesses, FactoryJet makes a strong case: fixed written prices, senior engineers, and stores that launch in weeks. Any ecommerce website development company in Ahmedabad — or any ecommerce solution company in Ahmedabad — should pass three checks: who writes the code, is the price fixed, and do you own the store at the end. That is how to find the best ecommerce website development company in Ahmedabad and the best ecommerce solution company in Ahmedabad for your catalog.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Should I hire ecommerce developer in Ahmedabad or use an agency?',
-      acceptedAnswer: { '@type': 'Answer', text: 'One developer can build a basic store, but a real shop needs design, payments, shipping, and SEO together. A small senior team covers all of it at a fixed price. If you do hire ecommerce developer in Ahmedabad directly, check store speed scores from their past work first.' },
-    },
-],
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -392,6 +335,16 @@ const AHMEDABAD_ECOM_FAQ_ITEMS = [
       'One developer can build a basic store, but a real shop needs design, payments, shipping, and SEO together. A small senior team covers all of it at a fixed price. If you do hire ecommerce developer in Ahmedabad directly, check store speed scores from their past work first.',
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: AHMEDABAD_ECOM_FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Page

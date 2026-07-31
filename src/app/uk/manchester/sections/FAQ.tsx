@@ -89,6 +89,8 @@ const COMPARISONS_FAQS = [
   },
 ];
 
+export const ALL_FAQS = [...GENERAL_FAQS, ...TECHNOLOGY_FAQS, ...SERVICES_FAQS, ...COMPARISONS_FAQS];
+
 function QAList({ items }: { items: { q: string; a: string }[] }) {
   return (
     <>

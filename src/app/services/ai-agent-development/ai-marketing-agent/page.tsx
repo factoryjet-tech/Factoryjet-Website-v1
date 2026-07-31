@@ -78,63 +78,8 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schemas
+   JSON-LD Schemas — faqSchema is declared after MARKETING_FAQ_ITEMS below
 ───────────────────────────────────────────────────────────────────────────── */
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is an AI marketing agent and how does it work for Indian businesses?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'An AI marketing agent plans, creates, schedules, and optimises your marketing campaigns autonomously. It reads your product catalogue, monitors your festival calendar, generates campaign briefs, writes copy in your brand voice, and sends campaigns via WhatsApp, email, or social — all without daily human intervention. Unlike generic SaaS tools, a FactoryJet AI marketing agent is built specifically for your business, audience, and Indian market context.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does an AI marketing agent cost in India?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet AI marketing agents are fixed-price and scoped to your build. The Content AI Starter covers social and email campaign generation. The Full Marketing AI Platform adds WhatsApp broadcast automation and CRM segmentation. Enterprise covers multi-language autonomous campaign execution. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. No hourly billing surprises.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can the AI automate Diwali and other festival marketing campaigns?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — festival campaign automation is one of the core capabilities. The AI is pre-loaded with the Indian festival calendar (Diwali, Navratri, Ganesh Chaturthi, Holi, Eid, IPL, and 15+ more events). It auto-triggers campaign briefs 10–14 days before each relevant event, generates themed copy and visuals, segments your audience by past behaviour, and runs A/B variants before the peak day.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Does the AI write marketing content in Hindi and regional languages?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. The AI generates content in Hindi, Hinglish, Marathi, Tamil, Telugu, Gujarati, and Kannada alongside English. This is particularly effective for WhatsApp broadcasts targeting Tier 2 and Tier 3 audiences, where vernacular copy dramatically outperforms English-only messaging. Language selection can be automated by audience segment.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to deploy an AI marketing agent?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A standard AI marketing agent covering WhatsApp, email, and social scheduling takes 4–6 weeks from kickoff to first live campaign. Week 1–2 covers strategy and integration setup. Week 3–4 covers campaign template build and brand voice training. Week 5–6 covers test campaigns with a live audience segment before full rollout.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Which Indian marketing tools does the AI integrate with?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We build native integrations with Zoho MarketingHub, CleverTap, WebEngage, MoEngage, and Netcore Cloud — the most widely used marketing automation stacks in India. We also connect to WhatsApp Business API via Interakt, Wati, or AiSensy, and to Google Ads and Meta Ads APIs for budget optimisation. International platforms (HubSpot, Klaviyo, ActiveCampaign) are also supported.',
-      },
-    },
-  ],
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -579,6 +524,16 @@ const MARKETING_FAQ_ITEMS = [
       "Yes. For clients wanting validation before committing to the full build, we offer a 4-week pilot: one live WhatsApp campaign and one email campaign, fully AI-generated and sent to a real audience segment. The pilot is offered at a fixed fee, credited against the full project cost if you proceed. Most clients find one successful live campaign more convincing than any proposal document.",
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: MARKETING_FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Page

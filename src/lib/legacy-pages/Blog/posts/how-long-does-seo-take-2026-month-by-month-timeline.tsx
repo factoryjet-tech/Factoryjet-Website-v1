@@ -1,31 +1,7 @@
 import React from 'react';
 import type { BlogPost } from '../data.types';
 
-export const post: BlogPost = {
-  id: '221',
-  slug: 'how-long-does-seo-take-2026-month-by-month-timeline',
-  title: 'How Long Does SEO Take in 2026? A Month-by-Month Timeline',
-  excerpt:
-    'SEO results do not arrive on a fixed schedule, but there is a predictable pattern. Here is what actually happens month by month, backed by data from Ahrefs, Semrush, and Google.',
-  category: 'Emerging Tech',
-  author: 'Bhavesh Barot',
-  date: 'Jun 7, 2026',
-  readTime: '11 min read',
-  imageUrl: '/blog-images/how-long-does-seo-take-2026-month-by-month-timeline.webp',
-  meta: {
-    title: 'How Long Does SEO Take in 2026? Ahrefs & Semrush Data: 3–6 Month Timeline',
-    description:
-      'How long does SEO take? Ahrefs and Semrush data both point to 3–6 months for initial results and 6–12 months for competitive terms. This month-by-month timeline shows exactly what happens when, and why.',
-  },
-  keyTakeaways: [
-    'SEO takes 3–6 months to produce measurable results for most small businesses starting from scratch.',
-    'Ahrefs data shows 95% of newly published pages never reach the top 10 within their first year, content quality and authority both matter.',
-    'The biggest variable is your starting point: an established domain with existing traffic can see movement in 6–8 weeks; a brand-new domain typically takes 4–6 months.',
-    'Months 1–2 are almost entirely invisible, technical fixes and content creation happening below the surface. Expecting rankings here leads to premature cancellations.',
-    'The compounding effect kicks in around month 6: each new piece of content reinforces earlier content, and rankings accelerate faster than the linear work suggests.',
-    'SEO in 2026 includes AI Overviews and GEO, pages optimized for traditional search that are not also structured for AI extraction leave traffic on the table.',
-  ],
-  faqs: [
+const faqs = [
     {
       q: 'How long does SEO take to work?',
       a: 'For most small businesses starting from scratch, SEO produces measurable results, increased impressions and early rankings for long-tail terms, within 3–4 months. Reaching page one for competitive terms typically takes 6–12 months. An established domain with good technical foundations can see movement in 6–8 weeks.',
@@ -122,7 +98,33 @@ export const post: BlogPost = {
       q: 'Does FactoryJet help with SEO timelines?',
       a: 'Yes. Every FactoryJet website is built with technical SEO foundations in place from launch: correct schema markup, clean URL structure, Core Web Vitals optimization, and proper internal linking. This eliminates the 4–8 week technical audit phase that typically begins most SEO engagements, compressing the overall timeline.',
     },
+  ];
+
+export const post: BlogPost = {
+  id: '221',
+  slug: 'how-long-does-seo-take-2026-month-by-month-timeline',
+  title: 'How Long Does SEO Take in 2026? A Month-by-Month Timeline',
+  excerpt:
+    'SEO results do not arrive on a fixed schedule, but there is a predictable pattern. Here is what actually happens month by month, backed by data from Ahrefs, Semrush, and Google.',
+  category: 'Emerging Tech',
+  author: 'Bhavesh Barot',
+  date: 'Jun 7, 2026',
+  readTime: '11 min read',
+  imageUrl: '/blog-images/how-long-does-seo-take-2026-month-by-month-timeline.webp',
+  meta: {
+    title: 'How Long Does SEO Take in 2026? Ahrefs & Semrush Data: 3–6 Month Timeline',
+    description:
+      'How long does SEO take? Ahrefs and Semrush data both point to 3–6 months for initial results and 6–12 months for competitive terms. This month-by-month timeline shows exactly what happens when, and why.',
+  },
+  keyTakeaways: [
+    'SEO takes 3–6 months to produce measurable results for most small businesses starting from scratch.',
+    'Ahrefs data shows 95% of newly published pages never reach the top 10 within their first year, content quality and authority both matter.',
+    'The biggest variable is your starting point: an established domain with existing traffic can see movement in 6–8 weeks; a brand-new domain typically takes 4–6 months.',
+    'Months 1–2 are almost entirely invisible, technical fixes and content creation happening below the surface. Expecting rankings here leads to premature cancellations.',
+    'The compounding effect kicks in around month 6: each new piece of content reinforces earlier content, and rankings accelerate faster than the linear work suggests.',
+    'SEO in 2026 includes AI Overviews and GEO, pages optimized for traditional search that are not also structured for AI extraction leave traffic on the table.',
   ],
+  faqs,
   content: (
     <article>
       {/* ── SCHEMA ─────────────────────────────────────────────────────── */}
@@ -182,48 +184,7 @@ export const post: BlogPost = {
             {
               '@context': 'https://schema.org',
               '@type': 'FAQPage',
-              mainEntity: [
-                {
-                  '@type': 'Question',
-                  name: 'How long does SEO take to work?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'For most small businesses starting from scratch, SEO produces measurable results within 3–4 months. Reaching page one for competitive terms typically takes 6–12 months. An established domain can see movement in 6–8 weeks.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'Why does SEO take so long?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: "SEO takes time because Google needs to crawl, index, and evaluate your content against competitors over weeks and months. Your site also builds topical authority and trust signals over time, there is no reliable shortcut.",
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'When will I see results from SEO?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'First visible signals appear around weeks 8–12. Meaningful organic traffic usually begins around month 4–6. Competitive terms often take 9–18 months.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'How long does local SEO take?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Local SEO produces results faster than national SEO. With a complete Google Business Profile and active review generation, local businesses often see Map Pack movement in 4–10 weeks.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'Is SEO worth it for a small business?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'For most small businesses, SEO produces the highest long-term ROI of any digital marketing channel. The challenge is that most businesses quit around month 3, just before results begin.',
-                  },
-                },
-              ],
+              mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
             },
           ]),
         }}

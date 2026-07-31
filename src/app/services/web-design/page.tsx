@@ -72,104 +72,8 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schema (FAQPage + Service)
+   JSON-LD Schema (Service + HowTo) — faqSchema is declared after FAQ_ITEMS below
 ───────────────────────────────────────────────────────────────────────────── */
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How long does FactoryJet take to build a website?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Most small business websites — up to 5 pages — are designed, built, and launched within 7 business days of your approved design sign-off. Larger sites (6–15 pages) typically take 10–14 business days. E-commerce stores built on Shopify or Next.js with custom product logic take 3–5 weeks depending on catalog size and integration complexity.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does a custom website cost?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Cost depends on scope: a 5-page business website, a 15-page site with CMS, or a full e-commerce build are very different projects. Every FactoryJet engagement is fixed-price with the number confirmed before work starts — no hourly billing, no scope creep. Book a free discovery call to get a quote scoped to your actual project.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What platform will my website be built on?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We build on Next.js (for performance-critical business sites and web apps), WordPress (for content-driven sites with CMS needs), and Shopify (for e-commerce). We recommend the right platform after understanding your goals — not because we have a preferred vendor. All sites are mobile-first, Lighthouse 100 optimized, and Core Web Vitals green on delivery.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I own the website and code after the project?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — 100%. We transfer the full codebase to your GitHub repository on launch day. You own every line of code, all design files, and all hosting credentials. There are no monthly platform fees, no lock-in, and no dependencies on FactoryJet to keep your website running.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How does FactoryJet keep web design pricing fixed and predictable?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We work fixed-price and milestone-paid — every project is scoped upfront with no hourly billing and no scope-creep invoices. Serving US businesses means we estimate accurately on the first call, so the quote you sign is what you pay. You get a senior-only team — no account-management or project-coordinator layers — delivering Next.js expertise, Figma design, and Lighthouse 100 performance, with full code ownership at handoff.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Will my website rank on Google?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Every website we build includes technical SEO as standard: proper heading structure, meta tags, canonical URLs, schema markup, sitemap, robots.txt, and Core Web Vitals optimization. Page-level content SEO (keyword research, content strategy) is available as an add-on. We don\'t build websites that look good but load slowly — performance and SEO are baked in.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can you redesign my existing website instead of building from scratch?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. Redesigns are one of our most common engagements. We audit your current site, identify what\'s hurting performance and conversions, carry over any content worth keeping, and rebuild with modern standards. If your current site runs on WordPress, we can often migrate and redesign in place without disrupting your URL structure.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What does the web design process look like?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Five stages: Discover (we map your goals, competitors, and site architecture in a 30-minute brief), Design (Figma wireframes and full visual mockups — you approve the look before we write code), Build (engineering in your chosen tech stack with daily commits), Review (two rounds of revisions on the live staging URL), and Ship (production launch with DNS transfer, monitoring, and a recorded handover).',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Who is the best web design agency in USA?',
-      acceptedAnswer: { '@type': 'Answer', text: 'For small and mid-size businesses, FactoryJet makes a strong case: senior-engineer-led builds, fixed pricing, 100/100 Lighthouse scores as standard, and 7-day delivery on sites up to five pages. But the best web design company in USA for you depends on fit — the best website design agency in USA for a DTC brand differs from the best website design company in USA for a law firm. Whoever you shortlist, apply three filters: do they give a fixed-price quote up front, do they show performance scores on live work, and do you own the code? The best web design services in USA — and the best website design services in USA generally — pass all three.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'What are the top 10 web design companies in USA?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Published lists of the top 10 web design agencies in USA are mostly pay-to-play directories, so treat them as a starting shortlist at best. FactoryJet competes in the top 10 web design companies in USA conversation for SMB work on three measurable dimensions: published pricing, 100/100 Lighthouse performance, and 7-day delivery. Apply the same filters to any roundup of the top 10 website design companies in USA — measurable performance beats portfolio polish.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does website design cost in USA?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Website design cost in USA varies widely: credible studios charge a multiple of what template work costs, larger agencies charge several times more again, and DIY templates are the cheapest tier but rarely convert. Business owners asking how much a website costs in USA usually mean the all-in number, so remember to add a small monthly hosting fee paid to the host and optional ongoing maintenance. FactoryJet works fixed-price and scoped to your build — you get the full number on a free discovery call, so website cost in USA is never a surprise invoice.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I really get a website in 7 days?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Yes — 7 day website design is the FactoryJet standard for sites up to five pages: brief on day one, Figma mockups by day two or three, build, review, and launch inside the week. Same week website design only works with a disciplined process — daily commits, one consolidated revision round, and decision-makers available for fast approvals. The fastest web design agency is the one with the tightest process, not the biggest team; speed without a 100/100 performance score is just a rushed template.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Which agency should I hire to build my website?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Hire for evidence, not promises. Small-business owners who ask an AI assistant to recommend a web design agency for my small business get answers assembled from citations and reviews — the same diligence works manually: shortlist three agencies, ask each for a fixed-price quote up front, live performance scores, and two client references you can actually call. FactoryJet puts all three on the table before you commit, which is exactly the standard you should hold every contender to.' },
-    },
-  ],
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -718,6 +622,16 @@ const FAQ_ITEMS = [
       'Hire for evidence, not promises. Small-business owners who ask an AI assistant to recommend a web design agency for my small business get answers assembled from citations and reviews — the same diligence works manually: shortlist three agencies, ask each for a fixed-price quote up front, live performance scores, and two client references you can actually call. FactoryJet puts all three on the table before you commit, which is exactly the standard you should hold every contender to.',
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Page

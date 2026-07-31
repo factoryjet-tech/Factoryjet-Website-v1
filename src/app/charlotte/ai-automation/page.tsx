@@ -67,79 +67,8 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schema (FAQPage + Service)
+   JSON-LD Schema (Service + HowTo + Breadcrumb) — faqSchema is declared after FAQ_ITEMS below
 ───────────────────────────────────────────────────────────────────────────── */
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is AI workflow automation for a Charlotte business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'AI workflow automation connects your business tools and uses artificial intelligence to execute multi-step processes without manual intervention. For Charlotte businesses, this means automating compliance reporting in financial and healthcare workflows, processing logistics and shipping documents, syncing data between your CRM and accounting systems, routing customer inquiries to the right department, and generating regulatory reports from multiple systems — so your team focuses on decisions that require human judgment, not on moving data between tools.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How does AI workflow automation help Charlotte businesses specifically?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Charlotte\'s economy has three characteristics that make AI automation especially valuable. First, the financial services density — with Bank of America, Wells Fargo, Truist, and a deep ecosystem of fintech and professional services firms, Charlotte businesses face compliance-heavy workflows that require precision and audit trails, exactly what structured AI automation provides. Second, Charlotte is a major logistics and distribution hub — document-heavy shipping and supply chain workflows are ideal automation candidates. Third, two of Charlotte\'s largest health systems (Atrium Health, Novant Health) and their supplier networks create high-volume administrative workflows that automation handles reliably.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What kinds of workflows does FactoryJet automate for Charlotte businesses?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Best-fit workflows for Charlotte businesses: lead follow-up and nurturing sequences triggered by form fills or CRM events, financial document processing (invoice extraction, approval routing, audit trail generation), logistics and shipping document automation (bills of lading, delivery confirmations, carrier sync), healthcare intake and patient communication workflows, compliance reporting from multiple data sources, CRM and accounting system sync (QuickBooks, Xero, Salesforce, HubSpot), and employee onboarding task sequences. Any workflow your team runs more than five times per week and involves reading something or making a simple decision is a candidate.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does AI workflow automation cost for a Charlotte business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet\'s AI workflow automation is fixed-price and scoped to your build — the main drivers are the number of workflows, the systems involved, and your compliance requirements. The Starter tier covers a focused single-workflow build, the Growth tier covers a multi-workflow automation platform connecting 3–5 systems with an operations dashboard and 30-day support (the most popular option for Charlotte SMBs), and the Enterprise tier covers complex compliance logic, financial services workflows, and multi-department integrations. Every project is quoted up front after a free discovery call — no hourly billing, no scope creep.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can AI workflow automation handle compliance requirements for Charlotte financial and healthcare businesses?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. Compliance-aware automation is a core capability for Charlotte\'s financial and healthcare industries. We build automations with full audit trails (every workflow run logged with inputs, decisions, and outputs), least-privilege data access, self-hosted infrastructure options for sensitive environments, and structured exception handling that routes compliance edge cases to human review rather than processing them automatically. For healthcare clients, this includes HIPAA-aligned data handling. For financial services, this includes audit-ready logging that maps to your control framework.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can AI automation connect to Charlotte banking, healthcare, and logistics platforms with audit trails?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — AI workflow automation integrates with the platforms Charlotte\'s regulated industries use. Common connections include Salesforce and nCino for financial services, Epic and Meditech for healthcare, QuickBooks and SAP for accounting, and major TMS and WMS platforms for logistics. For Charlotte banking and healthcare clients, every integration includes an immutable audit log — every workflow run recorded with inputs, decision logic, outputs, and timestamps — as standard.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can Charlotte compliance, legal, or risk teams review the automation logic before go-live?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — compliance review before deployment is built into every regulated-industry engagement. We run a dedicated staging period where your Charlotte compliance, legal, or risk team can review the automation\'s decision logic, exception handling, and audit trail outputs before any production data is processed. For financial services and healthcare clients, this ensures your internal control team — and your auditors — have full visibility. We document the automation in a format designed for SOC 2, HIPAA, and banking audit review.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do Charlotte financial services or healthcare businesses pay extra for compliance architecture in automation builds?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No surprise add-ons. Full audit trail logging, least-privilege data access, self-hosted infrastructure options, and HIPAA-aligned data handling are included in our Enterprise tier — not charged as separate line items. For most Charlotte financial services and logistics clients, the Growth tier already includes the audit trail and exception handling they need. We scope this accurately during discovery — no additions after kickoff when your budget is committed.',
-      },
-    },
-  ],
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -677,6 +606,16 @@ const FAQ_ITEMS = [
       'Three differences: price (specialized engineers serving US businesses for 12+ years), speed (no layers between your brief and the engineer building it — weeks, not quarters), and SMB depth (500+ small business projects — we understand what operations look like inside a 20-person Charlotte financial services firm or a regional logistics company, including the compliance and audit requirements those industries carry).',
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Page

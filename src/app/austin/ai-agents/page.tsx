@@ -67,79 +67,8 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schema (FAQPage + Service)
+   JSON-LD Schema (Service + HowTo + Breadcrumb) — faqSchema is declared after FAQ_ITEMS below
 ───────────────────────────────────────────────────────────────────────────── */
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is an AI agent for a business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'An AI agent is software that handles multi-step tasks autonomously — answering customer questions, qualifying leads, booking appointments, processing orders, or routing support tickets — using large language models like GPT-4o or Claude. Unlike a chatbot that just responds to messages, an AI agent can take actions: look up live data from your CRM, update records, send follow-up emails, or trigger workflows in connected tools. For Austin businesses dealing with high-volume customer interactions, an AI agent handles the routine work so your team focuses on what requires human judgment.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How does an AI agent help Austin businesses specifically?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Austin\'s market is unique — you have Silicon Hills tech companies competing for talent, a restaurant and hospitality scene that runs 18 hours a day, real estate moving at unusual speed, and a population growing faster than most US metros. AI agents solve three Austin-specific problems: responding to high-volume inbound at any hour (critical for hospitality and retail), competing with resource-rich tech companies without their headcount, and capturing leads from the wave of new residents and businesses arriving weekly who search for vendors online at all hours.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What kinds of AI agents does FactoryJet build for Austin companies?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet builds five core types for Austin businesses: Customer Support Agents (24/7 automated answers connected to your live systems), Lead Qualification Agents (engage and qualify website visitors before they bounce), E-Commerce Agents (order tracking, returns, product recommendations for Shopify and WooCommerce stores), Appointment Booking Agents (check real calendar availability and confirm bookings for service businesses), and Internal Knowledge Agents (instant answers from your SOPs and policies for your team). Austin businesses most commonly start with lead generation or support agents.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Which AI models power FactoryJet\'s agents?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We use GPT-4o (OpenAI), Claude 3.5 Sonnet (Anthropic), and Gemini (Google) depending on your use case, data sensitivity, and budget. For most Austin customer-facing agents, GPT-4o or Claude delivers the best balance of accuracy and cost. We use Voiceflow, Botpress, and LangChain for orchestration. We pick the right model for your workflow — not the most expensive one.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is Austin a good market for AI agent adoption?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Austin is one of the fastest AI-adoption markets in the US. The tech community normalizes AI tools faster than most cities, customers expect digital-first interactions, and the startup culture rewards businesses that move quickly. Early AI agent adopters in Austin\'s hospitality, real estate, and professional services sectors are already seeing competitive advantages — capturing leads other businesses are losing after hours and reducing support overhead in a tight labor market.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can an AI agent connect to my existing tools like HubSpot, Shopify, or Google Calendar?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — AI agents integrate natively with the platforms Austin businesses already run on. Common connections include HubSpot and Salesforce for CRM, Shopify and WooCommerce for e-commerce, Google Calendar and Calendly for scheduling, Zendesk and Freshdesk for support ticketing, Slack for internal alerts, and Twilio for SMS. Most Austin businesses already have 70–80% of the integration infrastructure in place. We build the agent layer on top — you don\'t rebuild your stack.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can an Austin AI agent deploy on my website, Instagram DMs, and WhatsApp at the same time?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — multi-channel deployment is standard on Growth and Enterprise plans. A single AI agent handles customer conversations across your website chat widget, WhatsApp Business, Instagram DMs, Facebook Messenger, and SMS simultaneously. Austin businesses with active social audiences see 30–50% of their lead inquiries coming through Instagram and Facebook, not just the website. One agent, consistent answers, all channels covered.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is there a payment plan for Austin AI agent projects, or is everything due at kickoff?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet uses milestone-based payments — 50% at kickoff and 50% at delivery for Starter projects. For Growth and Enterprise engagements, we offer a three-payment structure: 40% at kickoff, 40% at testing approval, and 20% at launch. Your payments align with working deliverables you can interact with — not with calendar dates. No large upfront commitment before you\'ve seen the agent handling real Austin business scenarios.',
-      },
-    },
-  ],
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -661,6 +590,16 @@ const FAQ_ITEMS = [
       'No. The admin dashboard lets non-technical team members view conversation logs, update answer content, adjust escalation thresholds, and monitor performance metrics without touching code. Your office manager or marketing coordinator can run it. If something breaks because a connected platform changes its API, you contact us and we fix it.',
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Page

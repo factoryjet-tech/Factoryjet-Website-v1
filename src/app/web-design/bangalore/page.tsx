@@ -136,63 +136,6 @@ const localBusinessSchema = {
   },
 };
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How much does a website cost for a startup in Bangalore?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to build a website in Bangalore?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A standard FactoryJet build delivers in 7 days from kickoff to launch. Discovery and design take the first two days, development runs through days five and six, and content, SEO, and launch happen on day seven. The 7-day clock starts when your brand assets and content are in our shared workspace.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you build websites for IT companies and SaaS startups in Bangalore?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — IT services, SaaS product companies, and enterprise software firms are a core client profile for us in Bangalore. We build sites with product demo flows, case study architecture, technical capability pages, and lead-capture forms designed for B2B SaaS sales cycles. We serve clients across Koramangala, Whitefield, Electronic City, Indiranagar, and HSR Layout.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Will my Bangalore business website rank on Google?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Technical SEO is built in: JSON-LD schema markup, optimised title and meta tags, Core Web Vitals green on Indian mobile networks, internal linking, XML sitemap submitted to Google Search Console, and WebP images with descriptive alt text. Branded searches typically rank within 1–2 weeks. Service + location queries take 3–6 months for a new domain.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I own the website after it is built?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No FactoryJet retainer required, no proprietary platform lock-in.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Who is the best web design agency in Bangalore?',
-      acceptedAnswer: { '@type': 'Answer', text: 'For small businesses, FactoryJet makes a strong case as the best web design company in Bangalore: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Bangalore you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Bangalore.' },
-    },
-    {
-      '@type': 'Question',
-      name: 'Should I hire web designer in Bangalore or use an agency?',
-      acceptedAnswer: { '@type': 'Answer', text: 'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Bangalore directly, agree the scope and price in writing first.' },
-    },
-],
-};
-
 /* ─────────────────────────────────────────────────────────────────────────────
    Section data
 ───────────────────────────────────────────────────────────────────────────── */
@@ -384,6 +327,16 @@ const BLR_FAQ_ITEMS = [
       'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Bangalore directly, agree the scope and price in writing first.',
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: BLR_FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 const BLR_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },

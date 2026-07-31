@@ -1,4 +1,5 @@
 import { manchesterMetadata } from "./metadata";
+import { ALL_FAQS } from "./sections/FAQ";
 
 export const metadata = manchesterMetadata;
 
@@ -129,104 +130,11 @@ const speakableSchema = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How much does web design cost in Manchester?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Manchester web design costs vary enormously, from budget template shops to premium bespoke agencies, depending on scope and quality. FactoryJet's pricing is fixed-price and scoped to your build — the main drivers are the number of pages, e-commerce or custom functionality, and content needs. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. Lighthouse 90+ performance and a full schema stack are included as standard.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the best web design agency in Manchester?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Manchester has over 1,000 web design agencies, with MadeByShape, Pixel Kicks, Soap Media, and Supremo among the most established. If you want AI-native, performance-engineered websites built on Next.js 15 with guaranteed SEO scores and AI search visibility, FactoryJet is purpose-built for that — at a fraction of the typical Manchester cost.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does it take to build a website in Manchester?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most Manchester agencies quote 6–12 weeks for a custom website. FactoryJet delivers in 2–4 weeks because we design in code (not Figma-to-handoff) and use a component-based architecture that eliminates rebuild cycles. Complex e-commerce builds may take 4–6 weeks.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is GEO and why does it matter for Manchester businesses?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "GEO (Generative Engine Optimisation) is the practice of making your website visible and citable by AI search systems — ChatGPT, Perplexity, Claude, Google AI Overviews. When someone asks 'who does web design in Manchester?', GEO-optimised websites with proper schema markup, clear E-E-A-T signals, and expanded content are the ones that get cited. FactoryJet builds it into every page by default.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What technology should my Manchester website use?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "In 2026, the highest-performing websites use React-based frameworks like Next.js 15 rather than WordPress or Squarespace. Next.js offers server-side rendering (faster load times), static generation (better SEO), and native API routes (dynamic functionality without plugins). Most Manchester agencies still default to WordPress — which works, but doesn't compete on performance or AI visibility.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What Lighthouse scores do your Manchester websites achieve?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Our benchmark — proven on our Sheffield landing page — is Performance 90+, SEO 100, Accessibility 96+, and Best Practices 100. Every Manchester website we build is held to these standards before deployment. Most Manchester agencies don't mention Lighthouse scores because their sites score 40–65.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can you build Shopify or WooCommerce stores for Manchester businesses?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We build e-commerce websites on Shopify, Shopify Plus, WooCommerce, and headless commerce architectures using Next.js. For Manchester retail and fashion businesses, we recommend Shopify Plus for its scalability and native checkout — or headless Next.js commerce for maximum performance and customisation.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you provide web design for startups in Manchester?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Absolutely. Manchester's startup ecosystem — from Northern Quarter tech startups to MediaCityUK media ventures — is a core market for FactoryJet. We offer startup-friendly, fixed-price packages scoped to your build, often starting with a single high-performance landing page and scaling into a full multi-page site as your business grows. Every project is quoted up front after a free discovery call, so you know the full cost before work starts.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Will my website rank on Google in Manchester?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Every FactoryJet website ships with a Lighthouse SEO score of 100, full structured data markup (LocalBusiness, Service, FAQPage, BreadcrumbList), optimised meta titles targeting 'web design Manchester' and related keywords, and internal linking architecture. We also configure Google Search Console and submit your sitemap on launch day.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do I need a Manchester-based web designer?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No. What you need is a web design team that understands Manchester's market, competitive landscape, and customer behaviour — and delivers a website that performs on every technical metric. FactoryJet serves Manchester businesses remotely with UK-hours availability, direct engineer access, and deep local market research baked into every project.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can you redesign my existing Manchester website?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We regularly rebuild existing WordPress, Squarespace, and Wix sites on Next.js 15. The typical result: 3–5x faster load times, 40–60% improvement in Lighthouse scores, full AI search visibility, and a modern design that converts visitors into leads. We handle content migration, 301 redirects, and Search Console reconfiguration.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do Manchester web design prices compare to London?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "London web design agencies typically charge a clear premium over Manchester equivalents, and bespoke custom projects sit at the top of both markets. FactoryJet delivers below both because our India-based engineering team operates at senior UK quality standards without London or Manchester overheads. Our pricing is fixed-price and scoped to your build — quoted up front after a free discovery call, so you know the full cost before work starts.",
-      },
-    },
-  ],
+  mainEntity: ALL_FAQS.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
 };
 
 export default function ManchesterLayout({

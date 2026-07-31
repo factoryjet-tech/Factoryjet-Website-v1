@@ -38,94 +38,6 @@ export const metadata: Metadata = {
    JSON-LD
 ───────────────────────────────────────────────────────────────────────────── */
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'ItemList',
-      name: 'FactoryJet Web Design & Development Services',
-      description: 'Complete web design and development services for US small businesses',
-      numberOfItems: 10,
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Custom Web Design', url: 'https://factoryjet.com/services/web-design' },
-        { '@type': 'ListItem', position: 2, name: 'Shopify Development', url: 'https://factoryjet.com/services/shopify-development' },
-        { '@type': 'ListItem', position: 3, name: 'Custom E-commerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
-        { '@type': 'ListItem', position: 4, name: 'Web Application Development', url: 'https://factoryjet.com/services/web-application-development' },
-        { '@type': 'ListItem', position: 5, name: 'Website Redesign', url: 'https://factoryjet.com/services/website-redesign' },
-        { '@type': 'ListItem', position: 6, name: 'WordPress Development', url: 'https://factoryjet.com/services/wordpress-development' },
-        { '@type': 'ListItem', position: 7, name: 'AI Agent Development', url: 'https://factoryjet.com/services/ai-agents' },
-        { '@type': 'ListItem', position: 8, name: 'AI Automation', url: 'https://factoryjet.com/services/ai-automation' },
-        { '@type': 'ListItem', position: 9, name: 'Law Firm Website Design', url: 'https://factoryjet.com/services/law-firm-website-design' },
-        { '@type': 'ListItem', position: 10, name: 'Real Estate Website Design', url: 'https://factoryjet.com/services/real-estate-website-design' },
-      ],
-    },
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-        { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://factoryjet.com/services' },
-      ],
-    },
-    {
-      '@type': 'Organization',
-      '@id': 'https://factoryjet.com/#organization',
-      name: 'FactoryJet',
-      url: 'https://factoryjet.com',
-      logo: 'https://factoryjet.com/logo.png',
-      sameAs: [
-        'https://www.linkedin.com/company/factoryjet',
-        'https://www.crunchbase.com/organization/factoryjet',
-      ],
-      
-    },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'How much do FactoryJet\'s web design services cost?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'FactoryJet works fixed-price and scoped to your build. The main cost drivers are page count, integrations, and any custom features. Every project is quoted up front after a free discovery call, so you know the full cost before work begins — no hourly billing, no scope surprises.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How long does it actually take to get a website built?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Standard 5-page websites go live in 7 business days. Shopify stores take 10–14 days. Complex web applications typically run 3–6 weeks. Every project has a fixed delivery date agreed upfront.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How does FactoryJet keep pricing fixed and predictable?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'We work fixed-price and milestone-paid — 12+ years of delivery experience serving the US market lets us scope accurately on the first call. You get senior Figma design, Next.js engineering, and responsive US-hour project management without hourly billing surprises.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Do I own my website after FactoryJet builds it?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes, 100%. Full source code ownership transfers to you on final payment. We hand over the GitHub repo, all assets, and complete documentation. You\'re never locked into a proprietary platform or monthly fee.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can FactoryJet build AI-powered features into my website?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Absolutely. We offer dedicated AI Agent Development and AI Automation services — everything from AI chatbots and lead qualification agents to full workflow automation. These can be added to any new or existing website.',
-          },
-        },
-      ],
-    },
-  ],
-};
-
 const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
@@ -410,6 +322,57 @@ const FAQS = [
     a: 'Yes — visit our portfolio at factoryjet.com/portfolio to see live case studies. We also share Figma design files and Lighthouse scores on request.',
   },
 ];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'ItemList',
+      name: 'FactoryJet Web Design & Development Services',
+      description: 'Complete web design and development services for US small businesses',
+      numberOfItems: 10,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Custom Web Design', url: 'https://factoryjet.com/services/web-design' },
+        { '@type': 'ListItem', position: 2, name: 'Shopify Development', url: 'https://factoryjet.com/services/shopify-development' },
+        { '@type': 'ListItem', position: 3, name: 'Custom E-commerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
+        { '@type': 'ListItem', position: 4, name: 'Web Application Development', url: 'https://factoryjet.com/services/web-application-development' },
+        { '@type': 'ListItem', position: 5, name: 'Website Redesign', url: 'https://factoryjet.com/services/website-redesign' },
+        { '@type': 'ListItem', position: 6, name: 'WordPress Development', url: 'https://factoryjet.com/services/wordpress-development' },
+        { '@type': 'ListItem', position: 7, name: 'AI Agent Development', url: 'https://factoryjet.com/services/ai-agents' },
+        { '@type': 'ListItem', position: 8, name: 'AI Automation', url: 'https://factoryjet.com/services/ai-automation' },
+        { '@type': 'ListItem', position: 9, name: 'Law Firm Website Design', url: 'https://factoryjet.com/services/law-firm-website-design' },
+        { '@type': 'ListItem', position: 10, name: 'Real Estate Website Design', url: 'https://factoryjet.com/services/real-estate-website-design' },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
+        { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://factoryjet.com/services' },
+      ],
+    },
+    {
+      '@type': 'Organization',
+      '@id': 'https://factoryjet.com/#organization',
+      name: 'FactoryJet',
+      url: 'https://factoryjet.com',
+      logo: 'https://factoryjet.com/logo.png',
+      sameAs: [
+        'https://www.linkedin.com/company/factoryjet',
+        'https://www.crunchbase.com/organization/factoryjet',
+      ],
+      
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: FAQS.map((item) => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: { '@type': 'Answer', text: item.a },
+      })),
+    },
+  ],
+};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Arrow icon

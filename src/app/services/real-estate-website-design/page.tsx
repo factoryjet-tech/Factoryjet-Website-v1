@@ -51,37 +51,6 @@ export const metadata: Metadata = {
    JSON-LD Schema
 ───────────────────────────────────────────────────────────────────────────── */
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How much does a real estate website cost?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "FactoryJet's real estate websites are fixed-price and scoped to your build. The main drivers are the site type (individual agent, team, brokerage, or property management), page count, the number of neighborhood pages, IDX integration, and any portal features. Every project is quoted up front after a free discovery call, so you know the full cost before work starts — and it comes in well below what US real estate web agencies charge for comparable work.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is IDX and do I need it on my real estate website?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "IDX (Internet Data Exchange) lets your website display live MLS listings — updated in near-real-time. If you're an active agent who wants buyers to search listings directly on your site, IDX is essential. We integrate with iHomefinder, Showcase IDX, and RETS-based connections. IDX integration is scoped into your fixed-price quote based on your provider.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: "Why doesn't a Zillow Premier Agent profile replace a real estate website?",
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Zillow Premier Agent gets your profile in front of buyers on Zillow — but you're paying for leads, not building an asset you own. A custom website builds your own search visibility: when someone searches 'real estate agent in [city]' or '[neighborhood] homes for sale,' your site appears. Your Zillow profile doesn't. Over time, a website that ranks organically generates leads for free.",
-      },
-    },
-  ],
-};
-
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -427,6 +396,16 @@ const FAQ_ITEMS = [
     answer: "Yes — brokerage and team sites need: a team roster with individual agent profiles and bios, a listings page that aggregates listings across all team members, office location pages, a recruitment page targeting agent talent, and often co-branded templates that individual agents can personalize. Brokerage sites are fixed-price and scoped to your team size and feature set.",
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 const MARKET_STATS = [
   {

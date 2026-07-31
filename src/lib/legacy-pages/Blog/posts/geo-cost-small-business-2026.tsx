@@ -1,31 +1,7 @@
 import React from 'react';
 import type { BlogPost } from '../data.types';
 
-export const post: BlogPost = {
-  id: '219',
-  slug: 'geo-cost-small-business-2026',
-  title: 'How Much Does GEO Cost in 2026? Real AI SEO Pricing, Decoded',
-  excerpt:
-    'GEO is the newest line item on agency proposals, and most small businesses have no idea what is reasonable to pay. Here is an honest breakdown backed by real market data: what GEO actually costs, what each budget tier delivers, and the red flags to watch before you sign.',
-  category: 'Emerging Tech',
-  author: 'Bhavesh Barot',
-  date: 'Jun 7, 2026',
-  readTime: '11 min read',
-  imageUrl: '/blog-images/geo-cost-small-business-2026.webp',
-  meta: {
-    title: 'GEO Cost 2026: What $1,500–$5,000/Month Actually Buys',
-    description:
-      'Real 2026 GEO pricing: $1,500–$5,000 a month for most small businesses, per WebFX data. What each tier delivers, plus DIY options and red flags.',
-  },
-  keyTakeaways: [
-    'According to WebFX\'s May 2026 pricing guide, GEO agency services range from $1,500 to $50,000+ per month, with basic small business programs starting at $1,500–$5,000/month.',
-    'Traditional SEO retainers average $1,000–$2,500/month per a Backlinko survey of 300+ professionals (Dec 2025). GEO programs at equivalent scope run slightly higher due to the PR and content authority work involved.',
-    'The cheapest GEO "packages" ($200–$500/month) are typically schema-only or FAQ-only plays with no third-party mention strategy, which is the highest-leverage component of any real GEO program.',
-    'DIY GEO costs $0 in tools and roughly 4–6 hours per month, covering the highest-impact tactics: answer-first content, reviews, directory profiles, and HARO outreach.',
-    'The market has not standardized GEO pricing yet, which means the gap between what a motivated agency charges and what a distracted one charges for the same scope is wider than in traditional SEO.',
-    'FactoryJet builds GEO-ready websites and content programs for US small businesses, with a focus on efficient delivery, not volume for its own sake.',
-  ],
-  faqs: [
+const faqs = [
     {
       q: 'What does GEO stand for and why does it cost money?',
       a: 'GEO stands for Generative Engine Optimization, the practice of making your business visible in AI-generated responses from tools like ChatGPT, Google AI Overviews, Perplexity, and Gemini. It costs money because it requires ongoing work: restructuring website content for AI extraction, implementing schema markup, acquiring third-party brand mentions, building review volume, and monitoring AI visibility across platforms. Unlike a one-time website build, GEO is a continuous program because AI models update their knowledge and competitors are building authority simultaneously.',
@@ -114,7 +90,33 @@ export const post: BlogPost = {
       q: 'Does FactoryJet offer GEO services?',
       a: 'Yes. FactoryJet builds GEO-ready websites for US small businesses, structured for AI citation from day one, and offers monthly AI visibility programs. Every site we build includes answer-first content architecture, complete schema implementation, Bing Places setup, and 20+ FAQs per key page. Book a free 30-minute call at calendly.com/bhavesh-factoryjet/30min to talk through what your specific business needs.',
     },
+  ];
+
+export const post: BlogPost = {
+  id: '219',
+  slug: 'geo-cost-small-business-2026',
+  title: 'How Much Does GEO Cost in 2026? Real AI SEO Pricing, Decoded',
+  excerpt:
+    'GEO is the newest line item on agency proposals, and most small businesses have no idea what is reasonable to pay. Here is an honest breakdown backed by real market data: what GEO actually costs, what each budget tier delivers, and the red flags to watch before you sign.',
+  category: 'Emerging Tech',
+  author: 'Bhavesh Barot',
+  date: 'Jun 7, 2026',
+  readTime: '11 min read',
+  imageUrl: '/blog-images/geo-cost-small-business-2026.webp',
+  meta: {
+    title: 'GEO Cost 2026: What $1,500–$5,000/Month Actually Buys',
+    description:
+      'Real 2026 GEO pricing: $1,500–$5,000 a month for most small businesses, per WebFX data. What each tier delivers, plus DIY options and red flags.',
+  },
+  keyTakeaways: [
+    'According to WebFX\'s May 2026 pricing guide, GEO agency services range from $1,500 to $50,000+ per month, with basic small business programs starting at $1,500–$5,000/month.',
+    'Traditional SEO retainers average $1,000–$2,500/month per a Backlinko survey of 300+ professionals (Dec 2025). GEO programs at equivalent scope run slightly higher due to the PR and content authority work involved.',
+    'The cheapest GEO "packages" ($200–$500/month) are typically schema-only or FAQ-only plays with no third-party mention strategy, which is the highest-leverage component of any real GEO program.',
+    'DIY GEO costs $0 in tools and roughly 4–6 hours per month, covering the highest-impact tactics: answer-first content, reviews, directory profiles, and HARO outreach.',
+    'The market has not standardized GEO pricing yet, which means the gap between what a motivated agency charges and what a distracted one charges for the same scope is wider than in traditional SEO.',
+    'FactoryJet builds GEO-ready websites and content programs for US small businesses, with a focus on efficient delivery, not volume for its own sake.',
   ],
+  faqs,
   content: (
     <>
       <script
@@ -145,13 +147,7 @@ export const post: BlogPost = {
             {
               '@context': 'https://schema.org',
               '@type': 'FAQPage',
-              mainEntity: [
-                { '@type': 'Question', name: 'What does GEO stand for and why does it cost money?', acceptedAnswer: { '@type': 'Answer', text: 'GEO stands for Generative Engine Optimization, the practice of making your business visible in AI-generated responses from ChatGPT, Google AI Overviews, Perplexity, and Gemini. It costs money because it requires ongoing work: restructuring content for AI extraction, schema markup, third-party brand mentions, review volume, and AI visibility monitoring.' } },
-                { '@type': 'Question', name: 'How much does a GEO retainer cost per month for a small business?', acceptedAnswer: { '@type': 'Answer', text: 'According to WebFX May 2026 pricing guide, GEO agency services range from $1,500 to $50,000+ per month. Small businesses with a basic strategy typically fall in the $1,500-$5,000/month range.' } },
-                { '@type': 'Question', name: 'Is GEO the same as SEO? Can I just pay for one?', acceptedAnswer: { '@type': 'Answer', text: 'GEO and SEO overlap significantly. Most businesses in 2026 benefit most from an integrated program rather than choosing one channel. A good agency integrates both in a single retainer rather than selling them as separate line items.' } },
-                { '@type': 'Question', name: 'How much does a one-time GEO audit cost?', acceptedAnswer: { '@type': 'Answer', text: 'A GEO audit as a standalone project typically runs $500-$2,500 depending on scope. A basic audit covers AI visibility testing across 3-4 platforms, schema gap analysis, and a prioritized action list.' } },
-                { '@type': 'Question', name: 'Can I do GEO myself without paying an agency?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The highest-impact GEO tactics are accessible to any organized small business owner at zero tool cost: answer-first content restructuring, directory profiles including Bing Places, review acquisition, and basic schema markup. Realistic time investment is 4-6 hours per month.' } },
-              ],
+              mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
             },
           ]),
         }}

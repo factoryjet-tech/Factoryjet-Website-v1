@@ -82,55 +82,8 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schema
+   JSON-LD Schema — N8N_FAQ_SCHEMA is declared after N8N_FAQ_ITEMS below
 ───────────────────────────────────────────────────────────────────────────── */
-
-const N8N_FAQ_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is n8n and why is it better than Zapier for Indian businesses?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'n8n is an open-source workflow automation platform that you can self-host on your own server — meaning zero per-task fees and no monthly SaaS subscription in USD. Zapier and Make.com charge in USD, bill per "task" or "operation," and do not natively connect Indian tools like Razorpay, Tally, WhatsApp Business API, or Shiprocket. n8n is self-hostable on AWS, DigitalOcean, or any VPS, runs entirely within India if needed for data residency, and FactoryJet builds the custom integrations your Indian tools require. For Indian SMBs running hundreds of thousands of automations monthly, n8n typically costs 80–90% less than Zapier.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does n8n automation setup cost in India?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "FactoryJet's n8n automation pricing is fixed-price and scoped to your build. The main drivers are the number of workflows and integrations: a Starter scope covers a handful of automated workflows and integrations with full deployment and documentation; a Growth scope covers more workflows and integrations plus WhatsApp Business API setup and 30-day monitoring; and custom automation infrastructure covers unlimited workflows, a dedicated n8n instance, full API integrations, and ongoing support. Every project is quoted up front after a free discovery call — no hourly billing, no scope creep.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to set up n8n automation for my business?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Standard automation setups of 3–5 workflows with common integrations (Razorpay, Zoho CRM, Google Sheets, WhatsApp) are delivered in 7 days. Complex automation infrastructure with 10+ workflows, custom API integrations (Tally, ERP systems), and dedicated server setup typically takes 2–4 weeks. The timeline depends on the number of workflows, complexity of logic, and whether custom API connectors need to be built for tools that lack native n8n nodes.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can n8n connect to Razorpay, Tally, WhatsApp Business API, and Zoho?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — connecting Indian business tools is our speciality. Razorpay has webhooks that n8n handles natively for payment events. Tally integration is built via Tally XML/HTTP API or TallyPrime REST API. WhatsApp Business API connects via official BSPs (Interakt, Wati, Gupshup) or the official Meta Cloud API. Zoho CRM and Zoho Books have full n8n community nodes. Shiprocket, Delhivery, and other Indian logistics APIs are connected via n8n HTTP Request nodes with custom auth. FactoryJet has built all of these integrations and maintains the nodes.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What happens when a workflow breaks — who fixes it?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Every automation we build includes error handling workflows — if a step fails, you receive an alert via WhatsApp or email with the exact node, error message, and retry instructions. For clients on a maintenance retainer (a fixed monthly fee scoped to your needs), FactoryJet monitors your n8n instance, receives error alerts directly, and fixes breaking changes within 24 hours. APIs change, webhooks expire, and third-party platforms release updates — an unmaintained automation is an automation that will eventually break silently. Our retainer prevents that.",
-      },
-    },
-  ],
-};
 
 const N8N_SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
@@ -619,6 +572,16 @@ const N8N_FAQ_ITEMS = [
       "Yes — FactoryJet's automation retainer plans are a fixed monthly fee scoped to your needs and cover: a set block of workflow development and adjustment hours, priority 24-hour error response, n8n version update management, monthly automation audit to identify new automation opportunities, and ongoing access to your dedicated automation engineer who knows your n8n instance. Retainer clients building automation over 6+ months consistently find it faster and more cost-effective than project-by-project engagements because there is no onboarding overhead on every new workflow.",
   },
 ];
+
+const N8N_FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: N8N_FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Page

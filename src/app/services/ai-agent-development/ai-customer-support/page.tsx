@@ -53,61 +53,6 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is an AI customer support agent and how does it work for Indian businesses?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'An AI customer support agent handles inbound support queries automatically — on WhatsApp, your website, or your support portal. It understands questions in Hindi and English, looks up real data (Shopify order status, Shiprocket tracking, Razorpay payment status), and responds accurately in under 60 seconds. Queries the AI cannot resolve are escalated to a human agent with full conversation context. Most Indian SMBs see 65–75% of WhatsApp queries resolved without human involvement within 30 days of deployment.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does AI customer support development cost in India?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'FactoryJet AI customer support agents are fixed-price and scoped to your build. Whether you need a focused WhatsApp or website support bot, a multi-channel platform with Freshdesk or Zoho Desk integration, or an enterprise support automation suite with deep ERP and multi-channel inbox, every project is quoted up front after a free discovery call. You know the full cost before work starts, with no hourly billing.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can the AI support agent handle WhatsApp queries in Hindi?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes — Hindi and Hinglish support is standard in all our India deployments. The AI detects the language the customer uses and responds in kind. A customer asking "mera order kab aayega" gets the same accurate Shiprocket tracking response as one asking "where is my order" — from the same AI, automatically.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Which Indian tools can the AI customer support agent integrate with?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We build integrations with the full Indian support stack: Zoho Desk, Freshdesk, Interakt, Wati, AiSensy (for WhatsApp), Shopify, WooCommerce, Commerceflo, Shiprocket, Delhivery, Razorpay, PayU, Tally (for GST invoice queries), and Google Workspace. If your support tool has an API, we connect to it.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What happens when the AI cannot resolve a support query?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Every AI support agent includes a confidence threshold and human escalation path. When the AI is not confident in its answer, it escalates to a human agent in Freshdesk or Zoho Desk — with the full conversation history and a context summary so the agent does not ask the customer to repeat themselves. You control the escalation threshold and routing rules.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does it take to deploy an AI customer support agent?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A focused WhatsApp or website support bot goes live in 2–3 weeks. Multi-channel platforms with Freshdesk or Zoho Desk integration take 4–5 weeks. Enterprise support automation with deep ERP integration takes 6–8 weeks. Timeline depends on the number of integrations and size of the knowledge base.',
-      },
-    },
-  ],
-};
-
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -501,6 +446,16 @@ const SUPPORT_FAQ_ITEMS = [
     answer: "Yes. For clients who want to validate before committing, we offer a 2-week pilot: a WhatsApp support bot deployed to a specific product category or customer segment, with real order lookups and FAQ handling. The pilot is offered at a fixed pilot price, credited against the full project. Seeing the first 100 real conversation transcripts is usually more convincing than any proposal.",
   },
 ];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: SUPPORT_FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
 
 export default function AICustomerSupportINPage() {
   return (
