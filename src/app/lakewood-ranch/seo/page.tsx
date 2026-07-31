@@ -13,7 +13,7 @@ const CANONICAL = 'https://factoryjet.com/lakewood-ranch/seo';
 
 // ─ Metadata ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'Lakewood Ranch FL SEO Company | Local SEO Services | FactoryJet',
+  title: 'Lakewood Ranch SEO Company | Local SEO Services | FactoryJet',
   description:
     'FactoryJet is an SEO company for Lakewood Ranch, FL businesses across Manatee and Sarasota County. Google map pack rankings, Business Profile management, AI search visibility, and technical SEO. Month-to-month, senior engineers, free audit.',
   alternates: { canonical: CANONICAL },

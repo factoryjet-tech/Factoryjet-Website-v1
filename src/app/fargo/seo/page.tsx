@@ -26,12 +26,12 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/fargo/seo';
 
 export const metadata: Metadata = {
-  title: 'Fargo SEO Company | Local SEO Services in Fargo, ND | FactoryJet',
+  title: 'Fargo SEO Company | Local SEO Services in Fargo | FactoryJet',
   description:
     'FactoryJet is a Fargo SEO company that wins the Map Pack, organic rankings, and AI answers across the two-state Fargo-Moorhead metro. Local SEO services in Fargo, West Fargo, Moorhead, and the 100 mile trade radius. Free SEO audit, month-to-month, built by senior engineers.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Fargo SEO Company | Local SEO Services in Fargo, ND | FactoryJet',
+    title: 'Fargo SEO Company | Local SEO Services in Fargo | FactoryJet',
     description:
       'Fargo SEO company for the whole two-state metro: Map Pack, organic, and AI answers in one plan covering Fargo, West Fargo, Moorhead, and the trade radius. Free SEO audit, month-to-month, senior engineers, founder-led.',
     url: CANONICAL,

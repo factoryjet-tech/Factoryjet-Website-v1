@@ -30,13 +30,13 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const OG_IMAGE = 'https://factoryjet.com/images/us/denver/denver-seo-og.jpg';
 
 export const metadata: Metadata = {
-  title: 'Denver SEO Company & Agency | Local SEO Services in Denver, CO | FactoryJet',
+  title: 'Denver SEO Company | Local SEO Services CO | FactoryJet',
   description:
     "FactoryJet is a Denver SEO company and agency built for the Mile High City's 47,470 monthly searches. Local SEO, technical SEO, and a founder who talks to you directly. Free audit, no long-term contract.",
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
-    title: 'Denver SEO Company & Agency | Local SEO Services in Denver, CO | FactoryJet',
+    title: 'Denver SEO Company | Local SEO Services CO | FactoryJet',
     description:
       "A Denver SEO company built for the Mile High City. Campaigns live in 7 days, month to month. 47,470 monthly searches across restaurants, tech, real estate, law, cannabis, and contractors.",
     url: CANONICAL,

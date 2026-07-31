@@ -14,7 +14,7 @@ const CANONICAL = 'https://factoryjet.com/huntington-beach/seo';
 
 // ─ Metadata ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'Huntington Beach SEO Company | Small Business Local SEO | FactoryJet',
+  title: 'Huntington Beach SEO Company | Local SEO | FactoryJet',
   description:
     'Huntington Beach SEO for small businesses: the Google map pack, local organic rankings and AI answers across Orange County. Real search volumes, named competitors, month to month, free audit.',
   alternates: { canonical: CANONICAL },

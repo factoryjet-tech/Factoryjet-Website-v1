@@ -22,12 +22,12 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/tampa/seo';
 
 export const metadata: Metadata = {
-  title: 'Tampa SEO Company | Local SEO Services in Tampa, FL | FactoryJet',
+  title: 'Tampa SEO Company | Local SEO Services in Tampa | FactoryJet',
   description:
     'FactoryJet is a Tampa SEO company that gets local businesses into the Google Map Pack and "near me" results. Local SEO month-to-month, fixed-price, free audit. Built by senior engineers.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Tampa SEO Company | Local SEO Services in Tampa, FL | FactoryJet',
+    title: 'Tampa SEO Company | Local SEO Services in Tampa | FactoryJet',
     description:
       'Tampa SEO company that gets you into the Google Map Pack. Local SEO month-to-month, fixed-price, free audit. Senior team, founder-led.',
     url: CANONICAL,

@@ -33,12 +33,12 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/austin/seo';
 
 export const metadata: Metadata = {
-  title: 'Austin SEO Company & Agency | Local SEO Services in Austin, TX | FactoryJet',
+  title: 'Austin SEO Company | Local SEO Services TX | FactoryJet',
   description:
     'FactoryJet is an Austin SEO company and agency built for the most crowded market in Texas. Local SEO, technical SEO, and an Austin SEO consultant who talks to you directly. Free audit, no long-term contract.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Austin SEO Company & Agency | Local SEO Services in Austin, TX | FactoryJet',
+    title: 'Austin SEO Company | Local SEO Services TX | FactoryJet',
     description:
       'Austin SEO company and agency built for the most crowded market in Texas. Local SEO, technical SEO, and a consultant who talks to you directly. Free audit, no long-term contract.',
     url: CANONICAL,

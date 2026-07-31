@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Providence RI SEO Company | FactoryJet',
     description:
-      'Rhode Island SEO for Providence businesses. Rank in local 3-pack for Brown, RISD, the medical corridor, and the booming restaurant and hospitality scene. KD 5.4 — open right now.',
+      'Rhode Island SEO for Providence businesses. Rank in local 3-pack for Brown, RISD, the medical corridor, and the booming restaurant and hospitality scene. KD 5.4, open right now.',
     url: CANONICAL,
     type: 'website',
   },
@@ -59,7 +59,7 @@ const FAQ_GROUPS = [
     items: [
       {
         q: 'Why is local SEO in Providence such a strong opportunity right now?',
-        a: 'Providence has keyword difficulty scores as low as 5.4 for primary SEO service queries — meaning the incumbent agencies ranking in the top results have thin content and weak authority. For any service category in the Providence market, a well-executed SEO campaign can displace existing rankings faster than in Boston, New York, or other Northeast metros. Combined with Brown University, RISD, a growing biotech and education sector, and a national restaurant scene, the organic search opportunity in Providence is genuinely underserved relative to the market size.',
+        a: 'Providence has keyword difficulty scores as low as 5.4 for primary SEO service queries, meaning the incumbent agencies ranking in the top results have thin content and weak authority. For any service category in the Providence market, a well-executed SEO campaign can displace existing rankings faster than in Boston, New York, or other Northeast metros. Combined with Brown University, RISD, a growing biotech and education sector, and a national restaurant scene, the organic search opportunity in Providence is genuinely underserved relative to the market size.',
       },
       {
         q: 'Which Providence neighborhoods and areas matter most for local SEO?',
@@ -417,7 +417,7 @@ export default function ProvidenceSEO() {
             <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
               <Image
                 src="/images/us/providence/seo/providence-ri-seo-hero.webp"
-                alt="Providence RI downtown and waterfront — the knowledge-economy capital where Brown, RISD, and a dense small business scene converge"
+                alt="Providence RI downtown and waterfront, the knowledge-economy capital where Brown, RISD, and a dense small business scene converge"
                 width={1200}
                 height={600}
                 style={{ width: '100%', height: 'auto', display: 'block' }}
@@ -431,12 +431,12 @@ export default function ProvidenceSEO() {
               </div>
               <div className="scard">
                 <div className="n">4</div>
-                <div className="l">Major universities within city limits: Brown, RISD, Providence College, Johnson &amp; Wales — combined enrollment 30K+</div>
+                <div className="l">Major universities within city limits: Brown, RISD, Providence College, Johnson &amp; Wales, combined enrollment 30K+</div>
                 <div className="src">NCES Integrated Postsecondary Education Data System, 2024</div>
               </div>
               <div className="scard">
                 <div className="n">KD 5.4</div>
-                <div className="l">Average keyword difficulty for "seo company providence" cluster — among the lowest in any comparable Northeast US market</div>
+                <div className="l">Average keyword difficulty for "seo company providence" cluster, among the lowest in any comparable Northeast US market</div>
                 <div className="src">Semrush keyword analysis, 2026</div>
               </div>
               <div className="scard">
@@ -460,7 +460,7 @@ export default function ProvidenceSEO() {
             <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
               <Image
                 src="/images/us/providence/seo/providence-university-district.webp"
-                alt="Providence RI university district and small businesses — Brown University, RISD, and Johnson & Wales create a uniquely dense local search market"
+                alt="Providence RI university district and small businesses. Brown University, RISD, and Johnson & Wales create a uniquely dense local search market"
                 width={1200}
                 height={600}
                 style={{ width: '100%', height: 'auto', display: 'block' }}
@@ -547,7 +547,7 @@ export default function ProvidenceSEO() {
             <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
               <Image
                 src="/images/us/shared/factoryjet-senior-engineer.webp"
-                alt="FactoryJet senior engineer reviewing SEO audit data — every engagement is led by a specialist, not handed to a junior"
+                alt="FactoryJet senior engineer reviewing SEO audit data, every engagement is led by a specialist, not handed to a junior"
                 width={1200}
                 height={600}
                 style={{ width: '100%', height: 'auto', display: 'block' }}
@@ -557,7 +557,7 @@ export default function ProvidenceSEO() {
               {[
                 {
                   h: 'Technical SEO foundation',
-                  p: 'Core Web Vitals, crawl management, schema markup (LocalBusiness, FAQPage, Service), mobile performance, and structured data for AI citation. Providence sites tend to have accumulated technical debt from older CMS installs — we clear that foundation first.',
+                  p: 'Core Web Vitals, crawl management, schema markup (LocalBusiness, FAQPage, Service), mobile performance, and structured data for AI citation. Providence sites tend to have accumulated technical debt from older CMS installs, we clear that foundation first.',
                 },
                 {
                   h: 'Google Business Profile management',
@@ -573,7 +573,7 @@ export default function ProvidenceSEO() {
                 },
                 {
                   h: 'AI search optimization (GEO)',
-                  p: 'Content structured for Google AI Overviews, ChatGPT, and Perplexity citations. Answer-first formatting, entity markup, FAQ schema, and verified sourcing. Providence is early-stage for AI citation competition — now is the time to build that authority.',
+                  p: 'Content structured for Google AI Overviews, ChatGPT, and Perplexity citations. Answer-first formatting, entity markup, FAQ schema, and verified sourcing. Providence is early-stage for AI citation competition, now is the time to build that authority.',
                 },
                 {
                   h: 'Monthly reporting and strategy',
@@ -597,7 +597,7 @@ export default function ProvidenceSEO() {
             <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
               <Image
                 src="/images/us/shared/factoryjet-audit-call.webp"
-                alt="FactoryJet founder on a free audit call — 30 minutes that maps your Providence SEO opportunity with zero obligation"
+                alt="FactoryJet founder on a free audit call, 30 minutes that maps your Providence SEO opportunity with zero obligation"
                 width={1200}
                 height={600}
                 style={{ width: '100%', height: 'auto', display: 'block' }}
@@ -664,7 +664,7 @@ export default function ProvidenceSEO() {
               <div className="byline">
                 <div className="avatar">K</div>
                 <div>
-                  <div className="nm">Kiran M — Impulse Branding</div>
+                  <div className="nm">Kiran M. Impulse Branding</div>
                   <div className="ti">Brand strategy and digital services</div>
                 </div>
               </div>
@@ -672,7 +672,7 @@ export default function ProvidenceSEO() {
             <div style={{ margin: '0 0 36px', borderRadius: '20px', overflow: 'hidden' }}>
               <Image
                 src="/images/us/providence/seo/providence-knowledge-economy.webp"
-                alt="Providence RI knowledge economy businesses — healthcare, biotech, creative agencies, and restaurants that win with local SEO"
+                alt="Providence RI knowledge economy businesses, healthcare, biotech, creative agencies, and restaurants that win with local SEO"
                 width={1200}
                 height={600}
                 style={{ width: '100%', height: 'auto', display: 'block' }}

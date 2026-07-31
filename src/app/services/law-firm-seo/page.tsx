@@ -19,8 +19,30 @@ import './law-firm-seo.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 
+/* Named-competitor comparison. Every firm below currently ranks on Google for
+   law firm SEO in the US (checked 31 July 2026), and each "best for" line is
+   written from that firm's OWN description of itself. Nothing is invented.
+   Source: pipeline/research/data/lawfirm_seo_us.json */
+const LAW_SEO_FIRMS = [
+  {
+    name: 'FactoryJet',
+    bestFor:
+      'Firms that want legal SEO run alongside the website itself, with AI-search visibility built in rather than sold as an upsell. Strongest fit for small and mid-size practices that want senior people on the account. (Yes, that is us. We include ourselves openly.)',
+    isUs: true,
+  },
+  { name: 'Consultwebs', bestFor: 'Firms wanting one of the longest-established legal-only marketing agencies in the US, working exclusively with law firms.' },
+  { name: 'LawRank', bestFor: 'Practices that want SEO and AI optimisation handled together. They describe themselves as a premier law firm SEO company covering search and AI optimisation for lawyers.' },
+  { name: 'Hennessey Digital', bestFor: 'Larger firms focused on signed cases rather than traffic. Their own listing leads with driving more leads and signed cases, led by a named legal SEO expert.' },
+  { name: 'SeoProfy', bestFor: 'Practices wanting a general-purpose SEO agency with a dedicated legal arm. They describe themselves as a leading law firm SEO agency.' },
+  { name: 'Exults', bestFor: 'Firms that want education alongside execution, and prefer an agency that explains how legal SEO works before selling it.' },
+  { name: 'Electric Lemonade', bestFor: 'Smaller practices wanting a hands-on team rather than a large agency account structure.' },
+  { name: 'Law SEO Service', bestFor: 'Firms in competitive injury and defence categories specifically, which is the focus their own listing leads with.' },
+  { name: 'Rankings.io', bestFor: 'Personal injury firms in particular, which is the niche they are best known for.' },
+  { name: 'Juris Digital', bestFor: 'Firms that want content and SEO from a team with in-house legal writing experience.' },
+];
+
 export const metadata: Metadata = {
-  title: 'Law Firm SEO Agency | Legal SEO Services for Attorneys | FactoryJet',
+  title: 'Best Law Firm SEO Company | SEO for Attorneys | FactoryJet',
   description:
     'Law firm SEO agency for US attorneys and legal practices. YMYL-certified content, Google Screened qualification, and Map Pack dominance for PI, criminal defense, family law, and more. Free audit.',
   alternates: {
@@ -31,7 +53,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     locale: 'en_US',
     type: 'website',
-    title: 'Law Firm SEO Agency | Legal SEO Services for Attorneys | FactoryJet',
+    title: 'Best Law Firm SEO Company | SEO for Attorneys | FactoryJet',
     description:
       'Law firm SEO agency for US attorneys and legal practices. YMYL-certified content, Google Screened qualification, and Map Pack dominance for PI, criminal defense, family law, and more. Free audit.',
     images: [
@@ -39,13 +61,13 @@ export const metadata: Metadata = {
         url: 'https://factoryjet.com/images/us/services/law-firm-seo/hero.webp',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet — Law firm SEO agency for US attorneys and legal practices',
+        alt: 'FactoryJet. Law firm SEO agency for US attorneys and legal practices',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Law Firm SEO Agency | Legal SEO Services for Attorneys | FactoryJet',
+    title: 'Best Law Firm SEO Company | SEO for Attorneys | FactoryJet',
     description:
       'Law firm SEO agency for US attorneys and legal practices. YMYL-certified content, Google Screened qualification, and Map Pack dominance for PI, criminal defense, family law, and more. Free audit.',
     images: ['https://factoryjet.com/images/us/services/law-firm-seo/hero.webp'],
@@ -70,7 +92,7 @@ export const metadata: Metadata = {
 const schemaWebPage = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Law Firm SEO Agency — Legal SEO Services for Attorneys | FactoryJet',
+  name: 'Law Firm SEO Agency. Legal SEO Services for Attorneys | FactoryJet',
   url: 'https://factoryjet.com/services/law-firm-seo',
   description:
     'Law firm SEO agency for US attorneys and legal practices. YMYL-certified content, Google Screened qualification, and Map Pack dominance for PI, criminal defense, family law, and more.',
@@ -112,6 +134,54 @@ const schemaFAQ = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Which is the best law firm SEO company?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'There is no single best law firm SEO company for every practice. A personal injury firm competing on some of the most expensive keywords in Google needs different work from a family law practice serving two counties. Judge on whether the agency understands YMYL content standards, does real Map Pack work, and can show results in your practice area specifically.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is SEO in law firms?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Law firm SEO is the work of getting your practice to appear when someone searches for legal help, without paying for each click. In practice it is three things: a technically sound website, content that meets Google YMYL standards for legal advice, and a Google Business Profile strong enough to appear in the Map Pack for your area.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does an SEO consultant cost for a law firm?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'It varies widely, and anyone quoting a number before seeing your market is guessing. The drivers are how competitive your practice area is, how many locations you serve, and how much technical repair the site needs first. Legal is among the most expensive categories in search, so ask any agency to separate their fee from any ad spend in writing.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is SEO being phased out?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No, but it has changed shape. AI Overviews and assistants now answer a share of queries without a click, which reduces traffic on informational searches. High-intent legal searches, someone looking for representation right now, still go to search results and the Map Pack. The work has shifted toward being the source AI cites rather than only ranking blue links.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does law firm SEO take to work?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Expect early movement in three to six months and stable local rankings in six to twelve. Legal is slower than most categories because Google applies stricter quality standards to YMYL topics, which includes anything affecting someone legal or financial wellbeing. Any agency promising fast rankings in legal is either overselling or planning something that will cost you later.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you get my firm cited by ChatGPT and Google AI answers?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'That is a separate discipline from ranking, and we treat it as one. It means self-contained factual answers on your pages, real attorney authorship and credentials, and presence on the third-party sources AI assistants actually cite. Most legal SEO agencies are not doing anything about this yet, which is exactly why it is worth doing now.',
+      },
+    },
     {
       '@type': 'Question',
       name: 'What is law firm SEO and why does it matter more than PPC?',
@@ -187,13 +257,31 @@ const schemaOrganization = {
    Page component
 ───────────────────────────────────────────────────────────────────────────── */
 
+
+const lawFirmsSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Best law firm SEO companies in the US (2026)',
+  numberOfItems: LAW_SEO_FIRMS.length,
+  itemListOrder: 'https://schema.org/ItemListUnordered',
+  itemListElement: LAW_SEO_FIRMS.map((a, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: a.name,
+  })),
+};
+
 export default function LawFirmSEOPage() {
   return (
     <>
-      {/* JSON-LD Schemas — inline at render time for maximum SEO reliability */}
+      {/* JSON-LD Schemas, inline at render time for maximum SEO reliability */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaWebPage) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(lawFirmsSchema) }}
       />
       <script
         type="application/ld+json"
@@ -216,7 +304,7 @@ export default function LawFirmSEOPage() {
       <div className="lfseo">
 
       {/* ============================================================
-          HERO — LIGHT CREAM
+          HERO. LIGHT CREAM
       ============================================================ */}
       <section className="hero">
         <div className="hero-grid">
@@ -290,6 +378,23 @@ export default function LawFirmSEOPage() {
       {/* ============================================================
           STATS
       ============================================================ */}
+      {/* Answer-first block (BLUF): the direct answer, written to be quoted by
+          Google AI Overviews, ChatGPT, Gemini and Perplexity. */}
+      <section className="section-white" id="best-law-firm-seo">
+        <div className="container" style={{ maxWidth: '48rem' }}>
+          <h2>So, which is the best law firm SEO company?</h2>
+          <p style={{ fontSize: '1.125rem', lineHeight: 1.7 }}>
+            There is no single best law firm SEO company for every practice. A personal injury firm
+            fighting for one of the most expensive keyword sets in Google and a family law practice
+            serving two counties need completely different work. The firms that consistently do well
+            are the ones that treat legal SEO as its own discipline: YMYL content standards, real
+            attorney authorship, Map Pack work, and now visibility inside AI answers. Below we
+            compare the companies that actually rank for law firm SEO in the US, including
+            ourselves, so you can judge the fit yourself.
+          </p>
+        </div>
+      </section>
+
       <section className="section-white" id="stats">
         <div className="container">
           <div className="stats-grid">
@@ -327,6 +432,57 @@ export default function LawFirmSEOPage() {
       {/* ============================================================
           PRACTICE AREAS BENTO
       ============================================================ */}
+      {/* Named-competitor comparison: the honest "who is best for what" listicle.
+          Targets "best law firm seo company" (880/mo, KD 6, $269 CPC). */}
+      <section className="section-light" id="best-law-firm-seo-companies">
+        <div className="container" style={{ maxWidth: '52rem' }}>
+          <h2>Best law firm SEO companies in the US (2026), and who each one suits</h2>
+          <p style={{ fontSize: '1.0625rem', lineHeight: 1.7, marginBottom: '2rem' }}>
+            Built from live search data checked on 31 July 2026: the firms that actually rank for
+            law firm SEO in the US. Each description is written from how that company describes
+            itself, not from our opinion of them. We include ourselves and say so openly, because
+            hiding it would be the opposite of honest.
+          </p>
+          <ol style={{ listStyle: 'none', padding: 0, display: 'grid', gap: '1rem' }}>
+            {LAW_SEO_FIRMS.map((a, i) => (
+              <li
+                key={a.name}
+                style={{
+                  display: 'flex', gap: '1rem', padding: '1.25rem 1.5rem', borderRadius: '1rem',
+                  border: a.isUs ? '1px solid rgba(240,90,40,0.4)' : '1px solid rgba(15,15,18,0.1)',
+                  background: a.isUs ? 'rgba(240,90,40,0.05)' : '#fff',
+                }}
+              >
+                <span
+                  style={{
+                    flex: '0 0 auto', width: '2.25rem', height: '2.25rem', borderRadius: '999px',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontWeight: 700, fontSize: '0.875rem',
+                    background: a.isUs ? '#F05A28' : 'rgba(15,15,18,0.05)',
+                    color: a.isUs ? '#fff' : '#0F0F12',
+                  }}
+                >
+                  {i + 1}
+                </span>
+                <div>
+                  <h3 style={{ fontSize: '1.0625rem', fontWeight: 700, margin: 0 }}>
+                    {a.name}
+                    {a.isUs && (
+                      <span style={{ marginLeft: '0.5rem', background: '#B23E13', color: '#fff', borderRadius: '999px', padding: '0.125rem 0.5rem', fontSize: '0.6875rem', fontWeight: 600 }}>
+                        That is us
+                      </span>
+                    )}
+                  </h3>
+                  <p style={{ margin: '0.25rem 0 0', lineHeight: 1.6 }}>
+                    <strong>Best for: </strong>{a.bestFor}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
       <section className="section-light" id="practice-areas">
         <div className="container">
           <span className="eyebrow reveal">Practice Areas</span>

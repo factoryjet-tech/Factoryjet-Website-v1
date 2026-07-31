@@ -28,12 +28,12 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/lincoln/seo';
 
 export const metadata: Metadata = {
-  title: 'Lincoln SEO Company | Local SEO Services in Lincoln, NE | FactoryJet',
+  title: 'Lincoln SEO Company | Local SEO Services NE | FactoryJet',
   description:
     'FactoryJet is a Lincoln SEO company running both lanes in one plan: local SEO services in Lincoln, NE for the Map Pack, and national SEO for the insurers, ag-tech, and SaaS teams selling from the Silicon Prairie. Free SEO audit, month-to-month, built by senior engineers.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Lincoln SEO Company | Local SEO Services in Lincoln, NE | FactoryJet',
+    title: 'Lincoln SEO Company | Local SEO Services NE | FactoryJet',
     description:
       'Lincoln SEO company for both lanes: Map Pack wins from the Haymarket to 84th Street, plus national rankings and AI answers for businesses selling coast to coast from Lincoln. Free SEO audit, month-to-month, senior engineers, founder-led.',
     url: CANONICAL,

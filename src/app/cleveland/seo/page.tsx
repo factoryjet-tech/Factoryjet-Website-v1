@@ -10,7 +10,7 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import './cleveland-seo.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   /us/cleveland/seo — Cleveland local-SEO city page. Built 2026-06-06.
+   /us/cleveland/seo. Cleveland local-SEO city page. Built 2026-06-06.
    "Working Drawing" layout (third distinct city design): schematic SERP hero
    with leader-line callouts, ruler facts, title-block BLUF, zero-sum dark stats,
    technical-SEO gauge, scroll-snap industry rail, work order, evaluation
@@ -28,12 +28,12 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/cleveland/seo';
 
 export const metadata: Metadata = {
-  title: 'Cleveland SEO Company | Local SEO Services Near Me | FactoryJet',
+  title: 'Cleveland SEO Company | Local SEO Services | FactoryJet',
   description:
-    'Trusted SEO company in Cleveland, Ohio. Senior SEO experts delivering local search engine optimization, technical SEO & GBP optimization. 500+ businesses served. Free audit — no lock-in contracts.',
+    'Trusted SEO company in Cleveland, Ohio. Senior SEO experts delivering local search engine optimization, technical SEO & GBP optimization. 500+ businesses served. Free audit, no lock-in contracts.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Cleveland SEO Company | Local SEO Services Near Me | FactoryJet',
+    title: 'Cleveland SEO Company | Local SEO Services | FactoryJet',
     description:
       'Top-rated SEO company in Cleveland, Ohio. Local SEO, technical SEO & Google Business Profile optimization for Ohio businesses. 500+ clients served. Free audit, no contracts.',
     url: CANONICAL,
@@ -93,7 +93,7 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
     id: 'faq-pricing',
     label: 'Pricing & timeline',
     items: [
-      { q: 'How much does SEO cost in Cleveland?', a: "Local SEO cost in Cleveland depends on three things: how many locations you're targeting, how competitive your category is, and the current state of your website. A home services business in a crowded suburb needs more work than a niche B2B in a quieter market. We scope every engagement after a free audit so you know exactly what the work is before you commit — no obligation to see the numbers." },
+      { q: 'How much does SEO cost in Cleveland?', a: "Local SEO cost in Cleveland depends on three things: how many locations you're targeting, how competitive your category is, and the current state of your website. A home services business in a crowded suburb needs more work than a niche B2B in a quieter market. We scope every engagement after a free audit so you know exactly what the work is before you commit, no obligation to see the numbers." },
       { q: 'How long does SEO take to work in Cleveland?', a: 'Expect early movement in 3-6 months and stable local-pack rankings in 6-12 months. If your Google Business Profile is under-optimized, the Map Pack can improve in as little as 2-8 weeks. Anyone promising page one in 30 days is selling risk, not results.' },
       { q: 'How fast can I rank in the Cleveland Map Pack?', a: "If you already have reviews, accurate citations, and a half-optimized profile, the 3-pack can move in 15-60 days. Starting from scratch in a competitive category, plan on 3-6 months. The good news: Cleveland's SEO market is softer than most big metros, so well-executed work moves faster here." },
       { q: 'Why is local SEO a monthly fee instead of one-time?', a: 'Rankings are earned and defended continuously: competitors optimize, Google updates its algorithm, and your profile needs ongoing posts, reviews, and citation upkeep. A one-time setup decays; that is why we work month-to-month.' },
@@ -135,19 +135,19 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
     items: [
       {
         q: 'What do SEO services include?',
-        a: "SEO services cover four layers. (1) Technical SEO — site speed, Core Web Vitals, crawlability, schema markup, and site architecture. (2) Local SEO — Google Business Profile optimization, citation cleanup, NAP consistency, and review management. (3) On-page SEO — keyword targeting, title tags, meta descriptions, headings, and internal linking. (4) Content — service pages, blog posts, and FAQ content that earns rankings. At FactoryJet all four are included in one monthly engagement. Most Cleveland SEO companies charge extra for technical work or skip it entirely.",
+        a: "SEO services cover four layers. (1) Technical SEO, site speed, Core Web Vitals, crawlability, schema markup, and site architecture. (2) Local SEO. Google Business Profile optimization, citation cleanup, NAP consistency, and review management. (3) On-page SEO, keyword targeting, title tags, meta descriptions, headings, and internal linking. (4) Content, service pages, blog posts, and FAQ content that earns rankings. At FactoryJet all four are included in one monthly engagement. Most Cleveland SEO companies charge extra for technical work or skip it entirely.",
       },
       {
         q: 'How do I find a good SEO company near me in Cleveland?',
-        a: 'Start with Google: search "SEO company near me" and look at who actually ranks. An SEO company that cannot rank its own website is a warning sign. Then apply the six-item checklist on this page: written deliverables, transparent, fixed-price quotes, month-to-month terms, you owning your data, reports tied to calls and leads, and no ranking guarantees. Proximity matters less than expertise — the right local SEO services partner for your Cleveland business may work with a dedicated Cleveland focus rather than a storefront on Euclid.',
+        a: 'Start with Google: search "SEO company near me" and look at who actually ranks. An SEO company that cannot rank its own website is a warning sign. Then apply the six-item checklist on this page: written deliverables, transparent, fixed-price quotes, month-to-month terms, you owning your data, reports tied to calls and leads, and no ranking guarantees. Proximity matters less than expertise, the right local SEO services partner for your Cleveland business may work with a dedicated Cleveland focus rather than a storefront on Euclid.',
       },
       {
         q: 'Do you offer HVAC SEO services near me in Cleveland?',
-        a: 'Yes. HVAC SEO is one of the most competitive local categories in Cleveland — emergency heating and AC calls go almost entirely to whoever owns the Map Pack. We optimize your Google Business Profile for service and neighborhood keywords, build suburb pages covering Lakewood, Parma, Westlake, and the wider metro, and run a review pipeline. HVAC companies we work with typically see Map Pack movement within 60–90 days because the category is driven by GBP signals and reviews, not domain authority. Book a free audit to see where your listings stand.',
+        a: 'Yes. HVAC SEO is one of the most competitive local categories in Cleveland, emergency heating and AC calls go almost entirely to whoever owns the Map Pack. We optimize your Google Business Profile for service and neighborhood keywords, build suburb pages covering Lakewood, Parma, Westlake, and the wider metro, and run a review pipeline. HVAC companies we work with typically see Map Pack movement within 60–90 days because the category is driven by GBP signals and reviews, not domain authority. Book a free audit to see where your listings stand.',
       },
       {
         q: 'Do you offer SEO services for plumbers in Cleveland and Northeast Ohio?',
-        a: 'Yes. Plumber SEO in Northeast Ohio is extremely high-intent — someone searching "plumber near me" needs help right now, and the Map Pack wins nearly every emergency call. We optimize your Google Business Profile, build service-area pages for communities across Cuyahoga, Lake, and Lorain counties, run a review-generation system, and fix the technical issues most plumbing websites carry. Book a free audit and we will show you exactly where you rank for Cleveland plumbing terms.',
+        a: 'Yes. Plumber SEO in Northeast Ohio is extremely high-intent, someone searching "plumber near me" needs help right now, and the Map Pack wins nearly every emergency call. We optimize your Google Business Profile, build service-area pages for communities across Cuyahoga, Lake, and Lorain counties, run a review-generation system, and fix the technical issues most plumbing websites carry. Book a free audit and we will show you exactly where you rank for Cleveland plumbing terms.',
       },
       {
         q: 'Do you offer local SEO services for businesses in Lakewood, Ohio?',
@@ -155,11 +155,11 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
       },
       {
         q: 'What makes FactoryJet one of the top SEO companies in Cleveland?',
-        a: 'Three things set the top SEO companies in Cleveland apart from the rest: senior engineers doing the actual work (not account managers), reporting tied to calls and leads (not ranking screenshots), and a technical foundation that includes Core Web Vitals, schema markup, and AI/GEO optimization — not just content and links. FactoryJet passes all three: every engagement is run by the same senior engineers who build Lighthouse 100/100 sites, with a written deliverables list and month-to-month terms. You can verify our technical work by running PageSpeed on factoryjet.com yourself before you talk to us.',
+        a: 'Three things set the top SEO companies in Cleveland apart from the rest: senior engineers doing the actual work (not account managers), reporting tied to calls and leads (not ranking screenshots), and a technical foundation that includes Core Web Vitals, schema markup, and AI/GEO optimization, not just content and links. FactoryJet passes all three: every engagement is run by the same senior engineers who build Lighthouse 100/100 sites, with a written deliverables list and month-to-month terms. You can verify our technical work by running PageSpeed on factoryjet.com yourself before you talk to us.',
       },
       {
         q: 'What local SEO services do you provide for Cleveland businesses?',
-        a: 'Our local SEO services for Cleveland include: Google Business Profile setup and full optimization, citation building and NAP cleanup across 50+ directories, review growth and response management, local keyword research and on-page optimization, neighborhood and suburb landing pages, schema markup (LocalBusiness, FAQPage, BreadcrumbList), and monthly reporting tied to calls and direction requests — not vanity metrics. Everything is in one flat monthly engagement with no setup fee and no long-term contract.',
+        a: 'Our local SEO services for Cleveland include: Google Business Profile setup and full optimization, citation building and NAP cleanup across 50+ directories, review growth and response management, local keyword research and on-page optimization, neighborhood and suburb landing pages, schema markup (LocalBusiness, FAQPage, BreadcrumbList), and monthly reporting tied to calls and direction requests, not vanity metrics. Everything is in one flat monthly engagement with no setup fee and no long-term contract.',
       },
     ],
   },
@@ -220,7 +220,7 @@ const jsonLd = {
       '@type': 'WebPage',
       '@id': CANONICAL,
       url: CANONICAL,
-      name: 'Cleveland SEO Company | Local SEO Services Near Me | FactoryJet',
+      name: 'Cleveland SEO Company | Local SEO Services | FactoryJet',
       datePublished: '2026-06-06',
       dateModified: '2026-06-15',
       author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhaveshbarot/', jobTitle: 'Founder, FactoryJet' },
@@ -291,7 +291,7 @@ export default function ClevelandSeoPage() {
                 <div className="tcell"><b>Terms</b>Month-to-month · no lock-in</div>
               </div>
               <div className="tbody">
-                <p>FactoryJet is a Cleveland SEO company that gets local businesses into Google&apos;s Map Pack and &quot;near me&quot; results. Our SEO services in Cleveland, Ohio cover Google Business Profile, citations, reviews, technical SEO, and content — billed month-to-month with a free audit, no setup fee, and honest monthly reports. You work directly with senior SEO experts.</p>
+                <p>FactoryJet is a Cleveland SEO company that gets local businesses into Google&apos;s Map Pack and &quot;near me&quot; results. Our SEO services in Cleveland, Ohio cover Google Business Profile, citations, reviews, technical SEO, and content, billed month-to-month with a free audit, no setup fee, and honest monthly reports. You work directly with senior SEO experts.</p>
               </div>
             </div>
             <div className="bluf-support" style={{ maxWidth: '920px', margin: '28px 0 0' }}>
@@ -456,7 +456,7 @@ export default function ClevelandSeoPage() {
               <ModalCTAButton label="Get your free Cleveland SEO audit" region="us" modalVariant="seo" btnVariant="primary-light" />
               <a className="btn btn-ghost" href={CALENDLY}>Talk to the founder</a>
             </div>
-            <p className="fine">SEO services in Cleveland, Ohio — month-to-month, free audit, no setup fee. Also in Cleveland: <Link href="/cleveland/web-design">web design</Link>. See <Link href="/services/seo">US SEO services</Link> and our <Link href="/services/seo-audit">free SEO audit</Link>. More US cities: <Link href="/nashville/seo">Nashville SEO</Link> · <Link href="/charlotte/seo">Charlotte SEO</Link>.</p>
+            <p className="fine">SEO services in Cleveland, Ohio, month-to-month, free audit, no setup fee. Also in Cleveland: <Link href="/cleveland/web-design">web design</Link>. See <Link href="/services/seo">US SEO services</Link> and our <Link href="/services/seo-audit">free SEO audit</Link>. More US cities: <Link href="/nashville/seo">Nashville SEO</Link> · <Link href="/charlotte/seo">Charlotte SEO</Link>.</p>
           </div>
         </section>
       </div>

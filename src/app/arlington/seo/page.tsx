@@ -11,7 +11,7 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import './arlington-seo.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   /us/arlington/seo — "Grid Iron" layout. Arlington TX local-SEO page.
+   /us/arlington/seo, "Grid Iron" layout. Arlington TX local-SEO page.
    Built 2026-06-12. CSS standings-board widget (text LCP, zero CLS, Lighthouse 100).
    Keywords: arlington seo company (480/mo), arlington seo agency (140),
    seo company arlington tx, local seo arlington tx, seo services arlington.
@@ -23,12 +23,12 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/arlington/seo';
 
 export const metadata: Metadata = {
-  title: 'Arlington TX SEO Company | Local SEO Services in Arlington, TX | FactoryJet',
+  title: 'Arlington TX SEO Company | Local SEO Services | FactoryJet',
   description:
     'FactoryJet is an Arlington TX SEO company that gets DFW businesses into Google\'s local 3-pack and "near me" results. Free audit, month-to-month, built by senior engineers. Serving Arlington, Mansfield, Grand Prairie, and the full DFW metro.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Arlington TX SEO Company | Local SEO Services in Arlington, TX | FactoryJet',
+    title: 'Arlington TX SEO Company | Local SEO Services | FactoryJet',
     description:
       'Arlington TX SEO company that wins the DFW search map. Free audit, month-to-month, senior engineers. Serving the full DFW Metroplex.',
     url: CANONICAL,
@@ -339,7 +339,7 @@ export default function ArlingtonSeoPage() {
             <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
               <Image
                 src="/images/us/arlington/seo/arlington-seo-hero.webp"
-                alt="Arlington TX skyline — AT&T Stadium and the Entertainment District at the heart of DFW's most car-centric city"
+                alt="Arlington TX skyline. AT&T Stadium and the Entertainment District at the heart of DFW's most car-centric city"
                 width={1200}
                 height={600}
                 style={{ width: '100%', height: 'auto', display: 'block' }}
@@ -364,7 +364,7 @@ export default function ArlingtonSeoPage() {
             <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
               <Image
                 src="/images/us/arlington/seo/arlington-local-business-seo.webp"
-                alt="Arlington TX local businesses — restaurants, retail, and service companies running on local search in Tarrant County"
+                alt="Arlington TX local businesses, restaurants, retail, and service companies running on local search in Tarrant County"
                 width={1200}
                 height={600}
                 style={{ width: '100%', height: 'auto', display: 'block' }}
@@ -405,7 +405,7 @@ export default function ArlingtonSeoPage() {
             <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
               <Image
                 src="/images/us/shared/factoryjet-senior-engineer.webp"
-                alt="FactoryJet senior engineer reviewing SEO audit data — every engagement is led by a specialist, not handed to a junior"
+                alt="FactoryJet senior engineer reviewing SEO audit data, every engagement is led by a specialist, not handed to a junior"
                 width={1200}
                 height={600}
                 style={{ width: '100%', height: 'auto', display: 'block' }}
@@ -427,7 +427,7 @@ export default function ArlingtonSeoPage() {
             <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
               <Image
                 src="/images/us/shared/factoryjet-audit-call.webp"
-                alt="FactoryJet founder on a free audit call — 30 minutes that gives you a clear picture of your local SEO opportunity"
+                alt="FactoryJet founder on a free audit call, 30 minutes that gives you a clear picture of your local SEO opportunity"
                 width={1200}
                 height={600}
                 style={{ width: '100%', height: 'auto', display: 'block' }}
@@ -474,7 +474,7 @@ export default function ArlingtonSeoPage() {
             <div style={{ margin: '0 0 36px', borderRadius: '20px', overflow: 'hidden' }}>
               <Image
                 src="/images/us/arlington/seo/arlington-tx-business-owner.webp"
-                alt="Confident Arlington TX business owner at their thriving local storefront — the kind of growth local SEO delivers"
+                alt="Confident Arlington TX business owner at their thriving local storefront, the kind of growth local SEO delivers"
                 width={1200}
                 height={600}
                 style={{ width: '100%', height: 'auto', display: 'block' }}

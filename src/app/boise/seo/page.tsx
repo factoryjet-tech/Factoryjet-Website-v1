@@ -26,12 +26,12 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/boise/seo';
 
 export const metadata: Metadata = {
-  title: 'Boise SEO Company | Local SEO Services in Boise, ID | FactoryJet',
+  title: 'Boise SEO Company | Local SEO Services in Boise | FactoryJet',
   description:
     'FactoryJet is a Boise SEO company that wins the Map Pack, organic rankings, and AI answers for Treasure Valley businesses. Local SEO services in Boise, Meridian, Eagle, Nampa, and Caldwell. Free SEO audit, month-to-month, built by senior engineers.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Boise SEO Company | Local SEO Services in Boise, ID | FactoryJet',
+    title: 'Boise SEO Company | Local SEO Services in Boise | FactoryJet',
     description:
       'Boise SEO company for the whole Treasure Valley: Map Pack, organic, and AI answers in one plan. Free SEO audit, month-to-month, senior engineers, founder-led.',
     url: CANONICAL,

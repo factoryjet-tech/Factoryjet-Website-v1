@@ -26,12 +26,12 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/chattanooga/seo';
 
 export const metadata: Metadata = {
-  title: 'Chattanooga SEO Company | Local SEO Services in Chattanooga, TN | FactoryJet',
+  title: 'Chattanooga SEO Company | Local SEO Services | FactoryJet',
   description:
     'FactoryJet is a Chattanooga SEO company that wins the Map Pack, organic rankings, and AI answers for tourism, Freight Alley B2B, and tri-state local businesses. SEO services in Chattanooga, North Georgia, and Cleveland TN. Free SEO audit, month-to-month, built by senior engineers.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Chattanooga SEO Company | Local SEO Services in Chattanooga, TN | FactoryJet',
+    title: 'Chattanooga SEO Company | Local SEO Services | FactoryJet',
     description:
       'Chattanooga SEO company for the whole tri-state metro: Map Pack, organic, and AI answers in one plan, with separate playbooks for tourism and Freight Alley B2B. Free SEO audit, month-to-month, senior engineers, founder-led.',
     url: CANONICAL,

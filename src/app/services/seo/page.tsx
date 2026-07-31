@@ -92,13 +92,13 @@ const LAV_SOFT = '#ECEAFB';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'SEO Agency for Small Business USA: Local, Near Me & AI SEO Services | FactoryJet',
+  title: 'SEO Agency for Small Business USA | Local SEO | FactoryJet',
   description:
     'FactoryJet is an SEO agency for US small businesses. We rank you on Google, put you in "near me" searches, and get you cited in AI Overviews, ChatGPT, and Perplexity. Founder-led, month-to-month, reported in leads.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'SEO Agency for Small Business USA: Local, Near Me & AI SEO Services | FactoryJet',
+    title: 'SEO Agency for Small Business USA | Local SEO | FactoryJet',
     description:
       'A US-focused SEO company for small businesses. Technical SEO, expert content, and authority building so you rank on Google, appear in "near me" searches, and get cited in AI answers. Founder-led, month-to-month.',
     url: 'https://factoryjet.com/services/seo',
@@ -114,7 +114,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SEO Agency for Small Business USA: Local, Near Me & AI SEO Services | FactoryJet',
+    title: 'SEO Agency for Small Business USA | Local SEO | FactoryJet',
     description:
       'A US-focused SEO agency for small businesses. Ranks you on Google, gets you in "near me" searches, and cited in AI answers. Founder-led, month-to-month, reported in leads.',
     images: ['https://factoryjet.com/og-default.png'],

@@ -22,12 +22,12 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/colorado-springs/seo';
 
 export const metadata: Metadata = {
-  title: 'Colorado Springs SEO Company | Local SEO Services in Colorado Springs, CO | FactoryJet',
+  title: 'Colorado Springs SEO Company | Local SEO | FactoryJet',
   description:
     'Colorado Springs SEO company for aerospace, military, home services, and local businesses. Map Pack dominance, neighborhood targeting, and 10 years of precision SEO. Free audit.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Colorado Springs SEO Company | Local SEO Services in Colorado Springs, CO | FactoryJet',
+    title: 'Colorado Springs SEO Company | Local SEO | FactoryJet',
     description:
       'Colorado Springs SEO company for aerospace, military, home services, and local businesses. Map Pack dominance, neighborhood targeting, and 10 years of precision SEO. Free audit.',
     url: CANONICAL,

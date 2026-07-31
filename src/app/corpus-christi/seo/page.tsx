@@ -14,7 +14,7 @@ const CANONICAL = 'https://factoryjet.com/corpus-christi/seo';
 
 // ─ Metadata ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'Corpus Christi TX SEO Company | Local SEO Services | FactoryJet',
+  title: 'Corpus Christi SEO Company | Local SEO Services | FactoryJet',
   description:
     'FactoryJet is a Corpus Christi TX SEO company that puts Gulf Coast businesses into Google\'s local 3-pack. Port city local SEO, Google Business Profile, and AI-search optimization. Month-to-month, senior engineers, free audit.',
   alternates: { canonical: CANONICAL },
@@ -365,7 +365,7 @@ export default function CorpusChristiSEO() {
             <div className="bluf rise">
               <p>
                 <strong>The short version:</strong> Corpus Christi has 316,000 permanent residents, 5.7 million annual visitors,
-                and one of the largest port complexes on the Gulf Coast — and the local 3-pack for most service categories
+                and one of the largest port complexes on the Gulf Coast, and the local 3-pack for most service categories
                 has fewer than three fully optimized competitors. That means a well-run SEO campaign can move you into the
                 top results within months, not years. We have done it for 500+ businesses. We can do it for yours.
               </p>
@@ -382,7 +382,7 @@ export default function CorpusChristiSEO() {
             <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
               <Image
                 src="/images/us/corpus-christi/seo/corpus-christi-seo-hero.webp"
-                alt="Corpus Christi TX harbor and downtown — the Gulf Coast port city where energy, tourism, and local commerce converge"
+                alt="Corpus Christi TX harbor and downtown, the Gulf Coast port city where energy, tourism, and local commerce converge"
                 width={1200}
                 height={600}
                 style={{ width: '100%', height: 'auto', display: 'block' }}
@@ -396,7 +396,7 @@ export default function CorpusChristiSEO() {
               </div>
               <div className="scard">
                 <div className="n">5.7M</div>
-                <div className="l">Annual visitors to the Corpus Christi metro — tourism is a $1.5B+ economic driver</div>
+                <div className="l">Annual visitors to the Corpus Christi metro, tourism is a $1.5B+ economic driver</div>
                 <div className="src">Visit Corpus Christi / TxDOT, 2023</div>
               </div>
               <div className="scard">
@@ -425,7 +425,7 @@ export default function CorpusChristiSEO() {
             <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
               <Image
                 src="/images/us/corpus-christi/seo/corpus-christi-local-seo-business.webp"
-                alt="Corpus Christi TX business owners across the Coastal Bend — hospitality, marine, energy, and retail all run on local search"
+                alt="Corpus Christi TX business owners across the Coastal Bend, hospitality, marine, energy, and retail all run on local search"
                 width={1200}
                 height={600}
                 style={{ width: '100%', height: 'auto', display: 'block' }}
@@ -512,7 +512,7 @@ export default function CorpusChristiSEO() {
             <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
               <Image
                 src="/images/us/shared/factoryjet-senior-engineer.webp"
-                alt="FactoryJet senior engineer reviewing SEO audit data — every engagement is led by a specialist, not handed to a junior"
+                alt="FactoryJet senior engineer reviewing SEO audit data, every engagement is led by a specialist, not handed to a junior"
                 width={1200}
                 height={600}
                 style={{ width: '100%', height: 'auto', display: 'block' }}
@@ -562,7 +562,7 @@ export default function CorpusChristiSEO() {
             <div style={{ margin: '40px 0', borderRadius: '20px', overflow: 'hidden' }}>
               <Image
                 src="/images/us/shared/factoryjet-audit-call.webp"
-                alt="FactoryJet founder on a free audit call — 30 minutes that maps your Corpus Christi SEO opportunity with zero obligation"
+                alt="FactoryJet founder on a free audit call, 30 minutes that maps your Corpus Christi SEO opportunity with zero obligation"
                 width={1200}
                 height={600}
                 style={{ width: '100%', height: 'auto', display: 'block' }}
@@ -655,7 +655,7 @@ export default function CorpusChristiSEO() {
             <div style={{ margin: '0 0 36px', borderRadius: '20px', overflow: 'hidden' }}>
               <Image
                 src="/images/us/corpus-christi/seo/corpus-christi-port-economy.webp"
-                alt="Corpus Christi TX port and energy economy — the Gulf Coast market where local SEO converts search intent into high-value clients"
+                alt="Corpus Christi TX port and energy economy, the Gulf Coast market where local SEO converts search intent into high-value clients"
                 width={1200}
                 height={600}
                 style={{ width: '100%', height: 'auto', display: 'block' }}
