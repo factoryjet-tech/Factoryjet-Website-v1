@@ -212,7 +212,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   // ── India digital-marketing city pages ───────────────────────────────────────
-  const dmCities: MetadataRoute.Sitemap = ['mumbai', 'bangalore', 'delhi', 'pune', 'hyderabad', 'noida', 'ahmedabad', 'chennai', 'kolkata', 'surat'].map((city) => ({
+  const dmCities: MetadataRoute.Sitemap = ['mumbai', 'bangalore', 'delhi', 'pune', 'hyderabad', 'noida', 'ahmedabad', 'chennai', 'kolkata', 'surat', 'indore', 'chandigarh', 'lucknow', 'jaipur'].map((city) => ({
     url: `${SITE_URL}/digital-marketing/${city}`,
     lastModified: getFileLastMod(`src/app/digital-marketing/${city}/page.tsx`),
     changeFrequency: CHANGEFREQ.city as ChangeFreq,

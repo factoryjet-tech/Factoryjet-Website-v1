@@ -17,35 +17,35 @@ import FinalCTA from '@/components/v2/FinalCTA';
 import Heading from '@/components/v2/Heading';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
-const CANONICAL = 'https://factoryjet.com/digital-marketing/surat';
+const CANONICAL = 'https://factoryjet.com/digital-marketing/indore';
 
 export const metadata: Metadata = {
-  title: 'Digital Marketing Agency in Surat | SEO + Ads | FactoryJet',
+  title: 'Digital Marketing Agency in Indore | SEO + Ads | FactoryJet',
   description:
-    'Looking for a digital marketing agency in Surat? We help textile, diamond and D2C businesses get found on Google and AI search, and win real enquiries.',
+    'Looking for a digital marketing agency in Indore? We help MP businesses get found on Google and AI search, and turn clicks into real enquiries.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Digital Marketing Agency in Surat | SEO + Ads | FactoryJet',
+    title: 'Digital Marketing Agency in Indore | SEO + Ads | FactoryJet',
     description:
-      'One senior in-house team that gets Surat businesses found on Google and AI search, and turns visitors into enquiries. SEO, ads, websites, social and more.',
+      'One senior in-house team that gets Indore businesses found on Google and AI search, and turns visitors into enquiries. SEO, ads, websites, social and more.',
     url: CANONICAL,
     images: [
       {
-        url: 'https://factoryjet.com/images/services/digital-marketing/surat/hero.webp',
+        url: 'https://factoryjet.com/images/services/digital-marketing/indore/hero.webp',
         width: 832,
         height: 1216,
-        alt: 'FactoryJet: Digital Marketing Agency in Surat',
+        alt: 'FactoryJet: Digital Marketing Agency in Indore',
       },
     ],
     locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Digital Marketing Agency in Surat | FactoryJet',
+    title: 'Digital Marketing Agency in Indore | FactoryJet',
     description:
-      'Get found on Google and AI search, and turn Surat visitors into customers. One senior in-house team.',
-    images: ['https://factoryjet.com/images/services/digital-marketing/surat/hero.webp'],
+      'Get found on Google and AI search, and turn Indore visitors into customers. One senior in-house team.',
+    images: ['https://factoryjet.com/images/services/digital-marketing/indore/hero.webp'],
   },
   alternates: {
     canonical: CANONICAL,
@@ -68,17 +68,14 @@ export const metadata: Metadata = {
 };
 
 /* ────────────────────────────────────────────────────────────────────────
-   Surat city page. Plain language, no pricing anywhere. Every jargon word is
-   explained the first time it appears. Content is written for Surat: textiles,
-   diamonds, Hazira industry, and the D2C brands coming out of all three.
+   Indore city page. Plain language, no pricing anywhere.
 
    Research basis (31 July 2026, pipeline/research/data/):
-     - india_demand_full.csv: "digital marketing agency surat" 2,900/mo KD 2,
-       "seo company surat" 1,300/mo KD 7, "best seo company surat" 390/mo KD 29.
-     - city5_paa.json: live People-Also-Ask for "digital marketing agency in surat".
-     - surat_agencies.json: top-ranking Surat agencies with their OWN meta
-       descriptions, so every "best for" line below reflects how each agency
-       describes itself. Nothing about a named competitor is invented.
+     - india_demand_full.csv: digital marketing agency indore (3,600/mo KD 56), digital marketing agency in indore (3,600/mo KD 12), seo company in indore (1,000/mo KD 0), web design company indore (1,300/mo KD 30)
+     - city5_paa.json: live People-Also-Ask for "digital marketing agency in indore".
+     - city4_agencies.json: top-ranking agencies with their OWN meta descriptions,
+       so every "best for" line reflects how each agency describes itself.
+       Nothing about a named competitor is invented.
    ──────────────────────────────────────────────────────────────────────── */
 
 const HERO_TRUST = [
@@ -92,18 +89,19 @@ const HERO_TRUST = [
    is estimated or rounded up by us. */
 const MARKET_STATS = [
   {
-    value: '70,000+',
+    value: '8 years running',
     label:
-      'traders operate across roughly 240 markets in Surat, per a Gujarat government release. Being the supplier a buyer can actually find is the whole advantage in a crowd that size.',
+      'Indore has been India’s cleanest city in Swachh Survekshan for eight consecutive years. A city that competes that hard on reputation has businesses that compete online just as hard.',
     sourceUrl:
-      'https://deshgujarat.com/2026/04/27/textile-industry-in-surat-and-south-gujarat-contributes-over-25-to-state-gdp-govt/',
-    sourceLabel: 'Gujarat Government, April 2026',
+      'https://www.newsonair.gov.in/president-murmu-to-confer-swachh-survekshan-2024-25-awards-in-new-delhi',
+    sourceLabel: 'Government of India, July 2025',
   },
   {
     value: '1.03 billion',
     label:
       'people in India now use the internet, about 70 in every 100 Indians. Your buyers are already searching before they ever call you.',
-    sourceUrl: 'https://datareportal.com/reports/digital-2026-india',
+    sourceUrl:
+      'https://datareportal.com/reports/digital-2026-india',
     sourceLabel: 'DataReportal Digital 2026',
   },
   {
@@ -124,7 +122,7 @@ const STATS = [
 ];
 
 // Channel grid = the internal-link authority hub. Each card links into an
-// existing FactoryJet service page so this Surat page passes authority down.
+// existing FactoryJet service page so this Indore page passes authority down.
 const CHANNELS: IndustryCard[] = [
   {
     name: 'SEO (get found on Google)',
@@ -143,35 +141,35 @@ const CHANNELS: IndustryCard[] = [
   {
     name: 'Online stores',
     description:
-      'Ecommerce means selling online. For a Surat saree or fabric brand, that means a store buyers can order from directly instead of only through traders.',
+      'Ecommerce means selling online. For an Indore food, pharma or FMCG brand, that means a store buyers can order from directly instead of only through distributors.',
     linkLabel: 'See ecommerce',
     linkHref: '/services/ecommerce-development',
   },
   {
     name: 'AI search (get picked by ChatGPT)',
     description:
-      'When a buyer asks ChatGPT, Gemini or Google’s AI "which supplier in Surat should I use", we help your business be one of the answers. This newer skill is called GEO.',
+      'When a buyer asks ChatGPT, Gemini or Google’s AI "which supplier in Indore should I use", we help your business be one of the answers. This newer skill is called GEO.',
     linkLabel: 'Explore AI SEO',
     linkHref: '/ai-seo',
   },
   {
     name: 'Chatbots and automation',
     description:
-      'Smart helpers that reply day and night. Useful when a buyer in another time zone messages your Surat office at 2am and nobody is there.',
+      'Smart helpers that reply day and night. Useful when a buyer in another time zone messages your Indore office at 2am and nobody is there.',
     linkLabel: 'See AI agents',
     linkHref: '/services/ai-agent-development',
   },
   {
     name: 'WhatsApp for business',
     description:
-      'Most Surat trade already happens on WhatsApp. We make it collect leads, send catalogues and follow up automatically instead of by hand.',
+      'A great deal of Indore trade and enquiry already happens on WhatsApp. We make it collect leads, send catalogues and follow up automatically instead of by hand.',
     linkLabel: 'See WhatsApp chatbot',
     linkHref: '/whatsapp-chatbot',
   },
   {
     name: 'Shopify stores',
     description:
-      'Shopify is a popular tool for online shops. We build custom Shopify stores for Surat textile and D2C brands that look great and load fast.',
+      'Shopify is a popular tool for online shops. We build custom Shopify stores for Indore D2C and FMCG brands that look great and load fast.',
     linkLabel: 'See Shopify',
     linkHref: '/shopify-development',
   },
@@ -251,7 +249,7 @@ const COMPARE_ROWS = [
     ],
   },
   {
-    feature: 'Sets up local Surat search (Google Maps and the local pack)',
+    feature: 'Sets up local Indore search (Google Maps and the local pack)',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ag" kind="partial" />,
@@ -287,38 +285,38 @@ const AGENCIES = [
   {
     name: 'FactoryJet',
     bestFor:
-      'Surat businesses that want one senior team across website, Google, ads and AI search, with plain-English monthly reports. Strongest fit if you are trying to reach buyers beyond Gujarat. (Yes, that is us. We include ourselves openly and let the comparison speak for itself.)',
+      'Indore businesses that want one senior team across website, Google, ads and AI search, with plain-English monthly reports. (Yes, that is us. We include ourselves openly and let the comparison speak for itself.)',
     isUs: true,
   },
   {
-    name: 'Social 101',
+    name: 'My Digital Savvy',
     bestFor:
-      'Brands whose priority is social media and video. They describe themselves as a Surat social media and branding agency covering social, branding, website design and video marketing.',
+      'Businesses that want a straightforward, results-focused mix of SEO, Google Ads and social media. They describe themselves as a results-driven Indore agency across those three channels.',
   },
   {
-    name: 'Four Pillars',
+    name: 'Xtrim Digitech',
     bestFor:
-      'Businesses that want branding handled alongside marketing. Their own listing covers logo design, brand identity, SEO, social, influencer and performance marketing, plus PR and media planning.',
+      'Companies whose priority is paid advertising and website work together. Their own listing leads with Google Ads and website services from an Indore base.',
   },
   {
-    name: 'Monkey Ads & Studios',
+    name: 'Namastetu Technologies',
     bestFor:
-      'Companies focused on lead generation from paid channels. They position themselves around SEO, social media and performance marketing.',
+      'Buyers who want digital marketing and website design from one team. They describe roughly five years of experience across marketing, web design, SEO and advertising.',
   },
   {
-    name: 'SQRoot',
+    name: 'India Websoft',
     bestFor:
-      'Fast-growing ecommerce and D2C brands specifically. They describe themselves as a performance marketing agency built for that kind of business, which suits Surat textile brands selling direct.',
+      'Businesses focused specifically on traffic and lead generation, which is how they describe their own priority.',
   },
   {
-    name: 'Socialee',
+    name: 'Digital Marketing Indore',
     bestFor:
-      'Businesses that want data-led social media as the main channel rather than a full multi-channel programme.',
+      'Companies wanting a broad channel mix in one place. Their own description covers SEO, PPC, social media, content and email marketing.',
   },
   {
-    name: 'Sassy Infotech',
+    name: 'ThirdEssential',
     bestFor:
-      'Buyers who want a longer-established local IT and marketing firm handling digital work as part of a wider technology relationship.',
+      'Buyers who want marketing handled alongside wider IT work, which is how they position themselves.',
   },
 ];
 
@@ -327,7 +325,7 @@ const JOURNEY: ServiceJourneyStage[] = [
     number: '01',
     title: 'A free, no-pressure chat',
     description:
-      'We learn about your business, who buys from you, and whether they are in Surat, elsewhere in India, or overseas. No jargon, no hard sell.',
+      'We learn about your business, who buys from you, and whether they are in Indore, elsewhere in India, or overseas. No jargon, no hard sell.',
   },
   {
     number: '02',
@@ -354,47 +352,47 @@ const JOURNEY: ServiceJourneyStage[] = [
 
 const SECTORS: IndustryCard[] = [
   {
-    name: 'Textiles and sarees',
+    name: 'Pharma and healthcare',
     description:
-      'Surat is India’s largest man-made fabric centre, and the Ring Road markets move enormous volume through traders. The brands growing fastest are the ones that stopped depending only on that chain and started selling to retailers and shoppers directly. That needs a catalogue buyers can browse, search visibility outside Gujarat, and WhatsApp that answers fast.',
-    example: 'Fabric mills, saree wholesalers and dress-material brands on and around Ring Road.',
+      'Indore and the Pithampur belt host a substantial pharma and medical supplies base, plus a dense network of hospitals and clinics in the city. B2B pharma buyers research quietly and need certifications, product documentation and a serious enquiry route. Clinics need almost the opposite: Google Maps, reviews and a phone number that gets answered.',
+    example: 'Manufacturers around Pithampur, plus hospitals and clinics across Vijay Nagar and AB Road.',
   },
   {
-    name: 'Diamonds and jewellery',
+    name: 'Food processing and FMCG',
     description:
-      'Varachha and Mahidharpura handle a huge share of the world’s diamond polishing, and the Surat Diamond Bourse pulled more of the trade into the city. Buyers here are cautious and relationship-led, so the job of a website is credibility: certifications, real photographs, and a way to start a conversation without a public price list.',
-    example: 'Polishers, certified diamond traders, and jewellery brands opening a retail line.',
+      'Food processing is one of the state’s strengths, and Indore sits at the centre of it. Whether you sell to distributors or direct to households, the job is the same: be findable by buyers outside Madhya Pradesh, and make it easy to request a quote or place a repeat order.',
+    example: 'Snack and spice brands, dairy and agri processors selling regionally and nationally.',
   },
   {
-    name: 'Chemicals, engineering and Hazira industry',
+    name: 'Education and coaching',
     description:
-      'The Hazira belt anchors heavy industry around Surat, and a long tail of engineering and chemical suppliers sells into it. These are long B2B sales cycles where a buyer researches quietly for weeks. Technical specifications, downloadable datasheets and a serious enquiry form matter far more than social media polish.',
-    example: 'Component makers, chemical suppliers and industrial services selling into Hazira and beyond.',
+      'Indore draws students from across the state, and coaching is fiercely competitive. Admissions are won on reviews, visible results and a fast reply when a parent enquires at 9pm. Paid ads work here, but only when the landing page answers the questions parents actually have.',
+    example: 'Coaching institutes, colleges and skill academies competing for the same admission cycle.',
   },
   {
-    name: 'D2C brands',
+    name: 'Manufacturing and auto components',
     description:
-      'A generation of Surat founders is selling straight to customers across India instead of through the trade. This is where paid ads, a fast Shopify store and honest measurement matter most, because the difference between a profitable brand and an expensive hobby is usually a few percentage points of conversion.',
-    example: 'Clothing, home textile and lifestyle brands shipping nationwide.',
+      'The Pithampur industrial area anchors a long tail of component makers and engineering suppliers. These are slow B2B sales with technical buyers. Specifications, downloadable datasheets and a credible website matter far more than social media polish.',
+    example: 'Component makers and industrial suppliers selling to OEMs across India.',
   },
   {
-    name: 'Local services and clinics',
+    name: 'Retail, restaurants and local services',
     description:
-      'Doctors, dentists, salons, gyms, coaching centres and repair services across Vesu, Adajan, Piplod, Athwa and Katargam. For these, nearly everything comes down to Google Maps: showing up when someone nearby searches, having reviews worth reading, and replying quickly.',
-    example: 'Clinics, salons and service businesses serving their own part of the city.',
+      'Vijay Nagar, Palasia and the areas around Rajwada are dense with restaurants, salons, gyms and clinics. For these, nearly everything is Google Maps: showing up when someone nearby searches, having reviews worth reading, and replying fast.',
+    example: 'Restaurants, salons and service businesses serving their own part of the city.',
   },
   {
-    name: 'Real estate and construction',
+    name: 'IT and startups',
     description:
-      'Surat keeps expanding outward, and developers compete for the same buyers online. Project pages that load fast on a phone, honest photography, and a lead form that reaches a human quickly tend to beat glossy brochures nobody can find.',
-    example: 'Developers, brokers and interior firms across the growing western suburbs.',
+      'Indore has a real and growing software and services scene, much of it selling well outside the city. When your buyer is in Mumbai or Michigan, local search does not help you. What helps is ranking for the problem you solve and being named when someone asks an AI assistant for options.',
+    example: 'Software firms, agencies and SaaS startups selling nationally and overseas.',
   },
 ];
 
 const FAQ_CATEGORIES: FAQCategory[] = [
   { key: 'choosing', label: 'Choosing an agency' },
   { key: 'cost', label: 'Cost and contracts' },
-  { key: 'local', label: 'Surat and local search' },
+  { key: 'local', label: 'Indore and local search' },
   { key: 'services', label: 'What we do' },
   { key: 'results', label: 'Results and reports' },
   { key: 'ai', label: 'AI and the future' },
@@ -403,9 +401,9 @@ const FAQ_CATEGORIES: FAQCategory[] = [
 const FAQ_ITEMS: FAQItem[] = [
   {
     category: 'choosing',
-    question: 'Which is the best digital marketing agency in Surat?',
+    question: 'Which is the best digital marketing agency in Indore?',
     answer:
-      'There is no single best agency for every Surat business. A saree wholesaler selling to traders and a D2C brand shipping across India need almost opposite plans. Further down this page we compare the agencies that actually rank in Surat, including ourselves, with an honest note on who each one suits. Pick the fit, not the loudest name.',
+      'There is no single best agency for every Indore business. Two companies on the same street can need completely different plans depending on who buys from them. Further down this page we compare the agencies that actually rank in Indore, including ourselves, with an honest note on who each one suits. Pick the fit, not the loudest name.',
   },
   {
     category: 'choosing',
@@ -415,15 +413,15 @@ const FAQ_ITEMS: FAQItem[] = [
   },
   {
     category: 'choosing',
-    question: 'How do I choose a digital marketing agency in Surat?',
+    question: 'How do I choose a digital marketing agency in Indore?',
     answer:
       'Ask three questions before signing. One: who does the actual work, a senior person or a fresher? Two: what exactly do I get each month, in plain words? Three: can you show real results for a business like mine? An agency that answers all three clearly is usually safe. Vague answers to any one of them are the warning.',
   },
   {
     category: 'choosing',
-    question: 'Should I hire a Surat agency or one from Mumbai or Delhi?',
+    question: 'Should I hire a Indore agency or one from Mumbai or Delhi?',
     answer:
-      'It depends on who buys from you. If your customers are in Surat, local knowledge and quick in-person meetings help. If you sell across India or export, what matters is skill, not postcode. Most of the work happens online either way, so judge the team and the reporting rather than the address.',
+      'It depends on who buys from you. If your customers are in Indore, local knowledge and quick in-person meetings help. If you sell across India or export, what matters is skill, not postcode. Most of the work happens online either way, so judge the team and the reporting rather than the address.',
   },
   {
     category: 'choosing',
@@ -432,14 +430,8 @@ const FAQ_ITEMS: FAQItem[] = [
       'Guaranteed number one rankings, refusing to give you access to your own Google and Analytics accounts, monthly reports full of charts but no enquiry numbers, and long contracts with heavy exit penalties. Any single one of these is a reason to slow down and ask harder questions.',
   },
   {
-    category: 'choosing',
-    question: 'Which is the best digital marketing institute in Surat?',
-    answer:
-      'We are an agency, not a training institute, so we are the wrong people to rank courses. A lot of people searching this phrase want to learn digital marketing or find a job rather than hire a team. If you are looking to hire an agency to do the work for your business, the comparison further down this page is the useful part.',
-  },
-  {
     category: 'cost',
-    question: 'What is the cost of digital marketing in Surat?',
+    question: 'What is the cost of digital marketing in Indore?',
     answer:
       'It varies widely, and any agency quoting a firm number before understanding your business is guessing. What actually moves the figure is how many channels you run, how much ad budget sits on top of the fee, and whether senior people or trainees do the work. Ask for the fee and the ad spend to be written separately.',
   },
@@ -457,33 +449,9 @@ const FAQ_ITEMS: FAQItem[] = [
   },
   {
     category: 'cost',
-    question: 'Is digital marketing worth it for a small Surat business?',
+    question: 'Is digital marketing worth it for a small Indore business?',
     answer:
       'It is worth it when people already search for what you sell and you have nobody with the time or skill to capture them. It is not worth it if the product itself is unproven, because marketing only makes you lose money faster. Fix the offer first, then spend on reaching more people.',
-  },
-  {
-    category: 'local',
-    question: 'How is marketing a Surat business different from other cities?',
-    answer:
-      'Two things stand out. A lot of Surat trade still runs on relationships and WhatsApp rather than web forms, so the follow-up matters more than the brochure. And many Surat businesses sell far outside Gujarat, which means local Google Maps work alone is not enough. You usually need both the local map and national search.',
-  },
-  {
-    category: 'local',
-    question: 'How do I show up on Google Maps in Surat?',
-    answer:
-      'Claim and complete your Google Business Profile, pick the right category, add real photographs of your actual premises, and collect reviews steadily rather than in one suspicious burst. Keep your name, address and phone number identical everywhere online. For a local clinic or salon this is usually the single highest-return thing to fix.',
-  },
-  {
-    category: 'local',
-    question: 'Can you help us sell outside Surat and outside India?',
-    answer:
-      'Yes, and for textile, diamond and engineering businesses that is often the bigger opportunity. It means ranking for the searches buyers use in Mumbai, Delhi or overseas rather than only the ones used locally, plus a website that answers an unfamiliar buyer’s questions without a phone call.',
-  },
-  {
-    category: 'local',
-    question: 'Do you work with businesses in Vesu, Adajan and Katargam?',
-    answer:
-      'Yes. Because the work happens online, your part of the city does not limit us. We work with businesses across Vesu, Adajan, Piplod, Athwa, Katargam, Varachha, Udhna and the areas around Ring Road, as well as firms out towards Hazira.',
   },
   {
     category: 'services',
@@ -495,13 +463,13 @@ const FAQ_ITEMS: FAQItem[] = [
     category: 'services',
     question: 'What are the main types of digital marketing?',
     answer:
-      'The ones that matter for most Surat businesses are search (SEO), paid ads on Google and Meta, social media, email and WhatsApp, content, and now AI search. You do not need all of them. You need the two or three where your buyers actually are.',
+      'The ones that matter for most Indore businesses are search (SEO), paid ads on Google and Meta, social media, email and WhatsApp, content, and now AI search. You do not need all of them. You need the two or three where your buyers actually are.',
   },
   {
     category: 'services',
     question: 'Do I need SEO, ads, or social media first?',
     answer:
-      'If you need enquiries this month, start with ads, because they turn on immediately. If you want cheaper enquiries in a year, start with SEO, because it compounds. Most businesses do best with a small mix: ads for now while search builds underneath. Social media suits you if your product is visual, which many Surat textile brands are.',
+      'If you need enquiries this month, start with ads, because they turn on immediately. If you want cheaper enquiries in a year, start with SEO, because it compounds. Most businesses do best with a small mix: ads for now while search builds underneath.',
   },
   {
     category: 'services',
@@ -513,7 +481,7 @@ const FAQ_ITEMS: FAQItem[] = [
     category: 'services',
     question: 'Do you handle WhatsApp enquiries?',
     answer:
-      'Yes, and in Surat it is often the highest-value piece. We set up WhatsApp so it captures leads, sends catalogues automatically and follows up without someone typing every message by hand. For trade businesses this usually recovers more enquiries than any new ad campaign.',
+      'Yes, and in most Indian markets it is where the real conversation happens. We set up WhatsApp so it captures leads, sends catalogues automatically and follows up without someone typing every message by hand. For trade businesses this often recovers more enquiries than any new ad campaign.',
   },
   {
     category: 'results',
@@ -535,7 +503,7 @@ const FAQ_ITEMS: FAQItem[] = [
   },
   {
     category: 'ai',
-    question: 'Should my Surat business show up in ChatGPT and Google AI answers?',
+    question: 'Should my Indore business show up in ChatGPT and Google AI answers?',
     answer:
       'If your buyers ask an AI assistant for a recommendation before calling anyone, then yes. This is already normal for younger B2B buyers researching suppliers. Being the business the AI names is the newer version of ranking first, and most agencies are not doing anything about it yet.',
   },
@@ -544,6 +512,36 @@ const FAQ_ITEMS: FAQItem[] = [
     question: 'How is AI changing digital marketing?',
     answer:
       'It has taken over most of the production work: drafts, ad variations, routine reporting. What it has not taken over is judgement about which buyers matter and which numbers are worth acting on. The practical change for you is that search now has two front doors, Google and the AI assistants, and you need to be visible in both.',
+  },
+  {
+    category: 'local',
+    question: 'How is marketing an Indore business different from other cities?',
+    answer:
+      'Two things. Indore competition is real but still thinner online than in the metros, so genuinely valuable searches are winnable in months rather than years. And a lot of Indore business sells outside Madhya Pradesh, which means local Google Maps work alone will not carry you. You usually need both the local map and wider search.',
+  },
+  {
+    category: 'local',
+    question: 'How do I show up on Google Maps in Indore?',
+    answer:
+      'Claim and complete your Google Business Profile, choose the right category, add real photographs of your actual premises, and collect reviews steadily rather than in one suspicious burst. Keep your name, address and phone number identical everywhere. For a Vijay Nagar restaurant or clinic this is usually the highest-return fix available.',
+  },
+  {
+    category: 'local',
+    question: 'Do you work with businesses in Vijay Nagar, Palasia and Rau?',
+    answer:
+      'Yes. Because the work happens online, your part of the city does not limit us. We work with businesses across Vijay Nagar, Palasia, AB Road, Bhawarkuan, Rajwada, the Super Corridor and out towards Rau and Pithampur.',
+  },
+  {
+    category: 'local',
+    question: 'Can you help us sell outside Indore and Madhya Pradesh?',
+    answer:
+      'Yes, and for pharma, food processing and IT businesses that is usually the bigger opportunity. It means ranking for the searches buyers use in Mumbai or Delhi rather than only the ones used locally, plus a website that answers an unfamiliar buyer’s questions without a phone call.',
+  },
+  {
+    category: 'choosing',
+    question: 'Which is the best digital marketing institute in Indore?',
+    answer:
+      'We are an agency, not a training institute, so we are the wrong people to rank courses. Many people searching this phrase want to learn digital marketing or find a job rather than hire a team. If you are looking to hire an agency to do the work for your business, the comparison further down this page is the useful part.',
   },
 ];
 
@@ -562,7 +560,7 @@ const faqSchema = {
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Digital Marketing Services in Surat',
+  name: 'Digital Marketing Services in Indore',
   provider: {
     '@type': 'Organization',
     '@id': 'https://factoryjet.com/#organization',
@@ -571,16 +569,16 @@ const serviceSchema = {
     telephone: '+919699977699',
     address: { '@type': 'PostalAddress', addressCountry: 'IN' },
   },
-  areaServed: { '@type': 'City', name: 'Surat' },
+  areaServed: { '@type': 'City', name: 'Indore' },
   serviceType: 'Digital Marketing',
   description:
-    'Integrated digital marketing for Surat businesses: SEO, paid ads, social media, websites, WhatsApp and AI search, handled by one senior in-house team.',
+    'Integrated digital marketing for Indore businesses: SEO, paid ads, social media, websites, WhatsApp and AI search, handled by one senior in-house team.',
 };
 
 const agenciesSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Digital marketing agencies in Surat, compared (July 2026)',
+  name: 'Digital marketing agencies in Indore, compared (July 2026)',
   numberOfItems: AGENCIES.length,
   itemListOrder: 'https://schema.org/ItemListUnordered',
   itemListElement: AGENCIES.map((a, i) => ({
@@ -595,33 +593,33 @@ const webpageSchema = {
   '@type': 'WebPage',
   '@id': `${CANONICAL}#webpage`,
   url: CANONICAL,
-  name: 'Digital Marketing Agency in Surat | FactoryJet',
+  name: 'Digital Marketing Agency in Indore | FactoryJet',
   speakable: {
     '@type': 'SpeakableSpecification',
     cssSelector: ['h1', 'h2:first-of-type'],
   },
 };
 
-export default function SuratDigitalMarketingPage() {
+export default function IndoreDigitalMarketingPage() {
   return (
     <>
       <script
-        id="surat-dm-faq-schema"
+        id="indore-dm-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <script
-        id="surat-dm-service-schema"
+        id="indore-dm-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <script
-        id="surat-dm-agencies-schema"
+        id="indore-dm-agencies-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(agenciesSchema) }}
       />
       <script
-        id="surat-dm-webpage-schema"
+        id="indore-dm-webpage-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webpageSchema) }}
       />
@@ -629,7 +627,7 @@ export default function SuratDigitalMarketingPage() {
         items={[
           { name: 'Home', url: 'https://factoryjet.com' },
           { name: 'Digital Marketing', url: 'https://factoryjet.com/digital-marketing' },
-          { name: 'Surat', url: CANONICAL },
+          { name: 'Indore', url: CANONICAL },
         ]}
       />
 
@@ -637,10 +635,10 @@ export default function SuratDigitalMarketingPage() {
 
       <main className="bg-fj-cream">
         <Hero
-          eyebrow="DIGITAL MARKETING AGENCY · SURAT"
-          headline="A Digital Marketing Agency in Surat That Brings You Real Customers"
-          lead="We help Surat businesses get found on Google and AI tools like ChatGPT, and turn visitors into real enquiries. One senior in-house team, plain-English reports, no jargon."
-          formSlot={<HeroInlineForm region="in" source="in_surat_digital_marketing_hero" />}
+          eyebrow="DIGITAL MARKETING AGENCY · INDORE"
+          headline="A Digital Marketing Agency in Indore That Brings You Real Customers"
+          lead="We help Indore businesses get found on Google and AI tools like ChatGPT, and turn visitors into real enquiries. One senior in-house team, plain-English reports, no jargon."
+          formSlot={<HeroInlineForm region="in" source="in_indore_digital_marketing_hero" />}
           secondaryCta={{ label: 'Get a Free Growth Plan', modal: true as const, region: 'in' as const }}
           trustItems={HERO_TRUST}
           accent="orange"
@@ -650,7 +648,7 @@ export default function SuratDigitalMarketingPage() {
               <div aria-hidden className="absolute -bottom-4 -left-4 h-28 w-28 rounded-2xl bg-fj-ink/[0.04]" />
               <div className="relative overflow-hidden rounded-2xl border border-fj-neutral-200 shadow-sm">
                 <img
-                  src="/images/services/digital-marketing/surat/hero.webp"
+                  src="/images/services/digital-marketing/indore/hero.webp"
                   alt="A marketing professional working at a desk in a modern office"
                   width={832}
                   height={1216}
@@ -659,7 +657,7 @@ export default function SuratDigitalMarketingPage() {
                 />
                 <div className="absolute bottom-3 left-3 rounded-xl bg-white/95 px-4 py-2.5 shadow-sm">
                   <p className="font-fj-mono text-[10px] font-medium uppercase tracking-[0.14em] text-[#B23E13]">
-                    Serving Surat and all of India
+                    Serving Indore and all of India
                   </p>
                   <p className="mt-0.5 font-fj-display text-sm font-semibold text-fj-ink">
                     500+ businesses, 12 years
@@ -675,15 +673,10 @@ export default function SuratDigitalMarketingPage() {
         <section className="border-y border-fj-ink/10 bg-white px-6 py-14 md:px-8 md:py-16">
           <div className="mx-auto max-w-3xl">
             <Heading as="h2" size="h3" className="text-fj-ink">
-              So, which is the best digital marketing agency in Surat?
+              So, which is the best digital marketing agency in Indore?
             </Heading>
             <p className="mt-4 text-lg leading-relaxed text-fj-ink/80">
-              The honest answer: there is no single best agency for every Surat business. A saree
-              wholesaler selling through traders and a D2C brand shipping across India need almost
-              opposite plans. For Surat businesses that want one senior team handling the website,
-              Google, ads and AI search together, and that need to reach buyers beyond Gujarat,
-              FactoryJet is a strong choice. Below we compare the agencies that actually rank in
-              Surat, including ourselves, so you can decide for yourself.
+              The honest answer: there is no single best agency for every Indore business. A pharma supplier selling across India and a Vijay Nagar restaurant filling tables on a Friday need almost opposite plans. For Indore businesses that want one senior team handling the website, Google, ads and AI search together, FactoryJet is a strong choice. Below we compare the agencies that actually rank in Indore, including ourselves, so you can decide for yourself.
             </p>
           </div>
         </section>
@@ -709,34 +702,27 @@ export default function SuratDigitalMarketingPage() {
 
         <ServiceExplanation
           eyebrow="WHAT WE DO, IN PLAIN WORDS"
-          headline="What a digital marketing agency in Surat actually does for you"
+          headline="What a digital marketing agency in Indore actually does for you"
           lead="Strip away the buzzwords and it comes down to one thing: helping more of the right people find your business and become customers."
           body={
             <>
               <p>
-                Most Surat businesses do not have a marketing problem. They have a visibility problem
-                and a follow-up problem. The product is good, the price is competitive, and the trade
-                already knows them. What is missing is being found by the buyers who are not already
-                in that circle, and replying fast enough when those buyers appear.
+                Most Indore businesses do not have a marketing problem. They have a visibility problem and a follow-up problem. The product is good, the price is fair, and the people who already know them are happy. What is missing is being found by the buyers who are not yet in that circle, and replying fast enough when those buyers appear.
               </p>
               <p>
-                That is the whole job. We make sure you show up when someone searches for what you
-                sell, whether that search happens on Google or inside ChatGPT. We make sure the page
-                they land on loads fast on a phone and answers the question they actually had. And we
-                make sure the enquiry reaches a human quickly, usually on WhatsApp, because in Surat
-                that is where the conversation really happens.
+                That is the whole job. We make sure you show up when someone searches for what you sell, whether that search happens on Google or inside ChatGPT. We make sure the page they land on loads fast on a phone and answers the question they actually had. And we make sure the enquiry reaches a human quickly, because in Indore the businesses winning online are usually just the ones that answer first.
               </p>
             </>
           }
         />
 
         <CityContextSection
-          eyebrow="THE SURAT MARKET, IN REAL NUMBERS"
-          headline="Surat is a crowded trading city, and being findable is the whole advantage"
+          eyebrow="THE INDORE MARKET, IN REAL NUMBERS"
+          headline="Indore is Madhya Pradesh’s commercial engine, and its buyers moved online first"
           leadParagraphs={[
-            'Surat runs on two enormous industries and a lot of quiet trade. It is India’s largest man-made fabric centre, and Varachha and Mahidharpura handle a very large share of the world’s diamond polishing. Around them sits the Hazira industrial belt and a long tail of engineering and chemical suppliers. Almost none of that business was built through advertising. It was built through relationships.',
-            'Which is exactly why the businesses moving online now have an advantage. When a retailer in Delhi or a buyer overseas searches for a supplier, the Surat firms that show up are mostly not the biggest ones. They are the ones that bothered to build a findable website. That gap is unusually wide here, which is why a city like Surat is often easier to win than its market size suggests.',
-            'The second thing that matters is where the conversation happens. In many cities a web form is the finish line. In Surat it is usually WhatsApp. If your marketing sends people to a form nobody checks, you will conclude that marketing does not work, when really the handoff was broken.',
+            'Indore is the commercial capital of Madhya Pradesh and the state’s clear front door for trade. Pharma, food processing, auto components, education and a fast-growing IT services base all cluster here, and the city pulls buyers and students in from across the state. That makes it busier and more competitive than its size suggests.',
+            'It is also a young city in buying behaviour. A great deal of local commerce now starts on a phone: a search, a Google Maps listing, a couple of reviews, then a WhatsApp message. Businesses still relying on word of mouth alone are competing against rivals who show up at the exact moment someone is deciding.',
+            'The opportunity is that Indore search competition is still thin compared to Delhi or Bangalore. Several genuinely valuable searches here are winnable within months rather than years, which is rarely true in the metros.',
           ]}
           bodySlot={
             <>
@@ -745,12 +731,11 @@ export default function SuratDigitalMarketingPage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.125rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
                 >
-                  In a market with 70,000 traders, the ones buyers can actually find have already won
-                  half the argument.
+                  In a city this competitive, the businesses that are easy to find have already won half the argument.
                 </p>
               </div>
               <div className="mt-5 flex flex-wrap gap-2">
-                {['Ring Road', 'Varachha', 'Katargam', 'Vesu', 'Adajan', 'Piplod', 'Athwa', 'Udhna', 'Hazira'].map(
+                {['Vijay Nagar', 'Palasia', 'AB Road', 'Rau', 'Sanwer Road', 'Rajwada', 'Bhawarkuan', 'Super Corridor', 'Pithampur'].map(
                   (area) => (
                     <span
                       key={area}
@@ -771,9 +756,9 @@ export default function SuratDigitalMarketingPage() {
 
         <IndustriesGrid
           variant="cards"
-          eyebrow="SURAT × DIGITAL MARKETING"
-          headline="Marketing built around how Surat actually earns"
-          lead="Textiles, diamonds, industry and a fast-growing D2C scene. Each one buys differently, so each one needs a different plan."
+          eyebrow="INDORE × DIGITAL MARKETING"
+          headline="Marketing built around how Indore actually earns"
+          lead="The sectors that actually drive Indore. Each one buys differently, so each one needs a different plan."
           sectors={SECTORS}
         />
 
@@ -797,13 +782,13 @@ export default function SuratDigitalMarketingPage() {
         <section className="bg-fj-cream px-6 py-16 md:px-8 md:py-20">
           <div className="mx-auto max-w-4xl">
             <p className="mb-3 font-mono text-xs uppercase tracking-widest text-[#B23E13]">
-              SURAT AGENCIES, COMPARED HONESTLY
+              INDORE AGENCIES, COMPARED HONESTLY
             </p>
             <Heading as="h2" size="h2" className="text-fj-ink">
-              Digital marketing agencies in Surat, and who each one suits
+              Digital marketing agencies in Indore, and who each one suits
             </Heading>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-fj-ink/80">
-              Every agency below currently ranks on Google for digital marketing in Surat, checked on
+              Every agency below currently ranks on Google for digital marketing in Indore, checked on
               31 July 2026. Each description is written from how that agency describes itself, not
               from our opinion of them. We include ourselves and say so openly, because hiding it
               would be the opposite of honest.
@@ -854,8 +839,8 @@ export default function SuratDigitalMarketingPage() {
 
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Common questions from Surat businesses"
-          lead="The questions Surat business owners actually ask us, plus the ones they search for on Google, answered straight."
+          headline="Common questions from Indore businesses"
+          lead="The questions Indore business owners actually ask us, plus the ones they search for on Google, answered straight."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
@@ -864,7 +849,7 @@ export default function SuratDigitalMarketingPage() {
         <section className="border-t border-fj-ink/10 bg-fj-cream px-6 py-10 md:px-8">
           <div className="mx-auto max-w-3xl">
             <p className="text-base leading-relaxed text-fj-ink/75">
-              We work well beyond Surat. See our{' '}
+              We work well beyond Indore. See our{' '}
               <a
                 href="/digital-marketing"
                 className="font-semibold text-[#B23E13] underline underline-offset-2"
@@ -872,11 +857,11 @@ export default function SuratDigitalMarketingPage() {
                 digital marketing agency services across India
               </a>{' '}
               and how the top agencies compare nationally, or read about{' '}
-              <a href="/web-design/surat" className="font-semibold text-[#B23E13] underline underline-offset-2">
-                web design in Surat
+              <a href="/web-design/indore" className="font-semibold text-[#B23E13] underline underline-offset-2">
+                web design in Indore
               </a>{' '}
               if the website is the piece holding you back.
-              We also work in <a href="/digital-marketing/indore" className="font-semibold text-[#B23E13] underline underline-offset-2">Indore</a> or <a href="/digital-marketing/jaipur" className="font-semibold text-[#B23E13] underline underline-offset-2">Jaipur</a>.
+              We also work in <a href="/digital-marketing/jaipur" className="font-semibold text-[#B23E13] underline underline-offset-2">Jaipur</a> or <a href="/digital-marketing/surat" className="font-semibold text-[#B23E13] underline underline-offset-2">Surat</a>.
             </p>
           </div>
         </section>
