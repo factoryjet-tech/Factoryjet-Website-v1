@@ -52,6 +52,45 @@ const SEO_SERVICE_LINKS: ReadonlyArray<{ href: string; label: string; blurb: str
   { href: '/services/roofing-seo', label: 'Roofing SEO', blurb: 'Storm-driven demand, service-area ranking, and steady roofing leads.' },
 ];
 
+/* "Affordable SEO" comparison (added 2026-07-31, targets "affordable seo services"
+   1,000/mo KD 2). Every price is what the agency states about itself on its own
+   site, cross-checked 31 July 2026 against the same research built for
+   /blog/best-seo-agencies-usa. FactoryJet does not publish a rate card; we say
+   that plainly rather than inventing one. */
+const AFFORDABLE_SEO_PROVIDERS: ReadonlyArray<{ name: string; price: string; detail: string; isUs?: boolean }> = [
+  {
+    name: 'FactoryJet',
+    price: 'Fixed price, quoted up front',
+    detail: 'No published rate card. Every engagement is scoped on a call and quoted before work starts, then billed month to month with no annual lock-in.',
+    isUs: true,
+  },
+  {
+    name: 'Third Marble Marketing',
+    price: '$499 to $3,499 / month',
+    detail: 'The most transparent published rate card we found in this market: three named tiers (Basic, Enhanced, Premier), month to month.',
+  },
+  {
+    name: 'Rankstar',
+    price: '~$100/hour, $1,000/month minimum',
+    detail: 'States an hourly rate and a monthly floor inside its own comparison table, rather than on a dedicated pricing page.',
+  },
+  {
+    name: 'SeoProfy',
+    price: 'From ~$1,600/month',
+    detail: 'States a starting price in the page source as structured data. It is not shown anywhere on the rendered page itself.',
+  },
+  {
+    name: 'SEO.co',
+    price: '$2,000 to $3,000/month minimum',
+    detail: 'Publishes a starting range inside a collapsed FAQ accordion on its services page.',
+  },
+  {
+    name: 'Searchbloom',
+    price: 'From ~$3,000/month',
+    detail: 'States an SEO starting price inside a collapsed homepage FAQ. Paid search management starts around $2,000/month.',
+  },
+];
+
 const US_SEO_CITIES: ReadonlyArray<{ slug: string; name: string }> = [
   { slug: 'austin', name: 'Austin' },
   { slug: 'charlotte', name: 'Charlotte' },
@@ -137,7 +176,8 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   FAQ data: 27 across 5 categories (verbatim from the approved mockup)
+   FAQ data: 30 across 5 categories (23 verbatim from the approved mockup,
+   5 money-query additions on 2026-06-11, 2 affordable-SEO additions on 2026-07-31)
 ───────────────────────────────────────────────────────────────────────────── */
 
 const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
@@ -328,6 +368,20 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     answer:
       'Credible US SEO retainers span a wide range, and one-time audits cost less than ongoing work. FactoryJet pricing is fixed and scoped to your goals rather than hidden behind a sales call. The main drivers are your market competitiveness, the number of target keywords and pages, and content volume. Every engagement is month-to-month and quoted up front, so you know the full cost before work starts. If a quote is suspiciously cheap, you are usually buying templated deliverables; if it is sky-high, you are often paying for account-management layers between you and the people doing the work.',
   },
+
+  // ── Affordable SEO money-query coverage (2), added 2026-07-31 ─────────
+  {
+    category: 'pricing',
+    question: 'Which SEO companies actually publish affordable pricing?',
+    answer:
+      'Very few. Checked against their own sites on 31 July 2026, only a handful of US SEO companies publish real numbers anywhere: Third Marble Marketing (three tiers from $499 to $3,499 a month), Rankstar ($100 an hour, $1,000 a month minimum), SeoProfy (from around $1,600 a month), SEO.co ($2,000 to $3,000 a month minimum), and Searchbloom (from around $3,000 a month). Most others, including several of the biggest names in the industry, ask for a call first. FactoryJet does not publish a rate card either, but we give you a fixed number on the same call where we scope the work, before you commit to anything.',
+  },
+  {
+    category: 'pricing',
+    question: 'What counts as affordable SEO pricing for a small business?',
+    answer:
+      'Published small-business tiers in the US market mostly sit in the hundreds to low thousands per month. Below a few hundred dollars a month, you are typically paying for automated reports rather than actual work, since real content, technical fixes, and outreach all take paid hours. The more useful question than the sticker price is what the money buys: how many hours, who does it, and what changes on your site in month one.',
+  },
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -388,6 +442,19 @@ const breadcrumbSchema = {
   ],
 };
 
+const affordableSeoListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'SEO services and agencies with published pricing, compared for affordability (2026)',
+  numberOfItems: AFFORDABLE_SEO_PROVIDERS.length,
+  itemListOrder: 'https://schema.org/ItemListUnordered',
+  itemListElement: AFFORDABLE_SEO_PROVIDERS.map((a, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: a.name,
+  })),
+};
+
 /* ─────────────────────────────────────────────────────────────────────────────
    Small inline SVG helpers
 ───────────────────────────────────────────────────────────────────────────── */
@@ -446,6 +513,11 @@ export default function SeoServicePage() {
         id="seo-breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        id="seo-affordable-list-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(affordableSeoListSchema) }}
       />
 
       <SiteHeader />
@@ -1097,6 +1169,73 @@ export default function SeoServicePage() {
           </div>
         </section>
 
+        {/* ─── 8a. AFFORDABLE SEO COMPARISON (white, named pricing) ─────── */}
+        <section className="bg-white py-14 md:py-20" id="affordable-seo-services">
+          <div className="mx-auto max-w-[760px] px-6 text-center md:px-8">
+            <p className="font-fj-mono text-[12px] font-medium uppercase tracking-[0.13em]" style={{ color: ORANGE_DARK }}>
+              Affordable SEO, honestly
+            </p>
+            <h2
+              className="fj-display mt-3.5 font-bold text-fj-ink"
+              style={{ fontSize: 'clamp(1.8rem, 3.8vw, 2.875rem)', lineHeight: 1.06, letterSpacing: '-0.025em' }}
+            >
+              So, which SEO services are <span className="italic" style={{ color: ORANGE }}>actually affordable</span>?
+            </h2>
+            <p className="mt-3 font-fj-body font-medium text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>
+              Most SEO agencies will not tell you a number until after a sales call. Checked against each
+              agency&apos;s own site on 31 July 2026, only a handful publish real pricing anywhere at all.
+              Here is exactly what each one states, in its own words, including where FactoryJet fits.
+            </p>
+          </div>
+
+          <div className="mx-auto mt-10 max-w-[860px] px-6 md:px-8">
+            <ol style={{ listStyle: 'none', padding: 0, display: 'grid', gap: '1rem' }}>
+              {AFFORDABLE_SEO_PROVIDERS.map((a) => (
+                <li
+                  key={a.name}
+                  className="flex flex-col gap-3 rounded-2xl p-5 sm:flex-row sm:items-center sm:justify-between md:p-6"
+                  style={{
+                    border: a.isUs ? '1px solid rgba(240,90,40,0.35)' : '1px solid rgba(26,23,18,0.10)',
+                    background: a.isUs ? 'rgba(240,90,40,0.05)' : '#fff',
+                  }}
+                >
+                  <div>
+                    <h3 className="fj-display text-[1.0625rem] font-bold text-fj-ink">
+                      {a.name}
+                      {a.isUs && (
+                        <span
+                          className="ml-2 font-fj-mono text-[10px] font-bold uppercase tracking-[0.08em] text-white"
+                          style={{ background: ORANGE_DARK, padding: '3px 9px', borderRadius: '999px' }}
+                        >
+                          That&apos;s us
+                        </span>
+                      )}
+                    </h3>
+                    <p className="mt-1.5 max-w-[440px] font-fj-body text-[0.875rem] text-fj-neutral-600" style={{ lineHeight: 1.55 }}>
+                      {a.detail}
+                    </p>
+                  </div>
+                  <div
+                    className="flex-shrink-0 whitespace-nowrap rounded-xl px-4 py-2.5 font-fj-body text-[0.9375rem] font-bold"
+                    style={{
+                      background: a.isUs ? ORANGE : 'rgba(15,15,18,0.05)',
+                      color: a.isUs ? '#fff' : CHARCOAL,
+                    }}
+                  >
+                    {a.price}
+                  </div>
+                </li>
+              ))}
+            </ol>
+
+            <p className="mt-6 font-fj-body text-[0.9375rem] text-fj-neutral-600" style={{ lineHeight: 1.65 }}>
+              Below a few hundred dollars a month, you are usually buying automated reports, not work. The
+              more useful question than the sticker price is what the money actually buys: how many hours,
+              who does it, and what changes on your site in month one.
+            </p>
+          </div>
+        </section>
+
         {/* ─── 8b. Shortlisting, not hiring: link to the agency roundup ── */}
         <section className="bg-fj-cream py-14 md:py-16">
           <div className="mx-auto max-w-[1120px] px-6 md:px-8">
@@ -1119,7 +1258,7 @@ export default function SeoServicePage() {
           </div>
         </section>
 
-        {/* ─── 9. FAQ: 27 across 5 categories (shared component) ──────── */}
+        {/* ─── 9. FAQ: 30 across 5 categories (shared component) ───────── */}
         <FAQ
           eyebrow="SEO FAQ"
           headline="Questions, answered like a real call"
