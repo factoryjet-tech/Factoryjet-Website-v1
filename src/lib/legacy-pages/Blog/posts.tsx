@@ -8,15 +8,11 @@ import { post as shopifyVsCustomWebsiteUsSmallBusiness2026Post } from './posts/s
 import { post as bestWebDesignAgencyUsSmallBusiness2026Post } from './posts/best-web-design-agency-us-small-business-2026';
 import { post as aiAgentsUkSmbsGuidePost } from './posts/ai-agents-uk-smbs-guide';
 import { post as woocommerceSeoTipsUkStoresPost } from './posts/woocommerce-seo-tips-uk-stores';
-import { post as shopifyVsWoocommerceUkSmbsPost } from './posts/shopify-vs-woocommerce-uk-smbs';
-import { post as chooseWebDesignAgencyUkSmbQuestions2026Post } from './posts/choose-web-design-agency-uk-smb-questions-2026';
 import { post as websiteRedesignCostUk2026CompletePricingGuidePost } from './posts/website-redesign-cost-uk-2026-complete-pricing-guide';
 import { post as bestWebDesignAgenciesUkSmbs2026Post } from './posts/best-web-design-agencies-uk-smbs-2026';
 import { post as topWebDesignAgenciesLondonSmbs2026Post } from './posts/top-web-design-agencies-london-smbs-2026';
-import { post as webDesignAgencyPricingUk2026Post } from './posts/web-design-agency-pricing-uk-2026';
 import { post as whatDoesWebDesignAgencyDo2026Post } from './posts/what-does-web-design-agency-do-2026';
 import { post as customOnlineStoreDevelopmentUkSmbs2026Post } from './posts/custom-online-store-development-uk-smbs-2026';
-import { post as howToBuildOnlineStoreUkSmb2026Post } from './posts/how-to-build-online-store-uk-smb-2026';
 import { post as shopifyStoreDevelopmentUkSmbs2026GuidePost } from './posts/shopify-store-development-uk-smbs-2026-guide';
 import { post as ecommerceDevelopmentUkShopifyWoocommerce2026Post } from './posts/ecommerce-development-uk-shopify-woocommerce-2026';
 import { post as bestWebDesignCompaniesSmallBusinessAustraliaPost } from './posts/best-web-design-companies-small-business-australia';
@@ -25,15 +21,8 @@ import { post as seoRecruitmentAgenciesUk2026Post } from './posts/seo-recruitmen
 import { post as bestWordpressDevelopmentCompaniesAustralia2026Post } from './posts/best-wordpress-development-companies-australia-2026';
 import { post as howToChooseWebDesignAgencyUk2026Post } from './posts/how-to-choose-web-design-agency-uk-2026';
 import { post as ukWebDesignAgencyPricing2026SmbGuidePost } from './posts/uk-web-design-agency-pricing-2026-smb-guide';
-import { post as topWebDesignAgenciesLondon2026AiNativeVsTraditionalPost } from './posts/top-web-design-agencies-london-2026-ai-native-vs-traditional';
-import { post as bestWebDesignAgenciesSmallBusiness2026Post } from './posts/best-web-design-agencies-small-business-2026';
 import { post as bestLeadGenerationWebsitesSmallBusiness2026Post } from './posts/best-lead-generation-websites-small-business-2026';
-import { post as bestWebDesignAgencyUk2026AiNativeSmePost } from './posts/best-web-design-agency-uk-2026-ai-native-sme';
-import { post as chooseBestWebDesignAgencyUk2026ChecklistPost } from './posts/choose-best-web-design-agency-uk-2026-checklist';
 import { post as websiteRedesignSmallBusinessUk2026AiPoweredPost } from './posts/website-redesign-small-business-uk-2026-ai-powered';
-import { post as webDevelopmentAgencyUk2026CustomAiSolutionsPost } from './posts/web-development-agency-uk-2026-custom-ai-solutions';
-import { post as websiteRedesignIdeasUkSmbs2026Post } from './posts/website-redesign-ideas-uk-smbs-2026';
-import { post as bestOnlineStoreDevelopmentSmallBusinessUk2026Post } from './posts/best-online-store-development-small-business-uk-2026';
 import { post as howToBuildOnlineStoreUkSmbGuide2026Post } from './posts/how-to-build-online-store-uk-smb-guide-2026';
 import { post as topEcommerceDevelopmentAgenciesUk2026Post } from './posts/top-ecommerce-development-agencies-uk-2026';
 import { post as createAiAgentsBusinessUkSmbGuide2026Post } from './posts/create-ai-agents-business-uk-smb-guide-2026';
@@ -47,7 +36,6 @@ import { post as salesAutomationAiUkSmbsWorkflowsPost } from './posts/sales-auto
 import { post as bestSalesAutomationSmallBusinessUk2026Post } from './posts/best-sales-automation-small-business-uk-2026';
 import { post as salesAutomationToolsUkSmbsRoi2026Post } from './posts/sales-automation-tools-uk-smbs-roi-2026';
 import { post as sellAiAutomationServicesUkAgencyPlaybook2026Post } from './posts/sell-ai-automation-services-uk-agency-playbook-2026';
-import { post as chooseWebDesignAgencyUk2026QuestionsPost } from './posts/choose-web-design-agency-uk-2026-questions';
 import { post as webDesignAustinTxSmallBusinessGuide2026Post } from './posts/web-design-austin-tx-small-business-guide-2026';
 import { post as webDesignMiamiFLSmallBusiness2026Post } from './posts/web-design-miami-fl-small-business-2026';
 import { post as shopifyStoreSetupUsSmallBusiness7DaysPost } from './posts/shopify-store-setup-us-small-business-7-days';
@@ -4697,17 +4685,13 @@ export const POSTS: BlogPost[] = [
   websiteCostSmallBusinessUsa2026Post,
   shopifyVsCustomWebsiteUsSmallBusiness2026Post,
   bestWebDesignAgencyUsSmallBusiness2026Post,
-  chooseWebDesignAgencyUkSmbQuestions2026Post,
   woocommerceSeoTipsUkStoresPost,
-  shopifyVsWoocommerceUkSmbsPost,
   aiAgentsUkSmbsGuidePost,
   websiteRedesignCostUk2026CompletePricingGuidePost,
   bestWebDesignAgenciesUkSmbs2026Post,
   topWebDesignAgenciesLondonSmbs2026Post,
-  webDesignAgencyPricingUk2026Post,
   whatDoesWebDesignAgencyDo2026Post,
   customOnlineStoreDevelopmentUkSmbs2026Post,
-  howToBuildOnlineStoreUkSmb2026Post,
   shopifyStoreDevelopmentUkSmbs2026GuidePost,
   ecommerceDevelopmentUkShopifyWoocommerce2026Post,
   bestWebDesignCompaniesSmallBusinessAustraliaPost,
@@ -4716,15 +4700,8 @@ export const POSTS: BlogPost[] = [
   bestWordpressDevelopmentCompaniesAustralia2026Post,
   howToChooseWebDesignAgencyUk2026Post,
   ukWebDesignAgencyPricing2026SmbGuidePost,
-  topWebDesignAgenciesLondon2026AiNativeVsTraditionalPost,
-  bestWebDesignAgenciesSmallBusiness2026Post,
   bestLeadGenerationWebsitesSmallBusiness2026Post,
-  bestWebDesignAgencyUk2026AiNativeSmePost,
-  chooseBestWebDesignAgencyUk2026ChecklistPost,
   websiteRedesignSmallBusinessUk2026AiPoweredPost,
-  webDevelopmentAgencyUk2026CustomAiSolutionsPost,
-  websiteRedesignIdeasUkSmbs2026Post,
-  bestOnlineStoreDevelopmentSmallBusinessUk2026Post,
   howToBuildOnlineStoreUkSmbGuide2026Post,
   topEcommerceDevelopmentAgenciesUk2026Post,
   createAiAgentsBusinessUkSmbGuide2026Post,
@@ -4738,7 +4715,6 @@ export const POSTS: BlogPost[] = [
   bestSalesAutomationSmallBusinessUk2026Post,
   salesAutomationToolsUkSmbsRoi2026Post,
   sellAiAutomationServicesUkAgencyPlaybook2026Post,
-  chooseWebDesignAgencyUk2026QuestionsPost,
   webDesignAustinTxSmallBusinessGuide2026Post,
   webDesignMiamiFLSmallBusiness2026Post,
   shopifyStoreSetupUsSmallBusiness7DaysPost,
