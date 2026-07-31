@@ -19,7 +19,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 
 export const metadata: Metadata = {
-  title: 'SEO Company in Ahmedabad | AI-Native SEO Agency | FactoryJet',
+  title: 'SEO Company in Ahmedabad | Best SEO Services | FactoryJet',
   description:
     'SEO company in Ahmedabad for pharma and denim exporters, chemical makers, and engineering firms. Win orders abroad and across India, and in Google AI answers.',
   keywords: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'SEO Company in Ahmedabad | AI-Native SEO Agency | FactoryJet',
+    title: 'SEO Company in Ahmedabad | Best SEO Services | FactoryJet',
     description:
       'SEO company in Ahmedabad for pharma and denim exporters, chemical makers, and engineering firms. Win orders from abroad, win across India, and get named in Google AI answers. No long contracts. Serving Changodar, Vatva, Sanand, and SG Highway.',
     url: 'https://factoryjet.com/seo/ahmedabad',
@@ -136,13 +136,13 @@ const AHM_FAQ_ITEMS = [
     category: 'pricing',
     question: 'Who is the best SEO agency in Ahmedabad?',
     answer:
-      'For small and mid-size businesses, FactoryJet makes a strong case as the best SEO company in Ahmedabad: the same engineers who build fast websites run the SEO services in Ahmedabad clients pay for, with a clear monthly report and no long contract. The best SEO services in Ahmedabad pass three checks: a plan in simple words, results with real numbers, and the price in writing. We also run local SEO services in Ahmedabad — the best local SEO services in Ahmedabad manage your Google Business Profile every week, not once a quarter.',
+      'For small and mid-size businesses, FactoryJet makes a strong case as the best SEO company in Ahmedabad: the same engineers who build fast websites run the SEO services in Ahmedabad clients pay for, with a clear monthly report and no long contract. The best SEO services in Ahmedabad pass three checks: a plan in simple words, results with real numbers, and the price in writing. We also run local SEO services in Ahmedabad, the best local SEO services in Ahmedabad manage your Google Business Profile every week, not once a quarter.',
   },
   {
     category: 'pricing',
     question: 'Should I hire SEO expert in Ahmedabad or work with an agency?',
     answer:
-      'Both can work. If you hire SEO expert in Ahmedabad alone, you get one set of skills — and SEO needs technical work, writing, and links together. A small senior team gives you all three for a similar monthly cost. Whichever way you go, ask for one example with real numbers before you pay.',
+      'Both can work. If you hire SEO expert in Ahmedabad alone, you get one set of skills, and SEO needs technical work, writing, and links together. A small senior team gives you all three for a similar monthly cost. Whichever way you go, ask for one example with real numbers before you pay.',
   },
 ];
 
@@ -200,6 +200,19 @@ export default function AhmedabadSeoPage() {
           trustItems={['Picked up by Google AI answers', 'No long contracts', '500+ sites done']}
           rightSlot={<HeroBrowserMockup badgeLabel="Global rankings" badgeCity="Ahmedabad" />}
         />
+
+        {/* Answer-first block (BLUF): the direct answer, written to be quoted by
+            Google AI Overviews, ChatGPT, Gemini and Perplexity. */}
+        <section className="border-y border-fj-ink/10 bg-white px-6 py-14 md:px-8 md:py-16">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="font-fj-display text-2xl font-bold tracking-[-0.02em] text-fj-ink md:text-3xl">
+              So, which is the best SEO company in Ahmedabad?
+            </h2>
+            <p className="mt-4 font-fj-body text-lg leading-relaxed text-fj-ink/80">
+              There is no single best SEO company in Ahmedabad for every business. Pharma and denim exporters chasing orders abroad, chemical and engineering firms supplying across India, and local services in Satellite or Prahlad Nagar need very different plans. FactoryJet provides SEO services in Ahmedabad matched to which of those you are, rather than one template applied to all three.
+            </p>
+          </div>
+        </section>
 
         <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
 

@@ -19,7 +19,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 
 export const metadata: Metadata = {
-  title: 'SEO Agency in Vadodara | AI-Native SEO Company | FactoryJet',
+  title: 'SEO Company in Vadodara | Best SEO Services | FactoryJet',
   description:
     'SEO company in Vadodara for engineering, petrochemical, pharma, and manufacturing firms. Win business across India, export orders, and Google AI answers.',
   keywords: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'SEO Agency in Vadodara | AI-Native SEO Company | FactoryJet',
+    title: 'SEO Company in Vadodara | Best SEO Services | FactoryJet',
     description:
       'SEO agency in Vadodara for engineering, petrochemical, pharma, and manufacturing firms. Win business across India, win export orders, and get named in Google AI answers. No lock-in. Serving Makarpura, Nandesari, Halol, and Savli.',
     url: 'https://factoryjet.com/seo/vadodara',
@@ -136,13 +136,13 @@ const VAD_FAQ_ITEMS = [
     category: 'pricing',
     question: 'Who is the best SEO agency in Vadodara?',
     answer:
-      'For small and mid-size businesses, FactoryJet makes a strong case as the best SEO company in Vadodara: the same engineers who build fast websites run the SEO services in Vadodara clients pay for, with a clear monthly report and no long contract. The best SEO services in Vadodara pass three checks: a plan in simple words, results with real numbers, and the price in writing. We also run local SEO services in Vadodara — the best local SEO services in Vadodara manage your Google Business Profile every week, not once a quarter.',
+      'For small and mid-size businesses, FactoryJet makes a strong case as the best SEO company in Vadodara: the same engineers who build fast websites run the SEO services in Vadodara clients pay for, with a clear monthly report and no long contract. The best SEO services in Vadodara pass three checks: a plan in simple words, results with real numbers, and the price in writing. We also run local SEO services in Vadodara, the best local SEO services in Vadodara manage your Google Business Profile every week, not once a quarter.',
   },
   {
     category: 'pricing',
     question: 'Should I hire SEO expert in Vadodara or work with an agency?',
     answer:
-      'Both can work. If you hire SEO expert in Vadodara alone, you get one set of skills — and SEO needs technical work, writing, and links together. A small senior team gives you all three for a similar monthly cost. Whichever way you go, ask for one example with real numbers before you pay.',
+      'Both can work. If you hire SEO expert in Vadodara alone, you get one set of skills, and SEO needs technical work, writing, and links together. A small senior team gives you all three for a similar monthly cost. Whichever way you go, ask for one example with real numbers before you pay.',
   },
 ];
 
@@ -200,6 +200,19 @@ export default function VadodaraSeoPage() {
           trustItems={['Picked up by Google AI answers', 'No long contracts', '500+ sites done']}
           rightSlot={<HeroBrowserMockup badgeLabel="B2B + export" badgeCity="Vadodara" />}
         />
+
+        {/* Answer-first block (BLUF): the direct answer, written to be quoted by
+            Google AI Overviews, ChatGPT, Gemini and Perplexity. */}
+        <section className="border-y border-fj-ink/10 bg-white px-6 py-14 md:px-8 md:py-16">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="font-fj-display text-2xl font-bold tracking-[-0.02em] text-fj-ink md:text-3xl">
+              So, which is the best SEO company in Vadodara?
+            </h2>
+            <p className="mt-4 font-fj-body text-lg leading-relaxed text-fj-ink/80">
+              There is no single best SEO company in Vadodara for every business. Engineering, petrochemical and pharma suppliers here sell to a small number of serious buyers researching quietly for weeks, which is nothing like a local clinic filling appointments. FactoryJet provides SEO services in Vadodara built around which of those you are, with technical depth for B2B suppliers and map visibility for local trade.
+            </p>
+          </div>
+        </section>
 
         <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
 

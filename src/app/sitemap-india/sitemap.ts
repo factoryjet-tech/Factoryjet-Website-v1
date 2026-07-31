@@ -78,6 +78,7 @@ const INDIA_SEO_CITIES = [
   'vadodara',
   'kolkata',
   'hyderabad',
+  'chennai',
 ] as const
 
 // ── India SEO sub-service pages (canonical: /seo/[discipline]-seo) ────────────

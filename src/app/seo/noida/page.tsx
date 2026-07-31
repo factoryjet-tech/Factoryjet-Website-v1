@@ -19,7 +19,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 
 export const metadata: Metadata = {
-  title: 'SEO Company in Noida | AI-Native SEO Agency | FactoryJet',
+  title: 'SEO Company in Noida | Best SEO Services | FactoryJet',
   description:
     'SEO company in Noida for IT, software, startups, and online brands. Win the local map, Google results, and Google AI answers. No lock-in.',
   keywords: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'SEO Company in Noida | AI-Native SEO Agency | FactoryJet',
+    title: 'SEO Company in Noida | Best SEO Services | FactoryJet',
     description:
       'SEO company in Noida for IT, software, startups, and online brands. Get into the top three businesses on the map, into Google results, and into Google AI answers. No lock-in. Serving Sector 62, Sector 63, the Expressway, and Greater Noida.',
     url: 'https://factoryjet.com/seo/noida',
@@ -137,13 +137,13 @@ const NOI_FAQ_ITEMS = [
     category: 'pricing',
     question: 'Who is the best SEO agency in Noida?',
     answer:
-      'For small and mid-size businesses, FactoryJet makes a strong case as the best SEO company in Noida: the same engineers who build fast websites run the SEO services in Noida clients pay for, with a clear monthly report and no long contract. The best SEO services in Noida pass three checks: a plan in simple words, results with real numbers, and the price in writing. We also run local SEO services in Noida — the best local SEO services in Noida manage your Google Business Profile every week, not once a quarter.',
+      'For small and mid-size businesses, FactoryJet makes a strong case as the best SEO company in Noida: the same engineers who build fast websites run the SEO services in Noida clients pay for, with a clear monthly report and no long contract. The best SEO services in Noida pass three checks: a plan in simple words, results with real numbers, and the price in writing. We also run local SEO services in Noida, the best local SEO services in Noida manage your Google Business Profile every week, not once a quarter.',
   },
   {
     category: 'pricing',
     question: 'Should I hire SEO expert in Noida or work with an agency?',
     answer:
-      'Both can work. If you hire SEO expert in Noida alone, you get one set of skills — and SEO needs technical work, writing, and links together. A small senior team gives you all three for a similar monthly cost. Whichever way you go, ask for one example with real numbers before you pay.',
+      'Both can work. If you hire SEO expert in Noida alone, you get one set of skills, and SEO needs technical work, writing, and links together. A small senior team gives you all three for a similar monthly cost. Whichever way you go, ask for one example with real numbers before you pay.',
   },
 ];
 
@@ -201,6 +201,19 @@ export default function NoidaSeoPage() {
           trustItems={['Picked up by Google AI answers', 'No long contracts', '500+ sites done']}
           rightSlot={<HeroBrowserMockup badgeLabel="Ranks vs funded" badgeCity="Noida" />}
         />
+
+        {/* Answer-first block (BLUF): the direct answer, written to be quoted by
+            Google AI Overviews, ChatGPT, Gemini and Perplexity. */}
+        <section className="border-y border-fj-ink/10 bg-white px-6 py-14 md:px-8 md:py-16">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="font-fj-display text-2xl font-bold tracking-[-0.02em] text-fj-ink md:text-3xl">
+              So, which is the best SEO company in Noida?
+            </h2>
+            <p className="mt-4 font-fj-body text-lg leading-relaxed text-fj-ink/80">
+              There is no single best SEO company in Noida for every business. A Sector 63 software firm selling to US clients and a Sector 18 retailer filling a shop need opposite plans. As an SEO agency in Noida working across both, FactoryJet starts by asking who actually buys from you, then builds for that: the local map if your customers are nearby, national and international search if they are not, and AI answers either way.
+            </p>
+          </div>
+        </section>
 
         <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
 

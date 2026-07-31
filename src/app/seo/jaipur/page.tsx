@@ -19,7 +19,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 
 export const metadata: Metadata = {
-  title: 'SEO Company in Jaipur | AI-Native SEO Agency | FactoryJet',
+  title: 'SEO Company in Jaipur | Best SEO Services | FactoryJet',
   description:
     'SEO company in Jaipur for gem and jewellery exporters, handicraft brands, hotels, and IT firms. Win abroad, on the local map, and in Google AI answers.',
   keywords: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'SEO Company in Jaipur | AI-Native SEO Agency | FactoryJet',
+    title: 'SEO Company in Jaipur | Best SEO Services | FactoryJet',
     description:
       'SEO company in Jaipur for gem and jewellery exporters, handicraft brands, hotels, and IT firms. Win abroad, win the top three businesses on the map, and get named in Google AI answers. No lock-in. Serving Johari Bazaar, Sitapura, Sanganer, and MI Road.',
     url: 'https://factoryjet.com/seo/jaipur',
@@ -135,13 +135,13 @@ const JAI_FAQ_ITEMS = [
     category: 'pricing',
     question: 'Who is the best SEO agency in Jaipur?',
     answer:
-      'For small and mid-size businesses, FactoryJet makes a strong case as the best SEO company in Jaipur: the same engineers who build fast websites run the SEO services in Jaipur clients pay for, with a clear monthly report and no long contract. The best SEO services in Jaipur pass three checks: a plan in simple words, results with real numbers, and the price in writing. We also run local SEO services in Jaipur — the best local SEO services in Jaipur manage your Google Business Profile every week, not once a quarter.',
+      'For small and mid-size businesses, FactoryJet makes a strong case as the best SEO company in Jaipur: the same engineers who build fast websites run the SEO services in Jaipur clients pay for, with a clear monthly report and no long contract. The best SEO services in Jaipur pass three checks: a plan in simple words, results with real numbers, and the price in writing. We also run local SEO services in Jaipur, the best local SEO services in Jaipur manage your Google Business Profile every week, not once a quarter.',
   },
   {
     category: 'pricing',
     question: 'Should I hire SEO expert in Jaipur or work with an agency?',
     answer:
-      'Both can work. If you hire SEO expert in Jaipur alone, you get one set of skills — and SEO needs technical work, writing, and links together. A small senior team gives you all three for a similar monthly cost. Whichever way you go, ask for one example with real numbers before you pay.',
+      'Both can work. If you hire SEO expert in Jaipur alone, you get one set of skills, and SEO needs technical work, writing, and links together. A small senior team gives you all three for a similar monthly cost. Whichever way you go, ask for one example with real numbers before you pay.',
   },
 ];
 
@@ -199,6 +199,19 @@ export default function JaipurSeoPage() {
           trustItems={['Picked up by Google AI answers', 'No long contracts', '500+ sites done']}
           rightSlot={<HeroBrowserMockup badgeLabel="Wins abroad" badgeCity="Jaipur" />}
         />
+
+        {/* Answer-first block (BLUF): the direct answer, written to be quoted by
+            Google AI Overviews, ChatGPT, Gemini and Perplexity. */}
+        <section className="border-y border-fj-ink/10 bg-white px-6 py-14 md:px-8 md:py-16">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="font-fj-display text-2xl font-bold tracking-[-0.02em] text-fj-ink md:text-3xl">
+              So, which is the best SEO company in Jaipur?
+            </h2>
+            <p className="mt-4 font-fj-body text-lg leading-relaxed text-fj-ink/80">
+              There is no single best SEO company in Jaipur for every business. A gem and jewellery exporter selling to overseas buyers, a heritage hotel filling rooms, and a local clinic all search completely differently. FactoryJet works as an SEO agency in Jaipur across all three, and the first thing we do is work out which buyer is actually yours before spending anything on reaching them.
+            </p>
+          </div>
+        </section>
 
         <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
 
