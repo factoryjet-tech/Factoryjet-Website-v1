@@ -20,33 +20,9 @@ import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
-import WebDesignCityLinksIN from '@/components/v2/WebDesignCityLinksIN';
+import { IN_WEB_DESIGN_CITIES } from '@/data/inWebDesignCities';
 
 /* Internal-linking data (added 2026-07-26 to fix orphaned city pages). */
-const IN_WEB_DESIGN_CITIES: ReadonlyArray<{ slug: string; name: string }> = [
-  { slug: 'ahmedabad', name: 'Ahmedabad' },
-  { slug: 'bangalore', name: 'Bangalore' },
-  { slug: 'bhubaneswar', name: 'Bhubaneswar' },
-  { slug: 'chennai', name: 'Chennai' },
-  { slug: 'coimbatore', name: 'Coimbatore' },
-  { slug: 'delhi', name: 'Delhi' },
-  { slug: 'gurgaon', name: 'Gurgaon' },
-  { slug: 'hyderabad', name: 'Hyderabad' },
-  { slug: 'indore', name: 'Indore' },
-  { slug: 'jaipur', name: 'Jaipur' },
-  { slug: 'kochi', name: 'Kochi' },
-  { slug: 'kolkata', name: 'Kolkata' },
-  { slug: 'madurai', name: 'Madurai' },
-  { slug: 'mumbai', name: 'Mumbai' },
-  { slug: 'nagpur', name: 'Nagpur' },
-  { slug: 'noida', name: 'Noida' },
-  { slug: 'pune', name: 'Pune' },
-  { slug: 'rajkot', name: 'Rajkot' },
-  { slug: 'surat', name: 'Surat' },
-  { slug: 'thiruvananthapuram', name: 'Thiruvananthapuram' },
-  { slug: 'vadodara', name: 'Vadodara' },
-  { slug: 'visakhapatnam', name: 'Visakhapatnam' },
-];
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -1268,12 +1244,6 @@ export default function WebDesignServicePage() {
           secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
           objectionHandler="Lighthouse 100 guaranteed. Full code ownership on launch day. 7-day delivery on Starter tier. Fixed price confirmed upfront."
         />
-
-        {/* India web-design city cross-links (silo fix, 31 Jul 2026): the hub
-
-            previously linked to none of its 22 city pages. */}
-
-        <WebDesignCityLinksIN isHub />
 
 
       </main>
