@@ -20,6 +20,7 @@ import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
+import WebDesignCityLinksIN from '@/components/v2/WebDesignCityLinksIN';
 
 /* Internal-linking data (added 2026-07-26 to fix orphaned city pages). */
 const IN_WEB_DESIGN_CITIES: ReadonlyArray<{ slug: string; name: string }> = [
@@ -1267,6 +1268,13 @@ export default function WebDesignServicePage() {
           secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
           objectionHandler="Lighthouse 100 guaranteed. Full code ownership on launch day. 7-day delivery on Starter tier. Fixed price confirmed upfront."
         />
+
+        {/* India web-design city cross-links (silo fix, 31 Jul 2026): the hub
+
+            previously linked to none of its 22 city pages. */}
+
+        <WebDesignCityLinksIN isHub />
+
 
       </main>
 

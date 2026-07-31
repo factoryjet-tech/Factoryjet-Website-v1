@@ -462,6 +462,45 @@ const FAQ_ITEMS: FAQItem[] = [
     answer:
       'Answer engine optimisation, or AEO, simply means shaping your website so AI tools and Google’s instant answers pick your business as the reply. It is closely related to GEO. If your customers are the kind of people who ask ChatGPT or Google a question before buying, then yes, you need it. If you are not sure, we can check for free whether AI tools already mention you.',
   },
+
+  /* Added from live People-Also-Ask on Google India, 31 July 2026.
+     Source data: pipeline/research/data/dm_paa.csv + dm_paa_round2.json */
+  {
+    category: 'choosing',
+    question: 'Is it worth hiring a digital marketing agency?',
+    answer:
+      'It is worth it when you have something to sell that people already search for, and nobody in-house with the time or skill to do the work properly. It is not worth it if your product is still unproven, because marketing will only spend money faster. Fix the offer first, then hire an agency to scale it.',
+  },
+  {
+    category: 'choosing',
+    question: 'How much does a digital marketing agency cost in India?',
+    answer:
+      'It varies enormously, and anyone quoting a single number without seeing your business is guessing. The real drivers are how many channels you run, how much ad budget sits on top of the fee, and whether seniors or juniors do the work. Ask any agency to split their fee from your ad spend in writing. Vague bundled pricing usually hides junior labour.',
+  },
+  {
+    category: 'trust',
+    question: 'How does a digital marketing agency make money?',
+    answer:
+      'Most agencies charge a monthly retainer, a percentage of your ad spend, a project fee, or some mix of the three. The percentage model is the one to watch, because it quietly rewards the agency for spending more of your money rather than spending it well. Ask which model you are on and what happens to the fee if your ad budget drops.',
+  },
+  {
+    category: 'trust',
+    question: 'How do I know if my digital marketing agency is legit?',
+    answer:
+      'Ask for direct access to your own Google Ads, Analytics and Search Console accounts, in your name, not theirs. A legitimate agency hands these over without hesitation. If they refuse, or insist on running everything through their accounts, you cannot verify any number they report and you lose all of it the day you leave.',
+  },
+  {
+    category: 'ai',
+    question: 'Will AI replace digital marketers?',
+    answer:
+      'AI has already replaced a lot of the production work: first drafts, ad variations, routine reporting. What it has not replaced is judgement about which customers matter, what your business should say, and which numbers are worth acting on. The marketers losing work are the ones who only did the production part. The ones using AI to do more thinking are fine.',
+  },
+  {
+    category: 'services',
+    question: 'What is the 70/20/10 rule in digital marketing?',
+    answer:
+      'It is a way to split your budget: 70 percent on what already works, 20 percent on improving it, and 10 percent on genuinely new experiments. The point is that it stops you betting everything on an untested idea while still leaving room to find the next thing that works. Treat it as a starting shape, not a law.',
+  },
 ];
 
 /* ── Structured data (server-rendered in initial HTML, so AI crawlers read it) ── */

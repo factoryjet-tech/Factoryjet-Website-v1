@@ -19,6 +19,7 @@ import TestimonialsSection from '@/components/v2/TestimonialsSection'
 import FAQ from '@/components/v2/FAQ'
 import FinalCTA from '@/components/v2/FinalCTA'
 import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
+import WebDesignCityLinksIN from '@/components/v2/WebDesignCityLinksIN';
 
 export const metadata: Metadata = {
   title: 'Professional Web Design Company in Madurai | FactoryJet',
@@ -541,6 +542,9 @@ const MDU_FAQ_ITEMS = [
           items={MDU_FAQ_ITEMS}
         />
       <FinalCTA {...finalCTAProps} />
+      {/* India web-design city cross-links (silo fix, 31 Jul 2026) */}
+      <WebDesignCityLinksIN currentCity="madurai" />
+
       <SiteFooter locale="in" />
     </>
   )

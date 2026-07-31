@@ -538,6 +538,31 @@ export default function SeoPune() {
           objectionHandler="Month-to-month. No lock-in. Everything stays yours. Free audit included."
         />
 
+        {/* Hub link-back (silo fix, 31 Jul 2026) */}
+
+        <section className="border-t border-fj-ink/10 bg-fj-cream px-6 py-10 md:px-8">
+
+          <div className="mx-auto max-w-3xl">
+
+            <p className="text-base leading-relaxed text-fj-ink/75">
+
+              We work well beyond Pune. See{' '}
+
+              <a href="/seo" className="font-semibold text-[#B23E13] underline underline-offset-2">
+
+                what our SEO company in India covers
+
+              </a>{' '}
+
+              and how the work is structured.
+
+            </p>
+
+          </div>
+
+        </section>
+
+
       </main>
       <SiteFooter locale="in" />
     </>

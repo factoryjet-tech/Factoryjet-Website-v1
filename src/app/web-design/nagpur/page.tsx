@@ -18,6 +18,7 @@ import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
+import WebDesignCityLinksIN from '@/components/v2/WebDesignCityLinksIN';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -878,6 +879,11 @@ export default function NagpurWebDesignPage() {
           secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
           objectionHandler="Fixed price. 7-day delivery. Next.js. Your codebase delivered in full on launch day."
         />
+
+        {/* India web-design city cross-links (silo fix, 31 Jul 2026) */}
+
+        <WebDesignCityLinksIN currentCity="nagpur" />
+
 
       </main>
 

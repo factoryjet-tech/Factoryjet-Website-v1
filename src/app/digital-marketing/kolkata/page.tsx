@@ -1195,11 +1195,11 @@ export default function KolkataDigitalMarketingPage() {
                 AI search
               </a>
               , the same senior team handles it.{' '}
-              You can also{' '}
+              You can also see{' '}
               <a href="/digital-marketing" className="font-semibold text-[#B23E13] underline underline-offset-2">
-                see how the top agencies in India compare
+                how the top agencies in India compare
               </a>
-              , we include ourselves openly.
+              , with us included openly.
             </p>
           </div>
         </section>
