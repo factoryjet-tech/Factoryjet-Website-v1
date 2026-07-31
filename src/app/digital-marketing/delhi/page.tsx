@@ -1201,7 +1201,12 @@ export default function DelhiDigitalMarketingPage() {
               <a href="/ai-seo" className="font-semibold text-[#B23E13] underline underline-offset-2">
                 AI search
               </a>
-              , the same senior team handles it.
+              , the same senior team handles it.{' '}
+              You can also{' '}
+              <a href="/digital-marketing" className="font-semibold text-[#B23E13] underline underline-offset-2">
+                compare the top 10 digital marketing agencies in India
+              </a>
+              , including us, before you decide.
             </p>
           </div>
         </section>

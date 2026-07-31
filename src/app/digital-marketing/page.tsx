@@ -20,31 +20,31 @@ import { digitalMarketingAlternates } from '@/data/hreflangMap';
 const CANONICAL = 'https://factoryjet.com/digital-marketing';
 
 export const metadata: Metadata = {
-  title: 'Digital Marketing Agency in India | FactoryJet',
+  title: 'Best Digital Marketing Agency in India (2026) | FactoryJet',
   description:
-    'Looking for a digital marketing agency in India? FactoryJet helps businesses get found on Google and AI tools like ChatGPT, and turn clicks into real customers. One senior in-house team for SEO, ads, websites and more.',
+    'Looking for the best digital marketing agency in India? Compare the top 10, built from live search data. One senior team for SEO, ads and AI search.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Digital Marketing Agency in India | FactoryJet',
+    title: 'Best Digital Marketing Agency in India (2026) | FactoryJet',
     description:
-      'One senior in-house team that gets Indian businesses found on Google and AI search, and turns visitors into enquiries. SEO, ads, websites, social and more.',
+      'Compare the top 10 digital marketing agencies in India, built from live search data. One senior in-house team for SEO, ads, websites and AI search.',
     url: CANONICAL,
     images: [
       {
         url: 'https://factoryjet.com/images/services/web-design.webp',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet — Digital Marketing Agency in India',
+        alt: 'FactoryJet, Digital Marketing Agency in India',
       },
     ],
     locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Digital Marketing Agency in India | FactoryJet',
+    title: 'Best Digital Marketing Agency in India (2026) | FactoryJet',
     description:
-      'Get found on Google and AI search, and turn visitors into customers. One senior in-house team for Indian businesses.',
+      'Compare the top 10 digital marketing agencies in India, built from live search data. One senior in-house team for Indian businesses.',
     images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {
@@ -230,7 +230,10 @@ const PILLARS: Pillar[] = [
 ];
 
 // Named-competitor comparison, built from live DataForSEO ranking data
-// (checked July 2026). Honest, positive, with open self-disclosure.
+// (re-checked 31 July 2026: Google organic top 10, AI Overview citations, and
+// brands named by ChatGPT, Claude, Gemini and Perplexity for the India head terms).
+// Honest, positive, with open self-disclosure. Exactly ten, so the list is what
+// it says it is.
 const AGENCIES = [
   {
     name: 'FactoryJet',
@@ -247,16 +250,33 @@ const AGENCIES = [
     bestFor: 'Brands that want wide digital coverage and public-relations style promotion.',
   },
   {
-    name: 'OrangeMantra',
-    bestFor: 'Larger companies that want technology and marketing built under one roof.',
-  },
-  {
     name: 'Matebiz',
     bestFor: 'Businesses whose main need is strong, steady SEO (Google rankings).',
   },
   {
-    name: 'DigiStreet Media',
-    bestFor: 'Businesses that lean heavily on paid advertising.',
+    name: 'OrangeMantra',
+    bestFor: 'Larger companies that want technology and marketing built under one roof.',
+  },
+  {
+    name: 'Nico Digital',
+    bestFor: 'Businesses that want a design-led agency with search work alongside it.',
+  },
+  {
+    name: 'Techmagnate',
+    bestFor:
+      'Companies that want a large, long-established SEO specialist. Of every agency we measured, this is the one AI assistants name most often when asked about India.',
+  },
+  {
+    name: 'BrandStory',
+    bestFor: 'Brands looking for storytelling and content-heavy campaigns.',
+  },
+  {
+    name: 'EZ Rankings',
+    bestFor: 'Smaller budgets that need straightforward, packaged SEO and marketing work.',
+  },
+  {
+    name: 'Schbang',
+    bestFor: 'Bigger brands wanting creative, media and technology under one large agency roof.',
   },
 ];
 
@@ -477,7 +497,9 @@ const serviceSchema = {
 const agenciesSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Top digital marketing agencies in India (July 2026)',
+  name: 'Top 10 digital marketing agencies in India (2026)',
+  numberOfItems: AGENCIES.length,
+  itemListOrder: 'https://schema.org/ItemListUnordered',
   itemListElement: AGENCIES.map((a, i) => ({
     '@type': 'ListItem',
     position: i + 1,
@@ -563,7 +585,7 @@ export default function DigitalMarketingPage() {
           }
         />
 
-        {/* Answer-first block (BLUF) — the direct answer, written to be quoted by
+        {/* Answer-first block (BLUF): the direct answer, written to be quoted by
             Google AI Overviews, ChatGPT, Gemini and Perplexity. */}
         <section className="border-y border-fj-ink/10 bg-white px-6 py-14 md:px-8 md:py-16">
           <div className="mx-auto max-w-3xl">
@@ -582,7 +604,7 @@ export default function DigitalMarketingPage() {
 
         <LogoBar tagline="Trusted by 500+ businesses across India, the US, the UK and the UAE" />
 
-        {/* Proof band — 4 across on desktop, 2x2 on mobile, hairline dividers */}
+        {/* Proof band: 4 across on desktop, 2x2 on mobile, hairline dividers */}
         <section className="bg-white px-6 py-12 md:px-8 md:py-16">
           <div className="mx-auto max-w-6xl">
             <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-fj-ink/10 bg-fj-ink/10 md:grid-cols-4">
@@ -657,19 +679,21 @@ export default function DigitalMarketingPage() {
           pillars={PILLARS}
         />
 
-        {/* Named-competitor comparison — the honest "who is best for what" listicle. */}
+        {/* Named-competitor comparison: the honest "who is best for what" listicle. */}
         <section className="bg-fj-cream px-6 py-16 md:px-8 md:py-20">
           <div className="mx-auto max-w-4xl">
             <p className="mb-3 font-mono text-xs uppercase tracking-widest text-[#B23E13]">
               THE TOP AGENCIES, COMPARED HONESTLY
             </p>
             <Heading as="h2" size="h2" className="text-fj-ink">
-              The best digital marketing agencies in India, and who each one suits
+              Top 10 digital marketing agencies in India (2026), and who each one suits
             </Heading>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-fj-ink/80">
-              We looked at which agencies actually rank on Google for digital marketing in India using
-              live search data in July 2026, and what each is known for. We include ourselves and say
-              so openly, because hiding it would be the opposite of honest.
+              This list is built from live search data checked on 31 July 2026, not from opinion. We
+              took the agencies that actually rank in Google&rsquo;s top 10 for digital marketing in
+              India, the ones Google&rsquo;s AI Overview cites, and the ones ChatGPT, Claude, Gemini
+              and Perplexity name when you ask them. Then we wrote who each one genuinely suits. We
+              include ourselves and say so openly, because hiding it would be the opposite of honest.
             </p>
 
             <ol className="mt-10 space-y-4">

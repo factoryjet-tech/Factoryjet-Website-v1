@@ -1193,7 +1193,12 @@ export default function NoidaDigitalMarketingPage() {
               <a href="/ai-seo" className="font-semibold text-[#B23E13] underline underline-offset-2">
                 AI search
               </a>
-              , the same senior team handles it.
+              , the same senior team handles it.{' '}
+              You can also{' '}
+              <a href="/digital-marketing" className="font-semibold text-[#B23E13] underline underline-offset-2">
+                digital marketing agency in India
+              </a>
+              , that works across every major city.
             </p>
           </div>
         </section>

@@ -1,0 +1,130 @@
+{
+ "page": "/digital-marketing",
+ "source": "pipeline/research/data/india_demand_full.csv (DataForSEO, India, 2026-07-31)",
+ "primary": [
+  {
+   "keyword": "digital marketing agency in india",
+   "volume": 9900,
+   "kd": "39"
+  }
+ ],
+ "secondary": [
+  {
+   "keyword": "best digital marketing agency in india",
+   "volume": 5400,
+   "kd": "9"
+  },
+  {
+   "keyword": "top 10 digital marketing agency in india",
+   "volume": 1000,
+   "kd": "1"
+  },
+  {
+   "keyword": "top digital marketing agency india",
+   "volume": 1900,
+   "kd": "35"
+  },
+  {
+   "keyword": "top 5 digital marketing agency in india",
+   "volume": 210,
+   "kd": "0"
+  },
+  {
+   "keyword": "india's best digital marketing agency",
+   "volume": 70,
+   "kd": "9"
+  }
+ ],
+ "qualifier": [
+  {
+   "keyword": "best digital marketing agency near me",
+   "volume": 1000,
+   "kd": "23"
+  },
+  {
+   "keyword": "near me digital marketing agency",
+   "volume": 12100,
+   "kd": "45"
+  },
+  {
+   "keyword": "biggest digital marketing agency",
+   "volume": 8100,
+   "kd": "36"
+  },
+  {
+   "keyword": "agency of digital marketing",
+   "volume": 49500,
+   "kd": "87"
+  },
+  {
+   "keyword": "top digital marketing agency",
+   "volume": 8100,
+   "kd": "33"
+  }
+ ],
+ "city_pointers": [
+  {
+   "keyword": "digital marketing agency in delhi",
+   "volume": 8100,
+   "kd": "31"
+  },
+  {
+   "keyword": "digital marketing agency in bangalore",
+   "volume": 8100,
+   "kd": "43"
+  },
+  {
+   "keyword": "digital marketing agency in mumbai",
+   "volume": 6600,
+   "kd": "28"
+  },
+  {
+   "keyword": "digital marketing agency in chennai",
+   "volume": 6600,
+   "kd": "27"
+  },
+  {
+   "keyword": "digital marketing agency noida",
+   "volume": 6600,
+   "kd": "23"
+  },
+  {
+   "keyword": "digital marketing agency in hyderabad",
+   "volume": 6600,
+   "kd": "66"
+  },
+  {
+   "keyword": "digital marketing agency in ahmedabad",
+   "volume": 8100,
+   "kd": "51"
+  },
+  {
+   "keyword": "digital marketing agency in pune",
+   "volume": 5400,
+   "kd": "90"
+  },
+  {
+   "keyword": "digital marketing agency in kolkata",
+   "volume": 4400,
+   "kd": "68"
+  }
+ ],
+ "question": [
+  {
+   "keyword": "what is digital marketing agency",
+   "volume": 210,
+   "kd": "40"
+  },
+  {
+   "keyword": "what do digital marketing agency do",
+   "volume": 90,
+   "kd": "34"
+  },
+  {
+   "keyword": "how to start a digital marketing agency",
+   "volume": 260,
+   "kd": "13"
+  }
+ ],
+ "keyword_count": 23
+}
