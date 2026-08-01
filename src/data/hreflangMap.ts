@@ -4,7 +4,13 @@
  * Rules enforced:
  *   - Absolute URLs only.
  *   - x-default always points to the India (en-IN) URL (or US if IN doesn't exist).
- *   - en-AE points to /uae (country landing) until dedicated UAE service pages exist.
+ *   - en-AE points to /uae (country landing) until a dedicated UAE service page
+ *     exists for that topic. The first exception shipped 2026-08-01:
+ *     ecommerce-development now has a dedicated /uae/ecommerce-development page,
+ *     so en-AE for that topic points there instead (see
+ *     ecommerceDevelopmentAlternatesUAE below). Repeat this pattern: a new
+ *     single-country UAE alternates object, NOT joining the US-owned
+ *     `ecommerceAlternates`, as more dedicated UAE service pages ship.
  *   - Pages that exist in only one country omit all other locale keys;
  *     only the existing locale + x-default are included.
  *
@@ -90,6 +96,22 @@ export const webDesignAlternates = {
 export const ecommerceAlternates = {
   'en-US': 'https://factoryjet.com/services/ecommerce-development',
   'x-default': 'https://factoryjet.com/services/ecommerce-development',
+} as const
+
+/**
+ * Ecommerce development service page, UAE-only.
+ * UAE: /uae/ecommerce-development
+ *
+ * Added 2026-08-01 (first dedicated UAE service page, see the file-level note
+ * above). Deliberately a SEPARATE object rather than joining `ecommerceAlternates`
+ * above: that object is US-owned and consumed by /services/ecommerce-development,
+ * so folding UAE in there would silently change that page's emitted hreflang tags.
+ * Per the single-country page rule: en-AE + x-default only, since there is no
+ * India or US page at this exact URL pattern.
+ */
+export const ecommerceDevelopmentAlternatesUAE = {
+  'en-AE': 'https://factoryjet.com/uae/ecommerce-development',
+  'x-default': 'https://factoryjet.com/uae/ecommerce-development',
 } as const
 
 // ===========================================================================

@@ -59,6 +59,9 @@ const WhyDubai: React.FC = () => {
                     <p className="text-[15px] md:text-[16px] text-[#334155] leading-relaxed">
                         The UAE e-commerce market reached <strong className="font-semibold text-[#B23E13]">$27 billion in 2024</strong>. Online shopping adoption increased 215% since 2020, with 82% of UAE residents making online purchases monthly. Without e-commerce capabilities, businesses miss this massive opportunity.
                     </p>
+                    <a href="/uae/ecommerce-development" className="mt-4 inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#B23E13] hover:underline">
+                        See our ecommerce development work in the UAE &rarr;
+                    </a>
                 </div>
 
                 {/* Block 3 */}

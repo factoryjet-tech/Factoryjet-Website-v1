@@ -369,7 +369,7 @@ export default function EcommerceSeoServicePage() {
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 3h18v4H3z" /><path d="M3 9h18v12H3z" opacity=".25" /></svg>
                 Ecommerce SEO services &middot; United States
               </span>
-              <h1 className="rise d2">The ecommerce SEO agency that turns product pages into <span className="it">revenue</span></h1>
+              <h1 className="rise d2">The best ecommerce SEO agency that turns product pages into <span className="it">revenue</span></h1>
               <p className="lead rise d3">
                 Most ecommerce SEO stops at rankings. We optimize your collection pages, product pages, and Shopify
                 technical foundation so you rank for what buyers search, win the rich result with stars and price, and

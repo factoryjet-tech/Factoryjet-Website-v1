@@ -141,11 +141,11 @@ const Services: React.FC = () => {
             <h4 className="font-bold text-navy mb-2">SEO Optimization</h4>
             <p className="text-xs text-gray-500">Rank high with our web design and seo services.</p>
           </div>
-          <div className="bg-white p-6 rounded-xl border border-gray-200 text-center hover:border-primary transition-colors hover:shadow-lg group">
+          <a href="/uae/ecommerce-development" className="bg-white p-6 rounded-xl border border-gray-200 text-center hover:border-primary transition-colors hover:shadow-lg group block">
             <ShoppingCart className="mx-auto text-primary-dark mb-3 group-hover:scale-110 transition-transform" size={32} />
             <h4 className="font-bold text-navy mb-2">E-Commerce Solutions</h4>
             <p className="text-xs text-gray-500">Shopify & WooCommerce experts.</p>
-          </div>
+          </a>
           <div className="bg-white p-6 rounded-xl border border-gray-200 text-center hover:border-primary transition-colors hover:shadow-lg group">
             <Settings className="mx-auto text-accent mb-3 group-hover:scale-110 transition-transform" size={32} />
             <h4 className="font-bold text-navy mb-2">AMC Support</h4>
