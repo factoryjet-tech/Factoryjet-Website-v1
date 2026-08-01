@@ -153,7 +153,7 @@ export default function BigCommerceDevelopmentPage() {
               <div>
                 <p className="pp-eyebrow">BigCommerce development</p>
                 <h1 style={{ margin: '14px 0 12px', maxWidth: '16ch' }}>
-                  BigCommerce, <span className="pp-grad">built open</span> and built to scale.
+                  BigCommerce, built open and built to scale.
                 </h1>
                 <p className="pp-lead" style={{ maxWidth: '48ch' }}>
                   We are a BigCommerce development agency for DTC and B2B brands. We design, build, and migrate stores on
@@ -278,6 +278,20 @@ export default function BigCommerceDevelopmentPage() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Mid-page CTA */}
+        <section className="pp-sec tint">
+          <div className="pp-wrap" style={{ textAlign: 'center' }}>
+            <p className="pp-mlabel">// before you compare platforms</p>
+            <h2 style={{ marginTop: '10px' }}>Not sure BigCommerce fits your catalog?</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '52ch', marginLeft: 'auto', marginRight: 'auto' }}>
+              Tell us what you sell and where you are migrating from. We will give you a straight answer, not a sales pitch.
+            </p>
+            <div style={{ marginTop: '22px' }}>
+              <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
             </div>
           </div>
         </section>

@@ -100,7 +100,7 @@ export default function HeadlessCommercePage() {
               <div>
                 <p className="pp-eyebrow">Headless &amp; composable commerce</p>
                 <h1 style={{ margin: '14px 0 12px', maxWidth: '17ch' }}>
-                  A fast <span className="pp-grad">front end</span>, any commerce backend.
+                  A fast front end, any commerce backend.
                 </h1>
                 <p className="pp-lead" style={{ maxWidth: '47ch' }}>
                   Headless commerce decouples your storefront from the platform underneath, so you get sub-second loads
@@ -145,6 +145,20 @@ export default function HeadlessCommercePage() {
                 and swap as you grow. We build both, and we are honest about when a brand actually needs them versus when
                 a well-built standard storefront is the smarter call.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Mid-page CTA */}
+        <section className="pp-sec tint">
+          <div className="pp-wrap" style={{ textAlign: 'center' }}>
+            <p className="pp-mlabel">// still deciding</p>
+            <h2 style={{ marginTop: '10px' }}>Headless, composable, or a standard storefront?</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '52ch', marginLeft: 'auto', marginRight: 'auto' }}>
+              Tell us your stack and performance goals. We will tell you honestly which approach actually earns its keep.
+            </p>
+            <div style={{ marginTop: '22px' }}>
+              <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
             </div>
           </div>
         </section>

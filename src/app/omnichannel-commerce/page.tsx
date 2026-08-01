@@ -151,7 +151,7 @@ export default function OmnichannelCommercePage() {
               <div>
                 <p className="pp-eyebrow">Omnichannel commerce</p>
                 <h1 style={{ margin: '14px 0 12px', maxWidth: '16ch' }}>
-                  One catalog. <span className="pp-grad">Every channel.</span> One system that sells.
+                  One catalog. Every channel. One system that sells.
                 </h1>
                 <p className="pp-lead" style={{ maxWidth: '48ch' }}>
                   We design, build, and run the engine behind omnichannel commerce, so your web store, retail POS,
@@ -275,6 +275,20 @@ export default function OmnichannelCommercePage() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Mid-page CTA */}
+        <section className="pp-sec tint">
+          <div className="pp-wrap" style={{ textAlign: 'center' }}>
+            <p className="pp-mlabel">// before you compare</p>
+            <h2 style={{ marginTop: '10px' }}>Running separate tools for each channel?</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '52ch', marginLeft: 'auto', marginRight: 'auto' }}>
+              Tell us what you sell and where. We will map what a unified system would actually replace.
+            </p>
+            <div style={{ marginTop: '22px' }}>
+              <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
             </div>
           </div>
         </section>
